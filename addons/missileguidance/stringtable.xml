@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Title">
@@ -14,8 +14,8 @@
             <Russian>Продвинутое наведение ракет</Russian>
             <Japanese>高度なミサイルの誘導</Japanese>
             <Korean>고급 미사일 유도</Korean>
-            <SChinese>进阶飞弹制导</SChinese>
-            <TChinese>進階飛彈制導</TChinese>
+            <Chinesesimp>进阶飞弹制导</Chinesesimp>
+            <Chinese>進階飛彈制導</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Desc">
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
@@ -30,8 +30,8 @@
             <Czech>Pokočilé navádění raket (AMG) poskytuje několik vylepšení pro lepší zaměření a následnou střelbu. Je to prvek vyžadovaný u typu zbraní jako jsou rakety.</Czech>
             <Japanese>高度なミサイルの誘導、または AMG はミサイルの捕捉と発射に複数の強化をあたえます。これはミサイルの種類によって、枠組みを必要とします。</Japanese>
             <Korean>고급 미사일 유도 혹은 AMG 는 표적 획득 및 발사를 위한 여러 기능을 제공합니다. 미사일 종류에따라 체계가 필요합니다.</Korean>
-            <SChinese>进阶飞弹制导增强了多种导弹锁定和射击的能力. 此系统适用于所有飞弹类型的武器.</SChinese>
-            <TChinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力. 此系統適用於所有飛彈類型的武器.</TChinese>
+            <Chinesesimp>进阶飞弹制导增强了多种导弹锁定和射击的能力. 此系统适用于所有飞弹类型的武器.</Chinesesimp>
+            <Chinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力. 此系統適用於所有飛彈類型的武器.</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
@@ -46,8 +46,8 @@
             <Russian>Hydra-70 DAGR</Russian>
             <Japanese>Hydra-70 DAGR ミサイル</Japanese>
             <Korean>Hydra-70 DAGR 미사일</Korean>
-            <SChinese>九头蛇-70 直接攻击导引飞弹</SChinese>
-            <TChinese>九頭蛇-70 直接攻擊導引飛彈</TChinese>
+            <Chinesesimp>九头蛇-70 直接攻击导引飞弹</Chinesesimp>
+            <Chinese>九頭蛇-70 直接攻擊導引飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Short">
             <English>DAGR</English>
@@ -62,8 +62,8 @@
             <Russian>DAGR</Russian>
             <Japanese>DAGR</Japanese>
             <Korean>DAGR</Korean>
-            <SChinese>直接攻击导引飞弹</SChinese>
-            <TChinese>直接攻擊導引飛彈</TChinese>
+            <Chinesesimp>直接攻击导引飞弹</Chinesesimp>
+            <Chinese>直接攻擊導引飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
@@ -78,8 +78,8 @@
             <Russian>Управляемая ракета лазерного наведения Hydra-70 DAGR</Russian>
             <Japanese>Hydra-70 DAGR レーザ誘導ミサイル</Japanese>
             <Korean>Hydra-70 DAGR 레이저 유도 미사일</Korean>
-            <SChinese>九头蛇-70 直接攻击雷射导引飞弹e</SChinese>
-            <TChinese>九頭蛇-70 直接攻擊雷射導引飛彈e</TChinese>
+            <Chinesesimp>九头蛇-70 直接攻击雷射导引飞弹e</Chinesesimp>
+            <Chinese>九頭蛇-70 直接攻擊雷射導引飛彈e</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -94,8 +94,8 @@
             <Russian>Hellfire II AGM-114K</Russian>
             <Japanese>Hellfire II AGM-114K ミサイル</Japanese>
             <Korean>Hellfire II AGM-114K 미사일</Korean>
-            <SChinese>地狱火II型 AGM-114K 导弹</SChinese>
-            <TChinese>地獄火II型 AGM-114K 導彈</TChinese>
+            <Chinesesimp>地狱火II型 AGM-114K 导弹</Chinesesimp>
+            <Chinese>地獄火II型 AGM-114K 導彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
@@ -110,8 +110,8 @@
             <Russian>AGM-114K</Russian>
             <Japanese>AGM-114K</Japanese>
             <Korean>AGM-114K</Korean>
-            <SChinese>AGM-114K</SChinese>
-            <TChinese>AGM-114K</TChinese>
+            <Chinesesimp>AGM-114K</Chinesesimp>
+            <Chinese>AGM-114K</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
@@ -126,8 +126,8 @@
             <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>
             <Japanese>Hellfire II AGM-114K レーザ誘導ミサイル</Japanese>
             <Korean>Hellfire II AGM-114K 레이저 유도 미사일</Korean>
-            <SChinese>地狱火II型 AGM-114K 雷射导引飞弹</SChinese>
-            <TChinese>地獄火II型 AGM-114K 雷射導引飛彈</TChinese>
+            <Chinesesimp>地狱火II型 AGM-114K 雷射导引飞弹</Chinesesimp>
+            <Chinese>地獄火II型 AGM-114K 雷射導引飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Off">
             <English>Off</English>
@@ -142,8 +142,8 @@
             <Italian>Spento</Italian>
             <Japanese>無効</Japanese>
             <Korean>끄기</Korean>
-            <SChinese>关闭</SChinese>
-            <TChinese>關閉</TChinese>
+            <Chinesesimp>关闭</Chinesesimp>
+            <Chinese>關閉</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -158,8 +158,8 @@
             <Italian>Solo Giocatore</Italian>
             <Japanese>プレイヤーのみ</Japanese>
             <Korean>오직 플레이어만</Korean>
-            <SChinese>只有玩家</SChinese>
-            <TChinese>只有玩家</TChinese>
+            <Chinesesimp>只有玩家</Chinesesimp>
+            <Chinese>只有玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
@@ -173,8 +173,8 @@
             <Russian>Игрок и боты</Russian>
             <Italian>Giocatore ed IA</Italian>
             <Japanese>プレイヤーと AI</Japanese>
-            <SChinese>玩家和AI</SChinese>
-            <TChinese>玩家和AI</TChinese>
+            <Chinesesimp>玩家和AI</Chinesesimp>
+            <Chinese>玩家和AI</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Cycle Fire Mode</English>
@@ -189,8 +189,8 @@
             <Portuguese>Alterar Modo de Disparo</Portuguese>
             <Japanese>発射モード切り替え</Japanese>
             <Korean>발사 방식 순환</Korean>
-            <SChinese>循环切换开火模式</SChinese>
-            <TChinese>循環切換開火模式</TChinese>
+            <Chinesesimp>循环切换开火模式</Chinesesimp>
+            <Chinese>循環切換開火模式</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Inventory">
         <Key ID="STR_ACE_Inventory_SettingName">
@@ -14,8 +14,8 @@
             <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
             <Japanese>インベントリ表示を大きくする</Japanese>
             <Korean>소지품 화면을 더 크게 합니다</Korean>
-            <SChinese>使物品显示清单更大</SChinese>
-            <TChinese>使物品顯示清單更大</TChinese>
+            <Chinesesimp>使物品显示清单更大</Chinesesimp>
+            <Chinese>使物品顯示清單更大</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_SettingDescription">
             <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
@@ -30,8 +30,8 @@
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
             <Japanese>通常のインベントリは UI の大きさによって表示されます。これはインベントリ UI を大きくできますが、文字は大きくできません。</Japanese>
             <Korean>보통 소지품 화면은 사용자 인터페이스 크기에 비례합니다. 이 항목은 소지품의 사용자 인터페이스를 확대를 가능케하면서 글씨는 그대로 냅두게 해줍니다.</Korean>
-            <SChinese>一般来说, 物品清单尺寸是由使用者介面来决定的. 此选项能让你的物品显示清单更大但不会增加字体大小, 此举可增加更多能被显示的描述行数!</SChinese>
-            <TChinese>一般來說, 物品清單尺寸是由使用者介面來決定的. 此選項能讓你的物品顯示清單更大但不會增加字體大小, 此舉可增加更多能被顯示的描述行數!</TChinese>
+            <Chinesesimp>一般来说, 物品清单尺寸是由使用者介面来决定的. 此选项能让你的物品显示清单更大但不会增加字体大小, 此举可增加更多能被显示的描述行数!</Chinesesimp>
+            <Chinese>一般來說, 物品清單尺寸是由使用者介面來決定的. 此選項能讓你的物品顯示清單更大但不會增加字體大小, 此舉可增加更多能被顯示的描述行數!</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Backpacks">
             <English>Backpacks</English>
@@ -45,8 +45,8 @@
             <Russian>Рюкзаки</Russian>
             <Japanese>バックパック</Japanese>
             <Korean>가방</Korean>
-            <SChinese>背包</SChinese>
-            <TChinese>背包</TChinese>
+            <Chinesesimp>背包</Chinesesimp>
+            <Chinese>背包</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -60,8 +60,8 @@
             <Russian>Головные уборы</Russian>
             <Japanese>ヘッドギア</Japanese>
             <Korean>헬멧</Korean>
-            <SChinese>头盔</SChinese>
-            <TChinese>頭盔</TChinese>
+            <Chinesesimp>头盔</Chinesesimp>
+            <Chinese>頭盔</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -75,8 +75,8 @@
             <Russian>Очки</Russian>
             <Japanese>メガネ</Japanese>
             <Korean>안경</Korean>
-            <SChinese>眼镜</SChinese>
-            <TChinese>眼鏡</TChinese>
+            <Chinesesimp>眼镜</Chinesesimp>
+            <Chinese>眼鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -90,8 +90,8 @@
             <Russian>Униформа</Russian>
             <Japanese>戦闘服</Japanese>
             <Korean>복장</Korean>
-            <SChinese>服装</SChinese>
-            <TChinese>服裝</TChinese>
+            <Chinesesimp>服装</Chinesesimp>
+            <Chinese>服裝</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -105,8 +105,8 @@
             <Russian>Жилеты</Russian>
             <Japanese>ベスト</Japanese>
             <Korean>조끼</Korean>
-            <SChinese>背心</SChinese>
-            <TChinese>背心</TChinese>
+            <Chinesesimp>背心</Chinesesimp>
+            <Chinese>背心</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -120,8 +120,8 @@
             <Russian>Гранаты</Russian>
             <Japanese>手榴弾</Japanese>
             <Korean>수류탄</Korean>
-            <SChinese>手榴弹</SChinese>
-            <TChinese>手榴彈</TChinese>
+            <Chinesesimp>手榴弹</Chinesesimp>
+            <Chinese>手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -135,8 +135,8 @@
             <Russian>Медицина</Russian>
             <Japanese>医療</Japanese>
             <Korean>의료</Korean>
-            <SChinese>医疗</SChinese>
-            <TChinese>醫療</TChinese>
+            <Chinesesimp>医疗</Chinesesimp>
+            <Chinese>醫療</Chinese>
         </Key>
     </Package>
 </Project>

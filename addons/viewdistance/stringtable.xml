@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ViewDistance">
         <Key ID="STR_ACE_ViewDistance_Module_DisplayName">
@@ -14,8 +14,8 @@
             <Italian>Limitatore Distanza Visiva</Italian>
             <Japanese>視界距離の制限</Japanese>
             <Korean>시야 제한기</Korean>
-            <SChinese>视野距离限制器</SChinese>
-            <TChinese>視野距離限制器</TChinese>
+            <Chinesesimp>视野距离限制器</Chinesesimp>
+            <Chinese>視野距離限制器</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_Module_Description">
             <English>Allows limiting maximum view distance that can be set by players.</English>
@@ -30,8 +30,8 @@
             <Italian>Consente di limitare la distanza visiva massima che può essere impostata dai giocatori.</Italian>
             <Japanese>プレイヤーへ最大の視界距離を制限できます。</Japanese>
             <Korean>플레이어가 볼 수 있는 최대 시야를 제한합니다.</Korean>
-            <SChinese>允许玩家最大的可视距离.</SChinese>
-            <TChinese>允許玩家最大的可視距離.</TChinese>
+            <Chinesesimp>允许玩家最大的可视距离.</Chinesesimp>
+            <Chinese>允許玩家最大的可視距離.</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_DisplayName">
             <English>Enable ACE viewdistance</English>
@@ -46,8 +46,8 @@
             <Italian>Abilita distanza visiva ACE</Italian>
             <Japanese>ACE 視界距離を有効化</Japanese>
             <Korean>ACE 시야 활성화</Korean>
-            <SChinese>启用ACE视距</SChinese>
-            <TChinese>啟用ACE視距</TChinese>
+            <Chinesesimp>启用ACE视距</Chinesesimp>
+            <Chinese>啟用ACE視距</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_Description">
             <English>Enables ACE viewdistance</English>
@@ -62,8 +62,8 @@
             <Italian>Abilita distanza visiva ACE</Italian>
             <Japanese>ACE 視界距離を有効化</Japanese>
             <Korean>ACE 시야 활성화</Korean>
-            <SChinese>启用ACE视距</SChinese>
-            <TChinese>啟用ACE視距</TChinese>
+            <Chinesesimp>启用ACE视距</Chinesesimp>
+            <Chinese>啟用ACE視距</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_DisplayName">
             <English>View Distance Limit</English>
@@ -78,8 +78,8 @@
             <Italian>Limite Distanza Visiva</Italian>
             <Japanese>視界距離の制限</Japanese>
             <Korean>시야 제한기</Korean>
-            <SChinese>视野距离限制</SChinese>
-            <TChinese>視野距離限制</TChinese>
+            <Chinesesimp>视野距离限制</Chinesesimp>
+            <Chinese>視野距離限制</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_Description">
             <English>Sets the limit for how high clients can raise their view distance (up to 10000)</English>
@@ -94,8 +94,8 @@
             <Italian>Imposta il limite massimo a cui i client possono alzare la propria distanza visiva (massimo 10000)</Italian>
             <Japanese>各クライアントが最大まで設定できる視界距離を設定します。(最大 10000)</Japanese>
             <Korean>클라이언트가 최대 얼마나 멀리 볼 수 있는지 제한을 둡니다 (10000 까지 가능)</Korean>
-            <SChinese>设定客户端最高可显示的视野距离 (最高至10000)</SChinese>
-            <TChinese>設定客戶端最高可顯示的視野距離 (最高至10000)</TChinese>
+            <Chinesesimp>设定客户端最高可显示的视野距离 (最高至10000)</Chinesesimp>
+            <Chinese>設定客戶端最高可顯示的視野距離 (最高至10000)</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_setting">
             <English>Limit for client's view distance set here and can overridden by module</English>
@@ -110,8 +110,8 @@
             <Italian>Limite per la distanza visiva del client impostato qui e può essere scavalcato dal modulo</Italian>
             <Japanese>クライアントへの視界距離の設定や、それをモジュールにより上書きできます</Japanese>
             <Korean>클라이언트의 시야를 이 모듈로 치환할 수 있습니다.</Korean>
-            <SChinese>玩家的视距限制可在此设定, 也可透过模块改写</SChinese>
-            <TChinese>玩家的視距限制可在此設定, 也可透過模塊改寫</TChinese>
+            <Chinesesimp>玩家的视距限制可在此设定, 也可透过模块改写</Chinesesimp>
+            <Chinese>玩家的視距限制可在此設定, 也可透過模塊改寫</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
@@ -126,8 +126,8 @@
             <Italian>Distanza Visiva Client (a Piedi)</Italian>
             <Japanese>クライアント側視界距離 (地上)</Japanese>
             <Korean>클라이언트 시야 (보병)</Korean>
-            <SChinese>客户端视野距离 (步行)</SChinese>
-            <TChinese>客戶端視野距離 (步行)</TChinese>
+            <Chinesesimp>客户端视野距离 (步行)</Chinesesimp>
+            <Chinese>客戶端視野距離 (步行)</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_Description">
             <English>Changes in game view distance when the player is on foot.</English>
@@ -142,8 +142,8 @@
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è a piedi.</Italian>
             <Japanese>プレイヤーが地上にいる時の視界距離を変更します。</Japanese>
             <Korean>플레이어가 보병일 경우의 시야를 바꿀 수 있습니다.</Korean>
-            <SChinese>改变玩家步行时的视野距离.</SChinese>
-            <TChinese>改變玩家步行時的視野距離.</TChinese>
+            <Chinesesimp>改变玩家步行时的视野距离.</Chinesesimp>
+            <Chinese>改變玩家步行時的視野距離.</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_DisplayName">
             <English>Client View Distance (Land Vehicle)</English>
@@ -158,8 +158,8 @@
             <Italian>Distanza Visiva Client (Veicolo Terrestre)</Italian>
             <Japanese>クライアント側視界距離 (車両)</Japanese>
             <Korean>클라이언트 시야 (차량)</Korean>
-            <SChinese>客户端视野距离 (地面载具)</SChinese>
-            <TChinese>客戶端視野距離 (地面載具)</TChinese>
+            <Chinesesimp>客户端视野距离 (地面载具)</Chinesesimp>
+            <Chinese>客戶端視野距離 (地面載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
@@ -174,8 +174,8 @@
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un veicolo terrestre.</Italian>
             <Japanese>プレイヤーが車両の時の視界距離を変更します。</Japanese>
             <Korean>플레이어가 차량 내부일 경우의 시야를 바꿀 수 있습니다.</Korean>
-            <SChinese>改变玩家于地面载具内时的视野距离.</SChinese>
-            <TChinese>改變玩家於地面載具內時的視野距離.</TChinese>
+            <Chinesesimp>改变玩家于地面载具内时的视野距离.</Chinesesimp>
+            <Chinese>改變玩家於地面載具內時的視野距離.</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_DisplayName">
             <English>Client View Distance (Air Vehicle)</English>
@@ -190,8 +190,8 @@
             <Italian>Distanza Visiva Client (Veicoli d'Aria)</Italian>
             <Japanese>クライアント側視界距離 (航空機)</Japanese>
             <Korean>클라이언트 시야 (항공기)</Korean>
-            <SChinese>客户端视野距离 (空中载具)</SChinese>
-            <TChinese>客戶端視野距離 (空中載具)</TChinese>
+            <Chinesesimp>客户端视野距离 (空中载具)</Chinesesimp>
+            <Chinese>客戶端視野距離 (空中載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_Description">
             <English>Changes in game view distance when the player is in an air vehicle.</English>
@@ -206,8 +206,8 @@
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un mezzo aereo.</Italian>
             <Japanese>プレイヤーが航空機に乗っている時の視界距離を変更します。</Japanese>
             <Korean>플레이어가 항공기 내부일 경우의 시야를 바꿀 수 있습니다.</Korean>
-            <SChinese>改变玩家于空中载具内时的视野距离.</SChinese>
-            <TChinese>改變玩家於空中載具內時的視野距離.</TChinese>
+            <Chinesesimp>改变玩家于空中载具内时的视野距离.</Chinesesimp>
+            <Chinese>改變玩家於空中載具內時的視野距離.</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_DisplayName">
             <English>Dynamic Object View Distance</English>
@@ -222,8 +222,8 @@
             <Italian>Distanza Visiva Oggetti Dinamica</Italian>
             <Japanese>動的なオブジェクトの描画距離</Japanese>
             <Korean>동적 물체 시야</Korean>
-            <SChinese>动态物件的视野距离</SChinese>
-            <TChinese>動態物件的視野距離</TChinese>
+            <Chinesesimp>动态物件的视野距离</Chinesesimp>
+            <Chinese>動態物件的視野距離</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_Description">
             <English>Sets the object view distance as a coefficient of the view distance or based on field of view. FoV Based's lowest and highest value is the value which is set when enabling the option.</English>
@@ -238,8 +238,8 @@
             <Italian>Imposta la distanza visiva degli oggetti come un coefficiente basato sulla distanza visiva oppure basato sul campo visivo.</Italian>
             <Japanese>視野角を元にするか、視界距離によるオブジェクト描画距離を決定します。視野角を元にするオプションを有効化した場合、視野角により最低と最高値が変動します。</Japanese>
             <Korean>설정된 시야 혹은 시계(FoV)에 계수를 적용해 물체 시야를 적용합니다. 시계를 바탕으로 하는 옵션을 활성화할 경우 시계에 의한 최저와 최고치가 변동됩니다.</Korean>
-            <SChinese>设定物件可被观察的距离, 透过视野距离或是视野角度来决定.</SChinese>
-            <TChinese>設定物件可被觀察的距離, 透過視野距離或是視野角度來決定.</TChinese>
+            <Chinesesimp>设定物件可被观察的距离, 透过视野距离或是视野角度来决定.</Chinesesimp>
+            <Chinese>設定物件可被觀察的距離, 透過視野距離或是視野角度來決定.</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_off">
             <English>Off</English>
@@ -254,8 +254,8 @@
             <Italian>Disabilitato</Italian>
             <Japanese>無効</Japanese>
             <Korean>끄기</Korean>
-            <SChinese>关闭</SChinese>
-            <TChinese>關閉</TChinese>
+            <Chinesesimp>关闭</Chinesesimp>
+            <Chinese>關閉</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_verylow">
             <English>Very Low</English>
@@ -270,8 +270,8 @@
             <Italian>Molto Basso</Italian>
             <Japanese>最低</Japanese>
             <Korean>매우 낮음</Korean>
-            <SChinese>非常低</SChinese>
-            <TChinese>非常低</TChinese>
+            <Chinesesimp>非常低</Chinesesimp>
+            <Chinese>非常低</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_low">
             <English>Low</English>
@@ -286,8 +286,8 @@
             <Italian>Basso</Italian>
             <Japanese>低</Japanese>
             <Korean>낮음</Korean>
-            <SChinese>低</SChinese>
-            <TChinese>低</TChinese>
+            <Chinesesimp>低</Chinesesimp>
+            <Chinese>低</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_medium">
             <English>Medium</English>
@@ -302,8 +302,8 @@
             <Italian>Medio</Italian>
             <Japanese>通常</Japanese>
             <Korean>중간</Korean>
-            <SChinese>中</SChinese>
-            <TChinese>中</TChinese>
+            <Chinesesimp>中</Chinesesimp>
+            <Chinese>中</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_high">
             <English>High</English>
@@ -318,8 +318,8 @@
             <Italian>Alto</Italian>
             <Japanese>高</Japanese>
             <Korean>높음</Korean>
-            <SChinese>高</SChinese>
-            <TChinese>高</TChinese>
+            <Chinesesimp>高</Chinesesimp>
+            <Chinese>高</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_veryhigh">
             <English>Very High</English>
@@ -334,8 +334,8 @@
             <Italian>Molto Alto</Italian>
             <Japanese>最高</Japanese>
             <Korean>매우 높음</Korean>
-            <SChinese>非常高</SChinese>
-            <TChinese>非常高</TChinese>
+            <Chinesesimp>非常高</Chinesesimp>
+            <Chinese>非常高</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_fovBased">
             <English>FoV Based</English>
@@ -349,8 +349,8 @@
             <French>Champ de vision basé</French>
             <Japanese>視野角を元にする</Japanese>
             <Korean>시계(FoV)</Korean>
-            <SChinese>由视野角度决定</SChinese>
-            <TChinese>由視野角度決定</TChinese>
+            <Chinesesimp>由视野角度决定</Chinesesimp>
+            <Chinese>由視野角度決定</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_infotext">
             <English>View Distance:</English>
@@ -365,8 +365,8 @@
             <Italian>Distanza Visiva:</Italian>
             <Japanese>視界距離：</Japanese>
             <Korean>시야:</Korean>
-            <SChinese>视野距离:</SChinese>
-            <TChinese>視野距離:</TChinese>
+            <Chinesesimp>视野距离:</Chinesesimp>
+            <Chinese>視野距離:</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_objectinfotext">
             <English>Object View Distance is</English>
@@ -381,8 +381,8 @@
             <Italian>Distanza Visiva Oggetti è</Italian>
             <Japanese>オブジェクト描画距離は</Japanese>
             <Korean>동적 물체 시야는</Korean>
-            <SChinese>物件视野距离为</SChinese>
-            <TChinese>物件視野距離為</TChinese>
+            <Chinesesimp>物件视野距离为</Chinesesimp>
+            <Chinese>物件視野距離為</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_invalid">
             <English>That option is invalid! The limit is</English>
@@ -397,8 +397,8 @@
             <Italian>Questa opzione è invalida! Il limite è</Italian>
             <Japanese>このオプションは無効です！制限は</Japanese>
             <Korean>이 옵션은 불가능합니다! 제한은</Korean>
-            <SChinese>该选项是无效的! 限制是</SChinese>
-            <TChinese>該選項是無效的! 限制是</TChinese>
+            <Chinesesimp>该选项是无效的! 限制是</Chinesesimp>
+            <Chinese>該選項是無效的! 限制是</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_videosettings">
             <English>Video Settings</English>
@@ -413,8 +413,8 @@
             <Italian>Impostazioni Video</Italian>
             <Japanese>映像設定</Japanese>
             <Korean>영상 설정</Korean>
-            <SChinese>影像设定</SChinese>
-            <TChinese>影像設定</TChinese>
+            <Chinesesimp>影像设定</Chinesesimp>
+            <Chinese>影像設定</Chinese>
         </Key>
     </Package>
 </Project>

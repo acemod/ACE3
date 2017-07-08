@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vehicles">
         <Key ID="STR_ACE_Vehicles_On">
@@ -14,8 +14,8 @@
             <Italian>Limitatore Attivo</Italian>
             <Japanese>速度制限を有効化</Japanese>
             <Korean>속도 제한기 켜짐</Korean>
-            <SChinese>启用速度限制</SChinese>
-            <TChinese>啟用速度限制</TChinese>
+            <Chinesesimp>启用速度限制</Chinesesimp>
+            <Chinese>啟用速度限制</Chinese>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -30,8 +30,8 @@
             <Italian>Limitatore Non Attivo</Italian>
             <Japanese>速度制限を無効化</Japanese>
             <Korean>속도 제한기 꺼짐</Korean>
-            <SChinese>停用速度限制</SChinese>
-            <TChinese>停用速度限制</TChinese>
+            <Chinesesimp>停用速度限制</Chinesesimp>
+            <Chinese>停用速度限制</Chinese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -46,8 +46,8 @@
             <Italian>Limitatore di Velocità</Italian>
             <Japanese>速度制限</Japanese>
             <Korean>속도 제한기</Korean>
-            <SChinese>速度限制器</SChinese>
-            <TChinese>速度限制器</TChinese>
+            <Chinesesimp>速度限制器</Chinesesimp>
+            <Chinese>速度限制器</Chinese>
         </Key>
     </Package>
 </Project>

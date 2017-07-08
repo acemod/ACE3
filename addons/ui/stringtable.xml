@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="UI">
         <Key ID="STR_ACE_UI_Category">
@@ -12,8 +12,8 @@
             <German>Benutzeroberfläche</German>
             <Korean>사용자 인터페이스</Korean>
             <Italian>Interfaccia Utente</Italian>
-            <SChinese>使用者介面</SChinese>
-            <TChinese>使用者介面</TChinese>
+            <Chinesesimp>使用者介面</Chinesesimp>
+            <Chinese>使用者介面</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_ModuleName">
             <English>User Interface</English>
@@ -26,8 +26,8 @@
             <German>Benutzeroberfläche</German>
             <Korean>사용자 인터페이스</Korean>
             <Italian>Interfaccia Utente</Italian>
-            <SChinese>使用者介面</SChinese>
-            <TChinese>使用者介面</TChinese>
+            <Chinesesimp>使用者介面</Chinesesimp>
+            <Chinese>使用者介面</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_ModuleDescription">
             <English>This module allows toggling visible user interface parts.</English>
@@ -39,8 +39,8 @@
             <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
             <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는것을 가능케 해줍니다.</Korean>
             <Italian>Questo modulo consente di commutare parti di interfaccia utente visibili.</Italian>
-            <SChinese>此模块允许你调整使用者介面的任何一个元件.</SChinese>
-            <TChinese>此模塊允許你調整使用者介面的任何一個元件.</TChinese>
+            <Chinesesimp>此模块允许你调整使用者介面的任何一个元件.</Chinesesimp>
+            <Chinese>此模塊允許你調整使用者介面的任何一個元件.</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
@@ -53,8 +53,8 @@
             <German>Erlaube selektives UI</German>
             <Korean>선택적 사용자 인터페이스 허가</Korean>
             <Italian>Permette l'UI Selettiva</Italian>
-            <SChinese>允许调整使用者介面</SChinese>
-            <TChinese>允許調整使用者介面</TChinese>
+            <Chinesesimp>允许调整使用者介面</Chinesesimp>
+            <Chinese>允許調整使用者介面</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
             <English>Allow client to modify their UI.</English>
@@ -67,8 +67,8 @@
             <German>Erlaube Clients, ihr UI zu modifizieren.</German>
             <Korean>클라이언트가 선택적 사용자 인터페이스 사용하는것을 허가합니다</Korean>
             <Italian>Permette al client di modificare la propria UI.</Italian>
-            <SChinese>允许客户端自行调整使用者介面.</SChinese>
-            <TChinese>允許客戶端自行調整使用者介面.</TChinese>
+            <Chinesesimp>允许客户端自行调整使用者介面.</Chinesesimp>
+            <Chinese>允許客戶端自行調整使用者介面.</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
             <English>Soldier/Vehicle/Weapon Information</English>
@@ -81,8 +81,8 @@
             <German>Soldat/Fahrzeug/Waffe Information</German>
             <Korean>병사/차량/무기 정보</Korean>
             <Italian>Informazioni Soldato/Veicolo/Arma</Italian>
-            <SChinese>士兵/载具/武器资讯栏</SChinese>
-            <TChinese>士兵/載具/武器資訊欄</TChinese>
+            <Chinesesimp>士兵/载具/武器资讯栏</Chinesesimp>
+            <Chinese>士兵/載具/武器資訊欄</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleRadar">
             <English>Vehicle Radar</English>
@@ -95,8 +95,8 @@
             <German>Fahrzeugradar</German>
             <Korean>차량 레이더</Korean>
             <Italian>Rada Veicolo</Italian>
-            <SChinese>载具雷达</SChinese>
-            <TChinese>載具雷達</TChinese>
+            <Chinesesimp>载具雷达</Chinesesimp>
+            <Chinese>載具雷達</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleCompass">
             <English>Vehicle Compass</English>
@@ -109,8 +109,8 @@
             <German>Fahrzeugkompass</German>
             <Korean>차량 나침반</Korean>
             <Italian>Bussola Veicolo</Italian>
-            <SChinese>载具指北针</SChinese>
-            <TChinese>載具指北針</TChinese>
+            <Chinesesimp>载具指北针</Chinesesimp>
+            <Chinese>載具指北針</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_CommandMenu">
             <English>Command Menu</English>
@@ -123,8 +123,8 @@
             <German>Kommandomenü</German>
             <Korean>지휘 메뉴</Korean>
             <Italian>Menù di Comando</Italian>
-            <SChinese>指挥选单</SChinese>
-            <TChinese>指揮選單</TChinese>
+            <Chinesesimp>指挥选单</Chinesesimp>
+            <Chinese>指揮選單</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GroupBar">
             <English>Group Bar</English>
@@ -137,8 +137,8 @@
             <German>Gruppenleiste</German>
             <Korean>그룹 막대</Korean>
             <Italian>Barra del Gruppo</Italian>
-            <SChinese>小队状态栏</SChinese>
-            <TChinese>小隊狀態欄</TChinese>
+            <Chinesesimp>小队状态栏</Chinesesimp>
+            <Chinese>小隊狀態欄</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -151,8 +151,8 @@
             <German>Waffenname</German>
             <Korean>무기 이름</Korean>
             <Italian>Nome Arma</Italian>
-            <SChinese>武器名称</SChinese>
-            <TChinese>武器名稱</TChinese>
+            <Chinesesimp>武器名称</Chinesesimp>
+            <Chinese>武器名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_WeaponNameBackground">
             <English>Weapon Name Background</English>
@@ -165,8 +165,8 @@
             <German>Waffenname Hintergrund</German>
             <Korean>무기 이름 배경</Korean>
             <Italian>Nome Sfondo Arma</Italian>
-            <SChinese>武器名称背景</SChinese>
-            <TChinese>武器名稱背景</TChinese>
+            <Chinesesimp>武器名称背景</Chinesesimp>
+            <Chinese>武器名稱背景</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_FiringMode">
             <English>Firing Mode</English>
@@ -179,8 +179,8 @@
             <German>Feuermodus</German>
             <Korean>사격 모드</Korean>
             <Italian>Modalità di Fuoco</Italian>
-            <SChinese>射击模式</SChinese>
-            <TChinese>射擊模式</TChinese>
+            <Chinesesimp>射击模式</Chinesesimp>
+            <Chinese>射擊模式</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_AmmoType">
             <English>Ammo Type</English>
@@ -193,8 +193,8 @@
             <German>Munitionstyp</German>
             <Korean>탄종</Korean>
             <Italian>Tipo Munizioni</Italian>
-            <SChinese>弹药类型</SChinese>
-            <TChinese>彈藥類型</TChinese>
+            <Chinesesimp>弹药类型</Chinesesimp>
+            <Chinese>彈藥類型</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_AmmoCount">
             <English>Ammo Count</English>
@@ -207,8 +207,8 @@
             <German>Munitionsanzahl</German>
             <Korean>탄약수</Korean>
             <Italian>Contatore Munizioni</Italian>
-            <SChinese>弹药数量</SChinese>
-            <TChinese>彈藥數量</TChinese>
+            <Chinesesimp>弹药数量</Chinesesimp>
+            <Chinese>彈藥數量</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
@@ -221,8 +221,8 @@
             <German>Magazinanzahl</German>
             <Korean>탄창수</Korean>
             <Italian>Contatore Caricatore</Italian>
-            <SChinese>弹匣数量</SChinese>
-            <TChinese>彈匣數量</TChinese>
+            <Chinesesimp>弹匣数量</Chinesesimp>
+            <Chinese>彈匣數量</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableName">
             <English>Throwable Type</English>
@@ -235,8 +235,8 @@
             <German>Wurfobjekt-Typ</German>
             <Korean>투척물 종류</Korean>
             <Italian>Tipo Lanciabile</Italian>
-            <SChinese>投掷物类型</SChinese>
-            <TChinese>投擲物類型</TChinese>
+            <Chinesesimp>投掷物类型</Chinesesimp>
+            <Chinese>投擲物類型</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableCount">
             <English>Throwable Count</English>
@@ -249,8 +249,8 @@
             <German>Wurfobjekt-Anzahl</German>
             <Korean>투척물 개수</Korean>
             <Italian>Contatore Lanciabili</Italian>
-            <SChinese>投掷物数量</SChinese>
-            <TChinese>投擲物數量</TChinese>
+            <Chinesesimp>投掷物数量</Chinesesimp>
+            <Chinese>投擲物數量</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_Zeroing">
             <English>Zeroing</English>
@@ -263,8 +263,8 @@
             <German>Nullung</German>
             <Korean>영점</Korean>
             <Italian>Azzeramento</Italian>
-            <SChinese>归零距离</SChinese>
-            <TChinese>歸零距離</TChinese>
+            <Chinesesimp>归零距离</Chinesesimp>
+            <Chinese>歸零距離</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
             <English>Weapon Lower Info Background</English>
@@ -276,8 +276,8 @@
             <German>Hintergrund der unteren Waffen-Info-Leiste</German>
             <Korean>무기 상세 정보 배경</Korean>
             <Italian>Informazioni Sfondo Arma Bassa</Italian>
-            <SChinese>武器底部资讯栏背景</SChinese>
-            <TChinese>武器底部資訊欄背景</TChinese>
+            <Chinesesimp>武器底部资讯栏背景</Chinesesimp>
+            <Chinese>武器底部資訊欄背景</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_Stance">
             <English>Stance</English>
@@ -290,8 +290,8 @@
             <German>Haltung</German>
             <Korean>자세</Korean>
             <Italian>Postura</Italian>
-            <SChinese>姿态</SChinese>
-            <TChinese>姿態</TChinese>
+            <Chinesesimp>姿态</Chinesesimp>
+            <Chinese>姿態</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_StaminaBar">
             <English>Stamina Bar</English>
@@ -304,8 +304,8 @@
             <German>Ausdaueranzeige</German>
             <Korean>체력 막대</Korean>
             <Italian>Barra Stamina</Italian>
-            <SChinese>体力栏</SChinese>
-            <TChinese>體力欄</TChinese>
+            <Chinesesimp>体力栏</Chinesesimp>
+            <Chinese>體力欄</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponName">
             <English>Gunner Weapon Name</English>
@@ -317,8 +317,8 @@
             <German>Richtschütze Waffenname</German>
             <Korean>사수 무기 명칭</Korean>
             <Italian>Nome Arma Artigliere</Italian>
-            <SChinese>炮手武器名称</SChinese>
-            <TChinese>砲手武器名稱</TChinese>
+            <Chinesesimp>炮手武器名称</Chinesesimp>
+            <Chinese>砲手武器名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
@@ -330,8 +330,8 @@
             <German>Richtschütze Waffenname Hintergrund</German>
             <Korean>사수 무기 명칭 배경</Korean>
             <Italian>Nome Sfondo Arma Artigliere</Italian>
-            <SChinese>炮手武器名称背景</SChinese>
-            <TChinese>砲手武器名稱背景</TChinese>
+            <Chinesesimp>炮手武器名称背景</Chinesesimp>
+            <Chinese>砲手武器名稱背景</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerFiringMode">
             <English>Gunner Firing Mode</English>
@@ -343,8 +343,8 @@
             <German>Richtschütze Feuermodus</German>
             <Korean>사수 사격 모드</Korean>
             <Italian>Modalità di Fuoco Artigliere</Italian>
-            <SChinese>炮手射击模式</SChinese>
-            <TChinese>砲手射擊模式</TChinese>
+            <Chinesesimp>炮手射击模式</Chinesesimp>
+            <Chinese>砲手射擊模式</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoType">
             <English>Gunner Ammo Type</English>
@@ -356,8 +356,8 @@
             <German>Richtschütze Munitionstyp</German>
             <Korean>사수 탄종</Korean>
             <Italian>Tipo Munizioni Artigliere</Italian>
-            <SChinese>炮手弹药类型</SChinese>
-            <TChinese>砲手彈藥類型</TChinese>
+            <Chinesesimp>炮手弹药类型</Chinesesimp>
+            <Chinese>砲手彈藥類型</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
@@ -369,8 +369,8 @@
             <German>Richtschütze Munitionsanzahl</German>
             <Korean>사수 탄약 수량</Korean>
             <Italian>Contatore Munizioni Artigliere</Italian>
-            <SChinese>炮手弹药数量</SChinese>
-            <TChinese>砲手彈藥數量</TChinese>
+            <Chinesesimp>炮手弹药数量</Chinesesimp>
+            <Chinese>砲手彈藥數量</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
@@ -382,8 +382,8 @@
             <German>Richtschütze Magazinanzahl</German>
             <Korean>사수 탄창 수량</Korean>
             <Italian>Contatore Caricatore Artigliere</Italian>
-            <SChinese>炮手弹匣数量</SChinese>
-            <TChinese>砲手彈匣數量</TChinese>
+            <Chinesesimp>炮手弹匣数量</Chinesesimp>
+            <Chinese>砲手彈匣數量</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
@@ -395,8 +395,8 @@
             <German>Richtschütze Raketentyp</German>
             <Korean>사수 발사체 종류</Korean>
             <Italian>Tipo Lanciabile Artigliere</Italian>
-            <SChinese>炮手发射物类型</SChinese>
-            <TChinese>砲手發射物類型</TChinese>
+            <Chinesesimp>炮手发射物类型</Chinesesimp>
+            <Chinese>砲手發射物類型</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
@@ -408,8 +408,8 @@
             <German>Richtschütze Raketenanzahl</German>
             <Korean>사수 발사체 수량</Korean>
             <Italian>Contatore Lanciabili Artigliere</Italian>
-            <SChinese>炮手发射物数量</SChinese>
-            <TChinese>砲手發射物數量</TChinese>
+            <Chinesesimp>炮手发射物数量</Chinesesimp>
+            <Chinese>砲手發射物數量</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
@@ -421,8 +421,8 @@
             <German>Richtschütze Nullung</German>
             <Korean>사수 영점</Korean>
             <Italian>Azzeramento Artigliere</Italian>
-            <SChinese>炮手归零距离</SChinese>
-            <TChinese>砲手歸零距離</TChinese>
+            <Chinesesimp>炮手归零距离</Chinesesimp>
+            <Chinese>砲手歸零距離</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
@@ -434,8 +434,8 @@
             <German>Hintergrund der unteren Waffen-Info-Leiste (Richtschütze)</German>
             <Korean>사수 무기 상세 정보 배경</Korean>
             <Italian>Informazioni Sfondo Arma Artigliere Bassa</Italian>
-            <SChinese>炮手武器底部资讯栏背景</SChinese>
-            <TChinese>砲手武器底部資訊欄背景</TChinese>
+            <Chinesesimp>炮手武器底部资讯栏背景</Chinesesimp>
+            <Chinese>砲手武器底部資訊欄背景</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
@@ -448,8 +448,8 @@
             <German>Fahrzeugname</German>
             <Korean>차량 명칭</Korean>
             <Italian>Nome Veicolo</Italian>
-            <SChinese>载具名称</SChinese>
-            <TChinese>載具名稱</TChinese>
+            <Chinesesimp>载具名称</Chinesesimp>
+            <Chinese>載具名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleNameBackground">
             <English>Vehicle Name Background</English>
@@ -462,8 +462,8 @@
             <German>Fahrzeugname Hintergrund</German>
             <Korean>차량 명칭 배경</Korean>
             <Italian>Nome Sfondo Veicolo</Italian>
-            <SChinese>载具名称背景</SChinese>
-            <TChinese>載具名稱背景</TChinese>
+            <Chinesesimp>载具名称背景</Chinesesimp>
+            <Chinese>載具名稱背景</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleFuelBar">
             <English>Vehicle Fuel Bar</English>
@@ -476,8 +476,8 @@
             <German>Fahrzeug-Treibstoffleiste</German>
             <Korean>차량 연료 막대</Korean>
             <Italian>Barra Carburante Veicolo</Italian>
-            <SChinese>载具燃料栏</SChinese>
-            <TChinese>載具燃料欄</TChinese>
+            <Chinesesimp>载具燃料栏</Chinesesimp>
+            <Chinese>載具燃料欄</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleSpeed">
             <English>Vehicle Speed</English>
@@ -490,8 +490,8 @@
             <German>Fahrzeuggeschwindigkeit</German>
             <Korean>차량 속도</Korean>
             <Italian>Velocità Veicolo</Italian>
-            <SChinese>载具速度</SChinese>
-            <TChinese>載具速度</TChinese>
+            <Chinesesimp>载具速度</Chinesesimp>
+            <Chinese>載具速度</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleAltitude">
             <English>Vehicle Altitude</English>
@@ -504,8 +504,8 @@
             <German>Fahrzeughöhe</German>
             <Korean>차량 고도</Korean>
             <Italian>Altitudine Veicolo</Italian>
-            <SChinese>载具高度</SChinese>
-            <TChinese>載具高度</TChinese>
+            <Chinesesimp>载具高度</Chinesesimp>
+            <Chinese>載具高度</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleDamage">
             <English>Vehicle Damage</English>
@@ -518,8 +518,8 @@
             <German>Fahrzeugschaden</German>
             <Korean>차량 피해</Korean>
             <Italian>Danno Veicolo</Italian>
-            <SChinese>载具伤害</SChinese>
-            <TChinese>載具傷害</TChinese>
+            <Chinesesimp>载具伤害</Chinesesimp>
+            <Chinese>載具傷害</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_VehicleInfoBackground">
             <English>Vehicle Info Background</English>
@@ -532,8 +532,8 @@
             <German>Fahrzeug Info Hintergrund</German>
             <Korean>차량 정보 배경</Korean>
             <Italian>Informazioni Sfondo Veicolo</Italian>
-            <SChinese>载具资讯栏背景</SChinese>
-            <TChinese>載具資訊欄背景</TChinese>
+            <Chinesesimp>载具资讯栏背景</Chinesesimp>
+            <Chinese>載具資訊欄背景</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
             <English>Requires Soldier/Vehicle/Weapon Information.</English>
@@ -546,8 +546,8 @@
             <German>Benötigt Soldat/Fahrzeug/Waffe Information.</German>
             <Korean>병사/차량/무기의 정보가 필요합니다.</Korean>
             <Italian>Richiede informazione Soldato/Veicolo/Arma.</Italian>
-            <SChinese>需要士兵/载具/武器的资讯.</SChinese>
-            <TChinese>需要士兵/載具/武器的資訊.</TChinese>
+            <Chinesesimp>需要士兵/载具/武器的资讯.</Chinesesimp>
+            <Chinese>需要士兵/載具/武器的資訊.</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_Disallowed">
             <English>Modifying User Interface is disabled.</English>
@@ -560,8 +560,8 @@
             <German>Die Modifizierung des UI ist deaktiviert.</German>
             <Korean>사용자 인터페이스 변경이 비활성화 되어있습니다.</Korean>
             <Italian>La modifica dell'Interfaccia Utente è disabilitata.</Italian>
-            <SChinese>自定使用者介面功能已关闭.</SChinese>
-            <TChinese>自定使用者介面功能已關閉.</TChinese>
+            <Chinesesimp>自定使用者介面功能已关闭.</Chinesesimp>
+            <Chinese>自定使用者介面功能已關閉.</Chinese>
         </Key>
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
@@ -573,8 +573,8 @@
             <German>Gesperrte UI-Elemente können nicht modifiziert werden.</German>
             <Korean>강제 사용자 인터페이스는 변경하실 수 없습니다.</Korean>
             <Italian>Impossibile modificare un elemento forzato d' Interfaccia Utente.</Italian>
-            <SChinese>无法编辑已被锁定的使用者介面元件.</SChinese>
-            <TChinese>無法編輯已被鎖定的使用者介面元件.</TChinese>
+            <Chinesesimp>无法编辑已被锁定的使用者介面元件.</Chinesesimp>
+            <Chinese>無法編輯已被鎖定的使用者介面元件.</Chinese>
         </Key>
     </Package>
 </Project>

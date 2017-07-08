@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MapTools">
         <Key ID="STR_ACE_MapTools_Name">
@@ -14,8 +14,8 @@
             <Russian>Инструменты карты</Russian>
             <Japanese>マップ ツール</Japanese>
             <Korean>독도용 도구</Korean>
-            <SChinese>地图工具</SChinese>
-            <TChinese>地圖工具</TChinese>
+            <Chinesesimp>地图工具</Chinesesimp>
+            <Chinese>地圖工具</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_Description">
             <English>The Map Tools allow you to measure distances and angles on the map.</English>
@@ -30,8 +30,8 @@
             <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
             <Japanese>マップ ツールは地図上で距離や角度を測れます。</Japanese>
             <Korean>독도용 도구는 지도상에서 거리나 각도를 잴 수 있게 해줍니다.</Korean>
-            <SChinese>地图工具能够让你在地图上测量距离与角度</SChinese>
-            <TChinese>地圖工具能夠讓你在地圖上測量距離與角度</TChinese>
+            <Chinesesimp>地图工具能够让你在地图上测量距离与角度</Chinesesimp>
+            <Chinese>地圖工具能夠讓你在地圖上測量距離與角度</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
@@ -46,8 +46,8 @@
             <Russian>Инструменты карты</Russian>
             <Japanese>マップ ツール</Japanese>
             <Korean>독도용 도구</Korean>
-            <SChinese>地图工具</SChinese>
-            <TChinese>地圖工具</TChinese>
+            <Chinesesimp>地图工具</Chinesesimp>
+            <Chinese>地圖工具</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsHide">
             <English>Hide Map Tool</English>
@@ -62,8 +62,8 @@
             <Russian>Скрыть инструменты</Russian>
             <Japanese>マップ ツールを隠す</Japanese>
             <Korean>독도용 도구 숨기기</Korean>
-            <SChinese>隐藏地图工具</SChinese>
-            <TChinese>隱藏地圖工具</TChinese>
+            <Chinesesimp>隐藏地图工具</Chinesesimp>
+            <Chinese>隱藏地圖工具</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
             <English>Show Normal Map Tool</English>
@@ -78,8 +78,8 @@
             <Russian>Показать инструменты (средн. размер)</Russian>
             <Japanese>マップ ツールを表示する</Japanese>
             <Korean>보통 독도용 도구로 보기</Korean>
-            <SChinese>显示地图工具</SChinese>
-            <TChinese>顯示地圖工具</TChinese>
+            <Chinesesimp>显示地图工具</Chinesesimp>
+            <Chinese>顯示地圖工具</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
             <English>Show Small Map Tool</English>
@@ -94,8 +94,8 @@
             <Russian>Показать инструменты (малый размер)</Russian>
             <Japanese>小さいマップ ツールを表示する</Japanese>
             <Korean>작은 독도용 도구로 보기</Korean>
-            <SChinese>显示小的地图工具</SChinese>
-            <TChinese>顯示小的地圖工具</TChinese>
+            <Chinesesimp>显示小的地图工具</Chinesesimp>
+            <Chinese>顯示小的地圖工具</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">
             <English>Align Map Tool to North</English>
@@ -110,8 +110,8 @@
             <Russian>Выровнять инструменты на север</Russian>
             <Japanese>マップ ツールを北に合わせる</Japanese>
             <Korean>독도용 도구를 북쪽으로 정렬</Korean>
-            <SChinese>地图工具对准北方</SChinese>
-            <TChinese>地圖工具對準北方</TChinese>
+            <Chinesesimp>地图工具对准北方</Chinesesimp>
+            <Chinese>地圖工具對準北方</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignCompass">
             <English>Align Map Tool to Compass</English>
@@ -126,8 +126,8 @@
             <Russian>Выровнять инструменты по компасу</Russian>
             <Japanese>マップ ツールを方位磁石に合わせる</Japanese>
             <Korean>독도용 도구를 나침반에 정렬</Korean>
-            <SChinese>地图工具对准指北针</SChinese>
-            <TChinese>地圖工具對準指北針</TChinese>
+            <Chinesesimp>地图工具对准指北针</Chinesesimp>
+            <Chinese>地圖工具對準指北針</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsShow">
             <English>Show GPS on Map</English>
@@ -142,8 +142,8 @@
             <Russian>Показать GPS на карте</Russian>
             <Japanese>地図上に GPS を表示する</Japanese>
             <Korean>GPS를 지도상에 꺼내기</Korean>
-            <SChinese>在地图上显示GPS</SChinese>
-            <TChinese>在地圖上顯示GPS</TChinese>
+            <Chinesesimp>在地图上显示GPS</Chinesesimp>
+            <Chinese>在地圖上顯示GPS</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsHide">
             <English>Hide GPS on Map</English>
@@ -158,8 +158,8 @@
             <Russian>Скрыть GPS на карте</Russian>
             <Japanese>地図上から GPS を隠す</Japanese>
             <Korean>GPS를 지도상에서 숨기기</Korean>
-            <SChinese>在地图上隐藏GPS</SChinese>
-            <TChinese>在地圖上隱藏GPS</TChinese>
+            <Chinesesimp>在地图上隐藏GPS</Chinesesimp>
+            <Chinese>在地圖上隱藏GPS</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_MarkerDirection">
             <English>Direction: %1°</English>
@@ -174,8 +174,8 @@
             <Portuguese>Direção: %1</Portuguese>
             <Japanese>方位：%1°</Japanese>
             <Korean>방위: %1°</Korean>
-            <SChinese>方位: %1°</SChinese>
-            <TChinese>方位: %1°</TChinese>
+            <Chinesesimp>方位: %1°</Chinesesimp>
+            <Chinese>方位: %1°</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
             <English>Rotate Map Tools Key</English>
@@ -186,8 +186,8 @@
             <German>Taste zum Drehen des Kartenwerkzeugs</German>
             <Korean>독도용 도구 돌리기 키</Korean>
             <Italian>Ruota Strumenti di Mappatura</Italian>
-            <SChinese>选转地图工具的按键</SChinese>
-            <TChinese>選轉地圖工具的按鍵</TChinese>
+            <Chinesesimp>选转地图工具的按键</Chinesesimp>
+            <Chinese>選轉地圖工具的按鍵</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
@@ -198,8 +198,8 @@
             <German>Steuerungstaste, um Drehung des Kartenwerkzeugs zu ermöglichen.</German>
             <Korean>독도용 도구를 돌리기 위한 키를 변경할 수 있습니다.</Korean>
             <Italian>Tasto modifica per consentire strumenti di mappatura rotanti</Italian>
-            <SChinese>修改旋转地图工具的按键</SChinese>
-            <TChinese>修改旋轉地圖工具的按鍵</TChinese>
+            <Chinesesimp>修改旋转地图工具的按键</Chinesesimp>
+            <Chinese>修改旋轉地圖工具的按鍵</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
             <English>Draw straight lines with maptools</English>
@@ -209,8 +209,8 @@
             <Polish>Rysuj proste linie przy użyciu narzędzi nawigacyjnych</Polish>
             <French>Tracer des lignes droites</French>
             <Italian>Disegna linee dritte con gli strumenti di mappatura</Italian>
-            <SChinese>使用地图工具来绘制直线</SChinese>
-            <TChinese>使用地圖工具來繪製直線</TChinese>
+            <Chinesesimp>使用地图工具来绘制直线</Chinesesimp>
+            <Chinese>使用地圖工具來繪製直線</Chinese>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStaightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
@@ -220,8 +220,8 @@
             <Polish>Przeciągnij po krawędzi narzędzi nawigacyjnych by narysować prostą linię. Uwaga: aby usunąć linię - nalezy ustawić kursor nad jej środkiem.</Polish>
             <French>Utiliser le bord des outils de navigation pour tracer des lignes droites. Note: l'on doit survoler le milieu du trait pour pouvoir le supprimer.</French>
             <Italian>Disegna sul bordo degli strumenti di mappatura per disegnare linee dritte. Nota: Deve spostarsi al centro per essere cancellato.</Italian>
-            <SChinese>使用地图工具的边缘来绘制直线. 备注: 要删除直线时, 请把滑鼠移动到该线条的中央即可删除该线.</SChinese>
-            <TChinese>使用地圖工具的邊緣來繪製直線. 備註: 要刪除直線時, 請把滑鼠移動到該線條的中央即可刪除該線.</TChinese>
+            <Chinesesimp>使用地图工具的边缘来绘制直线. 备注: 要删除直线时, 请把滑鼠移动到该线条的中央即可删除该线.</Chinesesimp>
+            <Chinese>使用地圖工具的邊緣來繪製直線. 備註: 要刪除直線時, 請把滑鼠移動到該線條的中央即可刪除該線.</Chinese>
         </Key>
     </Package>
 </Project>

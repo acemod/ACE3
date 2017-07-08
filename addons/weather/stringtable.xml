@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKeyHold">
@@ -14,8 +14,8 @@
             <Portuguese>Mostrar informação do vento</Portuguese>
             <Japanese>風速を表示</Japanese>
             <Korean>바람 정보 표시</Korean>
-            <SChinese>显示风力资讯</SChinese>
-            <TChinese>顯示風力資訊</TChinese>
+            <Chinesesimp>显示风力资讯</Chinesesimp>
+            <Chinese>顯示風力資訊</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_WindInfoKeyToggle">
             <English>Show Wind Info (Toggle)</English>
@@ -30,8 +30,8 @@
             <Portuguese>Mostrar informação do vento (alternar)</Portuguese>
             <Japanese>風速を表示 (トグル)</Japanese>
             <Korean>바람 정보 표시 (토글)</Korean>
-            <SChinese>显示风力资讯(切换)</SChinese>
-            <TChinese>顯示風力資訊(切換)</TChinese>
+            <Chinesesimp>显示风力资讯(切换)</Chinesesimp>
+            <Chinese>顯示風力資訊(切換)</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_Module_DisplayName">
             <English>Weather</English>
@@ -46,8 +46,8 @@
             <Italian>Meteo</Italian>
             <Japanese>天候</Japanese>
             <Korean>기후</Korean>
-            <SChinese>天气</SChinese>
-            <TChinese>天氣</TChinese>
+            <Chinesesimp>天气</Chinesesimp>
+            <Chinese>天氣</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
@@ -62,8 +62,8 @@
             <Italian>Modulo Sincronizzazione Meteo ACE Multiplayer</Italian>
             <Japanese>ACE 天候モジュールではマルチプレイで同期します。</Japanese>
             <Korean>ACE 기후 모듈과 멀티플레이가 동기화됩니다.</Korean>
-            <SChinese>使用ACE天气模块来同步所有客户端的天气状态(多人游戏)</SChinese>
-            <TChinese>使用ACE天氣模塊來同步所有客戶端的天氣狀態(多人遊戲)</TChinese>
+            <Chinesesimp>使用ACE天气模块来同步所有客户端的天气状态(多人游戏)</Chinesesimp>
+            <Chinese>使用ACE天氣模塊來同步所有客戶端的天氣狀態(多人遊戲)</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_DisplayName">
             <English>Weather propagation</English>
@@ -78,8 +78,8 @@
             <Italian>Propagazione Meteo</Italian>
             <Japanese>天候の統一</Japanese>
             <Korean>기후 전파</Korean>
-            <SChinese>天气状态广播</SChinese>
-            <TChinese>天氣狀態廣播</TChinese>
+            <Chinesesimp>天气状态广播</Chinesesimp>
+            <Chinese>天氣狀態廣播</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_Description">
             <English>Enables server side weather propagation</English>
@@ -94,8 +94,8 @@
             <Italian>Abilita propagazione meteo lato server</Italian>
             <Japanese>サーバ側による天候の統一を有効化</Japanese>
             <Korean>서버의 기후를 전파합니다 </Korean>
-            <SChinese>启用伺服器的天气状态广播</SChinese>
-            <TChinese>啟用伺服器的天氣狀態廣播</TChinese>
+            <Chinesesimp>启用伺服器的天气状态广播</Chinesesimp>
+            <Chinese>啟用伺服器的天氣狀態廣播</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_DisplayName">
             <English>ACE Weather</English>
@@ -110,8 +110,8 @@
             <Italian>Meteo ACE</Italian>
             <Japanese>ACE 天候</Japanese>
             <Korean>ACE 기후</Korean>
-            <SChinese>ACE 天气</SChinese>
-            <TChinese>ACE 天氣</TChinese>
+            <Chinesesimp>ACE 天气</Chinesesimp>
+            <Chinese>ACE 天氣</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_Description">
             <English>Overrides the default weather (editor, mission settings) with ACE weather (map based)</English>
@@ -126,8 +126,8 @@
             <Italian>Scavalca il meteo default (editor, parametri missione) con il meteo ACE (basato su mappa)</Italian>
             <Japanese>ACE 天候 (マップを元) による標準の天候 (エディタやミッション設定) を上書きします。</Japanese>
             <Korean>기존의 기후(에디터, 임무 설정)를 ACE 기후로 치환합니다. (지도에 따라)</Korean>
-            <SChinese>使ACE天气覆盖预设的天气 (编辑任务设置)</SChinese>
-            <TChinese>使ACE天氣覆蓋預設的天氣 (編輯任務設置)</TChinese>
+            <Chinesesimp>使ACE天气覆盖预设的天气 (编辑任务设置)</Chinesesimp>
+            <Chinese>使ACE天氣覆蓋預設的天氣 (編輯任務設置)</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_DisplayName">
             <English>Sync Rain</English>
@@ -142,8 +142,8 @@
             <Italian>Sincronizza Pioggia</Italian>
             <Japanese>降雨の同期</Japanese>
             <Korean>비 동기화</Korean>
-            <SChinese>同步雨</SChinese>
-            <TChinese>同步雨</TChinese>
+            <Chinesesimp>同步雨</Chinesesimp>
+            <Chinese>同步雨</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_Description">
             <English>Synchronizes rain</English>
@@ -158,8 +158,8 @@
             <Italian>Sincronizza Pioggia</Italian>
             <Japanese>降雨の同期</Japanese>
             <Korean>비를 동기화 합니다</Korean>
-            <SChinese>同步雨</SChinese>
-            <TChinese>同步雨</TChinese>
+            <Chinesesimp>同步雨</Chinesesimp>
+            <Chinese>同步雨</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_DisplayName">
             <English>Sync Wind</English>
@@ -174,8 +174,8 @@
             <Italian>Sincronizza Vento</Italian>
             <Japanese>風を同期</Japanese>
             <Korean>바람 동기화</Korean>
-            <SChinese>同步风</SChinese>
-            <TChinese>同步風</TChinese>
+            <Chinesesimp>同步风</Chinesesimp>
+            <Chinese>同步風</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_Description">
             <English>Synchronizes wind</English>
@@ -190,8 +190,8 @@
             <Italian>Sincronizza Vento</Italian>
             <Japanese>風を同期</Japanese>
             <Korean>바람을 동기화 합니다</Korean>
-            <SChinese>同步风</SChinese>
-            <TChinese>同步風</TChinese>
+            <Chinesesimp>同步风</Chinesesimp>
+            <Chinese>同步風</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_DisplayName">
             <English>Sync Misc</English>
@@ -206,8 +206,8 @@
             <Italian>Sincronizza Misto</Italian>
             <Japanese>その他を同期</Japanese>
             <Korean>기타 동기화</Korean>
-            <SChinese>同步杂项</SChinese>
-            <TChinese>同步雜項</TChinese>
+            <Chinesesimp>同步杂项</Chinesesimp>
+            <Chinese>同步雜項</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
             <English>Synchronizes lightnings, rainbow, fog,...</English>
@@ -222,8 +222,8 @@
             <Italian>Sincronizza lampi, arcobaleni, nebbia,...</Italian>
             <Japanese>ライティングや虹、霧などを同期</Japanese>
             <Korean>번개라던가, 무지개, 안개등을 동기화 합니다</Korean>
-            <SChinese>同步闪电, 彩虹, 雾等等...</SChinese>
-            <TChinese>同步閃電, 彩虹, 霧等等...</TChinese>
+            <Chinesesimp>同步闪电, 彩虹, 雾等等...</Chinesesimp>
+            <Chinese>同步閃電, 彩虹, 霧等等...</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
@@ -238,8 +238,8 @@
             <Italian>Intervallo Aggiornamenti</Italian>
             <Japanese>更新間隔</Japanese>
             <Korean>갱신 간격</Korean>
-            <SChinese>更新间隔</SChinese>
-            <TChinese>更新間隔</TChinese>
+            <Chinesesimp>更新间隔</Chinesesimp>
+            <Chinese>更新間隔</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_Description">
             <English>Defines the interval (seconds) between weather updates</English>
@@ -254,8 +254,8 @@
             <Italian>Definisce l'intervallo (in secondi) tra aggiornamenti del meteo</Italian>
             <Japanese>天候を更新する間隔を定義します。(秒)</Japanese>
             <Korean>기후를 갱신 하는 간격을 초 단위로 정합니다.</Korean>
-            <SChinese>设定天气更新的时间间隔(秒)</SChinese>
-            <TChinese>設定天氣更新的時間間隔(秒)</TChinese>
+            <Chinesesimp>设定天气更新的时间间隔(秒)</Chinesesimp>
+            <Chinese>設定天氣更新的時間間隔(秒)</Chinese>
         </Key>
     </Package>
 </Project>

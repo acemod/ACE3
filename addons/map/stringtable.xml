@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Map">
         <Key ID="STR_ACE_Map_Module_DisplayName">
@@ -14,8 +14,8 @@
             <Italian>Mappa</Italian>
             <Japanese>地図</Japanese>
             <Korean>지도</Korean>
-            <SChinese>地图</SChinese>
-            <TChinese>地圖</TChinese>
+            <Chinesesimp>地图</Chinesesimp>
+            <Chinese>地圖</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
@@ -30,8 +30,8 @@
             <Italian>Illuminazione Mappa?</Italian>
             <Japanese>地図に照明？</Japanese>
             <Korean>지도에 조명?</Korean>
-            <SChinese>地图照明?</SChinese>
-            <TChinese>地圖照明?</TChinese>
+            <Chinesesimp>地图照明?</Chinesesimp>
+            <Chinese>地圖照明?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
@@ -45,8 +45,8 @@
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
             <Japanese>環境光やプレイヤーのアイテムにより、地図へ光のシミュレーションをおこないますか？</Japanese>
             <Korean>주변 환경및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
-            <SChinese>透过环境光与玩家的物品来决定地图亮度?</SChinese>
-            <TChinese>透過環境光與玩家的物品來決定地圖亮度?</TChinese>
+            <Chinesesimp>透过环境光与玩家的物品来决定地图亮度?</Chinesesimp>
+            <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
@@ -60,8 +60,8 @@
             <French>Lumière de la lampe de carte ?</French>
             <Japanese>地図をフラッシュライトで照らしますか？</Japanese>
             <Korean>지도 조명이 빛이 납니까?</Korean>
-            <SChinese>增加地图亮度?</SChinese>
-            <TChinese>增加地圖亮度?</TChinese>
+            <Chinesesimp>增加地图亮度?</Chinesesimp>
+            <Chinese>增加地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -75,8 +75,8 @@
             <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
             <Japanese>プレイヤが地図上でフラッシュライトを使うと、照らすようにしますか？</Japanese>
             <Korean>지도에 불빛을 비치는 플레이어를 조금 더 밝게 합니까?</Korean>
-            <SChinese>当玩家拥有手电筒时, 增加地图亮度?</SChinese>
-            <TChinese>當玩家擁有手電筒時, 增加地圖亮度?</TChinese>
+            <Chinesesimp>当玩家拥有手电筒时, 增加地图亮度?</Chinesesimp>
+            <Chinese>當玩家擁有手電筒時, 增加地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -91,8 +91,8 @@
             <Italian>Scuoti la mappa?</Italian>
             <Japanese>地図を揺らしますか？</Japanese>
             <Korean>지도 흔들림?</Korean>
-            <SChinese>地图震动?</SChinese>
-            <TChinese>地圖震動?</TChinese>
+            <Chinesesimp>地图震动?</Chinesesimp>
+            <Chinese>地圖震動?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -107,8 +107,8 @@
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
             <Japanese>歩いているときは地図を揺らしますか？</Japanese>
             <Korean>걸을때 지도보면 흔들리게 합니까?</Korean>
-            <SChinese>走路时让地图有震动的感觉?</SChinese>
-            <TChinese>走路時讓地圖有震動的感覺?</TChinese>
+            <Chinesesimp>走路时让地图有震动的感觉?</Chinesesimp>
+            <Chinese>走路時讓地圖有震動的感覺?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
             <English>Limit map zoom?</English>
@@ -123,8 +123,8 @@
             <Italian>Limita lo zoom in mappa?</Italian>
             <Japanese>地図の拡大を制限しますか？</Japanese>
             <Korean>지도 확대 제한?</Korean>
-            <SChinese>限制地图缩放倍率?</SChinese>
-            <TChinese>限制地圖縮放倍率?</TChinese>
+            <Chinesesimp>限制地图缩放倍率?</Chinesesimp>
+            <Chinese>限制地圖縮放倍率?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
@@ -139,8 +139,8 @@
             <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
             <Japanese>地図上で利用できる拡大倍率を制限しますか？</Japanese>
             <Korean>지도 확대에 제한을 둡니까?</Korean>
-            <SChinese>限制地图上可允许缩放的倍率?</SChinese>
-            <TChinese>限制地圖上可允許縮放的倍率?</TChinese>
+            <Chinesesimp>限制地图上可允许缩放的倍率?</Chinesesimp>
+            <Chinese>限制地圖上可允許縮放的倍率?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates?</English>
@@ -155,8 +155,8 @@
             <Italian>Mostra coordinate sul cursore?</Italian>
             <Japanese>カーソル先で座標を表示しますか？</Japanese>
             <Korean>커서에 좌표를 보이게 합니까?</Korean>
-            <SChinese>显示游标的座标?</SChinese>
-            <TChinese>顯示游標的座標?</TChinese>
+            <Chinesesimp>显示游标的座标?</Chinesesimp>
+            <Chinese>顯示游標的座標?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
@@ -171,8 +171,8 @@
             <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
             <Japanese>カーソルに合わせた先の地図座標を表示しますか？</Japanese>
             <Korean>지도에서 커서 옆에 좌표가 뜨게 합니까?</Korean>
-            <SChinese>显示滑鼠游标所在的网格座标?</SChinese>
-            <TChinese>顯示滑鼠游標所在的網格座標?</TChinese>
+            <Chinesesimp>显示滑鼠游标所在的网格座标?</Chinesesimp>
+            <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
             <English>This module allows you to customize the map screen.</English>
@@ -187,8 +187,8 @@
             <Italian>Questo modulo ti permette di customizzare lo schermo della mappa.</Italian>
             <Japanese>モジュールは地図画面をカスタマイズできます。</Japanese>
             <Korean>이 모듈은 지도 화면을 임의로 설정할 수 있게 해줍니다.</Korean>
-            <SChinese>此模块允许自定地图的相关效果.</SChinese>
-            <TChinese>此模塊允許自定地圖的相關效果.</TChinese>
+            <Chinesesimp>此模块允许自定地图的相关效果.</Chinesesimp>
+            <Chinese>此模塊允許自定地圖的相關效果.</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -203,8 +203,8 @@
             <Italian>Blue Force Tracking</Italian>
             <Japanese>ブルー フォース トラッキング</Japanese>
             <Korean>GPS피아식별기</Korean>
-            <SChinese>显示蓝方踪迹</SChinese>
-            <TChinese>顯示藍方蹤跡</TChinese>
+            <Chinesesimp>显示蓝方踪迹</Chinesesimp>
+            <Chinese>顯示藍方蹤跡</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
             <English>BFT Enable</English>
@@ -219,8 +219,8 @@
             <Italian>Abilita BFT</Italian>
             <Japanese>BFT を有効化</Japanese>
             <Korean>GPS피아식별기 켜기</Korean>
-            <SChinese>蓝方踪迹启用</SChinese>
-            <TChinese>藍方蹤跡啟用</TChinese>
+            <Chinesesimp>蓝方踪迹启用</Chinesesimp>
+            <Chinese>藍方蹤跡啟用</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
@@ -235,8 +235,8 @@
             <Italian>Abilita Blue Force Tracking. Default: No</Italian>
             <Japanese>ブルー フォース トラッキングを有効化します。標準：無効</Japanese>
             <Korean>GPS피아식별기 켭니다. 기본설정: 아니요</Korean>
-            <SChinese>启用显示蓝方踪迹. 预设: 否</SChinese>
-            <TChinese>啟用顯示藍方蹤跡. 預設: 否</TChinese>
+            <Chinesesimp>启用显示蓝方踪迹. 预设: 否</Chinesesimp>
+            <Chinese>啟用顯示藍方蹤跡. 預設: 否</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
@@ -251,8 +251,8 @@
             <Italian>Intervallo</Italian>
             <Japanese>間隔</Japanese>
             <Korean>간격</Korean>
-            <SChinese>间隔</SChinese>
-            <TChinese>間隔</TChinese>
+            <Chinesesimp>间隔</Chinesesimp>
+            <Chinese>間隔</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
@@ -267,8 +267,8 @@
             <Italian>Quanto spesso vengono aggiornati i marker (in secondi)</Italian>
             <Japanese>マーカが再描画される間隔を設定できます（秒）</Japanese>
             <Korean>몇 초마다 마커를 새로 갱신합니까?</Korean>
-            <SChinese>设定每多少时间重新标示出单位位置 (秒)</SChinese>
-            <TChinese>設定每多少時間重新標示出單位位置 (秒)</TChinese>
+            <Chinesesimp>设定每多少时间重新标示出单位位置 (秒)</Chinesesimp>
+            <Chinese>設定每多少時間重新標示出單位位置 (秒)</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups?</English>
@@ -283,8 +283,8 @@
             <Italian>Nascondere gruppi IA?</Italian>
             <Japanese>AI グループを非表示にしますか？</Japanese>
             <Korean>인공지능 그룹을 숨깁니까?</Korean>
-            <SChinese>隐藏AI小队?</SChinese>
-            <TChinese>隱藏AI小隊?</TChinese>
+            <Chinesesimp>隐藏AI小队?</Chinesesimp>
+            <Chinese>隱藏AI小隊?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
@@ -299,8 +299,8 @@
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
             <Japanese>'AI のみ'グループのマーカを隠しますか？</Japanese>
             <Korean>인공지능만 있는 그룹의 마커를 숨깁니까?</Korean>
-            <SChinese>隐藏'AI小队'的踪迹?</SChinese>
-            <TChinese>隱藏'AI小隊'的蹤跡?</TChinese>
+            <Chinesesimp>隐藏'AI小队'的踪迹?</Chinesesimp>
+            <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_DisplayName">
             <English>Show player names?</English>
@@ -315,8 +315,8 @@
             <Italian>Mostra i nomi dei giocatori?</Italian>
             <Japanese>プレイヤ名を表示しますか？</Japanese>
             <Korean>플레이어 이름을 표시합니까?</Korean>
-            <SChinese>显示玩家名称?</SChinese>
-            <TChinese>顯示玩家名稱?</TChinese>
+            <Chinesesimp>显示玩家名称?</Chinesesimp>
+            <Chinese>顯示玩家名稱?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_Description">
             <English>Show individual player names?</English>
@@ -331,8 +331,8 @@
             <Italian>Mostra i nomi dei giocatori singoli?</Italian>
             <Japanese>プレイヤの名前を表示しますか？</Japanese>
             <Korean>각 플레이어의 이름을 표시합니까?</Korean>
-            <SChinese>显示玩家的个别名称?</SChinese>
-            <TChinese>顯示玩家的個別名稱?</TChinese>
+            <Chinesesimp>显示玩家的个别名称?</Chinesesimp>
+            <Chinese>顯示玩家的個別名稱?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English>This module allows the tracking of allied units with BFT map markers.</English>
@@ -347,8 +347,8 @@
             <Italian>Questo modulo permette il tracciamento di unità alleate con i marker BFT in mappa</Italian>
             <Japanese>モジュールは BFT マップ マーカとともに、同勢力ユニットの追跡を許可します。</Japanese>
             <Korean>이 모듈은 아군을 지도상에서 추적할 수 있게 해줍니다.</Korean>
-            <SChinese>此模块将使你能在地图上看见友方单位的踪迹.</SChinese>
-            <TChinese>此模塊將使你能在地圖上看見友方單位的蹤跡.</TChinese>
+            <Chinesesimp>此模块将使你能在地图上看见友方单位的踪迹.</Chinesesimp>
+            <Chinese>此模塊將使你能在地圖上看見友方單位的蹤跡.</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
@@ -362,8 +362,8 @@
             <Italian>Torcia</Italian>
             <Japanese>フラッシュライト</Japanese>
             <Korean>손전등</Korean>
-            <SChinese>手电筒</SChinese>
-            <TChinese>手電筒</TChinese>
+            <Chinesesimp>手电筒</Chinesesimp>
+            <Chinese>手電筒</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
@@ -377,8 +377,8 @@
             <Italian>NVG</Italian>
             <Japanese>夜間暗視装置</Japanese>
             <Korean>야투경</Korean>
-            <SChinese>夜视镜</SChinese>
-            <TChinese>夜視鏡</TChinese>
+            <Chinesesimp>夜视镜</Chinesesimp>
+            <Chinese>夜視鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
@@ -392,8 +392,8 @@
             <Italian>Acceso</Italian>
             <Japanese>起動</Japanese>
             <Korean>켜기</Korean>
-            <SChinese>开启</SChinese>
-            <TChinese>開啟</TChinese>
+            <Chinesesimp>开启</Chinesesimp>
+            <Chinese>開啟</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
@@ -407,8 +407,8 @@
             <Italian>Spento</Italian>
             <Japanese>停止</Japanese>
             <Korean>끄기</Korean>
-            <SChinese>关闭</SChinese>
-            <TChinese>關閉</TChinese>
+            <Chinesesimp>关闭</Chinesesimp>
+            <Chinese>關閉</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
@@ -422,8 +422,8 @@
             <Italian>Aumenta Luminosità</Italian>
             <Japanese>感度を上げる</Japanese>
             <Korean>밝기 올리기</Korean>
-            <SChinese>增加亮度</SChinese>
-            <TChinese>增加亮度</TChinese>
+            <Chinesesimp>增加亮度</Chinesesimp>
+            <Chinese>增加亮度</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
@@ -437,8 +437,8 @@
             <Italian>Diminuisci Luminosità</Italian>
             <Japanese>感度を下げる</Japanese>
             <Korean>밝기 내리기</Korean>
-            <SChinese>降低亮度</SChinese>
-            <TChinese>降低亮度</TChinese>
+            <Chinesesimp>降低亮度</Chinesesimp>
+            <Chinese>降低亮度</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_turnLightOn">
             <English>Turn On %1</English>
@@ -453,8 +453,8 @@
             <Russian>Активировать %1</Russian>
             <Japanese>%1 を点ける</Japanese>
             <Korean>%1 켜기</Korean>
-            <SChinese>开启%1</SChinese>
-            <TChinese>開啟%1</TChinese>
+            <Chinesesimp>开启%1</Chinesesimp>
+            <Chinese>開啟%1</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_turnLightOff">
             <English>Turn Off %1</English>
@@ -469,8 +469,8 @@
             <Russian>Деактивировать %1</Russian>
             <Japanese>%1 を消す</Japanese>
             <Korean>%1 끄기</Korean>
-            <SChinese>关闭%1</SChinese>
-            <TChinese>關閉%1</TChinese>
+            <Chinesesimp>关闭%1</Chinesesimp>
+            <Chinese>關閉%1</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
@@ -484,8 +484,8 @@
             <French>Mettre un canal par défaut</French>
             <Japanese>開始時のチャンネルを決定</Japanese>
             <Korean>시작시 채널</Korean>
-            <SChinese>设定游戏开始时的聊天频道</SChinese>
-            <TChinese>設定遊戲開始時的聊天頻道</TChinese>
+            <Chinesesimp>设定游戏开始时的聊天频道</Chinesesimp>
+            <Chinese>設定遊戲開始時的聊天頻道</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
@@ -499,8 +499,8 @@
             <French>Change le canal de communication par défaut au début de la mission.</French>
             <Japanese>ミッション開始時にあらかじめ設定されているマーカ チャンネルを変更します</Japanese>
             <Korean>미션시작시 마커채널을 변경합니다</Korean>
-            <SChinese>更改任务启动时的聊天频道</SChinese>
-            <TChinese>更改任務啟動時的聊天頻道</TChinese>
+            <Chinesesimp>更改任务启动时的聊天频道</Chinesesimp>
+            <Chinese>更改任務啟動時的聊天頻道</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT">
             <English>Disable BFT</English>
@@ -510,8 +510,8 @@
             <Polish>Wyłącz BFT</Polish>
             <French>Désactive le BFT</French>
             <Italian>Disablita BFT</Italian>
-            <SChinese>关闭友军踪迹</SChinese>
-            <TChinese>關閉友軍蹤跡</TChinese>
+            <Chinesesimp>关闭友军踪迹</Chinesesimp>
+            <Chinese>關閉友軍蹤跡</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT_description">
             <English>Always disable Blue Force Tracking for this group.</English>
@@ -521,8 +521,8 @@
             <Polish>Zawsze wyłączaj Blue Force Tracking dla tej grupy.</Polish>
             <French>Désactive en permanence le Blue Force Tracking pour ce groupe.</French>
             <Italian>Disabilita sempre il Blue Force Tracking per questo gruppo.</Italian>
-            <SChinese>对此小队永远关闭友军踪迹显示.</SChinese>
-            <TChinese>對此小隊永遠關閉友軍蹤跡顯示.</TChinese>
+            <Chinesesimp>对此小队永远关闭友军踪迹显示.</Chinesesimp>
+            <Chinese>對此小隊永遠關閉友軍蹤跡顯示.</Chinese>
         </Key>
     </Package>
 </Project>
