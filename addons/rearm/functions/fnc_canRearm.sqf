@@ -29,4 +29,9 @@ if (isNull _dummy) exitwith {false};
 private _magazineClass = _dummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {false};
 
-([_vehicle, _magazineClass] call FUNC(getNeedRearmMagazines)) select 0
+private _needRearmMags = [_vehicle] call FUNC(getNeedRearmMagazines);
+
+// Testing if vehicle needs rearm on any magazines of class _magazineClass
+private _needsRearm = ({(_x select 0) isEqualTo _magazineClass} count _needRearmMags) > 0;
+
+_needsRearm

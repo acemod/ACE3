@@ -23,50 +23,12 @@ _vehicles = _vehicles select {(_x != _truck) && {!(_x isKindOf "CAManBase")} && 
 private _vehicleActions = [];
 {
     private _vehicle = _x;
-    private _magazineHelper = [];
-    private _turrets = [_vehicle] call FUNC(getAllTurrets);
-    {
-        private _turretPath = _x;
-        private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
-        {
-            private _magazine = _x;
-            if (!(_magazine in _magazineHelper)) then {
-                private _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
-                private _maxMagazines = [_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines);
-
-                if ((_currentMagazines < _maxMagazines) || {(_vehicle magazineTurretAmmo [_magazine, _turretPath]) < getNumber (configFile >> "CfgMagazines" >> _magazine >> "count")}) then {
-                    _magazineHelper pushBack _magazine;
-                };
-            };
-            false
-        } count _magazines;
-        false
-    } count _turrets;
-
-    // 1.70 pylons
-    private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
-    {
-        private _pylonName = configName _x;
-        private _pylonAmmo = _vehicle ammoOnPylon _pylonName;
-        private _pylonMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
-        TRACE_3("",_pylonName,_pylonAmmo,_pylonMagazine);
-
-        if (_pylonAmmo > 0) then {
-            // Try to refill current pylon:
-            private _magAmmo = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
-            if ((!(_pylonMagazine in _magazineHelper)) && {_pylonAmmo < _magAmmo}) then {
-                _magazineHelper pushBack _pylonMagazine;
-            };
-        } else {
-            // See what we magazines can add to the empty pylon:
-            private _hardpointMags = [_x] call FUNC(getHardpointMagazines);
-            {
-                if (!(_x in _magazineHelper)) then {
-                    _magazineHelper pushBack _x;
-                };
-            } forEach _hardpointMags;
-        };
-    } forEach _pylonConfigs;
+    
+    // Array of magazines that can be rearmed in the vehicle
+    private _needRearmMags = ([_vehicle] call FUNC(getNeedRearmMagazines)) apply {_x select 0};
+    
+    // _needRearmMags without duplicates
+    private _magazineHelper = _needRearmMags arrayIntersect _needRearmMags;
 
     _magazineHelper = _magazineHelper select {[_truck, _x] call FUNC(hasEnoughSupply)};
     TRACE_2("can add",_x,_magazineHelper);
