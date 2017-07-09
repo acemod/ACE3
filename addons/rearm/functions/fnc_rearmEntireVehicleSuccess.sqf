@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Rearm information <ARRAY>
  *   0: Ammo Truck <OBJECT>
- *   1: Vehicle <OBJECT
+ *   1: Vehicle <OBJECT>
  *
  * Return Value:
  * None

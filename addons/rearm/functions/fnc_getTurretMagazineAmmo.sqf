@@ -1,6 +1,6 @@
 /*
  * Author: Tuupertunut
- * Returns the current ammo counts of all magazines of given class in turret.
+ * Returns the current ammo counts in all magazines of given class in turret.
  *
  * BIS command "magazineTurretAmmo" is broken at the time of writing (2017-06-24)
  * (https://feedback.bistudio.com/T79689). This function is intended as a workaround for it,

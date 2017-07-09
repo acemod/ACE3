@@ -3,7 +3,7 @@
  * Show the resupplyable ammunition of all surrounding vehicles.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  *
  * Return Value:
  * ChildActions <ARRAY>
@@ -78,40 +78,46 @@ private _vehicleActions = [];
         };
         if (GVAR(level) == 0) then {
             // [Level 0] adds a single action to rearm the entire vic
-            private _action = [_vehicle,
-            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),
-            _icon,
-            {_this call FUNC(rearmEntireVehicle)},
-            {true},
-            {},
-            _vehicle] call EFUNC(interact_menu,createAction);
+            private _action = [
+                _vehicle,
+                getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),
+                _icon,
+                {_this call FUNC(rearmEntireVehicle)},
+                {true},
+                {},
+                _vehicle
+            ] call EFUNC(interact_menu,createAction);
             _vehicleActions pushBack [_action, [], _truck];
         } else {
             // [Level 1,2] - Add actions for each magazine
             private _actions = [];
             {
-                private _action = [_x,
-                getText(configFile >> "CfgMagazines" >> _x >> "displayName"),
-                getText(configFile >> "CfgMagazines" >> _x >> "picture"),
-                {_this call FUNC(takeAmmo)},
-                {true},
-                {},
-                [_x, _vehicle]] call EFUNC(interact_menu,createAction);
+                private _action = [
+                    _x,
+                    getText(configFile >> "CfgMagazines" >> _x >> "displayName"),
+                    getText(configFile >> "CfgMagazines" >> _x >> "picture"),
+                    {_this call FUNC(takeAmmo)},
+                    {true},
+                    {},
+                    [_x, _vehicle]
+                ] call EFUNC(interact_menu,createAction);
 
                 _actions pushBack [_action, [], _truck];
             } forEach _magazineHelper;
 
-            private _action = [_vehicle,
+            private _action = [
+                _vehicle,
                 getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),
                 _icon,
                 {},
                 {true},
                 {},
-                []] call EFUNC(interact_menu,createAction);
+                []
+            ] call EFUNC(interact_menu,createAction);
+            
             _vehicleActions pushBack [_action, _actions, _truck];
         };
     };
-    false
-} count _vehicles;
+} forEach _vehicles;
 
 _vehicleActions
