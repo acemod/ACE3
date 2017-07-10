@@ -539,6 +539,12 @@ class CfgVehicles {
         GVAR(hooks)[] = {{0, 0.4, -0.5}, {0, -0.4, -0.5}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
+    class Land_FuelStation_01_pump_malevil_F: House_F {
+        transportFuel = 0; //50k
+        MACRO_REFUEL_ACTIONS
+        GVAR(hooks)[] = {{0, 0.4, -0.5}, {0, -0.4, -0.5}};
+        GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
+    };
 
     // Helper object for non-AllVehicles objects
     class GVAR(helper): Helicopter_Base_F {

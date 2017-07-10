@@ -39,7 +39,7 @@ private _fuelTrucks = configProperties [configFile >> "CfgVehicles", "(isClass _
 #endif
 
 #ifdef DRAW_HOOKS_POS
-addMissionEventHandler ["Draw3D", { // Blue is predicted before throw, red is real
+addMissionEventHandler ["Draw3D", {
     private _target = cursorObject;
     private _cfgPos = getArray (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hooks));
     private _dynPos = _target getVariable [QGVAR(dev_hooks), []];
