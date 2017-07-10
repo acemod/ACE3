@@ -44,11 +44,9 @@ if (local _box) then {
 
         // These functions are smart and do all the cooking off work
         if (local _box) then {
-            if (_box getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
-                if (GVAR(ammoCookoffDuration) == 0) exitWith {};
-                ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-                [_box, _mags, _total] call FUNC(detonateAmmunition);
-            };
+            if (GVAR(ammoCookoffDuration) == 0) exitWith {};
+            ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
+            [_box, _mags, _total] call FUNC(detonateAmmunition);
 
             // This shit is busy being on fire, magazines aren't accessible/usable
             clearMagazineCargoGlobal _box;
