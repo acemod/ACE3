@@ -12,7 +12,7 @@ class Cfg3DEN {
                         expression = QUOTE(if !(_value) then {_this setVariable [ARR_3('%s',_value,true)];};);
                         typeName = "BOOL";
                         condition = "objectVehicle";
-                        defaultValue = "(true)"; // fix pbo project preprocessing bug
+                        defaultValue = QUOTE(GETMVAR(QGVAR(enable),true));
                     };
                     class GVAR(enableAmmoCookoff) {
                         property = QGVAR(enableAmmoCookoff);
@@ -22,7 +22,7 @@ class Cfg3DEN {
                         expression = QUOTE(if !(_value) then {_this setVariable [ARR_3('%s',_value,true)];};);
                         typeName = "BOOL";
                         condition = "objectHasInventoryCargo";
-                        defaultValue = "(true)"; // fix pbo project preprocessing bug
+                        defaultValue = QUOTE(if (_this isKindOf 'ReammoBox_F') then { GETMVAR(QGVAR(enableAmmobox),true) } else { GETMVAR(QGVAR(enableAmmoCookoff),true) };);
                     };
                 };
             };
