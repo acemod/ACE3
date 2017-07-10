@@ -125,6 +125,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinGroup);
                     condition = QUOTE(GVAR(EnableTeamManagement) && {[ARR_2(_player,_target)] call DFUNC(canJoinGroup)});
                     statement = QUOTE([_player] joinSilent group _target);
+                    modifierFunction = QUOTE(call FUNC(modifyJoinGroupAction));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                     priority = 2.6;
