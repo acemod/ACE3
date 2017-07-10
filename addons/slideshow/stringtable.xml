@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Slideshow">
         <Key ID="STR_ACE_Slideshow_DisplayName">
@@ -14,8 +14,8 @@
             <Italian>Mostra Diapositive</Italian>
             <Japanese>スライドショー</Japanese>
             <Korean>슬라이드 쇼</Korean>
-            <TChinese>幻燈片</TChinese>
-            <SChinese>幻灯片</SChinese>
+            <Chinese>幻燈片</Chinese>
+            <Chinesesimp>幻灯片</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
@@ -30,8 +30,8 @@
             <Italian>Questo modulo ti permette di creare una presentazione con diapositive su vari oggetti. Un modulo per lista immagini. Solo oggetti con hiddenSelection 0 sono supportati.</Italian>
             <Japanese>さまざまなオブジェクトへスライドショーを設定することができます。1つのモジュールは各画像リストになっています。オブジェクトが hiddenSelection 0へ対応している必要があります。</Japanese>
             <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈당 한 이미지목록만 가능합니다. 또한 물체가 hiddenSelection 0 를 지원해야만합니다.</Korean>
-            <TChinese>此模塊可讓圖片以幻燈片的形式顯示在物件上. 每個模塊都能設定一串幻燈片清單. 被設定的物件不能有隱藏部位(hiddenSelection).</TChinese>
-            <SChinese>此模块可让图片以幻灯片的形式显示在物件上. 每个模块都能设定一串幻灯片清单. 被设定的物件不能有隐藏部位(hiddenSelection).</SChinese>
+            <Chinese>此模塊可讓圖片以幻燈片的形式顯示在物件上. 每個模塊都能設定一串幻燈片清單. 被設定的物件不能有隱藏部位(hiddenSelection).</Chinese>
+            <Chinesesimp>此模块可让图片以幻灯片的形式显示在物件上. 每个模块都能设定一串幻灯片清单. 被设定的物件不能有隐藏部位(hiddenSelection).</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
@@ -46,8 +46,8 @@
             <Italian>Oggetti</Italian>
             <Japanese>オブジェクト</Japanese>
             <Korean>물체</Korean>
-            <TChinese>物件</TChinese>
-            <SChinese>物件</SChinese>
+            <Chinese>物件</Chinese>
+            <Chinesesimp>物件</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
@@ -62,8 +62,8 @@
             <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separato da virgole se più di uno.</Italian>
             <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
             <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다.</Korean>
-            <TChinese>物件名稱 (也可使用同步線來設定), 幻燈片將會顯示在該物件上, 如有多個物件, 請以逗號作區隔.</TChinese>
-            <SChinese>物件名称 (也可使用同步线来设定), 幻灯片将会显示在该物件上, 如有多个物件, 请以逗号作区隔.</SChinese>
+            <Chinese>物件名稱 (也可使用同步線來設定), 幻燈片將會顯示在該物件上, 如有多個物件, 請以逗號作區隔.</Chinese>
+            <Chinesesimp>物件名称 (也可使用同步线来设定), 幻灯片将会显示在该物件上, 如有多个物件, 请以逗号作区隔.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
@@ -78,8 +78,8 @@
             <Italian>Controllori</Italian>
             <Japanese>コントローラ</Japanese>
             <Korean>조종 장치</Korean>
-            <TChinese>控制器</TChinese>
-            <SChinese>控制器</SChinese>
+            <Chinese>控制器</Chinese>
+            <Chinesesimp>控制器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
@@ -93,8 +93,8 @@
             <Italian>Nomi di oggetti controllori, separati da virgole se multipli.</Italian>
             <Japanese>コントローラに指定するオブジェクト名を記入し、複数ある場合はコンマで区切れます。</Japanese>
             <Korean>조종 장치 물체 명칭, 다수의 경우 쉼표로 구분됩니다.</Korean>
-            <TChinese>指定是控制器的物件名稱, 如有多個物件, 請以逗號作區隔.</TChinese>
-            <SChinese>指定是控制器的物件名称, 如有多个物件, 请以逗号作区隔.</SChinese>
+            <Chinese>指定是控制器的物件名稱, 如有多個物件, 請以逗號作區隔.</Chinese>
+            <Chinesesimp>指定是控制器的物件名称, 如有多个物件, 请以逗号作区隔.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
@@ -109,8 +109,8 @@
             <Italian>Immagini</Italian>
             <Japanese>画像</Japanese>
             <Korean>사진</Korean>
-            <TChinese>圖片</TChinese>
-            <SChinese>图片</SChinese>
+            <Chinese>圖片</Chinese>
+            <Chinesesimp>图片</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
@@ -125,8 +125,8 @@
             <Italian>Lista di immagini che verranno usate durante la presentazione, separati da virgole, con il formato completo del percorso (es. images\image.paa)</Italian>
             <Japanese>完全なパスでスライドショーに使う画像一覧を入力してください。コンマで区別できます。(例: images\image.paa)</Japanese>
             <Korean>슬라이드 쇼에 쓰일 사진목록입니다, 쉼표로 구분됩니다, 경로설정을 정확히 하십시요. (예: 사진\사진.ppa)</Korean>
-            <TChinese>要做為幻燈片的圖片清單, 每個圖片請已逗號區隔, 並輸入完整路徑位址 (例如:images\image.paa).</TChinese>
-            <SChinese>要做为幻灯片的图片清单, 每个图片请已逗号区隔, 并输入完整路径位址 (例如:images\image.paa).</SChinese>
+            <Chinese>要做為幻燈片的圖片清單, 每個圖片請已逗號區隔, 並輸入完整路徑位址 (例如:images\image.paa).</Chinese>
+            <Chinesesimp>要做为幻灯片的图片清单, 每个图片请已逗号区隔, 并输入完整路径位址 (例如:images\image.paa).</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
@@ -141,8 +141,8 @@
             <German>Interaktionsnamen</German>
             <Japanese>インタラクション名</Japanese>
             <Korean>상호작용 명칭</Korean>
-            <TChinese>互動鍵名稱</TChinese>
-            <SChinese>互动键名称</SChinese>
+            <Chinese>互動鍵名稱</Chinese>
+            <Chinesesimp>互动键名称</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
@@ -156,8 +156,8 @@
             <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Kommata getrennt, in Reihenfolge der Bilder.</German>
             <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
             <Korean>상호작용 메세지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
-            <TChinese>設定互動鍵切換圖片時的按鈕名稱, 多個按鈕請以逗號做區隔, 有多少圖片就輸入多少個按鈕, 以利切換圖片.</TChinese>
-            <SChinese>设定互动键切换图片时的按钮名称, 多个按钮请以逗号做区隔, 有多少图片就输入多少个按钮, 以利切换图片.</SChinese>
+            <Chinese>設定互動鍵切換圖片時的按鈕名稱, 多個按鈕請以逗號做區隔, 有多少圖片就輸入多少個按鈕, 以利切換圖片.</Chinese>
+            <Chinesesimp>设定互动键切换图片时的按钮名称, 多个按钮请以逗号做区隔, 有多少图片就输入多少个按钮, 以利切换图片.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
             <English>Set Name</English>
@@ -165,8 +165,8 @@
             <Japanese>名前設定</Japanese>
             <French>Définir le nom</French>
             <Italian>Imposta Nome</Italian>
-            <TChinese>設定名稱</TChinese>
-            <SChinese>设定名称</SChinese>
+            <Chinese>設定名稱</Chinese>
+            <Chinesesimp>设定名称</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
@@ -174,8 +174,8 @@
             <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。標準: "Slides"</Japanese>
             <French>Un nom qui sera utilisé pour interagir avec plusieurs diaporamas. Par défaut : "Slides"</French>
             <Italian>Nome che sarà utilizzato per le principali interazioni (per distinguere le multiple diapositive). Predefinito: "Slides"</Italian>
-            <TChinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片.) 預設名稱: "幻燈片"</TChinese>
-            <SChinese>设定该幻灯片的标题名称 (用来区分多个不同标题的幻灯片.) 预设名称: "幻灯片"</SChinese>
+            <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片.) 預設名稱: "幻燈片"</Chinese>
+            <Chinesesimp>设定该幻灯片的标题名称 (用来区分多个不同标题的幻灯片.) 预设名称: "幻灯片"</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
@@ -190,8 +190,8 @@
             <German>Länge der Diavorführung pro Bild</German>
             <Japanese>スライドの持続時間</Japanese>
             <Korean>슬라이드 지속시간</Korean>
-            <TChinese>幻燈片顯示時間</TChinese>
-            <SChinese>幻灯片显示时间</SChinese>
+            <Chinese>幻燈片顯示時間</Chinese>
+            <Chinesesimp>幻灯片显示时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
@@ -206,8 +206,8 @@
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
             <Japanese>各スライドの持続時間。標準：0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
-            <TChinese>每張幻燈片顯示的時間. 預設:0 (自動換圖已禁用)</TChinese>
-            <SChinese>每张幻灯片显示的时间. 预设:0 (自动换图已禁用)</SChinese>
+            <Chinese>每張幻燈片顯示的時間. 預設:0 (自動換圖已禁用)</Chinese>
+            <Chinesesimp>每张幻灯片显示的时间. 预设:0 (自动换图已禁用)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
@@ -222,8 +222,8 @@
             <German>Dias</German>
             <Japanese>スライド</Japanese>
             <Korean>슬라이드</Korean>
-            <TChinese>幻燈片</TChinese>
-            <SChinese>幻灯片</SChinese>
+            <Chinese>幻燈片</Chinese>
+            <Chinesesimp>幻灯片</Chinesesimp>
         </Key>
     </Package>
 </Project>

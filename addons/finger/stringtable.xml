@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="finger">
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
@@ -14,8 +14,8 @@
             <Italian>Mostra puntatore per te stesso</Italian>
             <Japanese>自分にポインティング表記を表示する</Japanese>
             <Korean>자신이 가리키는곳을 보여줍니다</Korean>
-            <SChinese>显示指向指示器给自己</SChinese>
-            <TChinese>顯示指向指示器給自己</TChinese>
+            <Chinesesimp>显示指向指示器给自己</Chinesesimp>
+            <Chinese>顯示指向指示器給自己</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
@@ -30,8 +30,8 @@
             <Italian>Mostra puntatore per il giocatore indicato. Questa opzione non influisce la possibilità che gli altri giocatori vedano il puntatore</Italian>
             <Japanese>プレイヤーへのポインティング表記を描画します。このオプションは他のプレイヤーの表記に影響しません。</Japanese>
             <Korean>대상이 가리키는곳을 보이게 합니다.</Korean>
-            <SChinese>显示指向指示器给玩家自己. 此选项设定并不影响其他玩家能否看到指示器.</SChinese>
-            <TChinese>顯示指向指示器給玩家自己. 此選項設定並不影響其他玩家能否看到指示器.</TChinese>
+            <Chinesesimp>显示指向指示器给玩家自己. 此选项设定并不影响其他玩家能否看到指示器.</Chinesesimp>
+            <Chinese>顯示指向指示器給玩家自己. 此選項設定並不影響其他玩家能否看到指示器.</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_name">
             <English>Pointing indicator</English>
@@ -46,8 +46,8 @@
             <Italian>Indicatore di puntamento</Italian>
             <Japanese>ポインティング表記</Japanese>
             <Korean>가리키기 표시기</Korean>
-            <SChinese>指向指示器</SChinese>
-            <TChinese>指向指示器</TChinese>
+            <Chinesesimp>指向指示器</Chinesesimp>
+            <Chinese>指向指示器</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
@@ -62,8 +62,8 @@
             <Italian>Colore del cerchio dell'indicatore di puntamento</Italian>
             <Japanese>ポインティング表記の円の色</Japanese>
             <Korean>가리키기의 원형 색상</Korean>
-            <SChinese>指向指示器颜色</SChinese>
-            <TChinese>指向指示器顏色</TChinese>
+            <Chinesesimp>指向指示器颜色</Chinesesimp>
+            <Chinese>指向指示器顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_keyComb">
             <English>Action "point a finger at"</English>
@@ -78,8 +78,8 @@
             <Italian>Azione "punta il dito a"</Italian>
             <Japanese>"point a finger at"キー</Japanese>
             <Korean>"손가락으로 가리키기"행동</Korean>
-            <SChinese>使"手指指向在"</SChinese>
-            <TChinese>使"手指指向在"</TChinese>
+            <Chinesesimp>使"手指指向在"</Chinesesimp>
+            <Chinese>使"手指指向在"</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
@@ -94,8 +94,8 @@
             <Italian>Punta e mostra un marker virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
             <Japanese>ポイント、そして架空のマーカー表記は自ユニットの近くにいると表記されます。これは押しっぱなしにできます。</Japanese>
             <Korean>당신이 보는것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른채로 유지할 수 있습니다.</Korean>
-            <SChinese>当按下此按键后, 你附近的单位即可看见一个虚拟图示, 标明你正在指向的位置. 此按键可以被按住来持续显示.</SChinese>
-            <TChinese>當按下此按鍵後, 你附近的單位即可看見一個虛擬圖示, 標明你正在指向的位置. 此按鍵可以被按住來持續顯示.</TChinese>
+            <Chinesesimp>当按下此按键后, 你附近的单位即可看见一个虚拟图示, 标明你正在指向的位置. 此按键可以被按住来持续显示.</Chinesesimp>
+            <Chinese>當按下此按鍵後, 你附近的單位即可看見一個虛擬圖示, 標明你正在指向的位置. 此按鍵可以被按住來持續顯示.</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
@@ -110,8 +110,8 @@
             <Italian>Impostazioni puntamento</Italian>
             <Japanese>ポインティング設定</Japanese>
             <Korean>가리키기 설정</Korean>
-            <SChinese>指向设定</SChinese>
-            <TChinese>指向設定</TChinese>
+            <Chinesesimp>指向设定</Chinesesimp>
+            <Chinese>指向設定</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
@@ -126,8 +126,8 @@
             <Italian>Puntamento abilitato</Italian>
             <Japanese>ポインティングを有効</Japanese>
             <Korean>가리키기 활성화</Korean>
-            <SChinese>指向系统启动</SChinese>
-            <TChinese>指向系統啟動</TChinese>
+            <Chinesesimp>指向系统启动</Chinesesimp>
+            <Chinese>指向系統啟動</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
@@ -142,8 +142,8 @@
             <Italian>Raggio massimo puntamento</Italian>
             <Japanese>ポインティングの最大範囲</Japanese>
             <Korean>가리키기 최대 범위</Korean>
-            <SChinese>指向指示器最大显示距离</SChinese>
-            <TChinese>指向指示器最大顯示距離</TChinese>
+            <Chinesesimp>指向指示器最大显示距离</Chinesesimp>
+            <Chinese>指向指示器最大顯示距離</Chinese>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
@@ -158,8 +158,8 @@
             <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [default: 4 metri]</Italian>
             <Japanese>ポインティング表記が他のプレイヤーに表示される範囲を決定できます。（標準 4 メートル）</Japanese>
             <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
-            <SChinese>设定指向指示器最大显示距离. [预设: 4公尺]</SChinese>
-            <TChinese>設定指向指示器最大顯示距離. [預設: 4公尺]</TChinese>
+            <Chinesesimp>设定指向指示器最大显示距离. [预设: 4公尺]</Chinesesimp>
+            <Chinese>設定指向指示器最大顯示距離. [預設: 4公尺]</Chinese>
         </Key>
     </Package>
 </Project>

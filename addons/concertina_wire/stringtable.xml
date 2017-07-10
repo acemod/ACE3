@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="concertina_wire">
         <Key ID="STR_ACE_CONCERTINA_WIRE">
@@ -14,8 +14,8 @@
             <Portuguese>Arame farpado</Portuguese>
             <Japanese>鉄条網</Japanese>
             <Korean>철조망</Korean>
-            <TChinese>鐵絲網</TChinese>
-            <SChinese>铁丝网</SChinese>
+            <Chinese>鐵絲網</Chinese>
+            <Chinesesimp>铁丝网</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CONCERTINA_WIRECOIL">
             <English>Concertina Wire Coil</English>
@@ -30,8 +30,8 @@
             <Portuguese>Bobina de arame farpado</Portuguese>
             <Japanese>鉄条網コイル</Japanese>
             <Korean>윤형 철조망</Korean>
-            <TChinese>鐵絲網捲</TChinese>
-            <SChinese>铁丝网卷</SChinese>
+            <Chinese>鐵絲網捲</Chinese>
+            <Chinesesimp>铁丝网卷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UNROLLWIRE">
             <English>Dismount Concertina Wire</English>
@@ -46,8 +46,8 @@
             <Portuguese>Desmontar arame farpado</Portuguese>
             <Japanese>鉄条網をほどく</Japanese>
             <Korean>철조망 해체</Korean>
-            <TChinese>卸下鐵絲網</TChinese>
-            <SChinese>卸下铁丝网</SChinese>
+            <Chinese>卸下鐵絲網</Chinese>
+            <Chinesesimp>卸下铁丝网</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ROLLWIRE">
             <English>Deploy Concertina Wire</English>
@@ -62,8 +62,8 @@
             <Portuguese>Colocar arame farpado</Portuguese>
             <Japanese>鉄条網を置く</Japanese>
             <Korean>철조망 배치</Korean>
-            <TChinese>佈署鐵絲網</TChinese>
-            <SChinese>布署铁丝网</SChinese>
+            <Chinese>佈署鐵絲網</Chinese>
+            <Chinesesimp>布署铁丝网</Chinesesimp>
         </Key>
     </Package>
 </Project>

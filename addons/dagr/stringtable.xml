@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="DAGR">
         <Key ID="STR_ACE_DAGR_Name">
@@ -13,8 +13,8 @@
             <French>DAGR</French>
             <Japanese>DAGR</Japanese>
             <Korean>DAGR</Korean>
-            <TChinese>軍用GPS接收器</TChinese>
-            <SChinese>军用GPS接收器</SChinese>
+            <Chinese>軍用GPS接收器</Chinese>
+            <Chinesesimp>军用GPS接收器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_DAGR_ConfigureDAGR">
             <English>Configure DAGR</English>
@@ -28,8 +28,8 @@
             <French>Configurer le DAGR</French>
             <Japanese>DAGR を設定</Japanese>
             <Korean>DAGR 설정</Korean>
-            <TChinese>軍用GPS接收器設定</TChinese>
-            <SChinese>军用GPS接收器设定</SChinese>
+            <Chinese>軍用GPS接收器設定</Chinese>
+            <Chinesesimp>军用GPS接收器设定</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_DAGR_ToggleDAGR">
             <English>Toggle DAGR</English>
@@ -43,8 +43,8 @@
             <French>Activer/Desactiver le DAGR</French>
             <Japanese>DAGR を常に表示</Japanese>
             <Korean>DAGR 토글</Korean>
-            <TChinese>切換軍用GPS接收器</TChinese>
-            <SChinese>切换军用GPS接收器</SChinese>
+            <Chinese>切換軍用GPS接收器</Chinese>
+            <Chinesesimp>切换军用GPS接收器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>
@@ -58,8 +58,8 @@
             <French>Defense Advanced GPS Receiver</French>
             <Japanese>アドバンスド DAGR の受信を定義します</Japanese>
             <Korean>국방 고급위성항법시스템 수신기</Korean>
-            <TChinese>軍用高級防禦GPS接收器</TChinese>
-            <SChinese>军用高级防御GPS接收器</SChinese>
+            <Chinese>軍用高級防禦GPS接收器</Chinese>
+            <Chinesesimp>军用高级防御GPS接收器</Chinesesimp>
         </Key>
     </Package>
 </Project>

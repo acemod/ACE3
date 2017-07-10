@@ -19,7 +19,9 @@ if (isServer) then {
 };
 
 [QGVAR(makeDummyEH), LINKFUNC(makeDummy)] call CBA_fnc_addEventHandler;
+[QGVAR(rearmEntireVehicleSuccessEH), LINKFUNC(rearmEntireVehicleSuccess)] call CBA_fnc_addEventHandler;
 [QGVAR(rearmEntireVehicleSuccessLocalEH), LINKFUNC(rearmEntireVehicleSuccessLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(rearmSuccessEH), LINKFUNC(rearmSuccess)] call CBA_fnc_addEventHandler;
 [QGVAR(rearmSuccessLocalEH), LINKFUNC(rearmSuccessLocal)] call CBA_fnc_addEventHandler;
 
 
