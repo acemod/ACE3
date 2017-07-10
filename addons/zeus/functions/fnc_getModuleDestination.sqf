@@ -5,17 +5,16 @@
  * Arguments:
  * 0: The souce object <OBJECT>
  * 1: Code to run when position is ready <CODE>
- * - Code is passed [
-                        0: Successful <BOOL>, 
-                        1: Object <OBJECT>, 
-                        2: Position ASL <ARRAY>, 
-                        3: State of Shift <BOOL>, 
-                        4: State of Ctrl <BOOL>,
-                        5: State of Alt <BOOL>
-                    ]
- * 2: Text <STRING><OPTIONAL>
- * 3: Icon image file <STRING><OPTIONAL>
- * 4: Icon color <ARRAY><OPTIONAL>
+ * - Code is passed
+ *  0: Successful <BOOL>
+ *  1: Object <OBJECT>
+ *  2: Position ASL <ARRAY>
+ *  3: State of Shift <BOOL>
+ *  4: State of Ctrl <BOOL>
+ *  5: State of Alt <BOOL>
+ * 2: Text <STRING> (default: "")
+ * 3: Icon image file <STRING> (default: "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa")
+ * 4: Icon color <ARRAY> (default: [1,0,0,1])
  *
  * Return Value:
  * None
@@ -37,10 +36,15 @@ if (missionNamespace getVariable [QGVAR(moduleDestination_running), false]) exit
 GVAR(moduleDestination_running) = true;
 
 // Add mouse button eh for the zeus display (triggered from 2d or 3d)
-GVAR(moduleDestination_displayEHMouse) = [(findDisplay 312), "mouseButtonDown", {
+GVAR(moduleDestination_displayEHMouse) = [findDisplay 312, "mouseButtonDown", {
     params ["", "_mouseButton", "", "", "_shift", "_ctrl", "_alt"];
+
     if (_mouseButton != 0) exitWith {}; // Only watch for LMB
+    TRACE_2("placed",_object,_mousePosASL);
+
     _thisArgs params ["_object", "_code"];
+
+    // Get mouse position on 2D map or 3D world
     private _mousePosASL = if (ctrlShown ((findDisplay 312) displayCtrl 50)) then {
         private _pos2d = (((findDisplay 312) displayCtrl 50) ctrlMapScreenToWorld getMousePosition);
         _pos2d set [2, getTerrainHeightASL _pos2d];
@@ -48,16 +52,21 @@ GVAR(moduleDestination_displayEHMouse) = [(findDisplay 312), "mouseButtonDown", 
     } else {
         AGLToASL (screenToWorld getMousePosition);
     };
-    TRACE_2("placed",_object,_mousePosASL);
+
     [true, _object, _mousePosASL, _shift, _ctrl, _alt] call _code;
     GVAR(moduleDestination_running) = false;
 }, [_object, _code]] call CBA_fnc_addBISEventHandler;
 
 // Add key eh for the zeus display (triggered from 2d or 3d)
-GVAR(moduleDestination_displayEHKeyboard) = [(findDisplay 312), "KeyDown", {
+GVAR(moduleDestination_displayEHKeyboard) = [findDisplay 312, "KeyDown", {
     params ["", "_keyCode", "_shift", "_ctrl", "_alt"];
+
     if (_keyCode != 1) exitWith {}; // Only watch for ESC
+    TRACE_2("aborted",_object,_mousePosASL);
+
     _thisArgs params ["_object", "_code"];
+
+    // Get mouse position on 2D map or 3D world
     private _mousePosASL = if (ctrlShown ((findDisplay 312) displayCtrl 50)) then {
         private _pos2d = (((findDisplay 312) displayCtrl 50) ctrlMapScreenToWorld getMousePosition);
         _pos2d set [2, getTerrainHeightASL _pos2d];
@@ -65,13 +74,13 @@ GVAR(moduleDestination_displayEHKeyboard) = [(findDisplay 312), "KeyDown", {
     } else {
         AGLToASL (screenToWorld getMousePosition);
     };
-    TRACE_2("aborted",_object,_mousePosASL);
+
     [false, _object, _mousePosASL, _shift, _ctrl, _alt] call _code;
     GVAR(moduleDestination_running) = false;
-    true;
+    true
 }, [_object, _code]] call CBA_fnc_addBISEventHandler;
 
-// Add draw eh for the zeus map - draws the 2d icon and line
+// Add draw EH for the zeus map - draws the 2D icon and line
 GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw", {
     params ["_mapCtrl"];
     _thisArgs params ["_object", "_text", "_icon", "_color"];
@@ -81,6 +90,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw",
     _mapCtrl drawLine [getPos _object, _pos2d, _color];
 }, [_object, _text, _icon, _color]] call CBA_fnc_addBISEventHandler;
 
+// Add draw EH for 3D camera view - draws the 3D icon and line
 [{
     (_this select 0) params ["_object", "_code", "_text", "_icon", "_color"];
     if ((isNull _object) || {isNull findDisplay 312} || {!isNull findDisplay 49}) then {
