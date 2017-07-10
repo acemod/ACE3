@@ -20,9 +20,11 @@
 params ["_logic", "_objects", "_activated"];
 TRACE_3("params",_logic,_objects,_activated);
 
+ACE_DEPRECATED(QFUNC(moduleMakeLoadable),"3.12.0","Eden editor object attributes");
+
 if ((isNull _logic) || {!_activated}) exitWith {};
 if (_objects isEqualTo []) exitWith {
-    ACE_LOGWARNING_1("ace_cargo_fnc_moduleMakeLoadable has no synced objects [%1]", _logic);
+    WARNING_1("ace_cargo_fnc_moduleMakeLoadable has no synced objects [%1]", _logic);
 };
 
 private _canLoad = _logic getVariable ["canLoad", true];

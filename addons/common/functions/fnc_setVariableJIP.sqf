@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "varname", 5] call ace_common_fnc_setVariableJIP
+ *
  * Public: No
  */
 #include "script_component.hpp"

@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Change in heart Rate <NUMBER>
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_getHeartRateChange
  *
  * Public: No
  */

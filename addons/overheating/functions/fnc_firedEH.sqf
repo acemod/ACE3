@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_overheating_fnc_firedEH
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -40,7 +43,7 @@ TRACE_4("weapon data from cache",_weapon,_dispersion,_slowdownFactor,_jamChance)
 // Dispersion and bullet slow down
 if (GVAR(overheatingDispersion)) then {
     // Exit if GVAR(pseudoRandomList) isn't synced yet
-    if (isNil QGVAR(pseudoRandomList)) exitWith {ACE_LOGERROR("No pseudoRandomList sync");};
+    if (isNil QGVAR(pseudoRandomList)) exitWith {ERROR("No pseudoRandomList sync");};
 
     //Dispersion: 0 mils @ 0°C, 0.5 mils @ 333°C, 2.2 mils @ 666°C, 5 mils at 1000°C
     _dispersion = _dispersion * 0.28125 * (_scaledTemperature^2);
@@ -94,7 +97,7 @@ if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(
 // Only compute jamming for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
-_jamChance = _jamChance * ([[0.5, 1.5, 15, 150], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
+_jamChance = _jamChance * ([[0.5, 1, 2, 8, 20, 150], 5 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
 
 // increase jam chance on dusty grounds if prone (and at ground level)
 if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {

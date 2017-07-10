@@ -33,7 +33,7 @@ params [["_reason", "", [""]], ["_mask", [], [[]], [0,8]]];
 
 if (isArray (missionConfigFile >> "showHUD")) then {
     //(showHud = 0;) is fine - the array is the problem
-    ACE_LOGWARNING("showHUD[] in Description.ext breaks the showHud command");
+    WARNING("showHUD[] in Description.ext breaks the showHud command");
 };
 
 if (_reason != "") then {

@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["sound", [0,0,0], 5, 5] call ace_common_fnc_playConfigSound3D
+ *
  * Public: Yes
  */
 #define DEBUG_MODE_FULL
@@ -21,7 +24,7 @@ params ["_soundClass", "_posASL", "_volume", "_distance"];
 private _cfgSound = configFile >> "CfgSounds" >> _soundClass;
 
 if (!isClass _cfgSound) exitWith {
-    ACE_LOGERROR_1("CfgSounds class [%1] does not exist", _soundClass);
+    ERROR_1("CfgSounds class [%1] does not exist", _soundClass);
 };
 
 private _args = getArray (_cfgSound >> "sound");

@@ -19,6 +19,9 @@
  * 2: Maximal X <NUMMBER>
  * 3: Maximal Y <NUMMBER>
  *
+ * Example:
+ * [bob, [5, 5, 5], [6, 6, 6]] call ace_common_fnc_worldToScreenBounds
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -38,13 +41,13 @@ _bounds params ["_boundsMin", "_boundsMax"];
 _boundsMin params ["_boundsMinX", "_boundsMinY", "_boundsMinZ"];
 _boundsMax params ["_boundsMaxX", "_boundsMaxY", "_boundsMaxZ"];
 
-_boundsMinX = _boundsMinX - _marginsX + _offsetsX;
-_boundsMinY = _boundsMinY - _marginsY + _offsetsY;
-_boundsMinZ = _boundsMinZ - _marginsZ + _offsetsZ;
+_boundsMinX = ((_boundsMinX - _marginsX) min 0) + _offsetsX;
+_boundsMinY = ((_boundsMinY - _marginsY) min 0) + _offsetsY;
+_boundsMinZ = ((_boundsMinZ - _marginsZ) min 0) + _offsetsZ;
 
-_boundsMaxX = _boundsMaxX + _marginsX + _offsetsX;
-_boundsMaxY = _boundsMaxY + _marginsY + _offsetsY;
-_boundsMaxZ = _boundsMaxZ + _marginsZ + _offsetsZ;
+_boundsMaxX = ((_boundsMaxX + _marginsX) max 0) + _offsetsX;
+_boundsMaxY = ((_boundsMaxY + _marginsY) max 0) + _offsetsY;
+_boundsMaxZ = ((_boundsMaxZ + _marginsZ) max 0) + _offsetsZ;
 
 private _boundsCorners = [
     [_boundsMinX, _boundsMinY, _boundsMinZ],

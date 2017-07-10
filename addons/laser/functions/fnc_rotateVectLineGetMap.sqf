@@ -1,17 +1,30 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_laser_fnc_rotateVectLineGetMap
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
-private ["_p", "_theta", "_p1", "_p2", "_q1", "_q2", "_u", "_d"];
-_p = _this select 0;
-_p1 = _this select 1;
-_p2 = _this select 2;
+params ["_p", "_p1", "_p2"];
 
-_q2 = [];
+private _q2 = [];
 
 /* Step 1 */
-_q1 = _p vectorDiff _p1;
-_u = _p2 vectorDiff _p1;
+private _q1 = _p vectorDiff _p1;
+private _u = _p2 vectorDiff _p1;
 _u = vectorNormalized _u;
-_d = sqrt((_u select 1)*(_u select 1) + (_u select 2)*(_u select 2));
+private _d = sqrt((_u select 1)*(_u select 1) + (_u select 2)*(_u select 2));
 
 /* Step 2 */
 if (_d != 0) then {

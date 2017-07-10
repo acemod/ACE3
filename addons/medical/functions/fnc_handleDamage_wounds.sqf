@@ -12,6 +12,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_wounds
+ *
  * Public: No
  */
 
@@ -38,7 +41,7 @@ call compile _extensionOutput;
     {
         _x params ["", "_compareId", "_comparyBodyPartN"];
         // Check if we have an id of the given class on the given bodypart already
-        if (_compareId == _toAddClassID && {_comparyBodyPartN2 == _bodyPartNToAdd}) exitWith {
+        if (_compareId == _toAddClassID && {_comparyBodyPartN == _bodyPartNToAdd}) exitWith {
             _foundIndex = _forEachIndex;
         };
     } forEach _openWounds;

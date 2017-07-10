@@ -7,10 +7,10 @@
  * 0: ace_cargo controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
- * onSetFocus = "_this call ace_zeus_fnc_ui_vehCargo"
+ * [CONTROL] call ace_zeus_fnc_ui_attributeCargo
  *
  * Public: No
  */
@@ -20,7 +20,7 @@
 params ["_control"];
 TRACE_1("params",_control);
 
-private _veh = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+private _veh = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("",_veh);
 
 private _loaded = _veh getVariable [QEGVAR(cargo,loaded), []];

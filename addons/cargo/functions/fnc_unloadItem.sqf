@@ -5,14 +5,15 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
+ * 2: Unloader <OBJECT> (default: objNull)
  *
  * Return Value:
- * Object unloaded <BOOL>
+ * Object was unloaded <BOOL>
  *
  * Example:
  * [object, vehicle] call ace_cargo_fnc_unloadItem
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
@@ -37,7 +38,7 @@ if ((count _emptyPosAGL) != 3) exitWith {
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
 if !(_item in _loaded) exitWith {
-    ACE_LOGERROR_3("Tried to unload item [%1] not in vehicle[%2] cargo[%3]", _item, _vehicle, _loaded);
+    ERROR_3("Tried to unload item [%1] not in vehicle[%2] cargo[%3]", _item, _vehicle, _loaded);
     false
 };
 

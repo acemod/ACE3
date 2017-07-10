@@ -12,6 +12,9 @@
  * 3: Light inner angle <NUMBER>
  * 4: Light outer angle <NUMBER>
  *
+ * Example:
+ * ["flashlight"] call ace_common_fnc_getLightPropertiesWeapon
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

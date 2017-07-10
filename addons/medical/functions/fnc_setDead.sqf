@@ -4,11 +4,14 @@
  *
  * Arguments:
  * 0: The unit that will be killed <OBJECT>
- * 1: Force Dead (ignore revive setting) <BOOL>
- * 1: Delay setDamage for a frame  <BOOL>
+ * 1: Force Dead (ignore revive setting) <BOOL> (default: false)
+ * 1: Delay setDamage for a frame  <BOOL> (default: false)
  *
- * ReturnValue:
+ * Return Value:
  * Did he died? <BOOL>
+ *
+ * Example:
+ * [bob, false, false] call ace_medical_fnc_setDead
  *
  * Public: yes
  */

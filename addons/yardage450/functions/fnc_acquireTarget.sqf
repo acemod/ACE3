@@ -3,12 +3,13 @@
  * Fires the laser to acquire the target
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_yardage450_fnc_acquireTarget
  *
  * Public: No
  */
@@ -33,7 +34,7 @@ GVAR(distanceIndex) = -1;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    _result = [eyePos ACE_player, ACE_player weaponDirection (currentWeapon ACE_player)] call EFUNC(laser,shootRay);
+    _result = [eyePos ACE_player, ACE_player weaponDirection (currentWeapon ACE_player), ACE_player] call EFUNC(laser,shootRay);
     _distance = _result select 1;
 
     _distance = _distance - 1 + (random 2);

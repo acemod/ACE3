@@ -9,8 +9,8 @@
  * 3: Track Added Hitpoints <BOOL> (default: false)
  *
  * Return Value:
- * 0: Text
- * 1: Added Hitpoint (default: [])
+ * 0: Text <STRING>
+ * 1: Added Hitpoint <NUMBER> (default: [])
  *
  * Example:
  * ["HitFuel", "Repairing %1 ...", "Repairing HitFuel"] call ace_repair_fnc_getHitPointString
@@ -84,7 +84,7 @@ for "_i" from 0 to (count _hitPoint) do {
 
 // Don't display part name if no string is found in stringtable
 if (_text == LSTRING(Hit)) then {
-    if (_hitPoint != "") then { ACE_LOGWARNING_1("Hitpoint [%1] - could not be localized", _hitPoint); };
+    if (_hitPoint != "") then { LOG_1("Hitpoint [%1] - could not be localized", _hitPoint); };
     _text = _textDefault;
 };
 

@@ -3,7 +3,7 @@
  * Switches to a unit close to a clicked map position
  *
  * Arguments:
- * 0: Faction
+ * 0: Faction <ARRAY>
  *   0: unit <OBJECT>
  *   1: sides <ARRAY>
  * 1: Map Position <ARRAY>

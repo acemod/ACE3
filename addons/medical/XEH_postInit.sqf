@@ -289,7 +289,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 if (hasInterface) then {
     ["ace_playerJIP", {
-        ACE_LOGINFO("JIP Medical init for player.");
+        INFO("JIP Medical init for player.");
         [player] call FUNC(init);
     }] call CBA_fnc_addEventHandler;
 };

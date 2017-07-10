@@ -46,12 +46,11 @@ if (_target getVariable [QEGVAR(medical,hasPain), false]) then {
 };
 
 _totalIvVolume = 0;
+private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
 {
-    private _value = _target getVariable _x;
-    if (!isNil "_value") then {
-        _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
-    };
-} count EGVAR(medical,IVBags);
+    _x params ["_bagVolumeRemaining"];
+    _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;
+} foreach _bloodBags;
 
 if (_totalIvVolume >= 1) then {
     _genericMessages pushBack [format [localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];

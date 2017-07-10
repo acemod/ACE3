@@ -7,18 +7,21 @@
  * ammo - classname <STRING>
  *
  * Return Value:
- * 0: _airFriction
- * 1: _caliber
- * 2: _bulletLength
- * 3: _bulletMass
- * 4: _transonicStabilityCoef
- * 5: _dragModel
- * 6: _ballisticCoefficients
- * 7: _velocityBoundaries
- * 8: _atmosphereModel
- * 9: _ammoTempMuzzleVelocityShifts
- * 10: _muzzleVelocityTable
- * 11: _barrelLengthTable
+ * 0: _airFriction <NUMBER>
+ * 1: _caliber <NUMBER>
+ * 2: _bulletLength <NUMBER>
+ * 3: _bulletMass <NUMBER>
+ * 4: _transonicStabilityCoef <NUMBER>
+ * 5: _dragModel <NUMBER>
+ * 6: _ballisticCoefficients <NUMBER>
+ * 7: _velocityBoundaries <NUMBER>
+ * 8: _atmosphereModel <NUMBER>
+ * 9: _ammoTempMuzzleVelocityShifts <NUMBER>
+ * 10: _muzzleVelocityTable <NUMBER>
+ * 11: _barrelLengthTable <NUMBER>
+ *
+ * Example:
+ * ["ammo"] call ace_advanced_ballistics_fnc_readAmmoDataFromConfig
  *
  * Public: No
  */
@@ -26,7 +29,7 @@
 
 TRACE_1("Reading Ammo Config",_this);
 private ["_ammo", "_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_result"];
-_ammoConfig = configFile >> "CfgAmmo" >> _this;
+private _ammoConfig = configFile >> "CfgAmmo" >> _this;
 
 _airFriction = getNumber(_ammoConfig >> "airFriction");
 _caliber = getNumber(_ammoConfig >> "ACE_caliber");
@@ -59,7 +62,7 @@ if ((_typicalSpeed > 0) && {_typicalSpeed < 360}) then {
     if (_inheritedBarrelConfig || _inheritedTempConfig) then {
         private _parentConfig = inheritsFrom _ammoConfig;
         private _parentSpeed = getNumber (_parentConfig >> "typicalSpeed");
-        ACE_LOGWARNING_4("Subsonic Ammo %1 (%2 m/s) missing `ACE_muzzleVelocities` or `ACE_ammoTempMuzzleVelocityShifts` configs, attempting to use parent %3 (%4m/s)",_this,_typicalSpeed,configName _parentConfig, _parentSpeed);
+        WARNING_4("Subsonic Ammo %1 (%2 m/s) missing `ACE_muzzleVelocities` or `ACE_ammoTempMuzzleVelocityShifts` configs, attempting to use parent %3 (%4m/s)",_this,_typicalSpeed,configName _parentConfig, _parentSpeed);
         if (_parentSpeed <= 0) exitWith {//Handle weird or null parent
             _muzzleVelocityTable = [];
             _ammoTempMuzzleVelocityShifts = [];

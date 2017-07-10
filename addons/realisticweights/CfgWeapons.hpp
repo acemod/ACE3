@@ -3,6 +3,9 @@ class CfgWeapons {
     class Rifle_Long_Base_F: Rifle_Base_F {
         class WeaponSlotsInfo;
     };
+    class Rifle_Short_Base_F: Rifle_Base_F {
+        class WeaponSlotsInfo;
+    };
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
@@ -176,7 +179,7 @@ class CfgWeapons {
 // - SMGs ---------------------------------------------------------------------
 
     // - CPW ------------------------------------------------------------------
-    class pdw2000_base_F: Rifle_Base_F {
+    class pdw2000_base_F: Rifle_Short_Base_F {
         class WeaponSlotsInfo;
     };
     class hgun_PDW2000_F: pdw2000_base_F {
@@ -186,7 +189,7 @@ class CfgWeapons {
     };
 
     // - KRISS Vector ---------------------------------------------------------
-    class SMG_01_Base: Rifle_Base_F {
+    class SMG_01_Base: Rifle_Short_Base_F {
         class WeaponSlotsInfo;
     };
     class SMG_01_F: SMG_01_Base {
@@ -196,7 +199,7 @@ class CfgWeapons {
     };
 
     // - CZ Scorpion ----------------------------------------------------------
-    class SMG_02_base_F: Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         class WeaponSlotsInfo;
     };
     class SMG_02_F: SMG_02_base_F {
@@ -283,6 +286,16 @@ class CfgWeapons {
     class srifle_DMR_02_F: DMR_02_base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 130;
+        };
+    };
+
+    // - Cyrus ------------------------------------------------------
+    class DMR_05_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class srifle_DMR_05_blk_F: DMR_05_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 140;
         };
     };
 

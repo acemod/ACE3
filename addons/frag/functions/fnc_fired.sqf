@@ -7,7 +7,7 @@
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_frag_fnc_fired
@@ -30,7 +30,7 @@ if (isNil "_shouldAdd") then {
         _shouldAdd = false;
     };
 
-    if (GVAR(SpallEnabled)) exitWith {
+    if (GVAR(spallEnabled)) exitWith {
         //Always want to run whenever spall is enabled?
         _shouldAdd = true;
         TRACE_2("SettingCache[spallEnabled]",_ammo,_shouldAdd);
@@ -42,7 +42,7 @@ if (isNil "_shouldAdd") then {
     private _explosive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive");
     private _indirectRange = getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange");
     private _force = getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(force));
-    private _fragPower = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange"))));
+    private _fragPower = getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirecthit") * (sqrt (getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange")));
 
     _shouldAdd = (_skip == 0) && {(_force == 1) || {_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}}};
     TRACE_6("SettingCache[willFrag?]",_skip,_explosive,_indirectRange,_force,_fragPower,_shouldAdd);
@@ -50,6 +50,14 @@ if (isNil "_shouldAdd") then {
 };
 
 if (_shouldAdd) then {
-    TRACE_3("Running Frag Tracking",_unit,_ammo,_projectile);
+    // firedMan will have nil "_gunner", so just check _unit; for firedVehicle we want to check _gunner
+    private _localShooter = if (isNil "_gunner") then {local _unit} else {local _gunner};
+    TRACE_4("",_localShooter,_unit,_ammo,_projectile);
+    if (!_localShooter) exitWith {};
+
+    // Skip if less than 0.5 second from last shot
+    if ((CBA_missionTime - (_unit getVariable [QGVAR(lastTrack), -1])) < 0.5) exitWith {};
+    _unit setVariable [QGVAR(lastTrack), CBA_missionTime];
+
     [_unit, _ammo, _projectile] call FUNC(addPfhRound);
 };

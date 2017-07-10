@@ -49,7 +49,7 @@ if (isArray _hitpointGroupConfig) then {
             {
                 private _subHitIndex = _allHitPoints find _x; //convert hitpoint classname to index
                 if (_subHitIndex == -1) then {
-                    ACE_LOGERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_x,_vehicle);
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_x,_vehicle);
                 } else {
                     private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
                     private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;

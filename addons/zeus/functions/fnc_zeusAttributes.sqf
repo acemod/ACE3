@@ -9,7 +9,7 @@
  * 2: Display class name <STRING>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * onLoad = "['onLoad',_this,'RscDisplayExample'] call ace_zeus_fnc_zeusAttributes"

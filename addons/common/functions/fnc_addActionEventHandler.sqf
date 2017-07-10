@@ -11,6 +11,9 @@
  * Return Value:
  * ID of the action (used to remove it later) <NUMBER>
  *
+ * Example:
+ * [bob, "DefaultAction", "condition", "execute"] call ace_common_fnc_addActionEventHandler
+ *
  * Public: No
  */
 #include "script_component.hpp"

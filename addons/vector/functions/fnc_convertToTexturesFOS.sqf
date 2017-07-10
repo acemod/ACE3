@@ -1,8 +1,19 @@
-/* by commy2
-
-converts rangefinder distance into array of textures for the vectors scripted info control
-
-*/
+/*
+ * Author: commy2
+ * converts rangefinder distance into array of textures for the vectors scripted info control
+ *
+ * Arguments:
+ * 0: Number <NUMBER>
+ * 1: Number <NUMBER>
+ *
+ * Return Value:
+ * Array <ARRAY>
+ *
+ * Example:
+ * [5, 6] call ace_vector_fnc_convertToTexturesFOS
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

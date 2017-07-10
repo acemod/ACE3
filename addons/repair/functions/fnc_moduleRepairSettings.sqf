@@ -33,4 +33,4 @@ if (!isServer) exitWith {};
 
 [_logic, QGVAR(wheelRepairRequiredItems), "wheelRepairRequiredItems"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("Repair Module Initialized.");
+INFO("Repair Module Initialized.");

@@ -3,10 +3,15 @@
  * Initializes the Map module.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.)
+ * Whatever the module provides. (I dunno.) <UNKNOWN>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ACE_map_fnc_moduleMap
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -24,4 +29,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(mapShowCursorCoordinates), "MapShowCursorCoordinates"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(DefaultChannel),           "DefaultChannel"          ] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("Map Module Initialized.");
+INFO("Map Module Initialized.");

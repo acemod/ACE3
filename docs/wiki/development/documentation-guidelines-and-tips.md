@@ -66,7 +66,7 @@ Short description of sub-feature 2.
 
 ## 3. Dependencies
 
-{% include dependencies_list.md component="ace_something" %}
+{% raw %}{% include dependencies_list.md component="blank" %}{% endraw %}
 
 ## 4. Guides
 

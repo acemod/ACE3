@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["ID"] call ace_common_fnc_removeCanInteractWithCondition
+ *
  * Public: No
  */
 #include "script_component.hpp"

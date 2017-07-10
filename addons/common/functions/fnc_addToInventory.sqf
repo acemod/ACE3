@@ -12,6 +12,9 @@
  * 0: Added to player <BOOL>
  * 1: weaponholder <OBJECT>
  *
+ * Example:
+ * [bob, "classname", "", 5] call ace_common_fnc_addToInventory
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -131,7 +134,7 @@ switch (_type select 0) do {
 
     default {
         _addedToUnit = false;
-        ACE_LOGWARNING_2("Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type);
+        WARNING_2("Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type);
     };
 };
 

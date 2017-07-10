@@ -9,6 +9,9 @@
  * 0: Type ("weapon", "item", "magazine", "") <STRING>
  * 1: Item Description <STRING>
  *
+ * Example:
+ * ["tire"] call ace_common_fnc_getItemType
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
