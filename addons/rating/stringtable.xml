@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Rating">
+        <Key ID="STR_ACE_Rating_Category_Rating">
+            <English>Rating</English>
+            <German>Bewertung</German>
+        </Key>
+        <Key ID="STR_ACE_Rating_RatingSettings_Module_DisplayName">
+            <English>Rating settings</English>
+            <German>Bewertungeinstellungen</German>
+        </Key>
+        <Key ID="STR_ACE_Rating_RatingSettings_Module_Description">
+            <English>Provides settings to control the rating behaviour to prevent friendly ai fire when destroying friendly equipment or shooting at friendlies</English>
+            <German>Bietet Einstellungen, um das Bewertungssystem zu steuern, um zu verhindern, dass verbündete KI das Feuer eröffnet, wenn verbündete Ausrüstung zerstört oder auf befreundete Einheiten gefeuert wurde</German>
+        </Key>
+        <Key ID="STR_ACE_Rating_RatingSettings_AllowRatingPlayers_DisplayName">
+            <English>Allow player ranking</English>
+            <German>Erlaube Bewertung von Spielern</German>
+        </Key>
+        <Key ID="STR_ACE_Rating_RatingSettings_AllowRatingPlayers_Description">
+            <English>Allows the player to get a negative ranking after friendly fire</English>
+            <German>Ermöglicht, dass der Spieler eine negative Bewertung nach Freundbeschuss erhält</German>
+        </Key>
+        <Key ID="STR_ACE_Rating_RatingSettings_AllowRatingAi_DisplayName">
+            <English>Allow AI ranking</English>
+            <German>Erlaube Bewertung von KI</German>
+        </Key>
+        <Key ID="STR_ACE_Rating_RatingSettings_AllowRatingAi_Description">
+            <English>Allows ai to get a negative ranking after friendly fire</English>
+            <German>Ermöglicht, dass KI eine negative Bewertung nach Freundbeschuss erhält</German>
+        </Key>
+    </Package>
+</Project>
