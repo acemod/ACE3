@@ -38,5 +38,5 @@ if (isServer) then {
         [QGVAR(rearmSuccessLocalEH), _this, _turretOwnerID] call CBA_fnc_ownerEvent;
     };
 } else {
-    [QGVAR(rearmSuccessLocalEH), _this] call EFUNC(common,serverEvent);
+    [QGVAR(rearmSuccessEH), _this] call CBA_fnc_serverEvent;
 };
