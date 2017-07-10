@@ -2,10 +2,11 @@
 #define COMPONENT_BEAUTIFIED Refuel
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define FAST_PROGRESSBARS
+// #define DRAW_HOOKS_POS
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
-// #define FAST_PROGRESSBARS
 
 #ifdef DEBUG_ENABLED_REFUEL
     #define DEBUG_MODE_FULL
