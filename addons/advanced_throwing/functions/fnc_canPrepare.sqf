@@ -32,6 +32,5 @@ GVAR(enabled) &&
 #endif
 
 {!(call EFUNC(common,isFeatureCameraActive))} &&
-{!EGVAR(common,isReloading)} &&
 {[_unit, objNull, ["isNotInside", "isNotSitting"/*, "isNotOnLadder"*/]] call EFUNC(common,canInteractWith)} && // Ladder needs positioning fixes on throw
 {_unit call CBA_fnc_canUseWeapon} // Disable in non-FFV seats due to surface detection issues
