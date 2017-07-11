@@ -5,7 +5,7 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_level_Description);
         value = 1;
         typeName = "SCALAR";
-        values[] = {"Disabled", "Basic", "Advanced"};
+        values[] = {"Basic", "Advanced"};
     };
     class GVAR(medicSetting) {
         category = CSTRING(Category_Medical);
