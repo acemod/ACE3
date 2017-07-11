@@ -1103,7 +1103,7 @@
             <Chinesesimp>只有维修专精兵</Chinesesimp>
             <Chinese>只有維修專精兵</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
+        <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
             <German>Erlaube Radwechsel</German>
             <Polish>Wymiana kół</Polish>
@@ -1118,7 +1118,7 @@
             <Chinesesimp>允许轮胎</Chinesesimp>
             <Chinese>允許輪胎</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Wheel_description">
+        <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
             <German>Wer kann Radwechsel durchführern?</German>
             <Polish>Kto może zdejmować i zmieniać koła?</Polish>
@@ -1133,7 +1133,7 @@
             <Chinesesimp>谁可维修轮胎?</Chinesesimp>
             <Chinese>誰可維修輪胎?</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Repair_name">
+        <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
             <German>Erlaube Reperatur</German>
             <Polish>Możliwość naprawy</Polish>
@@ -1148,7 +1148,7 @@
             <Chinesesimp>允许维修</Chinesesimp>
             <Chinese>允許維修</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Repair_description">
+        <Key ID="STR_ACE_Repair_engineerSetting_Repair_description">
             <English>Who can perform repair actions?</English>
             <German>Wer kann eine Reperatur durchführen?</German>
             <Polish>Kto może wykonywać czynności związane z naprawą pojazdów?</Polish>
