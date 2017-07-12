@@ -6,9 +6,9 @@ class CfgWeapons {
 	class MissileLauncher : LauncherCore {};
 	class Missile_AGM_02_Plane_CAS_01_F : MissileLauncher {};
 	
-	class ace_Weapon_AGM_65Launcher_Laser : weapon_AGM_65Launcher {
+	class ace_MaverickL_Launcher : weapon_AGM_65Launcher {
 		author = "xrufix";
-		displayname = $STR_ace_mav_weap;
+		displayname = $STR_ACE_MAV_WEAP;
 		magazines[] = {
 			"ace_magazine_missile_agm_02_laser_x1",
 			"ace_pylonmissile_missile_agm_02_Laser_x1",
@@ -19,12 +19,14 @@ class CfgWeapons {
 			"ace_PylonRack_Missile_AGM_02_Laser_x2"
 		};
 		weaponLockDelay = 0.1;
-		weaponLockSystem = 4;
+		weaponLockSystem = 0;
+
+        EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
 	};
 	
-	class ace_Missile_AGM_02_Plane_CAS_01_Laser : Missile_AGM_02_Plane_CAS_01_F {
+	class ace_MaverickL_Plane_CAS_01_F : Missile_AGM_02_Plane_CAS_01_F {
 		author = "xrufix";
-		displayname = $STR_ace_mav_weap;
+		displayname = $STR_ACE_MAV_WEAP;
 		magazines[] = {
 			"ace_magazine_missile_agm_02_laser_x1",
 			"ace_pylonmissile_missile_agm_02_Laser_x1",
@@ -35,6 +37,8 @@ class CfgWeapons {
 			"ace_PylonRack_Missile_AGM_02_Laser_x2"
 		};
 		weaponLockDelay = 0.1;
-		weaponLockSystem = 4;
+		weaponLockSystem = 0;
+		
+        EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
 	};
 };

@@ -5,14 +5,40 @@ class CfgAmmo {
 	};
 	class Missile_AGM_02_F : MissileBase {};
 	
-	class xru_missile_AGM_02_Laser : Missile_AGM_02_F {
+	class ace_missile_MaverickL : Missile_AGM_02_F {
 		author = "rufix";
 		autoSeekTarget = 0;
 		irLock = 0;
-		laserLock = 1;
+		laserLock = 0;
+		manualControl = 0;
 		missileLockMaxDistance = 16000;
 		weaponLockSystem = 4;
-		class Components : Components {
+		class ace_missileguidance {
+			enabled = 1;
+
+			minDeflection = 0.0005;
+			maxDeflection = 0.01;
+			incDeflection = 0.005;
+
+			canVanillaLock = 0;
+
+			defaultSeekerType = "SALH";
+			seekerTypes[] = {"SALH"};
+
+			defaultSeekerLockMode = "LOAL";
+			seekerLockModes[] = {"LOAL","LOBL"};
+
+			seekLastTargetPos = 1;
+			seekerAngle = 60;
+			seekerAccuracy = 1;
+
+			seekerMinRange = 1;
+			seekerMaxRange = 16000;
+
+			defaultAttackProfile = "LIN";
+			attackProfiles[] = {"LIN", "DIR", "MID", "HI"};
+		};
+/*		class Components : Components {
 			class SensorsManagerComponent {
 				class Components {
 					class LaserSensorComponent : SensorTemplateLaser {
@@ -39,6 +65,6 @@ class CfgAmmo {
 					};
 				};
 			};
-		};
+		};										*/
 	};
 };

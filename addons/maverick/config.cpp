@@ -10,7 +10,7 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 		ammo[] = {
-			"ace_missile_AGM_02_Laser"
+			"ace_missile_MaverickL"
 		};
 		magazines[] = {
 			"ace_magazine_missile_agm_02_laser_x1",
@@ -22,8 +22,8 @@ class CfgPatches {
 			"ace_PylonRack_Missile_AGM_02_Laser_x2"
 		};
 		weapons[] = {
-		    "ace_Weapon_AGM_65Launcher_Laser",
-			"ace_Missile_AGM_02_Plane_CAS_01_Laser"
+		    "ace_MaverickL_Launcher",
+			"ace_MaverickL_Plane_CAS_01_F"
 		};
 		units[] = {};
  	};
