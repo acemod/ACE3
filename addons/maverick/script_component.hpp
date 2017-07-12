@@ -15,3 +15,8 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define IDC_MODECONTROLGROUP 1000
+#define IDC_ATTACKMODE 1001
+#define IDC_LASERCODE 1002
+#define IDC_LASERICON 1003

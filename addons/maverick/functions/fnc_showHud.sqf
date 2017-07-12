@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [player] call ace_hellfire_fnc_showHud
+ * [player] call ace_maverick_fnc_showHud
  *
  * Public: No
  */
@@ -48,9 +48,8 @@ if (!_enabled) exitWith {TRACE_2("Disabled - Now Off",_enabled,GVAR(pfID));};
 
 TRACE_2("Enabled - Adding actions and PFEH",_enabled,GVAR(pfID));
 
-//[_vehicle, _turretPath] call FUNC(setupVehicle);
-
-private _adjustDown = false; // Flares display will block ours, if present just move ours down a bit
+private _adjustDown = false;
+// Flares display will block ours, if present just move ours down a bit
 {
     if ((getText (configFile >> "CfgWeapons" >> _x >> "simulation")) == "cmlauncher") exitWith {_adjustDown = true};
 } forEach (_vehicle weaponsTurret _turretPath);
@@ -73,37 +72,42 @@ GVAR(pfID) = [{
             _pos set [1, (_pos select 1) + ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)];
             _ctrl ctrlSetPosition _pos;
             _ctrl ctrlCommit 0;
+            TRACE_2("",_pos,_ctrl);
         };
     };
 
     private _currentWeapon = _vehicle currentWeaponTurret _turretPath;
     private _showLockMode = (getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(enabled))) == 1;
+    TRACE_2("",_currentWeapon,_showLockMode);
 
     private _ctrlGroup = (uiNamespace getVariable [QEGVAR(hellfire,display), displayNull]) displayCtrl 1000;
 
     if (!_showLockMode) exitWith {
         _ctrlGroup ctrlShow false;
     };
+    TRACE_1("",_ctrlGroup);
     _ctrlGroup ctrlShow true;
 
     private _ctrlText = (uiNamespace getVariable [QEGVAR(hellfire,display), displayNull]) displayCtrl IDC_ATTACKMODE;
     private _ctrlCode = (uiNamespace getVariable [QEGVAR(hellfire,display), displayNull]) displayCtrl IDC_LASERCODE;
     private _ctrlIcon = (uiNamespace getVariable [QEGVAR(hellfire,display), displayNull]) displayCtrl IDC_LASERICON;
+    TRACE_3("",_ctrlText,_ctrlCode,_ctrlIcon);
 
     // Do Laser Scan:
     private _laserSource = AGLtoASL (_vehicle modelToWorld (_vehicle selectionPosition _seekerSource));
     private _laserCode = _vehicle getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
     private _laserResult = [_laserSource, vectorDir _vehicle, 70, 5000, [ACE_DEFAULT_LASER_WAVELENGTH,ACE_DEFAULT_LASER_WAVELENGTH], _laserCode, _vehicle] call EFUNC(laser,seekerFindLaserSpot);
+    TRACE_3("",_laserSource,_laserCode,_laserResult);
     private _foundTargetPos = _laserResult select 0;
     private _haveLock = !isNil "_foundTargetPos";
+    TRACE_2("",_foundTargetPos,_haveLock);
 
     private _modeShort = "ERR";
     private _vehicleLockMode = _vehicle getVariable [QEGVAR(missileguidance,attackProfile), ""];
+    TRACE_1("before switch",_vehicleLockMode);
 
     switch (_vehicleLockMode) do { // note: missileguidance is case sensitive
-/*    case ("hellfire_hi"): {
-            _modeShort = getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
-        };  */
+        // keep switch although unused in case of future use.
         default {
             _vehicleLockMode = "maverick";
             _modeShort = if (_haveLock) then {

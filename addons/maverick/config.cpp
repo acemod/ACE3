@@ -4,7 +4,7 @@ class CfgPatches {
  	class ADDON {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_missileguidance"};
+        requiredAddons[] = {"ace_hellfire"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"xrufix"};
         url = ECSTRING(main,URL);
