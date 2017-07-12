@@ -1,5 +1,7 @@
 Adds pylon magazines with laser guided AGM-65 Maverick L.
 
 * The magazines can be added to every plane the vanilla Macer II can be added to.
-* The missile has near-instant lock-on simulating the real Maverick's ability to lock-on after launch. Maximum range is 16.000 M (Data taken from https://de.wikipedia.org/wiki/AGM-65_Maverick). This should be changed to real lock-on after launch.
+* The missile uses laser guidance based on ACE's Advanced Missile Guidance framework.
 * The PylonWeapon from CfgWeapons is added to planes with pylons automatically.
+
+![Laser guided Maverick](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/US_Navy_041128-N-5345W-016_Aviation_Ordnanceman_3rd_Class_William_Miller_arms_a_AGM-65_Maverick_laser-guided_missile.jpg/1280px-US_Navy_041128-N-5345W-016_Aviation_Ordnanceman_3rd_Class_William_Miller_arms_a_AGM-65_Maverick_laser-guided_missile.jpg)
