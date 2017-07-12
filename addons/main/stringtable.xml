@@ -12,6 +12,8 @@
             <Italian>Logistica ACE</Italian>
             <French>ACE Logistique</French>
             <Japanese>ACE ロジスティクス</Japanese>
+            <Chinesesimp>ACE 后勤</Chinesesimp>
+            <Chinese>ACE 後勤</Chinese>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>http://ace3mod.com/</English>
@@ -25,6 +27,8 @@
             <French>http://ace3mod.com/</French>
             <Korean>http://ace3mod.com/</Korean>
             <Japanese>http://ace3mod.com/</Japanese>
+            <Chinesesimp>http://ace3mod.com/</Chinesesimp>
+            <Chinese>http://ace3mod.com/</Chinese>
         </Key>
     </Package>
 </Project>

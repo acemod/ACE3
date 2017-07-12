@@ -14,6 +14,8 @@
             <Hungarian>Húzás</Hungarian>
             <Japanese>引きずる</Japanese>
             <Korean>끌기</Korean>
+            <Chinese>拖拉</Chinese>
+            <Chinesesimp>拖拉</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -28,6 +30,8 @@
             <Hungarian>Elengedés</Hungarian>
             <Japanese>はなす</Japanese>
             <Korean>놓기</Korean>
+            <Chinese>放開</Chinese>
+            <Chinesesimp>放开</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
@@ -42,6 +46,8 @@
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
             <Japanese>オブジェクトを引きずる/はなす</Japanese>
             <Korean>물건 끌기/놓기</Korean>
+            <Chinese>拖拉/放開物品</Chinese>
+            <Chinesesimp>拖拉/放开物品</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -56,6 +62,8 @@
             <Hungarian>Az objektum túl nehéz</Hungarian>
             <Japanese>アイテムが重すぎる</Japanese>
             <Korean>물체가 너무 무겁습니다</Korean>
+            <Chinese>此物品過重</Chinese>
+            <Chinesesimp>此物品过重</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -70,6 +78,8 @@
             <Russian>Нести</Russian>
             <Japanese>運ぶ</Japanese>
             <Korean>업기</Korean>
+            <Chinese>背起</Chinese>
+            <Chinesesimp>背起</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dragging_LowerRaise">
             <English>Raise/Lower</English>
@@ -83,6 +93,8 @@
             <French>Lever/Baisser</French>
             <Japanese>上げる/下げる</Japanese>
             <Korean>높이기/낮추기</Korean>
+            <Chinese>提高/下降</Chinese>
+            <Chinesesimp>提高/下降</Chinesesimp>
         </Key>
     </Package>
 </Project>
