@@ -5,7 +5,7 @@ class CfgAmmo {
 	};
 	class Missile_AGM_02_F : MissileBase {};
 	
-	class ace_missile_MaverickL : Missile_AGM_02_F {
+	class GVAR(L) : Missile_AGM_02_F {
 		author = "rufix";
 		autoSeekTarget = 0;
 		irLock = 0;

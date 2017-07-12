@@ -4,26 +4,26 @@ class CfgPatches {
  	class ADDON {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common","ace_missileguidance"};
+        requiredAddons[] = {"ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"xrufix"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 		ammo[] = {
-			"ace_missile_MaverickL"
+			GVAR(L)
 		};
 		magazines[] = {
-			"ace_magazine_missile_agm_02_laser_x1",
-			"ace_pylonmissile_missile_agm_02_Laser_x1",
-			"ace_pylonmissile_missile_agm_02_Laser_x2",
-			"ace_PylonRack_1Rnd_Missile_AGM_02_Laser",
-			"ace_PylonRack_3Rnd_Missile_AGM_02_Laser",
-			"ace_PylonRack_Missile_AGM_02_Laser_x1",
-			"ace_PylonRack_Missile_AGM_02_Laser_x2"
+			QGVAR(L_magazine_x1),
+			QGVAR(L_pylonmissile_x1),
+			QGVAR(L_pylonmissile_x2),
+			QGVAR(L_pylonRack_1Rnd),
+			QGVAR(L_PylonRack_3Rnd),
+			QGVAR(L_PylonRack_x1),
+			QGVAR(L_PylonRack_x2)
 		};
 		weapons[] = {
-		    "ace_MaverickL_Launcher",
-			"ace_MaverickL_Plane_CAS_01_F"
+		    GVAR(L_Launcher_Plane),
+			GVAR(L_Launcher)
 		};
 		units[] = {};
  	};
