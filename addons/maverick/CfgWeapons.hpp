@@ -22,6 +22,7 @@ class CfgWeapons {
 		weaponLockSystem = 0;
 
         EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
+		GVAR(enabled) = 1;
 	};
 	
 	class GVAR(L_Launcher_Plane) : Missile_AGM_02_Plane_CAS_01_F {
@@ -39,6 +40,7 @@ class CfgWeapons {
 		weaponLockDelay = 0.1;
 		weaponLockSystem = 0;
 		
-        EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
+        EGVAR(laser,canSelect) = 1;	// can ace_laser lock (allows switching laser code)
+		GVAR(enabled) = 1;
 	};
 };
