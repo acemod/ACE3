@@ -71,14 +71,15 @@ The server config setting entries are done through our optional `ace_server.pbo`
 
 ACE3 contains a lot of settings, for that reason tweaking everything to your liking manually can be quite a task. We have provided the option to export all settings in the editor (single-player). For this, follow these simple steps:
 
-- Open the editor (single-player).
-- Under modules (<kbd>F7</kbd>), find ACE, `Allow Config Export [ACE]`.
-- Place down the module, ensure that the `Allow` parameter is set to `Yes`.
-- Press preview, once in the game, press <kbd>Esc</kbd> and open the ACE3 Options dialog (top left)
-- This is the dialog where you can modify client side settings. On the bottom left of it, you will now see a button called `Config Export`. Press it and a new dialog opens.
-- You are now in the dialog that allows you to adjust all settings from ACE3. Tweak this to your liking.
-- Once you are done tweaking, press the `Export` button and all settings will be copied to your clipboard.
-- Paste the settings in your `serverconfig.hpp` file and you're done.
+- Open the `Eden Editor`.
+- Place a playable character.
+- Click `Systems` (<kbd>F5</kbd>) > `Modules` > `ACE`.
+- Place the `Allow Config Export [ACE]` module. Ensure that its `Allow` parameter is set to `Yes`.
+- Click `Play` > `Play in Singleplayer (SP)` (<kbd>Enter</kbd>).
+- Once in the game, press <kbd>Esc</kbd>, and click `ACE OPTIONS` (in the top-left corner) to open the `ACE Options` dialog. Here you can modify client-side settings.
+- Click `Open Export Menu` at the bottom of the dialog to open another dialog. Here you can adjust all `ACE3 settings`, both client-side and server-side. Tweak them to your liking.
+- Once you are done tweaking, click `Export` to copy all server-side settings to the clipboard.
+- Paste the settings in your `serverconfig.hpp` file, save it, and you're done.
 
 Please note that in the `serverconfig.hpp` file there is no need for adding the `ACE_Settings` class.
 
