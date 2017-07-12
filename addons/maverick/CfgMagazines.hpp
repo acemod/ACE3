@@ -44,7 +44,7 @@ class CfgMagazines {
 		descriptionShort = CSTRING(L_MAG_DESCR);
 		displayName = CSTRING(L_MAG_x1);
 		displayNameShort = CSTRING(L_MAG_short);
-		pylonWeapon = QGVAR(L_Launcher_Plane)
+		pylonWeapon = QGVAR(L_Launcher_Plane);
 	};
 	class GVAR(L_PylonRack_3Rnd) : PylonRack_3Rnd_Missile_AGM_02_F {
 		ammo = QGVAR(L);
@@ -52,7 +52,7 @@ class CfgMagazines {
 		descriptionShort = CSTRING(L_MAG_DESCR);
 		displayName = CSTRING(L_MAG_x3);
 		displayNameShort = CSTRING(L_MAG_short);
-		pylonWeapon = QGVAR(L_Launcher_Plane)
+		pylonWeapon = QGVAR(L_Launcher_Plane);
 	};
 	
 	class GVAR(L_PylonRack_x1) : PylonRack_Missile_AGM_02_x1 {
