@@ -1,0 +1,3 @@
+LOG("prep");
+
+PREP(attackProfile);

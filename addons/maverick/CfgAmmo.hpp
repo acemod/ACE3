@@ -35,8 +35,8 @@ class CfgAmmo {
 			seekerMinRange = 1;
 			seekerMaxRange = 16000;
 
-			defaultAttackProfile = "LIN";
-			attackProfiles[] = {"LIN", "DIR", "MID", "HI"};
+			defaultAttackProfile = "maverick";
+			attackProfiles[] = {"maverick"};
 		};
 /*		class Components : Components {
 			class SensorsManagerComponent {

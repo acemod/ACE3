@@ -1,0 +1,1 @@
+#include "\z\ace\addons\maverick\script_component.hpp"
