@@ -173,7 +173,7 @@ Note that this function takes local effect, so only the local player will experi
 ### 4.6 Set the camera mode/focus/vision/position/direction
 
 `ace_spectator_fnc_setCameraAttributes`
-You can change any of the listed camera attributes at any time during a mission (including before spectator has opened if you want to pre-set them to change the initial view). All arguments are option and default to no change (if you use `nil`).
+You can change any of the listed camera attributes at any time during a mission (including before spectator has opened if you want to pre-set them to change the initial view). All arguments are optional and default to no change (if you use `nil`).
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
