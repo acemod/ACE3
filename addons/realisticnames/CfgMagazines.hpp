@@ -447,7 +447,7 @@ class CfgMagazines {
     };
     class PylonMissile_Missile_AGM_02_x2 : magazine_Missile_AGM_02_x1 {
         displayName = "AGM-65 Maverick G 2x"; // [vanilla: Macer 2x - Missile_AGM_02_Plane_CAS_01_F]
-    };	
+    };
     class PylonRack_Missile_AGM_02_x1 : magazine_Missile_AGM_02_x1 {
         displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
     };
