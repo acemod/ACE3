@@ -30,7 +30,31 @@ params [
     ["_ammoCounts", [], [[]]]
 ];
 
+// Checking if a magazine of given class is currently loaded in any weapon.
+private _magLoadedInWeapon = false;
+private _loadedWeapon = "";
+{
+    private _currentlyLoadedMag = (weaponState [_vehicle, _turretPath, _x]) select 3;
+    
+    if (_currentlyLoadedMag isEqualTo _magazineClass) exitWith {
+        _magLoadedInWeapon = true;
+        _loadedWeapon = _x;
+    };
+} forEach (_vehicle weaponsTurret _turretPath);
+
+// Setting the ammo counts by removing and then adding new magazines with updated ammo counts.
 _vehicle removeMagazinesTurret [_magazineClass, _turretPath];
 {
     _vehicle addMagazineTurret [_magazineClass, _turretPath, _x];
 } forEach _ammoCounts;
+
+/* If a magazine of given class was loaded into a weapon, and the weapon has more than one type of
+ * magazine (e.g. AP and HEAT in a cannon), then removing all magazines has triggered the weapon to
+ * load a different magazine type. For example, setting the ammo count of HEAT shells while HEAT is
+ * loaded makes the cannon switch to AP. To prevent that, we must load back the original magazine
+ * type. */
+if (_magLoadedInWeapon) then {
+    _vehicle loadMagazine [_turretPath, _loadedWeapon, _magazineClass];
+};
+
+TRACE_5("setTurretMagazineAmmo", _vehicle, _turretPath, _magazineClass, _ammoCounts, _loadedWeapon);
