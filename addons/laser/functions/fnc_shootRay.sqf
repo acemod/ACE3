@@ -28,6 +28,13 @@ private _resultPos = nil;
 
 private _farPoint = _posASL vectorAdd (_dir vectorMultiply 10000);
 private _intersects = lineIntersectsSurfaces [_posASL, _farPoint, _ignoreVehicle1, _ignoreVehicle2];
+// workaround for lineIntersectsSurfaces using a hardcoded max distance of 5000m. New max distance 15000m
+if (_intersects isEqualTo []) then {
+    _intersects = lineIntersectsSurfaces [_posASL vectorAdd (_dir vectorMultiply 5000), _farPoint vectorAdd (_dir vectorMultiply 5000), _ignoreVehicle1, _ignoreVehicle2];
+};
+if (_intersects isEqualTo []) then {
+    _intersects = lineIntersectsSurfaces [_posASL vectorAdd (_dir vectorMultiply 10000), _farPoint vectorAdd (_dir vectorMultiply 10000), _ignoreVehicle1, _ignoreVehicle2];
+};
 
 if (!(_intersects isEqualTo [])) then {
     (_intersects select 0) params ["_intersectPosASL", "", "_intersectObject"];
