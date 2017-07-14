@@ -3,25 +3,21 @@
  * Adds a mapClick Eventhandler
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: sides <ARRAY<OBJECT>>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit, _sides] call ace_switchunits_fnc_addMapFunction
+ * [] call ace_switchunits_fnc_addMapFunction
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit", "_sides"];
-
-["theMapClick", "onMapSingleClick", {
-    // IGNORE_PRIVATE_WARNING(_pos,_shift,_alt)
+addMissionEventHandler ["MapSingleClick", {
+    params ["", "_pos", "_alt", "_shift"];
     if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
-        [_this, _pos, _shift, _alt] call FUNC(handleMapClick);
+        [[GVAR(OriginalUnit), GVAR(switchableSides)], _pos, _shift, _alt] call FUNC(handleMapClick);
     };
-
-}, [_unit, _sides]] call BIS_fnc_addStackedEventHandler;
+}];
