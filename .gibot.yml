@@ -45,6 +45,7 @@ stages:
       - status/wontfix
       - status/marked for cleanup
       - status/inactive
+      - status/stale
     comment:
       - 'Hello @acemod/maintainers. This ticket has been open for over {days} days without any activity.'
     action:
