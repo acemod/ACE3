@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -474,6 +474,7 @@
             <Japanese>給油ホースの長さ</Japanese>
             <Chinesesimp>加油软管长度</Chinesesimp>
             <Chinese>加油軟管長度</Chinese>
+            <Polish>Długość węża paliwowego</Polish>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -1102,6 +1102,7 @@
             <Japanese>上級工兵のみ</Japanese>
             <Chinesesimp>只有维修专精兵</Chinesesimp>
             <Chinese>只有維修專精兵</Chinese>
+            <Polish>Tylko zaawansowani mechanicy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1425,6 +1426,7 @@
             <Japanese>上級工兵</Japanese>
             <Chinesesimp>专精</Chinesesimp>
             <Chinese>專精</Chinese>
+            <Polish>Zaaw. mechanik</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
