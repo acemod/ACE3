@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -1015,6 +1015,7 @@
             <Japanese>制圧射撃</Japanese>
             <Chinesesimp>火力压制</Chinesesimp>
             <Chinese>火力壓制</Chinese>
+            <Polish>Ogień zaporowy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
             <English>Add full arsenal to object</English>
@@ -1023,6 +1024,7 @@
             <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
             <Chinesesimp>增加完整的虚拟军火库到物件上</Chinesesimp>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
+            <Polish>Dodaj Wirtualny Arsenał do obiektu</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
             <English>Remove arsenal from object</English>
@@ -1031,6 +1033,7 @@
             <Japanese>オブジェクトからアーセナルを削除</Japanese>
             <Chinesesimp>移除物件上的虚拟军火库</Chinesesimp>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
+            <Polish>Usuń Wirtualny Arsenał z obiektu</Polish>
         </Key>
     </Package>
 </Project>

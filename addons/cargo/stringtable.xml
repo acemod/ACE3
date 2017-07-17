@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -279,6 +279,7 @@
             <Japanese>カーゴ スペース</Japanese>
             <Chinese>貨物空間</Chinese>
             <Chinesesimp>货物空间</Chinesesimp>
+            <Polish>Przestrzeń ładunkowa</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
@@ -286,6 +287,7 @@
             <Japanese>この車両/コンテナでカーゴ スペースを使えるようにします</Japanese>
             <Chinese>設定此載具/集裝箱可裝載多少貨物</Chinese>
             <Chinesesimp>设定此载具/集装箱可装载多少货物</Chinesesimp>
+            <Polish>Dostępna przestrzeń ładunkowa w tym pojeździe/kontenerze</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -293,6 +295,7 @@
             <Japanese>カーゴ サイズ</Japanese>
             <Chinese>貨物的大小</Chinese>
             <Chinesesimp>货物的大小</Chinesesimp>
+            <Polish>Wielkość ładunku</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
@@ -300,6 +303,7 @@
             <Japanese>このオブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</Chinesesimp>
+            <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -330,6 +334,7 @@
             <French>Coefficient Temps de largage de cargaison</French>
             <Chinese>空投時間係數</Chinese>
             <Chinesesimp>空投时间系数</Chinesesimp>
+            <Polish>Współczynnik czasu zrzutu</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
@@ -338,6 +343,7 @@
             <French>Modifier le temps qu'il faut pour larguer la cargaison.</French>
             <Chinese>設定空投所需消耗的時間.</Chinese>
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
+            <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
         </Key>
     </Package>
 </Project>
