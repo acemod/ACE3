@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical Menu">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -13,8 +13,8 @@
             <French>Menu médical</French>
             <Japanese>治療メニュー</Japanese>
             <Korean>의료 메뉴</Korean>
-            <SChinese>医疗选单</SChinese>
-            <TChinese>醫療選單</TChinese>
+            <Chinesesimp>医疗选单</Chinesesimp>
+            <Chinese>醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
             <English>Allow Medical Menu</English>
@@ -28,8 +28,8 @@
             <French>Autoriser le menu médical</French>
             <Japanese>治療メニューを有効化</Japanese>
             <Korean>의료 메뉴 활성화</Korean>
-            <SChinese>允许医疗选单</SChinese>
-            <TChinese>允許醫療選單</TChinese>
+            <Chinesesimp>允许医疗选单</Chinesesimp>
+            <Chinese>允許醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow_Descr">
             <English>Allow clients to use the medical menu</English>
@@ -43,8 +43,8 @@
             <French>Autoriser les clients à utiliser le menu médical</French>
             <Japanese>すべてのクライアントが治療メニューをつかえるようにする</Japanese>
             <Korean>클라이언트가 의료 메뉴를 쓰는것을 허락합니다</Korean>
-            <SChinese>允许客户端使用医疗选单</SChinese>
-            <TChinese>允許客戶端使用醫療選單</TChinese>
+            <Chinesesimp>允许客户端使用医疗选单</Chinesesimp>
+            <Chinese>允許客戶端使用醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu">
             <English>Use Medical menu</English>
@@ -58,8 +58,8 @@
             <French>Utiliser le menu médical</French>
             <Japanese>治療メニューをつかう</Japanese>
             <Korean>의료 메뉴 사용</Korean>
-            <SChinese>使用医疗选单</SChinese>
-            <TChinese>使用醫療選單</TChinese>
+            <Chinesesimp>使用医疗选单</Chinesesimp>
+            <Chinese>使用醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
@@ -73,8 +73,8 @@
             <French>Si autorisé par le serveur, active l'option d'utiliser le menu médical à travers les raccourcis clavier et le menu d'interaction.</French>
             <Japanese>サーバーが有効化を許可している場合は、オプションから有効化でき治療メニューはキー割り当てとインタラクション メニューを無視できます</Japanese>
             <Korean>서버 허가하에 단축키와 상호작용 메뉴로 의료 메뉴사용을 허가합니다</Korean>
-            <SChinese>如果伺服器允许, 只需透过按键即可叫出医疗选单</SChinese>
-            <TChinese>如果伺服器允許, 只需透過按鍵即可叫出醫療選單</TChinese>
+            <Chinesesimp>如果伺服器允许, 只需透过按键即可叫出医疗选单</Chinesesimp>
+            <Chinese>如果伺服器允許, 只需透過按鍵即可叫出醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>
@@ -88,8 +88,8 @@
             <French>Ré-ouvrir le menu médical</French>
             <Japanese>治療メニューを再びひらく</Japanese>
             <Korean>의료 메뉴 다시 열기</Korean>
-            <SChinese>重新开启医疗选单</SChinese>
-            <TChinese>重新開啟醫療選單</TChinese>
+            <Chinesesimp>重新开启医疗选单</Chinesesimp>
+            <Chinese>重新開啟醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
@@ -103,8 +103,8 @@
             <French>Ré-ouvrir le menu médical après un traitement réussi</French>
             <Japanese>治療が終わったあと、再び治療メニューをひらく</Japanese>
             <Korean>성공적으로 치료한후에 의료 메뉴를 다시 엽니다</Korean>
-            <SChinese>当治疗成功后重新打开医疗选单</SChinese>
-            <TChinese>當治療成功後重新打開醫療選單</TChinese>
+            <Chinesesimp>当治疗成功后重新打开医疗选单</Chinesesimp>
+            <Chinese>當治療成功後重新打開醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
             <English>Open Medical Menu</English>
@@ -118,8 +118,8 @@
             <French>Ouvir le menu médical</French>
             <Japanese>治療メニューをひらく</Japanese>
             <Korean>의료 메뉴 열기</Korean>
-            <SChinese>开起医疗选单</SChinese>
-            <TChinese>開起醫療選單</TChinese>
+            <Chinesesimp>开起医疗选单</Chinesesimp>
+            <Chinese>開起醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
@@ -133,8 +133,8 @@
             <French>Réglages du menu médical</French>
             <Japanese>治療メニューの設定</Japanese>
             <Korean>의료 메뉴 설정</Korean>
-            <SChinese>医疗选单设定</SChinese>
-            <TChinese>醫療選單設定</TChinese>
+            <Chinesesimp>医疗选单设定</Chinesesimp>
+            <Chinese>醫療選單設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_Desc">
             <English>Configure the usage of the Medical Menu</English>
@@ -148,8 +148,8 @@
             <French>Configurer l'utilisation du menu médical</French>
             <Japanese>治療メニューを使うための設定</Japanese>
             <Korean>의료 메뉴 사용의 설정</Korean>
-            <SChinese>设置医疗选单的使用</SChinese>
-            <TChinese>設置醫療選單的使用</TChinese>
+            <Chinesesimp>设置医疗选单的使用</Chinesesimp>
+            <Chinese>設置醫療選單的使用</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -163,8 +163,8 @@
             <Italian>ESAMINA &amp; TRATTA</Italian>
             <Japanese>診断 &amp; 治療</Japanese>
             <Korean>검사 / 치료</Korean>
-            <SChinese>检查 &amp; 治疗</SChinese>
-            <TChinese>檢查 &amp; 治療</TChinese>
+            <Chinesesimp>检查 &amp; 治疗</Chinesesimp>
+            <Chinese>檢查 &amp; 治療</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS">
             <English>STATUS</English>
@@ -178,8 +178,8 @@
             <Italian>STATO</Italian>
             <Japanese>状態</Japanese>
             <Korean>상태</Korean>
-            <SChinese>状态</SChinese>
-            <TChinese>狀態</TChinese>
+            <Chinesesimp>状态</Chinesesimp>
+            <Chinese>狀態</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_OVERVIEW">
             <English>OVERVIEW</English>
@@ -193,8 +193,8 @@
             <Italian>PANORAMICA</Italian>
             <Japanese>オーバービュー</Japanese>
             <Korean>개요</Korean>
-            <SChinese>概述</SChinese>
-            <TChinese>概述</TChinese>
+            <Chinesesimp>概述</Chinesesimp>
+            <Chinese>概述</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
             <English>ACTIVITY LOG</English>
@@ -208,8 +208,8 @@
             <Italian>LOG ATTIVITA'</Italian>
             <Japanese>治療履歴</Japanese>
             <Korean>활동 로그</Korean>
-            <SChinese>医疗纪录</SChinese>
-            <TChinese>醫療紀錄</TChinese>
+            <Chinesesimp>医疗纪录</Chinesesimp>
+            <Chinese>醫療紀錄</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
             <English>QUICK VIEW</English>
@@ -223,8 +223,8 @@
             <Italian>VISTA RAPIDA</Italian>
             <Japanese>クイック ビュー</Japanese>
             <Korean>퀵 뷰</Korean>
-            <SChinese>快速检查</SChinese>
-            <TChinese>快速檢查</TChinese>
+            <Chinesesimp>快速检查</Chinesesimp>
+            <Chinese>快速檢查</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
             <English>View triage Card</English>
@@ -238,8 +238,8 @@
             <Italian>Guarda Triage Card</Italian>
             <Japanese>トリアージ カードを見る</Japanese>
             <Korean>부상자 카드 보기</Korean>
-            <SChinese>查看诊断卡</SChinese>
-            <TChinese>查看診斷卡</TChinese>
+            <Chinesesimp>查看诊断卡</Chinesesimp>
+            <Chinese>查看診斷卡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_PATIENT">
             <English>Examine Patient</English>
@@ -253,8 +253,8 @@
             <Italian>Esamina Paziente</Italian>
             <Japanese>患者を調べる</Japanese>
             <Korean>환자 검사하기</Korean>
-            <SChinese>检查伤者</SChinese>
-            <TChinese>檢查傷者</TChinese>
+            <Chinesesimp>检查伤者</Chinesesimp>
+            <Chinese>檢查傷者</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
             <English>Bandage / Fractures</English>
@@ -268,8 +268,8 @@
             <Italian>Bendaggi/Fratture</Italian>
             <Japanese>包帯 / 骨折</Japanese>
             <Korean>붕대 / 골절</Korean>
-            <SChinese>绷带 / 骨折</SChinese>
-            <TChinese>繃帶 / 骨折</TChinese>
+            <Chinesesimp>绷带 / 骨折</Chinesesimp>
+            <Chinese>繃帶 / 骨折</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDICATION">
             <English>Medication</English>
@@ -283,8 +283,8 @@
             <Italian>Medicazione</Italian>
             <Japanese>薬物による治療</Japanese>
             <Korean>약물 치료</Korean>
-            <SChinese>药物</SChinese>
-            <TChinese>藥物</TChinese>
+            <Chinesesimp>药物</Chinesesimp>
+            <Chinese>藥物</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_AIRWAY_MANAGEMENT">
             <English>Airway Management</English>
@@ -298,8 +298,8 @@
             <German>Atemwegssicherung</German>
             <Japanese>気道を確保</Japanese>
             <Korean>기도 관리</Korean>
-            <SChinese>呼吸道管理</SChinese>
-            <TChinese>呼吸道管理</TChinese>
+            <Chinesesimp>呼吸道管理</Chinesesimp>
+            <Chinese>呼吸道管理</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ADVANCED_TREATMENT">
             <English>Advanced Treatments</English>
@@ -313,8 +313,8 @@
             <Italian>Trattamenti Avanzati</Italian>
             <Japanese>高度な治療</Japanese>
             <Korean>고급 치료</Korean>
-            <SChinese>进阶治疗</SChinese>
-            <TChinese>進階治療</TChinese>
+            <Chinesesimp>进阶治疗</Chinesesimp>
+            <Chinese>進階治療</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DRAG_CARRY">
             <English>Drag/Carry</English>
@@ -328,8 +328,8 @@
             <Italian>Trascina/Trasporta</Italian>
             <Japanese>引きずる / 運ぶ</Japanese>
             <Korean>끌기 / 들기</Korean>
-            <SChinese>拖 / 背</SChinese>
-            <TChinese>拖 / 背</TChinese>
+            <Chinesesimp>拖 / 背</Chinesesimp>
+            <Chinese>拖 / 背</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TOGGLE_SELF">
             <English>Toggle (Self)</English>
@@ -343,8 +343,8 @@
             <Italian>Attiva (Te Stesso)</Italian>
             <Japanese>トグル (自分)</Japanese>
             <Korean>토글 (자신)</Korean>
-            <SChinese>切换 (自己)</SChinese>
-            <TChinese>切換 (自己)</TChinese>
+            <Chinesesimp>切换 (自己)</Chinesesimp>
+            <Chinese>切換 (自己)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
             <English>Select triage status</English>
@@ -358,8 +358,8 @@
             <Italian>Seleziona stato Triage</Italian>
             <Japanese>トリアージによる状態を選択</Japanese>
             <Korean>부상 상태 고르기</Korean>
-            <SChinese>选择分诊状态</SChinese>
-            <TChinese>選擇分診狀態</TChinese>
+            <Chinesesimp>选择分诊状态</Chinesesimp>
+            <Chinese>選擇分診狀態</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
             <English>Select Head</English>
@@ -373,8 +373,8 @@
             <Italian>Seleziona Testa</Italian>
             <Japanese>頭部を選ぶ</Japanese>
             <Korean>머리 선택</Korean>
-            <SChinese>选择头部</SChinese>
-            <TChinese>選擇頭部</TChinese>
+            <Chinesesimp>选择头部</Chinesesimp>
+            <Chinese>選擇頭部</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TORSO">
             <English>Select Torso</English>
@@ -388,8 +388,8 @@
             <Italian>Seleziona Torso</Italian>
             <Japanese>胴体を選ぶ</Japanese>
             <Korean>몸통 선택</Korean>
-            <SChinese>选择身体</SChinese>
-            <TChinese>選擇身體</TChinese>
+            <Chinesesimp>选择身体</Chinesesimp>
+            <Chinese>選擇身體</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_L">
             <English>Select Left Arm</English>
@@ -403,8 +403,8 @@
             <Italian>Seleziona Braccio Sinistro</Italian>
             <Japanese>左腕を選ぶ</Japanese>
             <Korean>왼쪽 팔 선택</Korean>
-            <SChinese>选择左手</SChinese>
-            <TChinese>選擇左手</TChinese>
+            <Chinesesimp>选择左手</Chinesesimp>
+            <Chinese>選擇左手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
             <English>Select Right Arm</English>
@@ -418,8 +418,8 @@
             <Italian>Seleziona Braccio Destro</Italian>
             <Japanese>右腕を選ぶ</Japanese>
             <Korean>오른쪽 팔 선택</Korean>
-            <SChinese>选择右手</SChinese>
-            <TChinese>選擇右手</TChinese>
+            <Chinesesimp>选择右手</Chinesesimp>
+            <Chinese>選擇右手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
             <English>Select Left Leg</English>
@@ -433,8 +433,8 @@
             <Italian>Seleziona Gamba Sinistra</Italian>
             <Japanese>左足を選ぶ</Japanese>
             <Korean>왼쪽 다리 선택</Korean>
-            <SChinese>选择左脚</SChinese>
-            <TChinese>選擇左腳</TChinese>
+            <Chinesesimp>选择左脚</Chinesesimp>
+            <Chinese>選擇左腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
             <English>Select Right Leg</English>
@@ -448,8 +448,8 @@
             <Italian>Seleziona Gamba Destra</Italian>
             <Japanese>右足を選ぶ</Japanese>
             <Korean>오른쪽 다리 선택</Korean>
-            <SChinese>选择右脚</SChinese>
-            <TChinese>選擇右腳</TChinese>
+            <Chinesesimp>选择右脚</Chinesesimp>
+            <Chinese>選擇右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_HEAD">
             <English>Head</English>
@@ -463,8 +463,8 @@
             <Italian>Testa</Italian>
             <Japanese>頭部</Japanese>
             <Korean>머리</Korean>
-            <SChinese>头部</SChinese>
-            <TChinese>頭部</TChinese>
+            <Chinesesimp>头部</Chinesesimp>
+            <Chinese>頭部</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TORSO">
             <English>Torso</English>
@@ -478,8 +478,8 @@
             <Italian>Torso</Italian>
             <Japanese>胴体</Japanese>
             <Korean>몸통</Korean>
-            <SChinese>身体</SChinese>
-            <TChinese>身體</TChinese>
+            <Chinesesimp>身体</Chinesesimp>
+            <Chinese>身體</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_L">
             <English>Left Arm</English>
@@ -493,8 +493,8 @@
             <Italian>Braccio Sinistro</Italian>
             <Japanese>左腕</Japanese>
             <Korean>왼쪽 팔</Korean>
-            <SChinese>左手</SChinese>
-            <TChinese>左手</TChinese>
+            <Chinesesimp>左手</Chinesesimp>
+            <Chinese>左手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_R">
             <English>Right Arm</English>
@@ -508,8 +508,8 @@
             <Italian>Braccio Destro</Italian>
             <Japanese>右腕</Japanese>
             <Korean>오른쪽 팔</Korean>
-            <SChinese>右手</SChinese>
-            <TChinese>右手</TChinese>
+            <Chinesesimp>右手</Chinesesimp>
+            <Chinese>右手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_L">
             <English>Left Leg</English>
@@ -523,8 +523,8 @@
             <Italian>Gamba Sinistra</Italian>
             <Japanese>左足</Japanese>
             <Korean>왼쪽 다리</Korean>
-            <SChinese>左脚</SChinese>
-            <TChinese>左腳</TChinese>
+            <Chinesesimp>左脚</Chinesesimp>
+            <Chinese>左腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_R">
             <English>Right Leg</English>
@@ -538,8 +538,8 @@
             <Italian>Gamba Destra</Italian>
             <Japanese>右足</Japanese>
             <Korean>오른쪽 다리</Korean>
-            <SChinese>右脚</SChinese>
-            <TChinese>右腳</TChinese>
+            <Chinesesimp>右脚</Chinesesimp>
+            <Chinese>右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECTED_BODY_PART">
             <English>Body Part: %1</English>
@@ -553,8 +553,8 @@
             <Italian>Parte del Corpo: %1</Italian>
             <Japanese>身体の一部: %1</Japanese>
             <Korean>신체 부위: %1</Korean>
-            <SChinese>身体部位: %1</SChinese>
-            <TChinese>身體部位: %1</TChinese>
+            <Chinesesimp>身体部位: %1</Chinesesimp>
+            <Chinese>身體部位: %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SMALL">
             <English>Small</English>
@@ -568,8 +568,8 @@
             <Italian>Piccolo</Italian>
             <Japanese>小さい</Japanese>
             <Korean>소</Korean>
-            <SChinese>小</SChinese>
-            <TChinese>小</TChinese>
+            <Chinesesimp>小</Chinesesimp>
+            <Chinese>小</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDIUM">
             <English>Medium</English>
@@ -583,8 +583,8 @@
             <Italian>Medio</Italian>
             <Japanese>中くらい</Japanese>
             <Korean>중</Korean>
-            <SChinese>中</SChinese>
-            <TChinese>中</TChinese>
+            <Chinesesimp>中</Chinesesimp>
+            <Chinese>中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LARGE">
             <English>Large</English>
@@ -598,8 +598,8 @@
             <Italian>Grande</Italian>
             <Japanese>大きい</Japanese>
             <Korean>대</Korean>
-            <SChinese>大</SChinese>
-            <TChinese>大</TChinese>
+            <Chinesesimp>大</Chinesesimp>
+            <Chinese>大</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_OPEN_WOUNDS">
             <English>There are %2 %1 Open Wounds</English>
@@ -613,8 +613,8 @@
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
             <Japanese>開いている傷口が %2 %1 ほどあるようだ</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
-            <SChinese>有 %2 %1 开放性伤口</SChinese>
-            <TChinese>有 %2 %1 開放性傷口</TChinese>
+            <Chinesesimp>有 %2 %1 开放性伤口</Chinesesimp>
+            <Chinese>有 %2 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
             <English>There is 1 %1 Open Wound</English>
@@ -628,8 +628,8 @@
             <Italian>C'è 1 %1 Ferita Aperta</Italian>
             <Japanese>1 つの空いている %1 傷口</Japanese>
             <Korean>여기 %1 크기의 열린 상처가 있다</Korean>
-            <SChinese>有 1 %1 开放性伤口</SChinese>
-            <TChinese>有 1 %1 開放性傷口</TChinese>
+            <Chinesesimp>有 1 %1 开放性伤口</Chinesesimp>
+            <Chinese>有 1 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
             <English>There is a partial %1 Open wound</English>
@@ -643,8 +643,8 @@
             <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
             <Japanese>部分的に開いている %1 の傷口がある</Japanese>
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
-            <SChinese>有部分 %1 开放性伤口</SChinese>
-            <TChinese>有部分 %1 開放性傷口</TChinese>
+            <Chinesesimp>有部分 %1 开放性伤口</Chinesesimp>
+            <Chinese>有部分 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
             <English>There are %2 %1 Bandaged Wounds</English>
@@ -658,8 +658,8 @@
             <Italian>Ci sono %2 %1 Ferite Bendate</Italian>
             <Japanese>ここには %2 %1 の処置された傷がある</Japanese>
             <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
-            <SChinese>有 %2 %1 包扎过伤口</SChinese>
-            <TChinese>有 %2 %1 包紮過傷口</TChinese>
+            <Chinesesimp>有 %2 %1 包扎过伤口</Chinesesimp>
+            <Chinese>有 %2 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
             <English>There is 1 %1 Bandaged Wound</English>
@@ -673,8 +673,8 @@
             <Italian>C'è 1 %1 Ferita Bendata</Italian>
             <Japanese>1 つの包帯で巻かれている %1 傷</Japanese>
             <Korean>여기에 붕대를 감은 %1 크기의 상처가 있다</Korean>
-            <SChinese>有 1 %1 包扎过伤口</SChinese>
-            <TChinese>有 1 %1 包紮過傷口</TChinese>
+            <Chinesesimp>有 1 %1 包扎过伤口</Chinesesimp>
+            <Chinese>有 1 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
             <English>There is a partial %1 Bandaged wound</English>
@@ -688,8 +688,8 @@
             <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
             <Japanese>患者には %1 の包帯で処置された傷がある</Japanese>
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
-            <SChinese>有部分 %1 包扎过伤口</SChinese>
-            <TChinese>有部分 %1 包紮過傷口</TChinese>
+            <Chinesesimp>有部分 %1 包扎过伤口</Chinesesimp>
+            <Chinese>有部分 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
             <English>Normal breathing</English>
@@ -703,8 +703,8 @@
             <Italian>Respirazione Normale</Italian>
             <Japanese>通常の呼吸</Japanese>
             <Korean>정상 호흡</Korean>
-            <SChinese>正常呼吸</SChinese>
-            <TChinese>正常呼吸</TChinese>
+            <Chinesesimp>正常呼吸</Chinesesimp>
+            <Chinese>正常呼吸</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
             <English>No breathing</English>
@@ -718,8 +718,8 @@
             <Italian>Nessuna Respirazione</Italian>
             <Japanese>息をしていない</Japanese>
             <Korean>호흡이 없음</Korean>
-            <SChinese>没有呼吸</SChinese>
-            <TChinese>沒有呼吸</TChinese>
+            <Chinesesimp>没有呼吸</Chinesesimp>
+            <Chinese>沒有呼吸</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
@@ -733,8 +733,8 @@
             <Italian>Difficoltà Respiratorie</Italian>
             <Japanese>呼吸が難しそうだ</Japanese>
             <Korean>호흡 곤란</Korean>
-            <SChinese>呼吸困难</SChinese>
-            <TChinese>呼吸困難</TChinese>
+            <Chinesesimp>呼吸困难</Chinesesimp>
+            <Chinese>呼吸困難</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ALMOST_NO_BREATHING">
             <English>Almost no breathing</English>
@@ -748,8 +748,8 @@
             <Italian>Quasi nessuna Respirazione</Italian>
             <Japanese>ほとんど呼吸していない</Japanese>
             <Korean>호흡이 거의 없음</Korean>
-            <SChinese>几乎没有呼吸</SChinese>
-            <TChinese>幾乎沒有呼吸</TChinese>
+            <Chinesesimp>几乎没有呼吸</Chinesesimp>
+            <Chinese>幾乎沒有呼吸</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_BLEEDING">
             <English>Bleeding</English>
@@ -763,8 +763,8 @@
             <Italian>Sanguinamento</Italian>
             <Japanese>出血</Japanese>
             <Korean>출혈</Korean>
-            <SChinese>出血中</SChinese>
-            <TChinese>出血中</TChinese>
+            <Chinesesimp>出血中</Chinesesimp>
+            <Chinese>出血中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_PAIN">
             <English>in Pain</English>
@@ -778,8 +778,8 @@
             <Italian>in Dolore</Italian>
             <Japanese>痛みがある</Japanese>
             <Korean>고통</Korean>
-            <SChinese>疼痛中</SChinese>
-            <TChinese>疼痛中</TChinese>
+            <Chinesesimp>疼痛中</Chinesesimp>
+            <Chinese>疼痛中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
             <English>Lost a lot of Blood</English>
@@ -793,8 +793,8 @@
             <Italian>Perso molto Sangue</Italian>
             <Japanese>大量出血している</Japanese>
             <Korean>많은 피를 흘림</Korean>
-            <SChinese>大量失血</SChinese>
-            <TChinese>大量失血</TChinese>
+            <Chinesesimp>大量失血</Chinesesimp>
+            <Chinese>大量失血</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -808,8 +808,8 @@
             <Italian>Laccio Emostatico [CAT]</Italian>
             <Japanese>止血帯 [CAT]</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <SChinese>军用止血带</SChinese>
-            <TChinese>軍用止血帶</TChinese>
+            <Chinesesimp>军用止血带</Chinesesimp>
+            <Chinese>軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
@@ -823,8 +823,8 @@
             <Italian>Tubo Nasofaringeo [NPA]</Italian>
             <Japanese>鼻咽頭チューブ [NPA]</Japanese>
             <Korean>비-인두 기도기 [NPA]</Korean>
-            <SChinese>鼻咽管</SChinese>
-            <TChinese>鼻咽管</TChinese>
+            <Chinesesimp>鼻咽管</Chinesesimp>
+            <Chinese>鼻咽管</Chinese>
         </Key>
     </Package>
 </Project>
