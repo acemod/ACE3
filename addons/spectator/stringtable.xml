@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_DisplayName">
@@ -37,8 +37,8 @@
             <French>Configure comment le système de spectateurs opère par défaut.</French>
             <Japanese>スペクテイター システムが標準でどのように動作するか設定できます。</Japanese>
             <Korean>어떻게 관전자 시스템이 기본적으로 작동되는지 설정합니다</Korean>
-            <Chinesesimp>设定旁观者系统相关配置.</Chinesesimp>
-            <Chinese>設定旁觀者系統相關配置.</Chinese>
+            <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
+            <Chinese>設定旁觀者系統相關配置</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
@@ -67,8 +67,8 @@
             <French>Méthode de filtration des unités regardables.</French>
             <Japanese>観察できるユニットへのフィルタ設定ができます。</Japanese>
             <Korean>관전할 수 있는 인원을 고릅니다</Korean>
-            <Chinesesimp>过滤哪些单位可以使用旁观者系统.</Chinesesimp>
-            <Chinese>過濾哪些單位可以使用旁觀者系統.</Chinese>
+            <Chinesesimp>过滤哪些单位可以使用旁观者系统</Chinesesimp>
+            <Chinese>過濾哪些單位可以使用旁觀者系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_none">
             <English>No units</English>
@@ -157,8 +157,8 @@
             <French>Méthode de filtration des factions regardables</French>
             <Japanese>観察できる勢力へのフィルタ設定ができます。</Japanese>
             <Korean>관전할 수 있는 진영을 고릅니다</Korean>
-            <Chinesesimp>过滤可旁观的阵营.</Chinesesimp>
-            <Chinese>過濾可旁觀的陣營.</Chinese>
+            <Chinesesimp>过滤可旁观的阵营</Chinesesimp>
+            <Chinese>過濾可旁觀的陣營</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
@@ -247,8 +247,8 @@
             <French>Modes de caméra qui peuvent être utilisés</French>
             <Japanese>カメラ モードを使えます。</Japanese>
             <Korean>사용할 수 있는 카메라 모드들 입니다</Korean>
-            <Chinesesimp>设定可使用的摄影机模式.</Chinesesimp>
-            <Chinese>設定可使用的攝影機模式.</Chinese>
+            <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
+            <Chinese>設定可使用的攝影機模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
@@ -330,8 +330,8 @@
             <French>Modes de visions qui peuvent être utilisés</French>
             <Japanese>ビジョン モードを使えます。</Japanese>
             <Korean>사용할 수 있는 시야 모드들 입니다</Korean>
-            <Chinesesimp>设定可使用的视觉模式.</Chinesesimp>
-            <Chinese>設定可使用的視覺模式.</Chinese>
+            <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
+            <Chinese>設定可使用的視覺模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>

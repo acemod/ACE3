@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="QuickMount">
         <Key ID="STR_ACE_QuickMount_Category">
@@ -22,8 +22,8 @@
             <English>Quickly enter the vehicle you are directly looking at.</English>
             <Italian>Entra velocemente nel veicolo che stai guardando.</Italian>
             <Japanese>直接見ている車両へ迅速に搭乗します。</Japanese>
-            <Chinesesimp>快速进入你正在看的载具之中.</Chinesesimp>
-            <Chinese>快速進入你正在看的載具之中.</Chinese>
+            <Chinesesimp>快速进入你正在看的载具之中</Chinesesimp>
+            <Chinese>快速進入你正在看的載具之中</Chinese>
             <Polish>Szybko wsiądź do pojazdu, na który patrzysz.</Polish>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">

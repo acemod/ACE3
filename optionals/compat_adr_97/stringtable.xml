@@ -15,6 +15,8 @@
             <Japanese>P90 TR (黒)</Japanese>
             <TChinese>P90 TR (黑色)</TChinese>
             <SChinese>P90 TR (黑色)</SChinese>
+            <Chinese>P90 TR (黑色)</Chinese>
+            <Chinesesimp>P90 TR (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_TR_Khaki_Name">
             <English>P90 TR (Khaki)</English>
@@ -30,6 +32,8 @@
             <Japanese>P90 TR (土埃)</Japanese>
             <TChinese>P90 TR (卡其色)</TChinese>
             <SChinese>P90 TR (卡其色)</SChinese>
+            <Chinese>P90 TR (沙色)</Chinese>
+            <Chinesesimp>P90 TR (沙色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_TR_Camo_Name">
             <English>P90 TR (Camo)</English>
@@ -45,6 +49,8 @@
             <Japanese>P90 TR (迷彩)</Japanese>
             <TChinese>P90 TR (迷彩)</TChinese>
             <SChinese>P90 TR (迷彩)</SChinese>
+            <Chinese>P90 TR (迷彩)</Chinese>
+            <Chinesesimp>P90 TR (迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_TR_Hex_Name">
             <English>P90 TR (Hex)</English>
@@ -60,6 +66,8 @@
             <Japanese>P90 TR (蜂巣)</Japanese>
             <TChinese>P90 TR (數位蜂巢迷彩)</TChinese>
             <SChinese>P90 TR (数位蜂巢迷彩)</SChinese>
+            <Chinese>P90 TR (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>P90 TR (数位蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Black_Name">
             <English>P90 (Black)</English>
@@ -75,6 +83,8 @@
             <Japanese>P90 (黒)</Japanese>
             <TChinese>P90 (黑色)</TChinese>
             <SChinese>P90 (黑色)</SChinese>
+            <Chinese>P90 (黑色)</Chinese>
+            <Chinesesimp>P90 (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Khaki_Name">
             <English>P90 (Khaki)</English>
@@ -90,6 +100,8 @@
             <Japanese>P90 (土埃)</Japanese>
             <TChinese>P90 (卡其色)</TChinese>
             <SChinese>P90 (卡其色)</SChinese>
+            <Chinese>P90 (沙色)</Chinese>
+            <Chinesesimp>P90 (沙色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Camo_Name">
             <English>P90 (Camo)</English>
@@ -105,6 +117,8 @@
             <Japanese>P90 (迷彩)</Japanese>
             <TChinese>P90 (迷彩)</TChinese>
             <SChinese>P90 (迷彩)</SChinese>
+            <Chinese>P90 (迷彩)</Chinese>
+            <Chinesesimp>P90 (迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Hex_Name">
             <English>P90 (Hex)</English>
@@ -120,6 +134,8 @@
             <Japanese>P90 (蜂巣)</Japanese>
             <TChinese>P90 (數位蜂巢迷彩)</TChinese>
             <SChinese>P90 (数位蜂巢迷彩)</SChinese>
+            <Chinese>P90 (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>P90 (数位蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Black_Name">
             <English>PS90 TR (Black)</English>
@@ -135,6 +151,8 @@
             <Japanese>PS90 TR (黒)</Japanese>
             <TChinese>PS90 TR (黑色)</TChinese>
             <SChinese>PS90 TR (黑色)</SChinese>
+            <Chinese>PS90 TR (黑色)</Chinese>
+            <Chinesesimp>PS90 TR (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Khaki_Name">
             <English>PS90 TR (Khaki)</English>
@@ -150,6 +168,8 @@
             <Japanese>PS90 TR (土埃)</Japanese>
             <TChinese>PS90 TR (卡其色)</TChinese>
             <SChinese>PS90 TR (卡其色)</SChinese>
+            <Chinese>PS90 TR (沙色)</Chinese>
+            <Chinesesimp>PS90 TR (沙色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Camo_Name">
             <English>PS90 TR (Camo)</English>
@@ -165,6 +185,8 @@
             <Japanese>PS90 TR (迷彩)</Japanese>
             <TChinese>PS90 TR (迷彩)</TChinese>
             <SChinese>PS90 TR (迷彩)</SChinese>
+            <Chinese>PS90 TR (迷彩)</Chinese>
+            <Chinesesimp>PS90 TR (迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Hex_Name">
             <English>PS90 TR (Hex)</English>
@@ -180,6 +202,8 @@
             <Japanese>PS90 TR (蜂巣)</Japanese>
             <TChinese>PS90 TR (數位蜂巢迷彩)</TChinese>
             <SChinese>PS90 TR (数位蜂巢迷彩)</SChinese>
+            <Chinese>PS90 TR (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>PS90 TR (数位蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Black_Name">
             <English>PS90 (Black)</English>
@@ -195,6 +219,8 @@
             <Japanese>PS90 (黒)</Japanese>
             <TChinese>PS90 (黑色)</TChinese>
             <SChinese>PS90 (黑色)</SChinese>
+            <Chinese>PS90 (黑色)</Chinese>
+            <Chinesesimp>PS90 (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Khaki_Name">
             <English>PS90 (Khaki)</English>
@@ -210,6 +236,8 @@
             <Japanese>PS90 (土埃)</Japanese>
             <TChinese>PS90 (卡其色)</TChinese>
             <SChinese>PS90 (卡其色)</SChinese>
+            <Chinese>PS90 (沙色)</Chinese>
+            <Chinesesimp>PS90 (沙色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Camo_Name">
             <English>PS90 (Camo)</English>
@@ -225,6 +253,8 @@
             <Japanese>PS90 (迷彩)</Japanese>
             <TChinese>PS90 (迷彩)</TChinese>
             <SChinese>PS90 (迷彩)</SChinese>
+            <Chinese>PS90 (迷彩)</Chinese>
+            <Chinesesimp>PS90 (迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Hex_Name">
             <English>PS90 (Hex)</English>
@@ -240,6 +270,8 @@
             <Japanese>PS90 (蜂巣)</Japanese>
             <TChinese>PS90 (數位蜂巢迷彩)</TChinese>
             <SChinese>PS90 (数位蜂巢迷彩)</SChinese>
+            <Chinese>PS90 (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>PS90 (数位蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Mag_Name">
             <English>5.7mm 50Rnd Mag</English>
@@ -255,6 +287,8 @@
             <Japanese>5.7mm 50 発入り弾倉</Japanese>
             <TChinese>5.7mm 50發 彈匣</TChinese>
             <SChinese>5.7mm 50发 弹匣</SChinese>
+            <Chinese>5.7mm 50發 彈匣</Chinese>
+            <Chinesesimp>5.7mm 50发 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Mag_DescriptionShort">
             <English>Caliber: 5.7mm&lt;br /&gt;Rounds: 50&lt;br /&gt;Used in: P90</English>
@@ -270,6 +304,8 @@
             <Japanese>口径: 5.7mm&lt;br /&gt;装弾数: 50&lt;br /&gt;次で使用: P90</Japanese>
             <TChinese>口徑: 5.7mm&lt;br /&gt;發數: 50&lt;br /&gt;使用於: P90</TChinese>
             <SChinese>口径: 5.7mm&lt;br /&gt;发数: 50&lt;br /&gt;使用于: P90</SChinese>
+            <Chinese>口徑: 5.7mm&lt;br /&gt;發數: 50&lt;br /&gt;使用於: P90</Chinese>
+            <Chinesesimp>口径: 5.7mm&lt;br /&gt;发数: 50&lt;br /&gt;使用于: P90</Chinesesimp>
         </Key>
     </Package>
 </Project>

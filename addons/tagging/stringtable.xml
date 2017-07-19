@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_Tagging">
@@ -22,8 +22,8 @@
             <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
             <French>Configure le fonctionnement par défaut du système de marquage.</French>
             <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
-            <Chinesesimp>定义喷漆系统预设设定.</Chinesesimp>
-            <Chinese>定義噴漆系統預設設定.</Chinese>
+            <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
+            <Chinese>定義噴漆系統預設設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
@@ -232,8 +232,8 @@
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
             <Japanese>スプレー缶は壁にタグ付できます。</Japanese>
             <Korean>벽에 뿌릴 수 있는 스프레이캔 입니다.</Korean>
-            <Chinesesimp>喷漆可喷涂在墙壁上.</Chinesesimp>
-            <Chinese>噴漆可噴塗在牆壁上.</Chinese>
+            <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
+            <Chinese>噴漆可噴塗在牆壁上</Chinese>
         </Key>
     </Package>
 </Project>

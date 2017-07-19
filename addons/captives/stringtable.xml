@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
@@ -238,8 +238,8 @@
             <Italian>Sincronizza una unità per farla arrendere.</Italian>
             <Japanese>同期されたユニットを投降させます。</Japanese>
             <Korean>투항시키기 위해 동기화합니다.</Korean>
-            <Chinese>同步此模塊到一個單位, 使該單位投降</Chinese>
-            <Chinesesimp>同步此模块到一个单位, 使该单位投降</Chinesesimp>
+            <Chinese>同步此模塊到一個單位，使該單位投降</Chinese>
+            <Chinesesimp>同步此模块到一个单位，使该单位投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
             <English>Make Unit Handcuffed</English>
@@ -394,8 +394,8 @@
             <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés</French>
             <Japanese>プレイヤーは拘束される前に、投降する必要があります。</Japanese>
             <Korean>체포하기 전에 플레이어가 투항을 먼저해야만 합니다</Korean>
-            <Chinese>玩家須先要求目標投降, 才可以進行逮捕</Chinese>
-            <Chinesesimp>玩家须先要求目标投降, 才可以进行逮捕</Chinesesimp>
+            <Chinese>玩家須先要求目標投降，才可以進行逮捕</Chinese>
+            <Chinesesimp>玩家须先要求目标投降，才可以进行逮捕</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
