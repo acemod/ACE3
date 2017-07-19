@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Fatigue">
+        <Key ID="STR_ACE_Advanced_Fatigue_DisplayName">
+            <English>Advanced Fatigue</English>
+            <Chinese>進階疲勞</Chinese>
+            <Chinesesimp>进阶疲劳</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
             <English>Performance Factor</English>
             <German>Leistungsfaktor</German>
