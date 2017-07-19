@@ -13,7 +13,6 @@ class CfgMarkers {
     class b_hq: b_unknown {scope = 1;};
     class b_installation: b_unknown {scope = 1;};
     class b_maint: b_unknown {scope = 1;};
-    class b_med: b_unknown {scope = 1;};
     class b_service: b_unknown {scope = 1;};
     class b_support: b_unknown {scope = 1;};
 
@@ -22,7 +21,6 @@ class CfgMarkers {
     class n_installation: n_unknown {scope = 1;};
     class u_installation: n_unknown {scope = 1;}; // i have no idea...
     class n_maint: n_unknown {scope = 1;};
-    class n_med: n_unknown {scope = 1;};
     class n_service: n_unknown {scope = 1;};
     class n_support: n_unknown {scope = 1;};
 
@@ -30,7 +28,6 @@ class CfgMarkers {
     class o_hq: o_unknown {scope = 1;};
     class o_installation: o_unknown {scope = 1;};
     class o_maint: o_unknown {scope = 1;};
-    class o_med: o_unknown {scope = 1;};
     class o_service: o_unknown {scope = 1;};
     class o_support: o_unknown {scope = 1;};
 
