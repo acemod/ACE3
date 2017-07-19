@@ -36,6 +36,6 @@ class ACE_Settings {
         description = CSTRING(PriorityDescription);
         isClientSettable = 1;
         force = 0;
-        values[] = {"Driver", "Gunner", "Commander", "Passenger"};
+        values[] = {CSTRING(PriorityDriver), CSTRING(PriorityGunner), CSTRING(PriorityCommander), CSTRING(PriorityPassenger)};
     };
 };

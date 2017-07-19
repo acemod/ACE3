@@ -90,5 +90,25 @@
             <Chinese>優先想進入哪個座位.</Chinese>
             <Polish>Priorytet pozycji w pojeździe</Polish>
         </Key>
+        <Key ID="STR_ACE_QuickMount_PriorityDriver">
+            <English>Driver</English>
+            <Chinesesimp>驾驶</Chinesesimp>
+            <Chinese>駕駛</Chinese>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_PriorityGunner">
+            <English>Gunner</English>
+            <Chinesesimp>炮手</Chinesesimp>
+            <Chinese>砲手</Chinese>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_PriorityCommander">
+            <English>Commander</English>
+            <Chinesesimp>指挥官</Chinesesimp>
+            <Chinese>指揮官</Chinese>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_PriorityPassenger">
+            <English>Passenger</English>
+            <Chinesesimp>乘客</Chinesesimp>
+            <Chinese>乘客</Chinese>
+        </Key>
     </Package>
 </Project>
