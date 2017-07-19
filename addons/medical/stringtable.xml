@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -1100,8 +1100,8 @@
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
             <Japanese>緊急圧迫包帯は、傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
-            <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止.</Chinesesimp>
-            <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止.</Chinese>
+            <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
+            <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Display">
             <English>Packing Bandage</English>
@@ -1196,8 +1196,8 @@
             <Czech>Hodí se k fixačním účelům a to i v oblastech kloubů.</Czech>
             <Japanese>負傷部分へ最大の対応と止血を続けられます。</Japanese>
             <Korean>부상 부위를 골고루 압박해주면서 동시에 고정시켜 줍니다.</Korean>
-            <Chinesesimp>可对伤口持续压迫并固定以防止伤口情况变严重.</Chinesesimp>
-            <Chinese>可對傷口持續壓迫並固定以防止傷口情況變嚴重.</Chinese>
+            <Chinesesimp>可对伤口持续压迫并固定以防止伤口情况变严重</Chinesesimp>
+            <Chinese>可對傷口持續壓迫並固定以防止傷口情況變嚴重</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Tourniquet_Display">
             <English>Tourniquet (CAT)</English>
@@ -1244,8 +1244,8 @@
             <Czech>Zařízení používané ke stlačení venózního a arteriálního oběhu. V důsledku dochází ke zpomalení toku krve a tedy i snížení ztrát krve.</Czech>
             <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れをおそくし、失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
-            <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的.</Chinesesimp>
-            <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的.</Chinese>
+            <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的</Chinesesimp>
+            <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1292,8 +1292,8 @@
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
             <Japanese>戦闘が収まったとき、モルヒネを痛みにたいしてつかいます。</Japanese>
             <Korean>심한 통증을 완화하기 위해 쓰이는 진통제입니다.</Korean>
-            <Chinesesimp>止痛药的一种, 用于减低中度至重度的疼痛感.</Chinesesimp>
-            <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感.</Chinese>
+            <Chinesesimp>止痛药的一种, 用于减低中度至重度的疼痛感</Chinesesimp>
+            <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
@@ -1753,8 +1753,8 @@
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných</Czech>
             <Japanese>縫合や高度な処置に必要とされる、さまざまな治療器具が含まれています。</Japanese>
             <Korean>봉합및 고급 조치에 필요한 다양한 치료 도구가 있습니다.</Korean>
-            <Chinesesimp>包含各种医疗套件, 以及进阶伤口系统需要的缝合用品.</Chinesesimp>
-            <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品.</Chinese>
+            <Chinesesimp>包含各种医疗套件, 以及进阶伤口系统需要的缝合用品</Chinesesimp>
+            <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Use">
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
@@ -1769,8 +1769,8 @@
             <Italian>Pronto soccorso personale da campo per mettersi i punti o per trattamenti avanzati.</Italian>
             <Japanese>戦場で縫合や高度な処置に必要とされる、さまざまな治療器具が含まれています。</Japanese>
             <Korean>야전에서 봉합및 고급 조치를 위한 개인응급키트</Korean>
-            <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用.</Chinesesimp>
-            <Chinese>個人急救包可用於戰地縫合手術或進階傷口系統使用.</Chinese>
+            <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用</Chinesesimp>
+            <Chinese>個人急救包可用於戰地縫合手術或進階傷口系統使用</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
@@ -1817,8 +1817,8 @@
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>縫合キットは戦場で高度な処置をするためにつかわれます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
-            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统).</Chinesesimp>
-            <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統).</Chinese>
+            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
+            <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Desc_Use">
             <English>Surgical Kit for in field advanced medical treatment</English>
@@ -1833,8 +1833,8 @@
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>縫合キットは戦場で高度な処置をするためにつかわれます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
-            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统).</Chinesesimp>
-            <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統).</Chinese>
+            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
+            <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Use_SurgicalKit">
             <English>Use Surgical Kit</English>
@@ -5083,8 +5083,8 @@
             <Italian>Numero massimo di vite di un'unità. 0 o -1 per disabilitare.</Italian>
             <Japanese>ユニットの最大リバイブ数を設定できます。0 または -1 は無効化になります</Japanese>
             <Korean>소생 가능한 횟수입니다. 0 혹은 -1 로 비활성화 합니다</Korean>
-            <Chinesesimp>一个人员最大可被救活次数, 0或-1为关闭 (无限救活).</Chinesesimp>
-            <Chinese>一個人員最大可被救活次數, 0或-1為關閉 (無限救活).</Chinese>
+            <Chinesesimp>一个人员最大可被救活次数, 0或-1为关闭 (无限救活)</Chinesesimp>
+            <Chinese>一個人員最大可被救活次數, 0或-1為關閉 (無限救活)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
@@ -5179,8 +5179,8 @@
             <Italian>Questo modulo ti permette di assegnare la classe Medico alle unità selezionate.</Italian>
             <Japanese>選択されたユニットを衛生兵として指定します。</Japanese>
             <Korean>이 모듈은 선택한 보직이 의무병을 할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>本模块可让被同步的单位成为医疗兵.</Chinesesimp>
-            <Chinese>本模塊可讓被同步的單位成為醫療兵.</Chinese>
+            <Chinesesimp>本模块可让被同步的单位成为医疗兵</Chinesesimp>
+            <Chinese>本模塊可讓被同步的單位成為醫療兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_none">
             <English>None</English>

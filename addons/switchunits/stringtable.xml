@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -45,8 +45,8 @@
             <Portuguese>Essa unidade  está muito perto do inimigo.</Portuguese>
             <Japanese>このユニットは敵に近すぎます。</Japanese>
             <Korean>그 인원은 적과 너무 가깝습니다.</Korean>
-            <Chinesesimp>这单位太接近敌人了.</Chinesesimp>
-            <Chinese>這單位太接近敵人了.</Chinese>
+            <Chinesesimp>这单位太接近敌人了</Chinesesimp>
+            <Chinese>這單位太接近敵人了</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
             <English>SwitchUnits System</English>
@@ -221,8 +221,8 @@
             <Italian>Abilita una zona sicura attorno ad unità nemiche? I giocatori non possono cambiare ad unità dentro la zona sicura.</Italian>
             <Japanese>敵ユニットから逃れる安全地帯を有効にしますか？プレイヤーは安全地帯内のユニットへ切り替えできません。</Japanese>
             <Korean>적 주위로 안전 지대를 활성화합니까? 안전 지대 내에서는 플레이어가 인원 전환을 할 수 없습니다.</Korean>
-            <Chinesesimp>启用敌方周围安全地带? 玩家不能切换到安全区内的单位.</Chinesesimp>
-            <Chinese>啟用敵方周圍安全地帶? 玩家不能切換到安全區內的單位.</Chinese>
+            <Chinesesimp>启用敌方周围安全地带? 玩家不能切换到安全区内的单位</Chinesesimp>
+            <Chinese>啟用敵方周圍安全地帶? 玩家不能切換到安全區內的單位</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
@@ -268,8 +268,8 @@
             <Spanish>El módulo permite a las unidades cambiar de bando durante el juego.</Spanish>
             <Japanese>モジュールはゲームにおいて、陣営の切り替えを有効にします。</Japanese>
             <Korean>이 모듈은 당신을 게임 중에 진영을 바꿀 수 있게 해줍니다.</Korean>
-            <Chinesesimp>此模块允许你在游戏中切换至另一方.</Chinesesimp>
-            <Chinese>此模塊允許你在遊戲中切換至另一方.</Chinese>
+            <Chinesesimp>此模块允许你在游戏中切换至另一方</Chinesesimp>
+            <Chinese>此模塊允許你在遊戲中切換至另一方</Chinese>
         </Key>
     </Package>
 </Project>

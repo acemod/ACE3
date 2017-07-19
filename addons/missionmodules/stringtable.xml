@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissionModules">
         <Key ID="STR_ACE_MissionModules_Category_DisplayName">
@@ -93,8 +93,8 @@
             <Italian>Usati per calcolare una posizione casuale ed impostare la distanza minima tra i giocatori ed il file suono eseguito</Italian>
             <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最低距離を設定します</Japanese>
             <Korean>무작위 위치 계산에 사용되며 플레이어와 재생 된 사운드 파일 간의 최소 거리를 설정합니다.</Korean>
-            <Chinesesimp>声音将随机产生在玩家附近, 此选项定义该声音最近会距离玩家多少公尺.</Chinesesimp>
-            <Chinese>聲音將隨機產生在玩家附近, 此選項定義該聲音最近會距離玩家多少公尺.</Chinese>
+            <Chinesesimp>声音将随机产生在玩家附近, 此选项定义该声音最近会距离玩家多少公尺</Chinesesimp>
+            <Chinese>聲音將隨機產生在玩家附近, 此選項定義該聲音最近會距離玩家多少公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -125,8 +125,8 @@
             <Italian>Usato per calcolare una posizione casuale ed impostare la distanza massima tra giocatori e il file suono eseguito</Italian>
             <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最大距離を設定します</Japanese>
             <Korean>무작위 위치 계산에 사용되며 플레이어와 재생 된 사운드 파일 간의 최대 거리를 설정합니다.</Korean>
-            <Chinesesimp>声音将随机产生在玩家附近, 此选项定义该声音最远会距离玩家多少公尺.</Chinesesimp>
-            <Chinese>聲音將隨機產生在玩家附近, 此選項定義該聲音最遠會距離玩家多少公尺.</Chinese>
+            <Chinesesimp>声音将随机产生在玩家附近, 此选项定义该声音最远会距离玩家多少公尺</Chinesesimp>
+            <Chinese>聲音將隨機產生在玩家附近, 此選項定義該聲音最遠會距離玩家多少公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
             <English>Minimal Delay</English>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -78,7 +78,7 @@
             <Italian>Opzioni</Italian>
             <Japanese>オプション</Japanese>
             <Korean>옵션</Korean>
-            <Chinesesimp>中文化由[MR]Diss制作</Chinesesimp>
+            <Chinesesimp>设定</Chinesesimp>
             <Chinese>設定</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabValues">
@@ -174,8 +174,8 @@
             <Portuguese>Vetor. Separe elementos usando *,*.</Portuguese>
             <Japanese>アライ。,を使うことで区別できます。</Japanese>
             <Korean>배열. 요소를 ,. 로 나눔</Korean>
-            <Chinesesimp>阵列. 使用','来做每个值的区隔.</Chinesesimp>
-            <Chinese>陣列. 使用','來做每個值的區隔.</Chinese>
+            <Chinesesimp>阵列. 使用','来做每个值的区隔</Chinesesimp>
+            <Chinese>陣列. 使用','來做每個值的區隔</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
@@ -350,8 +350,8 @@
             <Italian>Quando consentito, hai accesso alle modifiche delle impostazioni ed esportazione in SP. Cliccando Esporta piazzera il config formattato sul tuo Blocco Note.</Italian>
             <Japanese>許可の場合、あなたは設定の変更と出力をシングルプレイで可能です。出力をクリックすると、サーバ用設定の形式となっている設定がクリップボードに保存されます。</Japanese>
             <Korean>허락하는 경우 싱글플레이에서 설정의 변경과 내보내기가 가능해집니다. 내보내기를 눌러서 서버 형성의 설정을 클립보드로 보냅니다.</Korean>
-            <Chinesesimp>当本功能开启时, 你将能在单人模式中调整并输出设定. 点击输出按钮后将会让相关设定参数复制到剪贴簿上.</Chinesesimp>
-            <Chinese>當本功能開啟時, 你將能在單人模式中調整並輸出設定. 點擊輸出按鈕後將會讓相關設定參數複製到剪貼簿上.</Chinese>
+            <Chinesesimp>当本功能开启时, 你将能在单人模式中调整并输出设定. 点击输出按钮后将会让相关设定参数复制到剪贴簿上</Chinesesimp>
+            <Chinese>當本功能開啟時, 你將能在單人模式中調整並輸出設定. 點擊輸出按鈕後將會讓相關設定參數複製到剪貼簿上</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -463,8 +463,8 @@
             <French>%1 litres ont été écoulés.</French>
             <Japanese>%1 リッターがある</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
-            <Chinesesimp>已加入%1公升.</Chinesesimp>
-            <Chinese>已加入%1公升.</Chinese>
+            <Chinesesimp>已加入%1公升</Chinesesimp>
+            <Chinese>已加入%1公升</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>

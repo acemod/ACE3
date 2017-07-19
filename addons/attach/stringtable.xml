@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Attach">
         <Key ID="STR_ACE_Attach_AttachDetach">
@@ -190,8 +190,8 @@
             <Russian>ИК-маяк позволяет сигнализировать о своём местоположении через пульсирующий свет, видимый только через ПНВ.</Russian>
             <Japanese>赤外線ストロボはあなたの位置を知らせますが、夜間暗視装置を介してでしか見れません。</Japanese>
             <Korean>적외선 스트로브는 자신의 위치를 반짝이면서 표시합니다. 이는 야간투시경으로 밖에 보지 못합니다.</Korean>
-            <Chinese>紅外線閃頻器,藉由紅外線閃頻信號來辨識你的位置,僅能使用夜視系統來辨識紅外線信號</Chinese>
-            <Chinesesimp>红外线闪频器,藉由红外线闪频信号来辨识你的位置,仅能使用夜视系统来辨识红外线信号</Chinesesimp>
+            <Chinese>紅外線閃頻器,藉由紅外線閃頻信號來辨識你的位置，僅能使用夜視系統來辨識紅外線信號</Chinese>
+            <Chinesesimp>红外线闪频器,藉由红外线闪频信号来辨识你的位置，仅能使用夜视系统来辨识红外线信号</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
             <English>Place</English>

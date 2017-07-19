@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Scopes">
         <Key ID="STR_ACE_Scopes_DisplayName">
@@ -342,8 +342,8 @@
             <Polish>Ten moduł włącza pokrętła kalibracyjne poprawki na wiatr oraz poprawki wysokości dla celowników o dużym powiększeniu.</Polish>
             <French>Ce module ajoute les tambours de correction de la hausse et de dérive sur les optiques de visée à fort grossissement.</French>
             <Italian>Questo modulo aggiunge lo spostamento dell'aria e la regolazione dell'elevazione delle torrette in mirini a lunga gittata</Italian>
-            <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏, 距离用的调整纽.</Chinesesimp>
-            <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏, 距離用的調整紐.</Chinese>
+            <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏, 距离用的调整纽</Chinesesimp>
+            <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏, 距離用的調整紐</Chinese>
         </Key>
     </Package>
 </Project>

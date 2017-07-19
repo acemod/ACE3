@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Mk6Mortar">
         <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
@@ -189,8 +189,8 @@
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
             <Japanese>Mk6 迫撃砲への設定をできます。</Japanese>
             <Korean>이 모듈은 Mk6 설치 설정을 가능케 합니다.</Korean>
-            <Chinesesimp>这个模块允许你设定MK6迫击炮的相关功能.</Chinesesimp>
-            <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能.</Chinese>
+            <Chinesesimp>这个模块允许你设定MK6迫击炮的相关功能</Chinesesimp>
+            <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
             <English>Use Ammunition handling</English>
@@ -217,8 +217,8 @@
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
             <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI 迫撃砲へ影響を与えません。</Japanese>
             <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야만 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
-            <Chinesesimp>开启此功能时. 迫击炮的弹药需由炮手与装填手共同合作来进行装填. 此功能并不影响由AI射击的迫击炮.</Chinesesimp>
-            <Chinese>開啟此功能時. 迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填. 此功能並不影響由AI射擊的迫擊砲.</Chinese>
+            <Chinesesimp>开启此功能时. 迫击炮的弹药需由炮手与装填手共同合作来进行装填. 此功能并不影响由AI射击的迫击炮</Chinesesimp>
+            <Chinese>開啟此功能時. 迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填. 此功能並不影響由AI射擊的迫擊砲</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>

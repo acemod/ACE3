@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Hearing">
         <Key ID="STR_ACE_Hearing_EarPlugs_Name">
@@ -30,8 +30,8 @@
             <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
             <Japanese>着けることにより、近くの大きな銃声から聴覚を保護します。</Japanese>
             <Korean>보호용 귀마개는 화기로부터의 큰소리로부터 사용자의 청력을 보호합니다.</Korean>
-            <Chinesesimp>配戴防护耳塞, 遇到大声的武器发射时也不会损害听力.</Chinesesimp>
-            <Chinese>配戴防護耳塞, 遇到大聲的武器發射時也不會損害聽力.</Chinese>
+            <Chinesesimp>配戴防护耳塞, 遇到大声的武器发射时也不会损害听力</Chinesesimp>
+            <Chinese>配戴防護耳塞, 遇到大聲的武器發射時也不會損害聽力</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_On">
             <English>Earplugs in</English>
@@ -156,8 +156,8 @@
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
             <Japanese>プレイヤーの聴覚が損傷をしたら耳鳴りの効果を削除します</Japanese>
             <Korean>플레이어가 청력손실을 입을때 생기는 이명현상을 제거합니다.</Korean>
-            <Chinesesimp>关闭耳鸣效果时, 就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果.</Chinesesimp>
-            <Chinese>關閉耳鳴效果時, 就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果.</Chinese>
+            <Chinesesimp>关闭耳鸣效果时, 就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果</Chinesesimp>
+            <Chinese>關閉耳鳴效果時, 就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
@@ -249,8 +249,8 @@
             <French>Permet aux unités controlées à distance de subir des traumatismes sonores.</French>
             <Japanese>Zeus により遠隔操作されたユニットにも、聴覚へ損傷を受けるようにします。</Japanese>
             <Korean>Zeus가 원격으로 청력손실을 입힐 수 있게 합니다.</Korean>
-            <Chinesesimp>设定宙斯远程遥控的单位也会受到耳鸣的效果.</Chinesesimp>
-            <Chinese>設定宙斯遠程遙控的單位也會受到耳鳴的效果.</Chinese>
+            <Chinesesimp>设定宙斯远程遥控的单位也会受到耳鸣的效果</Chinesesimp>
+            <Chinese>設定宙斯遠程遙控的單位也會受到耳鳴的效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
             <English>Add earplugs to units</English>
@@ -279,8 +279,8 @@
             <French>Ajoute l'objet "Ace_EarPlugs" à toutes les unités ayant des armes bruyantes. Peut être désactivé par des loadouts personalisés.</French>
             <Japanese>全ユニットへ`ACE_EarPlugs`アイテムをもたせます。これは変更された武装で無効化できます。</Japanese>
             <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화 할 수 있습니다.</Korean>
-            <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位. 当你想自定装备时, 此功能可被关闭.</Chinesesimp>
-            <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位. 當你想自定裝備時, 此功能可被關閉.</Chinese>
+            <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位. 当你想自定装备时, 此功能可被关闭</Chinesesimp>
+            <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位. 當你想自定裝備時, 此功能可被關閉</Chinese>
         </Key>
     </Package>
 </Project>
