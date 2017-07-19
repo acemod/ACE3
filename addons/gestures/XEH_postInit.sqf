@@ -20,6 +20,8 @@ if (!hasInterface) exitWith {};
 
     TRACE_4("Adding KeyBind",_currentName,_signalName,_code,_key);
 
+    ["ACE3 Gestures", localize LSTRING(ACEKeybindCategoryGestures)] call CBA_fnc_registerKeybindModPrettyName;
+
     [
         "ACE3 Gestures",
         _currentName,
