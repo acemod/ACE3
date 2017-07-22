@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Markers">
         <Key ID="STR_ACE_Markers_MarkerDirection">
@@ -14,8 +14,8 @@
             <Portuguese>Direção %1</Portuguese>
             <Japanese>方位：%1°</Japanese>
             <Korean>방위: %1°</Korean>
-            <SChinese>方位: %1°</SChinese>
-            <TChinese>方位: %1°</TChinese>
+            <Chinesesimp>方位: %1°</Chinesesimp>
+            <Chinese>方位: %1°</Chinese>
         </Key>
     </Package>
 </Project>

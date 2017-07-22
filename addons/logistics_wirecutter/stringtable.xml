@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_Wirecutter">
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterName">
@@ -14,8 +14,8 @@
             <Portuguese>Cortador de Arame</Portuguese>
             <Japanese>ワイヤーカッター</Japanese>
             <Korean>절단기</Korean>
-            <SChinese>剪铁丝网钳</SChinese>
-            <TChinese>剪鐵絲網鉗</TChinese>
+            <Chinesesimp>剪铁丝网钳</Chinesesimp>
+            <Chinese>剪鐵絲網鉗</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -30,8 +30,8 @@
             <Portuguese>Cortador de Arame</Portuguese>
             <Japanese>ワイヤーカッター</Japanese>
             <Korean>절단기</Korean>
-            <SChinese>剪铁丝网钳</SChinese>
-            <TChinese>剪鐵絲網鉗</TChinese>
+            <Chinesesimp>剪铁丝网钳</Chinesesimp>
+            <Chinese>剪鐵絲網鉗</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CutFence">
             <English>Cut Fence</English>
@@ -46,8 +46,8 @@
             <Russian>Разрезать забор</Russian>
             <Japanese>フェンスを切断する</Japanese>
             <Korean>철조망 자르기</Korean>
-            <SChinese>剪断护栏</SChinese>
-            <TChinese>剪斷護欄</TChinese>
+            <Chinesesimp>剪断护栏</Chinesesimp>
+            <Chinese>剪斷護欄</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
             <English>Cutting Fences / Wires...</English>
@@ -62,8 +62,8 @@
             <Russian>Разрезаем забор / провода...</Russian>
             <Japanese>フェンス/ワイヤを切断中・・・</Japanese>
             <Korean>철망/철조망 자르는중...</Korean>
-            <SChinese>剪断护栏/刺网中...</SChinese>
-            <TChinese>剪斷護欄/刺網中...</TChinese>
+            <Chinesesimp>剪断护栏/刺网中...</Chinesesimp>
+            <Chinese>剪斷護欄/刺網中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>
@@ -78,8 +78,8 @@
             <Russian>Забор разрезан</Russian>
             <Japanese>フェンスを切断した</Japanese>
             <Korean>절단됨</Korean>
-            <SChinese>护栏已被剪断</SChinese>
-            <TChinese>護欄已被剪斷</TChinese>
+            <Chinesesimp>护栏已被剪断</Chinesesimp>
+            <Chinese>護欄已被剪斷</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Reload">
         <Key ID="STR_ACE_Reload_SettingDisplayTextName">
@@ -14,8 +14,8 @@
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
             <Japanese>再装填された武器の弾薬を確認</Japanese>
             <Korean>재장전시 장탄수 확인</Korean>
-            <SChinese>在重新装填时检查弹药</SChinese>
-            <TChinese>在重新裝填時檢查彈藥</TChinese>
+            <Chinesesimp>在重新装填时检查弹药</Chinesesimp>
+            <Chinese>在重新裝填時檢查彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_SettingDisplayTextDesc">
             <English>Check the ammo in your new magazine on magazine reload.</English>
@@ -30,8 +30,8 @@
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
             <Japanese>あたらしく装填された弾倉の弾薬を確認します。</Japanese>
             <Korean>재장전시 새탄창에 있는 탄약을 확인합니다.</Korean>
-            <SChinese>在重新装填时检查新弹匣上的弹药.</SChinese>
-            <TChinese>在重新裝填時檢查新彈匣上的彈藥.</TChinese>
+            <Chinesesimp>在重新装填时检查新弹匣上的弹药.</Chinesesimp>
+            <Chinese>在重新裝填時檢查新彈匣上的彈藥.</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
@@ -46,8 +46,8 @@
             <Russian>Проверить боеприпасы</Russian>
             <Japanese>弾薬を確認</Japanese>
             <Korean>장탄수 확인</Korean>
-            <SChinese>检查弹药</SChinese>
-            <TChinese>檢查彈藥</TChinese>
+            <Chinesesimp>检查弹药</Chinesesimp>
+            <Chinese>檢查彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_Ammo">
             <English>Ammo</English>
@@ -62,8 +62,8 @@
             <Russian>Боеприпасы</Russian>
             <Japanese>弾薬</Japanese>
             <Korean>장탄수</Korean>
-            <SChinese>弹药</SChinese>
-            <TChinese>彈藥</TChinese>
+            <Chinesesimp>弹药</Chinesesimp>
+            <Chinese>彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
@@ -78,8 +78,8 @@
             <Portuguese>Ligar cintos de munição</Portuguese>
             <Japanese>ベルト リンク</Japanese>
             <Korean>벨트 연결</Korean>
-            <SChinese>连接弹链</SChinese>
-            <TChinese>連接彈鏈</TChinese>
+            <Chinesesimp>连接弹链</Chinesesimp>
+            <Chinese>連接彈鏈</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
@@ -94,8 +94,8 @@
             <Portuguese>Ligando cintos...</Portuguese>
             <Japanese>ベルトをつなげている・・・</Japanese>
             <Korean>벨트 연결중...</Korean>
-            <SChinese>连接弹链中...</SChinese>
-            <TChinese>連接彈鏈中...</TChinese>
+            <Chinesesimp>连接弹链中...</Chinesesimp>
+            <Chinese>連接彈鏈中...</Chinese>
         </Key>
     </Package>
 </Project>

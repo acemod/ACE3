@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="gforces">
         <Key ID="STR_ACE_gforces_enabledFor_displayName">
@@ -13,8 +13,8 @@
             <Polish>Efekty przeciążeń</Polish>
             <Korean>중력가속도 효과</Korean>
             <Italian>Effetti forza G</Italian>
-            <SChinese>G力影响</SChinese>
-            <TChinese>G力影響</TChinese>
+            <Chinesesimp>G力影响</Chinesesimp>
+            <Chinese>G力影響</Chinese>
         </Key>
         <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
@@ -28,8 +28,8 @@
             <Polish>Tylko samoloty</Polish>
             <Korean>비행기에만 적용</Korean>
             <Italian>Solo Aerei</Italian>
-            <SChinese>只有战斗机</SChinese>
-            <TChinese>只有戰鬥機</TChinese>
+            <Chinesesimp>只有战斗机</Chinesesimp>
+            <Chinese>只有戰鬥機</Chinese>
         </Key>
     </Package>
 </Project>

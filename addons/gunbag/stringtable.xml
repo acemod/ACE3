@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gunbag">
         <Key ID="STR_ACE_Gunbag_DisplayName">
@@ -11,8 +11,8 @@
             <Polish>Torba na broń</Polish>
             <Korean>총가방</Korean>
             <Italian>Borsa per Armi</Italian>
-            <SChinese>枪袋</SChinese>
-            <TChinese>槍袋</TChinese>
+            <Chinesesimp>枪袋</Chinesesimp>
+            <Chinese>槍袋</Chinese>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
@@ -24,8 +24,8 @@
             <Polish>Torba na broń (jasnobrązowa)</Polish>
             <Korean>총가방 (황갈색)</Korean>
             <Italian>Borsa per Armi (Tan)</Italian>
-            <SChinese>枪袋 (黄褐色)</SChinese>
-            <TChinese>槍袋 (黃褐色)</TChinese>
+            <Chinesesimp>枪袋 (黄褐色)</Chinesesimp>
+            <Chinese>槍袋 (黃褐色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
@@ -37,8 +37,8 @@
             <Polish>Włóż broń do torby</Polish>
             <Korean>무기를 총가방에 넣기</Korean>
             <Italian>Metti l'arma nella borsa per armi</Italian>
-            <SChinese>将武器放置枪袋</SChinese>
-            <TChinese>將武器放置槍袋</TChinese>
+            <Chinesesimp>将武器放置枪袋</Chinesesimp>
+            <Chinese>將武器放置槍袋</Chinese>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -50,8 +50,8 @@
             <Polish>Wyciągnij broń z torby</Polish>
             <Korean>무기를 총가방에서 꺼내기</Korean>
             <Italian>Prendi l'arma dalla borsa per armi</Italian>
-            <SChinese>将武器拿出枪袋</SChinese>
-            <TChinese>將武器拿出槍袋</TChinese>
+            <Chinesesimp>将武器拿出枪袋</Chinesesimp>
+            <Chinese>將武器拿出槍袋</Chinese>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
@@ -63,8 +63,8 @@
             <Polish>Status</Polish>
             <Korean>상태</Korean>
             <Italian>Stato</Italian>
-            <SChinese>状态</SChinese>
-            <TChinese>狀態</TChinese>
+            <Chinesesimp>状态</Chinesesimp>
+            <Chinese>狀態</Chinese>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
@@ -76,8 +76,8 @@
             <Polish>Torba jest pusta</Polish>
             <Korean>총가방 비어있음</Korean>
             <Italian>Borsa per armi vuota</Italian>
-            <SChinese>枪袋为空</SChinese>
-            <TChinese>槍袋為空</TChinese>
+            <Chinesesimp>枪袋为空</Chinesesimp>
+            <Chinese>槍袋為空</Chinese>
         </Key>
     </Package>
 </Project>

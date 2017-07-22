@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
@@ -14,8 +14,8 @@
             <Portuguese>Mostrat texto ao lançar granada</Portuguese>
             <Japanese>手榴弾を投げるときに通知</Japanese>
             <Korean>수류탄 투척시 화면에 문자 표시</Korean>
-            <SChinese>投掷手榴弹时显示提示讯息</SChinese>
-            <TChinese>投擲手榴彈時顯示提示訊息</TChinese>
+            <Chinesesimp>投掷手榴弹时显示提示讯息</Chinesesimp>
+            <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextDesc">
             <English>Display a hint or text on grenade throw.</English>
@@ -30,8 +30,8 @@
             <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
             <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
             <Korean>수류탄 투척시 화면에 문자나 힌트를 표시합니다.</Korean>
-            <SChinese>投掷手榴弹时显示提示讯息.</SChinese>
-            <TChinese>投擲手榴彈時顯示提示訊息.</TChinese>
+            <Chinesesimp>投掷手榴弹时显示提示讯息.</Chinesesimp>
+            <Chinese>投擲手榴彈時顯示提示訊息.</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
@@ -46,8 +46,8 @@
             <Italian>Seleziona la Pistola</Italian>
             <Japanese>拳銃を選択</Japanese>
             <Korean>권총 선택</Korean>
-            <SChinese>选择手枪</SChinese>
-            <TChinese>選擇手槍</TChinese>
+            <Chinesesimp>选择手枪</Chinesesimp>
+            <Chinese>選擇手槍</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifle">
             <English>Select Rifle</English>
@@ -62,8 +62,8 @@
             <Italian>Seleziona il fucile</Italian>
             <Japanese>小銃を選択</Japanese>
             <Korean>소총 선택</Korean>
-            <SChinese>选择步枪</SChinese>
-            <TChinese>選擇步槍</TChinese>
+            <Chinesesimp>选择步枪</Chinesesimp>
+            <Chinese>選擇步槍</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>
@@ -78,8 +78,8 @@
             <Italian>Seleziona il lanciamissili</Italian>
             <Japanese>ランチャーを選択</Japanese>
             <Korean>발사기 선택</Korean>
-            <SChinese>选择发射器</SChinese>
-            <TChinese>選擇發射器</TChinese>
+            <Chinesesimp>选择发射器</Chinesesimp>
+            <Chinese>選擇發射器</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
             <English>Select Grenade Launcher</English>
@@ -94,8 +94,8 @@
             <Italian>Seleziona il lanciagranate</Italian>
             <Japanese>グレネード ランチャーを選択</Japanese>
             <Korean>유탄발사기 선택</Korean>
-            <SChinese>选择榴弹发射器</SChinese>
-            <TChinese>選擇榴彈發射器</TChinese>
+            <Chinesesimp>选择榴弹发射器</Chinesesimp>
+            <Chinese>選擇榴彈發射器</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
             <English>Select Binoculars</English>
@@ -110,8 +110,8 @@
             <Italian>Seleziona il Binocolo</Italian>
             <Japanese>双眼鏡を選択</Japanese>
             <Korean>망원경 선택</Korean>
-            <SChinese>选择望远镜</SChinese>
-            <TChinese>選擇望遠鏡</TChinese>
+            <Chinesesimp>选择望远镜</Chinesesimp>
+            <Chinese>選擇望遠鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
             <English>Holster Weapon</English>
@@ -126,8 +126,8 @@
             <Italian>Nascondi l'arma</Italian>
             <Japanese>武器をしまう</Japanese>
             <Korean>무기 집어넣기</Korean>
-            <SChinese>武器套</SChinese>
-            <TChinese>武器套</TChinese>
+            <Chinesesimp>武器套</Chinesesimp>
+            <Chinese>武器套</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOn">
             <English>Engine on</English>
@@ -142,8 +142,8 @@
             <Russian>Включить двигатель</Russian>
             <Japanese>エンジン始動</Japanese>
             <Korean>엔진 켜기</Korean>
-            <SChinese>引擎发动</SChinese>
-            <TChinese>引擎發動</TChinese>
+            <Chinesesimp>引擎发动</Chinesesimp>
+            <Chinese>引擎發動</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOff">
             <English>Engine off</English>
@@ -158,8 +158,8 @@
             <Russian>Выключить двигатель</Russian>
             <Japanese>エンジン停止</Japanese>
             <Korean>엔진 끄기</Korean>
-            <SChinese>引擎熄火</SChinese>
-            <TChinese>引擎熄火</TChinese>
+            <Chinesesimp>引擎熄火</Chinesesimp>
+            <Chinese>引擎熄火</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
             <English>Select Main Gun</English>
@@ -174,8 +174,8 @@
             <Russian>Выбрать основное оружие</Russian>
             <Japanese>主砲を選択</Japanese>
             <Korean>주포 선택</Korean>
-            <SChinese>选择主武器</SChinese>
-            <TChinese>選擇主武器</TChinese>
+            <Chinesesimp>选择主武器</Chinesesimp>
+            <Chinese>選擇主武器</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
             <English>Select Machine Gun</English>
@@ -190,8 +190,8 @@
             <Russian>Выбрать пулемёт</Russian>
             <Japanese>機関砲を選択</Japanese>
             <Korean>기관총 선택</Korean>
-            <SChinese>选择机枪</SChinese>
-            <TChinese>選擇機槍</TChinese>
+            <Chinesesimp>选择机枪</Chinesesimp>
+            <Chinese>選擇機槍</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
             <English>Select Missiles</English>
@@ -206,8 +206,8 @@
             <Russian>Выбрать ракеты</Russian>
             <Japanese>ミサイルを選択</Japanese>
             <Korean>미사일 선택</Korean>
-            <SChinese>选择导弹</SChinese>
-            <TChinese>選擇導彈</TChinese>
+            <Chinesesimp>选择导弹</Chinesesimp>
+            <Chinese>選擇導彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
             <English>Grenade %1</English>
@@ -222,8 +222,8 @@
             <Portuguese>Granada %1</Portuguese>
             <Japanese>%1 手榴弾</Japanese>
             <Korean>%1 수류탄</Korean>
-            <SChinese>手榴弹 %1</SChinese>
-            <TChinese>手榴彈 %1</TChinese>
+            <Chinesesimp>手榴弹 %1</Chinesesimp>
+            <Chinese>手榴彈 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
             <English>Ready Grenade</English>
@@ -238,8 +238,8 @@
             <Portuguese>Granada pronta</Portuguese>
             <Japanese>投てきよし</Japanese>
             <Korean>투척물 준비</Korean>
-            <SChinese>准备手榴弹</SChinese>
-            <TChinese>準備手榴彈</TChinese>
+            <Chinesesimp>准备手榴弹</Chinesesimp>
+            <Chinese>準備手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
             <English>Select Frag Grenade</English>
@@ -254,8 +254,8 @@
             <Russian>Выбрать осколочную гранату</Russian>
             <Japanese>破片手榴弾を選択</Japanese>
             <Korean>살상 투척물 선택</Korean>
-            <SChinese>选择破片手榴弹</SChinese>
-            <TChinese>選擇破片手榴彈</TChinese>
+            <Chinesesimp>选择破片手榴弹</Chinesesimp>
+            <Chinese>選擇破片手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
             <English>Select Non-Frag Grenade</English>
@@ -270,8 +270,8 @@
             <Russian>Выбрать гранату</Russian>
             <Japanese>その他の手榴弾を選択</Japanese>
             <Korean>비살상 투척물 선택</Korean>
-            <SChinese>选择非破片手榴弹</SChinese>
-            <TChinese>選擇非破片手榴彈</TChinese>
+            <Chinesesimp>选择非破片手榴弹</Chinesesimp>
+            <Chinese>選擇非破片手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
@@ -286,8 +286,8 @@
             <Russian>Бросить выбранную гранату</Russian>
             <Japanese>選択された手榴弾を投げる</Japanese>
             <Korean>선택된 투척물 투척</Korean>
-            <SChinese>投掷选择的手榴弹</SChinese>
-            <TChinese>投擲選擇的手榴彈</TChinese>
+            <Chinesesimp>投掷选择的手榴弹</Chinesesimp>
+            <Chinese>投擲選擇的手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
             <English>No grenades left</English>
@@ -302,8 +302,8 @@
             <Portuguese>Sem mais granadas</Portuguese>
             <Japanese>もう手榴弾は無い</Japanese>
             <Korean>투척물 없음</Korean>
-            <SChinese>已无手榴弹</SChinese>
-            <TChinese>已無手榴彈</TChinese>
+            <Chinesesimp>已无手榴弹</Chinesesimp>
+            <Chinese>已無手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
             <English>No frags left</English>
@@ -318,8 +318,8 @@
             <Russian>Осколочных гранат нет</Russian>
             <Japanese>もう破片手榴弾は無い</Japanese>
             <Korean>세열 수류탄 없음</Korean>
-            <SChinese>已无破片手榴弹</SChinese>
-            <TChinese>已無破片手榴彈</TChinese>
+            <Chinesesimp>已无破片手榴弹</Chinesesimp>
+            <Chinese>已無破片手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
             <English>No misc. grenades left</English>
@@ -334,8 +334,8 @@
             <Russian>Нелетальные гранаты закончились</Russian>
             <Japanese>もうその他の手榴弾は無い</Japanese>
             <Korean>기타 투척물 없음</Korean>
-            <SChinese>已无其他手榴弹</SChinese>
-            <TChinese>已無其他手榴彈</TChinese>
+            <Chinesesimp>已无其他手榴弹</Chinesesimp>
+            <Chinese>已無其他手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
             <English>No grenade selected</English>
@@ -350,8 +350,8 @@
             <Russian>Нет выбранной гранаты</Russian>
             <Japanese>手榴弾は選択されていない</Japanese>
             <Korean>선택된 수류탄 없음</Korean>
-            <SChinese>未选择手榴弹</SChinese>
-            <TChinese>未選擇手榴彈</TChinese>
+            <Chinesesimp>未选择手榴弹</Chinesesimp>
+            <Chinese>未選擇手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
             <English>Fire Smoke Launcher</English>
@@ -366,8 +366,8 @@
             <Portuguese>Lançador de fumaça</Portuguese>
             <Japanese>煙幕発射機を発射</Japanese>
             <Korean>연막발사기 박사</Korean>
-            <SChinese>发射烟雾发射器</SChinese>
-            <TChinese>發射煙霧發射器</TChinese>
+            <Chinesesimp>发射烟雾发射器</Chinesesimp>
+            <Chinese>發射煙霧發射器</Chinese>
         </Key>
     </Package>
 </Project>
