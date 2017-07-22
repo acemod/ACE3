@@ -44,7 +44,7 @@
             <Hungarian>Szögmértékegység:</Hungarian>
             <Italian>Unità angolare:</Italian>
             <Portuguese>Unidade Angular:</Portuguese>
-            <Japanese>角度の種類：</Japanese>
+            <Japanese>角度の種類:</Japanese>
             <Korean>각도의 단위:</Korean>
             <Chinesesimp>角密位:</Chinesesimp>
             <Chinese>角密位:</Chinese>
@@ -60,7 +60,7 @@
             <Hungarian>Mil</Hungarian>
             <Italian>Mils</Italian>
             <Portuguese>Mils:</Portuguese>
-            <Japanese>ミリ ラジアン</Japanese>
+            <Japanese>ミル</Japanese>
             <Korean>밀</Korean>
             <Chinesesimp>密位</Chinesesimp>
             <Chinese>密位</Chinese>
@@ -76,7 +76,7 @@
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
             <Portuguese>Mostrar Waypoints no mapa:</Portuguese>
-            <Japanese>地図へｳｪｲﾎﾟｲﾝﾄを表示：</Japanese>
+            <Japanese>地図へｳｪｲﾎﾟｲﾝﾄを表示:</Japanese>
             <Korean>웨이포인트를 지도에 보이기:</Korean>
             <Chinesesimp>显示路径点在地图上:</Chinesesimp>
             <Chinese>顯示路徑點在地圖上:</Chinese>
@@ -140,7 +140,7 @@
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
             <Italian>Introduci griglia coordinate:</Italian>
             <Portuguese>Digite as Ccords. do Grid</Portuguese>
-            <Japanese>座標を入力：</Japanese>
+            <Japanese>座標を入力:</Japanese>
             <Korean>망 좌표 입력:</Korean>
             <Chinesesimp>输入网格座标:</Chinesesimp>
             <Chinese>輸入網格座標:</Chinese>
@@ -204,7 +204,7 @@
             <Hungarian>Távolság:</Hungarian>
             <Italian>Distanza:</Italian>
             <Portuguese>Distância:</Portuguese>
-            <Japanese>距離：</Japanese>
+            <Japanese>距離:</Japanese>
             <Korean>거리:</Korean>
             <Chinesesimp>范围:</Chinesesimp>
             <Chinese>範圍:</Chinese>
@@ -300,7 +300,7 @@
             <Hungarian>UP Beállítása</Hungarian>
             <Italian>Definisci WayPoints</Italian>
             <Portuguese>Definir WP</Portuguese>
-            <Japanese>ウェイポイント設定</Japanese>
+            <Japanese>ｳｪｲﾎﾟｲﾝﾄ設定</Japanese>
             <Korean>웨이포인트 설정</Korean>
             <Chinesesimp>设置路径点</Chinesesimp>
             <Chinese>設置路徑點</Chinese>
