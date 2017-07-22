@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Movement">
         <Key ID="STR_ACE_Movement_UseImperial">
@@ -14,8 +14,8 @@
             <Russian>Показывать вес в фунтах</Russian>
             <Japanese>ポンドで重量を表示する</Japanese>
             <Korean>무게를 파운드(lb)로 보여줍니다</Korean>
-            <SChinese>使用磅来显示重量</SChinese>
-            <TChinese>使用磅來顯示重量</TChinese>
+            <Chinesesimp>使用磅来显示重量</Chinesesimp>
+            <Chinese>使用磅來顯示重量</Chinese>
         </Key>
         <Key ID="STR_ACE_Movement_Weight">
             <English>Weight:</English>
@@ -30,8 +30,8 @@
             <Russian>Вес:</Russian>
             <Japanese>重量：</Japanese>
             <Korean>무게:</Korean>
-            <SChinese>重量:</SChinese>
-            <TChinese>重量:</TChinese>
+            <Chinesesimp>重量:</Chinesesimp>
+            <Chinese>重量:</Chinese>
         </Key>
         <Key ID="STR_ACE_Movement_Climb">
             <English>Climb</English>
@@ -46,8 +46,8 @@
             <Portuguese>Subir</Portuguese>
             <Japanese>登る</Japanese>
             <Korean>오르기</Korean>
-            <SChinese>攀爬</SChinese>
-            <TChinese>攀爬</TChinese>
+            <Chinesesimp>攀爬</Chinesesimp>
+            <Chinese>攀爬</Chinese>
         </Key>
         <Key ID="STR_ACE_Movement_CanNotClimb">
             <English>Can't climb here</English>
@@ -61,8 +61,8 @@
             <Italian>Non puoi arrampicarti qui</Italian>
             <Portuguese>Não se pode subir aqui</Portuguese>
             <Japanese>ここは登れない</Japanese>
-            <SChinese>这里无法攀爬</SChinese>
-            <TChinese>這裡無法攀爬</TChinese>
+            <Chinesesimp>这里无法攀爬</Chinesesimp>
+            <Chinese>這裡無法攀爬</Chinese>
         </Key>
     </Package>
 </Project>

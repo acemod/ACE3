@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
@@ -14,8 +14,8 @@
             <Italian>Visualizza testo in caso di inceppamento</Italian>
             <Japanese>弾詰りを文章で表示</Japanese>
             <Korean>탄걸림의 경우 화면에 표시</Korean>
-            <SChinese>在卡弹时显示提示讯息</SChinese>
-            <TChinese>在卡彈時顯示提示訊息</TChinese>
+            <Chinesesimp>在卡弹时显示提示讯息</Chinesesimp>
+            <Chinese>在卡彈時顯示提示訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_description">
             <English>Display a notification whenever your weapon gets jammed</English>
@@ -30,8 +30,8 @@
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
             <Japanese>持っている武器が弾詰りをすると、通知を表示します</Japanese>
             <Korean>총알이 무기에 걸릴경우 화면에 알림을 띄웁니다</Korean>
-            <SChinese>当武器卡弹时显示提示讯息</SChinese>
-            <TChinese>當武器卡彈時顯示提示訊息</TChinese>
+            <Chinesesimp>当武器卡弹时显示提示讯息</Chinesesimp>
+            <Chinese>當武器卡彈時顯示提示訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_displayName">
             <English>Overheating Particle Effects</English>
@@ -45,8 +45,8 @@
             <Russian>Эффект частиц при перегреве</Russian>
             <Japanese>過熱の視覚効果</Japanese>
             <Korean>과열 입자 효과</Korean>
-            <SChinese>枪管过热特效</SChinese>
-            <TChinese>槍管過熱特效</TChinese>
+            <Chinesesimp>枪管过热特效</Chinesesimp>
+            <Chinese>槍管過熱特效</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
@@ -60,8 +60,8 @@
             <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
             <Japanese>武器を過熱すると視覚表現を表示します</Japanese>
             <Korean>무기가 과열되면 입자 효과를 보여줍니다</Korean>
-            <SChinese>显示枪管过热特效</SChinese>
-            <TChinese>顯示槍管過熱特效</TChinese>
+            <Chinesesimp>显示枪管过热特效</Chinesesimp>
+            <Chinese>顯示槍管過熱特效</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
@@ -75,8 +75,8 @@
             <Russian>Эффект частиц при перегреве для всех</Russian>
             <Japanese>過熱の視覚表現を全体に与えます</Japanese>
             <Korean>모두에게 과열 입자 효과 적용</Korean>
-            <SChinese>显示其他玩家的枪管过热特效</SChinese>
-            <TChinese>顯示其他玩家的槍管過熱特效</TChinese>
+            <Chinesesimp>显示其他玩家的枪管过热特效</Chinesesimp>
+            <Chinese>顯示其他玩家的槍管過熱特效</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
@@ -90,8 +90,8 @@
             <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
             <Japanese>他のプレイヤの過熱の視覚表現を表示します</Japanese>
             <Korean>모든 인원이 무기가 과열될시 입자 효과가 나타납니다.</Korean>
-            <SChinese>当其他玩家的武器过热时显示特效</SChinese>
-            <TChinese>當其他玩家的武器過熱時顯示特效</TChinese>
+            <Chinesesimp>当其他玩家的武器过热时显示特效</Chinesesimp>
+            <Chinese>當其他玩家的武器過熱時顯示特效</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
@@ -105,8 +105,8 @@
             <Czech>Důsledky přehřátí zbraně</Czech>
             <Japanese>過熱による精度の低下</Japanese>
             <Korean>과열 명중률 저하</Korean>
-            <SChinese>过热散射</SChinese>
-            <TChinese>過熱散射</TChinese>
+            <Chinesesimp>过热散射</Chinesesimp>
+            <Chinese>過熱散射</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
@@ -120,8 +120,8 @@
             <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
             <Japanese>過熱は精度を減少させたり、初速を低下させます、これは全プレイヤに適用します。</Japanese>
             <Korean>무기 과열시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
-            <SChinese>过热的武器将会有打不准和减少射击初速的情况. 适用于所有玩家</SChinese>
-            <TChinese>過熱的武器將會有打不準和減少射擊初速的情況. 適用於所有玩家</TChinese>
+            <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况. 适用于所有玩家</Chinesesimp>
+            <Chinese>過熱的武器將會有打不準和減少射擊初速的情況. 適用於所有玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
@@ -135,8 +135,8 @@
             <Russian>Исправлять клин при перезарядке</Russian>
             <Japanese>再装填による弾詰りの解消</Japanese>
             <Korean>재장전시 탄걸림 해결</Korean>
-            <SChinese>重装弹匣以解决卡弹</SChinese>
-            <TChinese>重裝彈匣以解決卡彈</TChinese>
+            <Chinesesimp>重装弹匣以解决卡弹</Chinesesimp>
+            <Chinese>重裝彈匣以解決卡彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
@@ -150,8 +150,8 @@
             <Russian>Перезарядка устраняет заклинивание оружия.</Russian>
             <Japanese>再装填により、弾詰りを除去します。</Japanese>
             <Korean>탄걸림이 재장전시 해결됩니다.</Korean>
-            <SChinese>利用重装弹匣来解决卡弹</SChinese>
-            <TChinese>利用重裝彈匣來解決卡彈</TChinese>
+            <Chinesesimp>利用重装弹匣来解决卡弹</Chinesesimp>
+            <Chinese>利用重裝彈匣來解決卡彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
@@ -165,8 +165,8 @@
             <Russian>Шанс неудачи при устранении клина</Russian>
             <Japanese>弾詰りの除去を失敗する可能性</Japanese>
             <Korean>탄걸림 해결 시도 실패확률</Korean>
-            <SChinese>解决卡弹失败机率</SChinese>
-            <TChinese>解決卡彈失敗機率</TChinese>
+            <Chinesesimp>解决卡弹失败机率</Chinesesimp>
+            <Chinese>解決卡彈失敗機率</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
@@ -180,8 +180,8 @@
             <Czech>Pravděpodobnost, že uvolnění zbraně selže, je proto nutné tuto akci opakovat. </Czech>
             <Japanese>弾詰りの除去を失敗する可能性が生まれ、もう一度動作を行う必要があります。</Japanese>
             <Korean>탄걸림 해결 시도시 실패할 확률이 있습니다. 이는 다시 탄걸림 해결을 시도해야함을 의미합니다.</Korean>
-            <SChinese>清除卡弹时有可能会失败, 需要反覆进行清枪</SChinese>
-            <TChinese>清除卡彈時有可能會失敗, 需要反覆進行清槍</TChinese>
+            <Chinesesimp>清除卡弹时有可能会失败, 需要反覆进行清枪</Chinesesimp>
+            <Chinese>清除卡彈時有可能會失敗, 需要反覆進行清槍</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -196,8 +196,8 @@
             <Italian>Canna di ricambio</Italian>
             <Japanese>予備銃身</Japanese>
             <Korean>예비 총열</Korean>
-            <SChinese>备用枪管</SChinese>
-            <TChinese>備用槍管</TChinese>
+            <Chinesesimp>备用枪管</Chinesesimp>
+            <Chinese>備用槍管</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelDescription">
             <English>Use to swap barrel.</English>
@@ -212,8 +212,8 @@
             <Italian>Usata per cambiare la canna.</Italian>
             <Japanese>予備銃身に交換する。</Japanese>
             <Korean>총열을 바꿀때 사용합니다.</Korean>
-            <SChinese>用来更换枪管</SChinese>
-            <TChinese>用來更換槍管</TChinese>
+            <Chinesesimp>用来更换枪管</Chinesesimp>
+            <Chinese>用來更換槍管</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_WeaponJammed">
             <English>Weapon jammed!</English>
@@ -228,8 +228,8 @@
             <Italian>Arma inceppata!</Italian>
             <Japanese>武器が詰まった！</Japanese>
             <Korean>탄걸림!</Korean>
-            <SChinese>武器卡弹!</SChinese>
-            <TChinese>武器卡彈!</TChinese>
+            <Chinesesimp>武器卡弹!</Chinesesimp>
+            <Chinese>武器卡彈!</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_UnjamWeapon">
             <English>Clear jam</English>
@@ -244,8 +244,8 @@
             <Italian>Ripulisci l'arma</Italian>
             <Japanese>弾詰りを除去する</Japanese>
             <Korean>탄걸림 해결</Korean>
-            <SChinese>清除卡弹</SChinese>
-            <TChinese>清除卡彈</TChinese>
+            <Chinesesimp>清除卡弹</Chinesesimp>
+            <Chinese>清除卡彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_WeaponUnjammed">
             <English>Jam cleared</English>
@@ -260,8 +260,8 @@
             <Italian>Arma pronta al fuoco</Italian>
             <Japanese>弾詰りが除去された</Japanese>
             <Korean>탄걸림 해결됨</Korean>
-            <SChinese>卡弹已清除</SChinese>
-            <TChinese>卡彈已清除</TChinese>
+            <Chinesesimp>卡弹已清除</Chinesesimp>
+            <Chinese>卡彈已清除</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_WeaponUnjamFailed">
             <English>Jam failed to clear</English>
@@ -275,8 +275,8 @@
             <Russian>Не удалось исправить клин</Russian>
             <Japanese>弾詰りの除去に失敗した</Japanese>
             <Korean>탄걸림 해결 실패</Korean>
-            <SChinese>卡弹未能清除</SChinese>
-            <TChinese>卡彈未能清除</TChinese>
+            <Chinesesimp>卡弹未能清除</Chinesesimp>
+            <Chinese>卡彈未能清除</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>
@@ -291,8 +291,8 @@
             <Italian>Sostiuisci la canna</Italian>
             <Japanese>銃身を交換</Japanese>
             <Korean>총열 교체</Korean>
-            <SChinese>换枪管</SChinese>
-            <TChinese>換槍管</TChinese>
+            <Chinesesimp>换枪管</Chinesesimp>
+            <Chinese>換槍管</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappingBarrel">
             <English>Swapping barrel...</English>
@@ -307,8 +307,8 @@
             <Italian>Sostituendo la canna...</Italian>
             <Japanese>銃身を交換中・・・</Japanese>
             <Korean>총열 교체중...</Korean>
-            <SChinese>换枪管中...</SChinese>
-            <TChinese>換槍管中...</TChinese>
+            <Chinesesimp>换枪管中...</Chinesesimp>
+            <Chinese>換槍管中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappedBarrel">
             <English>Swapped barrel</English>
@@ -323,8 +323,8 @@
             <Italian>Canna sostituita</Italian>
             <Japanese>銃身を交換した</Japanese>
             <Korean>교체된 총열</Korean>
-            <SChinese>完成换枪管</SChinese>
-            <TChinese>完成換槍管</TChinese>
+            <Chinesesimp>完成换枪管</Chinesesimp>
+            <Chinese>完成換槍管</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperature">
             <English>Check weapon temperature</English>
@@ -339,8 +339,8 @@
             <Russian>Проверить температуру оружия</Russian>
             <Japanese>武器の温度を測る</Japanese>
             <Korean>무기 온도 확인</Korean>
-            <SChinese>检查枪管温度</SChinese>
-            <TChinese>檢查槍管溫度</TChinese>
+            <Chinesesimp>检查枪管温度</Chinesesimp>
+            <Chinese>檢查槍管溫度</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
             <English>Check weapon temperature</English>
@@ -355,8 +355,8 @@
             <Italian>Controlla la temperatura della canna</Italian>
             <Japanese>武器の温度を測る</Japanese>
             <Korean>무기 온도 확인</Korean>
-            <SChinese>检查枪管温度</SChinese>
-            <TChinese>檢查槍管溫度</TChinese>
+            <Chinesesimp>检查枪管温度</Chinesesimp>
+            <Chinese>檢查槍管溫度</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature...</English>
@@ -371,8 +371,8 @@
             <Russian>Проверка температуры...</Russian>
             <Japanese>温度を測っている・・・</Japanese>
             <Korean>무기 온도 확인중...</Korean>
-            <SChinese>检查枪管温度中...</SChinese>
-            <TChinese>檢查槍管溫度中...</TChinese>
+            <Chinesesimp>检查枪管温度中...</Chinesesimp>
+            <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
             <English>Check spare barrels temperatures</English>
@@ -385,8 +385,8 @@
             <German>Temperatur der Wechselläufe prüfen</German>
             <Korean>총열 온도 확인</Korean>
             <Italian>Controlla la temperatura della canna di ricambio</Italian>
-            <SChinese>检查备用枪管温度</SChinese>
-            <TChinese>檢查備用槍管溫度</TChinese>
+            <Chinesesimp>检查备用枪管温度</Chinesesimp>
+            <Chinese>檢查備用槍管溫度</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
@@ -399,8 +399,8 @@
             <German>Prüfe Temperatur der Wechselläufe ...</German>
             <Korean>총열 온도 확인중...</Korean>
             <Italian>Controllando la temperatura della canna di ricambio...</Italian>
-            <SChinese>检查枪管温度中...</SChinese>
-            <TChinese>檢查槍管溫度中...</TChinese>
+            <Chinesesimp>检查枪管温度中...</Chinesesimp>
+            <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -415,8 +415,8 @@
             <Russian>Температура</Russian>
             <Japanese>温度</Japanese>
             <Korean>온도</Korean>
-            <SChinese>温度</SChinese>
-            <TChinese>溫度</TChinese>
+            <Chinesesimp>温度</Chinesesimp>
+            <Chinese>溫度</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
@@ -429,8 +429,8 @@
             <German>Kalte Wechselläufe</German>
             <Korean>차가운 예비 총열</Korean>
             <Italian>Canna/e di Ricambio Fredda</Italian>
-            <SChinese>备用枪管温度正常</SChinese>
-            <TChinese>備用槍管溫度正常</TChinese>
+            <Chinesesimp>备用枪管温度正常</Chinesesimp>
+            <Chinese>備用槍管溫度正常</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
@@ -443,8 +443,8 @@
             <German>Warme Wechselläufe</German>
             <Korean>따뜻한 예비 총열</Korean>
             <Italian>Canna/e di Ricambio Calda</Italian>
-            <SChinese>备用枪管温度偏温</SChinese>
-            <TChinese>備用槍管溫度偏溫</TChinese>
+            <Chinesesimp>备用枪管温度偏温</Chinesesimp>
+            <Chinese>備用槍管溫度偏溫</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
@@ -457,8 +457,8 @@
             <German>Heiße Wechselläufe</German>
             <Korean>뜨거운 예비 총열</Korean>
             <Italian>Canna/e di Ricambio Molto Calda</Italian>
-            <SChinese>备用枪管温度偏热</SChinese>
-            <TChinese>備用槍管溫度偏熱</TChinese>
+            <Chinesesimp>备用枪管温度偏热</Chinesesimp>
+            <Chinese>備用槍管溫度偏熱</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
@@ -471,8 +471,8 @@
             <German>Sehr heiße Wechselläufe</German>
             <Korean>매우 뜨거운 예비 총열</Korean>
             <Italian>Canna/e di Ricambio Estremamente Calda</Italian>
-            <SChinese>备用枪管温度过热</SChinese>
-            <TChinese>備用槍管溫度過熱</TChinese>
+            <Chinesesimp>备用枪管温度过热</Chinesesimp>
+            <Chinese>備用槍管溫度過熱</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
@@ -485,8 +485,8 @@
             <German>Extrem heiße Wechselläufe</German>
             <Korean>엄청나게 뜨거운 예비 총열</Korean>
             <Italian>Canna/e di Ricambio Rovente</Italian>
-            <SChinese>备用枪管温度超级热</SChinese>
-            <TChinese>備用槍管溫度超級熱</TChinese>
+            <Chinesesimp>备用枪管温度超级热</Chinesesimp>
+            <Chinese>備用槍管溫度超級熱</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
@@ -500,8 +500,8 @@
             <Polish>Przegrzewanie włączone</Polish>
             <Korean>과열 활성화</Korean>
             <Italian>Surriscaldamento Abilitato</Italian>
-            <SChinese>启用过热</SChinese>
-            <TChinese>啟用過熱</TChinese>
+            <Chinesesimp>启用过热</Chinesesimp>
+            <Chinese>啟用過熱</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
@@ -513,8 +513,8 @@
             <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
             <Korean>과열/탄걸림 최종 활성화</Korean>
             <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
-            <SChinese>启用枪管过热/干扰模块</SChinese>
-            <TChinese>啟用槍管過熱/干擾模塊</TChinese>
+            <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
+            <Chinese>啟用槍管過熱/干擾模塊</Chinese>
         </Key>
     </Package>
 </Project>

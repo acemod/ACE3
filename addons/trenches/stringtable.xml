@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="trenches">
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
@@ -13,8 +13,8 @@
             <Russian>Саперная лопата</Russian>
             <Japanese>シャベル</Japanese>
             <Korean>야전삽</Korean>
-            <SChinese>战备锹</SChinese>
-            <TChinese>戰備鍬</TChinese>
+            <Chinesesimp>战备锹</Chinesesimp>
+            <Chinese>戰備鍬</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
@@ -28,8 +28,8 @@
             <Russian>Саперная лопата</Russian>
             <Japanese>シャベル</Japanese>
             <Korean>야전용 삽. 군인들의 영원한 친구</Korean>
-            <SChinese>战备锹</SChinese>
-            <TChinese>戰備鍬</TChinese>
+            <Chinesesimp>战备锹</Chinesesimp>
+            <Chinese>戰備鍬</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
@@ -42,8 +42,8 @@
             <Russian>Окоп - Малый</Russian>
             <Japanese>塹壕 - 小型</Japanese>
             <Korean>참호 - 소형</Korean>
-            <SChinese>掩体 - 小</SChinese>
-            <TChinese>掩體 - 小</TChinese>
+            <Chinesesimp>掩体 - 小</Chinesesimp>
+            <Chinese>掩體 - 小</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -57,8 +57,8 @@
             <Russian>Малый персональный окоп</Russian>
             <Japanese>小型の個人用塹壕</Japanese>
             <Korean>소형 개인참호</Korean>
-            <SChinese>小型个人掩体</SChinese>
-            <TChinese>小型個人掩體</TChinese>
+            <Chinesesimp>小型个人掩体</Chinesesimp>
+            <Chinese>小型個人掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
@@ -72,8 +72,8 @@
             <Russian>Вырыть малый окоп</Russian>
             <Japanese>小型塹壕を掘る</Japanese>
             <Korean>소형참호 파기</Korean>
-            <SChinese>盖小掩体</SChinese>
-            <TChinese>蓋小掩體</TChinese>
+            <Chinesesimp>盖小掩体</Chinesesimp>
+            <Chinese>蓋小掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
@@ -86,8 +86,8 @@
             <Russian>Окоп - Большой</Russian>
             <Japanese>塹壕 - 大型</Japanese>
             <Korean>참호 -  대형</Korean>
-            <SChinese>掩体 - 大</SChinese>
-            <TChinese>掩體 - 大</TChinese>
+            <Chinesesimp>掩体 - 大</Chinesesimp>
+            <Chinese>掩體 - 大</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
@@ -101,8 +101,8 @@
             <Russian>Большой персональный окоп</Russian>
             <Japanese>大型の塹壕を掘る</Japanese>
             <Korean>대형 참호</Korean>
-            <SChinese>大型个人掩体</SChinese>
-            <TChinese>大型個人掩體</TChinese>
+            <Chinesesimp>大型个人掩体</Chinesesimp>
+            <Chinese>大型個人掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
@@ -116,8 +116,8 @@
             <Russian>Вырыть большой окоп</Russian>
             <Japanese>大型の塹壕を掘る</Japanese>
             <Korean>대형참호 파기</Korean>
-            <SChinese>盖大掩体</SChinese>
-            <TChinese>蓋大掩體</TChinese>
+            <Chinesesimp>盖大掩体</Chinesesimp>
+            <Chinese>蓋大掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
@@ -131,8 +131,8 @@
             <Russian>Копать</Russian>
             <Japanese>ここに掘る</Japanese>
             <Korean>여기에 파기</Korean>
-            <SChinese>确认开工</SChinese>
-            <TChinese>確認開工</TChinese>
+            <Chinesesimp>确认开工</Chinesesimp>
+            <Chinese>確認開工</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_CancelDig">
             <English>Cancel Dig</English>
@@ -146,8 +146,8 @@
             <Russian>Отменить копание</Russian>
             <Japanese>掘るのを中止</Japanese>
             <Korean>취소하기</Korean>
-            <SChinese>取消动作</SChinese>
-            <TChinese>取消動作</TChinese>
+            <Chinesesimp>取消动作</Chinesesimp>
+            <Chinese>取消動作</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
             <English>Rotate</English>
@@ -162,8 +162,8 @@
             <Russian>Bращать</Russian>
             <Japanese>回転</Japanese>
             <Korean>돌리기</Korean>
-            <SChinese>旋转</SChinese>
-            <TChinese>旋轉</TChinese>
+            <Chinesesimp>旋转</Chinesesimp>
+            <Chinese>旋轉</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>
@@ -177,8 +177,8 @@
             <Russian>Копание окопа</Russian>
             <Japanese>塹壕を掘っている</Japanese>
             <Korean>참호 파는중</Korean>
-            <SChinese>正在盖掩体中</SChinese>
-            <TChinese>正在蓋掩體中</TChinese>
+            <Chinesesimp>正在盖掩体中</Chinesesimp>
+            <Chinese>正在蓋掩體中</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
             <English>Continue Digging Trench</English>
@@ -191,8 +191,8 @@
             <German>Graben fortsetzen</German>
             <Korean>계속해서 참호파기</Korean>
             <Italian>Continua a Scavare la Trincea</Italian>
-            <SChinese>继续盖掩体</SChinese>
-            <TChinese>繼續蓋掩體</TChinese>
+            <Chinesesimp>继续盖掩体</Chinesesimp>
+            <Chinese>繼續蓋掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
@@ -205,8 +205,8 @@
             <German>Schützengraben entfernen</German>
             <Korean>참호 제거</Korean>
             <Italian>Rimuove Trincea</Italian>
-            <SChinese>移除掩体</SChinese>
-            <TChinese>移除掩體</TChinese>
+            <Chinesesimp>移除掩体</Chinesesimp>
+            <Chinese>移除掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -219,8 +219,8 @@
             <German>Entferne Schützengraben</German>
             <Korean>참호 제거중...</Korean>
             <Italian>Rimuovendo la Trincea</Italian>
-            <SChinese>移除掩体中</SChinese>
-            <TChinese>移除掩體中</TChinese>
+            <Chinesesimp>移除掩体中</Chinesesimp>
+            <Chinese>移除掩體中</Chinese>
         </Key>
     </Package>
 </Project>
