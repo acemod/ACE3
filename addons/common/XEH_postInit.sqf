@@ -300,6 +300,7 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
 ["unit", {
     ACE_player = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
+ACE_player_previous = ACE_player;
 
 GVAR(OldIsCamera) = false;
 
@@ -337,6 +338,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         switch (toLower _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
+                ACE_player = ACE_player_previous;
             };
             case ("driver"): {
                 _turret = [-1];
@@ -352,6 +354,8 @@ addMissionEventHandler ["PlayerViewChanged", {
         if (_newArray isEqualTo ACE_controlledUAV) exitWith {false}; // no change yet
         
         TRACE_2("Seat Change",_newArray,ACE_controlledUAV);
+        ACE_player_previous = ACE_player;
+        ACE_player = _seatAI;
         ACE_controlledUAV = _newArray;
         ["ACE_controlledUAV", _newArray] call CBA_fnc_localEvent;
         
