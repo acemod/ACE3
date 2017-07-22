@@ -102,7 +102,7 @@ GVAR(TweakedAngle) = 0;
             if (count _intersectsWith == 1) exitWith {_attachVehicle = (_intersectsWith select 0);};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         if ((!isNull _attachVehicle) && {[PLACE_RANGE_MIN] call _testPositionIsValid} &&
-                {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}}) then {
+                {(_attachVehicle isKindOf "House") || (_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}}) then {
             _min = PLACE_RANGE_MIN;
             _max = PLACE_RANGE_MAX;
             for "_index" from 0 to 6 do {
