@@ -300,7 +300,6 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
 ["unit", {
     ACE_player = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
-ACE_player_previous = ACE_player;
 
 GVAR(OldIsCamera) = false;
 
