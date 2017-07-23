@@ -130,7 +130,7 @@ GVAR(collectedActionPoints) resize 0;
 // Render nearby actions, unit self actions or vehicle self actions as appropiate
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (!(isNull (ACE_controlledUAV param [0, objNull]))) then {
+        if (!(isNull (ACE_controlledUAV select 0))) then {
             // Render UAV self actions when in control of UAV AI
             (ACE_controlledUAV select 0) call _fnc_renderSelfActions;
         } else {

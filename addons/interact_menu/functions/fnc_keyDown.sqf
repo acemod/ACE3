@@ -41,7 +41,7 @@ GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
-                      (!(isNull (ACE_controlledUAV param [0, objNull]))) ||
+                      (!(isNull (ACE_controlledUAV select 0))) ||
                       visibleMap ||
                       (!isNull curatorCamera) ||
                       {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
@@ -94,7 +94,7 @@ GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (
 //Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (!(isNull (ACE_controlledUAV param [0, objNull]))) then {
+        if (!(isNull (ACE_controlledUAV select 0))) then {
             GVAR(menuDepthPath) = [["ACE_SelfActions", (ACE_controlledUAV select 0)]];
             GVAR(expanded) = true;
             GVAR(expandedTime) = diag_tickTime;
