@@ -1018,7 +1018,7 @@
             <Hungarian>Sok vért vesztett</Hungarian>
             <Italian>Ha perso parecchio sangue</Italian>
             <Portuguese>Perdeu muito sangue</Portuguese>
-            <Japanese>大量出血している</Japanese>
+            <Japanese>大量失血している</Japanese>
             <Korean>많은 양의 혈액을 잃음</Korean>
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
@@ -2487,7 +2487,7 @@
             <Czech>Ztratil hodně krve</Czech>
             <Portuguese>Ele perdeu muito sangue</Portuguese>
             <Italian>Ha perso molto sangue</Italian>
-            <Japanese>彼は大量出血している</Japanese>
+            <Japanese>彼は大量失血している</Japanese>
             <Korean>많은 양의 피를 잃었다</Korean>
             <Chinesesimp>他流失大量血液</Chinesesimp>
             <Chinese>他流失大量血液</Chinese>
@@ -2503,7 +2503,7 @@
             <Hungarian>Nem vesztett vért</Hungarian>
             <Czech>Neztratil žádnou krev</Czech>
             <Portuguese>Ele não perdeu sangue</Portuguese>
-            <Japanese>彼は出血していない</Japanese>
+            <Japanese>彼は失血していない</Japanese>
             <Korean>피를 잃지 않았다</Korean>
             <Chinesesimp>他并没有失血</Chinesesimp>
             <Chinese>他並沒有失血</Chinese>
