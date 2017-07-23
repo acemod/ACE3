@@ -1,0 +1,3 @@
+
+PREP(initEjectAction);
+PREP(canShowEject);
