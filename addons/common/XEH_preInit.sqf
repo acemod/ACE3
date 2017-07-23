@@ -33,7 +33,6 @@ GVAR(setHearingCapabilityMap) = [];
 //////////////////////////////////////////////////
 
 ACE_player = objNull;
-ACE_player_previous = objNull;
 uiNamespace setVariable ["ACE_player", objNull];
 
 // Init toHex

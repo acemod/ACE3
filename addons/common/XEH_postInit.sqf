@@ -338,7 +338,6 @@ addMissionEventHandler ["PlayerViewChanged", {
         switch (toLower _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
-                ACE_player = ACE_player_previous;
             };
             case ("driver"): {
                 _turret = [-1];
@@ -354,8 +353,6 @@ addMissionEventHandler ["PlayerViewChanged", {
         if (_newArray isEqualTo ACE_controlledUAV) exitWith {false}; // no change yet
         
         TRACE_2("Seat Change",_newArray,ACE_controlledUAV);
-        ACE_player_previous = ACE_player;
-        ACE_player = _seatAI;
         ACE_controlledUAV = _newArray;
         ["ACE_controlledUAV", _newArray] call CBA_fnc_localEvent;
         
@@ -402,7 +399,9 @@ addMissionEventHandler ["PlayerViewChanged", {
     // Players can always interact with his vehicle
     {vehicle _unit == _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}}
+    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    // Players can always interact with connected UAV
+    {!(isNull (ACE_controlledUAV param [0, objNull]))}
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
