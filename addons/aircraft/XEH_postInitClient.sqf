@@ -6,7 +6,15 @@ private _cfgAction = configFile >> "CfgActions" >> "Eject";
 GVAR(ejectActionParams) = [
     [
         "", // will be set with setUserActionText
-        {moveOut (_this select 1)},
+        {
+            params ["_vehicle", "_unit"];
+            private _preserveEngineOn = (_unit == driver _vehicle) && {isEngineOn _vehicle};
+            moveOut _unit;
+            if (_preserveEngineOn) then {
+                // vehicle is local to last driver, no need to care
+                _vehicle engineOn true;
+            };
+        },
         nil,
         getNumber (_cfgAction >> "priority"),
         false,
