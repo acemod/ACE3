@@ -43,7 +43,7 @@ To tweak the default spectator experience four settings are provided:
 - **Vision modes:** Which vision modes (Normal, Night and Thermal) are available to use by default.
 - **Add Map Locations**: Whether to automatically add the map locations (cities, villages, etc.) to the locations UI list.
 
-Note that these settings govern the default spectator behaviour. Through use of public functions the spectator experience can be more finely controlled (e.g. to limit each player to only be able to spectate units on their side) on top of these.
+Note that these settings govern the default spectator behaviour. Through the use of public functions, the spectator experience can be more finely controlled (e.g. to limit each player to only be able to spectate units on their side) on top of these.
 
 ## 3. Events
 
@@ -55,7 +55,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 
 ## 4. Scripting
 
-While the majority of scenarios can be set up as desired using only the settings provided, some require more specific limitations on what functionality is available to whom. All of the following public functions are provided to try and accomidate for such needs.
+While the majority of scenarios can be set up as desired using only the settings provided, some require more specific limitations on what functionality is available to whom. All of the following public functions are provided to try and accommodate for such needs.
 
 ### 4.1 Change the local player's spectator status
 
@@ -99,7 +99,7 @@ Note that this function takes local effect, so only the local player will see th
 ### 4.3 Add/Remove sides available to spectate
 
 `ace_spectator_fnc_updateSides`
-By default, units on all 4 sides (`west`, `east`, `independent` and `civilian`) are available to spectate provided they pass through basic filtering (AI setting, simulated and visible). By removing a side, you effectively add a layer to the filtering that removes units belonging to that side from the spectator unit list. Adding sides is simply available to resverse a removal - you cannot add a side beyond the main 4 (e.g. `sideLogic`) as those units do not appear in the `allUnits` array, however you could whitelist a unit belonging to such a side.
+By default, units on all 4 sides (`west`, `east`, `independent` and `civilian`) are available to spectate provided they pass through basic filtering (AI setting, simulated and visible). By removing a side, you effectively add a layer of filtering that removes units belonging to that side from the spectator unit list. Adding sides is simply available to reverse a removal - you cannot add a side beyond the main 4 (e.g. `sideLogic`) as those units do not appear in the `allUnits` array (you could whitelist a unit belonging to such a side).
 
 Note that this function takes local effect, so only the local player will see these changes.
 
@@ -118,7 +118,7 @@ Note that this function takes local effect, so only the local player will see th
 ### 4.4 Add/Remove available camera modes
 
 `ace_spectator_fnc_updateCameraModes`
-You can change the spectator camera modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have free camera). Remember that the **Camera modes** setting will change which modes are available to everyone by default - changes with this function will override that. 
+You can change the spectator camera modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have a free camera). Remember that the **Camera modes** setting will change which modes are available to everyone by default - changes with this function will override that. 
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
@@ -208,7 +208,7 @@ Note that this function takes local effect, so only the local player will experi
 ### 4.7 Get the camera mode/focus/vision/position/direction
 
 `ace_spectator_fnc_getCameraAttributes`
-Returns an array of the listed camera attributes (see `setCameraAttributes` for more details) for the local player. If spectator is not currently active any pre-set attributes will be returned (otherwise default values will be returned - position will be `[0,0,0]` if unset).
+Returns an array of the listed camera attributes (see `setCameraAttributes` for more details) for the local player. If the spectator camera is not currently active any pre-set attributes will be returned (otherwise default values will be returned - position will be `[0,0,0]` if unset).
 
 ```cpp
  * Arguments:
