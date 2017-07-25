@@ -3,7 +3,7 @@
 params ["_unit"];
 
 _unit setVariable [
-    GVAR(HandleDamageEVHIndex),
+    QGVAR(HandleDamageEVHIndex),
     (_unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}])
 ];
 
