@@ -2,7 +2,7 @@
 
 params ["_unit"];
 
-_unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
+GVAR(HandleDamagEVHIndex) = (_unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]);
 
 if (local _unit) then {
     if (!EGVAR(common,settingsInitFinished)) exitWith {
