@@ -25,5 +25,5 @@ params [
 
 if (isNull _vehicle) exitWith {0};
 
-private _count = {_x == _magazineClass} count ([_vehicle, _turretPath] call FUNC(getVehicleMagazines));
+private _count = {_x == _magazineClass} count ([_vehicle, _turretPath] call FUNC(getTurretConfigMagazines));
 _count

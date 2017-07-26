@@ -61,7 +61,7 @@ private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf
 private _turrets = [_vehicle] call FUNC(getAllTurrets);
 {
     private _turretPath = _x;
-    private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
+    private _magazines = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);
 
     // _magazines without duplicates
     private _magazineClasses = _magazines arrayIntersect _magazines;

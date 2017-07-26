@@ -32,7 +32,7 @@ if (_vehicle == "") exitWith {
 private _turrets = [_vehicle] call FUNC(getAllTurrets);
 {
     private _turretPath = _x;
-    private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
+    private _magazines = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);
     TRACE_2("",_turretPath,_magazines);
     {
         [_truck, _x] call FUNC(addMagazineToSupply);
