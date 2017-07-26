@@ -11,7 +11,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Magazine Classname <STRING>
- * 3: Ammo Counts in Magazines <ARRAY>
+ * 3: Ammo Counts in Magazines <ARRAY of NUMBERs>
  *
  * Return Value:
  * None
@@ -42,19 +42,53 @@ private _loadedWeapon = "";
     };
 } forEach (_vehicle weaponsTurret _turretPath);
 
-// Setting the ammo counts by removing and then adding new magazines with updated ammo counts.
-_vehicle removeMagazinesTurret [_magazineClass, _turretPath];
-{
-    _vehicle addMagazineTurret [_magazineClass, _turretPath, _x];
-} forEach _ammoCounts;
 
-/* If a magazine of given class was loaded into a weapon, and the weapon has more than one type of
- * magazine (e.g. AP and HEAT in a cannon), then removing all magazines has triggered the weapon to
- * load a different magazine type. For example, setting the ammo count of HEAT shells while HEAT is
- * loaded makes the cannon switch to AP. To prevent that, we must load back the original magazine
- * type. */
-if (_magLoadedInWeapon) then {
-    _vehicle loadMagazine [_turretPath, _loadedWeapon, _magazineClass];
+if (!_magLoadedInWeapon) then {
+    /* The easy case:
+     * The magazine class was not loaded, so we can just remove those magazines and
+     * add them back with updated ammo counts. */
+
+    _vehicle removeMagazinesTurret [_magazineClass, _turretPath];
+    {
+        _vehicle addMagazineTurret [_magazineClass, _turretPath, _x];
+    } forEach _ammoCounts;
+    
+} else {
+    /* Special hack case:
+     * The magazine class was loaded into a weapon. If the weapon has more than one type of
+     * magazine (e.g. AP and HEAT in a cannon), then removing all magazines would trigger the
+     * weapon to load a different magazine type. For example, removing the HEAT shells while HEAT
+     * is loaded makes the cannon switch to AP.
+     * 
+     * To prevent that, we must remove all magazines that would fit into the weapon and then add
+     * them back with the magazine-to-be-loaded being the first. */
+
+    private _allowedMagClassesInWeapon = getArray (configFile >> "CfgWeapons" >> _loadedWeapon >> "magazines");
+    
+    /* Current ammo counts of all allowed magazine classes in weapon.
+     * Example: [["8Rnd_82mm_Mo_shells", [8, 8, 2]], ["8Rnd_82mm_Mo_Flare_white", [7]]] */
+    private _ammoCountsByMagClass = _allowedMagClassesInWeapon apply {[_x, ([_vehicle, _turretPath, _x] call FUNC(getTurretMagazineAmmo))]};
+    
+    // Removing all magazines that fit into the weapon.
+    {
+        _vehicle removeMagazinesTurret [_x, _turretPath];
+    } forEach _allowedMagClassesInWeapon;
+    
+    // Adding the mags of the given class first with updated ammo counts.
+    {
+        _vehicle addMagazineTurret [_magazineClass, _turretPath, _x];
+    } forEach _ammoCounts;
+    
+    // Adding back all other magazines with their original ammo counts.
+    {
+        _x params ["_loopMagClass", "_loopAmmoCounts"];
+        
+        if (!(_loopMagClass isEqualTo _magazineClass)) then {
+            {
+                _vehicle addMagazineTurret [_loopMagClass, _turretPath, _x];
+            } forEach _loopAmmoCounts;
+        };
+    } forEach _ammoCountsByMagClass;
 };
 
 TRACE_5("setTurretMagazineAmmo", _vehicle, _turretPath, _magazineClass, _ammoCounts, _loadedWeapon);
