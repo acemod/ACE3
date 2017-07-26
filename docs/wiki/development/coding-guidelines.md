@@ -90,6 +90,7 @@ There also exists the `FUNC` family of Macros:
 |`EFUNC(leg,face)` | `ace_leg_fnc_face` or the call trace wrapper for that function. |
 |`DFUNC(face)` | `ace_balls_fnc_face` and will ALWAYS be the function global variable. |
 |`DEFUNC(leg,face)` | `ace_leg_fnc_face` and will ALWAYS be the function global variable. |
+|`LINKFUNC(face)` | `ace_balls_fnc_face` or "pass by reference" `{_this call ace_balls_fnc_face}` |
 |`QFUNC(face)` | `"ace_balls_fnc_face"` |
 |`QEFUNC(leg,face)` | `"ace_leg_fnc_face"` |
 |`QQFUNC(face)` | `""ace_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.  |
@@ -98,6 +99,8 @@ There also exists the `FUNC` family of Macros:
 The `FUNC` and `EFUNC` macros shall NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
+
+`LINKFUNC` macro allows to recompile function used in event handler code when function cache is disabled. E.G. `player addEventHandler ["Fired", LINKFUNC(firedEH)];` will run updated code after each recompile.
 
 #### 2.1.1 `FUNC` Macros, Call Tracing, and Non-ACE3/Anonymous Functions
 ACE3 implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
