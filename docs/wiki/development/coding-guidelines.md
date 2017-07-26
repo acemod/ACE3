@@ -90,7 +90,7 @@ There also exists the `FUNC` family of Macros:
 |`EFUNC(leg,face)` | `ace_leg_fnc_face` or the call trace wrapper for that function. |
 |`DFUNC(face)` | `ace_balls_fnc_face` and will ALWAYS be the function global variable. |
 |`DEFUNC(leg,face)` | `ace_leg_fnc_face` and will ALWAYS be the function global variable. |
-|`LINKFUNC(face)` | `ace_balls_fnc_face` or "pass by reference" `{_this call ace_balls_fnc_face}` |
+|`LINKFUNC(face)` | `FUNC(face)` or "pass by reference" `{_this call FUNC(face)}` |
 |`QFUNC(face)` | `"ace_balls_fnc_face"` |
 |`QEFUNC(leg,face)` | `"ace_leg_fnc_face"` |
 |`QQFUNC(face)` | `""ace_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.  |
