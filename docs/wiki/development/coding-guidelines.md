@@ -58,6 +58,9 @@ class ACE_Settings {
 };
 ```
 
+#### 1.2.5 Addon template
+Addon template is at [extras/blank](https://github.com/acemod/ACE3/tree/master/extras/blank){:target="_blank"} repo directory.
+
 ### 1.3 Stringtable
 All text that shall be displayed to a user shall be defined in a `stringtable.xml` file for multi-language support.
 
