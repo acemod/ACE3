@@ -127,6 +127,8 @@ class CfgSettings {
 #define DISABLE_COMPILE_CACHE
 ```
 
+All functions with disabled caching can be recompiled with `[] call ACE_PREP_RECOMPILE;` command without mission restart. You can add a addAction/keybind/pfeh with this code and use it for fast recompiling.
+
 ### 7.2 Restrictions
 
 Files must exist in the built PBOs for file patching to work. If you create a new file you must rebuild the PBO or Arma will not find it in your file paths.
