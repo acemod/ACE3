@@ -2,6 +2,9 @@
  * Author: Tuupertunut
  * Returns all turrets in a vehicle.
  *
+ * BIS command "allTurrets" does not return the driver turret at the time of writing (2017-07-16).
+ * This function just adds driver turret to the array returned by "allTurrets".
+ *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
