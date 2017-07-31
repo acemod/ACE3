@@ -44,6 +44,7 @@ if(count _mouseOver == 2) then {
 
                 _markerName setMarkerAlphaLocal 0.5;
                 [FUNC(movePFH), 0, [_markerName]] call CBA_fnc_addPerFrameHandler;
+                [QGVAR(markerMoveStarted), [_markerName, ACE_player]] call CBA_fnc_localEvent;
             };
         };
     };

@@ -28,6 +28,7 @@ if(isNull (findDisplay 12 displayCtrl 51) || !(player getVariable [QGVAR(moveInP
 
     EGVAR(map_gestures,enabled) = player getVariable [QGVAR(mapGesturesSetting), false];
     (findDisplay 12 displayCtrl 51) ctrlMapCursor ["Track", "Track"];
+    [QGVAR(markerMoveEnded), [_marker, ACE_player]] call CBA_fnc_localEvent;
 };
 
 _marker setMarkerPosLocal ((findDisplay 12 displayCtrl 51) posScreenToWorld getMousePosition);
