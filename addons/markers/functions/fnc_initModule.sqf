@@ -18,3 +18,4 @@
 params ["_logic"];
 
 [_logic, QGVAR(movableMarkersEnabled), "MovableMarkersEnabled"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(moveRestriction), "MoveRestriction"] call EFUNC(common,readSettingFromModule);

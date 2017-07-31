@@ -32,7 +32,7 @@ if(count _mouseOver == 2) then {
         private _markerName = _mouseOver select 1;
 
         if(_markerName find "_USER_DEFINED" != -1) then {
-            if (!_ctrl && !_shift && !_alt) then {
+            if (!_ctrl && !_shift && !_alt && ([] call FUNC(canMoveMarker))) then {
                 // move marker
                 _mapCtrl ctrlMapCursor ["Track", "Move"];
 

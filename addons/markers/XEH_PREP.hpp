@@ -15,3 +15,4 @@ PREP(movePFH);
 PREP(onMouseButtonDownMap);
 PREP(onMouseButtonUpMap);
 PREP(initModule);
+PREP(canMoveMarker);
