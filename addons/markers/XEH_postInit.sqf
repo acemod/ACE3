@@ -18,3 +18,24 @@ GVAR(currentMarkerPosition) = [];
 GVAR(currentMarkerAngle) = 0;
 GVAR(currentMarkerColorConfigName) = "";
 GVAR(currentMarkerConfigName) = "";
+
+// set marker pos local on every computer (prevent markers visible for everyone)
+[QGVAR(applyMarkerPosLocal), {
+    params["_marker", "_pos"];
+    _marker setMarkerPosLocal _pos;
+}] call CBA_fnc_addEventHandler;
+
+["ace_settingsInitialized", {
+    if(GVAR(movableMarkersEnabled)) then {
+        addMissionEventHandler ["Map", {
+            params["_isOpen"];
+
+            if(_isOpen) then {
+                (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", FUNC(onMouseButtonDownMap)];
+                (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", FUNC(onMouseButtonUpMap)];
+            } else {
+                player setVariable [QGVAR(moveInProgress), false];
+            };
+        }];
+    };
+}] call CBA_fnc_addEventHandler;
