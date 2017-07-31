@@ -1,12 +1,12 @@
 class ACE_Settings {
-    class GVAR(MovableMarkersEnabled) {
+    class GVAR(movableMarkersEnabled) {
         category = CSTRING(Module_DisplayName);
         value = 0;
         typeName = "BOOL";
         displayName = CSTRING(MovableMarkers_DisplayName);
         description = CSTRING(MovableMarkers_Description);
     };
-    class GVAR(MoveRestriction) {
+    class GVAR(moveRestriction) {
         category = CSTRING(Module_DisplayName);
         value = 0;
         typeName = "SCALAR";

@@ -4,13 +4,13 @@
  *
  * Arguments:
  * 0: Marker data <ARRAY>
- * 1: PFH id <NUMBER>
+ * 1: PFH ID <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[MARKER], 5] call ACE_markers_fnc_movePFH
+ * [[MARKER], 5] call ace_markers_fnc_movePFH
  *
  * Public: No
  */
@@ -19,7 +19,7 @@
 params ["_args", "_idPFH"];
 _args params ["_marker"];
 
-if(isNull (findDisplay 12 displayCtrl 51) || !(player getVariable [QGVAR(moveInProgress), false])) exitWith {
+if (isNull (findDisplay 12 displayCtrl 51) || !(player getVariable [QGVAR(moveInProgress), false])) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 
     _marker = (player getVariable[QGVAR(movedMarker), ""]);

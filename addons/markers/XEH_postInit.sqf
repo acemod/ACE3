@@ -26,11 +26,11 @@ GVAR(currentMarkerConfigName) = "";
 }] call CBA_fnc_addEventHandler;
 
 ["ace_settingsInitialized", {
-    if(GVAR(movableMarkersEnabled)) then {
+    if (GVAR(movableMarkersEnabled)) then {
         addMissionEventHandler ["Map", {
             params["_isOpen"];
 
-            if(_isOpen) then {
+            if (_isOpen) then {
                 (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", FUNC(onMouseButtonDownMap)];
                 (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", FUNC(onMouseButtonUpMap)];
             } else {

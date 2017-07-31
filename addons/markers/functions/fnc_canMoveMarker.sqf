@@ -9,7 +9,7 @@
  * Whether the player can move markers <BOOL>
  *
  * Example:
- * [] call ACE_markers_fnc_canMoveMarker
+ * [] call ace_markers_fnc_canMoveMarker
  *
  * Public: No
  */
@@ -19,7 +19,7 @@ switch (GVAR(moveRestriction)) do {
     case MOVE_RESTRICTION_ALL: { true };
     case MOVE_RESTRICTION_ADMINS: { IS_ADMIN };
     case MOVE_RESTRICTION_GROUP_LEADERS: {
-        leader group ACE_player == leader ACE_player
+        leader group ACE_player == ACE_player
     };
     case MOVE_RESTRICTION_GROUP_LEADERS_ADMINS: {
         (leader group ACE_player == ACE_player) || IS_ADMIN
