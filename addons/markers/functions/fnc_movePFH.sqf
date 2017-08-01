@@ -22,13 +22,17 @@ _args params ["_marker"];
 if (isNull (findDisplay 12 displayCtrl 51) || !(player getVariable [QGVAR(moveInProgress), false])) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 
-    _marker = (player getVariable[QGVAR(movedMarker), ""]);
-    [QGVAR(applyMarkerPosLocal), [_marker, getMarkerPos _marker]] call CBA_fnc_globalEvent;
-    _marker setMarkerAlphaLocal (player getVariable [QGVAR(movedMarkerAlpha), 1]);
+    private _origin = ACE_player getVariable [QGVAR(movedMarkerOrigin), getMarkerPos _marker];
 
-    EGVAR(map_gestures,enabled) = player getVariable [QGVAR(mapGesturesSetting), false];
+    if !([QGVAR(markerMoveEnded), [ACE_player, _marker, _origin, getMarkerPos _marker]] call CBA_fnc_localEvent) exitWith {
+        _marker setMarkerPosLocal _origin;
+    };
+
+    [QGVAR(applyMarkerPosLocal), [_marker, getMarkerPos _marker]] call CBA_fnc_globalEvent;
+    _marker setMarkerAlphaLocal (ACE_player getVariable [QGVAR(movedMarkerAlpha), 1]);
+
+    EGVAR(map_gestures,enabled) = ACE_player getVariable [QGVAR(mapGesturesSetting), false];
     (findDisplay 12 displayCtrl 51) ctrlMapCursor ["Track", "Track"];
-    [QGVAR(markerMoveEnded), [_marker, ACE_player]] call CBA_fnc_localEvent;
 };
 
 _marker setMarkerPosLocal ((findDisplay 12 displayCtrl 51) posScreenToWorld getMousePosition);

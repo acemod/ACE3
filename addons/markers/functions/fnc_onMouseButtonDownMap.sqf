@@ -36,15 +36,17 @@ if (count _mouseOver == 2) then {
                 // move marker
                 _mapCtrl ctrlMapCursor ["Track", "Move"];
 
-                player setVariable [QGVAR(movedMarker), _markerName];
-                player setVariable [QGVAR(movedMarkerAlpha), markerAlpha _markerName];
-                player setVariable [QGVAR(moveInProgress), true];
-                player setVariable [QGVAR(mapGesturesSetting), EGVAR(map_gestures,enabled)];
+                if !([QGVAR(markerMoveStarted), [ACE_player, _markerName, getMarkerPos _markerName]] call CBA_fnc_localEvent) exitWith {};
+
+                ACE_player setVariable [QGVAR(movedMarkerOrigin), getMarkerPos _markerName];
+                ACE_player setVariable [QGVAR(movedMarkerAlpha), markerAlpha _markerName];
+                ACE_player setVariable [QGVAR(moveInProgress), true];
+                ACE_player setVariable [QGVAR(mapGesturesSetting), EGVAR(map_gestures,enabled)];
                 EGVAR(map_gestures,enabled) = false;
 
                 _markerName setMarkerAlphaLocal 0.5;
                 [FUNC(movePFH), 0, [_markerName]] call CBA_fnc_addPerFrameHandler;
-                [QGVAR(markerMoveStarted), [_markerName, ACE_player]] call CBA_fnc_localEvent;
+
             };
         };
     };
