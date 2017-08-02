@@ -22,7 +22,7 @@
 ["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
-["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
