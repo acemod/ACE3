@@ -25,15 +25,15 @@
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistnace", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
 
 private _seekerCos = cos _seekerFov;
-private _seekerMaxDistSq = _seekerMaxDistnace ^ 2;
+private _seekerMaxDistSq = _seekerMaxDistance ^ 2;
 
-TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistnace,_seekerWavelengths,_seekerCode);
+TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistance,_seekerWavelengths,_seekerCode);
 
 private _spots = [];
 private _finalPos = nil;
