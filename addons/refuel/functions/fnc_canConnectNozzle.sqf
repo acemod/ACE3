@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Check if a unit can connect a fuel nozzle
+ * Check if a unit can connect a fuel nozzle.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -10,23 +10,20 @@
  * Can Connect Nozzle <BOOL>
  *
  * Example:
- * [player, tank] call ace_refuel_fnc_canConnectNozzle
+ * [player, cursorObject] call ace_refuel_fnc_canConnectNozzle
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+params ["_unit", "_target"];
 
 private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
-private _engine = false;
+private _configFuelCapacity = configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(fuelCapacity);
 
-if (_target isKindOf "AllVehicles") then {
-    _engine = isEngineOn _target;
-};
-
-!(isNull _nozzle ||
-    {!alive _target} ||
-    {_engine} ||
-    {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
-    {!isNull (_target getVariable [QGVAR(nozzle), objNull])})
+!(isNull _nozzle)
+&& {alive _target}
+&& {!(_target isKindOf "AllVehicles" && {isEngineOn _target})}
+&& {!isNumber _configFuelCapacity || {0 < getNumber _configFuelCapacity}} /* prevent connect to electric vehicle */
+&& {REFUEL_ACTION_DISTANCE > ([_unit, _target] call EFUNC(interaction,getInteractionDistance))}
+&& {isNull (_target getVariable [QGVAR(nozzle), objNull])}

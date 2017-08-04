@@ -172,10 +172,6 @@ class CfgVehicles {
         GVAR(flowRate) = 4;
     };
 
-    class StaticWeapon: LandVehicle {
-        MACRO_CONNECT_ACTIONS
-    };
-
     class Air: AllVehicles {
         GVAR(flowRate) = 8;
     };

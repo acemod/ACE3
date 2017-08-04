@@ -27,10 +27,4 @@ if (isNil "_attachedNozzle") exitWith {};
 
 if (_nozzle != _attachedNozzle) exitWith {};
 
-private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
-if (_actionID != -1) then {
-    _unit removeAction _actionID;
-    _unit setVariable [QGVAR(isRefueling), false, true];
-    _unit setVariable [QGVAR(ReleaseActionID), nil];
-    _unit setVariable [QGVAR(nozzle), nil, true];
-};
+call EFUNC(interaction,hideMouseHint);

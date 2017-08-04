@@ -1,4 +1,3 @@
-
 PREP(canCheckFuel);
 PREP(canConnectNozzle);
 PREP(canDisconnect);
@@ -13,18 +12,17 @@ PREP(disconnect);
 PREP(dropNozzle);
 PREP(getFuel);
 PREP(handleDisconnect);
-PREP(handleKilled);
-PREP(handlePlayerWeaponChanged);
-PREP(handleUnconscious);
+PREP(handleRespawn);
 PREP(makeJerryCan);
-PREP(maxDistanceDropNozzle);
 PREP(moduleRefuelSettings);
+PREP(onMouseButtonDown);
 PREP(readFuelCounter);
 PREP(refuel);
 PREP(reset);
 PREP(resetLocal);
 PREP(returnNozzle);
 PREP(setFuel);
+PREP(startNozzleInHandsPFH);
 PREP(takeNozzle);
 PREP(turnOff);
 PREP(turnOn);

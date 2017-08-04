@@ -31,14 +31,7 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         detach _nozzle;
-        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
-        REFUEL_UNHOLSTER_WEAPON
         _unit setVariable [QGVAR(isRefueling), false];
-        private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
-        if (_actionID != -1) then {
-            _unit removeAction _actionID;
-            _unit setVariable [QGVAR(ReleaseActionID), nil];
-        };
 
         _target setVariable [QGVAR(isConnected), false, true];
         _target setVariable [QGVAR(ownedNozzle), nil, true];

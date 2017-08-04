@@ -74,13 +74,6 @@ private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
-        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
-        REFUEL_UNHOLSTER_WEAPON
-        private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
-        if (_actionID != -1) then {
-            _unit removeAction _actionID;
-            _unit setVariable [QGVAR(ReleaseActionID), nil];
-        };
 
         detach _nozzle;
         _nozzle attachTo [_target, _endPosTestOffset];
