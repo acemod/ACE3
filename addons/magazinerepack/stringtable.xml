@@ -81,5 +81,21 @@
             <Chinesesimp>重整被中断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>
         </Key>
+        <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
+            <English>%1 Full and %2 Partial</English>
+            <French>%1 plein(s) et %2 partiel(s)</French>
+            <German>%2 angefangenes und %1 volle Magazine</German>
+            <Spanish>%1 Llenos y %2 Incompletos</Spanish>
+            <Russian>%1 полных и %2 неполных</Russian>
+            <Czech>%1 plný a %2 částečně</Czech>
+            <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
+            <Hungarian>%1 teljes és %2 részleges</Hungarian>
+            <Italian>%1 pieno(i) e %2 parziale(i)</Italian>
+            <Portuguese>%1 Total e %2 Parcial </Portuguese>
+            <Japanese>%1 個の満杯で、 %2 の余分数</Japanese>
+            <Korean>%1 꽉찼고 %2 부분참</Korean>
+            <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
+            <Chinese>%1個滿的與%2個部分的</Chinese>
+          </Key>
     </Package>
 </Project>
