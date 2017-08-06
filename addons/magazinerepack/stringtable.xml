@@ -84,7 +84,7 @@
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
             <French>%1 plein(s) et %2 partiel(s)</French>
-            <German>%2 angefangenes und %1 volle Magazine</German>
+            <German>%1 volle(s) Magazin(e) und %2 angefangene(s) Magazin(e)</German>
             <Spanish>%1 Llenos y %2 Incompletos</Spanish>
             <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
