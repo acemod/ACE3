@@ -30,6 +30,7 @@ if (!([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,c
 // Count mags
 private _fullMags = 0;
 private _partialMags = 0;
+private _bulletsLeft = _fullMagazineCount;
 {
     _x params ["_classname", "_count"];
 
@@ -38,11 +39,12 @@ private _partialMags = 0;
             _fullMags = _fullMags + 1;
         } else {
             _partialMags = _partialMags + 1;
+            _bulletsLeft = _count;
         };
     };
 } forEach (magazinesAmmoFull ACE_player);
 
-private _repackedMagsText = format [localize LSTRING(RepackedMagazinesCount), _fullMags, _partialMags];
+private _repackedMagsText = format [localize LSTRING(RepackedMagazinesCount), _fullMags, _partialMags, _bulletsLeft];
 
 private _structuredOutputText = if (_errorCode == 0) then {
     format ["<t align='center'>%1</t><br/>%2", localize LSTRING(RepackComplete), _repackedMagsText];
