@@ -34,9 +34,19 @@ _unit selectWeapon _replacementTube;
     if (_x != "") then {_unit addSecondaryWeaponItem _x};
 } count _items;
 
+if ([_unit] call EFUNC(common,isPlayer)) then {
+    [_unit,_replacementTube] spawn {
+        params["_unit","_replacementTube"];
 
-// AI - Remove the ai's missle launcher tube after the missle has exploded
-if !([_unit] call EFUNC(common,isPlayer)) then {
+        waitUntil {currentWeapon _unit != _replacementTube};
+        _unit removeWeapon _replacementTube;
+        private _container = createVehicle ["WeaponHolderSimulated", position _unit, [], 0, "CAN_COLLIDE"];
+        _container addWeaponCargoGlobal [_replacementTube, 1];
+        _container setDir (getDir _unit - 90);
+        _container setPos (_unit modelToWorld ((_unit selectionPosition ["rightshoulder", "Memory"]) vectorAdd [0, 0.2, 0.1]));
+        _container setVelocityModelSpace [0.2, -1.5, 0];
+	};
+} else { // AI - Remove the ai's missle launcher tube after the missle has exploded
     [{
         params ["_args","_idPFH"];
         _args params ["_unit", "_tube", "_projectile"];
@@ -50,9 +60,11 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
             if (secondaryWeapon _unit != _tube || {!alive _unit} || {[_unit] call EFUNC(common,isPlayer)}) exitWith {};
 
             //private  _items = secondaryWeaponItems _unit;
-            private _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
-            _container setPosAsl (getPosAsl _unit);
+            private _container = createVehicle ["WeaponHolderSimulated", position _unit, [], 0, "CAN_COLLIDE"];
             _container addWeaponCargoGlobal [_tube, 1];
+            _container setDir (getDir _unit - 90);
+            _container setPos (_unit modelToWorld (_unit selectionPosition ["rightshoulder", "Memory"]));
+            _container setVelocityModelSpace [0.2, -1.5, 0];
 
             //This will duplicate attachements, because we will be adding a weapon that may already have attachments on it
             //We either need a way to add a clean weapon, or a way to add a fully configured weapon to a container:

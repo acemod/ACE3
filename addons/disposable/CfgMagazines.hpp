@@ -1,12 +1,13 @@
 class CfgMagazines {
     class CA_LauncherMagazine;
-    class ACE_PreloadedMissileDummy_Base: CA_LauncherMagazine {  // The dummy magazine
+    class ACE_PreloadedMissileDummy_Base: CA_LauncherMagazine {  // The base dummy magazine
         author = ECSTRING(common,ACETeam);
+        allowedSlots[] = {701,801,901};
         scope = 1;
         scopeArsenal = 1;
         displayName = CSTRING(PreloadedMissileDummy);
-        model = "\A3\weapons_f\empty";
         picture = QPATHTOEF(common,UI\blank_CO.paa);
+        model = "\A3\weapons_f\empty";
         weaponPoolAvailable = 0;
         mass = 0;
     };
@@ -18,6 +19,6 @@ class CfgMagazines {
         ammo = "M_NLAW_AT_F";
         initSpeed = 40;
         maxLeadSpeed = 40;
-        mass = 80;
+        type = "3*		256";
     };
 };

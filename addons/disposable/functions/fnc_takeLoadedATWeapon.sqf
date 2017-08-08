@@ -20,14 +20,22 @@ TRACE_1("params",_unit);
 
 if (!local _unit) exitWith {};
 
+if(getNumber (configFile >> "CfgWeapons" >> currentWeapon _unit >> "ACE_hasPreparation") != 1) then {
+    {
+        if(_x isKindOf ["ACE_PreloadedMissileDummy_Base", configFile >> "CfgMagazines"]) then {
+            _unit removeMagazine _x;
+        };
+    } forEach magazines _unit; //I'm not a huge fan of this, but it's the fastest method I can find.
+};
+
 private _launcher = secondaryWeapon _unit;
 private _config = configFile >> "CfgWeapons" >> _launcher;
+
+if ([_unit] call EFUNC(common,isPlayer) && {getNumber (_config >> "ACE_hasPreparation") == 1}) exitWith{}; //Players with ACE_hasPreparation launchers stop here, but AI need to have ammo for their launchers in order to select them as weapons.
 
 if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber (_config >> "ACE_isUsedLauncher") != 1} && {count secondaryWeaponMagazine _unit == 0}) then {
     private _magazine = getArray (_config >> "magazines") select 0;
     private _isLauncherSelected = currentWeapon _unit == _launcher;
-
-    _unit removeMagazines _magazine;
 
     if (backpack _unit == "") then {
         _unit addBackpack "ACE_FakeBackpack";
