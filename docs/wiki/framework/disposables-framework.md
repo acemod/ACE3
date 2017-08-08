@@ -14,7 +14,7 @@ version:
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>This is just the necessary changes to make a launcher disposable, this is not a guide to make your own launcher.</p>
+    <p>These are just the necessary changes to make a launcher disposable, this is not a guide to make your own launcher.</p>
 </div>
 
 ## 1. Making a launcher disposable

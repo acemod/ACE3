@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {};
 
 ["weapon", {
     params ["_unit","_weapon"];
-    [_unit,_weapon] FUNC(handlePreparation);
+    [_unit,_weapon] call FUNC(handlePreparation);
 }] call CBA_fnc_addPlayerEventHandler;
 
 // Register fire event handler
