@@ -23,12 +23,7 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_vehicle", objNull, [objNull]],
-    ["_turretPath", [], [[]]],
-    ["_magazineClass", "", [""]],
-    ["_ammoCounts", [], [[]]]
-];
+params ["_vehicle", "_turretPath", "_magazineClass", "_ammoCounts"];
 
 // Checking if a magazine of given class is currently loaded in any weapon.
 private _magLoadedInWeapon = false;

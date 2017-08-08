@@ -25,7 +25,7 @@
  */
 #include "script_component.hpp"
 
-params [["_vehicle", objNull, [objNull]]];
+params ["_vehicle"];
 
 private _magazineInfo = [];
 

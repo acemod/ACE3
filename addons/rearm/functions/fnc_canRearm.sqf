@@ -16,10 +16,7 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_vehicle", objNull, [objNull]],
-    ["_unit", objNull, [objNull]]
-];
+params ["_vehicle", "_unit"];
 
 if (!alive _vehicle) exitWith {false};
 if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_vehicle distance _unit > REARM_ACTION_DISTANCE} || {_vehicle getVariable [QGVAR(disabled), false]}) exitWith {false};

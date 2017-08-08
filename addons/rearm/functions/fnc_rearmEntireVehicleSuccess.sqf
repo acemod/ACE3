@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 params ["_args"];
-_args params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+_args params ["_truck", "_vehicle"];
 TRACE_2("rearmEntireVehicleSuccess",_truck,_vehicle);
 
 if (isServer) then {

@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]],["_unit", objNull, [objNull]]];
+params ["_target", "_unit"];
 TRACE_2("rearm",_target,_unit);
 
 private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];

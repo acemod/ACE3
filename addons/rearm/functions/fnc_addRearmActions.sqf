@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]]];
+params ["_truck"];
 
 private _vehicles = nearestObjects [_truck, ["AllVehicles"], 20];
 _vehicles = _vehicles select {(_x != _truck) && {!(_x isKindOf "CAManBase")} && {!(_x getVariable [QGVAR(disabled), false])}};

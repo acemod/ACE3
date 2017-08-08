@@ -18,11 +18,7 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_vehicle", objNull, [objNull]]
-];
-
-if (isNull _vehicle) exitWith {[]};
+params ["_vehicle"];
 
 private _turrets = allTurrets _vehicle;
 

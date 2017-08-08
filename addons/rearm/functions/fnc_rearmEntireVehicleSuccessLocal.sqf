@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
+params ["_truck", "_vehicle", "_turretPath"];
 TRACE_3("rearmEntireVehicleSuccessLocal", _truck, _vehicle, _turretPath);
 
 // Fetching all rearmable magazines in this turret
