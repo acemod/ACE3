@@ -34,9 +34,7 @@ private _needRearmMagsOfClass = _needRearmMags select {(_x select 0) isEqualTo _
 if ((count _needRearmMagsOfClass) == 0) exitWith {ERROR_2("Could not find turret for %1 in %2", _magazineClass, typeOf _target);};
 
 private _currentRearmableMag = _needRearmMagsOfClass select 0;
-private _turretPath = _currentRearmableMag select 1;
-private _pylon = _currentRearmableMag select 3;
-private _magazineCount = _currentRearmableMag select 5;
+_currentRearmableMag params ["", "_turretPath", "", "_pylon", "", "_magazineCount"];
 
 private _magazineDisplayName =  getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName");
 if (_magazineDisplayName == "") then {
