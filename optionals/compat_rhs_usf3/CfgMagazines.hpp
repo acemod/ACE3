@@ -27,4 +27,24 @@ class cfgMagazines {
         EGVAR(overpressure,range) = 0;
         EGVAR(overpressure,damage) = 0;
     };
+
+    class ACE_PreloadedMissileDummy_Base;
+    class ACE_PreloadedMissileDummy_M136HEAT: ACE_PreloadedMissileDummy_Base {
+        ammo = "rhs_ammo_M136_rocket";
+        type = "6 * 256";
+        initSpeed = 290;
+        mass = 0;
+    };
+
+    class ACE_PreloadedMissileDummy_M136HEDP: ACE_PreloadedMissileDummy_M136HEAT {
+        ammo = "rhs_ammo_M136_hedp_rocket";
+    };
+
+    class ACE_PreloadedMissileDummy_M136HP: ACE_PreloadedMissileDummy_M136HEAT {
+        ammo = "rhs_ammo_M136_hp_rocket";
+    };
+
+    class ACE_PreloadedMissileDummy_M72: ACE_PreloadedMissileDummy_M136HEAT {
+        ammo = "rhs_ammo_m72a7_rocket";
+    };
 };
