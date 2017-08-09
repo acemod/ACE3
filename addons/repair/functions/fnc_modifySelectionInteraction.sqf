@@ -1,6 +1,6 @@
 /*
- * Author: PabstMirror
- * Modifies the base interaction point for repair items to show it's current damage
+ * Author: 654wak654
+ * Modifies interaction color of vehicle selection to show it's current damage
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [cursorObject, ace_player, [], []] call ace_repair_fnc_modifyInteraction;
+ * [cursorObject, ace_player, [], []] call ace_repair_fnc_modifySelectionInteraction;
  *
  * Public: No
  */
@@ -21,8 +21,12 @@
 params ["_target", "_player", "_args", "_actionData"];
 TRACE_4("params",_target,_player,_args,_actionData);
 
-// Interaction dots numbered 0..8, white to red.
+// Interaction wrenches numbered 0..8, white to red.
 // Convert damage to number (rounding up), so that even slight damage can bee seen
 
-private _fileName = format [QPATHTOF(ui\damage_%1_ca.paa), ceil (linearConversion [0, 1, damage _target, 0, 8, true])];
+private _fileName = format [
+    QPATHTOF(ui\repair_%1_ca.paa),
+    ceil (linearConversion [0, 1, _target getHitPointDamage (_args select 0), 0, 8, true])
+];
+
 _actionData set [2, _fileName];
