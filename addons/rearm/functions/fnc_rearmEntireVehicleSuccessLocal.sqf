@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 params ["_truck", "_vehicle", "_turretPath"];
-TRACE_3("rearmEntireVehicleSuccessLocal", _truck, _vehicle, _turretPath);
+TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);
 
 // Fetching all rearmable magazines in this turret
 private _magazines = ([_vehicle] call FUNC(getNeedRearmMagazines)) select {(_x select 1) isEqualTo _turretPath};
@@ -46,7 +46,7 @@ private _magazines = ([_vehicle] call FUNC(getNeedRearmMagazines)) select {(_x s
         };
     };
     
-    TRACE_2("rearming", _x, _plannedRounds);
+    TRACE_2("rearming",_x,_plannedRounds);
     
     // Updating new ammo counts to vehicle.
     if (_isPylonMag) then {

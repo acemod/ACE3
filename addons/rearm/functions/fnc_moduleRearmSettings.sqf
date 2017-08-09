@@ -28,4 +28,4 @@ if (!_activated) exitWith {};
 [_logic, QGVAR(level), "level"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(supply), "supply"] call EFUNC(common,readSettingFromModule);
 
-INFO_2("Module Initialized [level: %1][supply: %2]", GVAR(level), GVAR(supply));
+INFO_2("Module Initialized [level: %1][supply: %2]",GVAR(level),GVAR(supply));

@@ -86,4 +86,4 @@ if (!_magLoadedInWeapon) then {
     } forEach _ammoCountsByMagClass;
 };
 
-TRACE_5("setTurretMagazineAmmo", _vehicle, _turretPath, _magazineClass, _ammoCounts, _loadedWeapon);
+TRACE_5("setTurretMagazineAmmo",_vehicle,_turretPath,_magazineClass,_ammoCounts,_loadedWeapon);

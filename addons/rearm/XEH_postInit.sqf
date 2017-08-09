@@ -28,6 +28,6 @@ if (isServer) then {
 #ifdef DEBUG_MODE_FULL
 INFO("Showing CfgVehicles with vanilla transportAmmo");
 {
-    WARNING_2("Type [%1] needs config [transportAmmo: %2]", configName _x, getNumber (_x >> 'transportAmmo'));
+    WARNING_2("Type [%1] needs config [transportAmmo: %2]",configName _x,getNumber (_x >> 'transportAmmo'));
 } forEach (configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(getNumber (_x >> 'transportAmmo')) > 0}", true]);
 #endif

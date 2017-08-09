@@ -86,5 +86,5 @@ private _turrets = [_vehicle] call FUNC(getAllTurrets);
     } forEach _magazineClasses;
 } forEach _turrets;
 
-TRACE_2("getNeedRearmMagazines", _vehicle, _magazineInfo);
+TRACE_2("getNeedRearmMagazines",_vehicle,_magazineInfo);
 _magazineInfo

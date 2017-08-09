@@ -31,7 +31,7 @@ private _needRearmMags = [_target] call FUNC(getNeedRearmMagazines);
 private _needRearmMagsOfClass = _needRearmMags select {(_x select 0) isEqualTo _magazineClass};
 
 // Exit if no magazines need rearming
-if ((count _needRearmMagsOfClass) == 0) exitWith {ERROR_2("Could not find turret for %1 in %2", _magazineClass, typeOf _target);};
+if ((count _needRearmMagsOfClass) == 0) exitWith {ERROR_2("Could not find turret for %1 in %2",_magazineClass,typeOf _target);};
 
 private _currentRearmableMag = _needRearmMagsOfClass select 0;
 _currentRearmableMag params ["", "_turretPath", "", "_pylon", "", "_magazineCount"];
@@ -39,7 +39,7 @@ _currentRearmableMag params ["", "_turretPath", "", "_pylon", "", "_magazineCoun
 private _magazineDisplayName =  getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName");
 if (_magazineDisplayName == "") then {
     _magazineDisplayName = _magazineClass;
-    ERROR_1("Magazine is missing display name [%1]", _magazineClass);
+    ERROR_1("Magazine is missing display name [%1]",_magazineClass);
 };
 
 [
