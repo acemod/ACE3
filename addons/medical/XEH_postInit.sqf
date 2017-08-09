@@ -31,6 +31,20 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 if (isServer) then {
     ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
     [QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
+    addMissionEventHandler ["BuildingChanged", {
+        if (isNil QGVAR(allCreatedLitter)) exitWith {};
+        params ["_buildingOld", "_buildingNew", "_isRuin"];
+        TRACE_3("BuildingChanged",_buildingOld,_buildingNew,_isRuin);
+        private _radius = ((0.75 * getNumber (configFile >> "CfgVehicles" >> (typeOf _buildingOld) >> "mapsize")) max 5) min 50;
+        TRACE_1("",_radius);
+        {
+            _x params ["", "_objects"];
+            if (({(_x distance2d _buildingOld) < _radius} count _objects) > 0) then {
+                GVAR(allCreatedLitter) deleteAt (GVAR(allCreatedLitter) find _x);
+                { TRACE_1("deleting",_x); deleteVehicle _x } forEach _objects;
+            };
+        } forEach (+GVAR(allCreatedLitter));
+    }];
 };
 
 ["ace_unconscious", {
