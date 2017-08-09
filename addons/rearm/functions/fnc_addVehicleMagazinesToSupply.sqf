@@ -29,7 +29,7 @@ if (_vehicle isEqualType objNull) then {_vehicle = typeOf _vehicle};
 if (_vehicle == "") exitWith {
     ERROR_1("VehicleType [%1] is empty in ace_rearm_fnc_addVehicleMagazinesToSupply",_string);
 };
-private _turrets = [_vehicle] call FUNC(getAllTurrets);
+private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
 {
     private _turretPath = _x;
     private _magazines = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);

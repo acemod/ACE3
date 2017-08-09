@@ -12,7 +12,7 @@
  * Turret paths <ARRAY>
  *
  * Example:
- * [vehicle] call ace_rearm_fnc_getAllTurrets
+ * [vehicle] call ace_rearm_fnc_getAllRearmTurrets
  *
  * Public: No
  */

@@ -22,7 +22,7 @@ _args params ["_truck", "_vehicle"];
 TRACE_2("rearmEntireVehicleSuccess",_truck,_vehicle);
 
 if (isServer) then {
-    private _turrets = [_vehicle] call FUNC(getAllTurrets);
+    private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
     {
         private _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
