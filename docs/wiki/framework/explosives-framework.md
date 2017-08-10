@@ -25,9 +25,10 @@ version:
 class CfgMagazines {
     class CA_Magazine;
     class banana_satchel_remote_mag: CA_Magazine {
-        ACE_Placeable = 1;  // Can be placed
+        ACE_Explosives_Placeable = 1;  // Can be placed
         useAction = 0;  // Disable the vanilla interaction
-        ACE_SetupObject = "banana_satchel_place";  // The object placed before the explosive is armed
+        ACE_Explosives_SetupObject = "banana_satchel_place";  // The object placed before the explosive is armed
+        ACE_Explosives_DelayTime = 1.5; // Seconds between trigger activation and explosion
         class ACE_Triggers {  // Trigger configurations
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};  // Triggers that can be used
             class Timer {
@@ -83,7 +84,7 @@ _Pretty much the same as Explosives except that we inherit from_ `ATMine_Range_M
 class CfgMagazines {
     class ATMine_Range_Mag;
     class BananaMine_Range_Mag: ATMine_Range_Mag {
-        ACE_SetupObject = "BananaMine_Place";  // The object placed before the mine is armed
+        ACE_Explosives_SetupObject = "BananaMine_Place";  // The object placed before the mine is armed
         class ACE_Triggers {  // Triggers
             SupportedTriggers[] = {"PressurePlate"};  // This mine only support pressure plate activation
             class PressurePlate {
@@ -110,7 +111,8 @@ class CfgWeapons {
     class banana_clacker: ACE_Clacker {
         displayName = "banana clacker";  // Name of the item
         picture = "";  // Path to the item's picture
-        ACE_Range = 9000;  // Explosives activation range in meters
+        ACE_Explosives_Range = 9000;  // Explosives activation range in meters
+        ACE_Explosives_triggerType = "Command"; // Trigger type, see below
     };
 };
 ```
