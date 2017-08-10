@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Modifies the base interaction point for repair items to show it's current damage
+ * Modifies the base interaction point for repair items to show it's current damage.
  *
  * Arguments:
  * 0: Target <OBJECT>

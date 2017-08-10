@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Modifies interaction color of vehicle selection to show it's current damage
+ * Modifies interaction color of vehicle selection to show it's current damage.
  *
  * Arguments:
  * 0: Target <OBJECT>
