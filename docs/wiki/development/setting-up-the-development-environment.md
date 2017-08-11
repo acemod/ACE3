@@ -127,7 +127,7 @@ class CfgSettings {
 #define DISABLE_COMPILE_CACHE
 ```
 
-All functions with disabled caching can be recompiled with `[] call ACE_PREP_RECOMPILE;` command without mission restart. You can add a addAction/keybind/pfeh with this code and use it for fast recompiling.
+All functions in module with `DISABLE_COMPILE_CACHE` line can be recompiled without mission restart with `[] call ACE_PREP_RECOMPILE;` command. You can add a addAction/keybind/pfeh with this code and use it for fast recompiling.
 
 ### 7.2 Restrictions
 
