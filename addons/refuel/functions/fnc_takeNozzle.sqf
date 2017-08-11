@@ -60,14 +60,14 @@ params [
                 _nozzle setVariable [QGVAR(helper), _helper, true];
                 _ropeTarget = _helper;
             };
-		    private _attachPos = getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks));
-		    if (count _attachPos == 1) then {
-		        _attachPos = _attachPos select 0;
-		    } else {
-		        // select closest hook
-		        private _hookDistances = _attachPos apply {_unit distance (_source modelToWorld _x)};
-		        _attachPos = _attachPos select (_hookDistances find selectMin _hookDistances);
-		    };
+            private _attachPos = getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks));
+            if (count _attachPos == 1) then {
+                _attachPos = _attachPos select 0;
+            } else {
+                // select closest hook
+                private _hookDistances = _attachPos apply {_unit distance (_source modelToWorld _x)};
+                _attachPos = _attachPos select (_hookDistances find selectMin _hookDistances);
+            };
             private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
             private _rope = ropeCreate [_ropeTarget, _attachPos, _nozzle, [0, -0.20, 0.12], _hoseLength];
             _nozzle setVariable [QGVAR(rope), _rope, true];
