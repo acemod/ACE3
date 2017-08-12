@@ -28,3 +28,5 @@
 #else
     #define TIME_PROGRESSBAR(X) (X)
 #endif
+
+#define INTERACT_EXCEPTIONS "isNotInside", "isNotOnLadder", "isNotRefueling"

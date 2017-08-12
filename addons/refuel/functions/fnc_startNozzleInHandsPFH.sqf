@@ -33,8 +33,12 @@ TRACE_2("start",_unit,_nozzle);
     params ["_args", "_idPFH"];
     _args params ["_unit", "_nozzle"];
 
-    if !(alive _unit && {"" isEqualTo (currentWeapon _unit)}) exitWith {
-        TRACE_3("stop dead/changed weapon",_unit,alive _unit,currentWeapon _unit);
+    if !(
+        alive _unit
+        && {"" isEqualTo (currentWeapon _unit)}
+        && {[_unit, objNull, [INTERACT_EXCEPTIONS, "notOnMap"]] call EFUNC(common,canInteractWith)}
+    ) exitWith {
+        TRACE_3("stop dead/weapon/interact",_unit,alive _unit,currentWeapon _unit);
         DROP_NOZZLE
         _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
         END_PFH

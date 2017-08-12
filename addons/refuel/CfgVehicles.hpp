@@ -7,6 +7,7 @@
                 distance = REFUEL_ACTION_DISTANCE; \
                 condition = "alive _target"; \
                 statement = ""; \
+                exceptions[] = {INTERACT_EXCEPTIONS}; \
                 showDisabled = 0; \
                 priority = 2; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
@@ -14,28 +15,28 @@
                     displayName = CSTRING(TakeNozzle); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
                     statement = QUOTE([ARR_3(_player,_target,objNull)] call FUNC(TakeNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
+                    exceptions[] = {"isNotInside", "isNotOnLadder"}; \
                     icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(CheckFuelCounter) { \
                     displayName = CSTRING(CheckFuelCounter); \
                     condition = "true"; \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(readFuelCounter)); \
-                    exceptions[] = {"isNotInside"}; \
+                    exceptions[] = {INTERACT_EXCEPTIONS}; \
                     icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(CheckFuel) { \
                     displayName = CSTRING(CheckFuel); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckFuel)); \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkFuel)); \
-                    exceptions[] = {"isNotInside"}; \
+                    exceptions[] = {INTERACT_EXCEPTIONS}; \
                     icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(returnNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
+                    exceptions[] = {INTERACT_EXCEPTIONS}; \
                     icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
             }; \
@@ -51,7 +52,7 @@
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                exceptions[] = {"isNotInside"}; \
+                exceptions[] = {INTERACT_EXCEPTIONS}; \
             }; \
         }; \
     };
@@ -64,6 +65,7 @@
             position = "[0,-0.025,0.125]"; \
             condition = "true"; \
             statement = ""; \
+            exceptions[] = {INTERACT_EXCEPTIONS}; \
             showDisabled = 0; \
             priority = 2; \
             icon = QPATHTOF(ui\icon_refuel_interact.paa); \
@@ -71,28 +73,28 @@
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
                 statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(takeNozzle)); \
-                exceptions[] = {"isNotInside"}; \
+                exceptions[] = {"isNotInside", "isNotOnLadder"}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOn) { \
                 displayName = CSTRING(TurnOn); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOn)); \
-                exceptions[] = {"isNotInside"}; \
+                exceptions[] = {INTERACT_EXCEPTIONS}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOff) { \
                 displayName = CSTRING(TurnOff); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff)); \
-                exceptions[] = {"isNotInside"}; \
+                exceptions[] = {INTERACT_EXCEPTIONS}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(Disconnect) { \
                 displayName = CSTRING(Disconnect); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
-                exceptions[] = {"isNotInside"}; \
+                exceptions[] = {"isNotInside", "isNotOnLadder"}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
         }; \

@@ -37,5 +37,5 @@ params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
     "",
     localize LSTRING(CheckFuelCounterAction),
     {true},
-    ["isnotinside"]
+    [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

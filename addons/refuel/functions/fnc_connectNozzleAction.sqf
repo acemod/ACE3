@@ -125,5 +125,5 @@ private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
     "",
     localize LSTRING(ConnectAction),
     {true},
-    ["isnotinside"]
+    [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

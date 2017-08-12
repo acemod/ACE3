@@ -36,5 +36,5 @@ private _fuel = [_target] call FUNC(getFuel);
     {true},
     localize LSTRING(CheckFuelAction),
     {true},
-    ["isnotinside"]
+    [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

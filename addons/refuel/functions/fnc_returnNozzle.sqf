@@ -50,7 +50,7 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
     "",
     localize LSTRING(ReturnAction),
     {true},
-    ["isnotinside"]
+    [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);
 
 true
