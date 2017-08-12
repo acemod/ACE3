@@ -4,6 +4,8 @@ class RscListBox;
 class RscEdit;
 class RscButtonMenu;
 class RscButtonMenuCancel;
+class RscText;
+class RscPicture;
 
 class GVAR(DialogLoadout) {
     idd = 654654;

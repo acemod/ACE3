@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Pylons">
+        <Key ID="STR_ACE_Pylons_Mirror">
+            <English>Mirror</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_AircraftLoadoutTitle">
+            <English>AIRCRAFT LOADOUT</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_LoadoutsFor">
+            <English>Loadouts for %1</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_ConfigurePylons">
+            <English>Configure Pylons</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Category_Pylons">
+            <English>Pylons</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnableLoadoutMenu">
+            <English>Enable Aircraft Loadout Menu</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnableLoadoutMenu_description">
+            <English>Allow aircraft near ammo trucks to open the aircraft loadout menu.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_MakeNewPylonsEmpty">
+            <English>Make New Pylons Empty</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_MakeNewPylonsEmpty_description">
+            <English>When a pylon changes it'll be empty and will have to be rearmed by other means.</English>
+        </Key>
+        </Key>
+        <Key ID="STR_ACE_Pylons_SearchDistance">
+            <English>Search Distance</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_SearchDistance_description">
+            <English></English> <!-- TODO -->
+        </Key>
+    </Package>
+</Project>

@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call ace_aircraft_fnc_onButtonLoad
+ * [] call ace_pylons_fnc_onButtonLoad
  *
  * Public: No
  */

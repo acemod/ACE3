@@ -13,7 +13,8 @@
                 "",
                 {[_target] call FUNC(showDialog)},
                 {
-                    private _rearmVehicles = _target nearObjects ["LandVehicle", AIRCRAFT_ACTION_DISTANCE + 10];
+                    // TODO
+                    private _rearmVehicles = _target nearObjects ["LandVehicle", GVAR(searchDistance) + 10];
 
                     if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
                         FILTER(_rearmVehicles,(_x getVariable [QEGVAR(rearm,magazineSupply), 0]) > 0);
@@ -21,7 +22,7 @@
                         FILTER(_rearmVehicles,getAmmoCargo _x > 0);
                     };
 
-                    ({([_x, _target] call EFUNC(interaction,getInteractionDistance)) < AIRCRAFT_ACTION_DISTANCE} count _rearmVehicles) > 0
+                    ({([_x, _target] call EFUNC(interaction,getInteractionDistance)) < GVAR(searchDistance)} count _rearmVehicles) > 0
                 }
             ] call EFUNC(interact_menu,createAction);
 

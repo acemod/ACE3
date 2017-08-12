@@ -49,32 +49,5 @@
             <Chinese>關閉貨艙門</Chinese>
             <Chinesesimp>关闭货舱门</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Aircraft_Mirror">
-            <English>Mirror</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_AircraftLoadoutTitle">
-            <English>AIRCRAFT LOADOUT</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_LoadoutsFor">
-            <English>Loadouts for %1</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_ConfigurePylons">
-            <English>Configure Pylons</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_Category_Aircraft">
-            <English>Aircraft</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_EnableLoadoutMenu">
-            <English>Enable Aircraft Loadout Menu</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_EnableLoadoutMenu_description">
-            <English>Allow aircraft near ammo trucks to open the aircraft loadout menu.</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_MakeNewPylonsEmpty">
-            <English>Make New Pylons Empty</English>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_MakeNewPylonsEmpty_description">
-            <English>When a pylon changes it'll be empty and will have to be rearmed by other means.</English>
-        </Key>
     </Package>
 </Project>

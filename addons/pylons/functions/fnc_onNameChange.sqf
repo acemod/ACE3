@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_aircraft_fnc_onNameChange
+ * [] call ace_pylons_fnc_onNameChange
  *
  * Public: No
  */

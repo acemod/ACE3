@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [vehicle ace_player] call ace_aircraft_fnc_showDialog
+ * [vehicle ace_player] call ace_pylons_fnc_showDialog
  *
  * Public: Yes
  */

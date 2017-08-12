@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call ace_aircraft_fnc_onButtonApply
+ * [] call ace_pylons_fnc_onButtonApply
  *
  * Public: No
  */
@@ -18,6 +18,7 @@
 {
     private _pylon = (_x select 0) lbData (lbCurSel (_x select 0));
 
+    // TODO
     if (GVAR(makeNewPylonsEmpty)) then {
         private _pylonMagazines = getPylonMagazines GVAR(currentAircraft);
         if ((_pylonMagazines select _forEachIndex) != _pylon) then {

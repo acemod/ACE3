@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call ace_aircraft_fnc_onButtonDelete
+ * [] call ace_pylons_fnc_onButtonDelete
  *
  * Public: No
  */

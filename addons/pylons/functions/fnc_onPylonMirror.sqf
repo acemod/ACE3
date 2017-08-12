@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [false] call ace_aircraft_fnc_onPylonMirror
+ * [false] call ace_pylons_fnc_onPylonMirror
  *
  * Public: No
  */
