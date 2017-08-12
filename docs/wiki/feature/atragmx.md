@@ -73,7 +73,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
  
 **Start of the mission:**
 
-- Select `Drag Coef Table` in the `Options` menu.
+- Select `Drag Coef Table` in the `Options` menu. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=14)
 - Add the `ZR` and the `C1` (`Gun` column) in the table and `Done`.
   
 **In position:**
@@ -92,6 +92,8 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - The ballistic coefficient `C1` and the elevation `Elev` will be recalculated.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx3.png" width="1123" height="600" alt="Interpolation" />
+
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx3a.png" width="1123" height="600" alt="Extrapolation" />
 
 ### 3.4 Example with overwritten zero distance
 
@@ -125,6 +127,10 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 
 > Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
+
+> Example direct conversion with 0.408 Cheytac 305 grains G7 BC 0.279 at 2000 meters 15°C:
+
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.png" width="1400" height="600" alt="Conversion G7/G1 BC" />
 
  
 ## 4. Official Manual and Horus Videos

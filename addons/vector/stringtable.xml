@@ -14,6 +14,8 @@
             <Russian>Vector 21 Nite</Russian>
             <Japanese>ベクター 21 ナイト</Japanese>
             <Korean>Vector 21 Nite</Korean>
+            <Chinesesimp>Vector 21 Nite</Chinesesimp>
+            <Chinese>Vector 21 Nite</Chinese>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDayName">
             <English>Vector 21</English>
@@ -28,6 +30,8 @@
             <Russian>Vector 21</Russian>
             <Japanese>ベクター 21</Japanese>
             <Korean>	Vector 21</Korean>
+            <Chinesesimp>Vector 21</Chinesesimp>
+            <Chinese>Vector 21</Chinese>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDescription">
             <English>Rangefinder</English>
@@ -42,6 +46,8 @@
             <Russian>Дальномер</Russian>
             <Japanese>測距機器</Japanese>
             <Korean>거리측정기</Korean>
+            <Chinesesimp>测距仪</Chinesesimp>
+            <Chinese>測距儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Vector_AzimuthKey">
             <English>Vector - Azimuth Key</English>
@@ -56,6 +62,8 @@
             <Russian>Vector – Азимут</Russian>
             <Japanese>ベクター - 方位角キー</Japanese>
             <Korean>Vector - 방위각 키</Korean>
+            <Chinesesimp>Vector - 方位按键</Chinesesimp>
+            <Chinese>Vector - 方位按鍵</Chinese>
         </Key>
         <Key ID="STR_ACE_Vector_DistanceKey">
             <English>Vector - Distance Key</English>
@@ -70,6 +78,8 @@
             <Russian>Vector – Расстояние</Russian>
             <Japanese>ベクター - 距離キー</Japanese>
             <Korean>Vector - 거리 키</Korean>
+            <Chinesesimp>Vector - 距离按键</Chinesesimp>
+            <Chinese>Vector - 距離按鍵</Chinese>
         </Key>
     </Package>
 </Project>

@@ -51,7 +51,7 @@ The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This i
 
 ### 2.2 `CROSSWIND` / `HEADWIND` Feature
 
-- https://www.youtube.com/watch?v=4Q_qgXwlRqk
+- [Official Kestrel Instruments video](https://www.youtube.com/watch?v=4Q_qgXwlRqk)
 
 - *[Wind info]({{ site.baseurl }}/wiki/feature/weather.html) is toggled on/off using <kbd>SHIFT</kbd> + <kbd>K</kbd>.*
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_DisplayName">
@@ -6,6 +6,9 @@
             <Japanese>ACE スペクテイター</Japanese>
             <Italian>Spettatore ACE</Italian>
             <French>Spectateur ACE</French>
+            <Chinesesimp>ACE 旁观者</Chinesesimp>
+            <Chinese>ACE 旁觀者</Chinese>
+            <Polish>Obserwator ACE</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
@@ -19,6 +22,8 @@
             <French>Réglages de spectateur</French>
             <Japanese>スペクテイター設定</Japanese>
             <Korean>관전자 설정</Korean>
+            <Chinesesimp>旁观者设定</Chinesesimp>
+            <Chinese>旁觀者設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -32,6 +37,8 @@
             <French>Configure comment le système de spectateurs opère par défaut.</French>
             <Japanese>スペクテイター システムが標準でどのように動作するか設定できます。</Japanese>
             <Korean>어떻게 관전자 시스템이 기본적으로 작동되는지 설정합니다</Korean>
+            <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
+            <Chinese>設定旁觀者系統相關配置</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_DisplayName">
             <English>AI Enabled</English>
@@ -51,6 +58,8 @@
             <French>Mode de caméra</French>
             <Japanese>カメラ モード</Japanese>
             <Korean>카메라 모드</Korean>
+            <Chinesesimp>摄影机模式</Chinesesimp>
+            <Chinese>攝影機模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used</English>
@@ -64,6 +73,8 @@
             <French>Modes de caméra qui peuvent être utilisés</French>
             <Japanese>カメラ モードを使えます。</Japanese>
             <Korean>사용할 수 있는 카메라 모드들 입니다</Korean>
+            <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
+            <Chinese>設定可使用的攝影機模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
@@ -77,6 +88,8 @@
             <French>Tous</French>
             <Japanese>全て</Japanese>
             <Korean>모두</Korean>
+            <Chinesesimp>所有</Chinesesimp>
+            <Chinese>所有</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>1PP and 3PP</English>
@@ -103,6 +116,8 @@
             <French>Modes de vision</French>
             <Japanese>ビジョン モード</Japanese>
             <Korean>시야 모드</Korean>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Chinese>視覺模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used</English>
@@ -116,6 +131,8 @@
             <French>Modes de visions qui peuvent être utilisés</French>
             <Japanese>ビジョン モードを使えます。</Japanese>
             <Korean>사용할 수 있는 시야 모드들 입니다</Korean>
+            <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
+            <Chinese>設定可使用的視覺模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>
@@ -129,6 +146,8 @@
             <French>Vision nocturne</French>
             <Japanese>夜間暗視</Japanese>
             <Korean>야간투시경</Korean>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
@@ -142,6 +161,8 @@
             <French>Vision thermique</French>
             <Japanese>熱源画像</Japanese>
             <Korean>열화상</Korean>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
@@ -169,6 +190,8 @@
             <French>Libre</French>
             <Japanese>自由視点</Japanese>
             <Korean>자유</Korean>
+            <Chinesesimp>自由模式</Chinesesimp>
+            <Chinese>自由模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
@@ -182,6 +205,8 @@
             <French>Normale</French>
             <Japanese>通常</Japanese>
             <Korean>정상</Korean>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
@@ -195,6 +220,8 @@
             <French>Nuit</French>
             <Japanese>暗視装置</Japanese>
             <Korean>야간</Korean>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
@@ -208,6 +235,8 @@
             <French>Thermique</French>
             <Japanese>熱源画像</Japanese>
             <Korean>열상</Korean>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_mapLocations_DisplayName">
             <English>Add Map Locations</English>
@@ -234,6 +263,8 @@
             <French>Unité suivante</French>
             <Japanese>次のユニット</Japanese>
             <Korean>다음 인원</Korean>
+            <Chinesesimp>下个单位</Chinesesimp>
+            <Chinese>下個單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
@@ -247,6 +278,8 @@
             <French>Unité précédente</French>
             <Japanese>前のユニット</Japanese>
             <Korean>이전 인원</Korean>
+            <Chinesesimp>上个单位</Chinesesimp>
+            <Chinese>上個單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Vision Mode</English>

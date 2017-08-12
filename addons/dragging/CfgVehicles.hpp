@@ -67,6 +67,10 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
+    class Pod_Heli_Transport_04_crewed_base_F: StaticWeapon {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
 
     class EAST_Box_Base: ReammoBox_F {
         GVAR(canCarry) = 1;

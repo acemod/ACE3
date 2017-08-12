@@ -384,7 +384,7 @@ class CfgVehicles {
 
     class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class MRAP_02_base_F;

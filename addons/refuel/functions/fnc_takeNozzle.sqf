@@ -39,7 +39,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
         _endPosOffset = _endPosOffset select 0;
     };
     [
-        REFUEL_PROGRESS_DURATION,
+        TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
         [_unit, _target, _endPosOffset],
         {
             params ["_args"];
@@ -105,7 +105,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
     ] call EFUNC(common,progressBar);
 } else { // func is called on muzzle either connected or on ground
     [
-        REFUEL_PROGRESS_DURATION,
+        TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
         [_unit, _nozzle],
         {
             params ["_args"];

@@ -7,6 +7,8 @@ order: 5
 parent: wiki
 ---
 
+Refer to [CBA Keybinding wiki](https://github.com/CBATeam/CBA_A3/wiki/Keybinding){:target="_blank"} on how to change ACE shortcuts.
+
 <table>
     <thead>
         <tr>
