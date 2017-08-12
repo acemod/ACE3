@@ -1,5 +1,5 @@
 
-["ACE3 Equipment", QGVAR(MenuKey), "Configure DAGR",
+["ACE3 Equipment", QGVAR(MenuKey), localize LSTRING(ConfigureDAGR),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -16,7 +16,7 @@
 {false},
 [0, [false, true, false]], false] call CBA_fnc_addKeybind;  // (empty default key)
 
-["ACE3 Equipment", QGVAR(ToggleKey), "Toggle DAGR",
+["ACE3 Equipment", QGVAR(ToggleKey), localize LSTRING(ToggleDAGR),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};

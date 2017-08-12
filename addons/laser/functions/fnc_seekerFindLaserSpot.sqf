@@ -13,7 +13,7 @@
  * 6: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  *
  * Return Value:
- * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
+ * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found. <ARRAY>
  *
  * Example:
  * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot;
@@ -25,15 +25,15 @@
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistnace", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
 
 private _seekerCos = cos _seekerFov;
-private _seekerMaxDistSq = _seekerMaxDistnace ^ 2;
+private _seekerMaxDistSq = _seekerMaxDistance ^ 2;
 
-TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistnace,_seekerWavelengths,_seekerCode);
+TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistance,_seekerWavelengths,_seekerCode);
 
 private _spots = [];
 private _finalPos = nil;
@@ -76,7 +76,7 @@ private _finalOwner = objNull;
             // Shoot a cone with dispersion
             ([_laserPos, _laserDir, _divergence, GVAR(dispersionCount), _obj] call FUNC(shootCone)) params ["", "", "_resultPositions"];
             {
-                _testPoint = _x select 0;
+                private _testPoint = _x select 0;
                 private _testPointVector = _posASL vectorFromTo _testPoint;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
                 if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
@@ -90,7 +90,7 @@ private _finalOwner = objNull;
             if (_distance > 0) then {
                 private _testPointVector = _posASL vectorFromTo _resultPos;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
-                if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
+                if ((_testDotProduct > _seekerCos) && {(_resultPos vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
                     _spots pushBack [_resultPos, _owner];
                 };
             };
@@ -178,6 +178,7 @@ if ((count _spots) > 0) then {
         private _maxOwnerCount = -1;
 
         [_ownersHash, {
+            //IGNORE_PRIVATE_WARNING ["_key", "_value"];
             if (_value > _maxOwnerCount) then {
                 _finalOwner = _key;
             };
@@ -189,9 +190,9 @@ END_COUNTER(seekerFindLaserSpot);
 
 #ifdef DRAW_LASER_INFO
 if (isNil "_finalPos") then {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _code], 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
 } else {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _code], 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
     drawLine3D [ASLtoAGL _posASL, ASLtoAGL _finalPos, [0.5,1,0,1]];
 };
 #endif

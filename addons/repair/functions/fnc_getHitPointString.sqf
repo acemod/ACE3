@@ -9,8 +9,8 @@
  * 3: Track Added Hitpoints <BOOL> (default: false)
  *
  * Return Value:
- * 0: Text
- * 1: Added Hitpoint (default: [])
+ * 0: Text <STRING>
+ * 1: Added Hitpoint <NUMBER> (default: [])
  *
  * Example:
  * ["HitFuel", "Repairing %1 ...", "Repairing HitFuel"] call ace_repair_fnc_getHitPointString

@@ -1,17 +1,19 @@
-﻿/*
+/*
  * Author: Rosuto
  * DAGR vector output loop
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_outputVector
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];

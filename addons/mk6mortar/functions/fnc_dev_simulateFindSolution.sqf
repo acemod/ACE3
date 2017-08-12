@@ -3,14 +3,14 @@
  * DEV to find a firing solution for a given range
  *
  * Arguments:
- * 0: Range to Hit (Meters)<NUMBER>
- * 1: Height To Hit (Meters)<NUMBER>
- * 2: Muzzle Velocity (M/S)<NUMBER>
+ * 0: Range to Hit (Meters) <NUMBER>
+ * 1: Height To Hit (Meters) <NUMBER>
+ * 2: Muzzle Velocity (M/S) <NUMBER>
  * 3: Air Friction <NUMBER>
  * 4: Time Step (seconds) (eg 1/50 will simulate 50 cycles per second) <NUMBER>
  *
  * Return Value:
- * ARRAY - [NUMBER - Elevation In Degrees, NUMBER - Shot Durration]
+ * [NUMBER - Elevation In Degrees, NUMBER - Shot Durration] <ARRAY>
  *
  * Example:
  * [_rangeToHit, _heightToHit, _muzzleVelocity, _airFriction, TIME_STEP] call ace_mk6mortar_fnc_dev_simulateFindSolution;

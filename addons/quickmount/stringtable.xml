@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="QuickMount">
+        <Key ID="STR_ACE_QuickMount_Category">
+            <English>Quick Mount</English>
+            <Italian>Entrata Rapida</Italian>
+            <Japanese>クイック マウント</Japanese>
+            <Chinesesimp>快速搭乘</Chinesesimp>
+            <Chinese>快速搭乘</Chinese>
+            <Polish>Szybkie wsiadanie</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_KeybindName">
+            <English>Vehicle quick mount</English>
+            <German>Fahrzeug schnell montieren</German>
+            <Polish>Szybkie wsiadanie do pojazdu</Polish>
+            <Italian>Entrata rapida veicolo</Italian>
+            <Japanese>車両クイック マウント</Japanese>
+            <Chinesesimp>快速搭乘载具</Chinesesimp>
+            <Chinese>快速搭乘載具</Chinese>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_KeybindDescription">
+            <English>Quickly enter the vehicle you are directly looking at.</English>
+            <Italian>Entra velocemente nel veicolo che stai guardando.</Italian>
+            <Japanese>直接見ている車両へ迅速に搭乗します。</Japanese>
+            <Chinesesimp>快速进入你正在看的载具之中</Chinesesimp>
+            <Chinese>快速進入你正在看的載具之中</Chinese>
+            <Polish>Szybko wsiądź do pojazdu, na który patrzysz.</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_VehicleFull">
+            <English>Vehicle Full</English>
+            <Italian>Veicolo Pieno</Italian>
+            <Japanese>車両は満員</Japanese>
+            <Chinesesimp>载具已满</Chinesesimp>
+            <Chinese>載具已滿</Chinese>
+            <Polish>Pojazd pełny</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_Distance">
+            <English>Distance</English>
+            <Italian>Distanza</Italian>
+            <Japanese>距離</Japanese>
+            <Chinesesimp>距离</Chinesesimp>
+            <Chinese>距離</Chinese>
+            <Polish>Odległość</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_DistanceDescription">
+            <English>Maximum distance to check for vehicles.</English>
+            <Italian>Distanza massima per controllare i veicoli.</Italian>
+            <Japanese>車両を確認できる最大距離</Japanese>
+            <Chinesesimp>最大可检查载具的距离.</Chinesesimp>
+            <Chinese>最大可檢查載具的距離.</Chinese>
+            <Polish>Maksymalna odległość do pojazdu.</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_VehicleLocked">
+            <English>Vehicle Locked</English>
+            <Italian>Veicolo Bloccato.</Italian>
+            <Japanese>車両は施錠されている</Japanese>
+            <Chinesesimp>载具已上锁</Chinesesimp>
+            <Chinese>載具已上鎖</Chinese>
+            <Polish>Pojazd zablokowany</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_Speed">
+            <English>Maximum Speed (km/h)</English>
+            <Italian>Velocità Massima (km/h)</Italian>
+            <Japanese>最高速度 (km/h)</Japanese>
+            <Chinesesimp>最高速度 (公里/小时)</Chinesesimp>
+            <Chinese>最高速度 (公里/小時)</Chinese>
+            <Polish>Maksymalna prędkość (km/h)</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_SpeedDescription">
+            <English>Maximum vehicle speed (km/h) allowed for player entry</English>
+            <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
+            <Japanese>プレイヤーが搭乗できる限界速度 (km/h)</Japanese>
+            <Chinesesimp>设置玩家能在最高多少的速度之下进入载具.</Chinesesimp>
+            <Chinese>設置玩家能在最高多少的速度之下進入載具.</Chinese>
+            <Polish>Maksymalna prędkość pojazdu (km/h) pozwalająca graczowi wsiąść.</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_Priority">
+            <English>Prioritize Seat</English>
+            <Italian>Priorità Sedile</Italian>
+            <Japanese>優先席</Japanese>
+            <Chinesesimp>优先座位</Chinesesimp>
+            <Chinese>優先座位</Chinese>
+            <Polish>Priorytet zajmowanych pozycji</Polish>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_PriorityDescription">
+            <English>Seat priority on entry</English>
+            <Italian>Priorità del sedile in entrata</Italian>
+            <Japanese>搭乗の際の優先順位</Japanese>
+            <Chinesesimp>优先想进入哪个座位.</Chinesesimp>
+            <Chinese>優先想進入哪個座位.</Chinese>
+            <Polish>Priorytet pozycji w pojeździe</Polish>
+        </Key>
+    </Package>
+</Project>

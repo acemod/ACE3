@@ -12,6 +12,9 @@
  *   3 = handgun
  *  -1 = other
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponType
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -1,11 +1,18 @@
 
 class CfgVehicles {
     class Sound;
-    class GVAR(Sound): Sound {
+    class GVAR(Sound_low): Sound {
         author = ECSTRING(common,ACETeam);
         _generalMacro = QGVAR(Sound);
         scope = 1;
-        sound = QGVAR(CookOff);
+        sound = QGVAR(CookOff_low);
+    };
+
+    class GVAR(Sound_mid): GVAR(Sound_low) {
+        sound = QGVAR(CookOff_mid);
+    };
+    class GVAR(Sound_high): GVAR(Sound_low) {
+        sound = QGVAR(CookOff_high);
     };
 
     class ThingX;

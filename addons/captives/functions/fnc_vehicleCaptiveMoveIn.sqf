@@ -7,7 +7,7 @@
  * 1: The Vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, car1] call ACE_captives_fnc_vehicleCaptiveMoveIn;

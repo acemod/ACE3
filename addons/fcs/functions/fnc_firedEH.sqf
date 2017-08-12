@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_fcs_fnc_firedEH
+ *
  * Public: No
  */
 #include "script_component.hpp"

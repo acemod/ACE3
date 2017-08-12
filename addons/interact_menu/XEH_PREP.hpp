@@ -9,6 +9,7 @@ PREP(collectActiveActionTree);
 PREP(createAction);
 PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
+PREP(handleEscapeMenu);
 PREP(isSubPath);
 PREP(keyDown);
 PREP(keyUp);

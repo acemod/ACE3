@@ -6,7 +6,10 @@
  * 0: The Unit (usually the player) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [bob] call ace_movement_fnc_handleVirtualMass
  *
  * Public: No
  */

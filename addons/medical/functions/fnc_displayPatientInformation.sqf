@@ -7,8 +7,11 @@
  * 1: Show <BOOL> (default: true)
  * 2: Selection <NUMBER> (default: 0)
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true, 2] call ACE_medical_fnc_displayPatientInformation
  *
  * Public: No
  */
@@ -68,7 +71,7 @@ if (_show) then {
         };
 
         private _totalIvVolume = 0;
-        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
+        private _bloodBags = _target getVariable [QGVAR(ivBags), []];
         {
             _x params ["_bagVolumeRemaining"];
             _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;

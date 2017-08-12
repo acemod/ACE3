@@ -3,10 +3,10 @@
  * Trues the c1 ballistic coefficient
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_true_c1_ballistic_coefficient

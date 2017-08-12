@@ -65,6 +65,12 @@ Please check the framework description for more details.
 ### Something broke, I can't use the fuel truck / nozzle any longer. What to do?
 You can reset the fuel truck and its nozzle by calling `ace_refuel_fnc_reset` with its first parameter being the fuel truck object.
 
+### How do I increase the length of the hose?
+There is a global setting that will effect all vehicles and static pumps. To only effect a specific vehicle put the following in it's init box:
+```cpp
+this setVariable ["ace_refuel_hoseLength", 30];
+```
+
 ## 4. Dependencies
 
 {% include dependencies_list.md component="refuel" %}

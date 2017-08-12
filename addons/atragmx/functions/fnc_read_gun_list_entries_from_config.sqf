@@ -3,10 +3,10 @@
  * Reads gun list entries from the config and appends them to the gun list
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_read_gun_list_entries_from_config
@@ -110,10 +110,10 @@ private _validate_preset = {
 
 {
     private _preset = _x >> "preset";
-    
+
     if (isArray(_preset)) then {
         private _gun = getArray _preset;
-        
+
         if (_gun call _validate_preset) then {
             _gun set [0, (_gun select 0) select [0, 14]];
             _gun set [20, false];

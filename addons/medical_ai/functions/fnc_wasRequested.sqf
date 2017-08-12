@@ -8,6 +8,9 @@
  * Return Value:
  * Was requested <BOOL>
  *
+ * Example:
+ * call ACE_medical_ai_fnc_wasRequested
+ *
  * Public: No
  */
 #include "script_component.hpp"
