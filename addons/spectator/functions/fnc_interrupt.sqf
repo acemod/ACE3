@@ -1,27 +1,17 @@
 /*
  * Author: SilentSpike
- * Interrupts the spectator interface for external systems
- *
- * Arguments:
- * 0: Reason <STRING>
- * 1: Interrupting <BOOL> (default: true)
- *
- * Return Value:
- * None <NIL>
- *
- * Example:
- * ["mySystem"] call ace_spectator_fnc_interrupt
- *
- * Public: Yes
+ * Deprecated. Technically never publically documented, but just in case.
  */
 #include "script_component.hpp"
 
 params [["_reason", "", [""]], ["_interrupt", true, [true]]];
 
+ACE_DEPRECATED(QFUNC(interrupt),"3.12.0","just close and reopen spectator");
+
 // Nothing to do when spectator is closed
 if !(GVAR(isSet)) exitWith {};
 
-if (_reason == "") exitWith { ERROR("Invalid Reason"); };
+if (_reason == "") exitWith { WARNING("Invalid Reason"); };
 if (_interrupt) then {
     GVAR(interrupts) pushBack _reason;
 } else {
@@ -29,16 +19,11 @@ if (_interrupt) then {
 };
 
 if (GVAR(interrupts) isEqualTo []) then {
-    if (isNull (GETUVAR(GVAR(interface),displayNull))) then {
-        (findDisplay 46) createDisplay QGVAR(interface);
-        [] call FUNC(transitionCamera);
+    if (isNull SPEC_DISPLAY) then {
+        [true] call FUNC(ui);
     };
 } else {
-    if !(isNull (GETUVAR(GVAR(interface),displayNull))) then {
-        while {dialog} do {
-            closeDialog 0;
-        };
-
-        (GETUVAR(GVAR(interface),displayNull)) closeDisplay 0;
+    if !(isNull SPEC_DISPLAY) then {
+        [false] call FUNC(ui);
     };
 };
