@@ -16,14 +16,14 @@
 #include "script_component.hpp"
 
 params ["_unit"];
-TRACE_1("params",_unit);
+TRACE_1("params", _unit);
 
 if (!local _unit) exitWith {};
 
 //Remove any preloaded missiles, unless we're currently wielding a hasPreparation launcher
-if(getNumber (configFile >> "CfgWeapons" >> currentWeapon _unit >> QGVAR(hasPreparation)) != 1) then {
+if (getNumber (configFile >> "CfgWeapons" >> currentWeapon _unit >> QGVAR(hasPreparation)) != 1) then {
     {
-        if(_x isKindOf ["ACE_PreloadedMissileDummy_Base", configFile >> "CfgMagazines"]) then {
+        if (_x isKindOf ["ACE_PreloadedMissileDummy_Base", configFile >> "CfgMagazines"]) then {
             _unit removeMagazine _x;
         };
     } forEach magazines _unit;
@@ -33,7 +33,7 @@ private _launcher = secondaryWeapon _unit;
 private _config = configFile >> "CfgWeapons" >> _launcher;
 
 //Players with hasPreparation launchers stop here, but AI need to have ammo for their launchers in order to select them as weapons.
-if ([_unit] call EFUNC(common,isPlayer) && {getNumber (_config >> QGVAR(hasPreparation)) == 1}) exitWith{};
+if ([_unit] call EFUNC(common,isPlayer) && {getNumber (_config >> QGVAR(hasPreparation)) == 1}) exitWith {};
 
 if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber (_config >> "ACE_isUsedLauncher") != 1} && {count secondaryWeaponMagazine _unit == 0}) then {
     private _magazine = getArray (_config >> "magazines") select 0;
