@@ -11,6 +11,8 @@ class CfgMagazines {
         modelSpecial = "";
         weaponPoolAvailable = 0;
         mass = 0;
+        initSpeed = 5;
+        maxLeadSpeed = 23;
     };
     class ACE_FiredMissileDummy: ACE_PreloadedMissileDummy_Base {
         count = 0;
