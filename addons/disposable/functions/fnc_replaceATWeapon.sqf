@@ -34,45 +34,24 @@ _unit selectWeapon _replacementTube;
     if (_x != "") then {_unit addSecondaryWeaponItem _x};
 } count _items;
 
-if ([_unit] call EFUNC(common,isPlayer)) then {
-    [_unit,_replacementTube] spawn {
-        params["_unit","_replacementTube"];
+[{
+    params ["_args","_idPFH"];
+    _args params ["_unit", "_replacementTube", "_projectile"];
 
-        waitUntil {currentWeapon _unit != _replacementTube};
-        _unit removeWeapon _replacementTube;
-        private _container = createVehicle ["WeaponHolderSimulated", position _unit, [], 0, "CAN_COLLIDE"];
+    //We want to wait for the missile to explode if it's an AI. If it's a player we want to wait until they switch weapons.
+    if ((!([_unit] call EFUNC(common,isPlayer)) && isNull _projectile) || ([_unit] call EFUNC(common,isPlayer) && currentWeapon _unit != _replacementTube)) then {
+        //Remove PFEH:
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
+
+        //If (tube is dropped) OR (is dead) just exit
+        if (secondaryWeapon _unit != _replacementTube || {!alive _unit}) exitWith {};
+
+        //Remove the weapon and "throw" it on the ground.
+        _unit removeWeaponGlobal _replacementTube;
+        private _container = createVehicle ["WeaponHolderSimulated", _unit modelToWorld ((_unit selectionPosition ["rightshoulder", "Memory"]) vectorAdd [0, 0.2, 0.1]), [], 0, "CAN_COLLIDE"];
         _container addWeaponCargoGlobal [_replacementTube, 1];
         _container setDir (getDir _unit - 90);
-        _container setPos (_unit modelToWorld ((_unit selectionPosition ["rightshoulder", "Memory"]) vectorAdd [0, 0.2, 0.1]));
-        _container setVelocityModelSpace [0.2, -1.5, 0];
-	};
-} else { // AI - Remove the ai's missle launcher tube after the missle has exploded
-    [{
-        params ["_args","_idPFH"];
-        _args params ["_unit", "_tube", "_projectile"];
-
-        //don't do anything until projectile is null (exploded/max range)
-        if (isNull _projectile) then {
-            //Remove PFEH:
-            [_idPFH] call CBA_fnc_removePerFrameHandler;
-
-            //If (tube is dropped) OR (is dead) OR (is player) just exit
-            if (secondaryWeapon _unit != _tube || {!alive _unit} || {[_unit] call EFUNC(common,isPlayer)}) exitWith {};
-
-            //private  _items = secondaryWeaponItems _unit;
-            private _container = createVehicle ["WeaponHolderSimulated", position _unit, [], 0, "CAN_COLLIDE"];
-            _container addWeaponCargoGlobal [_tube, 1];
-            _container setDir (getDir _unit - 90);
-            _container setPos (_unit modelToWorld (_unit selectionPosition ["rightshoulder", "Memory"]));
-            _container setVelocityModelSpace [0.2, -1.5, 0];
-
-            //This will duplicate attachements, because we will be adding a weapon that may already have attachments on it
-            //We either need a way to add a clean weapon, or a way to add a fully configured weapon to a container:
-            // {
-                // if (_x != "") then {_container addItemCargoGlobal [_x, 1];};
-            // } forEach _items;
-
-            _unit removeWeaponGlobal _tube;
-        };
-    }, 1, [_unit, _replacementTube, _projectile]] call CBA_fnc_addPerFrameHandler;
-};
+        //We get the current velocity of the soldier, then apply it to the launcher. Position 0 and 1 in the array are reversed because the model is rotated by 90 degrees.
+        _container setVelocityModelSpace [(velocityModelSpace _unit select 1) + 0.2, (velocityModelSpace _unit select 0) - 1.5, velocityModelSpace _unit select 2];
+    };
+}, 0, [_unit, _replacementTube, _projectile]] call CBA_fnc_addPerFrameHandler;

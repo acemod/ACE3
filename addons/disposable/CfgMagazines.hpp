@@ -1,6 +1,6 @@
 class CfgMagazines {
-    class CA_LauncherMagazine;
-    class ACE_PreloadedMissileDummy_Base: CA_LauncherMagazine {  // The base dummy magazine
+    class NLAW_F;
+    class ACE_PreloadedMissileDummy_Base: NLAW_F {  // The base dummy magazine
         author = ECSTRING(common,ACETeam);
         allowedSlots[] = {701,801,901};
         scope = 1;
@@ -8,17 +8,16 @@ class CfgMagazines {
         displayName = CSTRING(PreloadedMissileDummy);
         picture = QPATHTOEF(common,UI\blank_CO.paa);
         model = "\A3\weapons_f\empty";
+        modelSpecial = "";
         weaponPoolAvailable = 0;
         mass = 0;
     };
     class ACE_FiredMissileDummy: ACE_PreloadedMissileDummy_Base {
-        ammo = "M_NLAW_AT_F"; // This needs to be set or the player won't hold the launcher on their shoulder.
         count = 0;
     };
     class ACE_PreloadedMissileDummy_NLAW: ACE_PreloadedMissileDummy_Base { // Dummy NLAW magazine.
-        ammo = "M_NLAW_AT_F";
         initSpeed = 40;
         maxLeadSpeed = 40;
-        type = "3*		256";
     };
+    class ACE_PreloadedMissileDummy: ACE_PreloadedMissileDummy_NLAW {};  // Technically a breaking change without this.
 };

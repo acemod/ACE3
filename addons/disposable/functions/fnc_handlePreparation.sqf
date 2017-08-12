@@ -15,16 +15,16 @@
  */
 #include "script_component.hpp"
 
-if (!local _unit || !([_unit] call EFUNC(common,isPlayer)) || {_weapon != secondaryWeapon _unit} || {getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_hasPreparation") != 1})  exitWith {};
+params ["_unit","_weapon"];
+
+//If it's an AI, if our current weapon is not a launcher, or if our current launcher is not a hasPreparation launcher, exit.
+if (!local _unit || !([_unit] call EFUNC(common,isPlayer)) || {_weapon != secondaryWeapon _unit} || {getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(hasPreparation)) != 1})  exitWith {};
 
 private _config = configFile >> "CfgWeapons" >> _weapon;
 private _magazine = getArray (_config >> "magazines") select 0;
 _unit removeSecondaryWeaponItem _magazine;
 _unit addMagazine _magazine;
-[_unit,_weapon,_magazine] spawn {
-		params["_unit","_weapon","_magazine"];
 
-		waitUntil {currentWeapon _unit != _weapon};
-		_unit removeSecondaryWeaponItem _magazine;
-		_unit removeMagazines _magazine;
-};
+[{currentWeapon (_this select 0) != (_this select 1)},
+    {(_this select 0) removeMagazines (_this select 2)}, //Remove the magazine if the player doesn't load the launcher so it's not just hanging around in their inventory.
+[_unit,_weapon,_magazine]] call CBA_fnc_waitUntilAndExecute;

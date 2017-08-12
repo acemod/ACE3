@@ -44,7 +44,7 @@ class CfgWeapons {
         model = "\A3\weapons_f\launchers\nlaw\nlaw_loaded_F"; 
         magazines[] = {"ACE_PreloadedMissileDummy_Banana"};  // The dummy magazine
         ACE_UsedTube = "launch_Banana_Used_F";      // The class name of the used tube. This is required for your launcher to work on the disposables framework.
-        ACE_hasPreparation = 0; // If your launcher has any sort of preparation animation such as removing safeties, flipping up sights, or anything else, set this to 1. This is handled by having the player "reload" the launcher.
+        ace_disposable_hasPreparation = 0; // If your launcher has any sort of preparation animation such as removing safeties, flipping up sights, or anything else, set this to 1. This is handled by having the player "reload" the launcher.
         class WeaponSlotsInfo : WeaponSlotsInfo{
             mass = 180; //The mass of the launcher should include any mass of the missile. Don't put the missile mass in CfgMagazines.
         };

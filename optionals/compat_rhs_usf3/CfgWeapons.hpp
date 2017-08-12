@@ -215,7 +215,7 @@ class CfgWeapons {
     };
     class rhs_weap_M136 : Launcher_Base_F {
         ACE_UsedTube = "rhs_weap_M136_used";
-        ACE_hasPreparation = 1;
+        EGVAR(disposable,hasPreparation) = 1;
         magazines[] = {"ACE_PreloadedMissileDummy_M136HEAT"};
         class Eventhandlers: Eventhandlers {
             class RHS_DisposableWeapon {
@@ -223,19 +223,19 @@ class CfgWeapons {
             };
         };
     };
-    class rhs_weap_M136_hedp :  rhs_weap_M136 {
+    class rhs_weap_M136_hedp:  rhs_weap_M136 {
         ACE_UsedTube = "rhs_weap_M136_hedp_used";
         magazines[] = {"ACE_PreloadedMissileDummy_M136HEDP"};
     };
-    class rhs_weap_M136_hp : rhs_weap_M136 {
+    class rhs_weap_M136_hp: rhs_weap_M136 {
         ACE_UsedTube = "rhs_weap_M136_hp_used";
         magazines[] = {"ACE_PreloadedMissileDummy_M136HP"};
     };
-    class rhs_weap_M136_used : rhs_weap_M136 {
+    class rhs_weap_M136_used: rhs_weap_M136 {
         ACE_isUsedLauncher = 1;
         magazines[] = {"ACE_FiredMissileDummy"};
     };
-    class rhs_weap_m72a7: rhs_weap_M136{
+    class rhs_weap_m72a7: rhs_weap_M136 {
         ACE_UsedTube = "rhs_weap_m72a7_used";
         magazines[] = {"ACE_PreloadedMissileDummy_M72"};
     };
