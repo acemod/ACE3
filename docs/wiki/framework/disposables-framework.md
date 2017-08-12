@@ -52,6 +52,7 @@ class CfgWeapons {
     class launch_Banana_Used_F: launch_Banana_F {   // the used tube should be a sub class of the disposable launcher
         scope = 1;
         ACE_isUsedLauncher = 1; //Your used launcher must have this set to 1.
+        ace_disposable_hasPreparation = 0; //This should always be set to 0 for a used launcher.
         author = "grandBanana";
         displayName = "Used banana launcher";
         descriptionShort = "A used banana launcher";

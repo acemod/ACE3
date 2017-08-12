@@ -233,6 +233,7 @@ class CfgWeapons {
     };
     class rhs_weap_M136_used: rhs_weap_M136 {
         ACE_isUsedLauncher = 1;
+        EGVAR(disposable,hasPreparation) = 0;
         magazines[] = {"ACE_FiredMissileDummy"};
     };
     class rhs_weap_m72a7: rhs_weap_M136 {
@@ -240,10 +241,11 @@ class CfgWeapons {
         magazines[] = {"ACE_PreloadedMissileDummy_M72"};
     };
 
-	class rhs_weap_m72a7_used: rhs_weap_m72a7 {
-		ACE_isUsedLauncher = 1;
-		magazines[] = {"ACE_FiredMissileDummy"};
-	};
+    class rhs_weap_m72a7_used: rhs_weap_m72a7 {
+        ACE_isUsedLauncher = 1;
+        EGVAR(disposable,hasPreparation) = 0;
+        magazines[] = {"ACE_FiredMissileDummy"};
+    };
 
 
 

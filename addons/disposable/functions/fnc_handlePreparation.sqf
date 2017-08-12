@@ -17,8 +17,8 @@
 
 params ["_unit","_weapon"];
 
-//If it's an AI, if our current weapon is not a launcher, or if our current launcher is not a hasPreparation launcher, exit.
-if (!local _unit || !([_unit] call EFUNC(common,isPlayer)) || {_weapon != secondaryWeapon _unit} || {getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(hasPreparation)) != 1})  exitWith {};
+//If it's an AI, if our current weapon is not a launcher, if our current launcher is not a hasPreparation launcher, or if our launcher is actually a used launcher, exit.
+if (!local _unit || !([_unit] call EFUNC(common,isPlayer)) || {_weapon != secondaryWeapon _unit} || {getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(hasPreparation)) != 1} || {getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_isUsedLauncher") == 1})  exitWith {};
 
 private _config = configFile >> "CfgWeapons" >> _weapon;
 private _magazine = getArray (_config >> "magazines") select 0;
