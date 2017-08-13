@@ -37,8 +37,10 @@ TRACE_2("start",_unit,_nozzle);
         alive _unit
         && {"" isEqualTo (currentWeapon _unit)}
         && {[_unit, objNull, [INTERACT_EXCEPTIONS, "notOnMap"]] call EFUNC(common,canInteractWith)}
+        && {!("unconscious" isEqualTo toLower animationState _unit)}
+        && {!(_unit getVariable ["ACE_isUnconscious", false])}
     ) exitWith {
-        TRACE_3("stop dead/weapon/interact",_unit,alive _unit,currentWeapon _unit);
+        TRACE_3("stop dead/weapon/interact/uncon",_unit,alive _unit,currentWeapon _unit);
         DROP_NOZZLE
         _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
         END_PFH
@@ -68,12 +70,8 @@ TRACE_2("start",_unit,_nozzle);
         END_PFH
     };
 
-    if (
-        _unit != vehicle _unit
-        || {!(_unit isEqualTo ACE_player)}
-        || {_unit getVariable ["ACE_isUnconscious", false]}
-    ) exitWith {
-        TRACE_1("stop event",_unit);
+    if !(_unit == vehicle _unit && {_unit isEqualTo ACE_player}) exitWith {
+        TRACE_1("stop vehicle/player",_unit,vehicle _unit);
         DROP_NOZZLE
         UNHOLSTER_WEAPON
         END_PFH
