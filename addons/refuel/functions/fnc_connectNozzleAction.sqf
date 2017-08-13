@@ -128,6 +128,7 @@ private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
         };
 
         [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
+        [_unit, _nozzle] call FUNC(turnOn);
     },
     "",
     localize LSTRING(ConnectAction),
