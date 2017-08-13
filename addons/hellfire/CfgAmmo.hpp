@@ -23,6 +23,7 @@ class CfgAmmo {
         thrustTime = 2.5; // motor burn 2-3 sec
         thrust = 250;
         timeToLive = 40;
+        cameraViewAvailable = 1; //missile cam
 
         EGVAR(rearm,caliber) = 178;
 
