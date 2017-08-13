@@ -19,7 +19,7 @@
 params ["_args", "_idPFH"];
 _args params ["_marker"];
 
-if (isNull (findDisplay 12 displayCtrl 51) || !(player getVariable [QGVAR(moveInProgress), false])) exitWith {
+if (isNull (findDisplay 12 displayCtrl 51) || {!(player getVariable [QGVAR(moveInProgress), false])}) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 
     private _origin = ACE_player getVariable [QGVAR(movedMarkerOrigin), getMarkerPos _marker];
