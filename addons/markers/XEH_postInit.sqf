@@ -28,13 +28,13 @@ GVAR(currentMarkerConfigName) = "";
 ["ace_settingsInitialized", {
     if (GVAR(movableMarkersEnabled)) then {
         addMissionEventHandler ["Map", {
-            params["_isOpen"];
+            params ["_isOpen"];
 
             if (_isOpen) then {
                 (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", FUNC(onMouseButtonDownMap)];
                 (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", FUNC(onMouseButtonUpMap)];
             } else {
-                player setVariable [QGVAR(moveInProgress), false];
+                ACE_player setVariable [QGVAR(moveInProgress), false];
             };
         }];
     };

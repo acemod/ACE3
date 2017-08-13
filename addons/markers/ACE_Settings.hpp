@@ -12,5 +12,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         displayName = CSTRING(MoveRestriction_DisplayName);
         description = CSTRING(MoveRestriction_Description);
+        values[] = {CSTRING(MoveRestriction_All), CSTRING(MoveRestriction_Admins), CSTRING(MoveRestriction_GroupLeaders), CSTRING(MoveRestriction_GroupLeadersAndAdmins)};
     };
 };
