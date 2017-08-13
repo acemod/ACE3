@@ -16,3 +16,15 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscRespawnCounter {
+        ADDON = QUOTE(_this call FUNC(compat_counter));
+    };
+    class RscDisplayEGSpectator {
+        ADDON = QUOTE(_this call FUNC(compat_spectatorBI));
+    };
+    class RscDisplayCurator {
+        ADDON = QUOTE(_this call FUNC(compat_zeus));
+    };
+};
