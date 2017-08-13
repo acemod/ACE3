@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Fuel Truck <OBJECT>
+ * 1: Fuel Source <OBJECT>
  * 2: Nozzle <OBJECT> (optional)
  *
  * Return Value:

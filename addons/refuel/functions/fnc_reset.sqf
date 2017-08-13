@@ -3,7 +3,7 @@
  * Resets a fuel vehicle in case is got bugged
  *
  * Arguments:
- * 0: Fuel truck <OBJECT>
+ * 0: Fuel Source <OBJECT>
  *
  * Return Value:
  * None
@@ -15,12 +15,12 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]]];
+params [["_source", objNull, [objNull]]];
 
-[_target, "blockEngine", "ACE_Refuel", false] call EFUNC(common,statusEffect_set);
-_target setVariable [QGVAR(isConnected), false, true];
+[_source, "blockEngine", "ACE_Refuel", false] call EFUNC(common,statusEffect_set);
+_source setVariable [QGVAR(isConnected), false, true];
 
-private _nozzle = _target getVariable [QGVAR(ownedNozzle), nil];
+private _nozzle = _source getVariable [QGVAR(ownedNozzle), nil];
 if !(isNil "_nozzle") then {
     private _nozzleTarget = _nozzle getVariable [QGVAR(sink), nil];
     if !(isNil "_nozzleTarget") then {
@@ -41,4 +41,4 @@ if !(isNil "_nozzle") then {
     } count allPlayers;
     deleteVehicle _nozzle;
 };
-_target setVariable [QGVAR(ownedNozzle), nil, true];
+_source setVariable [QGVAR(ownedNozzle), nil, true];

@@ -23,5 +23,5 @@ if (isNull (_unit getVariable [QGVAR(nozzle), objNull])) exitWith {};
 [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
 _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
 _unit setVariable [QGVAR(isRefueling), false];
-_unit setVariable [QGVAR(nozzle), objNull, true];
+_unit setVariable [QGVAR(nozzle), nil, true];
 _unit setVariable [QGVAR(hint), nil];

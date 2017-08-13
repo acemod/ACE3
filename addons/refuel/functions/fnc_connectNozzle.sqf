@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 1: Vehicle <OBJECT>
  *
  * Return Value:
  * None
@@ -21,7 +21,7 @@
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]]];
 
 private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if (isNull _nozzle) exitWith {};
@@ -35,7 +35,7 @@ private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", locali
 
 [{
     params ["_args","_pfID"];
-    _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_actionID", -1, [0]]];
+    _args params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_actionID", -1, [0]]];
 
     private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
     if (cameraView == "EXTERNAL") then {
@@ -48,7 +48,7 @@ private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", locali
 
     if ((GVAR(placeAction) != PLACE_WAITING) ||
             {_unit != ace_player} ||
-            {!([_unit, _target, []] call EFUNC(common,canInteractWith))}) then {
+            {!([_unit, _sink, []] call EFUNC(common,canInteractWith))}) then {
 
         [_pfID] call CBA_fnc_removePerFrameHandler;
         [] call EFUNC(interaction,hideMouseHint);
@@ -56,7 +56,7 @@ private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", locali
         _unit removeAction _actionID;
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
-            [_unit, _target, _virtualPosASL, _nozzle] call FUNC(ConnectNozzleAction);
+            [_unit, _sink, _virtualPosASL, _nozzle] call FUNC(ConnectNozzleAction);
         };
     }; // TODO add model like in attach/functions/fnc_attach
-}, 0, [_unit, _target, _nozzle, _actionID] ] call cba_fnc_addPerFrameHandler;
+}, 0, [_unit, _sink, _nozzle, _actionID] ] call cba_fnc_addPerFrameHandler;
