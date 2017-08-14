@@ -13,7 +13,7 @@
  * Example:
  * ["item", vehicle] call ace_cargo_fnc_removeCargoItem
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
