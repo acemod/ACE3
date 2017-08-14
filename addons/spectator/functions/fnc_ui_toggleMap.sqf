@@ -22,9 +22,9 @@ if (GVAR(uiMapVisible)) then {
 
     ctrlSetFocus CTRL_MOUSE;
 
-    // if (GVAR(camMode) == MODE_FREE) then {
-    //     GVAR(camera) camCommand "manual on";
-    // };
+    if (GVAR(camMode) == MODE_FREE) then {
+        GVAR(camera) camCommand "manual on";
+    };
 } else {
     CTRL_MAP ctrlShow true;
     CTRL_MAP_GROUP ctrlShow true;
@@ -36,7 +36,7 @@ if (GVAR(uiMapVisible)) then {
     ctrlMapAnimCommit CTRL_MAP;
 
     // Disable camera input while map is open
-    // GVAR(camera) camCommand "manual off";
+    GVAR(camera) camCommand "manual off";
 };
 
 // Toggle the tracking variable
