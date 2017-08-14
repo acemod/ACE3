@@ -109,8 +109,8 @@ if (alive player) then {
     [player, _hidden, QGVAR(isSet), side group player] call EFUNC(common,switchToGroupSide);
 
     // Ghosts can't talk
-    [_hidden, QGVAR(isSet)] call EFUNC(common,hideUnit);
-    [_hidden, QGVAR(isSet)] call EFUNC(common,muteUnit);
+    [player, QGVAR(isSet)] call EFUNC(common,hideUnit);
+    [player, QGVAR(isSet)] call EFUNC(common,muteUnit);
 };
 
 // Reset interruptions
