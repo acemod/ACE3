@@ -70,19 +70,6 @@ if !(GVAR(uiMapVisible)) then {
 
             nil // Speed loop
         } count GVAR(iconsToDraw);
-
-        // Draw locations
-        {
-            _x params ["_pos", "_name", "_texture"];
-
-            if (_pos isEqualType objNull) then {
-                _pos = (_pos modelToWorldVisual (_pos selectionPosition "Head")) vectorAdd [0,0,2*HEIGHT_OFFSET];
-            };
-
-            drawIcon3D [_texture, [1,1,1,0.4], _pos, 0.8, 0.8, 0, _name];
-
-            nil // Speed loop
-        } count (GVAR(locationsToDraw));
         END_COUNTER(drawTags);
     };
 
