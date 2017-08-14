@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Reamoves a cargo item from the vehicle.
+ * Removes a cargo item from the vehicle.
  *
  * Arguments:
  * 0: Item Classname <STRING>
