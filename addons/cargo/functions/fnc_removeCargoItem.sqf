@@ -28,7 +28,7 @@ private _addedSpace = 0;
 {
     if (count _itemsToRemove == _amount) exitWith {};
 
-    if (_x == _itemClass || {typeOf _x == _itemClass}) {
+    if (_x == _itemClass || {typeOf _x == _itemClass}) then {
         _itemsToRemove pushBack _forEachIndex;
         ADD(_addedSpace,[_x] call FUNC(getSizeItem));
 
