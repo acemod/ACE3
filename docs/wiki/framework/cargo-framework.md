@@ -50,7 +50,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
 `ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
-`ace_cargoRemoved` | [_item, _vehicle, _amount] | Global | Cargo has been removed (deleted) from vehicle
+`ace_cargoRemoved` | [_itemClass, _vehicle, _amount] | Global | Cargo has been removed (deleted) from vehicle
 
 ## 3. Editor Attributes
 
@@ -149,7 +149,7 @@ Note first arg can be a in-game object or a classname of an object type.
 
 ```cpp
  * Arguments:
- * 0: Item <STRING>
+ * 0: Item Classname <STRING>
  * 1: Vehicle <OBJECT>
  * 2: Amount <NUMBER> (default: 1)
  *
