@@ -43,20 +43,6 @@
         }; \
     };
 
-#define MACRO_CONNECT_ACTIONS \
-    class ACE_Actions { \
-        class ACE_MainActions { \
-            class GVAR(Connect) { \
-                displayName = CSTRING(Connect); \
-                distance = REFUEL_ACTION_DISTANCE; \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
-                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                exceptions[] = {INTERACT_EXCEPTIONS}; \
-            }; \
-        }; \
-    };
-
 #define MACRO_NOZZLE_ACTIONS \
     class ACE_Actions { \
         class ACE_MainActions { \
@@ -162,15 +148,18 @@ class CfgVehicles {
 
     class AllVehicles: All {
         GVAR(flowRate) = 1;
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
     };
     class Land: AllVehicles {};
     class LandVehicle: Land {};
     class Car: LandVehicle {
-        MACRO_CONNECT_ACTIONS
+        GVAR(canReceive) = 1;
     };
 
     class Tank: LandVehicle {
-        MACRO_CONNECT_ACTIONS
+        GVAR(canReceive) = 1;
         GVAR(flowRate) = 4;
     };
 
@@ -179,14 +168,14 @@ class CfgVehicles {
     };
 
     class Helicopter: Air {
-        MACRO_CONNECT_ACTIONS
+        GVAR(canReceive) = 1;
     };
 
     class Helicopter_Base_F: Helicopter {};
     class Helicopter_Base_H: Helicopter_Base_F {};
 
     class Plane: Air {
-        MACRO_CONNECT_ACTIONS
+        GVAR(canReceive) = 1;
         GVAR(flowRate) = 16;
     };
 
@@ -195,7 +184,7 @@ class CfgVehicles {
     class Ship: AllVehicles {};
 
     class Ship_F: Ship {
-        MACRO_CONNECT_ACTIONS
+        GVAR(canReceive) = 1;
         GVAR(flowRate) = 4;
     };
 
@@ -215,7 +204,7 @@ class CfgVehicles {
     };
     class SDV_01_base_F: Boat_F {
         // SDV is using electrical propulsion
-        GVAR(fuelCapacity) = 0;
+        GVAR(canReceive) = 0;
     };
 
     class Car_F: Car {
@@ -410,7 +399,7 @@ class CfgVehicles {
 
     class UAV_01_base_F: Helicopter_Base_F {
         // Darter is electrical
-        GVAR(fuelCapacity) = 0;
+        GVAR(canReceive) = 0;
     };
 
     class UAV: Plane {};

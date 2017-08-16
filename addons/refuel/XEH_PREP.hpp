@@ -1,12 +1,10 @@
 PREP(canCheckFuel);
-PREP(canConnectNozzle);
 PREP(canDisconnect);
 PREP(canReturnNozzle);
 PREP(canTakeNozzle);
 PREP(canTurnOff);
 PREP(canTurnOn);
 PREP(checkFuel);
-PREP(connectNozzle);
 PREP(connectNozzleAction);
 PREP(disconnect);
 PREP(dropNozzle);

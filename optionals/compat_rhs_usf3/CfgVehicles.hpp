@@ -43,13 +43,6 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
                 }; \
-                class EGVAR(refuel,Connect) { \
-                    displayName = ECSTRING(refuel,Connect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canConnectNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DEFUNC(refuel,connectNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
-                }; \
                 class EGVAR(refuel,Return) { \
                     displayName = ECSTRING(refuel,Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canReturnNozzle)); \

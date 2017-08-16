@@ -94,7 +94,10 @@ TRACE_2("start",_unit,_nozzle);
 
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
     if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {
-        if (isClass (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(Connect)) && {[_unit, _cursorObject] call FUNC(canConnectNozzle)}) then {
+        if (
+            1 == getNumber (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> QGVAR(canReceive))
+            && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
+        ) then {
             _hintLMB = localize LSTRING(Connect);
         };
         if ([_unit, _cursorObject] call FUNC(canReturnNozzle)) then {

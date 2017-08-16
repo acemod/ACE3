@@ -45,8 +45,8 @@ if (cameraView == "EXTERNAL") then {
 if (
     !isNull _cursorObject
     && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}
-    && {isClass (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(Connect))}
-    && {[_unit, _cursorObject] call FUNC(canConnectNozzle)}
+    && {1 == getNumber (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> QGVAR(canReceive))}
+    && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
     && {!lineIntersects [eyePos _unit, _virtualPosASL, _unit]}
 ) then {
     [_unit, _cursorObject, _virtualPosASL, _nozzle] call FUNC(connectNozzleAction);
