@@ -8,8 +8,6 @@ if (!hasInterface) exitWith {};
 
 ["isNotRefueling", {!((_this select 0) getVariable [QGVAR(isRefueling), false])}] call EFUNC(common,addCanInteractWithCondition);
 
-[QGVAR(resetLocal), LINKFUNC(resetLocal)] call CBA_fnc_addEventHandler;
-
 ["MouseButtonDown", LINKFUNC(onMouseButtonDown)] call CBA_fnc_addDisplayHandler;
 
 // workaround for static fuel stations
