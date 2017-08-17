@@ -29,7 +29,6 @@ if (_init) then {
     ISNILS(GVAR(camMode),MODE_FREE);
     ISNILS(GVAR(camVision),VISION_NORM);
     ISNILS(GVAR(camTarget),objNull);
-    ISNILS(GVAR(camOnLocation),false);
 
     // Ticking related
     GVAR(camDeltaTime)          = 0;
@@ -128,7 +127,6 @@ if (_init) then {
     GVAR(camMode)               = nil;
     GVAR(camVision)             = nil;
     GVAR(camTarget)             = nil;
-    GVAR(camOnLocation)         = nil;
     GVAR(camDeltaTime)          = nil;
     GVAR(camLastTickTime)       = nil;
     GVAR(camHasTarget)          = nil;

@@ -1,6 +1,6 @@
 /*
  * Author: Nelson Duarte, AACO
- * Function used to fade/unfade the entitiy/location list
+ * Function used to fade/unfade the entitiy list
  *
  * Arguments:
  * 0: Fade the list <BOOL>

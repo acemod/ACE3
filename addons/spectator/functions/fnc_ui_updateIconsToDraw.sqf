@@ -143,20 +143,5 @@ private _entitiesToDraw = [];
     nil // Speed loop
 } count ([] call FUNC(getTargetEntities));
 
-// Remove object locations that are now null
-{
-    _x params ["_id", "_name", "", "_texture", "_pos"];
-
-    if ((_pos isEqualType objNull) && {isNull _pos}) then {
-        [_id] call FUNC(removeLocation);
-    } else {
-        if ((GVAR(camera) distanceSqr _pos) < DISTANCE_NAMES_SQR) then {
-            GVAR(locationsToDraw) pushBack [_pos, _name, _texture];
-        };
-    };
-
-    nil // Speed loop
-} count (GVAR(locationsList));
-
 GVAR(iconsToDraw) = _iconsToDraw;
 GVAR(entitiesToDraw) = _entitiesToDraw;

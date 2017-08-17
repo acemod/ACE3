@@ -50,8 +50,7 @@
 #define DISTANCE_NAMES_SQR 30625 // Names are rendered within 175m, squared for `distanceSqr` speed
 #define NAME_MAX_CHARACTERS 17
 
-#define LIST_ENTITIES localize "STR_A3_Spectator_Entities"
-#define LIST_LOCATIONS localize "STR_A3_Spectator_Locations"
+#define LIST_ENTITIES 0
 #define LIST_UPDATE_RATE 1
 
 // Revive variables

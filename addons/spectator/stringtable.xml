@@ -238,12 +238,6 @@
             <Chinesesimp>热成像</Chinesesimp>
             <Chinese>熱成像</Chinese>
         </Key>
-        <Key ID="STR_ACE_Spectator_mapLocations_DisplayName">
-            <English>Add Map Locations</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_mapLocations_Description">
-            <English>Add map locations to the spectator UI</English>
-        </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_uiIcons">
             <English>Icons</English>

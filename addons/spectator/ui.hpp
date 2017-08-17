@@ -73,7 +73,7 @@ class GVAR(display) {
         class Tabs: RscToolbox {
             idc = IDC_TABS;
 
-            onToolBoxSelChanged = QUOTE(_this call FUNC(ui_handleTabSelected));
+            //onToolBoxSelChanged = QUOTE(_this call FUNC(ui_handleTabSelected));
             onMouseEnter = QUOTE([false] call FUNC(ui_fadeList));
             onMouseExit = QUOTE([true] call FUNC(ui_fadeList));
 
@@ -84,9 +84,9 @@ class GVAR(display) {
 
             fade = 0.8;
             rows = 1;
-            columns = 2;
-            strings[] = {"$STR_A3_Spectator_Entities","$STR_A3_Spectator_Locations"};
-            values[] = {0,1};
+            columns = 1;
+            strings[] = {"$STR_A3_Spectator_Entities"};
+            values[] = {0};
             sizeEx = H_PART(1);
             colorBackground[] = {0,0,0,0.75};
             colorSelectedBg[] = {0,0,0,0.65};

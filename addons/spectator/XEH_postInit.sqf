@@ -3,17 +3,6 @@
 ["ace_settingsInitialized", {
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
-
-    if (GVAR(mapLocations)) then {
-        private _worldWidth = worldSize / 2;
-        {
-            [locationPosition _x, [text _x] call CBA_fnc_capitalize] call FUNC(addLocation);
-        } forEach nearestLocations [
-            [_worldWidth, _worldWidth],
-            ["NameVillage", "NameCity", "NameCityCapital", "NameLocal", "NameMarine"],
-            _worldWidth * sqrt 2
-        ];
-    };
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {

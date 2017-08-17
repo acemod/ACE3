@@ -29,8 +29,8 @@ if !(_newMode in _modes) then {
     _newMode = _modes select ((_modes find _oldMode) max 0);
 };
 
-// Can't switch camera from free mode when focus is a location
-if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
+// Can't switch camera from free mode with no focus selected
+if (!isNull _focus || _newMode == MODE_FREE) then {
     private _camera = GVAR(camera);
     private _showHUD = [true,true,true,true,true,true,true,true];
 
