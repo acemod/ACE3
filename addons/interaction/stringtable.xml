@@ -1048,5 +1048,18 @@
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
         </Key>
+        <Key ID="STR_ACE_Interaction_Ammo">
+            <English>Ammo</English>
+            <German>Munition</German>
+            <Spanish>Munición</Spanish>
+            <Polish>Amunicja</Polish>
+            <French>Munitions</French>
+            <Hungarian>Lőszer</Hungarian>
+            <Czech>Munice</Czech>
+            <Italian>Munizioni</Italian>
+            <Portuguese>Munições</Portuguese>
+            <Russian>Боеприпасы</Russian>
+            <Japanese>弾薬</Japanese>
+        </Key>
     </Package>
 </Project>

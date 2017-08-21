@@ -494,6 +494,11 @@ class CfgVehicles {
                 selection = "gunnerview";
                 distance = 4;
                 condition = "true";
+                class ACE_StaticWeapon_Ammo {
+                    displayName = CSTRING(Ammo);
+                    condition = "";
+                    statement = "";
+                };
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
                     condition = "true";
