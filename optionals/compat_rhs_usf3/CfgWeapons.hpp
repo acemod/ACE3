@@ -387,11 +387,11 @@ class CfgWeapons {
 
     // RHS Hellfire/DAGR
     class Missile_AGM_02_Plane_CAS_01_F;
-    class rhs_weap_HellfireLauncher: Missile_AGM_02_Plane_CAS_01_F	{};
+    class rhs_weap_HellfireLauncher: Missile_AGM_02_Plane_CAS_01_F  {};
     class RHS_weap_AGM114K_Launcher: rhs_weap_HellfireLauncher {
         EGVAR(hellfire,enabled) = 1;
         EGVAR(laser,canSelect) = 1;
-	};
+    };
     class RHS_MELB_Hellfire: rhs_weap_HellfireLauncher {
         EGVAR(hellfire,enabled) = 1;
         EGVAR(laser,canSelect) = 1;
