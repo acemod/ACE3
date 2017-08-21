@@ -21,3 +21,4 @@ params ["_unit", "_target"];
 alive _target
 && {rating _target < -2000}
 && {side group _unit == side group _target}
+&& !{GVAR(disableNegativeRating)}

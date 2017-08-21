@@ -927,6 +927,14 @@
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
         </Key>
+        <Key ID="STR_ACE_Interaction_DisableNegativeRating_DisplayName">
+            <English>Disable negative rating</English>
+            <German>Negative Bewertung deaktivieren</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
+            <English>Should players receive negative rating?</English>
+            <German>Sollen Spieler negative Bewertungen erhalten dürfen?</German>
+        </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
