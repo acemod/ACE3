@@ -276,4 +276,87 @@ class CfgAmmo {
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;
     };
+
+    // RHS Hellfire/DAGR
+	class MissileBase;
+	class Missile_AGM_02_F;
+	class rhs_ammo_Hellfire_AT: Missile_AGM_02_F { // AGM-114L
+		class ace_missileguidance {
+            enabled = 0;
+
+            minDeflection = 0.0005;
+            maxDeflection = 0.01;
+            incDeflection = 0.0005;
+
+            canVanillaLock = 0;
+
+            // Guidance type for munitions
+            defaultSeekerType = "SALH";
+            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };
+
+            defaultSeekerLockMode = "LOAL";
+            seekerLockModes[] = { "LOAL", "LOBL" };
+
+            seekLastTargetPos = 1;
+            seekerAngle = 70;
+            seekerAccuracy = 1;
+
+            seekerMinRange = 1;
+            seekerMaxRange = 5000;
+
+            // Attack profile type selection
+            defaultAttackProfile = "hellfire";
+            attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
+		};
+	};
+	class RHS_ammo_AGM_114K: rhs_ammo_Hellfire_AT { // AGM-114K
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+		};
+	};
+	class RHS_ammo_AGM_114M: RHS_ammo_AGM_114K { // AGM-114M
+		class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+		};
+	};
+	class RHS_ammo_AGM_114N: RHS_ammo_AGM_114M { // AGM-114N
+		class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+		};
+    };
+
+	class RHS_Ammo_DAGR: MissileBase { // DAGR
+		class ace_missileguidance {
+            enabled = 1;
+
+            minDeflection = 0.0005;
+            maxDeflection = 0.01;
+            incDeflection = 0.0005;
+
+            canVanillaLock = 0;
+
+            // Guidance type for munitions
+            defaultSeekerType = "SALH";
+            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };
+
+            defaultSeekerLockMode = "LOAL";
+            seekerLockModes[] = { "LOAL", "LOBL" };
+
+            seekLastTargetPos = 1;
+            seekerAngle = 70;
+            seekerAccuracy = 1;
+
+            seekerMinRange = 1;
+            seekerMaxRange = 5000;
+
+            // Attack profile type selection
+            defaultAttackProfile = "hellfire";
+            attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
+		};
+	};
+	class RHS_DAGR_Ammo_MELB: RHS_Ammo_DAGR {
+		class ace_missileguidance : ace_missileguidance {
+            enabled = 1;
+		};
+	};
 };
