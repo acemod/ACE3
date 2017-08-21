@@ -61,7 +61,7 @@ private _fnc_condition = {
     params ["_target", "_player", "_attackProfile"];
     
     private _turretPath = if (ACE_player == (driver _target)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
-    private _hasWeapon = ({QGVAR(launcher) == _x} count (_target weaponsTurret _turretPath)) > 0;
+    private _hasWeapon = ({(isNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled))) && {getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled)) > 0}} count (_target weaponsTurret _turretPath)) > 0;
 
     (_hasWeapon) &&
     {(_target getVariable [QEGVAR(missileguidance,attackProfile), "hellfire"]) != _attackProfile};
