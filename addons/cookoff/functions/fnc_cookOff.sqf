@@ -91,8 +91,9 @@ if (local _vehicle) then {
         } forEach _positions;
 
         if (isServer) then {
+            private _soundName = [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65] call BIS_fnc_selectRandomWeighted; // TODO: replace with script Command in 1.74
             // TODO - Players in the vehicle hear no sound (even after exiting the vehicle)
-            private _sound = createSoundSource [QGVAR(Sound), position _vehicle, [], 0];
+            private _sound = createSoundSource [_soundName, position _vehicle, [], 0];
 
             _effects pushBack _sound;
         };

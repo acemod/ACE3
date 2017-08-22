@@ -11,8 +11,8 @@ ace:
   version:
     major: 3
     minor: 10
-    patch: 1
-    build: 21
+    patch: 2
+    build: 22
 
 acex:
   githubUrl: https://github.com/acemod/ACEX

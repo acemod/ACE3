@@ -39,6 +39,7 @@ _hitPointsAddedNames = [];
 _hitPointsAddedStrings = [];
 _hitPointsAddedAmount = [];
 _processedHitpoints = [];
+_icon = QPATHTOF(ui\repair_0_ca.paa);
 
 {
     _selection = _x;
@@ -47,8 +48,6 @@ _processedHitpoints = [];
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
         if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
-
-        _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
 
         _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
 
@@ -59,7 +58,7 @@ _processedHitpoints = [];
         private _text = localize LSTRING(RemoveWheel);
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
-        _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
+        _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2, nil, FUNC(modifySelectionInteraction)] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
         // An action to replace the wheel is required
@@ -79,7 +78,8 @@ _processedHitpoints = [];
         if (_selection isEqualTo "") exitWith { TRACE_3("Selection Empty",_hitpoint,_forEachIndex,_selection); };
         if (_hitpoint isEqualTo "") exitWith { TRACE_3("Hitpoint Empty",_hitpoint,_forEachIndex,_selection); };
         //Depends hitpoints shouldn't be modified directly (will be normalized)
-        if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) exitWith {
+        // Biki: Clearing 'depends' in case of inheritance cannot be an empty string (rpt warnings), but rather a "0" value.
+        if (!((getText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) exitWith {
             TRACE_3("Skip Depends",_hitpoint,_forEachIndex,_selection);
         };
 
@@ -120,7 +120,6 @@ _processedHitpoints = [];
 
         // Prepair the repair action
         _name = format ["Repair_%1_%2", _forEachIndex, _selection];
-        _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
 
         // Find localized string and track those added for numerization
         ([_hitpoint, "%1", _hitpoint, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_text", "_trackArray"];
@@ -160,7 +159,7 @@ _processedHitpoints = [];
 
 _condition = {[_this select 1, _this select 0, "", "fullRepair"] call DFUNC(canRepair)};
 _statement = {[_this select 1, _this select 0, "", "fullRepair"] call DFUNC(repair)};
-_action = [QGVAR(fullRepair), localize LSTRING(fullRepair), "A3\ui_f\data\igui\cfg\actions\repair_ca.paa", _statement, _condition, {}, [], "", 4] call EFUNC(interact_menu,createAction);
+_action = [QGVAR(fullRepair), localize LSTRING(fullRepair), _icon, _statement, _condition, {}, [], "", 4] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
 
 // set class as initialized

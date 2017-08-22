@@ -355,9 +355,27 @@ class CfgVehicles {
     class CargoNet_01_base_F: Slingload_base_F { //Slingload pallets
         GVAR(size) = 6;
     };
-    class Slingload_01_Base_F: Slingload_base_F { //Huron 20ft containers
+
+     //Huron 20ft containers
+    class Slingload_01_Base_F: Slingload_base_F {
         GVAR(canLoad) = 0;
         GVAR(size) = -1;
+    };
+    class B_Slingload_01_Cargo_F: Slingload_01_Base_F { // Huron Cargo
+        GVAR(space) = 20;
+        GVAR(hasCargo) = 1;
+    };
+    class B_Slingload_01_Ammo_F: Slingload_01_Base_F { // Huron Ammo
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+    class B_Slingload_01_Medevac_F: Slingload_01_Base_F { // Huron Medevac
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+    class B_Slingload_01_Repair_F: Slingload_01_Base_F { // Huron Repair
+        GVAR(space) = 12;
+        GVAR(hasCargo) = 1;
     };
 
     // Taru pods

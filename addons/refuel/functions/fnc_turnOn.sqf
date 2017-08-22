@@ -19,7 +19,7 @@
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 [
-    REFUEL_PROGRESS_DURATION,
+    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
     [_unit, _nozzle],
     {
         params ["_args"];

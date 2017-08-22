@@ -21,6 +21,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 ["ACE3 Weapons", QGVAR(prepare), localize LSTRING(Prepare), {
     // Condition
     if (!([ACE_player] call FUNC(canPrepare))) exitWith {false};
+    if (EGVAR(common,isReloading)) exitWith {true};
 
     // Statement
     [ACE_player] call FUNC(prepare);

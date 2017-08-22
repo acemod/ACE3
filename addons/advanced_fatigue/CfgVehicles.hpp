@@ -3,7 +3,7 @@ class CfgVehicles {
     class GVAR(moduleSettings): ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "Advanced Fatigue";
+        displayName = CSTRING(DisplayName);
         function = QFUNC(moduleSettings);
         scope = 2;
         isGlobal = 1;

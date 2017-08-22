@@ -23,6 +23,7 @@ if (isNull _unit ||
     {!local _unit} ||
     {!alive _target} ||
     {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} ||
+    {typeOf _target == QGVAR(fuelNozzle) && {!isNull (attachedTo _target)}} || // Not carried by someone else
     {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 !(_target getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}

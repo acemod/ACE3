@@ -8,7 +8,7 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [LOGIC, [bob, kevin], true] call ace_spectator_fnc_moduleSpectatorSettings
@@ -22,7 +22,6 @@ params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(filterUnits), "unitsFilter"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(filterSides), "sidesFilter"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enableAI), "enableAI"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(restrictModes), "cameraModes"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(restrictVisions), "visionModes"] call EFUNC(common,readSettingFromModule);
