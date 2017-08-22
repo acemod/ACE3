@@ -16,6 +16,7 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+TRACE_1("switchUnit",_unit);
 
 // don't switch to original player units
 if (!([_unit] call FUNC(isValidAi))) exitWith {};

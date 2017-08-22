@@ -27,6 +27,7 @@ if (vehicle _playerUnit == _playerUnit) then {
     GVAR(OriginalUnit) = _playerUnit;
     GVAR(OriginalName) = name _playerUnit;
     GVAR(OriginalGroup) = group _playerUnit;
+    GVAR(switchableSides) = _sides;
 
     // remove all starting gear of a player
     removeAllWeapons _playerUnit;
@@ -41,5 +42,5 @@ if (vehicle _playerUnit == _playerUnit) then {
 
     [_playerUnit, "forceWalk", "ACE_SwitchUnits", true] call EFUNC(common,statusEffect_set);
 
-    [_playerUnit, _sides] call FUNC(addMapFunction);
+    [] call FUNC(addMapFunction);
 };

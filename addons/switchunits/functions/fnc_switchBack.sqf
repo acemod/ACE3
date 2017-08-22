@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_originalPlayerUnit"];
+TRACE_1("switchBack",_originalPlayerUnit);
 
 [_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
 
