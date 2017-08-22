@@ -398,7 +398,9 @@ addMissionEventHandler ["PlayerViewChanged", {
     // Players can always interact with his vehicle
     {vehicle _unit == _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}}
+    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    // Players can always interact with connected UAV
+    {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
