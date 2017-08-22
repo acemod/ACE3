@@ -14,7 +14,7 @@ version:
 
 ## 1. Config Values
 
-### 1.1 ehicle Interior Lighting
+### 1.1 Vehicle Interior Lighting
 
 ```cpp
 class CfgVehicles {
