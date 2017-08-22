@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Returns array of required nearby repair objects (wheels/tracks)
+ * Returns array of required nearby repair objects (wheels/tracks).
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>

@@ -49,7 +49,7 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 #### 2.4 Horizontal distance and height difference
 <img src="{{ site.baseurl }}/img/wiki/user/vector4.jpg" width="500" height="160" alt="Measuring Horizontal distance and height difference"/>
 
-- Tap <kb>R</kbd> once then press and hold it until the red pointing circle appears.
+- Tap <kbd>R</kbd> once then press and hold it until the red pointing circle appears.
 - Sight the circle on the object and release the key.
 
 #### 2.5 Azimuth and Inclination

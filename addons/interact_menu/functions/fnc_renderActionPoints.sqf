@@ -130,17 +130,22 @@ GVAR(collectedActionPoints) resize 0;
 // Render nearby actions, unit self actions or vehicle self actions as appropiate
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (vehicle ACE_player == ACE_player) then {
-            if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
-                // Once every 0.2 secs, collect nearby objects active and visible action points and render them
-                call _fnc_renderNearbyActions;
-            } else {
-                // The rest of the frames just draw the same action points rendered the last frame
-                call _fnc_renderLastFrameActions;
-            };
+        if (!(isNull (ACE_controlledUAV select 0))) then {
+            // Render UAV self actions when in control of UAV AI
+            (ACE_controlledUAV select 0) call _fnc_renderSelfActions;
         } else {
-            // Render vehicle self actions when in vehicle
-            (vehicle ACE_player) call _fnc_renderSelfActions;
+            if (vehicle ACE_player == ACE_player) then {
+                if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
+                    // Once every 0.2 secs, collect nearby objects active and visible action points and render them
+                    call _fnc_renderNearbyActions;
+                } else {
+                    // The rest of the frames just draw the same action points rendered the last frame
+                    call _fnc_renderLastFrameActions;
+                };
+            } else {
+                // Render vehicle self actions when in vehicle
+                (vehicle ACE_player) call _fnc_renderSelfActions;
+            };
         };
     } else {
         // Render zeus actions when zeus open

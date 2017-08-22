@@ -45,7 +45,6 @@ class ACE_Rsc_Control_Base {
     idc = 1;
     type = 0;
     style = 48;
-    access = 0;
     lineSpacing = 0;
     moving = 1;
     text = "";

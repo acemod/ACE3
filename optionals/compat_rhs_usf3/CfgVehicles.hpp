@@ -232,6 +232,7 @@ class CfgVehicles {
     };
 
     class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
         EGVAR(fastroping,onCut) = QFUNC(onCut);
@@ -338,6 +339,7 @@ class CfgVehicles {
 
     class APC_Tracked_02_base_F: Tank_F {};
     class rhsusf_m113tank_base: APC_Tracked_02_base_F {
+        EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
         EGVAR(refuel,fuelCapacity) = 360;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
