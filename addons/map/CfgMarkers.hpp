@@ -4,8 +4,6 @@ class CfgMarkers {
 
     // Reenable NATO symbols ...
     class b_unknown: Flag {scope = 2;};
-    class n_unknown: b_unknown {};
-    class o_unknown: b_unknown {};
     
     // disable all civy markers (harbor etc.)
     class c_unknown: b_unknown {scope = 1;};
