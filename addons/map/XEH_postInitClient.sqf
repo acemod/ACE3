@@ -145,8 +145,8 @@ GVAR(vehicleLightColor) = [1,1,1,0];
     if (_vehicleLightCondition == "") then {
         private _userAction = toLower getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
         switch (true) do {
-        case ((_userAction find "cabinlights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cabinlights_hide') == 1";};
-        case ((_userAction find "cargolights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cargolights_hide') == 1";};
+            case ((_userAction find "cabinlights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cabinlights_hide') == 1";};
+            case ((_userAction find "cargolights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cargolights_hide') == 1";};
         };
     };
 
@@ -158,10 +158,10 @@ GVAR(vehicleLightColor) = [1,1,1,0];
         };
     } else {
         switch (true) do {
-        case (_vehicle isKindOf "Tank");
-        case (_vehicle isKindOf "Wheeled_APC"): { {true} };
-        case (_vehicle isKindOf "Helicopter");
-        case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
+            case (_vehicle isKindOf "Tank");
+            case (_vehicle isKindOf "Wheeled_APC"): { {true} };
+            case (_vehicle isKindOf "Helicopter");
+            case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
             default { {false} };
         };
     };
