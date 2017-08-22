@@ -89,3 +89,8 @@ class CfgUIGrids {
 class ACE_Extensions {
     extensions[] = {};
 };
+
+class ACE_Tests {
+    vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
+    mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
+};
