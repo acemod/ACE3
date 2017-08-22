@@ -7,7 +7,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
-        function = FUNC(moduleInteraction);
+        function = QFUNC(moduleInteraction);
         scope = 2;
         isGlobal = 1;
         isSingular = 1;
