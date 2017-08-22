@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Map Framework
-description: Explains the Map system for developers
+description: Explains the Map system for developers.
 group: framework
 order: 5
 parent: wiki
@@ -27,4 +27,6 @@ class CfgVehicles {
         
          // Condition for interior lights to be working (string that when compiled and call should return a bool, will be passed _vehicle)
         ace_map_vehicleLightCondition[] = "(_vehicle animationSourcePhase 'cabinlights_hide') == 1";
+    };
+};
 ```
