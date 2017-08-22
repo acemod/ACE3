@@ -111,7 +111,7 @@ GVAR(isOpeningDoor) = false;
 
 ["ace_settingsInitialized", {
     if (GVAR(disableNegativeRating)) then {
-        ACE_player addEventHandler ["HandleRating", {
+        player addEventHandler ["HandleRating", {
             (_this select 1) max 0
         }];
     };
