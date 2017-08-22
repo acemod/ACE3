@@ -24,12 +24,18 @@ if ((!alive ACE_player) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(co
 private _currentShooter = objNull;
 private _currentWeapon = "";
 
-if (ACE_player call CBA_fnc_canUseWeapon) then {
-    _currentShooter = ACE_player;
-    _currentWeapon = currentWeapon ACE_player;
+if (isNull (ACE_controlledUAV param [0, objNull])) then {
+    if (ACE_player call CBA_fnc_canUseWeapon) then {
+        _currentShooter = ACE_player;
+        _currentWeapon = currentWeapon ACE_player;
+    } else {
+        _currentShooter = vehicle ACE_player;
+        private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+        _currentWeapon = _currentShooter currentWeaponTurret _turretPath;
+    };
 } else {
-    _currentShooter = vehicle ACE_player;
-    private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+    _currentShooter = ACE_controlledUAV select 0;
+    private _turretPath = ACE_controlledUAV select 2;
     _currentWeapon = _currentShooter currentWeaponTurret _turretPath;
 };
 
