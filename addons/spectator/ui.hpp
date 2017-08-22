@@ -82,7 +82,7 @@ class GVAR(display) {
             w = W_PART(13.5);
             h = H_PART(1.5);
 
-            fade = 0.8;
+            fade = 0.5;
             rows = 1;
             columns = 1;
             strings[] = {"$STR_A3_Spectator_Entities"};
