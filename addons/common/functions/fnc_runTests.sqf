@@ -1,16 +1,16 @@
 /*
  * Author: PabstMirror
- * Run test functions
+ * Run test functions.
  *
  * Arguments:
- * 0: Specifc test to run (default is to run all) <STRING><OPTIONAL>
+ * 0: Specific test to run (default is to run all) <STRING> (default: #all)
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_common_fnc_runTests;
- * ["ace_fcs"] call ace_common_fnc_runTests;
+ * [] call ace_common_fnc_runTests
+ * ["ace_fcs"] call ace_common_fnc_runTests
  *
  * Public: Yes
  */
