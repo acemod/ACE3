@@ -56,4 +56,4 @@ private _onFailure = {
 [_player, _magazineType, _maxAmmo] call EFUNC(common,removeSpecificMagazine);
 
 // Call progress bar
-[4, [_player, _target, [_magazineType, _maxAmmo]], _onFinish, _onFailure, (localize LSTRING(LinkingBelt)), _condition] call EFUNC(common,progressBar);
+[4, [_player, _target, [_magazineType, _maxAmmo]], _onFinish, _onFailure, (localize LSTRING(LinkingBelt)), _condition, ["isNotInside"]] call EFUNC(common,progressBar);
