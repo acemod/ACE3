@@ -10,7 +10,7 @@
  *
  * Example:
  * [] call ace_common_fnc_runTests
- * ["ace_fcs"] call ace_common_fnc_runTests
+ * ["fcs"] call ace_common_fnc_runTests
  *
  * Public: Yes
  */
