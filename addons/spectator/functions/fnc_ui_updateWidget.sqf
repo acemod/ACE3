@@ -32,8 +32,16 @@ if !(isPlayer _focus) then { _name = format ["%1: %2", localize "str_player_ai",
 
 private _unitTypePicture = "";
 private _vehicleTypePicture = "";
+private _vehiclePositionPicture = "";
 if (_inVehicle) then {
     _vehicleTypePicture = getText (configFile >> "CfgVehicles" >> typeOf vehicle _focus >> "Picture");
+
+    _vehiclePositionPicture = switch (_focus) do {
+        case (commander vehicle _focus): {IMG_COMMANDER};
+        case (driver vehicle _focus): {IMG_DRIVER};
+        case (gunner vehicle _focus): {IMG_GUNNER};
+        default {IMG_CARGO};
+    };
 } else {
     _unitTypePicture = [_focus] call EFUNC(common,getVehicleIcon);
 };
@@ -44,14 +52,7 @@ private _weapon = currentWeapon _focus;
 private _weaponPicture = if (_weapon != "") then {
     getText (configFile >> "CfgWeapons" >> _weapon >> "Picture")
 } else {
-    if (_inVehicle) then {
-        if (commander vehicle _focus == _focus) exitWith {IMG_COMMANDER};
-        if (driver vehicle _focus == _focus) exitWith {IMG_DRIVER};
-        if (gunner vehicle _focus == _focus) exitWith {IMG_GUNNER};
-        IMG_CARGO
-    } else {
-        IMG_UNARMED
-    };
+    IMG_UNARMED
 };
 
 (getPlayerScores _focus) params [
@@ -74,12 +75,8 @@ CTRL_WIDGET_TOTAL ctrlSetText str _total;
 CTRL_WIDGET_WEAPON ctrlSetText _weaponPicture;
 
 CTRL_WIDGET_UNIT ctrlSetText _unitTypePicture;
-CTRL_WIDGET_UNIT ctrlShow !_inVehicle;
 CTRL_WIDGET_VEHICLE ctrlSetText _vehicleTypePicture;
-CTRL_WIDGET_VEHICLE ctrlShow _inVehicle;
-
-CTRL_WIDGET_WEAPON ctrlShow (_weaponPicture != "");
-CTRL_WIDGET_WEAPON_BACK ctrlShow (_weaponPicture != "");
+CTRL_WIDGET_VEHICLE_POS ctrlSetText _vehiclePositionPicture;
 
 // Handle widget toggling
 if !(ctrlShown CTRL_WIDGET) then {

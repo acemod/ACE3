@@ -271,15 +271,14 @@ class GVAR(display) {
                     h = H_PART(1.4);
                     colorBackground[] = {0,0,0,0.75};
                 };
-                class LowerLeftBackground: RscText {
-                    idc = IDC_WIDGET_WEAPON_BACK;
+                class LowerRightBackground: RscText {
                     x = W_PART(9.8);
                     y = H_PART(1.5);
                     w = W_PART(6.1);
                     h = H_PART(2);
                     colorBackground[] = {1,1,1,0.4};
                 };
-                class LowerRightBackground: RscText {
+                class LowerLeftBackground: RscText {
                     x = W_PART(3.5);
                     y = H_PART(1.5);
                     w = W_PART(6.2);
@@ -292,6 +291,14 @@ class GVAR(display) {
                     w = W_PART(3.6);
                     h = H_PART(3.5);
                     colorBackground[] = {0,0,0,0.75};
+                };
+                class VehiclePos: RscPictureKeepAspect {
+                    idc = IDC_WIDGET_VEHICLE_POS;
+                    text = "";
+                    x = W_PART(12.4);
+                    y = H_PART(0.3);
+                    w = W_PART(1);
+                    h = H_PART(1);
                 };
                 class VehicleType: RscPicture {
                     idc = IDC_WIDGET_VEHICLE;
