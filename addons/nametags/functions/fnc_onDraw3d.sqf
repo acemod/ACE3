@@ -22,7 +22,7 @@ if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) ex
 
 private _flags = [[], DFUNC(getCachedFlags), ACE_player, QGVAR(flagsCache), 2] call EFUNC(common,cachedCall);
 
-_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_maxDistance"];
+_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_maxDistanceNearby","_maxDistanceCursor"];
 
 private _onKeyPressAlphaMax = 1;
 if (GVAR(showPlayerNames) == 3) then {
@@ -36,51 +36,16 @@ if (GVAR(showPlayerNames) == 4) then {
 
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
 if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged vehicle slots
-
 private _camPosASL = AGLtoASL _camPosAGL;
-
-// Show nametag for the unit behind the cursor or its commander
-if (_enabledTagsCursor) then {
-    private _target = cursorTarget;
-    if !(_target isKindOf "CAManBase") then {
-        // When cursorTarget is on a vehicle show the nametag for the commander.
-        if !(_target in allUnitsUAV) then {
-            _target = effectiveCommander _target;
-        } else {
-            _target = objNull;
-        };
-    };
-    if (isNull _target) exitWith {};
-
-    if (_target != ACE_player &&
-        {(side group _target) == (side group ACE_player)} &&
-        {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
-        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
-        {!isObjectHidden _target}) then {
-
-        private _distance = ACE_player distance _target;
-
-        private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
-        // Alpha:
-        // - base value determined by GVAR(playerNamesMaxAlpha)
-        // - decreases when _distance > _maxDistance
-        // - increases when the unit is speaking
-        // - it's clamped by the value of _onKeyPressAlphaMax
-        private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
-
-        if (_alpha > 0) then {
-            [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
-        };
-    };
-};
 
 // Show nametags for nearby units
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
-        private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
+        private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistanceNearby + 7];
         _nearMen = _nearMen select {
             _x != ACE_player &&
+			{!_enabledTagsCursor || {!(_x isEqualTo cursorTarget)}} &&
             {(side group _x) == (side group ACE_player)} &&
             {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
             {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
@@ -104,10 +69,17 @@ if (_enabledTagsNearby) then {
 
         if !(isNull _target) then {
             private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
-            if (_enabledTagsCursor && {!_drawSoundwave}) exitWith {}; // (Cursor Only && showSoundWaves==2) - quick exit
+            
+			// W- disabled below
+			//if (_enabledTagsCursor && {!_drawSoundwave}) exitWith {}; 
+			// (Cursor Only && showSoundWaves==2) - quick exit
 
-            private _relPos = (visiblePositionASL _target) vectorDiff _camPosASL;
-            private _distance = vectorMagnitude _relPos;
+			private _distance = ACE_Player distance _target;
+			
+			// W- Changed distance to be absolute distance from player to target.
+			// This prevents players seeing less tags (or fainter ones) in third person.
+            //private _relPos = (visiblePositionASL _target) vectorDiff _camPosASL;
+            //private _distance = vectorMagnitude _relPos;
 
             // Fade on border
             private _centerOffsetFactor = 1;
@@ -132,7 +104,10 @@ if (_enabledTagsNearby) then {
             // - decreases when _distance > _maxDistance
             // - increases when the unit is speaking
             // - it's clamped by the value of _onKeyPressAlphaMax unless soundwaves are forced on and the unit is talking
-            private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha) * _centerOffsetFactor) min _alphaMax;
+			
+			// W-
+            private _alpha = 
+			(((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistanceNearby)) min 1) * GVAR(playerNamesMaxAlpha) * _centerOffsetFactor) min _alphaMax;
 
             if (_alpha > 0) then {
                 [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
@@ -141,5 +116,49 @@ if (_enabledTagsNearby) then {
         nil
     } count _targets;
 };
+
+// W- moved tagsCursor down to avoid double tagging easier
+// Show nametag for the unit behind the cursor or its commander
+if (_enabledTagsCursor) then {
+
+    private _target = cursorTarget;
+	
+	// W- exit to prevent double tagging.
+	if (_enabledTagsNearby && {_target in _nearMen}) exitWith {};
+	
+	// W- Adding cursorTarget if within distance
+    if !(_target isKindOf "CAManBase") then {
+        // When cursorTarget is on a vehicle show the nametag for the commander.
+        if ( !(_target in allUnitsUAV) && {((ACE_Player distance _target) < (_maxDistanceCursor))} ) then {
+            _target = effectiveCommander _target;
+        } else {
+            _target = objNull;
+        };
+    };
+    if (isNull _target) exitWith {};
+
+    if (_target != ACE_player &&
+        {(side group _target) == (side group ACE_player)} &&
+        {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+		// Necessary? Can't see cursorTarget through walls.
+        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
+        {!isObjectHidden _target}) then {
+
+        private _distance = ACE_player distance _target;
+
+        private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
+        // Alpha:
+        // - base value determined by GVAR(playerNamesMaxAlpha)
+        // - decreases when _distance > _maxDistanceCursor
+        // - increases when the unit is speaking
+        // - it's clamped by the value of _onKeyPressAlphaMax
+        private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistanceCursor)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
+
+        if (_alpha > 0) then {
+            [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
+        };
+    };
+};
+
 
 END_COUNTER(GVAR(onDraw3d));
