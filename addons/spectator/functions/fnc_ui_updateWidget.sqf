@@ -25,7 +25,6 @@
 if (!GVAR(uiWidgetVisible) || {isNull GVAR(camTarget)}) exitWith {CTRL_WIDGET ctrlShow false};
 
 private _focus = GVAR(camTarget);
-private _inVehicle = _focus != vehicle _focus;
 
 private _name = ([_focus] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
 if !(isPlayer _focus) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
@@ -33,7 +32,7 @@ if !(isPlayer _focus) then { _name = format ["%1: %2", localize "str_player_ai",
 private _unitTypePicture = "";
 private _vehicleTypePicture = "";
 private _vehiclePositionPicture = "";
-if (_inVehicle) then {
+if (_focus != vehicle _focus) then {
     _vehicleTypePicture = getText (configFile >> "CfgVehicles" >> typeOf vehicle _focus >> "Picture");
 
     _vehiclePositionPicture = switch (_focus) do {

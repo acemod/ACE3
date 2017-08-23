@@ -296,23 +296,23 @@ class GVAR(display) {
                     idc = IDC_WIDGET_VEHICLE_POS;
                     text = "";
                     x = W_PART(12.4);
-                    y = H_PART(0.3);
+                    y = H_PART(0.2);
                     w = W_PART(1);
                     h = H_PART(1);
                 };
                 class VehicleType: RscPicture {
                     idc = IDC_WIDGET_VEHICLE;
-                    text = "\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+                    text = "";
                     x = W_PART(13.5);
-                    y = H_PART(0.3);
+                    y = H_PART(0.2);
                     w = W_PART(2.1);
                     h = H_PART(1);
                 };
                 class UnitType: RscPictureKeepAspect {
                     idc = IDC_WIDGET_UNIT;
-                    text = "\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+                    text = "";
                     x = W_PART(14.6);
-                    y = H_PART(0.3);
+                    y = H_PART(0.2);
                     w = W_PART(1);
                     h = H_PART(1);
                 };
@@ -322,13 +322,13 @@ class GVAR(display) {
                     text = "";
                     x = W_PART(3.6);
                     y = 0;
-                    w = W_PART(9.9);
+                    w = W_PART(8.8);
                     h = H_PART(1.4);
                     sizeEx = H_PART(1);
                 };
                 class Avatar: RscPictureKeepAspect {
                     idc = IDC_WIDGET_AVATAR;
-                    text = "a3\Ui_f\data\GUI\Cfg\UnitInsignia\bi_ca.paa";
+                    text = "";
                     x = 0;
                     y = H_PART(0.3);
                     w = W_PART(3.2);
@@ -444,7 +444,7 @@ class GVAR(display) {
                 };
                 class WeaponPicture: RscPictureKeepAspect {
                     idc = IDC_WIDGET_WEAPON;
-                    text = "A3\weapons_F\Rifles\MX\data\UI\gear_mx_rifle_X_CA.paa";
+                    text = "";
                     x = W_PART(9.9);
                     y = H_PART(1.6);
                     w = W_PART(5.9);
