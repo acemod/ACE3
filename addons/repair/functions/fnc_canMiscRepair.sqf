@@ -23,7 +23,7 @@ params ["_caller", "_target", "_hitPointIndex"];
 
 (getAllHitPointsDamage _target) params ["_allHitPoints", "", "_allHitPointDamages"];
 
-if !([_caller, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_caller, _target, ["isNotDragging", "isNotCarrying", "isNotSwimming", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 // Get hitpoint groups if available
 _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroups);

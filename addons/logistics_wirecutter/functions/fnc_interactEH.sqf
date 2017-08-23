@@ -47,7 +47,7 @@ TRACE_1("Starting wire-cut action PFEH",_interactionType);
             };
             _fncCondition = {
                 params ["_helper", "_player", "_attachedFence"];
-                if (!([_player, _attachedFence, []] call EFUNC(common,canInteractWith))) exitWith {false};
+                if (!([_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith))) exitWith {false};
                 ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))} && {
                     //Custom LOS check for fence
                     private _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");

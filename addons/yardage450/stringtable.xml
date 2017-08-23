@@ -14,6 +14,8 @@
             <French>Yardage 450</French>
             <Japanese>ヤードエイジ 450</Japanese>
             <Korean>Yardage 450</Korean>
+            <Chinesesimp>Yardage 450</Chinesesimp>
+            <Chinese>Yardage 450</Chinese>
         </Key>
         <Key ID="STR_ACE_Yardage450_Description">
             <English>Laser Rangefinder</English>
@@ -28,6 +30,8 @@
             <French>Télémètre laser</French>
             <Japanese>レーザー測距機</Japanese>
             <Korean>레이저 거리측정기</Korean>
+            <Chinesesimp>雷射测距仪</Chinesesimp>
+            <Chinese>雷射測距儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
@@ -42,6 +46,8 @@
             <French>Yardage 450 - bouton d'alimentation</French>
             <Japanese>ヤードエイジ 450 - 起動ボタン</Japanese>
             <Korean>Yardage 450 - 전원 버튼</Korean>
+            <Chinesesimp>Yardage 450 - 电源按钮</Chinesesimp>
+            <Chinese>Yardage 450 - 電源按鈕</Chinese>
         </Key>
     </Package>
 </Project>

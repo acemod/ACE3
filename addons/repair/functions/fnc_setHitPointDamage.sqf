@@ -1,12 +1,13 @@
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
- * Handles the ace_repair_setVehicleHitPointDamage event
+ * Handles the ace_repair_setVehicleHitPointDamage event.
  *
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
  * 1: Selected hitpoint INDEX <NUMBER>
  * 2: Total Damage <NUMBER>
+ * 3: Skip destruction effects <BOOL>
  *
  * Return Value:
  * None
@@ -18,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_hitPointIndex", "_hitPointDamage"];
+params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", true]];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
 private ["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
@@ -45,7 +46,7 @@ _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaire
     if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
         _realHitpointCount = _realHitpointCount + 1;
 
-        if ((((toLower _x) find "glass") == -1) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
+        if ((((toLower _x) find "glass") == -1) && {(getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")) in ["", "0"]}) then {
             _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
             if (_forEachIndex == _hitPointIndex) then {
                 _hitPointDamageRepaired = (_allHitPointDamages select _forEachIndex) - _hitPointDamage;
@@ -63,14 +64,14 @@ if (_hitPointDamageSumOld > 0) then {
 TRACE_5("structuralDamage",_damageOld,_damageNew,_hitPointDamageRepaired,_hitPointDamageSumOld,_realHitpointCount);
 
 // set new structural damage value
-_vehicle setDamage _damageNew;
+_vehicle setDamage [_damageNew, _useEffects];
 
 //Repair the hitpoint in the damages array:
 _allHitPointDamages set [_hitPointIndex, _hitPointDamage];
 
 //Set the new damage for all hitpoints
 {
-    _vehicle setHitIndex [_forEachIndex, _x];
+    _vehicle setHitIndex [_forEachIndex, _x, _useEffects];
 } forEach _allHitPointDamages;
 
 // normalize hitpoints

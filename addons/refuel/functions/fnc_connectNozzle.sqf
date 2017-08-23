@@ -41,7 +41,6 @@ private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", locali
     if (cameraView == "EXTERNAL") then {
         _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
     };
-    private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
     private _lineInterection = lineIntersects [eyePos ace_player, _virtualPosASL, ace_player];
 
     //Don't allow placing in a bad position:
@@ -57,7 +56,7 @@ private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", locali
         _unit removeAction _actionID;
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
-            [_unit, _target, _virtualPos, _nozzle] call FUNC(ConnectNozzleAction);
+            [_unit, _target, _virtualPosASL, _nozzle] call FUNC(ConnectNozzleAction);
         };
     }; // TODO add model like in attach/functions/fnc_attach
 }, 0, [_unit, _target, _nozzle, _actionID] ] call cba_fnc_addPerFrameHandler;

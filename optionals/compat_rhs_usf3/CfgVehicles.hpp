@@ -232,6 +232,7 @@ class CfgVehicles {
     };
 
     class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
         EGVAR(fastroping,onCut) = QFUNC(onCut);
@@ -292,19 +293,19 @@ class CfgVehicles {
     class rhsusf_M977A4_usarmy_wd: rhsusf_HEMTT_A4_base {};
     class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class rhsusf_M978A4_usarmy_wd: rhsusf_M977A4_usarmy_wd {
@@ -338,6 +339,7 @@ class CfgVehicles {
 
     class APC_Tracked_02_base_F: Tank_F {};
     class rhsusf_m113tank_base: APC_Tracked_02_base_F {
+        EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
         EGVAR(refuel,fuelCapacity) = 360;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -349,7 +351,7 @@ class CfgVehicles {
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class APC_Tracked_03_base_F;
