@@ -122,10 +122,7 @@ if (_enabledTagsNearby) then {
 if (_enabledTagsCursor) then {
 
     private _target = cursorTarget;
-    
-    // W- exit to prevent double tagging.
-    if (_enabledTagsNearby && {_target in _nearMen}) exitWith {};
-    
+
     // W- Adding cursorTarget if within distance
     if !(_target isKindOf "CAManBase") then {
         // When cursorTarget is on a vehicle show the nametag for the commander.
