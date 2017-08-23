@@ -57,12 +57,12 @@ class ACE_Settings {
         isClientSettable = 0;
         category = CSTRING(Module_DisplayName);
     };
-	class GVAR(playerNamesViewDistanceCursor) {
-		value = 15;
-		typeName = "SCALAR";
-		isClientSettable = 0;
-		category = CSTRING(Module_DisplayName);
-	};
+    class GVAR(playerNamesViewDistanceCursor) {
+        value = 15;
+        typeName = "SCALAR";
+        isClientSettable = 0;
+        category = CSTRING(Module_DisplayName);
+    };
     class GVAR(playerNamesMaxAlpha) {
         value = 0.8;
         typeName = "SCALAR";
