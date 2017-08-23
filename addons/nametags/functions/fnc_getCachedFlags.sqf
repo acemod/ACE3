@@ -18,12 +18,13 @@
 // Determine flags from current settings
 private _drawName = true;
 private _enabledTagsNearby = false;
-private _enabledTagsCursor = false;
+private _enabledTagsCursor = true;
 
 switch (GVAR(showPlayerNames)) do {
     case 0: {
         // Player names Disabled [Note: this should be unreachable as the drawEH will be removed]
         _drawName = false;
+		_enableTagsCursor = false;
         _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
     };
     case 1: {
@@ -51,6 +52,7 @@ switch (GVAR(showPlayerNames)) do {
 };
 
 private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
-private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
+private _maxDistanceNearby = _ambientBrightness * GVAR(playerNamesViewDistanceNearby);
+private _maxDistanceCursor = _ambientBrightness * GVAR(playerNamesViewDistanceCursor);
 
-[_drawName, GVAR(showPlayerRanks),_enabledTagsNearby,_enabledTagsCursor,_maxDistance]
+[_drawName, GVAR(showPlayerRanks),_enabledTagsNearby,_enabledTagsCursor,_maxDistanceNearby,_maxDistanceCursor]
