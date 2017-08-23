@@ -389,14 +389,32 @@ class CfgWeapons {
     class Missile_AGM_02_Plane_CAS_01_F;
     class rhs_weap_HellfireLauncher: Missile_AGM_02_Plane_CAS_01_F  {};
     class RHS_weap_AGM114K_Launcher: rhs_weap_HellfireLauncher {
+        weaponLockSystem = 0;
+        canLock = 0;
         EGVAR(hellfire,enabled) = 1;
         EGVAR(laser,canSelect) = 1;
     };
+    class RHS_weap_AGM114N_Launcher: rhs_weap_HellfireLauncher {
+        weaponLockSystem = 0;
+        canLock = 0;
+        ace_hellfire_enabled = 1;
+        ace_lase_canSelect = 1;
+    };
+    class RHS_weap_AGM114M_Launcher: rhs_weap_HellfireLauncher {
+        weaponLockSystem = 0;
+        canLock = 0;
+        ace_hellfire_enabled = 1;
+        ace_lase_canSelect = 1;
+    };
     class RHS_MELB_Hellfire: rhs_weap_HellfireLauncher {
+        weaponLockSystem = 0;
+        canLock = 0;
         EGVAR(hellfire,enabled) = 1;
         EGVAR(laser,canSelect) = 1;
     };
     class RHS_MELB_DAGR: rhs_weap_HellfireLauncher {
+        weaponLockSystem = 0;
+        canLock = 0;
         EGVAR(hellfire,enabled) = 1;
         EGVAR(laser,canSelect) = 1;
     };
