@@ -272,7 +272,7 @@ class GVAR(display) {
                     colorBackground[] = {0,0,0,0.75};
                 };
                 class LowerLeftBackground: RscText {
-                    idc = CTRL_WIDGET_WEAPON_BACK;
+                    idc = IDC_WIDGET_WEAPON_BACK;
                     x = W_PART(9.8);
                     y = H_PART(1.5);
                     w = W_PART(6.1);
