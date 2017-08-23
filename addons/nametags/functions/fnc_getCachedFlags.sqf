@@ -24,7 +24,7 @@ switch (GVAR(showPlayerNames)) do {
     case 0: {
         // Player names Disabled [Note: this should be unreachable as the drawEH will be removed]
         _drawName = false;
-        _enableTagsCursor = false;
+        _enabledTagsCursor = false;
         _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
     };
     case 1: {
