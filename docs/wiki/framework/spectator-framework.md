@@ -36,12 +36,11 @@ respawnTemplatesWest[] = {"ace_spectator","Counter","Wave"}; // Wave respawns an
 
 ## 2. Global Settings
 
-To tweak the default spectator experience four settings are provided:
+To tweak the default spectator experience three settings are provided:
 
 - **AI Enabled:** Whether AI will appear in the unit list and be spectatable. Defaults to only players.
 - **Camera modes:** Which camera modes (1PP, 3PP and Free) are available to use by default.
 - **Vision modes:** Which vision modes (Normal, Night and Thermal) are available to use by default.
-- **Add Map Locations**: Whether to automatically add the map locations (cities, villages, etc.) to the locations UI list.
 
 Note that these settings govern the default spectator behaviour. Through the use of public functions, the spectator experience can be more finely controlled (e.g. to limit each player to only be able to spectate units on their side) on top of these.
 
@@ -236,45 +235,3 @@ Will return both alive and dead players (note that dead player corpses are never
  * Example:
  * [] call ace_spectator_fnc_players
  ```
-
-### 4.9 Add locations available to spectate
-
-`ace_spectator_fnc_addLocation`
-Location name will be rendered in 3D (and on the map) at the given position and show up in the UI locations list which the free camera can use to teleport to the location.
-
-```cpp
- * Arguments:
- * 0: Position <ARRAY or OBJECT>
- * 1: Display Name <STRING> (Default: "")
- * 2: Description <STRING> (Default: "")
- * 3: Texture <STRING> (Default: "")
- * 4: Camera Offset Vector <Array> (Default: [0,0,0])
- *
- * Notes:
- * - Position array is of form ATL
- * - Position objects will remove location upon objNull
- * - If an empty name is supplied, a descriptive name will be used
- * - Camera offset is used when teleporting to location, default is treated as random
- *
- * Return Value:
- * Unique ID (used to remove a location) <STRING>
- *
- * Example:
- * [[2000, 3202, 0], "Objective Alpha"] call ace_spectator_fnc_addLocation
- ```
- 
-### 4.10 Remove locations available to spectate
-
-`ace_spectator_fnc_removeLocation`
-
-```cpp
- * Arguments:
- * 0: Unique ID <STRING>
- *
- * Return Value:
- * Success <BOOL>
- *
- * Example:
- * [_id] call ace_spectator_fnc_removeLocation
- ```
- 
