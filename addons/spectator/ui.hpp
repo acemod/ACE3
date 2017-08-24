@@ -259,43 +259,53 @@ class GVAR(display) {
         };
         class FocusInfo: RscControlsGroupNoScrollbars {
             idc = IDC_WIDGET;
-            x = X_PART(12.1);
+            x = X_PART(12.9);
             y = Y_PART(24);
-            w = W_PART(16);
+            w = W_PART(14.2);
             h = H_PART(3.5);
             class controls {
                 class UpperBackground: RscText {
-                    x = W_PART(3.5);
+                    x = 0;
                     y = 0;
-                    w = W_PART(12.4);
+                    w = W_PART(14.2);
                     h = H_PART(1.4);
                     colorBackground[] = {0,0,0,0.75};
                 };
-                class LowerRightBackground: RscText {
-                    x = W_PART(9.8);
+                class StatsBackground: RscText {
+                    x = 0;
                     y = H_PART(1.5);
-                    w = W_PART(6.1);
+                    w = W_PART(6);
+                    h = H_PART(2);
+                    colorBackground[] = {0,0,0,0.75};
+                };
+                class WeaponBackground: RscText {
+                    x = W_PART(6.1);
+                    y = H_PART(1.5);
+                    w = W_PART(6);
                     h = H_PART(2);
                     colorBackground[] = {1,1,1,0.4};
                 };
-                class LowerLeftBackground: RscText {
-                    x = W_PART(3.5);
+                class ThrowableBackground: RscText {
+                    x = W_PART(12.2);
                     y = H_PART(1.5);
-                    w = W_PART(6.2);
+                    w = W_PART(2);
                     h = H_PART(2);
-                    colorBackground[] = {0,0,0,0.75};
+                    colorBackground[] = {1,1,1,0.4};
                 };
-                class AvatarBackground: RscText {
-                    x = W_PART(-0.2);
-                    y = 0;
-                    w = W_PART(3.6);
-                    h = H_PART(3.5);
-                    colorBackground[] = {0,0,0,0.75};
+                class Name: RscText {
+                    shadow = 0;
+                    idc = IDC_WIDGET_NAME;
+                    text = "";
+                    x = W_PART(0.1);
+                    y = H_PART(0.1);
+                    w = W_PART(10.8);
+                    h = H_PART(1.2);
+                    sizeEx = H_PART(1);
                 };
                 class VehiclePos: RscPictureKeepAspect {
                     idc = IDC_WIDGET_VEHICLE_POS;
                     text = "";
-                    x = W_PART(12.4);
+                    x = W_PART(11);
                     y = H_PART(0.2);
                     w = W_PART(1);
                     h = H_PART(1);
@@ -303,75 +313,57 @@ class GVAR(display) {
                 class VehicleType: RscPicture {
                     idc = IDC_WIDGET_VEHICLE;
                     text = "";
-                    x = W_PART(13.5);
+                    x = W_PART(12.1);
                     y = H_PART(0.2);
-                    w = W_PART(2.1);
+                    w = W_PART(2);
                     h = H_PART(1);
                 };
                 class UnitType: RscPictureKeepAspect {
                     idc = IDC_WIDGET_UNIT;
                     text = "";
-                    x = W_PART(14.6);
+                    x = W_PART(13.1);
                     y = H_PART(0.2);
                     w = W_PART(1);
                     h = H_PART(1);
                 };
-                class Name: RscText {
-                    shadow = 0;
-                    idc = IDC_WIDGET_NAME;
-                    text = "";
-                    x = W_PART(3.6);
-                    y = 0;
-                    w = W_PART(8.8);
-                    h = H_PART(1.4);
-                    sizeEx = H_PART(1);
-                };
-                class Avatar: RscPictureKeepAspect {
-                    idc = IDC_WIDGET_AVATAR;
-                    text = "";
-                    x = 0;
-                    y = H_PART(0.3);
-                    w = W_PART(3.2);
-                    h = H_PART(2.9);
-                };
                 class Kills: RscPictureKeepAspect {
                     text = "a3\Ui_f\data\IGUI\Cfg\MPTable\infantry_ca.paa";
-                    x = W_PART(3.6);
+                    x = W_PART(0.1);
                     y = H_PART(1.6);
                     w = W_PART(0.8);
                     h = H_PART(0.8);
                 };
                 class LandKills: RscPictureKeepAspect {
                     text = "a3\Ui_f\data\IGUI\Cfg\MPTable\soft_ca.paa";
-                    x = W_PART(4.64);
+                    x = W_PART(1.1);
                     y = H_PART(1.6);
                     w = W_PART(0.8);
                     h = H_PART(0.8);
                 };
                 class ArmoredKills: RscPictureKeepAspect {
                     text = "a3\Ui_f\data\IGUI\Cfg\MPTable\armored_ca.paa";
-                    x = W_PART(5.76);
+                    x = W_PART(2.1);
                     y = H_PART(1.6);
                     w = W_PART(0.8);
                     h = H_PART(0.8);
                 };
                 class AirKills: RscPictureKeepAspect {
                     text = "a3\Ui_f\data\IGUI\Cfg\MPTable\air_ca.paa";
-                    x = W_PART(6.9);
+                    x = W_PART(3.1);
                     y = H_PART(1.6);
                     w = W_PART(0.8);
                     h = H_PART(0.8);
                 };
                 class Deaths: RscPictureKeepAspect {
                     text = "a3\Ui_f\data\IGUI\Cfg\MPTable\killed_ca.paa";
-                    x = W_PART(7.92);
+                    x = W_PART(4.1);
                     y = H_PART(1.6);
                     w = W_PART(0.8);
                     h = H_PART(0.8);
                 };
                 class Total: RscPictureKeepAspect {
                     text = "a3\Ui_f\data\IGUI\Cfg\MPTable\total_ca.paa";
-                    x = W_PART(8.86);
+                    x = W_PART(5.1);
                     y = H_PART(1.6);
                     w = W_PART(0.8);
                     h = H_PART(0.8);
@@ -381,9 +373,9 @@ class GVAR(display) {
                     shadow = 0;
                     idc = IDC_WIDGET_KILLS;
                     text = "";
-                    x = W_PART(3.6);
+                    x = W_PART(0.1);
                     y = H_PART(2.5);
-                    w = W_PART(0.9);
+                    w = W_PART(0.8);
                     h = H_PART(0.9);
                     sizeEx = H_PART(0.7);
                 };
@@ -392,7 +384,7 @@ class GVAR(display) {
                     shadow = 0;
                     idc = IDC_WIDGET_LAND;
                     text = "";
-                    x = W_PART(4.6);
+                    x = W_PART(1.1);
                     y = H_PART(2.5);
                     w = W_PART(0.8);
                     h = H_PART(0.9);
@@ -403,7 +395,7 @@ class GVAR(display) {
                     shadow = 0;
                     idc = IDC_WIDGET_ARMORED;
                     text = "";
-                    x = W_PART(5.7);
+                    x = W_PART(2.1);
                     y = H_PART(2.5);
                     w = W_PART(0.8);
                     h = H_PART(0.9);
@@ -414,7 +406,7 @@ class GVAR(display) {
                     shadow = 0;
                     idc = IDC_WIDGET_AIR;
                     text = "";
-                    x = W_PART(6.8);
+                    x = W_PART(3.1);
                     y = H_PART(2.5);
                     w = W_PART(0.8);
                     h = H_PART(0.9);
@@ -425,7 +417,7 @@ class GVAR(display) {
                     shadow = 0;
                     idc = IDC_WIDGET_DEATHS;
                     text = "";
-                    x = W_PART(7.9);
+                    x = W_PART(4.1);
                     y = H_PART(2.5);
                     w = W_PART(0.8);
                     h = H_PART(0.9);
@@ -436,7 +428,7 @@ class GVAR(display) {
                     shadow = 0;
                     idc = IDC_WIDGET_TOTAL;
                     text = "";
-                    x = W_PART(8.8);
+                    x = W_PART(5.1);
                     y = H_PART(2.5);
                     w = W_PART(0.8);
                     h = H_PART(0.9);
@@ -445,9 +437,17 @@ class GVAR(display) {
                 class WeaponPicture: RscPictureKeepAspect {
                     idc = IDC_WIDGET_WEAPON;
                     text = "";
-                    x = W_PART(9.9);
+                    x = W_PART(6.2);
                     y = H_PART(1.6);
-                    w = W_PART(5.9);
+                    w = W_PART(5.8);
+                    h = H_PART(1.8);
+                };
+                class ThrowablePicture: RscPictureKeepAspect {
+                    idc = IDC_WIDGET_THROWABLE;
+                    text = "";
+                    x = W_PART(12.3);
+                    y = H_PART(1.6);
+                    w = W_PART(1.8);
                     h = H_PART(1.8);
                 };
             };

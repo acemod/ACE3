@@ -18,7 +18,7 @@
 #define IMG_COMMANDER "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageCommander_ca.paa"
 #define IMG_DRIVER "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageDriver_ca.paa"
 #define IMG_GUNNER "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageGunner_ca.paa"
-#define IMG_CARGO "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageCommander_ca.paa"
+#define IMG_CARGO "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageCargo_ca.paa"
 #define IMG_UNARMED "" // TODO: Find suitable unarmed icon
 
 // Hide if no target or widget is toggled off
@@ -45,11 +45,17 @@ if (_focus != vehicle _focus) then {
     _unitTypePicture = [_focus] call EFUNC(common,getVehicleIcon);
 };
 
-private _insigniaTexture = ["GetGroupTexture", [group _focus]] call BIS_fnc_dynamicGroups;
 
 private _weapon = currentWeapon _focus;
 private _weaponPicture = if (_weapon != "") then {
     getText (configFile >> "CfgWeapons" >> _weapon >> "Picture")
+} else {
+    IMG_UNARMED
+};
+
+private _throwable = (currentThrowable _focus) param [0,""];
+private _throwablePicture = if (_throwable != "") then {
+    getText (configFile >> "CfgMagazines" >> _throwable >> "Picture")
 } else {
     IMG_UNARMED
 };
@@ -64,14 +70,15 @@ private _weaponPicture = if (_weapon != "") then {
 ];
 
 CTRL_WIDGET_NAME ctrlSetText _name;
-CTRL_WIDGET_AVATAR ctrlSetText _insigniaTexture;
 CTRL_WIDGET_KILLS ctrlSetText str _kills;
 CTRL_WIDGET_LAND ctrlSetText str _softKills;
 CTRL_WIDGET_ARMORED ctrlSetText str _armoredKills;
 CTRL_WIDGET_AIR ctrlSetText str _airKills;
 CTRL_WIDGET_DEATHS ctrlSetText str _deaths;
 CTRL_WIDGET_TOTAL ctrlSetText str _total;
+
 CTRL_WIDGET_WEAPON ctrlSetText _weaponPicture;
+CTRL_WIDGET_THROWABLE ctrlSetText _throwablePicture;
 
 CTRL_WIDGET_UNIT ctrlSetText _unitTypePicture;
 CTRL_WIDGET_VEHICLE ctrlSetText _vehicleTypePicture;
