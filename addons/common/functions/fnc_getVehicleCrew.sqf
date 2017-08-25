@@ -9,6 +9,9 @@
  * Return Value:
  * Crew <ARRAY>
  *
+ * Example:
+ * [car, ["driver"]] call ace_common_fnc_getVehicleCrew
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

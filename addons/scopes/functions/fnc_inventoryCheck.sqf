@@ -69,38 +69,12 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             _adjustment set [_forEachIndex, [0, 0, 0]];
             _updateAdjustment = true;
         };
-        // Determine rail height above bore
-        private _railHeightAboveBore = 0;
-        private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x);
-        if (isNumber (_weaponConfig >> "ACE_RailHeightAboveBore")) then {
-            _railHeightAboveBore = getNumber(_weaponConfig >> "ACE_RailHeightAboveBore");
-        } else {
-            switch (_x) do {
-                case 0: { _railHeightAboveBore = 2.0; }; // Rifle
-                case 2: { _railHeightAboveBore = 0.7; }; // Pistol
-            };
-        };
-        // Determine scope height above rail
-        private _scopeHeightAboveRail = 0;
-        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _x);
-        if (isNumber (_opticConfig >> "ACE_ScopeHeightAboveRail")) then {
-            _scopeHeightAboveRail = getNumber(_opticConfig >> "ACE_ScopeHeightAboveRail");
-        } else {
-            switch (getNumber(_opticConfig >> "ItemInfo" >> "opticType")) do {
-                case 1: { _scopeHeightAboveRail = 3.0; }; // RCO or similar
-                case 2: { _scopeHeightAboveRail = 4.0; }; // High power scope
-                default {
-                    switch (_x) do {
-                        case 0: { _scopeHeightAboveRail = 0.5; }; // Rifle iron sights
-                        case 2: { _scopeHeightAboveRail = 0.3; }; // Pistol iron sights
-                    };
-                };
-            };
-        };
-        GVAR(boreHeight) set [_x, _railHeightAboveBore + _scopeHeightAboveRail];
+        
+        GVAR(boreHeight) set [_x, [_player, _x] call FUNC(getBoreHeight)];
                 
         if ((_newOptics select _x) == "") then {
             // Check if the weapon comes with an integrated optic     
+            private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x); 
             private _verticalIncrement = 0;
             if (isNumber (_weaponConfig >> "ACE_ScopeAdjust_VerticalIncrement")) then {
                 _verticalIncrement = getNumber (_weaponConfig >> "ACE_ScopeAdjust_VerticalIncrement");
@@ -117,6 +91,7 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             if (isArray (_weaponConfig >> "ACE_ScopeAdjust_Horizontal")) then {
                 _maxHorizontal = getArray (_weaponConfig >> "ACE_ScopeAdjust_Horizontal");
             };
+            TRACE_5("",_newGuns select _x,_verticalIncrement,_horizontalIncrement,_maxVertical,_maxHorizontal);
             (GVAR(scopeAdjust) select _x) set [0, _maxVertical];
             (GVAR(scopeAdjust) select _x) set [1, _verticalIncrement];
             (GVAR(scopeAdjust) select _x) set [2, _maxHorizontal];

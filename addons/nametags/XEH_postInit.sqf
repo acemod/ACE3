@@ -15,7 +15,7 @@ GVAR(showNamesTime) = -10;
 
     // Statement
     GVAR(showNamesTime) = CBA_missionTime;
-    if (call FUNC(canShow)) then{ call FUNC(doShow); };
+    // if (call FUNC(canShow)) then{ call FUNC(doShow); }; // This code doesn't work (canShow has a nil / has never worked??)
     // Return false so it doesn't block other actions
     false
 },
@@ -34,6 +34,13 @@ GVAR(showNamesTime) = -10;
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };
+    // Reset nametag flag cache on setting change:
+    ACE_player setVariable [QGVAR(flagsCache), nil];
+}] call CBA_fnc_addEventHandler;
+
+["cba_events_visionModeEvent", {
+    // Reset nametag flag cache on vision mode change:
+    ACE_player setVariable [QGVAR(flagsCache), nil];
 }] call CBA_fnc_addEventHandler;
 
 // civilians don't use military ranks

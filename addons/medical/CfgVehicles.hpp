@@ -522,7 +522,7 @@ class CfgVehicles {
 
         class ACE_Actions {
             // Include actions in body parts for treatment while in the open
-            #define EXCEPTIONS exceptions[] = {};
+            #define EXCEPTIONS exceptions[] = {"isNotSwimming"};
             #define ACTION_CONDITION condition = QUOTE(GVAR(menuTypeStyle) == 0);
             #include "ACE_Medical_Actions.hpp"
 
@@ -538,7 +538,7 @@ class CfgVehicles {
 
                     #undef EXCEPTIONS
                     #undef ACTION_CONDITION
-                    #define EXCEPTIONS exceptions[] = {"isNotInside"};
+                    #define EXCEPTIONS exceptions[] = {"isNotInside", "isNotSwimming"};
                     #define ACTION_CONDITION condition = "true";
                     #include "ACE_Medical_Actions.hpp"
                 };
@@ -550,7 +550,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying"};
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotSwimming"};
                 };
                 class GVAR(UnLoadPatient) {
                     displayName = CSTRING(UnloadPatient);
@@ -560,7 +560,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside", "isNotSwimming"};
                 };
             };
         };
@@ -876,14 +876,22 @@ class CfgVehicles {
         };
     };
 
-    class NATO_Box_Base;
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        class ACE_Actions;
+    };
+    class NATO_Box_Base: ReammoBox_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         scopeCurator = 2;
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = QPATHTOF(data\ace_medcrate.p3d);
-        author = ECSTRING(common,ACETeam);
+        author = "ElTyranos";
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);
             MACRO_ADDITEM(ACE_morphine,25);
@@ -892,6 +900,35 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bloodIV_500,15);
             MACRO_ADDITEM(ACE_bloodIV_250,15);
             MACRO_ADDITEM(ACE_bodyBag,10);
+        };
+        class AnimationSources {
+            class Cover {
+                source = "user";
+                animPeriod = 1.5;
+                initPhase = 0;
+                minValue = 0;
+                maxValue = 1;
+            };
+        };
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                selection = "cover_action";
+
+                class ACE_OpenLid {
+                    displayName = CSTRING(openLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' < 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',1]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+                class ACE_CloseLid {
+                    displayName = CSTRING(closeLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' >= 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',0]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+            };
         };
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {

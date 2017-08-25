@@ -3,10 +3,10 @@
  * Trues the muzzle velocity
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_true_muzzle_velocity
@@ -26,6 +26,7 @@ if (_actualDrop > _referenceDrop) then {
 };
 
 private _solutionInput = +GVAR(targetSolutionInput);
+_solutionInput set [ 8, 200];
 _solutionInput set [13, GVAR(truingDropRangeData) select 0];
 private _muzzleVelocity = _solutionInput select 4;
 

@@ -27,10 +27,13 @@ class CfgAmmo {
     class PipeBombCore: TimeBombCore;
     class PipeBombBase: PipeBombCore;
     */
+    // GVAR(size) = 0; is small size
+    // GVAR(size) = 1; is large size
     class DirectionalBombBase;
     class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
         GVAR(Explosive) = "ClaymoreDirectionalMine_Remote_Ammo_Scripted";
+        GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
@@ -39,6 +42,7 @@ class CfgAmmo {
 
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
         GVAR(defuseObjectPosition)[] = {-1.415, 0, 0.12};
+        GVAR(size) = 0;
     };
 
     class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
@@ -58,16 +62,18 @@ class CfgAmmo {
             distance = 0;
         };
     };
-    
+
     class F_20mm_Red;
     class ACE_TripFlare_FlareEffect: F_20mm_Red {
         triggerTime = 0.1;
+        GVAR(size) = 0;
     };
 
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
         GVAR(explodeOnDefuseChance) = 1;
         GVAR(magazine) = "SLAMDirectionalMine_Wire_Mag";
+        GVAR(size) = 0;
     };
     class ACE_SLAMDirectionalMine_Command_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "RemoteTrigger";
@@ -89,6 +95,7 @@ class CfgAmmo {
     class DemoCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "DemoCharge_Remote_Mag";
         GVAR(Explosive) = "DemoCharge_Remote_Ammo_Scripted";
+        GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.07, 0, 0.055};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
@@ -99,6 +106,7 @@ class CfgAmmo {
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
         GVAR(Explosive) = "SatchelCharge_Remote_Ammo_Scripted";
+        GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.1, 0.1, 0.05};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
@@ -110,6 +118,7 @@ class CfgAmmo {
         triggerWhenDestroyed = 1;
         GVAR(explodeOnDefuseChance) = 0.02;
         GVAR(magazine) = "IEDUrbanBig_Remote_Mag";
+        GVAR(size) = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
     class ACE_IEDUrbanBig_Command_Ammo: IEDUrbanBig_Remote_Ammo {
@@ -123,6 +132,7 @@ class CfgAmmo {
         triggerWhenDestroyed = 1;
         GVAR(explodeOnDefuseChance) = 0.02;
         GVAR(magazine) = "IEDUrbanSmall_Remote_Mag";
+        GVAR(size) = 0;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
     class ACE_IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {
@@ -136,6 +146,7 @@ class CfgAmmo {
         triggerWhenDestroyed = 1;
         GVAR(explodeOnDefuseChance) = 0.02;
         GVAR(magazine) = "IEDLandBig_Remote_Mag";
+        GVAR(size) = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
     class ACE_IEDLandBig_Command_Ammo: IEDLandBig_Remote_Ammo {
@@ -149,6 +160,7 @@ class CfgAmmo {
         triggerWhenDestroyed = 1;
         GVAR(explodeOnDefuseChance) = 0.02;
         GVAR(magazine) = "IEDLandSmall_Remote_Mag";
+        GVAR(size) = 0;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
     class ACE_IEDLandSmall_Command_Ammo: IEDLandSmall_Remote_Ammo {

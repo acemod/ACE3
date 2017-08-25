@@ -3,10 +3,10 @@
  * Inits all global variables with the default values
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_init
@@ -15,7 +15,6 @@
  */
 #include "script_component.hpp"
 
-GVAR(active) = false;
 
 GVAR(workingMemory) = +(GVAR(gunList) select 0);
 

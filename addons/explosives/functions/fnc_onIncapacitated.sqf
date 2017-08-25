@@ -19,11 +19,14 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private ["_deadman"];
+// Exit if no item:
+if (({_x == "ACE_DeadManSwitch"} count (items _unit)) == 0) exitWith {};
 
-_deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
+private _range = getNumber (configFile >> "CfgWeapons" >> "ACE_DeadManSwitch" >> QGVAR(range));
+private _deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
+TRACE_2("placed",_deadman,_range);
 {
-    [_unit, -1, _x, true] call FUNC(detonateExplosive);
+    [_unit, _range, _x, "ACE_DeadManSwitch"] call FUNC(detonateExplosive);
 } forEach _deadman;
 
 //Handle deadman connected to explosive in inventory
@@ -44,5 +47,5 @@ if (_connectedInventoryExplosive != "") then {
 
     private _explosive = createVehicle [_ammo, (getPos _unit), [], 0, "NONE"];
     _explosive setPosASL (getPosASL _unit);
-    [_unit, -1, [_explosive, -1]] call FUNC(detonateExplosive); //Explode, ignoring range, with a random 0-1 second delay
+    [_unit, -1, [_explosive, 0.5], "ACE_DeadManSwitch"] call FUNC(detonateExplosive); //Explode, ignoring range, with a 0.5 second delay
 };

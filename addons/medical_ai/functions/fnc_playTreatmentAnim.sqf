@@ -8,7 +8,10 @@
  * 2: Is self treatment <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [bob, true, true] call ACE_medical_ai_fnc_playTreatmentAnim
  *
  * Public: No
  */

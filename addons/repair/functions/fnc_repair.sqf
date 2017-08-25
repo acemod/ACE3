@@ -169,31 +169,41 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (stance _caller == "STAND") then {
-        _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
-    } else {
-        _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+    if (!underwater _caller) then {
+        if (stance _caller == "STAND") then {
+            _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+        } else {
+            _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+        };
+        [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
-    [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
-//Get repair time
-_repairTime = if (isNumber (_config >> "repairingTime")) then {
-    getNumber (_config >> "repairingTime");
-} else {
-    if (isText (_config >> "repairingTime")) exitWith {
-        _repairTimeConfig = getText(_config >> "repairingTime");
-        if (isNil _repairTimeConfig) then {
-            _repairTimeConfig = compile _repairTimeConfig;
-        } else {
-            _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;
+// Get repair time
+_repairTime = [
+    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    "number",
+    -1
+] call CBA_fnc_getConfigEntry;
+
+if (_repairTime < 0) then {
+    _repairTime = if (isNumber (_config >> "repairingTime")) then {
+        getNumber (_config >> "repairingTime");
+    } else {
+        if (isText (_config >> "repairingTime")) exitWith {
+            _repairTimeConfig = getText (_config >> "repairingTime");
+            if (isNil _repairTimeConfig) then {
+                _repairTimeConfig = compile _repairTimeConfig;
+            } else {
+                _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;
+            };
+            if (_repairTimeConfig isEqualType 0) exitWith {
+                _repairTimeConfig;
+            };
+            [_caller, _target, _hitPoint, _className] call _repairTimeConfig;
         };
-        if (_repairTimeConfig isEqualType 0) exitWith {
-            _repairTimeConfig;
-        };
-        [_caller, _target, _hitPoint, _className] call _repairTimeConfig;
+        0;
     };
-    0;
 };
 
 // Find localized string
@@ -216,7 +226,7 @@ TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
     DFUNC(repair_failure),
     _text,
     _callbackProgress,
-    ["isNotOnLadder"]
+    ["isNotSwimming", "isNotOnLadder"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon

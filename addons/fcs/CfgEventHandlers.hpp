@@ -17,7 +17,7 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_Init_EventHandlers {
+class Extended_InitPost_EventHandlers {
     class Tank {
         class ADDON {
             serverInit = QUOTE(_this call FUNC(vehicleInit));

@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [1, 2, 3] call ace_common_fnc_ASLToPosition
+ *
  * Public: No
  */
 #include "script_component.hpp"

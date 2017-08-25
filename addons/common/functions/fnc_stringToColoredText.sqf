@@ -9,6 +9,9 @@
  * Return Value:
  * Text <STRING>
  *
+ * Example:
+ * ["text", [0, 1, 2]] call ace_common_fnc_stringToColoredText
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

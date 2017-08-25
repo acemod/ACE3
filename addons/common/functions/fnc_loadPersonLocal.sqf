@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, car, kevin] call ace_common_fnc_loadPersonLocal
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

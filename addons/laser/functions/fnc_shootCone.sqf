@@ -9,8 +9,8 @@
  * 3: Count at each divergence level <OPTIONAL><NUMBER>
  * 4: Ignore vehicle 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  *
- * Return value:
- * <ARRAY> [_longestReturn, _shortestReturn, _resultPositions]
+ * Return Value:
+ * [_longestReturn, _shortestReturn, _resultPositions] <ARRAY>
  *
  * Example:
  * [getPosASL player, [0,1,0]] call ace_laser_fnc_shootCone;
@@ -53,7 +53,7 @@ private _pos2 = _pos vectorAdd (_vec vectorMultiply 1000);
     for "_i" from 1 to ceil(_count*_x) do { // Will always do at least 1
         private _offset = [_vecRotateMap, (((360/_count)*_i)+_radOffset) mod 360] call FUNC(rotateVectLine);
         private _offsetPos = _pos2 vectorAdd (_offset vectorMultiply (_divergence*_x));
- 
+
         private _offsetVector = _pos vectorFromTo _offsetPos;
         _result = [_pos, _offsetVector, _ignoreObj1] call FUNC(shootRay);
         _resultPos = _result select 0;

@@ -22,10 +22,10 @@
  * 16: Use advanced ballistics config? <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_rangecard_fnc_calculateRangeCard
+ * [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ,14, 15, 16, true] call ace_rangecard_fnc_calculateRangeCard
  *
  * Public: No
  */
@@ -115,7 +115,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
     _bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
-    
+
     if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
 
     _TOF = _TOF + _deltaT;

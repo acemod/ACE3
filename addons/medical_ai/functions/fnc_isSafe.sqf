@@ -8,6 +8,9 @@
  * Return Value:
  * Is unit safe enough <BOOL>
  *
+ * Example:
+ * call ACE_medical_ai_fnc_isSafe
+ *
  * Public: No
  */
 #include "script_component.hpp"

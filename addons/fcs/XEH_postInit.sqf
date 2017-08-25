@@ -21,3 +21,7 @@ if (!hasInterface) exitWith {};
 
 // Register event for global updates
 [QGVAR(forceUpdate), {[ACE_player] call FUNC(onForceUpdate)}] call CBA_fnc_addEventHandler;
+
+#ifdef DEBUG_MODE_FULL
+call compile preprocessFileLineNumbers QPATHTOF(functions\dev_debugConfigs.sqf);
+#endif

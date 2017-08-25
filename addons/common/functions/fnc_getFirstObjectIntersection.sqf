@@ -11,6 +11,9 @@
  * 0: Intersects <BOOL>
  * 1: Intersection Position ASL <ARRAY>
  *
+ * Example:
+ * [[1,2,3], [0,0,5], 5] call ace_common_fnc_getFirstObjectIntersection
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

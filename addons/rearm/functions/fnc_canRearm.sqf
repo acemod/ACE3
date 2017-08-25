@@ -3,27 +3,30 @@
  * Check if a unit can rearm.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Vehicle <OBJECT>
  * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can Rearm <BOOL>
  *
  * Example:
- * [player, tank] call ace_rearm_fnc_canRearm
+ * [tank, player] call ace_rearm_fnc_canRearm
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_dummy","_magazineClass"];
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [
+    ["_vehicle", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
+];
 
-if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_target distance _unit > REARM_ACTION_DISTANCE} || {_target getVariable [QGVAR(disabled), false]}) exitWith {false};
+if (!alive _vehicle) exitWith {false};
+if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_vehicle distance _unit > REARM_ACTION_DISTANCE} || {_vehicle getVariable [QGVAR(disabled), false]}) exitWith {false};
 
-_dummy = _unit getVariable [QGVAR(dummy), objNull];
+private _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if (isNull _dummy) exitwith {false};
-_magazineClass = _dummy getVariable QGVAR(magazineClass);
+private _magazineClass = _dummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {false};
 
-([_target, _magazineClass] call FUNC(getNeedRearmMagazines)) select 0
+([_vehicle, _magazineClass] call FUNC(getNeedRearmMagazines)) select 0

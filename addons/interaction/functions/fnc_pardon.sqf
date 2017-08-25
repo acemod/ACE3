@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin] call ACE_interaction_fnc_pardon
+ *
  * Public: No
  */
 #include "script_component.hpp"

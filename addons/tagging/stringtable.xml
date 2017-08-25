@@ -7,6 +7,11 @@
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
             <German>Markierungssystem</German>
+            <Korean>뿌리기</Korean>
+            <French>Marquage</French>
+            <Italian>Marcamento</Italian>
+            <Chinesesimp>喷漆</Chinesesimp>
+            <Chinese>噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -14,6 +19,11 @@
             <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
             <German>Konfiguriert, wie das Markierungssystem standardmäßig funktioniert.</German>
+            <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
+            <French>Configure le fonctionnement par défaut du système de marquage.</French>
+            <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
+            <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
+            <Chinese>定義噴漆系統預設設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
@@ -21,6 +31,11 @@
             <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
             <German>Schnelle Markierung</German>
+            <Korean>빠른 뿌리기</Korean>
+            <French>Marquage rapide</French>
+            <Italian>Marcamento Rapido</Italian>
+            <Chinesesimp>快速喷漆</Chinesesimp>
+            <Chinese>快速噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -28,6 +43,11 @@
             <Japanese>インタラクション ポインにむけてタグ付けをします。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
+            <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
+            <French>Action réalisé au point de marquage principal.</French>
+            <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
+            <Chinesesimp>直接喷漆在互动选单瞄准的点上.</Chinesesimp>
+            <Chinese>直接噴漆在互動選單瞄準的點上.</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -35,6 +55,11 @@
             <Japanese>最後の使用</Japanese>
             <Polish>Ostatnio użyte</Polish>
             <German>Zuletzt benutzt</German>
+            <Korean>최근 사용</Korean>
+            <French>Dernier utilisé</French>
+            <Italian>Ultimo Usato</Italian>
+            <Chinesesimp>上次最后使用</Chinesesimp>
+            <Chinese>上次最後使用</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
@@ -42,6 +67,11 @@
             <Japanese>無作為な X印</Japanese>
             <Polish>Losowy X</Polish>
             <German>Zufällig X</German>
+            <Korean>무작위 X</Korean>
+            <French>Aléatoire X</French>
+            <Italian>Random X</Italian>
+            <Chinesesimp>随机X标记</Chinesesimp>
+            <Chinese>隨機X標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
@@ -49,18 +79,26 @@
             <Japanese>無作為</Japanese>
             <Polish>Losowy</Polish>
             <German>Zufällig</German>
+            <Korean>무작위</Korean>
+            <French>Aléatoire</French>
+            <Italian>Random</Italian>
+            <Chinesesimp>随机</Chinesesimp>
+            <Chinese>隨機</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
             <German>Markieren</German>
             <Spanish>Marcar</Spanish>
-            <Polish>Taguj</Polish>
-            <French>Tag</French>
+            <Polish>Oznakuj</Polish>
             <Italian>Marca</Italian>
             <Czech>Označit</Czech>
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
             <Japanese>タグ</Japanese>
+            <Korean>뿌리기</Korean>
+            <French>Tag</French>
+            <Chinesesimp>喷漆</Chinesesimp>
+            <Chinese>噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>
@@ -73,6 +111,9 @@
             <Portuguese>X em preto</Portuguese>
             <Russian>Черный Х</Russian>
             <Japanese>黒の X印</Japanese>
+            <Korean>검정 X</Korean>
+            <Chinesesimp>黑色X标记</Chinesesimp>
+            <Chinese>黑色X標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_XRed">
             <English>X red</English>
@@ -85,6 +126,9 @@
             <Portuguese>X em vermelho</Portuguese>
             <Russian>Красный Х</Russian>
             <Japanese>赤の X印</Japanese>
+            <Korean>빨간 X</Korean>
+            <Chinesesimp>红色X标记</Chinesesimp>
+            <Chinese>紅色X標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_XGreen">
             <English>X green</English>
@@ -97,6 +141,9 @@
             <Portuguese>X em verde</Portuguese>
             <Russian>Зеленый Х</Russian>
             <Japanese>緑の X印</Japanese>
+            <Korean>초록 X</Korean>
+            <Chinesesimp>绿色X标记</Chinesesimp>
+            <Chinese>綠色X標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlue">
             <English>X blue</English>
@@ -109,6 +156,9 @@
             <Portuguese>X em azul</Portuguese>
             <Russian>Синий Х</Russian>
             <Japanese>青の X印</Japanese>
+            <Korean>파랑 X</Korean>
+            <Chinesesimp>蓝色X标记</Chinesesimp>
+            <Chinese>藍色X標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Black spray paint</English>
@@ -121,6 +171,9 @@
             <Portuguese>Spray de tinta preta</Portuguese>
             <Russian>Черный спрей</Russian>
             <Japanese>黒のスプレー缶</Japanese>
+            <Korean>검정 스프레이</Korean>
+            <Chinesesimp>黑色喷漆</Chinesesimp>
+            <Chinese>黑色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Red spray paint</English>
@@ -133,6 +186,9 @@
             <Portuguese>Spray de tinta vermelha</Portuguese>
             <Russian>Красный спрей</Russian>
             <Japanese>赤のスプレー缶</Japanese>
+            <Korean>빨강 스프레이</Korean>
+            <Chinesesimp>红色喷漆</Chinesesimp>
+            <Chinese>紅色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Green spray paint</English>
@@ -145,6 +201,9 @@
             <Portuguese>Spray de tinta verde</Portuguese>
             <Russian>Зеленый спрей</Russian>
             <Japanese>緑のスプレー缶</Japanese>
+            <Korean>초록 스프레이</Korean>
+            <Chinesesimp>绿色喷漆</Chinesesimp>
+            <Chinese>綠色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Blue spray paint</English>
@@ -157,18 +216,24 @@
             <Portuguese>Spray de tinta azul</Portuguese>
             <Russian>Синий спрей</Russian>
             <Japanese>青のスプレー缶</Japanese>
+            <Korean>파랑 스프레이</Korean>
+            <Chinesesimp>蓝色喷漆</Chinesesimp>
+            <Chinese>藍色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
-            <French>Un spray de peinture pour taguer les murs.</French>
+            <French>Un spray de peinture pour marquer les murs.</French>
             <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
             <Japanese>スプレー缶は壁にタグ付できます。</Japanese>
+            <Korean>벽에 뿌릴 수 있는 스프레이캔 입니다.</Korean>
+            <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
+            <Chinese>噴漆可噴塗在牆壁上</Chinese>
         </Key>
     </Package>
 </Project>

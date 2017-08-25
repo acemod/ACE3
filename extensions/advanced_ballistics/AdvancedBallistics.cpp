@@ -93,7 +93,8 @@ double calculateAirDensity(double temperature, double pressure, double relativeH
     pressure = pressure * 100;
 
     if (relativeHumidity > 0) {
-        double _pSat = 6.1078 * pow(10, ((7.5 * temperature) / (temperature + 237.3)));
+        // 610.78 gives pressure in Pa - https://en.wikipedia.org/wiki/Density_of_air
+        double _pSat = 610.78 * pow(10, ((7.5 * temperature) / (temperature + 237.3)));
         double vaporPressure = relativeHumidity * _pSat;
         double partialPressure = pressure - vaporPressure;
 
@@ -338,7 +339,13 @@ double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHe
 
 extern "C"
 {
-   EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
+    EXPORT void __stdcall RVExtensionVersion(char *output, int outputSize);
+    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
+}
+
+void __stdcall RVExtensionVersion(char *output, int outputSize)
+{
+    strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
 }
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function)
@@ -681,7 +688,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         if (TOF > 0) {
             double bulletDir = atan2(velocity[0], velocity[1]);
-            double spinAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / pow(TOF, 0.17);
+            double r1 = pow(TOF - deltaT, 0.17);
+            double r2 = pow(TOF, 0.17);
+            double spinAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / ((r1 + r2) / 2.0f);
             velocityOffset[0] += sin(bulletDir + M_PI / 2) * spinAccel * deltaT;
             velocityOffset[1] += cos(bulletDir + M_PI / 2) * spinAccel * deltaT;
         }

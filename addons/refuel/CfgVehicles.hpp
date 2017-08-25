@@ -5,7 +5,7 @@
             class GVAR(Refuel) { \
                 displayName = CSTRING(Refuel); \
                 distance = REFUEL_ACTION_DISTANCE; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -119,6 +119,11 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 10;
             };
+            class hoseLength {
+                displayName = CSTRING(RefuelSettings_hoseLength_DisplayName);
+                typeName = "NUMBER";
+                defaultValue = 12;
+            };
         };
     };
 
@@ -141,20 +146,17 @@ class CfgVehicles {
     class NonStrategic: Building {};
     class HouseBase: NonStrategic {};
     class House: HouseBase {};
-    class House_F: House {};
-
-    class House_Small_F: House_F {
-        class EventHandlers;
-
+    class House_F: House {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
                 selection = "";
-                distance = 10;
+                distance = 5;
                 condition = "true";
             };
         };
     };
+    class House_Small_F: House_F {};
 
     class AllVehicles: All {
         GVAR(flowRate) = 1;
@@ -477,7 +479,7 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
-
+    // Vanilla fuel objects
     class StorageBladder_base_F: NonStrategic {
         class ACE_Actions {
             class ACE_MainActions {
@@ -493,18 +495,31 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        MACRO_REFUEL_ACTIONS
         transportFuel = 0; //60k
+        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-3.35,2.45,0.17}};
         GVAR(fuelCargo) = 60000;
     };
 
+    class FlexibleTank_base_F: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                position = "[0, 0, 0.5]";
+                distance = 4;
+                condition = "true";
+            };
+        };
+    };
+    class Land_FlexibleTank_01_F: FlexibleTank_base_F {
+        transportFuel = 0; //300
+        MACRO_REFUEL_ACTIONS
+        GVAR(hooks)[] = {{0, 0, 0.5}};
+        GVAR(fuelCargo) = 300;
+    };
+
     // Vanilla buildings
     class Land_Fuelstation_Feed_F: House_Small_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0,0,-0.5}};
@@ -512,14 +527,39 @@ class CfgVehicles {
     };
 
     class Land_fs_feed_F: House_Small_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-0.4,0.022,-.23}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
+    };
+
+    class Land_FuelStation_01_pump_F: House_F {
+        transportFuel = 0; //50k
+        MACRO_REFUEL_ACTIONS
+        GVAR(hooks)[] = {{0, 0.4, -0.5}, {0, -0.4, -0.5}};
+        GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
+    };
+    class Land_FuelStation_01_pump_malevil_F: House_F {
+        transportFuel = 0; //50k
+        MACRO_REFUEL_ACTIONS
+        GVAR(hooks)[] = {{0, 0.4, -0.5}, {0, -0.4, -0.5}};
+        GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
+    };
+
+    // Helper object for non-AllVehicles objects
+    class GVAR(helper): Helicopter_Base_F {
+        scope = 1;
+        displayName = "Refuel Helper";
+        model = "\A3\Weapons_f\empty";
+        class ACE_Actions {};
+        class ACE_SelfActions {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
+        damageEffect = "";
+        destrType = "";
+        class HitPoints {};
+        class Turrets {};
+        class TransportItems {};
     };
 
     /* // Barrels found in config  \

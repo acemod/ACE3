@@ -10,18 +10,20 @@
  * Created Dummy <OBJECT>
  *
  * Example:
- * ["500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_createDummy
+ * [player, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_createDummy
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_dummyName", "_dummy"];
-params [["_unit", objNull, [objNull]], ["_magazineClass", "", [""]]];
+params [
+    ["_unit", objNull, [objNull]],
+    ["_magazineClass", "", [""]]
+];
 
-_ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
-_dummyName = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
-_dummy = objNull;
+private _ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
+private _dummyName = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
+private _dummy = objNull;
 if !(_dummyName == "") then {
     _dummy = _dummyName createVehicle (position _unit);
 } else {
@@ -29,5 +31,7 @@ if !(_dummyName == "") then {
 };
 _dummy allowDamage false;
 _dummy setVariable [QGVAR(magazineClass), _magazineClass, true];
+
+TRACE_4("createdDummy",_unit,_magazineClass,_dummyName,_dummy);
 
 _dummy

@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
     if (GVAR(effects) == 0) exitWith {};
 
     // ---Add the TINT Effect---
-    
+
     // make sure to stack effect layers in correct order
     GVAR(GogglesEffectsLayer) = QGVAR(GogglesEffectsLayer) call BIS_fnc_RSCLayer;
     GVAR(GogglesLayer) = QGVAR(GogglesLayer) call BIS_fnc_RSCLayer;
@@ -28,6 +28,26 @@ if (!hasInterface) exitWith {};
     if (isNil QGVAR(UsePP)) then {
         GVAR(UsePP) = true;
     };
+
+    // init pp effects
+    GVAR(PostProcess) = ppEffectCreate ["ColorCorrections", 1995];
+    GVAR(EffectsActive) = false;
+
+    // add glasses eventhandlers
+    ["ace_glassesChanged", {
+        params ["_unit", "_glasses"];
+        TRACE_2("ace_glassesChanged eh",_unit,_glasses);
+
+        SETGLASSES(_unit,GLASSESDEFAULT);
+
+        if (call FUNC(ExternalCamera)) exitWith {call FUNC(RemoveGlassesEffect)};
+
+        if ([_unit] call FUNC(isGogglesVisible)) then {
+            [_unit, _glasses] call FUNC(applyGlassesEffect);
+        } else {
+            call FUNC(removeGlassesEffect);
+        };
+    }] call CBA_fnc_addEventHandler;
 
     // init GlassesChanged eventhandler
     GVAR(OldGlasses) = "<null>";
@@ -40,12 +60,9 @@ if (!hasInterface) exitWith {};
             ["ace_glassesChanged", [_unit, _currentGlasses]] call CBA_fnc_localEvent;
             GVAR(OldGlasses) = _currentGlasses;
         };
-    }] call CBA_fnc_addPlayerEventHandler;
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
 
-    // init pp effects
-    GVAR(PostProcess) =     ppEffectCreate ["ColorCorrections", 1995];
-    GVAR(EffectsActive) = false;
 
     // check goggles
     private _fnc_checkGoggles = {
@@ -57,7 +74,7 @@ if (!hasInterface) exitWith {};
             };
         } else {
             if (!(call FUNC(externalCamera)) && {[_unit] call FUNC(isGogglesVisible)}) then {
-                [goggles _unit] call FUNC(applyGlassesEffect);
+                [_unit, goggles _unit] call FUNC(applyGlassesEffect);
             };
         };
     };
@@ -65,21 +82,6 @@ if (!hasInterface) exitWith {};
     ["cameraView", _fnc_checkGoggles] call CBA_fnc_addPlayerEventHandler;
     ["ace_activeCameraChanged", _fnc_checkGoggles] call CBA_fnc_addEventHandler;
 
-
-    // add glasses eventhandlers
-    ["ace_glassesChanged", {
-        params ["_unit", "_glasses"];
-
-        SETGLASSES(_unit,GLASSESDEFAULT);
-
-        if (call FUNC(ExternalCamera)) exitWith {call FUNC(RemoveGlassesEffect)};
-
-        if ([_unit] call FUNC(isGogglesVisible)) then {
-            _glasses call FUNC(applyGlassesEffect);
-        } else {
-            call FUNC(removeGlassesEffect);
-        };
-    }] call CBA_fnc_addEventHandler;
 
 
     // // ---Add the Dust/Dirt/Rain Effects---
@@ -96,7 +98,7 @@ if (!hasInterface) exitWith {};
         GVAR(PostProcessEyes) ppEffectCommit 0;
         GVAR(PostProcessEyes) ppEffectEnable false;
         GVAR(PostProcessEyes_Enabled) = false;
-        
+
         GVAR(FrameEvent) = [false, [false, 20]];
         GVAR(DustHandler) = -1;
         GVAR(RainDrops) = objNull;

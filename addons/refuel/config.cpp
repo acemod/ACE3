@@ -17,3 +17,7 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_Tests {
+    vehicleTransportFuel = QPATHTOF(dev\test_debugConfigs.sqf);
+};

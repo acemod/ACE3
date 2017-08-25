@@ -31,7 +31,7 @@ private ["_config","_callback", "_weaponSelect"];
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
-if (vehicle _caller == _caller) then {
+if (vehicle _caller == _caller && {!underwater _caller}) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];
@@ -40,7 +40,7 @@ _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
 if (_weaponSelect != "") then {
     _caller selectWeapon _weaponSelect;
 } else {
-    _caller action ["SwitchWeapon", _caller, _caller, 99];
+    _caller action ["SwitchWeapon", _caller, _caller, 299];
 };
 
 //Unclaim repair objects:

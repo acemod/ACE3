@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_treatmentBasic_morphineLocal
+ *
  * Public: No
  */
 
