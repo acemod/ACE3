@@ -83,7 +83,7 @@ ACE3 requires Arma 3 and the latest version of <a href="https://github.com/CBATe
 
 ## Contributing
 
-You can help out with the ongoing development by looking for potential bugs in our code base, or by contributing new features. We are always welcoming new pull requests containing bug fixes and refactors. We have a list of tasks and bugs on our issue tracker on Github. Please comment on issues if you want to take it to avoid duplicating effort! Similarly, if a maintainer is already assigned on an issue you'd like to participate in, pinging him on Slack or Github to offer your help is the best way to go.
+You can help out with the ongoing development by looking for potential bugs in our code base, or by contributing new features. We are always welcoming new pull requests containing bug fixes, refactors and new features. We have a list of tasks and bugs on our issue tracker on Github. Please comment on issues if you want to contribute with, to avoid duplicating effort.
 
 ### Contribution guidelines
 
