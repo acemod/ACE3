@@ -28,7 +28,7 @@ class CfgMagazines {
         ACE_Explosives_Placeable = 1;  // Can be placed
         useAction = 0;  // Disable the vanilla interaction
         ACE_Explosives_SetupObject = "banana_satchel_place";  // The object placed before the explosive is armed
-        ACE_Explosives_DelayTime = 1.5; // Seconds between trigger activation and explosion
+        ACE_Explosives_DelayTime = 1.5;  // Seconds between trigger activation and explosion
         class ACE_Triggers {  // Trigger configurations
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};  // Triggers that can be used
             class Timer {
@@ -54,8 +54,8 @@ class CfgAmmo {
         soundDeactivation[] = {"", 0, 0, 0};  // No sound on deactivation
         triggerWhenDestroyed = 1;  // (Optional) Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled).
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
-        ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12}; // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
-        ACE_explosives_size = 0; // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
+        ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12};  // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
+        ACE_explosives_size = 0;  // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
     };
 };
 ```
@@ -112,7 +112,7 @@ class CfgWeapons {
         displayName = "banana clacker";  // Name of the item
         picture = "";  // Path to the item's picture
         ACE_Explosives_Range = 9000;  // Explosives activation range in meters
-        ACE_Explosives_triggerType = "Command"; // Trigger type, see below
+        ACE_Explosives_triggerType = "Command";  // Trigger type, see below
     };
 };
 ```
@@ -193,7 +193,7 @@ Jammer that blocks RF triggers:
 ```cpp
 [{
     params ["_unit", "_range", "_explosive", "_fuzeTime", "_triggerItem"];
-    if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false }; // always block cell phones
+    if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false };  // always block cell phones
     if (_triggerItem == "ace_m26_clacker") exitWith {
         _range = _range / 1000;
         private _actualRange = _unit distance _explosive;
