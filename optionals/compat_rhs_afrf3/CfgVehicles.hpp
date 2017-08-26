@@ -100,6 +100,7 @@ class CfgVehicles {
         };
     };
     class rhs_bmp1tank_base: Tank_F {
+        EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
         EGVAR(refuel,fuelCapacity) = 460;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -140,6 +141,7 @@ class CfgVehicles {
         };
     };
     class rhs_btr_base: Wheeled_APC_F {
+        EGVAR(map,vehicleLightColor)[] = {0,0,1,0.1};
         EGVAR(refuel,fuelCapacity) = 300;
         class Turrets: Turrets {
             class MainTurret: MainTurret  {
@@ -264,6 +266,7 @@ class CfgVehicles {
     };
     class Heli_Light_02_base_F: Helicopter_Base_H {};
     class RHS_Mi8_base : Heli_Light_02_base_F {
+        EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 3700;
         EGVAR(fastroping,enabled) = 0;
         class EventHandlers: EventHandlers {
@@ -333,6 +336,7 @@ class CfgVehicles {
     };
 
     class RHS_Mi24_base : Heli_Attack_02_base_F {
+        EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 1851;
         EGVAR(fastroping,enabled) = 0;
         class Turrets: Turrets {

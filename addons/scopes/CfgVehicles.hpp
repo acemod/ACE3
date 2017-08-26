@@ -11,7 +11,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.2;
                     //icon = QPATHTOF(UI\...); // TODO
-                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSwimming", "isNotSitting"};
                 };
             };
         };

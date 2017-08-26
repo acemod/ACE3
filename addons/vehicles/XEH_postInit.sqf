@@ -15,7 +15,7 @@ GVAR(isSpeedLimiter) = false;
         true
     } else {
         // Conditions: canInteract
-        if !([ACE_player, objNull, ["isnotinside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+        if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
         // Conditions: specific
         if !(ACE_player == driver vehicle ACE_player &&
         {vehicle ACE_player isKindOf 'Car' ||
