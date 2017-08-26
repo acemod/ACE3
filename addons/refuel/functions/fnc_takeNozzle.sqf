@@ -60,7 +60,10 @@ params [
                 _nozzle setVariable [QGVAR(helper), _helper, true];
                 _ropeTarget = _helper;
             };
-            private _attachPos = getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks));
+            private _attachPos = _source getVariable [QGVAR(hooks), getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks))];
+            if (_attachPos isEqualTo []) then {
+                _attachPos = [[0,0,0]];
+            };
             if (count _attachPos == 1) then {
                 _attachPos = _attachPos select 0;
             } else {

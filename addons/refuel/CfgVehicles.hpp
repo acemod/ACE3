@@ -1,48 +1,3 @@
-
-#define MACRO_REFUEL_ACTIONS \
-    class ACE_Actions: ACE_Actions { \
-        class ACE_MainActions: ACE_MainActions { \
-            class GVAR(Refuel) { \
-                displayName = CSTRING(Refuel); \
-                distance = REFUEL_ACTION_DISTANCE; \
-                condition = "alive _target"; \
-                statement = ""; \
-                exceptions[] = {INTERACT_EXCEPTIONS}; \
-                showDisabled = 0; \
-                priority = 2; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                class GVAR(TakeNozzle) { \
-                    displayName = CSTRING(TakeNozzle); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-                    statement = QUOTE([ARR_3(_player,_target,objNull)] call FUNC(TakeNozzle)); \
-                    exceptions[] = {"isNotInside", "isNotOnLadder"}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
-                class GVAR(CheckFuelCounter) { \
-                    displayName = CSTRING(CheckFuelCounter); \
-                    condition = "true"; \
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(readFuelCounter)); \
-                    exceptions[] = {INTERACT_EXCEPTIONS}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
-                class GVAR(CheckFuel) { \
-                    displayName = CSTRING(CheckFuel); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckFuel)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkFuel)); \
-                    exceptions[] = {INTERACT_EXCEPTIONS}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
-                class GVAR(Return) { \
-                    displayName = CSTRING(Return); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(returnNozzle)); \
-                    exceptions[] = {INTERACT_EXCEPTIONS}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
-            }; \
-        }; \
-    };
-
 #define MACRO_NOZZLE_ACTIONS \
     class ACE_Actions { \
         class ACE_MainActions { \
@@ -148,9 +103,6 @@ class CfgVehicles {
 
     class AllVehicles: All {
         GVAR(flowRate) = 1;
-        class ACE_Actions {
-            class ACE_MainActions;
-        };
     };
     class Land: AllVehicles {};
     class LandVehicle: Land {};
@@ -288,7 +240,6 @@ class CfgVehicles {
     };
 
     class Van_01_fuel_base_F: Van_01_base_F {
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
         GVAR(fuelCargo) = 2000;
     };
@@ -313,7 +264,6 @@ class CfgVehicles {
 
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-1.08,-4.81,-.8}};
         GVAR(fuelCargo) = 1000;
     };
@@ -417,21 +367,18 @@ class CfgVehicles {
     // Vanilla fuel vehicles
     class Truck_02_fuel_base_F: Truck_02_base_F {
         transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
         GVAR(fuelCargo) = 10000;
     };
 
     class B_Truck_01_fuel_F: B_Truck_01_mover_F {
         transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{.28,-4.99,-.3},{-.25,-4.99,-.3}};
         GVAR(fuelCargo) = 10000;
     };
 
     class O_Truck_03_fuel_F: Truck_03_base_F {
         transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{1.3,-1.59,-.62},{-1.16,-1.59,-.62}};
         GVAR(fuelCargo) = 10000;
     };
@@ -446,7 +393,6 @@ class CfgVehicles {
     class Pod_Heli_Transport_04_base_F: Slingload_base_F {};
     class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
         transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-1.49,1.41,-.3}};
         GVAR(fuelCargo) = 10000;
     };
@@ -454,14 +400,12 @@ class CfgVehicles {
     class Slingload_01_Base_F: Slingload_base_F {};
     class B_Slingload_01_Fuel_F: Slingload_01_Base_F {
         transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
         GVAR(fuelCargo) = 10000;
     };
 
     class O_Heli_Transport_04_fuel_F: Heli_Transport_04_base_F  {
         transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-1.52,1.14,-1.18}};
         GVAR(fuelCargo) = 10000;
     };
@@ -483,7 +427,6 @@ class CfgVehicles {
         };
 
         transportFuel = 0; //60k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-3.35,2.45,0.17}};
         GVAR(fuelCargo) = 60000;
     };
@@ -500,7 +443,6 @@ class CfgVehicles {
     };
     class Land_FlexibleTank_01_F: FlexibleTank_base_F {
         transportFuel = 0; //300
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0, 0, 0.5}};
         GVAR(fuelCargo) = 300;
     };
@@ -508,27 +450,23 @@ class CfgVehicles {
     // Vanilla buildings
     class Land_Fuelstation_Feed_F: House_Small_F {
         transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0,0,-0.5}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
     class Land_fs_feed_F: House_Small_F {
         transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-0.4,0.022,-.23}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
     class Land_FuelStation_01_pump_F: House_F {
         transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0, 0.4, -0.5}, {0, -0.4, -0.5}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
     class Land_FuelStation_01_pump_malevil_F: House_F {
         transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0, 0.4, -0.5}, {0, -0.4, -0.5}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };

@@ -19,6 +19,7 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define REFUEL_INFINITE_FUEL -10
+#define REFUEL_DISABLED_FUEL -1
 #define REFUEL_ACTION_DISTANCE 7
 #define REFUEL_NOZZLE_ACTION_DISTANCE 2
 #define REFUEL_PROGRESS_DURATION 2
