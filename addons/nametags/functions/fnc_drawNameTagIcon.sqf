@@ -31,7 +31,7 @@ _fnc_parameters = {
 
     //Set Icon:
     private _icon = "";
-	// W- _size normalized to 1 to avoid height fluctations
+    // W- _size normalized to 1 to avoid height fluctations
     private _size = 1;
     if (_drawSoundwave) then {
         _icon = format [QPATHTOF(UI\soundwave%1.paa), floor random 10];
