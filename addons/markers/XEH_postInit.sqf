@@ -23,8 +23,8 @@ GVAR(currentMarkerConfigName) = "";
 [QGVAR(applyMarkerPosLocal), {
     params["_marker", "_pos"];
     _marker setMarkerPosLocal _pos;
-    
-     if (isServer) then {
+
+    if (isServer) then {
         private _index = (GETGVAR(allMapMarkers,[])) find _marker; // case-sensitive, but should be fine
         if (_index < 0) exitWith {ERROR_1("Could not find data for %1", _marker);};
         private _data = GVAR(allMapMarkersProperties) select _index;
@@ -34,6 +34,7 @@ GVAR(currentMarkerConfigName) = "";
 
 ["ace_settingsInitialized", {
     if (GVAR(movableMarkersEnabled)) then {
+        if (!hasInterface) exitWith {};
         [{
             !isNull (findDisplay 12)
         }, {
