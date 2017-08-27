@@ -21,11 +21,18 @@ BEGIN_COUNTER(updateCursor);
 private _camTarget = GVAR(camTarget);
 private _cursorObject = objNull;
 
-// This function doesn't work for units underwater, due to use of screenToWorld. Would be complicated to work around this.
-private _intersections = [getMousePosition select 0, getMousePosition select 1, _camTarget, vehicle _camTarget] call BIS_fnc_getIntersectionsUnderCursor;
+// This doesn't work for units underwater due to use of screenToWorld
+// Would be hard to work around due to parallax
+private _start = AGLToASL positionCameraToWorld [0,0,0];
+private _end = AGLToASL screenToWorld getMousePosition;
 
-if !(_intersections isEqualTo []) then {
-    _cursorObject = effectiveCommander ((_intersections select 0) select 3);
+// Can only select units within name drawing distance
+if ((_start distanceSqr _end) <= DISTANCE_NAMES_SQR) then {
+    private _intersections = lineIntersectsSurfaces [_start, _end, _camTarget, vehicle _camTarget];
+
+    if !(_intersections isEqualTo []) then {
+        _cursorObject = effectiveCommander ((_intersections select 0) select 3);
+    };
 };
 
 GVAR(cursorObject) = _cursorObject;
