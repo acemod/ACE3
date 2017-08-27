@@ -46,10 +46,10 @@ if !(GVAR(uiMapVisible)) then {
             _x params ["_unit", "_type", "_icon"];
             private _position = (_unit modelToWorldVisual (_unit selectionPosition "Head")) vectorAdd [0,0,HEIGHT_OFFSET];
 
-            if (_type == 2 && {_unit in _camTarget || _unit in _cursorObject}) then {
+            if (_type == 2 && {_unit == _camTarget || _unit == _cursorObject}) then {
                 drawIcon3D [
                     ICON_BACKGROUND_UNIT,
-                    [0, 0, 0, [0.4, 0.8] select (_unit in _camTarget)],
+                    [0, 0, 0, [0.4, 0.8] select (_unit == _camTarget)],
                     _position,
                     5,
                     4,
