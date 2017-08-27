@@ -81,8 +81,8 @@ private _camPos = AGLToASL positionCameraToWorld [0,0,0];
                 "center"
             ]];
         } else {
-            // Draw group name for leader on foot
-            if (_isLeader) then {
+            // Draw group name for effective commander or leader on foot
+            if (_inVehicle || _isLeader) then {
                 _iconsToDraw pushBack [_x, 0, [
                     "",
                     [1,1,1,_fadeByDistance],
