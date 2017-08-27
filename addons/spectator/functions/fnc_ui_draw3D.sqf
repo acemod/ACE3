@@ -19,6 +19,7 @@
 
 BEGIN_COUNTER(updateCursor);
 private _camTarget = GVAR(camTarget);
+private _camTargetVeh = vehicle _camTarget;
 private _cursorObject = objNull;
 
 // This doesn't work for units underwater due to use of screenToWorld
@@ -28,7 +29,7 @@ private _end = AGLToASL screenToWorld getMousePosition;
 
 // Can only select units within name drawing distance
 if ((_start distanceSqr _end) <= DISTANCE_NAMES_SQR) then {
-    private _intersections = lineIntersectsSurfaces [_start, _end, _camTarget, vehicle _camTarget];
+    private _intersections = lineIntersectsSurfaces [_start, _end, _camTarget, _camTargetVeh];
 
     if !(_intersections isEqualTo []) then {
         _cursorObject = effectiveCommander ((_intersections select 0) select 3);
@@ -46,10 +47,11 @@ if !(GVAR(uiMapVisible)) then {
             _x params ["_unit", "_type", "_icon"];
             private _position = (_unit modelToWorldVisual (_unit selectionPosition "Head")) vectorAdd [0,0,HEIGHT_OFFSET];
 
-            if (_type == 2 && {_unit == _camTarget || _unit == _cursorObject}) then {
+            // Cursor object is always effectiveCommander so no need to check `in`
+            if (_type == 2 && {_unit in _camTargetVeh || _unit == _cursorObject}) then {
                 drawIcon3D [
                     ICON_BACKGROUND_UNIT,
-                    [0, 0, 0, [0.4, 0.8] select (_unit == _camTarget)],
+                    [0, 0, 0, [0.4, 0.8] select (_unit in _camTargetVeh)],
                     _position,
                     5,
                     4,
