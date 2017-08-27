@@ -132,14 +132,14 @@ private _camPos = AGLToASL positionCameraToWorld [0,0,0];
             "PuristaMedium",
             "center"
         ]];
-    };
 
-    // Track entities themselves for use with fired EH
-    _entitiesToDraw pushBack _vehicle;
+        // Track entities themselves for use with fired EH
+        _entitiesToDraw pushBack _vehicle;
 
-    // Add fired EH for drawing and icon highlighting
-    if (GETVAR(_vehicle,GVAR(firedEH),-1) == -1) then {
-        SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
+        // Add fired EH for drawing and icon highlighting
+        if (GETVAR(_vehicle,GVAR(firedEH),-1) == -1) then {
+            SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
+        };
     };
 
     nil // Speed loop
