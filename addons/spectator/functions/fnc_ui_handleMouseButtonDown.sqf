@@ -33,11 +33,13 @@ if (_button == 0) exitWith {
             [objNull] call FUNC(setFocus);
         };
     } else {
-        playSound "ReadoutClick";
+        if (GVAR(cursorObject) in ([] call FUNC(getTargetEntities))) then {
+            playSound "ReadoutClick";
 
-        // Focus will be at screen center
-        [GVAR(cursorObject)] call FUNC(setFocus);
-        setMousePosition [0.5, 0.5];
+            // Focus will be at screen center
+            [GVAR(cursorObject)] call FUNC(setFocus);
+            setMousePosition [0.5, 0.5];
+        };
     };
 };
 
