@@ -19,10 +19,12 @@
 private _iconsToDraw = [];
 private _entitiesToDraw = [];
 
+// camToWorld is used instead of camera object to account for FPP
+private _camPos = AGLToASL positionCameraToWorld [0,0,0];
 {
     private _vehicle = vehicle _x;
     private _inVehicle = (_vehicle != _x);
-    private _distanceToCameraSqr = GVAR(camera) distanceSqr _x;
+    private _distanceToCameraSqr = _camPos distanceSqr _x;
 
     if (_distanceToCameraSqr <= DISTANCE_ICONS_SQR && { !_inVehicle || { _x == effectiveCommander _vehicle } }) then {
         private _group = group _x;
