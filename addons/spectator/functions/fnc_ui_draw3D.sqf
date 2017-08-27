@@ -25,11 +25,7 @@ private _cursorObject = objNull;
 private _intersections = [getMousePosition select 0, getMousePosition select 1, _camTarget, vehicle _camTarget] call BIS_fnc_getIntersectionsUnderCursor;
 
 if !(_intersections isEqualTo []) then {
-    _cursorObject = (_intersections select 0) select 3;
-};
-
-if !(_cursorObject isKindOf "Man") then {
-    _cursorObject = effectiveCommander _cursorObject;
+    _cursorObject = effectiveCommander ((_intersections select 0) select 3);
 };
 
 GVAR(cursorObject) = _cursorObject;
