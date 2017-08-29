@@ -11,7 +11,8 @@
  * None
  *
  * Example:
- * ["item", vehicle] call ace_cargo_fnc_removeCargoItem
+ * ["ACE_Wheel", vehicle, 2] call ace_cargo_fnc_removeCargoItem
+ * [crate_7, truck] call ace_cargo_fnc_removeCargoItem
  *
  * Public: Yes
  */
@@ -28,7 +29,7 @@ private _addedSpace = 0;
 {
     if (_itemsRemoved == _amount) exitWith {};
 
-    if (_x isEqualTo _item || {_x isEqualType objNull && {typeOf _x == _item}}) then {
+    if (_x isEqualTo _item || {_x isEqualType objNull && {typeOf _x isEqualTo _item}}) then {
         INC(_itemsRemoved);
         ADD(_addedSpace,[_x] call FUNC(getSizeItem));
 
@@ -44,6 +45,11 @@ _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
 private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _vehicle setVariable [QGVAR(space), _space + _addedSpace, true];
+
+// No point in returning a deleted object in the event
+if (_item isEqualType objNull) then {
+    _item = typeOf _item;
+};
 
 // Invoke listenable event
 ["ace_cargoRemoved", [_item, _vehicle, _amount]] call CBA_fnc_globalEvent;
