@@ -145,7 +145,6 @@ Note first arg can be a in-game object or a classname of an object type.
 
 ### 4.6 Remove/ Delete cargo from vehicle (Added in ACE3 3.11.0)
 
-
 `ace_cargo_fnc_removeCargoItem`
 
 ```cpp
@@ -158,5 +157,6 @@ Note first arg can be a in-game object or a classname of an object type.
  * None
  *
  * Example:
- * ["item", vehicle] call ace_cargo_fnc_removeCargoItem
+ * ["ACE_Wheel", vehicle, 2] call ace_cargo_fnc_removeCargoItem
+ * [crate_7, truck] call ace_cargo_fnc_removeCargoItem
 ```
