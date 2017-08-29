@@ -30,8 +30,9 @@ if (isServer) then {
 if (hasInterface) then {
     // Local player (not ACE_Player) must be initalized to check
     [
-        { !isNil { player } && { !isNull player } },
-        { if (player isKindOf QGVAR(virtual)) then { [true] call FUNC(setSpectator) }; },
-        []
+        { !isNull player },
+        {
+            if (player isKindOf QGVAR(virtual)) then { [true] call FUNC(setSpectator); };
+        }
     ] call CBA_fnc_waitUntilAndExecute;
 };

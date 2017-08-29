@@ -34,9 +34,9 @@ GVAR(uiForced) = _force;
 if (_set isEqualTo GVAR(isSet)) exitWith {};
 
 // Delay if local player (must not be ACE_Player) is not fully initalized
-if (isNil { player } || { isNull player }) exitWith {
+if (isNull player) exitWith {
     [
-        { !isNil { player } && { !isNull player } },
+        { !isNull player },
         FUNC(setSpectator),
         _this
     ] call CBA_fnc_waitUntilAndExecute;
