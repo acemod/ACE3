@@ -31,6 +31,9 @@ if (_respawn in [0,1,4,5]) exitWith {
     if (typeOf _newCorpse == "seagull") then { deleteVehicle _newCorpse; };
 };
 
+// Virtual spectators should be ignored by the template (otherwise they break)
+if (_newCorpse isKindOf QGVAR(virtual)) exitWith {};
+
 // If player died while already in spectator, ignore
 if (!GVAR(isSet) || {alive _newCorpse}) then {
     // Negligible respawn delay can result in entering spectator after respawn
