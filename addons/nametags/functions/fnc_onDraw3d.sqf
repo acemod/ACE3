@@ -108,9 +108,10 @@ if (_enabledTagsNearby) then {
             // W-
             private _alpha = 
             (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistanceNearby)) min 1) * GVAR(playerNamesMaxAlpha) * _centerOffsetFactor) min _alphaMax;
-
+			//= ((linearConversion[_maxDistanceNearby/1.3,_maxDistanceNearby,_distance,_alphaMax,0,true] + ([0,0.2] select _drawSoundWave)) min _alphaMax);
+			
             if (_alpha > 0) then {
-                [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
+                [ACE_player, _target, _alpha, (_distance * 0.05), _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
             };
         };
         nil
@@ -152,7 +153,7 @@ if (_enabledTagsCursor) then {
         private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistanceCursor)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
 
         if (_alpha > 0) then {
-            [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
+            [ACE_player, _target, _alpha, (_distance * 0.05), _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon); // 0.026
         };
     };
 };
