@@ -3,13 +3,16 @@
  * Reload a launcher
  *
  * Arguments:
- * 0: Unit with magazine (Object)
- * 1: Unit with launcher (Object)
- * 2: weapon name (String)
- * 3: missile name (String)
+ * 0: Unit with magazine <OBJECT>
+ * 1: Unit with launcher <OBJECT>
+ * 2: weapon name <STRING>
+ * 3: missile name <STRING>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_load
  *
  * Public: No
  */
@@ -45,4 +48,4 @@ _condition = {
     (_this select 0) call DFUNC(canLoad) && {(_this select 0 select 0) distance (_this select 0 select 1) < 4}
 };
 
-[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, localize LSTRING(LoadingLauncher), _condition] call EFUNC(common,progressBar);
+[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, localize LSTRING(LoadingLauncher), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);

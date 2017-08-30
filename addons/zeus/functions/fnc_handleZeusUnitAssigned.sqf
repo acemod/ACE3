@@ -14,6 +14,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, bob] call ace_zeus_fnc_handleZeusUnitAssigned
+ *
  * Public: No
  */
 

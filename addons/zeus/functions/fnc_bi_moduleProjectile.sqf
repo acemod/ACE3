@@ -12,6 +12,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleProjectile
+ *
  * Public: No
  */
 

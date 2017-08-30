@@ -12,6 +12,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selectionname", "classname", ["bandage"]] call ACE_medical_fnc_treatment_failure
+ *
  * Public: No
  */
 
@@ -23,7 +26,7 @@ _args params ["_caller", "_target", "_selectionName", "_className", "_items", "_
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
-if (vehicle _caller == _caller) then {
+if (vehicle _caller == _caller && {!underwater _caller}) then {
     private _lastAnim = _caller getVariable [QGVAR(treatmentPrevAnimCaller), ""];
     //Don't play another medic animation (when player is rapidily treating)
     TRACE_2("Reseting to old animation", animationState player, _lastAnim);
@@ -34,7 +37,6 @@ if (vehicle _caller == _caller) then {
         case "ainvppnemstpslaywpstdnon_medic": {_lastAnim = "AinvPpneMstpSlayWpstDnon"};
         case "ainvpknlmstpslaywpstdnon_medic": {_lastAnim = "AmovPknlMstpSrasWpstDnon"};
     };
-
     [_caller, _lastAnim, 2] call EFUNC(common,doAnimation);
 };
 _caller setVariable [QGVAR(treatmentPrevAnimCaller), nil];

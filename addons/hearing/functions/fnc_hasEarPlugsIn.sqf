@@ -3,7 +3,7 @@
  * Check if the unit has earplugs put in.
  *
  * Arguments:
- * 0:Unit (player) <OBJECT>
+ * 0: Unit (player) <OBJECT>
  *
  * Return Value:
  * Have Earplugs in <BOOL>

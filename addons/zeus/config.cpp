@@ -13,6 +13,8 @@ class CfgPatches {
             QGVAR(moduleSearchNearby),
             QGVAR(moduleSimulation),
             QGVAR(moduleSuppressiveFire),
+            QGVAR(AddFullArsenal),
+            QGVAR(RemoveFullArsenal),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};

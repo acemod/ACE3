@@ -7,7 +7,7 @@
  * 1: True to surrender, false to un-surrender <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [Pierre, true] call ACE_captives_fnc_setSurrendered;

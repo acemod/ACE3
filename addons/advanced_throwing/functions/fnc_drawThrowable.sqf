@@ -36,6 +36,11 @@ if (_throwable isEqualTo [] && {!_primed}) exitWith {
 
 private _throwableMag = _throwable param [0, "#none"];
 
+// If not primed, double check we actually have the magazine in inventory
+if ((!_primed) && {!((_throwableMag in (uniformItems ACE_player)) || {_throwableMag in (vestItems ACE_player)} || {_throwableMag in (backpackItems ACE_player)})}) exitWith {
+    [ACE_player, "No valid throwable (glitched currentThrowable)"] call FUNC(exitThrowMode);
+};
+
 // Get correct throw power for primed grenade
 if (_primed) then {
     private _ammoType = typeOf _activeThrowable;
@@ -123,6 +128,10 @@ _activeThrowable setDir (_unitDirVisual + 90);
 private _pitch = [-30, -90] select (_throwType == "high");
 [_activeThrowable, _pitch, 0] call BIS_fnc_setPitchBank;
 
+// Force drop mode if underwater
+if (underwater player) then {
+    ACE_player setVariable [QGVAR(dropMode), true];
+};
 
 if (ACE_player getVariable [QGVAR(dropMode), false]) then {
     _posFin = _posFin vectorAdd (AGLToASL (positionCameraToWorld [_leanCoef, 0, ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]]));

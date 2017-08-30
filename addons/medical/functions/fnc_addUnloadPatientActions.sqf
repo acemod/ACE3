@@ -10,6 +10,9 @@
  * Return Value:
  * Children actions <ARRAY>
  *
+ * Example:
+ * [car, kevin, [params]] call ACE_medical_fnc_addUnloadPatientActions
+ *
  * Public: No
  */
 #include "script_component.hpp"

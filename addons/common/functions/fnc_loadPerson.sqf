@@ -9,6 +9,9 @@
  * Return Value:
  * the vehicle that the unitToBeloaded has been loaded in. Returns ObjNull if function failed <OBJECT>
  *
+ * Example:
+ * [bob, kevin] call ace_common_fnc_loadPerson
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -21,7 +24,7 @@ private _vehicle = objNull;
 
 if (!([_caller, _unit, ["isNotDragging", "isNotCarrying"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
 
-private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F"], 10];
+private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F","Pod_Heli_Transport_04_crewed_base_F"], 10];
 
 {
     TRACE_1("",_x);

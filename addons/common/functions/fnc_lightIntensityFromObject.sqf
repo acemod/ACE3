@@ -7,7 +7,10 @@
  * 1: Object that emits light <OBJECT>
  *
  * Return Value:
- * Brightest light level
+ * Brightest light level <NUMBER>
+ *
+ * Example:
+ * [reciever, giver] call ace_common_fnc_lightIntensityFromObject
  *
  * Public: Yes
  */

@@ -8,7 +8,7 @@
  * 1: Air Friction <NUMBER>
  *
  * Return Value:
- * <ARRAY>
+ * Array <ARRAY>
  *
  * Example:
  * [200, 0] call ace_mk6mortar_fnc_rangeTablePreCalculatedValues

@@ -14,6 +14,8 @@
             <Italian>Tavola Balistica</Italian>
             <Japanese>射表</Japanese>
             <Korean>사거리표</Korean>
+            <Chinesesimp>弹道射表</Chinesesimp>
+            <Chinese>彈道射表</Chinese>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -28,6 +30,8 @@
             <Italian>Incrementi per 50 METRI - MRAD/MRAD (reticolo/torrette)</Italian>
             <Japanese>50 メートル増やす -- MRAD/MRAD (照準線/砲塔)</Japanese>
             <Korean>50 미터 늘리기 -- MRAD/MRAD (조준선/포탑)</Korean>
+            <Chinesesimp>50公尺增量 -- 毫弧度/毫弧度 (瞄镜分划线/调整纽)</Chinesesimp>
+            <Chinese>50公尺增量 -- 毫弧度/毫弧度 (瞄鏡分劃線/調整紐)</Chinese>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
@@ -42,6 +46,8 @@
             <Italian>Apri Tavola Balistica</Italian>
             <Japanese>射表を開く</Japanese>
             <Korean>사거리표 열기</Korean>
+            <Chinesesimp>开启弹道射表</Chinesesimp>
+            <Chinese>開啟彈道射表</Chinese>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
@@ -56,6 +62,8 @@
             <Italian>Apri Copia Tavola Balistica</Italian>
             <Japanese>複製された射表を開く</Japanese>
             <Korean>복제 사거리표 열기</Korean>
+            <Chinesesimp>开启弹道射表副本</Chinesesimp>
+            <Chinese>開啟彈道射表副本</Chinese>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
@@ -70,6 +78,8 @@
             <Italian>Apri Tavola Balistica</Italian>
             <Japanese>射表を開く</Japanese>
             <Korean>사거리표 열기</Korean>
+            <Chinesesimp>开启弹道射表</Chinesesimp>
+            <Chinese>開啟彈道射表</Chinese>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
@@ -84,6 +94,8 @@
             <Italian>Apri Copia Tavola Balistica</Italian>
             <Japanese>複製された射表を開く</Japanese>
             <Korean>복제 사거리표 열기</Korean>
+            <Chinesesimp>开启弹道射表副本</Chinesesimp>
+            <Chinese>開啟彈道射表副本</Chinese>
         </Key>
         <Key ID="STR_ACE_RangeCard_CopyRangeCard">
             <English>Copy Range Card</English>
@@ -98,6 +110,8 @@
             <Italian>Copia Tavola Balistica</Italian>
             <Japanese>射表を複製する</Japanese>
             <Korean>사거리표 복제</Korean>
+            <Chinesesimp>复制弹道射表</Chinesesimp>
+            <Chinese>複製彈道射表</Chinese>
         </Key>
     </Package>
 </Project>

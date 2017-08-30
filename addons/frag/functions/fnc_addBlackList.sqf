@@ -6,7 +6,7 @@
  * 0: Projectile <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bullet] call ace_frag_fnc_addBlackList

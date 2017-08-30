@@ -18,7 +18,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "common.hpp";
+#include "common.hpp"
 
 params ["_type"];
 

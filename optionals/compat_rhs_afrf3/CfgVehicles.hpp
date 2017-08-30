@@ -1,34 +1,10 @@
-#define MACRO_REARM_TRUCK_ACTIONS \
-        class ACE_Actions: ACE_Actions { \
-            class ACE_MainActions: ACE_MainActions { \
-                class EGVAR(rearm,TakeAmmo) { \
-                    displayName = ECSTRING(rearm,TakeAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canTakeAmmo)); \
-                    insertChildren = QUOTE(_target call EFUNC(rearm,addRearmActions)); \
-                    exceptions[] = {"isNotInside"}; \
-                    showDisabled = 0; \
-                    priority = 2; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-                class EGVAR(rearm,StoreAmmo) { \
-                    displayName = ECSTRING(rearm,StoreAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canStoreAmmo)); \
-                    statement = QUOTE(_this call EFUNC(rearm,storeAmmo)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-            }; \
-        };
-
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
             class EGVAR(refuel,Refuel) { \
                 displayName = ECSTRING(refuel,Refuel); \
                 distance = 7; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -131,6 +107,7 @@ class CfgVehicles {
         };
     };
     class rhs_bmp1tank_base: Tank_F {
+        EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
         EGVAR(refuel,fuelCapacity) = 460;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -171,6 +148,7 @@ class CfgVehicles {
         };
     };
     class rhs_btr_base: Wheeled_APC_F {
+        EGVAR(map,vehicleLightColor)[] = {0,0,1,0.1};
         EGVAR(refuel,fuelCapacity) = 300;
         class Turrets: Turrets {
             class MainTurret: MainTurret  {
@@ -295,6 +273,7 @@ class CfgVehicles {
     };
     class Heli_Light_02_base_F: Helicopter_Base_H {};
     class RHS_Mi8_base : Heli_Light_02_base_F {
+        EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 3700;
         EGVAR(fastroping,enabled) = 0;
         class EventHandlers: EventHandlers {
@@ -364,6 +343,7 @@ class CfgVehicles {
     };
 
     class RHS_Mi24_base : Heli_Attack_02_base_F {
+        EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 1851;
         EGVAR(fastroping,enabled) = 0;
         class Turrets: Turrets {
@@ -408,7 +388,7 @@ class CfgVehicles {
 
     class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_defaultSupply = 1200;
     };
 
     class MRAP_02_base_F;
@@ -451,6 +431,11 @@ class CfgVehicles {
 
     class rhs_2s3tank_base : Tank_F {
         EGVAR(refuel,fuelCapacity) = 830;
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
     };
 
     class OTR21_Base : Truck_F {

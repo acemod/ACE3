@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [car, [turret]] call ace_fcs_fnc_keyDown
+ *
  * Public: No
  */
 #include "script_component.hpp"

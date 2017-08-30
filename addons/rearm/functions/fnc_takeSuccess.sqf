@@ -18,15 +18,21 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_dummyName", "_dummy", "_actionID"];
-params [["_args", [objNull, "", objNull], [[]]]];
-_args params ["_unit", "_magazineClass", "_target"]; // _target is for future possible finite ammo
+params [["_args", [objNull, "", objNull], [[]], 3]];
+_args params ["_unit", "_magazineClass", "_truck"];
+TRACE_3("takeSuccess",_unit,_magazineClass,_truck);
+
+private _success = true;
+if (GVAR(supply) > 0) then {
+    _success = [_truck, _magazineClass] call FUNC(removeMagazineFromSupply);
+};
+if !(_success) exitWith {WARNING_2("takeSuccess failed to take [%1] from [%2]",_magazineClass,_truck);};
 
 [_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
-_dummy = [_unit, _magazineClass] call FUNC(createDummy);
+private _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 
-_actionID = _unit addAction [
+private _actionID = _unit addAction [
     format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
     '(_this select 0) call FUNC(dropAmmo)',
     nil,

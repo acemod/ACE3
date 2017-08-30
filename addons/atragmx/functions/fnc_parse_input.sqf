@@ -3,10 +3,10 @@
  * Parses all input fields in the gun-, atmosphere- and target column, the result input fields and the muzzle velocity data input fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_parse_input

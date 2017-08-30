@@ -16,6 +16,8 @@
 */
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisID"]; // From CBA_fnc_addBISEventHandler;
+
 params ["_unit", "_anim"];
 _thisArgs params ["_realUnit"];
 TRACE_4("params",_unit,_anim,_realUnit,_thisID);

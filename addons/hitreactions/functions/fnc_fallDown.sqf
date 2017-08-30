@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, kevin, 5] call ACE_hitreactions_fnc_fallDown
+ *
  * Public: No
  */
 #include "script_component.hpp"

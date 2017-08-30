@@ -8,6 +8,9 @@
  * Return Value:
  * Fall animation <STRING>
  *
+ * Example:
+ * [bob] call ACE_hitreactions_fnc_getRandomAnimation
+ *
  * Public: No
  */
 #include "script_component.hpp"
