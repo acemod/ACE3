@@ -12,7 +12,7 @@ before_script:
     pip install pygithub3;
   fi
 script:
-- sqflint addons
+- sqflint -d addons
 - python3 tools/sqf_validator.py
 - python3 tools/config_style_checker.py
 - if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
