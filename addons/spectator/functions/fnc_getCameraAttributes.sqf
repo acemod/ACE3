@@ -17,12 +17,12 @@
 #include "script_component.hpp"
 
 if !(isNil QGVAR(camera)) then {
-    [GVAR(camMode), GVAR(camTarget), GVAR(camVision), getPosATL GVAR(camera), getDirVisual GVAR(camera)]
+    [GVAR(camMode), GVAR(camFocus), GVAR(camVision), getPosATL GVAR(camera), getDirVisual GVAR(camera)]
 } else {
     // These values could be pre-set by function
     [
         GETMVAR(GVAR(camMode),0),
-        GETMVAR(GVAR(camTarget),objNull),
+        GETMVAR(GVAR(camFocus),objNull),
         GETMVAR(GVAR(camVision),-2),
         GETMVAR(GVAR(camPos),[ARR_3(0,0,0)]),
         GETMVAR(GVAR(camDir),0)

@@ -23,7 +23,7 @@
 
 BEGIN_COUNTER(camTick);
 private _cameraMode = GVAR(camMode);
-private _camTarget = GVAR(camTarget);
+private _camTarget = GVAR(camFocus);
 
 // UI mouse handler makes use of delta time between camera ticks
 private _currentTime = diag_tickTime;
@@ -56,7 +56,7 @@ if (_cameraMode != MODE_FREE) then {
 };
 
 // Refresh the local variable
-_camTarget = GVAR(camTarget);
+_camTarget = GVAR(camFocus);
 
 // Focus get in / out of vehicle state
 if !(isNull _camTarget) then {

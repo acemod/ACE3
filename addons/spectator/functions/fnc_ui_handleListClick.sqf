@@ -41,7 +41,7 @@ if !(isNull _object) then {
 
         _handled = true;
     } else {
-        if (_object != GVAR(camTarget)) then {
+        if (_object != GVAR(camFocus)) then {
             [_object] call FUNC(setFocus);
 
             _handled = true;

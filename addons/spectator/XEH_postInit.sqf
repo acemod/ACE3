@@ -26,15 +26,13 @@ if (isServer) then {
 
 [QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;
 
-// Delay until local player (must not be ACE_Player) is fully initalized
-[
-    { !isNil { player } && { !isNull player } },
-    {
-        // Initalise virtual spectator players (must not be ACE_Player)
-        [QGVAR(virtual),"initpost",{
-            if !(GVAR(isSet)) then {
-                if (player == (_this select 0)) then { [true] call FUNC(setSpectator) };
-            };
-        },false,[],true] call CBA_fnc_addClassEventHandler;
-    },[]
-] call CBA_fnc_waitUntilAndExecute;
+// A virtual spectator cannot exist without an interface
+if (hasInterface) then {
+    // Local player (not ACE_Player) must be initalized to check
+    [
+        { !isNull player },
+        {
+            if (player isKindOf QGVAR(virtual)) then { [true] call FUNC(setSpectator); };
+        }
+    ] call CBA_fnc_waitUntilAndExecute;
+};
