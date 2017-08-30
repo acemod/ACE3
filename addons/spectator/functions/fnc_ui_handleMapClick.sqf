@@ -23,7 +23,7 @@ params ["", "", "_x", "_y"];
 
 if (isNull GVAR(uiMapHighlighted)) then {
     // Give user feedback that camera is no longer focused
-    if !(isNull GVAR(camTarget)) then {
+    if !(isNull GVAR(camFocus)) then {
         playSound "ReadoutHideClick1";
     };
 

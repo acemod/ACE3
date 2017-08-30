@@ -22,9 +22,9 @@
 #define IMG_UNARMED "" // TODO: Find suitable unarmed icon
 
 // Hide if no target or widget is toggled off
-if (!GVAR(uiWidgetVisible) || {isNull GVAR(camTarget)}) exitWith {CTRL_WIDGET ctrlShow false};
+if (!GVAR(uiWidgetVisible) || {isNull GVAR(camFocus)}) exitWith {CTRL_WIDGET ctrlShow false};
 
-private _focus = GVAR(camTarget);
+private _focus = GVAR(camFocus);
 
 private _name = ([_focus] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
 if !(isPlayer _focus) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };

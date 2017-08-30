@@ -28,7 +28,7 @@ params ["", "_button"];
 // Left click
 if (_button == 0) exitWith {
     if (isNull GVAR(cursorObject)) then {
-        if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camTarget) }) then {
+        if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camFocus) }) then {
             playSound "ReadoutHideClick1";
             [objNull] call FUNC(setFocus);
         };
@@ -45,7 +45,7 @@ if (_button == 0) exitWith {
 
 // Right click
 if (_button == 1) then {
-    if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camTarget) } && { !isNull (attachedTo GVAR(camDummy)) }) then {
+    if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camFocus) } && { !isNull (attachedTo GVAR(camDummy)) }) then {
         [] call FUNC(cam_resetTarget);
     };
     GVAR(holdingRMB) = true;

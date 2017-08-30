@@ -18,7 +18,7 @@
 #define HEIGHT_OFFSET 1.5
 
 BEGIN_COUNTER(updateCursor);
-private _camTarget = GVAR(camTarget);
+private _camTarget = GVAR(camFocus);
 private _camTargetVeh = vehicle _camTarget;
 private _cursorObject = objNull;
 
