@@ -19,17 +19,17 @@
 private _iconsToDraw = [];
 private _entitiesToDraw = [];
 
+// camToWorld is used instead of camera object to account for FPP
+private _camPos = AGLToASL positionCameraToWorld [0,0,0];
 {
     private _vehicle = vehicle _x;
     private _inVehicle = (_vehicle != _x);
-    private _distanceToCameraSqr = GVAR(camera) distanceSqr _x;
+    private _distanceToCameraSqr = _camPos distanceSqr _x;
 
     if (_distanceToCameraSqr <= DISTANCE_ICONS_SQR && { !_inVehicle || { _x == effectiveCommander _vehicle } }) then {
         private _group = group _x;
-        private _groupSide = side _group;
-        private _groupName = groupId _group;
-        private _groupLeader = leader _group;
-        private _groupColor = [_groupSide] call BIS_fnc_sideColor;
+        private _isLeader = _x == leader _group;
+        private _groupColor = [side _group] call BIS_fnc_sideColor;
 
         // Calculate distance fade
         (_distanceToCameraSqr call {
@@ -54,19 +54,19 @@ private _entitiesToDraw = [];
         // Apply color fade
         _groupColor set [3, _fadeByDistance];
 
-        private _name = ([_x] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
-        if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
-
-        if (_inVehicle) then {
-            private _crewCount = (({alive _x} count (crew _vehicle)) - 1);
-            if (_crewCount > 0) then {
-                _name = format ["%1 (+%2)", _name, _crewCount];
-            };
-        };
-
         // Show unit name only if camera is near enough
         if (_distanceToCameraSqr < DISTANCE_NAMES_SQR) then {
-            // Unit name
+            private _name = ([_x] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
+            if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
+
+            if (_inVehicle) then {
+                private _crewCount = (({alive _x} count (crew _vehicle)) - 1);
+                if (_crewCount > 0) then {
+                    _name = format ["%1 (+%2)", _name, _crewCount];
+                };
+            };
+
+            // Draw unit name for effective commander or all units on foot
             _iconsToDraw pushBack [_x, 2, [
                 "",
                 [1,1,1,1],
@@ -81,8 +81,8 @@ private _entitiesToDraw = [];
                 "center"
             ]];
         } else {
-            if (_x == _groupLeader) then {
-                // Group name
+            // Draw group name for effective commander or leader on foot
+            if (_inVehicle || _isLeader) then {
                 _iconsToDraw pushBack [_x, 0, [
                     "",
                     [1,1,1,_fadeByDistance],
@@ -90,7 +90,7 @@ private _entitiesToDraw = [];
                     0,
                     _heightByDistance,
                     0,
-                    _groupName,
+                    groupID _group,
                     2,
                     _fontSizeByDistance,
                     "PuristaMedium",
@@ -99,8 +99,8 @@ private _entitiesToDraw = [];
             };
         };
 
-        if (_x == _groupLeader || { _inVehicle && { _x == effectiveCommander _vehicle } }) then {
-            // Group icon
+        // Draw group icon for effective commander or leader on foot
+        if (_inVehicle || _isLeader) then {
             _iconsToDraw pushBack [_x, 0, [
                 [_group, true] call FUNC(getGroupIcon),
                 _groupColor,
@@ -116,7 +116,7 @@ private _entitiesToDraw = [];
             ]];
         };
 
-        // Draw unit icon
+        // Draw unit icon for effective commander or all units on foot
         _iconsToDraw pushBack [_x, 1, [
             [ICON_UNIT, ICON_REVIVE] select (NEEDS_REVIVE(_x)),
             _groupColor,
@@ -130,14 +130,14 @@ private _entitiesToDraw = [];
             "PuristaMedium",
             "center"
         ]];
-    };
 
-    // Track entities themselves for use with fired EH
-    _entitiesToDraw pushBack _vehicle;
+        // Track entities themselves for use with fired EH
+        _entitiesToDraw pushBack _vehicle;
 
-    // Add fired EH for drawing and icon highlighting
-    if (GETVAR(_vehicle,GVAR(firedEH),-1) == -1) then {
-        SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
+        // Add fired EH for drawing and icon highlighting
+        if (GETVAR(_vehicle,GVAR(firedEH),-1) == -1) then {
+            SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
+        };
     };
 
     nil // Speed loop
