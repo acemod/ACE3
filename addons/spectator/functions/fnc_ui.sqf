@@ -96,6 +96,7 @@ if (_init) then {
 } else {
     // Stop updating the list and focus widget
     [GVAR(uiPFH)] call CBA_fnc_removePerFrameHandler;
+    GVAR(uiPFH) = nil;
 
     // Stop drawing icons and tracking cursor object
     removeMissionEventHandler ["Draw3D", GVAR(uiDraw3D)];

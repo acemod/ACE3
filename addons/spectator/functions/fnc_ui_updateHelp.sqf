@@ -26,7 +26,7 @@ if !(GVAR(uiHelpVisible)) exitWith {};
 
 private _cameraMode = GVAR(camMode);
 private _availableModes = GVAR(availableModes);
-private _hasTarget = !isNull GVAR(camTarget);
+private _hasTarget = !isNull GVAR(camFocus);
 
 private _controls = [];
 

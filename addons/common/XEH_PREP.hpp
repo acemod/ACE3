@@ -134,6 +134,7 @@ PREP(requestCallback);
 PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
 PREP(runAfterSettingsInit);
+PREP(runTests);
 PREP(sanitizeString);
 PREP(sendRequest);
 PREP(serverLog);

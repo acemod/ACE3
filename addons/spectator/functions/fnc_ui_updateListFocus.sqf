@@ -16,4 +16,4 @@
 
 #include "script_component.hpp"
 
-CTRL_LIST tvSetCurSel ([[GVAR(camTarget)] call BIS_fnc_objectVar] call FUNC(ui_getTreeDataIndex));
+CTRL_LIST tvSetCurSel ([[GVAR(camFocus)] call BIS_fnc_objectVar] call FUNC(ui_getTreeDataIndex));

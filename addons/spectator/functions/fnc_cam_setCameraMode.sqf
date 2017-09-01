@@ -22,7 +22,7 @@ params ["_newMode"];
 
 private _oldMode = GVAR(camMode);
 private _modes = GVAR(availableModes);
-private _focus = GVAR(camTarget);
+private _focus = GVAR(camFocus);
 
 // If new mode isn't available then keep current (unless current also isn't)
 if !(_newMode in _modes) then {

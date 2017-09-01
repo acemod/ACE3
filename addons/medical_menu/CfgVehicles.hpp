@@ -47,7 +47,7 @@ class CfgVehicles {
             class Medical_Menu {
                 displayName = CSTRING(OpenMenu);
                 runOnHover = 0;
-                exceptions[] = {"isNotInside"};
+                exceptions[] = {"isNotInside", "isNotSwimming"};
                 condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                 statement = QUOTE([_target] call DFUNC(openMenu));
                 icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
@@ -60,7 +60,7 @@ class CfgVehicles {
                 class Medical_Menu {
                     displayName = CSTRING(OpenMenu);
                     runOnHover = 0;
-                    exceptions[] = {"isNotInside"};
+                    exceptions[] = {"isNotInside", "isNotSwimming"};
                     condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                     statement = QUOTE([_target] call DFUNC(openMenu));
                     icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
