@@ -108,6 +108,7 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
             };
         };
         [QEGVAR(common,setVectorDirAndUp), [_nozzle, _dirAndUp], _nozzle] call CBA_fnc_targetEvent;
+        if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), false, true]; };
         _nozzle setVariable [QGVAR(sink), _sink, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _sink setVariable [QGVAR(nozzle), _nozzle, true];

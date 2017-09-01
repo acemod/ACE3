@@ -424,6 +424,12 @@ class CfgVehicles {
         GVAR(size) = 2; // 1 = small, 2 = large
     };
 
+    // Fuel Canister (ace_refuel)
+    class Land_CanisterFuel_F: Items_base_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
+
     // objects
     class Lamps_base_F;
     class RoadCone_F: ThingX {
