@@ -308,23 +308,8 @@ class CfgAmmo {
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={
-            760,           // mosin carbine
-            795, 
-            835,           // pk/pkm
-            820, 
-            833, 
-            865,           // mosin M91/30
-            855            // pkt
-            };                            //( 147 grain bulgarian surplus ( 9.53 gram ) bullet, measured 10 feet ( 3m ) from the muzzle
-        ACE_barrelLengths[]={
-            406.4,         // mosin carbine
-            508.0, 
-            604.5,         // pk/pkm
-            609.6, 
-            660.4, 
-            736.6,         // mosin M91/30
-            772.2          // pkt
-            };                            // added barrel length of a pk, pkt, mousin nagant M91/30,
+            760, 795, 835, 820, 833, 865, 855};
+        ACE_barrelLengths[]={406.4, 508.0, 604.5, 609.6, 660.4, 736.6, 772.2};
     };
     class B_762x54_Tracer_Green;
     class ACE_762x54_Ball_7T2 : B_762x54_Tracer_Green {
