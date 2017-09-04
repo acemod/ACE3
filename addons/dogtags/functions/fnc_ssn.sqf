@@ -19,6 +19,8 @@ params ["_name"];
 
 private _chars = toArray _name;
 private _length = count _chars;
+// Warning, for strings containing non-latin characters, `_count _name` != `_count _chars`
+
 _chars pushBack _length;
 _length = _length + 1;
 
