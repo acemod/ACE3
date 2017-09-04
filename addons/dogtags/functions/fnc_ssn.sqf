@@ -17,8 +17,8 @@
 
 params ["_name"];
 
-private _length = count _name;
 private _chars = toArray _name;
+private _length = count _chars;
 _chars pushBack _length;
 _length = _length + 1;
 
