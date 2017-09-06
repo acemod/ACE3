@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Modifies the base interaction point for repair items to show it's current damage
+ * Modifies the base interaction point for repair items to show it's current damage.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [cursorObject, player, [], []] call ace_repair_fnc_modifyInteraction;
+ * [cursorObject, ace_player, [], []] call ace_repair_fnc_modifyInteraction;
  *
  * Public: No
  */

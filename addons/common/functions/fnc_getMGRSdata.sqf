@@ -22,7 +22,7 @@
 params [["_map", worldName]];
 
 private _long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
-private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
+private _lat = -1 * getNumber (configFile >> "CfgWorlds" >> _map >> "latitude"); // latitude is reversed in arma (negative config values in north)
 private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
 private _mapData = _map call FUNC(getMapData);
