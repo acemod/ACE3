@@ -163,7 +163,6 @@ PREP(statusEffect_sendEffects);
 PREP(statusEffect_set);
 PREP(stringCompare);
 PREP(stringToColoredText);
-PREP(stringRemoveWhiteSpace);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);
 PREP(toBin);
