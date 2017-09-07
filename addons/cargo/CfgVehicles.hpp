@@ -795,11 +795,27 @@ class CfgVehicles {
         GVAR(size) = 7;
         GVAR(canLoad) = 1;
     };
-    class Land_WaterBottle_01_stack_F: Items_base_F {
+    class Land_FoodSack_01_small_base_F: Items_base_F {
+        GVAR(size) = 2;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PaperBox_01_open_boxes_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PaperBox_01_open_water_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PaperBox_01_open_empty_F: Items_base_F {
         GVAR(size) = 7;
         GVAR(canLoad) = 1;
     };
     class Land_PaperBox_01_small_stacked_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_WaterBottle_01_stack_F: Items_base_F {
         GVAR(size) = 7;
         GVAR(canLoad) = 1;
     };
