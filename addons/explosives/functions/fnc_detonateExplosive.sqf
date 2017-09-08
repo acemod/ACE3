@@ -51,6 +51,13 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhe
     };
 };
 
+if (isNull (_item select 0)) then {
+    WARNING_1("Explosive is null [%1]",_this);
+};
+if ((getNumber (configFile >> "CfgAmmo" >> (typeOf (_item select 0)) >> "triggerWhenDestroyed")) != 1) then {
+    WARNING_1("Explosive is not triggerWhenDestroyed [%1]",typeOf (_item select 0));
+};
+
 [QGVAR(detonate), [_unit, _item select 0, _item select 1]] call CBA_fnc_serverEvent;
 
 _result
