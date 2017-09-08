@@ -6,7 +6,10 @@
  * 0: Units to un-garrison <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [unit1, unit2, unit3] call ace_ai_fnc_unGarrison
  *
  * Public: Yes
  *
@@ -14,6 +17,8 @@
 #include "script_component.hpp"
 
 params [["_units", [], [[]]]];
+
+diag_log format ["unGarrison called: %1", _units];
 
 _units = _units select {local _x};
 

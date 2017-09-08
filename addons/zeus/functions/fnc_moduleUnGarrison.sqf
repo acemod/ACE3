@@ -6,7 +6,10 @@
  * 0: The module logic <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [LOGIC] call ace_zeus_fnc_moduleUngarrison
  *
  * Public: No
 */
@@ -14,6 +17,8 @@
 #include "script_component.hpp"
 
 params ["_logic"];
+
+diag_log format ["moduleUnGarrison called: %1; %2", _logic, units (effectiveCommander (attachedTo _logic))];
 
 scopeName "Main";
 private _fnc_errorAndClose = {
@@ -42,6 +47,6 @@ switch (false) do {
 };
 private _units = units _unit;
 
-[QEGVAR(common,unGarrison), [_units], _units] call CBA_fnc_targetEvent;
+[QEGVAR(ai,unGarrison), [_units], _units] call CBA_fnc_targetEvent;
 
 deleteVehicle _logic;

@@ -13,10 +13,10 @@
  * Return Value:
  * Array of units not garrisoned
  *
- * Public: Yes
- *
  * Example:
- * [position, nil, [unit1, unit2, unit3, unitN], 200, 1, false] call ace_common_fnc_garrison
+ * [position, nil, [unit1, unit2, unit3, unitN], 200, 1, false] call ace_ai_fnc_garrison
+ *
+ * Public: Yes
 */
 #include "script_component.hpp"
 

@@ -216,12 +216,14 @@ class CfgVehicles {
     };
     class GVAR(moduleGarrison): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(AI);
         displayName = CSTRING(ModuleGarrison_DisplayName);
         curatorInfoType = QGVAR(RscGarrison);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Garrison_ca.paa);
     };
     class GVAR(moduleUnGarrison): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(AI);
         displayName = CSTRING(ModuleUnGarrison_DisplayName);
         function = QFUNC(moduleUnGarrison);
         icon = QPATHTOF(UI\Icon_Module_Zeus_UnGarrison_ca.paa);

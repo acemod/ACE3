@@ -11,6 +11,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [LOGIC, [2203.64, 2281.47, 1], 20, 2, true] call ace_zeus_fnc_moduleUngarrison
+ *
+ * Public: No
 */
 
 #include "script_component.hpp"
@@ -52,6 +57,6 @@ private _units = units _unit;
     };
 } forEach _units;
 
-[_pos, ["Building"], _units, _radius, _mode, _topDownMode] call EFUNC(common,garrison);
+[_pos, ["Building"], _units, _radius, _mode, _topDownMode] call EFUNC(ai,garrison);
 
 deleteVehicle _logic;
