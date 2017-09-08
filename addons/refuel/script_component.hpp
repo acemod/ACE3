@@ -2,6 +2,8 @@
 #define COMPONENT_BEAUTIFIED Refuel
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define FAST_PROGRESSBARS
+// #define DRAW_HOOKS_POS
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
@@ -29,3 +31,9 @@
     _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel); \
     _unit selectWeapon _weaponSelect; \
     _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
+
+#ifdef FAST_PROGRESSBARS
+    #define TIME_PROGRESSBAR(X) ((X) * 0.075)
+#else
+    #define TIME_PROGRESSBAR(X) (X)
+#endif

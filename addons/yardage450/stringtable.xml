@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MX2A">
         <Key ID="STR_ACE_Yardage450_DisplayName">
@@ -14,8 +14,8 @@
             <French>Yardage 450</French>
             <Japanese>ヤードエイジ 450</Japanese>
             <Korean>Yardage 450</Korean>
-            <SChinese>Yardage 450</SChinese>
-            <TChinese>Yardage 450</TChinese>
+            <Chinesesimp>Yardage 450</Chinesesimp>
+            <Chinese>Yardage 450</Chinese>
         </Key>
         <Key ID="STR_ACE_Yardage450_Description">
             <English>Laser Rangefinder</English>
@@ -30,8 +30,8 @@
             <French>Télémètre laser</French>
             <Japanese>レーザー測距機</Japanese>
             <Korean>레이저 거리측정기</Korean>
-            <SChinese>雷射测距仪</SChinese>
-            <TChinese>雷射測距儀</TChinese>
+            <Chinesesimp>雷射测距仪</Chinesesimp>
+            <Chinese>雷射測距儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
@@ -46,8 +46,8 @@
             <French>Yardage 450 - bouton d'alimentation</French>
             <Japanese>ヤードエイジ 450 - 起動ボタン</Japanese>
             <Korean>Yardage 450 - 전원 버튼</Korean>
-            <SChinese>Yardage 450 - 电源按钮</SChinese>
-            <TChinese>Yardage 450 - 電源按鈕</TChinese>
+            <Chinesesimp>Yardage 450 - 电源按钮</Chinesesimp>
+            <Chinese>Yardage 450 - 電源按鈕</Chinese>
         </Key>
     </Package>
 </Project>

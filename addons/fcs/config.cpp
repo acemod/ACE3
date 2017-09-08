@@ -30,3 +30,7 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_fcs"};
 };
+
+class ACE_Tests {
+    fcs = QPATHTOF(dev\test_debugConfigs.sqf);
+};

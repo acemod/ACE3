@@ -86,9 +86,9 @@ class CfgWeapons {
                     opticsZoomInit = 0.0872664626;
                     opticsZoomMax = 0.0872664626;
                     opticsZoomMin = 0.0872664626;
-                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5","ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera5", "OpticsBlur5", "ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
-                    visionMode[] = {"Normal","NVG"};
+                    visionMode[] = {"Normal", "NVG"};
                 };
             };
         };
@@ -135,7 +135,7 @@ class CfgWeapons {
                     opticsZoomInit = 0.0872664626;
                     opticsZoomMax = 0.0872664626;
                     opticsZoomMin = 0.0872664626;
-                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5","ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera5", "OpticsBlur5", "ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                     visionMode[] = {"Normal"};
                 };
@@ -184,7 +184,7 @@ class CfgWeapons {
                     opticsZoomInit = 0.0872664626;
                     opticsZoomMax = 0.0872664626;
                     opticsZoomMin = 0.0872664626;
-                    opticsPPEffects[] = {"OpticsCHAbera5","OpticsBlur5","ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera5", "OpticsBlur5", "ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                     visionMode[] = {"Normal"};
                 };
@@ -227,13 +227,13 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QPATHTOF(models\ace_optics_reticle90.p3d),QPATHTOF(models\ace_optics_reticle90.p3d)};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_reticle90.p3d), QPATHTOF(models\ace_optics_reticle90.p3d)};
                     useModelOptics = 1;
                     opticsZoomInit = 0.0116;
                     opticsZoomMax = 0.0464;
                     opticsZoomMin = 0.0116;
                     discreteFOV[] = {0.0464, 0.0116};
-                    opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1","ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera1", "OpticsBlur1", "ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                 };
                 class Iron: Iron {};
@@ -250,7 +250,7 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QPATHTOF(models\ace_optics_pip.p3d),QPATHTOF(models\ace_optics_pip.p3d)};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_pip.p3d), QPATHTOF(models\ace_optics_pip.p3d)};
                 };
                 class Iron: Iron {};
             };
@@ -279,13 +279,13 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QPATHTOF(models\ace_optics_reticle90.p3d),QPATHTOF(models\ace_optics_reticle90.p3d)};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_reticle90.p3d), QPATHTOF(models\ace_optics_reticle90.p3d)};
                     useModelOptics = 1;
                     opticsZoomInit = 0.0116;
                     opticsZoomMax = 0.0464;
                     opticsZoomMin = 0.0116;
                     discreteFOV[] = {};
-                    opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1","ACE_OpticsRadBlur1"};
+                    opticsPPEffects[] = {"OpticsCHAbera1", "OpticsBlur1", "ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                 };
             };
@@ -301,7 +301,7 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QPATHTOF(models\ace_optics_pip.p3d),QPATHTOF(models\ace_optics_pip.p3d)};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_pip.p3d), QPATHTOF(models\ace_optics_pip.p3d)};
                 };
             };
         };

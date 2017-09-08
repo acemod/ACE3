@@ -18,7 +18,7 @@ GVAR(camera) = objNull;
     params ["", "_isfeatureCameraActive"];
     TRACE_1("ace_activeCameraChanged",_isfeatureCameraActive);
     if (!_isfeatureCameraActive) then {
-        //Destroy the camera, and it will be re-created in the onDrawScope2d helper
+        // Destroy the camera, and it will be re-created in the onDrawScope2d helper
         if (!isNull GVAR(camera)) then {
             GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
             camDestroy GVAR(camera);

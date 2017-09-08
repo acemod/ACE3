@@ -1,7 +1,7 @@
-// by commy2
+// By commy2
 #include "script_component.hpp"
 
-// unmute unit if that player disconnects
+// Unmute unit if that player disconnects
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         [_this select 0, "isPlayer"] call EFUNC(common,unmuteUnit);
@@ -15,14 +15,14 @@ if (!isNull ace_player) then {
     [ace_player, "isPlayer"] call EFUNC(common,muteUnit);
 };
 
-// mutes/unmutes units when the player changes
+// Mutes/unmutes units when the player changes
 ["unit", {
     params ["_newPlayer", "_oldPlayer"];
 
-    // mute the new player
+    // Mute the new player
     [_newPlayer, "isPlayer"] call EFUNC(common,muteUnit);
 
-    // unmute the old player
+    // Unmute the old player
     if (alive _oldPlayer) then {
         [_oldPlayer, "isPlayer"] call EFUNC(common,unmuteUnit);
     };

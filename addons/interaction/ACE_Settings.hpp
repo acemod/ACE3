@@ -13,4 +13,10 @@ class ACE_Settings {
         displayName = CSTRING(PassMagazineSetting);
         category = ECSTRING(interact_menu,Category_InteractionMenu);
     };
+    class GVAR(disableNegativeRating) {
+        displayName = CSTRING(DisableNegativeRating_DisplayName);
+        description = CSTRING(DisableNegativeRating_Description);
+        value = 0;
+        typeName = "BOOL";
+    };
 };
