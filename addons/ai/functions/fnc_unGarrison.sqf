@@ -18,8 +18,6 @@
 
 params [["_units", [], [[]]]];
 
-diag_log format ["unGarrison called: %1", _units];
-
 _units = _units select {local _x};
 
 {

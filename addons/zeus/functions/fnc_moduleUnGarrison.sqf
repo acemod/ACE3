@@ -18,8 +18,6 @@
 
 params ["_logic"];
 
-diag_log format ["moduleUnGarrison called: %1; %2", _logic, units (effectiveCommander (attachedTo _logic))];
-
 scopeName "Main";
 private _fnc_errorAndClose = {
     params ["_msg"];
