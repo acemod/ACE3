@@ -24,14 +24,21 @@ if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))
 
 
 private ["_currentShooter", "_currentMagazine"];
-if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
-    _currentShooter = ACE_player;
-    _currentMagazine = currentMagazine ACE_player;
+if (isNull (ACE_controlledUAV param [0, objNull])) then {
+    if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
+        _currentShooter = ACE_player;
+        _currentMagazine = currentMagazine ACE_player;
+    } else {
+        _currentShooter = vehicle ACE_player;
+        private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+        _currentMagazine = _currentShooter currentMagazineTurret _turretPath;
+    };
 } else {
-    _currentShooter = vehicle ACE_player;
-    private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+    _currentShooter = ACE_controlledUAV select 0;
+    private _turretPath = ACE_controlledUAV select 2;
     _currentMagazine = _currentShooter currentMagazineTurret _turretPath;
 };
+
 if (_currentMagazine == "") exitWith {TRACE_1("no magazine",_currentMagazine)};
 
 private _ammo = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");

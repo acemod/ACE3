@@ -17,6 +17,7 @@ PREP(canInteractWithCivilian);
 PREP(getDown);
 PREP(sendAway);
 PREP(canJoinGroup);
+PREP(modifyJoinGroupAction);
 PREP(canJoinTeam);
 PREP(joinTeam);
 PREP(canPassMagazine);

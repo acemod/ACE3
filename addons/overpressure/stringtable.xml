@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="overpressure">
         <Key ID="STR_ACE_overpressure_distanceCoefficient_displayName">
@@ -8,8 +8,8 @@
             <Polish>Mnożnik dystansu nadciśnienia</Polish>
             <French>Coéfficient de distance pour la surpression</French>
             <Italian>Coefficente Distanza Sovrapressione</Italian>
-            <SChinese>高压影响距离系数</SChinese>
-            <TChinese>高壓影響距離係數</TChinese>
+            <Chinesesimp>高压影响距离系数</Chinesesimp>
+            <Chinese>高壓影響距離係數</Chinese>
         </Key>
         <Key ID="STR_ACE_overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect [Default: 1]</English>
@@ -18,8 +18,8 @@
             <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
             <French>Échelonne les effets de la surpression [Par défaut : 1]</French>
             <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
-            <SChinese>高压影响的范围 [预设: 1]</SChinese>
-            <TChinese>高壓影響的範圍 [預設: 1]</TChinese>
+            <Chinesesimp>高压影响的范围 [预设: 1]</Chinesesimp>
+            <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
         </Key>
     </Package>
 </Project>

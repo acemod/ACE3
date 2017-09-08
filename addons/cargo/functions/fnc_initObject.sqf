@@ -21,10 +21,13 @@ TRACE_2("params",_object,_type);
 
 // If object had size given to it via eden/public then override config canLoad setting
 private _canLoadPublic = _object getVariable [QGVAR(canLoad), false];
+if (!(_canLoadPublic isEqualType false)) then {
+    WARNING_4("%1[%2] - Variable %3 is %4 - Should be bool",_object,_type,QGVAR(canLoad),_canLoadPublic);
+};
 private _canLoadConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canLoad)) == 1;
 
 // Nothing to do here if object can't be loaded
-if !(_canLoadConfig || _canLoadPublic) exitWith {};
+if !(_canLoadConfig || {_canLoadPublic in [true, 1]}) exitWith {};
 
 // Servers and HCs do not require action menus (beyond this point)
 if !(hasInterface) exitWith {};
@@ -47,7 +50,7 @@ if (_canLoadConfig) then {
 private _condition = {
     //IGNORE_PRIVATE_WARNING ["_target", "_player"];
     GVAR(enable) &&
-    {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad)) == 1])} &&
+    {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
     {locked _target < 2} &&
     {alive _target} &&
     {[_player, _target, []] call EFUNC(common,canInteractWith)} &&

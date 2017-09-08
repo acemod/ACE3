@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Fully repairs vehicle
+ * Fully repairs vehicle.
  *
  * Arguments:
  * 0: Unit that does the repairing (not used) <OBJECT>

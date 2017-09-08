@@ -1277,7 +1277,7 @@ See the make.cfg file for additional build options.
 
                     if os.path.isfile(nobinFilePath):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
-                        cmd = [makepboTool, "-P","-A","-L","-G","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
+                        cmd = [makepboTool, "-P","-A","-G","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
                         if check_external:
