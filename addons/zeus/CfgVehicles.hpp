@@ -216,11 +216,13 @@ class CfgVehicles {
     };
     class GVAR(moduleToggleNvg): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(Utility);
         displayName = CSTRING(moduleToggleNVG_DisplayName);
         curatorInfoType = QGVAR(RscToggleNvg);
     };
     class GVAR(moduleToggleFlashlight): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(Utility);
         displayName = CSTRING(moduleToggleFlashlight_DisplayName);
         curatorInfoType = QGVAR(RscToggleFlashlight);
     };
