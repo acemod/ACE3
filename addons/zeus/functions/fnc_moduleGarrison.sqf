@@ -1,13 +1,13 @@
 /*
  * Author: alganthe
- * Module calling the garrison function
+ * Module calling the garrison function.
  *
  * Arguments:
  * 0: The module logic <OBJECT>
  * 1: Position of the module <POSITION>
  * 2: Radius of the task <NUMBER>
  * 3: Filling mode of the garrison function <NUMBER>
- * 4: Enable or not top down filling <BOOLEAN>
+ * 4: Enable or not top down filling <BOOL>
  *
  * Return Value:
  * None

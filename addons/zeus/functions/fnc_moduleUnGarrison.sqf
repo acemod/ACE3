@@ -1,6 +1,6 @@
 /*
  * Author: alganthe
- * Un-garrison a garrisoned group
+ * Un-garrison a garrisoned group.
  *
  * Arguments:
  * 0: The module logic <OBJECT>

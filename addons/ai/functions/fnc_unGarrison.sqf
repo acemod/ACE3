@@ -1,6 +1,6 @@
 /*
  * Author: alganthe
- * Used to un-garrison units
+ * Used to un-garrison units.
  *
  * Arguments:
  * 0: Units to un-garrison <ARRAY>
