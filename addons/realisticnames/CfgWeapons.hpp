@@ -233,6 +233,9 @@ class CfgWeapons {
     };
 
     class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
+        // Weapon does not exist in base game, and parent srifle_DMR_03_F is scope 2
+        // Can remove entirely in 3.12
+        scope = 1;
         displayName = CSTRING(srifle_DMR_03_spotter); //NATO DMR (provisional) spotter;
     };
     class DMR_04_base_F: Rifle_Long_Base_F {

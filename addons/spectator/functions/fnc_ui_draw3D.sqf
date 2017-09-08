@@ -18,18 +18,22 @@
 #define HEIGHT_OFFSET 1.5
 
 BEGIN_COUNTER(updateCursor);
-private _camTarget = GVAR(camTarget);
+private _camTarget = GVAR(camFocus);
+private _camTargetVeh = vehicle _camTarget;
 private _cursorObject = objNull;
 
-// This function doesn't work for units underwater, due to use of screenToWorld. Would be complicated to work around this.
-private _intersections = [getMousePosition select 0, getMousePosition select 1, _camTarget, vehicle _camTarget] call BIS_fnc_getIntersectionsUnderCursor;
+// This doesn't work for units underwater due to use of screenToWorld
+// Would be hard to work around due to parallax
+private _start = AGLToASL positionCameraToWorld [0,0,0];
+private _end = AGLToASL screenToWorld getMousePosition;
 
-if !(_intersections isEqualTo []) then {
-    _cursorObject = (_intersections select 0) select 3;
-};
+// Can only select units within name drawing distance
+if ((_start distanceSqr _end) <= DISTANCE_NAMES_SQR) then {
+    private _intersections = lineIntersectsSurfaces [_start, _end, _camTarget, _camTargetVeh];
 
-if !(_cursorObject isKindOf "Man") then {
-    _cursorObject = effectiveCommander _cursorObject;
+    if !(_intersections isEqualTo []) then {
+        _cursorObject = effectiveCommander ((_intersections select 0) select 3);
+    };
 };
 
 GVAR(cursorObject) = _cursorObject;
@@ -43,10 +47,11 @@ if !(GVAR(uiMapVisible)) then {
             _x params ["_unit", "_type", "_icon"];
             private _position = (_unit modelToWorldVisual (_unit selectionPosition "Head")) vectorAdd [0,0,HEIGHT_OFFSET];
 
-            if (_type == 2 && { _unit distanceSqr GVAR(camera) < DISTANCE_NAMES_SQR } && {_unit in _camTarget || _unit in _cursorObject}) then {
+            // Cursor object is always effectiveCommander so no need to check `in`
+            if (_type == 2 && {_unit in _camTargetVeh || _unit == _cursorObject}) then {
                 drawIcon3D [
                     ICON_BACKGROUND_UNIT,
-                    [0, 0, 0, [0.4, 0.8] select (_unit in _camTarget)],
+                    [0, 0, 0, [0.4, 0.8] select (_unit in _camTargetVeh)],
                     _position,
                     5,
                     4,

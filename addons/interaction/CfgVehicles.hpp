@@ -7,7 +7,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
-        function = "ACE_Interaction_fnc_moduleInteraction";
+        function = QFUNC(moduleInteraction);
         scope = 2;
         isGlobal = 1;
         isSingular = 1;
@@ -18,6 +18,12 @@ class CfgVehicles {
                 description = CSTRING(EnableTeamManagement_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
+            };
+            class DisableNegativeRating {
+                displayName = CSTRING(DisableNegativeRating_DisplayName);
+                description = CSTRING(DisableNegativeRating_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
             };
         };
         class ModuleDescription {
