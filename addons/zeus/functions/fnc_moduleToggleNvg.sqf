@@ -8,14 +8,17 @@
  * 2: Target of the toggle <SCALAR> 0: blufor; 1: opfor; 2: indep; 3: civ; 4: selected group
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [LOGIC, true, 4] call ace_zeus_fnc_moduleToggleNvg
  *
  * Public: No
 */
 
- #include "script_component.hpp"
+#include "script_component.hpp"
 
- params ["_logic", "_toggle", "_target"];
+params ["_logic", "_toggle", "_target"];
 
 private _units = [];
 

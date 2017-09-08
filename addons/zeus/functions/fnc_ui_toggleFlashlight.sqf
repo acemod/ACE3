@@ -6,7 +6,7 @@
  * 0: Flashlight toggle controls group <CONTROL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * onSetFocus = "_this call ace_zeus_fnc_ui_toggleFLashlight"
@@ -54,6 +54,7 @@ if !(isNull _unit) then {
 //Specific on-load stuff:
 private _comboBox = _display displayCtrl 56218;
 private _comboBox2 = _display displayCtrl 56219;
+private _comboBox3 = _display displayCtrl 56220;
 
 {
     _comboBox lbSetValue  [_comboBox lbAdd (_x select 0), _x select 1];
@@ -83,8 +84,16 @@ if (isNull _unit) then {
     ];
 };
 
+{
+    _comboBox3 lbSetValue  [_comboBox3 lbAdd (_x select 0), _x select 1];
+} foreach [
+    [localize ELSTRING(common,Disabled), 0],
+    [localize ELSTRING(common,Enabled), 1]
+];
+
 _comboBox lbSetCurSel 0;
 _comboBox2 lbSetCurSel 0;
+_comboBox3 lbSetCurSel 0;
 
 private _fnc_onUnload = {
     params ["_display"];
@@ -105,17 +114,24 @@ private _fnc_onConfirm = {
 
     private _combo1 = _display displayCtrl 56218;
     private _combo2 = _display displayCtrl 56219;
+    private _combo3 = _display displayCtrl 56220;
 
     private _toggle = _combo1 lbValue (lbCurSel _combo1);
     private _target = _combo2 lbValue (lbCurSel _combo2);
+    private _gear = _combo3 lbValue (lbCurSel _combo3);
 
 
-    private _toggle = [
+    _toggle = [
         false,
         true
     ] select (_toggle == 1);
 
-    [_logic, _toggle, _target] call FUNC(moduleToggleFlashlight);
+    _gear = [
+        false,
+        true
+    ] select (_gear == 1);
+
+    [_logic, _toggle, _gear, _target] call FUNC(moduleToggleFlashlight);
 };
 
 _display displayAddEventHandler ["unload", _fnc_onUnload];

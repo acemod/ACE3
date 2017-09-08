@@ -541,7 +541,7 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(3);
+                    h = H_PART(5);
                     class controls {
                         class ToggleFlashlightTitle: Title {
                             idc = -1;
@@ -568,6 +568,20 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                             idc = 56219;
                             x = H_PART(6);
                             y = H_PART(1.2);
+                            w = W_PART(10.1);
+                            h = H_PART(1);
+                        };
+                        class ToggleFlashlightGearTitle: Title {
+                            idc = -1;
+                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightGear);
+                            x = H_PART(0);
+                            y = H_PART(2.4);
+                            w = W_PART(7);
+                        };
+                        class ToggleFlashlightGearCombo: RscCombo {
+                            idc = 56220;
+                            x = H_PART(6);
+                            y = H_PART(2.4);
                             w = W_PART(10.1);
                             h = H_PART(1);
                         };

@@ -1067,5 +1067,9 @@
             <English>Flashlight</English>
             <French>Lampe torche</French>
         </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
+            <English>Add gear</English>
+            <French>Ajouter équipement</French>
+        </Key>
     </Package>
 </Project>

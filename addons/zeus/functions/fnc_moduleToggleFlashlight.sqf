@@ -5,25 +5,29 @@
  * Arguments:
  * 0: Logic object <OBJECT>
  * 1: Toggle mode <BOOL>
- * 2: Target of the toggle <SCALAR> 0: blufor; 1: opfor; 2: indep; 3: civ; 4: selected group
+ * 2: Add gear <BOOL>
+ * 3: Target of the toggle <SCALAR> 0: blufor; 1: opfor; 2: indep; 3: civ; 4: selected group
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [LOGIC, true, true, 4] call ace_zeus_fnc_moduleToggleFlashlight
  *
  * Public: No
 */
 
- #include "script_component.hpp"
+#include "script_component.hpp"
 
- params ["_logic", "_toggle", "_target"];
+params ["_logic", "_toggle", "_addGear", "_target"];
 
- private _units = [];
+private _units = [];
 
- if (_target == 4) then {
-     _units =  units (attachedTo _logic);
- } else {
-     _units =  allUnits select {alive _x && {side _x == ([blufor, opfor, independent, civilian] select _target)}},
- };
+if (_target == 4) then {
+    _units =  units (attachedTo _logic);
+} else {
+    _units =  allUnits select {alive _x && {side _x == ([blufor, opfor, independent, civilian] select _target)}},
+};
 
 if (_toggle) then {
     {
@@ -32,22 +36,25 @@ if (_toggle) then {
             private _pointer = (_x weaponAccessories (currentWeapon _x)) select 1;
 
             if (!(_pointer isEqualTo "") && {isNull (configfile >> "CfgWeapons" >> _pointer >> "ItemInfo" >> "Pointer")}) then {
-                _x enableGunLights "ForceOn";
+                _x enableGunLights "forceOn";
 
             } else {
-                // Retrieve compatible items for the pointer slot
-                private _pointerSlotCompatible = [currentWeapon _x, "pointer"] call CBA_fnc_compatibleItems;
+                if (_addGear) then {
+                    // Retrieve compatible items for the pointer slot
+                    private _pointerSlotCompatible = [currentWeapon _x, "pointer"] call CBA_fnc_compatibleItems;
 
-                // Get flashlights from the array above and select the first one
-                private _flashlight = (_pointerSlotCompatible select {isNull (configfile >> "CfgWeapons" >> _x >> "ItemInfo" >> "Pointer")}) select 0;
+                    // Get flashlights from the array above and select the first one
+                    private _flashlight = (_pointerSlotCompatible select {isNull (configfile >> "CfgWeapons" >> _x >> "ItemInfo" >> "Pointer")}) select 0;
 
-                if (local _x) then {
-                    _x addWeaponItem [(currentWeapon _x), _flashlight];
-                } else {
-                    [QEGVAR(common,addWeaponItem), [_x, (currentWeapon _x), _flashlight], _x] call CBA_fnc_targetEvent;
+                    if (local _x) then {
+                        _x addWeaponItem [(currentWeapon _x), _flashlight];
+                    } else {
+                        [QEGVAR(common,addWeaponItem), [_x, (currentWeapon _x), _flashlight], _x] call CBA_fnc_targetEvent;
+                    };
+
+                    _x enableGunLights "ForceOn";
+
                 };
-
-                _x enableGunLights "ForceOn";
             };
         };
     } foreach _units;

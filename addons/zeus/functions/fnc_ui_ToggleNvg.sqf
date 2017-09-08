@@ -6,7 +6,7 @@
  * 0: Nvg toggle controls group <CONTROL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * onSetFocus = "_this call ace_zeus_fnc_ui_toggleNvg"
