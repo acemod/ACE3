@@ -45,7 +45,7 @@ class ACE_Open_SettingsMenu_BtnBase : ACE_gui_buttonBase {
     colorDisabled[] = {1,1,1,0.25};
     colorFocused[] = {0,0,0,1};
     colorText[] = {1,1,1,1};
-    default = 0;
+    //default = 0;
     font = "RobotoCondensed";
     idc = -1;
     period = 1.2;
@@ -77,69 +77,63 @@ class ACE_Open_SettingsMenu_BtnBase : ACE_gui_buttonBase {
 class RscStandardDisplay;
 class RscDisplayMPInterrupt: RscStandardDisplay {
     class controls {
-        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
+        class ACE_Open_settingsMenu_Btn: ACE_Open_SettingsMenu_BtnBase {};
     };
 };
+
 class RscDisplayInterruptEditorPreview: RscStandardDisplay {
     class controls {
-        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
+        class ACE_Open_settingsMenu_Btn: ACE_Open_SettingsMenu_BtnBase {};
     };
 };
+
 class RscDisplayInterrupt: RscStandardDisplay {
     class controls {
-        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
+        class ACE_Open_settingsMenu_Btn: ACE_Open_SettingsMenu_BtnBase {};
     };
 };
+
 class RscDisplayInterruptEditor3D: RscStandardDisplay {
     class controls {
-        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
+        class ACE_Open_settingsMenu_Btn: ACE_Open_SettingsMenu_BtnBase {};
     };
 };
+
 class RscDisplayMovieInterrupt: RscStandardDisplay {
     class controls {
-        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
+        class ACE_Open_settingsMenu_Btn: ACE_Open_SettingsMenu_BtnBase {};
     };
 };
+
 class RscDisplayMain: RscStandardDisplay {
     class controls {
-        class ACE_news_apex: RscControlsGroupNoHScrollbars {
-            idc = 80090;
-            x = "safezoneX + safezoneW - 10 * (pixelW * pixelGrid * 2) - (4 * pixelH)";
-            y = "safezoneY + safezoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 3 * (4 * pixelH)";
-            w = "10 * (pixelW * pixelGrid * 2)";
-            h = "2 * (pixelH * pixelGrid * 2)";
-            class Controls {
-                class Background: RscPicture {
-                    idc = 80091;
-                    text = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\gradientMods_ca.paa";
-                    colorText[] = {0,0,0,0.75};
-                    x = "(10 - 4 * 2) * (pixelW * pixelGrid * 2)";
-                    y = 0;
-                    w = "4 * 2 * (pixelW * pixelGrid * 2)";
-                    h = "2 * (pixelH * pixelGrid * 2)";
-                    angle = 180;
-                };
-                class BackgroundIcon: RscPicture {
-                    idc = 80092;
-                    text = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\backgroundModsIcon_ca.paa";
-                    colorText[] = {0,0,0,0.75};
-                    x = "(10 - 2 * 2) * (pixelW * pixelGrid * 2)";
-                    y = 0;
-                    w = "2 * 2 * (pixelW * pixelGrid * 2)";
-                    h = "2 * (pixelH * pixelGrid * 2)";
-                    angle = 180;
-                };
-                class Icon: RscPicture {
-                    idc = 80093;
+        class InfoMods: RscControlsGroupNoHScrollbars {
+            class Controls;
+        };
+
+        class InfoNews: InfoMods {
+            class Controls: Controls {
+                class Background;
+                class BackgroundIcon;
+                class Icon;
+                class News;
+                class Notification;
+                class Button;
+            };
+        };
+
+        class ACE_news_apex: InfoNews {
+            idc = IDC_MAIN_INFO;
+            y = "safezoneY + safezoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
+
+            class Controls: Controls {
+                class Background: Background {};
+                class BackgroundIcon: BackgroundIcon {};
+                class Icon: Icon {
                     text = QPATHTOF(gui\aceMenuIcon_ca.paa);
-                    colorText[] = {1,1,1,0.5};
-                    x = "(10 - 2) * (pixelW * pixelGrid * 2)";
-                    y = 0;
-                    w = "2 * (pixelW * pixelGrid * 2)";
-                    h = "2 * (pixelH * pixelGrid * 2)";
                 };
                 class CurrentVersionInfo: RscText {
-                    idc = 80094;
+                    idc = IDC_MAIN_INFO_CURRENT_VERSION_INFO;
                     style = 1;
                     text = "";
                     sizeEx = "(pixelH * pixelGrid * 1.5)";
@@ -149,12 +143,13 @@ class RscDisplayMain: RscStandardDisplay {
                     x = 0;
                     y = 0;
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
-                    h = "2 * (pixelH * pixelGrid * 1)";
+                    h = "1 * (pixelH * pixelGrid * 2)";
                     onLoad = "(_this select 0) ctrlenable false;";
                 };
                 class HTTPVersionInfo: RscHTML {
-                    idc = 80095;
+                    idc = IDC_MAIN_INFO_NEWEST_VERSION_INFO;
                     shadow = 0;
+
                     class H1 {
                         sizeEx = "(pixelH * pixelGrid * 1.5)";
                         font = "RobotoCondensedLight";
@@ -167,24 +162,16 @@ class RscDisplayMain: RscStandardDisplay {
                     class P: H1 {
                         sizeEx = "(pixelH * pixelGrid * 1.5)";
                     };
+
                     x = 0;
-                    y = "2 * (pixelH * pixelGrid * 1)";
+                    y = "1 * (pixelH * pixelGrid * 2)";
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
-                    h = "2 * (pixelH * pixelGrid * 1)";
+                    h = "1 * (pixelH * pixelGrid * 2)";
                     onLoad = "(_this select 0) ctrlenable false;";
                 };
-                class Button: RscButtonMenu {
-                    idc = 80096;
-                    colorBackground[] = {0,0,0,0};
-                    colorBackgroundFocused[] = {0,0,0,0};
-                    colorBackground2[] = {0,0,0,0};
-                    x = 0;
-                    y = 0;
-                    w = "10 * (pixelW * pixelGrid * 2)";
-                    h = "2 * (pixelH * pixelGrid * 2)";
-
+                class Button: Button {
                     tooltip = "Download latest and report issues:";
-                    url = "https://github.com/acemod/ACE3";
+                    url = "https://github.com/acemod/ACE3/releases";
                 };
             };
         };

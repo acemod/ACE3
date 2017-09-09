@@ -58,6 +58,9 @@ class ACE_Settings {
 };
 ```
 
+#### 1.2.5 Addon template
+Addon template is at [extras/blank](https://github.com/acemod/ACE3/tree/master/extras/blank){:target="_blank"} repo directory.
+
 ### 1.3 Stringtable
 All text that shall be displayed to a user shall be defined in a `stringtable.xml` file for multi-language support.
 
@@ -87,6 +90,7 @@ There also exists the `FUNC` family of Macros:
 |`EFUNC(leg,face)` | `ace_leg_fnc_face` or the call trace wrapper for that function. |
 |`DFUNC(face)` | `ace_balls_fnc_face` and will ALWAYS be the function global variable. |
 |`DEFUNC(leg,face)` | `ace_leg_fnc_face` and will ALWAYS be the function global variable. |
+|`LINKFUNC(face)` | `FUNC(face)` or "pass by reference" `{_this call FUNC(face)}` |
 |`QFUNC(face)` | `"ace_balls_fnc_face"` |
 |`QEFUNC(leg,face)` | `"ace_leg_fnc_face"` |
 |`QQFUNC(face)` | `""ace_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.  |
@@ -95,6 +99,8 @@ There also exists the `FUNC` family of Macros:
 The `FUNC` and `EFUNC` macros shall NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
+
+`LINKFUNC` macro allows to recompile function used in event handler code when function cache is disabled. E.G. `player addEventHandler ["Fired", LINKFUNC(firedEH)];` will run updated code after each recompile.
 
 #### 2.1.1 `FUNC` Macros, Call Tracing, and Non-ACE3/Anonymous Functions
 ACE3 implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
@@ -204,7 +210,10 @@ Exceptions:
 
 ## 5. Code Style
 
+To help with some of the coding style we recommend you get the plugin [EditorConfig](http://editorconfig.org/#download) for your editor. It will help with correct indentations and deleting trailing spaces.
+
 ### 5.1 Braces placement
+
 Braces `{ }` which enclose a code block will have the first bracket placed behind the statement in case of `if`, `switch` statements or `while`, `waitUntil` & `for` loops. The second brace will be placed on the same column as the statement but on a separate line.
 
 - Opening brace on the same line as keyword
@@ -264,7 +273,7 @@ class Three {foo = 3;};
 Putting the opening brace in its own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
 ### 5.2 Indents
-Ever new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
+Every new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed. Tabs or spaces are not allowed to trail on a line, last character needs to be non blank.
 
 Good:
 

@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_ars", "_elapsedTime", "_totalTime"];
+params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_magazineClassname", "_lastAmmoCount", "_simEvents"];
 
 if !((_simEvents select 0) params ["_nextEventTime", "_nextEventIsBullet", "_nextEventMags"]) exitWith { ERROR("No Event"); false };

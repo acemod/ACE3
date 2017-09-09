@@ -8,6 +8,9 @@
  * Return Value:
  * Enabled Channels <ARRAY>
  *
+ * Example:
+ * [false] call ACE_markers_fnc_getEnabledChannels
+ *
  * Public: No
  */
 #include "script_component.hpp"

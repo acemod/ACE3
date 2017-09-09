@@ -33,7 +33,7 @@ private _dependentHitPointScripts = [];
 {
     if ((_x != "") && {isClass (_config >> _x)} && {!(_x in _realHitPoints)}) then {
         _realHitPoints pushBack _x;
-        if (isText (_config >> _x >> "depends")) then {
+        if (!((getText (_config >> _x >> "depends")) in ["", "0"])) then {
             _dependentHitPoints pushBack _x;
             _dependentHitPointScripts pushBack compile getText (_config >> _x >> "depends");
         };

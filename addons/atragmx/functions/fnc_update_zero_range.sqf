@@ -3,10 +3,10 @@
  * Updates the scope base angle based on the zero range input
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_zero_range
@@ -36,7 +36,7 @@ _barometricPressure = GVAR(barometricPressure);
 _relativeHumidity = GVAR(relativeHumidity);
 if (!GVAR(atmosphereModeTBH)) then {
     _barometricPressure = 1013.25 * (1 - (0.0065 * _altitude) / (273.15 + _temperature + 0.0065 * _altitude)) ^ 5.255754495;
-    _relativeHumidity = 50;
+    _relativeHumidity = 0.5;
 };
 
 private _scopeBaseAngle = if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {

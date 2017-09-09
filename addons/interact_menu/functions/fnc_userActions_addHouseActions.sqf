@@ -7,7 +7,7 @@
  * 0: Interact Menu Type (0 - world, 1 - self) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [0] call ace_interact_menu_fnc_userActions_addHouseActions

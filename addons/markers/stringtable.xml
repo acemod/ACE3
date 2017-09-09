@@ -14,6 +14,48 @@
             <Portuguese>Direção %1</Portuguese>
             <Japanese>方位：%1°</Japanese>
             <Korean>방위: %1°</Korean>
+            <Chinesesimp>方位: %1°</Chinesesimp>
+            <Chinese>方位: %1°</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Markers_Module_DisplayName">
+            <English>Markers</English>
+            <German>Markierungen</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_Module_Description">
+            <English>This module allows you to customize markers placement.</English>
+            <German>Dieses Modul ermöglicht die Steuerung der Platzierung von Markierungen.</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MovableMarkers_DisplayName">
+            <English>Movable markers</English>
+            <German>Bewegbare Markierungen</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MovableMarkers_Description">
+            <English>Should map markers placed by players be movable?</English>
+            <German>Sollen Markierungen, die von Spielern platziert wurden, verschiebbar sein?</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_DisplayName">
+            <English>Move restriction</English>
+            <German>Verschiebungsrestriktion</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Description">
+            <English>Apply move restrictions so that not every player is able to move markers.</English>
+            <German>Restriktionen, damit nicht jeder Spieler Marker verschieben kann</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_All">
+            <English>All players</English>
+            <German>Alle Spieler</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
+            <English>Admins</English>
+            <German>Admins</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
+            <English>Group leaders</English>
+            <German>Gruppenführer</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
+            <English>Group leaders and Admins</English>
+            <German>Gruppenführer und Admins</German>
         </Key>
     </Package>
 </Project>

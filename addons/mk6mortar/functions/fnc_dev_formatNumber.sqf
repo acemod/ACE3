@@ -1,19 +1,19 @@
 /*
-Author: Pabst Mirror
-
-Description:
-Converts numbers into nicely formated strings.
-
-Parameters:
-0: NUMBER - Input number
-1: STRING - Output type (see case statement)
-2: BOOL   - If output type is mil, convert input type from deg->mil
-
-Returns:
-STRING - Formatted number
-
-Example:
-[45, "mil4", true] call ace_mk6mortar_fnc_dev_formatNumber = "0800"
+ * Author: Pabst Mirror
+ * Converts numbers into nicely formated strings.
+ *
+ * Arguments:
+ * 0: Input number <NUMBER>
+ * 1: Output type (see case statement) <STRING>
+ * 2: If output type is mil, convert input type from deg->mil <BOOL>
+ *
+ * Return Value:
+ * Formatted number <STRING>
+ *
+ * Example:
+ * [45, "mil4", true] call ace_mk6mortar_fnc_dev_formatNumber = "0800"
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

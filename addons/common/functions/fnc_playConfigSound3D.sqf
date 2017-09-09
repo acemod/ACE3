@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["sound", [0,0,0], 5, 5] call ace_common_fnc_playConfigSound3D
+ *
  * Public: Yes
  */
 #define DEBUG_MODE_FULL

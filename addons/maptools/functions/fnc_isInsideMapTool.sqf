@@ -7,8 +7,14 @@
  * 1: y Position (in meters) <NUMBER>
  *
  * Return Value:
- * Boolean
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [0, 5] call ACE_maptools_fnc_isInsideMapTool
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
 if (GVAR(mapTool_Shown) == 0) exitWith {false};

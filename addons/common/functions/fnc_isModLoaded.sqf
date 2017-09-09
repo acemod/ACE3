@@ -8,6 +8,9 @@
  * Return Value:
  * if modification is loaded <BOOL>
  *
+ * Example:
+ * ["class"] call ace_common_fnc_isModLoaded
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

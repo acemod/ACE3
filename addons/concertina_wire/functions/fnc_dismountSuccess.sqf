@@ -9,11 +9,14 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [wire] call ace_concertina_wire_fnc_dismountSuccess
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_wire);
+params ["_wire"];
 
 {
     _wire animate [_x, 1];

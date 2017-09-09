@@ -233,6 +233,9 @@ class CfgWeapons {
     };
 
     class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
+        // Weapon does not exist in base game, and parent srifle_DMR_03_F is scope 2
+        // Can remove entirely in 3.12
+        scope = 1;
         displayName = CSTRING(srifle_DMR_03_spotter); //NATO DMR (provisional) spotter;
     };
     class DMR_04_base_F: Rifle_Long_Base_F {
@@ -319,7 +322,7 @@ class CfgWeapons {
         };
     };
 
-    class gatling_30mm: CannonCore { // This is a fictional veresion of the GSh-6-30, with 3 barrels
+    class gatling_30mm_base: CannonCore { // This is a fictional version of the GSh-6-30, with 3 barrels
         displayName = "GSh-3-30";
         class LowROF: Mode_FullAuto {
             displayName = "GSh-3-30";
@@ -602,7 +605,7 @@ class CfgWeapons {
     class arifle_CTAR_GL_hex_F: arifle_CTAR_GL_base_F {
         displayName = CSTRING(arifle_CTAR_GL_hex);
     };
-    
+
     class arifle_CTARS_base_F;
     class arifle_CTARS_blk_F: arifle_CTARS_base_F {
         displayName = CSTRING(arifle_CTARS_blk);

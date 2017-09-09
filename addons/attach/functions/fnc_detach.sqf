@@ -7,7 +7,7 @@
  * 1: unit doing the detaching (player) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [car, bob] call ace_attach_fnc_detach
@@ -69,7 +69,7 @@ if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then 
         detach _x;
         deleteVehicle _x;
     } forEach (attachedObjects _attachedObject);
-    
+
     // Delete attached item
     detach _attachedObject;
     deleteVehicle _attachedObject;

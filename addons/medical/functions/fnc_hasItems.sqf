@@ -7,8 +7,11 @@
  * 1: Patient <OBJECT>
  * 2: Items <ARRAY<STRING>>
  *
- * ReturnValue:
+ * Return Value:
  * Has the items <BOOL>
+ *
+ * Example:
+ * [bob, patient, ["bandage", "morphine"]] call ace_medical_fnc_hasItems
  *
  * Public: Yes
  */

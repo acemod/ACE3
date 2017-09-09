@@ -1,14 +1,15 @@
-﻿/*
+/*
  * Author: Rosuto
  * DAGR waypoint output loop
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_outputWP
  *
  * Public: No
  */
@@ -79,7 +80,11 @@ GVAR(outputPFH) = [{
     });
 
     // WP Heading
-    _bearing = floor ((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir);
+    _bearing = floor (if (GVAR(useDegrees)) then {
+        ((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir)
+    } else {
+        DEG_TO_MIL(((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir))
+    });
 
     // Output
     __gridControl ctrlSetText format ["%1", _dagrGrid];
