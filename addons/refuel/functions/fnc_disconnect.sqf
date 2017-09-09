@@ -26,4 +26,4 @@ _nozzle setVariable [QGVAR(sink), nil, true];
 _nozzle setVariable [QGVAR(isConnected), false, true];
 [objNull, _nozzle, true] call FUNC(dropNozzle);
 
-[_unit, objNull, _nozzle] call FUNC(takeNozzle);
+[_unit, _nozzle] call FUNC(takeNozzle);

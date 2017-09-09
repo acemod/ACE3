@@ -30,7 +30,7 @@ GVAR(actions) = [
     [QGVAR(TakeNozzle),
         localize LSTRING(TakeNozzle),
         QPATHTOF(ui\icon_refuel_interact.paa),
-        {[_player, _target, objNull] call FUNC(TakeNozzle)},
+        {[_player, _target] call FUNC(TakeNozzle)},
         {[_player, _target] call FUNC(canTakeNozzle)},
         {}, [], [0,0,0],
         REFUEL_ACTION_DISTANCE

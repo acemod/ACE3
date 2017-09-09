@@ -4,15 +4,13 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Fuel Source <OBJECT>
- * 2: Nozzle <OBJECT> (optional)
+ * 1: Fuel Source or Nozzle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, fuelTruck] call ace_refuel_fnc_takeNozzle
- * [player, objNull, nozzle] call ace_refuel_fnc_takeNozzle
+ * [player, cursorObject] call ace_refuel_fnc_takeNozzle
  *
  * Public: No
  */
@@ -20,13 +18,12 @@
 
 params [
     ["_unit", objNull, [objNull]],
-    ["_source", objNull, [objNull]],
-    ["_nozzle", objNull, [objNull]]
+    ["_object", objNull, [objNull]]
 ];
 
 [
     TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
-    [_unit, [_source, _nozzle] select isNull _source],
+    [_unit, _object],
     {
         params ["_args"];
         _args params ["_unit", "_object"];

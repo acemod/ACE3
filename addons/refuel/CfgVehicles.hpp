@@ -13,7 +13,7 @@
             class GVAR(PickUpNozzle) { \
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-                statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(takeNozzle)); \
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle)); \
                 exceptions[] = {"isNotInside", "isNotOnLadder"}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
