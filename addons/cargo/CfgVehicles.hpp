@@ -286,8 +286,16 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
-    // autonomus
+    // autonomous
     class UAV_01_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+    class UAV_03_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+    class UAV_06_base_F: Helicopter_Base_F {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };
