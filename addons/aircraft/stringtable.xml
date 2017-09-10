@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Aircraft">
         <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
@@ -14,8 +14,8 @@
             <Italian>XM301</Italian>
             <Japanese>XM301</Japanese>
             <Korean>XM301</Korean>
-            <TChinese>XM301</TChinese>
-            <SChinese>XM301</SChinese>
+            <Chinese>XM301</Chinese>
+            <Chinesesimp>XM301</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
             <English>Open Cargo Door</English>
@@ -30,8 +30,8 @@
             <Portuguese>Abrir porta de carga</Portuguese>
             <Japanese>カーゴ ドアを開く</Japanese>
             <Korean>화물칸 개방</Korean>
-            <TChinese>開啟貨艙門</TChinese>
-            <SChinese>开启货舱门</SChinese>
+            <Chinese>開啟貨艙門</Chinese>
+            <Chinesesimp>开启货舱门</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
             <English>Close Cargo Door</English>
@@ -46,8 +46,8 @@
             <Portuguese>Fechar porta de carga</Portuguese>
             <Japanese>カーゴ ドアを閉じる</Japanese>
             <Korean>화물칸 폐쇄</Korean>
-            <TChinese>關閉貨艙門</TChinese>
-            <SChinese>关闭货舱门</SChinese>
+            <Chinese>關閉貨艙門</Chinese>
+            <Chinesesimp>关闭货舱门</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -355,9 +355,27 @@ class CfgVehicles {
     class CargoNet_01_base_F: Slingload_base_F { //Slingload pallets
         GVAR(size) = 6;
     };
-    class Slingload_01_Base_F: Slingload_base_F { //Huron 20ft containers
+
+     //Huron 20ft containers
+    class Slingload_01_Base_F: Slingload_base_F {
         GVAR(canLoad) = 0;
         GVAR(size) = -1;
+    };
+    class B_Slingload_01_Cargo_F: Slingload_01_Base_F { // Huron Cargo
+        GVAR(space) = 20;
+        GVAR(hasCargo) = 1;
+    };
+    class B_Slingload_01_Ammo_F: Slingload_01_Base_F { // Huron Ammo
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+    class B_Slingload_01_Medevac_F: Slingload_01_Base_F { // Huron Medevac
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+    class B_Slingload_01_Repair_F: Slingload_01_Base_F { // Huron Repair
+        GVAR(space) = 12;
+        GVAR(hasCargo) = 1;
     };
 
     // Taru pods
@@ -407,6 +425,7 @@ class CfgVehicles {
     };
 
     // objects
+    class Lamps_base_F;
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
@@ -414,7 +433,11 @@ class CfgVehicles {
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
     };
-
+    class Land_PortableLight_single_F: Lamps_base_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
+    
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
         class EventHandlers {
@@ -724,7 +747,7 @@ class CfgVehicles {
         GVAR(size) = 100;
     };
 
-    // small
+    // Small
     class Land_CargoBox_V1_F: ThingX {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
@@ -745,10 +768,55 @@ class CfgVehicles {
             };
         };
     };
-
-    class Lamps_base_F;
-    class Land_PortableLight_single_F: Lamps_base_F {
+    class Land_PaperBox_01_small_closed_base_F: Items_base_F {
         GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+        
+        maximumLoad = 1000;
+        transportMaxBackpacks = 12;
+        transportMaxMagazines = 64;
+        transportMaxWeapons = 12;
+    };
+    class Box_UAV_06_base_F: Items_base_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
+
+    // Aid items
+    class Land_FoodSack_01_full_base_F: Items_base_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
+    class Land_FoodSack_01_cargo_base_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_FoodSack_01_large_base_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_FoodSack_01_small_base_F: Items_base_F {
+        GVAR(size) = 2;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PaperBox_01_open_boxes_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PaperBox_01_open_water_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PaperBox_01_open_empty_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PaperBox_01_small_stacked_F: Items_base_F {
+        GVAR(size) = 7;
+        GVAR(canLoad) = 1;
+    };
+    class Land_WaterBottle_01_stack_F: Items_base_F {
+        GVAR(size) = 7;
         GVAR(canLoad) = 1;
     };
 };

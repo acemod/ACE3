@@ -10,7 +10,7 @@
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
-                exceptions[] = {"isNotOnLadder"}; \
+                exceptions[] = {"isNotSwimming", "isNotOnLadder"}; \
             }; \
         }; \
     };
@@ -32,8 +32,8 @@ class CfgVehicles {
         author = ECSTRING(Common,ACETeam);
         class Arguments {
             class engineerSetting_Repair {
-                displayName = CSTRING(enginerSetting_Repair_name);
-                description = CSTRING(enginerSetting_Repair_description);
+                displayName = CSTRING(engineerSetting_Repair_name);
+                description = CSTRING(engineerSetting_Repair_description);
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
@@ -42,8 +42,8 @@ class CfgVehicles {
                 };
             };
             class engineerSetting_Wheel {
-                displayName = CSTRING(enginerSetting_Wheel_name);
-                description = CSTRING(enginerSetting_Wheel_description);
+                displayName = CSTRING(engineerSetting_Wheel_name);
+                description = CSTRING(engineerSetting_Wheel_description);
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 1; };

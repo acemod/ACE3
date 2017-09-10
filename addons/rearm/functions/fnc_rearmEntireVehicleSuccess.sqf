@@ -18,21 +18,19 @@
 #include "script_component.hpp"
 
 params ["_args"];
-_args params [
-    ["_truck", objNull, [objNull]],
-    ["_vehicle", objNull, [objNull]]
-];
+_args params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+TRACE_2("rearmEntireVehicleSuccess",_truck,_vehicle);
 
 if (isServer) then {
     {
         private _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
-            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _truck] call CBA_fnc_targetEvent;
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], [_vehicle]] call CBA_fnc_targetEvent;
         } else {
             [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _turretOwnerID] call CBA_fnc_ownerEvent;
         };
         false
     } count REARM_TURRET_PATHS;
 } else {
-    [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call CBA_fnc_serverEvent;
+    [QGVAR(rearmEntireVehicleSuccessEH), _this] call CBA_fnc_serverEvent;
 };

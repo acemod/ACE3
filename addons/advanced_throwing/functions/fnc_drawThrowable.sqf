@@ -128,6 +128,10 @@ _activeThrowable setDir (_unitDirVisual + 90);
 private _pitch = [-30, -90] select (_throwType == "high");
 [_activeThrowable, _pitch, 0] call BIS_fnc_setPitchBank;
 
+// Force drop mode if underwater
+if (underwater player) then {
+    ACE_player setVariable [QGVAR(dropMode), true];
+};
 
 if (ACE_player getVariable [QGVAR(dropMode), false]) then {
     _posFin = _posFin vectorAdd (AGLToASL (positionCameraToWorld [_leanCoef, 0, ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]]));

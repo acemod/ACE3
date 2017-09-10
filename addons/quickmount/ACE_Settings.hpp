@@ -36,6 +36,6 @@ class ACE_Settings {
         description = CSTRING(PriorityDescription);
         isClientSettable = 1;
         force = 0;
-        values[] = {"Driver", "Gunner", "Commander", "Passenger"};
+        values[] = {"$str_getin_pos_driver", "$str_getin_pos_gunn", "$str_getin_pos_comm", "$STR_GETIN_POS_PASSENGER"};
     };
 };

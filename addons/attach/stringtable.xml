@@ -14,8 +14,8 @@
             <Russian>Прикрепить предмет</Russian>
             <Japanese>アイテムを取り付ける</Japanese>
             <Korean>물건 부착</Korean>
-            <TChinese>附掛裝備&gt;&gt;</TChinese>
-            <SChinese>附挂装备&gt;&gt;</SChinese>
+            <Chinese>附掛裝備&gt;&gt;</Chinese>
+            <Chinesesimp>附挂装备&gt;&gt;</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
             <English>Attach</English>
@@ -30,8 +30,8 @@
             <Russian>Прикрепить</Russian>
             <Japanese>取り付ける</Japanese>
             <Korean>부착</Korean>
-            <TChinese>附掛</TChinese>
-            <SChinese>附挂</SChinese>
+            <Chinese>附掛</Chinese>
+            <Chinesesimp>附挂</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Detach">
             <English>Detach item</English>
@@ -46,8 +46,8 @@
             <Russian>Отсоединить</Russian>
             <Japanese>アイテムを外す</Japanese>
             <Korean>분리</Korean>
-            <TChinese>取下裝備</TChinese>
-            <SChinese>取下装备</SChinese>
+            <Chinese>取下裝備</Chinese>
+            <Chinesesimp>取下装备</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Attached">
             <English>IR Strobe Attached</English>
@@ -62,8 +62,8 @@
             <Russian>ИК-маяк прикреплён</Russian>
             <Japanese>赤外線ストロボを取り付ける</Japanese>
             <Korean>적외선 스트로브 부착됨</Korean>
-            <TChinese>已附掛紅外線頻閃器</TChinese>
-            <SChinese>已附挂红外线频闪器</SChinese>
+            <Chinese>已附掛紅外線頻閃器</Chinese>
+            <Chinesesimp>已附挂红外线频闪器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Detached">
             <English>IR Strobe Detached</English>
@@ -78,8 +78,8 @@
             <Russian>ИК-маяк отсоединён</Russian>
             <Japanese>赤外線ストロボを外す</Japanese>
             <Korean>적외선 스트로브 분리됨</Korean>
-            <TChinese>已取下紅外線頻閃器</TChinese>
-            <SChinese>已取下红外线频闪器</SChinese>
+            <Chinese>已取下紅外線頻閃器</Chinese>
+            <Chinesesimp>已取下红外线频闪器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Attached">
             <English>IR Grenade Attached</English>
@@ -94,8 +94,8 @@
             <Russian>ИК-граната прикреплена</Russian>
             <Japanese>赤外線グレネードを取り付ける</Japanese>
             <Korean>적외선 수류탄 부착됨</Korean>
-            <TChinese>已附掛紅外線手榴彈</TChinese>
-            <SChinese>已附挂红外线手榴弹</SChinese>
+            <Chinese>已附掛紅外線手榴彈</Chinese>
+            <Chinesesimp>已附挂红外线手榴弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Detached">
             <English>IR Grenade Detached</English>
@@ -110,8 +110,8 @@
             <Russian>ИК-граната отсоединена</Russian>
             <Japanese>赤外線グレネードを外す</Japanese>
             <Korean>적외선 수류탄 분리됨</Korean>
-            <TChinese>已取下紅外線手榴彈</TChinese>
-            <SChinese>已取下红外线手榴弹</SChinese>
+            <Chinese>已取下紅外線手榴彈</Chinese>
+            <Chinesesimp>已取下红外线手榴弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Attached">
             <English>Chemlight Attached</English>
@@ -126,8 +126,8 @@
             <Russian>Химсвет прикреплён</Russian>
             <Japanese>ケミライトを取り付け</Japanese>
             <Korean>켐라이트 부착됨</Korean>
-            <TChinese>已附掛螢光棒</TChinese>
-            <SChinese>已附挂萤光棒</SChinese>
+            <Chinese>已附掛螢光棒</Chinese>
+            <Chinesesimp>已附挂萤光棒</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Detached">
             <English>Chemlight Detached</English>
@@ -142,8 +142,8 @@
             <Russian>Химсвет отсоединён</Russian>
             <Japanese>ケミライトを外す</Japanese>
             <Korean>켐라이트 분리됨</Korean>
-            <TChinese>已取下螢光棒</TChinese>
-            <SChinese>已取下萤光棒</SChinese>
+            <Chinese>已取下螢光棒</Chinese>
+            <Chinesesimp>已取下萤光棒</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Inventory_Full">
             <English>No inventory space</English>
@@ -158,8 +158,8 @@
             <Russian>В инвентаре нет места</Russian>
             <Japanese>インベントリに空きがない</Japanese>
             <Korean>넣을 공간이 없음</Korean>
-            <TChinese>無可用空間</TChinese>
-            <SChinese>无可用空间</SChinese>
+            <Chinese>無可用空間</Chinese>
+            <Chinesesimp>无可用空间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Name">
             <English>IR Strobe</English>
@@ -174,8 +174,8 @@
             <Russian>ИК-маяк</Russian>
             <Japanese>赤外線ストロボ</Japanese>
             <Korean>적외선 스트로브</Korean>
-            <TChinese>紅外線頻閃器</TChinese>
-            <SChinese>红外线频闪器</SChinese>
+            <Chinese>紅外線頻閃器</Chinese>
+            <Chinesesimp>红外线频闪器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
@@ -190,8 +190,8 @@
             <Russian>ИК-маяк позволяет сигнализировать о своём местоположении через пульсирующий свет, видимый только через ПНВ.</Russian>
             <Japanese>赤外線ストロボはあなたの位置を知らせますが、夜間暗視装置を介してでしか見れません。</Japanese>
             <Korean>적외선 스트로브는 자신의 위치를 반짝이면서 표시합니다. 이는 야간투시경으로 밖에 보지 못합니다.</Korean>
-            <TChinese>紅外線閃頻器,藉由紅外線閃頻信號來辨識你的位置,僅能使用夜視系統來辨識紅外線信號</TChinese>
-            <SChinese>红外线闪频器,藉由红外线闪频信号来辨识你的位置,仅能使用夜视系统来辨识红外线信号</SChinese>
+            <Chinese>紅外線閃頻器,藉由紅外線閃頻信號來辨識你的位置，僅能使用夜視系統來辨識紅外線信號</Chinese>
+            <Chinesesimp>红外线闪频器,藉由红外线闪频信号来辨识你的位置，仅能使用夜视系统来辨识红外线信号</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
             <English>Place</English>
@@ -206,8 +206,8 @@
             <Russian>Установить</Russian>
             <Japanese>置く</Japanese>
             <Korean>두기</Korean>
-            <TChinese>放置</TChinese>
-            <SChinese>放置</SChinese>
+            <Chinese>放置</Chinese>
+            <Chinesesimp>放置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_CancelAction">
             <English>Cancel</English>
@@ -222,8 +222,8 @@
             <Russian>Отмена</Russian>
             <Japanese>やめる</Japanese>
             <Korean>취소</Korean>
-            <TChinese>取消</TChinese>
-            <SChinese>取消</SChinese>
+            <Chinese>取消</Chinese>
+            <Chinesesimp>取消</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Failed">
             <English>Attach Failed</English>
@@ -238,8 +238,8 @@
             <Italian>Non si attacca</Italian>
             <Japanese>取り付けに失敗した</Japanese>
             <Korean>부착 실패</Korean>
-            <TChinese>附掛失敗</TChinese>
-            <SChinese>附挂失败</SChinese>
+            <Chinese>附掛失敗</Chinese>
+            <Chinesesimp>附挂失败</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>
@@ -254,8 +254,8 @@
             <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
             <Japanese>%1&lt;br/&gt;を取り付けた</Japanese>
             <Korean>%1&lt;br/&gt;부착됨</Korean>
-            <TChinese>%1&lt;br/&gt;已附掛</TChinese>
-            <SChinese>%1&lt;br/&gt;已附挂</SChinese>
+            <Chinese>%1&lt;br/&gt;已附掛</Chinese>
+            <Chinesesimp>%1&lt;br/&gt;已附挂</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
@@ -270,8 +270,8 @@
             <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
             <Japanese>%1&lt;br/&gt;を外した</Japanese>
             <Korean>%1&lt;br/&gt;분리됨</Korean>
-            <TChinese>%1&lt;br/&gt;已取下</TChinese>
-            <SChinese>%1&lt;br/&gt;已取下</SChinese>
+            <Chinese>%1&lt;br/&gt;已取下</Chinese>
+            <Chinesesimp>%1&lt;br/&gt;已取下</Chinesesimp>
         </Key>
     </Package>
 </Project>

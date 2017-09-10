@@ -75,7 +75,7 @@ GVAR(MenuPFHID) = [{
     [GVAR(LatestDisplayOptionMenu)] call FUNC(handleUI_DisplayOptions);
 
     //Check that it's valid to stay open:
-    if !(([ACE_player, GVAR(INTERACTION_TARGET), ["isNotInside"]] call EFUNC(common,canInteractWith)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call FUNC(canOpenMenu)}) then {
+    if !(([ACE_player, GVAR(INTERACTION_TARGET), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call FUNC(canOpenMenu)}) then {
         closeDialog 314412;
         //If we failed because of distance check, show UI message:
         if ((ACE_player distance GVAR(INTERACTION_TARGET)) > GVAR(maxRange)) then {
