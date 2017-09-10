@@ -48,7 +48,7 @@ if !(_containerArray isEqualTo []) then {
         if (_x select 0 == _containerArrayClass) exitWith { _lookupObject = (_x select 1); };
     } forEach (everyContainer _toContainer);
 
-    if (isNull _lookupObject) exitWith {}; // should not happen (B&S)
+    if (isNull _lookupObject) exitWith { WARNING_2("Look up container: [%1] not found in container: [%2]", _containerArrayClass, _toContainer); }; // should not happen (B&S)
 
     {
         // magazines have a size of 3, items/weapons have a size of 2
@@ -59,7 +59,7 @@ if !(_containerArray isEqualTo []) then {
 
             // stored weapons are arrays, stored items are strings
             if (_itemInfo isEqualType []) then {
-                [_itemInfo, _lookupObject, _itemCount] call _fnc_addWeaponArrayToContainer;
+                [_itemInfo, _lookupObject, _itemCount] call FUNC(addWeaponArrayToContainer);
             } else {
                 _lookupObject addItemCargoGlobal _x;
             };

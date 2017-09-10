@@ -25,7 +25,7 @@
 params [
     "_weaponArray",
     "_container",
-    ["_weaponCount", 1, [0]] //
+    ["_weaponCount", 1, [0]]
 ];
 TRACE_3("params", _weaponArray, _container, _weaponCount);
 
@@ -42,7 +42,7 @@ if !(_weaponArray isEqualTo []) then {
 
     // look up attachementless weapon
     private _weaponCfg = (configfile >> "cfgweapons" >> _weapon);
-    if !(isClass _weaponCfg) exitWith {}; // if weapon is not valid exit here (shouldn't happen but B&S)
+    if !(isClass _weaponCfg) exitWith { WARNING_1("Provided weapon class invalid: [%1]", _weapon); }; // if weapon is not valid exit here (shouldn't happen but B&S)
 
     private _baseWeapon = getText (_weaponCfg >> "baseWeapon");
     if (_baseWeapon == "") then { // no base weapon reference on weapon class, just use provided classname (trying to lookup parents can end poorly)
