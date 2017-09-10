@@ -50,7 +50,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
 `ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
-`ace_cargoRemoved` | [_itemClass, _vehicle, _amount] | Global | Cargo has been removed (deleted) from vehicle
+`ace_cargoRemoved` | [_itemClass, _vehicle, _amount, _itemsRemoved] | Global | Cargo has been removed (deleted) from vehicle. `_amount` is the requested number of items, `_itemsRemoved` is the actual amount that was removed.
 
 ## 3. Editor Attributes
 

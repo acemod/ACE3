@@ -64,6 +64,6 @@ private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _vehicle setVariable [QGVAR(space), _space + _addedSpace, true];
 
 // Invoke listenable event
-["ace_cargoRemoved", [_itemClass, _vehicle, _amount]] call CBA_fnc_globalEvent;
+["ace_cargoRemoved", [_itemClass, _vehicle, _amount, _itemsRemoved]] call CBA_fnc_globalEvent;
 
 _itemsRemoved
