@@ -302,4 +302,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 3;
     };
+    class GVAR(moveInventoryToBodyBag) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_moveInventoryToBodyBag_DisplayName);
+        description = CSTRING(MedicalSettings_moveInventoryToBodyBag_Description);
+        typeName = "BOOL";
+        value = 0;
+    };
 };

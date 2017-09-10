@@ -5615,5 +5615,11 @@
             <German>Deckel zuklappen</German>
             <Japanese>フタをしめる</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_moveInventoryToBodyBag_DisplayName">
+            <English>Move casualty inventory to body bag</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_moveInventoryToBodyBag_Description">
+            <English>Move the casualty's inventory into the body bad they're loaded into</English>
+        </Key>
     </Package>
 </Project>

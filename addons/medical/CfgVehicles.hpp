@@ -146,6 +146,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class moveInventoryToBodyBag {
+                displayName = CSTRING(MedicalSettings_moveInventoryToBodyBag_DisplayName);
+                description = CSTRING(MedicalSettings_moveInventoryToBodyBag_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
 
         class ModuleDescription {
@@ -679,6 +685,16 @@ class CfgVehicles {
                 selection = "";
             };
         };
+    };
+    class ACE_bodyBagHolderObject: ACE_bodyBagObject { // make body bag function as crate
+        maximumLoad = 2000;
+        transportMaxWeapons = 12;
+        transportMaxMagazines = 64;
+        transportMaxBackpacks = 12;
+        transportAmmo = 0;
+        transportRepair = 0;
+        transportFuel = 0;
+        supplyRadius = 1.4;
     };
 
     // Medical litter classes
