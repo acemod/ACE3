@@ -136,7 +136,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                     _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(abs(sin(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
+                    _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _windDir) * _windSpeed) * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
                 };
                 _textInfoLine2 = "- set heading";
@@ -168,7 +168,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                     _textCenterBig = Str(round(cos(GVAR(RefHeading) - _playerDir) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(cos(GVAR(RefHeading)) * _windSpeed * 10) / 10);
+                    _textCenterBig = Str(round(-cos(GVAR(RefHeading) - _windDir) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
                 };
                 _textInfoLine2 = "- set heading";
