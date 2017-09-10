@@ -1,10 +1,12 @@
+#include "script_component.hpp"
+
 ["ace_settingsInitialized", {
-    if (!GVAR(enableLoadoutMenu)) exitWith {};
+    if (!GVAR(enabled)) exitWith {};
 
     private _filter = "isClass (_x >> 'Components' >> 'TransportPylonsComponent')";
-    private _aircraftWithPylons = _filter configClasses (configFile >> "CfgVehicles" >> "Air");
+    GVAR(aircraftWithPylons) = (_filter configClasses (configFile >> "CfgVehicles")) apply {configName _x};
     {
-        [configName _x, "init", {
+        [_x, "init", {
             params ["_aircraft"];
 
             private _loadoutAction = [
@@ -13,20 +15,14 @@
                 "",
                 {[_target] call FUNC(showDialog)},
                 {
-                    // TODO
                     private _rearmVehicles = _target nearObjects ["LandVehicle", GVAR(searchDistance) + 10];
+                    FILTER(_rearmVehicles,(_x getVariable [QEGVAR(rearm,magazineSupply), 0]) > 0);
 
-                    if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
-                        FILTER(_rearmVehicles,(_x getVariable [QEGVAR(rearm,magazineSupply), 0]) > 0);
-                    } else {
-                        FILTER(_rearmVehicles,getAmmoCargo _x > 0);
-                    };
-
-                    ({([_x, _target] call EFUNC(interaction,getInteractionDistance)) < GVAR(searchDistance)} count _rearmVehicles) > 0
+                    (!(_rearmVehicles isEqualTo []) && {[ace_player, _target] call FUNC(canConfigurePylons)})
                 }
             ] call EFUNC(interact_menu,createAction);
 
             [_aircraft, 0, ["ACE_MainActions"], _loadoutAction] call EFUNC(interact_menu,addActionToObject);
         }] call CBA_fnc_addClassEventHandler;
-    } forEach _aircraftWithPylons;
+    } forEach GVAR(aircraftWithPylons);
 }] call CBA_fnc_addEventHandler;

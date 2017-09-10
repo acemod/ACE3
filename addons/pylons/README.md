@@ -1,7 +1,7 @@
 ace_pylons
 ============
 
-Adds an interface that allows players to interact with aircraft pylons.
+Adds an interface that allows players to configure aircraft pylons.
 
 
 ## Maintainers

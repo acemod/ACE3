@@ -1,20 +1,18 @@
 /*
  * Author: Glowbal
- * Check if unit has item
+ * Check if unit has item. Note: Case sensitive
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Item Classname <STRING>
  *
  * Return Value:
- * has Item <BOOL>
+ * Unit has Item <BOOL>
  *
  * Example:
- * [[bob, "item"] call ace_common_fnc_hasItem
+ * [bob, "item"] call ace_common_fnc_hasItem
  *
- * Public: yes
- *
- * Note: Case sensitive
+ * Public: Yes
  */
 #include "script_component.hpp"
 

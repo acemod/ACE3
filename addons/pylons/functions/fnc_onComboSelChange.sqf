@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Mirrors magazine selection to the opposite pylon if mirroring is on
+ * Handles mirroring and rearm icons when a combobox' selection changes.
  *
  * Arguments:
  * 0: Combobox <CONTROL>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [false] call ace_pylons_fnc_onComboSelChange
+ * [_combo, 5] call ace_pylons_fnc_onComboSelChange
  *
  * Public: No
  */
@@ -18,16 +18,19 @@
 
 params ["_ctrl", "_index"];
 
-private _checkBox = (findDisplay 654654) displayCtrl 130;
-if (!cbChecked _checkBox) exitWith {};
-
 {
-    if (_ctrl == (_x select 0) && {(_x select 1) == -1}) exitWith {
-        private _indexOf = _forEachIndex;
-        {
-            if ((_x select 1) == _indexOf) exitWith {
-                (_x select 0) lbSetCurSel _index;
-            };
-        } forEach GVAR(comboBoxes);
+    _x params ["_combo", "_mirroredIndex", "_icon", "_originalIndex"];
+    if (_ctrl == _combo) exitWith {
+        if (_mirroredIndex == -1) then {
+            private _indexOf = _forEachIndex;
+            {
+                if (_mirroredIndex == _indexOf) exitWith {
+                    _combo lbSetCurSel _index;
+                };
+            } forEach GVAR(comboBoxes);
+        };
+        if (!GVAR(rearmNewPylons)) then {
+            _icon ctrlSetText (["a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa", ""] select (_index == _originalIndex));
+        };
     };
 } forEach GVAR(comboBoxes);

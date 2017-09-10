@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Saves the selected pylon configuration to profileNamespace
+ * Saves the selected pylon configuration to profileNamespace.
  *
  * Arguments:
  * None
@@ -25,5 +25,16 @@ private _index = lbAdd [160, _loadoutName];
 lbSetCurSel [160, _index];
 
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];
-_aircraftLoadouts pushBack [_loadoutName, _loadoutPylons, typeOf GVAR(currentAircraft)];
+private _found = {
+    if ((_x select 0) isEqualTo _loadoutName && {(_x select 2) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
+        _aircraftLoadouts set [_forEachIndex, [_loadoutName, _loadoutPylons, typeOf GVAR(currentAircraft)]];
+        true
+    };
+    false
+} forEach _aircraftLoadouts;
+
+if (!_found) then {
+    _aircraftLoadouts pushBack [_loadoutName, _loadoutPylons, typeOf GVAR(currentAircraft)];
+};
+
 profileNamespace setVariable [QGVAR(aircraftLoadouts), _aircraftLoadouts];

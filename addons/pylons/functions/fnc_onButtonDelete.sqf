@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Deletes the selected pylon configuration from profileNamespace
+ * Deletes the selected pylon configuration from profileNamespace.
  *
  * Arguments:
  * None
@@ -15,10 +15,15 @@
  */
 #include "script_component.hpp"
 
-private _selection = lbText [160, lbCurSel 160];
+private _loadoutName = lbText [160, lbCurSel 160];
 
 lbDelete [160, lbCurSel 160];
 
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];
-FILTER(_aircraftLoadouts,(_x select 0) != _selection);
+private _index = {
+    if ((_x select 0) isEqualTo _loadoutName && {(_x select 2) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
+        _forEachIndex
+    };
+} forEach _aircraftLoadouts;
+_aircraftLoadouts deleteAt _index;
 profileNamespace setVariable [QGVAR(aircraftLoadouts), _aircraftLoadouts];

@@ -17,9 +17,20 @@
 
 params ["_aircraft"];
 
+if (!GVAR(enabled) || {!(typeOf _aircraft in GVAR(aircraftWithPylons))}) exitWith {};
+
+[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+
 GVAR(currentAircraft) = _aircraft;
 
 createDialog QGVAR(DialogLoadout);
+
+if (GVAR(rearmNewPylons)) then {
+    ctrlShow [220, false];
+    ctrlShow [230, false];
+} else {
+    ctrlSetText [220, "    " + (ctrlText 220)];
+};
 
 private _config = configFile >> "CfgVehicles" >> typeOf _aircraft;
 private _pylonComponent = _config >> "Components" >> "TransportPylonsComponent";
@@ -30,45 +41,60 @@ private _display = findDisplay 654654;
 
 GVAR(comboBoxes) = [];
 {
-    private _pylon = _x;
-    private _ctrl = _display ctrlCreate ["RscCombo", -1];
+    private _pylonConfig = _x;
 
-    private _uiPos = getArray (_pylon >> "UIposition");
+    private _combo = _display ctrlCreate ["RscCombo", -1];
     private _picturePos = ctrlPosition (_display displayCtrl 111);
-    _ctrl ctrlsetPosition [
+    private _uiPos = getArray (_pylonConfig >> "UIposition");
+    _combo ctrlsetPosition [
         (_picturePos select 0) + (_uiPos select 0),
         (_picturePos select 1) + (_uiPos select 1),
-        0.100000 * safezoneW,
+        0.09 * safezoneW,
         0.028 * safezoneH
     ];
 
-    _ctrl lbAdd "<empty>";
-    _ctrl lbSetData [0, ""];
+    _combo lbAdd LSTRING(Empty);
+    _combo lbSetData [0, ""];
 
     private _mag = (getPylonMagazines _aircraft) select _forEachIndex;
-    private _mags = [_pylon] call EFUNC(rearm,getHardpointMagazines);
+    private _mags = [_pylonConfig] call EFUNC(rearm,getHardpointMagazines);
     private _index = 0;
     {
-        _ctrl lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayName");
-        _ctrl lbSetData [_forEachIndex + 1, _x];
-        _ctrl ctrlAddEventHandler ["LBSelChanged", {call FUNC(onComboSelChange)}];
+        _combo lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayName");
+        _combo lbSetData [_forEachIndex + 1, _x];
+        _combo ctrlAddEventHandler ["LBSelChanged", {call FUNC(onComboSelChange)}];
 
         if (_mag == _x) then {
             _index = _forEachIndex + 1;
         };
     } forEach _mags;
-    _ctrl lbSetCurSel _index;
+    _combo lbSetCurSel _index;
+    _combo ctrlCommit 0;
 
-    _ctrl ctrlCommit 0;
+    private _mirroredIndex = [_pylonConfig >> "mirroredMissilePos", "number", 0] call CBA_fnc_getConfigEntry;
 
-    private _mirroredIndex = if (isNumber (_pylon >> "mirroredMissilePos")) then {getNumber (_pylon >> "mirroredMissilePos")} else {0};
-    GVAR(comboBoxes) pushBack [_ctrl, _mirroredIndex - 1];
+    private _icon = controlNull;
+    if (!GVAR(rearmNewPylons)) then {
+        _icon = _display ctrlCreate ["RscPicture", -1];
+        _icon ctrlsetPosition [
+            (_picturePos select 0) + (_uiPos select 0) - (0.0131354 * safezoneW),
+            (_picturePos select 1) + (_uiPos select 1),
+            0.0131354 * safezoneW,
+            0.028 * safezoneH
+        ];
+        _icon ctrlCommit 0;
+    } else {
+        // TODO: Create ammo count controls
+    };
+
+    GVAR(comboBoxes) pushBack [_combo, _mirroredIndex - 1, _icon, _index];
 } forEach ("true" configClasses (_pylonComponent >> "Pylons"));
 
 GVAR(defaultLoadoutNames) = [];
 
 {
     lbAdd [160, getText (_x >> "displayName")];
+    lbSetPicture [160, _forEachIndex, "a3\data_f_jets\logos\jets_logo_small_ca.paa"];
     GVAR(defaultLoadoutNames) pushBack getText (_x >> "displayName");
 } forEach ("true" configClasses (_pylonComponent >> "Presets"));
 
@@ -91,6 +117,7 @@ _list ctrlAddEventHandler ["LBSelChanged", {
 
 private _edit = _display displayCtrl 170;
 _edit ctrlAddEventHandler ["KeyUp", {call FUNC(onNameChange)}];
+_edit ctrlAddEventHandler ["KeyDown", {call FUNC(onNameChange)}];
 
 private _checkbox = _display displayCtrl 130;
 _checkbox ctrlAddEventHandler ["CheckedChanged", {[(_this select 1) == 1] call FUNC(onPylonMirror)}];

@@ -1,15 +1,15 @@
 class ACE_Settings {
-    class GVAR(enableLoadoutMenu) {
+    class GVAR(enabled) {
         category = CSTRING(Category_Pylons);
-        displayName = CSTRING(EnableLoadoutMenu);
-        description = CSTRING(EnableLoadoutMenu_description);
+        displayName = CSTRING(Enabled);
+        description = CSTRING(Enabled_description);
         value = 1;
         typeName = "BOOL";
     };
-    class GVAR(makeNewPylonsEmpty) {
+    class GVAR(rearmNewPylons) {
         category = CSTRING(Category_Pylons);
-        displayName = CSTRING(MakeNewPylonsEmpty);
-        description = CSTRING(MakeNewPylonsEmpty_description);
+        displayName = CSTRING(RearmNewPylons);
+        description = CSTRING(RearmNewPylons_description);
         value = 1;
         typeName = "BOOL";
     };
@@ -19,5 +19,26 @@ class ACE_Settings {
         description = CSTRING(SearchDistance_description);
         value = 15;
         typeName = "SCALAR";
+    };
+    class GVAR(timePerPylon) {
+        category = CSTRING(Category_Pylons);
+        displayName = CSTRING(TimePerPylon);
+        description = CSTRING(TimePerPylon_description);
+        value = 5;
+        typeName = "SCALAR";
+    };
+    class GVAR(requireEngineer) {
+        category = CSTRING(Category_Pylons);
+        displayName = CSTRING(RequireEngineer);
+        description = CSTRING(RequireEngineer_description);
+        value = 0;
+        typeName = "BOOL";
+    };
+    class GVAR(requireToolkit) {
+        category = CSTRING(Category_Pylons);
+        displayName = CSTRING(RequireToolkit);
+        description = CSTRING(RequireToolkit_description);
+        value = 0;
+        typeName = "BOOL";
     };
 };

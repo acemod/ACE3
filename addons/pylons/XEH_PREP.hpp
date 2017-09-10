@@ -1,4 +1,6 @@
+PREP(canConfigurePylons);
 PREP(onButtonApply);
+PREP(onButtonClose);
 PREP(onButtonDelete);
 PREP(onButtonLoad);
 PREP(onButtonSave);

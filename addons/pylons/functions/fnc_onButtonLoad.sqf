@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Loads selected pylon configuration from either config or profile
+ * Loads selected pylon configuration from either config or profileNamespace.
  *
  * Arguments:
  * None
@@ -19,7 +19,6 @@
 ((findDisplay 654654) displayCtrl 130) cbSetChecked false;
 
 private _loadoutName = ctrlText 170;
-
 private _fnc_setSelections = {
     params ["_mags"];
 
@@ -36,20 +35,20 @@ private _fnc_setSelections = {
     } forEach GVAR(comboBoxes);
 };
 
-private _loadoutFound = false;
 private _pylonComponent = configFile >> "CfgVehicles" >> typeOf GVAR(currentAircraft) >> "Components" >> "TransportPylonsComponent";
-{
-    if (getText (_x >> "displayName") == _loadoutName) exitWith {
+private _loadoutFound = {
+    if (getText (_x >> "displayName") isEqualTo _loadoutName) exitWith {
         [getArray (_x >> "attachment")] call _fnc_setSelections;
-        _loadoutFound = true;
+        true
     };
+    false
 } forEach ("true" configClasses (_pylonComponent >> "Presets"));
 
 if (_loadoutFound) exitWith {};
 
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];
 {
-    if ((_x select 0) == _loadoutName) exitWith {
+    if ((_x select 0) isEqualTo _loadoutName && {(_x select 2) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
         [_x select 1] call _fnc_setSelections;
     };
 } forEach _aircraftLoadouts;

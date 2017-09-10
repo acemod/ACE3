@@ -3,7 +3,6 @@ class RscCheckBox;
 class RscListBox;
 class RscEdit;
 class RscButtonMenu;
-class RscButtonMenuCancel;
 class RscText;
 class RscPicture;
 
@@ -34,7 +33,7 @@ class GVAR(DialogLoadout) {
             idc = 111;
             x = 0.171616 * safezoneW + safezoneX;
             y = 0.318 * safezoneH + safezoneY;
-            w = 0.441347 * safezoneW;
+            w = 0.440035 * safezoneW;
             h = 0.392 * safezoneH;
             colorBackground[] = {0.3,0.3,0.3,1};
         };
@@ -120,11 +119,29 @@ class GVAR(DialogLoadout) {
             w = 0.0721875 * safezoneW;
             h = 0.028 * safezoneH;
         };
-        class BtnClose: RscButtonMenuCancel {
+        class BtnClose: RscButtonMenu {
             text = "$STR_disp_cancel";
+            action = QUOTE(call FUNC(onButtonClose));
             x = 0.769275 * safezoneW + safezoneX;
             y = 0.738 * safezoneH + safezoneY;
             w = 0.0721875 * safezoneW;
+            h = 0.028 * safezoneH;
+        };
+        class TextBanner: RscText {
+            idc = 220;
+            text = CSTRING(BannerText);
+            x = 0.171616 * safezoneW + safezoneX;
+            y = 0.290 * safezoneH + safezoneY;
+            w = 0.440035 * safezoneW;
+            h = 0.028 * safezoneH;
+            colorBackground[] = {0.5,0,0,0.5};
+        };
+        class PictureRearm: RscPicture {
+            idc = 230;
+            text = "a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa";
+            x = 0.171616 * safezoneW + safezoneX;
+            y = 0.290 * safezoneH + safezoneY;
+            w = 0.0131354 * safezoneW;
             h = 0.028 * safezoneH;
         };
     };
