@@ -351,7 +351,7 @@ class CfgVehicles {
         // Darter is electrical
         GVAR(canReceive) = 0;
     };
-    class UAV_03_base_F: Helicopter_Base_F {
+    class UAV_06_base_F: Helicopter_Base_F {
         // Orange UAV is electrical
         GVAR(canReceive) = 0;
     };
