@@ -28,7 +28,7 @@ params [
         params ["_args"];
         _args params ["_unit", "_object"];
 
-        if !([_unit, _object] call FUNC(canTakeNozzle)) exitWith {}; // TODO delete nozzle if truck is destroyed
+        if !([_unit, _object] call FUNC(canTakeNozzle)) exitWith {};
 
         private _source = _object;
         private _nozzle = _object;
