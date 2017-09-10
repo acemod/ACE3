@@ -50,7 +50,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
 `ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
-`ace_cargoRemoved` | [_item, _vehicle, _amount] | Global | Cargo has been removed (deleted) from vehicle
+`ace_cargoRemoved` | [_itemClass, _vehicle, _amount] | Global | Cargo has been removed (deleted) from vehicle
 
 ## 3. Editor Attributes
 
@@ -154,7 +154,7 @@ Note first arg can be a in-game object or a classname of an object type.
  * 2: Amount <NUMBER> (default: 1)
  *
  * Return Value:
- * None
+ * Number of items removed <NUMBER>
  *
  * Example:
  * ["ACE_Wheel", vehicle, 2] call ace_cargo_fnc_removeCargoItem
