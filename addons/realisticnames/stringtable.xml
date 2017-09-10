@@ -2288,22 +2288,6 @@
             <Chinese>SIG 556精準步槍 (森林迷彩)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (森林迷彩)</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
-            <English>SIG 556 (provisional) spotter</English>
-            <Czech>SIG 556 (provizorní) spotter</Czech>
-            <French>SIG 556 (provisoire) Observateur</French>
-            <Spanish>SIG 556 (provisional) observador</Spanish>
-            <Russian>SIG 556 (provisional) корректировщик</Russian>
-            <Polish>SIG 556 (prowizoryczny) obserwator</Polish>
-            <German>SIG 556 (provisorisch) Beobachter</German>
-            <Italian>SIG 556 (provisional) spotter</Italian>
-            <Hungarian>SIG 556 (Ellátmányi) Megfigyelő</Hungarian>
-            <Portuguese>SIG 556 (provisional) observador</Portuguese>
-            <Japanese>SIG 556 (仮) スポッター</Japanese>
-            <Korean>SIG 556 (임시) spotter</Korean>
-            <Chinese>SIG 556精準步槍 (暫定) 觀測手</Chinese>
-            <Chinesesimp>SIG 556精准步枪 (暂定) 观测手</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
             <Czech>ASP-1 Kir</Czech>
