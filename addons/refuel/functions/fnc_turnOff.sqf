@@ -31,5 +31,5 @@ params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
     "",
     localize LSTRING(TurnOffAction),
     {true},
-    ["isnotinside"]
+    [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);
