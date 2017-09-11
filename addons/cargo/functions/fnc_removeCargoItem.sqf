@@ -25,16 +25,17 @@ private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
 private _addedSpace = 0;
 private _itemClass = _item;
+private _itemsRemoved = 0;
 
 private _continue = if (_item isEqualType objNull) then {
-    if (_item in _loaded) exitWith {false};
+    if !(_item in _loaded) exitWith {false};
     _addedSpace = [_item] call FUNC(getSizeItem);
     _loaded deleteAt (_loaded find _item);
     _itemClass = typeOf _item;
     deleteVehicle _item;
+    _itemsRemoved = 1;
     true
 } else {
-    private _itemsRemoved = 0;
     {
         if (_itemsRemoved == _amount) exitWith {};
 
@@ -44,7 +45,7 @@ private _continue = if (_item isEqualType objNull) then {
         ) then {
             INC(_itemsRemoved);
             ADD(_addedSpace,[_x] call FUNC(getSizeItem));
-    
+
             if (_x isEqualType objNull) then {
                 deleteVehicle _x;
             };
