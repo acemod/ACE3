@@ -704,7 +704,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         velocityOffset[1] += accel[1] * deltaT;
         velocityOffset[2] += accel[2] * deltaT;
 
-        outputStr << "_bullet setVelocity (_bulletVelocity vectorAdd [" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]);";
+        outputStr << "[" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]";
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
