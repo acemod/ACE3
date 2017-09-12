@@ -36,8 +36,8 @@ if (!GVAR(running)) then {
     [] call FUNC(refreshGoggleType);
 };
 
-
 // Scale Border / Hex
+BEGIN_COUNTER(borderScaling);
 private _scale = (call FUNC(kkTrueZoom)) * 3.00001;
 if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
     // Prevents issues when "zooming out" on ultra wide monitors - The square mask would be narrower than the screen
@@ -49,6 +49,7 @@ if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
     // Fade out hexes with high zoom (optics are doing the magnifying, not the player "focusing in")
     ((uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1000) ctrlSetFade (linearConversion [4, 6, _scale, 0.2, 1, true]);
 };
+END_COUNTER(borderScaling);
 
 if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // Update radial blur as it depends on zoom level, so should be changed each frame like the border/hex
@@ -57,11 +58,12 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
         GVAR(ppeffectRadialBlur) ppEffectCommit 0;
     };
     // Need to rapidly update fog or it will try to resync from the server
-    if (GVAR(fogEffectScale) > 0) then {
+    if (GVAR(fogScaling) > 0) then {
         0 setFog GVAR(nvgFog);
     };
 } else {
     // Redo full effects less often
+    BEGIN_COUNTER(updateAllEffects);
     GVAR(nextEffectsUpdate) = CBA_missionTime + 5;
 
     // Detecting the efficiency of the nightvision.
@@ -90,6 +92,15 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
         if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL}; // Pistols aren't so bad
     };
 
+    // Scale effects based on ace_nightvision_effectScaling setting
+    _grainIntensityFinal = _grainIntensityFinal * GVAR(effectScaling);
+    _noiseSharpnessFinal = linearConversion [0, 1, GVAR(effectScaling), 2.5, _noiseSharpnessFinal];
+    private _radialBlurPower = 0.0025 * GVAR(effectScaling);
+    _brightFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _brightFinal];
+    _contrastFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _contrastFinal];
+    _blurFinal = _blurFinal * GVAR(effectScaling);
+
+
     // Setup all effects
     // This is hacky but... works. This prevents the effects from being cancelled by various things - alt-tabbing, resizing, going into AT sights, etc. A nicer method would be welcome but I don't have time to spend on it. TODO.
 
@@ -102,13 +113,12 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     GVAR(ppeffectGrain) ppEffectForceInNVG true;
     GVAR(ppeffectGrain) ppEffectEnable true;
 
-
     // RadialBlur - Blurs closer to the edge nvg border (radius based on GVAR(bluRadius) config; e.g. larger for quadtube)
     // Note: "Will not do anything if RADIAL BLUR is disabled in Video Options." - So should try to keep this effect to a minimum to prevent balance issues
     // Params: [powerX, powerY, offsetX, offsetY]
     if (GVAR(nvgBlurRadius) != -1) then {
         GVAR(ppeffectRadialBlur) = ppEffectCreate ["RadialBlur", 451];
-        GVAR(ppeffectRadialBlur) ppEffectAdjust [.0025, .0025, _scale * GVAR(nvgBlurRadius), _scale * .16];
+        GVAR(ppeffectRadialBlur) ppEffectAdjust [_radialBlurPower, _radialBlurPower, _scale * GVAR(nvgBlurRadius), _scale * .16];
         GVAR(ppeffectRadialBlur) ppEffectCommit 0;
         GVAR(ppeffectRadialBlur) ppEffectForceInNVG true;
         GVAR(ppeffectRadialBlur) ppEffectEnable true;
@@ -122,7 +132,6 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     GVAR(ppeffectColorCorrect) ppEffectForceInNVG true;
     GVAR(ppeffectColorCorrect) ppEffectEnable true;
 
-
     // DynamicBlur - Increases overall screen blur when aiming down sights (which would be hard/impossible with NVG)
     // Params: [value(0..inf)]
     GVAR(ppeffectBlur) = ppEffectCreate ["DynamicBlur", 190];
@@ -131,18 +140,21 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     GVAR(ppeffectBlur) ppEffectForceInNVG true;
     GVAR(ppeffectBlur) ppEffectEnable true;
 
+
     // Modify local fog:
-    if (GVAR(fogEffectScale) > 0) then {
+    if (GVAR(fogScaling) > 0) then {
         if (((vehicle ACE_player) != ACE_player) && {(vehicle ACE_player) isKindOf "Air"}) then {  // For flying in particular, can refine nicer later.
             _fogApply = _fogApply * ST_NVG_AIR_FOG_MULTIPLIER;
         };
-        _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogEffectScale) * _fogApply), 1]; // mix in old fog if present
+        _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogScaling) * _fogApply), 1]; // mix in old fog if present
         GVAR(nvgFog) = [_fogApply, 0, 0];
         0 setFog GVAR(nvgFog)
     };
 
     #ifdef DEBUG_MODE_FULL
     private _aceAmbient = [] call EFUNC(common,ambientBrightness);
-    hintSilent format ["EffectiveLight %1\nLight: %2\nACE Ambient: %3\nBrightness: %4\nContrast: %5\nGrain: %6\nBlur: %7\nFog: %8", _effectiveLight, _lightFinal, _aceAmbient, _brightFinal, _contrastFinal, [_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal], _blurFinal, _fogApply];
+    hintSilent format ["EffectiveLight %1\nLight: %2\nACE Ambient: %3\nBrightness: %4\nContrast: %5\nGrain: %6\nBlur: %7\nFog: %8\nScaling %9", _effectiveLight, _lightFinal, _aceAmbient, _brightFinal, _contrastFinal, [_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal], _blurFinal, _fogApply, [GVAR(effectScaling),GVAR(fogScaling)]];
     #endif
+
+    END_COUNTER(updateAllEffects);
 };

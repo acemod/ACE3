@@ -5,9 +5,15 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(fogEffectScale) {
-        displayName = CSTRING(fogEffectScale_DisplayName);
-        description = CSTRING(fogEffectScale_description);
+    class GVAR(fogScaling) {
+        displayName = CSTRING(fogScaling_DisplayName);
+        description = CSTRING(fogScaling_description);
+        typeName = "SCALAR";
+        value = 1;
+    };
+    class GVAR(effectScaling) {
+        displayName = CSTRING(effectScaling_DisplayName);
+        description = CSTRING(effectScaling_description);
         typeName = "SCALAR";
         value = 1;
     };

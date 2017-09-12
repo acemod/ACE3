@@ -24,7 +24,10 @@ GVAR(ppEffectCCMuzzleFlash) = -1;
 
 
 ["ace_settingsInitialized", {
-    TRACE_2("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogEffectScale));
+    TRACE_3("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(effectScaling));
+
+    // Disable ALL effects if ace_nightvision_effectScaling is zero
+    if (GVAR(effectScaling) == 0) exitWith {};
 
     ["loadout", LINKFUNC(onLoadoutChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
@@ -34,16 +37,16 @@ GVAR(ppEffectCCMuzzleFlash) = -1;
 
     ["ace_firedPlayer", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
     ["ace_firedPlayerVehicle", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
+
+
+    addMissionEventHandler ["Loaded", { // Restart UI vars on misison load
+        if (GVAR(running)) then {
+            TRACE_1("restarting effects",CBA_missionTime);
+            [false] call FUNC(setupDisplayEffects);
+            [true] call FUNC(setupDisplayEffects);
+        };
+    }];
 }] call CBA_fnc_addEventHandler;
-
-
-addMissionEventHandler ["Loaded", { // Restart UI vars on misison load
-    if (GVAR(running)) then {
-        TRACE_1("restarting effects",CBA_missionTime);
-        [false] call FUNC(setupDisplayEffects);
-        [true] call FUNC(setupDisplayEffects);
-    };
-}];
 
 
 // Handle an edge case for non-dedicated servers were the server running the fog effect would sync fog to other clients
@@ -73,3 +76,19 @@ if (!isNil QGVAR(serverPriorFog)) then {[] call FUNC(nonDedicatedFix);}; // If v
     [ACE_player, -1] call FUNC(changeNVGBrightness);
     true
 }, {false}, [209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
+
+#ifdef DEBUG_MODE_FULL
+WARNING("Debug mouse wheel action enabled, this should NOT be in a final release");
+["MouseZChanged", {
+    GVAR(nextEffectsUpdate) = 0;
+    if (cba_events_shift) then {
+        GVAR(effectScaling) = ((GVAR(effectScaling) + ((_this select 1) / 20)) max 0) min 1;
+        systemChat format ["%1: %2", QGVAR(effectScaling), GVAR(effectScaling)];
+    };
+    if (cba_events_control) then {
+        GVAR(fogScaling) = ((GVAR(fogScaling) + ((_this select 1) / 20)) max 0) min 1;
+        systemChat format ["%1: %2", QGVAR(fogScaling), GVAR(fogScaling)];
+    };
+}] call CBA_fnc_addDisplayHandler;
+#endif
+

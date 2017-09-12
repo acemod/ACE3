@@ -26,19 +26,19 @@ if (_visionMode == 1) then {
         [true] call FUNC(setupDisplayEffects);
         [] call FUNC(refreshGoggleType);
         GVAR(PFID) = [LINKFUNC(pfeh), 0, []] call CBA_fnc_addPerFrameHandler;
-        
+
         // Fade in from black when turning nvg on
         QGVAR(turnOnEffect) cutText ["", "BLACK IN", 2.5];
     };
 };
 
-// Handle disableNVGsWithSights setting: 
+// Handle disableNVGsWithSights setting:
 if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
     if ((vehicle _unit == _unit)
-        || {isTurnedOut _unit}
-        || {!([_unit] call EFUNC(common,hasHatch))
-            && {[_unit] call EFUNC(common,getTurretIndex) in ([vehicle _unit] call EFUNC(common,getTurretsFFV))}
-           }) then {
+            || {isTurnedOut _unit}
+            || {!([_unit] call EFUNC(common,hasHatch))
+                && {[_unit] call EFUNC(common,getTurretIndex) in ([vehicle _unit] call EFUNC(common,getTurretsFFV))}
+            }) then {
         if ((cameraView == "GUNNER") && {_visionMode > 0}) then {
             _unit action ["NVGogglesOff", _unit];
         };

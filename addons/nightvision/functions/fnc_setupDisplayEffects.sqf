@@ -19,7 +19,7 @@ params ["_activated"];
 TRACE_1("setupDisplayEffects",_activated);
 
 // Backup and restore changes to fog:
-if (GVAR(fogEffectScale) > 0) then {
+if (GVAR(fogScaling) > 0) then {
     if (_activated) then {
         if (isNil QGVAR(priorFog)) then {
             TRACE_1("Backing up fog",fogParams);

@@ -237,11 +237,17 @@
             <Chinesesimp>此功能开启后, 当要使用瞄准镜时, 为避免夜视镜镜头碰撞到瞄准镜, 会先拿开夜视镜后再进行瞄准镜瞄准</Chinesesimp>
             <Chinese>此功能開啟後, 當要使用瞄準鏡時, 為避免夜視鏡鏡頭碰撞到瞄準鏡, 會先拿開夜視鏡後再進行瞄準鏡瞄準</Chinese>
         </Key>
-        <Key ID="STR_ACE_NightVision_fogEffectScale_DisplayName">
-            <English>NVG Fog Effect Scale</English>
+        <Key ID="STR_ACE_NightVision_fogScaling_DisplayName">
+            <English>NVG Fog Scale</English>
         </Key>
-        <Key ID="STR_ACE_NightVision_fogEffectScale_DisplayName">
-            <English>Fog is used to limit visibility. [Will be disabled if set to 0]</English>
+        <Key ID="STR_ACE_NightVision_fogScaling_DisplayName">
+            <English>Fog is used to limit visibility.</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
+            <English>NVG Effect Scale</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
+            <English>Blur, grain and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
         </Key>
     </Package>
 </Project>
