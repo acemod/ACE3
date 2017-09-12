@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [(vehicle player), [0]] call ace_hellfire_fnc_setupVehicle
+ * [player] call ace_hellfire_fnc_setupVehicle
  *
  * Public: No
  */
