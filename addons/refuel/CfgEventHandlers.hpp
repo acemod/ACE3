@@ -1,4 +1,3 @@
-
 class Extended_PreStart_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preStart));
@@ -20,15 +19,15 @@ class Extended_PostInit_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class ADDON {
-            respawn = QUOTE(call COMPILE_FILE(XEH_respawn));
+            respawn = QUOTE(call DFUNC(handleRespawn));
         };
     };
 };
 
-class Extended_Killed_EventHandlers {
-    class CAManBase {
+class Extended_InitPost_EventHandlers {
+    class Land_CanisterFuel_F {
         class ADDON {
-            killed = QUOTE(_this call FUNC(handleKilled));
+            init = QUOTE(call DFUNC(makeJerryCan));
         };
     };
 };

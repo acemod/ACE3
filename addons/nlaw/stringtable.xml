@@ -7,6 +7,7 @@
             <Japanese>NALW 目標の追跡 (押しっぱ)</Japanese>
             <Chinesesimp>次世代轻型反坦克导弹发射器追踪目标 (按住)</Chinesesimp>
             <Chinese>次世代輕型反坦克導彈發射器追蹤目標 (按住)</Chinese>
+            <Polish>Śledzenie Celu NLAW (Przytrzymaj)</Polish>
         </Key>
         <Key ID="STR_ACE_NLAW_directAttack">
             <English>Direct Attack</English>
@@ -14,6 +15,7 @@
             <Japanese>ダイレクト アタック</Japanese>
             <Chinesesimp>直射模式</Chinesesimp>
             <Chinese>直射模式</Chinese>
+            <Polish>Bezpośredni atak</Polish>
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
@@ -21,6 +23,7 @@
             <Japanese>オーバーフライ トップ アタック</Japanese>
             <Chinesesimp>攻顶模式</Chinesesimp>
             <Chinese>攻頂模式</Chinese>
+            <Polish>Atak z góry</Polish>
         </Key>
     </Package>
 </Project>

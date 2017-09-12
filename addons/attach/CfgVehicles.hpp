@@ -6,7 +6,7 @@
                 displayName = CSTRING(AttachDetach); \
                 condition = QUOTE(_this call FUNC(canAttach)); \
                 insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions)); \
-                exceptions[] = {}; \
+                exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
                 priority = 0; \
                 icon = QPATHTOF(UI\attach_ca.paa); \
@@ -15,7 +15,7 @@
                 displayName = CSTRING(Detach); \
                 condition = QUOTE(_this call FUNC(canDetach)); \
                 statement = QUOTE(_this call FUNC(detach) ); \
-                exceptions[] = {}; \
+                exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
                 priority = 0.1; \
                 icon = QPATHTOF(UI\detach_ca.paa); \
@@ -55,7 +55,7 @@ class CfgVehicles {
                     displayName = CSTRING(AttachDetach);
                     condition = QUOTE(_this call FUNC(canAttach));
                     insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions));
-                    exceptions[] = {"isNotDragging"};
+                    exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
                     priority = 5;
                     icon = QPATHTOF(UI\attach_ca.paa);
@@ -64,7 +64,7 @@ class CfgVehicles {
                     displayName = CSTRING(Detach);
                     condition = QUOTE(_this call FUNC(canDetach));
                     statement = QUOTE(_this call FUNC(detach));
-                    exceptions[] = {"isNotDragging"};
+                    exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
                     priority = 5;
                     icon = QPATHTOF(UI\detach_ca.paa);

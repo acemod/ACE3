@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -30,8 +30,8 @@
             <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
             <Japanese>Zeus のさまざまな側面を強化します。</Japanese>
             <Korean>Zeus에게 다양한 방면의 조작을 제공해줍니다</Korean>
-            <Chinesesimp>提供宙斯各个方面的控制权.</Chinesesimp>
-            <Chinese>提供宙斯各個方面的控制權.</Chinese>
+            <Chinesesimp>提供宙斯各个方面的控制权</Chinesesimp>
+            <Chinese>提供宙斯各個方面的控制權</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_DisplayName">
             <English>Ascension Messages</English>
@@ -62,8 +62,8 @@
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
             <Japanese>プレイヤーが Zeus になるとき、全体へポップアップ表示をおこないます。</Japanese>
             <Korean>플레이어가 Zeus 될 시 서버에 이를 알리는 팝업이 등장합니다.</Korean>
-            <Chinesesimp>当一位玩家被指定为宙斯时显示全球讯息.</Chinesesimp>
-            <Chinese>當一位玩家被指定為宙斯時顯示全球訊息.</Chinese>
+            <Chinesesimp>当一位玩家被指定为宙斯时显示全球讯息</Chinesesimp>
+            <Chinese>當一位玩家被指定為宙斯時顯示全球訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
@@ -532,8 +532,8 @@
             <Polish>%1 nie jest kompatybilny ze zjazdem linowym.</Polish>
             <French>%1 n'est pas compatible.</French>
             <Italian>%1 non è compatibile con il fastrope.</Italian>
-            <Chinesesimp>%1无法使用快速绳降系统.</Chinesesimp>
-            <Chinese>%1無法使用快速繩降系統.</Chinese>
+            <Chinesesimp>%1无法使用快速绳降系统</Chinesesimp>
+            <Chinese>%1無法使用快速繩降系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
@@ -542,8 +542,8 @@
             <Polish>Nie można usunąć FRIES, liny są wypuszczone.</Polish>
             <French>Pas en mesure d'enlever le FRIES, les cordes ne sont pas déployées.</French>
             <Italian>Impossibile rimuovere le FRIES, le corde sono ancora dispiegate</Italian>
-            <Chinesesimp>无法移除快速绳降系统, 因为绳索已被释放出来.</Chinesesimp>
-            <Chinese>無法移除快速繩降系統, 因為繩索已被釋放出來.</Chinese>
+            <Chinesesimp>无法移除快速绳降系统, 因为绳索已被释放出来</Chinesesimp>
+            <Chinese>無法移除快速繩降系統, 因為繩索已被釋放出來</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -1015,6 +1015,7 @@
             <Japanese>制圧射撃</Japanese>
             <Chinesesimp>火力压制</Chinesesimp>
             <Chinese>火力壓制</Chinese>
+            <Polish>Ogień zaporowy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
             <English>Add full arsenal to object</English>
@@ -1023,6 +1024,7 @@
             <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
             <Chinesesimp>增加完整的虚拟军火库到物件上</Chinesesimp>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
+            <Polish>Dodaj Wirtualny Arsenał do obiektu</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
             <English>Remove arsenal from object</English>
@@ -1031,6 +1033,7 @@
             <Japanese>オブジェクトからアーセナルを削除</Japanese>
             <Chinesesimp>移除物件上的虚拟军火库</Chinesesimp>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
+            <Polish>Usuń Wirtualny Arsenał z obiektu</Polish>
         </Key>
     </Package>
 </Project>

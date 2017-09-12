@@ -21,6 +21,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 ["ACE3 Weapons", QGVAR(prepare), localize LSTRING(Prepare), {
     // Condition
     if (!([ACE_player] call FUNC(canPrepare))) exitWith {false};
+    if (EGVAR(common,isReloading)) exitWith {true};
 
     // Statement
     [ACE_player] call FUNC(prepare);
@@ -30,7 +31,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 
 ["ACE3 Weapons", QGVAR(dropModeToggle), localize LSTRING(DropModeToggle), {
     // Condition
-    if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {false};
+    if (!(ACE_player getVariable [QGVAR(inHand), false]) || {underwater ACE_player}) exitWith {false};
 
     // Statement
     private _currentDropMode = ACE_player getVariable [QGVAR(dropMode), false];

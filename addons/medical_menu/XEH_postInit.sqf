@@ -21,7 +21,7 @@ GVAR(pendingReopen) = false;
     if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {_target = ACE_player};
 
     // Conditions: canInteract
-    if !([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if !([ACE_player, _target] call FUNC(canOpenMenu)) exitWith {false};
 
     // Statement

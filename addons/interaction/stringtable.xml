@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -927,6 +927,14 @@
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
         </Key>
+        <Key ID="STR_ACE_Interaction_DisableNegativeRating_DisplayName">
+            <English>Disable negative rating</English>
+            <German>Negative Bewertung deaktivieren</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
+            <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
+            <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewerungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
+        </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
@@ -940,8 +948,8 @@
             <Italian>Management Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
             <Japanese>チーム管理はチーム メンバーへ色の割り当てや指揮権を取ったり、チームの出入りを許可します。</Japanese>
             <Korean>팀 설정은 팀 멤버에게 색을 부여하거나  팀에 참여 혹은 나가게 할 수 있게 합니다.</Korean>
-            <Chinesesimp>队伍管理系统允许将指定颜色分配到队伍成员上, 接管队长职位或加入/离开队伍.</Chinesesimp>
-            <Chinese>隊伍管理系統允許將指定顏色分配到隊伍成員上, 接管隊長職位或加入/離開隊伍.</Chinese>
+            <Chinesesimp>队伍管理系统允许将指定颜色分配到队伍成员上，接管队长职位或加入/离开队伍</Chinesesimp>
+            <Chinese>隊伍管理系統允許將指定顏色分配到隊伍成員上，接管隊長職位或加入/離開隊伍</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
             <English>Turn on</English>

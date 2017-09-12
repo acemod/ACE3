@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NameTags">
         <Key ID="STR_ACE_NameTags_ShowNames">
@@ -333,8 +333,8 @@
             <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
             <Japanese>このモジュールは名札の表示範囲と設定を変更できます。</Japanese>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>这个模块允许您设定名称和显示范围等设定.</Chinesesimp>
-            <Chinese>這個模塊允許您設定名稱和顯示範圍等設定.</Chinese>
+            <Chinesesimp>这个模块允许您设定名称和显示范围等设定</Chinesesimp>
+            <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only on Cursor</English>
@@ -493,8 +493,8 @@
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
             <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。このオプションは TFAR と ACRE2 で動作します。</Japanese>
             <Korean>플레이어가 PTT로 말할시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을때만 적용됩니다.</Korean>
-            <Chinesesimp>当玩家使用按键发话时, 其头上的角色名称旁会显示声波的图案. 此功能可搭配TFAR、ACRE2等模组使用.</Chinesesimp>
-            <Chinese>當玩家使用按鍵發話時, 其頭上的角色名稱旁會顯示聲波的圖案. 此功能可搭配TFAR、ACRE2等模組使用.</Chinese>
+            <Chinesesimp>当玩家使用按键发话时, 其头上的角色名称旁会显示声波的图案. 此功能可搭配TFAR、ACRE2等模组使用</Chinesesimp>
+            <Chinese>當玩家使用按鍵發話時, 其頭上的角色名稱旁會顯示聲波的圖案. 此功能可搭配TFAR、ACRE2等模組使用</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>

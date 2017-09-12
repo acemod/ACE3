@@ -156,6 +156,8 @@ class CfgVehicles {
         class ACE_Actions {};
         class Turrets {};
         class TransportItems {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
     };
 
     class Helicopter_Base_H;

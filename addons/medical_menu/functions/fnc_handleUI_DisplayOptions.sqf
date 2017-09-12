@@ -34,7 +34,7 @@ if (_name isEqualTo "toggle") exitWith {
     _newTarget = ACE_player;
     //If we are on the player, and only if our old target is still valid, switch to it:
     if ((GVAR(INTERACTION_TARGET) == ACE_player) &&
-            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS), ["isNotInside"]] call EFUNC(common,canInteractWith)} &&
+            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
             {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS)] call FUNC(canOpenMenu)}) then {
         _newTarget = GVAR(INTERACTION_TARGET_PREVIOUS);
     };
