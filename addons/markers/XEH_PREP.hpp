@@ -11,3 +11,8 @@ PREP(placeMarker);
 PREP(sendMarkersJIP);
 PREP(setMarkerJIP);
 PREP(setMarkerNetwork);
+PREP(movePFH);
+PREP(onMouseButtonDownMap);
+PREP(onMouseButtonUpMap);
+PREP(initModule);
+PREP(canMoveMarker);

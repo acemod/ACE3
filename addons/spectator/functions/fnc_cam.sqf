@@ -28,7 +28,7 @@ if (_init) then {
     // Start tracking camera attributes if not pre-set by public function
     ISNILS(GVAR(camMode),MODE_FREE);
     ISNILS(GVAR(camVision),VISION_NORM);
-    ISNILS(GVAR(camTarget),objNull);
+    ISNILS(GVAR(camFocus),objNull);
 
     // Ticking related
     GVAR(camDeltaTime)          = 0;
@@ -79,7 +79,7 @@ if (_init) then {
     GVAR(camera) = _camera;
 
     // Create dummy target used for follow camera
-    GVAR(camDummy) = "Logic" createVehicleLocal getPosASLVisual GVAR(camTarget);
+    GVAR(camDummy) = "Logic" createVehicleLocal getPosASLVisual GVAR(camFocus);
 
     // Handle initial camera mode limitation
     if !(GVAR(camMode) in GVAR(availableModes)) then {
@@ -87,7 +87,7 @@ if (_init) then {
     };
 
     // If inital camera mode is not free cam and no focus, find initial focus
-    if (GVAR(camMode) != MODE_FREE && isNull GVAR(camTarget)) then {
+    if (GVAR(camMode) != MODE_FREE && isNull GVAR(camFocus)) then {
         [true] call FUNC(setFocus);
     };
 
@@ -126,7 +126,7 @@ if (_init) then {
     // Stop tracking everything
     GVAR(camMode)               = nil;
     GVAR(camVision)             = nil;
-    GVAR(camTarget)             = nil;
+    GVAR(camFocus)              = nil;
     GVAR(camDeltaTime)          = nil;
     GVAR(camLastTickTime)       = nil;
     GVAR(camHasTarget)          = nil;

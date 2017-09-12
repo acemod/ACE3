@@ -37,8 +37,8 @@ if (_newFocus isEqualType true) then {
     };
 };
 
-if (_newFocus != GVAR(camTarget) && { !(isNull _newFocus && { isNull GVAR(camTarget) }) }) then {
-    GVAR(camTarget) = _newFocus;
+if (_newFocus != GVAR(camFocus) && { !(isNull _newFocus && { isNull GVAR(camFocus) }) }) then {
+    GVAR(camFocus) = _newFocus;
 
     if (isNull _newFocus) then {
         if (GVAR(camMode) == MODE_FREE) then {
