@@ -19,5 +19,5 @@
 
 
 #define ANIMS_HOOK ["extendHookRight", "extendHookLeft"]
-#define ANIMS_DOOR ["door_R", "door_L", "CargoRamp_Open", "Door_rear_source", "Door_6_source", "CargoDoorR", "CargoDoorL"]
-#define ANIMS ["dvere1_posunZ", "dvere2_posunZ", "doors"]
+#define ANIMS_ANIMATEDOOR ["door_R", "door_L", "CargoRamp_Open", "Door_rear_source", "Door_6_source", "CargoDoorR", "CargoDoorL"]
+#define ANIMS_ANIMATE ["dvere1_posunZ", "dvere2_posunZ", "doors"]

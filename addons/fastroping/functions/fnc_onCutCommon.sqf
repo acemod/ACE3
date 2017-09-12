@@ -21,15 +21,15 @@ private _fries = _vehicle getVariable [QGVAR(FRIES), objNull];
 if !(isNull _fries) then {
     {_fries animate [_x, 0]} forEach ANIMS_HOOK;
     [{
-        {_vehicle animateDoor [_x, 0]} forEach ANIMS_DOOR;
-        {_vehicle animate [_x, 0]} forEach ANIMS;
+        {_vehicle animateDoor [_x, 0]} forEach ANIMS_ANIMATEDOOR;
+        {_vehicle animate [_x, 0]} forEach ANIMS_ANIMATE;
         _this setVariable [QGVAR(doorsLocked), false, true];
     }, _vehicle, 2] call CBA_fnc_waitAndExecute;
 
     4
 } else {
-    {_vehicle animateDoor [_x, 0]} forEach ANIMS_DOOR;
-    {_vehicle animate [_x, 0]} forEach ANIMS;
+    {_vehicle animateDoor [_x, 0]} forEach ANIMS_ANIMATEDOOR;
+    {_vehicle animate [_x, 0]} forEach ANIMS_ANIMATE;
     _vehicle setVariable [QGVAR(doorsLocked), false, true];
 
     2

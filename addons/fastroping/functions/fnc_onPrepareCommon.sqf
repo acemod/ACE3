@@ -19,8 +19,8 @@ params ["_vehicle"];
 
 private _waitTime = 2;
 
-{_vehicle animateDoor [_x, 1]} forEach ANIMS_DOOR;
-{_vehicle animate [_x, 1]} forEach ANIMS;
+{_vehicle animateDoor [_x, 1]} forEach ANIMS_ANIMATEDOOR;
+{_vehicle animate [_x, 1]} forEach ANIMS_ANIMATE;
 
 _vehicle setVariable [QGVAR(doorsLocked), true, true];
 
