@@ -30,7 +30,7 @@ if (0 == getNumber (_config >> "driverCanEject")) then {
 
 {
     _x params ["", "_role", "", "_turretPath"];
-    if (0 == getNumber (([_vehicle, _turretPath] call CBA_fnc_getTurret) >> "canEject")) then {
+    if (0 == getNumber (([_config, _turretPath] call CBA_fnc_getTurret) >> "canEject")) then {
         _vehicle setVariable [format ["%1_%2_%3", QGVAR(ejectAction), _role, _turretPath], true];
         _addAction = true;
     };
