@@ -46,6 +46,9 @@
             <Chinesesimp>准备快速绳降系统</Chinesesimp>
             <Chinese>準備快速繩降系統</Chinese>
         </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
+            <English>Stow fast roping system</English>
+        </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
             <German>Seile auswerfen</German>
