@@ -117,7 +117,7 @@ private _actions = [
                     // Dummy statement so it's not collapsed when there's no available actions
                     true
                 },
-                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)},
+                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith)},
                 {},
                 {},
                 "Spine3",
