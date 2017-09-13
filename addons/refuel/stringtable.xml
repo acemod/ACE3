@@ -476,5 +476,22 @@
             <Chinese>加油軟管長度</Chinese>
             <Polish>Długość węża paliwowego</Polish>
         </Key>
+        <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
+            <English>Fuel Cargo Volume</English>
+            <Russian>Объем топлива для заправки</Russian>
+        </Key>
+        <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
+        <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
+            <English>The fuel volume available for refueling (-1 disable, -10 if infinite)</English>
+            <Russian>Объем топлива, доступный для заправки других машин (-1 отключить, -10 если неограничен)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Refuel_hooks_edenName">
+            <English>Refuel Hose attach coordinates</English>
+            <Russian>Координаты крепления шланга</Russian>
+        </Key>
+        <Key ID="STR_ACE_Refuel_hooks_edenDesc">
+            <English>Model coordinates used to attach refuel hose</English>
+            <Russian>Координаты модели, куда крепится заправочный шланг</Russian>
+        </Key>
     </Package>
 </Project>

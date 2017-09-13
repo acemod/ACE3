@@ -1258,7 +1258,7 @@
             <Hungarian>Morfium autoinjektor</Hungarian>
             <Italian>Autoiniettore di morfina</Italian>
             <Portuguese>Auto-injetor de morfina</Portuguese>
-            <Japanese>モルヒネ</Japanese>
+            <Japanese>モルヒネ注射器</Japanese>
             <Korean>모르핀 자동주사기</Korean>
             <Chinesesimp>吗啡自动注射器</Chinesesimp>
             <Chinese>嗎啡自動注射器</Chinese>
@@ -1305,7 +1305,7 @@
             <Czech>Auto-adenosine</Czech>
             <Portuguese>Auto-injetor de Adenosina</Portuguese>
             <Russian>Аденозин в пневмошприце</Russian>
-            <Japanese>アデノシン</Japanese>
+            <Japanese>アデノシン注射器</Japanese>
             <Korean>아데노신 자동주사기</Korean>
             <Chinesesimp>腺苷自动注射器</Chinesesimp>
             <Chinese>腺苷自動注射器</Chinese>
@@ -1351,7 +1351,7 @@
             <Hungarian>Atropin autoinjektor</Hungarian>
             <Italian>Autoiniettore di atropina</Italian>
             <Portuguese>Auto-injetor de Atropina</Portuguese>
-            <Japanese>アトロピン</Japanese>
+            <Japanese>アトロピン注射器</Japanese>
             <Korean>아트로핀 자동주사기</Korean>
             <Chinesesimp>阿托品自动注射器</Chinesesimp>
             <Chinese>阿托品自動注射器</Chinese>
@@ -1399,7 +1399,7 @@
             <Hungarian>Epinefrin autoinjektor</Hungarian>
             <Italian>Autoiniettore di adrenalina</Italian>
             <Portuguese>Auto-injetor de epinefrina</Portuguese>
-            <Japanese>アドレナリン</Japanese>
+            <Japanese>アドレナリン注射器</Japanese>
             <Korean>에피네프린 자동주사기</Korean>
             <Chinesesimp>肾上腺素自动注射器</Chinesesimp>
             <Chinese>腎上腺素自動注射器</Chinese>
@@ -2615,7 +2615,7 @@
             <Italian>Suturando</Italian>
             <Portuguese>Suturando</Portuguese>
             <Czech>Šití</Czech>
-            <Japanese>縫合</Japanese>
+            <Japanese>縫合中</Japanese>
             <Korean>붕합중</Korean>
             <Chinesesimp>缝合中</Chinesesimp>
             <Chinese>縫合中</Chinese>
@@ -5608,10 +5608,12 @@
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
             <German>Deckel aufklappen</German>
+            <Japanese>フタをあける</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
             <German>Deckel zuklappen</German>
+            <Japanese>フタをしめる</Japanese>
         </Key>
     </Package>
 </Project>
