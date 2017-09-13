@@ -6,9 +6,9 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_common", "ace_interact_menu", "ace_rearm"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"KoffeinFlummi", "Crusty", "commy2", "jaynus", "Kimi"};
+        authors[] = {"KoffeinFlummi", "Crusty", "commy2", "jaynus", "Kimi", "654wak654"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
@@ -17,8 +17,11 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgAmmo.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscInGameUI.hpp"
+#include "menu.hpp"
