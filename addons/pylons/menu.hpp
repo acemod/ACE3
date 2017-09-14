@@ -83,7 +83,7 @@ class GVAR(DialogLoadout) {
             h = 0.028 * safezoneH;
             colorBackground[] = {0,0,0,0.7};
         };
-        class BtnSave: RscButtonMenu {
+        class ButtonSave: RscButtonMenu {
             idc = 180;
             action = QUOTE(call FUNC(onButtonSave));
             text = "$STR_disp_int_save";
@@ -92,7 +92,7 @@ class GVAR(DialogLoadout) {
             w = 0.0590625 * safezoneW;
             h = 0.028 * safezoneH;
         };
-        class BtnLoad: RscButtonMenu {
+        class ButtonLoad: RscButtonMenu {
             idc = 190;
             action = QUOTE(call FUNC(onButtonLoad));
             text = "$STR_disp_int_load";
@@ -101,7 +101,7 @@ class GVAR(DialogLoadout) {
             w = 0.0590625 * safezoneW;
             h = 0.028 * safezoneH;
         };
-        class BtnDelete: RscButtonMenu {
+        class ButtonDelete: RscButtonMenu {
             idc = 200;
             action = QUOTE(call FUNC(onButtonDelete));
             text = "$STR_disp_delete";
@@ -110,7 +110,7 @@ class GVAR(DialogLoadout) {
             w = 0.0590625 * safezoneW;
             h = 0.028 * safezoneH;
         };
-        class BtnApply: RscButtonMenu {
+        class ButtonApply: RscButtonMenu {
             idc = 210;
             action = QUOTE(call FUNC(onButtonApply));
             text = "$STR_ui_debug_but_apply";
@@ -119,7 +119,7 @@ class GVAR(DialogLoadout) {
             w = 0.0721875 * safezoneW;
             h = 0.028 * safezoneH;
         };
-        class BtnClose: RscButtonMenu {
+        class ButtonClose: RscButtonMenu {
             text = "$STR_disp_cancel";
             action = QUOTE(call FUNC(onButtonClose));
             x = 0.769275 * safezoneW + safezoneX;

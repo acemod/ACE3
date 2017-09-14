@@ -23,6 +23,6 @@
             ] call EFUNC(interact_menu,createAction);
 
             [_aircraft, 0, ["ACE_MainActions"], _loadoutAction] call EFUNC(interact_menu,addActionToObject);
-        }] call CBA_fnc_addClassEventHandler;
+        }, false, [], true] call CBA_fnc_addClassEventHandler;
     } forEach GVAR(aircraftWithPylons);
 }] call CBA_fnc_addEventHandler;

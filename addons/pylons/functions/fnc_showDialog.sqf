@@ -1,43 +1,42 @@
 /*
- * Author: 654wak654
- * Shows the aircraft loadout dialog for given aircraft
- *
- * Arguments:
- * 0: The aircraft <OBJECT>
- *
- * Return Value:
- * None
- *
- * Example:
- * [vehicle ace_player] call ace_pylons_fnc_showDialog
- *
- * Public: Yes
- */
+* Author: 654wak654
+* Shows the aircraft loadout dialog for given aircraft.
+*
+* Arguments:
+* 0: The aircraft <OBJECT>
+*
+* Return Value:
+* None
+*
+* Example:
+* [vehicle ace_player] call ace_pylons_fnc_showDialog
+*
+* Public: Yes
+*/
 #include "script_component.hpp"
 
 params ["_aircraft"];
 
 if (!GVAR(enabled) || {!(typeOf _aircraft in GVAR(aircraftWithPylons))}) exitWith {};
 
-[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-
-GVAR(currentAircraft) = _aircraft;
-
 createDialog QGVAR(DialogLoadout);
+private _display = findDisplay 654654;
+_display ctrlAddEventHandler ["Unload", {call FUNC(onButtonClose)}];
+
+[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+GVAR(currentAircraft) = _aircraft;
 
 if (GVAR(rearmNewPylons)) then {
     ctrlShow [220, false];
     ctrlShow [230, false];
 } else {
-    ctrlSetText [220, "    " + (ctrlText 220)];
+    ctrlSetText [220, "    " + (ctrlText 220)]; // Spacing for the icon
 };
 
 private _config = configFile >> "CfgVehicles" >> typeOf _aircraft;
 private _pylonComponent = _config >> "Components" >> "TransportPylonsComponent";
 
 ctrlSetText [120, getText (_pylonComponent >> "uiPicture")];
-
-private _display = findDisplay 654654;
 
 GVAR(comboBoxes) = [];
 {
@@ -83,8 +82,6 @@ GVAR(comboBoxes) = [];
             0.028 * safezoneH
         ];
         _icon ctrlCommit 0;
-    } else {
-        // TODO: Create ammo count controls
     };
 
     GVAR(comboBoxes) pushBack [_combo, _mirroredIndex - 1, _icon, _index];

@@ -10,7 +10,7 @@ class ACE_Settings {
         category = CSTRING(Category_Pylons);
         displayName = CSTRING(RearmNewPylons);
         description = CSTRING(RearmNewPylons_description);
-        value = 1;
+        value = 0;
         typeName = "BOOL";
     };
     class GVAR(searchDistance) {

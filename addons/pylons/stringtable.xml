@@ -38,25 +38,25 @@
             <English>Time Per Pylon</English>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
-            <English>...</English> <!-- TODO -->
+            <English>The time it takes to replace each pylon (in seconds).</English>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance">
             <English>Search Distance</English>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance_description">
-            <English>...</English> <!-- TODO -->
+            <English>The distance an aircraft needs to be from a rearm vehicle.</English>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer">
             <English>Require Engineer</English>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer_description">
-            <English>...</English> <!-- TODO -->
+            <English>Require an engineer.</English>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit">
             <English>Require Toolkit</English>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit_description">
-            <English>...</English> <!-- TODO -->
+            <English>Require a toolkit in inventory.</English>
         </Key>
     </Package>
 </Project>

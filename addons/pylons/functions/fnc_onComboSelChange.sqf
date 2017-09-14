@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Handles mirroring and rearm icons when a combobox' selection changes.
+ * Handles various ui changes when a combobox' selection changes.
  *
  * Arguments:
  * 0: Combobox <CONTROL>
