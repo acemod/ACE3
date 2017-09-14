@@ -16,21 +16,15 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+params ["_unit", "_vehicle"];
 
 _vehicle == vehicle _unit
-&& {_vehicle getVariable [
-    // handle race when unit gets out of vehicle
-    call {
-        private _return = {
-            _x params ["_owner", "_role", "", "_turretPath"];
-            if (_unit == _owner) exitWith {
-                format ["%1_%2_%3", QGVAR(ejectAction), _role, _turretPath]
-            };
-            false
-        } count fullCrew _vehicle;
-        // getVariable ["", ...] returns default value
-        ["", _return] select (_return isEqualType "")
-    },
-    false
-]}
+&& {
+    private _ejectVarName = "";
+    {
+        if (_unit == _x select 0) exitWith {
+            _ejectVarName = format [QGVAR(ejectAction_%1), _x select 3];
+        };
+    } count fullCrew _vehicle;
+    _vehicle getVariable [_ejectVarName, false]
+}

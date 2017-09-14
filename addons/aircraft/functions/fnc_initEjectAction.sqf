@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * _vehicle call ace_aircraft_fnc_initEjectAction
+ * [cursorObject] call ace_aircraft_fnc_initEjectAction
  *
  * Public: No
  */
@@ -19,22 +19,26 @@ params ["_vehicle"];
 
 if (unitIsUAV _vehicle) exitWith {};
 
-private _config = configFile >> "CfgVehicles" >> (typeOf _vehicle);
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
 private _addAction = false;
 
 if (0 == getNumber (_config >> "driverCanEject")) then {
-    _vehicle setVariable [QUOTE(DOUBLES(GVAR(ejectAction),driver_[])), true];
+    TRACE_2("eject action",typeOf _vehicle,"driver");
+    _vehicle setVariable [QGVAR(ejectAction_[]), true];
     _addAction = true;
 };
 
 {
-    _x params ["", "_role", "", "_turretPath"];
-    if (0 == getNumber (([_config, _turretPath] call CBA_fnc_getTurret) >> "canEject")) then {
-        _vehicle setVariable [format ["%1_%2_%3", QGVAR(ejectAction), _role, _turretPath], true];
-        _addAction = true;
-    };
-} forEach (fullCrew [_vehicle, "gunner", true] + fullCrew [_vehicle, "turret", true]);
+    {
+        private _turretPath = _x select 3;
+        if (0 == getNumber (([_config, _turretPath] call CBA_fnc_getTurret) >> "canEject")) then {
+            TRACE_2("eject action",typeOf _vehicle,_turretPath);
+            _vehicle setVariable [format [QGVAR(ejectAction_%1), _turretPath], true];
+            _addAction = true;
+        };
+    } forEach fullCrew [_vehicle, _x, true];
+} forEach ["gunner", "commander", "turret"];
 
 if (!_addAction) exitWith {};
 
