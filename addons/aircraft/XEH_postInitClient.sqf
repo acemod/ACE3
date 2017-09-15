@@ -20,7 +20,7 @@ GVAR(ejectActionParams) = [
         false,
         true,
         getText (_cfgAction >> "shortcut"),
-        QUOTE([ARR_2(_this,_target)] call DFUNC(canShowEject))
+        '[_this, _target] call DFUNC(canShowEject)'
     ],
     getText (_cfgAction >> "text"),
     getText (_cfgAction >> "textDefault")
