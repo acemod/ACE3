@@ -1,6 +1,6 @@
 /*
  * Author: Nelson Duarte, AACO
- * Function used to fade/unfade the entitiy/location list
+ * Function used to fade/unfade the entitiy list
  *
  * Arguments:
  * 0: Fade the list <BOOL>
@@ -20,28 +20,31 @@ params ["_fadeList"];
 
 if (GVAR(uiVisible)) then {
     private _list = CTRL_LIST;
+    private _tabs = CTRL_TABS;
 
     if (_fadeList) then {
         _list ctrlSetBackgroundColor [0,0,0,0];
         _list ctrlSetFade 0.8;
-        ctrlSetFocus CTRL_MOUSE;
 
-        // if (GVAR(camMode) == MODE_FREE) then {
-        //     GVAR(camera) camCommand "manual on";
-        // };
+        _tabs ctrlSetBackgroundColor [0,0,0,0];
+        _tabs ctrlSetFade 0.5;
+
+        ctrlSetFocus CTRL_MOUSE;
 
         showChat true;
     } else {
         _list ctrlSetBackgroundColor [0,0,0,0.75];
         _list ctrlSetFade 0;
-        ctrlSetFocus _list;
 
-        // Disable camera input while using the list
-        // GVAR(camera) camCommand "manual off";
+        _tabs ctrlSetBackgroundColor [0,0,0,0.25];
+        _tabs ctrlSetFade 0;
+
+        ctrlSetFocus _list;
 
         // List overlaps with chat
         showChat false;
     };
 
     _list ctrlCommit 0.2;
+    _tabs ctrlCommit 0.2;
 };

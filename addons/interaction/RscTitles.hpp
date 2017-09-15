@@ -8,7 +8,6 @@ class ACE_Interaction_Button_Base {
     action = "";
 
     idc = -1;
-    access = 0;
     type = 1;
     text = "";
     font = "RobotoCondensed";

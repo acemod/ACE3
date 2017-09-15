@@ -1,6 +1,6 @@
 /*
  * Author: Nelson Duarte, AACO
- * Function used to find a tree path of a unit
+ * Function used to find the tree path of an entity
  *
  * Arguments:
  * 0: Data to search tree for <STRING>
@@ -24,7 +24,6 @@ scopeName QGVAR(getTreeDataIndex);
 if (_data != "") then {
     private _ctrl = CTRL_LIST;
 
-    // This also handles the locations list (_sideIndex = _locationIndex)
     for "_sideIndex" from 0 to ((_ctrl tvCount []) - 1) do {
         if (_ctrl tvData [_sideIndex] == _data) then {
             [_sideIndex] breakOut QGVAR(getTreeDataIndex);

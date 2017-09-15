@@ -28,4 +28,4 @@ private _surfaceType = getText (configFile >> "CfgSurfaces" >> _surfaceClass >> 
 private _surfaceDust = getNumber (configFile >> "CfgSurfaces" >> _surfaceClass >> "dust");
 TRACE_2("Surface",_surfaceType,_surfaceDust);
 
-!(_surfaceType in DIG_SURFACE_BLACKLIST) && {_surfaceDust >= 0.1}
+!(_surfaceType in DIG_SURFACE_BLACKLIST) && {(_surfaceDust >= 0.1) || {_surfaceType in DIG_SURFACE_WHITELIST}}

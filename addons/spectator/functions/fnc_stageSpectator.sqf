@@ -83,7 +83,5 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
 
 // If display exists already update the entity list to hide player
 if !(isNull SPEC_DISPLAY) then {
-    if (GVAR(uiListType) == LIST_ENTITIES) then {
-        [] call FUNC(ui_updateListEntities);
-    };
+    [] call FUNC(ui_updateListEntities);
 };

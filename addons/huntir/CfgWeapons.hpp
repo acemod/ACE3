@@ -1,7 +1,7 @@
 
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_HuntIR_monitor: ACE_ItemCore {
         scope = 2;
@@ -10,7 +10,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(monitor_displayName);
         model = QPATHTOF(data\ace_huntir_monitor.p3d);
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 20;
         };
     };

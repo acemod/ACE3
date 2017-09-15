@@ -55,7 +55,7 @@ if !(isNil QGVAR(camera)) then {
 
     if !(isNil "_mode") then {
         // If mode not free and no focus, find focus
-        if ((_mode != MODE_FREE) && {isNull GVAR(camTarget) || GVAR(camOnLocation)}) then {
+        if ((_mode != MODE_FREE) && {isNull GVAR(camFocus)}) then {
             [true] call FUNC(setFocus);
         };
 
@@ -80,7 +80,7 @@ if !(isNil QGVAR(camera)) then {
             _focus = ([] call FUNC(getTargetEntities)) select 0;
         };
 
-        GVAR(camTarget) = _focus;
+        GVAR(camFocus) = _focus;
     };
 
     if !(isNil "_mode") then {

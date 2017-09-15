@@ -1,8 +1,8 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_f;
+    class CBA_MiscItem_ItemInfo;
 
-    class ACE_ExplosiveItem: InventoryItem_Base_f {
+    class ACE_ExplosiveItem: CBA_MiscItem_ItemInfo {
         allowedSlots[] = {801,701,901};
         //type = 201;
     };

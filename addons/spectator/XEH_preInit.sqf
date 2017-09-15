@@ -11,8 +11,6 @@ GVAR(availableModes) = [MODE_FREE, MODE_FPS, MODE_FOLLOW];
 GVAR(availableSides) = [west,east,resistance,civilian];
 GVAR(availableVisions) = [VISION_NORM,VISION_NVG,0,1];
 GVAR(interrupts) = [];
-GVAR(locationCount) = 0;
-GVAR(locationsList) = [];
 GVAR(unitBlacklist) = [];
 GVAR(unitWhitelist) = [];
 

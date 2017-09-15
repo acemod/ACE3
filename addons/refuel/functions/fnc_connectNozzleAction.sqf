@@ -128,8 +128,13 @@ private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
         };
 
         [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
-        _unit setVariable [QGVAR(tempFuel), nil];
-        [_unit, _nozzle] call FUNC(turnOn);
+
+        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
+            _unit setVariable [QGVAR(tempFuel), nil];
+            [_unit, _nozzle] call FUNC(turnOn);
+        } else {
+            [LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        };
     },
     "",
     localize LSTRING(ConnectAction),

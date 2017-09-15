@@ -26,7 +26,7 @@ if !(GVAR(uiHelpVisible)) exitWith {};
 
 private _cameraMode = GVAR(camMode);
 private _availableModes = GVAR(availableModes);
-private _hasTarget = !isNull GVAR(camTarget);
+private _hasTarget = !isNull GVAR(camFocus);
 
 private _controls = [];
 
@@ -45,7 +45,7 @@ if (_cameraMode == MODE_FREE) then {
 };
 
 // When the camera has a focus, switch mode applies (if other modes are available)
-if (_hasTarget && {!GVAR(camOnLocation)} && {count _availableModes > 1}) then {
+if (_hasTarget && {count _availableModes > 1}) then {
     _controls pushBack [
         format ["[%1]", toUpper ([DIK_SPACE] call CBA_fnc_localizeKey)],
         localize "STR_A3_Spectator_Helper_CameraMode"

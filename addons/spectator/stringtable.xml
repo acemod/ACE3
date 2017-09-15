@@ -42,9 +42,11 @@
         </Key>
         <Key ID="STR_ACE_Spectator_ai_DisplayName">
             <English>AI Enabled</English>
+            <Japanese>AI にも有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
+            <Japanese>スペクテイターで AI 視点を可能に</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -102,7 +104,7 @@
             <Czech>1. a 3. osoby</Czech>
             <Portuguese>1ª e 3ª pessoa</Portuguese>
             <Korean>1PP 과 3PP 카메라</Korean>
-            <Japanese>1PP そして 3PP カメラ</Japanese>
+            <Japanese>1PP と 3PP カメラ</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
@@ -175,7 +177,7 @@
             <Spanish>Ingeniero</Spanish>
             <Italian>Geniere</Italian>
             <French>Ingénieur</French>
-            <Japanese>専門兵</Japanese>
+            <Japanese>工兵</Japanese>
             <Korean>정비공</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
@@ -238,18 +240,14 @@
             <Chinesesimp>热成像</Chinesesimp>
             <Chinese>熱成像</Chinese>
         </Key>
-        <Key ID="STR_ACE_Spectator_mapLocations_DisplayName">
-            <English>Add Map Locations</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_mapLocations_Description">
-            <English>Add map locations to the spectator UI</English>
-        </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_uiIcons">
             <English>Icons</English>
+            <Japanese>アイコン</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
+            <Japanese>弾道表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -283,9 +281,11 @@
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Vision Mode</English>
+            <Japanese>ビジョン モード</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
+            <Japanese>速度低下</Japanese>
         </Key>
     </Package>
 </Project>

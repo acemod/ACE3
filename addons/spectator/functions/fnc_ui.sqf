@@ -45,14 +45,10 @@ if (_init) then {
     GVAR(entitiesToDraw)    = [];
     GVAR(grenadesToDraw)    = [];
     GVAR(iconsToDraw)       = [];
-    GVAR(locationsToDraw)   = [];
     GVAR(projectilesToDraw) = [];
 
     // RMB tracking is used for follow camera mode
     GVAR(holdingRMB) = false;
-
-    // List type is used for list updates and interaction
-    GVAR(uiListType) = LIST_ENTITIES;
 
     // Highlighted map object is used for click and drawing events
     GVAR(uiMapHighlighted) = objNull;
@@ -94,17 +90,13 @@ if (_init) then {
 
     // Periodically update list and focus widget
     GVAR(uiPFH) = [{
-        if (GVAR(uiListType) == LIST_ENTITIES) then {
-            [] call FUNC(ui_updateListEntities);
-        } else {
-            [] call FUNC(ui_updateListLocations);
-        };
-
+        [] call FUNC(ui_updateListEntities);
         [] call FUNC(ui_updateWidget);
     }, 5] call CBA_fnc_addPerFrameHandler;
 } else {
     // Stop updating the list and focus widget
     [GVAR(uiPFH)] call CBA_fnc_removePerFrameHandler;
+    GVAR(uiPFH) = nil;
 
     // Stop drawing icons and tracking cursor object
     removeMissionEventHandler ["Draw3D", GVAR(uiDraw3D)];
@@ -123,7 +115,6 @@ if (_init) then {
     GVAR(uiMapVisible)      = nil;
     GVAR(uiWidgetVisible)   = nil;
     GVAR(holdingRMB)        = nil;
-    GVAR(uiListType)        = nil;
     GVAR(uiMapHighlighted)  = nil;
     GVAR(curList)           = nil;
     GVAR(uiHelpH)           = nil;
@@ -134,7 +125,6 @@ if (_init) then {
     GVAR(entitiesToDraw)    = nil;
     GVAR(grenadesToDraw)    = nil;
     GVAR(iconsToDraw)       = nil;
-    GVAR(locationsToDraw)   = nil;
     GVAR(projectilesToDraw) = nil;
 
     // Reset view distance

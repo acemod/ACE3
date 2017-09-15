@@ -23,7 +23,6 @@ PREP(ui_handleMouseButtonDblClick);
 PREP(ui_handleMouseButtonDown);
 PREP(ui_handleMouseMoving);
 PREP(ui_handleMouseZChanged);
-PREP(ui_handleTabSelected);
 PREP(ui_toggleMap);
 PREP(ui_toggleUI);
 PREP(ui_updateCamButtons);
@@ -31,7 +30,6 @@ PREP(ui_updateHelp);
 PREP(ui_updateIconsToDraw);
 PREP(ui_updateListEntities);
 PREP(ui_updateListFocus);
-PREP(ui_updateListLocations);
 PREP(ui_updateWidget);
 
 // Utility functions
@@ -48,10 +46,8 @@ PREP(stageSpectator);
 PREP(switchFocus);
 
 // Public functions
-PREP(addLocation);
 PREP(getCameraAttributes);
 PREP(players);
-PREP(removeLocation);
 PREP(setCameraAttributes);
 PREP(setSpectator);
 PREP(updateCameraModes);

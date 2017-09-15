@@ -28,22 +28,24 @@ params ["", "_button"];
 // Left click
 if (_button == 0) exitWith {
     if (isNull GVAR(cursorObject)) then {
-        if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camTarget) }) then {
+        if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camFocus) }) then {
             playSound "ReadoutHideClick1";
             [objNull] call FUNC(setFocus);
         };
     } else {
-        playSound "ReadoutClick";
+        if (GVAR(cursorObject) in ([] call FUNC(getTargetEntities))) then {
+            playSound "ReadoutClick";
 
-        // Focus will be at screen center
-        [GVAR(cursorObject)] call FUNC(setFocus);
-        setMousePosition [0.5, 0.5];
+            // Focus will be at screen center
+            [GVAR(cursorObject)] call FUNC(setFocus);
+            setMousePosition [0.5, 0.5];
+        };
     };
 };
 
 // Right click
 if (_button == 1) then {
-    if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camTarget) } && { !isNull (attachedTo GVAR(camDummy)) }) then {
+    if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camFocus) } && { !isNull (attachedTo GVAR(camDummy)) }) then {
         [] call FUNC(cam_resetTarget);
     };
     GVAR(holdingRMB) = true;

@@ -83,7 +83,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
         if ((GVAR(placeAction) != PLACE_WAITING) ||
                 {_unit != ACE_player} ||
-                {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))} ||
+                {!([_unit, _attachToVehicle, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
 
             [_idPFH] call CBA_fnc_removePerFrameHandler;

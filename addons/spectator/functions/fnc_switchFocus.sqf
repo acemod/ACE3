@@ -18,7 +18,7 @@
 
 private _next = param [0, true];
 private _entities = [true] call FUNC(getTargetEntities);
-private _focus = GVAR(camTarget);
+private _focus = GVAR(camFocus);
 
 // No entities to switch to
 if ((_entities isEqualTo []) || (_entities isEqualTo [_focus])) exitWith {};
