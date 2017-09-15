@@ -15,24 +15,22 @@
  */
 #include "script_component.hpp"
 
+// Pick combo boxes where current selection doesn't match original selection
+private _pylonsToConfigure = GVAR(comboBoxes) select {(lbCurSel (_x select 0)) != (_x select 3)};
+
 {
-    _x params ["_combo", "", "_icon", "_originalIndex"];
-
-    if ((lbCurSel _combo) == _originalIndex) exitWith {}; // Don't touch pylons that weren't changed
-
-    // TODO: Progress bar for each changed pylon
-    private _pylon = _combo lbData (lbCurSel _combo);
-
-    // TODO: Redo all of this
-    if (GVAR(rearmNewPylons)) then {
-        private _count = getNumber (configFile >> "CfgMagazines" >> _pylon >> "count");
-        GVAR(currentAircraft) setPylonLoadout [_forEachIndex + 1, _pylon, true];
-        GVAR(currentAircraft) setAmmoOnPylon [_forEachIndex + 1, _count];
-    } else {
-        private _pylonMagazines = getPylonMagazines GVAR(currentAircraft);
-        if ((_pylonMagazines select _forEachIndex) != _pylon) then {
-            GVAR(currentAircraft) setPylonLoadout [_forEachIndex + 1, _pylon, true];
-            GVAR(currentAircraft) setAmmoOnPylon [_forEachIndex + 1, 0];
-        };
-    };
-} forEach GVAR(comboBoxes);
+    [
+        GVAR(timePerPylon),
+        _x,
+        {
+            // TODO: Change pylon
+            if (GVAR(rearmNewPylons)) then {
+                // TODO: Rearm
+            };
+        },
+        {
+            ["", false, 5] call EFUNC(common,displayText); // TODO: Failed text
+        },
+        format [LSTRING(ConfiguringPylon), _forEachIndex + 1, count _pylonsToConfigure]
+    ] call EFUNC(common,progressBar);
+} forEach _pylonsToConfigure;

@@ -25,6 +25,9 @@
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
         </Key>
+        <Key ID="STR_ACE_Pylons_ConfiguringPylon">
+            <English>Configuring pylon %1 out of %2...</English>
+        </Key>
         <Key ID="STR_ACE_Pylons_Enabled">
             <English>Enable Pylons Menu</English>
         </Key>
