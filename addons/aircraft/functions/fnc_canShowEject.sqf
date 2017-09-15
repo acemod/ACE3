@@ -16,14 +16,18 @@
  */
 #include "script_component.hpp"
 
+#define FULLCREW_UNIT       0
+#define FULLCREW_ROLE       1
+#define FULLCREW_TURRETPATH 3
+
 params ["_unit", "_vehicle"];
 
 _vehicle == vehicle _unit
 && {
     private _ejectVarName = "";
     {
-        if (_unit == _x select 0) exitWith {
-            _ejectVarName = format [QGVAR(ejectAction_%1), _x select 3];
+        if (_unit == _x select FULLCREW_UNIT) exitWith {
+            _ejectVarName = format [QGVAR(ejectAction_%1_%2), _x select FULLCREW_ROLE, _x select FULLCREW_TURRETPATH];
         };
     } count fullCrew _vehicle;
     _vehicle getVariable [_ejectVarName, false]
