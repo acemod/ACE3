@@ -22,6 +22,9 @@
         <Key ID="STR_ACE_Pylons_BannerText">
             <English>Pylons that have the reload icon next to them will have to be manually rearmed.</English>
         </Key>
+        <Key ID="STR_ACE_Pylons_InUse">
+            <English>%1 is already configuring this aircraft!</English>
+        </Key>
         <Key ID="STR_ACE_Pylons_Enabled">
             <English>Enable Pylons Menu</English>
         </Key>

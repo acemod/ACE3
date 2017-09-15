@@ -16,15 +16,12 @@
 #include "script_component.hpp"
 
 private _loadoutName = ctrlText 170;
-private _loadoutPylons = [];
-{
-    _loadoutPylons pushBack ((_x select 0) lbData (lbCurSel (_x select 0)));
-} forEach GVAR(comboBoxes);
-
 private _index = lbAdd [160, _loadoutName];
 lbSetCurSel [160, _index];
 
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];
+private _loadoutPylons = GVAR(comboBoxes) apply {(_x select 0) lbData (lbCurSel (_x select 0))};
+
 private _found = {
     if ((_x select 0) isEqualTo _loadoutName && {(_x select 2) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
         _aircraftLoadouts set [_forEachIndex, [_loadoutName, _loadoutPylons, typeOf GVAR(currentAircraft)]];

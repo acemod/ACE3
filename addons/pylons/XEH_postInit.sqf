@@ -25,4 +25,11 @@
             [_aircraft, 0, ["ACE_MainActions"], _loadoutAction] call EFUNC(interact_menu,addActionToObject);
         }, false, [], true] call CBA_fnc_addClassEventHandler;
     } forEach GVAR(aircraftWithPylons);
+
+    if (isServer) then {
+        GVAR(currentAircraftNamespace) = true call CBA_fnc_createNamespace;
+        publicVariable QGVAR(currentAircraftNamespace);
+
+        addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleDisconnect)];
+    };
 }] call CBA_fnc_addEventHandler;

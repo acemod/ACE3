@@ -19,12 +19,19 @@ params ["_aircraft"];
 
 if (!GVAR(enabled) || {!(typeOf _aircraft in GVAR(aircraftWithPylons))}) exitWith {};
 
+private _currentUser = _aircraft getVariable [QGVAR(currentUser), objNull];
+if (!isNull _currentUser) exitWith {
+    [format [LSTRING(InUse), name _currentUser], false, 5] call EFUNC(common,displayText);
+};
+_aircraft setVariable [QGVAR(currentUser), ace_player, true];
+GVAR(currentAircraftNamespace) setVariable [getPlayerUID ace_player, _aircraft, true];
+[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+
+GVAR(currentAircraft) = _aircraft;
+
 createDialog QGVAR(DialogLoadout);
 private _display = findDisplay 654654;
-_display ctrlAddEventHandler ["Unload", {call FUNC(onButtonClose)}];
-
-[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-GVAR(currentAircraft) = _aircraft;
+_display ctrlAddEventHandler ["Unload", LINKFUNC(onButtonClose)];
 
 if (GVAR(rearmNewPylons)) then {
     ctrlShow [220, false];
@@ -61,7 +68,7 @@ GVAR(comboBoxes) = [];
     {
         _combo lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayName");
         _combo lbSetData [_forEachIndex + 1, _x];
-        _combo ctrlAddEventHandler ["LBSelChanged", {call FUNC(onComboSelChange)}];
+        _combo ctrlAddEventHandler ["LBSelChanged", LINKFUNC(onComboSelChange)];
 
         if (_mag == _x) then {
             _index = _forEachIndex + 1;
@@ -113,8 +120,8 @@ _list ctrlAddEventHandler ["LBSelChanged", {
 }];
 
 private _edit = _display displayCtrl 170;
-_edit ctrlAddEventHandler ["KeyUp", {call FUNC(onNameChange)}];
-_edit ctrlAddEventHandler ["KeyDown", {call FUNC(onNameChange)}];
+_edit ctrlAddEventHandler ["KeyUp", LINKFUNC(onNameChange)];
+_edit ctrlAddEventHandler ["KeyDown", LINKFUNC(onNameChange)];
 
 private _checkbox = _display displayCtrl 130;
 _checkbox ctrlAddEventHandler ["CheckedChanged", {[(_this select 1) == 1] call FUNC(onPylonMirror)}];
