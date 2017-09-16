@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Map">
         <Key ID="STR_ACE_Map_Module_DisplayName">
@@ -347,8 +347,8 @@
             <Italian>Questo modulo permette il tracciamento di unità alleate con i marker BFT in mappa</Italian>
             <Japanese>モジュールは BFT マップ マーカとともに、同勢力ユニットの追跡を許可します。</Japanese>
             <Korean>이 모듈은 아군을 지도상에서 추적할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>此模块将使你能在地图上看见友方单位的踪迹.</Chinesesimp>
-            <Chinese>此模塊將使你能在地圖上看見友方單位的蹤跡.</Chinese>
+            <Chinesesimp>此模块将使你能在地图上看见友方单位的踪迹</Chinesesimp>
+            <Chinese>此模塊將使你能在地圖上看見友方單位的蹤跡</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
@@ -521,8 +521,8 @@
             <Polish>Zawsze wyłączaj Blue Force Tracking dla tej grupy.</Polish>
             <French>Désactive en permanence le Blue Force Tracking pour ce groupe.</French>
             <Italian>Disabilita sempre il Blue Force Tracking per questo gruppo.</Italian>
-            <Chinesesimp>对此小队永远关闭友军踪迹显示.</Chinesesimp>
-            <Chinese>對此小隊永遠關閉友軍蹤跡顯示.</Chinese>
+            <Chinesesimp>对此小队永远关闭友军踪迹显示</Chinesesimp>
+            <Chinese>對此小隊永遠關閉友軍蹤跡顯示</Chinese>
         </Key>
     </Package>
 </Project>

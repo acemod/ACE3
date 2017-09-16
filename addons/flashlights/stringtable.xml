@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Flashlights">
         <Key ID="STR_ACE_Flashlights_MX991_DisplayName">
@@ -28,8 +28,8 @@
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
             <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
-            <Chinesesimp>拥有红色滤光片的手电筒. 用来照亮地图.</Chinesesimp>
-            <Chinese>擁有紅色濾光片的手電筒. 用來照亮地圖.</Chinese>
+            <Chinesesimp>拥有红色滤光片的手电筒. 用来照亮地图</Chinesesimp>
+            <Chinese>擁有紅色濾光片的手電筒. 用來照亮地圖</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>

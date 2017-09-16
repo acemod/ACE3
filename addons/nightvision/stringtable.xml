@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
@@ -234,8 +234,8 @@
             <French>Bloque l'usage des JVN pendant la visée.</French>
             <Japanese>スコープを使い狙いを付けると、夜間暗視装置を無効化します。</Japanese>
             <Korean>조준시 야투경의 사용을 제한합니다.</Korean>
-            <Chinesesimp>此功能开启后, 当要使用瞄准镜时, 为避免夜视镜镜头碰撞到瞄准镜, 会先拿开夜视镜后再进行瞄准镜瞄准.</Chinesesimp>
-            <Chinese>此功能開啟後, 當要使用瞄準鏡時, 為避免夜視鏡鏡頭碰撞到瞄準鏡, 會先拿開夜視鏡後再進行瞄準鏡瞄準.</Chinese>
+            <Chinesesimp>此功能开启后, 当要使用瞄准镜时, 为避免夜视镜镜头碰撞到瞄准镜, 会先拿开夜视镜后再进行瞄准镜瞄准</Chinesesimp>
+            <Chinese>此功能開啟後, 當要使用瞄準鏡時, 為避免夜視鏡鏡頭碰撞到瞄準鏡, 會先拿開夜視鏡後再進行瞄準鏡瞄準</Chinese>
         </Key>
     </Package>
 </Project>

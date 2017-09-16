@@ -164,6 +164,27 @@ class CfgVehicles {
         };
     };
 
+    // Orange DLC:
+    class ACE_Explosives_Place_APERSMineDispenser: ACE_Explosives_Place {
+        displayName = "APERSMineDispenser";
+        model = "\A3\Weapons_F_Orange\Explosives\APERSmineDispenser";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.0, -0.05, 0.15]";
+            };
+        };
+    };
+    class ACE_Explosives_Place_TrainingMine: ACE_Explosives_Place {
+        displayName = "TrainingMine";
+        model = "\A3\Weapons_F_Orange\Explosives\TrainingMine_F";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.15]";
+            };
+        };
+    };
+
+
     class ACE_Explosives_Place_SLAM: ACE_Explosives_Place {
         displayName = "SLAM";
         model = "\A3\Weapons_F\Explosives\mine_SLAM_directional";

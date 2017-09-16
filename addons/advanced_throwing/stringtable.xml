@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Throwing">
         <Key ID="STR_ACE_Advanced_Throwing_Category">
@@ -22,8 +22,8 @@
             <Korean>고급 투척 행위를 허가합니다</Korean>
             <French>Permet de changer la configuration du lancé amélioré.</French>
             <Italian>Permette il cambiamento della modalità di tiro.</Italian>
-            <Chinese>允許使用更多不同的投擲方式.</Chinese>
-            <Chinesesimp>允许使用更多不同的投掷方式.</Chinesesimp>
+            <Chinese>允許使用更多不同的投擲方式</Chinese>
+            <Chinesesimp>允许使用更多不同的投掷方式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
@@ -46,8 +46,8 @@
             <Korean>고급 투척을 활성화 합니다</Korean>
             <French>Active le système de lancé amélioré.</French>
             <Italian>Abilita il sistema di lancio avanzato.</Italian>
-            <Chinese>啟用進階投擲系統.</Chinese>
-            <Chinesesimp>启用进阶投掷系统.</Chinesesimp>
+            <Chinese>啟用進階投擲系統</Chinese>
+            <Chinesesimp>启用进阶投掷系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
@@ -70,8 +70,8 @@
             <Korean>투척 궤도를 시각화 합니다(투척물이 어디로 갈지)</Korean>
             <French>Active la visualisation de l'arc de lancé (où l'objet lancé va atterrir).</French>
             <Italian>Abilita la visualizzazione dell'arco del tiro (dove l'oggetto lanciabile volerà).</Italian>
-            <Chinese>顯示投擲軌道幫助投擲.</Chinese>
-            <Chinesesimp>显示投掷轨道帮助投掷.</Chinesesimp>
+            <Chinese>顯示投擲軌道幫助投擲</Chinese>
+            <Chinesesimp>显示投掷轨道帮助投掷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
@@ -94,8 +94,8 @@
             <Korean>투척물을 준비시 마우스 조작을 시각화해서 보여줍니다</Korean>
             <French>Active les aides visuels pour les controles à la souris lorsqu'un lancé est préparé.</French>
             <Italian>Abilita la visualizzazione dei controlli del mouse quando l'oggetto lanciabile è pronto.</Italian>
-            <Chinese>開啟後會在準備投擲時, 顯示滑鼠相關操作.</Chinese>
-            <Chinesesimp>开启后会在准备投掷时, 显示滑鼠相关操作.</Chinesesimp>
+            <Chinese>開啟後會在準備投擲時, 顯示滑鼠相關操作</Chinese>
+            <Chinesesimp>开启后会在准备投掷时, 显示滑鼠相关操作</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
@@ -118,8 +118,8 @@
             <Korean>땅에 떨어진 투척물을 주울 수 있게 해줍니다.</Korean>
             <French>Active la capacité de récupérer les objets lancés sur le sol.</French>
             <Italian>Abilita la possibilità di raccogliere un oggetto lanciabile da terra.</Italian>
-            <Chinese>啟用後, 可撿取地面上的投擲物.</Chinese>
-            <Chinesesimp>启用后, 可捡取地面上的投掷物.</Chinesesimp>
+            <Chinese>啟用後, 可撿取地面上的投擲物</Chinese>
+            <Chinesesimp>启用后, 可捡取地面上的投掷物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
@@ -142,8 +142,8 @@
             <Korean>부착된 투척물을 주울 수 있게 해줍니다.</Korean>
             <French>Active la capacité à ramasser les objets lançables attaché à d'autres objets.</French>
             <Italian>Abilita la possibilità di raccogliere gli oggetti lanciabili dagli altri oggetti. </Italian>
-            <Chinese>啟用後, 可撿取附著在物件上的投擲物.</Chinese>
-            <Chinesesimp>启用后, 可捡取附着在物件上的投掷物.</Chinesesimp>
+            <Chinese>啟用後, 可撿取附著在物件上的投擲物</Chinese>
+            <Chinesesimp>启用后, 可捡取附着在物件上的投掷物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>

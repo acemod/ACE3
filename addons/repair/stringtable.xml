@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -1063,8 +1063,8 @@
             <French>Fournit un système de réparation pour tous les types de véhicules.</French>
             <Japanese>車両の全種類に修理システムを適用しますか？</Japanese>
             <Korean>모든 차량에 대해 수리 시스템을 제공합니다.</Korean>
-            <Chinesesimp>提供修复系统给所有载具.</Chinesesimp>
-            <Chinese>提供修復系統給所有載具.</Chinese>
+            <Chinesesimp>提供修复系统给所有载具</Chinesesimp>
+            <Chinese>提供修復系統給所有載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_anyone">
             <English>Anyone</English>
@@ -1102,6 +1102,7 @@
             <Japanese>上級工兵のみ</Japanese>
             <Chinesesimp>只有维修专精兵</Chinesesimp>
             <Chinese>只有維修專精兵</Chinese>
+            <Polish>Tylko zaawansowani mechanicy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1425,6 +1426,7 @@
             <Japanese>上級工兵</Japanese>
             <Chinesesimp>专精</Chinesesimp>
             <Chinese>專精</Chinese>
+            <Polish>Zaaw. mechanik</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -1483,8 +1485,8 @@
             <French>Liste de véhicules qui seront considérés comme véhicules de réparation. Séparé par des virgules.</French>
             <Japanese>一覧に記載されたユニット名を、修理車両として指定します。コンマで複数を指定できます。</Japanese>
             <Korean>목록내 차량은 정비 차량으로 분류됩니다. 쉼표로 구분합니다.</Korean>
-            <Chinesesimp>载具名单, 把载具名称输入在这边即可定义其为维修载具. 每个载具使用逗号以做区隔.</Chinesesimp>
-            <Chinese>載具名單, 把載具名稱輸入在這邊即可定義其為維修載具. 每個載具使用逗號以做區隔.</Chinese>
+            <Chinesesimp>载具名单, 把载具名称输入在这边即可定义其为维修载具. 每个载具使用逗号以做区隔</Chinesesimp>
+            <Chinese>載具名單, 把載具名稱輸入在這邊即可定義其為維修載具. 每個載具使用逗號以做區隔</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_DisplayName">
             <English>Is Repair Vehicle</English>
@@ -1573,8 +1575,8 @@
             <French>Liste des objets considérés comme installations de réparation. Séparé par des virgules</French>
             <Japanese>一覧に記載されたユニット名を、修理施設として指定します。コンマで複数を指定できます。</Japanese>
             <Korean>목록내 시설은 정비 시설으로 분류됩니다. 쉼표로 구분합니다.</Korean>
-            <Chinesesimp>设施名单, 把设施名称输入在这边即可定义其为维修设施. 每个设施使用逗号以做区隔.</Chinesesimp>
-            <Chinese>設施名單, 把設施名稱輸入在這邊即可定義其為維修設施. 每個設施使用逗號以做區隔.</Chinese>
+            <Chinesesimp>设施名单, 把设施名称输入在这边即可定义其为维修设施. 每个设施使用逗号以做区隔</Chinesesimp>
+            <Chinese>設施名單, 把設施名稱輸入在這邊即可定義其為維修設施. 每個設施使用逗號以做區隔</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_DisplayName">
             <English>Is Repair Facility</English>
@@ -1678,8 +1680,8 @@
             <French>Liste des objets qui recevront des pièces de réparation en plus. Séparé par des virgules</French>
             <Japanese>一覧に追加されたオブジェクトへ予備部品を与えます。コンマで複数を指定できます。</Japanese>
             <Korean>목록내 물체는 예비 부품을 받습니다, 쉼표로 구분합니다.</Korean>
-            <Chinesesimp>添加备件到名单的载具上. 每个载具使用逗号以做区隔.</Chinesesimp>
-            <Chinese>添加備件到名單的載具上. 每個載具使用逗號以做區隔.</Chinese>
+            <Chinesesimp>添加备件到名单的载具上. 每个载具使用逗号以做区隔</Chinesesimp>
+            <Chinese>添加備件到名單的載具上. 每個載具使用逗號以做區隔</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
             <English>Part</English>

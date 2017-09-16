@@ -19,6 +19,7 @@ class CfgPatches {
             "A3_Data_F_Jets_Loadorder",
             "A3_Data_F_Argo_Loadorder",
             "A3_Data_F_Patrol_Loadorder",
+            "A3_Data_F_Orange_Loadorder",
 
             // Vanilla
             "a3_3den",

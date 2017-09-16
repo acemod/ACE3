@@ -54,9 +54,20 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
             _endPosShifted = _endPosTest vectorAdd _x;
             _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
-            //Uncomment to see the lazor show, and see how the scanning works:
-            // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
-            if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _unit]) exitWith {_doesIntersect = true};
+            #ifdef DRAW_ATTACH_SCAN
+                [{
+                    params ["_args", "_idPFH"];
+                    _args params ["_startingPosShifted", "_endPosShifted", "_timeAdded"];
+                    drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+                    if (_timeAdded + 5 < CBA_missionTime) then {
+                        [_idPFH] call CBA_fnc_removePerFrameHandler;
+                    };
+                }, 0, [_startingPosShifted, _endPosShifted, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+            #endif
+
+            // Default max results is 1, so take only first subarray and select parentObject (object itself or parent of proxy)
+            private _intersectObject = ((lineIntersectsSurfaces [_startASL, _endASL, _unit]) param [0, objNull]) param [3, objNull];
+            if (_attachToVehicle == _intersectObject) exitWith {_doesIntersect = true};
         } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
     } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
 

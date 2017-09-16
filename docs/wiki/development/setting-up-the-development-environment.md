@@ -17,7 +17,7 @@ This page describes how you can setup your development environment for ACE3, all
 - A properly setup P-drive
 - Run Arma 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - [Python 3.x](https://www.python.org/)
-- [Mikero Tools](https://dev.withsix.com/projects/mikero-pbodll/files): DePbo, DeRap, DeOgg, Rapify, MakePbo, PboProject >=1.70
+- [Mikero Tools](https://armaservices.maverick-applications.com/Products/MikerosDosTools/FileBrowserFree): DePbo, DeRap, DeOgg, Rapify, MakePbo, PboProject >=1.70
 - `*.hpp` removed from PboProject's "Exclude From Pbo" list
 - Python, Mikero Tools and Git in PATH environment variable
 - [CBA](https://github.com/CBATeam/CBA_A3/releases/latest) mod (release or development version)
@@ -127,10 +127,12 @@ class CfgSettings {
 #define DISABLE_COMPILE_CACHE
 ```
 
+All functions in module with `DISABLE_COMPILE_CACHE` line can be recompiled without mission restart with `[] call ACE_PREP_RECOMPILE;` command. You can add a addAction/keybind/pfeh with this code and use it for fast recompiling.
+
 ### 7.2 Restrictions
 
 Files must exist in the built PBOs for file patching to work. If you create a new file you must rebuild the PBO or Arma will not find it in your file paths.
 
-Configs are not patched during run time, only at load time. You do not have have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the [diagnostic exe](https://community.bistudio.com/wiki/Arma_3_Diagnostics_Exe). That includes `diag_mergeConfigFile` which takes a full system path (as in `diag_mergeConfigFile  ["p:\z\ace\addons\my_module\config.cpp"]`) and allows you selectively reload config files.
+Configs are not patched during run time, only at load time. You do not have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the [diagnostic exe](https://community.bistudio.com/wiki/Arma_3_Diagnostics_Exe). That includes `diag_mergeConfigFile` which takes a full system path (as in `diag_mergeConfigFile  ["p:\z\ace\addons\my_module\config.cpp"]`) and allows you selectively reload config files.
 
 If you need to add/remove files, then you'll need to run `build.py` again without the game running, and restart. That is all that is required to add new files for further use in testing.

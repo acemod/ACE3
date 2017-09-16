@@ -41,5 +41,5 @@ _nozzle setPosASL _groundPosition;
 TRACE_1("finalPos",getPosATL _nozzle);
 
 if (isNull _unit) exitWith {};
-_unit setVariable [QGVAR(isRefueling), false, true];
+_unit setVariable [QGVAR(isRefueling), false];
 _unit setVariable [QGVAR(nozzle), objNull, true];
