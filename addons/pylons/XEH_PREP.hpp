@@ -1,4 +1,5 @@
 PREP(canConfigurePylons);
+PREP(configurePylons);
 PREP(handleDisconnect);
 PREP(onButtonApply);
 PREP(onButtonClose);

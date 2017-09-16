@@ -24,7 +24,8 @@ params ["_ctrl", "_index"];
         if (_mirroredIndex == -1) then {
             private _indexOf = _forEachIndex;
             {
-                if (_mirroredIndex == _indexOf) exitWith {
+                _x params ["_combo", "_mirroredIndex"];
+                if (_mirroredIndex == _indexOf && {!ctrlEnabled _combo}) exitWith {
                     _combo lbSetCurSel _index;
                 };
             } forEach GVAR(comboBoxes);

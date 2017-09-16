@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Applies the current configuration of pylons to the aircraft
+ * Starts the pylon configuration.
  *
  * Arguments:
  * None
@@ -15,22 +15,14 @@
  */
 #include "script_component.hpp"
 
-// Pick combo boxes where current selection doesn't match original selection
-private _pylonsToConfigure = GVAR(comboBoxes) select {(lbCurSel (_x select 0)) != (_x select 3)};
-
+private _pylonsToConfigure = [];
 {
-    [
-        GVAR(timePerPylon),
-        _x,
-        {
-            // TODO: Change pylon
-            if (GVAR(rearmNewPylons)) then {
-                // TODO: Rearm
-            };
-        },
-        {
-            ["", false, 5] call EFUNC(common,displayText); // TODO: Failed text
-        },
-        format [LSTRING(ConfiguringPylon), _forEachIndex + 1, count _pylonsToConfigure]
-    ] call EFUNC(common,progressBar);
-} forEach _pylonsToConfigure;
+    // Pick combo boxes where current selection doesn't match original selection
+    if ((lbCurSel (_x select 0)) != (_x select 3)) then {
+        _pylonsToConfigure pushBack _forEachIndex;
+    };
+} forEach GVAR(comboBoxes);
+
+if (_pylonsToConfigure isEqualTo []) exitWith {};
+
+[_pylonsToConfigure, 0] call FUNC(configurePylons);

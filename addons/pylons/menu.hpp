@@ -131,7 +131,7 @@ class GVAR(DialogLoadout) {
             idc = 220;
             text = CSTRING(BannerText);
             x = 0.171616 * safezoneW + safezoneX;
-            y = 0.290 * safezoneH + safezoneY;
+            y = 0.738 * safezoneH + safezoneY;
             w = 0.440035 * safezoneW;
             h = 0.028 * safezoneH;
             colorBackground[] = {0.5,0,0,0.5};
@@ -140,7 +140,7 @@ class GVAR(DialogLoadout) {
             idc = 230;
             text = "a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa";
             x = 0.171616 * safezoneW + safezoneX;
-            y = 0.290 * safezoneH + safezoneY;
+            y = 0.738 * safezoneH + safezoneY;
             w = 0.0131354 * safezoneW;
             h = 0.028 * safezoneH;
         };
