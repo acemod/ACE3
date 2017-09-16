@@ -10,23 +10,23 @@ class CfgWeapons {
         muzzles[] = {"this"};
     };
     class R3F_Famas_F1_M203: R3F_Famas_F1 {
-		muzzles[] = {"this","Lance_Grenades"};
-	};
+        muzzles[] = {"this","Lance_Grenades"};
+    };
     class R3F_Famas_surb: R3F_Famas_F1 {
         ACE_RailHeightAboveBore = 5.4;
         ACE_barrelTwist = 228.6; // 1:9"
         ACE_barrelLength = 450.0; // Beretta barrel
     };
     class R3F_Famas_surb_M203: R3F_Famas_surb {
-		muzzles[] = {"this","Lance_Grenades"};
-	};
+        muzzles[] = {"this","Lance_Grenades"};
+    };
     class R3F_Famas_G2: R3F_Famas_F1 {
         ACE_RailHeightAboveBore = 10.6;
         ACE_barrelTwist = 228.6; // 1:9"
         ACE_barrelLength = 488.0;
     };
     class R3F_Famas_G2_M203: R3F_Famas_G2 {
-		muzzles[] = {"this","Lance_Grenades"};
+        muzzles[] = {"this","Lance_Grenades"};
     };
     class R3F_Famas_felin: R3F_Famas_G2 {
         ACE_RailHeightAboveBore = 5.4;
@@ -114,8 +114,8 @@ class CfgWeapons {
         muzzles[] = {"this"};
     };
     class R3F_HK416M_M203: R3F_HK416M {
-		muzzles[] = {"this","Lance_Grenades"};
-	};
+        muzzles[] = {"this","Lance_Grenades"};
+    };
     class R3F_HK416M_HG: R3F_HK416M {};
     class R3F_HK416S_HG: R3F_HK416M_HG {
         ACE_RailHeightAboveBore = 3.4;
