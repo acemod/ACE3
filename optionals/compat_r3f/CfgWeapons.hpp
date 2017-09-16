@@ -142,13 +142,13 @@ class CfgWeapons {
         ACE_barrelTwist = 250.0;
         ACE_barrelLength = 125.0;
         muzzles[] = {"this"};
-        initSpeed = 350; // default 410
+        initSpeed = -1.0; // default 410
     };
     class R3F_HKUSP: Pistol_Base_F {
         ACE_barrelTwist = 250.0;
         ACE_barrelLength = 121.0;
         muzzles[] = {"this"};
-        initSpeed = 350; // default 410
+        initSpeed = -1.0; // default 410
     };   
     class ItemCore;
     class InventoryOpticsItem_Base_F;
