@@ -80,3 +80,20 @@ class RscTitles {
         };
     };
 };
+
+// hide the mine detector display
+class RscText;
+
+class RscCustomInfoMineDetect {
+    class controls {
+        class GVAR(hideDummy): RscText {
+            onLoad = "\
+                params ['_control'];\
+                private _display = ctrlParent _control;\
+                {\
+                    _x ctrlShow false;\
+                } forEach allControls _display;\
+            ";
+        };
+    };
+};
