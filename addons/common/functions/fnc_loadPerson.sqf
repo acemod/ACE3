@@ -22,7 +22,7 @@ params ["_caller", "_unit"];
 
 private _vehicle = objNull;
 
-if (!([_caller, _unit, ["isNotDragging", "isNotCarrying"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
+if (!([_caller, _unit, ["isNotDragging", "isNotCarrying", "isNotSwimming"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
 
 private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F","Pod_Heli_Transport_04_crewed_base_F"], 10];
 
