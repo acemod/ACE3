@@ -74,11 +74,13 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 347.98;
         muzzles[] = {"this"};
+        initSpeed = 915; // R3F config
     };
     class R3F_Minimi_762: R3F_Minimi {
         ACE_RailHeightAboveBore = 4.0;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 502.92;
+        initSpeed = 820; // R3F config
     };
     class R3F_SIG551: Rifle_Base_F {
         ACE_RailHeightAboveBore = 4.2;
