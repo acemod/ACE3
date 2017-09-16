@@ -1,7 +1,7 @@
 class CfgAmmo {
     class Default;
     class BulletBase;
-    class R3F_9x19_Ball: BulletBase { // ACE_9x19_Ball
+    class R3F_9x19_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L360
         typicalSpeed = 350; // R3F config
         airFriction = -0.0019835001; // ACE3 value
         ACE_caliber = 9.017;
@@ -15,7 +15,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {340, 370, 400};
         ACE_barrelLengths[] = {101.6, 127.0, 228.6};
     };
-    class R3F_556x45_Ball: BulletBase { // B_556x45_Ball, AtragMx GunList: 5.56x45mm M855
+    class R3F_556x45_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L9
         typicalSpeed = 930; // R3F config
         airFriction = -0.00126466; // ACE3 value
         ACE_caliber = 5.69;
@@ -29,7 +29,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[] = {210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class R3F_762x51_Ball: BulletBase { // B_762x51_Ball, AtragMx GunList: 7.62x51mm M80
+    class R3F_762x51_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L152
         typicalSpeed = 820; // R3F config
         airFriction = -0.00100957; // ACE3 value
         ACE_caliber = 7.823;
@@ -43,7 +43,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {700, 800, 820, 833, 845};
         ACE_barrelLengths[] = {254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class R3F_762x51_Ball2: R3F_762x51_Ball { // FRF2 bullet
+    class R3F_762x51_Ball2: R3F_762x51_Ball { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L152
         typicalSpeed = 850; // R3F config
         airFriction = -0.00100957; // ACE3 value
 		ACE_caliber = 7.823;
@@ -57,10 +57,10 @@ class CfgAmmo {
 		ACE_muzzleVelocities[] = {850};
 		ACE_barrelLengths[] = {650};
 	};
-    class R3F_762x51_Minimi_Ball: R3F_762x51_Ball {
+    class R3F_762x51_Minimi_Ball: R3F_762x51_Ball { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L152
         airFriction = -0.00100957; // ACE3 value
 	};
-    class R3F_127x99_Ball: BulletBase { // B_127x99_Ball, AtragMx GunList: 12.7x99mm
+    class R3F_127x99_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 780; // R3F config
         airFriction = -0.00057503; // ACE3 value
         ACE_caliber = 12.954;
@@ -74,7 +74,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {780};
         ACE_barrelLengths[] = {700};
     };
-    class R3F_127x99_PEI: R3F_127x99_Ball { // B_127x99_Ball, AtragMx GunList: 12.7x99mm
+    class R3F_127x99_PEI: R3F_127x99_Ball { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 780; // R3F config
         airFriction = -0.00057503; // ACE3 value
         ACE_caliber = 12.954;
@@ -88,7 +88,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {780};
         ACE_barrelLengths[] = {700};
     };
-    class R3F_127x99_Ball2: BulletBase { // B_127x99_Ball, AtragMx GunList: 12.7x99mm
+    class R3F_127x99_Ball2: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 850; // R3F config
         airFriction = -0.00057503; // ACE3 value
         ACE_caliber = 12.954;
@@ -102,7 +102,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {850};
         ACE_barrelLengths[] = {736.6};
     };
-    class R3F_127x99_PEI2: R3F_127x99_Ball2 { // B_127x99_Ball, AtragMx GunList: 12.7x99mm
+    class R3F_127x99_PEI2: R3F_127x99_Ball2 { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 850; // R3F config
         airFriction = -0.00057503; // ACE3 value
         ACE_caliber = 12.954;
@@ -116,7 +116,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {850};
         ACE_barrelLengths[] = {736.6};
     };
-    class R3F_127x99_Ball3: BulletBase { // B_127x99_Ball, AtragMx GunList: 12.7x99mm
+    class R3F_127x99_Ball3: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 820; // R3F config
         airFriction = -0.00057503; // ACE3 value
         ACE_caliber = 12.954;
