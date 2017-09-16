@@ -36,7 +36,7 @@ private _actions = [];
     private _icon = (getText (_config >> "icon")) call BIS_fnc_textureVehicleIcon;
 
     private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
-    _actions pushBack _action;
+    _actions pushBack [_action, [], _target];
 } forEach (_target call EFUNC(common,nearestVehiclesFreeSeat));
 
 _actions
