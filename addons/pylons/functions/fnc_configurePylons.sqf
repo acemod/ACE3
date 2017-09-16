@@ -20,7 +20,6 @@ params ["_pylonsToConfigure", "_currentPylon"];
 
 if (_currentPylon == count _pylonsToConfigure) exitWith {};
 
-// TODO: Remove empty weapons
 // TODO: Animation and sound
 [
     GVAR(timePerPylon),
@@ -29,16 +28,28 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
         (_this select 0) params ["_pylonsToConfigure", "_currentPylon"];
         private _pylonIndex = _pylonsToConfigure select _currentPylon;
         private _combo = GVAR(comboBoxes) select _pylonIndex select 0;
-        private _pylon = _combo lbData (lbCurSel _combo);
+        private _pylonMagazine = _combo lbData (lbCurSel _combo);
+
+        // Remove the weapon of current pylon from aircraft IF weapon is only on this pylon
+        private _currentPylonMagazine = (getPylonMagazines GVAR(currentAircraft)) select _pylonIndex;
+        if (_currentPylonMagazine != "") then {
+            private _allPylonWeapons = (getPylonMagazines GVAR(currentAircraft)) apply {
+                getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon")
+            };
+            private _pylonWeapon = _allPylonWeapons select _pylonIndex;
+            if (({_x == _pylonWeapon} count _allPylonWeapons) == 1) then {
+                GVAR(currentAircraft) removeWeaponGlobal _pylonWeapon;
+            };
+        };
 
         [
             QGVAR(setPylonLoadOutEvent),
-            [GVAR(currentAircraft), _pylonIndex + 1, _pylon],
+            [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine],
             GVAR(currentAircraft)
         ] call CBA_fnc_targetEvent;
 
         if (GVAR(rearmNewPylons)) then {
-            private _count = getNumber (configFile >> "CfgMagazines" >> _pylon >> "count");
+            private _count = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
             [
                 QGVAR(setAmmoOnPylonEvent),
                 [GVAR(currentAircraft), _pylonIndex + 1, _count],
@@ -50,7 +61,7 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
     },
     {
         (_this select 0) params ["", "_currentPylon"];
-        [format [localize LSTRING(Stopped), _currentPylon], false, 5] call EFUNC(common,displayText);
+        [format [localize LSTRING(Stopped), _currentPylon + 1], false, 5] call EFUNC(common,displayText);
     },
     format [localize LSTRING(ReplacingPylon), _currentPylon + 1, count _pylonsToConfigure]
 ] call EFUNC(common,progressBar);
