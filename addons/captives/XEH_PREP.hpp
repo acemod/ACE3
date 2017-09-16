@@ -1,4 +1,4 @@
-
+PREP(addLoadCaptiveActions);
 PREP(canApplyHandcuffs);
 PREP(canEscortCaptive);
 PREP(canFriskPerson);
