@@ -29,6 +29,7 @@ if (GVAR(supply) > 0) then {
 if !(_success) exitWith {WARNING_2("takeSuccess failed to take [%1] from [%2]",_magazineClass,_truck);};
 
 [_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
 private _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 

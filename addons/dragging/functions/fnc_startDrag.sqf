@@ -35,6 +35,8 @@ if (primaryWeapon _unit == "") then {
 // select primary, otherwise the drag animation actions don't work.
 _unit selectWeapon primaryWeapon _unit;
 
+[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
 
