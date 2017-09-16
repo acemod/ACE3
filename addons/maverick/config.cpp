@@ -36,4 +36,3 @@ class SensorTemplateLaser;
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_GuidanceConfig.hpp"
-#include "CfgEventHandlers.hpp"

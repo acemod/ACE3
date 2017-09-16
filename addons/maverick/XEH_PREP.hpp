@@ -1,3 +1,0 @@
-LOG("prep");
-
-PREP(showHud);
