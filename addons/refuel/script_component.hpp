@@ -31,3 +31,4 @@
 #endif
 
 #define INTERACT_EXCEPTIONS "isNotInside", "isNotOnLadder", "isNotRefueling", "isNotSwimming"
+#define INTERACT_EXCEPTIONS_REFUELING "isNotInside", "isNotOnLadder", "isNotSwimming"

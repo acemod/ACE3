@@ -94,5 +94,5 @@ params [
     {},
     localize LSTRING(TakeNozzleAction),
     {true},
-    [INTERACT_EXCEPTIONS]
+    [INTERACT_EXCEPTIONS_REFUELING]
 ] call EFUNC(common,progressBar);
