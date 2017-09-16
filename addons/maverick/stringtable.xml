@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ace_Maverick">
+    <Package name="main">
+        <Container name="magazines">
+            <Key ID="str_ace_maverick_l_mag_descr">
+                <English>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</English>
+                <German>AGM-65 Maverick L, lasergelenkte Luft-Boden-Rakete</German>
+            </Key>
+            <Key ID="str_ace_maverick_l_mag_x1">
+                <English>AGM-65 Maverick L x1</English>
+                <German>AGM-65 Maverick L x1</German>
+            </Key>
+            <Key ID="str_ace_maverick_l_mag_x2">
+                <English>AGM-65 Maverick L x2</English>
+                <German>AGM-65 Maverick L x2</German>
+            </Key>
+            <Key ID="str_ace_maverick_l_mag_x3">
+                <English>AGM-65 Maverick L x3</English>
+                <German>AGM-65 Maverick L x3</German>
+            </Key>
+            <Key ID="str_ace_maverick_l_mag_short">
+                <English>Laser Guided</English>
+                <German>Lasergelenkt</German>
+            </Key>
+        </Container>
+        <Container name="weapons">
+            <Key ID="str_ace_maverick_l">
+                <English>AGM-65 Maverick L</English>
+                <German>AGM-65 Maverick L</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
