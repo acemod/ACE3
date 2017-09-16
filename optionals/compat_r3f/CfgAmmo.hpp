@@ -3,7 +3,7 @@ class CfgAmmo {
     class BulletBase;
     class R3F_9x19_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L360
         typicalSpeed = 350; // R3F config
-        airFriction = -0.0019835001; // ACE3 value
+        airFriction = -0.0019835001; // ACE3 value, default -0.001413
         ACE_caliber = 9.017;
         ACE_bulletLength = 15.494;
         ACE_bulletMass = 8.0352;
@@ -17,7 +17,7 @@ class CfgAmmo {
     };
     class R3F_556x45_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L9
         typicalSpeed = 930; // R3F config
-        airFriction = -0.00126466; // ACE3 value
+        airFriction = -0.00126466; // ACE3 value, default -0.001625
         ACE_caliber = 5.69;
         ACE_bulletLength = 23.012;
         ACE_bulletMass = 4.0176;
@@ -31,7 +31,7 @@ class CfgAmmo {
     };
     class R3F_762x51_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L152
         typicalSpeed = 820; // R3F config
-        airFriction = -0.00100957; // ACE3 value
+        airFriction = -0.00100957; // ACE3 value, default -0.001625
         ACE_caliber = 7.823;
         ACE_bulletLength = 28.956;
         ACE_bulletMass = 9.4608;
@@ -45,7 +45,7 @@ class CfgAmmo {
     };
     class R3F_762x51_Ball2: R3F_762x51_Ball { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L152
         typicalSpeed = 850; // R3F config
-        airFriction = -0.00100957; // ACE3 value
+        airFriction = -0.00100957; // ACE3 value, default -0.001625
 		ACE_caliber = 7.823;
 		ACE_bulletLength = 28.956;
 		ACE_bulletMass = 9.4608;
@@ -58,11 +58,11 @@ class CfgAmmo {
 		ACE_barrelLengths[] = {650};
 	};
     class R3F_762x51_Minimi_Ball: R3F_762x51_Ball { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L152
-        airFriction = -0.00100957; // ACE3 value
+        airFriction = -0.00100957; // ACE3 value, default -0.002000
 	};
     class R3F_127x99_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 780; // R3F config
-        airFriction = -0.00057503; // ACE3 value
+        airFriction = -0.00057503; // ACE3 value, default -0.00086
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
@@ -76,7 +76,7 @@ class CfgAmmo {
     };
     class R3F_127x99_PEI: R3F_127x99_Ball { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 780; // R3F config
-        airFriction = -0.00057503; // ACE3 value
+        airFriction = -0.00057503; // ACE3 value, default -0.00086
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
@@ -90,7 +90,7 @@ class CfgAmmo {
     };
     class R3F_127x99_Ball2: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 850; // R3F config
-        airFriction = -0.00057503; // ACE3 value
+        airFriction = -0.00057503; // ACE3 value, default -0.00086
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
@@ -104,7 +104,7 @@ class CfgAmmo {
     };
     class R3F_127x99_PEI2: R3F_127x99_Ball2 { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 850; // R3F config
-        airFriction = -0.00057503; // ACE3 value
+        airFriction = -0.00057503; // ACE3 value, default -0.00086
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
@@ -118,7 +118,7 @@ class CfgAmmo {
     };
     class R3F_127x99_Ball3: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L494
         typicalSpeed = 820; // R3F config
-        airFriction = -0.00057503; // ACE3 value
+        airFriction = -0.00057503; // ACE3 value, default -0.00086
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
