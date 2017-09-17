@@ -10,7 +10,7 @@
  * Children actions <ARRAY>
  *
  * Example:
- * [target, player] call ace_cargo_fnc_addCargoVehiclesActions
+ * [cursorObject, player] call ace_cargo_fnc_addCargoVehiclesActions
  *
  * Public: No
  */
@@ -23,22 +23,10 @@ private _statement = {
     [_player, _target, _vehicle] call FUNC(startLoadIn);
 };
 
-private _actions = [];
-
-{
-    private _config = configFile >> "CfgVehicles" >> typeOf _x;
+private _vehicles = (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE]) select {
+    private _hasCargoConfig = 1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo));
     private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
-    private _hasCargoConfig = getNumber (_config >> QGVAR(hasCargo)) == 1;
-    if ((_hasCargoPublic || _hasCargoConfig) && {_x != _target}) then {
-        private _name = getText (_config >> "displayName");
-        private _ownerName = [_x, true] call EFUNC(common,getName);
-        if ("" != _ownerName) then {
-            _name = format ["%1 (%2)", _name, _ownerName];
-        };
-        private _icon = (getText (_config >> "icon")) call BIS_fnc_textureVehicleIcon;
-        private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
-        _actions pushBack [_action, [], _target];
-    };
-} forEach (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE]);
+    (_hasCargoConfig || {_hasCargoPublic}) && {_x != _target}
+};
 
-_actions
+[_vehicles, _statement, _target] call EFUNC(interact_menu,createVehiclesActions)
