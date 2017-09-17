@@ -51,7 +51,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.2;
-                    insertChildren = QUOTE([ARR_2(_player, _target)] call DFUNC(addLoadCaptiveActions));
+                    insertChildren = QUOTE(call DFUNC(addLoadCaptiveActions));
                 };
                 class GVAR(UnloadCaptive) {
                     displayName = CSTRING(UnloadCaptive);

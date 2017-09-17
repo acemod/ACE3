@@ -1,13 +1,13 @@
 /*
  * Author: 654wak654
- * Adds child actions to the "load patient" action for near vehicles
+ * Adds child actions to the "load patient" action for near vehicles.
  *
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * The child actions
+ * The child actions <ARRAY>
  *
  * Example:
  * [bob, kevin] call ace_medical_fnc_addLoadPatientActions
@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_caller", "_target"];
+params ["_target", "_caller"];
 
 private _statement = {
     params ["_target", "_player", "_vehicle"];
