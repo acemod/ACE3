@@ -18,7 +18,7 @@ class GVAR(display) {
     movingEnable = 0;
     closeOnMissionEnd = 1;
     
-    onLoad = QUOTE(SETUVAR(GVAR(display),_this select 0));
+    onLoad = QUOTE(with uiNameSpace do {GVAR(display) = _this select 0};);
 
     onKeyDown = QUOTE(_this call FUNC(ui_handleKeyDown));
     onKeyUp = QUOTE(_this call FUNC(ui_handleKeyUp));
