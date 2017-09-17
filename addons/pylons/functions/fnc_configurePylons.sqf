@@ -48,14 +48,17 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
             GVAR(currentAircraft)
         ] call CBA_fnc_targetEvent;
 
-        if (GVAR(rearmNewPylons)) then {
-            private _count = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
-            [
-                QGVAR(setAmmoOnPylonEvent),
-                [GVAR(currentAircraft), _pylonIndex + 1, _count],
-                GVAR(currentAircraft)
-            ] call CBA_fnc_targetEvent;
+        private _count = if (GVAR(rearmNewPylons)) then {
+            getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count")
+        } else {
+            0
         };
+
+        [
+            QGVAR(setAmmoOnPylonEvent),
+            [GVAR(currentAircraft), _pylonIndex + 1, _count],
+            GVAR(currentAircraft)
+        ] call CBA_fnc_targetEvent;
 
         [_pylonsToConfigure, _currentPylon + 1] call FUNC(configurePylons);
     },
