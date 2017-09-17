@@ -9,7 +9,7 @@
  * Children actions <ARRAY>
  *
  * Example:
- * [cursorObject, player] call ace_cargo_fnc_addCargoVehiclesActions
+ * [cursorObject] call ace_cargo_fnc_addCargoVehiclesActions
  *
  * Public: No
  */
