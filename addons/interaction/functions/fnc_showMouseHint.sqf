@@ -59,21 +59,21 @@ if (_scroll == "") then {
 };
 
 {
-    _x params [["_xIcon", "", [""]], ["_xText", "", [""]]];
-    switch (toLower _xIcon) do {
-        case ("alt"): {_xIcon = QPATHTOF(UI\key_alt_ca.paa);};
+    _x params [["_xKeyName", "", [""]], ["_xText", "", [""]]];
+    switch (toLower _xKeyName) do {
+        case ("alt"): {_xKeyName = format ["<%1>", toUpper localize "str_dik_alt"];};
         case ("control");
-        case ("ctrl"): {_xIcon = QPATHTOF(UI\key_ctrl_ca.paa);};
-        case ("shift"): {_xIcon = QPATHTOF(UI\key_shift_ca.paa);};
+        case ("ctrl"): {_xKeyName = format ["<%1>", toUpper localize "str_dik_control"];};
+        case ("shift"): {_xKeyName = format ["<%1>", toUpper localize "str_dik_shift"];};
     };
 
-    private _iconCtrl = _display ctrlCreate ["RscInteractionHelperIcon", -1];
+    private _keyNameCtrl = _display ctrlCreate ["RscInteractionText_right", -1];
     private _textCtrl = _display ctrlCreate ["RscInteractionText", -1];
-    _iconCtrl ctrlSetText _xIcon;
+    _keyNameCtrl ctrlSetText _xKeyName;
     _textCtrl ctrlSetText _xText;
-    _iconCtrl ctrlSetPosition [19.75 * GUI_GRID_W, (_offset + 0.5) * GUI_GRID_H, 1.5 * GUI_GRID_W, 1.5 * GUI_GRID_H];
+    _keyNameCtrl ctrlSetPosition [0 * GUI_GRID_W, _offset * GUI_GRID_H, 21.4 * GUI_GRID_W, 1.5 * GUI_GRID_H];
     _textCtrl ctrlSetPosition [21 * GUI_GRID_W, _offset * GUI_GRID_H, 24 * GUI_GRID_W, 1.5 * GUI_GRID_H];
-    _iconCtrl ctrlCommit 0;
+    _keyNameCtrl ctrlCommit 0;
     _textCtrl ctrlCommit 0;
     _offset = _offset + 1;
 } forEach _extraIconSets;
