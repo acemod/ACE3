@@ -23,20 +23,4 @@ private _statement = {
     [_player, _target, _vehicle] call FUNC(doLoadCaptive);
 };
 
-private _actions = [];
-
-{
-    private _config = configFile >> "CfgVehicles" >> typeOf _x;
-
-    private _name = getText (_config >> "displayName");
-    private _ownerName = [_x, true] call EFUNC(common,getName);
-    if (_ownerName != "") then {
-        _name = format ["%1 (%2)", _name, _ownerName];
-    };
-    private _icon = (getText (_config >> "icon")) call BIS_fnc_textureVehicleIcon;
-
-    private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
-    _actions pushBack [_action, [], _target];
-} forEach (_target call EFUNC(common,nearestVehiclesFreeSeat));
-
-_actions
+[_target call EFUNC(common,nearestVehiclesFreeSeat), _statement, _target] call EFUNC(interact_menu,createVehiclesActions)
