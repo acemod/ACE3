@@ -15,17 +15,17 @@ class GVAR(DialogLoadout) {
         class TextTitlebar: RscText {
             idc = ID_TEXT_TITLEBAR;
             text = CSTRING(AircraftLoadoutTitle);
-            x = 0.158349 * safezoneW + safezoneX;
+            x = 0.15835 * safezoneW + safezoneX;
             y = 0.262 * safezoneH + safezoneY;
-            w = 0.683039 * safezoneW;
+            w = 0.68304 * safezoneW;
             h = 0.028 * safezoneH;
             colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profileNamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profileNamespace getVariable ['GUI_BCG_RGB_B',0.5])",1};
         };
         class BackgroundIGUIBack: IGUIBack {
             idc = ID_BACKGROUND_IGUIBACK;
-            x = 0.15848 * safezoneW + safezoneX;
+            x = 0.15835 * safezoneW + safezoneX;
             y = 0.29 * safezoneH + safezoneY;
-            w = 0.683039 * safezoneW;
+            w = 0.68304 * safezoneW;
             h = 0.448 * safezoneH;
             colorBackground[] = {0,0,0,0.3};
         };
