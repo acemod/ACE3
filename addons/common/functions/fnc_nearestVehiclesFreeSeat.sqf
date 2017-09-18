@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params ["_unit", ["_distance", 10]];
 
-private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F", "Pod_Heli_Transport_04_crewed_base_F"], 10];
+private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F", "Pod_Heli_Transport_04_crewed_base_F"], _distance];
 _nearVehicles select {(_x emptyPositions "cargo" > 0) || {_x emptyPositions "gunner" > 0}}
