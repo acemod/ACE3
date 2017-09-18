@@ -107,7 +107,7 @@ GVAR(defaultLoadoutNames) = [];
     };
 } forEach (profileNamespace getVariable [QGVAR(aircraftLoadouts), []]);
 
-private _displayName = getText (_config >> "displayName"); 
+private _displayName = getText (_config >> "displayName");
 ctrlSetText [ID_TEXT_LISTTITLE, format [localize LSTRING(LoadoutsFor), _displayName]];
 
 private _list = _display displayCtrl ID_LIST_LOADOUTS;

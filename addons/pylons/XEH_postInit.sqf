@@ -18,7 +18,7 @@
                     private _vehicles = _target nearObjects ["LandVehicle", GVAR(searchDistance) + 10];
                     private _filter = ["transportAmmo", QEGVAR(rearm,defaultSupply)] select (["ace_rearm"] call EFUNC(common,isModLoaded));
                     private _rearmVehicles = {([configFile >> "CfgVehicles" >> typeOf _x >> _filter, "number", 0] call CBA_fnc_getConfigEntry) > 0} count _vehicles;
- 
+
                     (_rearmVehicles > 0 && {[ace_player, _target] call FUNC(canConfigurePylons)})
                 }
             ] call EFUNC(interact_menu,createAction);
