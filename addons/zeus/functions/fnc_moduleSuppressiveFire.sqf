@@ -3,7 +3,7 @@
  * Commands the selected unit or group to start suppressive fire on the unit, group or location the module is placed on
  *
  * Arguments:
- * 0: The module logic <OBJECT>
+ * 0: Module logic <OBJECT>
  * 1: Synchronized units <ARRAY>
  * 2: Activated <BOOL>
  *
@@ -34,7 +34,7 @@ if (isNull _unit) exitWith {
     [LSTRING(NothingSelected)] call FUNC(showMessage);
 };
 if (!alive _unit) exitWith {
-    [localize LSTRING(OnlyAlive)] call FUNC(showMessage);
+    [LSTRING(OnlyAlive)] call FUNC(showMessage);
 };
 if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     ["str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call FUNC(showMessage);
@@ -43,8 +43,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
 [_unit, {
     params ["_successful", "_unit", "_mousePosASL"];
     TRACE_3("getModuleDestination return",_successful,_unit,_mousePosASL);
-    if (!_successful) exitWith {};
-    if (!alive _unit) exitWith {};
+    if !(_successful && {alive _unit}) exitWith {};
     private _vehicle = vehicle _unit;
 
     private _targetASL = _mousePosASL vectorAdd [0,0,0.6]; // mouse pos is at ground level zero, raise up a bit;

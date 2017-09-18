@@ -1,9 +1,9 @@
 /*
  * Author: 654wak654
- * TODO: Write description
+ * Loads the object module is placed on into selected vehicle.
  *
  * Arguments:
- * 0: The module logic <OBJECT>
+ * 0: Module logic <OBJECT>
  * 1: Synchronized units <ARRAY>
  * 2: Activated <BOOL>
  *
@@ -21,21 +21,38 @@ params ["_logic", "_units", "_activated"];
 
 if !(_activated && {local _logic}) exitWith {};
 
-private _unit = effectiveCommander (attachedTo _logic);
+private _cargo = attachedTo _logic;
 
 deleteVehicle _logic;
 
-if (isNull _unit) exitWith {
+if (isNull _cargo) exitWith {
     [LSTRING(NothingSelected)] call FUNC(showMessage);
 };
-if (!alive _unit) exitWith {
-    [localize LSTRING(OnlyAlive)] call FUNC(showMessage);
+if (!alive _cargo) exitWith {
+    [LSTRING(OnlyAlive)] call FUNC(showMessage);
 };
 
 [
-    _unit,
+    _cargo,
     {
-        // TODO
+        params ["_successful", "_cargo", "_mousePosASL"];
+        if (!_successful) exitWith {};
+
+        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 5]) param [0, objNull];
+        if (isNull _holder) exitWith {
+            [LSTRING(NothingSelected)] call FUNC(showMessage);
+        };
+        if (!alive _holder) exitWith {
+            [LSTRING(OnlyAlive)] call FUNC(showMessage);
+        };
+
+        private _displayName = [_cargo] call EFUNC(common,getName);
+        if ([_cargo, _holder] call EFUNC(cargo,loadItem)) then {
+            private _holderDisplayName = [_holder] call EFUNC(common,getName);
+            [ELSTRING(cargo,LoadedItem), _displayName, _holderDisplayName] call FUNC(showMessage);
+        } else {
+            [ELSTRING(cargo,LoadingFailed), _displayName] call FUNC(showMessage);
+        };
     },
     localize LSTRING(ModuleLoadIntoCargo_DisplayName),
     "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa"

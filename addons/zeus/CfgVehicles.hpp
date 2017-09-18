@@ -98,14 +98,14 @@ class CfgVehicles {
         category = QGVAR(Repair);
         displayName = CSTRING(ModuleAddSpareTrack_DisplayName);
         function = QFUNC(moduleAddSpareTrack);
-        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
     class GVAR(moduleAddSpareWheel): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Repair);
         displayName = CSTRING(ModuleAddSpareWheel_DisplayName);
         function = QFUNC(moduleAddSpareWheel);
-        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
     class GVAR(moduleAddOrRemoveFRIES): GVAR(moduleBase) {
         curatorCanAttach = 1;
