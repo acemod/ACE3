@@ -8,7 +8,7 @@
  * 2: Vehicle that the unit will be loaded in <OBJECT> (default: objNull)
  *
  * Return Value:
- * The vehicle that the unitToBeloaded has been loaded in. Returns objNull if function failed <OBJECT>
+ * Vehicle that the unitToBeloaded has been loaded in. Returns objNull if function failed <OBJECT>
  *
  * Example:
  * [bob, kevin] call ace_common_fnc_loadPerson

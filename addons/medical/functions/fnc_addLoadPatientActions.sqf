@@ -3,10 +3,10 @@
  * Adds child actions to the "load patient" action for near vehicles.
  *
  * Arguments:
- * 0: The patient <OBJECT>
+ * 0: Patient <OBJECT>
  *
  * Return Value:
- * The child actions <ARRAY>
+ * Child actions <ARRAY>
  *
  * Example:
  * [kevin] call ace_medical_fnc_addLoadPatientActions

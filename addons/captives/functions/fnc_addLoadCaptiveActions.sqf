@@ -3,10 +3,10 @@
  * Adds child actions to the "load captive" action for near vehicles.
  *
  * Arguments:
- * 0: The captive <OBJECT>
+ * 0: Captive <OBJECT>
  *
  * Return Value:
- * The child actions <ARRAY>
+ * Child actions <ARRAY>
  *
  * Example:
  * [kevin] call ace_medical_fnc_addLoadCaptiveActions

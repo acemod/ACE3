@@ -3,7 +3,8 @@
  * Returns a list of vehicles near given unit that the unit can be a passenger in.
  *
  * Arguments:
- * 0: The unit <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Distance <NUMBER>
  *
  * Return Value:
  * Nearest vehicles with a free seat <ARRAY>
@@ -11,7 +12,7 @@
  * Example:
  * [bob] call ace_common_fnc_nearestVehiclesFreeSeat
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 

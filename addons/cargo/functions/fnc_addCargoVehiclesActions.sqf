@@ -6,7 +6,7 @@
  * 0: Target <OBJECT>
  *
  * Return Value:
- * Children actions <ARRAY>
+ * Child actions <ARRAY>
  *
  * Example:
  * [cursorObject] call ace_cargo_fnc_addCargoVehiclesActions
