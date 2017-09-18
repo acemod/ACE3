@@ -41,7 +41,7 @@ class CfgMagazines {
         initSpeed = 820; // R3F config
     };
     class R3F_20Rnd_762x51_TRACER_HK417: R3F_20Rnd_762x51_HK417 {}; // AtragMx GunList: 7.62x51mm M80
-    class R3F_7Rnd_127x99_PGM: CA_magazine { // AtragMx GunList: 5.56x45mm M855
+    class R3F_7Rnd_127x99_PGM: CA_magazine { // AtragMx GunList: 12.7x99mm
         initSpeed = 780; // R3F config
     };
     class R3F_7Rnd_127x99_PEI_PGM: R3F_7Rnd_127x99_PGM { // AtragMx GunList: 12.7x99mm
