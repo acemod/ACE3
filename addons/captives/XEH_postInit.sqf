@@ -35,6 +35,22 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
+    //Add Keybind:
+["ACE3 Common", QGVAR(captives), [(localize LSTRING(KeyComb)), (localize LSTRING(KeyComb_description))],
+{
+    if !(cursorObject isKindOf "Man") exitWith {};
+
+    if([ACE_player, cursorObject] call FUNC(canApplyHandcuffs)) exitWith {
+        [cursorObject, true] call FUNC(setHandcuffed);
+    };
+
+    if([ACE_player, cursorObject] call FUNC(canRemoveHandcuffs)) exitWith {
+        [cursorObject, false] call FUNC(setHandcuffed);
+    };
+},
+{false},
+[59, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + Tilda (hold)
+
 ["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);
