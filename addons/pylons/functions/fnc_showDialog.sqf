@@ -3,7 +3,7 @@
 * Shows the aircraft loadout dialog for given aircraft.
 *
 * Arguments:
-* 0: The aircraft <OBJECT>
+* 0: Aircraft <OBJECT>
 *
 * Return Value:
 * None
@@ -30,25 +30,25 @@ GVAR(currentAircraftNamespace) setVariable [getPlayerUID ace_player, _aircraft, 
 GVAR(currentAircraft) = _aircraft;
 
 createDialog QGVAR(DialogLoadout);
-private _display = findDisplay 654654;
+private _display = DISPLAY(ID_DIALOG);
 _display displayAddEventHandler ["Unload", LINKFUNC(onButtonClose)];
 
 if (GVAR(rearmNewPylons)) then {
-    ctrlShow [220, false];
-    ctrlShow [230, false];
+    ctrlShow [ID_TEXT_BANNER, false];
+    ctrlShow [ID_PICTURE_REARM, false];
 } else {
-    ctrlSetText [220, "    " + (ctrlText 220)]; // Spacing for the icon
+    ctrlSetText [ID_TEXT_BANNER, "    " + (ctrlText ID_TEXT_BANNER)]; // Spacing for the icon
 };
 
 private _config = configFile >> "CfgVehicles" >> typeOf _aircraft;
 private _pylonComponent = _config >> "Components" >> "TransportPylonsComponent";
 
-ctrlSetText [120, getText (_pylonComponent >> "uiPicture")];
+ctrlSetText [ID_PICTURE_AIRCRAFT, getText (_pylonComponent >> "uiPicture")];
 
 GVAR(comboBoxes) = [];
 {
     private _combo = _display ctrlCreate ["RscCombo", -1];
-    private _picturePos = ctrlPosition (_display displayCtrl 111);
+    private _picturePos = ctrlPosition (_display displayCtrl ID_BACKGROUND_PICTURE);
     private _uiPos = getArray (_x >> "UIposition");
     _combo ctrlSetPosition [
         (_picturePos select 0) + (_uiPos select 0),
@@ -95,32 +95,32 @@ GVAR(comboBoxes) = [];
 
 GVAR(defaultLoadoutNames) = [];
 {
-    lbAdd [160, getText (_x >> "displayName")];
-    lbSetPicture [160, _forEachIndex, "a3\data_f_jets\logos\jets_logo_small_ca.paa"];
+    lbAdd [ID_LIST_LOADOUTS, getText (_x >> "displayName")];
+    lbSetPicture [ID_LIST_LOADOUTS, _forEachIndex, "a3\data_f_jets\logos\jets_logo_small_ca.paa"];
 
     GVAR(defaultLoadoutNames) pushBack getText (_x >> "displayName");
 } forEach ("true" configClasses (_pylonComponent >> "Presets"));
 
 {
     if ((_x select 2) == typeOf _aircraft) then {
-        lbAdd [160, _x select 0];
+        lbAdd [ID_LIST_LOADOUTS, _x select 0];
     };
 } forEach (profileNamespace getVariable [QGVAR(aircraftLoadouts), []]);
 
 private _displayName = getText (_config >> "displayName"); 
-ctrlSetText [150, format [localize LSTRING(LoadoutsFor), _displayName]];
+ctrlSetText [ID_TEXT_LISTTITLE, format [localize LSTRING(LoadoutsFor), _displayName]];
 
-private _list = _display displayCtrl 160;
+private _list = _display displayCtrl ID_LIST_LOADOUTS;
 _list ctrlAddEventHandler ["LBSelChanged", {
     params ["_ctrl"];
 
-    ctrlSetText [170, _ctrl lbText (lbCurSel _ctrl)];
+    ctrlSetText [ID_EDIT_LOADOUTNAME, _ctrl lbText (lbCurSel _ctrl)];
     call FUNC(onNameChange);
 }];
 
-private _edit = _display displayCtrl 170;
+private _edit = _display displayCtrl ID_EDIT_LOADOUTNAME;
 _edit ctrlAddEventHandler ["KeyUp", LINKFUNC(onNameChange)];
 _edit ctrlAddEventHandler ["KeyDown", LINKFUNC(onNameChange)];
 
-private _checkbox = _display displayCtrl 130;
+private _checkbox = _display displayCtrl ID_CHECKBOX_MIRROR;
 _checkbox ctrlAddEventHandler ["CheckedChanged", {[(_this select 1) == 1] call FUNC(onPylonMirror)}];

@@ -16,9 +16,9 @@
 #include "script_component.hpp"
 
 [false] call FUNC(onPylonMirror);
-((findDisplay 654654) displayCtrl 130) cbSetChecked false;
+(CONTROL(ID_DIALOG) ID_CHECKBOX_MIRROR) cbSetChecked false;
 
-private _loadoutName = ctrlText 170;
+private _loadoutName = ctrlText ID_EDIT_LOADOUTNAME;
 private _fnc_setSelections = {
     params ["_mags"];
 

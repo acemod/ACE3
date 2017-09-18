@@ -1,7 +1,7 @@
 /*
  * Author: 654wak654
- * Called when current loadout name is changed
- * Prevents default presets from gettings deleted / overwritten
+ * Called when current loadout name is changed.
+ * Prevents default presets from gettings deleted / overwritten.
  *
  * Arguments:
  * None
@@ -16,10 +16,10 @@
  */
 #include "script_component.hpp"
 
-if ((ctrlText 170) in GVAR(defaultLoadoutNames)) then {
-    ctrlEnable [180, false];
-    ctrlEnable [200, false];
+if ((ctrlText ID_EDIT_LOADOUTNAME) in GVAR(defaultLoadoutNames)) then {
+    ctrlEnable [ID_BUTTON_SAVE, false];
+    ctrlEnable [ID_BUTTON_DELETE, false];
 } else {
-    ctrlEnable [180, true];
-    ctrlEnable [200, true];
+    ctrlEnable [ID_BUTTON_SAVE, true];
+    ctrlEnable [ID_BUTTON_DELETE, true];
 };

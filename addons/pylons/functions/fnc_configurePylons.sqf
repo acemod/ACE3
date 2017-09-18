@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Indexes of pylons to configure <ARRAY>
- * 1: The current index <NUMBER>
+ * 1: Current index <NUMBER>
  *
  * Return Value:
  * None

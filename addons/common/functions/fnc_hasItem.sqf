@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Check if unit has item. Note: Case sensitive
+ * Check if unit has item. Note: case-sensitive.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -18,4 +18,4 @@
 
 params [["_unit", objNull, [objNull]], ["_item", "", [""]]];
 
-_item in items _unit // return
+_item in items _unit

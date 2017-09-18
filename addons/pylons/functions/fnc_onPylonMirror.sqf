@@ -1,7 +1,7 @@
 /*
  * Author: 654wak654
- * Called when the "mirror" checkbox on the loadout dialog is checked
- * Changes the comboboxes to be mirrored / normal
+ * Called when the "mirror" checkbox on the loadout dialog is checked.
+ * Changes the comboboxes to be mirrored / normal.
  *
  * Arguments:
  * 0: Checked status <BOOL>

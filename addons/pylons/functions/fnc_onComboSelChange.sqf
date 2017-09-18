@@ -1,6 +1,6 @@
 /*
  * Author: 654wak654
- * Handles various ui changes when a combobox' selection changes.
+ * Handles various UI changes when a combobox' selection changes.
  *
  * Arguments:
  * 0: Combobox <CONTROL>

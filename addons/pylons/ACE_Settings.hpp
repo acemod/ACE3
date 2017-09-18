@@ -38,7 +38,7 @@ class ACE_Settings {
         category = CSTRING(Category_Pylons);
         displayName = CSTRING(RequireToolkit);
         description = CSTRING(RequireToolkit_description);
-        value = 0;
+        value = 1;
         typeName = "BOOL";
     };
 };

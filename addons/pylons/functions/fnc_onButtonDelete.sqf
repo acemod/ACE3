@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-private _loadoutName = lbText [160, lbCurSel 160];
+private _loadoutName = lbText [ID_LIST_LOADOUTS, lbCurSel ID_LIST_LOADOUTS];
 
-lbDelete [160, lbCurSel 160];
+lbDelete [ID_LIST_LOADOUTS, lbCurSel ID_LIST_LOADOUTS];
 
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];
 private _index = {
