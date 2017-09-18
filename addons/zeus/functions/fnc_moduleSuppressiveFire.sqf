@@ -22,7 +22,7 @@ if (canSuspend) exitWith {[FUNC(moduleSuppressiveFire), _this] call CBA_fnc_dire
 
 params ["_logic", "_units", "_activated"];
 
-if !(_activated && local _logic) exitWith {};
+if !(_activated && {local _logic}) exitWith {};
 
 // Validate the module target
 private _unit = effectiveCommander (attachedTo _logic);
@@ -117,4 +117,4 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     };
 #endif
 
-}, (localize LSTRING(ModuleSuppressiveFire_DisplayName))] call FUNC(getModuleDestination);
+}, localize LSTRING(ModuleSuppressiveFire_DisplayName)] call FUNC(getModuleDestination);

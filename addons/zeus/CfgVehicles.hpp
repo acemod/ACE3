@@ -143,6 +143,13 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
     };
+    class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleLoadIntoCargo_DisplayName);
+        function = QFUNC(moduleLoadIntoCargo);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
+    };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
@@ -217,13 +224,13 @@ class CfgVehicles {
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
-        displayName = CSTRING(moduleAddFullArsenal_displayName);
+        displayName = CSTRING(ModuleAddFullArsenal_DisplayName);
         function = QFUNC(moduleAddArsenal);
     };
     class GVAR(RemoveFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
-        displayName = CSTRING(moduleRemoveArsenal_displayName);
+        displayName = CSTRING(ModuleRemoveArsenal_DisplayName);
         function = QFUNC(moduleRemoveArsenal);
     };
 };
