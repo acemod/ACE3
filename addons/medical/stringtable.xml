@@ -5609,11 +5609,13 @@
             <English>Open lid</English>
             <German>Deckel aufklappen</German>
             <Japanese>フタをあける</Japanese>
+            <Italian>Apri lid</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
             <German>Deckel zuklappen</German>
             <Japanese>フタをしめる</Japanese>
+            <Italian>Chiudi lid</Italian>
         </Key>
     </Package>
 </Project>
