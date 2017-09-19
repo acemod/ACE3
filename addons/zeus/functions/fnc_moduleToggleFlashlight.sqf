@@ -36,7 +36,11 @@ if (_toggle) then {
             private _pointer = (_x weaponAccessories (currentWeapon _x)) select 1;
 
             if (!(_pointer isEqualTo "") && {isNull (configfile >> "CfgWeapons" >> _pointer >> "ItemInfo" >> "Pointer")}) then {
-                _x enableGunLights "forceOn";
+                if (local _x) then {
+                    _x enableGunLights "forceOn";
+                } else {
+                    [QGVAR(enableFlashlight), [_x, "forceOn"], _x] call CBA_fnc_targetEvent;
+                };
 
             } else {
                 if (_addGear) then {
@@ -48,12 +52,11 @@ if (_toggle) then {
 
                     if (local _x) then {
                         _x addWeaponItem [(currentWeapon _x), _flashlight];
+                        _x enableGunLights "ForceOn";
                     } else {
                         [QEGVAR(common,addWeaponItem), [_x, (currentWeapon _x), _flashlight], _x] call CBA_fnc_targetEvent;
+                        [QGVAR(enableFlashlight), [_x, "forceOn"], _x] call CBA_fnc_targetEvent;
                     };
-
-                    _x enableGunLights "ForceOn";
-
                 };
             };
         };
@@ -62,7 +65,11 @@ if (_toggle) then {
 } else {
     {
         if !(isPlayer _x || {(currentWeapon _x) isEqualTo ""}) then {
-            _x enableGunLights "ForceOff";
+            if (local _x) then {
+                _x enableGunLights "ForceOff";
+            } else {
+                [QGVAR(enableFlashlight), [_x, "forceOff"], _x] call CBA_fnc_targetEvent;
+            };
         };
     } foreach _units;
 };
