@@ -16,9 +16,8 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_deployedRopes", "_config", "_waitTime"];
 
-_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 {
     _x params ["", "_ropeTop", "_ropeBottom", "_dummy", "_hook", "_occupied"];
 
@@ -42,8 +41,8 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
 _vehicle setVariable [QGVAR(deploymentStage), 1, true];
 
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_waitTime = 0;
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _waitTime = 0;
 if (isText (_config >> QGVAR(onCut))) then {
     _waitTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onCut))));
 };
