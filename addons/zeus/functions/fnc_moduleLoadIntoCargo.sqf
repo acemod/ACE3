@@ -48,10 +48,12 @@ if (!alive _cargo) exitWith {
 
         private _displayName = [_cargo] call EFUNC(common,getName);
         if ([_cargo, _holder] call EFUNC(cargo,loadItem)) then {
+            private _loadedItem = [localize ELSTRING(cargo,LoadedItem), "<br/>", " "] call CBA_fnc_replace;
             private _holderDisplayName = [_holder] call EFUNC(common,getName);
-            [ELSTRING(cargo,LoadedItem), _displayName, _holderDisplayName] call FUNC(showMessage);
+            [_loadedItem, _displayName, _holderDisplayName] call FUNC(showMessage);
         } else {
-            [ELSTRING(cargo,LoadingFailed), _displayName] call FUNC(showMessage);
+            private _loadingFailed = [localize ELSTRING(cargo,LoadingFailed), "<br/>", " "] call CBA_fnc_replace;
+            [_loadingFailed, _displayName] call FUNC(showMessage);
         };
     },
     localize LSTRING(ModuleLoadIntoCargo_DisplayName),
