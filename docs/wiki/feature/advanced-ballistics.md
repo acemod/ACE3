@@ -15,7 +15,7 @@ version:
 ## 1. Overview
 The Advanced Ballistics module improves internal and external ballistics.
 
-## 1.1 Features
+### 1.1 Features
 - Drag modelling based on real-world ballistic coefficients.
 - Ambient air density (air pressure, temperature, humidity) affects drag.
 - Wind affects drag and deflects the trajectory.
@@ -31,7 +31,19 @@ The Advanced Ballistics module improves internal and external ballistics.
 
 ## 2. Usage
 
-### 2.1 Protractor
+### 2.1 Enabling Advanced Ballistics
+
+#### 2.1.1 Editor
+<img src="{{ site.baseurl }}/img/wiki/feature/ab_module.jpg" width="799" height="620" alt="Advanced Ballistics module" />
+
+#### 2.1.2 Settings Framework
+- [Settings Framework]({{ site.baseurl }}/wiki/framework/settings-framework.html)
+
+#### 2.1.3 Enabled in-game ?
+- Pick up a [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and open it.
+<img src="{{ site.baseurl }}/img/wiki/feature/ab_ingame.png" width="1400" height="280" alt="Advanced Ballistics vs Default Ballistic" />
+
+### 2.2 Protractor
 - You need a compatible weapon.
 - Press <kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd>.
 - Red line indicates the current inclination angle in degrees.

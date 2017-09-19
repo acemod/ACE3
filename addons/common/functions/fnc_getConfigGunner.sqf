@@ -8,6 +8,9 @@
  * Return Value:
  * Gunner config <CONFIG>
  *
+ * Example:
+ * [car] call ace_common_fnc_getConfigGunner
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

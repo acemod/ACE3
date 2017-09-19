@@ -56,7 +56,7 @@ _processedHitpoints = [];
 
         // An action to remove the wheel is required
         _name = format ["Remove_%1_%2", _forEachIndex, _hitpoint];
-        _text = localize LSTRING(RemoveWheel);
+        private _text = localize LSTRING(RemoveWheel);
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
         _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
@@ -79,7 +79,8 @@ _processedHitpoints = [];
         if (_selection isEqualTo "") exitWith { TRACE_3("Selection Empty",_hitpoint,_forEachIndex,_selection); };
         if (_hitpoint isEqualTo "") exitWith { TRACE_3("Hitpoint Empty",_hitpoint,_forEachIndex,_selection); };
         //Depends hitpoints shouldn't be modified directly (will be normalized)
-        if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) exitWith {
+        // Biki: Clearing 'depends' in case of inheritance cannot be an empty string (rpt warnings), but rather a "0" value.
+        if (!((getText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) exitWith {
             TRACE_3("Skip Depends",_hitpoint,_forEachIndex,_selection);
         };
 

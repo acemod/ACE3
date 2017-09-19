@@ -3,10 +3,10 @@
  * Updates GVAR(currentTemperature) based on the map data
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_weather_fnc_updateTemperature

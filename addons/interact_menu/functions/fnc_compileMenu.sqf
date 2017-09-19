@@ -8,9 +8,12 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ACE_interact_menu_fnc_compileMenu
+ *
  * Public: No
  */
-#include "script_component.hpp";
+#include "script_component.hpp"
 
 params ["_target"];
 
@@ -108,6 +111,22 @@ private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions
 
 TRACE_1("Building ACE_Actions",_objectType);
 private _actions = [_actionsCfg, 0] call _recurseFnc;
+
+// ace_interaction_fnc_addPassengerAction expects ACE_MainActions to be first
+// Other mods can change the order that configs are added, so we should verify this now and resort if needed
+if (_objectType isKindOf "CaManBase") then {
+    if ((((_actions select 0) select 0) select 0) != "ACE_MainActions") then {
+        INFO_1("ACE_MainActions not first for man [%1]",_objectType);
+        private _mainActions = [];
+        {
+            if (((_x select 0) select 0) == "ACE_MainActions") then {
+                _mainActions = _actions deleteAt _forEachIndex;
+            };
+        } forEach _actions;
+        if (_mainActions isEqualTo []) exitWith {ERROR_1("ACE_MainActions not found on man [%1]",_objectType);};
+        _actions = [_mainActions] + _actions; // resort array with ACE_MainActions first
+    };
+};
 
 _namespace setVariable [_objectType, _actions];
 

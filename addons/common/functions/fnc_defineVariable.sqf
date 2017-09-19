@@ -13,6 +13,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["bob", 1, true, "category", 1, true] call ace_common_fnc_defineVariable
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

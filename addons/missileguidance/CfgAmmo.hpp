@@ -45,26 +45,6 @@ class CfgAmmo {
         };
     };
 
-    class ACE_Hellfire_AGM114K: ACE_Hydra70_DAGR {
-        displayName = CSTRING(Hellfire_AGM114K);
-        displayNameShort = CSTRING(Hellfire_AGM114K_Short);
-
-        description = CSTRING(Hellfire_AGM114K_desc);
-        descriptionShort = CSTRING(Hellfire_AGM114K_desc);
-
-        // @TODO: placeholder model to at least make it look different
-        model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
-        proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
-
-        hit = 1400;
-        indirectHit = 71;
-        indirectHitRange = 4.5;
-        effectsMissile = "missile2";
-
-        //Explicity add guidance config
-        class ADDON: ADDON {};
-    };
-
     // Titan
     class M_Titan_AT: MissileBase {};
 

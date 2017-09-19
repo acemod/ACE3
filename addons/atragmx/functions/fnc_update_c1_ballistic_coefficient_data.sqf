@@ -3,10 +3,10 @@
  * Updates the c1 ballistic coefficient data fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_c1_ballistic_coefficient_data

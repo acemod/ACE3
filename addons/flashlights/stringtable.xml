@@ -13,6 +13,8 @@
             <French>Fulton MX-991</French>
             <Japanese>Fulton MX-991</Japanese>
             <Korean>Fulton MX-991</Korean>
+            <Chinesesimp>Fulton MX-991</Chinesesimp>
+            <Chinese>Fulton MX-991</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -26,6 +28,8 @@
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
             <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
+            <Chinesesimp>拥有红色滤光片的手电筒. 用来照亮地图.</Chinesesimp>
+            <Chinese>擁有紅色濾光片的手電筒. 用來照亮地圖.</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -39,6 +43,8 @@
             <French>Maglite XL50</French>
             <Japanese>Maglite XL50</Japanese>
             <Korean>Maglite XL50</Korean>
+            <Chinesesimp>Maglite XL50</Chinesesimp>
+            <Chinese>Maglite XL50</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
@@ -52,6 +58,8 @@
             <French>Mini lampe torche blanche. Pour utilisation sur carte.</French>
             <Japanese>白色光の小さなフラッシュライト。地図上でつかいます。</Japanese>
             <Korean>하얀색 조그마한 손전등. 지도를 비출때 씁니다.</Korean>
+            <Chinesesimp>白色的迷你手电筒. 用来照亮地图.</Chinesesimp>
+            <Chinese>白色的迷你手電筒. 用來照亮地圖.</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -65,6 +73,8 @@
             <French>KSF-1</French>
             <Japanese>KSF-1</Japanese>
             <Korean>KSF-1</Korean>
+            <Chinesesimp>KSF-1</Chinesesimp>
+            <Chinese>KSF-1</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -78,6 +88,8 @@
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
             <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
+            <Chinesesimp>拥有红色滤光片的手电筒. 用来照亮地图.</Chinesesimp>
+            <Chinese>擁有紅色濾光片的手電筒. 用來照亮地圖.</Chinese>
         </Key>
     </Package>
 </Project>

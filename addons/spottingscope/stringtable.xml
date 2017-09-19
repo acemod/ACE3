@@ -14,6 +14,8 @@
             <Portuguese>Luneta de observador</Portuguese>
             <Japanese>観測用スコープ</Japanese>
             <Korean>감적 망원경</Korean>
+            <Chinesesimp>观测镜</Chinesesimp>
+            <Chinese>觀測鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -28,6 +30,8 @@
             <Portuguese>Pegar luneta de observador</Portuguese>
             <Japanese>観測用スコープを拾う</Japanese>
             <Korean>감적 망원경 줍기</Korean>
+            <Chinesesimp>捡起观测镜</Chinesesimp>
+            <Chinese>撿起觀測鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -42,6 +46,8 @@
             <Portuguese>Colocar luneta de observador</Portuguese>
             <Japanese>観測用スコープを置く</Japanese>
             <Korean>감적 망원경 배치</Korean>
+            <Chinesesimp>放置观测镜</Chinesesimp>
+            <Chinese>放置觀測鏡</Chinese>
         </Key>
     </Package>
 </Project>

@@ -2,16 +2,20 @@
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
  *
- * Arguments [Client] :
+ * Arguments [Client]:
  * 0: eventName <STRING>
  * 1: eventLog <ARRAY>
  *
- * Arguments [Server] :
+ * Arguments [Server]:
  * 0: eventName <STRING>
  * 1: client <OBJECT>
  *
  * Return Value:
  * Event is successed <BOOL>
+ *
+ * Example:
+ * ["name", [LOG]] call ace_common_fnc__handleRequestSyncedEvent //Client
+ * ["name", bob] call ace_common_fnc__handleRequestSyncedEvent//Server
  *
  * Public: No
  */

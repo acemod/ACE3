@@ -13,6 +13,9 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [bob, kevin, 3, 6] call ace_spectator_fnc_respawnTemplate
+ *
  * Public: No
  */
 

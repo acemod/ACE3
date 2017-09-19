@@ -4,13 +4,16 @@
  * Calculates the muzzle velocity shift caused by different barrel lengths
  *
  * Arguments:
- * 0: barrel length - mm
+ * 0: barrel length - mm <NUMBER>
  * 1: muzzle velocity lookup table - m/s <ARRAY>
  * 2: barrel length lookup table - mm <ARRAY>
  * 3: muzzle velocity - m/s <NUMBER>
  *
  * Return Value:
  * muzzle velocity shift - m/s <NUMBER>
+ *
+ * Example:
+ * [5, [0,5], [0,5], 5] call ace_advanced_ballistics_fnc_calculateBarrelLengthVelocityShift
  *
  * Public: No
  */

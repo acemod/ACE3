@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin] call ace_tacticalladder_fnc_handlePlayerChanged
+ *
  * Public: No
 */
 #include "script_component.hpp"

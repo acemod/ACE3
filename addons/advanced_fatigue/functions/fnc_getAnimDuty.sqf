@@ -21,6 +21,7 @@ private _duty = 1;
 private _animType = _animName select [1, 3];
 
 GVAR(isSwimming) = false;
+GVAR(isProne) = (stance _unit) == "PRONE";
 
 if (_animType in ["idl", "mov", "adj"]) then {
     switch (_animName select [5, 3]) do {
@@ -29,6 +30,7 @@ if (_animType in ["idl", "mov", "adj"]) then {
         };
         case ("pne"): {
             _duty = 10;
+            GVAR(isProne) = true; // #4880 - Unarmed sprint->prone has wrong `stance`
         };
         default {
             _duty = 1;

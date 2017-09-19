@@ -7,7 +7,7 @@
  * update display <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_recalculate_c1_ballistic_coefficient

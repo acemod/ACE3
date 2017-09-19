@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_spallHP
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 //player sideChat format ["f: %1 c: %2", (_this select 0), (count GVAR(spallHPData))];

@@ -51,3 +51,28 @@
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
 }] call CBA_fnc_addEventHandler;
+
+// Private events to handle adding actions globally via public functions
+[QGVAR(initObject), DFUNC(initObject)] call CBA_fnc_addEventHandler;
+[QGVAR(initVehicle), DFUNC(initVehicle)] call CBA_fnc_addEventHandler;
+
+// Add all the vehicle init EHs (require initPost for set/get variables)
+["LandVehicle", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Air", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Ship_F", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+// Add all the object init EHs
+["StaticWeapon", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Land_PortableLight_single_F", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["ACE_ConcertinaWireCoil", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+// Add all the vehicle/object init EHs
+["ThingX", "initPost", {
+    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Land_PaperBox_closed_F", "initPost", {
+    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+["PlasticCase_01_base_F", "initPost", {
+    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;

@@ -42,7 +42,7 @@ private _muzzle = _muzzles select _index;
 
 _index = 0;
 while {
-    _index < 100 && {currentMuzzle _unit != _muzzle}
+    _index < 299 && {currentMuzzle _unit != _muzzle}
 } do {
     _unit action ["SwitchWeapon", _unit, _unit, _index];
     _index = _index + 1;
