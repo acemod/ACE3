@@ -427,10 +427,6 @@
             <Chinese>投降或無武器狀態</Chinese>
             <Chinesesimp>投降或无武器状态</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Captives_KeyComb">
-            <English>Set unit captive</English>
-            <German>Einheit festnehmen</German>
-        </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
             <German>Nimmt die Einheit vor dem Cursor fest.</German>

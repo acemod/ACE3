@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include “\a3\editor_f\Data\Scripts\dikCodes.h”
 
 ["ace_settingsInitialized", {
     // Hold on a little bit longer to ensure anims will work
@@ -36,16 +37,20 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
     //Add Keybind:
-["ACE3 Common", QGVAR(captives), [(localize LSTRING(KeyComb)), (localize LSTRING(KeyComb_description))],
+["ACE3 Common", QGVAR(captives), [(localize LSTRING(SetCaptive)), (localize LSTRING(KeyComb_description))],
 {
-    if !(cursorObject isKindOf "CAManBase" || {(cursorObject distance player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")}) exitWith {};
+    private _target = cursorObject;
+    if !([ACE_player, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !(_target isKindOf "CAManBase" || {(_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")}) exitWith {false};
 
-    if([ACE_player, cursorObject] call FUNC(canApplyHandcuffs)) exitWith {
-        [cursorObject, true] call FUNC(setHandcuffed);
+    if([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
+        [_target, true] call FUNC(setHandcuffed);
+        true
     };
+    false
 },
 {false},
-[59, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + Tilda (hold)
+[DIK_F1, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + F1
 
 ["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
