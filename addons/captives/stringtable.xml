@@ -428,12 +428,12 @@
             <Chinesesimp>投降或无武器状态</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_KeyComb">
-            <English>Toggle unit captive</English>
-            <German>Einheit festnehmen umschalten</German>
+            <English>Set unit captive</English>
+            <German>Einheit festnehmen</German>
         </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
-            <English>Toggles the captive status of the unit under the cursor.</English>
-            <German>Schalten den Festnahmestatus der Einheit vor dem Cursor um.</German>
+            <English>Sets the unit under the cursor captive.</English>
+            <German>Nimmt die Einheit vor dem Cursor fest.</German>
         </Key>
     </Package>
 </Project>

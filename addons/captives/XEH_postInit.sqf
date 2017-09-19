@@ -38,14 +38,10 @@ if (!hasInterface) exitWith {};
     //Add Keybind:
 ["ACE3 Common", QGVAR(captives), [(localize LSTRING(KeyComb)), (localize LSTRING(KeyComb_description))],
 {
-    if !(cursorObject isKindOf "Man") exitWith {};
+    if !(cursorObject isKindOf "CAManBase" || {(cursorObject distance player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")}) exitWith {};
 
     if([ACE_player, cursorObject] call FUNC(canApplyHandcuffs)) exitWith {
         [cursorObject, true] call FUNC(setHandcuffed);
-    };
-
-    if([ACE_player, cursorObject] call FUNC(canRemoveHandcuffs)) exitWith {
-        [cursorObject, false] call FUNC(setHandcuffed);
     };
 },
 {false},
