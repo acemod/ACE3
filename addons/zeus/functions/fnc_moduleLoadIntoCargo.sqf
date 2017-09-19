@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+if (canSuspend) exitWith {[FUNC(moduleSuppressiveFire), _this] call CBA_fnc_directCall;};
+
 params ["_logic", "_units", "_activated"];
 
 if !(_activated && {local _logic}) exitWith {};
@@ -25,6 +27,9 @@ private _cargo = attachedTo _logic;
 
 deleteVehicle _logic;
 
+if !(missionNamespace getVariable [QEGVAR(cargo,enable), false]) exitWith {
+    [LSTRING(RequiresAddon)] call FUNC(showMessage);
+};
 if (isNull _cargo) exitWith {
     [LSTRING(NothingSelected)] call FUNC(showMessage);
 };
