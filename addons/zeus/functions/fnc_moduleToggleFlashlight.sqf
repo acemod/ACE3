@@ -46,12 +46,7 @@ if (_toggle) then {
                     // Get flashlights from the array above and select the first one
                     private _flashlight = (_pointerSlotCompatible select {isNull (configfile >> "CfgWeapons" >> _x >> "ItemInfo" >> "Pointer")}) select 0;
 
-                    if (local _x) then {
-                        _x addWeaponItem [(currentWeapon _x), _flashlight];
-                    } else {
-                        [QEGVAR(common,addWeaponItem), [_x, (currentWeapon _x), _flashlight], _x] call CBA_fnc_targetEvent;
-                    };
-
+                    [QEGVAR(common,addWeaponItem), [_x, (currentWeapon _x), _flashlight], _x] call CBA_fnc_targetEvent;
                     [QGVAR(enableFlashlight), [_x, "forceOn"], _x] call CBA_fnc_targetEvent;
                 };
             };
