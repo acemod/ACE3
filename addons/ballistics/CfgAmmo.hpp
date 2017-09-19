@@ -307,8 +307,8 @@ class CfgAmmo {
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=1;
-        ACE_muzzleVelocities[]={700, 800, 820, 833};
-        ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
+        ACE_muzzleVelocities[]={760, 795, 835, 820, 833, 865, 855};
+        ACE_barrelLengths[]={406.4, 508.0, 604.5, 609.6, 660.4, 736.6, 772.2};
     };
     class B_762x54_Tracer_Green;
     class ACE_762x54_Ball_7T2 : B_762x54_Tracer_Green {

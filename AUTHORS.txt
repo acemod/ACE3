@@ -1,3 +1,4 @@
+﻿
 # ACE3 CONTRIBUTOR LIST
 # If you contributed, but are not listed here, contact me:
 # koffeinflummi@gmail.com
@@ -90,6 +91,7 @@ Head <brobergsebastian@gmail.com>
 Hybrid V
 Karneck <dschultz26@hotmail.com>
 Kavinsky <nmunozfernandez@gmail.com>
+kOepi <ickekoep@hotmail.com>
 Kllrt <kllrtik@gmail.com>
 legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
