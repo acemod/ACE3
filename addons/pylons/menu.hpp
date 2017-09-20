@@ -60,6 +60,22 @@ class GVAR(DialogLoadout) {
             h = 0.028 * safezoneH;
             colorBackground[] = {0,0,0,0.5};
         };
+        class CheckboxFRIES: RscCheckBox {
+            idc = ID_CHECKBOX_FRIES;
+            x = 0.171616 * safezoneW + safezoneX;
+            y = 0.346 * safezoneH + safezoneY;
+            w = 0.0131354 * safezoneW;
+            h = 0.028 * safezoneH;
+        };
+        class TextFRIES: RscText {
+            idc = ID_TEXT_FRIES;
+            text = "FRIES";
+            x = 0.184751 * safezoneW + safezoneX;
+            y = 0.346 * safezoneH + safezoneY;
+            w = 0.0656768 * safezoneW;
+            h = 0.028 * safezoneH;
+            colorBackground[] = {0,0,0,0.5};
+        };
         class TextListTitle: RscText {
             idc = ID_TEXT_LISTTITLE;
             x = 0.624786 * safezoneW + safezoneX;

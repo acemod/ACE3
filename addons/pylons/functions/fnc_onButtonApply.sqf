@@ -15,6 +15,19 @@
  */
 #include "script_component.hpp"
 
+// Check for FRIES change
+private _checkbox = CONTROL(ID_DIALOG) ID_CHECKBOX_FRIES;
+if (ctrlShown _checkbox && {(cbChecked _checkbox) != (_checkbox getVariable QGVAR(originalState))}) then {
+    if (cbChecked _checkbox) then {
+        [GVAR(currentAircraft)] call EFUNC(fastroping,equipFRIES);
+    } else {
+        [GVAR(currentAircraft)] call EFUNC(fastroping,cutRopes);
+        private _fries = GVAR(currentAircraft) getVariable [QEGVAR(fastroping,FRIES), objNull];
+        deleteVehicle _fries;
+    };
+    _checkbox setVariable [QGVAR(originalState), cbChecked _checkbox];
+};
+
 private _pylonsToConfigure = [];
 {
     // Pick combo boxes where current selection doesn't match original selection

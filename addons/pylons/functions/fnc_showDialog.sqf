@@ -45,6 +45,17 @@ private _pylonComponent = _config >> "Components" >> "TransportPylonsComponent";
 
 ctrlSetText [ID_PICTURE_AIRCRAFT, getText (_pylonComponent >> "uiPicture")];
 
+private _hasFRIES = [_config >> QEGVAR(fastroping,enabled), "number", 0] call CBA_fnc_getConfigEntry;
+if (["ace_pylons"] call EFUNC(common,isModLoaded) && {_hasFRIES > 0}) then {
+    private _checkbox = _display displayCtrl ID_CHECKBOX_FRIES;
+    private _fries = _aircraft getVariable [QEGVAR(fastroping,FRIES), objNull];
+    _checkbox cbSetChecked (!isNull _fries);
+    _checkbox setVariable [QGVAR(originalState), !isNull _fries];
+} else {
+    ctrlShow [ID_CHECKBOX_FRIES, false];
+    ctrlShow [ID_TEXT_FRIES, false];
+};
+
 GVAR(comboBoxes) = [];
 {
     private _combo = _display ctrlCreate ["RscCombo", -1];
