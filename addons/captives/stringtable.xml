@@ -427,5 +427,15 @@
             <Chinese>投降或無武器狀態</Chinese>
             <Chinesesimp>投降或无武器状态</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
+            <English>Require AI surrendering</English>
+            <German>Benötigt AI Kapitulation</German>
+            <Italian>Necessita arresa AI</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
+            <English>Require AI to surrender before they can be arrested</English>
+            <German>AI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
+            <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
+        </Key>
     </Package>
 </Project>

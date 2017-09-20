@@ -50,6 +50,7 @@ private _jipID = _object getVariable QGVAR(setSize_jipID);
 // Actions should be added to all future JIP players too
 if (isNil "_jipID") then {
     _jipID = [QGVAR(initObject), [_object]] call CBA_fnc_globalEventJIP;
+    [_jipID, _object] call CBA_fnc_removeGlobalEventJIP;
 
     // Store the ID for any future calls to this function
     _object setVariable [QGVAR(setSize_jipID), _jipID, true];

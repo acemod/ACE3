@@ -37,11 +37,9 @@ class CfgVehicles {
 
     class Heli_Light_01_base_F: Helicopter_Base_H {
         incomingMissileDetectionSystem = 16; // Vanilla: 0
-        driverCanEject = 1;
 
         class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {
-                canEject = 1;
                 showHMD = 1;
             };
         };
@@ -49,22 +47,13 @@ class CfgVehicles {
 
     class Heli_Light_01_armed_base_F: Heli_Light_01_base_F {
         incomingMissileDetectionSystem = 16; // Vanilla: 0
-        driverCanEject = 1;
-
-        class Turrets: Turrets {
-            class CopilotTurret: CopilotTurret {
-                canEject = 1;
-            };
-        };
     };
     class Heli_Light_02_base_F: Helicopter_Base_H {
-        driverCanEject = 1;
         incomingMissileDetectionSystem = 16; // Vanilla: 24
         magazines[] = {"2000Rnd_762x51_Belt_T_Green", "12Rnd_PG_missiles", "168Rnd_CMFlare_Chaff_Magazine"}; // Switch gun magazine to 7.62mm from 6.5mm
 
         class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {
-                canEject = 1;
                 showHMD = 1;
             };
         };
@@ -80,44 +69,31 @@ class CfgVehicles {
 
     class Heli_Attack_02_base_F: Helicopter_Base_F {
         incomingMissileDetectionSystem = 16; // Vanilla: 24
-        driverCanEject = 1;
-
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                canEject = 1;
-            };
-        };
     };
 
     class Heli_Transport_01_base_F: Helicopter_Base_H {
         incomingMissileDetectionSystem = 16; // Vanilla: 24
-        driverCanEject = 1;
 
         class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {
-                canEject = 1;
                 showHMD = 1;
             };
 
             class MainTurret: MainTurret {
                 magazines[] = {"2000Rnd_762x51_Belt_T_Red"}; // Switch gun magazine to 7.62mm from 6.5mm
-                canEject = 1;
             };
 
             class RightDoorGun: MainTurret {
                 magazines[] = {"2000Rnd_762x51_Belt_T_Red"}; // Switch gun magazine to 7.62mm from 6.5mm
-                canEject = 1;
             };
         };
     };
 
     class Heli_Transport_02_base_F: Helicopter_Base_H {
         incomingMissileDetectionSystem = 16; // Vanilla: 24
-        driverCanEject = 1;
 
         class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {
-                canEject = 1;
                 showHMD = 1;
             };
         };
@@ -126,11 +102,9 @@ class CfgVehicles {
     class Heli_light_03_base_F: Helicopter_Base_F {
         lockDetectionSystem = 0; // Vanilla: 12
         incomingMissileDetectionSystem = 16; // Vanilla: 24
-        driverCanEject = 1;
 
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                canEject = 1;
                 showHMD = 1;
                 weapons[] = {"Laserdesignator_mounted"}; // Add Laser Designator
                 magazines[] = {"Laserbatteries"};
@@ -166,26 +140,8 @@ class CfgVehicles {
 
     class Heli_Transport_03_base_F: Helicopter_Base_H {
         incomingMissileDetectionSystem = 16; // Vanilla: 24
-        driverCanEject = 1;
-
-        class Turrets: Turrets {
-            class CopilotTurret: CopilotTurret {
-                canEject = 1;
-            };
-        };
     };
     class Heli_Transport_04_base_F: Helicopter_Base_H {
         incomingMissileDetectionSystem = 16; // Vanilla: 24
-        driverCanEject = 1;
-
-        class Turrets: Turrets {
-            class CopilotTurret: CopilotTurret {
-                canEject = 1;
-            };
-
-            class LoadmasterTurret: MainTurret {
-                canEject = 1;
-            };
-        };
     };
 };

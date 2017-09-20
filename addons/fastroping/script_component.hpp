@@ -16,3 +16,8 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+
+#define ANIMS_HOOK ["extendHookRight", "extendHookLeft"]
+#define ANIMS_ANIMATEDOOR ["door_R", "door_L", "CargoRamp_Open", "Door_rear_source", "Door_6_source", "CargoDoorR", "CargoDoorL"]
+#define ANIMS_ANIMATE ["dvere1_posunZ", "dvere2_posunZ", "doors"]
