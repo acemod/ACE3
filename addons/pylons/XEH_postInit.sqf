@@ -3,7 +3,7 @@
 ["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
-    private _filter = "isClass (_x >> 'Components' >> 'TransportPylonsComponent') && {(getNumber (_x > 'scope')) > 0}";
+    private _filter = "isClass (_x >> 'Components' >> 'TransportPylonsComponent') && {(getNumber (_x >> 'scope')) > 0}";
     GVAR(aircraftWithPylons) = (_filter configClasses (configFile >> "CfgVehicles")) apply {configName _x};
     {
         [_x, "init", {
