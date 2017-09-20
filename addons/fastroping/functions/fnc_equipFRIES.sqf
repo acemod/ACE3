@@ -16,7 +16,6 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_config", "_fries"];
 
 private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 if !(isNumber (_config >> QGVAR(enabled))) then {
