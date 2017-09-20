@@ -17,7 +17,7 @@
 
 // Check for FRIES change
 private _checkbox = CONTROL(ID_DIALOG) ID_CHECKBOX_FRIES;
-if (ctrlShown _checkbox && {(cbChecked _checkbox) != (_checkbox getVariable QGVAR(originalState))}) then {
+if (ctrlShown _checkbox && {!((cbChecked _checkbox) isEqualTo (_checkbox getVariable QGVAR(originalState)))}) then {
     if (cbChecked _checkbox) then {
         [GVAR(currentAircraft)] call EFUNC(fastroping,equipFRIES);
     } else {
