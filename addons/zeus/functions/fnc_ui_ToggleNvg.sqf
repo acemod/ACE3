@@ -84,7 +84,11 @@ if (isNull _unit) then {
 };
 
 
-_comboBox lbSetCurSel 0;
+private _enabledDefault = false;
+if (!isNull _unit) then {
+    _enabledDefault = !(hmd _unit isEqualTo "");
+};
+_comboBox lbSetCurSel ([0,1] select _enabledDefault);
 _comboBox2 lbSetCurSel 0;
 
 private _fnc_onUnload = {
