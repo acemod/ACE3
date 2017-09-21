@@ -43,7 +43,7 @@ if (!hasInterface) exitWith {};
     if !([ACE_player, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
     if !(_target isKindOf "CAManBase" || {(_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")}) exitWith {false};
 
-    if([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
+    if ([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
         [_target, true] call FUNC(setHandcuffed);
         true
     };
