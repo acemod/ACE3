@@ -1038,5 +1038,41 @@
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
         </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
+            <English>Toggle NVGs</English>
+            <French>Basculer JVN</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
+            <English>NVG equipment</English>
+            <French>Equipment de vision nocturne</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
+            <English>Add or remove NVGs from units</English>
+            <French>Ajouter ou retirer JVN des unités</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
+            <English>Toggle NVG target</English>
+            <French>Cible du basculement</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
+            <English>Selected group</English>
+            <French>Groupe sélectionné</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
+            <English>Toggle flashlights</English>
+            <French>Basculer lampes torches</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
+            <English>Toggle flashlight target</English>
+            <French>Cible du basculement</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
+            <English>Flashlight</English>
+            <French>Lampe torche</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
+            <English>Add gear</English>
+            <French>Ajouter équipement</French>
+        </Key>
     </Package>
 </Project>
