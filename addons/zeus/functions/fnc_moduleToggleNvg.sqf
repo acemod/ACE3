@@ -30,7 +30,7 @@ if (_target == 4) then {
 
 if (_toggle) then {
     {
-        if (hmd _x isEqualTo "") then {
+        if (!isplayer _x && {hmd _x isEqualTo ""}) then {
             private _cfgArray = getArray (configFile >> 'CfgVehicles' >> typeOf _x >>'linkedItems');
 
             private _nvgClass = _cfgArray select {_x isKindOf ["NVGoggles",(configFile >> "CfgWeapons")]};
@@ -52,16 +52,17 @@ if (_toggle) then {
 
 } else {
     {
-        private _cfgArray = getArray (configFile >> 'CfgVehicles' >> typeOf _x >>'linkedItems');
+        if (!isplayer _x) then {
+            private _cfgArray = getArray (configFile >> 'CfgVehicles' >> typeOf _x >>'linkedItems');
 
-        private _nvgHelmet =_cfgArray select {count (getArray (configFile >> "CfgWeapons" >> _x >> "subItems")) > 0};
+            private _nvgHelmet =_cfgArray select {count (getArray (configFile >> "CfgWeapons" >> _x >> "subItems")) > 0};
 
-        if (count _nvgHelmet == 1) then {
-            removeHeadgear _x;
-        } else {
-            _x unlinkItem (hmd _x);
+            if (count _nvgHelmet == 1) then {
+                removeHeadgear _x;
+            } else {
+                _x unlinkItem (hmd _x);
+            };
         };
-
     } foreach _units;
 };
 
