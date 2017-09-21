@@ -1,15 +1,15 @@
 /*
  * Author: BaerMitUmlaut
- * Prepares the helicopters FRIES.
+ * Stows the helicopters FRIES.
  *
  * Arguments:
- * 0: A helicopter with deployed ropes <OBJECT>
+ * 0: A helicopter with prepared FRIES <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_vehicle] call ace_fastroping_fnc_prepareFRIES
+ * [_vehicle] call ace_fastroping_fnc_stowFRIES
  *
  * Public: No
  */
@@ -22,10 +22,10 @@ _vehicle setVariable [QGVAR(deploymentStage), 1, true];
 
 private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 private _waitTime = 0;
-if (isText (_config >> QGVAR(onPrepare))) then {
-    _waitTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onPrepare))));
+if (isText (_config >> QGVAR(onCut))) then {
+    _waitTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onCut))));
 };
 
 [{
-    _this setVariable [QGVAR(deploymentStage), 2, true];
+    _this setVariable [QGVAR(deploymentStage), 0, true];
 }, _vehicle, _waitTime] call CBA_fnc_waitAndExecute;
