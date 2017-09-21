@@ -13,6 +13,7 @@ PREP(moduleAddOrRemoveFRIES);
 PREP(moduleCaptive);
 PREP(moduleGlobalSetSkill);
 PREP(moduleGroupSide);
+PREP(moduleLoadIntoCargo);
 PREP(moduleRemoveArsenal);
 PREP(moduleSearchNearby);
 PREP(moduleSetMedic);
