@@ -256,21 +256,6 @@
             <Chinesesimp>停止加油</Chinesesimp>
             <Chinese>停止加油</Chinese>
         </Key>
-        <Key ID="STR_ACE_Refuel_TurnOffAction">
-            <English>Stopping fueling...</English>
-            <German>Stoppe Betankung...</German>
-            <Polish>Zatrzymywanie tankowania...</Polish>
-            <Russian>Останавливаем заправку...</Russian>
-            <Portuguese>Parando reabastecimento...</Portuguese>
-            <Czech>Zastavuji tankování...</Czech>
-            <Italian>Fermando il rifornimento...</Italian>
-            <Spanish>Deteniendo reabastecimiento...</Spanish>
-            <French>Arrête le ravitaillement...</French>
-            <Japanese>給油をやめている・・・</Japanese>
-            <Korean>재급유 그만하는중...</Korean>
-            <Chinesesimp>停止加油中...</Chinesesimp>
-            <Chinese>停止加油中...</Chinese>
-        </Key>
         <Key ID="STR_ACE_Refuel_TurnOn">
             <English>Start fueling</English>
             <German>Betankung beginnen</German>
@@ -286,20 +271,8 @@
             <Chinesesimp>开始加油</Chinesesimp>
             <Chinese>開始加油</Chinese>
         </Key>
-        <Key ID="STR_ACE_Refuel_TurnOnAction">
-            <English>Starting fueling...</English>
-            <German>Beginne Betankung...</German>
-            <Polish>Rozpoczynanie tankowania...</Polish>
-            <Russian>Начинаем заправку...</Russian>
-            <Portuguese>Começando reabastecimento...</Portuguese>
-            <Czech>Spouštím tankování...</Czech>
-            <Italian>Iniziando il rifornimento...</Italian>
-            <Spanish>Comenzando reabastecimiento...</Spanish>
-            <French>Début du ravitaillement...</French>
-            <Japanese>給油を始めている・・・</Japanese>
-            <Korean>재급유 시작중...</Korean>
-            <Chinesesimp>开始加油中...</Chinesesimp>
-            <Chinese>開始加油中...</Chinese>
+        <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
+            <English>Couldn't turn on fuel nozzle</English>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -435,21 +408,6 @@
             <Korean>연로카운터 확인</Korean>
             <Chinesesimp>检查燃料表</Chinesesimp>
             <Chinese>檢查燃料表</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Refuel_CheckFuelCounterAction">
-            <English>Checking fuel counter...</English>
-            <German>Betrachte Tankuhr...</German>
-            <Polish>Sprawdzanie wskaźnika paliwa...</Polish>
-            <Russian>Проверяем счетчик топлива...</Russian>
-            <Portuguese>Verificando contador de combustível...</Portuguese>
-            <Czech>Konroluji palivoměr...</Czech>
-            <Italian>Controllando l'indicatore del livello benzina...</Italian>
-            <Spanish>Verificando el contador de combustible</Spanish>
-            <French>Vérification du compteur...</French>
-            <Japanese>燃料計を見ている・・・</Japanese>
-            <Korean>연료카운터 확인중...</Korean>
-            <Chinesesimp>检查燃料表中...</Chinesesimp>
-            <Chinese>檢查燃料表中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelCounter">
             <English>%1 liters have been fueled.</English>
