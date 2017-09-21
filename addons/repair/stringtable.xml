@@ -1098,6 +1098,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
+            <German>Erweiterter Pionier</German>
             <Italian>Solo Geniere avanzato</Italian>
             <Japanese>上級工兵のみ</Japanese>
             <Chinesesimp>只有维修专精兵</Chinesesimp>
@@ -1166,7 +1167,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
             <English>Repair Threshold</English>
-            <German>Repariere Schweller</German>
+            <German>Reparaturlimit</German>
             <Polish>Próg naprawy</Polish>
             <Portuguese>Limite de reparo</Portuguese>
             <Russian>Лимит ремкомплекта</Russian>
@@ -1181,7 +1182,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
             <English>What is the maximum damage that can be repaired with a toolkit?</English>
-            <German>Wie hoch ist der Schaden, der von einem Reperatursatz behoben werden kann?</German>
+            <German>Der maximale Schaden, der von einem Reperatursatz behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um kit de ferramentas?</Portuguese>
             <Russian>Какой максимальный урон можно починить с помощью ремкомплекта?</Russian>
@@ -1196,7 +1197,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
             <English>Repair Threshold (Engineer)</English>
-            <German>Repariere Schweller (Pionier)</German>
+            <German>Reparaturlimit (Pionier)</German>
             <Polish>Próg naprawy (mechanik)</Polish>
             <Portuguese>Limite de reparo (Engenheiro)</Portuguese>
             <Russian>Лимит инженера</Russian>
@@ -1211,7 +1212,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
             <English>What is the maximum damage that can be repaired by an engineer?</English>
-            <German>Wie hoch ist der Schaden, der von einem Pionier behoben werden kann?</German>
+            <German>Der maximale Schaden, der von einem Pionier behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um engenheiro?</Portuguese>
             <Russian>Какой максимальный урон может починить инженер?</Russian>
@@ -1422,6 +1423,7 @@
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
             <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
             <English>Adv. Engineer</English>
+            <German>Erw. Pionier</German>
             <Italian>Adv. Geniere</Italian>
             <Japanese>上級工兵</Japanese>
             <Chinesesimp>专精</Chinesesimp>
