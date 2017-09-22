@@ -1,4 +1,3 @@
-LOG("prep");
 
 PREP(changeNVGBrightness);
 PREP(initModule);

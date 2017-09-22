@@ -39,7 +39,7 @@ GVAR(ppEffectCCMuzzleFlash) = -1;
     ["ace_firedPlayerVehicle", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
 
 
-    addMissionEventHandler ["Loaded", { // Restart UI vars on misison load
+    addMissionEventHandler ["Loaded", { // Restart UI vars on mission load
         if (GVAR(running)) then {
             TRACE_1("restarting effects",CBA_missionTime);
             [false] call FUNC(setupDisplayEffects);
