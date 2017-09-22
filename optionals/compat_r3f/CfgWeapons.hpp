@@ -298,9 +298,9 @@ class CfgWeapons {
             };
 
             class AmmoCoef {
-                hit = 1.0;
+                hit = 1.0; // default "0.8"
                 visibleFire = 0.5;
-                audibleFire = 0.1;
+                audibleFire = 0.1; // default "0.3"
                 visibleFireTime = 0.5;
                 audibleFireTime = 0.5;
                 cost = 1.0;
@@ -309,11 +309,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.95f";
+                dispersionCoef = "0.95f"; // default "0.8f"
                 artilleryDispersionCoef = "1.0f";
-                fireLightCoef = "0.5f";
-                recoilCoef = "0.95f";
-                recoilProneCoef = "0.95f";
+                fireLightCoef = "0.5f"; // default "0.1f"
+                recoilCoef = "0.95f"; // default "1.0f"
+                recoilProneCoef = "0.95f"; // default "1.0f"
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
