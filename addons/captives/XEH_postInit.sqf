@@ -36,7 +36,6 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-    //Add Keybind:
 ["ACE3 Common", QGVAR(captives), [(localize LSTRING(SetCaptive)), (localize LSTRING(KeyComb_description))],
 {
     private _target = cursorObject;
