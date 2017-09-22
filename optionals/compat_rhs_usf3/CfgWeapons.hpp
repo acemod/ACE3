@@ -397,14 +397,14 @@ class CfgWeapons {
     class RHS_weap_AGM114N_Launcher: rhs_weap_HellfireLauncher {
         weaponLockSystem = 0;
         canLock = 0;
-        ace_hellfire_enabled = 1;
-        ace_lase_canSelect = 1;
+        EGVAR(hellfire,enabled) = 1;
+        EGVAR(laser,canSelect) = 1;
     };
     class RHS_weap_AGM114M_Launcher: rhs_weap_HellfireLauncher {
         weaponLockSystem = 0;
         canLock = 0;
-        ace_hellfire_enabled = 1;
-        ace_lase_canSelect = 1;
+        EGVAR(hellfire,enabled) = 1;
+        EGVAR(laser,canSelect) = 1;
     };
     class RHS_MELB_Hellfire: rhs_weap_HellfireLauncher {
         weaponLockSystem = 0;
