@@ -16,8 +16,15 @@ version:
 
 ```cpp
 class CfgVehicles {
-    class MyFuturisticMBT {
-        ace_refuel_fuelCapacity = 3000; // set to correct path static model
+    class MyFuelTruck {
+        ace_refuel_fuelCargo = 3000; // Fuel cargo
+        ace_refuel_hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}}; // Nozze hooks positions
+    };
+    class MyCar {
+        ace_refuel_fuelCapacity = 100; // Fuel tank volume
+    };
+    class MyElectricCar {
+        ace_refuel_canReceive = 0; // For vehicles which can't be refuelled
     };
 };
 ```
@@ -95,3 +102,23 @@ The jerry can will now have a volume of 200 liters.
 ---| --------- | -----------
 0  |  `fuelTruck` | My fuel truck object
 1  |  `428` | New fuel supply
+
+### 2.4 Make an object into a refuel source
+
+`ace_refuel_fnc_makeSource`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Fuel Source | Object | Required
+1  | Amount (in liters) | Number | Optional (default: `0`)
+2  | Hooks positions | Array | Optional (default: `[[0,0,0]]`)
+**R** | None | None | Return value
+
+#### 2.4.1 Example
+
+`[cursorObject, 100] call ace_refuel_fnc_makeSource`
+
+   | Arguments | Explanation
+---| --------- | -----------
+0  |  `cursorObject` | Fuel source object
+1  |  `100` | Fuel supply
