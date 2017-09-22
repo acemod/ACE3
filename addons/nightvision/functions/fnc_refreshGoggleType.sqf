@@ -89,7 +89,7 @@ GVAR(nvgBlurRadius) = _blurRadius;
 GVAR(nvgGeneration) = _nvgGen;
 
 // Setup border and hex image based on NVG config:
-private _scale = (call FUNC(kkTrueZoom)) * 3.00001;
+private _scale = (call EFUNC(common,getZoom)) * 1.12513;
 
 private _borderImageCtrl = (uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1001;
 private _trippleHeadLeft = (uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1002;

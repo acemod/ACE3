@@ -38,7 +38,7 @@ if (!GVAR(running)) then {
 
 // Scale Border / Hex
 BEGIN_COUNTER(borderScaling);
-private _scale = (call FUNC(kkTrueZoom)) * 3.00001;
+private _scale = (call EFUNC(common,getZoom)) * 1.12513;
 if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
     // Prevents issues when "zooming out" on ultra wide monitors - The square mask would be narrower than the screen
     if (((GVAR(defaultPositionBorder) select 2) * _scale) < safeZoneW) then {
