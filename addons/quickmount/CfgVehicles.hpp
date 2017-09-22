@@ -9,7 +9,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         isDisposable = 0;
-        icon = QPATHTOF(UI\Icon_Module_QuickMount_ca.paa);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\Obsolete\ui_action_getin_ca.paa";
         class Arguments {
             class enabled {
                 displayName = ECSTRING(common,Enabled);

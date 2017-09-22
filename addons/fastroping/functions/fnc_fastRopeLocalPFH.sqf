@@ -17,9 +17,8 @@
 
 #include "script_component.hpp"
 params ["_arguments", "_pfhHandle"];
-_arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex", "_timeToPlayRopeSound"];
-_rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook", "_occupied"];
-private ["_vectorUp", "_vectorDir", "_origin"];
+_arguments params ["_unit", "", "_rope", "", "_timeToPlayRopeSound"];
+_rope params ["", "", "", "_dummy"];
 
 //Wait until the unit is actually outside of the helicopter
 if (vehicle _unit != _unit) exitWith {};

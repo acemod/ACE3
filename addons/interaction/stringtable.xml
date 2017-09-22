@@ -931,11 +931,13 @@
             <English>Disable negative rating</English>
             <German>Negative Bewertung deaktivieren</German>
             <Japanese>否定評価を無効化</Japanese>
+            <Italian>Disabilita valutazione negativa</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
             <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewerungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
             <Japanese>否定評価を受けますか？有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
+            <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
