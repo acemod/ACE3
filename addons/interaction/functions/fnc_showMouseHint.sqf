@@ -1,12 +1,12 @@
 /*
  * Author: Garth de Wet (LH)
- * Shows the interaction helper text with the mouse buttons at the bottom middle of the screen
+ * Shows the interaction helper text with the mouse buttons at the bottom middle of the screen.
  *
  * Arguments:
  * 0: Left Click Text <STRING>
  * 1: Right Click Text <STRING>
- * 2: Scroll Text <STRING> (Optional)
- * 2: Extra Icon/Text pairs <OPTIONAL><ARRAY>
+ * 2: Scroll Text <STRING> (default: "")
+ * 2: Extra Icon/Text pairs <ARRAY> (default: [])
  *
  * Return Value:
  * None
