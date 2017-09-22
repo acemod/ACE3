@@ -430,7 +430,7 @@
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
             <German>Nimmt die Einheit vor dem Cursor fest.</German>
-        </Key>¸¸¸¸
+        </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
             <German>Benötigt AI Kapitulation</German>
