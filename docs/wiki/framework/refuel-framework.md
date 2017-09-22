@@ -18,13 +18,13 @@ version:
 class CfgVehicles {
     class MyFuelTruck {
         ace_refuel_fuelCargo = 3000; // Fuel cargo
-        ace_refuel_hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}}; // Nozze hooks positions
+        ace_refuel_hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}}; // Nozzle hooks positions
     };
     class MyCar {
         ace_refuel_fuelCapacity = 100; // Fuel tank volume
     };
     class MyElectricCar {
-        ace_refuel_canReceive = 0; // For vehicles which can't be refuelled
+        ace_refuel_canReceive = 0; // For vehicles which can't be refueled
     };
 };
 ```
@@ -69,7 +69,7 @@ class CfgVehicles {
 
    | Arguments | Explanation
 ---| --------- | -----------
-0  |  `can` | My jerry can object
+0  | `can` | My jerry can object
 
 The jerry can will have the default 20 liters volume.
 
@@ -79,8 +79,8 @@ The jerry can will have the default 20 liters volume.
 
    | Arguments | Explanation
 ---| --------- | -----------
-0  |  `can` | My jerry can object
-1  |  `200` | Vehicle class name
+0  | `can` | My jerry can object
+1  | `200` | Vehicle class name
 
 The jerry can will now have a volume of 200 liters.
 
@@ -100,8 +100,8 @@ The jerry can will now have a volume of 200 liters.
 
    | Arguments | Explanation
 ---| --------- | -----------
-0  |  `fuelTruck` | My fuel truck object
-1  |  `428` | New fuel supply
+0  | `fuelTruck` | My fuel truck object
+1  | `428` | New fuel supply
 
 ### 2.4 Make an object into a refuel source
 
@@ -120,5 +120,5 @@ The jerry can will now have a volume of 200 liters.
 
    | Arguments | Explanation
 ---| --------- | -----------
-0  |  `cursorObject` | Fuel source object
-1  |  `100` | Fuel supply
+0  | `cursorObject` | Fuel source object
+1  | `100` | Fuel supply
