@@ -22,7 +22,7 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
 
 // TODO: Animation and sound
 [
-    GVAR(timePerPylon),
+    [GVAR(timePerPylon), 0] select GVAR(isCurator),
     _this,
     {
         (_this select 0) params ["_pylonsToConfigure", "_currentPylon"];
@@ -50,7 +50,7 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
             [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine, _turret]
         ] call CBA_fnc_globalEvent;
 
-        private _count = if (GVAR(rearmNewPylons)) then {
+        private _count = if (GVAR(rearmNewPylons) || {GVAR(isCurator)}) then {
             getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count")
         } else {
             0

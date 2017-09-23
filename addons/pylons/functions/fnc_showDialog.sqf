@@ -4,6 +4,7 @@
 *
 * Arguments:
 * 0: Aircraft <OBJECT>
+* 1: Is curator. Disables time and resource requirements. <BOOL> (default: false)
 *
 * Return Value:
 * None
@@ -15,8 +16,7 @@
 */
 #include "script_component.hpp"
 
-// TODO: Add a zeus module
-params ["_aircraft"];
+params ["_aircraft", ["_isCurator", false]];
 
 if (!GVAR(enabled) || {!(typeOf _aircraft in GVAR(aircraftWithPylons))}) exitWith {};
 
@@ -28,13 +28,14 @@ _aircraft setVariable [QGVAR(currentUser), ace_player, true];
 GVAR(currentAircraftNamespace) setVariable [getPlayerUID ace_player, _aircraft, true];
 [_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
+GVAR(isCurator) = _isCurator;
 GVAR(currentAircraft) = _aircraft;
 
 createDialog QGVAR(DialogLoadout);
 private _display = DISPLAY(ID_DIALOG);
 _display displayAddEventHandler ["Unload", LINKFUNC(onButtonClose)];
 
-if (GVAR(rearmNewPylons)) then {
+if (GVAR(rearmNewPylons) || {_isCurator}) then {
     ctrlShow [ID_TEXT_BANNER, false];
 };
 

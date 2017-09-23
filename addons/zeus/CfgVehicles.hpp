@@ -120,6 +120,13 @@ class CfgVehicles {
         function = QFUNC(moduleCaptive);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa);
     };
+    class GVAR(moduleConfigurePylons): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = ECSTRING(pylons,ConfigurePylons);
+        function = QFUNC(moduleConfigurePylons);
+        icon = "a3\data_f_jets\logos\jets_logo_small_ca.paa";
+    };
     class GVAR(moduleDefendArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);

@@ -30,7 +30,7 @@ params ["_ctrl", "_index"];
                 };
             } forEach GVAR(comboBoxes);
         };
-        if (!GVAR(rearmNewPylons)) then {
+        if !(GVAR(rearmNewPylons) || {GVAR(isCurator)}) then {
             private _color = [[0.5, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1]] select (_index == _originalIndex);
             _combo ctrlSetBackgroundColor _color;
         };
