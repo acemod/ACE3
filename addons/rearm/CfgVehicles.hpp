@@ -106,12 +106,8 @@ class CfgVehicles {
         GVAR(defaultSupply) = 1200;
     };
 
-    class Truck_02_Ammo_base_F;
-    class I_Truck_02_ammo_F: Truck_02_Ammo_base_F {
-        transportAmmo = 0;
-        GVAR(defaultSupply) = 1200;
-    };
-    class O_Truck_02_Ammo_F: Truck_02_Ammo_base_F {
+    class Truck_02_base_F;
+    class Truck_02_Ammo_base_F: Truck_02_base_F {
         transportAmmo = 0;
         GVAR(defaultSupply) = 1200;
     };
