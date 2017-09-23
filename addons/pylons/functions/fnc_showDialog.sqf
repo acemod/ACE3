@@ -91,7 +91,7 @@ GVAR(comboBoxes) = [];
     private _button = controlNull;
     if (count allTurrets [_aircraft, false] > 0) then {
         _button = _display ctrlCreate ["ctrlShortcutButton", -1];
-        private _turret = getArray (_x >> "turret");
+        private _turret = (_aircraft getVariable ["ace_pylonTurrets", []]) param [_forEachIndex + 1, getArray (_x >> "turret")]; 
         if (_turret isEqualTo []) then {
             _turret = [-1];
         };

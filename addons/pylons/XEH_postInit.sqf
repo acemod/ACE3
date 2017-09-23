@@ -29,6 +29,13 @@
 
     [QGVAR(setPylonLoadOutEvent), {
         params ["_aircraft", "_pylonIndex", "_pylon", "_turret"];
+
+        if (isServer) then {
+            private _pylonTurrets = _aircraft getVariable ["ace_pylonTurrets", []]; // Don't use GVAR for cross copatibility, rearm has the same variable
+            _pylonTurrets set [_pylonIndex, _turret];
+            _aircraft setVariable ["ace_pylonTurrets", _pylonTurrets, true];
+        };
+
         _aircraft setPylonLoadOut [_pylonIndex, _pylon, false, _turret];
     }] call CBA_fnc_addEventHandler;
 
