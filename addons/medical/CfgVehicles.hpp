@@ -555,7 +555,7 @@ class CfgVehicles {
                 class GVAR(UnLoadPatient) {
                     displayName = CSTRING(UnloadPatient);
                     distance = 5;
-                    condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {vehicle _target != _target});
+                    condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {vehicle _target != _target} && {vehicle _player == _player});
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
                     showDisabled = 0;
                     priority = 2;
