@@ -103,7 +103,7 @@ The jerry can will now have a volume of 200 liters.
 0  | `fuelTruck` | My fuel truck object
 1  | `428` | New fuel supply
 
-### 2.4 Make an object into a refuel source
+### 2.4 Make an object into a refuel source (Added in ACE3 3.11.0)
 
 `ace_refuel_fnc_makeSource`
 
