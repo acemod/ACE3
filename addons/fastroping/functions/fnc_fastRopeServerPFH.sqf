@@ -18,8 +18,7 @@
 #include "script_component.hpp"
 params ["_arguments", "_pfhHandle"];
 _arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex", "_hasBeenAttached"];
-_rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook", "_occupied"];
-private ["_vectorUp", "_vectorDir", "_origin"];
+_rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook"];
 
 //Wait until the unit is actually outside of the helicopter
 if (vehicle _unit != _unit) exitWith {};
@@ -29,7 +28,7 @@ if (getMass _dummy != 80) exitWith {
     //Fix for twitchyness
     _dummy setMass 80;
     _dummy setCenterOfMass [0, 0, -2];
-    _origin = getPosASL _hook;
+    private _origin = getPosASL _hook;
     _dummy setPosASL (_origin vectorAdd [0, 0, -2]);
     _dummy setVectorUp [0, 0, 1];
 
@@ -65,7 +64,7 @@ if (
     deleteVehicle _ropeTop;
     deleteVehicle _ropeBottom;
 
-    _origin = getPosASL _hook;
+    private _origin = getPosASL _hook;
     _dummy setPosASL (_origin vectorAdd [0, 0, -1]);
 
     //Restore original mass and center of mass
@@ -79,7 +78,7 @@ if (
     _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
 
     //Update deployedRopes array
-    _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+    private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
     _deployedRopes set [_ropeIndex, [_attachmentPoint, _ropeTop, _ropeBottom, _dummy, _hook, false]];
     _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 

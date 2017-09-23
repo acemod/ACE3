@@ -24,7 +24,7 @@ private _vehicle = _cargoVehicle;
 if (isNull _vehicle) then {
     {
         if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_vehicle = _x};
-    } forEach (nearestObjects [_player, CARGO_VEHICLE_CLASSES, MAX_LOAD_DISTANCE]);
+    } forEach (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE]);
 };
 
 if (isNull _vehicle) exitWith {

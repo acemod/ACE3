@@ -694,7 +694,15 @@ class CfgVehicles {
         };
     };
 
-    class NATO_Box_Base;
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        class ACE_Actions;
+    };
+    class NATO_Box_Base: ReammoBox_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         scopeCurator = 2;
@@ -710,6 +718,35 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bloodIV_500,15);
             MACRO_ADDITEM(ACE_bloodIV_250,15);
             MACRO_ADDITEM(ACE_bodyBag,10);
+        };
+        class AnimationSources {
+            class Cover {
+                source = "user";
+                animPeriod = 1.5;
+                initPhase = 0;
+                minValue = 0;
+                maxValue = 1;
+            };
+        };
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                selection = "cover_action";
+
+                class ACE_OpenLid {
+                    displayName = CSTRING(openLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' < 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',1]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+                class ACE_CloseLid {
+                    displayName = CSTRING(closeLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' >= 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',0]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+            };
         };
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {

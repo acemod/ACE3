@@ -19,21 +19,33 @@
 private _info = [MACRO_DOOR_REACH_DISTANCE] call FUNC(getDoor);
 
 _info params ["_house", "_door"];
+TRACE_2("openDoor",_house,_door);
 
 if (isNull _house) exitWith {};
 
 private _getDoorAnimations = [_house, _door] call FUNC(getDoorAnimations);
 
-_getDoorAnimations params ["_animations", "_lockedVariable"];
+_getDoorAnimations params ["_animations"];
 
 if (_animations isEqualTo []) exitWith {};
 
-//Check if the door can be locked aka have locked variable, otherwhise cant lock it
-if (!(isNil (_lockedVariable select 0))) then {
-    if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [_lockedVariable select 0, 0] == 1}) exitWith {
-        _lockedVariable set [0, _house];
-        _lockedVariable call BIS_fnc_LockedDoorOpen;
+private _lockedVariable = format ["bis_disabled_%1", _door];
+
+// Check if the door can be locked aka have locked variable, otherwhise cant lock it
+if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [_lockedVariable, 0] == 1}) exitWith {
+    private _lockedAnimation = format ["%1_locked_source", _door];
+    TRACE_3("locked",_house,_lockedAnimation,isClass (configfile >> "CfgVehicles" >> (typeOf _house) >> "AnimationSources" >> _lockedAnimation));
+    if (isClass (configfile >> "CfgVehicles" >> (typeOf _house) >> "AnimationSources" >> _lockedAnimation)) then {
+        // from: a3\structures_f\scripts\fn_door.sqf: - wiggles the door handle (A3 buildings)
+        _house animateSource [_lockedAnimation, (1 - (_house animationSourcePhase _lockedAnimation))];
     };
+};
+
+// Add handle on carrier
+if (typeOf _house == "Land_Carrier_01_island_01_F") then {
+    private _handle = format ["door_handle_%1_rot_1", (_animations select 0) select [5, 1]];
+    TRACE_1("carrier handle",_handle);
+    _animations pushBack _handle;
 };
 
 playSound "ACE_Sound_Click"; // @todo replace with smth. more fitting

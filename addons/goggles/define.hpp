@@ -7,7 +7,6 @@
 ////////////////
 
 class RscPicture {
-    access = 0;
     idc = -1;
     type = CT_STATIC;
     style = ST_PICTURE;

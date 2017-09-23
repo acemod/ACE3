@@ -22,7 +22,7 @@
 ["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
-["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
@@ -127,6 +127,7 @@ if (isServer) then {
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
@@ -321,6 +322,49 @@ GVAR(OldIsCamera) = false;
     END_COUNTER(stateChecker);
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
+// Add event handler for UAV control change
+ACE_controlledUAV = [objNull, objNull, [], ""];
+addMissionEventHandler ["PlayerViewChanged", {
+    // On non-server client this command is semi-broken
+    // arg index 5 should be the controlled UAV, but it will often be objNull (delay from locality switching?)
+    // On PlayerViewChanged event, start polling for new uav state for a few seconds (should be done within a few frames)
+    
+    params ["", "", "", "", "_newCameraOn", "_UAV"];
+    TRACE_2("PlayerViewChanged",_newCameraOn,_UAV);
+    
+    [{
+        if (isNull player) exitWith {true};
+        private _UAV = getConnectedUAV player;
+        if (!alive player) then {_UAV = objNull;};
+        private _position = (UAVControl _UAV) param [1, ""];
+        private _seatAI = objNull;
+        private _turret = [];
+        switch (toLower _position) do {
+            case (""): {
+                _UAV = objNull; // set to objNull if not actively controlling
+            };
+            case ("driver"): {
+                _turret = [-1];
+                _seatAI = driver _UAV;
+            };
+            case ("gunner"): {
+                _turret = [0];
+                _seatAI = gunner _UAV;
+            };
+        };
+        
+        private _newArray = [_UAV, _seatAI, _turret, _position];
+        if (_newArray isEqualTo ACE_controlledUAV) exitWith {false}; // no change yet
+        
+        TRACE_2("Seat Change",_newArray,ACE_controlledUAV);
+        ACE_controlledUAV = _newArray;
+        ["ACE_controlledUAV", _newArray] call CBA_fnc_localEvent;
+        
+        // stay in the loop as we might switch from gunner -> driver, and there may be a empty position event in-between
+        false
+    }, {}, [], 3, {TRACE_1("timeout",_this);}] call CBA_fnc_waitUntilAndExecute;
+}];
+
 
 //////////////////////////////////////////////////
 // Eventhandlers for player controlled machines
@@ -359,7 +403,9 @@ GVAR(OldIsCamera) = false;
     // Players can always interact with his vehicle
     {vehicle _unit == _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}}
+    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    // Players can always interact with connected UAV
+    {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
@@ -377,7 +423,9 @@ GVAR(isReloading) = false;
         private _weapon = currentWeapon ACE_player;
 
         if (_weapon != "") then {
-            private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            private _muzzle = currentMuzzle ACE_player;
+            private _wpnConfig = configFile >> "CfgWeapons" >> _weapon;
+            private _gesture = getText ([_wpnConfig >> _muzzle, _wpnConfig] select (_weapon isEqualTo _muzzle) >> "reloadAction");
             if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
             private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
             private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;

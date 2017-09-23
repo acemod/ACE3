@@ -14,6 +14,8 @@
             <Portuguese>Escada telescópica</Portuguese>
             <Japanese>タクティカル ラダー</Japanese>
             <Korean>로프 사다리</Korean>
+            <Chinesesimp>伸缩梯子</Chinesesimp>
+            <Chinese>伸縮梯子</Chinese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
@@ -28,6 +30,8 @@
             <Portuguese>Implantar escada</Portuguese>
             <Japanese>ラダーを設置</Japanese>
             <Korean>사다리 배치</Korean>
+            <Chinesesimp>布署梯子</Chinesesimp>
+            <Chinese>佈署梯子</Chinese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
@@ -42,6 +46,8 @@
             <Portuguese>Derrubar escada</Portuguese>
             <Japanese>ラダーを落とす</Japanese>
             <Korean>사다리 놓기</Korean>
+            <Chinesesimp>降下梯子</Chinesesimp>
+            <Chinese>降下梯子</Chinese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Extend</English>
@@ -55,6 +61,8 @@
             <French>Déployer</French>
             <Japanese>伸ばす</Japanese>
             <Korean>늘리기</Korean>
+            <Chinesesimp>伸长梯子</Chinesesimp>
+            <Chinese>伸長梯子</Chinese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
             <English>+Ctrl tilt</English>
@@ -68,6 +76,8 @@
             <Italian>+Ctrl per inclinare</Italian>
             <Japanese>+Ctrl で傾ける</Japanese>
             <Korean>+컨트롤키 기울이기</Korean>
+            <Chinesesimp>+Ctrl 倾斜</Chinesesimp>
+            <Chinese>+Ctrl 傾斜</Chinese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -82,6 +92,8 @@
             <Portuguese>Posicionar escada</Portuguese>
             <Japanese>ラダーの位置</Japanese>
             <Korean>사다리 위치</Korean>
+            <Chinesesimp>梯子位置</Chinesesimp>
+            <Chinese>梯子位置</Chinese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
@@ -96,6 +108,8 @@
             <Portuguese>Pegar escada</Portuguese>
             <Japanese>ラダーを拾う</Japanese>
             <Korean>사다리 줍기</Korean>
+            <Chinesesimp>捡起梯子</Chinesesimp>
+            <Chinese>撿起梯子</Chinese>
         </Key>
     </Package>
 </Project>

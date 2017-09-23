@@ -1,6 +1,5 @@
 class Heli_Attack_01_base_F: Helicopter_Base_F {
     incomingMissileDetectionSystem = 16; // Vanilla: 24
-    driverCanEject = 1;
 
     class Turrets: Turrets {
         class MainTurret: MainTurret {
