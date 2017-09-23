@@ -22,7 +22,7 @@ This adds the option to refuel vehicles. The basic concept of refuel a vehicle i
 - Interact with the fuel source <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Select `Take fuel nozzle`. Your character will holster his weapon and receive a fuel nozzle.
 - Walk close to the vehicle you want to refuel and follow the instructions on the screen to connect the nozzle.
-- Refueling starts automatically after nozzle connecting.
+- Refueling starts automatically after nozzle connecting if possible.
 
 Refueling takes some time which depends on its fuel tank size, the vehicle type and the module settings.
 
