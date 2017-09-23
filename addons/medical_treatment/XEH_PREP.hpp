@@ -37,7 +37,6 @@ PREP(treatmentTourniquetRemove);
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);
-PREP(addUnloadPatientActions);
 PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
 PREP(getTriageStatus);
