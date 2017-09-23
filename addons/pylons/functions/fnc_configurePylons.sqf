@@ -27,8 +27,6 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
     {
         (_this select 0) params ["_pylonsToConfigure", "_currentPylon"];
         private _pylonIndex = _pylonsToConfigure select _currentPylon;
-        private _combo = GVAR(comboBoxes) select _pylonIndex select 0;
-        private _pylonMagazine = _combo lbData (lbCurSel _combo);
 
         // Remove the weapon of current pylon from aircraft IF weapon is only on this pylon
         private _currentPylonMagazine = (getPylonMagazines GVAR(currentAircraft)) select _pylonIndex;
@@ -42,11 +40,15 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
             };
         };
 
+        private _combo = GVAR(comboBoxes) select _pylonIndex select 0;
+        private _pylonMagazine = _combo lbData (lbCurSel _combo);
+        private _turret = (GVAR(comboBoxes) select _pylonIndex select 2) getVariable [QGVAR(turret), []];
+        if (_turret isEqualTo [-1]) then {_turret = [];};
+
         [
             QGVAR(setPylonLoadOutEvent),
-            [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine],
-            GVAR(currentAircraft)
-        ] call CBA_fnc_targetEvent;
+            [GVAR(currentAircraft), _pylonIndex + 1, _pylonMagazine, _turret]
+        ] call CBA_fnc_globalEvent;
 
         private _count = if (GVAR(rearmNewPylons)) then {
             getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count")

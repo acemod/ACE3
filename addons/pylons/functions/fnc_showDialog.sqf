@@ -15,6 +15,7 @@
 */
 #include "script_component.hpp"
 
+// TODO: Add a zeus module
 params ["_aircraft"];
 
 if (!GVAR(enabled) || {!(typeOf _aircraft in GVAR(aircraftWithPylons))}) exitWith {};
@@ -35,9 +36,6 @@ _display displayAddEventHandler ["Unload", LINKFUNC(onButtonClose)];
 
 if (GVAR(rearmNewPylons)) then {
     ctrlShow [ID_TEXT_BANNER, false];
-    ctrlShow [ID_PICTURE_REARM, false];
-} else {
-    ctrlSetText [ID_TEXT_BANNER, "    " + (ctrlText ID_TEXT_BANNER)]; // Spacing for the icon
 };
 
 private _config = configFile >> "CfgVehicles" >> typeOf _aircraft;
@@ -58,8 +56,8 @@ if (["ace_fastroping"] call EFUNC(common,isModLoaded) && {_hasFRIES > 1}) then {
 
 GVAR(comboBoxes) = [];
 {
-    private _combo = _display ctrlCreate ["RscCombo", -1];
-    private _picturePos = ctrlPosition (_display displayCtrl ID_BACKGROUND_PICTURE);
+    private _combo = _display ctrlCreate ["ctrlCombo", -1];
+    private _picturePos = ctrlPosition (_display displayCtrl ID_PICTURE_AIRCRAFT);
     private _uiPos = getArray (_x >> "UIposition");
     _combo ctrlSetPosition [
         (_picturePos select 0) + (_uiPos select 0),
@@ -89,19 +87,25 @@ GVAR(comboBoxes) = [];
 
     private _mirroredIndex = [_x >> "mirroredMissilePos", "number", 0] call CBA_fnc_getConfigEntry;
 
-    private _icon = controlNull;
-    if (!GVAR(rearmNewPylons)) then {
-        _icon = _display ctrlCreate ["RscPicture", -1];
-        _icon ctrlSetPosition [
-            (_picturePos select 0) + (_uiPos select 0) - (0.0131354 * safezoneW),
+    private _button = controlNull;
+    if (count allTurrets [_aircraft, false] > 0) then {
+        _button = _display ctrlCreate ["ctrlShortcutButton", -1];
+        private _turret = getArray (_x >> "turret");
+        if (_turret isEqualTo []) then {
+            _turret = [-1];
+        };
+        [_button, false, _turret] call FUNC(onButtonTurret);
+        _button ctrlAddEventHandler ["ButtonClick", {[_this select 0, true, []] call FUNC(onButtonTurret)}];
+        _button ctrlSetPosition [
+            (_picturePos select 0) + (_uiPos select 0) - (0.0165 * safezoneW),
             (_picturePos select 1) + (_uiPos select 1),
-            0.0131354 * safezoneW,
+            0.0165 * safezoneW,
             0.028 * safezoneH
         ];
-        _icon ctrlCommit 0;
+        _button ctrlCommit 0;
     };
 
-    GVAR(comboBoxes) pushBack [_combo, _mirroredIndex - 1, _icon, _index];
+    GVAR(comboBoxes) pushBack [_combo, _mirroredIndex - 1, _button, _index];
 } forEach ("true" configClasses (_pylonComponent >> "Pylons"));
 
 GVAR(defaultLoadoutNames) = [];
@@ -113,7 +117,7 @@ GVAR(defaultLoadoutNames) = [];
 } forEach ("true" configClasses (_pylonComponent >> "Presets"));
 
 {
-    if ((_x select 2) == typeOf _aircraft) then {
+    if ((_x select 3) == typeOf _aircraft) then {
         lbAdd [ID_LIST_LOADOUTS, _x select 0];
     };
 } forEach (profileNamespace getVariable [QGVAR(aircraftLoadouts), []]);

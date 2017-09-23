@@ -20,25 +20,29 @@
 
 private _loadoutName = ctrlText ID_EDIT_LOADOUTNAME;
 private _fnc_setSelections = {
-    params ["_mags"];
+    params ["_mags", "_turrets"];
 
     {
-        private _ctrl = _x select 0;
+        _x params ["_combo", "_mirroredIndex", "_button"];
 
         private _index = 0;
-        for "_i" from 1 to ((lbSize _ctrl) - 1) do {
-            if ((_ctrl lbData _i) == (_mags param [_forEachIndex, ""])) exitWith {
+        for "_i" from 1 to ((lbSize _combo) - 1) do {
+            if ((_combo lbData _i) == (_mags param [_forEachIndex, ""])) exitWith {
                 _index = _i;
             };
         };
-        _ctrl lbSetCurSel _index;
+        _combo lbSetCurSel _index;
+
+        [_button, false, _turrets select _forEachIndex] call FUNC(onButtonTurret);
     } forEach GVAR(comboBoxes);
 };
 
 private _pylonComponent = configFile >> "CfgVehicles" >> typeOf GVAR(currentAircraft) >> "Components" >> "TransportPylonsComponent";
 private _loadoutFound = {
     if (getText (_x >> "displayName") isEqualTo _loadoutName) exitWith {
-        [getArray (_x >> "attachment")] call _fnc_setSelections;
+        // Get default turrets from config
+        private _turrets = ("true" configClasses (_pylonComponent >> "Pylons")) apply {getArray (_x >> "turret")};
+        [getArray (_x >> "attachment"), _turrets] call _fnc_setSelections;
         true
     };
     false
@@ -48,7 +52,7 @@ if (_loadoutFound) exitWith {};
 
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];
 {
-    if ((_x select 0) isEqualTo _loadoutName && {(_x select 2) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
-        [_x select 1] call _fnc_setSelections;
+    if ((_x select 0) isEqualTo _loadoutName && {(_x select 3) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
+        [_x select 1, _x select 2] call _fnc_setSelections;
     };
 } forEach _aircraftLoadouts;

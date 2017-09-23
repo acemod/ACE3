@@ -6,6 +6,7 @@ PREP(onButtonClose);
 PREP(onButtonDelete);
 PREP(onButtonLoad);
 PREP(onButtonSave);
+PREP(onButtonTurret);
 PREP(onComboSelChange);
 PREP(onNameChange);
 PREP(onPylonMirror);

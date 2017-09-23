@@ -20,7 +20,7 @@
             <English>&lt;empty&gt;</English> <!-- <empty> -->
         </Key>
         <Key ID="STR_ACE_Pylons_BannerText">
-            <English>Pylons that have the reload icon next to them will have to be manually rearmed.</English>
+            <English>Pylons that are colored red will have to be manually rearmed.</English>
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>

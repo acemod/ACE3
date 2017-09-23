@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Combobox <CONTROL>
- * 1: Index of selected magazine in the combobox <NUMBER>
+ * 1: Selected index <NUMBER>
  *
  * Return Value:
  * None
@@ -19,7 +19,7 @@
 params ["_ctrl", "_index"];
 
 {
-    _x params ["_combo", "_mirroredIndex", "_icon", "_originalIndex"];
+    _x params ["_combo", "_mirroredIndex", "", "_originalIndex"];
     if (_ctrl == _combo) exitWith {
         if (_mirroredIndex == -1) then {
             private _indexOf = _forEachIndex;
@@ -31,7 +31,8 @@ params ["_ctrl", "_index"];
             } forEach GVAR(comboBoxes);
         };
         if (!GVAR(rearmNewPylons)) then {
-            _icon ctrlSetText (["a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa", ""] select (_index == _originalIndex));
+            private _color = [[0.5, 0.05, 0.05, 1], [0.05, 0.05, 0.05, 1]] select (_index == _originalIndex);
+            _combo ctrlSetBackgroundColor _color;
         };
     };
 } forEach GVAR(comboBoxes);

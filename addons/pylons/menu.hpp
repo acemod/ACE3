@@ -4,7 +4,7 @@ class RscListBox;
 class RscEdit;
 class RscButtonMenu;
 class RscText;
-class RscPicture;
+class RscPictureKeepAspect;
 
 class GVAR(DialogLoadout) {
     idd = ID_DIALOG;
@@ -19,10 +19,10 @@ class GVAR(DialogLoadout) {
             y = 0.262 * safezoneH + safezoneY;
             w = 0.68304 * safezoneW;
             h = 0.028 * safezoneH;
-            colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profileNamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profileNamespace getVariable ['GUI_BCG_RGB_B',0.5])",1};
+            colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R', 0.13])","(profileNamespace getVariable ['GUI_BCG_RGB_G', 0.54])","(profileNamespace getVariable ['GUI_BCG_RGB_B', 0.21])",1};
         };
-        class BackgroundIGUIBack: IGUIBack {
-            idc = ID_BACKGROUND_IGUIBACK;
+        class BackgroundDialog: IGUIBack {
+            idc = ID_BACKGROUND_DIALOG;
             x = 0.15835 * safezoneW + safezoneX;
             y = 0.29 * safezoneH + safezoneY;
             w = 0.68304 * safezoneW;
@@ -37,24 +37,24 @@ class GVAR(DialogLoadout) {
             h = 0.392 * safezoneH;
             colorBackground[] = {0.3,0.3,0.3,1};
         };
-        class PictureAircraft: RscPicture {
+        class PictureAircraft: RscPictureKeepAspect {
             idc = ID_PICTURE_AIRCRAFT;
-            x = 0.245174 * safezoneW + safezoneX;
+            x = 0.171616 * safezoneW + safezoneX;
             y = 0.318 * safezoneH + safezoneY;
-            w = 0.294231 * safezoneW;
+            w = 0.440035 * safezoneW;
             h = 0.392 * safezoneH;
         };
         class CheckboxMirror: RscCheckBox {
             idc = ID_CHECKBOX_MIRROR;
             x = 0.171616 * safezoneW + safezoneX;
             y = 0.318 * safezoneH + safezoneY;
-            w = 0.0131354 * safezoneW;
+            w = 0.0165 * safezoneW;
             h = 0.028 * safezoneH;
         };
         class TextMirror: RscText {
             idc = ID_TEXT_MIRROR;
             text = CSTRING(Mirror);
-            x = 0.184751 * safezoneW + safezoneX;
+            x = 0.188116 * safezoneW + safezoneX;
             y = 0.318 * safezoneH + safezoneY;
             w = 0.0656768 * safezoneW;
             h = 0.028 * safezoneH;
@@ -64,13 +64,13 @@ class GVAR(DialogLoadout) {
             idc = ID_CHECKBOX_FRIES;
             x = 0.171616 * safezoneW + safezoneX;
             y = 0.346 * safezoneH + safezoneY;
-            w = 0.0131354 * safezoneW;
+            w = 0.0165 * safezoneW;
             h = 0.028 * safezoneH;
         };
         class TextFRIES: RscText {
             idc = ID_TEXT_FRIES;
             text = "FRIES";
-            x = 0.184751 * safezoneW + safezoneX;
+            x = 0.188116 * safezoneW + safezoneX;
             y = 0.346 * safezoneH + safezoneY;
             w = 0.0656768 * safezoneW;
             h = 0.028 * safezoneH;
@@ -152,14 +152,6 @@ class GVAR(DialogLoadout) {
             w = 0.440035 * safezoneW;
             h = 0.028 * safezoneH;
             colorBackground[] = {0.5,0,0,0.5};
-        };
-        class PictureRearm: RscPicture {
-            idc = ID_PICTURE_REARM;
-            text = "a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa";
-            x = 0.171616 * safezoneW + safezoneX;
-            y = 0.738 * safezoneH + safezoneY;
-            w = 0.0131354 * safezoneW;
-            h = 0.028 * safezoneH;
         };
     };
 };

@@ -28,8 +28,8 @@
     } forEach GVAR(aircraftWithPylons);
 
     [QGVAR(setPylonLoadOutEvent), {
-        params ["_aircraft", "_pylonIndex", "_pylon"];
-        _aircraft setPylonLoadOut [_pylonIndex, _pylon];
+        params ["_aircraft", "_pylonIndex", "_pylon", "_turret"];
+        _aircraft setPylonLoadOut [_pylonIndex, _pylon, false, _turret];
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(setAmmoOnPylonEvent), {

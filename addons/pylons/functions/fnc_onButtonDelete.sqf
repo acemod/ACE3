@@ -21,7 +21,7 @@ lbDelete [ID_LIST_LOADOUTS, lbCurSel ID_LIST_LOADOUTS];
 
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];
 private _index = {
-    if ((_x select 0) isEqualTo _loadoutName && {(_x select 2) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
+    if ((_x select 0) isEqualTo _loadoutName && {(_x select 3) isEqualTo typeOf GVAR(currentAircraft)}) exitWith {
         _forEachIndex
     };
 } forEach _aircraftLoadouts;
