@@ -36,7 +36,6 @@ if (!(_returnValue isEqualTo [])) then {
     private _inPilot = _targetMag in (_vehicle magazinesTurret [-1]);
     private _inGunner = _targetMag in (_vehicle magazinesTurret [0]);
 
-    [];
     if (_inPilot) then {
         if (_inGunner) then {
             TRACE_3("ambiguous - in both",_targetMag,_inPilot,_inGunner);
