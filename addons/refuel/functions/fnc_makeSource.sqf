@@ -56,8 +56,5 @@ if (
 if (_fuelCargoConfig != 0 || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
 
 private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
+[_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
 _source setVariable [QGVAR(initSource_jipID), _jipID];
-_source addEventHandler ["Deleted", {
-    // delete event from JIP stack to prevent deleted vehicle init
-    cba_events_eventNamespaceJIP setVariable [(_this select 0) getVariable QGVAR(initSource_jipID), nil, true];
-}];

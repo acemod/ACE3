@@ -30,6 +30,7 @@ if (!([ACE_player, objNull, ["isNotInside", "isNotSitting", "isNotSwimming"]] ca
 // Count mags
 private _fullMags = 0;
 private _partialMags = 0;
+private _bulletsLeft = 0;
 {
     _x params ["_classname", "_count"];
 
@@ -38,15 +39,16 @@ private _partialMags = 0;
             _fullMags = _fullMags + 1;
         } else {
             _partialMags = _partialMags + 1;
+            _bulletsLeft = _count;
         };
     };
 } forEach (magazinesAmmoFull ACE_player);
 
-private _repackedMagsText = format [localize LSTRING(RepackedMagazinesCount), _fullMags, _partialMags];
-
 private _structuredOutputText = if (_errorCode == 0) then {
+    private _repackedMagsText = format [localize LSTRING(RepackedMagazinesDetail), _fullMags, _bulletsLeft];
     format ["<t align='center'>%1</t><br/>%2", localize LSTRING(RepackComplete), _repackedMagsText];
 } else {
+    private _repackedMagsText = format [localize LSTRING(RepackedMagazinesCount), _fullMags, _partialMags];
     format ["<t align='center'>%1</t><br/>%2", localize LSTRING(RepackInterrupted), _repackedMagsText];
 };
 

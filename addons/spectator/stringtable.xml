@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_DisplayName">
@@ -43,10 +43,12 @@
         <Key ID="STR_ACE_Spectator_ai_DisplayName">
             <English>AI Enabled</English>
             <Japanese>AI にも有効化</Japanese>
+            <Italian>AI Abilitate</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
             <Japanese>スペクテイターで AI 視点を可能に</Japanese>
+            <Italian>Permette la visibilità delle AI in spettatore</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -244,10 +246,12 @@
         <Key ID="STR_ACE_Spectator_uiIcons">
             <English>Icons</English>
             <Japanese>アイコン</Japanese>
+            <Italian>Icone</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
             <Japanese>弾道表示</Japanese>
+            <Italian>Proiettili</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -257,7 +261,7 @@
             <Russian>Следующий юнит</Russian>
             <Czech>Následující jednotka</Czech>
             <Spanish>Siguiente unidad</Spanish>
-            <Italian>Prossima Unità</Italian>
+            <Italian>Unità Successiva</Italian>
             <French>Unité suivante</French>
             <Japanese>次のユニット</Japanese>
             <Korean>다음 인원</Korean>
@@ -272,7 +276,7 @@
             <Russian>Предыдущий юнит</Russian>
             <Czech>Předchozí jednotka</Czech>
             <Spanish>Anterior unidad</Spanish>
-            <Italian>Precedente Unità</Italian>
+            <Italian>Unità Precedente</Italian>
             <French>Unité précédente</French>
             <Japanese>前のユニット</Japanese>
             <Korean>이전 인원</Korean>
@@ -282,10 +286,12 @@
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Vision Mode</English>
             <Japanese>ビジョン モード</Japanese>
+            <Italian>Modalità Visiva</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
             <Japanese>速度低下</Japanese>
+            <Italian>Bassa Velocità</Italian>
         </Key>
     </Package>
 </Project>

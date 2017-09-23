@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Markers">
         <Key ID="STR_ACE_Markers_MarkerDirection">
@@ -21,51 +21,61 @@
             <English>Markers</English>
             <German>Markierungen</German>
             <Japanese>マーカー</Japanese>
+            <Italian>Marcatori</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_Module_Description">
             <English>This module allows you to customize markers placement.</English>
             <German>Dieses Modul ermöglicht die Steuerung der Platzierung von Markierungen.</German>
             <Japanese>モジュールではマーカー配置のカスタマイズを可能にします。</Japanese>
+            <Italian>Questo modulo permette di personalizzare i marcatori a piacimento.</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MovableMarkers_DisplayName">
             <English>Movable markers</English>
             <German>Bewegbare Markierungen</German>
             <Japanese>可動式マーカー</Japanese>
+            <Italian>Marcatori mobili</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MovableMarkers_Description">
             <English>Should map markers placed by players be movable?</English>
             <German>Sollen Markierungen, die von Spielern platziert wurden, verschiebbar sein?</German>
             <Japanese>プレイヤーによって配置されたマーカーを可動式にしますか？</Japanese>
+            <Italian>I marcatori in mappa piazzati dai giocatori dovrebbero poter essere mossi ?</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_DisplayName">
             <English>Move restriction</English>
             <German>Verschiebungsrestriktion</German>
             <Japanese>可動制限</Japanese>
+            <Italian>Restrizione di movimento</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Apply move restrictions so that not every player is able to move markers.</English>
             <German>Restriktionen, damit nicht jeder Spieler Marker verschieben kann</German>
             <Japanese>マーカーを可動出来るプレイヤーを決定します。</Japanese>
+            <Italian>Applica le restrizioni di movimento cosicchè ogni giocatore possa spostare i marcatori.</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
             <German>Alle Spieler</German>
             <Japanese>全プレイヤー</Japanese>
+            <Italian>Tutti i giocatori</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
             <German>Admins</German>
             <Japanese>管理者</Japanese>
+            <Italian>Amministratori</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
             <German>Gruppenführer</German>
             <Japanese>グループ リーダー</Japanese>
+            <Italian>Capigruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
             <German>Gruppenführer und Admins</German>
             <Japanese>グループ リーダーと管理者</Japanese>
+            <Italian>Capigruppo e Amministratori</Italian>
         </Key>
     </Package>
 </Project>

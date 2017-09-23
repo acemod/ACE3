@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Shows the hellfire hud when vehicle is equiped with the weapon.
+ * Shows the laser hud when vehicle is equiped with the weapon.
  * Shows laser code, fire mode and seeker status.
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [player] call ace_hellfire_fnc_showHud
+ * [player] call ace_laser_fnc_showVehicleHud
  *
  * Public: No
  */
@@ -28,8 +28,8 @@ if ((alive _player) && {_player != _vehicle}) then {
         _turretPath = _player call CBA_fnc_turretPath
     };
     {
-        if ((getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled))) == 1) then {
-            TRACE_1("enabled",_x);
+        if ((getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(showHud))) == 1) then {
+            TRACE_1("showHud",_x);
             _enabled = true;
         };
     } forEach (_vehicle weaponsTurret _turretPath);
@@ -46,9 +46,7 @@ GVAR(pfID) = -1;
 
 if (!_enabled) exitWith {TRACE_2("Disabled - Now Off",_enabled,GVAR(pfID));};
 
-TRACE_2("Enabled - Adding actions and PFEH",_enabled,GVAR(pfID));
-
-[_vehicle, _turretPath] call FUNC(setupVehicle);
+TRACE_2("Enabled - Adding PFEH",_enabled,GVAR(pfID));
 
 private _adjustDown = false; // Flares display will block ours, if present just move ours down a bit
 {
@@ -77,7 +75,7 @@ GVAR(pfID) = [{
     };
 
     private _currentWeapon = _vehicle currentWeaponTurret _turretPath;
-    private _showLockMode = (getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(enabled))) == 1;
+    private _showLockMode = (getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(showHud))) == 1;
 
     private _ctrlGroup = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl 1000;
 
@@ -100,24 +98,13 @@ GVAR(pfID) = [{
     private _foundTargetPos = _laserResult select 0;
     private _haveLock = !isNil "_foundTargetPos";
 
-    private _modeShort = "ERR";
-    private _vehicleLockMode = _vehicle getVariable [QEGVAR(missileguidance,attackProfile), ""];
+    private _defaultAttackProfile = getText (configFile >> "CfgAmmo" >> _ammo >> "ace_missileguidance" >> "defaultAttackProfile");
+    private _vehicleLockMode = _vehicle getVariable [QEGVAR(missileguidance,attackProfile), _defaultAttackProfile];
 
-    switch (_vehicleLockMode) do { // note: missileguidance is case sensitive
-    case ("hellfire_hi"): {
-            _modeShort = getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
-        };
-    case ("hellfire_lo"): {
-            _modeShort = getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
-        };
-        default {
-            _vehicleLockMode = "hellfire";
-            _modeShort = if (_haveLock) then {
-                getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "nameLocked");
-            } else {
-                getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
-            };
-        };
+    _modeShort = if (_haveLock) then {
+        getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "nameLocked");
+    } else {
+        getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
     };
 
     _ctrlIcon ctrlSetTextColor ([[0,0,0,0.25],[1,0,0,0.75]] select _haveLock);

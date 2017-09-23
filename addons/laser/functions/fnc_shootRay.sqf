@@ -1,18 +1,18 @@
 /*
  * Author: Nou, PabstMirror
- * Shoots a ray from a source to a direction and finds first intersction and distance
+ * Shoots a ray from a source to a direction and finds first intersction and distance.
  *
  * Arguments:
  * 0: Origin position ASL <ARRAY>
  * 1: Direction (normalized) <ARRAY>
- * 2: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
- * 2: Ignore 2 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ * 2: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
+ * 2: Ignore 2 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  *
  * Return Value:
  * [posASL, distance] - pos will be nil if no intersection <ARRAY>
  *
  * Example:
- * [getPosASL player, [0,1,0], player] call ace_laser_fnc_shootRay;
+ * [getPosASL player, [0,1,0], player] call ace_laser_fnc_shootRay
  *
  * Public: No
  */
