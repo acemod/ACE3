@@ -147,20 +147,20 @@ if (_key == DIK_F1) exitWith {
 };
 
 // Handle toggle focus info widget
-if (_key == DIK_P) exitWith {
+if (_key == DIK_I) exitWith {
     GVAR(uiWidgetVisible) = !GVAR(uiWidgetVisible);
     [] call FUNC(ui_updateWidget);
     true
 };
 
 // Handle toggling projectile drawing
-if (_key == DIK_O) exitWith {
+if (_key == DIK_P) exitWith {
     GVAR(drawProjectiles) = !GVAR(drawProjectiles);
     true
 };
 
 // Handle toggling unit drawing
-if (_key == DIK_I) exitWith {
+if (_key == DIK_O) exitWith {
     GVAR(drawUnits) = !GVAR(drawUnits);
     true
 };

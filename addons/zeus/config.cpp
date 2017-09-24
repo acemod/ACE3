@@ -8,11 +8,15 @@ class CfgPatches {
             QGVAR(moduleEditableObjects),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
+            QGVAR(moduleLoadIntoCargo),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
             QGVAR(moduleGarrison),
             QGVAR(moduleUnGarrison),
+            QGVAR(moduleTeleportPlayers),
+            QGVAR(moduleToggleNvg),
+            QGVAR(moduleToggleFlashlight),
             QGVAR(moduleSimulation),
             QGVAR(moduleSuppressiveFire),
             QGVAR(AddFullArsenal),
@@ -27,6 +31,7 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
+
     // Use additional CfgPatches to contextually remove modules from zeus
     class GVAR(captives): ADDON {
         units[] = {
@@ -40,6 +45,11 @@ class CfgPatches {
             QGVAR(moduleSetMedic),
             QGVAR(moduleSetMedicalVehicle),
             QGVAR(moduleSetMedicalFacility)
+        };
+    };
+    class GVAR(cargo): ADDON {
+        units[] = {
+            QGVAR(moduleLoadIntoCargo)
         };
     };
     class GVAR(cargoAndRepair): ADDON {
@@ -58,6 +68,7 @@ class CfgPatches {
 class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
+    GVAR(cargo) = "ace_cargo";
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
     GVAR(fastroping) = "ace_fastroping";
 };

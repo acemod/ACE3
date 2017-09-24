@@ -1017,23 +1017,72 @@
             <Chinese>火力壓制</Chinese>
             <Polish>Ogień zaporowy</Polish>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
-            <English>Add full arsenal to object</English>
-            <French>Ajouter arsenal complet à l'objet</French>
-            <Italian>Aggiunge arsenale completo all'oggetto</Italian>
+        <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
+            <English>Add Full Arsenal</English>
+            <French>Ajouter Arsenal Complet</French>
+            <Italian>Aggiungi Arsenale Completo</Italian>
             <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
             <Chinesesimp>增加完整的虚拟军火库到物件上</Chinesesimp>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
-            <Polish>Dodaj Wirtualny Arsenał do obiektu</Polish>
+            <Polish>Dodaj Wirtualny Arsenał</Polish>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
-            <English>Remove arsenal from object</English>
-            <French>Retirer arsenal de l'objet</French>
-            <Italian>Rimuove arsenale completo dall'oggetto</Italian>
+        <Key ID="STR_ACE_Zeus_ModuleRemoveArsenal_DisplayName">
+            <English>Remove Arsenal</English>
+            <French>Retirer Arsenal</French>
+            <Italian>Rimuovi Arsenale</Italian>
             <Japanese>オブジェクトからアーセナルを削除</Japanese>
             <Chinesesimp>移除物件上的虚拟军火库</Chinesesimp>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
-            <Polish>Usuń Wirtualny Arsenał z obiektu</Polish>
+            <Polish>Usuń Wirtualny Arsenał</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
+            <English>Load into Cargo</English>
+            <Italian>Carica nel Cargo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
+            <English>Toggle NVGs</English>
+            <French>Basculer JVN</French>
+            <Italian>Attiva NVGs</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
+            <English>NVG equipment</English>
+            <French>Equipment de vision nocturne</French>
+            <Italian>Attrezzatura NVG</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
+            <English>Add or remove NVGs from units</English>
+            <French>Ajouter ou retirer JVN des unités</French>
+            <Italian>Aggiunge o rimuove NVGs alle unità</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
+            <English>Toggle NVG target</English>
+            <French>Cible du basculement</French>
+            <Italian>Attiva obiettivo NVG</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
+            <English>Selected group</English>
+            <French>Groupe sélectionné</French>
+            <Italian>Gruppo selezionato</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
+            <English>Toggle flashlights</English>
+            <French>Basculer lampes torches</French>
+            <Italian>Attiva torce</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
+            <English>Toggle flashlight target</English>
+            <French>Cible du basculement</French>
+            <Italian>Attiva obiettivo torcia</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
+            <English>Flashlight</English>
+            <French>Lampe torche</French>
+            <Italian>Torcia</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
+            <English>Add gear</English>
+            <French>Ajouter équipement</French>
+            <Italian>Aggiungi equipaggiamento</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison group</English>

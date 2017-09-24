@@ -83,7 +83,7 @@ GVAR(isOpeningDoor) = false;
     call EFUNC(interaction,openDoor);
     true
 }, {
-    //Probably don't want any condidtions here, so variable never gets locked down
+    //Probably don't want any conditions here, so variable never gets locked down
     // Statement
     GVAR(isOpeningDoor) = false;
     true
