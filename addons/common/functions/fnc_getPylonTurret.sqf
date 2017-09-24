@@ -1,13 +1,13 @@
 /*
  * Author: PabstMirror
- * Finds turret owner of a pylon
+ * Finds turret owner of a pylon.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Pylon Index (starting at 0) <NUMBER>
  *
  * Return Value:
- * <ARRAY> (turret Index, either [-1] or [0])
+ * * Turret index (either [-1] or [0]) <ARRAY>
  *
  * Example:
  * [cursorObject, 0] call ace_common_fnc_getPylonTurret
@@ -24,13 +24,13 @@ private _pylonTurrets = _vehicle getVariable ["ace_pylonTurrets", []];
 private _returnValue = _pylonTurrets param [_pylonIndex, []];
 
 if (!(_returnValue isEqualTo [])) then {
-    TRACE_1("Using ace_pylonTurrets value",_savedValue);
+    TRACE_1("Using ace_pylonTurrets value",_returnValue);
 } else {
     // Attempt to determine turret owner based on magazines in the vehicle
     private _pyMags = getPylonMagazines _vehicle;
     private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> typeOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
-    if (_pylonIndex >= (count _pyMags)) exitWith {ERROR("out of bounds"); []};
-    if (_pylonIndex >= (count _pylonConfigs)) exitWith {ERROR("out of bounds"); []};
+    if (_pylonIndex >= (count _pyMags)) exitWith {ERROR("out of bounds");};
+    if (_pylonIndex >= (count _pylonConfigs)) exitWith {ERROR("out of bounds");};
 
     private _targetMag = _pyMags select _pylonIndex;
     private _inPilot = _targetMag in (_vehicle magazinesTurret [-1]);
