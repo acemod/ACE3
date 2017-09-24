@@ -3,7 +3,7 @@
  * Un-garrison a garrisoned group.
  *
  * Arguments:
- * 0: The module logic <OBJECT>
+ * 0: Module logic <OBJECT>
  *
  * Return Value:
  * None

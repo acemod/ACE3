@@ -1,9 +1,9 @@
 /*
  * Author: alganthe
- * Initalises the `Garrison` zeus module display.
+ * Initalises the "Garrison" zeus module display.
  *
  * Arguments:
- * 0: garrison controls group <CONTROL>
+ * 0: Garrison controls group <CONTROL>
  *
  * Return Value:
  * None

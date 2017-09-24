@@ -3,7 +3,7 @@
  * Module calling the garrison function.
  *
  * Arguments:
- * 0: The module logic <OBJECT>
+ * 0: Module logic <OBJECT>
  * 1: Position of the module <POSITION>
  * 2: Radius of the task <NUMBER>
  * 3: Filling mode of the garrison function <NUMBER>
@@ -50,7 +50,7 @@ switch (false) do {
 };
 
 private _units = units _unit;
-// Make sure all units are disembarked.
+// Make sure all units are disembarked
 {
     if (vehicle _x != _x) then {
         moveOut _x;

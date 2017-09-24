@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ai">
-     <Key ID="STR_ACE_Common_GarrisonInvalidPosition">
+     <Key ID="STR_ACE_ai_GarrisonInvalidPosition">
             <English>Invalid position provided.</English>
             <French>Position invalide fourni</French>
         </Key>
-        <Key ID="STR_ACE_Common_GarrisonNoUnits">
+        <Key ID="STR_ACE_ai_GarrisonNoUnits">
             <English>No units provided.</English>
             <French>Aucune unité fourni</French>
         </Key>
-        <Key ID="STR_ACE_Common_GarrisonNotEnoughPos">
+        <Key ID="STR_ACE_ai_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
             <French>Il n'y a pas assez de positions pour placer toutes les unités</French>
         </Key>
-        <Key ID="STR_ACE_Common_GarrisonNoBuilding">
+        <Key ID="STR_ACE_ai_GarrisonNoBuilding">
             <English>No building found.</English>
             <French>Aucun bâtiment trouvé</French>
         </Key>

@@ -32,13 +32,9 @@ if (count _unitsArray == 0 || {isNull (_unitsArray select 0)}) exitWith {
     [LSTRING(GarrisonNoUnits)] call EFUNC(common,displayTextStructured);
 };
 
-private _buildings = [];
-
-if (_fillingRadius < 50) then {
-    _buildings = nearestObjects [_startingPos, _buildingTypes, 50];
-} else {
-    _buildings = nearestObjects [_startingPos, _buildingTypes, _fillingRadius];
-    _buildings = _buildings call BIS_fnc_arrayShuffle;
+private _buildings = nearestObjects [_startingPos, _buildingTypes, ([_fillingRadius, 50] select (_fillingRadius < 50))];
+if (_fillingRadius >= 50) then {
+    _buildings = [_buildings] call CBA_fnc_shuffle;
 };
 
 if (count _buildings == 0) exitWith {
