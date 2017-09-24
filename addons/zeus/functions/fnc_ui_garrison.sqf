@@ -36,7 +36,7 @@ private _fnc_errorAndClose = {
     params ["_msg"];
     _display closeDisplay 0;
     deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
+    [_msg] call FUNC(showMessage);
     breakOut "Main";
 };
 
@@ -56,7 +56,7 @@ switch (false) do {
 };
 
 //Specific on-load stuff:
-private _listbox = _display displayCtrl 73062;
+private _listbox = _display displayCtrl 73063;
 {
     _listbox lbSetValue  [_listbox lbAdd (_x select 0), _x select 1];
 } forEach [
@@ -69,6 +69,7 @@ _listbox lbSetCurSel 0;
 
 //Specific on-load stuff:
 (_display displayCtrl 73061) cbSetChecked (_logic getVariable ["TopDownFilling",false]);
+(_display displayCtrl 73062) cbSetChecked (_logic getVariable ["Teleport",false]);
 
 private _fnc_onUnload = {
     params ["_display"];
@@ -76,8 +77,7 @@ private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
-    // Store checkbox value for reopening
-    _logic setVariable ["TopDownFilling", cbChecked (_display displayCtrl 73061)];
+    deleteVehicle _logic;
 };
 
 private _fnc_onConfirm = {
@@ -89,14 +89,15 @@ private _fnc_onConfirm = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
-    private _lb = _display displayCtrl 73062;
+    private _lb = _display displayCtrl 73063;
 
     private _radius = GETVAR(_display,GVAR(radius),50);
     private _position = GETVAR(_display,GVAR(position),getPos _logic);
     private _mode = _lb lbValue (lbCurSel _lb);
     private _TopDownFilling = cbChecked (_display displayCtrl 73061);
+    private _teleport = cbChecked (_display displayCtrl 73062);
 
-    [_logic, _position ,_radius, _mode, _TopDownFilling] call FUNC(moduleGarrison);
+    [_logic, _position ,_radius, _mode, _TopDownFilling, _teleport] call FUNC(moduleGarrison);
 };
 
 _display displayAddEventHandler ["unload", _fnc_onUnload];

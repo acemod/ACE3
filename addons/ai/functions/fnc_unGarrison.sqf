@@ -21,11 +21,14 @@ params [["_units", [], [[]]]];
 _units = _units select {local _x};
 
 {
-    if !(isPlayer _x || {!local _x}) then {
-        _x enableAI "AUTOCOMBAT";
+    if (!isPlayer _x && {local _x}) then {
         _x enableAI "PATH";
 
         private _leader = leader _x;
+
+        TRACE_3("fnc_ungarrison: unit and leader",_x , _leader, (_leader == _x));
+
+        _x setVariable [QGVAR(garrisonned), false, true];
 
         if (_leader != _x) then {
             doStop _x;
@@ -33,6 +36,21 @@ _units = _units select {local _x};
 
         } else {
             _x doMove ((nearestBuilding (getPos _x)) buildingExit 0);
+        };
+
+        private _fnc_countGarrisonnedUnits = {
+            params ["_unit", "_bool"];
+            if (_bool) then {
+                ({(_x getVariable [QGVAR(garrisonned), false])} count units _unit)
+            } else {
+                ({!(_x getVariable [QGVAR(garrisonned), false])} count units _unit)
+            };
+            
+        };
+
+        if ([_x, true] call _fnc_countGarrisonnedUnits == count (units _x) -1 || {[_x, false] call _fnc_countGarrisonnedUnits == count (units _x)}) then {
+            LOG("fnc_ungarrison: enableAttack true");
+            (group _x) enableAttack true;
         };
     };
 } foreach _units;

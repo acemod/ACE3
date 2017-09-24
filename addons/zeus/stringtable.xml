@@ -1112,6 +1112,10 @@
             <English>Random filling</English>
             <French>Remplir au hasard</French>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
+            <English>Teleport</English>
+            <French>Téléporter</French>
+        </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonPlayer">
             <English>Unit must not be a player</English>
             <French>L'unité ne doit pas être un joueur</French>

@@ -507,19 +507,35 @@ class GVAR(RscGarrison): RscDisplayAttributes {
                             w = W_PART(1);
                             h = H_PART(1);
                         };
+                        class TeleportTitle: Title {
+                            idc = -1;
+                            text = CSTRING(ModuleGarrison_TeleportText);
+                            x = 0;
+                            y = H_PART(2.3);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class Teleport: RscCheckBox {
+                            idc = 73062;
+                            x = W_PART(10.1);
+                            y = H_PART(2.3);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                        };
                         class FillingModeTitle: RscText {
                             idc = -1;
                             text = CSTRING(ModuleGarrison_FillingModeText);
                             x = 0;
-                            y = H_PART(2.3);
+                            y = H_PART(3.5);
                             w = W_PART(26);
                             h = H_PART(1);
                             colorBackground[] = {0,0,0,0.5};
                         };
                         class FillingMode: RscListbox {
-                            idc = 73062;
+                            idc = 73063;
                             x = 0;
-                            y = H_PART(3.3);
+                            y = H_PART(4.5);
                             w = W_PART(26);
                             h = H_PART(4);
                         };

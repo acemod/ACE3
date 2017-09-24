@@ -20,7 +20,7 @@
 
 #include "script_component.hpp"
 
-params ["_logic", "_pos", "_radius" ,"_mode" , "_topDownMode"];
+params ["_logic", "_pos", "_radius" ,"_mode" , "_topDownMode", "_teleport"];
 
 private _unit = (attachedTo _logic);
 private _building = nearestBuilding (getPosASL _unit);
@@ -57,6 +57,6 @@ private _units = units _unit;
     };
 } forEach _units;
 
-[_pos, ["Building"], _units, _radius, _mode, _topDownMode] call EFUNC(ai,garrison);
+[_pos, ["Building"], _units, _radius, _mode, _topDownMode, _teleport] call EFUNC(ai,garrison);
 
 deleteVehicle _logic;
