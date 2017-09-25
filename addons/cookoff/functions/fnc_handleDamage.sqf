@@ -64,9 +64,9 @@ if (_simulationType == "tank") exitWith {
         _hitpoint = "#subturret";
     };
 
-    // ammo was hit, high chance for cook-off
+    // ammo was hit, variable chance for cook-off
     if (_hitpoint == _ammoLocationHitpoint) then {
-        if (_damage > 0.5 && {random 1 < 0.7}) then {
+        if (_damage > 0.5 && {random 1 < GVAR(ammoCookoffProbability)}) then {
             _vehicle call FUNC(cookOff);
         };
     } else {

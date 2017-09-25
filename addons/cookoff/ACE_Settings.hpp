@@ -24,4 +24,10 @@ class ACE_Settings {
         value = 1;
         typeName = "SCALAR";
     };
+    class GVAR(ammoCookoffProbability) {
+        displayName = CSTRING(ammoCookoffProbability_name);
+        description = CSTRING(ammoCookoffProbability_tooltip);
+        value = 0.7;
+        typeName = "SCALAR";
+    };
 };

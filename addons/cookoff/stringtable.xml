@@ -104,5 +104,11 @@
             <Chinese>設定彈藥殉爆效果會持續多久時間 [輸入0來關閉殉爆效果]</Chinese>
             <Chinesesimp>设定弹药殉爆效果会持续多久时间 [输入0来关闭殉爆效果]</Chinesesimp>
         </Key>
+		<Key ID="STR_ACE_CookOff_ammoCookoffProbability_name">
+			<English>Ammunition cook off probability</English>
+		</Key>
+		<Key ID="STR_ACE_CookOff_ammoCookoffProbability_tooltip">
+			<English>Chance of a vehicle cooking off when its ammunition stores are hit, from 0.0 to 1.0</English>
+		</Key>
     </Package>
 </Project>
