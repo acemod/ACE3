@@ -5,10 +5,10 @@ class CfgVehicles {
             class ACE_RepackMagazines {
                 displayName = CSTRING(RepackMagazines);
                 condition = QUOTE(true);
-                exceptions[] = {"isNotInside", "isNotSitting"};
+                exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                 insertChildren = QUOTE(_this call FUNC(getMagazineChildren));
                 priority = -2;
-                icon = QPATHTOF(UI\repack_ca.paa);
+                icon = QPATHTOEF(common,UI\repack_ca.paa);
             };
         };
     };

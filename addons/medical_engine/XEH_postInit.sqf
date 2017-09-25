@@ -48,6 +48,7 @@
 // needed, because the vanilla INCAPACITATED state does not handle vehicles
 ["CAManBase", "GetInMan", {
     params ["_unit"];
+    if (!local _unit) exitWith {};
 
     if (lifeState _unit == "INCAPACITATED") then {
         [_unit, true] call FUNC(setUnconsciousAnim);

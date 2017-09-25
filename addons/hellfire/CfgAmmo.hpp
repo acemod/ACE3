@@ -19,7 +19,7 @@ class CfgAmmo {
         laserLock = 0;
         manualControl = 0;
         maxSpeed = 450;
-        
+
         thrustTime = 2.5; // motor burn 2-3 sec
         thrust = 250;
         timeToLive = 40;
@@ -52,6 +52,19 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = "hellfire";
             attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
+        };
+    };
+    class ACE_Hellfire_AGM114N: ACE_Hellfire_AGM114K {
+        displayName = "AGM-114N";
+        displayNameShort = "AGM-114N";
+        description = "AGM-114N";
+        descriptionShort = "AGM-114N";
+        hit = 1100;
+        indirectHit = 200;
+        indirectHitRange = 10;
+        explosionEffects = "BombExplosion";
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1; // Missile Guidance must be explicitly enabled
         };
     };
 };

@@ -52,7 +52,6 @@ class ATragMX_RscButton {
     shadow=0;
 };
 class ATragMX_RscEdit {
-    access=0;
     type=2;
     style=ST_RIGHT;
     x=0;

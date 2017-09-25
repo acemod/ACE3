@@ -19,7 +19,7 @@
 
 params ["_player", "_target", "_name"];
 
-if (!([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {[]};
+if (!([ACE_player, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith))) exitWith {[]};
 
 private _collectedActions = [];
 private _bodyPart = EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart);
