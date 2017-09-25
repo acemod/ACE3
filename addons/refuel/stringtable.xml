@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -285,7 +285,7 @@
             <Spanish>La fuente de combustible está vacía.</Spanish>
             <French>La source de carburant est vide.</French>
             <Japanese>給油元は空です。</Japanese>
-            <Korean>재급유처가 비었음.</Korean>
+            <Korean>연료공급처가 비었음.</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_TooFar">
             <English>Maximum fuel hose length reached.</English>

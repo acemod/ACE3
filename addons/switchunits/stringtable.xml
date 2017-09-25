@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -13,7 +13,7 @@
             <Italian>Cambia unità</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
             <Japanese>ユニットを切り替え</Japanese>
-            <Korean>인원으로 전환</Korean>
+            <Korean>인원 전환</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
             <English>Trying to switch</English>
@@ -54,7 +54,7 @@
             <Russian>Переключение между юнитами</Russian>
             <Italian>Sistema Cambio Unità</Italian>
             <Japanese>SwitchUnits システム</Japanese>
-            <Korean>인원전환 시스템</Korean>
+            <Korean>인원 전환 시스템</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -68,7 +68,7 @@
             <Russian>На синих?</Russian>
             <Italian>Cambia per BLUFOR?</Italian>
             <Japanese>ウエストへ切り替えますか？</Japanese>
-            <Korean>서방으로 전환합니까?</Korean>
+            <Korean>청군으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -82,7 +82,7 @@
             <Russian>Разрешить переключаться на синих юнитов?</Russian>
             <Italian>Consenti passaggio ad unità BLUFOR?</Italian>
             <Japanese>ウエスト側ユニットへ切り替えられるようにしますか？</Japanese>
-            <Korean>서방 인원으로 전환합니까?</Korean>
+            <Korean>청군 인원으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
@@ -96,7 +96,7 @@
             <Russian>На красных?</Russian>
             <Italian>Cambia per OPFOR?</Italian>
             <Japanese>イースト側へ切り替えますか？</Japanese>
-            <Korean>동방으로 전환합니까?</Korean>
+            <Korean>대항군으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -110,7 +110,7 @@
             <Russian>Разрешить переключаться на красных юнитов?</Russian>
             <Italian>Consenti passaggio ad unità OPFOR?</Italian>
             <Japanese>イースト側ユニットへ切り替えられるようにしますか？</Japanese>
-            <Korean>동방인원으로 전환합니까?</Korean>
+            <Korean>대항군 인원으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
@@ -124,7 +124,7 @@
             <Russian>На независимых?</Russian>
             <Italian>Cambia per INDFOR?</Italian>
             <Japanese>インデペンデントへ切り替えますか？</Japanese>
-            <Korean>중립으로 전환합니까?</Korean>
+            <Korean>독립군 으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -138,7 +138,7 @@
             <Russian>Разрешить переключаться на независимых юнитов?</Russian>
             <Italian>Consenti passaggio ad unità INDFOR?</Italian>
             <Japanese>インデペンデント側ユニットへ切り替えられるようにしますか？</Japanese>
-            <Korean>중립 인원으로 전환합니까?</Korean>
+            <Korean>독립군 인원으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>

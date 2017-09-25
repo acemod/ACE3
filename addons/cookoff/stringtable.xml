@@ -59,12 +59,15 @@
             <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がりす。</Japanese>
             <German>Ermöglicht Selbstzündung von Munition. Feuert Projektile der Munition ab, solange das Fahrzeug brennt und Munition besitzt.</German>
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
+            <Korean>쿡오프 현상을 활성화 합니다. 이것은 탄약에 불이 붙어있는 동안 주변에 발사체를 발사합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
+            <Korean>쿡오프 지속 시간</Korean>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
+            <Korean>쿡오프 지속 시간의 배수 [0 이면 비활성]</Korean>
         </Key>
     </Package>
 </Project>

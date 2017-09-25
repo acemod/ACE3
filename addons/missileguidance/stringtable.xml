@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Title">
@@ -153,6 +153,7 @@
             <Russian>Игрок и боты</Russian>
             <Italian>Giocatore ed IA</Italian>
             <Japanese>プレイヤーと AI</Japanese>
+            <Korean>플레이어와 AI</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Cycle Fire Mode</English>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Fastroping">
         <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
@@ -114,6 +114,7 @@
             <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
             <Japanese>ユニットへファスト ロープをさせる</Japanese>
             <Polish>ZJAZD NA LINACH</Polish>
+            <Korean>패스트 로프를 놓음</Korean>
         </Key>
     </Package>
 </Project>

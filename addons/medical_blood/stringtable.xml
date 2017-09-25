@@ -20,6 +20,7 @@
             <Japanese>ダメージを受けたり、出血していると血が滴る様子の有効か無効化</Japanese>
             <German>Aktiviere oder deaktiviere Blutspritzer, die durch Blutungen oder bei Schadensnahme entstehen.</German>
             <Polish>Włącz lub wyłącz pozostawianie śladów krwi na ziemi kiedy postać odnosi obrażenia bądź krwawi</Polish>
+            <Korean>출혈이나 부상을 입었을 때, 떨어지는 혈액을 활성화 하거나 비활성화 합니다.</Korean>
         </Key>
     </Package>
 </Project>

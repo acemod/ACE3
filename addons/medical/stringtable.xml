@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -893,7 +893,7 @@
             <Italian>Ha perso parecchio sangue</Italian>
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Japanese>大量出血している</Japanese>
-            <Korean>많은 양의 혈액을 잃음</Korean>
+            <Korean>혈액 부족</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -921,7 +921,7 @@
             <Italian>Ricevendo EV [%1ml]</Italian>
             <Portuguese>Recebendo IV [%1ml]</Portuguese>
             <Japanese>IV [%1ml] を投与されている</Japanese>
-            <Korean>IV로 [%1ml] 수혈중</Korean>
+            <Korean>IV처리 [%1ml] 수혈중</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
@@ -1562,7 +1562,7 @@
             <Czech>Použít osobní lékárničku (PAK)</Czech>
             <Italian>Usa il pronto soccorso personale</Italian>
             <Japanese>応急処置キットをつかう</Japanese>
-            <Korean>개 응급 키트사용하기</Korean>
+            <Korean>개인 응급 키트사용하기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -1632,7 +1632,7 @@
             <Portuguese>Saco para cadáver</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋</Japanese>
-            <Korean>시체 운반 부대</Korean>
+            <Korean>시체 운반 가방</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
@@ -1646,7 +1646,7 @@
             <Portuguese>Um saco para corpos mortos</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
-            <Korean>시체를 운반할때 쓰는 부대입니다</Korean>
+            <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Use">
             <English>A bodybag for dead bodies</English>
@@ -1660,7 +1660,7 @@
             <Portuguese>Um saco para corpos mortos.</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
-            <Korean>시체를 운반할때 쓰는 부대입니다</Korean>
+            <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -1744,7 +1744,7 @@
             <Portuguese>Pressão Arterial baixa</Portuguese>
             <Czech>Naměřil si nízký krevní tlak</Czech>
             <Japanese>血圧はかなり低い</Japanese>
-            <Korean>혈압이 매우 낮다</Korean>
+            <Korean>혈압이 낮음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
@@ -1758,7 +1758,7 @@
             <Portuguese>Pressão Arterial normal</Portuguese>
             <Czech>Naměřil si normální krevní tlak</Czech>
             <Japanese>血圧は通常</Japanese>
-            <Korean>혈압이 정상이다</Korean>
+            <Korean>혈압이 정상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
@@ -1772,7 +1772,7 @@
             <Portuguese>Pressão Arterial Alta</Portuguese>
             <Czech>Naměřil si vysoký krevní tlak</Czech>
             <Japanese>血圧はかなり高い</Japanese>
-            <Korean>혈압이 매우 높다</Korean>
+            <Korean>혈압이 높음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
@@ -1982,7 +1982,7 @@
             <Portuguese>A Freqüência Cardíaca é de %2</Portuguese>
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
             <Japanese>心拍数は %2</Japanese>
-            <Korean>맥박이 %2 이다</Korean>
+            <Korean>맥박 %2</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
@@ -1996,7 +1996,7 @@
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal si slabý srdeční puls</Czech>
             <Japanese>自分の心拍数は低い</Japanese>
-            <Korean>약한 맥박이다</Korean>
+            <Korean>약한 맥박</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
@@ -2010,7 +2010,7 @@
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
             <Czech>Nahmatal si silný srdeční puls</Czech>
             <Japanese>自分の心拍数は強い</Japanese>
-            <Korean>강한 맥박이다</Korean>
+            <Korean>강한 맥박</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
@@ -2024,7 +2024,7 @@
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
             <Czech>Nahmatal si normální srdeční puls</Czech>
             <Japanese>自分の心拍数は通常</Japanese>
-            <Korean>보통 맥박이다</Korean>
+            <Korean>보통 맥박</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
@@ -2038,7 +2038,7 @@
             <Portuguese>Sem Freqüência Cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
             <Japanese>心拍数を測れなかった</Japanese>
-            <Korean>맥박을 찾을 수가 없다</Korean>
+            <Korean>맥박 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response">
             <English>Response</English>
@@ -2080,7 +2080,7 @@
             <Portuguese>%1 está respondendo</Portuguese>
             <Czech>%1 odpovídá</Czech>
             <Japanese>%1 は反応あり</Japanese>
-            <Korean>%1 은 반응이있다</Korean>
+            <Korean>%1 은 반응이 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
@@ -2094,7 +2094,7 @@
             <Portuguese>%1 não está respondendo</Portuguese>
             <Czech>%1 neodpovídá</Czech>
             <Japanese>%1 の反応なし</Japanese>
-            <Korean>%1 은 반응이없다</Korean>
+            <Korean>%1 은 반응이 없다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -2444,7 +2444,7 @@
             <Portuguese>Colocar corpo dentro do saco para cadáver</Portuguese>
             <Czech>Umístni tělo do pytle na mrtvoly</Czech>
             <Japanese>死体袋に入れる</Japanese>
-            <Korean>시체 운반 부대에 담기</Korean>
+            <Korean>시체 가방에 담기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -2458,7 +2458,7 @@
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
             <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
             <Japanese>死体袋へ梱包中・・・</Japanese>
-            <Korean>시체 운반 부대에 담는중...</Korean>
+            <Korean>시체 가방에 담는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -2472,7 +2472,7 @@
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
             <Japanese>%1 は包帯を巻いた</Japanese>
-            <Korean>%1 (이)가 붕대를 감아줬다</Korean>
+            <Korean>%1 (이)가 붕대를 감음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_CPR">
             <English>%1 performed CPR</English>
@@ -2485,7 +2485,7 @@
             <Spanish>%1 realicó RCP</Spanish>
             <French>%1 à fait une RPC</French>
             <Japanese>%1 は心肺蘇生をした</Japanese>
-            <Korean>%1 (이)가 심폐소생술을 실시했다</Korean>
+            <Korean>%1 (이)가 심폐소생술을 실시함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -2499,7 +2499,7 @@
             <Portuguese>%1 usou %2</Portuguese>
             <Czech>%1 použil %2</Czech>
             <Japanese>%1 は %2 をつかった</Japanese>
-            <Korean>%1 (이)가 %2 을 썼다</Korean>
+            <Korean>%1 (이)가 %2 을 사용함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_gaveIV">
             <English>%1 has given an IV</English>
@@ -2513,7 +2513,7 @@
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
             <Japanese>%1 は IV を与えた</Japanese>
-            <Korean>%1 (이)가 IV를 실시했다</Korean>
+            <Korean>%1 (이)가 IV를 실시함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
@@ -2527,7 +2527,7 @@
             <Portuguese>%1 aplicou um torniquete</Portuguese>
             <Czech>%1 použil škrtidlo</Czech>
             <Japanese>%1 は止血帯を巻いた</Japanese>
-            <Korean>%1 (이)가 지혈대를 적용했다</Korean>
+            <Korean>%1 (이)가 지혈대를 적용함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
@@ -2540,7 +2540,7 @@
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
             <French>%1 à utilisé un PAK</French>
             <Japanese>%1 は応急処置キットをつかった</Japanese>
-            <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
+            <Korean>%1 (이)가 개인응급키트를 사용함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2693,7 +2693,7 @@
             <Russian>Боль приглушается только временно</Russian>
             <Italian>Dolore è soppresso solo temporaneamente</Italian>
             <Japanese>痛みは一時的な影響</Japanese>
-            <Korean>고통은 일시적으로만 회복가능</Korean>
+            <Korean>고통은 일시적으로만 회복</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -3406,7 +3406,7 @@
             <French>Locations boost l'entraînement de médecin</French>
             <Russian>Места ускоренного обучения</Russian>
             <Japanese>衛生兵としての能力を与える場所</Japanese>
-            <Korean>교육 증가 지역</Korean>
+            <Korean>의료 효과 증가 지역</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
@@ -4684,7 +4684,7 @@
             <Hungarian>Hozzárendeli az ACE orvosi jelzőt egy egységhez</Hungarian>
             <Italian>Assegna la classe medico ACE ad un'unità</Italian>
             <Japanese>ユニットを ACE の衛生兵として割り当てる</Japanese>
-            <Korean>차량에 ACE 의무병 보직 선정</Korean>
+            <Korean>병력에 ACE 의무병 보직 선정</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_DisplayName">
             <English>Set Medical Facility [ACE]</English>

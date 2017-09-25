@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
         <Key ID="STR_ACE_Frag_Module_DisplayName">
@@ -177,6 +177,7 @@
             <Russian>(Только для одиночной игры) Требует перезапуска миссии/редактора. Включает визуальные следы от осколков и обломков в режиме одиночной игры.</Russian>
             <Italian>(Solo SP) Richiede un restart editor/missione. Abilita il tracciamento visivo di schegge da frammentazione/spalling in modalità Giocatore Singolo.</Italian>
             <Japanese>(SP のみ) ミッションとエディタの再起動が必要です。有効化すると、シングルプレイでのみ破片と剥離の弾頭が見えるようになります。</Japanese>
+            <Korean>(SP 전용) 임무 / 편집자가 다시 시작해야합니다. SP 게임 모드에서만 조각화 및 스 폴링 라운드의 시각적 추적을 가능하게합니다.</Korean>
         </Key>
     </Package>
 </Project>

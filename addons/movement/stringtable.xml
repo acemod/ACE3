@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Movement">
         <Key ID="STR_ACE_Movement_UseImperial">
@@ -55,6 +55,7 @@
             <Italian>Non puoi arrampicarti qui</Italian>
             <Portuguese>Não se pode subir aqui</Portuguese>
             <Japanese>ここは登れない</Japanese>
+            <Korean>여기는 올라갈 수 없다</Korean>
         </Key>
     </Package>
 </Project>

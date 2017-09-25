@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_Deploy">
@@ -97,7 +97,7 @@
             <Czech>Rallypoint Západ (Základna)</Czech>
             <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
             <Japanese>ラリーポイント ウエスト (ベース)</Japanese>
-            <Korean>서쪽 집결지 (기지)</Korean>
+            <Korean>청군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -111,7 +111,7 @@
             <Czech>Ralllypoint Východ (Základna)</Czech>
             <Portuguese>Ponto de encontro Lest (Base)</Portuguese>
             <Japanese>ラリーポイント イースト (ベース)</Japanese>
-            <Korean>동쪽 집결지 (기지)</Korean>
+            <Korean>대항군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -125,7 +125,7 @@
             <Czech>Rallypoint Nezávislý (Základna)</Czech>
             <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
             <Japanese>ラリーポイント インデペンデント (ベース)</Japanese>
-            <Korean>독립 집결지 (기지)</Korean>
+            <Korean>독립군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -139,7 +139,7 @@
             <Czech>Rallypoint Západ</Czech>
             <Portuguese>Ponto de encontro Oeste</Portuguese>
             <Japanese>ラリーポイント ウエスト</Japanese>
-            <Korean>서쪽 집결지</Korean>
+            <Korean>청군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -153,7 +153,7 @@
             <Czech>Rallypoint Východ</Czech>
             <Portuguese>Ponto de encontro Leste</Portuguese>
             <Japanese>ラリーポイント イースト</Japanese>
-            <Korean>동쪽 집결지</Korean>
+            <Korean>대항군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -167,7 +167,7 @@
             <Czech>Rallypoint Nezávislý</Czech>
             <Portuguese>Ponto de encontro Independente</Portuguese>
             <Japanese>ラリーポイント インデペンデント</Japanese>
-            <Korean>독립 집결지</Korean>
+            <Korean>독립군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
