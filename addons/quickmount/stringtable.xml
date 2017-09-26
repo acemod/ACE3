@@ -12,7 +12,7 @@
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindName">
             <English>Vehicle quick mount</English>
-            <German>Fahrzeug Schnellzugang</German>
+            <German>Fahrzeug-Schnellzugang</German>
             <Polish>Szybkie wsiadanie do pojazdu</Polish>
             <Italian>Entrata rapida veicolo</Italian>
             <Japanese>車両クイック マウント</Japanese>
@@ -75,7 +75,7 @@
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
-            <German>Maximal Geschwindigkeit (km/h) zum Schnelleinstieg</German>
+            <German>Maximal Geschwindigkeit (km/h) zum Schnellzugang</German>
             <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
             <Japanese>プレイヤーが搭乗できる限界速度 (km/h)</Japanese>
             <Chinesesimp>设置玩家能在最高多少的速度之下进入载具.</Chinesesimp>
@@ -84,7 +84,7 @@
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
-            <German>Priorisierter Sitz</German>
+            <German>Priorisierter Sitzplatz</German>
             <Italian>Priorità Sedile</Italian>
             <Japanese>優先席</Japanese>
             <Chinesesimp>优先座位</Chinesesimp>
@@ -93,7 +93,7 @@
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
-            <German>Priorisierter Sitz zum Schnelleinstieg</German>
+            <German>Priorisierter Sitzplatz zum Schnellzugang</German>
             <Italian>Priorità del sedile in entrata</Italian>
             <Japanese>搭乗の際の優先順位</Japanese>
             <Chinesesimp>优先想进入哪个座位.</Chinesesimp>
