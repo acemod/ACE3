@@ -5,13 +5,13 @@
  * Arguments:
  * 0: Original throw projectile <OBJECT>
  * 1: Class of projectile <STRING>
- * 2: Adv throw (default: false) <BOOL><OPTIONAL>
+ * 2: Adv throw <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [_projectile, _ammoType] call ace_chemlights_fnc_throwIR;
+ * [_projectile, _ammoType] call ace_chemlights_fnc_throwIR
  *
  * Public: No
  */

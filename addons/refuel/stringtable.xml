@@ -274,6 +274,7 @@
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
             <German>Kann Zapfpistole nicht anschalten</German>
+            <Italian>Impossibile iniziare il rifornimento</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>

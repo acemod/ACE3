@@ -4,10 +4,10 @@
  * Makes a unit drop items
  *
  * Arguments:
- * 0: caller (player) <OBJECT>
- * 1: target <OBJECT>
- * 2: classnamess <ARRAY>
- * 3: Do Not Drop Ammo <BOOL><OPTIONAL>
+ * 0: Caller (player) <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Classnames <ARRAY>
+ * 3: Do Not Drop Ammo <BOOL> (default: false)
  *
  * Return Value:
  * None

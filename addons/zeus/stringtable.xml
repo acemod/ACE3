@@ -1031,7 +1031,7 @@
             <English>Add Full Arsenal</English>
             <German>Füge ganzes Arsenal hinzu</German>
             <French>Ajouter Arsenal Complet</French>
-            <Italian>Aggiunge Arsenale Completo</Italian>
+            <Italian>Aggiungi Arsenale Completo</Italian>
             <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
             <Chinesesimp>增加完整的虚拟军火库到物件上</Chinesesimp>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
@@ -1041,7 +1041,7 @@
             <English>Remove Arsenal</English>
             <German>Entferne Arsenal</German>
             <French>Retirer Arsenal</French>
-            <Italian>Rimuove Arsenale</Italian>
+            <Italian>Rimuovi Arsenale</Italian>
             <Japanese>オブジェクトからアーセナルを削除</Japanese>
             <Chinesesimp>移除物件上的虚拟军火库</Chinesesimp>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
@@ -1050,51 +1050,61 @@
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
             <German>In Frachtraum laden</German>
+            <Italian>Carica nel Cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Basculer JVN</French>
+            <Italian>Attiva NVGs</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
             <English>NVG equipment</English>
             <German>Nachtsichtgeräte</German>
             <French>Equipment de vision nocturne</French>
+            <Italian>Attrezzatura NVG</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
             <English>Add or remove NVGs from units</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Ajouter ou retirer JVN des unités</French>
+            <Italian>Aggiunge o rimuove NVGs alle unità</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
             <English>Toggle NVG target</English>
             <German>Wechsle Nachtsichtgeräteziel</German>
             <French>Cible du basculement</French>
+            <Italian>Attiva obiettivo NVG</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
             <English>Selected group</English>
             <German>Ausgewählte Gruppe</German>
             <French>Groupe sélectionné</French>
+            <Italian>Gruppo selezionato</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
             <English>Toggle flashlights</English>
             <German>Ändere Taschenlampen</German>
             <French>Basculer lampes torches</French>
+            <Italian>Attiva torce</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
             <English>Toggle flashlight target</English>
             <German>Wechsle Nachtsichtgeräteziel</German>
             <French>Cible du basculement</French>
+            <Italian>Attiva obiettivo torcia</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
             <English>Flashlight</English>
             <German>Taschenlampe</German>
             <French>Lampe torche</French>
+            <Italian>Torcia</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
             <English>Add gear</English>
             <German>Ausrüstung hinzufügen</German>
             <French>Ajouter équipement</French>
+            <Italian>Aggiungi equipaggiamento</Italian>
         </Key>
     </Package>
 </Project>
