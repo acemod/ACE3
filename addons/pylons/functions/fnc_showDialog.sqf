@@ -44,7 +44,7 @@ private _pylonComponent = _config >> "Components" >> "TransportPylonsComponent";
 
 ctrlSetText [ID_PICTURE_AIRCRAFT, getText (_pylonComponent >> "uiPicture")];
 
-private _hasFRIES = [_config >> QEGVAR(fastroping,enabled), "number", 0] call CBA_fnc_getConfigEntry;
+private _hasFRIES = getNumber (_config >> QEGVAR(fastroping,enabled));
 if (["ace_fastroping"] call EFUNC(common,isModLoaded) && {_hasFRIES > 1}) then {
     private _checkbox = _display displayCtrl ID_CHECKBOX_FRIES;
     private _fries = _aircraft getVariable [QEGVAR(fastroping,FRIES), objNull];
@@ -86,7 +86,7 @@ GVAR(comboBoxes) = [];
     _combo ctrlAddEventHandler ["LBSelChanged", LINKFUNC(onComboSelChange)];
     // TODO: Allow pylon priority selection?
 
-    private _mirroredIndex = [_x >> "mirroredMissilePos", "number", 0] call CBA_fnc_getConfigEntry;
+    private _mirroredIndex = getNumber (_x >> "mirroredMissilePos");
 
     private _button = controlNull;
     if (count allTurrets [_aircraft, false] > 0) then {
