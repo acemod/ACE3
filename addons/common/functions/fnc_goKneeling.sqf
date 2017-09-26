@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // Animation changes even inside vehicle post-1.60
-if (stance _unit == "PRONE" || {vehicle _unit != _unit} || {underwater _unit}) exitWith {};
+if (stance _unit == "PRONE" || {vehicle _unit != _unit} || {!isTouchingGround _unit}) exitWith {};
 
 [
     _unit,
