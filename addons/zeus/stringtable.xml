@@ -267,7 +267,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
             <English>All Curators</English>
-            <German>Alle Zeus</German>
+            <German>Alle Zeus'</German>
             <Japanese>全キュレーター</Japanese>
             <Korean>모든 큐레이터</Korean>
             <Polish>Wszyscy kuratorzy</Polish>
@@ -278,7 +278,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators_desc">
             <English>Apply changes to all curators</English>
-            <German>Änderungen bei allen Zeus aktualisieren</German>
+            <German>Änderungen bei allen Zeus' aktualisieren</German>
             <Japanese>全キュレーターへ変更を適用</Japanese>
             <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
@@ -300,7 +300,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
             <English>Remove existing instead of adding new</English>
-            <German>Entfernt bestehendes, statt neues hinzuzufügen</German>
+            <German>Entfernt Bestehendes, statt Neues hinzuzufügen</German>
             <Japanese>新しく追加するために削除します</Japanese>
             <Korean>물체를 삭제합니다</Korean>
             <Polish>Usuń istniejące zamiast dodawać nowe</Polish>
@@ -522,7 +522,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddOrRemoveFRIES_DisplayName">
             <English>Add/Remove FRIES</English>
-            <German>Hinzufügen/Entferne FRIES</German>
+            <German>FRIES Hinzufügen/Entfernen</German>
             <Japanese>FRUES の追加と削除</Japanese>
             <Korean>패스트로프 추가/제거</Korean>
             <Polish>Dodaj/usuń FRIES</Polish>
@@ -533,7 +533,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
-            <German>%1 ist nicht FRIES kompatible.</German>
+            <German>%1 ist nicht FRIES-kompatibel.</German>
             <Japanese>%1 はファストロープに対応していません。</Japanese>
             <Korean>%1은 패스트로프하기에 적합하지 않습니다.</Korean>
             <Polish>%1 nie jest kompatybilny ze zjazdem linowym.</Polish>
@@ -1053,7 +1053,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
-            <German>Ändere Nachtsichtgeräte</German>
+            <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Basculer JVN</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
@@ -1063,17 +1063,17 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
             <English>Add or remove NVGs from units</English>
-            <German>Hinzufügen/Entfernen von Nachtsichtgeräten</German>
+            <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Ajouter ou retirer JVN des unités</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
             <English>Toggle NVG target</English>
-            <German>Ändere Nachtsichtgeräte Ziel</German>
+            <German>Wechsle Nachtsichtgeräteziel</German>
             <French>Cible du basculement</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
             <English>Selected group</English>
-            <German>Wähle eine Gruppe</German>
+            <German>Ausgewählte Gruppe</German>
             <French>Groupe sélectionné</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
@@ -1083,7 +1083,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
             <English>Toggle flashlight target</English>
-            <German>Ändere Nachtsichtgeräte Ziel</German>
+            <German>Wechsle Nachtsichtgeräteziel</German>
             <French>Cible du basculement</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
@@ -1093,7 +1093,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
             <English>Add gear</English>
-            <German>Füge Ausrüstung hinzu</German>
+            <German>Ausrüstung hinzufügen</German>
             <French>Ajouter équipement</French>
         </Key>
     </Package>
