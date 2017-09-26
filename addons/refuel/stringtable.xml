@@ -445,14 +445,14 @@
         <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
             <English>The fuel volume available for refueling (-1 disable, -10 if infinite)</English>
-            <German>Das Tankvolumen das zum Nachtanken verfügbar ist (-1 deaktiviert, -10 unendlich)</German>
+            <German>Das Tankvolumen, welches zum Nachtanken verfügbar ist (-1 deaktiviert, -10 unendlich)</German>
             <Russian>Объем топлива, доступный для заправки других машин (-1 отключить, -10 если неограничен)</Russian>
             <Japanese>給油用の貯油量を設定 (-1で無効、-10で無限)</Japanese>
             <Italian>La capacità del carburante disponibile per il rifornimento (-1 disabilita, -10 se infinito)</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
             <English>Refuel Hose attach coordinates</English>
-            <German>Tankpistolen Anheft-Koordinaten</German>
+            <German>Tankpistolen Befestigungs-Koordinaten</German>
             <Russian>Координаты крепления шланга</Russian>
             <Japanese>給油ノズルの取り付け座標</Japanese>
             <Italian>Coordinate del tubo di rifornimento</Italian>
