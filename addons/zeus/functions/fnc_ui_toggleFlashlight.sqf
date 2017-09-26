@@ -36,7 +36,7 @@ private _fnc_errorAndClose = {
     params ["_msg"];
     _display closeDisplay 0;
     deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
+    [_msg] call FUNC(showMessage);
     breakOut "Main";
 };
 
@@ -106,6 +106,7 @@ private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
+    deleteVehicle _logic;
 };
 
 private _fnc_onConfirm = {
