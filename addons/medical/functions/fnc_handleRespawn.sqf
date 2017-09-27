@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_unit"];
@@ -22,3 +23,8 @@ if (!local _unit) exitWith {};
 
 _unit call FUNC(init); // Call init to reset the medical states for the unit.
 [_unit, GVAR(STATE_MACHINE), _unit call FUNC(getUnitState), "Default"] call CBA_statemachine_fnc_manualTransition; // Move the unit to the default medical state
+#ifdef DEBUG_MODE_FULL
+private _state = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+TRACE_1("current state",_state);
+#endif
+
