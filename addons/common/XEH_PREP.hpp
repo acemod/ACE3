@@ -68,6 +68,7 @@ PREP(getMGRSdata);
 PREP(getName);
 PREP(getNumberMagazinesIn);
 PREP(getPitchBankYaw);
+PREP(getPylonTurret);
 PREP(getSettingData);
 PREP(getStaminaBarControl);
 PREP(getTargetAzimuthAndInclination);

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Main">
         <Key ID="STR_ACE_Main_Category_Logistics">
@@ -14,6 +14,7 @@
             <Japanese>ACE ロジスティクス</Japanese>
             <Chinesesimp>ACE 后勤</Chinesesimp>
             <Chinese>ACE 後勤</Chinese>
+            <Korean>ACE 논리</Korean>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>http://ace3mod.com/</English>
