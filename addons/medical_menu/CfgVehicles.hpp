@@ -92,14 +92,14 @@ class CfgVehicles {
                 };
                 class  ACE_Medical_loadPatient {
                     displayName = ECSTRING(medical,LoadPatient);
-                    condition = "(_target getVariable ['ACE_isUnconscious', false]) && {vehicle _target == _target}";
+                    condition = "(_target getVariable ['ACE_isUnconscious', false]) && {alive _target} && {vehicle _target == _target}";
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionLoadUnit));
                     icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying"};
                 };
                 class ACE_Medical_UnLoadPatient {
                     displayName = ECSTRING(medical,UnloadPatient);
-                    condition = "(_target getVariable ['ACE_isUnconscious', false]) && {vehicle _target != _target}";
+                    condition = "(_target getVariable ['ACE_isUnconscious', false]) && {vehicle _target != _target} && {vehicle _player == _player}";
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionUnloadUnit));
                     icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
