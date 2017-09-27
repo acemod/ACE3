@@ -19,6 +19,9 @@
 
 params ["_unit", "_target","_vehicle"];
 
+// Don't show "Load Captive" if unit is unconscious (already has "Load Patient")
+if (_target getVariable ["ACE_isUnconscious", false]) exitWith {false};
+
 if ((isNull _target) && {_unit getVariable [QGVAR(isEscorting), false]}) then {
     //Looking at a vehicle while escorting, get target from attached objects:
     {
