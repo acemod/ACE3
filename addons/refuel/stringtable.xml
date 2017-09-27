@@ -453,7 +453,7 @@
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
             <English>Refuel Hose attach coordinates</English>
-            <German>Tankpistolen Befestigungs-Koordinaten</German>
+            <German>Befestigungskoordinaten der Zapfpistole</German>
             <Russian>Координаты крепления шланга</Russian>
             <Japanese>給油ノズルの取り付け座標</Japanese>
             <Italian>Coordinate del tubo di rifornimento</Italian>
