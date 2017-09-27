@@ -284,7 +284,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
-            <German>Verfügbarer Frachtraum in diesem Fahrzeuge/Container</German>
+            <German>Verfügbarer Frachtraum in diesem Fahrzeug/Container</German>
             <Italian>Lo spazio disponibile in questo veicolo/container</Italian>
             <Japanese>この車両/コンテナでカーゴ スペースを使えるようにします</Japanese>
             <Chinese>設定此載具/集裝箱可裝載多少貨物</Chinese>
@@ -302,7 +302,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
-            <German>Frachtgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
+            <German>Frachtraumgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
             <Japanese>このオブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
