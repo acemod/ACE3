@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_UAVbattery">
         <Key ID="STR_ACE_Logistics_UAVbattery_Full">
@@ -95,6 +95,7 @@
             <Japanese>充電中</Japanese>
             <Chinesesimp>充电中...</Chinesesimp>
             <Chinese>充電中...</Chinese>
+            <Korean>충전중...</Korean>
         </Key>
     </Package>
 </Project>

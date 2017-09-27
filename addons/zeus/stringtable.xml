@@ -899,9 +899,9 @@
             <Russian>Требуется аддон, который отсутствует</Russian>
             <Italian>Richiede un addon che non è presente</Italian>
             <Japanese>要求されたアドオンは存在していません</Japanese>
-            <Korean>현재 없는 에드온을 필요로 합니다</Korean>
             <Chinesesimp>需要一个不存在的插件</Chinesesimp>
             <Chinese>需要一個不存在的插件</Chinese>
+            <Korean>현재 없는 애드온을 필요로 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
