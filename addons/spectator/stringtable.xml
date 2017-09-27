@@ -13,7 +13,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
-            <German>Zuschauer Einstellungen</German>
+            <German>Zuschauer-Einstellungen</German>
             <Polish>Ustawienia obserwatora</Polish>
             <Portuguese>Preferências de Espectador</Portuguese>
             <Russian>Настройки спектатора</Russian>
@@ -43,13 +43,13 @@
         </Key>
         <Key ID="STR_ACE_Spectator_ai_DisplayName">
             <English>AI Enabled</English>
-            <German>AI Sichtbarkeit</German>
+            <German>KI Sichtbarkeit</German>
             <Japanese>AI にも有効化</Japanese>
             <Italian>AI Abilitate</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
-            <German>Macht AI Einheiten den Zuschauern sichtbar</German>
+            <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
             <Japanese>スペクテイターで AI 視点を可能に</Japanese>
             <Italian>Permette la visibilità delle AI in spettatore</Italian>
         </Key>
