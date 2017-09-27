@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED(QFUNC(isUnderwater),"3.13.0","underwater OBJECT");
+
 params [["_unit", objNull, [objNull]]];
 
 private _return = false;
