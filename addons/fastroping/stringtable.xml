@@ -33,7 +33,7 @@
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
-            <German>Bereite Fast Roping System vor</German>
+            <German>Bereite "Fast Roping"-System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
             <French>Préparer le système de corde lisse</French>
             <Spanish>Preparar el sistema fast roping</Spanish>
@@ -48,7 +48,7 @@
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
             <English>Stow fast roping system</English>
-            <German>Verstaue Fast Roping System</German>
+            <German>Verstaue "Fast Roping"-System</German>
             <Italian>Arrotola le corde</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
