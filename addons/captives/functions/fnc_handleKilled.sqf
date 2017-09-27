@@ -16,6 +16,7 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+TRACE_1("handleKilled",_unit);
 
 // Remove handcuffs on a dead unit, removing them after unit goes into ragdoll causes a stand-up twitch and restarts the ragdoll
 if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
