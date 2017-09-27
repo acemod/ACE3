@@ -18,7 +18,7 @@ version:
 class CfgVehicles {
     class MyFuelTruck {
         ace_refuel_fuelCargo = 3000; // Fuel cargo
-        ace_refuel_hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}}; // Nozzle hooks positions
+        ace_refuel_hooks[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}}; // Nozzle hooks positions
     };
     class MyCar {
         ace_refuel_fuelCapacity = 100; // Fuel tank volume
