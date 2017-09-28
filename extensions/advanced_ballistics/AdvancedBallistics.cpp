@@ -7,7 +7,6 @@
 #include <random>
 #include <cmath>
 
-
 #define DELTA_T 0.02f
 #define GRAVITY 9.80665f
 #define DEGREES(X) (X * 180 / M_PI)
@@ -121,6 +120,7 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
     std::vector<double> dragCoefficients = {};
     double m = Velocity / Mach;
 
+    // Drag Functions from: http://www.jbmballistics.com/ballistics/downloads/text/
     switch (DragFunction) {
     case 1:
         dragCoefficients = { 0.2629, 0.2558, 0.2487, 0.2413, 0.2344, 0.2278, 0.2214, 0.2155, 0.2104, 0.2061, 0.2032, 0.2020, 0.2034, 0.2165, 0.2230, 0.2313, 0.2417, 0.2546, 0.2706, 0.2901, 0.3136, 0.3415, 0.3734, 0.4084, 0.4448, 0.4805, 0.5136, 0.5427, 0.5677, 0.5883, 0.6053, 0.6191, 0.6393, 0.6518, 0.6589, 0.6621, 0.6625, 0.6607, 0.6573, 0.6528, 0.6474, 0.6413, 0.6347, 0.6280, 0.6210, 0.6141, 0.6072, 0.6003, 0.5934, 0.5867, 0.5804, 0.5743, 0.5685, 0.5630, 0.5577, 0.5527, 0.5481, 0.5438, 0.5397, 0.5325, 0.5264, 0.5211, 0.5168, 0.5133, 0.5105, 0.5084, 0.5067, 0.5054, 0.5040, 0.5030, 0.5022, 0.5016, 0.5010, 0.5006, 0.4998, 0.4995, 0.4992, 0.4990, 0.4988 };
