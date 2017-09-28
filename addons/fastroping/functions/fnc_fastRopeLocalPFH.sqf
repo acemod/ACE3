@@ -23,6 +23,11 @@ _rope params ["", "", "", "_dummy"];
 //Wait until the unit is actually outside of the helicopter
 if (vehicle _unit != _unit) exitWith {};
 
+// dummy lost hook
+if (isNull (attachedTo _dummy)) exitWith {
+    [_pfhHandle] call CBA_fnc_removePerFrameHandler;
+};
+
 //Start fast roping
 if (animationState _unit != "ACE_FastRoping") exitWith {
     _unit disableCollisionWith _dummy;
