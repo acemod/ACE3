@@ -314,7 +314,7 @@
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
             <Russian>Связать союзника</Russian>
             <Italian>Puoi ammanettare unità alleate</Italian>
-            <Japanese>自陣営への拘束を可能に</Japanese>
+            <Japanese>拘束ユニットを自陣営へ</Japanese>
             <Korean>자기편에게 수갑을 채울 수 있게 합니다</Korean>
             <Chinese>可以銬住同陣營隊友</Chinese>
             <Chinesesimp>可以铐住同阵营队友</Chinesesimp>
@@ -330,7 +330,7 @@
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
             <Russian>Разрешить игрокам связывать юнитов своей стороны</Russian>
             <Italian>I giocatori possono ammanettare unità alleate</Italian>
-            <Japanese>プレイヤーがユニットを拘束し、彼らの陣営に変更できます。</Japanese>
+            <Japanese>プレイヤーが拘束したユニットの陣営を自陣営に変更させ。</Japanese>
             <Korean>자기편에게 케이블타이를 사용할 수 있게합니다</Korean>
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
             <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
@@ -362,7 +362,7 @@
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
             <Russian>Игроки могут сдаться в плен после того, как уберут оружие</Russian>
             <Italian>I giocatori possono arrendersi dopo aver messo via le proprie armi</Italian>
-            <Japanese>プレイヤーは武器を収めたあとに投降できるようにします。</Japanese>
+            <Japanese>プレイヤーは武器を収めたあと投降できるようにします。</Japanese>
             <Korean>비무장한 플레이어가 투항할 수 있게 합니다</Korean>
             <Chinese>玩家能在收起自己武器後投降</Chinese>
             <Chinesesimp>玩家能在收起自己武器后投降</Chinesesimp>
@@ -430,6 +430,7 @@
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
             <German>Nimmt die Einheit vor dem Cursor fest.</German>
+            <Japanese>カーソル先のユニットを拘束</Japanese>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
