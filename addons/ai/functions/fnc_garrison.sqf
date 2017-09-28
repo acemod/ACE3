@@ -257,11 +257,15 @@ TRACE_1(format [ARR_2("fnc_garrison: while loop ended | %1 units ready to be tre
 
 // Update the unit list and remove duplicate positions and units
 private _garrison_unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
-_garrison_unitMoveList append (_unitMoveList select {
+
+_garrison_unitMoveList = _garrison_unitMoveList select {
     _x params ["_testedUnit", "_testedPos"];
-    (({(_x select 0) isEqualTo _testedUnit} count _garrison_unitMoveList) == 0) && 
-    (({(_x select 1) isEqualTo _testedPos} count _garrison_unitMoveList) == 0)
-});
+
+    ({(_x select 0) isEqualTo _testedUnit} count _unitMoveList == 0)
+        
+};
+
+_garrison_unitMoveList append _unitMoveList;
 
 missionNameSpace setVariable [QGVAR(garrison_unitMoveList), _garrison_unitMoveList, true];
 

@@ -22,7 +22,7 @@ params [ ["_unitMoveList", nil, [[]]] ];
 if (isNil "_unitMoveList") exitWith {};
 
 // Start initial movement
-private _unitMoveListUnits = (_garrison_unitMoveList apply {_x select 0});
+private _unitMoveListUnits = (_unitMoveList apply {_x select 0});
 [QGVAR(setBehaviour), [(_unitMoveListUnits select {leader _x == _x}), "SAFE"], _unitMoveListUnits] call CBA_fnc_targetEvent;
 [QGVAR(doMove), [_unitMoveList], _unitMoveListUnits] call CBA_fnc_targetEvent;
 [QGVAR(enableAttack), [_unitMoveListUnits select {leader _x == _x}, false], _unitMoveListUnits] call CBA_fnc_targetEvent;
