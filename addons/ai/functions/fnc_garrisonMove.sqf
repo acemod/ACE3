@@ -23,7 +23,7 @@ if (isNil "_unitMoveList") exitWith {};
 
 // Start initial movement
 private _unitMoveListUnits = (_unitMoveList apply {_x select 0});
-[QGVAR(setBehaviour), [(_unitMoveListUnits select {leader _x == _x}), "SAFE"], _unitMoveListUnits] call CBA_fnc_targetEvent;
+[QGVAR(setBehaviour), [(_unitMoveListUnits select {leader _x == _x}), "AWARE"], _unitMoveListUnits] call CBA_fnc_targetEvent;
 [QGVAR(doMove), [_unitMoveList], _unitMoveListUnits] call CBA_fnc_targetEvent;
 [QGVAR(enableAttack), [_unitMoveListUnits select {leader _x == _x}, false], _unitMoveListUnits] call CBA_fnc_targetEvent;
 
@@ -117,8 +117,8 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                                 LOG(format [ARR_2("garrisonMove PFH unitNotReady: unit in position | %1 units left", count _unitMoveList)]);
                             };
 
-                            case ((_unitPosTimer + 30) < CBA_missionTime && {_unitOldPos distance _unitPos < 2}) : {
-                                TRACE_3("case 2",_unit, ((_unitPosTimer + 30) < CBA_missionTime), (_unitOldPos distance _unitPos < 2));
+                            case ((_unitPosTimer + 30) < CBA_missionTime && {_unitOldPos distance _unitPos < 0.5}) : {
+                                TRACE_3("case 2",_unit, ((_unitPosTimer + 30) < CBA_missionTime), (_unitOldPos distance _unitPos < 0.5));
                                 _unit setVariable [QGVAR(garrisonMove_failSafe), nil, true];
                                 _unit setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
                                 [QGVAR(unGarrison), [[_unit]], _unit] call CBA_fnc_targetEvent;
@@ -126,7 +126,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                                 LOG("garrisonMove PFH unitNotReady: all moving commands failed | restoring AI capabilities");
                             };
 
-                            case (_unitOldPos distance _unitPos < 2) : {};
+                            case (_unitOldPos distance _unitPos < 0.5) : {};
 
                             default {
                                 _unit setVariable [QGVAR(garrisonMove_unitPosMemory), [CBA_missionTime, _unitPos]];

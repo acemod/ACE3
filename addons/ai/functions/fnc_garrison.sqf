@@ -260,9 +260,7 @@ private _garrison_unitMoveList = missionNameSpace getVariable [QGVAR(garrison_un
 
 _garrison_unitMoveList = _garrison_unitMoveList select {
     _x params ["_testedUnit", "_testedPos"];
-
     ({(_x select 0) isEqualTo _testedUnit} count _unitMoveList == 0)
-        
 };
 
 _garrison_unitMoveList append _unitMoveList;

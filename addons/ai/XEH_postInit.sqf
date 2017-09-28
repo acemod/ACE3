@@ -16,6 +16,7 @@
     params ["_unitsArray"];
     {  
         _x params ["_unit", "_pos"];
+        _unit doFollow leader _unit;
         _unit doMove _pos;
         LOG(format [ARR_4("XEH_postInit: %1 doMove %2 | ID %3", _unit, _pos, clientOwner)]);
     } foreach _unitsArray
