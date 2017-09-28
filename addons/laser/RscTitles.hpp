@@ -1,7 +1,3 @@
-class RscControlsGroupNoScrollbars;
-class RscPictureKeepAspect;
-class RscText;
-
 class RscTitles {
     class GVAR(modeDisplay) {
         idd = -1;

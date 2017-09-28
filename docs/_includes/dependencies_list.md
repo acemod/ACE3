@@ -206,6 +206,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "maverick" %}
+`ace_hellfire`
+{% endif %}
+
 {% if include.component == "medical" %}
 `ace_interaction`, `ace_apl`
 {% endif %}

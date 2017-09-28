@@ -11,7 +11,7 @@ class CfgVehicles {
                     statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
                     showDisabled = 0;
                     priority = 4;
-                    icon = QPATHTOF(UI\unjam_ca.paa);
+                    icon = QPATHTOEF(common,UI\repack_ca.paa);
                 };
                 class GVAR(SwapBarrel) {
                     displayName = CSTRING(SwapBarrel);

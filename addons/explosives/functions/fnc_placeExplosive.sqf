@@ -1,6 +1,6 @@
 /*
  * Author: Garth 'L-H' de Wet
- * Places an explosive at the requested position
+ * Places an explosive at the requested position.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -9,14 +9,13 @@
  * 3: Magazine class <STRING>
  * 4: Config of trigger <STRING>
  * 5: Variables required for the trigger type <ARRAY>
- * 6: Explosive placeholder <OBJECT> <OPTIONAL>
+ * 6: Explosive placeholder <OBJECT> (default: objNull)
  *
  * Return Value:
  * Placed explosive <OBJECT>
  *
  * Example:
- * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134,
- *  "SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
+ * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134, "SatchelCharge_Remote_Mag", "Command", []] call ace_explosives_fnc_placeExplosive
  *
  * Public: Yes
  */

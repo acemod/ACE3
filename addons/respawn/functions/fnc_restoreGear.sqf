@@ -17,9 +17,16 @@
 #include "script_component.hpp"
 
 params ["_unit", "_allGear", "_activeWeaponAndMuzzle"];
+TRACE_3("restoreGear",_unit, count _allGear, _activeWeaponAndMuzzle);
 
 // restore all gear
 if (!isNil "_allGear") then {
+    _allGear params ["_primaryWeaponArray"];
+    if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
+        TRACE_1("Ignoring fake gun",_primaryWeaponArray);
+        _allGear set [0, []];
+        _activeWeaponAndMuzzle = nil;
+    };
     _unit setUnitLoadout _allGear;
 };
 

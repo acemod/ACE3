@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_ai">
         <Key ID="STR_ACE_medical_ai_enabledFor_OnlyServerAndHC">
@@ -12,6 +12,7 @@
             <Italian>Solo Server e HC</Italian>
             <Chinesesimp>只在伺服器或无头客户端</Chinesesimp>
             <Chinese>只在伺服器或無頭客戶端</Chinese>
+            <Korean>서버와 헤드리스만</Korean>
         </Key>
     </Package>
 </Project>
