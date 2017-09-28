@@ -126,7 +126,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                                 LOG("garrisonMove PFH unitNotReady: all moving commands failed | restoring AI capabilities");
                             };
 
-                            case (_unitOldPos distance _unitPos < 2);
+                            case (_unitOldPos distance _unitPos < 2) : {};
 
                             default {
                                 _unit setVariable [QGVAR(garrisonMove_unitPosMemory), [CBA_missionTime, _unitPos]];
