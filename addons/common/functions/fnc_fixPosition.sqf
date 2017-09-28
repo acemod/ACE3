@@ -29,12 +29,12 @@ if ((getText (configFile >> "CfgVehicles" >> (typeOf _this) >> "simulation")) ==
     };
 };
 
-private _position = getPos _this;
+private _position = getPosATL _this;
 
 // don't place the object below the ground
 if (_position select 2 < -0.1) then {
     _position set [2, -0.1];
-    _this setPos _position;
+    _this setPosATL _position;
 };
 
 // adjust position to sloped terrain, if placed on ground
