@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -1076,6 +1076,7 @@
             <Japanese>降ろすための空間がありません</Japanese>
             <Chinese>沒有空間可卸載</Chinese>
             <Chinesesimp>没有空间可卸载</Chinesesimp>
+            <Korean>언로드 할 공간이 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_KeybindToggle">
             <English>Toggle</English>
