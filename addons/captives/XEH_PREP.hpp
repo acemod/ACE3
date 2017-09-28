@@ -1,4 +1,3 @@
-
 PREP(canApplyHandcuffs);
 PREP(canEscortCaptive);
 PREP(canFriskPerson);
@@ -18,6 +17,7 @@ PREP(handleAnimChangedHandcuffed);
 PREP(handleAnimChangedSurrendered);
 PREP(handleGetIn);
 PREP(handleGetOut);
+PREP(handleKilled);
 PREP(handleLocal);
 PREP(handleOnUnconscious);
 PREP(handlePlayerChanged);

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
         <Key ID="STR_ACE_Frag_Module_DisplayName">
@@ -203,6 +203,7 @@
             <Japanese>(SP のみ) ミッションとエディタの再起動が必要です。有効化すると、シングルプレイでのみ破片と剥離の弾頭が見えるようになります。</Japanese>
             <Chinesesimp>(仅在单人模式) 让你在单人模式下可观察到碎片/剥落粒子的移动轨迹.</Chinesesimp>
             <Chinese>(僅在單人模式) 讓你在單人模式下可觀察到碎片/剝落粒子的移動軌跡.</Chinese>
+            <Korean>(SP 전용) 임무 / 편집자가 다시 시작해야합니다. SP 게임 모드에서만 조각화 및 스 폴링 라운드의 시각적 추적을 가능하게합니다.</Korean>
         </Key>
     </Package>
 </Project>

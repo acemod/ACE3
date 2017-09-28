@@ -66,7 +66,7 @@ private _statement = {
     [_player, _target] call FUNC(startLoadIn);
 };
 private _text = localize LSTRING(loadObject);
-private _icon = QPATHTOF(UI\Icon_load.paa);
+private _icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
 
 private _action = [QGVAR(load), _text, _icon, _statement, _condition, {call FUNC(addCargoVehiclesActions)}] call EFUNC(interact_menu,createAction);
 if (_canLoadConfig) then {

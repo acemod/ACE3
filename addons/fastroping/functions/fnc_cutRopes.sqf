@@ -39,14 +39,4 @@ private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
-_vehicle setVariable [QGVAR(deploymentStage), 1, true];
-
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-private _waitTime = 0;
-if (isText (_config >> QGVAR(onCut))) then {
-    _waitTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onCut))));
-};
-
-[{
-    _this setVariable [QGVAR(deploymentStage), 0, true];
-}, _vehicle, _waitTime] call CBA_fnc_waitAndExecute;
+_vehicle setVariable [QGVAR(deploymentStage), 2, true];

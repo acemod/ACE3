@@ -1,9 +1,9 @@
 /*
  * Author: PabstMirror
- * Changes the display mode of the microDAGR
+ * Changes the display mode of the MicroDAGR.
  *
  * Arguments:
- * 0: Display Mode to show the microDAGR in <NUMBER><OPTIONAL>
+ * 0: Display Mode to show the microDAGR in <NUMBER> (default: -1)
  *
  * Return Value:
  * None
