@@ -25,6 +25,11 @@ if (vehicle _unit != _unit) exitWith {};
 
 // dummy lost hook
 if (isNull (attachedTo _dummy)) exitWith {
+    TRACE_1("exit pfeh",_unit);
+
+    [_unit, "", 2] call EFUNC(common,doAnimation);
+    _unit setVectorUp [0, 0, 1];
+
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 
