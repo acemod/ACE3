@@ -117,7 +117,9 @@ addMissionEventHandler ["Draw3D", { // Blue is predicted before throw, red is re
         drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [0,0,1,1], _newTrajAGL, 1, 1, 0, "", 2];
     } forEach GVAR(predictedPath);
     {
-        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,0,0,1], _x, 1, 1, 0, "", 2];
-    } forEach GVAR(flightPath)
+        _x params ["_pos", "_vectorUp"];
+        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,0,0,1], _pos, 1, 1, 0, "", 2];
+        drawLine3D [_pos, _pos vectorAdd _vectorUp, [1,0,1,1]];
+    } forEach GVAR(flightPath);
 }];
 #endif

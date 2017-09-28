@@ -2,10 +2,10 @@
 #define COMPONENT_BEAUTIFIED Advanced Throwing
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DRAW_THROW_PATH
+#define DRAW_THROW_PATH
 // #define ALLOW_QUICK_THROW
 // #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_ADVANCED_THROWING
@@ -26,6 +26,7 @@
 
 #define THROW_TYPE_DEFAULT "normal"
 #define THROW_SPEED_DEFAULT 18
+#define THROW_ROTATION_DEFAULT [0, 0, 0]
 #define DROP_DISTANCE_DEFAULT 0.2
 
 #define PICK_UP_DISTANCE 10

@@ -49,9 +49,15 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
         _newVelocity = _newVelocity vectorAdd (velocity (vehicle _unit));
     };
 
+    private _rotation = getArray (configFile >> "CfgAmmo" >> typeOf _activeThrowable >> QGVAR(rotation));
+    if (count _rotation != 3) then {
+        _rotation = THROW_ROTATION_DEFAULT;
+    };
+
     // Drop if unit dies during throw process
     if (alive _unit) then {
         _activeThrowable setVelocity _newVelocity;
+        _activeThrowable addTorque /*_rotation*/[-0.5, 0.25, 0];
     };
 
     // Invoke listenable event
@@ -67,12 +73,12 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
 
 
 #ifdef DRAW_THROW_PATH
-GVAR(predictedPath) = call FUNC(drawArc); // save the current throw arc
+GVAR(predictedPath) = call FUNC(drawArc); // Save the current throw arc
 GVAR(flightPath) = [];
-[_unit getVariable QGVAR(activeThrowable)] spawn {
-    params ["_grenade"];
-    while {!isNull _grenade} do {
-        GVAR(flightPath) pushBack ASLtoAGL getPosASL _grenade;
+GVAR(flightRotation) = [];
+(_unit getVariable QGVAR(activeThrowable)) spawn {
+    while {!isNull _this && {(getPosATL _this) select 2 > 0.05}} do {
+        GVAR(flightPath) pushBack [ASLtoAGL (getPosASL _this), vectorUp _this];
         sleep 0.05;
     };
 };
