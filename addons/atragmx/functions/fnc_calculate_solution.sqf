@@ -118,7 +118,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     _trueSpeed = vectorMagnitude _trueVelocity;
 
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]));
+        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3:%4", _dragModel, _bc, _trueSpeed, _temperature]));
         _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction);

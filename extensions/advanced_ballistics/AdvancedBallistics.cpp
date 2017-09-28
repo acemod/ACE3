@@ -22,6 +22,7 @@
 #define STD_AIR_DENSITY_ICAO 1.22498f
 #define STD_AIR_DENSITY_ASM 1.20885f
 #define BC_CONVERSION_FACTOR 0.00068418f
+#define SPEED_OF_SOUND(t) (331.3 + std::sqrt(1 + t / 273.15f))
 
 struct Bullet {
     double airFriction;
@@ -115,10 +116,10 @@ double calculateAtmosphericCorrection(double ballisticCoefficient, double temper
     }
 }
 
-double calculateRetard(int DragFunction, double DragCoefficient, double Velocity) {
+double calculateRetard(int DragFunction, double DragCoefficient, double Velocity, double Mach) {
     std::vector<double> machNumbers = {};
     std::vector<double> dragCoefficients = {};
-    double mach = Velocity / 340.276; // @todo: I guess we have to take the air density into account
+    double m = Velocity / Mach;
 
     switch (DragFunction) {
     case 1:
@@ -157,11 +158,11 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
     }
 
     for (int i = 0; i < machNumbers.size(); i++) {
-        if (machNumbers[i] >= mach) {
+        if (machNumbers[i] >= m) {
             int previousIdx = std::max(0, i - 1);
             double lcd = dragCoefficients[previousIdx];
             double lmn = machNumbers[previousIdx];
-            double cd = lcd + (dragCoefficients[i] - lcd) * (mach - lmn) / (machNumbers[i] - lmn);
+            double cd = lcd + (dragCoefficients[i] - lcd) * (m - lmn) / (machNumbers[i] - lmn);
             return BC_CONVERSION_FACTOR * (cd / DragCoefficient) * std::pow(Velocity, 2);
         }
     }
@@ -248,7 +249,7 @@ double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHe
 
             v = std::sqrt(vx*vx + vy*vy);
 
-            double retard = calculateRetard(dragModel, ballisticCoefficient, v);
+            double retard = calculateRetard(dragModel, ballisticCoefficient, v, SPEED_OF_SOUND(15));
             double ax = vx / v * -retard;
             double ay = vy / v * -retard;
             ax += gx;
@@ -305,13 +306,15 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double ballisticCoefficient = 1.0;
         int dragModel = 1;
         double velocity = 0.0;
+        double temperature = 15.0;
         double retard = 0.0;
 
         dragModel = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
         ballisticCoefficient = strtod(strtok_s(NULL, ":", &next_token), NULL);
         velocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        temperature = strtod(strtok_s(NULL, ":", &next_token), NULL);
 
-        retard = calculateRetard(dragModel, ballisticCoefficient, velocity);
+        retard = calculateRetard(dragModel, ballisticCoefficient, velocity, SPEED_OF_SOUND(temperature));
         // int n = sprintf(output,  "%f", retard);
 
         outputStr << retard;
@@ -591,7 +594,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
             ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, bulletDatabase[index].humidity, bulletDatabase[index].atmosphereModel);
             ballisticCoefficient *= bulletDatabase[index].bcDegradation;
-            drag = deltaT * calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed);
+            drag = deltaT * calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed, SPEED_OF_SOUND(temperature));
             accel[0] = (trueVelocity[0] / trueSpeed) * drag;
             accel[1] = (trueVelocity[1] / trueSpeed) * drag;
             accel[2] = (trueVelocity[2] / trueSpeed) * drag;
