@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]],["_unit", objNull, [objNull]]];
+params ["_truck", "_unit"];
 TRACE_2("readSupplyCounter",_truck,_unit);
 
 if (GVAR(supply) == 0) exitWith {WARNING("Supply is unlimited");};
