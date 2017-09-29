@@ -91,10 +91,7 @@ GVAR(comboBoxes) = [];
     private _button = controlNull;
     if (count allTurrets [_aircraft, false] > 0) then {
         _button = _display ctrlCreate ["ctrlShortcutButton", -1];
-        private _turret = (_aircraft getVariable ["ace_pylonTurrets", []]) param [_forEachIndex + 1, getArray (_x >> "turret")]; 
-        if (_turret isEqualTo []) then {
-            _turret = [-1];
-        };
+        private _turret = [_aircraft, _forEachIndex] call EFUNC(common,getPylonTurret);
         [_button, false, _turret] call FUNC(onButtonTurret);
         _button ctrlAddEventHandler ["ButtonClick", {[_this select 0, true, []] call FUNC(onButtonTurret)}];
         _button ctrlSetPosition [
