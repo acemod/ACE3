@@ -127,16 +127,13 @@ if (_barrelLength > 0 && _useABConfig) then {
     _muzzleVelocity = _initSpeed;
 };
 
-if (_useABConfig) then {
-    ctrlSetText [770000, format["%1'' - %2 gr (%3)", round((_ammoConfig select 1) * 39.3700787) / 1000, round((_ammoConfig select 3) * 15.4323584), _ammoClass]];
-    if (_barrelLength > 0 && _barrelTwist > 0) then {
+ctrlSetText [770000, format["%1'' - %2 gr (%3)", round((_ammoConfig select 1) * 39.3700787) / 1000, round((_ammoConfig select 3) * 15.4323584), _ammoClass]];
+if (_barrelLength > 0) then {
+    if (_useABConfig && _barrelTwist > 0) then {
         ctrlSetText [770002, format["Barrel: %1'' 1:%2'' twist", round(2 * _barrelLength * 0.0393700787) / 2, round(_barrelTwist * 0.0393700787)]];
     } else {
-        ctrlSetText [770002, ""];
+        ctrlSetText [770002, format["Barrel: %1''", round(2 * _barrelLength * 0.0393700787) / 2]];
     };
-} else {
-    ctrlSetText [770000, getText (configFile >> "CfgMagazines" >> _magazineClass >> "displayNameShort")];
-    ctrlSetText [770002, getText (configFile >> "CfgWeapons" >> _weaponClass >> "displayName")];
 };
 
 lnbAddRow [770100, ["4mps Wind(MRADs)", "1mps LEAD(MRADs)"]];
@@ -241,10 +238,5 @@ for "_column" from 0 to 8 do {
     };
 } forEach [0, 3, 8];
 
-if (_useABConfig) then {
-    ctrlSetText [770020, "For best results keep ammunition at ambient air temperature. Tables calculated for the above listed barrel"];
-    ctrlSetText [770021, format["and load with optic mounted %1'' above line of bore.", round((_boreHeight / 2.54) * 10) / 10]];
-} else {
-    ctrlSetText [770020, ""];
-    ctrlSetText [770021, ""];
-};
+ctrlSetText [770020, "For best results keep ammunition at ambient air temperature. Tables calculated for the above listed barrel"];
+ctrlSetText [770021, format["and load with optic mounted %1'' above line of bore.", round((_boreHeight / 2.54) * 10) / 10]];

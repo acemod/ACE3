@@ -223,6 +223,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class requireSurrenderAi {
+                displayName = CSTRING(ModuleSettings_requireSurrenderAi_name);
+                description = CSTRING(ModuleSettings_requireSurrenderAi_description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription: ModuleDescription {
             description = CSTRING(ModuleSettings_Description);

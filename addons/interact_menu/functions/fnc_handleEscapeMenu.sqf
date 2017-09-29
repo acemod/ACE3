@@ -3,10 +3,13 @@
  * Handle the escape key being pressed.
  *
  * Arguments:
- * 0: Escape menu display that should be closed <DISPLAY><OPTIONAL>
+ * 0: Escape menu display that should be closed <DISPLAY> (default: displayNull)
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [display] call ace_interact_menu_fnc_handleEscapeMenu
  *
  * Public: No
  */

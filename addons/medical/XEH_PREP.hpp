@@ -12,7 +12,6 @@ PREP(actionUnloadUnit);
 PREP(addDamageToUnit);
 PREP(addHeartRateAdjustment);
 PREP(addLoadPatientActions);
-PREP(addToInjuredCollection);
 PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnconsciousCondition);
