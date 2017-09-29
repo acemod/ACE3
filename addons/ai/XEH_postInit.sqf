@@ -37,3 +37,43 @@
         LOG(format [ARR_4("XEH_postInit: %1 enableAttack %2 | ID %3", _unit, _mode, clientOwner)]);
     } foreach _unitsArray
 }] call CBA_fnc_addEventHandler;
+
+#ifdef DEBUG_MODE_FULL
+    addMissionEventHandler ["Draw3D", {
+        private _unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
+
+        {
+            _x params  ["_unit", "_pos"];
+
+            switch true do {
+                case (surfaceIsWater (getPos _unit) && {surfaceIsWater _pos}) : {
+                    for "_i" from 0 to 3 do {
+                        drawLine3D [(getPosASL _unit), (AGLtoASL _pos), [0,0,0,1]];
+                    };
+                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], (AGLtoASL _pos), 1, 1, 1];
+                };
+
+                case (!surfaceIsWater (getPos _unit) && {!surfaceIsWater _pos}) : {
+                    for "_i" from 0 to 3 do {
+                        drawLine3D [(getPos _unit), _pos, [1,0,0,1]];
+                    };
+                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], _pos, 1, 1, 1];
+                };
+
+                case (!surfaceIsWater (getPos _unit) && {surfaceIsWater _pos}) : {
+                    for "_i" from 0 to 3 do {
+                        drawLine3D [(getPos _unit), (AGLToASL _pos), [0,0,0,1]];
+                    };
+                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], (AGLtoASL _pos), 1, 1, 1];
+                };
+
+                case (surfaceIsWater (getPos _unit) && {!surfaceIsWater _pos}) : {
+                    for "_i" from 0 to 3 do {
+                        drawLine3D [(getPosASL _unit), _pos, [0,0,0,1]];
+                    };
+                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], _pos, 1, 1, 1];
+                };
+            };
+        } foreach _unitMoveList;
+    }];
+#endif
