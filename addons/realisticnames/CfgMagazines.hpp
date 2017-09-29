@@ -434,10 +434,25 @@ class CfgMagazines {
     };
     class 6Rnd_Missile_AGM_02_F;
     class PylonRack_1Rnd_Missile_AGM_02_F: 6Rnd_Missile_AGM_02_F {
-        displayName = "AGM-65 Maverick"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
     };
     class PylonRack_3Rnd_Missile_AGM_02_F: PylonRack_1Rnd_Missile_AGM_02_F {
-        displayName = "AGM-65 Maverick 3x"; // [vanilla: Macer 3x - Missile_AGM_02_Plane_CAS_01_F]
+        displayName = "AGM-65 Maverick G 3x"; // [vanilla: Macer 3x - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class magazine_Missile_AGM_02_x1 : VehicleMagazine {
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonMissile_Missile_AGM_02_x1 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonMissile_Missile_AGM_02_x2 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G 2x"; // [vanilla: Macer 2x - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonRack_Missile_AGM_02_x1 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonRack_Missile_AGM_02_x2 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G 2x"; // [vanilla: Macer 2x - Missile_AGM_02_Plane_CAS_01_F]
     };
     class 2Rnd_LG_scalpel;
     class PylonRack_1Rnd_LG_scalpel: 2Rnd_LG_scalpel {

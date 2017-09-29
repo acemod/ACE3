@@ -155,6 +155,9 @@ class RscInteractionText: RscText{
     w = 24 * GUI_GRID_W;
     h = 1.5 * GUI_GRID_H;
 };
+class RscInteractionText_right: RscText{
+    style = 1; // right aligned text
+};
 
 class RscTitles {
     class GVAR(InteractionHelper) {

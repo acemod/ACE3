@@ -1,6 +1,6 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_EarPlugs: ACE_ItemCore {
         displayName = CSTRING(EarPlugs_Name);
@@ -8,7 +8,7 @@ class CfgWeapons {
         model = QPATHTOF(data\ace_earplugs.p3d);
         picture = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
         scope = 2;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };

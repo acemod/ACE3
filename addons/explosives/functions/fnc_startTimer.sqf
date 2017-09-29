@@ -5,13 +5,13 @@
  * Arguments:
  * 0: Explosive <OBJECT>
  * 1: Time till detonate <NUMBER>
- * 2: Trigger Item Classname <STRING><OPTIONAL>
+ * 2: Trigger Item Classname <STRING> (default: "#timer")
  *
  * Return Value:
  * None
  *
  * Example:
- * [_explosive, 10] call ACE_Explosives_fnc_startTimer;
+ * [_explosive, 10] call ace_explosives_fnc_startTimer
  *
  * Public: Yes
  */

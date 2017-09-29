@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -12,7 +12,7 @@
             <Portuguese>ACE-Team</Portuguese>
             <Hungarian>ACE-Team</Hungarian>
             <Italian>ACE-Team</Italian>
-            <Japanese>ACE-Team</Japanese>
+            <Japanese>ACE-チーム</Japanese>
             <Korean>ACE-Team</Korean>
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
@@ -1076,6 +1076,7 @@
             <Japanese>降ろすための空間がありません</Japanese>
             <Chinese>沒有空間可卸載</Chinese>
             <Chinesesimp>没有空间可卸载</Chinesesimp>
+            <Korean>언로드 할 공간이 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_KeybindToggle">
             <English>Toggle</English>
@@ -1088,7 +1089,7 @@
             <Hungarian>pecek</Hungarian>
             <Czech>přep.</Czech>
             <Portuguese>alternar</Portuguese>
-            <Japanese>トグル</Japanese>
+            <Japanese>切り替え</Japanese>
             <Korean>토글</Korean>
             <Chinese>切換</Chinese>
             <Chinesesimp>切换</Chinesesimp>
