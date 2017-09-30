@@ -371,12 +371,7 @@ class CfgWeapons {
     };
 
 
-    class H_PilotHelmetHeli_B;
-    class H_CrewHelmetHeli_B;
-    class rhsusf_hgu56p: H_PilotHelmetHeli_B {
-        HEARING_PROTECTION_VICCREW
-    };
-    class rhsusf_hgu56p_mask: H_CrewHelmetHeli_B {
+    class rhsusf_hgu56p: rhsusf_opscore_01 {
         HEARING_PROTECTION_VICCREW
     };
 
