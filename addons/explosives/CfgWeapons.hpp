@@ -1,4 +1,13 @@
 class CfgWeapons {
+    class Default;
+    class Put: Default {
+        muzzles[] += {QGVAR(muzzle)};
+        class PutMuzzle: Default{};
+        class GVAR(muzzle): PutMuzzle {
+            magazines[] = {"ACE_FlareTripMine_Mag"};
+        };
+    };
+
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
 

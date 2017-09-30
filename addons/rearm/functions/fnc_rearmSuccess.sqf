@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-params [["_vehicle", objNull, [objNull]], ["_unit", objNull, [objNull]], "_turretPath", "_numMagazines", "_magazineClass", "_numRounds", "_pylon"];
+params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds", "_pylon"];
 TRACE_7("rearmSuccess",_vehicle,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds,_pylon);
 
 if (local _unit) then {

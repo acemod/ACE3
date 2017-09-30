@@ -18,4 +18,10 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(requireSurrenderAi) {
+        displayName = CSTRING(ModuleSettings_requireSurrenderAi_name);
+        description = CSTRING(ModuleSettings_requireSurrenderAi_description);
+        typeName = "BOOL";
+        value = 0;
+    };
 };
