@@ -116,6 +116,7 @@ PREP(moduleLSDVehicles);
 PREP(muteUnit);
 PREP(muteUnitHandleInitPost);
 PREP(muteUnitHandleRespawn);
+PREP(nearestVehiclesFreeSeat);
 PREP(numberToDigits);
 PREP(numberToDigitsString);
 PREP(numberToString);

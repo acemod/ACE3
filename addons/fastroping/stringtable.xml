@@ -50,6 +50,7 @@
             <English>Stow fast roping system</English>
             <German>Verstaue "Fast Roping"-System</German>
             <Italian>Arrotola le corde</Italian>
+            <Japanese>ファスト ロープのシステムを収容</Japanese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -137,6 +138,7 @@
             <Polish>ZJAZD NA LINACH</Polish>
             <Chinesesimp>让单位快速绳降</Chinesesimp>
             <Chinese>讓單位快速繩降</Chinese>
+            <Korean>패스트 로프를 놓음</Korean>
         </Key>
     </Package>
 </Project>

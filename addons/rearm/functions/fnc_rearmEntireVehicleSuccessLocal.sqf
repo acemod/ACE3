@@ -1,5 +1,5 @@
 /*
- * Author: GitHawk
+ * Author: Tuupertunut
  * Rearm an entire turret locally.
  *
  * Arguments:
@@ -17,60 +17,42 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
+params ["_truck", "_vehicle", "_turretPath"];
 TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);
 
-// 1.70 pylons
-private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+// Fetching all rearmable magazines in this turret
+private _magazines = ([_vehicle] call FUNC(getNeedRearmMagazines)) select {(_x select 1) isEqualTo _turretPath};
 {
-    private _pylonTurret = getArray (_x >> "turret");
-    if (_pylonTurret isEqualTo []) then {_pylonTurret = [-1];}; // convert to expected array for driver
-    if (_pylonTurret isEqualTo _turretPath) then {
-        private _pylonIndex = _forEachIndex + 1; // GJ BIS
-        private _pylonAmmo = _vehicle ammoOnPylon _pylonIndex;
-        private _pylonMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
-        private _maxRounds = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
-        TRACE_4("",_pylonIndex,_pylonAmmo,_maxRounds,_pylonMagazine);
-        if (_pylonAmmo < _maxRounds) then {
-            if ((GVAR(supply) == 0) || {[_truck, _pylonMagazine, (_maxRounds - _pylonAmmo)] call FUNC(removeMagazineFromSupply)}) then {
-                TRACE_3("Adding Rounds",_vehicle,_pylonIndex,_maxRounds);
-                _vehicle setAmmoOnPylon [_pylonIndex, _maxRounds];
+    _x params ["_magazineClass", "_magTurretPath", "_isPylonMag", "_pylonIndex", "_maxMagazines", "_currentMagazines", "_maxRoundsPerMag", "_currentRounds"];
+    
+    // Array of planned ammo counts in every magazine after the rearm is complete
+    private _plannedRounds = +_currentRounds;
+    
+    // Trying to fill all existing magazines.
+    {
+        if (_x < _maxRoundsPerMag) then {
+            if ((GVAR(supply) == 0) || {[_truck, _magazineClass, (_maxRoundsPerMag - _x)] call FUNC(removeMagazineFromSupply)}) then {
+                _plannedRounds set [_forEachIndex, _maxRoundsPerMag];
             };
         };
-    };
-} forEach _pylonConfigs;
-
-private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
-if (isNil "_magazines") exitWith {};
-{
-    private _magazine = _x;
-    private _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
-    private _maxMagazines = [_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines);
-    private _maxRounds = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
-    private _currentRounds = _vehicle magazineTurretAmmo [_magazine, _turretPath];
-
-    TRACE_7("Rearmed Turret",_vehicle,_turretPath,_currentMagazines,_maxMagazines,_currentRounds,_maxRounds,_magazine);
-
-    if (_turretPath isEqualTo [-1] && _currentMagazines == 0) then {
-        // On driver, the empty magazine is still there, but is not returned by magazinesTurret
-        _currentMagazines =  _currentMagazines + 1;
-    };
+    } forEach _currentRounds;
+    
+    // Trying to add new full magazines, if there is space left.
     if (_currentMagazines < _maxMagazines) then {
-        private _success = true;
-        if ((GVAR(supply) == 0) || {[_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply)}) then {
-            _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
-        };
-
         for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
-            if ((GVAR(supply) == 0) || {[_truck, _magazine, _maxRounds] call FUNC(removeMagazineFromSupply)}) then {
-                _vehicle addMagazineTurret [_magazine, _turretPath];
+            if ((GVAR(supply) == 0) || {[_truck, _magazineClass, _maxRoundsPerMag] call FUNC(removeMagazineFromSupply)}) then {
+                _plannedRounds pushBack _maxRoundsPerMag;
             };
         };
-    } else {
-        if ((GVAR(supply) == 0) || {[_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply)}) then {
-            _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
-        };
     };
-    false
-} count _magazines;
+    
+    TRACE_2("rearming",_x,_plannedRounds);
+    
+    // Updating new ammo counts to vehicle.
+    if (_isPylonMag) then {
+        _vehicle setAmmoOnPylon [_pylonIndex, (_plannedRounds select 0)];
+    } else {
+        [_vehicle, _magTurretPath, _magazineClass, _plannedRounds] call FUNC(setTurretMagazineAmmo);
+    };
+} forEach _magazines;
 
