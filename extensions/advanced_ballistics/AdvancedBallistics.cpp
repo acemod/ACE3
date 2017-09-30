@@ -160,9 +160,9 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
     for (int i = 0; i < machNumbers.size(); i++) {
         if (machNumbers[i] >= m) {
             int previousIdx = std::max(0, i - 1);
-            double lcd = dragCoefficients[previousIdx];
-            double lmn = machNumbers[previousIdx];
-            double cd = lcd + (dragCoefficients[i] - lcd) * (m - lmn) / (machNumbers[i] - lmn);
+            double previousDragCoefficient = dragCoefficients[previousIdx];
+            double previousMachNumber = machNumbers[previousIdx];
+            double cd = previousDragCoefficient + (dragCoefficients[i] - previousDragCoefficient) * (m - previousMachNumber) / (machNumbers[i] - previousMachNumber);
             return BC_CONVERSION_FACTOR * (cd / DragCoefficient) * std::pow(Velocity, 2);
         }
     }
