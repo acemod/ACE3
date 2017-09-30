@@ -31,7 +31,7 @@ if (GVAR(supply) == 1) then {
             if (_supplyCount > 0 ) then {
                 [[LSTRING(Hint_RemainingSupplyPoints), _supplyCount], 2, _unit] call EFUNC(common,displayTextStructured);
             } else {
-                [LSTRING(Hint_EmptySupplyPoints), 2, _unit] call EFUNC(common,displayTextStructured);
+                [LSTRING(Hint_Empty), 2, _unit] call EFUNC(common,displayTextStructured);
             };
             true
         },

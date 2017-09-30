@@ -47,12 +47,9 @@ private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf
         private _currentRounds = _vehicle ammoOnPylon _pylonIndex;
         
         if (_currentRounds < _maxRounds) then {
-        
-            private _pylonTurret = getArray (_pylonConfig >> "turret");
-    
-            // Converting to expected array for driver.
-            if (_pylonTurret isEqualTo []) then {_pylonTurret = [-1];};
-        
+            // getPylonTurret expects 0 based index, and returns driver turret as [-1]
+            private _pylonTurret = [_vehicle, (_pylonIndex - 1)] call EFUNC(common,getPylonTurret);
+
             _magazineInfo pushBack [_pylonMagazine, _pylonTurret, true, _pylonIndex, 1, 1, _maxRounds, [_currentRounds]];
         };
     };

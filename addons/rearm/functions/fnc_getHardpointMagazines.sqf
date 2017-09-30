@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED(QFUNC(getHardpointMagazines),"3.12.0","getCompatiblePylonMagazines");
+
 params ["_pylonConfig"];
 
 private _return = GVAR(hardpointGroupsCache) getVariable (str _pylonConfig);
