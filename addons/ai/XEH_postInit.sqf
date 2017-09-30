@@ -48,30 +48,30 @@
             switch true do {
                 case (surfaceIsWater (getPos _unit) && {surfaceIsWater _pos}) : {
                     for "_i" from 0 to 3 do {
-                        drawLine3D [_unit modelToWorldVisualWorld [0,0,1], (AGLtoASL _pos), [0,0,0,1]];
+                        drawLine3D [_unit modelToWorldVisualWorld [0,0,1], (AGLtoASL _pos), [1,0,0,1]];
                     };
-                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], (AGLtoASL _pos), 0.75, 0.75, 0.75];
+                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], (AGLtoASL _pos), 0.75, 0.75, 0.75];
                 };
 
                 case (!surfaceIsWater (getPos _unit) && {!surfaceIsWater _pos}) : {
                     for "_i" from 0 to 3 do {
                         drawLine3D [_unit modelToWorldVisual [0,0,1], _pos, [1,0,0,1]];
                     };
-                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], _pos, 0.75, 0.75, 0.75];
+                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], _pos, 0.75, 0.75, 0.75];
                 };
 
                 case (!surfaceIsWater (getPos _unit) && {surfaceIsWater _pos}) : {
                     for "_i" from 0 to 3 do {
-                        drawLine3D [_unit modelToWorldVisual [0,0,1], (AGLToASL _pos), [0,0,0,1]];
+                        drawLine3D [_unit modelToWorldVisual [0,0,1], (AGLToASL _pos), [1,0,0,1]];
                     };
-                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], (AGLtoASL _pos), 0.75, 0.75, 0.75];
+                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], (AGLtoASL _pos), 0.75, 0.75, 0.75];
                 };
 
                 case (surfaceIsWater (getPos _unit) && {!surfaceIsWater _pos}) : {
                     for "_i" from 0 to 3 do {
-                        drawLine3D [_unit modelToWorldVisualWorld  [0,0,1], _pos, [0,0,0,1]];
+                        drawLine3D [_unit modelToWorldVisualWorld  [0,0,1], _pos, [1,0,0,1]];
                     };
-                    drawIcon3D ["\a3\ui_f\data\gui\cfg\cursors\add_gs.paa", [1,0,0,1], _pos, 0.75, 0.75, 0.75];
+                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], _pos, 0.75, 0.75, 0.75];
                 };
             };
         } foreach _unitMoveList;
