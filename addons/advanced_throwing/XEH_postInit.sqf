@@ -3,6 +3,18 @@
 // Fired XEH
 [QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
+// make grenades spin
+["ace_throwableThrown", { // local event
+    params ["_unit", "_grenade"];
+
+    private _config = _grenade call CBA_fnc_getObjectConfig;
+    systemChat str [_config, getArray (_config >> QGVAR(torqueDirection)), getNumber (_config >> QGVAR(torqueMagnitude))];
+    private _torque = vectorNormalized getArray (_config >> QGVAR(torqueDirection)) vectorMultiply
+        getNumber (_config >> QGVAR(torqueMagnitude));
+
+    _grenade addTorque (_unit vectorModelToWorld _torque);
+}] call CBA_fnc_addEventHandler;
+
 // Exit on HC
 if (!hasInterface) exitWith {};
 
