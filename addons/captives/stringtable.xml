@@ -431,6 +431,7 @@
             <English>Sets the unit under the cursor captive.</English>
             <German>Nimmt die Einheit vor dem Cursor fest.</German>
             <Japanese>カーソル先のユニットを拘束</Japanese>
+            <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
