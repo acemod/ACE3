@@ -8,7 +8,6 @@
     params ["_unit", "_grenade"];
 
     private _config = _grenade call CBA_fnc_getObjectConfig;
-    systemChat str [_config, getArray (_config >> QGVAR(torqueDirection)), getNumber (_config >> QGVAR(torqueMagnitude))];
     private _torque = vectorNormalized getArray (_config >> QGVAR(torqueDirection)) vectorMultiply
         getNumber (_config >> QGVAR(torqueMagnitude));
 
