@@ -467,20 +467,17 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double drag = 0.0;
         double accelRef[3] = { 0.0, 0.0, 0.0 };
         double accel[3] = { 0.0, 0.0, 0.0 };
-        double TOF = 0.0;
-        double deltaT = 0.0;
+        double TOF = tickTime - bulletDatabase[index].startTime;
+        double deltaT = tickTime - bulletDatabase[index].lastFrame;
         double bulletSpeed;
         double trueVelocity[3] = { 0.0, 0.0, 0.0 };
         double trueSpeed = 0.0;
-        double temperature = 0.0;
-        double pressure = 1013.25;
+        double temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
+        double pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
         double windSpeed = 0.0;
         double windAttenuation = 1.0;
         double velocityOffset[3] = { 0.0, 0.0, 0.0 };
 
-        TOF = tickTime - bulletDatabase[index].startTime;
-
-        deltaT = tickTime - bulletDatabase[index].lastFrame;
         bulletDatabase[index].lastFrame = tickTime;
 
         bulletSpeed = sqrt(pow(velocity[0], 2) + pow(velocity[1], 2) + pow(velocity[2], 2));
@@ -532,9 +529,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         trueVelocity[2] = velocity[2] - wind[2];
         trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
 
-        double speedOfSound = 331.3 + (0.6 * temperature);
-        double transonicSpeed = 394 + (0.6 * temperature);
-        if (bulletDatabase[index].transonicStabilityCoef < 1.0f && bulletSpeed < transonicSpeed && bulletSpeed > speedOfSound) {
+        if (bulletDatabase[index].transonicStabilityCoef < 1.0f && bulletSpeed - 60 < SPEED_OF_SOUND(temperature) && bulletSpeed > SPEED_OF_SOUND(temperature)) {
             std::uniform_real_distribution<double> distribution(-10.0, 10.0);
             double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 
@@ -549,9 +544,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
             bulletDatabase[index].bcDegradation *= pow(0.993, coef);
         };
-
-        temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
-        pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
 
         if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
             dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
