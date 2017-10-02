@@ -23,6 +23,7 @@ _units = _units select {local _x};
 {
     if (!isPlayer _x && {local _x}) then {
         _x enableAI "PATH";
+        _x enableAI "FSM";
 
         private _leader = leader _x;
 

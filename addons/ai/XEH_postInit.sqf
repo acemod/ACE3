@@ -1,11 +1,15 @@
 #include "script_component.hpp"
 
-[QGVAR(disableAI), {
-    params [["_units", [], [[]]], ["_sections", [], [[]]]];
+[QGVAR(AISection), {
+    params [["_units", [], [[]]], ["_sections", [], [[]]], ["_bool", true, [true]]];
     {
         private _section = _x;
         {
-            _x disableAI _section;
+            if (_bool) then {
+                _x enableAI _section;
+            } else {
+                _x disableAI _section;
+            };
             LOG(format [ARR_4("XEH_postInit: %1 disableAI %2 | ID %3", _x, _section, clientOwner)]);
         } foreach (_units select {local _x});
     } foreach _sections
@@ -16,7 +20,8 @@
     params ["_unitsArray"];
     {  
         _x params ["_unit", "_pos"];
-        _unit doFollow leader _unit;
+        //_unit doFollow leader _unit;
+        _unit setDestination [_pos, "LEADER PLANNED", true];
         _unit doMove _pos;
         LOG(format [ARR_4("XEH_postInit: %1 doMove %2 | ID %3", _unit, _pos, clientOwner)]);
     } foreach _unitsArray

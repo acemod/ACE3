@@ -24,6 +24,7 @@ if (isNil "_unitMoveList") exitWith {};
 // Start initial movement
 private _unitMoveListUnits = (_unitMoveList apply {_x select 0});
 [QGVAR(setBehaviour), [(_unitMoveListUnits select {leader _x == _x}), "AWARE"], _unitMoveListUnits] call CBA_fnc_targetEvent;
+[QGVAR(AISection), [_unitMoveListUnits, ["FSM"], false], _unitMoveListUnits] call CBA_fnc_targetEvent;
 [QGVAR(doMove), [_unitMoveList], _unitMoveListUnits] call CBA_fnc_targetEvent;
 [QGVAR(enableAttack), [_unitMoveListUnits select {leader _x == _x}, false], _unitMoveListUnits] call CBA_fnc_targetEvent;
 
@@ -73,7 +74,8 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                             _unit setVariable [QGVAR(garrisonned), true, true];
                             _unitMoveList deleteAt (_unitMoveList find _x);
 
-                            [QGVAR(disableAI), [[_unit], ["PATH"]], _unit] call CBA_fnc_targetEvent;
+                            [QGVAR(AISection), [[_unit], ["PATH"], false], _unit] call CBA_fnc_targetEvent;
+                            [QGVAR(AISection), [[_unit], ["FSM"], true], _unit] call CBA_fnc_targetEvent;
 
                             if ({(_x select 0) in units _unit && {!isPlayer (_x select 0)}} count _unitMoveList == 0) then {
                                 [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
@@ -112,7 +114,8 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                                 _unit setVariable [QGVAR(garrisonned), true, true];
                                 _unitMoveList deleteAt (_unitMoveList find _x);
 
-                                [QGVAR(disableAI), [[_unit], ["PATH"]], _unit] call CBA_fnc_targetEvent;
+                                [QGVAR(AISection), [[_unit], ["PATH"], false], _unit] call CBA_fnc_targetEvent;
+                                [QGVAR(AISection), [[_unit], ["FSM"], true], _unit] call CBA_fnc_targetEvent;
 
                                 if ({(_x select 0) in units _unit && {!isPlayer (_x select 0)}} count _unitMoveList == 0) then {
                                     [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;

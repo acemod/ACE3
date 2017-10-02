@@ -268,7 +268,7 @@ _garrison_unitMoveList append _unitMoveList;
 missionNameSpace setVariable [QGVAR(garrison_unitMoveList), _garrison_unitMoveList, true];
 
 if (_teleport) then {
-    [QGVAR(disableAI), [_placedUnits, ["PATH"]], _placedUnits] call CBA_fnc_targetEvent;
+    [QGVAR(AISection), [_placedUnits, ["PATH"], false], _placedUnits] call CBA_fnc_targetEvent;
 
 } else {
     [_unitMoveList] call FUNC(garrisonMove);
