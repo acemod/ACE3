@@ -44,125 +44,23 @@ class CfgVehicles {
 
     class rhs_bmd_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 300;
-        class Turrets: Turrets {
-            class CommanderOptics: NewTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-            class GPMGTurret1: NewTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
     };
     class rhs_bmp1tank_base: Tank_F {
         EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
         EGVAR(refuel,fuelCapacity) = 460;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-            class Com_BMP1: NewTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
-    };
-    class rhs_bmp_base: rhs_bmp1tank_base {};
-    class rhs_bmp1_vdv: rhs_bmp_base {};
-    class rhs_bmp2e_vdv : rhs_bmp1_vdv {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                class Turrets: Turrets {
-                    class CommanderOptics : CommanderOptics {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                };
-            };
-        };
     };
     class rhs_bmp3tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 460;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-                class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                };
-            };
-            class GPMGTurret1: NewTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
     };
     class rhs_btr_base: Wheeled_APC_F {
         EGVAR(map,vehicleLightColor)[] = {0,0,1,0.1};
         EGVAR(refuel,fuelCapacity) = 300;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret  {
-                EGVAR(fcs,enabled) = 0;
-            };
-            class CommanderOptics: CommanderOptics {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
     };
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-                class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics
-                    {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                };
-            };
-        };
-    };
-    class rhs_bmd4_vdv: rhs_a3spruttank_base {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };
-            };
-            class GPMGTurret1: NewTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
-    };
-    class rhs_bmd4m_vdv: rhs_bmd4_vdv {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };
-            };
-            class GPMGTurret1: GPMGTurret1 {};
-            class GPMGTurret2: GPMGTurret1 {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
     };
     class rhs_a3t72tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-                class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                    class CommanderMG: CommanderOptics {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                };
-            };
-        };
     };
     class rhs_t72bb_tv: rhs_a3t72tank_base {
         ace_repair_hitpointPositions[] = {{"era_1_hitpoint", {0,0,0}}};
@@ -178,43 +76,17 @@ class CfgVehicles {
             ace_repair_hitpointGroups[] = {{"era_1_hitpoint", {"era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint", "era_31_hitpoint", "era_32_hitpoint"}}};
         };
     };
-    class rhs_t90_tv: rhs_t72bd_tv {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-                class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                };
-            };
-        };
-    };
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-                class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                    class CommanderMG: CommanderOptics {
-                        EGVAR(fcs,enabled) = 0;
-                    };
-                };
-            };
-        };
     };
 
     class rhs_infantry_msv_base;
-    class rhs_pilot_base : rhs_infantry_msv_base
-    {
+    class rhs_pilot_base: rhs_infantry_msv_base {
         ace_gforcecoef = 0.55;
     };
 
     class O_Plane_CAS_02_F;
-    class RHS_su25_base : O_Plane_CAS_02_F {
+    class RHS_su25_base: O_Plane_CAS_02_F {
         EGVAR(refuel,fuelCapacity) = 3600;
     };
 
@@ -222,7 +94,7 @@ class CfgVehicles {
         class EventHandlers;
     };
     class Heli_Light_02_base_F: Helicopter_Base_H {};
-    class RHS_Mi8_base : Heli_Light_02_base_F {
+    class RHS_Mi8_base: Heli_Light_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 3700;
         EGVAR(fastroping,enabled) = 0;
@@ -277,33 +149,33 @@ class CfgVehicles {
     class rhs_mi28_base: Heli_Attack_02_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
+                EGVAR(fcs,enabled) = 0; // Note: This is still required because of inheritance from Heli_Attack_02_base_F
             };
         };
     };
 
-    class RHS_Ka52_base : Heli_Attack_02_base_F {
+    class RHS_Ka52_base: Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1870;
         EGVAR(fastroping,enabled) = 0;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
+                EGVAR(fcs,enabled) = 0; // Note: This is still required because of inheritance from Heli_Attack_02_base_F
             };
         };
     };
 
-    class RHS_Mi24_base : Heli_Attack_02_base_F {
+    class RHS_Mi24_base: Heli_Attack_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 1851;
         EGVAR(fastroping,enabled) = 0;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
+                EGVAR(fcs,enabled) = 0; // Note: This is still required because of inheritance from Heli_Attack_02_base_F
             };
         };
     };
 
-    class rhs_t80b : rhs_tank_base {
+    class rhs_t80b: rhs_tank_base {
         EGVAR(refuel,fuelCapacity) = 1100;
     };
     class rhs_t80bv: rhs_t80b {
@@ -325,7 +197,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCargo) = 10000;
     };
 
-    class rhs_truck : Truck_F {
+    class rhs_truck: Truck_F {
         EGVAR(refuel,fuelCapacity) = 210;
     };
 
@@ -341,12 +213,12 @@ class CfgVehicles {
     };
 
     class MRAP_02_base_F;
-    class rhs_tigr_base : MRAP_02_base_F {
+    class rhs_tigr_base: MRAP_02_base_F {
         EGVAR(refuel,fuelCapacity) = 138;
     };
 
     class Offroad_01_base_f;
-    class RHS_UAZ_Base : Offroad_01_base_f {
+    class RHS_UAZ_Base: Offroad_01_base_f {
         EGVAR(refuel,fuelCapacity) = 78;
     };
 
@@ -356,38 +228,27 @@ class CfgVehicles {
         };
     };
 
-    class rhs_zsutank_base : APC_Tracked_02_base_F {
+    class rhs_zsutank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 515;
-
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
     };
 
-    class rhs_btr60_base : rhs_btr_base {
+    class rhs_btr60_base: rhs_btr_base {
         EGVAR(refuel,fuelCapacity) = 290;
     };
-    class rhs_btr70_vmf : rhs_btr_base {
+    class rhs_btr70_vmf: rhs_btr_base {
         EGVAR(refuel,fuelCapacity) = 350;
     };
 
-    class rhs_btr70_msv : rhs_btr70_vmf {};
-    class rhs_btr80_msv : rhs_btr70_msv {
+    class rhs_btr70_msv: rhs_btr70_vmf {};
+    class rhs_btr80_msv: rhs_btr70_msv {
         EGVAR(refuel,fuelCapacity) = 300;
     };
 
-    class rhs_2s3tank_base : Tank_F {
+    class rhs_2s3tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 830;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0;
-            };
-        };
     };
 
-    class OTR21_Base : Truck_F {
+    class OTR21_Base: Truck_F {
         EGVAR(refuel,fuelCapacity) = 500;
     };
 };
