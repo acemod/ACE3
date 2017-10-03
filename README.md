@@ -126,4 +126,4 @@ To help us test the latest development changes, download our master branch ([dir
 
 ## License
 
-ACE3 is licensed under the GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE).
+ACE3 is licensed under the GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
