@@ -21,7 +21,7 @@
 #define STD_AIR_DENSITY_ICAO 1.22498f
 #define STD_AIR_DENSITY_ASM 1.20885f
 #define BC_CONVERSION_FACTOR 0.00068418f
-#define SPEED_OF_SOUND(t) (331.3 + std::sqrt(1 + t / 273.15f))
+#define SPEED_OF_SOUND(t) (331.3 * std::sqrt(1 + t / 273.15f))
 #define SPEED_OF_SOUND_AT_15C 340.275
 
 struct Bullet {
