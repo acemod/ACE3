@@ -9,7 +9,7 @@
  * Child actions <ARRAY>
  *
  * Example:
- * [kevin] call ace_medical_fnc_addLoadPatientActions
+ * [kevin] call ace_medical_treatment_fnc_addLoadPatientActions
  *
  * Public: No
  */

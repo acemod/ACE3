@@ -96,6 +96,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionLoadUnit));
                     icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying"};
+                    insertChildren = QUOTE(call DEFUNC(medical_treatment,addLoadPatientActions));
                 };
                 class ACE_Medical_UnLoadPatient {
                     displayName = ECSTRING(medical,UnloadPatient);

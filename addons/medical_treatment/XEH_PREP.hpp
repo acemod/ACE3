@@ -9,6 +9,7 @@ PREP(actionDiagnose);
 PREP(actionLoadUnit);
 PREP(actionPlaceInBodyBag);
 PREP(actionUnloadUnit);
+PREP(addLoadPatientActions);
 
 // treaments
 PREP(canTreat);
