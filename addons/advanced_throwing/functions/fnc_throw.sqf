@@ -49,15 +49,14 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
         _newVelocity = _newVelocity vectorAdd (velocity (vehicle _unit));
     };
 
-    private _rotation = getArray (configFile >> "CfgAmmo" >> typeOf _activeThrowable >> QGVAR(rotation));
-    if (count _rotation != 3) then {
-        _rotation = THROW_ROTATION_DEFAULT;
-    };
+    private _config = configFile >> "CfgAmmo" >> typeOf _activeThrowable;
+    private _torque = vectorNormalized getArray (_config >> QGVAR(torqueDirection)) vectorMultiply
+        getNumber (_config >> QGVAR(torqueMagnitude));
 
     // Drop if unit dies during throw process
     if (alive _unit) then {
         _activeThrowable setVelocity _newVelocity;
-        _activeThrowable addTorque /*_rotation*/[-0.5, 0.25, 0];
+        _activeThrowable addTorque (_unit vectorModelToWorld _torque);
     };
 
     // Invoke listenable event
