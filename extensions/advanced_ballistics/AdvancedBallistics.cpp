@@ -39,6 +39,7 @@ struct Bullet {
     double twistDirection;
     double transonicStabilityCoef;
     double muzzleVelocity;
+    double bulletSpeed;
     std::vector<double> origin;
     double latitude;
     double temperature;
@@ -397,6 +398,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].twistDirection = twistDirection;
         bulletDatabase[index].transonicStabilityCoef = transonicStabilityCoef;
         bulletDatabase[index].muzzleVelocity = muzzleVelocity;
+        bulletDatabase[index].bulletSpeed = muzzleVelocity;
         bulletDatabase[index].origin = origin;
         bulletDatabase[index].latitude = latitude / 180 * M_PI;
         bulletDatabase[index].temperature = temperature;
@@ -467,18 +469,15 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double accel[3] = { 0.0, 0.0, 0.0 };
         double TOF = tickTime - bulletDatabase[index].startTime;
         double deltaT = tickTime - bulletDatabase[index].lastFrame;
-        double bulletSpeed;
         double trueVelocity[3] = { 0.0, 0.0, 0.0 };
         double trueSpeed = 0.0;
         double temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
-        double pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
+        double pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (KELVIN(temperature) + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
         double windSpeed = 0.0;
         double windAttenuation = 1.0;
         double velocityOffset[3] = { 0.0, 0.0, 0.0 };
 
         bulletDatabase[index].lastFrame = tickTime;
-
-        bulletSpeed = sqrt(pow(velocity[0], 2) + pow(velocity[1], 2) + pow(velocity[2], 2));
 
         windSpeed = sqrt(pow(wind[0], 2) + pow(wind[1], 2) + pow(wind[2], 2));
         if (windSpeed > 0.1) {
@@ -527,7 +526,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         trueVelocity[2] = velocity[2] - wind[2];
         trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
 
-        if (bulletDatabase[index].transonicStabilityCoef < 1.0f && bulletSpeed - 60 < SPEED_OF_SOUND(temperature) && bulletSpeed > SPEED_OF_SOUND(temperature)) {
+        if (bulletDatabase[index].transonicStabilityCoef < 1.0f && trueSpeed - 60 < SPEED_OF_SOUND(temperature) && trueSpeed > SPEED_OF_SOUND(temperature)) {
             std::uniform_real_distribution<double> distribution(-10.0, 10.0);
             double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 
@@ -544,11 +543,11 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         };
 
         if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
-            dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
+            dragRef = deltaT * bulletDatabase[index].airFriction * bulletDatabase[index].bulletSpeed * bulletDatabase[index].bulletSpeed;
 
-            accelRef[0] = (velocity[0] / bulletSpeed) * dragRef;
-            accelRef[1] = (velocity[1] / bulletSpeed) * dragRef;
-            accelRef[2] = (velocity[2] / bulletSpeed) * dragRef;
+            accelRef[0] = (velocity[0] / bulletDatabase[index].bulletSpeed) * dragRef;
+            accelRef[1] = (velocity[1] / bulletDatabase[index].bulletSpeed) * dragRef;
+            accelRef[2] = (velocity[2] / bulletDatabase[index].bulletSpeed) * dragRef;
 
             velocityOffset[0] -= accelRef[0];
             velocityOffset[1] -= accelRef[1];
@@ -556,7 +555,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
             ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[0];
             for (int i = (int)bulletDatabase[index].velocityBoundaries.size() - 1; i >= 0; i = i - 1) {
-                if (bulletSpeed < bulletDatabase[index].velocityBoundaries[i]) {
+                if (trueSpeed < bulletDatabase[index].velocityBoundaries[i]) {
                     ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[i + 1];
                     break;
                 }
@@ -577,11 +576,11 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             double airFriction = bulletDatabase[index].airFriction * airDensity / STD_AIR_DENSITY_ICAO;
 
             if (airFriction != bulletDatabase[index].airFriction || windSpeed > 0) {
-                dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
+                dragRef = deltaT * bulletDatabase[index].airFriction * bulletDatabase[index].bulletSpeed * bulletDatabase[index].bulletSpeed;
 
-                accelRef[0] = (velocity[0] / bulletSpeed) * dragRef;
-                accelRef[1] = (velocity[1] / bulletSpeed) * dragRef;
-                accelRef[2] = (velocity[2] / bulletSpeed) * dragRef;
+                accelRef[0] = (velocity[0] / bulletDatabase[index].bulletSpeed) * dragRef;
+                accelRef[1] = (velocity[1] / bulletDatabase[index].bulletSpeed) * dragRef;
+                accelRef[2] = (velocity[2] / bulletDatabase[index].bulletSpeed) * dragRef;
 
                 velocityOffset[0] -= accelRef[0];
                 velocityOffset[1] -= accelRef[1];
@@ -602,7 +601,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             double bulletDir = atan2(velocity[0], velocity[1]);
             double driftAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / pow(TOF, 0.17);
             double driftVelocity = 0.0581025 *(bulletDatabase[index].stabilityFactor + 1.2) * pow(TOF, 0.83);
-            double dragCorrection = (driftVelocity / bulletSpeed) * drag;
+            double dragCorrection = (driftVelocity / trueSpeed) * drag;
             velocityOffset[0] += sin(bulletDir + M_PI / 2) * (driftAccel * deltaT + dragCorrection);
             velocityOffset[1] += cos(bulletDir + M_PI / 2) * (driftAccel * deltaT + dragCorrection);
         }
@@ -615,6 +614,11 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         velocityOffset[0] += accel[0] * deltaT;
         velocityOffset[1] += accel[1] * deltaT;
         velocityOffset[2] += accel[2] * deltaT;
+
+        velocity[0] += velocityOffset[0];
+        velocity[1] += velocityOffset[1];
+        velocity[2] += velocityOffset[2];
+        bulletDatabase[index].bulletSpeed = sqrt(pow(velocity[0], 2) + pow(velocity[1], 2) + pow(velocity[2], 2));
 
         outputStr << "[" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]";
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
