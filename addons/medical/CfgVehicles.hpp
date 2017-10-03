@@ -551,6 +551,7 @@ class CfgVehicles {
                     priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotSwimming"};
+                    insertChildren = QUOTE(call DFUNC(addLoadPatientActions));
                 };
                 class GVAR(UnLoadPatient) {
                     displayName = CSTRING(UnloadPatient);

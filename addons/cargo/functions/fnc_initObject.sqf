@@ -53,7 +53,7 @@ private _condition = {
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
     {locked _target < 2} &&
     {alive _target} &&
-    {[_player, _target, []] call EFUNC(common,canInteractWith)} &&
+    {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
     {0 < {
             private _type = typeOf _x;
             private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];

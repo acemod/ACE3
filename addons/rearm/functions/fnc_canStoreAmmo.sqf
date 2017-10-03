@@ -16,10 +16,7 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_unit", objNull, [objNull]]
-];
+params ["_truck", "_unit"];
    
 (alive _unit)
 && {_unit isKindOf "CAManBase"}

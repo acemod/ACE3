@@ -58,7 +58,7 @@ if (_inBuilding) then {
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
 
-// make object accesable for other units
+// make object accessible for other units
 [objNull, _target, true] call EFUNC(common,claim);
 
 if !(_target isKindOf "CAManBase") then {

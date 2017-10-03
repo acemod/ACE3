@@ -7,6 +7,7 @@ PREP(compileMenuSelfAction);
 PREP(compileMenuZeus);
 PREP(collectActiveActionTree);
 PREP(createAction);
+PREP(createVehiclesActions);
 PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
 PREP(handleEscapeMenu);

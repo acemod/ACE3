@@ -30,4 +30,5 @@
     #define TIME_PROGRESSBAR(X) (X)
 #endif
 
-#define INTERACT_EXCEPTIONS "isNotInside", "isNotOnLadder", "isNotRefueling"
+#define INTERACT_EXCEPTIONS_REFUELING "isNotInside", "isNotOnLadder", "isNotSwimming"
+#define INTERACT_EXCEPTIONS INTERACT_EXCEPTIONS_REFUELING, "isNotRefueling"
