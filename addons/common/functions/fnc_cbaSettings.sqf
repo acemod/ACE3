@@ -47,7 +47,7 @@ GVAR(settings) = []; // will stay empty - for BWC?
 
     // Third: Event so that ACE_Modules have their settings loaded:
     [QGVAR(initSettingsFromModules), []] call CBA_fnc_localEvent;
-    
+
     TRACE_1("Finished mission settings",_this);
 }] call CBA_fnc_addEventHandler;
 
@@ -102,6 +102,11 @@ for "_index" from 0 to (_countOptions - 1) do {
             GVAR(cbaSettings_missionSettings) pushBack [_settingName, _value];
         };
     };
+};
+
+// Warning if using a custom ACE_ServerSettings config
+if (isServer && {isClass (configFile >> "ACE_ServerSettings")}) then {
+    WARNING("ACE_ServerSettings is no longer supported and will be ignored");
 };
 
 INFO_1("Parsed Settings Configs [%1 ms]",(1000 * (diag_tickTime - _start)) toFixed 1);
