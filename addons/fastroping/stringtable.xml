@@ -49,6 +49,7 @@
         <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
             <English>Stow fast roping system</English>
             <Italian>Arrotola le corde</Italian>
+            <Japanese>ファスト ロープのシステムを収容</Japanese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>

@@ -42,7 +42,9 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
         [_object,_vehicle],
         {["ace_loadCargo", _this select 0] call CBA_fnc_localEvent},
         {},
-        localize LSTRING(LoadingItem)
+        localize LSTRING(LoadingItem),
+        {true},
+        ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
     _return = true;
 } else {

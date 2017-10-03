@@ -17,13 +17,7 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_vehicle", objNull, [objNull]],
-    ["_turretPath", [], [[]]],
-    ["_magazineClass", "", [""]]
-];
+params ["_vehicle", "_turretPath", "_magazineClass"];
 
-if (isNull _vehicle) exitWith {0};
-
-private _count = {_x == _magazineClass} count ([_vehicle, _turretPath] call FUNC(getVehicleMagazines));
+private _count = {_x == _magazineClass} count ([_vehicle, _turretPath] call FUNC(getTurretConfigMagazines));
 _count

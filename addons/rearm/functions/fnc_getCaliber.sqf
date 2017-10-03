@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 params [
-    ["_magazineClass", "", [""]]
+    ["_magazineClass", ""]
 ];
 
 if (_magazineClass isEqualTo "") exitWith {[8, 2]};

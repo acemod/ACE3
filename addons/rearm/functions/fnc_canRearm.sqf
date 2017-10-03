@@ -16,10 +16,7 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_vehicle", objNull, [objNull]],
-    ["_unit", objNull, [objNull]]
-];
+params ["_vehicle", "_unit"];
 
 if (!alive _vehicle) exitWith {false};
 if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_vehicle distance _unit > REARM_ACTION_DISTANCE} || {_vehicle getVariable [QGVAR(disabled), false]}) exitWith {false};
@@ -29,4 +26,9 @@ if (isNull _dummy) exitwith {false};
 private _magazineClass = _dummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {false};
 
-([_vehicle, _magazineClass] call FUNC(getNeedRearmMagazines)) select 0
+private _needRearmMags = [_vehicle] call FUNC(getNeedRearmMagazines);
+
+// Testing if vehicle needs rearm on any magazines of class _magazineClass
+private _needsRearm = ({(_x select 0) isEqualTo _magazineClass} count _needRearmMags) > 0;
+
+_needsRearm
