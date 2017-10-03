@@ -25,7 +25,7 @@ if (_unit != ACE_player) exitWith {};
 
 _timeToCut = if ([_unit] call EFUNC(common,isEngineer)) then {7.5} else {11};
 
-if (!underwater _unit) then {
+if !(_unit call EFUNC(common,isSwimming)) then {
     [_unit, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
 };
 
@@ -33,7 +33,7 @@ _onCompletion = {
     TRACE_1("_onCompletion",_this);
     (_this select 0) params ["_fenceObject", "", "_unit"];
     _fenceObject setdamage 1;
-    if (!underwater _unit) then {
+    if !(_unit call EFUNC(common,isSwimming)) then {
         [_unit, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
     };
 };
@@ -41,7 +41,7 @@ _onCompletion = {
 _onFail = {
     TRACE_1("_onFail", _this);
     (_this select 0) params ["", "", "_unit"];
-    if (!underwater _unit) then {
+    if !(_unit call EFUNC(common,isSwimming)) then {
         [_unit, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
     };
 };

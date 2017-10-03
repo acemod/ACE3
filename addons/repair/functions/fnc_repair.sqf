@@ -169,7 +169,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (!underwater _caller) then {
+    if !(_caller call EFUNC(common,isSwimming)) then {
         if (stance _caller == "STAND") then {
             _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
         } else {

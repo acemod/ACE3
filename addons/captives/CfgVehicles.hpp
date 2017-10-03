@@ -51,6 +51,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.2;
+                    insertChildren = QUOTE(call DFUNC(addLoadCaptiveActions));
                 };
                 class GVAR(UnloadCaptive) {
                     displayName = CSTRING(UnloadCaptive);
@@ -221,6 +222,12 @@ class CfgVehicles {
                         value = 2;
                     };
                 };
+            };
+            class requireSurrenderAi {
+                displayName = CSTRING(ModuleSettings_requireSurrenderAi_name);
+                description = CSTRING(ModuleSettings_requireSurrenderAi_description);
+                typeName = "BOOL";
+                defaultValue = 0;
             };
         };
         class ModuleDescription: ModuleDescription {

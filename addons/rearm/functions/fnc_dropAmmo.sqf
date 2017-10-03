@@ -18,9 +18,9 @@
 #include "script_component.hpp"
 
 params [
-    ["_unit", objNull, [objNull]],
-    ["_delete", false, [false]],
-    ["_unholster", true, [true]]
+    "_unit",
+    ["_delete", false],
+    ["_unholster", true]
 ];
 
 private _dummy = _unit getVariable [QGVAR(dummy), objNull];

@@ -45,6 +45,13 @@ class CfgVehicles {
                 showDisabled = 0;
                 priority = 1;
             };
+            class ACE_stowFRIES {
+                displayName = CSTRING(Interaction_stowFRIES);
+                condition = QUOTE([vehicle _player] call FUNC(canStowFRIES));
+                statement = QUOTE([vehicle _player] call FUNC(stowFRIES));
+                showDisabled = 0;
+                priority = 1;
+            };
             class ACE_deployRopes {
                 displayName = CSTRING(Interaction_deployRopes);
                 condition = QUOTE([ARR_2(_player, vehicle _player)] call FUNC(canDeployRopes));
@@ -156,6 +163,8 @@ class CfgVehicles {
         class ACE_Actions {};
         class Turrets {};
         class TransportItems {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
     };
 
     class Helicopter_Base_H;

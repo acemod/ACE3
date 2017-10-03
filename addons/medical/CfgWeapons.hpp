@@ -1,7 +1,7 @@
 
 class CfgWeapons {
     class ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
     class InventoryFirstAidKitItem_Base_F;
     class MedikitItem;
 
@@ -27,7 +27,7 @@ class CfgWeapons {
         displayName = CSTRING(Bandage_Basic_Display);
         descriptionShort = CSTRING(Bandage_Basic_Desc_Short);
         descriptionUse = CSTRING(Bandage_Basic_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -38,7 +38,7 @@ class CfgWeapons {
         model = QPATHTOF(data\packingbandage.p3d);
         descriptionShort = CSTRING(Packing_Bandage_Desc_Short);
         descriptionUse = CSTRING(Packing_Bandage_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -49,7 +49,7 @@ class CfgWeapons {
         model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
         descriptionShort = CSTRING(Bandage_Elastic_Desc_Short);
         descriptionUse = CSTRING(Bandage_Elastic_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -60,7 +60,7 @@ class CfgWeapons {
         model = QPATHTOF(data\tourniquet.p3d);
         descriptionShort = CSTRING(Tourniquet_Desc_Short);
         descriptionUse = CSTRING(Tourniquet_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -71,7 +71,7 @@ class CfgWeapons {
         model = QPATHTOF(data\morphine.p3d);
         descriptionShort = CSTRING(Morphine_Desc_Short);
         descriptionUse = CSTRING(Morphine_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -82,7 +82,7 @@ class CfgWeapons {
         model = QPATHTOF(data\adenosine.p3d);
         descriptionShort = CSTRING(adenosine_Desc_Short);
         descriptionUse = CSTRING(adenosine_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -93,7 +93,7 @@ class CfgWeapons {
         model = QPATHTOF(data\atropine.p3d);
         descriptionShort = CSTRING(Atropine_Desc_Short);
         descriptionUse = CSTRING(Atropine_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -104,7 +104,7 @@ class CfgWeapons {
         model = QPATHTOF(data\epinephrine.p3d);
         descriptionShort = CSTRING(Epinephrine_Desc_Short);
         descriptionUse = CSTRING(Epinephrine_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -118,7 +118,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\items\plasmaIV_x_ca.paa);
         descriptionShort = CSTRING(Plasma_IV_Desc_Short);
         descriptionUse = CSTRING(Plasma_IV_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -126,7 +126,7 @@ class CfgWeapons {
         displayName = CSTRING(Plasma_IV_500);
         model = QPATHTOF(data\IVBag_500ml.p3d);
         hiddenSelectionsTextures[] = { QPATHTOF(data\IVBag_plasma_500ml_ca.paa) };
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -134,7 +134,7 @@ class CfgWeapons {
         displayName = CSTRING(Plasma_IV_250);
         model = QPATHTOF(data\IVBag_250ml.p3d);
         hiddenSelectionsTextures[] = { QPATHTOF(data\IVBag_plasma_250ml_ca.paa) };
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2.5;
         };
     };
@@ -147,7 +147,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = { QPATHTOF(data\IVBag_blood_1000ml_ca.paa) };
         descriptionShort = CSTRING(Blood_IV_Desc_Short);
         descriptionUse = CSTRING(Blood_IV_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -155,7 +155,7 @@ class CfgWeapons {
         displayName = CSTRING(Blood_IV_500);
         model = QPATHTOF(data\IVBag_500ml.p3d);
         hiddenSelectionsTextures[] = { QPATHTOF(data\IVBag_blood_500ml_ca.paa) };
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -163,7 +163,7 @@ class CfgWeapons {
         displayName = CSTRING(Blood_IV_250);
         model = QPATHTOF(data\IVBag_250ml.p3d);
         hiddenSelectionsTextures[] = { QPATHTOF(data\IVBag_blood_250ml_ca.paa) };
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2.5;
         };
     };
@@ -176,7 +176,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\items\salineIV_x_ca.paa);
         descriptionShort = CSTRING(Saline_IV_Desc_Short);
         descriptionUse = CSTRING(Saline_IV_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -184,7 +184,7 @@ class CfgWeapons {
         displayName = CSTRING(Saline_IV_500);
         model = QPATHTOF(data\IVBag_500ml.p3d);
         hiddenSelectionsTextures[] = { QPATHTOF(data\IVBag_saline_500ml_ca.paa) };
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -192,7 +192,7 @@ class CfgWeapons {
         displayName = CSTRING(Saline_IV_250);
         model = QPATHTOF(data\IVBag_250ml.p3d);
         hiddenSelectionsTextures[] = { QPATHTOF(data\IVBag_saline_250ml_ca.paa) };
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2.5;
         };
     };
@@ -203,7 +203,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\items\quickclot_x_ca.paa);
         descriptionShort = CSTRING(QuikClot_Desc_Short);
         descriptionUse = CSTRING(QuikClot_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -213,7 +213,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\items\personal_aid_kit_x_ca.paa);
         descriptionShort = CSTRING(Aid_Kit_Desc_Short);
         descriptionUse = CSTRING(Aid_Kit_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -224,7 +224,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\items\surgicalKit_x_ca.paa);
         descriptionShort = CSTRING(SurgicalKit_Desc_Short);
         descriptionUse = CSTRING(SurgicalKit_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -235,7 +235,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\items\bodybag_x_ca.paa);
         descriptionShort = CSTRING(Bodybag_Desc_Short);
         descriptionUse = CSTRING(Bodybag_Desc_Use);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 7;
         };
     };

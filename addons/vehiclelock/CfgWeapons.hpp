@@ -1,5 +1,5 @@
 class CfgWeapons {
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
     class ACE_ItemCore;
 
     class ACE_key_master: ACE_ItemCore {
@@ -10,7 +10,7 @@ class CfgWeapons {
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = QPATHTOF(ui\keyBlack.paa);
         scope = 2;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };

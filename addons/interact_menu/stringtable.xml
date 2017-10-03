@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -444,6 +444,7 @@
             <Japanese>サブ動作が表示されるホバーをした時に、表示されるメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
             <Chinesesimp>使选单的动画速度更快, 并减少子选项显现出来的时间</Chinesesimp>
             <Chinese>使選單的動畫速度更快, 並減少子選項顯現出來的時間</Chinese>
+            <Korean>상호 작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져 오는 데 필요한 시간을 줄입니다.</Korean>
         </Key>
     </Package>
 </Project>

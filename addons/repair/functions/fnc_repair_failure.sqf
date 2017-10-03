@@ -31,7 +31,7 @@ private ["_config","_callback", "_usersOfItems", "_weaponSelect"];
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
-if (vehicle _caller == _caller && {!underwater _caller}) then {
+if (vehicle _caller == _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];

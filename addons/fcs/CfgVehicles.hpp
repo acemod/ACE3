@@ -47,25 +47,19 @@ class CfgVehicles {
             };
         };
         class Turrets {
-            class MainTurret: NewTurret {
-                GVAR(Enabled) = 1; // all tracked vehicles get one by default
-            };
+            class MainTurret: NewTurret {};
         };
     };
 
     class Tank_F: Tank {
         class Turrets {
-            class MainTurret: NewTurret {
-                GVAR(Enabled) = 1; // all tracked vehicles get one by default
-            };
+            class MainTurret: NewTurret {};
         };
     };
 
     class APC_Tracked_01_base_F: Tank_F {
         class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 0;
-            };
+            class MainTurret: MainTurret {};
         };
     };
 
@@ -86,14 +80,11 @@ class CfgVehicles {
 
     class APC_Tracked_02_base_F: Tank_F {
         class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 0;
-            };
+            class MainTurret: MainTurret {};
         };
     };
 
     class O_APC_Tracked_02_base_F: APC_Tracked_02_base_F {};
-    
     class O_APC_Tracked_02_AA_F: O_APC_Tracked_02_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -103,38 +94,6 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
                 magazines[] += {"ACE_120Rnd_35mm_ABM_shells_Tracer_Green"};
-            };
-        };
-    };
-
-    class APC_Tracked_03_base_F: Tank_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 0;
-            };
-        };
-    };
-
-    class MBT_01_base_F: Tank_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 0;
-            };
-        };
-    };
-
-    class MBT_02_base_F: Tank_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 0;
-            };
-        };
-    };
-    
-    class MBT_03_base_F: Tank_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 0;
             };
         };
     };
