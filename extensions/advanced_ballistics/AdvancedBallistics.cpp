@@ -382,7 +382,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         humidity = strtod(strtok_s(NULL, ":", &next_token), NULL);
         overcast = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime = strtod(strtok_s(NULL, ":", &next_token), NULL);
-        tickTime += strtod(strtok_s(NULL, ":", &next_token), NULL);
 
         while (index >= bulletDatabase.size()) {
             Bullet bullet;
@@ -444,7 +443,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         wind[2] = strtod(strtok_s(NULL, ",", &token), NULL);
         heightAGL = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime = strtod(strtok_s(NULL, ":", &next_token), NULL);
-        tickTime += strtod(strtok_s(NULL, ":", &next_token), NULL);
 
         if (bulletDatabase[index].randSeed == 0) {
             int angle = (int)round(atan2(velocity[0], velocity[1]) * 360 / M_PI);
