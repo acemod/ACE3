@@ -67,7 +67,7 @@ if (_simulationType == "tank") exitWith {
     // ammo was hit, high chance for cook-off
     if (_hitpoint == _ammoLocationHitpoint) then {
         // get cookoff probability for vehicle (default to global setting if not found)
-        private _probability = [_vehicle call CBA_fnc_getObjectConfig >> QGVAR(cookoffProbability), "number", GVAR(cookoffProbability)] call CBA_fnc_getConfigEntry;
+        private _probability = [_vehicle call CBA_fnc_getObjectConfig >> QGVAR(probability), "number", GVAR(probability)] call CBA_fnc_getConfigEntry;
         if (_damage > 0.1 && {random 1 < _probability}) then {
             _vehicle call FUNC(cookOff);
         };
