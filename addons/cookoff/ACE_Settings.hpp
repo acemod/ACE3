@@ -24,9 +24,9 @@ class ACE_Settings {
         value = 1;
         typeName = "SCALAR";
     };
-    class GVAR(cookoffProbability) {
-        displayName = CSTRING(cookoffProbability_name);
-        description = CSTRING(cookoffProbability_tooltip);
+    class GVAR(probability) {
+        displayName = CSTRING(probability_name);
+        description = CSTRING(probability_tooltip);
         value = 0.4;
         typeName = "SCALAR";
     };

@@ -37,7 +37,7 @@ class CfgVehicles {
     class Tank_F: Tank {
         GVAR(ammoLocation) = "HitHull";
         GVAR(cookoffSelections)[] = {"poklop_gunner","poklop_commander"};
-        GVAR(cookoffProbability) = 0.5;
+        GVAR(probability) = 0.5;
     };
     class MBT_02_base_F: Tank_F {
         GVAR(ammoLocation) = "HitTurret";
@@ -47,7 +47,7 @@ class CfgVehicles {
     class Wheeled_APC_F: Car_F {
         GVAR(ammoLocation) = "HitHull";
         GVAR(cookoffSelections)[] = {"poklop_gunner","poklop_commander"};
-        GVAR(cookoffProbability) = 0.8;
+        GVAR(probability) = 0.8;
 
         // big explosions for wheeled APCs (same as for tanks)
         explosionEffect = "FuelExplosionBig";
