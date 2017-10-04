@@ -46,7 +46,7 @@ private _newDamage = _damage - _oldDamage;
 // because the config version ignores the return value completely
 if (_simulationType == "car") exitWith {
     // prevent destruction, let cook-off handle it if necessary
-    if (_hitpoint in ["hithull", "hitfuel", "#structural"] && {!IS_EXPLOSIVE_AMMO(_ammo)}) then {
+    if (_hitpoint in ["hithull", "#structural"] && {!IS_EXPLOSIVE_AMMO(_ammo)}) then {
         _damage min 0.89
     } else {
         if (_hitpoint isEqualTo "hitengine" && {_damage > 0.9}) then {
@@ -66,17 +66,23 @@ if (_simulationType == "tank") exitWith {
 
     // ammo was hit, high chance for cook-off
     if (_hitpoint == _ammoLocationHitpoint) then {
-        if (_damage > 0.5 && {random 1 < 0.7}) then {
+        // get cookoff probability for vehicle (default to global setting)
+        private _probability = if (isNumber (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(cookoffProbability))) then {
+            getNumber (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(cookoffProbability))
+        } else {
+            GVAR(cookoffProbability)
+        };
+        if (_damage > 0.1 && {random 1 < _probability}) then {
             _vehicle call FUNC(cookOff);
         };
     } else {
-        if (_hitpoint in ["hithull", "hitturret", "#structural"] && {_newDamage > 0.6 + random 0.3}) then {
-            _vehicle call FUNC(cookOff);
+        if (_hitpoint in ["hithull", "hitturret", "#structural"] && {_newDamage > 0.8 + random 0.2}) then {
+            _vehicle setDamage 1;
         };
     };
 
     // prevent destruction, let cook-off handle it if necessary
-    if (_hitpoint in ["hithull", "hitfuel", "#structural"]) then {
+    if (_hitpoint in ["hithull", "#structural"]) then {
         _damage min 0.89
     } else {
         _damage
