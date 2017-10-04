@@ -4508,19 +4508,13 @@ class ace_arsenal_test {
             h = safezoneH - 22 * GRID_H;
             colorBackground[] = {0,0,0,0.5};
         };
-        class blockRightFrame: RscFrame {
+        class blockRightFrame: blockLeftFrame {
             x = safezoneX + safezoneW - 85 * GRID_W;
-            y = safezoneY + 20 * GRID_H;
-            w = 70 * GRID_W;
             h = safezoneH + safezoneY - 62 * GRID_H;
-            colorText[]={0,0,0,1};
         };
-        class blockRighttBackground: ctrlStaticBackground {
+        class blockRighttBackground: blockLeftBackground {
             x = safezoneX + safezoneW - 85 * GRID_W;
-            y = safezoneY + 20 * GRID_H;
-            w = 70 * GRID_W;
             h = safezoneH + safezoneY - 62 * GRID_H;
-            colorBackground[] = {0,0,0,0.5};
         };
         class loadIndicator: ctrlProgress {
             fade=0;
@@ -4533,45 +4527,73 @@ class ace_arsenal_test {
             w = 70 * GRID_W;
             h = 7 * GRID_H;
         };
+        class message: RscText {
+            fade = 0; //1 in final
+            style=2;
+            shadow=0;
+            colorBackground[]={0,0,0,0.69999999};
+            text="Message test test test";
+            x = safezoneX + safezoneW * 0.50 - 75 * GRID_W;
+            y = safeZoneH + safezoneY - 25 * GRID_H;
+            w = 150 * GRID_W;
+            h = 10 * GRID_H;
+            sizeEx = 5 * GRID_H;
+        };
         class menuBar: RscControlsGroupNoScrollbars {
-            x = safezoneX + 5 * GUI_W;
-            y = safezoneY + 5 * GUI_H;
-            w = safezoneW;
-            h = 10 * GUI_H;
+            x = safezoneX + safezoneW * 0.50 - 75 * GRID_W;
+            y = safeZoneH + safezoneY - 10 * GRID_H;
+            w = 150 * GRID_W;
+            h = 7 * GRID_H;
             class controls {
-                class buttonClose: RscButtonMenu {
+                class menuBarBackground: ctrlStaticBackground {
                     x = 0;
                     y = 0;
-                    w = 5 * GRID_W;
-                    h = 3 * GRID_H;
+                    w = 150 * GRID_W;
+                    h = 7 * GRID_H;
+                    colorBackground[] = {0,0,0,1};
+                };
+                class buttonClose: ctrlButtonClose {
+                    x = 0;
+                    y = 0;
+                    w = 25 * GRID_W;
+                    h = 7 * GRID_H;
                     text="Close"; // TBL
                     shortcuts[]= {"0x01"};
                     tooltip="Close interface"; // TBL
                 };
-                class buttonSave: buttonClose {
-                    x = 6 * GRID_W;
+                class buttonSave: ctrlButton {
+                    x = 25 * GRID_W;
+                    y = 0;
+                    w = 25 * GRID_W;
+                    h = 7 * GRID_H;
                     text="Save"; // TBL
                     tooltip="Save loadout"; // TBL
                 };
-                class buttonLoad: buttonClose {
-                    x = 12 * GRID_W;
+                class buttonLoad: buttonSave {
+                    x = 50 * GRID_W;
                     text="Load"; // TBL
                     tooltip="Load loadout"; // TBL
                 };
-                class buttonImport: buttonClose {
-                    x = 18 * GRID_W;
+                class buttonImport: buttonSave {
+                    x = 75 * GRID_W;
                     text="Import"; // TBL
                     tooltip="Import loadout"; // TBL
                 };
-                class buttonExport: buttonClose {
-                    x = 24 * GRID_W;
+                class buttonExport: buttonSave {
+                    x = 100 * GRID_W;
                     text="Export"; // TBL
                     tooltip="Export loadout"; // TBL
+                };
+                class buttonHide: buttonSave {
+                    x = 125 * GRID_W;
+                    text="Hide"; // TBL
+                    shortcuts[]= {"DIK_BACK"};
+                    tooltip="Hide interface"; // TBL
                 };
             };
         };
         class infoBox: RscControlsGroupNoScrollbars {
-            fade=1;
+            fade=0; //1 in final
             x = safezoneX + safezoneW - 100 * GRID_W;
             y = safezoneH - 75 * GRID_H;
             w = 85 * GRID_W;
@@ -4602,7 +4624,7 @@ class ace_arsenal_test {
                     sizeEx = 5 * GRID_H; 
                 };
                 class DLCBackground: ctrlStaticBackground {
-                    fade=0;
+                    fade=1; //1 in final
                     x = 0;
                     y = 0;
                     w = 15 * GRID_W;
@@ -4610,7 +4632,7 @@ class ace_arsenal_test {
                 };
                 class DLCIcon: RscActivePicture {
                     enabled=0;
-                    fade=0;
+                    fade=1; // 1 in final
                     color[]={1,1,1,1};
                     colorActive[]={1,1,1,1};
                     text="#(argb,8,8,3)color(1,1,1,1)";
@@ -4622,7 +4644,7 @@ class ace_arsenal_test {
             };
         };
         class stats: RscControlsGroupNoScrollbars{
-            fade=1;
+            fade=0;
             enable=0;
             x = safezoneX + safezoneW - 85 * GRID_W;
             y = safezoneH - 145 * GRID_H;
@@ -4696,6 +4718,330 @@ class ace_arsenal_test {
                 };
                 class statText8: statText1 {
                     y = 53.5 * GRID_H;
+                };
+            };
+        };
+        /*class MouseBlock: RscText {
+            style=16;
+            x="safezoneX";
+            y="safezoneY";
+            w="safezoneW";
+            h="safezoneH";
+        };*/
+        class LeftTabContent: RscListBox {
+            colorBackground[]={0,0,0,0};
+            colorSelectBackground[]={1,1,1,0.5};
+            colorSelectBackground2[]={1,1,1,0.5};
+            colorPictureSelected[]={1,1,1,1};
+            colorSelect[]={1,1,1,1};
+            colorSelect2[]={1,1,1,1};
+            colorPictureRightSelected[]={1,1,1,1};
+            x = safezoneX + 15 * GRID_W;
+            y = safezoneY + 20 * GRID_H;
+            w = 70 * GRID_W;
+            h = safezoneH - 22 * GRID_H;
+        };
+        class RightTabContent: LeftTabContent {
+            x = safezoneX + safezoneW - 85 * GRID_W;
+            h = safezoneH + safezoneY - 62 * GRID_H;
+        };
+        class sortLeftTab: ctrlCombo {
+            x = safezoneX + 15 * GRID_W;
+            y = safezoneY + 14 * GRID_H;
+            w = 70 * GRID_W;
+            h = 6 * GRID_H;
+            class Items {
+                class Alphabet {
+                    text="$STR_a3_rscdisplayarsenal_sort_alphabet";
+                    default=1;
+                };
+                class Mod {
+                    text="$STR_a3_rscdisplayarsenal_sort_mod";
+                };
+            };
+        };
+        class sortRightTab: sortLeftTab {
+            x = safezoneX + safezoneW - 85 * GRID_W;
+        };
+        class leftSearchbar: ctrlEdit {
+            x = safezoneX + 15 * GRID_W;
+            y = safezoneY + 7.8 * GRID_H;
+            w = 70 * GRID_W;
+            h = 6 * GRID_H;
+        };
+        class rightSearchbar: leftSearchBar{
+            x = safezoneX + safezoneW - 85 * GRID_W;
+        };
+        class tabLeft: RscControlsGroupNoScrollbars {
+            x = safezoneX + 3 * GRID_W;
+            y = safezoneY + 3 * GRID_H;
+            w = 9 * GRID_W;
+            h = 200 * GRID_H;
+            class controls {
+                class iconBackgroundPrimaryWeapon: RscPicture {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
+                    colorText[]={0,0,0,0.8};
+                    x = 0;
+                    y = 0 * GRID_H;
+                    w = 9 * GRID_W;
+                    h = 9 * GRID_H;
+                };
+                class buttonPrimaryWeapon: RscButtonArsenal{
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_PrimaryWeapon";
+                    colorBackground[]={0,0,0,0.5};
+                    x = 0;
+                    y = 0 * GRID_H;
+                    w = 9 * GRID_W;
+                    h = 9 * GRID_H;
+                };
+                class iconBackgroundHandgun: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa";
+                    y = 10 * GRID_H;
+                };
+                class buttonHandgun: buttonPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Handgun";
+                   y = 10 * GRID_H;
+                };
+                class iconBackgroundSecondaryWeapon: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa";
+                    y = 20 * GRID_H;
+                };
+                class buttonSecondaryWeapon: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_SecondaryWeapon";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa";
+                    y = 20 * GRID_H;
+                };
+                class iconBackgroundHeadgear: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Headgear_ca.paa";
+                    y = 30 * GRID_H;
+                };
+                class buttonHeadgear: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Headgear";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Headgear_ca.paa";
+                    y = 30 * GRID_H;
+                };
+                class iconBackgroundUniform: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Uniform_ca.paa";
+                    y = 40 * GRID_H;
+                };
+                class buttonUniform: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Uniform";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Uniform_ca.paa";
+                    y = 40 * GRID_H;
+                };
+                class iconBackgroundVest: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Vest_ca.paa";
+                    y = 50 * GRID_H;
+                };
+                class buttonVest: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Vest";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Vest_ca.paa";
+                    y = 50 * GRID_H;
+                };
+                class iconBackgroundBackpack: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Backpack_ca.paa";
+                    y = 60 * GRID_H;
+                };
+                class buttonBackpack: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Backpack";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Backpack_ca.paa";
+                    y = 60 * GRID_H;
+                };
+                class iconBackgroundGoggles: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Goggles_ca.paa";
+                    y = 70 * GRID_H;
+                };
+                class buttonGoggles: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Goggles";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Goggles_ca.paa";
+                    y = 70 * GRID_H;
+                };
+                class iconBackgroundNVG: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\NVGs_ca.paa";
+                    y = 80 * GRID_H;
+                };
+                class buttonNVG: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_NVGs";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\NVGs_ca.paa";
+                    y = 80 * GRID_H;
+                };
+                class iconBackgroundBinoculars: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Binoculars_ca.paa";
+                    y = 90 * GRID_H;
+                };
+                class buttonBinoculars: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Binoculars";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Binoculars_ca.paa";
+                    y = 90 * GRID_H;
+                };
+                class iconBackgroundMap: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Map_ca.paa";
+                    y = 100 * GRID_H;
+                };
+                class buttonMap: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Map";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Map_ca.paa";
+                    y = 100 * GRID_H;
+                };
+                class iconBackgroundGPS: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\GPS_ca.paa";
+                   y = 110 * GRID_H;
+                };
+                class buttonGPS: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_GPS";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\GPS_ca.paa";
+                    y = 110 * GRID_H;
+                };
+                class iconBackgroundRadio: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Radio_ca.paa";
+                    y = 120 * GRID_H;
+                };
+                class buttonRadio: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Radio";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Radio_ca.paa";
+                    y = 120 * GRID_H;
+                };
+                class iconBackgroundCompass: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Compass_ca.paa";
+                    y = 130 * GRID_H;
+                };
+                class buttonCompass: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Compass";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Compass_ca.paa";
+                    y = 130 * GRID_H;
+                };
+                class iconBackgroundWatch: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa";
+                    y = 140 * GRID_H;
+                };
+                class buttonWatch: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Watch";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa";
+                    y = 140 * GRID_H;
+                };
+                class iconBackgroundFace: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Face_ca.paa";
+                    y = 150 * GRID_H;
+                };
+                class buttonFace: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Face";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Face_ca.paa";
+                    y = 150 * GRID_H;
+                };
+                class iconBackgroundVoice: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Voice_ca.paa";
+                    y = 160 * GRID_H;
+                };
+                class buttonVoice: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Voice";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Voice_ca.paa";
+                    y = 160 * GRID_H;
+                };
+                class iconBackgroundInsigna: IconBackgroundPrimaryWeapon {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Insignia_ca.paa";
+                    y = 170 * GRID_H;
+                };
+                class buttonInsigna: buttonPrimaryWeapon {
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_Insignia";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Insignia_ca.paa";
+                    y = 170 * GRID_H;
+                };
+            };
+        };
+        class tabRight: RscControlsGroupNoScrollbars{
+            x = safezoneW  + safezoneX - 12 * GRID_W;
+            y = safezoneY + 20 * GRID_H;
+            w = 9 * GRID_W;
+            h = 200 * GRID_H;
+            class controls {
+                class iconBackgroundOptic: RscPicture {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
+                    colorText[]={0,0,0,0.8};
+                    x = 0;
+                    y = 0 * GRID_H;
+                    w = 9 * GRID_W;
+                    h = 9 * GRID_H;
+                };
+                class buttonOptic: RscButtonArsenal {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemOptic";
+                    colorBackground[]={0,0,0,0.5};
+                    x = 0;
+                    y = 0 * GRID_H;
+                    w = 9 * GRID_W;
+                    h = 9 * GRID_H;
+                };
+                class iconBackgroundItemAcc: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemAcc_ca.paa";
+                    y = 10 * GRID_H;
+                };
+                class buttonItemAcc: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemAcc_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemAcc";
+                    y = 10 * GRID_H;
+                };
+                class iconBackgroundMuzzle: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemMuzzle_ca.paa";
+                    y = 20 * GRID_H;
+                };
+                class buttonMuzzle: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemMuzzle_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemMuzzle";
+                    y = 20 * GRID_H;
+                };
+                class iconBackgroundBipod: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemBipod_ca.paa";
+                    y = 30 * GRID_H;
+                };
+                class buttonBipod: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemBipod_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemBipod";
+                    y = 30 * GRID_H;
+                };
+                class iconBackgroundMag: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
+                };
+                class buttonMag: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMag";
+                };
+                class iconBackgroundMagALL: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMagAll_ca.paa";
+                    y = 10 * GRID_H;
+                };
+                class buttonMagALL: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMagAll_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMagAll";
+                    y = 10 * GRID_H;
+                };
+                class iconBackgroundThrow: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoThrow_ca.paa";
+                    y = 20 * GRID_H;
+                };
+                class buttonThrow: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoThrow_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoThrow";
+                    y = 20 * GRID_H;
+                };
+                class iconBackgroundPut: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoPut_ca.paa";
+                    y = 30 * GRID_H;
+                };
+                class buttonPut: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoPut_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoPut";
+                    y = 30 * GRID_H;
+                };
+                class iconBackgroundMisc: iconBackgroundOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
+                    y = 40 * GRID_H;
+                };
+                class buttonMisc: buttonOptic {
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
+                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
+                    y = 40 * GRID_H;
                 };
             };
         };
