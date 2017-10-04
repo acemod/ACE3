@@ -553,6 +553,10 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={820};
         ACE_barrelLengths[]={728.98};
     };
+    class B_127x108_APDS: B_127x108_Ball {
+        typicalSpeed = 820;
+        airFriction = -0.00065098;
+    };
     class B_45ACP_Ball : BulletBase {
         airFriction=-0.00081221;
         tracerScale = 0.6;
