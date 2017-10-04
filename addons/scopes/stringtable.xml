@@ -3,7 +3,7 @@
     <Package name="Scopes">
         <Key ID="STR_ACE_Scopes_DisplayName">
             <English>Scopes</English>
-            <German>Visiere</German>
+            <German>Zielfernrohre</German>
             <Japanese>スコープ</Japanese>
             <Korean>조준경</Korean>
             <Polish>Celowniki optyczne</Polish>
@@ -14,7 +14,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_displayName">
             <English>Enable ACE Scope adjustment</English>
-            <German>Aktiviere ACE-Visieranpassungen</German>
+            <German>Aktiviere das Nullen von Zielfernrohren</German>
             <Japanese>ACE スコープ調節を有効化</Japanese>
             <Korean>ACE 조준경 영점조작 활성화</Korean>
             <Polish>Włącz ustawienia celowników optycznych ACE</Polish>
@@ -24,8 +24,8 @@
             <Chinese>開啟ACE瞄準鏡歸零調節</Chinese>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_description">
-            <English>Enable adjustmet turrets on high powered scopes</English>
-            <German>Aktiviere Anpassungen für Waffen mit leistungsstarken Zielfernrohren</German>
+            <English>Enable adjustment turrets on high powered scopes</English>
+            <German>Aktiviere Absehenverstellungen für Waffen mit Zielfernrohren</German>
             <Japanese>高倍率スコープでACE スコープ調節を有効化</Japanese>
             <Korean>고성능 조준경 조절 나사 활성화</Korean>
             <Polish>Włącz pokrętła regulacyjne </Polish>
@@ -36,7 +36,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_displayName">
             <English>Force adjustment turrets</English>
-            <German>Erzwinge Absehenverstellung</German>
+            <German>Erzwinge Absehenverstellungen</German>
             <Japanese>ACE スコープ調節を有効化</Japanese>
             <Korean>조절 나사 강제</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych</Polish>
@@ -47,7 +47,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustmet turrets on high powered scopes</English>
-            <German>Erzwinge Anpassungen für Waffen mit leistungsstarken Zielfernrohren</German>
+            <German>Erzwinge Absehenverstellungen für Waffen mit Zielfernrohren</German>
             <Japanese>高倍率スコープで調整の使用を強制させます</Japanese>
             <Korean>고성능 조준경의 조절 나사 사용을 강제합니다</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o dużym powiększeniu</Polish>
@@ -91,7 +91,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
-            <German>Nutzt die Einstellung 'defaultZeroRange' um leistungsstarke Zielfernrohre anzupassen</German>
+            <German>Nutzt die Einstellung 'defaultZeroRange' um Zielfernrohre anzupassen</German>
             <Japanese>'defaultZeroRange'設定を使う高倍率スコープのゼロイン距離を上書きします</Japanese>
             <Korean>기존 고성능 조준경의 영점거리에 '기본설정 영점거리' 를 덮어씌웁니다</Korean>
             <Polish>Używa 'defaultZeroRange' zamiast ustawionej odległości zerowania dla celowników o duzym przybliżeniu </Polish>
@@ -112,8 +112,8 @@
             <Chinese>預設歸零距離</Chinese>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
-            <English>High power scopes will be zeroed at this distance</English>
-            <German>Leistungsstarke Zielfernrohre werden auf diese Entfernung genullt</German>
+            <English>High powered scopes will be zeroed at this distance</English>
+            <German>Zielfernrohre werden auf diese Entfernung genullt</German>
             <Japanese>高倍率スコープのゼロイン距離はこの設定になります</Japanese>
             <Korean>고성능 조준경이 정해진 수만큼 영점거리를 맞추게 됩니다.</Korean>
             <Polish>Celowniki o dużym powiększeniu będą zerowane dla tej odległości</Polish>
@@ -135,7 +135,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
             <English>Temperature at which the scope was zeroed</English>
-            <German>Temperatur bei welcher das Zielfernrohr genullt wurde</German>
+            <German>Temperatur bei der das Zielfernrohr genullt wurde</German>
             <Japanese>スコープがゼロインされる温度</Japanese>
             <Korean>조준경 영점조준시 온도</Korean>
             <Polish>Temperatura, przy której celownik został wyzerowany</Polish>
@@ -157,7 +157,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
             <English>Barometric pressure at which the scope was zeroed</English>
-            <German>Luftdruck bei welchem das Zielfernrohr genullt wurde</German>
+            <German>Luftdruck bei dem das Zielfernrohr genullt wurde</German>
             <Japanese>気圧の参照</Japanese>
             <Korean>조준경 영점조준시 기압</Korean>
             <Polish>Ciśnienie barometryczne, przy którym celownik został wyzerowany</Polish>
@@ -168,7 +168,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
-            <German>Benzugsluftfeuchtigkeit</German>
+            <German>Bezugsluftfeuchtigkeit</German>
             <Japanese>湿度の参照</Japanese>
             <Korean>습도 기준</Korean>
             <Polish>Referencyjna wilgotność</Polish>
@@ -201,7 +201,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
-            <German>Abgeleiteter Luftdruck von der Terrainhöhe</German>
+            <German>Abgeleiteter Luftdruck der Geländeumgebung</German>
             <Japanese>標高により気圧が減少されます</Japanese>
             <Korean>주변 고도에 맞춰 기압을 설정합니다</Korean>
             <Polish>Określ ciśnienie barometryczne na podstawie wysokości terenu</Polish>
@@ -212,13 +212,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
-            <German>Kleine Anpassung hoch</German>
+            <German>Kleine Korrektur hoch</German>
             <Polish>Zerowanie powoli w górę</Polish>
             <Russian>Малая корректировка ВВЕРХ</Russian>
             <Spanish>Ajuste menor arriba</Spanish>
             <Italian>Regola leggermente alzata in alto</Italian>
             <French>Hausse +</French>
-            <German>Kleine Korrektur nach oben</German>
             <Hungarian>Enyhe állítás fel</Hungarian>
             <Portuguese>Pequeno ajuste para cima</Portuguese>
             <Czech>Korekce nahoru (mírně)</Czech>
@@ -229,13 +228,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
-            <German>Kleine Anpassung runter</German>
+            <German>Kleine Korrektur runter</German>
             <Polish>Zerowanie powoli w dół</Polish>
             <Russian>Малая корректировка ВНИЗ</Russian>
             <Spanish>Ajuste menor abajo</Spanish>
             <Italian>Regola leggermente alzata in basso</Italian>
             <French>Hausse -</French>
-            <German>Kleine Korrektur nach unten</German>
             <Hungarian>Enyhe állítás le</Hungarian>
             <Portuguese>Pequeno ajuste para baixo</Portuguese>
             <Czech>Korekce dolů (mírně)</Czech>
@@ -246,13 +244,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
-            <German>Kleine Anpassung rechts</German>
+            <German>Kleine Korrektur rechts</German>
             <Polish>Zerowanie powoli w prawo</Polish>
             <Russian>Малая корректировка ВПРАВО</Russian>
             <Spanish>Ajuste menor derecha</Spanish>
             <Italian>Regola leggermente il tiro a destra</Italian>
             <French>Dérive +</French>
-            <German>Kleine Korrektur nach rechts</German>
             <Hungarian>Enyhe állítás jobbra</Hungarian>
             <Portuguese>Pequeno ajuste para direita</Portuguese>
             <Czech>Korekce doprava (mírně)</Czech>
@@ -263,13 +260,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
-            <German>Kleine Anpassung links</German>
+            <German>Kleine Korrektur links</German>
             <Polish>Zerowanie powoli w lewo</Polish>
             <Russian>Малая корректировка ВЛЕВО</Russian>
             <Spanish>Ajuste menor izquierda</Spanish>
             <Italian>Regola leggermete il tiro a sinistra</Italian>
             <French>Dérive -</French>
-            <German>Kleine Korrektur nach links</German>
             <Hungarian>Enyhe állítás balra</Hungarian>
             <Portuguese>Pequeno ajuste para esquerda</Portuguese>
             <Czech>Korekce doleva (mírně)</Czech>
@@ -280,13 +276,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
-            <German>Große Anpassung hoch</German>
+            <German>Große Korrektur hoch</German>
             <Polish>Zerowanie w górę</Polish>
             <Russian>Большая корректировка ВВЕРХ</Russian>
             <Spanish>Ajuste mayor arriba</Spanish>
             <Italian>Regola l'alzata in alto</Italian>
             <French>Hausse +++</French>
-            <German>Große Korrektur nach oben</German>
             <Hungarian>Nagy állítás fel</Hungarian>
             <Portuguese>Ajuste grande para cima</Portuguese>
             <Czech>Korekce nahoru</Czech>
@@ -297,13 +292,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMajor">
             <English>Major adjustment down</English>
-            <German>Große Anpassung runter</German>
+            <German>Große Korrektur runter</German>
             <Polish>Zerowanie w dół</Polish>
             <Russian>Большая корректировка ВНИЗ</Russian>
             <Spanish>Ajuste mayor abajo</Spanish>
             <Italian>Regola l'alzata in basso</Italian>
             <French>Hausse - - -</French>
-            <German>Große Korrektur nach unten</German>
             <Hungarian>Nagy állítás le</Hungarian>
             <Portuguese>Ajuste grande para baixo</Portuguese>
             <Czech>Korekce dolů</Czech>
@@ -314,13 +308,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
-            <German>Große Anpassung rechts</German>
+            <German>Große Korrektur rechts</German>
             <Polish>Zerowanie w prawo</Polish>
             <Russian>Большая корректировка ВПРАВО</Russian>
             <Spanish>Ajuste mayor derecha</Spanish>
             <Italian>Regola il tiro a destra</Italian>
             <French>Dérive +++</French>
-            <German>Große Korrektur nach rechts</German>
             <Hungarian>Nagy állítás jobbra</Hungarian>
             <Portuguese>Ajuste grande para direita</Portuguese>
             <Czech>Korekce doprava</Czech>
@@ -331,13 +324,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
-            <German>Große Anpassung links</German>
+            <German>Große Korrektur links</German>
             <Polish>Zerowanie w lewo</Polish>
             <Russian>Большая корректировка ВЛЕВО</Russian>
             <Spanish>Ajuste mayor izquierda</Spanish>
             <Italian>Regola il tiro a sinistra</Italian>
             <French>Dérive - - -</French>
-            <German>Große Korrektur nach links</German>
             <Hungarian>Nagy állítás balra</Hungarian>
             <Portuguese>Ajuste grande para esquerda</Portuguese>
             <Czech>Korekce doleva</Czech>
@@ -348,13 +340,12 @@
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
-            <German>Setze Nullung</German>
+            <German>Nullung durchführen</German>
             <Polish>Zresetuj wyzerowanie</Polish>
             <Russian>Сбросить корректировку</Russian>
             <Spanish>Establecer ajuste a cero</Spanish>
             <Italian>Resetta i valori del tiro</Italian>
             <French>RAZ corrections</French>
-            <German>Auf 0 justieren</German>
             <Hungarian>Állítások nullázása</Hungarian>
             <Portuguese>Zerar ajuste</Portuguese>
             <Czech>Vynulovat korekci</Czech>
@@ -365,7 +356,7 @@
         </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
-            <German>Dieses Modul fügt Windabtrieb und Höheneinstellung zu leistungsstarken Zielfernrohren hinzu.</German>
+            <German>Dieses Modul fügt Absehenverstellung (horizontal und vertikal) zu Zielfernrohren hinzu.</German>
             <Japanese>モジュールは高倍率ライフル スコープにおいて横風と仰角の調節ができます。</Japanese>
             <Korean>이 모듈은 고성능 조준경에 조준 나사를 이용한 편차 및 고도 조절 기능을 더해줍니다.</Korean>
             <Polish>Ten moduł włącza pokrętła kalibracyjne poprawki na wiatr oraz poprawki wysokości dla celowników o dużym powiększeniu.</Polish>
