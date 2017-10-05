@@ -15,3 +15,4 @@ class CfgPatches {
 };
 
 #include "ui\RscAttributes.hpp"
+#include "CfgEventHandlers.hpp"

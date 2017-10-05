@@ -1,0 +1,1 @@
+hint str _this;
