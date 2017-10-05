@@ -1,3 +1,6 @@
+#define FADE_DELAY 0.15
+
+// IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
 #define IDC_blockLeftFrame 1
@@ -25,7 +28,7 @@
 #define IDC_mouseBlock 43
 #define IDC_leftTabContent 44
 #define IDC_rightTabContent 45
-#define IDC_IDC_sortLeftTab 46
+#define IDC_sortLeftTab 46
 #define IDC_sortRightTab 47
 #define IDC_leftSearchbar 48
 #define IDC_rightSearchbar 49

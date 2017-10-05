@@ -7,6 +7,7 @@ class ace_arsenal {
     enableSimulation=1;
     onLoad = QUOTE([ARR_3('onLoad', _this, 'ace_arsenal')] call FUNC(onArsenalOpen));
     onUnload = QUOTE([ARR_3('onUnload', _this,'ace_arsenal')] call FUNC(onArsenalClose));
+    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, 'ace_arsenal')] call FUNC(onArsenalKeyDown));
     icon="\A3\Ui_f\data\Logos\a_64_ca.paa";
     logo="\A3\Ui_f\data\Logos\arsenal_1024_ca.paa";
     class ControlsBackground {
@@ -116,28 +117,28 @@ class ace_arsenal {
                     h = 7 * GRID_H;
                     text="Save"; // TBL
                     tooltip="Save loadout"; // TBL
-                    onButtonClick = QUOTE([_this] call FUNC(arsenalButtonSave));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonSave));
                 };
                 class buttonLoad: buttonSave {
                     idc = IDC_buttonLoad;
                     x = 50 * GRID_W;
                     text="Load"; // TBL
                     tooltip="Load loadout"; // TBL
-                    onButtonClick = QUOTE([_this] call FUNC(arsenalButtonLoad));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonLoad));
                 };
                 class buttonImport: buttonSave {
                     idc = IDC_buttonImport;
                     x = 75 * GRID_W;
                     text="Import"; // TBL
                     tooltip="Import loadout"; // TBL
-                    onButtonClick = QUOTE([_this] call FUNC(arsenalButtonImport));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonImport));
                 };
                 class buttonExport: buttonSave {
                     idc = IDC_buttonExport;
                     x = 100 * GRID_W;
                     text="Export"; // TBL
                     tooltip="Export loadout"; // TBL
-                    onButtonClick = QUOTE([_this] call FUNC(arsenalButtonExport));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonExport));
                 };
                 class buttonHide: buttonSave {
                     idc = IDC_buttonHide;
@@ -145,7 +146,7 @@ class ace_arsenal {
                     text="Hide"; // TBL
                     shortcuts[]= {"0x0E"};
                     tooltip="Hide interface"; // TBL
-                    onButtonClick = QUOTE([_this] call FUNC(arsenalButtonHide));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonHide));
                 };
             };
         };

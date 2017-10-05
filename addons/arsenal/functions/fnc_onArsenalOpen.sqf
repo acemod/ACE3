@@ -31,10 +31,11 @@ _args params ["_display"];
 
 #define MODLIST ["","curator","kart","heli","mark","expansion","expansionpremium"]
 #define CAM_DIS_MAX 5
-#define FADE_DELAY  0.15
 
 // Start loading screen, will be needed after camera stuff is added
 ["ace_arsenal"] call bis_fnc_startloadingscreen;
+
+missionNamespace setVariable [QGVAR(center), player];
 
 cuttext ["","plain"];
 showcommandingmenu "";
@@ -49,6 +50,10 @@ showhud false;
 
 // ------------------------------------------------------------------- Events
 // Fade out unused elements
+
+private _mouseBlockCtrl = _display displayctrl IDC_mouseBlock;
+_mouseBlockCtrl ctrlEnable false;
+
 private _msgCtrl = _display displayctrl IDC_message;
 _msgCtrl ctrlSetFade 1;
 _msgCtrl ctrlCommit 0;

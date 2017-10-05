@@ -6,3 +6,5 @@ PREP(arsenalButtonHide);
 PREP(arsenalBUttonImport);
 PREP(arsenalButtonLoad);
 PREP(arsenalButtonSave);
+PREP(onArsenalKeyDown);
+PREP(arsenalMessage);
