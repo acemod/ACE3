@@ -29,7 +29,7 @@ if (_hitIndex != -1) then {
 };
 
 // get change in damage
-private "_oldDamage";
+private _oldDamage = 0;
 
 if (_hitpoint isEqualTo "#structural") then {
     _oldDamage = damage _vehicle;

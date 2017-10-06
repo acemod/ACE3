@@ -19,18 +19,16 @@
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private ["_result", "_item", "_children", "_range", "_required","_explosivesList"];
+private _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
 
-_range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
-
-_result = [_unit] call FUNC(getPlacedExplosives);
-_children = [];
-_explosivesList = [];
+private _result = [_unit] call FUNC(getPlacedExplosives);
+private _children = [];
+private _explosivesList = [];
 {
     if (!isNull(_x select 0)) then {
-        _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
+        private _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
-            _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+            private _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
 
             _explosivesList pushBack _x;
 

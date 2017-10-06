@@ -16,8 +16,6 @@
  */
 #include "script_component.hpp"
 
-private ["_pain"];
-
 params ["_unit", "_addedPain"];
 //Only run on local units:
 if (!local _unit) exitWith {ERROR("unit is not local");};

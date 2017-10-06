@@ -23,7 +23,8 @@ if (!alive ACE_player) exitWith {};
 if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
 
 
-private ["_currentShooter", "_currentMagazine"];
+private _currentShooter = objNull;
+private _currentMagazine = "";
 if (isNull (ACE_controlledUAV param [0, objNull])) then {
     if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
         _currentShooter = ACE_player;

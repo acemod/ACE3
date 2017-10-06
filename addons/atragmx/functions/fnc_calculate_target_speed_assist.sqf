@@ -15,12 +15,10 @@
  */
 #include "script_component.hpp"
 
-private ["_targetRange", "_numTicks", "_timeSecs", "_estSpeed"];
-
-_targetRange = parseNumber(ctrlText 8004);
-_numTicks = parseNumber(ctrlText 8005);
-_timeSecs = parseNumber(ctrlText 8006);
-_estSpeed = 0;
+private _targetRange = parseNumber(ctrlText 8004);
+private _numTicks = parseNumber(ctrlText 8005);
+private _timeSecs = parseNumber(ctrlText 8006);
+private _estSpeed = 0;
 
 if (GVAR(currentUnit) == 1) then {
     _targetRange = _targetRange / 1.0936133;

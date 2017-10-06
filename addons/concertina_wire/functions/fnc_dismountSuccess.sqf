@@ -27,12 +27,11 @@ params ["_wire"];
     _args params ["_wire"];
 
     if (_wire animationPhase "wire_2" == 1) then {
-         private ["_dir", "_pos", "_wirecoil"];
 
-        _dir = getDir _wire;
-        _pos = getPosASL _wire;
+        private _dir = getDir _wire;
+        private _pos = getPosASL _wire;
 
-        _wirecoil = "ACE_ConcertinaWireCoil" createvehicle [0, 0, 0];
+        private _wirecoil = "ACE_ConcertinaWireCoil" createvehicle [0, 0, 0];
 
         deleteVehicle _wire;
 

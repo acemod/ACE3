@@ -77,11 +77,10 @@ if (GVAR(currentUnit) != 2) then {
     GVAR(barometricPressure) = 340 max GVAR(barometricPressure) min 1350;
 };
 
-private ["_windSpeed1", "_windSpeed2", "_targetSpeed", "_targetRange", "_inclinationAngleCosine", "_inclinationAngleDegree"];
-_windSpeed1 = parseNumber(ctrlText 140020);
-_windSpeed2 = parseNumber(ctrlText 140021);
-_targetSpeed = parseNumber(ctrlText 140050);
-_targetRange = parseNumber(ctrlText 140060);
+private _windSpeed1 = parseNumber(ctrlText 140020);
+private _windSpeed2 = parseNumber(ctrlText 140021);
+private _targetSpeed = parseNumber(ctrlText 140050);
+private _targetRange = parseNumber(ctrlText 140060);
 if (GVAR(currentUnit) != 2) then {
     _windSpeed1 = 0 max _windSpeed1 min 50;
     _windSpeed2 = 0 max _windSpeed2 min 50;
@@ -107,8 +106,8 @@ GVAR(windSpeed2) set [GVAR(currentTarget), _windSpeed2];
 GVAR(windDirection) set [GVAR(currentTarget), 1 max Round(parseNumber(ctrlText 140030)) min 12];
 GVAR(targetSpeed) set [GVAR(currentTarget), _targetSpeed];
 GVAR(targetRange) set [GVAR(currentTarget), _targetRange];
-_inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) min 1;
-_inclinationAngleDegree = -60 max round(parseNumber(ctrlText 140040)) min 60;
+private _inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) min 1;
+private _inclinationAngleDegree = -60 max round(parseNumber(ctrlText 140040)) min 60;
 if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)) then {
     GVAR(inclinationAngle) set [GVAR(currentTarget), _inclinationAngleDegree];
 } else {
@@ -122,19 +121,18 @@ if ((ctrlText 140051) == ">") then {
     GVAR(targetSpeedDirection) set [GVAR(currentTarget), -1];
 };
 
-private ["_boreHeight", "_bulletMass", "_bulletDiameter", "_airFriction", "_rifleTwist", "_muzzleVelocity", "_zeroRange"];
-_boreHeight = parseNumber(ctrlText 120000);
-_bulletMass = parseNumber(ctrlText 120010);
-_bulletDiameter = parseNumber(ctrlText 120020);
-_airFriction = parseNumber(ctrlText 120030);
+private _boreHeight = parseNumber(ctrlText 120000);
+private _bulletMass = parseNumber(ctrlText 120010);
+private _bulletDiameter = parseNumber(ctrlText 120020);
+private _airFriction = parseNumber(ctrlText 120030);
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _airFriction = 0.1 max _airFriction min 2;
 } else {
     _airFriction = _airFriction / -1000;
 };
-_rifleTwist = parseNumber(ctrlText 120040);
-_muzzleVelocity = parseNumber(ctrlText 120050);
-_zeroRange = parseNumber(ctrlText 120060);
+private _rifleTwist = parseNumber(ctrlText 120040);
+private _muzzleVelocity = parseNumber(ctrlText 120050);
+private _zeroRange = parseNumber(ctrlText 120060);
 if (GVAR(currentUnit) != 2) then {
     _boreHeight = 0.1 max _boreHeight min 5;
     _bulletMass = 1 max _bulletMass min 1500;

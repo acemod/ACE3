@@ -26,7 +26,6 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
 };
 
-private ["_animState", "_originalPos", "_startingTime", "_isDead"];
 params ["_unit", ["_set", true], ["_minWaitingTime", DEFAULT_DELAY], ["_force", false]];
 
 // No change, fuck off. (why is there no xor?)
@@ -55,7 +54,7 @@ if (_unit == ACE_player) then {
 };
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
-_isDead = false;
+private _isDead = false;
 if (!([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) && !_force) then {
     _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
     if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) then {
@@ -86,7 +85,7 @@ if (vehicle _unit != _unit) then {
 };
 
 //Save current stance:
-_originalPos = unitPos _unit;
+private _originalPos = unitPos _unit;
 
 _unit setUnitPos "DOWN";
 [_unit, true] call EFUNC(common,disableAI);
@@ -117,7 +116,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     };
 }, [_unit, _anim], 0.5, 0] call CBA_fnc_waitAndExecute;
 
-_startingTime = CBA_missionTime;
+private _startingTime = CBA_missionTime;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 

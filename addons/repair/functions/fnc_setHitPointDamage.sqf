@@ -22,8 +22,6 @@
 params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", true]];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
-private ["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
-
 // can't execute all commands if the vehicle isn't local. exit here.
 if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
@@ -35,13 +33,13 @@ if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith 
 
 // save structural damage and sum of hitpoint damages
 
-_damageOld = damage _vehicle;
+private _damageOld = damage _vehicle;
 
-_realHitpointCount = 0;
-_hitPointDamageSumOld = 0;
-_hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaired)
+private _realHitpointCount = 0;
+private _hitPointDamageSumOld = 0;
+private _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaired)
 {
-    _selectionName = _allHitPointsSelections select _forEachIndex;
+    private _selectionName = _allHitPointsSelections select _forEachIndex;
     //Filter out all the bad hitpoints (HitPoint="" or no selection)
     if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
         _realHitpointCount = _realHitpointCount + 1;
@@ -56,7 +54,7 @@ _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaire
 } forEach _allHitPoints;
 
 // calculate new structural damage
-_damageNew = (_hitPointDamageSumOld - _hitPointDamageRepaired) / _realHitpointCount;
+private _damageNew = (_hitPointDamageSumOld - _hitPointDamageRepaired) / _realHitpointCount;
 
 if (_hitPointDamageSumOld > 0) then {
     _damageNew = _damageOld * ((_hitPointDamageSumOld - _hitPointDamageRepaired) / _hitPointDamageSumOld);

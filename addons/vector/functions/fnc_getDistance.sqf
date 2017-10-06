@@ -19,12 +19,10 @@
 #define MIN_DISTANCE 10
 #define MAX_DISTANCE [6000, 9000] select GVAR(useFeet)
 
-private ["_dlgVector", "_distance"];
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
-_distance = ctrlText (_dlgVector displayCtrl 151);
+private _distance = ctrlText (_dlgVector displayCtrl 151);
 
 if (_distance == "----") exitWith {-1000};
 

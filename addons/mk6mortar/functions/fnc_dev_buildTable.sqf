@@ -17,21 +17,18 @@
  */
 #include "script_component.hpp"
 
-
-private ["_muzzleVelocity", "_airFriction", "_stillInRange", "_currentRange", "_increasePerRow", "_outputArray", "_rangeToHit", "_lineElevation", "_lineHeightElevation", "_lineTimeOfFlight", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_lineTempDec", "_lineTempInc", "_lineAirDensDec", "_lineAirDensInc", "_result", "_outputString"];
-
-_muzzleVelocity = _this select 0;
-_airFriction = _this select 1;
-_stillInRange = true;
-_currentRange = 100;
-_increasePerRow = 50;
-_outputArray = [];
+private _muzzleVelocity = _this select 0;
+private _airFriction = _this select 1;
+private _stillInRange = true;
+private _currentRange = 100;
+private _increasePerRow = 50;
+private _outputArray = [];
 
 
 //[_rangeToHit, _lineElevation, _lineHeightElevation, _lineHeightTimeDelta, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]
 
 while {_stillInRange} do {
-    _result = [_muzzleVelocity, _currentRange, _airFriction] call FUNC(dev_simulateCalcRangeTableLine);
+    private _result = [_muzzleVelocity, _currentRange, _airFriction] call FUNC(dev_simulateCalcRangeTableLine);
     if (_result isEqualTo []) then {
         _stillInRange = false;
     } else {
@@ -66,7 +63,7 @@ while {_stillInRange} do {
 };
 
 //handle floating point rounding errors
-_outputString = format ["case ((abs(_muzzleVelocity - %1) < 0.00001) && {(abs(_airFriction - %2) < 0.00001)}): {
+private _outputString = format ["case ((abs(_muzzleVelocity - %1) < 0.00001) && {(abs(_airFriction - %2) < 0.00001)}): {
 [
 ", _muzzleVelocity, _airFriction];
 
