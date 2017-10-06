@@ -29,7 +29,8 @@ private _distance = 0;
 while {_velocity > _thresholdVelocity} do {
     private _bc = GVAR(targetSolutionInput) select 14;
     private _dragModel = GVAR(targetSolutionInput) select 15;
-    private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _velocity]));
+    private _temperature = GVAR(targetSolutionInput) select 5;
+    private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3:%4", _dragModel, _bc, _velocity, _temperature]));
     _distance = _distance + _velocity * __DELTA_T;
     _velocity = _velocity - (_drag * __DELTA_T);
 };
