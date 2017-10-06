@@ -209,8 +209,3 @@ if (count _items == 1 && {(_items select 0)}) then {
 };
 
 _object setVariable [QGVAR(virtualItems), _cargo, _global];
-
-for "_testVar" from 0 to (count _cargo) do {
-    private _output = _cargo select _testVar;
-    diag_log _output;
-};

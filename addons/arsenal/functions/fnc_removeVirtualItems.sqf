@@ -31,7 +31,8 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
 if (count _items == 1 && {(_items select 0)}) then {
     _object setVariable [QGVAR(virtualItems), nil, _global];
 } else {
-    diag_log _items;
+    // Make sure all items are in string form
+    _items = _items select {typename _x isEqualTo typename ""};
     {
         _cargo set [_cargo find _x, _x - _items];
     } foreach _cargo;
