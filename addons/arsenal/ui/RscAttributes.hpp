@@ -7,9 +7,9 @@ class GVAR(display) {
     enableSimulation=1;
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(display))] call FUNC(onArsenalOpen));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(display))] call FUNC(onArsenalClose));
-    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onArsenalKeyDown));
-    onMouseButtonDown = QUOTE([ARR_3('onMouseButtonDown', _this, QQGVAR(display))] call FUNC(onArsenalMouseButtonDown));
-    onMouseButtonUp = QUOTE([ARR_3('onMouseButtonUp', _this, QQGVAR(display))] call FUNC(onArsenalMouseButtonUp));
+    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onKeyDown));
+    onMouseButtonDown = QUOTE([ARR_3('onMouseButtonDown', _this, QQGVAR(display))] call FUNC(onMouseButtonDown));
+    onMouseButtonUp = QUOTE([ARR_3('onMouseButtonUp', _this, QQGVAR(display))] call FUNC(onMouseButtonUp));
     icon="\A3\Ui_f\data\Logos\a_64_ca.paa";
     logo="\A3\Ui_f\data\Logos\arsenal_1024_ca.paa";
     class ControlsBackground {
@@ -28,9 +28,9 @@ class GVAR(display) {
         class mouseArea: ctrlStatic {
             idc = IDC_mouseArea;
             style = 16;
-            onMouseMoving = QUOTE([ARR_3('onMouseMoving', _this, GVAR(display))] call FUNC(arsenalHandleMouse));
-            onMouseHolding = QUOTE([ARR_3('onMouseHolding', _this, GVAR(display))] call FUNC(arsenalHandleMouse));
-            onMouseZChanged = QUOTE([ARR_3('onMouseZChanged', _this, GVAR(display))] call FUNC(arsenalHandleScrollWheel));
+            onMouseMoving = QUOTE([ARR_3('onMouseMoving', _this, GVAR(display))] call FUNC(handleMouse));
+            onMouseHolding = QUOTE([ARR_3('onMouseHolding', _this, GVAR(display))] call FUNC(handleMouse));
+            onMouseZChanged = QUOTE([ARR_3('onMouseZChanged', _this, GVAR(display))] call FUNC(handleScrollWheel));
             x = safezoneX;
             y = safezoneY;
             w = safezoneW;
@@ -113,6 +113,7 @@ class GVAR(display) {
                     text="Close"; // TBL
                     shortcuts[]= {"0x01"};
                     tooltip="Close interface"; // TBL
+                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
                 };
                 class buttonSave: ctrlButton {
                     idc = IDC_buttonSave;
@@ -136,14 +137,14 @@ class GVAR(display) {
                     x = 75 * GRID_W;
                     text="Import"; // TBL
                     tooltip="Import loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonImport));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonExport: buttonSave {
                     idc = IDC_buttonExport;
                     x = 100 * GRID_W;
                     text="Export"; // TBL
                     tooltip="Export loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonExport));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
                 };
                 class buttonHide: buttonSave {
                     idc = IDC_buttonHide;
@@ -151,7 +152,7 @@ class GVAR(display) {
                     text="Hide"; // TBL
                     shortcuts[]= {"0x0E"};
                     tooltip="Hide interface"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonHide));
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
                 };
             };
         };

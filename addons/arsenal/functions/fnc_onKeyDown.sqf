@@ -12,18 +12,18 @@ switch true do {
     };
     // Hide button
     case (_keyPressed == DIK_BACKSPACE): {
-        [_display] call FUNC(arsenalButtonHide);
+        [_display] call FUNC(buttonHide);
     };
     // Export button
     case (_keyPressed == DIK_C): {
         if (_ctrlState) then  {
-            [_display] call FUNC(arsenalButtonExport);
+            [_display] call FUNC(buttonExport);
         };
     };
     // Import button
     case (_keyPressed == DIK_V): {
         if (_ctrlState) then {
-            [_display] call FUNC(arsenalButtonImport);
+            [_display] call FUNC(buttonImport);
         };
     };
     // Switch vision mode

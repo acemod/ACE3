@@ -64,7 +64,7 @@ showCinemaBorder false;
 ["#(argb,8,8,3)color(0,0,0,1)",false,nil,0,[0,0.5]] call bis_fnc_textTiles;
 
 //--------------- Reset camera pos
-[nil, [controlNull,0,0]] call FUNC(arsenalHandleMouse);
+[nil, [controlNull,0,0]] call FUNC(handleMouse);
 GVAR(camPosUpdateHandle) = addMissionEventHandler ["draw3D",{ [] call FUNC(updateCamPos) }];
 
 ["ace_arsenal"] call bis_fnc_endloadingscreen;

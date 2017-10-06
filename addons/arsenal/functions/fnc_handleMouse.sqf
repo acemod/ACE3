@@ -41,10 +41,10 @@ if (count _RMB > 0) then {
     _helperPos = [
         [0,0,_helperPos select 2],
         [0,0,0] distance2D _helperPos,
-        ([0,0,0] getDir _helperPos) - _dX * 180
+        ([0,0,0] getDir _helperPos) - _dX * 360
     ] call bis_fnc_relpos;
 
-    GVAR(cameraPosition) set [1,(_dirH - _dX * 180) % 360];
+    GVAR(cameraPosition) set [1,(_dirH - _dX * 360) % 360];
     GVAR(cameraPosition) set [2,(_dirV - _dY * 100) max -89 min 89];
     GVAR(cameraPosition) set [3,_helperPos];
     GVAR(mouseButtonState) set [1,[_mouseX,_mouseY]];
