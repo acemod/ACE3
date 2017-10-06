@@ -140,7 +140,7 @@
             <Hungarian>Fényerő: %1</Hungarian>
             <Portuguese>Luminosidade: %1</Portuguese>
             <Italian>Luminosità: %1</Italian>
-            <Japanese>光度：%1</Japanese>
+            <Japanese>明度: %1</Japanese>
             <Korean>밝기: %1</Korean>
             <Chinesesimp>亮度: %1</Chinesesimp>
             <Chinese>亮度: %1</Chinese>
@@ -156,7 +156,7 @@
             <Hungarian>Éjjellátó fényerejének növelése</Hungarian>
             <Portuguese>Aumentar Luminosidade do EVN</Portuguese>
             <Italian>Aumenta la luminosità dell'NVG</Italian>
-            <Japanese>夜間暗視装置の光度を上げる</Japanese>
+            <Japanese>夜間暗視装置の明度を上げる</Japanese>
             <Korean>야투경 밝기 높이기</Korean>
             <Chinesesimp>增加夜视镜亮度</Chinesesimp>
             <Chinese>增加夜視鏡亮度</Chinese>
@@ -172,7 +172,7 @@
             <Hungarian>Éjjellátó fényerejének csökkentése</Hungarian>
             <Portuguese>Diminuir Luminosidade do EVN</Portuguese>
             <Italian>Riduci la luminosità dell'NVG</Italian>
-            <Japanese>夜間暗視装置の光度を下げる</Japanese>
+            <Japanese>夜間暗視装置の明度を下げる</Japanese>
             <Korean>야투경 밝기 줄이기</Korean>
             <Chinesesimp>减少夜视镜亮度</Chinesesimp>
             <Chinese>減少夜視鏡亮度</Chinese>

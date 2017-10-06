@@ -21,7 +21,7 @@
 
 params ["_caller", "_unit", ["_vehicle", objNull]];
 
-if (!([_caller, _unit, ["isNotDragging", "isNotCarrying"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
+if (!([_caller, _unit, ["isNotDragging", "isNotCarrying", "isNotSwimming"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
 
 // Try to use nearest vehicle if a vehicle hasn't been supplied
 if (isNull _vehicle) then {

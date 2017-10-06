@@ -124,7 +124,7 @@
             <Russian>Ключ для открытия большинства машин Красных.</Russian>
             <Italian>Una chiave che apre la maggior parte dei veicoli occidentali</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos ocidentais</Portuguese>
-            <Japanese>このキーは多くの WEST 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くの同盟軍車両を開けられます。</Japanese>
             <Korean>거의 모든 서방진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙 (可解锁大部份蓝方载具)</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具)</Chinese>
@@ -140,7 +140,7 @@
             <Russian>Ключ для открытия большинства машин Синих.</Russian>
             <Italian>Una chaive che apre la maggior parte dei veicoli orientali</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos orientais</Portuguese>
-            <Japanese>このキーは多くの EAST 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くのOPFOR軍車両を開けられます。</Japanese>
             <Korean>거의 모든 동방진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙 (可解锁大部份红方载具)</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份紅方載具)</Chinese>
@@ -156,7 +156,7 @@
             <Russian>Ключ для открытия большинства машин Независимых.</Russian>
             <Italian>Una chaive che apre la maggior parte dei veicoli degli indipendenti</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos independentes</Portuguese>
-            <Japanese>このキーは多くの INDEP 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くの独立軍車両を開けられます。</Japanese>
             <Korean>거의 모든 중립진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙 (可解锁大部份独立方载具)</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份獨立方載具)</Chinese>
@@ -172,7 +172,7 @@
             <Russian>Ключ для открытия большинства машин Гражданских.</Russian>
             <Italian>Una chaive che apr ela maggior parte dei veicoli civili</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos civis.</Portuguese>
-            <Japanese>このキーは多くの CIV 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くの市民車両を開けられます。</Japanese>
             <Korean>거의 모든 민간인 차량을 여는 열쇠입니다</Korean>
             <Chinesesimp>一组解锁钥匙 (可解锁大部份平民载具)</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份平民載具)</Chinese>
@@ -220,7 +220,7 @@
             <Hungarian>Bezárja a zárt járművek rakterét is</Hungarian>
             <Russian>Закрывать инвентарь транспорта, если транспорт закрыт</Russian>
             <Italian>Blocca l'inventario di un veicolo bloccato</Italian>
-            <Japanese>施錠されている車両の、開けないインベントリ</Japanese>
+            <Japanese>施錠されている車両の開けないインベントリ</Japanese>
             <Korean>잠긴 차량의 소지품을 뒤지지못하게 합니다.</Korean>
             <Chinesesimp>上锁载具的车箱, 使玩家不能拿取/查看载具内的装备</Chinesesimp>
             <Chinese>上鎖載具的車箱, 使玩家不能拿取/查看載具內的裝備</Chinese>
@@ -252,7 +252,7 @@
             <Hungarian>Beállítja a zár-állapotot az összes járműhöz (eltávolítja az azonosíthatatlan zárállapotokat)</Hungarian>
             <Russian>Устанавливает начальное состояние замков всех транспортных средств (устраняет неоднозначные состояния)</Russian>
             <Italian>Imposta lo stato di blocco per tutti i veicoli (rimuove stati di blocco ambigui)</Italian>
-            <Japanese>全車両への鍵の状態を設定します。(あいまいな鍵の状態を削除)</Japanese>
+            <Japanese>全車両へ鍵の状態を設定します。(あいまいな鍵の状態を削除)</Japanese>
             <Korean>모든 차량의 잠금 상태를 정합니다. (애매한 잠금 상태는 모두 없앱니다.)</Korean>
             <Chinesesimp>设定所有载具的初始上锁状态 (移除不明确的锁定状态)</Chinesesimp>
             <Chinese>設定所有載具的初始上鎖狀態 (移除不明確的鎖定狀態)</Chinese>
@@ -316,7 +316,7 @@
             <Hungarian>Alapértelmezett zártörő-erősség</Hungarian>
             <Russian>Сила отмычки по-умолчанию</Russian>
             <Italian>Durabilità Default del Grimaldello</Italian>
-            <Japanese>ピッキング ツールの標準の有効度</Japanese>
+            <Japanese>ピッキング ツールの能力設定</Japanese>
             <Korean>기본 해정도구 설정</Korean>
             <Chinesesimp>预设开锁能力</Chinesesimp>
             <Chinese>預設開鎖能力</Chinese>
@@ -332,7 +332,7 @@
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
             <Russian>Время для взлома замка отмычкой (в секундах). По-умолчанию: 10</Russian>
             <Italian>Tempo Default richiesto per forzare serrature (in secondi). Default: 10</Italian>
-            <Japanese>ピッキング ツールに標準の時間を設定。(秒) 標準：10</Japanese>
+            <Japanese>ピッキング ツールを使った作業時間の標準設定。(秒) 標準: 10</Japanese>
             <Korean>해정을 위해 들이는 기본시간입니다(초 단위). 기본설정: 10</Korean>
             <Chinesesimp>开锁时间(秒). 预设:10</Chinesesimp>
             <Chinese>開鎖時間(秒). 預設:10</Chinese>
@@ -348,7 +348,7 @@
             <Hungarian>Beállítások a zártörő erősségére és alapértelmezett zár-állapotra a járműveken. Eltávolítja az azonosíthatatlan zár-állapotokat.</Hungarian>
             <Russian>Настройки силы отмычек и начальное состояние замков транспорта. Устраняет неоднозначные состояния замков.</Russian>
             <Italian>Impostazioni per resistenza iniziale delle serrature e stato di blocco dei veicoli. Rimuove stati di blocco ambigui.</Italian>
-            <Japanese>ピッキング ツールの強さと車両の鍵の初期状態を設定できます。あいまいな鍵の状態を削除します。</Japanese>
+            <Japanese>ピッキング ツールの能力と車両の鍵の初期状態を設定できます。あいまいな鍵の状態を削除します。</Japanese>
             <Korean>해정도구 설정과 시작시 차량의 잠금 상태 그리고 애매한 잠금 상태를 지우는 설정입니다.</Korean>
             <Chinesesimp>设定开锁能力和初始载具上锁状态. 移除不明确的锁定状态</Chinesesimp>
             <Chinese>設定開鎖能力和初始載具上鎖狀態. 移除不明確的鎖定狀態</Chinese>
