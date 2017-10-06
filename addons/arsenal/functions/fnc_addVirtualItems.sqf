@@ -86,7 +86,8 @@ if (count _items == 1 && {(_items select 0)}) then {
             };
             /* Weapon, at the bottom to avoid adding binos */
             case (isClass (_x >> "WeaponSlotsInfo") &&
-                {getNumber (_x >> 'type') != 4096}): {
+                {getNumber (_x >> 'type') != 4096} &&
+                {!isClass (_x >> 'LinkedItems')}): {
                 (_cargo select 0) pushBackUnique (configName  _x);
             };
             /* Misc items */
@@ -114,7 +115,6 @@ if (count _items == 1 && {(_items select 0)}) then {
         (_cargo select 7) pushBackUnique (configName  _x);
     } foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
 } else {
-
     {
         if (typeName _x == typeName "") then {
             switch true do {
