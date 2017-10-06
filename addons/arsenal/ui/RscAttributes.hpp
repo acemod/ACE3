@@ -2,12 +2,14 @@
 #include "RscCommon.hpp"
 #include "..\defines.hpp"
 
-class ace_arsenal {
+class GVAR(display) {
     idd = 1127001;
     enableSimulation=1;
-    onLoad = QUOTE([ARR_3('onLoad', _this, 'ace_arsenal')] call FUNC(onArsenalOpen));
-    onUnload = QUOTE([ARR_3('onUnload', _this,'ace_arsenal')] call FUNC(onArsenalClose));
-    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, 'ace_arsenal')] call FUNC(onArsenalKeyDown));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(display))] call FUNC(onArsenalOpen));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(display))] call FUNC(onArsenalClose));
+    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onArsenalKeyDown));
+    onMouseButtonDown = QUOTE([ARR_3('onMouseButtonDown', _this, QQGVAR(display))] call FUNC(onArsenalMouseButtonDown));
+    onMouseButtonUp = QUOTE([ARR_3('onMouseButtonUp', _this, QQGVAR(display))] call FUNC(onArsenalMouseButtonUp));
     icon="\A3\Ui_f\data\Logos\a_64_ca.paa";
     logo="\A3\Ui_f\data\Logos\arsenal_1024_ca.paa";
     class ControlsBackground {
@@ -26,6 +28,9 @@ class ace_arsenal {
         class mouseArea: ctrlStatic {
             idc = IDC_mouseArea;
             style = 16;
+            onMouseMoving = QUOTE([ARR_3('onMouseMoving', _this, GVAR(display))] call FUNC(arsenalHandleMouse));
+            onMouseHolding = QUOTE([ARR_3('onMouseHolding', _this, GVAR(display))] call FUNC(arsenalHandleMouse));
+            onMouseZChanged = QUOTE([ARR_3('onMouseZChanged', _this, GVAR(display))] call FUNC(arsenalHandleScrollWheel));
             x = safezoneX;
             y = safezoneY;
             w = safezoneW;

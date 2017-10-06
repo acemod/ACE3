@@ -8,3 +8,8 @@ PREP(arsenalButtonLoad);
 PREP(arsenalButtonSave);
 PREP(onArsenalKeyDown);
 PREP(arsenalMessage);
+PREP(arsenalHandleMouse);
+PREP(arsenalHandleScrollWheel);
+PREP(onArsenalMouseButtonDown);
+PREP(onArsenalMouseButtonUp);
+PREP(updateCamPos);

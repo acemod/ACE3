@@ -1,4 +1,31 @@
 #define FADE_DELAY 0.15
+#define GETDLC\
+    {\
+        private _dlc = "";\
+        private _addons = configsourceaddonlist _this;\
+        if (count _addons > 0) then {\
+            private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons select 0);\
+            if (count _mods > 0) then {\
+                _dlc = _mods select 0;\
+            };\
+        };\
+        _dlc\
+    }
+
+#define ADDMODICON\
+    {\
+        private _dlcName = _this call GETDLC;\
+        if (_dlcName != "") then {\
+            _ctrlList lbsetpictureright [_lbAdd,(modParams [_dlcName,["logo"]]) param [0,""]];\
+            _modID = _modList find _dlcName;\
+            if (_modID < 0) then {_modID = _modList pushback _dlcName;};\
+            _ctrlList lbsetvalue [_lbAdd,_modID];\
+        };\
+    };
+
+#define MODLIST ["","curator","kart","heli","mark","expansion","expansionpremium"]
+#define CAM_DIS_MAX 5
+
 
 // IDCs
 #define IDD_ace_arsenal 1127001

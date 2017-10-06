@@ -28,11 +28,12 @@ switch true do {
     };
     // Switch vision mode
     case (_keyPressed in (actionkeys "nightvision")): {
-        private _currentVisionMode = missionNamespace getVariable [QGVAR(visionMode), -1];
-        _currentVisionMode = (_currentVisionMode + 1) % 3;
-        missionnamespace setvariable [QGVAR(visionMode), _currentVisionMode];
+        if (isNil QGVAR(visionMode)) then {
+            GVAR(visionMode) = 0;
+        };
+        GVAR(visionMode) = (GVAR(visionMode) + 1) % 3;
 
-        switch _currentVisionMode do {
+        switch GVAR(visionMode) do {
             //--- Normal
             case 0: {
                 camusenvg false;

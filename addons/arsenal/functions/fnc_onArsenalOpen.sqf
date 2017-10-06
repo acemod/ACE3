@@ -1,70 +1,70 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-params ["_mode", "_args"];
+params ["", "_args"];
 _args params ["_display"];
-
-// BI defines, might be of use later
-#define GETDLC\
-    {\
-        private _dlc = "";\
-        private _addons = configsourceaddonlist _this;\
-        if (count _addons > 0) then {\
-            private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons select 0);\
-            if (count _mods > 0) then {\
-                _dlc = _mods select 0;\
-            };\
-        };\
-        _dlc\
-    }
-
-#define ADDMODICON\
-    {\
-        private _dlcName = _this call GETDLC;\
-        if (_dlcName != "") then {\
-            _ctrlList lbsetpictureright [_lbAdd,(modParams [_dlcName,["logo"]]) param [0,""]];\
-            _modID = _modList find _dlcName;\
-            if (_modID < 0) then {_modID = _modList pushback _dlcName;};\
-            _ctrlList lbsetvalue [_lbAdd,_modID];\
-        };\
-    };
-
-#define MODLIST ["","curator","kart","heli","mark","expansion","expansionpremium"]
-#define CAM_DIS_MAX 5
 
 // Start loading screen, will be needed after camera stuff is added
 ["ace_arsenal"] call bis_fnc_startloadingscreen;
 
-missionNamespace setVariable [QGVAR(center), player];
+GVAR(center) = player;
+GVAR(mouseButtonState) = [[],[]];
 
-cuttext ["","plain"];
-showcommandingmenu "";
+GVAR(selectedWeaponType) = switch true do {
+    case (currentWeapon GVAR(center) == primaryWeapon GVAR(center)): {0};
+    case (currentWeapon GVAR(center) == secondaryWeapon GVAR(center)): {1};
+    case (currentWeapon GVAR(center) == handgunWeapon GVAR(center)): {2};
+    default {-1};
+};
+
+cutText ["","plain"];
+showCommandingMenu "";
 
 // Force consistent blurring, restored after display is closed
 
-/*
-GVAR(cameraView) = cameraview;
-player switchcamera "internal";
-*/
-showhud false;
 
-// ------------------------------------------------------------------- Events
+GVAR(cameraView) = cameraView;
+player switchCamera "internal";
+
+showHUD false;
+
+private _mouseAreaCtrl = _display displayCtrl IDC_mouseArea;
+ctrlSetFocus _mouseAreaCtrl;
+
 // Fade out unused elements
-
-private _mouseBlockCtrl = _display displayctrl IDC_mouseBlock;
+private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;
 _mouseBlockCtrl ctrlEnable false;
 
-private _msgCtrl = _display displayctrl IDC_message;
+private _msgCtrl = _display displayCtrl IDC_message;
 _msgCtrl ctrlSetFade 1;
 _msgCtrl ctrlCommit 0;
 
-private _infoCtrl = _display displayctrl IDC_infoBox;
+private _infoCtrl = _display displayCtrl IDC_infoBox;
 _infoCtrl ctrlSetFade 1;
 _infoCtrl ctrlCommit 0;
 
-private _statsCtrl = _display displayctrl IDC_stats;
+private _statsCtrl = _display displayCtrl IDC_stats;
 _statsCtrl ctrlSetFade 1;
 _statsCtrl ctrlCommit 0;
 _statsCtrl ctrlEnable false;
+
+//--------------- Init camera
+GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
+
+GVAR(cameraHelper) = createAgent ["Logic", position GVAR(center) ,[] ,0 ,"none"];
+GVAR(cameraHelper) attachTo [GVAR(center), GVAR(cameraPosition) select 3, ""];
+
+GVAR(camera) = "camera" camCreate position GVAR(center);
+GVAR(camera) cameraEffect ["internal","back"];
+GVAR(camera) camPrepareFocus [-1,-1];
+GVAR(camera) camPrepareFov 0.35;
+GVAR(camera) camCommitPrepared 0;
+
+showCinemaBorder false;
+["#(argb,8,8,3)color(0,0,0,1)",false,nil,0,[0,0.5]] call bis_fnc_textTiles;
+
+//--------------- Reset camera pos
+[nil, [controlNull,0,0]] call FUNC(arsenalHandleMouse);
+GVAR(camPosUpdateHandle) = addMissionEventHandler ["draw3D",{ [] call FUNC(updateCamPos) }];
 
 ["ace_arsenal"] call bis_fnc_endloadingscreen;
