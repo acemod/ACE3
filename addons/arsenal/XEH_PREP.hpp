@@ -13,3 +13,6 @@ PREP(handleScrollWheel);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(updateCamPos);
+PREP(addVirtualItems);
+PREP(removeVirtualItems);
+PREP(openBox);
