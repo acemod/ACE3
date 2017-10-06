@@ -172,10 +172,6 @@ class CfgVehicles {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
     };
-    class RHS_MELB_AH6M_H: RHS_MELB_base {
-        EGVAR(hellfire,addLaserDesignator) = 1;
-    };
-
     class RHS_UH60_Base: Heli_Transport_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1360;
     };
