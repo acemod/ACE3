@@ -88,7 +88,7 @@ if (_category == "") then {
 if (((_varName select [0, 4]) == "ACE_") && {(_category select [0, 3]) != "ACE"}) then {_category = format ["ACE - %1", _category];};
 if (((_varName select [0, 5]) == "ACEX_") && {(_category select [0, 4]) != "ACEX"}) then {_category = format ["ACEX - %1", _category];};
 
-private _code = compile format ["['ace_settingChanged', ['%1', _this]] call CBA_fnc_localEvent", _varName];
+private _code = compile format ['["%1", _this] call FUNC(cbaSettings_settingChanged)', _varName];
 
 TRACE_2("setting",_cbaSettingType,_cbaValueInfo);
 TRACE_4("",_isForced,_cbaIsGlobal,_category,_cbaValueInfo);

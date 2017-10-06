@@ -2,6 +2,7 @@ TRACE_1("",QUOTE(ADDON));
 
 PREP(cbaSettings);
 PREP(cbaSettings_loadFromConfig);
+PREP(cbaSettings_settingChanged);
 
 PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
