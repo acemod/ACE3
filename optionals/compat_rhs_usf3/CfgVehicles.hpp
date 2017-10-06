@@ -109,7 +109,6 @@ class CfgVehicles {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
     };
-
     class RHS_UH60_Base: Heli_Transport_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1360;
     };
@@ -187,6 +186,7 @@ class CfgVehicles {
 
     class RHS_AH1Z_base: Heli_Attack_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1600;
+        EGVAR(hellfire,addLaserDesignator) = 1;
     };
 
     class RHS_AH1Z: RHS_AH1Z_base {
@@ -198,6 +198,7 @@ class CfgVehicles {
     };
     class RHS_AH64_base: Heli_Attack_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1420;
+        EGVAR(hellfire,addLaserDesignator) = 1;
     };
     class RHS_AH64D: RHS_AH64_base {
         class Turrets: Turrets {
