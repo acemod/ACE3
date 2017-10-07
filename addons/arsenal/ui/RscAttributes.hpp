@@ -651,7 +651,7 @@ class GVAR(display) {
             y = safezoneY + 88 * GRID_H;
         };
         class iconBackgroundRemoveAllSelected: ctrlStaticBackground {
-            idc = IDC_buttonRemoveAllSelected;
+            idc = IDC_iconBackgroundRemoveAllSelected;
             colorBackground[]={0,0,0,1};
             fade=1;
             enable=0;
@@ -673,7 +673,7 @@ class GVAR(display) {
             h = 9 * GRID_H;
         };
         class iconBackgroundRemoveAll: iconBackgroundRemoveAllSelected {
-            idc = IDC_buttonRemoveAll;
+            idc = IDC_iconBackgroundRemoveAll;
             y = safezoneH - 165 * GRID_H;
         };
         class buttonRemoveAll: buttonRemoveAllSelected {
