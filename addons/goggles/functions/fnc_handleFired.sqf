@@ -32,7 +32,7 @@ if (_position select 2 > 0.2) exitWith {true};
 // get weapon dust effect
 private _particleConfig = configFile >> "CfgWeapons" >> _weapon >> "GunParticles";
 
-private private _cloudType = "";
+private _cloudType = "";
 
 if (isClass (_particleConfig >> "FirstEffect")) then { // @todo read this with custom / non-standard config classnames
     _cloudType = getText (_particleConfig >> "FirstEffect" >> "effectName");
@@ -48,7 +48,7 @@ if (_cloudType == "") exitWith {true};
 // get if the surface is dusty
 if (surfaceIsWater _position) exitWith {true};
 
-_surface = surfaceType _position select [1]; // cuts of the leading #
+private _surface = surfaceType _position select [1]; // cuts of the leading #
 
 if (_surface != GVAR(surfaceCache)) then {
     GVAR(surfaceCache) = _surface;

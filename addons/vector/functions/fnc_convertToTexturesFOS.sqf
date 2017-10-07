@@ -16,7 +16,7 @@
  */
 
 #include "script_component.hpp"
-params ["_number", "_coordinate"]
+params ["_number", "_coordinate"];
 
 _number = round (_number select _coordinate);
 private _isNegative = _number < 0;

@@ -19,7 +19,7 @@
 
 #define EMP_RF_ACC 5 // Rangefinder Accuracy
 
-params ["_slopeDistance", "_azimuth", "_inclination"]
+params ["_slopeDistance", "_azimuth", "_inclination"];
 
 if (GVAR(vectorConnected)) then {
     GVAR(LAZPOS) = (eyePos player) vectorAdd ([_slopeDistance, _azimuth, _inclination] call CBA_fnc_polar2vect);
