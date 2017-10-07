@@ -3,6 +3,8 @@
 
 params ["_display", "_control"];
 
+LOG(format [ARR_2("populatePanel started, %1",ctrlIDC _control)]);
+
 private _ctrlIDC = ctrlIDC _control;
 
 private _fnc_panelLeft = {
@@ -100,7 +102,9 @@ private _fnc_panelLeft = {
                     IDC_loadIndicator,
                     IDC_rightTabContent,
                     IDC_sortRightTab,
+                    RIGHT_PANEL_ACC_BACKGROUND_IDCS,
                     RIGHT_PANEL_ACC_IDCS,
+                    RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
                     RIGHT_PANEL_ITEMS_IDCS,
                     RIGHT_PANEL_REMOVE_IDCS,
                     IDC_rightSearchbar
@@ -114,8 +118,6 @@ private _fnc_panelLeft = {
 private _fnc_panelRight = {
     params ["_display", "_control", "_ctrlIDC"];
 
-    TRACE_3("panelRight",_display,_control,_ctrlIDC);
-
     if (isNil QGVAR(currentRightPanel) || {GVAR(currentRightPanel) != _ctrlIDC}) then {
 
         if !(isNil QGVAR(currentRightPanel)) then {
@@ -123,7 +125,7 @@ private _fnc_panelRight = {
             _previousCtrlBackground ctrlSetFade 1;
             _previousCtrlBackground ctrlCommit FADE_DELAY;
         };
-        
+
         private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
         _ctrlBackground ctrlShow true;
         _ctrlBackground ctrlSetFade 0;
@@ -188,6 +190,18 @@ switch (_ctrlIDC) do {
     };
     case IDC_buttonInsigna : {
         [_display, _control, _ctrlIDC] call _fnc_panelLeft
+    };
+    case IDC_buttonOptic : {
+        [_display, _control, _ctrlIDC] call _fnc_panelRight
+    };
+    case IDC_buttonItemAcc : {
+        [_display, _control, _ctrlIDC] call _fnc_panelRight
+    };
+    case IDC_buttonMuzzle : {
+        [_display, _control, _ctrlIDC] call _fnc_panelRight
+    };
+    case IDC_buttonBipod : {
+        [_display, _control, _ctrlIDC] call _fnc_panelRight
     };
     case IDC_buttonMag : {
         [_display, _control, _ctrlIDC] call _fnc_panelRight
