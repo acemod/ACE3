@@ -4,9 +4,8 @@
 params [["_object", objNull, [objNull]], ["_mode", 1, [1]], ["_items", true, [[], true]], ["_global", true, [true]]];
 
 if (_object isEqualTo objNull) exitWith {};
-if (!isNil {_object getVariable [QGVAR(interaction), nil]}) exitWith {};
 
-LOG(QUOTE(initial checks passed));
+LOG(QUOTE(initial check passed));
 
 if (_global) then {
     [QGVAR(initBox), [_object, _mode, _items, false]] call CBA_fnc_globalEventJIP;  
@@ -14,7 +13,7 @@ if (_global) then {
 
     LOG(QUOTE(global check passed));
 
-    if (isNil {_object getVariable QGVAR(interaction)}) then {
+    if ({(_x select 0) select 0 isEqualTo QGVAR(interaction)} count (cursorObject getVariable [QEGVAR(interact_menu,actions), []]) == 0) then {
 
         LOG(QUOTE(interaction present check passed));
 
