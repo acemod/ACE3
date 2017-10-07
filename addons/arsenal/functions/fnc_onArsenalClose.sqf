@@ -32,6 +32,7 @@ GVAR(mouseButtonState) = nil;
 GVAR(mode) = nil;
 GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
+GVAR(virtualItems) = nil;
 
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 

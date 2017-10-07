@@ -20,7 +20,7 @@ private _fnc_panelLeft = {
         _ctrlBackground ctrlSetFade 0;
         _ctrlBackground ctrlCommit FADE_DELAY;
 
-        // Handle icons
+        // Handle icons and filling
         switch true do { 
             case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
                 {
@@ -62,6 +62,21 @@ private _fnc_panelLeft = {
 
                 if (isNil QGVAR(currentRightPanel) || {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]}) then {
                     [_display, _display displayCtrl IDC_buttonOptic] call FUNC(populatePanel);
+                };
+
+                // Filling
+                private _panelData = _display displayCtrl IDC_leftTabContent;
+
+                switch (_ctrlIDC) do { 
+                    case IDC_buttonPrimaryWeapon : {
+                        
+                    };
+                    case IDC_buttonHandgun : {
+                        /*...code...*/
+                    };
+                    default IDC_buttonSecondaryWeapon {
+                        /*...code...*/
+                    };
                 };
             };
             case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
@@ -119,7 +134,7 @@ private _fnc_panelLeft = {
             };
         };
 
-        // Handle filling
+        // Done
         GVAR(currentLeftPanel) = _ctrlIDC;
     };
 };

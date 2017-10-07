@@ -29,4 +29,5 @@ if (isNil "_displayToUse" || {!isnull GVAR(camera)}) exitWith {
 };
 
 GVAR(mode) = _mode;
+GVAR(virtualItems) = _object getVariable [QGVAR(virtualItems), []];
 _displayToUse createDisplay QGVAR(display);

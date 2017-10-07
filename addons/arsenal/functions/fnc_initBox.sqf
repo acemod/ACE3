@@ -29,7 +29,7 @@ if (_global) then {
         {
             params ["_target", "_player"];
             
-            [_player, _target, ["isNotSwimming", "isNotCarrying", "isNotDragging", "notOnMap", "isNotEscorting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)
+            [_player, _target, ["isNotSwimming", "isNotCarrying", "isNotDragging", "notOnMap", "isNotEscorting", "isNotOnLadder"]] call EFUNC(common,canInteractWith
         }, {},[_mode]] call EFUNC(interact_menu,createAction);
         [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 

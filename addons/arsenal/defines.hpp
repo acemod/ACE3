@@ -32,6 +32,27 @@
 #define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
 #define RIGHT_PANEL_REMOVE_IDCS IDC_buttonRemoveAllSelected, IDC_buttonRemoveAll
 
+#define LIST_DEFAULTS \
+[ \
+    [(primaryweapon GVAR(center))], // PRIMARYWEAPON  \
+    [(secondaryweapon GVAR(center))], // SECONDARYWEAPON \
+    [(handgunweapon GVAR(center))], // HANDGUN \
+    [uniform GVAR(center)], // UNIFORM \
+    [vest GVAR(center)], // VEST \
+    [backpack GVAR(center)], // BACKPACK \
+    [headgear GVAR(center)], // HEADGEAR \
+    [goggles GVAR(center)], // GOGGLES \
+    [hmd GVAR(center)], // NVGS \
+    [binocular GVAR(center)], // BINOCULARS \
+    [], // MAP \
+    [], // GPS \
+    [], // RADIO \
+    [], // COMPASS \
+    [], // WATCH \
+    [face GVAR(center)], // FACE \
+    [speaker GVAR(center)], // VOICE \
+    [[GVAR(center)] call BIS_fnc_getUnitInsignia] // INSIGNIA \
+];
 
 // IDCs
 #define IDD_ace_arsenal 1127001
