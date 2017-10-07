@@ -4,6 +4,17 @@
 params ["_display"];
 
 private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
+
+if (_showToggle) then {
+    {
+        if (_x + 1 == GVAR(currentRightPanel)) then {
+            private _ctrl = _display displayctrl _x;
+            _ctrl ctrlSetFade 0;
+            _ctrl ctrlcommit 0.15;
+        };
+    } foreach [RIGHT_PANEL_ACC_BACKGROUND_IDCS, RIGHT_PANEL_ITEMS_BACKGROUND_IDCS]
+};
+
 {
     private _ctrl = _display displayctrl _x;
     _ctrl ctrlshow _showToggle;
@@ -24,6 +35,9 @@ private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
     IDC_leftSearchbar,
     IDC_rightSearchbar,
     IDC_tabLeft,
-    IDC_tabRight,
-    IDC_tabRight2
+    RIGHT_PANEL_ACC_BACKGROUND_IDCS,
+    RIGHT_PANEL_ACC_IDCS,
+    RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
+    RIGHT_PANEL_ITEMS_IDCS,
+    RIGHT_PANEL_REMOVE_IDCS
 ];

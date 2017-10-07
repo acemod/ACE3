@@ -26,6 +26,12 @@
 #define MODLIST ["","curator","kart","heli","mark","expansion","expansionpremium"]
 #define CAM_DIS_MAX 5
 
+#define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
+#define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
+#define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc
+#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
+#define RIGHT_PANEL_REMOVE_IDCS IDC_buttonRemoveAllSelected, IDC_buttonRemoveAll
+
 
 // IDCs
 #define IDD_ace_arsenal 1127001
@@ -96,27 +102,25 @@
 #define IDC_buttonVoice 84
 #define IDC_iconBackgroundInsigna 85
 #define IDC_buttonInsigna 86
-#define IDC_tabRight 87
-#define IDC_iconBackgroundOptic 88
-#define IDC_buttonOptic 89
-#define IDC_iconBackgroundItemAcc 90
-#define IDC_buttonItemAcc 91
-#define IDC_iconBackgroundMuzzle 92
-#define IDC_buttonMuzzle 93
-#define IDC_iconBackgroundBipod 94
-#define IDC_buttonBipod 95
-#define IDC_iconBackgroundMag 96
-#define IDC_buttonMag 97
-#define IDC_iconBackgroundMagALL 98
-#define IDC_buttonMagALL 99
-#define IDC_iconBackgroundThrow 100
-#define IDC_buttonThrow 101
-#define IDC_iconBackgroundPut 102
-#define IDC_buttonPut 103
-#define IDC_iconBackgroundMisc 104
-#define IDC_buttonMisc 105
-#define IDC_tabRight2 106
-#define IDC_iconBackgroundRemoveAllSelected 107
-#define IDC_buttonRemoveAllSelected 108
-#define IDC_iconBackgroundRemoveAll 109
-#define IDC_buttonRemoveAll 110
+#define IDC_iconBackgroundOptic 87
+#define IDC_buttonOptic 88
+#define IDC_iconBackgroundItemAcc 89
+#define IDC_buttonItemAcc 90
+#define IDC_iconBackgroundMuzzle 91
+#define IDC_buttonMuzzle 92
+#define IDC_iconBackgroundBipod 93
+#define IDC_buttonBipod 94
+#define IDC_iconBackgroundMag 95
+#define IDC_buttonMag 96
+#define IDC_iconBackgroundMagALL 97
+#define IDC_buttonMagALL 98
+#define IDC_iconBackgroundThrow 99
+#define IDC_buttonThrow 100
+#define IDC_iconBackgroundPut 101
+#define IDC_buttonPut 102
+#define IDC_iconBackgroundMisc 103
+#define IDC_buttonMisc 104
+#define IDC_iconBackgroundRemoveAllSelected 105
+#define IDC_buttonRemoveAllSelected 106
+#define IDC_iconBackgroundRemoveAll 107
+#define IDC_buttonRemoveAll 108

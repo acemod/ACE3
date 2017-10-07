@@ -30,6 +30,9 @@ GVAR(selectedWeaponType) = nil;
 GVAR(visionMode) = nil;
 GVAR(mouseButtonState) = nil;
 GVAR(mode) = nil;
+GVAR(currentLeftPanel) = nil;
+GVAR(currentRightPanel) = nil;
+
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 
 showHUD true;

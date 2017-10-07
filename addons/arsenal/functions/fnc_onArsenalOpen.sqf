@@ -9,6 +9,9 @@ _args params ["_display"];
 
 GVAR(center) = player;
 GVAR(mouseButtonState) = [[],[]];
+if (isNil QGVAR(mode)) then {
+    GVAR(mode) = 1;
+};
 
 GVAR(selectedWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == primaryWeapon GVAR(center)): {0};
@@ -36,6 +39,7 @@ _mouseBlockCtrl ctrlEnable false;
     _x = _display displayCtrl _x;
 
     _x ctrlSetFade 1;
+    _x ctrlShow false;
     _x ctrlCommit 0;
 } foreach [
     IDC_blockRightFrame, 
@@ -43,11 +47,29 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_loadIndicator,
     IDC_rightTabContent,
     IDC_sortRightTab,
-    IDC_tabRight,
-    IDC_tabRight2,
+    RIGHT_PANEL_ACC_IDCS,
+    RIGHT_PANEL_ITEMS_IDCS,
+    RIGHT_PANEL_REMOVE_IDCS,
     IDC_rightSearchbar
 ];
 
+//--------------- Prepare the left panel
+GVAR(currentLeftPanel) = nil;
+GVAR(currentRightPanel) = nil;
+
+if (GVAR(mode) != 0) then {
+    {
+        _x = _display displayCtrl _x;
+
+        _x ctrlSetFade 1;
+        _x ctrlShow false;
+        _x ctrlCommit 0;
+    } foreach [
+        IDC_buttonFace,
+        IDC_buttonVoice,
+        IDC_buttonInsigna
+    ];
+};
 //--------------- Init camera
 GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
 
@@ -66,18 +88,6 @@ showCinemaBorder false;
 //--------------- Reset camera pos
 [nil, [controlNull,0,0]] call FUNC(handleMouse);
 GVAR(camPosUpdateHandle) = addMissionEventHandler ["draw3D",{ [] call FUNC(updateCamPos) }];
-
-if (GVAR(mode) != 0) then {
-    {
-        _x = _display displayCtrl _x;
-
-        _x ctrlSetFade 1;
-        _x ctrlCommit 0;
-    } foreach [
-        IDC_buttonFace,
-        IDC_buttonVoice
-    ];
-};
 
 //--------------- End loading screen
 ["ace_arsenal"] call bis_fnc_endloadingscreen;

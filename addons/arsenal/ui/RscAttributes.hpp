@@ -367,9 +367,10 @@ class GVAR(display) {
                     h = 9 * GRID_H;
                 };
                 class buttonPrimaryWeapon: RscButtonArsenal {
-                    idc = ;
+                    idc = IDC_buttonPrimaryWeapon;
                     text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
                     tooltip="$STR_A3_RscDisplayArsenal_tab_PrimaryWeapon";
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(populatePanel));
                     colorBackground[]={0,0,0,0.5};
                     x = 1 * GRID_W;
                     y = 0 * GRID_H;
@@ -483,6 +484,7 @@ class GVAR(display) {
                 class buttonGPS: buttonPrimaryWeapon {
                     idc = IDC_buttonGPS;
                     tooltip="$STR_A3_RscDisplayArsenal_tab_GPS";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\GPS_ca.paa";
                     y = 110 * GRID_H;
                 };
                 class iconBackgroundRadio: IconBackgroundPrimaryWeapon {
@@ -547,153 +549,138 @@ class GVAR(display) {
                 };
             };
         };
-        class tabRight: RscControlsGroupNoScrollbars{
-            idc = IDC_tabRight;
+        class iconBackgroundOptic: ctrlStaticBackground {
+            idc = IDC_iconBackgroundOptic;
+            colorBackground[]={0,0,0,1};
+            fade=1;
+            enable=0;
             x = safezoneW  + safezoneX - 13 * GRID_W;
             y = safezoneY + 8 * GRID_H;
             w = 12 * GRID_W;
-            h = 200 * GRID_H;
-            class controls {
-                class iconBackgroundOptic: ctrlStaticBackground {
-                    idc = IDC_iconBackgroundOptic;
-                    colorBackground[]={0,0,0,1};
-                    fade=1;
-                    enable=0;
-                    x = 0;
-                    y = 0 * GRID_H;
-                    w = 12 * GRID_W;
-                    h = 9 * GRID_H;
-                };
-                class buttonOptic: RscButtonArsenal {
-                    idc = IDC_buttonOptic;
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemOptic";
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
-                    colorBackground[]={0,0,0,0.5};
-                    x = 3 * GRID_W;
-                    y = 0 * GRID_H;
-                    w = 9 * GRID_W;
-                    h = 9 * GRID_H;
-                };
-                class iconBackgroundItemAcc: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundItemAcc;
-                    y = 10 * GRID_H;
-                };
-                class buttonItemAcc: buttonOptic {
-                    idc = IDC_buttonItemAcc;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemAcc_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemAcc";
-                    y = 10 * GRID_H;
-                };
-                class iconBackgroundMuzzle: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundMuzzle;
-                    y = 20 * GRID_H;
-                };
-                class buttonMuzzle: buttonOptic {
-                    idc = IDC_buttonMuzzle;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemMuzzle_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemMuzzle";
-                    y = 20 * GRID_H;
-                };
-                class iconBackgroundBipod: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundBipod;
-                    y = 30 * GRID_H;
-                };
-                class buttonBipod: buttonOptic {
-                    idc = IDC_buttonBipod;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemBipod_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_ItemBipod";
-                    y = 30 * GRID_H;
-                };
-                class iconBackgroundMag: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundMag;
-                    y = 40 * GRID_H;
-                };
-                class buttonMag: buttonOptic {
-                    idc = IDC_buttonMag;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMag";
-                    y = 40 * GRID_H;
-                };
-                class iconBackgroundMagALL: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundMagALL;
-                    y = 50 * GRID_H;
-                };
-                class buttonMagALL: buttonOptic {
-                    idc = IDC_buttonMagALL;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMagAll_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMagAll";
-                    y = 50 * GRID_H;
-                };
-                class iconBackgroundThrow: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundThrow;
-                    y = 60 * GRID_H;
-                };
-                class buttonThrow: buttonOptic {
-                    idc = IDC_buttonThrow;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoThrow_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoThrow";
-                    y = 60 * GRID_H;
-                };
-                class iconBackgroundPut: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundPut;
-                    y = 70 * GRID_H;
-                };
-                class buttonPut: buttonOptic {
-                    idc = IDC_buttonPut;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoPut_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoPut";
-                    y = 70 * GRID_H;
-                };
-                class iconBackgroundMisc: iconBackgroundOptic {
-                    idc = IDC_iconBackgroundMisc;
-                    y = 80 * GRID_H;
-                };
-                class buttonMisc: buttonOptic {
-                    idc = IDC_buttonMisc;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
-                    tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
-                    y = 80 * GRID_H;
-                };
-            };
+            h = 9 * GRID_H;
         };
-        class tabRight2: RscControlsGroupNoScrollbars {
-            idc = IDC_tabRight2;
+        class buttonOptic: RscButtonArsenal {
+            idc = IDC_buttonOptic;
+            tooltip="$STR_A3_RscDisplayArsenal_tab_ItemOptic";
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(populatePanel));
+            colorBackground[]={0,0,0,0.5};
+            x = safezoneW  + safezoneX - 10 * GRID_W;
+            y = safezoneY + 8 * GRID_H;
+            w = 9 * GRID_W;
+            h = 9 * GRID_H;
+        };
+        class iconBackgroundItemAcc: iconBackgroundOptic {
+            idc = IDC_iconBackgroundItemAcc;
+            y = safezoneY + 18 * GRID_H;
+        };
+        class buttonItemAcc: buttonOptic {
+            idc = IDC_buttonItemAcc;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemAcc_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_ItemAcc";
+            y = safezoneY + 18 * GRID_H;
+        };
+        class iconBackgroundMuzzle: iconBackgroundOptic {
+            idc = IDC_iconBackgroundMuzzle;
+            y = safezoneY + 28 * GRID_H;
+        };
+        class buttonMuzzle: buttonOptic {
+            idc = IDC_buttonMuzzle;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemMuzzle_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_ItemMuzzle";
+            y = safezoneY + 28 * GRID_H;
+        };
+        class iconBackgroundBipod: iconBackgroundOptic {
+            idc = IDC_iconBackgroundBipod;
+            y = safezoneY + 38 * GRID_H;
+        };
+        class buttonBipod: buttonOptic {
+            idc = IDC_buttonBipod;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemBipod_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_ItemBipod";
+            y = safezoneY + 38 * GRID_H;
+        };
+        class iconBackgroundMag: iconBackgroundOptic {
+            idc = IDC_iconBackgroundMag;
+            y = safezoneY + 48 * GRID_H;
+        };
+        class buttonMag: buttonOptic {
+            idc = IDC_buttonMag;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMag";
+            y = safezoneY + 48 * GRID_H;
+        };
+        class iconBackgroundMagALL: iconBackgroundOptic {
+            idc = IDC_iconBackgroundMagALL;
+            y = safezoneY + 58 * GRID_H;
+        };
+        class buttonMagALL: buttonOptic {
+            idc = IDC_buttonMagALL;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMagAll_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMagAll";
+            y = safezoneY + 58 * GRID_H;
+        };
+        class iconBackgroundThrow: iconBackgroundOptic {
+            idc = IDC_iconBackgroundThrow;
+            y = safezoneY + 68 * GRID_H;
+        };
+        class buttonThrow: buttonOptic {
+            idc = IDC_buttonThrow;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoThrow_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_CargoThrow";
+            y = safezoneY + 68 * GRID_H;
+        };
+        class iconBackgroundPut: iconBackgroundOptic {
+            idc = IDC_iconBackgroundPut;
+            y = safezoneY + 78 * GRID_H;
+        };
+        class buttonPut: buttonOptic {
+            idc = IDC_buttonPut;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoPut_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_CargoPut";
+            y = safezoneY + 78 * GRID_H;
+        };
+        class iconBackgroundMisc: iconBackgroundOptic {
+            idc = IDC_iconBackgroundMisc;
+            y = safezoneY + 88 * GRID_H;
+        };
+        class buttonMisc: buttonOptic {
+            idc = IDC_buttonMisc;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
+            y = safezoneY + 88 * GRID_H;
+        };
+        class iconBackgroundRemoveAllSelected: ctrlStaticBackground {
+            idc = IDC_buttonRemoveAllSelected;
+            colorBackground[]={0,0,0,1};
+            fade=1;
+            enable=0;
             x = safezoneX + safezoneW - 94 * GRID_W;
             y = safezoneH - 175 * GRID_H;
             w = 9 * GRID_W;
-            h = 19 * GRID_H;
-            class controls {
-                class iconBackgroundRemoveAllSelected: ctrlStaticBackground {
-                    idc = IDC_buttonRemoveAllSelected;
-                    colorBackground[]={0,0,0,1};
-                    fade=1;
-                    enable=0;
-                    x = 0;
-                    y = 0 * GRID_H;
-                    w = 9 * GRID_W;
-                    h = 9 * GRID_H;
-                };
-                class buttonRemoveAllSelected: RscButtonArsenal  {
-                    idc = IDC_buttonRemoveAllSelected;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
-                    tooltip="Remove all selected items"; //TBL
-                    colorBackground[]={0,0,0,0.5};
-                    x = 0;
-                    y = 0 * GRID_H;
-                    w = 9 * GRID_W;
-                    h = 9 * GRID_H;
-                };
-                class iconBackgroundRemoveAll: iconBackgroundRemoveAllSelected {
-                    idc = IDC_buttonRemoveAll;
-                    y = 10 * GRID_H;
-                };
-                class buttonRemoveAll: buttonRemoveAllSelected {
-                    idc = IDC_buttonRemoveAll;
-                    tooltip="Remove all items from the container"; //TBL
-                    colorBackground[]={0,0,0,0.5};
-                    y = 10 * GRID_H;
-                };
-            };
+            h = 9 * GRID_H;
+        };
+        class buttonRemoveAllSelected: RscButtonArsenal  {
+            idc = IDC_buttonRemoveAllSelected;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
+            tooltip="Remove all selected items"; //TBL
+            colorBackground[]={0,0,0,0.5};
+            fade=1;
+            enable=0;
+            x = safezoneX + safezoneW - 94 * GRID_W;
+            y = safezoneH - 175 * GRID_H;
+            w = 9 * GRID_W;
+            h = 9 * GRID_H;
+        };
+        class iconBackgroundRemoveAll: iconBackgroundRemoveAllSelected {
+            idc = IDC_buttonRemoveAll;
+            y = safezoneH - 165 * GRID_H;
+        };
+        class buttonRemoveAll: buttonRemoveAllSelected {
+            idc = IDC_buttonRemoveAll;
+            tooltip="Remove all items from the container"; //TBL
+            colorBackground[]={0,0,0,0.5};
+            y = safezoneH - 165 * GRID_H;
         };
     };
 };
