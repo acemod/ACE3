@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-params [["_object", objNull, [objNull]], ["_items", [], [[""]]], ["_global", false, [false]]];
+params [["_object", objNull, [objNull]], ["_items", [], [true, []]], ["_global", false, [false]]];
 
 if (_object == objNull) exitWith {};
-if (count _items == 0) exitWith {};
+if (typeName _items isEqualTo "ARRAY" && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
     [ ], // Weapons 0
@@ -28,7 +28,7 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
 ]];
 
 
-if (count _items == 1 && {(_items select 0)}) then {
+if (typeName _items isEqualTo "BOOL" && {_items}) then {
     {
         switch true do {
             /* Weapon acc */
