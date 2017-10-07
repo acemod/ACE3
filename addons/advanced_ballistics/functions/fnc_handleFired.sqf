@@ -65,7 +65,7 @@ if (GVAR(barrelLengthInfluenceEnabled)) then {
 };
 
 private _ammoTemperatureVelocityShift = 0;
-private _temperature = scriptNull; //Need the variable in this scope. So we need to init it here.
+private _temperature = nil; //Need the variable in this scope. So we need to init it here.
 
 if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
@@ -103,7 +103,7 @@ if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
 
 private _stabilityFactor = 1.5;
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
-    if (_temperature isEqualTo scriptNull) then {//isNull doesn't work with Numbers
+    if (isNil "_temperature") then {
         _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
     };
     private _barometricPressure = ((getPosASL _projectile) select 2) call EFUNC(weather,calculateBarometricPressure);
