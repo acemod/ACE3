@@ -69,12 +69,15 @@ private _fnc_panelLeft = {
 
                 switch (_ctrlIDC) do { 
                     case IDC_buttonPrimaryWeapon : {
-                        
+                        //Code
                     };
                     case IDC_buttonHandgun : {
                         /*...code...*/
                     };
-                    default IDC_buttonSecondaryWeapon {
+                    case IDC_buttonSecondaryWeapon : {
+
+                    };
+                    default {
                         /*...code...*/
                     };
                 };

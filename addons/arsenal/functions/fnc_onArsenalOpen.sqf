@@ -4,13 +4,28 @@
 params ["", "_args"];
 _args params ["_display"];
 
-//--------------- Start loading screen
 ["ace_arsenal"] call bis_fnc_startloadingscreen;
 
-GVAR(center) = player;
+//--------------- General vars
+if (isNil QGVAR(center)) then {
+    GVAR(center) = player;
+};
+
 GVAR(mouseButtonState) = [[],[]];
 if (isNil QGVAR(mode)) then {
     GVAR(mode) = 1;
+};
+
+if (isNil QGVAR(virtualItems)) then {
+    GVAR(virtualItems) = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+};
+
+for "_index" from 0 to 10 do {
+    private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
+
+    if !(_array isEqualTo []) then {
+        {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array  ;
+    };
 };
 
 GVAR(selectedWeaponType) = switch true do {
@@ -19,17 +34,6 @@ GVAR(selectedWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == handgunWeapon GVAR(center)): {2};
     default {-1};
 };
-
-cutText ["","plain"];
-showCommandingMenu "";
-
-// Force consistent blurring, restored after display is closed
-GVAR(cameraView) = cameraView;
-player switchCamera "internal";
-showHUD false;
-
-private _mouseAreaCtrl = _display displayCtrl IDC_mouseArea;
-ctrlSetFocus _mouseAreaCtrl;
 
 //--------------- Fade out unused elements
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;
@@ -70,6 +74,18 @@ if (GVAR(mode) != 0) then {
         IDC_buttonInsigna
     ];
 };
+
+//--------------- Camera prep
+cutText ["","plain"];
+showCommandingMenu "";
+
+GVAR(cameraView) = cameraView;
+player switchCamera "internal";
+showHUD false;
+
+private _mouseAreaCtrl = _display displayCtrl IDC_mouseArea;
+ctrlSetFocus _mouseAreaCtrl;
+
 //--------------- Init camera
 GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
 
