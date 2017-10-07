@@ -230,7 +230,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
-            <German>Füge Objekt zum Frachtsystem hinzu</German>
+            <German>Objekt ein/entladbar machen</German>
             <Polish>Ustaw jako ładowalny</Polish>
             <Italian>Rendi oggetto caricabile</Italian>
             <Spanish>Hacer objeto cargable</Spanish>
@@ -245,7 +245,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
-            <German>Das synchronisierte Objekt wird dem Frachtsystem hinzugefügt und ist be- und entladbar.</German>
+            <German>Das synchronisierte Objekt wird dem Frachtsystem hinzugefügt und ist ein- und entladbar.</German>
             <Polish>Ustawia zsynchronizowany obiekt jako możliwy do załadowania poprzez system cargo</Polish>
             <Italian>Imposta l'oggetto sincronizzato come caricabile dal sistema cargo</Italian>
             <Spanish>Sincronizar un objecto para hacerlo cargable.</Spanish>
@@ -275,6 +275,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
+            <German>Frachtraum</German>
             <Italian>Spazio Cargo</Italian>
             <Japanese>カーゴ スペース</Japanese>
             <Chinese>貨物空間</Chinese>
@@ -283,6 +284,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
+            <German>Verfügbarer Frachtraum in diesem Fahrzeug/Container</German>
             <Italian>Lo spazio disponibile in questo veicolo/container</Italian>
             <Japanese>この車両/コンテナでカーゴ スペースを使えるようにします</Japanese>
             <Chinese>設定此載具/集裝箱可裝載多少貨物</Chinese>
@@ -291,6 +293,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
+            <German>Frachtgröße</German>
             <Italian>Dimensioni Cargo</Italian>
             <Japanese>カーゴ サイズ</Japanese>
             <Chinese>貨物的大小</Chinese>
@@ -299,6 +302,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
+            <German>Frachtraumgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
             <Japanese>このオブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
@@ -329,6 +333,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coffecient</English>
+            <German>Türlast Zeitfaktor</German>
             <Japanese>空中投下までの時間係数</Japanese>
             <Italian>Coefficente Tempo Lancio Paracadute</Italian>
             <French>Coefficient Temps de largage de cargaison</French>
@@ -338,6 +343,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
+            <German>Beeinflusst die zusätzliche Zeit für Türlastabwürfe.</German>
             <Japanese>カーゴ アイテムを空中投下するまでの時間を変更します。</Japanese>
             <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
             <French>Modifier le temps qu'il faut pour larguer la cargaison.</French>
