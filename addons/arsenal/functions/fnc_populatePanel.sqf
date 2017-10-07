@@ -3,8 +3,6 @@
 
 params ["_display", "_control"];
 
-LOG(format [ARR_2("populatePanel started, %1",ctrlIDC _control)]);
-
 private _ctrlIDC = ctrlIDC _control;
 
 private _fnc_panelLeft = {
@@ -61,6 +59,10 @@ private _fnc_panelLeft = {
                     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
                     RIGHT_PANEL_REMOVE_IDCS
                 ];
+
+                if (isNil QGVAR(currentRightPanel) || {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]}) then {
+                    [_display, _display displayCtrl IDC_buttonOptic] call FUNC(populatePanel);
+                };
             };
             case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
 
@@ -85,6 +87,10 @@ private _fnc_panelLeft = {
                     RIGHT_PANEL_ITEMS_IDCS,
                     RIGHT_PANEL_REMOVE_IDCS
                 ];
+
+                if (isNil QGVAR(currentRightPanel)) then {
+                    [_display, (_display displayCtrl IDC_buttonMisc)] call FUNC(populatePanel);
+                };
             };
             default {
                 {
@@ -109,8 +115,11 @@ private _fnc_panelLeft = {
                     RIGHT_PANEL_REMOVE_IDCS,
                     IDC_rightSearchbar
                 ];
+                GVAR(currentRightPanel) = nil;
             };
         };
+
+        // Handle filling
         GVAR(currentLeftPanel) = _ctrlIDC;
     };
 };
@@ -130,6 +139,13 @@ private _fnc_panelRight = {
         _ctrlBackground ctrlShow true;
         _ctrlBackground ctrlSetFade 0;
         _ctrlBackground ctrlCommit FADE_DELAY;
+
+        private _searchbarCtrl = _display displayCtrl IDC_rightSearchbar;
+        if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
+            _searchbarCtrl ctrlShow true;
+            _searchbarCtrl ctrlSetFade 0;
+            _searchbarCtrl ctrlCommit 0;
+        };
 
         GVAR(currentRightPanel) = _ctrlIDC;
     };
