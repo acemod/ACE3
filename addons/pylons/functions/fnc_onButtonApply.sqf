@@ -39,3 +39,8 @@ private _pylonsToConfigure = [];
 if (_pylonsToConfigure isEqualTo []) exitWith {};
 
 [_pylonsToConfigure, 0] call FUNC(configurePylons);
+
+// As a zeus you expect module dialogs to close once you click apply
+if (GVAR(isCurator)) then {
+    call FUNC(onButtonClose);
+};
