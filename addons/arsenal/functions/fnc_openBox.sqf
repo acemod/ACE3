@@ -29,11 +29,4 @@ if (isNil "_displayToUse" || {!isnull GVAR(camera)}) exitWith {
 };
 
 GVAR(mode) = _mode;
-
-// Need to use spawn to avoid crashes when called via ace menu
-[_displayToUse] spawn {
-    disableSerialization;
-    params ["_displayToUse"];
-    _displayToUse createDisplay QGVAR(display);
-};
-
+_displayToUse createDisplay QGVAR(display);

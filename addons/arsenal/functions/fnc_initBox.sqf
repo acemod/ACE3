@@ -23,7 +23,8 @@ if (_global) then {
             _params params ["_mode"];
 
             diag_log format ["right before openBox %1", _params];
-            [_mode, _target] call FUNC(openBox) ;
+
+            [{[_this select 0, _this select 1] call FUNC(openBox)}, [_mode, _target]] call CBA_fnc_execNextFrame;
         }, 
         {
             params ["_target", "_player"];
