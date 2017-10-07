@@ -40,7 +40,7 @@ class GVAR(display) {
     class controls {
         class blockLeftFrame: RscFrame {
             idc = IDC_blockLeftFrame;
-            x = safezoneX + 15 * GRID_W;
+            x = safezoneX + 14 * GRID_W;
             y = safezoneY + 14 * GRID_H;
             w = 70 * GRID_W;
             h = safezoneH - 22 * GRID_H;
@@ -48,7 +48,7 @@ class GVAR(display) {
         };
         class blockLeftBackground: ctrlStaticBackground {
             idc = IDC_blockLeftBackground;
-            x = safezoneX + 15 * GRID_W;
+            x = safezoneX + 14 * GRID_W;
             y = safezoneY + 14 * GRID_H;
             w = 70 * GRID_W;
             h = safezoneH - 22 * GRID_H;
@@ -56,12 +56,12 @@ class GVAR(display) {
         };
         class blockRightFrame: blockLeftFrame {
             idc = IDC_blockRightFrame;
-            x = safezoneX + safezoneW - 85 * GRID_W;
+            x = safezoneX + safezoneW - 84 * GRID_W;
             h = safezoneH + safezoneY - 62 * GRID_H;
         };
         class blockRighttBackground: blockLeftBackground {
             idc = IDC_blockRighttBackground;
-            x = safezoneX + safezoneW - 85 * GRID_W;
+            x = safezoneX + safezoneW - 84 * GRID_W;
             h = safezoneH + safezoneY - 62 * GRID_H;
         };
         class loadIndicator: ctrlProgress {
@@ -71,7 +71,7 @@ class GVAR(display) {
             texture = "#(argb,8,8,3)color(1,1,1,1)";
             colorBar[] = {1,1,1,1};
             colorFrame[] = {0,0,0,1};
-            x = safezoneX + safezoneW - 85 * GRID_W;
+            x = safezoneX + safezoneW - 84 * GRID_W;
             y = safezoneY + 131 * GRID_H;
             w = 70 * GRID_W;
             h = 7 * GRID_H;
@@ -308,19 +308,19 @@ class GVAR(display) {
             colorSelect[]={1,1,1,1};
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
-            x = safezoneX + 15 * GRID_W;
-            y = safezoneY + 15 * GRID_H;
+            x = safezoneX + 14 * GRID_W;
+            y = safezoneY + 14 * GRID_H;
             w = 70 * GRID_W;
             h = safezoneH - 22 * GRID_H;
         };
         class rightTabContent: leftTabContent {
             idc = IDC_rightTabContent;
-            x = safezoneX + safezoneW - 85 * GRID_W;
-            h = safezoneH + safezoneY - 62 * GRID_H;
+            x = safezoneX + safezoneW - 84 * GRID_W;
+            h = safezoneH + safezoneY - 69 * GRID_H;
         };
         class sortLeftTab: ctrlCombo {
             idc = IDC_sortLeftTab;
-            x = safezoneX + 15 * GRID_W;
+            x = safezoneX + 14 * GRID_W;
             y = safezoneY + 8 * GRID_H;
             w = 70 * GRID_W;
             h = 6 * GRID_H;
@@ -336,48 +336,48 @@ class GVAR(display) {
         };
         class sortRightTab: sortLeftTab {
             idc = IDC_sortRightTab;
-            x = safezoneX + safezoneW - 85 * GRID_W;
+            x = safezoneX + safezoneW - 84 * GRID_W;
         };
         class leftSearchbar: ctrlEdit {
             idc = IDC_leftSearchbar;
-            x = safezoneX + 15 * GRID_W;
+            x = safezoneX + 14 * GRID_W;
             y = safezoneY + 1.8 * GRID_H;
             w = 70 * GRID_W;
             h = 6 * GRID_H;
         };
         class rightSearchbar: leftSearchBar{
             idc = IDC_rightSearchbar;
-            x = safezoneX + safezoneW - 85 * GRID_W;
+            x = safezoneX + safezoneW - 84 * GRID_W;
         };
         class tabLeft: RscControlsGroupNoScrollbars {
             idc = IDC_tabLeft;
-            x = safezoneX + 3 * GRID_W;
+            x = safezoneX + 1 * GRID_W;
             y = safezoneY + 8 * GRID_H;
-            w = 9 * GRID_W;
+            w = 12 * GRID_W;
             h = 200 * GRID_H;
             class controls {
-                class iconBackgroundPrimaryWeapon: RscPicture {
+                class iconBackgroundPrimaryWeapon: ctrlStaticBackground {
                     idc = IDC_iconBackgroundPrimaryWeapon;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
-                    colorText[]={0,0,0,0.8};
+                    fade=1;
+                    enable=0;
+                    colorBackground[]={0,0,0,1};
                     x = 0;
                     y = 0 * GRID_H;
-                    w = 9 * GRID_W;
+                    w = 12 * GRID_W;
                     h = 9 * GRID_H;
                 };
-                class buttonPrimaryWeapon: RscButtonArsenal{
+                class buttonPrimaryWeapon: RscButtonArsenal {
                     idc = ;
                     text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
                     tooltip="$STR_A3_RscDisplayArsenal_tab_PrimaryWeapon";
                     colorBackground[]={0,0,0,0.5};
-                    x = 0;
+                    x = 1 * GRID_W;
                     y = 0 * GRID_H;
                     w = 9 * GRID_W;
                     h = 9 * GRID_H;
                 };
                 class iconBackgroundHandgun: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundHandgun;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa";
                     y = 10 * GRID_H;
                 };
                 class buttonHandgun: buttonPrimaryWeapon {
@@ -388,7 +388,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundSecondaryWeapon: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundSecondaryWeapon;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa";
                     y = 20 * GRID_H;
                 };
                 class buttonSecondaryWeapon: buttonPrimaryWeapon {
@@ -399,7 +398,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundHeadgear: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundHeadgear;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Headgear_ca.paa";
                     y = 30 * GRID_H;
                 };
                 class buttonHeadgear: buttonPrimaryWeapon {
@@ -410,7 +408,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundUniform: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundUniform;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Uniform_ca.paa";
                     y = 40 * GRID_H;
                 };
                 class buttonUniform: buttonPrimaryWeapon {
@@ -421,7 +418,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundVest: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundVest;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Vest_ca.paa";
                     y = 50 * GRID_H;
                 };
                 class buttonVest: buttonPrimaryWeapon {
@@ -432,7 +428,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundBackpack: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundBackpack;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Backpack_ca.paa";
                     y = 60 * GRID_H;
                 };
                 class buttonBackpack: buttonPrimaryWeapon {
@@ -443,7 +438,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundGoggles: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundGoggles;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Goggles_ca.paa";
                     y = 70 * GRID_H;
                 };
                 class buttonGoggles: buttonPrimaryWeapon {
@@ -454,7 +448,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundNVG: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundNVG;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\NVGs_ca.paa";
                     y = 80 * GRID_H;
                 };
                 class buttonNVG: buttonPrimaryWeapon {
@@ -465,7 +458,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundBinoculars: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundBinoculars;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Binoculars_ca.paa";
                     y = 90 * GRID_H;
                 };
                 class buttonBinoculars: buttonPrimaryWeapon {
@@ -476,7 +468,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundMap: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundMap;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Map_ca.paa";
                     y = 100 * GRID_H;
                 };
                 class buttonMap: buttonPrimaryWeapon {
@@ -487,18 +478,15 @@ class GVAR(display) {
                 };
                 class iconBackgroundGPS: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundGPS;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\GPS_ca.paa";
                    y = 110 * GRID_H;
                 };
                 class buttonGPS: buttonPrimaryWeapon {
                     idc = IDC_buttonGPS;
                     tooltip="$STR_A3_RscDisplayArsenal_tab_GPS";
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\GPS_ca.paa";
                     y = 110 * GRID_H;
                 };
                 class iconBackgroundRadio: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundRadio;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Radio_ca.paa";
                     y = 120 * GRID_H;
                 };
                 class buttonRadio: buttonPrimaryWeapon {
@@ -509,7 +497,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundCompass: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundCompass;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Compass_ca.paa";
                     y = 130 * GRID_H;
                 };
                 class buttonCompass: buttonPrimaryWeapon {
@@ -520,7 +507,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundWatch: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundWatch;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Watch_ca.paa";
                     y = 140 * GRID_H;
                 };
                 class buttonWatch: buttonPrimaryWeapon {
@@ -531,7 +517,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundFace: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundFace;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Face_ca.paa";
                     y = 150 * GRID_H;
                 };
                 class buttonFace: buttonPrimaryWeapon {
@@ -542,7 +527,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundVoice: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundVoice;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Voice_ca.paa";
                     y = 160 * GRID_H;
                 };
                 class buttonVoice: buttonPrimaryWeapon {
@@ -553,7 +537,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundInsigna: IconBackgroundPrimaryWeapon {
                     idc = IDC_iconBackgroundInsigna;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Insignia_ca.paa";
                     y = 170 * GRID_H;
                 };
                 class buttonInsigna: buttonPrimaryWeapon {
@@ -566,33 +549,33 @@ class GVAR(display) {
         };
         class tabRight: RscControlsGroupNoScrollbars{
             idc = IDC_tabRight;
-            x = safezoneW  + safezoneX - 12 * GRID_W;
+            x = safezoneW  + safezoneX - 13 * GRID_W;
             y = safezoneY + 8 * GRID_H;
-            w = 9 * GRID_W;
+            w = 12 * GRID_W;
             h = 200 * GRID_H;
             class controls {
-                class iconBackgroundOptic: RscPicture {
+                class iconBackgroundOptic: ctrlStaticBackground {
                     idc = IDC_iconBackgroundOptic;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
-                    colorText[]={0,0,0,0.8};
+                    colorBackground[]={0,0,0,1};
+                    fade=1;
+                    enable=0;
                     x = 0;
                     y = 0 * GRID_H;
-                    w = 9 * GRID_W;
+                    w = 12 * GRID_W;
                     h = 9 * GRID_H;
                 };
                 class buttonOptic: RscButtonArsenal {
                     idc = IDC_buttonOptic;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
                     tooltip="$STR_A3_RscDisplayArsenal_tab_ItemOptic";
+                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
                     colorBackground[]={0,0,0,0.5};
-                    x = 0;
+                    x = 3 * GRID_W;
                     y = 0 * GRID_H;
                     w = 9 * GRID_W;
                     h = 9 * GRID_H;
                 };
                 class iconBackgroundItemAcc: iconBackgroundOptic {
                     idc = IDC_iconBackgroundItemAcc;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemAcc_ca.paa";
                     y = 10 * GRID_H;
                 };
                 class buttonItemAcc: buttonOptic {
@@ -603,7 +586,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundMuzzle: iconBackgroundOptic {
                     idc = IDC_iconBackgroundMuzzle;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemMuzzle_ca.paa";
                     y = 20 * GRID_H;
                 };
                 class buttonMuzzle: buttonOptic {
@@ -614,7 +596,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundBipod: iconBackgroundOptic {
                     idc = IDC_iconBackgroundBipod;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemBipod_ca.paa";
                     y = 30 * GRID_H;
                 };
                 class buttonBipod: buttonOptic {
@@ -625,7 +606,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundMag: iconBackgroundOptic {
                     idc = IDC_iconBackgroundMag;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
                     y = 40 * GRID_H;
                 };
                 class buttonMag: buttonOptic {
@@ -636,7 +616,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundMagALL: iconBackgroundOptic {
                     idc = IDC_iconBackgroundMagALL;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMagAll_ca.paa";
                     y = 50 * GRID_H;
                 };
                 class buttonMagALL: buttonOptic {
@@ -647,7 +626,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundThrow: iconBackgroundOptic {
                     idc = IDC_iconBackgroundThrow;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoThrow_ca.paa";
                     y = 60 * GRID_H;
                 };
                 class buttonThrow: buttonOptic {
@@ -658,7 +636,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundPut: iconBackgroundOptic {
                     idc = IDC_iconBackgroundPut;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoPut_ca.paa";
                     y = 70 * GRID_H;
                 };
                 class buttonPut: buttonOptic {
@@ -669,7 +646,6 @@ class GVAR(display) {
                 };
                 class iconBackgroundMisc: iconBackgroundOptic {
                     idc = IDC_iconBackgroundMisc;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
                     y = 80 * GRID_H;
                 };
                 class buttonMisc: buttonOptic {
@@ -682,25 +658,39 @@ class GVAR(display) {
         };
         class tabRight2: RscControlsGroupNoScrollbars {
             idc = IDC_tabRight2;
-            x = safezoneX + safezoneW - 96 * GRID_W;
+            x = safezoneX + safezoneW - 94 * GRID_W;
             y = safezoneH - 175 * GRID_H;
             w = 9 * GRID_W;
             h = 19 * GRID_H;
             class controls {
-                class buttonRemoveAll: RscButtonArsenal {
-                    idc = IDC_buttonRemoveAll;
+                class iconBackgroundRemoveAllSelected: ctrlStaticBackground {
+                    idc = IDC_buttonRemoveAllSelected;
+                    colorBackground[]={0,0,0,1};
+                    fade=1;
+                    enable=0;
+                    x = 0;
+                    y = 0 * GRID_H;
+                    w = 9 * GRID_W;
+                    h = 9 * GRID_H;
+                };
+                class buttonRemoveAllSelected: RscButtonArsenal  {
+                    idc = IDC_buttonRemoveAllSelected;
                     text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
-                    tooltip="Remove all items from the container"; //TBL
+                    tooltip="Remove all selected items"; //TBL
                     colorBackground[]={0,0,0,0.5};
                     x = 0;
                     y = 0 * GRID_H;
                     w = 9 * GRID_W;
                     h = 9 * GRID_H;
                 };
-                class buttonRemoveAllSelected: buttonRemoveAll {
-                    idc = IDC_buttonRemoveAllSelected;
-                    text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
-                    tooltip="Remove all selected items"; //TBL
+                class iconBackgroundRemoveAll: iconBackgroundRemoveAllSelected {
+                    idc = IDC_buttonRemoveAll;
+                    y = 10 * GRID_H;
+                };
+                class buttonRemoveAll: buttonRemoveAllSelected {
+                    idc = IDC_buttonRemoveAll;
+                    tooltip="Remove all items from the container"; //TBL
+                    colorBackground[]={0,0,0,0.5};
                     y = 10 * GRID_H;
                 };
             };

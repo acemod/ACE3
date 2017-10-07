@@ -23,7 +23,7 @@ if (_global) then {
             _params params ["_mode"];
 
             diag_log format ["right before openBox %1", _params];
-            [_mode, _target] call FUNC(openBox);
+            [_mode, _target] call FUNC(openBox) ;
         }, 
         {
             params ["_target", "_player"];

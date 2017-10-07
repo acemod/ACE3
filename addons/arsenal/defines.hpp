@@ -116,5 +116,7 @@
 #define IDC_iconBackgroundMisc 104
 #define IDC_buttonMisc 105
 #define IDC_tabRight2 106
-#define IDC_buttonRemoveAll 107
+#define IDC_iconBackgroundRemoveAllSelected 107
 #define IDC_buttonRemoveAllSelected 108
+#define IDC_iconBackgroundRemoveAll 109
+#define IDC_buttonRemoveAll 110

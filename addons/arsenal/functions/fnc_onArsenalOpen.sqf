@@ -32,19 +32,12 @@ ctrlSetFocus _mouseAreaCtrl;
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;
 _mouseBlockCtrl ctrlEnable false;
 
-private _statsCtrl = _display displayCtrl IDC_stats;
-_statsCtrl ctrlSetFade 1;
-_statsCtrl ctrlCommit 0;
-_statsCtrl ctrlEnable false;
-
 {
     _x = _display displayCtrl _x;
 
     _x ctrlSetFade 1;
     _x ctrlCommit 0;
 } foreach [
-    IDC_message,
-    IDC_infoBox,
     IDC_blockRightFrame, 
     IDC_blockRighttBackground,
     IDC_loadIndicator,
