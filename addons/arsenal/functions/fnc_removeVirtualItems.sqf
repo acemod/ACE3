@@ -4,7 +4,7 @@
 params [ ["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]] ];
 
 if (_object == objNull) exitWith {};
-if (typeName _items isEqualTo "ARRAY" && {count _items == 0}) exitWith {};
+if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
     [ ], // Weapons 0
@@ -28,11 +28,11 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
 ]];
 
 
-if (typeName _items isEqualTo "BOOL" && {_items}) then {
+if (_items isEqualType true && {_items}) then {
     _object setVariable [QGVAR(virtualItems), nil, _global];
 } else {
     // Make sure all items are in string form
-    _items = _items select (typename _x isEqualTo "STRING");
+    _items = _items select ( _x isEqualType "");
     {
         _cargo set [_cargo find _x, _x - _items];
     } foreach _cargo;
