@@ -103,7 +103,7 @@ if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
 
 private _stabilityFactor = 1.5;
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
-    if (isNull _temperature) then {
+    if (_temperature isEqualTo scriptNull) then {//isNull doesn't work with Numbers
         _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
     };
     private _barometricPressure = ((getPosASL _projectile) select 2) call EFUNC(weather,calculateBarometricPressure);
