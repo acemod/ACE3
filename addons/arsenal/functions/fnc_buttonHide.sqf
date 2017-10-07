@@ -6,13 +6,7 @@ params ["_display"];
 private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
 
 if (_showToggle) then {
-    {
-        if (_x + 1 == GVAR(currentRightPanel)) then {
-            private _ctrl = _display displayctrl _x;
-            _ctrl ctrlSetFade 0;
-            _ctrl ctrlcommit 0.15;
-        };
-    } foreach [RIGHT_PANEL_ACC_BACKGROUND_IDCS, RIGHT_PANEL_ITEMS_BACKGROUND_IDCS]
+    [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(populatePanel)
 };
 
 {
