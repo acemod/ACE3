@@ -1,0 +1,39 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
+
+private _nextAction = "";
+
+switch (GVAR(currentLeftPanel)) do {
+
+    case IDC_buttonPrimaryWeapon : {
+        _nextAction = ["Civil", "PrimaryWeapon"] select ((GVAR(currentItems) select 0) != "");
+    };
+    case IDC_buttonHandgun : {
+        _nextAction = ["Civil", "HandGunOn"] select (GVAR(currentItems) select 2 != "");
+    };
+    case IDC_buttonSecondaryWeapon : {
+        _nextAction = ["Civil", "SecondaryWeapon"] select (GVAR(currentItems) select 1 != "");
+    };
+    case IDC_buttonHeadgear;
+    case IDC_buttonUniform;
+    case IDC_buttonVest;
+    case IDC_buttonBackpack;
+    case IDC_buttonGoggles;
+    case IDC_buttonNVG : {
+        _nextAction = "Stand";
+    };
+    case IDC_buttonBinoculars : {
+        _nextAction = ["Civil", "Binoculars"] select (GVAR(currentItems) select 9 != "");
+    };
+    case IDC_buttonInsigna : {
+        _nextAction = "Salute";
+    };
+};
+
+if (_nextAction != GVAR(currentAction)) then {
+    if (simulationEnabled GVAR(center)) then {
+        GVAR(center) playActionNow _nextAction;
+    } else {
+        GVAR(center) switchAction _nextAction;
+    };
+};

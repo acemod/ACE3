@@ -37,6 +37,7 @@ GVAR(currentItems) = nil;
 GVAR(currentFace) = nil;
 GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
+GVAR(currentAction) = nil;
 
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 

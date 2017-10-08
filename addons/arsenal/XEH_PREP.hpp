@@ -19,7 +19,6 @@ PREP(onSelChanged);
 PREP(openBox);
 PREP(populatePanel);
 PREP(removeVirtualItems);
+PREP(showWeapon);
 PREP(sortPanel);
 PREP(updateCamPos);
-
-

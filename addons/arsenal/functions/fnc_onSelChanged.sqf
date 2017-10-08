@@ -293,5 +293,3 @@ switch (GVAR(currentLeftPanel)) do {
         LOG("test");
     };
 };
-
-TRACE_1("currentItems onSelChange", GVAR(currentItems));

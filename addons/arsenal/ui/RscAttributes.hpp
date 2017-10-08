@@ -229,6 +229,7 @@ class GVAR(display) {
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
             onLBSelChanged = QUOTE(_this call FUNC(onSelChanged));
+            onLBDblClick = QUOTE(_this call FUNC(showWeapon));
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);

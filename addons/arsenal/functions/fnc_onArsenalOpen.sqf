@@ -23,6 +23,7 @@ GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
 GVAR(currentFace) = face GVAR(center);
 GVAR(currentVoice) = speaker GVAR(center);
 GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable ["BIS_fnc_setUnitInsignia_class", ""];
+GVAR(currentAction) = "Stand";
 
 for "_index" from 0 to 10 do {
     private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
@@ -155,7 +156,7 @@ cutText ["","plain"];
 showCommandingMenu "";
 
 GVAR(cameraView) = cameraView;
-player switchCamera "internal";
+GVAR(center) switchCamera "internal";
 showHUD false;
 
 private _mouseAreaCtrl = _display displayCtrl IDC_mouseArea;
