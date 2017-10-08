@@ -159,8 +159,8 @@ class GVAR(display) {
         class infoBox: RscControlsGroupNoScrollbars {
             idc = IDC_infoBox;
             fade = 1;
-            x = safezoneX + safezoneW - 100 * GRID_W;
-            y = safezoneH - 75 * GRID_H;
+            x = safezoneX + safezoneW - 90 * GRID_W;
+            y = safeZoneH + safezoneY - 17 * GRID_H;
             w = 85 * GRID_W;
             h = 15 * GRID_H;
             class controls {
