@@ -16,10 +16,10 @@
     {\
         private _dlcName = _this call GETDLC;\
         if (_dlcName != "") then {\
-            _panel lbsetpictureright [_lbAdd,(modParams [_dlcName,["logo"]]) param [0,""]];\
+            _ctrlPanel lbsetpictureright [_lbAdd,(modParams [_dlcName,["logo"]]) param [0,""]];\
             _modID = _modList find _dlcName;\
             if (_modID < 0) then {_modID = _modList pushback _dlcName;};\
-            _panel lbsetvalue [_lbAdd,_modID];\
+            _ctrlPanel lbsetvalue [_lbAdd,_modID];\
         };\
     };
 

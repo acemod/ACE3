@@ -22,17 +22,16 @@ private _fnc_panelLeft = {
         _ctrlBackground ctrlCommit FADE_DELAY;
 
         private _fnc_fill = {
-            params ["_display", "_configPath"];
+            params ["_configPath"];
 
             private _displayName = getText (_configPath >> "displayName");
 
-            private _panel = _display displayctrl IDC_leftTabContent;
-            private _lbAdd = _panel lbAdd _displayName;
+            private _lbAdd = _ctrlPanel lbAdd _displayName;
 
-            _panel lbSetdata [_lbAdd, _x];
-            _panel lbSetPicture [_lbAdd, geTtext (_configPath >> "picture")];
-            _panel lbSetTooltip [_lbAdd,format ["%1\n%2", _displayName, _x]];
-            _xCfg call ADDMODICON;
+            _ctrlPanel lbSetdata [_lbAdd, _x];
+            _ctrlPanel lbSetPicture [_lbAdd, geTtext (_configPath >> "picture")];
+            _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2", _displayName, _x]];
+            _configPath call ADDMODICON;
         };
 
         // Handle icons and filling
@@ -90,29 +89,29 @@ private _fnc_panelLeft = {
                 switch (_ctrlIDC) do {
                     case IDC_buttonPrimaryWeapon : {
                         {
-                            private _config = configfile >> "cfgweapons" >> _x;
+                            private _config = configfile >> "CfgWeapons" >> _x;
                             if (getNumber (_config >> "type") == 1) then {
-                                [_display, _config] call _fnc_fill;
+                                [_config] call _fnc_fill;
                             };
                         } foreach (GVAR(virtualItems) select 0);
                     };
 
                     case IDC_buttonHandgun : {
                         {
-                            private _config = configfile >> "cfgweapons" >> _x;
+                            private _config = configfile >> "CfgWeapons" >> _x;
 
                             if (getNumber (_config >> "type") == 2) then {
-                                [_display, _config] call _fnc_fill;
+                                [_config] call _fnc_fill;
                             };
                         } foreach (GVAR(virtualItems) select 0);
                     };
 
                     case IDC_buttonSecondaryWeapon : {
                         {
-                            private _config = configfile >> "cfgweapons" >> _x;
+                            private _config = configfile >> "CfgWeapons" >> _x;
 
                             if (getNumber (_config >> "type") == 4) then {
-                                [_display, _config] call _fnc_fill;
+                                [_config] call _fnc_fill;
                             };
                         } foreach (GVAR(virtualItems) select 0);
                     };
@@ -147,8 +146,40 @@ private _fnc_panelLeft = {
                     [_display, (_display displayCtrl IDC_buttonMisc)] call FUNC(populatePanel);
                 };
 
-                
-                 lbClear _ctrlPanel;
+                lbClear _ctrlPanel;
+                private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
+                _ctrlPanel lbsetvalue [_addEmpty, -1];
+
+                // Filling
+
+                switch (_ctrlIDC) do {
+                    case IDC_buttonUniform : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getNumber (_config >> "ItemInfo" >> "type") == 801) then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 4);
+                    };
+
+                    case IDC_buttonVest : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getNumber (_config >> "ItemInfo" >> "type") == 701) then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 5);
+                    };
+
+                    case IDC_buttonBackpack : {
+                        {
+                            private _config = configfile >> "CfgVehicles" >> _x;
+                            if ((getText (_config >> "vehicleClass")) == "Backpacks") then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 6);
+                    };
+                };
             };
 
             default {
@@ -177,6 +208,104 @@ private _fnc_panelLeft = {
                 GVAR(currentRightPanel) = nil;
 
                  lbClear _ctrlPanel;
+
+                 if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
+                    private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
+                    _ctrlPanel lbsetvalue [_addEmpty, -1];
+                 };
+
+                 switch (_ctrlIDC) do {
+                    case IDC_buttonHeadgear: {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getNumber (_config >> "ItemInfo" >> "type") == 605) then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 3);
+                    };
+                    case IDC_buttonGoggles : {
+                        {
+                            private _config = configfile >> "CfgGlasses" >> _x;
+                            [_config] call _fnc_fill;
+                        } foreach (GVAR(virtualItems) select 7);
+                    };
+                    case IDC_buttonNVG : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getText (_config >> "simulation") == "NVGoggles") then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 8);
+                    };
+                    case IDC_buttonBinoculars : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if ((getText (_config >> 'simulation') == 'Weapon') && {(getNumber (_config >> 'type') == 4096)}) then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 9);
+                    };
+                    case IDC_buttonMap : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getText (_config >> "simulation") == "ItemMap") then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 10);
+                    };
+                    case IDC_buttonCompass : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getText (_config >> "simulation") == "ItemCompass") then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 11);
+                    };
+                    case IDC_buttonRadio : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getText (_config >> "simulation") == "ItemRadio") then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 12);
+                    };
+                    case IDC_buttonWatch : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getText (_config >> "simulation") == "ItemWatch") then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 13);
+                    };
+                    case IDC_buttonGPS : {
+                        {
+                            private _config = configfile >> "CfgWeapons" >> _x;
+                            if (getText (_config >> "simulation") == "ItemGPS") then {
+                                [_config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 14);
+                    };
+                    case IDC_buttonFace : {
+                        {
+                            private ["_index"];
+                            _index = _foreachindex;
+                            {
+                                if (getnumber (_x >> "disabled") == 0 && gettext (_x >> "head") != "" && configname _x != "Default") then {
+                                    private _configName = configName _x;
+                                    private _displayName = gettext (_x >> "displayName");
+                                    private _lbAdd = _ctrlPanel lbadd _displayName;
+                                    _ctrlPanel lbsetdata [_lbAdd, _configName];
+                                    _ctrlPanel lbsettooltip [_lbAdd,format ["%1\n%2",_displayName, _configName]];
+                                    _x call ADDMODICON;
+                                };
+                            } foreach ("isclass _x" configclasses _x);
+                        } foreach ("isclass _x" configclasses (configfile >> "cfgfaces"));
+                    };
+                    case IDC_buttonVoice : {
+                    };
+                    case IDC_buttonInsigna : {
+                    };
+                };
             };
         };
 
