@@ -71,7 +71,9 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_loadIndicator,
     IDC_rightTabContent,
     IDC_sortRightTab,
+    RIGHT_PANEL_ACC_BACKGROUND_IDCS,
     RIGHT_PANEL_ACC_IDCS,
+    RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
     RIGHT_PANEL_ITEMS_IDCS,
     RIGHT_PANEL_REMOVE_IDCS,
     IDC_rightSearchbar

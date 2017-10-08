@@ -79,8 +79,6 @@
 #define IDC_infoAuthor 18
 #define IDC_DLCBackground 19
 #define IDC_DLCIcon 20
-#define IDC_stats 21
-#define IDC_statsBackground 22
 #define IDC_mouseBlock 43
 #define IDC_leftTabContent 44
 #define IDC_rightTabContent 45
