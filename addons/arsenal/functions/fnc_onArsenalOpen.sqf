@@ -75,6 +75,8 @@ if (GVAR(mode) != 0) then {
     ];
 };
 
+[_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(populatePanel);
+
 //--------------- Camera prep
 cutText ["","plain"];
 showCommandingMenu "";
