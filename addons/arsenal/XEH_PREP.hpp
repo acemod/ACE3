@@ -15,6 +15,7 @@ PREP(onArsenalOpen);
 PREP(onKeyDown);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
+PREP(onSelChanged);
 PREP(openBox);
 PREP(populatePanel);
 PREP(removeVirtualItems);

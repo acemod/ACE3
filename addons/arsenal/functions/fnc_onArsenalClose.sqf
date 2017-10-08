@@ -26,13 +26,17 @@ GVAR(cameraHelper) = nil;
 GVAR(cameraView) = nil;
 GVAR(center) = nil;
 GVAR(cameraPosition) = nil;
-GVAR(selectedWeaponType) = nil;
+GVAR(currentWeaponType) = nil;
 GVAR(visionMode) = nil;
 GVAR(mouseButtonState) = nil;
 GVAR(mode) = nil;
 GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
 GVAR(virtualItems) = nil;
+GVAR(currentItems) = nil;
+GVAR(currentFace) = nil;
+GVAR(currentVoice) = nil;
+GVAR(currentInsignia) = nil;
 
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 

@@ -228,6 +228,7 @@ class GVAR(display) {
             colorSelect[]={1,1,1,1};
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
+            onLBSelChanged = QUOTE(_this call FUNC(onSelChanged));
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);

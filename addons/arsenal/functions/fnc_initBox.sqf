@@ -14,7 +14,7 @@ if (_global) then {
             params ["_target", "_player", "_params"];
             _params params ["_mode"];
 
-            [{[_this select 0, _this select 1] call FUNC(openBox)}, [_mode, _target]] call CBA_fnc_execNextFrame;
+            [{[_this select 0, _this select 1, _this select 2] call FUNC(openBox)}, [_mode, _target, _player]] call CBA_fnc_execNextFrame;
         }, 
         {
             params ["_target", "_player"];

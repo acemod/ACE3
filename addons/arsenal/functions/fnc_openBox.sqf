@@ -1,12 +1,9 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-params ["_mode", "_object"];
+params [["_mode", 1, [1]], ["_object", objNull, [objNull]], ["_center", objNull, [objNull]]];
 
-TRACE_2("openBox: right after params", _mode, _object);
-
-if (isNull _object) exitWith {};
-
+if (isNull _object || {isNull _center}) exitWith {};
 if (isNil {_object getVariable [QGVAR(virtualItems), nil]}) exitWith {};
 
 private _displayToUse = nil;
@@ -29,6 +26,7 @@ if (isNil "_displayToUse" || {!isnull GVAR(camera)}) exitWith {
 };
 
 GVAR(mode) = _mode;
+GVAR(center) = _center;
 GVAR(virtualItems) = _object getVariable [QGVAR(virtualItems), [
     [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
 ]];

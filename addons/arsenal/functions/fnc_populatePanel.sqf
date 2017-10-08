@@ -37,6 +37,7 @@ private _fnc_panelLeft = {
         // Handle icons and filling
         switch true do { 
             case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
+                /*
                 {
                     _x = _display displayCtrl _x;
 
@@ -73,11 +74,13 @@ private _fnc_panelLeft = {
                     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
                     RIGHT_PANEL_REMOVE_IDCS
                 ];
+                */
 
+                /*
                 if (isNil QGVAR(currentRightPanel) || {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]}) then {
                     [_display, _display displayCtrl IDC_buttonOptic] call FUNC(populatePanel);
                 };
-
+                */
 
                 // Purge old data
                 lbClear _ctrlPanel;
@@ -119,7 +122,7 @@ private _fnc_panelLeft = {
             };
 
             case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
-
+                /*
                 {
                     _x = _display displayCtrl _x;
 
@@ -145,6 +148,7 @@ private _fnc_panelLeft = {
                 if (isNil QGVAR(currentRightPanel)) then {
                     [_display, (_display displayCtrl IDC_buttonMisc)] call FUNC(populatePanel);
                 };
+                */
 
                 lbClear _ctrlPanel;
                 private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
@@ -183,6 +187,7 @@ private _fnc_panelLeft = {
             };
 
             default {
+                /*
                 {
                     _x = _display displayCtrl _x;
                     if (ctrlFade _x != 1) then {
@@ -204,7 +209,7 @@ private _fnc_panelLeft = {
                     RIGHT_PANEL_ITEMS_IDCS,
                     RIGHT_PANEL_REMOVE_IDCS,
                     IDC_rightSearchbar
-                ];
+                ];*/
                 GVAR(currentRightPanel) = nil;
 
                  lbClear _ctrlPanel;
@@ -325,6 +330,7 @@ private _fnc_panelLeft = {
         };
 
         // Done
+        _ctrlPanel lbSetCurSel -1;
         GVAR(currentLeftPanel) = _ctrlIDC;
     };
 };
@@ -346,12 +352,14 @@ private _fnc_panelRight = {
         _ctrlBackground ctrlCommit FADE_DELAY;
 
         private _searchbarCtrl = _display displayCtrl IDC_rightSearchbar;
+        private _ctrlPanelRight = _display displayCtrl IDC_rightTabContent;
         if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
             _searchbarCtrl ctrlShow true;
             _searchbarCtrl ctrlSetFade 0;
             _searchbarCtrl ctrlCommit 0;
         };
 
+        _ctrlPanelRight lbSetCurSel -1;
         GVAR(currentRightPanel) = _ctrlIDC;
     };
 };

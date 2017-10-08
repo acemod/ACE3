@@ -23,6 +23,10 @@
         };\
     };
 
+#define ADDBINOCULARSMAG\
+    private _magazines = getarray (configfile >> "cfgweapons" >> _item >> "magazines");\
+    if (count _magazines > 0) then {GVAR(center) addmagazine (_magazines select 0)};
+
 #define CAM_DIS_MAX 5
 
 #define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
@@ -35,7 +39,7 @@
 #define LIST_DEFAULTS\
     [\
     [\
-        (primaryweapon GVAR(center)) call bis_fnc_baseWeapon,\
+        (primaryweapon GVAR(center) call bis_fnc_baseWeapon),\
         (secondaryweapon GVAR(center) call bis_fnc_baseWeapon),\
         (handgunweapon GVAR(center) call bis_fnc_baseWeapon)\
     ],\

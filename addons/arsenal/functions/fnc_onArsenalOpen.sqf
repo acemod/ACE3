@@ -16,44 +16,91 @@ if (isNil QGVAR(mode)) then {
     GVAR(mode) = 1;
 };
 
-// Default items
 if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };
+GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
+GVAR(currentFace) = face GVAR(center);
+GVAR(currentVoice) = speaker GVAR(center);
+GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable ["BIS_fnc_setUnitInsignia_class", ""];
 
 for "_index" from 0 to 10 do {
     private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
 
     if !(_array isEqualTo []) then {
-        {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array  ;
+        {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array;
+    };
+};
+
+for "_index" from 0 to 15 do {
+    switch (_index) do {
+        case 0;
+        case 1;
+        case 2:{
+            GVAR(currentItems) set [_index, ((LIST_DEFAULTS select 0) select _index)];
+        };
+        case 3;
+        case 4;
+        case 5;
+        case 6;
+        case 7;
+        case 8;
+        case 9: {
+            GVAR(currentItems) set [_index, (LIST_DEFAULTS select _index) select 0];
+
+        };
+        case 10: {
+            {(GVAR(currentItems) select 15) pushBack _x} forEach (uniformItems GVAR(center));
+        };
+        case 11: {
+            {(GVAR(currentItems) select 16) pushBack _x} forEach (vestItems GVAR(center));
+        };
+        case 12: {
+            {(GVAR(currentItems) select 17) pushBack _x} forEach (backpackItems GVAR(center));
+        };
+        case 13: {
+            {if (_x != "") then {(GVAR(currentItems) select 18) pushBack _x}} forEach (primaryWeaponItems GVAR(center));
+        };
+        case 14: {
+            {if (_x != "") then {(GVAR(currentItems) select 19) pushBack _x}} forEach (secondaryWeaponItems GVAR(center));
+        };
+        case 15: {
+            {if (_x != "") then {(GVAR(currentItems) select 20) pushBack _x}} forEach (handgunItems GVAR(center));
+        };
     };
 };
 
 {
     if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
         (GVAR(virtualItems) select 10) pushBackUnique _x;
+        GVAR(currentItems) set [10, _x];
     };
     if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemCompass") then {
         (GVAR(virtualItems) select 11) pushBackUnique _x;
+        GVAR(currentItems) set [11, _x];
     };
     if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemRadio") then {
         (GVAR(virtualItems) select 12) pushBackUnique _x;
+        GVAR(currentItems) set [12, _x];
     };
     if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemWatch") then {
         (GVAR(virtualItems) select 13) pushBackUnique _x;
+        GVAR(currentItems) set [13, _x];
     };
     if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemGPS") then {
         (GVAR(virtualItems) select 14) pushBackUnique _x;
+        GVAR(currentItems) set [14, _x];
     };
 } foreach (assignedItems GVAR(center));
 
-
-GVAR(selectedWeaponType) = switch true do {
+GVAR(currentWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == primaryWeapon GVAR(center)): {0};
     case (currentWeapon GVAR(center) == secondaryWeapon GVAR(center)): {1};
     case (currentWeapon GVAR(center) == handgunWeapon GVAR(center)): {2};
     default {-1};
 };
+
+TRACE_1("currentItems", GVAR(currentItems));
 
 //--------------- Fade out unused elements
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;
