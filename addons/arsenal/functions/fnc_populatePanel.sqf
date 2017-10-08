@@ -287,8 +287,6 @@ private _fnc_panelLeft = {
                     };
                     case IDC_buttonFace : {
                         {
-                            private ["_index"];
-                            _index = _foreachindex;
                             {
                                 if (getnumber (_x >> "disabled") == 0 && gettext (_x >> "head") != "" && configname _x != "Default") then {
                                     private _configName = configName _x;
