@@ -312,10 +312,14 @@ class GVAR(display) {
             y = safezoneY + 14 * GRID_H;
             w = 70 * GRID_W;
             h = safezoneH - 22 * GRID_H;
-            sizeEx = 5 * GRID_H;
+            sizeEx = 7 * GRID_H;
         };
         class rightTabContent: leftTabContent {
             idc = IDC_rightTabContent;
+            drawSideArrows=1;
+            disableOverflow=1;
+            idcLeft=200;
+            idcRight=201;
             x = safezoneX + safezoneW - 84 * GRID_W;
             h = safezoneH + safezoneY - 69 * GRID_H;
         };

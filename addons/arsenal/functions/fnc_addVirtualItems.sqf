@@ -100,7 +100,7 @@ if (_items isEqualType true && {_items}) then {
                 (_cargo select 17) pushBackUnique (configName  _x);
             };
         };
-    } foreach (configProperties [configFile >> "CfgWeapons", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]);
+    } foreach configProperties [configFile >> "CfgWeapons", "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
 
     {
     } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];

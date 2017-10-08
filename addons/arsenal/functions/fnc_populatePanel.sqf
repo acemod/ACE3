@@ -300,8 +300,25 @@ private _fnc_panelLeft = {
                         } foreach ("isclass _x" configclasses (configfile >> "cfgfaces"));
                     };
                     case IDC_buttonVoice : {
+                        {
+                            private _configName = configName _x;
+                            private _displayName = gettext (_x >> "displayName");
+                            _lbAdd = _ctrlPanel lbAdd _displayName;
+                            _ctrlPanel lbSetData [_lbAdd, _configName];
+                            _ctrlPanel lbSetPicture [_lbAdd,gettext (_x >> "icon")];
+                            _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _configName]];
+                            _x call ADDMODICON;
+                        } foreach configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
                     };
                     case IDC_buttonInsigna : {
+                        {
+                            private _configName = configName _x;
+                            _displayName = getText (_x >> "displayName");
+                            _lbAdd = _ctrlPanel lbAdd _displayName;
+                            _ctrlPanel lbSetData [_lbAdd, _configName];
+                            _ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
+                            _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _configName]];
+                        } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
                     };
                 };
             };

@@ -23,7 +23,6 @@
         };\
     };
 
-#define MODLIST ["","curator","kart","heli","mark","expansion","expansionpremium"]
 #define CAM_DIS_MAX 5
 
 #define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
@@ -52,6 +51,10 @@
     [binocular GVAR(center)]\
 ]
 
+// Pixel grid
+#define pixelScale  0.50
+#define GRID_W (pixelW * pixelGrid * pixelScale)
+#define GRID_H (pixelH * pixelGrid * pixelScale)
 
 // IDCs
 #define IDD_ace_arsenal 1127001

@@ -16,6 +16,7 @@ if (isNil QGVAR(mode)) then {
     GVAR(mode) = 1;
 };
 
+// Default items
 if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };
@@ -27,6 +28,25 @@ for "_index" from 0 to 10 do {
         {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array  ;
     };
 };
+
+{
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
+        (GVAR(virtualItems) select 10) pushBackUnique _x;
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemCompass") then {
+        (GVAR(virtualItems) select 11) pushBackUnique _x;
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemRadio") then {
+        (GVAR(virtualItems) select 12) pushBackUnique _x;
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemWatch") then {
+        (GVAR(virtualItems) select 13) pushBackUnique _x;
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemGPS") then {
+        (GVAR(virtualItems) select 14) pushBackUnique _x;
+    };
+} foreach (assignedItems GVAR(center));
+
 
 GVAR(selectedWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == primaryWeapon GVAR(center)): {0};
@@ -74,6 +94,10 @@ if (GVAR(mode) != 0) then {
         IDC_buttonInsigna
     ];
 };
+
+private _leftPanelCtrl = _display displayCtrl IDC_leftTabContent;
+_leftPanelCtrl ctrlsetfontheight (4.5 * GRID_H);
+_leftPanelCtrl ctrlCommit 0;
 
 [_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(populatePanel);
 

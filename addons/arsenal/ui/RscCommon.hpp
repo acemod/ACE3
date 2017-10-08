@@ -98,12 +98,6 @@
 #define GUI_TEXT_SIZE_MEDIUM        (GUI_GRID_H * 1)
 #define GUI_TEXT_SIZE_LARGE     (GUI_GRID_H * 1.2)
 
-// Pixel grid
-#define pixelScale  0.50
-#define GRID_W (pixelW * pixelGrid * pixelScale)
-#define GRID_H (pixelH * pixelGrid * pixelScale)
-
-
 class ScrollBar
 {
     color[] = {1,1,1,0.6};
