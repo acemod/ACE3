@@ -17,6 +17,7 @@ private _fnc_panelLeft = {
         };
         
         private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
+        private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
         _ctrlBackground ctrlSetFade 0;
         _ctrlBackground ctrlCommit FADE_DELAY;
 
@@ -66,7 +67,9 @@ private _fnc_panelLeft = {
 
 
                 // Purge old data
-                lbClear (_display displayctrl IDC_leftTabContent);
+                lbClear _ctrlPanel;
+                private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
+                _ctrlPanel lbsetvalue [_addEmpty, -1];
 
                 // Filling
                 private _fnc_fill = {
@@ -91,7 +94,6 @@ private _fnc_panelLeft = {
                     } foreach (GVAR(virtualItems) select 0);
                 };
 
-                
                 switch (_ctrlIDC) do {
                     case IDC_buttonPrimaryWeapon : {
                         [_display, 1] call _fnc_fill;
@@ -104,6 +106,7 @@ private _fnc_panelLeft = {
                     };
                 };
             };
+
             case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
 
                 {
@@ -131,6 +134,9 @@ private _fnc_panelLeft = {
                 if (isNil QGVAR(currentRightPanel)) then {
                     [_display, (_display displayCtrl IDC_buttonMisc)] call FUNC(populatePanel);
                 };
+
+                
+                 lbClear _ctrlPanel;
             };
             default {
                 {
@@ -156,6 +162,8 @@ private _fnc_panelLeft = {
                     IDC_rightSearchbar
                 ];
                 GVAR(currentRightPanel) = nil;
+
+                 lbClear _ctrlPanel;
             };
         };
 
