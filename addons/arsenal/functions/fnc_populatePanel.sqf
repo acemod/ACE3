@@ -21,6 +21,20 @@ private _fnc_panelLeft = {
         _ctrlBackground ctrlSetFade 0;
         _ctrlBackground ctrlCommit FADE_DELAY;
 
+        private _fnc_fill = {
+            params ["_display", "_configPath"];
+
+            private _displayName = getText (_configPath >> "displayName");
+
+            private _panel = _display displayctrl IDC_leftTabContent;
+            private _lbAdd = _panel lbAdd _displayName;
+
+            _panel lbSetdata [_lbAdd, _x];
+            _panel lbSetPicture [_lbAdd, geTtext (_configPath >> "picture")];
+            _panel lbSetTooltip [_lbAdd,format ["%1\n%2", _displayName, _x]];
+            _xCfg call ADDMODICON;
+        };
+
         // Handle icons and filling
         switch true do { 
             case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
@@ -72,37 +86,35 @@ private _fnc_panelLeft = {
                 _ctrlPanel lbsetvalue [_addEmpty, -1];
 
                 // Filling
-                private _fnc_fill = {
-                    TRACE_1("test1", GVAR(virtualItems) select 0);
-                    {
-                        TRACE_1("test1", _x);
-                        params ["_display", "_desiredType"];
-                        
-                        private _xCfg = configfile >> "cfgweapons" >> _x;
-                        if (_desiredType == (getNumber (_xCfg >> "type"))) then {
-                        
-                            private _displayName = getText (_xCfg >> "displayName");
-
-                            private _panel = _display displayctrl IDC_leftTabContent;
-                            private _lbAdd = _panel lbAdd _displayName;
-
-                            _panel lbSetdata [_lbAdd, _x];
-                            _panel lbSetPicture [_lbAdd, geTtext (_xCfg >> "picture")];
-                            _panel lbSetTooltip [_lbAdd,format ["%1\n%2", _displayName, _x]];
-                            _xCfg call ADDMODICON;
-                        };
-                    } foreach (GVAR(virtualItems) select 0);
-                };
 
                 switch (_ctrlIDC) do {
                     case IDC_buttonPrimaryWeapon : {
-                        [_display, 1] call _fnc_fill;
+                        {
+                            private _config = configfile >> "cfgweapons" >> _x;
+                            if (getNumber (_config >> "type") == 1) then {
+                                [_display, _config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 0);
                     };
+
                     case IDC_buttonHandgun : {
-                        [_display, 2]  call _fnc_fill;
+                        {
+                            private _config = configfile >> "cfgweapons" >> _x;
+
+                            if (getNumber (_config >> "type") == 2) then {
+                                [_display, _config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 0);
                     };
+
                     case IDC_buttonSecondaryWeapon : {
-                        [_display, 4] call _fnc_fill;
+                        {
+                            private _config = configfile >> "cfgweapons" >> _x;
+
+                            if (getNumber (_config >> "type") == 4) then {
+                                [_display, _config] call _fnc_fill;
+                            };
+                        } foreach (GVAR(virtualItems) select 0);
                     };
                 };
             };
@@ -138,6 +150,7 @@ private _fnc_panelLeft = {
                 
                  lbClear _ctrlPanel;
             };
+
             default {
                 {
                     _x = _display displayCtrl _x;
