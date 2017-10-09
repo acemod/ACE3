@@ -251,7 +251,7 @@ switch (GVAR(currentLeftPanel)) do {
         private _face = [_item, "Default"] select (_item == "");
         TRACE_1("face", _face);
 
-        [QGVAR(broadcastFace), [GVAR(center), _face], (QGVAR(center) + "_face")] call CBA_fnc_globalEventJIP;
+        GVAR(center) setFace _face;
         GVAR(currentFace) = _face;
     };
     case IDC_buttonVoice : {

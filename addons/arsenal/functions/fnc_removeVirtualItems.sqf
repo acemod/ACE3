@@ -27,7 +27,6 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
     [ ] // InventoryItems 17
 ]];
 
-
 if (_items isEqualType true && {_items}) then {
     _object setVariable [QGVAR(virtualItems), nil, _global];
 } else {

@@ -1,16 +1,14 @@
 #include "script_component.hpp"
 
-GVAR(camera) cameraEffect ["terminate","back"];
-private _cameraData = [getposatl GVAR(camera), (getposatl GVAR(camera)) vectorfromto (getposatl GVAR(cameraHelper))];
+GVAR(camera) cameraEffect ["terminate", "back"];
+private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFromTo (getposAtl GVAR(cameraHelper))];
 
 camDestroy GVAR(camera);
-player switchCamera GVAR(cameraView);
+GVAR(center) switchCamera GVAR(cameraView);
 deleteVehicle GVAR(cameraHelper);
 
-if !(isnull curatorCamera) then {
-    curatorcamera setPosAtl (_cameraData select 0);
-    curatorcamera setVectorDir (_cameraData select 1);
-    curatorcamera cameraEffect ["internal","back"];
+if (isMultiplayer) then {
+    [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)]] call CBA_fnc_globalEventJIP;
 };
 
 // Select correct weapon
@@ -20,24 +18,33 @@ switch GVAR(selectedWeaponType) do {
     case 2: {GVAR(center) selectWeapon handgunWeapon GVAR(center);};
 };
 
+if !(isnull curatorCamera) then {
+    curatorcamera setPosAtl (_cameraData select 0);
+    curatorcamera setVectorDir (_cameraData select 1);
+    curatorcamera cameraEffect ["internal","back"];
+};
+
 GVAR(camera) = nil;
 GVAR(cameraPosition) = nil;
 GVAR(cameraHelper) = nil;
 GVAR(cameraView) = nil;
-GVAR(center) = nil;
 GVAR(cameraPosition) = nil;
-GVAR(currentWeaponType) = nil;
 GVAR(visionMode) = nil;
+
 GVAR(mouseButtonState) = nil;
 GVAR(mode) = nil;
 GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
+
+GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;
 GVAR(currentItems) = nil;
 GVAR(currentFace) = nil;
 GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
+
+GVAR(center) = nil;
 
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 

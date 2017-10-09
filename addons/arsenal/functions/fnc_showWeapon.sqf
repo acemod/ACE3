@@ -8,11 +8,11 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonPrimaryWeapon : {
         _nextAction = ["Civil", "PrimaryWeapon"] select ((GVAR(currentItems) select 0) != "");
     };
-    case IDC_buttonHandgun : {
-        _nextAction = ["Civil", "HandGunOn"] select (GVAR(currentItems) select 2 != "");
-    };
     case IDC_buttonSecondaryWeapon : {
         _nextAction = ["Civil", "SecondaryWeapon"] select (GVAR(currentItems) select 1 != "");
+    };
+    case IDC_buttonHandgun : {
+        _nextAction = ["Civil", "HandGunOn"] select (GVAR(currentItems) select 2 != "");
     };
     case IDC_buttonHeadgear;
     case IDC_buttonUniform;
@@ -31,6 +31,18 @@ switch (GVAR(currentLeftPanel)) do {
 };
 
 if (_nextAction != GVAR(currentAction)) then {
+    switch (_nextAction) do {
+        case "PrimaryWeapon": {
+            GVAR(selectedWeaponType) = 0;
+        };
+        case "SecondaryWeapon": {
+            GVAR(selectedWeaponType) = 1;
+        };
+        case "HandGunOn": {
+            GVAR(selectedWeaponType) = 2;
+        };
+    };
+
     if (simulationEnabled GVAR(center)) then {
         GVAR(center) playActionNow _nextAction;
     } else {

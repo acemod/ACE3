@@ -18,6 +18,7 @@ PREP(onMouseButtonUp);
 PREP(onSelChanged);
 PREP(openBox);
 PREP(populatePanel);
+PREP(removeBox);
 PREP(removeVirtualItems);
 PREP(showWeapon);
 PREP(sortPanel);

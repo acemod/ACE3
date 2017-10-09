@@ -3,10 +3,11 @@
 
 params [["_object", objNull, [objNull]], ["_mode", 1, [1]], ["_items", true, [[], true]], ["_global", true, [true]]];
 
-if (_object isEqualTo objNull) exitWith {};
 
-if (_global) then {
-    [QGVAR(initBox), [_object, _mode, _items, false]] call CBA_fnc_globalEventJIP;  
+TRACE_1("initBox after params", _global);
+
+if (_global && {isMultiplayer}) then {
+     [QGVAR(initBox), [_object, _mode, _items, false]] call CBA_fnc_globalEventJIP;
 } else {
     if ({(_x select 0) select 0 isEqualTo QGVAR(interaction)} count (_object getVariable [QEGVAR(interact_menu,actions), []]) == 0) then {
 

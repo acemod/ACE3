@@ -95,9 +95,9 @@ for "_index" from 0 to 15 do {
 } foreach (assignedItems GVAR(center));
 
 GVAR(currentWeaponType) = switch true do {
-    case (currentWeapon GVAR(center) == primaryWeapon GVAR(center)): {0};
-    case (currentWeapon GVAR(center) == secondaryWeapon GVAR(center)): {1};
-    case (currentWeapon GVAR(center) == handgunWeapon GVAR(center)): {2};
+    case (currentWeapon GVAR(center) == GVAR(currentItems) select 0): {0};
+    case (currentWeapon GVAR(center) == GVAR(currentItems) select 1): {1};
+    case (currentWeapon GVAR(center) == GVAR(currentItems) select 2): {2};
     default {-1};
 };
 
