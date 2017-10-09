@@ -134,9 +134,8 @@ switch (GVAR(currentLeftPanel)) do {
             {GVAR(center) addItemtoUniform _x} foreach (GVAR(currentItems) select 15);
             GVAR(currentItems) set [4, _item];
 
-            if (GVAR(currentInsignia) != "") then {
-                // TODO
-            };
+            [GVAR(center), ""] call bis_fnc_setUnitInsignia;
+            [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
         };
     };
     case IDC_buttonVest: {
@@ -258,7 +257,6 @@ switch (GVAR(currentLeftPanel)) do {
         GVAR(currentVoice) = _item;
     };
     case IDC_buttonInsigna : {
-        TRACE_1("insignia", _item);
         [GVAR(center), _item] call bis_fnc_setUnitInsignia;
         GVAR(currentInsignia) = _item;
     };

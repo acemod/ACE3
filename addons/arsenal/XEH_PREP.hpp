@@ -20,6 +20,6 @@ PREP(openBox);
 PREP(populatePanel);
 PREP(removeBox);
 PREP(removeVirtualItems);
-PREP(showWeapon);
+PREP(showItem);
 PREP(sortPanel);
 PREP(updateCamPos);

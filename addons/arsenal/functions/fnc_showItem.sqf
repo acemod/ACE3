@@ -28,6 +28,9 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonInsigna : {
         _nextAction = "Salute";
     };
+    case IDC_buttonVoice : {
+        GVAR(center) directSay "CuratorObjectPlaced";
+    };
 };
 
 if (_nextAction != GVAR(currentAction)) then {
