@@ -330,8 +330,18 @@ private _fnc_panelLeft = {
         };
 
         // Done
-        _ctrlPanel lbSetCurSel -1;
         GVAR(currentLeftPanel) = _ctrlIDC;
+
+        _ctrlPanel lbSetCurSel -1;
+        private _itemsToCheck = (GVAR(currentItems) select [0,14]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)];
+
+        for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
+            private _currentData = _ctrlPanel lbData _lbIndex;
+
+            if ({_x != "" && {_currentData == _x}} count _itemsToCheck > 0) then {
+                _ctrlPanel lbSetCurSel _lbIndex;
+            };
+        };
     };
 };
 

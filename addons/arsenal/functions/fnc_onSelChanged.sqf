@@ -11,8 +11,6 @@ if (_curSel < 0) exitwith {};
 
 private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
 
-TRACE_2("onSelChanged", _item);
-
 switch (GVAR(currentLeftPanel)) do { 
 
     case IDC_buttonPrimaryWeapon : {
