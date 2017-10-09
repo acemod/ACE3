@@ -3,11 +3,17 @@
 
 params [["_object", objNull, [objNull]], ["_mode", 1, [1]], ["_items", true, [[], true]], ["_global", true, [true]]];
 
+if (isNil QGVAR(EHIDArray)) then {
+    GVAR(EHIDArray) = [];
+};
 
-TRACE_1("initBox after params", _global);
-
-if (_global && {isMultiplayer}) then {
-     [QGVAR(initBox), [_object, _mode, _items, false]] call CBA_fnc_globalEventJIP;
+if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) then {
+    private _ID = [QGVAR(initBox), [_object, _mode, _items, false]] call CBA_fnc_globalEventJIP;
+    [_ID, _object] call CBA_fnc_removeGlobalEventJIP;
+    
+    
+    GVAR(EHIDArray) pushBack [_ID, _object];
+    publicVariable QGVAR(EHIDArray);
 } else {
     if ({(_x select 0) select 0 isEqualTo QGVAR(interaction)} count (_object getVariable [QEGVAR(interact_menu,actions), []]) == 0) then {
 

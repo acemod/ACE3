@@ -249,13 +249,13 @@ switch (GVAR(currentLeftPanel)) do {
     };
     case IDC_buttonFace : {
         private _face = [_item, "Default"] select (_item == "");
-        TRACE_1("face", _face);
 
         GVAR(center) setFace _face;
         GVAR(currentFace) = _face;
     };
     case IDC_buttonVoice : {
-        
+        GVAR(center) setSpeaker _item;
+        GVAR(currentVoice) = _item;
     };
     case IDC_buttonInsigna : {
         TRACE_1("insignia", _item);

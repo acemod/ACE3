@@ -36,5 +36,9 @@ if (_items isEqualType true && {_items}) then {
         _cargo set [_cargo find _x, _x - _items];
     } foreach _cargo;
 
-    _object setVariable [QGVAR(virtualItems), _cargo, _global];
+    if (count _cargo == 0) then {
+        [_object, _global] call FUNC(removeBox);
+    } else {
+        _object setVariable [QGVAR(virtualItems), _cargo, _global];
+    };
 };
