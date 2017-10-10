@@ -29,6 +29,7 @@ _tripodPos set[2, (_tripodPos select 2) + 0.5];
 deleteVehicle _tripod;
 _csw setPosATL(_tripodPos);
 _csw setDir _tripodDir;
+_csw setVectorUp (surfaceNormal _tripodPos);
 
 // Set the ammo to zero so no config mess-ups will allow for infinite ammo
 _csw setVehicleAmmo 0;

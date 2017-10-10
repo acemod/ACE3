@@ -25,9 +25,7 @@ if (isNull GVAR(cswTripod)) then {
 	private _ammo = magazinesAmmoFull _weapon;
 
 	GVAR(cswTripod) = _cswTripod;
-	
-	_weaponPos set[2, (_weaponPos select 2) + 0.5];
-		
+			
 	{
 		private _magazineAmmoCount = _x select 1;
 		while {_magazineAmmoCount > 0} do {
@@ -38,11 +36,13 @@ if (isNull GVAR(cswTripod)) then {
 		
 	deleteVehicle _weapon;
 	
+	_weaponPos set[2, (_weaponPos select 2) + 0.5];
 	_cswTripod setPosATL _weaponPos;
 	_cswTripod setDir _weaponDir;
 	_cswTripod setVelocity [0, 0, -0.05];
+	_cswTripod setVectorUp (surfaceNormal _weaponPos);
 	
-	_weaponPos = _cswTripod getRelPos[1.5, 90];
+	_weaponPos = _cswTripod getRelPos[0.5, 90];
 	// For some reason ARMA refuses to set the position of the backpack, so we must spawn it on its desired position
 	private _backpack = createVehicle[_backpackClassname, _weaponPos, [], 0, "NONE"];
 	_backpack setPosATL _weaponPos;
