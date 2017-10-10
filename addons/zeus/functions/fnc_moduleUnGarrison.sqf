@@ -18,14 +18,15 @@
 
 params ["_logic"];
 
+if (!local _logic) exitWith {}; // Module is global
+
 scopeName "Main";
 private _fnc_errorAndClose = {
     params ["_msg"];
     deleteVehicle _logic;
     [_msg] call EFUNC(common,displayTextStructured);
     breakOut "Main";
- };
-
+};
 
 private _unit = effectiveCommander (attachedTo _logic);
 
