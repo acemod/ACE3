@@ -12,6 +12,8 @@ class CfgPatches {
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
+            QGVAR(moduleGarrison),
+            QGVAR(moduleUnGarrison),
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleToggleNvg),
             QGVAR(moduleToggleFlashlight),
@@ -23,7 +25,7 @@ class CfgPatches {
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_common", "ace_ai"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"SilentSpike"};
         url = ECSTRING(main,URL);

@@ -1116,5 +1116,45 @@
             <Italian>Aggiungi equipaggiamento</Italian>
             <Japanese>装備を追加</Japanese>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
+            <English>Garrison group</English>
+            <French>Garnir zone</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
+            <English>Fill from top to bottom</English>
+            <French>Remplir de haut en bas</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
+            <English>Fill buildings from the highest position first</English>
+            <French>Remplir les bâtiments par la position la plus haute d'abord</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
+            <English>Building filling mode</English>
+            <French>Mode de remplissage de bâtiment</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
+            <English>Even filling</English>
+            <French>Remplissage égal</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
+            <English>Building by building</English>
+            <French>Bâtiment par bâtiment</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
+            <English>Random filling</English>
+            <French>Remplir au hasard</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
+            <English>Teleport</English>
+            <French>Téléporter</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyNonPlayer">
+            <English>Unit must not be a player</English>
+            <French>L'unité ne doit pas être un joueur</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
+            <English>Un-garrison group</English>
+            <French>Dégarnir zone</French>
+        </Key>
     </Package>
 </Project>
