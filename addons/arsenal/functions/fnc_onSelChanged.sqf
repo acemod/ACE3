@@ -242,9 +242,9 @@ switch (GVAR(currentLeftPanel)) do {
             {GVAR(center) addItemToBackpack _x} foreach (GVAR(currentItems) select 17);
 
             GVAR(currentItems) set [6, _item];
-            TOGGLE_RIGHT_PANEL_CONTAINER
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_CONTAINER
         [(configFile >> "CfgVehicles" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonGoggles : {
