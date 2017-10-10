@@ -102,6 +102,36 @@ if (_items isEqualType true && {_items}) then {
     } foreach configProperties [configFile >> "CfgWeapons", "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
 
     {
+        private _grenadeList = [];
+        {
+            _grenadeList append getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines");
+            false
+        } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+
+        private _putList = [];
+        {
+            _putList append getArray (configFile >> "CfgWeapons" >> "Put" >> _x >> "magazines");
+            false
+        } count getArray (configFile >> "CfgWeapons" >> "Put" >> "muzzles");
+
+        switch true do {
+            // Rifle, handgun, secondary weapons mags
+            case (
+                    (getNumber (_x >> "type") == 256 || {getNumber (_x >> "type") == 512} || {getNumber (_x >> "type") == 1536} || {getNumber (_x >> "type") == 16}) && 
+                    {!((configName _x) in _grenadeList)} && 
+                    {!((configName _x) in _putList)}
+                ): {
+                (_cargo select 2) pushBackUnique (configName  _x);
+            };
+            // Grenades
+            case ((configName _x) in _grenadeList): {
+                (_cargo select 15) pushBackUnique (configName  _x);
+            };
+            // Put
+            case ((configName _x) in _putList): {
+                (_cargo select 16) pushBackUnique (configName  _x);
+            };
+        };
     } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
 
     {
@@ -193,6 +223,40 @@ if (_items isEqualType true && {_items}) then {
                     };
                 };
                 case (isClass (configFile >> "CfgMagazines" >> _x)): {
+                    // Lists to check against
+                    private _grenadeList = [];
+                    {
+                        _grenadeList append getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines");
+                        false
+                    } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+
+                    private _putList = [];
+                    {
+                        _putList append getArray (configFile >> "CfgWeapons" >> "Put" >> _x >> "magazines");
+                        false
+                    } count getArray (configFile >> "CfgWeapons" >> "Put" >> "muzzles");
+
+                    private _cfgX = (configFile >> "CfgMagazines" >> _x);
+
+                    // Check what the magazine actually is
+                    switch true do {
+                        // Rifle, handgun, secondary weapons mags
+                        case (
+                                (getNumber (_cfgX >> "type") == 256 || {getNumber (_cfgX >> "type") == 512} || {getNumber (_cfgX >> "type") == 1536} || {getNumber (_cfgX >> "type") == 16}) && 
+                                {!(_x in _grenadeList)} && 
+                                {!(_x in _putList)}
+                            ): {
+                            (_cargo select 2) pushBackUnique _x;
+                        };
+                        // Grenades
+                        case (_x in _grenadeList): {
+                            (_cargo select 15) pushBackUnique _x;
+                        };
+                        // Put
+                        case (_x in _putList): {
+                            (_cargo select 16) pushBackUnique _x;
+                        };
+                    };
                 };
                 case (isClass (configFile >> "CfgVehicles" >> _x)): {
                     if (getText (configFile >> "CfgVehicles" >> _x >> "vehicleClass") == "Backpacks") then {
