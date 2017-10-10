@@ -3,7 +3,6 @@
 
 params ["_control", "_curSel"];
 
-TRACE_1("curSel"_curSel);
 private _display = ctrlParent _control;
 if (_curSel < 0) exitwith {};
 
@@ -13,8 +12,6 @@ private _fnc_itemInfo = {
     params ["_itemCfg"];
 
     private _ctrlInfo = _display displayCtrl IDC_infoBox;
-
-    TRACE_2("onSelChanged", _item, (isClass _itemCfg));
 
     if (isClass _itemCfg) then {
 
@@ -66,9 +63,9 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(currentItems) set [18, _newAccs];
                 GVAR(currentItems) set [0, _item];
             };
-            call FUNC(showItem);
-            [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonHandgun : {
         private _baseWeapon = ((GVAR(currentItems) select 2) call bis_fnc_baseWeapon);
@@ -99,9 +96,9 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(currentItems) set [20, _newAccs];
                 GVAR(currentItems) set [2, _item];
             };
-            call FUNC(showItem);
-            [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonSecondaryWeapon : {
         private _baseWeapon = ((GVAR(currentItems) select 1) call bis_fnc_baseWeapon);
@@ -132,9 +129,9 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(currentItems) set [19, _newAccs];
                 GVAR(currentItems) set [1, _item];
             };
-            call FUNC(showItem);
-            [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonHeadgear : {
         if (_item == "") then {

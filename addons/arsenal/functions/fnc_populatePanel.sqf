@@ -34,6 +34,9 @@ private _fnc_panelLeft = {
             _configPath call ADDMODICON;
         };
 
+
+        _ctrlPanel lbSetCurSel -1;
+
         // Handle icons and filling
         switch true do { 
             case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
@@ -332,7 +335,6 @@ private _fnc_panelLeft = {
         // Done
         GVAR(currentLeftPanel) = _ctrlIDC;
 
-        _ctrlPanel lbSetCurSel -1;
         private _itemsToCheck = (GVAR(currentItems) select [0,14]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)];
 
         for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
@@ -342,7 +344,9 @@ private _fnc_panelLeft = {
                 _ctrlPanel lbSetCurSel _lbIndex;
             };
         };
-        TRACE_1("cursorIndex", lbCurSel _ctrlPanel);
+        if (lbCurSel _ctrlPanel < 0) then {
+            _ctrlPanel lbSetCurSel 0;
+        };
     };
 };
 
