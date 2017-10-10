@@ -251,6 +251,9 @@ private _fnc_panelLeft = {
                             if ((getText (_config >> 'simulation') == 'Weapon') && {(getNumber (_config >> 'type') == 4096)}) then {
                                 [_config] call _fnc_fill;
                             };
+                            if ((getText (_config >> 'simulation') == 'Binocular') && {(getNumber (_config >> 'type') == 4096)}) then {
+                                [_config] call _fnc_fill;
+                            };
                         } foreach (GVAR(virtualItems) select 9);
                     };
                     case IDC_buttonMap : {

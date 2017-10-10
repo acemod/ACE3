@@ -206,5 +206,5 @@ if (_items isEqualType true && {_items}) then {
         };
     } foreach _items;
 };
-TRACE_1("addVirtualItem", _cargo);
+
 _object setVariable [QGVAR(virtualItems), _cargo, _global];
