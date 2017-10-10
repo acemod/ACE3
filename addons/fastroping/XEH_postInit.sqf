@@ -8,6 +8,16 @@
     [FUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
+// Keybinds
+["ACE3 Vehicles", QGVAR(fastRope), localize LSTRING(Interaction_fastRope), {
+    if ([ACE_player, vehicle ACE_player] call FUNC(canFastRope)) then {
+        [ACE_player, vehicle ACE_player] call FUNC(fastRope);
+        true
+    } else {
+        false
+    };
+}, ""] call CBA_fnc_addKeybind;
+
 ["ACE3 Vehicles", QGVAR(cutRopes), localize LSTRING(Interaction_cutRopes), {
     if ([vehicle ACE_player] call FUNC(canCutRopes)) then {
         [vehicle ACE_player] call FUNC(cutRopes);
@@ -16,7 +26,6 @@
         false
     };
 }, {false}] call CBA_fnc_addKeybind;
-
 
 
 #ifdef DRAW_FASTROPE_INFO
