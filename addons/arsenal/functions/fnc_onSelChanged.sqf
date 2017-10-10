@@ -39,16 +39,18 @@ private _fnc_itemInfo = {
             _ctrlDLC ctrlsettooltip _name;
             _ctrlDLC ctrlsettext _logo;
             _ctrlDLCBackground ctrlsetfade 0;
+            _ctrlDLC ctrlsetfade 0;
             if (_appId > 0) then {
-                _ctrlDLC ctrlsetfade 0;
                 _ctrlDLC ctrlseteventhandler ["mouseexit",format ["(_this select 0) ctrlsettext '%1';",_logo]];
                 _ctrlDLC ctrlseteventhandler ["mouseenter",format ["(_this select 0) ctrlsettext '%1';",_logoOver]];
                 _ctrlDLC ctrlseteventhandler [
                     "buttonclick",
-                    format ["uiNamespace setvariable ['RscDisplayDLCPreview_dlc','%1']; ctrlparent (_this select 0) createDisplay 'RscDisplayDLCPreview';",_dlc]
+                    format ["uiNamespace setvariable ['RscDisplayDLCPreview_dlc','%1']; ctrlparent (_this select 0) createDisplay 'RscDisplayDLCPreview';", _dlc]
                 ];
             } else {
-                _ctrlDLC ctrlsetfade 0.5;
+                _ctrlDLC ctrlRemoveAllEventHandlers "buttonclick";
+                _ctrlDLC ctrlRemoveAllEventHandlers "mouseexit";
+                _ctrlDLC ctrlRemoveAllEventHandlers "mouseenter";
             };
             } else {
                 _ctrlDLC ctrlsetfade 1;
