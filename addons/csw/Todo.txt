@@ -1,0 +1,27 @@
+[X] Add ability to tear-down CSW's into tripod and backpack
+[X] Add ability to load ammo into/out of the CSW
+[X] Custom Ammo Types for all vanilla CSW's
+[ ] Test in Dedicated Server
+[ ] Create new Tripod model
+[ ] Create new Backpack Weapon Model
+[ ] Create new Weapon Ammo models
+
+[ ] Add timer for all relavent sections
+	[ ] Add timer to de-mount weapon
+	[ ] Add timer to mount weapon
+	[ ] Add timer to load ammo
+	[ ] Add timer to unload ammo
+	
+[ ] Add ACE weights to all Ammo and Tripod
+
+[ ] Test in Dedicated Server
+
+[ ] Create compatability for CUP and RHS
+	[ ] Custom ammo types for all CSW's
+	[ ] Create "Assemble Info" for all gun mounts
+	
+Notes:
+
+Bugs:
+	Mini-Spike AT Has no Javelin interface
+	Interaction point for all non Titan weapons is above its point
