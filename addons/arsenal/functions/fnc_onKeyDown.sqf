@@ -5,6 +5,9 @@
 params ["", "_args"];
 _args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState"];
 
+TRACE_3("searchbar state", GVAR(searchbarFocus), _keyPressed, DIK_BACKSPACE);
+
+private _return = true;
 switch true do { 
     // Close button
     case (_keyPressed == DIK_ESCAPE): {
@@ -12,7 +15,11 @@ switch true do {
     };
     // Hide button
     case (_keyPressed == DIK_BACKSPACE): {
-        [_display] call FUNC(buttonHide);
+        if (GVAR(searchbarFocus)) then {
+            _return = false;
+        } else {
+            [_display] call FUNC(buttonHide);
+        };
     };
     // Export button
     case (_keyPressed == DIK_C): {
@@ -55,4 +62,4 @@ switch true do {
     };
 };
 
-true
+_return

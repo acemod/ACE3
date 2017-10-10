@@ -266,6 +266,8 @@ class GVAR(display) {
         };
         class leftSearchbar: ctrlEdit {
             idc = IDC_leftSearchbar;
+            onSetFocus = QUOTE(GVAR(searchbarFocus) = true);
+            onKillFocus = QUOTE(GVAR(searchbarFocus) = false);
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(70 * GRID_W);
