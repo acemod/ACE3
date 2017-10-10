@@ -33,9 +33,8 @@ if (!hasInterface) exitWith {};
 
     "ACE_HuntIR_Propell" createVehicle (getPosATL _projectile);
     [{
-        private ["_huntir"];
         params ["_position"];
-        _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
+        private _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
         _huntir setPosATL _position;
         _huntir setVariable [QGVAR(startTime), CBA_missionTime, true];
         [{
@@ -44,10 +43,10 @@ if (!hasInterface) exitWith {};
             if (isNull _huntir) exitWith {
                 [_idPFH] call CBA_fnc_removePerFrameHandler;
             };
-            private ["_parachuteDamage", "_velocity"];
-            _parachuteDamage = _huntir getHitPointDamage "HitParachute";
+
+            private _parachuteDamage = _huntir getHitPointDamage "HitParachute";
             if (_parachuteDamage > 0) then {
-                _velocity = velocity _huntir;
+                private _velocity = velocity _huntir;
                 _velocity set [2, -1 min -20 * sqrt(_parachuteDamage)];
                 _huntir setVelocity _velocity;
                 _huntir setVectorUp [0, 0, 1];

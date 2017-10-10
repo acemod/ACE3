@@ -20,10 +20,9 @@ params ["_scroll"];
 if (isNull GVAR(ladder)) exitWith { false };
 
 if (ACE_Modifier == 0) then {
-    private ["_currentStep"];
     // Lengthening
     if (_scroll > 0) then {
-        _currentStep = GVAR(currentStep);
+        private _currentStep = GVAR(currentStep);
         if (_currentStep == 11) exitWith {};
         _currentStep = _currentStep + 1;
         if (GVAR(ladder) animationPhase (format["extract_%1", _currentStep]) == 0) then {
@@ -32,17 +31,17 @@ if (ACE_Modifier == 0) then {
         };
     };
     if (_scroll < 0) then {
-        _currentStep = GVAR(currentStep);
+        private _currentStep = GVAR(currentStep);
         if (_currentStep == 3) exitWith {};
         if (GVAR(ladder) animationPhase (format["extract_%1", _currentStep]) == 1) then {
             GVAR(ladder) animate [format["extract_%1", _currentStep], 0];
             GVAR(currentStep) = _currentStep - 1;
         };
     };
-} else {
+};// else {
     // Tilting (disabled due to sinking, interaction point offset and unsuitable animation)
     //GVAR(currentAngle) = 0 max (GVAR(currentAngle) + _scroll) min 30;
     //GVAR(ladder) animate ["rotate", GVAR(currentAngle)];
-};
+//};
 
 true

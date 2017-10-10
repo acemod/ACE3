@@ -34,8 +34,6 @@ if (GVAR(useMil)) then {
     _number = abs _number;
     if (_number isEqualTo 360) then {_number = 0};
 
-    private ["_digit1", "_digit2", "_digit3", "_digit4"];
-
     private _digit1 = floor (_number / 100);
     private _digit2 = floor (_number / 10) - _digit1 * 10;
     private _digit3 = _number mod 10;

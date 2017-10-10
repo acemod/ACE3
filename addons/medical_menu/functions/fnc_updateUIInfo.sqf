@@ -18,15 +18,13 @@
 
 params ["_target", "_display"];
 
-private ["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
-
 if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
 
-_selectionN = GVAR(selectedBodyPart);
+private _selectionN = GVAR(selectedBodyPart);
 if (_selectionN < 0 || {_selectionN > 5}) exitWith {};
 
-_genericMessages = [];
-_partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
+private _genericMessages = [];
+private _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
 _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
 
 if (_target getVariable [QEGVAR(medical,isBleeding), false]) then {
@@ -45,7 +43,7 @@ if (_target getVariable [QEGVAR(medical,hasPain), false]) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Pain), [1, 1, 1, 1]];
 };
 
-_totalIvVolume = 0;
+private _totalIvVolume = 0;
 private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
 {
     _x params ["_bagVolumeRemaining"];
@@ -56,15 +54,14 @@ if (_totalIvVolume >= 1) then {
     _genericMessages pushBack [format [localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
 };
 
-_damaged = [false, false, false, false, false, false];
-_selectionBloodLoss = [0, 0, 0, 0, 0, 0];
+private _damaged = [false, false, false, false, false, false];
+private _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
 
-_allInjuryTexts = [];
+private _allInjuryTexts = [];
 if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnabled))}) then {
-    _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
-    private "_amountOf";
+    private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
     {
-        _amountOf = _x select 3;
+        private _amountOf = _x select 3;
         // Find how much this bodypart is bleeding
         if (_amountOf > 0) then {
             _damaged set [_x select 2, true];
@@ -83,9 +80,9 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
         };
     } forEach _openWounds;
 
-    _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+    private _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
     {
-        _amountOf = _x select 3;
+        private _amountOf = _x select 3;
         // Find how much this bodypart is bleeding
         if !(_damaged select (_x select 2)) then {
             _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
@@ -106,10 +103,9 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
 } else {
 
     // Add all bleeding from wounds on selection
-    _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
-    private "_amountOf";
+    private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
     {
-        _amountOf = _x select 3;
+        private _amountOf = _x select 3;
         // Find how much this bodypart is bleeding
         if (_amountOf > 0) then {
             _damaged set [_x select 2, true];
@@ -117,9 +113,9 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
         };
     } forEach _openWounds;
 
-    _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+    private _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
     {
-        _amountOf = _x select 3;
+        private _amountOf = _x select 3;
         // Find how much this bodypart is bleeding
         if !(_damaged select (_x select 2)) then {
             _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];

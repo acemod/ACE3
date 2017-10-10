@@ -16,24 +16,22 @@
 #include "script_component.hpp"
 #include "common.hpp"
 
-private ["_roleImages", "_player", "_vehicle", "_type", "_config", "_text", "_data", "_isAir", "_turretUnits", "_turretRoles", "_index", "_roleType", "_unit", "_toShow"];
+private _player = ACE_player;
+private _vehicle = vehicle _player;
+private _type = typeOf _vehicle;
+private _config = configFile >> "CfgVehicles" >> _type;
+private _text = format["<t size='1.4'><img image='%1'></t> <t size='1.7' shadow='true'>%2</t><br/>", getText(_config>>"picture"), getText (_config >> "DisplayName")];
 
-_player = ACE_player;
-_vehicle = vehicle _player;
-_type = typeOf _vehicle;
-_config = configFile >> "CfgVehicles" >> _type;
-_text = format["<t size='1.4'><img image='%1'></t> <t size='1.7' shadow='true'>%2</t><br/>", getText(_config>>"picture"), getText (_config >> "DisplayName")];
+private _data = [_type] call FUNC(getVehicleData);
 
-_data = [_type] call FUNC(getVehicleData);
+private _isAir = _data select 0;
+private _data = _data select 1;
 
-_isAir = _data select 0;
-_data = _data select 1;
+private _turretUnits = _data apply {_vehicle turretUnit (_x select 0)};
+private _turretRoles = _data apply {_x select 1};
 
-_turretUnits = _data apply {_vehicle turretUnit (_x select 0)};
-_turretRoles = _data apply {_x select 1};
-
-_roleType = CARGO;
-_toShow = [];
+private _roleType = CARGO;
+private _toShow = [];
 {
     switch (_x) do {
         case commander _vehicle: {
@@ -70,10 +68,10 @@ _toShow = [
     }
 ] call BIS_fnc_sortBy;
 
-_roleImages = ROLE_IMAGES;
+private _roleImages = ROLE_IMAGES;
 {
-    _unit = _x select 0;
-    _roleType = _x select 1;
+    private _unit = _x select 0;
+    private _roleType = _x select 1;
     _text = _text + format["<t size='1.5' shadow='true'>%1</t> <t size='1.3'><img image='%2'></t><br/>", [_unit] call EFUNC(common,getName), _roleImages select _roleType];
 } forEach _toShow;
 

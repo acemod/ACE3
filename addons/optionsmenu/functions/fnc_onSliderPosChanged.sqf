@@ -16,9 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_newColor", "_settingIndex"];
-
-_settingIndex = -1;
+private _settingIndex = -1;
 if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
     _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
 };
@@ -27,7 +25,7 @@ if (_settingIndex == -1) exitWith {};
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_COLORS): {
 
-        _newColor = [];
+        private _newColor = [];
         {
             _newColor pushBack ((sliderPosition _x) / 255);
         } forEach [410, 411, 412, 413];
@@ -40,7 +38,7 @@ switch (GVAR(optionMenu_openTab)) do {
     };
     case (MENU_TAB_SERVER_COLORS): {
 
-        _newColor = [];
+        private _newColor = [];
         {
             _newColor pushBack ((sliderPosition _x) / 255);
         } forEach [410, 411, 412, 413];

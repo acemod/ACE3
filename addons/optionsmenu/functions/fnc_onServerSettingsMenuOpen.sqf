@@ -16,8 +16,6 @@
 
 #include "script_component.hpp"
 
-private ["_setting", "_settingsMenu"];
-
 if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitWith {closeDialog 145246;};
 
 // Filter only user setable setting
@@ -30,7 +28,7 @@ GVAR(serverSideValues) = [];
     // Exclude client side options if they are not included for the export
     if (!(_isClientSetable) || GVAR(ClientSettingsExportIncluded)) then {
         // Append the current value to the setting metadata
-        _setting = + _x;
+        private _setting = + _x;
         _setting pushBack (missionNamespace getVariable (_x select 0));
 
         // Categorize the setting according to types

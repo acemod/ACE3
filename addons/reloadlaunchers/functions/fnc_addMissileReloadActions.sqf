@@ -33,20 +33,18 @@ private _loadableMissiles = [_unit, _weapon] call FUNC(getLoadableMissiles);
 TRACE_2("",_weapon,_loadableMissiles);
 
 {
-    private ["_name", "_displayName", "_statement", "_condition", "_action"];
+    private _name = format [QGVAR(Missile_%1), _x];
+    private _displayName = format [localize LSTRING(LoadMagazine), getText (configFile >> "CfgMagazines" >> _x >> "displayName")];
 
-    _name = format [QGVAR(Missile_%1), _x];
-    _displayName = format [localize LSTRING(LoadMagazine), getText (configFile >> "CfgMagazines" >> _x >> "displayName")];
-
-    _statement = {
+    private _statement = {
         (_this select 2) call DFUNC(load);
     };
 
-    _condition = {
+    private _condition = {
         (_this select 2) call DFUNC(canLoad)
     };
 
-    _action = [_name, _displayName, "", _statement, _condition, {}, [_unit, _target, _weapon, _x], "", 4] call EFUNC(interact_menu,createAction);
+    private _action = [_name, _displayName, "", _statement, _condition, {}, [_unit, _target, _weapon, _x], "", 4] call EFUNC(interact_menu,createAction);
 
     _actions pushBack [_action, [], _unit];
 } forEach _loadableMissiles;

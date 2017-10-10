@@ -46,7 +46,7 @@ if (!("ACE_DefusalKit" in (items ACE_player))) exitWith {};
                     private _config = configFile >> "CfgAmmo" >> typeOf _x;
                     private _size = getNumber (_config >> QGVAR(size));
                     TRACE_3("Making Defuse Helper",(_x),(typeOf _x),(_size == 1));
-                    private ["_defuseHelper"];
+                    private _defuseHelper = objNull;
                     if (_size == 1) then {
                         _defuseHelper = "ACE_DefuseObject_Large" createVehicleLocal (getPos _x);
                     } else {

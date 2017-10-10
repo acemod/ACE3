@@ -18,19 +18,17 @@
 #include "script_component.hpp"
 
 params ["_static","_unit",["_magazineClassOptional","",[""]]];
-private ["_canLoadMagazine","_currentMagazine","_weapon","_listOfMagNames",
-    "_hasCompatibleMagazine","_count"];
 
 if !(alive _static && GVAR(useAmmoHandling)) exitWith {false};
 
-_canLoadMagazine = false;
-_hasCompatibleMagazine = false;
+private _canLoadMagazine = false;
+private _hasCompatibleMagazine = false;
 
-_currentMagazine = (magazinesAllTurrets _static) select 1;
-_weapon = (_static weaponsTurret [0]) select 0;
+private _currentMagazine = (magazinesAllTurrets _static) select 1;
+private _weapon = (_static weaponsTurret [0]) select 0;
 
-_listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
-_count = 0;
+private _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
+private _count = 0;
 
 //If function is called with an optional string then check if player has that magzine otherwise check all magazines of the player to see if they are compatible with the static weapon
 if (_magazineClassOptional != "") then {
