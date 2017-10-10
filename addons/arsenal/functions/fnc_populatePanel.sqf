@@ -41,45 +41,6 @@ private _fnc_panelLeft = {
         switch true do { 
             case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
                 /*
-                {
-                    _x = _display displayCtrl _x;
-
-                    if (ctrlFade _x != 0) then {
-                        _x ctrlSetFade 0;
-                    };
-                    if !(ctrlShown _x) then {
-                        _x ctrlShow true;
-                    };
-                    _x ctrlCommit FADE_DELAY;
-                } foreach [
-                    IDC_blockRightFrame, 
-                    IDC_blockRighttBackground,
-                    IDC_loadIndicator,
-                    IDC_rightTabContent,
-                    IDC_sortRightTab,
-                    RIGHT_PANEL_ACC_IDCS,
-                    RIGHT_PANEL_REMOVE_IDCS
-                ];
-
-                {
-                    _x = _display displayCtrl _x;
-
-                    if (ctrlFade _x != 1) then {
-                        _x ctrlSetFade 1;
-                    };
-                    if (ctrlShown _x) then {
-                        _x ctrlShow false;
-                    };
-                    _x ctrlCommit FADE_DELAY;
-                } foreach [
-                    IDC_loadIndicator,
-                    RIGHT_PANEL_ITEMS_IDCS,
-                    RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
-                    RIGHT_PANEL_REMOVE_IDCS
-                ];
-                */
-
-                /*
                 if (isNil QGVAR(currentRightPanel) || {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]}) then {
                     [_display, _display displayCtrl IDC_buttonOptic] call FUNC(populatePanel);
                 };
@@ -125,29 +86,8 @@ private _fnc_panelLeft = {
             };
 
             case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
+
                 /*
-                {
-                    _x = _display displayCtrl _x;
-
-                    if (ctrlFade _x != 0) then {
-                        _x ctrlSetFade 0;
-                    };
-                    if !(ctrlShown _x) then {
-                        _x ctrlShow true;
-                    };
-                    _x ctrlCommit FADE_DELAY;
-                } foreach [
-                    IDC_blockRightFrame, 
-                    IDC_blockRighttBackground,
-                    IDC_loadIndicator,
-                    IDC_rightTabContent,
-                    IDC_sortRightTab,
-                    IDC_tabRight,
-                    RIGHT_PANEL_ACC_IDCS,
-                    RIGHT_PANEL_ITEMS_IDCS,
-                    RIGHT_PANEL_REMOVE_IDCS
-                ];
-
                 if (isNil QGVAR(currentRightPanel)) then {
                     [_display, (_display displayCtrl IDC_buttonMisc)] call FUNC(populatePanel);
                 };
@@ -190,29 +130,6 @@ private _fnc_panelLeft = {
             };
 
             default {
-                /*
-                {
-                    _x = _display displayCtrl _x;
-                    if (ctrlFade _x != 1) then {
-                        _x ctrlSetFade 1;
-                    };
-                    if (ctrlShown _x) then {
-                        _x ctrlShow false;
-                    };
-                    _x ctrlCommit FADE_DELAY;
-                } foreach [
-                    IDC_blockRightFrame, 
-                    IDC_blockRighttBackground,
-                    IDC_loadIndicator,
-                    IDC_rightTabContent,
-                    IDC_sortRightTab,
-                    RIGHT_PANEL_ACC_BACKGROUND_IDCS,
-                    RIGHT_PANEL_ACC_IDCS,
-                    RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
-                    RIGHT_PANEL_ITEMS_IDCS,
-                    RIGHT_PANEL_REMOVE_IDCS,
-                    IDC_rightSearchbar
-                ];*/
                 GVAR(currentRightPanel) = nil;
 
                  lbClear _ctrlPanel;

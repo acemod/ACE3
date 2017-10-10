@@ -99,6 +99,7 @@ switch (GVAR(currentLeftPanel)) do {
             };
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_WEAPON
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonHandgun : {
@@ -132,6 +133,7 @@ switch (GVAR(currentLeftPanel)) do {
             };
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_WEAPON
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonSecondaryWeapon : {
@@ -165,6 +167,7 @@ switch (GVAR(currentLeftPanel)) do {
             };
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_WEAPON
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonHeadgear : {
@@ -174,6 +177,7 @@ switch (GVAR(currentLeftPanel)) do {
         } else {
             GVAR(center) addHeadgear _item;
             GVAR(currentItems) set [3, _item];
+            TOGGLE_RIGHT_PANEL_HIDE
         };
         call FUNC(showItem);
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
@@ -197,6 +201,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             [GVAR(center), ""] call bis_fnc_setUnitInsignia;
             [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
+            TOGGLE_RIGHT_PANEL_CONTAINER
         };
         call FUNC(showItem);
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
@@ -216,6 +221,7 @@ switch (GVAR(currentLeftPanel)) do {
             {GVAR(center) addItemToVest _x} foreach (GVAR(currentItems) select 16);
 
             GVAR(currentItems) set [5, _item];
+            TOGGLE_RIGHT_PANEL_CONTAINER
         };
         call FUNC(showItem);
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
@@ -236,6 +242,7 @@ switch (GVAR(currentLeftPanel)) do {
             {GVAR(center) addItemToBackpack _x} foreach (GVAR(currentItems) select 17);
 
             GVAR(currentItems) set [6, _item];
+            TOGGLE_RIGHT_PANEL_CONTAINER
         };
         call FUNC(showItem);
         [(configFile >> "CfgVehicles" >> _item)] call _fnc_itemInfo;
@@ -249,6 +256,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [7, _item];
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgGlasses" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonNVG : {
@@ -260,6 +268,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [8, _item];
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonBinoculars : {
@@ -273,6 +282,7 @@ switch (GVAR(currentLeftPanel)) do {
             ADDBINOCULARSMAG
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonMap : {
@@ -284,6 +294,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [10, _item];
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonCompass : {
@@ -295,6 +306,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [11, _item];
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonRadio : {
@@ -306,6 +318,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [12, _item];
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonWatch : {
@@ -317,6 +330,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [13, _item];
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonGPS : {
@@ -328,6 +342,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [14, _item];
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonFace : {
@@ -336,18 +351,21 @@ switch (GVAR(currentLeftPanel)) do {
         GVAR(center) setFace _face;
         GVAR(currentFace) = _face;
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgFaces" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonVoice : {
         GVAR(center) setSpeaker _item;
         GVAR(currentVoice) = _item;
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgVoice" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonInsigna : {
         [GVAR(center), _item] call bis_fnc_setUnitInsignia;
         GVAR(currentInsignia) = _item;
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgUnitInsignia" >> _item)] call _fnc_itemInfo;
     };
 };

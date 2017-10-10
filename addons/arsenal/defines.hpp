@@ -35,6 +35,89 @@
 #define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
 #define RIGHT_PANEL_REMOVE_IDCS IDC_buttonRemoveAllSelected, IDC_buttonRemoveAll
 
+#define TOGGLE_RIGHT_PANEL_WEAPON\
+{\
+    _x = _display displayCtrl _x;\
+\
+    if (ctrlFade _x != 0) then {\
+        _x ctrlSetFade 0;\
+    };\
+    if !(ctrlShown _x) then {\
+        _x ctrlShow true;\
+    };\
+    _x ctrlCommit FADE_DELAY;\
+} foreach [\
+    IDC_blockRightFrame,\
+    IDC_blockRighttBackground,\
+    IDC_rightTabContent,\
+    IDC_sortRightTab,\
+    RIGHT_PANEL_ACC_IDCS,\
+    RIGHT_PANEL_REMOVE_IDCS,\
+    IDC_rightSearchbar\
+];\
+{\
+    _x = _display displayCtrl _x;\
+\
+    if (ctrlFade _x != 1) then {\
+        _x ctrlSetFade 1;\
+    };\
+    if (ctrlShown _x) then {\
+        _x ctrlShow false;\
+    };\
+    _x ctrlCommit FADE_DELAY;\
+} foreach [\
+    IDC_loadIndicator,\
+    RIGHT_PANEL_ITEMS_IDCS,\
+    RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
+    RIGHT_PANEL_REMOVE_IDCS\
+];
+
+#define TOGGLE_RIGHT_PANEL_CONTAINER\
+{\
+    _x = _display displayCtrl _x;\
+\
+    if (ctrlFade _x != 0) then {\
+        _x ctrlSetFade 0;\
+    };\
+    if !(ctrlShown _x) then {\
+        _x ctrlShow true;\
+    };\
+    _x ctrlCommit FADE_DELAY;\
+} foreach [\
+    IDC_blockRightFrame, \
+    IDC_blockRighttBackground,\
+    IDC_rightTabContent,\
+    IDC_sortRightTab,\
+    IDC_tabRight,\
+    RIGHT_PANEL_ACC_IDCS,\
+    RIGHT_PANEL_ITEMS_IDCS,\
+    RIGHT_PANEL_REMOVE_IDCS,\
+    IDC_rightSearchbar\
+];
+
+#define TOGGLE_RIGHT_PANEL_HIDE\
+{\
+    _x = _display displayCtrl _x;\
+    if (ctrlFade _x != 1) then {\
+        _x ctrlSetFade 1;\
+    };\
+    if (ctrlShown _x) then {\
+        _x ctrlShow false;\
+    };\
+    _x ctrlCommit FADE_DELAY;\
+} foreach [\
+    IDC_blockRightFrame,\
+    IDC_blockRighttBackground,\
+    IDC_loadIndicator,\
+    IDC_rightTabContent,\
+    IDC_sortRightTab,\
+    RIGHT_PANEL_ACC_BACKGROUND_IDCS,\
+    RIGHT_PANEL_ACC_IDCS,\
+    RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
+    RIGHT_PANEL_ITEMS_IDCS,\
+    RIGHT_PANEL_REMOVE_IDCS,\
+    IDC_rightSearchbar\
+];
 
 #define LIST_DEFAULTS\
     [\

@@ -130,6 +130,7 @@ _mouseBlockCtrl ctrlEnable false;
 //--------------- Prepare the left panel
 GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
+GVAR(searchbarFocus) = false;
 
 if (GVAR(mode) != 0) then {
     {

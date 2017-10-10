@@ -11,7 +11,6 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
     private _ID = [QGVAR(initBox), [_object, _mode, _items, false]] call CBA_fnc_globalEventJIP;
     [_ID, _object] call CBA_fnc_removeGlobalEventJIP;
     
-    
     GVAR(EHIDArray) pushBack [_ID, _object];
     publicVariable QGVAR(EHIDArray);
 } else {
