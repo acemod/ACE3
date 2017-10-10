@@ -342,6 +342,7 @@ private _fnc_panelLeft = {
                 _ctrlPanel lbSetCurSel _lbIndex;
             };
         };
+        TRACE_1("cursorIndex", lbCurSel _ctrlPanel);
     };
 };
 

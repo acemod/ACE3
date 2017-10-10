@@ -178,16 +178,16 @@ class GVAR(display) {
                     y = QUOTE(0);
                     w = QUOTE(70 * GRID_W);
                     h = QUOTE(8 * GRID_H);
-                    sizeEx = QUOTE(8 * GRID_H); 
+                    sizeEx = QUOTE(7 * GRID_H);
                 };
                 class infoAuthor: RscText {
                     idc = IDC_infoAuthor;
                     colorText[] = {1,1,1,0.5};
-                    x = QUOTE(17 * GRID_W);
+                    x = QUOTE(15 * GRID_W);
                     y = QUOTE(8 * GRID_H);
                     w = QUOTE(70 * GRID_W);
                     h = QUOTE(6 * GRID_H);
-                    sizeEx = QUOTE(5 * GRID_H); 
+                    sizeEx = QUOTE(6 * GRID_H);
                 };
                 class DLCBackground: ctrlStaticBackground {
                     idc = IDC_DLCBackground;
@@ -229,7 +229,6 @@ class GVAR(display) {
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
             onLBSelChanged = QUOTE(_this call FUNC(onSelChanged));
-            onLBDblClick = QUOTE(_this call FUNC(showItem));
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);

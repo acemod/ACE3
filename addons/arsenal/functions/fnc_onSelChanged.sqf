@@ -3,13 +3,37 @@
 
 params ["_control", "_curSel"];
 
+TRACE_1("curSel"_curSel);
 private _display = ctrlParent _control;
-private _control = _display displayCtrl IDC_leftTabContent;
-
-private _curSel = lbCurSel _control;
 if (_curSel < 0) exitwith {};
 
 private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
+
+private _fnc_itemInfo = {
+    params ["_itemCfg"];
+
+    private _ctrlInfo = _display displayCtrl IDC_infoBox;
+
+    TRACE_2("onSelChanged", _item, (isClass _itemCfg));
+
+    if (isClass _itemCfg) then {
+
+        _ctrlInfo ctrlSetFade 0;
+        _ctrlInfo ctrlCommit FADE_DELAY;
+
+        _ctrlInfoName = _display displayctrl IDC_infoName;
+        _ctrlInfoName ctrlSetText (param [1, [_control lbtext _curSel ,_control lnbtext [_curSel,1]] select (ctrltype _control == 102)]);
+
+        _ctrlInfoAuthor = _display displayctrl IDC_infoAuthor;
+        _ctrlInfoAuthor ctrlSetText "";
+        [_itemCfg,_ctrlInfoAuthor] call bis_fnc_overviewauthor;
+
+    } else {
+        LOG("no item");
+        _ctrlInfo ctrlSetFade 1;
+        _ctrlInfo ctrlCommit FADE_DELAY;
+    };
+};
 
 switch (GVAR(currentLeftPanel)) do { 
 
@@ -42,6 +66,8 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(currentItems) set [18, _newAccs];
                 GVAR(currentItems) set [0, _item];
             };
+            call FUNC(showItem);
+            [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
         };
     };
     case IDC_buttonHandgun : {
@@ -73,6 +99,8 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(currentItems) set [20, _newAccs];
                 GVAR(currentItems) set [2, _item];
             };
+            call FUNC(showItem);
+            [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
         };
     };
     case IDC_buttonSecondaryWeapon : {
@@ -104,6 +132,8 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(currentItems) set [19, _newAccs];
                 GVAR(currentItems) set [1, _item];
             };
+            call FUNC(showItem);
+            [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
         };
     };
     case IDC_buttonHeadgear : {
@@ -114,6 +144,8 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) addHeadgear _item;
             GVAR(currentItems) set [3, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonUniform : {
         if (_item == "") then {
@@ -135,6 +167,8 @@ switch (GVAR(currentLeftPanel)) do {
             [GVAR(center), ""] call bis_fnc_setUnitInsignia;
             [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonVest: {
         if (_item == "") then {
@@ -152,6 +186,8 @@ switch (GVAR(currentLeftPanel)) do {
 
             GVAR(currentItems) set [5, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonBackpack : {
         if (_item == "") then {
@@ -170,6 +206,8 @@ switch (GVAR(currentLeftPanel)) do {
 
             GVAR(currentItems) set [6, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgVehicles" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonGoggles : {
         if (_item == "") then {
@@ -179,6 +217,8 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) addGoggles _item;
             GVAR(currentItems) set [7, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgGlasses" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonNVG : {
         if (_item == "") then {
@@ -188,6 +228,8 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) linkItem _item;
             GVAR(currentItems) set [8, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonBinoculars : {
         if (_item == "") then {
@@ -196,8 +238,11 @@ switch (GVAR(currentLeftPanel)) do {
         } else {
             GVAR(center) addWeapon _item;
             GVAR(currentItems) set [9, _item];
+            call FUNC(showItem);
             ADDBINOCULARSMAG
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonMap : {
         if (_item == "") then {
@@ -207,6 +252,8 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) linkItem _item;
             GVAR(currentItems) set [10, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonCompass : {
         if (_item == "") then {
@@ -216,6 +263,8 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) linkItem _item;
             GVAR(currentItems) set [11, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonRadio : {
         if (_item == "") then {
@@ -225,6 +274,8 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) linkItem _item;
             GVAR(currentItems) set [12, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonWatch : {
         if (_item == "") then {
@@ -234,6 +285,8 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) linkItem _item;
             GVAR(currentItems) set [13, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonGPS : {
         if (_item == "") then {
@@ -243,49 +296,27 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(center) linkItem _item;
             GVAR(currentItems) set [14, _item];
         };
+        call FUNC(showItem);
+        [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonFace : {
         private _face = [_item, "Default"] select (_item == "");
 
         GVAR(center) setFace _face;
         GVAR(currentFace) = _face;
+        call FUNC(showItem);
+        [(configFile >> "CfgFaces" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonVoice : {
         GVAR(center) setSpeaker _item;
         GVAR(currentVoice) = _item;
+        call FUNC(showItem);
+        [(configFile >> "CfgVoice" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonInsigna : {
         [GVAR(center), _item] call bis_fnc_setUnitInsignia;
         GVAR(currentInsignia) = _item;
-    };
-    case IDC_buttonOptic : {
-        
-    };
-    case IDC_buttonItemAcc : {
-        
-    };
-    case IDC_buttonMuzzle : {
-        
-    };
-    case IDC_buttonBipod : {
-        
-    };
-    case IDC_buttonMag : {
-        
-    };
-    case IDC_buttonMagALL : {
-        
-    };
-    case IDC_buttonThrow : {
-        
-    };
-    case IDC_buttonPut : {
-        
-    };
-    case IDC_buttonMisc : {
-        
-    };
-    default {
-        LOG("test");
+        call FUNC(showItem);
+        [(configFile >> "CfgUnitInsignia" >> _item)] call _fnc_itemInfo;
     };
 };
