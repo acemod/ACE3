@@ -31,7 +31,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
     if (_unit getVariable [QGVAR(inReviveState), false]) exitwith {
         if (GVAR(amountOfReviveLives) > 0) then {
             private _lifesLeft = _unit getVariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
-            if (_lifesLeft == 0) then {
+            if (_lifesLeft <= 0) then {
                 [_unit, true] call FUNC(setDead);
             };
         };
