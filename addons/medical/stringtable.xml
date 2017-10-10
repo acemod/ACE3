@@ -1019,9 +1019,9 @@
             <Italian>Ha perso parecchio sangue</Italian>
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Japanese>大量失血している</Japanese>
-            <Korean>많은 양의 혈액을 잃음</Korean>
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
+            <Korean>혈액 부족</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -1050,10 +1050,10 @@
             <Hungarian>Infúzióra kötve [%1ml]</Hungarian>
             <Italian>Ricevendo EV [%1ml]</Italian>
             <Portuguese>Recebendo IV [%1ml]</Portuguese>
-            <Japanese>IV [%1ml] を投与されている</Japanese>
-            <Korean>IV로 [%1ml] 수혈중</Korean>
+            <Japanese>IV で [%1ml] 投与されている</Japanese>
             <Chinesesimp>接收静脉注射液中 [%1ml]</Chinesesimp>
             <Chinese>接收靜脈注射液中 [%1ml]</Chinese>
+            <Korean>IV처리 [%1ml] 수혈중</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
@@ -1098,7 +1098,7 @@
             <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale viene applicata su di essa una volta fermata l'emorragia.</Italian>
             <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
-            <Japanese>緊急圧迫包帯は、傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
+            <Japanese>緊急圧迫包帯は傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
@@ -1146,7 +1146,7 @@
             <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
             <Portuguese>Uma bandagem usada para preencher o ferimento para estancar o sangramento e facilitar a cicatrização. Preenchimento de feridas é uma opção em ferimentos de politrauma grandes.</Portuguese>
             <Czech>Tlakový obvaz se skládá se ze sterilní krycí vrstvy, na kterou je přiložena silná vrstva savého materiálu stlačující cévu v ráně a která je přitlačována k ráně a připevněna obinadlem. Slouží k zastavení silnějších krvácení.</Czech>
-            <Japanese>包帯をつかうと出血の原因を取りのぞき、それを促進させます。また大きめな多発性外傷にたいしても使えます。</Japanese>
+            <Japanese>包帯をつかうと出血を防ぎ治療を促進させます。また大きめな多発性外傷にたいしても使えます。</Japanese>
             <Korean>출혈을 막고 상처를 치유하기 위한 붕대. 다발성외상의 경우 상처를 채우는것도 한 가지 방법입니다.</Korean>
             <Chinesesimp>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</Chinese>
@@ -1226,7 +1226,7 @@
             <Italian>Rallenta la perdita di sangue in caso di sanguinamento</Italian>
             <Portuguese>Reduz a velocidade da perda de sangue</Portuguese>
             <Czech>Zpomaluje ztráty krve při krvácení</Czech>
-            <Japanese>出血しているときに、流れ出る量をへらします。</Japanese>
+            <Japanese>出血しているときに、失血量をおさえます。</Japanese>
             <Korean>출혈 시 혈액손실을 늦춰줍니다</Korean>
             <Chinesesimp>减缓失血的速度</Chinesesimp>
             <Chinese>減緩失血的速度</Chinese>
@@ -1367,7 +1367,7 @@
             <Italian>Usato in situazioni con gas nervino.</Italian>
             <Portuguese>Usado em casos de ataque QBRN</Portuguese>
             <Czech>Používá se v přítomnosti nervových plynů</Czech>
-            <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
+            <Japanese>核・生物・化学兵器によ汚染環境下にてつかいます。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰입니다</Korean>
             <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
             <Chinese>使用於核生化汙染的情況</Chinese>
@@ -1543,7 +1543,7 @@
             <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
             <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
             <Czech>Krevní transfuze pro doplnění pacientovi krve (skladujte v chladu)</Czech>
-            <Japanese>血液 IV は、患者へ血液を補給します。（要低温保存）</Japanese>
+            <Japanese>血液 IV は、患者へ血液を補給します。(要低温保存)</Japanese>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다. (차갑게 할것)</Korean>
             <Chinesesimp>血液, 用于补充伤者流失的血液 (需冷藏)</Chinesesimp>
             <Chinese>血液, 用於補充傷者流失的血液 (需冷藏)</Chinese>
@@ -1703,7 +1703,7 @@
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem com agente coagulante</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
-            <Japanese>クイッククロット</Japanese>
+            <Japanese>クイッククロット包帯</Japanese>
             <Korean>퀵 클롯 붕대</Korean>
             <Chinesesimp>止血粉绷带</Chinesesimp>
             <Chinese>止血粉繃帶</Chinese>
@@ -1864,9 +1864,9 @@
             <Portuguese>Saco para cadáver</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋</Japanese>
-            <Korean>시체 가방</Korean>
             <Chinesesimp>尸袋</Chinesesimp>
             <Chinese>屍袋</Chinese>
+            <Korean>시체 운반 가방</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
@@ -1992,9 +1992,9 @@
             <Portuguese>Pressão Arterial baixa</Portuguese>
             <Czech>Naměřil si nízký krevní tlak</Czech>
             <Japanese>血圧はかなり低い</Japanese>
-            <Korean>혈압이 매우 낮다</Korean>
             <Chinesesimp>发现到低血压</Chinesesimp>
             <Chinese>發現到低血壓</Chinese>
+            <Korean>혈압이 낮음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
@@ -2008,9 +2008,9 @@
             <Portuguese>Pressão Arterial normal</Portuguese>
             <Czech>Naměřil si normální krevní tlak</Czech>
             <Japanese>血圧は通常</Japanese>
-            <Korean>혈압이 정상이다</Korean>
             <Chinesesimp>发现到正常血压</Chinesesimp>
             <Chinese>發現到正常血壓</Chinese>
+            <Korean>혈압이 정상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
@@ -2024,9 +2024,9 @@
             <Portuguese>Pressão Arterial Alta</Portuguese>
             <Czech>Naměřil si vysoký krevní tlak</Czech>
             <Japanese>血圧はかなり高い</Japanese>
-            <Korean>혈압이 매우 높다</Korean>
             <Chinesesimp>发现到高血压</Chinesesimp>
             <Chinese>發現到高血壓</Chinese>
+            <Korean>혈압이 높음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
@@ -2264,9 +2264,9 @@
             <Portuguese>A Freqüência Cardíaca é de %2</Portuguese>
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
             <Japanese>心拍数は %2</Japanese>
-            <Korean>맥박이 %2 이다</Korean>
             <Chinesesimp>心跳为%2</Chinesesimp>
             <Chinese>心跳為%2</Chinese>
+            <Korean>맥박 %2</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
@@ -2280,9 +2280,9 @@
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal si slabý srdeční puls</Czech>
             <Japanese>自分の心拍数は低い</Japanese>
-            <Korean>약한 맥박이다</Korean>
             <Chinesesimp>心跳微弱</Chinesesimp>
             <Chinese>心跳微弱</Chinese>
+            <Korean>약한 맥박</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
@@ -2296,9 +2296,9 @@
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
             <Czech>Nahmatal si silný srdeční puls</Czech>
             <Japanese>自分の心拍数は強い</Japanese>
-            <Korean>강한 맥박이다</Korean>
             <Chinesesimp>心跳过快</Chinesesimp>
             <Chinese>心跳過快</Chinese>
+            <Korean>강한 맥박</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
@@ -2312,9 +2312,9 @@
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
             <Czech>Nahmatal si normální srdeční puls</Czech>
             <Japanese>自分の心拍数は通常</Japanese>
-            <Korean>보통 맥박이다</Korean>
             <Chinesesimp>心跳正常</Chinesesimp>
             <Chinese>心跳正常</Chinese>
+            <Korean>보통 맥박</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
@@ -2328,9 +2328,9 @@
             <Portuguese>Sem Freqüência Cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
             <Japanese>心拍数を測れなかった</Japanese>
-            <Korean>맥박을 찾을 수가 없다</Korean>
             <Chinesesimp>量不到心跳</Chinesesimp>
             <Chinese>量不到心跳</Chinese>
+            <Korean>맥박 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response">
             <English>Response</English>
@@ -2376,9 +2376,9 @@
             <Portuguese>%1 está respondendo</Portuguese>
             <Czech>%1 odpovídá</Czech>
             <Japanese>%1 は反応あり</Japanese>
-            <Korean>%1 은 반응이있다</Korean>
             <Chinesesimp>%1 有反应</Chinesesimp>
             <Chinese>%1 有反應</Chinese>
+            <Korean>%1 은 반응이 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
@@ -2392,9 +2392,9 @@
             <Portuguese>%1 não está respondendo</Portuguese>
             <Czech>%1 neodpovídá</Czech>
             <Japanese>%1 の反応なし</Japanese>
-            <Korean>%1 은 반응이없다</Korean>
             <Chinesesimp>%1 没有反应</Chinesesimp>
             <Chinese>%1 沒有反應</Chinese>
+            <Korean>%1 은 반응이 없다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -2423,7 +2423,7 @@
             <Hungarian>A páciens, %1,&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Hungarian>
             <Czech>Pacient %1&lt;br/&gt;je %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Czech>
             <Portuguese>Paciente %1&lt;br/&gt;é %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Portuguese>
-            <Japanese>痛み %1&lt;br/&gt;は %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
+            <Japanese>患者 %1&lt;br/&gt;は %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
             <Korean>환자 %1&lt;br/&gt;는 %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Korean>
             <Chinesesimp>伤者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinesesimp>
             <Chinese>傷者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinese>
@@ -2824,9 +2824,9 @@
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
             <Japanese>%1 は包帯を巻いた</Japanese>
-            <Korean>%1 (이)가 붕대를 감아줬다</Korean>
             <Chinesesimp>%1 已包扎伤者</Chinesesimp>
             <Chinese>%1 已包紮傷者</Chinese>
+            <Korean>%1 (이)가 붕대를 감음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_CPR">
             <English>%1 performed CPR</English>
@@ -2839,9 +2839,9 @@
             <Spanish>%1 realicó RCP</Spanish>
             <French>%1 à fait une RCP</French>
             <Japanese>%1 は心肺蘇生をした</Japanese>
-            <Korean>%1 (이)가 심폐소생술을 실시했다</Korean>
             <Chinesesimp>%1 已执行心肺复苏术</Chinesesimp>
             <Chinese>%1 已執行心肺復甦術</Chinese>
+            <Korean>%1 (이)가 심폐소생술을 실시함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -2855,9 +2855,9 @@
             <Portuguese>%1 usou %2</Portuguese>
             <Czech>%1 použil %2</Czech>
             <Japanese>%1 は %2 をつかった</Japanese>
-            <Korean>%1 (이)가 %2 을 썼다</Korean>
             <Chinesesimp>%1 已使用 %2</Chinesesimp>
             <Chinese>%1 已使用 %2</Chinese>
+            <Korean>%1 (이)가 %2 을 사용함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_gaveIV">
             <English>%1 has given an IV</English>
@@ -2870,10 +2870,10 @@
             <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
-            <Japanese>%1 は IV を与えた</Japanese>
-            <Korean>%1 (이)가 IV를 실시했다</Korean>
+            <Japanese>%1 は IV をした</Japanese>
             <Chinesesimp>%1 已经给予静脉注射液</Chinesesimp>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
+            <Korean>%1 (이)가 IV를 실시함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
@@ -2887,9 +2887,9 @@
             <Portuguese>%1 aplicou um torniquete</Portuguese>
             <Czech>%1 použil škrtidlo</Czech>
             <Japanese>%1 は止血帯を巻いた</Japanese>
-            <Korean>%1 (이)가 지혈대를 적용했다</Korean>
             <Chinesesimp>%1 已经绑上止血带</Chinesesimp>
             <Chinese>%1 已經綁上止血帶</Chinese>
+            <Korean>%1 (이)가 지혈대를 적용함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
@@ -2902,9 +2902,9 @@
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
             <French>%1 a utilisé une trousse</French>
             <Japanese>%1 は応急処置キットをつかった</Japanese>
-            <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
             <Chinesesimp>%1 已使用了个人急救包</Chinesesimp>
             <Chinese>%1 已使用了個人急救包</Chinese>
+            <Korean>%1 (이)가 개인응급키트를 사용함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -3077,9 +3077,9 @@
             <Russian>Боль приглушается только временно</Russian>
             <Italian>Dolore è soppresso solo temporaneamente</Italian>
             <Japanese>痛みは一時的な影響</Japanese>
-            <Korean>고통은 일시적으로만 회복가능</Korean>
             <Chinesesimp>疼痛只会暂时性压制</Chinesesimp>
             <Chinese>疼痛只會暫時性壓制</Chinese>
+            <Korean>고통은 일시적으로만 회복</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -3172,7 +3172,7 @@
             <Hungarian>Választékok (3D)</Hungarian>
             <Czech>3D výběr</Czech>
             <Italian>Selezione (3D)</Italian>
-            <Japanese>選択 (3d)</Japanese>
+            <Japanese>選択 (3D)</Japanese>
             <Korean>선택 (3d)</Korean>
             <Chinesesimp>选择 (3D)</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>
@@ -3892,9 +3892,9 @@
             <French>Le lieu améliore l'efficacité</French>
             <Russian>Места ускоренного обучения</Russian>
             <Japanese>衛生兵としての能力を与える場所</Japanese>
-            <Korean>교육 증가 지역</Korean>
             <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
+            <Korean>의료 효과 증가 지역</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
@@ -5354,9 +5354,9 @@
             <Hungarian>Hozzárendeli az ACE orvosi jelzőt egy egységhez</Hungarian>
             <Italian>Assegna la classe medico ACE ad un'unità</Italian>
             <Japanese>ユニットを ACE の衛生兵として割り当てる</Japanese>
-            <Korean>차량에 ACE 의무병 보직 선정</Korean>
             <Chinesesimp>指派ACE医疗职位给该单位</Chinesesimp>
             <Chinese>指派ACE醫療職位給該單位</Chinese>
+            <Korean>병력에 ACE 의무병 보직 선정</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_DisplayName">
             <English>Set Medical Facility [ACE]</English>
@@ -5609,11 +5609,13 @@
             <English>Open lid</English>
             <German>Deckel aufklappen</German>
             <Japanese>フタをあける</Japanese>
+            <Italian>Apri lid</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
             <German>Deckel zuklappen</German>
             <Japanese>フタをしめる</Japanese>
+            <Italian>Chiudi lid</Italian>
         </Key>
     </Package>
 </Project>

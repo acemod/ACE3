@@ -141,9 +141,9 @@
             <Italian>Introduci griglia coordinate:</Italian>
             <Portuguese>Digite as Ccords. do Grid</Portuguese>
             <Japanese>座標を入力:</Japanese>
-            <Korean>망 좌표 입력:</Korean>
             <Chinesesimp>输入网格座标:</Chinesesimp>
             <Chinese>輸入網格座標:</Chinese>
+            <Korean>좌표 입력:</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterName">
             <English>Name of [%1]</English>
@@ -173,9 +173,9 @@
             <Italian>Nuovo MGRS</Italian>
             <Portuguese>MGRS-Novo</Portuguese>
             <Japanese>MGRS-New</Japanese>
-            <Korean>MGRS-새 것</Korean>
             <Chinesesimp>军事网格座标系统-新型</Chinesesimp>
             <Chinese>軍事網格座標系統-新型</Chinese>
+            <Korean>MGRS-New</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlWGD">
             <English>WGD</English>

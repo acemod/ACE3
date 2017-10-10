@@ -80,7 +80,7 @@ class RscACE_SelectTimeUI {
             y = 0.06;
             w = 0.49;
             h = 0.025;
-            onSliderPosChanged = "private ['_mins', '_secs'];_mins = floor((_this select 1)/60);_secs=floor((_this select 1) - (_mins*60));ctrlSetText [8870, format[localize 'STR_ACE_Explosives_TimerMenu',_mins, _secs]];";
+            onSliderPosChanged = "_mins = floor((_this select 1)/60);_secs=floor((_this select 1) - (_mins*60));ctrlSetText [8870, format[localize 'STR_ACE_Explosives_TimerMenu',_mins, _secs]];";
         };
         class cancelBtn: RscButton {
             idc = 8855;

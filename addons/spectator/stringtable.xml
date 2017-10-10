@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_DisplayName">
             <English>ACE Spectator</English>
+            <German>ACE Zuschauer</German>
             <Japanese>ACE スペクテイター</Japanese>
             <Italian>Spettatore ACE</Italian>
             <French>Spectateur ACE</French>
@@ -12,7 +13,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
-            <German>Zuschauer Einstellungen</German>
+            <German>Zuschauer-Einstellungen</German>
             <Polish>Ustawienia obserwatora</Polish>
             <Portuguese>Preferências de Espectador</Portuguese>
             <Russian>Настройки спектатора</Russian>
@@ -42,11 +43,15 @@
         </Key>
         <Key ID="STR_ACE_Spectator_ai_DisplayName">
             <English>AI Enabled</English>
+            <German>KI Sichtbarkeit</German>
             <Japanese>AI にも有効化</Japanese>
+            <Italian>AI Abilitate</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
+            <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
             <Japanese>スペクテイターで AI 視点を可能に</Japanese>
+            <Italian>Permette la visibilità delle AI in spettatore</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -243,11 +248,15 @@
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_uiIcons">
             <English>Icons</English>
+            <German>Icons</German>
             <Japanese>アイコン</Japanese>
+            <Italian>Icone</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
+            <German>Geschosse</German>
             <Japanese>弾道表示</Japanese>
+            <Italian>Proiettili</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -257,7 +266,7 @@
             <Russian>Следующий юнит</Russian>
             <Czech>Následující jednotka</Czech>
             <Spanish>Siguiente unidad</Spanish>
-            <Italian>Prossima Unità</Italian>
+            <Italian>Unità Successiva</Italian>
             <French>Unité suivante</French>
             <Japanese>次のユニット</Japanese>
             <Korean>다음 인원</Korean>
@@ -272,7 +281,7 @@
             <Russian>Предыдущий юнит</Russian>
             <Czech>Předchozí jednotka</Czech>
             <Spanish>Anterior unidad</Spanish>
-            <Italian>Precedente Unità</Italian>
+            <Italian>Unità Precedente</Italian>
             <French>Unité précédente</French>
             <Japanese>前のユニット</Japanese>
             <Korean>이전 인원</Korean>
@@ -281,11 +290,15 @@
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Vision Mode</English>
+            <German>Sichtmodus</German>
             <Japanese>ビジョン モード</Japanese>
+            <Italian>Modalità Visiva</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
+            <German>Langsam</German>
             <Japanese>速度低下</Japanese>
+            <Italian>Bassa Velocità</Italian>
         </Key>
     </Package>
 </Project>

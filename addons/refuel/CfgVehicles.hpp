@@ -14,7 +14,7 @@
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
                 statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle)); \
-                exceptions[] = {"isNotInside", "isNotOnLadder"}; \
+                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOn) { \
@@ -35,7 +35,7 @@
                 displayName = CSTRING(Disconnect); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
-                exceptions[] = {"isNotInside", "isNotOnLadder"}; \
+                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
         }; \
@@ -154,11 +154,14 @@ class CfgVehicles {
     class Rubber_duck_base_F: Boat_F  {
         GVAR(fuelCapacity) = 30;
     };
-    class SDV_01_base_F: Boat_F {
+/*    class SDV_01_base_F: Boat_F {
         // SDV is using electrical propulsion
+        // but we can't recharge it ATM another way
+        // TODO make recharging, maybe with this objects:
+        // Land_PowerGenerator_F Land_Portable_generator_F
         GVAR(canReceive) = 0;
     };
-
+*/
     class Car_F: Car {
         // Assuming large vehicle tank
         GVAR(fuelCapacity) = 60;

@@ -258,7 +258,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
-            <German>Synchronisiere eine Einheit um sie in Handschellen zu legen.</German>
+            <German>Synchronisiere eine Einheit, um sie in Handschellen zu legen.</German>
             <Polish>Zsynchronizuj z jednostką, aby została skuta.</Polish>
             <Portuguese>Sincronizar uma unidade para deixá-la algemada.</Portuguese>
             <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.</Russian>
@@ -314,7 +314,7 @@
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
             <Russian>Связать союзника</Russian>
             <Italian>Puoi ammanettare unità alleate</Italian>
-            <Japanese>自陣営への拘束を可能に</Japanese>
+            <Japanese>拘束ユニットを自陣営へ</Japanese>
             <Korean>자기편에게 수갑을 채울 수 있게 합니다</Korean>
             <Chinese>可以銬住同陣營隊友</Chinese>
             <Chinesesimp>可以铐住同阵营队友</Chinesesimp>
@@ -324,13 +324,13 @@
             <Polish>Czy gracze mogą skuwać sojuszników?</Polish>
             <Spanish>Pueden los jugadores esposar unidades en su propio bando</Spanish>
             <Czech>Mohou hráči spoutat jednotky na své straně</Czech>
-            <German>Spieler können eigene Einheiten fesseln. </German>
+            <German>Spieler können eigene Einheiten fesseln</German>
             <Portuguese>Os jogadores podem algemar unidades do seu lado</Portuguese>
             <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp</French>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
             <Russian>Разрешить игрокам связывать юнитов своей стороны</Russian>
             <Italian>I giocatori possono ammanettare unità alleate</Italian>
-            <Japanese>プレイヤーがユニットを拘束し、彼らの陣営に変更できます。</Japanese>
+            <Japanese>プレイヤーが拘束したユニットの陣営を自陣営に変更させ。</Japanese>
             <Korean>자기편에게 케이블타이를 사용할 수 있게합니다</Korean>
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
             <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
@@ -362,7 +362,7 @@
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
             <Russian>Игроки могут сдаться в плен после того, как уберут оружие</Russian>
             <Italian>I giocatori possono arrendersi dopo aver messo via le proprie armi</Italian>
-            <Japanese>プレイヤーは武器を収めたあとに投降できるようにします。</Japanese>
+            <Japanese>プレイヤーは武器を収めたあと投降できるようにします。</Japanese>
             <Korean>비무장한 플레이어가 투항할 수 있게 합니다</Korean>
             <Chinese>玩家能在收起自己武器後投降</Chinese>
             <Chinesesimp>玩家能在收起自己武器后投降</Chinesesimp>
@@ -426,6 +426,24 @@
             <Korean>투항 중 혹은 비무장</Korean>
             <Chinese>投降或無武器狀態</Chinese>
             <Chinesesimp>投降或无武器状态</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Captives_KeyComb_Description">
+            <English>Sets the unit under the cursor captive.</English>
+            <German>Nimmt die Einheit unter dem Cursor fest.</German>
+            <Japanese>カーソル先のユニットを拘束</Japanese>
+            <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
+            <English>Require AI surrendering</English>
+            <German>Benötigt für KI Kapitulation</German>
+            <Italian>Necessita arresa AI</Italian>
+            <Japanese>AI の投降を必要とする</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
+            <English>Require AI to surrender before they can be arrested</English>
+            <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
+            <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
+            <Japanese>AI の拘束は AI が投降している場合に限り可能にします。</Japanese>
         </Key>
     </Package>
 </Project>

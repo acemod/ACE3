@@ -98,14 +98,14 @@ class CfgVehicles {
         category = QGVAR(Repair);
         displayName = CSTRING(ModuleAddSpareTrack_DisplayName);
         function = QFUNC(moduleAddSpareTrack);
-        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
     class GVAR(moduleAddSpareWheel): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Repair);
         displayName = CSTRING(ModuleAddSpareWheel_DisplayName);
         function = QFUNC(moduleAddSpareWheel);
-        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
     class GVAR(moduleAddOrRemoveFRIES): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -142,6 +142,13 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
+    };
+    class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleLoadIntoCargo_DisplayName);
+        function = QFUNC(moduleLoadIntoCargo);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
     };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -214,16 +221,28 @@ class CfgVehicles {
         function = QFUNC(moduleUnconscious);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa);
     };
+    class GVAR(moduleToggleNvg): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleToggleNVG_DisplayName);
+        curatorInfoType = QGVAR(RscToggleNvg);
+    };
+    class GVAR(moduleToggleFlashlight): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleToggleFlashlight_DisplayName);
+        curatorInfoType = QGVAR(RscToggleFlashlight);
+    };
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
-        displayName = CSTRING(moduleAddFullArsenal_displayName);
+        displayName = CSTRING(ModuleAddFullArsenal_DisplayName);
         function = QFUNC(moduleAddArsenal);
     };
     class GVAR(RemoveFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
-        displayName = CSTRING(moduleRemoveArsenal_displayName);
+        displayName = CSTRING(ModuleRemoveArsenal_DisplayName);
         function = QFUNC(moduleRemoveArsenal);
     };
 };

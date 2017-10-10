@@ -1,9 +1,9 @@
 /*
  * Author: PabstMirror
- * Changes the display mode of the microDAGR
+ * Changes the display mode of the MicroDAGR.
  *
  * Arguments:
- * 0: Display Mode to show the microDAGR in <NUMBER><OPTIONAL>
+ * 0: Display Mode to show the microDAGR in <NUMBER> (default: -1)
  *
  * Return Value:
  * None
@@ -15,10 +15,8 @@
  */
 #include "script_component.hpp"
 
-private ["_oldShowMode", "_args", "_player"];
-
 params [["_newDisplayShowMode", -1, [-1]]];
-_oldShowMode = GVAR(currentShowMode);
+private _oldShowMode = GVAR(currentShowMode);
 
 if (_newDisplayShowMode == -1) then {
     //Toggle mode button:

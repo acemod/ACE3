@@ -32,6 +32,7 @@
             <Italian>Abilita o disabilita la Perdite di Sangue create sanguinando e prendendo danno</Italian>
             <Chinesesimp>开启后, 会让受伤时伤口有血液滴落的效果</Chinesesimp>
             <Chinese>開啟後, 會讓受傷時傷口有血液滴落的效果</Chinese>
+            <Korean>출혈이나 부상을 입었을 때, 떨어지는 혈액을 활성화 하거나 비활성화 합니다.</Korean>
         </Key>
     </Package>
 </Project>

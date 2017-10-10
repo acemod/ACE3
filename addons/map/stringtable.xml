@@ -43,7 +43,7 @@
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
             <Czech>Simulovat nasvícení mapy v závisloti na okolí a předmětů hráče?</Czech>
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
-            <Japanese>環境光やプレイヤーのアイテムにより、地図へ光のシミュレーションをおこないますか？</Japanese>
+            <Japanese>地図へ環境光やプレイヤーのアイテムにもとづいた光のシミュレーションをおこないますか？</Japanese>
             <Korean>주변 환경및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
             <Chinesesimp>透过环境光与玩家的物品来决定地图亮度?</Chinesesimp>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
@@ -169,7 +169,7 @@
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
             <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
-            <Japanese>カーソルに合わせた先の地図座標を表示しますか？</Japanese>
+            <Japanese>カーソルに合わせた先を地図座標で表示しますか？</Japanese>
             <Korean>지도에서 커서 옆에 좌표가 뜨게 합니까?</Korean>
             <Chinesesimp>显示滑鼠游标所在的网格座标?</Chinesesimp>
             <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
@@ -233,7 +233,7 @@
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
             <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
             <Italian>Abilita Blue Force Tracking. Default: No</Italian>
-            <Japanese>ブルー フォース トラッキングを有効化します。標準：無効</Japanese>
+            <Japanese>ブルー フォース トラッキングを有効化します。標準: 無効</Japanese>
             <Korean>GPS피아식별기 켭니다. 기본설정: 아니요</Korean>
             <Chinesesimp>启用显示蓝方踪迹. 预设: 否</Chinesesimp>
             <Chinese>啟用顯示藍方蹤跡. 預設: 否</Chinese>
@@ -265,7 +265,7 @@
             <Hungarian>Milyen gyakran frissüljenek a jelölők (másodpercben)</Hungarian>
             <Russian>Как часто должны обновляться маркеры (в секундах)</Russian>
             <Italian>Quanto spesso vengono aggiornati i marker (in secondi)</Italian>
-            <Japanese>マーカが再描画される間隔を設定できます（秒）</Japanese>
+            <Japanese>マーカが再描画される間隔を設定できます (秒)</Japanese>
             <Korean>몇 초마다 마커를 새로 갱신합니까?</Korean>
             <Chinesesimp>设定每多少时间重新标示出单位位置 (秒)</Chinesesimp>
             <Chinese>設定每多少時間重新標示出單位位置 (秒)</Chinese>
@@ -420,7 +420,7 @@
             <Czech>Zvýšit jas</Czech>
             <Spanish>Aumentar brillo</Spanish>
             <Italian>Aumenta Luminosità</Italian>
-            <Japanese>感度を上げる</Japanese>
+            <Japanese>明度を上げる</Japanese>
             <Korean>밝기 올리기</Korean>
             <Chinesesimp>增加亮度</Chinesesimp>
             <Chinese>增加亮度</Chinese>
@@ -435,7 +435,7 @@
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
             <Italian>Diminuisci Luminosità</Italian>
-            <Japanese>感度を下げる</Japanese>
+            <Japanese>明度を下げる</Japanese>
             <Korean>밝기 내리기</Korean>
             <Chinesesimp>降低亮度</Chinesesimp>
             <Chinese>降低亮度</Chinese>

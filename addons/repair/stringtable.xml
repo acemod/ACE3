@@ -439,7 +439,7 @@
             <Spanish>Parte totalmente reparado</Spanish>
             <Italian>Parte riparata completamente</Italian>
             <French>Pièce entièrement réparée</French>
-            <Japanese>部分的な完全な修理</Japanese>
+            <Japanese>完全に修理された部品</Japanese>
             <Korean>부분 완벽히 수리됨</Korean>
             <Chinesesimp>完整维修部分</Chinesesimp>
             <Chinese>完整維修部分</Chinese>
@@ -577,7 +577,7 @@
             <Italian>Stabilizzatore Verticale</Italian>
             <French>Stabilisateur vertical</French>
             <German>Seitenleitwerk</German>
-            <Japanese>車両安定器</Japanese>
+            <Japanese>車両スタビライザ</Japanese>
             <Korean>수직 안정판</Korean>
             <Chinesesimp>垂直稳定</Chinesesimp>
             <Chinese>垂直穩定</Chinese>
@@ -905,7 +905,7 @@
             <Italian>Ruota posteriore destra</Italian>
             <Hungarian>Jobb hátsó kerék</Hungarian>
             <Russian>Правое заднее колесо</Russian>
-            <Japanese>右の後</Japanese>
+            <Japanese>右の後輪</Japanese>
             <Korean>오른쪽 뒤쪽 바퀴</Korean>
             <Chinesesimp>右后轮</Chinesesimp>
             <Chinese>右後輪</Chinese>
@@ -1031,7 +1031,7 @@
             <French>ERA</French>
             <Portuguese>ERA</Portuguese>
             <Russian>ДЗ</Russian>
-            <Japanese>爆発反応装甲</Japanese>
+            <Japanese>ERA</Japanese>
             <Korean>폭발반응장갑</Korean>
             <Chinesesimp>爆炸式反应装甲</Chinesesimp>
             <Chinese>爆炸式反應裝甲</Chinese>
@@ -1098,6 +1098,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
+            <German>Erweiterter Pionier</German>
             <Italian>Solo Geniere avanzato</Italian>
             <Japanese>上級工兵のみ</Japanese>
             <Chinesesimp>只有维修专精兵</Chinesesimp>
@@ -1166,7 +1167,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
             <English>Repair Threshold</English>
-            <German>Repariere Schweller</German>
+            <German>Reparaturlimit</German>
             <Polish>Próg naprawy</Polish>
             <Portuguese>Limite de reparo</Portuguese>
             <Russian>Лимит ремкомплекта</Russian>
@@ -1181,7 +1182,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
             <English>What is the maximum damage that can be repaired with a toolkit?</English>
-            <German>Wie hoch ist der Schaden, der von einem Reperatursatz behoben werden kann?</German>
+            <German>Der maximale Schaden, der von einem Reperatursatz behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um kit de ferramentas?</Portuguese>
             <Russian>Какой максимальный урон можно починить с помощью ремкомплекта?</Russian>
@@ -1196,7 +1197,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
             <English>Repair Threshold (Engineer)</English>
-            <German>Repariere Schweller (Pionier)</German>
+            <German>Reparaturlimit (Pionier)</German>
             <Polish>Próg naprawy (mechanik)</Polish>
             <Portuguese>Limite de reparo (Engenheiro)</Portuguese>
             <Russian>Лимит инженера</Russian>
@@ -1211,7 +1212,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
             <English>What is the maximum damage that can be repaired by an engineer?</English>
-            <German>Wie hoch ist der Schaden, der von einem Pionier behoben werden kann?</German>
+            <German>Der maximale Schaden, der von einem Pionier behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um engenheiro?</Portuguese>
             <Russian>Какой максимальный урон может починить инженер?</Russian>
@@ -1399,7 +1400,7 @@
             <Spanish>Ningún</Spanish>
             <Italian>Nessuna</Italian>
             <French>Aucun</French>
-            <Japanese>工兵</Japanese>
+            <Japanese>なし</Japanese>
             <Korean>없음</Korean>
             <Chinesesimp>无</Chinesesimp>
             <Chinese>無</Chinese>
@@ -1414,7 +1415,7 @@
             <Spanish>Ingeniero</Spanish>
             <Italian>Geniere</Italian>
             <French>Ingénieur</French>
-            <Japanese>専門兵</Japanese>
+            <Japanese>工兵</Japanese>
             <Korean>정비공</Korean>
             <Chinesesimp>工兵</Chinesesimp>
             <Chinese>工兵</Chinese>
@@ -1422,6 +1423,7 @@
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
             <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
             <English>Adv. Engineer</English>
+            <German>Erw. Pionier</German>
             <Italian>Adv. Geniere</Italian>
             <Japanese>上級工兵</Japanese>
             <Chinesesimp>专精</Chinesesimp>

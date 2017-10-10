@@ -74,7 +74,7 @@ class CfgVehicles {
                 displayName = CSTRING(zeroReferenceHumidity_DisplayName);
                 description = CSTRING(zeroReferenceHumidity_Description);
                 typeName = "NUMBER";
-                defaultValue = 0.5;
+                defaultValue = 0.0;
             };
             class deduceBarometricPressureFromTerrainAltitude {
                 displayName = CSTRING(deduceBarometricPressureFromTerrainAltitude_DisplayName);

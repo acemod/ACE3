@@ -22,16 +22,14 @@
 
 #include "script_component.hpp"
 
-private ["_removeAddons", "_numCfgs", "_cfg", "_requiredAddon"];
-
 if !(isClass (configFile >> "ACE_Curator")) exitWith { ERROR("The ACE_Curator class does not exist") };
 
 params ["_logic"];
-_removeAddons = [];
+private _removeAddons = [];
 
-_numCfgs = count (configFile >> "ACE_Curator");
+private _numCfgs = count (configFile >> "ACE_Curator");
 for "_n" from 0 to (_numCfgs - 1) do {
-    _cfg = (configFile >> "ACE_Curator") select _n;
+    private _cfg = (configFile >> "ACE_Curator") select _n;
 
     if (isArray _cfg) then {
         _requiredAddon = getArray _cfg;

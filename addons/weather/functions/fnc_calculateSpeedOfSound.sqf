@@ -15,4 +15,4 @@
  */
 #include "script_component.hpp"
 
-(331.3 + (0.6 * _this))
+(331.3 * sqrt(1 + (_this / 273.15)))

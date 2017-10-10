@@ -18,11 +18,9 @@
 params ["_magazineClassname"];
 TRACE_1("params",_magazineClassname);
 
-private ["_result", "_config", "_count", "_index"];
-
-_result = [];
-_config = getArray (ConfigFile >> "CfgMagazines" >> _magazineClassname >> "ACE_Triggers" >> "SupportedTriggers");
-_count = count _config;
+private _result = [];
+private _config = getArray (ConfigFile >> "CfgMagazines" >> _magazineClassname >> "ACE_Triggers" >> "SupportedTriggers");
+private _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {
     _result set [_index, ConfigFile >> "ACE_Triggers" >> (_config select _index)];

@@ -14,13 +14,11 @@
  * Public: No
  */
 
-private ["_str", "_array", "_maxIndex", "_isEven"];
-_str = _this;
+private _str = _this;
 
-_isEven = {
+private _isEven = {
     params ["_array", "_index"];
-    private [ "_count"];
-    _count = 0;
+    private _count = 0;
     {
         if (_forEachIndex <= _index && {_x == 39}) then {
             _count = _count + 1;
@@ -32,14 +30,14 @@ _isEven = {
 
 // reg: 34
 // single: 39
-_array = toArray _str;
+private _array = toArray _str;
 {
     if (_x == 34) then {
         _array set [_forEachIndex, 39];
     };
 }forEach _array;
 
-_maxIndex = count _array;
+private _maxIndex = count _array;
 for "_i" from 0 to _maxIndex /* step +1 */ do {
     if (((_i + 1) < _maxIndex - 1) && {_array select _i == 39 && (_array select (_i + 1)) == 39}) then {
         if ([_array, _i] call _isEven) then {

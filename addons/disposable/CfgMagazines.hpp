@@ -5,7 +5,7 @@ class CfgMagazines {
         scope = 1;
         scopeArsenal = 1;
         displayName = CSTRING(PreloadedMissileDummy);
-        picture = QPATHTOEF(common,UI\blank_CO.paa);
+        picture = "a3\ui_f\data\IGUI\Cfg\Targeting\Empty_ca.paa";
         weaponPoolAvailable = 0;
         mass = 0;
     };
