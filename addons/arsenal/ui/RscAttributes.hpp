@@ -578,31 +578,18 @@ class GVAR(display) {
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
             y = QUOTE(safezoneY + 88 * GRID_H);
         };
-        class iconBackgroundRemoveAllSelected: ctrlStaticBackground {
-            idc = IDC_iconBackgroundRemoveAllSelected;
-            colorBackground[]={0,0,0,1};
-            fade=1;
-            enable=0;
-            x = QUOTE(safezoneX + safezoneW - 94 * GRID_W);
-            y = QUOTE(safeZoneH + safezoneY - 121 * GRID_H);
-            w = QUOTE(9 * GRID_W);
-            h = QUOTE(9 * GRID_H);
-        };
-        class buttonRemoveAllSelected: RscButtonArsenal  {
+        class buttonRemoveAllSelected: ctrlButtonPicture {
             idc = IDC_buttonRemoveAllSelected;
             text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
             tooltip="Remove all selected items"; //TBL
             colorBackground[]={0,0,0,0.5};
+            onButtonClick = QUOTE(hint str _this);
             fade=1;
             enable=0;
             x = QUOTE(safezoneX + safezoneW - 94 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 121 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
-        };
-        class iconBackgroundRemoveAll: iconBackgroundRemoveAllSelected {
-            idc = IDC_iconBackgroundRemoveAll;
-            y = QUOTE(safeZoneH + safezoneY - 111 * GRID_H);
         };
         class buttonRemoveAll: buttonRemoveAllSelected {
             idc = IDC_buttonRemoveAll;

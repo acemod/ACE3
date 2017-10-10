@@ -71,6 +71,12 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonPrimaryWeapon : {
         private _baseWeapon = ((GVAR(currentItems) select 0) call bis_fnc_baseWeapon);
 
+        if (_item == "") then {
+            TOGGLE_RIGHT_PANEL_HIDE
+        } else {
+            TOGGLE_RIGHT_PANEL_WEAPON
+        };
+
         if ((GVAR(currentItems) select 0) != _item && {_baseWeapon != _item}) then {
             {
                 GVAR(center) removeMagazines _x;
@@ -96,14 +102,20 @@ switch (GVAR(currentLeftPanel)) do {
 
                 GVAR(currentItems) set [18, _newAccs];
                 GVAR(currentItems) set [0, _item];
+                TOGGLE_RIGHT_PANEL_WEAPON
             };
         };
         call FUNC(showItem);
-        TOGGLE_RIGHT_PANEL_WEAPON
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonHandgun : {
         private _baseWeapon = ((GVAR(currentItems) select 2) call bis_fnc_baseWeapon);
+
+        if (_item == "") then {
+            TOGGLE_RIGHT_PANEL_HIDE
+        } else {
+            TOGGLE_RIGHT_PANEL_WEAPON
+        };
 
         if ((GVAR(currentItems) select 2) != _item && {_baseWeapon != _item}) then {
             {
@@ -133,11 +145,16 @@ switch (GVAR(currentLeftPanel)) do {
             };
         };
         call FUNC(showItem);
-        TOGGLE_RIGHT_PANEL_WEAPON
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonSecondaryWeapon : {
         private _baseWeapon = ((GVAR(currentItems) select 1) call bis_fnc_baseWeapon);
+
+        if (_item == "") then {
+            TOGGLE_RIGHT_PANEL_HIDE
+        } else {
+            TOGGLE_RIGHT_PANEL_WEAPON
+        };
 
         if ((GVAR(currentItems) select 1) != _item && {_baseWeapon != _item}) then {
             {
@@ -167,7 +184,6 @@ switch (GVAR(currentLeftPanel)) do {
             };
         };
         call FUNC(showItem);
-        TOGGLE_RIGHT_PANEL_WEAPON
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonHeadgear : {
@@ -177,9 +193,9 @@ switch (GVAR(currentLeftPanel)) do {
         } else {
             GVAR(center) addHeadgear _item;
             GVAR(currentItems) set [3, _item];
-            TOGGLE_RIGHT_PANEL_HIDE
         };
         call FUNC(showItem);
+        TOGGLE_RIGHT_PANEL_HIDE
         [(configFile >> "CfgWeapons" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonUniform : {
@@ -188,6 +204,7 @@ switch (GVAR(currentLeftPanel)) do {
             removeuniform GVAR(center);
             GVAR(currentItems) set [15, []];
             GVAR(currentItems) set [4, _item];
+            TOGGLE_RIGHT_PANEL_HIDE
         } else {
 
             GVAR(center) forceAddUniform _item;
@@ -212,6 +229,7 @@ switch (GVAR(currentLeftPanel)) do {
             removeVest GVAR(center);
             GVAR(currentItems) set [16, []];
             GVAR(currentItems) set [5, _item];
+            TOGGLE_RIGHT_PANEL_HIDE
         } else {
 
             GVAR(center) addVest _item;
@@ -232,6 +250,7 @@ switch (GVAR(currentLeftPanel)) do {
             removeBackpack GVAR(center);
             GVAR(currentItems) set [17, []];
             GVAR(currentItems) set [6, _item];
+            TOGGLE_RIGHT_PANEL_HIDE
         } else {
 
             removeBackpack GVAR(center);
@@ -242,9 +261,9 @@ switch (GVAR(currentLeftPanel)) do {
             {GVAR(center) addItemToBackpack _x} foreach (GVAR(currentItems) select 17);
 
             GVAR(currentItems) set [6, _item];
+            TOGGLE_RIGHT_PANEL_CONTAINER
         };
         call FUNC(showItem);
-        TOGGLE_RIGHT_PANEL_CONTAINER
         [(configFile >> "CfgVehicles" >> _item)] call _fnc_itemInfo;
     };
     case IDC_buttonGoggles : {
