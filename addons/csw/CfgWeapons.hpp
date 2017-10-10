@@ -3,7 +3,7 @@ class CfgWeapons {
 	class GVAR(carryTripod): Launcher_Base_F {
 		author = ECSTRING(common, ACETeam);
 		scope = 2;
-		displayName = CSTRING(CSWTripodFolded_displayName);
+		displayName = CSTRING(TripodFolded_displayName);
 		model = QUOTE(PATHTOF(data\ACE_CSWTripodFolded.p3d));
 		modes[] = {};
 	};
