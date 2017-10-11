@@ -41,4 +41,24 @@ class CfgGlasses {
         ACE_Protection = 0;
         ACE_DustPath = QPATHTOEF(goggles,textures\fx\dust\%1.paa);
     };
+    class rhsusf_oakley_goggles_base: G_Combat {
+        ACE_Overlay = "";
+        ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+        ACE_OverlayCracked = QPATHTOEF(goggles,textures\HUD\Cracked.paa);
+        ACE_Resistance = 1;
+        ACE_Protection = 0;
+        ACE_DustPath = QPATHTOEF(goggles,textures\fx\dust\%1.paa);
+    };
+    class rhsusf_oakley_goggles_blk: rhsusf_oakley_goggles_base {
+        ACE_Color[] = {0,0,0};
+        ACE_TintAmount = 16.0;
+    };
+    class rhsusf_oakley_goggles_clr: rhsusf_oakley_goggles_base {
+        ACE_Color[] = {0,0,0};
+        ACE_TintAmount = 0;
+    };
+    class rhsusf_oakley_goggles_ylw: rhsusf_oakley_goggles_base {
+        ACE_Color[] = {0,0,-1.5};
+        ACE_TintAmount = 8.0;
+    };
 };
