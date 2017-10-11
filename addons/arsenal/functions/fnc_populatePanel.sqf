@@ -34,25 +34,17 @@ private _fnc_panelLeft = {
             _configPath call ADDMODICON;
         };
 
-
         _ctrlPanel lbSetCurSel -1;
 
         // Handle icons and filling
         switch true do { 
             case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
-                /*
-                if (isNil QGVAR(currentRightPanel) || {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]}) then {
-                    [_display, _display displayCtrl IDC_buttonOptic] call FUNC(populatePanel);
-                };
-                */
-
                 // Purge old data
                 lbClear _ctrlPanel;
                 private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
                 _ctrlPanel lbsetvalue [_addEmpty, -1];
 
                 // Filling
-
                 switch (_ctrlIDC) do {
                     case IDC_buttonPrimaryWeapon : {
                         {
@@ -87,18 +79,11 @@ private _fnc_panelLeft = {
 
             case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
 
-                /*
-                if (isNil QGVAR(currentRightPanel)) then {
-                    [_display, (_display displayCtrl IDC_buttonMisc)] call FUNC(populatePanel);
-                };
-                */
-
                 lbClear _ctrlPanel;
                 private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
                 _ctrlPanel lbsetvalue [_addEmpty, -1];
 
                 // Filling
-
                 switch (_ctrlIDC) do {
                     case IDC_buttonUniform : {
                         {
@@ -273,30 +258,114 @@ private _fnc_panelLeft = {
 private _fnc_panelRight = {
     params ["_display", "_control", "_ctrlIDC"];
 
-    if (isNil QGVAR(currentRightPanel) || {GVAR(currentRightPanel) != _ctrlIDC}) then {
-
-        if !(isNil QGVAR(currentRightPanel)) then {
-            private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
-            _previousCtrlBackground ctrlSetFade 1;
-            _previousCtrlBackground ctrlCommit FADE_DELAY;
-        };
-
-        private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
-        _ctrlBackground ctrlShow true;
-        _ctrlBackground ctrlSetFade 0;
-        _ctrlBackground ctrlCommit FADE_DELAY;
-
-        private _searchbarCtrl = _display displayCtrl IDC_rightSearchbar;
-        private _ctrlPanelRight = _display displayCtrl IDC_rightTabContent;
-        if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
-            _searchbarCtrl ctrlShow true;
-            _searchbarCtrl ctrlSetFade 0;
-            _searchbarCtrl ctrlCommit 0;
-        };
-
-        _ctrlPanelRight lbSetCurSel -1;
-        GVAR(currentRightPanel) = _ctrlIDC;
+    if !(isNil QGVAR(currentRightPanel)) then {
+        private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
+        _previousCtrlBackground ctrlSetFade 1;
+        _previousCtrlBackground ctrlCommit FADE_DELAY;
     };
+
+    private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
+    _ctrlBackground ctrlShow true;
+    _ctrlBackground ctrlSetFade 0;
+    _ctrlBackground ctrlCommit FADE_DELAY;
+
+    private _searchbarCtrl = _display displayCtrl IDC_rightSearchbar;
+    private _ctrlPanelRight = _display displayCtrl IDC_rightTabContent;
+    if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
+        _searchbarCtrl ctrlShow true;
+        _searchbarCtrl ctrlSetFade 0;
+        _searchbarCtrl ctrlCommit 0;
+    };
+
+    private _fnc_fill_right = {
+        params ["_configPath"];
+
+        private _displayName = getText (_configPath >> "displayName");
+
+        private _lbAdd = _ctrlPanelRight lbAdd _displayName;
+
+        _ctrlPanelRight lbSetdata [_lbAdd, _x];
+        _ctrlPanelRight lbSetPicture [_lbAdd, geTtext (_configPath >> "picture")];
+        _ctrlPanelRight lbSetTooltip [_lbAdd,format ["%1\n%2", _displayName, _x]];
+        _configPath call ADDMODICON;
+    };
+
+     private _compatibleItems = [];
+    switch (GVAR(currentLeftPanel)) do {
+        case IDC_buttonPrimaryWeapon : {
+          _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        };
+        case IDC_buttonHandgun : {
+            _compatibleItems = (handgunWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        };
+        case IDC_buttonSecondaryWeapon : {
+            _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        };
+    };
+
+    lbClear _ctrlPanelRight;
+
+    _ctrlPanelRight lbSetCurSel -1;
+
+    if (_ctrlIDC in [RIGHT_PANEL_ACC_IDCS] && {GVAR(currentLeftPanel) in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]}) then {
+        private _addEmpty = _ctrlPanelRight lbadd format [" <%1>",localize "str_empty"];
+        _ctrlPanelRight lbsetvalue [_addEmpty, -1];
+    };
+
+    switch (_ctrlIDC) do {
+        case IDC_buttonOptic : {
+            {
+                private _config = configfile >> "CfgWeapons" >> _x;
+                if (getNumber (_config >> "ItemInfo" >> "type") == 201 && {_x in _compatibleItems}) then {
+                    [_config] call _fnc_fill_right;
+                };
+            } foreach (GVAR(virtualItems) select 1);
+        };
+        case IDC_buttonItemAcc : {
+
+            {
+                private _config = configfile >> "CfgWeapons" >> _x;
+                if (getNumber (_config >> "ItemInfo" >> "type") == 301  && {_x in _compatibleItems}) then {
+                    [_config] call _fnc_fill_right;
+                };
+            } foreach (GVAR(virtualItems) select 1);
+        };
+        case IDC_buttonMuzzle : {
+
+            {
+                private _config = configfile >> "CfgWeapons" >> _x;
+                if (getNumber (_config >> "ItemInfo" >> "type") == 101  && {_x in _compatibleItems}) then {
+                    [_config] call _fnc_fill_right;
+                };
+            } foreach (GVAR(virtualItems) select 1);
+        };
+        case IDC_buttonBipod : {
+
+            {
+                private _config = configfile >> "CfgWeapons" >> _x;
+                if (getNumber (_config >> "ItemInfo" >> "type") == 302  && {_x in _compatibleItems}) then {
+                    [_config] call _fnc_fill_right;
+                };
+            } foreach (GVAR(virtualItems) select 1);
+        };
+        case IDC_buttonMag : {
+
+        };
+        case IDC_buttonMagALL : {
+
+        };
+        case IDC_buttonThrow : {
+
+        };
+        case IDC_buttonPut : {
+
+        };
+        case IDC_buttonMisc : {
+
+        };
+    };
+
+    GVAR(currentRightPanel) = _ctrlIDC;
 };
 
 switch (_ctrlIDC) do {
