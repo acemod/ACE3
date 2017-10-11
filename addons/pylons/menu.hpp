@@ -53,7 +53,8 @@ class GVAR(DialogLoadout) {
         };
         class TextMirror: RscText {
             idc = ID_TEXT_MIRROR;
-            text = CSTRING(Mirror);
+            text = "$STR_3DEN_Object_Attribute_PylonsMirror_displayName";
+            tooltip="$STR_3DEN_Object_Attribute_PylonsMirror_tooltip";
             x = 0.188116 * safezoneW + safezoneX;
             y = 0.318 * safezoneH + safezoneY;
             w = 0.0656768 * safezoneW;
