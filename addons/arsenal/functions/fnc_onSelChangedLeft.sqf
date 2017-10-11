@@ -41,7 +41,6 @@ switch (GVAR(currentLeftPanel)) do {
 
                 GVAR(currentItems) set [18, _newAccs];
                 GVAR(currentItems) set [0, _item];
-                TOGGLE_RIGHT_PANEL_WEAPON
             };
         };
 
