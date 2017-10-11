@@ -11,6 +11,7 @@ PREP(moduleAddSpareTrack);
 PREP(moduleAddSpareWheel);
 PREP(moduleAddOrRemoveFRIES);
 PREP(moduleCaptive);
+PREP(moduleConfigurePylons);
 PREP(moduleGarrison);
 PREP(moduleGlobalSetSkill);
 PREP(moduleGroupSide);
