@@ -40,9 +40,9 @@ if (_switch) then {
 _ctrl setVariable [QGVAR(turret), _turret];
 
 if (_turret isEqualTo [-1]) then {
-    _ctrl ctrlSetStructuredText parseText "<img image='a3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa'/>";
+    _ctrl ctrlSetText "a3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa";
     _ctrl ctrlSetTooltip localize "str_driver";
 } else {
-    _ctrl ctrlSetStructuredText parseText "<img image='a3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa'/>";
+    _ctrl ctrlSetText "a3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa";
     _ctrl ctrlSetTooltip localize "str_gunner";
 };

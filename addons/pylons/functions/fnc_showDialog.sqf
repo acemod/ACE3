@@ -90,7 +90,7 @@ GVAR(comboBoxes) = [];
 
     private _button = controlNull;
     if (count allTurrets [_aircraft, false] > 0) then {
-        _button = _display ctrlCreate ["ctrlShortcutButton", -1];
+        _button = _display ctrlCreate ["ctrlButtonPictureKeepAspect", -1];
         private _turret = [_aircraft, _forEachIndex] call EFUNC(common,getPylonTurret);
         [_button, false, _turret] call FUNC(onButtonTurret);
         _button ctrlAddEventHandler ["ButtonClick", {[_this select 0, true, []] call FUNC(onButtonTurret)}];
