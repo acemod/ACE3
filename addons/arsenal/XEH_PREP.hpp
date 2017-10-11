@@ -20,6 +20,7 @@ PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(onSelChangedLeft);
 PREP(onSelChangedRight);
+PREP(onSelChangedRightListnBox);
 PREP(openBox);
 PREP(removeBox);
 PREP(removeVirtualItems);

@@ -29,6 +29,7 @@
 #define IDC_mouseBlock 43
 #define IDC_leftTabContent 44
 #define IDC_rightTabContent 45
+#define IDC_rightTabContentListnBox 450
 #define IDC_sortLeftTab 46
 #define IDC_sortRightTab 47
 #define IDC_leftSearchbar 48
@@ -162,6 +163,7 @@
 } foreach [\
     IDC_loadIndicator,\
     RIGHT_PANEL_ITEMS_IDCS,\
+    IDC_rightTabContentListnBox,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
     RIGHT_PANEL_REMOVE_IDCS\
 ];
@@ -180,7 +182,7 @@
 } foreach [\
     IDC_blockRightFrame, \
     IDC_blockRighttBackground,\
-    IDC_rightTabContent,\
+    IDC_rightTabContentListnBox,\
     IDC_sortRightTab,\
     IDC_tabRight,\
     RIGHT_PANEL_ACC_IDCS,\
