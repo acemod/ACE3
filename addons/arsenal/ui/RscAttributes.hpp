@@ -228,7 +228,7 @@ class GVAR(display) {
             colorSelect[]={1,1,1,1};
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
-            onLBSelChanged = QUOTE(_this call FUNC(onSelChanged));
+            onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);
@@ -241,8 +241,10 @@ class GVAR(display) {
             disableOverflow=1;
             idcLeft=200;
             idcRight=201;
+            onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRight));
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
             h = QUOTE(safezoneH - 122.5 * GRID_H);
+            sizeEx = QUOTE(7 * GRID_H);
         };
         class sortLeftTab: ctrlCombo {
             idc = IDC_sortLeftTab;
@@ -298,7 +300,7 @@ class GVAR(display) {
                     idc = IDC_buttonPrimaryWeapon;
                     text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
                     tooltip="$STR_A3_RscDisplayArsenal_tab_PrimaryWeapon";
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(populatePanel));
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(fillLeftPanel));
                     colorBackground[]={0,0,0,0.5};
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(0 * GRID_H);
@@ -491,7 +493,7 @@ class GVAR(display) {
             idc = IDC_buttonOptic;
             tooltip="$STR_A3_RscDisplayArsenal_tab_ItemOptic";
             text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(populatePanel));
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(fillRightPanel));
             colorBackground[]={0,0,0,0.5};
             x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
