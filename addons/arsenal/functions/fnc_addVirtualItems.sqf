@@ -85,9 +85,8 @@ if (_items isEqualType true && {_items}) then {
             };
             /* Weapon, at the bottom to avoid adding binos */
             case (isClass (_x >> "WeaponSlotsInfo") &&
-                {getNumber (_x >> 'type') != 4096} &&
-                {!isClass (_x >> 'LinkedItems')}): {
-                (_cargo select 0) pushBackUnique (configName  _x);
+                {getNumber (_x >> 'type') != 4096}): {
+                (_cargo select 0) pushBackUnique ((configName  _x) call bis_fnc_baseWeapon);
             };
             /* Misc items */
             case (
