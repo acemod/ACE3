@@ -68,5 +68,7 @@ if (_currentPylon == count _pylonsToConfigure) exitWith {};
         (_this select 0) params ["", "_currentPylon"];
         [format [localize LSTRING(Stopped), _currentPylon + 1], false, 5] call EFUNC(common,displayText);
     },
-    format [localize LSTRING(ReplacingPylon), _currentPylon + 1, count _pylonsToConfigure]
+    format [localize LSTRING(ReplacingPylon), _currentPylon + 1, count _pylonsToConfigure],
+    {true},
+    ["isNotInZeus"]
 ] call EFUNC(common,progressBar);
