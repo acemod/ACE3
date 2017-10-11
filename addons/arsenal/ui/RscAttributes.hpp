@@ -239,10 +239,26 @@ class GVAR(display) {
             idc = IDC_rightTabContent;
             drawSideArrows=1;
             disableOverflow=1;
-            idcLeft=200;
-            idcRight=201;
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRight));
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            h = QUOTE(safezoneH - 122.5 * GRID_H);
+        };
+        class rightTabContentListnBox : RscListNBox {
+            idc = IDC_rightTabContentListnBox;
+            colorBackground[]={0,0,0,0};
+            colorSelectBackground[]={1,1,1,0.5};
+            colorSelectBackground2[]={1,1,1,0.5};
+            colorPictureSelected[]={1,1,1,1};
+            colorSelect[]={1,1,1,1};
+            colorSelect2[]={1,1,1,1};
+            colorPictureRightSelected[]={1,1,1,1};
+            columns[]={0.07, 0.17, 0.75};
+            drawSideArrows=1;
+            disableOverflow=1;
+            onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRightListnBox));
+            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            y = QUOTE(safezoneY + 14 * GRID_H);
+            w = QUOTE(70 * GRID_W);
             h = QUOTE(safezoneH - 122.5 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };

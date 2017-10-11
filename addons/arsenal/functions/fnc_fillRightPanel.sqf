@@ -51,16 +51,19 @@ private _fnc_fill_right_Container = {
 
 private _compatibleItems = [];
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
-
+private _itemsToCheck = [];
 switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonPrimaryWeapon : {
       _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+      _itemsToCheck = GVAR(currentItems) select 18;
     };
     case IDC_buttonHandgun : {
         _compatibleItems = (handgunWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        _itemsToCheck = GVAR(currentItems) select 20;
     };
     case IDC_buttonSecondaryWeapon : {
         _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        _itemsToCheck = GVAR(currentItems) select 19;
     };
     case IDC_iconBackgroundUniform;
     case IDC_buttonVest;
@@ -69,7 +72,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
-TRACE_1("ctrlPanel", _ctrlPanel);
+TRACE_1("itemsToCheck", _itemsToCheck);
 
 lbClear (_display displayCtrl IDC_rightTabContentListnBox);
 lbClear (_display displayCtrl IDC_rightTabContent);
@@ -160,3 +163,18 @@ switch (_ctrlIDC) do {
 };
 
 GVAR(currentRightPanel) = _ctrlIDC;
+
+for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
+    private _currentData = _ctrlPanel lbData _lbIndex;
+
+    if ({_x != "" && {_currentData == _x}} count _itemsToCheck > 0) then {
+        TRACE_1("currentData", _currentData);
+        _ctrlPanel lbSetCurSel _lbIndex;
+    };
+};
+
+if (lbCurSel _ctrlPanel < 0) then {
+    _ctrlPanel lbSetCurSel 0;
+};
+
+

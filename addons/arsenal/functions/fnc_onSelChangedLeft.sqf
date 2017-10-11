@@ -24,22 +24,20 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item == "") then {
 
                 GVAR(center) removeWeapon (primaryWeapon GVAR(center));
-                GVAR(currentItems) set [18, []];
+                GVAR(currentItems) set [18, ["", "", "", ""]];
                 GVAR(currentItems) set [0, _item];
             } else {
 
                 private _compatibleItems = _item call bis_fnc_compatibleItems;
                 [GVAR(center), _item, 4] call bis_fnc_addweapon;
 
-                private _newAccs = [];
                 {
                     if (_x in _compatibleItems) then {
                         GVAR(center) addPrimaryWeaponItem _x;
-                        _newAccs pushBack _x;
                     };
                 } foreach (GVAR(currentItems) select 18);
 
-                GVAR(currentItems) set [18, _newAccs];
+                GVAR(currentItems) set [18, primaryWeaponItems GVAR(center)];
                 GVAR(currentItems) set [0, _item];
             };
         };
@@ -66,22 +64,20 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item == "") then {
 
                 GVAR(center) removeWeapon (handgunWeapon GVAR(center));
-                GVAR(currentItems) set [20, []];
+                GVAR(currentItems) set [20, ["", "", "", ""]];
                 GVAR(currentItems) set [2, _item];
             } else {
 
                 private _compatibleItems = _item call bis_fnc_compatibleItems;
                 [GVAR(center), _item, 3] call bis_fnc_addweapon;
 
-                private _newAccs = [];
                 {
                     if (_x in _compatibleItems) then {
                         GVAR(center) addHandgunItem _x;
-                        _newAccs pushBack _x;
                     };
                 } foreach (GVAR(currentItems) select 20);
 
-                GVAR(currentItems) set [20, _newAccs];
+                GVAR(currentItems) set [20, handgunItems GVAR(center)];
                 GVAR(currentItems) set [2, _item];
             };
         };
@@ -108,22 +104,20 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item == "") then {
 
                 GVAR(center) removeWeapon (secondaryWeapon GVAR(center));
-                GVAR(currentItems) set [19, []];
+                GVAR(currentItems) set [19, ["", "", "", ""]];
                 GVAR(currentItems) set [1, _item];
             } else {
 
                 private _compatibleItems = _item call bis_fnc_compatibleItems;
                 [GVAR(center), _item, 1] call bis_fnc_addweapon;
 
-                private _newAccs = [];
                 {
                     if (_x in _compatibleItems) then {
                         GVAR(center) addSecondaryWeaponItem _x;
-                        _newAccs pushBack _x;
                     };
                 } foreach (GVAR(currentItems) select 19);
 
-                GVAR(currentItems) set [19, _newAccs];
+                GVAR(currentItems) set [19, secondaryWeaponItems GVAR(center)];
                 GVAR(currentItems) set [1, _item];
             };
         };

@@ -13,9 +13,7 @@ private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select 
 private _fnc_selectItem = {
      params ["_item", "_currentItemsIndex", "_itemIndex"];
 
-     LOG("called");
     switch (_currentItemsIndex) do {
-
         case 18: {
             if (_item == "") then {
                 GVAR(center) removePrimaryWeaponItem ((GVAR(currentItems) select 18) select _itemIndex);
@@ -33,18 +31,18 @@ private _fnc_selectItem = {
                 GVAR(currentItems) set [19, secondaryWeaponItems GVAR(center)];
             } else {
                 GVAR(center) addSecondaryWeaponItem _item;
-                GVAR(currentItems) set [18, secondaryWeaponItems GVAR(center)];
+                GVAR(currentItems) set [19, secondaryWeaponItems GVAR(center)];
             };
             [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
         };
 
         case 20: {
             if (_item == "") then {
-                GVAR(center) removeHandgunItem((GVAR(currentItems) select 20) select _itemIndex);
+                GVAR(center) removeHandgunItem ((GVAR(currentItems) select 20) select _itemIndex);
                 GVAR(currentItems) set [20, handgunItems GVAR(center)];
             } else {
                 GVAR(center) addHandgunItem _item;
-                GVAR(currentItems) set [18, handgunItems GVAR(center)];
+                GVAR(currentItems) set [20, handgunItems GVAR(center)];
             };
             [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
         };

@@ -60,13 +60,13 @@ for "_index" from 0 to 15 do {
             {(GVAR(currentItems) select 17) pushBack _x} forEach (backpackItems GVAR(center));
         };
         case 13: {
-            {if (_x != "") then {(GVAR(currentItems) select 18) pushBack _x}} forEach (primaryWeaponItems GVAR(center));
+            GVAR(currentItems) set [18, primaryWeaponItems GVAR(center)];
         };
         case 14: {
-            {if (_x != "") then {(GVAR(currentItems) select 19) pushBack _x}} forEach (secondaryWeaponItems GVAR(center));
+            GVAR(currentItems) set [19, secondaryWeaponItems GVAR(center)];
         };
         case 15: {
-            {if (_x != "") then {(GVAR(currentItems) select 20) pushBack _x}} forEach (handgunItems GVAR(center));
+            GVAR(currentItems) set [20, handgunItems GVAR(center)];
         };
     };
 };
