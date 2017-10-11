@@ -31,8 +31,6 @@ __background ctrlSetText QPATHTOF(UI\dagr_gps.paa);
 if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
-    private ["_dagrElevation", "_dagrGrid", "_dagrHeading", "_dagrSpeed", "_dagrTime", "_elevation", "_gridArray", "_speed"];
-
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
         GVAR(outputPFH) = -1;
@@ -41,30 +39,30 @@ GVAR(outputPFH) = [{
     };
 
     // GRID
-    _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
+    private _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
     _gridArray params ["_gridArrayX","_gridArrayY"];
-    _dagrGrid = format ["%1 %2", ((_gridArrayX) select [0,4]), ((_gridArrayY) select [0,4])];
+    private _dagrGrid = format ["%1 %2", ((_gridArrayX) select [0,4]), ((_gridArrayY) select [0,4])];
 
     // SPEED
-    _speed = speed (vehicle ACE_player);
+    private _speed = speed (vehicle ACE_player);
     _speed = floor (_speed * 10) / 10;
     _speed = abs(_speed);
     _dagrspeed = str _speed + "kph";
 
     // Elevation
-    _elevation = getPosASL ACE_player;
+    private _elevation = getPosASL ACE_player;
     _elevation = floor ((_elevation select 2) + EGVAR(common,mapAltitude));
-    _dagrElevation = str _elevation + "m";
+    private _dagrElevation = str _elevation + "m";
 
     // Heading
-    _dagrHeading = if (!GVAR(useDegrees)) then {
+    private _dagrHeading = if (!GVAR(useDegrees)) then {
         floor (DEG_TO_MIL(direction (vehicle ACE_player)))
     } else {
         floor (direction (vehicle ACE_player))
     };
 
     // Time
-    _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
+    private _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
 
     // Output
     __gridControl ctrlSetText format ["%1", _dagrGrid];

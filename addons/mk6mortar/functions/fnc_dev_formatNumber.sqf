@@ -17,14 +17,10 @@
  */
 #include "script_component.hpp"
 
-private ["_theNumber", "_inputType", "_convertToMils", "_decimalPlaces", "_integerPlaces", "_prefix", "_return"];
+params ["_theNumber", "_inputType", "_convertToMils"];
 
-_theNumber = _this select 0;
-_inputType = _this select 1;
-_convertToMils = _this select 2;
-
-_decimalPlaces = -1;
-_integerPlaces = -1;
+private _decimalPlaces = -1;
+private _integerPlaces = -1;
 
 switch (toLower _inputType) do {
 case ("meters"): {
@@ -73,8 +69,8 @@ case ("sec"): {
 
 //CBA_fnc_formatNumber is silly:  [-9.58545, 1, 1, false] call CBA_fnc_formatNumber == "-9.-6"
 
-_prefix = if (_theNumber < 0) then {"-"} else {""};
+private _prefix = if (_theNumber < 0) then {"-"} else {""};
 
-_return = [abs (_theNumber), _integerPlaces, _decimalPlaces, false] call CBA_fnc_formatNumber;
+private _return = [abs (_theNumber), _integerPlaces, _decimalPlaces, false] call CBA_fnc_formatNumber;
 
 (_prefix + _return)

@@ -28,12 +28,11 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
 };
 
 params [["_addModes",[],[[]]], ["_removeModes",[],[[]]]];
-private ["_newModes","_currentModes"];
 
-_currentModes = GVAR(availableModes);
+private _currentModes = GVAR(availableModes);
 
 // Restrict additions to only possible values
-_newModes = _addModes arrayIntersect ALL_MODES;
+private _newModes = _addModes arrayIntersect ALL_MODES;
 _newModes append (_currentModes - _removeModes);
 
 _newModes = _newModes arrayIntersect _newModes;

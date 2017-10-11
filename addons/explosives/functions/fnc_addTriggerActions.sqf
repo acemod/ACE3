@@ -19,16 +19,14 @@
 params ["_magazine", "_explosive"];
 TRACE_2("params",_magazine,_explosive);
 
-private ["_hasRequiredItems","_triggerTypes", "_children", "_detonators", "_required", "_magTriggers", "_isAttached"];
-
-_isAttached = !isNull (attachedTo _explosive);
-_detonators = [ACE_player] call FUNC(getDetonators);
-_triggerTypes = [_magazine] call FUNC(triggerType);
-_magTriggers = ConfigFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers";
-_children = [];
+private _isAttached = !isNull (attachedTo _explosive);
+private _detonators = [ACE_player] call FUNC(getDetonators);
+private _triggerTypes = [_magazine] call FUNC(triggerType);
+private _magTriggers = ConfigFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers";
+private _children = [];
 {
-    _required = getArray (_x >> "requires");
-    _hasRequiredItems = true;
+    private _required = getArray (_x >> "requires");
+    private _hasRequiredItems = true;
     {
         if !(_x in _detonators) exitWith {
             _hasRequiredItems = false;

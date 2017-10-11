@@ -15,17 +15,15 @@
  */
 #include "script_component.hpp"
 
-private ["_weaponIndex", "_adjustment", "_zeroing"];
-
 params ["_unit"];
 
 if (vehicle _unit != _unit) exitWith {false};
 
-_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
 
-_adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
-_zeroing = _adjustment select _weaponIndex;
+private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
+private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
 _zero = round((_zero + _elevation) * 10) / 10;

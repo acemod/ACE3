@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]],["_unit", objNull, [objNull]]];
+params ["_truck", "_unit"];
 TRACE_2("readSupplyCounter",_truck,_unit);
 
 if (GVAR(supply) == 0) exitWith {WARNING("Supply is unlimited");};
@@ -31,7 +31,7 @@ if (GVAR(supply) == 1) then {
             if (_supplyCount > 0 ) then {
                 [[LSTRING(Hint_RemainingSupplyPoints), _supplyCount], 2, _unit] call EFUNC(common,displayTextStructured);
             } else {
-                [LSTRING(Hint_EmptySupplyPoints), 2, _unit] call EFUNC(common,displayTextStructured);
+                [LSTRING(Hint_Empty), 2, _unit] call EFUNC(common,displayTextStructured);
             };
             true
         },

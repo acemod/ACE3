@@ -23,9 +23,7 @@ call FUNC(applyDirtEffect);
 
 if (GETBROKEN) exitWith {true};
 
-private ["_config", "_effects"];
-
-_config = configFile >> "CfgGlasses" >> goggles _unit;
+private _config = configFile >> "CfgGlasses" >> goggles _unit;
 
 if ((_this select 1) call FUNC(GetExplosionIndex) < getNumber (_config >> "ACE_Resistance")) exitWith {true};
 
@@ -34,7 +32,7 @@ if !([_unit] call FUNC(isGogglesVisible)) exitWith {
     true
 };
 
-_effects = GETGLASSES(_unit);
+private _effects = GETGLASSES(_unit);
 _effects set [BROKEN, true];
 
 SETGLASSES(_unit,_effects);

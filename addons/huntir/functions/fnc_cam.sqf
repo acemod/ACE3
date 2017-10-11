@@ -135,22 +135,20 @@ GVAR(no_cams) sort true;
         };
     };
 
-    private ["_cam_coord_y", "_cam_coord_x", "_cam_time", "_cam_pos"];
-
     GVAR(logic) setPosATL (GVAR(pos) vectorAdd [0, 0, -5]);
     GVAR(logic) setDir GVAR(ROTATE);
     GVAR(logic) setVectorUp [0.0001, 0.0001, 1];
     GVAR(cam) CameraEffect ["internal", "BACK"];
-    _cam_coord_y = GVAR(ELEVAT) * cos(GVAR(ROTATE));
-    _cam_coord_x = GVAR(ELEVAT) * sin(GVAR(ROTATE));
+    private _cam_coord_y = GVAR(ELEVAT) * cos(GVAR(ROTATE));
+    private _cam_coord_x = GVAR(ELEVAT) * sin(GVAR(ROTATE));
     GVAR(cam) camSetRelPos [_cam_coord_x, _cam_coord_y, 2];
     GVAR(cam) camCommit 0;
 
     ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
     ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
-    _cam_time = CBA_missionTime - (GVAR(huntIR) getVariable [QGVAR(startTime), CBA_missionTime]);
+    private _cam_time = CBA_missionTime - (GVAR(huntIR) getVariable [QGVAR(startTime), CBA_missionTime]);
     ctrlSetText [3, format["%1 s", round(_cam_time)]];
-    _cam_pos = getPosVisual GVAR(huntIR);
+    private _cam_pos = getPosVisual GVAR(huntIR);
     _cam_pos = format ["X = %1, Y = %2", round (_cam_pos select 0), round (_cam_pos select 1)];
     ctrlSetText [5, _cam_pos];
     ctrlSetText [6, ""];

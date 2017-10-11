@@ -108,10 +108,10 @@
             <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
             <Czech>Rallypoint Západ (Základna)</Czech>
             <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
-            <Japanese>ラリーポイント ウエスト (ベース)</Japanese>
-            <Korean>서쪽 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント 同盟軍 (ベース)</Japanese>
             <Chinesesimp>蓝方集合点 (基地)</Chinesesimp>
             <Chinese>藍方集合點 (基地)</Chinese>
+            <Korean>청군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -124,10 +124,10 @@
             <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
             <Czech>Ralllypoint Východ (Základna)</Czech>
             <Portuguese>Ponto de encontro Lest (Base)</Portuguese>
-            <Japanese>ラリーポイント イースト (ベース)</Japanese>
-            <Korean>동쪽 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント OPFOR軍 (ベース)</Japanese>
             <Chinesesimp>红方集合点 (基地)</Chinesesimp>
             <Chinese>紅方集合點 (基地)</Chinese>
+            <Korean>대항군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -140,10 +140,10 @@
             <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
             <Czech>Rallypoint Nezávislý (Základna)</Czech>
             <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
-            <Japanese>ラリーポイント インデペンデント (ベース)</Japanese>
-            <Korean>독립 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント 独立軍 (ベース)</Japanese>
             <Chinesesimp>独立方集合点 (基地)</Chinesesimp>
             <Chinese>獨立方集合點 (基地)</Chinese>
+            <Korean>독립군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -156,10 +156,10 @@
             <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
             <Czech>Rallypoint Západ</Czech>
             <Portuguese>Ponto de encontro Oeste</Portuguese>
-            <Japanese>ラリーポイント ウエスト</Japanese>
-            <Korean>서쪽 집결지</Korean>
+            <Japanese>ラリーポイント 同盟軍</Japanese>
             <Chinesesimp>蓝方集合点</Chinesesimp>
             <Chinese>藍方集合點</Chinese>
+            <Korean>청군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -172,10 +172,10 @@
             <Hungarian>Gyülekezőpont, Kelet</Hungarian>
             <Czech>Rallypoint Východ</Czech>
             <Portuguese>Ponto de encontro Leste</Portuguese>
-            <Japanese>ラリーポイント イースト</Japanese>
-            <Korean>동쪽 집결지</Korean>
+            <Japanese>ラリーポイント OPFOR軍</Japanese>
             <Chinesesimp>红方集合点</Chinesesimp>
             <Chinese>紅方集合點</Chinese>
+            <Korean>대항군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -188,10 +188,10 @@
             <Hungarian>Gyülekezőpont, Független</Hungarian>
             <Czech>Rallypoint Nezávislý</Czech>
             <Portuguese>Ponto de encontro Independente</Portuguese>
-            <Japanese>ラリーポイント インデペンデント</Japanese>
-            <Korean>독립 집결지</Korean>
+            <Japanese>ラリーポイント 独立軍</Japanese>
             <Chinesesimp>独立方集合点</Chinesesimp>
             <Chinese>獨立方集合點</Chinese>
+            <Korean>독립군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
