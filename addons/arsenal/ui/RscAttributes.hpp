@@ -38,6 +38,21 @@ class GVAR(display) {
         };
     };
     class controls {
+        class ArrowLeft: RscButton {
+            idc = IDC_arrowMinus;
+            text = "-";
+            colorBackground[]={0,0,0,0.8};
+            fade = 1;
+            enable = 0;
+            x = 0.5;
+            y = 0.5;
+            w = QUOTE(1 * GRID_W);
+            h = QUOTE(1 * GRID_H);
+        };
+        class ArrowRight: ArrowLeft {
+            idc = IDC_arrowPlus;
+            text="+";
+        };
         class blockLeftFrame: RscFrame {
             idc = IDC_blockLeftFrame;
             x = QUOTE(safezoneX + 14 * GRID_W);
@@ -253,6 +268,8 @@ class GVAR(display) {
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
             columns[]={0.07, 0.17, 0.75};
+            idcLeft = IDC_arrowMinus;
+            idcRIght = IDC_arrowPlus;
             drawSideArrows=1;
             disableOverflow=1;
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRightListnBox));

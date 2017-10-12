@@ -6,6 +6,8 @@
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
+#define IDC_arrowMinus 501
+#define IDC_arrowPlus 502
 #define IDC_blockLeftFrame 1
 #define IDC_blockLeftBackground 2
 #define IDC_blockRightFrame 3
@@ -101,6 +103,7 @@
 #define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc
 #define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
 #define RIGHT_PANEL_REMOVE_IDCS IDC_buttonRemoveAllSelected, IDC_buttonRemoveAll
+#define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
 #define GETDLC\
     {\
@@ -187,7 +190,6 @@
     IDC_tabRight,\
     RIGHT_PANEL_ACC_IDCS,\
     RIGHT_PANEL_ITEMS_IDCS,\
-    RIGHT_PANEL_REMOVE_IDCS,\
     IDC_rightSearchbar\
 ];
 
@@ -206,6 +208,7 @@
     IDC_blockRighttBackground,\
     IDC_loadIndicator,\
     IDC_rightTabContent,\
+    IDC_rightTabContentListnBox,\
     IDC_sortRightTab,\
     RIGHT_PANEL_ACC_BACKGROUND_IDCS,\
     RIGHT_PANEL_ACC_IDCS,\

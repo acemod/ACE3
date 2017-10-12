@@ -50,8 +50,13 @@ private _fnc_fill_right_Container = {
 };
 
 private _compatibleItems = [];
-private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
+_compatibleMagazines = (getArray (configfile >> "cfgweapons" >> primaryWeapon GVAR(center) >> "magazines")) + 
+    (getArray (configfile >> "cfgweapons" >> secondaryWeapon GVAR(center) >> "magazines")) + 
+    (getArray (configfile >> "cfgweapons" >> handgunWeapon GVAR(center) >> "magazines"));
 private _itemsToCheck = [];
+
+private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
+
 switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonPrimaryWeapon : {
       _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
@@ -63,16 +68,15 @@ switch (GVAR(currentLeftPanel)) do {
     };
     case IDC_buttonSecondaryWeapon : {
         _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        
         _itemsToCheck = GVAR(currentItems) select 19;
     };
-    case IDC_iconBackgroundUniform;
+    case IDC_buttonUniform;
     case IDC_buttonVest;
     case IDC_buttonBackpack : {
         _ctrlPanel = _display displayCtrl IDC_rightTabContentListnBox;
     };
 };
-
-TRACE_1("itemsToCheck", _itemsToCheck);
 
 lbClear (_display displayCtrl IDC_rightTabContentListnBox);
 lbClear (_display displayCtrl IDC_rightTabContent);
@@ -142,27 +146,63 @@ switch (_ctrlIDC) do {
     };
 
     case IDC_buttonMag : {
-
+        {
+            private _config = configfile >> "CfgMagazines" >> _x;
+            if (_x in _compatibleMagazines) then {
+                [_config] call _fnc_fill_right_Container;
+            };
+        } foreach (GVAR(virtualItems) select 2);
     };
 
     case IDC_buttonMagALL : {
-
+        {
+            private _config = configfile >> "CfgMagazines" >> _x;
+            [_config] call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 2);
     };
 
     case IDC_buttonThrow : {
-
+        {
+            private _config = configfile >> "CfgMagazines" >> _x;
+            [_config] call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 15);
     };
 
     case IDC_buttonPut : {
-
+        {
+            private _config = configfile >> "CfgMagazines" >> _x;
+            [_config] call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 16);
     };
 
     case IDC_buttonMisc : {
-
+        {
+            private _config = configfile >> "CfgWeapons" >> _x;
+            [_config] call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 17);
     };
 };
 
 GVAR(currentRightPanel) = _ctrlIDC;
+
+if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
+    private _container = switch (GVAR(currentLeftPanel)) do {
+        case IDC_buttonUniform : {
+            GVAR(currentItems) select 15
+        };
+        case IDC_buttonVest : {
+            GVAR(currentItems) select 16
+        };
+        case IDC_buttonBackpack : {
+            GVAR(currentItems) select 17
+        };
+    };
+
+    for "_l" from 0 to (lbsize _ctrlPanel - 1) do {
+        private _class = _ctrlPanel lnbData [_l, 0];
+        _ctrlPanel lnbSetText [[_l, 2],str ({_x == _class} count _container)];
+    };
+};
 
 for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
     private _currentData = _ctrlPanel lbData _lbIndex;
@@ -176,5 +216,3 @@ for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
 if (lbCurSel _ctrlPanel < 0) then {
     _ctrlPanel lbSetCurSel 0;
 };
-
-
