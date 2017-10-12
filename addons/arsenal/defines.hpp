@@ -14,7 +14,7 @@
 #define IDC_blockRighttBackground 4
 #define IDC_loadIndicator 5
 #define IDC_totalWeight 300
-#define IDC_totalWeight 301
+#define IDC_totalWeightText 301
 #define IDC_message 6
 #define IDC_menuBar 7
 #define IDC_menuBarBackground 8

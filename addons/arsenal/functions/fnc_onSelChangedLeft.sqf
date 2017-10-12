@@ -368,3 +368,5 @@ switch (GVAR(currentLeftPanel)) do {
         [_display, _control, _curSel, (configFile >> "CfgUnitInsignia" >> _item)] call FUNC(itemInfo);
     };
 };
+
+(_display displayCtrl IDC_totalWeightText) ctrlSetText (format ["Total Weight: %1", GVAR(center) call EFUNC(movement,getWeight])); // TBL

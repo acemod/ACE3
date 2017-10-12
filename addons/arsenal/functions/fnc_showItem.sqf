@@ -26,7 +26,9 @@ switch (GVAR(currentLeftPanel)) do {
         _nextAction = ["Civil", "Binoculars"] select (GVAR(currentItems) select 9 != "");
     };
     case IDC_buttonInsigna : {
-        _nextAction = "Salute";
+        if ((animationState GVAR(center)) find "salute" == -1) then {
+            _nextAction = "Salute";
+        };
     };
     case IDC_buttonVoice : {
         GVAR(center) directSay "CuratorObjectPlaced";

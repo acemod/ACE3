@@ -127,7 +127,7 @@ class GVAR(display) {
                 };
                 class totalWeightText: RscText {
                     idc = IDC_totalWeightText;
-                    text = "Total weight: 40Kg"
+                    text = "";
                     x = 0;
                     y = 0;
                     w = QUOTE(50 * GRID_W);
