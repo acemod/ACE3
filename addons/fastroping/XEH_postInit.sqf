@@ -10,6 +10,8 @@
 
 // Keybinds
 ["ACE3 Vehicles", QGVAR(fastRope), localize LSTRING(Interaction_fastRope), {
+    if ((vehicle ACE_player) == player) exitWith {false};
+    if (!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))) exitWith {false};
     if ([ACE_player, vehicle ACE_player] call FUNC(canFastRope)) then {
         [ACE_player, vehicle ACE_player] call FUNC(fastRope);
         true
@@ -19,6 +21,8 @@
 }, ""] call CBA_fnc_addKeybind;
 
 ["ACE3 Vehicles", QGVAR(cutRopes), localize LSTRING(Interaction_cutRopes), {
+    if ((vehicle ACE_player) == player) exitWith {false};
+    if (!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))) exitWith {false};
     if ([vehicle ACE_player] call FUNC(canCutRopes)) then {
         [vehicle ACE_player] call FUNC(cutRopes);
         true
