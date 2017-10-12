@@ -664,8 +664,8 @@ class GVAR(display) {
             tooltip="Remove all selected items"; //TBL
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE(hint str _this);
-            //fade=1;
-            //enable=0;
+            fade=1;
+            enable=0;
             x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 45 * GRID_H);
             w = QUOTE(9 * GRID_W);

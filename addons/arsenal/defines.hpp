@@ -1,7 +1,7 @@
 // Pixel grid
-#define pixelScale  0.50
-#define GRID_W (pixelW * pixelGrid * pixelScale)
-#define GRID_H (pixelH * pixelGrid * pixelScale)
+#define pixelScale  0.25
+#define GRID_W (pixelW * pixelGridNoUIScale * pixelScale)
+#define GRID_H (pixelH * pixelGridNoUIScale * pixelScale)
 
 // IDCs
 #define IDD_ace_arsenal 1127001
