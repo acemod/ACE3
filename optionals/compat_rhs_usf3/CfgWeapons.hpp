@@ -6,8 +6,10 @@ class CfgWeapons {
         EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
         EGVAR(nightvision,bluRadius) = 0.13;
     };
-    class rhsusf_ANPVS_15: NVGoggles { // Binocular (same as base)
-        modelOptics = "";
+    class rhsusf_ANPVS_15: rhsusf_ANPVS_14 { // Binocular (same as base)
+        modelOptics = "";        
+        EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_binos_4096.paa);
+        EGVAR(nightvision,bluRadius) = 0.15;
     };
 
     class Pistol_Base_F;
