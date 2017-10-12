@@ -30,4 +30,5 @@ _cswTripod setPosATL _posATL;
 _cswTripod setDir (direction _player);
 _cswTripod setVectorUp (surfaceNormal _tripodPos);
 
+[QGVAR(addObjectToServer), [_cswTripod]] call CBA_fnc_serverEvent;
 [_player, "PutDown"] call EFUNC(common,doGesture);

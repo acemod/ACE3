@@ -96,7 +96,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -138,7 +138,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -180,7 +180,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -222,7 +222,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -264,7 +264,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -306,7 +306,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -348,7 +348,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -390,7 +390,7 @@ class CfgVehicles {
 						selection = "";
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
-						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};

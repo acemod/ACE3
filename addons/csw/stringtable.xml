@@ -109,5 +109,17 @@
 		<Key ID="STR_ACE_CSW_DummyMagazine_displayName">
             <English>Dummy Magazine (SHOULD NOT SEE THIS)</English>
         </Key>
+		<Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
+            <English>Disassembling Gun...</English>
+        </Key>
+		<Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
+            <English>Assembling Gun...</English>
+        </Key>
+		<Key ID="STR_ACE_CSW_LoadingAmmo_progressBar">
+            <English>Loading Ammo...</English>
+        </Key>
+		<Key ID="STR_ACE_CSW_UnloadingAmmo_progressBar">
+            <English>Unloading Ammo...</English>
+        </Key>
 	</Package>
 </Project>

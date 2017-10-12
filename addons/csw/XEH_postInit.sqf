@@ -1,5 +1,19 @@
 #include "script_component.hpp"
 
+if (isServer) then {
+	[QGVAR(addObjectToServer), {
+		params["_object"];
+		_object setOwner 2;
+    }] call CBA_fnc_addEventHandler;
+};
+
+[QGVAR(addCSWAmmo), {
+	params["_object", "_weapon", "_ammo"];
+	if (local _object) then {
+		_object setAmmo[_weapon, _ammo];
+	}
+}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 GVAR(cswTripod) = objNull;
