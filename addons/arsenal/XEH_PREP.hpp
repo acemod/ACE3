@@ -1,4 +1,5 @@
 PREP(addVirtualItems);
+PREP(buttonCargo);
 PREP(buttonExport);
 PREP(buttonHide);
 PREP(buttonImport);

@@ -3,11 +3,12 @@
 #include "..\defines.hpp"
 
 class GVAR(display) {
-    idd = 1127001;
+    idd = IDD_ace_arsenal;
     enableSimulation=1;
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(display))] call FUNC(onArsenalOpen));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(display))] call FUNC(onArsenalClose));
     onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onKeyDown));
+    onKeyUp = QUOTE(GVAR(shiftState) = _this select 2);
     onMouseButtonDown = QUOTE([ARR_3('onMouseButtonDown', _this, QQGVAR(display))] call FUNC(onMouseButtonDown));
     onMouseButtonUp = QUOTE([ARR_3('onMouseButtonUp', _this, QQGVAR(display))] call FUNC(onMouseButtonUp));
     icon="\A3\Ui_f\data\Logos\a_64_ca.paa";
@@ -42,6 +43,7 @@ class GVAR(display) {
             idc = IDC_arrowMinus;
             text = "-";
             colorBackground[]={0,0,0,0.8};
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), -1)] call FUNC(buttonCargo));
             fade = 1;
             enable = 0;
             x = 0.5;
@@ -51,6 +53,7 @@ class GVAR(display) {
         };
         class ArrowRight: ArrowLeft {
             idc = IDC_arrowPlus;
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), 1)] call FUNC(buttonCargo));
             text="+";
         };
         class blockLeftFrame: RscFrame {
@@ -58,7 +61,7 @@ class GVAR(display) {
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);
-            h = QUOTE(safezoneH - 22 * GRID_H);
+            h = QUOTE(safezoneH - 24 * GRID_H);
             colorText[] = {0,0,0,1};
         };
         class blockLeftBackground: ctrlStaticBackground {
@@ -66,30 +69,72 @@ class GVAR(display) {
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);
-            h = QUOTE(safezoneH - 22 * GRID_H);
+            h = QUOTE(safezoneH - 24 * GRID_H);
             colorBackground[] = {0,0,0,0.5};
         };
         class blockRightFrame: blockLeftFrame {
             idc = IDC_blockRightFrame;
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
-            h = QUOTE(safezoneH - 116 * GRID_H);
+            h = QUOTE(safezoneH - 38 * GRID_H);
         };
         class blockRighttBackground: blockLeftBackground {
             idc = IDC_blockRighttBackground;
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
-            h = QUOTE(safezoneH - 116 * GRID_H);
+            h = QUOTE(safezoneH - 38 * GRID_H);
         };
-        class loadIndicator: ctrlProgress {
+        class loadIndicator: RscControlsGroupNoScrollbars {
             idc = IDC_loadIndicator;
-            fade = 0;
-            style = 0;
-            texture = "#(argb,8,8,3)color(1,1,1,1)";
-            colorBar[] = {1,1,1,1};
-            colorFrame[] = {0,0,0,1};
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
-            y = QUOTE(safeZoneH + safezoneY - 108 * GRID_H);
+            y = QUOTE(safeZoneH + safezoneY - 24 * GRID_H);
             w = QUOTE(70 * GRID_W);
             h = QUOTE(6 * GRID_H);
+            class controls {
+                class loadIndicatorBackground: ctrlStaticBackground {
+                    idc = -1;
+                    colorBackground[] = {0,0,0,0.5};
+                    x = 0;
+                    y = 0;
+                    w = QUOTE(70 * GRID_W);
+                    h = QUOTE(6 * GRID_H);
+                };
+                class loadIndicatorBar: ctrlProgress {
+                    idc = 1000;
+                    style = 0;
+                    texture = "#(argb,8,8,3)color(1,1,1,1)";
+                    colorBar[] = {1,1,1,1};
+                    colorFrame[] = {0,0,0,1};
+                    x = 0;
+                    y = 0;
+                    w = QUOTE(70 * GRID_W);
+                    h = QUOTE(6 * GRID_H);
+                };
+            };
+        };
+        class totalWeight: RscControlsGroupNoScrollbars {
+            idc = 1001;
+            x = QUOTE(safezoneX + 14 * GRID_W);
+            y = QUOTE(safeZoneH + safezoneY - 9 * GRID_H);
+            w = QUOTE(70 * GRID_W);
+            h = QUOTE(7 * GRID_H);
+            class controls {
+                class totalWeightBackground: ctrlStaticBackground {
+                    idc = -1;
+                    colorBackground[] = {0,0,0,0.8};
+                    x = 0;
+                    y = 0;
+                    w = QUOTE(70 * GRID_W);
+                    h = QUOTE(7 * GRID_H);
+                };
+                class totalWeightText: RscText {
+                    idc = 1002;
+                    text = "Total weight: 40Kg"
+                    x = 0;
+                    y = 0;
+                    w = QUOTE(70 * GRID_W);
+                    h = QUOTE(7 * GRID_H);
+                    sizeEx = QUOTE(7 * GRID_H);
+                };
+            };
         };
         class message: RscText {
             idc = IDC_message;
@@ -107,7 +152,7 @@ class GVAR(display) {
         class menuBar: RscControlsGroupNoScrollbars {
             idc = IDC_menuBar;
             x = QUOTE(safezoneX + safezoneW * 0.50 - 75 * GRID_W);
-            y = QUOTE(safezoneH + safezoneY - 10 * GRID_H);
+            y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(150 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
@@ -247,7 +292,7 @@ class GVAR(display) {
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);
-            h = QUOTE(safezoneH - 22 * GRID_H);
+            h = QUOTE(safezoneH - 24 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
         class rightTabContent: leftTabContent {
@@ -256,7 +301,7 @@ class GVAR(display) {
             disableOverflow=1;
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRight));
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
-            h = QUOTE(safezoneH - 122.5 * GRID_H);
+            h = QUOTE(safezoneH - 38 * GRID_H);
         };
         class rightTabContentListnBox : RscListNBox {
             idc = IDC_rightTabContentListnBox;
@@ -276,7 +321,7 @@ class GVAR(display) {
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(70 * GRID_W);
-            h = QUOTE(safezoneH - 122.5 * GRID_H);
+            h = QUOTE(safezoneH - 38 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
         class sortLeftTab: ctrlCombo {
@@ -619,10 +664,10 @@ class GVAR(display) {
             tooltip="Remove all selected items"; //TBL
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE(hint str _this);
-            fade=1;
-            enable=0;
-            x = QUOTE(safezoneX + safezoneW - 94 * GRID_W);
-            y = QUOTE(safeZoneH + safezoneY - 121 * GRID_H);
+            //fade=1;
+            //enable=0;
+            x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
+            y = QUOTE(safeZoneH + safezoneY - 45 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
         };
@@ -630,7 +675,7 @@ class GVAR(display) {
             idc = IDC_buttonRemoveAll;
             tooltip="Remove all items from the container"; //TBL
             colorBackground[]={0,0,0,0.5};
-            y = QUOTE(safeZoneH + safezoneY - 111 * GRID_H);
+            y = QUOTE(safeZoneH + safezoneY - 35 * GRID_H);
         };
     };
 };

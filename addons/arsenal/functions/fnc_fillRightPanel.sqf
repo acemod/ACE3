@@ -185,6 +185,7 @@ switch (_ctrlIDC) do {
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
+// Add current items in those containers
 if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
     private _container = switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonUniform : {
@@ -202,8 +203,11 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
         private _class = _ctrlPanel lnbData [_l, 0];
         _ctrlPanel lnbSetText [[_l, 2],str ({_x == _class} count _container)];
     };
+
+    (_display displayCtrl 1000) progressSetPosition 0.64;
 };
 
+// Select current data if not in a container
 for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
     private _currentData = _ctrlPanel lbData _lbIndex;
 

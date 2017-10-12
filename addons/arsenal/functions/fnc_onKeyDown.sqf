@@ -7,6 +7,8 @@ _args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState
 
 TRACE_3("searchbar state", GVAR(searchbarFocus), _keyPressed, DIK_BACKSPACE);
 
+GVAR(shiftState) = _shiftState;
+
 private _return = true;
 switch true do { 
     // Close button

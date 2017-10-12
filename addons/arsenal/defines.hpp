@@ -185,6 +185,7 @@
 } foreach [\
     IDC_blockRightFrame, \
     IDC_blockRighttBackground,\
+    IDC_loadIndicator,\
     IDC_rightTabContentListnBox,\
     IDC_sortRightTab,\
     IDC_tabRight,\
