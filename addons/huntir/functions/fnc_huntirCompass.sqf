@@ -32,9 +32,7 @@ disableSerialization;
 #define __CENTER_X 0.70
 #define __CENTER_Y 0.65
 
-private ["_fnc_correctIt"];
-
-_fnc_correctIt = {
+private _fnc_correctIt = {
     params ["_pos", "_dir"];
     if (_dir >= 270 || {_dir <= 90}) then {
         _pos set [1, (_pos select 1) + __OFFSET_Y]
@@ -62,12 +60,11 @@ HUNTIR_CAM_ROSE_LAYER_ID cutRsc [QGVAR(cam_rose), "PLAIN"];
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
-    private ["_dir", "_x1", "_y1", "_pos"];
-    _dir = getDir GVAR(cam); // direction player;
+    private _dir = getDir GVAR(cam); // direction player;
 
-    _x1 = __CENTER_X - (__RADIUS * sin(_dir));
-    _y1 = __CENTER_Y - (__RADIUS * cos(_dir));
-    _pos = [[_x1, _y1], _dir] call _fnc_correctIt;
+    private _x1 = __CENTER_X - (__RADIUS * sin(_dir));
+    private _y1 = __CENTER_Y - (__RADIUS * cos(_dir));
+    private _pos = [[_x1, _y1], _dir] call _fnc_correctIt;
     __CHAR_N ctrlSetPosition [_pos select 0, _pos select 1, __WIDTH, __HEIGHT];
     __CHAR_N ctrlCommit 0;
 

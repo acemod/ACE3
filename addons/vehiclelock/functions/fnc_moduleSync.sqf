@@ -25,11 +25,9 @@ TRACE_3("params",_logic,_syncedObjects,_activated);
 if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not active");};
 
 [{
-    private ["_listOfVehicles"];
-
     params ["_syncedObjects"];
 
-    _listOfVehicles = [];
+    private _listOfVehicles = [];
     {
         if ((_x isKindOf "Car") || (_x isKindOf "Tank") || (_x isKindOf "Helicopter")) then {
             _listOfVehicles pushBack _x;

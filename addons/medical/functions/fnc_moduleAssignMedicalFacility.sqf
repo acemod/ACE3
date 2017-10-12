@@ -18,11 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_setting", "_objects"];
 params [["_logic", objNull, [objNull]]];
 if (!isNull _logic) then {
-    _setting = _logic getVariable ["class",0];
-    _objects = synchronizedObjects _logic;
+    private _setting = _logic getVariable ["class",0];
+    private _objects = synchronizedObjects _logic;
     {
         if (local _x) then {
             _x setVariable[QGVAR(isMedicalFacility), true, true];

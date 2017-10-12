@@ -256,6 +256,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
             <English>Update Editable Objects</English>
+            <German>Aktualisiere bearbeitbare Objekte</German>
             <Japanese>編集可能なオブジェクトを更新</Japanese>
             <Polish>Aktualizuj edytowalne obiekty</Polish>
             <Korean>수정 가능한 물체 갱신</Korean>
@@ -266,6 +267,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
             <English>All Curators</English>
+            <German>Alle Zeus'</German>
             <Japanese>全キュレーター</Japanese>
             <Korean>모든 큐레이터</Korean>
             <Polish>Wszyscy kuratorzy</Polish>
@@ -276,6 +278,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators_desc">
             <English>Apply changes to all curators</English>
+            <German>Änderungen bei allen Zeus' aktualisieren</German>
             <Japanese>全キュレーターへ変更を適用</Japanese>
             <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
@@ -286,6 +289,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal">
             <English>Remove Objects</English>
+            <German>Entferne Objekte</German>
             <Japanese>オブジェクトの削除</Japanese>
             <Korean>물체 삭제</Korean>
             <Polish>Usuń obiekty</Polish>
@@ -296,6 +300,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
             <English>Remove existing instead of adding new</English>
+            <German>Entfernt Bestehendes, statt Neues hinzuzufügen</German>
             <Japanese>新しく追加するために削除します</Japanese>
             <Korean>물체를 삭제합니다</Korean>
             <Polish>Usuń istniejące zamiast dodawać nowe</Polish>
@@ -517,6 +522,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddOrRemoveFRIES_DisplayName">
             <English>Add/Remove FRIES</English>
+            <German>FRIES Hinzufügen/Entfernen</German>
             <Japanese>FRIES の追加と削除</Japanese>
             <Korean>패스트로프 추가/제거</Korean>
             <Polish>Dodaj/usuń FRIES</Polish>
@@ -527,6 +533,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
+            <German>%1 ist nicht FRIES-kompatibel.</German>
             <Japanese>%1 はファストロープに対応していません。</Japanese>
             <Korean>%1은 패스트로프하기에 적합하지 않습니다.</Korean>
             <Polish>%1 nie jest kompatybilny ze zjazdem linowym.</Polish>
@@ -537,6 +544,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
+            <German>FRIES kann nicht entfernt werden, noch in Benutzung</German>
             <Japanese>すでにロープが展開されているため、FRIES を削除できません。</Japanese>
             <Korean>패스트로프 제거 불가능, 줄이 이미 배치되었습니다.</Korean>
             <Polish>Nie można usunąć FRIES, liny są wypuszczone.</Polish>
@@ -699,6 +707,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSimulation_DisplayName">
             <English>Toggle Simulation</English>
+            <German>Ändere Simulation</German>
             <Polish>Przełącz symulację</Polish>
             <Japanese>シミュレーションを切り替え</Japanese>
             <Korean>재현 토글</Korean>
@@ -1010,6 +1019,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
             <English>Suppressive Fire</English>
+            <German>Unterdrückungsfeuer</German>
             <Italian>Fuoco di Soppressione</Italian>
             <French>Tir de suppression</French>
             <Japanese>制圧射撃</Japanese>
@@ -1019,6 +1029,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
             <English>Add Full Arsenal</English>
+            <German>Füge ganzes Arsenal hinzu</German>
             <French>Ajouter Arsenal Complet</French>
             <Italian>Aggiungi Arsenale Completo</Italian>
             <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
@@ -1028,6 +1039,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveArsenal_DisplayName">
             <English>Remove Arsenal</English>
+            <German>Entferne Arsenal</German>
             <French>Retirer Arsenal</French>
             <Italian>Rimuovi Arsenale</Italian>
             <Japanese>オブジェクトからアーセナルを削除</Japanese>
@@ -1037,62 +1049,112 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
+            <German>In Frachtraum laden</German>
             <Italian>Carica nel Cargo</Italian>
             <Japanese>カーゴに積み込み</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
+            <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Basculer JVN</French>
             <Italian>Attiva NVGs</Italian>
             <Japanese>暗視装置の切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
             <English>NVG equipment</English>
+            <German>Nachtsichtgeräte</German>
             <French>Equipment de vision nocturne</French>
             <Italian>Attrezzatura NVG</Italian>
             <Japanese>暗視装置</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
             <English>Add or remove NVGs from units</English>
+            <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Ajouter ou retirer JVN des unités</French>
             <Italian>Aggiunge o rimuove NVGs alle unità</Italian>
             <Japanese>ユニットから暗視装置の追加と削除</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
             <English>Toggle NVG target</English>
+            <German>Wechsle Nachtsichtgeräteziel</German>
             <French>Cible du basculement</French>
             <Italian>Attiva obiettivo NVG</Italian>
             <Japanese>選択先の暗視装置の切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
             <English>Selected group</English>
+            <German>Ausgewählte Gruppe</German>
             <French>Groupe sélectionné</French>
             <Italian>Gruppo selezionato</Italian>
             <Japanese>選択されたグループ</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
             <English>Toggle flashlights</English>
+            <German>Ändere Taschenlampen</German>
             <French>Basculer lampes torches</French>
             <Italian>Attiva torce</Italian>
             <Japanese>フラッシュライトの切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
             <English>Toggle flashlight target</English>
+            <German>Wechsle Nachtsichtgeräteziel</German>
             <French>Cible du basculement</French>
             <Italian>Attiva obiettivo torcia</Italian>
             <Japanese>選択先のフラッシュライトの切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
             <English>Flashlight</English>
+            <German>Taschenlampe</German>
             <French>Lampe torche</French>
             <Italian>Torcia</Italian>
             <Japanese>フラッシュライト</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
             <English>Add gear</English>
+            <German>Ausrüstung hinzufügen</German>
             <French>Ajouter équipement</French>
             <Italian>Aggiungi equipaggiamento</Italian>
             <Japanese>装備を追加</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
+            <English>Garrison group</English>
+            <French>Garnir zone</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
+            <English>Fill from top to bottom</English>
+            <French>Remplir de haut en bas</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
+            <English>Fill buildings from the highest position first</English>
+            <French>Remplir les bâtiments par la position la plus haute d'abord</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
+            <English>Building filling mode</English>
+            <French>Mode de remplissage de bâtiment</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
+            <English>Even filling</English>
+            <French>Remplissage égal</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
+            <English>Building by building</English>
+            <French>Bâtiment par bâtiment</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
+            <English>Random filling</English>
+            <French>Remplir au hasard</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
+            <English>Teleport</English>
+            <French>Téléporter</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyNonPlayer">
+            <English>Unit must not be a player</English>
+            <French>L'unité ne doit pas être un joueur</French>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
+            <English>Un-garrison group</English>
+            <French>Dégarnir zone</French>
         </Key>
     </Package>
 </Project>

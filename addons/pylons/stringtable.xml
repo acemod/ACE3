@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Pylons">
+        <Key ID="STR_ACE_Pylons_AircraftLoadoutTitle">
+            <English>AIRCRAFT LOADOUT</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_LoadoutsFor">
+            <English>Loadouts for %1</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_ConfigurePylons">
+            <English>Configure Pylons</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Category_Pylons">
+            <English>Pylons</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Empty">
+            <English>&lt;empty&gt;</English> <!-- <empty> -->
+        </Key>
+        <Key ID="STR_ACE_Pylons_BannerText">
+            <English>Pylons that are colored red will have to be manually rearmed.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_InUse">
+            <English>%1 is already configuring this aircraft!</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_ReplacingPylon">
+            <English>Replacing pylon %1 out of %2...</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Stopped">
+            <English>Stopped at pylon %1!</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Enabled">
+            <English>Enable Pylons Menu</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_Enabled_description">
+            <English>Enable pylon configuration menu for aircraft.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RearmNewPylons">
+            <English>Rearm New Pylons</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RearmNewPylons_description">
+            <English>Automatically rearm new pylons from the nearest rearm vehicle.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_TimePerPylon">
+            <English>Time Per Pylon</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_TimePerPylon_description">
+            <English>The time it takes to replace each pylon (in seconds).</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_SearchDistance">
+            <English>Search Distance</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_SearchDistance_description">
+            <English>The distance an aircraft needs to be from a rearm vehicle.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireEngineer">
+            <English>Require Engineer</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireEngineer_description">
+            <English>Require an engineer.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireToolkit">
+            <English>Require Toolkit</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_RequireToolkit_description">
+            <English>Require a toolkit in inventory.</English>
+        </Key>
+    </Package>
+</Project>

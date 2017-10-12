@@ -222,7 +222,17 @@ class CfgWeapons {
         lockedTargetSound[] = {"",0,1};
     };
 
-
+    class Launcher_Base_F;
+    class rhs_weap_smaw: Launcher_Base_F {
+        ace_reloadlaunchers_enabled = 1;
+        ace_overpressure_angle = 45;
+    };
+    class rhs_weap_maaws: Launcher_Base_F {
+        ace_reloadlaunchers_enabled = 1;
+        ace_overpressure_range = 15;
+        ace_overpressure_angle = 70;
+        ace_overpressure_damage = 0.75;
+    };
 
     #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
     #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;

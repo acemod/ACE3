@@ -3,6 +3,7 @@
     <Package name="NLAW">
         <Key ID="STR_ACE_NLAW_trackTarget">
             <English>NLAW Track Target (Hold)</English>
+            <German>NLAW Zielverfolgung</German>
             <Italian>NLAW Traccia Bersaglio (Mantieni)</Italian>
             <Japanese>NALW 目標の追跡 (押しっぱ)</Japanese>
             <Chinesesimp>次世代轻型反坦克导弹发射器追踪目标 (按住)</Chinesesimp>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ACE_NLAW_directAttack">
             <English>Direct Attack</English>
+            <German>Direkter Angriff</German>
             <Italian>Attacco Diretto</Italian>
             <Japanese>ダイレクト アタック</Japanese>
             <Chinesesimp>直射模式</Chinesesimp>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
+            <German>Überflugangriff</German>
             <Italian>Attacco dall'alto</Italian>
             <Japanese>オーバーフライ トップ アタック</Japanese>
             <Chinesesimp>攻顶模式</Chinesesimp>
