@@ -6,13 +6,15 @@
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
-#define IDC_arrowMinus 501
-#define IDC_arrowPlus 502
+#define IDC_arrowMinus 200
+#define IDC_arrowPlus 201
 #define IDC_blockLeftFrame 1
 #define IDC_blockLeftBackground 2
 #define IDC_blockRightFrame 3
 #define IDC_blockRighttBackground 4
 #define IDC_loadIndicator 5
+#define IDC_totalWeight 300
+#define IDC_totalWeight 301
 #define IDC_message 6
 #define IDC_menuBar 7
 #define IDC_menuBarBackground 8
@@ -31,7 +33,7 @@
 #define IDC_mouseBlock 43
 #define IDC_leftTabContent 44
 #define IDC_rightTabContent 45
-#define IDC_rightTabContentListnBox 450
+#define IDC_rightTabContentListnBox 400
 #define IDC_sortLeftTab 46
 #define IDC_sortRightTab 47
 #define IDC_leftSearchbar 48
