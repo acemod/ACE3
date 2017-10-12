@@ -1050,7 +1050,7 @@
             <Hungarian>Infúzióra kötve [%1ml]</Hungarian>
             <Italian>Ricevendo EV [%1ml]</Italian>
             <Portuguese>Recebendo IV [%1ml]</Portuguese>
-            <Japanese>IV [%1ml] を投与されている</Japanese>
+            <Japanese>IV で [%1ml] 投与されている</Japanese>
             <Chinesesimp>接收静脉注射液中 [%1ml]</Chinesesimp>
             <Chinese>接收靜脈注射液中 [%1ml]</Chinese>
             <Korean>IV처리 [%1ml] 수혈중</Korean>
@@ -1098,7 +1098,7 @@
             <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale viene applicata su di essa una volta fermata l'emorragia.</Italian>
             <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
-            <Japanese>緊急圧迫包帯は、傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
+            <Japanese>緊急圧迫包帯は傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
@@ -1146,7 +1146,7 @@
             <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
             <Portuguese>Uma bandagem usada para preencher o ferimento para estancar o sangramento e facilitar a cicatrização. Preenchimento de feridas é uma opção em ferimentos de politrauma grandes.</Portuguese>
             <Czech>Tlakový obvaz se skládá se ze sterilní krycí vrstvy, na kterou je přiložena silná vrstva savého materiálu stlačující cévu v ráně a která je přitlačována k ráně a připevněna obinadlem. Slouží k zastavení silnějších krvácení.</Czech>
-            <Japanese>包帯をつかうと出血の原因を取りのぞき、それを促進させます。また大きめな多発性外傷にたいしても使えます。</Japanese>
+            <Japanese>包帯をつかうと出血を防ぎ治療を促進させます。また大きめな多発性外傷にたいしても使えます。</Japanese>
             <Korean>출혈을 막고 상처를 치유하기 위한 붕대. 다발성외상의 경우 상처를 채우는것도 한 가지 방법입니다.</Korean>
             <Chinesesimp>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</Chinese>
@@ -1226,7 +1226,7 @@
             <Italian>Rallenta la perdita di sangue in caso di sanguinamento</Italian>
             <Portuguese>Reduz a velocidade da perda de sangue</Portuguese>
             <Czech>Zpomaluje ztráty krve při krvácení</Czech>
-            <Japanese>出血しているときに、流れ出る量をへらします。</Japanese>
+            <Japanese>出血しているときに、失血量をおさえます。</Japanese>
             <Korean>출혈 시 혈액손실을 늦춰줍니다</Korean>
             <Chinesesimp>减缓失血的速度</Chinesesimp>
             <Chinese>減緩失血的速度</Chinese>
@@ -1367,7 +1367,7 @@
             <Italian>Usato in situazioni con gas nervino.</Italian>
             <Portuguese>Usado em casos de ataque QBRN</Portuguese>
             <Czech>Používá se v přítomnosti nervových plynů</Czech>
-            <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
+            <Japanese>核・生物・化学兵器によ汚染環境下にてつかいます。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰입니다</Korean>
             <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
             <Chinese>使用於核生化汙染的情況</Chinese>
@@ -1543,7 +1543,7 @@
             <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
             <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
             <Czech>Krevní transfuze pro doplnění pacientovi krve (skladujte v chladu)</Czech>
-            <Japanese>血液 IV は、患者へ血液を補給します。（要低温保存）</Japanese>
+            <Japanese>血液 IV は、患者へ血液を補給します。(要低温保存)</Japanese>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다. (차갑게 할것)</Korean>
             <Chinesesimp>血液, 用于补充伤者流失的血液 (需冷藏)</Chinesesimp>
             <Chinese>血液, 用於補充傷者流失的血液 (需冷藏)</Chinese>
@@ -1703,7 +1703,7 @@
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem com agente coagulante</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
-            <Japanese>クイッククロット</Japanese>
+            <Japanese>クイッククロット包帯</Japanese>
             <Korean>퀵 클롯 붕대</Korean>
             <Chinesesimp>止血粉绷带</Chinesesimp>
             <Chinese>止血粉繃帶</Chinese>
@@ -2870,7 +2870,7 @@
             <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
-            <Japanese>%1 は IV を与えた</Japanese>
+            <Japanese>%1 は IV をした</Japanese>
             <Chinesesimp>%1 已经给予静脉注射液</Chinesesimp>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
             <Korean>%1 (이)가 IV를 실시함</Korean>
@@ -3172,7 +3172,7 @@
             <Hungarian>Választékok (3D)</Hungarian>
             <Czech>3D výběr</Czech>
             <Italian>Selezione (3D)</Italian>
-            <Japanese>選択 (3d)</Japanese>
+            <Japanese>選択 (3D)</Japanese>
             <Korean>선택 (3d)</Korean>
             <Chinesesimp>选择 (3D)</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>

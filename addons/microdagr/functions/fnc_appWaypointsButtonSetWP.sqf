@@ -15,14 +15,12 @@
  */
 #include "script_component.hpp"
 
-private ["_wpListBox", "_newWpIndex", "_waypoints"];
-
 disableSerialization;
 params ["_wpButton"];
 
-_wpListBox = (ctrlParent _wpButton) displayCtrl 144501;
-_newWpIndex = lbCurSel _wpListBox;
-_waypoints = [] call FUNC(deviceGetWaypoints);
+private _wpListBox = (ctrlParent _wpButton) displayCtrl 144501;
+private _newWpIndex = lbCurSel _wpListBox;
+private _waypoints = [] call FUNC(deviceGetWaypoints);
 
 if ((_newWpIndex < 0) || (_newWpIndex > ((count _waypoints) - 1))) exitWith {
     GVAR(currentWaypoint) = -1;

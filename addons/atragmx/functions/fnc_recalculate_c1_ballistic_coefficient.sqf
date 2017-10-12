@@ -33,19 +33,20 @@ private _lookupTableSize = count _lookupTable;
 if (_lookupTableSize < 2) exitWith {};
 _lookupTable sort true;
 
-private ["_lowerIndex", "_upperIndex"];
+private _lowerIndex = -1;
+private _upperIndex = -1;
+
 for "_index" from 1 to (_lookupTableSize - 1) do {
     _upperIndex = _index;
     _lowerIndex = _upperIndex - 1;
     if (((_lookupTable select _index) select 0) >= (GVAR(targetRange) select GVAR(currentTarget))) exitWith {};
 };
 
-private ["_lowerDistance", "_upperDistance", "_lowerC1", "_upperC1", "_c1"];
-_lowerDistance = (_lookupTable select _lowerIndex) select 0;
-_upperDistance = (_lookupTable select _upperIndex) select 0;
-_lowerC1       = (_lookupTable select _lowerIndex) select 1;
-_upperC1       = (_lookupTable select _upperIndex) select 1;
-_c1 = _lowerC1;
+private _lowerDistance = (_lookupTable select _lowerIndex) select 0;
+private _upperDistance = (_lookupTable select _upperIndex) select 0;
+private _lowerC1       = (_lookupTable select _lowerIndex) select 1;
+private _upperC1       = (_lookupTable select _upperIndex) select 1;
+private _c1 = _lowerC1;
 if (_lowerDistance != _upperDistance) then {
     private _slope = (_upperC1 - _lowerC1) / (_upperDistance - _lowerDistance);
     _c1 = _lowerC1 + ((GVAR(targetRange) select GVAR(currentTarget)) - _lowerDistance) * _slope;

@@ -21,7 +21,7 @@ if (missionNamespace getVariable [QGVAR(EnableSwitchUnits), false]) then {
     [player] call FUNC(startSwitchUnits);
 } else {
     ["ace_settingChanged", {
-        PARAMS_2(_name,_value);
+        params ["_name", "_value"];
         if ((_name == QGVAR(EnableSwitchUnits)) && {_value}) then {
             [player] call FUNC(startSwitchUnits);
         };

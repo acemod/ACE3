@@ -764,7 +764,7 @@
             <Portuguese>ZSU-35 Tigris</Portuguese>
             <Hungarian>ZSU-35 Tigris</Hungarian>
             <Italian>ZSU-35 Tigris</Italian>
-            <Japanese>ZSU-35 </Japanese>
+            <Japanese>ZSU-35 ティグリス</Japanese>
             <Korean>ZSU-35 Tigris</Korean>
             <Chinese>ZSU-35"虎式"防空車</Chinese>
             <Chinesesimp>ZSU-35"虎式"防空车</Chinesesimp>
@@ -780,7 +780,7 @@
             <Portuguese>Otokar ARMA</Portuguese>
             <Hungarian>Otokar ARMA</Hungarian>
             <Italian>Otokar ARMA</Italian>
-            <Japanese>ティグリスOtokar アルマ</Japanese>
+            <Japanese>オトカ アルマ</Japanese>
             <Korean>Otokar ARMA</Korean>
             <Chinese>"奧托卡-阿爾默"裝甲運兵車</Chinese>
             <Chinesesimp>"奥托卡-阿尔默"装甲运兵车</Chinesesimp>
@@ -796,7 +796,7 @@
             <Portuguese>Typhoon Transporte</Portuguese>
             <Hungarian>Typhoon szállítójármű</Hungarian>
             <Italian>Typhoon da trasporto</Italian>
-            <Japanese>Typhoon 輸送型</Japanese>
+            <Japanese>タイフーン 輸送型</Japanese>
             <Korean>Typhoon 수송</Korean>
             <Chinese>"颱風"卡車 (運輸)</Chinese>
             <Chinesesimp>"台风"卡车 (运输)</Chinesesimp>
@@ -812,7 +812,7 @@
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
             <Hungarian>Typhoon szállítójármű (ponyvás)</Hungarian>
             <Italian>Typhoon da trasporto (coperto)</Italian>
-            <Japanese>Typhoon 輸送型 (幌)</Japanese>
+            <Japanese>タイフーン 輸送型 (幌)</Japanese>
             <Korean>Typhoon 수송 (덮개)</Korean>
             <Chinese>"颱風"卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>"台风"卡车 (运输, 棚布)</Chinesesimp>
@@ -828,7 +828,7 @@
             <Portuguese>Typhoon Dispositivo</Portuguese>
             <Hungarian>Typhoon (eszköz)</Hungarian>
             <Italian>Typhoon per dispositivo</Italian>
-            <Japanese>Typhoon デバイス型</Japanese>
+            <Japanese>タイフーン デバイス型</Japanese>
             <Korean>Typhoon 장치</Korean>
             <Chinese>"颱風"卡車 (精密設備)</Chinese>
             <Chinesesimp>"台风"卡车 (精密设备)</Chinesesimp>
@@ -844,7 +844,7 @@
             <Portuguese>Typhoon Munições</Portuguese>
             <Hungarian>Typhoon (lőszerszállító)</Hungarian>
             <Italian>Typhoon di rifornimento munizioni</Italian>
-            <Japanese>Typhoon 弾薬給弾型</Japanese>
+            <Japanese>タイフーン 弾薬給弾型</Japanese>
             <Korean>Typhoon 탄약</Korean>
             <Chinese>"颱風"卡車 (彈藥)</Chinese>
             <Chinesesimp>"台风"卡车 (弹药)</Chinesesimp>
@@ -860,7 +860,7 @@
             <Portuguese>Typhoon Combustível</Portuguese>
             <Hungarian>Typhoon (üzemanyag-szállító)</Hungarian>
             <Italian>Typhoon di rifornimento carburante</Italian>
-            <Japanese>Typhoon 燃料給油車</Japanese>
+            <Japanese>タイフーン 燃料給油車</Japanese>
             <Korean>Typhoon 연료</Korean>
             <Chinese>"颱風"卡車 (燃油)</Chinese>
             <Chinesesimp>"台风"卡车 (燃油)</Chinesesimp>
@@ -876,7 +876,7 @@
             <Portuguese>Typhoon Reparador</Portuguese>
             <Hungarian>Typhoon (szerelő-jármű)</Hungarian>
             <Italian>Typhoon riparatore</Italian>
-            <Japanese>Typhoon 修理型</Japanese>
+            <Japanese>タイフーン 修理型</Japanese>
             <Korean>Typhoon 수리</Korean>
             <Chinese>"颱風"卡車 (維修)</Chinese>
             <Chinesesimp>"台风"卡车 (维修)</Chinesesimp>
@@ -892,7 +892,7 @@
             <Portuguese>Typhoon Médico</Portuguese>
             <Hungarian>Typhoon (egészségügyi)</Hungarian>
             <Italian>Typhoon medico</Italian>
-            <Japanese>Typhoon 救急車</Japanese>
+            <Japanese>タイフーン 救急車</Japanese>
             <Korean>Typhoon 의료</Korean>
             <Chinese>"颱風"卡車 (醫療)</Chinese>
             <Chinesesimp>"台风"卡车 (医疗)</Chinesesimp>
@@ -1115,7 +1115,7 @@
             <Portuguese>Ka-60 Kasatka (preto e branco)</Portuguese>
             <Russian>Ka-60 Касатка (белый и черный)</Russian>
             <Spanish>Ka-60 Kasatka (blanco y negro)</Spanish>
-            <Japanese>Ka-60 カサートカ (黒&amp;白）</Japanese>
+            <Japanese>Ka-60 カサートカ (黒 &amp; 白）</Japanese>
             <Korean>Ka-60 Kasatka (검정 및 하양)</Korean>
             <Chinese>Ka-60"逆戟鯨"直升機 (黑&amp;白)</Chinese>
             <Chinesesimp>Ka-60"逆戟鲸"直升机 (黑&amp;白)</Chinesesimp>
@@ -1147,7 +1147,7 @@
             <Portuguese>Yak-130</Portuguese>
             <Hungarian>Jak-130</Hungarian>
             <Italian>Yak-130</Italian>
-            <Japanese>Yak-130 ミトン</Japanese>
+            <Japanese>Yak-130</Japanese>
             <Korean>Yak-130</Korean>
             <Chinese>Yak-130"手套"攻擊機</Chinese>
             <Chinesesimp>Yak-130"手套"攻击机</Chinesesimp>
@@ -1227,7 +1227,7 @@
             <Portuguese>M112 Carga de Demolição</Portuguese>
             <Hungarian>M112 romboló tömb</Hungarian>
             <Italian>M112 Demolition Block</Italian>
-            <Japanese>M113 爆薬ブロック</Japanese>
+            <Japanese>M112 爆薬ブロック</Japanese>
             <Korean>M112 폭파 블럭</Korean>
             <Chinese>M112塑性炸藥</Chinese>
             <Chinesesimp>M112塑性炸药</Chinesesimp>
@@ -2316,7 +2316,7 @@
             <Hungarian>ASP-1 Kir</Hungarian>
             <Portuguese>ASP-1 Kir</Portuguese>
             <Japanese>ASP-1 Kir</Japanese>
-            <Korean>ASP-1 Kir</Korean>
+            <Korean>ASP-1 キール</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪</Chinesesimp>
         </Key>
@@ -2331,7 +2331,7 @@
             <Italian>ASP-1 Kir (Nero)</Italian>
             <Hungarian>ASP-1 Kir (Fekete)</Hungarian>
             <Portuguese>ASP-1 Kir (Preto)</Portuguese>
-            <Japanese>ASP-1 Kir (黒)</Japanese>
+            <Japanese>ASP-1 キール (黒)</Japanese>
             <Korean>ASP-1 Kir (검정)</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍 (黑色)</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪 (黑色)</Chinesesimp>
@@ -2347,7 +2347,7 @@
             <Italian>ASP-1 Kir (Tan)</Italian>
             <Hungarian>ASP-1 Kir (Cserszín)</Hungarian>
             <Portuguese>ASP-1 Kir (Deserto)</Portuguese>
-            <Japanese>ASP-1 Kir (黄褐)</Japanese>
+            <Japanese>ASP-1 キール (黄褐)</Japanese>
             <Korean>ASP-1 Kir (황갈)</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍 (黃褐色)</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪 (黄褐色)</Chinesesimp>
@@ -3211,7 +3211,7 @@
             <Italian>P99 (Khaki)</Italian>
             <Hungarian>P99 (Khaki)</Hungarian>
             <Portuguese>P99 (Caqui)</Portuguese>
-            <Japanese>P99 (カーキ)</Japanese>
+            <Japanese>P99 (土埃)</Japanese>
             <Korean>P99 (카키)</Korean>
             <Chinese>P99半自動手槍 (卡其色)</Chinese>
             <Chinesesimp>P99半自动手枪 (卡其色)</Chinesesimp>
