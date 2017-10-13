@@ -11,6 +11,7 @@ class CfgMagazines {
 		scope=2;
 		type=256;
 		count = 100;
+		mass = 40;
 	};
 	// The maximum amount of ammo the HMG can hold. Its a dummy since all this purpose is for is to allow for 200 bullets
 	class GVAR(HMG_Dummy_200Rnd_mag): 100Rnd_127x99_mag {
@@ -20,6 +21,7 @@ class CfgMagazines {
 		scope=1;
 		type=0;
 		count=200;
+		mass = 40;
 	};
 	
 	class GVAR(20Rnd_20mm_G_belt): 40Rnd_20mm_G_belt {
@@ -29,6 +31,7 @@ class CfgMagazines {
 		scope=2;
 		type=256;
 		count=20;
+		mass = 40;
 	};
 	class GVAR(GMG_Dummy_120Rnd_mag): 40Rnd_20mm_G_belt {
 		author = ECSTRING(common, ACETeam);
@@ -37,6 +40,7 @@ class CfgMagazines {
 		scope=1;
 		type=0;
 		count=120;
+		mass = 40;
 	};
 	
 	class GVAR(1Rnd_GAT_missiles): 1Rnd_GAT_missiles {
@@ -46,6 +50,7 @@ class CfgMagazines {
 		scope=2;
 		type=256;
 		count=1;
+		mass = 125;
 	};
 	class GVAR(TitanAT_Dummy_Missile): 1Rnd_GAT_missiles {
 		author = ECSTRING(common, ACETeam);
@@ -54,6 +59,7 @@ class CfgMagazines {
 		scope=1;
 		type=0;
 		count=1;
+		mass = 125;
 	};
 	
 	class GVAR(1Rnd_GAA_missiles): 1Rnd_GAA_missiles {
@@ -63,6 +69,7 @@ class CfgMagazines {
 		scope=2;
 		type=256;
 		count=1;
+		mass = 125;
 	};
 	class GVAR(TitanAA_Dummy_Missile): 1Rnd_GAA_missiles {
 		author = ECSTRING(common, ACETeam);
@@ -71,6 +78,7 @@ class CfgMagazines {
 		scope=1;
 		type=0;
 		count=1;
+		mass = 125;
 	};
 	
 };

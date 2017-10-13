@@ -1,6 +1,13 @@
 class CfgWeapons {
-	class Launcher_Base_F;
+	class Launcher;
+	class Launcher_Base_F: Launcher {
+		class WeaponSlotsInfo;
+	};
 	class GVAR(carryTripod): Launcher_Base_F {
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			mass = 440;
+		};
+		
 		author = ECSTRING(common, ACETeam);
 		scope = 2;
 		displayName = CSTRING(TripodFolded_displayName);

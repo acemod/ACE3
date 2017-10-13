@@ -7,7 +7,7 @@
 	[X] Add timer to mount weapon
 	[X] Add timer to load ammo
 	[X] Add timer to unload ammo
-[ ] Add ACE weights to all Ammo and Tripod
+[X] Add ACE weights to all Ammo and Tripod
 [ ] Add Ammo Counts on arsenal for magazines
 [ ] Test in Dedicated Server
 [ ] Create new Tripod model
