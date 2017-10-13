@@ -44,12 +44,12 @@ if (isClass _itemCfg) then {
             _ctrlDLC ctrlRemoveAllEventHandlers "mouseexit";
             _ctrlDLC ctrlRemoveAllEventHandlers "mouseenter";
         };
-        } else {
-            _ctrlDLC ctrlsetfade 1;
-            _ctrlDLCBackground ctrlsetfade 1;
-        };
-        _ctrlDLC ctrlcommit FADE_DELAY;
-        _ctrlDLCBackground ctrlcommit FADE_DELAY;
+    } else {
+        _ctrlDLC ctrlsetfade 1;
+        _ctrlDLCBackground ctrlsetfade 1;
+    };
+    _ctrlDLC ctrlcommit FADE_DELAY;
+    _ctrlDLCBackground ctrlcommit FADE_DELAY;
 
 } else {
     LOG("no item");

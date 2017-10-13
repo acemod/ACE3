@@ -39,7 +39,7 @@ class GVAR(display) {
         };
     };
     class controls {
-        class ArrowLeft: RscButton {
+        class ArrowLeft: ctrlButton {
             idc = IDC_arrowMinus;
             text = "-";
             colorBackground[]={0,0,0,0.8};

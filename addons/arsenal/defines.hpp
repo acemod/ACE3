@@ -6,8 +6,8 @@
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
-#define IDC_arrowMinus 1
-#define IDC_arrowPlus 2
+#define IDC_arrowMinus 101
+#define IDC_arrowPlus 102
 #define IDC_blockLeftFrame 3
 #define IDC_blockLeftBackground 4
 #define IDC_blockRightFrame 5

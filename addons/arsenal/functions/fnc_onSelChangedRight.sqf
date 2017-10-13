@@ -11,7 +11,7 @@ private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select 
 
 
 private _fnc_selectItem = {
-     params ["_item", "_currentItemsIndex", "_itemIndex"];
+    params ["_item", "_currentItemsIndex", "_itemIndex"];
 
     switch (_currentItemsIndex) do {
         case 18: {
