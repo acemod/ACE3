@@ -189,12 +189,15 @@ GVAR(currentRightPanel) = _ctrlIDC;
 if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
     private _container = switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonUniform : {
+            (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadUniform GVAR(center));
             GVAR(currentItems) select 15
         };
         case IDC_buttonVest : {
+            (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadVest GVAR(center));
             GVAR(currentItems) select 16
         };
         case IDC_buttonBackpack : {
+            (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadBackpack GVAR(center));
             GVAR(currentItems) select 17
         };
     };
@@ -203,8 +206,6 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
         private _class = _ctrlPanel lnbData [_l, 0];
         _ctrlPanel lnbSetText [[_l, 2],str ({_x == _class} count _container)];
     };
-
-    (_display displayCtrl 1000) progressSetPosition 0.64;
 };
 
 // Select current data if not in a container
