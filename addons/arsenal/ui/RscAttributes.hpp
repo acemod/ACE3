@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 #include "RscCommon.hpp"
 #include "..\defines.hpp"
 
