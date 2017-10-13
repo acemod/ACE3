@@ -37,7 +37,7 @@ private _fnc_fill_right_ACC = {
 };
 
 private _fnc_fill_right_Container = {
-    params ["_configPath"];
+    params ["_configPath", "_isMagazine"];
 
     private _displayName = getText (_configPath >> "displayName");
     private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, str 0];
@@ -45,7 +45,7 @@ private _fnc_fill_right_Container = {
 
     _ctrlPanel lnbSetData [[_lbAdd, 0], _x];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], getText (_configPath >> "picture")];
-    _ctrlPanel lnbSetValue [[_lbAdd, 0], getNumber (_configPath >> "itemInfo" >> "mass")];
+    _ctrlPanel lnbSetValue [[_lbAdd, 0], [getNumber (_configPath >> "itemInfo" >> "mass"), getNumber (_configPath >> "mass")] select _isMagazine];
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
 
@@ -100,7 +100,7 @@ switch (_ctrlIDC) do {
                 if (_leftPanelState) then {
                     [_config] call _fnc_fill_right_ACC;
                 } else {
-                    [_config] call _fnc_fill_right_Container;
+                    [_config, false] call _fnc_fill_right_Container;
                 };
             };
         } foreach (GVAR(virtualItems) select 1);
@@ -113,7 +113,7 @@ switch (_ctrlIDC) do {
                 if (_leftPanelState) then {
                     [_config] call _fnc_fill_right_ACC;
                 } else {
-                    [_config] call _fnc_fill_right_Container;
+                    [_config, false] call _fnc_fill_right_Container;
                 };
             };
         } foreach (GVAR(virtualItems) select 1);
@@ -126,7 +126,7 @@ switch (_ctrlIDC) do {
                 if (_leftPanelState) then {
                     [_config] call _fnc_fill_right_ACC;
                 } else {
-                    [_config] call _fnc_fill_right_Container;
+                    [_config, false] call _fnc_fill_right_Container;
                 };
             };
         } foreach (GVAR(virtualItems) select 1);
@@ -139,7 +139,7 @@ switch (_ctrlIDC) do {
                 if (_leftPanelState) then {
                     [_config] call _fnc_fill_right_ACC;
                 } else {
-                    [_config] call _fnc_fill_right_Container;
+                    [_config, false] call _fnc_fill_right_Container;
                 };
             };
         } foreach (GVAR(virtualItems) select 1);
@@ -149,7 +149,7 @@ switch (_ctrlIDC) do {
         {
             private _config = configfile >> "CfgMagazines" >> _x;
             if (_x in _compatibleMagazines) then {
-                [_config] call _fnc_fill_right_Container;
+                [_config, true] call _fnc_fill_right_Container;
             };
         } foreach (GVAR(virtualItems) select 2);
     };
@@ -157,28 +157,28 @@ switch (_ctrlIDC) do {
     case IDC_buttonMagALL : {
         {
             private _config = configfile >> "CfgMagazines" >> _x;
-            [_config] call _fnc_fill_right_Container;
+            [_config, true] call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 2);
     };
 
     case IDC_buttonThrow : {
         {
             private _config = configfile >> "CfgMagazines" >> _x;
-            [_config] call _fnc_fill_right_Container;
+            [_config, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 15);
     };
 
     case IDC_buttonPut : {
         {
             private _config = configfile >> "CfgMagazines" >> _x;
-            [_config] call _fnc_fill_right_Container;
+            [_config, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 16);
     };
 
     case IDC_buttonMisc : {
         {
             private _config = configfile >> "CfgWeapons" >> _x;
-            [_config] call _fnc_fill_right_Container;
+            [_config, false]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 17);
     };
 };
