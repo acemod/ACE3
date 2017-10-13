@@ -86,10 +86,10 @@
             <English>[ACE] AA Static</English>
         </Key>
 		<Key ID="STR_ACE_CSW_HMGBelt_displayName">
-            <English>[ACE] 12.7mm M2 HMG Belt</English>
+            <English>[ACE] 12.7mm M2 HMG Belt (100 Rounds)</English>
         </Key>
 		<Key ID="STR_ACE_CSW_GMGBelt_displayName">
-            <English>[ACE] 40mm Grenade GMG Belt</English>
+            <English>[ACE] 40mm Grenade GMG Belt (20 Rounds)</English>
         </Key>
 		<Key ID="STR_ACE_CSW_ATRocket_displayName">
             <English>[ACE] Mini-Spike AT Missile</English>

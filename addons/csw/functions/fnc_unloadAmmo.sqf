@@ -53,7 +53,7 @@ private _maxAmmo = _magazineAmmoCount min _maxMagazineCapacity;
 	};
 	
 	if (_duration > 0) then {
-		[_duration, [_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret], _onFinish, {}, localize CSTRING(UnloadingAmmo_progressBar)] call EFUNC(common,progressBar);
+		[_duration, [_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret], _onFinish, {}, localize LSTRING(UnloadingAmmo_progressBar)] call EFUNC(common,progressBar);
 	} else {
 		[[_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret]] call _onFinish;
 	};

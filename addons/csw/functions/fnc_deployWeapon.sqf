@@ -50,5 +50,5 @@ params["_tripod", "_player"];
 		_player addBackpackGlobal _backpack;
 	};
 	
-	[15, [_tripod, _player, _backpackClassname], _onFinish, _onFailure, localize CSTRING(AssembleCSW_progressBar)] call EFUNC(common,progressBar);
+	[15, [_tripod, _player, _backpackClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar)] call EFUNC(common,progressBar);
 }, [_tripod, _player]] call CBA_fnc_execNextFrame;

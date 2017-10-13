@@ -60,6 +60,6 @@ if (isNull GVAR(cswTripod)) then {
 			((crew _weapon) isEqualTo [])
 		};
 		
-		[25, [_weapon], _onFinish, {}, localize CSTRING(DisassembleCSW_progressBar), _crewCheck] call EFUNC(common,progressBar);
+		[25, [_weapon], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _crewCheck] call EFUNC(common,progressBar);
 	}, [_weapon]] call CBA_fnc_execNextFrame;
 };
