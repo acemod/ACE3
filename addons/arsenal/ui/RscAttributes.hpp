@@ -115,7 +115,7 @@ class GVAR(display) {
             idc = IDC_totalWeight;
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 9 * GRID_H);
-            w = QUOTE(50 * GRID_W);
+            w = QUOTE(20 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
                 class totalWeightBackground: ctrlStaticBackground {
@@ -123,7 +123,7 @@ class GVAR(display) {
                     colorBackground[] = {0,0,0,0.8};
                     x = 0;
                     y = 0;
-                    w = QUOTE(50 * GRID_W);
+                    w = QUOTE(20 * GRID_W);
                     h = QUOTE(7 * GRID_H);
                 };
                 class totalWeightText: RscText {
