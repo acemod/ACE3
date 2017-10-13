@@ -98,7 +98,7 @@ class GVAR(display) {
                     h = QUOTE(6 * GRID_H);
                 };
                 class loadIndicatorBar: ctrlProgress {
-                    idc = 1000;
+                    idc = IDC_loadIndicatorBar;
                     style = 0;
                     texture = "#(argb,8,8,3)color(1,1,1,1)";
                     colorBar[] = {1,1,1,1};
