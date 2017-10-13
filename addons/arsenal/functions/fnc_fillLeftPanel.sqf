@@ -12,29 +12,16 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
         _previousCtrlBackground ctrlSetFade 1;
         _previousCtrlBackground ctrlCommit FADE_DELAY;
     };
-    
+
     private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
     private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
     _ctrlBackground ctrlSetFade 0;
     _ctrlBackground ctrlCommit FADE_DELAY;
 
-    private _fnc_fill = {
-        params ["_configPath"];
-
-        private _displayName = getText (_configPath >> "displayName");
-
-        private _lbAdd = _ctrlPanel lbAdd _displayName;
-
-        _ctrlPanel lbSetdata [_lbAdd, _x];
-        _ctrlPanel lbSetPicture [_lbAdd, geTtext (_configPath >> "picture")];
-        _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2", _displayName, _x]];
-        _configPath call ADDMODICON;
-    };
-
     _ctrlPanel lbSetCurSel -1;
 
     // Handle icons and filling
-    switch true do { 
+    switch true do {
         case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
             // Purge old data
             lbClear _ctrlPanel;
@@ -45,30 +32,19 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
             switch (_ctrlIDC) do {
                 case IDC_buttonPrimaryWeapon : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getNumber (_config >> "type") == 1) then {
-                            [_config] call _fnc_fill;
-                        };
-                    } foreach (GVAR(virtualItems) select 0);
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
+                    } foreach (GVAR(virtualItems) select 0); //#TODO split weapontypes into seperate arrays
                 };
 
                 case IDC_buttonHandgun : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-
-                        if (getNumber (_config >> "type") == 2) then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 0);
                 };
 
                 case IDC_buttonSecondaryWeapon : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-
-                        if (getNumber (_config >> "type") == 4) then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 0);
                 };
             };
@@ -84,28 +60,19 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
             switch (_ctrlIDC) do {
                 case IDC_buttonUniform : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getNumber (_config >> "ItemInfo" >> "type") == 801) then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 4);
                 };
 
                 case IDC_buttonVest : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getNumber (_config >> "ItemInfo" >> "type") == 701) then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 5);
                 };
 
                 case IDC_buttonBackpack : {
                     {
-                        private _config = configfile >> "CfgVehicles" >> _x;
-                        if ((getText (_config >> "vehicleClass")) == "Backpacks") then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgVehicles", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 6);
                 };
             };
@@ -124,75 +91,47 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
              switch (_ctrlIDC) do {
                 case IDC_buttonHeadgear: {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getNumber (_config >> "ItemInfo" >> "type") == 605) then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 3);
                 };
                 case IDC_buttonGoggles : {
                     {
-                        private _config = configfile >> "CfgGlasses" >> _x;
-                        [_config] call _fnc_fill;
+                        ["CfgGlasses", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 7);
                 };
                 case IDC_buttonNVG : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getText (_config >> "simulation") == "NVGoggles") then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 8);
                 };
                 case IDC_buttonBinoculars : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if ((getText (_config >> 'simulation') == 'Weapon') && {(getNumber (_config >> 'type') == 4096)}) then {
-                            [_config] call _fnc_fill;
-                        };
-                        if ((getText (_config >> 'simulation') == 'Binocular') && {(getNumber (_config >> 'type') == 4096)}) then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 9);
                 };
                 case IDC_buttonMap : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getText (_config >> "simulation") == "ItemMap") then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 10);
                 };
                 case IDC_buttonCompass : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getText (_config >> "simulation") == "ItemCompass") then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 11);
                 };
                 case IDC_buttonRadio : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getText (_config >> "simulation") == "ItemRadio") then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 12);
                 };
                 case IDC_buttonWatch : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getText (_config >> "simulation") == "ItemWatch") then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 13);
                 };
                 case IDC_buttonGPS : {
                     {
-                        private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getText (_config >> "simulation") == "ItemGPS" || {getNumber (_config >> "ItemInfo" >> "type") == 621}) then {
-                            [_config] call _fnc_fill;
-                        };
+                        ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                     } foreach (GVAR(virtualItems) select 14);
                 };
                 case IDC_buttonFace : {
@@ -211,23 +150,12 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
                 };
                 case IDC_buttonVoice : {
                     {
-                        private _configName = configName _x;
-                        private _displayName = gettext (_x >> "displayName");
-                        _lbAdd = _ctrlPanel lbAdd _displayName;
-                        _ctrlPanel lbSetData [_lbAdd, _configName];
-                        _ctrlPanel lbSetPicture [_lbAdd,gettext (_x >> "icon")];
-                        _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _configName]];
-                        _x call ADDMODICON;
+                        ["CfgVoice", configName _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
                     } foreach configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
                 };
                 case IDC_buttonInsigna : {
                     {
-                        private _configName = configName _x;
-                        _displayName = getText (_x >> "displayName");
-                        _lbAdd = _ctrlPanel lbAdd _displayName;
-                        _ctrlPanel lbSetData [_lbAdd, _configName];
-                        _ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
-                        _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _configName]];
+                        ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                     } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
                 };
             };
