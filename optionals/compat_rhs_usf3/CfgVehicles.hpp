@@ -217,6 +217,16 @@ class CfgVehicles {
     class rhsusf_hmmwe_base: MRAP_01_base_F {
         EGVAR(refuel,fuelCapacity) = 95;
     };
+    class rhsusf_m998_w_4dr_halftop;
+    class rhsusf_m998_w_4dr_fulltop: rhsusf_m998_w_4dr_halftop {
+        class UserActions;
+    };
+    class rhsusf_m1025_w: rhsusf_m998_w_4dr_fulltop {
+        class UserActions: UserActions {
+            // this action is incompatible with nodoors config
+            delete door_action;
+        };
+    };
 
     class rhsusf_rg33_base: MRAP_01_base_F {
         EGVAR(refuel,fuelCapacity) = 302;
