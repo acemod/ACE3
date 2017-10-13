@@ -24,7 +24,7 @@ private _ctrlList = _settingsMenu displayCtrl 200;
 
 lnbClear _ctrlList;
 
-_updateKeyView_selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
+private _selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
 
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_OPTIONS): {
