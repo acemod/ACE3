@@ -42,6 +42,21 @@ private _fnc_selectRight = {
         _control lbsettooltip [_r * _columns,[_text,_text + "\n(Not compatible with currently equipped weapons)"] select _isIncompatible];
     };
 
+    // Remove all from container show / hide
+    private _removeAllCtrl = _display displayCtrl IDC_buttonRemoveAll;
+
+    if (progressPosition (_display displayCtrl IDC_loadIndicatorBar) > 0) then {
+
+        if (ctrlFade _removeAllCtrl != 0) then {
+            _removeAllCtrl ctrlSetFade 0;
+        };
+
+        if !(ctrlShown _removeAllCtrl) then {
+            _removeAllCtrl ctrlShow true;
+        };
+        _removeAllCtrl ctrlCommit FADE_DELAY;
+    };
+
     [_display, _control, _curSel, (configFile >> _cfgEntry >> _item)] call FUNC(itemInfo);
 };
 

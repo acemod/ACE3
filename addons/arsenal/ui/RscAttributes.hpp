@@ -672,24 +672,18 @@ class GVAR(display) {
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
             y = QUOTE(safezoneY + 88 * GRID_H);
         };
-        class buttonRemoveAllSelected: ctrlButtonPicture {
-            idc = IDC_buttonRemoveAllSelected;
+        class buttonRemoveAll: ctrlButtonPicture {
+            idc = IDC_buttonRemoveAll;
             text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
-            tooltip="Remove all selected items"; //TBL
+            tooltip="Remove all items from the container"; //TBL
             colorBackground[]={0,0,0,0.5};
-            onButtonClick = QUOTE(hint str _this);
+            onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;
             enable=0;
             x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
-            y = QUOTE(safeZoneH + safezoneY - 45 * GRID_H);
+            y = QUOTE(safeZoneH + safezoneY - 33 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
-        };
-        class buttonRemoveAll: buttonRemoveAllSelected {
-            idc = IDC_buttonRemoveAll;
-            tooltip="Remove all items from the container"; //TBL
-            colorBackground[]={0,0,0,0.5};
-            y = QUOTE(safeZoneH + safezoneY - 35 * GRID_H);
         };
     };
 };

@@ -125,7 +125,7 @@ _mouseBlockCtrl ctrlEnable false;
     RIGHT_PANEL_ACC_IDCS,
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,
     RIGHT_PANEL_ITEMS_IDCS,
-    RIGHT_PANEL_REMOVE_IDCS,
+    IDC_buttonRemoveAll,
     IDC_rightSearchbar
 ];
 
