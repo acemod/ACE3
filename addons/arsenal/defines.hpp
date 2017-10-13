@@ -105,7 +105,6 @@
 #define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
 #define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc
 #define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
-#define RIGHT_PANEL_REMOVE_IDCS IDC_buttonRemoveAllSelected, IDC_buttonRemoveAll
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
 #define GETDLC\
@@ -153,7 +152,6 @@
     IDC_rightTabContent,\
     IDC_sortRightTab,\
     RIGHT_PANEL_ACC_IDCS,\
-    RIGHT_PANEL_REMOVE_IDCS,\
     IDC_rightSearchbar\
 ];\
 {\
@@ -171,7 +169,7 @@
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_rightTabContentListnBox,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
-    RIGHT_PANEL_REMOVE_IDCS\
+    IDC_buttonRemoveAll\
 ];
 
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
@@ -218,7 +216,7 @@
     RIGHT_PANEL_ACC_IDCS,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
     RIGHT_PANEL_ITEMS_IDCS,\
-    RIGHT_PANEL_REMOVE_IDCS,\
+    IDC_buttonRemoveAll,\
     IDC_rightSearchbar\
 ];
 

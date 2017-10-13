@@ -1,6 +1,7 @@
 PREP(addListBoxItem);
 PREP(addVirtualItems);
 PREP(buttonCargo);
+PREP(buttonClearAll);
 PREP(buttonExport);
 PREP(buttonHide);
 PREP(buttonImport);
