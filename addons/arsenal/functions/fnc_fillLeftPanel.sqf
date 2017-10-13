@@ -237,6 +237,11 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
     // Done
     GVAR(currentLeftPanel) = _ctrlIDC;
 
+    // Sort
+    private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
+    [_sortLeftCtrl, _sortLeftCtrl lbValue (lbCurSel _sortLeftCtrl)] call FUNC(sortPanel);
+
+    //Select current item
     private _itemsToCheck = (GVAR(currentItems) select [0,14]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)];
 
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {

@@ -24,6 +24,7 @@ GVAR(currentFace) = face GVAR(center);
 GVAR(currentVoice) = speaker GVAR(center);
 GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable ["BIS_fnc_setUnitInsignia_class", ""];
 GVAR(currentAction) = "Stand";
+GVAR(shiftState) = false;
 
 for "_index" from 0 to 10 do {
     private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};

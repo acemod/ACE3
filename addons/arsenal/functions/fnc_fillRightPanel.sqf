@@ -185,6 +185,21 @@ switch (_ctrlIDC) do {
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
+// Sorting
+private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
+
+if (_leftPanelState) then {
+   _sortRightCtrl lbDelete 1;
+   _sortRightCtrl lbAdd (localize "STR_a3_rscdisplayarsenal_sort_mod");
+   _sortRightCtrl lbSetValue [1, 1];
+} else {
+    _sortRightCtrl lbDelete 1;
+   _sortRightCtrl lbAdd "Sort by Weight";
+   _sortRightCtrl lbSetValue [1, 1];
+};
+
+[_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);
+
 // Add current items in those containers
 if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
     private _container = switch (GVAR(currentLeftPanel)) do {

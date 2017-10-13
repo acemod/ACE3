@@ -324,25 +324,39 @@ class GVAR(display) {
             h = QUOTE(safezoneH - 38 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
-        class sortLeftTab: ctrlCombo {
+        class sortLeftTab: RscCombo {
             idc = IDC_sortLeftTab;
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
             w = QUOTE(70 * GRID_W);
             h = QUOTE(6 * GRID_H);
+            onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
             class Items {
                 class Alphabet {
                     text="$STR_a3_rscdisplayarsenal_sort_alphabet";
                     default=1;
+                    value= 0;
                 };
                 class Mod {
                     text="$STR_a3_rscdisplayarsenal_sort_mod";
+                    value= 1;
                 };
             };
         };
         class sortRightTab: sortLeftTab {
             idc = IDC_sortRightTab;
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            class Items {
+                class Alphabet {
+                    text="$STR_a3_rscdisplayarsenal_sort_alphabet";
+                    default=1;
+                    value= 0;
+                };
+                class Weight {
+                    text="$STR_a3_rscdisplayarsenal_sort_mod";
+                    value= 1;
+                };
+            };
         };
         class leftSearchbar: ctrlEdit {
             idc = IDC_leftSearchbar;
