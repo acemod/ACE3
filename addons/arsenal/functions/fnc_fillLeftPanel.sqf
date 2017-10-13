@@ -190,7 +190,7 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
                 case IDC_buttonGPS : {
                     {
                         private _config = configfile >> "CfgWeapons" >> _x;
-                        if (getText (_config >> "simulation") == "ItemGPS") then {
+                        if (getText (_config >> "simulation") == "ItemGPS" || {getNumber (_config >> "ItemInfo" >> "type") == 621}) then {
                             [_config] call _fnc_fill;
                         };
                     } foreach (GVAR(virtualItems) select 14);
