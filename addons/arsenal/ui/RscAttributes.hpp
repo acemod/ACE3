@@ -50,6 +50,7 @@ class GVAR(display) {
             y = 0.5;
             w = QUOTE(1 * GRID_W);
             h = QUOTE(1 * GRID_H);
+            sizeEx = QUOTE(7 * GRID_H);
         };
         class ArrowRight: ArrowLeft {
             idc = IDC_arrowPlus;
