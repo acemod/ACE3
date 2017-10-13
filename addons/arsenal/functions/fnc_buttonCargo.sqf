@@ -24,6 +24,7 @@ switch GVAR(currentLeftPanel) do {
 
         _load = loadUniform GVAR(center);
         _items = uniformItems GVAR(center);
+        GVAR(currentItems) set [15 ,_items];
     };
 
     case IDC_buttonVest : {
@@ -39,6 +40,7 @@ switch GVAR(currentLeftPanel) do {
 
         _load = loadVest GVAR(center);
         _items = vestItems GVAR(center);
+        GVAR(currentItems) set [16,_items];
     };
 
     case IDC_buttonBackpack : {
@@ -54,6 +56,7 @@ switch GVAR(currentLeftPanel) do {
 
         _load = loadBackpack GVAR(center);
         _items = backpackItems GVAR(center);
+        GVAR(currentItems) set [17,_items];
     };
 };
 

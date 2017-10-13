@@ -45,7 +45,7 @@ private _fnc_fill_right_Container = {
 
     _ctrlPanel lnbSetData [[_lbAdd, 0], _x];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], getText (_configPath >> "picture")];
-    _ctrlPanel lnbSetValue [[_lbAdd, 0], getNumber (_configPath >> "mass")];
+    _ctrlPanel lnbSetValue [[_lbAdd, 0], getNumber (_configPath >> "itemInfo" >> "mass")];
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
 
