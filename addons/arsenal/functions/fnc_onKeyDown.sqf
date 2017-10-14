@@ -79,4 +79,16 @@ if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
     };
 };
 
+if (GVAR(leftTabFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
+    _return = false;
+};
+
+if (GVAR(rightTabFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
+    _return = false;
+};
+
+if (GVAR(rightTabLnBFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
+    _return = false;
+};
+
 _return

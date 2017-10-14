@@ -42,6 +42,9 @@ GVAR(currentRightPanel) = nil;
 GVAR(leftSearchbarFocus) = nil;
 GVAR(rightSearchbarFocus) = nil;
 GVAR(shiftState) = nil;
+GVAR(leftTabFocus) = nil;
+GVAR(rightTabFocus) = nil;
+GVAR(rightTabLnBFocus) = nil;
 
 GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;

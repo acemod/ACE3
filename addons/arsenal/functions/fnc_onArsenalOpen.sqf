@@ -169,6 +169,9 @@ GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
 GVAR(leftSearchbarFocus) = false;
 GVAR(rightSearchbarFocus) = false;
+GVAR(leftTabFocus) = false;
+GVAR(rightTabFocus) = false;
+GVAR(rightTabLnBFocus) = false;
 
 if (GVAR(mode) != 0) then {
     {
