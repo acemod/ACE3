@@ -67,7 +67,7 @@ switch (true) do {
             };
         } forEach _openWounds;
         private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
-        [_target, "Bandage", _selection] call EFUNC(medical,treatmentAdvanced_bandageLocal);
+        [_this, _target, _selection, "Bandage"] call EFUNC(medical,treatmentAdvanced_bandage);
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is bandaging selection %2 on %3", _this, _selection, _target];
@@ -78,7 +78,7 @@ switch (true) do {
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 5];
     };
     case _needsMorphine: {
-        [_target] call EFUNC(medical,treatmentBasic_morphineLocal);
+        [_this, _target] call EFUNC(medical,treatmentBasic_morphine);
         [_this, false, false] call FUNC(playTreatmentAnim);
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
@@ -87,7 +87,7 @@ switch (true) do {
         #endif
     };
     case _needsEpinephrine: {
-        [_target] call EFUNC(medical,treatmentBasic_epipen);
+        [_this, _target] call EFUNC(medical,treatmentBasic_epipen);
         [_this, false, false] call FUNC(playTreatmentAnim);
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
