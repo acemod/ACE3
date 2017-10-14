@@ -33,19 +33,19 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
                 case IDC_buttonPrimaryWeapon : {
                     {
                         ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                    } foreach (GVAR(virtualItems) select 0); //#TODO split weapontypes into seperate arrays
+                    } foreach ((GVAR(virtualItems) select 0) select 0); //#TODO split weapontypes into seperate arrays
                 };
 
                 case IDC_buttonHandgun : {
                     {
                         ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                    } foreach (GVAR(virtualItems) select 0);
+                    } foreach ((GVAR(virtualItems) select 0) select 1);
                 };
 
                 case IDC_buttonSecondaryWeapon : {
                     {
                         ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                    } foreach (GVAR(virtualItems) select 0);
+                    } foreach ((GVAR(virtualItems) select 0) select 2);
                 };
             };
         };
@@ -175,7 +175,7 @@ if (isNil QGVAR(currentLeftPanel) || {GVAR(currentLeftPanel) != _ctrlIDC}) then 
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
         private _currentData = _ctrlPanel lbData _lbIndex;
 
-        if ({_x != "" && {_currentData == _x}} count _itemsToCheck > 0) then {
+        if (!(_currentData isEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };
