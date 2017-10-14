@@ -364,11 +364,26 @@ class GVAR(display) {
             onKillFocus = QUOTE(GVAR(searchbarFocus) = false);
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
-            w = QUOTE(70 * GRID_W);
+            w = QUOTE(64 * GRID_W);
             h = QUOTE(6 * GRID_H);
         };
-        class rightSearchbar: leftSearchBar{
+        class leftSearchbarButton: ctrlButtonPicture {
+            idc = IDC_leftSearchbarButton;
+            text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+            colorBackground[]={0,0,0,0.5};
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_leftSearchbar)] call FUNC(handleSearchbar));
+            x = QUOTE(safezoneX + 78 * GRID_W);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(6 * GRID_W);
+            h = QUOTE(6 * GRID_H);
+        };
+        class rightSearchbar: leftSearchBar {
             idc = IDC_rightSearchbar;
+            x = QUOTE(safezoneX + safezoneW - 78 * GRID_W);
+        };
+        class rightSearchbarButton: leftSearchbarButton {
+            idc = IDC_rightSearchbarButton;
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_rightSearchbar)] call FUNC(handleSearchbar));
             x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
         };
         class tabLeft: RscControlsGroupNoScrollbars {

@@ -28,6 +28,8 @@ if (_showToggle) then {
     IDC_rightTabContentListnBox,
     IDC_sortLeftTab,
     IDC_sortRightTab,
+    IDC_leftSearchbarButton,
+    IDC_rightSearchbarButton,
     IDC_leftSearchbar,
     IDC_rightSearchbar,
     IDC_tabLeft,

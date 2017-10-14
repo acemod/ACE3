@@ -38,7 +38,9 @@
 #define IDC_sortLeftTab 16
 #define IDC_sortRightTab 17
 #define IDC_leftSearchbar 18
+#define IDC_leftSearchbarButton 41
 #define IDC_rightSearchbar 19
+#define IDC_rightSearchbarButton 42
 #define IDC_tabLeft 20
 #define IDC_iconBackgroundPrimaryWeapon 2001
 #define IDC_buttonPrimaryWeapon 2002
@@ -152,7 +154,8 @@
     IDC_rightTabContent,\
     IDC_sortRightTab,\
     RIGHT_PANEL_ACC_IDCS,\
-    IDC_rightSearchbar\
+    IDC_rightSearchbar,\
+    IDC_rightSearchbarButton\
 ];\
 {\
     _x = _display displayCtrl _x;\
@@ -192,7 +195,8 @@
     IDC_tabRight,\
     RIGHT_PANEL_ACC_IDCS,\
     RIGHT_PANEL_ITEMS_IDCS,\
-    IDC_rightSearchbar\
+    IDC_rightSearchbar,\
+    IDC_rightSearchbarButton\
 ];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
