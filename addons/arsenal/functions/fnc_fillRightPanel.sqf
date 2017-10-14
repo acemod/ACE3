@@ -24,18 +24,6 @@ if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
     _searchbarCtrl ctrlCommit 0;
 };
 
-private _fnc_fill_right_ACC = {
-    params ["_configPath"];
-
-    private _displayName = getText (_configPath >> "displayName");
-    private _lbAdd = _ctrlPanel lbAdd _displayName;
-
-    _ctrlPanel lbSetdata [_lbAdd, _x];
-    _ctrlPanel lbSetPicture [_lbAdd, geTtext (_configPath >> "picture")];
-    _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2", _displayName, _x]];
-    _configPath call ADDMODICON;
-};
-
 private _fnc_fill_right_Container = {
     params ["_configPath", "_isMagazine"];
 
@@ -50,8 +38,8 @@ private _fnc_fill_right_Container = {
 };
 
 private _compatibleItems = [];
-_compatibleMagazines = (getArray (configfile >> "cfgweapons" >> primaryWeapon GVAR(center) >> "magazines")) + 
-    (getArray (configfile >> "cfgweapons" >> secondaryWeapon GVAR(center) >> "magazines")) + 
+_compatibleMagazines = (getArray (configfile >> "cfgweapons" >> primaryWeapon GVAR(center) >> "magazines")) +
+    (getArray (configfile >> "cfgweapons" >> secondaryWeapon GVAR(center) >> "magazines")) +
     (getArray (configfile >> "cfgweapons" >> handgunWeapon GVAR(center) >> "magazines"));
 private _itemsToCheck = [];
 
@@ -68,7 +56,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
     case IDC_buttonSecondaryWeapon : {
         _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
-        
+
         _itemsToCheck = GVAR(currentItems) select 19;
     };
     case IDC_buttonUniform;
@@ -98,7 +86,7 @@ switch (_ctrlIDC) do {
             private _config = configfile >> "CfgWeapons" >> _x;
             if (getNumber (_config >> "ItemInfo" >> "type") == 201 && {!_leftPanelState || {_x in _compatibleItems}}) then {
                 if (_leftPanelState) then {
-                    [_config] call _fnc_fill_right_ACC;
+                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                 } else {
                     [_config, false] call _fnc_fill_right_Container;
                 };
@@ -111,7 +99,7 @@ switch (_ctrlIDC) do {
             private _config = configfile >> "CfgWeapons" >> _x;
             if (getNumber (_config >> "ItemInfo" >> "type") == 301 && {!_leftPanelState || {_x in _compatibleItems}}) then {
                 if (_leftPanelState) then {
-                    [_config] call _fnc_fill_right_ACC;
+                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                 } else {
                     [_config, false] call _fnc_fill_right_Container;
                 };
@@ -124,7 +112,7 @@ switch (_ctrlIDC) do {
             private _config = configfile >> "CfgWeapons" >> _x;
             if (getNumber (_config >> "ItemInfo" >> "type") == 101  && {!_leftPanelState || {_x in _compatibleItems}}) then {
                 if (_leftPanelState) then {
-                    [_config] call _fnc_fill_right_ACC;
+                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                 } else {
                     [_config, false] call _fnc_fill_right_Container;
                 };
@@ -137,7 +125,7 @@ switch (_ctrlIDC) do {
             private _config = configfile >> "CfgWeapons" >> _x;
             if (getNumber (_config >> "ItemInfo" >> "type") == 302  && {!_leftPanelState || {_x in _compatibleItems}}) then {
                 if (_leftPanelState) then {
-                    [_config] call _fnc_fill_right_ACC;
+                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
                 } else {
                     [_config, false] call _fnc_fill_right_Container;
                 };
