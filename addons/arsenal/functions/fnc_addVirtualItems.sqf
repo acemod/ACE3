@@ -30,7 +30,7 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
 private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
 
 if (_items isEqualType true && {_items}) then {
-    private _configItems = GVAR(configItems);
+    private _configItems = uiNamespace getVariable QGVAR(configItems);
 
     {
         (_x select 0) append (_x select 1);

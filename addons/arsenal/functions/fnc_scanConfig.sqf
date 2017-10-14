@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-GVAR(configItems) = [
+private _cargo = [
     [[], [], []], // Weapons 0, primary, handgun, secondary
     [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
     [ ], // Magazines 2
@@ -20,7 +20,7 @@ GVAR(configItems) = [
     [ ], // WeaponPut 16
     [ ] // InventoryItems 17
 ];
-private _cargo = GVAR(configItems);
+
 private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
 
 {
@@ -168,3 +168,5 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
 {
     (_cargo select 7) pushBackUnique (configName _x);
 } foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
+
+uiNamespace setVariable [QGVAR(configItems), _cargo];
