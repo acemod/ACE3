@@ -29,7 +29,7 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
         }, {},[_mode]] call EFUNC(interact_menu,createAction);
         [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
-        [_object, [_items, [_items]] select (typeName _items isEqualTo "ARRAY"), false] call FUNC(addVirtualItems);
+        [_object, _items, false] call FUNC(addVirtualItems);
     };
 };
 
