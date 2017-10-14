@@ -55,8 +55,6 @@ simulWeatherSync;
 
 
 ["ace_settingsInitialized",{
-    TRACE_1("ace_settingsInitialized eh",GVAR(syncRain));
-
     // Create a 1 sec delay PFEH to update wind/temp/humidity
     GVAR(nextUpdateTempAndHumidity) = 0;
     [{
