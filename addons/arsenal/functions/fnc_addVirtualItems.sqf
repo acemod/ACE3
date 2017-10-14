@@ -27,17 +27,22 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
     [ ] // InventoryItems 17
 ]];
 
+private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
+
 if (_items isEqualType true && {_items}) then {
     {
+        private _configItemInfo = _x >> "ItemInfo";
+        private _simulationType = getText (_x >> "simulation");
+
         switch true do {
             /* Weapon acc */
             case (
-                    isClass (_x >> "ItemInfo") &&
-                    {(getNumber (_x >> "ItemInfo" >> "type")) in [101, 201, 301, 302]} &&
-                    {!(configName _x isKindOf ["CBA_MiscItem", (configFile >> "CfgWeapons")])}
+                    isClass (_configItemInfo) &&
+                    {(getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302]} &&
+                    {!(configName _x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}
                 ): {
 
-                switch (getNumber (_x >> "ItemInfo" >> "type")) do {
+                switch (getNumber (_configItemInfo >> "type")) do {
                     case 201: {
                         (_cargo select 1) select 0 pushBackUnique (configName  _x);
                     };
@@ -54,44 +59,44 @@ if (_items isEqualType true && {_items}) then {
 
             };
             /* Headgear */
-            case (isClass (_x >> "ItemInfo") && {getNumber (_x >> "ItemInfo" >> "type") == 605}): {
+            case (isClass (_configItemInfo) && {getNumber (_configItemInfo >> "type") == 605}): {
                 (_cargo select 3) pushBackUnique (configName  _x);
             };
             /* Uniform */\
-            case (isClass (_x >> "ItemInfo") && {getNumber (_x >> "ItemInfo" >> "type") == 801}): {
+            case (isClass (_configItemInfo) && {getNumber (_configItemInfo >> "type") == 801}): {
                 (_cargo select 4) pushBackUnique (configName  _x);
             };
             /* Vest */
-            case (isClass (_x >> "ItemInfo") && {getNumber (_x >> "ItemInfo" >> "type") == 701}): {
+            case (isClass (_configItemInfo) && {getNumber (_configItemInfo >> "type") == 701}): {
                 (_cargo select 5) pushBackUnique (configName  _x);
             };
             /* NVgs */
-            case (getText (_x >> "simulation") == "NVGoggles"): {
+            case (_simulationType == "NVGoggles"): {
                 (_cargo select 8) pushBackUnique (configName  _x);
             };
             /* Binos */
-            case (getText (_x >> "simulation") == "Binocular" ||
-            ((getText (_x >> 'simulation') == 'Weapon') && {(getNumber (_x >> 'type') == 4096)})): {
+            case (_simulationType == "Binocular" ||
+            ((_simulationType == 'Weapon') && {(getNumber (_x >> 'type') == 4096)})): {
                 (_cargo select 9) pushBackUnique (configName  _x);
             };
             /* Map */
-            case (getText (_x >> "simulation") == "ItemMap"): {
+            case (_simulationType == "ItemMap"): {
                 (_cargo select 10) pushBackUnique (configName  _x);
             };
             /* Compass */
-            case (getText (_x >> "simulation") == "ItemCompass"): {
+            case (_simulationType == "ItemCompass"): {
                 (_cargo select 11) pushBackUnique (configName  _x);
             };
             /* Radio */
-            case (getText (_x >> "simulation") == "ItemRadio"): {
+            case (_simulationType == "ItemRadio"): {
                 (_cargo select 12) pushBackUnique (configName  _x);
             };
             /* Watch */
-            case (getText (_x >> "simulation") == "ItemWatch"): {
+            case (_simulationType == "ItemWatch"): {
                 (_cargo select 13) pushBackUnique (configName  _x);
             };
             /* GPS */
-            case (getText (_x >> "simulation") == "ItemGPS"): {
+            case (_simulationType == "ItemGPS"): {
                 (_cargo select 14) pushBackUnique (configName  _x);
             };
             /* UAV terminals */
@@ -115,45 +120,47 @@ if (_items isEqualType true && {_items}) then {
             };
             /* Misc items */
             case (
-                    isClass (_x >> "ItemInfo") &&
-                    ((getNumber (_x >> "ItemInfo" >> "type")) in [101, 201, 301, 302] &&
-                    {(configName _x isKindOf ["CBA_MiscItem", (configFile >> "CfgWeapons")])}) ||
-                    {(getNumber (_x >> "ItemInfo" >> "type")) in [401, 619, 620]}
+                    isClass (_configItemInfo) &&
+                    ((getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302] &&
+                    {(configName _x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
+                    {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]}
                 ): {
                 (_cargo select 17) pushBackUnique (configName  _x);
             };
         };
-    } foreach configProperties [configFile >> "CfgWeapons", "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
+    } foreach configProperties [_configCfgWeapons, "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
 
     {
+        private _className = configName _x;
         private _grenadeList = [];
         {
-            _grenadeList append getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines");
+            _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
             false
-        } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+        } count getArray (_configCfgWeapons >> "Throw" >> "muzzles");
 
         private _putList = [];
         {
-            _putList append getArray (configFile >> "CfgWeapons" >> "Put" >> _x >> "magazines");
+            _putList append getArray (_configCfgWeapons >> "Put" >> _x >> "magazines");
             false
-        } count getArray (configFile >> "CfgWeapons" >> "Put" >> "muzzles");
+        } count getArray (_configCfgWeapons >> "Put" >> "muzzles");
+
 
         switch true do {
             // Rifle, handgun, secondary weapons mags
             case (
-                    (getNumber (_x >> "type") == 256 || {getNumber (_x >> "type") == 512} || {getNumber (_x >> "type") == 1536} || {getNumber (_x >> "type") == 16}) &&
-                    {!((configName _x) in _grenadeList)} &&
-                    {!((configName _x) in _putList)}
+                    (getNumber (_x >> "type") in [256,512,1536,16]) &&
+                    {!(_className in _grenadeList)} &&
+                    {!(_className in _putList)}
                 ): {
-                (_cargo select 2) pushBackUnique (configName  _x);
+                (_cargo select 2) pushBackUnique _className;
             };
             // Grenades
-            case ((configName _x) in _grenadeList): {
-                (_cargo select 15) pushBackUnique (configName  _x);
+            case (_className in _grenadeList): {
+                (_cargo select 15) pushBackUnique _className;
             };
             // Put
-            case ((configName _x) in _putList): {
-                (_cargo select 16) pushBackUnique (configName  _x);
+            case (_className in _putList): {
+                (_cargo select 16) pushBackUnique _className;
             };
         };
     } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
@@ -170,16 +177,18 @@ if (_items isEqualType true && {_items}) then {
 } else {
     {
         if (_x isEqualType "") then {
+            private _configItemInfo = _configCfgWeapons >> _x >> "ItemInfo";
+            private _simulationType = getText (_configCfgWeapons >> _x >> "simulation");
             switch true do {
-                case (isClass (configFile >> "CfgWeapons" >> _x)): {
+                case (isClass (_configCfgWeapons >> _x)): {
                     switch true do {
                         /* Weapon acc */
                         case (
-                                isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
-                                {(getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type")) in [101, 201, 301, 302]} &&
-                                {!(_x isKindOf ["CBA_MiscItem", (configFile >> "CfgWeapons")])}
+                                isClass (_configItemInfo) &&
+                                {(getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302]} &&
+                                {!(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}
                             ): {
-                            switch (getNumber (configFile >> "CfgWeapons" >>_x >> "ItemInfo" >> "type")) do {
+                            switch (getNumber (_configItemInfo >> "type")) do {
                                 case 201: {
                                     (_cargo select 1) select 0 pushBackUnique _x;
                                 };
@@ -195,58 +204,58 @@ if (_items isEqualType true && {_items}) then {
                             };
                         };
                         /* Headgear */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
-                            {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 605}): {
+                        case (isClass (_configItemInfo) &&
+                            {getNumber (_configItemInfo >> "type") == 605}): {
                             (_cargo select 3) pushBackUnique _x;
                         };
                         /* Uniform */\
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
-                            {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 801}): {
+                        case (isClass (_configItemInfo) &&
+                            {getNumber (_configItemInfo >> "type") == 801}): {
                             (_cargo select 4) pushBackUnique _x;
                         };
                         /* Vest */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
-                            {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 701}): {
+                        case (isClass (_configItemInfo) &&
+                            {getNumber (__configItemInfo >> "type") == 701}): {
                             (_cargo select 5) pushBackUnique _x;
                         };
                         /* NVgs */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "NVGoggles"): {
+                        case (_simulationType == "NVGoggles"): {
                             (_cargo select 8) pushBackUnique _x;
                         };
                         /* Binos */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "Binocular" ||
-                            ((getText (configFile>> "CfgWeapons" >> _x >> 'simulation') == 'Weapon') && {(getNumber (configFile>> "CfgWeapons" >> _x >> 'type') == 4096)})): {
+                        case (_simulationType == "Binocular" ||
+                            {(_simulationType == 'Weapon') && {(getNumber (_configCfgWeapons >> _x >> 'type') == 4096)}}): {
                             (_cargo select 9) pushBackUnique _x;
                         };
                         /* Map */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap"): {
+                        case (_simulationType == "ItemMap"): {
                             (_cargo select 10) pushBackUnique _x;
                         };
                         /* Compass */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemCompass"): {
+                        case (_simulationType == "ItemCompass"): {
                             (_cargo select 11) pushBackUnique _x;
                         };
                         /* Radio */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemRadio"): {
+                        case (_simulationType == "ItemRadio"): {
                             (_cargo select 12) pushBackUnique _x;
                         };
                         /* Watch */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemWatch"): {
+                        case (_simulationType == "ItemWatch"): {
                             (_cargo select 13) pushBackUnique _x;
                         };
                         /* GPS */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemGPS"): {
+                        case (_simulationType == "ItemGPS"): {
                             (_cargo select 14) pushBackUnique _x;
                         };
                         /* UAV terminals */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
-                            {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 621}): {
+                        case (isClass (_configItemInfo) &&
+                            {getNumber (_configItemInfo >> "type") == 621}): {
                             (_cargo select 14) pushBackUnique _x;
                         };
                         /* Weapon, at the bottom to avoid adding binos */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo") &&
-                            {getNumber (configFile>> "CfgWeapons" >> _x >> 'type') != 4096}): {
-                            switch (getNumber (configFile>> "CfgWeapons" >> _x >> "type")) do {
+                        case (isClass (_configCfgWeapons >> _x >> "WeaponSlotsInfo") &&
+                            {getNumber (_configCfgWeapons >> _x >> 'type') != 4096}): {
+                            switch (getNumber (_configCfgWeapons >> _x >> "type")) do {
                                 case 1: {
                                     (_cargo select 0) select 0 pushBackUnique  ([_x] call bis_fnc_baseWeapon);
                                 };
@@ -260,10 +269,10 @@ if (_items isEqualType true && {_items}) then {
                         };
                         /* Misc items */
                         case (
-                                isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
-                                ((getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type")) in [101, 201, 301, 302] &&
-                                {(_x isKindOf ["CBA_MiscItem", (configFile >> "CfgWeapons")])}) ||
-                                {(getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type")) in [401, 619, 620]}
+                                isClass (_configItemInfo) &&
+                                ((getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302] &&
+                                {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
+                                {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]}
                             ): {
                             (_cargo select 17) pushBackUnique _x;
                         };
@@ -273,23 +282,21 @@ if (_items isEqualType true && {_items}) then {
                     // Lists to check against
                     private _grenadeList = [];
                     {
-                        _grenadeList append getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines");
+                        _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
                         false
-                    } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+                    } count getArray (_configCfgWeapons >> "Throw" >> "muzzles");
 
                     private _putList = [];
                     {
-                        _putList append getArray (configFile >> "CfgWeapons" >> "Put" >> _x >> "magazines");
+                        _putList append getArray (_configCfgWeapons >> "Put" >> _x >> "magazines");
                         false
-                    } count getArray (configFile >> "CfgWeapons" >> "Put" >> "muzzles");
-
-                    private _cfgX = (configFile >> "CfgMagazines" >> _x);
+                    } count getArray (_configCfgWeapons >> "Put" >> "muzzles");
 
                     // Check what the magazine actually is
                     switch true do {
                         // Rifle, handgun, secondary weapons mags
                         case (
-                                (getNumber (_cfgX >> "type") == 256 || {getNumber (_cfgX >> "type") == 512} || {getNumber (_cfgX >> "type") == 1536} || {getNumber (_cfgX >> "type") == 16}) &&
+                                (getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [256,512,1536,16]) &&
                                 {!(_x in _grenadeList)} &&
                                 {!(_x in _putList)}
                             ): {
