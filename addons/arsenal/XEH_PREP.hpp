@@ -7,6 +7,7 @@ PREP(buttonHide);
 PREP(buttonImport);
 PREP(buttonLoad);
 PREP(buttonSave);
+PREP(clearSearchbar);
 PREP(fillLeftPanel);
 PREP(fillRightPanel);
 PREP(handleMouse);

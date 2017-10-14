@@ -362,7 +362,7 @@ class GVAR(display) {
             idc = IDC_leftSearchbar;
             onSetFocus = QUOTE(GVAR(leftSearchbarFocus) = true);
             onKillFocus = QUOTE(GVAR(leftSearchbarFocus) = false);
-            onMouseButtonClick = QUOTE([ARR_2((_this select 0) ctrlSetText '', true)] select ((_this select 1) == 1));
+            onMouseButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(clearSearchbar));
             x = QUOTE(safezoneX + 14 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(64 * GRID_W);
@@ -382,7 +382,6 @@ class GVAR(display) {
             idc = IDC_rightSearchbar;
             onSetFocus = QUOTE(GVAR(rightSearchbarFocus) = true);
             onKillFocus = QUOTE(GVAR(rightSearchbarFocus) = false);
-            onMouseButtonClick = QUOTE([ARR_2((_this select 0) ctrlSetText '', true)] select ((_this select 1) == 1));
             x = QUOTE(safezoneX + safezoneW - 78 * GRID_W);
         };
         class rightSearchbarButton: leftSearchbarButton {
