@@ -29,9 +29,8 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(useACEWeather), "useACEWeather"] call EFUNC(common,readSettingFromModule);
 
 // Control client side weather effects
-[_logic, QGVAR(syncRain), "syncRain"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(syncWind), "syncWind"] call EFUNC(common,readSettingFromModule); // Wind, Gusts, Waves
-[_logic, QGVAR(syncMisc), "syncMisc"] call EFUNC(common,readSettingFromModule); // Lightnings, Rainbow, Fog
+[_logic, QGVAR(syncMisc), "syncMisc"] call EFUNC(common,readSettingFromModule); // Rainbow, Fog
 
 // Server weather update interval
 [_logic, QGVAR(serverUpdateInterval), "serverUpdateInterval"] call EFUNC(common,readSettingFromModule);
