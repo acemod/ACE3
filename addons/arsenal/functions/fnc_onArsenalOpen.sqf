@@ -29,7 +29,7 @@ GVAR(shiftState) = false;
 for "_index" from 0 to 10 do {
 
 
-    if (_index == 0 || _index == 1) then {
+    if (_index == 0) then {
         private _array = LIST_DEFAULTS select _index;
 
         if !((_array select 0) isEqualTo "") then {
@@ -44,15 +44,31 @@ for "_index" from 0 to 10 do {
              ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
         };
 
-        if (_index == 1 && {!((_array select 3) isEqualTo "")}) then {
-             ((GVAR(virtualItems) select _index) select 3) pushBackUnique (_array select 3);
-        };
-
     } else {
+        if (_index == 1) then {
+                private _array = LIST_DEFAULTS select _index;
 
-        private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
-        if !(_array isEqualTo []) then {
-            {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array;
+                if !((_array select 0) isEqualTo []) then {
+                    ((GVAR(virtualItems) select _index) select 0) append (_array select 0);
+                };
+
+                if !((_array select 1) isEqualTo []) then {
+                    ((GVAR(virtualItems) select _index) select 1) append (_array select 1);
+                };
+
+                if !((_array select 2) isEqualTo []) then {
+                     ((GVAR(virtualItems) select _index) select 2) append (_array select 2);
+                };
+
+                if !((_array select 3) isEqualTo []) then {
+                     ((GVAR(virtualItems) select _index) select 3) append (_array select 3);
+                };
+
+        } else {
+            private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
+            if !(_array isEqualTo []) then {
+                {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array;
+            };
         };
     };
 };
