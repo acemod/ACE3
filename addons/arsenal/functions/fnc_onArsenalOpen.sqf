@@ -4,8 +4,6 @@
 params ["", "_args"];
 _args params ["_display"];
 
-["ace_arsenal"] call bis_fnc_startloadingscreen;
-
 //--------------- General vars
 if (isNil QGVAR(center)) then {
     GVAR(center) = player;
@@ -222,6 +220,3 @@ showCinemaBorder false;
 //--------------- Reset camera pos
 [nil, [controlNull,0,0]] call FUNC(handleMouse);
 GVAR(camPosUpdateHandle) = addMissionEventHandler ["draw3D",{ [] call FUNC(updateCamPos) }];
-
-//--------------- End loading screen
-["ace_arsenal"] call bis_fnc_endloadingscreen;
