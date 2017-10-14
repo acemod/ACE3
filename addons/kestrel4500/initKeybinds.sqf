@@ -27,11 +27,10 @@
 
 
 //Add deviceKey entry:
-private ["_conditonCode", "_toggleCode", "_closeCode"];
-_conditonCode = {
+private _conditonCode = {
     [] call FUNC(canShow);
 };
-_toggleCode = {
+private _toggleCode = {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
 
@@ -44,7 +43,7 @@ _toggleCode = {
         [] call FUNC(createKestrelDialog);
     };
 };
-_closeCode = {
+private _closeCode = {
     // Statement
     if (GVAR(Overlay)) then {
         //If dispaly is open, close it:

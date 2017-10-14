@@ -94,7 +94,6 @@ class ACE_gui_backgroundBase {
 };
 class ACE_gui_editBase
 {
-    access = 0;
     type = 2;
     x = 0;
     y = 0;
@@ -290,7 +289,6 @@ class ACE_gui_listBoxBase : RscListBox{
 
 
 class ACE_gui_listNBox {
-  access = 0;
   type = CT_LISTNBOX;// 102;
   style =ST_MULTI;
   w = 0.4;

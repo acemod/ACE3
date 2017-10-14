@@ -21,16 +21,15 @@ if (backpack _unit != 'ACE_TacticalLadder_Pack') exitWith {};
 
 removeBackpack _unit;
 
-private ["_pos", "_offset", "_ladder"];
 
-_pos = _unit modelToWorld [0,0,0];
-_offset = if ((_unit call CBA_fnc_getUnitAnim select 0) == "prone") then { 1 } else {0.8};
+private _pos = _unit modelToWorld [0,0,0];
+private _offset = if ((_unit call CBA_fnc_getUnitAnim select 0) == "prone") then { 1 } else {0.8};
 
 _pos set [0, (_pos select 0) + (sin getDir _unit) * _offset];
 _pos set [1, (_pos select 1) + (cos getDir _unit) * _offset];
 _pos set [2, [_unit] call CBA_fnc_realHeight];
 
-_ladder = "ACE_TacticalLadder" createVehicle _pos;
+private _ladder = "ACE_TacticalLadder" createVehicle _pos;
 _ladder setPos _pos;
 _ladder setDir getDir _unit;
 

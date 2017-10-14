@@ -3,10 +3,10 @@
  * Updates the truing drop data fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_truing_drop_data

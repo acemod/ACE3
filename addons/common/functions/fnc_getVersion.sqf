@@ -8,6 +8,9 @@
  * Return Value:
  * ACE Version <STRING>
  *
+ * Example:
+ * [] call ace_common_fnc_getVersion
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

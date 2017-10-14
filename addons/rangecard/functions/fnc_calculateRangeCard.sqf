@@ -22,10 +22,10 @@
  * 16: Use advanced ballistics config? <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_rangecard_fnc_calculateRangeCard
+ * [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ,14, 15, 16, true] call ace_rangecard_fnc_calculateRangeCard
  *
  * Public: No
  */
@@ -39,48 +39,43 @@ params [
 
 GVAR(rangeCardDataMVs) set [_rangeCardSlot, format[" %1", round(_muzzleVelocity)]];
 
-private ["_tx", "_tz", "_lastBulletPos", "_bulletPos", "_bulletVelocity", "_bulletAccel", "_bulletSpeed", "_gravity", "_deltaT", "_speedOfSound"];
-_tx = 0;
-_tz = 0;
-_lastBulletPos = [0, 0, 0];
-_bulletPos = [0, 0, 0];
-_bulletVelocity = [0, 0, 0];
-_bulletAccel = [0, 0, 0];
-_bulletSpeed = 0;
-_gravity = [0, sin(_scopeBaseAngle) * -9.80665, cos(_scopeBaseAngle) * -9.80665];
-_deltaT = 1 / _simSteps;
-_speedOfSound = 0;
+private _tx = 0;
+private _tz = 0;
+private _lastBulletPos = [0, 0, 0];
+private _bulletPos = [0, 0, 0];
+private _bulletVelocity = [0, 0, 0];
+private _bulletAccel = [0, 0, 0];
+private _bulletSpeed = 0;
+private _gravity = [0, sin(_scopeBaseAngle) * -9.80665, cos(_scopeBaseAngle) * -9.80665];
+private _deltaT = 1 / _simSteps;
+private _speedOfSound = 0;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _speedOfSound = _temperature call EFUNC(weather,calculateSpeedOfSound);
 };
 
-private ["_elevation", "_windage", "_lead", "_TOF", "_trueVelocity", "_trueSpeed"];
-_elevation = 0;
-_windage = 0;
-_lead = 0;
-_TOF = 0;
-_trueVelocity = [0, 0, 0];
-_trueSpeed = 0;
+private _elevation = 0;
+private _windage = 0;
+private _lead = 0;
+private _TOF = 0;
+private _trueVelocity = [0, 0, 0];
+private _trueSpeed = 0;
 
-private ["_n", "_range"];
-_n = 0;
-_range = 0;
+private _n = 0;
+private _range = 0;
 
 if (_useABConfig) then {
     _bc = parseNumber(("ace_advanced_ballistics" callExtension format["atmosphericCorrection:%1:%2:%3:%4:%5", _bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]));
 };
 
-private ["_airFrictionCoef", "_airDensity"];
-_airFrictionCoef = 1;
+private _airFrictionCoef = 1;
 if (!_useABConfig && (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
-    _airDensity = [_temperature, _barometricPressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
+    private _airDensity = [_temperature, _barometricPressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
     _airFrictionCoef = _airDensity / 1.22498;
 };
 
-private ["_speedTotal", "_stepsTotal", "_speedAverage"];
-_speedTotal = 0;
-_stepsTotal = 0;
-_speedAverage = 0;
+private _speedTotal = 0;
+private _stepsTotal = 0;
+private _speedAverage = 0;
 
 _bulletPos set [0, 0];
 _bulletPos set [1, 0];
@@ -103,7 +98,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _trueSpeed = vectorMagnitude _trueVelocity;
 
     if (_useABConfig) then {
-        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]));
+        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3:%4", _dragModel, _bc, _trueSpeed, _temperature]));
         _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction * _airFrictionCoef);
@@ -115,7 +110,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
     _bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
-    
+
     if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
 
     _TOF = _TOF + _deltaT;
@@ -129,19 +124,19 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
             _windage = - atan(_tx / _range);
             _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _range);
         };
-        private ["_elevationString", "_windageString", "_leadString"];
-        _elevationString = Str(round(-_elevation * 60 / 3.38 * 10) / 10);
+
+        private _elevationString = Str(round(-_elevation * 60 / 3.38 * 10) / 10);
         if (_elevationString == "0") then {
             _elevationString = "-0.0";
         };
         if (_elevationString find "." == -1) then {
             _elevationString = _elevationString + ".0";
         };
-        _windageString = Str(round(_windage * 60 / 3.38 * 10) / 10);
+        private _windageString = Str(round(_windage * 60 / 3.38 * 10) / 10);
         if (_windageString find "." == -1) then {
             _windageString = _windageString + ".0";
         };
-        _leadString = Str(round(_lead * 10) / 10);
+        private _leadString = Str(round(_lead * 10) / 10);
         if (_leadString find "." == -1) then {
             _leadString = _leadString + ".0";
         };

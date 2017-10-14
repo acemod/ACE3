@@ -15,6 +15,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "leg",  2, kevin, "bullet", 2, kevin, 2] call ACE_medical_fnc_handleDamage_advanced
+ *
  * Public: No
  */
 
@@ -27,10 +30,10 @@ params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeO
 
 if ((_typeOfProjectile == "") && {_newDamage < 0.15} && {
     _newDamage = _newDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
-    if (_newDamage > 0.15) then { 
+    if (_newDamage > 0.15) then {
         // if the new sum is large enough, reset variable and continue with it added in
         _unit setVariable [QGVAR(trivialDamage), 0];
-        false 
+        false
     } else {
         // otherwise just save the new sum into the variable and exit
         _unit setVariable [QGVAR(trivialDamage), _newDamage];

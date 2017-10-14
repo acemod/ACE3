@@ -3,10 +3,17 @@
  * N/A
  *
  * Arguments:
- * ?
+ * 0: caller <OBJECT>
+ * 1: target <OBJECT>
+ * 2: requestID <STRING>
+ * 3: Message <STRING>
+ * 4: callback (NOT USED) <CODE>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_recieveRequest
  *
  * Public: No
  */

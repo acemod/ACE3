@@ -41,9 +41,16 @@ GVAR(greenLaserUnits) = [];
         params ["_unit"];
 
         private _weapon = currentWeapon _unit;
+        if (!(_unit isFlashlightOn _weapon)) exitWith {
+            GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+            GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
+        };
+        
         private _laser = [(_unit weaponAccessories _weapon) select 1] param [0, ""];
-
-        if (_laser isEqualTo "") exitWith {};
+        if (_laser isEqualTo "") exitWith {
+            GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+            GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
+        };
 
         private _laserID = GVAR(laserClassesCache) getVariable _laser;
 
@@ -51,20 +58,16 @@ GVAR(greenLaserUnits) = [];
             _laserID = getNumber (configFile >> "CfgWeapons" >> _laser >> "ACE_laserpointer");
             GVAR(laserClassesCache) setVariable [_laser, _laserID];
         };
+        TRACE_3("",_weapon,_laser,_laserID);
 
-        if (_unit isFlashlightOn _weapon) then {
-            if (_laserID isEqualTo 1) exitWith {
-                GVAR(redLaserUnits) pushBackUnique _unit;
-                GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
-            };
-
-            if (_laserID isEqualTo 2) exitWith {
-                GVAR(greenLaserUnits) pushBackUnique _unit;
-                GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
-            };
-        } else {
-            GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
+        if (_laserID isEqualTo 1) exitWith {
+            GVAR(redLaserUnits) pushBackUnique _unit;
             GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
+        };
+
+        if (_laserID isEqualTo 2) exitWith {
+            GVAR(greenLaserUnits) pushBackUnique _unit;
+            GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
         };
     };
 

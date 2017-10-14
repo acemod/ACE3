@@ -3,13 +3,16 @@
  * Calculate FCS solution
  *
  * Arguments:
- * 0: Vehicle
- * 1: Turret
- * 2: Target distance
- * 3: Azimuth offset
+ * 0: Vehicle <OBJECT>
+ * 1: Turret <ARRAY>
+ * 2: Target distance <NUMBER>
+ * 3: Azimuth offset <UNKNOWN>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [car, [turret], 5, ?] call ace_fcs_fnc_calculateSolution
  *
  * Public: No
  */

@@ -3,7 +3,7 @@
  * PFH logic for unconscious state
  *
  * Arguments:
- * 0: PFEH - Args
+ * 0: PFEH - <ARRAY>
  *      0: The unit that will be put in an unconscious state <OBJECT>
  *      1: unitPos (stance) <STRING>
  *      2: Starting Time <NUMBER>
@@ -12,14 +12,17 @@
  *      5: Parachute Check <BOOL>
  * 1: PFEH ID <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [[unit,"pos", 5, 5, true, false], 5], "classname"] call ace_medical_fnc_unconsciousPFH
  *
  * Public: yes
  */
+
 #include "script_component.hpp"
 
-private ["_unit", "_minWaitingTime", "_slotInfo", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime", "_awakeInVehicleAnimation", "_oldVehicleAnimation", "_vehicle"];
 params ["_args", "_idPFH"];
 _args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];
 
@@ -64,9 +67,9 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
                 [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
             };
         } else {
-            _vehicle = vehicle _unit;
-            _oldVehicleAnimation = _unit getVariable [QGVAR(vehicleAwakeAnim), []];
-            _awakeInVehicleAnimation = "";
+            private _vehicle = vehicle _unit;
+            private _oldVehicleAnimation = _unit getVariable [QGVAR(vehicleAwakeAnim), []];
+            private _awakeInVehicleAnimation = "";
             if (((count _oldVehicleAnimation) > 0) && {(_oldVehicleAnimation select 0) == _vehicle}) then {
                 _awakeInVehicleAnimation = _oldVehicleAnimation select 1;
             };
@@ -76,7 +79,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
             } else {
                 //Don't have a valid animation saved, reset the unit animation with a moveInXXX
                 TRACE_1("No Valid Animation, doing seat reset", _awakeInVehicleAnimation);
-                _slotInfo = [];
+                private _slotInfo = [];
                 {if ((_x select 0) == _unit) exitWith {_slotInfo = _x;};} forEach (fullCrew _vehicle);
                 if (_slotInfo isEqualTo []) exitWith {ERROR("No _slotInfo?");};
                 //Move the unit out:

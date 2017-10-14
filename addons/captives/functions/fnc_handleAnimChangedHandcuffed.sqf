@@ -6,8 +6,11 @@
  * 0: The Unit <OBJECT>
  * 1: New animation <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, "movearm"] call ACE_captives_fnc_handleAnimChangedHandcuffed
  *
  * Public: No
  */
@@ -23,7 +26,7 @@ if (_unit == (vehicle _unit)) then {
         [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
     };
 } else {
-    _turretPath = [];
+    private _turretPath = [];
     {
         _x params ["_xUnit", "", "", "_xTurretPath"];
         if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};

@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Cleans up refuel
+ * Cleans up refuel on client disconnect.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -15,12 +15,13 @@
  */
 #include "script_component.hpp"
 
-params [["_disconnectedPlayer", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]]];
+TRACE_1("disconnect",_unit);
 
-if (isNull _disconnectedPlayer) exitWith {};
+if (isNull _unit) exitWith {};
 
-private _nozzle = _disconnectedPlayer getVariable [QGVAR(nozzle), objNull];
-
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if (isNull _nozzle) exitWith {};
 
-[_disconnectedPlayer, _nozzle] call FUNC(dropNozzle);
+[_unit, _nozzle] call FUNC(dropNozzle);
+[_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);

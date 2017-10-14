@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [[array]] call ace_fcs_fnc_handleAirBurstAummunitionPFH
+ *
  * Public: No
  */
 #include "script_component.hpp"

@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ * Dev things
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_doSpall
+ *
+ * Public: No
+ */
+
 //fnc_doSpall.sqf
 #include "script_component.hpp"
 // ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";

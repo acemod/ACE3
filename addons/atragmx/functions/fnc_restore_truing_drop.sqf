@@ -6,7 +6,7 @@
  * update display <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_restore_truing_drop

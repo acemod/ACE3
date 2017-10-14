@@ -8,9 +8,14 @@
  * Return Value:
  * If unit's head is underwater <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc_isUnderwater
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
+
+ACE_DEPRECATED(QFUNC(isUnderwater),"3.13.0","underwater OBJECT");
 
 params [["_unit", objNull, [objNull]]];
 

@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ACE_Explosives_fnc_addTransmitterActions;
@@ -18,12 +18,10 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private ["_children", "_config", "_detonators"];
-
-_detonators = [_unit] call FUNC(getDetonators);
-_children = [];
+private _detonators = [_unit] call FUNC(getDetonators);
+private _children = [];
 {
-    _config = ConfigFile >> "CfgWeapons" >> _x;
+    private _config = ConfigFile >> "CfgWeapons" >> _x;
     _children pushBack
         [
             [

@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC] call ace_zeus_fnc_moduleSimulation
+ *
  * Public: No
  */
 

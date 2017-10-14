@@ -9,7 +9,7 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [objNull, [player], true] call ace_captives_fnc_moduleHandcuffed

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="ai">
+     <Key ID="STR_ACE_ai_GarrisonInvalidPosition">
+            <English>Invalid position provided.</English>
+            <French>Position invalide fourni</French>
+            <Japanese>位置が無効です。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_ai_GarrisonNoUnits">
+            <English>No units provided.</English>
+            <French>Aucune unité fourni</French>
+            <Japanese>ユニットがありません。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_ai_GarrisonNotEnoughPos">
+            <English>There aren't enough positions to place all units.</English>
+            <French>Il n'y a pas assez de positions pour placer toutes les unités</French>
+            <Japanese>全ユニットを置くために十分な位置がありません。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_ai_GarrisonNoBuilding">
+            <English>No building found.</English>
+            <French>Aucun bâtiment trouvé</French>
+            <Japanese>建物がありません。</Japanese>
+        </Key>
+    </Package>
+</Project>

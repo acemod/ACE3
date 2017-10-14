@@ -14,6 +14,8 @@
             <Italian>Limitatore Attivo</Italian>
             <Japanese>速度制限を有効化</Japanese>
             <Korean>속도 제한기 켜짐</Korean>
+            <Chinesesimp>启用速度限制</Chinesesimp>
+            <Chinese>啟用速度限制</Chinese>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -28,6 +30,8 @@
             <Italian>Limitatore Non Attivo</Italian>
             <Japanese>速度制限を無効化</Japanese>
             <Korean>속도 제한기 꺼짐</Korean>
+            <Chinesesimp>停用速度限制</Chinesesimp>
+            <Chinese>停用速度限制</Chinese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -42,6 +46,8 @@
             <Italian>Limitatore di Velocità</Italian>
             <Japanese>速度制限</Japanese>
             <Korean>속도 제한기</Korean>
+            <Chinesesimp>速度限制器</Chinesesimp>
+            <Chinese>速度限制器</Chinese>
         </Key>
     </Package>
 </Project>

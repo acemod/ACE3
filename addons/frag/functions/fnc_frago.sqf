@@ -8,7 +8,7 @@
  * 2: Ammo Classname <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [[], [], "handGrenade"] call ace_frag_fnc_frago

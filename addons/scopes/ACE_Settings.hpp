@@ -50,7 +50,7 @@ class ACE_Settings {
     };
     class GVAR(zeroReferenceHumidity) {
         typeName = "SCALAR";
-        value = 0.5;
+        value = 0.0;
         displayName = CSTRING(zeroReferenceHumidity_displayName);
         description = CSTRING(zeroReferenceHumidity_description);
     };

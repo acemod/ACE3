@@ -18,14 +18,13 @@
 
 #include "script_component.hpp"
 params ["_player", "_target", "_weapon"];
-private ["_compatibleMags", "_filteredMags", "_magToPass", "_magToPassIndex", "_playerName", "_magToPassDisplayName"];
 
-_compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-_filteredMags = magazinesAmmoFull _player select {(_x select 0) in _compatibleMags && {!(_x select 2)}};
+private _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
+private _filteredMags = magazinesAmmoFull _player select {(_x select 0) in _compatibleMags && {!(_x select 2)}};
 
 //select magazine with most ammo
-_magToPass = _filteredMags select 0;
-_magToPassIndex = 0;
+private _magToPass = _filteredMags select 0;
+private _magToPassIndex = 0;
 {
     _x params ["_className", "_ammoCount"];
     if ((_ammoCount > (_magToPass select 1)) && (_target canAdd _className)) then {
@@ -49,6 +48,6 @@ _player removeMagazines _magToPassClassName;
 
 _target addMagazine [_magToPassClassName, _magToPassAmmoCount];
 
-_playerName = [_player] call EFUNC(common,getName);
-_magToPassDisplayName = getText (configFile >> "CfgMagazines" >> _magToPassClassName >> "displayName");
+private _playerName = [_player] call EFUNC(common,getName);
+private _magToPassDisplayName = getText (configFile >> "CfgMagazines" >> _magToPassClassName >> "displayName");
 [QEGVAR(common,displayTextStructured), [[LSTRING(PassMagazineHint), _playerName, _magToPassDisplayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;

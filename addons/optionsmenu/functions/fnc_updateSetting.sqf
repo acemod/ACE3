@@ -18,10 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_changed"];
-PARAMS_3(_type,_name,_newValue);
+params ["_type", "_name", "_newValue"];
 
-_changed = false;
+private _changed = false;
 
 switch (_type) do {
   case (MENU_TAB_OPTIONS): {

@@ -17,11 +17,10 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_config", "_enabled", "_deploymentStage"];
 
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_enabled = getNumber (_config >> QGVAR(enabled));
-_deploymentStage = _vehicle getVariable [QGVAR(deploymentStage), 0];
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _enabled = getNumber (_config >> QGVAR(enabled));
+private _deploymentStage = _vehicle getVariable [QGVAR(deploymentStage), 0];
 
 (driver _vehicle != _unit) &&
 {getPos _vehicle select 2 > 2} &&

@@ -9,6 +9,9 @@
  * 0: Latitude <NUMBER>
  * 1: Altitude <NUMBER>
  *
+ * Example:
+ * ["altis"] call ace_common_fnc_getMapData
+ *
  * Public: No
  */
 
@@ -21,13 +24,14 @@ _map = toLower _map;
 if (_map in ["tanoa"]) exitWith { [-18, 0] };
 if (_map in ["altis"]) exitWith { [40, 0] };
 if (_map in ["stratis"]) exitWith { [40, 0] };
+if (_map in ["malden", "abel"]) exitWith { [38.8, 0] }; // 1.72 Malden and CWR2 Malden
 
 if (_map in ["abbottabad"]) exitWith { [34, 1256] }; // Abbottabad elevation 1256m (Wikipedia)
-if (_map in ["abel"]) exitWith { [39, 0] }; // CWR2 Malden
 if (_map in ["abramia"]) exitWith { [60, 0] };
 if (_map in ["af_kandahar_province"]) exitWith { [42, 0] };
 if (_map in ["angel"]) exitWith { [38, 0] };
 if (_map in ["anim_helvantis_v2"]) exitWith { [50, 0] };
+if (_map in ["anim_starokovka"]) exitWith { [50, 0] };
 if (_map in ["australia"]) exitWith { [-25, 0] };
 if (_map in ["baranow", "ivachev", "panavo", "staszow"]) exitWith { [50, 148.1] }; // IFA3LITE - default elevationOffset
 if (_map in ["beketov"]) exitWith { [55, 0] };
@@ -47,7 +51,7 @@ if (_map in ["csj_lawlands", "uns_dong_ha"]) exitWith { [12, 0] }; // Unsung Mod
 if (_map in ["csj_sea"]) exitWith { [15, 0] }; // Unsung Mod
 if (_map in ["dakrong"]) exitWith { [16, 0] }; // Unsung Mod
 if (_map in ["desert_e"]) exitWith { [40, 800] };
-if (_map in ["desert_island"]) exitWith { [40, 0] }; // CWR2 Desert Island   
+if (_map in ["desert_island"]) exitWith { [40, 0] }; // CWR2 Desert Island
 if (_map in ["dya"]) exitWith { [34, 110] }; // Diyala Iraq - default elevationOffset
 if (_map in ["eden"]) exitWith { [45, 0] }; // CWR2 Everon
 if (_map in ["esseker"]) exitWith { [43, 2000] };
@@ -71,6 +75,7 @@ if (_map in ["koplic"]) exitWith { [42, 0] };
 if (_map in ["kunduz"]) exitWith { [37, 0] };
 if (_map in ["lingor", "lingor3", "dingor"]) exitWith { [-4, 0] };
 if (_map in ["lost", "lostw"]) exitWith { [60, 0] };
+if (_map in ["lythium"]) exitWith { [34, 0] };
 if (_map in ["malvinas"]) exitWith { [-52, 0] };
 if (_map in ["marenice"]) exitWith { [51, 0] }; // CSA38 Mod (Czechoslovak army 1938 - Munich crisis), Lisatian Mountains.
 if (_map in ["mcn_aliabad"]) exitWith { [36, 0] };
@@ -94,6 +99,7 @@ if (_map in ["pja308"]) exitWith { [36, 0] }; // G.O.S Gunkizli
 if (_map in ["pja310"]) exitWith { [36, 0] }; // G.O.S Al Rayak
 if (_map in ["pja312"]) exitWith { [16, 0] }; // G.O.S Song Bin Tanh
 if (_map in ["pja314"]) exitWith { [46, 0] }; // G.O.S Leskovets
+if (_map in ["pja319"]) exitWith { [20, 0] }; // G.O.S N'Djenahoud, Ennedi Massif (Republic of Chad)
 if (_map in ["plr_bulge"]) exitWith { [49, 0] }; // I44: Battle of the Bulge
 if (_map in ["porquerolles"]) exitWith { [43, 0] };
 if (_map in ["porto"]) exitWith { [40, 0] };

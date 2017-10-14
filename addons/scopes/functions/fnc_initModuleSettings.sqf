@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_scopes_fnc_initModuleSettings
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -17,7 +20,7 @@
 params ["_logic","_units", "_activated"];
 
 if !(_activated) exitWith {};
-    
+
 [_logic, QGVAR(enabled), "enabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(forceUseOfAdjustmentTurrets), "forceUseOfAdjustmentTurrets"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(correctZeroing), "correctZeroing"] call EFUNC(common,readSettingFromModule);

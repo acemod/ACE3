@@ -9,7 +9,7 @@
  * 2: Projectile <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, "handGrenade", bullet] call ace_frag_fnc_addPfhRound
