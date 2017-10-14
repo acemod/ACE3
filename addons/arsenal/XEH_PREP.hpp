@@ -27,6 +27,7 @@ PREP(onSelChangedRightListnBox);
 PREP(openBox);
 PREP(removeBox);
 PREP(removeVirtualItems);
+PREP(scanConfig);
 PREP(showItem);
 PREP(sortPanel);
 PREP(updateCamPos);
