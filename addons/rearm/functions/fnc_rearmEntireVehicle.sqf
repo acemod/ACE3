@@ -17,11 +17,7 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    "",
-    ["_vehicle", objNull, [objNull]]
-];
+params ["_truck", "", "_vehicle"];
 
 [
     TIME_PROGRESSBAR(10),

@@ -15,8 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_index"];
-_index = 0 max (lbCurSel 6000);
+private _index = 0 max (lbCurSel 6000);
 
 GVAR(gunList) set [_index, +GVAR(workingMemory)];
 

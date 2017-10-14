@@ -18,9 +18,7 @@
 
 params ["_target"];
 
-private ["_allItems", "_classnamesCount", "_index", "_uniqueClassnames"];
-
-_allItems = (((items _target) + (assignedItems _target)) - (weapons _target)) + (weapons _target) + (magazines _target);
+private _allItems = (((items _target) + (assignedItems _target)) - (weapons _target)) + (weapons _target) + (magazines _target);
 
 if ((backpack _target) != "") then {
     _allItems pushBack (backpack _target);
@@ -39,11 +37,11 @@ if ((goggles _target) != "") then {
     _allItems pushBack (goggles _target);
 };
 
-_uniqueClassnames = [];
-_classnamesCount = [];
+private _uniqueClassnames = [];
+private _classnamesCount = [];
 //Filter unique and count
 {
-    _index = _uniqueClassnames find _x;
+    private _index = _uniqueClassnames find _x;
     if (_index != -1) then {
         _classnamesCount set [_index, ((_classnamesCount select _index) + 1)];
     } else {

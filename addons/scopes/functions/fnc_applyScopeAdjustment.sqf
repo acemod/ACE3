@@ -18,14 +18,12 @@
  */
 #include "script_component.hpp"
 
-private ["_adjustmentDifference", "_pitchBankYaw", "_adjustment", "_weaponIndex"];
-
 params ["_unit", "_elevation", "_windage", "_zero"];
 
-_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 
-_adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
-_adjustmentDifference = (_adjustment select _weaponIndex) vectorDiff [_elevation, _windage, _zero];
+private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
+private _adjustmentDifference = (_adjustment select _weaponIndex) vectorDiff [_elevation, _windage, _zero];
 if (_adjustmentDifference isEqualTo [0,0,0]) exitWith {false};  // Don't coninue if no adjustment is made
 
 _adjustment set [_weaponIndex, [_elevation, _windage, _zero]];
@@ -38,7 +36,7 @@ if (cameraView == "GUNNER") then {
     // Convert adjustmentDifference from mils to degrees
     _adjustmentDifference = _adjustmentDifference apply {_x * 0.05625};
     _adjustmentDifference params ["_elevationDifference", "_windageDifference"];
-    _pitchBankYaw = [_unit] call EFUNC(common,getPitchBankYaw);
+    private _pitchBankYaw = [_unit] call EFUNC(common,getPitchBankYaw);
     _pitchBankYaw params ["_pitch", "_bank", "_yaw"];
     _pitch = _pitch + _elevationDifference;
     _yaw = _yaw + _windageDifference;

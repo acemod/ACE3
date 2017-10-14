@@ -20,10 +20,12 @@ params ["_bloodRemaining"];
 disableSerialization;
 
 // get already existing controls, or create them
-private ["_fxBloodControls", "_bloodCtrl1", "_bloodCtrl2", "_bloodCtrl3"];
 
-_fxBloodControls = GETUVAR(GVAR(FXBloodControls),[]);
+private _fxBloodControls = GETUVAR(GVAR(FXBloodControls),[]);
 
+private _bloodCtrl1 = controlNull;
+private _bloodCtrl2 = controlNull;
+private _bloodCtrl3 = controlNull;
 if (count _fxBloodControls != 3) then {
     _bloodCtrl1 = findDisplay 46 ctrlCreate ["RscPicture", -1];
     _bloodCtrl2 = findDisplay 46 ctrlCreate ["RscPicture", -1];

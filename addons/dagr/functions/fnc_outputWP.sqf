@@ -31,8 +31,6 @@ __background ctrlSetText QPATHTOF(UI\dagr_wp.paa);
 if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
-    private ["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
-
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
         GVAR(outputPFH) = -1;
@@ -41,13 +39,13 @@ GVAR(outputPFH) = [{
     };
 
     // GRID
-    _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
+    private _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
     _gridArray params ["_gridArrayX","_gridArrayY"];
-    _dagrGrid = format ["%1 %2", (_gridArrayX select [0,4]), (_gridArrayY select [0,4])];
+    private _dagrGrid = format ["%1 %2", (_gridArrayX select [0,4]), (_gridArrayY select [0,4])];
 
     // WP Grid
-    _xGrid2 = floor (DAGR_WP_INFO / 10000);
-    _yGrid2 = DAGR_WP_INFO - _xGrid2 * 10000;
+    private _xGrid2 = floor (DAGR_WP_INFO / 10000);
+    private _yGrid2 = DAGR_WP_INFO - _xGrid2 * 10000;
 
     _xCoord2 = switch true do {
         case (_xGrid2 >= 1000): { "" + Str(_xGrid2) };
@@ -66,21 +64,21 @@ GVAR(outputPFH) = [{
     _dagrGrid2 = _xCoord2 + " " + _yCoord2;
 
     // Distance
-    _WPpos = [_dagrGrid2, true] call EFUNC(common,getMapPosFromGrid);
-    _MYpos = [_dagrGrid, true] call EFUNC(common,getMapPosFromGrid);
-    _distance = _MYpos distance _WPpos;
+    private _WPpos = [_dagrGrid2, true] call EFUNC(common,getMapPosFromGrid);
+    private _MYpos = [_dagrGrid, true] call EFUNC(common,getMapPosFromGrid);
+    private _distance = _MYpos distance _WPpos;
     _distance = floor (_distance * 10) / 10;
-    _dagrDistance = str _distance + "m";
+    private _dagrDistance = str _distance + "m";
 
     // Heading
-    _dagrHeading = floor (if (GVAR(useDegrees)) then {
+    private _dagrHeading = floor (if (GVAR(useDegrees)) then {
         direction (vehicle ACE_player)
     } else {
         DEG_TO_MIL(direction (vehicle ACE_player))
     });
 
     // WP Heading
-    _bearing = floor (if (GVAR(useDegrees)) then {
+    private _bearing = floor (if (GVAR(useDegrees)) then {
         ((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir)
     } else {
         DEG_TO_MIL(((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir))

@@ -302,6 +302,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "pylons" %}
+`ace_interact_menu`
+{% endif %}
+
 {% if include.component == "quickmount" %}
 `ace_common`
 {% endif %}
@@ -435,7 +439,7 @@
 {% endif %}
 
 {% if include.component == "zeus" %}
-`ace_common`
+`ace_common`, `ace_ai`
 {% endif %}
 
 {% if include.component == "compat_adr_97" %}

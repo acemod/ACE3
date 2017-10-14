@@ -16,8 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_ret"];
-_ret = false;
+private _ret = false;
 
 switch (_this select 1) do {
     // A = Lower zoom level

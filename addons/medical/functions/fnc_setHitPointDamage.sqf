@@ -24,7 +24,6 @@
 #define ARMDAMAGETRESHOLD1 1
 #define ARMDAMAGETRESHOLD2 1.7
 
-private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal", "_armdamage", "_legdamage"];
 params ["_unit", "_selection", "_damage", ["_disabled", false]];
 
 // Unit isn't local, give function to machine where it is.
@@ -37,7 +36,7 @@ if (_disabled) exitWith {
     _unit setHitPointDamage [_selection, _damage];
 };
 
-_selections = [
+private _selections = [
     "HitHead",
     "HitBody",
     "HitLeftArm",
@@ -50,10 +49,10 @@ if !(_selection in _selections) exitWith {
     _unit setHitPointDamage [_selection, _damage];
 };
 
-_damages = _selections apply {_unit getHitPointDamage _x};
+private _damages = _selections apply {_unit getHitPointDamage _x};
 
-_damageOld = damage _unit;
-_damageSumOld = 0;
+private _damageOld = damage _unit;
+private _damageSumOld = 0;
 {
     _damageSumOld = _damageSumOld + _x;
 } forEach _damages;
@@ -61,12 +60,12 @@ _damageSumOld = _damageSumOld max 0.001;
 
 _damages set [_selections find _selection, _damage];
 
-_damageSumNew = 0;
+private _damageSumNew = 0;
 {
     _damageSumNew = _damageSumNew + _x;
 } forEach _damages;
 
-_damageNew = _damageSumNew / 6;
+private _damageNew = _damageSumNew / 6;
 if (_damageOld > 0) then {
     _damageNew = _damageOld * (_damageSumNew / _damageSumOld);
 };
@@ -80,12 +79,12 @@ if (_damageNew >= 0.9) then {
 };
 
 {
-    _damageFinal = (_damages select _forEachIndex);
+    private _damageFinal = (_damages select _forEachIndex);
     _unit setHitPointDamage [_x, _damageFinal];
 } forEach _selections;
 
 // Leg Damage
-_legdamage = (_unit getHitPointDamage "HitLeftLeg") + (_unit getHitPointDamage "HitRightLeg");
+private _legdamage = (_unit getHitPointDamage "HitLeftLeg") + (_unit getHitPointDamage "HitRightLeg");
 if (_legdamage >= LEGDAMAGETRESHOLD1) then {
     if (_unit getHitPointDamage "HitLegs" != 1) then {_unit setHitPointDamage ["HitLegs", 1]};
 } else {
@@ -95,7 +94,7 @@ if (_legdamage >= LEGDAMAGETRESHOLD1) then {
 
 
 // Arm Damage
-_armdamage = (_unit getHitPointDamage "HitLeftArm") + (_unit getHitPointDamage "HitRightArm");
+private _armdamage = (_unit getHitPointDamage "HitLeftArm") + (_unit getHitPointDamage "HitRightArm");
 if (_armdamage >= ARMDAMAGETRESHOLD1) then {
     if (_unit getHitPointDamage "HitHands" != 1) then {_unit setHitPointDamage ["HitHands", 1]};
 } else {

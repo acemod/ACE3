@@ -228,6 +228,7 @@ class CfgWeapons {
         };
     };
     class R3F_J10_MILDOT: R3F_J10 { // Scope rail 30 MOA
+        ACE_ScopeZeroRange = 100;
         ACE_ScopeHeightAboveRail = 4.4;
         ACE_ScopeAdjust_Vertical[] = {-2, 18};
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
