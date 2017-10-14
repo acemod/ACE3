@@ -6,14 +6,10 @@ GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
 GVAR(humidityShift) = (5 - random 10) / 100;
 
 GVAR(wind_period_start_time) = CBA_missionTime;
-GVAR(rain_period_start_time) = CBA_missionTime;
-
-GVAR(ACE_rain) = rain;
 
 "ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = CBA_missionTime; };
-"ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = CBA_missionTime; };
-"ACE_MISC_PARAMS" addPublicVariableEventHandler {
-    if (!isServer) then {
+if (!isServer) then {
+    "ACE_MISC_PARAMS" addPublicVariableEventHandler {
         TRACE_1("MISC PARAMS PVEH",ACE_MISC_PARAMS);
         if (GVAR(syncMisc)) then {
             30 setLightnings (ACE_MISC_PARAMS select 0);
@@ -62,25 +58,13 @@ simulWeatherSync;
 ["ace_settingsInitialized",{
     TRACE_1("ace_settingsInitialized eh",GVAR(syncRain));
 
-    // update rain every frame:
-    if (GVAR(syncRain)) then {
-        addMissionEventHandler ["EachFrame", {0 setRain GVAR(ACE_rain)}];
-    };
-
-    //Create a 1 sec delay PFEH to update wind/rain/temp/humidity:
-
-    //If we don't sync rain, set next time to infinity
-    GVAR(nextUpdateRain) = if (GVAR(syncRain)) then {0} else {1e99};
+    // Create a 1 sec delay PFEH to update wind/temp/humidity
     GVAR(nextUpdateTempAndHumidity) = 0;
     [{
         BEGIN_COUNTER(weatherPFEH);
 
         [] call FUNC(updateWind); //Every 1 second
 
-        if (CBA_missionTime >= GVAR(nextUpdateRain)) then {
-            [] call FUNC(updateRain); //Every 2 seconds
-            GVAR(nextUpdateRain) = 2 + CBA_missionTime;
-        };
         if (CBA_missionTime >= GVAR(nextUpdateTempAndHumidity)) then {
             [] call FUNC(updateTemperature); //Every 20 seconds
             [] call FUNC(updateHumidity); //Every 20 seconds
