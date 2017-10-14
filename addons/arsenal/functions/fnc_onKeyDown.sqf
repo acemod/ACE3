@@ -9,7 +9,8 @@ GVAR(shiftState) = _shiftState;
 
 private _return = true;
 
-if !(GVAR(searchbarFocus)) then {
+if !(GVAR(leftSearchbarFocus) && {!(GVAR(rightSearchbarFocus))}) then {
+
     switch true do { 
         // Close button
         case (_keyPressed == DIK_ESCAPE): {
@@ -17,11 +18,7 @@ if !(GVAR(searchbarFocus)) then {
         };
         // Hide button
         case (_keyPressed == DIK_BACKSPACE): {
-            if (GVAR(searchbarFocus)) then {
-                _return = false;
-            } else {
-                [_display] call FUNC(buttonHide);
-            };
+            [_display] call FUNC(buttonHide);
         };
         // Export button
         case (_keyPressed == DIK_C): {
@@ -68,9 +65,16 @@ if !(GVAR(searchbarFocus)) then {
         case (_keyPressed == DIK_ESCAPE): {
             _display closeDisplay 2;
         };
-        // Hide button
         case (_keyPressed == DIK_BACKSPACE): {
             _return = false;
+        };
+        case (_keyPressed == DIK_RETURN): {
+            if (GVAR(leftSearchbarFocus)) then {
+                [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
+            }; 
+            if (GVAR(rightSearchbarFocus)) then {
+                [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
+            };
         };
     };
 };

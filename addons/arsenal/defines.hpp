@@ -221,7 +221,8 @@
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_buttonRemoveAll,\
-    IDC_rightSearchbar\
+    IDC_rightSearchbar,\
+    IDC_rightSearchbarButton\
 ];
 
 #define LIST_DEFAULTS\

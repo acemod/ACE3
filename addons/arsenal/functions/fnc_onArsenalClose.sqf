@@ -39,7 +39,8 @@ GVAR(mouseButtonState) = nil;
 GVAR(mode) = nil;
 GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
-GVAR(searchbarFocus) = nil;
+GVAR(leftSearchbarFocus) = nil;
+GVAR(rightSearchbarFocus) = nil;
 GVAR(shiftState) = nil;
 
 GVAR(selectedWeaponType) = nil;
