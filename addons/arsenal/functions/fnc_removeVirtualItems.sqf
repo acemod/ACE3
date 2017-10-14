@@ -8,7 +8,7 @@ if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
     [[], [], []], // Weapons 0, primary, handgun, secondary
-    [ ], // WeaponAccessories 1
+    [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
     [ ], // Magazines 2
     [ ], // Headgear 3
     [ ], // Uniform 4
@@ -36,18 +36,20 @@ if (_items isEqualType true && {_items}) then {
     _items = _items select {_x isEqualType "" && {_x != ""}};
 
     {
-        if (_x isEqualTo (_cargo select 0)) then {
-
-            _cargo set [0, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items]];
+        if (_forEachIndex isEqualTo 0) then {
+            _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items]];
         } else {
-
-            _cargo set [_cargo find _x, _x - _items];
+            if (_forEachIndex isEqualTo 0) then {
+                _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items, (_x select 3) - _items]];
+            } else {
+                _cargo set [_cargo find _x, _x - _items];
+            };
         };
     } foreach _cargo;
 
     private _itemCount = {
-        if (_x isEqualTo (_cargo select 0)) then {
-            if (_x isEqualTo [[],[],[]]) then {
+        if (_x isEqualTo (_cargo select 0) || {_x isEqualTo (_cargo select 1)}) then {
+            if (_x isEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]}) then {
                 false
             } else {
                 true

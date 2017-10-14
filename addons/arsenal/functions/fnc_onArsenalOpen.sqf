@@ -17,7 +17,7 @@ if (isNil QGVAR(mode)) then {
 };
 
 if (isNil QGVAR(virtualItems)) then {
-    GVAR(virtualItems) = [[[], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+    GVAR(virtualItems) = [[[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
 GVAR(currentFace) = face GVAR(center);
@@ -27,22 +27,27 @@ GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
 for "_index" from 0 to 10 do {
-    
 
-    if (_index == 0) then {
-        private _array = LIST_DEFAULTS select 0;
+
+    if (_index == 0 || _index == 1) then {
+        private _array = LIST_DEFAULTS select _index;
 
         if !((_array select 0) isEqualTo "") then {
-            ((GVAR(virtualItems) select 0) select 0) pushBackUnique (_array select 0);
+            ((GVAR(virtualItems) select _index) select 0) pushBackUnique (_array select 0);
         };
 
         if !((_array select 1) isEqualTo "") then {
-            ((GVAR(virtualItems) select 0) select 1) pushBackUnique (_array select 1);
+            ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
         };
 
         if !((_array select 2) isEqualTo "") then {
-             ((GVAR(virtualItems) select 0) select 2) pushBackUnique (_array select 2);
+             ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
         };
+
+        if (_index == 1 && {!((_array select 3) isEqualTo "")}) then {
+             ((GVAR(virtualItems) select _index) select 3) pushBackUnique (_array select 3);
+        };
+
     } else {
 
         private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
@@ -131,7 +136,7 @@ _mouseBlockCtrl ctrlEnable false;
     _x ctrlShow false;
     _x ctrlCommit 0;
 } foreach [
-    IDC_blockRightFrame, 
+    IDC_blockRightFrame,
     IDC_blockRighttBackground,
     IDC_loadIndicator,
     IDC_rightTabContent,
