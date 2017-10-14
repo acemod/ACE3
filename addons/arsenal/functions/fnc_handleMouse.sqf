@@ -9,7 +9,7 @@ GVAR(mouseButtonState) params ["_LMB", "_RMB"];
 
 if (count _LMB > 0) then {
     _LMB params ["_LMBcursorX", "_LMBcursorY"];
-    private _dX = (_LMBcursorX - _mouseX);
+    private _dX = (_mouseX - _LMBcursorX);
     private _dY = (_LMBcursorY - _mouseY);
     GVAR(mouseButtonState) set [0,[_mouseX,_mouseY]];
 
@@ -17,13 +17,14 @@ if (count _LMB > 0) then {
     private _centerSizeBottom = _centerBox select 0 select 2;
     private _centerSizeUp = _centerBox select 1 select 2;
     private _centerSize = sqrt ([_centerBox select 0 select 0,_centerBox select 0 select 1] distance [_centerBox select 1 select 0,_centerBox select 1 select 1]);
-    _helperPos = [_helperPos,_dX * _centerSize,_dirH - 90] call bis_fnc_relpos;
+
+    _helperPos = [_helperPos,_dX * _centerSize, _dirH - 90] call bis_fnc_relpos;
     _helperPos = [
         [0,0,((_helperPos select 2) - _dY * _centerSize) max _centerSizeBottom min _centerSizeUp],
         ([0,0,0] distance2D _helperPos) min _centerSize,
         [0,0,0] getDir _helperPos
     ] call bis_fnc_relpos;
-    //_helperPos set [2,(_helperPos select 2) max 0.1];
+
     _helperPos set [2,(_helperPos select 2) max ((boundingboxreal GVAR(center) select 0 select 2) + 0.2)];
 
     //--- Do not let target go below ground
