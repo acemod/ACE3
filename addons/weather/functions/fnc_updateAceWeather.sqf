@@ -99,7 +99,7 @@ if (GVAR(syncWind) && {GVAR(wind_period_count) > GVAR(wind_next_period)}) then {
 
 
 if (GVAR(syncMisc)) then {
-    ACE_MISC_PARAMS = [lightnings, rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
+    ACE_MISC_PARAMS = [rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
     publicVariable "ACE_MISC_PARAMS";
 };
 

@@ -12,13 +12,12 @@ if (!isServer) then {
     "ACE_MISC_PARAMS" addPublicVariableEventHandler {
         TRACE_1("MISC PARAMS PVEH",ACE_MISC_PARAMS);
         if (GVAR(syncMisc)) then {
-            30 setLightnings (ACE_MISC_PARAMS select 0);
-            30 setRainbow    (ACE_MISC_PARAMS select 1);
-            30 setFog        (ACE_MISC_PARAMS select 2);
+            30 setRainbow    (ACE_MISC_PARAMS select 0);
+            30 setFog        (ACE_MISC_PARAMS select 1);
         };
-        GVAR(temperatureShift) = (ACE_MISC_PARAMS select 3);
-        GVAR(badWeatherShift)  = (ACE_MISC_PARAMS select 4);
-        GVAR(humidityShift)    = (ACE_MISC_PARAMS select 5);
+        GVAR(temperatureShift) = (ACE_MISC_PARAMS select 2);
+        GVAR(badWeatherShift)  = (ACE_MISC_PARAMS select 3);
+        GVAR(humidityShift)    = (ACE_MISC_PARAMS select 4);
         call FUNC(updateTemperature);
         call FUNC(updateHumidity);
     };
