@@ -8,7 +8,7 @@ if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
     [[], [], []], // Weapons 0, primary, handgun, secondary
-    [ ], // WeaponAccessories 1
+    [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
     [ ], // Magazines 2
     [ ], // Headgear 3
     [ ], // Uniform 4
@@ -36,7 +36,22 @@ if (_items isEqualType true && {_items}) then {
                     {(getNumber (_x >> "ItemInfo" >> "type")) in [101, 201, 301, 302]} &&
                     {!(configName _x isKindOf ["CBA_MiscItem", (configFile >> "CfgWeapons")])}
                 ): {
-                (_cargo select 1) pushBackUnique (configName  _x);
+
+                switch (getNumber (_x >> "ItemInfo" >> "type")) do {
+                    case 201: {
+                        (_cargo select 1) select 0 pushBackUnique (configName  _x);
+                    };
+                    case 301: {
+                        (_cargo select 1) select 1 pushBackUnique (configName  _x);
+                    };
+                    case 101: {
+                        (_cargo select 1) select 2 pushBackUnique (configName  _x);
+                    };
+                    case 302: {
+                        (_cargo select 1) select 3 pushBackUnique (configName  _x);
+                    };
+                };
+
             };
             /* Headgear */
             case (isClass (_x >> "ItemInfo") && {getNumber (_x >> "ItemInfo" >> "type") == 605}): {
@@ -55,7 +70,7 @@ if (_items isEqualType true && {_items}) then {
                 (_cargo select 8) pushBackUnique (configName  _x);
             };
             /* Binos */
-            case (getText (_x >> "simulation") == "Binocular" || 
+            case (getText (_x >> "simulation") == "Binocular" ||
             ((getText (_x >> 'simulation') == 'Weapon') && {(getNumber (_x >> 'type') == 4096)})): {
                 (_cargo select 9) pushBackUnique (configName  _x);
             };
@@ -126,8 +141,8 @@ if (_items isEqualType true && {_items}) then {
         switch true do {
             // Rifle, handgun, secondary weapons mags
             case (
-                    (getNumber (_x >> "type") == 256 || {getNumber (_x >> "type") == 512} || {getNumber (_x >> "type") == 1536} || {getNumber (_x >> "type") == 16}) && 
-                    {!((configName _x) in _grenadeList)} && 
+                    (getNumber (_x >> "type") == 256 || {getNumber (_x >> "type") == 512} || {getNumber (_x >> "type") == 1536} || {getNumber (_x >> "type") == 16}) &&
+                    {!((configName _x) in _grenadeList)} &&
                     {!((configName _x) in _putList)}
                 ): {
                 (_cargo select 2) pushBackUnique (configName  _x);
@@ -164,20 +179,33 @@ if (_items isEqualType true && {_items}) then {
                                 {(getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type")) in [101, 201, 301, 302]} &&
                                 {!(_x isKindOf ["CBA_MiscItem", (configFile >> "CfgWeapons")])}
                             ): {
-                            (_cargo select 1) pushBackUnique _x;
+                            switch (getNumber (configFile >> "CfgWeapons" >>_x >> "ItemInfo" >> "type")) do {
+                                case 201: {
+                                    (_cargo select 1) select 0 pushBackUnique _x;
+                                };
+                                case 301: {
+                                    (_cargo select 1) select 1 pushBackUnique _x;
+                                };
+                                case 101: {
+                                    (_cargo select 1) select 2 pushBackUnique _x;
+                                };
+                                case 302: {
+                                    (_cargo select 1) select 3 pushBackUnique _x;
+                                };
+                            };
                         };
                         /* Headgear */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") && 
+                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
                             {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 605}): {
                             (_cargo select 3) pushBackUnique _x;
                         };
                         /* Uniform */\
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") && 
+                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
                             {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 801}): {
                             (_cargo select 4) pushBackUnique _x;
                         };
                         /* Vest */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") && 
+                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
                             {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 701}): {
                             (_cargo select 5) pushBackUnique _x;
                         };
@@ -186,7 +214,7 @@ if (_items isEqualType true && {_items}) then {
                             (_cargo select 8) pushBackUnique _x;
                         };
                         /* Binos */
-                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "Binocular" || 
+                        case (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "Binocular" ||
                             ((getText (configFile>> "CfgWeapons" >> _x >> 'simulation') == 'Weapon') && {(getNumber (configFile>> "CfgWeapons" >> _x >> 'type') == 4096)})): {
                             (_cargo select 9) pushBackUnique _x;
                         };
@@ -211,12 +239,12 @@ if (_items isEqualType true && {_items}) then {
                             (_cargo select 14) pushBackUnique _x;
                         };
                         /* UAV terminals */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") && 
+                        case (isClass (configFile >> "CfgWeapons" >> _x >> "ItemInfo") &&
                             {getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") == 621}): {
                             (_cargo select 14) pushBackUnique _x;
                         };
                         /* Weapon, at the bottom to avoid adding binos */
-                        case (isClass (configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo") && 
+                        case (isClass (configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo") &&
                             {getNumber (configFile>> "CfgWeapons" >> _x >> 'type') != 4096}): {
                             switch (getNumber (configFile>> "CfgWeapons" >> _x >> "type")) do {
                                 case 1: {
@@ -261,8 +289,8 @@ if (_items isEqualType true && {_items}) then {
                     switch true do {
                         // Rifle, handgun, secondary weapons mags
                         case (
-                                (getNumber (_cfgX >> "type") == 256 || {getNumber (_cfgX >> "type") == 512} || {getNumber (_cfgX >> "type") == 1536} || {getNumber (_cfgX >> "type") == 16}) && 
-                                {!(_x in _grenadeList)} && 
+                                (getNumber (_cfgX >> "type") == 256 || {getNumber (_cfgX >> "type") == 512} || {getNumber (_cfgX >> "type") == 1536} || {getNumber (_cfgX >> "type") == 16}) &&
+                                {!(_x in _grenadeList)} &&
                                 {!(_x in _putList)}
                             ): {
                             (_cargo select 2) pushBackUnique _x;

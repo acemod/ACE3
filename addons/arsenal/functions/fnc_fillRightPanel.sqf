@@ -25,15 +25,31 @@ if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
 };
 
 private _fnc_fill_right_Container = {
-    params ["_configPath", "_isMagazine"];
+    params ["_configCategory", "_className", "_isMagazine"];
 
-    private _displayName = getText (_configPath >> "displayName");
-    private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, str 0];
+    private _cacheNamespace = _ctrlPanel; //For better readability.
+    private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
+
+    if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into cache.
+        private _configPath = configFile >> _configCategory >> _className;
+
+        _cachedItemInfo set [0, getText (_configPath >> "displayName")];
+        _cachedItemInfo set [1, getText (_configPath >> "picture")];
+        _cachedItemInfo set [2, [getNumber (_configPath >> "itemInfo" >> "mass"), getNumber (_configPath >> "mass")] select _isMagazine];
+
+        _cacheNamespace setVariable [_configCategory+_className, _cachedItemInfo];
+    };
+
+
+
+    _cachedItemInfo params ["_displayName","_picture", "_mass"];
+
+    private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
     private _columns = count lnbGetColumnsPosition _ctrlPanel;
 
     _ctrlPanel lnbSetData [[_lbAdd, 0], _x];
-    _ctrlPanel lnbSetPicture [[_lbAdd, 0], getText (_configPath >> "picture")];
-    _ctrlPanel lnbSetValue [[_lbAdd, 0], [getNumber (_configPath >> "itemInfo" >> "mass"), getNumber (_configPath >> "mass")] select _isMagazine];
+    _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
+    _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
 
@@ -82,91 +98,82 @@ if (_ctrlIDC in [RIGHT_PANEL_ACC_IDCS] && {_leftPanelState}) then {
 switch (_ctrlIDC) do {
 
     case IDC_buttonOptic : {
-        {
-            private _config = configfile >> "CfgWeapons" >> _x;
-            if (getNumber (_config >> "ItemInfo" >> "type") == 201 && {!_leftPanelState || {_x in _compatibleItems}}) then {
-                if (_leftPanelState) then {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } else {
-                    [_config, false] call _fnc_fill_right_Container;
-                };
-            };
-        } foreach (GVAR(virtualItems) select 1);
+        if (_leftPanelState) then {
+            {
+                ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
+            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 0));
+        } else {
+            {
+                ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 1) select 0);
+        };
     };
 
     case IDC_buttonItemAcc : {
+    if (_leftPanelState) then {
         {
-            private _config = configfile >> "CfgWeapons" >> _x;
-            if (getNumber (_config >> "ItemInfo" >> "type") == 301 && {!_leftPanelState || {_x in _compatibleItems}}) then {
-                if (_leftPanelState) then {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } else {
-                    [_config, false] call _fnc_fill_right_Container;
-                };
-            };
-        } foreach (GVAR(virtualItems) select 1);
+            ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
+        } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 1));
+    } else {
+        {
+            ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
+        } foreach ((GVAR(virtualItems) select 1) select 1);
+    };
     };
 
     case IDC_buttonMuzzle : {
-        {
-            private _config = configfile >> "CfgWeapons" >> _x;
-            if (getNumber (_config >> "ItemInfo" >> "type") == 101  && {!_leftPanelState || {_x in _compatibleItems}}) then {
-                if (_leftPanelState) then {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } else {
-                    [_config, false] call _fnc_fill_right_Container;
-                };
-            };
-        } foreach (GVAR(virtualItems) select 1);
+        if (_leftPanelState) then {
+            {
+                ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
+            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 2));
+        } else {
+            {
+                ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 1) select 2);
+        };
     };
 
     case IDC_buttonBipod : {
-        {
-            private _config = configfile >> "CfgWeapons" >> _x;
-            if (getNumber (_config >> "ItemInfo" >> "type") == 302  && {!_leftPanelState || {_x in _compatibleItems}}) then {
-                if (_leftPanelState) then {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } else {
-                    [_config, false] call _fnc_fill_right_Container;
-                };
-            };
-        } foreach (GVAR(virtualItems) select 1);
+        if (_leftPanelState) then {
+            {
+                ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
+            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 3));
+        } else {
+            {
+                ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 1) select 3);
+        };
     };
 
     case IDC_buttonMag : {
         {
-            private _config = configfile >> "CfgMagazines" >> _x;
-            if (_x in _compatibleMagazines) then {
-                [_config, true] call _fnc_fill_right_Container;
-            };
-        } foreach (GVAR(virtualItems) select 2);
+            ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
+        } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagazines);
     };
 
     case IDC_buttonMagALL : {
+    isNil {"magAll";
         {
-            private _config = configfile >> "CfgMagazines" >> _x;
-            [_config, true] call _fnc_fill_right_Container;
+            ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 2);
+        };
     };
 
     case IDC_buttonThrow : {
         {
-            private _config = configfile >> "CfgMagazines" >> _x;
-            [_config, true]  call _fnc_fill_right_Container;
+            ["CfgMagazines", _x, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 15);
     };
 
     case IDC_buttonPut : {
         {
-            private _config = configfile >> "CfgMagazines" >> _x;
-            [_config, true]  call _fnc_fill_right_Container;
+            ["CfgMagazines", _x, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 16);
     };
 
     case IDC_buttonMisc : {
         {
-            private _config = configfile >> "CfgWeapons" >> _x;
-            [_config, false]  call _fnc_fill_right_Container;
+            ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 17);
     };
 };
@@ -207,17 +214,19 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 
     for "_l" from 0 to (lbsize _ctrlPanel - 1) do {
         private _class = _ctrlPanel lnbData [_l, 0];
-        _ctrlPanel lnbSetText [[_l, 2],str ({_x == _class} count _container)];
+        _ctrlPanel lnbSetText [[_l, 2], if (_class in _container) then {str ({_x == _class} count _container)} else {"0"}];
     };
 };
 
 // Select current data if not in a container
-for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
-    private _currentData = _ctrlPanel lbData _lbIndex;
+if !(_itemsToCheck isEqualTo []) then {
+    for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
+        private _currentData = _ctrlPanel lbData _lbIndex;
 
-    if ({_x != "" && {_currentData == _x}} count _itemsToCheck > 0) then {
-        TRACE_1("currentData", _currentData);
-        _ctrlPanel lbSetCurSel _lbIndex;
+        if (!(_currentData isEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
+            TRACE_1("currentData", _currentData);
+            _ctrlPanel lbSetCurSel _lbIndex;
+        };
     };
 };
 

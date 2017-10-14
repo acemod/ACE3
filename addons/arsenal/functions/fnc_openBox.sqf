@@ -28,6 +28,6 @@ if (isNil "_displayToUse" || {!isnull GVAR(camera)}) exitWith {
 GVAR(mode) = _mode;
 GVAR(center) = _center;
 GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), [
-    [[], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
+    [[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
 ]]);
 _displayToUse createDisplay QGVAR(display);
