@@ -7,7 +7,7 @@ if (_object == objNull) exitWith {};
 if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
-    [ ], // Weapons 0
+    [[], [], []], // Weapons 0, primary, handgun, secondary
     [ ], // WeaponAccessories 1
     [ ], // Magazines 2
     [ ], // Headgear 3
@@ -86,7 +86,17 @@ if (_items isEqualType true && {_items}) then {
             /* Weapon, at the bottom to avoid adding binos */
             case (isClass (_x >> "WeaponSlotsInfo") &&
                 {getNumber (_x >> 'type') != 4096}): {
-                (_cargo select 0) pushBackUnique ((configName  _x) call bis_fnc_baseWeapon);
+                switch (getNumber (_x >> "type")) do {
+                    case 1: {
+                        (_cargo select 0) select 0 pushBackUnique ((configName  _x) call bis_fnc_baseWeapon);
+                    };
+                    case 2: {
+                        (_cargo select 0) select 1 pushBackUnique ((configName  _x) call bis_fnc_baseWeapon);
+                    };
+                    case 4: {
+                        (_cargo select 0) select 2 pushBackUnique ((configName  _x) call bis_fnc_baseWeapon);
+                    };
+                };
             };
             /* Misc items */
             case (
@@ -208,7 +218,17 @@ if (_items isEqualType true && {_items}) then {
                         /* Weapon, at the bottom to avoid adding binos */
                         case (isClass (configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo") && 
                             {getNumber (configFile>> "CfgWeapons" >> _x >> 'type') != 4096}): {
-                            (_cargo select 0) pushBackUnique _x;
+                            switch (getNumber (configFile>> "CfgWeapons" >> _x >> "type")) do {
+                                case 1: {
+                                    (_cargo select 0) select 0 pushBackUnique  ([_x] call bis_fnc_baseWeapon);
+                                };
+                                case 2: {
+                                    (_cargo select 0) select 1 pushBackUnique ([_x] call bis_fnc_baseWeapon);
+                                };
+                                case 4: {
+                                    (_cargo select 0) select 2 pushBackUnique ([_x] call bis_fnc_baseWeapon);
+                                };
+                            };
                         };
                         /* Misc items */
                         case (

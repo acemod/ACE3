@@ -17,7 +17,7 @@ if (isNil QGVAR(mode)) then {
 };
 
 if (isNil QGVAR(virtualItems)) then {
-    GVAR(virtualItems) = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+    GVAR(virtualItems) = [[[], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
 GVAR(currentFace) = face GVAR(center);
@@ -27,10 +27,28 @@ GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
 for "_index" from 0 to 10 do {
-    private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
+    
 
-    if !(_array isEqualTo []) then {
-        {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array;
+    if (_index == 0) then {
+        private _array = LIST_DEFAULTS select 0;
+
+        if !((_array select 0) isEqualTo "") then {
+            ((GVAR(virtualItems) select 0) select 0) pushBackUnique (_array select 0);
+        };
+
+        if !((_array select 1) isEqualTo "") then {
+            ((GVAR(virtualItems) select 0) select 1) pushBackUnique (_array select 1);
+        };
+
+        if !((_array select 2) isEqualTo "") then {
+             ((GVAR(virtualItems) select 0) select 2) pushBackUnique (_array select 2);
+        };
+    } else {
+
+        private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
+        if !(_array isEqualTo []) then {
+            {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array;
+        };
     };
 };
 
@@ -101,8 +119,6 @@ GVAR(currentWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == GVAR(currentItems) select 2): {2};
     default {-1};
 };
-
-TRACE_1("currentItems", GVAR(currentItems));
 
 //--------------- Fade out unused elements
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;

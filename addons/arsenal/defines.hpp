@@ -224,8 +224,8 @@
     [\
     [\
         (primaryweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (handgunweapon GVAR(center) call bis_fnc_baseWeapon)\
+        (handgunweapon GVAR(center) call bis_fnc_baseWeapon),\
+        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon)\
     ],\
     ((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) + (GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) + (GVAR(center) weaponAccessories (handgunWeapon GVAR(center)))) select {!(_x isEqualTo "")}\
     ,\

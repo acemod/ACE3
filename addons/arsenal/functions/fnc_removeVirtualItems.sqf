@@ -7,7 +7,7 @@ if (_object == objNull) exitWith {};
 if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
-    [ ], // Weapons 0
+    [[], [], []], // Weapons 0, primary, handgun, secondary
     [ ], // WeaponAccessories 1
     [ ], // Magazines 2
     [ ], // Headgear 3
@@ -31,13 +31,33 @@ if (_items isEqualType true && {_items}) then {
     [_object, _global] call FUNC(removeBox);
     _object setVariable [QGVAR(virtualItems), nil, _global];
 } else {
+
     // Make sure all items are in string form
-    _items = _items select ( _x isEqualType "");
+    _items = _items select {_x isEqualType "" && {_x != ""}};
+
     {
-        _cargo set [_cargo find _x, _x - _items];
+        if (_x isEqualTo (_cargo select 0)) then {
+
+            _cargo set [0, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items]];
+        } else {
+
+            _cargo set [_cargo find _x, _x - _items];
+        };
     } foreach _cargo;
 
-    if (count _cargo == 0) then {
+    private _itemCount = {
+        if (_x isEqualTo (_cargo select 0)) then {
+            if (_x isEqualTo [[],[],[]]) then {
+                false
+            } else {
+                true
+            };
+        } else {
+            !(_x isEqualTo [])
+        };
+    } count _cargo;
+
+    if (_itemCount == 0) then {
         [_object, _global] call FUNC(removeBox);
     } else {
         _object setVariable [QGVAR(virtualItems), _cargo, _global];
