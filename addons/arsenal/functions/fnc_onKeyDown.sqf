@@ -9,7 +9,7 @@ GVAR(shiftState) = _shiftState;
 
 private _return = true;
 
-if !(GVAR(leftSearchbarFocus) && {!(GVAR(rightSearchbarFocus))}) then {
+if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
 
     switch true do { 
         // Close button
