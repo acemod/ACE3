@@ -2,6 +2,8 @@
 
 GVAR(EH_ID) = 0;
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
+GVAR(lastSearchTextLeft) = "";
+GVAR(lastSearchTextRight) = "";
 
 [QGVAR(initBox), {_this call FUNC(initBox)}] call CBA_fnc_addEventHandler;
 [QGVAR(removeBox), {_this call FUNC(removeBox)}] call CBA_fnc_addEventHandler;
