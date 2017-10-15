@@ -94,10 +94,11 @@ for "_index" from 0 to 10 do {
                     };
                     case (
                             isClass (_configCfgWeapons >> _x) &&
-                            {isClass (_configCfgItemInfo)} &&
-                            {(getNumber (_configCfgItemInfo >> "type")) in [101, 201, 301, 302] &&
-                            {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])} ||
-                            {(getNumber (_configCfgItemInfo >> "type")) in [401, 619, 620]}}
+                            {isClass (_configCfgItemInfo)} && {
+                            ((getNumber (_configCfgItemInfo >> "type")) in [101, 201, 301, 302] &&
+                            {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
+                            {(getNumber (_configCfgItemInfo >> "type")) in [401, 619, 620]}
+                            }
                         ):{
                         (GVAR(virtualItems) select 17) pushBackUnique _x;
                     };
