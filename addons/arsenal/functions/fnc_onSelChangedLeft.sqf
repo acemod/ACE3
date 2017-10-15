@@ -24,6 +24,9 @@ switch (GVAR(currentLeftPanel)) do {
             {
                 GVAR(center) removeMagazines _x;
             } foreach getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+            GVAR(currentItems) set [15, uniformItems GVAR(center)];
+            GVAR(currentItems) set [16, vestItems GVAR(center)];
+            GVAR(currentItems) set [17, backpackItems GVAR(center)];
 
             if (_item == "") then {
 
@@ -64,6 +67,9 @@ switch (GVAR(currentLeftPanel)) do {
             {
                 GVAR(center) removeMagazines _x;
             } foreach getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+            GVAR(currentItems) set [15, uniformItems GVAR(center)];
+            GVAR(currentItems) set [16, vestItems GVAR(center)];
+            GVAR(currentItems) set [17, backpackItems GVAR(center)];
 
             if (_item == "") then {
 
@@ -104,6 +110,9 @@ switch (GVAR(currentLeftPanel)) do {
             {
                 GVAR(center) removeMagazines _x;
             } foreach getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+            GVAR(currentItems) set [15, uniformItems GVAR(center)];
+            GVAR(currentItems) set [16, vestItems GVAR(center)];
+            GVAR(currentItems) set [17, backpackItems GVAR(center)];
 
             if (_item == "") then {
 
