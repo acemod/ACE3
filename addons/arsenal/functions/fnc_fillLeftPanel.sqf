@@ -31,7 +31,7 @@ switch true do {
             case IDC_buttonPrimaryWeapon : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach ((GVAR(virtualItems) select 0) select 0); //#TODO split weapontypes into seperate arrays
+                } foreach ((GVAR(virtualItems) select 0) select 0);
             };
 
             case IDC_buttonHandgun : {
@@ -161,6 +161,10 @@ switch true do {
 };
 
 // Done
+if (GVAR(currentLeftPanel) != _ctrlIDC) then {
+    [_display, _display displayCtrl IDC_leftSearchbar, 1] call FUNC(clearSearchbar);
+    [_display, _display displayCtrl IDC_rightSearchbar, 1] call FUNC(clearSearchbar);
+};
 GVAR(currentLeftPanel) = _ctrlIDC;
 
 // Sort

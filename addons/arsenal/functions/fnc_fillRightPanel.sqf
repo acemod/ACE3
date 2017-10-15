@@ -188,6 +188,10 @@ switch (_ctrlIDC) do {
     };
 };
 
+if (GVAR(currentRightPanel) != _ctrlIDC) then {
+    [_display, _display displayCtrl IDC_rightSearchbar, 1] call FUNC(clearSearchbar);
+};
+
 GVAR(currentRightPanel) = _ctrlIDC;
 
 // Sorting
