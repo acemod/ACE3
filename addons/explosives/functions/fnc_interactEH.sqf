@@ -41,7 +41,7 @@ if (!("ACE_DefusalKit" in (items ACE_player))) exitWith {};
         //If player moved >5 meters from last pos, then rescan
         if (((getPosASL ace_player) distance _setPosition) > 5) then {
             {
-                if (((_x distance ACE_player) < 15) && {!(_x in _minesHelped)}) then {
+                if (((_x distance ACE_player) < 15) && {!(_x in _minesHelped)} && {(getModelInfo _x) select 0 != "empty.p3d"}) then {
 
                     private _config = configFile >> "CfgAmmo" >> typeOf _x;
                     private _size = getNumber (_config >> QGVAR(size));
