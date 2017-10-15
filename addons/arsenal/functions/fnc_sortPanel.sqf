@@ -7,12 +7,10 @@ private _display = ctrlParent _control;
 
 private ["_panel", "_curSel", "_selected"];
 
-TRACE_2("sortPanel", _control, _mode);
-
 if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
     _panel = _display displayCtrl IDC_rightTabContentListnBox;
-    _curSel = lbCurSel _panel;
-    _selected = _panel lbData _curSel;
+    _curSel = lnbCurSelRow _panel;
+    _selected = _panel lnbData [_curSel, 0];
 
     switch (_mode) do {
         case 0: {
@@ -29,8 +27,8 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
     };
 
     if (_cursel >= 0) then {
-        for '_i' from 0 to (lbsize _panel - 1) do {
-            if ((_panel lbdata _i) == _selected) exitwith {_panel lbSetCurSel _i};
+        for '_i' from 0 to (((lnbsize _panel) select 0) - 1) do {
+            if ((_panel lnbdata [_i, 0]) == _selected) exitwith {_panel lnbSetCurSelRow _i};
         };
     };
 
