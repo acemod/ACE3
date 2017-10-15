@@ -9,7 +9,11 @@ private _ctrlIDC = ctrlIDC _control;
 private _display = ctrlParent _control;
 private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
 
-private _selectRightPanelWeapon = _display displayCtrl IDC_buttonOptic;
+private _weaponDefaultRightPanel = _display displayCtrl IDC_buttonOptic;
+private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS]});
+
+private _containerDefaultRightPanel = _display displayCtrl IDC_buttonMisc;
+private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
 
 switch (GVAR(currentLeftPanel)) do {
 
@@ -46,7 +50,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             TOGGLE_RIGHT_PANEL_WEAPON
-            [_display, _selectRightPanelWeapon] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
@@ -86,7 +90,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             TOGGLE_RIGHT_PANEL_WEAPON
-            [_display, _selectRightPanelWeapon] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
@@ -126,7 +130,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             TOGGLE_RIGHT_PANEL_WEAPON
-            [_display, _selectRightPanelWeapon] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
@@ -168,7 +172,7 @@ switch (GVAR(currentLeftPanel)) do {
             [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
 
             TOGGLE_RIGHT_PANEL_CONTAINER
-            [_display, _display displayCtrl IDC_buttonMisc] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelContainer] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
@@ -193,7 +197,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [5, _item];
 
             TOGGLE_RIGHT_PANEL_CONTAINER
-            [_display, _display displayCtrl IDC_buttonMisc] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelContainer] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
@@ -219,7 +223,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [6, _item];
 
             TOGGLE_RIGHT_PANEL_CONTAINER
-            [_display, _display displayCtrl IDC_buttonMisc] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelContainer] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
