@@ -54,9 +54,19 @@ private _fnc_fill_right_Container = {
 };
 
 private _compatibleItems = [];
-_compatibleMagazines = (getArray (configfile >> "cfgweapons" >> primaryWeapon GVAR(center) >> "magazines")) +
-    (getArray (configfile >> "cfgweapons" >> secondaryWeapon GVAR(center) >> "magazines")) +
-    (getArray (configfile >> "cfgweapons" >> handgunWeapon GVAR(center) >> "magazines"));
+_compatibleMagazines = [];
+
+{
+    private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
+
+    {
+        {_compatibleMagazines pushBackUnique _x} foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
+    } foreach getArray (_weaponConfig >> "muzzles");
+
+} foreach ([primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center)] select {_x != ""});
+
+LOG(_compatibleMagazines);
+
 private _itemsToCheck = [];
 
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
@@ -110,15 +120,15 @@ switch (_ctrlIDC) do {
     };
 
     case IDC_buttonItemAcc : {
-    if (_leftPanelState) then {
-        {
-            ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-        } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 1));
-    } else {
-        {
-            ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 1) select 1);
-    };
+        if (_leftPanelState) then {
+            {
+                ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
+            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 1));
+        } else {
+            {
+                ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 1) select 1);
+        };
     };
 
     case IDC_buttonMuzzle : {
@@ -232,7 +242,6 @@ if !(_itemsToCheck isEqualTo []) then {
         private _currentData = _ctrlPanel lbData _lbIndex;
 
         if (!(_currentData isEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
-            TRACE_1("currentData", _currentData);
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };
