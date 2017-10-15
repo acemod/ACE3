@@ -50,9 +50,9 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     };
 
     private _config = configFile >> "CfgAmmo" >> typeOf _activeThrowable;
-    private _torqueDir = getArray (_config >> QGVAR(torqueDirection));
+    private _torqueDir = vectorNormalized (getArray (_config >> QGVAR(torqueDirection)));
     private _torqueMag = getNumber (_config >> QGVAR(torqueMagnitude));
-    private _torque = vectorNormalized (_torqueDir vectorMultiply _torqueMag);
+    private _torque = _torqueDir vectorMultiply _torqueMag;
 
     // Drop if unit dies during throw process
     if (alive _unit) then {
