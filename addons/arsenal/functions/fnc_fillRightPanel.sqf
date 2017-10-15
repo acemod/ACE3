@@ -65,8 +65,6 @@ _compatibleMagazines = [];
 
 } foreach ([primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center)] select {_x != ""});
 
-LOG(_compatibleMagazines);
-
 private _itemsToCheck = [];
 
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;

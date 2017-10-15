@@ -52,7 +52,6 @@ if (isClass _itemCfg) then {
     _ctrlDLCBackground ctrlcommit FADE_DELAY;
 
 } else {
-    LOG("no item");
     _ctrlInfo ctrlSetFade 1;
     _ctrlInfo ctrlCommit FADE_DELAY;
 };
