@@ -13,6 +13,7 @@ class CfgVehicles {
 
 	class ThingX;
 	class GVAR(m3Tripod): ThingX {
+		class GVAR(cswOptions) { disassembleTo = QGVAR(m3CarryTripod); };
 		class ACE_Actions {
 			class ACE_MainActions {
 				displayName = CSTRING(Tripod_displayName);
@@ -60,14 +61,24 @@ class CfgVehicles {
 	
 	// Custom config entries
 	// Static Weapons
-	class StaticMGWeapon;
+	class LandVehicle;
+	class StaticWeapon: LandVehicle {
+		class ACE_SelfActions;
+		class ACE_Actions;
+	};
+	class StaticMGWeapon: StaticWeapon {
+		class ACE_Actions: ACE_Actions {
+			class ACE_MainActions;
+		};
+		class ACE_SelfActions: ACE_SelfActions {};
+	};
 	class AT_01_base_F: StaticMGWeapon {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticATWeapon_displayName);
 				distance = 3;
 				
@@ -114,9 +125,9 @@ class CfgVehicles {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticAAWeapon_displayName);
 				distance = 3;
 				
@@ -163,9 +174,9 @@ class CfgVehicles {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticHMGWeapon_displayName);
 				distance = 3;
 				
@@ -212,9 +223,9 @@ class CfgVehicles {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticHMGWeapon_displayName);
 				distance = 3;
 				
@@ -261,9 +272,9 @@ class CfgVehicles {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticHMGWeapon_displayName);
 				distance = 3;
 				
@@ -310,9 +321,9 @@ class CfgVehicles {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticGMGWeapon_displayName);
 				distance = 3;
 				
@@ -359,9 +370,9 @@ class CfgVehicles {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticGMGWeapon_displayName);
 				distance = 3;
 				
@@ -408,9 +419,9 @@ class CfgVehicles {
 		class Turrets {
 			class MainTurret;
 		};
-		class ACE_SelfActions;
-        class ACE_Actions {
-			class ACE_MainActions {
+		class ACE_SelfActions: ACE_SelfActions {};
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticGMGWeapon_displayName);
 				distance = 3;
 				
@@ -641,6 +652,7 @@ class CfgVehicles {
 				magazines[] = { QGVAR(TitanAT_Dummy_Missile) };
 			};
 		};
+		
 		author = ECSTRING(common, ACETeam);
 		scope = 1;
 		side = 3;

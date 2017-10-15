@@ -23,7 +23,7 @@ class CfgWeapons {
 	class GVAR(staticATCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
 			assembleTo = QGVAR(staticATWeapon);
-			baseTripod = QGVAR(m3m3Tripod);
+			baseTripod = QGVAR(m3Tripod);
 			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -187,6 +187,13 @@ class CfgWeapons {
 			ammoLoadTime = 15;
 			ammoUnloadTime = 10;
 		};
+		ace_javelin_enabled = 1;
+		weaponInfoType = "ACE_RscOptics_Javelin";
+		modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";
+		canLock = 0;
+		lockingTargetSound[] = {"", 0, 1};
+		lockedTargetSound[] = {"", 0, 1};
+		
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(ATStatic_displayName);
 		magazines[] = { GVAR(1Rnd_GAT_missiles), GVAR(TitanAT_Dummy_Missile) };

@@ -24,6 +24,3 @@
 Notes:
 
 Bugs:
-	Mini-Spike AT Has no Javelin interface
-	Interaction point for all non Titan weapons is above its point
-	If you put weapon in terrain, it freaks out

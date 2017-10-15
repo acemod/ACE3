@@ -23,6 +23,12 @@ if ((_key != 0) || {isNull GVAR(cswTripod})) exitWith {};
 
 detach GVAR(cswTripod);
 
+private _tripodPos = getPosATL GVAR(cswTripod);
+_tripodPos set[2, 0];
+
+GVAR(cswTripod) setVectorUp (surfaceNormal _tripodPos);
+GVAR(cswTripod) setPosATL _tripodPos;
+
 call EFUNC(interaction,hideMouseHint);
 
 [_player, "DefaultAction", _player getVariable [QGVAR(MoveTripod), -1]] call EFUNC(common,removeActionEventHandler);
