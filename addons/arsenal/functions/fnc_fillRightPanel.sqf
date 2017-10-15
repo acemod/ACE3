@@ -90,6 +90,9 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
+_itemsToCheck = _itemsToCheck apply {toLower _x};
+_compatibleItems =  _compatibleItems apply {toLower _x};
+
 lbClear (_display displayCtrl IDC_rightTabContentListnBox);
 lbClear (_display displayCtrl IDC_rightTabContent);
 
@@ -109,7 +112,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 0));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 0) apply {toLower _x}));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
@@ -121,7 +124,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 1));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 1) apply {toLower _x}));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
@@ -133,7 +136,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 2));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 2) apply {toLower _x}));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
@@ -145,7 +148,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (_compatibleItems arrayIntersect ((GVAR(virtualItems) select 1) select 3));
+            } foreach (_compatibleItems arrayIntersect (((GVAR(virtualItems) select 1) select 3) apply {toLower _x}));
         } else {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
