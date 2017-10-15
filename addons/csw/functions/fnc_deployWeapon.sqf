@@ -49,7 +49,7 @@ params["_tripod", "_player"];
 		_player addWeaponGlobal _carryWeaponClassname;
 	};
 	
-	private _assembledClassname = getText(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(cswOptions) >> "ace_csw_assembleTo");
+	private _assembledClassname = getText(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(cswOptions) >> "assembleTo");
 	private _weaponName = getArray(configFile >> "CfgVehicles" >> _assembledClassname >> "Turrets" >> "MainTurret" >> "weapons") select 0;
 	private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponName >> QGVAR(cswOptions) >> "deployTime");
 	[_deployTime, [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar)] call EFUNC(common,progressBar);

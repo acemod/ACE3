@@ -20,14 +20,17 @@ params ["_player"];
 [{
 	params["_player"];
 	// Remove the tripod from the launcher slot
-	_player removeWeaponGlobal QGVAR(carryTripod);
+	private _secondaryWeaponClassname = secondaryWeapon _player;
+	_player removeWeaponGlobal (secondaryWeapon _player);
 	
 	private _onFinish = {
 		params["_args"];
-		_args params["_player"];
+		_args params["_player", "_secondaryWeaponClassname"];
 		
+		private _tripodClassname = getText(configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QGVAR(cswOptions) >> "deploy");
+				
 		// Create a tripod
-		private _cswTripod = createVehicle [QGVAR(tripodObject), [0, 0, 0], [], 0, "NONE"];
+		private _cswTripod = createVehicle [_tripodClassname, [0, 0, 0], [], 0, "NONE"];
 		
 		_posATL = _player getRelPos[2, 0];
 		_posATL set[2, ((getPosATL _player) select 2) + 0.5];
@@ -42,10 +45,10 @@ params ["_player"];
 	
 	private _onFailure = {
 		params["_args"];
-		_args params["_player"];
-		_player addWeaponGlobal QGVAR(carryTripod);
+		_args params["_player", "_secondaryWeaponClassname"];
+		_player addWeaponGlobal _secondaryWeaponClassname;
 	};
 	
 	private _deployTime = getNumber(configFile >> "CfgWeapons" >> QGVAR(carryTripod) >> QGVAR(cswOptions) >> "deployTime");
-	[_deployTime, [_player], _onFinish, _onFailure, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
+	[_deployTime, [_player, _secondaryWeaponClassname], _onFinish, _onFailure, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
 }, [_player]] call CBA_fnc_execNextFrame;

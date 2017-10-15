@@ -14,6 +14,7 @@
 [X] Create new Backpack Weapon Model
 [X] Change from backpack to launcher
 [X] Create Textures for tripod/weapons
+[ ] Implement CSW for Mortar
 [ ] Test in Dedicated Server With Others
 
 [ ] Create compatability for CUP and RHS

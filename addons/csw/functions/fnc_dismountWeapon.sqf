@@ -24,7 +24,8 @@ if (isNull GVAR(cswTripod)) then {
 			params["_args"];
 			_args params["_weapon"];
 			
-			private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(cswOptions) >> "ace_csw_disassembleTo");
+			private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(cswOptions) >> "disassembleTo");
+			private _tripodName = getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(cswOptions) >> "baseTripod");
 			
 			private _weaponPos = getPosATL _weapon;
 			private _weaponDir = getDir _weapon;
@@ -40,7 +41,7 @@ if (isNull GVAR(cswTripod)) then {
 			
 			deleteVehicle _weapon;
 			
-			private _cswTripod = createVehicle [QGVAR(tripodObject), [0, 0, 0], [], 0, "NONE"];
+			private _cswTripod = createVehicle [_tripodName, [0, 0, 0], [], 0, "NONE"];
 			_cswTripod setPosATL _weaponPos;
 			_cswTripod setDir _weaponDir;
 			_cswTripod setVelocity [0, 0, -0.05];
@@ -49,7 +50,7 @@ if (isNull GVAR(cswTripod)) then {
 			_weaponPos = _cswTripod getRelPos[1.5, 90];
 			private _weaponHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
 			_weaponHolder setPosATL _weaponPos;
-			_ammoHolder setDir random[0, 180, 360];
+			_weaponHolder setDir random[0, 180, 360];
 			_weaponHolder addWeaponCargoGlobal[_carryWeaponClassname, 1];
 			
 		};

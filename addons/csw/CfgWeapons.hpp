@@ -3,10 +3,12 @@ class CfgWeapons {
 	class Launcher_Base_F: Launcher {
 		class WeaponSlotsInfo;
 	};
-	class GVAR(carryTripod): Launcher_Base_F {
+	class GVAR(m3CarryTripod): Launcher_Base_F {
 		class GVAR(cswOptions) {
 			deployTime = 3;
 			pickupTime = 3;
+			type = "mount";
+			deploy = QGVAR(m3Tripod);
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 440;
@@ -20,7 +22,9 @@ class CfgWeapons {
 	};
 	class GVAR(staticATCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticATWeapon);
+			assembleTo = QGVAR(staticATWeapon);
+			baseTripod = QGVAR(m3m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 320; // 9M113 Konkurs Weight
@@ -35,7 +39,9 @@ class CfgWeapons {
 	
 	class GVAR(staticAACarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticAAWeapon);
+			assembleTo = QGVAR(staticAAWeapon);
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 320;
@@ -50,7 +56,9 @@ class CfgWeapons {
 	
 	class GVAR(staticHMGCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticHMGWeapon);
+			assembleTo = QGVAR(staticHMGWeapon);
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 840;
@@ -64,7 +72,9 @@ class CfgWeapons {
 	};
 	class GVAR(staticAutoHMGCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticAutoHMGWeapon);
+			assembleTo = QGVAR(staticAutoHMGWeapon);
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 840;
@@ -78,7 +88,9 @@ class CfgWeapons {
 	};
 	class GVAR(staticHMGTallCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticHMGTallWeapon);
+			assembleTo = QGVAR(staticHMGTallWeapon);
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 840;
@@ -93,7 +105,9 @@ class CfgWeapons {
 	
 	class GVAR(staticGMGCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticGMGWeapon);
+			assembleTo = QGVAR(staticGMGWeapon);
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 780;
@@ -107,7 +121,9 @@ class CfgWeapons {
 	};
 	class GVAR(staticAutoGMGCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticAutoGMGWeapon);
+			assembleTo = QGVAR(staticAutoGMGWeapon);
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 780;
@@ -121,7 +137,9 @@ class CfgWeapons {
 	};
 	class GVAR(staticGMGTallCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
-			ace_csw_assembleTo = QGVAR(staticGMGTallWeapon);
+			assembleTo = QGVAR(staticGMGTallWeapon);
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 780;

@@ -17,4 +17,4 @@
 
 params ["_player"];
 
-((secondaryWeapon _player) == QGVAR(carryTripod))
+(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QGVAR(cswOptions) >> "type") == "mount");

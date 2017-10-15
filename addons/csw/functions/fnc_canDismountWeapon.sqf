@@ -16,4 +16,4 @@
 #include "script_component.hpp"
 params["_csw"];
 
-((crew _csw) isEqualTo [] || !(alive (gunner _csw))) && !(isNull(configfile >> "CfgVehicles" >> typeof(_csw) >> QGVAR(cswOptions) >> "ace_csw_disassembleTo"))
+((crew _csw) isEqualTo [] || !(alive (gunner _csw))) && !(isNull(configfile >> "CfgVehicles" >> typeof(_csw) >> QGVAR(cswOptions) >> "disassembleTo"))
