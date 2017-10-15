@@ -238,7 +238,7 @@
     [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 0), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 0), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 0)] select {!(_x isEqualTo "")},\
     [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 3), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 3), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 3)] select {!(_x isEqualTo "")}\
     ],\
-    magazines GVAR(center),\
+    uniformItems GVAR(center) + vestItems GVAR(center) + backpackItems GVAR(center),\
     [headgear GVAR(center)],\
     [uniform GVAR(center)],\
     [vest GVAR(center)],\

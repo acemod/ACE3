@@ -25,44 +25,86 @@ GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
 for "_index" from 0 to 10 do {
+    switch (_index) do {
+        case 0: {
+            private _array = LIST_DEFAULTS select _index;
 
+            if !((_array select 0) isEqualTo "") then {
+                ((GVAR(virtualItems) select _index) select 0) pushBackUnique (_array select 0);
+            };
 
-    if (_index == 0) then {
-        private _array = LIST_DEFAULTS select _index;
+            if !((_array select 1) isEqualTo "") then {
+                ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
+            };
 
-        if !((_array select 0) isEqualTo "") then {
-            ((GVAR(virtualItems) select _index) select 0) pushBackUnique (_array select 0);
+            if !((_array select 2) isEqualTo "") then {
+                 ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
+            };
         };
+        case 1: {
+            private _array = LIST_DEFAULTS select _index;
 
-        if !((_array select 1) isEqualTo "") then {
-            ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
+            if !((_array select 0) isEqualTo []) then {
+                ((GVAR(virtualItems) select _index) select 0) append (_array select 0);
+            };
+
+            if !((_array select 1) isEqualTo []) then {
+                ((GVAR(virtualItems) select _index) select 1) append (_array select 1);
+            };
+
+            if !((_array select 2) isEqualTo []) then {
+                 ((GVAR(virtualItems) select _index) select 2) append (_array select 2);
+            };
+
+            if !((_array select 3) isEqualTo []) then {
+                 ((GVAR(virtualItems) select _index) select 3) append (_array select 3);
+            };
         };
+        case 2: {
+            private _array = LIST_DEFAULTS select _index;
 
-        if !((_array select 2) isEqualTo "") then {
-             ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
+            private _configCfgWeapons = configFile >> "CfgWeapons";
+            private _grenadeList = [];
+            {
+                _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
+                false
+            } count getArray (_configCfgWeapons >> "Throw" >> "muzzles");
+
+            private _putList = [];
+            {
+                _putList append getArray (_configCfgWeapons >> "Put" >> _x >> "magazines");
+                false
+            } count getArray (_configCfgWeapons >> "Put" >> "muzzles");
+
+            {
+                private _configCfgItemInfo = _configCfgWeapons >> _x >> "itemInfo";
+                switch true do {
+                    case (isClass (configFile >> "CfgMagazines" >> _x) && 
+                        {(getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [256,512,1536,16]) &&
+                        {!(_x in _grenadeList)} &&
+                        {!(_x in _putList)}}): {
+
+                        (GVAR(virtualItems) select 2) pushBackUnique _x;
+                    };
+                    case (isClass (configFile >> "CfgMagazines" >> _x) && {_x in _grenadeList}): {
+                        (GVAR(virtualItems) select 15) pushBackUnique _x;
+                    };
+                    case (isClass (configFile >> "CfgMagazines" >> _x) && {_x in _putList}): {
+                        (GVAR(virtualItems) select 16) pushBackUnique _x;
+                    };
+                    case (
+                            isClass (_configCfgWeapons >> _x) &&
+                            {isClass (_configCfgItemInfo)} &&
+                            {(getNumber (_configCfgItemInfo >> "type")) in [101, 201, 301, 302] &&
+                            {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])} ||
+                            {(getNumber (_configCfgItemInfo >> "type")) in [401, 619, 620]}}
+                        ):{
+                        (GVAR(virtualItems) select 17) pushBackUnique _x;
+                    };
+                };
+            } foreach _array;
         };
-
-    } else {
-        if (_index == 1) then {
-                private _array = LIST_DEFAULTS select _index;
-
-                if !((_array select 0) isEqualTo []) then {
-                    ((GVAR(virtualItems) select _index) select 0) append (_array select 0);
-                };
-
-                if !((_array select 1) isEqualTo []) then {
-                    ((GVAR(virtualItems) select _index) select 1) append (_array select 1);
-                };
-
-                if !((_array select 2) isEqualTo []) then {
-                     ((GVAR(virtualItems) select _index) select 2) append (_array select 2);
-                };
-
-                if !((_array select 3) isEqualTo []) then {
-                     ((GVAR(virtualItems) select _index) select 3) append (_array select 3);
-                };
-
-        } else {
+        default {
             private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
             if !(_array isEqualTo []) then {
                 {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array;
