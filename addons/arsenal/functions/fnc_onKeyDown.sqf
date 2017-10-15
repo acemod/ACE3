@@ -91,4 +91,8 @@ if (GVAR(rightTabLnBFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
     _return = false;
 };
 
+if (GVAR(rightTabLnBFocus) && {_keyPressed in [DIK_LEFT, DIK_RIGHT]}) then {
+    [_display, [1, 0] select (_keyPressed == DIK_LEFT)] call FUNC(buttonCargo);
+};
+
 _return
