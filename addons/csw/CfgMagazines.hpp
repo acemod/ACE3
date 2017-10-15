@@ -7,7 +7,7 @@ class CfgMagazines {
 	class GVAR(100Rnd_127x99_mag): 100Rnd_127x99_mag {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(HMGBelt_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=2;
 		type=256;
 		count = 100;
@@ -17,7 +17,7 @@ class CfgMagazines {
 	class GVAR(HMG_Dummy_200Rnd_mag): 100Rnd_127x99_mag {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(DummyMagazine_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=1;
 		type=0;
 		count=200;
@@ -27,7 +27,7 @@ class CfgMagazines {
 	class GVAR(20Rnd_20mm_G_belt): 40Rnd_20mm_G_belt {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(GMGBelt_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=2;
 		type=256;
 		count=20;
@@ -36,7 +36,7 @@ class CfgMagazines {
 	class GVAR(GMG_Dummy_120Rnd_mag): 40Rnd_20mm_G_belt {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(DummyMagazine_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=1;
 		type=0;
 		count=120;
@@ -46,7 +46,7 @@ class CfgMagazines {
 	class GVAR(1Rnd_GAT_missiles): 1Rnd_GAT_missiles {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(ATRocket_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=2;
 		type=256;
 		count=1;
@@ -55,7 +55,7 @@ class CfgMagazines {
 	class GVAR(TitanAT_Dummy_Missile): 1Rnd_GAT_missiles {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(DummyMagazine_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=1;
 		type=0;
 		count=1;
@@ -65,7 +65,7 @@ class CfgMagazines {
 	class GVAR(1Rnd_GAA_missiles): 1Rnd_GAA_missiles {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(AARocket_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=2;
 		type=256;
 		count=1;
@@ -74,7 +74,7 @@ class CfgMagazines {
 	class GVAR(TitanAA_Dummy_Missile): 1Rnd_GAA_missiles {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(DummyMagazine_displayName);
-		model = QPATHTOF(data\ACE_CSW_ammoBox.p3d);
+		model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
 		scope=1;
 		type=0;
 		count=1;

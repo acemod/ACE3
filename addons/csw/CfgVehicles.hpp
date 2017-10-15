@@ -48,7 +48,7 @@ class CfgVehicles {
 		author = ECSTRING(common, ACETeam);
 		scope = 2;
 		side = 3;
-		model = QPATHTOF(data\ACE_CSWTripod.p3d);
+		model = QPATHTOF(data\ACE_CSW_Tripod.p3d);
 		displayName = CSTRING(Tripod_displayName);
 		typicalCargo[] = {};
 		armor = 500000;

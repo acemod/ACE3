@@ -10,8 +10,8 @@
 [X] Add ACE weights to all Ammo and Tripod
 [X] Add Ammo Counts on arsenal for magazines
 [X] Test in Dedicated Server
-[ ] Create new Tripod model
-[ ] Create new Backpack Weapon Model
+[X] Create new Tripod model
+[X] Create new Backpack Weapon Model
 [ ] Change from backpack to launcher
 [ ] Add module to configure settings
 	Assemble Time
@@ -19,6 +19,7 @@
 	Load Time
 	Unload Time
 [ ] Create Textures for tripod/weapons
+[X] Test in Dedicated Server With Others
 
 [ ] Create compatability for CUP and RHS
 	[ ] Custom ammo types for all CSW's

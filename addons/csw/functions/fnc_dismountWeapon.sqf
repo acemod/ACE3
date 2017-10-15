@@ -45,11 +45,11 @@ if (isNull GVAR(cswTripod)) then {
 			_cswTripod setVelocity [0, 0, -0.05];
 			_cswTripod setVectorUp (surfaceNormal _weaponPos);
 				
-			_weaponPos set[2, (_weaponPos select 2) + 0.5];
 			_weaponPos = _cswTripod getRelPos[0.5, 90];
+			_weaponPos set[2, (_weaponPos select 2) + 0.5];
 			// For some reason ARMA refuses to set the position of the backpack, so we must spawn it on its desired position
-			private _backpack = createVehicle[_backpackClassname, _weaponPos, [], 0, "CAN_COLLIDE"];
-			_backpack setPosATL _weaponPos;
+			private _backpack = createVehicle[_backpackClassname, [0, 0, 0], [], 0, "NONE"];
+			_backpack setPos _weaponPos;
 			_backpack setVelocity [0, 0, -0.05];
 			
 		};

@@ -11,7 +11,7 @@ class CfgWeapons {
 		author = ECSTRING(common, ACETeam);
 		scope = 2;
 		displayName = CSTRING(TripodFolded_displayName);
-		model = QUOTE(PATHTOF(data\ACE_CSWTripodFolded.p3d));
+		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
 	};
 	

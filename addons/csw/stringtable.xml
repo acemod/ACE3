@@ -121,5 +121,11 @@
 		<Key ID="STR_ACE_CSW_UnloadingAmmo_progressBar">
             <English>Unloading Ammo...</English>
         </Key>
+		<Key ID="STR_ACE_CSW_PickupTripod_progressBar">
+            <English>Picking Up Tripod...</English>
+        </Key>
+		<Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
+            <English>Placing Tripod...</English>
+        </Key>
 	</Package>
 </Project>

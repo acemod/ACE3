@@ -44,10 +44,14 @@ private _maxAmmo = _magazineAmmoCount min _maxMagazineCapacity;
 		// Create magazine holder and spawn the ammo that was in the weapon
 		private _ammoHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
 		_ammoHolder setPosATL _weaponPos;
+		_ammoHolder setVectorUp (surfaceNormal _weaponPos);
+		_ammoHolder setDir random[0, 180, 360];
 		_ammoHolder addMagazineAmmoCargo[_weaponMagazineClassname, 1, _maxAmmo];
 
-		[QGVAR(addCSWAmmo), [_csw, _weaponTurret, ((_csw ammo _weaponTurret) - _maxAmmo)]] call CBA_fnc_globalEvent;
-		_csw setAmmo [_weaponTurret, ((_csw ammo _weaponTurret) - _maxAmmo)];
+		private _ammoRemoved = (_csw ammo _weaponTurret) - _maxAmmo;
+		
+		[QGVAR(addCSWAmmo), [_csw, _weaponTurret, _ammoRemoved]] call CBA_fnc_serverEvent;
+		_csw setAmmo [_weaponTurret, _ammoRemoved];
 
 		[QGVAR(addObjectToServer), [_ammoHolder]] call CBA_fnc_serverEvent;
 	};

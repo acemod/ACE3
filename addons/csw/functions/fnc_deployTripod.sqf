@@ -17,18 +17,34 @@
 
 params ["_player"];
 
-// Create a tripod
-private _cswTripod = createVehicle [QGVAR(tripodObject), [0, 0, 0], [], 0, "NONE"];
+[{
+	params["_player"];
+	// Remove the tripod from the launcher slot
+	_player removeWeaponGlobal QGVAR(carryTripod);
+	
+	private _onFinish = {
+		params["_args"];
+		_args params["_player"];
+		
+		// Create a tripod
+		private _cswTripod = createVehicle [QGVAR(tripodObject), [0, 0, 0], [], 0, "NONE"];
+		
+		_posATL = _player getRelPos[2, 0];
+		_posATL set[2, ((getPosATL _player) select 2) + 0.5];
 
-// Remove the tripod from the launcher slot
-_player removeWeaponGlobal QGVAR(carryTripod);
+		_cswTripod setPosATL _posATL;
+		_cswTripod setDir (direction _player);
+		_cswTripod setVectorUp (surfaceNormal _tripodPos);
 
-_posATL = _player getRelPos[2, 0];
-_posATL set[2, ((getPosATL _player) select 2) + 0.5];
+		[QGVAR(addObjectToServer), [_cswTripod]] call CBA_fnc_serverEvent;
+		[_player, "PutDown"] call EFUNC(common,doGesture);
+	};
+	
+	private _onFailure = {
+		params["_args"];
+		_args params["_player"];
+		_player addWeaponGlobal QGVAR(carryTripod);
+	};
 
-_cswTripod setPosATL _posATL;
-_cswTripod setDir (direction _player);
-_cswTripod setVectorUp (surfaceNormal _tripodPos);
-
-[QGVAR(addObjectToServer), [_cswTripod]] call CBA_fnc_serverEvent;
-[_player, "PutDown"] call EFUNC(common,doGesture);
+	[4, [_player], _onFinish, _onFailure, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
+}, [_player]] call CBA_fnc_execNextFrame;
