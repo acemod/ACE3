@@ -196,10 +196,6 @@ if (_leftPanelState) then {
     _sortRightCtrl lbDelete 1;
     _sortRightCtrl lbAdd "Sort by Weight";
     _sortRightCtrl lbSetValue [1, 1];
-
-    if (lbSize _sortRightCtrl == 3) then {
-        _sortRightCtrl lbDelete 2;
-    };
     
     _sortRightCtrl lbAdd "Sort by amount";
     _sortRightCtrl lbSetValue [2, 2];
