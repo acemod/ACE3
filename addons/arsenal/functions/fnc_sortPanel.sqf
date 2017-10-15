@@ -7,6 +7,8 @@ private _display = ctrlParent _control;
 
 private ["_panel", "_curSel", "_selected"];
 
+TRACE_2("sortPanel", _control, _mode);
+
 if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
     _panel = _display displayCtrl IDC_rightTabContentListnBox;
     _curSel = lbCurSel _panel;
@@ -15,7 +17,7 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
     if (_mode > 0) then {
        _panel lnbSortByValue [0, false];
     } else {
-       _panel lnbSort [0, false];
+       _panel lnbSort [1, false];
     };
 
     if (_cursel >= 0) then {
