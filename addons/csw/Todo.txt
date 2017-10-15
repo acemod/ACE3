@@ -12,14 +12,9 @@
 [X] Test in Dedicated Server
 [X] Create new Tripod model
 [X] Create new Backpack Weapon Model
-[ ] Change from backpack to launcher
-[ ] Add module to configure settings
-	Assemble Time
-	Disassemble Time
-	Load Time
-	Unload Time
-[ ] Create Textures for tripod/weapons
-[X] Test in Dedicated Server With Others
+[X] Change from backpack to launcher
+[X] Create Textures for tripod/weapons
+[ ] Test in Dedicated Server With Others
 
 [ ] Create compatability for CUP and RHS
 	[ ] Custom ammo types for all CSW's
@@ -31,4 +26,3 @@ Bugs:
 	Mini-Spike AT Has no Javelin interface
 	Interaction point for all non Titan weapons is above its point
 	If you put weapon in terrain, it freaks out
-	Backpack doesnt spawn where we want it (close to the weapon)

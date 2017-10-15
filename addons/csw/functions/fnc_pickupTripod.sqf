@@ -27,5 +27,7 @@ params["_tripod", "_player"];
 		(_player select 1) addWeaponGlobal QGVAR(carryTripod);
 		[(_player select 1), "PutDown"] call EFUNC(common,doGesture);
 	};
+	
+	private _pickupTime = getNumber(configFile >> "CfgWeapons" >> QGVAR(carryTripod) >> QGVAR(cswOptions) >> "pickupTime");
 	[2, [_tripod, _player], _onFinish, {}, localize LSTRING(PickupTripod_progressBar)] call EFUNC(common,progressBar);
 }, [_tripod, _player]] call CBA_fnc_execNextFrame;

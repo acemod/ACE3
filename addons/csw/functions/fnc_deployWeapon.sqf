@@ -19,13 +19,12 @@ params["_tripod", "_player"];
 
 [{
 	params["_tripod", "_player"];
-	private _backpackClassname = backpack _player;
-	removeBackpackGlobal _player;
+	private _carryWeaponClassname = secondaryWeapon _player;
+	_player removeWeaponGlobal _carryWeaponClassname;
 	
 	private _onFinish = {
 		params["_args"];
-		_args params["_tripod", "_player", "_backpackClassname"];
-		private _assembledClassname = getText(configfile >> "CfgVehicles" >> _backpackClassname >> QGVAR(cswOptions) >> "ace_csw_assembleTo");
+		_args params["_tripod", "_player", "_assembledClassname"];
 		private _tripodPos = getPosATL _tripod;
 		private _tripodDir = getDir _tripod;
 	
@@ -46,9 +45,12 @@ params["_tripod", "_player"];
 	
 	private _onFailure = {
 		params["_args"];
-		_args params["", "_player", "_backpack"];
-		_player addBackpackGlobal _backpack;
+		_args params["", "_player", "", "_carryWeaponClassname"];
+		_player addWeaponGlobal _carryWeaponClassname;
 	};
 	
-	[15, [_tripod, _player, _backpackClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar)] call EFUNC(common,progressBar);
+	private _assembledClassname = getText(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(cswOptions) >> "ace_csw_assembleTo");
+	private _weaponName = getArray(configFile >> "CfgVehicles" >> _assembledClassname >> "Turrets" >> "MainTurret" >> "weapons") select 0;
+	private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponName >> QGVAR(cswOptions) >> "deployTime");
+	[_deployTime, [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar)] call EFUNC(common,progressBar);
 }, [_tripod, _player]] call CBA_fnc_execNextFrame;

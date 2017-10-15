@@ -16,6 +16,9 @@
 		<Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
         </Key>
+		<Key ID="STR_ACE_CSW_GetIn_displayName">
+            <English>Get In</English>
+        </Key>
 		<Key ID="STR_ACE_CSW_confirmDeployment_hint">
             <English>Confirm Placement</English>
         </Key>

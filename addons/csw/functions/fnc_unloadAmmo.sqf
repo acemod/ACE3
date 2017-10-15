@@ -18,9 +18,6 @@
 
 params["_csw", "_slowUnload"];
 
-private _duration = -1;
-if (_slowUnload) then { _duration = 4; };
-
 private _weaponPos = _csw getRelPos[1.5, 270];
 private _weaponMagazineClassname = "";
 private _ammo = magazinesAmmoFull _csw;
@@ -34,9 +31,10 @@ private _weaponMagazines = getArray(configFile >> "CfgWeapons" >> _weaponTurret 
 private _maxMagazineCapacity = getNumber(configFile >> "CfgMagazines" >> _weaponMagazineClassname >> "count");
 private _magazineAmmoCount = (_ammo select 0) select 1;
 private _maxAmmo = _magazineAmmoCount min _maxMagazineCapacity;
+private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponTurret >> QGVAR(cswOptions) >> "ammoUnloadTime");
 
 [{
-	params["_duration", "_weaponPos", "_weaponMagazineClassname", "_maxAmmo", "_csw", "_weaponTurret"];
+	params["_duration", "_slowUnload", "_weaponPos", "_weaponMagazineClassname", "_maxAmmo", "_csw", "_weaponTurret"];
 	private _onFinish = {
 		params["_args"];
 		_args params["_weaponPos", "_weaponMagazineClassname", "_maxAmmo", "_csw", "_weaponTurret"];
@@ -56,11 +54,12 @@ private _maxAmmo = _magazineAmmoCount min _maxMagazineCapacity;
 		[QGVAR(addObjectToServer), [_ammoHolder]] call CBA_fnc_serverEvent;
 	};
 	
-	if (_duration > 0) then {
+	if (_slowUnload) then {
 		[_duration, [_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret], _onFinish, {}, localize LSTRING(UnloadingAmmo_progressBar)] call EFUNC(common,progressBar);
 	} else {
 		[[_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret]] call _onFinish;
 	};
-}, [_duration, _weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret]] call CBA_fnc_execNextFrame;
+	
+}, [_deployTime, _slowUnload, _weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret]] call CBA_fnc_execNextFrame;
 
 _maxAmmo

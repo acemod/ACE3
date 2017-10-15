@@ -45,6 +45,7 @@ params ["_player"];
 		_args params["_player"];
 		_player addWeaponGlobal QGVAR(carryTripod);
 	};
-
-	[4, [_player], _onFinish, _onFailure, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
+	
+	private _deployTime = getNumber(configFile >> "CfgWeapons" >> QGVAR(carryTripod) >> QGVAR(cswOptions) >> "deployTime");
+	[_deployTime, [_player], _onFinish, _onFailure, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
 }, [_player]] call CBA_fnc_execNextFrame;

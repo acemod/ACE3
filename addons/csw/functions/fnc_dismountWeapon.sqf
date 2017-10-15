@@ -24,9 +24,10 @@ if (isNull GVAR(cswTripod)) then {
 			params["_args"];
 			_args params["_weapon"];
 			
+			private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(cswOptions) >> "ace_csw_disassembleTo");
+			
 			private _weaponPos = getPosATL _weapon;
 			private _weaponDir = getDir _weapon;
-			private _backpackClassname = getText(configfile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(cswOptions) >> "ace_csw_disassembleTo");
 			private _ammo = magazinesAmmoFull _weapon;
 			
 			{
@@ -45,12 +46,11 @@ if (isNull GVAR(cswTripod)) then {
 			_cswTripod setVelocity [0, 0, -0.05];
 			_cswTripod setVectorUp (surfaceNormal _weaponPos);
 				
-			_weaponPos = _cswTripod getRelPos[0.5, 90];
-			_weaponPos set[2, (_weaponPos select 2) + 0.5];
-			// For some reason ARMA refuses to set the position of the backpack, so we must spawn it on its desired position
-			private _backpack = createVehicle[_backpackClassname, [0, 0, 0], [], 0, "NONE"];
-			_backpack setPos _weaponPos;
-			_backpack setVelocity [0, 0, -0.05];
+			_weaponPos = _cswTripod getRelPos[1.5, 90];
+			private _weaponHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
+			_weaponHolder setPosATL _weaponPos;
+			_ammoHolder setDir random[0, 180, 360];
+			_weaponHolder addWeaponCargoGlobal[_carryWeaponClassname, 1];
 			
 		};
 		
@@ -60,6 +60,8 @@ if (isNull GVAR(cswTripod)) then {
 			((crew _weapon) isEqualTo [])
 		};
 		
-		[25, [_weapon], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _crewCheck] call EFUNC(common,progressBar);
+		private _turretClassname = getArray(configFile >> "CfgVehicles" >> typeof(_weapon) >> "Turrets" >> "MainTurret" >> "weapons") select 0;
+		private _deployTime = getNumber(configFile >> "CfgWeapons" >> _turretClassname >> QGVAR(cswOptions) >> "pickupTime");
+		[_deployTime, [_weapon], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _crewCheck] call EFUNC(common,progressBar);
 	}, [_weapon]] call CBA_fnc_execNextFrame;
 };
