@@ -14,10 +14,18 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
     _curSel = lbCurSel _panel;
     _selected = _panel lbData _curSel;
 
-    if (_mode > 0) then {
-       _panel lnbSortByValue [0, false];
-    } else {
-       _panel lnbSort [1, false];
+    switch (_mode) do {
+        case 0: {
+            _panel lnbSort [1, false];
+        };
+
+        case 1: {
+            _panel lnbSortByValue [0, false];
+        };
+
+        case 2: {
+            _panel lnbSort [2, true];
+        };
     };
 
     if (_cursel >= 0) then {

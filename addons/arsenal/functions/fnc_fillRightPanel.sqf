@@ -183,14 +183,26 @@ GVAR(currentRightPanel) = _ctrlIDC;
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
 
+if (lbSize _sortRightCtrl == 3) then {
+    _sortRightCtrl lbDelete 2;
+};
+
 if (_leftPanelState) then {
-   _sortRightCtrl lbDelete 1;
-   _sortRightCtrl lbAdd (localize "STR_a3_rscdisplayarsenal_sort_mod");
-   _sortRightCtrl lbSetValue [1, 1];
-} else {
     _sortRightCtrl lbDelete 1;
-   _sortRightCtrl lbAdd "Sort by Weight";
-   _sortRightCtrl lbSetValue [1, 1];
+    _sortRightCtrl lbAdd (localize "STR_a3_rscdisplayarsenal_sort_mod");
+    _sortRightCtrl lbSetValue [1, 1];
+} else {
+
+    _sortRightCtrl lbDelete 1;
+    _sortRightCtrl lbAdd "Sort by Weight";
+    _sortRightCtrl lbSetValue [1, 1];
+
+    if (lbSize _sortRightCtrl == 3) then {
+        _sortRightCtrl lbDelete 2;
+    };
+    
+    _sortRightCtrl lbAdd "Sort by amount";
+    _sortRightCtrl lbSetValue [2, 2];
 };
 
 [_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);
