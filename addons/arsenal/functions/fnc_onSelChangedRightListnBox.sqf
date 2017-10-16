@@ -32,14 +32,11 @@ private _fnc_selectRight = {
 
     // Grey out items too big
     for "_r" from 0 to (_rows - 1) do {
-        private _isIncompatible = _control lnbvalue [_r,1];
-        private _mass = _control lbValue (_r * _columns);
+        private _mass = _control lnbValue [_r, 0];
         private _alpha = [1.0,0.25] select (_mass > _load);
-        private _color = [[1,1,1,_alpha],[1,0.5,0,_alpha]] select _isIncompatible;
+        private _color = [1,1,1,_alpha];
         _control lnbsetcolor [[_r,1],_color];
         _control lnbsetcolor [[_r,2],_color];
-        _text = _control lnbtext [_r,1];
-        _control lbsettooltip [_r * _columns,[_text,_text + "\n(Not compatible with currently equipped weapons)"] select _isIncompatible];
     };
 
     // Remove all from container show / hide
@@ -47,14 +44,19 @@ private _fnc_selectRight = {
 
     if (progressPosition (_display displayCtrl IDC_loadIndicatorBar) > 0) then {
 
-        if (ctrlFade _removeAllCtrl != 0) then {
-            _removeAllCtrl ctrlSetFade 0;
-        };
-
-        if !(ctrlShown _removeAllCtrl) then {
-            _removeAllCtrl ctrlShow true;
-        };
+        _removeAllCtrl ctrlSetFade 0;
+        _removeAllCtrl ctrlShow true;
         _removeAllCtrl ctrlCommit FADE_DELAY;
+    };
+
+    // change button color if unique or too big
+    private _plusButtonCtrl = _display displayCtrl IDC_arrowPlus;
+    if ((_control lnbValue [_curSel, 2]) == 1 || {(_control lnbValue [_curSel, 0]) > _load}) then {
+        _plusButtonCtrl ctrlEnable false;
+        _plusButtonCtrl ctrlCommit FADE_DELAY;
+    } else {
+        _plusButtonCtrl ctrlEnable true;
+        _plusButtonCtrl ctrlCommit FADE_DELAY;
     };
 
     [_display, _control, _curSel, (configFile >> _cfgEntry >> _item)] call FUNC(itemInfo);

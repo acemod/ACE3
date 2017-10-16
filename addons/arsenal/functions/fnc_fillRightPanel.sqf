@@ -25,7 +25,7 @@ if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
 };
 
 private _fnc_fill_right_Container = {
-    params ["_configCategory", "_className", "_isMagazine"];
+    params ["_configCategory", "_className", "_isMagazine", ["_isUnique", false, [false]]];
 
     private _cacheNamespace = _ctrlPanel; //For better readability.
     private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
@@ -50,6 +50,7 @@ private _fnc_fill_right_Container = {
     _ctrlPanel lnbSetData [[_lbAdd, 0], _x];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
+    _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select (_isUnique)];
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
 
@@ -186,16 +187,20 @@ switch (_ctrlIDC) do {
         {
             ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 17);
+        {
+            ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 18);
     };
 };
 
 if (GVAR(currentRightPanel) != _ctrlIDC) then {
-    [_display, _display displayCtrl IDC_rightSearchbar, 1] call FUNC(clearSearchbar);
+    (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
 };
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
 ["ace_arsenal_rightPanelChanged", [_display, _ctrlIDC]] call CBA_fnc_localEvent;
+
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
 

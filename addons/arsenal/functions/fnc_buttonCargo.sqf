@@ -6,8 +6,10 @@ params ["_display", "_addOrRemove"];
 private _load = 0;
 private _items = [];
 private _ctrlList = (_display displayCtrl IDC_rightTabContentListnBox);
-private _lbCurSel = lbCurSel _ctrlList;
-private _item = _ctrlList lnbData [_lbCurSel, 0];
+private _lnbCurSel = lnbCurSelRow _ctrlList;
+private _item = _ctrlList lnbData [_lnbCurSel, 0];
+
+if ((_ctrlList lnbValue [_lnbCurSel, 2]) == 1 && {_addOrRemove == 1}) exitWith {};
 
 switch GVAR(currentLeftPanel) do {
 
@@ -63,4 +65,4 @@ switch GVAR(currentLeftPanel) do {
 (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition _load;
 
 private _value = {_x == _item} count _items;
-_ctrlList lnbSetText [[_lbCurSel, 2],str _value];
+_ctrlList lnbSetText [[_lnbCurSel, 2],str _value];

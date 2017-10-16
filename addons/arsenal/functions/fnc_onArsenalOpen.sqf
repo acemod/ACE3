@@ -17,10 +17,13 @@ if (isNil QGVAR(mode)) then {
 if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = [[[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };
+GVAR(virtualItems) set [18, []];
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
+
 GVAR(currentFace) = face GVAR(center);
 GVAR(currentVoice) = speaker GVAR(center);
 GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable ["BIS_fnc_setUnitInsignia_class", ""];
+
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
@@ -77,6 +80,7 @@ for "_index" from 0 to 10 do {
             } count getArray (_configCfgWeapons >> "Put" >> "muzzles");
 
             {
+
                 private _configCfgItemInfo = _configCfgWeapons >> _x >> "itemInfo";
                 switch true do {
                     case (isClass (configFile >> "CfgMagazines" >> _x) && 
@@ -94,6 +98,7 @@ for "_index" from 0 to 10 do {
                     };
                     case (
                             isClass (_configCfgWeapons >> _x) &&
+                            {(getNumber (_configCfgWeapons >> _x >> "scope")) == 2} &&
                             {isClass (_configCfgItemInfo)} && {
                             ((getNumber (_configCfgItemInfo >> "type")) in [101, 201, 301, 302] &&
                             {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
@@ -101,6 +106,11 @@ for "_index" from 0 to 10 do {
                             }
                         ):{
                         (GVAR(virtualItems) select 17) pushBackUnique _x;
+                    };
+                    default {
+                        if (isClass (configFile >> "CfgWeapons" >> _x)) then {
+                            (GVAR(virtualItems) select 18) pushBackUnique _x;
+                        };
                     };
                 };
             } foreach _array;
@@ -183,6 +193,7 @@ GVAR(currentWeaponType) = switch true do {
 };
 
 ["ace_arsenalOpened", []] call CBA_fnc_localEvent;
+
 //--------------- Fade out unused elements
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;
 _mouseBlockCtrl ctrlEnable false;
