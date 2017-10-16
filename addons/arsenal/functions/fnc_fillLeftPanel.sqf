@@ -162,8 +162,8 @@ switch true do {
 
 // Done
 if (GVAR(currentLeftPanel) != _ctrlIDC) then {
-    [_display, _display displayCtrl IDC_leftSearchbar, 1] call FUNC(clearSearchbar);
-    [_display, _display displayCtrl IDC_rightSearchbar, 1] call FUNC(clearSearchbar);
+    (_display displayCtrl IDC_leftSearchbar) ctrlSetText "";
+    (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
 };
 GVAR(currentLeftPanel) = _ctrlIDC;
 

@@ -3,6 +3,8 @@
 GVAR(camera) cameraEffect ["terminate", "back"];
 private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFromTo (getposAtl GVAR(cameraHelper))];
 
+["ace_arsenalClosed", []] call CBA_fnc_localEvent;
+
 camDestroy GVAR(camera);
 GVAR(center) switchCamera GVAR(cameraView);
 deleteVehicle GVAR(cameraHelper);
