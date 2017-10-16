@@ -151,17 +151,18 @@ for "_index" from 0 to 15 do {
             {(GVAR(currentItems) select 17) pushBack _x} forEach (backpackItems GVAR(center));
         };
         case 13: {
-            GVAR(currentItems) set [18, primaryWeaponItems GVAR(center)];
+            GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + (primaryWeaponMagazine GVAR(center))];
         };
         case 14: {
-            GVAR(currentItems) set [19, secondaryWeaponItems GVAR(center)];
+            GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + (secondaryWeaponMagazine GVAR(center))];
         };
         case 15: {
-            GVAR(currentItems) set [20, handgunItems GVAR(center)];
+            GVAR(currentItems) set [20, (handgunItems GVAR(center)) + (handgunMagazine GVAR(center))];
         };
     };
 };
 
+LOG(GVAR(currentItems) select 18);
 {
     if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
         (GVAR(virtualItems) select 10) pushBackUnique _x;

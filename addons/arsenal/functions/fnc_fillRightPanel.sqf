@@ -5,12 +5,14 @@ params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
 
+// Fade old control background
 if !(isNil QGVAR(currentRightPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;
 };
 
+// Show new control background
 private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
 _ctrlBackground ctrlShow true;
 _ctrlBackground ctrlSetFade 0;
@@ -54,34 +56,39 @@ private _fnc_fill_right_Container = {
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
 
+// Retrieve compatible mags
 private _compatibleItems = [];
-_compatibleMagazines = [];
-
+private _compatibleMagazines = [[], [], []];
 {
-    private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
+    if (_x != "") then {
+        private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
+        private _index = _forEachIndex;
 
-    {
-        {_compatibleMagazines pushBackUnique _x} foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
-    } foreach getArray (_weaponConfig >> "muzzles");
-
-} foreach ([primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center)] select {_x != ""});
+        {
+            {(_compatibleMagazines select _index) pushBackUnique _x} foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
+        } foreach getArray (_weaponConfig >> "muzzles");
+    };
+} foreach [primaryWeapon GVAR(center), handgunWeapon GVAR(center), secondaryWeapon GVAR(center)];
 
 private _itemsToCheck = [];
+private _compatibleMagsCurrentWeapon = [];
 
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
 
 switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonPrimaryWeapon : {
-      _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
-      _itemsToCheck = GVAR(currentItems) select 18;
+        _compatibleMagsCurrentWeapon = _compatibleMagazines select 0;
+         _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        _itemsToCheck = GVAR(currentItems) select 18;
     };
     case IDC_buttonHandgun : {
+        _compatibleMagsCurrentWeapon = _compatibleMagazines select 1;
         _compatibleItems = (handgunWeapon GVAR(center)) call bis_fnc_compatibleItems;
         _itemsToCheck = GVAR(currentItems) select 20;
     };
     case IDC_buttonSecondaryWeapon : {
+        _compatibleMagsCurrentWeapon = _compatibleMagazines select 2;
         _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
-
         _itemsToCheck = GVAR(currentItems) select 19;
     };
     case IDC_buttonUniform;
@@ -156,11 +163,18 @@ switch (_ctrlIDC) do {
             } foreach ((GVAR(virtualItems) select 1) select 3);
         };
     };
+    case IDC_buttonCurrentMag : {
+        if (_leftPanelState) then {
+            {
+                ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
+            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsCurrentWeapon);
+        };
+    };
 
     case IDC_buttonMag : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagazines);
+        } foreach ((GVAR(virtualItems) select 2) arrayIntersect ((_compatibleMagazines select 0) + (_compatibleMagazines select 1) + (_compatibleMagazines select 2)));
     };
 
     case IDC_buttonMagALL : {
@@ -253,6 +267,7 @@ if !(_itemsToCheck isEqualTo []) then {
         private _currentData = _ctrlPanel lbData _lbIndex;
 
         if (!(_currentData isEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
+            LOG("selected");
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };
