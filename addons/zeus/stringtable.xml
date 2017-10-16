@@ -1120,51 +1120,61 @@
             <English>Garrison group</English>
             <French>Garnir zone</French>
             <Japanese>歩哨グループ</Japanese>
+            <Italian>Proteggi gruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
             <English>Fill from top to bottom</English>
             <French>Remplir de haut en bas</French>
             <Japanese>上から下まで占拠</Japanese>
+            <Italian>Riempi dall'alto al basso</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
             <French>Remplir les bâtiments par la position la plus haute d'abord</French>
             <Japanese>建物を最も高い位置から占拠していきます</Japanese>
+            <Italian>Riempi gli edifici dalla posizione più alta prima</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
             <French>Mode de remplissage de bâtiment</French>
             <Japanese>建物占拠モード</Japanese>
+            <Italian>Modalità riempimento edifici</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
             <French>Remplissage égal</French>
             <Japanese>均一に占拠</Japanese>
+            <Italian>Riempimento uguale</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
             <French>Bâtiment par bâtiment</French>
             <Japanese>建物から建物へ</Japanese>
+            <Italian>Edificio per edificio</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
             <French>Remplir au hasard</French>
             <Japanese>ランダムに占拠</Japanese>
+            <Italian>Riempimento casuale</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
             <French>Téléporter</French>
             <Japanese>テレポート</Japanese>
+            <Italian>Teletrasporto</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonPlayer">
             <English>Unit must not be a player</English>
             <French>L'unité ne doit pas être un joueur</French>
             <Japanese>ユニットはプレイヤー</Japanese>
+            <Italian>L'unità non deve essere un giocatore</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison group</English>
             <French>Dégarnir zone</French>
             <Japanese>非歩哨グループ</Japanese>
+            <Italian>Non proteggere gruppo</Italian>
         </Key>
     </Package>
 </Project>
