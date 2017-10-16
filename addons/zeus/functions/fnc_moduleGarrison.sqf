@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [LOGIC, [2203.64, 2281.47, 1], 20, 2, true] call ace_zeus_fnc_moduleUngarrison
+ * [LOGIC, [2203.64, 2281.47, 1], 20, 2, true] call ace_zeus_fnc_moduleGarrison
  *
  * Public: No
 */
@@ -30,7 +30,7 @@ scopeName "Main";
 private _fnc_errorAndClose = {
     params ["_msg"];
     deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
+    [_msg] call FUNC(showMessage);
     breakOut "Main";
 };
 
