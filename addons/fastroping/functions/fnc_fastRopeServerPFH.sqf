@@ -23,6 +23,12 @@ _rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook"];
 //Wait until the unit is actually outside of the helicopter
 if (vehicle _unit != _unit) exitWith {};
 
+//Prevent teleport if hook has been deleted due to rope cut
+if (isNull _hook) exitWith {
+    detach _unit; //Does not matter if unit was not attached yet
+    [_pfhHandle] call CBA_fnc_removePerFrameHandler;
+};
+
 //Start fast roping
 if (getMass _dummy != 80) exitWith {
     //Fix for twitchyness
