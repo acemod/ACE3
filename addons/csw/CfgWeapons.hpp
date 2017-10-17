@@ -19,6 +19,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	class GVAR(staticMortarCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
@@ -35,6 +36,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	class GVAR(staticATCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
@@ -51,6 +53,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	
 	class GVAR(staticAACarry): Launcher_Base_F {
@@ -68,6 +71,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	
 	class GVAR(staticHMGCarry): Launcher_Base_F {
@@ -85,6 +89,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	class GVAR(staticAutoHMGCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
@@ -101,6 +106,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	class GVAR(staticHMGTallCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
@@ -117,6 +123,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	
 	class GVAR(staticGMGCarry): Launcher_Base_F {
@@ -134,6 +141,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	class GVAR(staticAutoGMGCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
@@ -150,6 +158,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	class GVAR(staticGMGTallCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
@@ -166,6 +175,7 @@ class CfgWeapons {
 		scope = 2;
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
+		picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
 	};
 	
 	// STATIC WEAPONS
