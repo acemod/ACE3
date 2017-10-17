@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team, esteldunedain, ruthberg
- * Updates the wind and rain evolution on the server. Broadcasts the current and next values to the clients
+ * Updates the wind and rain evolution on the server. Broadcasts the current and next values to the clients where needed.
  *
  * Arguments:
  * None
@@ -18,7 +18,7 @@
 private _overcastMultiplier = 1 max (2* overcast) min 2; // 0 (@ overcast 0), 2 (@ overcast 1)
 
 // Rain simulation
-if (GVAR(syncRain) && {GVAR(rain_period_count) > GVAR(rain_next_period)}) then {
+if (GVAR(rain_period_count) > GVAR(rain_next_period)) then {
 
     GVAR(rain_next_period) = ceil((1 + (random 10)) / _overcastMultiplier);
     GVAR(rain_period_count) = 0;
@@ -49,7 +49,6 @@ if (GVAR(syncRain) && {GVAR(rain_period_count) > GVAR(rain_next_period)}) then {
     TRACE_4("",_lastRain,_rainOverCast,_transitionTime,overcast);
 
     GVAR(rain_period_start_time) = CBA_missionTime;
-    publicVariable "ACE_RAIN_PARAMS";
 };
 
 // Wind simulation
@@ -100,7 +99,7 @@ if (GVAR(syncWind) && {GVAR(wind_period_count) > GVAR(wind_next_period)}) then {
 
 
 if (GVAR(syncMisc)) then {
-    ACE_MISC_PARAMS = [lightnings, rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
+    ACE_MISC_PARAMS = [rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
     publicVariable "ACE_MISC_PARAMS";
 };
 
