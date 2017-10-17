@@ -12,27 +12,21 @@ GVAR(ACE_rain) = rain;
 call FUNC(initWind);
 
 ["ace_settingsInitialized", {
-    TRACE_2("ace_settingsInitialized eh",GVAR(enableServerController),GVAR(serverUpdateInterval));
+    TRACE_3("ace_settingsInitialized eh",GVAR(enableServerController),GVAR(serverUpdateInterval),GVAR(useACEWeather));
 
     if (GVAR(enableServerController)) then {
         [FUNC(serverController), GVAR(serverUpdateInterval)] call CBA_fnc_addPerFrameHandler;
     };
 
     if (GVAR(useACEWeather)) then {
-        // Update rain every frame
-        addMissionEventHandler ["EachFrame", {0 setRain GVAR(ACE_rain)}];
+        GVAR(nextUpdateRain) = 0;
 
-        // Create a 1 sec delay PFEH to update rain
-        [{
-            BEGIN_COUNTER(weatherPFEHserver);
-
-            GVAR(nextUpdateRain) = 0;
+        addMissionEventHandler ["EachFrame", {
             if (CBA_missionTime >= GVAR(nextUpdateRain)) then {
                 [] call FUNC(updateRain); // Every 2 seconds
                 GVAR(nextUpdateRain) = 2 + CBA_missionTime;
             };
-
-            END_COUNTER(weatherPFEHserver);
-        }, 1, []] call CBA_fnc_addPerFrameHandler;
+            0 setRain GVAR(ACE_rain); // Update rain every frame
+        }];
     };
 }] call CBA_fnc_addEventHandler;
