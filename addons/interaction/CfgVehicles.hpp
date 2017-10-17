@@ -168,6 +168,14 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.6;
                 };
+
+                class GVAR(PullOutBody) {
+                    displayName = CSTRING(PullOutBody);
+                    condition = QUOTE(call DFUNC(canPullOutBody));
+                    statement = QUOTE(call DFUNC(pullOutBody));
+                    exceptions[] = {"isNotSwimming"};
+                    icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca.paa";
+                };
             };
 
             class ACE_Torso {
