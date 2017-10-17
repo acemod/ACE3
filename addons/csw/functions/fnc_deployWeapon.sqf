@@ -37,10 +37,10 @@ params["_tripod", "_player"];
 		_csw setVectorUp (surfaceNormal _tripodPos);
 
 		// Set the ammo to zero so no config mess-ups will allow for infinite ammo
-		_csw setVehicleAmmo 0;
+		// Disabled for now due to mortar incompatabilities
+		//_csw setVehicleAmmo 0;
 
 		[QGVAR(addObjectToServer), [_csw]] call CBA_fnc_serverEvent;
-		GVAR(newVehicle) = objNull;
 	};
 	
 	private _onFailure = {

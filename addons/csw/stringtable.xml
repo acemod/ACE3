@@ -22,6 +22,9 @@
 		<Key ID="STR_ACE_CSW_confirmDeployment_hint">
             <English>Confirm Placement</English>
         </Key>
+		<Key ID="STR_ACE_CSW_StaticMortarBag_displayName">
+            <English>[ACE] Mk6 Mortar Tube</English>
+        </Key>
 		<Key ID="STR_ACE_CSW_StaticATWeapon_displayName">
             <English>[ACE] Mini-Spike Launcher (AT)</English>
         </Key>

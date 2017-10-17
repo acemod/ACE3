@@ -20,6 +20,22 @@ class CfgWeapons {
 		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
 		modes[] = {};
 	};
+	class GVAR(staticMortarCarry): Launcher_Base_F {
+		class GVAR(cswOptions) {
+			assembleTo = "B_Mortar_01_F";
+			baseTripod = QGVAR(m3Tripod);
+			type = "weapon";
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			mass = 910; // M252 Mortar Weight
+		};
+		
+		displayName = CSTRING(StaticMortarBag_displayName);
+		author = ECSTRING(common, ACETeam);
+		scope = 2;
+		model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
+		modes[] = {};
+	};
 	class GVAR(staticATCarry): Launcher_Base_F {
 		class GVAR(cswOptions) {
 			assembleTo = QGVAR(staticATWeapon);
@@ -210,5 +226,15 @@ class CfgWeapons {
 		author = ECSTRING(common, ACETeam);
 		displayName = CSTRING(AAStatic_displayName);
 		magazines[] = { GVAR(1Rnd_GAA_missiles), GVAR(TitanAA_Dummy_Missile) };
+	};
+	
+	class mortar_82mm;
+	class ACE_mortar_82mm: mortar_82mm {
+		class GVAR(cswOptions) {
+			deployTime = 40;
+			pickupTime = 30;
+			//ammoLoadTime = 15;
+			//ammoUnloadTime = 10;
+		};
 	};
 };

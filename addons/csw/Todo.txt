@@ -14,8 +14,10 @@
 [X] Create new Backpack Weapon Model
 [X] Change from backpack to launcher
 [X] Create Textures for tripod/weapons
-[ ] Implement CSW for Mortar
+[ ] Implement CSW for Mortar (?)
 [ ] Test in Dedicated Server With Others
+
+[ ] Create Inventory Icons
 
 [ ] Create compatability for CUP and RHS
 	[ ] Custom ammo types for all CSW's

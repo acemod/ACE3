@@ -10,7 +10,7 @@ class CfgVehicles {
 			};
 		};
 	};
-
+	
 	class ThingX;
 	class GVAR(m3Tripod): ThingX {
 		class GVAR(cswOptions) { disassembleTo = QGVAR(m3CarryTripod); };
@@ -61,11 +61,59 @@ class CfgVehicles {
 	
 	// Custom config entries
 	// Static Weapons
+	
+	// Custom Mortar entry to fix issue with disabling the "Dismantle" and "Assemble" command
 	class LandVehicle;
-	class StaticWeapon: LandVehicle {
+    class StaticWeapon: LandVehicle {
+        class Turrets {
+            class MainTurret;
+        };
 		class ACE_SelfActions;
 		class ACE_Actions;
-	};
+    };
+    class StaticMortar: StaticWeapon {
+		class Turrets: Turrets {
+            class MainTurret: MainTurret {};
+        };
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions;
+		};
+    };
+	class Mortar_01_base_F: StaticMortar {
+		class Turrets: Turrets {
+            class MainTurret: MainTurret {};
+        };
+		class GVAR(cswOptions) { disassembleTo = QGVAR(staticMortarCarry); };
+        class ACE_Actions: ACE_Actions {
+			class ACE_MainActions: ACE_MainActions {
+				class GVAR(getIn) {
+						displayName = CSTRING(GetIn_displayName);
+						selection = "";
+						distance = 5;
+						condition = QUOTE([_target] call FUNC(canGetIn));
+						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+					};
+					
+				class GVAR(cswMenu) {
+					displayName = CSTRING(displayName);
+					selection = "";
+					distance = 3;
+					condition = "true";
+					
+					class GVAR(disassemble) {
+						displayName = CSTRING(DisassembleCSW_displayName);
+						selection = "";
+						distance = 3;
+						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
+						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
+					};
+				};
+			};
+        };
+    };
+	
+	// Rest of the static weapons
+
 	class StaticMGWeapon: StaticWeapon {
 		class ACE_Actions: ACE_Actions {
 			class ACE_MainActions;
@@ -80,7 +128,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticATWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -108,13 +164,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -129,7 +178,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticAAWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -157,13 +214,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -178,7 +228,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticHMGWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -206,13 +264,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -227,7 +278,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticHMGWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -255,13 +314,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -276,7 +328,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticHMGWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -304,13 +364,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -325,7 +378,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticGMGWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -353,13 +414,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -374,7 +428,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticGMGWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -402,13 +464,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -423,7 +478,15 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
 			class ACE_MainActions: ACE_MainActions {
 				displayName = CSTRING(StaticGMGWeapon_displayName);
-				distance = 3;
+				distance = 5;
+				
+				class GVAR(getIn) {
+					displayName = CSTRING(GetIn_displayName);
+					selection = "";
+					distance = 5;
+					condition = QUOTE([_target] call FUNC(canGetIn));
+					statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
+				};
 				
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
@@ -451,13 +514,6 @@ class CfgVehicles {
 						distance = 3;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-					};
-					class GVAR(getIn) {
-						displayName = CSTRING(GetIn_displayName);
-						selection = "";
-						distance = 3;
-						condition = QUOTE([_target] call FUNC(canGetIn));
-						statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
 					};
 				};
 			};
@@ -564,14 +620,14 @@ class CfgVehicles {
 		class Turrets: Turrets {
 			class MainTurret: MainTurret {};
 		};
-		class GVAR(cswOptions) { disassembleTo =  QGVAR(staticAutoHMG); };
+		class GVAR(cswOptions) { disassembleTo =  QGVAR(staticAutoHMGCarry); };
 		scope = 1;
 	};
 	class O_HMG_01_A_F: HMG_01_A_base_F {
 		class Turrets: Turrets {
 			class MainTurret: MainTurret {};
 		};
-		class GVAR(cswOptions) { disassembleTo =  QGVAR(staticAutoHMG); };
+		class GVAR(cswOptions) { disassembleTo =  QGVAR(staticAutoHMGCarry); };
 		scope = 1;
 	};
 	
