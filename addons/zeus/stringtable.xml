@@ -1164,12 +1164,6 @@
             <Japanese>テレポート</Japanese>
             <Italian>Teletrasporto</Italian>
         </Key>
-        <Key ID="STR_ACE_Zeus_OnlyNonPlayer">
-            <English>Unit must not be a player</English>
-            <French>L'unité ne doit pas être un joueur</French>
-            <Japanese>ユニットはプレイヤー</Japanese>
-            <Italian>L'unità non deve essere un giocatore</Italian>
-        </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison group</English>
             <French>Dégarnir zone</French>
