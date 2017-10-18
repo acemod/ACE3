@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKeyHold">
@@ -179,6 +179,7 @@
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
             <English>Synchronizes rainbow, fog, temperature and humidity</English>
+            <Italian>Sincronizza arcobaleno, nebbia, temperatura e umidità</Italian>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
