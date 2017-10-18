@@ -75,8 +75,8 @@
             <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
             <Japanese>プレイヤが地図上でフラッシュライトを使うと、照らすようにしますか？</Japanese>
             <Korean>지도에 불빛을 비치는 플레이어를 조금 더 밝게 합니까?</Korean>
-            <Chinesesimp>当玩家拥有手电筒时, 增加地图亮度?</Chinesesimp>
-            <Chinese>當玩家擁有手電筒時, 增加地圖亮度?</Chinese>
+            <Chinesesimp>当玩家拥有手电筒时，增加地图亮度?</Chinesesimp>
+            <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>

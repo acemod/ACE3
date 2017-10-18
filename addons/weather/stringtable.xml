@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKeyHold">
@@ -179,6 +179,8 @@
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
             <English>Synchronizes rainbow, fog, temperature and humidity</English>
+            <Chinese>同步彩虹、霧、溫度與濕度</Chinese>
+            <Chinesesimp>同步彩虹、雾、温度与湿度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
