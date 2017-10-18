@@ -44,7 +44,7 @@ if (_magazineAmmoCount == 0) then {
 			params["_args"];
 			_args params["_csw", "_cswWeapon", "", "", "_magazineAmmoCount"];
 			private _wantedAmmo = ((_csw ammo _cswWeapon) + _magazineAmmoCount);
-			[QGVAR(addCSWAmmo), [_csw, _cswWeapon, _wantedAmmo]] call CBA_fnc_serverEvent;
+			[QGVAR(addCSWAmmo), [_csw, _cswWeapon, _wantedAmmo]] call CBA_fnc_globalEvent;
 			// due to an issue with locality, I set the ammo locally so the person who deployed the weapon sees the same result. It does NOT duplicate ammo
 			_csw setAmmo [_cswWeapon, _wantedAmmo];
 		};

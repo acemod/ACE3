@@ -20,4 +20,4 @@
 
 params["_player", "_weapon"];
 
-(_player select 1) action ["getInGunner", _weapon];
+(_player select 1) moveInTurret [_weapon, [0]];

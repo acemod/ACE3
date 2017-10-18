@@ -38,7 +38,7 @@ params["_tripod", "_player"];
 
 		// Set the ammo to zero so no config mess-ups will allow for infinite ammo
 		// Disabled for now due to mortar incompatabilities
-		//_csw setVehicleAmmo 0;
+		_csw setAmmo[(weapons _csw) select 0, 0];
 
 		[QGVAR(addObjectToServer), [_csw]] call CBA_fnc_serverEvent;
 	};

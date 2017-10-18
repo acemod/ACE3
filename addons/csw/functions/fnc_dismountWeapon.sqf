@@ -28,16 +28,10 @@ if (isNull GVAR(cswTripod)) then {
 			private _tripodName = getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(cswOptions) >> "baseTripod");
 			
 			private _weaponPos = getPosATL _weapon;
+			_weaponPos set[2, (_weaponPos select 2) + 0.1];
 			private _weaponDir = getDir _weapon;
-			private _ammo = magazinesAmmoFull _weapon;
-			
-			{
-				private _magazineAmmoCount = _x select 1;
-				while {_magazineAmmoCount > 0} do {
-					private _ammoRemoved = [_weapon, false] call FUNC(unloadAmmo);
-					_magazineAmmoCount = _magazineAmmoCount - _ammoRemoved;
-				};
-			} forEach _ammo; // forEach so if a CSW has more than 1 magazine loaded it will still remove the ammo and give it back
+
+			[_weapon, false, true] call FUNC(unloadAmmo);
 			
 			deleteVehicle _weapon;
 			

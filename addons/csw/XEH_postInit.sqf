@@ -9,9 +9,7 @@ if (isServer) then {
 
 [QGVAR(addCSWAmmo), {
 	params["_object", "_weapon", "_ammo"];
-	if (local _object) then {
-		_object setAmmo[_weapon, _ammo];
-	}
+	_object setAmmo[_weapon, _ammo]; // we dont check if the CSW is local so no issues pop up regarding locality
 }] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};

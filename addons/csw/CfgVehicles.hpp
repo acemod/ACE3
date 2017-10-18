@@ -18,20 +18,20 @@ class CfgVehicles {
 			class ACE_MainActions {
 				displayName = CSTRING(Tripod_displayName);
 				selection = "";
-				distance = 3;
+				distance = 2;
 				condition = "true";
 				
 				class ACE_PickUp {
 					displayName = CSTRING(Pickup_displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = QUOTE([ARR_2(_target,_this)] call FUNC(canPickupTripod));
 					statement = QUOTE([ARR_2(_target,_this)] call FUNC(pickupTripod));
 				};
 				
 				class ACE_Position {
 					displayName = CSTRING(Move_displayName);
-					distance = 3;
+					distance = 2;
 					condition = QUOTE(_this call FUNC(canMoveTripod));
 					//wait a frame to handle "Do When releasing action menu key" option:
                     statement = QUOTE([ARR_2({_this call FUNC(positionTripod)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
@@ -39,7 +39,7 @@ class CfgVehicles {
 				
 				class GVAR(cswMenu) {
 					displayName = CSTRING(MountWeapon_displayName);
-					distance = 3;
+					distance = 2;
 					condition = QUOTE(_this call FUNC(canDeployWeapon));
 					statement = QUOTE([ARR_2({_this call FUNC(deployWeapon)},_this)] call CBA_fnc_execNextFrame);
 				};
@@ -97,13 +97,13 @@ class CfgVehicles {
 				class GVAR(cswMenu) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
@@ -141,27 +141,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
@@ -191,27 +191,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
@@ -241,27 +241,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
@@ -291,27 +291,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
@@ -341,27 +341,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
@@ -391,27 +391,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
@@ -441,27 +441,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
@@ -491,27 +491,27 @@ class CfgVehicles {
 				class GVAR(cswOptions) {
 					displayName = CSTRING(displayName);
 					selection = "";
-					distance = 3;
+					distance = 2;
 					condition = "true";
 					
 					class GVAR(disassemble) {
 						displayName = CSTRING(DisassembleCSW_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
 						statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(loadAmmo) {
 						displayName = CSTRING(LoadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canLoadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(loadAmmo)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
 					};
 					class GVAR(unloadAmmo) {
 						displayName = CSTRING(UnloadAmmo_displayName);
 						selection = "";
-						distance = 3;
+						distance = 2;
 						condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
 						statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
 					};
