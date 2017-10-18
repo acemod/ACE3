@@ -432,18 +432,24 @@
             <German>Nimmt die Einheit unter dem Cursor fest.</German>
             <Japanese>カーソル先のユニットを拘束</Japanese>
             <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
+            <Chinese>設置在游標下的單位成俘虜狀態。</Chinese>
+            <Chinesesimp>设置在游标下的单位成俘虏状态。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
             <German>Benötigt für KI Kapitulation</German>
             <Italian>Necessita arresa AI</Italian>
             <Japanese>AI の投降を必要とする</Japanese>
+            <Chinese>需要AI先行投降</Chinese>
+            <Chinesesimp>需要AI先行投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
             <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
             <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
             <Japanese>AI の拘束は AI が投降している場合に限り可能にします。</Japanese>
+            <Chinese>在逮捕AI之前該AI必須先進入投降狀態。</Chinese>
+            <Chinesesimp>在逮捕AI之前该AI必须先进入投降状态。</Chinesesimp>
         </Key>
     </Package>
 </Project>

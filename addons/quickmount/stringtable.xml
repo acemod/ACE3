@@ -78,8 +78,8 @@
             <German>Maximale Geschwindigkeit (km/h) für Schnellzugang</German>
             <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
             <Japanese>プレイヤーが搭乗できる限界速度 (km/h)</Japanese>
-            <Chinesesimp>设置玩家能在最高多少的速度之下进入载具.</Chinesesimp>
-            <Chinese>設置玩家能在最高多少的速度之下進入載具.</Chinese>
+            <Chinesesimp>设置玩家能在最高多少的速度之下进入载具。</Chinesesimp>
+            <Chinese>設置玩家能在最高多少的速度之下進入載具。</Chinese>
             <Polish>Maksymalna prędkość pojazdu (km/h) pozwalająca graczowi wsiąść.</Polish>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
@@ -96,8 +96,8 @@
             <German>Priorisierter Sitzplatz zum Schnellzugang</German>
             <Italian>Priorità del sedile in entrata</Italian>
             <Japanese>搭乗の際の優先順位</Japanese>
-            <Chinesesimp>优先想进入哪个座位.</Chinesesimp>
-            <Chinese>優先想進入哪個座位.</Chinese>
+            <Chinesesimp>优先想进入哪个座位。</Chinesesimp>
+            <Chinese>優先想進入哪個座位。</Chinese>
             <Polish>Priorytet pozycji w pojeździe</Polish>
         </Key>
     </Package>

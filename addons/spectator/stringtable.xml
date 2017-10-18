@@ -46,12 +46,16 @@
             <German>KI Sichtbarkeit</German>
             <Japanese>AI にも有効化</Japanese>
             <Italian>AI Abilitate</Italian>
+            <Chinese>可觀察AI</Chinese>
+            <Chinesesimp>可观察AI</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
             <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
             <Japanese>スペクテイターで AI 視点を可能に</Japanese>
             <Italian>Permette la visibilità delle AI in spettatore</Italian>
+            <Chinese>開啟此功能後可在觀察者模式下觀察AI單位。</Chinese>
+            <Chinesesimp>开启此功能后可在观察者模式下观察AI单位。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -110,6 +114,8 @@
             <Portuguese>1ª e 3ª pessoa</Portuguese>
             <Korean>1PP 과 3PP 카메라</Korean>
             <Japanese>1PP と 3PP カメラ</Japanese>
+            <Chinese>第一人稱與第三人稱</Chinese>
+            <Chinesesimp>第一人称与第三人称</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
@@ -184,6 +190,8 @@
             <French>Ingénieur</French>
             <Japanese>工兵</Japanese>
             <Korean>정비공</Korean>
+            <Chinese>工兵</Chinese>
+            <Chinesesimp>工兵</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
@@ -251,12 +259,16 @@
             <German>Icons</German>
             <Japanese>アイコン</Japanese>
             <Italian>Icone</Italian>
+            <Chinese>單位圖示</Chinese>
+            <Chinesesimp>单位图示</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
             <German>Geschosse</German>
             <Japanese>弾道表示</Japanese>
             <Italian>Proiettili</Italian>
+            <Chinese>顯示彈道</Chinese>
+            <Chinesesimp>显示弹道</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -293,12 +305,16 @@
             <German>Sichtmodus</German>
             <Japanese>ビジョン モード</Japanese>
             <Italian>Modalità Visiva</Italian>
+            <Chinese>視覺模式</Chinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
             <German>Langsam</German>
             <Japanese>速度低下</Japanese>
             <Italian>Bassa Velocità</Italian>
+            <Chinese>慢速度</Chinese>
+            <Chinesesimp>慢速度</Chinesesimp>
         </Key>
     </Package>
 </Project>
