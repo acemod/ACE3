@@ -20,6 +20,8 @@ class CfgPatches {
             QGVAR(moduleToggleFlashlight),
             QGVAR(moduleSimulation),
             QGVAR(moduleSuppressiveFire),
+            QGVAR(moduleStaticWeaponPlace),
+            QGVAR(moduleStaticWeaponTake),
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),
             QGVAR(moduleTeleportPlayers)

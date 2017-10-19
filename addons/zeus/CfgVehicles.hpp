@@ -181,6 +181,18 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSuppressiveFire_DisplayName);
         function = QFUNC(moduleSuppressiveFire);
     };
+    class GVAR(moduleStaticWeaponPlace): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleStaticWeaponPlace_DisplayName);
+        function = QFUNC(moduleStaticWeaponPlace);
+    };
+    class GVAR(moduleStaticWeaponTake): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleStaticWeaponTake_DisplayName);
+        function = QFUNC(moduleStaticWeaponTake);
+    };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Medical);

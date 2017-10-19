@@ -40,7 +40,7 @@ GVAR(moduleDestination_displayEHMouse) = [findDisplay 312, "mouseButtonDown", {
     params ["", "_mouseButton", "", "", "_shift", "_ctrl", "_alt"];
 
     if (_mouseButton != 0) exitWith {}; // Only watch for LMB
-    TRACE_2("placed",_object,_mousePosASL);
+    TRACE_1("placed",_mousePosASL);
 
     _thisArgs params ["_object", "_code"];
 

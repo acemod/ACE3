@@ -1208,5 +1208,23 @@
             <Chinese>解除駐軍駐守狀態</Chinese>
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Zeus_moduleStaticWeaponPlace_DisplayName">
+            <English>Static Weapon: Assemble</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleStaticWeaponTake_DisplayName">
+            <English>Static Weapon: Disassemble</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_StaticWeapon_NoneNearby">
+            <English>No nearby static weapons</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_StaticWeapon_NeedAssistant">
+            <English>Unit needs to be grouped with an assistant</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_StaticWeapon_NotCarrying">
+            <English>Group not carrying parts for a static weapon</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_StaticWeapon_SetDirection">
+            <English>Set direction to face weapon</English>
+        </Key>
     </Package>
 </Project>

@@ -16,6 +16,8 @@ QGVAR(GlobalSkillAI) addPublicVariableEventHandler FUNC(moduleGlobalSetSkill);
 [QGVAR(moduleSearchNearby), CBA_fnc_searchNearby] call CBA_fnc_addEventHandler;
 [QGVAR(moduleSearchArea), CBA_fnc_taskSearchArea] call CBA_fnc_addEventHandler;
 [QGVAR(suppressiveFire), LINKFUNC(moduleSuppressiveFireLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleStaticWeaponTake), LINKFUNC(moduleStaticWeaponTakeLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleStaticWeaponPlace), LINKFUNC(moduleStaticWeaponPlaceLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(enableFlashlight), {
     params ["_unit", "_mode"];
     _unit enableGunLights _mode;
