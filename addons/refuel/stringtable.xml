@@ -439,6 +439,12 @@
             <Chinese>加油軟管長度</Chinese>
             <Polish>Długość węża paliwowego</Polish>
         </Key>
+        <Key ID="STR_ACE_RefuelSettings_AllowEngine_DisplayName">
+            <English>Allow Engine On</English>
+        </Key>
+        <Key ID="STR_ACE_RefuelSettings_AllowEngine_Description">
+            <English>Allows engine to remain on during refuel.</English>
+        </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>
             <German>Tankvolumen</German>

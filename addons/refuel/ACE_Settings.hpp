@@ -12,4 +12,11 @@ class ACE_Settings {
         value = 12;
         typeName = "SCALAR";
     };
+    class GVAR(allowEngine) {
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
+        displayName = CSTRING(RefuelSettings_AllowEngine_DisplayName);
+        description = CSTRING(RefuelSettings_AllowEngine_Description);
+        value = 0;
+        typeName = "BOOL";
+    };
 };

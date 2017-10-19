@@ -26,7 +26,9 @@ if (!isNull _currentUser) exitWith {
 };
 _aircraft setVariable [QGVAR(currentUser), ace_player, true];
 GVAR(currentAircraftNamespace) setVariable [getPlayerUID ace_player, _aircraft, true];
-[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+if (!GVAR(allowEngine)) then {
+    [_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+};
 
 GVAR(isCurator) = _isCurator;
 GVAR(currentAircraft) = _aircraft;
@@ -137,3 +139,12 @@ _edit ctrlAddEventHandler ["KeyDown", LINKFUNC(onNameChange)];
 
 private _checkbox = _display displayCtrl ID_CHECKBOX_MIRROR;
 _checkbox ctrlAddEventHandler ["CheckedChanged", {[(_this select 1) == 1] call FUNC(onPylonMirror)}];
+
+// PFH for distance check to vehicle
+[{
+    params ["", "_idPFH"];    
+    if ((ace_player distance GVAR(currentAircraft)) > PYLONS_DISTANCE_CHECK) exitWith {
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
+        call FUNC(onButtonClose);
+    };
+}, 1, []] call CBA_fnc_addPerFrameHandler;

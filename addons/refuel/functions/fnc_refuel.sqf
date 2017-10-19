@@ -64,7 +64,7 @@ if (_maxFuel == 0) then {
     private _finished = false;
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
-        if (isEngineOn _sink) exitWith {
+        if (!GVAR(allowEngine) && {isEngineOn _sink}) exitWith {
             _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
             _nozzle setVariable [QGVAR(isRefueling), false, true];
         };
