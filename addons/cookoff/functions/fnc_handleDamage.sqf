@@ -46,7 +46,7 @@ private _newDamage = _damage - _oldDamage;
 // because the config version ignores the return value completely
 if (_simulationType == "car") exitWith {
     // prevent destruction, let cook-off handle it if necessary
-    if (_hitpoint in ["hithull", "#structural"] && {!IS_EXPLOSIVE_AMMO(_ammo)}) then {
+    if (_hitpoint in ["hithull", "hitfuel", "#structural"] && {!IS_EXPLOSIVE_AMMO(_ammo)}) then {
         _damage min 0.89
     } else {
         if (_hitpoint isEqualTo "hitengine" && {_damage > 0.9}) then {
@@ -79,7 +79,7 @@ if (_simulationType == "tank") exitWith {
     };
 
     // prevent destruction, let cook-off handle it if necessary
-    if (_hitpoint in ["hithull", "#structural"]) then {
+    if (_hitpoint in ["hithull", "hitfuel", "#structural"]) then {
         _damage min 0.89
     } else {
         _damage
