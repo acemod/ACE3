@@ -49,8 +49,7 @@ if (_magazineDisplayName == "") then {
     "",
     format [localize LSTRING(RearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName"), _magazineDisplayName],
     {
-        params ["_args"];
-        _args params ["_target", "_unit"];
+        param [0] params ["_target", "_unit"];
         (_unit distance _target) < (REARM_ACTION_DISTANCE + 2)
     },
     ["isnotinside"]

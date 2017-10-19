@@ -26,8 +26,7 @@ params ["_truck", "_player", "_vehicle"];
     "",
     format [localize LSTRING(BasicRearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
     {
-        params ["_args"];
-        _args params ["", "_player", "_vehicle"];
+        param [0] params ["", "_player", "_vehicle"];
         (_player distance _vehicle) < (REARM_ACTION_DISTANCE + 2)
     },
     ["isnotinside"]
