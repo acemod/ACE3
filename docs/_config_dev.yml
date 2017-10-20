@@ -12,7 +12,7 @@ ace:
     major: 3
     minor: 11
     patch: 0
-    build: 23
+    build: 24
 
 acex:
   githubUrl: https://github.com/acemod/ACEX
