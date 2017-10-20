@@ -28,6 +28,9 @@ private _totalAmmo = 0;
 {
     _x params ["_mag", "", "_count"];
     if (_count > 0) then {
+        private _ammo = getText (configFile >> "CfgMagazines" >> _mag >> "ammo");
+        private _model = getText (configFile >> "CfgAmmo" >> _ammo >> "model");
+        if (_model == "\A3\weapons_f\empty") exitWith {TRACE_3("skipping",_mag,_ammo,_model);};
         _ammoToDetonate pushBack [_mag, _count];
         _totalAmmo = _totalAmmo + _count;
     };
@@ -44,7 +47,9 @@ private _totalAmmo = 0;
 
 // Get ammo from transportAmmo / ace_rearm
 private _vehCfg = configFile >> "CfgVehicles" >> typeOf _vehicle;
-if (((getNumber (_vehCfg >> "transportAmmo")) > 1000) || {isClass (_vehCfg >> "ACE_Actions" >> "ACE_MainActions" >> QEGVAR(rearm,TakeAmmo))}) then {
+
+private _configSupply = (getNumber (_vehCfg >> "transportAmmo")) max (getNumber (_vehCfg >> QEGVAR(rearm,defaultSupply)));
+if (_vehicle getVariable [QEGVAR(rearm,isSupplyVehicle), (_configSupply > 0)]) then {
     TRACE_1("transportAmmo vehicle - adding virtual ammo",typeOf _vehicle);
 
     _ammoToDetonate pushBack ["2000Rnd_65x39_belt", 2000];
