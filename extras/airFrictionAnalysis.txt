@@ -250,10 +250,10 @@ Optimal airFriction: 0.00053639
 Ammo Class: ACE_338_Ball
 MaxRanges (m): [1200, 1300]
 MuzzleVelocities (m/s): [800, 830]
-Max. Velocity diff (m/s): 24.93
-Max. Drop diff (cm): 10.92
-Max. Tof diff (ms): 27.0
-Optimal airFriction: 0.00053585
+Max. Velocity diff (m/s): 26.22
+Max. Drop diff (cm): 12.14
+Max. Tof diff (ms): 29.5
+Optimal airFriction: 0.00055706
 ##########################################
 Ammo Class: ACE_338_Ball_API526
 MaxRanges (m): [1200, 1300]
