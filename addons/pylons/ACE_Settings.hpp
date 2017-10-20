@@ -41,11 +41,4 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
-    class GVAR(allowEngine) {
-        category = CSTRING(Category_Pylons);
-        displayName = CSTRING(AllowEngine);
-        description = CSTRING(AllowEngine_description);
-        value = 0;
-        typeName = "BOOL";
-    };
 };

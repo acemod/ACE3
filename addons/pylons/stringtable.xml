@@ -148,11 +148,5 @@
             <Chinese>需要工具包才能進行彈藥整補。</Chinese>
             <Chinesesimp>需要工具包才能进行弹药整补。</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Pylons_AllowEngine">
-            <English>Allow Engine On</English>
-        </Key>
-        <Key ID="STR_ACE_Pylons_AllowEngine_description">
-            <English>Allows engine to remain on for pylon change.</English>
-        </Key>
     </Package>
 </Project>

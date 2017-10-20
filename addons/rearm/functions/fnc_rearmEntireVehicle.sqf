@@ -27,7 +27,7 @@ params ["_truck", "_player", "_vehicle"];
     format [localize LSTRING(BasicRearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
     {
         param [0] params ["", "_player", "_vehicle"];
-        (_player distance _vehicle) < (REARM_ACTION_DISTANCE + 2)
+        (_player distanceSqr _vehicle) <= REARM_ACTION_DISTANCE_SQR
     },
     ["isnotinside"]
 ] call EFUNC(common,progressBar);
