@@ -213,7 +213,7 @@ if (GVAR(currentRightPanel) != _ctrlIDC) then {
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
-["ace_arsenal_rightPanelChanged", [_display, _ctrlIDC]] call CBA_fnc_localEvent;
+["ace_arsenal_rightPanelFilled", [_display, _ctrlIDC]] call CBA_fnc_localEvent;
 
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
@@ -267,7 +267,6 @@ if !(_itemsToCheck isEqualTo []) then {
         private _currentData = _ctrlPanel lbData _lbIndex;
 
         if (!(_currentData isEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
-            LOG("selected");
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };

@@ -243,8 +243,8 @@ _x = _display displayCtrl _x;\
     [\
     [\
         (primaryweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (handgunweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon)\
+        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon),\
+        (handgunweapon GVAR(center) call bis_fnc_baseWeapon)\
     ],\
     [\
     [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 2)] select {!(_x isEqualTo "")},\

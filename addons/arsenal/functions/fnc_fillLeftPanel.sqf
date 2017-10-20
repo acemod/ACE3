@@ -165,7 +165,9 @@ if (GVAR(currentLeftPanel) != _ctrlIDC) then {
     (_display displayCtrl IDC_leftSearchbar) ctrlSetText "";
     (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
 };
+
 GVAR(currentLeftPanel) = _ctrlIDC;
+["ace_arsenal_leftPanelFilled", [_display, _ctrlIDC]] call CBA_fnc_localEvent;
 
 // Sort
 private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;

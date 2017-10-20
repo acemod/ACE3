@@ -162,7 +162,6 @@ for "_index" from 0 to 15 do {
     };
 };
 
-LOG(GVAR(currentItems) select 18);
 {
     if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
         (GVAR(virtualItems) select 10) pushBackUnique _x;
