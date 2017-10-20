@@ -46,8 +46,8 @@
             <Italian>Messaggi di Ascesa</Italian>
             <Japanese>転生表示</Japanese>
             <Korean>재림 메세지</Korean>
-            <Chinesesimp>上任宙斯讯息</Chinesesimp>
-            <Chinese>上任宙斯訊息</Chinese>
+            <Chinesesimp>宙斯上任讯息</Chinesesimp>
+            <Chinese>宙斯上任訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_Description">
             <English>Display global popup messages when a player is assigned as Zeus.</English>
@@ -62,8 +62,8 @@
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
             <Japanese>プレイヤーが Zeus になるとき、全体へポップアップ表示をおこないます。</Japanese>
             <Korean>플레이어가 Zeus 될 시 서버에 이를 알리는 팝업이 등장합니다.</Korean>
-            <Chinesesimp>当一位玩家被指定为宙斯时显示全球讯息</Chinesesimp>
-            <Chinese>當一位玩家被指定為宙斯時顯示全球訊息</Chinese>
+            <Chinesesimp>当一位玩家被指定为宙斯时显示全域讯息</Chinesesimp>
+            <Chinese>當一位玩家被指定為宙斯時顯示全域訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
@@ -345,8 +345,8 @@
             <German>Ändert: general, commanding, courage</German>
             <Korean>변화: 전반적, 지휘, 사기</Korean>
             <Italian>Cambia: generale, comando, </Italian>
-            <Chinesesimp>改变: 战斗技巧, 指挥技巧, 勇气大小</Chinesesimp>
-            <Chinese>改變: 戰鬥技巧, 指揮技巧, 勇氣大小</Chinese>
+            <Chinesesimp>改变: 战斗技巧，指挥技巧，勇气大小</Chinesesimp>
+            <Chinese>改變: 戰鬥技巧，指揮技巧，勇氣大小</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
@@ -397,8 +397,8 @@
             <German>Ändert: aimingShake, aimingSpeed, reloadSpeed</German>
             <Korean>변화: 조준시 흔들림, 조준 속도, 재장전 속도</Korean>
             <Italian>Cambia: aimingShake, aimingSpeed, reloadSpeed</Italian>
-            <Chinesesimp>改变: 手晃幅度, 瞄准速度, 重新装填速度</Chinesesimp>
-            <Chinese>改變: 手晃幅度, 瞄準速度, 重新裝填速度</Chinese>
+            <Chinesesimp>改变: 手晃幅度，瞄准速度， 重新装填速度</Chinesesimp>
+            <Chinese>改變: 手晃幅度，瞄準速度， 重新裝填速度</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
@@ -550,8 +550,8 @@
             <Polish>Nie można usunąć FRIES, liny są wypuszczone.</Polish>
             <French>Pas en mesure d'enlever le FRIES, les cordes ne sont pas déployées.</French>
             <Italian>Impossibile rimuovere le FRIES, le corde sono ancora dispiegate</Italian>
-            <Chinesesimp>无法移除快速绳降系统, 因为绳索已被释放出来</Chinesesimp>
-            <Chinese>無法移除快速繩降系統, 因為繩索已被釋放出來</Chinese>
+            <Chinesesimp>无法移除快速绳降系统，因为绳索已被释放出来</Chinesesimp>
+            <Chinese>無法移除快速繩降系統，因為繩索已被釋放出來</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -1052,6 +1052,8 @@
             <German>In Frachtraum laden</German>
             <Italian>Carica nel Cargo</Italian>
             <Japanese>カーゴに積み込み</Japanese>
+            <Chinese>裝載到貨物中</Chinese>
+            <Chinesesimp>装载到货物中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1059,6 +1061,8 @@
             <French>Basculer JVN</French>
             <Italian>Attiva NVGs</Italian>
             <Japanese>暗視装置の切り替え</Japanese>
+            <Chinese>切換夜視鏡</Chinese>
+            <Chinesesimp>切换夜视镜</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
             <English>NVG equipment</English>
@@ -1066,6 +1070,8 @@
             <French>Equipment de vision nocturne</French>
             <Italian>Attrezzatura NVG</Italian>
             <Japanese>暗視装置</Japanese>
+            <Chinese>夜視鏡裝備</Chinese>
+            <Chinesesimp>夜视镜装备</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
             <English>Add or remove NVGs from units</English>
@@ -1073,6 +1079,8 @@
             <French>Ajouter ou retirer JVN des unités</French>
             <Italian>Aggiunge o rimuove NVGs alle unità</Italian>
             <Japanese>ユニットから暗視装置の追加と削除</Japanese>
+            <Chinese>增加或移除單位的夜視鏡</Chinese>
+            <Chinesesimp>增加或移除单位的夜视镜</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
             <English>Toggle NVG target</English>
@@ -1080,6 +1088,8 @@
             <French>Cible du basculement</French>
             <Italian>Attiva obiettivo NVG</Italian>
             <Japanese>選択先の暗視装置の切り替え</Japanese>
+            <Chinese>切換目標的夜視鏡狀態</Chinese>
+            <Chinesesimp>切换目标的夜视镜状态</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
             <English>Selected group</English>
@@ -1087,6 +1097,8 @@
             <French>Groupe sélectionné</French>
             <Italian>Gruppo selezionato</Italian>
             <Japanese>選択されたグループ</Japanese>
+            <Chinese>選擇小隊</Chinese>
+            <Chinesesimp>选择小队</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
             <English>Toggle flashlights</English>
@@ -1094,6 +1106,8 @@
             <French>Basculer lampes torches</French>
             <Italian>Attiva torce</Italian>
             <Japanese>フラッシュライトの切り替え</Japanese>
+            <Chinese>切換手電筒</Chinese>
+            <Chinesesimp>切换手电筒</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
             <English>Toggle flashlight target</English>
@@ -1101,6 +1115,8 @@
             <French>Cible du basculement</French>
             <Italian>Attiva obiettivo torcia</Italian>
             <Japanese>選択先のフラッシュライトの切り替え</Japanese>
+            <Chinese>切換目標的手電筒狀態</Chinese>
+            <Chinesesimp>切换目标的手电筒状态</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
             <English>Flashlight</English>
@@ -1108,6 +1124,8 @@
             <French>Lampe torche</French>
             <Italian>Torcia</Italian>
             <Japanese>フラッシュライト</Japanese>
+            <Chinese>手電筒</Chinese>
+            <Chinesesimp>手电筒</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
             <English>Add gear</English>
@@ -1115,66 +1133,80 @@
             <French>Ajouter équipement</French>
             <Italian>Aggiungi equipaggiamento</Italian>
             <Japanese>装備を追加</Japanese>
+            <Chinese>增加裝備</Chinese>
+            <Chinesesimp>增加装备</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison group</English>
             <French>Garnir zone</French>
             <Japanese>歩哨グループ</Japanese>
             <Italian>Proteggi gruppo</Italian>
+            <Chinese>佈置駐軍</Chinese>
+            <Chinesesimp>布置驻军</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
             <English>Fill from top to bottom</English>
             <French>Remplir de haut en bas</French>
             <Japanese>上から下まで占拠</Japanese>
             <Italian>Riempi dall'alto al basso</Italian>
+            <Chinese>由上而下進行填滿</Chinese>
+            <Chinesesimp>由上而下进行填满</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
             <French>Remplir les bâtiments par la position la plus haute d'abord</French>
             <Japanese>建物を最も高い位置から占拠していきます</Japanese>
             <Italian>Riempi gli edifici dalla posizione più alta prima</Italian>
+            <Chinese>從建築物的最高點開始布置衛哨</Chinese>
+            <Chinesesimp>从建筑物的最高点开始布置卫哨</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
             <French>Mode de remplissage de bâtiment</French>
             <Japanese>建物占拠モード</Japanese>
             <Italian>Modalità riempimento edifici</Italian>
+            <Chinese>駐軍填充建築物模式</Chinese>
+            <Chinesesimp>驻军填充建筑物模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
             <French>Remplissage égal</French>
             <Japanese>均一に占拠</Japanese>
             <Italian>Riempimento uguale</Italian>
+            <Chinese>平均分配</Chinese>
+            <Chinesesimp>平均分配</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
             <French>Bâtiment par bâtiment</French>
             <Japanese>建物から建物へ</Japanese>
             <Italian>Edificio per edificio</Italian>
+            <Chinese>一棟填滿後再換下一棟</Chinese>
+            <Chinesesimp>一栋填满后再换下一栋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
             <French>Remplir au hasard</French>
             <Japanese>ランダムに占拠</Japanese>
             <Italian>Riempimento casuale</Italian>
+            <Chinese>隨機分配</Chinese>
+            <Chinesesimp>随机分配</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
             <French>Téléporter</French>
             <Japanese>テレポート</Japanese>
             <Italian>Teletrasporto</Italian>
-        </Key>
-        <Key ID="STR_ACE_Zeus_OnlyNonPlayer">
-            <English>Unit must not be a player</English>
-            <French>L'unité ne doit pas être un joueur</French>
-            <Japanese>ユニットはプレイヤー</Japanese>
-            <Italian>L'unità non deve essere un giocatore</Italian>
+            <Chinese>傳送</Chinese>
+            <Chinesesimp>传送</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison group</English>
             <French>Dégarnir zone</French>
             <Japanese>非歩哨グループ</Japanese>
             <Italian>Non proteggere gruppo</Italian>
+            <Chinese>解除駐軍駐守狀態</Chinese>
+            <Chinesesimp>解除驻军驻守状态</Chinesesimp>
         </Key>
     </Package>
 </Project>
