@@ -7,13 +7,13 @@ class ACE_Settings {
     };
     class GVAR(fogScaling) {
         displayName = CSTRING(fogScaling_DisplayName);
-        description = CSTRING(fogScaling_description);
+        description = CSTRING(fogScaling_Description);
         typeName = "SCALAR";
         value = 1;
     };
     class GVAR(effectScaling) {
         displayName = CSTRING(effectScaling_DisplayName);
-        description = CSTRING(effectScaling_description);
+        description = CSTRING(effectScaling_Description);
         typeName = "SCALAR";
         value = 1;
     };
