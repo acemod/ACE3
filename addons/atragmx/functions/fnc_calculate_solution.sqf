@@ -139,7 +139,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
                 _windage1 = - atan(_tx / _trueRange);
                 _windDrift = (_wind2 select 0) * (_TOF - _trueRange / _muzzleVelocity);
                 _windage2 = - atan(_windDrift / _trueRange);
-                _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _trueRange);
+                _lead = (_targetSpeed * _TOF) / (Tan(MRAD_TO_DEG(1)) * _trueRange);
             };
             _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
             _kineticEnergy = _kineticEnergy * 0.737562149;
@@ -174,7 +174,7 @@ if (_targetRange != 0) then {
     _windage1 = - atan(_tx / _targetRange);
     _windDrift = (_wind2 select 0) * (_TOF - _targetRange / _muzzleVelocity);
     _windage2 = - atan(_windDrift / _targetRange);
-    _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _targetRange);
+    _lead = (_targetSpeed * _TOF) / (Tan(MRAD_TO_DEG(1)) * _targetRange);
 };
 
 _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));

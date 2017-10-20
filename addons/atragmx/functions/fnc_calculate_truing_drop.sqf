@@ -46,8 +46,8 @@ if (_parseInput) then {
     };
     switch (_dropUnit) do {
         case 0: {
-            _transonicDrop = _transonicDrop * 3.38;
-            _subsonicDrop  = _subsonicDrop  * 3.38;
+            _transonicDrop = MRAD_TO_MOA(_transonicDrop);
+            _subsonicDrop  = MRAD_TO_MOA(_subsonicDrop);
         };
         case 2: {
             _transonicDrop = _transonicDrop / 1.047;

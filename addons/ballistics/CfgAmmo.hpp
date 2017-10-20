@@ -445,7 +445,7 @@ class CfgAmmo {
     };
     class ACE_338_Ball : B_338_Ball {
         timeToLive=10;
-        airFriction=-0.00053585;
+        airFriction=-0.00055706;
         typicalSpeed=826;
         ACE_caliber=8.585;
         ACE_bulletLength=43.18;
