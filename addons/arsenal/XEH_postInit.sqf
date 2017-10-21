@@ -18,3 +18,9 @@ GVAR(lastSearchTextRight) = "";
 
     _unit setSpeaker _voice;
 }] call CBA_fnc_addEventHandler;
+
+if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+    ["ace_arsenalOpened", {
+        GVAR(virtualItems) set [17, (GVAR(virtualItems) select 17) -  ["FirstAidKit", "Medikit"]];
+    }] call CBA_fnc_addEventHandler;
+};
