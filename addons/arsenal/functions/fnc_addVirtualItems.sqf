@@ -7,7 +7,7 @@ if (_object == objNull) exitWith {};
 if (_items isEqualType [] && {count _items == 0}) exitWith {};
 
 private _cargo = _object getVariable [QGVAR(virtualItems), [
-    [[], [], []], // Weapons 0, primary, handgun, secondary
+    [[], [], []], // Weapons 0, primary, secondary, handgun
     [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
     [ ], // Magazines 2
     [ ], // Headgear 3
@@ -136,10 +136,10 @@ if (_items isEqualType true && {_items}) then {
                                     (_cargo select 0) select 0 pushBackUnique  ([_x] call bis_fnc_baseWeapon);
                                 };
                                 case 2: {
-                                    (_cargo select 0) select 1 pushBackUnique ([_x] call bis_fnc_baseWeapon);
+                                    (_cargo select 0) select 2 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
                                 case 4: {
-                                    (_cargo select 0) select 2 pushBackUnique ([_x] call bis_fnc_baseWeapon);
+                                    (_cargo select 0) select 1 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
                             };
                         };

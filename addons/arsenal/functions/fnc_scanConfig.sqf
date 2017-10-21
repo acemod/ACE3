@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 private _cargo = [
-    [[], [], []], // Weapons 0, primary, handgun, secondary
+    [[], [], []], // Weapons 0, primary, secondary, handgun
     [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
     [ ], // Magazines 2
     [ ], // Headgear 3
@@ -105,10 +105,10 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
                     (_cargo select 0) select 0 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
                 case 2: {
-                    (_cargo select 0) select 1 pushBackUnique (_className call bis_fnc_baseWeapon);
+                    (_cargo select 0) select 2 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
                 case 4: {
-                    (_cargo select 0) select 2 pushBackUnique (_className call bis_fnc_baseWeapon);
+                    (_cargo select 0) select 1 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
             };
         };

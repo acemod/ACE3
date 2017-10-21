@@ -37,13 +37,13 @@ switch true do {
             case IDC_buttonHandgun : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach ((GVAR(virtualItems) select 0) select 1);
+                } foreach ((GVAR(virtualItems) select 0) select 2);
             };
 
             case IDC_buttonSecondaryWeapon : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach ((GVAR(virtualItems) select 0) select 2);
+                } foreach ((GVAR(virtualItems) select 0) select 1);
             };
         };
     };
