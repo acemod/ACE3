@@ -64,6 +64,9 @@
             <Chinese>已停止在%1號派龍架!</Chinese>
             <Chinesesimp>已停止在%1号派龙架!</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Pylons_TooFar">
+            <English>Vehicle too far</English>
+        </Key>
         <Key ID="STR_ACE_Pylons_Enabled">
             <English>Enable Pylons Menu</English>
             <Japanese>パイロン メニューを有効化</Japanese>

@@ -46,10 +46,3 @@
 
     GVAR(searchDistanceSqr) = GVAR(searchDistance) ^ 2;
 }] call CBA_fnc_addEventHandler;
-
-["ace_settingChanged", {
-    params ["_name", "_value"];
-    if (_name isEqualTo QGVAR(searchDistance)) then {
-        GVAR(searchDistanceSqr) = _value ^ 2;
-    };
-}] call CBA_fnc_addEventHandler;
