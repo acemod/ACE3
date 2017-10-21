@@ -174,7 +174,8 @@
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_rightTabContentListnBox,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
-    IDC_buttonRemoveAll\
+    IDC_buttonRemoveAll,\
+    [IDC_buttonCurrentMag, IDC_buttonRemoveAll] select (GVAR(canUseCurrentMagTab))\
 ];
 
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
