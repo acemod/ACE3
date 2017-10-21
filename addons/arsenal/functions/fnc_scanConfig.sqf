@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 private _cargo = [
-    [[], [], []], // Weapons 0, primary, handgun, secondary
+    [[], [], []], // Weapons 0, primary, secondary, handgun
     [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
     [ ], // Magazines 2
     [ ], // Headgear 3
@@ -105,10 +105,10 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
                     (_cargo select 0) select 0 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
                 case 2: {
-                    (_cargo select 0) select 1 pushBackUnique (_className call bis_fnc_baseWeapon);
+                    (_cargo select 0) select 2 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
                 case 4: {
-                    (_cargo select 0) select 2 pushBackUnique (_className call bis_fnc_baseWeapon);
+                    (_cargo select 0) select 1 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
             };
         };
@@ -122,7 +122,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
             (_cargo select 17) pushBackUnique _className;
         };
     };
-} foreach configProperties [_configCfgWeapons, "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
+} foreach configProperties [_configCfgWeapons, "isClass _x && {getNumber (_x >> 'scope') == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 {
     private _className = configName _x;
@@ -157,16 +157,16 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
             (_cargo select 16) pushBackUnique _className;
         };
     };
-} foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
+} foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {getNumber (_x >> 'scope') == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 {
     if (getText (_x >> "vehicleClass") == "Backpacks") then {
         (_cargo select 6) pushBackUnique (configName _x);
     };
-} foreach configProperties [(configFile >> "CfgVehicles"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
+} foreach configProperties [(configFile >> "CfgVehicles"), "isClass _x && {getNumber (_x >> 'scope') == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 {
     (_cargo select 7) pushBackUnique (configName _x);
-} foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
+} foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {getNumber (_x >> 'scope') == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];
