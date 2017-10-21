@@ -37,11 +37,11 @@ for "_index" from 0 to 10 do {
             };
 
             if !((_array select 1) isEqualTo "") then {
-                ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
+                ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 1);
             };
 
             if !((_array select 2) isEqualTo "") then {
-                 ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
+                 ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 2);
             };
         };
         case 1: {
