@@ -7,7 +7,6 @@ private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_classNam
 
 //_cachedItemInfo == [_displayName, _itemPicture, _modPicture, _modID]
 
-
 if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into cache.
 
     private _configPath = configFile >> _configCategory >> _className;
@@ -45,6 +44,6 @@ private _lbAdd =  _ctrlPanel lbAdd _displayName;
 
 _ctrlPanel lbSetData [_lbAdd, _className];
 _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
-_ctrlPanel lbSetPictureRight [_lbAdd,_modPicture];
+_ctrlPanel lbSetPictureRight [_lbAdd,["",_modPicture] select (GVAR(enableModIcons))];
 _ctrlPanel lbSetValue [_lbAdd,_modID];
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
