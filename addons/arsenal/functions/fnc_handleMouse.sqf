@@ -9,8 +9,8 @@ GVAR(mouseButtonState) params ["_LMB", "_RMB"];
 
 if (count _LMB > 0) then {
     _LMB params ["_LMBcursorX", "_LMBcursorY"];
-    private _dX = (_mouseX - _LMBcursorX);
-    private _dY = (_LMBcursorY - _mouseY);
+    private _dX = [(_mouseX - _LMBcursorX), (_LMBcursorX - _mouseX)] select GVAR(camInvertedHorizontal);
+    private _dY = [(_mouseY -_LMBcursorY), (_LMBcursorY - _mouseY)] select GVAR(camInvertedVertical);
     GVAR(mouseButtonState) set [0,[_mouseX,_mouseY]];
 
     private _centerBox = boundingboxreal GVAR(center);
