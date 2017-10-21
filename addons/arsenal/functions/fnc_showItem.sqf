@@ -20,7 +20,7 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonBackpack;
     case IDC_buttonGoggles;
     case IDC_buttonNVG : {
-        _nextAction = "Stand";
+        _nextAction = "Civil";
     };
     case IDC_buttonBinoculars : {
         _nextAction = ["Civil", "Binoculars"] select (GVAR(currentItems) select 9 != "");
