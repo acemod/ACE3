@@ -65,10 +65,9 @@ class CfgWeapons {
     };
     class rhs_weap_orsis_Base_F;
     class rhs_weap_t5000: rhs_weap_orsis_Base_F { // http://en.orsis.com/production/catalog/19046/
-        ACE_RailHeightAboveBore = 2.12198;
         ACE_barrelTwist = 254.0; // 1:10"
         ACE_barrelLength = 698.5; // 27.5"
-        ACE_RailHeightAboveBore = 2.4;
+        ACE_RailHeightAboveBore = 2.12198;
     };
     class rhs_acc_sniper_base;
     class rhs_acc_pso1m2: rhs_acc_sniper_base {
