@@ -86,6 +86,8 @@
 #define IDC_buttonMuzzle 26
 #define IDC_iconBackgroundBipod 27
 #define IDC_buttonBipod 28
+#define IDC_iconBackgroundCurrentMag 3001
+#define IDC_buttonCurrentMag 3002
 #define IDC_iconBackgroundMag 29
 #define IDC_buttonMag 30
 #define IDC_iconBackgroundMagALL 31
@@ -103,8 +105,8 @@
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
 
-#define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
-#define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
+#define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod, IDC_buttonCurrentMag
+#define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod, IDC_iconBackgroundCurrentMag
 #define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc
 #define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
@@ -172,7 +174,8 @@
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_rightTabContentListnBox,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
-    IDC_buttonRemoveAll\
+    IDC_buttonRemoveAll,\
+    [IDC_buttonCurrentMag, IDC_buttonRemoveAll] select (GVAR(canUseCurrentMagTab))\
 ];
 
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
@@ -197,7 +200,19 @@
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_rightSearchbar,\
     IDC_rightSearchbarButton\
-];
+];\
+\
+{\
+_x = _display displayCtrl _x;\
+\
+    if (ctrlFade _x != 1) then {\
+        _x ctrlSetFade 1;\
+    };\
+    if !(ctrlShown _x) then {\
+        _x ctrlShow false;\
+    };\
+    _x ctrlCommit FADE_DELAY;\
+} foreach [IDC_iconBackgroundCurrentMag, IDC_buttonCurrentMag];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
@@ -229,8 +244,8 @@
     [\
     [\
         (primaryweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (handgunweapon GVAR(center) call bis_fnc_baseWeapon),\
-        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon)\
+        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon),\
+        (handgunweapon GVAR(center) call bis_fnc_baseWeapon)\
     ],\
     [\
     [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 2)] select {!(_x isEqualTo "")},\
