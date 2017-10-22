@@ -101,7 +101,7 @@ class CfgWeapons {
 class CfgVehicles {
 	class ace_csw_baseTripod;
 	class banana_tripod: ace_csw_baseTripod {
-		class GVAR(cswOptions) { disassembleTo = "banana_carry_tripod"; };
+		class GVAR(cswOptions) { disassembleTo = "banana_carry_tripod"; }; // What will be spawned when "Pickup Tripod" is selected
 	};
 };
 ```
@@ -113,10 +113,10 @@ class CfgWeapons {
 	class ace_csw_base_carry;
 	class banana_carry_tripod: ace_csw_base_carry {
 		class GVAR(cswOptions) {
-				deployTime = 166;
-				pickupTime = 12;
-				type = "mount";
-				deploy = "banana_tripod";
+				deployTime = 166; // How much time in seconds it takes to deploy the tripod
+				pickupTime = 12; // How much time in seconds it takes to pickup the tripod
+				type = "mount";  // What type of carry it is. Must always be "mount" for the carry tripod
+				deploy = "banana_tripod"; // What will be deployed when "Deploy Tripod" is selected
 			};
 	};
 };
