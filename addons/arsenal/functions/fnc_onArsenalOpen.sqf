@@ -244,7 +244,7 @@ if (GVAR(mode) != 0) then {
 
 {
     private _panel = _display displayCtrl _x;
-    _panel ctrlsetfontheight (4.5 * GRID_H);
+    _panel ctrlSetFontHeight (GVAR(fontHeight) * GRID_H);
     _panel ctrlCommit 0;
 } foreach [IDC_leftTabContent, IDC_rightTabContent, IDC_rightTabContentListnBox];
 
