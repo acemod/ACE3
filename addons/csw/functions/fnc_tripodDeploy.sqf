@@ -17,7 +17,7 @@
 
 params["_player", "_key"];
 
-if ((_key != 0) || {isNull GVAR(cswTripod})) exitWith {};
+if ((_key != 0) || {isNull GVAR(cswTripod)}) exitWith {}; 
 
 [_player, "forceWalk", "ACE_csw", false] call EFUNC(common,statusEffect_set);
 

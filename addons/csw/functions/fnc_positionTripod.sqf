@@ -27,7 +27,7 @@ GVAR(cswTripod) = _tripod;
 
 (_player select 1) setVariable[QGVAR(canMoveTripod), false, true];
 (_player select 1) setVariable[QGVAR(MoveTripod), [
-	(_player select 1),"DefaultAction",
-	{!isNull GVAR(cswTripod)},
-	{[_this select 0, GVAR(cswTripod)] call FUNC(tripodDeploy)}
+    (_player select 1),"DefaultAction",
+    {!isNull GVAR(cswTripod)},
+    {[_this select 0, GVAR(cswTripod)] call FUNC(tripodDeploy)}
 ] call EFUNC(common,addActionEventHandler)]

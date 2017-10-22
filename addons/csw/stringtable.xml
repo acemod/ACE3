@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CSW">
-		<Key ID="STR_ACE_CSW_displayName">
+        <Key ID="STR_ACE_CSW_displayName">
             <English>CSW</English>
         </Key>
         <Key ID="STR_ACE_CSW_Tripod_displayName">
             <English>CSW Tripod</English>
         </Key>
-		<Key ID="STR_ACE_CSW_TripodFolded_displayName">
+        <Key ID="STR_ACE_CSW_TripodFolded_displayName">
             <English>CSW Deployable Tripod</English>
         </Key>
-		<Key ID="STR_ACE_CSW_PlaceTripod_displayName">
+        <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
         </Key>
-		<Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
+        <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
         </Key>
-		<Key ID="STR_ACE_CSW_GetIn_displayName">
+        <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
         </Key>
-		<Key ID="STR_ACE_CSW_confirmDeployment_hint">
+        <Key ID="STR_ACE_CSW_confirmDeployment_hint">
             <English>Confirm Placement</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticMortarBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticMortarBag_displayName">
             <English>[ACE] Mk6 Mortar Tube</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticATWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticATWeapon_displayName">
             <English>[ACE] Mini-Spike Launcher (AT)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticAAWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticAAWeapon_displayName">
             <English>[ACE] Mini-Spike Launcher (AA)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticHMGWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticHMGWeapon_displayName">
             <English>[ACE] XM312</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticAutoHMGWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticAutoHMGWeapon_displayName">
             <English>[ACE] XM312A</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticHMGTallWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticHMGTallWeapon_displayName">
             <English>[ACE] XM312 (High)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticGMGWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticGMGWeapon_displayName">
             <English>[ACE] XM307</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticAutoGMGWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticAutoGMGWeapon_displayName">
             <English>[ACE] XM307A</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticGMGTallWeapon_displayName">
+        <Key ID="STR_ACE_CSW_StaticGMGTallWeapon_displayName">
             <English>[ACE] XM307 (High)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticATBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[ACE] Static Mini-Spike Launcher (AT)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticAABag_displayName">
+        <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[ACE] Static Mini-Spike Launcher (AA)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[ACE] Static XM312 Gun</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[ACE] Static XM312 Gun (Autonomous)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticHMGTallBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticHMGTallBag_displayName">
             <English>[ACE] Static XM312 Gun (High)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[ACE] Static XM307 Gun</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[ACE] Static XM307 Gun (Autonomous)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_StaticGMGTallBag_displayName">
+        <Key ID="STR_ACE_CSW_StaticGMGTallBag_displayName">
             <English>[ACE] Static XM307 Gun (High)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_LoadAmmo_displayName">
+        <Key ID="STR_ACE_CSW_LoadAmmo_displayName">
             <English>Load Ammo</English>
         </Key>
-		<Key ID="STR_ACE_CSW_UnloadAmmo_displayName">
+        <Key ID="STR_ACE_CSW_UnloadAmmo_displayName">
             <English>Unload Ammo</English>
         </Key>
-		<Key ID="STR_ACE_CSW_HMGStatic_displayName">
+        <Key ID="STR_ACE_CSW_HMGStatic_displayName">
             <English>[ACE] HMG Static</English>
         </Key>
-		<Key ID="STR_ACE_CSW_GMGStatic_displayName">
+        <Key ID="STR_ACE_CSW_GMGStatic_displayName">
             <English>[ACE] GMG Static</English>
         </Key>
-		<Key ID="STR_ACE_CSW_ATStatic_displayName">
+        <Key ID="STR_ACE_CSW_ATStatic_displayName">
             <English>[ACE] AT Static</English>
         </Key>
-		<Key ID="STR_ACE_CSW_AAStatic_displayName">
+        <Key ID="STR_ACE_CSW_AAStatic_displayName">
             <English>[ACE] AA Static</English>
         </Key>
-		<Key ID="STR_ACE_CSW_HMGBelt_displayName">
+        <Key ID="STR_ACE_CSW_HMGBelt_displayName">
             <English>[ACE] 12.7mm M2 HMG Belt (100 Rounds)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_GMGBelt_displayName">
+        <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[ACE] 40mm Grenade GMG Belt (20 Rounds)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_ATRocket_displayName">
+        <Key ID="STR_ACE_CSW_ATRocket_displayName">
             <English>[ACE] Mini-Spike AT Missile</English>
         </Key>
-		<Key ID="STR_ACE_CSW_AARocket_displayName">
+        <Key ID="STR_ACE_CSW_AARocket_displayName">
             <English>[ACE] Mini-Spike AA Missile</English>
         </Key>
-		<Key ID="STR_ACE_CSW_Pickup_displayName">
+        <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
         </Key>
-		<Key ID="STR_ACE_CSW_Move_displayName">
+        <Key ID="STR_ACE_CSW_Move_displayName">
             <English>Move Tripod</English>
         </Key>
-		<Key ID="STR_ACE_CSW_MountWeapon_displayName">
+        <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
         </Key>
-		<Key ID="STR_ACE_CSW_DummyMagazine_displayName">
+        <Key ID="STR_ACE_CSW_DummyMagazine_displayName">
             <English>Dummy Magazine (SHOULD NOT SEE THIS)</English>
         </Key>
-		<Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
+        <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
         </Key>
-		<Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
+        <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
         </Key>
-		<Key ID="STR_ACE_CSW_LoadingAmmo_progressBar">
+        <Key ID="STR_ACE_CSW_LoadingAmmo_progressBar">
             <English>Loading Ammo...</English>
         </Key>
-		<Key ID="STR_ACE_CSW_UnloadingAmmo_progressBar">
+        <Key ID="STR_ACE_CSW_UnloadingAmmo_progressBar">
             <English>Unloading Ammo...</English>
         </Key>
-		<Key ID="STR_ACE_CSW_PickupTripod_progressBar">
+        <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
         </Key>
-		<Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
+        <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
         </Key>
-	</Package>
+    </Package>
 </Project>

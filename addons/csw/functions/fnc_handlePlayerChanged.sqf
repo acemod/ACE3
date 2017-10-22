@@ -21,5 +21,5 @@ if (isNull (GVAR(cswTripod))) exitWith {};
 params["_newPlayer", "_oldPlayer"];
 
 if (GVAR(cswTripod) in attachedObjects _newPlayer) then {
-	[_newPlayer, 0] call FUNC(tripodDeploy);
+    [_newPlayer, 0] call FUNC(tripodDeploy);
 };

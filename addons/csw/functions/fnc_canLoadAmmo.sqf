@@ -26,7 +26,7 @@ private _magExists = false;
 private _maxAmmo = [_csw] call FUNC(getMaxAmmo);
 
 {
-	if (_x in _cswMagazines) exitWith { _magExists = true; true; };
+    if (_x in _cswMagazines) exitWith { _magExists = true; true; };
 } forEach magazines(_player select 1);
 
 _magExists && (_csw ammo _cswWeapon < _maxAmmo)

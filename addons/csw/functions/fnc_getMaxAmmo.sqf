@@ -22,7 +22,7 @@ private _cswMagazines = getArray(configFile >> "CfgWeapons" >> _cswWeapon >> "ma
 private _maxAmmo = -1;
 
 {
-	if (_x find "Dummy" >= 0) exitWith {_maxAmmo = getNumber(configFile >> "CfgMagazines" >> _x >> "count"); true };
+    if (_x find "Dummy" >= 0) exitWith {_maxAmmo = getNumber(configFile >> "CfgMagazines" >> _x >> "count"); true };
 } forEach _cswMagazines;
 
 _maxAmmo

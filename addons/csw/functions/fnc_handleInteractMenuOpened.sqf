@@ -18,5 +18,5 @@
 params["_unit"];
 
 if (!isNull (missionNamespace getVariable[QGVAR(cswTripod), objNull]) && GVAR(cswTripod) in attachedObjects _unit) then {
-	[_unit, 0] call FUNC(tripodDeploy);
+    [_unit, 0] call FUNC(tripodDeploy);
 };
