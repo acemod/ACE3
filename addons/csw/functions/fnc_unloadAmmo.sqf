@@ -53,8 +53,14 @@ private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponTurret >> Q
 		_maxAmmo
 	};
 	
+	private _codeCheck = {
+		params["_args"];
+		_args params["", "", "_maxAmmo", "_csw", "_weaponTurret"];
+		((_csw ammo _weaponTurret) - _maxAmmo) >= 0
+	};
+
 	if (_slowUnload) then {
-		[_duration, [_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret], _onFinish, {}, localize LSTRING(UnloadingAmmo_progressBar)] call EFUNC(common,progressBar);
+		[_duration, [_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret], _onFinish, {}, localize LSTRING(UnloadingAmmo_progressBar), _codeCheck] call EFUNC(common,progressBar);
 	} else {
 		if (_allAmmo) then {
 			private _ammo = magazinesAmmoFull _csw;
