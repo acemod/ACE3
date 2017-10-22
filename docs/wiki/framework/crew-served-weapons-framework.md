@@ -3,6 +3,7 @@ layout: wiki
 title: Crew Served Weapons Framework
 description: Explains how to add new Crew Served Weapons to ACE3
 group: framework
+order: 5
 parent: wiki
 mod: ace
 version:
