@@ -19,3 +19,4 @@
 params["_tripod", "_player"];
 
 ((secondaryWeapon(_player select 1)) == (""))
+

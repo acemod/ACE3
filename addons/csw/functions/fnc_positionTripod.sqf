@@ -31,3 +31,4 @@ GVAR(cswTripod) = _tripod;
     {!isNull GVAR(cswTripod)},
     {[_this select 0, GVAR(cswTripod)] call FUNC(tripodDeploy)}
 ] call EFUNC(common,addActionEventHandler)]
+

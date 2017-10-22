@@ -18,3 +18,4 @@
 params["_weapon"];
 
 ((crew _weapon) isEqualTo [] || !(alive (gunner _weapon)))
+

@@ -32,3 +32,4 @@ params["_tripod", "_player"];
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _tripodClassname >> QGVAR(cswOptions) >> "pickupTime");
     [_pickupTime, [_tripod, _player, _tripodClassname], _onFinish, {}, localize LSTRING(PickupTripod_progressBar)] call EFUNC(common,progressBar);
 }, [_tripod, _player]] call CBA_fnc_execNextFrame;
+

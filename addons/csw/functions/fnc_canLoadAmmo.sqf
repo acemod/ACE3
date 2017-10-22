@@ -30,3 +30,4 @@ private _maxAmmo = [_csw] call FUNC(getMaxAmmo);
 } forEach magazines(_player select 1);
 
 _magExists && (_csw ammo _cswWeapon < _maxAmmo)
+

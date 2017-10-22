@@ -7,3 +7,4 @@ class CfgActions {
         show = 0;
     };
 };
+

@@ -59,3 +59,4 @@ if (_magazineAmmoCount == 0) then {
         [_deployTime, [_csw, _cswWeapon, _player, _magazineSelected, _magazineAmmoCount], _onFinish, _onFailure, localize LSTRING(LoadingAmmo_progressBar)] call EFUNC(common,progressBar);
     }, [_csw, _cswWeapon, (_player select 1), _magazineSelected, _magazineAmmoCount]] call CBA_fnc_execNextFrame;
 }
+

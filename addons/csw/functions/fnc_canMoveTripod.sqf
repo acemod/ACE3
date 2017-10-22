@@ -18,3 +18,4 @@
 params["_player"];
 
 isNull GVAR(cswTripod);
+

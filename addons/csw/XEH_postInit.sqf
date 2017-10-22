@@ -25,3 +25,4 @@ GVAR(cswTripod) = objNull;
 
 // Handle falling uncon
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+

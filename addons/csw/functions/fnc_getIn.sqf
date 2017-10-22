@@ -21,3 +21,4 @@
 params["_player", "_weapon"];
 
 (_player select 1) moveInTurret [_weapon, [0]];
+

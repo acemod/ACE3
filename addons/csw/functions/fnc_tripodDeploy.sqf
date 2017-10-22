@@ -37,3 +37,4 @@ call EFUNC(interaction,hideMouseHint);
 GVAR(cswTripod) setVelocity [0, 0, -0.01];
 
 GVAR(cswTripod) = objNull;
+

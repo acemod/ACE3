@@ -79,3 +79,4 @@ private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponTurret >> Q
     };
     
 }, [_deployTime, _slowUnload, _allAmmo, _weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret]] call CBA_fnc_execNextFrame;
+

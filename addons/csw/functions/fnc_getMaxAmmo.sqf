@@ -26,3 +26,4 @@ private _maxAmmo = -1;
 } forEach _cswMagazines;
 
 _maxAmmo
+

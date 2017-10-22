@@ -18,3 +18,4 @@
 params["_csw"];
 
 count (magazines _csw) > 0
+
