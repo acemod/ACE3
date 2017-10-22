@@ -1,6 +1,0 @@
-Mount/dismount all weapons
-Move the tripod
-Load ammo
-Unload partial ammo, and it stays partial
-Load more ammo than weapon allows
-Load partial ammo to see if it can go above max limit
