@@ -22,6 +22,7 @@ private _cargo = [
 ];
 
 private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
+private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
 
 {
     private _configItemInfo = _x >> "ItemInfo";
@@ -157,6 +158,14 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
             (_cargo select 16) pushBackUnique _className;
         };
     };
+
+    if (isArray (_x >> "magazineGroup")) then {
+        {
+            private _entry = [_magazineGroups, _x] call CBA_fnc_hashGet;
+            _entry pushBackUnique _className;
+            [_magazineGroups, _x, _entry] call CBA_fnc_hashSet;
+        } forEach getArray (_x >> "magazineGroup")
+    };
 } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {getNumber (_x >> 'scope') == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 {
@@ -170,3 +179,4 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
 } foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {getNumber (_x >> 'scope') == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];
+uiNamespace setVariable [QGVAR(magazineGroups), _magazineGroups];
