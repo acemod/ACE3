@@ -32,7 +32,7 @@ if (isNumber (_weaponConfig >> "ACE_RailHeightAboveBore")) then {
     _railHeightAboveBore = getNumber(_weaponConfig >> "ACE_RailHeightAboveBore");
 } else {
     switch (_weaponIndex) do {
-        case 0: { _railHeightAboveBore = 2.0; }; // Rifle
+        case 0: { _railHeightAboveBore = 3.0; }; // Rifle
         case 2: { _railHeightAboveBore = 0.7; }; // Pistol
     };
 };
@@ -43,7 +43,7 @@ if (isNumber (_opticConfig >> "ACE_ScopeHeightAboveRail")) then {
     _scopeHeightAboveRail = getNumber(_opticConfig >> "ACE_ScopeHeightAboveRail");
 } else {
     switch (getNumber(_opticConfig >> "ItemInfo" >> "opticType")) do {
-        case 1: { _scopeHeightAboveRail = 3.0; }; // RCO or similar
+        case 1: { _scopeHeightAboveRail = 4.5; }; // RCO or similar
         case 2: { _scopeHeightAboveRail = 4.0; }; // High power scope
         default {
             switch (_weaponIndex) do {

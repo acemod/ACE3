@@ -62,7 +62,7 @@ tpM | ACSE Dev Lead - Sounds, SME
 * BlackQwar
 * Brakoviejo
 * Brisse
-* Brostrom.A | Evul
+* Brostrom.A (Evul)
 * BullHorn
 * chris579
 * classicarma
