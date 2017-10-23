@@ -173,7 +173,7 @@ class GVAR(display) {
                     x = QUOTE(25 * GRID_W);
                     text="Loadouts"; // TBL
                     tooltip="Displays loadouts screen"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonLoadouts));
+                    onButtonClick = QUOTE(ctrlparent (_this select 0) createDisplay QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
                     idc = -1;
@@ -711,6 +711,8 @@ class GVAR(display) {
 
 class GVAR(loadoutsDisplay) {
     idd = IDD_loadouts_display;
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(loadoutsDisplay))] call FUNC(onLoadoutsOpen));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(loadoutsDisplay))] call FUNC(onLoadoutsClose));
     class controls {
         class centerBox: ctrlControlsGroupNoScrollbars {
             idc = IDC_centerBox;
@@ -804,7 +806,7 @@ class GVAR(loadoutsDisplay) {
             h = QUOTE(10 * GRID_H);
             class controls {
                 class buttonMyLoadouts: ctrlButton {
-                    idc = -1;
+                    idc = IDC_buttonMyLoadouts;
                     colorBackground[] = {0,0,0,0.8};
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(0 * GRID_H);
@@ -813,21 +815,19 @@ class GVAR(loadoutsDisplay) {
                     sizeEx = QUOTE(4.5 * GRID_H);
                     text="My loadouts"; // TBL
                     tooltip="Save selected loadout"; // TBL
-                    onButtonClick = "";
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
                 };
                 class buttonDefaultLoadouts: buttonMyLoadouts {
-                    idc = -1;
+                    idc = IDC_buttonDefaultLoadouts;
                     x = QUOTE(41 * GRID_W);
                     text="Default loadouts"; // TBL
                     tooltip=""; // TBL
-                    onButtonClick = "";
                 };
                 class buttonSharedLoadouts: buttonMyLoadouts {
-                    idc = -1;
+                    idc = IDC_buttonSharedLoadouts;
                     x = QUOTE(82 * GRID_W);
                     text="Shared loadouts"; // TBL
                     tooltip=""; // TBL
-                    onButtonClick = "";
                 };
             };
         };

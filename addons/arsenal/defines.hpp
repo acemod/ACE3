@@ -99,6 +99,9 @@
 #define IDC_centerTitle 301
 #define IDC_contentPanel 302
 #define IDC_centerBoxButtonLoad 303
+#define IDC_buttonMyLoadouts 401
+#define IDC_buttonDefaultLoadouts 402
+#define IDC_buttonSharedLoadouts 403
 
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
