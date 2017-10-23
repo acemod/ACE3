@@ -22,7 +22,7 @@ private _vehicle = objectParent _target;
 
 if (
     alive _target
-    || {_target == _vehicle}
+    || {isNull _vehicle}
     || {1 < locked _vehicle}
     || {
         0 < {alive _x} count crew _vehicle // alive is in vehicle
