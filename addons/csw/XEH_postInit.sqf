@@ -26,3 +26,11 @@ GVAR(cswTripod) = objNull;
 // Handle falling uncon
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
+[QGVAR(initWeapon), {_this call FUNC(weaponInit);}] call CBA_fnc_addEventHandler;
+
+["ace_settingsInitialized", {
+    ["StaticWeapon", "init", {
+        [QGVAR(initWeapon), _this] call CBA_fnc_localEvent;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+}] call CBA_fnc_addEventHandler;
+

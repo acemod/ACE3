@@ -4,13 +4,14 @@
  *
  * Arguments:
  * 0: CSW <OBJECT>
- * 1: Unit <OBJECT>
+ * 1: Slow Unload <BOOL>
+ * 2: Unload All Ammo <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CSW] call ace_csw_fnc_unloadAmmo
+ * [CSW, false, false] call ace_csw_fnc_unloadAmmo
  *
  * Public: No
  */
@@ -65,14 +66,24 @@ private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponTurret >> Q
         if (_allAmmo) then {
             private _ammo = magazinesAmmoFull _csw;
             private _maxMagazineCapacity = getNumber(configFile >> "CfgMagazines" >> _weaponMagazineClassname >> "count");
+            private _ammoCount = 0;
             {
-                private _magazineAmmoCount = _x select 1;
-                while {_magazineAmmoCount > 0} do {
-                    private _maxAmmoArg = (_csw ammo _weaponTurret) min _maxMagazineCapacity;
-                    private _ammoRemoved = [[_weaponPos, _weaponMagazineClassname, _maxAmmoArg, _csw, _weaponTurret]] call _onFinish;
-                    _magazineAmmoCount = _magazineAmmoCount - _ammoRemoved;
-                };
+                _ammoCount = _ammoCount + (_x select 1);
             } forEach _ammo; // forEach so if a CSW has more than 1 magazine loaded it will still remove the ammo and give it back
+            
+            private _extraAmmo = _ammoCount % _maxMagazineCapacity;
+            _ammoCount = _ammoCount - _extraAmmo;
+            
+            private _ammoHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
+            _ammoHolder setPosATL _weaponPos;
+            _ammoHolder setVectorUp (surfaceNormal _weaponPos);
+            _ammoHolder setDir random[0, 180, 360];
+            _ammoHolder addMagazineAmmoCargo[_weaponMagazineClassname, _ammoCount / _maxMagazineCapacity, _maxMagazineCapacity];
+            _ammoHolder addMagazineAmmoCargo[_weaponMagazineClassname, 1, _extraAmmo];
+            
+            [QGVAR(addCSWAmmo), [_csw, _weaponTurret, 0]] call CBA_fnc_globalEvent;
+            _csw setAmmo [_weaponTurret, 0];
+            
         } else {
             [[_weaponPos, _weaponMagazineClassname, _maxAmmo, _csw, _weaponTurret]] call _onFinish;
         };

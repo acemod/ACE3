@@ -17,5 +17,5 @@
 
 params["_csw"];
 
-count (magazines _csw) > 0
+(count (magazines _csw) > 0) && (getNumber(configFile >> "CfgVehicles" >> typeof(_csw) >> QGVAR(options) >> "enabled") == 1)
 

@@ -32,6 +32,7 @@ class CfgVehicles {
     };
     class banana_csw: StaticMGWeapon {
         class ace_csw_options {
+            enabled = 1; // Enabled = 0 means that ACE CSW will not affect this weapon, and can be disassembled/assembled using vanilla ARMA.
             disassembleTo = "banana_carry_weapon"; // What will be spawned when "Disassemble Weapon" is pressed
         };
         class Turrets: Turrets {
