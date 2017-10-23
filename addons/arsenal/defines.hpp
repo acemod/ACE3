@@ -18,13 +18,6 @@
 #define IDC_totalWeightText 801
 #define IDC_message 9
 #define IDC_menuBar 10
-#define IDC_menuBarBackground 1001
-#define IDC_buttonClose 1002
-#define IDC_buttonSave 1003
-#define IDC_buttonLoad 1004
-#define IDC_buttonImport 1005
-#define IDC_buttonExport 1006
-#define IDC_buttonHide 1007
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
@@ -101,6 +94,11 @@
 #define IDC_buttonRemoveAllSelected 39
 #define IDC_buttonRemoveAll 40
 
+#define IDD_loadouts_display 1127002
+#define IDC_centerBox 3
+#define IDC_centerTitle 301
+#define IDC_contentPanel 302
+#define IDC_centerBoxButtonLoad 303
 
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
@@ -142,7 +140,6 @@
 #define TOGGLE_RIGHT_PANEL_WEAPON\
 {\
     _x = _display displayCtrl _x;\
-\
     if (ctrlFade _x != 0) then {\
         _x ctrlSetFade 0;\
     };\
@@ -161,7 +158,6 @@
 ];\
 {\
     _x = _display displayCtrl _x;\
-\
     if (ctrlFade _x != 1) then {\
         _x ctrlSetFade 1;\
     };\
@@ -181,7 +177,6 @@
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
 {\
     _x = _display displayCtrl _x;\
-\
     if (ctrlFade _x != 0) then {\
         _x ctrlSetFade 0;\
     };\
@@ -201,10 +196,8 @@
     IDC_rightSearchbar,\
     IDC_rightSearchbarButton\
 ];\
-\
 {\
-_x = _display displayCtrl _x;\
-\
+    _x = _display displayCtrl _x;\
     if (ctrlFade _x != 1) then {\
         _x ctrlSetFade 1;\
     };\

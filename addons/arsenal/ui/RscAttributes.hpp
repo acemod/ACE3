@@ -156,17 +156,43 @@ class GVAR(display) {
             w = QUOTE(150 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
-                class menuBarBackground: ctrlStaticBackground {
-                    idc = IDC_menuBarBackground;
-                    x = QUOTE(0);
+                class buttonHide: ctrlButton {
+                    idc = -1;
+                    colorBackground[] = {0,0,0,0.8};
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(0);
-                    w = QUOTE(150 * GRID_W);
+                    w = QUOTE(25 * GRID_W);
                     h = QUOTE(7 * GRID_H);
-                    colorBackground[] = {0,0,0,1};
+                    text="Hide"; // TBL
+                    shortcuts[]= {"0x0E"};
+                    tooltip="Hide interface"; // TBL
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
+                };
+                class buttonLoadouts: buttonHide {
+                    idc = -1;
+                    x = QUOTE(25 * GRID_W);
+                    text="Loadouts"; // TBL
+                    tooltip="Displays loadouts screen"; // TBL
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonLoadouts));
+                };
+                class buttonExport: buttonHide {
+                    idc = -1;
+                    x = QUOTE(50 * GRID_W);
+                    text="Export"; // TBL
+                    tooltip="Export loadout"; // TBL
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
+                };
+                class buttonImport: buttonHide {
+                    idc = -1;
+                    x = QUOTE(75 * GRID_W);
+                    text="Import"; // TBL
+                    tooltip="Import loadout"; // TBL
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonClose {
-                    idc = IDC_buttonClose;
-                    x = QUOTE(0);
+                    idc = -1;
+                    colorBackground[] = {0,0,0,0.8};
+                    x = QUOTE(100 * GRID_W);
                     y = QUOTE(0);
                     w = QUOTE(25 * GRID_W);
                     h = QUOTE(7 * GRID_H);
@@ -174,45 +200,6 @@ class GVAR(display) {
                     shortcuts[]= {"0x01"};
                     tooltip="Close interface"; // TBL
                     onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
-                };
-                class buttonSave: ctrlButton {
-                    idc = IDC_buttonSave;
-                    x = QUOTE(25 * GRID_W);
-                    y = QUOTE(0);
-                    w = QUOTE(25 * GRID_W);
-                    h = QUOTE(7 * GRID_H);
-                    text="Save"; // TBL
-                    tooltip="Save loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonSave));
-                };
-                class buttonLoad: buttonSave {
-                    idc = IDC_buttonLoad;
-                    x = QUOTE(50 * GRID_W);
-                    text="Load"; // TBL
-                    tooltip="Load loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonLoad));
-                };
-                class buttonImport: buttonSave {
-                    idc = IDC_buttonImport;
-                    x = QUOTE(75 * GRID_W);
-                    text="Import"; // TBL
-                    tooltip="Import loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
-                };
-                class buttonExport: buttonSave {
-                    idc = IDC_buttonExport;
-                    x = QUOTE(100 * GRID_W);
-                    text="Export"; // TBL
-                    tooltip="Export loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
-                };
-                class buttonHide: buttonSave {
-                    idc = IDC_buttonHide;
-                    x = QUOTE(125 * GRID_W);
-                    text="Hide"; // TBL
-                    shortcuts[]= {"0x0E"};
-                    tooltip="Hide interface"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
                 };
             };
         };
@@ -718,6 +705,131 @@ class GVAR(display) {
             y = QUOTE(safeZoneH + safezoneY - 33 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
+        };
+    };
+};
+
+class GVAR(loadoutsDisplay) {
+    idd = IDD_loadouts_display;
+    class controls {
+        class centerBox: ctrlControlsGroupNoScrollbars {
+            idc = IDC_centerBox;
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (80 * GRID_W));
+            y = QUOTE(safezoneY + (5 * GRID_H));
+            w = QUOTE(160 * GRID_W);
+            h = QUOTE(safezoneH - (45 * GRID_H));
+            class controls {
+                class centerFrame: RscFrame {
+                    idc = -1;
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(0 * GRID_H);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(safezoneH - (45 * GRID_H));
+                    colorText[] = {0,0,0,1};
+                };
+                class centerBackground: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(safezoneH - (45 * GRID_H));
+                    colorBackground[] = {0,0,0,0.8};
+                };
+                class centerTitle: ctrlStaticTitle {
+                    idc = IDC_centerTitle;
+                    style = ST_CENTER;
+                    text = "Loadouts";
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                };
+                class contentPanel: RscListnBox {
+                    idc = IDC_contentPanel
+                    colorBackground[]={0,0,0,0};
+                    colorSelectBackground[]={1,1,1,0.5};
+                    colorSelectBackground2[]={1,1,1,0.5};
+                    colorPictureSelected[]={1,1,1,1};
+                    colorSelect[]={1,1,1,1};
+                    colorSelect2[]={1,1,1,1};
+                    colorPictureRightSelected[]={1,1,1,1};
+                    columns[]={0.10, 0.20, 0.75};
+                    drawSideArrows=0;
+                    disableOverflow=1;
+                    x = QUOTE(0);
+                    y = QUOTE(5 * GRID_H);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(safezoneH - (61 * GRID_H));
+                    sizeEx = QUOTE(7 * GRID_H);
+                };
+                class buttonSave: ctrlButton {
+                    idc = -1;
+                    x = QUOTE(5 * GRID_W);
+                    y = QUOTE(safezoneH - (55 * GRID_H));
+                    w = QUOTE(30 * GRID_W);
+                    h = QUOTE(10 * GRID_H);
+                    text="Save"; // TBL
+                    tooltip="Save selected loadout"; // TBL
+                    onButtonClick = "";
+                    colorBackground[] = {0,0,0,0.8};
+                };
+                class buttonSaveAs: buttonSave {
+                    idc = -1;
+                    x = QUOTE(45 * GRID_W);
+                    text="Save as"; // TBL
+                    tooltip="Save loadout as"; // TBL
+                    onButtonClick = "";
+                };
+                class buttonLoad: buttonSave {
+                    idc = IDC_centerBoxButtonLoad;
+                    x = QUOTE(85 * GRID_W);
+                    text="Load"; // TBL
+                    tooltip="Load selected loadout"; // TBL
+                    onButtonClick = "";
+                };
+                class buttonShare: buttonSave {
+                    idc = IDC_centerBoxButtonShare;
+                    x = QUOTE(125 * GRID_W);
+                    text="Share"; // TBL
+                    tooltip="Share selected loadout"; // TBL
+                    onButtonClick = "";
+                };
+            };
+        };
+        class buttonBar: ctrlControlsGroupNoScrollbars {
+            idc = -1;
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (61 * GRID_W));
+            y = QUOTE(safezoneH + safezoneY - 12 * GRID_H);
+            w = QUOTE(122 * GRID_W);
+            h = QUOTE(10 * GRID_H);
+            class controls {
+                class buttonMyLoadouts: ctrlButton {
+                    idc = -1;
+                    colorBackground[] = {0,0,0,0.8};
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(0 * GRID_H);
+                    w = QUOTE(40 * GRID_W);
+                    h = QUOTE(10 * GRID_H);
+                    sizeEx = QUOTE(4.5 * GRID_H);
+                    text="My loadouts"; // TBL
+                    tooltip="Save selected loadout"; // TBL
+                    onButtonClick = "";
+                };
+                class buttonDefaultLoadouts: buttonMyLoadouts {
+                    idc = -1;
+                    x = QUOTE(41 * GRID_W);
+                    text="Default loadouts"; // TBL
+                    tooltip=""; // TBL
+                    onButtonClick = "";
+                };
+                class buttonSharedLoadouts: buttonMyLoadouts {
+                    idc = -1;
+                    x = QUOTE(82 * GRID_W);
+                    text="Shared loadouts"; // TBL
+                    tooltip=""; // TBL
+                    onButtonClick = "";
+                };
+            };
         };
     };
 };
