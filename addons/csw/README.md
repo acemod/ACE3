@@ -8,4 +8,5 @@ Crew Served Weapons - Static weapons that are served by multiple people
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [TCVM (Brandon)](https://github.com/TheCandianVendingMachine)
+- [Name](https://github.com/name)
+

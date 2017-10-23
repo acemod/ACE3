@@ -31,7 +31,7 @@ private _weaponMagazines = getArray(configFile >> "CfgWeapons" >> _weaponTurret 
 private _maxMagazineCapacity = getNumber(configFile >> "CfgMagazines" >> _weaponMagazineClassname >> "count");
 private _magazineAmmoCount = (_ammo select 0) select 1;
 private _maxAmmo = _magazineAmmoCount min _maxMagazineCapacity;
-private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponTurret >> QGVAR(cswOptions) >> "ammoUnloadTime");
+private _deployTime = getNumber(configFile >> "CfgWeapons" >> _weaponTurret >> QGVAR(options) >> "ammoUnloadTime");
 
 [{
     params["_duration", "_slowUnload", "_allAmmo", "_weaponPos", "_weaponMagazineClassname", "_maxAmmo", "_csw", "_weaponTurret"];

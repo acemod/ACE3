@@ -12,8 +12,7 @@ class CfgVehicles {
     };
     
     class ThingX;
-    class GVAR(m3Tripod): ThingX {
-        class GVAR(cswOptions) { disassembleTo = QGVAR(m3CarryTripod); };
+    class GVAR(baseTripod): ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(Tripod_displayName);
@@ -43,6 +42,15 @@ class CfgVehicles {
                     condition = QUOTE(_this call FUNC(canDeployWeapon));
                     statement = QUOTE([ARR_2({_this call FUNC(deployWeapon)},_this)] call CBA_fnc_execNextFrame);
                 };
+            };
+        };
+    };
+    
+    class GVAR(m3Tripod): GVAR(baseTripod) {
+        class GVAR(options) { disassembleTo = QGVAR(m3CarryTripod); };
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                displayName = CSTRING(Tripod_displayName);
             };
         };
         
@@ -83,7 +91,7 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticMortarCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticMortarCarry); };
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(getIn) {
@@ -138,7 +146,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -188,7 +196,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -238,7 +246,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -288,7 +296,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -338,7 +346,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -388,7 +396,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -438,7 +446,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -488,7 +496,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(getIn)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
-                class GVAR(cswOptions) {
+                class GVAR(options) {
                     displayName = CSTRING(displayName);
                     selection = "";
                     distance = 2;
@@ -525,21 +533,21 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticATCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticATCarry); };
         scope = 1;
     };
     class I_static_AT_F: AT_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticATCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticATCarry); };
         scope = 1;
     };
     class O_static_AT_F: AT_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticATCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticATCarry); };
         scope = 1;
     };
     
@@ -547,21 +555,21 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticAACarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticAACarry); };
         scope = 1;
     };
     class I_static_AA_F: AA_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticAACarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticAACarry); };
         scope = 1;
     };
     class O_static_AA_F: AA_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticAACarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticAACarry); };
         scope = 1;
     };
     
@@ -569,21 +577,21 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticHMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticHMGCarry); };
         scope = 1;
     };
     class I_HMG_01_F: HMG_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticHMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticHMGCarry); };
         scope = 1;
     };
     class O_HMG_01_F: HMG_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticHMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticHMGCarry); };
         scope = 1;
     };
     
@@ -591,21 +599,21 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticHMGTallCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticHMGTallCarry); };
         scope = 1;
     };
     class I_HMG_01_high_F: HMG_01_high_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticHMGTallCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticHMGTallCarry); };
         scope = 1;
     };
     class O_HMG_01_high_F: HMG_01_high_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticHMGTallCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticHMGTallCarry); };
         scope = 1;
     };
     
@@ -613,21 +621,21 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticAutoHMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticAutoHMGCarry); };
         scope = 1;
     };
     class I_HMG_01_A_F: HMG_01_A_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo =  QGVAR(staticAutoHMGCarry); };
+        class GVAR(options) { disassembleTo =  QGVAR(staticAutoHMGCarry); };
         scope = 1;
     };
     class O_HMG_01_A_F: HMG_01_A_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo =  QGVAR(staticAutoHMGCarry); };
+        class GVAR(options) { disassembleTo =  QGVAR(staticAutoHMGCarry); };
         scope = 1;
     };
     
@@ -635,21 +643,21 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticGMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticGMGCarry); };
         scope = 1;
     };
     class I_GMG_01_F: GMG_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticGMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticGMGCarry); };
         scope = 1;
     };
     class O_GMG_01_F: GMG_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticGMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticGMGCarry); };
         scope = 1;
     };
     
@@ -657,21 +665,21 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticGMGTallCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticGMGTallCarry); };
         scope = 1;
     };
     class I_GMG_01_high_F: GMG_01_high_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticGMGTallCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticGMGTallCarry); };
         scope = 1;
     };
     class O_GMG_01_high_F: GMG_01_high_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticGMGTallCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticGMGTallCarry); };
         scope = 1;
     };
     
@@ -679,27 +687,27 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticAutoGMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticAutoGMGCarry); };
         scope = 1;
     };
     class I_GMG_01_A_F: GMG_01_A_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticAutoGMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticAutoGMGCarry); };
         scope = 1;
     };
     class O_GMG_01_A_F: GMG_01_A_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class GVAR(cswOptions) { disassembleTo = QGVAR(staticAutoGMGCarry); };
+        class GVAR(options) { disassembleTo = QGVAR(staticAutoGMGCarry); };
         scope = 1;
     };
     
     // Exploiting the fact that all vanilla static weapons are the same model
     class GVAR(staticATWeapon): B_static_AT_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticATCarry);
         };
         class Turrets: Turrets {
@@ -719,7 +727,7 @@ class CfgVehicles {
     class GVAR(O_staticATWeapon): GVAR(staticATWeapon) { side = 0; scope = 2; };
     
     class GVAR(staticAAWeapon): B_static_AA_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticAACarry);
         };
         class Turrets: Turrets {
@@ -738,7 +746,7 @@ class CfgVehicles {
     class GVAR(O_staticAAWeapon): GVAR(staticAAWeapon) { side = 0; scope = 2; };
     
     class GVAR(staticHMGWeapon): B_HMG_01_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticHMGCarry);
         };
         class Turrets: Turrets {
@@ -757,7 +765,7 @@ class CfgVehicles {
     class GVAR(O_staticHMGWeapon): GVAR(staticHMGWeapon) { side = 0; scope = 2; };
     
     class GVAR(staticAutoHMGWeapon): B_HMG_01_A_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticAutoHMGCarry);
         };
         class Turrets: Turrets {
@@ -776,7 +784,7 @@ class CfgVehicles {
     class GVAR(O_staticAutoHMGWeapon): GVAR(staticAutoHMGWeapon) { side = 0; scope = 2; };
     
     class GVAR(staticHMGTallWeapon): B_HMG_01_high_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticHMGTallCarry);
         };
         class Turrets: Turrets {
@@ -795,7 +803,7 @@ class CfgVehicles {
     class GVAR(O_staticHMGTallWeapon): GVAR(staticHMGTallWeapon) { side = 0; scope = 2; };
     
     class GVAR(staticGMGWeapon): B_GMG_01_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticGMGCarry);
         };
         class Turrets: Turrets {
@@ -814,7 +822,7 @@ class CfgVehicles {
     class GVAR(O_staticGMGWeapon): GVAR(staticGMGWeapon) { side = 0; scope = 2; };
     
     class GVAR(staticAutoGMGWeapon): B_GMG_01_A_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticAutoGMGCarry);
         };
         class Turrets: Turrets {
@@ -833,7 +841,7 @@ class CfgVehicles {
     class GVAR(O_staticAutoGMGWeapon): GVAR(staticAutoGMGWeapon) { side = 0; scope = 2; };
     
     class GVAR(staticGMGTallWeapon): B_GMG_01_high_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             disassembleTo = QGVAR(staticGMGTallCarry);
         };
         class Turrets: Turrets {
@@ -856,106 +864,107 @@ class CfgVehicles {
     
     // Default s (Disabling Scope)
     class B_AT_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticATWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticATWeapon); };
         scope = 1;
     };
     class I_AT_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticATWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticATWeapon); };
         scope = 1;
     };
     class O_AT_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticATWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticATWeapon); };
         scope = 1;
     };
     
     class B_AA_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAAWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAAWeapon); };
         scope = 1;
     };
     class I_AA_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAAWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAAWeapon); };
         scope = 1;
     };
     class O_AA_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAAWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAAWeapon); };
         scope = 1;
     };
     
     class B_HMG_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticHMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticHMGWeapon); };
         scope = 1;
     };
     class I_HMG_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticHMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticHMGWeapon); };
         scope = 1;
     };
     class O_HMG_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticHMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticHMGWeapon); };
         scope = 1;
     };
     
     class B_HMG_01_A_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAutoHMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAutoHMGWeapon); };
         scope = 1;
     };
     class I_HMG_01_A_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAutoHMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAutoHMGWeapon); };
         scope = 1;
     };
     class O_HMG_01_A_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAutoHMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAutoHMGWeapon); };
         scope = 1;
     };
     
     class B_HMG_01_high_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticHMGTallWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticHMGTallWeapon); };
         scope = 1;
     };
     class I_HMG_01_high_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticHMGTallWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticHMGTallWeapon); };
         scope = 1;
     };
     class O_HMG_01_high_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticHMGTallWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticHMGTallWeapon); };
         scope = 1;
     };
     
     class B_GMG_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticGMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticGMGWeapon); };
         scope = 1;
     };
     class I_GMG_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticGMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticGMGWeapon); };
         scope = 1;
     };
     class O_GMG_01_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticGMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticGMGWeapon); };
         scope = 1;
     };
     
     class B_GMG_01_A_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAutoGMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAutoGMGWeapon); };
         scope = 1;
     };
     class I_GMG_01_A_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAutoGMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAutoGMGWeapon); };
         scope = 1;
     };
     class O_GMG_01_A_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticAutoGMGWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticAutoGMGWeapon); };
         scope = 1;
     };
     
     class B_GMG_01_high_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticGMGTallWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticGMGTallWeapon); };
         scope = 1;
     };
     class I_GMG_01_high_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticGMGTallWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticGMGTallWeapon); };
         scope = 1;
     };
     class O_GMG_01_high_weapon_F: Weapon_Bag_Base {
-        class GVAR(cswOptions) { ace_csw_assembleTo = QGVAR(staticGMGTallWeapon); };
+        class GVAR(options) { ace_csw_assembleTo = QGVAR(staticGMGTallWeapon); };
         scope = 1;
     };
 };
+

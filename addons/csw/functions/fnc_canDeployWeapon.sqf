@@ -16,6 +16,6 @@
 #include "script_component.hpp"
 params["_target", "_player"];
 
-// If the current launcher has a config-value of "cswOptions::assembleTo" that means its a CSW
-(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QGVAR(cswOptions) >> "baseTripod") isEqualTo typeof(_target));
+// If the current launcher has a config-value of "options::assembleTo" that means its a CSW
+(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QGVAR(options) >> "baseTripod") isEqualTo typeof(_target));
 

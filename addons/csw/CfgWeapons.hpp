@@ -3,8 +3,17 @@ class CfgWeapons {
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
     };
+    class GVAR(base_carry): Launcher_Base_F {
+        class GVAR(options) {
+            deployTime = 0;
+            pickupTime = 0;
+            type = "mount";
+            deploy = "";
+        };
+        scope = 1;
+    };
     class GVAR(m3CarryTripod): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             deployTime = 3;
             pickupTime = 3;
             type = "mount";
@@ -22,7 +31,7 @@ class CfgWeapons {
         picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
     };
     class GVAR(staticMortarCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = "B_Mortar_01_F";
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -39,7 +48,7 @@ class CfgWeapons {
         picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
     };
     class GVAR(staticATCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticATWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -57,7 +66,7 @@ class CfgWeapons {
     };
     
     class GVAR(staticAACarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticAAWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -75,7 +84,7 @@ class CfgWeapons {
     };
     
     class GVAR(staticHMGCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticHMGWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -92,7 +101,7 @@ class CfgWeapons {
         picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
     };
     class GVAR(staticAutoHMGCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticAutoHMGWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -109,7 +118,7 @@ class CfgWeapons {
         picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
     };
     class GVAR(staticHMGTallCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticHMGTallWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -127,7 +136,7 @@ class CfgWeapons {
     };
     
     class GVAR(staticGMGCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticGMGWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -144,7 +153,7 @@ class CfgWeapons {
         picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
     };
     class GVAR(staticAutoGMGCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticAutoGMGWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -161,7 +170,7 @@ class CfgWeapons {
         picture = "\A3\Weapons_F\items\data\ui\gear_minedetector_ca.paa";
     };
     class GVAR(staticGMGTallCarry): Launcher_Base_F {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             assembleTo = QGVAR(staticGMGTallWeapon);
             baseTripod = QGVAR(m3Tripod);
             type = "weapon";
@@ -181,7 +190,7 @@ class CfgWeapons {
     // STATIC WEAPONS
     class HMG_Static;
     class GVAR(HMG_Static): HMG_Static {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             deployTime = 15;
             pickupTime = 10;
             ammoLoadTime = 5;
@@ -194,7 +203,7 @@ class CfgWeapons {
     
     class GMG_20mm;
     class GVAR(GMG_20mm): GMG_20mm {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             deployTime = 20;
             pickupTime = 15;
             ammoLoadTime = 5;
@@ -207,7 +216,7 @@ class CfgWeapons {
     
     class ace_javelin_Titan_Static;
     class GVAR(missiles_titan_static_AT): ace_javelin_Titan_Static {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             deployTime = 25;
             pickupTime = 20;
             ammoLoadTime = 15;
@@ -227,7 +236,7 @@ class CfgWeapons {
     
     class missiles_titan_static;
     class GVAR(missiles_titan_static_AA): missiles_titan_static {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             deployTime = 25;
             pickupTime = 20;
             ammoLoadTime = 15;
@@ -240,7 +249,7 @@ class CfgWeapons {
     
     class mortar_82mm;
     class ACE_mortar_82mm: mortar_82mm {
-        class GVAR(cswOptions) {
+        class GVAR(options) {
             deployTime = 40;
             pickupTime = 30;
             //ammoLoadTime = 15;
@@ -248,3 +257,4 @@ class CfgWeapons {
         };
     };
 };
+

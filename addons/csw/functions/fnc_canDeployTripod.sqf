@@ -17,5 +17,5 @@
 
 params ["_player"];
 
-(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QGVAR(cswOptions) >> "type") == "mount");
+(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QGVAR(options) >> "type") == "mount");
 

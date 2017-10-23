@@ -24,8 +24,8 @@ if (isNull GVAR(cswTripod)) then {
             params["_args"];
             _args params["_weapon"];
             
-            private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(cswOptions) >> "disassembleTo");
-            private _tripodName = getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(cswOptions) >> "baseTripod");
+            private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(options) >> "disassembleTo");
+            private _tripodName = getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(options) >> "baseTripod");
             
             private _weaponPos = getPosATL _weapon;
             _weaponPos set[2, (_weaponPos select 2) + 0.1];
@@ -56,7 +56,8 @@ if (isNull GVAR(cswTripod)) then {
         };
         
         private _turretClassname = getArray(configFile >> "CfgVehicles" >> typeof(_weapon) >> "Turrets" >> "MainTurret" >> "weapons") select 0;
-        private _deployTime = getNumber(configFile >> "CfgWeapons" >> _turretClassname >> QGVAR(cswOptions) >> "pickupTime");
+        private _deployTime = getNumber(configFile >> "CfgWeapons" >> _turretClassname >> QGVAR(options) >> "pickupTime");
         [_deployTime, [_weapon], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _crewCheck] call EFUNC(common,progressBar);
     }, [_weapon]] call CBA_fnc_execNextFrame;
 };
+
