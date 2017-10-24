@@ -3,8 +3,6 @@
 
 params ["_display", "_control"];
 
-systemChat str [_display, _control];
-
 if !(ctrlEnabled _control || {GVAR(currentLoadoutsTab) == ctrlIDC _control}) exitWith {};
 
 private _centerBoxTitleCtrl = _display displayCtrl IDC_centerTitle;

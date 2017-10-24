@@ -3,8 +3,6 @@
 
 params ["_display", "_control", "_curSel"];
 
-systemChat str _curSel;
-
 if (_curSel == -1) exitWith {};
 
 private _shareButtonCtrl = _display displayCtrl IDC_buttonShare;

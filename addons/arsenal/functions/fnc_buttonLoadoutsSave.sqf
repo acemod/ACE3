@@ -3,8 +3,6 @@
 
 params ["_display", "_control"];
 
-systemChat str [_display, _control];
-
 if !(ctrlEnabled _control) exitWith {};
 
 private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
@@ -16,13 +14,10 @@ private _loadoutName = _contentPanelCtrl lnbText [(lnbCurSelRow _contentPanelCtr
 private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
 private _editBoxContent = ctrlText _editBoxCtrl;
 
-private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
-
-TRACE_3("data", count _sameNameLoadoutsList, _editBoxContent, _loadoutName);
-
 switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonMyLoadouts: {
+        private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
         if (count _sameNameLoadoutsList == 0) then {
 
@@ -46,12 +41,10 @@ switch (GVAR(currentLoadoutsTab)) do {
     };
 
     case IDC_buttonDefaultLoadouts: {
-
         //TODO
     };
 
     case IDC_buttonSharedLoadouts: {
-
         //TODO
     };
 };
