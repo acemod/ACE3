@@ -112,14 +112,14 @@ class GVAR(display) {
         };
         class totalWeight: RscControlsGroupNoScrollbars {
             idc = IDC_totalWeight;
-            x = QUOTE(safezoneX + 14 * GRID_W);
+            x = QUOTE(safezoneX + 39 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(20 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
                 class totalWeightBackground: ctrlStaticBackground {
                     idc = -1;
-                    colorBackground[] = {0,0,0,0.8};
+                    colorBackground[] = {0,0,0,0.5};
                     x = 0;
                     y = 0;
                     w = QUOTE(20 * GRID_W);
@@ -151,9 +151,9 @@ class GVAR(display) {
         };
         class menuBar: RscControlsGroupNoScrollbars {
             idc = IDC_menuBar;
-            x = QUOTE(safezoneX + safezoneW * 0.50 - 75 * GRID_W);
+            x = QUOTE((safezoneX + safezoneW * 0.50) - (64.5 * GRID_W));
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
-            w = QUOTE(150 * GRID_W);
+            w = QUOTE(125 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
                 class buttonHide: ctrlButton {
@@ -206,7 +206,7 @@ class GVAR(display) {
         class infoBox: RscControlsGroupNoScrollbars {
             idc = IDC_infoBox;
             fade = 1;
-            x = QUOTE(safezoneX + safezoneW - 90 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 99 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 17 * GRID_H);
             w = QUOTE(85 * GRID_W);
             h = QUOTE(15 * GRID_H);
@@ -695,13 +695,13 @@ class GVAR(display) {
         };
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
-            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
+            text= QPATHTOF(data\iconClearContainer.paa);
             tooltip="Remove all items from the container"; //TBL
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;
             enable=0;
-            x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
+            x = QUOTE(safezoneW  + safezoneX - 11 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 33 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);

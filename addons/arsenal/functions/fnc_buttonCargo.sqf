@@ -65,6 +65,5 @@ switch GVAR(currentLeftPanel) do {
 (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition _load;
 (_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight)); // TBL
 
-
 private _value = {_x == _item} count _items;
 _ctrlList lnbSetText [[_lnbCurSel, 2],str _value];
