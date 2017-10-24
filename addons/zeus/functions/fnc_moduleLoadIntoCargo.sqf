@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-if (canSuspend) exitWith {[FUNC(moduleSuppressiveFire), _this] call CBA_fnc_directCall;};
+if (canSuspend) exitWith {[FUNC(moduleLoadIntoCargo), _this] call CBA_fnc_directCall;};
 
 params ["_logic", "_units", "_activated"];
 
