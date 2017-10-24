@@ -15,9 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_fnc_underCover"];
-
-_unit = ACE_player;
+private _unit = ACE_player;
 
 if (!alive _unit) exitWith {};
 
@@ -33,10 +31,9 @@ if (GVAR(FrameEvent) select 0) exitWith {
 };
 
 // check if the unit is affected by rotor wash
-private ["_rotorWash", "_safe"];
 
-_rotorWash = GVAR(FrameEvent) select 1;
-_safe = false;
+private _rotorWash = GVAR(FrameEvent) select 1;
+private _safe = false;
 
 // no rotor wash? remove effects.
 if !(_rotorWash select 0) exitWith {

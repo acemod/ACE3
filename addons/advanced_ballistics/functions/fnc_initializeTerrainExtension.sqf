@@ -19,10 +19,8 @@ if (!hasInterface) exitWith {};
 if (!GVAR(enabled)) exitWith {};
 if (!GVAR(extensionAvailable)) exitWith {};
 
-private ["_initStartTime", "_mapSize", "_mapGrids", "_gridCells", "_x", "_y", "_gridCenter", "_gridHeight", "_gridNumObjects", "_gridSurfaceIsWater"];
-
-_initStartTime = CBA_missionTime;
-_mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
+private _initStartTime = CBA_missionTime;
+private _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
 
 if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
     INFO_1("Terrain already initialized [world: %1]", worldName);
@@ -31,8 +29,8 @@ if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _ma
     #endif
 };
 
-_mapGrids = ceil(_mapSize / 50) + 1;
-_gridCells = _mapGrids * _mapGrids;
+private _mapGrids = ceil(_mapSize / 50) + 1;
+private _gridCells = _mapGrids * _mapGrids;
 
 GVAR(currentGrid) = 0;
 
@@ -51,12 +49,12 @@ INFO_2("Starting Terrain Extension [cells: %1] [world: %2]", _gridCells, worldNa
     };
 
     for "_i" from 1 to 50 do {
-        _x = floor(GVAR(currentGrid) / _mapGrids) * 50;
-        _y = (GVAR(currentGrid) - floor(GVAR(currentGrid) / _mapGrids) * _mapGrids) * 50;
-        _gridCenter = [_x + 25, _y + 25];
-        _gridHeight = round(getTerrainHeightASL _gridCenter);
-        _gridNumObjects = count (_gridCenter nearObjects ["Building", 50]);
-        _gridSurfaceIsWater = if (surfaceIsWater _gridCenter) then {1} else {0};
+        private _x = floor(GVAR(currentGrid) / _mapGrids) * 50;
+        private _y = (GVAR(currentGrid) - floor(GVAR(currentGrid) / _mapGrids) * _mapGrids) * 50;
+        private _gridCenter = [_x + 25, _y + 25];
+        private _gridHeight = round(getTerrainHeightASL _gridCenter);
+        private _gridNumObjects = count (_gridCenter nearObjects ["Building", 50]);
+        private _gridSurfaceIsWater = if (surfaceIsWater _gridCenter) then {1} else {0};
         "ace_advanced_ballistics" callExtension format["set:%1:%2:%3", _gridHeight, _gridNumObjects, _gridSurfaceIsWater];
         GVAR(currentGrid) = GVAR(currentGrid) + 1;
         if (GVAR(currentGrid) >= _gridCells) exitWith {};

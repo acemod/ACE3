@@ -64,17 +64,15 @@ _unit setVariable [QGVAR(hasPain), false, true];
 _unit setVariable [QGVAR(painSuppress), 0, true];
 _unit setVariable [QGVAR(painSuppressAdjustments), [], true];
 
-private ["_allUsedMedication", "_logs"];
-
 // medication
-_allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
+private _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
 {
    _unit setVariable [_x select 0, nil];
 } forEach _allUsedMedication;
 _unit setVariable [QGVAR(allUsedMedication), [], true];
 
 // TODO move to treatment
-_logs = _unit getVariable [QGVAR(allLogs), []];
+private _logs = _unit getVariable [QGVAR(allLogs), []];
 {
     _unit setVariable [_x, nil];
 } forEach _logs;

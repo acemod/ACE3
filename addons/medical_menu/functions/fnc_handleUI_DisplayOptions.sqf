@@ -21,13 +21,11 @@
 
 if (!hasInterface) exitWith{};
 
-private ["_entries", "_display", "_newTarget", "_ctrl", "_code"];
-
 params ["_name"];
 
 disableSerialization;
 
-_display = uiNamespace getVariable QGVAR(medicalMenu);
+private _display = uiNamespace getVariable QGVAR(medicalMenu);
 if (isNil "_display") exitWith {}; // no valid dialog present
 
 if (_name isEqualTo "toggle") exitWith {
@@ -48,9 +46,8 @@ if (_name isEqualTo "toggle") exitWith {
 };
 
 // Clean the dropdown options list from all actions
-//IGNORE_PRIVATE_WARNING ["_i"];
-for [{_i = START_IDC}, {_i <= END_IDC}, {_i = _i + 1}] do {
-    _ctrl = (_display displayCtrl (_i));
+for [{_x = START_IDC}, {_x <= END_IDC}, {_x = _x + 1}] do {
+    private _ctrl = (_display displayCtrl (_x));
     _ctrl ctrlSetText "";
     _ctrl ctrlShow false;
     _ctrl ctrlSetEventHandler ["ButtonClick",""];
@@ -65,12 +62,11 @@ lbClear 212;
 if (_name isEqualTo "triage") exitWith {
 
     ctrlEnable [212, true];
-    private ["_log", "_triageCardTexts", "_message"];
-    _log = GVAR(INTERACTION_TARGET) getVariable [QEGVAR(medical,triageCard), []];
-    _triageCardTexts = [];
+    private _log = GVAR(INTERACTION_TARGET) getVariable [QEGVAR(medical,triageCard), []];
+    private _triageCardTexts = [];
     {
         _x params ["_item", "_amount", "_time"];
-        _message = _item;
+        private _message = _item;
         if (isClass(configFile >> "CfgWeapons" >> _item)) then {
             _message = getText(configFile >> "CfgWeapons" >> _item >> "DisplayName");
         } else {
@@ -101,7 +97,7 @@ _entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTreatmentO
     _ctrl = (_display displayCtrl (START_IDC + _forEachIndex));
     if (!(_forEachIndex > AMOUNT_OF_ENTRIES)) then {
         _ctrl ctrlSetText (_x select 0);
-        _code = format ["ace_medical_menu_pendingReopen = true; call %1;", (_x select 3)];
+        private _code = format ["ace_medical_menu_pendingReopen = true; call %1;", (_x select 3)];
         _ctrl ctrlSetEventHandler ["ButtonClick", _code];
         _ctrl ctrlSetTooltip (_x select 0); // TODO implement
         _ctrl ctrlShow true;

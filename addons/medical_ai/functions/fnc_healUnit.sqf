@@ -54,6 +54,7 @@ _target forceSpeed 0;
 
 private _needsBandaging = ([_target] call EFUNC(medical,getBloodLoss)) > 0;
 private _needsMorphine  = (_target getVariable [QEGVAR(medical,pain), 0]) > 0.2;
+private _needsEpinephrine = _target getVariable ["ACE_isUnconscious", false];
 
 switch (true) do {
     case _needsBandaging: {
@@ -85,4 +86,14 @@ switch (true) do {
             systemChat format ["%1 is giving %2 morphine", _this, _target];
         #endif
     };
+//ToDo - Figure out how to connect to new medical
+    // case _needsEpinephrine: {
+        // [_this, _target] call EFUNC(medical,treatmentBasic_epipen);
+        // [_this, false, false] call FUNC(playTreatmentAnim);
+        // _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
+
+        // #ifdef DEBUG_MODE_FULL
+            // systemChat format ["%1 is using an epipen on %2", _this, _target];
+        // #endif
+    // };
 };

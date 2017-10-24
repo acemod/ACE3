@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="map_gestures">
         <Key ID="STR_ACE_map_gestures_moduleSettings_displayName">
@@ -87,8 +87,8 @@
             <French>Couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage pour le groupe. (Module : laisser vide pour ne pas forcer chez les clients)</French>
             <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
-            <Chinesesimp>当没有设定小队颜色时, 此功能会定义队长的指示器颜色. [模块: 此栏留空来保持预设颜色]</Chinesesimp>
-            <Chinese>當沒有設定小隊顏色時, 此功能會定義隊長的指示器顏色. [模塊: 此欄留空來保持預設顏色]</Chinese>
+            <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的指示器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
+            <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
             <English>Default Color</English>
@@ -116,8 +116,8 @@
             <French>Couleur par défaut quand il n'y a pas de réglage pour le groupe. (Module : laisser vide pour ne pas forcer chez les clients)</French>
             <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없을 경우의 예비 색상입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
-            <Chinesesimp>当没有设定小队颜色时, 此功能会定义玩家的指示器颜色. [模块: 此栏留空来保持预设颜色]</Chinesesimp>
-            <Chinese>當沒有設定小隊顏色時, 此功能會定義玩家的指示器顏色. [模塊: 此欄留空來保持預設顏色]</Chinese>
+            <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的指示器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
+            <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_displayName">
             <English>Lead Color</English>
@@ -145,8 +145,8 @@
             <French>Couleur pour les chefs de groupe des groupes synchronisés avec le module.</French>
             <Japanese>モジュールで同期されたグループのリーダー用に色の値を決定します。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을때의 리더 색상입니다.</Korean>
-            <Chinesesimp>改变与此同步小队队长的指示器颜色.</Chinesesimp>
-            <Chinese>改變與此同步小隊隊長的指示器顏色.</Chinese>
+            <Chinesesimp>改变与此同步小队队长的指示器颜色。</Chinesesimp>
+            <Chinese>改變與此同步小隊隊長的指示器顏色。</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_color_displayName">
             <English>Color</English>
@@ -263,8 +263,8 @@
             <French>Couleur des tags de nom à côté de marqueur de pointage sur carte.</French>
             <Japanese>マップ ジェスチャに表示される、名前の色を決定します。</Japanese>
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
-            <Chinesesimp>定义名称文字颜色. 使其与地图指示器颜色有所区别.</Chinesesimp>
-            <Chinese>定義名稱文字顏色. 使其與地圖指示器顏色有所區別.</Chinese>
+            <Chinesesimp>定义名称文字颜色。使其与地图指示器颜色有所区别。</Chinesesimp>
+            <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別。</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_mapGestures_category">
             <English>Map Gestures</English>

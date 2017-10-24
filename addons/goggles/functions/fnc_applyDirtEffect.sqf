@@ -17,11 +17,9 @@
 
 if (call FUNC(externalCamera)) exitWith {false};
 
-private ["_unit", "_effects"];
+private _unit = ACE_player;
 
-_unit = ACE_player;
-
-_effects = GETGLASSES(_unit);
+private _effects = GETGLASSES(_unit);
 _effects set [DIRT, true];
 
 SETGLASSES(_unit,_effects);

@@ -24,12 +24,10 @@
 params ["_unit", "_range", "_item", ["_triggerClassname", "#unknown", [""]]];
 TRACE_4("detonateExplosive",_unit,_range,_item,_triggerClassname);
 
-private ["_result", "_ignoreRange", "_pos"];
-
-_ignoreRange = (_range == -1);
+private _ignoreRange = (_range == -1);
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {TRACE_1("out of range",_range); false};
 
-_result = true;
+private _result = true;
 {
     // Pass [Unit<OBJECT>, MaxRange <NUMBER>, Explosive <OBJECT>, FuzeTime <NUMBER>, TriggerItem <STRING>]
     private _handlerResult = [_unit, _range, _item select 0, _item select 1, _triggerClassname] call _x;
@@ -38,14 +36,13 @@ _result = true;
 if (!_result) exitWith {false};
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
-    private ["_exp", "_previousExp"];
-    _previousExp = _item select 0;
-    _exp = getText (ConfigFile >> "CfgAmmo" >> typeOf (_previousExp) >> QGVAR(Explosive));
+    private _previousExp = _item select 0;
+    private _exp = getText (ConfigFile >> "CfgAmmo" >> typeOf (_previousExp) >> QGVAR(Explosive));
     if (_exp != "") then {
         _exp = createVehicle [_exp, [0,0,15001], [], 0, "NONE"];
         _exp setDir (getDir _previousExp);
         _item set [0, _exp];
-        _pos = getPosASL _previousExp;
+        private _pos = getPosASL _previousExp;
         deleteVehicle _previousExp;
         _exp setPosASL _pos;
     };

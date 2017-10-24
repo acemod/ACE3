@@ -18,13 +18,11 @@
 params ["_object"];
 TRACE_1("params",_object);
 
-private ["_position","_objects","_isInBuilding","_repairFacility"];
+private _position = getPosASL _object;
+private _isInBuilding = false;
+private _repairFacility = [];
 
-_position = getPosASL _object;
-_isInBuilding = false;
-_repairFacility = [];
-
-_objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
+private _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
 {
     if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitWith {
         _isInBuilding = true;

@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases/latest">
-        <img src="https://img.shields.io/badge/Version-3.10.2-blue.svg?style=flat-square" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-3.11.0-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">
@@ -126,4 +126,4 @@ To help us test the latest development changes, download our master branch ([dir
 
 ## License
 
-ACE3 is licensed under the GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE).
+ACE3 is licensed under the GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
