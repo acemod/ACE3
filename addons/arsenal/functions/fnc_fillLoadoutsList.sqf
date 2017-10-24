@@ -32,9 +32,9 @@ if (ctrlIDC _control == IDC_buttonMyLoadouts) then {
             _contentListCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
             _contentListCtrl lbSetValue [_newRow, -1];
         };
-
-        _contentListCtrl lnbSort [1, false];
     } foreach _data;
 } else {
 
 };
+
+_contentListCtrl lnbSort [1, false];

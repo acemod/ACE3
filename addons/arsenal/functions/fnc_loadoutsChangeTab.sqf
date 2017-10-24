@@ -30,7 +30,7 @@ switch (ctrlIDC _control) do {
 {
     _x ctrlEnable false;
     _x ctrlCommit 0;
-} foreach [_saveButtonCtrl, _shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl];
+} foreach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl];
 
 [_display, _control] call FUNC(fillLoadoutsList);
 

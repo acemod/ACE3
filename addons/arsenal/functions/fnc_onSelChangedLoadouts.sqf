@@ -5,6 +5,8 @@ params ["_display", "_control", "_curSel"];
 
 systemChat str _curSel;
 
+if (_curSel == -1) exitWith {};
+
 private _shareButtonCtrl = _display displayCtrl IDC_buttonShare;
 private _saveButtonCtrl = _display displayCtrl IDC_buttonSave;
 private _loadButtonCtrl = _display displayCtrl IDC_buttonLoad;
@@ -21,13 +23,8 @@ switch (GVAR(currentLoadoutsTab)) do {
         _shareButtonCtrl ctrlEnable ([false, true] select (GVAR(allowSharedLoadouts)));
         _shareButtonCtrl ctrlCommit 0;
 
-        _saveButtonCtrl ctrlEnable true;
-        _saveButtonCtrl ctrlCommit 0;
-
-        {
-            _x ctrlEnable (_curSel >= 0);
-            _x ctrlCommit 0;
-        } foreach [_saveButtonCtrl, _deleteButtonCtrl];
+        _deleteButtonCtrl ctrlEnable (_curSel >= 0);
+        _deleteButtonCtrl ctrlCommit 0;
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };
@@ -41,7 +38,7 @@ switch (GVAR(currentLoadoutsTab)) do {
         {
             _x ctrlEnable false;
             _x ctrlCommit 0;
-        } foreach [_shareButtonCtrl, _saveButtonCtrl, _deleteButtonCtrl];
+        } foreach [_shareButtonCtrl, _deleteButtonCtrl];
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 0]);
     };
@@ -54,7 +51,7 @@ switch (GVAR(currentLoadoutsTab)) do {
         {
             _x ctrlEnable false;
             _x ctrlCommit 0;
-        } foreach [_shareButtonCtrl, _saveButtonCtrl, _deleteButtonCtrl];
+        } foreach [_shareButtonCtrl, _deleteButtonCtrl];
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 0]);
     };
