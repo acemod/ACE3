@@ -14,5 +14,6 @@ private _loadoutName = _contentPanelCtrl lnbText [_contentPanelCursSel, 1];
 _data deleteAt (_data find ((_data select {_x select 0 == _loadoutName}) select 0));
 
 _contentPanelCtrl lnbDeleteRow _contentPanelCursSel;
+_contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel - 1);
 
 [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was deleted", _loadoutName]] call FUNC(message); // TBL
