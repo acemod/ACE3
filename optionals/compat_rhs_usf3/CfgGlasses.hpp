@@ -1,3 +1,4 @@
+
 class CfgGlasses {
     class G_Combat;
     class rhs_ess_black: G_Combat {
