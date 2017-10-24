@@ -4,6 +4,8 @@
 params ["_display", "_control"];
 
 private _contentListCtrl = _display displayCtrl IDC_contentPanel;
+private _textEditBoxCtrl= _display displayCtrl IDC_textEditBox;
+_textEditBoxCtrl ctrlSetText "";
 
 _contentListCtrl lnbSetCurSelRow -1;
 lnbClear _contentListCtrl;
@@ -27,7 +29,7 @@ if (ctrlIDC _control == IDC_buttonMyLoadouts) then {
         _contentListCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadoutData select 7) >> "picture")];
 
         if (false) then {
-            _contentListCtrl lnbSetColor [[_newRow, 0], [1, 1, 1, 0.25]];
+            _contentListCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
             _contentListCtrl lbSetValue [_newRow, -1];
         };
 

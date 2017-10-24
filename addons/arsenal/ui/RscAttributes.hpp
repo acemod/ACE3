@@ -748,7 +748,7 @@ class GVAR(loadoutsDisplay) {
                 };
                 class contentPanel: RscListnBox {
                     idc = IDC_contentPanel;
-                    colorBackground[]={0,0,0,0};
+                    colorBackground[]={1,1,1,1};
                     colorSelectBackground[]={1,1,1,0.5};
                     colorSelectBackground2[]={1,1,1,0.5};
                     colorPictureSelected[]={1,1,1,1};
@@ -762,8 +762,24 @@ class GVAR(loadoutsDisplay) {
                     x = QUOTE(0);
                     y = QUOTE(5 * GRID_H);
                     w = QUOTE(160 * GRID_W);
-                    h = QUOTE(safezoneH - (61 * GRID_H));
+                    h = QUOTE(safezoneH - (67 * GRID_H));
                     sizeEx = QUOTE(7 * GRID_H);
+                };
+                class textTitle: RscText {
+                    idc= -1;
+                    text="$STR_DISP_GAME_NAME";
+                    x = QUOTE(5 * GRID_W);
+                    y = QUOTE(safezoneH - (61 * GRID_H));
+                    w = QUOTE(15 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                    colorBackground[]={0,0,0,0.2};
+                };
+                class textEditBox: ctrlEdit {
+                    idc= IDC_textEditBox;
+                    x = QUOTE(20 * GRID_W);
+                    y = QUOTE(safezoneH - (61 * GRID_H));
+                    w = QUOTE(50 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
                 };
                 class buttonSave: ctrlButton {
                     idc = IDC_buttonSave;
