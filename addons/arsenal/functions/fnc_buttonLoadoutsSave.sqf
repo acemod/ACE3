@@ -9,7 +9,8 @@ private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 private _loadout = getUnitLoadout GVAR(center);
 
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
-private _loadoutName = _contentPanelCtrl lnbText [(lnbCurSelRow _contentPanelCtrl), 1];
+private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
+private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
 
 private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
 private _editBoxContent = ctrlText _editBoxCtrl;
@@ -42,6 +43,15 @@ switch (GVAR(currentLoadoutsTab)) do {
 
         } else {
             _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 4], getText (configFile >> "cfgWeapons" >> ((_loadout select 2) select 0) >> "picture")];
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 5], getText (configFile >> "cfgWeapons" >> ((_loadout select 3) select 0) >> "picture")];
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 6], getText (configFile >> "cfgWeapons" >> ((_loadout select 4) select 0) >> "picture")];
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
+            _contentPanelCtrl lnbSetPicture [[_cursSelRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
         };
 
         [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
