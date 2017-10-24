@@ -14,6 +14,7 @@ version:
 
 ## 1. Config Values
 
+{% raw %}
 ```cpp
 class CfgVehicles {
     class MyFuelTruck {
@@ -28,6 +29,7 @@ class CfgVehicles {
     };
 };
 ```
+{% endraw %}
 
 <div class="panel callout">
     <h5>Note:</h5>
