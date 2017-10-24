@@ -60,6 +60,7 @@ GVAR(comboBoxes) = [];
     private _combo = _display ctrlCreate [QGVAR(CtrlCombo), -1];
     private _picturePos = ctrlPosition (_display displayCtrl ID_PICTURE_AIRCRAFT);
     private _uiPos = getArray (_x >> "UIposition");
+    MAP(_uiPos,if (_x isEqualType 0) then {_x} else {call compile _x}); // Handle string positions
     _combo ctrlSetPosition [
         (_picturePos select 0) + (_uiPos select 0),
         (_picturePos select 1) + (_uiPos select 1),
