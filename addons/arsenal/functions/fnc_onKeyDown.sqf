@@ -5,6 +5,8 @@
 params ["", "_args"];
 _args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState"];
 
+if !((findDisplay IDD_loadouts_display) isEqualTo displayNull) exitWith {};
+
 GVAR(shiftState) = _shiftState;
 
 private _return = true;

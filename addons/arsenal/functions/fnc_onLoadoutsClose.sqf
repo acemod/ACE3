@@ -3,3 +3,13 @@
 
 params ["", "_args"];
 _args params ["_display"];
+
+GVAR(currentLoadoutsTab) = nil;
+
+private _arsenalDisplay = findDisplay IDD_ace_arsenal;
+private _mouseBlockCtrl = _arsenalDisplay displayCtrl IDC_mouseBlock;
+
+_mouseBlockCtrl ctrlEnable false;
+_mouseBlockCtrl ctrlCommit 0;
+
+[_arsenalDisplay] call FUNC(buttonHide);

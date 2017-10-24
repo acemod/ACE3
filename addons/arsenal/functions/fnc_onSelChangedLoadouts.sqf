@@ -1,2 +1,54 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
+
+params ["_display", "_control", "_curSel"];
+
+systemChat str _curSel;
+
+private _shareButtonCtrl = _display displayCtrl IDC_buttonShare;
+private _saveButtonCtrl = _display displayCtrl IDC_buttonSave;
+private _loadButtonCtrl = _display displayCtrl IDC_buttonLoad;
+private _deleteButtonCtrl = _display displayCtrl IDC_buttonDelete;
+
+switch (GVAR(currentLoadoutsTab)) do {
+
+    case IDC_buttonMyLoadouts: {
+
+        _loadButtonCtrl ctrlEnable ([false, true] select ((_control lbValue _curSel) >= 0));
+        _loadButtonCtrl ctrlCommit 0;
+
+        _shareButtonCtrl ctrlEnable ([false, true] select (GVAR(allowSharedLoadouts)));
+        _shareButtonCtrl ctrlCommit 0;
+
+        _saveButtonCtrl ctrlEnable true;
+        _saveButtonCtrl ctrlCommit 0;
+
+        {
+            _x ctrlEnable (_curSel >= 0);
+            _x ctrlCommit 0;
+        } foreach [_saveButtonCtrl, _deleteButtonCtrl];
+    };
+
+    case IDC_buttonDefaultLoadouts: {
+
+
+        _loadButtonCtrl ctrlEnable ([false, true] select ((_control lbValue _curSel) >= 0));
+        _loadButtonCtrl ctrlCommit 0;
+
+        {
+            _x ctrlEnable false;
+            _x ctrlCommit 0;
+        } foreach [_shareButtonCtrl, _saveButtonCtrl, _deleteButtonCtrl];
+    };
+
+    case IDC_buttonSharedLoadouts: {
+
+        _loadButtonCtrl ctrlEnable ([false, true] select ((_control lbValue _curSel) >= 0));
+        _loadButtonCtrl ctrlCommit 0;
+
+        {
+            _x ctrlEnable false;
+            _x ctrlCommit 0;
+        } foreach [_shareButtonCtrl, _saveButtonCtrl, _deleteButtonCtrl];
+    };
+};

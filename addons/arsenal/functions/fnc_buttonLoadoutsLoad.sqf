@@ -6,3 +6,4 @@ params ["_display", "_control"];
 systemChat str [_display, _control];
 
 if !(ctrlEnabled _control) exitWith {};
+

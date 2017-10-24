@@ -173,7 +173,7 @@ class GVAR(display) {
                     x = QUOTE(25 * GRID_W);
                     text="Loadouts"; // TBL
                     tooltip="Displays loadouts screen"; // TBL
-                    onButtonClick = QUOTE(ctrlparent (_this select 0) createDisplay QQGVAR(loadoutsDisplay));
+                    onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
                     idc = -1;
@@ -747,7 +747,7 @@ class GVAR(loadoutsDisplay) {
                     h = QUOTE(5 * GRID_H);
                 };
                 class contentPanel: RscListnBox {
-                    idc = IDC_contentPanel
+                    idc = IDC_contentPanel;
                     colorBackground[]={0,0,0,0};
                     colorSelectBackground[]={1,1,1,0.5};
                     colorSelectBackground2[]={1,1,1,0.5};
@@ -755,10 +755,10 @@ class GVAR(loadoutsDisplay) {
                     colorSelect[]={1,1,1,1};
                     colorSelect2[]={1,1,1,1};
                     colorPictureRightSelected[]={1,1,1,1};
-                    columns[]={0.10, 0.20, 0.75};
+                    columns[]={0, 0.10, 0.45, 0.55, 0.65, 0.75, 0.80, 0.85, 0.90, 0.95};
                     drawSideArrows=0;
                     disableOverflow=1;
-                    onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLoadouts));
+                    onLBSelChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onSelChangedLoadouts));
                     x = QUOTE(0);
                     y = QUOTE(5 * GRID_H);
                     w = QUOTE(160 * GRID_W);
@@ -776,26 +776,26 @@ class GVAR(loadoutsDisplay) {
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
                     colorBackground[] = {0,0,0,0.8};
                 };
-                class buttonSaveAs: buttonSave {
-                    idc = IDC_buttonSaveAs;
-                    x = QUOTE(45 * GRID_W);
-                    text="Save as"; // TBL
-                    tooltip="Save loadout as"; // TBL
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSaveAs));
-                };
                 class buttonLoad: buttonSave {
                     idc = IDC_buttonLoad;
-                    x = QUOTE(85 * GRID_W);
+                    x = QUOTE(45 * GRID_W);
                     text="Load"; // TBL
                     tooltip="Load selected loadout"; // TBL
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsLoad));
                 };
                 class buttonShare: buttonSave {
                     idc = IDC_buttonShare;
-                    x = QUOTE(125 * GRID_W);
+                    x = QUOTE(85 * GRID_W);
                     text="Share"; // TBL
                     tooltip="Share selected loadout"; // TBL
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
+                };
+                class buttonDelete: buttonSave {
+                    idc = IDC_buttonDelete;
+                    x = QUOTE(125 * GRID_W);
+                    text="Delete"; // TBL
+                    tooltip="Delete loadout"; // TBL
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
                 };
             };
         };
