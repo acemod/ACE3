@@ -823,6 +823,18 @@ class GVAR(loadoutsDisplay) {
             tooltip="Delete loadout"; // TBL
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
         };
+        class buttonClose: buttonSave {
+            idc = -1;
+            x = QUOTE(safezoneW  + safezoneX - 31 * GRID_W);
+            y = QUOTE(safezoneH + safezoneY - 12 * GRID_H);
+            w = QUOTE(30 * GRID_W);
+            h = QUOTE(10 * GRID_H);
+            sizeEx = QUOTE(4.5 * GRID_H);
+            text="Close"; // TBL
+            shortcuts[]= {"0x01"};
+            tooltip="Close interface"; // TBL
+            onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
+        };
         class buttonBar: ctrlControlsGroupNoScrollbars {
             idc = -1;
             x = QUOTE((safezoneW * 0.5) + safezoneX - (61 * GRID_W));
