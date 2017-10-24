@@ -35,6 +35,11 @@ switch (GVAR(currentLoadoutsTab)) do {
             _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
             _contentPanelCtrl lnbSort [1, false];
+
+            for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+                if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
+            };
+
         } else {
             _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
         };
