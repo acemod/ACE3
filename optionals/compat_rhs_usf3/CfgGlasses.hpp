@@ -72,7 +72,7 @@ class CfgGlasses {
         ACE_TintAmount = 8.0;
     };
     class rhsusf_shemagh_gogg_base: G_Combat {
-		ACE_Color[] = {0,0,0};
+        ACE_Color[] = {0,0,0};
         ACE_TintAmount = 16.0;
         ACE_Overlay = "";
         ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
@@ -82,7 +82,7 @@ class CfgGlasses {
         ACE_DustPath = QPATHTOEF(goggles,textures\fx\dust\%1.paa);
     };
     class rhsusf_shemagh2_gogg_base: G_Combat {
-		ACE_Color[] = {0,0,0};
+        ACE_Color[] = {0,0,0};
         ACE_TintAmount = 16.0;
         ACE_Overlay = "";
         ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
