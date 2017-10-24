@@ -57,7 +57,7 @@ if (["ace_fastroping"] call EFUNC(common,isModLoaded) && {_hasFRIES > 1}) then {
 
 GVAR(comboBoxes) = [];
 {
-    private _combo = _display ctrlCreate ["ctrlCombo", -1];
+    private _combo = _display ctrlCreate [QGVAR(CtrlCombo), -1];
     private _picturePos = ctrlPosition (_display displayCtrl ID_PICTURE_AIRCRAFT);
     private _uiPos = getArray (_x >> "UIposition");
     _combo ctrlSetPosition [
