@@ -10,6 +10,7 @@ private _shareButtonCtrl = _display displayCtrl IDC_buttonShare;
 private _saveButtonCtrl = _display displayCtrl IDC_buttonSave;
 private _loadButtonCtrl = _display displayCtrl IDC_buttonLoad;
 private _deleteButtonCtrl = _display displayCtrl IDC_buttonDelete;
+private _renameButtonCtrl = _display displayCtrl IDC_buttonRename;
 
 switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {
@@ -28,7 +29,7 @@ switch (ctrlIDC _control) do {
 {
     _x ctrlEnable false;
     _x ctrlCommit 0;
-} foreach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl];
+} foreach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl, _renameButtonCtrl];
 
 [_display, _control] call FUNC(fillLoadoutsList);
 

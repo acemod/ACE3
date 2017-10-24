@@ -53,6 +53,8 @@ switch (GVAR(currentLoadoutsTab)) do {
                 };
             };
         };
+
+        [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was loaded", _loadoutName]] call FUNC(message); // TBL
     };
 
     case IDC_buttonDefaultLoadouts: {

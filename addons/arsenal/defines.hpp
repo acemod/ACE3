@@ -103,6 +103,7 @@
 #define IDC_buttonLoad 305
 #define IDC_buttonShare 306
 #define IDC_buttonDelete 307
+#define IDC_buttonRename 308
 #define IDC_buttonMyLoadouts 401
 #define IDC_buttonDefaultLoadouts 402
 #define IDC_buttonSharedLoadouts 403

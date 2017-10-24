@@ -9,6 +9,7 @@ private _shareButtonCtrl = _display displayCtrl IDC_buttonShare;
 private _saveButtonCtrl = _display displayCtrl IDC_buttonSave;
 private _loadButtonCtrl = _display displayCtrl IDC_buttonLoad;
 private _deleteButtonCtrl = _display displayCtrl IDC_buttonDelete;
+private _renameButtonCtrl = _display displayCtrl IDC_buttonRename;
 private _textEditBoxCtrl= _display displayCtrl IDC_textEditBox;
 
 switch (GVAR(currentLoadoutsTab)) do {
@@ -21,8 +22,10 @@ switch (GVAR(currentLoadoutsTab)) do {
         _shareButtonCtrl ctrlEnable ([false, true] select (GVAR(allowSharedLoadouts)));
         _shareButtonCtrl ctrlCommit 0;
 
-        _deleteButtonCtrl ctrlEnable (_curSel >= 0);
-        _deleteButtonCtrl ctrlCommit 0;
+        {
+            _x ctrlEnable (_curSel >= 0);
+            _x ctrlCommit 0;
+        } foreach [_renameButtonCtrl, _deleteButtonCtrl];
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };

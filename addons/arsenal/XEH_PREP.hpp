@@ -7,6 +7,7 @@ PREP(buttonHide);
 PREP(buttonImport);
 PREP(buttonLoadoutsDelete);
 PREP(buttonLoadoutsLoad);
+PREP(buttonLoadoutsRename);
 PREP(buttonLoadoutsSave);
 PREP(buttonLoadoutsShare);
 PREP(clearSearchbar);

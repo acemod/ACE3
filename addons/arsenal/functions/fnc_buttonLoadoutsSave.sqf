@@ -43,6 +43,8 @@ switch (GVAR(currentLoadoutsTab)) do {
         } else {
             _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
         };
+
+        [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
     };
 
     case IDC_buttonDefaultLoadouts: {
