@@ -18,7 +18,7 @@ Enable players to place down fortifications. Budget enables mission makers / adm
 
 ## 2. Usage
 
-Please note that to use this function the `Fortify module` needs to be placed down and `Fortify tool` equipped by player.
+Please note that to use this function the `Fortify Module` needs to be placed down and `Fortify Tool` equipped by player.
 
 ### 2.1 Placing fortification
 
@@ -32,9 +32,9 @@ Please note that to use this function the `Fortify module` needs to be placed do
 
 ## 3. Tips
 
-- Using <kbd>alt</kbd> / <kbd>ctrl</kbd> / <kbd>shift</kbd> + <kbd>scroll wheel</kbd> you can rotate object on different axis.
+- Using <kbd>Alt</kbd> / <kbd>Ctrl</kbd> / <kbd>Shift</kbd> + <kbd>Scroll Wheel</kbd> you can rotate object on different axis.
 - You can use planks to get up on rooftops.
-- Holding <kbd>ctrl</kbd> while placing allows for placing multiple objects of the same type.
+- Holding <kbd>Ctrl</kbd> while placing allows for placing multiple objects of the same type.
 
 ## 4. Dependencies
 
