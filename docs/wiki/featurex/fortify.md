@@ -8,7 +8,7 @@ parent: wiki
 mod: acex
 version:
   major: 3
-  minor: 2
+  minor: 3
   patch: 0
 ---
 
