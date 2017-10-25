@@ -46,6 +46,7 @@ private _fnc_selectRight = {
 
         _removeAllCtrl ctrlSetFade 0;
         _removeAllCtrl ctrlShow true;
+        _removeAllCtrl ctrlEnable true;
         _removeAllCtrl ctrlCommit FADE_DELAY;
     };
 

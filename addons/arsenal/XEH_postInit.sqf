@@ -21,13 +21,13 @@ GVAR(lastSearchTextRight) = "";
 }] call CBA_fnc_addEventHandler;
 
 if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
-    ["ace_arsenalOpened", {
+    [QGVAR(displayOpened), {
         GVAR(virtualItems) set [17, (GVAR(virtualItems) select 17) -  ["FirstAidKit", "Medikit"]];
     }] call CBA_fnc_addEventHandler;
 };
 
 if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
-    ["ace_arsenal_rightPanelFilled", {
+    [QGVAR(rightPanelFilled), {
 
         if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack] && {GVAR(currentRightPanel) == IDC_buttonMisc}) then {
 

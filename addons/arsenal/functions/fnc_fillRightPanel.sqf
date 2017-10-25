@@ -221,7 +221,7 @@ if (GVAR(currentRightPanel) != _ctrlIDC) then {
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
-["ace_arsenal_rightPanelFilled", [_display, _ctrlIDC]] call CBA_fnc_localEvent;
+[QGVAR(rightPanelFilled), [_display, _ctrlIDC]] call CBA_fnc_localEvent;
 
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
