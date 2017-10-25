@@ -279,9 +279,33 @@
     {_item in (GVAR(virtualItems) select 12)} ||\
     {_item in (GVAR(virtualItems) select 13)} ||\
     {_item in (GVAR(virtualItems) select 14)} ||\
-    {_item in (GVAR(virtualItems) select 8)}
+    {_item in (GVAR(virtualItems) select 8)} ||\
+    {_item in (GVAR(virtualItems) select 18)}
 
 #define CHECK_CONTAINER\
     _item in (GVAR(virtualItems) select 4) ||\
     {_item in (GVAR(virtualItems) select 5)} ||\
     {_item in (GVAR(virtualItems) select 6)}
+
+#define CLASS_CHECK_ITEM\
+    isClass (_weaponCfg >> _item) ||\
+    {isClass (_vehcCfg >> _item)} ||\
+    {isClass (_glassesCfg >> _item)} ||\
+    {isClass (_magCfg >> _item)}
+
+#define CHECK_CONTAINER_ITEMS\
+    _item in (GVAR(virtualItems) select 3) ||\
+    {_item in (GVAR(virtualItems) select 4)} ||\
+    {_item in (GVAR(virtualItems) select 5)} ||\
+    {_item in (GVAR(virtualItems) select 6)} ||\
+    {_item in (GVAR(virtualItems) select 7)} ||\
+    {_item in (GVAR(virtualItems) select 8)} ||\
+    {_item in (GVAR(virtualItems) select 10)} ||\
+    {_item in (GVAR(virtualItems) select 11)} ||\
+    {_item in (GVAR(virtualItems) select 12)} ||\
+    {_item in (GVAR(virtualItems) select 13)} ||\
+    {_item in (GVAR(virtualItems) select 14)} ||\
+    {_item in (GVAR(virtualItems) select 15)} ||\
+    {_item in (GVAR(virtualItems) select 16)} ||\
+    {_item in (GVAR(virtualItems) select 17)} ||\
+    {_item in (GVAR(virtualItems) select 18)}

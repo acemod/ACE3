@@ -102,7 +102,21 @@ private _fnc_handleLoadoutArray = {
 
                                             if ((_x select 0) isEqualType "") then {
 
+                                                private _item = _x select 0;
+
+                                                if (CLASS_CHECK_ITEM) then {
+                                                    if !(CHECK_CONTAINER_ITEMS) then {
+
+                                                        ((_loadoutData select _dataIndex) select 1) set [_currentIndex, []];
+                                                        _unavailableItemsAmount = _unavailableItemsAmount + 1;
+                                                    };
+                                                } else {
+
+                                                    ((_loadoutData select _dataIndex) select 1) set [_currentIndex, []];
+                                                    _nullItemsAmount = _nullItemsAmount + 1;
+                                                };
                                             } else {
+
                                                 [(((_loadoutData select _dataIndex) select 1) select _currentIndex) select 0] call _weaponCheck;
                                             };
                                         };
