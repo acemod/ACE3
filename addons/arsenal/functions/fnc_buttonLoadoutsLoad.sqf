@@ -35,21 +35,26 @@ switch (GVAR(currentLoadoutsTab)) do {
 
                 };
                 case 10: {
+                    GVAR(currentItems) set [15, []];
                     {(GVAR(currentItems) select 15) pushBack _x} forEach (uniformItems GVAR(center));
                 };
                 case 11: {
+                    GVAR(currentItems) set [16, []];
                     {(GVAR(currentItems) select 16) pushBack _x} forEach (vestItems GVAR(center));
                 };
                 case 12: {
+                    GVAR(currentItems) set [17, []];
                     {(GVAR(currentItems) select 17) pushBack _x} forEach (backpackItems GVAR(center));
                 };
                 case 13: {
                     GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + (primaryWeaponMagazine GVAR(center))];
                 };
                 case 14: {
+                    GVAR(currentItems) set [19, []];
                     GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + (secondaryWeaponMagazine GVAR(center))];
                 };
                 case 15: {
+                    GVAR(currentItems) set [20, []];
                     GVAR(currentItems) set [20, (handgunItems GVAR(center)) + (handgunMagazine GVAR(center))];
                 };
             };
