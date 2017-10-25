@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: fortify
-description: enables player to build fortifications.
+description: Enables player to build fortifications.
 group: feature
 category: interaction
 parent: wiki
@@ -14,21 +14,16 @@ version:
 
 ## 1. Overview
 
-### 1.1 Fortification
-
-Enable players to place down fortifications.
-
-### 1.2 Budget
-
-Enables mission makers / admin to restrict the amount of resources available.
+Enable players to place down fortifications. Budget enables mission makers / admin to restrict the amount of resources available.
 
 ## 2. Usage
-Please note that to use this function the `fortify module` needs to be placed down and `fortify tool` equipped by player.
+
+Please note that to use this function the `Fortify module` needs to be placed down and `Fortify tool` equipped by player.
 
 ### 2.1 Placing fortification
 
 - Open self-interaction menu with <kbd>Ctrl</kbd> + <kbd>⊞ Win</kbd> (ACE3 default).
-- Select equipment → fortify.
+- Select `Equipment` -> `Fortify`.
 - Choose your fortification object and follow the instructions on the screen.
 
 ### 2.1 Removing fortification
