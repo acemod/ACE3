@@ -12,6 +12,6 @@ private _mouseBlockCtrl = _arsenalDisplay displayCtrl IDC_mouseBlock;
 _mouseBlockCtrl ctrlEnable false;
 _mouseBlockCtrl ctrlCommit 0;
 
-[_arsenalDisplay , _arsenalDisplay displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
-
 [_arsenalDisplay] call FUNC(buttonHide);
+
+[_arsenalDisplay , _arsenalDisplay displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
