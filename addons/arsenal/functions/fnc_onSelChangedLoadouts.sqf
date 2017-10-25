@@ -16,11 +16,11 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonMyLoadouts: {
 
-        _loadButtonCtrl ctrlEnable ([false, true] select ((_control lbValue _curSel) >= 0));
-        _loadButtonCtrl ctrlCommit 0;
-
         _shareButtonCtrl ctrlEnable ([false, true] select (GVAR(allowSharedLoadouts)));
         _shareButtonCtrl ctrlCommit 0;
+
+        _loadButtonCtrl ctrlEnable true;
+        _loadButtonCtrl ctrlCommit 0;
 
         {
             _x ctrlEnable (_curSel >= 0);
@@ -32,8 +32,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonDefaultLoadouts: {
 
-
-        _loadButtonCtrl ctrlEnable ([false, true] select ((_control lbValue _curSel) >= 0));
+        _loadButtonCtrl ctrlEnable true;
         _loadButtonCtrl ctrlCommit 0;
 
         {
@@ -46,7 +45,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonSharedLoadouts: {
 
-        _loadButtonCtrl ctrlEnable ([false, true] select ((_control lbValue _curSel) >= 0));
+        _loadButtonCtrl ctrlEnable true;
         _loadButtonCtrl ctrlCommit 0;
 
         {

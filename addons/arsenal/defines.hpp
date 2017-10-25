@@ -264,3 +264,19 @@
     [binocular GVAR(center)]\
 ]
 
+#define CHECK_WEAPON_OR_ACC\
+    _item in (_weaponsArray select 0) ||\
+    {_item in (_weaponsArray select 1)} ||\
+    {_item in (_weaponsArray select 2)} ||\
+    {_item in (_accsArray select 0)} ||\
+    {_item in (_accsArray select 1)} ||\
+    {_item in (_accsArray select 2)} ||\
+    {_item in (_accsArray select 3)}
+
+#define CHECK_ASSIGNED_ITEMS\
+    _item in (GVAR(virtualItems) select 10) ||\
+    {_item in (GVAR(virtualItems) select 11)} ||\
+    {_item in (GVAR(virtualItems) select 12)} ||\
+    {_item in (GVAR(virtualItems) select 13)} ||\
+    {_item in (GVAR(virtualItems) select 14)} ||\
+    {_item in (GVAR(virtualItems) select 8)}

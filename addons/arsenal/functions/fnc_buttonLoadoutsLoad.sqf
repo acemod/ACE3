@@ -7,14 +7,15 @@ if !(ctrlEnabled _control) exitWith {};
 
 private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
-private _loadoutName = _contentPanelCtrl lnbText [(lnbCurSelRow _contentPanelCtrl), 1];
+private _curSel = lnbCurSelRow _contentPanelCtrl;
+private _loadoutName = _contentPanelCtrl lnbText [_curSel, 1];
 
 switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonMyLoadouts: {
         private _loadout = (_data select {_x select 0 == _loadoutName}) select 0;
 
-        GVAR(center) setUnitLoadout [(_loadout select 1), true];
+        GVAR(center) setUnitLoadout [GVAR(loadoutsList) select (_contentPanelCtrl lnbValue [_curSel, 1]), true];
 
         for "_index" from 0 to 15 do {
             switch (_index) do {
