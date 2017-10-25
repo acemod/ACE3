@@ -18,7 +18,7 @@
 
 params ["_unit", "_aircraft"];
 
-if (GVAR(requireEngineer) && {!(_unit getUnitTrait "engineer")}) exitWith {false};
+if (GVAR(requireEngineer) && {!([_unit] call EFUNC(common,isEngineer))}) exitWith {false};
 
 if (GVAR(requireToolkit) && {!([_unit, "ToolKit"] call EFUNC(common,hasItem))}) exitWith {false};
 
