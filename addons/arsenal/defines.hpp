@@ -148,12 +148,9 @@
 #define TOGGLE_RIGHT_PANEL_WEAPON\
 {\
     _x = _display displayCtrl _x;\
-    if (ctrlFade _x != 0) then {\
-        _x ctrlSetFade 0;\
-    };\
-    if !(ctrlShown _x) then {\
-        _x ctrlShow true;\
-    };\
+    _x ctrlSetFade 0;\
+    _x ctrlShow true;\
+    _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame,\
@@ -166,12 +163,9 @@
 ];\
 {\
     _x = _display displayCtrl _x;\
-    if (ctrlFade _x != 1) then {\
-        _x ctrlSetFade 1;\
-    };\
-    if (ctrlShown _x) then {\
-        _x ctrlShow false;\
-    };\
+    _x ctrlSetFade 1;\
+    _x ctrlShow false;\
+    _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_loadIndicator,\
@@ -185,12 +179,9 @@
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
 {\
     _x = _display displayCtrl _x;\
-    if (ctrlFade _x != 0) then {\
-        _x ctrlSetFade 0;\
-    };\
-    if !(ctrlShown _x) then {\
-        _x ctrlShow true;\
-    };\
+    _x ctrlSetFade 0;\
+    _x ctrlShow true;\
+    _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame, \
@@ -206,24 +197,18 @@
 ];\
 {\
     _x = _display displayCtrl _x;\
-    if (ctrlFade _x != 1) then {\
-        _x ctrlSetFade 1;\
-    };\
-    if !(ctrlShown _x) then {\
-        _x ctrlShow false;\
-    };\
+    _x ctrlSetFade 1;\
+    _x ctrlShow false;\
+    _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [IDC_iconBackgroundCurrentMag, IDC_buttonCurrentMag];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
     _x = _display displayCtrl _x;\
-    if (ctrlFade _x != 1) then {\
-        _x ctrlSetFade 1;\
-    };\
-    if (ctrlShown _x) then {\
-        _x ctrlShow false;\
-    };\
+    _x ctrlSetFade 1;\
+    _x ctrlShow false;\
+    _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame,\
