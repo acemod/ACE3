@@ -20,10 +20,10 @@ Enable players to place down fortifications.
 
 ### 1.2 Budget
 
-Enables missionmakers / admin to restrict amount of resources available.
+Enables mission makers / admin to restrict the amount of resources available.
 
 ## 2. Usage
-Please note that to be able to use this function the `fortify module` needs to be placed down and `fortify tool` equipped by player.
+Please note that to use this function the `fortify module` needs to be placed down and `fortify tool` equipped by player.
 
 ### 2.1 Placing fortification
 
