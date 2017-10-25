@@ -99,6 +99,7 @@ private _fnc_handleLoadoutArray = {
 
                                     switch (count _x) do {
                                         case 2: {
+
                                             if ((_x select 0) isEqualType "") then {
 
                                             } else {
@@ -107,6 +108,19 @@ private _fnc_handleLoadoutArray = {
                                         };
 
                                         case 3: {
+                                            private _item = _x select 0;
+
+                                            if (isClass (_magCfg >> _item)) then {
+                                                if (_item in (GVAR(virtualItems) select 3)) then {
+
+                                                    ((_loadoutData select _dataIndex) select 1) set [_currentIndex, []];
+                                                    _unavailableItemsAmount = _unavailableItemsAmount + 1;
+                                                };
+                                            } else {
+
+                                                ((_loadoutData select _dataIndex) select 1) set [_currentIndex, []];
+                                                _nullItemsAmount = _nullItemsAmount + 1;
+                                            };
                                         };
                                     };
                                 } foreach _containerItems;
