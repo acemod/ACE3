@@ -31,15 +31,15 @@ If the Fortify module is present in the mission, server admins can use chat comm
 
 There are two ways of adding custom presets to your mission, either via code or through desciption.ext.
 
-To add a preset via code you use the function `call acex_fortify_fnc_registerObjects`. Also enables Fortify. 
+To add a preset via code you use the function `call acex_fortify_fnc_registerObjects`. Also enables Fortify.
 
 ```
 * Adds objects to preset.
 *
 * Arguments:
-* 0: Side <
-* 1: Budget <Number>
-* 2: Asset <Object>
+* 0: Side <>
+* 1: Budget <NUMBER>
+* 2: Asset <OBJECT>
 *
 * Return value:
 * None
