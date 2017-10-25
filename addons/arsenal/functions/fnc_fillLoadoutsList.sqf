@@ -156,9 +156,6 @@ private _fnc_handleLoadoutArray = {
     };
 };
 
-private _nullItemsAmount = 0;
-private _unavailableItemsAmount = 0;
-
 switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {
         {
