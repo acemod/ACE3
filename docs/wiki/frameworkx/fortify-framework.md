@@ -51,7 +51,7 @@ To add a preset via code you use the function `call acex_fortify_fnc_registerObj
 * [west, 5000, [["Sandbag", 5], ["Bunker", 50]]] call acex_fortify_fnc_registerObjects
 ```
 
-Adding it through description.ext you use:
+Adding it through `description.ext` you use:
 
 ```c++
 class ACEX_Fortify_Presets {
