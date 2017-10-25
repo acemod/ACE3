@@ -19,6 +19,12 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonVest;
     case IDC_buttonBackpack;
     case IDC_buttonGoggles;
+    case IDC_buttonMap;
+    case IDC_buttonGPS;
+    case IDC_buttonRadio;
+    case IDC_buttonCompass;
+    case IDC_buttonWatch;
+    case IDC_buttonFace;
     case IDC_buttonNVG : {
         _nextAction = "Civil";
     };
@@ -31,6 +37,7 @@ switch (GVAR(currentLeftPanel)) do {
         };
     };
     case IDC_buttonVoice : {
+        _nextAction = "Civil";
         GVAR(center) directSay "CuratorObjectPlaced";
     };
 };
