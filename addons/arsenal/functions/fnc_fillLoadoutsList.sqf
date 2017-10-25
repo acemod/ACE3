@@ -80,7 +80,44 @@ private _fnc_handleLoadoutArray = {
             case 3;
             case 4;
             case 5: {
+                private _containerArray = (_loadoutData select _dataIndex);
 
+                if (count _containerArray != 0) then {
+
+                    _containerArray params ["_item", "_containerItems"];
+
+                    if (isClass (_vehcCfg >> _item) || {isClass (_weaponCfg >> _item)}) then {
+                        if !(CHECK_CONTAINER) then {
+
+                            _loadoutData set [_dataIndex, []];
+                            _unavailableItemsAmount = _unavailableItemsAmount + 1;
+                        } else {
+
+                            if (count _containerItems != 0) then {
+                                {
+                                    private _currentIndex = _forEachIndex;
+
+                                    switch (count _x) do {
+                                        case 2: {
+                                            if ((_x select 0) isEqualType "") then {
+
+                                            } else {
+                                                [(((_loadoutData select _dataIndex) select 1) select _currentIndex) select 0] call _weaponCheck;
+                                            };
+                                        };
+
+                                        case 3: {
+                                        };
+                                    };
+                                } foreach _containerItems;
+                            };
+                        };
+                    } else {
+
+                        _loadoutData set [_dataIndex, []];
+                        _nullItemsAmount = _nullItemsAmount + 1;
+                    };
+                };
             };
 
             case 6: {
