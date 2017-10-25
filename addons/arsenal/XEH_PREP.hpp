@@ -40,3 +40,4 @@ PREP(scanConfig);
 PREP(showItem);
 PREP(sortPanel);
 PREP(updateCamPos);
+PREP(verifyLoadout);
