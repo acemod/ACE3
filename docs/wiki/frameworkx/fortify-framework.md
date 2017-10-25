@@ -27,7 +27,7 @@ If the Fortify module is present in the mission server admins can use chat comma
 - `#fortify west medium` registers the "medium" preset for the west side with no budget
 - `#fortify o big` registers the "big" preset for the east side with no budget
 
-## 1.3 Adding custom presets
+## 1.2 Adding custom presets
 
 There are two ways of adding custom presets to your mission, either via code or through desciption.ext.
 
