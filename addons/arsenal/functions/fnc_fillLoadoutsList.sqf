@@ -24,53 +24,45 @@ GVAR(loadoutsList) = [];
 private _weaponCheck = {
     params ["_dataPath"];
 
-    for "_sub_subIndex" from 0 to 6 do {
-        switch (_sub_subIndex) do {
-            case 0;
-            case 1;
-            case 2;
-            case 3;
-            case 6: {
-                if ((count _dataPath) != 0) then {
+    if (count _dataPath != 0) then {
+        {
+            if (_x isEqualType "") then {
 
-                    private _item = _dataPath select _sub_subIndex;
+                private _item = _x;
 
-                    if (_item != "") then {
-                        if (isClass (_weaponCfg >> _item)) then {
+                if (_item != "") then {
+                    if (isClass (_weaponCfg >> _item)) then {
+                        if !(CHECK_WEAPON_OR_ACC) then {
 
-                            if !(CHECK_WEAPON_OR_ACC) then {
-
-                                _dataPath set [_sub_subIndex, ""];
-                                _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                            };
-                        } else {
-
-                            _dataPath set [_sub_subIndex, ""];
-                            _nullItemsAmount = _nullItemsAmount + 1;
-                        };
-                    };
-                };
-            };
-
-            case 4;
-            case 5: {
-                if (((count _dataPath) != 0)) then {
-
-                    private _mag = (_dataPath select _sub_subIndex) select 0;
-
-                    if (isClass (_magCfg >> _mag)) then {
-
-                        if !(_mag in (GVAR(virtualItems) select 2)) then {
-                            _dataPath set [_sub_subIndex, []];
+                            _dataPath set [_forEachIndex, ""];
                             _unavailableItemsAmount = _unavailableItemsAmount + 1;
                         };
                     } else {
-                        _dataPath set [_sub_subIndex, []];
+
+                        _dataPath set [_forEachIndex, ""];
+                        _nullItemsAmount = _nullItemsAmount + 1;
+                    };
+                };
+
+            } else {
+
+                if (count _x != 0) then {
+                    private _mag = _x select 0;
+
+                    if (isClass (_magCfg >> _mag)) then {
+                        if !(_mag in (GVAR(virtualItems) select 2)) then {
+
+                            _dataPath set [_forEachIndex, []];
+                            _unavailableItemsAmount = _unavailableItemsAmount + 1;
+                        };
+                    } else {
+
+                        _dataPath set [_forEachIndex, []];
                         _nullItemsAmount = _nullItemsAmount + 1;
                     };
                 };
             };
-        };
+        } foreach _dataPath;
     };
 };
 
