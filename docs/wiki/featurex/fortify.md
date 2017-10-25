@@ -43,4 +43,4 @@ Please note that to use this function the `fortify module` needs to be placed do
 
 ## 4. Dependencies
 
-{% include dependencies_list.md component="acex_main","ace_interaction" %}
+{% include dependenciesx_list.md component="acex_fortify" %}
