@@ -18,7 +18,7 @@ Enable players to place down fortifications. Budget enables mission makers / adm
 
 ## 2. Usage
 
-Please note that to use this function the `Fortify Module` needs to be placed down and `Fortify Tool` equipped by player.
+Please note that to use this function the Fortify module needs to be placed down and `Fortify Tool` equipped by player.
 
 ### 2.1 Placing fortification
 
