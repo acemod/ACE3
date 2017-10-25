@@ -34,7 +34,6 @@ There are two ways of adding custom presets to your mission, either via code or 
 To add a preset via code you use the function `call acex_fortify_fnc_registerObjects`. Also enables Fortify.
 
 ```
-*
 * Registers the given objects in the given side's player interaction menu.
 * Players on that side must have the `Fortify Tool` item in their inventory to access the menu.
 * Classnames must be in the format [<classname>, <cost>]
@@ -50,8 +49,6 @@ To add a preset via code you use the function `call acex_fortify_fnc_registerObj
 *
 * Example:
 * [west, 5000, [["Sandbag", 5], ["Bunker", 50]]] call acex_fortify_fnc_registerObjects
-*
-*
 ```
 
 Adding it through description.ext you use:
