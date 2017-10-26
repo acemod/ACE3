@@ -12,15 +12,12 @@ lnbClear _contentListCtrl;
 
 private _data = +(profileNamespace getvariable [QGVAR(saved_loadouts),[]]);
 
-GVAR(loadoutsList) = [];
-
 if (ctrlIDC _control != IDC_buttonSharedLoadouts) then {
 
     {
         _x params ["_loadoutName", "_loadoutData"];
 
         ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];
-        GVAR(loadoutsList) pushBack _loadout;
 
         private _newRow = _contentListCtrl lnbAddRow ["",_loadoutName];
 
@@ -43,7 +40,7 @@ if (ctrlIDC _control != IDC_buttonSharedLoadouts) then {
             };
         };
 
-        _contentListCtrl lnbSetValue [[_newRow, 1], _forEachIndex];
+        _contentListCtrl setVariable [_loadoutName, _loadout];
     } foreach ([_data, ([GVAR(defaultLoadoutsList), []] select (isNil QGVAR(defaultLoadoutsList)))] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {
 

@@ -15,7 +15,7 @@ if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
 } else {
     private _loadout = (_data select {_x select 0 == _loadoutName}) select 0;
 
-    GVAR(center) setUnitLoadout [GVAR(loadoutsList) select (_contentPanelCtrl lnbValue [_curSel, 1]), true];
+    GVAR(center) setUnitLoadout [_contentPanelCtrl getVariable _loadoutName, true];
 
     GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
     for "_index" from 0 to 15 do {
