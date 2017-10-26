@@ -20,7 +20,6 @@ if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
 
 } else {
     private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
-    _contentPanelCtrl setVariable [_loadoutName, nil];
 
     if (count _sameNameLoadoutsList == 0) then {
 
@@ -28,15 +27,15 @@ if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
     } else {
 
         _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), [_loadout, _curSelLoadout] select (GVAR(currentLoadoutsTab) != IDC_buttonMyLoadouts)]];
+    };
+
+    // Add new row if the current tab is "My loadouts"
+    if (GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts) then {
 
         // Delete "old" loadout row
         for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
             if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbDeleteRow _i};
         };
-    };
-
-    // Add new row if the current tab is "My loadouts"
-    if (GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts) then {
 
         private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
 

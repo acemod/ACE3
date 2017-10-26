@@ -5,7 +5,6 @@ params ["_display", "_control"];
 
 if !(ctrlEnabled _control) exitWith {};
 
-private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _curSel = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_curSel, 1];
@@ -13,7 +12,6 @@ private _loadoutName = _contentPanelCtrl lnbText [_curSel, 1];
 if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
 
 } else {
-    private _loadout = (_data select {_x select 0 == _loadoutName}) select 0;
 
     GVAR(center) setUnitLoadout [_contentPanelCtrl getVariable _loadoutName, true];
 
