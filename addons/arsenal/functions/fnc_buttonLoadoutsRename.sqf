@@ -18,12 +18,10 @@ private _loadoutIndex = _data find _loadoutData;
 
 _data set [_loadoutIndex, [_editBoxContent, _loadoutData select 1]];
 
-_contentPanelCtrl lnbSetText [[(lnbCurSelRow _contentPanelCtrl), 1], _editBoxContent];
-
-[(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was renamed to '%2'", _loadoutName, _editBoxContent]] call FUNC(message); // TBL
-
-_contentPanelCtrl lnbSort [1, false];
+[_display, _display displayCtrl GVAR(currentLoadoutsTab)] call FUNC(fillLoadoutsList);
 
 for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
     if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
 };
+
+[(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was renamed to '%2'", _loadoutName, _editBoxContent]] call FUNC(message); // TBL

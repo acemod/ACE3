@@ -40,7 +40,7 @@ switch (GVAR(currentLoadoutsTab)) do {
             _x ctrlCommit 0;
         } foreach [_shareButtonCtrl, _deleteButtonCtrl];
 
-        _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 0]);
+        _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };
 
     case IDC_buttonSharedLoadouts: {
@@ -53,6 +53,6 @@ switch (GVAR(currentLoadoutsTab)) do {
             _x ctrlCommit 0;
         } foreach [_shareButtonCtrl, _deleteButtonCtrl];
 
-        _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 0]);
+        _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };
 };
