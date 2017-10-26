@@ -280,6 +280,10 @@
 
 #define CHECK_CONTAINER_ITEMS\
     _item in (GVAR(virtualItems) select 3) ||\
+    {_item in (_accsArray select 0)} ||\
+    {_item in (_accsArray select 1)} ||\
+    {_item in (_accsArray select 2)} ||\
+    {_item in (_accsArray select 3)} ||\
     {_item in (GVAR(virtualItems) select 4)} ||\
     {_item in (GVAR(virtualItems) select 5)} ||\
     {_item in (GVAR(virtualItems) select 6)} ||\
