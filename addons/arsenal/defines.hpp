@@ -253,6 +253,7 @@
     _item in (_weaponsArray select 0) ||\
     {_item in (_weaponsArray select 1)} ||\
     {_item in (_weaponsArray select 2)} ||\
+    {_item in (GVAR(virtualItems) select 9)} ||\
     {_item in (_accsArray select 0)} ||\
     {_item in (_accsArray select 1)} ||\
     {_item in (_accsArray select 2)} ||\
