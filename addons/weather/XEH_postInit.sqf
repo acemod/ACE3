@@ -11,13 +11,14 @@ GVAR(wind_period_start_time) = CBA_missionTime;
 if (!isServer) then {
     "ACE_MISC_PARAMS" addPublicVariableEventHandler {
         TRACE_1("MISC PARAMS PVEH",ACE_MISC_PARAMS);
+        GVAR(currentOvercast) = (ACE_MISC_PARAMS select 0);
         if (GVAR(syncMisc)) then {
-            30 setRainbow    (ACE_MISC_PARAMS select 0);
-            30 setFog        (ACE_MISC_PARAMS select 1);
+            30 setRainbow    (ACE_MISC_PARAMS select 1);
+            30 setFog        (ACE_MISC_PARAMS select 2);
         };
-        GVAR(temperatureShift) = (ACE_MISC_PARAMS select 2);
-        GVAR(badWeatherShift)  = (ACE_MISC_PARAMS select 3);
-        GVAR(humidityShift)    = (ACE_MISC_PARAMS select 4);
+        GVAR(temperatureShift) = (ACE_MISC_PARAMS select 3);
+        GVAR(badWeatherShift)  = (ACE_MISC_PARAMS select 4);
+        GVAR(humidityShift)    = (ACE_MISC_PARAMS select 5);
         call FUNC(updateTemperature);
         call FUNC(updateHumidity);
     };

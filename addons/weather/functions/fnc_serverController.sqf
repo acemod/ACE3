@@ -27,7 +27,7 @@ if (GVAR(useACEWeather)) then {
         publicVariable "ACE_WIND_PARAMS";
     };
     if (GVAR(syncMisc)) then {
-        ACE_MISC_PARAMS = [rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
+        ACE_MISC_PARAMS = [overcast, rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
         publicVariable "ACE_MISC_PARAMS";
     };
 };
