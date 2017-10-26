@@ -119,6 +119,6 @@ GVAR(interrupts) = [];
 
 // Mark spectator state for reference
 GVAR(isSet) = _set;
-player setVariable [QGVAR(isSet), true, true];
+player setVariable [QGVAR(isSet), _set, true];
 
 ["ace_spectatorSet", [_set, player]] call CBA_fnc_globalEvent;
