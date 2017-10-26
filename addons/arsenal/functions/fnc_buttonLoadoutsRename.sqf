@@ -46,4 +46,4 @@ for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
     if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
 };
 
-[(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was renamed to '%2'", _editBoxContent, _editBoxContent]] call FUNC(message); // TBL
+[(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was renamed to '%2'", _loadoutName, _editBoxContent]] call FUNC(message); // TBL
