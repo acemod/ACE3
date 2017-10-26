@@ -225,7 +225,7 @@ switch (GVAR(currentLeftPanel)) do {
             removeBackpack GVAR(center);
             GVAR(center) addBackpack _item;
             while {count backpackItems GVAR(center) > 0} do {
-                GVAR(center) removeItemFromBackpack (VestItems GVAR(center) select 0);
+                GVAR(center) removeItemFromBackpack (backpackItems GVAR(center) select 0);
             }; //--- Remove default config contents
             {GVAR(center) addItemToBackpack _x} foreach (GVAR(currentItems) select 17);
 
