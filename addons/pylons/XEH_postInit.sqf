@@ -43,4 +43,6 @@
 
         addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleDisconnect)];
     };
+
+    GVAR(searchDistanceSqr) = GVAR(searchDistance) ^ 2;
 }] call CBA_fnc_addEventHandler;

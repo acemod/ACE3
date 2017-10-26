@@ -20,7 +20,6 @@ params ["", "", "_uid"];
 private _aircraft = GVAR(currentAircraftNamespace) getVariable ["_uid", objNull];
 if (!isNull _aircraft) then {
     _aircraft setVariable [QGVAR(currentUser), objNull, true];
-    [_aircraft, "blockEngine", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
     GVAR(currentAircraftNamespace) setVariable [_uid, nil, true]; // Remove var from namespace, no need to keep objNull
 };

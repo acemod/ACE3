@@ -22,4 +22,6 @@ if (GVAR(requireEngineer) && {!([_unit] call EFUNC(common,isEngineer))}) exitWit
 
 if (GVAR(requireToolkit) && {!([_unit, "ToolKit"] call EFUNC(common,hasItem))}) exitWith {false};
 
-(!isEngineOn _aircraft && {[_unit, _aircraft] call EFUNC(common,canInteractWith)})
+if ((_unit distanceSqr _aircraft) > GVAR(searchDistanceSqr)) exitWith {false};
+
+[_unit, _aircraft] call EFUNC(common,canInteractWith)
