@@ -246,7 +246,7 @@ if (_leftPanelState) then {
 
 [_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);
 
-// Add current items in those containers
+// Add current items and change progress bar
 if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
     private _container = switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonUniform : {

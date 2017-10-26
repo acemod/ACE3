@@ -4,6 +4,7 @@
 params ["_display", "_addOrRemove"];
 
 private _load = 0;
+private _maxLoad = "";
 private _items = [];
 private _ctrlList = (_display displayCtrl IDC_rightTabContentListnBox);
 private _lnbCurSel = lnbCurSelRow _ctrlList;
@@ -11,6 +12,7 @@ private _item = _ctrlList lnbData [_lnbCurSel, 0];
 
 if ((_ctrlList lnbValue [_lnbCurSel, 2]) == 1 && {_addOrRemove == 1}) exitWith {};
 
+// Update item count and currentItems array
 switch GVAR(currentLeftPanel) do {
 
     case IDC_buttonUniform : {
@@ -25,6 +27,7 @@ switch GVAR(currentLeftPanel) do {
             };
 
         _load = loadUniform GVAR(center);
+        _maxLoad = gettext (configfile >> "CfgWeapons" >> uniform GVAR(center) >> "ItemInfo" >> "containerClass");
         _items = uniformItems GVAR(center);
         GVAR(currentItems) set [15 ,_items];
     };
@@ -41,6 +44,7 @@ switch GVAR(currentLeftPanel) do {
             };
 
         _load = loadVest GVAR(center);
+        _maxLoad = gettext (configfile >> "CfgWeapons" >> vest GVAR(center) >> "ItemInfo" >> "containerClass");
         _items = vestItems GVAR(center);
         GVAR(currentItems) set [16,_items];
     };
@@ -57,13 +61,18 @@ switch GVAR(currentLeftPanel) do {
             };
 
         _load = loadBackpack GVAR(center);
+        _maxLoad = backpack GVAR(center);
         _items = backpackItems GVAR(center);
         GVAR(currentItems) set [17,_items];
     };
 };
 
-(_display displayCtrl IDC_loadIndicatorBar) progressSetPosition _load;
+// Update progress bar status, weight info
+private _loadIndicatorBarCtrl = _display displayCtrl IDC_loadIndicatorBar;
+_loadIndicatorBarCtrl progressSetPosition _load;
 (_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
 
 private _value = {_x == _item} count _items;
 _ctrlList lnbSetText [[_lnbCurSel, 2],str _value];
+
+[_ctrlList, _maxLoad] call FUNC(updateRightPanel);
