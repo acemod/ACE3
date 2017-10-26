@@ -22,19 +22,22 @@ if (GVAR(quickTag) == 0) exitWith {};
 params ["_unit"];
 
 private _possibleTags = [];
+private _useRandom = false;
 
 // Last Used
 if (GVAR(quickTag) == 1) then {
     private _lastUsedTagClass = _unit getVariable [QGVAR(lastUsedTag), nil];
 
-    if (!isNil "_lastUsedTagClass") then {
+    if (isNil "_lastUsedTagClass") then {
+        _useRandom = true;
+    } else {
         private _lastUsedTag = GVAR(cachedTags) select {(_x select 0) == _lastUsedTagClass};
         _possibleTags = _lastUsedTag;
     };
 };
 
 // Random X
-if (GVAR(quickTag == 2)) then {
+if ((GVAR(quickTag) == 2) || _useRandom) then {
     private _xTags = GVAR(cachedTags) select {(_x select 0) in ["ACE_XBlack", "ACE_XRed", "ACE_XGreen", "ACE_XBlue"]};
     _possibleTags = _xTags;
 };
