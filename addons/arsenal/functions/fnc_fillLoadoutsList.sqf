@@ -12,7 +12,7 @@ lnbClear _contentListCtrl;
 
 private _data = +(profileNamespace getvariable [QGVAR(saved_loadouts),[]]);
 
-if (ctrlIDC _control != IDC_buttonSharedLoadouts) then {
+if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
     {
         _x params ["_loadoutName", "_loadoutData"];
