@@ -148,7 +148,8 @@ if (_items isEqualType true && {_items}) then {
                                 isClass (_configItemInfo) &&
                                 ((getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302] &&
                                 {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
-                                {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]}
+                                {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]} ||
+                                {(getText (_configCfgWeapons >> _x >> "simulation")) == "ItemMineDetector"}
                             ): {
                             (_cargo select 17) pushBackUnique _x;
                         };
