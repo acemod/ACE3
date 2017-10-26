@@ -26,11 +26,13 @@ private _fnc_weaponCheck = {
                     if (isClass (_weaponCfg >> _item)) then {
                         if !(CHECK_WEAPON_OR_ACC) then {
 
+                            TRACE_1("item unavailable", _item);
                             _dataPath set [_forEachIndex, ""];
                             _unavailableItemsAmount = _unavailableItemsAmount + 1;
                         };
                     } else {
 
+                        TRACE_1("item null", _item);
                         _dataPath set [_forEachIndex, ""];
                         _nullItemsAmount = _nullItemsAmount + 1;
                     };
@@ -44,11 +46,13 @@ private _fnc_weaponCheck = {
                     if (isClass (_magCfg >> _mag)) then {
                         if !(_mag in (GVAR(virtualItems) select 2)) then {
 
+                            TRACE_1("item unavailable", _item);
                             _dataPath set [_forEachIndex, []];
                             _unavailableItemsAmount = _unavailableItemsAmount + 1;
                         };
                     } else {
 
+                        TRACE_1("item null", _item);
                         _dataPath set [_forEachIndex, []];
                         _nullItemsAmount = _nullItemsAmount + 1;
                     };
