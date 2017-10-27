@@ -2,6 +2,8 @@ cmake_minimum_required (VERSION 3.7)
 
 set(ACE_EXTENSION_NAME "ace_wind_deflection")
 
+include(${PROJECT_SOURCE_DIR}/cmake/cxx_compiler_functions.cmake)
+
 option(USE_64BIT_BUILD "USE_64BIT_BUILD" OFF)
 option(USE_STATIC_LINKING "USE_STATIC_LINKING" ON)
 
@@ -37,10 +39,10 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}ace_wind_de
 
 
 file(GLOB SOURCES *.h *.hpp *.c *.cpp)
-file(GLOB INTERCEPT_CLIENT_SOURCES  P:/z/intercept/src/client/intercept/*.h P:/z/intercept/src/client/intercept/*.hpp P:/z/intercept/src/client/intercept/*.c P:/z/intercept/src/client/intercept/*.cpp)
-file(GLOB INTERCEPT_CLIENT_MAIN_SOURCES  P:/z/intercept/src/client/intercept/client/*.h P:/z/intercept/src/client/intercept/client/*.hpp P:/z/intercept/src/client/intercept/client/*.c P:/z/intercept/src/client/intercept/client/*.cpp)
-file(GLOB INTERCEPT_CLIENT_SHARED_SOURCES  P:/z/intercept/src/client/intercept/shared/*.h P:/z/intercept/src/client/intercept/shared/*.hpp P:/z/intercept/src/client/intercept/shared/*.c P:/z/intercept/src/client/intercept/shared/*.cpp)
-file(GLOB INTERCEPT_CLIENT_SQF_SHARED_SOURCES  P:/z/intercept/src/client/intercept/client/sqf/*.h P:/z/intercept/src/client/intercept/client/sqf/*.hpp P:/z/intercept/src/client/intercept/client/sqf/*.c P:/z/intercept/src/client/intercept/client/sqf/*.cpp)
+file(GLOB INTERCEPT_CLIENT_SOURCES  P:/z/intercept/src/client/headers/*.hpp)
+file(GLOB INTERCEPT_CLIENT_MAIN_SOURCES  P:/z/intercept/src/client/headers/client/*.hpp P:/z/intercept/src/client/intercept/client/*.cpp)
+file(GLOB INTERCEPT_CLIENT_SHARED_SOURCES  P:/z/intercept/src/client/headers/shared/*.hpp P:/z/intercept/src/client/intercept/shared/*.cpp)
+file(GLOB INTERCEPT_CLIENT_SQF_SHARED_SOURCES  P:/z/intercept/src/client/headers/client/sqf/*.hpp P:/z/intercept/src/client/intercept/client/sqf/*.cpp)
 
 SOURCE_GROUP("ace_wind_deflection" FILES ${SOURCES})
 SOURCE_GROUP("intercept_includes" FILES ${INTERCEPT_CLIENT_SOURCES})
@@ -53,7 +55,10 @@ SOURCE_GROUP("intercept_includes\\client\\sqf" FILES ${INTERCEPT_CLIENT_SQF_SHAR
 
 
 add_library( ${ACE_EXTENSION_NAME} SHARED ${SOURCES} ${INTERCEPT_CLIENT_SOURCES} ${INTERCEPT_CLIENT_SOURCES} ${INTERCEPT_CLIENT_MAIN_SOURCES} ${INTERCEPT_CLIENT_SHARED_SOURCES} ${INTERCEPT_CLIENT_SQF_SHARED_SOURCES})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR} "P:/z/intercept/src/client/intercept")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} "P:/z/intercept/src/client/headers/")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} "P:/z/intercept/src/client/headers/client/")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} "P:/z/intercept/src/client/headers/shared/")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} "P:/z/intercept/src/client/headers/client/sqf/")
 
 target_link_libraries(${ACE_EXTENSION_NAME} ${LINK_LIBS})
 set_target_properties(${ACE_EXTENSION_NAME} PROPERTIES PREFIX "")
