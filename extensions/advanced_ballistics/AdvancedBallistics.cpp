@@ -551,17 +551,17 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             bulletDatabase[index].bcDegradation *= pow(0.993, coef);
         };
 
+        dragRef = -bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
+
+        accelRef[0] = (bulletDatabase[index].bulletVelocity[0] / bulletSpeed) * dragRef;
+        accelRef[1] = (bulletDatabase[index].bulletVelocity[1] / bulletSpeed) * dragRef;
+        accelRef[2] = (bulletDatabase[index].bulletVelocity[2] / bulletSpeed) * dragRef;
+
+        velocityOffset[0] += accelRef[0] * deltaT;
+        velocityOffset[1] += accelRef[1] * deltaT;
+        velocityOffset[2] += accelRef[2] * deltaT;
+
         if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
-            dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
-
-            accelRef[0] = (bulletDatabase[index].bulletVelocity[0] / bulletSpeed) * dragRef;
-            accelRef[1] = (bulletDatabase[index].bulletVelocity[1] / bulletSpeed) * dragRef;
-            accelRef[2] = (bulletDatabase[index].bulletVelocity[2] / bulletSpeed) * dragRef;
-
-            velocityOffset[0] -= accelRef[0];
-            velocityOffset[1] -= accelRef[1];
-            velocityOffset[2] -= accelRef[2];
-
             ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[0];
             for (int i = (int)bulletDatabase[index].velocityBoundaries.size() - 1; i >= 0; i = i - 1) {
                 if (trueSpeed < bulletDatabase[index].velocityBoundaries[i]) {
@@ -572,45 +572,28 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
             ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, bulletDatabase[index].humidity, bulletDatabase[index].atmosphereModel);
             ballisticCoefficient *= bulletDatabase[index].bcDegradation;
-            drag = deltaT * calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed, SPEED_OF_SOUND(temperature));
-            accel[0] = (trueVelocity[0] / trueSpeed) * drag;
-            accel[1] = (trueVelocity[1] / trueSpeed) * drag;
-            accel[2] = (trueVelocity[2] / trueSpeed) * drag;
 
-            velocityOffset[0] -= accel[0];
-            velocityOffset[1] -= accel[1];
-            velocityOffset[2] -= accel[2];
+            drag = calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed, SPEED_OF_SOUND(temperature));
         } else {
             double airDensity = calculateAirDensity(temperature, pressure, bulletDatabase[index].humidity);
             double airFriction = bulletDatabase[index].airFriction * airDensity / STD_AIR_DENSITY_ICAO;
 
-            if (airFriction != bulletDatabase[index].airFriction || windSpeed > 0) {
-                dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
-
-                accelRef[0] = (bulletDatabase[index].bulletVelocity[0] / bulletSpeed) * dragRef;
-                accelRef[1] = (bulletDatabase[index].bulletVelocity[1] / bulletSpeed) * dragRef;
-                accelRef[2] = (bulletDatabase[index].bulletVelocity[2] / bulletSpeed) * dragRef;
-
-                velocityOffset[0] -= accelRef[0];
-                velocityOffset[1] -= accelRef[1];
-                velocityOffset[2] -= accelRef[2];
-
-                drag = deltaT * airFriction * trueSpeed * trueSpeed;
-                accel[0] = (trueVelocity[0] / trueSpeed) * drag;
-                accel[1] = (trueVelocity[1] / trueSpeed) * drag;
-                accel[2] = (trueVelocity[2] / trueSpeed) * drag;
-
-                velocityOffset[0] += accel[0];
-                velocityOffset[1] += accel[1];
-                velocityOffset[2] += accel[2];
-            }
+            drag = -airFriction * trueSpeed * trueSpeed;
         }
+
+        accel[0] = (trueVelocity[0] / trueSpeed) * drag;
+        accel[1] = (trueVelocity[1] / trueSpeed) * drag;
+        accel[2] = (trueVelocity[2] / trueSpeed) * drag;
+
+        velocityOffset[0] -= accel[0] * deltaT;
+        velocityOffset[1] -= accel[1] * deltaT;
+        velocityOffset[2] -= accel[2] * deltaT;
 
         if (TOF > 0) {
             double bulletDir = atan2(bulletDatabase[index].bulletVelocity[0], bulletDatabase[index].bulletVelocity[1]);
             double driftAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / pow(TOF, 0.17);
             double driftVelocity = 0.0581025 *(bulletDatabase[index].stabilityFactor + 1.2) * pow(TOF, 0.83);
-            double dragCorrection = (driftVelocity / trueSpeed) * drag;
+            double dragCorrection = (driftVelocity / trueSpeed) * drag * deltaT;
             velocityOffset[0] += sin(bulletDir + M_PI / 2) * (driftAccel * deltaT + dragCorrection);
             velocityOffset[1] += cos(bulletDir + M_PI / 2) * (driftAccel * deltaT + dragCorrection);
         }
