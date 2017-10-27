@@ -50,9 +50,9 @@ SOURCE_GROUP("intercept_includes\\client" FILES ${INTERCEPT_CLIENT_MAIN_SOURCES}
 SOURCE_GROUP("intercept_includes\\shared" FILES ${INTERCEPT_CLIENT_SHARED_SOURCES})
 SOURCE_GROUP("intercept_includes\\client\\sqf" FILES ${INTERCEPT_CLIENT_SQF_SHARED_SOURCES})
 
-
-
-
+get_property(the_include_dirs DIRECTORY PROPERTY INCLUDE_DIRECTORIES)
+string(REPLACE "${PROJECT_SOURCE_DIR}/common" "" new_include_dirs ${the_include_dirs}) #remove ACE common include dir. Because it conflicts with Intercept "shared.hpp"
+set_property(DIRECTORY PROPERTY INCLUDE_DIRECTORIES ${new_include_dirs})
 
 add_library( ${ACE_EXTENSION_NAME} SHARED ${SOURCES} ${INTERCEPT_CLIENT_SOURCES} ${INTERCEPT_CLIENT_SOURCES} ${INTERCEPT_CLIENT_MAIN_SOURCES} ${INTERCEPT_CLIENT_SHARED_SOURCES} ${INTERCEPT_CLIENT_SQF_SHARED_SOURCES})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} "P:/z/intercept/src/client/headers/")
