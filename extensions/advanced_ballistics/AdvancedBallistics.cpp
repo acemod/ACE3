@@ -48,7 +48,6 @@ struct Bullet {
     double overcast;
     double startTime;
     double lastFrame;
-    double bcDegradation;
     unsigned randSeed;
     std::default_random_engine randGenerator;
 };
@@ -415,7 +414,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].overcast = overcast;
         bulletDatabase[index].startTime = tickTime;
         bulletDatabase[index].lastFrame = tickTime;
-        bulletDatabase[index].bcDegradation = 1.0;
         bulletDatabase[index].randSeed = 0;
 
         strncpy_s(output, outputSize, "", _TRUNCATE);
@@ -547,8 +545,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             trueVelocity[0] *= trueSpeed / speed;
             trueVelocity[1] *= trueSpeed / speed;
             trueVelocity[2] *= trueSpeed / speed;
-
-            bulletDatabase[index].bcDegradation *= pow(0.993, coef);
         };
 
         dragRef = -bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
@@ -571,7 +567,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             }
 
             ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, bulletDatabase[index].humidity, bulletDatabase[index].atmosphereModel);
-            ballisticCoefficient *= bulletDatabase[index].bcDegradation;
 
             drag = calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed, SPEED_OF_SOUND(temperature));
         } else {
