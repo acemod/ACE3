@@ -28,11 +28,14 @@ _actionData params ["_actionName", "", "", "", "", "", "", "_positionCode", "_di
 private _pos = if((count _this) > 2) then {
     _this select 2
 } else {
-    // Setup scope variables for position code
-    private _target = _object;
-
-    // Get action position
-    _object modelToWorldVisual (call _positionCode)
+    if ((_object isEqualTo GVAR(firstCursorTarget)) && {(_actionData select 0) == "ACE_MainActions"}) then {
+        _object modelToWorldVisual GVAR(firstCursorTargetPos);
+    } else {
+        // Setup scope variables for position code
+        private _target = _object;
+        // Get action position
+        _object modelToWorldVisual (call _positionCode)
+    };
 };
 
 // For non-self actions, exit if the action is too far away or ocluded

@@ -105,4 +105,12 @@ class ACE_Settings {
         description = CSTRING(menuAnimationSpeed_Description);
         values[] = {"$str_speed_normal", "2x", "3x"};
     };
+    class GVAR(moveMainInteractionToCursor) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        category = CSTRING(Category_InteractionMenu);
+        displayName = CSTRING(moveMainInteractionToCursor);
+        description = CSTRING(moveMainInteractionToCursor_Description);
+    };
 };
