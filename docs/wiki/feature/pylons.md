@@ -26,7 +26,7 @@ To configure pylons you need a `Toolkit` equipped.
 - Select `Configure Pylons`.
 - Configure your loadout in the menu that appears.
 - Press `APPLY` when done.
-- Rearm the aircraft . (See [Rearm Wiki](rearm.md))
+- Rearm the aircraft (See [Rearm Wiki](rearm.md)).
 
 ### 2.2 Managing loadouts
 
