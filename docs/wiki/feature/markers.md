@@ -15,7 +15,18 @@ version:
 ## 1. Overview
 
 ### 1.1 Improved marker placement
+
 Expands the "Insert Marker" menu and allows to rotate map markers. Shows the currently selected channel to prevent misplacement.
+
+### 1.2 Moveable map markers
+
+Adds the ability to move map markers after they are placed. (Note: Must be enabled in `Markers` module)
+
+## 2. Usage
+
+### 2.1 Moving map markers
+
+- To move a marker hold down <kbd>Alt</kbd> and <kbd>Left Mouse Btn</kbd> on marker and move. 
 
 ## 2. Dependencies
 
