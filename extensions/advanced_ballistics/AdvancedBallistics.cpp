@@ -322,6 +322,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "new")) {
         unsigned int index = 0;
+        unsigned int ammoCount = 0;
         double airFriction = 0.0;
         char* ballisticCoefficientArray;
         char* ballisticCoefficient;
@@ -348,6 +349,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double tickTime = 0.0;
 
         index = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
+        ammoCount = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
         airFriction = strtod(strtok_s(NULL, ":", &next_token), NULL);
         ballisticCoefficientArray = strtok_s(NULL, ":", &next_token);
         ballisticCoefficientArray++;
@@ -415,20 +417,12 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].overcast = overcast;
         bulletDatabase[index].startTime = tickTime;
         bulletDatabase[index].lastFrame = tickTime;
-
-        int angle = (int)round(atan2(bulletDatabase[index].bulletVelocity[0], bulletDatabase[index].bulletVelocity[1]) * 360 / M_PI);
-        bulletDatabase[index].randSeed = (unsigned)(720 + angle) % 720;
-        bulletDatabase[index].randSeed *= 3;
-        bulletDatabase[index].randSeed += (unsigned)round(abs(bulletDatabase[index].bulletVelocity[2]) / 2);
-        bulletDatabase[index].randSeed *= 3;
-        bulletDatabase[index].randSeed += (unsigned)round(abs(bulletDatabase[index].origin[0] / 2));
-        bulletDatabase[index].randSeed *= 3;
-        bulletDatabase[index].randSeed += (unsigned)round(abs(bulletDatabase[index].origin[1] / 2));
-        bulletDatabase[index].randSeed *= 3;
-        bulletDatabase[index].randSeed += (unsigned)abs(bulletDatabase[index].temperature) * 10;
-        bulletDatabase[index].randSeed *= 3;
-        bulletDatabase[index].randSeed += (unsigned)abs(bulletDatabase[index].humidity) * 10;
-        bulletDatabase[index].randGenerator.seed(bulletDatabase[index].randSeed);
+        if (transonicStabilityCoef < 1) {
+            unsigned int k1 = (unsigned)round(tickTime / 2);
+            unsigned int k2 = ammoCount;
+            bulletDatabase[index].randSeed = 0.5 * (k1 + k2) * (k1 + k2 + 1) + k2;
+            bulletDatabase[index].randGenerator.seed(bulletDatabase[index].randSeed);
+        }
 
         strncpy_s(output, outputSize, "", _TRUNCATE);
         EXTENSION_RETURN();
