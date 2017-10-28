@@ -22,7 +22,7 @@ Allow players to gesture/point on their map.
 
 ### 2.1 Gesturing on map
 
-- To gesture on map press and hold <kbd>Left Mouse Btn</kbd>.
+- To gesture on map hold <kbd>Left Mouse Btn</kbd>.
 
 ## 2. Dependencies
 
