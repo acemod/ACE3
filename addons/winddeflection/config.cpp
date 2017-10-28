@@ -25,3 +25,12 @@ class CfgAddons {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+
+
+class Intercept {
+    class ACE {
+        class wind_deflection {
+            pluginName = "ace_wind_deflection";
+        };
+    };
+};

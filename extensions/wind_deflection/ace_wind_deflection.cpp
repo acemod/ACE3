@@ -1,54 +1,31 @@
 /*
  * ace_wind_deflection.cpp
- * Author: NouberNou
- * Implements basic wind deflection using the intercept binding
- *
- * Takes:
- * None
- *
- * Returns:
- * None
+ * Author: Dedmen
+ * Implements basic wind deflection using Intercept
  */
-#include <windows.h>
-//#include "intercept.hpp"
+#include "bulletTracker.hpp"
 
-#define PI 3.14159265f
+int __cdecl intercept::api_version() {
+    return 1;
+}
 
-#define DEG(x) (x * 180.0f / PI)
-#define RAD(x) (x / 180.0f * PI)
+static client::EHIdentifierHandle handleFiredCallbackHandle;
+static bulletTracker tracker;
 
- //using namespace intercept;
- ////using namespace ace::wind_deflection;
- //
- //int __cdecl intercept::api_version() {
- //    return 1;
- //}
- //
- //void __cdecl intercept::on_frame() {
- // 
- //}
- //
- //
- //void __cdecl intercept::post_init() {
- //
- //}
- //
- //void __cdecl intercept::mission_stopped() {
- //
- //}
+void intercept::post_start() {
+    sqf::set_variable(sqf::ui_namespace(), "ace_winddeflection_interceptPlugin", sqf::compile_final("true"));
+    tracker.init();
+}
 
+void intercept::pre_init() {
+    tracker.missionEnded(); //intercept::mission_stopped eventhandler wasn't reliable when writing this. This works fine.
+    auto[handleFiredCode, handleFiredHandle] = client::generate_custom_callback([](game_value args) -> game_value {
+        tracker.handleFired(args);
+        return {};//ret nil
+    });
+    handleFiredCallbackHandle = handleFiredHandle;
 
-BOOL APIENTRY DllMain(HMODULE hModule,
-    DWORD  ul_reason_for_call,
-    LPVOID lpReserved
-    )
-{
-    switch (ul_reason_for_call)
-    {
-    case DLL_PROCESS_ATTACH:
-    case DLL_THREAD_ATTACH:
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH: break;
-    }
-    return TRUE;
+    sqf::set_variable(sqf::mission_namespace(), "ace_winddeflection_fnc_handleFired", sqf::compile_final(handleFiredCode));
+    sqf::set_variable(sqf::mission_namespace(), "ace_winddeflection_fnc_updateTrajectoryPFH", sqf::compile_final("true"));//We take care of that.
+    tracker.preInit();
 }
