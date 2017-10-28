@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team
- * Updates GVAR(currentTemperature) based on the map data
+ * Smoothly updates GVAR(currentTemperature) based time of day and map data
  *
  * Arguments:
  * None
@@ -14,6 +14,8 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+if (!GVAR(enabled)) exitWith { GVAR(currentTemperature) = 15 };
 
 private _time = daytime;
 private _month = date select 1;

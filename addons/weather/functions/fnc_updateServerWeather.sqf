@@ -1,5 +1,5 @@
 /*
- * Author: ACE2 Team, esteldunedain, ruthberg
+ * Author: ACE2 Team, esteldunedain, Ruthberg
  * Updates the wind and rain evolution on the server. Broadcasts the current and next values to the clients where needed.
  *
  * Arguments:
@@ -9,11 +9,15 @@
  * None
  *
  * Example:
- * [] call ace_weather_fnc_updateAceWeather
+ * [] call ace_weather_fnc_updateServerWeather
  *
  * Public: No
  */
 #include "script_component.hpp"
+
+if (!GVAR(enabled)) exitWith {
+    missionNamespace setVariable [QGVAR(currentOvercast), 0, true];
+};
 
 private _overcastMultiplier = 1 max (2* overcast) min 2; // 0 (@ overcast 0), 2 (@ overcast 1)
 
@@ -23,36 +27,35 @@ if (GVAR(rain_period_count) > GVAR(rain_next_period)) then {
     GVAR(rain_next_period) = ceil((1 + (random 10)) / _overcastMultiplier);
     GVAR(rain_period_count) = 0;
 
-    private _lastRain = GVAR(current_rain);
+    GVAR(last_rain) = GVAR(next_rain);
     private _rainOverCast = 0;
 
     if (overcast >= 0.7) then {
         _rainOverCast = (overcast - 0.7) / 0.3;
-        if (GVAR(current_rain) == 0) then {
+        if (GVAR(next_rain) == 0) then {
             // Initialize rain with a random strength depending on the current overcast value
-            GVAR(current_rain) = -0.25 + (random 0.75) + (random 0.5) * _rainOverCast;
+            GVAR(next_rain) = -0.25 + (random 0.75) + (random 0.5) * _rainOverCast;
         };
 
-        GVAR(current_rain) = GVAR(current_rain) + GVAR(current_rain) * ((_rainOverCast * _overcastMultiplier) / 8) * GVAR(rain_current_range);
-        GVAR(current_rain) = 0 max GVAR(current_rain) min 1;
+        GVAR(next_rain) = GVAR(next_rain) + GVAR(next_rain) * ((_rainOverCast * _overcastMultiplier) / 8) * GVAR(rain_current_range);
+        GVAR(next_rain) = 0 max GVAR(next_rain) min 1;
 
         GVAR(rain_current_range) = -1 + (random 2);
     } else {
         _rainOverCast = 1;
 
-        GVAR(current_rain) = 0;
+        GVAR(next_rain) = 0;
     };
 
-    private _transitionTime = 1 + (_rainOverCast * 5) + (random (_rainOverCast * 20));
-
-    ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
-    TRACE_4("",_lastRain,_rainOverCast,_transitionTime,overcast);
-
-    GVAR(rain_period_start_time) = CBA_missionTime;
+    GVAR(rain_transition_time) = 1 + (_rainOverCast * 5) + (random (_rainOverCast * 20));
+    
+    GVAR(rain_transition_time) setRain GVAR(next_rain);
+    
+    TRACE_6("",GVAR(last_rain),rain,GVAR(next_rain),GVAR(rain_transition_time),_rainOverCast,overcast);
 };
 
 // Wind simulation
-if (GVAR(syncWind) && {GVAR(wind_period_count) > GVAR(wind_next_period)}) then {
+if (GVAR(wind_period_count) > GVAR(wind_next_period)) then {
 
     GVAR(wind_next_period) = ceil((2 + (random 5)) / _overcastMultiplier);
     GVAR(wind_period_count) = 0;
@@ -80,28 +83,19 @@ if (GVAR(syncWind) && {GVAR(wind_period_count) > GVAR(wind_next_period)}) then {
         _windSpeedChange = _windSpeed - GVAR(current_wind_speed);
     };
 
-    private _transitionTime = GVAR(wind_next_period) * GVAR(serverUpdateInterval);
+    private _transitionTime = GVAR(wind_next_period) * GVAR(updateInterval);
 
     TRACE_5("dirCur/dirNew/spdCur/spdNew/period",GVAR(current_wind_direction),_windDirection,GVAR(current_wind_speed),_windSpeed,_transitionTime);
 
-    ACE_WIND_PARAMS = [GVAR(current_wind_direction),
-    _windDirectionChange,
-    GVAR(current_wind_speed),
-    _windSpeedChange,
-    _transitionTime];
+    ACE_WIND_PARAMS = [GVAR(current_wind_direction), _windDirectionChange, GVAR(current_wind_speed), _windSpeedChange, _transitionTime, CBA_missionTime];
 
     GVAR(current_wind_direction) = _windDirection;
     GVAR(current_wind_speed) = _windSpeed;
 
-    GVAR(wind_period_start_time) = CBA_missionTime;
     publicVariable "ACE_WIND_PARAMS";
 };
 
-
-if (GVAR(syncMisc)) then {
-    ACE_MISC_PARAMS = [overcast, rainbow, fogParams, GVAR(temperatureShift), GVAR(badWeatherShift), GVAR(humidityShift)];
-    publicVariable "ACE_MISC_PARAMS";
-};
+missionNamespace setVariable [QGVAR(currentOvercast), overcast, true];
 
 GVAR(rain_period_count) = GVAR(rain_period_count) + 1;
 GVAR(wind_period_count) = GVAR(wind_period_count) + 1;

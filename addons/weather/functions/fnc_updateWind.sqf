@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team, Ruthberg
- * Updates wind, gusts and waves based on ACE_wind
+ * Smoothly updates ACE_wind based on the server weather
  *
  * Arguments:
  * None
@@ -15,21 +15,26 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(syncWind)) exitWith { ACE_wind = wind };
+if (!GVAR(enabled)) exitWith { ACE_wind = wind };
+if (isNil "ACE_WIND_PARAMS") exitWith { ACE_wind = wind };
 
-ACE_wind = [] call FUNC(getWind);
+ACE_WIND_PARAMS params ["_dir", "_dirChange", "_spd", "_spdChange", "_period", "_wind_period_start_time"];
 
-// setWind correctly replicates to clients
-if (isServer) then {
-    setWind [ACE_wind select 0, ACE_wind select 1, true];
-};
+private _periodPosition = (CBA_missionTime - _wind_period_start_time) min _period;
+private _periodPercent = _periodPosition / _period;
 
-2 setGusts 0;
+_spd = _spd + _spdChange * _periodPercent;
+_dir = _dir + _dirChange * _periodPercent;
 
-// Set waves: 0 when no wind, 1 when wind >= 16 m/s
-private _newWaves = ((vectorMagnitude ACE_wind) / 16.0) min 1.0;
-if (abs(_newWaves - waves) > 0.1) then {
-    1 setWaves _newWaves;
-};
+_dir = (360 + _dir) % 360;
 
-TRACE_3("Wind/ACE_wind/Deviation(m/s)",wind,ACE_wind,Round((vectorMagnitude (ACE_wind vectorDiff wind)) * 1000) / 1000);
+TRACE_1("PeriodStartTime",Round(_wind_period_start_time));
+TRACE_2("Dir: Current/Change",Round(_dir),Round(_dirChange));
+TRACE_2("Spd: Current/Change",_spd toFixed 1,_spdChange toFixed 1);
+TRACE_3("Period/Position/Percent",Round(_period),Round(_periodPosition),_periodPercent toFixed 2);
+
+// TODO: Add some deterministic noise
+
+ACE_wind = [-_spd * sin(_dir), -_spd * cos(_dir), 0];
+
+TRACE_3("Wind/ACE_wind/Deviation(m/s)",wind,ACE_wind,(ACE_wind vectorDistance wind) toFixed 1);

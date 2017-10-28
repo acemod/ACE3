@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team
- * Updates GVAR(currentHumidity)
+ * Smoothly updates GVAR(currentHumidity) based time of day and map data
  *
  * Arguments:
  * None
@@ -14,6 +14,8 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+if (!GVAR(enabled)) exitWith { GVAR(currentHumidity) = 0 };
 
 private _month = date select 1;
 

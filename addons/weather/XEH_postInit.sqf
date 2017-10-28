@@ -1,29 +1,5 @@
 #include "script_component.hpp"
 
-// Randomization
-GVAR(temperatureShift) = 3 - random 6;
-GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
-GVAR(humidityShift) = (5 - random 10) / 100;
-
-GVAR(wind_period_start_time) = CBA_missionTime;
-
-"ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = CBA_missionTime; };
-if (!isServer) then {
-    "ACE_MISC_PARAMS" addPublicVariableEventHandler {
-        TRACE_1("MISC PARAMS PVEH",ACE_MISC_PARAMS);
-        GVAR(currentOvercast) = (ACE_MISC_PARAMS select 0);
-        if (GVAR(syncMisc)) then {
-            30 setRainbow    (ACE_MISC_PARAMS select 1);
-            30 setFog        (ACE_MISC_PARAMS select 2);
-        };
-        GVAR(temperatureShift) = (ACE_MISC_PARAMS select 3);
-        GVAR(badWeatherShift)  = (ACE_MISC_PARAMS select 4);
-        GVAR(humidityShift)    = (ACE_MISC_PARAMS select 5);
-        call FUNC(updateTemperature);
-        call FUNC(updateHumidity);
-    };
-};
-
 GVAR(WindInfo) = false;
 ["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKeyToggle),
 {
@@ -52,24 +28,21 @@ GVAR(WindInfo) = false;
 
 simulWeatherSync;
 
-
-
-
 ["ace_settingsInitialized",{
-    // Create a 1 sec delay PFEH to update wind/temp/humidity
-    GVAR(nextUpdateTempAndHumidity) = 0;
+    TRACE_2("ace_settingsInitialized eh",GVAR(updateInterval),GVAR(enabled));
+    
+    // Create a 1 sec delay PFH to update wind
     [{
-        BEGIN_COUNTER(weatherPFEH);
-
-        [] call FUNC(updateWind); //Every 1 second
-
-        if (CBA_missionTime >= GVAR(nextUpdateTempAndHumidity)) then {
-            [] call FUNC(updateTemperature); //Every 20 seconds
-            [] call FUNC(updateHumidity); //Every 20 seconds
-            GVAR(nextUpdateTempAndHumidity) = 20 + CBA_missionTime;
+        [] call FUNC(updateWind);
+        if (isMultiplayer && isServer && GVAR(enabled)) then {
+            // Initiate (vanilla) wind update
+            setWind [ACE_wind select 0, ACE_wind select 1, true];
         };
-
-        END_COUNTER(weatherPFEH);
-    }, 1, []] call CBA_fnc_addPerFrameHandler;
+    }, 1] call CBA_fnc_addPerFrameHandler;
+    
+    [{
+        [] call FUNC(updateTemperature);
+        [] call FUNC(updateHumidity);
+    }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;
 
 }] call CBA_fnc_addEventHandler;
