@@ -27,5 +27,4 @@ void intercept::pre_init() {
 
     sqf::set_variable(sqf::mission_namespace(), "ace_winddeflection_fnc_handleFired", sqf::compile_final(handleFiredCode));
     sqf::set_variable(sqf::mission_namespace(), "ace_winddeflection_fnc_updateTrajectoryPFH", sqf::compile_final("true"));//We take care of that.
-    tracker.preInit();
 }
