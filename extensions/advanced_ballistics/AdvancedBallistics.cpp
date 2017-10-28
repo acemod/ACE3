@@ -10,7 +10,7 @@
 
 #define DT_ZERO 0.02
 #define DT_SIMULATION 0.005
-#define GRAVITY 9.80665f
+#define GRAVITY 9.8066f
 #define DEGREES(X) (X * 180 / M_PI)
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
 #define KELVIN(t) (t - ABSOLUTE_ZERO_IN_CELSIUS)
