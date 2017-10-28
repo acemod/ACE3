@@ -17,13 +17,13 @@ class CfgWeapons {
 
     class GM6_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
     };
 
     class LRR_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.00020; // radians. Equal to 0.70 MOA.
+            dispersion = MOA_TO_RAD(0.7);
         };
     };
 
@@ -40,59 +40,59 @@ class CfgWeapons {
     
     class DMR_06_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
     };
 
     class DMR_05_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
     };
 
     class DMR_04_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
     };
 
     class DMR_03_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.00032; // radians. Equal to 1.10 MOA.
+            dispersion = MOA_TO_RAD(1.1);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = 0.00032; // radians. Equal to 1.10 MOA.
+            dispersion = MOA_TO_RAD(1.1);
         };
     };
 
     class DMR_02_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.000262; // radians. Equal to 0.90 MOA.
+            dispersion = MOA_TO_RAD(0.9);
         };
     };
 
     class DMR_01_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.0004; // radians. Equal to 1.375 MOA.
+            dispersion = MOA_TO_RAD(1.375);
         };
     };
 
     class EBR_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+            dispersion = MOA_TO_RAD(1.0);
         };
     };
 
@@ -127,11 +127,11 @@ class CfgWeapons {
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 457.2;
         class Single: Single {
-            dispersion = 0.000436; // radians. Equal to 1.50 MOA.
+            dispersion = MOA_TO_RAD(1.5);
         };
 
         class FullAuto: FullAuto {
-            dispersion = 0.000436; // radians. Equal to 1.50 MOA.
+            dispersion = MOA_TO_RAD(1.5);
         };
     };
 
@@ -206,15 +206,15 @@ class CfgWeapons {
     class SDAR_base_F: Rifle_Base_F {
         initSpeed = -1.211;
         class Single: Mode_SemiAuto {
-            dispersion = 0.0008727; // radians. Equal to 3 MOA.
+            dispersion = MOA_TO_RAD(3.0);
         };
 
         class Burst: Mode_Burst {
-            dispersion = 0.0008727; // radians. Equal to 3 MOA.
+            dispersion = MOA_TO_RAD(3.0);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = 0.0008727; // radians. Equal to 3 MOA.
+            dispersion = MOA_TO_RAD(3.0);
         };
     };
 
