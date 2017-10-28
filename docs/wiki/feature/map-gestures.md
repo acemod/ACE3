@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Map Gestures
-description: Allow players to gesture on map for other in close proximity to see.
+description: Allow players to gesture on map.
 group: feature
 category: interaction
 parent: wiki
@@ -16,7 +16,7 @@ version:
 
 ### 1.1 Map gestures
 
-Allow players to gesture/point on their map for others in close proximity to see.
+Allow players to gesture/point on their map.
 
 ## 2. Usage
 
