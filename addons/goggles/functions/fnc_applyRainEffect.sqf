@@ -15,13 +15,11 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_fnc_underCover"];
-
-_unit = ACE_player;
+private _unit = ACE_player;
 
 if (!alive _unit) exitWith {};
 
-_fnc_underCover = {
+private _fnc_underCover = {
     params ["_unit"];
 
     if (vehicle _unit != _unit && {!isTurnedOut _unit}) exitWith {true};

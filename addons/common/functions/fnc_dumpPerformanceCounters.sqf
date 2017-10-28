@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_common_fnc_dumpPerformanceCounters
+ *
  * Public: No
  */
 #include "script_component.hpp"

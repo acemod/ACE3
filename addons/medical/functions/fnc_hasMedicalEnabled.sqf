@@ -1,4 +1,3 @@
-
 /*
  * Author: Glowbal
  * Check if unit has CMS enabled
@@ -14,6 +13,7 @@
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 params ["_unit"];

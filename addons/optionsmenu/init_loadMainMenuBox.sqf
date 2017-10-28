@@ -13,17 +13,47 @@
  *
  * Public: No
  */
+#include "\a3\ui_f\hpp\defineResinclDesign.inc"
 #include "script_component.hpp"
+
+params ["_display"];
+private _controlsGroup = _display displayCtrl IDC_MAIN_INFO;
 
 //Need to load from profileNamespace because ace_settings might not be init if world = empty
 if (profileNamespace getVariable [QGVAR(showNewsOnMainMenu), true]) then {
-    ((_this select 0) displayCtrl 80090) ctrlShow true;
+    _controlsGroup ctrlShow true;
 
-    private _ace3VersionStr = (getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr")) select [0,5];
-    ((_this select 0) displayCtrl 80094) ctrlSetText format ["Version: %1", _ace3VersionStr];
-    ((_this select 0) displayCtrl 80095) htmlLoad "http://ace3mod.com/version.html";
+    private _fnc_onSetFocus = {
+        params ["_control"];
+        private _controlsGroup = ctrlParentControlsGroup _control;
+
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND) ctrlSetTextColor [1,1,1,1];
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND_ICON) ctrlSetTextColor [1,1,1,1];
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_ICON) ctrlSetTextColor [0,0,0,1];
+    };
+
+    private _fnc_onKillFocus = {
+        params ["_control"];
+        private _controlsGroup = ctrlParentControlsGroup _control;
+
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND) ctrlSetTextColor [0,0,0,0.75];
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND_ICON) ctrlSetTextColor [0,0,0,0.75];
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_ICON) ctrlSetTextColor [1,1,1,0.5];
+    };
+
+    (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BUTTON) ctrlAddEventHandler ["MouseEnter", _fnc_onSetFocus];
+    (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BUTTON) ctrlAddEventHandler ["SetFocus", _fnc_onSetFocus];
+    (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BUTTON) ctrlAddEventHandler ["MouseExit", _fnc_onKillFocus];
+    (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BUTTON) ctrlAddEventHandler ["KillFocus", _fnc_onKillFocus];
+
+    private _versionStr = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr") splitString ".";
+    _versionStr resize 3; // MAJOR, MINOR, PATCH
+    _versionStr = _versionStr joinString ".";
+
+    (_display displayCtrl IDC_MAIN_INFO_CURRENT_VERSION_INFO) ctrlSetText format ["Version: %1", _versionStr];
+    (_display displayCtrl IDC_MAIN_INFO_NEWEST_VERSION_INFO) htmlLoad "https://ace3mod.com/version.html";
 } else {
-    ((_this select 0) displayCtrl 80090) ctrlShow false;
+    _controlsGroup ctrlShow false;
 };
 
 /*

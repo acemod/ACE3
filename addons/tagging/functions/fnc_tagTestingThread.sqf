@@ -27,12 +27,13 @@ GVAR(tagsToTest) = GVAR(tagsToTest) select {
     private _intersections = lineIntersectsSurfaces [_tagPosASL, _endPosASL, _tag, objNull, true, 1, "GEOM", "FIRE"];
 
     // If there's no intersections
-    if (_intersections isEqualTo []) exitWith {
+    if (_intersections isEqualTo []) then {
         TRACE_1("No intersections, deleting:",_tag);
         deleteVehicle _tag;
         false
+    } else {
+        true
     };
-    true
 };
 
 // If there's no more tag

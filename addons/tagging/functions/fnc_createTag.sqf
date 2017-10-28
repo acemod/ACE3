@@ -28,9 +28,8 @@ if (_texture == "") exitWith {
     false
 };
 
-private _tag = "UserTexture1m_F" createVehicle [0,0,0];
+private _tag = createSimpleObject ["UserTexture1m_F", _tagPosASL];
 _tag setObjectTextureGlobal [0, _texture];
-_tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
 // Throw a global event for mision makers

@@ -18,11 +18,9 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private ["_nearObjects", "_return"];
+private _nearObjects = nearestObjects [_unit, ["Air", "LandVehicle", "Slingload_base_F"], 20];
 
-_nearObjects = nearestObjects [_unit, ["Air","LandVehicle"], 20];
-
-_return = false;
+private _return = false;
 {
     if ([_x] call FUNC(isRepairVehicle)) exitWith {_return = true;};
 } forEach _nearObjects;

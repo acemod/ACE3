@@ -13,6 +13,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "weapon", "muzzle", "ammo", "magazine", bullet] call ace_overheating_fnc_overheat
+ *
  * Public: No
  */
 #include "script_component.hpp"

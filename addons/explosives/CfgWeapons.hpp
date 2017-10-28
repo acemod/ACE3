@@ -1,8 +1,17 @@
 class CfgWeapons {
-    class ACE_ItemCore;
-    class InventoryItem_Base_f;
+    class Default;
+    class Put: Default {
+        muzzles[] += {QGVAR(muzzle)};
+        class PutMuzzle: Default{};
+        class GVAR(muzzle): PutMuzzle {
+            magazines[] = {"ACE_FlareTripMine_Mag"};
+        };
+    };
 
-    class ACE_ExplosiveItem: InventoryItem_Base_f {
+    class ACE_ItemCore;
+    class CBA_MiscItem_ItemInfo;
+
+    class ACE_ExplosiveItem: CBA_MiscItem_ItemInfo {
         allowedSlots[] = {801,701,901};
         //type = 201;
     };

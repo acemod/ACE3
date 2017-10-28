@@ -8,7 +8,10 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleZeusSettings
  *
  * Public: No
  */

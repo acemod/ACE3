@@ -9,16 +9,14 @@
  * Is surface taggable <BOOL>
  *
  * Example:
- * [unit] call ace_tagging_fnc_checkTaggable
+ * [player] call ace_tagging_fnc_checkTaggable
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_unit"];
-
-[[_unit], {
+[_this, {
     params ["_unit"];
 
     // Exit if no required item in inventory
@@ -45,15 +43,11 @@ params ["_unit"];
         if (_object isKindOf "Static") exitWith {false};
 
         // If the class is not categorized correctly search the cache
-        private _array = str(_object) splitString " ";
-        private _str = toLower (_array select 1);
-        TRACE_1("Object:",_str);
-        private _objClass = GVAR(cacheStaticModels) getVariable _str;
+        private _modelName = (getModelInfo _object) select 0;
+        private _isStatic = GVAR(cacheStaticModels) getVariable [_modelName, false];
+        TRACE_2("Object:",_modelName,_isStatic);
         // If the class in not on the cache, exit
-        if (isNil "_objClass") exitWith {
-            false
-        };
-        true
+        (!_isStatic)
     }) exitWith {
         TRACE_1("Pointed object is non static",_object);
         false

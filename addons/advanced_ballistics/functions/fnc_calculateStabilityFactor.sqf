@@ -15,6 +15,9 @@
  * Return Value:
  * stability factor <NUMBER>
  *
+ * Example:
+ * [1, 2, 3, 4, 5, 6, 7] call ace_advanced_ballistics_fnc_calculateStabilityFactor
+ *
  * Public: No
  */
 #include "script_component.hpp"

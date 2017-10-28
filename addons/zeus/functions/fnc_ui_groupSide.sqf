@@ -6,10 +6,10 @@
  * 0: groupSide controls group <CONTROL>
  *
  * Return Value:
- * NONE <NIL>
+ * None
  *
  * Example:
- * onSetFocus = "_this call ace_zeus_fnc_ui_groupSide"
+ * [CONTROL] call ace_zeus_fnc_ui_groupSide
  *
  * Public: No
  */
@@ -17,14 +17,12 @@
 #include "script_component.hpp"
 #define IDCs [31201,31200,31202,31203]
 
-disableSerialization;
-
 params ["_control"];
 
 //Generic Init:
-private _display = ctrlparent _control;
-private _ctrlButtonOK = _display displayctrl 1; //IDC_OK
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+private _display = ctrlParent _control;
+private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("logicObject",_logic);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
@@ -38,7 +36,7 @@ private _fnc_errorAndClose = {
     params ["_msg"];
     _display closeDisplay 0;
     deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
+    [_msg] call FUNC(showMessage);
     breakOut "Main";
 };
 

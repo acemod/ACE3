@@ -16,6 +16,8 @@
  */
 #include "script_component.hpp"
 
+#define ALERT_NEAR_ENEMY_RANGE 60
+
 #define PARTICLE_LIFE_TIME 2
 #define PARTICLE_DENSITY 20
 #define PARTICLE_SIZE 1
@@ -32,11 +34,28 @@
 #define ORIENTATION 5.4
 #define EXPANSION 1
 
-params ["_projectile", "_timeToLive"];
+params ["_projectile", "_timeToLive", "_center"];
 
 if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
 
 private _position = position _projectile;
+
+// --- AI
+private _nearLocalEnemies = [];
+
+{
+    {
+        if (local _x && {[_center, side _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECTS SIDE HERE!
+            _nearLocalEnemies pushBackUnique _x;
+        };
+    } forEach crew _x;
+} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE);
+
+{
+    if (behaviour _x in ["SAFE", "AWARE"]) then {
+        _x setBehaviour "COMBAT";
+    };
+} forEach _nearLocalEnemies;
 
 // --- fire
 private _fire = "#particlesource" createVehicleLocal _position;

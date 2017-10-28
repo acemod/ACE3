@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Is in medical facility <BOOL>
  *
  * Example:

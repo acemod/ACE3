@@ -3,10 +3,10 @@
  * Updates wind, gusts and waves based on ACE_wind
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_weather_fnc_updateWind
@@ -18,7 +18,12 @@
 if (!GVAR(syncWind)) exitWith { ACE_wind = wind };
 
 ACE_wind = [] call FUNC(getWind);
-setWind [ACE_wind select 0, ACE_wind select 1, true];
+
+// setWind correctly replicates to clients
+if (isServer) then {
+    setWind [ACE_wind select 0, ACE_wind select 1, true];
+};
+
 2 setGusts 0;
 
 // Set waves: 0 when no wind, 1 when wind >= 16 m/s

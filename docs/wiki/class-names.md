@@ -73,6 +73,19 @@ Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
 ACE_CableTie | cable tie |  ACE_ItemCore |
 
+### Chemlights
+`Added in 3.7.0`
+
+Class Name | In-Game Name | Type   |
+---------- | --------- | ---------
+ACE_Chemlight_HiOrange | Chemlight (Hi Orange) | Throwable |
+ACE_Chemlight_HiRed | Chemlight (Hi Red) | Throwable |
+ACE_Chemlight_HiYellow | Chemlight (Hi Yellow) | Throwable |
+ACE_Chemlight_HiWhite | Chemlight (Hi White) | Throwable |
+ACE_Chemlight_Orange | Chemlight (Orange) | Throwable |
+ACE_Chemlight_White | Chemlight (White) | Throwable |
+ACE_Chemlight_IR | Chemlight (IR) | Throwable |
+
 ### Common
 `Added in 3.0.0`
 
@@ -131,6 +144,7 @@ ACE_HandFlare_White | M127A1 Hand Held Signal (White) | Grenade |
 ACE_HandFlare_Red | M127A1 Hand Held Signal (Red | Grenade |
 ACE_HandFlare_Green | M127A1 Hand Held Signal (Green) | Grenade |
 ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
+ACE_M14 | AN-M14 Incendiary Grenade | Grenade |
 ACE_M84 | M84 Stun Grenade | Grenade |
 
 ### Gun Bag
@@ -339,6 +353,7 @@ Class Name | In-Game Name | Type |
 ACE_SpottingScope | Spotting Scope | ACE_ItemCore |
 ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon |
 
+
 ### Tactical Ladder
 `Added in 3.1.1`
 
@@ -352,10 +367,10 @@ ACE_Tactical_Ladder | Telescopic Ladder (placed) | house |
 
 Class Name | In-Game Name | Type |
 ---------- | --------- | ---------
-ACE_SpraypaintBlack | Spraypaint Black | ACE_ItemCore |
-ACE_SpraypaintBlue | Spraypaint Blue | ACE_ItemCore |
-ACE_SpraypaintGreen | Spraypaint Green | ACE_ItemCore |
-ACE_SpraypaintRed | Spraypaint Red | ACE_ItemCore |
+ACE_SpraypaintBlack | Black spray paint | ACE_ItemCore |
+ACE_SpraypaintBlue | Blue spray paint | ACE_ItemCore |
+ACE_SpraypaintGreen | Green spray paint | ACE_ItemCore |
+ACE_SpraypaintRed | Red spray paint | ACE_ItemCore |
 
 ### Trenches
 `Added in 3.5.0`

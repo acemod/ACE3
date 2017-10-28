@@ -31,6 +31,7 @@ private _totalWeight = 0;
     } forEach _item;
     true
 } count [
+    //IGNORE_PRIVATE_WARNING ["_x"];
     [getMagazineCargo _object, {configFile >> "CfgMagazines" >> _x}],
     [getBackpackCargo _object, {configFile >> "CfgVehicles" >> _x}],
     [getItemCargo _object, {configFile >> "CfgWeapons" >> _x >> "ItemInfo"}],
