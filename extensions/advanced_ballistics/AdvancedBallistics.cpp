@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <random>
 #include <cmath>
+#include <sstream>
 
 #define DELTA_T 0.02f
 #define GRAVITY 9.80665f
