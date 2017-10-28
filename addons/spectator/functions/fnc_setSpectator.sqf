@@ -110,7 +110,7 @@ if (alive player) then {
     [player, _hidden, QGVAR(isSet), side group player] call EFUNC(common,switchToGroupSide);
 
     // Ghosts can't talk
-    if (_set) then {
+    if (_hidden) then {
         [player, QGVAR(isSet)] call EFUNC(common,hideUnit);
         [player, QGVAR(isSet)] call EFUNC(common,muteUnit);
     } else {
