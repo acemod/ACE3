@@ -37,6 +37,20 @@ private _vertical = _display displayCtrl 12;
 private _horizontal = _display displayCtrl 13;
 _vertical ctrlSetText (str _elevation);
 _horizontal ctrlSetText (str _windage);
+if (_elevation >= 0) then {
+    _vertical ctrlSetText Str(_elevation);
+} else {
+    _vertical ctrlSetText format["%1D", abs(_elevation)];
+};
+if (_windage == 0) then {
+    _horizontal ctrlSetText "0";
+} else {
+    if (_windage > 0) then {
+        _horizontal ctrlSetText format["%1R", abs(_windage)];
+    } else {
+        _horizontal ctrlSetText format["%1L", abs(_windage)];
+    };
+};
 
 // Set the time when to hide the knobs
 GVAR(timeToHide) = diag_tickTime + 3.0;

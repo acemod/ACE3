@@ -60,7 +60,7 @@ class RscTitles {
                 colorBackground[] = { 1, 0, 0, 0 };
                 shadow = 0;
 
-                x = (0.5 - 0.4 / 2 + 0.6*0.4) * safezoneW + safezoneX;
+                x = (0.5 - 0.4 / 2 + 0.595*0.4) * safezoneW + safezoneX;
                 y = (0 + 0.47*0.3) * safezoneH + safezoneY;
                 w = 0.04 * safezoneW;
                 h = 0.025 * safezoneH;
