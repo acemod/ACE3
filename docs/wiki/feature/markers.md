@@ -22,11 +22,15 @@ Expands the "Insert Marker" menu and allows to rotate map markers. Shows the cur
 
 Adds the ability to move map markers after they are placed. (Note: Must be enabled in `Markers` module)
 
+
 ## 2. Usage
 
 ### 2.1 Moving map markers
 
-- To move a marker hold down <kbd>Alt</kbd> and <kbd>Left Mouse Btn</kbd> on marker and move. 
+- To move a marker hold down <kbd>Alt</kbd> and <kbd>Left Mouse Btn</kbd> on marker and move.
+
+Note: does not work in Editor. Conflict with vanilla teleport.
+
 
 ## 2. Dependencies
 
