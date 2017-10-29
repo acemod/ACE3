@@ -8,6 +8,8 @@
 #include <cmath>
 #include <sstream>
 
+#include "vector.hpp"
+
 #define DT_ZERO 0.02
 #define DT_SIMULATION 0.005
 #define GRAVITY 9.8066f
@@ -40,8 +42,8 @@ struct Bullet {
     double stabilityFactor;
     double twistDirection;
     double transonicStabilityCoef;
-    std::vector<double> bulletVelocity;
-    std::vector<double> origin;
+    ace::vector3<double> bulletVelocityPreviousFrame;
+    ace::vector3<double> origin;
     double latitude;
     double temperature;
     double altitude;
@@ -138,7 +140,7 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
     int idx = std::max(0, std::min(DragFunction, 9));
     double m = Velocity / Mach;
 
-    for (int i = 0; i < machNumbers[idx].size(); i++) {
+    for (int i = 0; i < (int)machNumbers[idx].size(); i++) {
         if (machNumbers[idx][i] >= m) {
             int previousIdx = std::max(0, i - 1);
             double previousDragCoefficient = dragCoefficients[idx][previousIdx];
@@ -408,8 +410,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].stabilityFactor = stabilityFactor;
         bulletDatabase[index].twistDirection = twistDirection;
         bulletDatabase[index].transonicStabilityCoef = transonicStabilityCoef;
-        bulletDatabase[index].bulletVelocity = bulletVelocity;
-        bulletDatabase[index].origin = origin;
+        bulletDatabase[index].bulletVelocityPreviousFrame = { bulletVelocity[0], bulletVelocity[1], bulletVelocity[2] };
+        bulletDatabase[index].origin = { origin[0], origin[1], origin[2] };
         bulletDatabase[index].latitude = latitude / 180 * M_PI;
         bulletDatabase[index].temperature = temperature;
         bulletDatabase[index].altitude = altitude;
@@ -420,7 +422,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         if (transonicStabilityCoef < 1) {
             unsigned int k1 = (unsigned)round(tickTime / 2);
             unsigned int k2 = ammoCount;
-            bulletDatabase[index].randSeed = 0.5 * (k1 + k2) * (k1 + k2 + 1) + k2;
+            bulletDatabase[index].randSeed = (unsigned int)(0.5 * (k1 + k2) * (k1 + k2 + 1) + k2);
             bulletDatabase[index].randGenerator.seed(bulletDatabase[index].randSeed);
         }
 
@@ -460,121 +462,93 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         heightAGL = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime = strtod(strtok_s(NULL, ":", &next_token), NULL);
 
+        ace::vector3<double> bulletVelocityCurrentFrame = { velocity[0], velocity[1], velocity[2] };
+        ace::vector3<double> bulletPosition = { position[0], position[1], position[2] };
+        ace::vector3<double> windVelocity = { wind[0], wind[1], wind[2] };
+        ace::vector3<double> gravityAccel = { 0, 0, -GRAVITY };
         double ballisticCoefficient = 1.0;
         double dragRef = 0.0;
         double drag = 0.0;
-        double accelRef[3] = { 0.0, 0.0, 0.0 };
-        double accel[3] = { 0.0, 0.0, 0.0 };
         double TOF = tickTime - bulletDatabase[index].startTime;
         double deltaT = tickTime - bulletDatabase[index].lastFrame;
-        double trueVelocity[3] = { 0.0, 0.0, 0.0 };
-        double trueSpeed = 0.0;
-        double temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
-        double pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (KELVIN(temperature) + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
-        double windSpeed = 0.0;
-        double windAttenuation = 1.0;
-        double velocityOffset[3] = { 0.0, 0.0, 0.0 };
+        ace::vector3<double> trueVelocity;
+        double temperature = bulletDatabase[index].temperature - 0.0065 * bulletPosition.z();
+        double pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + bulletPosition.z())) / (KELVIN(temperature) + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
+        ace::vector3<double> velocityOffset;
 
         bulletDatabase[index].lastFrame = tickTime;
 
-        windSpeed = sqrt(pow(wind[0], 2) + pow(wind[1], 2) + pow(wind[2], 2));
-        if (windSpeed > 0.1) {
-            double windSourceTerrain[3];
+        if (windVelocity.magnitude() > 0.1) {
+            double windAttenuation = 1.0;
+            ace::vector3<double> windSourceTerrain;
 
-            windSourceTerrain[0] = position[0] - wind[0] / windSpeed * 100;
-            windSourceTerrain[1] = position[1] - wind[1] / windSpeed * 100;
-            windSourceTerrain[2] = position[2] - wind[2] / windSpeed * 100;
+            windSourceTerrain = bulletPosition - windVelocity.normalize() * 100;
 
-            int gridX = (int)floor(windSourceTerrain[0] / 50);
-            int gridY = (int)floor(windSourceTerrain[1] / 50);
+            int gridX = (int)floor(windSourceTerrain.x() / 50);
+            int gridY = (int)floor(windSourceTerrain.y() / 50);
             int gridCell = gridX * map->mapGrids + gridY;
 
             if (gridCell >= 0 && (std::size_t)gridCell < map->gridHeights.size() && (std::size_t)gridCell < map->gridBuildingNums.size()) {
                 double gridHeight = map->gridHeights[gridCell];
 
-                if (gridHeight > position[2]) {
-                    double angle = atan((gridHeight - position[2]) / 100);
+                if (gridHeight > bulletPosition.z()) {
+                    double angle = atan((gridHeight - bulletPosition.z()) / 100);
                     windAttenuation *= pow(abs(cos(angle)), 2);
                 }
             }
-        }
-
-        if (windSpeed > 0.1) {
-            double windSourceObstacles[3];
-
-            windSourceObstacles[0] = position[0] - wind[0] / windSpeed * 25;
-            windSourceObstacles[1] = position[1] - wind[1] / windSpeed * 25;
-            windSourceObstacles[2] = position[2] - wind[2] / windSpeed * 25;
 
             if (heightAGL > 0 && heightAGL < 20) {
-                double roughnessLength = calculateRoughnessLength(windSourceObstacles[0], windSourceObstacles[1]);
+                ace::vector3<double> windSourceObstacles;
+
+                windSourceObstacles = bulletPosition - windVelocity.normalize() * 25;
+
+                double roughnessLength = calculateRoughnessLength(windSourceObstacles.x(), windSourceObstacles.y());
                 windAttenuation *= abs(log(heightAGL / roughnessLength) / log(20 / roughnessLength));
             }
+
+            windVelocity = windVelocity * windAttenuation;
         }
 
-        if (windAttenuation < 1) {
-            wind[0] *= windAttenuation;
-            wind[1] *= windAttenuation;
-            wind[2] *= windAttenuation;
-            windSpeed = sqrt(pow(wind[0], 2) + pow(wind[1], 2) + pow(wind[2], 2));
-        }
-
-        std::vector<double> bulletVelocity = bulletDatabase[index].bulletVelocity;
+        ace::vector3<double> bulletVelocity = bulletDatabase[index].bulletVelocityPreviousFrame;
         double time = 0.0;
 
         while (time < deltaT) {
             double dt = std::min(deltaT - time, DT_SIMULATION);
 
-            double bulletSpeed = sqrt(pow(bulletVelocity[0], 2) + pow(bulletVelocity[1], 2) + pow(bulletVelocity[2], 2));
+            dragRef = -bulletDatabase[index].airFriction * bulletVelocity.magnitude_squared();
 
-            dragRef = -bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
+            ace::vector3<double> accelRef = bulletVelocity.normalize() * dragRef;
 
-            accelRef[0] = (bulletVelocity[0] / bulletSpeed) * dragRef;
-            accelRef[1] = (bulletVelocity[1] / bulletSpeed) * dragRef;
-            accelRef[2] = (bulletVelocity[2] / bulletSpeed) * dragRef;
-
-            velocityOffset[0] += accelRef[0] * dt;
-            velocityOffset[1] += accelRef[1] * dt;
-            velocityOffset[2] += accelRef[2] * dt;
-
-            bulletVelocity[0] -= accelRef[0] * dt;
-            bulletVelocity[1] -= accelRef[1] * dt;
-            bulletVelocity[2] -= accelRef[2] * dt + GRAVITY * dt;
+            velocityOffset += accelRef * dt;
+            bulletVelocity -= accelRef * dt;
+            bulletVelocity += gravityAccel * dt;
 
             time += dt;
         }
 
-        bulletVelocity = bulletDatabase[index].bulletVelocity;
+        bulletVelocity = bulletDatabase[index].bulletVelocityPreviousFrame;
         time = 0.0;
         TOF -= deltaT;
 
         while (time < deltaT) {
             double dt = std::min(deltaT - time, DT_SIMULATION * 2);
 
-            trueVelocity[0] = bulletVelocity[0] - wind[0];
-            trueVelocity[1] = bulletVelocity[1] - wind[1];
-            trueVelocity[2] = bulletVelocity[2] - wind[2];
-            trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
+            trueVelocity = bulletVelocity - windVelocity;
 
-            if (bulletDatabase[index].transonicStabilityCoef < 1.0f && trueSpeed < 1.2 * SPEED_OF_SOUND(temperature) && trueSpeed > SPEED_OF_SOUND(temperature)) {
+            if (bulletDatabase[index].transonicStabilityCoef < 1.0f && trueVelocity.magnitude() < 1.2 * SPEED_OF_SOUND(temperature) && trueVelocity.magnitude() > SPEED_OF_SOUND(temperature)) {
                 std::uniform_real_distribution<double> distribution(-10.0, 10.0);
+                ace::vector3<double> offset(distribution(bulletDatabase[index].randGenerator), distribution(bulletDatabase[index].randGenerator), distribution(bulletDatabase[index].randGenerator));
                 double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 
-                trueVelocity[0] += distribution(bulletDatabase[index].randGenerator) * coef;
-                trueVelocity[1] += distribution(bulletDatabase[index].randGenerator) * coef;
-                trueVelocity[2] += distribution(bulletDatabase[index].randGenerator) * coef;
-
-                double speed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
-
-                trueVelocity[0] *= trueSpeed / speed;
-                trueVelocity[1] *= trueSpeed / speed;
-                trueVelocity[2] *= trueSpeed / speed;
+                double trueSpeed = trueVelocity.magnitude();             
+                trueVelocity += offset * coef;
+                trueVelocity = trueVelocity.normalize() * trueSpeed;
             };
 
             if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
                 ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[0];
                 for (int i = (int)bulletDatabase[index].velocityBoundaries.size() - 1; i >= 0; i = i - 1) {
-                    if (trueSpeed < bulletDatabase[index].velocityBoundaries[i]) {
+                    if (trueVelocity.magnitude() < bulletDatabase[index].velocityBoundaries[i]) {
                         ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[i + 1];
                         break;
                     }
@@ -582,64 +556,45 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
                 ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, bulletDatabase[index].humidity, bulletDatabase[index].atmosphereModel);
 
-                drag = calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed, SPEED_OF_SOUND(temperature));
-            }
-            else {
+                drag = calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueVelocity.magnitude(), SPEED_OF_SOUND(temperature));
+            } else {
                 double airDensity = calculateAirDensity(temperature, pressure, bulletDatabase[index].humidity);
                 double airFriction = bulletDatabase[index].airFriction * airDensity / STD_AIR_DENSITY_ICAO;
 
-                drag = -airFriction * trueSpeed * trueSpeed;
+                drag = -airFriction * trueVelocity.magnitude_squared();
             }
 
-            accel[0] = (trueVelocity[0] / trueSpeed) * drag;
-            accel[1] = (trueVelocity[1] / trueSpeed) * drag;
-            accel[2] = (trueVelocity[2] / trueSpeed) * drag;
+            ace::vector3<double> accel = trueVelocity.normalize() * drag;
 
-            velocityOffset[0] -= accel[0] * dt;
-            velocityOffset[1] -= accel[1] * dt;
-            velocityOffset[2] -= accel[2] * dt;
-
-            bulletVelocity[0] -= accel[0] * dt;
-            bulletVelocity[1] -= accel[1] * dt;
-            bulletVelocity[2] -= accel[2] * dt;
+            velocityOffset -= accel * dt;
+            bulletVelocity -= accel * dt;
 
             if (TOF > 0) {
-                double bulletDir = atan2(bulletVelocity[0], bulletVelocity[1]);
+                double bulletDir = atan2(bulletVelocity.x(), bulletVelocity.y());
                 double driftAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / pow(TOF, 0.17);
                 double driftVelocity = 0.0581025 *(bulletDatabase[index].stabilityFactor + 1.2) * pow(TOF, 0.83);
-                double dragCorrection = (driftVelocity / trueSpeed) * drag;
-                double velocityOffsetX = sin(bulletDir + M_PI / 2) * (driftAccel + dragCorrection) * dt;
-                double velocityOffsetY = cos(bulletDir + M_PI / 2) * (driftAccel + dragCorrection) * dt;
-
-                velocityOffset[0] += velocityOffsetX;
-                velocityOffset[1] += velocityOffsetY;
-
-                bulletVelocity[0] += velocityOffsetX;
-                bulletVelocity[1] += velocityOffsetY;
+                double dragCorrection = (driftVelocity / trueVelocity.magnitude()) * drag;
+                double magnitude = (driftAccel + dragCorrection) * dt;
+                ace::vector3<double> offset(sin(bulletDir + M_PI / 2) * magnitude, cos(bulletDir + M_PI / 2) * magnitude, 0);
+                velocityOffset += offset;
+                bulletVelocity += offset;
             }
 
             double lat = bulletDatabase[index].latitude;
-            accel[0] = 2 * EARTH_ANGULAR_SPEED * +(bulletVelocity[1] * sin(lat) - bulletVelocity[2] * cos(lat));
-            accel[1] = 2 * EARTH_ANGULAR_SPEED * -(bulletVelocity[0] * sin(lat));
-            accel[2] = 2 * EARTH_ANGULAR_SPEED * +(bulletVelocity[0] * cos(lat));
+            accel.x(2 * EARTH_ANGULAR_SPEED * +(bulletVelocity.y() * sin(lat) - bulletVelocity.z() * cos(lat)));
+            accel.y(2 * EARTH_ANGULAR_SPEED * -(bulletVelocity.x() * sin(lat)));
+            accel.z(2 * EARTH_ANGULAR_SPEED * +(bulletVelocity.x() * cos(lat)));
 
-            velocityOffset[0] += accel[0] * dt;
-            velocityOffset[1] += accel[1] * dt;
-            velocityOffset[2] += accel[2] * dt;
-
-            bulletVelocity[0] += accel[0] * dt;
-            bulletVelocity[1] += accel[1] * dt;
-            bulletVelocity[2] += accel[2] * dt - GRAVITY * dt;
+            velocityOffset += accel * dt;
+            bulletVelocity += accel * dt + gravityAccel * dt;
 
             TOF += dt;
             time += dt;
         }
 
-        bulletDatabase[index].bulletVelocity[0] = velocity[0] + velocityOffset[0];
-        bulletDatabase[index].bulletVelocity[1] = velocity[1] + velocityOffset[1];
-        bulletDatabase[index].bulletVelocity[2] = velocity[2] + velocityOffset[2];
+        bulletDatabase[index].bulletVelocityPreviousFrame = bulletVelocityCurrentFrame + velocityOffset;
 
-        outputStr << "[" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]";
+        outputStr << "[" << velocityOffset.x() << "," << velocityOffset.y() << "," << velocityOffset.z() << "]";
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
