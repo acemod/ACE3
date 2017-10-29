@@ -365,5 +365,25 @@
             <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏，距离用的调整纽。</Chinesesimp>
             <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏，距離用的調整紐。</Chinese>
         </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentUp">
+            <English>%1</English>
+            <German>%1</German>
+            <French>%1</French>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentDown">
+            <English>%1D</English>
+            <German>%1D</German>
+            <French>%1B</French>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
+            <English>%1L</English>
+            <German>%1L</German>
+            <French>%1G</French>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
+            <English>%1R</English>
+            <German>%1R</German>
+            <French>%1D</French>
+        </Key>
     </Package>
 </Project>
