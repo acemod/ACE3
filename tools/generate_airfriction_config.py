@@ -235,7 +235,7 @@ def tofTillM2(m, v, dM, bc):
 
 def dropAtM(m, v, a):
     lx = 0
-    cly = 0
+    ly = 0
     dx = 0
     dy = 0
     vx = v
@@ -257,7 +257,7 @@ def dropAtM(m, v, a):
 
 def dropAtM2(m, v, dM, bc):
     lx = 0
-    cly = 0
+    ly = 0
     dx = 0
     dy = 0
     vx = v
