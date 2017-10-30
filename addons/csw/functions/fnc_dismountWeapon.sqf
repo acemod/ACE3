@@ -41,7 +41,7 @@ if (isNull GVAR(cswTripod)) then {
             _cswTripod setVelocity [0, 0, -0.05];
             _cswTripod setVectorUp (surfaceNormal _weaponPos);
                 
-            _weaponPos = _cswTripod getRelPos[1.5, 90];
+            _weaponPos = _cswTripod getRelPos RELATIVE_DIRECTION(90);
             private _weaponHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
             _weaponHolder setPosATL _weaponPos;
             _weaponHolder setDir random[0, 180, 360];

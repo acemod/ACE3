@@ -19,7 +19,7 @@
 
 params["_csw", "_slowUnload", "_allAmmo"];
 
-private _weaponPos = _csw getRelPos[1.5, 270];
+private _weaponPos = _csw getRelPos RELATIVE_DIRECTION(270);
 private _weaponMagazineClassname = "";
 private _ammo = magazinesAmmoFull _csw;
 private _weaponTurret = getArray(configFile >> "CfgVehicles" >> typeof(_csw) >> "Turrets" >> "MainTurret" >> "weapons") select 0;

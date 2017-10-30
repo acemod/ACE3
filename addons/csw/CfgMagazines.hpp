@@ -8,8 +8,8 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(HMGBelt_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=2;
-        type=256;
+        scope = 2;
+        type = 256;
         count = 100;
         mass = 40;
         picture = "\A3\weapons_f_mark\data\ui\m_338_ca.paa";
@@ -19,9 +19,9 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(DummyMagazine_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=1;
-        type=0;
-        count=200;
+        scope = 1;
+        type = 0;
+        count = 200;
         mass = 40;
     };
     
@@ -29,9 +29,9 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(GMGBelt_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=2;
-        type=256;
-        count=20;
+        scope = 2;
+        type = 256;
+        count = 20;
         mass = 40;
         picture = "\A3\weapons_f\data\ui\gear_flare_tripwire_ca.paa";
     };
@@ -39,9 +39,9 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(DummyMagazine_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=1;
-        type=0;
-        count=120;
+        scope = 1;
+        type = 0;
+        count = 120;
         mass = 40;
     };
     
@@ -49,9 +49,9 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(ATRocket_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=2;
-        type=256;
-        count=1;
+        scope = 2;
+        type = 256;
+        count = 1;
         mass = 125;
         picture = "\A3\weapons_f\launchers\nlaw\data\ui\gear_nlaw_rocket_ca.paa";
     };
@@ -59,9 +59,9 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(DummyMagazine_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=1;
-        type=0;
-        count=1;
+        scope = 1;
+        type = 0;
+        count = 1;
         mass = 125;
     };
     
@@ -69,9 +69,9 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(AARocket_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=2;
-        type=256;
-        count=1;
+        scope = 2;
+        type = 256;
+        count = 1;
         mass = 125;
         picture = "\A3\weapons_f\launchers\nlaw\data\ui\gear_nlaw_rocket_ca.paa";
     };
@@ -79,9 +79,9 @@ class CfgMagazines {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(DummyMagazine_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope=1;
-        type=0;
-        count=1;
+        scope = 1;
+        type = 0;
+        count = 1;
         mass = 125;
     };
     

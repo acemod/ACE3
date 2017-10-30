@@ -26,7 +26,7 @@ private _magazineAmmoCount = 0;
 private _maxAmmo = [_csw] call FUNC(getMaxAmmo);
 
 {
-    if ((_x select 0) in _cswMagazines && (_csw ammo _cswWeapon) + (_x select 1) <= _maxAmmo) exitWith {
+    if ((_x select 0) in _cswMagazines && {(_csw ammo _cswWeapon) + (_x select 1) <= _maxAmmo}) exitWith {
         _magazineSelected = _x select 0;
         _magazineAmmoCount = _x select 1;
         true
