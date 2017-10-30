@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
 // Temperature, pressure, humidity randomization
-missionNamespace setVariable [QGVAR(temperatureShift), 3 - random 6, true];
-missionNamespace setVariable [QGVAR(badWeatherShift), (random 1) ^ 2 * 10, true];
-missionNamespace setVariable [QGVAR(humidityShift), (5 - random 10) / 100, true];
+missionNamespace setVariable [QGVAR(temperatureShift), random [-5, 0, 5], true];
+missionNamespace setVariable [QGVAR(badWeatherShift), random [10, 0, 10], true];
+missionNamespace setVariable [QGVAR(humidityShift), random [-0.1, 0, 0.1], true];
 
 // Rain
 GVAR(rain_next_period) = -1;
