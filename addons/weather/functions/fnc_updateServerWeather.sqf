@@ -27,7 +27,6 @@ if (GVAR(rain_period_count) > GVAR(rain_next_period)) then {
     GVAR(rain_next_period) = ceil((1 + (random 10)) / _overcastMultiplier);
     GVAR(rain_period_count) = 0;
 
-    GVAR(last_rain) = GVAR(next_rain);
     private _rainOverCast = 0;
 
     if (overcast >= 0.7) then {
@@ -37,21 +36,20 @@ if (GVAR(rain_period_count) > GVAR(rain_next_period)) then {
             GVAR(next_rain) = -0.25 + (random 0.75) + (random 0.5) * _rainOverCast;
         };
 
-        GVAR(next_rain) = GVAR(next_rain) + GVAR(next_rain) * ((_rainOverCast * _overcastMultiplier) / 8) * GVAR(rain_current_range);
+        private _rain_current_range = -1 + (random 2);
+        
+        GVAR(next_rain) = GVAR(next_rain) + GVAR(next_rain) * ((_rainOverCast * _overcastMultiplier) / 8) * _rain_current_range;
         GVAR(next_rain) = 0 max GVAR(next_rain) min 1;
-
-        GVAR(rain_current_range) = -1 + (random 2);
     } else {
         _rainOverCast = 1;
-
         GVAR(next_rain) = 0;
     };
 
-    GVAR(rain_transition_time) = 1 + (_rainOverCast * 5) + (random (_rainOverCast * 20));
+    private _rain_transition_time = 1 + (_rainOverCast * 5) + (random (_rainOverCast * 20));
     
-    GVAR(rain_transition_time) setRain GVAR(next_rain);
+    _rain_transition_time setRain GVAR(next_rain);
     
-    TRACE_6("",GVAR(last_rain),rain,GVAR(next_rain),GVAR(rain_transition_time),_rainOverCast,overcast);
+    TRACE_5("",rain,GVAR(next_rain),_rain_transition_time,_rainOverCast,overcast);
 };
 
 // Wind simulation
