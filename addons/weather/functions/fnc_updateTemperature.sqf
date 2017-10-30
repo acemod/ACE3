@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team
- * Smoothly updates GVAR(currentTemperature) based time of day and map data
+ * Smoothly updates GVAR(currentTemperature) based on time of day and map data
  *
  * Arguments:
  * None
