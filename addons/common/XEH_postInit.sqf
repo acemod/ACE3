@@ -58,6 +58,7 @@
 }] call CBA_fnc_addEventHandler;
 [QGVAR(blockThrow), {
     params ["_object", "_set"];
+    TRACE_2("blockThrow EH",_object,_set);
     if (_set > 0) then {
         GVAR(blockThrow_EH) = ["KeyDown", {(_this select 1) in actionKeys "Throw"}] call CBA_fnc_addDisplayHandler;
         if (!isNil QEGVAR(advanced_throwing,enabled) && {EGVAR(advanced_throwing,enabled)}) then {
@@ -381,7 +382,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 // block throw when launcher is in hands
 ["weapon", {
     params ["_unit", "_weapon"];
-    [_unit, "blockThrow", QUOTE(ADDON), _weapon == secondaryWeapon _unit] call EFUNC(common,statusEffect_set);
+    [_unit, "blockThrow", QUOTE(ADDON), _weapon == secondaryWeapon _unit] call FUNC(statusEffect_set);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
