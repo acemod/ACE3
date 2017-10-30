@@ -12,6 +12,11 @@ version:
   patch: 0
 ---
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Changed in 3.12.0.</p>
+</div>
+
 ## 1. Config Values
 
 ```cpp
