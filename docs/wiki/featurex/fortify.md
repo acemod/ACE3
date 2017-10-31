@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: fortify
+title: Fortify
 description: Enables player to build fortifications.
 group: feature
 category: interaction
