@@ -54,5 +54,9 @@ if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
         };
     };
 
+    // Reapply insignia
+    [GVAR(center), ""] call bis_fnc_setUnitInsignia;
+    [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
+
     [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was loaded", _loadoutName]] call FUNC(message); // TBL
 };
