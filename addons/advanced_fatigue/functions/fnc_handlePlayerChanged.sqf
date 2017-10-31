@@ -29,6 +29,7 @@ if !(isNull _oldUnit) then {
     _oldUnit setVariable [QGVAR(anReserve), GVAR(anReserve)];
     _oldUnit setVariable [QGVAR(anFatigue), GVAR(anFatigue)];
     _oldUnit setVariable [QGVAR(muscleDamage), GVAR(muscleDamage)];
+    _oldUnit setVariable [QGVAR(respiratoryRate), GVAR(respiratoryRate)];
 };
 
 _newUnit enableStamina false;
@@ -47,18 +48,25 @@ GVAR(ae2Reserve)      = _newUnit getVariable [QGVAR(ae2Reserve), AE2_MAXRESERVE]
 GVAR(anReserve)       = _newUnit getVariable [QGVAR(anReserve), AN_MAXRESERVE];
 GVAR(anFatigue)       = _newUnit getVariable [QGVAR(anFatigue), 0];
 GVAR(muscleDamage)    = _newUnit getVariable [QGVAR(muscleDamage), 0];
+GVAR(respiratoryRate) = _newUnit getVariable [QGVAR(respiratoryRate), 0];
 
 // Clean variables for respawning units
 {
     _newUnit setVariable [_x, nil];
-} forEach [QGVAR(ae1Reserve), QGVAR(ae2Reserve), QGVAR(anReserve), QGVAR(anFatigue), QGVAR(muscleDamage)];
+} forEach [QGVAR(ae1Reserve), QGVAR(ae2Reserve), QGVAR(anReserve), QGVAR(anFatigue), QGVAR(muscleDamage), QGVAR(respiratoryRate)];
 
 GVAR(VO2Max)          = 35 + 20 * (_newUnit getVariable [QGVAR(performanceFactor), GVAR(performanceFactor)]);
-GVAR(VO2MaxPower)     = GVAR(VO2Max) * SIM_BODYMASS * 0.23 * JOULES_PER_ML_O2 / 60;
+GVAR(VO2MaxPower)     = GVAR(VO2Max) * SIM_BODYMASS * BIOMECH_EFFICIENCY * JOULES_PER_ML_O2 / 60;
 GVAR(peakPower)       = VO2MAX_STRENGTH * GVAR(VO2MaxPower);
 
-GVAR(ae1PathwayPower) = GVAR(peakPower) / (13.3 + 16.7 + 113.3) * 13.3 * ANTPERCENT ^ 1.28 * 1.362;
-GVAR(ae2PathwayPower) = GVAR(peakPower) / (13.3 + 16.7 + 113.3) * 16.7 * ANTPERCENT ^ 1.28 * 1.362;
+GVAR(ae1PathwayPower) = GVAR(peakPower) / (AE1_ATP_RELEASE_RATE + AE2_ATP_RELEASE_RATE + AN_ATP_RELEASE_RATE) * AE1_ATP_RELEASE_RATE * ANTPERCENT ^ 1.28 * 1.362;
+GVAR(ae2PathwayPower) = GVAR(peakPower) / (AE1_ATP_RELEASE_RATE + AE2_ATP_RELEASE_RATE + AN_ATP_RELEASE_RATE) * AE2_ATP_RELEASE_RATE * ANTPERCENT ^ 1.28 * 1.362;
+GVAR(aePathwayPower)  = GVAR(ae1PathwayPower) + GVAR(ae2PathwayPower);
+
+GVAR(wattsPerATP)     = GVAR(ae1PathwayPower) / AE1_ATP_RELEASE_RATE;
+
+GVAR(respiratoryBufferDivisor) = (RESPIRATORY_BUFFER - 1) / RESPIRATORY_BUFFER;
+GVAR(maxPowerFatigueRatio) = 0.057 / GVAR(peakPower);
 
 GVAR(ppeBlackoutLast) = 100;
 GVAR(lastBreath)      = 0;

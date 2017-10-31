@@ -6,32 +6,29 @@
  * 0: Unit <OBJECT>
  * 1: Fatigue <NUMBER>
  * 2: Speed <NUMBER>
- * 3: Overexhausted <BOOL>
+ * 3: Respiratory Rate <NUMBER>
+ * 4: Forward Angle <NUMBER>
+ * 5: Side Angle <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_player, 0.5, 3.3, true] call ace_advanced_fatigue_fnc_handleEffects
+ * [_player, 0.5, 3.3, true, 0, 0] call ace_advanced_fatigue_fnc_handleEffects
  *
  * Public: No
  */
 #include "script_component.hpp"
-params ["_unit", "_fatigue", "_speed", "_overexhausted"];
-
-#ifdef DEBUG_MODE_FULL
-    systemChat str _fatigue;
-    systemChat str vectorMagnitude velocity _unit;
-#endif
+params ["_unit", "_fatigue", "_speed", "_respiratoryRate", "_fwdAngle", "_sideAngle"];
 
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
-if (_fatigue > 0.4 && {GVAR(lastBreath) > (_fatigue * -10 + 9)} && {!underwater _unit}) then {
+if (_respiratoryRate > 0.4 && {GVAR(lastBreath) > (_respiratoryRate * -10 + 9)} && {!underwater _unit}) then {
     switch (true) do {
-        case (_fatigue < 0.6): {
+        case (_respiratoryRate < 0.6): {
             playSound (QGVAR(breathLow) + str(floor random 6));
         };
-        case (_fatigue < 0.85): {
+        case (_respiratoryRate < 0.85): {
             playSound (QGVAR(breathMid) + str(floor random 6));
         };
         default {
@@ -60,10 +57,10 @@ if (GVAR(ppeBlackoutLast) == 1) then {
 if (GVAR(isSwimming)) exitWith {
     _unit setAnimSpeedCoef linearConversion [0.7, 0.9, _fatigue, 1, 0.5, true];
 
-    if ((isSprintAllowed _unit) && {_fatigue > 0.7}) then {
+    if ((isSprintAllowed _unit) && _fatigue > 0.7) then {
         [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
     } else {
-        if ((!isSprintAllowed _unit) && {_fatigue < 0.7}) then {
+        if ((!isSprintAllowed _unit) && _fatigue < 0.7) then {
             [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
         };
     };
@@ -72,16 +69,16 @@ if ((getAnimSpeedCoef _unit) != 1) then {
     _unit setAnimSpeedCoef 1;
 };
 
-if (_overexhausted) then {
+if (_fatigue >= 1) then {
     [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 } else {
-    if (isForcedWalk _unit && {_fatigue < 0.7}) then {
+    if (isForcedWalk _unit && _fatigue < 0.8) then {
         [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
     } else {
-        if ((isSprintAllowed _unit) && {_fatigue > 0.7}) then {
+        if ((isSprintAllowed _unit) && (_fatigue > 0.7 || abs(_fwdAngle) > 20 || abs(_sideAngle) > 20)) then {
             [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         } else {
-            if ((!isSprintAllowed _unit) && {_fatigue < 0.6}) then {
+            if ((!isSprintAllowed _unit) && _fatigue < 0.6 && abs(_fwdAngle) < 20 && abs(_sideAngle) < 20) then {
                 [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             };
         };
