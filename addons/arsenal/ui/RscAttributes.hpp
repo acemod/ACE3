@@ -112,14 +112,14 @@ class GVAR(display) {
         };
         class totalWeight: RscControlsGroupNoScrollbars {
             idc = IDC_totalWeight;
-            x = QUOTE(safezoneX + 14 * GRID_W);
+            x = QUOTE(safezoneX + 39 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(20 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
                 class totalWeightBackground: ctrlStaticBackground {
                     idc = -1;
-                    colorBackground[] = {0,0,0,0.8};
+                    colorBackground[] = {0,0,0,0.5};
                     x = 0;
                     y = 0;
                     w = QUOTE(20 * GRID_W);
@@ -151,22 +151,48 @@ class GVAR(display) {
         };
         class menuBar: RscControlsGroupNoScrollbars {
             idc = IDC_menuBar;
-            x = QUOTE(safezoneX + safezoneW * 0.50 - 75 * GRID_W);
+            x = QUOTE((safezoneX + safezoneW * 0.50) - (64.5 * GRID_W));
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
-            w = QUOTE(150 * GRID_W);
+            w = QUOTE(125 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
-                class menuBarBackground: ctrlStaticBackground {
-                    idc = IDC_menuBarBackground;
-                    x = QUOTE(0);
+                class buttonHide: ctrlButton {
+                    idc = -1;
+                    colorBackground[] = {0,0,0,0.8};
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(0);
-                    w = QUOTE(150 * GRID_W);
+                    w = QUOTE(25 * GRID_W);
                     h = QUOTE(7 * GRID_H);
-                    colorBackground[] = {0,0,0,1};
+                    text="Hide"; // TBL
+                    shortcuts[]= {"0x0E"};
+                    tooltip="Hide interface"; // TBL
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
+                };
+                class buttonLoadouts: buttonHide {
+                    idc = -1;
+                    x = QUOTE(25 * GRID_W);
+                    text="Loadouts"; // TBL
+                    tooltip="Displays loadouts screen"; // TBL
+                    onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
+                };
+                class buttonExport: buttonHide {
+                    idc = -1;
+                    x = QUOTE(50 * GRID_W);
+                    text="Export"; // TBL
+                    tooltip="Export loadout"; // TBL
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
+                };
+                class buttonImport: buttonHide {
+                    idc = -1;
+                    x = QUOTE(75 * GRID_W);
+                    text="Import"; // TBL
+                    tooltip="Import loadout"; // TBL
+                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonClose {
-                    idc = IDC_buttonClose;
-                    x = QUOTE(0);
+                    idc = -1;
+                    colorBackground[] = {0,0,0,0.8};
+                    x = QUOTE(100 * GRID_W);
                     y = QUOTE(0);
                     w = QUOTE(25 * GRID_W);
                     h = QUOTE(7 * GRID_H);
@@ -175,51 +201,12 @@ class GVAR(display) {
                     tooltip="Close interface"; // TBL
                     onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
                 };
-                class buttonSave: ctrlButton {
-                    idc = IDC_buttonSave;
-                    x = QUOTE(25 * GRID_W);
-                    y = QUOTE(0);
-                    w = QUOTE(25 * GRID_W);
-                    h = QUOTE(7 * GRID_H);
-                    text="Save"; // TBL
-                    tooltip="Save loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonSave));
-                };
-                class buttonLoad: buttonSave {
-                    idc = IDC_buttonLoad;
-                    x = QUOTE(50 * GRID_W);
-                    text="Load"; // TBL
-                    tooltip="Load loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(arsenalButtonLoad));
-                };
-                class buttonImport: buttonSave {
-                    idc = IDC_buttonImport;
-                    x = QUOTE(75 * GRID_W);
-                    text="Import"; // TBL
-                    tooltip="Import loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
-                };
-                class buttonExport: buttonSave {
-                    idc = IDC_buttonExport;
-                    x = QUOTE(100 * GRID_W);
-                    text="Export"; // TBL
-                    tooltip="Export loadout"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
-                };
-                class buttonHide: buttonSave {
-                    idc = IDC_buttonHide;
-                    x = QUOTE(125 * GRID_W);
-                    text="Hide"; // TBL
-                    shortcuts[]= {"0x0E"};
-                    tooltip="Hide interface"; // TBL
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
-                };
             };
         };
         class infoBox: RscControlsGroupNoScrollbars {
             idc = IDC_infoBox;
             fade = 1;
-            x = QUOTE(safezoneX + safezoneW - 90 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 99 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 17 * GRID_H);
             w = QUOTE(85 * GRID_W);
             h = QUOTE(15 * GRID_H);
@@ -708,16 +695,178 @@ class GVAR(display) {
         };
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
-            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
+            text= QPATHTOF(data\iconClearContainer.paa);
             tooltip="Remove all items from the container"; //TBL
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;
             enable=0;
-            x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
+            x = QUOTE(safezoneW  + safezoneX - 11 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 33 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
+        };
+    };
+};
+
+class GVAR(loadoutsDisplay) {
+    idd = IDD_loadouts_display;
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(loadoutsDisplay))] call FUNC(onLoadoutsOpen));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(loadoutsDisplay))] call FUNC(onLoadoutsClose));
+    class controls {
+        class centerBox: ctrlControlsGroupNoScrollbars {
+            idc = IDC_centerBox;
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (80 * GRID_W));
+            y = QUOTE(safezoneY + (5 * GRID_H));
+            w = QUOTE(160 * GRID_W);
+            h = QUOTE(safezoneH - (45 * GRID_H));
+            class controls {
+                class centerFrame: RscFrame {
+                    idc = -1;
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(0 * GRID_H);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(safezoneH - (45 * GRID_H));
+                    colorText[] = {0,0,0,1};
+                };
+                class centerBackground: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(safezoneH - (45 * GRID_H));
+                    colorBackground[] = {0,0,0,0.8};
+                };
+                class centerTitle: ctrlStaticTitle {
+                    idc = IDC_centerTitle;
+                    style = ST_CENTER;
+                    text = "Loadouts";
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                };
+                class contentPanel: RscListnBox {
+                    idc = IDC_contentPanel;
+                    colorBackground[]={1,1,1,1};
+                    colorSelectBackground[]={1,1,1,0.5};
+                    colorSelectBackground2[]={1,1,1,0.5};
+                    colorPictureSelected[]={1,1,1,1};
+                    colorSelect[]={1,1,1,1};
+                    colorSelect2[]={1,1,1,1};
+                    colorPictureRightSelected[]={1,1,1,1};
+                    columns[]={0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90};
+                    drawSideArrows=0;
+                    disableOverflow=1;
+                    onLBSelChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onSelChangedLoadouts));
+                    onLBDblClick = QUOTE([ARR_2(ctrlparent (_this select 0), (ctrlParent (_this select 0)) displayCtrl IDC_buttonLoad)] call FUNC(buttonLoadoutsLoad));
+                    x = QUOTE(0);
+                    y = QUOTE(5 * GRID_H);
+                    w = QUOTE(160 * GRID_W);
+                    h = QUOTE(safezoneH - (57 * GRID_H));
+                    sizeEx = QUOTE(7 * GRID_H);
+                };
+                class textTitle: RscText {
+                    idc= -1;
+                    text="$STR_DISP_GAME_NAME";
+                    x = QUOTE(5 * GRID_W);
+                    y = QUOTE(safezoneH - (51 * GRID_H));
+                    w = QUOTE(15 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                    colorBackground[]={0,0,0,0.2};
+                };
+                class textEditBox: ctrlEdit {
+                    idc= IDC_textEditBox;
+                    x = QUOTE(20 * GRID_W);
+                    y = QUOTE(safezoneH - (51 * GRID_H));
+                    w = QUOTE(100 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                };
+            };
+        };
+        class buttonSave: ctrlButton {
+            idc = IDC_buttonSave;
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (75 * GRID_W));
+            y = QUOTE(safezoneH + safezoneY - 39 * GRID_H);
+            w = QUOTE(25 * GRID_W);
+            h = QUOTE(10 * GRID_H);
+            text="Save"; // TBL
+            tooltip="Save selected loadout"; // TBL
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
+            colorBackground[] = {0,0,0,0.8};
+        };
+        class buttonRename: buttonSave {
+            idc = IDC_buttonRename;
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (45 * GRID_W));
+            text="Rename"; // TBL
+            tooltip="Rename loadout"; // TBL
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
+        };
+        class buttonLoad: buttonSave {
+            idc = IDC_buttonLoad;
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (15 * GRID_W));
+            text="Load"; // TBL
+            tooltip="Load selected loadout"; // TBL
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsLoad));
+        };
+        class buttonShare: buttonSave {
+            idc = IDC_buttonShare;
+            x = QUOTE((safezoneW * 0.5) + safezoneX + (15 * GRID_W));
+            text="Share"; // TBL
+            tooltip="Share selected loadout"; // TBL
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
+        };
+        class buttonDelete: buttonSave {
+            idc = IDC_buttonDelete;
+            x = QUOTE((safezoneW * 0.5) + safezoneX + (45 * GRID_W));
+            text="Delete"; // TBL
+            tooltip="Delete loadout"; // TBL
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
+        };
+        class buttonClose: buttonSave {
+            idc = -1;
+            x = QUOTE(safezoneW  + safezoneX - 31 * GRID_W);
+            y = QUOTE(safezoneH + safezoneY - 12 * GRID_H);
+            w = QUOTE(30 * GRID_W);
+            h = QUOTE(10 * GRID_H);
+            sizeEx = QUOTE(4.5 * GRID_H);
+            text="Close"; // TBL
+            shortcuts[]= {"0x01"};
+            tooltip="Close interface"; // TBL
+            onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
+        };
+        class buttonBar: ctrlControlsGroupNoScrollbars {
+            idc = -1;
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (61 * GRID_W));
+            y = QUOTE(safezoneH + safezoneY - 12 * GRID_H);
+            w = QUOTE(122 * GRID_W);
+            h = QUOTE(10 * GRID_H);
+            class controls {
+                class buttonMyLoadouts: ctrlButton {
+                    idc = IDC_buttonMyLoadouts;
+                    colorBackground[] = {0,0,0,0.8};
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(0 * GRID_H);
+                    w = QUOTE(40 * GRID_W);
+                    h = QUOTE(10 * GRID_H);
+                    sizeEx = QUOTE(4.5 * GRID_H);
+                    text="My loadouts"; // TBL
+                    tooltip="Save selected loadout"; // TBL
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
+                };
+                class buttonDefaultLoadouts: buttonMyLoadouts {
+                    idc = IDC_buttonDefaultLoadouts;
+                    x = QUOTE(41 * GRID_W);
+                    text="Default loadouts"; // TBL
+                    tooltip=""; // TBL
+                };
+                class buttonSharedLoadouts: buttonMyLoadouts {
+                    idc = IDC_buttonSharedLoadouts;
+                    x = QUOTE(82 * GRID_W);
+                    text="Shared loadouts"; // TBL
+                    tooltip=""; // TBL
+                };
+            };
         };
     };
 };

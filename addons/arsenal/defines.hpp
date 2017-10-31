@@ -18,13 +18,6 @@
 #define IDC_totalWeightText 801
 #define IDC_message 9
 #define IDC_menuBar 10
-#define IDC_menuBarBackground 1001
-#define IDC_buttonClose 1002
-#define IDC_buttonSave 1003
-#define IDC_buttonLoad 1004
-#define IDC_buttonImport 1005
-#define IDC_buttonExport 1006
-#define IDC_buttonHide 1007
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
@@ -101,6 +94,19 @@
 #define IDC_buttonRemoveAllSelected 39
 #define IDC_buttonRemoveAll 40
 
+#define IDD_loadouts_display 1127002
+#define IDC_centerBox 3
+#define IDC_centerTitle 301
+#define IDC_contentPanel 302
+#define IDC_textEditBox 303
+#define IDC_buttonSave 304
+#define IDC_buttonLoad 305
+#define IDC_buttonShare 306
+#define IDC_buttonDelete 307
+#define IDC_buttonRename 308
+#define IDC_buttonMyLoadouts 401
+#define IDC_buttonDefaultLoadouts 402
+#define IDC_buttonSharedLoadouts 403
 
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
@@ -142,13 +148,9 @@
 #define TOGGLE_RIGHT_PANEL_WEAPON\
 {\
     _x = _display displayCtrl _x;\
-\
-    if (ctrlFade _x != 0) then {\
-        _x ctrlSetFade 0;\
-    };\
-    if !(ctrlShown _x) then {\
-        _x ctrlShow true;\
-    };\
+    _x ctrlSetFade 0;\
+    _x ctrlShow true;\
+    _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame,\
@@ -161,13 +163,9 @@
 ];\
 {\
     _x = _display displayCtrl _x;\
-\
-    if (ctrlFade _x != 1) then {\
-        _x ctrlSetFade 1;\
-    };\
-    if (ctrlShown _x) then {\
-        _x ctrlShow false;\
-    };\
+    _x ctrlSetFade 1;\
+    _x ctrlShow false;\
+    _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_loadIndicator,\
@@ -181,13 +179,9 @@
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
 {\
     _x = _display displayCtrl _x;\
-\
-    if (ctrlFade _x != 0) then {\
-        _x ctrlSetFade 0;\
-    };\
-    if !(ctrlShown _x) then {\
-        _x ctrlShow true;\
-    };\
+    _x ctrlSetFade 0;\
+    _x ctrlShow true;\
+    _x ctrlEnable true;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame, \
@@ -201,28 +195,20 @@
     IDC_rightSearchbar,\
     IDC_rightSearchbarButton\
 ];\
-\
 {\
-_x = _display displayCtrl _x;\
-\
-    if (ctrlFade _x != 1) then {\
-        _x ctrlSetFade 1;\
-    };\
-    if !(ctrlShown _x) then {\
-        _x ctrlShow false;\
-    };\
+    _x = _display displayCtrl _x;\
+    _x ctrlSetFade 1;\
+    _x ctrlShow false;\
+    _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [IDC_iconBackgroundCurrentMag, IDC_buttonCurrentMag];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
     _x = _display displayCtrl _x;\
-    if (ctrlFade _x != 1) then {\
-        _x ctrlSetFade 1;\
-    };\
-    if (ctrlShown _x) then {\
-        _x ctrlShow false;\
-    };\
+    _x ctrlSetFade 1;\
+    _x ctrlShow false;\
+    _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame,\
@@ -262,3 +248,54 @@ _x = _display displayCtrl _x;\
     [hmd GVAR(center)],\
     [binocular GVAR(center)]\
 ]
+
+#define CHECK_WEAPON_OR_ACC\
+    _item in (_weaponsArray select 0) ||\
+    {_item in (_weaponsArray select 1)} ||\
+    {_item in (_weaponsArray select 2)} ||\
+    {_item in (GVAR(virtualItems) select 9)} ||\
+    {_item in (_accsArray select 0)} ||\
+    {_item in (_accsArray select 1)} ||\
+    {_item in (_accsArray select 2)} ||\
+    {_item in (_accsArray select 3)}
+
+#define CHECK_ASSIGNED_ITEMS\
+    _item in (GVAR(virtualItems) select 10) ||\
+    {_item in (GVAR(virtualItems) select 11)} ||\
+    {_item in (GVAR(virtualItems) select 12)} ||\
+    {_item in (GVAR(virtualItems) select 13)} ||\
+    {_item in (GVAR(virtualItems) select 14)} ||\
+    {_item in (GVAR(virtualItems) select 8)} ||\
+    {_item in (GVAR(virtualItems) select 18)}
+
+#define CHECK_CONTAINER\
+    _item in (GVAR(virtualItems) select 4) ||\
+    {_item in (GVAR(virtualItems) select 5)} ||\
+    {_item in (GVAR(virtualItems) select 6)}
+
+#define CLASS_CHECK_ITEM\
+    isClass (_weaponCfg >> _item) ||\
+    {isClass (_vehcCfg >> _item)} ||\
+    {isClass (_glassesCfg >> _item)} ||\
+    {isClass (_magCfg >> _item)}
+
+#define CHECK_CONTAINER_ITEMS\
+    _item in (GVAR(virtualItems) select 3) ||\
+    {_item in (_accsArray select 0)} ||\
+    {_item in (_accsArray select 1)} ||\
+    {_item in (_accsArray select 2)} ||\
+    {_item in (_accsArray select 3)} ||\
+    {_item in (GVAR(virtualItems) select 4)} ||\
+    {_item in (GVAR(virtualItems) select 5)} ||\
+    {_item in (GVAR(virtualItems) select 6)} ||\
+    {_item in (GVAR(virtualItems) select 7)} ||\
+    {_item in (GVAR(virtualItems) select 8)} ||\
+    {_item in (GVAR(virtualItems) select 10)} ||\
+    {_item in (GVAR(virtualItems) select 11)} ||\
+    {_item in (GVAR(virtualItems) select 12)} ||\
+    {_item in (GVAR(virtualItems) select 13)} ||\
+    {_item in (GVAR(virtualItems) select 14)} ||\
+    {_item in (GVAR(virtualItems) select 15)} ||\
+    {_item in (GVAR(virtualItems) select 16)} ||\
+    {_item in (GVAR(virtualItems) select 17)} ||\
+    {_item in (GVAR(virtualItems) select 18)}

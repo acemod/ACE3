@@ -27,6 +27,7 @@ GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable [
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
+// Add the items the player has to virtualItems
 for "_index" from 0 to 10 do {
     switch (_index) do {
         case 0: {
@@ -44,29 +45,34 @@ for "_index" from 0 to 10 do {
                  ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
             };
         };
+
         case 1: {
             private _array = LIST_DEFAULTS select _index;
 
             if !((_array select 0) isEqualTo []) then {
-                ((GVAR(virtualItems) select _index) select 0) append (_array select 0);
+                 {((GVAR(virtualItems) select _index) select 0) pushBackUnique _x} foreach (_array select 0);
             };
 
             if !((_array select 1) isEqualTo []) then {
-                ((GVAR(virtualItems) select _index) select 1) append (_array select 1);
+                {((GVAR(virtualItems) select _index) select 1) pushBackUnique _x} foreach (_array select 1);
             };
 
             if !((_array select 2) isEqualTo []) then {
-                 ((GVAR(virtualItems) select _index) select 2) append (_array select 2);
+                 {((GVAR(virtualItems) select _index) select 2) pushBackUnique _x} foreach (_array select 2);
             };
 
             if !((_array select 3) isEqualTo []) then {
-                 ((GVAR(virtualItems) select _index) select 3) append (_array select 3);
+                 {((GVAR(virtualItems) select _index) select 3) pushBackUnique _x} foreach (_array select 3);
             };
         };
+
         case 2: {
             private _array = LIST_DEFAULTS select _index;
+            private _itemsCache = uiNamespace getVariable QGVAR(configItems);
 
             private _configCfgWeapons = configFile >> "CfgWeapons";
+            private _configMagazines = configFile >> "CfgMagazines";
+
             private _grenadeList = [];
             {
                 _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
@@ -80,41 +86,35 @@ for "_index" from 0 to 10 do {
             } count getArray (_configCfgWeapons >> "Put" >> "muzzles");
 
             {
-
-                private _configCfgItemInfo = _configCfgWeapons >> _x >> "itemInfo";
                 switch true do {
-                    case (isClass (configFile >> "CfgMagazines" >> _x) && 
-                        {(getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [256,512,1536,16]) &&
-                        {!(_x in _grenadeList)} &&
-                        {!(_x in _putList)}}): {
+                    case (isClass (_configMagazines >> _x) && {_x in _grenadeList}): {
+                        (GVAR(virtualItems) select 15) pushBackUnique _x;
+                    };
+
+                    case (isClass (_configMagazines >> _x) && {_x in _putList}): {
+                        (GVAR(virtualItems) select 16) pushBackUnique _x;
+                    };
+
+                    case (
+                            isClass (_configMagazines >> _x) && 
+                            {_x in (_itemsCache select 2)} && 
+                            {!(_x in (GVAR(virtualItems) select 2))}
+                        ): {
 
                         (GVAR(virtualItems) select 2) pushBackUnique _x;
                     };
-                    case (isClass (configFile >> "CfgMagazines" >> _x) && {_x in _grenadeList}): {
-                        (GVAR(virtualItems) select 15) pushBackUnique _x;
-                    };
-                    case (isClass (configFile >> "CfgMagazines" >> _x) && {_x in _putList}): {
-                        (GVAR(virtualItems) select 16) pushBackUnique _x;
-                    };
+
                     case (
                             isClass (_configCfgWeapons >> _x) &&
-                            {(getNumber (_configCfgWeapons >> _x >> "scope")) == 2} &&
-                            {isClass (_configCfgItemInfo)} && {
-                            ((getNumber (_configCfgItemInfo >> "type")) in [101, 201, 301, 302] &&
-                            {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
-                            {(getNumber (_configCfgItemInfo >> "type")) in [401, 619, 620]}
-                            }
-                        ):{
-                        (GVAR(virtualItems) select 17) pushBackUnique _x;
-                    };
-                    default {
-                        if (isClass (configFile >> "CfgWeapons" >> _x)) then {
-                            (GVAR(virtualItems) select 18) pushBackUnique _x;
-                        };
+                            {!(_x in (GVAR(virtualItems) select 17))}
+                        ): {
+
+                        (GVAR(virtualItems) select 18) pushBackUnique _x;
                     };
                 };
             } foreach _array;
         };
+
         default {
             private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
             if !(_array isEqualTo []) then {
@@ -124,6 +124,7 @@ for "_index" from 0 to 10 do {
     };
 };
 
+// Fill current items
 for "_index" from 0 to 15 do {
     switch (_index) do {
         case 0;
@@ -192,7 +193,7 @@ GVAR(currentWeaponType) = switch true do {
     default {-1};
 };
 
-["ace_arsenalOpened", []] call CBA_fnc_localEvent;
+[QGVAR(displayOpened), []] call CBA_fnc_localEvent;
 
 //--------------- Fade out unused elements
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;

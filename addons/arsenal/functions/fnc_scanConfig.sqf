@@ -118,7 +118,8 @@ private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
                 isClass (_configItemInfo) &&
                 ((getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302] &&
                 {(_className isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
-                {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]}
+                {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]} ||
+                {(getText ( _x >> "simulation")) == "ItemMineDetector"}
             ): {
             (_cargo select 17) pushBackUnique _className;
         };

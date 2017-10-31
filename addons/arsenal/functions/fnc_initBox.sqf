@@ -3,6 +3,8 @@
 
 params [["_object", objNull, [objNull]], ["_mode", 1, [1]], ["_items", true, [[], true]], ["_global", true, [true]]];
 
+if (isNull _object) exitWith {};
+
 if (isNil QGVAR(EHIDArray)) then {
     GVAR(EHIDArray) = [];
 };

@@ -52,6 +52,7 @@ private _fnc_fill_right_Container = {
     _ctrlPanel lnbSetData [[_lbAdd, 0], _x];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
+    _ctrlPanel setVariable [_displayName, _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select (_isUnique)];
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
@@ -221,7 +222,7 @@ if (GVAR(currentRightPanel) != _ctrlIDC) then {
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
-["ace_arsenal_rightPanelFilled", [_display, _ctrlIDC]] call CBA_fnc_localEvent;
+[QGVAR(rightPanelFilled), [_display, _ctrlIDC]] call CBA_fnc_localEvent;
 
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
@@ -246,7 +247,7 @@ if (_leftPanelState) then {
 
 [_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);
 
-// Add current items in those containers
+// Add current items and change progress bar
 if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
     private _container = switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonUniform : {
