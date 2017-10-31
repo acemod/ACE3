@@ -16,12 +16,14 @@
  * Public: No
  */
 #include "script_component.hpp"
-params ["_unit", "_velocity"];
+params ["_unit", "_movementSpeed"];
 
 private _gearMass = ((_unit getVariable [QEGVAR(movement,totalLoad), loadAbs _unit]) / 22.046) * GVAR(loadFactor);
 
-private _terrainAngle = asin (1 - ((surfaceNormal getPosASL _unit) select 2));
-private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
+private _surfaceNormal = surfaceNormal (getPosASL _unit);
+private _terrainAngle = asin (1 - (_surfaceNormal select 2));
+private _terrainGradient = (_terrainAngle / 45 min 1);
+private _terrainFactor = 1;
 private _duty = GVAR(animDuty);
 
 {
@@ -32,20 +34,29 @@ private _duty = GVAR(animDuty);
     };
 } forEach (GVAR(dutyList) select 1);
 
-if (GVAR(isSwimming)) then {
-    _terrainGradient = 0;
+if (!GVAR(isSwimming)) then {
+    private _movementVector = vectorNormalized (velocity _unit);
+    private _side = vectorNormalized(_surfaceNormal vectorCrossProduct [0, 0, 1]);
+    private _up = vectorNormalized(_surfaceNormal vectorCrossProduct _side);
+    private _upGradient = -(_movementVector vectorDotProduct _up) * _terrainGradient;
+    private _sideGradient = abs(_movementVector vectorDotProduct _side) * _terrainGradient;
+    if (_upGradient > -0.1) then {
+        _terrainFactor = (2 * _sideGradient) + 0.075 + 3.00 * abs(_upGradient + 0.1);
+    } else {
+        _terrainFactor = (2 * _sideGradient) + 0.075 + 0.55 * abs(_upGradient + 0.1);
+    };
 };
 
-if (_velocity > 2) then {
+if (_movementSpeed > 2) then {
     (
         2.10 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + (SIM_BODYMASS + _gearMass) * (0.90 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
+        + (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainFactor * GVAR(terrainGradientFactor))
     ) * 0.23 * _duty
 } else {
     (
         1.05 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + (SIM_BODYMASS + _gearMass) * (1.15 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
+        + (SIM_BODYMASS + _gearMass) * (1.15 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainFactor * GVAR(terrainGradientFactor))
     ) * 0.23 * _duty
 };
