@@ -202,7 +202,7 @@ class CfgWeapons {
     
     // Negev NG7
     class LMG_Zafir_F: Rifle_Long_Base_F {
-        initSpeed = -1.00333;
+        initSpeed = -0.931071;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 459.74;
     };
@@ -563,7 +563,7 @@ class CfgWeapons {
             "10Rnd_762x54_Mag",
             "ACE_10Rnd_762x54_Tracer_mag"
         };
-        initSpeed = -1.025;
+        initSpeed = -1.00019;
         ACE_barrelTwist = 241.3;
         ACE_barrelLength = 609.6;
     };
