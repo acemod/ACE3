@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith { GVAR(currentHumidity) = 0 };
-
 if ((rain > 0) && {GVAR(currentOvercast) > 0.7}) then {
     GVAR(currentHumidity) = 1;
 } else {

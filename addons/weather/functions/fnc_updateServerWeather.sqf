@@ -15,10 +15,6 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {
-    missionNamespace setVariable [QGVAR(currentOvercast), 0, true];
-};
-
 private _overcastMultiplier = 1 max (2* overcast) min 2; // 0 (@ overcast 0), 2 (@ overcast 1)
 
 // Rain simulation

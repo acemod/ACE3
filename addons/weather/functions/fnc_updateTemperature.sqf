@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith { GVAR(currentTemperature) = 15 };
-
 private _month = date select 1;
 private _timeRatio = abs(daytime - 12) / 12;
 

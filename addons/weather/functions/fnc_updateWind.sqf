@@ -15,7 +15,6 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith { ACE_wind = wind };
 if (isNil "ACE_WIND_PARAMS") exitWith { ACE_wind = wind };
 
 ACE_WIND_PARAMS params ["_dir", "_dirChange", "_spd", "_spdChange", "_period", "_wind_period_start_time"];

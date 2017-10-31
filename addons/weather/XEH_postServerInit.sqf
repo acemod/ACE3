@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
-// Temperature, pressure, humidity randomization
+if (!GVAR(enabled)) exitWith {};
+
+// Temperature and humidity randomization
 missionNamespace setVariable [QGVAR(temperatureShift), random [-5, 0, 5], true];
 missionNamespace setVariable [QGVAR(badWeatherShift), random [10, 0, 10], true];
 missionNamespace setVariable [QGVAR(humidityShift), random [-0.1, 0, 0.1], true];
