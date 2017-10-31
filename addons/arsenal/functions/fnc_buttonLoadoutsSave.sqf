@@ -5,6 +5,13 @@ params ["_display", "_control"];
 
 if !(ctrlEnabled _control) exitWith {};
 
+private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
+private _editBoxContent = ctrlText _editBoxCtrl;
+
+if (_editBoxContent == "") exitWith {
+    [(findDisplay IDD_ace_arsenal), format ["The name box is empty!", _editBoxContent]] call FUNC(message); // TBL
+};
+
 private _data = +(profileNamespace getVariable [QGVAR(saved_loadouts), []]);
 private _loadout = getUnitLoadout GVAR(center);
 
@@ -13,8 +20,7 @@ private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
 private _curSelLoadout = _contentPanelCtrl getVariable _loadoutName;
 
-private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
-private _editBoxContent = ctrlText _editBoxCtrl;
+
 
 if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
 
@@ -62,3 +68,6 @@ if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
 };
 
 profileNamespace setVariable [QGVAR(saved_loadouts), _data];
+
+private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
+[QGVAR(LoadoutSaved), [_data find _savedLoadout, _savedLoadout select 1]] call CBA_fnc_localEvent;
