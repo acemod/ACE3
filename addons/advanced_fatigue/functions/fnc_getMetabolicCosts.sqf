@@ -19,6 +19,7 @@
 params ["_unit", "_movementSpeed"];
 
 private _gearMass = ((_unit getVariable [QEGVAR(movement,totalLoad), loadAbs _unit]) / 22.046) * GVAR(loadFactor);
+private _terrainGradient = 1;
 private _terrainFactor = 1;
 private _duty = GVAR(animDuty);
 
@@ -64,15 +65,18 @@ if (!GVAR(isSwimming)) then {
     private _sideAngle = abs (asin (_sideVector select 2));
     private _fwdGradient = (_fwdAngle / 45) min 1;
     private _sideGradient = (_sideAngle / 45) min 1;
-    if (_fwdGradient > -0.1) then {
-        _terrainFactor = 0.75 * (_sideGradient ^ 1.5 + (0.75 + 30.0 * abs (_fwdGradient+0.1)) / 20) * GVAR(terrainGradientFactor);
+    if (_fwdGradient < 0) then {
+        _terrainGradient = 0.15 * abs(_fwdGradient);
     } else {
-        _terrainFactor = 0.75 * (_sideGradient ^ 1.5 + (0.75 + 5.50 * abs (_fwdGradient+0.1)) / 20) * GVAR(terrainGradientFactor);
+        _terrainGradient = _fwdGradient;
     };
+    _terrainFactor = 1 + _sideGradient ^ 2;
 #ifdef DEBUG_MODE_FULL
-    private _terrainAngle = asin (1 - ((surfaceNormal getPosWorld player) select 2));
-    private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
-    hintSilent format["FwdAngle: %1 | SideAngle: %2 \n Baer -> Angle: %3 | Gradient: %4 | Impact: %5 \n Ulteq -> FwdGradient: %6 | SideGradient: %7 | Impact: %8", _fwdAngle toFixed 1, _sideAngle toFixed 1, _terrainAngle toFixed 2, _terrainGradient toFixed 2, 0.66 * _movementSpeed * _terrainGradient toFixed 2, _fwdGradient toFixed 2, _sideGradient toFixed 2, 0.66 * _movementSpeed * _terrainFactor toFixed 2];
+    private _terrainAngleBaer = asin (1 - ((surfaceNormal getPosWorld player) select 2));
+    private _terrainGradientBaer = (_terrainAngleBaer / 45 min 1) * 5 * GVAR(terrainGradientFactor);
+    private _impactBaer = (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradientBaer);
+    private _impactUlteq = _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradient);
+    hintSilent format["FwdAngle: %1 | SideAngle: %2 \n Baer -> Angle: %3 | Gradient: %4 | Impact: %5 \n Ulteq -> FwdGradient: %6 | SideGradient: %7 | Impact: %8", _fwdAngle toFixed 1, _sideAngle toFixed 1, _terrainAngleBaer toFixed 2, _terrainGradientBaer toFixed 2, _impactBaer toFixed 2, _fwdGradient toFixed 2, _sideGradient toFixed 2, _impactUlteq toFixed 2];
 #endif
 };
 
@@ -80,12 +84,12 @@ if (_movementSpeed > 2) then {
     (
         2.10 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainFactor)
+        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradient)
     ) * 0.23 * _duty
 } else {
     (
         1.05 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + (SIM_BODYMASS + _gearMass) * (1.15 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainFactor)
+        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (1.15 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradient)
     ) * 0.23 * _duty
 };
