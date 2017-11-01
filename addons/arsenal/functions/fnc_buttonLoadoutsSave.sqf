@@ -70,4 +70,4 @@ if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
 profileNamespace setVariable [QGVAR(saved_loadouts), _data];
 
 private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
-[QGVAR(loadoutSaved), [_data find _savedLoadout, _savedLoadout select 1]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
