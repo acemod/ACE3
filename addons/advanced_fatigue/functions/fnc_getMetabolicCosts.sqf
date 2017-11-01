@@ -70,7 +70,9 @@ if (!GVAR(isSwimming)) then {
     } else {
         _terrainGradient = _fwdGradient;
     };
-    _terrainFactor = 1 + _sideGradient ^ 2;
+    if ((getPosATL _unit) select 2 < 0.01) then {
+        _terrainFactor = 1 + _sideGradient ^ 2;
+    };
 #ifdef DEBUG_MODE_FULL
     private _terrainAngleBaer = asin (1 - ((surfaceNormal getPosWorld player) select 2));
     private _terrainGradientBaer = (_terrainAngleBaer / 45 min 1) * 5 * GVAR(terrainGradientFactor);
