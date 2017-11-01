@@ -24,8 +24,8 @@ if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle 
 private _normal = surfaceNormal (getPosWorld ACE_player);
 private _movementVector = vectorNormalized (velocity ACE_player);
 private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
-private _fwdAngle = asin (_movementVector select 2);
-private _sideAngle = asin (_sideVector select 2);
+private _fwdAngle = asin (_movementVector select 2) * GVAR(terrainGradientFactor);
+private _sideAngle = asin (_sideVector select 2) * GVAR(terrainGradientFactor);
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
