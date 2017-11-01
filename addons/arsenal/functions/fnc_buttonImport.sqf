@@ -1,2 +1,5 @@
 #include "script_component.hpp"
-hint str _this;
+
+params ["_display"];
+
+[_display, localize "Not implemented"] call FUNC(message);
