@@ -65,9 +65,9 @@ if (!GVAR(isSwimming)) then {
     private _fwdGradient = (_fwdAngle / 45) min 1;
     private _sideGradient = (_sideAngle / 45) min 1;
     if (_fwdGradient > -0.1) then {
-        _terrainFactor = (_sideGradient + (0.75 + 30.0 * abs (_fwdGradient+0.1)) / 20) * GVAR(terrainGradientFactor);
+        _terrainFactor = 0.75 * (_sideGradient ^ 1.5 + (0.75 + 30.0 * abs (_fwdGradient+0.1)) / 20) * GVAR(terrainGradientFactor);
     } else {
-        _terrainFactor = (_sideGradient + (0.75 + 5.50 * abs (_fwdGradient+0.1)) / 20) * GVAR(terrainGradientFactor);
+        _terrainFactor = 0.75 * (_sideGradient ^ 1.5 + (0.75 + 5.50 * abs (_fwdGradient+0.1)) / 20) * GVAR(terrainGradientFactor);
     };
 #ifdef DEBUG_MODE_FULL
     private _terrainAngle = asin (1 - ((surfaceNormal getPosWorld player) select 2));
