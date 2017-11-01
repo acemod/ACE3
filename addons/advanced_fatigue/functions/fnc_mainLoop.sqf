@@ -21,6 +21,12 @@ if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle 
     _staminaBarContainer ctrlCommit 1;
 };
 
+private _normal = surfaceNormal (getPosWorld ACE_player);
+private _movementVector = vectorNormalized (velocity ACE_player);
+private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
+private _fwdAngle = asin (_movementVector select 2);
+private _sideAngle = asin (_sideVector select 2);
+
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
 
@@ -30,7 +36,7 @@ if (GVAR(isProne)) then {
 };
 
 if ((vehicle ACE_player == ACE_player) && {_currentSpeed > 0.1} && {isTouchingGround ACE_player || {underwater ACE_player}}) then {
-    _currentWork = [ACE_player, _currentSpeed] call FUNC(getMetabolicCosts);
+    _currentWork = [ACE_player, _currentSpeed, _fwdAngle, _sideAngle] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;
 };
 
@@ -72,7 +78,7 @@ private _aeReservePercentage = (GVAR(ae1Reserve) / AE1_MAXRESERVE + GVAR(ae2Rese
 private _anReservePercentage = GVAR(anReserve) / AN_MAXRESERVE;
 private _perceivedFatigue = 1 - (_anReservePercentage min _aeReservePercentage);
 
-[ACE_player, _perceivedFatigue, _currentSpeed, GVAR(anReserve) == 0] call FUNC(handleEffects);
+[ACE_player, _perceivedFatigue, _currentSpeed, GVAR(anReserve) == 0, _fwdAngle, _sideAngle] call FUNC(handleEffects);
 
 if (GVAR(enableStaminaBar)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);

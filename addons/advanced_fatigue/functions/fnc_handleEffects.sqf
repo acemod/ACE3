@@ -7,6 +7,8 @@
  * 1: Fatigue <NUMBER>
  * 2: Speed <NUMBER>
  * 3: Overexhausted <BOOL>
+ * 4: Forward Angle <NUMBER>
+ * 5: Side Angle <NUMBER>
  *
  * Return Value:
  * None
@@ -17,7 +19,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-params ["_unit", "_fatigue", "_speed", "_overexhausted"];
+params ["_unit", "_fatigue", "_speed", "_overexhausted", "_fwdAngle", "_sideAngle"];
 
 #ifdef DEBUG_MODE_FULL
     systemChat str _fatigue;
@@ -78,10 +80,10 @@ if (_overexhausted) then {
     if (isForcedWalk _unit && {_fatigue < 0.7}) then {
         [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
     } else {
-        if ((isSprintAllowed _unit) && {_fatigue > 0.7}) then {
+        if ((isSprintAllowed _unit) && (_fatigue > 0.7 || abs(_fwdAngle) > 20 || abs(_sideAngle) > 20)) then {
             [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         } else {
-            if ((!isSprintAllowed _unit) && {_fatigue < 0.6}) then {
+            if ((!isSprintAllowed _unit) && _fatigue < 0.6 && abs(_fwdAngle) < 20 && abs(_sideAngle) < 20) then {
                 [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             };
         };

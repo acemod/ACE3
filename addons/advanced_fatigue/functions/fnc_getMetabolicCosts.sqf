@@ -6,6 +6,8 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Speed <NUMBER>
+ * 2: Forward Angle <NUMBER>
+ * 3: Side Angle <NUMBER>
  *
  * Return Value:
  * Metabolic cost <NUMBER>
@@ -16,7 +18,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-params ["_unit", "_movementSpeed"];
+params ["_unit", "_movementSpeed", "_fwdAngle", "_sideAngle"];
 
 private _gearMass = ((_unit getVariable [QEGVAR(movement,totalLoad), loadAbs _unit]) / 22.046) * GVAR(loadFactor);
 private _terrainGradient = 1;
@@ -31,41 +33,10 @@ private _duty = GVAR(animDuty);
     };
 } forEach (GVAR(dutyList) select 1);
 
-#ifdef DEBUG_MODE_FULL
-onEachFrame {
-    private _normal = surfaceNormal (getPosWorld player);
-    private _beg = (getPosWorld player) vectorAdd (_normal vectorMultiply 0.5);
-    private _end = _beg vectorAdd (_normal vectorMultiply 2.0);
-    drawLine3D [ASLToATL _beg, ASLToATL _end, [0,1,0,1]];
-
-    private _side = vectorNormalized (_normal vectorCrossProduct [0, 0, 1]);
-    private _end = _beg vectorAdd (_side vectorMultiply 2.0);
-    drawLine3D [ASLToATL _beg, ASLToATL _end, [0,0,1,1]];
-
-    private _up = vectorNormalized (_normal vectorCrossProduct _side);
-    private _end = _beg vectorAdd (_up vectorMultiply 2.0);
-    drawLine3D [ASLToATL _beg, ASLToATL _end, [1,0,0,1]];
-
-    private _movementVector = vectorNormalized (velocity player);
-    private _end = _beg vectorAdd (_movementVector vectorMultiply 2.0);
-    drawLine3D [ASLToATL _beg, ASLToATL _end, [1,1,0,1]];
-
-    private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
-    _sideVector set[2, 0];
-    private _end = _beg vectorAdd (_sideVector vectorMultiply 2.0);
-    drawLine3D [ASLToATL _beg, ASLToATL _end, [0,1,1,1]];
-};
-#endif
-
 if (!GVAR(isSwimming)) then {
-    private _normal = surfaceNormal (getPosWorld _unit);
-    private _movementVector = vectorNormalized (velocity _unit);
-    private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
-    private _fwdAngle = asin (_movementVector select 2);
-    private _sideAngle = abs (asin (_sideVector select 2));
-    private _fwdGradient = (_fwdAngle / 45) min 1;
-    private _sideGradient = (_sideAngle / 45) min 1;
-    if (_fwdGradient < 0) then {
+    private _fwdGradient = abs(_fwdAngle / 45) min 1;
+    private _sideGradient = abs(_sideAngle / 45) min 1;
+    if (_fwdAngle < 0) then {
         _terrainGradient = 0.15 * abs(_fwdGradient);
     } else {
         _terrainGradient = _fwdGradient;
@@ -73,8 +44,8 @@ if (!GVAR(isSwimming)) then {
     if ((getPosATL _unit) select 2 < 0.01) then {
         _terrainFactor = 1 + _sideGradient ^ 2;
     };
-    [_unit, "blockSprint", "fatique_test", _sideAngle > 20 || abs(_fwdAngle) > 20] call EFUNC(common,statusEffect_set);
 #ifdef DEBUG_MODE_FULL
+    // TODO: Remove this once we're convinced of the new method
     private _terrainAngleBaer = asin (1 - ((surfaceNormal getPosWorld player) select 2));
     private _terrainGradientBaer = (_terrainAngleBaer / 45 min 1) * 5 * GVAR(terrainGradientFactor);
     private _impactBaer = (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradientBaer);
