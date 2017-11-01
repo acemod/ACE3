@@ -1,5 +1,5 @@
 class CfgWeapons {
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
     class ACE_ItemCore;
 
     class ACE_UAVBattery: ACE_ItemCore {
@@ -8,7 +8,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Battery_Description);
         model = QPATHTOF(data\ace_battery.p3d);
         picture = QPATHTOF(ui\UAV_battery_ca.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 20;
         };
     };

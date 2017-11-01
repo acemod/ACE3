@@ -417,7 +417,6 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
     };
 };
 
-
 class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
     onSetFocus = QUOTE(_this call FUNC(ui_attributeCargo));
     idc = -1;
@@ -471,5 +470,201 @@ class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
                 class ace_cargo: GVAR(AttributeCargo) { };
             };
         };
+    };
+};
+
+class GVAR(RscGarrison): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGarrison)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGarrison)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class Garrison: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_garrison));
+                    idc = 73060;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(8.5);
+                    class controls {
+                        class radius: GVAR(AttributeRadius) {};
+                        class TopDownFillingTitle: Title {
+                            idc = -1;
+                            text = CSTRING(ModuleGarrison_TopDownFillingText);
+                            toolTip = CSTRING(ModuleGarrison_TopDownFillingTooltip);
+                            x = 0;
+                            y = H_PART(1.2);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class TopDownFilling: RscCheckBox {
+                            idc = 73061;
+                            x = W_PART(10.1);
+                            y = H_PART(1.2);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                        };
+                        class TeleportTitle: Title {
+                            idc = -1;
+                            text = CSTRING(ModuleGarrison_TeleportText);
+                            x = 0;
+                            y = H_PART(2.3);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class Teleport: RscCheckBox {
+                            idc = 73062;
+                            x = W_PART(10.1);
+                            y = H_PART(2.3);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                        };
+                        class FillingModeTitle: RscText {
+                            idc = -1;
+                            text = CSTRING(ModuleGarrison_FillingModeText);
+                            x = 0;
+                            y = H_PART(3.5);
+                            w = W_PART(26);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class FillingMode: RscListbox {
+                            idc = 73063;
+                            x = 0;
+                            y = H_PART(4.5);
+                            w = W_PART(26);
+                            h = H_PART(4);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscToggleNvg): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscToggleNvg)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscToggleNvg)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class ToggleNvg: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_toggleNvg));
+                    idc = 92854;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(3);
+                    class controls {
+                        class ToggleNvgTitle: Title {
+                            idc = -1;
+                            text = CSTRING(moduleToggleNVG_ToggleNvgTitle);
+                            toolTip = CSTRING(moduleToggleNVG_ToggleNvgTitleTooltip);
+                            x = H_PART(0);
+                            y = H_PART(0);
+                            w = W_PART(7);
+                        };
+                        class ToggleNvgCombo: RscCombo {
+                            idc = 92855;
+                            x = H_PART(6);
+                            y = H_PART(0);
+                            w = W_PART(10.1);
+                            h = H_PART(1);
+                        };
+                        class ToggleNvgSideTitle: Title {
+                            idc = -1;
+                            text = CSTRING(moduleToggleNVG_ToggleNvgSide);
+                            x = H_PART(0);
+                            y = H_PART(1.2);
+                            w = W_PART(7);
+                        };
+                        class ToggleNvgSideCombo: RscCombo {
+                            idc = 92856;
+                            x = H_PART(6);
+                            y = H_PART(1.2);
+                            w = W_PART(10.1);
+                            h = H_PART(1);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscToggleFlashlight): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscToggleFlashlight)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscToggleFlashlight)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class ToggleFlashlight: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_toggleFlashlight));
+                    idc = 56217;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(5);
+                    class controls {
+                        class ToggleFlashlightTitle: Title {
+                            idc = -1;
+                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightTitle);
+                            x = H_PART(0);
+                            y = H_PART(0);
+                            w = W_PART(7);
+                        };
+                        class ToggleFlashlightCombo: RscCombo {
+                            idc = 56218;
+                            x = H_PART(6);
+                            y = H_PART(0);
+                            w = W_PART(10.1);
+                            h = H_PART(1);
+                        };
+                        class ToggleFlashlightSideTitle: Title {
+                            idc = -1;
+                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightSide);
+                            x = H_PART(0);
+                            y = H_PART(1.2);
+                            w = W_PART(7);
+                        };
+                        class ToggleFlashlightSideCombo: RscCombo {
+                            idc = 56219;
+                            x = H_PART(6);
+                            y = H_PART(1.2);
+                            w = W_PART(10.1);
+                            h = H_PART(1);
+                        };
+                        class ToggleFlashlightGearTitle: Title {
+                            idc = -1;
+                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightGear);
+                            x = H_PART(0);
+                            y = H_PART(2.4);
+                            w = W_PART(7);
+                        };
+                        class ToggleFlashlightGearCombo: RscCombo {
+                            idc = 56220;
+                            x = H_PART(6);
+                            y = H_PART(2.4);
+                            w = W_PART(10.1);
+                            h = H_PART(1);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
     };
 };

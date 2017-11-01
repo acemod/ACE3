@@ -286,8 +286,16 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
-    // autonomus
+    // autonomous
     class UAV_01_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+    class UAV_03_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+    class UAV_06_base_F: Helicopter_Base_F {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };
@@ -422,6 +430,12 @@ class CfgVehicles {
     };
     class Land_MetalCase_01_large_F: MetalCase_01_base_F {
         GVAR(size) = 2; // 1 = small, 2 = large
+    };
+
+    // Fuel Canister (ace_refuel)
+    class Land_CanisterFuel_F: Items_base_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
     };
 
     // objects

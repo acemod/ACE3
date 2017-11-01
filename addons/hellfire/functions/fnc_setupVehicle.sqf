@@ -4,22 +4,42 @@
  * Also adds a Laser Designator if vehicle is configured for one.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
- * 1: Player's Turret Path <ARRAY>
+ * 0: Player <OBJECT>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [(vehicle player), [0]] call ace_hellfire_fnc_setupVehicle
+ * [player] call ace_hellfire_fnc_setupVehicle
  *
  * Public: No
  */
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params ["_vehicle", "_turretPath"];
-TRACE_2("setupVehicle",_vehicle,_turretPath);
+
+params ["_player"];
+// Note: player may be the currently controlled UAV's AI unit (so may be different from ace_player)
+TRACE_1("showHud",_player);
+
+private _enabled = false;
+private _vehicle = vehicle _player;
+private _turretPath = [-1];
+
+if ((alive _player) && {_player != _vehicle}) then {
+    if (_player != (driver _vehicle)) then {
+        _turretPath = _player call CBA_fnc_turretPath
+    };
+    {
+        if ((getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled))) == 1) then {
+            TRACE_1("enabled",_x);
+            _enabled = true;
+        };
+    } forEach (_vehicle weaponsTurret _turretPath);
+};
+
+if (!_enabled) exitWith {TRACE_3("Not enabled",_enabled,_vehicle,_turretPath);};
+
 
 // Add laser if vehicle is configured for one:
 if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QGVAR(addLaserDesignator))) == 1) then {  
@@ -40,7 +60,7 @@ if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QGVAR(addLas
             _vehicle addWeaponTurret ["Laserdesignator_mounted", _turretPath];
             _vehicle addMagazineTurret ["Laserbatteries", _turretPath];
         };
-    }, _this, 1] call CBA_fnc_waitAndExecute; // Need to delay slightly for turret to become local (probably only needs a single frame)
+    }, [_vehicle, _turretPath], 1] call CBA_fnc_waitAndExecute; // Need to delay slightly for turret to become local (probably only needs a single frame)
 };
 
 

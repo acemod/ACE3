@@ -206,6 +206,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "maverick" %}
+`ace_hellfire`
+{% endif %}
+
 {% if include.component == "medical" %}
 `ace_interaction`, `ace_apl`
 {% endif %}
@@ -296,6 +300,10 @@
 
 {% if include.component == "parachute" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "pylons" %}
+`ace_interact_menu`
 {% endif %}
 
 {% if include.component == "quickmount" %}
@@ -431,7 +439,7 @@
 {% endif %}
 
 {% if include.component == "zeus" %}
-`ace_common`
+`ace_common`, `ace_ai`
 {% endif %}
 
 {% if include.component == "compat_adr_97" %}

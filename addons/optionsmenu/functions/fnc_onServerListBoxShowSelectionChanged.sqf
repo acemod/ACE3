@@ -16,17 +16,15 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu", "_localizedHeader"];
-
-PARAMS_1(_openTab);
+params ["_openTab"];
 GVAR(optionMenu_openTab) = _openTab;
 
 disableSerialization;
-_settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
+private _settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
 
 switch (GVAR(optionMenu_openTab)) do {
 case (MENU_TAB_SERVER_OPTIONS): {
-    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabOptions))];
+    private _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabOptions))];
     ctrlSetText [13, _localizedHeader];
     lbClear 400;
 
@@ -43,7 +41,7 @@ case (MENU_TAB_SERVER_OPTIONS): {
     (_settingsMenu displayCtrl 416) ctrlEnable false;
   };
 case (MENU_TAB_SERVER_COLORS): {
-    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabColors))];
+    private _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabColors))];
     ctrlSetText [13, _localizedHeader];
 
     lbClear 400;
@@ -67,7 +65,7 @@ case (MENU_TAB_SERVER_COLORS): {
     (_settingsMenu displayCtrl 416) ctrlEnable false;
   };
 case (MENU_TAB_SERVER_VALUES): {
-    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabValues))];
+    private _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabValues))];
     ctrlSetText [13, _localizedHeader];
 
     lbClear 400;

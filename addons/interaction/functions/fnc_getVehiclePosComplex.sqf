@@ -34,7 +34,7 @@ private _ndy = (abs _dy) / ((abs (_bbY)) - 1);
 private _ndz = (abs _dz) / ((abs (_bbZ)) - 1);
 
 
-private "_pos";
+private _pos = [];
 if (_ndx > _ndy) then {
     if (_ndx > _ndz) then {
         // _ndx is greater, will colide with x plane first

@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: python:3-alpine
+    steps:
+      - checkout
+      - run:
+          name: Validate SQF And Config style
+          command: python tools/sqf_validator.py && python tools/config_style_checker.py
+  deployment:
+    docker:
+      - image: python:3-alpine
+    branch: master
+    requires:
+      - build
+    steps:
+      - checkout
+      - deploy:
+          name: Deploy
+          command: |
+            pip install pygithub pygithub3
+            python3 tools/deploy.py

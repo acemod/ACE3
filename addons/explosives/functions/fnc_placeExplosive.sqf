@@ -1,6 +1,6 @@
 /*
  * Author: Garth 'L-H' de Wet
- * Places an explosive at the requested position
+ * Places an explosive at the requested position.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -9,14 +9,13 @@
  * 3: Magazine class <STRING>
  * 4: Config of trigger <STRING>
  * 5: Variables required for the trigger type <ARRAY>
- * 6: Explosive placeholder <OBJECT> <OPTIONAL>
+ * 6: Explosive placeholder <OBJECT> (default: objNull)
  *
  * Return Value:
  * Placed explosive <OBJECT>
  *
  * Example:
- * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134,
- *  "SatchelCharge_Remote_Mag", "Command", []] call ACE_Explosives_fnc_placeExplosive;
+ * _explosive = [player, player modelToWorldVisual [0,0.5, 0.1], 134, "SatchelCharge_Remote_Mag", "Command", []] call ace_explosives_fnc_placeExplosive
  *
  * Public: Yes
  */
@@ -25,11 +24,9 @@
 params ["_unit", "_pos", "_dir", "_magazineClass", "_triggerConfig", "_triggerSpecificVars", ["_setupPlaceholderObject", objNull]];
 TRACE_7("params",_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars,_setupPlaceholderObject);
 
-private ["_ammo", "_explosive", "_attachedTo", "_magazineTrigger", "_pitch", "_digDistance", "_canDigDown", "_soundEnviron", "_surfaceType"];
-
 [_unit, "PutDown"] call EFUNC(common,doGesture);
 
-_attachedTo = objNull;
+private _attachedTo = objNull;
 if (!isNull _setupPlaceholderObject) then {
     _attachedTo = attachedTo _setupPlaceholderObject;
     deleteVehicle _setupPlaceholderObject;
@@ -40,7 +37,7 @@ if (isNil "_triggerConfig") exitWith {
     objNull
 };
 
-_magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
+private _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
 _triggerConfig = ConfigFile >> "ACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
@@ -48,7 +45,7 @@ if (isNil "_triggerConfig") exitWith {
     objNull
 };
 
-_ammo = getText(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ammo");
+private _ammo = getText(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 if (isText(_magazineTrigger >> "ammo")) then {
     _ammo = getText (_magazineTrigger >> "ammo");
 };
@@ -56,14 +53,14 @@ _triggerSpecificVars pushBack _triggerConfig;
 
 //Dig the explosive down into the ground (usually on "pressurePlate")
 if (isNumber (_magazineTrigger >> "digDistance")) then {
-    _digDistance = getNumber (_magazineTrigger >> "digDistance");
+    private _digDistance = getNumber (_magazineTrigger >> "digDistance");
 
     //Get Surface Type:
-    _canDigDown = true;
-    _surfaceType = surfaceType _pos;
+    private _canDigDown = true;
+    private _surfaceType = surfaceType _pos;
     if ((_surfaceType select [0,1]) == "#") then {_surfaceType = _surfaceType select [1, 99];};
     if ((_surfaceType != "") || {isClass (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron")}) then {
-        _soundEnviron = getText (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
+        private _soundEnviron = getText (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
         TRACE_2("Dig Down Surface",_surfaceType,_soundEnviron);
         _canDigDown = !(_soundEnviron in ["road", "tarmac", "concrete", "concrete_int", "int_concrete", "concrete_ext"]);
     };
@@ -76,7 +73,7 @@ if (isNumber (_magazineTrigger >> "digDistance")) then {
     };
 };
 
-_explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
+private _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
 _explosive setPosATL _pos;
 
 if (!isNull _attachedTo) then {
@@ -92,7 +89,7 @@ if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_tr
 
 //TODO: placing explosives on hills looks funny
 
-_pitch = getNumber (_magazineTrigger >> "pitch");
+private _pitch = getNumber (_magazineTrigger >> "pitch");
 
 //Globaly set the position and angle:
 [QGVAR(place), [_explosive, _dir, _pitch, _unit]] call CBA_fnc_globalEvent;

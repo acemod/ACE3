@@ -19,21 +19,16 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define REFUEL_INFINITE_FUEL -10
+#define REFUEL_DISABLED_FUEL -1
 #define REFUEL_ACTION_DISTANCE 7
+#define REFUEL_NOZZLE_ACTION_DISTANCE 2
 #define REFUEL_PROGRESS_DURATION 2
-
-#define REFUEL_HOLSTER_WEAPON \
-    _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit]; \
-    _unit call EFUNC(common,fixLoweredRifleAnimation); \
-    _unit action ["SwitchWeapon", _unit, _unit, 299];
-
-#define REFUEL_UNHOLSTER_WEAPON \
-    _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel); \
-    _unit selectWeapon _weaponSelect; \
-    _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
 
 #ifdef FAST_PROGRESSBARS
     #define TIME_PROGRESSBAR(X) ((X) * 0.075)
 #else
     #define TIME_PROGRESSBAR(X) (X)
 #endif
+
+#define INTERACT_EXCEPTIONS_REFUELING "isNotInside", "isNotOnLadder", "isNotSwimming"
+#define INTERACT_EXCEPTIONS INTERACT_EXCEPTIONS_REFUELING, "isNotRefueling"

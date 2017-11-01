@@ -11,7 +11,7 @@ class CfgVehicles {
                     statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
                     showDisabled = 0;
                     priority = 4;
-                    icon = QPATHTOF(UI\unjam_ca.paa);
+                    icon = QPATHTOEF(common,UI\repack_ca.paa);
                 };
                 class GVAR(SwapBarrel) {
                     displayName = CSTRING(SwapBarrel);
@@ -54,7 +54,7 @@ class CfgVehicles {
                 };
                 class GVAR(CheckTemperature) {
                     displayName = CSTRING(CheckTemperatureShort);
-                    condition = QUOTE( GVAR(enabled) && {switch (currentWeapon _target) do {case (''): {false}; case (primaryWeapon _target); case (handgunWeapon _target): {true}; default {false}}} );
+                    condition = QUOTE( GVAR(enabled) && {switch (currentWeapon _target) do {case ('ACE_FakePrimaryWeapon'); case (''): {false}; case (primaryWeapon _target); case (handgunWeapon _target): {true}; default {false}}} );
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_3(_player, _target, currentWeapon _target)] call FUNC(checkTemperature); );
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));

@@ -16,8 +16,6 @@
 
 #include "script_component.hpp"
 
-private ["_setting", "_menu"];
-
 // Filter only user setable setting
 GVAR(clientSideOptions) = [];
 GVAR(clientSideColors) = [];
@@ -27,7 +25,7 @@ private _clientSettableCategories = [""];
     // If the setting is user setable and not forced
     if ((_x select 2) && !(_x select 6)) then {
         // Append the current value to the setting metadata
-        _setting = + _x;
+        private _setting = + _x;
         _setting pushBack (missionNamespace getVariable (_x select 0));
 
         // Categorize the setting according to types
@@ -46,7 +44,7 @@ private _clientSettableCategories = [""];
 [{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call CBA_fnc_execNextFrame;
 
 disableSerialization;
-_menu = uiNamespace getVariable "ACE_settingsMenu";
+private _menu = uiNamespace getVariable "ACE_settingsMenu";
 (_menu displayCtrl 1002) ctrlEnable false;
 (_menu displayCtrl 1003) ctrlEnable false;
 
@@ -67,5 +65,3 @@ lbClear (_menu displayCtrl 14);
 } forEach GVAR(categories);
 
 (_menu displayCtrl 14) lbSetCurSel GVAR(currentCategorySelection); //All Catagoies
-
-

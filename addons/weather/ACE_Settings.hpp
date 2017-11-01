@@ -11,12 +11,6 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
-    class GVAR(syncRain) {
-        displayName = CSTRING(syncRain_DisplayName);
-        description = CSTRING(syncRain_Description);
-        typeName = "BOOL";
-        value = 1;
-    };
     class GVAR(syncWind) {
         displayName = CSTRING(syncWind_DisplayName);
         description = CSTRING(syncWind_Description);

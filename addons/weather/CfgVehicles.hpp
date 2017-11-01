@@ -24,12 +24,6 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class syncRain {
-                displayName = CSTRING(syncRain_DisplayName);
-                description = CSTRING(syncRain_Description);
-                typeName = "BOOL";
-                defaultValue = 1;
-            };
             class syncWind {
                 displayName = CSTRING(syncWind_DisplayName);
                 description = CSTRING(syncWind_Description);
