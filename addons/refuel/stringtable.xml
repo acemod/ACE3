@@ -193,8 +193,8 @@
             <French>Il reste %1 litres.</French>
             <Japanese>後 %1 リットル残っている。</Japanese>
             <Korean>%1 리터 남음</Korean>
-            <Chinesesimp>剩下%1公升的燃料.</Chinesesimp>
-            <Chinese>剩下%1公升的燃料.</Chinese>
+            <Chinesesimp>剩下%1公升的燃料。</Chinesesimp>
+            <Chinese>剩下%1公升的燃料。</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Empty">
             <English>There is no fuel left.</English>
@@ -273,8 +273,11 @@
         </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
+            <German>Kann Zapfpistole nicht anschalten</German>
             <Italian>Impossibile iniziare il rifornimento</Italian>
             <Japanese>給油を始められなかった</Japanese>
+            <Chinese>無法開啟燃料噴嘴</Chinese>
+            <Chinesesimp>无法开启燃料喷嘴</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -318,8 +321,8 @@
             <French>Tuyau tendu au maximum</French>
             <Japanese>給油ホースはもうこれ以上届かない。</Japanese>
             <Korean>주유기 호스 최대 거리에 도달함.</Korean>
-            <Chinesesimp>已加满至最大油量.</Chinesesimp>
-            <Chinese>已加滿至最大油量.</Chinese>
+            <Chinesesimp>已加满至最大油量。</Chinesesimp>
+            <Chinese>已加滿至最大油量。</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Completed">
             <English>Fueling completed</English>
@@ -438,28 +441,40 @@
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>
+            <German>Tankvolumen</German>
             <Russian>Объем топлива для заправки</Russian>
             <Japanese>貯油量</Japanese>
             <Italian>Capacità Carburante Cargo</Italian>
+            <Chinese>儲油量</Chinese>
+            <Chinesesimp>储油量</Chinesesimp>
         </Key>
         <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
             <English>The fuel volume available for refueling (-1 disable, -10 if infinite)</English>
+            <German>Das Tankvolumen, welches zum Nachtanken verfügbar ist (-1 deaktiviert, -10 unendlich)</German>
             <Russian>Объем топлива, доступный для заправки других машин (-1 отключить, -10 если неограничен)</Russian>
             <Japanese>給油用の貯油量を設定 (-1で無効、-10で無限)</Japanese>
             <Italian>La capacità del carburante disponibile per il rifornimento (-1 disabilita, -10 se infinito)</Italian>
+            <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
+            <Chinesesimp>设定有多少油料可供载具进行加油(-1时关闭，-10为无限油量)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
             <English>Refuel Hose attach coordinates</English>
+            <German>Befestigungskoordinaten der Zapfpistole</German>
             <Russian>Координаты крепления шланга</Russian>
             <Japanese>給油ノズルの取り付け座標</Japanese>
             <Italian>Coordinate del tubo di rifornimento</Italian>
+            <Chinese>加油軟管安裝位置</Chinese>
+            <Chinesesimp>加油软管安装位置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenDesc">
             <English>Model coordinates used to attach refuel hose</English>
+            <German>Modelkoordinaten zum Anheften der Zapfpistole</German>
             <Russian>Координаты модели, куда крепится заправочный шланг</Russian>
             <Japanese>給油ノズルの取り付けにモデル座標を使用</Japanese>
             <Italian>Coordinate del modello utilizzate per il fissaggio del tubo</Italian>
+            <Chinese>設定加油軟管會安裝到模型的哪個位置上</Chinese>
+            <Chinesesimp>设定加油软管会安装到模型的哪个位置上</Chinesesimp>
         </Key>
     </Package>
 </Project>

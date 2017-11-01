@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKeyHold">
@@ -28,7 +28,7 @@
             <Hungarian>Széladatok mutatása (pecek)</Hungarian>
             <Czech>Zobrazit údaje o větru (přep.)</Czech>
             <Portuguese>Mostrar informação do vento (alternar)</Portuguese>
-            <Japanese>風速を表示 (トグル)</Japanese>
+            <Japanese>風速を表示 (切り替え)</Japanese>
             <Korean>바람 정보 표시 (토글)</Korean>
             <Chinesesimp>显示风力资讯(切换)</Chinesesimp>
             <Chinese>顯示風力資訊(切換)</Chinese>
@@ -129,38 +129,6 @@
             <Chinesesimp>使ACE天气覆盖预设的天气 (编辑任务设置)</Chinesesimp>
             <Chinese>使ACE天氣覆蓋預設的天氣 (編輯任務設置)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Weather_syncRain_DisplayName">
-            <English>Sync Rain</English>
-            <Polish>Synchronizuj deszcz</Polish>
-            <Spanish>Sincronizar lluvia</Spanish>
-            <German>Regen synchronisieren</German>
-            <Czech>Synchronizuj déšť</Czech>
-            <Portuguese>Sincronizar chuva</Portuguese>
-            <French>Synchronisation de la pluie</French>
-            <Hungarian>Eső szinkronizálása</Hungarian>
-            <Russian>Синхрониз. дождь</Russian>
-            <Italian>Sincronizza Pioggia</Italian>
-            <Japanese>降雨の同期</Japanese>
-            <Korean>비 동기화</Korean>
-            <Chinesesimp>同步雨</Chinesesimp>
-            <Chinese>同步雨</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Weather_syncRain_Description">
-            <English>Synchronizes rain</English>
-            <Polish>Synchronizuje deszcz</Polish>
-            <Spanish>Sincroniza la lluvia</Spanish>
-            <German>Synchronisiert den Regen</German>
-            <Czech>Synchronizace deště</Czech>
-            <Portuguese>Sincroniza a chuva</Portuguese>
-            <French>Synchronise la pluie</French>
-            <Hungarian>Szinkronizálja az esőt</Hungarian>
-            <Russian>Синхронизирует дождь</Russian>
-            <Italian>Sincronizza Pioggia</Italian>
-            <Japanese>降雨の同期</Japanese>
-            <Korean>비를 동기화 합니다</Korean>
-            <Chinesesimp>同步雨</Chinesesimp>
-            <Chinese>同步雨</Chinese>
-        </Key>
         <Key ID="STR_ACE_Weather_syncWind_DisplayName">
             <English>Sync Wind</English>
             <Polish>Synchronizuj wiatr</Polish>
@@ -210,20 +178,10 @@
             <Chinese>同步雜項</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
-            <English>Synchronizes lightnings, rainbow, fog,...</English>
-            <Polish>Synchronizuje pioruny, tęcze, mgłę,...</Polish>
-            <Spanish>Sincroniza relampagos, arcoiris, niebla...</Spanish>
-            <German>Synchronisiert Blitze, Regenbögen, Nebel,...</German>
-            <Czech>Synchronizace blesků, duhy, mlhy,...</Czech>
-            <Portuguese>Sincroniza relâmpagos, arco-íris, neblina...</Portuguese>
-            <French>Synchronise les éclairs, les arcs en ciel, le brouillard,...</French>
-            <Hungarian>Szinkronizálja a villámokat, szivárványokat, ködöt,...</Hungarian>
-            <Russian>Синхронизирует молнии, радугу, туман,...</Russian>
-            <Italian>Sincronizza lampi, arcobaleni, nebbia,...</Italian>
-            <Japanese>ライティングや虹、霧などを同期</Japanese>
-            <Korean>번개라던가, 무지개, 안개등을 동기화 합니다</Korean>
-            <Chinesesimp>同步闪电, 彩虹, 雾等等...</Chinesesimp>
-            <Chinese>同步閃電, 彩虹, 霧等等...</Chinese>
+            <English>Synchronizes rainbow, fog, temperature and humidity</English>
+            <Italian>Sincronizza arcobaleno, nebbia, temperatura e umidità</Italian>
+            <Chinese>同步彩虹、霧、溫度與濕度</Chinese>
+            <Chinesesimp>同步彩虹、雾、温度与湿度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>

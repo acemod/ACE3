@@ -16,27 +16,21 @@
  */
 
 #include "script_component.hpp"
-
-private ["_number", "_coordinate", "_isNegative"];
-
-_number = _this select 0;
-_coordinate = _this select 1;
+params ["_number", "_coordinate"];
 
 _number = round (_number select _coordinate);
-_isNegative = _number < 0;
+private _isNegative = _number < 0;
 _number = abs _number;
 
 if (_number > 9999) exitWith {
     [QPATHTOF(rsc\vector_minus.paa), QPATHTOF(rsc\vector_minus.paa), QPATHTOF(rsc\vector_minus.paa), QPATHTOF(rsc\vector_minus.paa), QPATHTOF(rsc\vector_minus.paa)]    // return
 };
 
-private ["_digit0", "_digit1", "_digit2", "_digit3", "_digit4"];
-
-_digit0 = "";
-_digit1 = floor (_number / 1000);
-_digit2 = floor (_number / 100) - _digit1 * 10;
-_digit3 = floor (_number / 10) - _digit1 * 100 - _digit2 * 10;
-_digit4 = _number mod 10;
+private _digit0 = "";
+private _digit1 = floor (_number / 1000);
+private _digit2 = floor (_number / 100) - _digit1 * 10;
+private _digit3 = floor (_number / 10) - _digit1 * 100 - _digit2 * 10;
+private _digit4 = _number mod 10;
 
 switch (_coordinate) do {
     case 0 : {

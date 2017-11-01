@@ -25,9 +25,7 @@ if !(_display isEqualType displayNull) then {
     _display = displayNull;
 };
 
-private ["_currentVehicle", "_grainSetting", "_blurSetting", "_radBlurSetting", "_config", "_hmd", "_cameraView", "_turret"];
-
-_currentVehicle = vehicle ACE_player;
+private _currentVehicle = vehicle ACE_player;
 
 // If the Zeus display is on or the player has no nightvision
 if (ctrlIDD _display == 312 || currentVisionMode ACE_player != 1) exitWith {
@@ -38,23 +36,22 @@ if (ctrlIDD _display == 312 || currentVisionMode ACE_player != 1) exitWith {
 };
 
 // The unit has nightvision
-_config = configFile >> "CfgVehicles" >> typeOf _currentVehicle;
-_hmd = hmd ACE_player;
-_cameraView = cameraView;
-_turret = [ACE_player] call EFUNC(common,getTurretIndex);
+private _config = configFile >> "CfgVehicles" >> typeOf _currentVehicle;
+private _hmd = hmd ACE_player;
+private _cameraView = cameraView;
+private _turret = [ACE_player] call EFUNC(common,getTurretIndex);
 
 
-_fnc_isUsingHMD = {
+private _fnc_isUsingHMD = {
     if (_cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
 
     if (ACE_player == (driver _currentVehicle)) exitWith {
         !("NVG" in getArray (_config >> "ViewOptics" >> "visionMode"));
     };
 
-    private ["_result", "_turretConfig", "_turretConfigOpticsIn", "_index"];
-    _result = true;
-    _turretConfig = [_config, _turret] call EFUNC(common,getTurretConfigPath);
-    _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
+    private _result = true;
+    private _turretConfig = [_config, _turret] call EFUNC(common,getTurretConfigPath);
+    private _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
 
     if (isClass _turretConfigOpticsIn) then {
         for "_index" from 0 to (count _turretConfigOpticsIn - 1) do {
@@ -66,6 +63,10 @@ _fnc_isUsingHMD = {
     };
     _result
 };
+
+private _grainSetting = 0;
+private _blurSetting = 0;
+private _radBlurSetting = 0;
 
 if ((_currentVehicle == ACE_player) || _fnc_isUsingHMD) then {
     _grainSetting = getNumber (configFile >> "CfgWeapons" >> _hmd >> "ACE_NightVision_grain");

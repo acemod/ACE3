@@ -17,23 +17,21 @@
  */
 #include "script_component.hpp"
 
-private ["_weaponIndex", "_zeroing", "_optic", "_opticConfig", "_verticalIncrement", "_horizontalIncrement", "_maxVertical", "_maxHorizontal", "_adjustment"];
-
 params ["_unit", "_turretAndDirection", "_majorStep"];
 
 if (!(_unit isKindOf "Man")) exitWith {false};
 if (currentMuzzle _unit != currentWeapon _unit) exitWith {false};
 if (!GVAR(enabled)) exitWith {false};
 
-_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
 
-_adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
+private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 
 if (!(GVAR(canAdjustElevation) select _weaponIndex) && (_turretAndDirection in [ELEVATION_UP, ELEVATION_DOWN])) exitWith {false};
 if (!(GVAR(canAdjustWindage) select _weaponIndex) && (_turretAndDirection in [WINDAGE_UP, WINDAGE_DOWN])) exitWith {false};
 
-_zeroing = _adjustment select _weaponIndex;
+private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
 (GVAR(scopeAdjust) select _weaponIndex) params ["_maxVertical", "_verticalIncrement", "_maxHorizontal", "_horizontalIncrement"];

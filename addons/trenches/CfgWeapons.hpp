@@ -1,6 +1,6 @@
 class CfgWeapons {
-    class CBA_MiscItem_ItemInfo;
     class ACE_ItemCore;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_EntrenchingTool: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);

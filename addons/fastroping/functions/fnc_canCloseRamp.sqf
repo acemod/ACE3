@@ -11,7 +11,7 @@
  * Able to close ramp <BOOL>
  *
  * Example:
- * [_player, _vehicle] call ace_fastroping_fnc_canCloseRamp
+ * [_vehicle, _door, _turretPaths] call ace_fastroping_fnc_canCloseRamp
  *
  * Public: No
  */

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Inventory">
         <Key ID="STR_ACE_Inventory_SettingName">
@@ -28,10 +28,10 @@
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
-            <Japanese>通常のインベントリは UI の大きさによって表示されます。これはインベントリ UI を大きくできますが、文字は大きくできません。</Japanese>
+            <Japanese>通常、インベントリは UI の大きさにより調整して表示されます。これはインベントリ UI を大きくできますが、文字は大きくできません。</Japanese>
             <Korean>보통 소지품 화면은 사용자 인터페이스 크기에 비례합니다. 이 항목은 소지품의 사용자 인터페이스를 확대를 가능케하면서 글씨는 그대로 냅두게 해줍니다.</Korean>
-            <Chinesesimp>一般来说, 物品清单尺寸是由使用者介面来决定的. 此选项能让你的物品显示清单更大但不会增加字体大小, 此举可增加更多能被显示的描述行数!</Chinesesimp>
-            <Chinese>一般來說, 物品清單尺寸是由使用者介面來決定的. 此選項能讓你的物品顯示清單更大但不會增加字體大小, 此舉可增加更多能被顯示的描述行數!</Chinese>
+            <Chinesesimp>一般来说，物品清单尺寸是由使用者介面来决定的。此选项能让你的物品显示清单更大但不会增加字体大小，此举可增加更多能被显示的描述行数!</Chinesesimp>
+            <Chinese>一般來說，物品清單尺寸是由使用者介面來決定的。此選項能讓你的物品顯示清單更大但不會增加字體大小，此舉可增加更多能被顯示的描述行數!</Chinese>
         </Key>
         <Key ID="STR_ACE_Inventory_Backpacks">
             <English>Backpacks</English>

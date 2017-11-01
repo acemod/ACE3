@@ -25,7 +25,6 @@ REARM_HOLSTER_WEAPON;
     TIME_PROGRESSBAR(5),
     [_dummy, _unit],
     {
-        private ["_actionID"];
         params ["_args"];
         _args params ["_dummy", "_unit"];
         [_dummy, _unit] call FUNC(pickUpAmmo);

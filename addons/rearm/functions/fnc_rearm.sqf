@@ -48,6 +48,9 @@ if (_magazineDisplayName == "") then {
     {(_this select 0) call FUNC(rearmSuccess)},
     "",
     format [localize LSTRING(RearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName"), _magazineDisplayName],
-    {true},
+    {
+        param [0] params ["_target", "_unit"];
+        (_unit distanceSqr _target) <= REARM_ACTION_DISTANCE_SQR
+    },
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

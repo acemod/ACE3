@@ -10,12 +10,11 @@ version:
   major: 3
   minor: 2
   patch: 0
+redirect_from: "/wiki/framework/sitting-framework.md"
 ---
 
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>ACE3 Sitting has been deprecated in favour of ACEX Sitting and will be removed in a future version.</p>
-</div>
+_Sitting has been moved from ACE3 (in v3.8.0) to ACEX._
+
 
 ## 1. Requirements
 

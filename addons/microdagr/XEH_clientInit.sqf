@@ -4,15 +4,14 @@
 if (!hasInterface) exitWith {};
 
 //Add deviceKey entry:
-private ["_conditonCode", "_toggleCode", "_closeCode"];
-_conditonCode = {
+private _conditonCode = {
     ("ACE_microDAGR" in (items ACE_player))
 };
-_toggleCode = {
+private _toggleCode = {
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
     [] call FUNC(openDisplay); //toggle display mode
 };
-_closeCode = {
+private _closeCode = {
     if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {};
     [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
 };

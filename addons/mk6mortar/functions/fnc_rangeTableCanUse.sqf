@@ -16,6 +16,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_player);
+params ["_vehicle", "_player"];
 
 "ACE_RangeTable_82mm" in (items _player);

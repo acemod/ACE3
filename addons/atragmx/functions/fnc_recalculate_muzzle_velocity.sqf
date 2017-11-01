@@ -33,19 +33,19 @@ private _lookupTableSize = count _lookupTable;
 if (_lookupTableSize < 2) exitWith {};
 _lookupTable sort true;
 
-private ["_lowerIndex", "_upperIndex"];
+private _lowerIndex = -1;
+private _upperIndex = -1;
 for "_index" from 1 to (_lookupTableSize - 1) do {
     _upperIndex = _index;
     _lowerIndex = _upperIndex - 1;
     if (((_lookupTable select _index) select 0) >= GVAR(temperature)) exitWith {};
 };
 
-private ["_lowerTemperature", "_upperTemperature", "_lowerMuzzleVelocity", "_upperMuzzleVelocity", "_muzzleVelocity"];
-_lowerTemperature    = (_lookupTable select _lowerIndex) select 0;
-_upperTemperature    = (_lookupTable select _upperIndex) select 0;
-_lowerMuzzleVelocity = (_lookupTable select _lowerIndex) select 1;
-_upperMuzzleVelocity = (_lookupTable select _upperIndex) select 1;
-_muzzleVelocity = _lowerMuzzleVelocity;
+private _lowerTemperature    = (_lookupTable select _lowerIndex) select 0;
+private _upperTemperature    = (_lookupTable select _upperIndex) select 0;
+private _lowerMuzzleVelocity = (_lookupTable select _lowerIndex) select 1;
+private _upperMuzzleVelocity = (_lookupTable select _upperIndex) select 1;
+private _muzzleVelocity = _lowerMuzzleVelocity;
 if (_lowerTemperature != _upperTemperature) then {
     private _slope = (_upperMuzzleVelocity - _lowerMuzzleVelocity) / (_upperTemperature - _lowerTemperature);
     _muzzleVelocity = _lowerMuzzleVelocity + (GVAR(temperature) - _lowerTemperature) * _slope;

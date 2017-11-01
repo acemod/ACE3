@@ -7,7 +7,7 @@
  * 1: Units to hide in the list <ARRAY>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [allPlayers, [player]] call ace_spectator_fnc_updateUnits
