@@ -73,6 +73,7 @@ if (!GVAR(isSwimming)) then {
     if ((getPosATL _unit) select 2 < 0.01) then {
         _terrainFactor = 1 + _sideGradient ^ 2;
     };
+    [_unit, "blockSprint", "fatique_test", _sideAngle > 20 || abs(_fwdAngle) > 20] call EFUNC(common,statusEffect_set);
 #ifdef DEBUG_MODE_FULL
     private _terrainAngleBaer = asin (1 - ((surfaceNormal getPosWorld player) select 2));
     private _terrainGradientBaer = (_terrainAngleBaer / 45 min 1) * 5 * GVAR(terrainGradientFactor);
