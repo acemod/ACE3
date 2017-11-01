@@ -66,6 +66,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_TooFar">
             <English>Vehicle too far</English>
+            <Italian>Veicolo troppo lontano</Italian>
         </Key>
         <Key ID="STR_ACE_Pylons_Enabled">
             <English>Enable Pylons Menu</English>
