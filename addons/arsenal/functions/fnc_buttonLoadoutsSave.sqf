@@ -20,23 +20,18 @@ private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
 private _curSelLoadout = _contentPanelCtrl getVariable _loadoutName;
 
+private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
+switch (GVAR(currentLoadoutsTab)) do {
+    case IDC_buttonMyLoadouts:{
 
-if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
+        if (count _sameNameLoadoutsList == 0) then {
 
-} else {
-    private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
+            _data pushBack [_editBoxContent, _loadout];
+        } else {
 
-    if (count _sameNameLoadoutsList == 0) then {
-
-        _data pushBack [_editBoxContent, [_loadout, _curSelLoadout] select (GVAR(currentLoadoutsTab) != IDC_buttonMyLoadouts)];
-    } else {
-
-        _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), [_loadout, _curSelLoadout] select (GVAR(currentLoadoutsTab) != IDC_buttonMyLoadouts)]];
-    };
-
-    // Add new row if the current tab is "My loadouts"
-    if (GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts) then {
+            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+        };
 
         // Delete "old" loadout row
         for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
@@ -57,16 +52,30 @@ if (ctrlIDC _control == IDC_buttonSharedLoadouts) then {
         _contentPanelCtrl setVariable [_editBoxContent, _loadout];
 
         _contentPanelCtrl lnbSort [1, false];
+
+        // Select newly saved loadout
+        for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+            if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
+        };
     };
 
-    // Select newly saved loadout
-    for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
-        if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
+    case IDC_buttonDefaultLoadouts:{
+
+        if (count _sameNameLoadoutsList == 0) then {
+
+            _data pushBack [_editBoxContent, _curSelLoadout];
+        } else {
+
+            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
+        };
     };
 
-    [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
+    case IDC_buttonSharedLoadouts :{
+
+    };
 };
 
+[(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
 profileNamespace setVariable [QGVAR(saved_loadouts), _data];
 
 private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
