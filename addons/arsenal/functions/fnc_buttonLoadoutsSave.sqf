@@ -25,6 +25,49 @@ private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonMyLoadouts:{
 
+        for "_dataIndex" from 0 to 10 do {
+            switch (_dataIndex) do {
+
+                case 0;
+                case 1;
+                case 2;
+                case 8: {
+
+                    private _weapon = (_loadout select _dataIndex) select 0;
+                    if (_weapon != "") then {
+
+                        private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                        if (_weapon != _baseWeapon) then {
+                            (_loadout select _dataIndex) set [0, _baseWeapon];
+                        };
+                    };
+                };
+
+                case 3;
+                case 4;
+                case 5: {
+                    private _containerContents = (_loadout select _dataIndex) select 1;
+
+                    if (count _containerContents > 0) then {
+
+                        {
+                            if (count _x == 2 && {!((_x select 0) isEqualType "")}) then {
+
+                                private _weapon = (_x select 0) select 0;
+                                if (_weapon != "") then {
+
+                                    private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                    if (_weapon != _baseWeapon) then {
+                                        (_x select 0)set [0, _baseWeapon];
+                                    };
+                                };
+                            };
+                        } foreach _containerContents;
+                    };
+                };
+            };
+        };
+
         if (count _sameNameLoadoutsList == 0) then {
 
             _data pushBack [_editBoxContent, _loadout];
