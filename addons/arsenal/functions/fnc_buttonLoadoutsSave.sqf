@@ -33,12 +33,15 @@ switch (GVAR(currentLoadoutsTab)) do {
                 case 2;
                 case 8: {
 
-                    private _weapon = (_loadout select _dataIndex) select 0;
-                    if (_weapon != "") then {
+                    if (count (_loadout select _dataIndex) > 0) then {
 
-                        private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                        if (_weapon != _baseWeapon) then {
-                            (_loadout select _dataIndex) set [0, _baseWeapon];
+                        private _weapon = (_loadout select _dataIndex) select 0;
+                        if (_weapon != "") then {
+
+                            private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                            if (_weapon != _baseWeapon) then {
+                                (_loadout select _dataIndex) set [0, _baseWeapon];
+                            };
                         };
                     };
                 };
@@ -46,23 +49,25 @@ switch (GVAR(currentLoadoutsTab)) do {
                 case 3;
                 case 4;
                 case 5: {
-                    private _containerContents = (_loadout select _dataIndex) select 1;
+                    if (count (_loadout select _dataIndex) > 0) then {
+                        private _containerContents = (_loadout select _dataIndex) select 1;
 
-                    if (count _containerContents > 0) then {
+                        if (count _containerContents > 0) then {
 
-                        {
-                            if (count _x == 2 && {!((_x select 0) isEqualType "")}) then {
+                            {
+                                if (count _x == 2 && {!((_x select 0) isEqualType "")}) then {
 
-                                private _weapon = (_x select 0) select 0;
-                                if (_weapon != "") then {
+                                    private _weapon = (_x select 0) select 0;
+                                    if (_weapon != "") then {
 
-                                    private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                                    if (_weapon != _baseWeapon) then {
-                                        (_x select 0)set [0, _baseWeapon];
+                                        private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                        if (_weapon != _baseWeapon) then {
+                                            (_x select 0)set [0, _baseWeapon];
+                                        };
                                     };
                                 };
-                            };
-                        } foreach _containerContents;
+                            } foreach _containerContents;
+                        };
                     };
                 };
             };
