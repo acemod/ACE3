@@ -30,19 +30,50 @@ private _duty = GVAR(animDuty);
     };
 } forEach (GVAR(dutyList) select 1);
 
+#ifdef DEBUG_MODE_FULL
+onEachFrame {
+    private _normal = surfaceNormal (getPosASL player);
+    private _beg = (getPosASL player) vectorAdd (_normal vectorMultiply 0.5);
+    private _end = _beg vectorAdd (_normal vectorMultiply 2.0);
+    drawLine3D [ASLToATL _beg, ASLToATL _end, [0,1,0,1]];
+
+    private _side = vectorNormalized (_normal vectorCrossProduct [0, 0, 1]);
+    private _end = _beg vectorAdd (_side vectorMultiply 2.0);
+    drawLine3D [ASLToATL _beg, ASLToATL _end, [0,0,1,1]];
+
+    private _up = vectorNormalized (_normal vectorCrossProduct _side);
+    private _end = _beg vectorAdd (_up vectorMultiply 2.0);
+    drawLine3D [ASLToATL _beg, ASLToATL _end, [1,0,0,1]];
+
+    private _movementVector = vectorNormalized (velocity player);
+    private _end = _beg vectorAdd (_movementVector vectorMultiply 2.0);
+    drawLine3D [ASLToATL _beg, ASLToATL _end, [1,1,0,1]];
+
+    private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
+    _sideVector set[2, 0];
+    private _end = _beg vectorAdd (_sideVector vectorMultiply 2.0);
+    drawLine3D [ASLToATL _beg, ASLToATL _end, [0,1,1,1]];
+};
+#endif
+
 if (!GVAR(isSwimming)) then {
     private _normal = surfaceNormal (getPosASL _unit);
     private _movementVector = vectorNormalized (velocity _unit);
     private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
     private _fwdAngle = asin (_movementVector select 2);
-    private _sideAngle = asin (_sideVector select 2);
+    private _sideAngle = abs (asin (_sideVector select 2));
     private _fwdGradient = (_fwdAngle / 45) min 1;
     private _sideGradient = (_sideAngle / 45) min 1;
     if (_fwdGradient > -0.1) then {
-        _terrainFactor = _sideGradient + (0.75 + 30.0 * abs (_fwdGradient+0.1)) / 20;
+        _terrainFactor = 5 * (_sideGradient + (0.75 + 30.0 * abs (_fwdGradient+0.1)) / 20);
     } else {
-        _terrainFactor = _sideGradient + (0.75 + 5.50 * abs (_fwdGradient+0.1)) / 20;
+        _terrainFactor = 5 * (_sideGradient + (0.75 + 5.50 * abs (_fwdGradient+0.1)) / 20);
     };
+#ifdef DEBUG_MODE_FULL
+    private _terrainAngle = asin (1 - ((surfaceNormal getPosASL player) select 2));
+    private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
+    hintSilent format["FwdAngle: %1 | SideAngle: %2 \n Baer -> Angle: %3 | Gradient: %4 | Impact: %5 \n Ulteq -> FwdGradient: %6 | SideGradient: %7 | Impact: %8", _fwdAngle toFixed 1, _sideAngle toFixed 1, _terrainAngle toFixed 2, _terrainGradient toFixed 2, 0.66 * _movementSpeed * 5 * _terrainGradient toFixed 2, _fwdGradient toFixed 2, _sideGradient toFixed 2, 0.66 * _movementSpeed * _terrainFactor toFixed 2];
+#endif
 };
 
 if (_movementSpeed > 2) then {
