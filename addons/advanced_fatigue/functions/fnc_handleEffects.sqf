@@ -80,10 +80,10 @@ if (_overexhausted) then {
     if (isForcedWalk _unit && {_fatigue < 0.7}) then {
         [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
     } else {
-        if ((isSprintAllowed _unit) && (_fatigue > 0.7 || abs(_fwdAngle) > 20 || abs(_sideAngle) > 20)) then {
+        if ((isSprintAllowed _unit) && (_fatigue > 0.7 || _fwdAngle > 15 || _fwdAngle < -25 || abs(_sideAngle) > 20)) then {
             [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         } else {
-            if ((!isSprintAllowed _unit) && _fatigue < 0.6 && abs(_fwdAngle) < 20 && abs(_sideAngle) < 20) then {
+            if ((!isSprintAllowed _unit) && _fatigue < 0.6 && _fwdAngle > -25 && _fwdAngle < 15 && abs(_sideAngle) < 20) then {
                 [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             };
         };
