@@ -19,10 +19,6 @@
 params ["_unit", "_movementSpeed"];
 
 private _gearMass = ((_unit getVariable [QEGVAR(movement,totalLoad), loadAbs _unit]) / 22.046) * GVAR(loadFactor);
-
-private _surfaceNormal = surfaceNormal (getPosASL _unit);
-private _terrainAngle = asin (1 - (_surfaceNormal select 2));
-private _terrainGradient = (_terrainAngle / 45 min 1);
 private _terrainFactor = 1;
 private _duty = GVAR(animDuty);
 
@@ -35,15 +31,17 @@ private _duty = GVAR(animDuty);
 } forEach (GVAR(dutyList) select 1);
 
 if (!GVAR(isSwimming)) then {
+    private _normal = surfaceNormal (getPosASL _unit);
     private _movementVector = vectorNormalized (velocity _unit);
-    private _side = vectorNormalized(_surfaceNormal vectorCrossProduct [0, 0, 1]);
-    private _up = vectorNormalized(_surfaceNormal vectorCrossProduct _side);
-    private _upGradient = -(_movementVector vectorDotProduct _up) * _terrainGradient;
-    private _sideGradient = abs(_movementVector vectorDotProduct _side) * _terrainGradient;
-    if (_upGradient > -0.1) then {
-        _terrainFactor = (2 * _sideGradient) + 0.075 + 3.00 * abs(_upGradient + 0.1);
+    private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
+    private _fwdAngle = asin (_movementVector select 2);
+    private _sideAngle = asin (_sideVector select 2);
+    private _fwdGradient = (_fwdAngle / 45) min 1;
+    private _sideGradient = (_sideAngle / 45) min 1;
+    if (_fwdGradient > -0.1) then {
+        _terrainFactor = _sideGradient + (0.75 + 30.0 * abs (_fwdGradient+0.1)) / 20;
     } else {
-        _terrainFactor = (2 * _sideGradient) + 0.075 + 0.55 * abs(_upGradient + 0.1);
+        _terrainFactor = _sideGradient + (0.75 + 5.50 * abs (_fwdGradient+0.1)) / 20;
     };
 };
 
