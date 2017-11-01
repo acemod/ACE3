@@ -32,8 +32,8 @@ private _duty = GVAR(animDuty);
 
 #ifdef DEBUG_MODE_FULL
 onEachFrame {
-    private _normal = surfaceNormal (getPosASL player);
-    private _beg = (getPosASL player) vectorAdd (_normal vectorMultiply 0.5);
+    private _normal = surfaceNormal (getPosWorld player);
+    private _beg = (getPosWorld player) vectorAdd (_normal vectorMultiply 0.5);
     private _end = _beg vectorAdd (_normal vectorMultiply 2.0);
     drawLine3D [ASLToATL _beg, ASLToATL _end, [0,1,0,1]];
 
@@ -57,7 +57,7 @@ onEachFrame {
 #endif
 
 if (!GVAR(isSwimming)) then {
-    private _normal = surfaceNormal (getPosASL _unit);
+    private _normal = surfaceNormal (getPosWorld _unit);
     private _movementVector = vectorNormalized (velocity _unit);
     private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
     private _fwdAngle = asin (_movementVector select 2);
@@ -70,7 +70,7 @@ if (!GVAR(isSwimming)) then {
         _terrainFactor = 5 * (_sideGradient + (0.75 + 5.50 * abs (_fwdGradient+0.1)) / 20);
     };
 #ifdef DEBUG_MODE_FULL
-    private _terrainAngle = asin (1 - ((surfaceNormal getPosASL player) select 2));
+    private _terrainAngle = asin (1 - ((surfaceNormal getPosWorld player) select 2));
     private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
     hintSilent format["FwdAngle: %1 | SideAngle: %2 \n Baer -> Angle: %3 | Gradient: %4 | Impact: %5 \n Ulteq -> FwdGradient: %6 | SideGradient: %7 | Impact: %8", _fwdAngle toFixed 1, _sideAngle toFixed 1, _terrainAngle toFixed 2, _terrainGradient toFixed 2, 0.66 * _movementSpeed * 5 * _terrainGradient toFixed 2, _fwdGradient toFixed 2, _sideGradient toFixed 2, 0.66 * _movementSpeed * _terrainFactor toFixed 2];
 #endif
