@@ -42,8 +42,6 @@ private _fnc_fill_right_Container = {
         _cacheNamespace setVariable [_configCategory+_className, _cachedItemInfo];
     };
 
-
-
     _cachedItemInfo params ["_displayName","_picture", "_mass"];
 
     private _lbAdd = _ctrlPanel lnbAddRow ["", _displayName, "0"];
@@ -90,16 +88,19 @@ switch (GVAR(currentLeftPanel)) do {
          _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
         _itemsToCheck = GVAR(currentItems) select 18;
     };
+
     case IDC_buttonHandgun : {
         _compatibleMagsCurrentWeapon = _compatibleMagazines select 1;
         _compatibleItems = (handgunWeapon GVAR(center)) call bis_fnc_compatibleItems;
         _itemsToCheck = GVAR(currentItems) select 20;
     };
+
     case IDC_buttonSecondaryWeapon : {
         _compatibleMagsCurrentWeapon = _compatibleMagazines select 2;
         _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
         _itemsToCheck = GVAR(currentItems) select 19;
     };
+
     case IDC_buttonUniform;
     case IDC_buttonVest;
     case IDC_buttonBackpack : {
@@ -172,6 +173,7 @@ switch (_ctrlIDC) do {
             } foreach ((GVAR(virtualItems) select 1) select 3);
         };
     };
+
     case IDC_buttonCurrentMag : {
         if (_leftPanelState) then {
             {
@@ -187,11 +189,9 @@ switch (_ctrlIDC) do {
     };
 
     case IDC_buttonMagALL : {
-    isNil {"magAll";
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 2);
-        };
     };
 
     case IDC_buttonThrow : {
