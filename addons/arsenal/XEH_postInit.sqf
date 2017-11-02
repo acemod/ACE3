@@ -51,9 +51,7 @@ if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
             };
         };
     }] call CBA_fnc_addEventHandler;
-};
 
-if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
     [QGVAR(onLoadoutSave), {
 
         params ["_index", "_loadout"];
