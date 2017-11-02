@@ -32,8 +32,10 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonDefaultLoadouts: {
 
-        _loadButtonCtrl ctrlEnable true;
-        _loadButtonCtrl ctrlCommit 0;
+        {
+            _x ctrlEnable true;
+            _x ctrlCommit 0;
+        } foreach [_saveButtonCtrl, _loadButtonCtrl];
 
         {
             _x ctrlEnable false;
@@ -45,8 +47,10 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonSharedLoadouts: {
 
-        _loadButtonCtrl ctrlEnable true;
-        _loadButtonCtrl ctrlCommit 0;
+        {
+            _x ctrlEnable true;
+            _x ctrlCommit 0;
+        } foreach [_saveButtonCtrl, _loadButtonCtrl];
 
         {
             _x ctrlEnable false;
