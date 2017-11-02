@@ -19,6 +19,7 @@ if (_loadoutIndex > -1) then {
     GVAR(sharedLoadoutsVars) = GVAR(sharedLoadoutsVars) - [_loadoutVar];
 
     _contentPanelCtrl lnbSetText [[_contentPanelCursSel, 0], ""];
+    [QGVAR(loadoutUnshared), [_contentPanelCtrl, _loadoutName]] call CBA_fnc_remoteEvent;
 
 } else {
     GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, [_profileName ,_loadoutName , _loadoutData], true];

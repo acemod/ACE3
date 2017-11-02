@@ -21,7 +21,7 @@ GVAR(lastSearchTextRight) = "";
     _unit setSpeaker _voice;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(sharedLoadoutDeleted), {
+[QGVAR(loadoutUnshared), {
     _x params ["_contentPanel" ,"_loadoutName"];
 
     if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
