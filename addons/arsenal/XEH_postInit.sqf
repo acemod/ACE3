@@ -52,6 +52,8 @@ GVAR(lastSearchTextRight) = "";
         _contentPanel lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
         _contentPanel lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
+        _contentPanel lnbSetData [[_newRow, 1], _playerName + _loadoutName];
+
         if (_nullItemsAmount > 0) then {
 
             _contentPanel lnbSetColor [[_newRow, 1], [1, 0, 0, 0.5]];
