@@ -34,14 +34,13 @@ private _duty = GVAR(animDuty);
 } forEach (GVAR(dutyList) select 1);
 
 if (!GVAR(isSwimming)) then {
-    private _fwdGradient = abs(_fwdAngle / 45) min 1;
-    private _sideGradient = abs(_sideAngle / 45) min 1;
     if (_fwdAngle < 0) then {
-        _terrainGradient = 0.15 * abs(_fwdGradient);
+        _terrainGradient = 0.15 * abs(_fwdAngle);
     } else {
-        _terrainGradient = _fwdGradient;
+        _terrainGradient = _fwdAngle;
     };
     if ((getPosATL _unit) select 2 < 0.01) then {
+        private _sideGradient = abs(_sideAngle / 45) min 1;
         _terrainFactor = 1 + _sideGradient ^ 2;
     };
 #ifdef DEBUG_MODE_FULL
@@ -50,7 +49,7 @@ if (!GVAR(isSwimming)) then {
     private _terrainGradientBaer = (_terrainAngleBaer / 45 min 1) * 5 * GVAR(terrainGradientFactor);
     private _impactBaer = (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradientBaer);
     private _impactUlteq = _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.90 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradient);
-    hintSilent format["FwdAngle: %1 | SideAngle: %2 \n Baer -> Angle: %3 | Gradient: %4 | Impact: %5 \n Ulteq -> FwdGradient: %6 | SideGradient: %7 | Impact: %8", _fwdAngle toFixed 1, _sideAngle toFixed 1, _terrainAngleBaer toFixed 2, _terrainGradientBaer toFixed 2, _impactBaer toFixed 2, _fwdGradient toFixed 2, _sideGradient toFixed 2, _impactUlteq toFixed 2];
+    hintSilent format["FwdAngle: %1 | SideAngle: %2 \n Baer -> Angle: %3 | Gradient: %4 | Impact: %5 \n Ulteq -> Impact: %6", _fwdAngle toFixed 1, _sideAngle toFixed 1, _terrainAngleBaer toFixed 2, _terrainGradientBaer toFixed 2, _impactBaer toFixed 2, _impactUlteq toFixed 2];
 #endif
 };
 
@@ -63,7 +62,7 @@ if (_movementSpeed > 2) then {
 } else {
     (
         1.05 * SIM_BODYMASS
-        + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
+        + 2 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
         + _terrainFactor * (SIM_BODYMASS + _gearMass) * (1.15 * (_movementSpeed ^ 2) + 0.66 * _movementSpeed * _terrainGradient)
     ) * 0.23 * _duty
 };
