@@ -175,12 +175,12 @@ private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
 [_sortLeftCtrl, _sortLeftCtrl lbValue (lbCurSel _sortLeftCtrl)] call FUNC(sortPanel);
 
 //Select current item
-private _itemsToCheck = (GVAR(currentItems) select [0,14]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)];
+private _itemsToCheck = ((GVAR(currentItems) select [0,14]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]) apply {tolower _x};
 
 for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
     private _currentData = _ctrlPanel lbData _lbIndex;
 
-    if (!(_currentData isEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
+    if (!(_currentData isEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
         _ctrlPanel lbSetCurSel _lbIndex;
     };
 };
