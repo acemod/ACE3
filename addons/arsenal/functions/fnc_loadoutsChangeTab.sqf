@@ -15,14 +15,23 @@ private _renameButtonCtrl = _display displayCtrl IDC_buttonRename;
 switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {
         _centerBoxTitleCtrl ctrlSetText "My loadouts"; // TBL
+
+        _saveButtonCtrl ctrlEnable true;
+        _saveButtonCtrl ctrlCommit 0;
     };
 
     case IDC_buttonDefaultLoadouts: {
         _centerBoxTitleCtrl ctrlSetText "Default loadouts"; // TBL
+
+        _saveButtonCtrl ctrlEnable false;
+        _saveButtonCtrl ctrlCommit 0;
     };
 
     case IDC_buttonSharedLoadouts: {
         _centerBoxTitleCtrl ctrlSetText "Shared loadouts"; // TBL
+
+        _saveButtonCtrl ctrlEnable false;
+        _saveButtonCtrl ctrlCommit 0;
     };
 };
 
@@ -31,6 +40,6 @@ switch (ctrlIDC _control) do {
     _x ctrlCommit 0;
 } foreach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl, _renameButtonCtrl];
 
-[_display, _control] call FUNC(fillLoadoutsList);
-
 GVAR(currentLoadoutsTab) = ctrlIDC _control;
+
+[_display, _control] call FUNC(fillLoadoutsList);

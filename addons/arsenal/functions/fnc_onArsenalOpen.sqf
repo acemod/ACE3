@@ -14,6 +14,15 @@ if (isNil QGVAR(mode)) then {
     GVAR(mode) = 1;
 };
 
+if (isNil QGVAR(sharedLoadoutsNamespace)) then {
+    GVAR(sharedLoadoutsNamespace) = true call CBA_fnc_createNamespace;
+    publicVariable QGVAR(sharedLoadoutsNamespace);
+};
+
+if (isNil QGVAR(sharedLoadoutsVars)) then {
+    GVAR(sharedLoadoutsVars) = [];
+};
+
 if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = [[[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };

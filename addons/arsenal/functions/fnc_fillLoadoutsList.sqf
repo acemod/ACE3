@@ -21,6 +21,13 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
         private _newRow = _contentListCtrl lnbAddRow ["",_loadoutName];
 
+        if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts) then {
+
+            _contentListCtrl lnbSetColumnsPos [0, 0, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
+        } else {
+           _contentListCtrl lnbSetColumnsPos [0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
+        };
+
         _contentListCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];
         _contentListCtrl lnbSetPicture [[_newRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];
         _contentListCtrl lnbSetPicture [[_newRow, 4], getText (configFile >> "cfgWeapons" >> ((_loadout select 2) select 0) >> "picture")];
@@ -41,9 +48,14 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         };
 
         _contentListCtrl setVariable [_loadoutName, _loadout];
+
+        if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars)) then {
+            _contentListCtrl lnbSetText [[_newRow, 0], "X"];
+        };
     } foreach ([_data, ([GVAR(defaultLoadoutsList), []] select (isNil QGVAR(defaultLoadoutsList)))] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {
 
+    //TODO
 };
 
 _contentListCtrl lnbSort [1, false];
