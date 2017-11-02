@@ -38,7 +38,7 @@ GVAR(lastSearchTextRight) = "";
 
     if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
-        private _curSelText =_contentPanel lnbText [(lnbCurSelRow _contentPanel), 1];
+        private _curSelText =_contentPanel lnbData [(lnbCurSelRow _contentPanel), 1];
         ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];
 
         private _newRow = _contentPanel lnbAddRow [_playerName, _loadoutName];

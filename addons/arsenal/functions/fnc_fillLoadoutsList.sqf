@@ -80,6 +80,8 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _contentListCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
             _contentListCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
+            _contentListCtrl lnbSetData [[_newRow, 1], _playerName + _loadoutName];
+
             if (_nullItemsAmount > 0) then {
 
                 _contentListCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.5]];
