@@ -22,8 +22,24 @@ private _curSelLoadout = _contentPanelCtrl getVariable _loadoutName;
 
 private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
+scopeName "main";
 switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonMyLoadouts:{
+
+        if (count _sameNameLoadoutsList > 0) then {
+
+            {
+                for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+
+                    if ((_contentPanelCtrl lnbText [_i, 1]) == _x) exitwith {
+                        if ((_contentPanelCtrl lnbText [_i, 0]) != "") then {
+                            [(findDisplay IDD_ace_arsenal), format ["A loadout of yours with the same name is being shared", _editBoxContent]] call FUNC(message); // TBL
+                            breakOut "main";
+                        };
+                    };
+                };
+            } foreach _sameNameLoadoutsList;
+        };
 
         for "_dataIndex" from 0 to 10 do {
             switch (_dataIndex) do {
@@ -109,6 +125,21 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonDefaultLoadouts:{
 
+        if (count _sameNameLoadoutsList > 0) then {
+
+            {
+                for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+
+                    if ((_contentPanelCtrl lnbText [_i, 1]) == (_x select 0)) exitwith {
+                        if ((_contentPanelCtrl lnbText [_i, 0]) != "") then {
+                            [(findDisplay IDD_ace_arsenal), format ["A loadout of yours with the same name is being shared", _editBoxContent]] call FUNC(message); // TBL
+                            breakOut "main";
+                        };
+                    };
+                };
+            } foreach _sameNameLoadoutsList;
+        };
+
         if (count _sameNameLoadoutsList == 0) then {
 
             _data pushBack [_editBoxContent, _curSelLoadout];
@@ -120,6 +151,18 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonSharedLoadouts :{
 
+        if ((_contentPanelCtrl lnbText [_cursSelRow, 0]) == profileName) exitWith {
+            [(findDisplay IDD_ace_arsenal), format ["You are sharing this loadout", _editBoxContent]] call FUNC(message); // TBL
+            breakOut "main";
+        };
+
+        if (count _sameNameLoadoutsList == 0) then {
+
+            _data pushBack [_editBoxContent, _curSelLoadout];
+        } else {
+
+            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
+        };
     };
 };
 

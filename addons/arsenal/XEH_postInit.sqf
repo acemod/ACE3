@@ -14,10 +14,22 @@ GVAR(lastSearchTextRight) = "";
 
     _unit setFace _face;
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(broadcastVoice), {
     params ["_unit", "_voice"];
 
     _unit setSpeaker _voice;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(sharedLoadoutDeleted), {
+    _x params ["_contentPanel" ,"_loadoutName"];
+
+    if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
+
+        for '_i' from 0 to (((lnbsize _contentPanel) select 0) - 1) do {
+            if ((_contentPanel lnbText [_i, 1]) == _loadoutName) exitwith {_contentPanel lnbDeleteRow _i};
+        };
+    };
 }] call CBA_fnc_addEventHandler;
 
 if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
