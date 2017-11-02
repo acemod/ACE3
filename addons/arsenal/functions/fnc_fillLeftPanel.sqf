@@ -147,9 +147,10 @@ switch true do {
                 } foreach ("isclass _x" configclasses (configfile >> "cfgfaces"));
             };
             case IDC_buttonVoice : {
+                private _voices = (configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [(configfile >> "CfgVoice" >> "NoVoice")];
                 {
                     ["CfgVoice", configName _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
-                } foreach configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true];
+                } foreach _voices;
             };
             case IDC_buttonInsigna : {
                 {
