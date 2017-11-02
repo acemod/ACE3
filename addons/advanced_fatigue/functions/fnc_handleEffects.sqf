@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [_player, 0.5, 3.3, true] call ace_advanced_fatigue_fnc_handleEffects
+ * [_player, 0.5, 3.3, true, 0, 0] call ace_advanced_fatigue_fnc_handleEffects
  *
  * Public: No
  */
