@@ -52,3 +52,41 @@ if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
         };
     }] call CBA_fnc_addEventHandler;
 };
+
+if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
+    [QGVAR(onLoadoutSave), {
+
+        params ["_index", "_loadout"];
+        _loadout params ["_loadoutName", "_loadoutData"];
+
+        for "_dataIndex" from 0 to 10 do {
+            switch (_dataIndex) do {
+
+                case 3;
+                case 4;
+                case 5: {
+                    if (count (_loadoutData select _dataIndex) > 0) then {
+                        private _containerContents = (_loadoutData select _dataIndex) select 1;
+
+                        if (count _containerContents > 0) then {
+
+                            {
+                                if (count _x == 2 && {(_x select 0) isEqualType ""}) then {
+
+                                    private _item = _x select 0;
+                                    if (_item isKindOf ["ACE_dogtag", (configFile >> "CfgWeapons")]) then {
+
+                                        _containerContents set [_foreachIndex, []];
+                                    };
+                                };
+                            } foreach _containerContents;
+                        };
+                    };
+                };
+            };
+
+            _loadoutsData = profileNamespace getVariable [QGVAR(saved_loadouts), []];
+            _loadoutsData set [_index, [_loadoutName, _loadoutData]];
+        };
+    }] call CBA_fnc_addEventHandler;
+};
