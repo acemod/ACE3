@@ -50,7 +50,7 @@ private _fnc_fill_right_Container = {
     _ctrlPanel lnbSetData [[_lbAdd, 0], _x];
     _ctrlPanel lnbSetPicture [[_lbAdd, 0], _picture];
     _ctrlPanel lnbSetValue [[_lbAdd, 0], _mass];
-    _ctrlPanel setVariable [_displayName, _mass];
+    _ctrlPanel setVariable [_x, _mass];
     _ctrlPanel lnbSetValue [[_lbAdd, 2], [0, 1] select (_isUnique)];
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
