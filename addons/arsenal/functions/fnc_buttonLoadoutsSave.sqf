@@ -152,16 +152,18 @@ switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonSharedLoadouts :{
 
         if ((_contentPanelCtrl lnbText [_cursSelRow, 0]) == profileName) exitWith {
-            [(findDisplay IDD_ace_arsenal), format ["You are sharing this loadout", _editBoxContent]] call FUNC(message); // TBL
+            [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
             breakOut "main";
         };
 
+        private _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_cursSelRow, 0]) + (_contentPanelCtrl lnbText [_cursSelRow, 1]))) select 2;
+
         if (count _sameNameLoadoutsList == 0) then {
 
-            _data pushBack [_editBoxContent, _curSelLoadout];
+            _data pushBack [_editBoxContent, _loadout];
         } else {
 
-            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
+            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
         };
     };
 };

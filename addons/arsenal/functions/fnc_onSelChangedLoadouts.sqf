@@ -67,7 +67,11 @@ switch (GVAR(currentLoadoutsTab)) do {
         _shareButtonCtrl ctrlCommit 0;
 
         if ((serverCommandAvailable "#logout") || {(_control lnbText [_curSel, 0]) == profileName}) then {
+
             _deleteButtonCtrl ctrlEnable true;
+            _deleteButtonCtrl ctrlCommit 0;
+        } else {
+            _deleteButtonCtrl ctrlEnable false;
             _deleteButtonCtrl ctrlCommit 0;
         };
 
