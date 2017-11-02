@@ -32,6 +32,45 @@ GVAR(lastSearchTextRight) = "";
     };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(loadoutShared), {
+    _x params ["_contentPanel" ,"_loadoutArgs"];
+    _loadoutArgs params ["_playerName", "_loadoutName", "_loadoutData"];
+
+    if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
+
+        private _curSelText =_contentPanel lnbText [(lnbCurSelRow _contentPanel), 1];
+        ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+
+        private _newRow = _contentPanel lnbAddRow [_playerName, _loadoutName];
+
+        _contentPanel lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];
+        _contentPanel lnbSetPicture [[_newRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];
+        _contentPanel lnbSetPicture [[_newRow, 4], getText (configFile >> "cfgWeapons" >> ((_loadout select 2) select 0) >> "picture")];
+        _contentPanel lnbSetPicture [[_newRow, 5], getText (configFile >> "cfgWeapons" >> ((_loadout select 3) select 0) >> "picture")];
+        _contentPanel lnbSetPicture [[_newRow, 6], getText (configFile >> "cfgWeapons" >> ((_loadout select 4) select 0) >> "picture")];
+        _contentPanel lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];
+        _contentPanel lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
+        _contentPanel lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
+
+        if (_nullItemsAmount > 0) then {
+
+            _contentPanel lnbSetColor [[_newRow, 1], [1, 0, 0, 0.5]];
+        } else {
+
+            if (_unavailableItemsAmount > 0) then {
+                _contentPanel lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
+            };
+        };
+
+        _contentPanel lnbSort [1, false];
+
+        // Select newly saved loadout
+        for '_i' from 0 to (((lnbsize _contentPanel) select 0) - 1) do {
+            if ((_contentPanel lnbText [_i, 1]) == _curSelText) exitwith {_contentPanel lnbSetCurSelRow _i};
+        };
+    };
+}] call CBA_fnc_addEventHandler;
+
 if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [QGVAR(displayOpened), {
         GVAR(virtualItems) set [17, (GVAR(virtualItems) select 17) -  ["FirstAidKit", "Medikit"]];

@@ -31,7 +31,7 @@ switch (GVAR(currentLoadoutsTab)) do {
             {
                 for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
 
-                    if ((_contentPanelCtrl lnbText [_i, 1]) == _x) exitwith {
+                    if ((_contentPanelCtrl lnbText [_i, 1]) == (_x select 0)) exitwith {
                         if ((_contentPanelCtrl lnbText [_i, 0]) != "") then {
                             [(findDisplay IDD_ace_arsenal), format ["A loadout of yours with the same name is being shared", _editBoxContent]] call FUNC(message); // TBL
                             breakOut "main";

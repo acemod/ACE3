@@ -26,6 +26,7 @@ if (_loadoutIndex > -1) then {
     GVAR(sharedLoadoutsVars) pushBackUnique _loadoutVar;
 
     _contentPanelCtrl lnbSetText [[_contentPanelCursSel, 0], "X"];
+    [QGVAR(loadoutShared), [_contentPanelCtrl, [_profileName ,_loadoutName , _loadoutData]]] call CBA_fnc_remoteEvent;
 };
 
 publicVariable QGVAR(sharedLoadoutsVars);
