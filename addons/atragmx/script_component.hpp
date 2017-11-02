@@ -23,4 +23,4 @@
 #define DEG_TO_MRAD(d) (d * 17.45329252) // Conversion factor: (50 * PI) / 9
 #define MRAD_TO_DEG(d) (d / 17.45329252) // Conversion factor: 9 / (50 * PI)
 
-#define ATRAGMX_PROFILE_NAMESPACE_VERSION 2.1
+#define ATRAGMX_PROFILE_NAMESPACE_VERSION 2.2
