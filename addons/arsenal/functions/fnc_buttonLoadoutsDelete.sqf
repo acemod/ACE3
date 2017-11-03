@@ -11,8 +11,14 @@ private _loadoutName = _contentPanelCtrl lnbText [_contentPanelCursSel, 1];
 
 if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
-    private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
-    _data deleteAt (_data find ((_data select {_x select 0 == _loadoutName}) select 0));
+    if (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts}) then {
+            GVAR(defaultLoadoutsList) deleteAt (GVAR(defaultLoadoutsList) find ((GVAR(defaultLoadoutsList) select {_x select 0 == _loadoutName}) select 0));
+
+    } else {
+            private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
+            _data deleteAt (_data find ((_data select {_x select 0 == _loadoutName}) select 0));
+    };
+
 
     _contentPanelCtrl setVariable [_loadoutName, nil];
     _contentPanelCtrl lnbDeleteRow _contentPanelCursSel;

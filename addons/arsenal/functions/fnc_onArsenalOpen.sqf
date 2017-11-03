@@ -20,6 +20,10 @@ if (isNil QGVAR(sharedLoadoutsVars)) then {
     GVAR(sharedLoadoutsVars) = [];
 };
 
+if (isNil QGVAR(defaultLoadoutsList)) then {
+    GVAR(defaultLoadoutsList) = [];
+};
+
 if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = [[[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };

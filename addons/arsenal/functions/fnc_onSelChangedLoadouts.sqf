@@ -12,7 +12,7 @@ private _textEditBoxCtrl= _display displayCtrl IDC_textEditBox;
 
 if (_curSel == -1) exitWith {
 
-    if (GVAR(currentLoadoutsTab) != IDC_buttonMyLoadouts) then {
+    if (GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts) then {
         _saveButtonCtrl ctrlEnable false;
         _saveButtonCtrl ctrlCommit 0;
     };
@@ -27,7 +27,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonMyLoadouts: {
 
-        _shareButtonCtrl ctrlEnable ([false, true] select (GVAR(allowSharedLoadouts)));
+        _shareButtonCtrl ctrlEnable (GVAR(allowSharedLoadouts) && {isMultiplayer});
         _shareButtonCtrl ctrlCommit 0;
 
         _loadButtonCtrl ctrlEnable true;
@@ -48,10 +48,11 @@ switch (GVAR(currentLoadoutsTab)) do {
             _x ctrlCommit 0;
         } foreach [_saveButtonCtrl, _loadButtonCtrl];
 
-        {
-            _x ctrlEnable false;
-            _x ctrlCommit 0;
-        } foreach [_shareButtonCtrl, _deleteButtonCtrl];
+        _shareButtonCtrl ctrlEnable false;
+        _shareButtonCtrl ctrlCommit 0;
+
+        _deleteButtonCtrl ctrlEnable (is3DEN);
+        _deleteButtonCtrl ctrlCommit 0;
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };
