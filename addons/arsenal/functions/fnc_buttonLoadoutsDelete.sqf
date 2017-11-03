@@ -14,7 +14,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
     _data deleteAt (_data find ((_data select {_x select 0 == _loadoutName}) select 0));
 
-    _contentPanelCtrl setVariable [_loadoutName, nil];
+    _contentPanelCtrl setVariable [_loadoutName + QGVAR(currentLoadoutsTab), nil];
     _contentPanelCtrl lnbDeleteRow _contentPanelCursSel;
     _contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel);
 

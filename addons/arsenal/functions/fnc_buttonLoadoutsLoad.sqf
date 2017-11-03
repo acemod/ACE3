@@ -10,7 +10,7 @@ private _curSel = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_curSel, 1];
 
 private _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_curSel, 0]) + (_contentPanelCtrl lnbText [_curSel, 1]))) select 2;
-GVAR(center) setUnitLoadout [[_contentPanelCtrl getVariable _loadoutName, _loadout] select (GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts), true];
+GVAR(center) setUnitLoadout [[_contentPanelCtrl getVariable _loadoutName + QGVAR(currentLoadoutsTab), _loadout] select (GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts), true];
 
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
 for "_index" from 0 to 15 do {

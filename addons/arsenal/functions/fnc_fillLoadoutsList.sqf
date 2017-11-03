@@ -17,9 +17,21 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     {
         _x params ["_loadoutName", "_loadoutData"];
 
-        ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+        if (isNil {_contentListCtrl getVariable _loadoutName}) then {
 
-        private _newRow = _contentListCtrl lnbAddRow ["",_loadoutName];
+            [_loadoutData] call FUNC(verifyLoadout)
+        } else {
+            _contentListCtrl getVariable (_loadoutName + "missingOrNilItemsCount")
+        } params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
+
+        if (!(isNil "_nullItemsList") && {_nullItemsAmount > 0} || {_unavailableItemsAmount > 0}) then {
+
+            private _printComponent = "ACE_Arsenal - Loadout:";
+            private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
+            private _printUnavailableItemsList = ["Unavailable items:", str _unavailableItemsList] joinString " ";
+
+            diag_log text (format ["%1%5    %2%5    %3%5    %4", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, endl]);
+        };
 
         if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts) then {
 
@@ -27,6 +39,8 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         } else {
            _contentListCtrl lnbSetColumnsPos [0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
         };
+
+        private _newRow = _contentListCtrl lnbAddRow ["",_loadoutName];
 
         _contentListCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];
         _contentListCtrl lnbSetPicture [[_newRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];
@@ -47,7 +61,8 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             };
         };
 
-        _contentListCtrl setVariable [_loadoutName, _loadout];
+        _contentListCtrl setVariable [_loadoutName + QGVAR(currentLoadoutsTab), _loadout];
+        _contentListCtrl setVariable [_loadoutName + "missingOrNilItemsCount" + QGVAR(currentLoadoutsTab) , [_nullItemsAmount, _unavailableItemsAmount]];
 
         if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars)) then {
             _contentListCtrl lnbSetText [[_newRow, 0], "X"];
@@ -97,4 +112,5 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     publicVariable QGVAR(sharedLoadoutsVars);
 };
 
+ GVAR(firstRun) = nil;
 _contentListCtrl lnbSort [1, false];

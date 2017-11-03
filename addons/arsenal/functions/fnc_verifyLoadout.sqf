@@ -12,6 +12,8 @@ private _accsArray = GVAR(virtualItems) select 1;
 
 private _nullItemsAmount = 0;
 private _unavailableItemsAmount = 0;
+private _nullItemsList = [];
+private _unavailableItemsList = [];
 
 private _fnc_weaponCheck = {
     params ["_dataPath"];
@@ -26,13 +28,13 @@ private _fnc_weaponCheck = {
                     if (isClass (_weaponCfg >> _item)) then {
                         if !(CHECK_WEAPON_OR_ACC) then {
 
-                            TRACE_1("item unavailable", _item);
+                            _unavailableItemsList pushBackUnique _item;
                             _dataPath set [_forEachIndex, ""];
                             _unavailableItemsAmount = _unavailableItemsAmount + 1;
                         };
                     } else {
 
-                        TRACE_1("item null", _item);
+                        _nullItemsList pushBackUnique _item;
                         _dataPath set [_forEachIndex, ""];
                         _nullItemsAmount = _nullItemsAmount + 1;
                     };
@@ -46,13 +48,13 @@ private _fnc_weaponCheck = {
                     if (isClass (_magCfg >> _mag)) then {
                         if !(_mag in (GVAR(virtualItems) select 2)) then {
 
-                            TRACE_1("item unavailable", _item);
+                            _unavailableItemsList pushBackUnique _item;
                             _dataPath set [_forEachIndex, []];
                             _unavailableItemsAmount = _unavailableItemsAmount + 1;
                         };
                     } else {
 
-                        TRACE_1("item null", _item);
+                        _nullItemsList pushBackUnique _item;
                         _dataPath set [_forEachIndex, []];
                         _nullItemsAmount = _nullItemsAmount + 1;
                     };
@@ -83,7 +85,7 @@ for "_dataIndex" from 0 to 9 do {
                 if (isClass (_vehcCfg >> _item) || {isClass (_weaponCfg >> _item)}) then {
                     if !(CHECK_CONTAINER) then {
 
-                        TRACE_1("item unavailable", _item);
+                        _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, []];
                         _unavailableItemsAmount = _unavailableItemsAmount + 1;
                     } else {
@@ -108,7 +110,7 @@ for "_dataIndex" from 0 to 9 do {
                                                 };
                                             } else {
 
-                                                TRACE_1("item null", _item);
+                                                _nullItemsList pushBackUnique _item;
                                                 ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
                                                 _nullItemsAmount = _nullItemsAmount + 1;
                                             };
@@ -130,7 +132,7 @@ for "_dataIndex" from 0 to 9 do {
                                             };
                                         } else {
 
-                                            TRACE_1("item null", _item);
+                                            _nullItemsList pushBackUnique _item;
                                             ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
                                             _nullItemsAmount = _nullItemsAmount + 1;
                                         };
@@ -141,6 +143,7 @@ for "_dataIndex" from 0 to 9 do {
                     };
                 } else {
 
+                    _nullItemsList pushBackUnique _item;
                     _loadout set [_dataIndex, []];
                     _nullItemsAmount = _nullItemsAmount + 1;
                 };
@@ -156,13 +159,13 @@ for "_dataIndex" from 0 to 9 do {
 
                     if !(_item in (GVAR(virtualItems) select 3)) then {
 
-                        TRACE_1("item unavailable", _item);
+                        _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
                         _unavailableItemsAmount = _unavailableItemsAmount + 1;
                     };
                 } else {
 
-                    TRACE_1("item null", _item);
+                    _nullItemsList pushBackUnique _item;
                     _loadout set [_dataIndex, ""];
                     _nullItemsAmount = _nullItemsAmount + 1;
                 };
@@ -178,13 +181,13 @@ for "_dataIndex" from 0 to 9 do {
 
                     if !(_item in (GVAR(virtualItems) select 7)) then {
 
-                        TRACE_1("item unavailable", _item);
+                        _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
                         _unavailableItemsAmount = _unavailableItemsAmount + 1;
                     };
                 } else {
 
-                    TRACE_1("item null", _item);
+                    _nullItemsList pushBackUnique _item;
                     _loadout set [_dataIndex, ""];
                     _nullItemsAmount = _nullItemsAmount + 1;
                 };
@@ -201,13 +204,13 @@ for "_dataIndex" from 0 to 9 do {
 
                         if !(CHECK_ASSIGNED_ITEMS) then {
 
-                            TRACE_1("item unavailable", _item);
+                            _unavailableItemsList pushBackUnique _item;
                             (_loadout select _dataIndex) set [_subIndex, ""];
                             _unavailableItemsAmount = _unavailableItemsAmount + 1;
                         };
                     } else {
 
-                        TRACE_1("item null", _item);
+                        _nullItemsList pushBackUnique _item;
                         (_loadout select _dataIndex) set [_subIndex, ""];
                         _nullItemsAmount = _nullItemsAmount + 1;
                     };
@@ -217,4 +220,4 @@ for "_dataIndex" from 0 to 9 do {
     };
 };
 
-[_loadout, _nullItemsAmount, _unavailableItemsAmount]
+[_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]
