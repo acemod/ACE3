@@ -23,16 +23,12 @@ if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
             [_display] call FUNC(buttonHide);
         };
         // Export button
-        case (_keyPressed == DIK_C): {
-            if (_ctrlState) then  {
-                [_display] call FUNC(buttonExport);
-            };
+        case (_keyPressed == DIK_C && {_ctrlState}): {
+            [_display] call FUNC(buttonExport);
         };
         // Import button
-        case (_keyPressed == DIK_V): {
-            if (_ctrlState) then {
-                [_display] call FUNC(buttonImport);
-            };
+        case (_keyPressed == DIK_V && {_ctrlState}): {
+            [_display] call FUNC(buttonImport);
         };
         // Switch vision mode
         case (_keyPressed in (actionkeys "nightvision")): {
@@ -77,6 +73,15 @@ if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
             if (GVAR(rightSearchbarFocus)) then {
                 [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
             };
+        };
+        case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
+            _return = false;
+        };
+        case (_keyPressed == DIK_C && {_ctrlState}): {
+            _return = false;
+        };
+        case (_keyPressed == DIK_V && {_ctrlState}): {
+            _return = false;
         };
     };
 };
