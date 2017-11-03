@@ -5,7 +5,7 @@ params ["_display"];
 
 private _data = call (compile copyFromClipboard);
 
-if !(_data isEqualType []) exitWith {
+if (isNil "_data" || {!(_data isEqualType [])}) exitWith {
     [_display, "Wrong format given"] call FUNC(message);
 };
 
