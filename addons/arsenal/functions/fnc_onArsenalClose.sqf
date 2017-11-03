@@ -9,7 +9,27 @@ camDestroy GVAR(camera);
 GVAR(center) switchCamera GVAR(cameraView);
 deleteVehicle GVAR(cameraHelper);
 
+if (is3DEN) then {
+
+    GVAR(centerOrigin) setUnitLoadout (getUnitLoadout GVAR(center));
+    GVAR(centerOrigin) setFace GVAR(currentFace);
+    GVAR(centerOrigin) setSpeaker GVAR(currentVoice);
+
+    deleteVehicle GVAR(sphere);
+    deleteVehicle GVAR(light);
+    deleteVehicle GVAR(center);
+
+    GVAR(centerOrigin) = nil;
+    GVAR(sphere) = nil;
+    GVAR(light) = nil;
+
+    get3DENCamera cameraEffect ["internal","back"];
+    ["ShowInterface",true] call bis_fnc_3DENInterface;
+    GVAR(visionMode) call bis_fnc_3DENVisionMode;
+};
+
 if (isMultiplayer) then {
+
     [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)], QGVAR(center) + "_face"] call CBA_fnc_globalEventJIP;
     [QGVAR(center) + "_face", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 

@@ -33,6 +33,7 @@ PREP(onSelChangedLeft);
 PREP(onSelChangedLoadouts);
 PREP(onSelChangedRight);
 PREP(onSelChangedRightListnBox);
+PREP(open3DEN);
 PREP(openBox);
 PREP(removeBox);
 PREP(removeVirtualItems);

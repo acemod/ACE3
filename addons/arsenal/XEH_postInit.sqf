@@ -2,7 +2,6 @@
 #include "defines.hpp"
 
 GVAR(EH_ID) = 0;
-GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 GVAR(lastSearchTextLeft) = "";
 GVAR(lastSearchTextRight) = "";
 

@@ -25,7 +25,6 @@ if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into
         };
     };
 
-
     if (_dlcName != "") then {
         _cachedItemInfo set [2, (modParams [_dlcName,["logo"]]) param [0,""]];//mod picture
         _modID = GVAR(modList) find _dlcName;
