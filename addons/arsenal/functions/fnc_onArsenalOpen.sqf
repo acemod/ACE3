@@ -10,7 +10,6 @@ if (isNil QGVAR(center)) then {
 };
 
 GVAR(mouseButtonState) = [[],[]];
-GVAR(firstRun) = true;
 
 if (isNil QGVAR(sharedLoadoutsNamespace)) then {
     GVAR(sharedLoadoutsNamespace) = true call CBA_fnc_createNamespace;

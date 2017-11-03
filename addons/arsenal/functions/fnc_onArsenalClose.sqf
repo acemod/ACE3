@@ -46,7 +46,6 @@ GVAR(shiftState) = nil;
 GVAR(leftTabFocus) = nil;
 GVAR(rightTabFocus) = nil;
 GVAR(rightTabLnBFocus) = nil;
-GVAR(firstRun) = nil;
 
 GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;

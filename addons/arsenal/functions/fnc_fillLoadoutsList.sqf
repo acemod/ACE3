@@ -17,6 +17,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     {
         _x params ["_loadoutName", "_loadoutData"];
 
+        // Check if the check was ran already
         if (isNil {_contentListCtrl getVariable _loadoutName}) then {
 
             [_loadoutData] call FUNC(verifyLoadout)
@@ -24,6 +25,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _contentListCtrl getVariable (_loadoutName + "missingOrNilItemsCount")
         } params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
+        // Log missing / nil items to RPT
         if (!(isNil "_nullItemsList") && {_nullItemsAmount > 0} || {_unavailableItemsAmount > 0}) then {
 
             private _printComponent = "ACE_Arsenal - Loadout:";
