@@ -24,21 +24,29 @@ private _ctrlList = _display displayCtrl IDC_rightTabContentListnBox;
 
 for "_l" from 0 to (lbSize _ctrlList - 1) do {
     _ctrlList lnbSetText [[_l, 2], str 0];
-    _ctrlList lnbsetcolor [[_l, 1], [1, 1, 1, 1]];
-    _ctrlList lnbsetcolor [[_l, 2], [1, 1, 1, 1]];
 };
 
-// Fade out button
 private _removeAllCtrl = _display displayCtrl IDC_buttonRemoveAll;
-
-if (ctrlFade _removeAllCtrl != 1) then {
-    _removeAllCtrl ctrlSetFade 1;
-};
-
-if (ctrlShown _removeAllCtrl) then {
-    _removeAllCtrl ctrlShow false;
-};
+_removeAllCtrl ctrlSetFade 1;
 _removeAllCtrl ctrlCommit FADE_DELAY;
 
-(_display displayCtrl IDC_loadIndicatorBar) progressSetPosition 0;
-(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight)); // TBL
+// Update load bar and weight
+private _loadIndicatorBarCtrl = _display displayCtrl IDC_loadIndicatorBar;
+_loadIndicatorBarCtrl progressSetPosition 0;
+(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
+
+// Update right panel colors
+private _maxLoad = switch (GVAR(currentLeftPanel)) do {
+    case IDC_buttonUniform: {
+        gettext (configfile >> "CfgWeapons" >> uniform GVAR(center) >> "ItemInfo" >> "containerClass")
+    };
+    case IDC_buttonVest: {
+        gettext (configfile >> "CfgWeapons" >> vest GVAR(center) >> "ItemInfo" >> "containerClass")
+    };
+    case IDC_buttonBackpack: {
+        backpack GVAR(center)
+    };
+};
+
+private _control = _display displayCtrl IDC_rightTabContentListnBox;
+[_control, _maxLoad] call FUNC(updateRightPanel);

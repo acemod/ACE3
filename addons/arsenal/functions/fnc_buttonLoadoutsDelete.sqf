@@ -20,7 +20,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     };
 
 
-    _contentPanelCtrl setVariable [_loadoutName, nil];
+    _contentPanelCtrl setVariable [_loadoutName + QGVAR(currentLoadoutsTab), nil];
     _contentPanelCtrl lnbDeleteRow _contentPanelCursSel;
     _contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel);
 

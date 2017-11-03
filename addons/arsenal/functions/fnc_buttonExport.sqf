@@ -2,4 +2,4 @@
 
 params ["_display"];
 
-[_display, localize "Not implemented"] call FUNC(message);
+[_display, "Not implemented"] call FUNC(message);

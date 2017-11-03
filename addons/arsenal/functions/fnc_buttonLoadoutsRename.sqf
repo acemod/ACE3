@@ -23,8 +23,8 @@ if (count _similarLoadouts > 0) exitWith {
 
 // Update loadout info in profile and list namespaces
 _data set [_data find ((_data select {_x select 0 == _loadoutName}) select 0), [_editBoxContent, _loadout]];
-_contentPanelCtrl setVariable [_loadoutName, nil];
-_contentPanelCtrl setVariable [_editBoxContent, _loadout];
+_contentPanelCtrl setVariable [_loadoutName + QGVAR(currentLoadoutsTab), nil];
+_contentPanelCtrl setVariable [_editBoxContent + QGVAR(currentLoadoutsTab), _loadout];
 
 _contentPanelCtrl lnbDeleteRow _curSelRow;
 

@@ -48,8 +48,9 @@ if (isClass _itemCfg) then {
         _ctrlDLC ctrlsetfade 1;
         _ctrlDLCBackground ctrlsetfade 1;
     };
-    _ctrlDLC ctrlcommit FADE_DELAY;
-    _ctrlDLCBackground ctrlcommit FADE_DELAY;
+
+    _ctrlDLC ctrlcommit 0;
+    _ctrlDLCBackground ctrlcommit 0;
 
 } else {
     _ctrlInfo ctrlSetFade 1;

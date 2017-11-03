@@ -64,7 +64,6 @@ GVAR(cameraPosition) = nil;
 GVAR(visionMode) = nil;
 
 GVAR(mouseButtonState) = nil;
-GVAR(mode) = nil;
 GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
 GVAR(leftSearchbarFocus) = nil;

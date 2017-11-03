@@ -113,7 +113,7 @@ switch (GVAR(currentLoadoutsTab)) do {
         _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
         _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
-        _contentPanelCtrl setVariable [_editBoxContent, _loadout];
+        _contentPanelCtrl setVariable [_editBoxContent + QGVAR(currentLoadoutsTab), _loadout];
 
         _contentPanelCtrl lnbSort [1, false];
 
