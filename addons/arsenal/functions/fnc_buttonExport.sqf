@@ -28,12 +28,12 @@ if (GVAR(shiftState)) then {
 
     "ace_clipboard" callExtension "--COMPLETE--";
 
-    [_display, "Default loadouts list exported"] call FUNC(message);
+    [_display, "Default loadouts list exported to clipboard"] call FUNC(message);
 } else {
 
     private _export = str getUnitLoadout GVAR(center);
     "ace_clipboard" callExtension (_export + ";");
     "ace_clipboard" callExtension "--COMPLETE--";
 
-    [_display, "Current loadout exported"] call FUNC(message);
+    [_display, "Current loadout exported to clipboard"] call FUNC(message);
 };

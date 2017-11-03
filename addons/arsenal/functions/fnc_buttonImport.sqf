@@ -57,5 +57,5 @@ if (count _data == 10) then {
 
     [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
 
-    [_display, "Loadout imported"] call FUNC(message); // TBL
+    [_display, "Loadout imported from clipboard"] call FUNC(message); // TBL
 };
