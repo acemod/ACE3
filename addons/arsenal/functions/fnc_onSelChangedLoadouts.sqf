@@ -17,6 +17,8 @@ if (_curSel == -1) exitWith {
         _saveButtonCtrl ctrlCommit 0;
     };
 
+    _shareButtonCtrl ctrlSetText "Share"; // TBL
+
     {
         _x ctrlEnable false;
         _x ctrlCommit 0;
@@ -33,8 +35,10 @@ switch (GVAR(currentLoadoutsTab)) do {
         _loadButtonCtrl ctrlEnable true;
         _loadButtonCtrl ctrlCommit 0;
 
+        _shareButtonCtrl ctrlSetText (["Share", "Unshare"] select ((_control lnbText [_curSel, 0]) != "")); // TBL
+
         {
-            _x ctrlEnable (_curSel >= 0);
+            _x ctrlEnable true;
             _x ctrlCommit 0;
         } foreach [_renameButtonCtrl, _deleteButtonCtrl];
 

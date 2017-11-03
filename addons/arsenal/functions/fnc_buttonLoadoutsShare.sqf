@@ -29,4 +29,5 @@ if (_loadoutIndex > -1) then {
     [QGVAR(loadoutShared), [_contentPanelCtrl, [_profileName ,_loadoutName , _loadoutData]]] call CBA_fnc_remoteEvent;
 };
 
+_control ctrlSetText (["Share", "Unshare"] select ((_contentPanelCtrl lnbText [_contentPanelCursSel, 0]) != "")); // TBL
 publicVariable QGVAR(sharedLoadoutsVars);
