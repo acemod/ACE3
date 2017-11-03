@@ -13,7 +13,7 @@ if (is3DEN) then {
 
     GVAR(centerOrigin) hideObject false;
 
-    //--- Apply the loadout on all selected objects
+    // Apply the loadout from the dummy to all selected units
     {
         _x setUnitLoadout (getUnitLoadout GVAR(center));
         _x setFace GVAR(currentFace);
