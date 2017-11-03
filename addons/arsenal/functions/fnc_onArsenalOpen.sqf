@@ -10,9 +10,6 @@ if (isNil QGVAR(center)) then {
 };
 
 GVAR(mouseButtonState) = [[],[]];
-if (isNil QGVAR(mode)) then {
-    GVAR(mode) = 1;
-};
 
 if (isNil QGVAR(sharedLoadoutsNamespace)) then {
     GVAR(sharedLoadoutsNamespace) = true call CBA_fnc_createNamespace;
@@ -237,20 +234,6 @@ GVAR(rightSearchbarFocus) = false;
 GVAR(leftTabFocus) = false;
 GVAR(rightTabFocus) = false;
 GVAR(rightTabLnBFocus) = false;
-
-if (GVAR(mode) != 0) then {
-    {
-        _x = _display displayCtrl _x;
-
-        _x ctrlSetFade 1;
-        _x ctrlShow false;
-        _x ctrlCommit 0;
-    } foreach [
-        IDC_buttonFace,
-        IDC_buttonVoice,
-        IDC_buttonInsigna
-    ];
-};
 
 {
     private _panel = _display displayCtrl _x;

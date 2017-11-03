@@ -1,25 +1,13 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-params [["_mode", 1, [1]], ["_object", objNull, [objNull]], ["_center", objNull, [objNull]]];
+params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mode", false, [false]]];
 
 if (isNull _object || {isNull _center}) exitWith {};
-if (isNil {_object getVariable [QGVAR(virtualItems), nil]}) exitWith {};
+if (isNil {_object getVariable [QGVAR(virtualItems), nil]} && {!_mode}) exitWith {};
 
-private _displayToUse = nil;
-switch _mode do {
-    case 0 : {
-        _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
-        _displayToUse = [_displayToUse, findDisplay 313] select (is3DEN);
-    };
-    case 1 : {
-        _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
-    };
-    case 2 : {
-        _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
-    };
-    default {};
-};
+private _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
+_displayToUse = [_displayToUse, findDisplay 313] select (is3DEN);
 
 if (isNil "_displayToUse" || {!isnull GVAR(camera)}) exitWith {
     hint "No display or arsenal already opened"; // TBR
@@ -27,7 +15,13 @@ if (isNil "_displayToUse" || {!isnull GVAR(camera)}) exitWith {
 
 GVAR(mode) = _mode;
 GVAR(center) = _center;
-GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), [
-    [[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
-]]);
+if (_mode) then {
+
+    GVAR(virtualItems) = uiNamespace getVariable QGVAR(configItems);
+} else {
+    GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), [
+        [[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
+    ]]);
+};
+
 _displayToUse createDisplay QGVAR(display);
