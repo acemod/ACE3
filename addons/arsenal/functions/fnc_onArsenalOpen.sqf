@@ -273,7 +273,7 @@ if (is3DEN) then {
     GVAR(center) setSpeaker GVAR(currentVoice);
 
     //--- Create light for night editing (code based on BIS_fnc_3DENFlashlight)
-    private _intensity = 20;
+    private _intensity = 1;
     GVAR(light) = "#lightpoint" createVehicle _centerPos;
     GVAR(light) setLightBrightness _intensity;
     GVAR(light) setLightAmbient [1,1,1];
