@@ -69,7 +69,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars)) then {
             _contentListCtrl lnbSetText [[_newRow, 0], "X"];
         };
-    } foreach ([_data, ([GVAR(defaultLoadoutsList), []] select (isNil QGVAR(defaultLoadoutsList)))] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
+    } foreach ([_data, GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {
 
     {
@@ -114,5 +114,4 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     publicVariable QGVAR(sharedLoadoutsVars);
 };
 
- GVAR(firstRun) = nil;
 _contentListCtrl lnbSort [1, false];
