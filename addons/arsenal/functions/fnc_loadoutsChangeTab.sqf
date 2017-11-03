@@ -23,7 +23,7 @@ switch (ctrlIDC _control) do {
     case IDC_buttonDefaultLoadouts: {
         _centerBoxTitleCtrl ctrlSetText "Default loadouts"; // TBL
 
-        _saveButtonCtrl ctrlEnable false;
+        _saveButtonCtrl ctrlEnable (is3DEN);
         _saveButtonCtrl ctrlCommit 0;
     };
 

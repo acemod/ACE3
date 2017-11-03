@@ -126,26 +126,110 @@ switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonDefaultLoadouts:{
 
         if (count _sameNameLoadoutsList > 0) then {
+            if (is3DEN) then {
 
-            {
-                for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+                _sameNameLoadoutsList = GVAR(defaultLoadoutsList) select {_x select 0 == _editBoxContent};
 
-                    if ((_contentPanelCtrl lnbText [_i, 1]) == (_x select 0)) exitwith {
-                        if ((_contentPanelCtrl lnbText [_i, 0]) != "") then {
-                            [(findDisplay IDD_ace_arsenal), format ["A loadout of yours with the same name is being shared", _editBoxContent]] call FUNC(message); // TBL
-                            breakOut "main";
+                for "_dataIndex" from 0 to 10 do {
+                    switch (_dataIndex) do {
+
+                        case 0;
+                        case 1;
+                        case 2;
+                        case 8: {
+
+                            if (count (_loadout select _dataIndex) > 0) then {
+
+                                private _weapon = (_loadout select _dataIndex) select 0;
+                                if (_weapon != "") then {
+
+                                    private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                    if (_weapon != _baseWeapon) then {
+                                        (_loadout select _dataIndex) set [0, _baseWeapon];
+                                    };
+                                };
+                            };
+                        };
+
+                        case 3;
+                        case 4;
+                        case 5: {
+                            if (count (_loadout select _dataIndex) > 0) then {
+                                private _containerContents = (_loadout select _dataIndex) select 1;
+
+                                if (count _containerContents > 0) then {
+
+                                    {
+                                        if (count _x == 2 && {!((_x select 0) isEqualType "")}) then {
+
+                                            private _weapon = (_x select 0) select 0;
+                                            if (_weapon != "") then {
+
+                                                private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                                if (_weapon != _baseWeapon) then {
+                                                    (_x select 0)set [0, _baseWeapon];
+                                                };
+                                            };
+                                        };
+                                    } foreach _containerContents;
+                                };
+                            };
                         };
                     };
                 };
-            } foreach _sameNameLoadoutsList;
-        };
 
-        if (count _sameNameLoadoutsList == 0) then {
+                if (count _sameNameLoadoutsList == 0) then {
 
-            _data pushBack [_editBoxContent, _curSelLoadout];
-        } else {
+                    GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _loadout];
+                } else {
+                    GVAR(defaultLoadoutsList) set [GVAR(defaultLoadoutsList) find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+                };
 
-            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
+                for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+                    if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbDeleteRow _i};
+                };
+
+                private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
+
+                _contentPanelCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];
+                _contentPanelCtrl lnbSetPicture [[_newRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];
+                _contentPanelCtrl lnbSetPicture [[_newRow, 4], getText (configFile >> "cfgWeapons" >> ((_loadout select 2) select 0) >> "picture")];
+                _contentPanelCtrl lnbSetPicture [[_newRow, 5], getText (configFile >> "cfgWeapons" >> ((_loadout select 3) select 0) >> "picture")];
+                _contentPanelCtrl lnbSetPicture [[_newRow, 6], getText (configFile >> "cfgWeapons" >> ((_loadout select 4) select 0) >> "picture")];
+                _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];
+                _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
+                _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
+
+                _contentPanelCtrl setVariable [_editBoxContent, _loadout];
+
+                _contentPanelCtrl lnbSort [1, false];
+
+                // Select newly saved loadout
+                for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+                    if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
+                };
+            } else {
+                {
+                    for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+
+                        if ((_contentPanelCtrl lnbText [_i, 1]) == (_x select 0)) exitwith {
+                            if ((_contentPanelCtrl lnbText [_i, 0]) != "") then {
+                                [(findDisplay IDD_ace_arsenal), format ["A loadout of yours with the same name is being shared", _editBoxContent]] call FUNC(message); // TBL
+                                breakOut "main";
+                            };
+                        };
+                    };
+                } foreach _sameNameLoadoutsList;
+
+
+                if (count _sameNameLoadoutsList == 0) then {
+
+                    _data pushBack [_editBoxContent, _curSelLoadout];
+                } else {
+
+                    _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
+                };
+            };
         };
     };
 

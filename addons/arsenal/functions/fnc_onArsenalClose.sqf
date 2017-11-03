@@ -9,7 +9,33 @@ camDestroy GVAR(camera);
 GVAR(center) switchCamera GVAR(cameraView);
 deleteVehicle GVAR(cameraHelper);
 
+if (is3DEN) then {
+
+    GVAR(centerOrigin) hideObject false;
+
+    // Apply the loadout from the dummy to all selected units
+    {
+        _x setUnitLoadout (getUnitLoadout GVAR(center));
+        _x setFace GVAR(currentFace);
+        _x setSpeaker GVAR(currentVoice);
+    } foreach (get3DENSelected "object");
+
+    save3DENInventory (get3DENSelected "object");
+    setStatValue ["3DENArsenal", 1];
+
+    deleteVehicle GVAR(light);
+    deleteVehicle GVAR(center);
+
+    GVAR(centerOrigin) = nil;
+    GVAR(light) = nil;
+
+    get3DENCamera cameraEffect ["internal","back"];
+    ["ShowInterface",true] call bis_fnc_3DENInterface;
+    GVAR(visionMode) call bis_fnc_3DENVisionMode;
+};
+
 if (isMultiplayer) then {
+
     [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)], QGVAR(center) + "_face"] call CBA_fnc_globalEventJIP;
     [QGVAR(center) + "_face", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 

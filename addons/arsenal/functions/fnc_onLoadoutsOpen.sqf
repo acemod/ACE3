@@ -24,7 +24,7 @@ if !(GVAR(allowDefaultLoadouts)) then {
     _buttonDefaultLoadoutsCtrl ctrlCommit 0;
 };
 
-if !(GVAR(allowSharedLoadouts) || {isMultiplayer}) then {
+if !(GVAR(allowSharedLoadouts) && {isMultiplayer}) then {
     private _buttonShareLoadoutsCtrl = _display displayCtrl IDC_buttonSharedLoadouts;
     _buttonShareLoadoutsCtrl ctrlEnable false;
     _buttonShareLoadoutsCtrl ctrlCommit 0;
