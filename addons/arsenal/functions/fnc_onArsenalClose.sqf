@@ -12,9 +12,16 @@ deleteVehicle GVAR(cameraHelper);
 if (is3DEN) then {
 
     GVAR(centerOrigin) hideObject false;
-    GVAR(centerOrigin) setUnitLoadout (getUnitLoadout GVAR(center));
-    GVAR(centerOrigin) setFace GVAR(currentFace);
-    GVAR(centerOrigin) setSpeaker GVAR(currentVoice);
+
+    //--- Apply the loadout on all selected objects
+    {
+        _x setUnitLoadout (getUnitLoadout GVAR(center));
+        _x setFace GVAR(currentFace);
+        _x setSpeaker GVAR(currentVoice);
+    } foreach (get3DENSelected "object");
+
+    save3DENInventory (get3DENSelected "object");
+    setStatValue ["3DENArsenal", 1];
 
     deleteVehicle GVAR(light);
     deleteVehicle GVAR(center);
