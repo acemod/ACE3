@@ -75,4 +75,6 @@ _loadIndicatorBarCtrl progressSetPosition _load;
 private _value = {_x == _item} count _items;
 _ctrlList lnbSetText [[_lnbCurSel, 2],str _value];
 
+[QGVAR(cargoChanged), [_display, _item, _addOrRemove, GVAR(shiftState)]] call CBA_fnc_localEvent;
+
 [_ctrlList, _maxLoad] call FUNC(updateRightPanel);
