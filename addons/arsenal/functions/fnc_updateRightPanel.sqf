@@ -30,6 +30,8 @@ if (progressPosition _loadIndicatorBarCtrl > 0) then {
     _removeAllCtrl ctrlCommit FADE_DELAY;
 };
 
+(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
+
 // change button color if unique or too big
 private _plusButtonCtrl = _display displayCtrl IDC_arrowPlus;
 _plusButtonCtrl ctrlEnable !((_control lnbValue [_curSel, 2]) == 1 || {(_control getVariable (_control lnbData [_curSel, 0])) > _maxLoad});

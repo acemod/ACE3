@@ -70,7 +70,6 @@ switch GVAR(currentLeftPanel) do {
 // Update progress bar status, weight info
 private _loadIndicatorBarCtrl = _display displayCtrl IDC_loadIndicatorBar;
 _loadIndicatorBarCtrl progressSetPosition _load;
-(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
 
 private _value = {_x == _item} count _items;
 _ctrlList lnbSetText [[_lnbCurSel, 2],str _value];
