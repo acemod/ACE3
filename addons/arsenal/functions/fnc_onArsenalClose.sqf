@@ -21,7 +21,6 @@ if (is3DEN) then {
     } foreach (get3DENSelected "object");
 
     save3DENInventory (get3DENSelected "object");
-    setStatValue ["3DENArsenal", 1];
 
     deleteVehicle GVAR(light);
     deleteVehicle GVAR(center);
