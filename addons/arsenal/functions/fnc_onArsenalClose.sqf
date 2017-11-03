@@ -11,16 +11,15 @@ deleteVehicle GVAR(cameraHelper);
 
 if (is3DEN) then {
 
+    GVAR(centerOrigin) hideObject false;
     GVAR(centerOrigin) setUnitLoadout (getUnitLoadout GVAR(center));
     GVAR(centerOrigin) setFace GVAR(currentFace);
     GVAR(centerOrigin) setSpeaker GVAR(currentVoice);
 
-    deleteVehicle GVAR(sphere);
     deleteVehicle GVAR(light);
     deleteVehicle GVAR(center);
 
     GVAR(centerOrigin) = nil;
-    GVAR(sphere) = nil;
     GVAR(light) = nil;
 
     get3DENCamera cameraEffect ["internal","back"];

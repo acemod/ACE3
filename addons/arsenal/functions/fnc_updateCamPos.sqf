@@ -13,20 +13,3 @@ if ((getPosAsl GVAR(camera) select 2) < (getPosAsl GVAR(center) select 2)) then 
     private _disCoef = ((getPosAsl GVAR(cameraHelper) select 2) - (getPosAsl GVAR(center) select 2)) / ((getPosAsl GVAR(cameraHelper) select 2) - (getPosAsl GVAR(camera) select 2) + 0.001);
     GVAR(camera) setPos (GVAR(cameraHelper) modelToWorldVisual [0, -_distance * _disCoef, 0]);
 };
-
-if (is3DEN) then {
-    for "_x" from -5 to 5 step 1 do {
-        drawLine3D [
-            GVAR(sphere) modelToWorld [_x, -5, 0],
-            GVAR(sphere) modelToWorld [_x, +5, 0],
-            [0.03, 0.03, 0.03, 1]
-        ];
-    };
-    for "_y" from -5 to 5 step 1 do {
-        drawLine3D [
-            GVAR(sphere) modelToWorld [-5, _y, 0],
-            GVAR(sphere) modelToWorld [+5, _y, 0],
-            [0.03, 0.03, 0.03, 1]
-        ];
-    };
-};

@@ -258,17 +258,12 @@ ctrlSetFocus _mouseAreaCtrl;
 if (is3DEN) then {
 
     GVAR(centerOrigin) = GVAR(center);
+    GVAR(centerOrigin) hideObject true;
     private _centerPos = position GVAR(centerOrigin);
-    _centerPos set [2,500];
-    GVAR(sphere) = createVehicle ["Sphere_3DEN", _centerPos, [], 0, "none"];
-    GVAR(sphere) setPosAtl _centerPos;
-    GVAR(sphere) setDir 0;
-    GVAR(sphere) setObjectTexture [0,"#(argb,8,8,3)color(0.93,1.0,0.98,0.028,co)"];
-    GVAR(sphere) setObjectTexture [1,"#(argb,8,8,3)color(0.93,1.0,0.98,0.01,co)"];
 
     GVAR(center) = createAgent [typeOf GVAR(centerOrigin), position GVAR(centerOrigin), [], 0, "none"];
-    GVAR(center) setPosAtl getPosAtl GVAR(sphere);
-    GVAR(center) setDir 0;
+    GVAR(center) setPosAtl getPosAtl GVAR(centerOrigin);
+    GVAR(center) setDir (getDir GVAR(centerOrigin));
     GVAR(center) switchMove animationState GVAR(centerOrigin);
     GVAR(center) switchAction "playerstand";
     GVAR(center) enableSimulation false;
@@ -283,7 +278,7 @@ if (is3DEN) then {
     GVAR(light) setLightBrightness _intensity;
     GVAR(light) setLightAmbient [1,1,1];
     GVAR(light) setLightColor [0,0,0];
-    GVAR(light) lightAttachObject [GVAR(sphere), [0, 0, -_intensity * 7]];
+    GVAR(light) lightAttachObject [GVAR(centerOrigin), [0, 0, -_intensity * 7]];
 
     //--- Use the same vision mode as in Eden
     GVAR(visionMode)= -2 call bis_fnc_3DENVisionMode;
