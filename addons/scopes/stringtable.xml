@@ -210,6 +210,14 @@
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
         </Key>
+        <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
+            <English>Use legacy UI</English>
+            <German>Vorheriges UI verwenden</German>
+        </Key>
+        <Key ID="STR_ACE_Scopes_useLegacyUI_description">
+            <English>Displays elevation and windage with signed numbers</English>
+            <German>Anzeige der Absehenverstellungen mit vorzeichenbehafteten Zahlen</German>
+        </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <German>Kleine Korrektur hoch</German>
