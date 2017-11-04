@@ -13,7 +13,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
     if (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts}) then {
             GVAR(defaultLoadoutsList) deleteAt (GVAR(defaultLoadoutsList) find ((GVAR(defaultLoadoutsList) select {_x select 0 == _loadoutName}) select 0));
-
+            set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
     } else {
             private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
             _data deleteAt (_data find ((_data select {_x select 0 == _loadoutName}) select 0));
@@ -40,4 +40,3 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     publicVariable QGVAR(sharedLoadoutsVars);
     [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was unshared", _loadoutName]] call FUNC(message); // TBL
 };
-
