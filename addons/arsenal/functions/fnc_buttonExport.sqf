@@ -13,11 +13,11 @@ if (GVAR(shiftState)) then {
 
         switch true do {
             case (_index == -1): {
-                "ace_clipboard" callExtension (format ["GVAR(defaultLoadoutsList) = [%1", endl]);
+                "ace_clipboard" callExtension (format ["[%1", endl]);
             };
 
             case (_index == _listLength): {
-                "ace_clipboard" callExtension "];;";
+                "ace_clipboard" callExtension "];";
             };
 
             default {
@@ -37,3 +37,4 @@ if (GVAR(shiftState)) then {
 
     [_display, "Current loadout exported to clipboard"] call FUNC(message);
 };
+

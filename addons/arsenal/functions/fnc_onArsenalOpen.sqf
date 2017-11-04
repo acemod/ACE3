@@ -21,7 +21,12 @@ if (isNil QGVAR(sharedLoadoutsVars)) then {
 };
 
 if (isNil QGVAR(defaultLoadoutsList)) then {
-    GVAR(defaultLoadoutsList) = [];
+
+    if (is3DEN) then {
+        GVAR(defaultLoadoutsList) = (QGVAR(DummyCategory) get3DENMissionAttribute QGVAR(DefaultLoadoutsListAttribute));
+    } else {
+            GVAR(defaultLoadoutsList) = [];
+    };
 };
 
 if (isNil QGVAR(virtualItems)) then {
