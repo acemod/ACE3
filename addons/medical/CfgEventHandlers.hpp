@@ -20,7 +20,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class CAManBase {
         class ADDON {
-            init = QUOTE(call COMPILE_FILE(XEH_init));
+            init = QUOTE(call FUNC(handleInit));
         };
     };
     class ACE_bodyBagObject {
@@ -33,7 +33,7 @@ class Extended_Init_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class ADDON {
-            respawn = QUOTE(call COMPILE_FILE(XEH_respawn));
+            respawn = QUOTE(call FUNC(handleRespawn));
         };
     };
 };

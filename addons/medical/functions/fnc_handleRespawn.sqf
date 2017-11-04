@@ -1,3 +1,18 @@
+/*
+ * Author: KoffeinFlummi
+ * Called when a unit is initialized via XEH_respawn
+ *
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_handleRespawn
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_unit"];
