@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * None
+ * call ace_parachute_fnc_handleRespawn
  *
  * Public: No
  */
