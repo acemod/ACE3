@@ -56,7 +56,13 @@ GVAR(localUnits) = [];
     TRACE_2("unit deleted",_unit,local _unit);
 
     if (local _unit) then {
-        GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
+        [{
+            params ["_unit"];
+            TRACE_3("unit deleted nextFrame",_unit,local _unit,isNull _unit);
+            if (isNull _unit) then { //If it is not null then the deleted EH was Fake.
+                GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
+            };
+        }, [_unit]] call CBA_fnc_execNextFrame;
     };
 }] call CBA_fnc_addClassEventHandler;
 
