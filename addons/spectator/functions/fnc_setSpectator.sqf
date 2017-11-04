@@ -101,6 +101,7 @@ if (_set) then {
 // Hide/Unhide the player if enabled and alive
 if (alive player) then {
     private _hidden = (_hide && _set);
+    TRACE_1("",_hidden);
 
     // Ignore damage (vanilla and ace_medical)
     player allowDamage !_hidden;
