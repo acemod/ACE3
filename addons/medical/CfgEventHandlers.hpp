@@ -18,30 +18,9 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_Init_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            init = QUOTE(call FUNC(handleInit));
-        };
-    };
     class ACE_bodyBagObject {
         class ADDON {
             init = QUOTE(_this call DEFUNC(dragging,initObject));
-        };
-    };
-};
-
-class Extended_Respawn_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            respawn = QUOTE(call FUNC(handleRespawn));
-        };
-    };
-};
-
-class Extended_Killed_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };
