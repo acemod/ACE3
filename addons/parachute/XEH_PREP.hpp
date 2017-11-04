@@ -1,6 +1,7 @@
 
 PREP(doLanding);
 PREP(handleInfoDisplayChanged);
+PREP(handleRespawn);
 PREP(hideAltimeter);
 PREP(onEachFrame);
 PREP(showAltimeter);
