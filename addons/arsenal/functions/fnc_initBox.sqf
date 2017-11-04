@@ -35,4 +35,3 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
         [_object, _items, false] call FUNC(addVirtualItems);
     };
 };
-

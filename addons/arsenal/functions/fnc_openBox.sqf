@@ -9,7 +9,7 @@ if (isNil {_object getVariable [QGVAR(virtualItems), nil]} && {!_mode}) exitWith
 private _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
 _displayToUse = [_displayToUse, findDisplay 313] select (is3DEN);
 
-if (isNil "_displayToUse" || {!isnull GVAR(camera)}) exitWith {
+if (isNil "_displayToUse" || {!isnil QGVAR(camera)}) exitWith {
     hint "No display or arsenal already opened"; // TBR
 };
 

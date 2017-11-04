@@ -245,4 +245,7 @@ class CfgVehicles {
         displayName = CSTRING(ModuleRemoveArsenal_DisplayName);
         function = QFUNC(moduleRemoveArsenal);
     };
+    class ModuleArsenal_F: Module_F {
+        function=QFUNC(bi_moduleArsenal);
+    };
 };
