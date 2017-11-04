@@ -1,6 +1,6 @@
 /*
  * Author: KoffeinFlummi
- * Called when a unit is initialized via XEH_respawn
+ * Called when a unit is Respawned
  *
  * Arguments:
  * 0: The Unit <OBJECT>
