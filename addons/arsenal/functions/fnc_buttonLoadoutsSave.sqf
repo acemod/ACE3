@@ -26,8 +26,8 @@ scopeName "main";
 switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonMyLoadouts:{
 
-        private _similarSharedLoadouts = GVAR(sharedLoadoutsVars) select {_x == (profileName + _editBoxContent)};
-        if (count _similarSharedLoadouts > 0) exitWith {
+        private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
+        if (_similarSharedLoadout) exitWith {
             [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
             breakOut "main";
         };
@@ -167,7 +167,6 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
 
             if (count _sameNameLoadoutsList == 0) then {
-
                 GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _loadout];
             } else {
                 GVAR(defaultLoadoutsList) set [GVAR(defaultLoadoutsList) find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
@@ -200,12 +199,11 @@ switch (GVAR(currentLoadoutsTab)) do {
             set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
         } else {
 
-            private _similarSharedLoadouts = GVAR(sharedLoadoutsVars) select {_x == (profileName + _editBoxContent)};
-            if (count _similarSharedLoadouts > 0) exitWith {
+            private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
+            if (_similarSharedLoadout) exitWith {
                 [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
                 breakOut "main";
             };
-
 
             if (count _sameNameLoadoutsList == 0) then {
                 _data pushBack [_editBoxContent, _curSelLoadout];
@@ -217,9 +215,10 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonSharedLoadouts :{
 
-        if ((_contentPanelCtrl lnbText [_cursSelRow, 0]) == profileName) exitWith {
-            [(findDisplay IDD_ace_arsenal), format ["You are sharing this loadout", _editBoxContent]] call FUNC(message); // TBL
-            breakOut "main";
+        private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
+        if (_similarSharedLoadout) exitWith {
+            [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
+             breakOut "main";
         };
 
         private _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_cursSelRow, 0]) + (_contentPanelCtrl lnbText [_cursSelRow, 1]))) select 2;

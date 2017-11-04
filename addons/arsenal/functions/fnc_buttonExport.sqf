@@ -37,4 +37,3 @@ if (GVAR(shiftState)) then {
 
     [_display, "Current loadout exported to clipboard"] call FUNC(message);
 };
-
