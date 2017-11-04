@@ -39,7 +39,7 @@ if (_items isEqualType true && {_items}) then {
         if (_forEachIndex isEqualTo 0) then {
             _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items]];
         } else {
-            if (_forEachIndex isEqualTo 0) then {
+            if (_forEachIndex isEqualTo 1) then {
                 _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items, (_x select 3) - _items]];
             } else {
                 _cargo set [_cargo find _x, _x - _items];
