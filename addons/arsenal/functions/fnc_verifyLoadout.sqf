@@ -104,7 +104,7 @@ for "_dataIndex" from 0 to 9 do {
                                             if (CLASS_CHECK_ITEM) then {
                                                 if !(CHECK_CONTAINER_ITEMS) then {
 
-                                                    TRACE_1("item unavailable", _item);
+                                                    _unavailableItemsList pushBackUnique _item;
                                                     ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
                                                     _unavailableItemsAmount = _unavailableItemsAmount + 1;
                                                 };
@@ -126,7 +126,7 @@ for "_dataIndex" from 0 to 9 do {
                                         if (isClass (_magCfg >> _item)) then {
                                             if (_item in (GVAR(virtualItems) select 3)) then {
 
-                                                TRACE_1("item unavailable", _item);
+                                                _unavailableItemsList pushBackUnique _item;
                                                 ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
                                                 _unavailableItemsAmount = _unavailableItemsAmount + 1;
                                             };
