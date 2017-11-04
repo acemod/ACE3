@@ -69,7 +69,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars)) then {
             _contentListCtrl lnbSetText [[_newRow, 0], "X"];
         };
-    } foreach ([_data, GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
+    } foreach ([_data, +GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {
 
     {
