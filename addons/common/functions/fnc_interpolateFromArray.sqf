@@ -9,6 +9,9 @@
  * Return Value:
  * Interpolation result <NUMBER>
  *
+ * Example:
+ * [[0,1], 5] call ace_common_fnc_interpolateFromArray
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

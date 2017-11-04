@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_common_fnc_loadSettingsLocalizedText
+ *
  * Public: No
  */
 #include "script_component.hpp"

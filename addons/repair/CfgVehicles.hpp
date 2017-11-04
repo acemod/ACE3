@@ -10,7 +10,7 @@
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
-                exceptions[] = {"isNotOnLadder"}; \
+                exceptions[] = {"isNotSwimming", "isNotOnLadder"}; \
             }; \
         }; \
     };
@@ -32,23 +32,23 @@ class CfgVehicles {
         author = ECSTRING(Common,ACETeam);
         class Arguments {
             class engineerSetting_Repair {
-                displayName = CSTRING(enginerSetting_Repair_name);
-                description = CSTRING(enginerSetting_Repair_description);
+                displayName = CSTRING(engineerSetting_Repair_name);
+                description = CSTRING(engineerSetting_Repair_description);
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
                     class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; default = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
+                    class Advanced { name = CSTRING(engineerSetting_AdvancedOnly); value = 2; };
                 };
             };
             class engineerSetting_Wheel {
-                displayName = CSTRING(enginerSetting_Wheel_name);
-                description = CSTRING(enginerSetting_Wheel_description);
+                displayName = CSTRING(engineerSetting_Wheel_name);
+                description = CSTRING(engineerSetting_Wheel_description);
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 1; };
                     class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
+                    class Advanced { name = CSTRING(engineerSetting_AdvancedOnly); value = 2; };
                 };
             };
             class repairDamageThreshold {
@@ -91,7 +91,7 @@ class CfgVehicles {
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
                     class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 1;};
+                    class Advanced { name = CSTRING(engineerSetting_AdvancedOnly); value = 2; default = 1;};
                 };
             };
             class addSpareParts {
@@ -150,7 +150,7 @@ class CfgVehicles {
                         default = 1;
                     };
                     class doctor {
-                        name = CSTRING(AssignEngineerRole_role_specialist);
+                        name = CSTRING(AssignEngineerRole_role_advanced);
                         value = 2;
                     };
                 };

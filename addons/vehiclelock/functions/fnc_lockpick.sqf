@@ -20,8 +20,6 @@
  */
 #include "script_component.hpp"
 
-private ["_vehLockpickStrenth","_condition","_returnValue"];
-
 params ["_unit", "_veh", "_funcType"];
 TRACE_3("params",_unit,_veh,_funcType);
 
@@ -34,14 +32,14 @@ if ((locked _veh) == 0) exitWith {false};
 //need lockpick item
 if (!("ACE_key_lockpick" in (items _unit))) exitWith {false};
 
-_vehLockpickStrenth = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
+private _vehLockpickStrenth = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
 if (!(_vehLockpickStrenth isEqualType 0)) exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};
 
 //-1 indicates unpickable lock
 if (_vehLockpickStrenth < 0) exitWith {false};
 
 //Condition check for progressBar
-_condition = {
+private _condition = {
     params ["_args"];
     _args params ["_unit", "_veh"];
     ((_unit distance _veh) < 5) && {(speed _veh) < 0.1}
@@ -49,13 +47,13 @@ _condition = {
 
 if (!([[_unit, _veh]] call _condition)) exitWith {false};
 
-_returnValue = _funcType in ["canLockpick", "startLockpick", "finishLockpick"];
+private _returnValue = _funcType in ["canLockpick", "startLockpick", "finishLockpick"];
 switch (_funcType) do {
     case "canLockpick": {
         _returnValue = !([_unit, _veh] call FUNC(hasKeyForVehicle)) && {(locked _veh) in [2, 3]};
     };
     case "startLockpick": {
-        [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition, ["isNotInside"]] call EFUNC(common,progressBar);
+        [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);
     };
     case "finishLockpick": {
         [QGVAR(setVehicleLock), [_veh, false], [_veh]] call CBA_fnc_targetEvent;

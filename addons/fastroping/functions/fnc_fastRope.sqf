@@ -17,12 +17,11 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_deployedRopes", "_usableRope", "_usableRopeIndex"];
 
 //Select unoccupied rope
-_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
-_usableRope = _deployedRopes select 0;
-_usableRopeIndex = 0;
+private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+private _usableRope = _deployedRopes select 0;
+private _usableRopeIndex = 0;
 {
     if !(_x select 5) exitWith {
         _usableRope = _x;

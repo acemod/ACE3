@@ -9,6 +9,9 @@
  * Return Value:
  * Digits. The maximum count is six digits. <ARRAY>
  *
+ * Example:
+ * [5, 5] call ace_common_fnc_numberToDigits
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

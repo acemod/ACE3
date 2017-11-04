@@ -1,5 +1,18 @@
-//esteldunedain
-//update gps display
+/*
+ * Author: esteldunedain
+ * update gps display
+ *
+ * Arguments:
+ * Something
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_maptools_fnc_openMapGpsUpdate
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

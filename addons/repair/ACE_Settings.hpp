@@ -8,19 +8,19 @@ class ACE_Settings {
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
     class GVAR(engineerSetting_repair) {
-        displayName = CSTRING(enginerSetting_Repair_name);
-        description = CSTRING(enginerSetting_Repair_description);
+        displayName = CSTRING(engineerSetting_Repair_name);
+        description = CSTRING(engineerSetting_Repair_description);
         typeName = "SCALAR";
         value = 1;
-        values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
+        values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_AdvancedOnly)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
     class GVAR(engineerSetting_wheel) {
-        displayName = CSTRING(enginerSetting_Wheel_name);
-        description = CSTRING(enginerSetting_Wheel_description);
+        displayName = CSTRING(engineerSetting_Wheel_name);
+        description = CSTRING(engineerSetting_Wheel_description);
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
+        values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_AdvancedOnly)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
     class GVAR(repairDamageThreshold) {
@@ -58,7 +58,7 @@ class ACE_Settings {
         description = CSTRING(engineerSetting_fullRepair_description);
         typeName = "SCALAR";
         value = 2;
-        values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
+        values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_AdvancedOnly)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
     class GVAR(addSpareParts) {

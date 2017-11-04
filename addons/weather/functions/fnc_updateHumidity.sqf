@@ -3,10 +3,10 @@
  * Updates GVAR(currentHumidity)
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_weather_fnc_updateHumidity
@@ -19,7 +19,7 @@ private _month = date select 1;
 
 GVAR(currentHumidity) = (GVAR(Humidity) select (_month - 1)) / 100;
 
-if ((rain > 0) && {overcast > 0.7}) then {
+if ((rain > 0) && {GVAR(currentOvercast) > 0.7}) then {
     GVAR(currentHumidity) = 1;
 } else {
     private _avgTemperature = ((GVAR(TempDay) select (_month - 1)) + (GVAR(TempNight) select (_month - 1))) / 2;

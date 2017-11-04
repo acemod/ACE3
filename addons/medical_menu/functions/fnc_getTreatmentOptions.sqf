@@ -10,7 +10,7 @@
  * Return Value:
  * Available actions <ARRAY>
  *
- * Exmaple:
+ * Example:
  * [ACE_player, poor_dude, "some category"] call ace_medical_menu_fnc_getTreatmentOptions
  *
  * Public: No
@@ -19,7 +19,7 @@
 
 params ["_player", "_target", "_name"];
 
-if (!([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {[]};
+if (!([ACE_player, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith))) exitWith {[]};
 
 private _actions = if (EGVAR(medical,level) == 2) then {
     GVAR(actionsAdvanced);

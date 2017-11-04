@@ -6,7 +6,7 @@
  * Apply new data? <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_solution_setup

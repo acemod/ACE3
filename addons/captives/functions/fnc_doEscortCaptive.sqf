@@ -30,7 +30,7 @@ if (_state) then {
     _unit setVariable [QGVAR(escortedUnit), _target, true];
 
     //Add Actionmenu to release captive
-    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
+    private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
     {[(_this select 0), ((_this select 0) getVariable [QGVAR(escortedUnit), objNull]), false] call FUNC(doEscortCaptive);},
     nil, 20, false, true, "", QUOTE(!isNull (GETVAR(_target,QGVAR(escortedUnit),objNull)))];
 

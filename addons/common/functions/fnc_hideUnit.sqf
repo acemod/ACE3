@@ -7,7 +7,7 @@
  * 1: Reason to hide the unit <STRING>
  *
  * Return Value:
- * nil
+ * None <NIL>
  *
  * Example:
  * [ACE_Player, "SpectatorMode"] call ace_common_fnc_hideUnit

@@ -12,7 +12,6 @@ class GVAR(ProgressBar_Dialog) {
             text = "";
             sizeEx = 0;
             lineSpacing = 0;
-            access = 0;
             type = 0;
             style = 0;
             size = 1;
@@ -64,7 +63,6 @@ class GVAR(DisableMouse_Dialog) {
             text = "";
             sizeEx = 0;
             lineSpacing = 0;
-            access = 0;
             type = 0;
             style = 0;
             size = 1;

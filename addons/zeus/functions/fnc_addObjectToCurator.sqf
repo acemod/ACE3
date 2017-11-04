@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [object] call ace_zeus_fnc_addObjectToCurator
+ *
  * Public: No
  */
 

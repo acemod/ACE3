@@ -6,7 +6,7 @@
  * parse input <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_calculate_truing_drop
@@ -33,7 +33,7 @@ if (_parseInput) then {
     _subsonicRange  = Round(_subsonicRange);
 
     _subsonicRange = _transonicRange max _subsonicRange;
-    
+
     _transonicDrop = -100 max parseNumber(ctrlText 18013) min 100;
     _subsonicDrop = -100 max parseNumber(ctrlText 18014) min 100;
     private _dropUnit = GVAR(currentScopeUnit);
@@ -46,8 +46,8 @@ if (_parseInput) then {
     };
     switch (_dropUnit) do {
         case 0: {
-            _transonicDrop = _transonicDrop * 3.38;
-            _subsonicDrop  = _subsonicDrop  * 3.38;
+            _transonicDrop = MOA_TO_MRAD(_transonicDrop);
+            _subsonicDrop  = MOA_TO_MRAD(_subsonicDrop);
         };
         case 2: {
             _transonicDrop = _transonicDrop / 1.047;
@@ -56,7 +56,7 @@ if (_parseInput) then {
     };
     _transonicDrop = Round(_transonicDrop * 100) / 100;
     _subsonicDrop  = Round(_subsonicDrop  * 100) / 100;
-    
+
     _subsonicDrop = _transonicDrop max _subsonicDrop;
 };
 
@@ -65,7 +65,7 @@ if ((GVAR(truingDropDropData) select 0) == 0 || {!([_transonicRange, _subsonicRa
         call FUNC(calculate_target_solution);
     };
     private _solutionInput = +GVAR(targetSolutionInput);
-    
+
     if (_transonicRange == 0) then {
         _transonicRange = Round(403 call FUNC(calculate_distance_at_velocity));
     };

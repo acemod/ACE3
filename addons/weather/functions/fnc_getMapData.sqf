@@ -45,6 +45,7 @@ GVAR(Humidity) = [82, 80, 78, 70, 71, 72, 70, 73, 78, 80, 83, 82];
 
 GVAR(currentTemperature) = 20;
 GVAR(currentHumidity) = 0.5;
+GVAR(currentOvercast) = 0;
 
 // Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
 private _nonInheritedArrays = configProperties [configFile >> "CfgWorlds" >> _worldName, "isArray _x", false];

@@ -16,12 +16,10 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_broken", "_effects"];
+private _unit = ACE_player;
 
-_unit = ACE_player;
-
-_broken = GETBROKEN;
-_effects = GLASSESDEFAULT;
+private _broken = GETBROKEN;
+private _effects = GLASSESDEFAULT;
 _effects set [BROKEN, _broken];
 
 SETGLASSES(_unit,_effects);

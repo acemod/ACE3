@@ -7,7 +7,7 @@
  * 1: True to take captive, false to release captive <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, true] call ACE_captives_fnc_setHandcuffed;

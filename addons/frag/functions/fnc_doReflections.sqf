@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ * Dev things
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_doReflections
+ *
+ * Public: No
+ */
+
 //fnc_doReflections.sqf
 #include "script_component.hpp"
 

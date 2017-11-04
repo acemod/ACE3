@@ -13,6 +13,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, bob, "weapon",5, 2] call ace_overheating_fnc_loadCoolestSpareBarrel
+ *
  *
  * Public: No
  */

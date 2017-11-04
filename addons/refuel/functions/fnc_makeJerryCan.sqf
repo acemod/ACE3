@@ -22,7 +22,9 @@ if (isNull _target ||
     {_target isKindOf "AllVehicles"} ||
     {_target getVariable [QGVAR(jerryCan), false]}) exitWith {};
 
-[_target, _fuelAmount] call FUNC(setFuel);
+if (isServer) then {
+    [_target, _fuelAmount] call FUNC(setFuel);  // has global effects
+};
 _target setVariable [QGVAR(jerryCan), true];
 _target setVariable [QGVAR(source), _target];
 
@@ -42,7 +44,7 @@ private _action = [QGVAR(Refuel),
 _action = [QGVAR(PickUpNozzle),
     localize LSTRING(TakeNozzle),
     QPATHTOF(ui\icon_refuel_interact.paa),
-    {[_player, objNull, _target] call FUNC(TakeNozzle)},
+    {[_player, _target] call FUNC(takeNozzle)},
     {[_player, _target] call FUNC(canTakeNozzle)},
     {},
     [],
