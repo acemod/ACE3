@@ -18,7 +18,7 @@ params ["_display", "_control"];
 
 if !(ctrlEnabled _control) exitWith {};
 
-private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts);
+private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
 
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _curSelRow = lnbCurSelRow _contentPanelCtrl;
