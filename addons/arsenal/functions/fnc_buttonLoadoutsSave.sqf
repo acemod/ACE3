@@ -36,6 +36,9 @@ private _loadout = getUnitLoadout GVAR(center);
 private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
 private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
+if ((_contentPanelCtrl lnbText [_cursSelRow, 0]) == profileName) exitWith {
+    [(findDisplay IDD_ace_arsenal), format ["You are the author of this loadout", _editBoxContent]] call FUNC(message); // TBL
+};
 if (_similarSharedLoadout) exitWith {
     [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
 };
