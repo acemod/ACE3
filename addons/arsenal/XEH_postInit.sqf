@@ -37,7 +37,7 @@ GVAR(lastSearchTextRight) = "";
     _x params ["_contentPanel" ,"_loadoutArgs"];
     _loadoutArgs params ["_playerName", "_loadoutName", "_loadoutData"];
 
-    TRACE_3("loadoutShared EH", _contentPanel, _loadoutsArgs, IDC_buttonSharedLoadouts);
+    TRACE_3("loadoutShared EH", _contentPanel, _loadoutArgs, IDC_buttonSharedLoadouts);
 
     if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
