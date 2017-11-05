@@ -25,7 +25,7 @@ if (_editBoxContent == "") exitWith {
     [(findDisplay IDD_ace_arsenal), format ["The name box is empty!", _editBoxContent]] call FUNC(message); // TBL
 };
 
-private _data = +(profileNamespace getVariable [QGVAR(saved_loadouts), []]);
+private _data = [+(profileNamespace getVariable [QGVAR(saved_loadouts), []]), +GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts);
 private _loadout = getUnitLoadout GVAR(center);
 
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
@@ -123,6 +123,8 @@ switch (GVAR(currentLoadoutsTab)) do {
         for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
             if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
         };
+
+        profileNamespace setVariable [QGVAR(saved_loadouts), _data];
     };
 
     case IDC_buttonDefaultLoadouts:{
@@ -223,6 +225,8 @@ switch (GVAR(currentLoadoutsTab)) do {
             } else {
                 _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
             };
+
+            profileNamespace setVariable [QGVAR(saved_loadouts), _data];
         };
     };
 
@@ -241,11 +245,12 @@ switch (GVAR(currentLoadoutsTab)) do {
         } else {
             _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
         };
+
+        profileNamespace setVariable [QGVAR(saved_loadouts), _data];
     };
 };
 
 [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
-profileNamespace setVariable [QGVAR(saved_loadouts), _data];
 
 private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
 [QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
