@@ -23,7 +23,7 @@ private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _curSelRow = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_curSelRow, 1];
-private _loadout = _contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab));
+private _loadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
 
 private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
 private _editBoxContent = ctrlText _editBoxCtrl;
@@ -37,7 +37,7 @@ if (count _similarLoadouts > 0) exitWith {
 // Update loadout info in profile and list namespaces
 _data set [_data find ((_data select {_x select 0 == _loadoutName}) select 0), [_editBoxContent, _loadout]];
 _contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), nil];
-_contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), _loadout];
+_contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
 
 _contentPanelCtrl lnbDeleteRow _curSelRow;
 
@@ -51,7 +51,6 @@ _contentPanelCtrl lnbSetPicture [[_newRow, 6], getText (configFile >> "cfgWeapon
 _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];
 _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
 _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
-_contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), _loadout];
 
 // Sort and select the current row
 _contentPanelCtrl lnbSort [1, false];

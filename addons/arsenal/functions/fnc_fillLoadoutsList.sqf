@@ -31,7 +31,13 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     {
         _x params ["_loadoutName", "_loadoutData"];
 
-        [_loadoutData] call FUNC(verifyLoadout) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
+        private _loadoutCachedInfo = _contentListCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab)); 
+
+        if (isNil "_loadoutCachedInfo") then {
+            [_loadoutData] call FUNC(verifyLoadout)
+        } else {
+            _loadoutCachedInfo
+        } params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
         // Log missing / nil items to RPT
         if (_nullItemsAmount > 0 || {_unavailableItemsAmount > 0}) then {
@@ -70,7 +76,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             };
         };
 
-        _contentListCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), _loadout];
+        _contentListCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), [_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
 
         if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars)) then {
             _contentListCtrl lnbSetText [[_newRow, 0], "X"];
