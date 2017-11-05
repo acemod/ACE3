@@ -23,6 +23,8 @@ GVAR(lastSearchTextRight) = "";
 [QGVAR(loadoutUnshared), {
     _x params ["_contentPanel" ,"_loadoutName"];
 
+    TRACE_3("loadoutUnshared EH", _contentPanel, _loadoutName, IDC_buttonSharedLoadouts);
+
     if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
         for '_i' from 0 to (((lnbsize _contentPanel) select 0) - 1) do {
@@ -34,6 +36,8 @@ GVAR(lastSearchTextRight) = "";
 [QGVAR(loadoutShared), {
     _x params ["_contentPanel" ,"_loadoutArgs"];
     _loadoutArgs params ["_playerName", "_loadoutName", "_loadoutData"];
+
+    TRACE_3("loadoutShared EH", _contentPanel, _loadoutsArgs, IDC_buttonSharedLoadouts);
 
     if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 

@@ -21,9 +21,6 @@ private _loadout = switch GVAR(currentLoadoutsTab) do {
     };
 };
 
-TRACE_1("loadout load", _loadout);
-
-
 GVAR(center) setUnitLoadout [_loadout, true];
 
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
