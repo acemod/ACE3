@@ -21,27 +21,25 @@ GVAR(lastSearchTextRight) = "";
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(loadoutUnshared), {
-    _x params ["_contentPanel" ,"_loadoutName"];
-
-    TRACE_3("loadoutUnshared EH", _contentPanel, _loadoutName, IDC_buttonSharedLoadouts);
+    params ["_contentPanel" , "_playerName", "_loadoutName"];
 
     if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
+        private _dataToCheck = _playerName + _loadoutName;
+
         for '_i' from 0 to (((lnbsize _contentPanel) select 0) - 1) do {
-            if ((_contentPanel lnbText [_i, 1]) == _loadoutName) exitwith {_contentPanel lnbDeleteRow _i};
+            if ((_contentPanel lnbData [_i, 1]) == _dataToCheck) exitwith {_contentPanel lnbDeleteRow _i};
         };
     };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(loadoutShared), {
-    _x params ["_contentPanel" ,"_loadoutArgs"];
+    params ["_contentPanel" ,"_loadoutArgs"];
     _loadoutArgs params ["_playerName", "_loadoutName", "_loadoutData"];
-
-    TRACE_3("loadoutShared EH", _contentPanel, _loadoutArgs, IDC_buttonSharedLoadouts);
 
     if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
-        private _curSelText =_contentPanel lnbData [(lnbCurSelRow _contentPanel), 1];
+        private _curSelData =_contentPanel lnbData [(lnbCurSelRow _contentPanel), 1];
         ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];
 
         private _newRow = _contentPanel lnbAddRow [_playerName, _loadoutName];
@@ -69,9 +67,9 @@ GVAR(lastSearchTextRight) = "";
 
         _contentPanel lnbSort [1, false];
 
-        // Select newly saved loadout
+        // Select previously selected loadout
         for '_i' from 0 to (((lnbsize _contentPanel) select 0) - 1) do {
-            if ((_contentPanel lnbText [_i, 1]) == _curSelText) exitwith {_contentPanel lnbSetCurSelRow _i};
+            if ((_contentPanel lnbText [_i, 1]) == _curSelData) exitwith {_contentPanel lnbSetCurSelRow _i};
         };
     };
 }] call CBA_fnc_addEventHandler;

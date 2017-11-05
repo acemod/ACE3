@@ -35,8 +35,9 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     _contentPanelCtrl lnbDeleteRow _contentPanelCursSel;
     _contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel);
 
-    [QGVAR(loadoutUnshared), [_contentPanelCtrl, _loadoutName]] call CBA_fnc_remoteEvent;
-
     publicVariable QGVAR(sharedLoadoutsVars);
+
+    [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
+
     [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was unshared", _loadoutName]] call FUNC(message); // TBL
 };

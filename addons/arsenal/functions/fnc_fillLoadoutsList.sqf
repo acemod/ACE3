@@ -80,6 +80,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             private _loadoutVar = _playerName + _loadoutName;
             GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
             GVAR(sharedLoadoutsVars) = GVAR(sharedLoadoutsVars) - [_loadoutVar];
+            [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName, ]] call CBA_fnc_remoteEvent;
 
         } else {
 
