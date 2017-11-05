@@ -11,6 +11,12 @@ deleteVehicle GVAR(cameraHelper);
 
 if (is3DEN) then {
 
+    private _centerOriginParent = objectParent GVAR(centerOrigin);
+
+    if !(isNull _centerOriginParent) then {
+        _centerOriginParent hideObject false;
+    };
+
     GVAR(centerOrigin) hideObject false;
 
     // Apply the loadout from the dummy to all selected units

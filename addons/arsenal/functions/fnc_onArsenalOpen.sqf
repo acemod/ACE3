@@ -281,6 +281,12 @@ if (is3DEN) then {
 
     GVAR(centerOrigin) = GVAR(center);
     GVAR(centerOrigin) hideObject true;
+
+    private _centerOriginParent = objectParent GVAR(centerOrigin);
+    if !(isNull _centerOriginParent) then {
+        _centerOriginParent hideObject true;
+    };
+
     private _centerPos = position GVAR(centerOrigin);
 
     GVAR(center) = createAgent [typeOf GVAR(centerOrigin), position GVAR(centerOrigin), [], 0, "none"];

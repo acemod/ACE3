@@ -20,11 +20,11 @@
 params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mode", false, [false]]];
 
 if (
-        isNull _object ||
-        {isNull _center} ||
-        {!(_center isKindOf "Man")} ||
-        {!(isNull objectParent _center)}
-    ) exitWith {};
+    isNull _object ||
+    {isNull _center} ||
+    {!(_center isKindOf "Man")} ||
+    {!(isNull objectParent _center) && {!is3DEN}}
+) exitWith {};
 
 if (isNil {_object getVariable [QGVAR(virtualItems), nil]} && {!_mode}) exitWith {
     [localize LSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
