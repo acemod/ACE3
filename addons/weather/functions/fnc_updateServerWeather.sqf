@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team, esteldunedain, Ruthberg
- * Updates the wind and rain evolution on the server. Broadcasts the current and next values to the clients where needed.
+ * Updates the wind evolution on the server. Broadcasts relevant weather information to the clients.
  *
  * Arguments:
  * None
@@ -15,42 +15,12 @@
  */
 #include "script_component.hpp"
 
-private _overcastMultiplier = 1 max (2* overcast) min 2; // 0 (@ overcast 0), 2 (@ overcast 1)
-
-// Rain simulation
-if (GVAR(rain_period_count) > GVAR(rain_next_period)) then {
-
-    GVAR(rain_next_period) = ceil((1 + (random 10)) / _overcastMultiplier);
-    GVAR(rain_period_count) = 0;
-
-    private _rainOverCast = 0;
-
-    if (overcast >= 0.7) then {
-        _rainOverCast = (overcast - 0.7) / 0.3;
-        if (GVAR(next_rain) == 0) then {
-            // Initialize rain with a random strength depending on the current overcast value
-            GVAR(next_rain) = -0.25 + (random 0.75) + (random 0.5) * _rainOverCast;
-        };
-
-        private _rain_current_range = -1 + (random 2);
-        
-        GVAR(next_rain) = GVAR(next_rain) + GVAR(next_rain) * ((_rainOverCast * _overcastMultiplier) / 8) * _rain_current_range;
-        GVAR(next_rain) = 0 max GVAR(next_rain) min 1;
-    } else {
-        _rainOverCast = 1;
-        GVAR(next_rain) = 0;
-    };
-
-    private _rain_transition_time = 1 + (_rainOverCast * 5) + (random (_rainOverCast * 20));
-    
-    _rain_transition_time setRain GVAR(next_rain);
-    
-    TRACE_5("",rain,GVAR(next_rain),_rain_transition_time,_rainOverCast,overcast);
-};
+missionNamespace setVariable [QGVAR(currentOvercast), overcast, true];
 
 // Wind simulation
 if (GVAR(wind_period_count) > GVAR(wind_next_period)) then {
 
+    private _overcastMultiplier = 1 max (2* overcast) min 2; // 0 (@ overcast 0), 2 (@ overcast 1)
     GVAR(wind_next_period) = ceil((2 + (random 5)) / _overcastMultiplier);
     GVAR(wind_period_count) = 0;
 
@@ -89,7 +59,4 @@ if (GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     publicVariable "ACE_WIND_PARAMS";
 };
 
-missionNamespace setVariable [QGVAR(currentOvercast), overcast, true];
-
-GVAR(rain_period_count) = GVAR(rain_period_count) + 1;
 GVAR(wind_period_count) = GVAR(wind_period_count) + 1;
