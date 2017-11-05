@@ -31,7 +31,7 @@ private _loadout = getUnitLoadout GVAR(center);
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
-private _curSelLoadout = _contentPanelCtrl getVariable _loadoutName;
+private _curSelLoadout = _contentPanelCtrl getVariable (_loadoutName + QGVAR(currentLoadoutsTab));
 
 private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
