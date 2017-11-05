@@ -1,7 +1,7 @@
 /*
  * Author: Karel Moricky, modified by Alganthe
  * Update camera position
- * Modernized a bit, modified vars to fit arsenal rewrite
+ * Modernized a bit, modified vars to fit arsenal rewrite.
  *
  * Arguments:
  * None

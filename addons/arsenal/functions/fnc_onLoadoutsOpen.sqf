@@ -1,11 +1,11 @@
 /*
  * Author: Alganthe
- * onLoad EH for ACE3's arsenal loadouts display
+ * onLoad EH for arsenal loadouts display.
  *
  * Arguments:
  * 0: Ignored
  * 1: Arguments <ARRAY>
-  * 1.1: Display <DISPLAY>
+  * 1.1: Loadouts display <DISPLAY>
  *
  * Return Value:
  * None

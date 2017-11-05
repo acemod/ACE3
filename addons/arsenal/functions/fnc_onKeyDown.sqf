@@ -1,3 +1,19 @@
+/*
+ * Author: Alganthe
+ * Handles keyboard inputs in arsenal.
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Key being pressed <SCALAR>
+ * 2: Shift state <BOOL>
+ * 3: Ctrl state <BOOL>
+ * 4: Alt state <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 #include "\A3\ui_f\hpp\defineDIKCodes.inc"

@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Handles keyboard inputs inside the searchbars text boxes.
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Searchbar control <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

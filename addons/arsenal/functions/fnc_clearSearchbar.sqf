@@ -1,3 +1,17 @@
+/*
+ * Author: Alganthe
+ * Clear the provided searchbar.
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Searchbar control <CONTROL>
+ * 2: Right button state <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe
- * FIll arsenal's left panel
+ * Fill  left panel.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>

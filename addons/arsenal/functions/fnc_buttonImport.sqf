@@ -1,9 +1,9 @@
 /*
  * Author: Alganthe
- * Import loadout / default loadouts list from clipboard
+ * Import loadout / default loadouts list from clipboard.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None

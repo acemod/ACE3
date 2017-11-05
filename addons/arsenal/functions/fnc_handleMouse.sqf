@@ -1,3 +1,19 @@
+/*
+ * Author: Alganthe
+ * Update the camera position and pitch/bank.
+ *
+ * Arguments:
+ * 0: Not used
+ * 1: Arguments <ARRAY>
+  * 1.1: Mouse area control <CONTROL>
+  * 1.2: Mouse X position <SCALAR>
+  * 1.3: Mouse Y position <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

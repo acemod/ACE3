@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe
- * onUnLoad EH for ACE3's arsenal
+ * onUnLoad EH for arsenal.
  *
  * Arguments:
  * None

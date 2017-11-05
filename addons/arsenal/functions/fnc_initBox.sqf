@@ -1,11 +1,11 @@
 /*
  * Author: Alganthe
- * Initialize a box / object for ACE3 arsenal.
+ * Initialize a box / object for arsenal.
  *
  * Arguments:
  * 0: Target <OBJECT>
  * 1: Items <BOOL> or <ARRAY>
- * 2: Global <BOOL>
+ * 2: Initialize globally <BOOL>
  *
  * Return Value:
  * None

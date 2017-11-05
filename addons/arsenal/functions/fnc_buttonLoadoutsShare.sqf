@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Share selected loadout.
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Button control <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Handles tab changing for the loadouts display.
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Tab control <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

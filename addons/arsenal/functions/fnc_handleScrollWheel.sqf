@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Handle the mouse wheel.
+ *
+ * Arguments:
+ * 0: Not used
+ * 1: Mousewheel Z position <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

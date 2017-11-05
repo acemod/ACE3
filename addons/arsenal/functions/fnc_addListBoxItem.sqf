@@ -1,6 +1,6 @@
 /*
  * Author: Dedmen
- * Add a listbox row
+ * Add a listbox row.
  *
  * Arguments:
  * 0: Config category <STRING> (must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice")

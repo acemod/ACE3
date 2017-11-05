@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe, Dedmen
- * Add virtual items to the provided target
+ * Add virtual items to the provided target.
  *
  * Arguments:
  * 0: Target <OBJECT>

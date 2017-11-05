@@ -1,9 +1,9 @@
 /*
  * Author: Alganthe
- * Rename selected loadout
+ * Rename selected loadout.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Arsenal display <DISPLAY>
  * 1: Button control <CONTROL>
  *
  * Return Value:
@@ -17,7 +17,6 @@
 params ["_display", "_control"];
 
 if !(ctrlEnabled _control) exitWith {};
-
 
 private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts);
 

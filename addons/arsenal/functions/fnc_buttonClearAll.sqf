@@ -1,9 +1,9 @@
 /*
  * Author: Alganthe
- * Clear container
+ * Clear the current container.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None

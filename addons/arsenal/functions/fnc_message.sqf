@@ -1,9 +1,22 @@
+/*
+ * Author: Alganthe
+ * Displays messages in arsenal.
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Message <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
 params ["_display", "_message"];
 
-private _messageBoxCtrl = _display displayctrl IDC_message;
+private _messageBoxCtrl = _display displayCtrl IDC_message;
 private _handle = _messageBoxCtrl getVariable QGVAR(messageBoxHandle);
 
 if !(isNil "_handle") then {
@@ -22,20 +35,20 @@ _handle = [_display, _messageBoxCtrl, time + 5, _message, FADE_DELAY] spawn {
             };
 
             case (round (_timer - time) == 5): {
-                _control ctrlsettext _message;
-                _control ctrlsetfade 1;
-                _control ctrlcommit 0;
+                _control ctrlSetText _message;
+                _control ctrlSetFade 1;
+                _control ctrlCommit 0;
 
-                _control ctrlsetfade 0;
-                _control ctrlcommit _delay;
+                _control ctrlSetFade 0;
+                _control ctrlCommit _delay;
             };
         };
 
         uiSleep 1;
     };
 
-    _control ctrlsetfade 1;
-    _control ctrlcommit _delay;
+    _control ctrlSetFade 1;
+    _control ctrlCommit _delay;
     terminate _thisScript;
 };
 _messageBoxCtrl setVariable [QGVAR(messageBoxHandle), _handle];

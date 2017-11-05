@@ -1,9 +1,9 @@
 /*
  * Author: Alganthe
- * Hide arsenal's interface
+ * Hide / show arsenal interface.
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None

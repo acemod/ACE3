@@ -1,8 +1,9 @@
 /*
  * Author: Alganthe
- * onUnLoad EH for ACE3's arsenal loadouts display
+ * onUnLoad EH for arsenal loadouts display.
  *
  * Arguments:
+ * None
  *
  * Return Value:
  * None
@@ -11,9 +12,6 @@
 */
 #include "script_component.hpp"
 #include "..\defines.hpp"
-
-params ["", "_args"];
-_args params ["_display"];
 
 GVAR(currentLoadoutsTab) = nil;
 
