@@ -55,8 +55,10 @@ switch (GVAR(currentLoadoutsTab)) do {
         _shareButtonCtrl ctrlEnable false;
         _shareButtonCtrl ctrlCommit 0;
 
-        _deleteButtonCtrl ctrlEnable (is3DEN);
-        _deleteButtonCtrl ctrlCommit 0;
+        {
+            _x ctrlEnable (is3DEN);
+            _x ctrlCommit 0;
+        } foreach [_deleteButtonCtrl, _renameButtonCtrl];
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };
