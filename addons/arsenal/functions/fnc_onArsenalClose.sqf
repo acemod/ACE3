@@ -1,3 +1,15 @@
+/*
+ * Author: Alganthe
+ * onUnLoad EH for ACE3's arsenal
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
 GVAR(camera) cameraEffect ["terminate", "back"];
