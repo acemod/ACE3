@@ -51,12 +51,10 @@ if (GVAR(wind_period_count) > GVAR(wind_next_period)) then {
 
     TRACE_5("dirCur/dirNew/spdCur/spdNew/period",GVAR(current_wind_direction),_windDirection,GVAR(current_wind_speed),_windSpeed,_transitionTime);
 
-    ACE_WIND_PARAMS = [GVAR(current_wind_direction), _windDirectionChange, GVAR(current_wind_speed), _windSpeedChange, _transitionTime, CBA_missionTime];
+    GVAR(windParams) = [GVAR(current_wind_direction), _windDirectionChange, GVAR(current_wind_speed), _windSpeedChange, _transitionTime, CBA_missionTime];
 
     GVAR(current_wind_direction) = _windDirection;
     GVAR(current_wind_speed) = _windSpeed;
-
-    publicVariable "ACE_WIND_PARAMS";
 };
 
 GVAR(wind_period_count) = GVAR(wind_period_count) + 1;

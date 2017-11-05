@@ -1,6 +1,6 @@
 /*
  * Author: Ruthberg
- * Inits the wind variables on mission start
+ * Inits the wind variables on the server (on mission start)
  *
  * Arguments:
  * None
@@ -17,8 +17,6 @@
 
 private _month = date select 1;
 private _windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);
-
-ACE_wind = [0, 0, 0];
 
 GVAR(wind_direction_reference) = random 360;
 private _sum = 0;
@@ -57,5 +55,3 @@ GVAR(current_wind_speed) = GVAR(min_wind_speed) + (GVAR(max_wind_speed) - GVAR(m
 
 GVAR(wind_period_count) = 0;
 GVAR(wind_next_period) = -1;
-
-GVAR(wind_speed_debug_output) = [];

@@ -27,26 +27,10 @@ GVAR(WindInfo) = false;
 [0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)
 
 ["ace_settingsInitialized",{
-    TRACE_2("ace_settingsInitialized eh",GVAR(updateInterval),GVAR(enabled));
-    
-    if (GVAR(enabled)) then {
-        [{
-            [] call FUNC(updateWind);
-            if (isMultiplayer && isServer) then {
-                // Initiate (vanilla) wind update
-                setWind [ACE_wind select 0, ACE_wind select 1, true];
-            };
-        }, 1] call CBA_fnc_addPerFrameHandler;
+    if (!GVAR(enabled)) exitWith {};
 
-        [{
-            [] call FUNC(updateTemperature);
-            [] call FUNC(updateHumidity);
-        }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;
-    } else {
-        GVAR(currentTemperature) = 15;
-        GVAR(currentHumidity) = 0;
-        GVAR(currentOvercast) = 0;
-        [{ACE_wind = wind;}, 1] call CBA_fnc_addPerFrameHandler;
-    };
-
+    [{
+        [] call FUNC(updateTemperature);
+        [] call FUNC(updateHumidity);
+    }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
