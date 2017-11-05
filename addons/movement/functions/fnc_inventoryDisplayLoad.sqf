@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [DISPLAY] call ACE_inventory_fnc_inventoryDisplayLoad
+ * [DISPLAY] call ACE_movement_fnc_inventoryDisplayLoad
  *
  * Public: No
  */
