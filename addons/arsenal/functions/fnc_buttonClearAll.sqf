@@ -1,3 +1,15 @@
+/*
+ * Author: Alganthe
+ * Clear container
+ *
+ * Arguments:
+ * 0: Display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
@@ -19,7 +31,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
-// Clear number of owned items / set color back to normal
+// Clear number of owned items
 private _ctrlList = _display displayCtrl IDC_rightTabContentListnBox;
 
 for "_l" from 0 to (lbSize _ctrlList - 1) do {
@@ -30,12 +42,10 @@ private _removeAllCtrl = _display displayCtrl IDC_buttonRemoveAll;
 _removeAllCtrl ctrlSetFade 1;
 _removeAllCtrl ctrlCommit FADE_DELAY;
 
-// Update load bar and weight
+// Update load bar
 private _loadIndicatorBarCtrl = _display displayCtrl IDC_loadIndicatorBar;
 _loadIndicatorBarCtrl progressSetPosition 0;
-(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
 
-// Update right panel colors
 private _maxLoad = switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonUniform: {
         gettext (configfile >> "CfgWeapons" >> uniform GVAR(center) >> "ItemInfo" >> "containerClass")
