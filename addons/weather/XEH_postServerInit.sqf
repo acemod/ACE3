@@ -7,9 +7,10 @@
     GVAR(badWeatherShift) = random [10, 0, 10];
     GVAR(humidityShift) = random [-0.1, 0, 0.1];
 
-    call FUNC(initWind);
-
-    [FUNC(updateWind), 1] call CBA_fnc_addPerFrameHandler;
+    if (GVAR(windSimulation)) then {
+        call FUNC(initWind);
+        [FUNC(updateWind), 1] call CBA_fnc_addPerFrameHandler;
+    };
     [FUNC(updateWeather), GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
 
 }] call CBA_fnc_addEventHandler;

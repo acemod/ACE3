@@ -24,6 +24,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 60;
             };
+            class windSimulation {
+                displayName = CSTRING(windSimulation_DisplayName);
+                description = CSTRING(windSimulation_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Module_Description);

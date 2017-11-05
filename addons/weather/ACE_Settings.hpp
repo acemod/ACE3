@@ -11,4 +11,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 60;
     };
+    class GVAR(windSimulation) {
+        displayName = CSTRING(windSimulation_DisplayName);
+        description = CSTRING(windSimulation_Description);
+        typeName = "BOOL";
+        value = 1;
+    };
 };

@@ -129,5 +129,11 @@
             <Chinesesimp>设定天气更新的时间间隔(秒)</Chinesesimp>
             <Chinese>設定天氣更新的時間間隔(秒)</Chinese>
         </Key>
+        <Key ID="STR_ACE_Weather_windSimulation_DisplayName">
+            <English>Wind Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_Weather_windSimulation_Description">
+            <English>Enables the wind simulation (map based)</English>
+        </Key>
     </Package>
 </Project>
