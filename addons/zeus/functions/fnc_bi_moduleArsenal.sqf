@@ -34,14 +34,18 @@ if (_activated && local _logic) then {
     };
 
     if (_error == "") then {
-
         if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+            if (!isPlayer _unit || {player == _unit}) then {
 
-            [{
-                params ["_unit"];
+                [{
+                    params ["_unit"];
 
-                [_unit, _unit, true] call EFUNC(arsenal,openBox);
-            }, [_unit]] call CBA_fnc_directCall;
+                    [_unit, _unit, true] call EFUNC(arsenal,openBox);
+                }, [_unit]] call CBA_fnc_directCall;
+            } else {
+
+                [objNull, localize "str_a3_BIS_fnc_moduleArsenal_errorDead"] call bis_fnc_showCuratorFeedbackMessage;
+            };
         } else {
             if !(isPlayer _unit) then {
 
