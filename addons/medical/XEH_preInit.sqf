@@ -46,8 +46,6 @@ private _fixStatic = {
 ["CAManBase", "Killed", FUNC(handleKilled)] call CBA_fnc_addClassEventHandler;
 ["CAManBase", "Local", FUNC(handleLocal)] call CBA_fnc_addClassEventHandler;
 
-["ACE_bodyBagObject", "init", EFUNC(dragging,initObject)] call CBA_fnc_addClassEventHandler;
-
 addMissionEventHandler ["Loaded",{
     {
         TRACE_1("starting preload (save load)",_x);
