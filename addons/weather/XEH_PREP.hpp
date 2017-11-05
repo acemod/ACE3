@@ -15,6 +15,6 @@ PREP(getMapData);
 PREP(initModuleSettings);
 PREP(initWind);
 PREP(updateHumidity);
-PREP(updateServerWeather);
 PREP(updateTemperature);
+PREP(updateWeather);
 PREP(updateWind);

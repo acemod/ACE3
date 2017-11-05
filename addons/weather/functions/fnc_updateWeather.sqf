@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call ace_weather_fnc_updateServerWeather
+ * [] call ace_weather_fnc_updateWeather
  *
  * Public: No
  */
