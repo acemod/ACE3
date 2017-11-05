@@ -1,3 +1,17 @@
+/*
+ * Author: Alganthe
+ * onLoad EH for ACE3's arsenal loadouts display
+ *
+ * Arguments:
+ * 0: Ignored
+ * 1: Arguments <ARRAY>
+  * 1.1: Display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

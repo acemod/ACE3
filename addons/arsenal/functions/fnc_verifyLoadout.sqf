@@ -1,3 +1,15 @@
+/*
+ * Author: Alganthe
+ * Verify the provided loadout
+ *
+ * Arguments:
+ * 0: Loadout <ARRAY> (getUnitLoadout format)
+ *
+ * Return Value:
+ * Verified loadout and missing / unavailable items list and count <ARRAY>
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

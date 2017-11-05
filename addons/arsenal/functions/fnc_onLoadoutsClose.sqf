@@ -1,3 +1,14 @@
+/*
+ * Author: Alganthe
+ * onUnLoad EH for ACE3's arsenal loadouts display
+ *
+ * Arguments:
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
