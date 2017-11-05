@@ -82,20 +82,8 @@
             <Chinese>ACE 天氣</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_enabled_Description">
-            <English>Overrides the default weather (editor, mission settings) with ACE weather (map based)</English>
-            <Polish>Nadpisuje domyślne ustawienia pogody (edytor, wywiad) przy użyciu pogody ACE (zależna od mapy)</Polish>
-            <Spanish>Sobreescribe el sistema climático por defecto (editor, ajustes de mision) con clima del ACE (basado en el mapa)</Spanish>
-            <German>Überschreibt das Standardwetter (Editor, Missionseinstellungen) mit dem ACE-Wetter (kartenbasiert)</German>
-            <Czech>Přepíše výchozí počasí (editor, nastavení mise) s ACE počasím (podle mapy)</Czech>
-            <Portuguese>Sobreescreve o clima padrão (editor, ajustes de missão) pelo sistema de clima ACE (baseado por mapa)</Portuguese>
-            <French>Force la métao par défaut (éditeur, paramètres de mission) avec la météo ACE (basé sur la carte)</French>
-            <Hungarian>Felülbírálja az alapértelmezett időjárást (editor, küldetésbeállítások) az ACE időjárással (térkép-alapú) </Hungarian>
-            <Russian>Заменяет погоду по-умолчанию (из редактора, настроек миссии) погодой ACE (на основе карты)</Russian>
-            <Italian>Scavalca il meteo default (editor, parametri missione) con il meteo ACE (basato su mappa)</Italian>
-            <Japanese>ACE 天候 (マップを元) による標準の天候 (エディタやミッション設定) を上書きします。</Japanese>
-            <Korean>기존의 기후(에디터, 임무 설정)를 ACE 기후로 치환합니다. (지도에 따라)</Korean>
-            <Chinesesimp>使ACE天气覆盖预设的天气 (编辑任务设置)</Chinesesimp>
-            <Chinese>使ACE天氣覆蓋預設的天氣 (編輯任務設置)</Chinese>
+            <English>Expands the existing weather by temperature, humidity and air pressure.</English>
+            <German>Erweitert das vorhandene Wetter um Temperatur, Luftfeuchtigkeit und Luftdruck.</German>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -130,10 +118,12 @@
             <Chinese>設定天氣更新的時間間隔(秒)</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_DisplayName">
-            <English>Wind Simulation</English>
+            <English>Wind Simulation (map based)</English>
+            <German>Wind Simulation (kartenbasiert)</German>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
-            <English>Enables the wind simulation (map based)</English>
+            <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
+            <German>Aktiviert die kartenbasierte Windsimulation (überschreibt Vanilla Wind)</German>
         </Key>
     </Package>
 </Project>
