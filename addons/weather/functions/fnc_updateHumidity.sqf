@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team
- * Smoothly updates GVAR(currentHumidity) based on time of day and map data
+ * Smoothly updates GVAR(currentHumidity) on the server (based on time of day and map data)
  *
  * Arguments:
  * None
@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-if ((rain > 0) && {GVAR(currentOvercast) > 0.7}) then {
+if (rain > 0 && overcast > 0.7) then {
     GVAR(currentHumidity) = 1;
 } else {
     private _month = date select 1;
@@ -29,4 +29,4 @@ if ((rain > 0) && {GVAR(currentOvercast) > 0.7}) then {
 
 GVAR(currentHumidity) = 0 max GVAR(currentHumidity) min 1;
 
-TRACE_1("humidityShift",GVAR(humidityShift));
+publicVariable QGVAR(currentHumidity);

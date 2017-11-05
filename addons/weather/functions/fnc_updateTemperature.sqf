@@ -1,6 +1,6 @@
 /*
  * Author: ACE2 Team
- * Smoothly updates GVAR(currentTemperature) based on time of day and map data
+ * Smoothly updates GVAR(currentTemperature) on the server (based on time of day and map data)
  *
  * Arguments:
  * None
@@ -22,4 +22,4 @@ GVAR(currentTemperature) = (GVAR(TempDay) select (_month - 1)) * (1 - _timeRatio
 GVAR(currentTemperature) = GVAR(currentTemperature) + GVAR(temperatureShift) - GVAR(badWeatherShift) * GVAR(currentOvercast);
 GVAR(currentTemperature) = round(GVAR(currentTemperature) * 10) / 10;
 
-TRACE_2("temperatureShift/badWeatherShift",GVAR(temperatureShift),GVAR(badWeatherShift));
+publicVariable QGVAR(currentTemperature);

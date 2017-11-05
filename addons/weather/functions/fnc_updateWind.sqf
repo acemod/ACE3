@@ -15,23 +15,7 @@
  */
 #include "script_component.hpp"
 
-if (isNil QGVAR(windParams)) exitWith {};
+private _speed = linearConversion [GVAR(last_wind_update), GVAR(next_wind_udpate), CBA_missionTime, GVAR(current_wind_speed), GVAR(next_wind_speed), true];
+private _direction = linearConversion [GVAR(last_wind_update), GVAR(next_wind_udpate), CBA_missionTime, GVAR(current_wind_direction), GVAR(next_wind_direction), true];
 
-GVAR(windParams) params ["_dir", "_dirChange", "_spd", "_spdChange", "_period", "_wind_period_start_time"];
-
-private _periodPosition = (CBA_missionTime - _wind_period_start_time) min _period;
-private _periodPercent = _periodPosition / _period;
-
-_spd = _spd + _spdChange * _periodPercent;
-_dir = _dir + _dirChange * _periodPercent;
-
-_dir = (360 + _dir) % 360;
-
-TRACE_1("PeriodStartTime",Round(_wind_period_start_time));
-TRACE_2("Dir: Current/Change",Round(_dir),Round(_dirChange));
-TRACE_2("Spd: Current/Change",_spd toFixed 1,_spdChange toFixed 1);
-TRACE_3("Period/Position/Percent",Round(_period),Round(_periodPosition),_periodPercent toFixed 2);
-
-// TODO: Add some noise
-
-setWind [-_spd * sin(_dir), -_spd * cos(_dir), true];
+setWind [-_speed * sin(_direction), -_speed * cos(_direction), true];
