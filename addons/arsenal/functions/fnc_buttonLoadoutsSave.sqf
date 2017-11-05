@@ -25,25 +25,23 @@ if (_editBoxContent == "") exitWith {
     [(findDisplay IDD_ace_arsenal), format ["The name box is empty!", _editBoxContent]] call FUNC(message); // TBL
 };
 
-private _data = [+(profileNamespace getVariable [QGVAR(saved_loadouts), []]), +GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts);
-private _loadout = getUnitLoadout GVAR(center);
-
+private _data = [+(profileNamespace getVariable QGVAR(saved_loadouts)), +(GVAR(defaultLoadoutsList))] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
+
 private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
-private _curSelLoadout = _contentPanelCtrl getVariable (_loadoutName + QGVAR(currentLoadoutsTab));
+private _curSelLoadout = _contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab));
+private _loadout = getUnitLoadout GVAR(center);
 
 private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
-scopeName "main";
+private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
+if (_similarSharedLoadout) exitWith {
+    [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
+};
+
 switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonMyLoadouts:{
-
-        private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
-        if (_similarSharedLoadout) exitWith {
-            [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
-            breakOut "main";
-        };
 
         for "_dataIndex" from 0 to 10 do {
             switch (_dataIndex) do {
@@ -115,7 +113,7 @@ switch (GVAR(currentLoadoutsTab)) do {
         _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
         _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
-        _contentPanelCtrl setVariable [_editBoxContent + QGVAR(currentLoadoutsTab), _loadout];
+        _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), _loadout];
 
         _contentPanelCtrl lnbSort [1, false];
 
@@ -125,13 +123,16 @@ switch (GVAR(currentLoadoutsTab)) do {
         };
 
         profileNamespace setVariable [QGVAR(saved_loadouts), _data];
+
+        private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
+        [QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
     };
 
     case IDC_buttonDefaultLoadouts:{
 
         if (is3DEN) then {
 
-            _sameNameLoadoutsList = GVAR(defaultLoadoutsList) select {_x select 0 == _editBoxContent};
+            private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
             for "_dataIndex" from 0 to 10 do {
                 switch (_dataIndex) do {
@@ -202,7 +203,7 @@ switch (GVAR(currentLoadoutsTab)) do {
             _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
             _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
-            _contentPanelCtrl setVariable [_editBoxContent + QGVAR(currentLoadoutsTab), _loadout];
+            _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), _loadout];
 
             _contentPanelCtrl lnbSort [1, false];
 
@@ -212,13 +213,10 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
 
             set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
-        } else {
 
-            private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
-            if (_similarSharedLoadout) exitWith {
-                [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
-                breakOut "main";
-            };
+            private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
+            [QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
+        } else {
 
             if (count _sameNameLoadoutsList == 0) then {
                 _data pushBack [_editBoxContent, _curSelLoadout];
@@ -232,13 +230,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
     case IDC_buttonSharedLoadouts :{
 
-        private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
-        if (_similarSharedLoadout) exitWith {
-            [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
-             breakOut "main";
-        };
-
-        private _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_cursSelRow, 0]) + (_contentPanelCtrl lnbText [_cursSelRow, 1]))) select 2;
+        _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_cursSelRow, 0]) + (_contentPanelCtrl lnbText [_cursSelRow, 1]))) select 2;
 
         if (count _sameNameLoadoutsList == 0) then {
             _data pushBack [_editBoxContent, _loadout];
@@ -249,8 +241,4 @@ switch (GVAR(currentLoadoutsTab)) do {
         profileNamespace setVariable [QGVAR(saved_loadouts), _data];
     };
 };
-
 [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
-
-private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
-[QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;

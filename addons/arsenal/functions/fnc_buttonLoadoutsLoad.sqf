@@ -26,7 +26,7 @@ private _loadout = switch GVAR(currentLoadoutsTab) do {
 
     case IDC_buttonMyLoadouts;
     case IDC_buttonDefaultLoadouts:{
-        _contentPanelCtrl getVariable _loadoutName + QGVAR(currentLoadoutsTab)
+        _contentPanelCtrl getVariable _loadoutName + str GVAR(currentLoadoutsTab)
     };
 
     case IDC_buttonSharedLoadouts:{

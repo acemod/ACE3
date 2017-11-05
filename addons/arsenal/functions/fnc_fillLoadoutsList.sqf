@@ -31,16 +31,10 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     {
         _x params ["_loadoutName", "_loadoutData"];
 
-        // Check if the check was ran already
-        if (isNil {_contentListCtrl getVariable _loadoutName}) then {
-
-            [_loadoutData] call FUNC(verifyLoadout)
-        } else {
-            _contentListCtrl getVariable (_loadoutName + "missingOrNilItemsCount")
-        } params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
+        [_loadoutData] call FUNC(verifyLoadout) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
         // Log missing / nil items to RPT
-        if (!(isNil "_nullItemsList") && {_nullItemsAmount > 0} || {_unavailableItemsAmount > 0}) then {
+        if (_nullItemsAmount > 0 || {_unavailableItemsAmount > 0}) then {
 
             private _printComponent = "ACE_Arsenal - Loadout:";
             private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
@@ -76,8 +70,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             };
         };
 
-        _contentListCtrl setVariable [_loadoutName + QGVAR(currentLoadoutsTab), _loadout];
-        _contentListCtrl setVariable [_loadoutName + "missingOrNilItemsCount" + QGVAR(currentLoadoutsTab) , [_nullItemsAmount, _unavailableItemsAmount]];
+        _contentListCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), _loadout];
 
         if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars)) then {
             _contentListCtrl lnbSetText [[_newRow, 0], "X"];

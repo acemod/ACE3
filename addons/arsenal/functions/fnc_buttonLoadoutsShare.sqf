@@ -25,7 +25,7 @@ private _profileName = profileName; // GVAR(center) could be a remote unit
 private _loadoutVar = _profileName + _loadoutName;
 
 private _loadoutIndex = GVAR(sharedLoadoutsVars) find _loadoutVar;
-private _loadoutData = _contentPanelCtrl getVariable (_loadoutName + QGVAR(currentLoadoutsTab));
+private _loadoutData = _contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab));
 
 if (_loadoutIndex > -1) then {
     GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
