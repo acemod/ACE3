@@ -1,3 +1,15 @@
+/*
+ * Author: Alganthe
+ * "Show" something, depend on which tab the user is currently in
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

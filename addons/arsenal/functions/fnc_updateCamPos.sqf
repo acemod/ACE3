@@ -1,5 +1,17 @@
+/*
+ * Author: Karel Moricky, modified by Alganthe
+ * Update camera position
+ * Modernized a bit, modified vars to fit arsenal rewrite
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
+*/
 #include "script_component.hpp"
-#include "..\defines.hpp"
 
 GVAR(cameraPosition)  params ["_distance", "_dirH", "_dirV"];
 [GVAR(cameraHelper), [_dirH + 180, - _dirV, 0]] call bis_fnc_setobjectrotation;

@@ -1,3 +1,17 @@
+/*
+ * Author: Alganthe
+ * onLoad EH for ACE3's arsenal
+ *
+ * Arguments:
+ * 0: Ignored
+ * 1: Arguments <ARRAY>
+  * 1.1: Display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
@@ -21,7 +35,6 @@ if (isNil QGVAR(sharedLoadoutsVars)) then {
 };
 
 if (isNil QGVAR(defaultLoadoutsList)) then {
-
     if (is3DEN) then {
         GVAR(defaultLoadoutsList) = (QGVAR(DummyCategory) get3DENMissionAttribute QGVAR(DefaultLoadoutsListAttribute));
     } else {

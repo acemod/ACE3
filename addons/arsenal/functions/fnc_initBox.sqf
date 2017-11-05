@@ -1,5 +1,22 @@
+/*
+ * Author: Alganthe
+ * Initialize a box / object for ACE3 arsenal.
+ *
+ * Arguments:
+ * 0: Target <OBJECT>
+ * 1: Items <BOOL> or <ARRAY>
+ * 2: Global <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_box, ["MyItem1", "MyItem2", "MyItemN"]] call ace_arsenal_fnc_initBox
+ * [_box, true] call ace_arsenal_fnc_initBox
+ *
+ * Public: Yes
+*/
 #include "script_component.hpp"
-#include "..\defines.hpp"
 
 params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global", true, [true]]];
 
@@ -20,16 +37,23 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
 
     if ({(_x select 0) select 0 isEqualTo QGVAR(interaction)} count (_object getVariable [QEGVAR(interact_menu,actions), []]) == 0) then {
 
-        private _action = [QGVAR(interaction), "arsenal", "", {
-            params ["_target", "_player"];
+        private _action = [
+            QGVAR(interaction), 
+            "arsenal",// TBL
+            "", 
+            {
+                params ["_target", "_player"];
 
-            [{[_this select 0, _this select 1] call FUNC(openBox)}, [_target, _player]] call CBA_fnc_execNextFrame;
-        }, 
-        {
-            params ["_target", "_player"];
+                [{[_this select 0, _this select 1] call FUNC(openBox)}, [_target, _player]] call CBA_fnc_execNextFrame;
+            }, 
+            {
+                params ["_target", "_player"];
             
-            [_player, _target, ["isNotSwimming", "isNotCarrying", "isNotDragging", "notOnMap", "isNotEscorting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)
-        }, {},[]] call EFUNC(interact_menu,createAction);
+                [_player, _target, ["isNotSwimming", "isNotCarrying", "isNotDragging", "notOnMap", "isNotEscorting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)
+            }, 
+            {},
+            []
+        ] call EFUNC(interact_menu,createAction);
         [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
         [_object, _items, false] call FUNC(addVirtualItems);

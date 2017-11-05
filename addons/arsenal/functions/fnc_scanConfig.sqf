@@ -1,3 +1,15 @@
+/*
+ * Author: Dedmen
+ * Cache an array of all the compatible items for arsenal.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
 private _cargo = [

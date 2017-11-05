@@ -163,30 +163,27 @@ class GVAR(display) {
                     y = QUOTE(0);
                     w = QUOTE(25 * GRID_W);
                     h = QUOTE(7 * GRID_H);
-                    text="Hide"; // TBL
-                    shortcuts[]= {"0x0E"};
-                    tooltip="Hide interface"; // TBL
+                    text = CSTRING(buttonHideText);
+                    shortcuts[] = {"0x0E"};
+                    tooltip = CSTRING(buttonHideTooltip);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
                 };
                 class buttonLoadouts: buttonHide {
                     idc = -1;
                     x = QUOTE(25 * GRID_W);
-                    text="Loadouts"; // TBL
-                    tooltip="Displays loadouts screen"; // TBL
+                    text = CSTRING(buttonLoadoutsText);
                     onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
                     idc = -1;
                     x = QUOTE(50 * GRID_W);
-                    text="Export"; // TBL
-                    tooltip="Export loadout"; // TBL
+                    text = CSTRING(buttonExportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
                 };
                 class buttonImport: buttonHide {
                     idc = -1;
                     x = QUOTE(75 * GRID_W);
-                    text="Import"; // TBL
-                    tooltip="Import loadout"; // TBL
+                    text = CSTRING(buttonImportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonClose {
@@ -196,9 +193,8 @@ class GVAR(display) {
                     y = QUOTE(0);
                     w = QUOTE(25 * GRID_W);
                     h = QUOTE(7 * GRID_H);
-                    text="Close"; // TBL
+                    text = CSTRING(buttonCloseText);
                     shortcuts[]= {"0x01"};
-                    tooltip="Close interface"; // TBL
                     onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
                 };
             };
@@ -695,8 +691,7 @@ class GVAR(display) {
         };
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
-            text= QPATHTOF(data\iconClearContainer.paa);
-            tooltip="Remove all items from the container"; //TBL
+            text = QPATHTOF(data\iconClearContainer.paa);
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;
@@ -740,7 +735,7 @@ class GVAR(loadoutsDisplay) {
                 class centerTitle: ctrlStaticTitle {
                     idc = IDC_centerTitle;
                     style = ST_CENTER;
-                    text = "Loadouts";
+                    text = "";
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(160 * GRID_W);
@@ -790,37 +785,37 @@ class GVAR(loadoutsDisplay) {
             y = QUOTE(safezoneH + safezoneY - 39 * GRID_H);
             w = QUOTE(25 * GRID_W);
             h = QUOTE(10 * GRID_H);
-            text="Save"; // TBL
-            tooltip="Save selected loadout"; // TBL
+            text= CSTRING(buttonSaveText);
+            tooltip= CSTRING(buttonSaveTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
             colorBackground[] = {0,0,0,0.8};
         };
         class buttonRename: buttonSave {
             idc = IDC_buttonRename;
             x = QUOTE((safezoneW * 0.5) + safezoneX - (45 * GRID_W));
-            text="Rename"; // TBL
-            tooltip="Rename loadout"; // TBL
+            text= CSTRING(buttonRenameText);
+            tooltip= CSTRING(buttonRenameTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
         };
         class buttonLoad: buttonSave {
             idc = IDC_buttonLoad;
             x = QUOTE((safezoneW * 0.5) + safezoneX - (15 * GRID_W));
-            text="Load"; // TBL
-            tooltip="Load selected loadout"; // TBL
+            text= CSTRING(buttonLoadText);
+            tooltip= CSTRING(buttonLoadTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsLoad));
         };
         class buttonShare: buttonSave {
             idc = IDC_buttonShare;
             x = QUOTE((safezoneW * 0.5) + safezoneX + (15 * GRID_W));
-            text="Share"; // TBL
-            tooltip="Share selected loadout"; // TBL
+            text= CSTRING(buttonShareText);
+            tooltip= CSTRING(buttonShareTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
         };
         class buttonDelete: buttonSave {
             idc = IDC_buttonDelete;
             x = QUOTE((safezoneW * 0.5) + safezoneX + (45 * GRID_W));
-            text="Delete"; // TBL
-            tooltip="Delete loadout"; // TBL
+            text= CSTRING(buttonDeleteText);
+            tooltip= CSTRING(buttonDeleteTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
         };
         class buttonClose: buttonSave {
@@ -830,9 +825,9 @@ class GVAR(loadoutsDisplay) {
             w = QUOTE(30 * GRID_W);
             h = QUOTE(10 * GRID_H);
             sizeEx = QUOTE(4.5 * GRID_H);
-            text="Close"; // TBL
+            text= CSTRING(buttonCloseText);
             shortcuts[]= {"0x01"};
-            tooltip="Close interface"; // TBL
+            tooltip= "";
             onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
         };
         class buttonBar: ctrlControlsGroupNoScrollbars {
@@ -850,21 +845,21 @@ class GVAR(loadoutsDisplay) {
                     w = QUOTE(40 * GRID_W);
                     h = QUOTE(10 * GRID_H);
                     sizeEx = QUOTE(4.5 * GRID_H);
-                    text="My loadouts"; // TBL
-                    tooltip="Save selected loadout"; // TBL
+                    text= CSTRING(tabMyLoadoutsText);
+                    tooltip= CSTRING(tabMyLoadoutsTooltip);
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
                 };
                 class buttonDefaultLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonDefaultLoadouts;
                     x = QUOTE(41 * GRID_W);
-                    text="Default loadouts"; // TBL
-                    tooltip=""; // TBL
+                    text= CSTRING(tabDefaultLoadoutsText);
+                    tooltip= CSTRING(tabDefaultLoadoutsTooltip);
                 };
                 class buttonSharedLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonSharedLoadouts;
                     x = QUOTE(82 * GRID_W);
-                    text="Shared loadouts"; // TBL
-                    tooltip=""; // TBL
+                    text= CSTRING(tabSharedLoadoutsText);
+                    tooltip= CSTRING(tabSharedLoadoutsTooltip);
                 };
             };
         };

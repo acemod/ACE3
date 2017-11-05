@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * FIll arsenal's left panel
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Tab control <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
@@ -135,16 +148,20 @@ switch true do {
             case IDC_buttonFace : {
                 {
                     {
-                        if (getnumber (_x >> "disabled") == 0 && gettext (_x >> "head") != "" && configname _x != "Default") then {
+                        if (
+                            getnumber (_x >> "disabled") == 0 && 
+                            {getText (_x >> "head") != ""} && 
+                            {configName _x != "Default"}
+                        ) then {
                             private _configName = configName _x;
-                            private _displayName = gettext (_x >> "displayName");
-                            private _lbAdd = _ctrlPanel lbadd _displayName;
-                            _ctrlPanel lbsetdata [_lbAdd, _configName];
-                            _ctrlPanel lbsettooltip [_lbAdd,format ["%1\n%2",_displayName, _configName]];
+                            private _displayName = getText (_x >> "displayName");
+                            private _lbAdd = _ctrlPanel lbAdd _displayName;
+                            _ctrlPanel lbSetData [_lbAdd, _configName];
+                            _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2",_displayName, _configName]];
                             _x call ADDMODICON;
                         };
-                    } foreach ("isclass _x" configclasses _x);
-                } foreach ("isclass _x" configclasses (configfile >> "cfgfaces"));
+                    } foreach ("isClass _x" configClasses _x);
+                } foreach ("isClass _x" configClasses (configfile >> "cfgfaces"));
             };
             case IDC_buttonVoice : {
                 private _voices = (configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [(configfile >> "CfgVoice" >> "NoVoice")];

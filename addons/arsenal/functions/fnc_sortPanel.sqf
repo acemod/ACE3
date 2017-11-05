@@ -1,12 +1,25 @@
+/*
+ * Author: Alganthe, Dedmen
+ * Sort arsenal panel
+ *
+ * Arguments:
+ * 0: Panel's control to sort <CONTROL>
+ * 1: Sorting mode <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
 params ["_control", "_mode"];
 
 private _display = ctrlParent _control;
-
 private ["_panel", "_curSel", "_selected"];
 
+// Right panel
 if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
     _panel = _display displayCtrl IDC_rightTabContentListnBox;
     _curSel = lnbCurSelRow _panel;
@@ -31,7 +44,7 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
             if ((_panel lnbdata [_i, 0]) == _selected) exitwith {_panel lnbSetCurSelRow _i};
         };
     };
-
+// Left panel
 } else {
     _panel = _display displayCtrl ([IDC_leftTabContent, IDC_rightTabContent] select (ctrlIDC _control == 17));
     _curSel = lbCurSel _panel;
@@ -49,5 +62,3 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
         };
     };
 };
-
-

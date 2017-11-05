@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe, Dedmen
+ * FIll arsenal's left panel
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Tab control <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
@@ -29,10 +42,11 @@ if (!(ctrlShown _searchbarCtrl) || {ctrlFade _searchbarCtrl > 0}) then {
 private _fnc_fill_right_Container = {
     params ["_configCategory", "_className", "_isMagazine", ["_isUnique", false, [false]]];
 
-    private _cacheNamespace = _ctrlPanel; //For better readability.
+    private _cacheNamespace = _ctrlPanel;
     private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
 
-    if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into cache.
+    // Not in cache. So get info and put into cache
+    if (_cachedItemInfo isEqualTo []) then {
         private _configPath = configFile >> _configCategory >> _className;
 
         _cachedItemInfo set [0, getText (_configPath >> "displayName")];
@@ -65,7 +79,8 @@ private _compatibleMagazines = [[], [], []];
 
         {
             {
-                if !(isClass (configFile >> "CfgMagazines" >> _x)) then {//magazine group
+                // Magazine group
+                if !(isClass (configFile >> "CfgMagazines" >> _x)) then {
                     private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
                     private _magArray = [_magazineGroups, _x] call CBA_fnc_hashGet;
                     {(_compatibleMagazines select _index) pushBackUnique _x} forEach _magArray;
@@ -238,10 +253,10 @@ if (_leftPanelState) then {
 } else {
 
     _sortRightCtrl lbDelete 1;
-    _sortRightCtrl lbAdd "Sort by Weight";
+    _sortRightCtrl lbAdd localize LSTRING(sortByWeightText);
     _sortRightCtrl lbSetValue [1, 1];
     
-    _sortRightCtrl lbAdd "Sort by amount";
+    _sortRightCtrl lbAdd localize LSTRING(sortByAmountText);
     _sortRightCtrl lbSetValue [2, 2];
 };
 

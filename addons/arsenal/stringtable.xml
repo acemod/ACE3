@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Arsenal">
+        <Key ID="STR_ACE_Arsenal_CantOpenDisplay">
+            <English>Unable to open the display</English>
+            <French>Impossible d'afficher l'interface</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonHideText">
+            <English>Hide</English>
+            <French>Cacher</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonHideTooltip">
+            <English>Hide interface</English>
+            <French>Cache l'interface</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonLoadoutsText">
+            <English>Loadouts</English>
+            <French>Loadouts</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonExportText">
+            <English>Export</English>
+            <French>Exporter</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonImportText">
+            <English>Import</English>
+            <French>Importer</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonCloseText">
+            <English>Close</English>
+            <French>Fermer</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_noVirtualItems">
+            <English>No virtual item available</English>
+            <French>Aucun objet virtuel disponible</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonSaveText">
+            <English>Save</English>
+            <French>Enregister</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonSaveTooltip">
+            <English>Save the current loadout</English>
+            <French>Enregistre l'équipement actuel</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonRenameText">
+            <English>Rename</English>
+            <French>Renommer</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
+            <English>Rename the selected loadout</English>
+            <French>Renommer le loadout selectionné</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonLoadText">
+            <English>Load</English>
+            <French>Charger</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonLoadTooltip">
+            <English>Load the selected loadout</English>
+            <French>Charger le loadout selectionné</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonShareText">
+            <English>Share</English>
+            <French>Partager</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
+            <English>Share the selected loadout</English>
+            <French>Partager le loadout selectionné</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonDeleteText">
+            <English>Delete</English>
+            <French>Supprimer</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonDeleteTooltip">
+            <English>Delete the selected loadout</English>
+            <French>Supprimer le loadout selectionné</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_tabMyLoadoutsText">
+            <English>My loadouts</English>
+            <French>Mes loadouts</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_tabMyLoadoutsTooltip">
+            <English>Loadouts saved in your profile</English>
+            <French>Loadouts enregistrés dans votre profil</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsText">
+            <English>Default loadouts</English>
+            <French>Loadouts de base</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
+            <English>Shared loadouts</English>
+            <French>Loadouts partagés</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsTooltip">
+            <English>Loadouts made available by the mission maker</English>
+            <French>Loadouts mit à disposition par l'auteur de la mission</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsTooltip">
+            <English>Loadouts shared by you and other players</English>
+            <French>Loadouts partagés par vous et les autres joueurs</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByWeightText">
+            <English>Sort by weight</English>
+            <French>Trier par poids</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByAmountText">
+            <English>Sort by amount</English>
+            <French>Trier par quantité</French>
+        </Key>
+    </Package>
+</Project>
