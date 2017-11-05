@@ -248,23 +248,6 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_rightSearchbar
 ];
 
-//--------------- Prepare the left panel
-GVAR(currentLeftPanel) = nil;
-GVAR(currentRightPanel) = nil;
-GVAR(leftSearchbarFocus) = false;
-GVAR(rightSearchbarFocus) = false;
-GVAR(leftTabFocus) = false;
-GVAR(rightTabFocus) = false;
-GVAR(rightTabLnBFocus) = false;
-
-{
-    private _panel = _display displayCtrl _x;
-    _panel ctrlSetFontHeight (GVAR(fontHeight) * GRID_H);
-    _panel ctrlCommit 0;
-} foreach [IDC_leftTabContent, IDC_rightTabContent, IDC_rightTabContentListnBox];
-
-[_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(fillLeftPanel);
-
 //--------------- Camera prep
 cutText ["","plain"];
 showCommandingMenu "";
@@ -313,6 +296,23 @@ if (is3DEN) then {
     ["ShowInterface",false] spawn bis_fnc_3DENInterface;
     if (get3denactionstate "togglemap" > 0) then {do3DENAction "togglemap";};
 };
+
+//--------------- Prepare the left panel
+GVAR(currentLeftPanel) = nil;
+GVAR(currentRightPanel) = nil;
+GVAR(leftSearchbarFocus) = false;
+GVAR(rightSearchbarFocus) = false;
+GVAR(leftTabFocus) = false;
+GVAR(rightTabFocus) = false;
+GVAR(rightTabLnBFocus) = false;
+
+{
+    private _panel = _display displayCtrl _x;
+    _panel ctrlSetFontHeight (GVAR(fontHeight) * GRID_H);
+    _panel ctrlCommit 0;
+} foreach [IDC_leftTabContent, IDC_rightTabContent, IDC_rightTabContentListnBox];
+
+[_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(fillLeftPanel);
 
 //--------------- Init camera
 GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
