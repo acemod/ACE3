@@ -8,8 +8,8 @@ class GVAR(display) {
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(display))] call FUNC(onArsenalClose));
     onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onKeyDown));
     onKeyUp = QUOTE(GVAR(shiftState) = _this select 2);
-    onMouseButtonDown = QUOTE([ARR_3('onMouseButtonDown', _this, QQGVAR(display))] call FUNC(onMouseButtonDown));
-    onMouseButtonUp = QUOTE([ARR_3('onMouseButtonUp', _this, QQGVAR(display))] call FUNC(onMouseButtonUp));
+    onMouseButtonDown = QUOTE(GVAR(mouseButtonState) set [ARR_2(_this select 1, [ARR_2(_this select 2, _this select 3)])]);
+    onMouseButtonUp = QUOTE(GVAR(mouseButtonState) set [ARR_2(_this select 1, [])]);
     icon="\A3\Ui_f\data\Logos\a_64_ca.paa";
     logo="\A3\Ui_f\data\Logos\arsenal_1024_ca.paa";
     class ControlsBackground {
