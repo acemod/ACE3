@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Handles selection changes on loadouts panel.
+ *
+ * Arguments:
+ * 0: Loadouts panel control <CONTROL>
+ * 1: Loadouts panel selection <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

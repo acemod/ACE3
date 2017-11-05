@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe
- * Verify the provided loadout
+ * Verify the provided loadout.
  *
  * Arguments:
  * 0: Loadout <ARRAY> (getUnitLoadout format)

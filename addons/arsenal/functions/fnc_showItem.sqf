@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe
- * "Show" something, depend on which tab the user is currently in
+ * Change unit animation / play sound preview.
  *
  * Arguments:
  * None

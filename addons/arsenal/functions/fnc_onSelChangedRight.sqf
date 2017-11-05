@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Handles selection changes on the right panel.
+ *
+ * Arguments:
+ * 0: Right panel control <CONTROL>
+ * 1: Right panel selection <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
@@ -121,4 +134,4 @@ switch (GVAR(currentRightPanel)) do {
         };
     };
 };
-(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight)); // TBL
+(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));

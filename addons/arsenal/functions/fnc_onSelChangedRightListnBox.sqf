@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Handles selection changes on the right panel (listnbox).
+ *
+ * Arguments:
+ * 0: Right panel control <CONTROL>
+ * 1: Right panel selection <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

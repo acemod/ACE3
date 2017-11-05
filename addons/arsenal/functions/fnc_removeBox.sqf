@@ -1,10 +1,10 @@
 /*
  * Author: Alganthe
- * Remove arsenal from box
+ * Remove arsenal from target.
  *
  * Arguments:
- * 0: Box <OBJECT>
- * 1: Global <BOOL>
+ * 0: Target <OBJECT>
+ * 1: Remove globally <BOOL>
  *
  * Return Value:
  * None

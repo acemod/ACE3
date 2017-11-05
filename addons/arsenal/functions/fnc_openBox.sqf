@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe
- * Open ACE3 arsenal.
+ * Open arsenal.
  *
  * Arguments:
  * 0: Box <OBJECT>

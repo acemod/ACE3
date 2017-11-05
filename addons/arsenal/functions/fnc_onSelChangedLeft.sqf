@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Handles selection changes on the left panel.
+ *
+ * Arguments:
+ * 0: Left panel control <CONTROL>
+ * 1: Left panel selection <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
@@ -382,4 +395,4 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
-(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight)); // TBL
+(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));

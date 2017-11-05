@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Update the right panel (listnbox).
+ *
+ * Arguments:
+ * 0: Right panel control <CONTROL>
+ * 1: Max load of the current container <SCALAR>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

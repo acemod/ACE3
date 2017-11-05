@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe, Dedmen
- * Sort arsenal panel
+ * Sort arsenal panel.
  *
  * Arguments:
  * 0: Panel's control to sort <CONTROL>
