@@ -1,3 +1,19 @@
+/*
+ * Author: Dedmen
+ * Add a listbox row
+ *
+ * Arguments:
+ * 0: Config category <STRING> (must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice")
+ * 1: Classname <STRING>
+ * 2: Panel control <CONTROL>
+ * 3: Name of the picture entry in that Cfg class <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
+*/
+
 #include "script_component.hpp"
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 
@@ -6,7 +22,6 @@ private _cacheNamespace = _ctrlPanel; //For better readability.
 private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
 
 //_cachedItemInfo == [_displayName, _itemPicture, _modPicture, _modID]
-
 if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into cache.
 
     private _configPath = configFile >> _configCategory >> _className;

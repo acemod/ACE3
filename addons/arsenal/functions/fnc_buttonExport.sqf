@@ -1,3 +1,15 @@
+/*
+ * Author: Alganthe
+ * Export current loadout / default loadouts list to clipboard
+ *
+ * Arguments:
+ * 0: Display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
 params ["_display"];

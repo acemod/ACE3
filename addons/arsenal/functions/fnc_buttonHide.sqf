@@ -1,3 +1,15 @@
+/*
+ * Author: Alganthe
+ * Hide arsenal's interface
+ *
+ * Arguments:
+ * 0: Display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
@@ -22,7 +34,6 @@ if (_showToggle) then {
     IDC_totalWeight,
     IDC_menuBar,
     IDC_infoBox,
-    IDC_stats,
     IDC_leftTabContent,
     IDC_rightTabContent,
     IDC_rightTabContentListnBox,

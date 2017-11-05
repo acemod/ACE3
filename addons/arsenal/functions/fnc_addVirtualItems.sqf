@@ -1,3 +1,21 @@
+/*
+ * Author: Alganthe, Dedmen
+ * Add virtual items to the provided target
+ *
+ * Arguments:
+ * 0: Target <OBJECT>
+ * 1: Items <ARRAY of strings> <BOOL>
+ * 2: Add globally <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems
+ * [_box, true, false] call ace_arsenal_fnc_addVirtualItems
+ *
+ * Public: Yes
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 

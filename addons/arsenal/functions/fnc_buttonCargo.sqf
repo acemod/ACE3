@@ -1,3 +1,16 @@
+/*
+ * Author: Alganthe
+ * Add or remove item(s) when the + or - button is pressed in the right panel
+ *
+ * Arguments:
+ * 0: Display <DISPLAY>
+ * 1: Add or remove <SCALAR> (-1: remove, 1: Add)
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
