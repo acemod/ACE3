@@ -69,7 +69,13 @@ if (_simulationType == "tank") exitWith {
         // get cookoff probability for vehicle
         private _probability = [_vehicle call CBA_fnc_getObjectConfig >> QGVAR(probability), "number", 0.7] call CBA_fnc_getConfigEntry;
         // probability multiplied by coef for global probability control (higher coef = more probable cookoff)
-        if (_damage > 0.5 && {random 1 < (_probability * GVAR(probabilityCoef))}) then {
+        if (GVAR(probabilityCoef) > 1) then {
+            _probability = 1 - (1 - _probability) / GVAR(probabilityCoef);
+        } else {
+            _probability = _probability * GVAR(probabilityCoef);
+        };
+
+        if (_damage > 0.5 && {random 1 < _probability}) then {
             _vehicle call FUNC(cookOff);
         };
     } else {
