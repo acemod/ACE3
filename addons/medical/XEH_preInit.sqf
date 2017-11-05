@@ -44,6 +44,9 @@ private _fixStatic = {
 ["CAManBase", "Init", FUNC(handleInit)] call CBA_fnc_addClassEventHandler;
 ["CAManBase", "Respawn", FUNC(handleRespawn)] call CBA_fnc_addClassEventHandler;
 ["CAManBase", "Killed", FUNC(handleKilled)] call CBA_fnc_addClassEventHandler;
+["CAManBase", "Local", FUNC(handleLocal)] call CBA_fnc_addClassEventHandler;
+
+["ACE_bodyBagObject", "init", EFUNC(dragging,initObject)] call CBA_fnc_addClassEventHandler;
 
 addMissionEventHandler ["Loaded",{
     {
