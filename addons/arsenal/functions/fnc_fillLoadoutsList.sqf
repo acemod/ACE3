@@ -6,6 +6,7 @@ params ["_display", "_control"];
 private _contentListCtrl = _display displayCtrl IDC_contentPanel;
 private _textEditBoxCtrl= _display displayCtrl IDC_textEditBox;
 _textEditBoxCtrl ctrlSetText "";
+private _sharingEnabled = (GVAR(allowSharedLoadouts) && {isMultiplayer});
 
 _contentListCtrl lnbSetCurSelRow -1;
 lnbClear _contentListCtrl;
@@ -35,11 +36,10 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             diag_log text (format ["%1%5    %2%5    %3%5    %4", _printComponent, "Name: " + _loadoutName, _printNullItemsList, _printUnavailableItemsList, endl]);
         };
 
-        if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts) then {
-
+        if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts || {!_sharingEnabled}) then {
             _contentListCtrl lnbSetColumnsPos [0, 0, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
         } else {
-           _contentListCtrl lnbSetColumnsPos [0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
+            _contentListCtrl lnbSetColumnsPos [0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
         };
 
         private _newRow = _contentListCtrl lnbAddRow ["",_loadoutName];
