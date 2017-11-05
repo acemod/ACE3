@@ -123,9 +123,6 @@ switch (GVAR(currentLoadoutsTab)) do {
         };
 
         profileNamespace setVariable [QGVAR(saved_loadouts), _data];
-
-        private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
-        [QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
     };
 
     case IDC_buttonDefaultLoadouts:{
@@ -242,3 +239,5 @@ switch (GVAR(currentLoadoutsTab)) do {
     };
 };
 [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
+private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
+[QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
