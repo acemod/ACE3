@@ -75,7 +75,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     {
         _x params ["_playerName", "_loadoutName", "_loadoutData"];
 
-        if !((allPlayers apply {name _x}) find _playerName > -1) then {
+        if ((allPlayers apply {name _x}) find _playerName == -1) then {
 
             private _loadoutVar = _playerName + _loadoutName;
             GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];

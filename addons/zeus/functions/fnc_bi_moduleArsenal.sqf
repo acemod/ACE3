@@ -15,7 +15,7 @@
  * [LOGIC, nil, true] call ace_zeus_fnc_bi_moduleArsenal
  *
  * Public: No
- */
+*/
 
 #include "script_component.hpp"
 
