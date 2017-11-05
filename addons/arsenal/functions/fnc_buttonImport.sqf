@@ -1,5 +1,16 @@
+/*
+ * Author: Alganthe
+ * Import loadout / default loadouts list from clipboard
+ *
+ * Arguments:
+ * 0: Display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display"];
 
@@ -76,6 +87,24 @@ if (GVAR(shiftState) && {is3DEN}) then {
             };
         };
 
+        {
+            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
+                GVAR(currentItems) set [10, _x];
+            };
+            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemCompass") then {
+                GVAR(currentItems) set [11, _x];
+            };
+            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemRadio") then {
+                GVAR(currentItems) set [12, _x];
+            };
+            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemWatch") then {
+                GVAR(currentItems) set [13, _x];
+            };
+            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemGPS") then {
+                GVAR(currentItems) set [14, _x];
+            };
+        } foreach (assignedItems GVAR(center));
+
         // Reapply insignia
         [GVAR(center), ""] call bis_fnc_setUnitInsignia;
         [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
@@ -85,4 +114,3 @@ if (GVAR(shiftState) && {is3DEN}) then {
         [_display, "Loadout imported from clipboard"] call FUNC(message); // TBL
     };
 };
-

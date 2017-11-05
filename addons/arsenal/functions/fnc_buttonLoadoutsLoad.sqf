@@ -61,6 +61,23 @@ for "_index" from 0 to 15 do {
         };
     };
 };
+{
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
+        GVAR(currentItems) set [10, _x];
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemCompass") then {
+        GVAR(currentItems) set [11, _x];
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemRadio") then {
+        GVAR(currentItems) set [12, _x];
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemWatch") then {
+        GVAR(currentItems) set [13, _x];
+    };
+    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemGPS") then {
+        GVAR(currentItems) set [14, _x];
+    };
+} foreach (assignedItems GVAR(center));
 
 // Reapply insignia
 [GVAR(center), ""] call bis_fnc_setUnitInsignia;
