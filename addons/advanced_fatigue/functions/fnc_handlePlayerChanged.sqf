@@ -62,8 +62,10 @@ GVAR(peakPower)       = VO2MAX_STRENGTH * GVAR(VO2MaxPower);
 GVAR(ae1PathwayPower) = GVAR(peakPower) / (AE1_ATP_RELEASE_RATE + AE2_ATP_RELEASE_RATE + AN_ATP_RELEASE_RATE) * AE1_ATP_RELEASE_RATE * ANTPERCENT ^ 1.28 * 1.362;
 GVAR(ae2PathwayPower) = GVAR(peakPower) / (AE1_ATP_RELEASE_RATE + AE2_ATP_RELEASE_RATE + AN_ATP_RELEASE_RATE) * AE2_ATP_RELEASE_RATE * ANTPERCENT ^ 1.28 * 1.362;
 GVAR(aePathwayPower)  = GVAR(ae1PathwayPower) + GVAR(ae2PathwayPower);
-
-GVAR(wattsPerATP)     = GVAR(ae1PathwayPower) / AE1_ATP_RELEASE_RATE;
+GVAR(anPathwayPower)  = GVAR(peakPower) - GVAR(aePathwayPower);
+    
+GVAR(aeWattsPerATP)     = GVAR(ae1PathwayPower) / AE1_ATP_RELEASE_RATE;
+GVAR(anWattsPerATP)     = GVAR(anPathwayPower) / AN_ATP_RELEASE_RATE;
 
 GVAR(respiratoryBufferDivisor) = (RESPIRATORY_BUFFER - 1) / RESPIRATORY_BUFFER;
 GVAR(maxPowerFatigueRatio) = 0.057 / GVAR(peakPower);

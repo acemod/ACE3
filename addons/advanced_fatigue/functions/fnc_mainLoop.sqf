@@ -62,9 +62,9 @@ private _ae2Power = (_currentWork - _ae1Power) min _ae2PathwayPowerFatigued;
 private _anPower  = 0 max (_currentWork - _ae1Power - _ae2Power);
 
 // Remove ATP from reserves for current work
-GVAR(ae1Reserve) = 0 max (GVAR(ae1Reserve) - _ae1Power / GVAR(wattsPerATP));
-GVAR(ae2Reserve) = 0 max (GVAR(ae2Reserve) - _ae2Power / GVAR(wattsPerATP));
-GVAR(anReserve)  = 0 max (GVAR(anReserve)  -  _anPower / GVAR(wattsPerATP));
+GVAR(ae1Reserve) = 0 max (GVAR(ae1Reserve) - _ae1Power / GVAR(aeWattsPerATP));
+GVAR(ae2Reserve) = 0 max (GVAR(ae2Reserve) - _ae2Power / GVAR(aeWattsPerATP));
+GVAR(anReserve)  = 0 max (GVAR(anReserve)  -  _anPower / GVAR(anWattsPerATP));
 #ifdef DEBUG_MODE_FULL
 systemChat format["---- ae2: %1 ----", (GVAR(ae2Reserve) / AE2_MAXRESERVE) toFixed 2];
 systemChat format["---- an: %1 ----", (GVAR(anReserve) / AN_MAXRESERVE) toFixed 2];
