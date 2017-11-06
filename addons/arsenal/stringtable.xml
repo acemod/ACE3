@@ -85,5 +85,14 @@
             <English>Sort by amount</English>
             <French>Trier par quantité</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_buttonShareText">
+            <English>Private</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
+            <English>Share or stop sharing the selected loadout</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
+            <English>Public loadouts</English>
+        </Key>
     </Package>
 </Project>

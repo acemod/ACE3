@@ -31,14 +31,14 @@ if (_loadoutIndex > -1) then {
     GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
     GVAR(sharedLoadoutsVars) = GVAR(sharedLoadoutsVars) - [_loadoutVar];
 
-    _contentPanelCtrl lnbSetText [[_contentPanelCursSel, 0], ""];
+    _contentPanelCtrl lnbSetPicture [[_contentPanelCursSel, 0], QPATHTOF(data\iconPublicBlank.paa)];
     [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
 
 } else {
     GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, [_profileName ,_loadoutName , _loadoutData], true];
     GVAR(sharedLoadoutsVars) pushBackUnique _loadoutVar;
 
-    _contentPanelCtrl lnbSetText [[_contentPanelCursSel, 0], "X"];
+    _contentPanelCtrl lnbSetPicture [[_contentPanelCursSel, 0], QPATHTOF(data\iconPublic.paa)];
     [QGVAR(loadoutShared), [_contentPanelCtrl, [_profileName ,_loadoutName , _loadoutData]]] call CBA_fnc_remoteEvent;
 };
 

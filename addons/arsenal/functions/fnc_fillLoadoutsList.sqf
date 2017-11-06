@@ -66,6 +66,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         _contentListCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
         _contentListCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
+
         if (_nullItemsAmount > 0) then {
 
             _contentListCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.5]];
@@ -78,8 +79,8 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
         _contentListCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), [_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
 
-        if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars)) then {
-            _contentListCtrl lnbSetText [[_newRow, 0], "X"];
+        if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars) && {GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts}) then {
+            _contentListCtrl lnbSetPicture [[_newRow, 0], QPATHTOF(data\iconPublic.paa)];
         };
     } foreach ([_data, +GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {

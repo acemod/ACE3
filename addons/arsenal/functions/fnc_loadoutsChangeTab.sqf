@@ -30,19 +30,19 @@ if (GVAR(currentLoadoutsTab) != -1) then {
 
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLoadoutsTab) - 1);
     _previousCtrlBackground ctrlSetBackgroundColor [0, 0, 0, 0.8];
-    _previousCtrlBackground ctrlCommit FADE_DELAY;
+    _previousCtrlBackground ctrlCommit 0;
 
     private _previousCtrl = _display displayCtrl GVAR(currentLoadoutsTab);
     _previousCtrl ctrlSetTextColor [1, 1, 1, 1];
-    _previousCtrl ctrlCommit FADE_DELAY;
+    _previousCtrl ctrlCommit 0;
 };
 
 private _ctrlBackground = _display displayCtrl ((ctrlIDC _control) - 1);
 _ctrlBackground ctrlSetBackgroundColor [1, 1, 1, 0.8];
-_ctrlBackground ctrlCommit FADE_DELAY;
+_ctrlBackground ctrlCommit 0;
 
 _control ctrlSetTextColor [0, 0, 0, 1];
-_control ctrlCommit FADE_DELAY;
+_control ctrlCommit 0;
 
 switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {

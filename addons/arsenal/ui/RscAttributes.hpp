@@ -58,35 +58,35 @@ class GVAR(display) {
         };
         class blockLeftFrame: RscFrame {
             idc = IDC_blockLeftFrame;
-            x = QUOTE(safezoneX + 14 * GRID_W);
+            x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
-            w = QUOTE(70 * GRID_W);
+            w = QUOTE(80 * GRID_W);
             h = QUOTE(safezoneH - 24 * GRID_H);
             colorText[] = {0,0,0,1};
         };
         class blockLeftBackground: ctrlStaticBackground {
             idc = IDC_blockLeftBackground;
-            x = QUOTE(safezoneX + 14 * GRID_W);
+            x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
-            w = QUOTE(70 * GRID_W);
+            w = QUOTE(80 * GRID_W);
             h = QUOTE(safezoneH - 24 * GRID_H);
             colorBackground[] = {0,0,0,0.5};
         };
         class blockRightFrame: blockLeftFrame {
             idc = IDC_blockRightFrame;
-            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             h = QUOTE(safezoneH - 38 * GRID_H);
         };
         class blockRighttBackground: blockLeftBackground {
             idc = IDC_blockRighttBackground;
-            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             h = QUOTE(safezoneH - 38 * GRID_H);
         };
         class loadIndicator: RscControlsGroupNoScrollbars {
             idc = IDC_loadIndicator;
-            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 24 * GRID_H);
-            w = QUOTE(70 * GRID_W);
+            w = QUOTE(80 * GRID_W);
             h = QUOTE(6 * GRID_H);
             class controls {
                 class loadIndicatorBackground: ctrlStaticBackground {
@@ -94,7 +94,7 @@ class GVAR(display) {
                     colorBackground[] = {0,0,0,0.5};
                     x = 0;
                     y = 0;
-                    w = QUOTE(70 * GRID_W);
+                    w = QUOTE(80 * GRID_W);
                     h = QUOTE(6 * GRID_H);
                 };
                 class loadIndicatorBar: ctrlProgress {
@@ -105,14 +105,14 @@ class GVAR(display) {
                     colorFrame[] = {0,0,0,1};
                     x = 0;
                     y = 0;
-                    w = QUOTE(70 * GRID_W);
+                    w = QUOTE(80 * GRID_W);
                     h = QUOTE(6 * GRID_H);
                 };
             };
         };
         class totalWeight: RscControlsGroupNoScrollbars {
             idc = IDC_totalWeight;
-            x = QUOTE(safezoneX + 39 * GRID_W);
+            x = QUOTE(safezoneX + 46 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(20 * GRID_W);
             h = QUOTE(7 * GRID_H);
@@ -202,16 +202,16 @@ class GVAR(display) {
         class infoBox: RscControlsGroupNoScrollbars {
             idc = IDC_infoBox;
             fade = 1;
-            x = QUOTE(safezoneX + safezoneW - 99 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 108 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 17 * GRID_H);
-            w = QUOTE(85 * GRID_W);
+            w = QUOTE(95 * GRID_W);
             h = QUOTE(15 * GRID_H);
             class controls {
                 class infoBackground: ctrlStaticBackground {
                     idc = IDC_infoBackground;
                     x = QUOTE(15 * GRID_W);
                     y = QUOTE(0);
-                    w = QUOTE(70 * GRID_W);
+                    w = QUOTE(80 * GRID_W);
                     h = QUOTE(15 * GRID_H);
                     colorBackground[] = {0,0,0,0.8};
                 };
@@ -219,7 +219,7 @@ class GVAR(display) {
                     idc = IDC_infoName;
                     x = QUOTE(15 * GRID_W);
                     y = QUOTE(0);
-                    w = QUOTE(70 * GRID_W);
+                    w = QUOTE(80 * GRID_W);
                     h = QUOTE(8 * GRID_H);
                     sizeEx = QUOTE(7 * GRID_H);
                 };
@@ -228,7 +228,7 @@ class GVAR(display) {
                     colorText[] = {1,1,1,0.5};
                     x = QUOTE(15 * GRID_W);
                     y = QUOTE(8 * GRID_H);
-                    w = QUOTE(70 * GRID_W);
+                    w = QUOTE(80 * GRID_W);
                     h = QUOTE(6 * GRID_H);
                     sizeEx = QUOTE(6 * GRID_H);
                 };
@@ -274,9 +274,9 @@ class GVAR(display) {
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);
-            x = QUOTE(safezoneX + 14 * GRID_W);
+            x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
-            w = QUOTE(70 * GRID_W);
+            w = QUOTE(80 * GRID_W);
             h = QUOTE(safezoneH - 24 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
@@ -287,7 +287,7 @@ class GVAR(display) {
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRight));
             onSetFocus = QUOTE(GVAR(rightTabFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabFocus) = false);
-            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             h = QUOTE(safezoneH - 38 * GRID_H);
         };
         class rightTabContentListnBox : RscListNBox {
@@ -307,17 +307,17 @@ class GVAR(display) {
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRightListnBox));
             onSetFocus = QUOTE(GVAR(rightTabLnBFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabLnBFocus) = false);
-            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
-            w = QUOTE(70 * GRID_W);
+            w = QUOTE(80 * GRID_W);
             h = QUOTE(safezoneH - 38 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
         class sortLeftTab: RscCombo {
             idc = IDC_sortLeftTab;
-            x = QUOTE(safezoneX + 14 * GRID_W);
+            x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
-            w = QUOTE(70 * GRID_W);
+            w = QUOTE(80 * GRID_W);
             h = QUOTE(6 * GRID_H);
             onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
             class Items {
@@ -334,7 +334,7 @@ class GVAR(display) {
         };
         class sortRightTab: sortLeftTab {
             idc = IDC_sortRightTab;
-            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             class Items {
                 class Alphabet {
                     text="$STR_a3_rscdisplayarsenal_sort_alphabet";
@@ -352,9 +352,9 @@ class GVAR(display) {
             onSetFocus = QUOTE(GVAR(leftSearchbarFocus) = true);
             onKillFocus = QUOTE(GVAR(leftSearchbarFocus) = false);
             onMouseButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(clearSearchbar));
-            x = QUOTE(safezoneX + 14 * GRID_W);
+            x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
-            w = QUOTE(64 * GRID_W);
+            w = QUOTE(74 * GRID_W);
             h = QUOTE(6 * GRID_H);
         };
         class leftSearchbarButton: ctrlButtonPicture {
@@ -362,7 +362,7 @@ class GVAR(display) {
             text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_leftSearchbar)] call FUNC(handleSearchbar));
-            x = QUOTE(safezoneX + 78 * GRID_W);
+            x = QUOTE(safezoneX + 87 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);
             h = QUOTE(6 * GRID_H);
@@ -371,12 +371,12 @@ class GVAR(display) {
             idc = IDC_rightSearchbar;
             onSetFocus = QUOTE(GVAR(rightSearchbarFocus) = true);
             onKillFocus = QUOTE(GVAR(rightSearchbarFocus) = false);
-            x = QUOTE(safezoneX + safezoneW - 78 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 87 * GRID_W);
         };
         class rightSearchbarButton: leftSearchbarButton {
             idc = IDC_rightSearchbarButton;
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_rightSearchbar)] call FUNC(handleSearchbar));
-            x = QUOTE(safezoneX + safezoneW - 84 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
         };
         class tabLeft: RscControlsGroupNoScrollbars {
             idc = IDC_tabLeft;
@@ -401,7 +401,7 @@ class GVAR(display) {
                     tooltip="$STR_A3_RscDisplayArsenal_tab_PrimaryWeapon";
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(fillLeftPanel));
                     colorBackground[]={0,0,0,0.5};
-                    x = QUOTE(1 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(0 * GRID_H);
                     w = QUOTE(9 * GRID_W);
                     h = QUOTE(9 * GRID_H);
@@ -764,7 +764,7 @@ class GVAR(loadoutsDisplay) {
                 class textTitle: RscText {
                     idc= -1;
                     text="$STR_DISP_GAME_NAME";
-                    x = QUOTE(5 * GRID_W);
+                    x = QUOTE(1 * GRID_W);
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(15 * GRID_W);
                     h = QUOTE(5 * GRID_H);
@@ -772,9 +772,9 @@ class GVAR(loadoutsDisplay) {
                 };
                 class textEditBox: ctrlEdit {
                     idc= IDC_textEditBox;
-                    x = QUOTE(20 * GRID_W);
+                    x = QUOTE(16 * GRID_W);
                     y = QUOTE(safezoneH - (51 * GRID_H));
-                    w = QUOTE(100 * GRID_W);
+                    w = QUOTE(80 * GRID_W);
                     h = QUOTE(5 * GRID_H);
                 };
             };
