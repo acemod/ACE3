@@ -252,6 +252,12 @@ switch (_ctrlIDC) do {
         {
             ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 18);
+        {
+            ["CfgVehicles", _x, false, true]  call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 23);
+        {
+            ["CfgGlasses", _x, false, true]  call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 24);
     };
 };
 

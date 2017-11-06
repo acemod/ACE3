@@ -51,6 +51,8 @@ GVAR(virtualItems) set [19, []];
 GVAR(virtualItems) set [20, []];
 GVAR(virtualItems) set [21, []];
 GVAR(virtualItems) set [22, [[], [], [], []]];
+GVAR(virtualItems) set [23, []];
+GVAR(virtualItems) set [24, []];
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
 
 GVAR(currentFace) = face GVAR(center);
@@ -108,6 +110,8 @@ for "_index" from 0 to 10 do {
 
             private _configCfgWeapons = configFile >> "CfgWeapons";
             private _configMagazines = configFile >> "CfgMagazines";
+            private _configVehicles = configFile >> "CfgVehicles";
+            private _configGlasses = configFile >> "CfgGlasses";
 
             {
                 switch true do {
@@ -183,6 +187,16 @@ for "_index" from 0 to 10 do {
                             {!(_x in ((_itemsCache select 1) select 3))} 
                         ): {
                         (GVAR(virtualItems) select 18) pushBackUnique _x;
+                    };
+
+                    // Backpacks
+                    case (isClass (_configVehicles >> _x)): {
+                        (GVAR(virtualItems) select 23) pushBackUnique _x;
+                    };
+
+                    // Facewear
+                    case (isClass (_configGlasses >> _x)): {
+                        (GVAR(virtualItems) select 24) pushBackUnique _x;
                     };
                 };
             } foreach _array;
