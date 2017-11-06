@@ -20,7 +20,7 @@
 #include "script_component.hpp"
 params ["_unit", "_speed", "_fwdAngle", "_sideAngle"];
 
-private _gearMass = ((_unit getVariable [QEGVAR(movement,totalLoad), loadAbs _unit]) / 22.046) * GVAR(loadFactor);
+private _gearMass = 0 max (((_unit getVariable [QEGVAR(movement,totalLoad), loadAbs _unit]) / 22.046 - 3.5) * GVAR(loadFactor));
 private _terrainGradient = abs(_fwdAngle);
 private _terrainFactor = 1;
 
