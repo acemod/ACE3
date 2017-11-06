@@ -42,7 +42,7 @@ if ((vehicle ACE_player == ACE_player) && {_currentSpeed > 0.1} && {isTouchingGr
 };
 
 // Oxygen calculation
-private _oxygen = 1 - 0.126 * GVAR(respiratoryRate) ^ 2;
+private _oxygen = 1 - 0.1315 * GVAR(respiratoryRate) ^ 2;
 
 // Calculate muscle damage increase
 GVAR(muscleDamage) = (GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.2 * MUSCLE_TEAR_RATE) min 1;
