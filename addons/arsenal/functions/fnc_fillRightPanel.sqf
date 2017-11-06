@@ -150,6 +150,9 @@ switch (_ctrlIDC) do {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
             } foreach ((GVAR(virtualItems) select 1) select 0);
+            {
+                ["CfgWeapons", _x, false, true] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 22) select 0);
         };
     };
 
@@ -162,6 +165,9 @@ switch (_ctrlIDC) do {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
             } foreach ((GVAR(virtualItems) select 1) select 1);
+            {
+                ["CfgWeapons", _x, false, true] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 22) select 1);
         };
     };
 
@@ -174,6 +180,9 @@ switch (_ctrlIDC) do {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
             } foreach ((GVAR(virtualItems) select 1) select 2);
+            {
+                ["CfgWeapons", _x, false, true] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 22) select 2);
         };
     };
 
@@ -186,6 +195,9 @@ switch (_ctrlIDC) do {
             {
                 ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
             } foreach ((GVAR(virtualItems) select 1) select 3);
+            {
+                ["CfgWeapons", _x, false, true] call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 22) select 3);
         };
     };
 
@@ -201,24 +213,36 @@ switch (_ctrlIDC) do {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
         } foreach ((GVAR(virtualItems) select 2) arrayIntersect ((_compatibleMagazines select 0) + (_compatibleMagazines select 1) + (_compatibleMagazines select 2)));
+        {
+            ["CfgMagazines", _x, true, true] call _fnc_fill_right_Container;
+        } foreach ((GVAR(virtualItems) select 19) arrayIntersect ((_compatibleMagazines select 0) + (_compatibleMagazines select 1) + (_compatibleMagazines select 2)));
     };
 
     case IDC_buttonMagALL : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 2);
+        {
+            ["CfgMagazines", _x, true, true]  call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 19);
     };
 
     case IDC_buttonThrow : {
         {
             ["CfgMagazines", _x, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 15);
+        {
+            ["CfgMagazines", _x, true, true]  call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 20);
     };
 
     case IDC_buttonPut : {
         {
             ["CfgMagazines", _x, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 16);
+        {
+            ["CfgMagazines", _x, true, true]  call _fnc_fill_right_Container;
+        } foreach (GVAR(virtualItems) select 21);
     };
 
     case IDC_buttonMisc : {

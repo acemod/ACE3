@@ -45,7 +45,12 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
 if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = [[[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
 };
+
 GVAR(virtualItems) set [18, []];
+GVAR(virtualItems) set [19, []];
+GVAR(virtualItems) set [20, []];
+GVAR(virtualItems) set [21, []];
+GVAR(virtualItems) set [22, [[], [], [], []]];
 GVAR(currentItems) = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", [], [], [], [], [], []];
 
 GVAR(currentFace) = face GVAR(center);
@@ -58,6 +63,7 @@ GVAR(shiftState) = false;
 // Add the items the player has to virtualItems
 for "_index" from 0 to 10 do {
     switch (_index) do {
+        // primary, secondary, handgun weapons
         case 0: {
             private _array = LIST_DEFAULTS select _index;
 
@@ -74,6 +80,7 @@ for "_index" from 0 to 10 do {
             };
         };
 
+        // Accs for the weapons above
         case 1: {
             private _array = LIST_DEFAULTS select _index;
 
@@ -94,6 +101,7 @@ for "_index" from 0 to 10 do {
             };
         };
 
+        // Inventory items
         case 2: {
             private _array = LIST_DEFAULTS select _index;
             private _itemsCache = uiNamespace getVariable QGVAR(configItems);
@@ -101,48 +109,86 @@ for "_index" from 0 to 10 do {
             private _configCfgWeapons = configFile >> "CfgWeapons";
             private _configMagazines = configFile >> "CfgMagazines";
 
-            private _grenadeList = [];
-            {
-                _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
-                false
-            } count getArray (_configCfgWeapons >> "Throw" >> "muzzles");
-
-            private _putList = [];
-            {
-                _putList append getArray (_configCfgWeapons >> "Put" >> _x >> "magazines");
-                false
-            } count getArray (_configCfgWeapons >> "Put" >> "muzzles");
-
             {
                 switch true do {
-                    case (isClass (_configMagazines >> _x) && {_x in _grenadeList}): {
-                        (GVAR(virtualItems) select 15) pushBackUnique _x;
-                    };
-
-                    case (isClass (_configMagazines >> _x) && {_x in _putList}): {
-                        (GVAR(virtualItems) select 16) pushBackUnique _x;
-                    };
-
+                    // Weapon mag
                     case (
                             isClass (_configMagazines >> _x) && 
                             {_x in (_itemsCache select 2)} && 
                             {!(_x in (GVAR(virtualItems) select 2))}
                         ): {
-
-                        (GVAR(virtualItems) select 2) pushBackUnique _x;
+                        (GVAR(virtualItems) select 19) pushBackUnique _x;
                     };
 
+                    // Mag throw
+                    case (
+                            isClass (_configMagazines >> _x) && 
+                            {_x in (_itemsCache select 15)} &&
+                            {!(_x in (GVAR(virtualItems) select 15))}
+                        ): {
+                        (GVAR(virtualItems) select 20) pushBackUnique _x;
+                    };
+
+                    // Mag put
+                    case (
+                            isClass (_configMagazines >> _x) && 
+                            {_x in (_itemsCache select 16)} &&
+                            {!(_x in (GVAR(virtualItems) select 16))}
+                        ): {
+                        (GVAR(virtualItems) select 21) pushBackUnique _x;
+                    };
+
+                    // acc
                     case (
                             isClass (_configCfgWeapons >> _x) &&
-                            {!(_x in (GVAR(virtualItems) select 17))}
+                            {!(_x in ((GVAR(virtualItems) select 1) select 0))} &&
+                            {_x in ((_itemsCache select 1) select 0)}
                         ): {
+                        ((GVAR(virtualItems) select 22) select 0) pushBackUnique _x;
+                    };
 
+                    // acc
+                    case (
+                            isClass (_configCfgWeapons >> _x) &&
+                            {!(_x in ((GVAR(virtualItems) select 1) select 1))} &&
+                            {_x in ((_itemsCache select 1) select 1)}
+                        ): {
+                        ((GVAR(virtualItems) select 22) select 1) pushBackUnique _x;
+                    };
+
+                    // acc
+                    case (
+                            isClass (_configCfgWeapons >> _x) &&
+                            {!(_x in ((GVAR(virtualItems) select 1) select 2))} &&
+                            {_x in ((_itemsCache select 1) select 2)}
+                        ): {
+                        ((GVAR(virtualItems) select 22) select 2) pushBackUnique _x;
+                    };
+                    // acc
+                    case (
+                            isClass (_configCfgWeapons >> _x) &&
+                            {!(_x in ((GVAR(virtualItems) select 1) select 3))} &&
+                            {_x in ((_itemsCache select 1) select 3)}
+                        ): {
+                        ((GVAR(virtualItems) select 22) select 3) pushBackUnique _x;
+                    };
+
+                    // Misc
+                    case (
+                            isClass (_configCfgWeapons >> _x) &&
+                            {!(_x in (GVAR(virtualItems) select 17))} &&
+                            {!(_x in ((_itemsCache select 1) select 0))} &&
+                            {!(_x in ((_itemsCache select 1) select 1))} &&
+                            {!(_x in ((_itemsCache select 1) select 2))} &&
+                            {!(_x in ((_itemsCache select 1) select 3))} 
+                        ): {
                         (GVAR(virtualItems) select 18) pushBackUnique _x;
                     };
                 };
             } foreach _array;
         };
 
+        // The rest
         default {
             private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
             if !(_array isEqualTo []) then {
