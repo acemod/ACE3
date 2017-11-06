@@ -1104,6 +1104,7 @@
             <Chinesesimp>只有维修专精兵</Chinesesimp>
             <Chinese>只有維修專精兵</Chinese>
             <Polish>Tylko zaawansowani mechanicy</Polish>
+            <Korean>고급 정비공만</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1429,6 +1430,7 @@
             <Chinesesimp>专精</Chinesesimp>
             <Chinese>專精</Chinese>
             <Polish>Zaaw. mechanik</Polish>
+            <Korean>고급 정비공</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>

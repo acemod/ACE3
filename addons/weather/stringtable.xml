@@ -182,6 +182,7 @@
             <Italian>Sincronizza arcobaleno, nebbia, temperatura e umidità</Italian>
             <Chinese>同步彩虹、霧、溫度與濕度</Chinese>
             <Chinesesimp>同步彩虹、雾、温度与湿度</Chinesesimp>
+            <Korean>무지개, 안개, 온도, 습도 동기화</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>

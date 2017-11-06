@@ -53,6 +53,7 @@
             <Japanese>ファスト ロープのシステムを収容</Japanese>
             <Chinese>收起快速繩降系統</Chinese>
             <Chinesesimp>收起快速绳降系统</Chinesesimp>
+            <Korean>패스트 로프 시스템 보관</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
