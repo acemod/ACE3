@@ -104,9 +104,12 @@
 #define IDC_buttonShare 306
 #define IDC_buttonDelete 307
 #define IDC_buttonRename 308
-#define IDC_buttonMyLoadouts 401
-#define IDC_buttonDefaultLoadouts 402
-#define IDC_buttonSharedLoadouts 403
+#define IDC_buttonMyLoadoutsBackground 401
+#define IDC_buttonMyLoadouts 402
+#define IDC_buttonDefaultLoadoutsBackground 403
+#define IDC_buttonDefaultLoadouts 404
+#define IDC_buttonSharedLoadoutsBackground 405
+#define IDC_buttonSharedLoadouts 406
 
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5

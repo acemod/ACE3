@@ -47,7 +47,6 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
-            <French>Renommer le loadout selectionné</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadText">
             <English>Load</English>
@@ -55,15 +54,6 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadTooltip">
             <English>Load the selected loadout</English>
-            <French>Charger le loadout selectionné</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_buttonShareText">
-            <English>Share</English>
-            <French>Partager</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
-            <English>Share the selected loadout</English>
-            <French>Partager le loadout selectionné</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteText">
             <English>Delete</English>
@@ -71,31 +61,21 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteTooltip">
             <English>Delete the selected loadout</English>
-            <French>Supprimer le loadout selectionné</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsText">
             <English>My loadouts</English>
-            <French>Mes loadouts</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsTooltip">
             <English>Loadouts saved in your profile</English>
-            <French>Loadouts enregistrés dans votre profil</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsText">
             <English>Default loadouts</English>
-            <French>Loadouts de base</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
-            <English>Shared loadouts</English>
-            <French>Loadouts partagés</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsTooltip">
             <English>Loadouts made available by the mission maker</English>
-            <French>Loadouts mit à disposition par l'auteur de la mission</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsTooltip">
             <English>Loadouts shared by you and other players</English>
-            <French>Loadouts partagés par vous et les autres joueurs</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByWeightText">
             <English>Sort by weight</English>

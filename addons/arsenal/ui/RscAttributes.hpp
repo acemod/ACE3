@@ -837,9 +837,17 @@ class GVAR(loadoutsDisplay) {
             w = QUOTE(122 * GRID_W);
             h = QUOTE(10 * GRID_H);
             class controls {
+                class buttonMyLoadoutsBackground: ctrlStaticBackground {
+                    idc = IDC_buttonMyLoadoutsBackground;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(40 * GRID_W);
+                    h = QUOTE(10 * GRID_H);
+                    colorBackground[] = {0,0,0,0.8};
+                };
                 class buttonMyLoadouts: ctrlButton {
                     idc = IDC_buttonMyLoadouts;
-                    colorBackground[] = {0,0,0,0.8};
+                    colorBackground[] = {0,0,0,0};
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(0 * GRID_H);
                     w = QUOTE(40 * GRID_W);
@@ -849,11 +857,19 @@ class GVAR(loadoutsDisplay) {
                     tooltip= CSTRING(tabMyLoadoutsTooltip);
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
                 };
+                class buttonDefaultLoadoutsBackground: buttonMyLoadoutsBackground {
+                    idc = IDC_buttonDefaultLoadoutsBackground;
+                    x = QUOTE(41 * GRID_W);
+                };
                 class buttonDefaultLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonDefaultLoadouts;
                     x = QUOTE(41 * GRID_W);
                     text= CSTRING(tabDefaultLoadoutsText);
                     tooltip= CSTRING(tabDefaultLoadoutsTooltip);
+                };
+                class buttonSharedLoadoutsBackground: buttonMyLoadoutsBackground {
+                    idc = IDC_buttonSharedLoadoutsBackground;
+                    x = QUOTE(82 * GRID_W);
                 };
                 class buttonSharedLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonSharedLoadouts;

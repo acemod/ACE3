@@ -25,6 +25,25 @@ private _loadButtonCtrl = _display displayCtrl IDC_buttonLoad;
 private _deleteButtonCtrl = _display displayCtrl IDC_buttonDelete;
 private _renameButtonCtrl = _display displayCtrl IDC_buttonRename;
 
+// Update UI visual elements
+if (GVAR(currentLoadoutsTab) != -1) then {
+
+    private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLoadoutsTab) - 1);
+    _previousCtrlBackground ctrlSetBackgroundColor [0, 0, 0, 0.8];
+    _previousCtrlBackground ctrlCommit FADE_DELAY;
+
+    private _previousCtrl = _display displayCtrl GVAR(currentLoadoutsTab);
+    _previousCtrl ctrlSetTextColor [1, 1, 1, 1];
+    _previousCtrl ctrlCommit FADE_DELAY;
+};
+
+private _ctrlBackground = _display displayCtrl ((ctrlIDC _control) - 1);
+_ctrlBackground ctrlSetBackgroundColor [1, 1, 1, 0.8];
+_ctrlBackground ctrlCommit FADE_DELAY;
+
+_control ctrlSetTextColor [0, 0, 0, 1];
+_control ctrlCommit FADE_DELAY;
+
 switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {
         _centerBoxTitleCtrl ctrlSetText "My loadouts"; // TBL

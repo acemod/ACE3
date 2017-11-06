@@ -36,12 +36,20 @@ if !(GVAR(allowDefaultLoadouts)) then {
     private _buttonDefaultLoadoutsCtrl = _display displayCtrl IDC_buttonDefaultLoadouts;
     _buttonDefaultLoadoutsCtrl ctrlEnable false;
     _buttonDefaultLoadoutsCtrl ctrlCommit 0;
+
+    private _buttonDefaultLoadoutsBackgroundCtrl = _display displayCtrl IDC_buttonDefaultLoadoutsBackground;
+    _buttonDefaultLoadoutsBackgroundCtrl ctrlShow false;
+    _buttonDefaultLoadoutsBackgroundCtrl ctrlCommit 0;
 };
 
 if !(GVAR(allowSharedLoadouts) && {isMultiplayer}) then {
     private _buttonShareLoadoutsCtrl = _display displayCtrl IDC_buttonSharedLoadouts;
     _buttonShareLoadoutsCtrl ctrlEnable false;
     _buttonShareLoadoutsCtrl ctrlCommit 0;
+
+    private _buttonShareLoadoutsBackgroundCtrl = _display displayCtrl IDC_buttonSharedLoadoutsBackground;
+    _buttonShareLoadoutsBackgroundCtrl ctrlShow false;
+    _buttonShareLoadoutsBackgroundCtrl ctrlCommit 0;
 };
 
 [_display, _display displayCtrl IDC_buttonMyLoadouts] call FUNC(loadoutsChangeTab);
