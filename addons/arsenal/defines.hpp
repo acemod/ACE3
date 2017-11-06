@@ -265,8 +265,7 @@
     {_item in (GVAR(virtualItems) select 12)} ||\
     {_item in (GVAR(virtualItems) select 13)} ||\
     {_item in (GVAR(virtualItems) select 14)} ||\
-    {_item in (GVAR(virtualItems) select 8)} ||\
-    {_item in (GVAR(virtualItems) select 18)}
+    {_item in (GVAR(virtualItems) select 8)}
 
 #define CHECK_CONTAINER\
     _item in (GVAR(virtualItems) select 4) ||\
@@ -297,5 +296,4 @@
     {_item in (GVAR(virtualItems) select 14)} ||\
     {_item in (GVAR(virtualItems) select 15)} ||\
     {_item in (GVAR(virtualItems) select 16)} ||\
-    {_item in (GVAR(virtualItems) select 17)} ||\
-    {_item in (GVAR(virtualItems) select 18)}
+    {_item in (GVAR(virtualItems) select 17)}

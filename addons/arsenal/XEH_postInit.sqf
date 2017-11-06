@@ -78,45 +78,6 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [QGVAR(displayOpened), {
         GVAR(virtualItems) set [17, (GVAR(virtualItems) select 17) -  ["FirstAidKit", "Medikit"]];
     }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(onLoadoutSave), {
-
-        params ["_index", "_loadout"];
-        _loadout params ["_loadoutName", "_loadoutData"];
-
-        for "_dataIndex" from 0 to 10 do {
-            switch (_dataIndex) do {
-
-                case 3;
-                case 4;
-                case 5: {
-                    if (count (_loadoutData select _dataIndex) > 0) then {
-                        private _containerContents = (_loadoutData select _dataIndex) select 1;
-
-                        if (count _containerContents > 0) then {
-
-                            {
-                                if (count _x == 2 && {(_x select 0) isEqualType ""}) then {
-
-                                    private _item = _x select 0;
-                                    if (
-                                        _item isKindOf ["FirstAidKit", (configFile >> "CfgWeapons")] ||
-                                        _item isKindOf ["Medikit", (configFile >> "CfgWeapons")]
-                                    ) then {
-
-                                        _containerContents set [_foreachIndex, []];
-                                    };
-                                };
-                            } foreach _containerContents;
-                        };
-                    };
-                };
-            };
-
-            private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
-            _data set [_index, [_loadoutName, _loadoutData]];
-        };
-    }] call CBA_fnc_addEventHandler;
 };
 
 if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
@@ -142,42 +103,6 @@ if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
                     _rightPanel lnbSetText [[_r, 1], _dogtagData select 0];
                 };
             };
-        };
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(onLoadoutSave), {
-
-        params ["_index", "_loadout"];
-        _loadout params ["_loadoutName", "_loadoutData"];
-
-        for "_dataIndex" from 0 to 10 do {
-            switch (_dataIndex) do {
-
-                case 3;
-                case 4;
-                case 5: {
-                    if (count (_loadoutData select _dataIndex) > 0) then {
-                        private _containerContents = (_loadoutData select _dataIndex) select 1;
-
-                        if (count _containerContents > 0) then {
-
-                            {
-                                if (count _x == 2 && {(_x select 0) isEqualType ""}) then {
-
-                                    private _item = _x select 0;
-                                    if (_item isKindOf ["ACE_dogtag", (configFile >> "CfgWeapons")]) then {
-
-                                        _containerContents set [_foreachIndex, []];
-                                    };
-                                };
-                            } foreach _containerContents;
-                        };
-                    };
-                };
-            };
-
-            private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
-            _data set [_index, [_loadoutName, _loadoutData]];
         };
     }] call CBA_fnc_addEventHandler;
 };
