@@ -3,7 +3,7 @@
  * Makes unit pull target body out of vehicle.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Body <OBJECT>
  * 1: Unit <OBJECT>
  *
  * Return Value:
@@ -16,12 +16,12 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_unit"];
+params ["_body", "_unit"];
 
-private _vehicle = objectParent _target; // vehicle command doesn't work for dead
+private _vehicle = objectParent _body; // vehicle command doesn't work for dead
 
 // get target crew properties
-((fullCrew [_vehicle, ""] select {_target == _x select 0}) select 0) params ["", "_role", "_cargoIndex", "_turretPath"];
+((fullCrew [_vehicle, ""] select {_body == _x select 0}) select 0) params ["", "_role", "_cargoIndex", "_turretPath"];
 TRACE_3("found crew",_role,_cargoIndex,_turretPath);
 
 private _preserveEngineOn = false;
@@ -33,9 +33,8 @@ if (!(_turretPath isEqualTo [])) then {
     if (_cargoIndex > -1) then {
         _unit action ["GetInCargo", _vehicle, _cargoIndex];
     } else {
-        _unit action ["GetIn" + _role, _vehicle];
-        _preserveEngineOn = (_unit == assignedDriver _vehicle) && {isEngineOn _vehicle}; // (_unit != driver _unit) here O_O
-        TRACE_1("peo",_preserveEngineOn);
+        _unit action ["GetInDriver", _vehicle];
+        _preserveEngineOn = isEngineOn _vehicle;
     };
 };
 
