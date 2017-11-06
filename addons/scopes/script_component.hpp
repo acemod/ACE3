@@ -22,6 +22,6 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_SCOPES
 #endif
 
-#define MRAD_TO_DEG(d) (d / 17.45329252) // Conversion factor: 9 / (50 * PI)
+#define MRAD_TO_DEG(d) ((d) / 17.45329252) // Conversion factor: 9 / (50 * PI)
 
 #include "\z\ace\addons\main\script_macros.hpp"
