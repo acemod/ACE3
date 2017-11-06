@@ -136,7 +136,7 @@ for "_dataIndex" from 0 to 9 do {
                                         private _item = _x select 0;
 
                                         if (isClass (_magCfg >> _item)) then {
-                                            if (_item in (GVAR(virtualItems) select 3)) then {
+                                            if !(_item in (GVAR(virtualItems) select 2)) then {
 
                                                 _unavailableItemsList pushBackUnique _item;
                                                 ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
