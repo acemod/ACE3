@@ -807,7 +807,7 @@ class GVAR(loadoutsDisplay) {
         class buttonShare: buttonSave {
             idc = IDC_buttonShare;
             x = QUOTE((safezoneW * 0.5) + safezoneX + (15 * GRID_W));
-            text= CSTRING(buttonShareText);
+            text= CSTRING(buttonSharePrivateText);
             tooltip= CSTRING(buttonShareTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
         };

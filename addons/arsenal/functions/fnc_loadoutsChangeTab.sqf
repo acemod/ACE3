@@ -46,21 +46,21 @@ _control ctrlCommit 0;
 
 switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {
-        _centerBoxTitleCtrl ctrlSetText "My loadouts"; // TBL
+        _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabMyLoadoutsText));
 
         _saveButtonCtrl ctrlEnable true;
         _saveButtonCtrl ctrlCommit 0;
     };
 
     case IDC_buttonDefaultLoadouts: {
-        _centerBoxTitleCtrl ctrlSetText "Default loadouts"; // TBL
+        _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabDefaultLoadoutsText));
 
         _saveButtonCtrl ctrlEnable (is3DEN);
         _saveButtonCtrl ctrlCommit 0;
     };
 
     case IDC_buttonSharedLoadouts: {
-        _centerBoxTitleCtrl ctrlSetText "Shared loadouts"; // TBL
+        _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabSharedLoadoutsText));
 
         _saveButtonCtrl ctrlEnable false;
         _saveButtonCtrl ctrlCommit 0;

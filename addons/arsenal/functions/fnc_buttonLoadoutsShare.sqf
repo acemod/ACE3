@@ -32,6 +32,7 @@ if (_loadoutIndex > -1) then {
     GVAR(sharedLoadoutsVars) = GVAR(sharedLoadoutsVars) - [_loadoutVar];
 
     _contentPanelCtrl lnbSetPicture [[_contentPanelCursSel, 0], QPATHTOF(data\iconPublicBlank.paa)];
+    _contentPanelCtrl lnbSetValue [[_contentPanelCursSel, 0], 0];
     [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
 
 } else {
@@ -39,8 +40,13 @@ if (_loadoutIndex > -1) then {
     GVAR(sharedLoadoutsVars) pushBackUnique _loadoutVar;
 
     _contentPanelCtrl lnbSetPicture [[_contentPanelCursSel, 0], QPATHTOF(data\iconPublic.paa)];
+    _contentPanelCtrl lnbSetValue [[_contentPanelCursSel, 0], 1];
     [QGVAR(loadoutShared), [_contentPanelCtrl, [_profileName ,_loadoutName , _loadoutData]]] call CBA_fnc_remoteEvent;
 };
 
-_control ctrlSetText (["Share", "Unshare"] select ((_contentPanelCtrl lnbText [_contentPanelCursSel, 0]) != "")); // TBL
+_control ctrlSetText ( [
+    localize LSTRING(buttonSharePrivateText),
+    localize LSTRING(buttonSharePublicText)
+] select ((_contentPanelCtrl lnbValue [_contentPanelCursSel, 0]) == 1));
+
 publicVariable QGVAR(sharedLoadoutsVars);

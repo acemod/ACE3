@@ -17,7 +17,7 @@ params ["_display"];
 if (GVAR(shiftState)) then {
 
     if (isNil QGVAR(defaultLoadoutsList) || {GVAR(defaultLoadoutsList) isEqualTo []}) exitWIth {
-        [_display, "Default loadouts list is empty"] call FUNC(message); //TBL
+        [_display, "Default loadouts list is empty"] call FUNC(message); // TBL
     };
 
     private _listLength = count GVAR(defaultLoadoutsList);
@@ -40,12 +40,12 @@ if (GVAR(shiftState)) then {
 
     "ace_clipboard" callExtension "--COMPLETE--";
 
-    [_display, "Default loadouts list exported to clipboard"] call FUNC(message); //TBL
+    [_display, "Default loadouts list exported to clipboard"] call FUNC(message); // TBL
 } else {
 
     private _export = str getUnitLoadout GVAR(center);
     "ace_clipboard" callExtension (_export + ";");
     "ace_clipboard" callExtension "--COMPLETE--";
 
-    [_display, "Current loadout exported to clipboard"] call FUNC(message); //TBL
+    [_display, "Current loadout exported to clipboard"] call FUNC(message); // TBL
 };

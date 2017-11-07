@@ -81,6 +81,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
         if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars) && {GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts}) then {
             _contentListCtrl lnbSetPicture [[_newRow, 0], QPATHTOF(data\iconPublic.paa)];
+            _contentListCtrl lnbSetValue [[_newRow, 0], 1];
         };
     } foreach ([_data, +GVAR(defaultLoadoutsList)] select (ctrlIDC _control == IDC_buttonDefaultLoadouts));
 } else {

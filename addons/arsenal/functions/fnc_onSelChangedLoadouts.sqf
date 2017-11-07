@@ -30,7 +30,7 @@ if (_curSel == -1) exitWith {
         _saveButtonCtrl ctrlCommit 0;
     };
 
-    _shareButtonCtrl ctrlSetText "Share"; // TBL
+    _shareButtonCtrl ctrlSetText (localize LSTRING(buttonSharePrivateText));
 
     {
         _x ctrlEnable false;
@@ -48,7 +48,10 @@ switch (GVAR(currentLoadoutsTab)) do {
         _loadButtonCtrl ctrlEnable true;
         _loadButtonCtrl ctrlCommit 0;
 
-        _shareButtonCtrl ctrlSetText (["Share", "Unshare"] select ((_control lnbText [_curSel, 0]) != "")); // TBL
+        _shareButtonCtrl ctrlSetText ( [
+            localize LSTRING(buttonSharePrivateText),
+            localize LSTRING(buttonSharePublicText)
+        ] select ((_control lnbValue [_curSel, 0]) == 1));
 
         {
             _x ctrlEnable true;
