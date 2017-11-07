@@ -30,6 +30,20 @@ GVAR(lastSearchTextRight) = "";
         for '_i' from 0 to (((lnbsize _contentPanel) select 0) - 1) do {
             if ((_contentPanel lnbData [_i, 1]) == _dataToCheck) exitwith {_contentPanel lnbDeleteRow _i};
         };
+    } else {
+
+        if (
+            profileName == _playerName &&
+            {!(isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts})}
+        ) then {
+
+            for '_i' from 0 to (((lnbsize _contentPanel) select 0) - 1) do {
+                if ((_contentPanel lnbText [_i, 1]) == _loadoutName) exitwith {
+                    _contentPanel lnbSetPicture [[_i, 0], QPATHTOF(data\iconPublicBlank.paa)];
+                    _contentPanel lnbSetValue [[_i, 0], 0];
+                };
+            };
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
