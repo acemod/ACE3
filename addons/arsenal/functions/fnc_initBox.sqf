@@ -39,7 +39,7 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
 
         private _action = [
             QGVAR(interaction), 
-            "arsenal",// TBL
+            localize "STR_A3_Arsenal",
             "", 
             {
                 params ["_target", "_player"];
