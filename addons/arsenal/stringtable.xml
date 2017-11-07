@@ -2,97 +2,123 @@
 <Project name="ACE">
     <Package name="Arsenal">
         <Key ID="STR_ACE_Arsenal_CantOpenDisplay">
-            <English>Unable to open the display</English>
+            <English>Unable to open ACE arsenal</English>
             <French>Impossible d'afficher l'interface</French>
+            <German>Kann ACE Arsenal nicht anzeigen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideText">
             <English>Hide</English>
             <French>Cacher</French>
+            <German>Verstecken</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideTooltip">
             <English>Hide interface</English>
             <French>Cache l'interface</French>
+            <German>Oberfläche verstecken</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsText">
             <English>Loadouts</English>
             <French>Loadouts</French>
+            <German>Ausrüstungen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportText">
             <English>Export</English>
             <French>Exporter</French>
+            <German>Exportieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportText">
             <English>Import</English>
             <French>Importer</French>
+            <German>Importieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonCloseText">
             <English>Close</English>
             <French>Fermer</French>
+            <German>Schließen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
             <English>No virtual item available</English>
             <French>Aucun objet virtuel disponible</French>
+            <German>Kein virtuelles Objekt verfügbar</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveText">
             <English>Save</English>
             <French>Enregister</French>
+            <German>Speichern</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip">
             <English>Save the current loadout</English>
             <French>Enregistre l'équipement actuel</French>
+            <German>Ausgewählte Ausrüstung speichern</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
             <French>Renommer</French>
+            <German>Umbenennen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
+            <German>Ausgewählte Ausrüstung umbenennen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadText">
             <English>Load</English>
             <French>Charger</French>
+            <German>Laden</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadTooltip">
             <English>Load the selected loadout</English>
+            <German>Ausgewählte Ausrüstung laden</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteText">
             <English>Delete</English>
             <French>Supprimer</French>
+            <German>Entfernen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteTooltip">
             <English>Delete the selected loadout</English>
+            <German>Ausgewählte Ausrüstung entfernen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsText">
             <English>My loadouts</English>
+            <German>Meine Ausrüstungen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsTooltip">
             <English>Loadouts saved in your profile</English>
+            <German>Ausrüstungen, die in deinem Profil gespeichert sind</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsText">
             <English>Default loadouts</English>
+            <German>Standard-Ausrüstungen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsTooltip">
             <English>Loadouts made available by the mission maker</English>
+            <German>Ausrüstungen, die durch den Missionsersteller zur Verfügung gestellt worden sind</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsTooltip">
             <English>Loadouts shared by you and other players</English>
+            <German>Ausrüstungen, die von dir und anderen Spielern geteilt wurden</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByWeightText">
             <English>Sort by weight</English>
             <French>Trier par poids</French>
+            <German>Nach Gewicht sortieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAmountText">
             <English>Sort by amount</English>
             <French>Trier par quantité</French>
+            <German>Nach Menge sortieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareText">
             <English>Private</English>
+            <German>Privat</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
+            <German>Ausgewählte Ausrüstung teilen oder nicht mehr teilen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
             <English>Public loadouts</English>
+            <German>Veröffentlichte Ausrüstungen</German>
         </Key>
     </Package>
 </Project>
