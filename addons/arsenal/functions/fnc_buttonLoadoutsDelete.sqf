@@ -36,7 +36,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     _contentPanelCtrl lnbDeleteRow _contentPanelCursSel;
     _contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel);
 
-    [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was deleted", _loadoutName]] call FUNC(message); // TBL
+    [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutDeleted), _loadoutName] joinString " "] call FUNC(message);
 } else {
 
     private _profileName = profileName; // GVAR(center) could be a remote unit
@@ -52,5 +52,5 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
     [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
 
-    [(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was unshared", _loadoutName]] call FUNC(message); // TBL
+    [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutUnshared), _loadoutName] joinString " "] call FUNC(message);
 };

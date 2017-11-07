@@ -781,9 +781,9 @@ class GVAR(loadoutsDisplay) {
         };
         class buttonSave: ctrlButton {
             idc = IDC_buttonSave;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (75 * GRID_W));
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (80 * GRID_W));
             y = QUOTE(safezoneH + safezoneY - 39 * GRID_H);
-            w = QUOTE(25 * GRID_W);
+            w = QUOTE(30 * GRID_W);
             h = QUOTE(10 * GRID_H);
             text= CSTRING(buttonSaveText);
             tooltip= CSTRING(buttonSaveTooltip);
@@ -792,7 +792,7 @@ class GVAR(loadoutsDisplay) {
         };
         class buttonRename: buttonSave {
             idc = IDC_buttonRename;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (45 * GRID_W));
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (47.5 * GRID_W));
             text= CSTRING(buttonRenameText);
             tooltip= CSTRING(buttonRenameTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
@@ -806,14 +806,14 @@ class GVAR(loadoutsDisplay) {
         };
         class buttonShare: buttonSave {
             idc = IDC_buttonShare;
-            x = QUOTE((safezoneW * 0.5) + safezoneX + (15 * GRID_W));
+            x = QUOTE((safezoneW * 0.5) + safezoneX + (17.5 * GRID_W));
             text= CSTRING(buttonSharePrivateText);
             tooltip= CSTRING(buttonShareTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
         };
         class buttonDelete: buttonSave {
             idc = IDC_buttonDelete;
-            x = QUOTE((safezoneW * 0.5) + safezoneX + (45 * GRID_W));
+            x = QUOTE((safezoneW * 0.5) + safezoneX + (50 * GRID_W));
             text= CSTRING(buttonDeleteText);
             tooltip= CSTRING(buttonDeleteTooltip);
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
@@ -832,9 +832,9 @@ class GVAR(loadoutsDisplay) {
         };
         class buttonBar: ctrlControlsGroupNoScrollbars {
             idc = -1;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (61 * GRID_W));
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (63 * GRID_W));
             y = QUOTE(safezoneH + safezoneY - 12 * GRID_H);
-            w = QUOTE(122 * GRID_W);
+            w = QUOTE(126 * GRID_W);
             h = QUOTE(10 * GRID_H);
             class controls {
                 class buttonMyLoadoutsBackground: ctrlStaticBackground {
@@ -859,21 +859,21 @@ class GVAR(loadoutsDisplay) {
                 };
                 class buttonDefaultLoadoutsBackground: buttonMyLoadoutsBackground {
                     idc = IDC_buttonDefaultLoadoutsBackground;
-                    x = QUOTE(41 * GRID_W);
+                    x = QUOTE(42 * GRID_W);
                 };
                 class buttonDefaultLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonDefaultLoadouts;
-                    x = QUOTE(41 * GRID_W);
+                    x = QUOTE(42 * GRID_W);
                     text= CSTRING(tabDefaultLoadoutsText);
                     tooltip= CSTRING(tabDefaultLoadoutsTooltip);
                 };
                 class buttonSharedLoadoutsBackground: buttonMyLoadoutsBackground {
                     idc = IDC_buttonSharedLoadoutsBackground;
-                    x = QUOTE(82 * GRID_W);
+                    x = QUOTE(84 * GRID_W);
                 };
                 class buttonSharedLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonSharedLoadouts;
-                    x = QUOTE(82 * GRID_W);
+                    x = QUOTE(84 * GRID_W);
                     text= CSTRING(tabSharedLoadoutsText);
                     tooltip= CSTRING(tabSharedLoadoutsTooltip);
                 };

@@ -154,5 +154,13 @@
             <English>Loadout imported from clipboard</English>
             <French>Équipement importé depuis le presse papier</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutDeleted">
+            <English>The following loadout was deleted:</English>
+            <French>L'équipement suivant fut supprimé:</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutUnshared">
+            <English>The following loadout is not public anymore:</English>
+            <French>L'équipement suivant n'est plus public:</French>
+        </Key>
     </Package>
 </Project>
