@@ -17,7 +17,7 @@ params ["_display"];
 private _data = call (compile copyFromClipboard);
 
 if (isNil "_data" || {!(_data isEqualType [])}) exitWith {
-    [_display, "Wrong format given"] call FUNC(message);
+    [_display, localize LSTRING(importFormatError)] call FUNC(message);
 };
 
 if (GVAR(shiftState) && {is3DEN}) then {
@@ -28,7 +28,7 @@ if (GVAR(shiftState) && {is3DEN}) then {
                 {_x select 0 isEqualType ""} && 
                 {_x select 1 isEqualType []} && 
                 {count (_x select 1) == 10}
-            ) then {
+        ) then {
 
             _x params ["_loadoutName", "_loadout"];
 
@@ -42,6 +42,7 @@ if (GVAR(shiftState) && {is3DEN}) then {
         };
     } foreach _data;
 
+    [_display, localize LSTRING(importedDefault)] call FUNC(message);
     set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
 
 } else {
@@ -111,6 +112,6 @@ if (GVAR(shiftState) && {is3DEN}) then {
 
         [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
 
-        [_display, "Loadout imported from clipboard"] call FUNC(message); // TBL
+        [_display, localize LSTRING(importedCurrent)] call FUNC(message);
     };
 };

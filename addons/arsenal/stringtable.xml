@@ -130,5 +130,29 @@
             <English>Public</English>
             <French>Public</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_exportDefaultError">
+            <English>The default loadouts list is empty!</English>
+            <French>La liste d'équipements de base est vide !</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_exportDefault">
+            <English>Default loadouts list exported to clipboard</English>
+            <French>Liste d'équipements de base exportée dans le presse papier</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_exportCurrent">
+            <English>Current loadout exported to clipboard</English>
+            <French>Équipement actuel exporté dans le presse papier</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_importFormatError">
+            <English>Wrong format provided</English>
+            <French>Mauvais format fourni</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_importedDefault">
+            <English>Default loadouts list imported from clipboard</English>
+            <French>Liste d'équipements de base importée depuis le presse papier</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_importedCurrent">
+            <English>Loadout imported from clipboard</English>
+            <French>Équipement importé depuis le presse papier</French>
+        </Key>
     </Package>
 </Project>
