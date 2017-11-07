@@ -69,6 +69,7 @@ GVAR(anWattsPerATP)     = GVAR(anPathwayPower) / AN_ATP_RELEASE_RATE;
 
 GVAR(respiratoryBufferDivisor) = (RESPIRATORY_BUFFER - 1) / RESPIRATORY_BUFFER;
 GVAR(maxPowerFatigueRatio) = 0.057 / GVAR(peakPower);
+GVAR(lastSpeed) = 0;
 
 GVAR(ppeBlackoutLast) = 100;
 GVAR(lastBreath)      = 0;

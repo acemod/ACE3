@@ -5,10 +5,12 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Fatigue <NUMBER>
- * 2: Speed <NUMBER>
- * 3: Respiratory Rate <NUMBER>
- * 4: Forward Angle <NUMBER>
- * 5: Side Angle <NUMBER>
+ * 2: Respiratory Rate <NUMBER>
+ * 3: Current Speed <NUMBER>
+ * 4: Max Run Speed <NUMBER>
+ * 5: Max Sprint Speed <NUMBER>
+ * 6: Forward Angle <NUMBER>
+ * 7: Side Angle <NUMBER>
  *
  * Return Value:
  * None
@@ -19,7 +21,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-params ["_unit", "_fatigue", "_speed", "_respiratoryRate", "_fwdAngle", "_sideAngle"];
+params ["_unit", "_fatigue", "_respiratoryRate", "_currentSpeed", "_maxRunSpeed", "_maxSprintSpeed", "_fwdAngle", "_sideAngle"];
 
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
@@ -65,20 +67,36 @@ if (GVAR(isSwimming)) exitWith {
         };
     };
 };
-if ((getAnimSpeedCoef _unit) != 1) then {
-    _unit setAnimSpeedCoef 1;
+
+private _currentAnimCoef = getAnimSpeedCoef _unit;
+if (_currentSpeed > 0.1) then {
+    if (_currentSpeed > 4 * _currentAnimCoef || _currentSpeed > GVAR(lastSpeed) + 0.8) then {
+        _unit setAnimSpeedCoef (0.70 max (_currentAnimCoef * ((_maxSprintSpeed / _currentSpeed) ^ 0.5)) min 1.0);
+    } else {
+        if (isForcedWalk _unit) then {
+            _unit setAnimSpeedCoef (0.80 max (_currentAnimCoef * ((_maxRunSpeed / _currentSpeed) ^ 0.5)) min 1.2);
+        } else {
+            _unit setAnimSpeedCoef (0.70 max (_currentAnimCoef * ((_maxRunSpeed / _currentSpeed) ^ 0.5)) min 1.0);
+        };
+    };
+    GVAR(lastSpeed) = _currentSpeed;
 };
 
-if (_fatigue >= 1) then {
+if (!isForcedWalk _unit && {_fatigue >= 1 || (_maxRunSpeed < 2.4 && _currentSpeed < 2.5 && _currentAnimCoef < 0.75)}) then {
+    _unit setAnimSpeedCoef 1.2;
     [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 } else {
-    if (isForcedWalk _unit && _fatigue < 0.8) then {
+    if (isForcedWalk _unit && {_fatigue < 0.90 && _maxRunSpeed > 2.5}) then {
+        if (!isWalking _unit) then {
+            _unit setAnimSpeedCoef 0.90;
+        };
         [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
     } else {
-        if ((isSprintAllowed _unit) && (_fatigue > 0.7 || abs(_fwdAngle) > 20 || abs(_sideAngle) > 20)) then {
+        if (isSprintAllowed _unit && {abs(_fwdAngle) > 20 || abs(_sideAngle) > 20 || (_maxSprintSpeed < 3.5 && _currentAnimCoef < 0.85)}) then {
+            _unit setAnimSpeedCoef 1;
             [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         } else {
-            if ((!isSprintAllowed _unit) && _fatigue < 0.6 && abs(_fwdAngle) < 20 && abs(_sideAngle) < 20) then {
+            if (!isSprintAllowed _unit && {_fatigue < 0.8 && {abs(_fwdAngle) < 20 && abs(_sideAngle) < 20 && _maxSprintSpeed > 4.5}}) then {
                 [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             };
         };
