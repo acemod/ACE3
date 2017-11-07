@@ -162,5 +162,21 @@
             <English>The following loadout is not public anymore:</English>
             <French>L'équipement suivant n'est plus public:</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_saveEmptyNameBox">
+            <English>The name field is empty!</English>
+            <French>Le champ de nom est vide !</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_saveAuthorError">
+            <English>You are the author of this loadout</English>
+            <French>Vous êtes l'auteur de cet équipement</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_saveSharedError">
+            <English>A loadout of yours with the same name is public</English>
+            <French>Un de vos équipement avec le même nom est public</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutSaved">
+            <English>The following loadout was saved:</English>
+            <French>L'équipement suivant fut enregistré:</French>
+        </Key>
     </Package>
 </Project>

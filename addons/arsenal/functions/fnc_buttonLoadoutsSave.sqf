@@ -22,7 +22,7 @@ private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
 private _editBoxContent = ctrlText _editBoxCtrl;
 
 if (_editBoxContent == "") exitWith {
-    [(findDisplay IDD_ace_arsenal), format ["The name box is empty!", _editBoxContent]] call FUNC(message); // TBL
+    [(findDisplay IDD_ace_arsenal), localize LSTRING(saveEmptyNameBox)] call FUNC(message);
 };
 
 private _data = [+(profileNamespace getVariable QGVAR(saved_loadouts)), +(GVAR(defaultLoadoutsList))] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
@@ -37,10 +37,10 @@ private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
 
 private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
 if ((_contentPanelCtrl lnbText [_cursSelRow, 0]) == profileName) exitWith {
-    [(findDisplay IDD_ace_arsenal), format ["You are the author of this loadout", _editBoxContent]] call FUNC(message); // TBL
+    [(findDisplay IDD_ace_arsenal), localize LSTRING(saveAuthorError)] call FUNC(message);
 };
 if (_similarSharedLoadout) exitWith {
-    [(findDisplay IDD_ace_arsenal), format ["You are sharing a loadout with this name", _editBoxContent]] call FUNC(message); // TBL
+    [(findDisplay IDD_ace_arsenal), localize LSTRING(saveSharedError)] call FUNC(message);
 };
 
 switch (GVAR(currentLoadoutsTab)) do {
@@ -60,7 +60,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                         if (_weapon != "") then {
 
                             private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                            if (_weapon != _baseWeapon) then {
+                             if (_weapon != _baseWeapon) then {
                                 (_loadout select _dataIndex) set [0, _baseWeapon];
                             };
                         };
@@ -240,6 +240,6 @@ switch (GVAR(currentLoadoutsTab)) do {
         profileNamespace setVariable [QGVAR(saved_loadouts), _data];
     };
 };
-[(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was saved", _editBoxContent]] call FUNC(message); // TBL
+[(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutSaved), _editBoxContent] joinString " "] call FUNC(message);
 private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
 [QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
