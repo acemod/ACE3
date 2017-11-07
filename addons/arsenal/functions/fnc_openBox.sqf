@@ -30,6 +30,10 @@ if (isNil {_object getVariable [QGVAR(virtualItems), nil]} && {!_mode}) exitWith
     [localize LSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
 };
 
+if (canSuspend) exitWith {
+    [{_this call FUNC(openBox)}, _this] call CBA_fnc_directCall;
+};
+
 private _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
 _displayToUse = [_displayToUse, findDisplay 313] select (is3DEN);
 
