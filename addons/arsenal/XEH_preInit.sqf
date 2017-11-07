@@ -18,5 +18,6 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
 // Arsenal loadouts
 [QGVAR(allowDefaultLoadouts), "CHECKBOX", "Allow the use of the default loadouts tab", "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init; // TBL
 [QGVAR(allowSharedLoadouts), "CHECKBOX", "Allow the use of loadout sharing", "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init; // TBL
+[QGVAR(allowSharedLoadouts), "CHECKBOX", "Print missing / unavailable items to RPT", "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init; // TBL
 
 ADDON = true;

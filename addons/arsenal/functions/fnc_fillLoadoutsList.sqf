@@ -40,7 +40,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         } params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
         // Log missing / nil items to RPT
-        if (_nullItemsAmount > 0 || {_unavailableItemsAmount > 0}) then {
+        if (GVAR(allowSharedLoadouts) && {isNil "_loadoutCachedInfo"} && {_nullItemsAmount > 0} || {_unavailableItemsAmount > 0}) then {
 
             private _printComponent = "ACE_Arsenal - Loadout:";
             private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
