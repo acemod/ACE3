@@ -31,7 +31,7 @@ private _editBoxContent = ctrlText _editBoxCtrl;
 private _similarLoadouts = _data select {_x select 0 == _editBoxContent};
 
 if (count _similarLoadouts > 0) exitWith {
-    [(findDisplay IDD_ace_arsenal), format ["A loadout named %1 already exist", _editBoxContent]] call FUNC(message); // TBL
+    [(findDisplay IDD_ace_arsenal), localize LSTRING(renameExistError)] call FUNC(message);
 };
 
 // Update loadout info in profile and list namespaces
@@ -62,4 +62,4 @@ if (is3DEN && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts}) then {
     set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
 };
 
-[(findDisplay IDD_ace_arsenal), format ["Loadout '%1' was renamed to '%2'", _loadoutName, _editBoxContent]] call FUNC(message); // TBL
+[(findDisplay IDD_ace_arsenal), [_loadoutName, localize LSTRING(loadoutRenamed) ,_editBoxContent] joinString " "] call FUNC(message);

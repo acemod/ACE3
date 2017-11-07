@@ -164,7 +164,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_saveEmptyNameBox">
             <English>The name field is empty!</English>
-            <French>Le champ de nom est vide !</French>
+            <French>Le champ nom est vide !</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveAuthorError">
             <English>You are the author of this loadout</English>
@@ -177,6 +177,18 @@
         <Key ID="STR_ACE_Arsenal_loadoutSaved">
             <English>The following loadout was saved:</English>
             <French>L'équipement suivant fut enregistré:</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutLoaded">
+            <English>The following loadout was loaded:</English>
+            <French>L'équipement suivant fut chargé:</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_renameExistError">
+            <English>A loadout with the same name already exist!</English>
+            <French>Un équipement avec le même nom éxiste déjà !</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_loadoutRenamed">
+            <English>was renamed to</English>
+            <French>fut renommé en</French>
         </Key>
     </Package>
 </Project>
