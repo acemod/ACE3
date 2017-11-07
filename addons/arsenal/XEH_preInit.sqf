@@ -7,17 +7,16 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 // Arsenal
-
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 
-[QGVAR(camInverted), "CHECKBOX", "Invert camera controls", "ACE3 Arsenal", false] call CBA_Settings_fnc_init; // TBL
-[QGVAR(canUseCurrentMagTab), "CHECKBOX", "Can use currentMag tab", "ACE3 Arsenal", false] call CBA_Settings_fnc_init; // TBL
-[QGVAR(enableModIcons), "CHECKBOX", "Enable mod logos", "ACE3 Arsenal", true] call CBA_Settings_fnc_init; // TBL
-[QGVAR(fontHeight), "SLIDER", "Font height for left and right panels", "ACE3 Arsenal", [1, 10, 4.5, 1]] call CBA_Settings_fnc_init; // TBL
+[QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), "ACE3 Arsenal", false] call CBA_Settings_fnc_init;
+[QGVAR(canUseCurrentMagTab), "CHECKBOX", localize LSTRING(currentMagTabSetting), "ACE3 Arsenal", false] call CBA_Settings_fnc_init;
+[QGVAR(enableModIcons), "CHECKBOX", localize LSTRING(modIconsSetting), "ACE3 Arsenal", true] call CBA_Settings_fnc_init;
+[QGVAR(fontHeight), "SLIDER", localize LSTRING(fontHeightSetting), "ACE3 Arsenal", [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
 
 // Arsenal loadouts
-[QGVAR(allowDefaultLoadouts), "CHECKBOX", "Allow the use of the default loadouts tab", "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init; // TBL
-[QGVAR(allowSharedLoadouts), "CHECKBOX", "Allow the use of loadout sharing", "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init; // TBL
-[QGVAR(allowSharedLoadouts), "CHECKBOX", "Print missing / unavailable items to RPT", "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init; // TBL
+[QGVAR(allowDefaultLoadouts), "CHECKBOX", localize LSTRING(allowDefaultLoadoutsSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
+[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
+[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(printToRPTSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
 
 ADDON = true;

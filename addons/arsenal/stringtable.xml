@@ -172,7 +172,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_saveSharedError">
             <English>A loadout of yours with the same name is public</English>
-            <French>Un de vos équipement avec le même nom est public</French>
+            <French>Un de vos équipements avec le même nom est public</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutSaved">
             <English>The following loadout was saved:</English>
@@ -184,11 +184,39 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_renameExistError">
             <English>A loadout with the same name already exist!</English>
-            <French>Un équipement avec le même nom éxiste déjà !</French>
+            <French>Un équipement avec le même nom existe déjà !</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutRenamed">
             <English>was renamed to</English>
             <French>fut renommé en</French>
+        </Key>
+        <Key ID="STR_Ace_Arsenal_invertCameraSetting">
+            <English>Invert camera controls</English>
+            <French>Inverser les contrôles de la caméra</French>
+        </Key>
+        <Key ID="STR_Ace_Arsenal_currentMagTabSetting">
+            <English>Enable the current magazines tab (EXPERIMENTAL)</English>
+            <French>Activer l'onglet chargeurs actuel (EXPÉRIMENTAL)</French>
+        </Key>
+        <Key ID="STR_Ace_Arsenal_modIconsSetting">
+            <English>Enable mod icons</English>
+            <French>Afficher les icônes de mod</French>
+        </Key>
+        <Key ID="STR_Ace_Arsenal_fontHeightSetting">
+            <English>Font height for the left and right panels</English>
+            <French>Hauteur du texte pour les listes de gauche/droite</French>
+        </Key>
+        <Key ID="STR_Ace_Arsenal_allowDefaultLoadoutsSetting">
+            <English>Allow the use of the default loadouts tab</English>
+            <French>Activer l'onglet équipement de base</French>
+        </Key>
+        <Key ID="STR_Ace_Arsenal_allowSharingSetting">
+            <English>Allow the use of loadout sharing</English>
+            <French>Autoriser le partage d'équipement</French>
+        </Key>
+        <Key ID="STR_Ace_Arsenal_printToRPTSetting">
+            <English>Enable RPT logging for missing / unavailable items</English>
+            <French>inscrire les objets manquants dans le RPT</French>
         </Key>
     </Package>
 </Project>

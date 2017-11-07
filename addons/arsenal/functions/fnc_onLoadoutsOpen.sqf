@@ -29,7 +29,7 @@ _mouseBlockCtrl ctrlCommit 0;
 GVAR(currentLoadoutsTab) = -1;
 
 private _panelContentCtrl = _display displayCtrl IDC_contentPanel;
-_panelContentCtrl ctrlSetFontHeight (GVAR(fontHeight) * GRID_H);
+_panelContentCtrl ctrlSetFontHeight (4.5 * GRID_H);
 _panelContentCtrl ctrlCommit 0;
 
 if !(GVAR(allowDefaultLoadouts)) then {
