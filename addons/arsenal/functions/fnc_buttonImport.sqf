@@ -11,6 +11,7 @@
  * Public: No
 */
 #include "script_component.hpp"
+#include "..\defines.hpp"
 
 params ["_display"];
 
@@ -105,6 +106,8 @@ if (GVAR(shiftState) && {is3DEN}) then {
                 GVAR(currentItems) set [14, _x];
             };
         } foreach (assignedItems GVAR(center));
+
+        call FUNC(updateUniqueItemsList);
 
         // Reapply insignia
         [GVAR(center), ""] call bis_fnc_setUnitInsignia;

@@ -92,6 +92,8 @@ for "_index" from 0 to 15 do {
     };
 } foreach (assignedItems GVAR(center));
 
+call FUNC(updateUniqueItemsList);
+
 // Reapply insignia
 [GVAR(center), ""] call bis_fnc_setUnitInsignia;
 [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;

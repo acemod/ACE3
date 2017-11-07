@@ -41,4 +41,5 @@ PREP(showItem);
 PREP(sortPanel);
 PREP(updateCamPos);
 PREP(updateRightPanel);
+PREP(updateUniqueItemsList);
 PREP(verifyLoadout);
