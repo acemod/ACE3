@@ -154,8 +154,8 @@
         <Key ID="STR_ACE_Arsenal_buttonSharePublicText">
             <English>Public</English>
             <French>Public</French>
-            <Polish>Publiczny</Polish>
             <German>Öffentlich</German>
+            <Polish>Publiczny</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefaultError">
             <English>The default loadouts list is empty!</English>
