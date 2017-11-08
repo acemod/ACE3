@@ -1,6 +1,7 @@
 /*
- * Author: Alganthe
+ * Author: Karel Moricky, modified by Alganthe
  * Update the camera position and pitch/bank.
+ * Modernized a bit, modified to fit the rewrite.
  *
  * Arguments:
  * 0: Not used
