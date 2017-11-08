@@ -39,26 +39,9 @@ switch true do {
         private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
         _ctrlPanel lbsetvalue [_addEmpty, -1];
 
-        // Filling
-        switch (_ctrlIDC) do {
-            case IDC_buttonPrimaryWeapon : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach ((GVAR(virtualItems) select 0) select 0);
-            };
-
-            case IDC_buttonHandgun : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach ((GVAR(virtualItems) select 0) select 2);
-            };
-
-            case IDC_buttonSecondaryWeapon : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach ((GVAR(virtualItems) select 0) select 1);
-            };
-        };
+        {
+            ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
+        } foreach ((GVAR(virtualItems) select 0) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
     };
 
     case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
