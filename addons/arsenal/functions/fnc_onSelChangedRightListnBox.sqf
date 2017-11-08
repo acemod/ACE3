@@ -42,41 +42,10 @@ private _fnc_selectRight = {
     [_display, _control, _curSel, (configFile >> _cfgEntry >> _item)] call FUNC(itemInfo);
 };
 
-switch (GVAR(currentRightPanel)) do {
+if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
 
-    case IDC_buttonOptic;
-    case IDC_buttonItemAcc;
-    case IDC_buttonMuzzle;
-    case IDC_buttonBipod : {
-        switch (GVAR(currentLeftPanel)) do {
-            case IDC_buttonUniform;
-            case IDC_buttonVest;
-            case IDC_buttonBackpack : {
-                [_item, "CfgWeapons"] call _fnc_selectRight;
-            };
-        };
-    };
-
-    case IDC_buttonMag;
-    case IDC_buttonMagALL;
-    case IDC_buttonThrow;
-    case IDC_buttonPut : {
-        switch (GVAR(currentLeftPanel)) do {
-            case IDC_buttonUniform;
-            case IDC_buttonVest;
-            case IDC_buttonBackpack : {
-                [_item, "CfgMagazines"] call _fnc_selectRight;
-            };
-        };
-    };
-
-    case IDC_buttonMisc : {
-        switch (GVAR(currentLeftPanel)) do {
-            case IDC_buttonUniform;
-            case IDC_buttonVest;
-            case IDC_buttonBackpack : {
-                [_item, "CfgWeapons"] call _fnc_selectRight;
-            };
-        };
-    };
+    [
+        _item, 
+        ["CfgWeapons", "CfgMagazines"] select (GVAR(currentRightPanel) in [IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut])
+    ] call _fnc_selectRight;
 };
