@@ -40,19 +40,19 @@ class CfgVehicles {
             class ACE_MainActions { \
                 class GVAR(GetIn) { \
                     displayName = "$STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1"; \
-                    condition = QUOTE(call DFUNC(canShowGetIn)); \
+                    condition = QUOTE(call DFUNC(canShowFreeSeats)); \
                     statement = ""; \
                     exceptions[] = {"isNotSwimming"}; \
-                    insertChildren = QUOTE(call DFUNC(addGetInActions)); \
+                    insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
                 }; \
             }; \
         }; \
         class ACE_SelfActions { \
-            class GVAR(GetIn) { \
-                displayName = "Change seat";/*---------------------------------------------------------------*/ \
-                condition = QUOTE(call DFUNC(canShowGetIn)); \
+            class GVAR(ChangeSeat) { \
+                displayName = CSTRING(ChangeSeat); \
+                condition = QUOTE(call DFUNC(canShowFreeSeats)); \
                 statement = ""; \
-                insertChildren = QUOTE(call DFUNC(addGetInActions)); \
+                insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
             }; \
         };
 

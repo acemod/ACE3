@@ -100,5 +100,9 @@
             <Chinese>優先想進入哪個座位。</Chinese>
             <Polish>Priorytet pozycji w pojeździe</Polish>
         </Key>
+        <Key ID="STR_ACE_QuickMount_ChangeSeat">
+            <English>Change seat</English>
+            <Russian>Пересесть</Russian>
+        </Key>
     </Package>
 </Project>

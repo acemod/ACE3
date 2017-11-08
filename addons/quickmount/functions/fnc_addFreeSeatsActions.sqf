@@ -1,19 +1,19 @@
 /*
  * Author: Dystopian
- * Create actions for nearest vehicles with cargo.
+ * Creates actions for vehicle free seats.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Vehicle <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Child actions <ARRAY>
  *
  * Example:
- * [cursorObject] call ace_quickmount_fnc_addGetInActions
+ * [cursorObject, player] call ace_quickmount_fnc_addFreeSeatsActions
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 scopeName "main";
