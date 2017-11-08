@@ -63,8 +63,8 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
-            <German>Ausgewählte Ausrüstung umbenennen</German>
             <French>Renomme l'équipement sélectionné</French>
+            <German>Ausgewählte Ausrüstung umbenennen</German>
             <Polish>Zmień nazwę wybranego zestawu</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadText">
@@ -75,8 +75,8 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadTooltip">
             <English>Load the selected loadout</English>
-            <German>Ausgewählte Ausrüstung laden</German>
             <French>Charger l'équipement sélectionné</French>
+            <German>Ausgewählte Ausrüstung laden</German>
             <Polish>Wczytaj wybrany zestaw</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteText">
@@ -87,44 +87,44 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteTooltip">
             <English>Delete the selected loadout</English>
-            <German>Ausgewählte Ausrüstung entfernen</German>
             <French>Supprimer l'équipement sélectionné</French>
+            <German>Ausgewählte Ausrüstung entfernen</German>
             <Polish>Skasuj wybrany zestaw</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsText">
             <English>My loadouts</English>
-            <German>Meine Ausrüstungen</German>
             <French>Mes équipements</French>
+            <German>Meine Ausrüstungen</German>
             <Polish>Moje zestawy</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsTooltip">
             <English>Loadouts saved in your profile</English>
-            <German>Ausrüstungen, die in deinem Profil gespeichert sind</German>
             <French>Équipements enregistrés dans votre profil</French>
+            <German>Ausrüstungen, die in deinem Profil gespeichert sind</German>
             <Polish>Zestawy zapisane w Twoim profilu</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsText">
             <English>Default loadouts</English>
-            <German>Standard-Ausrüstungen</German>
             <French>Équipements de base</French>
+            <German>Standard-Ausrüstungen</German>
             <Polish>Domyślne zestawy</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsTooltip">
             <English>Loadouts made available by the mission maker</English>
-            <German>Ausrüstungen, die durch den Missionsersteller zur Verfügung gestellt worden sind</German>
             <French>Équipements faits par l'auteur de la mission</French>
+            <German>Ausrüstungen, die durch den Missionsersteller zur Verfügung gestellt worden sind</German>
             <Polish>Zestawy udostępnione przez twórcę misji</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
             <English>Public loadouts</English>
-            <German>Veröffentlichte Ausrüstungen</German>
             <French>Équipements publics</French>
+            <German>Veröffentlichte Ausrüstungen</German>
             <Polish>Publiczne zestawy</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsTooltip">
             <English>Loadouts shared by you and other players</English>
-            <German>Ausrüstungen, die von dir und anderen Spielern geteilt wurden</German>
             <French>Équipements mis à disposition par vous ou les autres joueurs</French>
+            <German>Ausrüstungen, die von dir und anderen Spielern geteilt wurden</German>
             <Polish>Zestawy udostępnione przez Ciebie i innych graczy</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByWeightText">
@@ -141,8 +141,8 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
-            <German>Ausgewählte Ausrüstung teilen oder nicht mehr teilen</German>
             <French>Partager ou arrêter de partager cet équipement</French>
+            <German>Ausgewählte Ausrüstung teilen oder nicht mehr teilen</German>
             <Polish>Udostępnij lub przestań udostępniać wybrany zestaw</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSharePrivateText">
@@ -154,116 +154,139 @@
         <Key ID="STR_ACE_Arsenal_buttonSharePublicText">
             <English>Public</English>
             <French>Public</French>
+            <German>Öffentlich</German>
             <Polish>Publiczny</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefaultError">
             <English>The default loadouts list is empty!</English>
             <French>La liste d'équipements de base est vide !</French>
+            <German>Die Standard-Ausrüstungen-Liste ist leer!</German>
             <Polish>Lista domyślnych zestawów jest pusta!</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefault">
             <English>Default loadouts list exported to clipboard</English>
             <French>Liste d'équipements de base exportée dans le presse papier</French>
+            <German>Standard-Ausrüstungen-Liste in die Zwischenablage exportiert</German>
             <Polish>Lista domyślnych zestawów została eksportowana do schowka</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportCurrent">
             <English>Current loadout exported to clipboard</English>
             <French>Équipement actuel exporté dans le presse papier</French>
+            <German>Derzeitige Ausrüstung in die Zwischenablage exportiert</German>
             <Polish>Obecny zestaw został eksportowany do schowka</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_importFormatError">
             <English>Wrong format provided</English>
             <French>Mauvais format fourni</French>
+            <German>Falsches Format verwendet</German>
             <Polish>Podano zły format</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedDefault">
             <English>Default loadouts list imported from clipboard</English>
             <French>Liste d'équipements de base importée depuis le presse papier</French>
+            <German>Standard-Ausrüstungen-Liste aus der Zwischenablage importiert</German>
             <Polish>Lista domyślnych zestawów została importowana ze schowka</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedCurrent">
             <English>Loadout imported from clipboard</English>
             <French>Équipement importé depuis le presse papier</French>
+            <German>Ausrüstung aus der Zwischenablage importiert</German>
             <Polish>Zestaw został importowany ze schowka</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutDeleted">
             <English>The following loadout was deleted:</English>
             <French>L'équipement suivant fut supprimé:</French>
+            <German>Folgende Ausrüstung wurde entfernt:</German>
             <Polish>Następujący zestaw został skasowany:</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutUnshared">
             <English>The following loadout is not public anymore:</English>
             <French>L'équipement suivant n'est plus public:</French>
+            <German>Folgende Ausrüstung ist nicht mehr öffentlich:</German>
             <Polish>Następujący zestaw nie jest już publiczny:</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveEmptyNameBox">
             <English>The name field is empty!</English>
             <French>Le champ nom est vide !</French>
+            <German>Das Feld "Name" ist leer!</German>
             <Polish>Pole nazwy jest puste!</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveAuthorError">
             <English>You are the author of this loadout</English>
             <French>Vous êtes l'auteur de cet équipement</French>
+            <German>Du bist der Ersteller dieser Ausrüstung</German>
             <Polish>Jesteś autorem tego zestawu</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveSharedError">
             <English>A loadout of yours with the same name is public</English>
             <French>Un de vos équipements avec le même nom est public</French>
+            <German>Eine deiner Ausrüstungen mit dem gleichen Namen ist öffentlich</German>
             <Polish>Jeden z Twoich zestawów nazwany tak samo jest już publiczny</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutSaved">
             <English>The following loadout was saved:</English>
             <French>L'équipement suivant fut enregistré:</French>
+            <German>Folgende Ausrüstung wurde gespeichert:</German>
             <Polish>Następujący zestaw został zapisany:</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutLoaded">
             <English>The following loadout was loaded:</English>
             <French>L'équipement suivant fut chargé:</French>
+            <German>Folgene Ausrüstung wurde geladen:</German>
             <Polish>Następujący zestaw został wczytany:</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_renameExistError">
             <English>A loadout with the same name already exist!</English>
             <French>Un équipement avec le même nom existe déjà !</French>
+            <German>Eine Ausrüstung mit dem gleichen Namen existiert bereits!</German>
             <Polish>Zestaw z tą nazwą już istnieje!</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutRenamed">
             <English>was renamed to</English>
             <French>fut renommé en</French>
+            <German>wurde umbenannt in</German>
             <Polish>zmienił nazwę na</Polish>
         </Key>
         <Key ID="STR_Ace_Arsenal_invertCameraSetting">
             <English>Invert camera controls</English>
             <French>Inverser les contrôles de la caméra</French>
+            <German>Kamerasteuerung invertieren</German>
             <Polish>Odwróć sterowanie kamerą</Polish>
         </Key>
         <Key ID="STR_Ace_Arsenal_currentMagTabSetting">
             <English>Enable the current magazines tab (EXPERIMENTAL)</English>
             <French>Activer l'onglet chargeurs actuel (EXPÉRIMENTAL)</French>
+            <German>Aktiviert den Reiter "Derzeitige Magazine" (EXPERIMENTELL)</German>
             <Polish>Włącz zakładkę załadowanych magazynków (EKSPERYMENTALNE)</Polish>
         </Key>
         <Key ID="STR_Ace_Arsenal_modIconsSetting">
             <English>Enable mod icons</English>
             <French>Afficher les icônes de mod</French>
+            <German>Aktiviert Mod-Icons</German>
             <Polish>Włącz ikony modów</Polish>
         </Key>
         <Key ID="STR_Ace_Arsenal_fontHeightSetting">
             <English>Font height for the left and right panels</English>
             <French>Hauteur du texte pour les listes de gauche/droite</French>
+            <German>Schrifthöhe für die linke und rechte Liste</German>
             <Polish>Wysokość czcionki prawego i lewego panelu</Polish>
         </Key>
         <Key ID="STR_Ace_Arsenal_allowDefaultLoadoutsSetting">
             <English>Allow the use of the default loadouts tab</English>
             <French>Activer l'onglet équipement de base</French>
+            <German>Erlaubt die Benutzung des Standard-Ausrüstungen-Reiters</German>
             <Polish>Zezwól na użycie zakładki domyślnych zestawów</Polish>
         </Key>
         <Key ID="STR_Ace_Arsenal_allowSharingSetting">
             <English>Allow the use of loadout sharing</English>
             <French>Autoriser le partage d'équipement</French>
+            <German>Erlaubt das Teilen von Ausrüstungen</German>
             <Polish>Zezwól na udostępnianie zestawów</Polish>
         </Key>
         <Key ID="STR_Ace_Arsenal_printToRPTSetting">
             <English>Enable RPT logging for missing / unavailable items</English>
-            <French>inscrire les objets manquants dans le RPT</French>
+            <French>Inscrire les objets manquants dans le RPT</French>
+            <German>Aktiviert die Aufzeichnung fehlender Gegenstände in der RPT</German>
             <Polish>Włącz rejestrowanie brakujących / niedostępnych przedmiotów do pliku RPT</Polish>
         </Key>
     </Package>
