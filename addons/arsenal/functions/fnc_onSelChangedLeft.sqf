@@ -183,8 +183,8 @@ switch (GVAR(currentLeftPanel)) do {
 
             GVAR(center) forceAddUniform _item;
 
-            while {count uniformitems GVAR(center) > 0} do {
-                GVAR(center) removeitemfromuniform (uniformitems GVAR(center) select 0);
+            while {count uniformItems GVAR(center) > 0} do {
+                GVAR(center) removeItemFromUniform (uniformItems GVAR(center) select 0);
             }; //--- Remove default config contents
 
             {GVAR(center) addItemtoUniform _x} foreach (GVAR(currentItems) select 15);

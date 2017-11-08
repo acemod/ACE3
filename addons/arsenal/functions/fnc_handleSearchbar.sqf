@@ -62,7 +62,7 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
         _rightPanelCtrl lnbSetCurSelRow -1;
     };
 
-    [_display, nil, nil, (configFile >> "")] call FUNC(itemInfo);
+    [_display, nil, nil, configNull] call FUNC(itemInfo);
 } else {
 
     if !(GVAR(lastSearchTextLeft) isEqualTo "" || {(_textString find GVAR(lastSearchTextLeft)) == 0}) then {//don't refill if there is no need
@@ -88,5 +88,5 @@ if ((ctrlIDC _control) == IDC_rightSearchbar) then {
         _itemsToGo = _itemsToGo - 1;
     };
     _leftPanelCtrl lbSetCurSel -1;
-    [_display, nil, nil, (configFile >> "")] call FUNC(itemInfo);
+    [_display, nil, nil, configNull] call FUNC(itemInfo);
 };

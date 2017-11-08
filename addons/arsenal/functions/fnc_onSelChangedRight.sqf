@@ -62,76 +62,10 @@ private _fnc_selectItem = {
     };
 };
 
-switch (GVAR(currentRightPanel)) do {
+[
+    _item,
+    18 + ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find GVAR(currentLeftPanel)), 
+    [IDC_buttonMuzzle, IDC_buttonItemAcc, IDC_buttonOptic, IDC_buttonBipod, IDC_buttonCurrentMag] find GVAR(currentRightPanel)
+] call _fnc_selectItem;
 
-    case IDC_buttonOptic : {
-        switch (GVAR(CurrentLeftPanel)) do { 
-            case  IDC_buttonPrimaryWeapon : {
-                [_item, 18, 2] call _fnc_selectItem;
-            };
-            case IDC_buttonSecondaryWeapon : {
-                [_item, 19, 2] call _fnc_selectItem;
-            };
-            case IDC_buttonHandgun : {
-                [_item, 20, 2] call _fnc_selectItem;
-            };
-        };
-    };
-
-    case IDC_buttonItemAcc : {
-        switch (GVAR(CurrentLeftPanel)) do { 
-            case  IDC_buttonPrimaryWeapon : {
-                [_item, 18, 1] call _fnc_selectItem;
-            };
-            case IDC_buttonSecondaryWeapon : {
-                [_item, 19, 1] call _fnc_selectItem;
-            };
-            case IDC_buttonHandgun : {
-                [_item, 20, 1] call _fnc_selectItem;
-            };
-        };
-    };
-
-    case IDC_buttonMuzzle : {
-        switch (GVAR(CurrentLeftPanel)) do { 
-            case  IDC_buttonPrimaryWeapon : {
-                [_item, 18, 0] call _fnc_selectItem;
-            };
-            case IDC_buttonSecondaryWeapon : {
-                [_item, 19, 0] call _fnc_selectItem;
-            };
-            case IDC_buttonHandgun : {
-                [_item, 20, 0] call _fnc_selectItem;
-            };
-        };
-    };
-
-    case IDC_buttonBipod : {
-        switch (GVAR(CurrentLeftPanel)) do { 
-            case  IDC_buttonPrimaryWeapon : {
-                [_item, 18, 3] call _fnc_selectItem;
-            };
-            case IDC_buttonSecondaryWeapon : {
-                [_item, 19, 3] call _fnc_selectItem;
-            };
-            case IDC_buttonHandgun : {
-                [_item, 20, 3] call _fnc_selectItem;
-            };
-        };
-    };
-
-    case IDC_buttonCurrentMag : {
-       switch (GVAR(CurrentLeftPanel)) do {
-            case  IDC_buttonPrimaryWeapon : {
-                [_item, 18, 4] call _fnc_selectItem;
-            };
-            case IDC_buttonSecondaryWeapon : {
-                [_item, 19, 4] call _fnc_selectItem;
-            };
-            case IDC_buttonHandgun : {
-                [_item, 20, 4] call _fnc_selectItem;
-            };
-        };
-    };
-};
 (_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
