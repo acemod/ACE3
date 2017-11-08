@@ -40,7 +40,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         } params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
         // Log missing / nil items to RPT
-        if (GVAR(allowSharedLoadouts) && {isNil "_loadoutCachedInfo"} && {_nullItemsAmount > 0} || {_unavailableItemsAmount > 0}) then {
+        if (GVAR(allowSharedLoadouts) && {isNil "_loadoutCachedInfo"} && {(_nullItemsAmount > 0) || {_unavailableItemsAmount > 0}}) then {
 
             private _printComponent = "ACE_Arsenal - Loadout:";
             private _printNullItemsList = ["Missing items:", str _nullItemsList] joinString " ";
@@ -95,14 +95,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             _contentPanelCtrl lnbSetColumnsPos [0, 0.15, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90];
             private _newRow = _contentPanelCtrl lnbAddRow [_playerName, _loadoutName];
 
-            _contentPanelCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 4], getText (configFile >> "cfgWeapons" >> ((_loadout select 2) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 5], getText (configFile >> "cfgWeapons" >> ((_loadout select 3) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 6], getText (configFile >> "cfgWeapons" >> ((_loadout select 4) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
+            ADD_LOADOUTS_LIST_PICTURES
 
             _contentPanelCtrl lnbSetData [[_newRow, 1], _playerName + _loadoutName];
 
