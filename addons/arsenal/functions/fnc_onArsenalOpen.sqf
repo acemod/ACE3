@@ -151,26 +151,10 @@ for "_index" from 0 to 15 do {
 };
 
 {
-    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
-        (GVAR(virtualItems) select 10) pushBackUnique _x;
-        GVAR(currentItems) set [10, _x];
-    };
-    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemCompass") then {
-        (GVAR(virtualItems) select 11) pushBackUnique _x;
-        GVAR(currentItems) set [11, _x];
-    };
-    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemRadio") then {
-        (GVAR(virtualItems) select 12) pushBackUnique _x;
-        GVAR(currentItems) set [12, _x];
-    };
-    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemWatch") then {
-        (GVAR(virtualItems) select 13) pushBackUnique _x;
-        GVAR(currentItems) set [13, _x];
-    };
-    if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemGPS") then {
-        (GVAR(virtualItems) select 14) pushBackUnique _x;
-        GVAR(currentItems) set [14, _x];
-    };
+    private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
+    private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
+
+    GVAR(currentItems) set [_index, _x];
 } foreach (assignedItems GVAR(center));
 
 GVAR(currentWeaponType) = switch true do {

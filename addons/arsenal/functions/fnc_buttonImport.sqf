@@ -27,6 +27,7 @@ if (GVAR(shiftState) && {is3DEN}) then {
         if (
                 count _x == 2 && 
                 {_x select 0 isEqualType ""} && 
+                {_x select 0 != ""} &&
                 {_x select 1 isEqualType []} && 
                 {count (_x select 1) == 10}
         ) then {
@@ -89,22 +90,12 @@ if (GVAR(shiftState) && {is3DEN}) then {
             };
         };
 
+
         {
-            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemMap") then {
-                GVAR(currentItems) set [10, _x];
-            };
-            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemCompass") then {
-                GVAR(currentItems) set [11, _x];
-            };
-            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemRadio") then {
-                GVAR(currentItems) set [12, _x];
-            };
-            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemWatch") then {
-                GVAR(currentItems) set [13, _x];
-            };
-            if (getText (configFile >> "CfgWeapons" >> _x >> "simulation") == "ItemGPS") then {
-                GVAR(currentItems) set [14, _x];
-            };
+            private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
+            private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
+
+            GVAR(currentItems) set [_index, _x];
         } foreach (assignedItems GVAR(center));
 
         call FUNC(updateUniqueItemsList);
