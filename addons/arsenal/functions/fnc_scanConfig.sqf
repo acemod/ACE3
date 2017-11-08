@@ -40,41 +40,30 @@ private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
     private _configItemInfo = _x >> "ItemInfo";
     private _simulationType = getText (_x >> "simulation");
     private _className = configName _x;
+    private _hasItemInfo = isClass (_configItemInfo);
+    private _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
 
     switch true do {
         /* Weapon acc */
         case (
-                isClass (_configItemInfo) &&
-                {(getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302]} &&
+                _hasItemInfo &&
+                {_itemInfoType in [101, 201, 301, 302]} &&
                 {!(configName _x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}
             ): {
 
-            switch (getNumber (_configItemInfo >> "type")) do {
-                case 201: {
-                    (_cargo select 1) select 0 pushBackUnique _className;
-                };
-                case 301: {
-                    (_cargo select 1) select 1 pushBackUnique _className;
-                };
-                case 101: {
-                    (_cargo select 1) select 2 pushBackUnique _className;
-                };
-                case 302: {
-                    (_cargo select 1) select 3 pushBackUnique _className;
-                };
-            };
-
+            //Convert type to array index
+            (_cargo select 1) select ([201,301,101,302] find _itemInfoType) pushBackUnique _className;
         };
         /* Headgear */
-        case (isClass (_configItemInfo) && {getNumber (_configItemInfo >> "type") == 605}): {
+        case (_hasItemInfo && {_itemInfoType == 605}): {
             (_cargo select 3) pushBackUnique _className;
         };
         /* Uniform */\
-        case (isClass (_configItemInfo) && {getNumber (_configItemInfo >> "type") == 801}): {
+        case (_hasItemInfo && {_itemInfoType == 801}): {
             (_cargo select 4) pushBackUnique _className;
         };
         /* Vest */
-        case (isClass (_configItemInfo) && {getNumber (_configItemInfo >> "type") == 701}): {
+        case (_hasItemInfo && {_itemInfoType == 701}): {
             (_cargo select 5) pushBackUnique _className;
         };
         /* NVgs */
@@ -107,7 +96,7 @@ private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
             (_cargo select 14) pushBackUnique _className;
         };
         /* UAV terminals */
-        case (isClass (_x >> "ItemInfo") && {getNumber (_x >> "ItemInfo" >> "type") == 621}): {
+        case (_hasItemInfo && {_itemInfoType == 621}): {
             (_cargo select 14) pushBackUnique _className;
         };
         /* Weapon, at the bottom to avoid adding binos */
@@ -127,10 +116,10 @@ private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
         };
         /* Misc items */
         case (
-                isClass (_configItemInfo) &&
-                ((getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302] &&
+                _hasItemInfo &&
+                (_itemInfoType in [101, 201, 301, 302] &&
                 {(_className isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
-                {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]} ||
+                {_itemInfoType in [401, 619, 620]} ||
                 {(getText ( _x >> "simulation")) == "ItemMineDetector"}
             ): {
             (_cargo select 17) pushBackUnique _className;
