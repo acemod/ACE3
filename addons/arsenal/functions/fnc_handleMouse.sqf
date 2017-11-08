@@ -34,7 +34,7 @@ if (count _LMB > 0) then {
     private _centerSizeUp = _centerBox select 1 select 2;
     private _centerSize = sqrt ([_centerBox select 0 select 0,_centerBox select 0 select 1] distance [_centerBox select 1 select 0,_centerBox select 1 select 1]);
 
-    _helperPos = [_helperPos,_dX * _centerSize, _dirH - 90] call bis_fnc_relpos;
+    _helperPos = [_helperPos, _dX * _centerSize, _dirH - 90] call bis_fnc_relpos;
     _helperPos = [
         [0,0,((_helperPos select 2) - _dY * _centerSize) max _centerSizeBottom min _centerSizeUp],
         ([0,0,0] distance2D _helperPos) min _centerSize,
@@ -61,7 +61,7 @@ if (count _RMB > 0) then {
         ([0,0,0] getDir _helperPos) - _dX * 360
     ] call bis_fnc_relpos;
 
-    GVAR(cameraPosition) set [1,(_dirH - _dX * 360) % 360];
+    GVAR(cameraPosition) set [1,(_dirH - _dX * 360)];
     GVAR(cameraPosition) set [2,(_dirV - _dY * 100) max -89 min 89];
     GVAR(cameraPosition) set [3,_helperPos];
     GVAR(mouseButtonState) set [1,[_mouseX,_mouseY]];
