@@ -17,6 +17,6 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
 // Arsenal loadouts
 [QGVAR(allowDefaultLoadouts), "CHECKBOX", localize LSTRING(allowDefaultLoadoutsSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
 [QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
-[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(printToRPTSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
+[QGVAR(EnableRPTLog), "CHECKBOX", localize LSTRING(printToRPTSetting), "ACE3 Arsenal", true, false] call CBA_Settings_fnc_init;
 
 ADDON = true;
