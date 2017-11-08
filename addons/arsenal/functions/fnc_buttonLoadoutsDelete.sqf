@@ -41,14 +41,13 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
     private _profileName = profileName; // GVAR(center) could be a remote unit
     private _loadoutVar = _profileName + _loadoutName;
+    private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
 
     GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
-    GVAR(sharedLoadoutsVars) = GVAR(sharedLoadoutsVars) - [_loadoutVar];
+    GVAR(sharedLoadoutsNamespace) setVariable [QGVAR(sharedLoadoutsNamespace), _sharedLoadoutsVars - [_loadoutVar], true];
 
     _contentPanelCtrl lnbDeleteRow _contentPanelCursSel;
     _contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel);
-
-    publicVariable QGVAR(sharedLoadoutsVars);
 
     [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
 

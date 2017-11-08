@@ -34,11 +34,14 @@ private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR
 private _loadout = getUnitLoadout GVAR(center);
 
 private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
+private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
 
-private _similarSharedLoadout = (profileName + _editBoxContent) in GVAR(sharedLoadoutsVars);
+// Make sure the loadout isn't yours (public tab) or being shared (my loadouts tab)
+private _similarSharedLoadout = (profileName + _editBoxContent) in _sharedLoadoutsVars;
 if ((_contentPanelCtrl lnbText [_cursSelRow, 0]) == profileName) exitWith {
     [(findDisplay IDD_ace_arsenal), localize LSTRING(saveAuthorError)] call FUNC(message);
 };
+
 if (_similarSharedLoadout) exitWith {
     [(findDisplay IDD_ace_arsenal), localize LSTRING(saveSharedError)] call FUNC(message);
 };
@@ -187,14 +190,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
             private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
 
-            _contentPanelCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 3], getText (configFile >> "cfgWeapons" >> ((_loadout select 1) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 4], getText (configFile >> "cfgWeapons" >> ((_loadout select 2) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 5], getText (configFile >> "cfgWeapons" >> ((_loadout select 3) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 6], getText (configFile >> "cfgWeapons" >> ((_loadout select 4) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];
-            _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
+            ADD_LOADOUTS_LIST_PICTURES
 
             _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
 

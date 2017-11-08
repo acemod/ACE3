@@ -20,6 +20,7 @@ private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _textEditBoxCtrl= _display displayCtrl IDC_textEditBox;
 _textEditBoxCtrl ctrlSetText "";
 private _sharingEnabled = (GVAR(allowSharedLoadouts) && {isMultiplayer});
+private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
 
 _contentPanelCtrl lnbSetCurSelRow -1;
 lnbClear _contentPanelCtrl;
@@ -71,7 +72,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
         _contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), [_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
 
-        if ((profileName + _loadoutName) in GVAR(sharedLoadoutsVars) && {GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts}) then {
+        if ((profileName + _loadoutName) in _sharedLoadoutsVars && {GVAR(currentLoadoutsTab) == IDC_buttonMyLoadouts}) then {
             _contentPanelCtrl lnbSetPicture [[_newRow, 0], QPATHTOF(data\iconPublic.paa)];
             _contentPanelCtrl lnbSetValue [[_newRow, 0], 1];
         };
@@ -84,10 +85,12 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         if ((allPlayers apply {name _x}) find _playerName == -1) then {
 
             private _loadoutVar = _playerName + _loadoutName;
-            GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
-            GVAR(sharedLoadoutsVars) = GVAR(sharedLoadoutsVars) - [_loadoutVar];
-            [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
 
+            GVAR(sharedLoadoutsNamespace) setVariable [_loadoutVar, nil, true];
+            _sharedLoadoutsVars = _sharedLoadoutsVars - [_loadoutVar];
+            GVAR(sharedLoadoutsNamespace) setVariable [QGVAR(sharedLoadoutsNamespace), _sharedLoadoutsVars, true];
+
+            [QGVAR(loadoutUnshared), [_contentPanelCtrl, profileName, _loadoutName]] call CBA_fnc_remoteEvent;
         } else {
 
             ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];
@@ -109,9 +112,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
                 };
             };
         };
-    } foreach (GVAR(sharedLoadoutsVars) apply {GVAR(sharedLoadoutsNamespace) getVariable _x});
-
-    publicVariable QGVAR(sharedLoadoutsVars);
+    } foreach (_sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x});
 };
 
 _contentPanelCtrl lnbSort [1, false];
