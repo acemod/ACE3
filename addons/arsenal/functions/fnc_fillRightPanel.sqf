@@ -297,15 +297,15 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
     private _container = switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonUniform : {
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadUniform GVAR(center));
-            GVAR(currentItems) select 15
+            uniformItems GVAR(center)
         };
         case IDC_buttonVest : {
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadVest GVAR(center));
-            GVAR(currentItems) select 16
+            vestItems GVAR(center)
         };
         case IDC_buttonBackpack : {
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadBackpack GVAR(center));
-            GVAR(currentItems) select 17
+            backpackItems GVAR(center)
         };
     };
 
