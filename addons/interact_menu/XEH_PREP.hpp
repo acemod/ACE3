@@ -1,6 +1,7 @@
 
 PREP(addActionToClass);
 PREP(addActionToObject);
+PREP(addActionToZeus);
 PREP(addMainAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);

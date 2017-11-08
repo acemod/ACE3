@@ -176,7 +176,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (!underwater _caller) then {
+    if !(_caller call EFUNC(common,isSwimming)) then {
         // Weapon on back also does not work underwater
         if (isWeaponDeployed _caller) then {
             TRACE_1("Weapon Deployed, breaking out first",(stance _caller));

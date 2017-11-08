@@ -15,10 +15,9 @@
  */
 #include "script_component.hpp"
 
-private _target = 0 max _this min 3;
+GVAR(currentTarget) = 0 max _this min 3;
 
-[] call FUNC(parse_input);
+GVAR(targetRangeDirtyFlag) = true;
 
-GVAR(currentTarget) = _target;
 call FUNC(update_target_selection);
 call FUNC(calculate_target_solution);

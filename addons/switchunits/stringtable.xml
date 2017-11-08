@@ -253,8 +253,8 @@
             <Italian>La zona sicura attorno ai giocatori di un team diverso. Default: 200</Italian>
             <Japanese>別のチームへのプレイヤーの周囲にある安全地帯の範囲。標準: 200</Japanese>
             <Korean>다른 진영으로 부터의 플레이어 안전 지대. 기본설정: 200</Korean>
-            <Chinesesimp>安全区的范围. 预设值：200</Chinesesimp>
-            <Chinese>安全區的範圍. 預設值：200</Chinese>
+            <Chinesesimp>安全区的范围。预设值：200</Chinesesimp>
+            <Chinese>安全區的範圍。預設值：200</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English>Module allows you to switch side during the game.</English>

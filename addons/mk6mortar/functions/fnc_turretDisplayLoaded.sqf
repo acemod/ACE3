@@ -24,8 +24,6 @@ TRACE_2("params",_display,_rscType);
 if (_rscType != "Mk6Mortar") exitWith {};
 if (isNull _display) exitWith {};
 
-private ["_fnc_hideControl", "_xPos", "_yPos", "_wPos", "_hPos"];
-
 #define CTRL_CA_OPTICSPITCH (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSPITCH")
 #define CTRL_CA_OPTICSZOOM (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSZOOM")
 #define CTRL_CA_SOLUTION_TEXT (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_SOLUTION_TEXT")
@@ -40,11 +38,10 @@ private ["_fnc_hideControl", "_xPos", "_yPos", "_wPos", "_hPos"];
 #define CTRL_CA_ELEV (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV")
 #define CTRL_CA_ELEV_NEED (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV_NEED")
 
-_fnc_hideControl = {
-    private ["_idc", "_pos"];
-    PARAMS_2(_path,_hideCtrl);
-    _idc = getNumber (_path >> "IDC");
-    _pos = [];
+private _fnc_hideControl = {
+    params ["_path", "_hideCtrl"];
+    private _idc = getNumber (_path >> "IDC");
+    private _pos = [];
     if (_hideCtrl) then {
         _pos = [-9,-9,0,0];
     } else {

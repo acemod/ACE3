@@ -16,4 +16,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define ATRAGMX_PROFILE_NAMESPACE_VERSION 2.0
+#define ATRAGMX_PROFILE_NAMESPACE_VERSION 2.2

@@ -473,6 +473,81 @@ class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
     };
 };
 
+class GVAR(RscGarrison): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGarrison)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGarrison)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class Garrison: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_garrison));
+                    idc = 73060;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(8.5);
+                    class controls {
+                        class radius: GVAR(AttributeRadius) {};
+                        class TopDownFillingTitle: Title {
+                            idc = -1;
+                            text = CSTRING(ModuleGarrison_TopDownFillingText);
+                            toolTip = CSTRING(ModuleGarrison_TopDownFillingTooltip);
+                            x = 0;
+                            y = H_PART(1.2);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class TopDownFilling: RscCheckBox {
+                            idc = 73061;
+                            x = W_PART(10.1);
+                            y = H_PART(1.2);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                        };
+                        class TeleportTitle: Title {
+                            idc = -1;
+                            text = CSTRING(ModuleGarrison_TeleportText);
+                            x = 0;
+                            y = H_PART(2.3);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class Teleport: RscCheckBox {
+                            idc = 73062;
+                            x = W_PART(10.1);
+                            y = H_PART(2.3);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                        };
+                        class FillingModeTitle: RscText {
+                            idc = -1;
+                            text = CSTRING(ModuleGarrison_FillingModeText);
+                            x = 0;
+                            y = H_PART(3.5);
+                            w = W_PART(26);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class FillingMode: RscListbox {
+                            idc = 73063;
+                            x = 0;
+                            y = H_PART(4.5);
+                            w = W_PART(26);
+                            h = H_PART(4);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscToggleNvg): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscToggleNvg)))] call FUNC(zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscToggleNvg)))] call FUNC(zeusAttributes));

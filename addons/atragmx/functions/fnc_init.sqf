@@ -51,7 +51,7 @@ GVAR(atmosphereModeTBH) = true;
 GVAR(altitude) = 0;
 GVAR(temperature) = 15;
 GVAR(barometricPressure) = 1013.25;
-GVAR(relativeHumidity) = 0.5;
+GVAR(relativeHumidity) = 0.0;
 
 GVAR(latitude) = [38, 38, 38, 38];
 GVAR(directionOfFire) = [0, 0, 0, 0];
@@ -83,6 +83,8 @@ GVAR(truingDropC1) = 0;
 GVAR(truingDropMuzzleVelocity) = 0;
 
 GVAR(targetSolutionInput) = nil;
+
+GVAR(targetRangeDirtyFlag) = false;
 
 GVAR(showMainPage) = true;
 GVAR(showAddNewGun) = false;

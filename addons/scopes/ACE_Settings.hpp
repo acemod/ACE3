@@ -50,7 +50,7 @@ class ACE_Settings {
     };
     class GVAR(zeroReferenceHumidity) {
         typeName = "SCALAR";
-        value = 0.5;
+        value = 0.0;
         displayName = CSTRING(zeroReferenceHumidity_displayName);
         description = CSTRING(zeroReferenceHumidity_description);
     };
@@ -59,5 +59,13 @@ class ACE_Settings {
         value = 0;
         displayName = CSTRING(deduceBarometricPressureFromTerrainAltitude_displayName);
         description = CSTRING(deduceBarometricPressureFromTerrainAltitude_description);
+    };
+    
+    class GVAR(useLegacyUI) {
+        typeName = "BOOL";
+        value = 0;
+        isClientSettable = 1;
+        displayName = CSTRING(useLegacyUI_displayName);
+        description = CSTRING(useLegacyUI_description);
     };
 };

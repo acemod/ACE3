@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Chemlights">
         <Key ID="STR_ACE_Chemlights_Action_Chemlights">
@@ -333,8 +333,8 @@
             <Korean>초록빛 조명</Korean>
             <French>Lampe d'orientation verte.</French>
             <Italian>Luce da lettura Verde.</Italian>
-            <Chinese>綠色閱讀燈.</Chinese>
-            <Chinesesimp>绿色阅读灯.</Chinesesimp>
+            <Chinese>綠色閱讀燈。</Chinese>
+            <Chinesesimp>绿色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DisplayName">
             <English>Chemlight Shield (Red)</English>
@@ -355,8 +355,8 @@
             <Korean>빨간색 조명</Korean>
             <French>Lampe d'orientation rouge.</French>
             <Italian>Luce da lettura Rossa.</Italian>
-            <Chinese>紅色閱讀燈.</Chinese>
-            <Chinesesimp>红色阅读灯.</Chinesesimp>
+            <Chinese>紅色閱讀燈。</Chinese>
+            <Chinesesimp>红色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DisplayName">
             <English>Chemlight Shield (Blue)</English>
@@ -377,8 +377,8 @@
             <Korean>파란색 조명</Korean>
             <French>Lampe d'orientation bleue.</French>
             <Italian>Luce da lettura Blu.</Italian>
-            <Chinese>藍色閱讀燈.</Chinese>
-            <Chinesesimp>蓝色阅读灯.</Chinesesimp>
+            <Chinese>藍色閱讀燈。</Chinese>
+            <Chinesesimp>蓝色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DisplayName">
             <English>Chemlight Shield (Yellow)</English>
@@ -399,8 +399,8 @@
             <Korean>노란색 조명</Korean>
             <French>Lampe d'orientation jaune.</French>
             <Italian>Luce da lettura Gialla.</Italian>
-            <Chinese>黃色閱讀燈.</Chinese>
-            <Chinesesimp>黄色阅读灯.</Chinesesimp>
+            <Chinese>黃色閱讀燈。</Chinese>
+            <Chinesesimp>黄色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DisplayName">
             <English>Chemlight Shield (Orange)</English>
@@ -421,8 +421,8 @@
             <Korean>주황색 조명</Korean>
             <French>Lampe d'orientation orange.</French>
             <Italian>Luce da lettura Arancione.</Italian>
-            <Chinese>橘色閱讀燈.</Chinese>
-            <Chinesesimp>橘色阅读灯.</Chinesesimp>
+            <Chinese>橘色閱讀燈。</Chinese>
+            <Chinesesimp>橘色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DisplayName">
             <English>Chemlight Shield (White)</English>
@@ -443,8 +443,8 @@
             <Korean>주황색 조명</Korean>
             <French>Lampe d'orientation blanche.</French>
             <Italian>Luce da lettura Bianca.</Italian>
-            <Chinese>白色閱讀燈.</Chinese>
-            <Chinesesimp>白色阅读灯.</Chinesesimp>
+            <Chinese>白色閱讀燈。</Chinese>
+            <Chinesesimp>白色阅读灯。</Chinesesimp>
         </Key>
     </Package>
 </Project>

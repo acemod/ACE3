@@ -120,6 +120,13 @@ class CfgVehicles {
         function = QFUNC(moduleCaptive);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa);
     };
+    class GVAR(moduleConfigurePylons): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = ECSTRING(pylons,ConfigurePylons);
+        function = QFUNC(moduleConfigurePylons);
+        icon = "a3\data_f_jets\logos\jets_logo_small_ca.paa";
+    };
     class GVAR(moduleDefendArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
@@ -220,6 +227,20 @@ class CfgVehicles {
         displayName = CSTRING(ModuleUnconscious_DisplayName);
         function = QFUNC(moduleUnconscious);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa);
+    };
+    class GVAR(moduleGarrison): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleGarrison_DisplayName);
+        curatorInfoType = QGVAR(RscGarrison);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Garrison_ca.paa);
+    };
+    class GVAR(moduleUnGarrison): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleUnGarrison_DisplayName);
+        function = QFUNC(moduleUnGarrison);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_UnGarrison_ca.paa);
     };
     class GVAR(moduleToggleNvg): GVAR(moduleBase) {
         curatorCanAttach = 1;

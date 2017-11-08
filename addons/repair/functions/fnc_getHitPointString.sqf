@@ -21,12 +21,10 @@
 
 params ["_hitPoint", "_textLocalized", "_textDefault", ["_trackArray", []]];
 
-private ["_track", "_trackNames", "_trackStrings", "_trackAmount", "_text", "_toFind", "_trackIndex", "_combinedString"];
-
-_track = if (count _trackArray > 0) then {true} else {false};
-_trackNames = [];
-_trackStrings = [];
-_trackAmount = [];
+private _track = (count _trackArray > 0);
+private _trackNames = [];
+private _trackStrings = [];
+private _trackAmount = [];
 
 if (_track) then {
     _trackNames = _trackArray select 0;
@@ -35,10 +33,10 @@ if (_track) then {
 };
 
 // Prepare first part of the string from stringtable
-_text = LSTRING(Hit);
+private _text = LSTRING(Hit);
 
 // Remove "Hit" from hitpoint name if one exists
-_toFind = if ((toLower _hitPoint) find "hit" == 0) then {
+private _toFind = if ((toLower _hitPoint) find "hit" == 0) then {
     [_hitPoint, 3] call CBA_fnc_substr
 } else {
     _hitPoint
@@ -48,7 +46,7 @@ _toFind = if ((toLower _hitPoint) find "hit" == 0) then {
 for "_i" from 0 to (count _hitPoint) do {
     if (_track) then {
         // Loop through already added hitpoints and save index
-        _trackIndex = -1;
+        private _trackIndex = -1;
         {
             if (_x == _toFind) exitWith {
                 _trackIndex = _forEachIndex;
@@ -65,7 +63,7 @@ for "_i" from 0 to (count _hitPoint) do {
 
 
     // Localize if localization found
-    _combinedString = _text + _toFind;
+    private _combinedString = _text + _toFind;
     if (isLocalized _combinedString) exitWith {
         _text = format [_textLocalized, localize _combinedString];
         TRACE_1("Hitpoint localized",_toFind);

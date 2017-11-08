@@ -4,6 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
+            QGVAR(moduleConfigurePylons),
             QGVAR(moduleDefendArea),
             QGVAR(moduleEditableObjects),
             QGVAR(moduleGlobalSetSkill),
@@ -12,6 +13,8 @@ class CfgPatches {
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
+            QGVAR(moduleGarrison),
+            QGVAR(moduleUnGarrison),
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleToggleNvg),
             QGVAR(moduleToggleFlashlight),
@@ -23,7 +26,7 @@ class CfgPatches {
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_common", "ace_ai"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"SilentSpike"};
         url = ECSTRING(main,URL);
@@ -61,6 +64,11 @@ class CfgPatches {
             QGVAR(moduleAddOrRemoveFRIES)
         };
     };
+    class GVAR(pylons): ADDON {
+        units[] = {
+            QGVAR(moduleConfigurePylons)
+        };
+    };
 };
 
 class ACE_Curator {
@@ -69,6 +77,7 @@ class ACE_Curator {
     GVAR(cargo) = "ace_cargo";
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
     GVAR(fastroping) = "ace_fastroping";
+    GVAR(pylons) = "ace_pylons";
 };
 
 #include "CfgFactionClasses.hpp"
