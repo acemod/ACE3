@@ -212,14 +212,14 @@ class GVAR(display) {
         class infoBox: RscControlsGroupNoScrollbars {
             idc = IDC_infoBox;
             fade = 1;
-            x = QUOTE(safezoneX + safezoneW - 105 * GRID_W);
+            x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 14 * GRID_H);
             w = QUOTE(92 * GRID_W);
             h = QUOTE(12 * GRID_H);
             class controls {
                 class infoBackground: ctrlStaticBackground {
                     idc = IDC_infoBackground;
-                    x = QUOTE(12 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(0);
                     w = QUOTE(80 * GRID_W);
                     h = QUOTE(12 * GRID_H);
@@ -227,7 +227,7 @@ class GVAR(display) {
                 };
                 class infoName: RscText {
                     idc = IDC_infoName;
-                    x = QUOTE(12 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(0);
                     w = QUOTE(80 * GRID_W);
                     h = QUOTE(7 * GRID_H);
@@ -236,7 +236,7 @@ class GVAR(display) {
                 class infoAuthor: RscText {
                     idc = IDC_infoAuthor;
                     colorText[] = {1,1,1,0.5};
-                    x = QUOTE(12 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(6 * GRID_H);
                     w = QUOTE(80 * GRID_W);
                     h = QUOTE(5 * GRID_H);
@@ -245,7 +245,7 @@ class GVAR(display) {
                 class DLCBackground: ctrlStaticBackground {
                     idc = IDC_DLCBackground;
                     fade = 1;
-                    x = QUOTE(0);
+                    x = QUOTE(80 * GRID_W);
                     y = QUOTE(0);
                     w = QUOTE(12 * GRID_W);
                     h = QUOTE(12 * GRID_H);
@@ -257,7 +257,7 @@ class GVAR(display) {
                     color[] = {1,1,1,1};
                     colorActive[] = {1,1,1,1};
                     text="#(argb,8,8,3)color(1,1,1,1)";
-                    x = QUOTE(0);
+                    x = QUOTE(80 * GRID_W);
                     y = QUOTE(0);
                     w = QUOTE(12 * GRID_W);
                     h = QUOTE(12 * GRID_H);
