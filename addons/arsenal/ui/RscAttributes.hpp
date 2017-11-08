@@ -826,6 +826,7 @@ class GVAR(loadoutsDisplay) {
             x = QUOTE((safezoneW * 0.5) + safezoneX + (50 * GRID_W));
             text= CSTRING(buttonDeleteText);
             tooltip= CSTRING(buttonDeleteTooltip);
+            colorBackgroundActive[] = {0.5,0,0,1};
             onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
         };
         class buttonClose: buttonSave {
@@ -842,9 +843,9 @@ class GVAR(loadoutsDisplay) {
         };
         class buttonBar: ctrlControlsGroupNoScrollbars {
             idc = -1;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (80 * GRID_W));
+            x = QUOTE((safezoneW * 0.5) + safezoneX - (80.5 * GRID_W));
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
-            w = QUOTE(160 * GRID_W);
+            w = QUOTE(161 * GRID_W);
             h = QUOTE(7 * GRID_H);
             class controls {
                 class buttonMyLoadoutsBackground: ctrlStaticBackground {
@@ -869,21 +870,21 @@ class GVAR(loadoutsDisplay) {
                 };
                 class buttonDefaultLoadoutsBackground: buttonMyLoadoutsBackground {
                     idc = IDC_buttonDefaultLoadoutsBackground;
-                    x = QUOTE(54 * GRID_W);
+                    x = QUOTE(54.5 * GRID_W);
                 };
                 class buttonDefaultLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonDefaultLoadouts;
-                    x = QUOTE(54 * GRID_W);
+                    x = QUOTE(54.5 * GRID_W);
                     text= CSTRING(tabDefaultLoadoutsText);
                     tooltip= CSTRING(tabDefaultLoadoutsTooltip);
                 };
                 class buttonSharedLoadoutsBackground: buttonMyLoadoutsBackground {
                     idc = IDC_buttonSharedLoadoutsBackground;
-                    x = QUOTE(108 * GRID_W);
+                    x = QUOTE(109 * GRID_W);
                 };
                 class buttonSharedLoadouts: buttonMyLoadouts {
                     idc = IDC_buttonSharedLoadouts;
-                    x = QUOTE(108 * GRID_W);
+                    x = QUOTE(109 * GRID_W);
                     text= CSTRING(tabSharedLoadoutsText);
                     tooltip= CSTRING(tabSharedLoadoutsTooltip);
                 };
