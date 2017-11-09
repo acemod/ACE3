@@ -62,7 +62,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                         private _weapon = (_loadout select _dataIndex) select 0;
                         if (_weapon != "") then {
 
-                            private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                            private _baseWeapon = _weapon call CBA_fnc_getNonPresetClass;
                              if (_weapon != _baseWeapon) then {
                                 (_loadout select _dataIndex) set [0, _baseWeapon];
                             };
@@ -84,7 +84,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                                     private _weapon = (_x select 0) select 0;
                                     if (_weapon != "") then {
 
-                                        private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                        private _baseWeapon = _weapon call CBA_fnc_getNonPresetClass;
                                         if (_weapon != _baseWeapon) then {
                                             (_x select 0)set [0, _baseWeapon];
                                         };
@@ -143,7 +143,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                             private _weapon = (_loadout select _dataIndex) select 0;
                             if (_weapon != "") then {
 
-                                private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                private _baseWeapon = _weapon call CBA_fnc_getNonPresetClass;
                                 if (_weapon != _baseWeapon) then {
                                     (_loadout select _dataIndex) set [0, _baseWeapon];
                                 };
@@ -165,7 +165,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                                         private _weapon = (_x select 0) select 0;
                                         if (_weapon != "") then {
 
-                                            private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                            private _baseWeapon = _weapon call CBA_fnc_getNonPresetClass;
                                             if (_weapon != _baseWeapon) then {
                                                 (_x select 0)set [0, _baseWeapon];
                                             };
