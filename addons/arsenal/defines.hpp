@@ -232,9 +232,9 @@
 #define LIST_DEFAULTS\
     [\
     [\
-        (primaryweapon GVAR(center) call CBA_fnc_getNonPresetClass),\
-        (secondaryweapon GVAR(center) call CBA_fnc_getNonPresetClass),\
-        (handgunweapon GVAR(center) call CBA_fnc_getNonPresetClass)\
+        (primaryweapon GVAR(center) call bis_fnc_baseWeapon),\
+        (secondaryweapon GVAR(center) call bis_fnc_baseWeapon),\
+        (handgunweapon GVAR(center) call bis_fnc_baseWeapon)\
     ],\
     [\
     [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 2)] select {!(_x isEqualTo "")},\

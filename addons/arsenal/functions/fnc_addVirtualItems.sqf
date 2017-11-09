@@ -151,13 +151,13 @@ if (_items isEqualType true && {_items}) then {
                             {getNumber (_configCfgWeapons >> _x >> 'type') != 4096}): {
                             switch (getNumber (_configCfgWeapons >> _x >> "type")) do {
                                 case 1: {
-                                    (_cargo select 0) select 0 pushBackUnique  ([_x] call CBA_fnc_getNonPresetClass);
+                                    (_cargo select 0) select 0 pushBackUnique  ([_x] call bis_fnc_baseWeapon);
                                 };
                                 case 2: {
-                                    (_cargo select 0) select 2 pushBackUnique ([_x] call CBA_fnc_getNonPresetClass);
+                                    (_cargo select 0) select 2 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
                                 case 4: {
-                                    (_cargo select 0) select 1 pushBackUnique ([_x] call CBA_fnc_getNonPresetClass);
+                                    (_cargo select 0) select 1 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
                             };
                         };

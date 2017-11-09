@@ -31,8 +31,7 @@ private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display di
 switch (GVAR(currentLeftPanel)) do {
 
     case IDC_buttonPrimaryWeapon : {
-        private _baseWeapon = (GVAR(currentItems) select 0) call CBA_fnc_getNonPresetClass;
-        TRACE_2("weapon classes", (GVAR(currentItems) select 0), _baseWeapon);
+        private _baseWeapon = ((GVAR(currentItems) select 0) call bis_fnc_baseWeapon);
 
         if ((GVAR(currentItems) select 0) != _item && {_baseWeapon != _item}) then {
             {
@@ -75,7 +74,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
 
     case IDC_buttonHandgun : {
-        private _baseWeapon = (GVAR(currentItems) select 2) call CBA_fnc_getNonPresetClass;
+        private _baseWeapon = ((GVAR(currentItems) select 2) call bis_fnc_baseWeapon);
 
         if ((GVAR(currentItems) select 2) != _item && {_baseWeapon != _item}) then {
             {
@@ -118,7 +117,7 @@ switch (GVAR(currentLeftPanel)) do {
     };
 
     case IDC_buttonSecondaryWeapon : {
-        private _baseWeapon = (GVAR(currentItems) select 1) call CBA_fnc_getNonPresetClass;
+        private _baseWeapon = ((GVAR(currentItems) select 1) call bis_fnc_baseWeapon);
 
         if ((GVAR(currentItems) select 1) != _item && {_baseWeapon != _item}) then {
             {
