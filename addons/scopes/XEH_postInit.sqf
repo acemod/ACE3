@@ -14,6 +14,7 @@ GVAR(Guns) = ["", "", ""];
 GVAR(canAdjustElevation) = [false, false, false];
 GVAR(canAdjustWindage) = [false, false, false];
 GVAR(boreHeight) = [0, 0, 0];
+GVAR(baseAngle) = [0, 0, 0];
 GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
 ["ace_settingsInitialized", {

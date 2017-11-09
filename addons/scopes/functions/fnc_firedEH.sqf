@@ -31,15 +31,20 @@ TRACE_1("Adjusting With",_zeroing);
 _zeroing = _zeroing vectorMultiply MRAD_TO_DEG(1);
 
 if (GVAR(correctZeroing)) then {
+    // Override all previously applied corrections
+    private _muzzleVelocity = vectorMagnitude (velocity _projectile);
+    private _railDirection = _unit weaponDirection _weapon;
+    _projectile setVelocity (_railDirection vectorMultiply _muzzleVelocity);
+    // Calculate correct zero angle
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
     private _boreHeight = GVAR(boreHeight) select _weaponIndex;
-    private _oldZeroRange = currentZeroing _unit;
-    private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
-    private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
+    private _baseAngle = GVAR(baseAngle) select _weaponIndex;
+    private _zeroRange = [_unit] call FUNC(getCurrentZeroRange);
+    private _zeroAngle = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6), _zeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
     if (isNil "_zeroCorrection") then {
-         _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
+         _zeroAngle = [_zeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngle);
     };
-    _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection];
+    _zeroing = _zeroing vectorAdd [0, 0, _zeroAngle - _baseAngle];
 };
 
 if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
