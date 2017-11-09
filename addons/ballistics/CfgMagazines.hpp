@@ -69,6 +69,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(30Rnd_556x45_Stanag_M995_AP_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_556x45_Stanag_M995_AP_mag_Description);
         initSpeed = 865;
+        magazineGroup[] = {"asdg_jam_mg_556x45_stanag"};
     };
     class ACE_30Rnd_556x45_Stanag_Mk262_mag: 30Rnd_556x45_Stanag {
         author = ECSTRING(common,ACETeam);
@@ -77,6 +78,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(30Rnd_556x45_Stanag_Mk262_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_556x45_Stanag_Mk262_mag_Description);
         initSpeed = 832;
+        magazineGroup[] = {"asdg_jam_mg_556x45_stanag"};
     };
     class ACE_30Rnd_556x45_Stanag_Mk318_mag: 30Rnd_556x45_Stanag {
         author = ECSTRING(common,ACETeam);
@@ -85,6 +87,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(30Rnd_556x45_Stanag_Mk318_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_556x45_Stanag_Mk318_mag_Description);
         initSpeed = 922;
+        magazineGroup[] = {"asdg_jam_mg_556x45_stanag"};
     };
     class 30Rnd_556x45_Stanag_Tracer_Red: 30Rnd_556x45_Stanag {
     };
@@ -95,6 +98,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(30Rnd_556x45_mag_Tracer_DimNameShort);
         descriptionShort = CSTRING(30Rnd_556x45_mag_Tracer_DimDescription);
         picture = "\A3\weapons_f\data\ui\m_20stanag_red_ca.paa";
+        magazineGroup[] = {"asdg_jam_mg_556x45_stanag"};
     };
 
     class 200Rnd_556x45_Box_F: CA_Magazine {
@@ -124,6 +128,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x51_mag_TracerNameShort);
         descriptionShort = CSTRING(20Rnd_762x51_mag_TracerDescription);
         tracersEvery = 1;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
 
     class ACE_20Rnd_762x51_Mag_Tracer_Dim: ACE_20Rnd_762x51_Mag_Tracer {
@@ -132,6 +137,7 @@ class CfgMagazines {
         displayName = CSTRING(20Rnd_762x51_mag_Tracer_DimName);
         displayNameShort = CSTRING(20Rnd_762x51_mag_Tracer_DimNameShort);
         descriptionShort = CSTRING(20Rnd_762x51_mag_Tracer_DimDescription);
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
 
     class ACE_20Rnd_762x51_Mag_SD: 20Rnd_762x51_Mag {
@@ -141,6 +147,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x51_mag_SDNameShort);
         descriptionShort = CSTRING(20Rnd_762x51_mag_SDDescription);
         initSpeed = 325;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
 
     class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_762x51_Mag {
@@ -151,6 +158,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(10Rnd_762x51_M118LR_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_762x51_M118LR_Mag_Description);
         initSpeed = 780;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_10Rnd_762x51_Mk316_Mod_0_Mag: 10Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -160,6 +168,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(10Rnd_762x51_Mk316_Mod_0_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_762x51_Mk316_Mod_0_Mag_Description);
         initSpeed = 790;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_10Rnd_762x51_Mk319_Mod_0_Mag: 10Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -169,6 +178,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(10Rnd_762x51_Mk319_Mod_0_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_762x51_Mk319_Mod_0_Mag_Description);
         initSpeed = 900;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_10Rnd_762x51_M993_AP_Mag: 10Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -178,6 +188,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(10Rnd_762x51_M993_AP_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_762x51_M993_AP_Mag_Description);
         initSpeed = 920;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_20Rnd_762x51_M118LR_Mag: 20Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -186,6 +197,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x51_M118LR_Mag_NameShort);
         descriptionShort = CSTRING(20Rnd_762x51_M118LR_Mag_Description);
         initSpeed = 780;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_20Rnd_762x51_Mk316_Mod_0_Mag: 20Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -195,6 +207,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x51_Mk316_Mod_0_Mag_NameShort);
         descriptionShort = CSTRING(20Rnd_762x51_Mk316_Mod_0_Mag_Description);
         initSpeed = 790;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_20Rnd_762x51_Mk319_Mod_0_Mag: 20Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -203,6 +216,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x51_Mk319_Mod_0_Mag_NameShort);
         descriptionShort = CSTRING(20Rnd_762x51_Mk319_Mod_0_Mag_Description);
         initSpeed = 900;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_20Rnd_762x51_M993_AP_Mag: 20Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -212,6 +226,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x51_M993_AP_Mag_NameShort);
         descriptionShort = CSTRING(20Rnd_762x51_M993_AP_Mag_Description);
         initSpeed = 920;
+        magazineGroup[] = {"asdg_jam_mg_762x51"};
     };
     class ACE_20Rnd_762x67_Mk248_Mod_0_Mag: 20Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -220,6 +235,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_NameShort);
         descriptionShort = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_Description);
         initSpeed = 900;
+        magazineGroup[] = {"asdg_jam_mg_762x67"};
     };
     class ACE_20Rnd_762x67_Mk248_Mod_1_Mag: 20Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -228,6 +244,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_NameShort);
         descriptionShort = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_Description);
         initSpeed = 880;
+        magazineGroup[] = {"asdg_jam_mg_762x67"};
     };
     class ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag: 20Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
@@ -236,6 +253,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort);
         descriptionShort = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description);
         initSpeed = 832;
+        magazineGroup[] = {"asdg_jam_mg_762x67"};
     };
     class ACE_30Rnd_65x47_Scenar_mag: 30Rnd_65x39_caseless_mag {
         author = ECSTRING(common,ACETeam);
@@ -277,6 +295,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(10Rnd_338_300gr_HPBT_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_338_300gr_HPBT_Mag_Description);
         initSpeed = 800;
+        magazineGroup[] = {"asdg_jam_mg_338"};
     };
     class ACE_10Rnd_338_API526_Mag: 10Rnd_338_Mag {
         author = ECSTRING(common,ACETeam);
@@ -285,6 +304,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(10Rnd_338_API526_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_338_API526_Mag_Description);
         initSpeed = 880;
+        magazineGroup[] = {"asdg_jam_mg_338"};
     };
     
     class 7Rnd_408_Mag: CA_Magazine {
@@ -310,6 +330,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(5Rnd_127x99_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_Mag_Description);
         initSpeed = 900;
+        magazineGroup[] = {"asdg_jam_mg_127x99"};
     };
     class ACE_5Rnd_127x99_API_Mag: 5Rnd_127x108_Mag {
         author = ECSTRING(common,ACETeam);
@@ -318,6 +339,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(5Rnd_127x99_API_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_API_Mag_Description);
         initSpeed = 900;
+        magazineGroup[] = {"asdg_jam_mg_127x99"};
     };
     class ACE_5Rnd_127x99_AMAX_Mag: 5Rnd_127x108_Mag {
         author = ECSTRING(common,ACETeam);
@@ -326,6 +348,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(5Rnd_127x99_AMAX_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_AMAX_Mag_Description);
         initSpeed = 860;
+        magazineGroup[] = {"asdg_jam_mg_127x99"};
     };
 
 
