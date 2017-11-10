@@ -55,7 +55,7 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
 
 
     private _playerDir = (ACE_player call CBA_fnc_headDir) select 0;
-    private _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+    private _windDir = (wind select 0) atan2 (wind select 1);
     _windDir = 30 * (round(((_windDir - _playerDir + 360) % 360) / 30));
 
     // Color Codes from https://en.wikipedia.org/wiki/Beaufort_scale#Modern_scale
