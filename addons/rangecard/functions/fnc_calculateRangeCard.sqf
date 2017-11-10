@@ -46,7 +46,7 @@ private _bulletPos = [0, 0, 0];
 private _bulletVelocity = [0, 0, 0];
 private _bulletAccel = [0, 0, 0];
 private _bulletSpeed = 0;
-private _gravity = [0, sin(_scopeBaseAngle) * -9.80665, cos(_scopeBaseAngle) * -9.80665];
+private _gravity = [0, sin(_scopeBaseAngle) * -GRAVITY, cos(_scopeBaseAngle) * -GRAVITY];
 private _deltaT = 1 / _simSteps;
 private _speedOfSound = 0;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
