@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -281,6 +281,7 @@
             <Chinese>貨物空間</Chinese>
             <Chinesesimp>货物空间</Chinesesimp>
             <Polish>Przestrzeń ładunkowa</Polish>
+            <Korean>화물 공간</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
@@ -290,6 +291,7 @@
             <Chinese>設定此載具/集裝箱可裝載多少貨物</Chinese>
             <Chinesesimp>设定此载具/集装箱可装载多少货物</Chinesesimp>
             <Polish>Dostępna przestrzeń ładunkowa w tym pojeździe/kontenerze</Polish>
+            <Korean>이 차량/컨테이너에서 사용가능한 화물 공간</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -299,6 +301,7 @@
             <Chinese>貨物的大小</Chinese>
             <Chinesesimp>货物的大小</Chinesesimp>
             <Polish>Wielkość ładunku</Polish>
+            <Korean>화물 크기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
@@ -308,6 +311,7 @@
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
+            <Korean>이 화물을 적재하는데 필요한 공간 (-1=무조건 적재가능)</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -340,6 +344,7 @@
             <Chinese>空投時間係數</Chinese>
             <Chinesesimp>空投时间系数</Chinesesimp>
             <Polish>Współczynnik czasu zrzutu</Polish>
+            <Korean>공중 투하 시간 계수</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
@@ -350,6 +355,7 @@
             <Chinese>設定空投所需消耗的時間.</Chinese>
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
+            <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>
         </Key>
     </Package>
 </Project>

@@ -371,6 +371,8 @@
         </Key>
         <Key ID="STR_ACE_WeaponSelect_CollisionLights">
             <English>Toggle Collision Lights</English>
+            <Italian>Attiva Luci di Collisione</Italian>
+            <Korean>충돌 표시등 토글</Korean>
         </Key>
     </Package>
 </Project>

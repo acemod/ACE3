@@ -24,6 +24,7 @@
             <Italian>Marcatori</Italian>
             <Chinese>標誌</Chinese>
             <Chinesesimp>标志</Chinesesimp>
+            <Korean>맵마커</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_Module_Description">
             <English>This module allows you to customize markers placement.</English>
@@ -32,6 +33,7 @@
             <Italian>Questo modulo permette di personalizzare i marcatori a piacimento.</Italian>
             <Chinese>此模塊可讓你自定標誌的擺放方式。</Chinese>
             <Chinesesimp>此模块可让你自定标志的摆放方式。</Chinesesimp>
+            <Korean>이 모듈을 설정해서 맵마커 배치에 대하여 설정 할 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MovableMarkers_DisplayName">
             <English>Movable markers</English>
@@ -40,6 +42,7 @@
             <Italian>Marcatori mobili</Italian>
             <Chinese>可移動的標誌</Chinese>
             <Chinesesimp>可移动的标志</Chinesesimp>
+            <Korean>마커 이동</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MovableMarkers_Description">
             <English>Should map markers placed by players be movable?</English>
@@ -48,6 +51,7 @@
             <Italian>I marcatori in mappa piazzati dai giocatori dovrebbero poter essere mossi ?</Italian>
             <Chinese>玩家放置的地圖標誌可以被移動嗎?</Chinese>
             <Chinesesimp>玩家放置的地图标志可以被移动吗?</Chinesesimp>
+            <Korean>배치한 마커를 플레이어가 움직일 수 있게 합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_DisplayName">
             <English>Move restriction</English>
@@ -56,6 +60,7 @@
             <Italian>Restrizione di movimento</Italian>
             <Chinese>移動限制</Chinese>
             <Chinesesimp>移动限制</Chinesesimp>
+            <Korean>이동 제한</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Apply move restrictions so that not every player is able to move markers.</English>
@@ -64,6 +69,7 @@
             <Italian>Applica le restrizioni di movimento cosicchè ogni giocatore possa spostare i marcatori.</Italian>
             <Chinese>設定那些玩家可以移動標誌的位置。</Chinese>
             <Chinesesimp>设定那些玩家可以移动标志的位置。</Chinesesimp>
+            <Korean>일부의 플레이어가 마커를 움직일 수 있도록 제한권한을 설정하세요.</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
@@ -72,6 +78,7 @@
             <Italian>Tutti i giocatori</Italian>
             <Chinese>所有玩家</Chinese>
             <Chinesesimp>所有玩家</Chinesesimp>
+            <Korean>모든 플레이어</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
@@ -80,6 +87,7 @@
             <Italian>Amministratori</Italian>
             <Chinese>管理員</Chinese>
             <Chinesesimp>管理员</Chinesesimp>
+            <Korean>관리자</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
@@ -88,6 +96,7 @@
             <Italian>Capigruppo</Italian>
             <Chinese>小隊長</Chinese>
             <Chinesesimp>小队长</Chinesesimp>
+            <Korean>분대장</Korean>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
@@ -96,6 +105,7 @@
             <Italian>Capigruppo e Amministratori</Italian>
             <Chinese>小隊長與管理員</Chinese>
             <Chinesesimp>小队长与管理员</Chinesesimp>
+            <Korean>분대장과 관리자</Korean>
         </Key>
     </Package>
 </Project>

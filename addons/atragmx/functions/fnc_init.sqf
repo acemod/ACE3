@@ -84,6 +84,8 @@ GVAR(truingDropMuzzleVelocity) = 0;
 
 GVAR(targetSolutionInput) = nil;
 
+GVAR(targetRangeDirtyFlag) = false;
+
 GVAR(showMainPage) = true;
 GVAR(showAddNewGun) = false;
 GVAR(showAtmoEnvData) = false;
