@@ -13,7 +13,7 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 LOG("Adding ACE_Settings to CBA_settings");
