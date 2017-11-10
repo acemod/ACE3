@@ -10,8 +10,7 @@
 
 #include "vector.hpp"
 
-#define DT_ZERO 0.02
-#define DT_SIMULATION 0.005
+#define DELTA_T 0.005
 #define GRAVITY 9.8066f
 #define DEGREES(X) (X * 180 / M_PI)
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
@@ -155,6 +154,7 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
 
 double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double airFriction, double boreHeight) {
     double zeroAngle = 0.0f;
+    double deltaT = 1.0 / std::max(100.0, zeroRange);
 
     for (int i = 0; i < 10; i++) {
         double lx = 0.0f;
@@ -183,14 +183,14 @@ double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double
             ax += gx;
             ay += gy;
 
-            px += vx * DT_ZERO * 0.5;
-            py += vy * DT_ZERO * 0.5;
-            vx += ax * DT_ZERO;
-            vy += ay * DT_ZERO;
-            px += vx * DT_ZERO * 0.5;
-            py += vy * DT_ZERO * 0.5;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
+            vx += ax * deltaT;
+            vy += ay * deltaT;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
 
-            tof += DT_ZERO;
+            tof += deltaT;
         }
 
         double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
@@ -207,6 +207,7 @@ double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double
 
 double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHeight, double temperature, double pressure, double humidity, double ballisticCoefficient, int dragModel, char*  atmosphereModel) {
     double zeroAngle = 0.0f;
+    double deltaT = 1.0 / std::max(100.0, zeroRange);
 
     ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
 
@@ -238,14 +239,14 @@ double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHe
             ax += gx;
             ay += gy;
 
-            px += vx * DT_ZERO * 0.5;
-            py += vy * DT_ZERO * 0.5;
-            vx += ax * DT_ZERO;
-            vy += ay * DT_ZERO;
-            px += vx * DT_ZERO * 0.5;
-            py += vy * DT_ZERO * 0.5;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
+            vx += ax * deltaT;
+            vy += ay * deltaT;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
 
-            tof += DT_ZERO;
+            tof += deltaT;
         }
 
         double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
@@ -513,7 +514,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double time = 0.0;
 
         while (time < deltaT) {
-            double dt = std::min(deltaT - time, DT_SIMULATION);
+            double dt = std::min(deltaT - time, DELTA_T);
 
             dragRef = -bulletDatabase[index].airFriction * bulletVelocity.magnitude_squared();
 
@@ -531,7 +532,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         TOF -= deltaT;
 
         while (time < deltaT) {
-            double dt = std::min(deltaT - time, DT_SIMULATION * 2);
+            double dt = std::min(deltaT - time, DELTA_T * 2);
 
             trueVelocity = bulletVelocity - windVelocity;
 
