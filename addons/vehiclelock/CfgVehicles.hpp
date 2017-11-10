@@ -82,7 +82,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_VehicleLock_ca.paa);
@@ -121,7 +121,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(VehicleKeyAssign_Module_DisplayName);
         function = QFUNC(moduleSync);
-        scope = 2;
+        scope = 1;
         isGlobal = 0;
         icon = QPATHTOF(UI\Icon_Module_VehicleKey_ca.paa);
         functionPriority = 0;

@@ -1,7 +1,7 @@
 class CfgVehicles {
     class ACE_Module;
     class GVAR(moduleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Settings_DisplayName);
         icon = QPATHTOF(data\Icon_Module_Spectator_ca.paa);
         category = "ACE";

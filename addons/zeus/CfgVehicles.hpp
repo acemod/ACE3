@@ -16,7 +16,7 @@ class CfgVehicles {
         function = QFUNC(bi_moduleRemoteControl);
     };
     class GVAR(moduleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Settings_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa);
         category = "ACE";

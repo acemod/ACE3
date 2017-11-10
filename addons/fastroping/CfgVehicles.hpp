@@ -18,7 +18,7 @@ class CfgVehicles {
     };
     class ACE_Module: Module_F {};
     class ACE_moduleEquipFRIES: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Module_FRIES_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_FRIES_ca.paa);
         category = "ACE";

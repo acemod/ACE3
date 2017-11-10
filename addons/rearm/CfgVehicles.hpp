@@ -17,7 +17,7 @@ class CBA_Extended_EventHandlers;
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRearmSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(RearmSettings_Module_DisplayName);
         icon = QPATHTOF(ui\icon_module_rearm.paa);
         category = "ACE_Logistics";
