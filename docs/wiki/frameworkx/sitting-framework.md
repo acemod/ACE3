@@ -2,7 +2,7 @@
 layout: wiki
 title: Sitting Framework
 description: Explains how to set-up sitting objects (eg. chairs) with ACE3 sitting system.
-group: framework
+group: frameworkx
 order: 5
 parent: wiki
 mod: ace
