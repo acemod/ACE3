@@ -119,5 +119,6 @@
 #define DEG_TO_MRAD(d) ((d) * 17.45329252) // Conversion factor: (50 * PI) / 9
 #define MRAD_TO_DEG(d) ((d) / 17.45329252) // Conversion factor: 9 / (50 * PI)
 #define MOA_TO_RAD(d) ((d) * 0.00029088) // Conversion factor: PI / 10800
+#define RAD_TO_DEG(d) ((d) * 57.29577951) // Conversion factor: 180 / PI
 
 #include "script_debug.hpp"

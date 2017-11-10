@@ -35,15 +35,18 @@ if (GVAR(correctZeroing)) then {
     private _muzzleVelocity = vectorMagnitude (velocity _projectile);
     private _railDirection = _unit weaponDirection _weapon;
     _projectile setVelocity (_railDirection vectorMultiply _muzzleVelocity);
+    // Add dispersion (Bivariate normal distribution - calculate variance by solving the Rayleigh CDF for sigma at x ~ 0.6827)
+    private _dispersion = 0.659991 * sqrt((RAD_TO_DEG(getNumber(configFile >> "CfgWeapons" >> _weapon >> "Single" >> "dispersion")) / 2) ^ 2);
+    _zeroing = _zeroing vectorAdd [random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion], 0];
     // Calculate correct zero angle
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
     private _boreHeight = GVAR(boreHeight) select _weaponIndex;
-    private _baseAngle = GVAR(baseAngle) select _weaponIndex;
     private _zeroRange = [_unit] call FUNC(getCurrentZeroRange);
     private _zeroAngle = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6), _zeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
     if (isNil "_zeroCorrection") then {
          _zeroAngle = [_zeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngle);
     };
+    private _baseAngle = GVAR(baseAngle) select _weaponIndex;
     _zeroing = _zeroing vectorAdd [0, 0, _zeroAngle - _baseAngle];
 };
 
