@@ -2,7 +2,7 @@
 layout: wiki
 title: Sitting Framework
 description: Explains how to set-up sitting objects (eg. chairs) with ACEX sitting system.
-group: frameworkx
+group: framework
 order: 5
 parent: wiki
 mod: acex
