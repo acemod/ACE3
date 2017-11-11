@@ -320,7 +320,7 @@ if !(_itemsToCheck isEqualTo []) then {
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
         private _currentData = _ctrlPanel lbData _lbIndex;
 
-        if (!(_currentData isEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
+        if ((_currentData != "") && {tolower _currentData in _itemsToCheck}) exitWith {
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };
