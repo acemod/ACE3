@@ -253,7 +253,7 @@ double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHe
         double offset = -std::atan(y / zeroRange);
         zeroAngle += offset;
 
-        if (std::abs(offset) < 0.0001f) {
+        if (std::abs(offset) < 0.00001f) {
             break;
         }
     }

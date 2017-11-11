@@ -48,12 +48,15 @@ if (hasInterface) then {
     //Add Take EH (for reload)
     ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
 
-    // Register fire event handler
-    ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
-    // Only add eh to non local players if dispersion is enabled
-    if (GVAR(overheatingDispersion)) then {
-        ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
-    };
+    // Make sure these run after the firedEH in the scopes module
+    [{
+        // Register fire event handler
+        ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+        // Only add eh to non local players if dispersion is enabled
+        if (GVAR(overheatingDispersion)) then {
+            ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+        };
+    }, []] call CBA_fnc_execNextFrame;
 
     // Schedule cool down calculation of player weapons at (infrequent) regular intervals
     [] call FUNC(updateTemperatureThread);

@@ -2,9 +2,10 @@
 PREP(adjustScope);
 PREP(adjustZero);
 PREP(applyScopeAdjustment);
-PREP(calculateZeroAngleCorrection);
+PREP(calculateZeroAngle);
 PREP(canAdjustZero);
 PREP(firedEH);
+PREP(getBaseAngle);
 PREP(getBoreHeight);
 PREP(getCurrentZeroRange);
 PREP(getOptics);
