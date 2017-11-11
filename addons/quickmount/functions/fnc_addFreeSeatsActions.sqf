@@ -129,11 +129,10 @@ private _cargoNumber = -1;
                     _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa";
                 };
                 default {
-                    if (_isPersonTurret) then {
-                        _icon = "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa";
-                    } else {
-                        _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa";
-                    };
+                    _icon = [
+                        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
+                        "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"
+                    ] select _isPersonTurret;
                 };
             };
         } else { // cargo, no FFV
