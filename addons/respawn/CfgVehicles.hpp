@@ -7,8 +7,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(module);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_Respawn_ca.paa);
 
         class Arguments {
@@ -37,7 +37,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(FriendlyFire_Module_DisplayName);
         function = QFUNC(moduleFriendlyFire);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_FriendlyFire_ca.paa);
 
@@ -52,7 +52,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Rallypoint_Module_DisplayName);
         function = QFUNC(moduleRallypoint);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_Rallypoint_ca.paa);
 
