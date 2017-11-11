@@ -87,8 +87,15 @@ if (!isNull _target &&
                     TRACE_3("Geting In Turret",_x,_role,_turretPath);
                 } else {
                     if (_cargoIndex > -1) then {
-                        ACE_player action ["GetInCargo", _target, _cargoIndex];
-                        TRACE_3("Geting In Cargo",_x,_role,_cargoIndex);
+                        // GetInCargo expects the index of the seat in the "cargo" array from fullCrew
+                        // See description: https://community.bistudio.com/wiki/fullCrew
+                        private _cargoActionIndex = -1;
+                        {
+                            if ((_x select 2) == _cargoIndex) exitWith {_cargoActionIndex = _forEachIndex};
+                        } forEach (fullCrew [_target, "cargo", true]);
+                        
+                        ACE_player action ["GetInCargo", _target, _cargoActionIndex];
+                        TRACE_4("Geting In Cargo",_x,_role,_cargoActionIndex,_cargoIndex);
                     } else {
                         ACE_player action ["GetIn" + _role, _target];
                         TRACE_2("Geting In",_x,_role);
