@@ -16,29 +16,54 @@
  */
 #include "script_component.hpp"
 
-scopeName "main";
+#define TO_STRING(arg) if !(arg isEqualType "") then {arg = "Compartment" + str arg}
 
 // this will check UAV vehicle like Stomper (with cargo seat)
 #define IS_CREW_UAV(vehicleConfig) ("UAVPilot" == getText (configFile >> "CfgVehicles" >> (getText (vehicleConfig >> "crew")) >> "simulation"))
 
 // this is used in statements when move from driver
-#define MOVEOUT_AND_CHECK_ENGINE_ON private _preserveEngineOn = _player == driver _target && {isEngineOn _target}; moveOut _player; if (_preserveEngineOn) then {_target engineOn true}
+#define MOVEOUT_AND_CHECK_ENGINE_ON \
+    private _preserveEngineOn = _player == driver _target && {isEngineOn _target}; \
+    moveOut _player; \
+    if (_preserveEngineOn) then {_target engineOn true};
+
+// moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
+// we have to wait some time (e.g. until player is out)
+// usually it takes 1 frame in SP and 3 frames in MP, so in MP looks a little lagging
+#define MOVE_IN(command) [ARR_3( \
+    {isNull objectParent (_this select 0)}, \
+    {(_this select 0) command (_this select 1)}, \
+    [ARR_2(_player,_this select 2)] \
+)] call CBA_fnc_waitUntilAndExecute;
+
+scopeName "main";
 
 params ["_vehicle", "_player"];
 
 private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
 private _isInVehicle = _player in _vehicle;
 
-private _driverCompartments = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
-// Air class by default has driverCompartments=0 and cargoCompartments[]={0}, so we have to disable them
-private _isPilotAndIsolated = _driverCompartments isEqualTo 0 && {_vehicle isKindOf "Air"};
+private ["_driverCompartments", "_isPilotAndIsolated", "_cargoCompartments", "_cargoCompartmentsLast", "_compartment"];
 
-private _cargoCompartments = getArray (_vehicleConfig >> "cargoCompartments");
-private _cargoCompartmentsLast = count _cargoCompartments - 1;
-
-// first find current compartment
-private _compartment = "";
 if (_isInVehicle) then {
+    _driverCompartments = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
+    // Air class by default has driverCompartments=0 and cargoCompartments[]={0}, so we have to disable them
+    _isPilotAndIsolated = _driverCompartments isEqualTo 0 && {_vehicle isKindOf "Air"};
+    TO_STRING(_driverCompartments);
+
+    _cargoCompartments = getArray (_vehicleConfig >> "cargoCompartments");
+    _cargoCompartments = _cargoCompartments apply {
+        if (_x isEqualType "") then {
+            _x
+        } else {
+            "Compartment" + str _x
+        };
+    };
+    _cargoCompartmentsLast = count _cargoCompartments - 1;
+
+    TRACE_2("",_driverCompartments,_cargoCompartments);
+
+    // find current compartment
     private ["_role", "_turretPath"];
     private _cargoNumber = 0;
     {
@@ -64,12 +89,12 @@ if (_isInVehicle) then {
         default {
             private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
             _compartment = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
+            TO_STRING(_compartment);
         };
     };
     TRACE_4("",_role,_turretPath,_cargoNumber,_compartment);
 };
 
-// second find seats with the same compartment
 private _actions = [];
 private _cargoNumber = -1;
 {
@@ -85,9 +110,11 @@ private _cargoNumber = -1;
             if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
             private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
             if (_isInVehicle) then {
-                if !(_compartment isEqualTo ((_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData)) then {breakTo "crewLoop"};
+                private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
+                TO_STRING(_gunnerCompartments);
+                if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
                 _params = [_vehicle, _turretPath];
-                _statement = {MOVEOUT_AND_CHECK_ENGINE_ON; _player moveInTurret (_this select 2)};
+                _statement = {MOVEOUT_AND_CHECK_ENGINE_ON; MOVE_IN(moveInTurret)};
             } else {
                 _params = ["GetInTurret", _vehicle, _turretPath];
                 _statement = {_player action (_this select 2)};
@@ -114,9 +141,9 @@ private _cargoNumber = -1;
                 INC(_cargoNumber);
                 if (_vehicle lockedCargo _cargoIndex) then {breakTo "crewLoop"};
                 if (_isInVehicle) then {
-                    if !(_compartment isEqualTo (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
+                    if (_compartment != (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
                     _params = [_vehicle, _cargoIndex];
-                    _statement = {MOVEOUT_AND_CHECK_ENGINE_ON; _player moveInCargo (_this select 2)};
+                    _statement = {MOVEOUT_AND_CHECK_ENGINE_ON; MOVE_IN(moveInCargo)};
                 } else {
                     _params = ["GetInCargo", _vehicle, _cargoNumber];
                     _statement = {_player action (_this select 2)};
@@ -132,14 +159,9 @@ private _cargoNumber = -1;
                     breakTo "crewLoop";
                 };
                 if (_isInVehicle) then {
-                    if (
-                        !(_compartment isEqualTo _driverCompartments)
-                        || {_isPilotAndIsolated}
-                    ) then {
-                        breakTo "crewLoop";
-                    };
+                    if (_compartment != _driverCompartments || {_isPilotAndIsolated}) then {breakTo "crewLoop"};
                     _params = _vehicle;
-                    _statement = {moveOut _player; _player moveInDriver (_this select 2)};
+                    _statement = {moveOut _player; MOVE_IN(moveInDriver)};
                 } else {
                     _params = ["GetInDriver", _vehicle];
                     _statement = {_player action (_this select 2)};
