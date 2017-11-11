@@ -27,4 +27,9 @@ _solutionInput set [ 8, round(_solutionInput select 4)];
 _solutionInput set [13, _targetRange];
 _solutionInput set [17, true];
 
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    private _c1 = [_targetRange] call FUNC(lookup_c1_ballistic_coefficient);
+    _solutionInput set [14, _c1];
+};
+
 private _result = _solutionInput call FUNC(calculate_solution);

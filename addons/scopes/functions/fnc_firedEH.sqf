@@ -28,7 +28,7 @@ private _zeroing = +(_adjustment select _weaponIndex);
 TRACE_1("Adjusting With",_zeroing);
 
 // Convert zeroing from mils to degrees
-_zeroing = _zeroing vectorMultiply 0.05625;
+_zeroing = _zeroing vectorMultiply MRAD_TO_DEG(1);
 
 if (GVAR(correctZeroing)) then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];

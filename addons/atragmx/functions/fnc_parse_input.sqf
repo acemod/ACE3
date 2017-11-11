@@ -99,6 +99,7 @@ if (GVAR(currentUnit) == 1) then {
 } else {
     _targetRange = 25 max _targetRange min 3700;
 };
+GVAR(targetRangeDirtyFlag) = GVAR(targetRangeDirtyFlag) || {_targetRange != GVAR(targetRange) select GVAR(currentTarget)};
 GVAR(latitude) set [GVAR(currentTarget), -90 max Round(parseNumber(ctrlText 140000)) min 90];
 GVAR(directionOfFire) set [GVAR(currentTarget), 0 max abs(Round(parseNumber(ctrlText 140010))) min 359];
 GVAR(windSpeed1) set [GVAR(currentTarget), _windSpeed1];
@@ -172,6 +173,11 @@ if (_muzzleVelocity != GVAR(workingMemory) select 1) then {
 };
 GVAR(workingMemory) set [1, _muzzleVelocity];
 GVAR(workingMemory) set [2, _zeroRange];
+
+if (GVAR(targetRangeDirtyFlag) && missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    [false, false] call FUNC(recalculate_c1_ballistic_coefficient);
+    GVAR(targetRangeDirtyFlag) = false;
+};
 
 [] call FUNC(update_gun);
 [] call FUNC(update_gun_ammo_data);

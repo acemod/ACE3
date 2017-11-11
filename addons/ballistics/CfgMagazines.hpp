@@ -381,7 +381,7 @@ class CfgMagazines {
     };
 
     class 10Rnd_762x54_Mag: 10Rnd_762x51_Mag {
-        initSpeed = 800;
+        initSpeed = 836;
     };
     class ACE_10Rnd_762x54_Tracer_mag: 10Rnd_762x54_Mag {
         author = ECSTRING(common,ACETeam);
@@ -389,12 +389,12 @@ class CfgMagazines {
         displayName = CSTRING(10Rnd_762x54_Tracer_mag_Name);
         displayNameShort = CSTRING(10Rnd_762x54_Tracer_mag_NameShort);
         descriptionShort = CSTRING(10Rnd_762x54_Tracer_mag_Description);
-        initSpeed = 800;
+        initSpeed = 809;
         tracersEvery = 1;
     };
 
     class 150Rnd_762x54_Box: 150Rnd_762x51_Box {
-        initSpeed = 750;
+        initSpeed = 836;
     };
 
     class 150Rnd_93x64_Mag: CA_Magazine {
