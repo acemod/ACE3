@@ -36,7 +36,7 @@ if (GVAR(correctZeroing)) then {
     private _railDirection = _unit weaponDirection _weapon;
     _projectile setVelocity (_railDirection vectorMultiply _muzzleVelocity);
     // Add dispersion (Bivariate normal distribution - calculate variance by solving the Rayleigh CDF for sigma at x ~ 0.6827)
-    private _dispersion = SD_TO_MIN_MAX(0.659991 * sqrt((RAD_TO_DEG(getNumber(configFile >> "CfgWeapons" >> _weapon >> "Single" >> "dispersion")) / 2) ^ 2));
+    private _dispersion = SD_TO_MIN_MAX(0.66 * RAD_TO_DEG(getNumber(configFile >> "CfgWeapons" >> _weapon >> "Single" >> "dispersion")) / 2);
     _zeroing = _zeroing vectorAdd [random [-_dispersion, 0, _dispersion], random [-_dispersion, 0, _dispersion], 0];
     // Calculate correct zero angle
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
