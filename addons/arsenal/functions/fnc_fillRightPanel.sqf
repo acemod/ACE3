@@ -294,25 +294,32 @@ if (_leftPanelState) then {
 
 // Add current items and change progress bar
 if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
+
+    private _maxLoad = 0;
     private _container = switch (GVAR(currentLeftPanel)) do {
         case IDC_buttonUniform : {
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadUniform GVAR(center));
+            _maxLoad = gettext (configfile >> "CfgWeapons" >> uniform GVAR(center) >> "ItemInfo" >> "containerClass");
             uniformItems GVAR(center)
         };
         case IDC_buttonVest : {
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadVest GVAR(center));
+            _maxLoad = gettext (configfile >> "CfgWeapons" >> vest GVAR(center) >> "ItemInfo" >> "containerClass");
             vestItems GVAR(center)
         };
         case IDC_buttonBackpack : {
             (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition (loadBackpack GVAR(center));
+            _maxLoad = backpack GVAR(center);
             backpackItems GVAR(center)
         };
     };
 
-    for "_l" from 0 to (lbsize _ctrlPanel - 1) do {
+    for "_l" from 0 to ((lnbsize _ctrlPanel select 0) - 1) do {
         private _class = _ctrlPanel lnbData [_l, 0];
         _ctrlPanel lnbSetText [[_l, 2], if (_class in _container) then {str ({_x == _class} count _container)} else {"0"}];
     };
+
+    [_ctrlPanel, _maxLoad] call FUNC(updateRightPanel);
 };
 
 // Select current data if not in a container
@@ -324,8 +331,8 @@ if !(_itemsToCheck isEqualTo []) then {
             _ctrlPanel lbSetCurSel _lbIndex;
         };
     };
-};
 
-if (lbCurSel _ctrlPanel < 0) then {
-    _ctrlPanel lbSetCurSel 0;
+    if (lbCurSel _ctrlPanel < 0) then {
+        _ctrlPanel lbSetCurSel 0;
+    };
 };
