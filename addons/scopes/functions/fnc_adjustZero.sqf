@@ -32,9 +32,9 @@ _elevation = 0;
 
 private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex;
 if (_zero != 0) then {
-    profileNamespace setVariable [format["ACE_Scopes_PersistentZero_%1_%2", _weaponClass, _opticsClass], _zero];
+    profileNamespace setVariable [format[QGVAR(PersistentZero_%1_%2), _weaponClass, _opticsClass], _zero];
 } else {
-    profileNamespace setVariable [format["ACE_Scopes_PersistentZero_%1_%2", _weaponClass, _opticsClass], nil];
+    profileNamespace setVariable [format[QGVAR(PersistentZero_%1_%2), _weaponClass, _opticsClass], nil];
 };
 
 [_unit, _elevation, _windage, _zero] call FUNC(applyScopeAdjustment);
