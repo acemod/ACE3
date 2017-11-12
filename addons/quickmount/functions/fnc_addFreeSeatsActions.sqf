@@ -30,11 +30,12 @@
 // moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
 // we have to wait some time (e.g. until player is out)
 // usually it takes 1 frame in SP and 3 frames in MP, so in MP looks a little lagging
-#define MOVE_IN(command) [ARR_3( \
-    {isNull objectParent (_this select 0)}, \
-    {(_this select 0) command (_this select 1)}, \
-    [ARR_2(_player,_this select 2)] \
-)] call CBA_fnc_waitUntilAndExecute;
+#define MOVE_IN(command) \
+    [ARR_3( \
+        {isNull objectParent (_this select 0)}, \
+        {(_this select 0) command (_this select 1)}, \
+        [ARR_2(_player,_this select 2)] \
+    )] call CBA_fnc_waitUntilAndExecute;
 
 scopeName "main";
 
