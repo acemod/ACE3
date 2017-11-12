@@ -247,41 +247,13 @@
             <German>wurde umbenannt in</German>
             <Polish>zmienił nazwę na</Polish>
         </Key>
-        <Key ID="STR_Ace_Arsenal_invertCameraSetting">
-            <English>Invert camera controls</English>
-            <French>Inverser les contrôles de la caméra</French>
-            <German>Kamerasteuerung invertieren</German>
-            <Polish>Odwróć sterowanie kamerą</Polish>
+        <Key ID="STR_ACE_Arsenal_buttonCurrentMagTooltip">
+            <English>Primary magazine</English>
+            <French>Chargeur principal </French>
         </Key>
-        <Key ID="STR_Ace_Arsenal_modIconsSetting">
-            <English>Enable mod icons</English>
-            <French>Afficher les icônes de mod</French>
-            <German>Aktiviert Mod-Icons</German>
-            <Polish>Włącz ikony modów</Polish>
-        </Key>
-        <Key ID="STR_Ace_Arsenal_fontHeightSetting">
-            <English>Font height for the left and right panels</English>
-            <French>Hauteur du texte pour les listes de gauche/droite</French>
-            <German>Schrifthöhe für die linke und rechte Liste</German>
-            <Polish>Wysokość czcionki prawego i lewego panelu</Polish>
-        </Key>
-        <Key ID="STR_Ace_Arsenal_allowDefaultLoadoutsSetting">
-            <English>Allow the use of the default loadouts tab</English>
-            <French>Activer l'onglet équipement de base</French>
-            <German>Erlaubt die Benutzung des Standard-Ausrüstungen-Reiters</German>
-            <Polish>Zezwól na użycie zakładki domyślnych zestawów</Polish>
-        </Key>
-        <Key ID="STR_Ace_Arsenal_allowSharingSetting">
-            <English>Allow the use of loadout sharing</English>
-            <French>Autoriser le partage d'équipement</French>
-            <German>Erlaubt das Teilen von Ausrüstungen</German>
-            <Polish>Zezwól na udostępnianie zestawów</Polish>
-        </Key>
-        <Key ID="STR_Ace_Arsenal_printToRPTSetting">
-            <English>Enable RPT logging for missing / unavailable items</English>
-            <French>Inscrire les objets manquants dans le RPT</French>
-            <German>Aktiviert die Aufzeichnung fehlender Gegenstände in der RPT</German>
-            <Polish>Włącz rejestrowanie brakujących / niedostępnych przedmiotów do pliku RPT</Polish>
+        <Key ID="STR_ACE_Arsenal_buttonCurrentMag2Tooltip">
+            <English>Secondary magazine</English>
+            <French>Chargeur secondaire</French>
         </Key>
     </Package>
 </Project>

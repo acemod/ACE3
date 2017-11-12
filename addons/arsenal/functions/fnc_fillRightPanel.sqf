@@ -342,7 +342,6 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 };
 
 // Select current data if not in a container
-
 if !(_itemsToCheck isEqualTo []) then {
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
         private _currentData = _ctrlPanel lbData _lbIndex;
