@@ -81,6 +81,8 @@
 #define IDC_buttonBipod 28
 #define IDC_iconBackgroundCurrentMag 3001
 #define IDC_buttonCurrentMag 3002
+#define IDC_iconBackgroundCurrentMag2 3003
+#define IDC_buttonCurrentMag2 3004
 #define IDC_iconBackgroundMag 29
 #define IDC_buttonMag 30
 #define IDC_iconBackgroundMagALL 31
@@ -114,8 +116,8 @@
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
 
-#define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod, IDC_buttonCurrentMag
-#define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod, IDC_iconBackgroundCurrentMag
+#define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
+#define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
 #define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc
 #define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
@@ -162,7 +164,9 @@
     IDC_sortRightTab,\
     RIGHT_PANEL_ACC_IDCS,\
     IDC_rightSearchbar,\
-    IDC_rightSearchbarButton\
+    IDC_rightSearchbarButton,\
+    IDC_buttonCurrentMag,\
+    IDC_buttonCurrentMag2\
 ];\
 {\
     _x = _display displayCtrl _x;\
@@ -175,8 +179,7 @@
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_rightTabContentListnBox,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
-    IDC_buttonRemoveAll,\
-    [IDC_buttonCurrentMag, IDC_buttonRemoveAll] select (GVAR(canUseCurrentMagTab))\
+    IDC_buttonRemoveAll\
 ];
 
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
@@ -204,7 +207,12 @@
     _x ctrlShow false;\
     _x ctrlEnable false;\
     _x ctrlCommit FADE_DELAY;\
-} foreach [IDC_iconBackgroundCurrentMag, IDC_buttonCurrentMag];
+} foreach [\
+    IDC_buttonCurrentMag,\
+    IDC_buttonCurrentMag2,\
+    IDC_iconBackgroundCurrentMag,\
+    IDC_iconBackgroundCurrentMag2\
+];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
@@ -226,7 +234,11 @@
     RIGHT_PANEL_ITEMS_IDCS,\
     IDC_buttonRemoveAll,\
     IDC_rightSearchbar,\
-    IDC_rightSearchbarButton\
+    IDC_rightSearchbarButton,\
+    IDC_buttonCurrentMag,\
+    IDC_buttonCurrentMag2,\
+    IDC_iconBackgroundCurrentMag,\
+    IDC_iconBackgroundCurrentMag2\
 ];
 
 #define LIST_DEFAULTS\

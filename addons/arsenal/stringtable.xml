@@ -253,12 +253,6 @@
             <German>Kamerasteuerung invertieren</German>
             <Polish>Odwróć sterowanie kamerą</Polish>
         </Key>
-        <Key ID="STR_Ace_Arsenal_currentMagTabSetting">
-            <English>Enable the current magazines tab (EXPERIMENTAL)</English>
-            <French>Activer l'onglet chargeurs actuel (EXPÉRIMENTAL)</French>
-            <German>Aktiviert den Reiter "Derzeitige Magazine" (EXPERIMENTELL)</German>
-            <Polish>Włącz zakładkę załadowanych magazynków (EKSPERYMENTALNE)</Polish>
-        </Key>
         <Key ID="STR_Ace_Arsenal_modIconsSetting">
             <English>Enable mod icons</English>
             <French>Afficher les icônes de mod</French>

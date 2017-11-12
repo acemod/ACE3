@@ -10,7 +10,6 @@ PREP_RECOMPILE_END;
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), "ACE3 Arsenal", false] call CBA_Settings_fnc_init;
-[QGVAR(canUseCurrentMagTab), "CHECKBOX", localize LSTRING(currentMagTabSetting), "ACE3 Arsenal", false] call CBA_Settings_fnc_init;
 [QGVAR(enableModIcons), "CHECKBOX", localize LSTRING(modIconsSetting), "ACE3 Arsenal", true] call CBA_Settings_fnc_init;
 [QGVAR(fontHeight), "SLIDER", localize LSTRING(fontHeightSetting), "ACE3 Arsenal", [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
 

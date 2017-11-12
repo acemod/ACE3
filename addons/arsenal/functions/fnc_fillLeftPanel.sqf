@@ -75,14 +75,14 @@ switch true do {
     default {
         GVAR(currentRightPanel) = nil;
 
-         lbClear _ctrlPanel;
+        lbClear _ctrlPanel;
 
-         if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
+        if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
             private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
             _ctrlPanel lbsetvalue [_addEmpty, -1];
-         };
+        };
 
-         switch (_ctrlIDC) do {
+        switch (_ctrlIDC) do {
             case IDC_buttonHeadgear: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);

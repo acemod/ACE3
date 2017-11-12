@@ -71,21 +71,22 @@ private _fnc_fill_right_Container = {
 
 // Retrieve compatible mags
 private _compatibleItems = [];
-private _compatibleMagazines = [[], [], []];
+private _compatibleMagazines = [[[], []], [[], []], [[], []]];
 {
     if (_x != "") then {
         private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
         private _index = _forEachIndex;
 
         {
+            private _subIndex = _forEachIndex;
             {
                 // Magazine group
                 if !(isClass (configFile >> "CfgMagazines" >> _x)) then {
                     private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
                     private _magArray = [_magazineGroups, _x] call CBA_fnc_hashGet;
-                    {(_compatibleMagazines select _index) pushBackUnique _x} forEach _magArray;
+                    {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
                 } else {
-                    (_compatibleMagazines select _index) pushBackUnique _x
+                    ((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x
                 }
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
         } foreach getArray (_weaponConfig >> "muzzles");
@@ -93,25 +94,29 @@ private _compatibleMagazines = [[], [], []];
 } foreach [primaryWeapon GVAR(center), handgunWeapon GVAR(center), secondaryWeapon GVAR(center)];
 
 private _itemsToCheck = [];
-private _compatibleMagsCurrentWeapon = [];
+private _compatibleMagsPrimaryMuzzle = [];
+private _compatibleMagsSecondaryMuzzle = [];
 
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
 
 switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonPrimaryWeapon : {
-        _compatibleMagsCurrentWeapon = _compatibleMagazines select 0;
-         _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 0 select 0;
+        _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 0 select 1;
+        _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
         _itemsToCheck = GVAR(currentItems) select 18;
     };
 
     case IDC_buttonHandgun : {
-        _compatibleMagsCurrentWeapon = _compatibleMagazines select 1;
+        _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 1 select 0;
+        _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 1 select 1;
         _compatibleItems = (handgunWeapon GVAR(center)) call bis_fnc_compatibleItems;
         _itemsToCheck = GVAR(currentItems) select 20;
     };
 
     case IDC_buttonSecondaryWeapon : {
-        _compatibleMagsCurrentWeapon = _compatibleMagazines select 2;
+        _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 2 select 0;
+        _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 2 select 1;
         _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
         _itemsToCheck = GVAR(currentItems) select 19;
     };
@@ -134,7 +139,7 @@ lbClear (_display displayCtrl IDC_rightTabContent);
 
 private _leftPanelState = GVAR(currentLeftPanel) in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon];
 
-if (_ctrlIDC in [RIGHT_PANEL_ACC_IDCS] && {_leftPanelState}) then {
+if (_ctrlIDC in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2] && {_leftPanelState}) then {
     private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
     _ctrlPanel lbsetvalue [_addEmpty, -1];
 };
@@ -205,7 +210,15 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsCurrentWeapon);
+            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsPrimaryMuzzle);
+        };
+    };
+
+    case IDC_buttonCurrentMag2 : {
+        if (_leftPanelState) then {
+            {
+                ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
+            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsSecondaryMuzzle);
         };
     };
 
@@ -323,6 +336,7 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 };
 
 // Select current data if not in a container
+
 if !(_itemsToCheck isEqualTo []) then {
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
         private _currentData = _ctrlPanel lbData _lbIndex;

@@ -649,6 +649,16 @@ class GVAR(display) {
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMag";
             y = QUOTE(safezoneY + 48 * GRID_H);
         };
+        class iconBackgroundCurrentMag2: iconBackgroundOptic {
+            idc = IDC_iconBackgroundCurrentMag2;
+            y = QUOTE(safezoneY + 58 * GRID_H);
+        };
+        class buttonCurrentMag2: buttonOptic {
+            idc = IDC_buttonCurrentMag2;
+            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
+            tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMag";
+            y = QUOTE(safezoneY + 58 * GRID_H);
+        };
         class iconBackgroundMag: iconBackgroundOptic {
             idc = IDC_iconBackgroundMag;
             y = QUOTE(safezoneY + 48 * GRID_H);
