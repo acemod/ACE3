@@ -43,7 +43,7 @@ class CfgVehicles {
         };
     };
     class GVAR(moduleGroupSettings): ACE_Module {
-        scope = 1;
+        scope = 2;
         category = "ACE";
         displayName = CSTRING(moduleGroupSettings_displayName);
         function = QFUNC(moduleGroupSettings);
