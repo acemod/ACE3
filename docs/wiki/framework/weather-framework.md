@@ -14,7 +14,7 @@ version:
 
 ## 1. Overview
 
-ACE3 Weather extends the existing weather by temperature, humidity and air pressure according to the geographic location, season and time of day. It allows the weather to evolve realistically as the simulation progresses.
+ACE3 Weather extends the existing weather by temperature, humidity and air pressure according to the geographic location, season and time of day.
 
 The additional wind simulation, which is also influenced by the season and the geographical location, can be deactivated if necessary.
 
