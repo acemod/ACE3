@@ -165,9 +165,19 @@
     RIGHT_PANEL_ACC_IDCS,\
     IDC_rightSearchbar,\
     IDC_rightSearchbarButton,\
-    IDC_buttonCurrentMag,\
-    IDC_buttonCurrentMag2\
+    IDC_buttonCurrentMag\
 ];\
+private _buttonCurrentMag2Ctrl = _display displayCtrl IDC_buttonCurrentMag2;\
+if (GVAR(currentLeftPanel) == IDC_buttonPrimaryWeapon) then {\
+    _buttonCurrentMag2Ctrl ctrlSetFade 0;\
+    _buttonCurrentMag2Ctrl ctrlShow true;\
+    _buttonCurrentMag2Ctrl ctrlEnable true;\
+} else {\
+    _buttonCurrentMag2Ctrl ctrlSetFade 1;\
+    _buttonCurrentMag2Ctrl ctrlShow false;\
+    _buttonCurrentMag2Ctrl ctrlEnable false;\
+};\
+_buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 {\
     _x = _display displayCtrl _x;\
     _x ctrlSetFade 1;\

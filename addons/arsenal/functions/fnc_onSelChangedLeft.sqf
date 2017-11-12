@@ -117,7 +117,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             TOGGLE_RIGHT_PANEL_WEAPON
-            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+            [_display, [_selectCorrectPanelWeapon, _weaponDefaultRightPanel] select (GVAR(currentRightPanel) == IDC_buttonCurrentMag2)] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
@@ -164,7 +164,7 @@ switch (GVAR(currentLeftPanel)) do {
             TOGGLE_RIGHT_PANEL_HIDE
         } else {
             TOGGLE_RIGHT_PANEL_WEAPON
-            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+            [_display, [_selectCorrectPanelWeapon, _weaponDefaultRightPanel] select (GVAR(currentRightPanel) == IDC_buttonCurrentMag2)] call FUNC(fillRightPanel);
         };
 
         call FUNC(showItem);
