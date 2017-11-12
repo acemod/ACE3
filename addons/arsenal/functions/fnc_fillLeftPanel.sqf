@@ -168,7 +168,7 @@ if (GVAR(currentLeftPanel) != _ctrlIDC) then {
 };
 
 GVAR(currentLeftPanel) = _ctrlIDC;
-[QGVAR(leftPanelFilled), [_display, _ctrlIDC]] call CBA_fnc_localEvent;
+[QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
 private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;

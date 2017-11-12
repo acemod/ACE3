@@ -90,9 +90,11 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
 if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
     [QGVAR(rightPanelFilled), {
 
-        if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack] && {GVAR(currentRightPanel) == IDC_buttonMisc}) then {
+        params ["_display", "_leftPanelIDC", "_rightPanelIDC"];
 
-            private _rightPanel = (findDisplay IDD_ace_arsenal) displayCtrl IDC_rightTabContentListnBox;
+        if (_leftPanelIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack] && {_rightPanelIDC == IDC_buttonMisc}) then {
+
+            private _rightPanel = _display displayCtrl IDC_rightTabContentListnBox;
             (lnbSize _rightPanel) params ["_rows", "_columns"];
 
             private _allDogtags = missionNameSpace getVariable [QEGVAR(dogtags,allDogtags), []];
@@ -106,8 +108,9 @@ if (["ACE_dogtags"] call EFUNC(common,isModLoaded)) then {
                     private _dogtagData = [];
                     private _index = _allDogtags find _data;
                     _dogtagData = _allDogtagDatas select _index;
+                    private _dogtagString =  [localize ELSTRING(dogtags,itemName), ": ", (_dogtagData select 0)] joinString "";
 
-                    _rightPanel lnbSetText [[_r, 1], _dogtagData select 0];
+                    _rightPanel lnbSetText [[_r, 1], _dogtagString];
                 };
             };
         };
