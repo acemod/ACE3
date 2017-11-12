@@ -335,7 +335,7 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 
     for "_l" from 0 to ((lnbsize _ctrlPanel select 0) - 1) do {
         private _class = _ctrlPanel lnbData [_l, 0];
-        _ctrlPanel lnbSetText [[_l, 2], if (_class in _container) then {str ({_x == _class} count _container)} else {"0"}];
+        _ctrlPanel lnbSetText [[_l, 2], ["0", str ({_x == _class} count _container)] select (_class in _container)];
     };
 
     [_ctrlPanel, _maxLoad] call FUNC(updateRightPanel);
