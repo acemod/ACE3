@@ -3,7 +3,7 @@
  * Checks if unit can pull target body out of vehicle.
  *
  * Arguments:
- * 1: Target <OBJECT>
+ * 1: Body <OBJECT>
  * 2: Unit <OBJECT>
  *
  * Return Value:
@@ -16,12 +16,13 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_unit"];
+params ["_body", "_unit"];
 
-private _vehicle = objectParent _target;
+private _vehicle = objectParent _body;
 
 if (
-    alive _target
+    !isNull objectParent _unit
+    || {alive _body}
     || {isNull _vehicle}
     || {1 < locked _vehicle}
     || {
@@ -31,7 +32,7 @@ if (
     }
 ) exitWith {false};
 
-((fullCrew [_vehicle, ""] select {_target == _x select 0}) select 0) params ["", "", "_cargoIndex", "_turretPath"];
+((fullCrew [_vehicle, ""] select {_body == _x select 0}) select 0) params ["", "", "_cargoIndex", "_turretPath"];
 
 private _locked = if (!(_turretPath isEqualTo [])) then {
     _vehicle lockedTurret _turretPath;

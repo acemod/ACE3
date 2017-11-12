@@ -21,8 +21,18 @@ params ["_body", "_unit"];
 private _vehicle = objectParent _body; // vehicle command doesn't work for dead
 
 // get target crew properties
-((fullCrew [_vehicle, ""] select {_body == _x select 0}) select 0) params ["", "_role", "_cargoIndex", "_turretPath"];
-TRACE_3("found crew",_role,_cargoIndex,_turretPath);
+private ["_cargoIndex", "_turretPath"];
+private _cargoNumber = -1;
+{
+    if ("cargo" == _x select 1) then {
+        INC(_cargoNumber);
+    };
+    if (_body == _x select 0) exitWith {
+        _cargoIndex = _x select 2;
+        _turretPath = _x select 3;
+    };
+} forEach fullCrew [_vehicle, "", true];
+TRACE_3("",_cargoIndex,_cargoNumber,_turretPath);
 
 private _preserveEngineOn = false;
 
@@ -31,7 +41,7 @@ if (!(_turretPath isEqualTo [])) then {
     _unit action ["GetInTurret", _vehicle, _turretPath];
 } else {
     if (_cargoIndex > -1) then {
-        _unit action ["GetInCargo", _vehicle, _cargoIndex];
+        _unit action ["GetInCargo", _vehicle, _cargoNumber];
     } else {
         _unit action ["GetInDriver", _vehicle];
         _preserveEngineOn = isEngineOn _vehicle;
@@ -43,7 +53,7 @@ if (!(_turretPath isEqualTo [])) then {
     {(_this select 0) in (_this select 1)},
     {
         params ["_unit", "_vehicle", "_preserveEngineOn"];
-        TRACE_3("get out",_unit,_vehicle,_preserveEngineOn);
+        TRACE_3("",_unit,_vehicle,_preserveEngineOn);
         _unit action ["GetOut", _vehicle];
         if (_preserveEngineOn) then {
             [{isNull driver _this}, {_this engineOn true}, _vehicle] call CBA_fnc_waitUntilAndExecute;
