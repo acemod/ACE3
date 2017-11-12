@@ -20,7 +20,7 @@ if (_curSel < 0) exitwith {};
 
 private _ctrlIDC = ctrlIDC _control;
 private _display = ctrlParent _control;
-private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
+private _item = _control lbData _curSel;
 
 
 private _fnc_selectItem = {
@@ -30,10 +30,12 @@ private _fnc_selectItem = {
         case 18: {
             if (_item == "") then {
                 GVAR(center) removePrimaryWeaponItem ((GVAR(currentItems) select 18) select _itemIndex);
-                GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + (primaryWeaponMagazine GVAR(center))];
+                private _primaryMags = primaryWeaponMagazine GVAR(center);
+                GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + ([_primaryMags + [""], _primaryMags] select (count _primaryMags > 1))];
             } else {
                 GVAR(center) addPrimaryWeaponItem _item;
-                GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + (primaryWeaponMagazine GVAR(center))];
+                private _primaryMags = primaryWeaponMagazine GVAR(center);
+                GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + ([_primaryMags + [""], _primaryMags] select (count _primaryMags > 1))];
             };
             [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
         };
@@ -41,10 +43,12 @@ private _fnc_selectItem = {
         case 19: {
             if (_item == "") then {
                 GVAR(center) removeSecondaryWeaponItem ((GVAR(currentItems) select 19) select _itemIndex);
-                GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + (secondaryWeaponMagazine GVAR(center))];
+                private _secondaryMags = secondaryWeaponMagazine GVAR(center);
+                GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
             } else {
                 GVAR(center) addSecondaryWeaponItem _item;
-                GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + (secondaryWeaponMagazine GVAR(center))];
+                private _secondaryMags = secondaryWeaponMagazine GVAR(center);
+                GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
             };
             [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
         };
@@ -52,10 +56,12 @@ private _fnc_selectItem = {
         case 20: {
             if (_item == "") then {
                 GVAR(center) removeHandgunItem ((GVAR(currentItems) select 20) select _itemIndex);
-                GVAR(currentItems) set [20, (handgunItems GVAR(center)) + (handgunMagazine GVAR(center))];
+                private _handgunMags = handgunMagazine GVAR(center);
+                GVAR(currentItems) set [20, (handgunItems GVAR(center)) + ([_handgunMags + [""], _handgunMags] select (count _handgunMags > 1))];
             } else {
                 GVAR(center) addHandgunItem _item;
-                GVAR(currentItems) set [20, (handgunItems GVAR(center)) + (handgunMagazine GVAR(center))];
+                private _handgunMags = handgunMagazine GVAR(center);
+                GVAR(currentItems) set [20, (handgunItems GVAR(center)) + ([_handgunMags + [""], _handgunMags] select (count _handgunMags > 1))];
             };
             [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
         };

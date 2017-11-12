@@ -23,7 +23,7 @@ private _display = ctrlParent _control;
 private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
 
 private _weaponDefaultRightPanel = _display displayCtrl IDC_buttonOptic;
-private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS]});
+private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
 
 private _containerDefaultRightPanel = _display displayCtrl IDC_buttonMisc;
 private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
@@ -34,9 +34,12 @@ switch (GVAR(currentLeftPanel)) do {
         private _baseWeapon = ((GVAR(currentItems) select 0) call bis_fnc_baseWeapon);
 
         if ((GVAR(currentItems) select 0) != _item && {_baseWeapon != _item}) then {
+
+            private _compatibleMags = getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
             {
                 GVAR(center) removeMagazines _x;
-            } foreach getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+            } foreach _compatibleMags;
+
             GVAR(currentItems) set [15, uniformItems GVAR(center)];
             GVAR(currentItems) set [16, vestItems GVAR(center)];
             GVAR(currentItems) set [17, backpackItems GVAR(center)];
@@ -44,20 +47,21 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item == "") then {
 
                 GVAR(center) removeWeapon (primaryWeapon GVAR(center));
-                GVAR(currentItems) set [18, ["", "", "", ""]];
+                GVAR(currentItems) set [18, ["", "", "", "", "", ""]];
                 GVAR(currentItems) set [0, _item];
             } else {
 
-                private _compatibleItems = _item call bis_fnc_compatibleItems;
+                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
                 [GVAR(center), _item, 4] call bis_fnc_addweapon;
 
                 {
-                    if (_x in _compatibleItems) then {
+                    if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
                         GVAR(center) addPrimaryWeaponItem _x;
                     };
                 } foreach (GVAR(currentItems) select 18);
 
-                GVAR(currentItems) set [18, primaryWeaponItems GVAR(center)];
+                private _primaryMags = primaryWeaponMagazine GVAR(center);
+                GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + ([_primaryMags + [""], _primaryMags] select (count _primaryMags > 1))];
                 GVAR(currentItems) set [0, _item];
             };
         };
@@ -77,9 +81,12 @@ switch (GVAR(currentLeftPanel)) do {
         private _baseWeapon = ((GVAR(currentItems) select 2) call bis_fnc_baseWeapon);
 
         if ((GVAR(currentItems) select 2) != _item && {_baseWeapon != _item}) then {
+
+            private _compatibleMags = getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
             {
                 GVAR(center) removeMagazines _x;
-            } foreach getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+            } foreach _compatibleMags;
+
             GVAR(currentItems) set [15, uniformItems GVAR(center)];
             GVAR(currentItems) set [16, vestItems GVAR(center)];
             GVAR(currentItems) set [17, backpackItems GVAR(center)];
@@ -87,20 +94,21 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item == "") then {
 
                 GVAR(center) removeWeapon (handgunWeapon GVAR(center));
-                GVAR(currentItems) set [20, ["", "", "", ""]];
+                GVAR(currentItems) set [18, ["", "", "", "", "", ""]];
                 GVAR(currentItems) set [2, _item];
             } else {
 
-                private _compatibleItems = _item call bis_fnc_compatibleItems;
+                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
                 [GVAR(center), _item, 3] call bis_fnc_addweapon;
 
                 {
-                    if (_x in _compatibleItems) then {
+                    if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
                         GVAR(center) addHandgunItem _x;
                     };
                 } foreach (GVAR(currentItems) select 20);
 
-                GVAR(currentItems) set [20, handgunItems GVAR(center)];
+                private _handgunMags = handgunMagazine GVAR(center);
+                GVAR(currentItems) set [20, (handgunItems GVAR(center)) + ([_handgunMags + [""], _handgunMags] select (count _handgunMags > 1))];
                 GVAR(currentItems) set [2, _item];
             };
         };
@@ -120,9 +128,12 @@ switch (GVAR(currentLeftPanel)) do {
         private _baseWeapon = ((GVAR(currentItems) select 1) call bis_fnc_baseWeapon);
 
         if ((GVAR(currentItems) select 1) != _item && {_baseWeapon != _item}) then {
+
+            private _compatibleMags = getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
             {
                 GVAR(center) removeMagazines _x;
-            } foreach getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+            } foreach _compatibleMags;
+
             GVAR(currentItems) set [15, uniformItems GVAR(center)];
             GVAR(currentItems) set [16, vestItems GVAR(center)];
             GVAR(currentItems) set [17, backpackItems GVAR(center)];
@@ -130,20 +141,21 @@ switch (GVAR(currentLeftPanel)) do {
             if (_item == "") then {
 
                 GVAR(center) removeWeapon (secondaryWeapon GVAR(center));
-                GVAR(currentItems) set [19, ["", "", "", ""]];
+                GVAR(currentItems) set [18, ["", "", "", "", "", ""]];
                 GVAR(currentItems) set [1, _item];
             } else {
 
-                private _compatibleItems = _item call bis_fnc_compatibleItems;
+                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
                 [GVAR(center), _item, 1] call bis_fnc_addweapon;
 
                 {
-                    if (_x in _compatibleItems) then {
+                    if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
                         GVAR(center) addSecondaryWeaponItem _x;
                     };
                 } foreach (GVAR(currentItems) select 19);
 
-                GVAR(currentItems) set [19, secondaryWeaponItems GVAR(center)];
+                private _secondaryMags = secondaryWeaponMagazine GVAR(center);
+                GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
                 GVAR(currentItems) set [1, _item];
             };
         };
