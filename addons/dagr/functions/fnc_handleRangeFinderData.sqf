@@ -8,7 +8,7 @@
  * 2: Inclination (Degrees) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [1000, 45, 1] call ace_dagr_fnc_handleRangeFinderData
@@ -19,7 +19,7 @@
 
 #define EMP_RF_ACC 5 // Rangefinder Accuracy
 
-PARAMS_3(_slopeDistance,_azimuth,_inclination);
+params ["_slopeDistance", "_azimuth", "_inclination"];
 
 if (GVAR(vectorConnected)) then {
     GVAR(LAZPOS) = (eyePos player) vectorAdd ([_slopeDistance, _azimuth, _inclination] call CBA_fnc_polar2vect);

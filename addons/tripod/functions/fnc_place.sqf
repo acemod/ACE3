@@ -27,12 +27,10 @@ if (stance _unit == "STAND") then {
 [{
     params ["_unit"];
 
-    private ["_direction", "_position", "_tripod"];
+    private _direction = getDir _unit;
+    private _position = getPosASL _unit vectorAdd [0.8 * sin _direction, 0.8 * cos _direction, 0.02];
 
-    _direction = getDir _unit;
-    _position = getPosASL _unit vectorAdd [0.8 * sin _direction, 0.8 * cos _direction, 0.02];
-
-    _tripod = "ACE_TripodObject" createVehicle [0, 0, 0];
+    private _tripod = "ACE_TripodObject" createVehicle [0, 0, 0];
 
     {
         _tripod animate [_x, 1];

@@ -1,14 +1,14 @@
 /*
  * Author: 654wak654
- * Shows a zeus message through the BIS function, handles localization.
+ * Shows a Zeus message through the BIS function, handles localization.
  * If multiple args are given, they get formatted.
  *
  * Arguments:
- * 0: The message <STRING>
- * N: Anything <ANY><OPTIONAL>
+ * 0: Message <STRING>
+ * N: Anything <ANY> (default: nil)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["something"] call ace_zeus_fnc_showMessage

@@ -30,6 +30,21 @@ class CfgVehicles {
         GVAR(dragDirection) = 0;
     };
 
+    // Big 1.70 Autonomous AA Turrets
+    class StaticMGWeapon;
+    class AAA_System_01_base_F: StaticMGWeapon { // Praetorian 1C (aka Phalanx CIWS)
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class SAM_System_01_base_F: StaticMGWeapon { // Mk49 Spartan
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class SAM_System_02_base_F: StaticMGWeapon { // Mk21 Centurion
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+
     // ammo boxes
     class ThingX;
     class Items_base_F;
@@ -49,6 +64,10 @@ class CfgVehicles {
     };
     //remove actions from Taru Pods
     class Pod_Heli_Transport_04_base_F: Slingload_base_F {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class Pod_Heli_Transport_04_crewed_base_F: StaticWeapon {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
@@ -188,7 +207,24 @@ class CfgVehicles {
         GVAR(dragPosition[]) = {0,1.5,0};
         GVAR(dragDirection) = 90;
     };
+    class Land_PaperBox_01_small_closed_base_F: Items_base_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 0;
 
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.5,0};
+        GVAR(dragDirection) = 90;
+    };
+    class Box_UAV_06_base_F: Items_base_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 0;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.5,0};
+        GVAR(dragDirection) = 0;
+    };
     class ACE_RepairItem_Base: ThingX {};
 
     class ACE_Track: ACE_RepairItem_Base {

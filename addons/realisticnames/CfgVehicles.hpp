@@ -293,9 +293,17 @@ class CfgVehicles {
         displayName = CSTRING(Heli_Attack_01_Name);
     };
 
+    class Heli_Attack_01_dynamicLoadout_base_F;
+    class B_Heli_Attack_01_dynamicLoadout_F: Heli_Attack_01_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_Attack_01_Name);
+    };
+
     class Heli_Light_01_unarmed_base_F;
     class B_Heli_Light_01_F: Heli_Light_01_unarmed_base_F {
         displayName = CSTRING(Heli_Light_01_Name);
+    };
+    class Heli_Light_01_civil_base_F: Heli_Light_01_unarmed_base_F {
+        displayName = CSTRING(Heli_Light_01_civil_Name);
     };
 
     class Heli_Light_01_armed_base_F;
@@ -303,8 +311,9 @@ class CfgVehicles {
         displayName = CSTRING(Heli_Light_01_armed_Name);
     };
 
-    class Heli_Light_01_civil_base_F: Heli_Light_01_unarmed_base_F {
-        displayName = CSTRING(Heli_Light_01_civil_Name);
+    class Heli_Light_01_dynamicLoadout_base_F;
+    class B_Heli_Light_01_dynamicLoadout_F: Heli_Light_01_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_Light_01_armed_Name);
     };
 
     class Heli_Transport_03_base_F;
@@ -328,6 +337,11 @@ class CfgVehicles {
         displayName = CSTRING(Heli_Light_02_unarmed_Name);
     };
 
+    class Heli_Light_02_dynamicLoadout_base_F;
+    class O_Heli_Light_02_dynamicLoadout_F: Heli_Light_02_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_Light_02_Name);
+    };
+
     class Heli_light_03_base_F;
     class I_Heli_light_03_F: Heli_light_03_base_F {
         displayName = CSTRING(Heli_light_03_Name);
@@ -336,6 +350,11 @@ class CfgVehicles {
     class Heli_light_03_unarmed_base_F;
     class I_Heli_light_03_unarmed_F: Heli_light_03_unarmed_base_F {
         displayName = CSTRING(Heli_light_03_unarmed_Name);
+    };
+
+    class Heli_light_03_dynamicLoadout_base_F;
+    class I_Heli_light_03_dynamicLoadout_F: Heli_light_03_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_light_03_Name);
     };
 
     class Heli_Transport_02_base_F;
@@ -349,8 +368,18 @@ class CfgVehicles {
         displayName = CSTRING(Plane_CAS_01_Name);
     };
 
+    class Plane_CAS_01_dynamicLoadout_base_F;
+    class B_Plane_CAS_01_dynamicLoadout_F: Plane_CAS_01_dynamicLoadout_base_F {
+        displayName = CSTRING(Plane_CAS_01_Name);
+    };
+
     class Plane_CAS_02_base_F;
     class O_Plane_CAS_02_F: Plane_CAS_02_base_F {
+        displayName = CSTRING(Plane_CAS_02_Name);
+    };
+
+    class Plane_CAS_02_dynamicLoadout_base_F;
+    class O_Plane_CAS_02_dynamicLoadout_F: Plane_CAS_02_dynamicLoadout_base_F {
         displayName = CSTRING(Plane_CAS_02_Name);
     };
 
@@ -361,6 +390,11 @@ class CfgVehicles {
 
     class I_Plane_Fighter_03_AA_F: I_Plane_Fighter_03_CAS_F {
         displayName = CSTRING(Plane_Fighter_03_AA_Name);
+    };
+
+    class Plane_Fighter_03_dynamicLoadout_base_F;
+    class I_Plane_Fighter_03_dynamicLoadout_F: Plane_Fighter_03_dynamicLoadout_base_F {
+        displayName = CSTRING(Plane_Fighter_03_Name);
     };
 
     // uavs
@@ -375,7 +409,7 @@ class CfgVehicles {
         displayName = CSTRING(UAV_02_Name);
     };
 
-    class UAV_02_CAS_base_F: UAV_02_base_F {};
+    class UAV_02_CAS_base_F;
     class B_UAV_02_CAS_F: UAV_02_CAS_base_F {
         displayName = CSTRING(UAV_02_CAS_Name);
     };
@@ -384,6 +418,17 @@ class CfgVehicles {
     };
     class I_UAV_02_CAS_F: UAV_02_CAS_base_F {
         displayName = CSTRING(UAV_02_CAS_Name);
+    };
+
+    class UAV_02_dynamicLoadout_base_F;
+    class B_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
+        displayName = CSTRING(UAV_02_Name);
+    };
+    class O_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
+        displayName = CSTRING(UAV_02_Name);
+    };
+    class I_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
+        displayName = CSTRING(UAV_02_Name);
     };
 
     // pistols
@@ -525,11 +570,11 @@ class CfgVehicles {
     class Weapon_SMG_02_F: Weapon_Base_F {
         displayName = CSTRING(SMG_02_Name);
     };
-    
+
     class Weapon_SMG_05_F: Weapon_Base_F {
         displayName = CSTRING(SMG_05);
     };
-    
+
     class Weapon_hgun_PDW2000_F: Weapon_Base_F {
         displayName = CSTRING(hgun_PDW2000_Name);
     };

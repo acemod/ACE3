@@ -6,8 +6,11 @@
  * Arguments:
  * 0: The unit that will be put in cardiac arrest state <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_setCardiacArrest
  *
  * Public: yes
  */
@@ -23,22 +26,5 @@ _unit setVariable [QGVAR(heartRate), 0, true];
 
 ["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
-[_unit, true] call FUNC(setUnconscious);
-[QEGVAR(medical,InjuryCritical), _unit] call CBA_fnc_localEvent;
-private _timeInCardiacArrest = 120 + round(random(600));
+[_unit, true] call FUNC(setUnconsciousStatemachine);
 
-[{
-    params ["_args", "_idPFH"];
-    _args params ["_unit", "_startTime", "_timeInCardiacArrest"];
-
-    private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
-    if (_heartRate > 20 || !alive _unit) exitWith {
-        [_idPFH] call CBA_fnc_removePerFrameHandler;
-        _unit setVariable [QGVAR(inCardiacArrest), nil, true];
-    };
-    if (CBA_missionTime - _startTime >= _timeInCardiacArrest) exitWith {
-        [_idPFH] call CBA_fnc_removePerFrameHandler;
-        _unit setVariable [QGVAR(inCardiacArrest), nil, true];
-        [_unit] call FUNC(setDead);
-    };
-}, 1, [_unit, CBA_missionTime, _timeInCardiacArrest] ] call CBA_fnc_addPerFrameHandler;

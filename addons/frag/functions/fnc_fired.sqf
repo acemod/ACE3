@@ -7,7 +7,7 @@
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_frag_fnc_fired
@@ -58,6 +58,6 @@ if (_shouldAdd) then {
     // Skip if less than 0.5 second from last shot
     if ((CBA_missionTime - (_unit getVariable [QGVAR(lastTrack), -1])) < 0.5) exitWith {};
     _unit setVariable [QGVAR(lastTrack), CBA_missionTime];
-    
+
     [_unit, _ammo, _projectile] call FUNC(addPfhRound);
 };

@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_init
  *
  * Public: No
  */
@@ -20,7 +23,7 @@ if (damage _unit > 0) then {
 
 _unit setVariable [QGVAR(pain), 0, true];
 _unit setVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME, true];
-_unit setVariable [QGVAR(isUnconscious), false, true];
+_unit setVariable ["ACE_isUnconscious", false, true];
 _unit setVariable [QGVAR(partialHealCounter), 0, true];
 
 // tourniquets
@@ -31,6 +34,7 @@ _unit setVariable [QGVAR(occludedMedications), nil, true]; //Delayed Medications
 _unit setVariable [QGVAR(openWounds), [], true];
 _unit setVariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(stitchedWounds), [], true];
+_unit setVariable [QEGVAR(medical_engine,isLimping), false, true];
 
 // vitals
 _unit setVariable [QGVAR(heartRate), DEFAULT_HEART_RATE, true];
@@ -60,17 +64,15 @@ _unit setVariable [QGVAR(hasPain), false, true];
 _unit setVariable [QGVAR(painSuppress), 0, true];
 _unit setVariable [QGVAR(painSuppressAdjustments), [], true];
 
-private ["_allUsedMedication", "_logs"];
-
 // medication
-_allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
+private _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
 {
    _unit setVariable [_x select 0, nil];
 } forEach _allUsedMedication;
 _unit setVariable [QGVAR(allUsedMedication), [], true];
 
 // TODO move to treatment
-_logs = _unit getVariable [QGVAR(allLogs), []];
+private _logs = _unit getVariable [QGVAR(allLogs), []];
 {
     _unit setVariable [_x, nil];
 } forEach _logs;

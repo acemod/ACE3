@@ -3,10 +3,10 @@
  * Handles all incoming damage for tanks (including wheeled APCs).
  *
  * Arguments:
- * HandleDamage EH
+ * HandleDamage EH <ARRAY>
  *
  * Return Value:
- * Damage to be inflicted.
+ * Damage to be inflicted. <NUMBER>
  *
  * Example:
  * _this call ace_cookoff_fnc_handleDamage
@@ -29,7 +29,7 @@ if (_hitIndex != -1) then {
 };
 
 // get change in damage
-private "_oldDamage";
+private _oldDamage = 0;
 
 if (_hitpoint isEqualTo "#structural") then {
     _oldDamage = damage _vehicle;

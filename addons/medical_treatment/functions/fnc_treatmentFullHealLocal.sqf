@@ -28,6 +28,7 @@ _target setVariable [QGVAR(occludedMedications), nil, true];
 _target setVariable [QEGVAR(medical,openWounds), [], true];
 _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
 _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
+_target setVariable [QEGVAR(medical_engine,isLimping), false, true];
 
 // vitals
 _target setVariable [QEGVAR(medical,heartRate), 80, true];
@@ -47,7 +48,7 @@ _target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
 
 // generic medical admin
 _target setVariable [QEGVAR(medical,inCardiacArrest), false, true];
-_target setVariable [QEGVAR(medical,isUnconscious), false, true];
+_target setVariable ["ACE_isUnconscious", false, true];
 _target setVariable [QEGVAR(medical,hasLostBlood), 0, true];
 _target setVariable [QEGVAR(medical,isBleeding), false, true];
 _target setVariable [QEGVAR(medical,hasPain), false, true];

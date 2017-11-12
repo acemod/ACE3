@@ -6,7 +6,7 @@
  * step <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_cycle_scope_unit

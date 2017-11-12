@@ -6,7 +6,7 @@
  * 0: Captive Unit being unloaded <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob] call ACE_captives_fnc_vehicleCaptiveMoveOut;

@@ -47,14 +47,20 @@ private _actionPathPositions = ["spine3", "pilot", "LeftForeArm", "RightForeArm"
         private _bodyPart = _x;
         private _actionPath = _actionPaths select (ALL_BODY_PARTS find toLower _bodyPart);
 
-        private _statement = {[_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,treatment)};
-        private _condition = {[_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,canTreatCached)};
-
+        private _statement = {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            [_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,treatment)
+        };
+        private _condition = {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            [_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,canTreatCached)
+        };
         private _action = [
             _actionName, _displayName, _icon, _statement, _condition, {}, [_bodyPart, configName _config], [0, 0, 0], 2, [false, true, false, false, false]
         ] call EFUNC(interact_menu,createAction);
 
         ["CAManBase", 0, [_actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
+        ["CAManBase", 0, ["ACE_MainActions", "ACE_Medical_Radial", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
         ["CAManBase", 1, ["ACE_SelfActions", "Medical", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
     } forEach _allowedBodyParts;
 } forEach configProperties [_actionsConfig, "isClass _x"];

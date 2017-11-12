@@ -1,4 +1,4 @@
-﻿# ACE3 CONTRIBUTOR LIST
+# ACE3 CONTRIBUTOR LIST
 # If you contributed, but are not listed here, contact me:
 # koffeinflummi@gmail.com
 #
@@ -38,7 +38,9 @@ Aggr094 <bastards4glory@gmail.com>
 alef <alefor@gmail.com>
 Aleksey EpMAK Yermakov <epmak777@gmail.com>
 Alganthe <alganthe@live.fr>
+Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
+Anton
 Arcanum417 <lubos.len@gmail.com>
 Arkhir <wonsz666@gmail.com >
 Asgar Serran <piechottaf@web.de>
@@ -51,6 +53,8 @@ Brakoviejo
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
+chris579 <github@klemm.one>
+classicarma
 Clon1998 <ps.patti1998@gmail.com>
 Codingboy
 Coren <coren4@gmail.com>
@@ -61,6 +65,7 @@ dixon13 <dixonbegay@gmail.com>
 Drill <drill87@gmail.com>
 Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
+ElTyranos
 eRazeri
 evromalarkey <evromalarkey@gmail.com>
 F3 Project <alanr@ferstaberinde.com>
@@ -84,8 +89,10 @@ Harakhti <shadowdragonphd@gmail.com>
 havena <silveredenis@gmail.com>
 Hawkins
 Head <brobergsebastian@gmail.com>
+Hybrid V
 Karneck <dschultz26@hotmail.com>
 Kavinsky <nmunozfernandez@gmail.com>
+Keithen <Keithen.Neu@gmail.com>
 Kllrt <kllrtik@gmail.com>
 legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
@@ -103,6 +110,7 @@ nomisum <nomisum@gmail.com>
 OnkelDisMaster <onkeldismaster@gmail.com>
 oscarmolinadev
 PaxJaromeMalues <seemax1991@gmail.com>
+Phyma <sethramstrom@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
 rakowozz
@@ -121,8 +129,10 @@ Tessa Elieff <Fastroping Sound - CreativeCommons Attributions 3.0>
 Toaster <jonathan.pereira@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
+Tuupertunut
 Valentin Torikian <valentin.torikian@gmail.com>
 voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Winter <simon@agius-muscat.net>
+xrufix
 zGuba

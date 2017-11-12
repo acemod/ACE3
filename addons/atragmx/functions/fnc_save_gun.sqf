@@ -3,10 +3,10 @@
  * Saves the currently select gun profile into the profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_save_gun
@@ -15,8 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_index"];
-_index = 0 max (lbCurSel 6000);
+private _index = 0 max (lbCurSel 6000);
 
 GVAR(gunList) set [_index, +GVAR(workingMemory)];
 

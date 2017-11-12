@@ -1,6 +1,6 @@
 /*
  * Author: BaerMitUmlaut
- * Function for closing doors and retracting the hook for most vanilla helos.
+ * Function for opening doors and extending the hook for most vanilla and older Arma helos.
  *
  * Arguments:
  * 0: Helicopter <OBJECT>
@@ -16,25 +16,18 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_fries", "_waitTime"];
 
-_waitTime = 2;
+private _waitTime = 2;
 
-_vehicle animateDoor ["door_R", 1];
-_vehicle animateDoor ["door_L", 1];
-_vehicle animateDoor ["CargoRamp_Open", 1];
-_vehicle animateDoor ["Door_rear_source", 1];
-_vehicle animateDoor ["Door_6_source", 1];
-_vehicle animate ["dvere1_posunZ", 1];
-_vehicle animate ["dvere2_posunZ", 1];
+{_vehicle animateDoor [_x, 1]} forEach ANIMS_ANIMATEDOOR;
+{_vehicle animate [_x, 1]} forEach ANIMS_ANIMATE;
 
 _vehicle setVariable [QGVAR(doorsLocked), true, true];
 
-_fries = _vehicle getVariable [QGVAR(FRIES), objNull];
+private _fries = _vehicle getVariable [QGVAR(FRIES), objNull];
 if !(isNull _fries) then {
     [{
-        _this animate ["extendHookRight", 1];
-        _this animate ["extendHookLeft", 1];
+        {_this animate [_x, 1]} forEach ANIMS_HOOK;
     }, _fries, 2] call CBA_fnc_waitAndExecute;
     _waitTime = 4;
 };

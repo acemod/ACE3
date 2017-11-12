@@ -15,11 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_theMap", "_mapSize"];
-
 disableSerialization;
 
-_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+private _display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
 
 if (isNull _display) exitWith {ERROR("No Display");};
 

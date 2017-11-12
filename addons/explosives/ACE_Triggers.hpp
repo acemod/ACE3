@@ -44,7 +44,7 @@ onSetup parameters:
         isAttachable = 0;
         displayName = CSTRING(IRSensor);
         picture = QPATHTOF(Data\UI\PressurePlate.paa);
-        onPlace = "false";
+        onPlace = QUOTE(false);
     };
     class Timer {
         isAttachable = 1;
@@ -57,6 +57,6 @@ onSetup parameters:
         isAttachable = 0;
         displayName = CSTRING(TripWire);
         picture = QPATHTOF(Data\UI\Tripwire.paa);
-        onPlace = "false";
+        onPlace = QUOTE(false);
     };
 };

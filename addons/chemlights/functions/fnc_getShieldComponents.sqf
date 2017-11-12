@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit to check <OBJECT>
  *
- * Return value:
+ * Return Value:
  * List of carried chemlight classnames <ARRAY>
  *
  * Example:

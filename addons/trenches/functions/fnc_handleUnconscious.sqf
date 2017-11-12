@@ -8,11 +8,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_trenches_fnc_handleUnconscious
+ *
  * Public: No
 */
 #include "script_component.hpp"
 
 params ["_unit"];
+
+if (!local _unit) exitWith {};
 
 if (_unit getVariable [QGVAR(isPlacing), false]) then {
     [_unit] call FUNC(placeCancel);

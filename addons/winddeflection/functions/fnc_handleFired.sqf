@@ -6,7 +6,7 @@
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_advanced_ballistics_fnc_handleFired

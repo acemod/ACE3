@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Modifies the base interaction point for repair items to show it's current damage
+ * Modifies the base interaction point for repair items to show it's current damage.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -9,10 +9,10 @@
  * 3: Action Data <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * [cursorObject, player, [], []] call ace_repair_fnc_modifyInteraction;
+ * [cursorObject, ace_player, [], []] call ace_repair_fnc_modifyInteraction;
  *
  * Public: No
  */
@@ -21,7 +21,7 @@
 params ["_target", "_player", "_args", "_actionData"];
 TRACE_4("params",_target,_player,_args,_actionData);
 
-// Interaction dots numbered 0..8, white to red. 
+// Interaction dots numbered 0..8, white to red.
 // Convert damage to number (rounding up), so that even slight damage can bee seen
 
 private _fileName = format [QPATHTOF(ui\damage_%1_ca.paa), ceil (linearConversion [0, 1, damage _target, 0, 8, true])];

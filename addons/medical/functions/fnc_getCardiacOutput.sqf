@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Current cardiac output (liter per second) <NUMBER>
  *
  * Example:

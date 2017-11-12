@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Argument:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_laser_fnc_rotateVectline
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_map", "_theta"];

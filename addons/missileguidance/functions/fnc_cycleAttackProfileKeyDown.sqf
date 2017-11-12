@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
@@ -22,14 +23,23 @@ if (!alive ACE_player) exitWith {};
 if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
 
 
-private ["_currentShooter", "_currentMagazine"];
-if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
-    _currentShooter = ACE_player;
-    _currentMagazine = currentMagazine ACE_player;
+private _currentShooter = objNull;
+private _currentMagazine = "";
+if (isNull (ACE_controlledUAV param [0, objNull])) then {
+    if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
+        _currentShooter = ACE_player;
+        _currentMagazine = currentMagazine ACE_player;
+    } else {
+        _currentShooter = vehicle ACE_player;
+        private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+        _currentMagazine = _currentShooter currentMagazineTurret _turretPath;
+    };
 } else {
-    _currentShooter = vehicle ACE_player;
-    _currentMagazine = _currentShooter currentMagazineTurret (ACE_player call CBA_fnc_turretPath);
+    _currentShooter = ACE_controlledUAV select 0;
+    private _turretPath = ACE_controlledUAV select 2;
+    _currentMagazine = _currentShooter currentMagazineTurret _turretPath;
 };
+
 if (_currentMagazine == "") exitWith {TRACE_1("no magazine",_currentMagazine)};
 
 private _ammo = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");

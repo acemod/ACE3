@@ -15,23 +15,21 @@
  */
 #include "script_component.hpp"
 
-private ["_mapSize", "_waypoints", "_size", "_targetPos", "_relBearing", "_wpName", "_wpPos", "_alpha"];
-
 params ["_theMap"];
 
-_mapSize = (ctrlPosition _theMap) select 3;
+private _mapSize = (ctrlPosition _theMap) select 3;
 
-_waypoints = [] call FUNC(deviceGetWaypoints);
+private _waypoints = [] call FUNC(deviceGetWaypoints);
 
 if (GVAR(currentApplicationPage) == 1) then {
     _theMap ctrlMapAnimAdd [0, DUMMY_ZOOM, DUMMY_POS];
     ctrlMapAnimCommit _theMap;
-    _size = 412 * _mapSize;
+    private _size = 412 * _mapSize;
     _theMap drawIcon [QUOTE(PATHTO_R(images\compass_starInverted.paa)), [1,1,1,1], DUMMY_POS, _size, _size, (-1 * (([ACE_player] call CBA_fnc_headDir) select 0)), '', 0 ];
     _theMap drawIcon [QUOTE(PATHTO_R(images\compass_needle.paa)), [0.533,0.769,0.76,1], DUMMY_POS, _size, _size, 0, '', 0 ];
 
     if (GVAR(currentWaypoint) != -1) then {
-        _targetPos = [];
+        private _targetPos = [];
         if (GVAR(currentWaypoint) == -2) then {
             if ((count GVAR(rangeFinderPositionASL)) == 3) then {
                 _targetPos = GVAR(rangeFinderPositionASL);
@@ -42,7 +40,7 @@ if (GVAR(currentApplicationPage) == 1) then {
             };
         };
         if ((count _targetPos) == 3) then {
-            _relBearing = (ACE_player getDir _targetPos) - (([ACE_player] call CBA_fnc_headDir) select 0);
+            private _relBearing = (ACE_player getDir _targetPos) - (([ACE_player] call CBA_fnc_headDir) select 0);
             _theMap drawIcon [QUOTE(PATHTO_R(images\compass_needle.paa)), [1,0.564,0.564,1], DUMMY_POS, _size, _size, _relBearing, '', 0 ];
         };
     };
@@ -55,14 +53,14 @@ if (GVAR(currentApplicationPage) == 1) then {
         _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom)/_mapSize), (getPosASL ACE_player)];
         ctrlMapAnimCommit _theMap;
     };
-    _size = 48 * _mapSize;
+    private _size = 48 * _mapSize;
     _theMap drawIcon [QUOTE(PATHTO_R(images\icon_self.paa)), [0.533,0.769,0.76,0.75], (getPosASL ACE_player), _size, _size, (([ACE_player] call CBA_fnc_headDir) select 0), '', 0 ];
 
     if (GVAR(settingShowAllWaypointsOnMap)) then {
         _size = 32 * _mapSize;
         {
             _x params ["_wpName", "_wpPos"];
-            _alpha = if (_forEachIndex == GVAR(currentWaypoint)) then {1} else {0.5};
+            private _alpha = if (_forEachIndex == GVAR(currentWaypoint)) then {1} else {0.5};
             _theMap drawIcon [QUOTE(PATHTO_R(images\icon_mapWaypoints.paa)), [1,1,1,_alpha], _wpPos, _size, _size, 0, '', 0 ];
         } forEach _waypoints;
     };

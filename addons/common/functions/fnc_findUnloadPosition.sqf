@@ -1,20 +1,20 @@
 /*
  * Author: PabstMirror, ViperMaul
- * Find a safe place near a vehicle to unload something
- * Handles Normal Terrain, In Water or On Buildings (Pier, StaticShip)
+ * Find a safe place near a vehicle to unload something.
+ * Handles Normal Terrain, In Water or On Buildings (Pier, StaticShip).
  *
  * Arguments:
  * 0: Source Vehicle <OBJECT>
  * 1: Cargo Classname <STRING>
- * 2: Unloader (player) <OBJECT><OPTIONAL>
- * 3: Max Distance (meters) <NUMBER><OPTIONAL>
- * 4: Check Vehicle is Stable <BOOL><OPTIONAL>
+ * 2: Unloader (player) <OBJECT> (default: objNull)
+ * 3: Max Distance (meters) <NUMBER> (default: 10)
+ * 4: Check Vehicle is Stable <BOOL> (default: true)
  *
  * Return Value:
- * Unload PositionAGL (Can Be [] if no valid pos found) <ARRAY>
+ * Unload PositionAGL (can Be [] if no valid pos found) <ARRAY>
  *
  * Example:
- * [theCar, "CAManBase", player, 10, true] call ace_common_fnc_findUnloadPosition;
+ * [theCar, "CAManBase", player, 10, true] call ace_common_fnc_findUnloadPosition
  *
  * Public: No
  */

@@ -26,17 +26,15 @@ params ["_args"];
 _args params ["_caller", "_target","_selectionName","_className","","","_claimedObjects"];
 TRACE_4("params",_caller,_target,_selectionName,_className);
 
-private ["_config","_callback", "_weaponSelect"];
-
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
-if (vehicle _caller == _caller) then {
+if (vehicle _caller == _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];
 
-_weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
+private _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
 if (_weaponSelect != "") then {
     _caller selectWeapon _weaponSelect;
 } else {
@@ -50,9 +48,9 @@ if (_weaponSelect != "") then {
 } forEach _claimedObjects;
 
 // Record specific callback
-_config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 
-_callback = getText (_config >> "callbackSuccess");
+private _callback = getText (_config >> "callbackSuccess");
 if (isNil _callback) then {
     _callback = compile _callback;
 } else {

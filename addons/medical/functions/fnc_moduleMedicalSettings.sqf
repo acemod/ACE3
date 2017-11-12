@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ACE_medical_fnc_moduleMedicalSettings
+ *
  * Public: No
  */
 
@@ -53,6 +56,8 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(menuTypeStyle), "menuTypeStyle"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(ivFlowRate), "ivFlowRate"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowSelfIV), "allowSelfIV"] call EFUNC(common,readSettingFromModule);
+
+[_logic, QGVAR(spontaneousWakeUpChance), "spontaneousWakeUpChance"] call EFUNC(common,readSettingFromModule);
 
 //[_logic, QGVAR(allowLitterCreation), "allowLitterCreation"] call EFUNC(common,readSettingFromModule);
 //[_logic, QGVAR(litterCleanUpDelay), "litterCleanUpDelay"] call EFUNC(common,readSettingFromModule);

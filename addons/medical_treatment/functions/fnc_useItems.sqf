@@ -7,9 +7,12 @@
  * 1: Patient <OBJECT>
  * 2: Items <ARRAY<STRING>>
  *
- * ReturnValue:
+ * Return Value:
  * 0: success <BOOL>
  * 1: Unit <OBJECT>
+ *
+ * Example:
+ * [unit, patient, ["bandage"]] call ACE_medical_treatment_fnc_useItems
  *
  * Public: Yes
  */

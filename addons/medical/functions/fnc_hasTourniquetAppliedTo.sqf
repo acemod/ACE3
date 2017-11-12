@@ -6,7 +6,7 @@
  * 0: The Unit <OBJECT>
  * 1: Body Part <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Has tourniquet applied <BOOL>
  *
  * Example:

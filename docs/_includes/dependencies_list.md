@@ -138,6 +138,10 @@
 `ace_interaction`
 {% endif %}
 
+{% if include.component == "hellfire" %}
+`ace_interaction`, `ace_missileguidance`
+{% endif %}
+
 {% if include.component == "hitreactions" %}
 `ace_common`
 {% endif %}
@@ -202,6 +206,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "maverick" %}
+`ace_hellfire`
+{% endif %}
+
 {% if include.component == "medical" %}
 `ace_interaction`, `ace_apl`
 {% endif %}
@@ -258,6 +266,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "nlaw" %}
+`ace_missileguidance`
+{% endif %}
+
 {% if include.component == "noidle" %}
 `ace_common`
 {% endif %}
@@ -287,6 +299,14 @@
 {% endif %}
 
 {% if include.component == "parachute" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "pylons" %}
+`ace_interact_menu`
+{% endif %}
+
+{% if include.component == "quickmount" %}
 `ace_common`
 {% endif %}
 
@@ -419,7 +439,7 @@
 {% endif %}
 
 {% if include.component == "zeus" %}
-`ace_common`
+`ace_common`, `ace_ai`
 {% endif %}
 
 {% if include.component == "compat_adr_97" %}

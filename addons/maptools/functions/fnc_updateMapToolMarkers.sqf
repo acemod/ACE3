@@ -6,7 +6,10 @@
  * 0: The Map <CONTROL>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [CONTROL] call ACE_maptools_fnc_updateMapToolMarkers
  *
  * Public: No
  */

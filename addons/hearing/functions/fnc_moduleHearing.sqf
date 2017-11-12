@@ -3,10 +3,15 @@
  * Initializes the Hearing module.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.)
+ * Whatever the module provides. (I dunno.) <UNKNOWN>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [player] call ACE_hearing_fnc_moduleHearing
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

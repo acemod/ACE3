@@ -170,4 +170,29 @@ class CfgMagazines {
             };
         };
     };
+
+
+    // Orange DLC:
+    class APERSMineDispenser_Mag: SatchelCharge_Remote_Mag {
+        GVAR(SetupObject) = "ACE_Explosives_Place_APERSMineDispenser";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+        };
+    };
+    class TrainingMine_Mag: APERSMine_Range_Mag {
+        GVAR(SetupObject) = "ACE_Explosives_Place_TrainingMine";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.02;
+            };
+        };
+    };
 };
