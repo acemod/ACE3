@@ -152,7 +152,33 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
     return 0.0;
 }
 
-double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double airFriction, double boreHeight) {
+float replicateVanillaZero(float zeroRange, float muzzleVelocity, float airFriction) {
+    const float maxDeltaT = 0.05f;
+    float time = 0.0f;
+    ace::vector3<float> curShotPos = { 0, 0, 0 };
+    ace::vector3<float> speed = { muzzleVelocity, 0, 0 };
+
+    while (time < 8.0f) {
+        float distLeft = zeroRange - curShotPos.x();
+        float traveled = speed.x() * maxDeltaT;
+        if (distLeft < traveled) {
+            float deltaT = distLeft / speed.x();
+            speed -= { 0, GRAVITY * deltaT, 0 };
+            curShotPos += speed * deltaT;
+            time += deltaT;
+            break;
+        } else {
+            float deltaT = maxDeltaT;
+            curShotPos += speed * deltaT;
+            time += deltaT;
+            speed += speed * (speed.magnitude() * airFriction * deltaT);
+            speed -= { 0, GRAVITY * deltaT, 0 };
+        }
+    }
+    return -std::atan(curShotPos.y() / zeroRange);
+}
+
+double calculateVanillaZero(double zeroRange, double muzzleVelocity, double airFriction, double boreHeight) {
     double zeroAngle = 0.0f;
     double deltaT = 1.0 / std::max(100.0, zeroRange);
 
@@ -197,7 +223,7 @@ double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double
         double offset = -std::atan(y / zeroRange);
         zeroAngle += offset;
 
-        if (std::abs(offset) < 0.0001f) {
+        if (std::abs(offset) < 0.00001f) {
             break;
         }
     }
@@ -205,7 +231,7 @@ double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double
     return zeroAngle;
 }
 
-double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHeight, double temperature, double pressure, double humidity, double ballisticCoefficient, int dragModel, char*  atmosphereModel) {
+double calculateAdvancedZero(double zeroRange, double muzzleVelocity, double boreHeight, double temperature, double pressure, double humidity, double ballisticCoefficient, int dragModel, char*  atmosphereModel) {
     double zeroAngle = 0.0f;
     double deltaT = 1.0 / std::max(100.0, zeroRange);
 
@@ -253,7 +279,7 @@ double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHe
         double offset = -std::atan(y / zeroRange);
         zeroAngle += offset;
 
-        if (std::abs(offset) < 0.0001f) {
+        if (std::abs(offset) < 0.00001f) {
             break;
         }
     }
@@ -642,18 +668,28 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
-    } else if (!strcmp(mode, "zeroAngleVanilla")) {
+    } else if (!strcmp(mode, "replicateVanillaZero")) {
+        float zeroRange = strtof(strtok_s(NULL, ":", &next_token), NULL);
+        float initSpeed = strtof(strtok_s(NULL, ":", &next_token), NULL);
+        float airFriction = strtof(strtok_s(NULL, ":", &next_token), NULL);
+
+        float zeroAngle = replicateVanillaZero(zeroRange, initSpeed, airFriction);
+
+        outputStr << DEGREES(zeroAngle);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        EXTENSION_RETURN();
+    } else if (!strcmp(mode, "calcZero")) {
         double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double initSpeed = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double airFriction = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
 
-        double zeroAngle = calculateVanillaZeroAngle(zeroRange, initSpeed, airFriction, boreHeight);
+        double zeroAngle = calculateVanillaZero(zeroRange, initSpeed, airFriction, boreHeight);
 
         outputStr << DEGREES(zeroAngle);
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
-    } else if (!strcmp(mode, "zeroAngle")) {
+    } else if (!strcmp(mode, "calcZeroAB")) {
         double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double muzzleVelocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
@@ -664,7 +700,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         int dragModel = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
         char* atmosphereModel = strtok_s(NULL, ":", &next_token);
 
-        double zeroAngle = calculateZeroAngle(zeroRange, muzzleVelocity, boreHeight, temperature, pressure, humidity, ballisticCoefficient, dragModel, atmosphereModel);
+        double zeroAngle = calculateAdvancedZero(zeroRange, muzzleVelocity, boreHeight, temperature, pressure, humidity, ballisticCoefficient, dragModel, atmosphereModel);
 
         outputStr << DEGREES(zeroAngle);
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);

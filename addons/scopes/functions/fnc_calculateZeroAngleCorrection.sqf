@@ -32,11 +32,11 @@ if (_initSpeedCoef < 0) then {
     _initSpeed = _initSpeed * (-1 * _initSpeedCoef);
 };
 
-private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngleVanilla:%1:%2:%3:%4", _oldZeroRange, _initSpeed, _airFriction, 0];
+private _zeroAngle = "ace_advanced_ballistics" callExtension format ["replicateVanillaZero:%1:%2:%3", _oldZeroRange, _initSpeed, _airFriction];
 private _vanillaZero = parseNumber _zeroAngle;
 
 private _trueZero = if (!_advancedBallistics) then {
-    _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngleVanilla:%1:%2:%3:%4", _newZeroRange, _initSpeed, _airFriction, _boreHeight];
+    _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _newZeroRange, _initSpeed, _airFriction, _boreHeight];
     (parseNumber _zeroAngle)
 } else {
     // Get Weapon and Ammo Configurations
@@ -62,7 +62,7 @@ private _trueZero = if (!_advancedBallistics) then {
         _initSpeed = _initSpeed + _ammoTemperatureVelocityShift;
     };
 
-    _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngle:%1:%2:%3:%4:%5:%6:%7:%8:%9", _newZeroRange, _initSpeed, _boreHeight, GVAR(zeroReferenceTemperature), GVAR(zeroReferenceBarometricPressure), GVAR(zeroReferenceHumidity), _ballisticCoefficients select 0, _dragModel, _atmosphereModel];
+    _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZeroAB:%1:%2:%3:%4:%5:%6:%7:%8:%9", _newZeroRange, _initSpeed, _boreHeight, GVAR(zeroReferenceTemperature), GVAR(zeroReferenceBarometricPressure), GVAR(zeroReferenceHumidity), _ballisticCoefficients select 0, _dragModel, _atmosphereModel];
     (parseNumber _zeroAngle)
 };
 
