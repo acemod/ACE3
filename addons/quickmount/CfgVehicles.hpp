@@ -54,31 +54,31 @@ class CfgVehicles {
                 statement = ""; \
                 insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
             }; \
-        };
+        }
 
     class LandVehicle;
     class Car: LandVehicle {
-        GETIN_ACTIONS
+        GETIN_ACTIONS;
     };
     class Motorcycle: LandVehicle {
-        GETIN_ACTIONS
+        GETIN_ACTIONS;
     };
     class StaticWeapon: LandVehicle {
-        GETIN_ACTIONS
+        GETIN_ACTIONS;
     };
     class Tank: LandVehicle {
-        GETIN_ACTIONS
+        GETIN_ACTIONS;
     };
     class Air;
     class Helicopter: Air {
-        GETIN_ACTIONS
+        GETIN_ACTIONS;
     };
     class Plane: Air {
-        GETIN_ACTIONS
+        GETIN_ACTIONS;
     };
     class Ship;
     class Ship_F: Ship {
-        GETIN_ACTIONS
+        GETIN_ACTIONS;
     };
 
 };
