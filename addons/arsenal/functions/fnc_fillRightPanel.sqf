@@ -97,6 +97,12 @@ private _itemsToCheck = [];
 private _compatibleMagsPrimaryMuzzle = [];
 private _compatibleMagsSecondaryMuzzle = [];
 
+private _allCompatibleMags = [];
+{
+    _allCompatibleMags append (_x select 0);
+    _allCompatibleMags append (_x select 1);
+} foreach _compatibleMagazines;
+
 private _ctrlPanel = _display displayCtrl IDC_rightTabContent;
 
 switch (GVAR(currentLeftPanel)) do {
@@ -225,10 +231,10 @@ switch (_ctrlIDC) do {
     case IDC_buttonMag : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 2) arrayIntersect ((_compatibleMagazines select 0) + (_compatibleMagazines select 1) + (_compatibleMagazines select 2)));
+        } foreach ((GVAR(virtualItems) select 2) arrayIntersect _allCompatibleMags);
         {
             ["CfgMagazines", _x, true, true] call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 19) arrayIntersect ((_compatibleMagazines select 0) + (_compatibleMagazines select 1) + (_compatibleMagazines select 2)));
+        } foreach ((GVAR(virtualItems) select 19) arrayIntersect _allCompatibleMags);
     };
 
     case IDC_buttonMagALL : {
