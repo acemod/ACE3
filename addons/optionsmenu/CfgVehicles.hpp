@@ -1,7 +1,7 @@
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleAllowConfigExport: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AllowConfigExport_Module_DisplayName);
         //icon = "";
         category = "ACE";

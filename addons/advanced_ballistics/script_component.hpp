@@ -16,7 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define GRAVITY 9.80665
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15
 #define KELVIN(t) (t - ABSOLUTE_ZERO_IN_CELSIUS)
 #define CELSIUS(t) (t + ABSOLUTE_ZERO_IN_CELSIUS)

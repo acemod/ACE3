@@ -41,16 +41,16 @@ private _lead = GVAR(leadOutput) select GVAR(currentTarget);
 
 switch (GVAR(currentScopeUnit)) do {
     case 0: {
-        _elevationAbs = _elevationAbs / 3.38;
-        _windageAbs = _windageAbs / 3.38;
+        _elevationAbs = MOA_TO_MRAD(_elevationAbs);
+        _windageAbs = MOA_TO_MRAD(_windageAbs);
 
-        _wind2 = _wind2 / 3.38;
+        _wind2 = MOA_TO_MRAD(_wind2);
 
-        _elevationRel = _elevationRel / 3.38;
-        _windageRel = _windageRel / 3.38;
+        _elevationRel = MOA_TO_MRAD(_elevationRel);
+        _windageRel = MOA_TO_MRAD(_windageRel);
 
-        _elevationCur = _elevationCur / 3.38;
-        _windageCur = _windageCur / 3.38;
+        _elevationCur = MOA_TO_MRAD(_elevationCur);
+        _windageCur = MOA_TO_MRAD(_windageCur);
     };
     case 2: {
         _elevationAbs = _elevationAbs * 1.047;
@@ -65,7 +65,7 @@ switch (GVAR(currentScopeUnit)) do {
         _windageCur = _windageCur * 1.047;
     };
     case 3: {
-        private _clickSize = [1, 1 / 1.047, 3.38] select (GVAR(workingMemory) select 7);
+        private _clickSize = [1, 1 / 1.047, MRAD_TO_MOA(1)] select (GVAR(workingMemory) select 7);
         private _clickNumber = GVAR(workingMemory) select 8;
         private _clickInterval = _clickSize / _clickNumber;
 

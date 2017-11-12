@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_init"];
+TRACE_1("cam",_init);
 
 // No change
 if (_init isEqualTo !isNil QGVAR(camera)) exitWith {};

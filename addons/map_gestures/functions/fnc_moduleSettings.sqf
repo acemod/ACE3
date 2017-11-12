@@ -19,7 +19,7 @@
 
 params ["_logic", "", "_activated"];
 
-if (!_activated || !isServer) exitWith {};
+if (!_activated) exitWith {};
 
 [_logic, QGVAR(enabled), "enabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(maxRange), "maxRange"] call EFUNC(common,readSettingFromModule);
@@ -30,14 +30,14 @@ private _defaultLeadColor = _logic getVariable ["defaultLeadColor", ""];
 if (_defaultLeadColor != "") then {
     _defaultLeadColor = call compile ("[" + _defaultLeadColor + "]");
     if (!([_defaultLeadColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultLeadColor is not a valid color array.")};
-    [QGVAR(defaultLeadColor), _defaultLeadColor, true, true] call EFUNC(common,setSetting);
+    ["CBA_settings_setSettingMission", [QGVAR(defaultLeadColor), _defaultLeadColor, true]] call CBA_fnc_localEvent;
 };
 
 private _defaultColor = _logic getVariable ["defaultColor", ""];
 if (_defaultColor != "") then {
     _defaultColor = call compile ("[" + _defaultColor + "]");
     if (!([_defaultColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultColor is not a valid color array.")};
-    [QGVAR(defaultColor), _defaultColor, true, true] call EFUNC(common,setSetting);
+    ["CBA_settings_setSettingMission", [QGVAR(defaultColor), _defaultColor, true]] call CBA_fnc_localEvent;
 };
 
 INFO("Map Gestures Module Initialized.");

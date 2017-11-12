@@ -57,6 +57,11 @@ private _trueZero = if (!_advancedBallistics) then {
         _initSpeed = _initSpeed + _barrelVelocityShift;
     };
 
+    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,ammoTemperatureEnabled), false]) then {
+        private _ammoTemperatureVelocityShift = ([_ammoTempMuzzleVelocityShifts, GVAR(zeroReferenceTemperature)] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift));
+        _initSpeed = _initSpeed + _ammoTemperatureVelocityShift;
+    };
+
     _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngle:%1:%2:%3:%4:%5:%6:%7:%8:%9", _newZeroRange, _initSpeed, _boreHeight, GVAR(zeroReferenceTemperature), GVAR(zeroReferenceBarometricPressure), GVAR(zeroReferenceHumidity), _ballisticCoefficients select 0, _dragModel, _atmosphereModel];
     (parseNumber _zeroAngle)
 };

@@ -15,7 +15,7 @@
                 "",
                 {[_target] call FUNC(showDialog)},
                 {
-                    private _vehicles = _target nearObjects ["LandVehicle", GVAR(searchDistance) + 10];
+                    private _vehicles = nearestObjects [_target, ["Air", "LandVehicle", "Slingload_base_F", "ReammoBox_F"], GVAR(searchDistance) + 10];
                     private _filter = ["transportAmmo", QEGVAR(rearm,defaultSupply)] select (["ace_rearm"] call EFUNC(common,isModLoaded));
                     private _rearmVehicles = {(getNumber (configFile >> "CfgVehicles" >> typeOf _x >> _filter)) > 0} count _vehicles;
 
@@ -43,4 +43,6 @@
 
         addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleDisconnect)];
     };
+
+    GVAR(searchDistanceSqr) = GVAR(searchDistance) ^ 2;
 }] call CBA_fnc_addEventHandler;

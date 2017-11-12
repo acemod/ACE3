@@ -14,10 +14,6 @@ class ACE_Settings {
      *     values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"}; // Stringtable entries that describe the options
      * };
      */
-    class GVAR(forceAllSettings) {
-        value = 0;
-        typeName = "BOOL";
-    };
     class GVAR(checkPBOsAction) {
         value = 0;
         typeName = "SCALAR";

@@ -18,10 +18,8 @@ GVAR(runAtSettingsInitialized) = [];
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings on the server and broadcast them
-if (isServer) then {
-    call FUNC(loadSettingsOnServer);
-};
+// Load ace_settings into CBA Settings
+[] call FUNC(cbaSettings);
 
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];

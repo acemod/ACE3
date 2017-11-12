@@ -41,7 +41,7 @@ switch (false) do {
         [LSTRING(OnlyAlive)] call _fnc_errorAndClose;
     };
     case !(isPlayer _unit): {
-        [LSTRING(OnlyNonPlayer)] call _fnc_errorAndClose;
+        ["str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call _fnc_errorAndClose;
     };
 };
 private _units = units _unit;

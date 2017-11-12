@@ -60,4 +60,12 @@ class ACE_Settings {
         displayName = CSTRING(deduceBarometricPressureFromTerrainAltitude_displayName);
         description = CSTRING(deduceBarometricPressureFromTerrainAltitude_description);
     };
+    
+    class GVAR(useLegacyUI) {
+        typeName = "BOOL";
+        value = 0;
+        isClientSettable = 1;
+        displayName = CSTRING(useLegacyUI_displayName);
+        description = CSTRING(useLegacyUI_description);
+    };
 };
