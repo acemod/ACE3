@@ -121,7 +121,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(VehicleKeyAssign_Module_DisplayName);
         function = QFUNC(moduleSync);
-        scope = 1;
+        scope = 2;
         isGlobal = 0;
         icon = QPATHTOF(UI\Icon_Module_VehicleKey_ca.paa);
         functionPriority = 0;
