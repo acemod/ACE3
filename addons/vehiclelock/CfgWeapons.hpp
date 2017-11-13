@@ -11,7 +11,7 @@ class CfgWeapons {
         picture = QPATHTOF(ui\keyBlack.paa);
         scope = 2;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0;
+            mass = 0.1;
         };
     };
     class ACE_key_lockpick: ACE_key_master {
