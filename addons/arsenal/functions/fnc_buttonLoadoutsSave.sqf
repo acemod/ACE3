@@ -125,6 +125,7 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
         };
 
+        TRACE_2("loadout state after unique item check",_editBoxContent, _loadout);
         if (count _sameNameLoadoutsList == 0) then {
             _data pushBack [_editBoxContent, _loadout];
         } else {
@@ -141,6 +142,7 @@ switch (GVAR(currentLoadoutsTab)) do {
         ADD_LOADOUTS_LIST_PICTURES
 
         _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
+        TRACE_2("loadout state after verifyLoadout",_editBoxContent, _loadout);
 
         _contentPanelCtrl lnbSort [1, false];
 
