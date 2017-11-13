@@ -10,7 +10,7 @@
  * bore height <NUMBER>
  *
  * Example:
- * [player] call ace_scopes_fnc_getBoreHeight
+ * [player, 0] call ace_scopes_fnc_getBoreHeight
  *
  * Public: Yes
  */

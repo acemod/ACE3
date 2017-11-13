@@ -1,7 +1,7 @@
 /*
  * Author: esteldunedain
  * Reads a setting value from a module, set it and force it. Logs if the setting is missing from the module.
- * Must be called on the server, effect is global.
+ * Must be called on all machines!!!!!!!
  *
  * Arguments:
  * 0: Module <OBJECT>
@@ -16,11 +16,15 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
-
 params ["_logic", "_settingName", "_moduleVariable"];
+
+// Check if the variable is already defined
+if (isNil _settingName) exitWith {
+    ERROR_1("readSettingFromModule - param [%1] is not an ace_setting", _settingName);
+};
 
 // Check if the parameter is defined in the module
 if (isNil {_logic getVariable _moduleVariable}) exitWith {
@@ -37,5 +41,10 @@ if (_value isEqualTo -1) then {
     };
 };
 
-// Set the setting globally and force it
-[_settingName, _value, true, true] call FUNC(setSetting);
+if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
+    WARNING_1("Setting [%1] - Already Forced",_settingName);
+};
+
+// Set the setting as a mission setting and force it
+TRACE_2("setSettingMission from module",_settingName,_value);
+["CBA_settings_setSettingMission", [_settingName, _value, true]] call CBA_fnc_localEvent;

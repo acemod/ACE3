@@ -32,6 +32,7 @@ _zeroing = _zeroing vectorMultiply MRAD_TO_DEG(1);
 
 if (GVAR(correctZeroing)) then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
+    private _baseAngle = GVAR(baseAngle) select _weaponIndex; 
     private _boreHeight = GVAR(boreHeight) select _weaponIndex;
     private _oldZeroRange = currentZeroing _unit;
     private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
@@ -39,7 +40,7 @@ if (GVAR(correctZeroing)) then {
     if (isNil "_zeroCorrection") then {
          _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
     };
-    _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection];
+    _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection - _baseAngle];
 };
 
 if (_zeroing isEqualTo [0, 0, 0]) exitWith {};

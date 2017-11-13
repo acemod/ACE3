@@ -59,7 +59,7 @@ private _textCenterLine5 = "";
 private _textCenterLine6 = "";
 
 private _windSpeed = call FUNC(measureWindSpeed);
-private _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+private _windDir = (wind select 0) atan2 (wind select 1);
 
 private _playerDir = getDir ACE_player;
 private _playerAltitude = (getPosASL ACE_player) select 2;

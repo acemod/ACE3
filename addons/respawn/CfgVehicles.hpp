@@ -7,8 +7,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(module);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_Respawn_ca.paa);
 
         class Arguments {

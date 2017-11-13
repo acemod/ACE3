@@ -1,7 +1,7 @@
 class CfgVehicles {
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(windDeflection_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Wind_ca.paa);
         category = "ACE";

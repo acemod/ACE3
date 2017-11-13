@@ -41,7 +41,7 @@ TRACE_2("Unit fired with temp:",_unit,_temperature);
 TRACE_4("weapon data from cache",_weapon,_dispersion,_slowdownFactor,_jamChance);
 
 // Dispersion and bullet slow down
-if (GVAR(overheatingDispersion)) then {
+if (GVAR(overheatingDispersion) && _scaledTemperature > 0.1) then {
     // Exit if GVAR(pseudoRandomList) isn't synced yet
     if (isNil QGVAR(pseudoRandomList)) exitWith {ERROR("No pseudoRandomList sync");};
 
@@ -68,7 +68,7 @@ if (_unit != ACE_player && (!GVAR(showParticleEffectsForEveryone) || {_unit dist
 };
 
 //Particle Effects:
-if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
+if (GVAR(showParticleEffects) && _scaledTemperature > 0.1 && {CBA_missionTime > (_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40}) then {
     _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
 
     private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;

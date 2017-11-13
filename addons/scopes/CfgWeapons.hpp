@@ -255,6 +255,7 @@ class CfgWeapons {
 
     class pdw2000_base_F: Rifle_Short_Base_F {
         ACE_RailHeightAboveBore = 3.08883;
+        ACE_RailBaseAngle = 0.019366;
     };
 
     class arifle_AKS_base_F: Rifle_Base_F {
@@ -306,13 +307,16 @@ class CfgWeapons {
     };
 
     class SMG_01_Base: Rifle_Short_Base_F {
-        ACE_RailHeightAboveBore = 8.85355;
+        ACE_RailHeightAboveBore = 4.85355;
+        ACE_RailBaseAngle = 0.0250956;
     };
     class SMG_02_base_F: Rifle_Short_Base_F  {
         ACE_RailHeightAboveBore = 4.41831;
+        ACE_RailBaseAngle = 0.0217724;
     };
     class SMG_05_base_F: Rifle_Short_Base_F {
         ACE_RailHeightAboveBore = 4.05169;
+        ACE_RailBaseAngle = 0.019366;
     };
 
     class Tavor_base_F: Rifle_Base_F {};
@@ -362,13 +366,14 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 2.83284;
     };
     class srifle_DMR_02_F: DMR_02_base_F {
-        ACE_RailHeightAboveBore = 4.43913;
+        ACE_RailHeightAboveBore = 3.43913;
     };
     class srifle_DMR_03_F: DMR_03_base_F {
         ACE_RailHeightAboveBore = 4.0795;
     };
     class srifle_DMR_04_F: DMR_04_base_F {
-        ACE_RailHeightAboveBore = 5.38022;
+        ACE_RailHeightAboveBore = 2.38022;
+        ACE_RailBaseAngle = 0.019366;
     };
     class srifle_DMR_05_blk_F: DMR_05_base_F {
         ACE_RailHeightAboveBore = 3.91334;

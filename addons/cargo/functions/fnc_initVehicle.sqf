@@ -71,6 +71,7 @@ private _condition = {
     GVAR(enable) &&
     {(_target getVariable [QGVAR(hasCargo), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(hasCargo)) == 1])} &&
     {locked _target < 2} &&
+    {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE} &&
     {alive _target} &&
     {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
 };
