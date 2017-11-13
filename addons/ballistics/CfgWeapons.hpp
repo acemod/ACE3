@@ -15,14 +15,14 @@ class CfgWeapons {
     // GM6 Lynx
     class GM6_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
     };
 
     // M200 Intervention
     class LRR_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.7);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(0.7));
         };
     };
 
@@ -41,65 +41,65 @@ class CfgWeapons {
     // M14
     class DMR_06_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
     };
 
     // Cyrus
     class DMR_05_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
     };
 
     // ASP-1 Kir
     class DMR_04_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
     };
 
     // SIG 556
     class DMR_03_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.1);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.1));
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.1);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.1));
         };
     };
 
     // Noreen "Bad News" ULR
     class DMR_02_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.9);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(0.9));
         };
     };
 
     // VS-121
     class DMR_01_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.375);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.375));
         };
     };
 
     // Mk14 Mod 1 EBR
     class EBR_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.0));
         };
     };
 
@@ -137,11 +137,11 @@ class CfgWeapons {
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 457.2;
         class Single: Single {
-            dispersion = MOA_TO_RAD(1.5);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.5));
         };
 
         class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(1.5);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(1.5));
         };
     };
     
@@ -218,15 +218,15 @@ class CfgWeapons {
     class SDAR_base_F: Rifle_Base_F {
         initSpeed = -1.211;
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(3.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(3.0));
         };
 
         class Burst: Mode_Burst {
-            dispersion = MOA_TO_RAD(3.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(3.0));
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(3.0);
+            dispersion = PRECISION_TO_DISPERSION(MOA_TO_RAD(3.0));
         };
     };
 
