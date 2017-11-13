@@ -86,7 +86,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                                             if (_item != "") then {
 
                                                 private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                                if !(_uniqueBaseCfgText != "") then {
+                                                if (_uniqueBaseCfgText != "") then {
 
                                                     _x set [0, _uniqueBaseCfgText];
                                                 };
