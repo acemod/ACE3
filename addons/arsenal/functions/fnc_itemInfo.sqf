@@ -31,7 +31,9 @@ if (isClass _itemCfg) then {
 
     private _ctrlInfoAuthor = _display displayctrl IDC_infoAuthor;
     _ctrlInfoAuthor ctrlSetText "";
-    [_itemCfg, _ctrlInfoAuthor] call bis_fnc_overviewauthor;
+
+    private _itemAuthor = getText (_itemCfg >> "author");
+    _ctrlInfoAuthor ctrlSetText ([localize "STR_AUTHOR_UNKNOWN", format [localize "STR_FORMAT_AUTHOR_SCRIPTED",_itemAuthor]] select (_itemAuthor != ""));
 
     // DLC / mod icon
     private _ctrlDLC = _display displayctrl IDC_DLCIcon;
