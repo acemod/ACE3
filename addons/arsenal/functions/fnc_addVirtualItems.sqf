@@ -102,14 +102,14 @@ if (_items isEqualType true && {_items}) then {
                             {getNumber (_configItemInfo >> "type") == 605}): {
                             (_cargo select 3) pushBackUnique _x;
                         };
-                        /* Uniform */\
+                        /* Uniform */
                         case (isClass (_configItemInfo) &&
                             {getNumber (_configItemInfo >> "type") == 801}): {
                             (_cargo select 4) pushBackUnique _x;
                         };
                         /* Vest */
                         case (isClass (_configItemInfo) &&
-                            {getNumber (__configItemInfo >> "type") == 701}): {
+                            {getNumber (_configItemInfo >> "type") == 701}): {
                             (_cargo select 5) pushBackUnique _x;
                         };
                         /* NVgs */
