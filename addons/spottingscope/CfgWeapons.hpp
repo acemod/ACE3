@@ -5,6 +5,7 @@ class CfgWeapons {
 
     class ACE_SpottingScope: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(DisplayName);
         descriptionShort = "";
         picture = QPATHTOF(UI\w_spottingscope_ca.paa);
