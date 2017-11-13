@@ -503,6 +503,10 @@
             <Chinesesimp>启用过热</Chinesesimp>
             <Chinese>啟用過熱</Chinese>
         </Key>
+        <Key ID="STR_ACE_Overheating_DisplayName">
+            <English>Overheating</English>
+            <German>Heißlaufen</German>
+        </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
