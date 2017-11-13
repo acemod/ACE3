@@ -16,6 +16,12 @@
 
 #define DEFAULT_RAIL_BASE_ANGLE 0.0086
 
+// Converts rifle/ammo precision (a) into dispersion config values (b)
+// Meets the following criteria:
+// 68.3 % of the shots land within a circle of diameter (1a)
+// 99.6 % of the shots land within a circle of diameter (2a)
+#define PRECISION_TO_DISPERSION(d) ((d) * 0.562) // empirical data
+
 #ifdef DEBUG_ENABLED_SCOPES
     #define DEBUG_MODE_FULL
 #endif
