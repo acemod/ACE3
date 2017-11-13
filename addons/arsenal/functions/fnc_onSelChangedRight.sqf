@@ -37,7 +37,7 @@ private _fnc_selectItem = {
                 private _primaryMags = primaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [18, (primaryWeaponItems GVAR(center)) + ([_primaryMags + [""], _primaryMags] select (count _primaryMags > 1))];
             };
-            [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
+            [_display, _control, _curSel, (configFile >> (["CfgWeapons", "CfgMagazines"] select (_itemIndex in [4, 5]))>> _item)] call FUNC(itemInfo);
         };
 
         case 19: {
@@ -50,7 +50,7 @@ private _fnc_selectItem = {
                 private _secondaryMags = secondaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
             };
-            [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
+            [_display, _control, _curSel, (configFile >> (["CfgWeapons", "CfgMagazines"] select (_itemIndex in [4, 5]))>> _item)] call FUNC(itemInfo);
         };
 
         case 20: {
@@ -63,7 +63,7 @@ private _fnc_selectItem = {
                 private _handgunMags = handgunMagazine GVAR(center);
                 GVAR(currentItems) set [20, (handgunItems GVAR(center)) + ([_handgunMags + [""], _handgunMags] select (count _handgunMags > 1))];
             };
-            [_display, _control, _curSel, (configFile >> "CfgWeapons" >> _item)] call FUNC(itemInfo);
+            [_display, _control, _curSel, (configFile >> (["CfgWeapons", "CfgMagazines"] select (_itemIndex in [4, 5]))>> _item)] call FUNC(itemInfo);
         };
     };
 };
