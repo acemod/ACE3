@@ -3,9 +3,9 @@
 ["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
-    GVAR(temperatureShift) = random [-5, 0, 5];
-    GVAR(badWeatherShift) = random [10, 0, 10];
-    GVAR(humidityShift) = random [-0.1, 0, 0.1];
+    GVAR(temperatureShift) = random [-SD_TO_MIN_MAX(4), 0, SD_TO_MIN_MAX(4)]; // Gauss(0, 4)
+    GVAR(badWeatherShift)  = random [-SD_TO_MIN_MAX(2) + 4, 4, 4 + SD_TO_MIN_MAX(2)]; // Gauss(4, 2)
+    GVAR(humidityShift)    = random [-SD_TO_MIN_MAX(0.065), 0, SD_TO_MIN_MAX(0.065)]; // Gauss(0, 0.065)
 
     if (GVAR(windSimulation)) then {
         call FUNC(initWind);
