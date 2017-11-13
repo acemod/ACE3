@@ -309,7 +309,7 @@ class GVAR(display) {
             colorSelect[]={1,1,1,1};
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
-            columns[]={0.10, 0.20, 0.75};
+            columns[]={0.07, 0.15, 0.75};
             idcLeft = IDC_arrowMinus;
             idcRIght = IDC_arrowPlus;
             drawSideArrows=1;

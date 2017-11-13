@@ -52,7 +52,8 @@ switch (GVAR(currentLeftPanel)) do {
             } else {
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                [GVAR(center), _item, 4] call bis_fnc_addweapon;
+                GVAR(center) addWeapon _item;
+                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -99,7 +100,8 @@ switch (GVAR(currentLeftPanel)) do {
             } else {
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                [GVAR(center), _item, 3] call bis_fnc_addweapon;
+                GVAR(center) addWeapon _item;
+                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -146,7 +148,8 @@ switch (GVAR(currentLeftPanel)) do {
             } else {
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                [GVAR(center), _item, 1] call bis_fnc_addweapon;
+                GVAR(center) addWeapon _item;
+                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
