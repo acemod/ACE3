@@ -49,6 +49,7 @@ if (_similarSharedLoadout) exitWith {
 switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonMyLoadouts:{
 
+        TRACE_2("loadout data",_editBoxContent, _loadout);
         for "_dataIndex" from 0 to 10 do {
             switch (_dataIndex) do {
 
