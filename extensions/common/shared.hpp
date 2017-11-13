@@ -20,6 +20,12 @@
 #include "ace_version.hpp"
 #include <algorithm>
 #include <cctype> //std::isspace
+#include <cstring>
+#include <istream>
+
+#ifndef _WIN32
+#define strncpy_s(dest, size, src, ignored) strncpy(dest, src, size)
+#endif
 
 #ifdef _DEBUG
 #define ZERO_OUTPUT()    { memset(output, 0x00, outputSize); }
