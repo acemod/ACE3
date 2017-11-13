@@ -13,18 +13,18 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-private _nextAction = "";
 
-switch (GVAR(currentLeftPanel)) do {
+
+private _nextAction = switch (GVAR(currentLeftPanel)) do {
 
     case IDC_buttonPrimaryWeapon : {
-        _nextAction = ["Civil", "PrimaryWeapon"] select ((GVAR(currentItems) select 0) != "");
+        ["Civil", "PrimaryWeapon"] select ((GVAR(currentItems) select 0) != "")
     };
     case IDC_buttonSecondaryWeapon : {
-        _nextAction = ["Civil", "SecondaryWeapon"] select (GVAR(currentItems) select 1 != "");
+        ["Civil", "SecondaryWeapon"] select (GVAR(currentItems) select 1 != "")
     };
     case IDC_buttonHandgun : {
-        _nextAction = ["Civil", "HandGunOn"] select (GVAR(currentItems) select 2 != "");
+        ["Civil", "HandGunOn"] select (GVAR(currentItems) select 2 != "")
     };
     case IDC_buttonHeadgear;
     case IDC_buttonUniform;
@@ -38,22 +38,21 @@ switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonWatch;
     case IDC_buttonFace;
     case IDC_buttonNVG : {
-        _nextAction = "Civil";
+        "Civil"
     };
     case IDC_buttonBinoculars : {
-        _nextAction = ["Civil", "Binoculars"] select (GVAR(currentItems) select 9 != "");
+        ["Civil", "Binoculars"] select (GVAR(currentItems) select 9 != "")
     };
     case IDC_buttonInsigna : {
-        if ((animationState GVAR(center)) find "salute" == -1) then {
-            _nextAction = "Salute";
-        };
+        "Salute"
     };
     case IDC_buttonVoice : {
-        _nextAction = "Civil";
         GVAR(center) directSay "CuratorObjectPlaced";
+        "Civil"
     };
 };
 
+TRACE_1("anim", GVAR(currentAction));
 if (_nextAction != GVAR(currentAction)) then {
     switch (_nextAction) do {
         case "PrimaryWeapon": {
@@ -72,4 +71,6 @@ if (_nextAction != GVAR(currentAction)) then {
     } else {
         GVAR(center) switchAction _nextAction;
     };
+
+    GVAR(currentAction) = _nextAction;
 };
