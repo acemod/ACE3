@@ -58,7 +58,12 @@ case ("SCALAR"): { // ACE's Scalar can be a float or an index for a list
             _cbaValueInfo = [_values, _valueTitles, getNumber (_config >> "value")];
         } else {
             _cbaSettingType = "SLIDER"; // [_min, _max, _default, _trailingDecimals]
-            _cbaValueInfo = [-1, 5000, getNumber (_config >> "value"), 1];
+            _cbaValueInfo = if (isArray (_config >> "sliderSettings")) then {
+                getArray (_config >> "sliderSettings");
+            } else {
+                [-1, 5000, 0, 1]
+            };
+            _cbaValueInfo set [2, getNumber (_config >> "value")];
         };
     };
 case ("BOOL"): {

@@ -10,6 +10,7 @@ class ACE_Settings {
         description = CSTRING(updateInterval_Description);
         typeName = "SCALAR";
         value = 60;
+        sliderSettings[] = {0, 300, 0, 0};
     };
     class GVAR(windSimulation) {
         displayName = CSTRING(windSimulation_DisplayName);
