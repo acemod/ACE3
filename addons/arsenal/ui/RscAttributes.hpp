@@ -655,7 +655,7 @@ class GVAR(display) {
         };
         class buttonCurrentMag2: buttonOptic {
             idc = IDC_buttonCurrentMag2;
-            text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
+            text= QPATHTOF(data\iconSecondaryMuzzle);
             tooltip= CSTRING(buttonCurrentMag2Tooltip);
             y = QUOTE(safezoneY + 58 * GRID_H);
         };
