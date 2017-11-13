@@ -52,7 +52,6 @@ private _nextAction = switch (GVAR(currentLeftPanel)) do {
     };
 };
 
-TRACE_1("anim", GVAR(currentAction));
 if (_nextAction != GVAR(currentAction)) then {
     switch (_nextAction) do {
         case "PrimaryWeapon": {
