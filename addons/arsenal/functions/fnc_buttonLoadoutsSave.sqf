@@ -49,7 +49,6 @@ if (_similarSharedLoadout) exitWith {
 switch (GVAR(currentLoadoutsTab)) do {
     case IDC_buttonMyLoadouts:{
 
-        TRACE_2("loadout data",_editBoxContent, _loadout);
         for "_dataIndex" from 0 to 10 do {
             switch (_dataIndex) do {
 
@@ -87,7 +86,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                                             if (_item != "") then {
 
                                                 private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                                if !(isNil "_uniqueBaseCfgText") then {
+                                                if !(_uniqueBaseCfgText != "") then {
 
                                                     _x set [0, _uniqueBaseCfgText];
                                                 };
@@ -125,7 +124,6 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
         };
 
-        TRACE_2("loadout state after unique item check",_editBoxContent, _loadout);
         if (count _sameNameLoadoutsList == 0) then {
             _data pushBack [_editBoxContent, _loadout];
         } else {
@@ -142,7 +140,6 @@ switch (GVAR(currentLoadoutsTab)) do {
         ADD_LOADOUTS_LIST_PICTURES
 
         _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
-        TRACE_2("loadout state after verifyLoadout",_editBoxContent, _loadout);
 
         _contentPanelCtrl lnbSort [1, false];
 
