@@ -410,4 +410,4 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
-(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
+(_display displayCtrl IDC_totalWeightText) ctrlSetText ([[GVAR(center), 1] call EFUNC(common,getWeight), [GVAR(center), 2] call EFUNC(common,getWeight)] joinString " / ");

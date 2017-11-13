@@ -47,7 +47,7 @@ if (progressPosition _loadIndicatorBarCtrl > 0) then {
     _removeAllCtrl ctrlCommit FADE_DELAY;
 };
 
-(_display displayCtrl IDC_totalWeightText) ctrlSetText (GVAR(center) call EFUNC(movement,getWeight));
+(_display displayCtrl IDC_totalWeightText) ctrlSetText ([[GVAR(center), 1] call EFUNC(common,getWeight), [GVAR(center), 2] call EFUNC(common,getWeight)] joinString " / ");
 
 // change button color if unique or too big
 if (_curSel != -1) then {
