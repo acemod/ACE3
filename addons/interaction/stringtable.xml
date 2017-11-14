@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
+        <Key ID="STR_ACE_Interaction_DisplayName">
+            <English>Interaction</English>
+            <German>Interaktion</German>
+        </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
             <German>Interaktionen</German>

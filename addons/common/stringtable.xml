@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
+        <Key ID="STR_ACE_Common_DisplayName">
+            <English>Common</English>
+            <German>Allgemein</German>
+        </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
             <German>ACE-Team</German>
@@ -465,6 +469,15 @@
             <Korean>다른 플레이어가 보내온 요청을 거부합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
             <Chinese>拒絕由其他玩家送出的請求。包含使用/共享裝備與執行特定動作。</Chinese>
             <Chinesesimp>拒绝由其他玩家送出的请求。包含使用/共享装备与执行特定动作。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsAction">
+            <English>Check PBO Action</English>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
+            <English>Check PBO All</English>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
+            <English>Check PBO Whitelist</English>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
