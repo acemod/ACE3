@@ -259,10 +259,8 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
         (handgunweapon GVAR(center) call bis_fnc_baseWeapon)\
     ],\
     [\
-    [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 2), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 2)] select {!(_x isEqualTo "")},\
-    [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 1), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 1), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 1)] select {!(_x isEqualTo "")},\
-    [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 0), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 0), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 0)] select {!(_x isEqualTo "")},\
-    [((GVAR(center) weaponAccessories (primaryWeapon GVAR(center))) select 3), ((GVAR(center) weaponAccessories (secondaryWeapon GVAR(center))) select 3), ((GVAR(center) weaponAccessories (handgunWeapon GVAR(center))) select 3)] select {!(_x isEqualTo "")}\
+        [primaryWeaponItems GVAR(center), secondaryWeaponItems GVAR(center), handgunItems GVAR(center)],\
+        [primaryWeaponMagazine GVAR(center), secondaryWeaponMagazine GVAR(center), handgunMagazine GVAR(center)]\
     ],\
     uniformItems GVAR(center) + vestItems GVAR(center) + backpackItems GVAR(center),\
     [headgear GVAR(center)],\

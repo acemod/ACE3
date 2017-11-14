@@ -78,22 +78,30 @@ for "_index" from 0 to 10 do {
         // Accs for the weapons above
         case 1: {
             private _array = LIST_DEFAULTS select _index;
+            _array params ["_accsArray", "_magsArray"];
 
-            if !((_array select 0) isEqualTo []) then {
-                 {((GVAR(virtualItems) select _index) select 0) pushBackUnique _x} foreach (_array select 0);
-            };
+            {
+                private _subIndex = _forEachIndex;
 
-            if !((_array select 1) isEqualTo []) then {
-                {((GVAR(virtualItems) select _index) select 1) pushBackUnique _x} foreach (_array select 1);
-            };
+                {
+                    if (_x != "") then {
+                        (GVAR(virtualItems) select _index) select ([2, 1, 0, 3] select _forEachIndex) pushBackUnique _x;
+                    };
+                } foreach _x;
+            } foreach _accsArray;
 
-            if !((_array select 2) isEqualTo []) then {
-                 {((GVAR(virtualItems) select _index) select 2) pushBackUnique _x} foreach (_array select 2);
-            };
+            {
+                if !(_x isEqualTo []) then {
 
-            if !((_array select 3) isEqualTo []) then {
-                 {((GVAR(virtualItems) select _index) select 3) pushBackUnique _x} foreach (_array select 3);
-            };
+                    if (_x select 0 != "") then {
+                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 0);
+                    };
+
+                    if (count _x > 1 && {_x select 1 != ""}) then {
+                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 1);
+                    };
+                };
+            } foreach _magsArray;
         };
 
         // Inventory items
