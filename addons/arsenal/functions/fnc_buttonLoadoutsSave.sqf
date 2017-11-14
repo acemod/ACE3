@@ -114,7 +114,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                         if (_item != "") then {
 
                             private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                            if !(isNil "_uniqueBaseCfgText") then {
+                            if (_uniqueBaseCfgText != "") then {
 
                                 (_loadout select _dataIndex) set [_subIndex, _uniqueBaseCfgText];
                             };
@@ -194,7 +194,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                                             if (_item != "") then {
 
                                                 private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                                if !(isNil "_uniqueBaseCfgText") then {
+                                                if (_uniqueBaseCfgText != "") then {
 
                                                     _x set [0, _uniqueBaseCfgText];
                                                 };
@@ -222,7 +222,7 @@ switch (GVAR(currentLoadoutsTab)) do {
                             if (_item != "") then {
 
                                 private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                if !(isNil "_uniqueBaseCfgText") then {
+                                if (_uniqueBaseCfgText != "") then {
 
                                     (_loadout select _dataIndex) set [_subIndex, _uniqueBaseCfgText];
                                 };
