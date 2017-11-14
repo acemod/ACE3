@@ -32,23 +32,16 @@ GVAR(distanceIndex) = -1;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    private _result = [eyePos ACE_player, ACE_player weaponDirection (currentWeapon ACE_player), ACE_player] call EFUNC(laser,shootRay);
-    private _distance = _result select 1;
-
-    _distance = _distance - 1 + (random 2);
+    ([eyePos ACE_player, ACE_player weaponDirection (currentWeapon ACE_player), ACE_player] call EFUNC(laser,shootRay)) params ["", "_distance"];
 
     GVAR(distanceIndex) = (GVAR(distanceIndex) + 1) % METERING_POINT_NUMBER;
-    GVAR(distances) set [GVAR(distanceIndex), _distance];
+    GVAR(distances) set [GVAR(distanceIndex), _distance - 1 + (random 2)];
 
     if (count GVAR(distances) == METERING_POINT_NUMBER) then {
-        private _min = MAX_DISTANCE;
-        private _max = MIN_DISTANCE;
-        {
-            _min = _x min _min;
-            _max = _max max _x;
-        } forEach GVAR(distances);
+        private _min = selectMin GVAR(distances);
+        private _max = selectMax GVAR(distances);
 
-        if (abs(_max - _min) < 5) then {
+        if (_max - _min < 5) then {
             private _range = (_min + _max) / 2;
             if (_range >= MIN_DISTANCE && _range <= MAX_DISTANCE) then {
                 GVAR(targetAcquired) = true;
