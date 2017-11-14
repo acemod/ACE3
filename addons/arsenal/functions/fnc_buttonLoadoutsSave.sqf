@@ -25,7 +25,7 @@ if (_editBoxContent == "") exitWith {
     [(findDisplay IDD_ace_arsenal), localize LSTRING(saveEmptyNameBox)] call FUNC(message);
 };
 
-private _data = [+(profileNamespace getVariable QGVAR(saved_loadouts)), +(GVAR(defaultLoadoutsList))] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
+private _data = [+(profileNamespace getVariable [QGVAR(saved_loadouts),[]]), +(GVAR(defaultLoadoutsList))] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
 
