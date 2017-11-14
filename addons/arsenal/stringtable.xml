@@ -260,26 +260,26 @@
             <Polish>Włącz ikony modów</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightSetting">
-            <English>Font height for the left and right panels</English>
-            <French>Hauteur du texte pour les listes de gauche/droite</French>
+            <English>Panel font height</English>
+            <French>taille de police des panneaux</French>
             <German>Schrifthöhe für die linke und rechte Liste</German>
             <Polish>Wysokość czcionki prawego i lewego panelu</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_allowDefaultLoadoutsSetting">
-            <English>Allow the use of the default loadouts tab</English>
+            <English>Allow default loadouts</English>
             <French>Activer l'onglet équipement de base</French>
             <German>Erlaubt die Benutzung des Standard-Ausrüstungen-Reiters</German>
             <Polish>Zezwól na użycie zakładki domyślnych zestawów</Polish>
-         </Key>
-          <Key ID="STR_ACE_Arsenal_allowSharingSetting">
-            <English>Allow the use of loadout sharing</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_allowSharingSetting">
+            <English>Allow loadout sharing</English>
             <French>Autoriser le partage d'équipement</French>
             <German>Erlaubt das Teilen von Ausrüstungen</German>
             <Polish>Zezwól na udostępnianie zestawów</Polish>
-           </Key>
+        </Key>
         <Key ID="STR_ACE_Arsenal_printToRPTSetting">
-            <English>Enable RPT logging for missing / unavailable items</English>
-            <French>Inscrire les objets manquants dans le RPT</French>
+            <English>Log missing / unavailable items</English>
+            <French>Enregistrer les objets manquants</French>
             <German>Aktiviert die Aufzeichnung fehlender Gegenstände in der RPT</German>
             <Polish>Włącz rejestrowanie brakujących / niedostępnych przedmiotów do pliku RPT</Polish>
         </Key>
@@ -290,6 +290,26 @@
         <Key ID="STR_ACE_Arsenal_buttonCurrentMag2Tooltip">
             <English>Secondary magazine</English>
             <French>Chargeur secondaire</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_settingCategory">
+            <English>ACE - Arsenal</English>
+            <French>ACE - Arsenal</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_defaultLoadoutsTooltip">
+            <English>Allow the use of the default loadouts tab</English>
+            <French>Autorise l'usage de l'onglet équipements de base</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_modIconsTooltip">
+            <English>Show / hide mod icons for the left panel</English>
+            <French>Montrer / cacher les icones de mod pour le panneau de gauche</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_fontHeightTooltip">
+            <English>Change the font height for text in the left / right panels</English>
+            <French>Change la taille de police du texte des panneaux gauche / droite</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_printToRPTTooltip">
+            <English>Log missing / unavailable items in the RPT</English>
+            <French>Enregistre les objets manquants / indisponibles dans le RPT</French>
         </Key>
     </Package>
 </Project>

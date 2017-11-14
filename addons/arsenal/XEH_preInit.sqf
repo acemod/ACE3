@@ -9,13 +9,13 @@ PREP_RECOMPILE_END;
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 
-[QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), "ACE3 Arsenal", false] call CBA_Settings_fnc_init;
-[QGVAR(enableModIcons), "CHECKBOX", localize LSTRING(modIconsSetting), "ACE3 Arsenal", true] call CBA_Settings_fnc_init;
-[QGVAR(fontHeight), "SLIDER", localize LSTRING(fontHeightSetting), "ACE3 Arsenal", [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
+[QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
+[QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;
+[QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
 
 // Arsenal loadouts
-[QGVAR(allowDefaultLoadouts), "CHECKBOX", localize LSTRING(allowDefaultLoadoutsSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
-[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), "ACE3 Arsenal", true, true] call CBA_Settings_fnc_init;
-[QGVAR(EnableRPTLog), "CHECKBOX", localize LSTRING(printToRPTSetting), "ACE3 Arsenal", true, false] call CBA_Settings_fnc_init;
+[QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
+[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
+[QGVAR(EnableRPTLog), "CHECKBOX", [LSTRING(printToRPTSetting), LSTRING(printToRPTTooltip)], localize LSTRING(settingCategory), false, false] call CBA_Settings_fnc_init;
 
 ADDON = true;
