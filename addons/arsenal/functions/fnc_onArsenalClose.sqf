@@ -17,6 +17,8 @@ private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFr
 
 [QGVAR(displayClosed), []] call CBA_fnc_localEvent;
 
+removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
+
 camDestroy GVAR(camera);
 GVAR(center) switchCamera GVAR(cameraView);
 deleteVehicle GVAR(cameraHelper);
@@ -74,10 +76,7 @@ if !(isnull curatorCamera) then {
 };
 
 GVAR(camera) = nil;
-GVAR(cameraPosition) = nil;
 GVAR(cameraHelper) = nil;
-GVAR(cameraView) = nil;
-GVAR(cameraPosition) = nil;
 
 GVAR(mouseButtonState) = nil;
 GVAR(currentLeftPanel) = nil;
@@ -98,7 +97,5 @@ GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
 GVAR(center) = nil;
-
-removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 
 showHUD true;

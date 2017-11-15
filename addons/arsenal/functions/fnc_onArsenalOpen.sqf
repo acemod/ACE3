@@ -266,7 +266,9 @@ GVAR(rightTabLnBFocus) = false;
 [_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(fillLeftPanel);
 
 //--------------- Init camera
-GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
+if (isNil QGVAR(cameraPosition)) then {
+    GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
+};
 
 GVAR(cameraHelper) = createAgent ["Logic", position GVAR(center) ,[] ,0 ,"none"];
 GVAR(cameraHelper) attachTo [GVAR(center), GVAR(cameraPosition) select 3, ""];
