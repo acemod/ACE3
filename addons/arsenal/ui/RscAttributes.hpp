@@ -864,7 +864,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(0);
                     w = QUOTE(52 * GRID_W);
                     h = QUOTE(7 * GRID_H);
-                    colorBackground[] = {0,0,0,0.8};
+                    colorBackground[] = {0,0,0,0.7};
                 };
                 class buttonMyLoadouts: ctrlButton {
                     idc = IDC_buttonMyLoadouts;
