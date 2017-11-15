@@ -29,7 +29,7 @@ _mouseBlockCtrl ctrlCommit 0;
 GVAR(currentLoadoutsTab) = -1;
 
 GVAR(previousCameraPos) = GVAR(cameraPosition);
-GVAR(cameraPosition) = [5,0,0,[-0.85,0,0.85]];
+GVAR(cameraPosition) = [5,0,20,[-0.85,0,0.85]];
 
 private _panelContentCtrl = _display displayCtrl IDC_contentPanel;
 _panelContentCtrl ctrlSetFontHeight (4.5 * GRID_H);
