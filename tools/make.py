@@ -249,7 +249,7 @@ def find_depbo_tools():
         finally:
             winreg.CloseKey(k)
 
-    if failed > 0:
+    if failed:
         raise Exception("BadDePBO", "DePBO tools not installed correctly")
 
     return requiredToolPaths
