@@ -109,6 +109,12 @@
             <Chinese>設定陡峭的地形將會影響多少體力的流失，值越高代表體力流失越快</Chinese>
             <Chinesesimp>设定陡峭的地形将会影响多少体力的流，失值越高代表体力流失越快</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor">
+            <English>Sway factor</English>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
+            <English>Changes how much fatigue influences weapon sway. Higher means more weapon sway.</English>
+        </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
             <German>Aktiv</German>

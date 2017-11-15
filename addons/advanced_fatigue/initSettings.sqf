@@ -57,3 +57,12 @@
     [0, 2, 1, 1],
     true
 ] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(swayFactor),
+    "SLIDER",
+    [LSTRING(SwayFactor), LSTRING(SwayFactor_Description)],
+    "ACE3 Advanced Fatigue",
+    [0, 2, 1, 1],
+    true
+] call CBA_Settings_fnc_init;

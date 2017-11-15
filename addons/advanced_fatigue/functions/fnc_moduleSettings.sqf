@@ -21,3 +21,4 @@ params ["_logic"];
 [_logic, QGVAR(recoveryFactor), "RecoveryFactor"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(loadFactor), "LoadFactor"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(terrainGradientFactor), "TerrainGradientFactor"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(swayFactor), "SwayFactor"] call EFUNC(common,readSettingFromModule);
