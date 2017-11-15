@@ -113,7 +113,7 @@
             <English>Sway factor</English>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
-            <English>Changes how much fatigue influences weapon sway. Higher means more weapon sway.</English>
+            <English>Influences the amount of weapon sway. Higher means more sway.</English>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
