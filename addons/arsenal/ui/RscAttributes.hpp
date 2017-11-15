@@ -750,7 +750,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(0);
                     w = QUOTE(160 * GRID_W);
                     h = QUOTE(safezoneH - (45 * GRID_H));
-                    colorBackground[] = {0.05,0.05,0.05,1};
+                    colorBackground[] = {0.13,0.13,0.13,0.9};
                 };
                 class centerTitle: ctrlStaticTitle {
                     idc = IDC_centerTitle;
@@ -763,13 +763,6 @@ class GVAR(loadoutsDisplay) {
                 };
                 class contentPanel: RscListnBox {
                     idc = IDC_contentPanel;
-                    colorBackground[]={0,0,0,0};
-                    colorSelectBackground[]={1,1,1,0.5};
-                    colorSelectBackground2[]={1,1,1,0.5};
-                    colorPictureSelected[]={1,1,1,1};
-                    colorSelect[]={1,1,1,1};
-                    colorSelect2[]={1,1,1,1};
-                    colorPictureRightSelected[]={1,1,1,1};
                     columns[]={0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90};
                     drawSideArrows=0;
                     disableOverflow=1;
