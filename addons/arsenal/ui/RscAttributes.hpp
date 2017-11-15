@@ -731,10 +731,10 @@ class GVAR(loadoutsDisplay) {
     class controls {
         class centerBox: ctrlControlsGroupNoScrollbars {
             idc = IDC_centerBox;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (80 * GRID_W));
+            x = QUOTE(safezoneW  + safezoneX - (180 * GRID_W));
             y = QUOTE(safezoneY + (5 * GRID_H));
             w = QUOTE(160 * GRID_W);
-            h = QUOTE(safezoneH - (45 * GRID_H));
+            h = QUOTE(safezoneH - (34 * GRID_H));
             class controls {
                 class centerFrame: RscFrame {
                     idc = -1;
@@ -750,7 +750,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(0);
                     w = QUOTE(160 * GRID_W);
                     h = QUOTE(safezoneH - (45 * GRID_H));
-                    colorBackground[] = {0,0,0,0.8};
+                    colorBackground[] = {0.05,0.05,0.05,1};
                 };
                 class centerTitle: ctrlStaticTitle {
                     idc = IDC_centerTitle;
@@ -763,7 +763,7 @@ class GVAR(loadoutsDisplay) {
                 };
                 class contentPanel: RscListnBox {
                     idc = IDC_contentPanel;
-                    colorBackground[]={1,1,1,1};
+                    colorBackground[]={0,0,0,0};
                     colorSelectBackground[]={1,1,1,0.5};
                     colorSelectBackground2[]={1,1,1,0.5};
                     colorPictureSelected[]={1,1,1,1};
@@ -797,49 +797,50 @@ class GVAR(loadoutsDisplay) {
                     w = QUOTE(80 * GRID_W);
                     h = QUOTE(5 * GRID_H);
                 };
+                class buttonSave: ctrlButton {
+                    idc = IDC_buttonSave;
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(safezoneH - (44 * GRID_H));
+                    w = QUOTE(30 * GRID_W);
+                    h = QUOTE(10 * GRID_H);
+                    text= CSTRING(buttonSaveText);
+                    tooltip= CSTRING(buttonSaveTooltip);
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
+                    colorBackground[] = {0,0,0,0.8};
+                };
+                class buttonRename: buttonSave {
+                    idc = IDC_buttonRename;
+                    x = QUOTE(32.5 * GRID_W);
+                    text= CSTRING(buttonRenameText);
+                    tooltip= CSTRING(buttonRenameTooltip);
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
+                };
+                class buttonLoad: buttonSave {
+                    idc = IDC_buttonLoad;
+                    x = QUOTE(65 * GRID_W);
+                    text= CSTRING(buttonLoadText);
+                    tooltip= CSTRING(buttonLoadTooltip);
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsLoad));
+                };
+                class buttonShare: buttonSave {
+                    idc = IDC_buttonShare;
+                    x = QUOTE(97.5 * GRID_W);
+                    text= CSTRING(buttonSharePrivateText);
+                    tooltip= CSTRING(buttonShareTooltip);
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
+                };
+                class buttonDelete: buttonSave {
+                    idc = IDC_buttonDelete;
+                    x = QUOTE(130 * GRID_W);
+                    text= CSTRING(buttonDeleteText);
+                    tooltip= CSTRING(buttonDeleteTooltip);
+                    colorBackgroundActive[] = {0.5,0,0,1};
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
+                };
             };
         };
-        class buttonSave: ctrlButton {
-            idc = IDC_buttonSave;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (80 * GRID_W));
-            y = QUOTE(safezoneH + safezoneY - 39 * GRID_H);
-            w = QUOTE(30 * GRID_W);
-            h = QUOTE(10 * GRID_H);
-            text= CSTRING(buttonSaveText);
-            tooltip= CSTRING(buttonSaveTooltip);
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
-            colorBackground[] = {0,0,0,0.8};
-        };
-        class buttonRename: buttonSave {
-            idc = IDC_buttonRename;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (47.5 * GRID_W));
-            text= CSTRING(buttonRenameText);
-            tooltip= CSTRING(buttonRenameTooltip);
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
-        };
-        class buttonLoad: buttonSave {
-            idc = IDC_buttonLoad;
-            x = QUOTE((safezoneW * 0.5) + safezoneX - (15 * GRID_W));
-            text= CSTRING(buttonLoadText);
-            tooltip= CSTRING(buttonLoadTooltip);
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsLoad));
-        };
-        class buttonShare: buttonSave {
-            idc = IDC_buttonShare;
-            x = QUOTE((safezoneW * 0.5) + safezoneX + (17.5 * GRID_W));
-            text= CSTRING(buttonSharePrivateText);
-            tooltip= CSTRING(buttonShareTooltip);
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
-        };
-        class buttonDelete: buttonSave {
-            idc = IDC_buttonDelete;
-            x = QUOTE((safezoneW * 0.5) + safezoneX + (50 * GRID_W));
-            text= CSTRING(buttonDeleteText);
-            tooltip= CSTRING(buttonDeleteTooltip);
-            colorBackgroundActive[] = {0.5,0,0,1};
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
-        };
-        class buttonClose: buttonSave {
+        
+        class buttonClose: ctrlButton {
             idc = -1;
             x = QUOTE(safezoneW  + safezoneX - 32 * GRID_W);
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);

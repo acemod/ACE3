@@ -18,6 +18,9 @@ GVAR(currentLoadoutsTab) = nil;
 private _arsenalDisplay = findDisplay IDD_ace_arsenal;
 private _mouseBlockCtrl = _arsenalDisplay displayCtrl IDC_mouseBlock;
 
+GVAR(cameraPosition) = GVAR(previousCameraPos);
+GVAR(previousCameraPos) = nil;
+
 _mouseBlockCtrl ctrlEnable false;
 _mouseBlockCtrl ctrlCommit 0;
 
