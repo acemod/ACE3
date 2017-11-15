@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
+        <Key ID="STR_ACE_Respawn_DisplayName">
+            <English>Respawn</English>
+        </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
             <French>Déploiement dans 5 secondes...</French>
@@ -272,6 +275,9 @@
             <Korean>접속이 끊긴 플레이어의 시체를 제거합니까?</Korean>
             <Chinesesimp>要删除已离线的玩家尸体吗?</Chinesesimp>
             <Chinese>要刪除已離線的玩家屍體嗎?</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
+            <English>Body remove timer</English>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>

@@ -43,7 +43,7 @@ if (GVAR(useLegacyUI)) then {
         _vertical ctrlSetText "0";
     } else {
         if (_elevation > 0) then {
-            _vertical ctrlSetText format[localize LSTRING(DisplayAdjustmentUp), abs(_elevation)];
+            _vertical ctrlSetText (str _elevation);
         } else {
             _vertical ctrlSetText format[localize LSTRING(DisplayAdjustmentDown), abs(_elevation)];
         };

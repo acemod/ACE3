@@ -46,13 +46,13 @@ class CBA_Extended_EventHandlers;
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRefuelSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(RefuelSettings_Module_DisplayName);
         icon = QPATHTOF(ui\icon_module_refuel.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRefuelSettings);
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {

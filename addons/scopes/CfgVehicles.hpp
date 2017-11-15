@@ -18,7 +18,7 @@ class CfgVehicles {
     };
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(DisplayName);
         //icon = ""; // needs an icon
         category = "ACE";

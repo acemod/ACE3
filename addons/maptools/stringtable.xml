@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MapTools">
         <Key ID="STR_ACE_MapTools_Name">
@@ -201,7 +201,7 @@
             <Chinesesimp>修改旋转地图工具的按键</Chinesesimp>
             <Chinese>修改旋轉地圖工具的按鍵</Chinese>
         </Key>
-        <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
+        <Key ID="STR_ACE_MapTools_drawStraightLines_displayName">
             <English>Draw straight lines with maptools</English>
             <Japanese>マップ ツールを使って直線を書く</Japanese>
             <German>Zeichne gerade Linien mit dem Kartenwerkzeug</German>
@@ -212,7 +212,7 @@
             <Chinesesimp>使用地图工具来绘制直线</Chinesesimp>
             <Chinese>使用地圖工具來繪製直線</Chinese>
         </Key>
-        <Key ID="STR_ACE_MapTools_drawStaightLines_description">
+        <Key ID="STR_ACE_MapTools_drawStraightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
             <Japanese>マップ ツールの端から直線を書きます。メモ：線の中央ホバーすると削除します。</Japanese>
             <German>Zeichne gerade Linien am Rand des Kartenwerkzeugs. Hinweis: zum Löschen über den Mittelpunkt der Linie fahren</German>

@@ -69,9 +69,10 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             _adjustment set [_forEachIndex, [0, 0, 0]];
             _updateAdjustment = true;
         };
-        
+
+        GVAR(baseAngle) set [_x, [_player, _x] call FUNC(getBaseAngle)]; 
         GVAR(boreHeight) set [_x, [_player, _x] call FUNC(getBoreHeight)];
-                
+
         if ((_newOptics select _x) == "") then {
             // Check if the weapon comes with an integrated optic     
             private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x); 
