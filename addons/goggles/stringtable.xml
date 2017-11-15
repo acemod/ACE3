@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Goggles">
+        <Key ID="STR_ACE_Goggles_DisplayName">
+            <English>Goggles</English>
+            <German>Schutzbrille</German>
+        </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
             <German>Brilleneffekt in dritter Person anzeigen</German>

@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
+        <Key ID="STR_ACE_SwitchUnits_DisplayName">
+            <English>Switch Units</English>
+        </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
             <German>Einheit gewechselt</German>
@@ -47,22 +50,6 @@
             <Korean>그 인원은 적과 너무 가깝습니다.</Korean>
             <Chinesesimp>这单位太接近敌人了</Chinesesimp>
             <Chinese>這單位太接近敵人了</Chinese>
-        </Key>
-        <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
-            <English>SwitchUnits System</English>
-            <Polish>System zmiany stron</Polish>
-            <Spanish>Sistema de cambio de unidad</Spanish>
-            <German>Einheiten-Wechsel-System</German>
-            <Czech>Systém výměny stran</Czech>
-            <Portuguese>Sistema de troca de unidades</Portuguese>
-            <French>Système de changement d'unité</French>
-            <Hungarian>Egységváltó-rendszer</Hungarian>
-            <Russian>Переключение между юнитами</Russian>
-            <Italian>Sistema Cambio Unità</Italian>
-            <Japanese>SwitchUnits システム</Japanese>
-            <Chinesesimp>切换单位系统</Chinesesimp>
-            <Chinese>切換單位系統</Chinese>
-            <Korean>인원 전환 시스템</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>

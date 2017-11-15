@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
-        <Key ID="STR_ACE_Spectator_DisplayName">
+        <Key ID="STR_ACE_Spectator_Module_DisplayName">
+            <English>Spectator</English>
+            <German>Zuschauer</German>
+        </Key>
+        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
             <German>ACE Zuschauer</German>
             <Japanese>ACE スペクテイター</Japanese>
@@ -11,21 +15,6 @@
             <Chinese>ACE 旁觀者</Chinese>
             <Polish>Obserwator ACE</Polish>
             <Korean>ACE 관전자</Korean>
-        </Key>
-        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
-            <English>Spectator Settings</English>
-            <German>Zuschauer-Einstellungen</German>
-            <Polish>Ustawienia obserwatora</Polish>
-            <Portuguese>Preferências de Espectador</Portuguese>
-            <Russian>Настройки спектатора</Russian>
-            <Czech>Nastavení pozorovatele</Czech>
-            <Spanish>Ajustes de espectador</Spanish>
-            <Italian>Impostazioni Spettatore</Italian>
-            <French>Réglages de spectateur</French>
-            <Japanese>スペクテイター設定</Japanese>
-            <Korean>관전자 설정</Korean>
-            <Chinesesimp>旁观者设定</Chinesesimp>
-            <Chinese>旁觀者設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
