@@ -18,30 +18,32 @@ params ["_display", "_control"];
 
 if !(ctrlEnabled _control) exitWith {};
 
-private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
-
+// Retrieve panel data
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 private _curSelRow = lnbCurSelRow _contentPanelCtrl;
 private _loadoutName = _contentPanelCtrl lnbText [_curSelRow, 1];
-private _loadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
 
 private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
 private _editBoxContent = ctrlText _editBoxCtrl;
 
+private _data = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
 private _similarLoadouts = _data select {_x select 0 == _editBoxContent};
 
 if (count _similarLoadouts > 0) exitWith {
     [(findDisplay IDD_ace_arsenal), localize LSTRING(renameExistError)] call FUNC(message);
 };
 
-// Update loadout info in profile and list namespaces
-_data set [_data find ((_data select {_x select 0 == _loadoutName}) select 0), [_editBoxContent, _loadout]];
-_contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), nil];
-_contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
+// Update loadout info in profile / 3DEN and list namespaces
+private _loadoutToRename = (_data select {_x select 0 == _loadoutName}) select 0;
+private _loadout = _loadoutToRename select 1;
+(_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) params ["", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
-_contentPanelCtrl lnbDeleteRow _curSelRow;
+_data set [_data find _loadoutToRename, [_editBoxContent, _loadout]];
+_contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), nil];
+_contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
 
 // Add new row
+_contentPanelCtrl lnbDeleteRow _curSelRow;
 private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
 
 ADD_LOADOUTS_LIST_PICTURES
