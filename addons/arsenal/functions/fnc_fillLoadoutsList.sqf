@@ -62,7 +62,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
         if (_nullItemsAmount > 0) then {
 
-            _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.5]];
+            _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]];
         } else {
 
             if (_unavailableItemsAmount > 0) then {
@@ -104,7 +104,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
             if (_nullItemsAmount > 0) then {
 
-                _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.5]];
+                _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]];
             } else {
 
                 if (_unavailableItemsAmount > 0) then {
