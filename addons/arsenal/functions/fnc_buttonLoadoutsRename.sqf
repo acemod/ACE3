@@ -35,8 +35,7 @@ if (count _similarLoadouts > 0) exitWith {
 
 // Update loadout info in profile / 3DEN and list namespaces
 private _loadoutToRename = (_data select {_x select 0 == _loadoutName}) select 0;
-private _loadout = _loadoutToRename select 1;
-(_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) params ["", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
+(_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
 _data set [_data find _loadoutToRename, [_editBoxContent, _loadout]];
 _contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), nil];
@@ -47,6 +46,16 @@ _contentPanelCtrl lnbDeleteRow _curSelRow;
 private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
 
 ADD_LOADOUTS_LIST_PICTURES
+
+if (_nullItemsAmount > 0) then {
+
+    _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.5]];
+} else {
+
+    if (_unavailableItemsAmount > 0) then {
+        _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
+    };
+};
 
 // Sort and select the current row
 _contentPanelCtrl lnbSort [1, false];
