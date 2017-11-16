@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Common_DisplayName">
             <English>Common</English>
             <German>Allgemein</German>
+            <Italian>Comuni</Italian>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -472,12 +473,15 @@
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
+            <Italian>Controlla Azioni PBO</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
+            <Italian>Controlla Tutti i PBO</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
+            <Italian>Controlla Whitelist PBO</Italian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>

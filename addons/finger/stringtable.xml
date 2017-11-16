@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_finger_DisplayName">
             <English>Pointing</English>
             <German>Fingerzeig</German>
+            <Italian>Puntamento</Italian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

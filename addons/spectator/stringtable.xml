@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Spectator_Module_DisplayName">
             <English>Spectator</English>
             <German>Zuschauer</German>
+            <Italian>Spettatore</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>

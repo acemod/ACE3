@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Rearm_DisplayName">
             <English>Rearm</English>
             <German>Aufmunitionierung</German>
+            <Italian>Riarmo</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>

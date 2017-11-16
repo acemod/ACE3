@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Captives_DisplayName">
             <English>Captives</English>
             <German>Gefangene</German>
+            <Italian>Prigionieri</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>

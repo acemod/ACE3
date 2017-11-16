@@ -84,6 +84,7 @@
         <Key ID="STR_ACE_Weather_enabled_Description">
             <English>Expands the existing weather by temperature, humidity and air pressure.</English>
             <German>Erweitert das vorhandene Wetter um Temperatur, Luftfeuchtigkeit und Luftdruck.</German>
+            <Italian>Espande il tempo esistente per temperatura, umidità e pressione dell'aria.</Italian>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -95,7 +96,7 @@
             <French>Intervalle de synchronisation</French>
             <Hungarian>Frissítési intervallum</Hungarian>
             <Russian>Интервал обновления</Russian>
-            <Italian>Intervallo Aggiornamenti</Italian>
+            <Italian>Intervallo Aggiornamento</Italian>
             <Japanese>更新間隔</Japanese>
             <Korean>갱신 간격</Korean>
             <Chinesesimp>更新间隔</Chinesesimp>
@@ -111,7 +112,7 @@
             <French>Défini un intervalle (secondes) entre deux synchronisations</French>
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
-            <Italian>Definisce l'intervallo (in secondi) tra aggiornamenti del meteo</Italian>
+            <Italian>Definisce l'intervallo(in secondi) tra aggiornamenti del meteo</Italian>
             <Japanese>天候を更新する間隔を定義します。(秒)</Japanese>
             <Korean>기후를 갱신 하는 간격을 초 단위로 정합니다.</Korean>
             <Chinesesimp>设定天气更新的时间间隔(秒)</Chinesesimp>
@@ -120,10 +121,12 @@
         <Key ID="STR_ACE_Weather_windSimulation_DisplayName">
             <English>Wind Simulation (map based)</English>
             <German>Wind Simulation (kartenbasiert)</German>
+            <Italian>Simulazione del Vento (basato sulla mappa)</Italian>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
             <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
             <German>Aktiviert die kartenbasierte Windsimulation (überschreibt Vanilla Wind)</German>
+            <Italian>Abilita la simulazione del vento basato sulla mappa (sovrascrive il vento vanilla)</Italian>
         </Key>
     </Package>
 </Project>
