@@ -37,7 +37,7 @@ if (count _similarLoadouts > 0) exitWith {
 private _loadoutToRename = (_data select {_x select 0 == _loadoutName}) select 0;
 (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount", "_nullItemsList", "_unavailableItemsList"];
 
-_data set [_data find _loadoutToRename, [_editBoxContent, _loadout]];
+_data set [_data find _loadoutToRename, [_editBoxContent, (_loadoutToRename select 1)]];
 _contentPanelCtrl setVariable [_loadoutName + str GVAR(currentLoadoutsTab), nil];
 _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]];
 
