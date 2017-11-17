@@ -57,3 +57,5 @@ private _progressCheck = {
 };
 
 [_timeToCut, [_fenceObject,0,_unit], _onCompletion, _onFail, localize LSTRING(CuttingFence), _progressCheck, ["isNotSwimming"]] call EFUNC(common,progressBar);
+
+["ace_wireCuttingStarted", [_unit, _fenceObject]] call CBA_fnc_globalEvent;
