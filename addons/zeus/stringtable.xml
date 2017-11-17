@@ -3,6 +3,7 @@
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_DisplayName">
             <English>Zeus</English>
+            <Italian>Zeus</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>

@@ -3,6 +3,7 @@
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_DisplayName">
             <English>Respawn</English>
+            <Italian>Riapparizione</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -278,6 +279,7 @@
         </Key>
         <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
             <English>Body remove timer</English>
+            <Italian>Timer rimozione corpo</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>

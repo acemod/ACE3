@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Interaction_DisplayName">
             <English>Interaction</English>
             <German>Interaktion</German>
+            <Italian>Interazione</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="hitreactions">
         <Key ID="STR_ACE_hitreactions_minDamageToTrigger_displayName">
             <English>Min Damage to trigger falling</English>
+            <Italian>Danno Minimo da caduta se colpiti</Italian>
         </Key>
     </Package>
 </Project>

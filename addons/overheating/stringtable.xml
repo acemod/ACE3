@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Overheating_DisplayName">
             <English>Overheating</English>
             <German>Heißlaufen</German>
+            <Italian>Surriscaldamento</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>

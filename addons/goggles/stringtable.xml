@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Goggles">
         <Key ID="STR_ACE_Goggles_DisplayName">
             <English>Goggles</English>
             <German>Schutzbrille</German>
+            <Italian>Occhiali</Italian>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
@@ -45,7 +46,7 @@
             <German>Brilleneffekt</German>
             <Korean>고글 효과</Korean>
             <French>Effets des lunettes</French>
-            <Italian>Effetto Occhiali</Italian>
+            <Italian>Effetti Occhiali</Italian>
             <Chinesesimp>护目镜效果</Chinesesimp>
             <Chinese>護目鏡效果</Chinese>
         </Key>

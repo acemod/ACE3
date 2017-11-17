@@ -213,10 +213,12 @@
         <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
             <English>Use legacy UI</English>
             <German>Vorheriges UI verwenden</German>
+            <Italian>Usa UI precedente</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
             <German>Anzeige der Absehenverstellungen mit vorzeichenbehafteten Zahlen</German>
+            <Italian>Visualizza l'elevazione e la derivazione con i numeri firmati</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -377,16 +379,19 @@
             <English>%1D</English>
             <German>%1T</German>
             <French>%1B</French>
+            <Italian>%1D</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
             <English>%1L</English>
             <German>%1L</German>
             <French>%1G</French>
+            <Italian>%1L</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
             <English>%1R</English>
             <German>%1R</German>
             <French>%1D</French>
+            <Italian>%1R</Italian>
         </Key>
     </Package>
 </Project>

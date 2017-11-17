@@ -3,6 +3,7 @@
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_DisplayName">
             <English>Switch Units</English>
+            <Italian>Cambio Unità</Italian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
@@ -13,7 +14,7 @@
             <Spanish>Cambiado de unidad</Spanish>
             <French>Unité changée</French>
             <Hungarian>Egység átváltva</Hungarian>
-            <Italian>Cambia unità</Italian>
+            <Italian>Unità cambiata</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
             <Japanese>ユニットを切り替え</Japanese>
             <Chinesesimp>切换单位</Chinesesimp>
