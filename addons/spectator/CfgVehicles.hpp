@@ -75,7 +75,7 @@ class CfgVehicles {
     class VirtualMan_F;
     class GVAR(virtual): VirtualMan_F {
         author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(DisplayName);
+        displayName = CSTRING(Settings_DisplayName);
         scope = 2;
         scopeArsenal = 0;
         scopeCurator = 0;
