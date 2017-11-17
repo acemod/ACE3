@@ -71,7 +71,7 @@ key = ""
 dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
-signature_blacklist = ["ace_server.pbo"]
+signature_blacklist = []
 importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
 versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
 
