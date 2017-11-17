@@ -30,7 +30,7 @@ TRACE_1("Adjusting With",_zeroing);
 // Convert zeroing from mils to degrees
 _zeroing = _zeroing vectorMultiply MRAD_TO_DEG(1);
 
-if (GVAR(correctZeroing)) then {
+if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
     private _baseAngle = GVAR(baseAngle) select _weaponIndex; 
     private _boreHeight = GVAR(boreHeight) select _weaponIndex;
@@ -40,7 +40,11 @@ if (GVAR(correctZeroing)) then {
     if (isNil "_zeroCorrection") then {
          _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
     };
-    _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection - _baseAngle];
+    if (GVAR(simplifiedZeroing)) then {
+        _zeroing = [0, 0, _zeroCorrection - _baseAngle];
+    } else {
+        _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection - _baseAngle];
+    };
 #ifdef DISABLE_DISPERSION
     _projectile setVelocity (_unit weaponDirection currentWeapon _unit) vectorMultiply (vectorMagnitude (velocity _projectile));
 #endif

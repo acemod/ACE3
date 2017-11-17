@@ -26,11 +26,10 @@ if (!GVAR(enabled)) exitWith {false};
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
 
-private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
-
 if (!(GVAR(canAdjustElevation) select _weaponIndex) && (_turretAndDirection in [ELEVATION_UP, ELEVATION_DOWN])) exitWith {false};
 if (!(GVAR(canAdjustWindage) select _weaponIndex) && (_turretAndDirection in [WINDAGE_UP, WINDAGE_DOWN])) exitWith {false};
 
+private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 

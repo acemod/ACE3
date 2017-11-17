@@ -224,6 +224,14 @@
             <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
             <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
+            <English>Simplified zeroing</English>
+            <German>Vereinfachte Nullung</German>
+        </Key>
+        <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
+            <English>Replicates the vanilla zeroing system for riflescopes.</English>
+            <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
+        </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <German>Kleine Korrektur hoch</German>
