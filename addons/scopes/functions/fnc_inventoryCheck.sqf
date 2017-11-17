@@ -64,12 +64,6 @@ private _newOptics = [_player] call FUNC(getOptics);
 private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
 {
     if ((_newOptics select _x) != (GVAR(Optics) select _x) || (_newGuns select _x != GVAR(Guns) select _x)) then {
-        // The optic or the weapon changed, set adjustment to zero
-        if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
-            _adjustment set [_forEachIndex, [0, 0, 0]];
-            _updateAdjustment = true;
-        };
-
         GVAR(baseAngle) set [_x, [_player, _x] call FUNC(getBaseAngle)]; 
         GVAR(boreHeight) set [_x, [_player, _x] call FUNC(getBoreHeight)];
 
@@ -99,6 +93,17 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             (GVAR(scopeAdjust) select _x) set [3, _horizontalIncrement];
             GVAR(canAdjustElevation) set [_x, (_verticalIncrement > 0) && !(_maxVertical isEqualTo [0, 0])];
             GVAR(canAdjustWindage) set [_x, (_horizontalIncrement > 0) && !(_maxHorizontal isEqualTo [0, 0])];
+        };
+        
+        // The optic or the weapon changed, reset the adjustment
+        private _persistentZero = profileNamespace getVariable [format[QGVAR(PersistentZero_%1_%2), _newGuns select _x, _newOptics select _x], 0];
+        ((GVAR(scopeAdjust) select _x) select 0) params ["_minElevation", "_maxElevation"];
+        if (!(_persistentZero isEqualType 0) || {_persistentZero < _minElevation || _persistentZero > _maxElevation}) then {
+            _persistentZero = 0;
+        };
+        if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, _persistentZero])) then {
+            _adjustment set [_forEachIndex, [0, 0, _persistentZero]];
+            _updateAdjustment = true;
         };
     }
 } forEach [0, 1, 2];
