@@ -506,7 +506,3 @@
 `ace_ballistics`
 {% endif %}
 
-{% if include.component == "server" %}
-`ace_common`
-{% endif %}
-
