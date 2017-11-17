@@ -4,6 +4,8 @@
         <Key ID="STR_ACE_CookOff_displayName">
             <English>Cook off</English>
             <Italian>Esplosione</Italian>
+            <Chinese>殉爆效果</Chinese>
+            <Chinesesimp>殉爆效果</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>

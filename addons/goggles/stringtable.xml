@@ -5,6 +5,8 @@
             <English>Goggles</English>
             <German>Schutzbrille</German>
             <Italian>Occhiali</Italian>
+            <Chinese>護目鏡</Chinese>
+            <Chinesesimp>护目镜</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>

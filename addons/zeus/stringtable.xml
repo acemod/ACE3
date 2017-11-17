@@ -4,6 +4,8 @@
         <Key ID="STR_ACE_Zeus_DisplayName">
             <English>Zeus</English>
             <Italian>Zeus</Italian>
+            <Chinese>宙斯</Chinese>
+            <Chinesesimp>宙斯</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>

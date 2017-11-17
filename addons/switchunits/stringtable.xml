@@ -4,6 +4,8 @@
         <Key ID="STR_ACE_SwitchUnits_DisplayName">
             <English>Switch Units</English>
             <Italian>Cambio Unità</Italian>
+            <Chinese>切換單位</Chinese>
+            <Chinesesimp>切换单位</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>

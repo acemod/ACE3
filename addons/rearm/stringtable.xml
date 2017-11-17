@@ -5,6 +5,8 @@
             <English>Rearm</English>
             <German>Aufmunitionierung</German>
             <Italian>Riarmo</Italian>
+            <Chinese>整裝</Chinese>
+            <Chinesesimp>整装</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
