@@ -69,6 +69,8 @@
             <English>Mk6 Mortar</English>
             <German>Mk6 Mörser</German>
             <Italian>Mortaio Mk6</Italian>
+            <Chinese>MK6迫擊炮</Chinese>
+            <Chinesesimp>MK6迫击炮</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>

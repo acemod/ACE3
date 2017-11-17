@@ -4,6 +4,8 @@
         <Key ID="STR_ACE_VehicleLock_DisplayName">
             <English>Vehicle Lock</English>
             <Italian>Blocco Veicolo</Italian>
+            <Chinese>載具上鎖</Chinese>
+            <Chinesesimp>载具上锁</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>

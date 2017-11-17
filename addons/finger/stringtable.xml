@@ -5,6 +5,8 @@
             <English>Pointing</English>
             <German>Fingerzeig</German>
             <Italian>Puntamento</Italian>
+            <Chinese>指向指示器</Chinese>
+            <Chinesesimp>指向指示器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

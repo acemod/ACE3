@@ -5,6 +5,8 @@
             <English>Overheating</English>
             <German>Heißlaufen</German>
             <Italian>Surriscaldamento</Italian>
+            <Chinese>過熱</Chinese>
+            <Chinesesimp>过热</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>

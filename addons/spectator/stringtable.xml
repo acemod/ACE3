@@ -5,6 +5,8 @@
             <English>Spectator</English>
             <German>Zuschauer</German>
             <Italian>Spettatore</Italian>
+            <Chinese>旁觀者</Chinese>
+            <Chinesesimp>旁观者</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>

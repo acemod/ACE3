@@ -373,6 +373,8 @@
             <English>Toggle Collision Lights</English>
             <Italian>Attiva Luci di Collisione</Italian>
             <Korean>충돌 표시등 토글</Korean>
+            <Chinese>切換碰撞燈</Chinese>
+            <Chinesesimp>切换碰撞灯</Chinesesimp>
         </Key>
     </Package>
 </Project>
