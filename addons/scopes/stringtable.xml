@@ -368,6 +368,10 @@
             <Chinesesimp>设定归零</Chinesesimp>
             <Chinese>設定歸零</Chinese>
         </Key>
+        <Key ID="STR_ACE_Scopes_ResetZero">
+            <English>Reset zero adjustment</English>
+            <German>Nullung zurücksetzen</German>
+        </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
             <German>Dieses Modul fügt Absehenverstellung (horizontal und vertikal) zu Zielfernrohren hinzu.</German>

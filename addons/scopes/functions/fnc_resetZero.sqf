@@ -1,6 +1,6 @@
 /*
  * Author: KoffeinFlummi, Ruthberg
- * Updates the zero adjustment of the current scope
+ * Resets the zero adjustment of the current scope
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -9,7 +9,7 @@
  * true <BOOL>
  *
  * Example:
- * [player] call ace_scopes_fnc_adjustZero
+ * [player] call ace_scopes_fnc_resetZero
  *
  * Public: No
  */
@@ -27,15 +27,11 @@ private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0
 private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
-_zero = round((_zero + _elevation) * 10) / 10;
-_elevation = 0;
+_elevation = round((_zero + _elevation) * 10) / 10;
+_zero = 0;
 
 private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex;
-if (_zero != 0) then {
-    profileNamespace setVariable [format[QGVAR(PersistentZero_%1_%2), _weaponClass, _opticsClass], _zero];
-} else {
-    profileNamespace setVariable [format[QGVAR(PersistentZero_%1_%2), _weaponClass, _opticsClass], nil];
-};
+profileNamespace setVariable [format[QGVAR(PersistentZero_%1_%2), _weaponClass, _opticsClass], nil];
 
 [_unit, _elevation, _windage, _zero] call FUNC(applyScopeAdjustment);
 
