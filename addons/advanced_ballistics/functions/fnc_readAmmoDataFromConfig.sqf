@@ -32,15 +32,15 @@ TRACE_1("Reading Ammo Config",_this);
 private _ammoConfig = configFile >> "CfgAmmo" >> _this;
 
 private _airFriction = getNumber(_ammoConfig >> "airFriction");
-private _caliber = getNumber(_ammoConfig >> "ACE_caliber");
-private _bulletLength = getNumber(_ammoConfig >> "ACE_bulletLength");
-private _bulletMass = getNumber(_ammoConfig >> "ACE_bulletMass");
-private _transonicStabilityCoef = getNumber(_ammoConfig >> "ACE_transonicStabilityCoef");
+private _caliber = 0 max getNumber(_ammoConfig >> "ACE_caliber");
+private _bulletLength = 0 max getNumber(_ammoConfig >> "ACE_bulletLength");
+private _bulletMass = 0 max getNumber(_ammoConfig >> "ACE_bulletMass");
+private _transonicStabilityCoef = 0 max getNumber(_ammoConfig >> "ACE_transonicStabilityCoef") min 1;
 if (_transonicStabilityCoef == 0) then {
     _transonicStabilityCoef = 0.5;
 };
 private _dragModel = getNumber(_ammoConfig >> "ACE_dragModel");
-if (_dragModel == 0 || !(_dragModel in [1, 2, 5, 6, 7, 8])) then {
+if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
     _dragModel = 1;
 };
 private _ballisticCoefficients = getArray(_ammoConfig >> "ACE_ballisticCoefficients");
