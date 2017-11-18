@@ -1,15 +1,15 @@
 /*
  * Author: KoffeinFlummi, Ruthberg
- * Checks if the unit can change the zero adjustment of the current scope
+ * Checks if the unit can reset the zero adjustment of the current scope
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Can we update the zero reference? <BOOL>
+ * Can we reset the zero reference? <BOOL>
  *
  * Example:
- * [player] call ace_scopes_fnc_canAdjustZero
+ * [player] call ace_scopes_fnc_canResetZero
  *
  * Public: No
  */
@@ -25,7 +25,7 @@ private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponI
 if (_weaponIndex < 0) exitWith {false};
 
 private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
-private _elevation = (_adjustment select _weaponIndex) select 0;
+private _zero = (_adjustment select _weaponIndex) select 2;
 
-// You can only adjust your zero reference, if your relative elevation setting is not 0
-_elevation != 0
+// You can only reset your zero reference, if it is not 0 already
+_zero != 0

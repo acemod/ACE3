@@ -13,6 +13,16 @@ class CfgVehicles {
                     //icon = QPATHTOF(UI\...); // TODO
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSwimming", "isNotSitting"};
                 };
+                class GVAR(resetZero) {
+                    // Updates the zero reference
+                    displayName = CSTRING(ResetZero);
+                    condition = QUOTE([ACE_player] call FUNC(canResetZero));
+                    statement = QUOTE([ACE_player] call FUNC(resetZero));
+                    showDisabled = 0;
+                    priority = 0.2;
+                    //icon = QPATHTOF(UI\...); // TODO
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSwimming", "isNotSitting"};
+                };
             };
         };
     };
