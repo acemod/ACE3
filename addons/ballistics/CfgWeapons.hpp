@@ -28,7 +28,7 @@ class CfgWeapons {
 
     // QBU-88
     class DMR_07_base_F: Rifle_Long_Base_F {
-        initSpeed = -1.06051;
+        initSpeed = -0.99998;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 640.0;
         magazines[] = {
@@ -119,7 +119,7 @@ class CfgWeapons {
             "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim",
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
         };
-        initSpeed = -1.0;
+        initSpeed = -0.981912;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 406.4;
     };
@@ -133,7 +133,7 @@ class CfgWeapons {
             "ACE_30Rnd_65x47_Scenar_mag",
             "ACE_30Rnd_65_Creedmor_mag"
         };
-        initSpeed = -1.01842;
+        initSpeed = -1.0;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 457.2;
         class Single: Single {
@@ -159,14 +159,14 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.859238;
+        initSpeed = -0.869636;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 264.0;
     };
     
     // HK416A5 14.5"
     class arifle_SPAR_02_base_F: Rifle_Base_F {
-        initSpeed = -0.934282;
+        initSpeed = -0.999864;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.0;
     };
@@ -183,7 +183,7 @@ class CfgWeapons {
             "ACE_20Rnd_762x51_M993_AP_Mag",
             "ACE_20Rnd_762x51_Mag_SD"
         };
-        initSpeed = -0.984394;
+        initSpeed = -0.991536;
         ACE_barrelTwist = 279.4;
         ACE_barrelLength = 508.0;
     };
@@ -195,28 +195,27 @@ class CfgWeapons {
             "200Rnd_65x39_cased_Box_Tracer",
             "ACE_200Rnd_65x39_cased_Box_Tracer_Dim"
         };
-        initSpeed = -0.976974;
+        initSpeed = -0.999327;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 317.5;
     };
     
     // Negev NG7
     class LMG_Zafir_F: Rifle_Long_Base_F {
-        initSpeed = -0.931071;
+        initSpeed = -1.00048;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 459.74;
     };
     
     // M249 SPW
     class LMG_03_base_F: Rifle_Long_Base_F {
-        initSpeed = -1.02002;
+        initSpeed = -1.00051;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 414.02;
     };
 
     // RFB SDAR
     class SDAR_base_F: Rifle_Base_F {
-        initSpeed = -1.211;
         class Single: Mode_SemiAuto {
             dispersion = MOA_TO_RAD(3.0);
         };
@@ -235,49 +234,51 @@ class CfgWeapons {
 
     // P99
     class hgun_P07_F: Pistol_Base_F {
-        initSpeed = -1.0;
+        initSpeed = -0.906977;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 101.6;
     };
 
     // MP-443 Grach
     class hgun_Rook40_F: Pistol_Base_F {
-        initSpeed = -1.03077;
+        initSpeed = -0.934884;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 111.76;
     };
 
     // Custom Covert II
     class hgun_ACPC2_F: Pistol_Base_F {
-        initSpeed = -1.0;
+        initSpeed = -0.984252;
         ACE_barrelTwist = 406.4;
         ACE_barrelLength = 127.0;
     };
 
     // FNX-45 Tactical
     class hgun_Pistol_heavy_01_F: Pistol_Base_F {
-        initSpeed = -0.96;
+        initSpeed = -0.944882;
         ACE_barrelTwist = 406.4;
         ACE_barrelLength = 114.3;
     };
 
     // Chiappa Rhino 60DS
     class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-        initSpeed = -0.92;
+        initSpeed = -0.905512;
         ACE_barrelTwist = 406.4;
         ACE_barrelLength = 76.2;
     };
     
     // Makarov PM
     class hgun_Pistol_01_F: Pistol_Base_F {
-        initSpeed = -0.974359;
+        initSpeed = -0.883721;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 93.5;
     };
     
+    class pdw2000_base_F: Rifle_Short_Base_F {};
+    
     // CPW
-    class pdw2000_base_F: Rifle_Short_Base_F {
-        initSpeed = -1.09615;
+    class hgun_PDW2000_F: pdw2000_base_F {
+        initSpeed = -0.994186;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 177.8;
     };
@@ -291,35 +292,35 @@ class CfgWeapons {
     
     // AKM
     class arifle_AKM_base_F: Rifle_Base_F {
-        initSpeed = -1.0014;
+        initSpeed = -1.0;
         ACE_barrelTwist = 199.898;
         ACE_barrelLength = 414.02;
     };
     
     // AK12
     class arifle_AK12_base_F: Rifle_Base_F {
-        initSpeed = -1.0014;
+        initSpeed = -1.0;
         ACE_barrelTwist = 199.898;
         ACE_barrelLength = 414.02;
     };
     
     // QBZ-95-1
     class arifle_CTAR_base_F: Rifle_Base_F {
-        initSpeed = -1.0;
+        initSpeed = -0.978947;
         ACE_barrelTwist = 244.0;
         ACE_barrelLength = 463.0;
     };
     
     // QBZ-95-1 LSW
     class arifle_CTARS_base_F: Rifle_Base_F {
-        initSpeed = -1.04301;
+        initSpeed = -1.0;
         ACE_barrelTwist = 244.0;
         ACE_barrelLength = 600.0;
     };
     
     // Type 115
     class arifle_ARX_base_F: Rifle_Base_F {
-        initSpeed = -1.02052;
+        initSpeed = -0.984262;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 463.0;
     };
@@ -333,7 +334,7 @@ class CfgWeapons {
             "30Rnd_65x39_caseless_green_mag_Tracer",
             "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
-        initSpeed = -1.08355;
+        initSpeed = -1.0;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 508.0;
     };
@@ -345,7 +346,7 @@ class CfgWeapons {
             "30Rnd_65x39_caseless_green_mag_Tracer",
             "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
-        initSpeed = -1.07105;
+        initSpeed = -0.961294;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 393.7;
     };
@@ -357,7 +358,7 @@ class CfgWeapons {
             "30Rnd_65x39_caseless_green_mag_Tracer",
             "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
-        initSpeed = -1.08355;
+        initSpeed = -1.0;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 508.0;
     };
@@ -369,7 +370,7 @@ class CfgWeapons {
             "30Rnd_65x39_caseless_mag_Tracer",
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
         };
-        initSpeed = -0.990132;
+        initSpeed = -0.972222;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 368.3;
     };
@@ -381,7 +382,7 @@ class CfgWeapons {
             "30Rnd_65x39_caseless_mag_Tracer",
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
         };
-        initSpeed = -0.99;
+        initSpeed = -0.972222;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 368.3;
     };
@@ -393,7 +394,7 @@ class CfgWeapons {
             "30Rnd_65x39_caseless_mag_Tracer",
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
         };
-        initSpeed = -0.963816;
+        initSpeed = -0.946382;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 266.7;
     };
@@ -413,21 +414,23 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.989;
+        initSpeed = -0.998321;
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 457.2;
     };
     
+    class SMG_02_base_F: Rifle_Short_Base_F  {};
+    
     // Scorpion Evo 3 A1
-    class SMG_02_base_F: Rifle_Short_Base_F  {
-        initSpeed = -1.10288;
+    class SMG_02_F: SMG_02_base_F  {
+        initSpeed = -1.00029;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 195.58;
     };
     
     // MP5K
     class SMG_05_base_F: Rifle_Short_Base_F {
-        initSpeed = -1.04058;
+        initSpeed = -0.943783;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 115.0;
     };
@@ -448,7 +451,7 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.95;
+        initSpeed = -0.961496;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 381.0;
     };
@@ -467,7 +470,7 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.988043;
+        initSpeed = -1.0;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 459.74;
     };
@@ -486,7 +489,7 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.988043;
+        initSpeed = -1.0;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 459.74;
     };
@@ -507,7 +510,7 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.980978;
+        initSpeed = -0.992849;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 441.96;
     };
@@ -526,7 +529,7 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.962648;
+        initSpeed = -0.974297;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 406.4;
     };
@@ -545,14 +548,16 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
-        initSpeed = -0.962648;
+        initSpeed = -0.974297;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 406.4;
     };
     
+    class SMG_01_Base: Rifle_Short_Base_F {};
+    
     // Vector SMG
-    class SMG_01_Base: Rifle_Short_Base_F {
-        initSpeed = -1.0175;
+    class SMG_01_F: SMG_01_Base {
+        initSpeed = -1.00148;
         ACE_barrelTwist = 406.4;
         ACE_barrelLength = 139.7;
     };
@@ -580,7 +585,7 @@ class CfgWeapons {
             "ACE_20Rnd_762x51_M993_AP_Mag",
             "ACE_20Rnd_762x51_Mag_SD"
         };
-        initSpeed = -0.972389;
+        initSpeed = -0.979444;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 457.2;
     };
@@ -620,7 +625,7 @@ class CfgWeapons {
             "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
             "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
         };
-        initSpeed = -0.961749;
+        initSpeed = -1.0;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 508.0;
     };
@@ -637,7 +642,7 @@ class CfgWeapons {
             "ACE_20Rnd_762x51_M993_AP_Mag",
             "ACE_20Rnd_762x51_Mag_SD"
         };
-        initSpeed = -0.984394;
+        initSpeed = -0.991536;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 508.0;
     };
@@ -668,14 +673,14 @@ class CfgWeapons {
             "ACE_20Rnd_762x51_M993_AP_Mag",
             "ACE_20Rnd_762x51_Mag_SD"
         };
-        initSpeed = -0.992197;
+        initSpeed = -0.999395;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
     };
     
     // HK121
     class MMG_01_hex_F: MMG_01_base_F {
-        initSpeed = -0.997073;
+        initSpeed = -0.985613;
         ACE_barrelTwist = 359.918;
         ACE_barrelLength = 549.91;
     };
