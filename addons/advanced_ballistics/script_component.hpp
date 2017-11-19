@@ -28,4 +28,7 @@
 #define STD_AIR_DENSITY_ICAO 1.22498
 #define STD_AIR_DENSITY_ASM 1.20885
 
+ // Standard deviation of the default muzzle velocity variation (0.3%)
+#define DEFAULT_MUZZLE_VELOCITY_VARIATION_SD 0.003
+
 #define EXTENSION_REQUIRED_VERSION "1.0"

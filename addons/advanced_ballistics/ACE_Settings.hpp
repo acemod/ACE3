@@ -43,6 +43,13 @@ class ACE_Settings {
         value = 0;
     };
     */
+    class GVAR(muzzleVelocityVariationEnabled) {
+        category = CSTRING(DisplayName);
+        displayName = CSTRING(muzzleVelocityVariationEnabled_DisplayName);
+        description = CSTRING(muzzleVelocityVariationEnabled_Description);
+        typeName = "BOOL";
+        value = 1;
+    }; 
     class GVAR(ammoTemperatureEnabled) {
         category = CSTRING(DisplayName);
         displayName = CSTRING(ammoTemperatureEnabled_DisplayName);
