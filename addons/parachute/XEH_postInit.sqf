@@ -33,7 +33,7 @@ GVAR(PFH) = false;
 ["vehicle",{
     if (!GVAR(PFH) && {(vehicle ACE_player) isKindOf "ParachuteBase"}) then {
         GVAR(PFH) = true;
-        [FUNC(onEachFrame), 0.1, []] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+        [FUNC(onEachFrame), 0.1, []] call CBA_fnc_addPerFrameHandler;
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
