@@ -20,7 +20,7 @@ TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectil
 
 BEGIN_COUNTER(firedEH);
 
-if ((_unit distance ACE_player) > 3000 //Ignore far away shots
+if ((_unit distance ACE_player) > 3000
     || {(_muzzle != (primaryWeapon _unit)) && {_muzzle != (handgunWeapon _unit)}}) exitWith { // Only rifle or pistol muzzles (ignore grenades / GLs)
     END_COUNTER(firedEH);
 };
@@ -36,60 +36,57 @@ private _scaledTemperature = linearConversion [0, 1000, _temperature, 0, 1, true
 
 TRACE_2("Unit fired with temp:",_unit,_temperature);
 
-//Get weapon data from cache:
+// Get weapon data from cache:
 ([_weapon] call FUNC(getWeaponData)) params ["_dispersion", "_slowdownFactor", "_jamChance"];
 TRACE_4("weapon data from cache",_weapon,_dispersion,_slowdownFactor,_jamChance);
 
-// Dispersion and bullet slow down
-if (GVAR(overheatingDispersion) && _scaledTemperature > 0.1) then {
-    // Exit if GVAR(pseudoRandomList) isn't synced yet
-    if (isNil QGVAR(pseudoRandomList)) exitWith {ERROR("No pseudoRandomList sync");};
+if (_scaledTemperature > 0.1) then {
+    // Dispersion and bullet slow down
+    if (GVAR(overheatingDispersion)) then {
+        if (isNil QGVAR(pseudoRandomList)) exitWith {ERROR("No pseudoRandomList sync");};
 
-    //Dispersion: 0 mils @ 0°C, 0.5 mils @ 333°C, 2.2 mils @ 666°C, 5 mils at 1000°C
-    _dispersion = _dispersion * 0.28125 * (_scaledTemperature^2);
+        //Dispersion: 0 mils @ 0°C, 0.5 mils @ 333°C, 2.2 mils @ 666°C, 5 mils at 1000°C
+        _dispersion = _dispersion * 0.28125 * (_scaledTemperature^2);
 
-    _slowdownFactor = _slowdownFactor * linearConversion [0.666, 1, _scaledTemperature, 0, -0.1, true];
+        _slowdownFactor = _slowdownFactor * linearConversion [0.666, 1, _scaledTemperature, 0, -0.1, true];
 
-    // Get the pseudo random values for dispersion from the remaining ammo count
-    (GVAR(pseudoRandomList) select ((_unit ammo _weapon) mod (count GVAR(pseudoRandomList)))) params ["_dispersionX", "_dispersionY"];
+        // Get the pseudo random values for dispersion from the remaining ammo count
+        (GVAR(pseudoRandomList) select ((_unit ammo _weapon) mod (count GVAR(pseudoRandomList)))) params ["_dispersionX", "_dispersionY"];
 
-    TRACE_4("change",_dispersion,_slowdownFactor,_dispersionX,_dispersionY);
+        TRACE_4("change",_dispersion,_slowdownFactor,_dispersionX,_dispersionY);
 
-    TRACE_PROJECTILE_INFO(_projectile);
-    [_projectile, _dispersionX * _dispersion, _dispersionY * _dispersion, _slowdownFactor * vectorMagnitude (velocity _projectile)] call EFUNC(common,changeProjectileDirection);
-    TRACE_PROJECTILE_INFO(_projectile);
-};
-
-
-// ------  LOCAL AND NEARBY PLAYERS DEPENDING ON SETTINGS ------------
-// Particle effects only apply to the local player and, depending on settings, to other nearby players
-if (_unit != ACE_player && (!GVAR(showParticleEffectsForEveryone) || {_unit distance ACE_player > 20})) exitWith {
-    END_COUNTER(firedEH);
-};
-
-//Particle Effects:
-if (GVAR(showParticleEffects) && _scaledTemperature > 0.1 && {CBA_missionTime > (_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40}) then {
-    _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
-
-    private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
-    private _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
-
-    // Refract SFX, beginning at temp 100°C and maxs out at 500°C
-    private _intensity = linearConversion [0.1, 0.5, _scaledTemperature, 0, 1, true];
-    TRACE_3("refract",_direction,_position,_intensity);
-    if (_intensity > 0) then {
-        drop [
-        "\A3\data_f\ParticleEffects\Universal\Refract", "", "Billboard", 10, 2, _position, _direction, 0, 1.2, 1.0,
-        0.1, [0.10,0.25], [[0.6,0.6,0.6,0.3 * _intensity],[0.2,0.2,0.2,0.05 * _intensity]], [0,1], 0.1, 0.05, "", "", ""];
+        TRACE_PROJECTILE_INFO(_projectile);
+        [_projectile, _dispersionX * _dispersion, _dispersionY * _dispersion, _slowdownFactor * vectorMagnitude (velocity _projectile)] call EFUNC(common,changeProjectileDirection);
+        TRACE_PROJECTILE_INFO(_projectile);
     };
-    // Smoke SFX, beginning at temp 150°C
-    private _intensity = linearConversion [0.15, 1, _scaledTemperature, 0, 1, true];
-    TRACE_3("smoke",_direction,_position,_intensity);
-    if (_intensity > 0) then {
-        drop [
-        ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16], "", "Billboard", 10, 1.2, _position,
-        [0,0,0.15], 100 + random 80, 1.275, 1, 0.025, [0.15,0.43], [[0.6,0.6,0.6,0.5 * _intensity],[0.2,0.2,0.2,0.15 * _intensity]],
-        [0,1], 1, 0.04, "", "", ""];
+    
+    // Particle Effects
+    if (GVAR(showParticleEffects)
+        && {GVAR(showParticleEffectsForEveryone) || {_unit == ACE_player} || {_unit distance ACE_player <= 20}}
+        && {CBA_missionTime > (_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40}) then {
+        
+        _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
+
+        private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
+        private _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
+
+        // Refract SFX, beginning at temp 100°C and maxs out at 500°C
+        private _intensity = linearConversion [0.1, 0.5, _scaledTemperature, 0, 1, true];
+        TRACE_3("refract",_direction,_position,_intensity);
+        if (_intensity > 0) then {
+            drop [
+            "\A3\data_f\ParticleEffects\Universal\Refract", "", "Billboard", 10, 2, _position, _direction, 0, 1.2, 1.0,
+            0.1, [0.10,0.25], [[0.6,0.6,0.6,0.3 * _intensity],[0.2,0.2,0.2,0.05 * _intensity]], [0,1], 0.1, 0.05, "", "", ""];
+        };
+        // Smoke SFX, beginning at temp 150°C
+        private _intensity = linearConversion [0.15, 1, _scaledTemperature, 0, 1, true];
+        TRACE_3("smoke",_direction,_position,_intensity);
+        if (_intensity > 0) then {
+            drop [
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16], "", "Billboard", 10, 1.2, _position,
+            [0,0,0.15], 100 + random 80, 1.275, 1, 0.025, [0.15,0.43], [[0.6,0.6,0.6,0.5 * _intensity],[0.2,0.2,0.2,0.15 * _intensity]],
+            [0,1], 1, 0.04, "", "", ""];
+        };
     };
 };
 
