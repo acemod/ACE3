@@ -1,31 +1,34 @@
 /*
  * Author: Ruthberg
- * Gets the base angle of the rail on the weapon with the given weapon index
+ * Gets the base angle of the currently used weapon & optic combination
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon index <NUMBER>
+ * 2: Weapon <CLASS>
+ * 3: Optic <CLASS>
  *
  * Return Value:
  * base angle <NUMBER>
  *
  * Example:
- * [player, 0] call ace_scopes_fnc_getBaseAngle
+ * [player, 0, "srifle_LRR_F", "optic_LRPS"] call ace_scopes_fnc_getBaseAngle
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_player", "_weaponIndex"];
+params ["_player", "_weaponIndex", "_weaponClass", "_opticsClass"];
 
-if (_weaponIndex < 0 || {_weaponIndex > 2}) exitWith { 0 };
-
-private _weaponClass = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player] select _weaponIndex;
-
-private _baseAngle = DEFAULT_RAIL_BASE_ANGLE;
 private _weaponConfig = configFile >> "CfgWeapons" >> _weaponClass;
-if (isNumber (_weaponConfig >> "ACE_RailBaseAngle")) then {
-    _baseAngle = getNumber(_weaponConfig >> "ACE_RailBaseAngle");
+private _baseAngle = getNumber(_weaponConfig >> "ACE_IronSightBaseAngle");
+
+if (_opticsClass != "") then {
+    if (isNumber (_weaponConfig >> "ACE_RailBaseAngle")) then {
+        _baseAngle = getNumber(_weaponConfig >> "ACE_RailBaseAngle");
+    } else {
+        _baseAngle = DEFAULT_RAIL_BASE_ANGLE;
+    };
 };
 
 _baseAngle
