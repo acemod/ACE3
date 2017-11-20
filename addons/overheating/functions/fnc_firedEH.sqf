@@ -97,7 +97,9 @@ if (GVAR(showParticleEffects) && _scaledTemperature > 0.1 && {CBA_missionTime > 
 // Only compute jamming for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
-_jamChance = _jamChance * ([[0.5, 1, 2, 8, 20, 150], 5 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
+private _value = 5 * _scaledTemperature;
+private _array = [0.5, 1, 2, 8, 20, 150];
+_jamChance = _jamChance * linearConversion [0, 1, _value % 1, _array select floor _value, _array select ceil _value];
 
 TRACE_3("check for random jam",_unit,_weapon,_jamChance);
 
