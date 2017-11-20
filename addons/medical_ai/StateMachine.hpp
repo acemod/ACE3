@@ -1,5 +1,5 @@
 class GVAR(stateMachine) {
-    list = QEGVAR(common,localUnits);
+    list = QUOTE(call EFUNC(common,getLocalUnits));
     skipNull = 1;
 
     class Initial {

@@ -58,6 +58,7 @@ PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getLocalUnits);
 PREP(getMapData);
 PREP(getMapGridData);
 PREP(getMapGridFromPos);
