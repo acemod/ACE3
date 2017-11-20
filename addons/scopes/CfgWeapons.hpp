@@ -220,6 +220,7 @@ class CfgWeapons {
 
     class DMR_07_base_F: Rifle_Long_Base_F {
         ACE_RailHeightAboveBore = 5.07109;
+        ACE_IronSightBaseAngle = -0.02857143;
     };
     
     class arifle_MX_Base_F: Rifle_Base_F {
@@ -231,26 +232,33 @@ class CfgWeapons {
     };
     class arifle_MXM_F: arifle_MX_Base_F {
         ACE_RailHeightAboveBore = 2.40323;
+        ACE_IronSightBaseAngle = 0.14285714;
     };
 
     class arifle_SPAR_01_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.20768;
+        ACE_IronSightBaseAngle = -0.22285714;
     };
     class arifle_SPAR_02_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.22175;
+        ACE_IronSightBaseAngle = -0.21714286;
     };
     class arifle_SPAR_03_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.71491;
+        ACE_IronSightBaseAngle = -0.16571429;
     };
 
     class LMG_Mk200_F: Rifle_Long_Base_F {
         ACE_RailHeightAboveBore = 2.68925;
+        ACE_IronSightBaseAngle = -0.02285714;
     };
     class LMG_Zafir_F: Rifle_Long_Base_F {
         ACE_RailHeightAboveBore = 0.996651;
+        ACE_IronSightBaseAngle = 0.17142857;
     };
     class LMG_03_base_F: Rifle_Long_Base_F {
         ACE_RailHeightAboveBore = 4.24282;
+        ACE_IronSightBaseAngle = -0.01142857;
     };
 
     class pdw2000_base_F: Rifle_Short_Base_F {
@@ -269,31 +277,38 @@ class CfgWeapons {
     };
     class arifle_CTAR_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 6.07588;
+        ACE_IronSightBaseAngle = -0.03428571;
     };
     class arifle_CTARS_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 6.0787;
     };
     class arifle_ARX_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 2.81635;
+        ACE_IronSightBaseAngle = 0.04;
     };
 
     class arifle_katiba_Base_F: Rifle_Base_F {};
     
     class arifle_Katiba_F: arifle_katiba_Base_F {
         ACE_RailHeightAboveBore = 5.75468;
+        ACE_IronSightBaseAngle = 0.02285714;
     };
     class arifle_Katiba_C_F: arifle_katiba_Base_F {
         ACE_RailHeightAboveBore = 5.75468;
+        ACE_IronSightBaseAngle = 0.05714286;
     };
     class arifle_Katiba_GL_F: arifle_katiba_Base_F {
         ACE_RailHeightAboveBore = 5.75468;
+        ACE_IronSightBaseAngle = 0.02285714;
     };
     
     class arifle_MX_F: arifle_MX_Base_F {
         ACE_RailHeightAboveBore = 2.80201;
+        ACE_IronSightBaseAngle = 0.17142857;
     };
     class arifle_MX_GL_F: arifle_MX_Base_F {
         ACE_RailHeightAboveBore = 2.80201;
+        ACE_IronSightBaseAngle = 0.17142857;
     };
 
     class arifle_MXC_F: arifle_MX_Base_F {
@@ -304,19 +319,23 @@ class CfgWeapons {
     
     class arifle_SDAR_F: SDAR_base_F {
         ACE_RailHeightAboveBore = 0;
+        ACE_IronSightBaseAngle = -0.08571429;
     };
 
     class SMG_01_Base: Rifle_Short_Base_F {
         ACE_RailHeightAboveBore = 4.85355;
         ACE_RailBaseAngle = 0.0250956;
+        ACE_IronSightBaseAngle = -0.13750987;
     };
     class SMG_02_base_F: Rifle_Short_Base_F  {
         ACE_RailHeightAboveBore = 4.41831;
         ACE_RailBaseAngle = 0.0217724;
+        ACE_IronSightBaseAngle = 0.4;
     };
     class SMG_05_base_F: Rifle_Short_Base_F {
         ACE_RailHeightAboveBore = 4.05169;
         ACE_RailBaseAngle = 0.019366;
+        ACE_IronSightBaseAngle = -0.15714285;
     };
 
     class Tavor_base_F: Rifle_Base_F {};
@@ -326,21 +345,26 @@ class CfgWeapons {
     };
     class arifle_TRG21_F: Tavor_base_F {
         ACE_RailHeightAboveBore = 4.30954;
+        ACE_IronSightBaseAngle = -0.03428571;
     };
     class arifle_TRG21_GL_F: arifle_TRG21_F {
         ACE_RailHeightAboveBore = 4.30954;
+        ACE_IronSightBaseAngle = -0.03428571;
     };
 
     class mk20_base_F: Rifle_Base_F {};
 
     class arifle_Mk20_F: mk20_base_F {
         ACE_RailHeightAboveBore = 4.57255;
+        ACE_IronSightBaseAngle = -0.05714286;
     };
     class arifle_Mk20C_F: mk20_base_F {
         ACE_RailHeightAboveBore = 4.41539;
+        ACE_IronSightBaseAngle = -0.05714286;
     };
     class arifle_Mk20_GL_F: mk20_base_F {
         ACE_RailHeightAboveBore = 4.41539;
+        ACE_IronSightBaseAngle = -0.05714286;
     };
 
     class EBR_base_F: Rifle_Long_Base_F {};
@@ -355,21 +379,25 @@ class CfgWeapons {
 
     class srifle_EBR_F: EBR_base_F {
         ACE_RailHeightAboveBore = 1.98812;
+        ACE_IronSightBaseAngle = -0.04;
     };
     class srifle_LRR_F: LRR_base_F {
         ACE_RailHeightAboveBore = 3.20864;
     };
     class srifle_GM6_F: GM6_base_F {
         ACE_RailHeightAboveBore = 4.75572;
+        ACE_IronSightBaseAngle = -0.2;
     };
     class srifle_DMR_01_F: DMR_01_base_F {
         ACE_RailHeightAboveBore = 2.83284;
     };
     class srifle_DMR_02_F: DMR_02_base_F {
         ACE_RailHeightAboveBore = 3.43913;
+        ACE_IronSightBaseAngle = -0.01714285;
     };
     class srifle_DMR_03_F: DMR_03_base_F {
         ACE_RailHeightAboveBore = 4.0795;
+        ACE_IronSightBaseAngle = -0.02;
     };
     class srifle_DMR_04_F: DMR_04_base_F {
         ACE_RailHeightAboveBore = 2.38022;
@@ -380,6 +408,7 @@ class CfgWeapons {
     };
     class srifle_DMR_06_camo_F: DMR_06_base_F {
         ACE_RailHeightAboveBore = 3.27488;
+        ACE_IronSightBaseAngle = -0.02285714;
     };
 
     class MMG_01_base_F;
@@ -390,5 +419,6 @@ class CfgWeapons {
     };    
     class MMG_02_camo_F: MMG_02_base_F {
         ACE_RailHeightAboveBore = 5.01913;
+        ACE_IronSightBaseAngle = -0.02285714;
     };
 };
