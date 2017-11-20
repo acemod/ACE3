@@ -99,18 +99,25 @@ if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
 _jamChance = _jamChance * ([[0.5, 1, 2, 8, 20, 150], 5 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
 
-// increase jam chance on dusty grounds if prone (and at ground level)
-if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {
-    private _surface = configFile >> "CfgSurfaces" >> ((surfaceType getPosASL _unit) select [1]);
-    if (isClass _surface) then {
-        TRACE_1("dust",getNumber (_surface >> "dust"));
-        _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
-    };
-};
-
 TRACE_3("check for random jam",_unit,_weapon,_jamChance);
-if ((random 1) < _jamChance) then {
-    [_unit, _weapon] call FUNC(jamWeapon);
+
+private _randomNumber = random 1;
+
+// Fail early if we know that we won't have a malfunction regardless of the ground type.
+if (_randomNumber < _jamChance * 2) then {
+    if (_randomNumber > _jamChance) then {
+        // Increase jam chance on dusty grounds if prone (and at ground level)
+        if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {
+            private _surface = configFile >> "CfgSurfaces" >> ((surfaceType getPosASL _unit) select [1]);
+            if (isClass _surface) then {
+                TRACE_1("dust",getNumber (_surface >> "dust"));
+                _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
+            };
+        };
+    };
+    if (_randomNumber < _jamChance) then {
+        [_unit, _weapon] call FUNC(jamWeapon);
+    };
 };
 
 END_COUNTER(firedEH);
