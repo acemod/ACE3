@@ -60,7 +60,7 @@ GVAR(localUnits) = [];
             params ["_unit"];
             TRACE_3("unit deleted nextFrame",_unit,local _unit,isNull _unit);
             if (isNull _unit) then { //If it is not null then the deleted EH was Fake.
-                GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
+                GVAR(localUnits) = GVAR(localUnits) - [objNull];
             };
         }, [_unit]] call CBA_fnc_execNextFrame;
     };
