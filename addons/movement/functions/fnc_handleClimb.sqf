@@ -24,4 +24,5 @@ private _pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 
 _pos = _pos vectorDiff (_unit selectionPosition "camera");
 
-_unit setPos _pos;
+_unit setPosASL (AGLtoASL _pos);
+TRACE_2("",AGLtoASL _pos,getPosASL _unit);
