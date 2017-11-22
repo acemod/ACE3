@@ -17,7 +17,6 @@
 
 if (!hasInterface) exitWith {};
 if (!GVAR(enabled)) exitWith {};
-if (!GVAR(extensionAvailable)) exitWith {};
 
 private _initStartTime = diag_tickTime;
 private _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
