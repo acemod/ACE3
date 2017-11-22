@@ -35,6 +35,10 @@ if (_initSpeedCoef < 0) then {
 private _zeroAngle = "ace_advanced_ballistics" callExtension format ["replicateVanillaZero:%1:%2:%3", _oldZeroRange, _initSpeed, _airFriction];
 private _vanillaZero = parseNumber _zeroAngle;
 
+#ifdef DISABLE_DISPERSION
+    _vanillaZero = 0;
+#endif
+
 private _trueZero = if (!_advancedBallistics) then {
     _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _newZeroRange, _initSpeed, _airFriction, _boreHeight];
     (parseNumber _zeroAngle)

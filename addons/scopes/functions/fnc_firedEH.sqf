@@ -41,6 +41,9 @@ if (GVAR(correctZeroing)) then {
          _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
     };
     _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection - _baseAngle];
+#ifdef DISABLE_DISPERSION
+    _projectile setVelocity (_unit weaponDirection currentWeapon _unit) vectorMultiply (vectorMagnitude (velocity _projectile));
+#endif
 };
 
 if (_zeroing isEqualTo [0, 0, 0]) exitWith {};

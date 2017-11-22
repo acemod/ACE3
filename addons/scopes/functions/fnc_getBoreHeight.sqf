@@ -1,27 +1,24 @@
 /*
  * Author: Ruthberg
- * Gets the bore height of the weapon & optic combination with the given weapon index
+ * Gets the bore height of the currently used weapon & optic combination
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon index <NUMBER>
+ * 2: Weapon <CLASS>
+ * 3: Optic <CLASS>
  *
  * Return Value:
  * bore height <NUMBER>
  *
  * Example:
- * [player, 0] call ace_scopes_fnc_getBoreHeight
+ * [player, 0, "srifle_LRR_F", "optic_LRPS"] call ace_scopes_fnc_getBoreHeight
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_player", "_weaponIndex"];
-
-if (_weaponIndex < 0 || {_weaponIndex > 2}) exitWith { 0 };
-
-private _weaponClass = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player] select _weaponIndex;
-private _opticsClass = ([_player] call FUNC(getOptics)) select _weaponIndex;
+params ["_player", "_weaponIndex", "_weaponClass", "_opticsClass"];
 
 if (_opticsClass == "") then { _opticsClass = _weaponClass; };
 
@@ -47,8 +44,8 @@ if (isNumber (_opticConfig >> "ACE_ScopeHeightAboveRail")) then {
         case 2: { _scopeHeightAboveRail = 4.0; }; // High power scope
         default {
             switch (_weaponIndex) do {
-                case 0: { _scopeHeightAboveRail = 0.5; }; // Rifle iron sights
-                case 2: { _scopeHeightAboveRail = 0.3; }; // Pistol iron sights
+                case 0: { _scopeHeightAboveRail = 2.0; }; // Rifle iron sights
+                case 2: { _scopeHeightAboveRail = 1.0; }; // Pistol iron sights
             };
         };
     };
