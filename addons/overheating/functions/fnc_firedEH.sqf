@@ -25,11 +25,6 @@ if ((_unit distance ACE_player) > 3000
     END_COUNTER(firedEH);
 };
 
-// Compute new temperature if the unit is the local player
-if (_unit == ACE_player) then {
-    _this call FUNC(overheat);
-};
-
 // Get current temperature from the unit variable
 private _temperature = _unit getVariable [format [QGVAR(%1_temp), _weapon], 0];
 private _scaledTemperature = linearConversion [0, 1000, _temperature, 0, 1, true];
@@ -93,6 +88,11 @@ if (_scaledTemperature > 0.1) then {
 // ------  LOCAL PLAYER ONLY ------------
 // Only compute jamming for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
+
+// Compute new temperature once every 3 bullets
+if ((_unit ammo _weapon) % 3 == 0) then {
+    _this call FUNC(overheat);
+};
 
 private _value = 5 * _scaledTemperature;
 private _array = [0.5, 1, 2, 8, 20, 150];

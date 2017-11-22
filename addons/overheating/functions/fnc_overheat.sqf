@@ -23,9 +23,6 @@
 params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
 TRACE_4("params",_unit,_weapon,_ammo,_projectile);
 
-// Only do heat calculations every 3 bullets
-if (((_unit ammo _weapon) % 3) != 0) exitWith {};
-
 BEGIN_COUNTER(overheat);
 
 // Get bullet parameters
