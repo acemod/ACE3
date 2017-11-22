@@ -230,7 +230,7 @@ def find_bi_tools(work_drive):
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
-    requiredToolPaths = {"pboProject": None,"rapify": None,"MakePbo": None}
+    requiredToolPaths = {"pboProject": None, "rapify": None, "MakePbo": None}
     failed = False
 
     for tool in requiredToolPaths:
