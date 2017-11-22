@@ -23,7 +23,7 @@ if (!(_ammo isKindOf "BulletBase")) exitWith {};
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
-private _adjustment = ACE_player getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
+private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 private _zeroing = +(_adjustment select _weaponIndex);
 TRACE_1("Adjusting With",_zeroing);
 
