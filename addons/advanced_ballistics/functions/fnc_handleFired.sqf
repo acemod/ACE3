@@ -82,7 +82,7 @@ if (GVAR(ammoTemperatureEnabled) || GVAR(barrelLengthInfluenceEnabled)) then {
     };
 };
 
-if (_abort || !(GVAR(extensionAvailable))) exitWith {
+if (_abort) exitWith {
     if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
         EGVAR(windDeflection,trackedBullets) pushBack [_projectile, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
     };
