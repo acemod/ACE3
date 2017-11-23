@@ -19,28 +19,24 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-private _abort = false;
-
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (!alive _projectile) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
 if (underwater _unit) exitWith {};
-if (!GVAR(simulateForEveryone) && !(local _unit)) then {
-    // The shooter is non local
-    _abort = true;
-    if (GVAR(simulateForSnipers)) then {
+
+private _abort = GVAR(disabledInFullAutoMode) && {getNumber(configFile >> "CfgWeapons" >> _weapon >> _mode >> "autoFire") == 1};
+if (!local _unit && {!_abort && !GVAR(simulateForEveryone)}) then {
+    // The shooter is non local -> abort unless we match an exception rule        
+    _abort = !GVAR(simulateForGroupMembers) || {group ACE_player != group _unit};
+    if (_abort && GVAR(simulateForSnipers)) then {
         if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
             private _opticsName = (primaryWeaponItems _unit) select 2;
             private _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
             _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
         };
     };
-    if (GVAR(simulateForGroupMembers) && _abort) then {
-        _abort = (group ACE_player) != (group _unit);
-    };
 };
 //if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // We currently do not have firedEHs on vehicles
-if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "CfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
 // Get Weapon and Ammo Configurations
 private _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
