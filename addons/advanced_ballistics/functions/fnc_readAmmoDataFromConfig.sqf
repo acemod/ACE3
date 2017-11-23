@@ -49,6 +49,10 @@ private _atmosphereModel = getText(_ammoConfig >> "ACE_standardAtmosphere");
 if (_atmosphereModel isEqualTo "") then {
     _atmosphereModel = "ICAO";
 };
+private _muzzleVelocityVariationSD = DEFAULT_MUZZLE_VELOCITY_VARIATION_SD;
+if (isNumber (_ammoConfig >> "ACE_muzzleVelocityVariationSD")) then {
+    _muzzleVelocityVariationSD = getNumber(_ammoConfig >> "ACE_muzzleVelocityVariationSD") / 100;
+};
 private _ammoTempMuzzleVelocityShifts = getArray(_ammoConfig >> "ACE_ammoTempMuzzleVelocityShifts");
 private _muzzleVelocityTable = getArray(_ammoConfig >> "ACE_muzzleVelocities");
 private _barrelLengthTable = getArray(_ammoConfig >> "ACE_barrelLengths");
@@ -89,7 +93,7 @@ if ((_typicalSpeed > 0) && {_typicalSpeed < 360}) then {
     };
 };
 
-private _result = [_airFriction, _caliber, _bulletLength, _bulletMass, _transonicStabilityCoef, _dragModel, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _ammoTempMuzzleVelocityShifts, _muzzleVelocityTable, _barrelLengthTable];
+private _result = [_airFriction, _caliber, _bulletLength, _bulletMass, _transonicStabilityCoef, _dragModel, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _ammoTempMuzzleVelocityShifts, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocityVariationSD];
 
 uiNamespace setVariable [format[QGVAR(%1), _this], _result];
 

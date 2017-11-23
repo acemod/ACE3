@@ -49,6 +49,12 @@ class CfgVehicles {
                 defaultValue = 0;
             };
             */
+            class muzzleVelocityVariationEnabled {
+                displayName = CSTRING(muzzleVelocityVariation_DisplayName);
+                description = CSTRING(muzzleVelocityVariation_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class ammoTemperatureEnabled {
                 displayName = CSTRING(ammoTemperatureEnabled_DisplayName);
                 description = CSTRING(ammoTemperatureEnabled_Description);
