@@ -70,7 +70,7 @@ if (GVAR(muzzleVelocityVariationEnabled)) then {
     // Generate seed from publicly known values (via Cantor pairing function)
     private _seed = 0.5 * (_time + _ammoCount) * (_time + _ammoCount + 1) + _ammoCount;
     // Generate normally distributed random number (via Box–Muller transform)
-    private _z = sqrt(-2.0 * log(0.00000001 max (-_seed random 1))) * cos(_seed random 360);
+    private _z = sqrt(-2.0 * ln(0.00000001 max (-_seed random 1))) * cos(_seed random 360);
     
     _muzzleVelocity = _muzzleVelocity * (_z * _muzzleVelocityVariationSD + 1);
 };
