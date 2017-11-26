@@ -5612,6 +5612,7 @@
             <Italian>Apri lid</Italian>
             <Chinese>打開蓋子</Chinese>
             <Chinesesimp>打开盖子</Chinesesimp>
+            <Korean>뚜껑 열기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -5620,6 +5621,7 @@
             <Italian>Chiudi lid</Italian>
             <Chinese>關閉蓋子</Chinese>
             <Chinesesimp>关闭盖子</Chinesesimp>
+            <Korean>뚜껑 닫기</Korean>
         </Key>
     </Package>
 </Project>

@@ -5,6 +5,7 @@ class CfgWeapons {
 
     class ACE_HuntIR_monitor: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(monitor_displayName);
         picture = QPATHTOF(UI\w_huntir_monitor_ca.paa);
         descriptionShort = CSTRING(monitor_displayName);

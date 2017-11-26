@@ -23,7 +23,7 @@ if (!(_ammo isKindOf "BulletBase")) exitWith {};
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
-private _adjustment = ACE_player getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
+private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 private _zeroing = +(_adjustment select _weaponIndex);
 TRACE_1("Adjusting With",_zeroing);
 
@@ -32,6 +32,7 @@ _zeroing = _zeroing vectorMultiply MRAD_TO_DEG(1);
 
 if (GVAR(correctZeroing)) then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
+    private _baseAngle = GVAR(baseAngle) select _weaponIndex; 
     private _boreHeight = GVAR(boreHeight) select _weaponIndex;
     private _oldZeroRange = currentZeroing _unit;
     private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
@@ -39,7 +40,10 @@ if (GVAR(correctZeroing)) then {
     if (isNil "_zeroCorrection") then {
          _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
     };
-    _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection];
+    _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection - _baseAngle];
+#ifdef DISABLE_DISPERSION
+    _projectile setVelocity (_unit weaponDirection currentWeapon _unit) vectorMultiply (vectorMagnitude (velocity _projectile));
+#endif
 };
 
 if (_zeroing isEqualTo [0, 0, 0]) exitWith {};

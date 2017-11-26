@@ -73,7 +73,7 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     private _bulletVelocity = velocity _shell;
     private _bulletSpeed = vectorMagnitude _bulletVelocity;
 
-    private _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
+    private _trueVelocity = _bulletVelocity vectorDiff wind;
     private _trueSpeed = vectorMagnitude _trueVelocity;
 
     private _drag = _deltaT * _airFriction * _trueSpeed * _relativeDensity;

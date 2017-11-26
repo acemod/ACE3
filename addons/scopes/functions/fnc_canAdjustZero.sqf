@@ -1,6 +1,6 @@
 /*
  * Author: KoffeinFlummi, Ruthberg
- * Changes the adjustment for the current scope
+ * Checks if the unit can change the zero adjustment of the current scope
  *
  * Arguments:
  * 0: Unit <OBJECT>

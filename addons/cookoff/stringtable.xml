@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
+        <Key ID="STR_ACE_CookOff_displayName">
+            <English>Cook off</English>
+            <Italian>Esplosione</Italian>
+            <Chinese>殉爆效果</Chinese>
+            <Chinesesimp>殉爆效果</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
             <German>Selbstzündung ermöglichen</German>

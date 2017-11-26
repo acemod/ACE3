@@ -14,25 +14,27 @@ class ACE_Settings {
      *     values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"}; // Stringtable entries that describe the options
      * };
      */
-    class GVAR(forceAllSettings) {
-        value = 0;
-        typeName = "BOOL";
-    };
     class GVAR(checkPBOsAction) {
+        category = CSTRING(DisplayName);
         value = 0;
         typeName = "SCALAR";
         isClientSettable = 0;
+        displayName = CSTRING(CheckPBOsAction);
         values[] = {CSTRING(CheckPBO_Action_WarnOnce), CSTRING(CheckPBO_Action_WarnPerm), CSTRING(CheckPBO_Action_Kick)};
     };
     class GVAR(checkPBOsCheckAll) {
+        category = CSTRING(DisplayName);
         value = 0;
         typeName = "BOOL";
         isClientSettable = 0;
+        displayName = CSTRING(CheckPBOsCheckAll);
     };
     class GVAR(checkPBOsWhitelist) {
+        category = CSTRING(DisplayName);
         value = "[]";
         typeName = "STRING";
         isClientSettable = 0;
+        displayName = CSTRING(CheckPBOsWhitelist);
     };
     /*class GVAR(enableNumberHotkeys) {
         value = 1;
@@ -41,6 +43,7 @@ class ACE_Settings {
         displayName = CSTRING(EnableNumberHotkeys);
     };*/
     class GVAR(settingFeedbackIcons) {
+        category = CSTRING(DisplayName);
         value = 1;
         typeName = "SCALAR";
         force = 0;
@@ -50,6 +53,7 @@ class ACE_Settings {
         values[] = {ECSTRING(optionsmenu,Hide), ECSTRING(optionsmenu,TopRightDown), ECSTRING(optionsmenu,TopRightLeft), ECSTRING(optionsmenu,TopLeftDown), ECSTRING(optionsmenu,TopLeftRight)};
     };
     class GVAR(settingProgressBarLocation) {
+        category = CSTRING(DisplayName);
         value = 0;
         typeName = "SCALAR";
         force = 0;
@@ -59,6 +63,7 @@ class ACE_Settings {
         values[] = {ECSTRING(optionsmenu,Top), ECSTRING(optionsmenu,Bottom)};
     };
     class GVAR(displayTextColor) {
+        category = CSTRING(DisplayName);
         value[] = {0,0,0,0.1};
         typeName = "COLOR";
         isClientSettable = 1;
@@ -66,6 +71,7 @@ class ACE_Settings {
         description = CSTRING(SettingDisplayTextColorDesc);
     };
     class GVAR(displayTextFontColor) {
+        category = CSTRING(DisplayName);
         value[] = {1,1,1,1};
         typeName = "COLOR";
         isClientSettable = 1;

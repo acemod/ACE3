@@ -18,68 +18,19 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
+TRACE_4("setSetting",_name,_value,_force,_broadcastChanges);
 
-private _settingData = [_name] call FUNC(getSettingData);
-
-// Exit if the setting does not exist
-if (_settingData isEqualTo []) exitWith {
-    ERROR_1("SetSetting [%1] setting does not exist", _name);
+if (!isServer) exitWith {};
+if (!_broadcastChanges) exitWith {
+    ERROR_1("Setting [%1] - SetSetting no longer supports non-global settings",_name);
 };
 
-_settingData params ["", "_typeName", "_isClientSetable", "", "", "", "_isForced"];
-
-// Exit if the setting is already forced
-if (_isForced) exitWith {
-    INFO_1("SetSetting [%1] Trying to set forced setting", _name);
+if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
+    WARNING_1("Setting [%1] - Already mission forced - Ignoring",_settingName);
 };
 
-//This does NOT broadcast changes to GVAR(settings), so clients would not get updated force status
-if ((missionNamespace getVariable [QEGVAR(modules,serverModulesRead), false]) && {!(_isForced isEqualTo _force)}) then {
-    WARNING_3("SetSetting [%1] attempting to broadcast a change to force (%2 to %3)", _name, _isForced, _force);
-};
-
-// If the type is not equal, try to cast it
-private _failed = false;
-if (typeName _value != _settingData select 1) then {
-    _failed = true;
-    if ((_typeName == "BOOL") && {_value isEqualType 0}) then {
-        // If value is not 0 or 1 consider it invalid and don't set anything
-        if (_value isEqualTo 0) then {
-            _value = false;
-            _failed = false;
-        };
-        if (_value isEqualTo 1) then {
-            _value = true;
-            _failed = false;
-        };
-    };
-    if ((_typeName == "COLOR") && {_value isEqualType []}) then {
-        _failed = false;
-    };
-};
-
-if (_failed) exitWith {ERROR_3("SetSetting [%1] bad data type expected %2 got %3", _name, _typeName, typeName _value);};
-
-// Force it if it was required
-_settingData set [6, _force];
-
-// Exit if the value didn't change
-if (_value isEqualTo (missionNamespace getVariable _name)) exitWith {};
-
-// Update the variable
-TRACE_2("Variable Updated",_name,_value);
-missionNamespace setVariable [_name, _value];
-
-if (isServer && {_broadcastChanges}) then {
-    // Publicize the new value
-    publicVariable _name;
-
-    // Raise event globally, this publicizes eventual changes in _force status so clients can update it locally
-    ["ace_settingChanged", [_name, _value, _force]] call CBA_fnc_globalEvent;
-} else {
-    // Raise event locally
-    ["ace_settingChanged", [_name, _value, _force]] call CBA_fnc_localEvent;
-};
+[QGVAR(setSetting), [_name, _value], (format [QGVAR(setSetting_%1), _name])] call CBA_fnc_globalEventJIP;

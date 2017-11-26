@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
-        <Key ID="STR_ACE_Spectator_DisplayName">
+        <Key ID="STR_ACE_Spectator_Module_DisplayName">
+            <English>Spectator</English>
+            <German>Zuschauer</German>
+            <Italian>Spettatore</Italian>
+            <Chinese>旁觀者</Chinese>
+            <Chinesesimp>旁观者</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
             <German>ACE Zuschauer</German>
             <Japanese>ACE スペクテイター</Japanese>
@@ -10,21 +17,7 @@
             <Chinesesimp>ACE 旁观者</Chinesesimp>
             <Chinese>ACE 旁觀者</Chinese>
             <Polish>Obserwator ACE</Polish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
-            <English>Spectator Settings</English>
-            <German>Zuschauer-Einstellungen</German>
-            <Polish>Ustawienia obserwatora</Polish>
-            <Portuguese>Preferências de Espectador</Portuguese>
-            <Russian>Настройки спектатора</Russian>
-            <Czech>Nastavení pozorovatele</Czech>
-            <Spanish>Ajustes de espectador</Spanish>
-            <Italian>Impostazioni Spettatore</Italian>
-            <French>Réglages de spectateur</French>
-            <Japanese>スペクテイター設定</Japanese>
-            <Korean>관전자 설정</Korean>
-            <Chinesesimp>旁观者设定</Chinesesimp>
-            <Chinese>旁觀者設定</Chinese>
+            <Korean>ACE 관전자</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -48,6 +41,7 @@
             <Italian>AI Abilitate</Italian>
             <Chinese>可觀察AI</Chinese>
             <Chinesesimp>可观察AI</Chinesesimp>
+            <Korean>AI 활성</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -56,6 +50,7 @@
             <Italian>Permette la visibilità delle AI in spettatore</Italian>
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位。</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察AI单位。</Chinesesimp>
+            <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -261,6 +256,7 @@
             <Italian>Icone</Italian>
             <Chinese>單位圖示</Chinese>
             <Chinesesimp>单位图示</Chinesesimp>
+            <Korean>아이콘</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -269,6 +265,7 @@
             <Italian>Proiettili</Italian>
             <Chinese>顯示彈道</Chinese>
             <Chinesesimp>显示弹道</Chinesesimp>
+            <Korean>발사체</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -307,6 +304,7 @@
             <Italian>Modalità Visiva</Italian>
             <Chinese>視覺模式</Chinese>
             <Chinesesimp>视觉模式</Chinesesimp>
+            <Korean>보기 모드</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -315,6 +313,7 @@
             <Italian>Bassa Velocità</Italian>
             <Chinese>慢速度</Chinese>
             <Chinesesimp>慢速度</Chinesesimp>
+            <Korean>느린 속도</Korean>
         </Key>
     </Package>
 </Project>
