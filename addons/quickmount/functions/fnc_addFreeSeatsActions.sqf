@@ -21,10 +21,18 @@
 // this will check UAV vehicle like Stomper (with cargo seat)
 #define IS_CREW_UAV(vehicleConfig) ("UAVPilot" == getText (configFile >> "CfgVehicles" >> (getText (vehicleConfig >> "crew")) >> "simulation"))
 
+// workaround getting damage when moveout while vehicle is moving
+#define MOVEOUT_AND_BLOCK_DAMAGE \
+    if (isDamageAllowed _player) then { \
+        _player allowDamage false; \
+        SETVAR(_player,GVAR(damageBlocked),true); \
+    }; \
+    moveOut _player;
+
 // this is used in statements when move from driver
-#define MOVEOUT_AND_CHECK_ENGINE_ON \
+#define MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON \
     private _preserveEngineOn = _player == driver _target && {isEngineOn _target}; \
-    moveOut _player; \
+    MOVEOUT_AND_BLOCK_DAMAGE; \
     if (_preserveEngineOn) then {_target engineOn true};
 
 // moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
@@ -33,7 +41,14 @@
 #define MOVE_IN(command) \
     [ARR_3( \
         {isNull objectParent (_this select 0)}, \
-        {(_this select 0) command (_this select 1)}, \
+        { \
+            params [ARR_2("_player","_moveInParams")]; \
+            _player command _moveInParams; \
+            if (GETVAR(_player,GVAR(damageBlocked),false)) then { \
+                _player allowDamage true; \
+                SETVAR(_player,GVAR(damageBlocked),nil); \
+            }; \
+        }, \
         [ARR_2(_player,_this select 2)] \
     )] call CBA_fnc_waitUntilAndExecute;
 
@@ -115,7 +130,7 @@ private _cargoNumber = -1;
                 TO_STRING(_gunnerCompartments);
                 if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
                 _params = [_vehicle, _turretPath];
-                _statement = {MOVEOUT_AND_CHECK_ENGINE_ON; MOVE_IN(moveInTurret)};
+                _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInTurret)};
             } else {
                 _params = ["GetInTurret", _vehicle, _turretPath];
                 _statement = {_player action (_this select 2)};
@@ -143,7 +158,7 @@ private _cargoNumber = -1;
                 if (_isInVehicle) then {
                     if (_compartment != (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
                     _params = [_vehicle, _cargoIndex];
-                    _statement = {MOVEOUT_AND_CHECK_ENGINE_ON; MOVE_IN(moveInCargo)};
+                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInCargo)};
                 } else {
                     _params = ["GetInCargo", _vehicle, _cargoNumber];
                     _statement = {_player action (_this select 2)};
@@ -161,7 +176,7 @@ private _cargoNumber = -1;
                 if (_isInVehicle) then {
                     if (_compartment != _driverCompartments || {_isPilotAndIsolated}) then {breakTo "crewLoop"};
                     _params = _vehicle;
-                    _statement = {moveOut _player; MOVE_IN(moveInDriver)};
+                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE; MOVE_IN(moveInDriver)};
                 } else {
                     _params = ["GetInDriver", _vehicle];
                     _statement = {_player action (_this select 2)};
