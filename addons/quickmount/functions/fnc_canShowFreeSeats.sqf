@@ -18,7 +18,7 @@
 
 params ["_vehicle", "_unit"];
 
-(GVAR(enabled) || {!isNull objectParent _unit})
+(GVAR(enabled) && {GVAR(enableGetInMenu)} || {!isNull objectParent _unit})
 && {alive _vehicle}
 && {2 > locked _vehicle}
 && {
