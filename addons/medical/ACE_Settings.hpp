@@ -54,7 +54,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_Description);
         typeName = "BOOL";
-        value = false;
+        value = 0;
     };
     class GVAR(enableVehicleCrashes) {
         category = CSTRING(Category_Medical);
