@@ -37,7 +37,7 @@ class FunctionFile:
         self.description = ""
         self.arguments = []
         self.return_value = []
-        self.examples = []
+        self.examples = ""
 
         # Filepath should only be logged once
         self.logged = False
@@ -96,8 +96,12 @@ class FunctionFile:
             self.arguments = self.process_arguments(arguments_raw)
 
         # Process return
+        if return_value_raw:
+            self.return_value = self.process_return_value(return_value_raw)
 
         # Process example
+        if example_raw:
+            self.example = example_raw.strip()
 
     def get_section(self, section_name):
         try:
@@ -175,6 +179,23 @@ class FunctionFile:
 
         return arguments
 
+    def process_return_value(self, raw):
+        return_value = raw.strip()
+
+        if return_value.title() == "None":
+            return ["None", "N/A"]
+
+        valid = re.match(r"^(.+?)\<([\s\w]+?)\>", return_value)
+
+        if valid:
+            return_name = valid.group(1)
+            return_types = valid.group(2)
+
+        else:
+            self.feedback("Malformed return value \"{}\"".format(return_value))
+
+        return [return_name, return_types]
+
     def log_file(self, error=False):
         # When in debug mode we only want to see the files with errors
         if not self.debug or error:
@@ -195,22 +216,6 @@ class FunctionFile:
         to_print.append(message)
         print("".join(to_print))
 
-# def process_return(text, writer):
-#     # Remove header characters and only use first line
-#     text = text.splitlines()[0][3:]
-
-#     if text == "None":
-#         return ["None", ""]
-
-#     valid_value = re.match(r"^(.+)\<([\s\w]+)\>", text)
-
-#     if valid_value:
-#         return [valid_value.group(1), valid_value.group(2)]
-#     else:
-#         writer.error("Malformed \"Return Value\" {}".format(text))
-
-#     return ["", ""]
-
 def document_function(function):
     os.makedirs('../wiki/functions/', exist_ok=True)
 
@@ -226,6 +231,11 @@ def document_function(function):
         file.write("__Parameters__\n\nIndex | Description | Datatype(s) | Default Value\n--- | --- | --- | ---\n")
         for argument in function.arguments:
             file.write("{} | {} | {} | {}\n".format(*argument))
+        file.write("\n")
+        # Return Value
+        file.write("__Return Value__\n\nDescription | Datatype(s)\n--- | ---\n{} | {}\n\n".format(*function.return_value))
+        # Example
+        file.write("__Example__\n\n```\n{}\n```\n".format(function.example))
         # Authors
         file.write("\n__Authors__\n\n")
         for author in function.authors:
