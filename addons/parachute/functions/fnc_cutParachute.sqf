@@ -1,6 +1,6 @@
 /*
  * Author: joko // Jonas
- * Cut Parachute and delete Old
+ * Perform the cut parachute action (move unit out and delete)
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -18,4 +18,3 @@ params ["_unit"];
 private _vehicle = vehicle _unit;
 _unit action ["GetOut", _vehicle];
 deleteVehicle _vehicle;
-_unit setVariable [QGVAR(chuteIsCut), true, true];
