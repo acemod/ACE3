@@ -182,15 +182,14 @@ class FunctionFile:
     def process_return_value(self, raw):
         return_value = raw.strip()
 
-        if return_value.title() == "None":
-            return ["None", "N/A"]
+        if return_value == "None":
+            return []
 
         valid = re.match(r"^(.+?)\<([\s\w]+?)\>", return_value)
 
         if valid:
             return_name = valid.group(1)
             return_types = valid.group(2)
-
         else:
             self.feedback("Malformed return value \"{}\"".format(return_value), 2)
 
@@ -228,14 +227,20 @@ def document_function(function):
         # Description
         file.write("__Description__\n\n" + function.description)
         # Arguments
-        file.write("__Parameters__\n\nIndex | Description | Datatype(s) | Default Value\n--- | --- | --- | ---\n")
-        for argument in function.arguments:
-            file.write("{} | {} | {} | {}\n".format(*argument))
-        file.write("\n")
+        if function.arguments:
+            file.write("__Parameters__\n\nIndex | Description | Datatype(s) | Default Value\n--- | --- | --- | ---\n")
+            for argument in function.arguments:
+                file.write("{} | {} | {} | {}\n".format(*argument))
+            file.write("\n")
+        else:
+            file.write("__Parameters__\n\nNone\n\n")
         # Return Value
-        file.write("__Return Value__\n\nDescription | Datatype(s)\n--- | ---\n{} | {}\n\n".format(*function.return_value))
+        if function.return_value:
+            file.write("__Return Value__\n\nDescription | Datatype(s)\n--- | ---\n{} | {}\n\n".format(*function.return_value))
+        else:
+            file.write("__Return Value__\n\nNone\n\n")
         # Example
-        file.write("__Example__\n\n```\n{}\n```\n".format(function.example))
+        file.write("__Example__\n\n```sqf\n{}\n```\n\n".format(function.example))
         # Authors
         file.write("\n__Authors__\n\n")
         for author in function.authors:
