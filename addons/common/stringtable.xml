@@ -999,94 +999,94 @@
             <Chinesesimp>不要强行</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
-            <English>ACE3 Equipment</English>
-            <German>ACE-Ausrüstung</German>
-            <Polish>ACE3 Wyposażenie</Polish>
-            <Portuguese>Equipamentos ACE3</Portuguese>
-            <Russian>ACE3 Снаряжение</Russian>
-            <Czech>ACE3 Vybavení</Czech>
-            <Spanish>ACE3 Equipo</Spanish>
-            <Italian>Equipaggiamento ACE3</Italian>
-            <French>ACE3 Equipement</French>
-            <Japanese>ACE3 装備</Japanese>
-            <Korean>ACE3 장비</Korean>
-            <Chinese>ACE3 裝備按鍵</Chinese>
-            <Chinesesimp>ACE3 装备按键</Chinesesimp>
+            <English>ACE Equipment</English>
+            <German>ACE Ausrüstung</German>
+            <Polish>ACE Wyposażenie</Polish>
+            <Portuguese>ACE Equipamentos</Portuguese>
+            <Russian>ACE Снаряжение</Russian>
+            <Czech>ACE Vybavení</Czech>
+            <Spanish>ACE Equipo</Spanish>
+            <Italian>ACE Equipaggiamento</Italian>
+            <French>ACE Equipement</French>
+            <Japanese>ACE 装備</Japanese>
+            <Korean>ACE 장비</Korean>
+            <Chinese>ACE 裝備按鍵</Chinese>
+            <Chinesesimp>ACE 装备按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
-            <English>ACE3 Common</English>
-            <German>ACE3 Allgemein</German>
-            <Polish>ACE3 Ogólne</Polish>
-            <Portuguese>Comum ACE3</Portuguese>
-            <Russian>ACE3 Общие</Russian>
-            <Spanish>ACE3 Común</Spanish>
-            <Czech>ACE3 Obecné</Czech>
-            <Italian>Comune ACE3</Italian>
-            <French>ACE3 Commun</French>
-            <Japanese>ACE3 全般</Japanese>
-            <Korean>ACE3 일반</Korean>
-            <Chinese>ACE3 通用按鍵</Chinese>
-            <Chinesesimp>ACE3 通用按键</Chinesesimp>
+            <English>ACE Common</English>
+            <German>ACE Allgemein</German>
+            <Polish>ACE Ogólne</Polish>
+            <Portuguese>ACE Comum</Portuguese>
+            <Russian>ACE Общие</Russian>
+            <Spanish>ACE Común</Spanish>
+            <Czech>ACE Obecné</Czech>
+            <Italian>ACE Comune</Italian>
+            <French>ACE Commun</French>
+            <Japanese>ACE 全般</Japanese>
+            <Korean>ACE 일반</Korean>
+            <Chinese>ACE 通用按鍵</Chinese>
+            <Chinesesimp>ACE 通用按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
-            <English>ACE3 Weapons</English>
-            <German>ACE3 Waffen</German>
-            <Polish>ACE3 Broń</Polish>
-            <Portuguese>Armamento ACE3</Portuguese>
-            <Russian>ACE3 Оружие</Russian>
-            <Czech>ACE3 Zbraně</Czech>
-            <Spanish>ACE3 Armas</Spanish>
-            <Italian>Armi ACE3</Italian>
-            <French>ACE3 Armes</French>
-            <Japanese>ACE3 武器</Japanese>
-            <Korean>ACE3 무기</Korean>
-            <Chinese>ACE3 武器按鍵</Chinese>
-            <Chinesesimp>ACE3 武器按键</Chinesesimp>
+            <English>ACE Weapons</English>
+            <German>ACE Waffen</German>
+            <Polish>ACE Broń</Polish>
+            <Portuguese>ACE Armamento</Portuguese>
+            <Russian>ACE Оружие</Russian>
+            <Czech>ACE Zbraně</Czech>
+            <Spanish>ACE Armas</Spanish>
+            <Italian>ACE Armi</Italian>
+            <French>ACE Armes</French>
+            <Japanese>ACE 武器</Japanese>
+            <Korean>ACE 무기</Korean>
+            <Chinese>ACE 武器按鍵</Chinese>
+            <Chinesesimp>ACE 武器按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
-            <English>ACE3 Movement</English>
-            <German>ACE3 Bewegung</German>
-            <Polish>ACE3 Ruch</Polish>
-            <Portuguese>Movimento ACE3</Portuguese>
-            <Russian>ACE3 Перемещение</Russian>
-            <Spanish>ACE3 Movimiento</Spanish>
-            <Czech>ACE3 Pohyb</Czech>
-            <Italian>Movimento ACE3</Italian>
-            <French>ACE3 Mouvement</French>
-            <Japanese>ACE3 移動</Japanese>
-            <Korean>ACE3 움직임</Korean>
-            <Chinese>ACE3 動作按鍵</Chinese>
-            <Chinesesimp>ACE3 动作按键</Chinesesimp>
+            <English>ACE Movement</English>
+            <German>ACE Bewegung</German>
+            <Polish>ACE Ruch</Polish>
+            <Portuguese>ACE Movimento</Portuguese>
+            <Russian>ACE Перемещение</Russian>
+            <Spanish>ACE Movimiento</Spanish>
+            <Czech>ACE Pohyb</Czech>
+            <Italian>ACE Movimento</Italian>
+            <French>ACE Mouvement</French>
+            <Japanese>ACE 移動</Japanese>
+            <Korean>ACE 움직임</Korean>
+            <Chinese>ACE 動作按鍵</Chinese>
+            <Chinesesimp>ACE 动作按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
-            <English>ACE3 Scope Adjustment</English>
-            <German>ACE3 Visiereinstellung</German>
-            <Polish>ACE3 Regulacja optyki</Polish>
-            <Portuguese>Ajuste de luneta ACE3</Portuguese>
-            <Russian>ACE3 Прицелы</Russian>
-            <Czech>ACE3 Nastavení optiky</Czech>
-            <Spanish>ACE3 Ajuste de miras</Spanish>
-            <Italian>Regolazione Ottiche ACE3</Italian>
-            <French>ACE3 Ajustement de la lunette </French>
-            <Japanese>ACE3 スコープ調節</Japanese>
-            <Korean>ACE3 조준경 조정</Korean>
-            <Chinese>ACE3 瞄準鏡調節按鍵</Chinese>
-            <Chinesesimp>ACE3 瞄准镜调节按键</Chinesesimp>
+            <English>ACE Scope Adjustment</English>
+            <German>ACE Visiereinstellung</German>
+            <Polish>ACE Regulacja optyki</Polish>
+            <Portuguese>ACE Ajuste de luneta</Portuguese>
+            <Russian>ACE Прицелы</Russian>
+            <Czech>ACE Nastavení optiky</Czech>
+            <Spanish>ACE Ajuste de miras</Spanish>
+            <Italian>ACE Regolazione Ottiche</Italian>
+            <French>ACE Ajustement de la lunette </French>
+            <Japanese>ACE スコープ調節</Japanese>
+            <Korean>ACE 조준경 조정</Korean>
+            <Chinese>ACE 瞄準鏡調節按鍵</Chinese>
+            <Chinesesimp>ACE 瞄准镜调节按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
-            <English>ACE3 Vehicles</English>
-            <German>ACE3 Fahrzeuge</German>
-            <Polish>ACE3 Pojazdy</Polish>
-            <Portuguese>Veículos ACE3</Portuguese>
-            <Russian>ACE3 Транспорт</Russian>
-            <Czech>ACE3 Vozidla</Czech>
-            <Spanish>ACE3 Vehículos</Spanish>
-            <Italian>Veicoli ACE3</Italian>
-            <French>ACE3 Vehicules</French>
-            <Japanese>ACE3 車両</Japanese>
-            <Korean>ACE3 차량</Korean>
-            <Chinese>ACE3 載具按鍵</Chinese>
-            <Chinesesimp>ACE3 载具按键</Chinesesimp>
+            <English>ACE Vehicles</English>
+            <German>ACE Fahrzeuge</German>
+            <Polish>ACE Pojazdy</Polish>
+            <Portuguese>ACE Veículos</Portuguese>
+            <Russian>ACE Транспорт</Russian>
+            <Czech>ACE Vozidla</Czech>
+            <Spanish>ACE Vehículos</Spanish>
+            <Italian>ACE Veicoli</Italian>
+            <French>ACE Vehicules</French>
+            <Japanese>ACE 車両</Japanese>
+            <Korean>ACE 차량</Korean>
+            <Chinese>ACE 載具按鍵</Chinese>
+            <Chinesesimp>ACE 载具按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
