@@ -163,7 +163,7 @@ case (APP_MODE_WAYPOINTS): {
             _x params ["_wpName", "_wpPos"];
             _wpListBox lbAdd _wpName;
             private _2dDistanceKm = ((getPosASL ACE_player) distance2D _wpPos) / 1000;
-            _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed 3)];
+            _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed 3];
         } forEach _waypoints;
 
         _currentIndex = (_currentIndex max 0) min (count _waypoints);
