@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * Check if the player can 
+ * Reloads a vehicles turret to a new magazine.
+ * Just removes all magazines and then re-adds them, reloading animation happens automaticaly by engine.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
