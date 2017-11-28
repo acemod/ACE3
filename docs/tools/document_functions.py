@@ -154,7 +154,7 @@ class FunctionFile:
             if valid:
                 arg_index = valid.group(1)
                 arg_name = valid.group(2)
-                arg_types = valid.group(3).split(" or ")
+                arg_types = valid.group(3)
                 arg_default = valid.group(5)
                 arg_notes = []
 
@@ -211,6 +211,28 @@ class FunctionFile:
 
 #     return ["", ""]
 
+def document_function(function):
+    os.makedirs('../wiki/functions/', exist_ok=True)
+
+    component = os.path.basename(os.path.dirname(os.path.dirname(function.path)))
+
+    output = os.path.join('../wiki/functions/',component) + ".md"
+    with open(output, "a+") as file:
+        # Title
+        file.write("\n## ace_{}_fnc_{}\n".format(component,os.path.basename(function.path)[4:-4]))
+        # Description
+        file.write("__Description__\n\n" + function.description)
+        # Arguments
+        file.write("__Parameters__\n\nIndex | Description | Datatype(s) | Default Value\n--- | --- | --- | ---\n")
+        for argument in function.arguments:
+            file.write("{} | {} | {} | {}\n".format(*argument))
+        # Authors
+        file.write("\n__Authors__\n\n")
+        for author in function.authors:
+            file.write("- {}\n".format(author))
+        # Horizontal rule
+        file.write("\n---\n")
+
 def crawl_dir(directory, debug=False):
     for root, dirs, files in os.walk(directory):
         for file in files:
@@ -227,6 +249,7 @@ def crawl_dir(directory, debug=False):
 
                     # Placeholder
                     if function.is_public() and not debug:
+                        document_function(function)
                         function.feedback("Publicly documented")
 
 def main():
