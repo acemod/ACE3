@@ -37,7 +37,7 @@ class FunctionFile:
         self.description = ""
         self.arguments = []
         self.return_value = []
-        self.examples = ""
+        self.example = ""
 
         # Filepath should only be logged once
         self.logged = False
@@ -192,7 +192,7 @@ class FunctionFile:
             return_types = valid.group(2)
 
         else:
-            self.feedback("Malformed return value \"{}\"".format(return_value))
+            self.feedback("Malformed return value \"{}\"".format(return_value), 2)
 
         return [return_name, return_types]
 
