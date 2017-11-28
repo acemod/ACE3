@@ -34,5 +34,43 @@ class CfgVehicles {
                 };
             };
         };
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+            };
+        };
+    };
+
+    class Tank: LandVehicle {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+            };
+        };
+    };
+
+    class Car: LandVehicle {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+            };
+        };
+    };
+
+    class Air;
+    class Helicopter: Air {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+            };
+        };
     };
 };
