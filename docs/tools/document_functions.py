@@ -174,6 +174,7 @@ class FunctionFile:
                 # Only applies if there exists an above argument
                 if re.match(r"^(\d+):", argument) or not arguments:
                     self.feedback("Malformed argument \"{}\"".format(argument), 2)
+                    arguments.append(["?", "Malformed", "?", "?", []])
                 else:
                     arguments[-1][-1].append(argument)
 
@@ -192,6 +193,7 @@ class FunctionFile:
             return_types = valid.group(2)
         else:
             self.feedback("Malformed return value \"{}\"".format(return_value), 2)
+            return ["Malformed",""]
 
         return [return_name, return_types]
 
