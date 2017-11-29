@@ -18,6 +18,7 @@
 params ["_enabled"];
 
 if (!_enabled) exitWith {
+    if (isNil QGVAR(laserKeyDownEH)) exitWith {};
     ["KeyDown", GVAR(laserKeyDownEH)] call CBA_fnc_removeDisplayHandler;
     ["weapon", GVAR(laserWeaponEH)] call CBA_fnc_removePlayerEventHandler;
     ["turret", GVAR(laserTurretEH)] call CBA_fnc_removePlayerEventHandler;

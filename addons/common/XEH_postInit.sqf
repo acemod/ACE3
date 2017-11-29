@@ -446,9 +446,4 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
-
-// init persistent laser
-if (GVAR(persistentLaserEnabled)) then {true call FUNC(switchPersistentLaser)};
-
-
 GVAR(commonPostInited) = true;
