@@ -197,6 +197,37 @@ class FunctionFile:
 
         return [return_name, return_types]
 
+    def document(self, component):
+        str_list = []
+
+        # Title
+        str_list.append("\n## ace_{}_fnc_{}\n".format(component,os.path.basename(self.path)[4:-4]))
+        # Description
+        str_list.append("__Description__\n\n" + self.description)
+        # Arguments
+        if self.arguments:
+            str_list.append("__Parameters__\n\nIndex | Description | Datatype(s) | Default Value\n--- | --- | --- | ---\n")
+            for argument in self.arguments:
+                str_list.append("{} | {} | {} | {}\n".format(*argument))
+            str_list.append("\n")
+        else:
+            str_list.append("__Parameters__\n\nNone\n\n")
+        # Return Value
+        if self.return_value:
+            str_list.append("__Return Value__\n\nDescription | Datatype(s)\n--- | ---\n{} | {}\n\n".format(*self.return_value))
+        else:
+            str_list.append("__Return Value__\n\nNone\n\n")
+        # Example
+        str_list.append("__Example__\n\n```sqf\n{}\n```\n\n".format(self.example))
+        # Authors
+        str_list.append("\n__Authors__\n\n")
+        for author in self.authors:
+            str_list.append("- {}\n".format(author))
+        # Horizontal rule
+        str_list.append("\n---\n")
+
+        return ''.join(str_list)
+
     def log_file(self, error=False):
         # When in debug mode we only want to see the files with errors
         if not self.debug or error:
@@ -217,40 +248,18 @@ class FunctionFile:
         to_print.append(message)
         print("".join(to_print))
 
-def document_function(function):
+def document_functions(components):
     os.makedirs('../wiki/functions/', exist_ok=True)
 
-    component = os.path.basename(os.path.dirname(os.path.dirname(function.path)))
-
-    output = os.path.join('../wiki/functions/',component) + ".md"
-    with open(output, "a+") as file:
-        # Title
-        file.write("\n## ace_{}_fnc_{}\n".format(component,os.path.basename(function.path)[4:-4]))
-        # Description
-        file.write("__Description__\n\n" + function.description)
-        # Arguments
-        if function.arguments:
-            file.write("__Parameters__\n\nIndex | Description | Datatype(s) | Default Value\n--- | --- | --- | ---\n")
-            for argument in function.arguments:
-                file.write("{} | {} | {} | {}\n".format(*argument))
-            file.write("\n")
-        else:
-            file.write("__Parameters__\n\nNone\n\n")
-        # Return Value
-        if function.return_value:
-            file.write("__Return Value__\n\nDescription | Datatype(s)\n--- | ---\n{} | {}\n\n".format(*function.return_value))
-        else:
-            file.write("__Return Value__\n\nNone\n\n")
-        # Example
-        file.write("__Example__\n\n```sqf\n{}\n```\n\n".format(function.example))
-        # Authors
-        file.write("\n__Authors__\n\n")
-        for author in function.authors:
-            file.write("- {}\n".format(author))
-        # Horizontal rule
-        file.write("\n---\n")
+    for component in components:
+        output = os.path.join('../wiki/functions/',component) + ".md"
+        with open(output, "w") as file:
+            for function in components[component]:
+                file.write(function.document(component))
 
 def crawl_dir(directory, debug=False):
+    components = {}
+
     for root, dirs, files in os.walk(directory):
         for file in files:
             if file.endswith(".sqf") and file.startswith("fnc_"):
@@ -264,10 +273,14 @@ def crawl_dir(directory, debug=False):
                 if function.has_header():
                     function.process_header(debug)
 
-                    # Placeholder
                     if function.is_public() and not debug:
-                        document_function(function)
+                        # Add functions to component key (initalise key if necessary)
+                        component = os.path.basename(os.path.dirname(root))
+                        components.setdefault(component,[]).append(function)
+
                         function.feedback("Publicly documented")
+
+    document_functions(components)
 
 def main():
     print("""
