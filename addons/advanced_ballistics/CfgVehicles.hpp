@@ -50,8 +50,8 @@ class CfgVehicles {
             };
             */
             class muzzleVelocityVariationEnabled {
-                displayName = CSTRING(muzzleVelocityVariation_DisplayName);
-                description = CSTRING(muzzleVelocityVariation_Description);
+                displayName = CSTRING(muzzleVelocityVariationEnabled_DisplayName);
+                description = CSTRING(muzzleVelocityVariationEnabled_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
