@@ -78,4 +78,12 @@ class ACE_Settings {
         displayName = CSTRING(useLegacyUI_displayName);
         description = CSTRING(useLegacyUI_description);
     };
+    
+    class GVAR(simplifiedZeroing) {
+        category = CSTRING(DisplayName);
+        typeName = "BOOL";
+        value = 0;
+        displayName = CSTRING(simplifiedZeroing_displayName);
+        description = CSTRING(simplifiedZeroing_description);
+    };
 };
