@@ -142,6 +142,7 @@ PREP(runTests);
 PREP(sanitizeString);
 PREP(sendRequest);
 PREP(serverLog);
+PREP(setAimCoef);
 PREP(setApproximateVariablePublic);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
