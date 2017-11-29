@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit","_id", "_setting", ["_add", true]];
+params ["_unit", "_id", "_setting", ["_add", true]];
 
 private _exists = false;
 private _highestCoef = 1;
