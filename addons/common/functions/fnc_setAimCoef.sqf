@@ -3,9 +3,10 @@
  * Handle set AimCoef calls. Will use highest available setting.
  *
  * Arguments:
- * 0: id <STRING>
- * 1: settings <NUMBER>
- * 2: add [true] OR remove [false] (default: true) <BOOL>
+ * 0: unit <OBJECT>
+ * 1: id <STRING>
+ * 2: settings <NUMBER>
+ * 3: add [true] OR remove [false] (default: true) <BOOL>
  *
  * Return Value:
  * None
@@ -40,7 +41,7 @@ _map = _map select {
     };
 };
 
-if (!exists && _add) then {
+if (!_exists && _add) then {
 	_highestCoef = _highestCoef max _setting;
 	_map pushBack [_id, _setting];
 };
