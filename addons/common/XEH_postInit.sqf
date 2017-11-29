@@ -60,14 +60,11 @@
     params ["_object", "_set"];
     TRACE_2("blockThrow EH",_object,_set);
     if (_set > 0) then {
-        GVAR(blockThrow_EH) = ["KeyDown", {(_this select 1) in actionKeys "Throw"}] call CBA_fnc_addDisplayHandler;
         if (!isNil QEGVAR(advanced_throwing,enabled) && {EGVAR(advanced_throwing,enabled)}) then {
             GVAR(advanced_throwing_enabled) = true;
             EGVAR(advanced_throwing,enabled) = false;
         };
     } else {
-        ["KeyDown", GVAR(blockThrow_EH)] call CBA_fnc_removeDisplayHandler;
-        GVAR(blockThrow_EH) = nil;
         if (!isNil QGVAR(advanced_throwing_enabled) && {GVAR(advanced_throwing_enabled)}) then {
             GVAR(advanced_throwing_enabled) = nil;
             EGVAR(advanced_throwing,enabled) = true;
