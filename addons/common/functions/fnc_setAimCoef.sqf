@@ -42,8 +42,8 @@ _map = _map select {
 };
 
 if (!_exists && _add) then {
-	_highestCoef = _highestCoef max _setting;
-	_map pushBack [_id, _setting];
+    _highestCoef = _highestCoef max _setting;
+    _map pushBack [_id, _setting];
 };
 
 // Update the value
