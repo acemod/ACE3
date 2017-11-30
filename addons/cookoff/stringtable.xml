@@ -6,6 +6,7 @@
             <Italian>Esplosione</Italian>
             <Chinese>殉爆效果</Chinese>
             <Chinesesimp>殉爆效果</Chinesesimp>
+            <Japanese>誘爆</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
@@ -45,7 +46,7 @@
             <English>Wreck (Turret)</English>
             <Portuguese>Ruínas (torre)</Portuguese>
             <Korean>잔해(포탑)</Korean>
-            <Japanese>残骸（タレット）</Japanese>
+            <Japanese>残骸 (砲塔)</Japanese>
             <Chinese>殘骸 (砲塔)</Chinese>
             <Chinesesimp>残骸 (炮塔)</Chinesesimp>
         </Key>
