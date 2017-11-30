@@ -302,6 +302,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "pylons" %}
+`ace_interact_menu`
+{% endif %}
+
 {% if include.component == "quickmount" %}
 `ace_common`
 {% endif %}
@@ -495,10 +499,6 @@
 {% endif %}
 
 {% if include.component == "particles" %}
-`ace_common`
-{% endif %}
-
-{% if include.component == "server" %}
 `ace_common`
 {% endif %}
 

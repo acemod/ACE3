@@ -46,7 +46,7 @@ private _bulletPos = [0, 0, 0];
 private _bulletVelocity = [0, 0, 0];
 private _bulletAccel = [0, 0, 0];
 private _bulletSpeed = 0;
-private _gravity = [0, sin(_scopeBaseAngle) * -9.80665, cos(_scopeBaseAngle) * -9.80665];
+private _gravity = [0, sin(_scopeBaseAngle) * -GRAVITY, cos(_scopeBaseAngle) * -GRAVITY];
 private _deltaT = 1 / _simSteps;
 private _speedOfSound = 0;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
@@ -122,17 +122,17 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
             _tz = (_lastBulletPos select 2) + (_range - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
             _elevation = - atan(_tz / _range);
             _windage = - atan(_tx / _range);
-            _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _range);
+            _lead = (_targetSpeed * _TOF) / (Tan(MRAD_TO_DEG(1)) * _range);
         };
 
-        private _elevationString = Str(round(-_elevation * 60 / 3.38 * 10) / 10);
+        private _elevationString = Str(round(-DEG_TO_MRAD(_elevation) * 10) / 10);
         if (_elevationString == "0") then {
             _elevationString = "-0.0";
         };
         if (_elevationString find "." == -1) then {
             _elevationString = _elevationString + ".0";
         };
-        private _windageString = Str(round(_windage * 60 / 3.38 * 10) / 10);
+        private _windageString = Str(round(DEG_TO_MRAD(_windage) * 10) / 10);
         if (_windageString find "." == -1) then {
             _windageString = _windageString + ".0";
         };

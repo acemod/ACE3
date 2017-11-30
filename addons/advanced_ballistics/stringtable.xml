@@ -241,6 +241,14 @@
             <Chinese>在全自動模式開火時,關閉先進彈道系統</Chinese>
             <Chinesesimp>在全自动模式开火时,关闭先进弹道系统</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_DisplayName">
+            <English>Enable Muzzle Velocity Variation</English>
+            <German>Variation der Mündungsgeschwindigkeit aktivieren</German>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
+            <English>Simulates slight variations in muzzle velocity between each shot</English>
+            <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
+        </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
             <Polish>Symulacja temp. amunicji</Polish>

@@ -17,13 +17,13 @@ class CBA_Extended_EventHandlers;
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRearmSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(RearmSettings_Module_DisplayName);
         icon = QPATHTOF(ui\icon_module_rearm.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRearmSettings);
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {

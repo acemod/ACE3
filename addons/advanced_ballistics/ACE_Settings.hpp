@@ -43,6 +43,13 @@ class ACE_Settings {
         value = 0;
     };
     */
+    class GVAR(muzzleVelocityVariationEnabled) {
+        category = CSTRING(DisplayName);
+        displayName = CSTRING(muzzleVelocityVariationEnabled_DisplayName);
+        description = CSTRING(muzzleVelocityVariationEnabled_Description);
+        typeName = "BOOL";
+        value = 1;
+    }; 
     class GVAR(ammoTemperatureEnabled) {
         category = CSTRING(DisplayName);
         displayName = CSTRING(ammoTemperatureEnabled_DisplayName);
@@ -70,6 +77,7 @@ class ACE_Settings {
         description = CSTRING(simulationInterval_Description);
         typeName = "SCALAR";
         value = 0.05;
+        sliderSettings[] = {0, 0.2, 0.05, 1};
     };
     class GVAR(simulationRadius) {
         category = CSTRING(DisplayName);
@@ -77,5 +85,6 @@ class ACE_Settings {
         description = CSTRING(simulationRadius_Description);
         typeName = "SCALAR";
         value = 3000;
+        sliderSettings[] = {0, 3000, 3000, 0};
     };
 };

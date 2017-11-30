@@ -19,8 +19,6 @@
  */
 #include "script_component.hpp"
 
-scopeName "main";
-
 params ["_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity"];
 TRACE_4("params",_barrelLength,_muzzleVelocityTable,_barrelLengthTable,_muzzleVelocity);
 
@@ -31,7 +29,7 @@ private _muzzleVelocityTableCount = count _muzzleVelocityTable;
 private _barrelLengthTableCount = count _barrelLengthTable;
 
 // Exit if tables are different sizes, have no elements or have only one element
-if (_muzzleVelocityTableCount != _barrelLengthTableCount || _muzzleVelocityTableCount == 0 || _barrelLengthTableCount == 0) exitWith { 0 };
+if (_muzzleVelocityTableCount != _barrelLengthTableCount || _muzzleVelocityTableCount == 0) exitWith { 0 };
 if (_muzzleVelocityTableCount == 1) exitWith { (_muzzleVelocityTable select 0) - _muzzleVelocity };
 
 // If we have the precise barrel length value, return result immediately
@@ -43,28 +41,15 @@ if (_barrelLength in _barrelLengthTable) exitWith {
 if (_barrelLength <= (_barrelLengthTable select 0)) exitWith { (_muzzleVelocityTable select 0) - _muzzleVelocity };
 if (_barrelLength >= (_barrelLengthTable select _barrelLengthTableCount - 1)) exitWith { (_muzzleVelocityTable select _barrelLengthTableCount - 1) - _muzzleVelocity };
 
-private _upperDataIndex = -1;
-private _lowerDataIndex = -1;
+private _upperDataIndex = 0;
+private _lowerDataIndex = 1;
 
 // Find closest bordering values for barrel length
 {
-    if (_barrelLength <= _x) then {
+    if (_barrelLength <= _x) exitWith {
         _upperDataIndex = _forEachIndex;
         _lowerDataIndex = _upperDataIndex - 1;
-        breakTo "main";
     };
 } forEach _barrelLengthTable;
 
-// Worst case scenario
-if (_upperDataIndex == -1 || _lowerDataIndex == -1) exitWith {0};
-
-private _lowerBarrelLength = _barrelLengthTable select _lowerDataIndex;
-private _upperBarrelLength = _barrelLengthTable select _upperDataIndex;
-private _lowerMuzzleVelocity = _muzzleVelocityTable select _lowerDataIndex;
-private _upperMuzzleVelocity = _muzzleVelocityTable select _upperDataIndex;
-
-// Calculate interpolation ratio
-private _interpolationRatio = [0, (_upperBarrelLength - _barrelLength) / (_upperBarrelLength - _lowerBarrelLength)] select (abs (_lowerBarrelLength - _upperBarrelLength) > 0);
-
-// Calculate interpolated muzzle velocity shift
-(_lowerMuzzleVelocity + ((_upperMuzzleVelocity - _lowerMuzzleVelocity) * (1 - _interpolationRatio))) - _muzzleVelocity // Return
+(linearConversion [_barrelLengthTable select _lowerDataIndex, _barrelLengthTable select _upperDataIndex, _barrelLength, _muzzleVelocityTable select _lowerDataIndex, _muzzleVelocityTable select _upperDataIndex]) - _muzzleVelocity // Return
