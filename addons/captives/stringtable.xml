@@ -7,6 +7,7 @@
             <Italian>Prigionieri</Italian>
             <Chinese>俘虜</Chinese>
             <Chinesesimp>俘虏</Chinesesimp>
+            <Japanese>捕虜</Japanese>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
