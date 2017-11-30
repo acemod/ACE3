@@ -7,6 +7,7 @@
             <Italian>Spettatore</Italian>
             <Chinese>旁觀者</Chinese>
             <Chinesesimp>旁观者</Chinesesimp>
+            <Japanese>スペクテイター</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -77,7 +78,7 @@
             <Czech>Módy kamery které mohou být použity.</Czech>
             <Italian>Modalità che la camera può utilizzare.</Italian>
             <French>Modes de caméra qui peuvent être utilisés</French>
-            <Japanese>カメラ モードを使えます。</Japanese>
+            <Japanese>カメラ モードを設定できます。</Japanese>
             <Korean>사용할 수 있는 카메라 모드들 입니다</Korean>
             <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
             <Chinese>設定可使用的攝影機模式</Chinese>
@@ -137,7 +138,7 @@
             <Czech>Módy zobrazení které mohou být použity.</Czech>
             <Italian>Modalità visuali che possono essere usate.</Italian>
             <French>Modes de visions qui peuvent être utilisés</French>
-            <Japanese>ビジョン モードを使えます。</Japanese>
+            <Japanese>ビジョン モードを設定できます。</Japanese>
             <Korean>사용할 수 있는 시야 모드들 입니다</Korean>
             <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
             <Chinese>設定可使用的視覺模式</Chinese>
