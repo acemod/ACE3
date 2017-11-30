@@ -7,6 +7,7 @@
             <Italian>Interazione</Italian>
             <Chinese>互動</Chinese>
             <Chinesesimp>互动</Chinesesimp>
+            <Japanese>インタラクション</Japanese>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -307,7 +308,7 @@
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
             <Italian>DANZA!</Italian>
-            <Japanese>おどれ！</Japanese>
+            <Japanese>おどれ!</Japanese>
             <Korean>춤추기!</Korean>
             <Chinesesimp>跳舞</Chinesesimp>
             <Chinese>跳舞</Chinese>
@@ -451,7 +452,7 @@
             <Hungarian>Tűnés!</Hungarian>
             <Portuguese>Vá Embora!</Portuguese>
             <Italian>Via di qui!</Italian>
-            <Japanese>うせろ！</Japanese>
+            <Japanese>失せろ!</Japanese>
             <Korean>저리 가!</Korean>
             <Chinesesimp>走开!</Chinesesimp>
             <Chinese>走開!</Chinese>
@@ -467,7 +468,7 @@
             <Russian>Ложись!</Russian>
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
-            <Japanese>ふせろ！</Japanese>
+            <Japanese>伏せろ!</Japanese>
             <Korean>엎드려!</Korean>
             <Chinesesimp>趴下!</Chinesesimp>
             <Chinese>趴下!</Chinese>
@@ -481,7 +482,7 @@
             <French>Sortez !</French>
             <Russian>Выходи</Russian>
             <Czech>Vystupte</Czech>
-            <Japanese>降りる</Japanese>
+            <Japanese>降りろ</Japanese>
             <Korean>나가</Korean>
             <Chinesesimp>出去</Chinesesimp>
             <Chinese>出去</Chinese>
@@ -1076,6 +1077,7 @@
         <Key ID="STR_ACE_Interaction_PullOutBody">
             <English>Pull out body</English>
             <Russian>Вытащить тело</Russian>
+            <Japanese>"身体を引き出す</Japanese>
         </Key>
     </Package>
 </Project>
