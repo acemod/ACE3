@@ -4,7 +4,7 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
 
     class ACE_RangeCard: ACE_ItemCore {
-        author[] = {"Ruthberg"};
+        author = "Ruthberg";
         scope = 2;
         displayName = CSTRING(Name);
         descriptionShort = CSTRING(Description);

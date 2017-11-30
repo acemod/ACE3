@@ -152,7 +152,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleSurrender_DisplayName);
         function = QFUNC(moduleSurrender);
-        scope = 2;  //show in editor
+        scope = 1;  //show in editor
         isGlobal = 0; //run on server
         isTriggerActivated  = 1; //Wait for triggers
         icon = QPATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa);
@@ -168,7 +168,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleHandcuffed_DisplayName);
         function = QFUNC(moduleHandcuffed);
-        scope = 2;  //show in editor
+        scope = 1;  //show in editor
         isGlobal = 0; //run on server
         isTriggerActivated  = 1; //Wait for triggers
         icon = QPATHTOF(UI\Icon_Module_Make_Unit_Handcuffed_ca.paa);
@@ -186,7 +186,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleSettings_DisplayName);
         function = QFUNC(moduleSettings);
-        scope = 2;
+        scope = 1;
         icon = QPATHTOF(UI\Icon_Module_settings_ca.paa);
         isGlobal = 1;
         isSingular = 1;

@@ -163,8 +163,8 @@
             <Polish>Ciśnienie barometryczne, przy którym celownik został wyzerowany</Polish>
             <French>Pression barométrique de référence pour le zérotage des optiques</French>
             <Italian>Pressione barometrica a cui è stato azzerato il mirino</Italian>
-            <Chinesesimp>武器参考多少大气压力来进行归零.</Chinesesimp>
-            <Chinese>武器參考多少大氣壓力來進行歸零.</Chinese>
+            <Chinesesimp>武器参考多少大气压力来进行归零。</Chinesesimp>
+            <Chinese>武器參考多少大氣壓力來進行歸零。</Chinese>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
@@ -185,8 +185,8 @@
             <Polish>Wilgotność powietrza, przy której celownik został wyzerowany</Polish>
             <French>Taux d'humidité de référence pour le zérotage des optiques</French>
             <Italian>Umidità a cui è stato azzerato il mirino</Italian>
-            <Chinesesimp>武器参考多少湿度来进行归零.</Chinesesimp>
-            <Chinese>武器參考多少濕度來進行歸零.</Chinese>
+            <Chinesesimp>武器参考多少湿度来进行归零。</Chinesesimp>
+            <Chinese>武器參考多少濕度來進行歸零。</Chinese>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
@@ -209,6 +209,28 @@
             <Italian>Ricava la pressione barometrica dall'altitudine del terreno</Italian>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
+            <English>Use legacy UI</English>
+            <German>Vorheriges UI verwenden</German>
+            <Italian>Usa UI precedente</Italian>
+            <Chinese>使用舊版介面</Chinese>
+            <Chinesesimp>使用旧版介面</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Scopes_useLegacyUI_description">
+            <English>Displays elevation and windage with signed numbers</English>
+            <German>Anzeige der Absehenverstellungen mit vorzeichenbehafteten Zahlen</German>
+            <Italian>Visualizza l'elevazione e la derivazione con i numeri firmati</Italian>
+            <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
+            <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
+            <English>Simplified zeroing</English>
+            <German>Vereinfachte Nullung</German>
+        </Key>
+        <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
+            <English>Replicates the vanilla zeroing system for riflescopes.</English>
+            <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -354,6 +376,10 @@
             <Chinesesimp>设定归零</Chinesesimp>
             <Chinese>設定歸零</Chinese>
         </Key>
+        <Key ID="STR_ACE_Scopes_ResetZero">
+            <English>Reset zero adjustment</English>
+            <German>Nullung zurücksetzen</German>
+        </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
             <German>Dieses Modul fügt Absehenverstellung (horizontal und vertikal) zu Zielfernrohren hinzu.</German>
@@ -362,8 +388,32 @@
             <Polish>Ten moduł włącza pokrętła kalibracyjne poprawki na wiatr oraz poprawki wysokości dla celowników o dużym powiększeniu.</Polish>
             <French>Ce module ajoute les tambours de correction de la hausse et de dérive sur les optiques de visée à fort grossissement.</French>
             <Italian>Questo modulo aggiunge lo spostamento dell'aria e la regolazione dell'elevazione delle torrette in mirini a lunga gittata</Italian>
-            <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏, 距离用的调整纽</Chinesesimp>
-            <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏, 距離用的調整紐</Chinese>
+            <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏，距离用的调整纽。</Chinesesimp>
+            <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏，距離用的調整紐。</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentDown">
+            <English>%1D</English>
+            <German>%1T</German>
+            <French>%1B</French>
+            <Italian>%1D</Italian>
+            <Chinese>%1D</Chinese>
+            <Chinesesimp>%1D</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
+            <English>%1L</English>
+            <German>%1L</German>
+            <French>%1G</French>
+            <Italian>%1L</Italian>
+            <Chinese>%1L</Chinese>
+            <Chinesesimp>%1L</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
+            <English>%1R</English>
+            <German>%1R</German>
+            <French>%1D</French>
+            <Italian>%1R</Italian>
+            <Chinese>%1R</Chinese>
+            <Chinesesimp>%1R</Chinesesimp>
         </Key>
     </Package>
 </Project>

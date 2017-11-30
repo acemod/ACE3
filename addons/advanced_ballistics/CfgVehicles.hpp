@@ -1,7 +1,7 @@
 class CfgVehicles {
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Wind_ca.paa);
         category = "ACE";
@@ -49,6 +49,12 @@ class CfgVehicles {
                 defaultValue = 0;
             };
             */
+            class muzzleVelocityVariationEnabled {
+                displayName = CSTRING(muzzleVelocityVariationEnabled_DisplayName);
+                description = CSTRING(muzzleVelocityVariationEnabled_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class ammoTemperatureEnabled {
                 displayName = CSTRING(ammoTemperatureEnabled_DisplayName);
                 description = CSTRING(ammoTemperatureEnabled_Description);

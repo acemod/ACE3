@@ -26,7 +26,6 @@ if (!isNull _currentUser) exitWith {
 };
 _aircraft setVariable [QGVAR(currentUser), ace_player, true];
 GVAR(currentAircraftNamespace) setVariable [getPlayerUID ace_player, _aircraft, true];
-[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 GVAR(isCurator) = _isCurator;
 GVAR(currentAircraft) = _aircraft;
@@ -57,9 +56,10 @@ if (["ace_fastroping"] call EFUNC(common,isModLoaded) && {_hasFRIES > 1}) then {
 
 GVAR(comboBoxes) = [];
 {
-    private _combo = _display ctrlCreate ["ctrlCombo", -1];
+    private _combo = _display ctrlCreate [QGVAR(CtrlCombo), -1];
     private _picturePos = ctrlPosition (_display displayCtrl ID_PICTURE_AIRCRAFT);
     private _uiPos = getArray (_x >> "UIposition");
+    MAP(_uiPos,if (_x isEqualType 0) then {_x} else {call compile _x}); // Handle string positions
     _combo ctrlSetPosition [
         (_picturePos select 0) + (_uiPos select 0),
         (_picturePos select 1) + (_uiPos select 1),
@@ -137,3 +137,13 @@ _edit ctrlAddEventHandler ["KeyDown", LINKFUNC(onNameChange)];
 
 private _checkbox = _display displayCtrl ID_CHECKBOX_MIRROR;
 _checkbox ctrlAddEventHandler ["CheckedChanged", {[(_this select 1) == 1] call FUNC(onPylonMirror)}];
+
+if (!GVAR(isCurator)) then {
+    [{
+        isNull (GVAR(currentAircraft) getVariable [QGVAR(currentUser), objNull]) ||
+        {(ace_player distanceSqr GVAR(currentAircraft)) > GVAR(searchDistanceSqr)}
+    }, {
+        [localize LSTRING(TooFar), false, 5] call EFUNC(common,displayText);
+        call FUNC(onButtonClose);
+    }] call CBA_fnc_waitUntilAndExecute;
+};

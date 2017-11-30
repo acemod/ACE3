@@ -22,6 +22,7 @@ params ["_logic","_units", "_activated"];
 if !(_activated) exitWith {};
 
 [_logic, QGVAR(enabled), "enabled"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(muzzleVelocityVariationEnabled), "muzzleVelocityVariationEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(ammoTemperatureEnabled), "ammoTemperatureEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(barrelLengthInfluenceEnabled), "barrelLengthInfluenceEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(bulletTraceEnabled), "bulletTraceEnabled"] call EFUNC(common,readSettingFromModule);

@@ -4,6 +4,7 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
 
     class ACE_Flashlight_MX991: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(MX991_DisplayName);
         descriptionShort = CSTRING(MX991_Description);
         model = QPATHTOF(data\MX_991.p3d);
@@ -21,6 +22,7 @@ class CfgWeapons {
     };
 
     class ACE_Flashlight_KSF1: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(KSF1_DisplayName);
         descriptionShort = CSTRING(KSF1_Description);
         model = QPATHTOF(data\KSF_1.p3d);
@@ -38,6 +40,7 @@ class CfgWeapons {
     };
 
     class ACE_Flashlight_XL50: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(XL50_DisplayName);
         descriptionShort = CSTRING(XL50_Description);
         model = QPATHTOF(data\Maglight.p3d);

@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_init"];
+TRACE_1("ui",_init);
 
 // No change
 if (_init isEqualTo !isNull SPEC_DISPLAY) exitWith {};

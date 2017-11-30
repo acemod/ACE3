@@ -7,7 +7,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Category);
         function = QFUNC(moduleInit);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_AdvancedThrowing_ca.paa);
         class Arguments {

@@ -12,6 +12,11 @@ version:
   patch: 0
 ---
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Deprecated and replaced with <a href="https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System">CBA Settings System</a> in 3.12.0!</p>
+</div>
+
 ACE3 contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting PBOs. These settings are all handled server side and broadcasted to the clients connecting to that server. This ensures that everyone playing on the server will have a uniform experience.
 
 Part of this settings framework are global settings and client settings. Both use the same underlaying framework, with the difference that client settings can be adjusted by clients, where global settings can not.

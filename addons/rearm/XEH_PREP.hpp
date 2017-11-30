@@ -19,6 +19,7 @@ PREP(getTurretConfigMagazines);
 PREP(getTurretMagazineAmmo);
 PREP(grabAmmo);
 PREP(handleKilled);
+PREP(handleRespawn);
 PREP(handleUnconscious);
 PREP(hasEnoughSupply);
 PREP(initSupplyVehicle);

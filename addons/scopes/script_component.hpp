@@ -14,6 +14,10 @@
 #define MINOR_INCREMENT false
 #define MAJOR_INCREMENT true
 
+#define DEFAULT_RAIL_BASE_ANGLE 0.0086
+
+// #define DISABLE_DISPERSION
+
 #ifdef DEBUG_ENABLED_SCOPES
     #define DEBUG_MODE_FULL
 #endif

@@ -12,7 +12,7 @@ class CfgVehicles {
 
     class ACE_Module;
     class ACE_moduleMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(MedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -154,7 +154,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleBasicMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(BasicMedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -196,7 +196,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleAdvancedMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AdvancedMedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -318,7 +318,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleReviveSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(ReviveSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -362,7 +362,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleAssignMedicRoles: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignMedicRoles_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -409,7 +409,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleAssignMedicVehicle: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignMedicVehicle_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -453,7 +453,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleAssignMedicalFacility: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignMedicalFacility_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -556,7 +556,7 @@ class CfgVehicles {
                 class GVAR(UnLoadPatient) {
                     displayName = CSTRING(UnloadPatient);
                     distance = 5;
-                    condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {vehicle _target != _target} && {vehicle _player == _player});
+                    condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {alive _target} && {vehicle _target != _target} && {vehicle _player == _player});
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
                     showDisabled = 0;
                     priority = 2;

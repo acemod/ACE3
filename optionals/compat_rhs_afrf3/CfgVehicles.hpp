@@ -59,22 +59,28 @@ class CfgVehicles {
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
     };
+
+#define ERA(num) QUOTE(era_##num##_hitpoint)
+#define ERA_2_28 ERA(2), ERA(3), ERA(4), ERA(5), ERA(6), ERA(7), ERA(8), ERA(9), ERA(10), ERA(11), ERA(12), ERA(13), ERA(14), ERA(15), ERA(16), ERA(17), ERA(18), ERA(19), ERA(20), ERA(21), ERA(22), ERA(23), ERA(24), ERA(25), ERA(26), ERA(27), ERA(28)
+#define ERA_2_31 ERA_2_28, ERA(29), ERA(30), ERA(31)
+#define ERA_2_32 ERA_2_31, ERA(32)
+#define ERA_2_35 ERA_2_32, ERA(33), ERA(34), ERA(35)
+#define ERA_2_36 ERA_2_35, ERA(36)
+
     class rhs_a3t72tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
     };
     class rhs_t72bb_tv: rhs_a3t72tank_base {
-        ace_repair_hitpointPositions[] = {{"era_1_hitpoint", {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{"era_1_hitpoint", {"era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint", "era_31_hitpoint"}}};
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_31}}};
     };
     class rhs_t72bc_tv: rhs_a3t72tank_base {
-        ace_repair_hitpointPositions[] = {{"era_1_hitpoint", {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{"era_1_hitpoint", {"era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint", "era_31_hitpoint", "era_32_hitpoint"}}};
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_32}}};
     };
     class rhs_t72bd_tv: rhs_a3t72tank_base {
-        class rhs_t72bd_tv: rhs_a3t72tank_base {
-            ace_repair_hitpointPositions[] = {{"era_1_hitpoint", {0,0,0}}};
-            ace_repair_hitpointGroups[] = {{"era_1_hitpoint", {"era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint", "era_31_hitpoint", "era_32_hitpoint"}}};
-        };
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_32}}};
     };
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
@@ -179,8 +185,25 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1100;
     };
     class rhs_t80bv: rhs_t80b {
-        ace_repair_hitpointPositions[] = {{"era_1_hitpoint", {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{"era_1_hitpoint", {"era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint"}}};
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_28}}};
+    };
+    class rhs_t80a: rhs_t80bv {};
+    class rhs_t80u: rhs_t80a {
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_35}}};
+    };
+    class rhs_t80uk: rhs_t80u {
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_36}}};
+    };
+    class rhs_t80ue1: rhs_t80a {
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_36}}};
+    };
+    class rhs_t80um: rhs_t80u {
+        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
+        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_36}}};
     };
 
     class Truck_F: Car_F {};
@@ -195,6 +218,10 @@ class CfgVehicles {
         transportFuel = 0;
         EGVAR(refuel,hooks)[] = {{-0.05,-3.6,-0.45}};
         EGVAR(refuel,fuelCargo) = 10000;
+    };
+    class RHS_Ural_Repair_MSV_01: RHS_Ural_Support_MSV_Base_01 {
+        transportRepair = 0;
+        EGVAR(repair,canRepair) = 1;
     };
 
     class rhs_truck: Truck_F {

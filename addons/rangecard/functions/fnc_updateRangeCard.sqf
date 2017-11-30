@@ -156,10 +156,10 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
 private _cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5), _zeroRange, _boreHeight, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
 if (isNil {_cacheEntry}) then {
     private _scopeBaseAngle = if (!_useABConfig) then {
-        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngleVanilla:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
+        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
         (parseNumber _zeroAngle)
     } else {
-        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngle:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel];
+        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZeroAB:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel];
         (parseNumber _zeroAngle)
     };
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && missionNamespace getVariable [QEGVAR(advanced_ballistics,ammoTemperatureEnabled), false]) then {
@@ -167,10 +167,10 @@ if (isNil {_cacheEntry}) then {
             private _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
             private _mv = _muzzleVelocity + _mvShift;
 
-            [_scopeBaseAngle,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,_forEachIndex,_useABConfig] call FUNC(calculateRangeCard);
+            [_scopeBaseAngle,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),200,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,_forEachIndex,_useABConfig] call FUNC(calculateRangeCard);
         } forEach [-15, -5, 5, 10, 15, 20, 25, 30, 35];
     } else {
-        [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,3,_useABConfig] call FUNC(calculateRangeCard);
+        [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),200,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,3,_useABConfig] call FUNC(calculateRangeCard);
     };
 
     for "_i" from 0 to 9 do {
