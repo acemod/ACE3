@@ -28,4 +28,10 @@ class ACE_Settings {
         value = 1;
         typeName = "SCALAR";
     };
+    class GVAR(probabilityCoef) {
+        displayName = CSTRING(probabilityCoef_name);
+        description = CSTRING(probabilityCoef_tooltip);
+        value = 1;
+        typeName = "SCALAR";
+    };
 };
