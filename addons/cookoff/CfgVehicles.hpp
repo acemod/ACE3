@@ -54,10 +54,10 @@ class CfgVehicles {
     };
 
     class APC_Wheeled_02_base_F: Wheeled_APC_F { // Otokar ARMA - RCWS Turret
-        GVAR(rcwsTurret) = 1;
+        GVAR(ignoreTurret) = 1;
     };
     class APC_Tracked_01_base_F: Tank_F { // Namera, Nemmera - RCWS Turret
-        GVAR(rcwsTurret) = 1;
+        GVAR(ignoreTurret) = 1;
     };
 
     class B_MBT_01_base_F;

@@ -41,3 +41,14 @@ class MyVehicle {
 Global cook off probability can also be adjusted with the `ace_cookoff_probabilityCoef` mission setting.
 
 Higher values will make cook-off more probable, whilst lower values will make cook-off less probable.
+
+## 3. Ignore damage to turret
+
+For use on vehicles when damage to the main turret would not cause a vehicle cookoff.
+e.g. RCWS turrets
+
+```
+class MyVehicle {
+    ace_cookoff_ignoreTurret = 1;
+};
+```

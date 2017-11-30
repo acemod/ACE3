@@ -81,7 +81,7 @@ if (_simulationType == "tank") exitWith {
         };
     } else {
         if (_hitpoint in ["hithull", "hitturret", "#structural"] && {_newDamage > 0.8 + random 0.2}) then {
-            if ((_hitpoint == "hitturret") && {(getNumber (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(rcwsTurret))) == 1}) exitWith {}; // ignore RCWS
+            if ((_hitpoint == "hitturret") && {(getNumber (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(ignoreTurret))) == 1}) exitWith {}; // ignore turrets like RCWS
             _vehicle setDamage 1;
         };
     };
