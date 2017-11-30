@@ -5,6 +5,7 @@
             <English>Common</English>
             <German>Allgemein</German>
             <Italian>Comuni</Italian>
+            <Japanese>全般</Japanese>
             <Chinese>通用</Chinese>
             <Chinesesimp>通用</Chinesesimp>
         </Key>
@@ -356,7 +357,7 @@
             <Portuguese>[ACE] Itens diversos</Portuguese>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
             <Italian>[ACE] Oggetti vari</Italian>
-            <Japanese>[ACE] その他のアイテム</Japanese>
+            <Japanese>[ACE] その他アイテム</Japanese>
             <Korean>[ACE] 기타 물품.</Korean>
             <Chinese>[ACE] 雜項</Chinese>
             <Chinesesimp>[ACE] 杂项</Chinesesimp>
@@ -478,18 +479,21 @@
             <Italian>Controlla Azioni PBO</Italian>
             <Chinese>檢查PBO動作</Chinese>
             <Chinesesimp>检查PBO动作</Chinesesimp>
+            <Japanese>PBO 検査の挙動</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
             <Italian>Controlla Tutti i PBO</Italian>
             <Chinese>檢查所有PBO</Chinese>
             <Chinesesimp>检查所有PBO</Chinesesimp>
+            <Japanese>PBO 全てを検査</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
             <Italian>Controlla Whitelist PBO</Italian>
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查PBO白名单</Chinesesimp>
+            <Japanese>ホワイトリスト内の PBO を検査</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -709,7 +713,7 @@
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
-            <Japanese>プレイヤーが正しい PBO を持っていない場合は？</Japanese>
+            <Japanese>プレイヤーが正しい PBO を持っていない場合は?</Japanese>
             <Korean>올바르지 않는 PBO를 가진 사람을 어떻게 할까요?</Korean>
             <Chinese>若玩家沒有正確的PBO檔時，將採取何種動作?</Chinese>
             <Chinesesimp>若玩家没有正确的PBO档时，将采取何种动作?</Chinesesimp>
@@ -789,7 +793,7 @@
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
-            <Japanese>ACE MOD の代わりに全アドオンを検査しますか？</Japanese>
+            <Japanese>ACE MOD の代わりに全アドオンを検査しますか?</Japanese>
             <Korean>ACE를 제외한 모든 모드를 검사할까요?</Korean>
             <Chinese>檢查包含ACE之外的其他模組?</Chinese>
             <Chinesesimp>检查包含ACE之外的其他模组?</Chinesesimp>
@@ -821,7 +825,7 @@
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
-            <Japanese>どのようなアドオンを許可しますか？</Japanese>
+            <Japanese>どのようなアドオンを許可しますか?</Japanese>
             <Korean>허가되는 에드온은 어느것입니까?</Korean>
             <Chinese>哪些模組是可被允許/忽略的?</Chinese>
             <Chinesesimp>哪些模组是可被允许/忽略的?</Chinesesimp>
