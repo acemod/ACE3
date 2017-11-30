@@ -53,6 +53,13 @@ class CfgVehicles {
         explosionEffect = "FuelExplosionBig";
     };
 
+    class APC_Wheeled_02_base_F: Wheeled_APC_F { // Otokar ARMA - RCWS Turret
+        GVAR(ignoreTurret) = 1;
+    };
+    class APC_Tracked_01_base_F: Tank_F { // Namera, Nemmera - RCWS Turret
+        GVAR(ignoreTurret) = 1;
+    };
+
     class B_MBT_01_base_F;
     class B_MBT_01_cannon_F: B_MBT_01_base_F {
         GVAR(turret)[] = {QGVAR(Turret_MBT_01),{0,-1,0.5}};
