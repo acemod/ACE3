@@ -9,23 +9,18 @@ class CfgVehicles {
         };
     };
 
-     class Man;
-     class CAManBase: Man {
-         class ACE_SelfActions {
-             class ACE_CutParachute {
-                 displayName = CSTRING(CutParachute);
-                 exceptions[] = {"isNotInside"};
-                 condition = QUOTE([_player] call FUNC(canCutParachute));
-                 statement = QUOTE([_player] call FUNC(cutParachute));
-                 showDisabled = 0;
-                 priority = 2.9;
-                 icon = QPATHTOF(UI\cut_ca.paa);
-             };
-         };
-     };
-
     class Helicopter;
     class ParachuteBase: Helicopter {
+        class ACE_SelfActions {
+            class ACE_CutParachute {
+                displayName = CSTRING(CutParachute);
+                condition = QUOTE(_target getVariable [ARR_2(QQGVAR(canCut),false)]);
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(cutParachute));
+                showDisabled = 0;
+                priority = 2.9;
+                icon = QPATHTOF(UI\cut_ca.paa);
+            };
+        };
         MACRO_HASRESERVE
     };
     class ParachuteWest: ParachuteBase {
@@ -49,7 +44,7 @@ class CfgVehicles {
     class Steerable_Parachute_F: Paraglide {
         MACRO_HASRESERVE
     };
-    class Parachute_02_base_F: parachuteBase {
+    class Parachute_02_base_F: ParachuteBase {
         MACRO_HASRESERVE
     };
     class B_Parachute_02_F: Parachute_02_base_F {

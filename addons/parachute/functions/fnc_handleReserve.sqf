@@ -1,5 +1,5 @@
 /*
- * Author: joko // Jonas
+ * Author: joko, Jonas, SilentSpike
  * Cache reserve parachute on player unit when their inventory changes and add it when they open their parachute
  *
  * Arguments:
@@ -26,7 +26,7 @@ if (
 ) then {
     // Case where unit has just opened parachute and reserve should be added
     _unit addBackpackGlobal (GETVAR(_unit,GVAR(backpackClass),"ACE_NonSteerableReserveParachute"));
-    SETVAR(_unit,GVAR(canCut),true); // Mark the cut parachute action available since reserve is present
+    SETVAR(vehicle _unit,GVAR(canCut),true); // Mark the parachute cuttable since reserve is present
 } else {
     // Case where inventory has changed otherwise (including when reserve is added)
     private _backpackCfg = configFile >> "CfgVehicles" >> _backpack;

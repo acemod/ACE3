@@ -1,4 +1,3 @@
-PREP(canCutParachute);
 PREP(cutParachute);
 PREP(handleInfoDisplayChanged);
 PREP(handleReserve);
