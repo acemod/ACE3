@@ -15,4 +15,4 @@
  */
 #include "script_component.hpp"
 params ["_unit"];
-(vehicle _unit isKindOf 'ParachuteBase' && {GETVAR(_unit,GVAR(hasReserve),false)})
+vehicle _unit isKindOf 'ParachuteBase' && {GETVAR(_unit,GVAR(canCut),false)}
