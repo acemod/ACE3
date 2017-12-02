@@ -14,6 +14,8 @@
 #define MINOR_INCREMENT false
 #define MAJOR_INCREMENT true
 
+#define MIN_INCREMENT 0.05
+
 #define DEFAULT_RAIL_BASE_ANGLE 0.0086
 
 // #define DISABLE_DISPERSION
