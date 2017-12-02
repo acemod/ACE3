@@ -10,7 +10,7 @@
  * The return value <NUMBER>
  *
  * Example:
- * [player] call ace_movement_fnc_getWeight
+ * [player] call ace_common_fnc_getWeight
  *
  * Public: No
  */
@@ -33,7 +33,8 @@ private _useImperial = (!isNil QEGVAR(movement,useImperial) && {EGVAR(movement,u
 private _weight = (loadAbs _unit + _virtualLoad) * 0.1;
 
 //Return
-[
-    (format ["%1kg", (round (_weight * (1/2.2046) * 100)) / 100]),
-    (format ["%1lb", (round (_weight * 100)) / 100])
-] select ([_useImperial, [false, true] select (_returnFormat == 1)] select (_returnFormat != 0))
+if ([_useImperial, (_returnFormat == 1)] select (_returnFormat != 0)) then {
+    format ["%1lb", (round (_weight * 100)) / 100]
+} else {
+    format ["%1kg", (round (_weight * (1/2.2046) * 100)) / 100]
+};
