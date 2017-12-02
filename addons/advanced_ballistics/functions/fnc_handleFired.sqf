@@ -31,11 +31,11 @@ if (_abort) then {
     private _maxRange = uiNamespace getVariable format[QGVAR(maxRange_%1), _ammo];
     if (isNil "_maxRange") then {
         private _airFriction = getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-        private _maxTime = ((_muzzleVelocity - BULLET_TRACE_MIN_VELOCITY) / (BULLET_TRACE_MIN_VELOCITY * -_airFriction * _muzzleVelocity)) max getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime");
         private _maxRange = if (_airFriction < 0) then {
-            -ln(1 - _airFriction * _muzzleVelocity * _maxTime) / _airFriction
+            private _maxTime = ((_vanillaInitialSpeed - BULLET_TRACE_MIN_VELOCITY) / (BULLET_TRACE_MIN_VELOCITY * -_airFriction * _vanillaInitialSpeed)) max getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime");
+            -ln(1 - _airFriction * _vanillaInitialSpeed * _maxTime) / _airFriction
         } else {
-            _muzzleVelocity * _maxTime
+            _vanillaInitialSpeed * getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime")
         };
         uiNamespace setVariable [format[QGVAR(maxRange_%1), _ammo], _maxRange];
     };
