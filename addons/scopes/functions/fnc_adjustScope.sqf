@@ -51,8 +51,8 @@ if (_majorStep) then {
     };
 };
 
-_elevation = round(_elevation * 10) / 10;
-_windage = round(_windage * 10) / 10;
+_elevation = round(_elevation / MIN_INCREMENT) * MIN_INCREMENT;
+_windage = round(_windage / MIN_INCREMENT) * MIN_INCREMENT;
 
 if ((_elevation + _zero) < _maxVertical select 0 or (_elevation + _zero) > _maxVertical select 1) exitWith {false};
 if (_windage < _maxHorizontal select 0 or _windage > _maxHorizontal select 1) exitWith {false};

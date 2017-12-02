@@ -27,7 +27,7 @@ private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0
 private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
-_elevation = round((_zero + _elevation) * 10) / 10;
+_elevation = round((_zero + _elevation) / MIN_INCREMENT) * MIN_INCREMENT;
 _zero = 0;
 
 private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex;
