@@ -18,6 +18,7 @@
 #include "script_component.hpp"
 
 private _focus = vehicle (param [0, objNull, [objNull]]);
+TRACE_1("cam_prepareTarget",_focus);
 
 if !(isNull _focus) then {
     // Interpolate zoom
@@ -25,8 +26,19 @@ if !(isNull _focus) then {
     private _zoomTemp = GVAR(camDistanceTemp);
 
     if (_zoomTemp != _zoom) then {
-        _zoomTemp = [_zoomTemp, _zoom, 10, GVAR(camDeltaTime)] call BIS_fnc_lerp;
+        _zoomTemp = [_zoomTemp, _zoom, 10, GVAR(camDeltaTime)] call {
+            // BIS_fnc_lerp was broken in 1.78, this is the previous version from a3\functions_f_exp_a\math
+            params [["_a", 0.0, [0.0]], ["_b", 0.0, [0.0]], ["_speed", 1.0, [0.0]], ["_deltaTime", 0.0, [0.0]]];
+            private "_result";
+            _result = 0.0;
+            if (_a != _b) then
+            {
+                _result = (_a * (1.0 - _deltaTime * _speed)) + (_b * _deltaTime * _speed);
+            };
+            _result;
+        };
         GVAR(camDistanceTemp) = _zoomTemp;
+        TRACE_2("new zoom",GVAR(camDeltaTime),_zoomTemp);
     };
 
     // The distance at which to place camera from the focus pivot
