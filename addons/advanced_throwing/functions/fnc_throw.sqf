@@ -50,7 +50,8 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     };
 
     private _config = configFile >> "CfgAmmo" >> typeOf _activeThrowable;
-    private _torqueDir = vectorNormalized (getArray (_config >> QGVAR(torqueDirection)));
+    private _torqueDir = getArray (_config >> QGVAR(torqueDirection));
+    _torqueDir = if (_torqueDir isEqualTypeArray [0,0,0]) then { vectorNormalized _torqueDir } else { [0,0,0] };
     private _torqueMag = getNumber (_config >> QGVAR(torqueMagnitude));
     private _torque = _torqueDir vectorMultiply _torqueMag;
 
