@@ -200,6 +200,11 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
+    class ParachuteBase: Helicopter {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+
     class Helicopter_Base_H;
     class Heli_Light_01_base_F: Helicopter_Base_H {
         GVAR(space) = 0;
