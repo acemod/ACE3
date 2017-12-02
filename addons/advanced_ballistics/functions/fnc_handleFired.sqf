@@ -55,11 +55,7 @@ if (_abort) then {
         };
     };
 };
-if (_abort) exitWith {
-    if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
-        EGVAR(windDeflection,trackedBullets) pushBack [_projectile, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
-    };
-};
+if (_abort) exitWith {};
 
 // Get Weapon and Ammo Configurations
 private _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
