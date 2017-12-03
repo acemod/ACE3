@@ -95,5 +95,5 @@ params [
     {},
     localize LSTRING(TakeNozzleAction),
     {true},
-    ["isNotInside", "isNotOnLadder"]
+    [INTERACT_EXCEPTIONS_REFUELING]
 ] call EFUNC(common,progressBar);

@@ -75,20 +75,6 @@ if (isServer) then {
     }];
 };
 
-// Listens for global "SettingChanged" events, to update the force status locally
-["ace_settingChanged", {
-    params ["_name", "_value", "_force"];
-
-    if (_force) then {
-        private _settingData = [_name] call FUNC(getSettingData);
-
-        if (_settingData isEqualTo []) exitWith {};
-
-        _settingData set [6, _force];
-    };
-}] call CBA_fnc_addEventHandler;
-
-
 // Event to log Fix Headbug output
 [QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
@@ -124,6 +110,7 @@ if (isServer) then {
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
@@ -192,60 +179,6 @@ call FUNC(checkFiles);
     ] call FUNC(checkPBOs)
 }] call CBA_fnc_addEventHandler;
 
-// Create a pfh to wait until all postinits are ready and settings are initialized
-[{
-    params ["_args"];
-
-    _args params ["_waitingMsgSent"];
-
-    // If post inits are not ready then wait
-    if !(SLX_XEH_MACHINE select 8) exitWith {};
-
-    // If settings are not initialized then wait
-    if (isNil QGVAR(settings) || {!isServer && isNil QEGVAR(modules,serverModulesRead)}) exitWith {
-        if !(_waitingMsgSent) then {
-            _args set [0, true];
-            INFO("Waiting on settings from server...");
-        };
-    };
-
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-
-    INFO("Settings received from server.");
-
-    if (isServer) then { //read settings from paramsArray
-        [] call FUNC(readSettingsFromParamsArray);
-    };
-    // Event so that ACE_Modules have their settings loaded:
-    [QGVAR(initSettingsFromModules), []] call CBA_fnc_localEvent;
-
-    if (isServer) then {
-        // Publish all settings data after all configs and modules are read
-        publicVariable QGVAR(settings);
-    };
-
-    // Load user settings from profile
-    if (hasInterface) then {
-        call FUNC(loadSettingsFromProfile);
-        call FUNC(loadSettingsLocalizedText);
-    };
-
-    INFO("Settings initialized.");
-
-    //Event that settings are safe to use:
-    ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
-
-    //Set init finished and run all delayed functions:
-    GVAR(settingsInitFinished) = true;
-    INFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
-
-    {
-        (_x select 1) call (_x select 0);
-        false
-    } count GVAR(runAtSettingsInitialized);
-
-    GVAR(runAtSettingsInitialized) = nil; //cleanup
-}, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
 /***************************************************************************/

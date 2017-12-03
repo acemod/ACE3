@@ -18,7 +18,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_closeInDistance", "_endPosTestOffset"];
 
 params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startingPosASL", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
 
@@ -57,7 +56,6 @@ private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToW
 
 //Checks (too close to center or can't attach)
 if (_bestPosASL isEqualTo []) exitWith {
-    TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
@@ -122,6 +120,13 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         };
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
+
+        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
+            _unit setVariable [QGVAR(tempFuel), nil];
+            [_unit, _nozzle] call FUNC(turnOn);
+        } else {
+            [LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        };
     },
     "",
     localize LSTRING(ConnectAction),

@@ -33,7 +33,7 @@ class ACE_ZeusActions {
         class remoteControl {
             displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
             icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
-            statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,''];";
+            statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,'NONE'];";
         };
     };
 

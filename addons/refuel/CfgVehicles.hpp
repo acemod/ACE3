@@ -14,7 +14,7 @@
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
                 statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle)); \
-                exceptions[] = {"isNotInside", "isNotOnLadder"}; \
+                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOn) { \
@@ -35,7 +35,7 @@
                 displayName = CSTRING(Disconnect); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
-                exceptions[] = {"isNotInside", "isNotOnLadder"}; \
+                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
         }; \
@@ -46,13 +46,13 @@ class CBA_Extended_EventHandlers;
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRefuelSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(RefuelSettings_Module_DisplayName);
         icon = QPATHTOF(ui\icon_module_refuel.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRefuelSettings);
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {
@@ -154,11 +154,14 @@ class CfgVehicles {
     class Rubber_duck_base_F: Boat_F  {
         GVAR(fuelCapacity) = 30;
     };
-    class SDV_01_base_F: Boat_F {
+/*    class SDV_01_base_F: Boat_F {
         // SDV is using electrical propulsion
+        // but we can't recharge it ATM another way
+        // TODO make recharging, maybe with this objects:
+        // Land_PowerGenerator_F Land_Portable_generator_F
         GVAR(canReceive) = 0;
     };
-
+*/
     class Car_F: Car {
         // Assuming large vehicle tank
         GVAR(fuelCapacity) = 60;
@@ -373,6 +376,9 @@ class CfgVehicles {
         transportFuel = 0; //3k
         GVAR(hooks)[] = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
         GVAR(fuelCargo) = 10000;
+    };
+    class Truck_02_water_base_F: Truck_02_fuel_base_F {
+        GVAR(fuelCargo) = REFUEL_DISABLED_FUEL;
     };
 
     class B_Truck_01_fuel_F: B_Truck_01_mover_F {

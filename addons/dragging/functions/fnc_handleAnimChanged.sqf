@@ -30,7 +30,7 @@ if (_unit != _realUnit) exitWith {
 if (_unit getVariable [QGVAR(isDragging), false]) then {
 
     // drop dragged object when not in valid animation
-    if !(_anim in DRAG_ANIMATIONS) then {
+    if (!(_anim in DRAG_ANIMATIONS) && {!(_unit call EFUNC(common,isSwimming))}) then {
         private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
         if (!isNull _draggedObject) then {

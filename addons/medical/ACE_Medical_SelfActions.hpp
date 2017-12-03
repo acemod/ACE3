@@ -351,7 +351,7 @@ class Medical {
     class ACE_LegLeft {
         displayName = ECSTRING(interaction,LegLeft);
         runOnHover = 1;
-        exceptions[] = {"isNotInside", "isNotSitting"};
+        exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
         statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
         modifierFunction = QUOTE([ARR_4(_target,_player,4,_this select 3)] call FUNC(modifyMedicalAction));
         condition = "true";
@@ -443,7 +443,7 @@ class Medical {
     class ACE_LegRight {
         displayName = ECSTRING(interaction,LegRight);
         runOnHover = 1;
-        exceptions[] = {"isNotInside", "isNotSitting"};
+        exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
         statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
         modifierFunction = QUOTE([ARR_4(_target,_player,5,_this select 3)] call FUNC(modifyMedicalAction));
         condition = "true";

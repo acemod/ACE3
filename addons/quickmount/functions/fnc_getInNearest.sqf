@@ -63,6 +63,12 @@ if (!isNull _target &&
 
                 if ((_effectiveRole in ["driver", "gunner"]) && {unitIsUAV _target}) exitWith {}; // Ignoring UAV Driver/Gunner
                 if ((_effectiveRole == "driver") && {(getNumber (([_target] call CBA_fnc_getObjectConfig) >> "hasDriver")) == 0}) exitWith {}; // Ignoring Non Driver (static weapons)
+
+                // Seats can be locked independently of the main vehicle
+                if ((_role == "driver") && {lockedDriver _target}) exitWith {TRACE_1("lockedDriver",_x);};
+                if ((_cargoIndex >= 0) && {_target lockedCargo _cargoIndex}) exitWith {TRACE_1("lockedCargo",_x);};
+                if ((!(_turretPath isEqualTo [])) && {_target lockedTurret _turretPath}) exitWith {TRACE_1("lockedTurret",_x);};
+
                 if (_effectiveRole == "turret") then {
                     if ((getNumber (([_target, _turretPath] call CBA_fnc_getTurret) >> "isCopilot")) == 1) exitWith {
                         _effectiveRole = "driver";
@@ -75,12 +81,25 @@ if (!isNull _target &&
                 TRACE_2("",_effectiveRole,_x);
                 if (_effectiveRole != _desiredRole) exitWith {};
 
-                if (_role == "Turret") then {
-                    ACE_player action ["GetIn" + _role, _target, _turretPath];
-                    TRACE_3("Geting In",_x,_role,_turretPath);
+                if (!(_turretPath isEqualTo [])) then {
+                     // Using GetInTurret seems to solve problems with incorrect GetInEH params when gunner/commander
+                    ACE_player action ["GetInTurret", _target, _turretPath];
+                    TRACE_3("Geting In Turret",_x,_role,_turretPath);
                 } else {
-                    ACE_player action ["GetIn" + _role, _target];
-                    TRACE_3("Geting In",_x,_role);
+                    if (_cargoIndex > -1) then {
+                        // GetInCargo expects the index of the seat in the "cargo" array from fullCrew
+                        // See description: https://community.bistudio.com/wiki/fullCrew
+                        private _cargoActionIndex = -1;
+                        {
+                            if ((_x select 2) == _cargoIndex) exitWith {_cargoActionIndex = _forEachIndex};
+                        } forEach (fullCrew [_target, "cargo", true]);
+                        
+                        ACE_player action ["GetInCargo", _target, _cargoActionIndex];
+                        TRACE_4("Geting In Cargo",_x,_role,_cargoActionIndex,_cargoIndex);
+                    } else {
+                        ACE_player action ["GetIn" + _role, _target];
+                        TRACE_2("Geting In",_x,_role);
+                    };
                 };
 
                 _hasAction = true;

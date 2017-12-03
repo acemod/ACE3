@@ -15,17 +15,15 @@
  */
 #include "script_component.hpp"
 
-private ["_var", "_unit", "_outputText", "_text"];
-
 #define MIN_ARRAY_SIZE 50
 
-_outputText = {
+private _outputText = {
     diag_log text (_this select 0);
     "ace_clipboard" callExtension ((_this select 0) + "
 ");
 };
 
-_text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
+private _text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
 time = %1
 
 ------Performance------
@@ -82,9 +80,9 @@ _text = format ["
 } forEach (allVariables missionNamespace);
 
 {
-    _unit = _x;
+    private _unit = _x;
     {
-        _var = _unit getVariable [_x, nil];
+        private _var = _unit getVariable [_x, nil];
         if(!isnil "_var" && {_var isEqualType []} && {(count _var) > MIN_ARRAY_SIZE}) then {
             _text = format ["%1 on [%2] - ARRAY SIZE: %3", _x, _unit, (count _var)];
             [_text] call _outputText;

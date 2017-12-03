@@ -19,23 +19,16 @@
  */
 #include "script_component.hpp"
 
-private ["_rangeToHit", "_heightToHit", "_muzzleVelocity", "_airFriction", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts"];
-
 #define MAX_ATTEMPTS 22
+params ["_rangeToHit", "_heightToHit", "_muzzleVelocity", "_airFriction","_timeStep"];
 
-_rangeToHit = _this select 0;
-_heightToHit = _this select 1;
-_muzzleVelocity = _this select 2;
-_airFriction = _this select 3;
-_timeStep = _this select 4;
+private _maxElev = 90;
+private _minElev = 45; //todo - Low Angle Howitzers???
 
-_maxElev = 90;
-_minElev = 45; //todo - Low Angle Howitzers???
-
-_error = 10000;
-_solutionElevation = -1;
-_lastTestResult = [];
-_numberOfAttempts = 0;
+private _error = 10000;
+private _solutionElevation = -1;
+private _lastTestResult = [];
+private _numberOfAttempts = 0;
 
 //(binary search)
 while {(_numberOfAttempts < MAX_ATTEMPTS) && {(abs _error) > 0.2}} do {

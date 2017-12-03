@@ -18,10 +18,8 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private ["_result", "_magazines"];
-
-_result = false;
-_magazines = magazines _unit;
+private _result = false;
+private _magazines = magazines _unit;
 {
     if (getNumber (ConfigFile >> "CfgMagazines" >> _x >> QGVAR(Placeable)) == 1) exitWith {
         _result = true;

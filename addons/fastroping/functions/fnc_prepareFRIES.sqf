@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 params ["_vehicle"];
 
-//Stage indicator: 0 - travel mode; 1 - preparing FRIES; 2 - FRIES ready; 3 - ropes deployed
+//Stage indicator: 0 - travel mode; 1 - preparing/stowing FRIES; 2 - FRIES ready; 3 - ropes deployed
 _vehicle setVariable [QGVAR(deploymentStage), 1, true];
 
 private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;

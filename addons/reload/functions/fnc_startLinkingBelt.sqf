@@ -43,7 +43,7 @@ private _onFinish = {
 };
 
 private _onFailure = {
-    EXPLODE_3_PVT((_this select 0),_player,_target,_magazine);
+    (_this select 0) params ["_player", "_target", "_magazine"];
     [_player, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
 
     // Add back the magazine with the former ammo count

@@ -4,10 +4,10 @@
  * Makes a unit drop items
  *
  * Arguments:
- * 0: caller (player) <OBJECT>
- * 1: target <OBJECT>
- * 2: classnamess <ARRAY>
- * 3: Do Not Drop Ammo <BOOL><OPTIONAL>
+ * 0: Caller (player) <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Classnames <ARRAY>
+ * 3: Do Not Drop Ammo <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -21,12 +21,10 @@
 
 #define TIME_MAX_WAIT 5
 
-private ["_fncSumArray", "_return", "_holder", "_dropPos", "_targetMagazinesStart", "_holderMagazinesStart", "_xClassname", "_xAmmo", "_targetMagazinesEnd", "_holderMagazinesEnd", "_holderItemsStart", "_targetItemsStart", "_addToCrateClassnames", "_addToCrateCount", "_index", "_holderItemsEnd", "_targetItemsEnd", "_holderIsEmpty"];
-
 params ["_caller", "_target", "_listOfItemsToRemove", ["_doNotDropAmmo", false, [false]]]; //By default units drop all weapon mags when dropping a weapon
 
-_fncSumArray = {
-    _return = 0;
+private _fncSumArray = {
+    private _return = 0;
     {_return = _return + _x;} count (_this select 0);
     _return
 };
@@ -39,7 +37,7 @@ if (_doNotDropAmmo && {({_x in _listOfItemsToRemove} count (magazines _target)) 
     [_caller, _target, "Debug: Trying to drop magazine with _doNotDropAmmo flag"] call FUNC(eventTargetFinish);
 };
 
-_holder = objNull;
+private _holder = objNull;
 
 //If not dropping ammo, don't use an existing container
 if (!_doNotDropAmmo) then {
@@ -52,7 +50,7 @@ if (!_doNotDropAmmo) then {
 
 //Create a new weapon holder
 if (isNull _holder) then {
-    _dropPos = _target modelToWorld [0.4, 0.75, 0]; //offset someone unconscious isn't lying over it
+    private _dropPos = _target modelToWorld [0.4, 0.75, 0]; //offset someone unconscious isn't lying over it
     _dropPos set [2, ((getPosASL _target) select 2)];
     _holder = createVehicle [DISARM_CONTAINER, _dropPos, [], 0, "CAN_COLLIDE"];
     _holder setPosASL _dropPos;
@@ -73,19 +71,19 @@ _holder setVariable [QGVAR(holderInUse), true];
 
 
 //Remove Magazines
-_targetMagazinesStart = magazinesAmmo _target;
-_holderMagazinesStart = magazinesAmmoCargo _holder;
+private _targetMagazinesStart = magazinesAmmo _target;
+private _holderMagazinesStart = magazinesAmmoCargo _holder;
 
 {
-    EXPLODE_2_PVT(_x,_xClassname,_xAmmo);
+    _x params ["_xClassname", "_xAmmo"];
     if ((_xClassname in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> _xClassname >> "ACE_isUnique")) == 0}) then {
         _holder addMagazineAmmoCargo [_xClassname, 1, _xAmmo];
         _target removeMagazine _xClassname;
     };
 } forEach _targetMagazinesStart;
 
-_targetMagazinesEnd = magazinesAmmo _target;
-_holderMagazinesEnd = magazinesAmmoCargo _holder;
+private _targetMagazinesEnd = magazinesAmmo _target;
+private _holderMagazinesEnd = magazinesAmmoCargo _holder;
 
 //Verify Mags dropped from unit:
 if (({((_x select 0) in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "ACE_isUnique")) == 0}} count _targetMagazinesEnd) != 0) exitWith {
@@ -100,14 +98,14 @@ if (!([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holde
 };
 
 //Remove Items, Assigned Items and NVG
-_holderItemsStart = getitemCargo _holder;
-_targetItemsStart = (assignedItems _target) + (items _target) - (weapons _target);
+private _holderItemsStart = getitemCargo _holder;
+private _targetItemsStart = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsStart pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsStart pushBack (goggles _target);};
 
 
-_addToCrateClassnames = [];
-_addToCrateCount = [];
+private _addToCrateClassnames = [];
+private _addToCrateCount = [];
 {
     if (_x in _listOfItemsToRemove) then {
         if (_x in (items _target)) then {
@@ -115,7 +113,7 @@ _addToCrateCount = [];
         } else {
             _target unlinkItem _x;
         };
-        _index = _addToCrateClassnames find _x;
+        private _index = _addToCrateClassnames find _x;
         if (_index != -1) then {
             _addToCrateCount set [_index, ((_addToCrateCount select _index) + 1)];
         } else {
@@ -130,8 +128,8 @@ _addToCrateCount = [];
     _holder addItemCargoGlobal [(_addToCrateClassnames select _forEachIndex), (_addToCrateCount select _forEachIndex)];
 } forEach _addToCrateClassnames;
 
-_holderItemsEnd = getitemCargo _holder;
-_targetItemsEnd = (assignedItems _target) + (items _target) - (weapons _target);
+private _holderItemsEnd = getitemCargo _holder;
+private _targetItemsEnd = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsEnd pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsEnd pushBack (goggles _target);};
 
@@ -158,7 +156,7 @@ if (((vest _target) != "") && {(vest _target) in _listOfItemsToRemove} && {(vest
 
 //If holder is still empty, it will be 'garbage collected' while we wait for the drop 'action' to take place
 //So add a dummy item and just remove at the end
-_holderIsEmpty = ([_holder] call FUNC(getAllGearContainer)) isEqualTo [[],[]];
+private _holderIsEmpty = ([_holder] call FUNC(getAllGearContainer)) isEqualTo [[],[]];
 if (_holderIsEmpty) then {
     TRACE_1("Debug: adding dummy item to holder",_holder);
     _holder addItemCargoGlobal [DUMMY_ITEM, 1];
@@ -166,16 +164,14 @@ if (_holderIsEmpty) then {
 
 //Start the PFEH to do the actions (which could take >1 frame)
 [{
-    private ["_needToRemoveWeapon", "_needToRemoveMagazines", "_needToRemoveBackpack", "_needToRemoveVest", "_needToRemoveUniform", "_error", "_magsToPickup", "_index", "_magazinesInHolder"];
+    params ["_args", "_pfID"];
+    _args params ["_caller", "_target", "_listOfItemsToRemove", "_holder", "_holderIsEmpty", "_maxWaitTime", "_doNotDropAmmo", "_startingMagazines"];
 
-    PARAMS_2(_args,_pfID);
-    EXPLODE_8_PVT(_args,_caller,_target,_listOfItemsToRemove,_holder,_holderIsEmpty,_maxWaitTime,_doNotDropAmmo,_startingMagazines);
-
-    _needToRemoveWeapon = ({_x in _listOfItemsToRemove} count (weapons _target)) > 0;
-    _needToRemoveMagazines = ({_x in _listOfItemsToRemove} count (magazines _target)) > 0;
-    _needToRemoveBackpack = ((backPack _target) != "") && {(backPack _target) in _listOfItemsToRemove};
-    _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
-    _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
+    private _needToRemoveWeapon = ({_x in _listOfItemsToRemove} count (weapons _target)) > 0;
+    private _needToRemoveMagazines = ({_x in _listOfItemsToRemove} count (magazines _target)) > 0;
+    private _needToRemoveBackpack = ((backPack _target) != "") && {(backPack _target) in _listOfItemsToRemove};
+    private _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
+    private _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
 
     if ((CBA_missionTime < _maxWaitTime) && {[_target] call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
         //action drop weapons (keeps loaded magazine and attachements)
@@ -198,18 +194,18 @@ if (_holderIsEmpty) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
 
         if (_doNotDropAmmo) then {
-            _error = false;
+            private _error = false;
 
-            _magsToPickup = +_startingMagazines;
+            private _magsToPickup = +_startingMagazines;
             {
-                _index = _magsToPickup find _x;
+                private _index = _magsToPickup find _x;
                 if (_index == -1) exitWith {_error = true; ERROR("More mags than when we started?")};
                 _magsToPickup deleteAt _index;
             } forEach (magazinesAmmo _target);
 
-            _magazinesInHolder = magazinesAmmoCargo _holder;
+            private _magazinesInHolder = magazinesAmmoCargo _holder;
             {
-                _index = _magazinesInHolder find _x;
+                private _index = _magazinesInHolder find _x;
                 if (_index == -1) exitWith {_error = true; ERROR("Missing mag not in holder")};
                 _magazinesInHolder deleteAt _index;
             } forEach _magsToPickup;

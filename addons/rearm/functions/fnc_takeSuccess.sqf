@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params [["_args", [objNull, "", objNull], [[]], 3]];
+params ["_args"];
 _args params ["_unit", "_magazineClass", "_truck"];
 TRACE_3("takeSuccess",_unit,_magazineClass,_truck);
 

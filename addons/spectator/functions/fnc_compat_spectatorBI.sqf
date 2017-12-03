@@ -42,7 +42,10 @@ if (_respawn in [4,5]) then {
 
 // Switch to a virtual unit so draw3D continues to work
 private _grp = createGroup [sideLogic, true];
-private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,""];
+private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,"NONE"];
+
+// Prevent unit falling into water (compatibility for some addons)
+_virtual enableSimulation false;
 
 // Transfer assigned zeus if applicable
 private _zeus = getAssignedCuratorLogic player;

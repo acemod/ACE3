@@ -107,7 +107,6 @@ GVAR(effectTimeBlood) = CBA_missionTime;
 
 // MAIN EFFECTS LOOP
 [{
-    private ["_bleeding", "_blood"];
     // Zeus interface is open or player is dead; disable everything
     if (!(isNull curatorCamera) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
@@ -148,7 +147,7 @@ GVAR(effectTimeBlood) = CBA_missionTime;
         };
     };
 
-    _bleeding = [ACE_player] call FUNC(getBloodLoss);
+    private _bleeding = [ACE_player] call FUNC(getBloodLoss);
     // Bleeding Indicator
     if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < CBA_missionTime) then {
         GVAR(effectTimeBlood) = CBA_missionTime;
@@ -156,7 +155,7 @@ GVAR(effectTimeBlood) = CBA_missionTime;
     };
 
     // Blood Volume Effect
-    _blood = if (GVAR(level) < 2) then {
+    private _blood = if (GVAR(level) < 2) then {
         (ACE_player getVariable [QGVAR(bloodVolume), 100]) / 100;
     } else {
         (((ACE_player getVariable [QGVAR(bloodVolume), 100]) - 60) max 0) / 40;
@@ -177,14 +176,13 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 // HEARTRATE BASED EFFECTS
 [{
-    private ["_heartRate", "_interval", "_minTime", "_sound", "_strength", "_pain"];
-    _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
-    _pain = ACE_player getVariable [QGVAR(pain), 0];
+    private _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
+    private _pain = ACE_player getVariable [QGVAR(pain), 0];
     if (GVAR(level) == 1) then {
         _heartRate = 60 + 40 * _pain;
     };
     if (_heartRate <= 0) exitWith {};
-    _interval = 60 / (_heartRate min 40);
+    private _interval = 60 / (_heartRate min 40);
 
     if ((ACE_player getVariable ["ACE_isUnconscious", false])) then {
         if (GVAR(painEffectType) == 1) then {
@@ -198,7 +196,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
             // Pain effect, no pain effect in zeus camera
             if (isNull curatorCamera) then {
-                _strength = ((_pain - (ACE_player getVariable [QGVAR(painSuppress), 0])) max 0) min 1;
+                private _strength = ((_pain - (ACE_player getVariable [QGVAR(painSuppress), 0])) max 0) min 1;
                 _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
                 if (GVAR(painEffectType) == 1) then {
                     GVAR(effectPainCC) ppEffectEnable false;
@@ -250,12 +248,12 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
     };
 
     if (GVAR(level) >= 2 && {_heartRate > 0}) then {
-        _minTime = 60 / _heartRate;
+        private _minTime = 60 / _heartRate;
         if (CBA_missionTime - GVAR(lastHeartBeatSound) > _minTime) then {
             GVAR(lastHeartBeatSound) = CBA_missionTime;
             // Heart rate sound effect
             if (_heartRate < 60) then {
-                _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));
+                private _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));
                 playSound _sound;
             } else {
                 if (_heartRate > 150) then {

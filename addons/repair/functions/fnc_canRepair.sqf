@@ -21,14 +21,12 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
 
-private ["_config", "_engineerRequired", "_items", "_return", "_condition", "_vehicleStateCondition", "_settingName", "_settingItemsArray"];
-
-_config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
 
 // if(isEngineOn _target) exitWith {false}; // Ignore here so action shows, then exit and show warning when selected #3348
 
-_engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
+private _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     getNumber (_config >> "requiredEngineer");
 } else {
     // Check for required class
@@ -40,11 +38,11 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
 
 //Items can be an array of required items or a string to a ACE_Setting array
-_items = if (isArray (_config >> "items")) then {
+private _items = if (isArray (_config >> "items")) then {
     getArray (_config >> "items");
 } else {
-    _settingName = getText (_config >> "items");
-    _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
+    private _settingName = getText (_config >> "items");
+    private _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
     if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
         ERROR("bad setting"); ["BAD"]
     };
@@ -52,9 +50,9 @@ _items = if (isArray (_config >> "items")) then {
 };
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
-_return = true;
+private _return = true;
 if (getText (_config >> "condition") != "") then {
-    _condition = getText (_config >> "condition");
+    private _condition = getText (_config >> "condition");
     if (isNil _condition) then {
         _condition = compile _condition;
     } else {
@@ -69,7 +67,7 @@ if (getText (_config >> "condition") != "") then {
 
 if (!_return) exitWith {false};
 
-// _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
+// private _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
     // missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
 // } else {
     // getNumber(_config >> "vehicleStateCondition")

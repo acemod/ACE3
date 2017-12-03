@@ -18,7 +18,7 @@
 #define HEIGHT_OFFSET 1.5
 
 BEGIN_COUNTER(updateCursor);
-private _camTarget = GVAR(camFocus);
+private _camTarget = missionNamespace getVariable [QGVAR(camFocus), objNull];
 private _camTargetVeh = vehicle _camTarget;
 private _cursorObject = objNull;
 

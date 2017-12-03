@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_init"];
+TRACE_1("ui",_init);
 
 // No change
 if (_init isEqualTo !isNull SPEC_DISPLAY) exitWith {};
@@ -27,6 +28,15 @@ openMap [false,false];
 // Close any open dialogs
 while {dialog} do {
     closeDialog 0;
+};
+
+// Controls some PP effects, but a little unclear which
+BIS_fnc_feedback_allowPP = !_init;
+
+// Removes death blur if present
+if !(isNil "BIS_DeathBlur") then {
+    BIS_DeathBlur ppEffectAdjust [0];
+    BIS_DeathBlur ppEffectCommit 0;
 };
 
 // Note that init and destroy intentionally happen in reverse order

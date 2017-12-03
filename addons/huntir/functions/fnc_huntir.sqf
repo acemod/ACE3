@@ -46,9 +46,8 @@ createDialog QGVAR(cam_dialog_off);
                 closeDialog 0;
             };
 
-            private ["_elapsedTime", "_nearestHuntIRs"];
-            _elapsedTime = CBA_missionTime - GVAR(startTime);
-            _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
+            private _elapsedTime = CBA_missionTime - GVAR(startTime);
+            private _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
 
             if ((!dialog) || GVAR(done)) exitWith {
                 [_this select 1] call CBA_fnc_removePerFrameHandler;

@@ -1,12 +1,14 @@
 
 PREP(addActionToClass);
 PREP(addActionToObject);
+PREP(addActionToZeus);
 PREP(addMainAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(compileMenuZeus);
 PREP(collectActiveActionTree);
 PREP(createAction);
+PREP(createVehiclesActions);
 PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
 PREP(handleEscapeMenu);

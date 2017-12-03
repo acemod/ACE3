@@ -1,9 +1,7 @@
 #include "shared.hpp"
 
-#include <algorithm> 
 #include <functional> 
-#include <cctype>
-#include <locale>
+#include <sstream>
 
 int test(int var) {
     return var;
@@ -22,20 +20,5 @@ namespace ace {
         std::vector<std::string> elems;
         split(s, delim, elems);
         return elems;
-    }
-
-    void runtime_assert(bool result) {
-        assert(result);
-        if (!result) {
-            LOG(ERROR) << "ACE Assertion failed, execution cancelling";
-            throw exception(-1, "assertion failed");
-        }
-    }
-    void runtime_assert(bool result, const uint32_t code, const std::string & text) {
-        assert(result);
-        if (!result) {
-            LOG(ERROR) << "ACE Assertion failed, execution cancelling";
-            throw exception(code, text);
-        }
     }
 }
