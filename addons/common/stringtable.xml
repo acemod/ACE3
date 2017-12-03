@@ -623,6 +623,14 @@
             <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色。</Chinese>
             <Chinesesimp>设定ACE提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用ACE系统的预设颜色。</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_SettingPersistentLaserName">
+            <English>Persistent weapon laserpointer/flashlight</English>
+            <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
+            <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
+            <Russian>Включать ЛЦУ/тактический фонарь после смены оружия или входа/выхода из машины, если он был до этого включен.</Russian>
+        </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
             <German>Banane</German>
