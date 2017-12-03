@@ -39,7 +39,7 @@ if (_init) then {
 
     // Follow camera related
     GVAR(camDistance)           = 0;
-    GVAR(camDistanceTemp)       = 0;
+    GVAR(camDistanceTrue)       = 0;
     GVAR(camYaw)                = 0;
     GVAR(camPitch)              = 0;
 
@@ -133,7 +133,7 @@ if (_init) then {
     GVAR(camHasTarget)          = nil;
     GVAR(camTargetInVehicle)    = nil;
     GVAR(camDistance)           = nil;
-    GVAR(camDistanceTemp)       = nil;
+    GVAR(camDistanceTrue)       = nil;
     GVAR(camYaw)                = nil;
     GVAR(camPitch)              = nil;
     GVAR(camSlow)               = nil;
