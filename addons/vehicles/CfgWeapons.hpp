@@ -63,6 +63,11 @@ class CfgWeapons {
 
         muzzles[] = {"AP"};
     };
+    class autocannon_40mm_VTOL_01: autocannon_40mm_CTWS {
+        class AP: AP {
+            magazines[] = {"160Rnd_40mm_APFSDS_Tracer_Red_shells", "40Rnd_40mm_APFSDS_shells", "40Rnd_40mm_APFSDS_Tracer_Red_shells", "40Rnd_40mm_APFSDS_Tracer_Green_shells", "40Rnd_40mm_APFSDS_Tracer_Yellow_shells","240Rnd_40mm_GPR_Tracer_Red_shells", "60Rnd_40mm_GPR_shells", "60Rnd_40mm_GPR_Tracer_Red_shells", "60Rnd_40mm_GPR_Tracer_Green_shells", "60Rnd_40mm_GPR_Tracer_Yellow_shells"};
+        };
+    };
 
     // make static weapons compatible with 100rnd mag variants
     class HMG_static: HMG_01 {
