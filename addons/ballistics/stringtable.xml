@@ -1990,8 +1990,8 @@
             <Hungarian>.338 10-lövedékes tár (300gr Lapua Scenar)</Hungarian>
             <Japanese>.338 10発入り 弾倉 (300gr Lapua Scenar)</Japanese>
             <Korean>10발들이 .338 탄창 (300gr Lapua Scenar)</Korean>
-            <Chinese>.338 10發 彈匣 (300公克 Lapua Scenar 空尖艇尾比賽專用彈)</Chinese>
-            <Chinesesimp>.338 10发 弹匣 (300公克 Lapua Scenar 空尖艇尾比赛专用弹)</Chinesesimp>
+            <Chinese>.338 10發 彈匣 (300公克 Lapua Scenar)</Chinese>
+            <Chinesesimp>.338 10发 弹匣 (300公克 Lapua Scenar)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 Scenar</English>
@@ -2020,8 +2020,8 @@
             <Hungarian>Kaliber: 8,6x70mm (300gr Lapua Scenar)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;装填数: 10</Japanese>
             <Korean>구경: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 8.6x70mm (300公克 Lapua Scenar 空尖艇尾比賽專用彈)&lt;br /&gt;發數: 10</Chinese>
-            <Chinesesimp>口径: 8.6x70mm (300公克 Lapua Scenar 空尖艇尾比赛专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Chinese>口徑: 8.6x70mm (300公克 Lapua Scenar)&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: 8.6x70mm (300公克 Lapua Scenar)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
