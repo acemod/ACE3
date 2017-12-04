@@ -8,6 +8,7 @@ stages:
        - status/wontfix
      exclude:
        - status/marked for cleanup
+       - status/accepting-pr
      comment:
        - 'Hello @{author}! There has been no activity on this ticket for over a period of {days} days. I am automatically replying to let you know we will close this ticket within 1 week due to inactivity and consider this resolved.'
        - 'If you believe this is in error, please reply with the requested information.'
@@ -34,7 +35,7 @@ stages:
        remove_label:
          - status/marked for cleanup
   remind_about_old_ticket:
-    days: 160
+    days: 365
     labels:
       - kind/bug
       - kind/critical bug
@@ -46,6 +47,7 @@ stages:
       - status/marked for cleanup
       - status/inactive
       - status/stale
+      - status/accepting-pr
     comment:
       - 'Hello @acemod/maintainers. This ticket has been open for over {days} days without any activity.'
     action:

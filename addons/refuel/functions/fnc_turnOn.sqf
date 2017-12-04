@@ -18,18 +18,6 @@
 
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
-[
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
-    [_unit, _nozzle],
-    {
-        params ["_args"];
-        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
-        _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
-        _nozzle setVariable [QGVAR(isRefueling), true, true];
-        [LSTRING(Hint_Started), 1.5, _unit] call EFUNC(common,displayTextStructured);
-    },
-    "",
-    localize LSTRING(TurnOnAction),
-    {true},
-    ["isnotinside"]
-] call EFUNC(common,progressBar);
+_nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
+_nozzle setVariable [QGVAR(isRefueling), true, true];
+[LSTRING(Hint_Started), 1.5, _unit] call EFUNC(common,displayTextStructured);

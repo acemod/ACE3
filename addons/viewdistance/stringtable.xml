@@ -110,8 +110,8 @@
             <Italian>Limite per la distanza visiva del client impostato qui e può essere scavalcato dal modulo</Italian>
             <Japanese>クライアントへの視界距離の設定や、それをモジュールにより上書きできます</Japanese>
             <Korean>클라이언트의 시야를 이 모듈로 치환할 수 있습니다.</Korean>
-            <Chinesesimp>玩家的视距限制可在此设定, 也可透过模块改写</Chinesesimp>
-            <Chinese>玩家的視距限制可在此設定, 也可透過模塊改寫</Chinese>
+            <Chinesesimp>玩家的视距限制可在此设定，也可透过模块改写</Chinesesimp>
+            <Chinese>玩家的視距限制可在此設定，也可透過模塊改寫</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
@@ -238,8 +238,8 @@
             <Italian>Imposta la distanza visiva degli oggetti come un coefficiente basato sulla distanza visiva oppure basato sul campo visivo.</Italian>
             <Japanese>視野角を元にするか、視界距離によるオブジェクト描画距離を決定します。視野角を元にするオプションを有効化した場合、視野角により最低と最高値が変動します。</Japanese>
             <Korean>설정된 시야 혹은 시계(FoV)에 계수를 적용해 물체 시야를 적용합니다. 시계를 바탕으로 하는 옵션을 활성화할 경우 시계에 의한 최저와 최고치가 변동됩니다.</Korean>
-            <Chinesesimp>设定物件可被观察的距离, 透过视野距离或是视野角度来决定</Chinesesimp>
-            <Chinese>設定物件可被觀察的距離, 透過視野距離或是視野角度來決定</Chinese>
+            <Chinesesimp>设定物件可被观察的距离，透过视野距离或是视野角度来决定。</Chinesesimp>
+            <Chinese>設定物件可被觀察的距離，透過視野距離或是視野角度來決定。</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_off">
             <English>Off</English>

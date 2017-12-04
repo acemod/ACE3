@@ -13,28 +13,22 @@
  *
  * Public: No
  */
-
-
 #include "script_component.hpp"
-
-private ["_number", "_isNegative"];
-
-_number = _this select 0;
+params ["_number"];
 
 _number = round _number;
-_isNegative = _number < 0;
+private _isNegative = _number < 0;
 _number = abs _number;
 
 if (_number >= 10000) exitWith {
     [QPATHTOF(rsc\vector_minus.paa), QPATHTOF(rsc\vector_minus.paa), QPATHTOF(rsc\vector_minus.paa), QPATHTOF(rsc\vector_minus.paa)]    // return
 };
 
-private ["_digit1", "_digit2", "_digit3", "_digit4"];
 
-_digit1 = floor (_number / 1000);
-_digit2 = floor (_number / 100) - _digit1 * 10;
-_digit3 = floor (_number / 10) - _digit1 * 100 - _digit2 * 10;
-_digit4 = _number mod 10;
+private _digit1 = floor (_number / 1000);
+private _digit2 = floor (_number / 100) - _digit1 * 10;
+private _digit3 = floor (_number / 10) - _digit1 * 100 - _digit2 * 10;
+private _digit4 = _number mod 10;
 
 if (_isNegative) then {
 

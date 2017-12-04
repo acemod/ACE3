@@ -18,8 +18,6 @@
 #include "script_component.hpp"
 
 params ["_static","_unit",["_magazineClassOptional","",[""]]];
-private ["_weapon","_currentMagazine","_count","_magazines","_magazineDetails","_listOfMagNames",
-    "_magazineClass","_magazineClassDetails","_parsed","_roundsLeft"];
 
 //If function has been called with an optional classname hten add that magazine to the static weapon. Otherwise add the compatible magazine
 if(_magazineClassOptional != "") then {
@@ -27,20 +25,19 @@ if(_magazineClassOptional != "") then {
     [QGVAR(addMagazine), [_static, _magazineClassOptional]] call CBA_fnc_globalEvent;
 } else {
     //Get weapon & magazine information of static weapon
-    _weapon = (_static weaponsTurret [0]) select 0;
-    _currentMagazine = (magazinesAllTurrets _static) select 1;
-    _currentMagazineClass = _currentMagazine select 0;
-    _count = _currentMagazine select 2;
+    private _weapon = (_static weaponsTurret [0]) select 0;
+    private _currentMagazine = (magazinesAllTurrets _static) select 1;
+    private _currentMagazineClass = _currentMagazine select 0;
+    private _count = _currentMagazine select 2;
 
     //Check all of the players magazines to see if they are compatible with the static weapon. First magazine that is compatible is chosen
     //VKing: This section ought to be double checked.
-    _magazines = magazines _unit;
-    _magazineDetails = magazinesDetail _unit;
-    _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
-    _magazineClass = "";
-    _magazineClassDetails = "";
-    _parsed  ="";
-    _roundsLeft = 0;
+    private _magazines = magazines _unit;
+    private _magazineDetails = magazinesDetail _unit;
+    private _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
+    private _magazineClass = "";
+    private _magazineClassDetails = "";
+    private _roundsLeft = 0;
     {
         if (_x in _listOfMagNames) exitWith {
             _magazineClass = _x;
@@ -53,7 +50,7 @@ if(_magazineClassOptional != "") then {
     };
     //Find out the ammo count of the compatible magazine found
     if (_magazineClassDetails != "") then{
-        _parsed = _magazineClassDetails splitString "([]/: )";
+        private _parsed = _magazineClassDetails splitString "([]/: )";
         _parsed params ["_type", "", "", "_roundsLeftText", "_maxRoundsText"];
         _roundsLeft = parseNumber _roundsLeftText;
         _magType = _type;

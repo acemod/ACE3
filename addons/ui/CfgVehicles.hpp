@@ -5,7 +5,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleName);
         function = QFUNC(moduleInit);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_UI_ca.paa));
         class Arguments {

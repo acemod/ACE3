@@ -41,6 +41,7 @@ tpM | ACSE Dev Lead - Sounds, SME
 
 * [BIG]Bull
 * 11RDP-LoupVert
+* 654wak654
 * ACCtomeek
 * adam3adam
 * Adanteh
@@ -49,9 +50,12 @@ tpM | ACSE Dev Lead - Sounds, SME
 * alef
 * Aleksey EpMAK Yermakov
 * Alganthe
+* Andrea "AtixNeon" Verano
 * Anthariel
+* Anton
 * Arkhir
 * Asgar Serran
+* BaerMitUmlaut
 * Bamse
 * Bla1337
 * BlackPixxel
@@ -60,6 +64,8 @@ tpM | ACSE Dev Lead - Sounds, SME
 * Brisse
 * Brostrom.A (Evul)
 * BullHorn
+* chris579
+* classicarma
 * Clon1998
 * Codingboy
 * Coren
@@ -70,6 +76,7 @@ tpM | ACSE Dev Lead - Sounds, SME
 * Drill
 * Dudakov aka [OMCB]Kaban
 * Dslyecxi
+* ElTyranos
 * eRazeri
 * evromalarkey
 * F3 Project
@@ -93,12 +100,16 @@ tpM | ACSE Dev Lead - Sounds, SME
 * havena
 * Hawkins
 * Head
+* Hybrid V
 * Karneck
 * Kavinsky
+* Keithen
 * Kllrt
 * legman
 * Legolasindar "Viper"
 * licht-im-Norden87
+* looter
+* Luigi "Luigium" Myrini
 * Macusercom
 * MarcBook
 * meat
@@ -120,15 +131,19 @@ tpM | ACSE Dev Lead - Sounds, SME
 * Robert Boklahánics
 * ruPaladin
 * simon84
+* Skengman2
 * Sniperwolf572
 * System98
 * SzwedzikPL
 * Tachi
+* Tessa Elieff
 * Toaster
 * Tonic
 * Tourorist
+* Tuupertunut
 * Valentin Torikian
 * voiper
 * VyMajoris(W-Cephei)
 * Winter
+* xrufix
 * zGuba

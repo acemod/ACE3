@@ -10,7 +10,7 @@
  * Able to fast ropes <BOOL>
  *
  * Example:
- * [_player, _vehicle] call ace_fastroping_fnc_canDeployRopes
+ * [_player, _vehicle] call ace_fastroping_fnc_canFastRope
  *
  * Public: No
  */

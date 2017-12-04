@@ -15,17 +15,15 @@
  */
 #include "script_component.hpp"
 
-private ["_vehConfigSide","_vehSide","_returnValue"];
-
 params ["_veh"];
 TRACE_1("params",_veh);
 
 if (isNull _veh) exitWith {ERROR("null vehicle"); "error"};
 
-_vehConfigSide = [_veh, true] call BIS_fnc_objectSide;
-_vehSide = _veh getVariable [QGVAR(lockSide), _vehConfigSide];
+private _vehConfigSide = [_veh, true] call BIS_fnc_objectSide;
+private _vehSide = _veh getVariable [QGVAR(lockSide), _vehConfigSide];
 
-_returnValue = "";
+private _returnValue = "";
 
 switch (_vehSide) do {
 case (west):       {_returnValue = "ACE_key_west"};

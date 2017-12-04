@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 1: Vehicle <OBJECT>
  * 2: Nozzle <OBJECT>
  * 3: Connection Point <ARRAY>
  *
@@ -19,9 +19,9 @@
 
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
+params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _target;
+private _config = configFile >> "CfgVehicles" >> typeOf _sink;
 
 private _rate =  getNumber (_config >> QGVAR(flowRate)) * GVAR(rate);
 private _maxFuel = getNumber (_config >> QGVAR(fuelCapacity));
@@ -43,8 +43,9 @@ if (_maxFuel == 0) then {
     if (!alive _source || {!alive _sink}) exitWith {
         [objNull, _nozzle] call FUNC(dropNozzle);
         _nozzle setVariable [QGVAR(isConnected), false, true];
-        _nozzle setVariable [QGVAR(sink), objNull, true];
-        _sink setVariable [QGVAR(nozzle), objNull, true];
+        if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), true, true]; };
+        _nozzle setVariable [QGVAR(sink), nil, true];
+        _sink setVariable [QGVAR(nozzle), nil, true];
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
     private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
@@ -54,18 +55,15 @@ if (_maxFuel == 0) then {
 
         [objNull, _nozzle] call FUNC(dropNozzle);
         _nozzle setVariable [QGVAR(isConnected), false, true];
-        _nozzle setVariable [QGVAR(sink), objNull, true];
-        _sink setVariable [QGVAR(nozzle), objNull, true];
+        if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), true, true]; };
+        _nozzle setVariable [QGVAR(sink), nil, true];
+        _sink setVariable [QGVAR(nozzle), nil, true];
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
     private _finished = false;
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
-        if (isEngineOn _sink) exitWith {
-            _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
-            _nozzle setVariable [QGVAR(isRefueling), false, true];
-        };
         private _fuelInSource = [_source] call FUNC(getFuel);
         if (_fuelInSource == 0) exitWith {
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
@@ -108,11 +106,11 @@ if (_maxFuel == 0) then {
     };
 }, 1, [
     _nozzle getVariable QGVAR(source),
-    _target,
+    _sink,
     _unit,
     _nozzle,
     _rate,
-    fuel _target,
+    fuel _sink,
     _maxFuel,
     _nozzle getVariable [QGVAR(attachPos), [0,0,0]],
     _connectToPoint

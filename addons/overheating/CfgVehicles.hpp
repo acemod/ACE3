@@ -7,15 +7,16 @@ class CfgVehicles {
                 class GVAR(UnJam) {
                     displayName = CSTRING(UnjamWeapon);
                     condition = QUOTE( GVAR(enabled) && {[_player] call FUNC(canUnjam)} );
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
                     showDisabled = 0;
                     priority = 4;
-                    icon = QPATHTOF(UI\unjam_ca.paa);
+                    icon = QPATHTOEF(common,UI\repack_ca.paa);
                 };
                 class GVAR(SwapBarrel) {
                     displayName = CSTRING(SwapBarrel);
                     condition = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(canSwapBarrel) );
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(swapBarrel); );
                     showDisabled = 0;
                     priority = 3;
@@ -24,7 +25,7 @@ class CfgVehicles {
                 class GVAR(CheckTemperature) {
                     displayName = CSTRING(CheckTemperatureShort);
                     condition = QUOTE( GVAR(enabled) && {switch (currentWeapon _player) do {case (''): {false}; case (primaryWeapon _player); case (handgunWeapon _player): {true}; default {false}}} );
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(checkTemperature); );
                     showDisabled = 0;
                     priority = 2.9;
@@ -33,7 +34,7 @@ class CfgVehicles {
                 class GVAR(CheckTemperatureSpareBarrels) {
                     displayName = CSTRING(CheckTemperatureSpareBarrelsShort);
                     condition = QUOTE((_player) call FUNC(canCheckSpareBarrelsTemperatures) );
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(checkSpareBarrelsTemperatures); );
                     showDisabled = 0;
                     priority = 2.8;
@@ -48,12 +49,13 @@ class CfgVehicles {
                     displayName = CSTRING(SwapBarrel);
                     condition = QUOTE( [ARR_2(_player, currentWeapon _target)] call FUNC(canSwapBarrel) );
                     statement = QUOTE([ARR_3(_player, _target, currentWeapon _target)] call FUNC(swapBarrelAssistant););
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
                 };
                 class GVAR(CheckTemperature) {
                     displayName = CSTRING(CheckTemperatureShort);
-                    condition = QUOTE( GVAR(enabled) && {switch (currentWeapon _target) do {case (''): {false}; case (primaryWeapon _target); case (handgunWeapon _target): {true}; default {false}}} );
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    condition = QUOTE( GVAR(enabled) && {switch (currentWeapon _target) do {case ('ACE_FakePrimaryWeapon'); case (''): {false}; case (primaryWeapon _target); case (handgunWeapon _target): {true}; default {false}}} );
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_3(_player, _target, currentWeapon _target)] call FUNC(checkTemperature); );
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 };

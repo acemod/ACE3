@@ -19,7 +19,8 @@
 private _bb = boundingBoxReal _target;
 (_bb select 0) params ["_bbX", "_bbY", "_bbZ"];
 
-private _relPos = _target worldToModelVisual ASLToAGL EGVAR(interact_menu,cameraPosASL);
+private _cameraPosASL = EGVAR(interact_menu,cameraPosASL);
+private _relPos = _target worldToModelVisual ASLToAGL _cameraPosASL;
 #ifdef DEBUG_MODE_FULL
     _relPos = _target worldToModelVisual ASLToAGL eyePos ACE_player;
 #endif
@@ -29,7 +30,7 @@ private _ndx = (abs _dx) / ((abs (_bbx)) - 1);
 private _ndy = (abs _dy) / ((abs (_bbY)) - 1);
 private _ndz = (abs _dz) / ((abs (_bbZ)) - 1);
 
-private "_pos";
+private _pos = [];
 if (_ndx > _ndy) then {
     if (_ndx > _ndz) then {
         // _ndx is greater, will colide with x plane first
@@ -47,9 +48,14 @@ if (_ndx > _ndy) then {
         _pos = _relPos vectorMultiply ((1 / _ndz) min 0.8);
     };
 };
-//Set max height at player's eye level (prevent very high interactin point on choppers)
-_pos set [2, (_pos select 2) min _dz];
-TRACE_4("",_bb,_bbX,_relPos, _pos);
+
+// Set max height at player's eye level (prevent very high interaction point on choppers)
+// Only when above water level to prevent underwater actions from following player eye level
+if (_cameraPosASL select 2 >= 0) then {
+    _pos set [2, (_pos select 2) min _dz];
+};
+
+TRACE_4("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
 _pos
 
 ///////////////////
