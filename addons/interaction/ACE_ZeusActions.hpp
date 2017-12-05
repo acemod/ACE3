@@ -52,7 +52,7 @@ class ACE_ZeusActions {
             class safe {
                 displayName = "$STR_Combat_Safe";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('CARELESS',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('SAFE',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
             };
             class aware {
                 displayName = "$STR_Combat_Aware";
