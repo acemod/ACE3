@@ -243,3 +243,6 @@ PREP(addMapMarkerCreatedEventHandler);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
+
+// ui
+PREP(createCompassControl);
