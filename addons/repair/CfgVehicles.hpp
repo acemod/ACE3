@@ -10,7 +10,7 @@
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
-                exceptions[] = {"isNotOnLadder"}; \
+                exceptions[] = {"isNotSwimming", "isNotOnLadder"}; \
             }; \
         }; \
     };
@@ -20,7 +20,7 @@ class CBA_Extended_EventHandlers_base;
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRepairSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(moduleName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -118,7 +118,7 @@ class CfgVehicles {
 
     class Module_F;
     class ACE_moduleAssignEngineerRoles: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -162,7 +162,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleAssignRepairVehicle: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";

@@ -42,7 +42,7 @@ private _distance = -1;
     private _objectType = typeOf _x;
 
     _isDetectable = GVAR(detectableClasses) getVariable _objectType;
-    if (isNil "_isDetectable") then {
+    if (isNil "_isDetectable" || {(getModelInfo _x) select 0 == "empty.p3d"}) then {
         _isDetectable = false;
     };
 

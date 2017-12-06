@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_yardage450_fnc_acquireTarget
+ * call ace_yardage450_fnc_turnOn
  *
  * Public: No
  */

@@ -40,6 +40,7 @@ private _absLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "max
 private _loadCoef = _unit getVariable QGVAR(loadCoef);
 
 if (isNil "_loadCoef") then {
+    INFO("Note: getUnitTrait / loadCoef enum error can be ignored [present in ARMA 1.78 RC]");
     _loadCoef = _unit getUnitTrait "loadCoef";
     _unit setVariable [QGVAR(loadCoef), _loadCoef, true];
 };

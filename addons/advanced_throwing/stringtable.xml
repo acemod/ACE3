@@ -148,7 +148,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
             <Russian>Подготовить/заменить гранату</Russian>
-            <Japanese>機能の起動/変更</Japanese>
+            <Japanese>投てき物の準備/変更</Japanese>
             <Polish>Przygotuj/zmień ob. miotany</Polish>
             <German>Wurfobjekt vorbereiten/wechseln</German>
             <Korean>투척물 준비/변경</Korean>
@@ -172,7 +172,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
             <English>Throwable Drop Mode (Toggle)</English>
             <Russian>Режим броска гранаты (переключить)</Russian>
-            <Japanese>投てきモード (トグル)</Japanese>
+            <Japanese>投てきモード (切り替え)</Japanese>
             <Polish>Tryb upuszczania ob. miotanego (przełącz)</Polish>
             <German>Wurfobjekt Fallmodus (umschalten)</German>
             <Korean>투척물 떨어뜨리기 모드(토글)</Korean>

@@ -26,7 +26,7 @@ params ["_listBoxCtrl", "_itemsCountArray"];
     private _count = (_itemsCountArray select 1) select _forEachIndex;
 
     if ((_classname != DUMMY_ITEM) && {_classname != "ACE_FakePrimaryWeapon"}) then { //Don't show the dummy potato or fake weapon
-        private "_configPath";
+        private _configPath = configNull;
         private _displayName = "";
         private _picture = "";
         switch (true) do {

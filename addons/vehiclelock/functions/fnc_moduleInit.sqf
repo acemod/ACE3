@@ -17,8 +17,6 @@
  */
 #include "script_component.hpp"
 
-if (!isServer) exitWith {};
-
 params ["_logic", "_syncedUnits", "_activated"];
 TRACE_3("params",_logic,_syncedUnits,_activated);
 

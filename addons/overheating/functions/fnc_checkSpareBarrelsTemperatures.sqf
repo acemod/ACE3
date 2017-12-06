@@ -18,9 +18,6 @@
 
 params ["_player"];
 
-// Check canInteractWith:
-if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
-
 // Make the unit go kneeling
 [_player] call EFUNC(common,goKneeling);
 
@@ -37,5 +34,5 @@ if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canI
     {},
     (localize LSTRING(CheckingSpareBarrelsTemperatures)),
     {true},
-    ["isNotInside", "isNotSitting"]
+    ["isNotInside", "isNotSitting", "isNotSwimming"]
 ] call EFUNC(common,progressBar);

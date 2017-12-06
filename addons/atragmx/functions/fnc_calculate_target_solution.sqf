@@ -17,21 +17,19 @@
 
 [] call FUNC(parse_input);
 
-private ["_scopeBaseAngle"];
-_scopeBaseAngle = (GVAR(workingMemory) select 3);
+private _scopeBaseAngle = (GVAR(workingMemory) select 3);
 
-private ["_bulletMass", "_bulletDiameter", "_boreHeight", "_airFriction", "_barrelTwist", "_muzzleVelocity", "_bc", "_dragModel", "_atmosphereModel", "_twistDirection"];
-_bulletMass = GVAR(workingMemory) select 12;
-_bulletDiameter = GVAR(workingMemory) select 13;
-_boreHeight = GVAR(workingMemory) select 5;
-_airFriction = GVAR(workingMemory) select 4;
-_barrelTwist = GVAR(workingMemory) select 14;
-_muzzleVelocity = GVAR(workingMemory) select 1;
-_bc = GVAR(workingMemory) select 15;
-_dragModel = GVAR(workingMemory) select 16;
-_atmosphereModel = GVAR(workingMemory) select 17;
+private _bulletMass = GVAR(workingMemory) select 12;
+private _bulletDiameter = GVAR(workingMemory) select 13;
+private _boreHeight = GVAR(workingMemory) select 5;
+private _airFriction = GVAR(workingMemory) select 4;
+private _barrelTwist = GVAR(workingMemory) select 14;
+private _muzzleVelocity = GVAR(workingMemory) select 1;
+private _bc = GVAR(workingMemory) select 15;
+private _dragModel = GVAR(workingMemory) select 16;
+private _atmosphereModel = GVAR(workingMemory) select 17;
 
-_twistDirection = 0;
+private _twistDirection = 0;
 if (_barrelTwist > 0) then {
     _twistDirection = 1;
 } else {
@@ -41,34 +39,31 @@ if (_barrelTwist > 0) then {
 };
 _barrelTwist = abs(_barrelTwist);
 
-private ["_altitude", "_temperature", "_barometricPressure", "_relativeHumidity"];
-_altitude = GVAR(altitude);
-_temperature = GVAR(temperature);
-_barometricPressure = GVAR(barometricPressure);
-_relativeHumidity = GVAR(relativeHumidity);
+private _altitude = GVAR(altitude);
+private _temperature = GVAR(temperature);
+private _barometricPressure = GVAR(barometricPressure);
+private _relativeHumidity = GVAR(relativeHumidity);
 if (!GVAR(atmosphereModeTBH)) then {
     _barometricPressure = 1013.25 * (1 - (0.0065 * _altitude) / (273.15 + _temperature + 0.0065 * _altitude)) ^ 5.255754495;
-    _relativeHumidity = 50;
+    _relativeHumidity = 0.5;
 };
 
-private ["_bulletLength", "_stabilityFactor"];
-_bulletLength = 50 * _bulletMass / ((_bulletDiameter/2)^2);
-_stabilityFactor = 1.5;
+private _bulletLength = 50 * _bulletMass / ((_bulletDiameter/2)^2);
+private _stabilityFactor = 1.5;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     if (_bulletDiameter > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
         _stabilityFactor = [_bulletDiameter, _bulletLength, _bulletMass, _barrelTwist * 10, _muzzleVelocity, _temperature, _barometricPressure] call EFUNC(advanced_ballistics,calculateStabilityFactor);
     };
 };
 
-private ["_latitude", "_directionOfFire", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange"];
-_latitude = GVAR(latitude) select GVAR(currentTarget);
-_directionOfFire = GVAR(directionOfFire) select GVAR(currentTarget);
-_windSpeed1 = GVAR(windSpeed1) select GVAR(currentTarget);
-_windSpeed2 = GVAR(windSpeed2) select GVAR(currentTarget);
-_windDirection = GVAR(windDirection) select GVAR(currentTarget);
-_inclinationAngle = GVAR(inclinationAngle) select GVAR(currentTarget);
-_targetSpeed = GVAR(targetSpeed) select GVAR(currentTarget);
-_targetRange = GVAR(targetRange) select GVAR(currentTarget);
+private _latitude = GVAR(latitude) select GVAR(currentTarget);
+private _directionOfFire = GVAR(directionOfFire) select GVAR(currentTarget);
+private _windSpeed1 = GVAR(windSpeed1) select GVAR(currentTarget);
+private _windSpeed2 = GVAR(windSpeed2) select GVAR(currentTarget);
+private _windDirection = GVAR(windDirection) select GVAR(currentTarget);
+private _inclinationAngle = GVAR(inclinationAngle) select GVAR(currentTarget);
+private _targetSpeed = GVAR(targetSpeed) select GVAR(currentTarget);
+private _targetRange = GVAR(targetRange) select GVAR(currentTarget);
 
 GVAR(targetSolutionInput) = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, round(_muzzleVelocity),
             [_windSpeed1, _windSpeed2], _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, false, _stabilityFactor, _twistDirection, _latitude, _directionOfFire];

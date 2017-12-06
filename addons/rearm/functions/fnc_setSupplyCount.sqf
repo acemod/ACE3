@@ -23,6 +23,6 @@ if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the s
 params [["_truck", objNull, [objNull]], ["_supply", 0, [0]]];
 
 if (GVAR(supply) != 1) exitWith {WARNING("supply setting is not set to limited");};
-if (isNull _truck) exitWith {WARNING_1("Truck is null [%1]", _truck);};
+if (isNull _truck) exitWith {WARNING_1("Truck is null [%1]",_truck);};
 
 _truck setVariable [QGVAR(currentSupply), (_supply max 0), true];

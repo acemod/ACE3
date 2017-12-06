@@ -54,6 +54,7 @@ _target forceSpeed 0;
 
 private _needsBandaging = ([_target] call EFUNC(medical,getBloodLoss)) > 0;
 private _needsMorphine  = (_target getVariable [QEGVAR(medical,pain), 0]) > 0.2;
+private _needsEpinephrine = _target getVariable ["ACE_isUnconscious", false];
 
 switch (true) do {
     case _needsBandaging: {
@@ -66,7 +67,7 @@ switch (true) do {
             };
         } forEach _openWounds;
         private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
-        [_target, "Bandage", _selection] call EFUNC(medical,treatmentAdvanced_bandageLocal);
+        [_this, _target, _selection, "Bandage"] call EFUNC(medical,treatmentAdvanced_bandage);
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is bandaging selection %2 on %3", _this, _selection, _target];
@@ -77,12 +78,21 @@ switch (true) do {
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 5];
     };
     case _needsMorphine: {
-        [_target] call EFUNC(medical,treatmentBasic_morphineLocal);
+        [_this, _target] call EFUNC(medical,treatmentBasic_morphine);
         [_this, false, false] call FUNC(playTreatmentAnim);
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is giving %2 morphine", _this, _target];
+        #endif
+    };
+    case _needsEpinephrine: {
+        [_this, _target] call EFUNC(medical,treatmentBasic_epipen);
+        [_this, false, false] call FUNC(playTreatmentAnim);
+        _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
+
+        #ifdef DEBUG_MODE_FULL
+            systemChat format ["%1 is using an epipen on %2", _this, _target];
         #endif
     };
 };

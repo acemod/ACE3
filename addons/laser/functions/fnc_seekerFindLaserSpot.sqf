@@ -8,15 +8,15 @@
  * 1: Direction vector (will be normalized) <ARRAY>
  * 2: Seeker FOV in degrees <NUMBER>
  * 3: Seeker max distance in meters <NUMBER>
- * 4: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <ARRAY>
+ * 4: Seeker wavelength sensitivity range, [1550,1550] is common eye safe <ARRAY>
  * 5: Seeker laser code. <NUMBER>
- * 6: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  *
  * Return Value:
- * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found. <ARRAY>
+ * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>
  *
  * Example:
- * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot;
+ * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot
  *
  * Public: No
  */
@@ -25,15 +25,15 @@
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistnace", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
 
 private _seekerCos = cos _seekerFov;
-private _seekerMaxDistSq = _seekerMaxDistnace ^ 2;
+private _seekerMaxDistSq = _seekerMaxDistance ^ 2;
 
-TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistnace,_seekerWavelengths,_seekerCode);
+TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistance,_seekerWavelengths,_seekerCode);
 
 private _spots = [];
 private _finalPos = nil;

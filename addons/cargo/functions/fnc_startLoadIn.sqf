@@ -24,7 +24,7 @@ private _vehicle = _cargoVehicle;
 if (isNull _vehicle) then {
     {
         if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_vehicle = _x};
-    } forEach (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE]);
+    } forEach (nearestObjects [_player, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]);
 };
 
 if (isNull _vehicle) exitWith {
@@ -35,14 +35,20 @@ if (isNull _vehicle) exitWith {
 private _return = false;
 // Start progress bar
 if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
+    [_player, _object, true] call EFUNC(common,claim);
     private _size = [_object] call FUNC(getSizeItem);
 
     [
         5 * _size,
-        [_object,_vehicle],
-        {["ace_loadCargo", _this select 0] call CBA_fnc_localEvent},
-        {},
-        localize LSTRING(LoadingItem)
+        [_object, _vehicle],
+        {
+            [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
+            ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
+        },
+        {[objNull, _this select 0 select 0, true] call EFUNC(common,claim)},
+        localize LSTRING(LoadingItem),
+        {true},
+        ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
     _return = true;
 } else {

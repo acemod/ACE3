@@ -1,4 +1,3 @@
-
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
@@ -8,8 +7,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(module);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_Respawn_ca.paa);
 
         class Arguments {
@@ -71,6 +70,7 @@ class CfgVehicles {
                 displayName = CSTRING(Rallypoint_MoveRallypoint);
                 condition = QUOTE([ARR_2(_player, side group _player)] call FUNC(canMoveRallypoint));
                 statement = QUOTE([ARR_2(_player, side group _player)] call FUNC(moveRallypoint));
+                exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
                 priority = -0.5;
             };
@@ -110,6 +110,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE(side group _player == west);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_West')] call FUNC(teleportToRallypoint));
+                exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
                 priority = 1;
@@ -132,6 +133,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE(side group _player == east);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_East')] call FUNC(teleportToRallypoint));
+                exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
                 priority = 1;
@@ -154,6 +156,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_Independent')] call FUNC(teleportToRallypoint));
+                exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
                 priority = 1;
@@ -177,6 +180,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE(side group _player == west);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_West_Base')] call FUNC(teleportToRallypoint));
+                exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
                 priority = 1;
@@ -199,6 +203,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE(side group _player == east);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_East_Base')] call FUNC(teleportToRallypoint));
+                exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
                 priority = 1;
@@ -221,6 +226,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_Independent_Base')] call FUNC(teleportToRallypoint));
+                exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
                 priority = 1;

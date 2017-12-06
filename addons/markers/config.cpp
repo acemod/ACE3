@@ -15,4 +15,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "ACE_Settings.hpp"
+#include "CfgVehicles.hpp"
+
 #include "InsertMarker.hpp"

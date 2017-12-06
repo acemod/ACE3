@@ -14,6 +14,7 @@ PREP(moduleMakeLoadable);
 PREP(moduleSettings);
 PREP(onMenuOpen);
 PREP(paradropItem);
+PREP(removeCargoItem);
 PREP(setSize);
 PREP(setSpace);
 PREP(startLoadIn);

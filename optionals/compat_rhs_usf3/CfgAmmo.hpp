@@ -6,6 +6,7 @@ class CfgAmmo {
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
+        ACE_muzzleVelocityVariationSD=0.35;
         ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[] = {0.670};
         ACE_velocityBoundaries[] = {};
@@ -18,6 +19,7 @@ class CfgAmmo {
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9904;
+        ACE_muzzleVelocityVariationSD=0.4;
         ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[] = {0.670};
         ACE_velocityBoundaries[] = {};
@@ -25,12 +27,13 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {900};
         ACE_barrelLengths[] = {736.6};
-    };    
+    };
     class B_762x54_Ball;
     class rhsusf_B_300winmag: B_762x54_Ball { // ACE_762x67_Ball_Mk248_Mod_1 (ballistics/CfgAmmo.hpp)
         ACE_caliber = 7.823;
         ACE_bulletLength = 37.821;
         ACE_bulletMass = 14.256;
+        ACE_muzzleVelocityVariationSD=0.3;
         ACE_ammoTempMuzzleVelocityShifts[] = {-5.3, -5.1, -4.6, -4.2, -3.4, -2.6, -1.4, -0.3, 1.4, 3.0, 5.2};
         ACE_ballisticCoefficients[] = {0.310};
         ACE_velocityBoundaries[] = {};
@@ -40,7 +43,19 @@ class CfgAmmo {
         ACE_barrelLengths[] = {508.0, 609.6, 660.4};
     };
     class B_556x45_Ball;
-    class rhs_ammo_556x45_M855A1_Ball: B_556x45_Ball { // B_556x45_Ball (ballistics/CfgAmmo.hpp) 
+    class rhs_ammo_556x45_M855_Ball: B_556x45_Ball { // B_556x45_Ball (ballistics/CfgAmmo.hpp)
+        ACE_caliber = 5.69;
+        ACE_bulletLength = 23.012;
+        ACE_bulletMass = 4.0176;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
+        ACE_ballisticCoefficients[] = {0.151};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ASM";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
+        ACE_barrelLengths[] = {210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
+    };
+    class rhs_ammo_556x45_M855A1_Ball: B_556x45_Ball { // B_556x45_Ball (ballistics/CfgAmmo.hpp)
         ACE_caliber = 5.69;
         ACE_bulletLength = 23.012;
         ACE_bulletMass = 4.0176;
@@ -72,6 +87,7 @@ class CfgAmmo {
         ACE_caliber = 5.69;
         ACE_bulletLength = 23.012;
         ACE_bulletMass = 4.9896;
+        ACE_muzzleVelocityVariationSD=0.4;
         ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[] = {0.361};
         ACE_velocityBoundaries[] = {};
@@ -99,6 +115,7 @@ class CfgAmmo {
         ACE_caliber = 7.823;
         ACE_bulletLength = 31.496;
         ACE_bulletMass = 11.34;
+        ACE_muzzleVelocityVariationSD=0.4;
         ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[] = {0.243};
         ACE_velocityBoundaries[] = {};
@@ -154,8 +171,8 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {680};
         ACE_barrelLengths[] = {180};
-    };        
-    class rhs_ammo_45ACP_MHP: BulletBase { // B_45ACP_Ball (ballistics/CfgAmmo.hpp) 
+    };
+    class rhs_ammo_45ACP_MHP: BulletBase { // B_45ACP_Ball (ballistics/CfgAmmo.hpp)
         ACE_caliber = 11.481;
         ACE_bulletLength = 17.272;
         ACE_bulletMass = 14.904;
@@ -192,8 +209,8 @@ class CfgAmmo {
         ACE_barrelLengths[] = {101.6, 127.0, 228.6};
     };
 
-    class M_Titan_AT;
-    class rhs_ammo_M_fgm148_AT: M_Titan_AT {
+    class MissileBase;
+    class rhs_ammo_M_fgm148_AT: MissileBase {
         irLock = 1;
         laserLock = 0;
         airLock = 0;
@@ -222,13 +239,13 @@ class CfgAmmo {
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
             seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            
+
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
         };
     };
-    
+
     class GrenadeHand;
     class rhs_ammo_mk3a2: GrenadeHand {
         ace_frag_enabled = 0;

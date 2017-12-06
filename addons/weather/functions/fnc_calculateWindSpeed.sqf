@@ -26,8 +26,8 @@ private _fnc_polar2vect = {
     [_mag2D * sin(_dir), _mag2D * cos(_dir), _mag * sin(_elev)];
 };
 
-private _windSpeed = vectorMagnitude ACE_wind;
-private _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+private _windSpeed = vectorMagnitude wind;
+private _windDir = (wind select 0) atan2 (wind select 1);
 private _windDirAdjusted = _windDir + 180;
 
 // Wind gradient
