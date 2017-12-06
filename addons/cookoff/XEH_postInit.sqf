@@ -129,21 +129,8 @@ if (hasInterface) then {
         if (isNull _obj) exitWith {};
         private _distance = _obj distance (positionCameraToWorld [0,0,0]);
         if (_distance > _maxDis) exitWith {};
-        _distance = _distance + (random (50) - 25);
-        private _dis = switch (true) do {
-            case (_distance <= 325): {
-                "close"
-            };
-            case (_distance > 325 && _distance < 952): {
-                "mid"
-            };
-            case (_distance >= 952): {
-                "far"
-            };
-            default {
-                "close"
-            };
-        };
+        _distance = _distance + (random (5) - 2.5);
+        private _dis = [["far", "mid"] select (_distance < 952), "close"] select (_distance < 325);
         _sound = format [QGVAR(%1_%2_%3), _sound, _dis, (floor random 3) + 1];
         // Delay sound after Rule of SOS.
         [{
