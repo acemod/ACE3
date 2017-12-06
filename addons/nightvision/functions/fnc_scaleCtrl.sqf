@@ -1,6 +1,6 @@
 /*
  * Author: Dslyecxi, PabstMirror
- * Determins night vision source (player/vehicle) - Updates UI based on type
+ * Determines night vision source (player/vehicle) - Updates UI based on type.
  *
  * Arguments:
  * 0: Control <CONTROL>

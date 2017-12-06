@@ -1,6 +1,6 @@
 /*
  * Author: commy2, Dslyecxi, PabstMirror
- * Change the blending when the player fires??. Called from the unified fired EH only for the local player and his vehicle.
+ * Change the blending when the player fires. Called from the unified fired EH only for the local player and his vehicle.
  *
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)

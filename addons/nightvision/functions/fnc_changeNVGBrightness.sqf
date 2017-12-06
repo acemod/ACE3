@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Change the brightness of the unit's NVG
+ * Change the brightness of the unit's NVG.
  *
  * Arguments:
  * 0: The Unit <OBJECT>

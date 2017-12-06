@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Handles the client who is the non-dedicated server turning on the fog effects
+ * Handles the client who is the non-dedicated server turning on the fog effects.
  *
  * Arguments:
  * 0: Module <OBJECT>

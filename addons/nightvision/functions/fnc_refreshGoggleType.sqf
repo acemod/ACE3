@@ -1,6 +1,6 @@
 /*
  * Author: Dslyecxi, PabstMirror
- * Determins night vision source (player/vehicle) - Updates UI based on type
+ * Determines night vision source (player/vehicle) - Updates UI based on type.
  *
  * Arguments:
  * None
@@ -29,22 +29,22 @@ private _blurRadius = -1;
 if (alive ACE_player) then {
     if (((vehicle ACE_player) == ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
-        
+
         private _currentVehicle = vehicle ACE_player;
         private _vehConfig = configFile >> "CfgVehicles" >> (typeOf _currentVehicle);
-        
+
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
-        
+
         if (ACE_player == (driver _currentVehicle)) exitWith {
             !("NVG" in getArray (_vehConfig >> "ViewOptics" >> "visionMode"));
         };
         private _result = true;
         private _turret = ACE_player call CBA_fnc_turretPath;
         private _turretConfig = [_currentVehicle, _turret] call CBA_fnc_getTurret;
-        
+
         // Seems to cover things like the offroad technical
         if ((isNumber (_turretConfig >> "optics")) && {(getNumber (_turretConfig >> "optics")) == 0}) exitWith {true};
-        
+
         private _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
         if (isClass _turretConfigOpticsIn) then {
             for "_index" from 0 to (count _turretConfigOpticsIn - 1) do {
@@ -61,7 +61,7 @@ if (alive ACE_player) then {
             private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
             if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
         };
-        
+
         TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
         private _config = configFile >> "CfgWeapons" >> GVAR(playerHMD);
         if (!isClass _config) exitWith {};
@@ -99,11 +99,11 @@ if (_borderImage == "") then {
     _trippleHeadLeft ctrlShow false;
     _trippleHeadRight ctrlShow false;
     GVAR(defaultPositionBorder) = [];
-} else {    
+} else {
     _borderImageCtrl ctrlShow true;
     _trippleHeadLeft ctrlShow true;
     _trippleHeadRight ctrlShow true;
-    
+
     _borderImageCtrl ctrlSetText _borderImage;
     _borderImageCtrl ctrlSetFade ([.15, 0] select _eyeCups);
 

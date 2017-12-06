@@ -1,6 +1,6 @@
 /*
  * Author: Dslyecxi, PabstMirror
- * Handles setting up the effects: fog, ppEffects and the RscTittle
+ * Handles setting up the effects: fog, ppEffects and the RscTittle.
  *
  * Arguments:
  * 0: Activated <BOOL>

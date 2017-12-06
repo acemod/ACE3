@@ -1,7 +1,7 @@
 /*
  * Author: Dslyecxi, PabstMirror
- * Pfeh to handle refreshing effects.
- * Updates ui scale on every frame, effects are updated less often.
+ * PFEH to handle refreshing effects.
+ * Updates UI scale on every frame, effects are updated less often.
  *
  * Arguments:
  * 1: PFEH ID <NUMBER>
