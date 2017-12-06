@@ -31,7 +31,7 @@ if (GVAR(fogScaling) > 0) then {
         // Handle non-dedicated:
         if (isServer && hasInterface) then {
             missionNamespace setVariable [QGVAR(serverPriorFog), fogParams, true];
-            [QGVAR(nonDedicatedFix), []] call CBA_fnc_globalEvent;
+            [QGVAR(nonDedicatedFix), []] call CBA_fnc_remoteEvent;
         };
     } else {
         if (!isNil QGVAR(priorFog)) then {
