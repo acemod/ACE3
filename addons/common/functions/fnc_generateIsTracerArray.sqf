@@ -11,7 +11,7 @@
  * Bools indicating if it is a tracer<ARRAY>
  *
  * Example:
- * ["100Rnd_65x39_caseless_mag"] call ace_attach_fnc_attach;
+ * ["100Rnd_65x39_caseless_mag"] call ace_common_fnc_generateIsTracerArray;
  *
  * Public: No
  */
