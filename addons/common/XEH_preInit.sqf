@@ -26,6 +26,8 @@ GVAR(statusEffect_isGlobal) = [];
 
 GVAR(setHearingCapabilityMap) = [];
 
+GVAR(isTracerNamespace) = [] call CBA_fnc_createNamespace;
+
 //////////////////////////////////////////////////
 // Set up PlayerChanged eventhandler for pre init (EH is installed in postInit)
 //////////////////////////////////////////////////

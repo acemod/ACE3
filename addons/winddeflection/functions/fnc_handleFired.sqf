@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [clientFiredBIS-XEH] call ace_advanced_ballistics_fnc_handleFired
+ * [clientFiredBIS-XEH] call ace_winddeflection_fnc_handleFired
  *
  * Public: No
  */
@@ -25,10 +25,11 @@ if (_unit distance ACE_player > 2000) exitWith {false};
 
 private _abort = false;
 if (!local _unit && {_projectile isKindOf "BulletBase"}) then {
-    private _ammoCount = (_unit ammo _muzzle) + 1;
-    private _tracersEvery = getNumber(configFile >> "CfgMagazines" >> _magazine >> "tracersEvery");
-    private _lastRoundsTracer = getNumber(configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
-    _abort = _ammoCount > _lastRoundsTracer && {_tracersEvery == 0 || {(_ammoCount - _lastRoundsTracer) % _tracersEvery != 0}};
+    private _magTracers = EGVAR(common,isTracerNamespace) getVariable _magazine;
+    if (isNil "_magTracers") then {
+        _magTracers = [_magazine] call EFUNC(common,generateIsTracerArray);
+    };
+    _abort = !(_magTracers param [(_unit ammo _muzzle), true]);
 };
 if (_abort) exitWith {false};
 

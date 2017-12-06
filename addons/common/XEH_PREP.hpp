@@ -52,6 +52,7 @@ PREP(fixCollision);
 PREP(fixFloating);
 PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
+PREP(generateIsTracerArray);
 PREP(getAllDefinedSetVariables);
 PREP(getDeathAnim);
 PREP(getDefaultAnim);
