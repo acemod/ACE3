@@ -38,7 +38,16 @@
 [QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
-    _object setCaptive (_set > 0);
+    private _visibility = _object getUnitTrait "camouflageCoef";
+    if (_set > 0) then {
+        if (_visibility != 0) then {
+            _object setVariable [QGVAR(oldVisibility), _visibility];
+            _object setUnitTrait ["camouflageCoef", 0];
+        };
+    } else {
+        _visibility = _unit getVariable [QGVAR(oldVisibility), _visibility];
+        _object setUnitTrait ["camouflageCoef", _visibility];
+    };
 }] call CBA_fnc_addEventHandler;
 [QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
     params ["_object", "_set"];
