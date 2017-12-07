@@ -69,7 +69,7 @@ class Cfg3DEN {
                         property = QGVAR(editorLoadedTracks);
                         control = "Edit";
                         expression = "_this setVariable ['%s',_value];";
-                        defaultValue = "[ARR_2(0,1)] select (_this isKindOf 'Tank')"; // must match pre init script
+                        defaultValue = "[0,1] select (_this isKindOf 'Tank')"; // must match pre init script
                         validate = "number";
                         condition = "objectHasInventoryCargo";
                         typeName = "NUMBER";
@@ -80,7 +80,7 @@ class Cfg3DEN {
                         property = QGVAR(editorLoadedWheels);
                         control = "Edit";
                         expression = "_this setVariable ['%s',_value];";
-                        defaultValue = "[ARR_2(0,1)] select (_this isKindOf 'Car')"; // must match pre init script
+                        defaultValue = "[0,1] select (_this isKindOf 'Car')"; // must match pre init script
                         validate = "number";
                         condition = "objectHasInventoryCargo";
                         typeName = "NUMBER";

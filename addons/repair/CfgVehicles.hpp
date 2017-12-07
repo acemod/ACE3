@@ -234,7 +234,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleAddSpareParts: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AddSpareParts_Module_DisplayName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -321,7 +321,6 @@ class CfgVehicles {
 
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
-        destrType = "DesturctNo"; // scripted delayed destruction
         editorCategory = "EdCat_Supplies";
         editorSubcategory = QGVAR(subcategory);
     };
@@ -337,9 +336,9 @@ class CfgVehicles {
         mapSize = 0.5;
 
         // damage handling
-        armor = 0.06;
+        armor = 1000;
         armorStructural = 1;
-        minTotalDamageThreshold = 0;//0.01;
+        minTotalDamageThreshold = 0.01;
         explosionShielding = 1;
         replaceDamagedLimit = 0.9;
         selectionDamage = "mat_track";
@@ -368,9 +367,9 @@ class CfgVehicles {
         mapSize = 0.7;
 
         // damage handling
-        armor = 0.05;
+        armor = 120;
         armorStructural = 1;
-        minTotalDamageThreshold = 0;//0.01;
+        minTotalDamageThreshold = 0.01;
         explosionShielding = 1;
         replaceDamagedLimit = 0.9;
         selectionDamage = "mat_tyre"; //"mat_rim"
@@ -379,7 +378,7 @@ class CfgVehicles {
         // can not take damage individually though, because of limitations of the thingX simulation type
         class HitPoints {
             class HitBody {
-                armor = 0.06;
+                armor = 0.6;
                 material = -1;
                 name = "mat_rim";
                 visual = "mat_rim";
