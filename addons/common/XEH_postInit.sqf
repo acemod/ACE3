@@ -55,7 +55,7 @@
             _object setUnitTrait ["camouflageCoef", 0];
         };
     } else {
-        _visibility = _unit getVariable [QGVAR(oldVisibility), _visibility];
+        _visibility = _object getVariable [QGVAR(oldVisibility), _visibility];
         _object setUnitTrait ["camouflageCoef", _visibility];
     };
 }] call CBA_fnc_addEventHandler;
