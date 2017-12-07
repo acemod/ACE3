@@ -10,6 +10,7 @@ class RscPictureKeepAspect;
 class RscText;
 class RscToolbox;
 class RscTree;
+class EGVAR(common,CompassControl);
 
 // Based on RscDisplayEGSpectator (sadly Arma doesn't like display inheritance)
 class GVAR(display) {
@@ -454,6 +455,6 @@ class GVAR(display) {
                 };
             };
         };
+        class compass: EGVAR(common,CompassControl) {};
     };
 };
-
