@@ -28,6 +28,7 @@ TRACE_1("",GVAR(trenchPlacementData));
 
 // prevent the placing unit from running
 [_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
 
 // create the trench
 private _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
