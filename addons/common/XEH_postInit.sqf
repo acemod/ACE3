@@ -21,26 +21,45 @@
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
 ["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
     TRACE_2("forceWalk EH",_object,_set);
     _object forceWalk (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockSprint), { //Name reversed from `allowSprint` because we want NOR logic
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
     _object setCaptive (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setHidden), {
+    params ["_object", "_set"];
+    TRACE_2("setHidden EH",_object,_set);
+    private _visibility = _object getUnitTrait "camouflageCoef";
+    if (_set > 0) then {
+        if (_visibility != 0) then {
+            _object setVariable [QGVAR(oldVisibility), _visibility];
+            _object setUnitTrait ["camouflageCoef", 0];
+        };
+    } else {
+        _visibility = _object getVariable [QGVAR(oldVisibility), _visibility];
+        _object setUnitTrait ["camouflageCoef", _visibility];
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
     params ["_object", "_set"];
     if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
@@ -51,6 +70,7 @@
        _object allowDamage (_set == 0);
     };
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockEngine), {
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
