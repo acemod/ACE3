@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_Category">
-            <English>ACE - Nightvision</English>
+            <English>ACE Nightvision</English>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
             <English>NV Goggles (Gen1)</English>
