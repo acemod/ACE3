@@ -322,6 +322,8 @@ class CfgVehicles {
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
         destrType = "DesturctNo"; // scripted delayed destruction
+        editorCategory = "EdCat_Supplies";
+        editorSubcategory = QGVAR(subcategory);
     };
 
     class ACE_Track: ACE_RepairItem_Base {
@@ -335,9 +337,9 @@ class CfgVehicles {
         mapSize = 0.5;
 
         // damage handling
-        armor = 0.6;
+        armor = 0.06;
         armorStructural = 1;
-        minTotalDamageThreshold = 0.01;
+        minTotalDamageThreshold = 0;//0.01;
         explosionShielding = 1;
         replaceDamagedLimit = 0.9;
         selectionDamage = "mat_track";
@@ -350,6 +352,8 @@ class CfgVehicles {
                 QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
             };
         };
+
+        editorPreview = QPATHTOF(data\preview_track.jpg);
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
@@ -366,7 +370,7 @@ class CfgVehicles {
         // damage handling
         armor = 0.05;
         armorStructural = 1;
-        minTotalDamageThreshold = 0.01;
+        minTotalDamageThreshold = 0;//0.01;
         explosionShielding = 1;
         replaceDamagedLimit = 0.9;
         selectionDamage = "mat_tyre"; //"mat_rim"
@@ -375,7 +379,7 @@ class CfgVehicles {
         // can not take damage individually though, because of limitations of the thingX simulation type
         class HitPoints {
             class HitBody {
-                armor = 0.6;
+                armor = 0.06;
                 material = -1;
                 name = "mat_rim";
                 visual = "mat_rim";
@@ -396,6 +400,8 @@ class CfgVehicles {
                 QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
             };
         };
+
+        editorPreview = QPATHTOF(data\preview_wheel.jpg);
     };
 
     // disable vanilla repair
