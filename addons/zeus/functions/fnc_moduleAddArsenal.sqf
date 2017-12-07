@@ -29,9 +29,15 @@ switch (true) do {
         [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     default {
-        TRACE_1("BIS_fnc_arsenal: AmmoboxInit",_object);
-        // Global Effects: "Action to access the Arsenal will be added automatically on all clients."
-        ["AmmoboxInit", [_object, true]] call BIS_fnc_arsenal;
+        if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+
+            [_object, true, true] call EFUNC(arsenal,initBox);
+        } else {
+
+            TRACE_1("BIS_fnc_arsenal: AmmoboxInit",_object);
+            // Global Effects: "Action to access the Arsenal will be added automatically on all clients."
+            ["AmmoboxInit", [_object, true]] call BIS_fnc_arsenal;
+        };
     };
 };
 

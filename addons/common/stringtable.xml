@@ -1131,5 +1131,21 @@
             <Chinese>切換</Chinese>
             <Chinesesimp>切换</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_Weight">
+            <English>Weight:</English>
+            <German>Gewicht:</German>
+            <Spanish>Peso:</Spanish>
+            <French>Poids :</French>
+            <Polish>Waga:</Polish>
+            <Czech>Váha:</Czech>
+            <Italian>Peso:</Italian>
+            <Portuguese>Peso:</Portuguese>
+            <Hungarian>Súly:</Hungarian>
+            <Russian>Вес:</Russian>
+            <Japanese>重量：</Japanese>
+            <Korean>무게:</Korean>
+            <Chinesesimp>重量:</Chinesesimp>
+            <Chinese>重量:</Chinese>
+        </Key>
     </Package>
 </Project>

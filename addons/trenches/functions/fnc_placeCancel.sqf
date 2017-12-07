@@ -22,6 +22,7 @@ if (_key != 1 || {GVAR(digPFH) == -1}) exitWith {};
 
 // enable running again
 [_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
 
 // delete placement dummy
 deleteVehicle GVAR(trench);

@@ -5,6 +5,7 @@
  * - Curator
  * - ACE Spectator
  * - Arsenal camera (BIS_fnc_arsenal)
+ * - Nexus Spectator (BIS_fnc_EGSpectator)
  * - Establishing shot (BIS_fnc_establishingShot)
  * - Splendid camera (BIS_fnc_camera)
  * - Animation viewer (BIS_fnc_animViewer)
@@ -26,6 +27,7 @@
 !(
     isNull curatorCamera && // Curator
     {!(GETMVAR(EGVAR(spectator,isSet),false))} && // ACE Spectator
+    {isNull (GETMVAR(BIS_EGSpectatorCamera_camera, objNull))} && // BIS Nexus Spectator
     {isNull (GETUVAR(BIS_fnc_arsenal_cam, objNull))} && // Arsenal camera
     {isNull (GETMVAR(BIS_fnc_establishingShot_fakeUAV, objNull))} && // Establishing shot camera
     {isNull (GETMVAR(BIS_fnc_camera_cam, objNull))} && // Splendid camera
