@@ -78,7 +78,11 @@ class CfgVehicles {
         };
         class ACE_SelfActions;
         class ACE_Actions {
-            class ACE_MainActions {    
+            class ACE_MainActions {
+                class EGVAR(reload,CheckAmmo) {
+                    condition = "false";
+                };
+                
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
                     selection = "";
@@ -92,6 +96,13 @@ class CfgVehicles {
                     selection = "";
                     distance = 2;
                     condition = "true";
+                    
+                    class GVAR(checkAmmo) {
+                        displayName = ECSTRING(reload,checkAmmo);
+                        distance = 2.0;
+                        condition = QUOTE([ARR_2(_player, _target)] call EFUNC(reload,canCheckAmmo));
+                        statement = QUOTE([ARR_2(_player, _target)] call EFUNC(reload,checkAmmo));
+                    };
                     
                     class GVAR(disassemble) {
                         displayName = CSTRING(DisassembleCSW_displayName);
