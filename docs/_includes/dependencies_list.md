@@ -22,6 +22,10 @@
 `ace_main`
 {% endif %}
 
+{% if include.component == "arsenal" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "atragmx" %}
 `ACE_Advanced_Ballistics`, `ACE_common`, `ACE_weather`
 {% endif %}
