@@ -530,7 +530,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
                 windSourceObstacles = bulletPosition - windVelocity.normalize() * 25;
 
                 double roughnessLength = calculateRoughnessLength(windSourceObstacles.x(), windSourceObstacles.y());
-                windAttenuation *= max(0, log(heightAGL / roughnessLength) / log(20 / roughnessLength));
+                windAttenuation *= std::max(0.0, log(heightAGL / roughnessLength) / log(20 / roughnessLength));
             }
 
             windVelocity = windVelocity * windAttenuation;
