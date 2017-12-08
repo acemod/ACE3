@@ -8,12 +8,14 @@ class CfgWeapons {
     // ITEMS
     class FirstAidKit: ItemCore {
         type = 0;
+        ace_arsenal_hide = 1;
         class ItemInfo: InventoryFirstAidKitItem_Base_F {
             mass = 4;
         };
     };
     class Medikit: ItemCore {
         type = 0;
+        ace_arsenal_hide = 1;
         class ItemInfo: MedikitItem {
             mass = 60;
         };
@@ -22,6 +24,7 @@ class CfgWeapons {
     class ACE_ItemCore;
     class ACE_fieldDressing: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         model = QPATHTOF(data\bandage.p3d);
         picture = QPATHTOF(ui\items\fieldDressing_x_ca.paa);
         displayName = CSTRING(Bandage_Basic_Display);
@@ -33,6 +36,7 @@ class CfgWeapons {
     };
     class ACE_packingBandage: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Packing_Bandage_Display);
         picture = QPATHTOF(ui\items\packingBandage_x_ca.paa);
         model = QPATHTOF(data\packingbandage.p3d);
@@ -44,6 +48,7 @@ class CfgWeapons {
     };
     class ACE_elasticBandage: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Bandage_Elastic_Display);
         picture = QPATHTOF(ui\items\elasticBandage_x_ca.paa);
         model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
@@ -55,6 +60,7 @@ class CfgWeapons {
     };
     class ACE_tourniquet: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Tourniquet_Display);
         picture = QPATHTOF(ui\items\tourniquet_x_ca.paa);
         model = QPATHTOF(data\tourniquet.p3d);
@@ -66,6 +72,7 @@ class CfgWeapons {
     };
     class ACE_morphine: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Morphine_Display);
         picture = QPATHTOF(ui\items\morphine_x_ca.paa);
         model = QPATHTOF(data\morphine.p3d);
@@ -77,6 +84,7 @@ class CfgWeapons {
     };
     class ACE_adenosine: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Adenosine_Display);
         picture = QPATHTOF(ui\items\adenosine_x_ca.paa);
         model = QPATHTOF(data\adenosine.p3d);
@@ -88,6 +96,7 @@ class CfgWeapons {
     };
     class ACE_atropine: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Atropine_Display);
         picture = QPATHTOF(ui\items\atropine_x_ca.paa);
         model = QPATHTOF(data\atropine.p3d);
@@ -99,6 +108,7 @@ class CfgWeapons {
     };
     class ACE_epinephrine: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Epinephrine_Display);
         picture = QPATHTOF(ui\items\epinephrine_x_ca.paa);
         model = QPATHTOF(data\epinephrine.p3d);
@@ -111,6 +121,7 @@ class CfgWeapons {
 
     class ACE_plasmaIV: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Plasma_IV);
         model = QPATHTOF(data\IVBag_1000ml.p3d);
         hiddenSelections[] = {"camo"};
@@ -140,6 +151,7 @@ class CfgWeapons {
     };
     class ACE_bloodIV: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         model = QPATHTOF(data\IVBag_1000ml.p3d);
         displayName = CSTRING(Blood_IV);
         picture = QPATHTOF(ui\items\bloodIV_x_ca.paa);
@@ -169,6 +181,7 @@ class CfgWeapons {
     };
     class ACE_salineIV: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Saline_IV);
         model = QPATHTOF(data\IVBag_1000ml.p3d);
         hiddenSelections[] = {"camo"};
@@ -198,6 +211,7 @@ class CfgWeapons {
     };
     class ACE_quikclot: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(QuikClot_Display);
         model = QPATHTOF(data\QuikClot.p3d);
         picture = QPATHTOF(ui\items\quickclot_x_ca.paa);
@@ -209,6 +223,7 @@ class CfgWeapons {
     };
     class ACE_personalAidKit: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Aid_Kit_Display);
         picture = QPATHTOF(ui\items\personal_aid_kit_x_ca.paa);
         descriptionShort = CSTRING(Aid_Kit_Desc_Short);
@@ -219,6 +234,7 @@ class CfgWeapons {
     };
     class ACE_surgicalKit: ACE_ItemCore {
         scope=2;
+        author = ECSTRING(common,ACETeam);
         displayName= CSTRING(SurgicalKit_Display);
         model = QPATHTOF(data\surgical_kit.p3d);
         picture = QPATHTOF(ui\items\surgicalKit_x_ca.paa);
@@ -230,6 +246,7 @@ class CfgWeapons {
     };
     class ACE_bodyBag: ACE_ItemCore {
         scope=2;
+        author = ECSTRING(common,ACETeam);
         displayName= CSTRING(Bodybag_Display);
         model = QPATHTOF(data\bodybagItem.p3d);
         picture = QPATHTOF(ui\items\bodybag_x_ca.paa);

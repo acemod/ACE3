@@ -30,11 +30,10 @@
 [0, [false, false, false]], false] call CBA_fnc_addKeybind;  // (empty default key)
 
 //Add deviceKey entry:
-private ["_conditonCode", "_toggleCode", "_closeCode"];
-_conditonCode = {
+private _conditonCode = {
     ([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem));
 };
-_toggleCode = {
+private _toggleCode = {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
 
@@ -44,7 +43,7 @@ _toggleCode = {
         [] call FUNC(menuInit);
     };
 };
-_closeCode = {
+private _closeCode = {
     // Statement
     if (GVAR(run)) then {
         //If dispaly is open, close it:

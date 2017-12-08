@@ -23,7 +23,6 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_minWaitingTime", "_slotInfo", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime", "_awakeInVehicleAnimation", "_oldVehicleAnimation", "_vehicle"];
 params ["_args", "_idPFH"];
 _args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];
 
@@ -37,7 +36,7 @@ if (!alive _unit) exitWith {
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
         [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
     };
-    [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+    [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
 
@@ -68,9 +67,9 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
                 [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
             };
         } else {
-            _vehicle = vehicle _unit;
-            _oldVehicleAnimation = _unit getVariable [QGVAR(vehicleAwakeAnim), []];
-            _awakeInVehicleAnimation = "";
+            private _vehicle = vehicle _unit;
+            private _oldVehicleAnimation = _unit getVariable [QGVAR(vehicleAwakeAnim), []];
+            private _awakeInVehicleAnimation = "";
             if (((count _oldVehicleAnimation) > 0) && {(_oldVehicleAnimation select 0) == _vehicle}) then {
                 _awakeInVehicleAnimation = _oldVehicleAnimation select 1;
             };
@@ -80,7 +79,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
             } else {
                 //Don't have a valid animation saved, reset the unit animation with a moveInXXX
                 TRACE_1("No Valid Animation, doing seat reset", _awakeInVehicleAnimation);
-                _slotInfo = [];
+                private _slotInfo = [];
                 {if ((_x select 0) == _unit) exitWith {_slotInfo = _x;};} forEach (fullCrew _vehicle);
                 if (_slotInfo isEqualTo []) exitWith {ERROR("No _slotInfo?");};
                 //Move the unit out:
@@ -105,7 +104,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
-        [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+        [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
 
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:

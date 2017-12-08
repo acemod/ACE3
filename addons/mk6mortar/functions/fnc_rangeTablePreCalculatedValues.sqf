@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_muzzleVelocity,_airFriction);
+params ["_muzzleVelocity", "_airFriction"];
 
 switch (true) do {
 

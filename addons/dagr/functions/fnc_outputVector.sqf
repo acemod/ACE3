@@ -16,8 +16,6 @@
 
 #include "script_component.hpp"
 
-private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];
-
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
 #define __display (uiNameSpace getVariable "DAGR_DISPLAY")
@@ -39,7 +37,7 @@ if (_lazPosX < 0) then { _lazPosX = _lazPosX + 99999;};
 if (_lazPosY < 0) then {_lazPosY = _lazPosY + 99999;};
 
 // Find laser position
-_xGrid = toArray Str(round _lazPosX);
+private _xGrid = toArray Str(round _lazPosX);
 
 while {count _xGrid < 5} do {
     _xGrid = [48] + _xGrid;
@@ -48,7 +46,7 @@ _xGrid resize 4;
 _xGrid = toString _xGrid;
 _xGrid = parseNumber _xGrid;
 
-_yGrid = toArray Str(round _lazPosY);
+private _yGrid = toArray Str(round _lazPosY);
 while {count _yGrid < 5} do {
     _yGrid = [48] + _yGrid;
 };
@@ -56,37 +54,37 @@ _yGrid resize 4;
 _yGrid = toString _yGrid;
 _yGrid = parseNumber _yGrid;
 
-_xCoord = switch true do {
+private _xCoord = switch true do {
     case (_xGrid >= 1000): { "" + Str(_xGrid) };
     case (_xGrid >= 100): { "0" + Str(_xGrid) };
     case (_xGrid >= 10): { "00" + Str(_xGrid) };
     default             { "000" + Str(_xGrid) };
 };
 
-_yCoord = switch true do {
+private _yCoord = switch true do {
     case (_yGrid >= 1000): { "" + Str(_yGrid) };
     case (_yGrid >= 100): { "0" + Str(_yGrid) };
     case (_yGrid >= 10): { "00" + Str(_yGrid) };
     default             { "000" + Str(_yGrid) };
 };
 
-_dagrGrid = _xCoord + " " + _yCoord;
+private _dagrGrid = _xCoord + " " + _yCoord;
 
 // Find target elevation
-_elevation = floor ((_lazPosZ) + EGVAR(common,mapAltitude));
-_dagrElevation = str _elevation + "m";
+private _elevation = floor ((_lazPosZ) + EGVAR(common,mapAltitude));
+private _dagrElevation = str _elevation + "m";
 
 // Time
-_dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
+private _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
 
 // Bearing
-_bearing = GVAR(LAZHEADING);
+private _bearing = GVAR(LAZHEADING);
 if (_bearing >= 360) then {_bearing = _bearing - 360;};
 if (!GVAR(useDegrees)) then {_bearing = DEG_TO_MIL(_bearing)};
 _bearing = floor (_bearing);
 
 // Distance
-_dagrDist = str GVAR(LAZDIST) + "m";
+private _dagrDist = str GVAR(LAZDIST) + "m";
 
 // Put grid into variable so DAGR menu can access it
 GVAR(vectorGrid) = _dagrGrid;

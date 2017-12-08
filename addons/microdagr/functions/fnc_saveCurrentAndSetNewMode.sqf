@@ -15,22 +15,19 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-private ["_display", "_theMap", "_centerPos", "_mapCtrlPos"];
-
 params ["_newMode"];
 
 disableSerialization;
-_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+private _display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
 
 if (isNull _display) exitWith {ERROR("No Display");};
 
 if (GVAR(currentApplicationPage) == 2) then {
-    _theMap = [_display displayCtrl IDC_MAPDETAILS, _display displayCtrl IDC_MAPPLAIN] select (!GVAR(mapShowTexture));
-    _mapCtrlPos = ctrlPosition _theMap;
+    private _theMap = [_display displayCtrl IDC_MAPDETAILS, _display displayCtrl IDC_MAPPLAIN] select (!GVAR(mapShowTexture));
+    private _mapCtrlPos = ctrlPosition _theMap;
 
     _mapCtrlPos params ["_mapCtrlPosX", "_mapCtrlPosY", "_mapCtrlPosZ", "_mapSize"];
-    _centerPos = [(_mapCtrlPosX + _mapCtrlPosZ / 2), (_mapCtrlPosY + _mapSize / 2)];
+    private _centerPos = [(_mapCtrlPosX + _mapCtrlPosZ / 2), (_mapCtrlPosY + _mapSize / 2)];
     GVAR(mapPosition) = _theMap ctrlMapScreenToWorld _centerPos;
     GVAR(mapZoom) = (ctrlMapScale _theMap) * _mapSize;
 

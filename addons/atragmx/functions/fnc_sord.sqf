@@ -21,6 +21,8 @@ if (!GVAR(initialised)) exitWith {};
 
 params ["_slopeDistance", "_azimuth", "_inclination"];
 
+GVAR(targetRangeDirtyFlag) = (round(_slopeDistance) != (GVAR(targetRange) select GVAR(currentTarget)));
+
 GVAR(inclinationAngle) set [GVAR(currentTarget), round(_inclination)];
 GVAR(directionOfFire) set [GVAR(currentTarget), round(_azimuth)];
 GVAR(targetRange) set [GVAR(currentTarget), round(_slopeDistance)];

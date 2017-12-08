@@ -15,10 +15,8 @@
  */
 #include "script_component.hpp"
 
-private ["_oldShowMode", "_args", "_player"];
-
 params [["_newDisplayShowMode", -1, [-1]]];
-_oldShowMode = GVAR(currentShowMode);
+private _oldShowMode = GVAR(currentShowMode);
 
 if (_newDisplayShowMode == -1) then {
     //Toggle mode button:

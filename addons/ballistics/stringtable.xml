@@ -1978,52 +1978,50 @@
             <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MXM</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Name">
-            <English>.338 10Rnd Mag (300gr Sierra MatchKing HPBT)</English>
-            <French>Ch. .338 10 Cps (300gr Sierra MatchKing HPBT)</French>
-            <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Sierra MatchKing HPBT)</Spanish>
-            <Polish>Magazynek .338 10rd (300gr Sierra MatchKing HPBT)</Polish>
-            <Russian>Магазин из 10-ти .338 (300 гран Sierra MatchKing экспансивные)</Russian>
-            <German>.338 10-Patronen-Magazin (300gr Sierra MatchKing HPBT)</German>
-            <Italian>.338 10Munizioni Mag (300gr Sierra MatchKing HPBT)</Italian>
-            <Czech>.338 10náb. Zásobník (300gr Sierra MatchKing HPBT)</Czech>
-            <Portuguese>Carregador .338 (300gr Sierra MatchKing HPBT) com 10 cartuchos </Portuguese>
-            <Hungarian>.338 10-lövedékes tár (300gr Sierra MatchKing HPBT)</Hungarian>
-            <Japanese>.338 10発入り 弾倉 (300gr Sierra MatchKing HPBT)</Japanese>
-            <Korean>10발들이 .338 탄창 (300gr Sierra MatchKing HPBT)</Korean>
-            <Chinese>.338 10發 彈匣 (300公克 Sierra MatchKing 空尖艇尾比賽專用彈)</Chinese>
-            <Chinesesimp>.338 10发 弹匣 (300公克 Sierra MatchKing 空尖艇尾比赛专用弹)</Chinesesimp>
+            <English>.338 10Rnd Mag (300gr Lapua Scenar)</English>
+            <French>Ch. .338 10 Cps (300gr Lapua Scenar)</French>
+            <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Lapua Scenar)</Spanish>
+            <Polish>Magazynek .338 10rd (300gr Lapua Scenar)</Polish>
+            <Russian>Магазин из 10-ти .338 (300 гран Lapua Scenar)</Russian>
+            <German>.338 10-Patronen-Magazin (300gr Lapua Scenar)</German>
+            <Italian>.338 10Munizioni Mag (300gr Lapua Scenar)</Italian>
+            <Czech>.338 10náb. Zásobník (300gr Lapua Scenar)</Czech>
+            <Portuguese>Carregador .338 (300gr Lapua Scenar) com 10 cartuchos </Portuguese>
+            <Hungarian>.338 10-lövedékes tár (300gr Lapua Scenar)</Hungarian>
+            <Japanese>.338 10発入り 弾倉 (300gr Lapua Scenar)</Japanese>
+            <Korean>10발들이 .338 탄창 (300gr Lapua Scenar)</Korean>
+            <Chinese>.338 10發 彈匣 (300公克 Lapua Scenar)</Chinese>
+            <Chinesesimp>.338 10发 弹匣 (300公克 Lapua Scenar)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_NameShort">
-            <English>.338 HPBT</English>
-            <French>.338 HPBT</French>
-            <Spanish>.338 HPBT</Spanish>
-            <Polish>.338 HPBT</Polish>
-            <Russian>.338 экспансивные</Russian>
-            <German>.338 HPBT</German>
-            <Italian>.338 HPBT</Italian>
-            <Czech>.338 HPBT</Czech>
-            <Portuguese>.338 HPBT</Portuguese>
-            <Hungarian>.338 HPBT</Hungarian>
-            <Japanese>338 HPBT</Japanese>
-            <Korean>.338 HPBT</Korean>
-            <Chinese>.338 空尖艇尾比賽專用彈</Chinese>
-            <Chinesesimp>.338 空尖艇尾比赛专用弹</Chinesesimp>
+            <English>.338 Scenar</English>
+            <French>.338 Scenar</French>
+            <Spanish>.338 Scenar</Spanish>
+            <Polish>.338 Scenar</Polish>
+            <Russian>.338 Scenar</Russian>
+            <German>.338 Scenar</German>
+            <Italian>.338 Scenar</Italian>
+            <Czech>.338 Scenar</Czech>
+            <Portuguese>.338 Scenar</Portuguese>
+            <Hungarian>.338 Scenar</Hungarian>
+            <Japanese>338 Scenar</Japanese>
+            <Korean>.338 Scenar</Korean>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Description">
-            <English>Caliber: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Rounds: 10</English>
-            <French>Calibre: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Cartouches: 10</French>
-            <Spanish>Calibre: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Balas: 10</Spanish>
-            <Polish>Kaliber: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Pociski: 10</Polish>
-            <Russian>Калибр: 8,6x70mm (300 гран Sierra MatchKing экспансивные)&lt;br /&gt;Патронов: 10</Russian>
-            <German>Kaliber: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Patronen: 10</German>
-            <Italian>Calibro: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Munizioni: 10</Italian>
-            <Czech>Ráže: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Nábojů: 10</Czech>
-            <Portuguese>Calibre: 8.6x70mm  (300gr Sierra MatchKing HPBT)&lt;br/&gt;Cartuchos: 10</Portuguese>
-            <Hungarian>Kaliber: 8,6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;Lövedékek: 10</Hungarian>
-            <Japanese>口径: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;装填数: 10</Japanese>
-            <Korean>구경: 8.6x70mm (300gr Sierra MatchKing HPBT)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 8.6x70mm (300公克 Sierra MatchKing 空尖艇尾比賽專用彈)&lt;br /&gt;發數: 10</Chinese>
-            <Chinesesimp>口径: 8.6x70mm (300公克 Sierra MatchKing 空尖艇尾比赛专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <English>Caliber: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Rounds: 10</English>
+            <French>Calibre: 8,6x70mm (300gr Lapua Scenar)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Balas: 10</Spanish>
+            <Polish>Kaliber: 8,6x70mm (300gr Lapua Scenar)&lt;br /&gt;Pociski: 10</Polish>
+            <Russian>Калибр: 8,6x70mm (300 гран Lapua Scenar)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 8,6x70mm (300gr Lapua Scenar)&lt;br /&gt;Patronen: 10</German>
+            <Italian>Calibro: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Munizioni: 10</Italian>
+            <Czech>Ráže: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Nábojů: 10</Czech>
+            <Portuguese>Calibre: 8.6x70mm  (300gr Lapua Scenar)&lt;br/&gt;Cartuchos: 10</Portuguese>
+            <Hungarian>Kaliber: 8,6x70mm (300gr Lapua Scenar)&lt;br /&gt;Lövedékek: 10</Hungarian>
+            <Japanese>口径: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;装填数: 10</Japanese>
+            <Korean>구경: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;장탄수: 10</Korean>
+            <Chinese>口徑: 8.6x70mm (300公克 Lapua Scenar)&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: 8.6x70mm (300公克 Lapua Scenar)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>

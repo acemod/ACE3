@@ -18,12 +18,11 @@
 #include "script_component.hpp"
 
 params ["_static","_unit"];
-private ["_currentMagazine","_currentMagazineClass","_ammoCount"];
 
 //Get weapon & magazine information about static weapon
-_currentMagazine = (magazinesAllTurrets _static) select 1;
-_currentMagazineClass = _currentMagazine select 0;
-_ammoCount = _currentMagazine select 2;
+private _currentMagazine = (magazinesAllTurrets _static) select 1;
+private _currentMagazineClass = _currentMagazine select 0;
+private _ammoCount = _currentMagazine select 2;
 
 // Try to add the round to player inventory, otherwise place it on the ground near the player
 if (_ammoCount > 0) then {

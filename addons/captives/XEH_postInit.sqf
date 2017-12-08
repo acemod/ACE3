@@ -40,7 +40,8 @@ if (!hasInterface) exitWith {};
 {
     private _target = cursorObject;
     if !([ACE_player, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
-    if !(_target isKindOf "CAManBase" || {(_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")}) exitWith {false};
+    if !(_target isKindOf "CAManBase") exitWith {false};
+    if ((_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")) exitWith {false};
 
     if ([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
         [QGVAR(setHandcuffed), [_target, true], _target] call CBA_fnc_targetEvent;

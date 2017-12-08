@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="noradio">
+        <Key ID="STR_ACE_noradio_setting">
+            <English>Mute Player</English>
+            <German>Spieler stummschalten</German>
+            <Italian>Muta Giocatore</Italian>
+            <Chinese>玩家靜音</Chinese>
+            <Chinesesimp>玩家静音</Chinesesimp>
+            <Japanese>プレイヤーをミュート</Japanese>
+        </Key>
+        <Key ID="STR_ACE_noradio_setting_tooltip">
+            <English>Mutes the controlled player avatar.</English>
+            <German>Schaltet eigenen Spieleravatar stumm.</German>
+            <Italian>Muta l'avatar del giocatore controllato.</Italian>
+            <Chinese>靜音玩家所控制的角色。</Chinese>
+            <Chinesesimp>静音玩家所控制的角色。</Chinesesimp>
+            <Japanese>プレイヤーに操作されているこのキャラをミュートします。</Japanese>
+        </Key>
+    </Package>
+</Project>

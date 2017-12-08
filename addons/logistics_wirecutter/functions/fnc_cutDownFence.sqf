@@ -19,17 +19,15 @@
 params ["_unit", "_fenceObject"];
 TRACE_2("params",_unit,_fenceObject);
 
-private ["_timeToCut", "_progressCheck", "_onCompletion", "_onFail"];
-
 if (_unit != ACE_player) exitWith {};
 
-_timeToCut = if ([_unit] call EFUNC(common,isEngineer)) then {7.5} else {11};
+private _timeToCut = if ([_unit] call EFUNC(common,isEngineer)) then {7.5} else {11};
 
 if !(_unit call EFUNC(common,isSwimming)) then {
     [_unit, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
 };
 
-_onCompletion = {
+private _onCompletion = {
     TRACE_1("_onCompletion",_this);
     (_this select 0) params ["_fenceObject", "", "_unit"];
     _fenceObject setdamage 1;
@@ -38,7 +36,7 @@ _onCompletion = {
     };
 };
 
-_onFail = {
+private _onFail = {
     TRACE_1("_onFail", _this);
     (_this select 0) params ["", "", "_unit"];
     if !(_unit call EFUNC(common,isSwimming)) then {
@@ -46,7 +44,7 @@ _onFail = {
     };
 };
 
-_progressCheck = {
+private _progressCheck = {
     params ["_args", "_passedTime"];
     _args params ["_fenceObject", "_lastSoundEffectTime", "_unit"];
 
@@ -59,3 +57,5 @@ _progressCheck = {
 };
 
 [_timeToCut, [_fenceObject,0,_unit], _onCompletion, _onFail, localize LSTRING(CuttingFence), _progressCheck, ["isNotSwimming"]] call EFUNC(common,progressBar);
+
+["ace_wireCuttingStarted", [_unit, _fenceObject]] call CBA_fnc_globalEvent;

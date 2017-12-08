@@ -8,7 +8,7 @@ class CfgVehicles {
     };
     class ACE_Module: Module_F {};
     class ACE_moduleCargoSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(SettingsModule_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Cargo_ca.paa);
         category = "ACE_Logistics";
@@ -40,7 +40,7 @@ class CfgVehicles {
         };
     };
     class GVAR(makeLoadable): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(makeLoadable_displayName);
         icon = QPATHTOF(UI\Icon_Module_makeLoadable_ca.paa);
         category = "ACE_Logistics";
@@ -198,6 +198,11 @@ class CfgVehicles {
     class Helicopter: Air {
         GVAR(space) = 8;
         GVAR(hasCargo) = 1;
+    };
+
+    class ParachuteBase: Helicopter {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
     };
 
     class Helicopter_Base_H;
@@ -451,7 +456,7 @@ class CfgVehicles {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
     };
-    
+
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
         class EventHandlers {
@@ -785,7 +790,7 @@ class CfgVehicles {
     class Land_PaperBox_01_small_closed_base_F: Items_base_F {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
-        
+
         maximumLoad = 1000;
         transportMaxBackpacks = 12;
         transportMaxMagazines = 64;

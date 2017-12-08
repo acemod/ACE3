@@ -22,7 +22,7 @@ params ["_unit", "_team"];
 
 // display message
 if (_unit == ACE_player) then {
-    private "_message";
+    private _message = "";
 
     if (_team == "MAIN") then {
         _message = localize LSTRING(LeftTeam);

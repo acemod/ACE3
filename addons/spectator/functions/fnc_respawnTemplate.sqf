@@ -23,6 +23,7 @@
 #include "script_component.hpp"
 
 params [["_newCorpse",objNull,[objNull]], ["_oldKiller",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
+TRACE_4("respawnTemplate",_newCorpse,_oldKiller,_respawn,_respawnDelay);
 
 // Compatibility handled via spectator display XEH
 if (_respawn in [0,1,4,5]) exitWith {
