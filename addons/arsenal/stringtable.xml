@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Arsenal">
         <Key ID="STR_ACE_Arsenal_buttonHideText">
@@ -294,9 +294,9 @@
             <Polish>Dodatkowy magazynek</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_settingCategory">
-            <English>ACE - Arsenal</English>
-            <French>ACE - Arsenal</French>
-            <Polish>ACE - Arsenał</Polish>
+            <English>ACE Arsenal</English>
+            <French>ACE Arsenal</French>
+            <Polish>ACE Arsenał</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultLoadoutsTooltip">
             <English>Allow the use of the default loadouts tab</English>
