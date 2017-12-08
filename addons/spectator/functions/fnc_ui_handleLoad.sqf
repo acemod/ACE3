@@ -20,6 +20,6 @@ params ["_display"];
 uiNamespace setVariable [QGVAR(display), _display];
 
 // Handle ACRE2 Toggle Spectator (if present)
-if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {
+if (!isNil "acre_api_fnc_addDisplayPassthroughKeys") then {
     [_display] call acre_api_fnc_addDisplayPassthroughKeys;
 };
