@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-[QGVAR(endRadioTransmissions)] call CBA_fnc_localEvent;
+["ace_endRadioTransmissions"] call CBA_fnc_localEvent;
 
 // ACRE
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
