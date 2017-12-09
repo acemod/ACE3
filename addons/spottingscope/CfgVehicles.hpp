@@ -123,6 +123,8 @@ class CfgVehicles {
                 opticsDisablePeripherialVision = 1;
             };
         };
+
+        editorPreview = QPATHTOF(data\preview_spottingscope.jpg);
     };
 
     class ACE_B_SpottingScope: ACE_SpottingScopeObject {
@@ -150,6 +152,24 @@ class CfgVehicles {
         side = 2;
         faction = "IND_F";
         crew = "I_spotter_F";
+    };
+
+    class ACE_B_T_SpottingScope: ACE_SpottingScopeObject {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_B_T_SpottingScope";
+        scope = 2;
+        side = 1;
+        faction = "BLU_T_F";
+        crew = "B_T_Spotter_F";
+    };
+
+    class ACE_O_T_SpottingScope: ACE_SpottingScopeObject {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_O_T_SpottingScope";
+        scope = 2;
+        side = 0;
+        faction = "OPF_T_F";
+        crew = "O_T_Spotter_F";
     };
 
     class Item_Base_F;
