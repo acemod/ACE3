@@ -111,7 +111,6 @@ if (isServer) then {
 
 if (hasInterface) then {
     GVAR(soundObjPool) = [];
-
     [QFUNC(poolGetObject), {
         private _pooledObject = GVAR(soundObjPool) param [0, [-999, objNull]];
         _pooledObject params ["_time", "_obj"];
@@ -125,21 +124,26 @@ if (hasInterface) then {
     }] call CBA_fnc_compileFinal;
 
     [QGVAR(playCookoffSound), {
-        params ["_obj", "_sound", "_maxDis"];
+        params ["_obj", "_sound", "_maxDist"];
         if (isNull _obj) exitWith {};
         private _distance = _obj distance (positionCameraToWorld [0,0,0]);
-        if (_distance > _maxDis) exitWith {};
-        _distance = _distance + (random (5) - 2.5);
-        private _dis = [["far", "mid"] select (_distance < 952), "close"] select (_distance < 325);
-        _sound = format [QGVAR(%1_%2_%3), _sound, _dis, (floor random 3) + 1];
+        if (_distance > _maxDist) exitWith {};
+
         // Delay sound after Rule of SOS.
         [{
-            params ["_obj", "_sound"];
-
+            params ["_obj", "_sound", "_maxDist"];
+            private _distance = _obj distance (positionCameraToWorld [0, 0, 0]); // update Value so that distance is correct to the current camera Position
+            private _sDistance = _distance + ((random 5) - 2.5);
+            private _disStep = [[["far", 1.5], ["mid", 1.3]] select (_sDistance < 952), ["close", 1]] select (_sDistance < 235);
+            _sound = format [QGVAR(%1_%2_%3), _sound, _disStep select 0, ceil (random 3)];
+            hintSilent _sound;
+            // fix for Vanilla Say3d Falloff
+            private _value = 1 - (_distance / _maxDist);
+            private _fakeValue = linearConversion ([[0, 0.7, _value, 1, 0.8], [0, 0.3, _value - 0.7, 0.8, 0]] select (_value >= 0.7));
             private _soundSource = call FUNC(poolGetObject);
             _soundSource setPos (getPos _obj);
-            _soundSource say3D [_sound, 3000, 0.9 + (random 0.2)];
-        }, [_obj, _sound], _distance / SPEED_OF_SOUND] call CBA_fnc_waitAndExecute;
+            _soundSource say3D [_sound, (_distance / _fakeValue) * (_disStep select 1), 0.9 + (random 0.2)];
+        }, [_obj, _sound, _maxDist], _distance / SPEED_OF_SOUND] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
 
     [{
