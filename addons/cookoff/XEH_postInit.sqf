@@ -139,7 +139,7 @@ if (hasInterface) then {
             hintSilent _sound;
             // fix for Vanilla Say3d Falloff
             private _value = 1 - (_distance / _maxDist);
-            private _fakeValue = linearConversion ([[0, 0.7, _value, 1, 0.8], [0, 0.3, _value - 0.7, 0.8, 0]] select (_value >= 0.7));
+            private _fakeValue = linearConversion ([[0, 0.7, _value, 1, 0.8], [0.7, 1, _value, 0.8, 0]] select (_value >= 0.7));
             private _soundSource = call FUNC(poolGetObject);
             _soundSource setPos (getPos _obj);
             _soundSource say3D [_sound, (_distance / _fakeValue) * (_disStep select 1), 0.9 + (random 0.2)];
