@@ -124,6 +124,24 @@ class CfgVehicles {
             };
         };
 
+        // damage handling
+        armor = 100;
+
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                QPATHTO_R(data\ace_spottingscope_metal.rvmat),
+                QPATHTO_R(data\ace_spottingscope_metal_damage.rvmat),
+                QPATHTO_R(data\ace_spottingscope_metal_destruct.rvmat),
+                QPATHTO_R(data\ace_spottingscope_glass.rvmat),
+                QPATHTO_R(data\ace_spottingscope_glass_damage.rvmat),
+                QPATHTO_R(data\ace_spottingscope_glass_destruct.rvmat),
+                QPATHTO_R(data\ace_spottingscope_rubber.rvmat),
+                QPATHTO_R(data\ace_spottingscope_rubber_damage.rvmat),
+                QPATHTO_R(data\ace_spottingscope_rubber_damage.rvmat)
+            };
+        };
+
         editorPreview = QPATHTOF(data\preview_spottingscope.jpg);
     };
 
