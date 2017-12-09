@@ -18,6 +18,14 @@ class CfgVehicles {
         };
     };
 
+    class ThingX;
+    class ACE_SpottingScope_Tube: ThingX {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        displayName = CSTRING(DisplayName);
+        model = QPATHTOF(data\ace_spottingscope_tube.p3d);
+    };
+
     class LandVehicle;
     class StaticWeapon: LandVehicle {
         class Turrets;
@@ -73,6 +81,21 @@ class CfgVehicles {
         getInAction = "PlayerProne";
         getOutAction = "PlayerProne";
         editorSubcategory = "EdSubcat_Turrets";
+
+        threat[] = {0.7, 0.3, 0};
+        accuracy = 0.12;
+        cost = 10000;
+        icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";
+
+        class SpeechVariants {
+            class Default {
+                speechSingular[] = {"veh_infantry_SF_s"};
+                speechPlural[] = {"veh_infantry_SF_p"};
+            };
+        };
+        textSingular = "$STR_A3_nameSound_veh_infantry_SF_s";
+        textPlural = "$STR_A3_nameSound_veh_infantry_SF_p";
+        nameSound = "veh_infantry_SF_s";
 
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -142,6 +165,17 @@ class CfgVehicles {
             };
         };
 
+        class DestructionEffects {
+            class Smoke {
+                simulation = "particles";
+                type = "WeaponWreckSmoke";
+                position = "eye"; //"destructionEffect";
+                intensity = 1;
+                interval = 1;
+                lifeTime = 5;
+            };
+        };
+
         editorPreview = QPATHTOF(data\preview_spottingscope.jpg);
     };
 
@@ -197,6 +231,8 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(DisplayName);
         vehicleClass = "Items";
+        editorCategory = "EdCat_Equipment";
+        editorSubcategory = "EdSubcat_InventoryItems";
         editorPreview = QPATHTOF(data\preview_spottingscope.jpg);
         class TransportItems {
             MACRO_ADDITEM(ACE_SpottingScope,1);
