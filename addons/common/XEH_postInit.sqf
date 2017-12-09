@@ -48,15 +48,16 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
-    private _visibility = _object getUnitTrait "camouflageCoef";
+    INFO("Note: getUnitTrait / camouflageCoef enum error can be ignored [present since Arma 3 v1.78] - IGNORE THIS");
+    private _vis = _object getUnitTrait "camouflageCoef";
     if (_set > 0) then {
-        if (_visibility != 0) then {
-            _object setVariable [QGVAR(oldVisibility), _visibility];
+        if (_vis != 0) then {
+            _object setVariable [QGVAR(oldVisibility), _vis];
             _object setUnitTrait ["camouflageCoef", 0];
         };
     } else {
-        _visibility = _object getVariable [QGVAR(oldVisibility), _visibility];
-        _object setUnitTrait ["camouflageCoef", _visibility];
+        _vis = _object getVariable [QGVAR(oldVisibility), _vis];
+        _object setUnitTrait ["camouflageCoef", _vis];
     };
 }] call CBA_fnc_addEventHandler;
 
