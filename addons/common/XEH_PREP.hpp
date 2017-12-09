@@ -87,6 +87,7 @@ PREP(getVersion);
 PREP(getWeaponAzimuthAndInclination);
 PREP(getWeaponIndex);
 PREP(getWeaponState);
+PREP(getWeight);
 PREP(getWindDirection);
 PREP(getZoom);
 PREP(goKneeling);

@@ -169,7 +169,10 @@ if (isServer) then {
             _x setDamage 1;
         };
         if (_x isKindOf "ReammoBox_F") then {
-            if ("ace_cookoff" call EFUNC(common,isModLoaded) && {EGVAR(cookoff,enable)}) then {
+            if (
+                "ace_cookoff" call EFUNC(common,isModLoaded) &&
+                {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
+            ) then {
                 _x call EFUNC(cookoff,cookOffBox);
             } else {
                 _x setDamage 1;

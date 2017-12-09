@@ -305,3 +305,9 @@ if (hasInterface) then {
         [player] call FUNC(init);
     }] call CBA_fnc_addEventHandler;
 };
+
+if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+    [QEGVAR(arsenal,displayOpened), {
+        EGVAR(arsenal,virtualItems) set [17, (EGVAR(arsenal,virtualItems) select 17) -  ["FirstAidKit", "Medikit"]];
+    }] call CBA_fnc_addEventHandler;
+};

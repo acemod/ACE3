@@ -34,10 +34,9 @@ private _windDirAdjusted = _windDir + 180;
 if (_windGradientEnabled) then {
     if (_windSpeed > 0.05) then {
         private _height = (ASLToATL _position) select 2;
-        _height = 0 max _height min 20;
-        if (_height < 20) then {
+        if (_height > 0 && _height < 20) then {
             private _roughnessLength = _position call FUNC(calculateRoughnessLength);
-            _windSpeed = _windSpeed * abs(ln(_height / _roughnessLength) / ln(20 / _roughnessLength));
+            _windSpeed = _windSpeed * (0 max (ln(_height / _roughnessLength) / ln(20 / _roughnessLength)));
         };
     };
 };

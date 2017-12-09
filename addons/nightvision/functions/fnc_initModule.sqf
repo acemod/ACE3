@@ -17,5 +17,6 @@
 #include "script_component.hpp"
 
 params ["_module"];
+TRACE_1("initModule",_module);
 
 [_module, QGVAR(disableNVGsWithSights), "disableNVGsWithSights"] call EFUNC(common,readSettingFromModule);
