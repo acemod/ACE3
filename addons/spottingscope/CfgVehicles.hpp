@@ -197,6 +197,7 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(DisplayName);
         vehicleClass = "Items";
+        editorPreview = QPATHTOF(data\preview_spottingscope.jpg);
         class TransportItems {
             MACRO_ADDITEM(ACE_SpottingScope,1);
         };
