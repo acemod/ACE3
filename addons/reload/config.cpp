@@ -19,4 +19,3 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgActions.hpp"
 #include "ACE_Settings.hpp"
-#include "ACE_UI.hpp"
