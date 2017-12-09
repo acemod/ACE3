@@ -97,5 +97,13 @@
             <Chinesesimp>备用降落伞</Chinesesimp>
             <Chinese>備用降落傘</Chinese>
         </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter">
+            <English>Hide Freefall Altimeter</English>
+            <German>Freifall-Höhenmesser verstecken</German>
+        </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
+            <English>Hides the altitude and speed shown while free falling or parachuting.</English>
+            <German>Blendet den Höhen- und Geschwindigkeitsmesser während des Fallschirmspringens aus.</German>
+        </Key>
     </Package>
 </Project>

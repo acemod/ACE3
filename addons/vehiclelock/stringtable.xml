@@ -6,6 +6,7 @@
             <Italian>Blocco Veicolo</Italian>
             <Chinese>載具上鎖</Chinese>
             <Chinesesimp>载具上锁</Chinesesimp>
+            <Japanese>車両の施錠</Japanese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
@@ -194,7 +195,7 @@
             <Hungarian>Jármű-zár beállítás</Hungarian>
             <Russian>Запирание транспорта</Russian>
             <Italian>Impostazioni Blocco Veicolo</Italian>
-            <Japanese>車両の施錠の設定</Japanese>
+            <Japanese>車両の施錠設定</Japanese>
             <Korean>차량 잠금 설정</Korean>
             <Chinesesimp>载具上锁设置</Chinesesimp>
             <Chinese>載具上鎖設置</Chinese>

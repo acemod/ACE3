@@ -20,6 +20,7 @@ params ["_unit", "_ladder"];
 
 // enable running again
 [_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
 
 private _pos1 = getPosASL _ladder;
 private _pos2 = AGLToASL (_ladder modelToWorld (_ladder selectionPosition "check2"));

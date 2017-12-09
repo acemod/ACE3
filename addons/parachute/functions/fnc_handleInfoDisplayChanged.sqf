@@ -18,7 +18,7 @@
 params ["_dialog", "_type"];
 
 // don't do anything in noob mode
-if (cadetMode) exitWith {};
+if (!GVAR(hideAltimeter)) exitWith {};
 
 switch (_type) do {
     case ("Parachute"): {

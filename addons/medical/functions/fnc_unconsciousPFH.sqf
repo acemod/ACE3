@@ -36,7 +36,7 @@ if (!alive _unit) exitWith {
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
         [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
     };
-    [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+    [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
 
@@ -104,7 +104,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
-        [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+        [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
 
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:

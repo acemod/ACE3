@@ -31,4 +31,6 @@
  // Standard deviation of the default muzzle velocity variation (0.3%)
 #define DEFAULT_MUZZLE_VELOCITY_VARIATION_SD 0.003
 
+#define BULLET_TRACE_MIN_VELOCITY 500
+
 #define EXTENSION_REQUIRED_VERSION "1.0"

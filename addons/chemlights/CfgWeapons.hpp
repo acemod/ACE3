@@ -57,6 +57,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Shield_Green_DescriptionShort);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = QPATHTOF(UI\ace_chemlight_shield_green_x_ca.paa);
+        ace_arsenal_uniqueBase = "ACE_Chemlight_Shield";
         scope = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
