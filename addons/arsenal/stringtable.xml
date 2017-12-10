@@ -318,5 +318,10 @@
             <French>Enregistre les objets manquants / indisponibles dans le RPT</French>
             <Polish>Rejestruj brakujące / niedostępne przedmioty do pliku RPT</Polish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_CantOpenDisplay">
+            <English>Unable to open ACE arsenal</English>
+            <French>Impossible d'ouvrir ACE arsenal</French>
+            <German>Kann ACE Arsenal nicht anzeigen</German>
+        </Key>
     </Package>
 </Project>
