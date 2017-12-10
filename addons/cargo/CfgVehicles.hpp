@@ -39,6 +39,10 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class GVAR(makeLoadable): Logic {
+        scope = 1;
+        displayName = "Delete (Deprecated in ACE3 3.12.0)";
+    };
 
     class LandVehicle;
     class Car: LandVehicle {
