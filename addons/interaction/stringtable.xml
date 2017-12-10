@@ -930,7 +930,7 @@
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
-            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか？標準：はい</Japanese>
+            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか? 標準: 有効化</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
@@ -1077,7 +1077,7 @@
         <Key ID="STR_ACE_Interaction_PullOutBody">
             <English>Pull out body</English>
             <Russian>Вытащить тело</Russian>
-            <Japanese>"身体を引き出す</Japanese>
+            <Japanese>身体を引き出す</Japanese>
         </Key>
     </Package>
 </Project>
