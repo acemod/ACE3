@@ -169,7 +169,7 @@ class CfgVehicles {
             class Smoke {
                 simulation = "particles";
                 type = "WeaponWreckSmoke";
-                position = "eye"; //"destructionEffect";
+                position = "destructionEffect";
                 intensity = 1;
                 interval = 1;
                 lifeTime = 5;
