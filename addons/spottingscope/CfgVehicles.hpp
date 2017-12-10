@@ -148,7 +148,7 @@ class CfgVehicles {
         };
 
         // damage handling
-        armor = 100;
+        armor = 80;
 
         class Damage {
             tex[] = {};
@@ -162,17 +162,6 @@ class CfgVehicles {
                 QPATHTO_R(data\ace_spottingscope_rubber.rvmat),
                 QPATHTO_R(data\ace_spottingscope_rubber_damage.rvmat),
                 QPATHTO_R(data\ace_spottingscope_rubber_damage.rvmat)
-            };
-        };
-
-        class DestructionEffects {
-            class Smoke {
-                simulation = "particles";
-                type = "WeaponWreckSmoke";
-                position = "destructionEffect";
-                intensity = 1;
-                interval = 1;
-                lifeTime = 5;
             };
         };
 
