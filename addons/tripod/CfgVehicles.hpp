@@ -95,5 +95,9 @@ class CfgVehicles {
                 };
             };
         };
+
+        editorCategory = "EdCat_Equipment";
+        editorSubcategory = "EdSubcat_InventoryItems";
+        editorPreview = QPATHTOF(data\preview_tripod.jpg);
     };
 };
