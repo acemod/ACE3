@@ -551,7 +551,7 @@ class CfgWeapons {
         class AP: AP {
             displayName = "L/60 Bofors Autocannon";
         };
-        class HE: AP {
+        class HE: HE {
             displayName = "L/60 Bofors Autocannon";
         };
     };
