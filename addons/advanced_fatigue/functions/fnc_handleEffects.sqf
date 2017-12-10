@@ -90,12 +90,12 @@ if (_overexhausted) then {
 
 switch (stance _unit) do {
     case ("CROUCH"): {
-        [_unit, QUOTE(ADDON), 1.0 + _fatigue ^ 2 * 0.1] call EFUNC(common,setAimCoef);
+        [_unit, QUOTE(ADDON), (1.0 + _fatigue ^ 2 * 0.1) * GVAR(swayFactor)] call EFUNC(common,setAimCoef);
     };
     case ("PRONE"): {
-        [_unit, QUOTE(ADDON), 1.0 + _fatigue ^ 2 * 2.0] call EFUNC(common,setAimCoef);
+        [_unit, QUOTE(ADDON), (1.0 + _fatigue ^ 2 * 2.0) * GVAR(swayFactor)] call EFUNC(common,setAimCoef);
     };
     default {
-        [_unit, QUOTE(ADDON), 1.5 + _fatigue ^ 2 * 3.0] call EFUNC(common,setAimCoef);
+        [_unit, QUOTE(ADDON), (1.5 + _fatigue ^ 2 * 3.0) * GVAR(swayFactor)] call EFUNC(common,setAimCoef);
     };
 };
