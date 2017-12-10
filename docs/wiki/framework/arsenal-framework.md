@@ -53,7 +53,7 @@ Examples:
  * 2: Add globally <BOOL>
  ```
 
-Same as adding virtual items, passing an array of string will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE arsenal.
+Like adding virtual items, passing an array of string will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE arsenal.
 
 Examples:
 
@@ -119,3 +119,9 @@ ACE arsenal has 2 new config entries for items:
 - `ace_arsenal_uniqueBase`: Classname of the item that ACE arsenal will replace it with when saving a loadout.
 
 Both of them are optional.
+
+## 4. Default loadouts
+
+While in 3DEN you have the ability to save default loadouts in ACE arsenal, doing so will make the saved loadouts available to all players (those loadouts are still subject to loadout verification).
+
+This loadout list can be exported to the clipboard by using <kbd>Shift</kbd>. + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
