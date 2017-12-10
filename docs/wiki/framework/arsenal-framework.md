@@ -20,6 +20,10 @@ version:
     <p>Units and objects that can have ACE arsenal added to them will be called "Boxes" in this documentation</p>
 </div>
 
+To quickly add a full ACE arsenal to a box:
+`[_box, true] call ace_arsenal_fnc_initBox`  
+`_box` being the object you wish to add arsenal to.
+
 ## 1. Virtual items
 
 Each box has an array of virtual items, it is sorted internally when adding items via `ace_arsenal_fnc_addVirtualItems`
@@ -34,7 +38,7 @@ Each box has an array of virtual items, it is sorted internally when adding item
  * 2: Add globally <BOOL>
 ```
 
-Passing an array of strings will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE arsenal (that sorting is done on game startup).
+Passing an array of strings (classnames) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE arsenal (that sorting is done on game startup).
 
 Examples:
 
@@ -75,7 +79,7 @@ Examples:
 - `[_box, true] call ace_arsenal_fnc_initBox`
 - `[_box, false, false] call ace_arsenal_fnc_initBox`
 
-Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.
+Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.  
 Please note that at least one virtual item need to be added otherwise ACE arsenal will not open.
 
 if you wish to open a full ACE arsenal on yourself or open ACE arsenal via a custom action you can use `ace_arsenal_fnc_openBox`.
