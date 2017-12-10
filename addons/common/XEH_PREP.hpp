@@ -4,6 +4,7 @@ PREP(cbaSettings);
 PREP(cbaSettings_loadFromConfig);
 PREP(cbaSettings_settingChanged);
 PREP(cbaSettings_transferUserSettings);
+PREP(readSettingsFromParamsArray);
 
 PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
