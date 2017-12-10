@@ -36,9 +36,6 @@ private _aceSettings = configProperties [configFile >> "ACE_Settings", "isClass 
             private _ret = [_settingName, _profileVar, 0, "client", true] call CBA_settings_fnc_set;
             INFO_3("Transfering setting [%1: %2] returned %3", _settingName, _profileVar, _ret);
         };
-
-        // Cleanup old profileNamespace
-        // profileNamespace setVariable [_settingName, nil];
     };
 } forEach _aceSettings;
 
