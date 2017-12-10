@@ -1,13 +1,9 @@
-class StageTI {
-    texture = "a3\data_f\Default_ti_ca.paa";
-};
-
-ambient[] = {0.301,0.63999999,0.68000001,1};
-diffuse[] = {0.301,0.63999999,0.68000001,1};
-forcedDiffuse[] = {0.2,0.34999999,0.2,0};
+ambient[] = {1,1,1,1};
+diffuse[] = {1,1,1,1};
+forcedDiffuse[] = {0,0,0,0};
 emmisive[] = {0,0,0,1};
-specular[] = {0.67450982,0.64313728,0.50196081,1};
-specularPower = 550;
+specular[] = {0.2,0.2,0.2,0};
+specularPower = 100;
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 
@@ -23,22 +19,22 @@ class Stage1 {
 };
 
 class Stage2 {
-    texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";
+    texture = "a3\data_f\destruct\destruct_rust_cdt.paa";
     uvSource = "tex";
     class uvTransform {
-        aside[] = {6,0,0};
-        up[] = {0,6,0};
+        aside[] = {8,8,0};
+        up[] = {-8,8,0};
         dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
 };
 
 class Stage3 {
-    texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
+    texture = "a3\data_f\destruct\destruct_rust_mca.paa";
     uvSource = "tex";
     class uvTransform {
-        aside[] = {1,0,0};
-        up[] = {0,1,0};
+        aside[] = {2,0,0};
+        up[] = {0,2,0};
         dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
