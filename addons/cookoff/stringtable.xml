@@ -118,11 +118,11 @@
         </Key>        
 		<Key ID="STR_ACE_CookOff_probabilityCoef_name">
 			<English>Cook-off probability coefficient</English>
-            <Japanese>誘爆の可能性係数</Japanese>
+			<Japanese>誘爆の可能性係数</Japanese>
 		</Key>
 		<Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
 			<English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
-            <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
+			<Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
 		</Key>
     </Package>
 </Project>
