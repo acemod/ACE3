@@ -117,12 +117,12 @@
             <Korean>쿡오프 지속 시간의 배수 [0 이면 비활성]</Korean>
         </Key>        
 		<Key ID="STR_ACE_CookOff_probabilityCoef_name">
-			<English>Cook-off probability coefficient</English>
-			<Japanese>誘爆の可能性係数</Japanese>
+            <English>Cook-off probability coefficient</English>
+            <Japanese>誘爆の可能性係数</Japanese>
 		</Key>
 		<Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
-			<English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
-			<Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
+            <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
+            <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
 		</Key>
     </Package>
 </Project>
