@@ -20,7 +20,7 @@ version:
     <p>Units and objects that can have ACE arsenal added to them will be called "Boxes" in this documentation</p>
 </div>
 
-To quickly add a full ACE arsenal to a box for all clients (do not use in init box):
+To quickly add a full ACE arsenal to a box for all clients (do not use in init fields):  
 `[_box, true] call ace_arsenal_fnc_initBox`  
 `_box` being the object you wish to add arsenal to.
 
