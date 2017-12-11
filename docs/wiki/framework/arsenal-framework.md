@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: ACE arsenal framework
-description: Explains how to interact with ACE arsenal APIs
+description: Explains how to interact with the ACE arsenal APIs
 group: framework
 parent: wiki
 mod: ace
@@ -25,8 +25,6 @@ To quickly add a full ACE arsenal to a box for all clients (do not use in init f
 `_box` being the object you wish to add arsenal to.
 
 ## 1. Virtual items
-
-Each box has an array of virtual items, it is sorted internally when adding items via `ace_arsenal_fnc_addVirtualItems`
 
 ### 1.1 Adding virtual items
 
@@ -53,7 +51,7 @@ Examples:
  * 2: Add globally <BOOL>
  ```
 
-Like adding virtual items, passing an array of string will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE arsenal.
+Like adding virtual items, passing an array of string (classnames) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE arsenal.
 
 Examples:
 
