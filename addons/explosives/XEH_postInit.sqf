@@ -43,15 +43,15 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(sendOrientations), {
-        params ["_logic"];
-        TRACE_1("sendOrientations received:",_logic);
+        params ["_owner"];
+        TRACE_1("sendOrientations received:",_owner);
         // Filter the array before sending it
         GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
             _x params ["_explosive"];
             (!isNull _explosive && {alive _explosive})
         };
         TRACE_1("orientationsSent sent:",GVAR(explosivesOrientations));
-        [QGVAR(orientationsSent), [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
+        [QGVAR(orientationsSent), [GVAR(explosivesOrientations)], _owner] call CBA_fnc_ownerEvent;
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -73,14 +73,11 @@ if (didJIP) then {
             TRACE_3("orientation set:",_explosive,_direction,_pitch);
             [_explosive, _direction, _pitch] call FUNC(setPosition);
         } forEach _explosivesOrientations;
-        deleteVehicle GVAR(localLogic);
-        GVAR(localLogic) = nil;
     }] call CBA_fnc_addEventHandler;
 
     //  Create a logic to get the client ID
-    GVAR(localLogic) = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    TRACE_1("sendOrientations sent:",GVAR(localLogic));
-    [QGVAR(sendOrientations), [GVAR(localLogic)]] call CBA_fnc_serverEvent;
+    TRACE_1("sendOrientations sent:",CBA_clientID);
+    [QGVAR(sendOrientations), CBA_clientID] call CBA_fnc_serverEvent;
 };
 
 ["ace_interactMenuOpened", {
