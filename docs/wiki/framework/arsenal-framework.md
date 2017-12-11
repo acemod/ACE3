@@ -20,9 +20,12 @@ version:
     <p>Units and objects that can have ACE Arsenal added to them will be called "Boxes" in this documentation.</p>
 </div>
 
-To quickly add a full ACE Arsenal to a box for all clients (do not use in init fields):  
-`[_box, true] call ace_arsenal_fnc_initBox`  
-`_box` being the object you wish to add ACE Arsenal to.
+```cpp
+[_box, true] call ace_arsenal_fnc_initBox;
+// To quickly add a full ACE Arsenal to a box for all clients
+```
+
+`_box` being the object you wish to add ACE Arsenal to. (or `this` when called from the box's init field)
 
 ## 1. Virtual items
 
@@ -33,10 +36,10 @@ To quickly add a full ACE Arsenal to a box for all clients (do not use in init f
  * Arguments:
  * 0: Box <OBJECT>
  * 1: Items <ARRAY of strings> or <BOOL>
- * 2: Add globally <BOOL>
+ * 2: Add globally <BOOL> (optional)
 ```
 
-Passing an array of strings (classnames) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (that sorting is done on game startup).
+Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup).
 
 Examples:
 
@@ -48,10 +51,10 @@ Examples:
 ```cpp
  * 0: Box <OBJECT>
  * 1: Items <ARRAY of strings> <BOOL>
- * 2: Add globally <BOOL>
+ * 2: Add globally <BOOL> (optional)
  ```
 
-Like adding virtual items, passing an array of string (classnames) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal.
+Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal.
 
 Examples:
 
@@ -66,7 +69,7 @@ Examples:
 ```cpp
  * 0: Box <OBJECT>
  * 1: Items <BOOL> or <ARRAY>
- * 2: Initialize globally <BOOL>
+ * 2: Initialize globally <BOOL> (optional)
 ```
 
 This will add the virtual items passed as arguments and add an ACE interaction to open ACE Arsenal.
@@ -78,7 +81,7 @@ Examples:
 - `[_box, false, false] call ace_arsenal_fnc_initBox`
 
 Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.  
-Please note that at least one virtual item need to be added otherwise ACE Arsenal will not open.
+Please note that at least one virtual item needs to be added otherwise ACE Arsenal will not open.
 
 if you wish to open a full ACE Arsenal on yourself or open ACE Arsenal via a custom action you can use `ace_arsenal_fnc_openBox`.
 
@@ -86,7 +89,7 @@ if you wish to open a full ACE Arsenal on yourself or open ACE Arsenal via a cus
 ```cpp
  * 0: Box <OBJECT>
  * 1: Unit to open ACE Arsenal on <OBJECT>
- * 2: Ignore virtual items and fill ACE Arsenal <BOOL>
+ * 2: Ignore virtual items and fill ACE Arsenal <BOOL> (optional)
 ```
 
 Examples:
@@ -98,12 +101,12 @@ In the second example a full ACE Arsenal will be opened on the player.
 
 ### 2.2 Removing the ACE Arsenal interaction
 
-In order to remove the ACE interaction added by initBox you need to either use removeBox or remove all virtual items, since we saw how to remove all virtual items above we'll be focusing on removeBox.
+In order to remove the ACE interaction added by `ace_arsenal_fnc_initBox` you need to either use `ace_arsenal_fnc_removeBox` or remove all virtual items, since we saw how to [remove all virtual items](#12-removing-virtual-items) above we'll be focusing on `ace_arsenal_fnc_removeBox`.
 
 `ace_arsenal_fnc_removeBox`
 ```cpp
  * 0: Box <OBJECT>
- * 1: Remove globally <BOOL>
+ * 1: Remove globally <BOOL> (optional)
 ```
 
 Example:
@@ -111,10 +114,10 @@ Example:
 
 ## 3. Config entries
 
-ACE arsenal has 2 new config entries for items:
+ACE Arsenal has 2 new config entries for items:
 
 - `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal.
-- `ace_arsenal_uniqueBase`: Classname of the item that ACE Arsenal will replace it with when saving a loadout.
+- `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout.
 
 Both of them are optional.
 
