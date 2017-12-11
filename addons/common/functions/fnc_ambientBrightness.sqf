@@ -8,6 +8,9 @@
  * Return Value:
  * Ambient brightness <NUMBER>
  *
+ * Example:
+ * [] call ace_common_fnc_ambientBrightness
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

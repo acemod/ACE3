@@ -19,10 +19,8 @@
 params ["_name", "_code"];
 TRACE_2("params",_name,_code);
 
-private ["_speedDial", "_found"];
-
-_speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
-_found = false;
+private _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
+private _found = false;
 
 if ((_code) == "") exitWith {
     [_name] call FUNC(removeFromSpeedDial);

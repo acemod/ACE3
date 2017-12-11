@@ -21,6 +21,7 @@ class CfgVehicles {
     class Bag_Base;
     class ACE_TacticalLadder_Pack: Bag_Base {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(DisplayName);
         descriptionShort = "";
         model = QPATHTOF(data\ace_tacticalladder_pack.p3d);

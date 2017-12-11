@@ -8,6 +8,9 @@
  * Return Value:
  * Nearest object in line of sight, objNull if none are found <OBJECT>
  *
+ * Example:
+ * [56] call ace_common_fnc_getTargetObject
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

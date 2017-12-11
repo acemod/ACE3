@@ -9,7 +9,7 @@
  * 3: Embargo delay <NUMBER> (Optional. Default: 1)
  *
  * Return Value:
- * Nothing.
+ * None
  *
  * Example:
  * [player, "balls", 2, 1] call ace_common_fnc_setVariablePublic;

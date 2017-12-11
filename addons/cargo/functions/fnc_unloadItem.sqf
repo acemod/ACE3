@@ -5,14 +5,15 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
+ * 2: Unloader <OBJECT> (default: objNull)
  *
  * Return Value:
- * Object unloaded <BOOL>
+ * Object was unloaded <BOOL>
  *
  * Example:
  * [object, vehicle] call ace_cargo_fnc_unloadItem
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
@@ -54,7 +55,7 @@ if (_item isEqualType objNull) then {
     // do both on server to ensure they are executed in the correct order
     [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
 } else {
-    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
+    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);
 };
 

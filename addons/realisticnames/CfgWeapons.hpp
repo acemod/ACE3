@@ -232,9 +232,6 @@ class CfgWeapons {
         displayName = CSTRING(srifle_DMR_03_woodland); //Mk-I EMR 7.62 mm (Woodland);
     };
 
-    class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
-        displayName = CSTRING(srifle_DMR_03_spotter); //NATO DMR (provisional) spotter;
-    };
     class DMR_04_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_04); //ASP-1 Kir 12.7 mm;
     };
@@ -319,7 +316,7 @@ class CfgWeapons {
         };
     };
 
-    class gatling_30mm: CannonCore { // This is a fictional veresion of the GSh-6-30, with 3 barrels
+    class gatling_30mm_base: CannonCore { // This is a fictional version of the GSh-6-30, with 3 barrels
         displayName = "GSh-3-30";
         class LowROF: Mode_FullAuto {
             displayName = "GSh-3-30";
@@ -351,7 +348,7 @@ class CfgWeapons {
 
     class MissileLauncher;
     class Missile_AGM_02_Plane_CAS_01_F: MissileLauncher {
-        displayName = "AGM-65 Maverick";
+        displayName = "AGM-65 Maverick G";
     };
     class Missile_AGM_01_Plane_CAS_02_F: Missile_AGM_02_Plane_CAS_01_F {
         displayName = "Kh-25MTP";
@@ -549,6 +546,16 @@ class CfgWeapons {
         };
     };
 
+    class autocannon_40mm_VTOL_01: autocannon_40mm_CTWS {
+        displayName = "L/60 Bofors Autocannon";
+        class AP: AP {
+            displayName = "L/60 Bofors Autocannon";
+        };
+        class HE: HE {
+            displayName = "L/60 Bofors Autocannon";
+        };
+    };
+
     class autocannon_30mm_CTWS: autocannon_Base_F {
         displayName = "Mk44 Bushmaster II";
         class AP: autocannon_Base_F {
@@ -602,7 +609,7 @@ class CfgWeapons {
     class arifle_CTAR_GL_hex_F: arifle_CTAR_GL_base_F {
         displayName = CSTRING(arifle_CTAR_GL_hex);
     };
-    
+
     class arifle_CTARS_base_F;
     class arifle_CTARS_blk_F: arifle_CTARS_base_F {
         displayName = CSTRING(arifle_CTARS_blk);

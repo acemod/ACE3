@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ACE_map_fnc_updateMapEffects
+ *
  * Public: No
  */
 
@@ -32,7 +35,7 @@ if (GVAR(mapShake)) then {
 
     // Only shake map while moving on foot
     private _speed = 0;
-    if (vehicle ACE_player == ACE_player) then {
+    if ((alive ACE_player) && {vehicle ACE_player == ACE_player}) then {
         _speed = vectorMagnitude (velocity ACE_player);
     };
 

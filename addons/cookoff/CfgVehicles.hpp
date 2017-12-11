@@ -1,11 +1,18 @@
 
 class CfgVehicles {
     class Sound;
-    class GVAR(Sound): Sound {
+    class GVAR(Sound_low): Sound {
         author = ECSTRING(common,ACETeam);
         _generalMacro = QGVAR(Sound);
         scope = 1;
-        sound = QGVAR(CookOff);
+        sound = QGVAR(CookOff_low);
+    };
+
+    class GVAR(Sound_mid): GVAR(Sound_low) {
+        sound = QGVAR(CookOff_mid);
+    };
+    class GVAR(Sound_high): GVAR(Sound_low) {
+        sound = QGVAR(CookOff_high);
     };
 
     class ThingX;
@@ -30,6 +37,7 @@ class CfgVehicles {
     class Tank_F: Tank {
         GVAR(ammoLocation) = "HitHull";
         GVAR(cookoffSelections)[] = {"poklop_gunner","poklop_commander"};
+        GVAR(probability) = 0.5;
     };
     class MBT_02_base_F: Tank_F {
         GVAR(ammoLocation) = "HitTurret";
@@ -39,9 +47,17 @@ class CfgVehicles {
     class Wheeled_APC_F: Car_F {
         GVAR(ammoLocation) = "HitHull";
         GVAR(cookoffSelections)[] = {"poklop_gunner","poklop_commander"};
+        GVAR(probability) = 0.8;
 
         // big explosions for wheeled APCs (same as for tanks)
         explosionEffect = "FuelExplosionBig";
+    };
+
+    class APC_Wheeled_02_base_F: Wheeled_APC_F { // Otokar ARMA - RCWS Turret
+        GVAR(ignoreTurret) = 1;
+    };
+    class APC_Tracked_01_base_F: Tank_F { // Namera, Nemmera - RCWS Turret
+        GVAR(ignoreTurret) = 1;
     };
 
     class B_MBT_01_base_F;

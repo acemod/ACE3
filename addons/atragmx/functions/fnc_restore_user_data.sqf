@@ -3,10 +3,10 @@
  * Reads user data from profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_restore_user_data
@@ -23,7 +23,7 @@ GVAR(atmosphereModeTBH) = profileNamespace getVariable ["ACE_ATragMX_atmosphereM
 GVAR(altitude) = -1000 max (profileNamespace getVariable ["ACE_ATragMX_altitude", 0]) min 20000;
 GVAR(temperature) = -50 max (profileNamespace getVariable ["ACE_ATragMX_temperature", 15]) min 160;
 GVAR(barometricPressure) = 340 max (profileNamespace getVariable ["ACE_ATragMX_barometricPressure", 1013.25]) min 1350;
-GVAR(relativeHumidity) = 0 max (profileNamespace getVariable ["ACE_ATragMX_relativeHumidity", 0.5]) min 1;
+GVAR(relativeHumidity) = 0 max (profileNamespace getVariable ["ACE_ATragMX_relativeHumidity", 0.0]) min 1;
 
 GVAR(showWind2) = profileNamespace getVariable ["ACE_ATragMX_showWind2", false];
 GVAR(showCoriolis) = profileNamespace getVariable ["ACE_ATragMX_showCoriolis", true];

@@ -17,9 +17,7 @@
 
 params ["_unit"];
 
-private ["_currentGlasses", "_position"];
-
-_currentGlasses = goggles _unit;
+private _currentGlasses = goggles _unit;
 
 if (_currentGlasses == "") exitWith {false};
 
@@ -27,6 +25,6 @@ if (_currentGlasses == "") exitWith {false};
 if (getNumber (configFile >> "CfgGlasses" >> _currentGlasses >> "ACE_Resistance") == 0) exitWith {false};
 
 // check if in water and has diving goggles or on land and not diving goggles
-_position = getPosASLW _unit;
+private _position = getPosASLW _unit;
 
 (surfaceIsWater _position && {_position select 2 < 0.25}) isEqualTo (_currentGlasses call FUNC(isDivingGoggles)) // return

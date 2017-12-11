@@ -28,6 +28,7 @@ TRACE_1("",GVAR(trenchPlacementData));
 
 // prevent the placing unit from running
 [_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
 
 // create the trench
 private _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
@@ -67,9 +68,8 @@ GVAR(digPFH) = [{
     // Stick the trench to the ground
     _basePos set [2, getTerrainHeightASL _basePos];
     private _minzoffset = 0;
-    private ["_ix","_iy"];
-    for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
-        for [{_iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
+    for [{private _ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
+        for [{private _iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
             private _pos = _basePos vectorAdd (_v2 vectorMultiply _ix)
                                     vectorAdd (_v1 vectorMultiply _iy);
             _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));

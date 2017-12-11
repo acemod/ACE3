@@ -65,7 +65,6 @@ if (_amountOfMagazines > 0) exitWith {
             private _velVec = _vectorAmmo vectorMultiply _speed;
             _projectile setVectorDir _velVec;
             _projectile setVelocity _velVec;
-            // [ACE_player, _projectile, [1,0,0,1]] call EFUNC(frag,addTrack); // visual debuging from ace_frag
         } else {
             _projectile setDamage 1;
         };

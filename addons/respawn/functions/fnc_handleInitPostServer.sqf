@@ -18,11 +18,9 @@
 
 params ["_unit"];
 
-private ["_groupUnit", "_rallypoint", "_leaderVarName"];
+private _groupUnit = group _unit; // _group is a reserved veriable and shouldn't be used
 
-_groupUnit = group _unit; // _group is a reserved veriable and shouldn't be used
-
-_rallypoint = [
+private _rallypoint = [
     objNull,
     missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
     missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
@@ -33,13 +31,15 @@ _rallypoint = [
 if (isNull _rallypoint) exitWith {};
 
 // find leader
-_leaderVarName = _groupUnit getVariable [QGVAR(leaderVarName), ""];
+private _leaderVarName = _groupUnit getVariable [QGVAR(leaderVarName), ""];
 
 // exit if group already has a playable slot assigned as rallypoint leader
 if (_leaderVarName != "") exitWith {
     // assign JIP unit as rallypoint leader
     if (str _unit == _leaderVarName) then {
-        _unit setVariable ["ACE_canMoveRallypoint", true, true];
+        if (isNil {_unit getVariable "ACE_canMoveRallypoint"}) then {
+            _unit setVariable ["ACE_canMoveRallypoint", true, true];
+        };
     };
 };
 
@@ -61,4 +61,6 @@ if (_leaderVarName == "") then {
 // prevent group from getting multiple leaders; use this to assign rallypoint moving ability on JIP
 _groupUnit setVariable [QGVAR(leaderVarName), _leaderVarName];
 
-_unit setVariable ["ACE_canMoveRallypoint", true, true];
+if (isNil {_unit getVariable "ACE_canMoveRallypoint"}) then {
+    _unit setVariable ["ACE_canMoveRallypoint", true, true];
+};

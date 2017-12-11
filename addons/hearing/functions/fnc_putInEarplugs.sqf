@@ -3,7 +3,7 @@
  * Puts in earplugs.
  *
  * Arguments:
- * 0:Unit (player) <OBJECT>
+ * 0: Unit (player) <OBJECT>
  *
  * Return Value:
  * None

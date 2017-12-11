@@ -3,12 +3,13 @@
  * Shows the Yardage 450 screen elements
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_yardage450_fnc_turnOn
  *
  * Public: No
  */

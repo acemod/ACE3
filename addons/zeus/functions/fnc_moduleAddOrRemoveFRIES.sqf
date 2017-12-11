@@ -10,13 +10,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleAddOrRemoveFRIES
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
+params ["_logic"];
 
-if !(_activated && {local _logic}) exitWith {};
+if !(local _logic) exitWith {};
 
 if !(["ace_fastroping"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);

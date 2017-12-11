@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_advanced_throwing_fnc_renderPickUpInteraction

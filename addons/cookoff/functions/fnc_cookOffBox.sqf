@@ -44,11 +44,9 @@ if (local _box) then {
 
         // These functions are smart and do all the cooking off work
         if (local _box) then {
-            if (_box getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
-                if (GVAR(ammoCookoffDuration) == 0) exitWith {};
-                ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
-                [_box, _mags, _total] call FUNC(detonateAmmunition);
-            };
+            if (GVAR(ammoCookoffDuration) == 0) exitWith {};
+            ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
+            [_box, _mags, _total] call FUNC(detonateAmmunition);
 
             // This shit is busy being on fire, magazines aren't accessible/usable
             clearMagazineCargoGlobal _box;
@@ -71,6 +69,6 @@ if (local _box) then {
             if (local _box) then {
                 _box setDamage 1;
             };
-        }, [_box, _effects], 82.5] call CBA_fnc_waitAndExecute; // Give signifcant time for ammo cookoff to occur (perhaps keep the box alive until all cooked off?)
-    }, [_box, _effects], 10.5] call CBA_fnc_waitAndExecute;
-}, _box, 3] call CBA_fnc_waitAndExecute;
+        }, [_box, _effects], COOKOFF_TIME_BOX] call CBA_fnc_waitAndExecute; // TODO: Change so that box is alive until no ammo left, with locality in mind
+    }, [_box, _effects], SMOKE_TIME] call CBA_fnc_waitAndExecute;
+}, _box, IGNITE_TIME] call CBA_fnc_waitAndExecute;

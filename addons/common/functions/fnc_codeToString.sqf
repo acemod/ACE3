@@ -8,6 +8,9 @@
  * Return Value:
  * Code <STRING>
  *
+ * Example:
+ * ["bob"] call ace_common_fnc_codeToString
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

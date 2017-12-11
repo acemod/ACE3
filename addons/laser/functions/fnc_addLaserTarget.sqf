@@ -6,7 +6,7 @@
  * 0: TargetObject (vanilla laser) <OBJECT>
  * 1: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

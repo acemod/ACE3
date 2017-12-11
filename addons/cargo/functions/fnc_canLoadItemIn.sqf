@@ -34,10 +34,11 @@ if (_item  isEqualType "") then {
 } else {
     _validItem =
         (alive _item) &&
-        {(_item distance _vehicle) <= MAX_LOAD_DISTANCE};
+        {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE};
 };
 
 _validItem &&
 {_itemSize > 0} &&
 {alive _vehicle} &&
-{_itemSize <= ([_vehicle] call FUNC(getCargoSpaceLeft))}
+{_itemSize <= ([_vehicle] call FUNC(getCargoSpaceLeft))} &&
+{locked _vehicle < 2}

@@ -7,8 +7,11 @@
  * 1: Show <BOOL> (default: true)
  * 2: Selection <NUMBER> (default: 0)
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true, 2] call ACE_medical_fnc_displayPatientInformation
  *
  * Public: No
  */
@@ -28,7 +31,6 @@ if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 
     [{
-        private ["_target", "_display", "_alphaLevel", "_damaged", "_availableSelections", "_openWounds", "_selectionBloodLoss", "_red", "_green", "_blue", "_alphaLevel", "_allInjuryTexts", "_lbCtrl", "_genericMessages"];
         params ["_args", "_idPFH"];
         _args params ["_target", "_selectionN"];
 
@@ -68,7 +70,7 @@ if (_show) then {
         };
 
         private _totalIvVolume = 0;
-        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
+        private _bloodBags = _target getVariable [QGVAR(ivBags), []];
         {
             _x params ["_bagVolumeRemaining"];
             _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;

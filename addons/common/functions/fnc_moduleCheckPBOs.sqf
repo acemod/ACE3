@@ -10,11 +10,12 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_common_fnc_moduleCheckPBOs
+ *
  * Public: No
  */
 #include "script_component.hpp"
-
-if !(isServer) exitWith {};
 
 params ["_logic", "_units", "_activated"];
 
