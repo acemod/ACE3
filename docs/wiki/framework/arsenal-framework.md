@@ -13,16 +13,13 @@ version:
 
 <div class="panel callout">
     <h5>BI functions and variables from BI Virtual Arsenal DO NOT apply to ACE Arsenal!</h5>
-</div>
 
-<div class="panel callout">
-    <h5>Note:</h5>
     <p>Units and objects that can have ACE Arsenal added to them will be called "Boxes" in this documentation.</p>
 </div>
 
 ```cpp
-[_box, true] call ace_arsenal_fnc_initBox;
 // To quickly add a full ACE Arsenal to a box for all clients
+[_box, true] call ace_arsenal_fnc_initBox;
 ```
 
 `_box` being the object you wish to add ACE Arsenal to. (or `this` when called from the box's init field)
