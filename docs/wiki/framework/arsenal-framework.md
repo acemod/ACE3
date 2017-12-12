@@ -42,7 +42,6 @@ version:
 Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup).
 
 Examples:
-
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
 - `[_box, true, false] call ace_arsenal_fnc_addVirtualItems`
 
@@ -57,7 +56,6 @@ Examples:
 Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal.
 
 Examples:
-
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_removeVirtualItems`
 - `[_box, true, false] call ace_arsenal_fnc_removeVirtualItems`
 
@@ -75,7 +73,6 @@ Examples:
 This will add the virtual items passed as arguments and add an ACE interaction to open ACE Arsenal.
 
 Examples:
-
 - `[_box, ["MyItem1", "MyItem2", "MyItemN"]] call ace_arsenal_fnc_initBox`
 - `[_box, true] call ace_arsenal_fnc_initBox`
 - `[_box, false, false] call ace_arsenal_fnc_initBox`
@@ -93,7 +90,6 @@ if you wish to open a full ACE Arsenal on yourself or open ACE Arsenal via a cus
 ```
 
 Examples:
-
 - `[_box, player] call ace_arsenal_fnc_openBox`
 - `[player, player, true] call ace_arsenal_fnc_openBox`
 
@@ -109,7 +105,7 @@ In order to remove the ACE interaction added by `ace_arsenal_fnc_initBox` you ne
  * 1: Remove globally <BOOL> (optional)
 ```
 
-Example:
+Example:  
 `[_box, true] call ace_arsenal_fnc_removeBox`
 
 ## 3. Config entries
