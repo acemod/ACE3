@@ -27,7 +27,11 @@ private _surfaceClass = (surfaceType _posASL) select [1];
 private _config = configFile >> "CfgSurfaces" >> _surfaceClass;
 private _surfaceType = getText (_config >> "soundEnviron");
 private _surfaceDust = getNumber (_config >> "dust");
-private _canDig = getNumber (_config >> "ACE_canDig") == 1;
+
 TRACE_2("Surface",_surfaceType,_surfaceDust);
 
-_canDig || !{(_surfaceType in DIG_SURFACE_BLACKLIST) && {(_surfaceDust >= 0.1) || {_surfaceType in DIG_SURFACE_WHITELIST}}}
+if (isNumber (_config >> "ACE_canDig")) then {
+    getNumber (_config >> "ACE_canDig") // return
+} else {
+    !(_surfaceType in DIG_SURFACE_BLACKLIST) && {(_surfaceDust >= 0.1) || {_surfaceType in DIG_SURFACE_WHITELIST}} // return
+};
