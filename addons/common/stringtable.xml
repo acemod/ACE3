@@ -493,7 +493,7 @@
             <Italian>Controlla Whitelist PBO</Italian>
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查PBO白名单</Chinesesimp>
-            <Japanese>ホワイトリスト内の PBO を検査</Japanese>
+            <Japanese>許可リスト内の PBO を検査</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -626,10 +626,12 @@
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
             <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
+            <Japanese>武器のレーザー ポインタ/フラッシュライトの永続</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
             <Russian>Включать ЛЦУ/тактический фонарь после смены оружия или входа/выхода из машины, если он был до этого включен.</Russian>
+            <Japanese>銃のライト等を点けていると武器を切り替えた後や車両を乗り降りしても、ライト等を点けたままにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -753,7 +755,7 @@
             <Hungarian>Figyelmeztetés (tartós)</Hungarian>
             <Russian>Предупреждать (постоянно)</Russian>
             <Italian>Avverti (permanente)</Italian>
-            <Japanese>警告（永久的）</Japanese>
+            <Japanese>警告 (永久的)</Japanese>
             <Korean>경고 (영구적)</Korean>
             <Chinese>警告 (持續)</Chinese>
             <Chinesesimp>警告 (持续)</Chinesesimp>
@@ -1142,7 +1144,7 @@
             <Portuguese>Peso:</Portuguese>
             <Hungarian>Súly:</Hungarian>
             <Russian>Вес:</Russian>
-            <Japanese>重量：</Japanese>
+            <Japanese>重量:</Japanese>
             <Korean>무게:</Korean>
             <Chinesesimp>重量:</Chinesesimp>
             <Chinese>重量:</Chinese>

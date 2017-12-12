@@ -41,7 +41,7 @@
             <Italian>Quanto velocemente dovrebbe essere rifornito un veicolo?</Italian>
             <Spanish>Cuán rápido se reabastecen los vehículos?</Spanish>
             <French>A quelle vitesse devrait être ravitaillé un véhicule ?</French>
-            <Japanese>どのくらいの速さで車両へ給油しますか？</Japanese>
+            <Japanese>どのくらいの速さで車両へ給油しますか?</Japanese>
             <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
             <Chinesesimp>载具多快会加油完毕?</Chinesesimp>
             <Chinese>載具多快會加油完畢?</Chinese>
@@ -86,7 +86,7 @@
             <Italian>Prendendo manicotto benzina...</Italian>
             <Spanish>Tomando surtidor...</Spanish>
             <French>Prise de la pompe...</French>
-            <Japanese>給油ノズルを取っている・・・</Japanese>
+            <Japanese>給油ノズルを取っています・・・</Japanese>
             <Korean>주유기 획득중...</Korean>
             <Chinesesimp>拿取燃料喷嘴中...</Chinesesimp>
             <Chinese>拿取燃料噴嘴中...</Chinese>
@@ -116,7 +116,7 @@
             <Italian>Collegando manicotto benzina...</Italian>
             <Spanish>Conectando surtidor...</Spanish>
             <French>Connection de la pompe...</French>
-            <Japanese>給油ノズルを接続している・・・</Japanese>
+            <Japanese>給油ノズルを接続しています・・・</Japanese>
             <Korean>주유기 꼽는중...</Korean>
             <Chinesesimp>连结燃料喷嘴中...</Chinesesimp>
             <Chinese>連結燃料噴嘴中...</Chinese>
@@ -176,7 +176,7 @@
             <Italian>Controllando la benzina rimanente...</Italian>
             <Spanish>Verificando combustible remanente,,,</Spanish>
             <French>Vérifie le carburant restant...</French>
-            <Japanese>残燃料を見ている・・・</Japanese>
+            <Japanese>残燃料を見ています・・・</Japanese>
             <Korean>남은 연료 확인중...</Korean>
             <Chinesesimp>检查剩余燃料中...</Chinesesimp>
             <Chinese>檢查剩餘燃料中...</Chinese>
@@ -395,7 +395,7 @@
             <Italian>Riponendo la manica della benzina...</Italian>
             <Spanish>Devolviendo el surtidor...</Spanish>
             <French>Retourne la pompe</French>
-            <Japanese>給油ノズルを戻している・・・</Japanese>
+            <Japanese>給油ノズルを戻しています・・・</Japanese>
             <Korean>주유기 반환중</Korean>
             <Chinesesimp>放回燃料喷嘴中...</Chinesesimp>
             <Chinese>放回燃料噴嘴中...</Chinese>
