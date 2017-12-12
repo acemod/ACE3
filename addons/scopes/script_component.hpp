@@ -14,7 +14,11 @@
 #define MINOR_INCREMENT false
 #define MAJOR_INCREMENT true
 
-#define DEFAULT_RAIL_BASE_ANGLE 0.0086
+#define MIN_INCREMENT 0.05 // mrad
+
+#define DEFAULT_RAIL_BASE_ANGLE 0.0086 // deg
+
+// #define DISABLE_DISPERSION
 
 #ifdef DEBUG_ENABLED_SCOPES
     #define DEBUG_MODE_FULL

@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
+        <Key ID="STR_ACE_Interaction_DisplayName">
+            <English>Interaction</English>
+            <German>Interaktion</German>
+            <Italian>Interazione</Italian>
+            <Chinese>互動</Chinese>
+            <Chinesesimp>互动</Chinesesimp>
+            <Japanese>インタラクション</Japanese>
+        </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
             <German>Interaktionen</German>
@@ -300,7 +308,7 @@
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
             <Italian>DANZA!</Italian>
-            <Japanese>おどれ！</Japanese>
+            <Japanese>おどれ!</Japanese>
             <Korean>춤추기!</Korean>
             <Chinesesimp>跳舞</Chinesesimp>
             <Chinese>跳舞</Chinese>
@@ -444,7 +452,7 @@
             <Hungarian>Tűnés!</Hungarian>
             <Portuguese>Vá Embora!</Portuguese>
             <Italian>Via di qui!</Italian>
-            <Japanese>うせろ！</Japanese>
+            <Japanese>失せろ!</Japanese>
             <Korean>저리 가!</Korean>
             <Chinesesimp>走开!</Chinesesimp>
             <Chinese>走開!</Chinese>
@@ -460,7 +468,7 @@
             <Russian>Ложись!</Russian>
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
-            <Japanese>ふせろ！</Japanese>
+            <Japanese>伏せろ!</Japanese>
             <Korean>엎드려!</Korean>
             <Chinesesimp>趴下!</Chinesesimp>
             <Chinese>趴下!</Chinese>
@@ -474,7 +482,7 @@
             <French>Sortez !</French>
             <Russian>Выходи</Russian>
             <Czech>Vystupte</Czech>
-            <Japanese>降りる</Japanese>
+            <Japanese>降りろ</Japanese>
             <Korean>나가</Korean>
             <Chinesesimp>出去</Chinesesimp>
             <Chinese>出去</Chinese>
@@ -922,7 +930,7 @@
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
-            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか？標準：はい</Japanese>
+            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか? 標準: 有効化</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
@@ -1065,6 +1073,11 @@
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PullOutBody">
+            <English>Pull out body</English>
+            <Russian>Вытащить тело</Russian>
+            <Japanese>身体を引き出す</Japanese>
         </Key>
     </Package>
 </Project>

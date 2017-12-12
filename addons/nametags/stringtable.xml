@@ -204,7 +204,7 @@
             <Hungarian>Névcímkék megjelenítése AI-nál?</Hungarian>
             <Russian>Показывать имена ботов?</Russian>
             <Italian>Mostra etichette nomi per IA?</Italian>
-            <Japanese>AI の名札も表示しますか？</Japanese>
+            <Japanese>AI の名札も表示しますか?</Japanese>
             <Korean>인공지능의 이름도 표시합니까?</Korean>
             <Chinesesimp>显示AI名称?</Chinesesimp>
             <Chinese>顯示AI名稱?</Chinese>
@@ -220,7 +220,7 @@
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
-            <Japanese>友軍の AI にも名前と階級を表示しますか？標準: 強制しない</Japanese>
+            <Japanese>友軍の AI にも名前と階級を表示しますか? 標準: 強制しない</Japanese>
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示友军AI的名称和军阶? 预设: 不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>

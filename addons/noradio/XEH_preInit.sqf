@@ -27,7 +27,7 @@ if (hasInterface) then {
     }, true] call CBA_fnc_addPlayerEventHandler;
 };
 
-[QGVAR(enabled), "CHECKBOX", [LSTRING(setting), LSTRING(setting_tooltip)], localize ELSTRING(common,ACEKeybindCategoryCommon), true, nil, {
+[QGVAR(enabled), "CHECKBOX", [LSTRING(setting), LSTRING(setting_tooltip)], format ["ACE %1", localize ELSTRING(common,DisplayName)], true, true, {
     params ["_enabled"];
 
     if (_enabled) then {

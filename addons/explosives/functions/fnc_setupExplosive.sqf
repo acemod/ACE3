@@ -31,6 +31,7 @@ private _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >>
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
 [_unit, "forceWalk", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
@@ -149,6 +150,7 @@ GVAR(TweakedAngle) = 0;
         GVAR(pfeh_running) = false;
 
         [_unit, "forceWalk", "ACE_Explosives", false] call EFUNC(common,statusEffect_set);
+        [_unit, "blockThrow", "ACE_Explosives", false] call EFUNC(common,statusEffect_set);
         [] call EFUNC(interaction,hideMouseHint);
         [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
         [_unit, "zoomtemp", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);

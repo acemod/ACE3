@@ -1,10 +1,5 @@
-
-PREP(doLanding);
-PREP(handleInfoDisplayChanged);
-PREP(handleRespawn);
-PREP(hideAltimeter);
-PREP(onEachFrame);
-PREP(showAltimeter);
 PREP(cutParachute);
-PREP(checkCutParachute);
-PREP(storeParachute);
+PREP(handleInfoDisplayChanged);
+PREP(handleReserve);
+PREP(hideAltimeter);
+PREP(showAltimeter);

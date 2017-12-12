@@ -23,27 +23,25 @@
 params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
 TRACE_4("params",_unit,_weapon,_ammo,_projectile);
 
-// Only do heat calculations every 3 bullets
-if (((_unit ammo _weapon) % 3) != 0) exitWith {};
-
 BEGIN_COUNTER(overheat);
 
 // Get bullet parameters
-private _bulletMass = GVAR(cacheAmmoData) getVariable _ammo;
-if (isNil "_bulletMass") then {
+private _energyIncrement = GVAR(cacheAmmoData) getVariable _ammo;
+if (isNil "_energyIncrement") then {
     _bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
     if (_bulletMass == 0) then {
         // If the bullet mass is not configured, estimate it
         _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
     };
-    GVAR(cacheAmmoData) setVariable [_ammo, _bulletMass];
-};
+    
+    // Projectile motion is roughly equal to Barrel heat
+    // Ref: https://en.wikipedia.org/wiki/Physics_of_firearms
+    // Muzzle Engergy = 1/2 * m * v^2 = (1/2 * 0.001 g/kg * bulletMass (grams) * v^2)
+    // Multiple by 3 becase we only calc every 3rd bullet: (3 * 1/2 * 0.001) = 0.0015
+    private _energyIncrement = 0.0015 * _bulletMass * (vectorMagnitudeSqr velocity _projectile);
 
-// Projectile motion is roughly equal to Barrel heat
-// Ref: https://en.wikipedia.org/wiki/Physics_of_firearms
-// Muzzle Engergy = 1/2 * m * v^2 = (1/2 * 0.001 g/kg * bulletMass (grams) * v^2)
-// Multiple by 3 becase we only calc every 3rd bullet: (3 * 1/2 * 0.001) = 0.0015
-private _energyIncrement = 0.0015 * _bulletMass * (vectorMagnitudeSqr velocity _projectile);
+    GVAR(cacheAmmoData) setVariable [_ammo, _energyIncrement];
+};
 
 // Increase overheating depending on how obstrusive is the current supressor,
 // if any. Typical arma supressors have visibleFire=0.5 and audibleFire=0.3,
@@ -64,7 +62,7 @@ if (_silencer != "") then {
     _energyIncrement = _energyIncrement * _silencerCoef;
 };
 
-TRACE_2("heat",_bulletMass,_energyIncrement);
+TRACE_1("heat",_energyIncrement);
 
 [_unit, _weapon, _energyIncrement] call FUNC(updateTemperature);
 

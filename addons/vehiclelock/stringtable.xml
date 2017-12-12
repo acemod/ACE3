@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="VehicleLock">
+        <Key ID="STR_ACE_VehicleLock_DisplayName">
+            <English>Vehicle Lock</English>
+            <Italian>Blocco Veicolo</Italian>
+            <Chinese>載具上鎖</Chinese>
+            <Chinesesimp>载具上锁</Chinesesimp>
+            <Japanese>車両の施錠</Japanese>
+        </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
             <German>Fahrzeug aufschließen</German>
@@ -10,7 +17,7 @@
             <Czech>Odemknout vozidlo</Czech>
             <Hungarian>Jármű nyitása</Hungarian>
             <Russian>Открыть машину</Russian>
-            <Italian>Sblocca il veicolo</Italian>
+            <Italian>Sblocca il Veicolo</Italian>
             <Portuguese>Destravar veículo</Portuguese>
             <Japanese>車両の鍵を開ける</Japanese>
             <Korean>차량 잠금열기</Korean>
@@ -26,7 +33,7 @@
             <Czech>Zamknout vozidlo</Czech>
             <Hungarian>Jármű zárása</Hungarian>
             <Russian>Закрыть машину</Russian>
-            <Italian>Chiudi il veicolo a chiave</Italian>
+            <Italian>Chiudi il Veicolo a chiave</Italian>
             <Portuguese>Travar Veículo</Portuguese>
             <Japanese>車両を施錠</Japanese>
             <Korean>차량 잠그기</Korean>
@@ -188,7 +195,7 @@
             <Hungarian>Jármű-zár beállítás</Hungarian>
             <Russian>Запирание транспорта</Russian>
             <Italian>Impostazioni Blocco Veicolo</Italian>
-            <Japanese>車両の施錠の設定</Japanese>
+            <Japanese>車両の施錠設定</Japanese>
             <Korean>차량 잠금 설정</Korean>
             <Chinesesimp>载具上锁设置</Chinesesimp>
             <Chinese>載具上鎖設置</Chinese>

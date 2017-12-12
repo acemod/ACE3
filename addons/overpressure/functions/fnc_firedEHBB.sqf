@@ -54,6 +54,8 @@ if (_distance < _backblastRange) then {
     if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_unit] call EFUNC(medical,hasMedicalEnabled))}) then {
         [_unit, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
     } else {
+        TRACE_1("",isDamageAllowed _x);
+        if (!isDamageAllowed _x) exitWith {}; // Skip damage if not allowed
         _unit setDamage (damage _unit + _damage);
     };
 };

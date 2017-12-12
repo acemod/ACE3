@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
+        <Key ID="STR_ACE_Respawn_DisplayName">
+            <English>Respawn</English>
+            <Italian>Riapparizione</Italian>
+            <Chinese>重生</Chinese>
+            <Chinesesimp>重生</Chinesesimp>
+            <Japanese>リスポン</Japanese>
+        </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
             <French>Déploiement dans 5 secondes...</French>
@@ -220,7 +227,7 @@
             <Hungarian>Felszerelés elmentése?</Hungarian>
             <Russian>Сохранять снаряжение?</Russian>
             <Italian>Salva Equipaggiamento?</Italian>
-            <Japanese>装備を保存？</Japanese>
+            <Japanese>装備を保存?</Japanese>
             <Korean>장비를 저장합니까?</Korean>
             <Chinesesimp>储存装备?</Chinesesimp>
             <Chinese>儲存裝備?</Chinese>
@@ -236,7 +243,7 @@
             <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
             <Russian>Возрождать солдата с тем же снаряжением, которое было на нем при смерти?</Russian>
             <Italian>Respawna con l'equipaggiamento che il soldato aveva appena prima di morire?</Italian>
-            <Japanese>ユニットが死ぬ前に持っていた装備でリスポンしますか？</Japanese>
+            <Japanese>ユニットが死ぬ前に持っていた装備でリスポンしますか?</Japanese>
             <Korean>죽기 전에 가지고 있던 장비로 재배치합니까?</Korean>
             <Chinesesimp>是否在重生时载入死亡前的装备?</Chinesesimp>
             <Chinese>是否在重生時載入死亡前的裝備?</Chinese>
@@ -252,7 +259,7 @@
             <Hungarian>Holttestek eltávolítása?</Hungarian>
             <Russian>Удалять трупы?</Russian>
             <Italian>Rimuovi corpi?</Italian>
-            <Japanese>死体を削除？</Japanese>
+            <Japanese>死体を削除?</Japanese>
             <Korean>시체를 제거합니까?</Korean>
             <Chinesesimp>删除尸体?</Chinesesimp>
             <Chinese>刪除屍體?</Chinese>
@@ -268,10 +275,17 @@
             <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
             <Russian>Удалять трупы игроков после дисконнекта?</Russian>
             <Italian>Rimuovi i corpi dei giocatori quando si disconnettono?</Italian>
-            <Japanese>切断後はプレイヤーの死体を削除しますか？</Japanese>
+            <Japanese>切断後はプレイヤーの死体を削除しますか?</Japanese>
             <Korean>접속이 끊긴 플레이어의 시체를 제거합니까?</Korean>
             <Chinesesimp>要删除已离线的玩家尸体吗?</Chinesesimp>
             <Chinese>要刪除已離線的玩家屍體嗎?</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
+            <English>Body remove timer</English>
+            <Italian>Timer rimozione corpo</Italian>
+            <Chinese>屍體移除計時器</Chinese>
+            <Chinesesimp>尸体移除计时器</Chinesesimp>
+            <Japanese>死体削除タイマー</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
@@ -283,7 +297,7 @@
             <French>Ce module permet de régler les options de Respawn</French>
             <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
             <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
-            <Japanese>あなたが設定した ACE 機能をリスポンへ設定できます。</Japanese>
+            <Japanese>このモジュールを有効化するとリスポンへ ACE 機能を設定できます。</Japanese>
             <Korean>이 모듈은 ACE 재배치의 자세한 설정을 변결할 수 있게 해줍니다.</Korean>
             <Chinesesimp>该模块使您可以设定ACE的重生功能</Chinesesimp>
             <Chinese>該模塊使您可以設定ACE的重生功能</Chinese>

@@ -1,6 +1,6 @@
 /*
- * Author: joko // Jonas
- * Cut Parachute and delete Old
+ * Author: joko, Jonas, SilentSpike
+ * Perform the cut parachute action (move unit out and delete)
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -9,13 +9,11 @@
  * None
  *
  * Example:
- * [player] call FUNC(cutParachute);
+ * [player, vehicle player] call FUNC(cutParachute);
  *
  * Public: No
  */
 #include "script_component.hpp"
-params ["_unit"];
-private _vehicle = vehicle _unit;
-_unit action ["GetOut", _vehicle];
-deleteVehicle _vehicle;
-_unit setVariable [QGVAR(chuteIsCut), true, true];
+params ["_unit", "_parachute"];
+_unit action ["GetOut", _parachute];
+deleteVehicle _parachute;

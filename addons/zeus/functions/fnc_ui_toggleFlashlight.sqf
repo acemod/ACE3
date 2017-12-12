@@ -126,18 +126,7 @@ private _fnc_onConfirm = {
     private _target = _combo2 lbValue (lbCurSel _combo2);
     private _gear = _combo3 lbValue (lbCurSel _combo3);
 
-
-    _toggle = [
-        false,
-        true
-    ] select (_toggle == 1);
-
-    _gear = [
-        false,
-        true
-    ] select (_gear == 1);
-
-    [_logic, _toggle, _gear, _target] call FUNC(moduleToggleFlashlight);
+    [_logic, _toggle == 1, _gear == 1, _target] call FUNC(moduleToggleFlashlight);
 };
 
 _display displayAddEventHandler ["unload", _fnc_onUnload];

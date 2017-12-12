@@ -18,9 +18,9 @@
 
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
+params ["_logic"];
 
-if !(_activated && local _logic) exitWith {};
+if !(local _logic) exitWith {};
 
 if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);

@@ -7,8 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 if (hasInterface) then {
-    [[format ["ACE3 %1", localize LSTRING(DumpDebug)], localize LSTRING(DumpDebugTooltip)], QGVAR(MainMenuHelperDumpDebug)] call CBA_fnc_addPauseMenuOption;
-    [[format ["ACE3 %1", localize LSTRING(headBugFix)], localize LSTRING(headBugFixTooltip)], QGVAR(MainMenuHelperHeadBugFix)] call CBA_fnc_addPauseMenuOption;
+    [[format ["ACE %1", localize LSTRING(DumpDebug)], localize LSTRING(DumpDebugTooltip)], QGVAR(MainMenuHelperDumpDebug)] call CBA_fnc_addPauseMenuOption;
+    [[format ["ACE %1", localize LSTRING(headBugFix)], localize LSTRING(headBugFixTooltip)], QGVAR(MainMenuHelperHeadBugFix)] call CBA_fnc_addPauseMenuOption;
 };
 
 ADDON = true;
