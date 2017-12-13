@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit","_newSide"];
+params ["_unit", "_newSide"];
 private _side = side _unit;
 
 // Nothing to do here

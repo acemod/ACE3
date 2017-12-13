@@ -180,8 +180,8 @@ private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberStrin
 
 // check previous version number from profile
 if (_currentVersion != _previousVersion) then {
-    // do something
-
+    INFO_2("Updating ACE from [%1] to [%2]",_previousVersion,_currentVersion);
+    [_previousVersion] call FUNC(cbaSettings_transferUserSettings);
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
