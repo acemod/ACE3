@@ -39,6 +39,7 @@ GVAR(trench) = _trench;
 [QEGVAR(common,enableSimulationGlobal), [_trench, false]] call CBA_fnc_serverEvent;
 
 GVAR(digDirection) = 0;
+GVAR(currentSurface) = "";
 
 // pfh that runs while the dig is in progress
 GVAR(digPFH) = [{
@@ -86,6 +87,13 @@ GVAR(digPFH) = [{
     _trench setPosASL _basePos;
     _trench setVectorDirAndUp [_v1, _v3];
     GVAR(trenchPos) = _basePos;
+
+    if(surfaceType (position _trench) != GVAR(currentSurface)) then {
+        GVAR(currentSurface) = surfaceType (position _trench);
+        TRACE_1("Current surface",GVAR(currentSurface));
+        
+        _trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];
+    };
 
 }, 0, [_unit, _trench]] call CBA_fnc_addPerFrameHandler;
 

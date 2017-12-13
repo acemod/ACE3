@@ -8,12 +8,14 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Grey", "esteldunedain"};
+        authors[] = {"Grey", "esteldunedain", "chris579", "Salbei"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgWorldsTextures.hpp"

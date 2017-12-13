@@ -1,0 +1,22 @@
+/*
+ * Author: chris579
+ * Checks if camouflage can be applied to a trench
+ *
+ * Arguments:
+ * 0: trench <OBJECT>
+ *
+ * Return Value:
+ * Can place <BOOL>
+ *
+ * Example:
+ * [TrenchObj] call ace_trenches_fnc_canPlaceCamouflage
+ *
+ * Public: No
+ */
+#include "script_component.hpp"
+
+params ["_trench"];
+
+(count (_trench getVariable [QGVAR(camouflageObjects), []]) == 0) &&
+{count (getArray (configFile >> "CfgWorldsTextures" >> worldName >> "camouflageObjects")) > 0} &&
+{count (configProperties [configFile >> "CfgVehicles" >> (typeof _trench) >> "CamouflagePositions"]) > 0}

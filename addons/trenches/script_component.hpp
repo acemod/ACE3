@@ -14,4 +14,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_TRENCHES
 #endif
 
+#define DEFAULT_TEXTURE QPATHTOEF(apl,data\zr_plevel_co.paa)
+#define CAMOUFLAGE_DURATION 5
+
 #include "\z\ace\addons\main\script_macros.hpp"

@@ -222,5 +222,53 @@
             <Chinesesimp>移除掩体中</Chinesesimp>
             <Chinese>移除掩體中</Chinese>
         </Key>
+        <Key ID="STR_ACE_Trenches_PlaceCamouflage">
+            <English>Place camouflage</English>
+            <German>Tarnung platzieren</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_PlaceCamouflageProgress">
+            <English>Placing camouflage...</English>
+            <German>Platziere Tarnung...</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_RemoveCamouflage">
+            <English>Remove camouflage</English>
+            <German>Tarnung entfernen</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_RemoveCamouflageProgress">
+            <English>Removing camouflage...</English>
+            <German>Entferne Tarnung...</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeGigantName">
+            <English>Envelope - Gigant</English>
+            <German>Rund - Sehr groß</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnevlopeGigantDescription">
+            <English>Giant Personal Trench</English>
+            <German>Sehr großer Schützengraben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeGigant">
+            <English>Dig Giant Trench</English>
+            <German>Grabe sehr großen Schützengraben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_CamouflageAttribute">
+            <English>Apply camouflage</English>
+            <German>Tarnung anbringen</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_CamouflageAttributeTooltip">
+            <English>Apply camouflage to this trench</English>
+            <German>Tarnung an diesen Graben anbringen</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeVehicleName">
+            <English>Envelope - Vehicle</English>
+            <German>Rund - Fahrzeug</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnevlopeVehicleDescription">
+            <English>Vehicle Trench</English>
+            <German>Fahrzeug Schützengraben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeVehicle">
+            <English>Dig Vehicle Trench</English>
+            <German>Grabe Fahrzeug Schützengraben</German>
+        </Key>
     </Package>
 </Project>
