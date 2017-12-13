@@ -478,8 +478,8 @@ Group: General
 
 // *************************************
 // Internal Functions
-#define DOUBLES(var1,var2) ##var1##_##var2
-#define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
+#define DOUBLES(var1,var2) var1##_##var2
+#define TRIPLES(var1,var2,var3) var1##_##var2##_##var3
 #define QUOTE(var1) #var1
 
 #ifdef MODULAR
@@ -733,29 +733,29 @@ Examples:
 Author:
     Sickboy
 ------------------------------------------- */
-#define ISNILS(VARIABLE,DEFAULT_VALUE) if (isNil #VARIABLE) then { ##VARIABLE = ##DEFAULT_VALUE }
+#define ISNILS(VARIABLE,DEFAULT_VALUE) if (isNil #VARIABLE) then { VARIABLE = DEFAULT_VALUE }
 #define ISNILS2(var1,var2,var3,var4) ISNILS(TRIPLES(var1,var2,var3),var4)
 #define ISNILS3(var1,var2,var3) ISNILS(DOUBLES(var1,var2),var3)
 #define ISNIL(var1,var2) ISNILS2(PREFIX,COMPONENT,var1,var2)
 #define ISNILMAIN(var1,var2) ISNILS3(PREFIX,var1,var2)
 
-#define CREATELOGICS(var1,var2) ##var1##_##var2## = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["LOGIC", [0, 0, 0], [], 0, "NONE"]
-#define CREATELOGICLOCALS(var1,var2) ##var1##_##var2## = "LOGIC" createVehicleLocal [0, 0, 0]
-#define CREATELOGICGLOBALS(var1,var2) ##var1##_##var2## = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["LOGIC", [0, 0, 0], [], 0, "NONE"]; publicVariable QUOTE(DOUBLES(var1,var2))
-#define CREATELOGICGLOBALTESTS(var1,var2) ##var1##_##var2## = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit [QUOTE(DOUBLES(ADDON,logic)), [0, 0, 0], [], 0, "NONE"]
+#define CREATELOGICS(var1,var2) var1##_##var2 = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["LOGIC", [0, 0, 0], [], 0, "NONE"]
+#define CREATELOGICLOCALS(var1,var2) var1##_##var2 = "LOGIC" createVehicleLocal [0, 0, 0]
+#define CREATELOGICGLOBALS(var1,var2) var1##_##var2 = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["LOGIC", [0, 0, 0], [], 0, "NONE"]; publicVariable QUOTE(DOUBLES(var1,var2))
+#define CREATELOGICGLOBALTESTS(var1,var2) var1##_##var2 = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit [QUOTE(DOUBLES(ADDON,logic)), [0, 0, 0], [], 0, "NONE"]
 
-#define GETVARS(var1,var2,var3) (##var1##_##var2 getVariable #var3)
+#define GETVARS(var1,var2,var3) (var1##_##var2 getVariable #var3)
 #define GETVARMAINS(var1,var2) GETVARS(var1,MAINLOGIC,var2)
 
 #ifndef PATHTO_SYS
-    #define PATHTO_SYS(var1,var2,var3) \MAINPREFIX\##var1\SUBPREFIX\##var2\##var3.sqf
+    #define PATHTO_SYS(var1,var2,var3) \MAINPREFIX\var1\SUBPREFIX\var2\var3.sqf
 #endif
 #ifndef PATHTOF_SYS
-    #define PATHTOF_SYS(var1,var2,var3) \MAINPREFIX\##var1\SUBPREFIX\##var2\##var3
+    #define PATHTOF_SYS(var1,var2,var3) \MAINPREFIX\var1\SUBPREFIX\var2\var3
 #endif
 
 #ifndef PATHTOF2_SYS
-    #define PATHTOF2_SYS(var1,var2,var3) MAINPREFIX\##var1\SUBPREFIX\##var2\##var3
+    #define PATHTOF2_SYS(var1,var2,var3) MAINPREFIX\var1\SUBPREFIX\var2\var3
 #endif
 
 #define PATHTO_R(var1) PATHTOF2_SYS(PREFIX,COMPONENT_C,var1)
@@ -781,9 +781,9 @@ Author:
 #define COMPILE_FILE_SYS(var1,var2,var3) COMPILE_FILE2_SYS('PATHTO_SYS(var1,var2,var3)')
 #define COMPILE_FILE_CFG_SYS(var1,var2,var3) COMPILE_FILE2_CFG_SYS('PATHTO_SYS(var1,var2,var3)')
 
-#define SETVARS(var1,var2) ##var1##_##var2 setVariable
+#define SETVARS(var1,var2) var1##_##var2 setVariable
 #define SETVARMAINS(var1) SETVARS(var1,MAINLOGIC)
-#define GVARMAINS(var1,var2) ##var1##_##var2##
+#define GVARMAINS(var1,var2) var1##_##var2
 #define CFGSETTINGSS(var1,var2) configFile >> "CfgSettings" >> #var1 >> #var2
 //#define SETGVARS(var1,var2,var3) ##var1##_##var2##_##var3 =
 //#define SETGVARMAINS(var1,var2) ##var1##_##var2 =
@@ -794,9 +794,9 @@ Author:
 // #define PREP_SYS2(var1,var2,var3,var4) ##var1##_##var2##_fnc_##var4 = { ##var1##_##var2##_fnc_##var4 = COMPILE_FILE_SYS(var1,var3,DOUBLES(fnc,var4)); if (isNil "_this") then { call ##var1##_##var2##_fnc_##var4 } else { _this call ##var1##_##var2##_fnc_##var4 } }
 
 // Compile-Once, at Macro. As opposed to Compile-Once, on first use.
-#define PREPMAIN_SYS(var1,var2,var3) ##var1##_fnc_##var3 = COMPILE_FILE_SYS(var1,var2,DOUBLES(fnc,var3))
-#define PREP_SYS(var1,var2,var3) ##var1##_##var2##_fnc_##var3 = COMPILE_FILE_SYS(var1,var2,DOUBLES(fnc,var3))
-#define PREP_SYS2(var1,var2,var3,var4) ##var1##_##var2##_fnc_##var4 = COMPILE_FILE_SYS(var1,var3,DOUBLES(fnc,var4))
+#define PREPMAIN_SYS(var1,var2,var3) var1##_fnc_##var3 = COMPILE_FILE_SYS(var1,var2,DOUBLES(fnc,var3))
+#define PREP_SYS(var1,var2,var3) var1##_##var2##_fnc_##var3 = COMPILE_FILE_SYS(var1,var2,DOUBLES(fnc,var3))
+#define PREP_SYS2(var1,var2,var3,var4) var1##_##var2##_fnc_##var4 = COMPILE_FILE_SYS(var1,var3,DOUBLES(fnc,var4))
 
 #define LSTR(var1) TRIPLES(ADDON,STR,var1)
 
@@ -888,7 +888,7 @@ Author:
 #define GETVAR(var1) GETVARS(PREFIX,COMPONENT,var1)
 #define SETVAR SETVARS(PREFIX,COMPONENT)
 #define SETVARMAIN SETVARMAINS(PREFIX)
-#define IFCOUNT(var1,var2,var3) if (count ##var1 > ##var2) then { ##var3 = ##var1 select ##var2 };
+#define IFCOUNT(var1,var2,var3) if (count var1 > var2) then { var3 = var1 select var2 };
 
 //#define PREP(var1) PREP_SYS(PREFIX,COMPONENT_F,var1)
 
