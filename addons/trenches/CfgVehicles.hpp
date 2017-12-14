@@ -133,11 +133,11 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeGigantName);
         descriptionShort = CSTRING(EnevlopeGigantDescription);
-        ace_trenches_diggingDuration = 30;
-        ace_trenches_removalDuration = 20;
-        ace_trenches_noGeoClass = "ACE_envelope_gigant_noGeo";
-        ace_trenches_placementData[] = {6,1.1,0.20};
-        ace_trenches_grassCuttingPoints[] = {{-1.5,-1,0},{1.5,-1,0}};
+        GVAR(diggingDuration) = 30;
+        GVAR(removalDuration) = 20;
+        GVAR(noGeoClass) = "ACE_envelope_gigant_noGeo";
+        GVAR(placementData)[] = {15,1.1,0.40};
+        GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_gigant.p3d);
 
         class CamouflagePositions {
@@ -151,11 +151,11 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeVehicleName);
         descriptionShort = CSTRING(EnevlopeVehicleDescription);
-        ace_trenches_diggingDuration = 60;
-        ace_trenches_removalDuration = 30;
-        ace_trenches_noGeoClass = "ACE_envelope_vehicle_noGeo";
-        ace_trenches_placementData[] = {6,1.1,0.20};
-        ace_trenches_grassCuttingPoints[] = {{-1.5,-1,0},{1.5,-1,0}};
+        GVAR(diggingDuration) = 60;
+        GVAR(removalDuration) = 30;
+        GVAR(noGeoClass) = "ACE_envelope_vehicle_noGeo";
+        GVAR(placementData)[] = {6,1.1,0.20};
+        GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_vehicle.p3d);
 
         class CamouflagePositions {};
