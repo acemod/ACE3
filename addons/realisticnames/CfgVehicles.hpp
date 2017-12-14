@@ -173,8 +173,8 @@ class CfgVehicles {
         displayName = CSTRING(APC_Wheeled_01_cannon_Name);
     };
 
-    class O_APC_Wheeled_02_base_F;
-    class O_APC_Wheeled_02_rcws_F: O_APC_Wheeled_02_base_F {
+    class APC_Wheeled_02_base_F;
+    class O_APC_Wheeled_02_base_F : APC_Wheeled_02_base_F {
         displayName = CSTRING(APC_Wheeled_02_rcws_Name);
     };
 
