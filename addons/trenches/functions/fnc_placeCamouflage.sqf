@@ -31,7 +31,7 @@ private _fnc_onFinish = {
 
     {
         private _object = createSimpleObject [selectRandom _camouflageObjects, [0,0,0]];
-        _object attachTo [_trench, getArray(_x)];
+        _object attachTo [_trench, getArray _x];
 
         if (is3DEN) then {
             _object setVariable [QGVAR(positionData), getArray _x];
