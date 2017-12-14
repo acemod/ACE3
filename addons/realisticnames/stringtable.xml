@@ -658,50 +658,50 @@
             <Chinesesimp>"卡玛斯"卡车 (医疗)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
-            <English>Punisher</English>
-            <German>Punisher</German>
-            <Spanish>Punisher</Spanish>
-            <Polish>Punisher</Polish>
-            <Czech>Punisher</Czech>
-            <French>Punisher</French>
+            <English>Karatel</English>
+            <German>Karatel</German>
+            <Spanish>Karatel</Spanish>
+            <Polish>Karatel</Polish>
+            <Czech>Karatel</Czech>
+            <French>Karatel</French>
             <Russian>Kаратель</Russian>
-            <Portuguese>Punisher</Portuguese>
-            <Hungarian>Punisher</Hungarian>
-            <Italian>Punisher</Italian>
+            <Portuguese>Karatel</Portuguese>
+            <Hungarian>Karatel</Hungarian>
+            <Italian>Karatel</Italian>
             <Japanese>パニッシャー</Japanese>
-            <Korean>Punisher</Korean>
+            <Korean>Karatel</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_hmg_Name">
-            <English>Punisher (HMG)</English>
-            <German>Punisher (sMG)</German>
-            <Spanish>Punisher (HMG)</Spanish>
-            <Polish>Punisher (CKM)</Polish>
-            <Czech>Punisher (HMG)</Czech>
-            <French>Punisher (HMG)</French>
+            <English>Karatel (HMG)</English>
+            <German>Karatel (sMG)</German>
+            <Spanish>Karatel (HMG)</Spanish>
+            <Polish>Karatel (CKM)</Polish>
+            <Czech>Karatel (HMG)</Czech>
+            <French>Karatel (HMG)</French>
             <Russian>Kаратель (Пулемёт)</Russian>
-            <Portuguese>Punisher (HMG)</Portuguese>
-            <Hungarian>Punisher (nehézgéppuska)</Hungarian>
-            <Italian>Punisher (HMG)</Italian>
+            <Portuguese>Karatel (HMG)</Portuguese>
+            <Hungarian>Karatel (nehézgéppuska)</Hungarian>
+            <Italian>Karatel (HMG)</Italian>
             <Japanese>パニッシャー (HMG)</Japanese>
-            <Korean>Punisher (HMG)</Korean>
+            <Korean>Karatel (HMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (重機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (重机枪)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_gmg_Name">
-            <English>Punisher (GMG)</English>
-            <German>Punisher (GMW)</German>
-            <Spanish>Punisher (GMG)</Spanish>
-            <Polish>Punisher (GMG)</Polish>
-            <Czech>Punisher (GMG)</Czech>
-            <French>Punisher (GMG)</French>
+            <English>Karatel (GMG)</English>
+            <German>Karatel (GMW)</German>
+            <Spanish>Karatel (GMG)</Spanish>
+            <Polish>Karatel (GMG)</Polish>
+            <Czech>Karatel (GMG)</Czech>
+            <French>Karatel (GMG)</French>
             <Russian>Kаратель (Гранатомёт)</Russian>
-            <Portuguese>Punisher (GMG)</Portuguese>
-            <Hungarian>Punisher (gránátgéppuska)</Hungarian>
-            <Italian>Punisher (GMG)</Italian>
+            <Portuguese>Karatel (GMG)</Portuguese>
+            <Hungarian>Karatel (gránátgéppuska)</Hungarian>
+            <Italian>Karatel (GMG)</Italian>
             <Japanese>パニッシャー (GMG)</Japanese>
-            <Korean>Punisher (GMG)</Korean>
+            <Korean>Karatel (GMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (榴彈機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (榴弹机枪)</Chinesesimp>
         </Key>
