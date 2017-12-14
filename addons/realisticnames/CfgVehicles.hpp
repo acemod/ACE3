@@ -740,4 +740,26 @@ class CfgVehicles {
     class O_T_UAV_04_CAS_F: UAV_04_base_F {
         displayName = CSTRING(O_T_UAV_04_CAS);
     };
+
+    // Polaris DAGOR (Prowler)
+    class LSV_01_base_F;
+    class LSV_01_armed_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_armed);
+    };
+    class LSV_01_unarmed_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_unarmed);
+    };
+    class LSV_01_light_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_light);
+    };
+
+    // Light Strike Vehicle Mk. II (Qilin)
+    class LSV_02_base_F;
+    class LSV_02_armed_base_F : LSV_02_base_F {
+        displayName = CSTRING(lsv_02_armed);
+    };
+    class LSV_02_unarmed_base_F : LSV_02_base_F {
+        displayName = CSTRING(lsv_02_unarmed);
+    };
+
 };

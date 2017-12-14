@@ -3216,5 +3216,85 @@
             <Chinese>"馬卡洛夫"手槍</Chinese>
             <Chinesesimp>"马卡洛夫"手枪</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_01_armed">
+            <English>Polaris DAGOR (XM312)</English>
+            <German>Polaris DAGOR (XM312)</German>
+            <Spanish>Polaris DAGOR (XM312)</Spanish>
+            <Polish>Polaris DAGOR (XM312)</Polish>
+            <Czech>Polaris DAGOR (XM312)</Czech>
+            <French>Polaris DAGOR (XM312)</French>
+            <Russian>Polaris DAGOR (XM312)</Russian>
+            <Portuguese>Polaris DAGOR (XM312)</Portuguese>
+            <Hungarian>Polaris DAGOR (XM312)</Hungarian>
+            <Italian>Polaris DAGOR (XM312)</Italian>
+            <Japanese>Polaris DAGOR (XM312)</Japanese>
+            <Korean>Polaris DAGOR (XM312)</Korean>
+            <Chinese>Polaris DAGOR (XM312)</Chinese>
+            <Chinesesimp>Polaris DAGOR (XM312)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
+            <English>Polaris DAGOR</English>
+            <German>Polaris DAGOR</German>
+            <Spanish>Polaris DAGOR</Spanish>
+            <Polish>Polaris DAGOR</Polish>
+            <Czech>Polaris DAGOR</Czech>
+            <French>Polaris DAGOR</French>
+            <Russian>Polaris DAGOR</Russian>
+            <Portuguese>Polaris DAGOR</Portuguese>
+            <Hungarian>Polaris DAGOR</Hungarian>
+            <Italian>Polaris DAGOR</Italian>
+            <Japanese>Polaris DAGOR</Japanese>
+            <Korean>Polaris DAGOR</Korean>
+            <Chinese>Polaris DAGOR</Chinese>
+            <Chinesesimp>Polaris DAGOR</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_01_light">
+            <English>Polaris DAGOR (light)</English>
+            <German>Polaris DAGOR (leicht)</German>
+            <Spanish>Polaris DAGOR (light)</Spanish>
+            <Polish>Polaris DAGOR (light)</Polish>
+            <Czech>Polaris DAGOR (light)</Czech>
+            <French>Polaris DAGOR (light)</French>
+            <Russian>Polaris DAGOR (light)</Russian>
+            <Portuguese>Polaris DAGOR (light)</Portuguese>
+            <Hungarian>Polaris DAGOR (light)</Hungarian>
+            <Italian>Polaris DAGOR (light)</Italian>
+            <Japanese>Polaris DAGOR (light)</Japanese>
+            <Korean>Polaris DAGO (light)</Korean>
+            <Chinese>Polaris DAGOR (light)</Chinese>
+            <Chinesesimp>Polaris DAGOR (light)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
+            <English>LSV Mk. II (M134)</English>
+            <German>LSV Mk. II (M134)</German>
+            <Spanish>LSV Mk. II (M134)</Spanish>
+            <Polish>LSV Mk. II (M134)</Polish>
+            <Czech>LSV Mk. II (M134)</Czech>
+            <French>LSV Mk. II (M134)</French>
+            <Russian>LSV Mk. II (M134)</Russian>
+            <Portuguese>LSV Mk. II (M134)</Portuguese>
+            <Hungarian>LSV Mk. II (M134)</Hungarian>
+            <Italian>LSV Mk. II (M134)</Italian>
+            <Japanese>LSV Mk. II (M134)</Japanese>
+            <Korean>LSV Mk. II (M134)</Korean>
+            <Chinese>LSV Mk. II (M134)</Chinese>
+            <Chinesesimp>LSV Mk. II (M134)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
+            <English>LSV Mk. II</English>
+            <German>LSV Mk. II</German>
+            <Spanish>LSV Mk. II</Spanish>
+            <Polish>LSV Mk. II</Polish>
+            <Czech>LSV Mk. II</Czech>
+            <French>LSV Mk. II</French>
+            <Russian>LSV Mk. II</Russian>
+            <Portuguese>LSV Mk. II</Portuguese>
+            <Hungarian>LSV Mk. II</Hungarian>
+            <Italian>LSV Mk. II</Italian>
+            <Japanese>LSV Mk. II</Japanese>
+            <Korean>LSV Mk. II</Korean>
+            <Chinese>LSV Mk. II</Chinese>
+            <Chinesesimp>LSV Mk. II</Chinesesimp>
+        </Key>
     </Package>
 </Project>
