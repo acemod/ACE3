@@ -33,7 +33,7 @@ if (stance _unit == "STAND") then {
     private _tripod = "ACE_TripodObject" createVehicle [0, 0, 0];
 
     {
-        _tripod animate [_x, 1];
+        _tripod animate [_x, 0.5];
     } count ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
 
     [{
