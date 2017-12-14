@@ -1,0 +1,29 @@
+/*
+ * Author: Dystopian
+ * Wrapper for BIS_fnc_removeVirtualItemCargo.
+ *
+ * Arguments:
+ * 0: Box <OBJECT>
+ * 1: Items <STRING, ARRAY, BOOL>
+ * 2: Remove globally <BOOL> (default: false)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [cursorObject, "Toolkit"] call ace_arsenal_fnc_wrapper_removeVirtualItemCargo
+ *
+ * Public: No
+*/
+#include "script_component.hpp"
+
+if !(missionNamespace getVariable QGVAR(replaceBIS)) exitWith {_this call BIS_fnc_removeVirtualItemCargoBIS};
+
+params [["_box", objNull, [objNull]], ["_items", [], ["", [], true]], ["_isGlobal", false, [false]]];
+
+if (_items isEqualType "") then {_items = [_items]};
+if (_items isEqualType [] && {0 < count _items} && {"%All" == _items select 0}) then {
+    _items = true;
+};
+
+[_box, _items, _isGlobal] call FUNC(removeVirtualItems);

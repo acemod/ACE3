@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_common", "A3_Functions_F_Bootcamp"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"alganthe"};
         url = ECSTRING(main,URL);
@@ -38,3 +38,4 @@ class Cfg3DEN {
 
 #include "ui\RscAttributes.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"

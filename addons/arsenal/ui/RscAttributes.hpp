@@ -205,7 +205,7 @@ class GVAR(display) {
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
                     shortcuts[]= {"0x01"};
-                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
+                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2; if (missionname == 'Arsenal') then {endmission 'end1'};);
                 };
             };
         };

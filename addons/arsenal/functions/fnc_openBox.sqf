@@ -26,7 +26,7 @@ if (
     {!(isNull objectParent _center) && {!is3DEN}}
 ) exitWith {};
 
-if (isNil {_object getVariable [QGVAR(virtualItems), nil]} && {!_mode}) exitWith {
+if (isNil {_object getVariable [QGVAR(virtualItems), nil]} && {!_mode} && {_object != ACE_player}) exitWith {
     [localize LSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
 };
 

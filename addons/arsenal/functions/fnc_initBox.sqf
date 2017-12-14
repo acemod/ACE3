@@ -6,6 +6,7 @@
  * 0: Target <OBJECT>
  * 1: Items <BOOL> or <ARRAY>
  * 2: Initialize globally <BOOL>
+ * 3: Condition <CODE>
  *
  * Return Value:
  * None
@@ -18,7 +19,7 @@
 */
 #include "script_component.hpp"
 
-params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global", true, [true]]];
+params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global", true, [true]], ["_condition", {true}, [{}]]];
 
 if (isNull _object) exitWith {};
 
@@ -47,12 +48,12 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
                 [{[_this select 0, _this select 1] call FUNC(openBox)}, [_target, _player]] call CBA_fnc_execNextFrame;
             }, 
             {
-                params ["_target", "_player"];
-            
+                params ["_target", "_player", "_condition"];
+                ["_target", "_player"] call _condition &&
                 [_player, _target, ["isNotSwimming", "isNotCarrying", "isNotDragging", "notOnMap", "isNotEscorting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)
             }, 
             {},
-            []
+            _condition
         ] call EFUNC(interact_menu,createAction);
         [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 

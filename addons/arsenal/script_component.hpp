@@ -14,4 +14,13 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_ARSENAL
 #endif
 
+#ifdef DISABLE_COMPILE_CACHE
+    #define RECOMPILE
+#endif
+
 #include "\z\ace\addons\main\script_macros.hpp"
+
+
+#define USE_WRAPPER(func,wrp) \
+    if !(missionNamespace getVariable QGVAR(replaceBIS)) exitWith {_this call BIS_fnc_##func##BIS}; \
+    _this call FUNC(DOUBLES(wrapper,wrp))

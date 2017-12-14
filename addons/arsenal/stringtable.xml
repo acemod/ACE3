@@ -433,5 +433,13 @@
             <Italian>Impossibile aprire l'arsenale ACE</Italian>
             <Japanese>ACE 武器庫を開けません</Japanese>
         </Key>
+        <Key ID="STR_ACE_Arsenal_replaceBISSetting">
+            <English>Replace BIS Arsenal</English>
+            <Russian>Заменить BIS Арсенал</Russian>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_replaceBISTooltip">
+            <English>Replace vanilla Virtual Arsenal with ACE Arsenal</English>
+            <Russian>Заменить внутриигровой Виртуальный Арсенал на ACE Арсенал</Russian>
+        </Key>
     </Package>
 </Project>
