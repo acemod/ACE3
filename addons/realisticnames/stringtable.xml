@@ -2929,20 +2929,20 @@
             <Chinesesimp>GM6"天猫"反器材狙击步枪 (绿色数位蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_03">
-            <English>M249 SPW</English>
-            <German>M249 SPW</German>
-            <Spanish>M249 SPW</Spanish>
-            <Polish>M249 SPW</Polish>
-            <Czech>M249 SPW</Czech>
-            <French>M249 SPW</French>
-            <Russian>M249 SPW</Russian>
-            <Portuguese>M249 SPW</Portuguese>
-            <Hungarian>M249 SPW</Hungarian>
-            <Italian>M249 SPW</Italian>
-            <Japanese>M249 SPW</Japanese>
-            <Korean>M249 SPW</Korean>
-            <Chinese>M249班用自動機槍</Chinese>
-            <Chinesesimp>M249班用自动机枪</Chinesesimp>
+            <English>FN Minimi SPW</English>
+            <German>FN Minimi SPW</German>
+            <Spanish>FN Minimi SPW</Spanish>
+            <Polish>FN Minimi SPW</Polish>
+            <Czech>FN Minimi SPW</Czech>
+            <French>FN Minimi SPW</French>
+            <Russian>FN Minimi SPW</Russian>
+            <Portuguese>FN Minimi SPW</Portuguese>
+            <Hungarian>FN Minimi SPW</Hungarian>
+            <Italian>FN Minimi SPW</Italian>
+            <Japanese>FN Minimi SPW</Japanese>
+            <Korean>FN Minimi SPW</Korean>
+            <Chinese>FN Minimi班用自動機槍</Chinese>
+            <Chinesesimp>FN Minimi班用自动机枪</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_tna">
             <English>M200 Intervention (Tropic)</English>
