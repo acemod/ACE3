@@ -179,7 +179,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_hmg_Name">
             <English>M-ATV (HMG)</English>
-            <German>M-ATV (SMG)</German>
+            <German>M-ATV (sMG)</German>
             <Spanish>M-ATV (HMG)</Spanish>
             <Polish>M-ATV (CKM)</Polish>
             <Czech>M-ATV (HMG)</Czech>
@@ -483,7 +483,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_hmg_Name">
             <English>Fennek (HMG)</English>
-            <German>Fennek (SMG)</German>
+            <German>Fennek (sMG)</German>
             <Spanish>Fennek (HMG)</Spanish>
             <Polish>Fennek (CKM)</Polish>
             <Czech>Fennek (HMG)</Czech>
@@ -675,7 +675,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_hmg_Name">
             <English>Punisher (HMG)</English>
-            <German>Punisher (SMG)</German>
+            <German>Punisher (sMG)</German>
             <Spanish>Punisher (HMG)</Spanish>
             <Polish>Punisher (CKM)</Polish>
             <Czech>Punisher (HMG)</Czech>
