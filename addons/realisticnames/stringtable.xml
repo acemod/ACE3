@@ -1089,6 +1089,22 @@
             <Chinese>L-159先進輕型戰鬥機 (空對空)</Chinese>
             <Chinesesimp>L-159先进轻型战斗机 (空对空)</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_Plane_Fighter_04_Name">
+            <English>JAS 39 Gripen</English>
+            <German>JAS 39 Gripen</German>
+            <Spanish>JAS 39 Gripen</Spanish>
+            <Polish>JAS 39 Gripen</Polish>
+            <Czech>JAS 39 Gripen</Czech>
+            <French>JAS 39 Gripen</French>
+            <Russian>JAS 39 Gripen</Russian>
+            <Portuguese>JAS 39 Gripen</Portuguese>
+            <Hungarian>JAS 39 Gripen</Hungarian>
+            <Italian>JAS 39 Gripen</Italian>
+            <Japanese>JAS 39 Gripen</Japanese>
+            <Korean>JAS 39 Gripen</Korean>
+            <Chinese>JAS 39 Gripen</Chinese>
+            <Chinesesimp>JAS 39 Gripen</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_Name">
             <English>Ka-60 Kasatka</English>
             <German>Ka-60 Kasatka</German>
