@@ -49,7 +49,7 @@ class CfgVehicles {
         scope = 2;
         GVAR(diggingDuration) = 20;
         GVAR(removalDuration) = 12;
-        GVAR(noGeoClass) = QUOTE(ACE_envelope_small_NoGeo);
+        GVAR(noGeoClass) = "ACE_envelope_small_NoGeo";
         GVAR(placementData)[] = {2,3,0.35};
         GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
         GVAR(isTrench) = 1;
@@ -104,7 +104,7 @@ class CfgVehicles {
                 displayName = CSTRING(CamouflageAttribute);
                 tooltip = CSTRING(CamouflageAttributeTooltip);
                 expression = QUOTE([ARR_2(_this,_value)] call FUNC(applyCamouflageAttribute));
-                property = QUOTE(ACE_trenches_camouflageTrench);
+                property = QGVAR(camouflageTrench);
             };
         };
 
@@ -119,7 +119,7 @@ class CfgVehicles {
         model = QPATHTOEF(apl,ace_envelope_big4.p3d);
         GVAR(diggingDuration) = 25;
         GVAR(removalDuration) = 15;
-        GVAR(noGeoClass) = QUOTE(ACE_envelope_big_NoGeo);
+        GVAR(noGeoClass) = "ACE_envelope_big_NoGeo";
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
 
@@ -135,7 +135,7 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnevlopeGigantDescription);
         ace_trenches_diggingDuration = 30;
         ace_trenches_removalDuration = 20;
-        ace_trenches_noGeoClass = QUOTE(ACE_envelope_gigant_noGeo);
+        ace_trenches_noGeoClass = "ACE_envelope_gigant_noGeo";
         ace_trenches_placementData[] = {6,1.1,0.20};
         ace_trenches_grassCuttingPoints[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_gigant.p3d);
@@ -153,7 +153,7 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnevlopeVehicleDescription);
         ace_trenches_diggingDuration = 60;
         ace_trenches_removalDuration = 30;
-        ace_trenches_noGeoClass = QUOTE(ACE_envelope_vehicle_noGeo);
+        ace_trenches_noGeoClass = "ACE_envelope_vehicle_noGeo";
         ace_trenches_placementData[] = {6,1.1,0.20};
         ace_trenches_grassCuttingPoints[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_vehicle.p3d);
