@@ -563,7 +563,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_transport_Name">
             <English>KamAZ Transport</English>
-            <German>KamAZ Transport</German>
+            <German>KamAS Transport</German>
             <Spanish>KamAZ de transporte</Spanish>
             <Polish>KamAZ transportowy</Polish>
             <Czech>KamAZ (valník)</Czech>
@@ -579,7 +579,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_covered_Name">
             <English>KamAZ Transport (covered)</English>
-            <German>KamAZ Transport (bedeckt)</German>
+            <German>KamAS Transport (bedeckt)</German>
             <Spanish>KamAZ de transporte (cubierto)</Spanish>
             <Polish>KamAZ Transportowy (zakryty)</Polish>
             <Czech>KamAZ (valník-krytý)</Czech>
@@ -595,7 +595,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
-            <German>KamAZ Munition</German>
+            <German>KamAS Munition</German>
             <Spanish>KamAZ de munición</Spanish>
             <Polish>KamAZ Amunicyjny</Polish>
             <Czech>KamAZ (muniční)</Czech>
@@ -611,7 +611,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_fuel_Name">
             <English>KamAZ Fuel</English>
-            <German>KamAZ Treibstoff</German>
+            <German>KamAS Treibstoff</German>
             <Spanish>KamAZ de combustible</Spanish>
             <Polish>KamAZ cysterna</Polish>
             <Czech>KamAZ (cisterna)</Czech>
@@ -627,7 +627,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_box_Name">
             <English>KamAZ Repair</English>
-            <German>KamAZ Instandsetzung</German>
+            <German>KamAS Instandsetzung</German>
             <Spanish>KamAZ de reparación</Spanish>
             <Polish>KamAZ Naprawczy</Polish>
             <Czech>KamAZ (opravárenský)</Czech>
@@ -643,7 +643,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_medical_Name">
             <English>KamAZ Medical</English>
-            <German>KamAZ Sanitäter</German>
+            <German>KamAS Sanitäter</German>
             <Spanish>KamAZ médico</Spanish>
             <Polish>KamAZ Medyczny</Polish>
             <Czech>KamAZ (zdravotnický)</Czech>
