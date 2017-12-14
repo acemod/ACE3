@@ -46,6 +46,10 @@ if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
         case (_keyPressed == DIK_V && {_ctrlState}): {
             [_display] call FUNC(buttonImport);
         };
+        // Search fields
+        case (_keyPressed == DIK_F && {_ctrlState}): {
+            ctrlSetFocus (_display displayCtrl IDC_leftSearchbar);
+        };
         // Switch vision mode
         case (_keyPressed in (actionkeys "nightvision")): {
             if (isNil QGVAR(visionMode)) then {
@@ -98,6 +102,14 @@ if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
         };
         case (_keyPressed == DIK_V && {_ctrlState}): {
             _return = false;
+        };
+        // Search fields
+        case (_keyPressed == DIK_F && {_ctrlState}): {
+            if (GVAR(rightSearchbarFocus)) then {
+                ctrlSetFocus (_display displayCtrl IDC_leftSearchbar);
+            } else {
+                ctrlSetFocus (_display displayCtrl IDC_rightSearchbar);
+            };
         };
     };
 };
