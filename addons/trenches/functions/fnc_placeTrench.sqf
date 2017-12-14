@@ -20,7 +20,7 @@ params ["_unit", "_trenchClass"];
 
 //Load trench data
 private _noGeoModel = getText (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(noGeoClass));
-if(_noGeoModel == "") then {_noGeoModel = _trenchClass;};
+if (_noGeoModel == "") then {_noGeoModel = _trenchClass;};
 
 GVAR(trenchClass) = _trenchClass;
 GVAR(trenchPlacementData) = getArray (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(placementData));
@@ -88,10 +88,10 @@ GVAR(digPFH) = [{
     _trench setVectorDirAndUp [_v1, _v3];
     GVAR(trenchPos) = _basePos;
 
-    if(surfaceType (position _trench) != GVAR(currentSurface)) then {
+    if (surfaceType (position _trench) != GVAR(currentSurface)) then {
         GVAR(currentSurface) = surfaceType (position _trench);
         TRACE_1("Current surface",GVAR(currentSurface));
-        
+
         _trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];
     };
 

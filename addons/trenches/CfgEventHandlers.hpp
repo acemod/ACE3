@@ -1,9 +1,3 @@
-#define CAMOUFLAGE_DELETE
-
-#define TRENCH_INIT class GVAR(trenchInit) { \
-        init = QUOTE(_this call FUNC(initTrench)); \
-    }
-
 class Extended_PreStart_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preStart));

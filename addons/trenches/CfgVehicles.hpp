@@ -5,28 +5,36 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(digEnvelopeSmall) {
-                    displayName = CSTRING(DigEnvelopeSmall);
-                    condition = QUOTE(_player call FUNC(canDigTrench));
-                    //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_small')])] call CBA_fnc_execNextFrame);
+                class ACE_Trenches {
+                    displayName = CSTRING(ActionCategory);
+                    condition = QUOTE(true);
+                    statement = "";
                     exceptions[] = {};
-                    showDisabled = 0;
+                    showDisabled = 1;
                     priority = 4;
-                    //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
-                };
-                class GVAR(digEnvelopeBig): GVAR(digEnvelopeSmall) {
-                    displayName = CSTRING(DigEnvelopeBig);
-                    //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call CBA_fnc_execNextFrame);
-                };
-                class GVAR(DigEnvelopeGigant): GVAR(digEnvelopeSmall) {
-                    displayName = CSTRING(DigEnvelopeGigant);
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_gigant')])] call CBA_fnc_execNextFrame);
-                };
-                class GVAR(DigEnvelopeVehicle): GVAR(digEnvelopeSmall) {
-                    displayName = CSTRING(DigEnvelopeVehicle);
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_vehicle')])] call CBA_fnc_execNextFrame);
+                    class GVAR(digEnvelopeSmall) {
+                        displayName = CSTRING(DigEnvelopeSmall);
+                        condition = QUOTE(_player call FUNC(canDigTrench));
+                        //wait a frame to handle "Do When releasing action menu key" option
+                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_small')])] call CBA_fnc_execNextFrame);
+                        exceptions[] = {};
+                        showDisabled = 0;
+                        priority = 4;
+                        //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
+                    };
+                    class GVAR(digEnvelopeBig): GVAR(digEnvelopeSmall) {
+                        displayName = CSTRING(DigEnvelopeBig);
+                        //wait a frame to handle "Do When releasing action menu key" option
+                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call CBA_fnc_execNextFrame);
+                    };
+                    class GVAR(DigEnvelopeGigant): GVAR(digEnvelopeSmall) {
+                        displayName = CSTRING(DigEnvelopeGigant);
+                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_gigant')])] call CBA_fnc_execNextFrame);
+                    };
+                    class GVAR(DigEnvelopeVehicle): GVAR(digEnvelopeSmall) {
+                        displayName = CSTRING(DigEnvelopeVehicle);
+                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_vehicle')])] call CBA_fnc_execNextFrame);
+                    };
                 };
             };
         };
@@ -45,8 +53,10 @@ class CfgVehicles {
         GVAR(placementData)[] = {2,3,0.35};
         GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
         GVAR(isTrench) = 1;
+
         editorCategory = "EdCat_Things";
         editorSubcategory = "EdSubcat_Military";
+        hiddenSelections[] = {"velka"};
 
         class CamouflagePositions {
             center[] = {0, 1.3, 0};
@@ -61,15 +71,27 @@ class CfgVehicles {
                 distance = 3;
                 condition = QUOTE(true);
                 class GVAR(continueDigging) {
-                    displayName = CSTRING(ContinueDiggingTrench);
+                    displayName = CSTRING(continueDiggingTrench);
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench));
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(continueDiggingTrench););
                     priority = -1;
                 };
                 class GVAR(remove) {
-                    displayName = CSTRING(RemoveEnvelope);
+                    displayName = CSTRING(removeEnvelope);
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench));
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench););
+                    priority = -1;
+                };
+                class GVAR(placeCamouflage) {
+                    displayName = CSTRING(placeCamouflage);
+                    condition = QUOTE([_target] call FUNC(canPlaceCamouflage));
+                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(placeCamouflage));
+                    priority = -1;
+                };
+                class GVAR(removeCamouflage) {
+                    displayName = CSTRING(removeCamouflage);
+                    condition = QUOTE([_target] call FUNC(canRemoveCamouflage));
+                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeCamouflage));
                     priority = -1;
                 };
             };

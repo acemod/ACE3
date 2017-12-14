@@ -17,9 +17,9 @@
 params [
     ["_object", objnull, [objNull]]
 ];
-if(isNull _object) exitWith {};
+if (isNull _object) exitWith {};
 
-if(!isText (configFile >> "CfgWorldsTextures" >> worldName >> "surfaceTextureBasePath")) exitWith {DEFAULT_TEXTURE};
+if (!isText (configFile >> "CfgWorldsTextures" >> worldName >> "surfaceTextureBasePath")) exitWith {DEFAULT_TEXTURE};
 
 private _surfaceType = surfaceType (position _object);
 
@@ -30,14 +30,14 @@ private _getTexturePath = {
     private _parsedSurfaceType = _surfaceType select [1, count _surfaceType];
     // check for overridden surface paths
     private _overrideCfg = configFile >> "CfgWorldsTextures" >> worldName >> "Surfaces" >> _parsedSurfaceType >> "texturePath";
-    if(isText (_overrideCfg)) exitWith {
+    if (isText (_overrideCfg)) exitWith {
         getText(_overrideCfg)
     };
     // get config file wildcard
     private _fileWildcard = getText(configfile >> "CfgSurfaces" >> _parsedSurfaceType >> "files");
     // remove * in file wildcard
     private _fileNameArr = _fileWildcard splitString "";
-    if(_fileNameArr find "*" > -1) then {
+    if (_fileNameArr find "*" > -1) then {
         _fileNameArr deleteAt (_fileNameArr find "*");
     };
 
@@ -45,16 +45,16 @@ private _getTexturePath = {
 };
 
 private _basePath = getText (configFile >> "CfgWorldsTextures" >> "Altis" >> "surfaceTextureBasePath");
-if((_surfaceType find "#Gdt" == -1) || {worldName == "Tanoa"}) then {
+if ((_surfaceType find "#Gdt" == -1) || {worldName == "Tanoa"}) then {
     _basePath = getText (configFile >> "CfgWorldsTextures" >> worldName >> "surfaceTextureBasePath")
 };
 
 private _result = [_surfaceType, _basePath, getText(configFile >> "CfgWorldsTextures" >> worldName >> "filePrefix")] call _getTexturePath;
 
-if(isNil {_result}) then {
+if (isNil {_result}) then {
     _result = DEFAULT_TEXTURE;
 };
 
-TRACE_5("",(typeof _object),(position _object),worldName,_surfaceType,_result);
+TRACE_5("Calculcated texture path",typeof _object,position _object,worldName,_surfaceType,_result);
 
 _result;

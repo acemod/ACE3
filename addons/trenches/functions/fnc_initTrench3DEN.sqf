@@ -18,10 +18,10 @@ params [
     ["_object", objnull, [objNull]]
 ];
 
-_initTrench = {
-    params["_object"];
+private _initTrench = {
+    params ["_object"];
     _object addEventHandler ["Dragged3DEN", {
-        params["_object"];
+        params ["_object"];
         private _texture = [_object] call FUNC(getSurfaceTexturePath);
         _object setObjectTexture [0, _texture];
         {
