@@ -10,15 +10,29 @@ BUILD = $(shell grep "^\#define[[:space:]]*BUILD" addons/main/script_version.hpp
 VERSION = $(MAJOR).$(MINOR).$(PATCH)
 VERSION_FULL = $(VERSION).$(BUILD)
 
+ifeq ($(OS), Windows_NT)
+	ifeq ($(PROCESSOR_ARCHITEW6432), AMD64)
+		ARMAKE = ./tools/armake_w64.exe
+	else
+		ifeq ($(PROCESSOR_ARCHITECTURE), AMD64)
+			ARMAKE = ./tools/armake_w64.exe
+		else
+			ARMAKE = ./tools/armake_w32.exe
+		endif
+	endif
+else
+	ARMAKE = armake
+endif
+
 $(BIN)/addons/$(PREFIX)_%.pbo: addons/%
 	@mkdir -p $(BIN)/addons
 	@echo "  PBO  $@"
-	@armake build ${FLAGS} -f $< $@
+	@${ARMAKE} build ${FLAGS} -f $< $@
 
 $(BIN)/optionals/$(PREFIX)_%.pbo: optionals/%
 	@mkdir -p $(BIN)/optionals
 	@echo "  PBO  $@"
-	@armake build ${FLAGS} -f $< $@
+	@${ARMAKE} build ${FLAGS} -f $< $@
 
 # Shortcut for building single addons (eg. "make <component>.pbo")
 %.pbo:
@@ -33,15 +47,15 @@ filepatching:
 $(BIN)/keys/%.biprivatekey:
 	@mkdir -p $(BIN)/keys
 	@echo "  KEY  $@"
-	@armake keygen -f $(patsubst $(BIN)/keys/%.biprivatekey, $(BIN)/keys/%, $@)
+	@${ARMAKE} keygen -f $(patsubst $(BIN)/keys/%.biprivatekey, $(BIN)/keys/%, $@)
 
 $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign: $(BIN)/addons/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey
 	@echo "  SIG  $@"
-	@armake sign -f $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey $<
+	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey $<
 
 $(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign: $(BIN)/optionals/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey
 	@echo "  SIG  $@"
-	@armake sign -f $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey $<
+	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey $<
 
 signatures: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign, $(wildcard optionals/*))
