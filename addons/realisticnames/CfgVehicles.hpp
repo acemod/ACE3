@@ -314,6 +314,9 @@ class CfgVehicles {
     class Heli_Light_01_civil_base_F: Heli_Light_01_unarmed_base_F {
         displayName = CSTRING(Heli_Light_01_civil_Name);
     };
+    class I_C_Heli_Light_01_civil_F: Heli_Light_01_civil_base_F {
+        displayName = CSTRING(Heli_Light_01_civil_Name);
+    };
 
     class Heli_Light_01_armed_base_F;
     class B_Heli_Light_01_armed_F: Heli_Light_01_armed_base_F {
@@ -727,6 +730,9 @@ class CfgVehicles {
     class C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
         displayName = CSTRING(C_Offroad_02_unarmed);
     };
+    class I_C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
+        displayName = CSTRING(C_Offroad_02_unarmed);
+    };
     class C_Offroad_02_unarmed_F_black: C_Offroad_02_unarmed_F {
         displayName = CSTRING(C_Offroad_02_unarmed_black);
     };
@@ -747,6 +753,9 @@ class CfgVehicles {
     };
     class C_Plane_Civil_01_racing_F: Plane_Civil_01_base_F {
         displayName = CSTRING(C_Plane_Civil_01_racing);
+    };
+    class I_C_Plane_Civil_01_F: Plane_Civil_01_base_F {
+        displayName = CSTRING(C_Plane_Civil_01);
     };
 
     // Burraq
