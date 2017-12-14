@@ -2166,7 +2166,7 @@
             <French>Noreen "Bad News" ULR (Camo)</French>
             <Spanish>Noreen "Bad News" ULR (Camuflaje)</Spanish>
             <Russian>Noreen "Bad News" ULR (Камо)</Russian>
-            <German>Noreen "Bad News" ULR (Camo)</German>
+            <German>Noreen "Bad News" ULR (Tarnmuster)</German>
             <Polish>Noreen "Bad News" ULR (kamuflaż)</Polish>
             <Italian>Noreen "Bad News" ULR (Camo)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Terepmintás)</Hungarian>
@@ -2182,7 +2182,7 @@
             <French>Noreen "Bad News" ULR (Beige)</French>
             <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
             <Russian>Noreen "Bad News" ULR (Песочный)</Russian>
-            <German>Noreen "Bad News" ULR (Sand)</German>
+            <German>Noreen "Bad News" ULR (Sandfarben)</German>
             <Polish>Noreen "Bad News" ULR (piaskowy)</Polish>
             <Italian>Noreen "Bad News" ULR (Sabbia)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Homok)</Hungarian>
@@ -2247,7 +2247,7 @@
             <Spanish>SIG 556 (Arena)</Spanish>
             <Russian>SIG 556 (Песочный)</Russian>
             <Polish>SIG 556 (piaskowy)</Polish>
-            <German>SIG 556 (Sand)</German>
+            <German>SIG 556 (Sandfarben)</German>
             <Italian>SIG 556 (Sabbia)</Italian>
             <Hungarian>SIG 556 (Homok)</Hungarian>
             <Portuguese>SIG 556 (Deserto)</Portuguese>
@@ -2263,7 +2263,7 @@
             <Spanish>SIG 556 (Camuflaje)</Spanish>
             <Russian>SIG 556 (Камо)</Russian>
             <Polish>SIG 556 (kamuflaż)</Polish>
-            <German>SIG 556 (Camo)</German>
+            <German>SIG 556 (Wüstentarn)</German>
             <Italian>SIG 556 (Camo)</Italian>
             <Hungarian>SIG 556 (Terepmintás)</Hungarian>
             <Portuguese>SIG 556 (Camuflagem)</Portuguese>
@@ -2279,7 +2279,7 @@
             <Spanish>SIG 556 (Bosque)</Spanish>
             <Russian>SIG 556 (Лесной)</Russian>
             <Polish>SIG 556 (leśny)</Polish>
-            <German>SIG 556 (Woodland)</German>
+            <German>SIG 556 (Grünes Tarnmuster)</German>
             <Italian>SIG 556 (Woodland)</Italian>
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
             <Portuguese>SIG 556 (Floresta)</Portuguese>
@@ -2423,7 +2423,7 @@
             <Spanish>M14 (Camuflaje)</Spanish>
             <Russian>M14 (Камо)</Russian>
             <Polish>M14 (kamuflaż)</Polish>
-            <German>M14 (Camo)</German>
+            <German>M14 (Tarnmuster)</German>
             <Italian>M14 (Camo)</Italian>
             <Hungarian>M14 (Terepmintás)</Hungarian>
             <Portuguese>M14 (Camuflagem)</Portuguese>
@@ -2439,7 +2439,7 @@
             <Spanish>M14 (Oliva)</Spanish>
             <Russian>M14 (Олива)</Russian>
             <Polish>M14 (oliwkowy)</Polish>
-            <German>M14 (Olive)</German>
+            <German>M14 (Olivgrün)</German>
             <Italian>M14 (Olive)</Italian>
             <Hungarian>M14 (Olíva)</Hungarian>
             <Portuguese>M14 (Oliva)</Portuguese>
@@ -2551,7 +2551,7 @@
             <Spanish>LWMMG (Arena)</Spanish>
             <Russian>LWMMG (Песочный)</Russian>
             <Polish>LWMMG (piaskowy)</Polish>
-            <German>LWMMG (Sand)</German>
+            <German>LWMMG (Sandfarben)</German>
             <Italian>LWMMG (Sabbia)</Italian>
             <Hungarian>LWMMG (Homok)</Hungarian>
             <Portuguese>LWMMG (Deserto)</Portuguese>
