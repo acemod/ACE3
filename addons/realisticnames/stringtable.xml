@@ -1921,20 +1921,20 @@
             <Chinesesimp>CTAR-21卡宾步枪</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
-            <English>TAR-21 EGLM</English>
-            <German>TAR-21 EGLM</German>
-            <Czech>TAR-21 EGLM</Czech>
-            <Polish>TAR-21 EGLM</Polish>
-            <French>TAR-21 EGLM</French>
-            <Hungarian>TAR-21 EGLM</Hungarian>
-            <Spanish>TAR-21 EGLM</Spanish>
-            <Russian>TAR-21 EGLM</Russian>
-            <Portuguese>TAR-21 EGLM</Portuguese>
-            <Italian>TAR-21 EGLM</Italian>
-            <Japanese>TAR-21 EGLM</Japanese>
-            <Korean>TAR-21 EGLM</Korean>
-            <Chinese>TAR-21突擊步槍 (榴彈)</Chinese>
-            <Chinesesimp>TAR-21突击步枪 (榴弹)</Chinesesimp>
+            <English>GTAR-21 EGLM</English>
+            <German>GTAR-21 EGLM</German>
+            <Czech>GTAR-21 EGLM</Czech>
+            <Polish>GTAR-21 EGLM</Polish>
+            <French>GTAR-21 EGLM</French>
+            <Hungarian>GTAR-21 EGLM</Hungarian>
+            <Spanish>GTAR-21 EGLM</Spanish>
+            <Russian>GTAR-21 EGLM</Russian>
+            <Portuguese>GTAR-21 EGLM</Portuguese>
+            <Italian>GTAR-21 EGLM</Italian>
+            <Japanese>GTAR-21 EGLM</Japanese>
+            <Korean>GTAR-21 EGLM</Korean>
+            <Chinese>GTAR-21突擊步槍 (榴彈)</Chinese>
+            <Chinesesimp>GTAR-21突击步枪 (榴弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
