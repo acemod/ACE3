@@ -23,15 +23,15 @@ private _fnc_onFinish = {
     [_trench] call FUNC(deleteCamouflage);
 
     // Reset animation
-    [_unit, "", 1] call ace_common_fnc_doAnimation;
+    [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 
 private _fnc_onFailure = {
     (_this select 0) params ["_unit"];
     // Reset animation
-    [_unit, "", 1] call ace_common_fnc_doAnimation;
+    [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 
-[CAMOUFLAGE_DURATION, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(removeCamouflageProgress)] call ace_common_fnc_progressBar;
+[CAMOUFLAGE_DURATION, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(removeCamouflageProgress)] call EFUNC(common,progressBar);
 
 [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call ace_common_fnc_doAnimation;
