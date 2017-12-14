@@ -36,7 +36,7 @@ _unit setVariable [QGVAR(isPlacing), false, true];
 params ["_unit"];
 if (isNull GVAR(trench)) exitWith {};
 
-private _trenchTexture = (getObjectTextures ace_trenches_trench) select 0;
+private _trenchTexture = (getObjectTextures GVAR(trench)) select 0;
 deleteVehicle GVAR(trench);
 private _trench = createVehicle [GVAR(trenchClass), [0, 0, 0], [], 0, "NONE"];
 _trench setObjectTextureGlobal [0,_trenchTexture];

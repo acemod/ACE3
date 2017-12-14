@@ -34,7 +34,7 @@ private _fnc_onFinish = {
         _object attachTo [_trench, getArray(_x)];
 
         if (is3DEN) then {
-            _object setVariable [QGVAR(positionData), getArray(_x)];
+            _object setVariable [QGVAR(positionData), getArray _x];
         };
 
         _placedObjects pushBack _object;
@@ -43,19 +43,19 @@ private _fnc_onFinish = {
     _trench setVariable [QGVAR(camouflageObjects), _placedObjects, true];
 
     // Reset animation
-    [_unit, "", 1] call ace_common_fnc_doAnimation;
+    [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 
 private _fnc_onFailure = {
     (_this select 0) params ["_unit"];
     // Reset animation
-    [_unit, "", 1] call ace_common_fnc_doAnimation;
+    [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 
 if (isNull _unit) exitWith {
     [[objnull, _trench]] call _fnc_onFinish;
 };
 
-[CAMOUFLAGE_DURATION, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(placeCamouflageProgress)] call ace_common_fnc_progressBar;
+[CAMOUFLAGE_DURATION, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(placeCamouflageProgress)] call EFUNC(common,progressBar);
 
-[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call ace_common_fnc_doAnimation;
+[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);

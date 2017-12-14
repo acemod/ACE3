@@ -16,5 +16,6 @@
 
 #define DEFAULT_TEXTURE QPATHTOEF(apl,data\zr_plevel_co.paa)
 #define CAMOUFLAGE_DURATION 5
+#define CAMOUFLAGE_3DEN_ATTRIBUTE QGVAR(camouflageTrench)
 
 #include "\z\ace\addons\main\script_macros.hpp"

@@ -1,8 +1,9 @@
 ace_trenches
 =================
 
-Adds item 'ACE_entrenchingtool'
-Adds 2 trenches; Envelope - Small & Envelop - Big
+* Adds item `ACE_entrenchingtool`
+* Adds 4 trenches: `Envelope - Small`, `Envelope - Big`, `Envelope - Gigant`, `Envelope - Vehicle`
+* Adjusts trenches texture based on ground texture
 
 
 ## Maintainers

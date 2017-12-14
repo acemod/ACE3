@@ -104,7 +104,7 @@ class CfgVehicles {
                 displayName = CSTRING(CamouflageAttribute);
                 tooltip = CSTRING(CamouflageAttributeTooltip);
                 expression = QUOTE([ARR_2(_this,_value)] call FUNC(applyCamouflageAttribute));
-                property = QGVAR(camouflageTrench);
+                property = CAMOUFLAGE_3DEN_ATTRIBUTE;
             };
         };
 

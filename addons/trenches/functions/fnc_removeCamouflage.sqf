@@ -34,4 +34,4 @@ private _fnc_onFailure = {
 
 [CAMOUFLAGE_DURATION, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(removeCamouflageProgress)] call EFUNC(common,progressBar);
 
-[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call ace_common_fnc_doAnimation;
+[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);

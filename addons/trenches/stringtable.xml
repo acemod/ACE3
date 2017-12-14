@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="trenches">
-      <Key ID="STR_ACE_Trenches_ActionCategory">
-          <English>Trenches</English>
-          <German>Gräben</German>
-      </Key>
+        <Key ID="STR_ACE_Trenches_ActionCategory">
+            <English>Trenches</English>
+            <German>Gräben</German>
+        </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
             <English>Entrenching Tool</English>
             <German>Klappspaten</German>
