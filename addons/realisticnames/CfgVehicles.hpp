@@ -66,14 +66,23 @@ class CfgVehicles {
     class O_MRAP_02_F: MRAP_02_base_F {
         displayName = CSTRING(MRAP_02_Name);
     };
+    class O_T_MRAP_02_ghex_F: MRAP_02_base_F {
+        displayName = CSTRING(MRAP_02_Name);
+    };
 
     class MRAP_02_hmg_base_F: MRAP_02_base_F {};
     class O_MRAP_02_hmg_F: MRAP_02_hmg_base_F {
         displayName = CSTRING(MRAP_02_hmg_Name);
     };
+    class O_T_MRAP_02_hmg_ghex_F: MRAP_02_hmg_base_F {
+        displayName = CSTRING(MRAP_02_hmg_Name);
+    };
 
     class MRAP_02_gmg_base_F: MRAP_02_hmg_base_F {};
     class O_MRAP_02_gmg_F: MRAP_02_gmg_base_F {
+        displayName = CSTRING(MRAP_02_gmg_Name);
+    };
+    class O_T_MRAP_02_gmg_ghex_F: MRAP_02_gmg_base_F {
         displayName = CSTRING(MRAP_02_gmg_Name);
     };
 
