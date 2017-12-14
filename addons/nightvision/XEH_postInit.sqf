@@ -26,11 +26,15 @@ GVAR(ppEffectCCMuzzleFlash) = -1;
 ["ace_settingsInitialized", {
     TRACE_3("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(effectScaling));
 
-    // Disable ALL effects if ace_nightvision_effectScaling is zero
-    if (GVAR(effectScaling) == 0) exitWith {};
+    ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
+
+    // handle only brightness if effects are disabled
+    if (GVAR(effectScaling) == 0) exitWith {
+        GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];
+        GVAR(ppEffectNVGBrightness) ppEffectForceInNVG true;
+    };
 
     ["loadout", LINKFUNC(onLoadoutChanged), true] call CBA_fnc_addPlayerEventHandler;
-    ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
     ["cameraView", LINKFUNC(onCameraViewChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["vehicle", LINKFUNC(refreshGoggleType), false] call CBA_fnc_addPlayerEventHandler;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
