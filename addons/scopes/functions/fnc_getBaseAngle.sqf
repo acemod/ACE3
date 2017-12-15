@@ -23,9 +23,6 @@ if (_weaponIndex < 0 || {_weaponIndex > 2}) exitWith { 0 };
 private _weaponClass = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] select _weaponIndex; 
 private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex; 
 
-private _cachedResult = _unit getVariable format[QGVAR(%1_%2), _weaponClass, _opticsClass];
-if (!isNil "_cachedResult") exitWith { _cachedResult };
-
 private _weaponConfig = configFile >> "CfgWeapons" >> _weaponClass;
 private _baseAngle = getNumber(_weaponConfig >> "ACE_IronSightBaseAngle");
 
@@ -36,7 +33,5 @@ if (_opticsClass != "") then {
         _baseAngle = DEFAULT_RAIL_BASE_ANGLE;
     };
 };
-
-_unit setVariable [format[QGVAR(%1_%2), _weaponClass, _opticsClass], _baseAngle];
 
 _baseAngle

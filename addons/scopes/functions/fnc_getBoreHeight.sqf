@@ -25,9 +25,6 @@ private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex;
 
 if (_opticsClass == "") then { _opticsClass = _weaponClass; };
 
-private _cachedResult = _unit getVariable format[QGVAR(%1_%2), _weaponClass, _opticsClass];
-if (!isNil "_cachedResult") exitWith { _cachedResult };
-
 // Determine rail height above bore
 private _railHeightAboveBore = 0;
 private _weaponConfig = configFile >> "CfgWeapons" >> _weaponClass;
@@ -57,8 +54,4 @@ if (isNumber (_opticConfig >> "ACE_ScopeHeightAboveRail")) then {
     };
 };
 
-private _boreHeight = _railHeightAboveBore + _scopeHeightAboveRail;
-
-_unit setVariable [format[QGVAR(%1_%2), _weaponClass, _opticsClass], _boreHeight];
-
-_boreHeight
+(_railHeightAboveBore + _scopeHeightAboveRail)
