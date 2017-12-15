@@ -79,16 +79,14 @@ private _newOptics = [_player] call FUNC(getOptics);
     };
 } forEach GVAR(Optics);
 
-private _unitBaseAngleOld = _player getVariable [QGVAR(baseAngle), [0,0,0]];
-private _unitBaseAngleNew = +_unitBaseAngleOld;
-private _unitBoreHeightOld = _player getVariable [QGVAR(boreHeight), [0,0,0]];
-private _unitBoreHeightNew = +_unitBoreHeightOld;
+private _unitBaseAngle = +(_player getVariable [QGVAR(baseAngle), [0,0,0]]);
+private _unitBoreHeight = +(_player getVariable [QGVAR(boreHeight), [0,0,0]]);
 
 private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
 {
     if ((_newOptics select _x) != (GVAR(Optics) select _x) || (_newGuns select _x != GVAR(Guns) select _x)) then {
-        _unitBaseAngleNew set [_x, [_player, _x] call FUNC(getBaseAngle)];
-        _unitBoreHeightNew set [_x, [_player, _x] call FUNC(getBoreHeight)];
+        _unitBaseAngle set [_x, [_player, _x] call FUNC(getBaseAngle)];
+        _unitBoreHeight set [_x, [_player, _x] call FUNC(getBoreHeight)];
         if ((_newOptics select _x) == "") then {
             // Check if the weapon comes with an integrated optic
             private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x);
@@ -133,13 +131,13 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
 } forEach [0, 1, 2];
 
 if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
-    if (!(_unitBaseAngleNew isEqualTo _unitBaseAngleOld)) then {
-        TRACE_2("syncing",_unitBaseAngleNew,_unitBaseAngleOld);
-        _unit setVariable [QGVAR(baseAngle), _unitBaseAngleNew, true];
+    if (!(_unitBaseAngle isEqualTo (_player getVariable [QGVAR(baseAngle), [0,0,0]]))) then {
+        TRACE_2("syncing",_unitBaseAngle,_player getVariable QGVAR(baseAngle));
+        _player setVariable [QGVAR(baseAngle), _unitBaseAngle, true];
     };
-    if (!(_unitBoreHeightNew isEqualTo _unitBoreHeightOld)) then {
-        TRACE_2("syncing",_unitBoreHeightNew,_unitBoreHeightOld);
-        _unit setVariable [QGVAR(boreHeight), _unitBoreHeightNew, true];
+    if (!(_unitBoreHeight isEqualTo (_player getVariable [QGVAR(boreHeight), [0,0,0]]))) then {
+        TRACE_2("syncing",_unitBoreHeight,_player getVariable QGVAR(boreHeight));
+        _player setVariable [QGVAR(boreHeight), _unitBoreHeight, true];
     };
 };
 
