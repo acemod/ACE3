@@ -32,7 +32,7 @@ GVAR(ppEffectCCMuzzleFlash) = -1;
     if (GVAR(effectScaling) == 0) exitWith {
         GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];
         GVAR(ppEffectNVGBrightness) ppEffectForceInNVG true;
-        GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (0+3)/5 + 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
+        GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (-3+3)/5 + 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
         GVAR(ppEffectNVGBrightness) ppEffectCommit 0;
     };
 
