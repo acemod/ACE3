@@ -14,7 +14,7 @@ version:
 
 ## 1. Configs Values
 
-You do not have to put the ACE_ATragMX_Presets class into a separate file. You can reuse CfgAmmo.hpp or CfgWeapons.hpp.
+You do not have to put the `ACE_ATragMX_Presets` class into a separate file. You can reuse `CfgAmmo.hpp` or `CfgWeapons.hpp`.
 
 <div class="panel callout">
     <h5>All values are in METRIC units!</h5>
