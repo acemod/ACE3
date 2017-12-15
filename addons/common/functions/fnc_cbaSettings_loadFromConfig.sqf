@@ -61,7 +61,7 @@ case ("SCALAR"): { // ACE's Scalar can be a float or an index for a list
             _cbaValueInfo = if (isArray (_config >> "sliderSettings")) then {
                 getArray (_config >> "sliderSettings");
             } else {
-                WARNING_1("Using auto min/max for [%1]",_varName);
+                INFO_1("Using auto min/max for [%1]",_varName);
                 [-1, 5000, 0, 1]
             };
             _cbaValueInfo set [2, getNumber (_config >> "value")];
