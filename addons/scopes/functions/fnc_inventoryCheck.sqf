@@ -82,7 +82,7 @@ private _newOptics = [_player] call FUNC(getOptics);
 private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
 {
     if ((_newOptics select _x) != (GVAR(Optics) select _x) || (_newGuns select _x != GVAR(Guns) select _x)) then {
-        GVAR(baseAngle) set [_x, [_player, _x] call FUNC(getBaseAngle)]; 
+        GVAR(baseAngle) set [_x, [_player, _x, _newGuns select _x, _newOptics select _x] call FUNC(getBaseAngle)]; 
         GVAR(boreHeight) set [_x, [_player, _x] call FUNC(getBoreHeight)];
 
         if ((_newOptics select _x) == "") then {
