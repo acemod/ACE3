@@ -230,11 +230,13 @@
             <English>Simplified zeroing</English>
             <German>Vereinfachte Nullung</German>
             <Japanese>簡略なゼロイン</Japanese>
+            <Italian>Azzeramento semplificato</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
             <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
             <Japanese>標準で使われるライフルスコープ用のゼロイン システムを複製します。</Japanese>
+            <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -370,7 +372,7 @@
             <Polish>Zresetuj wyzerowanie</Polish>
             <Russian>Сбросить корректировку</Russian>
             <Spanish>Establecer ajuste a cero</Spanish>
-            <Italian>Resetta i valori del tiro</Italian>
+            <Italian>Imposta i valori dell'azzeramento</Italian>
             <French>RAZ corrections</French>
             <Hungarian>Állítások nullázása</Hungarian>
             <Portuguese>Zerar ajuste</Portuguese>
@@ -384,6 +386,7 @@
             <English>Reset zero adjustment</English>
             <German>Nullung zurücksetzen</German>
             <Japanese>ゼロイン調節を初期化</Japanese>
+            <Italian>Resetta i valori dell'azzeramento</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
