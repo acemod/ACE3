@@ -30,6 +30,7 @@ playSound "ACE_Sound_Click";
 
 // handle only brightness if effects are disabled
 if (GVAR(effectScaling) == 0) exitWith {
+    // here we take (-6; 0) _brightness range and alter it to (-1.6; 1.6)
     GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (_brightness+3)/5 + 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
     GVAR(ppEffectNVGBrightness) ppEffectCommit 0;
 };
