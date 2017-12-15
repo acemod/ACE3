@@ -32,8 +32,8 @@ _zeroing = _zeroing vectorMultiply MRAD_TO_DEG(1);
 
 if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
-    private _baseAngle = [_unit, _weaponIndex] call FUNC(getBaseAngle);
-    private _boreHeight = [_unit, _weaponIndex] call FUNC(getBoreHeight);
+    private _baseAngle = (_unit getVariable [QGVAR(baseAngle), [0,0,0]]) select _weaponIndex;
+    private _boreHeight = (_unit getVariable [QGVAR(boreHeight), [0,0,0]]) select _weaponIndex; 
     private _oldZeroRange = currentZeroing _unit;
     private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
     private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
