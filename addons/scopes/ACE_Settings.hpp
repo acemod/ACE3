@@ -48,7 +48,7 @@ class ACE_Settings {
         value = 15;
         displayName = CSTRING(zeroReferenceTemperature_displayName);
         description = CSTRING(zeroReferenceTemperature_description);
-        sliderSettings[] = {-55, 55, 15, 1};
+        sliderSettings[] = {-55, 55, 15, 0};
     };
     class GVAR(zeroReferenceBarometricPressure) {
         category = CSTRING(DisplayName);
