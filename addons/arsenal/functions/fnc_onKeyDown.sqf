@@ -103,6 +103,12 @@ if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
         case (_keyPressed == DIK_V && {_ctrlState}): {
             _return = false;
         };
+        case (_keyPressed == DIK_A && {_ctrlState}): {
+            _return = false;
+        };
+        case (_keyPressed == DIK_X && {_ctrlState}): {
+            _return = false;
+        };
         // Search fields
         case (_keyPressed == DIK_F && {_ctrlState}): {
             if (GVAR(rightSearchbarFocus)) then {
