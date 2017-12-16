@@ -5,6 +5,11 @@
  * Arguments:
  * 0: Map Control the evh was assigned to <CONTROL>
  * 1: Button code <NUMBER>
+ * 2: Position of x <NUMBER>
+ * 3: Position of y <NUMBER>
+ * 4: State of Shift <BOOL>
+ * 5: State of Ctrl <BOOL>
+ * 6: State of Alt <BOOL>
  *
  * Return Value:
  * None
@@ -16,6 +21,6 @@
  */
 #include "script_component.hpp"
 
-params ["_mapCtrl", "_button"];
+params ["_ctrlMap", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
 
-player setVariable [QGVAR(moveInProgress), false];
+GVAR(moving) = false;
