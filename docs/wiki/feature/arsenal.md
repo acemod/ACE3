@@ -16,7 +16,29 @@ version:
 
 ### 1.1 Main screen
 
-### 1.1 Loadouts screen
+### 1.2 Loadouts
+
+<div class="panel callout">
+    <p>Loadouts from BI Virtual Arsenal will not show up in ACE Arsenal and vice versa.</p>
+</div>
+
+The loadouts screen is separated into 3 tabs:
+- `My loadouts` for loadouts saved into your profile.
+- `Default loadouts` for loadouts saved in the mission.
+- `Public loadouts` for loadouts made public by other players (does not persist after the owner disconnects).
+
+`Default loadouts` and `Public loadouts` tabs can be disabled by the mission maker.
+
+Loadout names are unique, you cannot have two loadouts with the same name, however you are able to rename loadouts.
+
+Saving loadouts from the default and public tabs will save them in your profile, they will show up in the "My loadouts" tab if you switch back to it.
+
+All loadouts can be loaded, however items not available or missing, will NOT be added.  This limitation applies to all tabs as well as imported loadouts.
+
+The color coding for loadouts is as follows:
+- White: All items are available and will be loaded.
+- Grey: Some items in that loadout are not available in that box.
+- Red: Missing mods / class not defined, this takes precedence over grey if there is also unavailable items.
 
 ## 2. Shortcuts
 
@@ -32,6 +54,7 @@ version:
 - <kbd>Backspace</kbd>: Hide / show the UI (does not work on loadouts screen).
 - Arrow keys can be used to naviguate the left and right panels.
 - <kbd>Shift</kbd> + <kbd>LMB</kbd> on the `+` or `-` buttons on the right panel to add or remove 5 of the selected item.
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> Selects the left search bar.
 
 <div class="panel callout">
     <h5>Note:</h5>
@@ -40,11 +63,12 @@ version:
 
 ### 2.2 Inside of search boxes
 
-- Searchboxes support copy and pasting (same limitations as importing apply in multiplayer).
-- <kbd>Backspace</kbd> is supported.
+- Search boxes support copy / cut and paste (same limitations as importing apply in multiplayer).
+- <kbd>Ctrl</kbd> + <kbd>A</kbd> is supported.
 - <kbd>Enter</kbd> validates the search.
 - <kbd>RMB</kbd> clears the text field.
 - Arrow keys can be used to move the caret.
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> Switches which search bar is selected.
 
 
 {% include dependencies_list.md component="arsenal" %}
