@@ -262,5 +262,8 @@
             <Japanese>ぼかしと粒子、明度効果 [0 に設定で全効果を無効化します]</Japanese>
             <Italian>Effetti di sfocatura, sgranatura e luminosità [Importare a 0 disabiliterà TUTTI gli effetti della visione notturna]</Italian>
         </Key>
+        <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
+            <English>Aim Down Sights Blur</English>
+        </Key>
     </Package>
 </Project>
