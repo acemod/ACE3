@@ -26,23 +26,17 @@
             <Chinesesimp>标志</Chinesesimp>
             <Korean>맵마커</Korean>
         </Key>
-        <Key ID="STR_ACE_Markers_MoveRestriction_DisplayName">
-            <English>Move restriction</English>
-            <German>Verschiebungsrestriktion</German>
-            <Japanese>可動制限</Japanese>
-            <Italian>Restrizione di movimento</Italian>
-            <Chinese>移動限制</Chinese>
-            <Chinesesimp>移动限制</Chinesesimp>
-            <Korean>이동 제한</Korean>
+        <Key ID="STR_ACE_Markers_MoveRestriction">
+            <English>Allow moving markers for</English>
+            <German>Erlaube Marker zu bewegen für</German>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
-            <English>Apply move restrictions so that not every player is able to move markers.</English>
-            <German>Restriktionen, damit nicht jeder Spieler Marker verschieben kann</German>
-            <Japanese>マーカーを可動出来るプレイヤーを決定します。</Japanese>
-            <Italian>Applica le restrizioni di movimento cosicchè ogni giocatore possa spostare i marcatori.</Italian>
-            <Chinese>設定那些玩家可以移動標誌的位置。</Chinese>
-            <Chinesesimp>设定那些玩家可以移动标志的位置。</Chinesesimp>
-            <Korean>일부의 플레이어가 마커를 움직일 수 있도록 제한권한을 설정하세요.</Korean>
+            <English>Restricts which players are able to move markers while holding the Alt key.</English>
+            <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
+            <English>Nobody</English>
+            <German>Niemand</German>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
