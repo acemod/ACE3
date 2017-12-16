@@ -12,6 +12,7 @@ class ACE_Settings {
         description = CSTRING(fogScaling_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 2, 1, 1};
     };
     class GVAR(effectScaling) {
         category = CSTRING(Category);
@@ -19,5 +20,6 @@ class ACE_Settings {
         description = CSTRING(effectScaling_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 2, 1, 1};
     };
 };

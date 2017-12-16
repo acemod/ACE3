@@ -5,6 +5,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         displayName = CSTRING(BFT_Interval_DisplayName);
         description = CSTRING(BFT_Interval_Description);
+        sliderSettings[] = {0, 30, 1, 1};
     };
     class GVAR(BFT_Enabled) {
         category = CSTRING(Module_DisplayName);
@@ -68,5 +69,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         displayName = CSTRING(DefaultChannel_DisplayName);
         description = CSTRING(DefaultChannel_Description);
+        sliderSettings[] = {-1, 5, -1, -1};
     };
 };
