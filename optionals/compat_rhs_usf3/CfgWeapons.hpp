@@ -264,7 +264,6 @@ class CfgWeapons {
         EGVAR(disposable,hasPreparation) = 0;
         magazines[] = {"ACE_FiredMissileDummy"};
     };
-
     class Launcher_Base_F;
     class rhs_weap_smaw: Launcher_Base_F {
         ace_reloadlaunchers_enabled = 1;
