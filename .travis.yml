@@ -4,7 +4,7 @@ branches:
    - release
 language: python
 python:
-- '3.4'
+- '3.5'
 before_script:
 - if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
     pip install pygithub;

@@ -45,7 +45,6 @@ class ACE_Rsc_Control_Base {
     idc = 1;
     type = 0;
     style = 48;
-    access = 0;
     lineSpacing = 0;
     moving = 1;
     text = "";
@@ -65,6 +64,7 @@ class ACE_Rsc_Control_Base {
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
 #include <RscInfoType.hpp>
+#include "CompassControl.hpp"
 
 class CfgUIGrids {
     class IGUI {
@@ -89,4 +89,9 @@ class CfgUIGrids {
 
 class ACE_Extensions {
     extensions[] = {};
+};
+
+class ACE_Tests {
+    vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
+    mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
 };

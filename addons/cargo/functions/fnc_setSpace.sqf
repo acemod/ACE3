@@ -49,6 +49,7 @@ private _jipID = _vehicle getVariable QGVAR(setSpace_jipID);
 // Cargo menu should be added to all future JIP players too
 if (isNil "_jipID") then {
     _jipID = [QGVAR(initVehicle), [_vehicle]] call CBA_fnc_globalEventJIP;
+    [_jipID, _vehicle] call CBA_fnc_removeGlobalEventJIP;
 
     // Store the ID for any future calls to this function
     _vehicle setVariable [QGVAR(setSpace_jipID), _jipID, true];

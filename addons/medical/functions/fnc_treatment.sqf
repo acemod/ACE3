@@ -176,21 +176,24 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (isWeaponDeployed _caller) then {
-        TRACE_1("Weapon Deployed, breaking out first",(stance _caller));
-        [_caller, "", 0] call EFUNC(common,doAnimation);
-    };
-
-    if ((stance _caller) == "STAND") then {
-        switch (_wpn) do {//If standing, end in a crouched animation based on their current weapon
-            case ("rfl"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWrflDnon"];};
-            case ("pst"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWpstDnon"];};
-            case ("non"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSnonWnonDnon"];};
+    if !(_caller call EFUNC(common,isSwimming)) then {
+        // Weapon on back also does not work underwater
+        if (isWeaponDeployed _caller) then {
+            TRACE_1("Weapon Deployed, breaking out first",(stance _caller));
+            [_caller, "", 0] call EFUNC(common,doAnimation);
         };
-    } else {
-        _caller setVariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
+
+        if ((stance _caller) == "STAND") then {
+            switch (_wpn) do {//If standing, end in a crouched animation based on their current weapon
+                case ("rfl"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWrflDnon"];};
+                case ("pst"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWpstDnon"];};
+                case ("non"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSnonWnonDnon"];};
+            };
+        } else {
+            _caller setVariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
+        };
+        [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
-    [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
 //Get treatment time
@@ -220,7 +223,7 @@ private _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
     DFUNC(treatment_failure),
     getText (_config >> "displayNameProgress"),
     _callbackProgress,
-    ["isnotinside"]
+    ["isNotInside", "isNotSwimming"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon

@@ -1,4 +1,3 @@
-
 PREP(addCargoItem);
 PREP(addCargoVehiclesActions);
 PREP(canLoadItemIn);
@@ -9,11 +8,10 @@ PREP(handleDestroyed);
 PREP(initObject);
 PREP(initVehicle);
 PREP(loadItem);
-PREP(makeLoadable);
-PREP(moduleMakeLoadable);
 PREP(moduleSettings);
 PREP(onMenuOpen);
 PREP(paradropItem);
+PREP(removeCargoItem);
 PREP(setSize);
 PREP(setSpace);
 PREP(startLoadIn);

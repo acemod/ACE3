@@ -25,38 +25,47 @@
  */
 #include "script_component.hpp"
 
-private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_attachList"];
+params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAttachText", "_startingPosition"];
+TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAttachText,_startingPosition);
 
-params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAtachText", "_startingPosition"];
-TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
+private _startingOffset = _attachToVehicle worldToModel _startingPosition;
 
-_startingOffset = _attachToVehicle worldToModel _startingPosition;
+private _startDistanceFromCenter = vectorMagnitude _startingOffset;
+private _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 
-_startDistanceFromCenter = vectorMagnitude _startingOffset;
-_closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
-
-_closeInMax = _startDistanceFromCenter;
-_closeInMin = 0;
+private _closeInMax = _startDistanceFromCenter;
+private _closeInMin = 0;
 
 while {(_closeInMax - _closeInMin) > 0.01} do {
-    _closeInDistance = (_closeInMax + _closeInMin) / 2;
+    private _closeInDistance = (_closeInMax + _closeInMin) / 2;
     // systemChat format ["Trying %1 from %2 start %3", _closeInDistance, [_closeInMax, _closeInMin], _startDistanceFromCenter];
-    _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
+    private _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
     _endPosTestOffset set [2, (_startingOffset select 2)];
-    _endPosTest = _attachToVehicle modelToWorldVisual _endPosTestOffset;
+    private _endPosTest = _attachToVehicle modelToWorldVisual _endPosTestOffset;
 
-    _doesIntersect = false;
+    private _doesIntersect = false;
     {
         if (_doesIntersect) exitWith {};
-        _startingPosShifted = _startingPosition vectorAdd _x;
-        _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
+        private _startingPosShifted = _startingPosition vectorAdd _x;
+        private _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
         {
-            _endPosShifted = _endPosTest vectorAdd _x;
-            _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
+            private _endPosShifted = _endPosTest vectorAdd _x;
+            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
-            //Uncomment to see the lazor show, and see how the scanning works:
-            // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
-            if (_attachToVehicle in lineIntersectsWith [_startASL, _endASL, _unit]) exitWith {_doesIntersect = true};
+            #ifdef DRAW_ATTACH_SCAN
+                [{
+                    params ["_args", "_idPFH"];
+                    _args params ["_startingPosShifted", "_endPosShifted", "_timeAdded"];
+                    drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
+                    if (_timeAdded + 5 < CBA_missionTime) then {
+                        [_idPFH] call CBA_fnc_removePerFrameHandler;
+                    };
+                }, 0, [_startingPosShifted, _endPosShifted, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+            #endif
+
+            // Default max results is 1, so take only first subarray and select parentObject (object itself or parent of proxy)
+            private _intersectObject = ((lineIntersectsSurfaces [_startASL, _endASL, _unit]) param [0, objNull]) param [3, objNull];
+            if (_attachToVehicle == _intersectObject) exitWith {_doesIntersect = true};
         } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
     } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
 
@@ -67,7 +76,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
     };
 };
 
-_closeInDistance = (_closeInMax + _closeInMin) / 2;
+private _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
 //Checks (too close to center or can't attach)
 if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
@@ -79,17 +88,17 @@ if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicl
 _closeInDistance = (_closeInDistance - 0.0085);
 
 //Create New 'real' Object
-_endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
+private _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
 _endPosTestOffset set [2, (_startingOffset select 2)];
-_attachedObject = _itemVehClass createVehicle (getPos _unit);
+private _attachedObject = _itemVehClass createVehicle (getPos _unit);
 _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 
 //Remove Item from inventory
 _unit removeItem _itemClassname;
 
 //Add Object to attached array
-_attachList = _attachToVehicle getVariable [QGVAR(attached), []];
+private _attachList = _attachToVehicle getVariable [QGVAR(attached), []];
 _attachList pushBack [_attachedObject, _itemClassname];
 _attachToVehicle setVariable [QGVAR(attached), _attachList, true];
 
-[_onAtachText] call EFUNC(common,displayTextStructured);
+[_onAttachText, 2] call EFUNC(common,displayTextStructured);

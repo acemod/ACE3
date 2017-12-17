@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 1: Vehicle <OBJECT>
  * 2: Visual Position ASL <ARRAY>
  * 3: Nozzle <OBJECT>
  *
@@ -18,16 +18,15 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_closeInDistance", "_endPosTestOffset"];
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_startingPosASL", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startingPosASL", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
 
 
 private _bestPosASL = [];
 private _bestPosDistance = 1e99;
 private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
-private _modelVector = _startingPosASL vectorFromTo (AGLtoASL (_target modelToWorld [0,0,0]));
-private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_target modelToWorld [0,0,-1]));
+private _modelVector = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,0]));
+private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,-1]));
 
 {
     private _endPosASL = _x;
@@ -35,7 +34,7 @@ private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_target modelT
     private _intersections = lineIntersectsSurfaces [_startingPosASL, _endPosASL, _unit];
     {
         _x params ["_intersectPosASL", "", "_intersectObject"];
-        if (_intersectObject == _target) then {
+        if (_intersectObject == _sink) then {
             private _distance = _startingPosASL distance _intersectPosASL;
             if (_distance < _bestPosDistance) then {
                 _bestPosDistance = _distance;
@@ -51,41 +50,33 @@ private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_target modelT
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,-0.25,1])) vectorMultiply 3),
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [-0.25,-0.25,1])) vectorMultiply 3),
     _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0.25,-0.25,1])) vectorMultiply 3),
-    AGLtoASL (_target modelToWorld [0,0,0]), // Try old method of just using model center
-    AGLtoASL (_target modelToWorld [0,0,-0.5])
+    AGLtoASL (_sink modelToWorld [0,0,0]), // Try old method of just using model center
+    AGLtoASL (_sink modelToWorld [0,0,-0.5])
 ];
 
 //Checks (too close to center or can't attach)
 if (_bestPosASL isEqualTo []) exitWith {
-    TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
 _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
 
-private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
+private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
 
 [
     TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
-    [_unit, _nozzle, _target, _attachPosModel],
+    [_unit, _nozzle, _sink, _attachPosModel],
     {
         params ["_args"];
-        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
+        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
-        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
-        REFUEL_UNHOLSTER_WEAPON
-        private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
-        if (_actionID != -1) then {
-            _unit removeAction _actionID;
-            _unit setVariable [QGVAR(ReleaseActionID), nil];
-        };
 
         detach _nozzle;
-        _nozzle attachTo [_target, _endPosTestOffset];
+        _nozzle attachTo [_sink, _endPosTestOffset];
         _endPosTestOffset params ["_x", "_y"];
-        private _bb = boundingBoxReal _target;
+        private _bb = boundingBoxReal _sink;
         _bb params ["_ll", "_rr"];
         _ll set [2, 0];
         _rr set [2, 0];
@@ -115,9 +106,10 @@ private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
             };
         };
         [QEGVAR(common,setVectorDirAndUp), [_nozzle, _dirAndUp], _nozzle] call CBA_fnc_targetEvent;
-        _nozzle setVariable [QGVAR(sink), _target, true];
+        if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), false, true]; };
+        _nozzle setVariable [QGVAR(sink), _sink, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
-        _target setVariable [QGVAR(nozzle), _nozzle, true];
+        _sink setVariable [QGVAR(nozzle), _nozzle, true];
 
         _source = _nozzle getVariable QGVAR(source);
         private _fuel = [_source] call FUNC(getFuel);
@@ -127,10 +119,17 @@ private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
             _source setVariable [QGVAR(fuelCounter), _fuel, true];
         };
 
-        [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
+        [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
+
+        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
+            _unit setVariable [QGVAR(tempFuel), nil];
+            [_unit, _nozzle] call FUNC(turnOn);
+        } else {
+            [LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        };
     },
     "",
     localize LSTRING(ConnectAction),
     {true},
-    ["isnotinside"]
+    [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

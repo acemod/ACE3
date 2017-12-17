@@ -43,7 +43,7 @@ private _onFinish = {
 };
 
 private _onFailure = {
-    EXPLODE_3_PVT((_this select 0),_player,_target,_magazine);
+    (_this select 0) params ["_player", "_target", "_magazine"];
     [_player, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
 
     // Add back the magazine with the former ammo count
@@ -56,4 +56,4 @@ private _onFailure = {
 [_player, _magazineType, _maxAmmo] call EFUNC(common,removeSpecificMagazine);
 
 // Call progress bar
-[4, [_player, _target, [_magazineType, _maxAmmo]], _onFinish, _onFailure, (localize LSTRING(LinkingBelt)), _condition] call EFUNC(common,progressBar);
+[4, [_player, _target, [_magazineType, _maxAmmo]], _onFinish, _onFailure, (localize LSTRING(LinkingBelt)), _condition, ["isNotInside"]] call EFUNC(common,progressBar);

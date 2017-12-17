@@ -1,14 +1,24 @@
 class CfgWeapons {
-    class ACE_ItemCore;
-    class InventoryItem_Base_f;
+    class Default;
+    class Put: Default {
+        muzzles[] += {QGVAR(muzzle)};
+        class PutMuzzle: Default{};
+        class GVAR(muzzle): PutMuzzle {
+            magazines[] = {"ACE_FlareTripMine_Mag"};
+        };
+    };
 
-    class ACE_ExplosiveItem: InventoryItem_Base_f {
+    class ACE_ItemCore;
+    class CBA_MiscItem_ItemInfo;
+
+    class ACE_ExplosiveItem: CBA_MiscItem_ItemInfo {
         allowedSlots[] = {801,701,901};
         //type = 201;
     };
 
     class ACE_Clacker: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(clacker_displayName);
         descriptionShort = CSTRING(clacker_description);
         picture = QPATHTOF(Data\UI\Clacker.paa);
@@ -23,6 +33,7 @@ class CfgWeapons {
         };
     };
     class ACE_M26_Clacker: ACE_Clacker {
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(M152_Clacker_displayName);
         picture = QPATHTOF(Data\UI\MK26_Transmitter_ca.paa);
         GVAR(Range) = 5000;
@@ -30,6 +41,7 @@ class CfgWeapons {
     };
     class ACE_DefusalKit: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(DefusalKit_displayName);
         descriptionShort = CSTRING(DefusalKit_description);
         picture = QPATHTOF(Data\UI\Pliers.paa);
@@ -42,6 +54,7 @@ class CfgWeapons {
     };
     class ACE_DeadManSwitch: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(DeadManSwitch_displayName);
         descriptionShort = CSTRING(DeadManSwitch_description);
         picture = QPATHTOF(Data\UI\DeadmanSwitch.paa);
@@ -57,6 +70,7 @@ class CfgWeapons {
     };
     class ACE_Cellphone: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(cellphone_displayName);
         descriptionShort = CSTRING(cellphone_description);
         picture = QPATHTOF(Data\UI\Cellphone_UI.paa);

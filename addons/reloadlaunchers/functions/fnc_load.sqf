@@ -31,21 +31,20 @@ private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGV
 [_unit] call EFUNC(common,goKneeling);
 
 // show progress bar
-private ["_onSuccess", "_onFailure", "_condition"];
 
-_onSuccess =  {
+private _onSuccess =  {
     (_this select 0 select 0) removeMagazine (_this select 0 select 3);
     [QGVAR(reloadLauncher), _this select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
 
     [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
 };
 
-_onFailure = {
+private _onFailure = {
     [localize ELSTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
 };
 
-_condition = {
+private _condition = {
     (_this select 0) call DFUNC(canLoad) && {(_this select 0 select 0) distance (_this select 0 select 1) < 4}
 };
 
-[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, localize LSTRING(LoadingLauncher), _condition] call EFUNC(common,progressBar);
+[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, localize LSTRING(LoadingLauncher), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);

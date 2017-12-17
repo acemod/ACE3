@@ -17,8 +17,6 @@
  */
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
-
 params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
@@ -33,6 +31,6 @@ GVAR(Module) = true;
 [_logic, QGVAR(EnableSafeZone), "EnableSafeZone"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(SafeZoneRadius), "SafeZoneRadius"] call EFUNC(common,readSettingFromModule);
 
-[QGVAR(EnableSwitchUnits), true, false, true] call EFUNC(common,setSetting);
+["CBA_settings_setSettingMission", [QGVAR(EnableSwitchUnits), true, true]] call CBA_fnc_localEvent;
 
 INFO("SwitchUnits Module Initialized.");

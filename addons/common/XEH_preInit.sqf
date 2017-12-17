@@ -18,10 +18,8 @@ GVAR(runAtSettingsInitialized) = [];
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings on the server and broadcast them
-if (isServer) then {
-    call FUNC(loadSettingsOnServer);
-};
+// Load ace_settings into CBA Settings
+[] call FUNC(cbaSettings);
 
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
@@ -41,5 +39,15 @@ uiNamespace setVariable ["ACE_player", objNull];
 isHC = !hasInterface && !isDedicated; // deprecated because no tag
 missionNamespace setVariable ["ACE_isHC", ACE_isHC];
 uiNamespace setVariable ["ACE_isHC", ACE_isHC];
+
+[
+    QGVAR(persistentLaserEnabled),
+    "CHECKBOX",
+    [localize LSTRING(SettingPersistentLaserName), localize LSTRING(SettingPersistentLaserDesc)],
+    localize LSTRING(ACEKeybindCategoryWeapons),
+    false,
+    false,
+    LINKFUNC(switchPersistentLaser)
+] call CBA_settings_fnc_init;
 
 ADDON = true;

@@ -15,11 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_windSpeed", "_windDir"];
-
-_playerDir = getDir ACE_player;
-_windSpeed = vectorMagnitude ACE_wind;
-_windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+private _playerDir = getDir ACE_player;
+private _windSpeed = vectorMagnitude wind;
+private _windDir = (wind select 0) atan2 (wind select 1);
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     // With wind gradient
     _windSpeed = [eyePos ACE_player, true, true, true] call EFUNC(weather,calculateWindSpeed);

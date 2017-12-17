@@ -35,13 +35,17 @@ if (primaryWeapon _unit == "") then {
 // select primary, otherwise the drag animation actions don't work.
 _unit selectWeapon primaryWeapon _unit;
 
+[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
 
 // can't play action that depends on weapon if it was added the same frame
-[{
-    [_this, "grabDrag"] call EFUNC(common,doGesture);
-}, _unit] call CBA_fnc_execNextFrame;
+if !(_unit call EFUNC(common,isSwimming)) then {
+    [{
+        [_this, "grabDrag"] call EFUNC(common,doGesture);
+    }, _unit] call CBA_fnc_execNextFrame;
+};
 
 // move a bit closer and adjust direction when trying to pick up a person
 if (_target isKindOf "CAManBase") then {

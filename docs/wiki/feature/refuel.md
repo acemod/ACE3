@@ -19,12 +19,10 @@ This adds the option to refuel vehicles. The basic concept of refuel a vehicle i
 ## 2. Usage
 
 ### 2.1 Start refueling vehicles
-- Interact with the fuel truck <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
+- Interact with the fuel source <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Select `Take fuel nozzle`. Your character will holster his weapon and receive a fuel nozzle.
-- Walk to the vehicle you want to refuel and interact with it.
-- Select `Connect fuel nozzle`.
-- Place the nozzle on the vehicle and interact with it.
-- Select `Start fueling`. The vehicle is now being refuel.
+- Walk close to the vehicle you want to refuel and follow the instructions on the screen to connect the nozzle.
+- Refueling starts automatically after nozzle connecting if possible.
 
 Refueling takes some time which depends on its fuel tank size, the vehicle type and the module settings.
 
@@ -32,8 +30,7 @@ Refueling takes some time which depends on its fuel tank size, the vehicle type 
 - Interact with the nozzle <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Select `Stop fueling` if refueling is still under way.
 - Select `Take fuel nozzle` which is only possible after stopping. Your character will holster his weapon and pick up the fuel nozzle.
-- Walk to the fuel truck and interact with it.
-- Select `Return fuel nozzle`.
+- Walk close to the fuel source and follow the instructions on the screen to return the nozzle.
 
 ### 2.3 Checking the remaining fuel
 - Interact with the fuel truck <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
@@ -41,14 +38,14 @@ Refueling takes some time which depends on its fuel tank size, the vehicle type 
 - A hint will display the remaining fuel in liters.
 
 ### 2.4 Checking the fuel counter
-- Interact with the fuel truck <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
+- Interact with the fuel source <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Select `Check fuel counter`.
 - A hint will display the fueled amount in liters.
 
 ## 3. FAQ
 
 ### Can I drop the nozzle?
-Yes, using the action menu.
+Yes, follow the instructions on the screen.
 
 ### Can I pick up a nozzle?
 Yes, using the interact menu <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
@@ -56,14 +53,11 @@ Yes, using the interact menu <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Int
 ### The nozzle was dropped. What's wrong?
 You can only use the nozzle within a close distance from its source. You may need to park closer.
 
-### The engine of the fuel truck is broken. Why?
+### The engine of the fuel truck can't be on. Why?
 While refueling, you can't move the fuel truck. Return the nozzle.
 
 ### How do I replenish the fuel supply on a fuel truck?
 Please check the framework description for more details.
-
-### Something broke, I can't use the fuel truck / nozzle any longer. What to do?
-You can reset the fuel truck and its nozzle by calling `ace_refuel_fnc_reset` with its first parameter being the fuel truck object.
 
 ### How do I increase the length of the hose?
 There is a global setting that will effect all vehicles and static pumps. To only effect a specific vehicle put the following in it's init box:

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WindDeflection">
         <Key ID="STR_ACE_WindDeflection_METER_WIND_CATEGORY">
@@ -92,7 +92,7 @@
             <Hungarian>Szél-hárítás</Hungarian>
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
-            <Japanese>風向による変化</Japanese>
+            <Japanese>風向の変化</Japanese>
             <Korean>풍향 변화</Korean>
             <Chinesesimp>风偏</Chinesesimp>
             <Chinese>風偏</Chinese>
@@ -108,7 +108,7 @@
             <Hungarian>Szél-hárítás</Hungarian>
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
-            <Japanese>風向による変化</Japanese>
+            <Japanese>風向の変化</Japanese>
             <Korean>풍향 변화</Korean>
             <Chinesesimp>风偏</Chinesesimp>
             <Chinese>風偏</Chinese>
@@ -124,7 +124,7 @@
             <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
             <Russian>Включает отклонение ветром</Russian>
             <Italian>Abilita deviazione del vento</Italian>
-            <Japanese>風向による変化を有効化</Japanese>
+            <Japanese>風向の変化を有効化</Japanese>
             <Korean>풍향 변화를 적용합니다</Korean>
             <Chinesesimp>开启风偏效果</Chinesesimp>
             <Chinese>開啟風偏效果</Chinese>
@@ -156,7 +156,7 @@
             <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
             <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
             <Italian>Abilita deviazione del vento per artiglieri di statiche/veicoli</Italian>
-            <Japanese>重火器や車両へ、風による変化を有効化</Japanese>
+            <Japanese>重火器や車両へ、風向の変化を有効化</Japanese>
             <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
             <Chinesesimp>使风偏作用在固定式武器与载具炮手身上</Chinesesimp>
             <Chinese>使風偏作用在固定式武器與載具砲手身上</Chinese>
@@ -173,9 +173,9 @@
             <Russian>Интервал симуляции</Russian>
             <Italian>Intervallo Simulazione</Italian>
             <Japanese>シミュレーションの間隔</Japanese>
-            <Korean>재현 간격</Korean>
             <Chinesesimp>模拟间隔</Chinesesimp>
             <Chinese>模擬間隔</Chinese>
+            <Korean>시뮬레이션 간격</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -193,38 +193,6 @@
             <Chinesesimp>定义每个计算之间的时间间隔</Chinesesimp>
             <Chinese>定義每個計算之間的時間間隔</Chinese>
         </Key>
-        <Key ID="STR_ACE_WindDeflection_simulationRadius_DisplayName">
-            <English>Simulation Radius</English>
-            <Polish>Zasięg symulacji</Polish>
-            <Spanish>Radio de simulación</Spanish>
-            <German>Simulationsradius</German>
-            <Czech>Oblast simulace</Czech>
-            <Portuguese>Radio da Simulação</Portuguese>
-            <French>Rayon de simulation</French>
-            <Hungarian>Szimulációs hatókör</Hungarian>
-            <Russian>Радиус симуляции</Russian>
-            <Italian>Raggio Simulazione</Italian>
-            <Japanese>シミュレーション半径</Japanese>
-            <Korean>재현 범위</Korean>
-            <Chinesesimp>模拟半径</Chinesesimp>
-            <Chinese>模擬半徑</Chinese>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_simulationRadius_Description">
-            <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
-            <Polish>Określa obszar naokoło gracza (w metrach), na którym pociski są znoszone przez wiatr</Polish>
-            <Spanish>Define el radio alrededor del jugador (en metros) en el cual los proyectiles son desviados por el viento</Spanish>
-            <German>Gibt den Radius (in Metern) um den Spieler an, in dem Projektile vom Wind beeinflusst werden</German>
-            <Czech>Definuje oblast kolem hráče (v metrech) v které je projektil ovlivněn větrem</Czech>
-            <Portuguese>Define o raio ao redor do jogador (em metros) em qual os projéteis são desviados pelo vento</Portuguese>
-            <French>Défini un rayon autour du joueur (en mètres) autour duquel les projectiles sont influencés par le vent</French>
-            <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékeket háríthatja a szél</Hungarian>
-            <Russian>Определяет радиус вокруг игрока (а метрах), в котором снаряды отклоняются ветром</Russian>
-            <Italian>Definisce il raggio attorno al giocatore (in metri) dove viene applicata la deviazione del vento ai proiettili</Italian>
-            <Japanese>プレイヤーの周囲に適用させる風による弾道の変化の半径を定義します (メートル)</Japanese>
-            <Korean>플레이어 주위로 발사체가 풍향 변화의 영향을 받는 범위를 정합니다 (미터)</Korean>
-            <Chinesesimp>定义玩家多少半径范围内(单位公尺)子弹会受到风偏的引响</Chinesesimp>
-            <Chinese>定義玩家多少半徑範圍內(單位公尺)子彈會受到風偏的引響</Chinese>
-        </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
             <English>Wind influence on projectiles trajectory</English>
             <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>
@@ -236,7 +204,7 @@
             <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
             <Russian>Влияние втера на траекторию снарядов</Russian>
             <Italian>Influenza del vento sulla traiettoria dei proiettili</Italian>
-            <Japanese>風が弾道へ影響させます</Japanese>
+            <Japanese>風を弾道へ影響させます</Japanese>
             <Korean>발사체의 궤도에 풍향 변화를 줍니다.</Korean>
             <Chinesesimp>风力的大小会引响到弹道的轨迹</Chinesesimp>
             <Chinese>風力的大小會引響到彈道的軌跡</Chinese>

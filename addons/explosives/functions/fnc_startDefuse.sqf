@@ -19,15 +19,12 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-private ["_actionToPlay", "_defuseTime", "_isEOD"];
-
 _target = attachedTo (_target);
 
-_fnc_DefuseTime = {
+private _fnc_DefuseTime = {
     params ["_specialist", "_target"];
     TRACE_2("defuseTime",_specialist,_target);
-    private ["_defuseTime"];
-    _defuseTime = 5;
+    private _defuseTime = 5;
     if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime))) then {
         _defuseTime = getNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime));
     };
@@ -36,7 +33,7 @@ _fnc_DefuseTime = {
     };
     _defuseTime
 };
-_actionToPlay = "MedicOther";
+private _actionToPlay = "MedicOther";
 if (STANCE _unit == "Prone") then {
     _actionToPlay = "PutDown";
 };
@@ -49,7 +46,7 @@ if (ACE_player != _unit) then {
         [_unit, _actionToPlay] call EFUNC(common,doGesture);
         _unit disableAI "MOVE";
         _unit disableAI "TARGET";
-        _defuseTime = [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime;
+        private _defuseTime = [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime;
         [{
             params ["_unit", "_target"];
             TRACE_2("defuse finished",_unit,_target);
@@ -60,8 +57,8 @@ if (ACE_player != _unit) then {
     };
 } else {
     [_unit, _actionToPlay] call EFUNC(common,doGesture);
-    _isEOD = [_unit] call EFUNC(Common,isEOD);
-    _defuseTime = [_isEOD, _target] call _fnc_DefuseTime;
+    private _isEOD = [_unit] call EFUNC(Common,isEOD);
+    private _defuseTime = [_isEOD, _target] call _fnc_DefuseTime;
     if (_isEOD || {!GVAR(RequireSpecialist)}) then {
         [_defuseTime, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize LSTRING(DefusingExplosive)), {true}, ["isNotSwimming"]] call EFUNC(common,progressBar);
     };

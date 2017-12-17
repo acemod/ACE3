@@ -17,6 +17,8 @@
 
 params ["_unit"];
 
+if (!local _unit) exitWith {};
+
 if (_unit getVariable [QGVAR(isPlacing), false]) then {
     [_unit] call FUNC(placeCancel);
 };

@@ -6,10 +6,12 @@
 #include <unordered_map>
 #include <random>
 #include <cmath>
+#include <sstream>
 
+#include "vector.hpp"
 
-#define DELTA_T 0.02f
-#define GRAVITY 9.80665f
+#define DELTA_T 0.005
+#define GRAVITY 9.8066f
 #define DEGREES(X) (X * 180 / M_PI)
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
 #define KELVIN(t) (t - ABSOLUTE_ZERO_IN_CELSIUS)
@@ -21,6 +23,9 @@
 #define SPECIFIC_GAS_CONSTANT_DRY_AIR 287.058f
 #define STD_AIR_DENSITY_ICAO 1.22498f
 #define STD_AIR_DENSITY_ASM 1.20885f
+#define BC_CONVERSION_FACTOR 0.00068418f
+#define SPEED_OF_SOUND(t) (331.3 * std::sqrt(1 + t / 273.15f))
+#define SPEED_OF_SOUND_AT_15C 340.275
 
 struct Bullet {
     double airFriction;
@@ -36,8 +41,8 @@ struct Bullet {
     double stabilityFactor;
     double twistDirection;
     double transonicStabilityCoef;
-    double muzzleVelocity;
-    std::vector<double> origin;
+    ace::vector3<double> bulletVelocityPreviousFrame;
+    ace::vector3<double> origin;
     double latitude;
     double temperature;
     double altitude;
@@ -45,7 +50,6 @@ struct Bullet {
     double overcast;
     double startTime;
     double lastFrame;
-    double bcDegradation;
     unsigned randSeed;
     std::default_random_engine randGenerator;
 };
@@ -114,124 +118,69 @@ double calculateAtmosphericCorrection(double ballisticCoefficient, double temper
     }
 }
 
-double calculateRetard(int DragFunction, double DragCoefficient, double Velocity) {
-    double vel = Velocity * 3.2808399;
-    double val = -1;
-    double A = -1;
-    double M = -1;
+// Drag Functions from: http://www.jbmballistics.com/ballistics/downloads/text/
+const std::vector<double> dragCoefficientsG1 = { 0.2629, 0.2558, 0.2487, 0.2413, 0.2344, 0.2278, 0.2214, 0.2155, 0.2104, 0.2061, 0.2032, 0.2020, 0.2034, 0.2165, 0.2230, 0.2313, 0.2417, 0.2546, 0.2706, 0.2901, 0.3136, 0.3415, 0.3734, 0.4084, 0.4448, 0.4805, 0.5136, 0.5427, 0.5677, 0.5883, 0.6053, 0.6191, 0.6393, 0.6518, 0.6589, 0.6621, 0.6625, 0.6607, 0.6573, 0.6528, 0.6474, 0.6413, 0.6347, 0.6280, 0.6210, 0.6141, 0.6072, 0.6003, 0.5934, 0.5867, 0.5804, 0.5743, 0.5685, 0.5630, 0.5577, 0.5527, 0.5481, 0.5438, 0.5397, 0.5325, 0.5264, 0.5211, 0.5168, 0.5133, 0.5105, 0.5084, 0.5067, 0.5054, 0.5040, 0.5030, 0.5022, 0.5016, 0.5010, 0.5006, 0.4998, 0.4995, 0.4992, 0.4990, 0.4988 };
+const std::vector<double> machNumbersG1 = { 0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.70, 0.725, 0.75, 0.775, 0.80, 0.825, 0.85, 0.875, 0.90, 0.925, 0.95, 0.975, 1.0, 1.025, 1.05, 1.075, 1.10, 1.125, 1.15, 1.20, 1.25, 1.30, 1.35, 1.40, 1.45, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00, 2.05, 2.10, 2.15, 2.20, 2.25, 2.30, 2.35, 2.40, 2.45, 2.50, 2.60, 2.70, 2.80, 2.90, 3.00, 3.10, 3.20, 3.30, 3.40, 3.50, 3.60, 3.70, 3.80, 3.90, 4.00, 4.20, 4.40, 4.60, 4.80, 5.00 };
+const std::vector<double> dragCoefficientsG2 = { 0.2303, 0.2298, 0.2287, 0.2271, 0.2251, 0.2227, 0.2196, 0.2156, 0.2107, 0.2048, 0.1980, 0.1905, 0.1828, 0.1758, 0.1702, 0.1669, 0.1664, 0.1667, 0.1682, 0.1711, 0.1761, 0.1831, 0.2004, 0.2589, 0.3492, 0.3983, 0.4075, 0.4103, 0.4114, 0.4106, 0.4089, 0.4068, 0.4046, 0.4021, 0.3966, 0.3904, 0.3835, 0.3759, 0.3678, 0.3594, 0.3512, 0.3432, 0.3356, 0.3282, 0.3213, 0.3149, 0.3089, 0.3033, 0.2982, 0.2933, 0.2889, 0.2846, 0.2806, 0.2768, 0.2731, 0.2696, 0.2663, 0.2632, 0.2602, 0.2572, 0.2543, 0.2515, 0.2487, 0.2460, 0.2433, 0.2408, 0.2382, 0.2357, 0.2333, 0.2309, 0.2262, 0.2217, 0.2173, 0.2132, 0.2091, 0.2052, 0.2014, 0.1978, 0.1944, 0.1912, 0.1851, 0.1794, 0.1741, 0.1693, 0.1648 };
+const std::vector<double> machNumbersG2 = { 0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.775, 0.80, 0.825, 0.85, 0.875, 0.90, 0.925, 0.95, 0.975, 1.0, 1.025, 1.05, 1.075, 1.10, 1.125, 1.15, 1.175, 1.20, 1.25, 1.30, 1.35, 1.40, 1.45, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00, 2.05, 2.10, 2.15, 2.20, 2.25, 2.30, 2.35, 2.40, 2.45, 2.50, 2.55, 2.60, 2.65, 2.70, 2.75, 2.80, 2.85, 2.90, 2.95, 3.00, 3.10, 3.20, 3.30, 3.40, 3.50, 3.60, 3.70, 3.80, 3.90, 4.00, 4.20, 4.40, 4.60, 4.80, 5.00 };
+const std::vector<double> dragCoefficientsG5 = { 0.1710, 0.1719, 0.1727, 0.1732, 0.1734, 0.1730, 0.1718, 0.1696, 0.1668, 0.1637, 0.1603, 0.1566, 0.1529, 0.1497, 0.1473, 0.1463, 0.1489, 0.1583, 0.1672, 0.1815, 0.2051, 0.2413, 0.2884, 0.3379, 0.3785, 0.4032, 0.4147, 0.4201, 0.4278, 0.4338, 0.4373, 0.4392, 0.4403, 0.4406, 0.4401, 0.4386, 0.4362, 0.4328, 0.4286, 0.4237, 0.4182, 0.4121, 0.4057, 0.3991, 0.3926, 0.3861, 0.3800, 0.3741, 0.3684, 0.3630, 0.3578, 0.3529, 0.3481, 0.3435, 0.3391, 0.3349, 0.3269, 0.3194, 0.3125, 0.3060, 0.2999, 0.2942, 0.2889, 0.2838, 0.2790, 0.2745, 0.2703, 0.2662, 0.2624, 0.2588, 0.2553, 0.2488, 0.2429, 0.2376, 0.2326, 0.2280 };
+const std::vector<double> machNumbersG5 = { 0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.875, 0.90, 0.925, 0.95, 0.975, 1.0, 1.025, 1.05, 1.075, 1.10, 1.15, 1.20, 1.25, 1.30, 1.35, 1.40, 1.45, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00, 2.05, 2.10, 2.15, 2.20, 2.25, 2.30, 2.35, 2.40, 2.45, 2.50, 2.60, 2.70, 2.80, 2.90, 3.00, 3.10, 3.20, 3.30, 3.40, 3.50, 3.60, 3.70, 3.80, 3.90, 4.00, 4.20, 4.40, 4.60, 4.80, 5.00 };
+const std::vector<double> dragCoefficientsG6 = { 0.2617, 0.2553, 0.2491, 0.2432, 0.2376, 0.2324, 0.2278, 0.2238, 0.2205, 0.2177, 0.2155, 0.2138, 0.2126, 0.2121, 0.2122, 0.2132, 0.2154, 0.2194, 0.2229, 0.2297, 0.2449, 0.2732, 0.3141, 0.3597, 0.3994, 0.4261, 0.4402, 0.4465, 0.4490, 0.4497, 0.4494, 0.4482, 0.4464, 0.4441, 0.4390, 0.4336, 0.4279, 0.4221, 0.4162, 0.4102, 0.4042, 0.3981, 0.3919, 0.3855, 0.3788, 0.3721, 0.3652, 0.3583, 0.3515, 0.3447, 0.3381, 0.3314, 0.3249, 0.3185, 0.3122, 0.3060, 0.3000, 0.2941, 0.2883, 0.2772, 0.2668, 0.2574, 0.2487, 0.2407, 0.2333, 0.2265, 0.2202, 0.2144, 0.2089, 0.2039, 0.1991, 0.1947, 0.1905, 0.1866, 0.1794, 0.1730, 0.1673, 0.1621, 0.1574 };
+const std::vector<double> machNumbersG6 = { 0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.875, 0.90, 0.925, 0.95, 0.975, 1.0, 1.025, 1.05, 1.075, 1.10, 1.125, 1.15, 1.175, 1.20, 1.225, 1.25, 1.30, 1.35, 1.40, 1.45, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00, 2.05, 2.10, 2.15, 2.20, 2.25, 2.30, 2.35, 2.40, 2.45, 2.50, 2.60, 2.70, 2.80, 2.90, 3.00, 3.10, 3.20, 3.30, 3.40, 3.50, 3.60, 3.70, 3.80, 3.90, 4.00, 4.20, 4.40, 4.60, 4.80, 5.00 };
+const std::vector<double> dragCoefficientsG7 = { 0.1198, 0.1197, 0.1196, 0.1194, 0.1193, 0.1194, 0.1194, 0.1194, 0.1193, 0.1193, 0.1194, 0.1193, 0.1194, 0.1197, 0.1202, 0.1207, 0.1215, 0.1226, 0.1242, 0.1266, 0.1306, 0.1368, 0.1464, 0.1660, 0.2054, 0.2993, 0.3803, 0.4015, 0.4043, 0.4034, 0.4014, 0.3987, 0.3955, 0.3884, 0.3810, 0.3732, 0.3657, 0.3580, 0.3440, 0.3376, 0.3315, 0.3260, 0.3209, 0.3160, 0.3117, 0.3078, 0.3042, 0.3010, 0.2980, 0.2951, 0.2922, 0.2892, 0.2864, 0.2835, 0.2807, 0.2779, 0.2752, 0.2725, 0.2697, 0.2670, 0.2643, 0.2615, 0.2588, 0.2561, 0.2533, 0.2506, 0.2479, 0.2451, 0.2424, 0.2368, 0.2313, 0.2258, 0.2205, 0.2154, 0.2106, 0.2060, 0.2017, 0.1975, 0.1935, 0.1861, 0.1793, 0.1730, 0.1672, 0.1618 };
+const std::vector<double> machNumbersG7 = { 0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.725, 0.75, 0.775, 0.80, 0.825, 0.85, 0.875, 0.90, 0.925, 0.95, 0.975, 1.0, 1.025, 1.05, 1.075, 1.10, 1.125, 1.15, 1.20, 1.25, 1.30, 1.35, 1.40, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00, 2.05, 2.10, 2.15, 2.20, 2.25, 2.30, 2.35, 2.40, 2.45, 2.50, 2.55, 2.60, 2.65, 2.70, 2.75, 2.80, 2.85, 2.90, 2.95, 3.00, 3.10, 3.20, 3.30, 3.40, 3.50, 3.60, 3.70, 3.80, 3.90, 4.00, 4.20, 4.40, 4.60, 4.80, 5.00 };
+const std::vector<double> dragCoefficientsG8 = { 0.2105, 0.2105, 0.2104, 0.2104, 0.2103, 0.2103, 0.2103, 0.2103, 0.2103, 0.2102, 0.2102, 0.2102, 0.2102, 0.2102, 0.2103, 0.2103, 0.2104, 0.2104, 0.2105, 0.2106, 0.2109, 0.2183, 0.2571, 0.3358, 0.4068, 0.4378, 0.4476, 0.4493, 0.4477, 0.4450, 0.4419, 0.4353, 0.4283, 0.4208, 0.4133, 0.4059, 0.3986, 0.3915, 0.3845, 0.3777, 0.3710, 0.3645, 0.3581, 0.3519, 0.3458, 0.3400, 0.3343, 0.3288, 0.3234, 0.3182, 0.3131, 0.3081, 0.3032, 0.2983, 0.2937, 0.2891, 0.2845, 0.2802, 0.2720, 0.2642, 0.2569, 0.2499, 0.2432, 0.2368, 0.2308, 0.2251, 0.2197, 0.2147, 0.2101, 0.2058, 0.2019, 0.1983, 0.1950, 0.1890, 0.1837, 0.1791, 0.1750, 0.1713 };
+const std::vector<double> machNumbersG8 = { 0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.825, 0.85, 0.875, 0.90, 0.925, 0.95, 0.975, 1.0, 1.025, 1.05, 1.075, 1.10, 1.125, 1.15, 1.20, 1.25, 1.30, 1.35, 1.40, 1.45, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00, 2.05, 2.10, 2.15, 2.20, 2.25, 2.30, 2.35, 2.40, 2.45, 2.50, 2.60, 2.70, 2.80, 2.90, 3.00, 3.10, 3.20, 3.30, 3.40, 3.50, 3.60, 3.70, 3.80, 3.90, 4.00, 4.20, 4.40, 4.60, 4.80, 5.00 };
 
-    switch (DragFunction) {
-    case 1:
-        if (vel> 4230) { A = 1.477404177730177e-04; M = 1.9565; }
-        else if (vel> 3680) { A = 1.920339268755614e-04; M = 1.925; }
-        else if (vel> 3450) { A = 2.894751026819746e-04; M = 1.875; }
-        else if (vel> 3295) { A = 4.349905111115636e-04; M = 1.825; }
-        else if (vel> 3130) { A = 6.520421871892662e-04; M = 1.775; }
-        else if (vel> 2960) { A = 9.748073694078696e-04; M = 1.725; }
-        else if (vel> 2830) { A = 1.453721560187286e-03; M = 1.675; }
-        else if (vel> 2680) { A = 2.162887202930376e-03; M = 1.625; }
-        else if (vel> 2460) { A = 3.209559783129881e-03; M = 1.575; }
-        else if (vel> 2225) { A = 3.904368218691249e-03; M = 1.55; }
-        else if (vel> 2015) { A = 3.222942271262336e-03; M = 1.575; }
-        else if (vel> 1890) { A = 2.203329542297809e-03; M = 1.625; }
-        else if (vel> 1810) { A = 1.511001028891904e-03; M = 1.675; }
-        else if (vel> 1730) { A = 8.609957592468259e-04; M = 1.75; }
-        else if (vel> 1595) { A = 4.086146797305117e-04; M = 1.85; }
-        else if (vel> 1520) { A = 1.954473210037398e-04; M = 1.95; }
-        else if (vel> 1420) { A = 5.431896266462351e-05; M = 2.125; }
-        else if (vel> 1360) { A = 8.847742581674416e-06; M = 2.375; }
-        else if (vel> 1315) { A = 1.456922328720298e-06; M = 2.625; }
-        else if (vel> 1280) { A = 2.419485191895565e-07; M = 2.875; }
-        else if (vel> 1220) { A = 1.657956321067612e-08; M = 3.25; }
-        else if (vel> 1185) { A = 4.745469537157371e-10; M = 3.75; }
-        else if (vel> 1150) { A = 1.379746590025088e-11; M = 4.25; }
-        else if (vel> 1100) { A = 4.070157961147882e-13; M = 4.75; }
-        else if (vel> 1060) { A = 2.938236954847331e-14; M = 5.125; }
-        else if (vel> 1025) { A = 1.228597370774746e-14; M = 5.25; }
-        else if (vel>  980) { A = 2.916938264100495e-14; M = 5.125; }
-        else if (vel>  945) { A = 3.855099424807451e-13; M = 4.75; }
-        else if (vel>  905) { A = 1.185097045689854e-11; M = 4.25; }
-        else if (vel>  860) { A = 3.566129470974951e-10; M = 3.75; }
-        else if (vel>  810) { A = 1.045513263966272e-08; M = 3.25; }
-        else if (vel>  780) { A = 1.291159200846216e-07; M = 2.875; }
-        else if (vel>  750) { A = 6.824429329105383e-07; M = 2.625; }
-        else if (vel>  700) { A = 3.569169672385163e-06; M = 2.375; }
-        else if (vel>  640) { A = 1.839015095899579e-05; M = 2.125; }
-        else if (vel>  600) { A = 5.71117468873424e-05; M = 1.950; }
-        else if (vel>  550) { A = 9.226557091973427e-05; M = 1.875; }
-        else if (vel>  250) { A = 9.337991957131389e-05; M = 1.875; }
-        else if (vel>  100) { A = 7.225247327590413e-05; M = 1.925; }
-        else if (vel>   65) { A = 5.792684957074546e-05; M = 1.975; }
-        else if (vel>    0) { A = 5.206214107320588e-05; M = 2.000; }
-        break;
+const std::vector<std::vector<double>> dragCoefficients = { {}, dragCoefficientsG1, dragCoefficientsG2, {}, {}, dragCoefficientsG5, dragCoefficientsG6, dragCoefficientsG7, dragCoefficientsG8, {} };
+const std::vector<std::vector<double>> machNumbers = { {}, machNumbersG1, machNumbersG2, {},{}, machNumbersG5, machNumbersG6, machNumbersG7, machNumbersG8,{} };
 
-    case 2:
-        if (vel> 1674) { A = .0079470052136733;  M = 1.36999902851493; }
-        else if (vel> 1172) { A = 1.00419763721974e-03;  M = 1.65392237010294; }
-        else if (vel> 1060) { A = 7.15571228255369e-23;  M = 7.91913562392361; }
-        else if (vel>  949) { A = 1.39589807205091e-10;  M = 3.81439537623717; }
-        else if (vel>  670) { A = 2.34364342818625e-04;  M = 1.71869536324748; }
-        else if (vel>  335) { A = 1.77962438921838e-04;  M = 1.76877550388679; }
-        else if (vel>    0) { A = 5.18033561289704e-05;  M = 1.98160270524632; }
-        break;
+double calculateRetard(int DragFunction, double DragCoefficient, double Velocity, double Mach) {
+    int idx = std::max(0, std::min(DragFunction, 9));
+    double m = Velocity / Mach;
 
-    case 5:
-        if (vel> 1730) { A = 7.24854775171929e-03; M = 1.41538574492812; }
-        else if (vel> 1228) { A = 3.50563361516117e-05; M = 2.13077307854948; }
-        else if (vel> 1116) { A = 1.84029481181151e-13; M = 4.81927320350395; }
-        else if (vel> 1004) { A = 1.34713064017409e-22; M = 7.8100555281422; }
-        else if (vel>  837) { A = 1.03965974081168e-07; M = 2.84204791809926; }
-        else if (vel>  335) { A = 1.09301593869823e-04; M = 1.81096361579504; }
-        else if (vel>    0) { A = 3.51963178524273e-05; M = 2.00477856801111; }
-        break;
-
-    case 6:
-        if (vel> 3236) { A = 0.0455384883480781; M = 1.15997674041274; }
-        else if (vel> 2065) { A = 7.167261849653769e-02; M = 1.10704436538885; }
-        else if (vel> 1311) { A = 1.66676386084348e-03; M = 1.60085100195952; }
-        else if (vel> 1144) { A = 1.01482730119215e-07; M = 2.9569674731838; }
-        else if (vel> 1004) { A = 4.31542773103552e-18; M = 6.34106317069757; }
-        else if (vel>  670) { A = 2.04835650496866e-05; M = 2.11688446325998; }
-        else if (vel>    0) { A = 7.50912466084823e-05; M = 1.92031057847052; }
-        break;
-
-    case 7:
-        if (vel> 4200) { A = 1.29081656775919e-09; M = 3.24121295355962; }
-        else if (vel> 3000) { A = 0.0171422231434847; M = 1.27907168025204; }
-        else if (vel> 1470) { A = 2.33355948302505e-03; M = 1.52693913274526; }
-        else if (vel> 1260) { A = 7.97592111627665e-04; M = 1.67688974440324; }
-        else if (vel> 1110) { A = 5.71086414289273e-12; M = 4.3212826264889; }
-        else if (vel>  960) { A = 3.02865108244904e-17; M = 5.99074203776707; }
-        else if (vel>  670) { A = 7.52285155782535e-06; M = 2.1738019851075; }
-        else if (vel>  540) { A = 1.31766281225189e-05; M = 2.08774690257991; }
-        else if (vel>    0) { A = 1.34504843776525e-05; M = 2.08702306738884; }
-        break;
-
-    case 8:
-        if (vel> 3571) { A = .0112263766252305; M = 1.33207346655961; }
-        else if (vel> 1841) { A = .0167252613732636; M = 1.28662041261785; }
-        else if (vel> 1120) { A = 2.20172456619625e-03; M = 1.55636358091189; }
-        else if (vel> 1088) { A = 2.0538037167098e-16; M = 5.80410776994789; }
-        else if (vel>  976) { A = 5.92182174254121e-12; M = 4.29275576134191; }
-        else if (vel>    0) { A = 4.3917343795117e-05; M = 1.99978116283334; }
-        break;
-
-    default:
-        break;
-
-    }
-
-    if (A != -1 && M != -1 && vel > 0 && vel < 10000) {
-        val = A * pow(vel, M) / DragCoefficient;
-        val = val / 3.2808399;
-        return val;
+    for (int i = 0; i < (int)machNumbers[idx].size(); i++) {
+        if (machNumbers[idx][i] >= m) {
+            int previousIdx = std::max(0, i - 1);
+            double previousDragCoefficient = dragCoefficients[idx][previousIdx];
+            double previousMachNumber = machNumbers[idx][previousIdx];
+            double cd = previousDragCoefficient + (dragCoefficients[idx][i] - previousDragCoefficient) * (m - previousMachNumber) / (machNumbers[idx][i] - previousMachNumber);
+            return BC_CONVERSION_FACTOR * (cd / DragCoefficient) * std::pow(Velocity, 2);
+        }
     }
 
     return 0.0;
 }
 
-double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double airFriction, double boreHeight) {
+float replicateVanillaZero(float zeroRange, float muzzleVelocity, float airFriction) {
+    const float maxDeltaT = 0.05f;
+    float time = 0.0f;
+    ace::vector3<float> curShotPos = { 0, 0, 0 };
+    ace::vector3<float> speed = { muzzleVelocity, 0, 0 };
+
+    while (time < 8.0f) {
+        float distLeft = zeroRange - curShotPos.x();
+        float traveled = speed.x() * maxDeltaT;
+        if (distLeft < traveled) {
+            float deltaT = distLeft / speed.x();
+            speed -= { 0, GRAVITY * deltaT, 0 };
+            curShotPos += speed * deltaT;
+            time += deltaT;
+            break;
+        } else {
+            float deltaT = maxDeltaT;
+            curShotPos += speed * deltaT;
+            time += deltaT;
+            speed += speed * (speed.magnitude() * airFriction * deltaT);
+            speed -= { 0, GRAVITY * deltaT, 0 };
+        }
+    }
+    return -std::atan(curShotPos.y() / zeroRange);
+}
+
+double calculateVanillaZero(double zeroRange, double muzzleVelocity, double airFriction, double boreHeight) {
     double zeroAngle = 0.0f;
+    double deltaT = 1.0 / std::max(100.0, zeroRange);
 
     for (int i = 0; i < 10; i++) {
         double lx = 0.0f;
@@ -260,21 +209,21 @@ double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double
             ax += gx;
             ay += gy;
 
-            px += vx * DELTA_T * 0.5;
-            py += vy * DELTA_T * 0.5;
-            vx += ax * DELTA_T;
-            vy += ay * DELTA_T;
-            px += vx * DELTA_T * 0.5;
-            py += vy * DELTA_T * 0.5;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
+            vx += ax * deltaT;
+            vy += ay * deltaT;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
 
-            tof += DELTA_T;
+            tof += deltaT;
         }
 
         double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
         double offset = -std::atan(y / zeroRange);
         zeroAngle += offset;
 
-        if (std::abs(offset) < 0.0001f) {
+        if (std::abs(offset) < 0.00001f) {
             break;
         }
     }
@@ -282,8 +231,9 @@ double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double
     return zeroAngle;
 }
 
-double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHeight, double temperature, double pressure, double humidity, double ballisticCoefficient, int dragModel, char*  atmosphereModel) {
+double calculateAdvancedZero(double zeroRange, double muzzleVelocity, double boreHeight, double temperature, double pressure, double humidity, double ballisticCoefficient, int dragModel, char*  atmosphereModel) {
     double zeroAngle = 0.0f;
+    double deltaT = 1.0 / std::max(100.0, zeroRange);
 
     ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
 
@@ -309,27 +259,27 @@ double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHe
 
             v = std::sqrt(vx*vx + vy*vy);
 
-            double retard = calculateRetard(dragModel, ballisticCoefficient, v);
+            double retard = calculateRetard(dragModel, ballisticCoefficient, v, SPEED_OF_SOUND_AT_15C);
             double ax = vx / v * -retard;
             double ay = vy / v * -retard;
             ax += gx;
             ay += gy;
 
-            px += vx * DELTA_T * 0.5;
-            py += vy * DELTA_T * 0.5;
-            vx += ax * DELTA_T;
-            vy += ay * DELTA_T;
-            px += vx * DELTA_T * 0.5;
-            py += vy * DELTA_T * 0.5;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
+            vx += ax * deltaT;
+            vy += ay * deltaT;
+            px += vx * deltaT * 0.5;
+            py += vy * deltaT * 0.5;
 
-            tof += DELTA_T;
+            tof += deltaT;
         }
 
         double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
         double offset = -std::atan(y / zeroRange);
         zeroAngle += offset;
 
-        if (std::abs(offset) < 0.0001f) {
+        if (std::abs(offset) < 0.00001f) {
             break;
         }
     }
@@ -366,13 +316,15 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double ballisticCoefficient = 1.0;
         int dragModel = 1;
         double velocity = 0.0;
+        double temperature = 15.0;
         double retard = 0.0;
 
         dragModel = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
         ballisticCoefficient = strtod(strtok_s(NULL, ":", &next_token), NULL);
         velocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        temperature = strtod(strtok_s(NULL, ":", &next_token), NULL);
 
-        retard = calculateRetard(dragModel, ballisticCoefficient, velocity);
+        retard = calculateRetard(dragModel, ballisticCoefficient, velocity, SPEED_OF_SOUND(temperature));
         // int n = sprintf(output,  "%f", retard);
 
         outputStr << retard;
@@ -399,6 +351,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "new")) {
         unsigned int index = 0;
+        unsigned int ammoCount = 0;
         double airFriction = 0.0;
         char* ballisticCoefficientArray;
         char* ballisticCoefficient;
@@ -411,7 +364,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double stabilityFactor = 1.5;
         int twistDirection = 1;
         double transonicStabilityCoef = 1;
-        double muzzleVelocity = 850;
+        char* bulletVelocityArray;
+        char* bulletVelocityEntry;
+        std::vector<double> bulletVelocity;
         char* originArray;
         char* originEntry;
         std::vector<double> origin;
@@ -423,6 +378,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double tickTime = 0.0;
 
         index = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
+        ammoCount = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
         airFriction = strtod(strtok_s(NULL, ":", &next_token), NULL);
         ballisticCoefficientArray = strtok_s(NULL, ":", &next_token);
         ballisticCoefficientArray++;
@@ -444,7 +400,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         dragModel = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
         stabilityFactor = strtod(strtok_s(NULL, ":", &next_token), NULL);
         twistDirection = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
-        muzzleVelocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
         transonicStabilityCoef = strtod(strtok_s(NULL, ":", &next_token), NULL);
         originArray = strtok_s(NULL, ":", &next_token);
         originArray++;
@@ -454,13 +409,20 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             origin.push_back(strtod(originEntry, NULL));
             originEntry = strtok_s(NULL, ",", &token);
         }
+        bulletVelocityArray = strtok_s(NULL, ":", &next_token);
+        bulletVelocityArray++;
+        bulletVelocityArray[strlen(bulletVelocityArray) - 1] = 0;
+        bulletVelocityEntry = strtok_s(bulletVelocityArray, ",", &token);
+        while (bulletVelocityEntry != NULL) {
+            bulletVelocity.push_back(strtod(bulletVelocityEntry, NULL));
+            bulletVelocityEntry = strtok_s(NULL, ",", &token);
+        }
         latitude = strtod(strtok_s(NULL, ":", &next_token), NULL);
         temperature = strtod(strtok_s(NULL, ":", &next_token), NULL);
         altitude = strtod(strtok_s(NULL, ":", &next_token), NULL);
         humidity = strtod(strtok_s(NULL, ":", &next_token), NULL);
         overcast = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime = strtod(strtok_s(NULL, ":", &next_token), NULL);
-        tickTime += strtod(strtok_s(NULL, ":", &next_token), NULL);
 
         while (index >= bulletDatabase.size()) {
             Bullet bullet;
@@ -475,8 +437,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].stabilityFactor = stabilityFactor;
         bulletDatabase[index].twistDirection = twistDirection;
         bulletDatabase[index].transonicStabilityCoef = transonicStabilityCoef;
-        bulletDatabase[index].muzzleVelocity = muzzleVelocity;
-        bulletDatabase[index].origin = origin;
+        bulletDatabase[index].bulletVelocityPreviousFrame = { bulletVelocity[0], bulletVelocity[1], bulletVelocity[2] };
+        bulletDatabase[index].origin = { origin[0], origin[1], origin[2] };
         bulletDatabase[index].latitude = latitude / 180 * M_PI;
         bulletDatabase[index].temperature = temperature;
         bulletDatabase[index].altitude = altitude;
@@ -484,8 +446,12 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].overcast = overcast;
         bulletDatabase[index].startTime = tickTime;
         bulletDatabase[index].lastFrame = tickTime;
-        bulletDatabase[index].bcDegradation = 1.0;
-        bulletDatabase[index].randSeed = 0;
+        if (transonicStabilityCoef < 1) {
+            unsigned int k1 = (unsigned)round(tickTime / 2);
+            unsigned int k2 = ammoCount;
+            bulletDatabase[index].randSeed = (unsigned int)(0.5 * (k1 + k2) * (k1 + k2 + 1) + k2);
+            bulletDatabase[index].randGenerator.seed(bulletDatabase[index].randSeed);
+        }
 
         strncpy_s(output, outputSize, "", _TRUNCATE);
         EXTENSION_RETURN();
@@ -522,189 +488,140 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         wind[2] = strtod(strtok_s(NULL, ",", &token), NULL);
         heightAGL = strtod(strtok_s(NULL, ":", &next_token), NULL);
         tickTime = strtod(strtok_s(NULL, ":", &next_token), NULL);
-        tickTime += strtod(strtok_s(NULL, ":", &next_token), NULL);
 
-        if (bulletDatabase[index].randSeed == 0) {
-            int angle = (int)round(atan2(velocity[0], velocity[1]) * 360 / M_PI);
-            bulletDatabase[index].randSeed = (unsigned)(720 + angle) % 720;
-            bulletDatabase[index].randSeed *= 3;
-            bulletDatabase[index].randSeed += (unsigned)round(abs(velocity[2]) / 2);
-            bulletDatabase[index].randSeed *= 3;
-            bulletDatabase[index].randSeed += (unsigned)round(abs(bulletDatabase[index].origin[0] / 2));
-            bulletDatabase[index].randSeed *= 3;
-            bulletDatabase[index].randSeed += (unsigned)round(abs(bulletDatabase[index].origin[1] / 2));
-            bulletDatabase[index].randSeed *= 3;
-            bulletDatabase[index].randSeed += (unsigned)abs(bulletDatabase[index].temperature) * 10;
-            bulletDatabase[index].randSeed *= 3;
-            bulletDatabase[index].randSeed += (unsigned)abs(bulletDatabase[index].humidity) * 10;
-            bulletDatabase[index].randGenerator.seed(bulletDatabase[index].randSeed);
-        }
-
+        ace::vector3<double> bulletVelocityCurrentFrame = { velocity[0], velocity[1], velocity[2] };
+        ace::vector3<double> bulletPosition = { position[0], position[1], position[2] };
+        ace::vector3<double> windVelocity = { wind[0], wind[1], wind[2] };
+        ace::vector3<double> gravityAccel = { 0, 0, -GRAVITY };
         double ballisticCoefficient = 1.0;
         double dragRef = 0.0;
         double drag = 0.0;
-        double accelRef[3] = { 0.0, 0.0, 0.0 };
-        double accel[3] = { 0.0, 0.0, 0.0 };
-        double TOF = 0.0;
-        double deltaT = 0.0;
-        double bulletSpeed;
-        double trueVelocity[3] = { 0.0, 0.0, 0.0 };
-        double trueSpeed = 0.0;
-        double temperature = 0.0;
-        double pressure = 1013.25;
-        double windSpeed = 0.0;
-        double windAttenuation = 1.0;
-        double velocityOffset[3] = { 0.0, 0.0, 0.0 };
+        double TOF = tickTime - bulletDatabase[index].startTime;
+        double deltaT = tickTime - bulletDatabase[index].lastFrame;
+        ace::vector3<double> trueVelocity;
+        double temperature = bulletDatabase[index].temperature - 0.0065 * bulletPosition.z();
+        double pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + bulletPosition.z())) / (KELVIN(temperature) + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
+        ace::vector3<double> velocityOffset;
 
-        TOF = tickTime - bulletDatabase[index].startTime;
-
-        deltaT = tickTime - bulletDatabase[index].lastFrame;
         bulletDatabase[index].lastFrame = tickTime;
 
-        bulletSpeed = sqrt(pow(velocity[0], 2) + pow(velocity[1], 2) + pow(velocity[2], 2));
+        if (windVelocity.magnitude() > 0.1) {
+            double windAttenuation = 1.0;
+            ace::vector3<double> windSourceTerrain;
 
-        windSpeed = sqrt(pow(wind[0], 2) + pow(wind[1], 2) + pow(wind[2], 2));
-        if (windSpeed > 0.1) {
-            double windSourceTerrain[3];
+            windSourceTerrain = bulletPosition - windVelocity.normalize() * 100;
 
-            windSourceTerrain[0] = position[0] - wind[0] / windSpeed * 100;
-            windSourceTerrain[1] = position[1] - wind[1] / windSpeed * 100;
-            windSourceTerrain[2] = position[2] - wind[2] / windSpeed * 100;
-
-            int gridX = (int)floor(windSourceTerrain[0] / 50);
-            int gridY = (int)floor(windSourceTerrain[1] / 50);
+            int gridX = (int)floor(windSourceTerrain.x() / 50);
+            int gridY = (int)floor(windSourceTerrain.y() / 50);
             int gridCell = gridX * map->mapGrids + gridY;
 
             if (gridCell >= 0 && (std::size_t)gridCell < map->gridHeights.size() && (std::size_t)gridCell < map->gridBuildingNums.size()) {
                 double gridHeight = map->gridHeights[gridCell];
 
-                if (gridHeight > position[2]) {
-                    double angle = atan((gridHeight - position[2]) / 100);
+                if (gridHeight > bulletPosition.z()) {
+                    double angle = atan((gridHeight - bulletPosition.z()) / 100);
                     windAttenuation *= pow(abs(cos(angle)), 2);
                 }
             }
-        }
-
-        if (windSpeed > 0.1) {
-            double windSourceObstacles[3];
-
-            windSourceObstacles[0] = position[0] - wind[0] / windSpeed * 25;
-            windSourceObstacles[1] = position[1] - wind[1] / windSpeed * 25;
-            windSourceObstacles[2] = position[2] - wind[2] / windSpeed * 25;
 
             if (heightAGL > 0 && heightAGL < 20) {
-                double roughnessLength = calculateRoughnessLength(windSourceObstacles[0], windSourceObstacles[1]);
-                windAttenuation *= abs(log(heightAGL / roughnessLength) / log(20 / roughnessLength));
+                ace::vector3<double> windSourceObstacles;
+
+                windSourceObstacles = bulletPosition - windVelocity.normalize() * 25;
+
+                double roughnessLength = calculateRoughnessLength(windSourceObstacles.x(), windSourceObstacles.y());
+                windAttenuation *= std::max(0.0, log(heightAGL / roughnessLength) / log(20 / roughnessLength));
             }
+
+            windVelocity = windVelocity * windAttenuation;
         }
 
-        if (windAttenuation < 1) {
-            wind[0] *= windAttenuation;
-            wind[1] *= windAttenuation;
-            wind[2] *= windAttenuation;
-            windSpeed = sqrt(pow(wind[0], 2) + pow(wind[1], 2) + pow(wind[2], 2));
+        ace::vector3<double> bulletVelocity = bulletDatabase[index].bulletVelocityPreviousFrame;
+        double time = 0.0;
+
+        while (time < deltaT) {
+            double dt = std::min(deltaT - time, DELTA_T);
+
+            dragRef = -bulletDatabase[index].airFriction * bulletVelocity.magnitude_squared();
+
+            ace::vector3<double> accelRef = bulletVelocity.normalize() * dragRef;
+
+            velocityOffset += accelRef * dt;
+            bulletVelocity -= accelRef * dt;
+            bulletVelocity += gravityAccel * dt;
+
+            time += dt;
         }
 
-        trueVelocity[0] = velocity[0] - wind[0];
-        trueVelocity[1] = velocity[1] - wind[1];
-        trueVelocity[2] = velocity[2] - wind[2];
-        trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
+        bulletVelocity = bulletDatabase[index].bulletVelocityPreviousFrame;
+        time = 0.0;
+        TOF -= deltaT;
 
-        double speedOfSound = 331.3 + (0.6 * temperature);
-        double transonicSpeed = 394 + (0.6 * temperature);
-        if (bulletDatabase[index].transonicStabilityCoef < 1.0f && bulletSpeed < transonicSpeed && bulletSpeed > speedOfSound) {
-            std::uniform_real_distribution<double> distribution(-10.0, 10.0);
-            double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
+        while (time < deltaT) {
+            double dt = std::min(deltaT - time, DELTA_T * 2);
 
-            trueVelocity[0] += distribution(bulletDatabase[index].randGenerator) * coef;
-            trueVelocity[1] += distribution(bulletDatabase[index].randGenerator) * coef;
-            trueVelocity[2] += distribution(bulletDatabase[index].randGenerator) * coef;
-            double speed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
+            trueVelocity = bulletVelocity - windVelocity;
 
-            trueVelocity[0] *= trueSpeed / speed;
-            trueVelocity[1] *= trueSpeed / speed;
-            trueVelocity[2] *= trueSpeed / speed;
+            if (bulletDatabase[index].transonicStabilityCoef < 1.0f && trueVelocity.magnitude() < 1.2 * SPEED_OF_SOUND(temperature) && trueVelocity.magnitude() > SPEED_OF_SOUND(temperature)) {
+                std::uniform_real_distribution<double> distribution(-10.0, 10.0);
+                ace::vector3<double> offset(distribution(bulletDatabase[index].randGenerator), distribution(bulletDatabase[index].randGenerator), distribution(bulletDatabase[index].randGenerator));
+                double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 
-            bulletDatabase[index].bcDegradation *= pow(0.993, coef);
-        };
+                double trueSpeed = trueVelocity.magnitude();             
+                trueVelocity += offset * coef;
+                trueVelocity = trueVelocity.normalize() * trueSpeed;
+            };
 
-        temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
-        pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
-
-        if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
-            dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
-
-            accelRef[0] = (velocity[0] / bulletSpeed) * dragRef;
-            accelRef[1] = (velocity[1] / bulletSpeed) * dragRef;
-            accelRef[2] = (velocity[2] / bulletSpeed) * dragRef;
-
-            velocityOffset[0] -= accelRef[0];
-            velocityOffset[1] -= accelRef[1];
-            velocityOffset[2] -= accelRef[2];
-
-            ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[0];
-            for (int i = (int)bulletDatabase[index].velocityBoundaries.size() - 1; i >= 0; i = i - 1) {
-                if (bulletSpeed < bulletDatabase[index].velocityBoundaries[i]) {
-                    ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[i + 1];
-                    break;
+            if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
+                ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[0];
+                for (int i = (int)bulletDatabase[index].velocityBoundaries.size() - 1; i >= 0; i = i - 1) {
+                    if (trueVelocity.magnitude() < bulletDatabase[index].velocityBoundaries[i]) {
+                        ballisticCoefficient = bulletDatabase[index].ballisticCoefficients[i + 1];
+                        break;
+                    }
                 }
+
+                ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, bulletDatabase[index].humidity, bulletDatabase[index].atmosphereModel);
+
+                drag = calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueVelocity.magnitude(), SPEED_OF_SOUND(temperature));
+            } else {
+                double airDensity = calculateAirDensity(temperature, pressure, bulletDatabase[index].humidity);
+                double airFriction = bulletDatabase[index].airFriction * airDensity / STD_AIR_DENSITY_ICAO;
+
+                drag = -airFriction * trueVelocity.magnitude_squared();
             }
 
-            ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, bulletDatabase[index].humidity, bulletDatabase[index].atmosphereModel);
-            ballisticCoefficient *= bulletDatabase[index].bcDegradation;
-            drag = deltaT * calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed);
-            accel[0] = (trueVelocity[0] / trueSpeed) * drag;
-            accel[1] = (trueVelocity[1] / trueSpeed) * drag;
-            accel[2] = (trueVelocity[2] / trueSpeed) * drag;
+            ace::vector3<double> accel = trueVelocity.normalize() * drag;
 
-            velocityOffset[0] -= accel[0];
-            velocityOffset[1] -= accel[1];
-            velocityOffset[2] -= accel[2];
-        } else {
-            double airDensity = calculateAirDensity(temperature, pressure, bulletDatabase[index].humidity);
-            double airFriction = bulletDatabase[index].airFriction * airDensity / STD_AIR_DENSITY_ICAO;
+            velocityOffset -= accel * dt;
+            bulletVelocity -= accel * dt;
 
-            if (airFriction != bulletDatabase[index].airFriction || windSpeed > 0) {
-                dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
-
-                accelRef[0] = (velocity[0] / bulletSpeed) * dragRef;
-                accelRef[1] = (velocity[1] / bulletSpeed) * dragRef;
-                accelRef[2] = (velocity[2] / bulletSpeed) * dragRef;
-
-                velocityOffset[0] -= accelRef[0];
-                velocityOffset[1] -= accelRef[1];
-                velocityOffset[2] -= accelRef[2];
-
-                drag = deltaT * airFriction * trueSpeed * trueSpeed;
-                accel[0] = (trueVelocity[0] / trueSpeed) * drag;
-                accel[1] = (trueVelocity[1] / trueSpeed) * drag;
-                accel[2] = (trueVelocity[2] / trueSpeed) * drag;
-
-                velocityOffset[0] += accel[0];
-                velocityOffset[1] += accel[1];
-                velocityOffset[2] += accel[2];
+            if (TOF > 0) {
+                double bulletDir = atan2(bulletVelocity.x(), bulletVelocity.y());
+                double driftAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / pow(TOF, 0.17);
+                double driftVelocity = 0.0581025 *(bulletDatabase[index].stabilityFactor + 1.2) * pow(TOF, 0.83);
+                double dragCorrection = (driftVelocity / trueVelocity.magnitude()) * drag;
+                double magnitude = (driftAccel + dragCorrection) * dt;
+                ace::vector3<double> offset(sin(bulletDir + M_PI / 2) * magnitude, cos(bulletDir + M_PI / 2) * magnitude, 0);
+                velocityOffset += offset;
+                bulletVelocity += offset;
             }
+
+            double lat = bulletDatabase[index].latitude;
+            accel.x(2 * EARTH_ANGULAR_SPEED * +(bulletVelocity.y() * sin(lat) - bulletVelocity.z() * cos(lat)));
+            accel.y(2 * EARTH_ANGULAR_SPEED * -(bulletVelocity.x() * sin(lat)));
+            accel.z(2 * EARTH_ANGULAR_SPEED * +(bulletVelocity.x() * cos(lat)));
+
+            velocityOffset += accel * dt;
+            bulletVelocity += accel * dt + gravityAccel * dt;
+
+            TOF += dt;
+            time += dt;
         }
 
-        if (TOF > 0) {
-            double bulletDir = atan2(velocity[0], velocity[1]);
-            double r1 = pow(TOF - deltaT, 0.17);
-            double r2 = pow(TOF, 0.17);
-            double spinAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / ((r1 + r2) / 2.0f);
-            velocityOffset[0] += sin(bulletDir + M_PI / 2) * spinAccel * deltaT;
-            velocityOffset[1] += cos(bulletDir + M_PI / 2) * spinAccel * deltaT;
-        }
+        bulletDatabase[index].bulletVelocityPreviousFrame = bulletVelocityCurrentFrame + velocityOffset;
 
-        double lat = bulletDatabase[index].latitude;
-        accel[0] = 2 * EARTH_ANGULAR_SPEED * +(velocity[1] * sin(lat) - velocity[2] * cos(lat));
-        accel[1] = 2 * EARTH_ANGULAR_SPEED * -(velocity[0] * sin(lat));
-        accel[2] = 2 * EARTH_ANGULAR_SPEED * +(velocity[0] * cos(lat));
-
-        velocityOffset[0] += accel[0] * deltaT;
-        velocityOffset[1] += accel[1] * deltaT;
-        velocityOffset[2] += accel[2] * deltaT;
-
-        outputStr << "_bullet setVelocity (_bulletVelocity vectorAdd [" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]);";
+        outputStr << "[" << velocityOffset.x() << "," << velocityOffset.y() << "," << velocityOffset.z() << "]";
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
@@ -751,18 +668,28 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
-    } else if (!strcmp(mode, "zeroAngleVanilla")) {
+    } else if (!strcmp(mode, "replicateVanillaZero")) {
+        float zeroRange = strtof(strtok_s(NULL, ":", &next_token), NULL);
+        float initSpeed = strtof(strtok_s(NULL, ":", &next_token), NULL);
+        float airFriction = strtof(strtok_s(NULL, ":", &next_token), NULL);
+
+        float zeroAngle = replicateVanillaZero(zeroRange, initSpeed, airFriction);
+
+        outputStr << DEGREES(zeroAngle);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        EXTENSION_RETURN();
+    } else if (!strcmp(mode, "calcZero")) {
         double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double initSpeed = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double airFriction = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
 
-        double zeroAngle = calculateVanillaZeroAngle(zeroRange, initSpeed, airFriction, boreHeight);
+        double zeroAngle = calculateVanillaZero(zeroRange, initSpeed, airFriction, boreHeight);
 
         outputStr << DEGREES(zeroAngle);
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
-    } else if (!strcmp(mode, "zeroAngle")) {
+    } else if (!strcmp(mode, "calcZeroAB")) {
         double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double muzzleVelocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
         double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
@@ -773,7 +700,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         int dragModel = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
         char* atmosphereModel = strtok_s(NULL, ":", &next_token);
 
-        double zeroAngle = calculateZeroAngle(zeroRange, muzzleVelocity, boreHeight, temperature, pressure, humidity, ballisticCoefficient, dragModel, atmosphereModel);
+        double zeroAngle = calculateAdvancedZero(zeroRange, muzzleVelocity, boreHeight, temperature, pressure, humidity, ballisticCoefficient, dragModel, atmosphereModel);
 
         outputStr << DEGREES(zeroAngle);
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);

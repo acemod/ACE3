@@ -16,7 +16,7 @@ class CfgVehicles {
         function = QFUNC(bi_moduleRemoteControl);
     };
     class GVAR(moduleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Settings_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa);
         category = "ACE";
@@ -98,14 +98,14 @@ class CfgVehicles {
         category = QGVAR(Repair);
         displayName = CSTRING(ModuleAddSpareTrack_DisplayName);
         function = QFUNC(moduleAddSpareTrack);
-        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
     class GVAR(moduleAddSpareWheel): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Repair);
         displayName = CSTRING(ModuleAddSpareWheel_DisplayName);
         function = QFUNC(moduleAddSpareWheel);
-        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
     class GVAR(moduleAddOrRemoveFRIES): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -119,6 +119,13 @@ class CfgVehicles {
         displayName = CSTRING(ModuleCaptive_DisplayName);
         function = QFUNC(moduleCaptive);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa);
+    };
+    class GVAR(moduleConfigurePylons): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = ECSTRING(pylons,ConfigurePylons);
+        function = QFUNC(moduleConfigurePylons);
+        icon = "a3\data_f_jets\logos\jets_logo_small_ca.paa";
     };
     class GVAR(moduleDefendArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -142,6 +149,13 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
+    };
+    class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleLoadIntoCargo_DisplayName);
+        function = QFUNC(moduleLoadIntoCargo);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
     };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -214,16 +228,45 @@ class CfgVehicles {
         function = QFUNC(moduleUnconscious);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa);
     };
+    class GVAR(moduleGarrison): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleGarrison_DisplayName);
+        curatorInfoType = QGVAR(RscGarrison);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Garrison_ca.paa);
+    };
+    class GVAR(moduleUnGarrison): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleUnGarrison_DisplayName);
+        function = QFUNC(moduleUnGarrison);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_UnGarrison_ca.paa);
+    };
+    class GVAR(moduleToggleNvg): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleToggleNVG_DisplayName);
+        curatorInfoType = QGVAR(RscToggleNvg);
+    };
+    class GVAR(moduleToggleFlashlight): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleToggleFlashlight_DisplayName);
+        curatorInfoType = QGVAR(RscToggleFlashlight);
+    };
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
-        displayName = CSTRING(moduleAddFullArsenal_displayName);
+        displayName = CSTRING(ModuleAddFullArsenal_DisplayName);
         function = QFUNC(moduleAddArsenal);
     };
     class GVAR(RemoveFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
-        displayName = CSTRING(moduleRemoveArsenal_displayName);
+        displayName = CSTRING(ModuleRemoveArsenal_DisplayName);
         function = QFUNC(moduleRemoveArsenal);
+    };
+    class ModuleArsenal_F: Module_F {
+        function=QFUNC(bi_moduleArsenal);
     };
 };

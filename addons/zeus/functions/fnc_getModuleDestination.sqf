@@ -40,8 +40,8 @@ GVAR(moduleDestination_displayEHMouse) = [findDisplay 312, "mouseButtonDown", {
     params ["", "_mouseButton", "", "", "_shift", "_ctrl", "_alt"];
 
     if (_mouseButton != 0) exitWith {}; // Only watch for LMB
-    TRACE_2("placed",_object,_mousePosASL);
 
+    //IGNORE_PRIVATE_WARNING ["_thisArgs"]
     _thisArgs params ["_object", "_code"];
 
     // Get mouse position on 2D map or 3D world
@@ -52,6 +52,7 @@ GVAR(moduleDestination_displayEHMouse) = [findDisplay 312, "mouseButtonDown", {
     } else {
         AGLToASL (screenToWorld getMousePosition);
     };
+    TRACE_2("placed",_object,_mousePosASL);
 
     [true, _object, _mousePosASL, _shift, _ctrl, _alt] call _code;
     GVAR(moduleDestination_running) = false;
@@ -62,8 +63,8 @@ GVAR(moduleDestination_displayEHKeyboard) = [findDisplay 312, "KeyDown", {
     params ["", "_keyCode", "_shift", "_ctrl", "_alt"];
 
     if (_keyCode != 1) exitWith {}; // Only watch for ESC
-    TRACE_2("aborted",_object,_mousePosASL);
 
+    //IGNORE_PRIVATE_WARNING ["_thisArgs"]
     _thisArgs params ["_object", "_code"];
 
     // Get mouse position on 2D map or 3D world
@@ -74,6 +75,7 @@ GVAR(moduleDestination_displayEHKeyboard) = [findDisplay 312, "KeyDown", {
     } else {
         AGLToASL (screenToWorld getMousePosition);
     };
+    TRACE_2("aborted",_object,_mousePosASL);
 
     [false, _object, _mousePosASL, _shift, _ctrl, _alt] call _code;
     GVAR(moduleDestination_running) = false;
@@ -83,6 +85,7 @@ GVAR(moduleDestination_displayEHKeyboard) = [findDisplay 312, "KeyDown", {
 // Add draw EH for the zeus map - draws the 2D icon and line
 GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw", {
     params ["_mapCtrl"];
+    //IGNORE_PRIVATE_WARNING ["_thisArgs"]
     _thisArgs params ["_object", "_text", "_icon", "_color"];
 
     private _pos2d = (((findDisplay 312) displayCtrl 50) ctrlMapScreenToWorld getMousePosition);

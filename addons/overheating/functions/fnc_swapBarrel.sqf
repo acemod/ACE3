@@ -34,4 +34,4 @@ if (_assistant isEqualTo _gunner) then {
     _duration = 5.0;
 };
 
-[_duration, [_assistant,_gunner,_weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);
+[_duration, [_assistant,_gunner,_weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, localize LSTRING(SwappingBarrel), nil, ["isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,progressBar);

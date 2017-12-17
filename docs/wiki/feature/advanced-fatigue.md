@@ -14,7 +14,7 @@ version:
 
 ## 1. Overview
 
-Advanced Fatigue is a human fatigue simulation based on the information and formulas provided by Bohemia Interactive Simulations, which are [publicly available online](https://manuals.bisimulations.com/vbs3/3-0/downloads/VBS_AdvFatigueSys.pdf) and apparently used in VBS3. However, just to make this clear again, none of VBS3 code was taken over, this is an independent implementation.
+Advanced Fatigue is a human fatigue simulation based on the information and formulas provided by Bohemia Interactive Simulations, which used to be publicly available via their manuals page and are apparently used in VBS3. However, just to make this clear again, none of VBS3 code was taken over, this is an independent implementation.
 
 
 ### 1.1 Basics

@@ -232,9 +232,6 @@ class CfgWeapons {
         displayName = CSTRING(srifle_DMR_03_woodland); //Mk-I EMR 7.62 mm (Woodland);
     };
 
-    class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
-        displayName = CSTRING(srifle_DMR_03_spotter); //NATO DMR (provisional) spotter;
-    };
     class DMR_04_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_04); //ASP-1 Kir 12.7 mm;
     };
@@ -351,7 +348,7 @@ class CfgWeapons {
 
     class MissileLauncher;
     class Missile_AGM_02_Plane_CAS_01_F: MissileLauncher {
-        displayName = "AGM-65 Maverick";
+        displayName = "AGM-65 Maverick G";
     };
     class Missile_AGM_01_Plane_CAS_02_F: Missile_AGM_02_Plane_CAS_01_F {
         displayName = "Kh-25MTP";
@@ -546,6 +543,16 @@ class CfgWeapons {
 
         class HE: autocannon_Base_F {
             displayName = "Mk44 Bushmaster II";
+        };
+    };
+
+    class autocannon_40mm_VTOL_01: autocannon_40mm_CTWS {
+        displayName = "L/60 Bofors Autocannon";
+        class AP: AP {
+            displayName = "L/60 Bofors Autocannon";
+        };
+        class HE: HE {
+            displayName = "L/60 Bofors Autocannon";
         };
     };
 

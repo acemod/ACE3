@@ -27,7 +27,6 @@ if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
 TRACE_1("Starting wire-cut action PFEH",_interactionType);
 
 [{
-    private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper", "_action"];
     params ["_args", "_pfID"];
     _args params ["_setPosition", "_addedHelpers", "_fencesHelped"];
 
@@ -41,13 +40,13 @@ TRACE_1("Starting wire-cut action PFEH",_interactionType);
         //If player moved >5 meters from last pos, then rescan
         if (((getPosASL ace_player) distance _setPosition) > 5) then {
 
-            _fncStatement = {
+            private _fncStatement = {
                 params ["", "_player", "_attachedFence"];
                 [_player, _attachedFence] call FUNC(cutDownFence);
             };
-            _fncCondition = {
+            private _fncCondition = {
                 params ["_helper", "_player", "_attachedFence"];
-                if (!([_player, _attachedFence, []] call EFUNC(common,canInteractWith))) exitWith {false};
+                if (!([_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith))) exitWith {false};
                 ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))} && {
                     //Custom LOS check for fence
                     private _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
@@ -60,8 +59,8 @@ TRACE_1("Starting wire-cut action PFEH",_interactionType);
                 if (!(_x in _fencesHelped)) then {
                     if ([_x] call FUNC(isFence)) then {
                         _fencesHelped pushBack _x;
-                        _helper = "ACE_LogicDummy" createVehicleLocal (getpos _x);
-                        _action = [QGVAR(helperCutFence), (localize LSTRING(CutFence)), QPATHTOF(ui\wirecutter_ca.paa), _fncStatement, _fncCondition, {}, _x, {[0,0,0]}, 5.5, [false, false, false, false, true]] call EFUNC(interact_menu,createAction);
+                        private _helper = "ACE_LogicDummy" createVehicleLocal (getpos _x);
+                        private _action = [QGVAR(helperCutFence), (localize LSTRING(CutFence)), QPATHTOF(ui\wirecutter_ca.paa), _fncStatement, _fncCondition, {}, _x, {[0,0,0]}, 5.5, [false, false, false, false, true]] call EFUNC(interact_menu,createAction);
                         [_helper, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
                         _helper setPosASL ((getPosASL _x) vectorAdd [0,0,1.25]);
                         _addedHelpers pushBack _helper;

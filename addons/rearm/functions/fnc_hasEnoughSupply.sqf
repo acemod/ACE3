@@ -16,9 +16,7 @@
 */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]]];
-
-if (isNull _truck || {_magazineClass isEqualTo ""}) exitWith {false};
+params ["_truck", "_magazineClass"];
 
 // With infinite supply, there is always enough
 if (GVAR(supply) == 0) exitWith {true};

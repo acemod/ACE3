@@ -141,9 +141,9 @@
             <Italian>Introduci griglia coordinate:</Italian>
             <Portuguese>Digite as Ccords. do Grid</Portuguese>
             <Japanese>座標を入力:</Japanese>
-            <Korean>망 좌표 입력:</Korean>
             <Chinesesimp>输入网格座标:</Chinesesimp>
             <Chinese>輸入網格座標:</Chinese>
+            <Korean>좌표 입력:</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterName">
             <English>Name of [%1]</English>
@@ -173,9 +173,9 @@
             <Italian>Nuovo MGRS</Italian>
             <Portuguese>MGRS-Novo</Portuguese>
             <Japanese>MGRS-New</Japanese>
-            <Korean>MGRS-새 것</Korean>
             <Chinesesimp>军事网格座标系统-新型</Chinesesimp>
             <Chinese>軍事網格座標系統-新型</Chinese>
+            <Korean>MGRS-New</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlWGD">
             <English>WGD</English>
@@ -510,8 +510,8 @@
             <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>
             <Japanese>アイテム上で表示されるデータ量を決定します。設定を減らすと地図上での情報が少なくなります。</Japanese>
             <Korean>MicroDAGR에 얼마나 많은 데이터가 들어있는지 정합니다. 적을 수록 지도상에도 비춰지는게 적어집니다.</Korean>
-            <Chinesesimp>设定有多少数据会显示在微型军用GPS接收器上. 这些资料的多寡会反映在迷你地图的显示上</Chinesesimp>
-            <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上. 這些資料的多寡會反映在迷你地圖的顯示上</Chinese>
+            <Chinesesimp>设定有多少数据会显示在微型军用GPS接收器上。这些资料的多寡会反映在迷你地图的显示上。</Chinesesimp>
+            <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上。這些資料的多寡會反映在迷你地圖的顯示上。</Chinese>
         </Key>
     </Package>
 </Project>

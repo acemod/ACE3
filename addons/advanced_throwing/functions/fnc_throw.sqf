@@ -49,9 +49,26 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
         _newVelocity = _newVelocity vectorAdd (velocity (vehicle _unit));
     };
 
+    // Calculate torque of thrown grenade
+    private _config = configFile >> "CfgAmmo" >> typeOf _activeThrowable;
+    private _torqueDir = getArray (_config >> QGVAR(torqueDirection));
+    _torqueDir = if (_torqueDir isEqualTypeArray [0,0,0]) then { vectorNormalized _torqueDir } else { [0,0,0] };
+    private _torqueMag = getNumber (_config >> QGVAR(torqueMagnitude));
+
+    if (_dropMode) then {
+        _torqueMag = _torqueMag * THROWSTYLE_DROP_TORQUE_COEF;
+    } else {
+        if (_throwType == "high") then {
+            _torqueMag = _torqueMag * THROWSTYLE_HIGH_TORQUE_COEF;
+        };
+    };
+
+    private _torque = _torqueDir vectorMultiply _torqueMag;
+
     // Drop if unit dies during throw process
     if (alive _unit) then {
         _activeThrowable setVelocity _newVelocity;
+        _activeThrowable addTorque (_unit vectorModelToWorld _torque);
     };
 
     // Invoke listenable event
@@ -67,12 +84,12 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
 
 
 #ifdef DRAW_THROW_PATH
-GVAR(predictedPath) = call FUNC(drawArc); // save the current throw arc
+GVAR(predictedPath) = call FUNC(drawArc); // Save the current throw arc
 GVAR(flightPath) = [];
-[_unit getVariable QGVAR(activeThrowable)] spawn {
-    params ["_grenade"];
-    while {!isNull _grenade} do {
-        GVAR(flightPath) pushBack ASLtoAGL getPosASL _grenade;
+GVAR(flightRotation) = [];
+(_unit getVariable QGVAR(activeThrowable)) spawn {
+    while {!isNull _this && {(getPosATL _this) select 2 > 0.05}} do {
+        GVAR(flightPath) pushBack [ASLtoAGL (getPosASL _this), vectorUp _this];
         sleep 0.05;
     };
 };

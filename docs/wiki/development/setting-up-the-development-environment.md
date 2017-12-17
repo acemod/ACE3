@@ -17,7 +17,7 @@ This page describes how you can setup your development environment for ACE3, all
 - A properly setup P-drive
 - Run Arma 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - [Python 3.x](https://www.python.org/)
-- [Mikero Tools](https://dev.withsix.com/projects/mikero-pbodll/files): DePbo, DeRap, DeOgg, Rapify, MakePbo, PboProject >=1.70
+- [Mikero Tools](https://armaservices.maverick-applications.com/Products/MikerosDosTools/FileBrowserFree): DePbo, DeRap, DeOgg, Rapify, MakePbo, PboProject >=1.70
 - `*.hpp` removed from PboProject's "Exclude From Pbo" list
 - Python, Mikero Tools and Git in PATH environment variable
 - [CBA](https://github.com/CBATeam/CBA_A3/releases/latest) mod (release or development version)
@@ -127,7 +127,7 @@ class CfgSettings {
 #define DISABLE_COMPILE_CACHE
 ```
 
-All functions with disabled caching can be recompiled with `[] call ACE_PREP_RECOMPILE;` command without mission restart. You can add a addAction/keybind/pfeh with this code and use it for fast recompiling.
+All functions in module with `DISABLE_COMPILE_CACHE` line can be recompiled without mission restart with `[] call ACE_PREP_RECOMPILE;` command. You can add a addAction/keybind/pfeh with this code and use it for fast recompiling.
 
 ### 7.2 Restrictions
 
