@@ -38,8 +38,8 @@ _unit selectWeapon _replacementTube;
     params ["_args", "_idPFH"];
     _args params ["_unit", "_replacementTube", "_projectile"];
 
-    //We want to wait for the missile to explode if it's an AI. If it's a player we want to wait until they switch weapons.
-    if ((!([_unit] call EFUNC(common,isPlayer)) && {isNull _projectile}) || {([_unit] call EFUNC(common,isPlayer) && {currentWeapon _unit != _replacementTube})}) then {
+    //Wait until the unit switches weapon.
+    if (currentWeapon _unit != _replacementTube) then {
         //Remove PFEH:
         [_idPFH] call CBA_fnc_removePerFrameHandler;
 
