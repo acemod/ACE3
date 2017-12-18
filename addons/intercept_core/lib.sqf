@@ -19,7 +19,7 @@ intercept_fnc_callWrapper = {
 };
 
 intercept_fnc_isNilWrapper = {
-	(missionNamespace getVariable "INTERCEPT_CALL_ARGS") call intercept_fnc_callWrapper;
+    (missionNamespace getVariable "INTERCEPT_CALL_ARGS") call intercept_fnc_callWrapper;
 };
 
 diag_log text "Intercept Invoker SQF handler initializing...";
@@ -28,22 +28,22 @@ private _res = "intercept" callExtension "init_invoker:";
 //Check if invoker is working
 private _res = "intercept" callExtension "test_invoker:";
 if(_res == profileNameSteam) then {
-	intercept_invoker_ok = true;
+    intercept_invoker_ok = true;
 };
 diag_log text format["Intercept Invoker test result: %1 == %2", _res, profileNameSteam];
-		
-		
-if(intercept_invoker_ok) then {
-	intercept_fnc_signal = compileFinal preProcessFileLineNumbers "\z\intercept\rv\addons\core\signal.sqf";
 
-	addMissionEventHandler ["EachFrame", "interceptOnFrame"]; //Register our PFH
-	
+
+if(intercept_invoker_ok) then {
+    intercept_fnc_signal = compileFinal preProcessFileLineNumbers "\z\intercept\rv\addons\core\signal.sqf";
+
+    addMissionEventHandler ["EachFrame", "interceptOnFrame"]; //Register our PFH
+
     diag_log text "Intercept Invoker initialized.";
     diag_log text format["Intercept Pre-Init..."];
     ["pre_init",[]] call (uiNamespace getVariable "intercept_fnc_event");
     diag_log text format["Intercept Pre-Init Completed."];
 } else {
-	diag_log text "Intercept Invoker initialization failed.";
+    diag_log text "Intercept Invoker initialization failed.";
     intercept_fnc_signal =  compileFinal "";
 
     if (isNull (uiNamespace getVariable ["intercept_fnc_event", scriptNull])) then {

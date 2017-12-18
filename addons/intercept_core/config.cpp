@@ -886,8 +886,8 @@ class CfgPatches {
 };
 
 class CfgFunctions {
-	init = "z\intercept\rv\addons\core\initFunctionsWrapper.sqf";
-	//init = "A3\functions_f\initFunctions.sqf";
+    init = "z\intercept\rv\addons\core\initFunctionsWrapper.sqf";
+    //init = "A3\functions_f\initFunctions.sqf";
 };
 
 #define QUOTE(var1) #var1
