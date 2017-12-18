@@ -1,12 +1,10 @@
-class CfgWorldsTextures {
-    class Default {
-        surfaceTextureBasePath = "a3\map_data\";
-        filePrefix = "co.paa";
-    };
+class CfgWorlds {
 
     //Altis
-    class Altis: Default {
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d" /*, "A3\plants_f\Clutter\c_Thistle_Thorn_Green.p3d"*/};
+    class Altis {
+        surfaceTextureBasePath = "a3\map_data\";
+        filePrefix = "co.paa";
+        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     // Bukovina
@@ -48,7 +46,7 @@ class CfgWorldsTextures {
     };
 
     //Lythium
-    class lythium: Default {
+    class lythium {
         surfaceTextureBasePath = "GBR\lythium\data\";
         filePrefix = "co.paa";
         camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};

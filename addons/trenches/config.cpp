@@ -18,4 +18,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgWorldsTextures.hpp"
+#include "CfgWorlds.hpp"

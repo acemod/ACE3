@@ -21,12 +21,12 @@ params [
     ["_unit", objnull, [objnull]]
 ];
 
-if (isNull _trench || {count getArray (configFile >> "CfgWorldsTextures" >> worldName >> "camouflageObjects") == 0}) exitWith {};
+if (isNull _trench || {count getArray (configFile >> "CfgWorlds" >> worldName >> "camouflageObjects") == 0}) exitWith {};
 
 private _fnc_onFinish = {
     (_this select 0) params ["_unit", "_trench"];
 
-    private _camouflageObjects = getArray (configFile >> "CfgWorldsTextures" >> worldName >> "camouflageObjects");
+    private _camouflageObjects = getArray (configFile >> "CfgWorlds" >> worldName >> "camouflageObjects");
     private _placedObjects = [];
 
     {
