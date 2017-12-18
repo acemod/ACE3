@@ -5,6 +5,7 @@ class ACE_Settings {
         description = CSTRING(DefaultLockpickStrength_Description);
         value = 10;
         typeName = "SCALAR";
+        sliderSettings[] = {-1, 60, 5, 1};
     };
     class GVAR(lockVehicleInventory) {
         category = CSTRING(DisplayName);
@@ -19,5 +20,6 @@ class ACE_Settings {
         description = CSTRING(VehicleStartingLockState_Description);
         value = -1;
         typeName = "SCALAR";
+        sliderSettings[] = {-1, 2, -1, -1}; // ToDo: Make this a list?
     };
 };

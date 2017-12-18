@@ -1792,26 +1792,29 @@
             <Chinesesimp>引擎必须先关闭才能开始进行维修</Chinesesimp>
             <Chinese>引擎必須先關閉才能開始進行維修</Chinese>
         </Key>
-
         <Key ID="STR_ACE_Repair_editorLoadedTracks">
             <English>Spare Tracks</English>
             <German>Ersatzketten</German>
             <Japanese>予備履帯</Japanese>
+            <Italian>Cingoli di Scorta</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
             <German>Anzahl der Ersatzketten im Laderaum.</German>
             <Japanese>カーゴ内にある予備履帯の数を指定します。</Japanese>
+            <Italian>Numero dei cingoli di scorta nel cargo.</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
             <German>Ersatzreifen</German>
             <Japanese>予備タイヤ</Japanese>
+            <Italian>Ruote di Scorta</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
             <German>Anzahl der Ersatzreifen im Laderaum.</German>
             <Japanese>カーゴ内にある予備タイヤの数を指定します。</Japanese>
+            <Italian>Numero delle ruote di scorta nel cargo.</Italian>
         </Key>
     </Package>
 </Project>
