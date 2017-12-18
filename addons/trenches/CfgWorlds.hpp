@@ -2,92 +2,92 @@ class CfgWorlds {
 
     //Altis
     class Altis {
-        surfaceTextureBasePath = "a3\map_data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        GVAR(surfaceTextureBasePath) = "a3\map_data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     // Bukovina
     class Bootcamp_ACR {
-        surfaceTextureBasePath = "ca\Bootcamp_ACR\data\";
-        filePrefix = "detail_co.paa";
-        camouflageObjects[] = {"ca\plants2\clutter\c_GrassBunch.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\Bootcamp_ACR\data\";
+        GVAR(filePrefix) = "detail_co.paa";
+        GVAR(camouflageObjects)[] = {"ca\plants2\clutter\c_GrassBunch.p3d"};
     };
 
     // Bystrica
     class Woodland_ACR {
-        surfaceTextureBasePath = "ca\Bohemia\data\";
-        filePrefix = "detail_co.paa";
-        camouflageObjects[] = {"ca\plants2\clutter\c_weed3.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\Bohemia\data\";
+        GVAR(filePrefix) = "detail_co.paa";
+        GVAR(camouflageObjects)[] = {"ca\plants2\clutter\c_weed3.p3d"};
     };
 
     //Chernarus
     class Chernarus {
-        surfaceTextureBasePath = "ca\CHERNARUS\data\";
-        filePrefix = "detail_co.paa";
-        camouflageObjects[] = {"ca\plants2\clutter\c_weed3.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\CHERNARUS\data\";
+        GVAR(filePrefix) = "detail_co.paa";
+        GVAR(camouflageObjects)[] = {"ca\plants2\clutter\c_weed3.p3d"};
     };
 
     //Celle
     class mbg_celle2: Chernarus {
-        camouflageObjects[] = {};
+        GVAR(camouflageObjects)[] = {};
     };
 
     //Chernarus Summer
       class Chernarus_Summer: Chernarus {
-        camouflageObjects[] = {"ca\plants2\clutter\c_weed3.p3d"};
+        GVAR(camouflageObjects)[] = {"ca\plants2\clutter\c_weed3.p3d"};
     };
 
     //Desert
     class Desert_E {
-        surfaceTextureBasePath = "ca\Desert_E\data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {"ca\plants_E\Clutter\c_Brush_Hard_EP1.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\Desert_E\data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {"ca\plants_E\Clutter\c_Brush_Hard_EP1.p3d"};
     };
 
     //Lythium
     class lythium {
-        surfaceTextureBasePath = "GBR\lythium\data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        GVAR(surfaceTextureBasePath) = "GBR\lythium\data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     //Malden
     class Malden: Altis {
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        GVAR(camouflageObjects)[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     //Rahmadi
     class Intro: Chernarus {
-        camouflageObjects[] = {"ca\plants\clutter_grass_flowers.p3d"};
+        GVAR(camouflageObjects)[] = {"ca\plants\clutter_grass_flowers.p3d"};
     };
 
     //Porto
     class Porto {
-        surfaceTextureBasePath = "ca\desert2\data\";
-        filePrefix = ".paa";
-        camouflageObjects[] = {};
+        GVAR(surfaceTextureBasePath) = "ca\desert2\data\";
+        GVAR(filePrefix) = ".paa";
+        GVAR(camouflageObjects)[] = {};
     };
 
     //Prei Khmaoch Luong
     class prei_khmaoch_luong {
-        surfaceTextureBasePath = "\blud_prei_art\data\ground\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {"a3\vegetation_f_exp\clutter\grass\c_Grass_Tropic.p3d"};
+        GVAR(surfaceTextureBasePath) = "\blud_prei_art\data\ground\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {"a3\vegetation_f_exp\clutter\grass\c_Grass_Tropic.p3d"};
     };
 
     //Proving Grounds
     class ProvingGrounds_PMC {
-        surfaceTextureBasePath = "ca\provinggrounds_pmc\Data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {};
+        GVAR(surfaceTextureBasePath) = "ca\provinggrounds_pmc\Data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {};
     };
 
     //Sahrani
     class Sara {
-        surfaceTextureBasePath = "ca\sara\Data\";
-        filePrefix = "_detail_co.paa";
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\sara\Data\";
+        GVAR(filePrefix) = "_detail_co.paa";
+        GVAR(camouflageObjects)[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
         class Surfaces {
             class blato_detail_nohq {
                 texturePath = "ca\sara\Data\blato_detail_nohq.paa";
@@ -175,16 +175,16 @@ class CfgWorlds {
 
     //Shapur
     class Shapur_Baf {
-        surfaceTextureBasePath = "ca\shapur_baf\Data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {"ca\plants_E\Clutter\c_Brush_Hard_EP1.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\shapur_baf\Data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {"ca\plants_E\Clutter\c_Brush_Hard_EP1.p3d"};
     };
 
     //Southern Sahrani
     class SaraLite {
-        surfaceTextureBasePath = "ca\saralite\Data\";
-        filePrefix = "_detail_co.paa";
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\saralite\Data\";
+        GVAR(filePrefix) = "_detail_co.paa";
+        GVAR(camouflageObjects)[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
         class Surfaces {
              class leslist_detail_nohq {
                  texturePath = "ca\saralite\Data\leslist_detail_nohq.paa";
@@ -230,39 +230,39 @@ class CfgWorlds {
 
     //Stratis
     class Stratis: Altis {
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        GVAR(camouflageObjects)[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     //Takistan
     class Takistan {
-        surfaceTextureBasePath = "ca\takistan\Data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {};
+        GVAR(surfaceTextureBasePath) = "ca\takistan\Data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {};
     };
 
     //Takistan Mountains
     class Mountains_ACR {
-        surfaceTextureBasePath = "ca\afghan\Data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {};
+        GVAR(surfaceTextureBasePath) = "ca\afghan\Data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {};
     };
 
     //Tanoa
     class Tanoa : Altis{
-        surfaceTextureBasePath = "A3\Map_Data_Exp\";
-        camouflageObjects[] = {"A3\Vegetation_F_Exp\Clutter\Grass\c_GrassBunch_HI.p3d"};
+        GVAR(surfaceTextureBasePath) = "A3\Map_Data_Exp\";
+        GVAR(camouflageObjects)[] = {"A3\Vegetation_F_Exp\Clutter\Grass\c_GrassBunch_HI.p3d"};
     };
 
     //United Sahrani
     class Sara_dbe1 : Sara {
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        GVAR(camouflageObjects)[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     //Utes
     class utes {
-        surfaceTextureBasePath = "ca\utes\Data\";
-        filePrefix = ".paa";
-        camouflageObjects[] = {"CUP\Terrains\cup_terrains_worlds\Clutter\c_GrassCrookedForest.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\utes\Data\";
+        GVAR(filePrefix) = ".paa";
+        GVAR(camouflageObjects)[] = {"CUP\Terrains\cup_terrains_worlds\Clutter\c_GrassCrookedForest.p3d"};
         class Surfaces {
             class Default {
                 texturePath = "a3\map_data\gdt_beach_co.paa";
@@ -272,8 +272,8 @@ class CfgWorlds {
 
     //Zargabad
     class Zargabad {
-        surfaceTextureBasePath = "ca\zargabad\Data\";
-        filePrefix = "co.paa";
-        camouflageObjects[] = {"ca\plants_E\Clutter\c_Brush_Soft_EP1.p3d"};
+        GVAR(surfaceTextureBasePath) = "ca\zargabad\Data\";
+        GVAR(filePrefix) = "co.paa";
+        GVAR(camouflageObjects)[] = {"ca\plants_E\Clutter\c_Brush_Soft_EP1.p3d"};
     };
 };
