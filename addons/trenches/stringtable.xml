@@ -36,8 +36,8 @@
             <Chinese>戰備鍬</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
-            <English>Envelope - Small</English>
-            <German>Rund - Klein</German>
+            <English>Trench (Envelope - Small)</English>
+            <German>Schützengraben (Rund - Klein)</German>
             <Polish>Wnęka - mała</Polish>
             <Italian>Fascia - Piccola</Italian>
             <Spanish>Trinchera pequeña</Spanish>
@@ -80,8 +80,8 @@
             <Chinese>蓋小掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
-            <English>Envelope - Big</English>
-            <German>Rund - Groß</German>
+            <English>Trench (Envelope - Big)</English>
+            <German>Schützengraben (Rund - Groß)</German>
             <Polish>Wnęka - duża</Polish>
             <Italian>Fascia - Grande</Italian>
             <Spanish>Trinchera grande</Spanish>
@@ -243,8 +243,8 @@
             <German>Entferne Tarnung...</German>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeGigantName">
-            <English>Envelope - Gigant</English>
-            <German>Rund - Sehr groß</German>
+            <English>Trench (Envelope - Gigant)</English>
+            <German>Schützengraben (Rund - Sehr groß)</German>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeGigantDescription">
             <English>Giant Personal Trench</English>
@@ -263,8 +263,8 @@
             <German>Tarnung an diesen Graben anbringen</German>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeVehicleName">
-            <English>Envelope - Vehicle</English>
-            <German>Rund - Fahrzeug</German>
+            <English>Trench (Envelope - Vehicle)</English>
+            <German>Schützengraben (Rund - Fahrzeug)</German>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeVehicleDescription">
             <English>Vehicle Trench</English>
