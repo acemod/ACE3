@@ -20,6 +20,7 @@ class ACE_Settings {
         description = CSTRING(PerformanceFactor_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 5, 1, 1};
     };
     class GVAR(recoveryFactor) {
         category = CSTRING(DisplayName);
@@ -27,6 +28,7 @@ class ACE_Settings {
         description = CSTRING(RecoveryFactor_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 5, 1, 1};
     };
     class GVAR(loadFactor) {
         category = CSTRING(DisplayName);
@@ -34,6 +36,7 @@ class ACE_Settings {
         description = CSTRING(LoadFactor_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 5, 1, 1};
     };
     class GVAR(terrainGradientFactor) {
         category = CSTRING(DisplayName);
@@ -41,5 +44,6 @@ class ACE_Settings {
         description = CSTRING(TerrainGradientFactor_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 5, 1, 1};
     };
 };

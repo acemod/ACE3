@@ -27,11 +27,14 @@ class ACE_Settings {
         description = CSTRING(ammoCookoffDuration_tooltip);
         value = 1;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 5, 1, 1};
     };
     class GVAR(probabilityCoef) {
+        category = CSTRING(displayName);
         displayName = CSTRING(probabilityCoef_name);
         description = CSTRING(probabilityCoef_tooltip);
         value = 1;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 5, 1, 1};
     };
 };
