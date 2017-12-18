@@ -45,7 +45,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeSmallName);
         descriptionShort = CSTRING(EnevlopeSmallDescription);
-        model = QPATHTOEF(apl,ace_envelope_small4.p3d);
+        model = QPATHTOF(data\trench_small.p3d);
         scope = 2;
         GVAR(diggingDuration) = 20;
         GVAR(removalDuration) = 12;
@@ -116,7 +116,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeBigName);
         descriptionShort = CSTRING(EnevlopeBigDescription);
-        model = QPATHTOEF(apl,ace_envelope_big4.p3d);
+        model = QPATHTOF(data\trench_big.p3d);
         GVAR(diggingDuration) = 25;
         GVAR(removalDuration) = 15;
         GVAR(noGeoClass) = "ACE_envelope_big_NoGeo";
@@ -164,11 +164,11 @@ class CfgVehicles {
 
     class ACE_envelope_small_NoGeo: ACE_envelope_small {
         scope = 1;
-        model = QPATHTOEF(apl,ace_envelope_small4_nogeo.p3d);
+        model = QPATHTOF(data\trench_small_nogeo.p3d);
     };
     class ACE_envelope_big_NoGeo: ACE_envelope_big {
         scope = 1;
-        model = QPATHTOEF(apl,ace_envelope_big4_nogeo.p3d);
+        model = QPATHTOF(data\trench_big_nogeo.p3d);
     };
     class ACE_envelope_gigant_NoGeo: ACE_envelope_gigant {
         scope = 1;

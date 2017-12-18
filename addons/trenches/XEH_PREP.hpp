@@ -6,7 +6,6 @@ PREP(canRemoveCamouflage);
 PREP(canRemoveTrench);
 PREP(continueDiggingTrench);
 PREP(deleteCamouflage);
-PREP(getSurfaceTexturePath);
 PREP(handleInteractMenuOpened);
 PREP(handleKilled);
 PREP(handlePlayerChanged);
@@ -22,3 +21,13 @@ PREP(placeTrench);
 PREP(removeCamouflage);
 PREP(removeTrench);
 PREP(setTrenchPlacement);
+
+if ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]])) then {
+    #ifdef DISABLE_COMPILE_CACHE
+        DFUNC(getSurfaceTexturePath) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,getSurfaceTexturePathNative).sqf);
+    #else
+        [QPATHTOF(functions\DOUBLES(fnc,getSurfaceTexturePathNative).sqf), QFUNC(getSurfaceTexturePath)] call CBA_fnc_compileFunction;
+    #endif
+} else {
+    PREP(getSurfaceTexturePath);
+}
