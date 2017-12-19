@@ -86,6 +86,7 @@ if (!GVAR(leftSearchbarFocus) && {!GVAR(rightSearchbarFocus)}) then {
         case (_keyPressed == DIK_BACKSPACE): {
             _return = false;
         };
+        case (_keyPressed == DIK_NUMPADENTER);
         case (_keyPressed == DIK_RETURN): {
             if (GVAR(leftSearchbarFocus)) then {
                 [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
