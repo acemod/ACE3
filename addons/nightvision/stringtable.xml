@@ -264,6 +264,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
+            <Japanese>照準器を使用時にぼかし</Japanese>
         </Key>
     </Package>
 </Project>
