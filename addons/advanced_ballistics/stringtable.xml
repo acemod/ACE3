@@ -76,7 +76,7 @@
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックスを有効化</Japanese>
+            <Japanese>アドバンスド バリスティックス</Japanese>
             <Korean>고급 탄도학을 적용합니다</Korean>
             <Chinese>啟用先進彈道系統</Chinese>
             <Chinesesimp>启用先进弹道系统</Chinesesimp>
@@ -84,10 +84,14 @@
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_DisplayName">
             <English>Enable Muzzle Velocity Variation</English>
             <German>Variation der Mündungsgeschwindigkeit aktivieren</German>
+            <Japanese>銃口初速の変化</Japanese>
+            <Italian>Abilita Variazione Velocità Volata</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
             <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
+            <Japanese>発射毎に僅かな銃口初速の変化をシミュレートします。</Japanese>
+            <Italian>Simula lievi variazioni della velocità della volata tra un colpo e l'altro</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
@@ -100,7 +104,7 @@
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
             <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
-            <Japanese>弾薬の温度シミュレーションを有効化</Japanese>
+            <Japanese>弾薬温度シミュレーション</Japanese>
             <Korean>탄약 온도 구현 적용</Korean>
             <Chinese>啟用彈藥溫度模擬系統</Chinese>
             <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
@@ -116,7 +120,7 @@
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от температуры</Russian>
             <Italian>La velocità dello sparo varia a seconda della temperatura delle munizioni</Italian>
-            <Japanese>弾薬の温度により初速値を変化させます</Japanese>
+            <Japanese>弾薬の温度により銃口初速を変化させます</Japanese>
             <Korean>탄약 온도에 비례해 총구 속도가 달라집니다</Korean>
             <Chinese>子彈初速將隨彈藥溫度而有所變化</Chinese>
             <Chinesesimp>子弹初速将随弹药温度而有所变化</Chinesesimp>
@@ -132,7 +136,7 @@
             <Hungarian>Csőhossz-szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция длины ствола</Russian>
             <Italian>Abilita simulazione della lunghezza della canna</Italian>
-            <Japanese>銃身長のシミュレーションを有効化</Japanese>
+            <Japanese>銃身長シミュレーション</Japanese>
             <Korean>총열 길이 구현 적용</Korean>
             <Chinese>啟用槍管長度模擬系統</Chinese>
             <Chinesesimp>启用枪管长度模拟系统</Chinesesimp>
@@ -148,7 +152,7 @@
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от длины ствола</Russian>
             <Italian>La velocità di sparo varia a seconda della lunghezza della canna</Italian>
-            <Japanese>銃身長により初速値を変化させます</Japanese>
+            <Japanese>銃身長により銃口初速を変化させます</Japanese>
             <Korean>총구 속도가 총열에 비례해 달라집니다</Korean>
             <Chinese>子彈初速將隨槍管長度而有所變化</Chinese>
             <Chinesesimp>子弹初速将随枪管长度而有所变化</Chinesesimp>
@@ -164,7 +168,7 @@
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
-            <Japanese>弾丸の痕跡表示を有効化</Japanese>
+            <Japanese>弾丸の痕跡表示</Japanese>
             <Korean>예광탄 효과 적용</Korean>
             <Chinese>啟用曳光彈效果</Chinese>
             <Chinesesimp>启用曳光弹效果</Chinesesimp>
@@ -228,7 +232,7 @@
             <Hungarian>Szimuláció hatóköre</Hungarian>
             <Russian>Радиус симуляции</Russian>
             <Italian>Raggio Simulazione</Italian>
-            <Japanese>シミュレーションの適用範囲</Japanese>
+            <Japanese>シミュレーション適用範囲</Japanese>
             <Korean>구현 범위</Korean>
             <Chinese>模擬半徑</Chinese>
             <Chinesesimp>模拟半径</Chinesesimp>

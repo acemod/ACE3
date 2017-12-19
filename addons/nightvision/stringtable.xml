@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_Category">
             <English>ACE Nightvision</English>
+            <Japanese>ACE 暗視装置</Japanese>
+            <Italian>Visione notturna ACE</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
             <English>NV Goggles (Gen1)</English>
@@ -220,7 +222,7 @@
             <Italian>Disabilita NVG nei mirini</Italian>
             <Spanish>Desactivar NVG en miras</Spanish>
             <French>Desactiver les JVN dans les viseurs.</French>
-            <Japanese>スコープを覗くと暗視装置を無効化</Japanese>
+            <Japanese>スコープでは暗視装置を無効化</Japanese>
             <Korean>조준경 사용시 야투경 비활성화</Korean>
             <Chinesesimp>使用瞄准镜时关闭夜视镜</Chinesesimp>
             <Chinese>使用瞄準鏡時關閉夜視鏡</Chinese>
@@ -242,15 +244,26 @@
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_DisplayName">
             <English>NVG Fog Scale</English>
+            <Japanese>暗視装置の霧の規模</Japanese>
+            <Italian>Livello Nebbia NVG</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_Description">
             <English>Fog is used to limit visibility.</English>
+            <Japanese>霧は視界制限のために使われます。</Japanese>
+            <Italian>La nebbia viene utilizzata per limitare la visibilità.</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
             <English>NVG Effect Scale</English>
+            <Japanese>暗視装置の効果規模</Japanese>
+            <Italian>Effetto livello NVG</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur, grain and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
+            <Japanese>ぼかしと粒子、明度効果 [0 に設定で全効果を無効化します]</Japanese>
+            <Italian>Effetti di sfocatura, sgranatura e luminosità [Importare a 0 disabiliterà TUTTI gli effetti della visione notturna]</Italian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
+            <English>Aim Down Sights Blur</English>
         </Key>
     </Package>
 </Project>

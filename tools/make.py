@@ -239,8 +239,16 @@ def find_depbo_tools():
                 k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(tool))
                 path = winreg.QueryValueEx(k, "exe")[0]
             except FileNotFoundError:
-                k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(tool))
-                path = winreg.QueryValueEx(k, "exe")[0]
+                try:
+                    k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(tool))
+                    path = winreg.QueryValueEx(k, "exe")[0]
+                except FileNotFoundError:
+                    try:
+                        k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Wow6432Node\Mikero\{}".format(tool))
+                        path = winreg.QueryValueEx(k, "exe")[0]
+                    except FileNotFoundError:
+                        k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Wow6432Node\Mikero\{}".format(tool))
+                        path = winreg.QueryValueEx(k, "exe")[0]
         except FileNotFoundError:
             print_error("Could not find {}".format(tool))
             failed = True

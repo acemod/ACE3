@@ -17,10 +17,6 @@ params ["_display"];
 
 private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
 
-if (_showToggle) then {
-    [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(populatePanel)
-};
-
 {
     private _ctrl = _display displayctrl _x;
     _ctrl ctrlshow _showToggle;
