@@ -48,7 +48,6 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
-    INFO("Note: getUnitTrait / camouflageCoef enum error can be ignored [present since Arma 3 v1.78] - IGNORE THIS");
     private _vis = _object getUnitTrait "camouflageCoef";
     if (_set > 0) then {
         if (_vis != 0) then {
