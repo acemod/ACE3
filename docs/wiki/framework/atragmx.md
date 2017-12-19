@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: ATragMX Framework
-description: Explains how to use the ATragMX framework.
+description: Explains how to set-up custom gun list entries with the ATragMX.
 group: framework
 order: 5
 parent: wiki
