@@ -431,6 +431,7 @@
             <French>Impossible d'ouvrir ACE arsenal</French>
             <German>Kann ACE Arsenal nicht anzeigen</German>
             <Italian>Impossibile aprire l'arsenale ACE</Italian>
+            <Japanese>ACE 武器庫を開けません</Japanese>
         </Key>
     </Package>
 </Project>
