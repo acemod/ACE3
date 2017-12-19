@@ -1,9 +1,12 @@
-version: '2'
+version: "3"
 
 services:
   docs:
-    build: .
-    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - INC="false"
     ports:
       - "4000:4000"
     volumes:

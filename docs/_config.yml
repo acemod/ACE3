@@ -36,7 +36,7 @@ lsi: false
 
 exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:
