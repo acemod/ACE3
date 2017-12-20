@@ -76,11 +76,13 @@ unassignVehicle _gunner;
                 TRACE_1("gunner in pos",_gunner distance _staticWeapon);
                 doStop _gunner;
                 _args set [5, true];
+                _gunnerReady = true;
             };
             if ((!_assistantReady) && {unitReady _assistant}) then {
                 TRACE_1("assistant in pos",_assistant distance _staticWeapon);
                 doStop _assistant;
                 _args set [6, true];
+                _assistantReady = true;
             };
             if (_gunnerReady && _assistantReady) then {
                 _gunner setVariable [QGVAR(weaponDisassembled), nil];

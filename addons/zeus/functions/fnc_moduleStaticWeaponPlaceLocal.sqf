@@ -1,7 +1,7 @@
 /*
  * Author: PabstMirror
  * Adapted from BIS_fnc_packStaticWeapon (Dean "Rocket" Hall, reworked by Killzone_Kid)
- * Place on a unit in a static weapon to make them dissasemble and pickup the backpacks parts
+ * Runs on a group carrying static weapon backpacks to make them setup the weapon
  *
  * Arguments:
  * 0: Gunner (carrying the weapon backpack) <OBJECT>
