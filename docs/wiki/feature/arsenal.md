@@ -14,12 +14,29 @@ version:
 
 ## 1. Overview
 
-### 1.1 Main screen
+### 1.1 Features
+
+ACE Arsenal has a pretty large number of improvements over BI Virtual Arsenal, here is a non exhaustive list:
+- The ability to select the magazine loaded into your primary / secondary / handgun without leaving ACE Arsenal.
+- Search bars for both the left and right panels.
+- New tabs to add weapon accessories to a container.
+- A clear container button to remove all items from a container.
+- Unique items support.`*`
+- Loadouts can be shared with other players.
+- Mission makers can save `default loadouts` that will be available in their own tab independently from player saved loadouts.
+- A setting to disable mod icons to increase performance even further.
+- An other setting to invert horizontal camera controls.
+- Settings to disable the `default loadouts` and `Public loadouts`tabs.
+
+`*` Items not currently available in ACE Arsenal but in the unit's inventory, unique items will be omitted when loading loadouts and they can only be removed from containers.
 
 ### 1.2 Loadouts
 
 <div class="panel callout">
-    <p>Loadouts from BI Virtual Arsenal will not show up in ACE Arsenal and vice versa.</p>
+    <p>
+        Loadouts from BI Virtual Arsenal will not show up in ACE Arsenal and vice versa.
+        Insignias, faces, and voices are NOT saved
+    </p>
 </div>
 
 The loadouts screen is separated into 3 tabs:
@@ -47,7 +64,7 @@ The color coding for loadouts is as follows:
     <p><kbd>Ctrl</kbd> + <kbd>V</kbd> does NOT work in multiplayer due to a BI safety, however <kbd>Ctrl</kbd> + <kbd>C</kbd> does since it's using the ACE3 clipboard extension.</p>
 </div>
 
-### 2.1 Outside of search boxes
+### 2.1 Outside of search bars
 
 - <kbd>Ctrl</kbd> + <kbd>C</kbd>: Export current loadout to clipboard.
 - <kbd>Ctrl</kbd> + <kbd>V</kbd>: Import loadout from clipboard.
@@ -61,9 +78,9 @@ The color coding for loadouts is as follows:
     <p><kbd>Shift</kbd> + arrow keys can be used to add or remove a large amount of items in a short amount of time from the right panel.</p>
 </div>
 
-### 2.2 Inside of search boxes
+### 2.2 Inside of search bars
 
-- Search boxes support copy / cut and paste (same limitations as importing apply in multiplayer).
+- Search bars support copy / cut and paste (same limitations as importing apply in multiplayer).
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> is supported.
 - <kbd>Enter</kbd> validates the search.
 - <kbd>RMB</kbd> clears the text field.
