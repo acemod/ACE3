@@ -22,6 +22,7 @@ You do not have to put the `ACE_ATragMX_Presets` class into a separate file. You
 
 ### 1.1 `ACE_ATragMX_Presets`
 
+{% raw %}
 ```cpp
 class ACE_ATragMX_Presets {
     class yourTestPreset1 {
@@ -34,3 +35,4 @@ class ACE_ATragMX_Presets {
     };
 };
 ```
+{% endraw %}
