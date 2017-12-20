@@ -1,6 +1,6 @@
 ---
 title: Using CBA Settings in ACE3
-description: With v3.12.0 we're dropping the ACE3 Settings System and now are using CBA Settings
+description: With v3.12.0 we are dropping the ACE3 Settings System and now are using CBA Settings
 parent: posts
 image: /img/news/171220_cbaPost2.jpg
 author: Pabstmirror, bux
@@ -19,14 +19,16 @@ We have tried to make the change as smooth as possible.
 ## Players
 
 All of your old (client settable) settings should transfer automatically.
+
 The biggest change is how to access the settings now; from the escape menu hit `OPTIONS` and then `ADDON OPTIONS`.
 
 ## Mission Makers
 
 Old mission should still be fully compatible with ACE3 v3.12.0.
-However the old methods of changing settings (Setting Modules and `class ace_settings` in description.ext) are considered deprecated (old modules will still function, but new ones are no longer placeable).
-We recommend switching to changing settings via the CBA 3DEN interface and deleting any old ACE Setting modules.
-From 3DEN click on the `SETTINGS` -> `ADDON OPTIONS`.
+
+However the old methods of changing settings (Setting Modules and `class ace_settings` in `description.ext`) are considered deprecated (old modules will still function, but new ones are no longer placeable).
+
+All settings are also subject to backwards incompatible changes with future ACE3 versions. We recommend switching to changing settings via the CBA Eden Editor interface and deleting any old ACE Setting modules. From Eden Editor click on the `SETTINGS` -> `ADDON OPTIONS`.
 
 ## Server Admins
 
@@ -42,11 +44,11 @@ Refer to CBA's [Server Settings](https://github.com/CBATeam/CBA_A3/wiki/CBA-Sett
 
 ## Addon / Script Makers
 
-* ACE3 will convert all config based settings to CBA Settings automatically (except `typeName = "ARRAY"`).
-* Non-public function `ace_common_fnc_addSettings` has been removed.
-* Non-public function `ace_common_fnc_setSetting` has changed and may not function as before.
-* It is critical that calls to `ace_common_fnc_readSettingFromModule` are now done **globaly** instead of just on the server.
+- ACE3 will convert all config based settings to CBA Settings automatically (except `typeName = "ARRAY"`).
+- Non-public function `ace_common_fnc_addSettings` has been removed.
+- Non-public function `ace_common_fnc_setSetting` has changed and may not function as before.
+- It is critical that calls to `ace_common_fnc_readSettingFromModule` are now done **globaly** instead of just on the server.
 
 It is also recommended to deprecate `(scope = 1;)` your custom setting modules.
 
-* ACE Events `ace_settingsInitialized` and `ace_settingChanged` will continue to work normally.
+- ACE Events `ace_settingsInitialized` and `ace_settingChanged` will continue to work normally.
