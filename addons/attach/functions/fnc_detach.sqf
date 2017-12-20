@@ -83,4 +83,4 @@ if (_itemDisplayName == "") then {
     _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
 
-[format [localize LSTRING(Item_Detached), _itemDisplayName]] call EFUNC(common,displayTextStructured);
+[format [localize LSTRING(Item_Detached), _itemDisplayName], 2] call EFUNC(common,displayTextStructured);

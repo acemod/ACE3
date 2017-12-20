@@ -41,7 +41,7 @@
             <Italian>Quanto velocemente dovrebbe essere rifornito un veicolo?</Italian>
             <Spanish>Cuán rápido se reabastecen los vehículos?</Spanish>
             <French>A quelle vitesse devrait être ravitaillé un véhicule ?</French>
-            <Japanese>どのくらいの速さで車両へ給油しますか？</Japanese>
+            <Japanese>どのくらいの速さで車両へ給油しますか?</Japanese>
             <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
             <Chinesesimp>载具多快会加油完毕?</Chinesesimp>
             <Chinese>載具多快會加油完畢?</Chinese>
@@ -86,7 +86,7 @@
             <Italian>Prendendo manicotto benzina...</Italian>
             <Spanish>Tomando surtidor...</Spanish>
             <French>Prise de la pompe...</French>
-            <Japanese>給油ノズルを取っている・・・</Japanese>
+            <Japanese>給油ノズルを取っています・・・</Japanese>
             <Korean>주유기 획득중...</Korean>
             <Chinesesimp>拿取燃料喷嘴中...</Chinesesimp>
             <Chinese>拿取燃料噴嘴中...</Chinese>
@@ -116,7 +116,7 @@
             <Italian>Collegando manicotto benzina...</Italian>
             <Spanish>Conectando surtidor...</Spanish>
             <French>Connection de la pompe...</French>
-            <Japanese>給油ノズルを接続している・・・</Japanese>
+            <Japanese>給油ノズルを接続しています・・・</Japanese>
             <Korean>주유기 꼽는중...</Korean>
             <Chinesesimp>连结燃料喷嘴中...</Chinesesimp>
             <Chinese>連結燃料噴嘴中...</Chinese>
@@ -176,7 +176,7 @@
             <Italian>Controllando la benzina rimanente...</Italian>
             <Spanish>Verificando combustible remanente,,,</Spanish>
             <French>Vérifie le carburant restant...</French>
-            <Japanese>残燃料を見ている・・・</Japanese>
+            <Japanese>残燃料を見ています・・・</Japanese>
             <Korean>남은 연료 확인중...</Korean>
             <Chinesesimp>检查剩余燃料中...</Chinesesimp>
             <Chinese>檢查剩餘燃料中...</Chinese>
@@ -278,6 +278,7 @@
             <Japanese>給油を始められなかった</Japanese>
             <Chinese>無法開啟燃料噴嘴</Chinese>
             <Chinesesimp>无法开启燃料喷嘴</Chinesesimp>
+            <Korean>주유기를 켤 수 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -394,7 +395,7 @@
             <Italian>Riponendo la manica della benzina...</Italian>
             <Spanish>Devolviendo el surtidor...</Spanish>
             <French>Retourne la pompe</French>
-            <Japanese>給油ノズルを戻している・・・</Japanese>
+            <Japanese>給油ノズルを戻しています・・・</Japanese>
             <Korean>주유기 반환중</Korean>
             <Chinesesimp>放回燃料喷嘴中...</Chinesesimp>
             <Chinese>放回燃料噴嘴中...</Chinese>
@@ -438,6 +439,7 @@
             <Chinesesimp>加油软管长度</Chinesesimp>
             <Chinese>加油軟管長度</Chinese>
             <Polish>Długość węża paliwowego</Polish>
+            <Korean>주유기 호스 길이</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>
@@ -447,6 +449,7 @@
             <Italian>Capacità Carburante Cargo</Italian>
             <Chinese>儲油量</Chinese>
             <Chinesesimp>储油量</Chinesesimp>
+            <Korean>연료통 크기</Korean>
         </Key>
         <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
@@ -457,6 +460,7 @@
             <Italian>La capacità del carburante disponibile per il rifornimento (-1 disabilita, -10 se infinito)</Italian>
             <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
             <Chinesesimp>设定有多少油料可供载具进行加油(-1时关闭，-10为无限油量)</Chinesesimp>
+            <Korean>재급유에 사용 할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
             <English>Refuel Hose attach coordinates</English>
@@ -466,6 +470,7 @@
             <Italian>Coordinate del tubo di rifornimento</Italian>
             <Chinese>加油軟管安裝位置</Chinese>
             <Chinesesimp>加油软管安装位置</Chinesesimp>
+            <Korean>재급유기 부착 좌표</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenDesc">
             <English>Model coordinates used to attach refuel hose</English>
@@ -475,6 +480,7 @@
             <Italian>Coordinate del modello utilizzate per il fissaggio del tubo</Italian>
             <Chinese>設定加油軟管會安裝到模型的哪個位置上</Chinese>
             <Chinesesimp>设定加油软管会安装到模型的哪个位置上</Chinesesimp>
+            <Korean>재급유기 부착에 쓰이는 모델 좌표</Korean>
         </Key>
     </Package>
 </Project>

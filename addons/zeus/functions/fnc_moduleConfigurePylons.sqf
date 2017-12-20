@@ -19,9 +19,9 @@
 
 if (canSuspend) exitWith {[FUNC(moduleConfigurePylons), _this] call CBA_fnc_directCall;};
 
-params ["_logic", "_units", "_activated"];
+params ["_logic"];
 
-if !(_activated && {local _logic}) exitWith {};
+if !(local _logic) exitWith {};
 
 private _aircraft = attachedTo _logic;
 

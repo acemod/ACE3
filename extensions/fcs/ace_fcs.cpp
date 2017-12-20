@@ -61,7 +61,7 @@ double traceBullet(double initSpeed, double airFriction, double angle, double an
         posX += velX * simulationStep * 0.5;
         posY += velY * simulationStep * 0.5;
         velX += simulationStep * (velX * velMag * airFriction);
-        velY += simulationStep * (velY * velMag * airFriction - 9.80665);
+        velY += simulationStep * (velY * velMag * airFriction - 9.8066);
         posX += velX * simulationStep * 0.5;
         posY += velY * simulationStep * 0.5;
         if (posX >= posTargetX) { break; }

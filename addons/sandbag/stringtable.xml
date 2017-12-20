@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="sandbag">
         <Key ID="STR_ACE_Sandbag_sandbag_displayName">
@@ -25,7 +25,7 @@
             <Spanish>Saco de arena (vacio)</Spanish>
             <French>Sac de sable (vide)</French>
             <Czech>Pytel na písek (prázdný)</Czech>
-            <Italian>Sacco di Sabbia (Vuoto)</Italian>
+            <Italian>Sacco di Sabbia (vuoto)</Italian>
             <Hungarian>Homokzsák (üres)</Hungarian>
             <Portuguese>Saco de Areia (vazio)</Portuguese>
             <Japanese>土のう (空)</Japanese>

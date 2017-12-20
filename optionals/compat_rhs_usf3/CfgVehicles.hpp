@@ -174,6 +174,7 @@ class CfgVehicles {
     };
 
     class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        EGVAR(interaction,bodyWidth) = 3.5;
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};

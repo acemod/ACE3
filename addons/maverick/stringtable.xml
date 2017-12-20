@@ -9,6 +9,7 @@
                 <Japanese>AGM-65 マーベリック L、レーザー誘導対地ミサイル</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型，雷射導引對地導彈</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型，雷射导引对地导弹</Chinesesimp>
+                <Korean>AGM-65 Maverick L, 레이저 유도 대지 미사일</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x1">
                 <English>AGM-65 Maverick L x1</English>
@@ -17,6 +18,7 @@
                 <Japanese>AGM-65 マーベリック L x1</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型 x1</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型 x1</Chinesesimp>
+                <Korean>AGM-65 Maverick L x1</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x2">
                 <English>AGM-65 Maverick L x2</English>
@@ -25,6 +27,7 @@
                 <Japanese>AGM-65 マーベリック L x2</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型 x2</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型 x2</Chinesesimp>
+                <Korean>AGM-65 Maverick L x2</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x3">
                 <English>AGM-65 Maverick L x3</English>
@@ -33,6 +36,7 @@
                 <Japanese>AGM-65 マーベリック L x3</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型 x3</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型 x3</Chinesesimp>
+                <Korean>AGM-65 Maverick L x3</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_short">
                 <English>Laser Guided</English>
@@ -41,6 +45,7 @@
                 <Japanese>レーザー誘導</Japanese>
                 <Chinese>雷射導引</Chinese>
                 <Chinesesimp>雷射导引</Chinesesimp>
+                <Korean>레이저 유도</Korean>
             </Key>
         </Container>
         <Container name="weapons">
@@ -51,6 +56,7 @@
                 <Japanese>AGM-65 マーベリック L</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型</Chinesesimp>
+                <Korean>AGM-65 Maverick L</Korean>
             </Key>
         </Container>
     </Package>

@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
+        <Key ID="STR_ACE_Interaction_DisplayName">
+            <English>Interaction</English>
+            <German>Interaktion</German>
+            <Italian>Interazione</Italian>
+            <Chinese>互動</Chinese>
+            <Chinesesimp>互动</Chinesesimp>
+            <Japanese>インタラクション</Japanese>
+        </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
             <German>Interaktionen</German>
@@ -300,7 +308,7 @@
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
             <Italian>DANZA!</Italian>
-            <Japanese>おどれ！</Japanese>
+            <Japanese>おどれ!</Japanese>
             <Korean>춤추기!</Korean>
             <Chinesesimp>跳舞</Chinesesimp>
             <Chinese>跳舞</Chinese>
@@ -365,7 +373,7 @@
             <Portuguese>Tocar ombro</Portuguese>
             <Italian>Dai un colpetto</Italian>
             <Japanese>肩を叩く</Japanese>
-            <Korean>어깨 두드리기</Korean>
+            <Korean>어깨 치기</Korean>
             <Chinesesimp>轻拍肩膀</Chinesesimp>
             <Chinese>輕拍肩膀</Chinese>
         </Key>
@@ -444,7 +452,7 @@
             <Hungarian>Tűnés!</Hungarian>
             <Portuguese>Vá Embora!</Portuguese>
             <Italian>Via di qui!</Italian>
-            <Japanese>うせろ！</Japanese>
+            <Japanese>失せろ!</Japanese>
             <Korean>저리 가!</Korean>
             <Chinesesimp>走开!</Chinesesimp>
             <Chinese>走開!</Chinese>
@@ -460,7 +468,7 @@
             <Russian>Ложись!</Russian>
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
-            <Japanese>ふせろ！</Japanese>
+            <Japanese>伏せろ!</Japanese>
             <Korean>엎드려!</Korean>
             <Chinesesimp>趴下!</Chinesesimp>
             <Chinese>趴下!</Chinese>
@@ -474,7 +482,7 @@
             <French>Sortez !</French>
             <Russian>Выходи</Russian>
             <Czech>Vystupte</Czech>
-            <Japanese>降りる</Japanese>
+            <Japanese>降りろ</Japanese>
             <Korean>나가</Korean>
             <Chinesesimp>出去</Chinesesimp>
             <Chinese>出去</Chinese>
@@ -922,7 +930,7 @@
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
-            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか？標準：はい</Japanese>
+            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか? 標準: 有効化</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
@@ -934,6 +942,7 @@
             <Italian>Disabilita valutazione negativa</Italian>
             <Chinese>關閉負面評價</Chinese>
             <Chinesesimp>关闭负面评价</Chinesesimp>
+            <Korean>부정행위 가중치 사용안함</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
@@ -942,6 +951,7 @@
             <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價。</Chinese>
             <Chinesesimp>玩家是否会收到负面评价? 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
+            <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 높은 레이팅을 가질때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -1063,6 +1073,12 @@
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PullOutBody">
+            <English>Pull out body</English>
+            <Russian>Вытащить тело</Russian>
+            <Japanese>身体を引き出す</Japanese>
+            <Italian>Estrai il corpo</Italian>
         </Key>
     </Package>
 </Project>

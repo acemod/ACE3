@@ -1,3 +1,11 @@
+// combo box that looks good + doesn't get cut off
+class RscCombo;
+class GVAR(CtrlCombo): RscCombo {
+    arrowEmpty = "\a3\3DEN\Data\Controls\ctrlCombo\arrowEmpty_ca.paa";
+    arrowFull = "\a3\3DEN\Data\Controls\ctrlCombo\arrowFull_ca.paa";
+    colorSelectBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R', 0.13])","(profileNamespace getVariable ['GUI_BCG_RGB_G', 0.54])","(profileNamespace getVariable ['GUI_BCG_RGB_B', 0.21])",1};
+};
+
 class IGUIBack;
 class RscCheckBox;
 class RscListBox;

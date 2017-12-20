@@ -19,37 +19,58 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
     TRACE_2("forceWalk EH",_object,_set);
     _object forceWalk (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockSprint), { //Name reversed from `allowSprint` because we want NOR logic
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
     _object setCaptive (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setHidden), {
+    params ["_object", "_set"];
+    TRACE_2("setHidden EH",_object,_set);
+    private _vis = _object getUnitTrait "camouflageCoef";
+    if (_set > 0) then {
+        if (_vis != 0) then {
+            _object setVariable [QGVAR(oldVisibility), _vis];
+            _object setUnitTrait ["camouflageCoef", 0];
+        };
+    } else {
+        _vis = _object getVariable [QGVAR(oldVisibility), _vis];
+        _object setUnitTrait ["camouflageCoef", _vis];
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
     params ["_object", "_set"];
     if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
         TRACE_2("blockDamage EH (using medical)",_object,_set);
-       _object setvariable [QEGVAR(medical,allowDamage), (_set == 0), true];
+       _object setVariable [QEGVAR(medical,allowDamage), (_set == 0), true];
     } else {
         TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
        _object allowDamage (_set == 0);
     };
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockEngine), {
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
@@ -73,20 +94,6 @@ if (isServer) then {
         };
     }];
 };
-
-// Listens for global "SettingChanged" events, to update the force status locally
-["ace_settingChanged", {
-    params ["_name", "_value", "_force"];
-
-    if (_force) then {
-        private _settingData = [_name] call FUNC(getSettingData);
-
-        if (_settingData isEqualTo []) exitWith {};
-
-        _settingData set [6, _force];
-    };
-}] call CBA_fnc_addEventHandler;
-
 
 // Event to log Fix Headbug output
 [QGVAR(headbugFixUsed), {
@@ -172,8 +179,8 @@ private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberStrin
 
 // check previous version number from profile
 if (_currentVersion != _previousVersion) then {
-    // do something
-
+    INFO_2("Updating ACE from [%1] to [%2]",_previousVersion,_currentVersion);
+    [_previousVersion] call FUNC(cbaSettings_transferUserSettings);
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
@@ -192,60 +199,6 @@ call FUNC(checkFiles);
     ] call FUNC(checkPBOs)
 }] call CBA_fnc_addEventHandler;
 
-// Create a pfh to wait until all postinits are ready and settings are initialized
-[{
-    params ["_args"];
-
-    _args params ["_waitingMsgSent"];
-
-    // If post inits are not ready then wait
-    if !(SLX_XEH_MACHINE select 8) exitWith {};
-
-    // If settings are not initialized then wait
-    if (isNil QGVAR(settings) || {!isServer && isNil QEGVAR(modules,serverModulesRead)}) exitWith {
-        if !(_waitingMsgSent) then {
-            _args set [0, true];
-            INFO("Waiting on settings from server...");
-        };
-    };
-
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-
-    INFO("Settings received from server.");
-
-    if (isServer) then { //read settings from paramsArray
-        [] call FUNC(readSettingsFromParamsArray);
-    };
-    // Event so that ACE_Modules have their settings loaded:
-    [QGVAR(initSettingsFromModules), []] call CBA_fnc_localEvent;
-
-    if (isServer) then {
-        // Publish all settings data after all configs and modules are read
-        publicVariable QGVAR(settings);
-    };
-
-    // Load user settings from profile
-    if (hasInterface) then {
-        call FUNC(loadSettingsFromProfile);
-        call FUNC(loadSettingsLocalizedText);
-    };
-
-    INFO("Settings initialized.");
-
-    //Event that settings are safe to use:
-    ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
-
-    //Set init finished and run all delayed functions:
-    GVAR(settingsInitFinished) = true;
-    INFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
-
-    {
-        (_x select 1) call (_x select 0);
-        false
-    } count GVAR(runAtSettingsInitialized);
-
-    GVAR(runAtSettingsInitialized) = nil; //cleanup
-}, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
 /***************************************************************************/

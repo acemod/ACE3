@@ -64,6 +64,7 @@ class ACE_Rsc_Control_Base {
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
 #include <RscInfoType.hpp>
+#include "CompassControl.hpp"
 
 class CfgUIGrids {
     class IGUI {

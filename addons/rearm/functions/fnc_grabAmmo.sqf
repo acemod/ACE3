@@ -19,7 +19,8 @@
 params ["_dummy", "_unit"];
 
 REARM_HOLSTER_WEAPON;
-[_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
 
 [
     TIME_PROGRESSBAR(5),

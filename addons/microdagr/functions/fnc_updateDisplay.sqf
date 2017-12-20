@@ -89,7 +89,7 @@ case (APP_MODE_INFODISPLAY): {
                     ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
                 private _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
-                _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
+                _rangeText = format ["%1km", _2dDistanceKm toFixed 3];
                 private _numASL = (_targetPosLocationASL select 2) + EGVAR(common,mapAltitude);
                 _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
                 _aboveSeaLevelText = if (_numASL > 0) then {"+" + _aboveSeaLevelText + " MSL"} else {_aboveSeaLevelText + " MSL"};
@@ -145,7 +145,7 @@ case (APP_MODE_COMPASS): {
                     ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
                 private _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
-                _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
+                _rangeText = format ["%1km", _2dDistanceKm toFixed 3];
             };
 
             (_display displayCtrl IDC_MODECOMPASS_BEARING) ctrlSetText _bearingText;
@@ -163,7 +163,7 @@ case (APP_MODE_WAYPOINTS): {
             _x params ["_wpName", "_wpPos"];
             _wpListBox lbAdd _wpName;
             private _2dDistanceKm = ((getPosASL ACE_player) distance2D _wpPos) / 1000;
-            _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)])];
+            _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed 3])];
         } forEach _waypoints;
 
         _currentIndex = (_currentIndex max 0) min (count _waypoints);

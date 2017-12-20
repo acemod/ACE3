@@ -1,4 +1,3 @@
-
 PREP(addMagazineToSupply);
 PREP(addRearmActions);
 PREP(addVehicleMagazinesToSupply);
@@ -11,7 +10,6 @@ PREP(disable);
 PREP(dropAmmo);
 PREP(getAllRearmTurrets);
 PREP(getCaliber);
-PREP(getHardpointMagazines);
 PREP(getMaxMagazines);
 PREP(getNeedRearmMagazines);
 PREP(getSupplyCount);
@@ -19,6 +17,7 @@ PREP(getTurretConfigMagazines);
 PREP(getTurretMagazineAmmo);
 PREP(grabAmmo);
 PREP(handleKilled);
+PREP(handleRespawn);
 PREP(handleUnconscious);
 PREP(hasEnoughSupply);
 PREP(initSupplyVehicle);

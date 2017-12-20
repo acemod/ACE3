@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
+        <Key ID="STR_ACE_Overheating_DisplayName">
+            <English>Overheating</English>
+            <German>Heißlaufen</German>
+            <Italian>Surriscaldamento</Italian>
+            <Chinese>過熱</Chinese>
+            <Chinesesimp>过热</Chinesesimp>
+            <Japanese>過熱</Japanese>
+        </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
             <German>Zeige Text bei Ladehemmung</German>
@@ -226,7 +234,7 @@
             <Hungarian>Megakadt a fegyver!</Hungarian>
             <Portuguese>Arma travada!</Portuguese>
             <Italian>Arma inceppata!</Italian>
-            <Japanese>武器が詰まった！</Japanese>
+            <Japanese>武器が詰まった!</Japanese>
             <Korean>탄걸림!</Korean>
             <Chinesesimp>武器卡弹!</Chinesesimp>
             <Chinese>武器卡彈!</Chinese>
@@ -305,7 +313,7 @@
             <Hungarian>Cső kicserélése folyamatban...</Hungarian>
             <Portuguese>Substituindo cano...</Portuguese>
             <Italian>Sostituendo la canna...</Italian>
-            <Japanese>銃身を交換中・・・</Japanese>
+            <Japanese>銃身を交換しています・・・</Japanese>
             <Korean>총열 교체중...</Korean>
             <Chinesesimp>换枪管中...</Chinesesimp>
             <Chinese>換槍管中...</Chinese>
@@ -369,7 +377,7 @@
             <Portuguese>Conferindo temperatura...</Portuguese>
             <Italian>Controllando la temperatura...</Italian>
             <Russian>Проверка температуры...</Russian>
-            <Japanese>温度を測っている・・・</Japanese>
+            <Japanese>温度を測っています・・・</Japanese>
             <Korean>무기 온도 확인중...</Korean>
             <Chinesesimp>检查枪管温度中...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
@@ -394,7 +402,7 @@
             <French>Vérification de la température des canons de rechange...</French>
             <Russian>Проверка температуры запасных стволов...</Russian>
             <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
-            <Japanese>予備銃身の温度を測っている・・・</Japanese>
+            <Japanese>予備銃身の温度を測っています・・・</Japanese>
             <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
             <German>Prüfe Temperatur der Wechselläufe ...</German>
             <Korean>총열 온도 확인중...</Korean>

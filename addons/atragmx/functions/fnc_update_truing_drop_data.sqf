@@ -42,9 +42,9 @@ private _dropData = +GVAR(truingDropDropData);
 
 switch (_dropUnit) do {
     case 0: {
-        _dropData set [0, MRAD_TO_MOA(_dropData select 0)];
-        _dropData set [1, MRAD_TO_MOA(_dropData select 1)];
-        _dropData set [2, MRAD_TO_MOA(_dropData select 2)];
+        _dropData set [0, MOA_TO_MRAD(_dropData select 0)];
+        _dropData set [1, MOA_TO_MRAD(_dropData select 1)];
+        _dropData set [2, MOA_TO_MRAD(_dropData select 2)];
     };
     case 2: {
         _dropData set [0, (_dropData select 0) * 1.047];

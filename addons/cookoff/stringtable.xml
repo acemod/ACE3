@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
+        <Key ID="STR_ACE_CookOff_displayName">
+            <English>Cook off</English>
+            <Italian>Esplosione</Italian>
+            <Chinese>殉爆效果</Chinese>
+            <Chinesesimp>殉爆效果</Chinesesimp>
+            <Japanese>誘爆</Japanese>
+        </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
             <German>Selbstzündung ermöglichen</German>
@@ -39,7 +46,7 @@
             <English>Wreck (Turret)</English>
             <Portuguese>Ruínas (torre)</Portuguese>
             <Korean>잔해(포탑)</Korean>
-            <Japanese>残骸（タレット）</Japanese>
+            <Japanese>残骸 (砲塔)</Japanese>
             <Chinese>殘骸 (砲塔)</Chinese>
             <Chinesesimp>残骸 (炮塔)</Chinesesimp>
         </Key>
@@ -78,7 +85,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
-            <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がりす。</Japanese>
+            <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がります。</Japanese>
             <German>Ermöglicht Selbstzündung von Munition. Feuert Projektile der Munition ab, solange das Fahrzeug brennt und Munition besitzt.</German>
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
             <French>Mets à feu les munitions lorsqu'un véhicule est en feu et contient des munitions.</French>
@@ -108,6 +115,16 @@
             <Chinese>設定彈藥殉爆效果會持續多久時間 [輸入0來關閉殉爆效果]</Chinese>
             <Chinesesimp>设定弹药殉爆效果会持续多久时间 [输入0来关闭殉爆效果]</Chinesesimp>
             <Korean>쿡오프 지속 시간의 배수 [0 이면 비활성]</Korean>
+        </Key>
+        <Key ID="STR_ACE_CookOff_probabilityCoef_name">
+            <English>Cook-off probability coefficient</English>
+            <Japanese>誘爆の可能性係数</Japanese>
+            <Italian>Coefficiente probabilità esplosione</Italian>
+        </Key>
+        <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
+            <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
+            <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
+            <Italian>Moltiplicatore per la probabilità dell'esplosione. Un valore più alto aumenta la probabilità dell'esplosione</Italian>
         </Key>
     </Package>
 </Project>

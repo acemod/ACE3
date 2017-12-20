@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="trenches">
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
             <English>Entrenching Tool</English>
             <German>Klappspaten</German>
             <Polish>Saperka</Polish>
-            <Italian>Pala</Italian>
+            <Italian>Pala da Trincea</Italian>
             <Spanish>Pala para trincheras</Spanish>
             <French>Outil de tranchée</French>
             <Czech>Polní lopatka</Czech>
@@ -20,7 +20,7 @@
             <English>Entrenching Tool</English>
             <Polish>Saperka, używana do budowy wnęk</Polish>
             <German>Mit dem Klappspaten können Erdwälle oder Gräben ausgehoben werden. </German>
-            <Italian>Pala</Italian>
+            <Italian>Pala da Trincea</Italian>
             <Spanish>Pala para trincheras</Spanish>
             <French>Outil de tranchée</French>
             <Czech>Polní lopatky se používají k zákopovým a jiným pracem.</Czech>
@@ -123,7 +123,7 @@
             <English>Confirm Dig</English>
             <German>Graben bestätigen</German>
             <Polish>Potwierdź kopanie</Polish>
-            <Italian>Conferma Scava</Italian>
+            <Italian>Conferma Scavo</Italian>
             <Spanish>Confirmar cavado</Spanish>
             <French>Confirmer la creusée</French>
             <Czech>Potvrdit kopání</Czech>
@@ -138,7 +138,7 @@
             <English>Cancel Dig</English>
             <German>Graben abbrechen</German>
             <Polish>Anuluj kopanie</Polish>
-            <Italian>Cancella Scava</Italian>
+            <Italian>Annulla Scavo</Italian>
             <Spanish>Cancelar cavado</Spanish>
             <French>Annuler la creusée</French>
             <Czech>Zrušit kopání</Czech>
@@ -190,7 +190,7 @@
             <Japanese>塹壕を掘りつづける</Japanese>
             <German>Graben fortsetzen</German>
             <Korean>계속해서 참호파기</Korean>
-            <Italian>Continua a Scavare la Trincea</Italian>
+            <Italian>Continuando a Scavare la Trincea</Italian>
             <Chinesesimp>继续盖掩体</Chinesesimp>
             <Chinese>繼續蓋掩體</Chinese>
         </Key>
@@ -204,7 +204,7 @@
             <Japanese>塹壕を消す</Japanese>
             <German>Schützengraben entfernen</German>
             <Korean>참호 제거</Korean>
-            <Italian>Rimuove Trincea</Italian>
+            <Italian>Rimuovi Trincea</Italian>
             <Chinesesimp>移除掩体</Chinesesimp>
             <Chinese>移除掩體</Chinese>
         </Key>
@@ -215,7 +215,7 @@
             <French>Retirement de la tranchée</French>
             <Russian>Убирание окопа</Russian>
             <Czech>Odstraňuji zákop</Czech>
-            <Japanese>塹壕を消している</Japanese>
+            <Japanese>塹壕を消しています</Japanese>
             <German>Entferne Schützengraben</German>
             <Korean>참호 제거중...</Korean>
             <Italian>Rimuovendo la Trincea</Italian>

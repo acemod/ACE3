@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
-
 params ["_logic"];
 
 [_logic, QGVAR(RequireSpecialist), "RequireSpecialist"] call EFUNC(Common,readSettingFromModule);

@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Medical_Injuries">
             <English>INJURIES</English>
             <German>VERLETZUNGEN</German>
-            <Italian>LESIONI</Italian>
+            <Italian>FERITE</Italian>
             <Russian>ТРАВМЫ</Russian>
             <French>BLESSURES</French>
             <Polish>OBRAŻENIA</Polish>
@@ -20,7 +20,7 @@
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart...</English>
             <German>Körperteil nicht verletzt...</German>
-            <Italian>Non ci sono lesioni in questa parte del corpo...</Italian>
+            <Italian>Non ci sono ferite in questa parte del corpo...</Italian>
             <Russian>Данная часть тела не повреждена...</Russian>
             <French>Aucune blessure ici...</French>
             <Polish>Brak obrażeń na tej części ciała...</Polish>
@@ -28,7 +28,7 @@
             <Hungarian>Ezen a testrészen nincs sérülés...</Hungarian>
             <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
-            <Japanese>怪我をしていない</Japanese>
+            <Japanese>この身体は怪我をしていません・・・</Japanese>
             <Korean>이 부위에는 부상이 없습니다...</Korean>
             <Chinesesimp>此身体部位没有受伤</Chinesesimp>
             <Chinese>此身體部位沒有受傷</Chinese>
@@ -44,7 +44,7 @@
             <Hungarian>Hulladékszimuláció részletessége</Hungarian>
             <Portuguese>Detalhe da simulação de sujeira</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
-            <Japanese>医療廃棄物を再現する詳細度</Japanese>
+            <Japanese>医療廃棄物シミュレーション詳細度</Japanese>
             <Korean>의료폐기물 재현 상세도</Korean>
             <Chinesesimp>医疗废弃物模拟细节</Chinesesimp>
             <Chinese>醫療廢棄物模擬細節</Chinese>
@@ -60,7 +60,7 @@
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
             <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
-            <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
+            <Japanese>医療廃棄物シミュレーションは各クライアントでローカルに作成される、医療廃棄物の詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
             <Korean>의료폐기물 재현 상세도의 경우 얼마나 많은 수의 폐기물이 클라이언트 주변에 생성되는지를 정합니다. 매우 많은 수의 지역은 프레임드랍을 유발할 수 있습니다, 고로 이는 클라이언트 전용 설정입니다.</Korean>
             <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会导致画面更新率延迟，因此这由用户端来设定。</Chinesesimp>
             <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定。</Chinese>
@@ -315,7 +315,7 @@
             <Hungarian>Morfium beadása...</Hungarian>
             <Portuguese>Injetando Morfina...</Portuguese>
             <Italian>Inietto la morfina...</Italian>
-            <Japanese>モルヒネを投与中・・・</Japanese>
+            <Japanese>モルヒネを投与しています・・・</Japanese>
             <Korean>모르핀 주사중...</Korean>
             <Chinesesimp>吗啡注射中...</Chinesesimp>
             <Chinese>嗎啡注射中...</Chinese>
@@ -331,7 +331,7 @@
             <Hungarian>Epinefrin beadása...</Hungarian>
             <Portuguese>Injetando Epinefrina...</Portuguese>
             <Italian>Inietto l'adrenalina...</Italian>
-            <Japanese>アドレナリンを投与中・・・</Japanese>
+            <Japanese>アドレナリンを投与しています・・・</Japanese>
             <Korean>에피네프린 주사중...</Korean>
             <Chinesesimp>肾上腺素注射中...</Chinesesimp>
             <Chinese>腎上腺素注射中...</Chinese>
@@ -346,7 +346,7 @@
             <Czech>Aplikuji adenosine...</Czech>
             <Portuguese>Injetando Adenosina...</Portuguese>
             <Russian>Введение аденозина...</Russian>
-            <Japanese>アドネシンを投与中・・・</Japanese>
+            <Japanese>アドネシンを投与しています・・・</Japanese>
             <Korean>아데노신 주사중...</Korean>
             <Chinesesimp>腺苷注射中...</Chinesesimp>
             <Chinese>腺苷注射中...</Chinese>
@@ -362,7 +362,7 @@
             <Hungarian>Atropin beadása...</Hungarian>
             <Italian>Inietto l'atropina...</Italian>
             <Portuguese>Injetando Atropina</Portuguese>
-            <Japanese>アトロピンを投与中・・・</Japanese>
+            <Japanese>アトロピンを投与しています・・・</Japanese>
             <Korean>아트리핀 주사중...</Korean>
             <Chinesesimp>阿托品注射中 ...</Chinesesimp>
             <Chinese>阿托品注射中 ...</Chinese>
@@ -378,7 +378,7 @@
             <Hungarian>Infúzió vérrel...</Hungarian>
             <Portuguese>Transfundindo Sangue...</Portuguese>
             <Italian>Effettuo la trasfusione di sangue...</Italian>
-            <Japanese>輸血中・・・</Japanese>
+            <Japanese>輸血しています・・・</Japanese>
             <Korean>혈액 수혈중...</Korean>
             <Chinesesimp>输血液中 ...</Chinesesimp>
             <Chinese>輸血液中 ...</Chinese>
@@ -394,7 +394,7 @@
             <Hungarian>Infúzió sós vizzel...</Hungarian>
             <Italian>Effettuo la rasfusione di soluzione salina</Italian>
             <Portuguese>Transfundindo Soro...</Portuguese>
-            <Japanese>生理食塩水を投与中・・・</Japanese>
+            <Japanese>生理食塩水を投与しています・・・</Japanese>
             <Korean>생리식염수 수혈중...</Korean>
             <Chinesesimp>施打生理食盐水中 ...</Chinesesimp>
             <Chinese>施打生理食鹽水中 ...</Chinese>
@@ -410,7 +410,7 @@
             <Hungarian>Infúzió vérplazmával...</Hungarian>
             <Italian>Effettu la trasfusione di plasma...</Italian>
             <Portuguese>Transfundindo Plasma...</Portuguese>
-            <Japanese>血しょうを投与中・・・</Japanese>
+            <Japanese>血しょうを投与しています・・・</Japanese>
             <Korean>혈장 수혈중...</Korean>
             <Chinesesimp>输血浆中 ...</Chinesesimp>
             <Chinese>輸血漿中 ...</Chinese>
@@ -586,7 +586,7 @@
             <Hungarian>Ez az orvosi lap nem tartalmaz bejegyzést.</Hungarian>
             <Czech>Žádné záznamy na tomto štítku</Czech>
             <Portuguese>Nenhuma entrada neste cartão de triagem</Portuguese>
-            <Japanese>トリアージ カードには何も無い</Japanese>
+            <Japanese>トリアージ カードには何も無い。</Japanese>
             <Korean>부상자 분류 카드에 쓰여있는것이 없습니다.</Korean>
             <Chinesesimp>此检伤分类卡上没有任何资料</Chinesesimp>
             <Chinese>此檢傷分類卡上沒有任何資料</Chinese>
@@ -650,7 +650,7 @@
             <Hungarian>Diagnózis folyamatban...</Hungarian>
             <Czech>Diagnostika...</Czech>
             <Portuguese>Diagnosticando...</Portuguese>
-            <Japanese>診断中・・・</Japanese>
+            <Japanese>診断しています・・・</Japanese>
             <Korean>진단중...</Korean>
             <Chinesesimp>诊断中...</Chinesesimp>
             <Chinese>診斷中...</Chinese>
@@ -682,7 +682,7 @@
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
             <Czech>Provádím CPR...</Czech>
             <Portuguese>Realizando o SBV...</Portuguese>
-            <Japanese>心肺蘇生を実行中・・・</Japanese>
+            <Japanese>心肺蘇生をしています・・・</Japanese>
             <Korean>심폐소생중...</Korean>
             <Chinesesimp>进行心肺复苏术中...</Chinesesimp>
             <Chinese>進行心肺復甦術中...</Chinese>
@@ -1927,7 +1927,7 @@
             <Italian>Controllando la pressione sanguigna..</Italian>
             <Portuguese>Aferindo Pressão Arterial...</Portuguese>
             <Czech>Měřím krevní tlak...</Czech>
-            <Japanese>血圧を測定中・・・</Japanese>
+            <Japanese>血圧を測定しています・・・</Japanese>
             <Korean>혈압 측정증...</Korean>
             <Chinesesimp>检查血压中...</Chinesesimp>
             <Chinese>檢查血壓中...</Chinese>
@@ -2151,7 +2151,7 @@
             <Italian>Controllando il battito cardiaco...</Italian>
             <Portuguese>Aferindo Pulso...</Portuguese>
             <Czech>Kontroluji srdeční tep...</Czech>
-            <Japanese>心拍数を測定中・・・</Japanese>
+            <Japanese>心拍数を測定しています・・・</Japanese>
             <Korean>맥박 확인중...</Korean>
             <Chinesesimp>检查心跳中...</Chinesesimp>
             <Chinese>檢查心跳中...</Chinese>
@@ -2583,7 +2583,7 @@
             <German>%1 verbindet dich</German>
             <Portuguese>%1 está aplicando  uma bandagem em você</Portuguese>
             <Czech>%1 tě obvazuje</Czech>
-            <Japanese>%1 は自分に包帯を巻いている</Japanese>
+            <Japanese>%1 はあなたに包帯を巻いている</Japanese>
             <Korean>%1 (이)가 나에게 붕대를 감고있다</Korean>
             <Chinesesimp>%1 正在对你包扎绷带中</Chinesesimp>
             <Chinese>%1 正在對你包紮繃帶中</Chinese>
@@ -2807,7 +2807,7 @@
             <Italian>Stai mettendo il corpo nella sacca...</Italian>
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
             <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
-            <Japanese>死体袋へ梱包中・・・</Japanese>
+            <Japanese>死体袋へ入れています・・・</Japanese>
             <Korean>시체 가방에 담는중...</Korean>
             <Chinesesimp>将尸体放入尸袋中...</Chinesesimp>
             <Chinese>將屍體放入屍袋中...</Chinese>
@@ -3732,7 +3732,7 @@
             <Portuguese>Tratando...</Portuguese>
             <Czech>Ošetřuji...</Czech>
             <Italian>Curando...</Italian>
-            <Japanese>治療中・・・</Japanese>
+            <Japanese>治療しています・・・</Japanese>
             <Korean>치료중...</Korean>
             <Chinesesimp>治疗中...</Chinesesimp>
             <Chinese>治療中...</Chinese>
@@ -3748,7 +3748,7 @@
             <Czech>Sundavám škrtidlo...</Czech>
             <Russian>Снятие жгута...</Russian>
             <Italian>Togliendo il laccio emostatico...</Italian>
-            <Japanese>止血帯を外している・・・</Japanese>
+            <Japanese>止血帯を外しています・・・</Japanese>
             <Korean>지혈대 제거중...</Korean>
             <Chinesesimp>移除军用止血带中...</Chinesesimp>
             <Chinese>移除軍用止血帶中...</Chinese>
@@ -3812,7 +3812,7 @@
             <French>Quel niveau de simulation médicale choisissez-vous?</French>
             <Hungarian>Milyen komplex legyen az orvosi szimuláció?</Hungarian>
             <Italian>Qual'è il livello di simulazione medica?</Italian>
-            <Japanese>治療の再現度は？</Japanese>
+            <Japanese>治療の再現度は?</Japanese>
             <Korean>의료 시뮬레이션의 수준</Korean>
             <Chinesesimp>选择需要的医疗模拟等级</Chinesesimp>
             <Chinese>選擇需要的醫療模擬等級</Chinese>
@@ -3876,7 +3876,7 @@
             <French>Quel niveau de détail voulez-vous pour les infirmiers?</French>
             <Hungarian>Mi a javasolt részletesség orvosok számára?</Hungarian>
             <Italian>Qual'è il livello di dettagli preferito per i medici?</Italian>
-            <Japanese>&gt;衛生兵への再現度をどのくらいに設定しますか？</Japanese>
+            <Japanese>衛生兵への再現度をどのくらいに設定しますか?</Japanese>
             <Korean>의무병의 시뮬레이션 정도?</Korean>
             <Chinesesimp>设定医护兵的预设医疗水平(医疗兵，军医)</Chinesesimp>
             <Chinese>設定醫護兵的預設醫療水平(醫療兵，軍醫)</Chinese>
@@ -3906,7 +3906,7 @@
             <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
             <French>Améliore l'efficacité des soins dans les véhicules ou structures de soins [non formés deviennent médecins, médecins deviennent docteurs]</French>
             <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
-            <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる（未訓練は衛生兵に、衛生兵は医師に）</Japanese>
+            <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる (未訓練は衛生兵に、衛生兵は医師に)</Japanese>
             <Korean>의무병의 수준이 주변의 차량이나 의료시설에 따라 증가합니다. [비교육자가 의무병이되고, 의무병이 의사가 됩니다]</Korean>
             <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时，该员医疗能力将会有所提升 (未受训人员提升为医疗兵，医疗兵提升为军医)</Chinesesimp>
             <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時，該員醫療能力將會有所提升 (未受訓人員提升為醫療兵，醫療兵提升為軍醫)</Chinese>
@@ -3986,7 +3986,7 @@
             <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
-            <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
+            <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか? -1 は永遠です。</Japanese>
             <Korean>얼마동안 폐기물이 존재합니까? 초 단위. -1 은 영구적.</Korean>
             <Chinesesimp>定义医疗废弃物存在时间，以秒为单位，-1为永远存在。</Chinesesimp>
             <Chinese>定義醫療廢棄物存在時間，以秒為單位，-1為永遠存在。</Chinese>
@@ -4050,7 +4050,7 @@
             <French>Quels dégâts peut subir un joueur avant d'être tué</French>
             <Hungarian>Mennyi sérülést szenvedhet el egy játékos, mielőtt meghal?</Hungarian>
             <Italian>Quanto è il danno che un giocatore può sostenere prima di essere ucciso?</Italian>
-            <Japanese>プレイヤーが死に始める前に損傷を受けるようにしますか？</Japanese>
+            <Japanese>プレイヤーが死に始める前に損傷を受けるようにしますか?</Japanese>
             <Korean>얼마정도의 부상을 플레이어가 죽기 전까지 버틸 수 있습니까?</Korean>
             <Chinesesimp>玩家死亡前所能承受的伤害程度</Chinesesimp>
             <Chinese>玩家死亡前所能承受的傷害程度</Chinese>
@@ -4082,7 +4082,7 @@
             <French>Quels dégâts peut subir une IA avant d'être tuée</French>
             <Hungarian>Mennyi sérülést szenvedhet el egy AI, mielőtt meghal?</Hungarian>
             <Italian>Quanto è il danno che un'IA può sostenere prima di essere uccisa?</Italian>
-            <Japanese>AI が死に始める前に損傷を受けるようにしますか？</Japanese>
+            <Japanese>AI が死に始める前に損傷を受けるようにしますか?</Japanese>
             <Korean>얼마정도의 부상을 인공지능이 죽기 전까지 버틸 수 있습니까?</Korean>
             <Chinesesimp>AI 死亡前所能承受的伤害程度</Chinesesimp>
             <Chinese>AI 死亡前所能承受的傷害程度</Chinese>
@@ -4146,7 +4146,7 @@
             <Hungarian>Távvezérelt egységek AI-ként, nem játékosként való kezelése?</Hungarian>
             <Russian>Обрабатывать дистанционно управляемых юнитов как ботов, а не как игроков?</Russian>
             <Italian>Considera le unità controllate in remoto come IA e non come giocatori?</Italian>
-            <Japanese>遠隔操作された AI は、非プレイヤーとして扱いますか？</Japanese>
+            <Japanese>遠隔操作された AI は、非プレイヤーとして扱いますか?</Japanese>
             <Korean>원격 조작하는 AI는 비 플레이어로 취급합니까?</Korean>
             <Chinesesimp>以医疗AI的方式医疗被遥控的单位</Chinesesimp>
             <Chinese>以醫療AI的方式醫療被遙控的單位</Chinese>
@@ -4417,7 +4417,7 @@
             <French>Les plaies peuvent se rouvrir</French>
             <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
             <Italian>Permetti la riapertura di ferite bendate?</Italian>
-            <Japanese>包帯で巻かれた傷を再び開くようにしますか？</Japanese>
+            <Japanese>包帯で巻かれた傷を再び開くようにしますか?</Japanese>
             <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
             <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
             <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
@@ -4449,7 +4449,7 @@
             <French>Les unités subissent des dégats lors d'accident</French>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
-            <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか？</Japanese>
+            <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか?</Japanese>
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
             <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
@@ -4479,7 +4479,7 @@
             <Czech>Kdo může použít adrenalin k úplnému vyléčení? (Pouze základní zdravotní systém)</Czech>
             <Portuguese>Quem pode usar Epinefrina para cura completa? (Somente sistema médico básico)</Portuguese>
             <Russian>Кому разрешено использовать адреналин для полного излечения? (Только для базовой медицины)</Russian>
-            <Japanese>完全に回復できるよう誰しもがアドレナリンを使えるようにしますか？(ベーシック医療のみ)</Japanese>
+            <Japanese>完全に回復できるよう誰しもがアドレナリンを使えるようにしますか? (ベーシック医療のみ)</Japanese>
             <Korean>완전한 체력회복을 위해 어느 인원이 에피네프린을 쓸 수 있습니까? (기본 의료 전용)</Korean>
             <Chinesesimp>谁可以使用肾上腺素完整医治? (仅适用于基本医疗)</Chinesesimp>
             <Chinese>誰可以使用腎上腺素完整醫治? (僅適用於基本醫療)</Chinese>
@@ -4511,7 +4511,7 @@
             <French>Qui peut utilier la trousse sanitaire pour des soins complets?</French>
             <Hungarian>Ki használhatja az elsősegélycsomagot teljes gyógyításra?</Hungarian>
             <Italian>Chi può usare il KPS per cura completa?</Italian>
-            <Japanese>完全に回復できるよう誰しもが応急処置キットを使えるようにしますか？</Japanese>
+            <Japanese>完全に回復できるよう誰しもが応急処置キットを使えるようにしますか?</Japanese>
             <Korean>완전한 체력회복을 위해 어느 인원이 개인응급키트을 쓸 수 있습니까? (기본 의료 전용)</Korean>
             <Chinesesimp>谁能够使用个人急救包来达到完整医疗?</Chinesesimp>
             <Chinese>誰能夠使用個人急救包來達到完整醫療?</Chinese>
@@ -4591,7 +4591,7 @@
             <French>La trousse sanitaire doit être consommée à l'utilisation?</French>
             <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
             <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
-            <Japanese>応急処置キットを使うと削除しますか？</Japanese>
+            <Japanese>応急処置キットを使うと削除しますか?</Japanese>
             <Korean>개인응급키트를 사용하고 나서 제거합니까?</Korean>
             <Chinesesimp>要在使用后删除个人急救包吗?</Chinesesimp>
             <Chinese>要在使用後刪除個人急救包嗎?</Chinese>
@@ -4621,7 +4621,7 @@
             <Czech>Kde může být použit adrenalin? (Pouze základní zdravotní systém)</Czech>
             <Portuguese>Onde pode-se usar a Epinefrina? (Somente sistema médico básico)</Portuguese>
             <Russian>Где может использоваться адреналин? (Базовая медицина)</Russian>
-            <Japanese>どこでもアドレナリンをつかえるようにしますか？(ベーシック医療のみ)</Japanese>
+            <Japanese>どこでもアドレナリンをつかえるようにしますか? (ベーシック医療のみ)</Japanese>
             <Korean>어디에서 에피네프린을 사용할 수 있습니까? (기본 의료)</Korean>
             <Chinesesimp>在哪里可以使用肾上腺素? (基本医疗)</Chinesesimp>
             <Chinese>在哪裡可以使用腎上腺素? (基本醫療)</Chinese>
@@ -4653,7 +4653,7 @@
             <French>Où la trousse sanitaire peut être utilisée ?</French>
             <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
             <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
-            <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
+            <Japanese>どこでも応急処置キットをつかえるようにしますか?</Japanese>
             <Korean>어디에서 개인응급키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>在哪里可以使用个人急救包?</Chinesesimp>
             <Chinese>在哪裡可以使用個人急救包?</Chinese>
@@ -4685,7 +4685,7 @@
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
             <Russian>Когда может использоваться аптечка?</Russian>
             <Italian>Quando può essere usato il Kit Pronto Soccorso?</Italian>
-            <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
+            <Japanese>どこでも応急処置キットをつかえるようにしますか?</Japanese>
             <Korean>언제 개인응급키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>何时可以使用个人急救包?</Chinesesimp>
             <Chinese>何時可以使用個人急救包?</Chinese>
@@ -4781,7 +4781,7 @@
             <French>Qui peut utiliser les trousses chirurgicales?</French>
             <Hungarian>Ki használhatja a sebészkészletet?</Hungarian>
             <Italian>Chi può usare il Kit Chirurgico?</Italian>
-            <Japanese>だれでも縫合キットをつかえるようにしますか？</Japanese>
+            <Japanese>だれでも縫合キットをつかえるようにしますか?</Japanese>
             <Korean>어느 인원이 봉합키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>谁能够使用手术包?</Chinesesimp>
             <Chinese>誰能夠使用手術包?</Chinese>
@@ -4813,7 +4813,7 @@
             <French>La trousse chirurgicale doit être consommée à l'utilisation?</French>
             <Hungarian>Eltávolítódjon a sebészkészlet használatkor?</Hungarian>
             <Italian>Il Kit Chirurgico dev'essere rimosso dopo l'uso?</Italian>
-            <Japanese>縫合キットをつかった後に削除しますか？</Japanese>
+            <Japanese>縫合キットをつかった後に削除しますか?</Japanese>
             <Korean>봉합키트를 사용하고 나서 제거합니까?</Korean>
             <Chinesesimp>手术包会在使用后被删除吗?</Chinesesimp>
             <Chinese>手術包會在使用後被刪除嗎?</Chinese>
@@ -4845,7 +4845,7 @@
             <French>Où peut être utilisé les trousses chirurgicales?</French>
             <Hungarian>Hol lehet a sebészkészletet használni?</Hungarian>
             <Italian>Dove può essere usato il Kit Chirurgico?</Italian>
-            <Japanese>どこでも縫合キットをつかえるようにしますか？</Japanese>
+            <Japanese>どこでも縫合キットをつかえるようにしますか?</Japanese>
             <Korean>어디에서 봉합키트를 사용할 수 있게 합니까?</Korean>
             <Chinesesimp>定义手术包可被使用的地方?</Chinesesimp>
             <Chinese>定義手術包可被使用的地方?</Chinese>
@@ -4877,7 +4877,7 @@
             <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
             <Russian>Когда может использоваться хирургический набор?</Russian>
             <Italian>Quando può essere usato il Kit Chirurgico?</Italian>
-            <Japanese>いつでも縫合キットをつかえるようにしますか？</Japanese>
+            <Japanese>いつでも縫合キットをつかえるようにしますか?</Japanese>
             <Korean>언제 봉합키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>何时可以使用手术工具包?</Chinesesimp>
             <Chinese>何時可以使用手術工具包?</Chinese>
@@ -5481,7 +5481,7 @@
             <Portuguese>Estável</Portuguese>
             <Russian>После стабилизации</Russian>
             <Italian>Stabile</Italian>
-            <Japanese>安定</Japanese>
+            <Japanese>安静下</Japanese>
             <Korean>안정된</Korean>
             <Chinesesimp>稳定状态下</Chinesesimp>
             <Chinese>穩定狀態下</Chinese>
@@ -5542,7 +5542,7 @@
             <Czech>Žádné škrtidlo na této části těla!</Czech>
             <Italian>Non c'è nessun laccio emostatico su questa parte del corpo!</Italian>
             <French>Il n'y a pas de garrot sur ce membre !</French>
-            <Japanese>身体には止血帯が無い！</Japanese>
+            <Japanese>身体には止血帯が無い!</Japanese>
             <Korean>이 부위에는 지혈대가 없습니다!</Korean>
             <Chinesesimp>这部位没有止血带!</Chinesesimp>
             <Chinese>這部位沒有止血帶!</Chinese>
@@ -5612,6 +5612,7 @@
             <Italian>Apri lid</Italian>
             <Chinese>打開蓋子</Chinese>
             <Chinesesimp>打开盖子</Chinesesimp>
+            <Korean>뚜껑 열기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -5620,6 +5621,7 @@
             <Italian>Chiudi lid</Italian>
             <Chinese>關閉蓋子</Chinese>
             <Chinesesimp>关闭盖子</Chinesesimp>
+            <Korean>뚜껑 닫기</Korean>
         </Key>
     </Package>
 </Project>
