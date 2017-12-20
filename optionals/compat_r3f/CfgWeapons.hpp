@@ -1,4 +1,6 @@
 class Mode_SemiAuto;
+class Mode_Burst;
+class Mode_FullAuto;
 
 class CfgWeapons {
     class Pistol_Base_F;
@@ -8,6 +10,15 @@ class CfgWeapons {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 488.0;
         muzzles[] = {"this"};
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.00087 (2.99 MOA)
+        };
+        class Burst: Mode_Burst {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.0035 (12 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.005 (17.2 MOA)
+        };
     };
     class R3F_Famas_F1_M203: R3F_Famas_F1 {
         muzzles[] = {"this","Lance_Grenades"};
@@ -24,6 +35,15 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 10.1808;
         ACE_barrelTwist = 228.6; // 1:9"
         ACE_barrelLength = 488.0;
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.00087 (2.99 MOA)
+        };
+        class Burst: Mode_Burst {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.0035 (12 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.005 (17.2 MOA)
+        };
     };
     class R3F_Famas_G2_M203: R3F_Famas_G2 {
         muzzles[] = {"this","Lance_Grenades"};
@@ -38,7 +58,7 @@ class CfgWeapons {
         ACE_barrelTwist = 294.6;
         ACE_barrelLength = 650.0;
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // 1 MOA, default 9.9999997e-005
+            dispersion = MOA_TO_RAD(0.73); // R3F default value 9.9999997e-005 (0.34 MOA)
         };
         muzzles[] = {"this"};
     };
@@ -47,7 +67,7 @@ class CfgWeapons {
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 700.0;
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // 1 MOA, default 0.00018
+            dispersion = MOA_TO_RAD(0.40); // R3F default value 0.00018 (0.62 MOA)
         };
         muzzles[] = {"this"};
     };
@@ -56,7 +76,7 @@ class CfgWeapons {
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // 1 MOA, default 0.00030
+            dispersion = MOA_TO_RAD(0.45); // R3F default value 0.00030 (1.03 MOA)
         };
         muzzles[] = {"this"};
     };
@@ -65,7 +85,7 @@ class CfgWeapons {
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // 1 MOA, default 0.00015
+            dispersion = MOA_TO_RAD(0.40); // R3F default value 0.00015 (0.52 MOA)
         };
         muzzles[] = {"this"};
     };
@@ -75,32 +95,57 @@ class CfgWeapons {
         ACE_barrelLength = 347.98;
         muzzles[] = {"this"};
         initSpeed = 915; // R3F config
+        class manual: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(1.55); // R3F default value 0.0008 (2.75 MOA)
+        };
+    };
+    class R3F_Minimi_HG: R3F_Minimi {
+        class manual: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(1.55); // R3F default value 0.0008 (2.75 MOA)
+        };
     };
     class R3F_Minimi_762: R3F_Minimi {
         ACE_RailHeightAboveBore = 3.80834;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 502.92;
         initSpeed = 820; // R3F config
+        class manual: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(3.87); // R3F default value 0.002 (6.88 MOA)
+        };
     };
-    class R3F_SIG551: Rifle_Base_F {
-        ACE_RailHeightAboveBore = 3.95288;
-        ACE_barrelTwist = 177.8;
-        ACE_barrelLength = 363.0;
-        muzzles[] = {"this"};
-    };
+    class R3F_Minimi_762_HG: R3F_Minimi_762 {
+        class manual: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(3.87); // R3F default value 0.002 (6.88 MOA)
+        };
+	};
     class R3F_HK417M: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.23377;
         ACE_barrelTwist = 279.4;
         ACE_barrelLength = 406.0;
         muzzles[] = {"this"};
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(0.81); // R3F default value 0.001 (3.44 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(0.81); // R3F default value 0.0025 (8.6 MOA)
+        };
     };
     class R3F_HK417S_HG: R3F_HK417M {
         ACE_barrelLength = 305.0;
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(0.81); // R3F default value 0.002 (6.88 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(0.81); // R3F default value 0.007 (24.06 MOA)
+        };
     };
     class R3F_HK417L: R3F_HK417M {
         ACE_barrelLength = 508.0;
         class Single: Mode_SemiAuto {
-            dispersion = 0.00029; // 1 MOA, default 0.00020
+            dispersion = MOA_TO_RAD(0.81); // R3F default value 0.0002 (0.69 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(0.81); // R3F default value 0.0025 (8.6 MOA)
         };
     };
     class R3F_HK416M: Rifle_Base_F {
@@ -108,6 +153,12 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.3;
         muzzles[] = {"this"};
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.00087 (2.99 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.005 (17.2 MOA)
+        };
     };
     class R3F_HK416M_M203: R3F_HK416M {
         muzzles[] = {"this","Lance_Grenades"};
@@ -116,15 +167,39 @@ class CfgWeapons {
     class R3F_HK416S_HG: R3F_HK416M_HG {
         ACE_barrelLength = 279.4;
     };
+    class R3F_SIG551: Rifle_Base_F {
+        ACE_RailHeightAboveBore = 3.95288;
+        ACE_barrelTwist = 177.8;
+        ACE_barrelLength = 363.0;
+        muzzles[] = {"this"};
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.00087 (2.99 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(1.12); // R3F default value 0.005 (17.2 MOA)
+        };
+    };
     class R3F_MP5SD: Rifle_Base_F {
         ACE_RailHeightAboveBore = 4.21816;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 144.78;
         muzzles[] = {"this"};
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(7.73); // R3F default value 0.004 (13.75 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(7.73); // R3F default value 0.007 (24.06 MOA)
+        };
     };
     class R3F_MP5A5: R3F_MP5SD {
         ACE_barrelLength = 226.06;
         muzzles[] = {"this"};
+        class Single: Mode_SemiAuto {
+            dispersion = MOA_TO_RAD(7.73); // R3F default value 0.004 (13.75 MOA)
+        };
+        class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(7.73); // R3F default value 0.007 (24.06 MOA)
+        };
     };
     class R3F_M4S90: Rifle_Base_F {
         ACE_RailHeightAboveBore = 1.86213;
@@ -152,7 +227,7 @@ class CfgWeapons {
     class R3F_EOTECH: ItemCore {
         ACE_ScopeHeightAboveRail = 4.25923;
     };
-    class R3F_J4: ItemCore {
+    class R3F_J4: ItemCore { // http://www.scrome.com/assets/templates/flexibility/pdf/Scrome_Riflescope_LTE_J4_Datasheet_GB.pdf
         ACE_ScopeHeightAboveRail = 3.20641;
         ACE_ScopeAdjust_Vertical[] = {-8, 8};
         ACE_ScopeAdjust_Horizontal[] = {-8, 8};
@@ -173,7 +248,7 @@ class CfgWeapons {
     class R3F_FELIN_FRF2: ItemCore {
         ACE_ScopeHeightAboveRail = 4.28091;
     };
-    class R3F_J8: ItemCore {
+    class R3F_J8: ItemCore { // http://www.scrome.com/assets/templates/flexibility/pdf/Scrome_Marksman_Scope_LTE_Datasheet_GB.pdf
         ACE_ScopeHeightAboveRail = 4.474;
         ACE_ScopeAdjust_Vertical[] = {-10, 10};
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
@@ -202,7 +277,7 @@ class CfgWeapons {
             };
         };
     };
-    class R3F_J10: ItemCore {
+    class R3F_J10: ItemCore { // http://www.scrome.com/assets/templates/flexibility/pdf/Scrome_Marksman_Scope_LTE_Datasheet_GB.pdf
         ACE_ScopeZeroRange = 1400; // Inaccurate reticle, designed to work with the vanilla ballistic.
         ACE_ScopeHeightAboveRail = 4.474;
         ACE_ScopeAdjust_Vertical[] = {-10, 10};
@@ -233,12 +308,12 @@ class CfgWeapons {
             };
         };
     };
-    class R3F_ZEISS: ItemCore {
+    class R3F_ZEISS: ItemCore { // https://www.hensoldt.net/fileadmin/hensoldt/Datenbl%C3%A4tter/En/0714_SL_0817_9-6-24x72_6-24x56_EN_LoRes.pdf#page=2
         ACE_ScopeHeightAboveRail = 4.96547;
-        ACE_ScopeAdjust_Vertical[] = {0, 23};
-        ACE_ScopeAdjust_Horizontal[] = {-7, 7};
-        ACE_ScopeAdjust_VerticalIncrement = 0.1;
-        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        ACE_ScopeAdjust_Vertical[] = {0, 16};
+        ACE_ScopeAdjust_Horizontal[] = {-5, 5};
+        ACE_ScopeAdjust_VerticalIncrement = 0.05;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.05;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class ZEISS_MILDOT {
@@ -248,7 +323,7 @@ class CfgWeapons {
             };
         };
     };
-    class R3F_NF: ItemCore {
+    class R3F_NF: ItemCore { // http://nightforceoptics.com/nxs/3-5-15x56
         ACE_ScopeHeightAboveRail = 4.30469;
         ACE_ScopeAdjust_Vertical[] = {0, 30};
         ACE_ScopeAdjust_Horizontal[] = {-11, 11};
@@ -263,10 +338,10 @@ class CfgWeapons {
             };
         };
     };
-    class R3F_NF42: ItemCore {
+    class R3F_NF42: ItemCore { // http://nightforceoptics.com/nxs/12-42x56
         ACE_ScopeHeightAboveRail = 4.30469;
-        ACE_ScopeAdjust_Vertical[] = {0, 24};
-        ACE_ScopeAdjust_Horizontal[] = {-9, 9};
+        ACE_ScopeAdjust_Vertical[] = {0, 12};
+        ACE_ScopeAdjust_Horizontal[] = {-5, 5};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo: InventoryOpticsItem_Base_F {
