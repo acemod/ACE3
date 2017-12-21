@@ -20,7 +20,7 @@
  */
 #include "script_component.hpp"
 
-params ["_dblClick","_params"];
+params ["_dblClick", "_params"];
 _params params ["_list","_index"];
 
 private _handled = false;

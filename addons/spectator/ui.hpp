@@ -1,3 +1,6 @@
+#include "\A3\ui_f\hpp\defineDIKCodes.inc"
+
+class CtrlMenu;
 class RscButton;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
@@ -11,6 +14,48 @@ class RscText;
 class RscToolbox;
 class RscTree;
 class EGVAR(common,CompassControl);
+
+class GVAR(contextMenu): CtrlMenu {
+    idc = IDC_CONTEXT;
+
+    colorBackground[] = {0.1,0.1,0.1,1};
+    class Items {
+        items[] = {"Toggles"};
+        class Toggles {
+            text = "Toggles";
+            items[] = {
+                "ToggleLight",
+                "ToggleInfo",
+                "ToggleTags",
+                "ToggleProjectiles"
+            };
+        };
+        class ToggleLight {
+            text = "Toggle Lights";
+            action = QUOTE([ARR_2(displayNull, DIK_L)] call FUNC(ui_handleKeyDown));
+            shortcuts[] = { DIK_L };
+            picture="\a3\3DEN\Data\Displays\Display3DEN\ToolBar\flashlight_off_ca.paa";
+        };
+        class ToggleInfo {
+            text = "Toggle Widget";
+            action = QUOTE([ARR_2(displayNull, DIK_I)] call FUNC(ui_handleKeyDown));
+            shortcuts[] = { DIK_I };
+        };
+        class ToggleTags {
+            text = "Toggle Icons";
+            action = QUOTE([ARR_2(displayNull, DIK_O)] call FUNC(ui_handleKeyDown));
+            shortcuts[] = { DIK_O };
+        };
+        class ToggleProjectiles {
+            text = "Toggle Projectiles";
+            action = QUOTE([ARR_2(displayNull, DIK_P)] call FUNC(ui_handleKeyDown));
+            shortcuts[] = { DIK_P };
+        };
+        class Default {
+            enable = 0;
+        };
+    };
+};
 
 // Based on RscDisplayEGSpectator (sadly Arma doesn't like display inheritance)
 class GVAR(display) {
@@ -48,6 +93,7 @@ class GVAR(display) {
         class List: RscTree {
             idc = IDC_LIST;
 
+            onMouseButtonDown = QUOTE(_this call FUNC(ui_handleContextMenu));
             onMouseEnter = QUOTE([false] call FUNC(ui_fadeList));
             onMouseExit = QUOTE([true] call FUNC(ui_fadeList));
             onTreeSelChanged = QUOTE([ARR_2(false,_this)] call FUNC(ui_handleListClick));
@@ -76,7 +122,6 @@ class GVAR(display) {
         class Tabs: RscToolbox {
             idc = IDC_TABS;
 
-            //onToolBoxSelChanged = QUOTE(_this call FUNC(ui_handleTabSelected));
             onMouseEnter = QUOTE([false] call FUNC(ui_fadeList));
             onMouseExit = QUOTE([true] call FUNC(ui_fadeList));
 

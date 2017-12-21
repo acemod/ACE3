@@ -14,6 +14,7 @@ PREP(ui_draw3D);
 PREP(ui_fadeList);
 PREP(ui_getTreeDataIndex);
 PREP(ui_handleChildDestroyed);
+PREP(ui_handleContextMenu);
 PREP(ui_handleKeyDown);
 PREP(ui_handleKeyUp);
 PREP(ui_handleListClick);
