@@ -23,20 +23,18 @@ ACE Arsenal has a pretty large number of improvements over BI Virtual Arsenal, h
 - A clear container button to remove all items from a container.
 - Unique items support.`*`
 - Loadouts can be shared with other players.
-- Mission makers can save `default loadouts` that will be available in their own tab independently from player saved loadouts.
+- Mission makers can save `Default loadouts` that will be available in their own tab independently from player saved loadouts.
 - A setting to disable mod icons to increase performance even further.
 - An other setting to invert horizontal camera controls.
-- Settings to disable the `default loadouts` and `Public loadouts`tabs.
+- Settings to disable the `Default loadouts` and `Public loadouts`tabs.
 
 `*` Items not currently available in ACE Arsenal but in the unit's inventory, unique items will be omitted when loading loadouts and they can only be removed from containers.
 
 ### 1.2 Loadouts
 
 <div class="panel callout">
-    <p>
-        Loadouts from BI Virtual Arsenal will not show up in ACE Arsenal and vice versa.
-        Insignias, faces, and voices are NOT saved
-    </p>
+    <p>Loadouts from BI Virtual Arsenal will not show up in ACE Arsenal and vice versa.
+    Insignias, faces, and voices are NOT saved</p>
 </div>
 
 The loadouts screen is separated into 3 tabs:
