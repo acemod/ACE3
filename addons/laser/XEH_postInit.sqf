@@ -15,6 +15,8 @@ if (hasInterface) then {
             TRACE_4("ACE_controlledUAV EH",_UAV,_seatAI,_turret,_position);
             if (!isNull _seatAI) then {
                 [_seatAI] call FUNC(showVehicleHud);
+            } else {
+                [ace_player] call FUNC(showVehicleHud);
             };
         }] call CBA_fnc_addEventHandler;
     }] call CBA_fnc_addEventHandler;
