@@ -20,15 +20,15 @@ ACE Arsenal has a pretty large number of improvements over BI Virtual Arsenal, h
 - The ability to select the magazine loaded into your primary / secondary / handgun without leaving ACE Arsenal.
 - Search bars for both the left and right panels.
 - New tabs to add weapon accessories to a container.
-- A clear container button to remove all items from a container.
-- Unique items support.`*`
+- A "Clear container" button to remove all items from a container.
+- Unique items support.<sup>*</sup>
 - Loadouts can be shared with other players.
-- Mission makers can save `Default loadouts` that will be available in their own tab independently from player saved loadouts.
+- Mission makers can save "Default loadouts" that will be available in their own tab independently from player saved loadouts.
 - A setting to disable mod icons to increase performance even further.
 - An other setting to invert horizontal camera controls.
-- Settings to disable the `Default loadouts` and `Public loadouts`tabs.
+- Settings to disable the "Default loadouts" and "Public loadouts" tabs.
 
-`*` Items not currently available in ACE Arsenal but in the unit's inventory, unique items will be omitted when loading loadouts and they can only be removed from containers.
+<sup>*</sup> Items not currently available in ACE Arsenal but in the unit's inventory, unique items will be omitted when loading loadouts and they can only be removed from containers.
 
 ### 1.2 Loadouts
 
@@ -38,17 +38,17 @@ ACE Arsenal has a pretty large number of improvements over BI Virtual Arsenal, h
 </div>
 
 The loadouts screen is separated into 3 tabs:
-- `My loadouts` for loadouts saved into your profile.
-- `Default loadouts` for loadouts saved in the mission.
-- `Public loadouts` for loadouts made public by other players (does not persist after the owner disconnects).
+- "My loadouts" for loadouts saved into your profile.
+- "Default loadouts" for loadouts saved in the mission.
+- "Public loadouts" for loadouts made public by other players (does not persist after the owner disconnects).
 
-`Default loadouts` and `Public loadouts` tabs can be disabled by the mission maker.
+"Default loadouts" and "Public loadouts" tabs can be disabled by the mission maker.
 
 Loadout names are unique, you cannot have two loadouts with the same name, however you are able to rename loadouts.
 
 Saving loadouts from the default and public tabs will save them in your profile, they will show up in the "My loadouts" tab if you switch back to it.
 
-All loadouts can be loaded, however items not available or missing, will NOT be added.  This limitation applies to all tabs as well as imported loadouts.
+All loadouts can be loaded, however items not available or missing, will NOT be added. This limitation applies to all tabs as well as imported loadouts.
 
 The color coding for loadouts is as follows:
 - White: All items are available and will be loaded.
@@ -83,7 +83,7 @@ The color coding for loadouts is as follows:
 - <kbd>Enter</kbd> validates the search.
 - <kbd>RMB</kbd> clears the text field.
 - Arrow keys can be used to move the caret.
-- <kbd>Ctrl</kbd> + <kbd>F</kbd> Switches which search bar is selected.
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> switches which search bar is selected.
 
 
 {% include dependencies_list.md component="arsenal" %}
