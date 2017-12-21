@@ -15,7 +15,7 @@
 private _VALoadouts = +(profilenamespace getvariable ["bis_fnc_saveInventory_data",[]]);
 private _aceLoadouts = +(profileNamespace getVariable [QGVAR(saved_loadouts),[]]);
 
-if (_VALoadouts isEqualTo []) exitWith {};
+if (_VALoadouts isEqualTo [] || {isNull player}) exitWith {};
 
 for "_i" from 0 to (count _VALoadouts - 1) step 2 do {
     _name = _VALoadouts select _i;
