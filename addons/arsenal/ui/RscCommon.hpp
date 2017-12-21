@@ -284,7 +284,7 @@ class Display3DEN {
                 class ACE_arsenal_portVALoadouts {
                     text = CSTRING(portLoadoutsText);
                     picture = "\z\ace\logo_ace3_ca.paa";
-                    action = "[false] call ace_arsenal_fnc_portVALoadouts;";
+                    action = "call ace_arsenal_fnc_portVALoadouts;";
                 };
             };
         };
