@@ -29,7 +29,10 @@ if (GVAR(uiVisible)) then {
         _tabs ctrlSetBackgroundColor [0,0,0,0];
         _tabs ctrlSetFade 0.5;
 
-        ctrlSetFocus CTRL_MOUSE;
+        // Taking focus away from context menu kills it
+        if (isNull (GETUVAR(GVAR(context),controlNull))) then {
+            ctrlSetFocus CTRL_MOUSE;
+        };
 
         showChat true;
     } else {
