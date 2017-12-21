@@ -1,9 +1,9 @@
 /*
  * Author: alganthe
- * Port VA loadouts to ACE Arsenal
+ * Port VA loadouts to ACE Arsenal.
  *
  * Arguments:
- * 0: Write over similarly named loadouts in ACE Arsenal <BOOL>
+ * 0: Write over similarly named loadouts in ACE Arsenal <BOOL> (default: false)
  *
  * Return Value:
  * None
