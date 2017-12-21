@@ -275,4 +275,18 @@ class Display3DEN {
             };
         };
     };
+    class Controls {
+        class MenuStrip: ctrlMenuStrip {
+            class Items {
+                class Tools {
+                    items[] += {"ACE_arsenal_portVALoadouts"};
+                };
+                class ACE_arsenal_portVALoadouts {
+                    text = CSTRING(portLoadoutsText);
+                    picture = "\z\ace\logo_ace3_ca.paa";
+                    action = "[false] call ace_arsenal_fnc_portVALoadouts;";
+                };
+            };
+        };
+    };
 };

@@ -3,7 +3,7 @@
  * Port VA loadouts to ACE Arsenal.
  *
  * Arguments:
- * 0: Write over similarly named loadouts in ACE Arsenal <BOOL> (default: false)
+ * None
  *
  * Return Value:
  * None
@@ -12,7 +12,6 @@
 */
 #include "script_component.hpp"
 
-params [["_override", false, [false]]];
 private _VALoadouts = +(profilenamespace getvariable ["bis_fnc_saveInventory_data",[]]);
 private _aceLoadouts = +(profileNamespace getVariable [QGVAR(saved_loadouts),[]]);
 
@@ -28,9 +27,7 @@ for "_i" from 0 to (count _VALoadouts - 1) step 2 do {
     private _loadout = getUnitLoadout player;
 
     if (count _sameNameLoadoutsList > 0) then {
-        if (_override) then {
-            _aceLoadouts set [_aceLoadouts find (_sameNameLoadoutsList select 0), [_name, _loadout]];
-        };
+        _aceLoadouts set [_aceLoadouts find (_sameNameLoadoutsList select 0), [_name, _loadout]];
 
     } else {
         _aceLoadouts pushBack [_name, _loadout];
