@@ -16,7 +16,6 @@ class CfgWeapons {
     class Pistol_Base_F;
     class Rifle_Base_F;
     class srifle_EBR_F;
-    class Launcher_Base_F;
     class launch_O_Titan_F;
     class UGL_F;
 
