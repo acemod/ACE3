@@ -17,4 +17,6 @@
 */
 #include "script_component.hpp"
 
-USE_WRAPPER(removeVirtualWeaponCargo,removeVirtualItemCargo);
+WAIT_AND_CHECK_SETTING(removeVirtualWeaponCargo);
+
+USE_WRAPPER(removeVirtualItemCargo);

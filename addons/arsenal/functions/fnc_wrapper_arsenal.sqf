@@ -16,8 +16,7 @@
 */
 #include "script_component.hpp"
 
-// if use just GVAR here, "Undefined variable" error occurs
-if !(missionNamespace getVariable QGVAR(replaceBIS)) exitWith {_this call BIS_fnc_arsenalBIS};
+WAIT_AND_CHECK_SETTING(arsenal);
 
 params [["_mode", "Open", [""]], ["_params", []]];
 TRACE_2("",_mode,_params);

@@ -17,4 +17,6 @@
 */
 #include "script_component.hpp"
 
-USE_WRAPPER(removeVirtualMagazineCargo,removeVirtualItemCargo);
+WAIT_AND_CHECK_SETTING(removeVirtualMagazineCargo);
+
+USE_WRAPPER(removeVirtualItemCargo);

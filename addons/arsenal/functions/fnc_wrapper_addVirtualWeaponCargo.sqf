@@ -18,4 +18,6 @@
 */
 #include "script_component.hpp"
 
-USE_WRAPPER(addVirtualWeaponCargo,addVirtualItemCargo);
+WAIT_AND_CHECK_SETTING(addVirtualWeaponCargo);
+
+USE_WRAPPER(addVirtualItemCargo);

@@ -17,4 +17,6 @@
 */
 #include "script_component.hpp"
 
-USE_WRAPPER(removeVirtualBackpackCargo,removeVirtualItemCargo);
+WAIT_AND_CHECK_SETTING(removeVirtualBackpackCargo);
+
+USE_WRAPPER(removeVirtualItemCargo);

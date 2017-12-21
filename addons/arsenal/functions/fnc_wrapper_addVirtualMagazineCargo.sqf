@@ -18,4 +18,6 @@
 */
 #include "script_component.hpp"
 
-USE_WRAPPER(addVirtualMagazineCargo,addVirtualItemCargo);
+WAIT_AND_CHECK_SETTING(addVirtualMagazineCargo);
+
+USE_WRAPPER(addVirtualItemCargo);

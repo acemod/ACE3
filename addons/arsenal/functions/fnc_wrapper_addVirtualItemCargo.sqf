@@ -18,7 +18,7 @@
 */
 #include "script_component.hpp"
 
-if !(missionNamespace getVariable QGVAR(replaceBIS)) exitWith {_this call BIS_fnc_addVirtualItemCargoBIS};
+WAIT_AND_CHECK_SETTING(addVirtualItemCargo);
 
 params [["_box", objNull, [objNull]], ["_items", [], ["", [], true]], ["_isGlobal", false, [false]], ["_initBox", true, [true]]];
 

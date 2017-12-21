@@ -18,4 +18,6 @@
 */
 #include "script_component.hpp"
 
-USE_WRAPPER(addVirtualBackpackCargo,addVirtualItemCargo);
+WAIT_AND_CHECK_SETTING(addVirtualBackpackCargo);
+
+USE_WRAPPER(addVirtualItemCargo);

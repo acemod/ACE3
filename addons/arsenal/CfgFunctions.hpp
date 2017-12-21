@@ -1,4 +1,3 @@
-#define CONCAT(s1,s2) ##s1####s2##
 #define WRAP(function) \
     class function { \
         file = QPATHTOF(functions\CONCAT(fnc_wrapper_,function).sqf); \
