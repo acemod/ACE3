@@ -174,6 +174,7 @@ class GVAR(display) {
                     w = QUOTE(40 * GRID_W);
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonHideText);
+                    sizeEx = QUOTE(5 * GRID_H);
                     shortcuts[] = {"0x0E"};
                     tooltip = CSTRING(buttonHideTooltip);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
@@ -204,6 +205,7 @@ class GVAR(display) {
                     w = QUOTE(40 * GRID_W);
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
+                    sizeEx = QUOTE(5 * GRID_H);
                     shortcuts[]= {"0x01"};
                     onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
                 };
@@ -330,6 +332,7 @@ class GVAR(display) {
             w = QUOTE(80 * GRID_W);
             h = QUOTE(6 * GRID_H);
             onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
+            sizeEx = QUOTE(5 * GRID_H);
             class Items {
                 class Alphabet {
                     text="$STR_a3_rscdisplayarsenal_sort_alphabet";
@@ -760,6 +763,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(0);
                     w = QUOTE(160 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
                 };
                 class contentPanel: RscListnBox {
                     idc = IDC_contentPanel;
@@ -781,6 +785,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(15 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
                     colorBackground[]={0,0,0,0.2};
                 };
                 class textEditBox: ctrlEdit {
@@ -798,6 +803,7 @@ class GVAR(loadoutsDisplay) {
                     h = QUOTE(10 * GRID_H);
                     text= CSTRING(buttonSaveText);
                     tooltip= CSTRING(buttonSaveTooltip);
+                    sizeEx = QUOTE(5 * GRID_H);
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
                     colorBackground[] = {0,0,0,0.8};
                 };
@@ -839,7 +845,7 @@ class GVAR(loadoutsDisplay) {
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(30 * GRID_W);
             h = QUOTE(7 * GRID_H);
-            sizeEx = QUOTE(4 * GRID_H);
+            sizeEx = QUOTE(5 * GRID_H);
             text= CSTRING(buttonCloseText);
             shortcuts[]= {"0x01"};
             tooltip= "";
@@ -867,7 +873,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(0 * GRID_H);
                     w = QUOTE(52 * GRID_W);
                     h = QUOTE(7 * GRID_H);
-                    sizeEx = QUOTE(4 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
                     text= CSTRING(tabMyLoadoutsText);
                     tooltip= CSTRING(tabMyLoadoutsTooltip);
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
