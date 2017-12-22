@@ -434,16 +434,18 @@
             <Japanese>ACE 武器庫を開けません</Japanese>
         </Key>
           <Key ID="STR_ACE_Arsenal_Mission">
-            <English>ACE Virtual Arsenal</English>
-            <German>ACE Virtuelles Arsenal</German>
+            <English>ACE Arsenal</English>
+            <German>ACE-Arsenal</German>
+          </Key>
+          <Key ID="STR_ACE_Arsenal_ReturnToArsenal">
+            <English>Return to ACE Arsenal.</English>
+            <German>Zurück zum ACE-Arsenal.</German>
           </Key>
           <Key ID="STR_ACE_Arsenal_Mission_tooltip">
-            <English>View and try out different weapons, equipment and vehicles.</English>
-            <German>Sieh dir verschiedene Waffen, Ausrüstung und Fahrzeuge an und probiere sie aus.</German>
+            <English>Not as bad as the regular one.</English>
           </Key>
           <Key ID="STR_ACE_Arsenal_Mission_overview">
-            <English>View and try out different weapons, equipment and vehicles.</English>
-            <German>Sieh dir verschiedene Waffen, Ausrüstung und Fahrzeuge an und probiere sie aus.</German>
+            <English>Dress up simulator loading in progress...</English>
           </Key>
     </Package>
 </Project>

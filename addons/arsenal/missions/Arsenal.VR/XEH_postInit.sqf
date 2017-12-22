@@ -1,4 +1,6 @@
 #include "script_component.hpp"
+#include "\z\ace\addons\arsenal\defines.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 enableSaving [false, false];
 cba_diagnostic_projectileMaxLines = 10;
@@ -29,6 +31,35 @@ cba_diagnostic_projectileMaxLines = 10;
 
     _player call CBA_fnc_removeUnitTrackProjectiles;
     _player setFatigue 0;
+
+    // Esc to close mission
+    {
+        private _display = findDisplay IDD_ace_arsenal;
+
+        _display displayAddEventHandler ["KeyDown", {
+            params ["_display", "_key", "_shift"];
+
+            if (_key isEqualTo DIK_ESCAPE && {!_shift}) then {
+                [_display] spawn {
+                    disableSerialization;
+                    params ["_display"];
+
+                    private _return = [
+                        localize "str_a3_rscdisplaymain_buttonexit",
+                        localize "str_sure",
+                        true, false,
+                        _display, false, true
+                    ] call BIS_fnc_GUImessage;
+
+                    if (_return) then {
+                        _display closeDisplay 2;
+                        findDisplay 46 closeDisplay 0;
+                    };
+                };
+                true
+            };
+        }];
+    } call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(displayClosed), {

@@ -54,55 +54,54 @@ for "_i" from 0 to 1 do {
     _target setSpeedMode "LIMITED";
 };
 
-/*
 //--- Armored vehicles
-_vehicles = [];
-if (isclass (configfile >> "cfgvehicles" >> "Land_VR_Target_MRAP_01_F")) then {
-    _step = 15;
-    _positionCenter = [position _unit select 0,(position _unit select 1) + 30,0];
+private _vehicles = [];
+
+private _step = 15;
+_position = [position _unit select 0,(position _unit select 1) + 30,0];
+
+{
+    private _row = _forEachIndex;
+    private _rowCount = (count _x - 1) * 0.5;
+
     {
-        _row = _foreachindex;
-        _rowCount = (count _x - 1) * 0.5;
-        {
-            _position = [
-                (_positionCenter select 0) + (-_rowCount + _foreachindex) * _step,
-                (_positionCenter select 1) + _row * _step,
-                0
-            ];
-            _veh = createvehicle [_x,_position,[],0,"none"];
-            _veh setpos _position;
-            _veh setdir 180;
-            _veh setvelocity [0,0,-1];
-            [_veh] call bis_fnc_VRHitpart;
-            _marker = _veh call bis_fnc_boundingboxmarker;
-            _marker setmarkercolor "colororange";
-            _vehicles pushback _veh;
-        } foreach _x;
-    } foreach [
-        [
-            "Land_VR_Target_MRAP_01_F",
-            "Land_VR_Target_APC_Wheeled_01_F",
-            "Land_VR_Target_MBT_01_cannon_F"
-        ],
-        [
-            "Land_VR_Target_MRAP_01_F",
-            "Land_VR_Target_APC_Wheeled_01_F",
-            "Land_VR_Target_MBT_01_cannon_F"
-        ]
-    ];
-};
+        private _position = _position vectorAdd [(-_rowCount + _forEachIndex) * _step, _row * _step, 0];
+
+        private _vehicle = createVehicle [_x, _position, [], 0, "NONE"];
+        _vehicle setPos _position;
+        _vehicle setDir 180;
+        _vehicle setVelocity [0,0,-1];
+        _vehicle call BIS_fnc_VRHitpart;
+
+        private _marker = _vehicle call BIS_fnc_boundingBoxMarker;
+        _marker setMarkerColor "ColorOrange";
+        _vehicles pushBack _vehicle;
+    } forEach _x;
+} forEach [[
+    "Land_VR_Target_MRAP_01_F",
+    "Land_VR_Target_APC_Wheeled_01_F",
+    "Land_VR_Target_MBT_01_cannon_F"
+], [
+    "Land_VR_Target_MRAP_01_F",
+    "Land_VR_Target_APC_Wheeled_01_F",
+    "Land_VR_Target_MBT_01_cannon_F"
+]];
+
 _vehicles spawn {
     waituntil {
-        _allDisabled = true;
+        private _allDisabled = true;
+
         {
-            _hitalive = _x getvariable ["bis_fnc_VRHitParts_hitalive",[]];
-            _allDisabled = _allDisabled && ({!_x} count _hitalive >= 2);
+            _hitAlive = _x getVariable ["bis_fnc_VRHitParts_hitalive", []];
+            _allDisabled = _allDisabled && ({!_x} count _hitAlive >= 2);
             sleep 0.1;
-        } foreach _this;
+        } forEach _this;
+
         _allDisabled
     };
-    setstatvalue ["MarkMassVirtualDestruction",1];
-};*/
+
+    setStatValue ["MarkMassVirtualDestruction", 1];
+};
 
 //--- Cover objects
 private _coverObjects = [
@@ -149,20 +148,22 @@ _unit addEventHandler ["AnimChanged", {
 ["#(argb,8,8,3)color(0,0,0,1)", false, nil, 0.1, [0,0.5]] spawn BIS_fnc_textTiles;
 
 //--- Target markers
-/*[] spawn {
-    _targets = [];
-    {
-        _targets pushback vehiclevarname _x;
-        _var = vehiclevarname _x;
-        _marker = createmarker [_var,position _x];
-        _marker setmarkertype "mil_dot";
-        _marker setmarkercolor "colororange";
-    } foreach (allmissionobjects "man") - [player];
-    while {true} do {   
+private _markers = [];
+
+{
+    private _marker = createMarker [vehicleVarName _x, position _x];
+    _marker setMarkerType "mil_dot";
+    _marker setMarkerColor "ColorOrange";
+
+    _markers pushBack _marker;
+} forEach (allMissionObjects "CAManBase" - [_unit]);
+
+_markers spawn {
+    while {true} do {
         {
-            _t = missionnamespace getvariable _x;
-            (vehiclevarname _t) setmarkerpos position _t;
-        } foreach _targets;
+            private _target = missionNamespace getVariable _x;
+            _x setMarkerPos position _target;
+        } forEach _this;
         sleep 0.1;
     };
 };
