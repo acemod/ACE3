@@ -1,10 +1,10 @@
 #define WRAP(function) \
     class function { \
-        file = QPATHTOF(functions\CONCAT(fnc_wrapper_,function).sqf); \
+        file = QPATHTOF(functions\DOUBLES(fnc_wrapper,function).sqf); \
         RECOMPILE; \
     }; \
     class function##BIS { \
-        file = QUOTE(A3\functions_f_bootcamp\Inventory\CONCAT(fn_,function).sqf); \
+        file = QUOTE(A3\functions_f_bootcamp\Inventory\DOUBLES(fn,function).sqf); \
     }
 
 class CfgFunctions {
