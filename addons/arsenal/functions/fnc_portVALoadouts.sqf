@@ -15,7 +15,13 @@
 private _VALoadouts = +(profilenamespace getvariable ["bis_fnc_saveInventory_data",[]]);
 private _aceLoadouts = +(profileNamespace getVariable [QGVAR(saved_loadouts),[]]);
 
-if (_VALoadouts isEqualTo [] || {isNull player}) exitWith {};
+if (isNull player) exitWith {
+    [localize LSTRING(portLoadoutsPlayerError)] call BIS_fnc_error;
+};
+
+if (_VALoadouts isEqualTo []) exitWith {
+    [localize LSTRING(portLoadoutsLoadoutError)] call BIS_fnc_error;
+};
 
 for "_i" from 0 to (count _VALoadouts - 1) step 2 do {
     _name = _VALoadouts select _i;
