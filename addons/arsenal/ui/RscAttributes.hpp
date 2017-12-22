@@ -130,7 +130,7 @@ class GVAR(display) {
                     text = ECSTRING(common,Weight);
                     x = 0;
                     y = 0;
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(30 * GRID_W);
                     h = QUOTE(8 * GRID_H);
                     sizeEx = QUOTE(7 * GRID_H);
                 };
@@ -138,9 +138,9 @@ class GVAR(display) {
                     idc = IDC_totalWeightText;
                     style = ST_RIGHT;
                     text = "";
-                    x = QUOTE(40 * GRID_W);
+                    x = QUOTE(30 * GRID_W);
                     y = 0;
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(50 * GRID_W);
                     h = QUOTE(8 * GRID_H);
                     sizeEx = QUOTE(7 * GRID_H);
                 };
