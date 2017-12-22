@@ -1,8 +1,9 @@
 #include "script_component.hpp"
 
 private ["_pos","_side","_obj","_grp","_type","_target"];
-_pos = [_this,0,[],[[],objnull]] call bis_fnc_param;
-_type = [_this,1,"B_Soldier_VR_F",["",objnull]] call bis_fnc_param;
+//_pos = [_this,0,[],[[],objnull]] call bis_fnc_param;
+//_type = [_this,1,"B_Soldier_VR_F",["",objnull]] call bis_fnc_param;
+params ["_type", "_pos"];
 
 _obj = _pos;
 _grp = grpnull;

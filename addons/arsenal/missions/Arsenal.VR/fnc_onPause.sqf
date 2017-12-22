@@ -4,13 +4,11 @@ params ["_display"];
 
 private _ctrlButtonAbort = _display displayCtrl 104;
 _ctrlButtonAbort ctrlSetText localize LSTRING(Mission);
-_ctrlButtonAbort ctrlSetEventHandler [
-    "ButtonClick", {
-        params ["_control"];
-        ctrlParent _control closeDisplay 2;
-        {[player, player, true] call FUNC(openBox)} call CBA_fnc_execNextFrame;
-        true
-    } call EFUNC(common,codeToString)
-];
+_ctrlButtonAbort ctrlSetEventHandler ["ButtonClick", {
+    params ["_control"];
+    ctrlParent _control closeDisplay 2;
+    {[player, player, true] call FUNC(openBox)} call CBA_fnc_execNextFrame;
+    true
+} call EFUNC(common,codeToString)];
 
 true

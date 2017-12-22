@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 enableSaving [false, false];
+cba_diagnostic_projectileMaxLines = 10;
 
 [QGVAR(displayOpened), {
     private _player = player;
@@ -9,13 +10,13 @@ enableSaving [false, false];
     [{
         switch (true) do {
             case (primaryWeapon _this != ""): {
-                [_this, "amovpercmstpslowwrfldnon", 2] call EFUNC(common,doAnimation);
+                _this switchMove "amovpercmstpslowwrfldnon";
             };
             case (handgunWeapon _this != ""): {
-                [_this, "amovpercmstpslowwpstdnon", 2] call EFUNC(common,doAnimation);
+                _this switchMove "amovpercmstpslowwpstdnon";
             };
             default {
-                [_this, "amovpercmstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                _this switchMove "amovpercmstpsnonwnondnon";
             };
         };
     }, _player] call CBA_fnc_execNextFrame;
@@ -24,7 +25,7 @@ enableSaving [false, false];
     {
         _x enableSimulation false;
         _x hideObject true;
-    } forEach (entities [[], [], true] - [_player]);
+    } forEach (allMissionObjects "" - [_player]);
 
     _player call CBA_fnc_removeUnitTrackProjectiles;
     _player setFatigue 0;
@@ -37,7 +38,7 @@ enableSaving [false, false];
     {
         _x enableSimulation true;
         _x hideObject false;
-    } forEach entities [[], [], true];
+    } forEach allMissionObjects "";
 
     // update VR unit gear
     {
