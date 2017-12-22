@@ -5,7 +5,7 @@ author = ECSTRING(common,ACETeam);
 
 onLoadName = CSTRING(Mission);
 overviewText = CSTRING(Mission_overview);
-overviewPicture = "logo.paa";
+overviewPicture = "logo_ca.paa";
 
 briefing = 0;
 debriefing = 0;
