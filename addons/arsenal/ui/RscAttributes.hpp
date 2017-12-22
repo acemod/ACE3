@@ -159,19 +159,24 @@ class GVAR(display) {
             h = QUOTE(10 * GRID_H);
             sizeEx = QUOTE(5 * GRID_H);
         };
+
+        #define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
+        #define WIDTH_GAP (WIDTH_TOTAL / 100)
+        #define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
+
         class menuBar: RscControlsGroupNoScrollbars {
             idc = IDC_menuBar;
-            x = QUOTE((safezoneX + safezoneW * 0.50) - (105 * GRID_W));
+            x = QUOTE(0.5 - WIDTH_TOTAL / 2);
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
-            w = QUOTE(210 * GRID_W);
+            w = QUOTE(WIDTH_TOTAL);
             h = QUOTE(7 * GRID_H);
             class controls {
                 class buttonHide: ctrlButton {
                     idc = -1;
                     colorBackground[] = {0,0,0,0.8};
-                    x = QUOTE(0 * GRID_W);
+                    x = QUOTE(1 * WIDTH_GAP + 0 * WIDTH_SINGLE);
                     y = QUOTE(0);
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonHideText);
                     shortcuts[] = {"0x0E"};
@@ -180,28 +185,28 @@ class GVAR(display) {
                 };
                 class buttonLoadouts: buttonHide {
                     idc = -1;
-                    x = QUOTE(42.5 * GRID_W);
+                    x = QUOTE(2 * WIDTH_GAP + 1 * WIDTH_SINGLE);
                     text = CSTRING(buttonLoadoutsText);
                     onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
                     idc = -1;
-                    x = QUOTE(85 * GRID_W);
+                    x = QUOTE(3 * WIDTH_GAP + 2 * WIDTH_SINGLE);
                     text = CSTRING(buttonExportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
                 };
                 class buttonImport: buttonHide {
                     idc = -1;
-                    x = QUOTE(127.5 * GRID_W);
+                    x = QUOTE(4 * WIDTH_GAP + 3 * WIDTH_SINGLE);
                     text = CSTRING(buttonImportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonClose {
                     idc = -1;
                     colorBackground[] = {0,0,0,0.8};
-                    x = QUOTE(170 * GRID_W);
+                    x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
                     y = QUOTE(0);
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
                     shortcuts[]= {"0x01"};
