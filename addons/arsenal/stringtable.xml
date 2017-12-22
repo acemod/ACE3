@@ -441,5 +441,9 @@
             <English>View and try out different weapons, equipment and vehicles.</English>
             <German>Sieh dir verschiedene Waffen, Ausrüstung und Fahrzeuge an und probiere sie aus.</German>
           </Key>
+          <Key ID="STR_ACE_Arsenal_Mission_overview">
+            <English>View and try out different weapons, equipment and vehicles.</English>
+            <German>Sieh dir verschiedene Waffen, Ausrüstung und Fahrzeuge an und probiere sie aus.</German>
+          </Key>
     </Package>
 </Project>

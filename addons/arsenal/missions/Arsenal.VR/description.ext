@@ -1,26 +1,26 @@
-dev = "Karel";
-author = $STR_A3_Bohemia_Interactive;
+#include "script_component.hpp"
 
-onLoadName = $STR_A3_Arsenal;
-overviewText = $STR_A3_Arsenal_overviewText;
-overviewPicture = "\A3\Ui_f\data\Logos\arsenal_1024_ca.paa";
+dev = "commy2";
+author = ECSTRING(common,ACETeam);
+
+onLoadName = CSTRING(Mission);
+overviewText = CSTRING(Mission_overview);
+overviewPicture = "logo.paa";
 
 briefing = 0;
 debriefing = 0;
+enableDebugConsole = 2;
 
 doneKeys[] = {"BIS_Arsenal.Map_VR_done"};
 onPauseScript[] = {"arsenal_fnc_onPauseScript"};
 
-class CfgFunctions
-{
-	class Arsenal
-	{
-		class Misc
-		{
-			class createTarget	{file = "fn_createTarget.sqf";};
-			class onPauseScript	{file = "fn_onPauseScript.sqf";};
-			class opened		{file = "fn_opened.sqf";};
-			class closed		{file = "fn_closed.sqf";};
-		};
-	};
+class CfgFunctions {
+    class Arsenal {
+        class Misc {
+            class createTarget  {file = "fn_createTarget.sqf";};
+            class onPauseScript {file = "fn_onPauseScript.sqf";};
+            class opened        {file = "fn_opened.sqf";};
+            class closed        {file = "fn_closed.sqf";};
+        };
+    };
 };

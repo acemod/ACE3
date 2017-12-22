@@ -1,11 +1,16 @@
-disableserialization;
-_display = _this select 0;
+#include "script_component.hpp"
 
-_ctrlButtonAbort = _display displayctrl 104;
-_ctrlButtonAbort ctrlsettext localize (["STR_A3_Arsenal","STR_A3_Garage"] select (missionnamespace getvariable ["bis_typeLast",0]));
-_ctrlButtonAbort ctrlseteventhandler [
-	"buttonclick",
-	"(ctrlparent (_this select 0)) closedisplay 2; ['Open',true] spawn (uinamespace getvariable (['bis_fnc_arsenal','bis_fnc_garage'] select bis_typeLast)); true"
+params ["_display"];
+
+private _ctrlButtonAbort = _display displayCtrl 104;
+_ctrlButtonAbort ctrlSetText localize LSTRING(Mission);
+_ctrlButtonAbort ctrlSetEventHandler [
+    "ButtonClick", {
+        params ["_control"];
+        ctrlParent _control closeDisplay 2;
+        ["Open", true] spawn (uiNamespace getVariable "bis_fnc_arsenal"); //@todo
+        true
+    } call EFUNC(common,codeToString)
 ];
 
 true

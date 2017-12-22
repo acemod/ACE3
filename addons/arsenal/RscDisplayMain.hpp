@@ -17,12 +17,12 @@ class RscDisplayMain: RscStandardDisplay {
                     tooltip = CSTRING(Mission_tooltip);
                     y = "(3 *   1.5) *  (pixelH * pixelGrid * 2) +  (pixelH)";
                     onbuttonclick = QUOTE(playMission [ARR_2('','PATHTOF(missions\Arsenal.VR)')]);
-                    animTextureNormal = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\buttonMenu_ca.paa"; //@todo custom icons
-                    animTextureDisabled = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\buttonMenu_ca.paa";
-                    animTextureOver = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\buttonMenuHover_ca.paa";
-                    animTextureFocused = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\buttonMenuHover_ca.paa";
-                    animTexturePressed = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\buttonMenu_ca.paa";
-                    animTextureDefault = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\buttonMenu_ca.paa";
+                    animTextureNormal = QPATHTOF(data\buttonMissionMainMenu_ca.paa)
+                    animTextureDisabled = QPATHTOF(data\buttonMissionMainMenu_ca.paa)
+                    animTextureOver = QPATHTOF(data\buttonMissionMainMenuHover_ca.paa)
+                    animTextureFocused = QPATHTOF(data\buttonMissionMainMenuHover_ca.paa)
+                    animTexturePressed = QPATHTOF(data\buttonMissionMainMenu_ca.paa)
+                    animTextureDefault = QPATHTOF(data\buttonMissionMainMenu_ca.paa)
                 };
                 class FieldManual: Bootcamp {
                     y = "(4 *   1.5) *  (pixelH * pixelGrid * 2) +  (pixelH)";
