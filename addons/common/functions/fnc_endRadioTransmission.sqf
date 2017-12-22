@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * End radio transmissions of addons TFAR and ACRE2. TFAR v0.9.7, ACRE Public Beta 2.0.3.571
+ * End radio transmissions of addons TFAR and ACRE2. TFAR v0.9.x, ACRE Public Beta 2.0.3.571
  *
  * Arguments:
  * None
@@ -15,6 +15,8 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+["ace_endRadioTransmissions"] call CBA_fnc_localEvent;
 
 // ACRE
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {

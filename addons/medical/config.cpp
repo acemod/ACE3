@@ -54,3 +54,7 @@ class ACE_newEvents {
     actionCheckBloodPressureLocal = QGVAR(actionCheckBloodPressureLocal);
     addVitalLoop = QGVAR(addVitalLoop);
 };
+
+class ACE_Extensions {
+    extensions[] += {"ace_medical"};
+};

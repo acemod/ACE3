@@ -235,17 +235,27 @@ def find_depbo_tools():
 
     for tool in requiredToolPaths:
         try:
-            k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(tool))
+            try:
+                k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(tool))
+                path = winreg.QueryValueEx(k, "exe")[0]
+            except FileNotFoundError:
+                try:
+                    k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(tool))
+                    path = winreg.QueryValueEx(k, "exe")[0]
+                except FileNotFoundError:
+                    try:
+                        k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Wow6432Node\Mikero\{}".format(tool))
+                        path = winreg.QueryValueEx(k, "exe")[0]
+                    except FileNotFoundError:
+                        k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Wow6432Node\Mikero\{}".format(tool))
+                        path = winreg.QueryValueEx(k, "exe")[0]
         except FileNotFoundError:
-            k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(tool))
-        try:
-            path = winreg.QueryValueEx(k, "exe")[0]
+            print_error("Could not find {}".format(tool))
+            failed = True
+        else:
             #Strip any quotations from the path due to a MikeRo tool bug which leaves a trailing space in some of its registry paths.
             requiredToolPaths[tool] = path.strip('"')
             print_green("Found {}.".format(tool))
-        except:
-            print_error("Could not find {}".format(tool))
-            failed = True
         finally:
             winreg.CloseKey(k)
 

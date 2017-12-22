@@ -462,7 +462,7 @@ class CfgAmmo {
         airFriction=-0.00055706;
         typicalSpeed=826;
         ACE_caliber=8.585;
-        ACE_bulletLength=43.18;
+        ACE_bulletLength=44.0182;
         ACE_bulletMass=19.44;
         ACE_muzzleVelocityVariationSD=0.3;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};

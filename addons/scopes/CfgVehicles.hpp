@@ -92,6 +92,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
+            class simplifiedZeroing {
+                displayName = CSTRING(simplifiedZeroing_displayName);
+                description = CSTRING(simplifiedZeroing_description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Description);

@@ -7,6 +7,7 @@
             <Italian>Riarmo</Italian>
             <Chinese>整裝</Chinese>
             <Chinesesimp>整装</Chinesesimp>
+            <Japanese>再武装</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
@@ -18,10 +19,10 @@
             <Italian>Impostazioni Riarmo</Italian>
             <Spanish>Parámetros de rearme</Spanish>
             <French>Options de réarmement</French>
-            <Japanese>再武装設定</Japanese>
             <Korean>재보급 설정</Korean>
             <Chinesesimp>整装设定</Chinesesimp>
             <Chinese>整裝設定</Chinese>
+            <Japanese>再武装設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
             <English>This module allows you to tweak rearm system settings.</English>
@@ -492,7 +493,7 @@
             <Italian>Hydra 70 HE</Italian>
             <Spanish>Hydra 70 HE</Spanish>
             <French>Hydra 70 HE</French>
-            <Japanese>ハイドラ 70 りゅう弾</Japanese>
+            <Japanese>ハイドラ 70 HE</Japanese>
             <Korean>Hydra 70 고폭탄</Korean>
             <Chinesesimp>九头蛇 70 高爆弹</Chinesesimp>
             <Chinese>九頭蛇 70 高爆彈</Chinese>
@@ -507,7 +508,7 @@
             <Italian>S-8 HE</Italian>
             <Spanish>S-8 HE</Spanish>
             <French>S-8 HE</French>
-            <Japanese>S-8 りゅう弾</Japanese>
+            <Japanese>S-8 HE</Japanese>
             <Korean>S-8 고폭탄</Korean>
             <Chinesesimp>S-8 高爆弹</Chinesesimp>
             <Chinese>S-8 高爆彈</Chinese>
@@ -522,7 +523,7 @@
             <Italian>Hydra 70 AP</Italian>
             <Spanish>Hydra 70 AP</Spanish>
             <French>Hydra 70 AP</French>
-            <Japanese>ハイドラ 70 徹甲弾</Japanese>
+            <Japanese>ハイドラ 70 AP</Japanese>
             <Korean>Hydra 70 철갑탄</Korean>
             <Chinesesimp>九头蛇 70 反人员弹</Chinesesimp>
             <Chinese>九頭蛇 70 反人員彈</Chinese>
@@ -537,7 +538,7 @@
             <Italian>S-8 AP</Italian>
             <Spanish>S-8 AP</Spanish>
             <French>S-8 AP</French>
-            <Japanese>S-8 徹甲弾</Japanese>
+            <Japanese>S-8 AP</Japanese>
             <Korean>S-8 철갑탄</Korean>
             <Chinesesimp>S-8 反人员弹</Chinesesimp>
             <Chinese>S-8 反人員彈</Chinese>

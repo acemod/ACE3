@@ -21,22 +21,41 @@ TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectil
 
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (!alive _projectile) exitWith {};
-if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
 if (underwater _unit) exitWith {};
 
-private _abort = GVAR(disabledInFullAutoMode) && {getNumber(configFile >> "CfgWeapons" >> _weapon >> _mode >> "autoFire") == 1};
-if (!local _unit && {!_abort && !GVAR(simulateForEveryone)}) then {
-    // The shooter is non local -> abort unless we match an exception rule        
-    _abort = !GVAR(simulateForGroupMembers) || {group ACE_player != group _unit};
-    if (_abort && GVAR(simulateForSnipers)) then {
-        if (currentWeapon _unit == primaryWeapon _unit && count primaryWeaponItems _unit > 2) then {
-            private _opticsName = (primaryWeaponItems _unit) select 2;
+private _abort = !local _unit;
+if (_abort) then {
+    private _bulletVelocity = velocity _projectile;
+    private _muzzleVelocity = vectorMagnitude _bulletVelocity;
+    
+    private _maxRange = uiNamespace getVariable format[QGVAR(maxRange_%1), _ammo];
+    if (isNil "_maxRange") then {
+        private _airFriction = getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction");
+        private _maxRange = if (_airFriction < 0) then {
+            private _maxTime = ((_vanillaInitialSpeed - BULLET_TRACE_MIN_VELOCITY) / (BULLET_TRACE_MIN_VELOCITY * -_airFriction * _vanillaInitialSpeed)) max getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime");
+            -ln(1 - _airFriction * _vanillaInitialSpeed * _maxTime) / _airFriction
+        } else {
+            _vanillaInitialSpeed * getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime")
+        };
+        uiNamespace setVariable [format[QGVAR(maxRange_%1), _ammo], _maxRange];
+    };
+    if (ACE_player distance _unit > _maxRange && {ACE_player distance ((getPosASL _unit) vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply _maxRange)) > _maxRange}) exitWith {};
+    
+    private _ammoCount = (_unit ammo _muzzle) + 1;
+    private _tracersEvery = getNumber(configFile >> "CfgMagazines" >> _magazine >> "tracersEvery");
+    private _lastRoundsTracer = getNumber(configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
+    if (_ammoCount <= _lastRoundsTracer || {_tracersEvery > 0 && {(_ammoCount - _lastRoundsTracer) % _tracersEvery == 0}}) exitWith { _abort = false };
+    
+    if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} && {cameraView == "GUNNER"}) then {
+        if (currentWeapon ACE_player == binocular ACE_player) exitWith { _abort = false };
+        if (currentWeapon ACE_player == primaryWeapon ACE_player && {count primaryWeaponItems ACE_player > 2}) then {
+            private _opticsName = (primaryWeaponItems ACE_player) select 2;
             private _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
-            _abort = _opticType != 2; // We only abort if the non local shooter is not a sniper
+            if (_opticType == 2) exitWith { _abort = false };
         };
     };
 };
-//if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // We currently do not have firedEHs on vehicles
+if (_abort) exitWith {};
 
 // Get Weapon and Ammo Configurations
 private _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
@@ -54,7 +73,6 @@ _WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 private _temperature = nil; // We need the variable in this scope. So we need to init it here.
 
 private _ammoCount = _unit ammo _muzzle;
-
 private _bulletVelocity = velocity _projectile;
 private _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
@@ -78,14 +96,8 @@ if (GVAR(muzzleVelocityVariationEnabled)) then {
 _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply _muzzleVelocity;
 _projectile setVelocity _bulletVelocity;
 
-if (_abort) exitWith {
-    if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
-        EGVAR(windDeflection,trackedBullets) pushBack [_projectile, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
-    };
-};
-
 private _bulletTraceVisible = false;
-if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
+if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} && {cameraView == "GUNNER"}) then {
     if (currentWeapon ACE_player == binocular ACE_player) then {
         _bulletTraceVisible = true;
     } else {
