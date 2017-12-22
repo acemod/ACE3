@@ -9,7 +9,7 @@ overviewPicture = "logo_ca.paa";
 
 briefing = 0;
 debriefing = 0;
-enableDebugConsole = 2;
+enableDebugConsoleSP = 1;
 
 doneKeys[] = {"BIS_Arsenal.Map_VR_done"};
 onPauseScript[] = {"arsenal_fnc_onPauseScript"};
