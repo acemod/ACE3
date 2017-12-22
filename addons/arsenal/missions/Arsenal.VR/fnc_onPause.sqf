@@ -8,7 +8,7 @@ _ctrlButtonAbort ctrlSetEventHandler [
     "ButtonClick", {
         params ["_control"];
         ctrlParent _control closeDisplay 2;
-        ["Open", true] spawn (uiNamespace getVariable "bis_fnc_arsenal"); //@todo
+        {[player, player, true] call FUNC(openBox)} call CBA_fnc_execNextFrame;
         true
     } call EFUNC(common,codeToString)
 ];

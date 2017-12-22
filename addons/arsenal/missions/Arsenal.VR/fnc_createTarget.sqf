@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 private ["_pos","_side","_obj","_grp","_type","_target"];
 _pos = [_this,0,[],[[],objnull]] call bis_fnc_param;
 _type = [_this,1,"B_Soldier_VR_F",["",objnull]] call bis_fnc_param;
@@ -7,13 +9,13 @@ _grp = grpnull;
 _var = "";
 
 if (typename _obj == typename objnull) then {
-	_grp = group _obj;
-	_type = typeof _obj;
-	_pos = _obj getvariable ["pos",position objnull];
-	_var = _obj getvariable ["var",""];
-	[_obj,true] call bis_fnc_VREffectKilled;
+    _grp = group _obj;
+    _type = typeof _obj;
+    _pos = _obj getvariable ["pos",position objnull];
+    _var = _obj getvariable ["var",""];
+    [_obj,true] call bis_fnc_VREffectKilled;
 } else {
-	_grp = creategroup east;
+    _grp = creategroup east;
 };
 if (_var == "") then {_var = "t" + str round random 999999;};
 
@@ -48,7 +50,7 @@ missionnamespace setvariable [_var,_target];
 _target switchmove "amovpercmstpslowwrfldnon";
 _target setvariable ["pos",_pos];
 _target setvariable ["var",_var];
-_target addeventhandler ["killed",{_this spawn arsenal_fnc_createTarget;}];
+_target addeventhandler ["killed", FUNC(createTarget)];
 [_target] call bis_fnc_VRHitpart;
 
 _target

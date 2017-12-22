@@ -12,15 +12,6 @@ debriefing = 0;
 enableDebugConsoleSP = 1;
 
 doneKeys[] = {"BIS_Arsenal.Map_VR_done"};
-onPauseScript[] = {"arsenal_fnc_onPauseScript"};
+onPauseScript[] = {QFUNC(onPause)};
 
-class CfgFunctions {
-    class Arsenal {
-        class Misc {
-            class createTarget  {file = "fn_createTarget.sqf";};
-            class onPauseScript {file = "fn_onPauseScript.sqf";};
-            class opened        {file = "fn_opened.sqf";};
-            class closed        {file = "fn_closed.sqf";};
-        };
-    };
-};
+#include "CfgEventHandlers.hpp"
