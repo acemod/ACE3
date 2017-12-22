@@ -19,7 +19,7 @@
 
 WAIT_AND_CHECK_SETTING(removeVirtualItemCargo);
 
-params [["_box", objNull, [objNull]], ["_items", [], ["", [], true]], ["_isGlobal", false, [false]]];
+params [["_box", ACE_player, [objNull]], ["_items", [], ["", [], true]], ["_isGlobal", false, [false]]];
 
 if (_items isEqualType "") then {_items = [_items]};
 if (_items isEqualType [] && {0 < count _items} && {"%All" == _items select 0}) then {

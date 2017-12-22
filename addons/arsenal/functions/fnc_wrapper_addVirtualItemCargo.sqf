@@ -20,7 +20,7 @@
 
 WAIT_AND_CHECK_SETTING(addVirtualItemCargo);
 
-params [["_box", objNull, [objNull]], ["_items", [], ["", [], true]], ["_isGlobal", false, [false]], ["_initBox", true, [true]]];
+params [["_box", ACE_player, [objNull]], ["_items", [], ["", [], true]], ["_isGlobal", false, [false]], ["_initBox", true, [true]]];
 
 if (_items isEqualType "") then {_items = [_items]};
 if (_items isEqualType [] && {0 < count _items} && {"%All" == _items select 0}) then {
