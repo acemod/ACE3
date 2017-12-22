@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 
 GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
 GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
+GVAR(vehicleIconCache) = call CBA_fnc_createNamespace; // for getVehicleIcon
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
