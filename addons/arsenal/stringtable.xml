@@ -439,7 +439,7 @@
         </Key>
         <Key ID= "STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
-            <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur"</French>
+            <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
         </Key>
         <Key ID= "STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
