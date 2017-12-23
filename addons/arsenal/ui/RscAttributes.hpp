@@ -130,7 +130,7 @@ class GVAR(display) {
                     text = ECSTRING(common,Weight);
                     x = 0;
                     y = 0;
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(30 * GRID_W);
                     h = QUOTE(8 * GRID_H);
                     sizeEx = QUOTE(7 * GRID_H);
                 };
@@ -138,9 +138,9 @@ class GVAR(display) {
                     idc = IDC_totalWeightText;
                     style = ST_RIGHT;
                     text = "";
-                    x = QUOTE(40 * GRID_W);
+                    x = QUOTE(30 * GRID_W);
                     y = 0;
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(50 * GRID_W);
                     h = QUOTE(8 * GRID_H);
                     sizeEx = QUOTE(7 * GRID_H);
                 };
@@ -159,51 +159,58 @@ class GVAR(display) {
             h = QUOTE(10 * GRID_H);
             sizeEx = QUOTE(5 * GRID_H);
         };
+
+        #define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
+        #define WIDTH_GAP (WIDTH_TOTAL / 100)
+        #define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
+
         class menuBar: RscControlsGroupNoScrollbars {
             idc = IDC_menuBar;
-            x = QUOTE((safezoneX + safezoneW * 0.50) - (105 * GRID_W));
+            x = QUOTE(0.5 - WIDTH_TOTAL / 2);
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
-            w = QUOTE(210 * GRID_W);
+            w = QUOTE(WIDTH_TOTAL);
             h = QUOTE(7 * GRID_H);
             class controls {
                 class buttonHide: ctrlButton {
                     idc = -1;
                     colorBackground[] = {0,0,0,0.8};
-                    x = QUOTE(0 * GRID_W);
+                    x = QUOTE(1 * WIDTH_GAP + 0 * WIDTH_SINGLE);
                     y = QUOTE(0);
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonHideText);
+                    sizeEx = QUOTE(5 * GRID_H);
                     shortcuts[] = {"0x0E"};
                     tooltip = CSTRING(buttonHideTooltip);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
                 };
                 class buttonLoadouts: buttonHide {
                     idc = -1;
-                    x = QUOTE(42.5 * GRID_W);
+                    x = QUOTE(2 * WIDTH_GAP + 1 * WIDTH_SINGLE);
                     text = CSTRING(buttonLoadoutsText);
                     onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
                     idc = -1;
-                    x = QUOTE(85 * GRID_W);
+                    x = QUOTE(3 * WIDTH_GAP + 2 * WIDTH_SINGLE);
                     text = CSTRING(buttonExportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
                 };
                 class buttonImport: buttonHide {
                     idc = -1;
-                    x = QUOTE(127.5 * GRID_W);
+                    x = QUOTE(4 * WIDTH_GAP + 3 * WIDTH_SINGLE);
                     text = CSTRING(buttonImportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonClose {
                     idc = -1;
                     colorBackground[] = {0,0,0,0.8};
-                    x = QUOTE(170 * GRID_W);
+                    x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
                     y = QUOTE(0);
-                    w = QUOTE(40 * GRID_W);
+                    w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
+                    sizeEx = QUOTE(5 * GRID_H);
                     shortcuts[]= {"0x01"};
                     onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
                 };
@@ -330,6 +337,7 @@ class GVAR(display) {
             w = QUOTE(80 * GRID_W);
             h = QUOTE(6 * GRID_H);
             onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
+            sizeEx = QUOTE(5 * GRID_H);
             class Items {
                 class Alphabet {
                     text="$STR_a3_rscdisplayarsenal_sort_alphabet";
@@ -760,6 +768,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(0);
                     w = QUOTE(160 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
                 };
                 class contentPanel: RscListnBox {
                     idc = IDC_contentPanel;
@@ -781,6 +790,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(15 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
                     colorBackground[]={0,0,0,0.2};
                 };
                 class textEditBox: ctrlEdit {
@@ -798,6 +808,7 @@ class GVAR(loadoutsDisplay) {
                     h = QUOTE(10 * GRID_H);
                     text= CSTRING(buttonSaveText);
                     tooltip= CSTRING(buttonSaveTooltip);
+                    sizeEx = QUOTE(5 * GRID_H);
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
                     colorBackground[] = {0,0,0,0.8};
                 };
@@ -839,7 +850,7 @@ class GVAR(loadoutsDisplay) {
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(30 * GRID_W);
             h = QUOTE(7 * GRID_H);
-            sizeEx = QUOTE(4 * GRID_H);
+            sizeEx = QUOTE(5 * GRID_H);
             text= CSTRING(buttonCloseText);
             shortcuts[]= {"0x01"};
             tooltip= "";
@@ -867,7 +878,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(0 * GRID_H);
                     w = QUOTE(52 * GRID_W);
                     h = QUOTE(7 * GRID_H);
-                    sizeEx = QUOTE(4 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
                     text= CSTRING(tabMyLoadoutsText);
                     tooltip= CSTRING(tabMyLoadoutsTooltip);
                     onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
