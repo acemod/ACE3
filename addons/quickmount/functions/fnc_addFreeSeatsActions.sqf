@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-#define TO_STRING(arg) if !(arg isEqualType "") then {arg = "Compartment" + str arg}
+#define TO_STRING(var) if !(var isEqualType "") then {var = "Compartment" + str var}
 
 // this will check UAV vehicle like Stomper (with cargo seat)
 #define IS_CREW_UAV(vehicleConfig) ("UAVPilot" == getText (configFile >> "CfgVehicles" >> (getText (vehicleConfig >> "crew")) >> "simulation"))
@@ -38,16 +38,31 @@
 // moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
 // we have to wait some time (e.g. until player is out)
 // usually it takes 1 frame in SP and 3 frames in MP, so in MP looks a little lagging
+// also if unit isn't moved to new seat in 1 second, we move him back to his seat
 #define MOVE_IN(command) \
     [ARR_3( \
         {isNull objectParent (_this select 0)}, \
         { \
             params [ARR_2("_player","_moveInParams")]; \
             _player command _moveInParams; \
-            if (GETVAR(_player,GVAR(damageBlocked),false)) then { \
-                _player allowDamage true; \
-                SETVAR(_player,GVAR(damageBlocked),nil); \
-            }; \
+            [ARR_5( \
+                {!isNull objectParent _this}, \
+                { \
+                    if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
+                        _this allowDamage true; \
+                        SETVAR(_this,GVAR(damageBlocked),nil); \
+                    }; \
+                }, \
+                _player, \
+                1, \
+                { \
+                    (_this getVariable QGVAR(moveBackParams)) call (_this getVariable QGVAR(moveBackCode)); \
+                    if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
+                        _this allowDamage true; \
+                        SETVAR(_this,GVAR(damageBlocked),nil); \
+                    }; \
+                } \
+            )] call CBA_fnc_waitUntilAndExecute; \
         }, \
         [ARR_2(_player,_this select 2)] \
     )] call CBA_fnc_waitUntilAndExecute;
@@ -80,11 +95,12 @@ if (_isInVehicle) then {
     TRACE_2("",_driverCompartments,_cargoCompartments);
 
     // find current compartment
-    private ["_role", "_turretPath"];
+    private ["_role", "_cargoIndex", "_turretPath"];
     private _cargoNumber = 0;
     {
         _role = _x select 1;
         if (_player == _x select 0) exitWith {
+            _cargoIndex = _x select 2;
             _turretPath = _x select 3;
         };
         if (_role == "cargo") then {
@@ -98,17 +114,23 @@ if (_isInVehicle) then {
                 [] breakOut "main";
             };
             _compartment = _driverCompartments;
+            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInDriver (_this select 1)}];
+            _player setVariable [QGVAR(moveBackParams), [_player, _vehicle]];
         };
         case "cargo": {
             _compartment = _cargoCompartments select (_cargoNumber min _cargoCompartmentsLast);
+            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInCargo [_this select 1, _this select 2]}];
+            _player setVariable [QGVAR(moveBackParams), [_player, _vehicle, _cargoIndex]];
         };
         default {
             private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
             _compartment = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
             TO_STRING(_compartment);
+            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInTurret [_this select 1, _this select 2]}];
+            _player setVariable [QGVAR(moveBackParams), [_player, _vehicle, _turretPath]];
         };
     };
-    TRACE_4("",_role,_turretPath,_cargoNumber,_compartment);
+    TRACE_5("",_role,_cargoIndex,_turretPath,_cargoNumber,_compartment);
 };
 
 private _actions = [];
@@ -122,7 +144,7 @@ private _cargoNumber = -1;
         };
     } else {
         private ["_name", "_icon", "_statement", "_params"];
-        if (!(_turretPath isEqualTo [])) then { // all turrets including FFV
+        if !(_turretPath isEqualTo []) then { // all turrets including FFV
             if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
             private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
             if (_isInVehicle) then {
