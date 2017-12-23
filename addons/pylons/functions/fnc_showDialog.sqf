@@ -26,7 +26,6 @@ if (!isNull _currentUser) exitWith {
 };
 _aircraft setVariable [QGVAR(currentUser), ace_player, true];
 GVAR(currentAircraftNamespace) setVariable [getPlayerUID ace_player, _aircraft, true];
-[_aircraft, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 GVAR(isCurator) = _isCurator;
 GVAR(currentAircraft) = _aircraft;
@@ -138,3 +137,13 @@ _edit ctrlAddEventHandler ["KeyDown", LINKFUNC(onNameChange)];
 
 private _checkbox = _display displayCtrl ID_CHECKBOX_MIRROR;
 _checkbox ctrlAddEventHandler ["CheckedChanged", {[(_this select 1) == 1] call FUNC(onPylonMirror)}];
+
+if (!GVAR(isCurator)) then {
+    [{
+        isNull (GVAR(currentAircraft) getVariable [QGVAR(currentUser), objNull]) ||
+        {(ace_player distanceSqr GVAR(currentAircraft)) > GVAR(searchDistanceSqr)}
+    }, {
+        [localize LSTRING(TooFar), false, 5] call EFUNC(common,displayText);
+        call FUNC(onButtonClose);
+    }] call CBA_fnc_waitUntilAndExecute;
+};

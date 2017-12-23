@@ -44,7 +44,7 @@ private _itemObject = if (_item isEqualType objNull) then {
     [QGVAR(serverUnload), [_item, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
     _item
 } else {
-    private _newItem = createVehicle [_item, _posBehindVehicleAGL, [], 0, ""];
+    private _newItem = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
     _newItem setPosASL (AGLtoASL _posBehindVehicleAGL);
     _newItem
 };

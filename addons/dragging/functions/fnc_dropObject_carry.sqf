@@ -51,6 +51,7 @@ _unit removeWeapon "ACE_FakePrimaryWeapon";
 _unit selectWeapon primaryWeapon _unit;
 
 [_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
 
 // prevent object from flipping inside buildings
 if (_inBuilding) then {

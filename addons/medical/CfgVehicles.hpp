@@ -9,7 +9,7 @@ class CfgVehicles {
     };
     class ACE_Module;
     class ACE_moduleMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(MedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";

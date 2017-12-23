@@ -45,9 +45,9 @@ private _speedOfSound = GVAR(temperature) call EFUNC(weather,calculateSpeedOfSou
 
     switch (GVAR(currentScopeUnit)) do {
         case 0: {
-            _elevation = MRAD_TO_MOA(_elevation);
-            _windage1 = MRAD_TO_MOA(_windage1);
-            _windage2 = MRAD_TO_MOA(_windage2);
+            _elevation = MOA_TO_MRAD(_elevation);
+            _windage1 = MOA_TO_MRAD(_windage1);
+            _windage2 = MOA_TO_MRAD(_windage2);
         };
         case 2: {
             _elevation = _elevation * 1.047;
@@ -55,7 +55,7 @@ private _speedOfSound = GVAR(temperature) call EFUNC(weather,calculateSpeedOfSou
             _windage2 = _windage2 * 1.047;
         };
         case 3: {
-            private _clickSize = [1, 1 / 1.047, MOA_TO_MRAD(1)] select (GVAR(workingMemory) select 7);
+            private _clickSize = [1, 1 / 1.047, MRAD_TO_MOA(1)] select (GVAR(workingMemory) select 7);
             private _clickNumber = GVAR(workingMemory) select 8;
             private _clickInterval = _clickSize / _clickNumber;
 

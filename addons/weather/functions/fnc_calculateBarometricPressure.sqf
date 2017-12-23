@@ -15,4 +15,4 @@
  */
 #include "script_component.hpp"
 
-((1013.25 - 10 * overcast) * (1 - (0.0065 * (EGVAR(common,mapAltitude) + _this)) / (KELVIN(GVAR(currentTemperature)) + 0.0065 * EGVAR(common,mapAltitude))) ^ 5.255754495);
+((1013.25 - 10 * GVAR(currentOvercast)) * (1 - (0.0065 * (EGVAR(common,mapAltitude) + _this)) / (KELVIN(GVAR(currentTemperature)) + 0.0065 * EGVAR(common,mapAltitude))) ^ 5.255754495);

@@ -115,7 +115,7 @@ private _fnc_onUnload = {
 };
 
 private _fnc_onConfirm = {
-    params [["_ctrlButtonOK", controlNull, [controlNull]]];
+    params ["_ctrlButtonOK"];
 
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};

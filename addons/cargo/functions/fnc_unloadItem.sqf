@@ -55,7 +55,7 @@ if (_item isEqualType objNull) then {
     // do both on server to ensure they are executed in the correct order
     [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
 } else {
-    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
+    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);
 };
 

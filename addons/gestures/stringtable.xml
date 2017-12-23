@@ -2,20 +2,20 @@
 <Project name="ACE">
     <Package name="Gestures">
         <Key ID="STR_ACE_Gestures_ACEKeybindCategoryGestures">
-            <English>ACE3 Gestures</English>
-            <German>ACE3 Gesten</German>
-            <Polish>ACE3 Gesty</Polish>
-            <Czech>ACE3 Posunky</Czech>
-            <French>ACE3 Gestes</French>
-            <Hungarian>ACE3 Kézjelek</Hungarian>
-            <Italian>Gesti ACE3</Italian>
-            <Portuguese>ACE3 Gestos</Portuguese>
-            <Russian>ACE3 Жесты</Russian>
-            <Spanish>ACE3 Gestos</Spanish>
-            <Japanese>ACE3 ジェスチャー</Japanese>
-            <Korean>ACE3 수신호</Korean>
-            <Chinesesimp>ACE3 手势</Chinesesimp>
-            <Chinese>ACE3 手勢</Chinese>
+            <English>ACE Gestures</English>
+            <German>ACE Gesten</German>
+            <Polish>ACE Gesty</Polish>
+            <Czech>ACE Posunky</Czech>
+            <French>ACE Gestes</French>
+            <Hungarian>ACE Kézjelek</Hungarian>
+            <Italian>ACE Gesti</Italian>
+            <Portuguese>ACE Gestos</Portuguese>
+            <Russian>ACE Жесты</Russian>
+            <Spanish>ACE Gestos</Spanish>
+            <Japanese>ACE ジェスチャー</Japanese>
+            <Korean>ACE 수신호</Korean>
+            <Chinesesimp>ACE 手势</Chinesesimp>
+            <Chinese>ACE 手勢</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Name">
             <English>ACE Gestures</English>
@@ -24,7 +24,7 @@
             <Czech>ACE Posunky</Czech>
             <French>ACE Gestes</French>
             <Hungarian>ACE Kézjelek</Hungarian>
-            <Italian>Gesti ACE</Italian>
+            <Italian>ACE Gesti</Italian>
             <Portuguese>ACE Gestos</Portuguese>
             <Russian>ACE Жесты</Russian>
             <Spanish>ACE Gestos</Spanish>

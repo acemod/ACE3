@@ -7,6 +7,7 @@
             <Italian>LOADOUT AEREO</Italian>
             <Chinese>飛機武裝配置</Chinese>
             <Chinesesimp>飞机武装配置</Chinesesimp>
+            <Korean>항공기 무장</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_LoadoutsFor">
             <English>Loadouts for %1</English>
@@ -14,6 +15,7 @@
             <Italian>Loadouts per %1</Italian>
             <Chinese>%1用的武裝配置</Chinese>
             <Chinesesimp>%1用的武装配置</Chinesesimp>
+            <Korean>%1 무장</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylons">
             <English>Configure Pylons</English>
@@ -21,6 +23,7 @@
             <Italian>Configura Piloni</Italian>
             <Chinese>定義派龍架</Chinese>
             <Chinesesimp>定义派龙架</Chinesesimp>
+            <Korean>파일런 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_Category_Pylons">
             <English>Pylons</English>
@@ -28,6 +31,7 @@
             <Italian>Piloni</Italian>
             <Chinese>派龍架</Chinese>
             <Chinesesimp>派龙架</Chinesesimp>
+            <Korean>파일런</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_Empty">
             <English>&lt;empty&gt;</English>
@@ -35,6 +39,7 @@
             <Italian>&lt;vuoto&gt;</Italian>
             <Chinese>&lt;空&gt;</Chinese>
             <Chinesesimp>&lt;空&gt;</Chinesesimp>
+            <Korean>&lt;비어있음&gt;</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_BannerText">
             <English>Pylons that are colored red will have to be manually rearmed.</English>
@@ -42,6 +47,7 @@
             <Italian>I Piloni di colore rosso devono essere riarmati manualmente.</Italian>
             <Chinese>以紅色標記出的派龍架必須以手動方式進行彈藥整補。</Chinese>
             <Chinesesimp>以红色标记出的派龙架必须以手动方式进行弹药整补。</Chinesesimp>
+            <Korean>붉은색의 파일런은 수동으로 재무장해야 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
@@ -49,6 +55,7 @@
             <Italian>% sta già configurando questo aereo!</Italian>
             <Chinese>%1已經正在定義此飛機的武裝配置!</Chinese>
             <Chinesesimp>%1已经正在定义此飞机的武装配置!</Chinesesimp>
+            <Korean>이미 이 항공기에 장착되어 있음 (%1)</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_ReplacingPylon">
             <English>Replacing pylon %1 out of %2...</English>
@@ -56,6 +63,7 @@
             <Italian>Sostituendo pilone %1 al posto di %2...</Italian>
             <Chinese>共有%2個派龍架，正在整補%1號派龍架中...</Chinese>
             <Chinesesimp>共有%2个派龙架，正在整补%1号派龙架中...</Chinesesimp>
+            <Korean>교체중 (%2 -&gt; %1)</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_Stopped">
             <English>Stopped at pylon %1!</English>
@@ -63,6 +71,15 @@
             <Italian>Fermato al pilone %1!</Italian>
             <Chinese>已停止在%1號派龍架!</Chinese>
             <Chinesesimp>已停止在%1号派龙架!</Chinesesimp>
+            <Korean>%1 파일런이 멈춤</Korean>
+        </Key>
+        <Key ID="STR_ACE_Pylons_TooFar">
+            <English>Vehicle too far</English>
+            <Italian>Veicolo troppo lontano</Italian>
+            <Korean>차량이 너무 멈</Korean>
+            <Chinese>載具過遠</Chinese>
+            <Chinesesimp>载具过远</Chinesesimp>
+            <Japanese>車両が遠すぎます</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_Enabled">
             <English>Enable Pylons Menu</English>
@@ -70,6 +87,7 @@
             <Italian>Abilita Menu Piloni</Italian>
             <Chinese>啟用派龍架選單</Chinese>
             <Chinesesimp>启用派龙架选单</Chinesesimp>
+            <Korean>파일런 메뉴 활성</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_Enabled_description">
             <English>Enable pylon configuration menu for aircraft.</English>
@@ -77,6 +95,7 @@
             <Italian>Abilita il menù di configurazione piloni per aereo.</Italian>
             <Chinese>啟用後可透過派龍架選單來定義飛機的武裝配置。</Chinese>
             <Chinesesimp>启用后可透过派龙架选单来定义飞机的武装配置。</Chinesesimp>
+            <Korean>항공기의 파일런 설정 메뉴를 활성합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -84,6 +103,7 @@
             <Italian>Riarma Nuovi Piloni</Italian>
             <Chinese>重新武裝新的派龍架</Chinese>
             <Chinesesimp>重新武装新的派龙架</Chinesesimp>
+            <Korean>새파일런 재무장</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons_description">
             <English>Automatically rearm new pylons from the nearest rearm vehicle.</English>
@@ -91,6 +111,7 @@
             <Italian>Riarma automaticamente i nuovi piloni dal veicoli di riarmo più vicino.</Italian>
             <Chinese>自動從附近的整補載具中為派龍架進行彈藥整補。</Chinese>
             <Chinesesimp>自动从附近的整补载具中为派龙架进行弹药整补。</Chinesesimp>
+            <Korean>근처의 재무장 차량에서 빈 파일런을 자동으로 재무장 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon">
             <English>Time Per Pylon</English>
@@ -98,6 +119,7 @@
             <Italian>Tempo Per Pilone</Italian>
             <Chinese>派龍架整補所需時間(個別)</Chinese>
             <Chinesesimp>派龙架整补所需时间(个别)</Chinesesimp>
+            <Korean>파일런당 시간</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
@@ -105,6 +127,7 @@
             <Italian>Il tempo che impiega ogni pilone ad essere sostituito (in secondi).</Italian>
             <Chinese>每個派龍架需花多久時間進行整補(單位為秒)。</Chinese>
             <Chinesesimp>每个派龙架需花多久时间进行整补(单位为秒)。</Chinesesimp>
+            <Korean>파일런을 재설정 하는데 걸리는 시간 (초)</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance">
             <English>Search Distance</English>
@@ -112,6 +135,7 @@
             <Italian>Distanza di Ricerca</Italian>
             <Chinese>搜索距離</Chinese>
             <Chinesesimp>搜索距离</Chinesesimp>
+            <Korean>검색 반경</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance_description">
             <English>The distance an aircraft needs to be from a rearm vehicle.</English>
@@ -119,6 +143,7 @@
             <Italian>La distanza necessaria per un aereo da un veicolo di riarmo.</Italian>
             <Chinese>設定飛機必須距離整補載具多少公尺才能進行彈藥整補。</Chinese>
             <Chinesesimp>设定飞机必须距离整补载具多少公尺才能进行弹药整补。</Chinesesimp>
+            <Korean>항공기에서 재보급 가능한 재무장 차량을 찾습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer">
             <English>Require Engineer</English>
@@ -126,6 +151,7 @@
             <Italian>Necessita Ingegnere</Italian>
             <Chinese>需要工兵</Chinese>
             <Chinesesimp>需要工兵</Chinesesimp>
+            <Korean>정비병 요구</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer_description">
             <English>Require an engineer.</English>
@@ -133,6 +159,7 @@
             <Italian>Necessita un ingegnere.</Italian>
             <Chinese>需要工兵才能進行彈藥整補。</Chinese>
             <Chinesesimp>需要工兵才能进行弹药整补。</Chinesesimp>
+            <Korean>정비병이 필요합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit">
             <English>Require Toolkit</English>
@@ -140,6 +167,7 @@
             <Italian>Necessita Kit Riparazione</Italian>
             <Chinese>需要工具包</Chinese>
             <Chinesesimp>需要工具包</Chinesesimp>
+            <Korean>툴킷 요구</Korean>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit_description">
             <English>Require a toolkit in inventory.</English>
@@ -147,6 +175,7 @@
             <Italian>Necessita un kit di riparazione nell'inventario</Italian>
             <Chinese>需要工具包才能進行彈藥整補。</Chinese>
             <Chinesesimp>需要工具包才能进行弹药整补。</Chinesesimp>
+            <Korean>툴킷이 필요합니다.</Korean>
         </Key>
     </Package>
 </Project>

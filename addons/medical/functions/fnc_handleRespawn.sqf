@@ -1,6 +1,6 @@
 /*
- * Author: Zakant
- * Handles respawn of a unit.
+ * Author: KoffeinFlummi
+ * Called when a unit is Respawned
  *
  * Arguments:
  * 0: The Unit <OBJECT>
@@ -9,22 +9,24 @@
  * None
  *
  * Example:
- * [player] call ace_medical_fnc_handleRespawn
+ * [bob] call ACE_medical_fnc_handleRespawn
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_unit"];
-TRACE_2("handleRespawn",_unit,local _unit);
 
-if (!local _unit) exitWith {};
+// reset all variables. @todo GROUP respawn?
+[_unit] call FUNC(init);
 
-_unit call FUNC(init); // Call init to reset the medical states for the unit.
-[_unit, GVAR(STATE_MACHINE), _unit call FUNC(getUnitState), "Default"] call CBA_statemachine_fnc_manualTransition; // Move the unit to the default medical state
-#ifdef DEBUG_MODE_FULL
-private _state = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-TRACE_1("current state",_state);
-#endif
+// Reset captive status for respawning unit
+if (!(_unit getVariable ["ACE_isUnconscious", false])) then {
+    [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+};
 
+// Remove maximum unconsciousness time handler
+_maxUnconHandle = _unit getVariable [QGVAR(maxUnconTimeHandle), -1];
+if (_maxUnconHandle > 0) then {
+    [_maxUnconHandle] call CBA_fnc_removePerFrameHandler;
+};

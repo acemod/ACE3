@@ -1,5 +1,6 @@
 
 PREP(addObjectToCurator);
+PREP(bi_moduleArsenal);
 PREP(bi_moduleCurator);
 PREP(bi_moduleMine);
 PREP(bi_moduleProjectile);

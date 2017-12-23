@@ -63,6 +63,28 @@ class Cfg3DEN {
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
                         defaultValue = 0;
                     };
+                    class GVAR(editorLoadedTracks) {
+                        displayName = CSTRING(editorLoadedTracks);
+                        tooltip = CSTRING(editorLoadedTracks_tooltip);
+                        property = QGVAR(editorLoadedTracks);
+                        control = "Edit";
+                        expression = "_this setVariable ['%s',_value];";
+                        defaultValue = "[0,1] select (_this isKindOf 'Tank')"; // must match pre init script
+                        validate = "number";
+                        condition = "objectHasInventoryCargo";
+                        typeName = "NUMBER";
+                    };
+                    class GVAR(editorLoadedWheels) {
+                        displayName = CSTRING(editorLoadedWheels);
+                        tooltip = CSTRING(editorLoadedWheels_tooltip);
+                        property = QGVAR(editorLoadedWheels);
+                        control = "Edit";
+                        expression = "_this setVariable ['%s',_value];";
+                        defaultValue = "[0,1] select (_this isKindOf 'Car')"; // must match pre init script
+                        validate = "number";
+                        condition = "objectHasInventoryCargo";
+                        typeName = "NUMBER";
+                    };
                 };
             };
         };

@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="finger">
+        <Key ID="STR_ACE_finger_DisplayName">
+            <English>Pointing</English>
+            <German>Fingerzeig</German>
+            <Italian>Puntamento</Italian>
+            <Chinese>指向指示器</Chinese>
+            <Chinesesimp>指向指示器</Chinesesimp>
+            <Japanese>指差し</Japanese>
+        </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
             <German>Zeigersymbol einem selbst anzeigen</German>

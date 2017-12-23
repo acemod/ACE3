@@ -26,7 +26,7 @@
             <Chinese>定義噴漆系統預設設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
-            <English>Quick Tag</English>
+            <English>Spray Paint - Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
             <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
@@ -40,7 +40,7 @@
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
-            <Japanese>インタラクション ポインにむけてタグ付けをします。</Japanese>
+            <Japanese>インタラクション ポイントにむけてタグ付けをします。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
@@ -52,7 +52,7 @@
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Russian>Повторить последний</Russian>
-            <Japanese>最後の使用</Japanese>
+            <Japanese>前回と同じ</Japanese>
             <Polish>Ostatnio użyte</Polish>
             <German>Zuletzt benutzt</German>
             <Korean>최근 사용</Korean>
@@ -64,7 +64,7 @@
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
             <Russian>Случайный Х</Russian>
-            <Japanese>無作為な X印</Japanese>
+            <Japanese>無作為なX印</Japanese>
             <Polish>Losowy X</Polish>
             <German>Zufällig X</German>
             <Korean>무작위 X</Korean>
@@ -110,7 +110,7 @@
             <Czech>X černě</Czech>
             <Portuguese>X em preto</Portuguese>
             <Russian>Черный Х</Russian>
-            <Japanese>黒の X印</Japanese>
+            <Japanese>黒のX印</Japanese>
             <Korean>검정 X</Korean>
             <Chinesesimp>黑色X标记</Chinesesimp>
             <Chinese>黑色X標記</Chinese>
@@ -125,7 +125,7 @@
             <Czech>X červeně</Czech>
             <Portuguese>X em vermelho</Portuguese>
             <Russian>Красный Х</Russian>
-            <Japanese>赤の X印</Japanese>
+            <Japanese>赤のX印</Japanese>
             <Korean>빨간 X</Korean>
             <Chinesesimp>红色X标记</Chinesesimp>
             <Chinese>紅色X標記</Chinese>
@@ -140,7 +140,7 @@
             <Czech>X zeleně</Czech>
             <Portuguese>X em verde</Portuguese>
             <Russian>Зеленый Х</Russian>
-            <Japanese>緑の X印</Japanese>
+            <Japanese>緑のX印</Japanese>
             <Korean>초록 X</Korean>
             <Chinesesimp>绿色X标记</Chinesesimp>
             <Chinese>綠色X標記</Chinese>
@@ -155,7 +155,7 @@
             <Czech>X modře</Czech>
             <Portuguese>X em azul</Portuguese>
             <Russian>Синий Х</Russian>
-            <Japanese>青の X印</Japanese>
+            <Japanese>青のX印</Japanese>
             <Korean>파랑 X</Korean>
             <Chinesesimp>蓝色X标记</Chinesesimp>
             <Chinese>藍色X標記</Chinese>

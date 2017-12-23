@@ -158,7 +158,7 @@
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
             <English>Barometric pressure at which the scope was zeroed</English>
             <German>Luftdruck bei dem das Zielfernrohr genullt wurde</German>
-            <Japanese>気圧の参照</Japanese>
+            <Japanese>スコープがゼロインされる気圧</Japanese>
             <Korean>조준경 영점조준시 기압</Korean>
             <Polish>Ciśnienie barometryczne, przy którym celownik został wyzerowany</Polish>
             <French>Pression barométrique de référence pour le zérotage des optiques</French>
@@ -209,6 +209,34 @@
             <Italian>Ricava la pressione barometrica dall'altitudine del terreno</Italian>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
+            <English>Use legacy UI</English>
+            <German>Vorheriges UI verwenden</German>
+            <Italian>Usa UI precedente</Italian>
+            <Chinese>使用舊版介面</Chinese>
+            <Chinesesimp>使用旧版介面</Chinesesimp>
+            <Japanese>昔の UI を使用</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_useLegacyUI_description">
+            <English>Displays elevation and windage with signed numbers</English>
+            <German>Anzeige der Absehenverstellungen mit vorzeichenbehafteten Zahlen</German>
+            <Italian>Visualizza l'elevazione e la derivazione con i numeri firmati</Italian>
+            <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
+            <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
+            <Japanese>印付きの数字で仰角と横風を表示</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
+            <English>Simplified zeroing</English>
+            <German>Vereinfachte Nullung</German>
+            <Japanese>簡略なゼロイン</Japanese>
+            <Italian>Azzeramento semplificato</Italian>
+        </Key>
+        <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
+            <English>Replicates the vanilla zeroing system for riflescopes.</English>
+            <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
+            <Japanese>標準で使われるライフルスコープ用のゼロイン システムを複製します。</Japanese>
+            <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -344,7 +372,7 @@
             <Polish>Zresetuj wyzerowanie</Polish>
             <Russian>Сбросить корректировку</Russian>
             <Spanish>Establecer ajuste a cero</Spanish>
-            <Italian>Resetta i valori del tiro</Italian>
+            <Italian>Imposta i valori dell'azzeramento</Italian>
             <French>RAZ corrections</French>
             <Hungarian>Állítások nullázása</Hungarian>
             <Portuguese>Zerar ajuste</Portuguese>
@@ -354,16 +382,49 @@
             <Chinesesimp>设定归零</Chinesesimp>
             <Chinese>設定歸零</Chinese>
         </Key>
+        <Key ID="STR_ACE_Scopes_ResetZero">
+            <English>Reset zero adjustment</English>
+            <German>Nullung zurücksetzen</German>
+            <Japanese>ゼロイン調節を初期化</Japanese>
+            <Italian>Resetta i valori dell'azzeramento</Italian>
+        </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
             <German>Dieses Modul fügt Absehenverstellung (horizontal und vertikal) zu Zielfernrohren hinzu.</German>
-            <Japanese>モジュールは高倍率ライフル スコープにおいて横風と仰角の調節ができます。</Japanese>
+            <Japanese>このモジュールは高倍率ライフル スコープにおいて横風と仰角の調節ができます。</Japanese>
             <Korean>이 모듈은 고성능 조준경에 조준 나사를 이용한 편차 및 고도 조절 기능을 더해줍니다.</Korean>
             <Polish>Ten moduł włącza pokrętła kalibracyjne poprawki na wiatr oraz poprawki wysokości dla celowników o dużym powiększeniu.</Polish>
             <French>Ce module ajoute les tambours de correction de la hausse et de dérive sur les optiques de visée à fort grossissement.</French>
             <Italian>Questo modulo aggiunge lo spostamento dell'aria e la regolazione dell'elevazione delle torrette in mirini a lunga gittata</Italian>
             <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏，距离用的调整纽。</Chinesesimp>
             <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏，距離用的調整紐。</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentDown">
+            <English>%1D</English>
+            <German>%1T</German>
+            <French>%1B</French>
+            <Italian>%1D</Italian>
+            <Chinese>%1D</Chinese>
+            <Chinesesimp>%1D</Chinesesimp>
+            <Japanese>%1D</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
+            <English>%1L</English>
+            <German>%1L</German>
+            <French>%1G</French>
+            <Italian>%1L</Italian>
+            <Chinese>%1L</Chinese>
+            <Chinesesimp>%1L</Chinesesimp>
+            <Japanese>%1L</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
+            <English>%1R</English>
+            <German>%1R</German>
+            <French>%1D</French>
+            <Italian>%1R</Italian>
+            <Chinese>%1R</Chinese>
+            <Chinesesimp>%1R</Chinesesimp>
+            <Japanese>%1R</Japanese>
         </Key>
     </Package>
 </Project>

@@ -65,39 +65,7 @@
             <Chinesesimp>使用ACE天气模块来同步所有客户端的天气状态(多人游戏)</Chinesesimp>
             <Chinese>使用ACE天氣模塊來同步所有客戶端的天氣狀態(多人遊戲)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Weather_enableServerController_DisplayName">
-            <English>Weather propagation</English>
-            <Polish>Zmiany pogody</Polish>
-            <Spanish>Propagación del clima</Spanish>
-            <German>Wetterübertragung</German>
-            <Czech>Změny počasí</Czech>
-            <Portuguese>Propagação do clima</Portuguese>
-            <French>Propagation de la météo</French>
-            <Hungarian>Időjárás-változás</Hungarian>
-            <Russian>Единая погода для всех</Russian>
-            <Italian>Propagazione Meteo</Italian>
-            <Japanese>天候の統一</Japanese>
-            <Korean>기후 전파</Korean>
-            <Chinesesimp>天气状态广播</Chinesesimp>
-            <Chinese>天氣狀態廣播</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Weather_enableServerController_Description">
-            <English>Enables server side weather propagation</English>
-            <Polish>Aktywuje zmiany pogody po stronie serwera</Polish>
-            <Spanish>Permite al servidor controlar la propagación del clima</Spanish>
-            <German>Aktiviere serverseitige Wetterübertragung</German>
-            <Czech>Aktivuje změny počasí na straně serveru</Czech>
-            <Portuguese>Ativa propagação de clima via server</Portuguese>
-            <French>Active la propagation météo par le serveur</French>
-            <Hungarian>Engedélyezi a szerveroldali időjárás-változást</Hungarian>
-            <Russian>Включает управление погодой на серверной стороне</Russian>
-            <Italian>Abilita propagazione meteo lato server</Italian>
-            <Japanese>サーバ側による天候の統一を有効化</Japanese>
-            <Korean>서버의 기후를 전파합니다 </Korean>
-            <Chinesesimp>启用伺服器的天气状态广播</Chinesesimp>
-            <Chinese>啟用伺服器的天氣狀態廣播</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Weather_useACEWeather_DisplayName">
+        <Key ID="STR_ACE_Weather_enabled_DisplayName">
             <English>ACE Weather</English>
             <Polish>Pogoda ACE</Polish>
             <Spanish>Clima ACE</Spanish>
@@ -113,77 +81,15 @@
             <Chinesesimp>ACE 天气</Chinesesimp>
             <Chinese>ACE 天氣</Chinese>
         </Key>
-        <Key ID="STR_ACE_Weather_useACEWeather_Description">
-            <English>Overrides the default weather (editor, mission settings) with ACE weather (map based)</English>
-            <Polish>Nadpisuje domyślne ustawienia pogody (edytor, wywiad) przy użyciu pogody ACE (zależna od mapy)</Polish>
-            <Spanish>Sobreescribe el sistema climático por defecto (editor, ajustes de mision) con clima del ACE (basado en el mapa)</Spanish>
-            <German>Überschreibt das Standardwetter (Editor, Missionseinstellungen) mit dem ACE-Wetter (kartenbasiert)</German>
-            <Czech>Přepíše výchozí počasí (editor, nastavení mise) s ACE počasím (podle mapy)</Czech>
-            <Portuguese>Sobreescreve o clima padrão (editor, ajustes de missão) pelo sistema de clima ACE (baseado por mapa)</Portuguese>
-            <French>Force la métao par défaut (éditeur, paramètres de mission) avec la météo ACE (basé sur la carte)</French>
-            <Hungarian>Felülbírálja az alapértelmezett időjárást (editor, küldetésbeállítások) az ACE időjárással (térkép-alapú) </Hungarian>
-            <Russian>Заменяет погоду по-умолчанию (из редактора, настроек миссии) погодой ACE (на основе карты)</Russian>
-            <Italian>Scavalca il meteo default (editor, parametri missione) con il meteo ACE (basato su mappa)</Italian>
-            <Japanese>ACE 天候 (マップを元) による標準の天候 (エディタやミッション設定) を上書きします。</Japanese>
-            <Korean>기존의 기후(에디터, 임무 설정)를 ACE 기후로 치환합니다. (지도에 따라)</Korean>
-            <Chinesesimp>使ACE天气覆盖预设的天气 (编辑任务设置)</Chinesesimp>
-            <Chinese>使ACE天氣覆蓋預設的天氣 (編輯任務設置)</Chinese>
+        <Key ID="STR_ACE_Weather_enabled_Description">
+            <English>Expands the existing weather by temperature, humidity and air pressure.</English>
+            <German>Erweitert das vorhandene Wetter um Temperatur, Luftfeuchtigkeit und Luftdruck.</German>
+            <Italian>Espande il tempo esistente per temperatura, umidità e pressione dell'aria.</Italian>
+            <Chinese>透過增加濕度、溫度與氣壓來增強天氣模擬的表現。</Chinese>
+            <Chinesesimp>透过增加湿度、温度与气压来增强天气模拟的表现。</Chinesesimp>
+            <Japanese>気温や湿度、大気圧によって既存の天候を拡張します。</Japanese>
         </Key>
-        <Key ID="STR_ACE_Weather_syncWind_DisplayName">
-            <English>Sync Wind</English>
-            <Polish>Synchronizuj wiatr</Polish>
-            <Spanish>Sincronizar viento</Spanish>
-            <German>Wind synchronisieren</German>
-            <Czech>Synchronizuj vítr</Czech>
-            <Portuguese>Sincronizar vento</Portuguese>
-            <French>Synchronisation du vent</French>
-            <Hungarian>Szél szinkronizálása</Hungarian>
-            <Russian>Синхрониз. ветер</Russian>
-            <Italian>Sincronizza Vento</Italian>
-            <Japanese>風を同期</Japanese>
-            <Korean>바람 동기화</Korean>
-            <Chinesesimp>同步风</Chinesesimp>
-            <Chinese>同步風</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Weather_syncWind_Description">
-            <English>Synchronizes wind</English>
-            <Polish>Synchronizuje wiatr</Polish>
-            <Spanish>Sincroniza el viento</Spanish>
-            <German>Synchronisiert den Wind</German>
-            <Czech>Synchronizace větru</Czech>
-            <Portuguese>Sincroniza o vento</Portuguese>
-            <French>Synchronise le vent</French>
-            <Hungarian>Szinkronizálja a szelet</Hungarian>
-            <Russian>Синхронизирует ветер</Russian>
-            <Italian>Sincronizza Vento</Italian>
-            <Japanese>風を同期</Japanese>
-            <Korean>바람을 동기화 합니다</Korean>
-            <Chinesesimp>同步风</Chinesesimp>
-            <Chinese>同步風</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Weather_syncMisc_DisplayName">
-            <English>Sync Misc</English>
-            <Polish>Synchronizuj różne</Polish>
-            <Spanish>Sincronizar otros</Spanish>
-            <German>Sonstiges synchronisieren</German>
-            <Czech>Synchronizuj různé</Czech>
-            <Portuguese>Sincronizar outros</Portuguese>
-            <French>Synchronisation autres</French>
-            <Hungarian>Egyéb szinkronizálása</Hungarian>
-            <Russian>Синхрониз. прочее</Russian>
-            <Italian>Sincronizza Misto</Italian>
-            <Japanese>その他を同期</Japanese>
-            <Korean>기타 동기화</Korean>
-            <Chinesesimp>同步杂项</Chinesesimp>
-            <Chinese>同步雜項</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Weather_syncMisc_Description">
-            <English>Synchronizes rainbow, fog, temperature and humidity</English>
-            <Italian>Sincronizza arcobaleno, nebbia, temperatura e umidità</Italian>
-            <Chinese>同步彩虹、霧、溫度與濕度</Chinese>
-            <Chinesesimp>同步彩虹、雾、温度与湿度</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
+        <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
             <Polish>Interwał aktualizacji</Polish>
             <Spanish>Intervalo de actualización</Spanish>
@@ -193,13 +99,13 @@
             <French>Intervalle de synchronisation</French>
             <Hungarian>Frissítési intervallum</Hungarian>
             <Russian>Интервал обновления</Russian>
-            <Italian>Intervallo Aggiornamenti</Italian>
+            <Italian>Intervallo Aggiornamento</Italian>
             <Japanese>更新間隔</Japanese>
             <Korean>갱신 간격</Korean>
             <Chinesesimp>更新间隔</Chinesesimp>
             <Chinese>更新間隔</Chinese>
         </Key>
-        <Key ID="STR_ACE_Weather_serverUpdateInterval_Description">
+        <Key ID="STR_ACE_Weather_updateInterval_Description">
             <English>Defines the interval (seconds) between weather updates</English>
             <Polish>Określa interwał (sekundy) pomiędzy aktualizacjami pogody</Polish>
             <Spanish>Defina el intervalo (en segundos) entre actualizacions de clima</Spanish>
@@ -209,11 +115,27 @@
             <French>Défini un intervalle (secondes) entre deux synchronisations</French>
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
-            <Italian>Definisce l'intervallo (in secondi) tra aggiornamenti del meteo</Italian>
+            <Italian>Definisce l'intervallo(in secondi) tra aggiornamenti del meteo</Italian>
             <Japanese>天候を更新する間隔を定義します。(秒)</Japanese>
             <Korean>기후를 갱신 하는 간격을 초 단위로 정합니다.</Korean>
             <Chinesesimp>设定天气更新的时间间隔(秒)</Chinesesimp>
             <Chinese>設定天氣更新的時間間隔(秒)</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Weather_windSimulation_DisplayName">
+            <English>Wind Simulation (map based)</English>
+            <German>Wind Simulation (kartenbasiert)</German>
+            <Italian>Simulazione del Vento (basato sulla mappa)</Italian>
+            <Chinese>風力模擬(基於地圖)</Chinese>
+            <Chinesesimp>风力模拟(基于地图)</Chinesesimp>
+            <Japanese>風シミュレーション (マップを基に)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Weather_windSimulation_Description">
+            <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
+            <German>Aktiviert die kartenbasierte Windsimulation (überschreibt Vanilla Wind)</German>
+            <Italian>Abilita la simulazione del vento basato sulla mappa (sovrascrive il vento vanilla)</Italian>
+            <Chinese>啟用後將遵照地圖特色進行風力模擬(覆蓋掉官方原版的風力模擬)</Chinese>
+            <Chinesesimp>启用后将遵照地图特色进行风力模拟(覆盖掉官方原版的风力模拟)</Chinesesimp>
+            <Japanese>マップを基にした風シミュレーションを有効化 (標準の風を上書き)</Japanese>
         </Key>
     </Package>
 </Project>
