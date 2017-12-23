@@ -29,7 +29,3 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_medical"};
 };
-
-class ACE_Extensions {
-    extensions[] += {"ace_medical"};
-};
