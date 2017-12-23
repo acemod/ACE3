@@ -19,8 +19,10 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-// close cellphone if open
-closeDialog 0;
+if (_unit == ace_player) then {
+    // close cellphone if open
+    closeDialog 0;
+};
 
 // Exit if no item:
 if (({_x == "ACE_DeadManSwitch"} count (items _unit)) == 0) exitWith {};
