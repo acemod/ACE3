@@ -271,6 +271,33 @@ class GVAR(display) {
                 };
             };
         };
+        class statsBox: RscControlsGroupNoScrollbars {
+            idc = -1;
+            x = QUOTE(0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(WIDTH_TOTAL);
+            h = QUOTE(40 * GRID_H);
+            class controls {
+                class statsBackground: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(WIDTH_TOTAL - 2 * WIDTH_GAP);
+                    h = QUOTE(40 * GRID_H);
+                    colorBackground[] = {0,0,0,0.5};
+                };
+            };
+        };
+        class statsButton: ctrlButton {
+            idc = -1;
+            style= 2;
+            text="»";
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(6 * GRID_W);
+            h = QUOTE(6 * GRID_H);
+            sizeEx = QUOTE(5 * GRID_H)
+        };
         class mouseBlock: RscText {
             idc = IDC_mouseBlock;
             style = 16;
