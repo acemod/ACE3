@@ -144,50 +144,8 @@ private _cargoNumber = -1;
         };
     } else {
         private ["_name", "_icon", "_statement", "_params"];
-        if !(_turretPath isEqualTo []) then { // all turrets including FFV
-            if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
-            private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
-            if (_isInVehicle) then {
-                private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
-                TO_STRING(_gunnerCompartments);
-                if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
-                _params = [_vehicle, _turretPath];
-                _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInTurret)};
-            } else {
-                _params = ["GetInTurret", _vehicle, _turretPath];
-                _statement = {_player action (_this select 2)};
-            };
-            _name = getText (_turretConfig >> "gunnerName");
-            switch (_role) do {
-                case "gunner": {
-                    if (IS_CREW_UAV(_vehicleConfig)) then {breakTo "crewLoop"};
-                    _icon = "A3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
-                };
-                case "commander": {
-                    _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa";
-                };
-                default {
-                    _icon = [
-                        "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
-                        "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"
-                    ] select _isPersonTurret;
-                };
-            };
-        } else { // cargo, no FFV
-            if (_cargoIndex > -1) then {
-                INC(_cargoNumber);
-                if (_vehicle lockedCargo _cargoIndex) then {breakTo "crewLoop"};
-                if (_isInVehicle) then {
-                    if (_compartment != (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
-                    _params = [_vehicle, _cargoIndex];
-                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInCargo)};
-                } else {
-                    _params = ["GetInCargo", _vehicle, _cargoNumber];
-                    _statement = {_player action (_this select 2)};
-                };
-                _name = format ["%1 %2", localize "str_getin_pos_passenger", _cargoNumber + 1];
-                _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_cargo_ca.paa";
-            } else { // driver
+        switch (toLower _role) do {
+            case "driver": {
                 if (
                     lockedDriver _vehicle
                     || {IS_CREW_UAV(_vehicleConfig)}
@@ -209,6 +167,50 @@ private _cargoNumber = -1;
                 } else {
                     _name = localize "str_driver";
                     _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa";
+                };
+            };
+            case "cargo": {
+                INC(_cargoNumber);
+                if (_vehicle lockedCargo _cargoIndex) then {breakTo "crewLoop"};
+                if (_isInVehicle) then {
+                    if (_compartment != (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
+                    _params = [_vehicle, _cargoIndex];
+                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInCargo)};
+                } else {
+                    _params = ["GetInCargo", _vehicle, _cargoNumber];
+                    _statement = {_player action (_this select 2)};
+                };
+                _name = format ["%1 %2", localize "str_getin_pos_passenger", _cargoNumber + 1];
+                _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_cargo_ca.paa";
+            };
+            default { // all turrets including FFV
+                if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
+                private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
+                if (_isInVehicle) then {
+                    private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
+                    TO_STRING(_gunnerCompartments);
+                    if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
+                    _params = [_vehicle, _turretPath];
+                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInTurret)};
+                } else {
+                    _params = ["GetInTurret", _vehicle, _turretPath];
+                    _statement = {_player action (_this select 2)};
+                };
+                _name = getText (_turretConfig >> "gunnerName");
+                switch (toLower _role) do {
+                    case "gunner": {
+                        if (IS_CREW_UAV(_vehicleConfig)) then {breakTo "crewLoop"};
+                        _icon = "A3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
+                    };
+                    case "commander": {
+                        _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa";
+                    };
+                    default {
+                        _icon = [
+                            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
+                            "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"
+                        ] select _isPersonTurret;
+                    };
                 };
             };
         };
