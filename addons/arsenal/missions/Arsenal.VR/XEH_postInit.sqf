@@ -52,6 +52,7 @@ cba_diagnostic_projectileMaxLines = 10;
                     ] call BIS_fnc_GUImessage;
 
                     if (_return) then {
+                        profileNamespace setVariable [QGVAR(missionLastLoadout), getUnitLoadout player];
                         _display closeDisplay 2;
                         findDisplay 46 closeDisplay 0;
                     };

@@ -2,6 +2,12 @@
 
 params ["_unit"];
 
+private _loadout = profileNamespace getVariable QGVAR(missionLastLoadout);
+
+if (!isNil "_loadout") then {
+    _unit setUnitLoadout _loadout;
+};
+
 _unit allowDamage false;
 
 //--- Static targets in various distance
