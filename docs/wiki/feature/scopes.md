@@ -33,9 +33,9 @@ Please not that the following key combinations are ACE3 default key binds.
 - Major adjustment right <kbd>Ctrl</kbd> + <kbd>⇧&nbsp;Shift</kbd> + <kbd>Page Up</kbd>.
 - Major adjustment left <kbd>Ctrl</kbd> + <kbd>⇧&nbsp;Shift</kbd> + <kbd>page Down</kbd>.
 
-### 2.3 Scopes Module: OPTIONS → GAME → CONFIGURE ADDONS
+### 2.3 Scopes Module
 
-<img src="{{ site.baseurl }}/img/wiki/feature/scope_module1.jpg" width="800" height="484" alt="Editor's scopes module" />
+<img src="{{ site.baseurl }}/img/wiki/feature/scope_module1.jpg" width="800" height="484" alt="CBA Settings scopes module" />
 
 
 ## 3. Dependencies
