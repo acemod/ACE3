@@ -52,23 +52,25 @@ if !(_loadoutsDisplay isEqualTo displayNull) then {
             case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
                 _return = false;
             };
-            case (_keyPressed == DIK_C && {_ctrlState}): {
-                _return = false;
-            };
-            case (_keyPressed == DIK_V && {_ctrlState}): {
-                _return = false;
-            };
-            case (_keyPressed == DIK_A && {_ctrlState}): {
-                _return = false;
-            };
-            case (_keyPressed == DIK_X && {_ctrlState}): {
-                _return = false;
-            };
         };
     };
 
-    if (GVAR(loadoutsPanelFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
-        _return = false;
+    switch true do {
+        case (_keyPressed == DIK_C && {_ctrlState}): {
+            _return = false;
+        };
+        case (_keyPressed == DIK_V && {_ctrlState}): {
+            _return = false;
+        };
+        case (_keyPressed == DIK_A && {_ctrlState}): {
+            _return = false;
+        };
+        case (_keyPressed == DIK_X && {_ctrlState}): {
+            _return = false;
+        };
+        case (GVAR(loadoutsPanelFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
+            _return = false;
+        };
     };
 } else {
 
