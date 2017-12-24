@@ -197,7 +197,7 @@ class GVAR(display) {
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonClose {
-                    idc = -1;
+                    idc = IDC_menuBarClose;
                     colorBackground[] = {0,0,0,0.8};
                     x = QUOTE(170 * GRID_W);
                     y = QUOTE(0);

@@ -60,6 +60,9 @@ cba_diagnostic_projectileMaxLines = 10;
                 true
             };
         }];
+
+        private _buttonClose = _display displayCtrl IDC_menuBarClose;
+        _buttonClose ctrlSetText localize "str_a3_rscdisplayarsenal_buttonok";
     } call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 

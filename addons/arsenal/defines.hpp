@@ -18,6 +18,7 @@
 #define IDC_totalWeightText 801
 #define IDC_message 9
 #define IDC_menuBar 10
+#define IDC_menuBarClose 1001
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102

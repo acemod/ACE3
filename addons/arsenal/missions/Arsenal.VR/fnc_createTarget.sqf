@@ -24,13 +24,13 @@ _target setSpeedMode "LIMITED";
 _target disableAI "TARGET";
 _target disableAI "AUTOTARGET";
 _target allowFleeing 0;
-_target setSpeaker "Base";
+_target setSpeaker "BASE";
 
 [{
     params ["_target", "_time"];
 
-    if (speaker _target == "Base") exitWith {time > _time};
-    _target setSpeaker "Base";
+    if (speaker _target == "BASE") exitWith {time > _time};
+    _target setSpeaker "BASE";
     false
 }, {}, [_target, time + 1]] call CBA_fnc_waitUntilAndExecute;
 
