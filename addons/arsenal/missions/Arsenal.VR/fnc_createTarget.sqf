@@ -24,8 +24,8 @@ _target setSpeedMode "LIMITED";
 _target disableAI "TARGET";
 _target disableAI "AUTOTARGET";
 _target allowFleeing 0;
-_target setSpeaker "BASE";
-[{_this setSpeaker "BASE"}, _target] call CBA_fnc_execNextFrame;
+_target setSpeaker "NoVoice";
+[{_this setSpeaker "NoVoice"}, _target] call CBA_fnc_execNextFrame;
 _player reveal [_target, 4];
 
 _target addVest vest _player;
