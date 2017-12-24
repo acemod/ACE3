@@ -18,6 +18,7 @@ class EGVAR(common,CompassControl);
 class GVAR(contextMenu): CtrlMenu {
     idc = IDC_CONTEXT;
 
+    itemSpacingW = 0;
     colorBackground[] = {0.1,0.1,0.1,1};
     class Items {
         items[] = {"Toggles"};
