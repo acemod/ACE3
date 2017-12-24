@@ -775,6 +775,8 @@ class GVAR(loadoutsDisplay) {
                     columns[]={0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90};
                     drawSideArrows=0;
                     disableOverflow=1;
+                    onSetFocus = QUOTE(GVAR(loadoutsPanelFocus) = true);
+                    onKillFocus = QUOTE(GVAR(loadoutsPanelFocus) = false);
                     onLBSelChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onSelChangedLoadouts));
                     onLBDblClick = QUOTE([ARR_2(ctrlparent (_this select 0), (ctrlParent (_this select 0)) displayCtrl IDC_buttonLoad)] call FUNC(buttonLoadoutsLoad));
                     x = QUOTE(0);
