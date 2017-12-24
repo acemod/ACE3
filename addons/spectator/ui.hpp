@@ -21,9 +21,31 @@ class GVAR(contextMenu): CtrlMenu {
     itemSpacingW = 0;
     colorBackground[] = {0.1,0.1,0.1,1};
     class Items {
-        items[] = {"Toggles"};
-        class Toggles {
-            text = "Toggles";
+        items[] = {"List","Camera","View"};
+        class List {
+            text = "Entity List";
+            items[] = {
+                "ListAI"
+            };
+        };
+        class ListAI {
+            text = "Show AI";
+        };
+        class Camera {
+            text = "Camera";
+            items[] = {
+                "BulletCam"
+            };
+        };
+        class BulletCam {
+            text = "Bullet Camera";
+            action = QUOTE(GVAR(uiBulletCam) = !GVAR(uiBulletCam));
+            data = QGVAR(uiBulletCam); // You need data attribute for checkbox apparently
+            type = "CheckBox";
+            default = 0; // Need to use commands to initalise this, but they seemingly don't work
+        };
+        class View {
+            text = "$STR_3DEN_Display3DEN_MenuBar_View_text";
             items[] = {
                 "ToggleLight",
                 "ToggleInfo",
@@ -32,13 +54,13 @@ class GVAR(contextMenu): CtrlMenu {
             };
         };
         class ToggleLight {
-            text = "Toggle Lights";
+            text = "$STR_3DEN_Display3DEN_MenuBar_ToggleFlashlight_text";
             action = QUOTE([ARR_2(displayNull, DIK_L)] call FUNC(ui_handleKeyDown));
             shortcuts[] = { DIK_L };
             picture="\a3\3DEN\Data\Displays\Display3DEN\ToolBar\flashlight_off_ca.paa";
         };
         class ToggleInfo {
-            text = "Toggle Widget";
+            text = "Toggle Unit Info";
             action = QUOTE([ARR_2(displayNull, DIK_I)] call FUNC(ui_handleKeyDown));
             shortcuts[] = { DIK_I };
         };
@@ -51,6 +73,9 @@ class GVAR(contextMenu): CtrlMenu {
             text = "Toggle Projectiles";
             action = QUOTE([ARR_2(displayNull, DIK_P)] call FUNC(ui_handleKeyDown));
             shortcuts[] = { DIK_P };
+            data = QGVAR(drawProjectiles);
+            type = "CheckBox";
+            default = 0;
         };
         class Default {
             enable = 0;

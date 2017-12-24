@@ -57,6 +57,9 @@ if (_init) then {
     GVAR(iconsToDraw)       = [];
     GVAR(projectilesToDraw) = [];
 
+    // Context menu toggles
+    GVAR(uiBulletCam) = false;
+
     // RMB tracking is used for follow camera mode
     GVAR(holdingRMB) = false;
 
@@ -119,11 +122,15 @@ if (_init) then {
     // Destroy the display
     SPEC_DISPLAY closeDisplay 1;
 
+    // Context menu no longer exists
+    SETUVAR(GVAR(context),nil);
+
     // Stop tracking everything
     GVAR(uiVisible)         = nil;
     GVAR(uiHelpVisible)     = nil;
     GVAR(uiMapVisible)      = nil;
     GVAR(uiWidgetVisible)   = nil;
+    GVAR(uiBulletCam)       = nil;
     GVAR(holdingRMB)        = nil;
     GVAR(uiMapHighlighted)  = nil;
     GVAR(curList)           = nil;
