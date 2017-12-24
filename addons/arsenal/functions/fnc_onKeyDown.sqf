@@ -68,7 +68,7 @@ if !(_loadoutsDisplay isEqualTo displayNull) then {
         case (_keyPressed == DIK_X && {_ctrlState}): {
             _return = false;
         };
-        case (GVAR(loadoutsPanelFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
+        case (GVAR(loadoutsPanelFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}): {
             _return = false;
         };
     };
