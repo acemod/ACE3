@@ -106,6 +106,7 @@
 #define IDC_buttonShare 306
 #define IDC_buttonDelete 307
 #define IDC_buttonRename 308
+#define IDC_loadoutsSearchbar 309
 #define IDC_buttonMyLoadoutsBackground 401
 #define IDC_buttonMyLoadouts 402
 #define IDC_buttonDefaultLoadoutsBackground 403

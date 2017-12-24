@@ -786,7 +786,7 @@ class GVAR(loadoutsDisplay) {
                 class textTitle: RscText {
                     idc= -1;
                     text="$STR_DISP_GAME_NAME";
-                    x = QUOTE(1 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(15 * GRID_W);
                     h = QUOTE(5 * GRID_H);
@@ -795,9 +795,29 @@ class GVAR(loadoutsDisplay) {
                 };
                 class textEditBox: ctrlEdit {
                     idc= IDC_textEditBox;
-                    x = QUOTE(16 * GRID_W);
+                    x = QUOTE(15 * GRID_W);
                     y = QUOTE(safezoneH - (51 * GRID_H));
-                    w = QUOTE(80 * GRID_W);
+                    w = QUOTE(65 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                };
+                class loadoutsSearchbar: ctrlEdit {
+                    idc = IDC_loadoutsSearchbar;
+                    onSetFocus = QUOTE(GVAR(loadoutsSearchbarFocus) = true);
+                    onKillFocus = QUOTE(GVAR(loadoutsSearchbarFocus) = false);
+                    onMouseButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(clearSearchbar));
+                    x = QUOTE(83 * GRID_W);
+                    y = QUOTE(safezoneH - (51 * GRID_H));
+                    w = QUOTE(72 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                };
+                class loadoutsSearchbarButton: ctrlButtonPicture {
+                    idc = -1;
+                    text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+                    colorBackground[]={0,0,0,0.5};
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_loadoutsSearchbar)] call FUNC(handleLoadoutsSearchbar));
+                    x = QUOTE(155 * GRID_W);
+                    y = QUOTE(safezoneH - (51 * GRID_H));
+                    w = QUOTE(5 * GRID_W);
                     h = QUOTE(5 * GRID_H);
                 };
                 class buttonSave: ctrlButton {
