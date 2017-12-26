@@ -38,7 +38,7 @@
 // moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
 // we have to wait some time (e.g. until player is out)
 // usually it takes 1 frame in SP and 3 frames in MP, so in MP looks a little lagging
-// also if unit isn't moved to new seat in 1 second, we move him back to his seat
+// also if unit isn't moved to new seat in 0.5 seconds, we move him back to his seat
 #define MOVE_IN(command) \
     [ARR_3( \
         {isNull objectParent (_this select 0)}, \
@@ -54,7 +54,7 @@
                     }; \
                 }, \
                 _player, \
-                1, \
+                0.5, \
                 { \
                     (_this getVariable QGVAR(moveBackParams)) call (_this getVariable QGVAR(moveBackCode)); \
                     if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
