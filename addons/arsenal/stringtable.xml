@@ -433,5 +433,17 @@
             <Italian>Impossibile aprire l'arsenale ACE</Italian>
             <Japanese>ACE 武器庫を開けません</Japanese>
         </Key>
+        <Key ID= "STR_ACE_Arsenal_portLoadoutsText">
+            <English>Import BI VA loadouts to ACE Arsenal</English>
+            <French>Importe les loadouts de BI VA dans ACE Arsenal</French>
+        </Key>
+        <Key ID= "STR_ACE_Arsenal_portLoadoutsPlayerError">
+            <English>No player unit available! Place a unit and mark it as "Player".</English>
+            <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
+        </Key>
+        <Key ID= "STR_ACE_Arsenal_portLoadoutsLoadoutError">
+            <English>No loadouts to import.</English>
+            <French>Aucun loadout à importer.</French>
+        </Key>
     </Package>
 </Project>
