@@ -98,7 +98,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ### 3.5 Example with `Add New Gun` in `GunList`
 
-- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the cartridge, the bullet diameter, the bullet weight and the muzzle velocities.
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the bullet diameter, the bullet weight, the **(Class Name bullet)** and the muzzle velocities.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
 - Select `Add New Gun` in the `GunList`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=25)
 - Add a `New Gun Name` and `Open Gun`.
@@ -109,9 +109,9 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Edit manually the `Muzzle Velocity Table` according with the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
 - The `C1 coefficient` of the bullet can be found with the Eden Editor `Config Viewer`:
 
-> configfile >> "CfgAmmo" >> "**(Class Name bullet)** at the top left of the Range Card" >> "ACE_ballisticCoefficients"
+> configfile >> "CfgAmmo" >> "**(Class Name bullet)**" >> "ACE_ballisticCoefficients"
 
-> configfile >> "CfgAmmo" >> "**(Class Name bullet)** at the top left of the Range Card" >> "ACE_dragModel"
+> configfile >> "CfgAmmo" >> "**(Class Name bullet)**" >> "ACE_dragModel"
 
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
@@ -124,7 +124,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.png" width="1400" height="600" alt="Conversion G7/G1 BC" />
 
-### 3.6 Add ATragMX Presets
+### 3.6 Adding ATragMX Presets
 
 - [ATragMX Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
 
