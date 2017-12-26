@@ -1,7 +1,8 @@
 ace_optionsmenu
 ===============
 
-Adds the options menu used by other components.
+Previously held the options menu.
+Now just handles version display on main menu and debug/headbug on options menu.
 
 
 ## Maintainers
