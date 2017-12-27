@@ -2,6 +2,18 @@
 
 #include "script_component.hpp"
 
-params ["_projectile"];
+params ["_projectile", "_seekerParams", "_seekerConfig"];
+_seekerParams params ["", "", "_gpsTarget"];
+_seekerConfig params ["_seekerAngle", "", "", ""];
 
-([(getPosASL _projectile), (velocity _projectile), _seekerAngle, _seekerMaxRange, [_wavelengthMin, _wavelengthMax], _code, _projectile] call EFUNC(laser,seekerFindLaserSpot)) select 0;
+private _vector = vectorDir _projectile;
+private _targetVector = (getPosASL _projectile) vectorFromTo _gpsTarget;
+
+private _foundTarget = if ((_vector vectorCos _targetVector) < (cos _seekerAngle)) then {
+	_gpsTarget
+} else {
+	[0,0,0]
+};
+
+TRACE_1("",_foundTarget);
+_foundTarget

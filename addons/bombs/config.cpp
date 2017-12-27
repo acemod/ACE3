@@ -14,3 +14,15 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventhandlers.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgWeapons.hpp"
+
+class GVAR(seekerTypes) {
+    class SALH {
+        function = QFUNC(seeker_SALH);
+    };
+    class GPS {
+        function = QFUNC(seeker_GPS);
+    };
+};

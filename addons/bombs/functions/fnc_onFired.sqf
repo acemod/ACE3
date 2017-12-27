@@ -20,14 +20,14 @@
 
 params ["_shooter","","","","_ammo","","_projectile"];
 
-// Exit if not Bomb
+// Exit if not a Bomb
 if (!(_ammo isKindOf "BombCore")) exitWith {};
-
-// Exit if guidance is disabled for this ammo
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
 
 // Exit on locality of the projectile, it should be local to us
 if (!local _projectile) exitWith {};
+
+// Exit if guidance is disabled for this ammo
+if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
 
 // // Verify ammo has explicity added guidance config (ignore inheritances)
 // private _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
@@ -42,27 +42,32 @@ private _seekerType = _shooter getVariable [QGVAR(seekerType), nil];
 if (isNil "_seekerType" || {!(_seekerType in (getArray (_config >> "seekerTypes")))}) then {
     _seekerType = getText (_config >> "defaultSeekerType");
 };
-private _laserCode = _shooter getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
-private _laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
-private _gpsTarget = _shooter getVariable [QGVAR(gpsTarget), nil];
+private _laserInfo = [
+    _shooter getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE],
+    ACE_DEFAULT_LASER_WAVELENGTH,
+    ACE_DEFAULT_LASER_WAVELENGTH
+];
+
+private _pilotCameraTarget = getPilotCameraTarget vehicle _shooter;
+_pilotCameraTarget params ["_pilotCameraIsTracking","_pilotCameraTargetPosition",""];
+if (!_pilotCameraIsTracking) then {
+    _pilotCameraTargetPosition = [0,0,0];
+};
 
 private _arguments = [	
-	_this,											// _firedParams
-	[												// _seekerParams
-		_seekerType,
-		_laserInfo,
-		_gpsTarget
-	], [											// _seekerConfig
-		getNumber (_config >> "seekerAngle"),
-		getNumber (_config >> "seekerAccuracy"),
-		getNumber (_config >> "seekerMaxRange")
-	], 
-	getNumber (_config >> "steeringAngle"),			// _steeringAngle
-	[diag_tickTime, [], []]							// _stateParams
+    _this,											// _firedParams
+    [												// _seekerParams
+        _seekerType,
+        _laserInfo,
+        _pilotCameraTargetPosition
+    ], [											// _seekerConfig
+        getNumber (_config >> "seekerAngle"),
+        getNumber (_config >> "seekerAccuracy"),
+        getNumber (_config >> "seekerMaxRange"),
+        getText (configFile >> QGVAR(seekerTypes) >> _seekerType >> "function")
+    ], 
+    getNumber (_config >> "steeringAngle"),			// _steeringAngle
+    [diag_tickTime, [], []]							// _stateParams
 ];
 
 [FUNC(guidancePFH), 0, _arguments] call CBA_fnc_addPerFrameHandler;
-
-/*
-	PFH starten.
-*/
