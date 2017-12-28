@@ -29,6 +29,8 @@ _lastKnownPosState params ["_seekLastTargetPos", "_lastKnownPos"];
 
 TRACE_1("params",_this);
 
+_steeringFactor = missionNameSpace getVariable ["test_steering", _steeringFactor];
+
 // End guidance when the bomb exploded or vanished.
 if (!alive _bomb or isNull _bomb) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -41,9 +43,9 @@ private _runtimeDelta = diag_tickTime - _lastRunTime;
 private _adjustTime = 1;
 
 if (accTime > 0) then {
-    _adjustTime = 1/accTime;
+    _adjustTime = accTime;
     _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
-    TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
+    TRACE_4("Adjust timing", accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
 } else {
     _adjustTime = 0;
 };
@@ -60,11 +62,13 @@ if !(_targetPos isEqualTo [0,0,0]) then {
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], ASLtoAGL _targetPos, 0.5, 0.5, 0, _seekerType, 1, 0.025, "TahomaB"];
     #endif
     
-    // Check how much the guidance system should steer.
+    // Compare bomb direction with adjusted target direction.
     private _bombDir = vectorDir _bomb;
-    private _targetDir = _bombPos vectorFromTo _targetPos;
+    private _adjustedTargetPos = [_bomb, _targetPos] call FUNC(adjustTarget);
+    private _targetDir = _bombPos vectorFromTo _adjustedTargetPos;
     (_targetDir vectorDiff _bombDir) params ["_adjustVectorX", "_adjustVectorY", "_adjustVectorZ"];
 
+    // calculate how much the guidance system should steer.
     private _yaw = if (_adjustVectorX > 0) then {
         _steeringFactor
     } else {
