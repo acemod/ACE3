@@ -15,12 +15,7 @@
  */
 #include "script_component.hpp"
 
-#define WEIGHTED_TYPES [ \
-    QGVAR(spall_small), 4, \
-    QGVAR(spall_medium), 3, \
-    QGVAR(spall_large), 2, \
-    QGVAR(spall_huge), 1 \
-]
+#define WEIGHTED_SIZE [QGVAR(spall_small), 4, QGVAR(spall_medium), 3, QGVAR(spall_large), 2, QGVAR(spall_huge), 1]
 
 params ["_hitData", "_hitPartDataIndex"];
 private _initialData = GVAR(spallHPData) select (_hitData select 0);
@@ -107,7 +102,7 @@ for "_i" from 1 to _spallCount do {
     _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
 
     private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
-    private _fragment = (selectRandomWeighted WEIGHTED_TYPES) createVehicleLocal [0,0,10000];
+    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicleLocal [0,0,10000];
     _fragment setPosASL _spallPos;
     _fragment setVelocity _spallFragVect;
 
@@ -129,7 +124,7 @@ for "_i" from 1 to _spallCount do {
     _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
 
     private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
-    private _fragment = (selectRandomWeighted WEIGHTED_TYPES) createVehicleLocal [0, 0, 10000];
+    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicleLocal [0, 0, 10000];
     _fragment setPosASL _spallPos;
     _fragment setVelocity _spallFragVect;
 
