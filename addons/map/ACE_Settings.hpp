@@ -63,12 +63,4 @@ class ACE_Settings {
         displayName = CSTRING(MapShowCursorCoordinates_DisplayName);
         description = CSTRING(MapShowCursorCoordinates_Description);
     };
-    class GVAR(defaultChannel) {
-        category = CSTRING(Module_DisplayName);
-        value = -1;
-        typeName = "SCALAR";
-        displayName = CSTRING(DefaultChannel_DisplayName);
-        description = CSTRING(DefaultChannel_Description);
-        sliderSettings[] = {-1, 5, -1, -1};
-    };
 };
