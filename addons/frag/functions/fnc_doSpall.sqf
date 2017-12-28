@@ -13,10 +13,14 @@
  *
  * Public: No
  */
-
-//fnc_doSpall.sqf
 #include "script_component.hpp"
-// ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";
+
+#define WEIGHTED_TYPES [ \
+    QGVAR(spall_small), 4, \
+    QGVAR(spall_medium), 3, \
+    QGVAR(spall_large), 2, \
+    QGVAR(spall_huge), 1 \
+]
 
 params ["_hitData", "_hitPartDataIndex"];
 private _initialData = GVAR(spallHPData) select (_hitData select 0);
@@ -51,6 +55,7 @@ if (alive _round) then {
     };
 };
 if (_exit) exitWith {};
+
 private _unitDir = vectorNormalized _velocity;
 private _pos = _hpData select 3;
 private _spallPos = [];
@@ -88,14 +93,6 @@ if (_explosive > 0) then {
     _spallPolar set [0, _fragPower * 0.66];
 };
 
-private _fragTypes = [
-    QGVAR(spall_small), QGVAR(spall_small), QGVAR(spall_small),
-    QGVAR(spall_small),QGVAR(spall_medium),QGVAR(spall_medium),QGVAR(spall_medium),
-    QGVAR(spall_medium), QGVAR(spall_large), QGVAR(spall_large), QGVAR(spall_huge),
-    QGVAR(spall_huge)
-
-];
-
 // diag_log text format ["SPALL POWER: %1", _spallPolar select 0];
 private _spread = 15 + (random 25);
 private _spallCount = 5 + (random 10);
@@ -110,8 +107,7 @@ for "_i" from 1 to _spallCount do {
     _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
 
     private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
-    private _fragType = round (random ((count _fragTypes) - 1));
-    private _fragment = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
+    private _fragment = (selectRandomWeighted WEIGHTED_TYPES) createVehicleLocal [0,0,10000];
     _fragment setPosASL _spallPos;
     _fragment setVelocity _spallFragVect;
 
@@ -133,8 +129,7 @@ for "_i" from 1 to _spallCount do {
     _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
 
     private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
-    private _fragType = round (random ((count _fragTypes) - 1));
-    private _fragment = (_fragTypes select _fragType) createVehicleLocal [0, 0, 10000];
+    private _fragment = (selectRandomWeighted WEIGHTED_TYPES) createVehicleLocal [0, 0, 10000];
     _fragment setPosASL _spallPos;
     _fragment setVelocity _spallFragVect;
 
