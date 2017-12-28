@@ -48,7 +48,7 @@ To add a preset via code you use the function `call acex_fortify_fnc_registerObj
 * None
 *
 * Example:
-* [west, 5000, [["Sandbag", 5], ["Bunker", 50]]] call acex_fortify_fnc_registerObjects
+* [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call acex_fortify_fnc_registerObjects
 ```
 
 Adding it through `description.ext` you use:
