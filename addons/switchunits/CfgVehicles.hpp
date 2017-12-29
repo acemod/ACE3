@@ -3,7 +3,7 @@ class CfgVehicles {
     class ACE_ModuleSwitchUnits: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = CSTRING(Module_DisplayName);
+        displayName = CSTRING(DisplayName);
         function = FUNC(module);
         scope = 1;
         isGlobal = 1;

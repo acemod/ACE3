@@ -77,6 +77,9 @@
             <English>Vehicle too far</English>
             <Italian>Veicolo troppo lontano</Italian>
             <Korean>차량이 너무 멈</Korean>
+            <Chinese>載具過遠</Chinese>
+            <Chinesesimp>载具过远</Chinesesimp>
+            <Japanese>車両が遠すぎます</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_Enabled">
             <English>Enable Pylons Menu</English>

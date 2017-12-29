@@ -35,13 +35,17 @@ if (isNull _vehicle) exitWith {
 private _return = false;
 // Start progress bar
 if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
+    [_player, _object, true] call EFUNC(common,claim);
     private _size = [_object] call FUNC(getSizeItem);
 
     [
         5 * _size,
-        [_object,_vehicle],
-        {["ace_loadCargo", _this select 0] call CBA_fnc_localEvent},
-        {},
+        [_object, _vehicle],
+        {
+            [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
+            ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
+        },
+        {[objNull, _this select 0 select 0, true] call EFUNC(common,claim)},
         localize LSTRING(LoadingItem),
         {true},
         ["isNotSwimming"]

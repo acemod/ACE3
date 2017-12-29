@@ -377,6 +377,9 @@ class CfgVehicles {
         GVAR(hooks)[] = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
         GVAR(fuelCargo) = 10000;
     };
+    class Truck_02_water_base_F: Truck_02_fuel_base_F {
+        GVAR(fuelCargo) = REFUEL_DISABLED_FUEL;
+    };
 
     class B_Truck_01_fuel_F: B_Truck_01_mover_F {
         transportFuel = 0; //3k

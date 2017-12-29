@@ -35,6 +35,10 @@ if (_initSpeedCoef < 0) then {
 private _zeroAngle = "ace_advanced_ballistics" callExtension format ["replicateVanillaZero:%1:%2:%3", _oldZeroRange, _initSpeed, _airFriction];
 private _vanillaZero = parseNumber _zeroAngle;
 
+#ifdef DISABLE_DISPERSION
+    _vanillaZero = 0;
+#endif
+
 private _trueZero = if (!_advancedBallistics) then {
     _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _newZeroRange, _initSpeed, _airFriction, _boreHeight];
     (parseNumber _zeroAngle)
@@ -49,7 +53,7 @@ private _trueZero = if (!_advancedBallistics) then {
          _WeaponCacheEntry = _weapon call EFUNC(advanced_ballistics,readWeaponDataFromConfig);
     };
 
-    _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable"];
+    _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
     _WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]) then {

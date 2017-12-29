@@ -21,8 +21,6 @@ params [["_object", objNull, [objNull, ""]]];
 
 if ((_object isEqualType objNull && {isNull _object}) || {_object isEqualType "" && {_object == ""}}) exitWith { DEFAULT_TEXTURE };
 
-ISNILS(GVAR(vehicleIconCache),call CBA_fnc_createNamespace);
-
 private _objectType = if (_object isEqualType objNull) then {
     typeOf _object
 } else {

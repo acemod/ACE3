@@ -3,6 +3,7 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
 
     class ACE_EarPlugs: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EarPlugs_Name);
         descriptionShort = CSTRING(EarPlugs_Description);
         model = QPATHTOF(data\ace_earplugs.p3d);

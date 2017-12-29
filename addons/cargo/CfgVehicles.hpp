@@ -39,32 +39,9 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-    class GVAR(makeLoadable): ACE_Module {
+    class GVAR(makeLoadable): Logic {
         scope = 1;
-        displayName = CSTRING(makeLoadable_displayName);
-        icon = QPATHTOF(UI\Icon_Module_makeLoadable_ca.paa);
-        category = "ACE_Logistics";
-        function = QFUNC(moduleMakeLoadable);
-        isGlobal = 1;
-        isTriggerActivated = 0;
-        author = ECSTRING(common,ACETeam);
-        class Arguments {
-            class canLoad {
-                displayName = CSTRING(makeLoadable_displayName);
-                description = CSTRING(MakeLoadable_description);
-                typeName = "BOOL";
-                defaultValue = 1;
-            };
-            class setSize {
-                displayName = CSTRING(makeLoadable_setSize_displayName);
-                typeName = "NUMBER";
-                defaultValue = 1;
-            };
-        };
-        class ModuleDescription: ModuleDescription {
-            description = CSTRING(makeLoadable_description);
-            sync[] = {"AnyStaticObject"};
-        };
+        displayName = "Delete (Deprecated in ACE3 3.12.0)";
     };
 
     class LandVehicle;
@@ -198,6 +175,11 @@ class CfgVehicles {
     class Helicopter: Air {
         GVAR(space) = 8;
         GVAR(hasCargo) = 1;
+    };
+
+    class ParachuteBase: Helicopter {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
     };
 
     class Helicopter_Base_H;

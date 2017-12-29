@@ -38,10 +38,10 @@ class Stage3 {
     texture = "a3\data_f\destruct\damage_metal_mc.paa";
     uvSource = "tex";
     class uvTransform {
-		aside[] = {3,0,0};
-		up[] = {0,3,0};
-		dir[] = {0,0,0};
-		pos[] = {0.1,0.23,0};
+        aside[] = {3,0,0};
+        up[] = {0,3,0};
+        dir[] = {0,0,0};
+        pos[] = {0.1,0.23,0};
     };
 };
 

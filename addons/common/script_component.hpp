@@ -3,7 +3,7 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
+// #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_COMMON
@@ -33,4 +33,4 @@
     "wood", "wood_int", "int_wood", "softwood_exp", "int_softwood_exp", "int_solidwood_exp" \
 ]
 
-#define DIG_SURFACE_WHITELIST ["grass"]
+#define DIG_SURFACE_WHITELIST ["grass", "grasstall_exp", "forest_exp"]

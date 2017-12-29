@@ -97,5 +97,17 @@
             <Chinesesimp>备用降落伞</Chinesesimp>
             <Chinese>備用降落傘</Chinese>
         </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter">
+            <English>Hide Freefall Altimeter</English>
+            <German>Freifall-Höhenmesser verstecken</German>
+            <Japanese>降下時に高度計を非表示</Japanese>
+            <Italian>Nascondi Altimetro in Caduta Libera</Italian>
+        </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
+            <English>Hides the altitude and speed shown while free falling or parachuting.</English>
+            <German>Blendet den Höhen- und Geschwindigkeitsmesser während des Fallschirmspringens aus.</German>
+            <Japanese>自由降下時かパラシュート中に高度と速度を非表示にします。</Japanese>
+            <Italian>Nasconde l'altitudine e la velocità mostrate durante la caduta libera o paracadutandosi.</Italian>
+        </Key>
     </Package>
 </Project>

@@ -88,6 +88,7 @@ params [
         _unit action ["SwitchWeapon", _unit, _unit, 299];
 
         [_unit, "forceWalk", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
+        [_unit, "blockThrow", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
 
         [_unit, _nozzle] call FUNC(startNozzleInHandsPFH);
     },

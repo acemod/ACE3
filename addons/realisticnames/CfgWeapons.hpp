@@ -546,6 +546,16 @@ class CfgWeapons {
         };
     };
 
+    class autocannon_40mm_VTOL_01: autocannon_40mm_CTWS {
+        displayName = "L/60 Bofors Autocannon";
+        class AP: AP {
+            displayName = "L/60 Bofors Autocannon";
+        };
+        class HE: HE {
+            displayName = "L/60 Bofors Autocannon";
+        };
+    };
+
     class autocannon_30mm_CTWS: autocannon_Base_F {
         displayName = "Mk44 Bushmaster II";
         class AP: autocannon_Base_F {

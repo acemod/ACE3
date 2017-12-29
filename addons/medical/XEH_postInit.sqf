@@ -31,6 +31,20 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 if (isServer) then {
     ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
     [QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
+    addMissionEventHandler ["BuildingChanged", {
+        if (isNil QGVAR(allCreatedLitter)) exitWith {};
+        params ["_buildingOld", "_buildingNew", "_isRuin"];
+        TRACE_3("BuildingChanged",_buildingOld,_buildingNew,_isRuin);
+        private _radius = sizeOf typeOf _buildingOld / 2;
+        TRACE_1("",_radius);
+        {
+            _x params ["", "_objects"];
+            if (({(_x distance2d _buildingOld) < _radius && {getPos _x select 2 > 0.1}} count _objects) > 0) then {
+                GVAR(allCreatedLitter) deleteAt (GVAR(allCreatedLitter) find _x);
+                { TRACE_1("deleting",_x); deleteVehicle _x } forEach _objects;
+            };
+        } forEach (+GVAR(allCreatedLitter));
+    }];
 };
 
 ["ace_unconscious", {
@@ -289,5 +303,11 @@ if (hasInterface) then {
     ["ace_playerJIP", {
         INFO("JIP Medical init for player.");
         [player] call FUNC(init);
+    }] call CBA_fnc_addEventHandler;
+};
+
+if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+    [QEGVAR(arsenal,displayOpened), {
+        EGVAR(arsenal,virtualItems) set [17, (EGVAR(arsenal,virtualItems) select 17) -  ["FirstAidKit", "Medikit"]];
     }] call CBA_fnc_addEventHandler;
 };

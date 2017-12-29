@@ -76,170 +76,22 @@
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックスを有効化</Japanese>
+            <Japanese>アドバンスド バリスティックス</Japanese>
             <Korean>고급 탄도학을 적용합니다</Korean>
             <Chinese>啟用先進彈道系統</Chinese>
             <Chinesesimp>启用先进弹道系统</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_DisplayName">
-            <English>Enabled For Snipers</English>
-            <Spanish>Activada para francotiradores</Spanish>
-            <Polish>Akt. dla snajperów</Polish>
-            <German>Für Scharfschützen aktiviert</German>
-            <Czech>Povoleno pro odstřelovače</Czech>
-            <Portuguese>Ativar para caçadores</Portuguese>
-            <French>Activé pour les snipers</French>
-            <Hungarian>Mesterlövészeknek engedélyezve</Hungarian>
-            <Russian>Включена для снайперов</Russian>
-            <Italian>Abilita per Tiratori Scelti</Italian>
-            <Japanese>狙撃手へ有効化</Japanese>
-            <Korean>저격수만 적용</Korean>
-            <Chinese>啟用給狙擊手</Chinese>
-            <Chinesesimp>启用给狙击手</Chinesesimp>
+        <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_DisplayName">
+            <English>Enable Muzzle Velocity Variation</English>
+            <German>Variation der Mündungsgeschwindigkeit aktivieren</German>
+            <Japanese>銃口初速の変化</Japanese>
+            <Italian>Abilita Variazione Velocità Volata</Italian>
         </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_Description">
-            <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
-            <Spanish>Activa la balística avanzada para francotiradores no locales (cuando se usa una mira telescópica)</Spanish>
-            <Polish>Aktywuje zaawansowaną balistykę dla nielokalnych snajperów (kiedy używają optyki)</Polish>
-            <German>Aktiviert die erweiterte Ballistik für nicht lokale Scharfschützen (bei Benutzung von Optiken mit starker Vergrößerung)</German>
-            <Czech>Aktivuje pokročilou balistiku pro nelokální odstřelovače (při použití optiky)</Czech>
-            <Portuguese>Ativa balística avançada para caçadores não locais (quando usando miras telescópicas)</Portuguese>
-            <French>Active la balistique avancée pour les snipers non locaux (en utilisant les optiques avancées)</French>
-            <Hungarian>Engedélyezi a fejlett ballisztikát nem-helyi mesterlövészeknek (nagy-teljesítményű optika használatakor)</Hungarian>
-            <Russian>Включает продвинутую баллистику для нелокальных снайперов (при использовании мощной оптики)</Russian>
-            <Italian>Abilita Balistica Avanzata per Tiratori Scelti non locali (con ottiche ad alto potenziale)</Italian>
-            <Japanese>非ローカルの狙撃手 (高倍率スコープを使っている場合)へアドバンスド バリスティックスを有効化します</Japanese>
-            <Korean>고급 탄도학을 비-저격수 인원에게도 적용합니다(고성능 조준경을 사용시)</Korean>
-            <Chinese>啟用先進彈道系統給非本地狙擊手(當使用高倍率光學瞄鏡時)</Chinese>
-            <Chinesesimp>启用先进弹道系统给非本地狙击手(当使用高倍率光学瞄镜时)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_DisplayName">
-            <English>Enabled For Group Members</English>
-            <Spanish>Activada para miembros de grupo</Spanish>
-            <Polish>Akt. dla czł. grupy</Polish>
-            <German>Für Gruppenmitglieder aktiviert</German>
-            <Czech>Povoleno pro členy skupiny</Czech>
-            <Portuguese>Ativada para membros do grupo</Portuguese>
-            <French>Activé pour les membres groupés</French>
-            <Hungarian>Csoporttagoknak engedélyezve</Hungarian>
-            <Russian>Включена для группы</Russian>
-            <Italian>Abilita per Membri del Gruppo</Italian>
-            <Japanese>グループ メンバーへ有効化</Japanese>
-            <Korean>그룹 멤버도 적용</Korean>
-            <Chinese>啟用給小隊成員</Chinese>
-            <Chinesesimp>启用给小队成员</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_Description">
-            <English>Enables advanced ballistics for non local group members</English>
-            <Spanish>Activada la balística avanzada para miembros de grupo no locales</Spanish>
-            <Polish>Aktywuje zaawansowaną balistykę dla nielokalnych członków grupy</Polish>
-            <German>Aktiviert die erweiterte Ballistik für nicht lokale Gruppenmitglieder</German>
-            <Czech>Aktivuje pokročilou balistiku pro nelokální členy skupiny</Czech>
-            <Portuguese>Ativa balística avançada para membros de grupo não locais</Portuguese>
-            <French>Active la balistique avancée pour les membres du groupe non locaux</French>
-            <Hungarian>Engedélyezi a fejlett ballisztikát nem-helyi csoporttagoknak</Hungarian>
-            <Russian>Включает продвинутую баллистику для нелокальных членов группы</Russian>
-            <Italian>Abilita Balistica Avanzata per Membri non locali del Gruppo</Italian>
-            <Japanese>非ローカルのグループ メンバーへアドバンスド バリスティックスを有効化します</Japanese>
-            <Korean>고급 탄도학을 비-그룹멤버에게도 적용합니다</Korean>
-            <Chinese>啟用先進彈道系統給非本地小隊成員</Chinese>
-            <Chinesesimp>启用先进弹道系统给非本地小队成员</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_DisplayName">
-            <English>Enabled For Everyone</English>
-            <Spanish>Activada para todos</Spanish>
-            <Polish>Akt. dla wszystkich</Polish>
-            <German>Für jeden aktiviert</German>
-            <Czech>Povoleno pro všechny</Czech>
-            <Portuguese>Ativada para todos</Portuguese>
-            <French>Activé pour tout le monde</French>
-            <Hungarian>Mindenkinek engedélyezve</Hungarian>
-            <Russian>Включена для всех</Russian>
-            <Italian>Abilita per tutti</Italian>
-            <Japanese>全員に有効化</Japanese>
-            <Korean>모두에게 적용</Korean>
-            <Chinese>啟用給所有人</Chinese>
-            <Chinesesimp>启用给所有人</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_Description">
-            <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
-            <Spanish>Activada la balística avanzada para todos los jugadores no locales (activarlo puede degradar el rendimiento durante grandes tiroteos en multijugador).</Spanish>
-            <Polish>Aktywuje zaawansowaną balistykę dla wszystkich nielokalnych graczy (aktywacja tej opcji może spodowować spory spadek wydajności podczas ciężkiej wymiany ognia)</Polish>
-            <German>Aktiviert die erweiterte Ballistik für alle nicht lokalen Spieler (das Aktivieren dieser Funktion kann zur Beeinträchtigung des Spielerlebnisses im Multiplayer führen)</German>
-            <Czech>Aktivuje pokročilou balistiku pro všechny nelokální hráče (aktivace této možnosti způsobuje pokles FPS během velké přestřelky v multiplayeru)</Czech>
-            <Portuguese>Ativa balística avançada para todos os jogadores não locais (ativando isso pode degradar a performance durante troca de tiros intensas no multiplayer)</Portuguese>
-            <French>Active la balistique avancée pour tous les joueurs non locaux (activer cette option peut avoir un impact sur les performance en multi durant les grands échanges de tirs)</French>
-            <Hungarian>Engedélyezi a fejlett ballisztikát az összes nem-helyi játékosnak (ez a funkció leronthatja a teljesítményt intenzív többjátékos tűzharcok alatt)</Hungarian>
-            <Russian>Включает продвинутую баллистику для всех нелокальных игроков (включение этой опции может снизить производительность при массовых перестрелках в мультиплеере)</Russian>
-            <Italian>Abilita Balistica Avanzata per tutti i giocatori non locali (abilitare questo parametro potrebbe ridurre le prestazioni durante scontri intensi in multiplayer)</Italian>
-            <Japanese>非ローカルの全プレイヤーへアドバンスド バリスティックスを有効化します (マルチプレイで大規模な銃撃戦がおこなわれると、動作の低下を招きます)</Japanese>
-            <Korean>고급 탄도학을 모든 비-로컬그룹에게도 적용합니다(적용 후 대규모 전투시 성능하락을 유발할 수 있습니다)</Korean>
-            <Chinese>啟用先進彈道系統給所有非本地玩家 (啟用此功能後,在多人連線大量交火時可能會降低效能)</Chinese>
-            <Chinesesimp>启用先进弹道系统给所有非本地玩家 (启用此功能后,在多人连线大量交火时可能会降低效能)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_DisplayName">
-            <English>Always Enabled For Group Members</English>
-            <Polish>Zawsze akt. dla czł. grupy</Polish>
-            <Spanish>Siempre activada para miembros de grupo</Spanish>
-            <German>Für Gruppenmitglieder immer aktiviert</German>
-            <Czech>Vždy povoleno pro členy skupiny</Czech>
-            <Portuguese>Sempre ativada para membros do grupo</Portuguese>
-            <French>Toujours activer pour les membres du groupe</French>
-            <Hungarian>Mindig engedélyezve csoporttagoknak</Hungarian>
-            <Russian>Всегда включена для членов группы</Russian>
-            <Italian>Sempre abilitato per Membri del Gruppo</Italian>
-            <Japanese>常にグループ メンバーへ有効化</Japanese>
-            <Korean>그룹 멤버에게 항상 적용</Korean>
-            <Chinese>永遠啟用給小隊成員</Chinese>
-            <Chinesesimp>永远启用给小队成员</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_Description">
-            <English>Always enables advanced ballistics when a group member fires</English>
-            <Polish>Aktywuje zaawansowaną balistykę dla wszystkich członków grupy</Polish>
-            <Spanish>Activada la balística avanzada siempre cuando miembros de grupo disparan</Spanish>
-            <German>Aktiviert die erweiterte Ballistik immer, wenn ein Gruppenmitglied schießt</German>
-            <Czech>Aktivuje pokročilou balistiku pro členy skupiny</Czech>
-            <Portuguese>Sempre ative balística avançada quando um membro do grupo disparar</Portuguese>
-            <French>Active tout le temps la balistique avancée quand un membre du groupe ouvre le feu</French>
-            <Hungarian>Mindig engedélyezi a fejlett ballisztikát, ha egy csoporttag tüzel</Hungarian>
-            <Russian>Всегда включает продвинутую баллистику когда стреляет член группы</Russian>
-            <Italian>Abilita sempre Balistica Avanzata quando un membro del gruppo spara</Italian>
-            <Japanese>グループ メンバーが射撃した時、常にアドバンスド バリスティックスを有効化します</Japanese>
-            <Korean>그룹 멤버가 발사시 항상 고급 탄도학을 적용합니다</Korean>
-            <Chinese>當小隊成員開火時,永遠啟用先進彈道系統</Chinese>
-            <Chinesesimp>当小队成员开火时,永远启用先进弹道系统</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_disabledInFullAutoMod_DisplayName">
-            <English>Disabled In FullAuto Mode</English>
-            <Polish>Wył. podczas ognia auto.</Polish>
-            <Spanish>Desactivada en modo automático</Spanish>
-            <German>Beim vollautomatischen Feuern deaktiviert</German>
-            <Czech>Zakázáno v automatickém režimu střelby</Czech>
-            <Portuguese>Desabilitar no modo automático</Portuguese>
-            <French>Désactiver en mode automatique</French>
-            <Hungarian>Automata módban letiltva</Hungarian>
-            <Russian>Выкл. для автомат. режима</Russian>
-            <Italian>Disabilita in modalità di fuoco automatico</Italian>
-            <Japanese>フルオートでは無効化</Japanese>
-            <Korean>조정간 자동시 비활성화</Korean>
-            <Chinese>在全自動模式時關閉</Chinese>
-            <Chinesesimp>在全自动模式时关闭</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Ballistics_disabledInFullAutoMod_Description">
-            <English>Disables the advanced ballistics during full auto fire</English>
-            <Polish>Dezaktywuje zaawansowaną balistykę podczas ognia automatycznego</Polish>
-            <Spanish>Desactivada la balística avanzada durante el fuego automático</Spanish>
-            <German>Deaktiviert die erweiterte Ballistik beim vollautomatischen Feuern</German>
-            <Czech>Zákáže pokročilou balistiku během střelby v režimu automat</Czech>
-            <Portuguese>Desabilitar a balística avançada durante fogo automático</Portuguese>
-            <French>Désactive la balistique avancée pour les tirs en automatique</French>
-            <Hungarian>Letiltja a fejlett ballisztikát automata tüzelés folyamán</Hungarian>
-            <Russian>Выключает продвинутую баллистику при стрельбе в полностью автоматическом режиме</Russian>
-            <Italian>Disabilita Balistica Avanzata durante fuoco automatico</Italian>
-            <Japanese>フルオートで射撃中ではアドバンスド バリスティックスを無効化します</Japanese>
-            <Korean>조정간 자동시 고급 탄도학을 비활성화 합니다</Korean>
-            <Chinese>在全自動模式開火時,關閉先進彈道系統</Chinese>
-            <Chinesesimp>在全自动模式开火时,关闭先进弹道系统</Chinesesimp>
+        <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
+            <English>Simulates slight variations in muzzle velocity between each shot</English>
+            <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
+            <Japanese>発射毎に僅かな銃口初速の変化をシミュレートします。</Japanese>
+            <Italian>Simula lievi variazioni della velocità della volata tra un colpo e l'altro</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
@@ -252,7 +104,7 @@
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
             <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
-            <Japanese>弾薬の温度シミュレーションを有効化</Japanese>
+            <Japanese>弾薬温度シミュレーション</Japanese>
             <Korean>탄약 온도 구현 적용</Korean>
             <Chinese>啟用彈藥溫度模擬系統</Chinese>
             <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
@@ -268,7 +120,7 @@
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от температуры</Russian>
             <Italian>La velocità dello sparo varia a seconda della temperatura delle munizioni</Italian>
-            <Japanese>弾薬の温度により初速値を変化させます</Japanese>
+            <Japanese>弾薬の温度により銃口初速を変化させます</Japanese>
             <Korean>탄약 온도에 비례해 총구 속도가 달라집니다</Korean>
             <Chinese>子彈初速將隨彈藥溫度而有所變化</Chinese>
             <Chinesesimp>子弹初速将随弹药温度而有所变化</Chinesesimp>
@@ -284,7 +136,7 @@
             <Hungarian>Csőhossz-szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция длины ствола</Russian>
             <Italian>Abilita simulazione della lunghezza della canna</Italian>
-            <Japanese>銃身長のシミュレーションを有効化</Japanese>
+            <Japanese>銃身長シミュレーション</Japanese>
             <Korean>총열 길이 구현 적용</Korean>
             <Chinese>啟用槍管長度模擬系統</Chinese>
             <Chinesesimp>启用枪管长度模拟系统</Chinesesimp>
@@ -300,7 +152,7 @@
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от длины ствола</Russian>
             <Italian>La velocità di sparo varia a seconda della lunghezza della canna</Italian>
-            <Japanese>銃身長により初速値を変化させます</Japanese>
+            <Japanese>銃身長により銃口初速を変化させます</Japanese>
             <Korean>총구 속도가 총열에 비례해 달라집니다</Korean>
             <Chinese>子彈初速將隨槍管長度而有所變化</Chinese>
             <Chinesesimp>子弹初速将随枪管长度而有所变化</Chinesesimp>
@@ -316,7 +168,7 @@
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
-            <Japanese>弾丸の痕跡表示を有効化</Japanese>
+            <Japanese>弾丸の痕跡表示</Japanese>
             <Korean>예광탄 효과 적용</Korean>
             <Chinese>啟用曳光彈效果</Chinese>
             <Chinesesimp>启用曳光弹效果</Chinesesimp>
@@ -354,10 +206,10 @@
             <Chinesesimp>模拟间隔</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_Description">
-            <English>Defines the interval between every calculation step</English>
+            <English>Defines the interval between each calculation step</English>
             <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
             <Spanish>Define el intervalo entre cada cálculo</Spanish>
-            <German>Legt das Intervall zwischen den Berechnungsschritten fest</German>
+            <German>Definiert das Intervall zwischen den einzelnen Simulationsschritten</German>
             <Czech>Určuje interval mezi každým výpočtem</Czech>
             <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
             <French>Définit un intervalle de calcul entre deux simulations</French>
@@ -380,7 +232,7 @@
             <Hungarian>Szimuláció hatóköre</Hungarian>
             <Russian>Радиус симуляции</Russian>
             <Italian>Raggio Simulazione</Italian>
-            <Japanese>シミュレーションの適用範囲</Japanese>
+            <Japanese>シミュレーション適用範囲</Japanese>
             <Korean>구현 범위</Korean>
             <Chinese>模擬半徑</Chinese>
             <Chinesesimp>模拟半径</Chinesesimp>

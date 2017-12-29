@@ -177,6 +177,9 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     };
 };
 
+private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selectionPosition "RightHand"));
+["Acts_carFixingWheel", _soundPosition, nil, 50] call EFUNC(common,playConfigSound3D);
+
 // Get repair time
 private _repairTime = [
     configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,

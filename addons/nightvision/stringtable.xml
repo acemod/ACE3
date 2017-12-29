@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
+        <Key ID="STR_ACE_NightVision_Category">
+            <English>ACE Nightvision</English>
+            <Japanese>ACE 暗視装置</Japanese>
+            <Italian>Visione notturna ACE</Italian>
+        </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
             <English>NV Goggles (Gen1)</English>
             <Czech>Noktovizor (Gen1)</Czech>
@@ -54,7 +59,7 @@
             <Czech>Noktovizor (Gen3, hnědý)</Czech>
             <French>JVN (Gen3, marron)</French>
             <German>NS-Brille (3. Gen., braun)</German>
-            <Italian>Occhiali notturni (Gen3, marroni)</Italian>
+            <Italian>Occhiali notturni (Gen3, Marroni)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, brązowe)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, marrons)</Portuguese>
             <Russian>ПНВ (Gen3, Коричневый)</Russian>
@@ -70,7 +75,7 @@
             <Czech>Noktovizor (Gen3, zelený)</Czech>
             <French>JVN (Gen3, vertes)</French>
             <German>NS-Brille (3. Gen., grün)</German>
-            <Italian>Occhiali notturni (Gen3, verdi)</Italian>
+            <Italian>Occhiali notturni (Gen3, Verdi)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, zielone)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, verdes)</Portuguese>
             <Russian>ПНВ (Gen3, Зелёный)</Russian>
@@ -86,7 +91,7 @@
             <Czech>Noktovizor (Gen3, černý)</Czech>
             <French>JVN (Gen3, noires)</French>
             <German>NS-Brille (3. Gen., schwarz)</German>
-            <Italian>Occhiali notturni (Gen3, neri)</Italian>
+            <Italian>Occhiali notturni (Gen3, Neri)</Italian>
             <Polish>Gogle noktowizyjne (Gen3, czarne)</Polish>
             <Portuguese>Óculos de visão noturna (Gen3, pretos)</Portuguese>
             <Russian>ПНВ (Gen3, Чёрный)</Russian>
@@ -217,7 +222,7 @@
             <Italian>Disabilita NVG nei mirini</Italian>
             <Spanish>Desactivar NVG en miras</Spanish>
             <French>Desactiver les JVN dans les viseurs.</French>
-            <Japanese>スコープを覗くと暗視装置を無効化</Japanese>
+            <Japanese>スコープでは暗視装置を無効化</Japanese>
             <Korean>조준경 사용시 야투경 비활성화</Korean>
             <Chinesesimp>使用瞄准镜时关闭夜视镜</Chinesesimp>
             <Chinese>使用瞄準鏡時關閉夜視鏡</Chinese>
@@ -236,6 +241,30 @@
             <Korean>조준시 야투경의 사용을 제한합니다.</Korean>
             <Chinesesimp>此功能开启后，当要使用瞄准镜时，为避免夜视镜镜头碰撞到瞄准镜，会先拿开夜视镜后再进行瞄准镜瞄准。</Chinesesimp>
             <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準。</Chinese>
+        </Key>
+        <Key ID="STR_ACE_NightVision_fogScaling_DisplayName">
+            <English>NVG Fog Scale</English>
+            <Japanese>暗視装置の霧の規模</Japanese>
+            <Italian>Livello Nebbia NVG</Italian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_fogScaling_Description">
+            <English>Fog is used to limit visibility.</English>
+            <Japanese>霧は視界制限のために使われます。</Japanese>
+            <Italian>La nebbia viene utilizzata per limitare la visibilità.</Italian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
+            <English>NVG Effect Scale</English>
+            <Japanese>暗視装置の効果規模</Japanese>
+            <Italian>Effetto livello NVG</Italian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_effectScaling_Description">
+            <English>Blur, grain and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
+            <Japanese>ぼかしと粒子、明度効果 [0 に設定で全効果を無効化します]</Japanese>
+            <Italian>Effetti di sfocatura, sgranatura e luminosità [Importare a 0 disabiliterà TUTTI gli effetti della visione notturna]</Italian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
+            <English>Aim Down Sights Blur</English>
+            <Japanese>照準器を使用時にぼかし</Japanese>
         </Key>
     </Package>
 </Project>

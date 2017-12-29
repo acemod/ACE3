@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
+        <Key ID="STR_ACE_Common_DisplayName">
+            <English>Common</English>
+            <German>Allgemein</German>
+            <Italian>Comuni</Italian>
+            <Japanese>全般</Japanese>
+            <Chinese>通用</Chinese>
+            <Chinesesimp>通用</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
             <German>ACE-Team</German>
@@ -349,7 +357,7 @@
             <Portuguese>[ACE] Itens diversos</Portuguese>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
             <Italian>[ACE] Oggetti vari</Italian>
-            <Japanese>[ACE] その他のアイテム</Japanese>
+            <Japanese>[ACE] その他アイテム</Japanese>
             <Korean>[ACE] 기타 물품.</Korean>
             <Chinese>[ACE] 雜項</Chinese>
             <Chinesesimp>[ACE] 杂项</Chinesesimp>
@@ -465,6 +473,27 @@
             <Korean>다른 플레이어가 보내온 요청을 거부합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
             <Chinese>拒絕由其他玩家送出的請求。包含使用/共享裝備與執行特定動作。</Chinese>
             <Chinesesimp>拒绝由其他玩家送出的请求。包含使用/共享装备与执行特定动作。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsAction">
+            <English>Check PBO Action</English>
+            <Italian>Controlla Azioni PBO</Italian>
+            <Chinese>檢查PBO動作</Chinese>
+            <Chinesesimp>检查PBO动作</Chinesesimp>
+            <Japanese>PBO 検査の挙動</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
+            <English>Check PBO All</English>
+            <Italian>Controlla Tutti i PBO</Italian>
+            <Chinese>檢查所有PBO</Chinese>
+            <Chinesesimp>检查所有PBO</Chinesesimp>
+            <Japanese>PBO 全てを検査</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
+            <English>Check PBO Whitelist</English>
+            <Italian>Controlla Whitelist PBO</Italian>
+            <Chinese>檢查PBO白名單</Chinese>
+            <Chinesesimp>检查PBO白名单</Chinesesimp>
+            <Japanese>許可リスト内の PBO を検査</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -594,6 +623,18 @@
             <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色。</Chinese>
             <Chinesesimp>设定ACE提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用ACE系统的预设颜色。</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_SettingPersistentLaserName">
+            <English>Persistent weapon laserpointer/flashlight</English>
+            <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
+            <Japanese>武器のレーザー ポインタ/フラッシュライトの永続</Japanese>
+            <Italian>Laser/torcia dell'arma costantemente accesi</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
+            <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
+            <Russian>Включать ЛЦУ/тактический фонарь после смены оружия или входа/выхода из машины, если он был до этого включен.</Russian>
+            <Japanese>銃のライト等を点けていると武器を切り替えた後や車両を乗り降りしても、ライト等を点けたままにします。</Japanese>
+            <Italian>Abilita la torcia/laser dopo il cambio dell'arma o l'entrata/uscita del veicolo se precedentemente attiva.</Italian>
+        </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
             <German>Banane</German>
@@ -684,7 +725,7 @@
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
-            <Japanese>プレイヤーが正しい PBO を持っていない場合は？</Japanese>
+            <Japanese>プレイヤーが正しい PBO を持っていない場合は?</Japanese>
             <Korean>올바르지 않는 PBO를 가진 사람을 어떻게 할까요?</Korean>
             <Chinese>若玩家沒有正確的PBO檔時，將採取何種動作?</Chinese>
             <Chinesesimp>若玩家没有正确的PBO档时，将采取何种动作?</Chinesesimp>
@@ -716,7 +757,7 @@
             <Hungarian>Figyelmeztetés (tartós)</Hungarian>
             <Russian>Предупреждать (постоянно)</Russian>
             <Italian>Avverti (permanente)</Italian>
-            <Japanese>警告（永久的）</Japanese>
+            <Japanese>警告 (永久的)</Japanese>
             <Korean>경고 (영구적)</Korean>
             <Chinese>警告 (持續)</Chinese>
             <Chinesesimp>警告 (持续)</Chinesesimp>
@@ -764,7 +805,7 @@
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
-            <Japanese>ACE MOD の代わりに全アドオンを検査しますか？</Japanese>
+            <Japanese>ACE MOD の代わりに全アドオンを検査しますか?</Japanese>
             <Korean>ACE를 제외한 모든 모드를 검사할까요?</Korean>
             <Chinese>檢查包含ACE之外的其他模組?</Chinese>
             <Chinesesimp>检查包含ACE之外的其他模组?</Chinesesimp>
@@ -796,7 +837,7 @@
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
-            <Japanese>どのようなアドオンを許可しますか？</Japanese>
+            <Japanese>どのようなアドオンを許可しますか?</Japanese>
             <Korean>허가되는 에드온은 어느것입니까?</Korean>
             <Chinese>哪些模組是可被允許/忽略的?</Chinese>
             <Chinesesimp>哪些模组是可被允许/忽略的?</Chinesesimp>
@@ -974,94 +1015,94 @@
             <Chinesesimp>不要强行</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
-            <English>ACE3 Equipment</English>
-            <German>ACE-Ausrüstung</German>
-            <Polish>ACE3 Wyposażenie</Polish>
-            <Portuguese>Equipamentos ACE3</Portuguese>
-            <Russian>ACE3 Снаряжение</Russian>
-            <Czech>ACE3 Vybavení</Czech>
-            <Spanish>ACE3 Equipo</Spanish>
-            <Italian>Equipaggiamento ACE3</Italian>
-            <French>ACE3 Equipement</French>
-            <Japanese>ACE3 装備</Japanese>
-            <Korean>ACE3 장비</Korean>
-            <Chinese>ACE3 裝備按鍵</Chinese>
-            <Chinesesimp>ACE3 装备按键</Chinesesimp>
+            <English>ACE Equipment</English>
+            <German>ACE Ausrüstung</German>
+            <Polish>ACE Wyposażenie</Polish>
+            <Portuguese>ACE Equipamentos</Portuguese>
+            <Russian>ACE Снаряжение</Russian>
+            <Czech>ACE Vybavení</Czech>
+            <Spanish>ACE Equipo</Spanish>
+            <Italian>ACE Equipaggiamento</Italian>
+            <French>ACE Equipement</French>
+            <Japanese>ACE 装備</Japanese>
+            <Korean>ACE 장비</Korean>
+            <Chinese>ACE 裝備按鍵</Chinese>
+            <Chinesesimp>ACE 装备按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
-            <English>ACE3 Common</English>
-            <German>ACE3 Allgemein</German>
-            <Polish>ACE3 Ogólne</Polish>
-            <Portuguese>Comum ACE3</Portuguese>
-            <Russian>ACE3 Общие</Russian>
-            <Spanish>ACE3 Común</Spanish>
-            <Czech>ACE3 Obecné</Czech>
-            <Italian>Comune ACE3</Italian>
-            <French>ACE3 Commun</French>
-            <Japanese>ACE3 全般</Japanese>
-            <Korean>ACE3 일반</Korean>
-            <Chinese>ACE3 通用按鍵</Chinese>
-            <Chinesesimp>ACE3 通用按键</Chinesesimp>
+            <English>ACE Common</English>
+            <German>ACE Allgemein</German>
+            <Polish>ACE Ogólne</Polish>
+            <Portuguese>ACE Comum</Portuguese>
+            <Russian>ACE Общие</Russian>
+            <Spanish>ACE Común</Spanish>
+            <Czech>ACE Obecné</Czech>
+            <Italian>ACE Comune</Italian>
+            <French>ACE Commun</French>
+            <Japanese>ACE 全般</Japanese>
+            <Korean>ACE 일반</Korean>
+            <Chinese>ACE 通用按鍵</Chinese>
+            <Chinesesimp>ACE 通用按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
-            <English>ACE3 Weapons</English>
-            <German>ACE3 Waffen</German>
-            <Polish>ACE3 Broń</Polish>
-            <Portuguese>Armamento ACE3</Portuguese>
-            <Russian>ACE3 Оружие</Russian>
-            <Czech>ACE3 Zbraně</Czech>
-            <Spanish>ACE3 Armas</Spanish>
-            <Italian>Armi ACE3</Italian>
-            <French>ACE3 Armes</French>
-            <Japanese>ACE3 武器</Japanese>
-            <Korean>ACE3 무기</Korean>
-            <Chinese>ACE3 武器按鍵</Chinese>
-            <Chinesesimp>ACE3 武器按键</Chinesesimp>
+            <English>ACE Weapons</English>
+            <German>ACE Waffen</German>
+            <Polish>ACE Broń</Polish>
+            <Portuguese>ACE Armamento</Portuguese>
+            <Russian>ACE Оружие</Russian>
+            <Czech>ACE Zbraně</Czech>
+            <Spanish>ACE Armas</Spanish>
+            <Italian>ACE Armi</Italian>
+            <French>ACE Armes</French>
+            <Japanese>ACE 武器</Japanese>
+            <Korean>ACE 무기</Korean>
+            <Chinese>ACE 武器按鍵</Chinese>
+            <Chinesesimp>ACE 武器按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
-            <English>ACE3 Movement</English>
-            <German>ACE3 Bewegung</German>
-            <Polish>ACE3 Ruch</Polish>
-            <Portuguese>Movimento ACE3</Portuguese>
-            <Russian>ACE3 Перемещение</Russian>
-            <Spanish>ACE3 Movimiento</Spanish>
-            <Czech>ACE3 Pohyb</Czech>
-            <Italian>Movimento ACE3</Italian>
-            <French>ACE3 Mouvement</French>
-            <Japanese>ACE3 移動</Japanese>
-            <Korean>ACE3 움직임</Korean>
-            <Chinese>ACE3 動作按鍵</Chinese>
-            <Chinesesimp>ACE3 动作按键</Chinesesimp>
+            <English>ACE Movement</English>
+            <German>ACE Bewegung</German>
+            <Polish>ACE Ruch</Polish>
+            <Portuguese>ACE Movimento</Portuguese>
+            <Russian>ACE Перемещение</Russian>
+            <Spanish>ACE Movimiento</Spanish>
+            <Czech>ACE Pohyb</Czech>
+            <Italian>ACE Movimento</Italian>
+            <French>ACE Mouvement</French>
+            <Japanese>ACE 移動</Japanese>
+            <Korean>ACE 움직임</Korean>
+            <Chinese>ACE 動作按鍵</Chinese>
+            <Chinesesimp>ACE 动作按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
-            <English>ACE3 Scope Adjustment</English>
-            <German>ACE3 Visiereinstellung</German>
-            <Polish>ACE3 Regulacja optyki</Polish>
-            <Portuguese>Ajuste de luneta ACE3</Portuguese>
-            <Russian>ACE3 Прицелы</Russian>
-            <Czech>ACE3 Nastavení optiky</Czech>
-            <Spanish>ACE3 Ajuste de miras</Spanish>
-            <Italian>Regolazione Ottiche ACE3</Italian>
-            <French>ACE3 Ajustement de la lunette </French>
-            <Japanese>ACE3 スコープ調節</Japanese>
-            <Korean>ACE3 조준경 조정</Korean>
-            <Chinese>ACE3 瞄準鏡調節按鍵</Chinese>
-            <Chinesesimp>ACE3 瞄准镜调节按键</Chinesesimp>
+            <English>ACE Scope Adjustment</English>
+            <German>ACE Visiereinstellung</German>
+            <Polish>ACE Regulacja optyki</Polish>
+            <Portuguese>ACE Ajuste de luneta</Portuguese>
+            <Russian>ACE Прицелы</Russian>
+            <Czech>ACE Nastavení optiky</Czech>
+            <Spanish>ACE Ajuste de miras</Spanish>
+            <Italian>ACE Regolazione Ottiche</Italian>
+            <French>ACE Ajustement de la lunette </French>
+            <Japanese>ACE スコープ調節</Japanese>
+            <Korean>ACE 조준경 조정</Korean>
+            <Chinese>ACE 瞄準鏡調節按鍵</Chinese>
+            <Chinesesimp>ACE 瞄准镜调节按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
-            <English>ACE3 Vehicles</English>
-            <German>ACE3 Fahrzeuge</German>
-            <Polish>ACE3 Pojazdy</Polish>
-            <Portuguese>Veículos ACE3</Portuguese>
-            <Russian>ACE3 Транспорт</Russian>
-            <Czech>ACE3 Vozidla</Czech>
-            <Spanish>ACE3 Vehículos</Spanish>
-            <Italian>Veicoli ACE3</Italian>
-            <French>ACE3 Vehicules</French>
-            <Japanese>ACE3 車両</Japanese>
-            <Korean>ACE3 차량</Korean>
-            <Chinese>ACE3 載具按鍵</Chinese>
-            <Chinesesimp>ACE3 载具按键</Chinesesimp>
+            <English>ACE Vehicles</English>
+            <German>ACE Fahrzeuge</German>
+            <Polish>ACE Pojazdy</Polish>
+            <Portuguese>ACE Veículos</Portuguese>
+            <Russian>ACE Транспорт</Russian>
+            <Czech>ACE Vozidla</Czech>
+            <Spanish>ACE Vehículos</Spanish>
+            <Italian>ACE Veicoli</Italian>
+            <French>ACE Vehicules</French>
+            <Japanese>ACE 車両</Japanese>
+            <Korean>ACE 차량</Korean>
+            <Chinese>ACE 載具按鍵</Chinese>
+            <Chinesesimp>ACE 载具按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1093,6 +1134,22 @@
             <Korean>토글</Korean>
             <Chinese>切換</Chinese>
             <Chinesesimp>切换</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_Weight">
+            <English>Weight:</English>
+            <German>Gewicht:</German>
+            <Spanish>Peso:</Spanish>
+            <French>Poids :</French>
+            <Polish>Waga:</Polish>
+            <Czech>Váha:</Czech>
+            <Italian>Peso:</Italian>
+            <Portuguese>Peso:</Portuguese>
+            <Hungarian>Súly:</Hungarian>
+            <Russian>Вес:</Russian>
+            <Japanese>重量:</Japanese>
+            <Korean>무게:</Korean>
+            <Chinesesimp>重量:</Chinesesimp>
+            <Chinese>重量:</Chinese>
         </Key>
     </Package>
 </Project>
