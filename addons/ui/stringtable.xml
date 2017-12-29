@@ -34,7 +34,7 @@
             <Portuguese>Este módulo permite ligar ou desligar partes da interface do usuário</Portuguese>
             <French>Ce module permet le basculement de parties visibles de l'interface utlisateur</French>
             <Russian>Этот модуль позволяет переключать видимость элементов пользовательского интерфейса.</Russian>
-            <Japanese>モジュールではユーザ インタフェイスの一部をトグル表示できます。</Japanese>
+            <Japanese>モジュールではユーザ インタフェイスの一部表示を切り替えできます。</Japanese>
             <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
             <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
             <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는것을 가능케 해줍니다.</Korean>
@@ -48,7 +48,7 @@
             <Portuguese>Permitir IU Selecionável</Portuguese>
             <French>Permettre l'IU selective</French>
             <Russian>Включить настраиваемый интерфейс</Russian>
-            <Japanese>選択できるユーザ インタフェイスを有効化します</Japanese>
+            <Japanese>UI 選択性を許可</Japanese>
             <Polish>Zezwól na selektywne UI</Polish>
             <German>Erlaube selektives UI</German>
             <Korean>선택적 사용자 인터페이스 허가</Korean>
@@ -471,7 +471,7 @@
             <Portuguese>Barra de Combustível do Veículo</Portuguese>
             <French>Barre d'éssence du véhicule</French>
             <Russian>Полоса топлива</Russian>
-            <Japanese>車両の給油計</Japanese>
+            <Japanese>車両の燃料計</Japanese>
             <Polish>Pasek paliwa</Polish>
             <German>Fahrzeug-Treibstoffleiste</German>
             <Korean>차량 연료 막대</Korean>
@@ -555,7 +555,7 @@
             <Portuguese>A modificação da interface do usuário está desabilitada.</Portuguese>
             <French>Modifications de l'interface utilisateur désactivé.</French>
             <Russian>Изменение пользовательского интерфейса запрещено.</Russian>
-            <Japanese>変更されたユーザ インタフェイスを無効化します。</Japanese>
+            <Japanese>ユーザ インタフェイスの変更は無効化されています。</Japanese>
             <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
             <German>Die Modifizierung des UI ist deaktiviert.</German>
             <Korean>사용자 인터페이스 변경이 비활성화 되어있습니다.</Korean>
@@ -568,7 +568,7 @@
             <Portuguese>Não é possível modificar um elemento forçado da interface do usuário.</Portuguese>
             <French>Impossible de modifier un élément de l'interface utilisateur forcé.</French>
             <Russian>Невозможно изменить зафиксированный элемент пользовательского интерфейса.</Russian>
-            <Japanese>ユーザー インタフェイス要素は変更できません。</Japanese>
+            <Japanese>ユーザー インタフェイス要素の強制はできません。</Japanese>
             <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
             <German>Gesperrte UI-Elemente können nicht modifiziert werden.</German>
             <Korean>강제 사용자 인터페이스는 변경하실 수 없습니다.</Korean>

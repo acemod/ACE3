@@ -8,7 +8,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInteraction);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_Interaction_ca.paa);
@@ -167,6 +167,14 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                     priority = 2.6;
+                };
+
+                class GVAR(PullOutBody) {
+                    displayName = CSTRING(PullOutBody);
+                    condition = QUOTE(call DFUNC(canPullOutBody));
+                    statement = QUOTE(call DFUNC(pullOutBody));
+                    exceptions[] = {"isNotSwimming"};
+                    icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca.paa";
                 };
             };
 
@@ -342,7 +350,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = "true";
+                    condition = QUOTE(alive _target);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -353,7 +361,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Passengers {
                 displayName = CSTRING(Passengers);
-                condition = "true";
+                condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
@@ -370,7 +378,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = "true";
+                    condition = QUOTE(alive _target);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -381,7 +389,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Passengers {
                 displayName = CSTRING(Passengers);
-                condition = "true";
+                condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
@@ -397,7 +405,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = "true";
+                    condition = QUOTE(alive _target);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -408,7 +416,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Passengers {
                 displayName = CSTRING(Passengers);
-                condition = "true";
+                condition = QUOTE(alive _target);
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -428,7 +436,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = "true";
+                    condition = QUOTE(alive _target);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -439,7 +447,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Passengers {
                 displayName = CSTRING(Passengers);
-                condition = "true";
+                condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
@@ -456,7 +464,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = "true";
+                    condition = QUOTE(alive _target);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -467,7 +475,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Passengers {
                 displayName = CSTRING(Passengers);
-                condition = "true";
+                condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
@@ -505,7 +513,7 @@ class CfgVehicles {
                 };
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = "true";
+                    condition = QUOTE(alive _target);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -516,7 +524,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Passengers {
                 displayName = CSTRING(Passengers);
-                condition = "true";
+                condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
@@ -532,7 +540,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = "true";
+                    condition = QUOTE(alive _target);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -543,7 +551,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Passengers {
                 displayName = CSTRING(Passengers);
-                condition = "true";
+                condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };

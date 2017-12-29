@@ -12,7 +12,7 @@
             <Hungarian>Kilövö betöltése</Hungarian>
             <Italian>Carica lanciamissili</Italian>
             <Portuguese>Recarregar lançador</Portuguese>
-            <Japanese>ランチャーを装填</Japanese>
+            <Japanese>ランチャーに装填</Japanese>
             <Korean>무기 재장전</Korean>
             <Chinesesimp>装载发射器</Chinesesimp>
             <Chinese>裝載發射器</Chinese>
@@ -28,7 +28,7 @@
             <Hungarian>Kilövő betöltés alatt...</Hungarian>
             <Italian>Caricando il lanciamissili...</Italian>
             <Portuguese>Recarregando lançador...</Portuguese>
-            <Japanese>ランチャーを装填している・・・</Japanese>
+            <Japanese>ランチャーに装填中・・・</Japanese>
             <Korean>무기 재장전중...</Korean>
             <Chinesesimp>装载发射器中...</Chinesesimp>
             <Chinese>裝載發射器中...</Chinese>
@@ -44,7 +44,7 @@
             <Hungarian>Kilövő betöltve</Hungarian>
             <Italian>Lanciamissili caricato</Italian>
             <Portuguese>Lançador Carregado</Portuguese>
-            <Japanese>ランチャーの装填完了</Japanese>
+            <Japanese>ランチャーに装填完了</Japanese>
             <Korean>무기 재장전됨</Korean>
             <Chinesesimp>发射器装载完毕</Chinesesimp>
             <Chinese>發射器裝載完畢</Chinese>
@@ -60,7 +60,7 @@
             <Hungarian>%1 betöltése</Hungarian>
             <Italian>Caricato %1</Italian>
             <Portuguese>Recarregar %1</Portuguese>
-            <Japanese>%1 へ装填</Japanese>
+            <Japanese>%1 を装填</Japanese>
             <Korean>%1 장전</Korean>
             <Chinesesimp>装载%1</Chinesesimp>
             <Chinese>裝載%1</Chinese>

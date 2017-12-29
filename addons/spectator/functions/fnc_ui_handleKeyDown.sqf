@@ -197,13 +197,4 @@ if ((_key in (actionKeys "CuratorInterface")) && {!isNull (getAssignedCuratorLog
     true
 };
 
-// Handle acre spectate headset down (if present)
-if (
-    ["acre_sys_radio"] call EFUNC(common,isModLoaded) &&
-    { [_key, [_shift, _ctrl, _alt]] isEqualTo ((["ACRE2", "HeadSet"] call CBA_fnc_getKeybind) select 5) }
-) exitWith {
-    [] call acre_sys_core_fnc_toggleHeadset;
-    true
-};
-
 false // default to unhandled

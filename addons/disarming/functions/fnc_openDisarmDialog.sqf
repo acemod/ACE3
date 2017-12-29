@@ -48,7 +48,6 @@ GVAR(disarmTarget) = _target;
 
 //Setup PFEH
 [{
-    private ["_groundContainer", "_targetContainer", "_playerName", "_icon", "_rankPicture", "_targetUniqueItems", "_holderUniqueItems", "_holder"];
     disableSerialization;
     params ["_args", "_idPFH"];
     _args params ["_player", "_target", "_display"];
@@ -62,13 +61,13 @@ GVAR(disarmTarget) = _target;
         if (!isNull _display) then { closeDialog 0; }; //close dialog if still open
     } else {
 
-        _groundContainer = _display displayCtrl 632;
-        _targetContainer = _display displayCtrl 633;
-        _playerName = _display displayCtrl 111;
-        _rankPicture = _display displayCtrl 1203;
+        private _groundContainer = _display displayCtrl 632;
+        private _targetContainer = _display displayCtrl 633;
+        private _playerName = _display displayCtrl 111;
+        private _rankPicture = _display displayCtrl 1203;
 
         //Show rank and name (just like BIS's inventory)
-        _icon = format [DEFUALTPATH, toLower (rank _target)];
+        private _icon = format [DEFUALTPATH, toLower (rank _target)];
         if (_icon isEqualTo DEFUALTPATH) then {_icon = ""};
         _rankPicture ctrlSetText _icon;
         _playerName ctrlSetText ([GVAR(disarmTarget), false, true] call EFUNC(common,getName));
@@ -78,11 +77,11 @@ GVAR(disarmTarget) = _target;
         lbClear _targetContainer;
 
         //Show the items in the ground disarmTarget's inventory
-        _targetUniqueItems = [GVAR(disarmTarget)] call FUNC(getAllGearUnit);
+        private _targetUniqueItems = [GVAR(disarmTarget)] call FUNC(getAllGearUnit);
         [_targetContainer, _targetUniqueItems] call FUNC(showItemsInListbox);
 
         //Try to find a holder that the target is using to drop items into:
-        _holder = objNull;
+        private _holder = objNull;
         {
             if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
                 _holder = _x;
@@ -91,7 +90,7 @@ GVAR(disarmTarget) = _target;
 
         //If a holder exists, show it's inventory
         if (!isNull _holder) then {
-            _holderUniqueItems = [_holder] call FUNC(getAllGearContainer);
+            private _holderUniqueItems = [_holder] call FUNC(getAllGearContainer);
             [_groundContainer, _holderUniqueItems] call FUNC(showItemsInListbox);
         };
     };

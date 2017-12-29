@@ -1,6 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
+        <Key ID="STR_ACE_Overheating_DisplayName">
+            <English>Overheating</English>
+            <German>Heißlaufen</German>
+            <Italian>Surriscaldamento</Italian>
+            <Chinese>過熱</Chinese>
+            <Chinesesimp>过热</Chinesesimp>
+            <Japanese>過熱</Japanese>
+        </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
             <German>Zeige Text bei Ladehemmung</German>
@@ -120,8 +128,8 @@
             <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
             <Japanese>過熱は精度を減少させたり、初速を低下させます、これは全プレイヤに適用します。</Japanese>
             <Korean>무기 과열시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
-            <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况. 适用于所有玩家</Chinesesimp>
-            <Chinese>過熱的武器將會有打不準和減少射擊初速的情況. 適用於所有玩家</Chinese>
+            <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况。适用于所有玩家</Chinesesimp>
+            <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
@@ -180,8 +188,8 @@
             <Czech>Pravděpodobnost, že uvolnění zbraně selže, je proto nutné tuto akci opakovat. </Czech>
             <Japanese>弾詰りの除去を失敗する可能性が生まれ、もう一度動作を行う必要があります。</Japanese>
             <Korean>탄걸림 해결 시도시 실패할 확률이 있습니다. 이는 다시 탄걸림 해결을 시도해야함을 의미합니다.</Korean>
-            <Chinesesimp>清除卡弹时有可能会失败, 需要反覆进行清枪</Chinesesimp>
-            <Chinese>清除卡彈時有可能會失敗, 需要反覆進行清槍</Chinese>
+            <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
+            <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -226,7 +234,7 @@
             <Hungarian>Megakadt a fegyver!</Hungarian>
             <Portuguese>Arma travada!</Portuguese>
             <Italian>Arma inceppata!</Italian>
-            <Japanese>武器が詰まった！</Japanese>
+            <Japanese>武器が詰まった!</Japanese>
             <Korean>탄걸림!</Korean>
             <Chinesesimp>武器卡弹!</Chinesesimp>
             <Chinese>武器卡彈!</Chinese>
@@ -305,7 +313,7 @@
             <Hungarian>Cső kicserélése folyamatban...</Hungarian>
             <Portuguese>Substituindo cano...</Portuguese>
             <Italian>Sostituendo la canna...</Italian>
-            <Japanese>銃身を交換中・・・</Japanese>
+            <Japanese>銃身を交換しています・・・</Japanese>
             <Korean>총열 교체중...</Korean>
             <Chinesesimp>换枪管中...</Chinesesimp>
             <Chinese>換槍管中...</Chinese>
@@ -369,7 +377,7 @@
             <Portuguese>Conferindo temperatura...</Portuguese>
             <Italian>Controllando la temperatura...</Italian>
             <Russian>Проверка температуры...</Russian>
-            <Japanese>温度を測っている・・・</Japanese>
+            <Japanese>温度を測っています・・・</Japanese>
             <Korean>무기 온도 확인중...</Korean>
             <Chinesesimp>检查枪管温度中...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
@@ -394,7 +402,7 @@
             <French>Vérification de la température des canons de rechange...</French>
             <Russian>Проверка температуры запасных стволов...</Russian>
             <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
-            <Japanese>予備銃身の温度を測っている・・・</Japanese>
+            <Japanese>予備銃身の温度を測っています・・・</Japanese>
             <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
             <German>Prüfe Temperatur der Wechselläufe ...</German>
             <Korean>총열 온도 확인중...</Korean>

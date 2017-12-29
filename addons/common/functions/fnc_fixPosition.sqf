@@ -19,7 +19,7 @@
 if (!local _this) exitWith {};
 
 // Objects with disabled simulation and objects with simulation type "house" don't have gravity/physics, so make sure they are not floating
-private _hasGravity = simulationEnabled _this && {!(getText (configFile >> "CfgVehicles" >> typeOf _this >> "simulation") == "house")};
+private _hasGravity = simulationEnabled _this && {getText (configFile >> "CfgVehicles" >> typeOf _this >> "simulation") != "house"};
 
 if (!_hasGravity) then {
     private _posAbove = (getPosATL _this) select 2;

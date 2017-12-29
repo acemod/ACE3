@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 //paramsArray is a normal variable not a command
@@ -35,12 +36,6 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
         };
 
-        private _settingData = [_settingName] call FUNC(getSettingData);
-        _settingData params ["", "_typeName", "", "", "", "", "_isForced"];
-
-        // Check if it's already forced and quit
-        if (_isForced) exitWith {WARNING_1("readSettingsFromParamsArray - param [%1] is already set and forced", _settingName);};
-
         // The setting is not forced, so update the value
         // Read entry and cast it to the correct type from the existing variable
         private _validValue = false;
@@ -57,7 +52,12 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_typeName);
         };
 
-        // Update the variable globaly and Force
-        [_settingName, _settingValue, true, true] call FUNC(setSetting);
+        if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
+            WARNING_1("Setting [%1] - Already Forced",_settingName);
+        };
+
+        // Set the setting as a mission setting and force it
+        TRACE_2("setSettingMission from module",_settingName,_value);
+        ["CBA_settings_setSettingMission", [_settingName, _value, true]] call CBA_fnc_localEvent;
     };
 } forEach _paramsArray;

@@ -1,6 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MagazineRepack">
+        <Key ID="STR_ACE_MagazineRepack_DisplayName">
+            <English>Magazine Repack</English>
+            <Italian>Riempimento Caricatori</Italian>
+            <Chinese>重新整理彈匣</Chinese>
+            <Chinesesimp>重新整理弹匣</Chinesesimp>
+            <Japanese>弾倉詰め替え</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
+            <English>Time per round</English>
+            <German>Zeit pro Patrone</German>
+            <Italian>Durata per proiettile</Italian>
+            <Chinese>每發所需時間</Chinese>
+            <Chinesesimp>每发所需时间</Chinesesimp>
+            <Japanese>弾頭毎の所有時間</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
+            <English>Time per magazine</English>
+            <German>Zeit pro Magazin</German>
+            <Italian>Durata per caricatore</Italian>
+            <Chinese>每匣所需時間</Chinese>
+            <Chinesesimp>每匣所需时间</Chinesesimp>
+            <Japanese>弾倉毎の所有時間</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
+            <English>Time per belt link</English>
+            <German>Zeit pro Gurtglied</German>
+            <Italian>Durata per caricatore a nastro</Italian>
+            <Chinese>每彈鍊所需時間</Chinese>
+            <Chinesesimp>每弹炼所需时间</Chinesesimp>
+            <Japanese>ベルトリンク毎の所有時間</Japanese>
+        </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>
             <German>Magazine umpacken</German>
@@ -8,7 +39,7 @@
             <French>Réorganiser les chargeurs</French>
             <Polish>Przepakuj magazynki</Polish>
             <Czech>Přepáskovat zásobníky</Czech>
-            <Italian>Riempi i caricatori</Italian>
+            <Italian>Riempi Caricatori</Italian>
             <Portuguese>Reorganizar Carregadores</Portuguese>
             <Hungarian>Újratárazás </Hungarian>
             <Russian>Перепаковать магазины</Russian>
@@ -24,7 +55,7 @@
             <French>Réorganisation des chargeurs...</French>
             <Polish>Przepakowywanie magazynków...</Polish>
             <Czech>Přepáskovávám zásobník...</Czech>
-            <Italian>Sto riempendo i caricatori...</Italian>
+            <Italian>Riempendo i caricatori...</Italian>
             <Portuguese>Reorganizando Carregadores...</Portuguese>
             <Hungarian>Újratárazás...</Hungarian>
             <Russian>Перепаковка магазинов...</Russian>
@@ -44,7 +75,7 @@
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
-            <Japanese>%1 個の満杯な弾倉と入りきらなかった %2 発の弾薬</Japanese>
+            <Japanese>%1 個の満杯な弾倉とあふれた %2 発の弾薬</Japanese>
             <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
             <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
             <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
@@ -58,7 +89,7 @@
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
-            <Italian>Caricatori riempiti</Italian>
+            <Italian>Caricatori Riempiti</Italian>
             <Portuguese>Reorganização Terminada</Portuguese>
             <Japanese>詰め替えが完了</Japanese>
             <Korean>탄창 채우기 끝남</Korean>
@@ -74,7 +105,7 @@
             <Czech>Páskování přerušeno</Czech>
             <Polish>Przepakowywanie przerwane</Polish>
             <Hungarian>Újratárazás megszakítva</Hungarian>
-            <Italian>Riempimento interrotto</Italian>
+            <Italian>Riempimento Interrotto</Italian>
             <Portuguese>Reorganização Interrompida</Portuguese>
             <Japanese>詰め替えを中断した</Japanese>
             <Korean>탄창 채우기 방해받음</Korean>
@@ -90,7 +121,7 @@
             <Czech>%1 plný a %2 částečně</Czech>
             <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
-            <Italian>%1 pieno(i) e %2 parziale(i)</Italian>
+            <Italian>%1 Pieno(i) e %2 Parziale(i)</Italian>
             <Portuguese>%1 Total e %2 Parcial </Portuguese>
             <Japanese>%1 個の満杯と %2 個の弾薬入り弾倉</Japanese>
             <Korean>%1 꽉찼고 %2 부분참</Korean>

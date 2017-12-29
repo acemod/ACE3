@@ -18,20 +18,19 @@
 
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
-private ["_mouseOver", "_unit"];
+params ["_logic"];
 
-if !(_activated && local _logic) exitWith {};
+if !(local _logic) exitWith {};
 
 if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
-    _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
+    private _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);
     } else {
-        _unit = (_mouseOver select 1);
+        private _unit = (_mouseOver select 1);
 
         if (_unit isKindOf "Man" || {!(_unit isKindOf "Building")}) then {
             [LSTRING(OnlyStructures)] call FUNC(showMessage);

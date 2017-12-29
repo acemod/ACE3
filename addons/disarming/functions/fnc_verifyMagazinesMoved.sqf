@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_4(_startA,_endA,_startB,_endB);
+params ["_startA", "_endA", "_startB", "_endB"];
 
 //Quick Lazy Count Check
 if (((count _startA) + (count _startB)) != ((count _endA) + (count _endB))) exitWith {

@@ -17,11 +17,11 @@
  */
 #include "script_component.hpp"
 
-if (canSuspend) exitWith {[FUNC(moduleSuppressiveFire), _this] call CBA_fnc_directCall;};
+if (canSuspend) exitWith {[FUNC(moduleLoadIntoCargo), _this] call CBA_fnc_directCall;};
 
-params ["_logic", "_units", "_activated"];
+params ["_logic"];
 
-if !(_activated && {local _logic}) exitWith {};
+if !(local _logic) exitWith {};
 
 private _cargo = attachedTo _logic;
 

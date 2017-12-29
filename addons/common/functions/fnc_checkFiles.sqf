@@ -78,7 +78,17 @@ if (toLower (productVersion select 6) in ["linux", "osx"]) then {
         private _versionEx = _x callExtension "version";
 
         if (_versionEx == "") then {
-            private _errorMsg = format ["Extension %1.dll not installed.", _x];
+            private _extension = ".dll";
+
+            if (productVersion select 7 == "x64") then {
+                _extension = "_x64.dll";
+            };
+
+            if (productVersion select 6 == "Linux") then {
+                _extension = ".so";
+            };
+
+            private _errorMsg = format ["Extension %1%2 not found.", _x, _extension];
 
             ERROR(_errorMsg);
 

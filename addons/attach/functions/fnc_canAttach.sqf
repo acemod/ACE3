@@ -21,10 +21,8 @@ params ["_attachToVehicle","_player","_args"];
 _args params [["_itemClassname","", [""]]];
 TRACE_3("params",_attachToVehicle,_player,_itemClassname);
 
-private ["_attachLimit", "_attachedObjects"];
-
-_attachLimit = [6, 1] select (_player == _attachToVehicle);
-_attachedObjects = _attachToVehicle getVariable [QGVAR(attached), []];
+private _attachLimit = [6, 1] select (_player == _attachToVehicle);
+private _attachedObjects = _attachToVehicle getVariable [QGVAR(attached), []];
 
 ((_player == _attachToVehicle) || {canStand _player}) &&
 {(_attachToVehicle distance _player) < 10} &&

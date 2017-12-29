@@ -19,16 +19,14 @@
 params ["_attachToVehicle","_unit"],
 TRACE_2("params",_attachToVehicle,_unit);
 
-private ["_attachedList", "_itemDisplayName", "_attachedObject", "_attachedIndex", "_itemName", "_minDistance", "_isChemlight"];
+private _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 
-_attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
-
-_attachedObject = objNull;
-_attachedIndex = -1;
-_itemName = "";
+private _attachedObject = objNull;
+private _attachedIndex = -1;
+private _itemName = "";
 
 //Find closest attached object
-_minDistance = 1000;
+private _minDistance = 1000;
 
 {
     _x params ["_xObject", "_xItemName"];
@@ -45,7 +43,7 @@ _minDistance = 1000;
 if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find attached object")};
 
 // Check if item is a chemlight
-_isChemlight = _attachedObject isKindOf "Chemlight_base";
+private _isChemlight = _attachedObject isKindOf "Chemlight_base";
 
 // Exit if can't add the item
 if (!(_unit canAdd _itemName) && {!_isChemlight}) exitWith {
@@ -80,9 +78,9 @@ _attachedList deleteAt _attachedIndex;
 _attachToVehicle setVariable [QGVAR(attached), _attachedList, true];
 
 // Display message
-_itemDisplayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
+private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
 if (_itemDisplayName == "") then {
     _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
 
-[format [localize LSTRING(Item_Detached), _itemDisplayName]] call EFUNC(common,displayTextStructured);
+[format [localize LSTRING(Item_Detached), _itemDisplayName], 2] call EFUNC(common,displayTextStructured);

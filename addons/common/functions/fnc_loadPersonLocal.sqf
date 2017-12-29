@@ -19,9 +19,9 @@
 
 params ["_unit", "_vehicle", "_caller"];
 
-if (!alive _unit) then {
-    // _unit = [_unit, _caller] call FUNC(makeCopyOfBody); //func does not exist
-};
+// if (!alive _unit) then {
+// _unit = [_unit, _caller] call makeCopyOfBody; //func does not exist
+// };
 
 private _slotsOpen = false;
 

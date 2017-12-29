@@ -17,6 +17,7 @@ PREP(ui_handleChildDestroyed);
 PREP(ui_handleKeyDown);
 PREP(ui_handleKeyUp);
 PREP(ui_handleListClick);
+PREP(ui_handleLoad);
 PREP(ui_handleMapClick);
 PREP(ui_handleMapDraw);
 PREP(ui_handleMouseButtonDblClick);
@@ -42,7 +43,6 @@ PREP(handleFired);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
 PREP(setFocus);
-PREP(stageSpectator);
 PREP(switchFocus);
 
 // Public functions
@@ -54,10 +54,3 @@ PREP(updateCameraModes);
 PREP(updateSides);
 PREP(updateUnits);
 PREP(updateVisionModes);
-
-// Deprecated (temp)
-PREP(interrupt);
-DFUNC(updateSpectatableSides) = {
-    ACE_DEPRECATED(QFUNC(updateSpectatableSides),"3.12.0",QFUNC(updateSides));
-    _this call FUNC(updateSides);
-};

@@ -33,7 +33,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(CheckPBO_DisplayName);
         function = QFUNC(moduleCheckPBOs);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_CheckPBO_ca.paa);

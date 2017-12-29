@@ -22,7 +22,6 @@
 disableSerialization;
 #define __dsp (uiNamespace getVariable "RangleCard_Display")
 
-private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_transonicStabilityCoef", "_barrelLength", "_barrelTwist", "_bc", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_offset", "_row", "_weaponConfig", "_initSpeed", "_initSpeedCoef"];
 
 params ["_zeroRange", "_boreHeight", "_ammoClass", "_magazineClass", "_weaponClass"];
 
@@ -34,8 +33,8 @@ if (_ammoClass == "" || _magazineClass == "" || _weaponClass == "") exitWith {};
 GVAR(controls) = [];
 
 for "_row" from 0 to 49 do {
-    _offset = if (_row < 5) then {0} else {0.003};
-    _control = (__dsp ctrlCreate ["RangeCard_RscText", 790000 + _row]);
+    private _offset = if (_row < 5) then {0} else {0.003};
+    private _control = (__dsp ctrlCreate ["RangeCard_RscText", 790000 + _row]);
     _control ctrlSetPosition [safeZoneX + 0.183, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.062, 0.025];
     if (_row in [0, 8, 18, 28, 38, 48]) then {
         _control ctrlSetTextColor [1, 1, 1, 1];
@@ -48,8 +47,8 @@ for "_row" from 0 to 49 do {
 };
 for "_column" from 0 to 8 do {
     for "_row" from 0 to 49 do {
-        _offset = if (_row < 5) then {0} else {0.003};
-        _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + _column * 100 + _row]);
+        private _offset = if (_row < 5) then {0} else {0.003};
+        private _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + _column * 100 + _row]);
         _control ctrlSetPosition [safeZoneX + 0.249 + _column * 0.055, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.052, 0.025];
         _control ctrlCommit 0;
         _control ctrlSetText "-0.0";
@@ -58,8 +57,8 @@ for "_column" from 0 to 8 do {
 };
 for "_column" from 0 to 2 do {
     for "_row" from 0 to 49 do {
-        _offset = if (_row < 5) then {0} else {0.003};
-        _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + (9 +_column) * 100 + _row]);
+        private _offset = if (_row < 5) then {0} else {0.003};
+        private _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + (9 +_column) * 100 + _row]);
         _control ctrlSetPosition [safeZoneX + 0.743 + _column * 0.049, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.047, 0.025];
         _control ctrlCommit 0;
         _control ctrlSetText "-0.0";
@@ -68,8 +67,8 @@ for "_column" from 0 to 2 do {
 };
 for "_column" from 0 to 2 do {
     for "_row" from 0 to 49 do {
-        _offset = if (_row < 5) then {0} else {0.003};
-        _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + (12 +_column) * 100 + _row]);
+        private _offset = if (_row < 5) then {0} else {0.003};
+        private _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + (12 +_column) * 100 + _row]);
         _control ctrlSetPosition [safeZoneX + 0.892 + _column * 0.049, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.047, 0.025];
         _control ctrlCommit 0;
         _control ctrlSetText "-0.0";
@@ -93,20 +92,20 @@ GVAR(rangeCardStartRange) = 100;
 GVAR(rangeCardIncrement) = 50;
 GVAR(rangeCardEndRange) = GVAR(rangeCardStartRange) + 49 * GVAR(rangeCardIncrement);
 
-_ammoConfig = _ammoClass call EFUNC(advanced_ballistics,readAmmoDataFromConfig);
-_weaponConfig = _weaponClass call EFUNC(advanced_ballistics,readWeaponDataFromConfig);
-_airFriction = _ammoConfig select 0;
-_barrelTwist = _weaponConfig select 0;
-_barrelLength = _weaponConfig select 2;
-_muzzleVelocity = 0;
+private _ammoConfig = _ammoClass call EFUNC(advanced_ballistics,readAmmoDataFromConfig);
+private _weaponConfig = _weaponClass call EFUNC(advanced_ballistics,readWeaponDataFromConfig);
+private _airFriction = _ammoConfig select 0;
+private _barrelTwist = _weaponConfig select 0;
+private _barrelLength = _weaponConfig select 2;
+private _muzzleVelocity = 0;
 
-_bc = 0;
+private _bc = 0;
 if (count (_ammoConfig select 6) > 0) then {
     _bc = (_ammoConfig select 6) select 0;
 };
-_transonicStabilityCoef = _ammoConfig select 4;
-_dragModel = _ammoConfig select 5;
-_atmosphereModel = _ammoConfig select 8;
+private _transonicStabilityCoef = _ammoConfig select 4;
+private _dragModel = _ammoConfig select 5;
+private _atmosphereModel = _ammoConfig select 8;
 
 private _useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
 if (_bc == 0) then {
@@ -116,8 +115,8 @@ if (_bc == 0) then {
 if (_barrelLength > 0 && _useABConfig) then {
     _muzzleVelocity = [_barrelLength, _ammoConfig select 10, _ammoConfig select 11, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
 } else {
-    _initSpeed     = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
-    _initSpeedCoef = getNumber (configFile >> "CfgWeapons" >> _weaponClass >> "initSpeed");
+    private _initSpeed     = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
+    private _initSpeedCoef = getNumber (configFile >> "CfgWeapons" >> _weaponClass >> "initSpeed");
     if (_initSpeedCoef < 0) then {
         _initSpeed = _initSpeed * -_initSpeedCoef;
     };
@@ -154,13 +153,13 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     ctrlSetText [77004 , ""];
 };
 
-_cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5), _zeroRange, _boreHeight, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
+private _cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5), _zeroRange, _boreHeight, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
 if (isNil {_cacheEntry}) then {
     private _scopeBaseAngle = if (!_useABConfig) then {
-        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngleVanilla:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
+        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
         (parseNumber _zeroAngle)
     } else {
-        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngle:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel];
+        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZeroAB:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel];
         (parseNumber _zeroAngle)
     };
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && missionNamespace getVariable [QEGVAR(advanced_ballistics,ammoTemperatureEnabled), false]) then {
@@ -168,10 +167,10 @@ if (isNil {_cacheEntry}) then {
             private _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
             private _mv = _muzzleVelocity + _mvShift;
 
-            [_scopeBaseAngle,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,_forEachIndex,_useABConfig] call FUNC(calculateRangeCard);
+            [_scopeBaseAngle,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),200,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,_forEachIndex,_useABConfig] call FUNC(calculateRangeCard);
         } forEach [-15, -5, 5, 10, 15, 20, 25, 30, 35];
     } else {
-        [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,3,_useABConfig] call FUNC(calculateRangeCard);
+        [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),200,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,3,_useABConfig] call FUNC(calculateRangeCard);
     };
 
     for "_i" from 0 to 9 do {
@@ -202,7 +201,7 @@ lnbAddRow [770200, GVAR(rangeCardDataMVs)];
 
 for "_column" from 0 to 8 do {
     for "_row" from 0 to 49 do {
-        _control = (__dsp displayCtrl (90000 + _column * 100 + _row));
+        private _control = (__dsp displayCtrl (90000 + _column * 100 + _row));
         _control ctrlSetText ((GVAR(rangeCardDataElevation) select _column) select _row);
         if (_row >= (GVAR(lastValidRow) select _column)) then {
             _control ctrlSetTextColor [0, 0, 0, 0.6];
@@ -214,7 +213,7 @@ for "_column" from 0 to 8 do {
 };
 {
     for "_row" from 0 to 49 do {
-        _control = (__dsp displayCtrl (90000 + (9 + _forEachIndex) * 100 + _row));
+        private _control = (__dsp displayCtrl (90000 + (9 + _forEachIndex) * 100 + _row));
         _control ctrlSetText ((GVAR(rangeCardDataWindage) select _x) select _row);
         if (_row >= (GVAR(lastValidRow) select _x)) then {
             _control ctrlSetTextColor [0, 0, 0, 0.6];
@@ -227,7 +226,7 @@ for "_column" from 0 to 8 do {
 
 {
     for "_row" from 0 to 49 do {
-        _control = (__dsp displayCtrl (90000 + (12 + _forEachIndex) * 100 + _row));
+        private _control = (__dsp displayCtrl (90000 + (12 + _forEachIndex) * 100 + _row));
         _control ctrlSetText ((GVAR(rangeCardDataLead) select _x) select _row);
         if (_row >= (GVAR(lastValidRow) select _x)) then {
             _control ctrlSetTextColor [0, 0, 0, 0.6];

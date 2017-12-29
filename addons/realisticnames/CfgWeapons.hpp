@@ -232,12 +232,6 @@ class CfgWeapons {
         displayName = CSTRING(srifle_DMR_03_woodland); //Mk-I EMR 7.62 mm (Woodland);
     };
 
-    class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
-        // Weapon does not exist in base game, and parent srifle_DMR_03_F is scope 2
-        // Can remove entirely in 3.12
-        scope = 1;
-        displayName = CSTRING(srifle_DMR_03_spotter); //NATO DMR (provisional) spotter;
-    };
     class DMR_04_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_04); //ASP-1 Kir 12.7 mm;
     };
@@ -549,6 +543,16 @@ class CfgWeapons {
 
         class HE: autocannon_Base_F {
             displayName = "Mk44 Bushmaster II";
+        };
+    };
+
+    class autocannon_40mm_VTOL_01: autocannon_40mm_CTWS {
+        displayName = "L/60 Bofors Autocannon";
+        class AP: AP {
+            displayName = "L/60 Bofors Autocannon";
+        };
+        class HE: HE {
+            displayName = "L/60 Bofors Autocannon";
         };
     };
 
