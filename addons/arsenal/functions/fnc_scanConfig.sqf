@@ -125,7 +125,7 @@ private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
             (_cargo select 17) pushBackUnique _className;
         };
     };
-} foreach configProperties [_configCfgWeapons, "isClass _x && {2 == (if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')})} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
+} foreach configProperties [_configCfgWeapons, "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 {
     private _className = configName _x;
