@@ -42,7 +42,7 @@ if (isNil "_displayToUse" || {!isnil QGVAR(camera)}) exitWith {
 };
 
 if (_mode) then {
-    GVAR(virtualItems) = uiNamespace getVariable QGVAR(configItems);
+    GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
 } else {
     GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), [
         [[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
