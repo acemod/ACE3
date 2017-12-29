@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Dev function: Converts ace_settings to code
+ * Dev function: Converts ace_settings to code, outputs to clipboard
  *
  * Arguments:
  * 0: Addon <STRING>
@@ -9,14 +9,12 @@
  * None
  *
  * Example:
- * ["ace_frag"] call ace_common_fnc_cbaSettings_convertHelper
+ * ["ace_weaponselect"] call ace_common_fnc_cbaSettings_convertHelper
  *
  * Public: No
  */
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
-
-diag_log "start";
 
 params ["_addon"];
 
@@ -104,19 +102,20 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
         WARNING_1("Setting [%1] - no category",_varName);
         _category = "Uncategorized";
     };
-    if (((_varName select [0, 4]) == "ACE_") && {(_category select [0, 3]) != "ACE"}) then {_category = format ["ACE - %1", _category];};
-    if (((_varName select [0, 5]) == "ACEX_") && {(_category select [0, 4]) != "ACEX"}) then {_category = format ["ACEX - %1", _category];};
+    private _uncat = false;
+    if (((_varName select [0, 4]) == "ACE_") && {(_category select [0, 3]) != "ACE"}) then {_uncat = true; _category = format ["ACE %1", _category];};
+    if (((_varName select [0, 5]) == "ACEX_") && {(_category select [0, 4]) != "ACEX"}) then {_uncat = true; _category = format ["ACEX %1", _category];};
 
     private _gvarName = _varName select [_addonSearchCount];
 
     _output pushBack "";
     _output pushBack format ["[QGVAR(%1), ""%2"",", _gvarName, _cbaSettingType];
     _output pushBack format ["[LSTRING(), LSTRING()], // %1, %2", _localizedName, _localizedDescription];
-    _output pushBack format ["localize LSTRING(), // %1", _category];
+    _output pushBack format ["""%1"", // %2", ["localize LSTRING()", _category] select _uncat, _category];
     _output pushBack format ["%1, // %2", _cbaValueInfo, _cbaValueInfoHint];
     _output pushBack format ["%1, // isGlobal", _cbaIsGlobal];
     if ((_varName select [0, 4]) == "ACE_") then {
-        _output pushBack format ["{[""%1"", _this] call EFUNC(common,cbaSettings_settingChanged)}] call CBA_settings_fnc_init;", _varName];
+        _output pushBack format ["{[QGVAR(%1), _this] call EFUNC(common,cbaSettings_settingChanged)}] call CBA_settings_fnc_init;", _gvarName];
     } else {
         _output pushBack format ["{[""%1"", _this] call ace_common_fnc_cbaSettings_settingChanged}] call CBA_settings_fnc_init;", _varName];
     };
@@ -124,4 +123,4 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
 
 copyToClipboard (_output joinString endl);
 
-diag_log "done";
+INFO_1("Settings sqf copied to clipboard for %1",_addon);
