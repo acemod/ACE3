@@ -39,3 +39,4 @@ class Cfg3DEN {
 #include "ui\RscAttributes.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
+#include "RscDisplayMain.hpp"

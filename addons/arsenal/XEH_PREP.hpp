@@ -34,6 +34,7 @@ PREP(onSelChangedRight);
 PREP(onSelChangedRightListnBox);
 PREP(open3DEN);
 PREP(openBox);
+PREP(portVALoadouts);
 PREP(removeBox);
 PREP(removeVirtualItems);
 PREP(scanConfig);

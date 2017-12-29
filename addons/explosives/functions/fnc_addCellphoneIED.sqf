@@ -27,15 +27,18 @@ private _config = (_this select 3) select (count (_this select 3) - 1);
 private _requiredItems = getArray(_config >> "requires");
 private _hasRequired = true;
 private _detonators = [_unit] call FUNC(getDetonators);
+
 {
     if !(_x in _detonators) exitWith{
         _hasRequired = false;
     };
 } count _requiredItems;
 
+private _code = "";
 private _codeSet = false;
+
 while {!_codeSet} do {
-    private _code = str(round (random 9999));
+    _code = str(round (random 9999));
     _count = 4 - count (toArray _code);
     while {_count > 0} do {
         _code = "0" + _code;
@@ -43,9 +46,11 @@ while {!_codeSet} do {
     };
     _codeSet = (count ([_code] call FUNC(getSpeedDialExplosive))) == 0;
 };
+
 if (isNil QGVAR(CellphoneIEDs)) then {
     GVAR(CellphoneIEDs) = [];
 };
+
 private _count = GVAR(CellphoneIEDs) pushBack [_explosive,_code,GetNumber(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> "Cellphone" >> "FuseTime")];
 _count = _count + 1;
 publicVariable QGVAR(CellphoneIEDs);
