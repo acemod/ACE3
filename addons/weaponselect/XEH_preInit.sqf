@@ -26,11 +26,6 @@ GVAR(GrenadesNonFrag) = [];
     false
 } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
-// settings
-[
-    QGVAR(displayText), "CHECKBOX",
-    [LSTRING(SettingDisplayTextName), LSTRING(SettingDisplayTextDesc)],
-    localize ELSTRING(common,ACEKeybindCategoryWeapons)
-] call CBA_settings_fnc_init;
+#include "initSettings.sqf"
 
 ADDON = true;
