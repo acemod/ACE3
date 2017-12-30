@@ -394,6 +394,7 @@
         <Key ID="STR_ACE_Arsenal_settingCategory">
             <English>ACE Arsenal</English>
             <French>ACE Arsenal</French>
+            <German>ACE-Arsenal</German>
             <Polish>ACE Arsenał</Polish>
             <Japanese>ACE 武器庫</Japanese>
             <Italian>Arsenale ACE</Italian>
@@ -429,9 +430,37 @@
         <Key ID="STR_ACE_Arsenal_CantOpenDisplay">
             <English>Unable to open ACE arsenal</English>
             <French>Impossible d'ouvrir ACE arsenal</French>
-            <German>Kann ACE Arsenal nicht anzeigen</German>
+            <German>Kann ACE-Arsenal nicht anzeigen</German>
             <Italian>Impossibile aprire l'arsenale ACE</Italian>
             <Japanese>ACE 武器庫を開けません</Japanese>
+        </Key>
+        <Key ID= "STR_ACE_Arsenal_portLoadoutsText">
+            <English>Import BI VA loadouts to ACE Arsenal</English>
+            <French>Importe les loadouts de BI VA dans ACE Arsenal</French>
+        </Key>
+        <Key ID= "STR_ACE_Arsenal_portLoadoutsPlayerError">
+            <English>No player unit available! Place a unit and mark it as "Player".</English>
+            <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
+        </Key>
+        <Key ID= "STR_ACE_Arsenal_portLoadoutsLoadoutError">
+            <English>No loadouts to import.</English>
+            <French>Aucun loadout à importer.</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Mission">
+            <English>ACE Arsenal</English>
+            <German>ACE-Arsenal</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_ReturnToArsenal">
+            <English>Return to ACE Arsenal.</English>
+            <German>Zurück zum ACE-Arsenal.</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Mission_tooltip">
+            <English>Use ACE Arsenal to try out different weapons and equipment.</English>
+            <German>Verwende ACE-Arsenal und sieh dir verschiedene Waffen und Ausrüstung an und probiere sie aus.</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Mission_overview">
+            <English>Try weapons and equipment and create your own loadouts.</English>
+            <German>Probiere verschiedene Waffen und Ausrüstung aus und stelle dir eigene Ausrüstungsprofile zusammen.</German>
         </Key>
     </Package>
 </Project>

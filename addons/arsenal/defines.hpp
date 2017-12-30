@@ -18,6 +18,7 @@
 #define IDC_totalWeightText 801
 #define IDC_message 9
 #define IDC_menuBar 10
+#define IDC_menuBarClose 1001
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
@@ -106,6 +107,7 @@
 #define IDC_buttonShare 306
 #define IDC_buttonDelete 307
 #define IDC_buttonRename 308
+#define IDC_loadoutsSearchbar 309
 #define IDC_buttonMyLoadoutsBackground 401
 #define IDC_buttonMyLoadouts 402
 #define IDC_buttonDefaultLoadoutsBackground 403
