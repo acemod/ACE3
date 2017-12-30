@@ -36,8 +36,6 @@ if (is3DEN) then {
     // Apply the loadout from the dummy to all selected units
     {
         _x setUnitLoadout (getUnitLoadout GVAR(center));
-        _x setFace GVAR(currentFace);
-        _x setSpeaker GVAR(currentVoice);
     } foreach (get3DENSelected "object");
 
     save3DENInventory (get3DENSelected "object");
