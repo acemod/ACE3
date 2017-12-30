@@ -305,6 +305,7 @@ class GVAR(Actions) {
         items[] = {"ACE_medKit"};
         treatmentLocations[] = {QEGVAR(medical,useLocation_MedKit)};
         requiredMedic = QEGVAR(medical,medicSetting_MedKit);
+        treatmentTime = QUOTE(_target call FUNC(HealTimeMedkit));
         callbackSuccess = QFUNC(treatmentPartialHeal);
         itemConsumed = QEGVAR(medical,consumeItem_MedKit);
     };

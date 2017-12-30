@@ -78,6 +78,17 @@
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
             <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
+        <Key ID="STR_ACE_Medical_Treatment_PAKTime">
+            <English>How long should PAK take to apply ?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_PAKTime_Description">
+            <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedkitTime">
+            <English>How long should Medkit take to apply ?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedkitTime_Description">
+            <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English> 
         </Key>
     </Package>
 </Project>

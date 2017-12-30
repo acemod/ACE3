@@ -1,5 +1,5 @@
 /*
- * Author: Ruthberg
+ * Author: Ruthberg, Arcanum
  * Calculates the personal aid kit treatment time based on amount of damage to heal
  *
  * Arguments:
@@ -9,7 +9,7 @@
  * treatment time <NUMBER>
  *
  * Example:
- * [_target] call ace_medical_treatment_fnc_healTime
+ * [_target] call ace_medical_treatment_fnc_HealTimeMedkit
  *
  * Public: No
  */
@@ -23,8 +23,8 @@ private _treatTime = 0;
 {
     _totalDamage = _totalDamage + _x;
 } forEach (_unit getVariable [QEGVAR(medical,bodyPartDamage), []]);
-if (EGVAR(medical,PAKTime) > 0) then {
-    _treatTime = EGVAR(medical,PAKTime);
+if (EGVAR(medical,MedkitTime) > 0) then {
+    _treatTime = EGVAR(medical,MedkitTime);
 } else {
     _treatTime = 10 max (_totalDamage * 5) min 180;
 };

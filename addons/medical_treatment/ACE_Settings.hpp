@@ -23,4 +23,18 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
     };
+    class EGVAR(medical,MedkitTime) {
+        category = ECSTRING(medical,Category_Medical);
+        displayName = CSTRING(MedkitTime);
+        description = CSTRING(MedkitTime_Description);
+        typeName = "SCALAR";
+        value = 0;
+    };
+    class EGVAR(medical,PAKTime) {
+        category = ECSTRING(medical,Category_Medical);
+        displayName = CSTRING(PAKTime);
+        description = CSTRING(PAKTime_Description);
+        typeName = "SCALAR";
+        value = 0;
+    };
 };
