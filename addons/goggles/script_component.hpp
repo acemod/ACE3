@@ -37,6 +37,6 @@
 #define DBULLETS 2
 #define DAMOUNT 3
 
-#define GLASSDISPLAY (GETUVAR(GVAR(Display),displayNull))
+#define GLASSDISPLAY GETUVAR(GVAR(Display),displayNull)
 
 #define CLAMP(x,low,high) (if(x > high)then{high}else{if(x < low)then{low}else{x}})
