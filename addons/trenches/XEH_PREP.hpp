@@ -12,6 +12,7 @@ PREP(handlePlayerChanged);
 PREP(handlePlayerInventoryChanged);
 PREP(handleScrollWheel);
 PREP(handleUnconscious);
+PREP(initCurator);
 PREP(initTrench);
 PREP(initTrench3DEN);
 PREP(placeCamouflage);

@@ -32,7 +32,7 @@ class Extended_DisplayLoad_EventHandlers {
 
 class Extended_Deleted_EventHandlers {
     class ACE_envelope_small {
-        class GVAR(camouflageDelete) {
+        class ADDON {
             deleted = QUOTE(if (isServer) then {_this call FUNC(deleteCamouflage)});
         };
     };
@@ -43,7 +43,7 @@ class Extended_Deleted_EventHandlers {
 
 class Extended_Init_EventHandlers {
     class ACE_envelope_small {
-        class GVAR(trenchInit) {
+        class ADDON {
             init = QUOTE(_this call FUNC(initTrench));
         };
     };
@@ -51,4 +51,12 @@ class Extended_Init_EventHandlers {
     class ACE_envelope_big: ACE_envelope_small {};
     class ACE_envelope_gigant: ACE_envelope_small {};
     class ACE_envelope_vehicle: ACE_envelope_small {};
+};
+
+class Extended_InitPost_EventHandlers {
+    class ModuleCurator_F {
+        class ADDON {
+            init = QUOTE(_this call FUNC(initCurator));
+        };
+    };
 };

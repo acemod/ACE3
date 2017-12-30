@@ -23,14 +23,4 @@ GVAR(digDirection) = 0;
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
-// Add zeus evh to handle texture on trench move
-(getAssignedCuratorLogic player) addEventHandler ["CuratorObjectEdited", {
-    params ["_logic", "_object"];
-    
-    if (getNumber(configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(isTrench)) == 1) then {
-        private _texture = [_object] call FUNC(getSurfaceTexturePath);
-        _object setObjectTextureGlobal [0, _texture];
-    };
-}];
-
 //@todo Captivity?
