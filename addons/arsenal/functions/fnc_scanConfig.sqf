@@ -127,20 +127,18 @@ private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
     };
 } foreach configProperties [_configCfgWeapons, "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
-{
-    private _className = configName _x;
     private _grenadeList = [];
     {
         _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
-        false
-    } count getArray (_configCfgWeapons >> "Throw" >> "muzzles");
+    } foreach getArray (_configCfgWeapons >> "Throw" >> "muzzles");
 
     private _putList = [];
     {
         _putList append getArray (_configCfgWeapons >> "Put" >> _x >> "magazines");
-        false
-    } count getArray (_configCfgWeapons >> "Put" >> "muzzles");
+    } foreach getArray (_configCfgWeapons >> "Put" >> "muzzles");
 
+{
+    private _className = configName _x;
 
     switch true do {
         // Rifle, handgun, secondary weapons mags
