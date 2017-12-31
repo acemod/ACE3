@@ -34,7 +34,7 @@
 #define ORIENTATION 5.4
 #define EXPANSION 1
 
-#define EFFECT_AREA 1.8
+#define EFFECT_RADIUS 1.8
 
 params ["_projectile", "_timeToLive", "_center"];
 
@@ -189,7 +189,7 @@ if (isServer) then {
         // --- inflame fireplace, barrels etc.
         _x inflame true;
     };
-} forEach (_position nearObjects EFFECT_AREA);
+} forEach (_position nearObjects EFFECT_RADIUS);
 
 // --- damage local vehicle
 private _vehicle = _position nearestObject "Car";
