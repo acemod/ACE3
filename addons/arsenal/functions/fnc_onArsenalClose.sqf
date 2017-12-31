@@ -19,9 +19,11 @@ private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFr
 
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 
-camDestroy GVAR(camera);
-GVAR(center) switchCamera GVAR(cameraView);
+GVAR(camera) cameraEffect ["terminate","back"];
+player switchCamera GVAR(cameraView);
+
 deleteVehicle GVAR(cameraHelper);
+camDestroy GVAR(camera);
 
 if (is3DEN) then {
 
@@ -68,8 +70,6 @@ if (isMultiplayer) then {
 };
 
 if !(isnull curatorCamera) then {
-    curatorcamera setPosAtl (_cameraData select 0);
-    curatorcamera setVectorDir (_cameraData select 1);
     curatorcamera cameraEffect ["internal","back"];
 };
 
