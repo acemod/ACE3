@@ -272,24 +272,106 @@ class GVAR(display) {
             };
         };
         class statsBox: RscControlsGroupNoScrollbars {
-            idc = -1;
-            x = QUOTE(0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP);
+            idc = IDC_statsBox;
+            x = QUOTE(0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
-            w = QUOTE(WIDTH_TOTAL);
-            h = QUOTE(40 * GRID_H);
+            w = QUOTE(WIDTH_TOTAL / 5.1);
+            h = QUOTE(56 * GRID_H);
             class controls {
                 class statsBackground: ctrlStaticBackground {
                     idc = -1;
                     x = QUOTE(0);
                     y = QUOTE(0);
-                    w = QUOTE(WIDTH_TOTAL - 2 * WIDTH_GAP);
-                    h = QUOTE(40 * GRID_H);
-                    colorBackground[] = {0,0,0,0.5};
+                    w = QUOTE(WIDTH_TOTAL / 5.1);
+                    h = QUOTE(56 * GRID_H);
+                    colorBackground[]={0.1,0.1,0.1,0.5};
+                };
+                class statsTitle1: RscText {
+                    idc = IDC_statsTitle1;
+                    x = QUOTE(1 * GRID_W);
+                    y = QUOTE(1 * GRID_H);
+                    w = QUOTE(WIDTH_SINGLE);
+                    h = QUOTE(5 * GRID_H);
+                    colorBackground[]={0,0,0,0};
+                    shadow=1;
+                    sizeEx = QUOTE(5 * GRID_H);
+                    text = "Completion";
+                };
+                class statsBackground1: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(1 * GRID_W);
+                    y = QUOTE(7 * GRID_H);
+                    w = QUOTE(WIDTH_SINGLE);
+                    h = QUOTE(4 * GRID_H);
+                    colorBackground[]={1,1,1,0.15};
+                };
+                class statsBar1: ctrlProgress {
+                    idc = IDC_statsBar1;
+                    style = 0;
+                    texture = "#(argb,8,8,3)color(1,1,1,1)";
+                    colorBar[] = {1,1,1,1};
+                    colorFrame[] = {0,0,0,0};
+                    x = QUOTE(1 * GRID_W);
+                    y = QUOTE(7 * GRID_H);
+                    w = QUOTE(WIDTH_SINGLE);
+                    h = QUOTE(4 * GRID_H);
+                };
+                class statsTitle2: statsTitle1 {
+                    idc = IDC_statsTitle2;
+                    y = QUOTE(12 * GRID_H);
+                    text = "Design";
+                };
+                class statsBackground2: statsBackground1 {
+                    idc = -1;
+                    y = QUOTE(18 * GRID_H);
+                };
+                class statsBar2: statsBar1 {
+                    idc = IDC_statsBar2;
+                    y = QUOTE(18 * GRID_H);
+                };
+                class statsTitle3: statsTitle1 {
+                    idc = IDC_statsTitle3;
+                    y = QUOTE(23 * GRID_H);
+                    text = "Bananas";
+                };
+                class statsBackground3: statsBackground1 {
+                    idc = -1;
+                    y = QUOTE(29 * GRID_H);
+                };
+                class statsBar3: statsBar1 {
+                    idc = IDC_statsBar3;
+                    y = QUOTE(29 * GRID_H);
+                };
+                class statsTitle4: statsTitle1 {
+                    idc = IDC_statsTitle4;
+                    y = QUOTE(34 * GRID_H);
+                    text = "Unicorn resistance";
+                };
+                class statsBackground4: statsBackground1 {
+                    idc = -1;
+                    y = QUOTE(40 * GRID_H);
+                };
+                class statsBar4: statsBar1 {
+                    idc = IDC_statsBar4;
+                    y = QUOTE(40 * GRID_H);
+                };
+                class statsTitle5: statsTitle1 {
+                    idc = IDC_statsTitle5;
+                    y = QUOTE(45 * GRID_H);
+                    text = "By the power of overflow";
+                };
+                class statsBackground5: statsBackground1 {
+                    idc = -1;
+                    y = QUOTE(51 * GRID_H);
+                };
+                class statsBar5: statsBar1 {
+                    idc = IDC_statsBar5;
+                    y = QUOTE(51 * GRID_H);
                 };
             };
         };
         class statsButton: ctrlButton {
-            idc = -1;
+            idc = IDC_statsButton;
             style= 2;
             text="»";
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);

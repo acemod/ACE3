@@ -199,6 +199,18 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_rightSearchbar
 ];
 
+{
+    _x = _display displayCtrl _x;
+
+    _x progressSetPosition (random [0, 0.5, 1]);
+} foreach [
+    IDC_statsBar1,
+    IDC_statsBar2,
+    IDC_statsBar3,
+    IDC_statsBar4,
+    IDC_statsBar5
+];
+
 //--------------- Camera prep
 cutText ["","plain"];
 showCommandingMenu "";

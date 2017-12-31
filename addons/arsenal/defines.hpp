@@ -95,6 +95,18 @@
 #define IDC_buttonMisc 38
 #define IDC_buttonRemoveAllSelected 39
 #define IDC_buttonRemoveAll 40
+#define IDC_statsBox 41
+#define IDC_statsTitle1 4101
+#define IDC_statsBar1 4102
+#define IDC_statsTitle2 4103
+#define IDC_statsBar2 4104
+#define IDC_statsTitle3 4105
+#define IDC_statsBar3 4106
+#define IDC_statsTitle4 4107
+#define IDC_statsBar4 4108
+#define IDC_statsTitle5 4109
+#define IDC_statsBar5 4110
+#define IDC_statsButton 42
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3
