@@ -127,15 +127,15 @@ private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
     };
 } foreach configProperties [_configCfgWeapons, "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
-    private _grenadeList = [];
-    {
-        _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
-    } foreach getArray (_configCfgWeapons >> "Throw" >> "muzzles");
+private _grenadeList = [];
+{
+    _grenadeList append getArray (_configCfgWeapons >> "Throw" >> _x >> "magazines");
+} foreach getArray (_configCfgWeapons >> "Throw" >> "muzzles");
 
-    private _putList = [];
-    {
-        _putList append getArray (_configCfgWeapons >> "Put" >> _x >> "magazines");
-    } foreach getArray (_configCfgWeapons >> "Put" >> "muzzles");
+private _putList = [];
+{
+    _putList append getArray (_configCfgWeapons >> "Put" >> _x >> "magazines");
+} foreach getArray (_configCfgWeapons >> "Put" >> "muzzles");
 
 {
     private _className = configName _x;
