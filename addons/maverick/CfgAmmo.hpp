@@ -41,7 +41,7 @@ class CfgAmmo {
     };
 
     class Missile_AGM_01_F: Missile_AGM_02_F {};
-     class ace_kh25ml : Missile_AGM_01_F {
+    class ace_kh25ml : Missile_AGM_01_F {
         author = "xrufix";
         irLock = 0;
         missileLockMaxDistance = 10000;
