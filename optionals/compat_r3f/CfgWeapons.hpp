@@ -52,6 +52,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 5.14504;
         ACE_barrelTwist = 177.8; // 1:7"
         ACE_barrelLength = 450.0; // Beretta barrel
+        // Fix a ghost mag in the VA with the FAMAS FELIN: default magazines[]={...,"",...}
         magazines[] = {
 			"R3F_25Rnd_556x45_FAMAS",
 			"R3F_30Rnd_556x45_FAMAS",
@@ -113,7 +114,7 @@ class CfgWeapons {
     };
     class R3F_Minimi_HG: R3F_Minimi {
         class manual: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.92); // 3.41 MOA*0.5621.92, R3F default value 0.0008 (2.75 MOA)
+            dispersion = MOA_TO_RAD(1.92); // 3.41 MOA*0.562, R3F default value 0.0008 (2.75 MOA)
         };
     };
     class R3F_Minimi_762: R3F_Minimi {
@@ -509,5 +510,27 @@ class CfgWeapons {
                 maxRangeProbabCoef = "1.0f";
             };
         };
+    };
+};
+class ACE_ATragMX_Presets {
+    class R3F_PGM_Hecate_II {
+        // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
+        preset[] = {"[R3F]PGM", 780, 100, 0.0879633, -0.00058679, 8.89, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15,753},{0,760},{10,767},{15,772},{25,786},{30,795},{35,806}}, {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}}};
+    };
+    class R3F_M107 {
+        // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
+        preset[] = {"[R3F]M107", 850, 100, 0.0879633, -0.00058679, 8.89, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15,823},{0,830},{10,837},{15,842},{25,856},{30,865},{35,876}}, {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}}};
+    };
+    class R3F_TAC50 {
+        // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
+        preset[] = {"[R3F]TAC50", 820, 100, 0.0879633, -0.00058679, 8.89, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15,793},{0,800},{10,807},{15,812},{25,826},{30,835},{35,846}}, {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}}};
+    };
+    class R3F_FRF2 {
+        // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
+        preset[] = {"[R3F]FRF2", 850, 100, 0.0909184, -0.00103711, 7.62, 0, 2, 10, 120, 0, 0, 9.461, 7.82, 29.46, 0.398, 1, "ICAO", {{-15,823},{0,830},{10,837},{15,842},{25,856},{30,865},{35,876}}, {{0, 0.399}, {810, 0.392}, {1030, 0.383}, {1120, 0.381}, {1270, 0.380}, {1410, 0.379}, {1530, 0.379}}};
+    };
+    class R3F_HK417L {
+        // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
+        preset[] = {"[R3F]HK417L", 820, 100, 0.0909184, -0.00103711, 7.62, 0, 2, 10, 120, 0, 0, 9.461, 7.82, 29.46, 0.398, 1, "ICAO", {{-15,793},{0,800},{10,807},{15,812},{25,826},{30,835},{35,846}}, {{0, 0.399}, {810, 0.392}, {1030, 0.383}, {1120, 0.381}, {1270, 0.380}, {1410, 0.379}, {1530, 0.379}}};
     };
 };
