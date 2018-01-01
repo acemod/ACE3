@@ -88,8 +88,8 @@ class CfgAmmo {
 ### 4.2 Custom Seeker Types
 
 ```cpp
-class ace_missileguidance_attackProfiles {
-    class MyAttackProfile {
+class ace_missileguidance_seekerTypes {
+    class MySeekerType {
         name = "";  // Name
         visualName = "";  // Visual name
         description = "";  // Description
@@ -102,8 +102,8 @@ class ace_missileguidance_attackProfiles {
 ### 4.3 Custom Attack Profiles
 
 ```cpp
-class ace_missileguidance_seekerTypes {
-    class MySeekerType {
+class ace_missileguidance_attackProfiles {
+    class MyAttackProfile {
         name = "";  // Name
         visualName = "";  // Visual name
         description = "";  // Description
