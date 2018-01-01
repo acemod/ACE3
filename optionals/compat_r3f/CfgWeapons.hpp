@@ -130,7 +130,7 @@ class CfgWeapons {
         class manual: Mode_FullAuto {
             dispersion = MOA_TO_RAD(1.56); // 2.77 MOA*0.562, R3F default value 0.002 (6.88 MOA)
         };
-	};
+    };
     class R3F_HK417M: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.23377;
         ACE_barrelTwist = 279.4;
