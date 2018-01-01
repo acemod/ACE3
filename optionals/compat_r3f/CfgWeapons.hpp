@@ -54,17 +54,17 @@ class CfgWeapons {
         ACE_barrelLength = 450.0; // Beretta barrel
         // Fix a ghost mag in the VA with the FAMAS FELIN: default magazines[]={...,"",...}
         magazines[] = {
-			"R3F_25Rnd_556x45_FAMAS",
-			"R3F_30Rnd_556x45_FAMAS",
-			"R3F_25Rnd_556x45_TRACER_FAMAS",
-			"R3F_30Rnd_556x45_TRACER_FAMAS",
-			"R3F_30Rnd_556x45_HK416",
-			"R3F_30Rnd_556x45_tracer_hk416",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag_Tracer_Red",
-			"30Rnd_556x45_Stanag_Tracer_Green",
-			"30Rnd_556x45_Stanag_Tracer_Yellow"
-		};
+            "R3F_25Rnd_556x45_FAMAS",
+            "R3F_30Rnd_556x45_FAMAS",
+            "R3F_25Rnd_556x45_TRACER_FAMAS",
+            "R3F_30Rnd_556x45_TRACER_FAMAS",
+            "R3F_30Rnd_556x45_HK416",
+            "R3F_30Rnd_556x45_tracer_hk416",
+            "30Rnd_556x45_Stanag",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Green",
+            "30Rnd_556x45_Stanag_Tracer_Yellow"
+        };
     };
     class R3F_FRF2: Rifle_Base_F {
         ACE_RailHeightAboveBore = 1.79013;
@@ -181,47 +181,47 @@ class CfgWeapons {
         ACE_barrelLength = 279.4;
         class Single: Mode_SemiAuto {
             sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType {
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.38999999,1,30};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.38999999,1,30};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
-			};
-			class StandardSound: BaseSoundModeType {
-				begin1[] = {"\r3f_armes\sons\hk416_1",3.5,1,1200};
-				begin2[] = {"\r3f_armes\sons\hk416_2",3.5,1,1200};
-				begin3[] = {"\r3f_armes\sons\hk416_3",3.5,1,1200};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-			};
-			class SilencedSound: BaseSoundModeType {
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",0.80000001,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",0.80000001,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.80000001,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-			};
+            class BaseSoundModeType {
+                weaponSoundEffect = "DefaultRifle";
+                closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.38999999,1,30};
+                closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.38999999,1,30};
+                soundClosure[] = {"closure1",0.5,"closure2",0.5};
+            };
+            class StandardSound: BaseSoundModeType {
+                begin1[] = {"\r3f_armes\sons\hk416_1",3.5,1,1200};
+                begin2[] = {"\r3f_armes\sons\hk416_2",3.5,1,1200};
+                begin3[] = {"\r3f_armes\sons\hk416_3",3.5,1,1200};
+                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+            };
+            class SilencedSound: BaseSoundModeType {
+                begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",0.80000001,1,300};
+                begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",0.80000001,1,300};
+                begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.80000001,1,300};
+                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+            };
             dispersion = MOA_TO_RAD(2.12); // 3.78 MOA*0.562, R3F default value 0.00087 (2.99 MOA)
         };
         class FullAuto: Mode_FullAuto {
             sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType {
-				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.38999999,1,30};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.38999999,1,30};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
-				soundContinuous = 0;
-			};
-			class StandardSound: BaseSoundModeType {
-				begin1[] = {"\r3f_armes\sons\hk416_1",3.5,1,1200};
-				begin2[] = {"\r3f_armes\sons\hk416_2",3.5,1,1200};
-				begin3[] = {"\r3f_armes\sons\hk416_3",3.5,1,1200};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-			};
-			class SilencedSound: BaseSoundModeType {
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",0.80000001,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",0.80000001,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.80000001,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-			};
+            class BaseSoundModeType {
+                weaponSoundEffect = "DefaultRifle";
+                closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.38999999,1,30};
+                closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.38999999,1,30};
+                soundClosure[] = {"closure1",0.5,"closure2",0.5};
+                soundContinuous = 0;
+            };
+            class StandardSound: BaseSoundModeType {
+                begin1[] = {"\r3f_armes\sons\hk416_1",3.5,1,1200};
+                begin2[] = {"\r3f_armes\sons\hk416_2",3.5,1,1200};
+                begin3[] = {"\r3f_armes\sons\hk416_3",3.5,1,1200};
+                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+            };
+            class SilencedSound: BaseSoundModeType {
+                begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",0.80000001,1,300};
+                begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",0.80000001,1,300};
+                begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.80000001,1,300};
+                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+            };
             dispersion = MOA_TO_RAD(2.12); // 3.78 MOA*0.562, R3F default value 0.005 (17.2 MOA)
         };
     };
@@ -512,6 +512,7 @@ class CfgWeapons {
         };
     };
 };
+
 class ACE_ATragMX_Presets {
     class R3F_PGM_Hecate_II {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
