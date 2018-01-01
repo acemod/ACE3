@@ -19,6 +19,7 @@ class CfgPatches {
             QGVAR(moduleToggleNvg),
             QGVAR(moduleToggleFlashlight),
             QGVAR(moduleSimulation),
+            QGVAR(moduleCargoParadrop),
             QGVAR(moduleSuppressiveFire),
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),

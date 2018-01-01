@@ -1516,5 +1516,8 @@
             <Polish>"%1" menu</Polish>
             <Italian>menu "%1"</Italian>
         </Key>
+        <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
+            <English>Paradrop Cargo</English>
+        </Key>
     </Package>
 </Project>
