@@ -14,7 +14,7 @@
         // Calling this function inside curly brackets allows the usage of
         // "exitWith", which would be broken with "HandleDamage" otherwise.
         _unit setVariable [
-            QGVAR(HandleDamageEHID),
+            QEGVAR(medical,HandleDamageEHID),
             _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
         ];
     };
