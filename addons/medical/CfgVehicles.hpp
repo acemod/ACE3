@@ -125,9 +125,21 @@ class CfgVehicles {
                     };
                     class never {
                         name = ECSTRING(common,Never);
-                        value = 1;
+                        value = 2;
                     };
                 };
+            };
+            class fatalInjuryConditionAI {
+                displayName = CSTRING(MedicalSettings_fatalInjuryConditionAI_DisplayName);
+                description = CSTRING(MedicalSettings_fatalInjuryConditionAI_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class unconsciousConditionAI {
+                displayName = CSTRING(MedicalSettings_unconsciousConditionAI_DisplayName);
+                description = CSTRING(MedicalSettings_unconsciousConditionAI_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
             };
             class cardiacArrestTime {
                 displayName = CSTRING(MedicalSettings_cardiacArrestTime_DisplayName);
