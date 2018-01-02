@@ -20,6 +20,8 @@ private _mouseBlockCtrl = _arsenalDisplay displayCtrl IDC_mouseBlock;
 
 GVAR(cameraPosition) = GVAR(previousCameraPos);
 GVAR(previousCameraPos) = nil;
+GVAR(loadoutsSearchbarFocus) = nil;
+GVAR(loadoutsPanelFocus) =  nil;
 
 _mouseBlockCtrl ctrlEnable false;
 _mouseBlockCtrl ctrlCommit 0;

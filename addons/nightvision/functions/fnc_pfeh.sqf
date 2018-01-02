@@ -88,8 +88,8 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // Modify blur if looking down scope
     if ((cameraView == "GUNNER") && {[ACE_player] call CBA_fnc_canUseWeapon}) then {
         if (currentWeapon ACE_player == "") exitWith {};
-        if (currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {_blurFinal = _blurFinal * ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE}; // Rifles are bad
-        if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL}; // Pistols aren't so bad
+        if (currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]}; // Rifles are bad
+        if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL]}; // Pistols aren't so bad
     };
 
     // Scale effects based on ace_nightvision_effectScaling setting
@@ -98,7 +98,6 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _radialBlurPower = 0.0025 * GVAR(effectScaling);
     _brightFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _brightFinal];
     _contrastFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _contrastFinal];
-    _blurFinal = _blurFinal * GVAR(effectScaling);
 
 
     // Setup all effects
