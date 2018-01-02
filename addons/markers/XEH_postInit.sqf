@@ -9,8 +9,7 @@
 
 // request marker data for JIP
 if (isMultiplayer && {!isServer} && {hasInterface}) then {
-    GVAR(localLogic) = (createGroup sideLogic) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    [QGVAR(sendMarkersJIP), [GVAR(localLogic)]] call CBA_fnc_serverEvent;
+    [QGVAR(sendMarkersJIP), CBA_clientID] call CBA_fnc_serverEvent;
 };
 
 GVAR(mapDisplaysWithDrawEHs) = [];
