@@ -322,7 +322,7 @@ class CfgVehicles {
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
         editorCategory = "EdCat_Supplies";
-        editorSubcategory = QGVAR(subcategory);
+        editorSubcategory = QEGVAR(main,subcategory);
     };
 
     class ACE_Track: ACE_RepairItem_Base {

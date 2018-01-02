@@ -49,6 +49,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(DisplayName);
         model = QPATHTOF(data\sniper_tripod.p3d);
+        icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";
 
         class AnimationSources {
             class slide_down_tripod {
@@ -96,8 +97,8 @@ class CfgVehicles {
             };
         };
 
-        editorCategory = "EdCat_Equipment";
-        editorSubcategory = "EdSubcat_InventoryItems";
+        editorCategory = "EdCat_Supplies";
+        editorSubcategory = QEGVAR(main,subcategory);
         editorPreview = QPATHTOF(data\preview_tripod.jpg);
     };
 };
