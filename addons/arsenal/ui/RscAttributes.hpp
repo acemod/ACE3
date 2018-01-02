@@ -153,17 +153,12 @@ class GVAR(display) {
             shadow=0;
             colorBackground[]={0,0,0,0.69999999};
             text="";
-            x = QUOTE(safezoneX + safezoneW * 0.50 - 80 * GRID_W);
+            x = QUOTE(0.5 - WIDTH_TOTAL / 2);
             y = QUOTE(safeZoneH + safezoneY - 25 * GRID_H);
-            w = QUOTE(160 * GRID_W);
+            w = QUOTE(WIDTH_TOTAL);
             h = QUOTE(10 * GRID_H);
             sizeEx = QUOTE(5 * GRID_H);
         };
-
-        #define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
-        #define WIDTH_GAP (WIDTH_TOTAL / 100)
-        #define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
-
         class menuBar: RscControlsGroupNoScrollbars {
             idc = IDC_menuBar;
             x = QUOTE(0.5 - WIDTH_TOTAL / 2);

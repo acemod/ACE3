@@ -3,6 +3,10 @@
 #define GRID_W (pixelW * pixelGridNoUIScale * pixelScale)
 #define GRID_H (pixelH * pixelGridNoUIScale * pixelScale)
 
+#define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
+#define WIDTH_GAP (WIDTH_TOTAL / 100)
+#define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
+
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
