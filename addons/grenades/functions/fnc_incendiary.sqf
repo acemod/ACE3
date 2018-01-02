@@ -34,6 +34,8 @@
 #define ORIENTATION 5.4
 #define EXPANSION 1
 
+#define DESTRUCTION_RADIUS 1.8
+
 params ["_projectile", "_timeToLive", "_center"];
 
 if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
@@ -187,7 +189,7 @@ if (isServer) then {
         // --- inflame fireplace, barrels etc.
         _x inflame true;
     };
-} forEach (_position nearObjects EFFECT_SIZE);
+} forEach (_position nearObjects DESTRUCTION_RADIUS);
 
 // --- damage local vehicle
 private _vehicle = _position nearestObject "Car";
