@@ -47,7 +47,7 @@ if (!_exists && _add) then {
 // in game sounds
 0 fadeSound _lowestVolume;
 0 fadeRadio _lowestVolume;
-if (GVAR(setMusicVolume)) then {
+if (GVAR(allowFadeMusic)) then {
     0 fadeMusic _lowestVolume;
 };
 
