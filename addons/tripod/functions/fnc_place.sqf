@@ -39,7 +39,7 @@ if (stance _unit == "STAND") then {
     [{
         (_this select 0) params ["_tripod", "_direction", "_position"];
 
-        if (_tripod animationPhase "slide_down_tripod" == 1) then {
+        if (_tripod animationPhase "slide_down_tripod" == 0.5) then {
             _tripod setDir _direction;
             _tripod setPosASL _position;
 
