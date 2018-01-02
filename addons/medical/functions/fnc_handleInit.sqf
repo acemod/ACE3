@@ -17,7 +17,10 @@
 
 params ["_unit"];
 
-_unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
+_unit setVariable [
+    QGVAR(HandleDamageEHID),
+    _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+];
 
 if (local _unit) then {
     if (!EGVAR(common,settingsInitFinished)) exitWith {

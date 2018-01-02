@@ -13,7 +13,10 @@
     } else {
         // Calling this function inside curly brackets allows the usage of
         // "exitWith", which would be broken with "HandleDamage" otherwise.
-        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
+        _unit setVariable [
+            QGVAR(HandleDamageEHID),
+            _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+        ];
     };
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
