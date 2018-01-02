@@ -54,7 +54,9 @@
             _object setVariable [QGVAR(oldVisibility), _vis];
             _object setUnitTrait ["camouflageCoef", 0];
             {
-                _x forgetTarget _object;
+                if (side _x != side group _object) then {
+                    _x forgetTarget _object;
+                };
             } forEach allGroups;
         };
     } else {
