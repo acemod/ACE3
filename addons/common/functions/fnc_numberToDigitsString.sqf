@@ -16,6 +16,6 @@
  */
 #include "script_component.hpp"
 
-ACE_DEPRECATED(QFUNC(numberToDigitsString),"3.14.0",CBA_fnc_formatNumber);
+ACE_DEPRECATED(QFUNC(numberToDigitsString),"3.14.0","CBA_fnc_formatNumber");
 
 _this call CBA_fnc_formatNumber
