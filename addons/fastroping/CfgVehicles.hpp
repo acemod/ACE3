@@ -4,7 +4,7 @@
         control = "Checkbox"; \
         displayName = CSTRING(Eden_equipFRIES); \
         tooltip = CSTRING(Eden_equipFRIES_Tooltip); \
-        expression = QUOTE([_this] call FUNC(equipFRIES)); \
+        expression = QUOTE(if (_value) then {[_this] call FUNC(equipFRIES)}); \
         typeName = "BOOL"; \
         condition = "objectVehicle"; \
         defaultValue = false; \
