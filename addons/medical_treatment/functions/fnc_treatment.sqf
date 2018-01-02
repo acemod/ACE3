@@ -179,6 +179,19 @@ if (isArray (_config >> "sounds")) then {
     ];
 };
 
+private _startCallback = getText (_config >> "callbackStart");
+if (isNil _startCallback) then {
+    _startCallback = compile _startCallback;
+} else {
+    _startCallback = missionNamespace getVariable _startCallback;
+};
+
+if !(_startCallback isEqualType {}) then {
+    _startCallback = {TRACE_1("startCallback was NOT code",_startCallback)};
+};
+
+[_caller, _target, _bodyPart, _className, _items, _usersOfItems] call _startCallback;
+
 // start treatment
 [
     _treatmentTime,

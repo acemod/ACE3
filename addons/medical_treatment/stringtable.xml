@@ -27,6 +27,14 @@
             <Italian>Abilita la creazione della barella dopo trattamento</Italian>
             <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRcreatesPulse">
+            <English>CPR creates pulse</English>
+            <German>HLW erzeugt einen Puls</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRcreatesPulse_Description">
+            <English>CPR will create a pulse for the patient while performing</English>
+            <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
             <Polish>Detale zużytych medykamentów</Polish>

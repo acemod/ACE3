@@ -18,6 +18,10 @@
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
+_target setVariable [QEGVAR(medical,heartRate), 0, true];
+_target setVariable [QGVAR(receiveCPR), false, true]; // CPR finished
+[_target] call FUNC(calculateBlood);
+
 if (alive _target && {_target getVariable [QEGVAR(medical,inCardiacArrest), false]}) then {
     [_target, "activity_view", ELSTRING(medical,Activity_cpr), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 

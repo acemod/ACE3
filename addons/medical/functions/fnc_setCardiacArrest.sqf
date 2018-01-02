@@ -27,4 +27,3 @@ _unit setVariable [QGVAR(heartRate), 0, true];
 ["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
 [_unit, true] call FUNC(setUnconsciousStatemachine);
-

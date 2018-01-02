@@ -248,10 +248,11 @@ class GVAR(Actions) {
         requiredMedic = 0;
         treatmentTime = 15;
         items[] = {};
-        condition = QUOTE(!(_target call EFUNC(common,isAwake)));
+        condition = QUOTE(!(_target call EFUNC(common,isAwake)) && {!(_target getVariable [ARR_2('GVAR(receiveCPR)', false)])});
         callbackSuccess = QFUNC(treatmentCPR);
-        callbackFailure = "";
-        callbackProgress = QUOTE(!([(_this select 0) select 1] call EFUNC(common,isAwake)));
+        callbackFailure = QFUNC(treatmentCPR_failure);
+        callbackProgress = QFUNC(treatmentCPR_progress);
+        callbackStart = QFUNC(treatmentCPR_start);
         animationPatient = "";
         animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";

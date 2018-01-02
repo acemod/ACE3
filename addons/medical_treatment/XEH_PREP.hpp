@@ -20,6 +20,9 @@ PREP(treatment_success);
 
 PREP(treatmentBandage);
 PREP(treatmentBandageLocal);
+PREP(treatmentCPR_failure);
+PREP(treatmentCPR_progress);
+PREP(treatmentCPR_start);
 PREP(treatmentCPR);
 PREP(treatmentCPRLocal);
 PREP(treatmentFullHeal);
@@ -46,6 +49,7 @@ PREP(healTime);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(onMedicationUsage);
+PREP(calculateBlood);
 
 // items
 PREP(checkItems);
