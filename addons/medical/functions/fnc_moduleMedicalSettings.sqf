@@ -35,6 +35,8 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(playerDamageThreshold), "playerDamageThreshold"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(AIDamageThreshold), "AIDamageThreshold"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(fatalInjuryCondition), "fatalInjuryCondition"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(fatalInjuryConditionAI), "fatalInjuryConditionAI"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(unconsciousConditionAI), "unconsciousConditionAI"] call EFUNC(common,readSettingFromModule);
 
 [_logic, QGVAR(cardiacArrestTime), "cardiacArrestTime"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting_PainVisualization), "painVisualization"] call EFUNC(common,readSettingFromModule);
