@@ -36,7 +36,7 @@ private _detonators = [_unit] call FUNC(getDetonators);
 
 private _code = "";
 while {true} do {
-    _code = [round(random 9999), 4] call EFUNC(common,numberToDigitsString);
+    _code = [floor(random 10000), 4] call CBA_fnc_formatNumber;
     if (([_code] call FUNC(getSpeedDialExplosive)) isEqualTo []) exitWith {};
 };
 
