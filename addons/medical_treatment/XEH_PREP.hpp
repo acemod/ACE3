@@ -46,6 +46,7 @@ PREP(dropDownTriageCard);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);
 PREP(healTime);
+PREP(HealTimeMedkit);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(onMedicationUsage);
