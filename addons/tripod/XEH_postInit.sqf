@@ -4,7 +4,7 @@ if (!hasInterface) exitWith {};
 
 GVAR(adjustPFH) = -1;
 
-GVAR(height) = 0;
+GVAR(height) = 0.5;
 
 // Cancel adjustment if interact menu opens
 ["ace_interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call CBA_fnc_addEventHandler;
