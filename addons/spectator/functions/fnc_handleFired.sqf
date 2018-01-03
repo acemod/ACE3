@@ -21,7 +21,7 @@ params [
     ["_weapon", "", [""]],
     "", // Muzzle
     "", // Mode
-    "", // Ammo
+    ["_ammo", "", [""]], // Ammo
     "", // Magazine
     ["_projectile", objNull, [objNull]]
 ];
@@ -35,6 +35,11 @@ if (isNil QGVAR(entitiesToDraw) || {!(_unit in GVAR(entitiesToDraw))}) exitWith 
 
 // Fire time used for unit icon highlighting
 _unit setVariable [QGVAR(highlightTime), time + FIRE_HIGHLIGHT_TIME];
+
+// expensive, but any non local units might have this as null for 'global' projectiles (like grenades)
+if (isNull _projectile) then {
+    _projectile = nearestObject [_unit, _ammo];
+};
 
 // Store projectiles / grenades for drawing
 if (GVAR(drawProjectiles) && {!isNull _projectile}) then {
