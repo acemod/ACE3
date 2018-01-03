@@ -197,7 +197,7 @@ class GVAR(display) {
                     text = CSTRING(buttonImportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
-                class buttonClose: ctrlButtonClose {
+                class buttonClose: ctrlButtonOK {
                     idc = IDC_menuBarClose;
                     colorBackground[] = {0,0,0,0.8};
                     x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
@@ -206,8 +206,7 @@ class GVAR(display) {
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
                     sizeEx = QUOTE(5 * GRID_H);
-                    shortcuts[]= {"0x01"};
-                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
+                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 1);
                 };
             };
         };

@@ -257,6 +257,9 @@ if (is3DEN) then {
         IDC_buttonVoice,
         IDC_buttonInsigna
     ];
+
+    _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
+    _buttonCloseCtrl ctrlSetText (localize "STR_DISP_OK");
 };
 
 //--------------- Prepare the left panel
