@@ -383,6 +383,7 @@
             <Polish>Główny magazynek</Polish>
             <Japanese>プライマリ弾倉</Japanese>
             <Italian>Caricatore primario</Italian>
+            <German>Primärmagazin</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonCurrentMag2Tooltip">
             <English>Secondary magazine</English>
@@ -390,6 +391,7 @@
             <Polish>Dodatkowy magazynek</Polish>
             <Japanese>セカンダリ弾倉</Japanese>
             <Italian>Caricatore secondario</Italian>
+            <German>Sekundärmagazin</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_settingCategory">
             <English>ACE Arsenal</English>
@@ -405,6 +407,7 @@
             <Polish>Zezwól na użycie zakładki domyślnych zestawów</Polish>
             <Japanese>標準の装備タブの使用を許可します</Japanese>
             <Italian>Consenti l'uso della sezione per gli equipaggiamenti standard</Italian>
+            <German>Erlaube die Nutzung des Standard Ausrüstungs Reiters</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsTooltip">
             <English>Show / hide mod icons for the left panel</English>
@@ -412,6 +415,7 @@
             <Polish>Pokaż / ukryj ikony modów w lewym panelu</Polish>
             <Japanese>左パネルにある MOD アイコンの表示 / 非表示をします</Japanese>
             <Italian>Mostra / nascondi le icone delle mod dal pannello sinistro</Italian>
+            <German>Zeigt/Versteckt Mod-Symbole für die linke Leiste</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightTooltip">
             <English>Change the font height for text in the left / right panels</English>
@@ -419,6 +423,7 @@
             <Polish>Zmień wysokość czcionki dla tekstu lewego i prawego panelu</Polish>
             <Japanese>右か左パネルにあるフォントの高さを変更します。</Japanese>
             <Italian>Cambia l'altezza del font per il testo sul pannello sinistro / destro</Italian>
+            <German>Ändert die Schriftgröße für die linke/rechte Leiste</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_printToRPTTooltip">
             <English>Log missing / unavailable items in the RPT</English>
@@ -426,6 +431,7 @@
             <Polish>Rejestruj brakujące / niedostępne przedmioty do pliku RPT</Polish>
             <Japanese>PRT で欠落 / 利用不可アイテムを記録します</Japanese>
             <Italian>Log mancante / oggetto non disponibile nell' RPT</Italian>
+            <German>Fehlende Gegenstände werden in der RPT aufgezeichnet</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_CantOpenDisplay">
             <English>Unable to open ACE arsenal</English>
@@ -434,17 +440,20 @@
             <Italian>Impossibile aprire l'arsenale ACE</Italian>
             <Japanese>ACE 武器庫を開けません</Japanese>
         </Key>
-        <Key ID= "STR_ACE_Arsenal_portLoadoutsText">
+        <Key ID="STR_ACE_Arsenal_portLoadoutsText">
             <English>Import BI VA loadouts to ACE Arsenal</English>
             <French>Importe les loadouts de BI VA dans ACE Arsenal</French>
+            <German>Importiert die BI VA Ausrüstungen in das Ace Arsenal</German>
         </Key>
-        <Key ID= "STR_ACE_Arsenal_portLoadoutsPlayerError">
+        <Key ID="STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
+            <German>Keine Spieler Einheit verfügbar. Setze eine Einheit und markiere sie als "Spieler"</German>
         </Key>
-        <Key ID= "STR_ACE_Arsenal_portLoadoutsLoadoutError">
+        <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
             <French>Aucun loadout à importer.</French>
+            <German>Keine Ausrüstungen zum importieren.</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
             <English>ACE Arsenal</English>

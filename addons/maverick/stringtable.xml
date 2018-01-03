@@ -69,8 +69,8 @@
             </Key>
             <Key ID="str_ace_maverick_kh25ml">
                 <English>Kh-25ML</English>
-                <German>Ch-25ML</English>
-                <Russian>Х-25МЛ</English>
+                <German>Ch-25ML</German>
+                <Russian>Х-25МЛ</Russian>
             </Key>
         </Container>
     </Package>

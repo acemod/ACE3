@@ -7,6 +7,7 @@
             <Chinese>殉爆效果</Chinese>
             <Chinesesimp>殉爆效果</Chinesesimp>
             <Japanese>誘爆</Japanese>
+            <German>Selbstzündung</German>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
@@ -96,7 +97,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
-            <German>Munitionsselbstzündungdauer</German>
+            <German>Munitionsselbstzündungsdauer</German>
             <Polish>Czas trwania samozapłonu amunicji</Polish>
             <Japanese>弾薬の誘爆持続時間</Japanese>
             <French>Durée cook-off des munitions</French>
@@ -120,11 +121,13 @@
             <English>Cook-off probability coefficient</English>
             <Japanese>誘爆の可能性係数</Japanese>
             <Italian>Coefficiente probabilità esplosione</Italian>
+            <German>Selbstzündungs Wahrscheinlichkeitsfaktor</German>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
             <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
             <Italian>Moltiplicatore per la probabilità dell'esplosione. Un valore più alto aumenta la probabilità dell'esplosione</Italian>
+            <German>Faktor für die Selbstzündungswahrscheinlichkeit.Ein höherer Wert führt zu höherer Selbstzündungswahrscheinlichkeit</German>
         </Key>
     </Package>
 </Project>
