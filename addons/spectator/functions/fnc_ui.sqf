@@ -93,6 +93,9 @@ if (_init) then {
         [] call FUNC(ui_updateListEntities);
         [] call FUNC(ui_updateWidget);
     }, 5] call CBA_fnc_addPerFrameHandler;
+
+    // register advanced throwing EH
+    GVAR(advancedThrowingEH) = [QEGVAR(advanced_throwing,throwFiredXEH), FUNC(handleFired)] call CBA_fnc_addEventHandler;
 } else {
     // Stop updating the list and focus widget
     [GVAR(uiPFH)] call CBA_fnc_removePerFrameHandler;
@@ -105,6 +108,10 @@ if (_init) then {
     // Stop updating things to draw
     [GVAR(collectPFH)] call CBA_fnc_removePerFrameHandler;
     GVAR(collectPFH) = nil;
+
+    // remove advanced throwing EH
+    [QEGVAR(advanced_throwing,throwFiredXEH), GVAR(advancedThrowingEH)] call CBA_fnc_removeEventHandler;
+    GVAR(advancedThrowingEH) = nil;
 
     // Destroy the display
     SPEC_DISPLAY closeDisplay 1;
