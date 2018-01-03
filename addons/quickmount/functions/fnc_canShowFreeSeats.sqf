@@ -25,3 +25,4 @@ params ["_vehicle", "_unit"];
     0 == {alive _x} count crew _vehicle
     || {0.6 <= side group _unit getFriend side group _vehicle}
 }
+&& {0.3 < vectorUp _vehicle select 2 || {_vehicle isKindOf "Air"}} // moveIn* and GetIn* don't work for flipped vehicles except Air
