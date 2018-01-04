@@ -176,52 +176,12 @@ class CfgWeapons {
     class R3F_HK416M_M203: R3F_HK416M {
         muzzles[] = {"this","Lance_Grenades"};
     };
-    class R3F_HK416M_HG: R3F_HK416M {};
-    class R3F_HK416S_HG: R3F_HK416M_HG {
+    class R3F_HK416S_HG: R3F_HK416M {
         ACE_barrelLength = 279.4;
-        class Single: Mode_SemiAuto {
-            sounds[] = {"StandardSound","SilencedSound"};
-            class BaseSoundModeType {
-                weaponSoundEffect = "DefaultRifle";
-                closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.38999999,1,30};
-                closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.38999999,1,30};
-                soundClosure[] = {"closure1",0.5,"closure2",0.5};
-            };
-            class StandardSound: BaseSoundModeType {
-                begin1[] = {"\r3f_armes\sons\hk416_1",3.5,1,1200};
-                begin2[] = {"\r3f_armes\sons\hk416_2",3.5,1,1200};
-                begin3[] = {"\r3f_armes\sons\hk416_3",3.5,1,1200};
-                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-            };
-            class SilencedSound: BaseSoundModeType {
-                begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",0.80000001,1,300};
-                begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",0.80000001,1,300};
-                begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.80000001,1,300};
-                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-            };
+        class Single: Single {
             dispersion = MOA_TO_RAD(2.12); // 3.78 MOA*0.562, R3F default value 0.00087 (2.99 MOA)
         };
-        class FullAuto: Mode_FullAuto {
-            sounds[] = {"StandardSound","SilencedSound"};
-            class BaseSoundModeType {
-                weaponSoundEffect = "DefaultRifle";
-                closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.38999999,1,30};
-                closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.38999999,1,30};
-                soundClosure[] = {"closure1",0.5,"closure2",0.5};
-                soundContinuous = 0;
-            };
-            class StandardSound: BaseSoundModeType {
-                begin1[] = {"\r3f_armes\sons\hk416_1",3.5,1,1200};
-                begin2[] = {"\r3f_armes\sons\hk416_2",3.5,1,1200};
-                begin3[] = {"\r3f_armes\sons\hk416_3",3.5,1,1200};
-                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-            };
-            class SilencedSound: BaseSoundModeType {
-                begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",0.80000001,1,300};
-                begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",0.80000001,1,300};
-                begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.80000001,1,300};
-                soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
-            };
+        class FullAuto: FullAuto {
             dispersion = MOA_TO_RAD(2.12); // 3.78 MOA*0.562, R3F default value 0.005 (17.2 MOA)
         };
     };
