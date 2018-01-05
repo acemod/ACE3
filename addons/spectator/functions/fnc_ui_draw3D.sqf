@@ -72,7 +72,7 @@ if !(GVAR(uiMapVisible)) then {
 
             // Draw icon
             drawIcon3D _icon;
-        } count GVAR(iconsToDraw);
+        } forEach GVAR(iconsToDraw);
         END_COUNTER(drawTags);
     };
 
@@ -117,7 +117,7 @@ if !(GVAR(uiMapVisible)) then {
                         drawLine3D [_oldLoc, _locNew, _colorNew];
                     };
                     _oldLoc = _locNew;
-                } count _segments;
+                } forEach _segments;
             };
         } forEach GVAR(projectilesToDraw);
         GVAR(projectilesToDraw) = _projectilesNew;

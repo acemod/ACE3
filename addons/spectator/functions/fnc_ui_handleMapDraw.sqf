@@ -64,7 +64,7 @@ private _handledVehicles = [];
 
         _map drawIcon [_vehicleTexture, _sideColor, getPosASLVisual _vehicle, 24, 24, getDirVisual _vehicle, _text, 1, 0.04, "TahomaB", "right"];
     };
-} count ([] call FUNC(getTargetEntities));
+} forEach ([] call FUNC(getTargetEntities));
 
 // Set highlighted unit
 private _text = if (isNull _nearestEntity) then {

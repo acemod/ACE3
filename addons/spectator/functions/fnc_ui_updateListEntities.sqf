@@ -205,7 +205,7 @@ if !(GVAR(curList) isEqualTo _newList) then {
                     _ctrl tvSetPictureColor [_path, _sideColor];
                     _ctrl tvSetTooltip [_path, _tooltip];
                 };
-            } count _nestedUnitData;
+            } forEach _nestedUnitData;
         } forEach _nestedGroupData;
     } forEach _newList;
 
