@@ -47,25 +47,27 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
 
 private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
 
-if (_items isEqualType true && {_items}) then {
-    private _configItems = uiNamespace getVariable QGVAR(configItems);
+if (_items isEqualType true) then {
+    if (_items) then {
+        private _configItems = uiNamespace getVariable QGVAR(configItems);
 
-    {
-        (_x select 0) append (_x select 1);
-        (_x select 2) set [(_x select 3), (_x select 0) arrayIntersect (_x select 0)];
-    } forEach [
-        [(_cargo select 0 select 0),(_configItems select 0 select 0), _cargo select 0, 0],
-        [(_cargo select 0 select 1),(_configItems select 0 select 1), _cargo select 0, 1],
-        [(_cargo select 0 select 2),(_configItems select 0 select 2), _cargo select 0, 2],
-        [(_cargo select 1 select 0),(_configItems select 1 select 0), _cargo select 1, 0],
-        [(_cargo select 1 select 1),(_configItems select 1 select 1), _cargo select 1, 1],
-        [(_cargo select 1 select 2),(_configItems select 1 select 2), _cargo select 1, 2],
-        [(_cargo select 1 select 3),(_configItems select 1 select 3), _cargo select 1, 3]
-    ];
+        {
+            (_x select 0) append (_x select 1);
+            (_x select 2) set [(_x select 3), (_x select 0) arrayIntersect (_x select 0)];
+        } forEach [
+            [(_cargo select 0 select 0),(_configItems select 0 select 0), _cargo select 0, 0],
+            [(_cargo select 0 select 1),(_configItems select 0 select 1), _cargo select 0, 1],
+            [(_cargo select 0 select 2),(_configItems select 0 select 2), _cargo select 0, 2],
+            [(_cargo select 1 select 0),(_configItems select 1 select 0), _cargo select 1, 0],
+            [(_cargo select 1 select 1),(_configItems select 1 select 1), _cargo select 1, 1],
+            [(_cargo select 1 select 2),(_configItems select 1 select 2), _cargo select 1, 2],
+            [(_cargo select 1 select 3),(_configItems select 1 select 3), _cargo select 1, 3]
+        ];
 
-    for "_index" from 2 to 17 do {
-        (_cargo select _index) append (_configItems select _index);
-        _cargo set [_index, (_cargo select _index) arrayIntersect (_cargo select _index)];
+        for "_index" from 2 to 17 do {
+            (_cargo select _index) append (_configItems select _index);
+            _cargo set [_index, (_cargo select _index) arrayIntersect (_cargo select _index)];
+        };
     };
 
 } else {
