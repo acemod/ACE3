@@ -42,12 +42,8 @@ if (isNull _projectile) then {
 };
 
 // Store projectiles / grenades for drawing
-if (GVAR(drawProjectiles) && {!isNull _projectile}) then {
-    if (_weapon == "Throw") then {
-        if (count GVAR(grenadesToDraw) > MAX_GRENADES) then { GVAR(grenadesToDraw) deleteAt 0; };
-        GVAR(grenadesToDraw) pushBack _projectile;
-    } else {
-        if (count GVAR(projectilesToDraw) > MAX_PROJECTILES) then { GVAR(projectilesToDraw) deleteAt 0; };
-        GVAR(projectilesToDraw) pushBack [_projectile, [[getPosVisual _projectile, [1,0,0,0]]]];
-    };
+if (_weapon == "Throw") then {
+    [QGVAR(addToGrenadeTracking), [_projectile]] CBA_fnc_localEvent;
+} else {
+    [QGVAR(addToProjectileTracking), [_projectile]] CBA_fnc_localEvent;
 };
