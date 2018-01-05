@@ -18,5 +18,5 @@
 
 #define MACRO_DOOR_REACH_DISTANCE (AGLToASL positionCameraToWorld [0,0,0] vectorDistance AGLToASL (ACE_player modelToWorld (ACE_player selectionPosition "Head"))) + 2
 
-// here is most suitable mass for all vanilla, CUP and RHS statics ATM (ZU-23 suits, D-30 and M119 don't suit)
+// most suitable mass for all vanilla, CUP and RHS statics ATM (ZU-23 suits, D-30 and M119 don't suit)
 #define FLIP_MAX_STATICWEAPON_MASS 2000
