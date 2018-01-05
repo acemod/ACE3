@@ -394,16 +394,31 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             w = W_PART(26);
                             h = H_PART(5.9);
                         };
-                        class Label: Title {
+                        class LabelSearch: Title {
+                            idc = -1;
+                            text = "Search";
+                            toolTip = "Filters list of players";
+                            y = H_PART(7.1);
+                            w = W_PART(4.5);
+                        };
+                        class Search: RscEdit {
+                            idc = 16190;
+                            x = W_PART(4.7);
+                            y = H_PART(7.1);
+                            w = W_PART(12.1);
+                            h = H_PART(1);
+                            autocomplete = "";
+                        };
+                        class LabelGroup: LabelSearch {
                             idc = -1;
                             text = CSTRING(ModuleTeleportPlayers_group);
                             toolTip = CSTRING(ModuleTeleportPlayers_group_desc);
-                            y = H_PART(7.1);
-                            w = W_PART(10);
+                            x = W_PART(17);
+                            w = W_PART(7.9);
                         };
                         class UseGroup: RscCheckBox {
                             idc = 16188;
-                            x = W_PART(10.1);
+                            x = W_PART(25);
                             y = H_PART(7.1);
                             w = W_PART(1);
                             h = H_PART(1);

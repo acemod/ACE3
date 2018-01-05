@@ -37,6 +37,33 @@ private _listbox = _display displayCtrl 16189;
 _listbox lbSetCurSel 0;
 (_display displayCtrl 16188) cbSetChecked (_logic getVariable ["tpGroup",false]);
 
+private _fnc_onKeyUp = {
+    params ["_display"];
+
+    private _listbox = _display displayCtrl 16189;
+    private _edit = _display displayCtrl 16190;
+    private _text = toLower ctrlText _edit;
+
+    lbClear _listbox;
+
+    {
+        if (alive _x) then {
+            if ([toLower name _x, _text] call CBA_fnc_find > -1) then {
+                _listbox lbSetData [_listbox lbAdd (name _x), getPlayerUID _x];
+            };
+        };
+    } forEach ([] call CBA_fnc_players);
+
+    // Alert user to zero search matches
+    if (lbSize _listbox == 0) then {
+        _edit ctrlSetTooltip "No players found";
+        _edit ctrlSetTextColor [1, 0, 0, 1];
+    } else {
+        _edit ctrlSetTooltip "";
+        _edit ctrlSetTextColor [1, 1, 1, 1];
+    };
+};
+
 private _fnc_onUnload = {
     params ["_display"];
 
@@ -64,5 +91,6 @@ private _fnc_onConfirm = {
     [_logic, _uid, _group] call FUNC(moduleTeleportPlayers);
 };
 
+_display displayAddEventHandler ["KeyUp", _fnc_onKeyUp];
 _display displayAddEventHandler ["unload", _fnc_onUnload];
 _ctrlButtonOK ctrlAddEventHandler ["buttonclick", _fnc_onConfirm];
