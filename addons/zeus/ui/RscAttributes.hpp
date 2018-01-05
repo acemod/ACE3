@@ -280,7 +280,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class BLUFOR: RscActivePicture {
                             idc = 31200;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\b_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
                             x = W_PART(12.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
@@ -289,7 +289,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class OPFOR: BLUFOR {
                             idc = 31201;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\o_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
                             x = W_PART(15.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
@@ -298,7 +298,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class Independent: BLUFOR {
                             idc = 31202;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
                             x = W_PART(18.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
@@ -307,7 +307,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class Civilian: BLUFOR {
                             idc = 31203;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
                             x = W_PART(21.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
