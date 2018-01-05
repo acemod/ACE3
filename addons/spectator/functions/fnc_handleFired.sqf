@@ -43,7 +43,7 @@ if (isNull _projectile) then {
 
 // Store projectiles / grenades for drawing
 if (_weapon == "Throw") then {
-    [QGVAR(addToGrenadeTracking), [_projectile]] CBA_fnc_localEvent;
+    [QGVAR(addToGrenadeTracking), [_projectile]] call CBA_fnc_localEvent;
 } else {
-    [QGVAR(addToProjectileTracking), [_projectile]] CBA_fnc_localEvent;
+    [QGVAR(addToProjectileTracking), [_projectile]] call CBA_fnc_localEvent;
 };
