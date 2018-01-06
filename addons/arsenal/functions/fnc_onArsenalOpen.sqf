@@ -259,7 +259,7 @@ if (is3DEN) then {
     ];
 
     _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
-    _buttonCloseCtrl ctrlSetText (localize "STR_DISP_OK");
+    _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 };
 
 //--------------- Prepare the left panel

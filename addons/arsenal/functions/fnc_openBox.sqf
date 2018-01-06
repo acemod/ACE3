@@ -50,4 +50,9 @@ if (_mode) then {
 };
 
 GVAR(center) = _center;
-_displayToUse createDisplay QGVAR(display);
+
+if (is3DEN) then {
+    _displayToUse createDisplay QGVAR(display);
+} else {
+    [{(_this select 0) createDisplay (_this select 1)}, [_displayToUse, QGVAR(display)]] call CBA_fnc_execNextFrame;
+};
