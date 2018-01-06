@@ -56,7 +56,7 @@ private _fnc_onKeyUp = {
 
     // Alert user to zero search matches
     if (lbSize _listbox == 0) then {
-        _edit ctrlSetTooltip "No players found";
+        _edit ctrlSetTooltip (localize LSTRING(ModuleTeleportPlayers_noneFound));
         _edit ctrlSetTextColor [1, 0, 0, 1];
     } else {
         _edit ctrlSetTooltip "";

@@ -8,6 +8,7 @@ class RscXSliderH;
 class RscCheckBox;
 class RscActivePicture;
 class RscMapControl;
+class RscPicture;
 
 class RscDisplayAttributes {
     class Controls {
@@ -394,27 +395,37 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             w = W_PART(26);
                             h = H_PART(5.9);
                         };
-                        class LabelSearch: Title {
+                        class SearchBackground: RscText {
                             idc = -1;
-                            text = "Search";
-                            toolTip = "Filters list of players";
+                            x = 0;
                             y = H_PART(7.1);
-                            w = W_PART(4.5);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class SeachPicture: RscPicture {
+                            idc = -1;
+                            text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+                            x = 0;
+                            y = H_PART(7.1);
+                            w = W_PART(1);
+                            h = H_PART(1);
                         };
                         class Search: RscEdit {
                             idc = 16190;
-                            x = W_PART(4.7);
+                            x = W_PART(1.2);
                             y = H_PART(7.1);
-                            w = W_PART(12.1);
+                            w = W_PART(14.5);
                             h = H_PART(1);
                             autocomplete = "";
                         };
-                        class LabelGroup: LabelSearch {
+                        class LabelGroup: Title {
                             idc = -1;
                             text = CSTRING(ModuleTeleportPlayers_group);
                             toolTip = CSTRING(ModuleTeleportPlayers_group_desc);
-                            x = W_PART(17);
-                            w = W_PART(7.9);
+                            x = W_PART(15.9);
+                            y = H_PART(7.1);
+                            w = W_PART(9);
                         };
                         class UseGroup: RscCheckBox {
                             idc = 16188;

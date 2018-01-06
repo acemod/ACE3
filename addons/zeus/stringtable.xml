@@ -1237,5 +1237,21 @@
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
             <Korean>주둔해제</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_noneFound">
+            <English>No players found</English>
+            <Chinese>沒有玩家找到</Chinese>
+            <Chinesesimp>没有玩家找到</Chinesesimp>
+            <Czech>Nije pronađen nijedan igrač</Czech>
+            <French>Aucun joueur trouvé</French>
+            <German>Keine Spieler gefunden</German>
+            <Hungarian>Nincsenek játékosok</Hungarian>
+            <Italian>Nessun giocatore trovato</Italian>
+            <Japanese>プレーヤーが見つかりません</Japanese>
+            <Korean>플레이어가 없습니다.</Korean>
+            <Polish>Nie znaleziono graczy</Polish>
+            <Portuguese>Nenhum jogador encontrado</Portuguese>
+            <Russian>Игроки не найдены</Russian>
+            <Spanish>No se encontraron jugadores</Spanish>
+        </Key>
     </Package>
 </Project>
