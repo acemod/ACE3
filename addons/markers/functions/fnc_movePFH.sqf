@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-(_this select 0) params ["_marker", "_ctrlMap", "_originalPos", "_originalAlpha", "_mapGesturesEnabled"];
+(_this select 0) params ["_marker", "_ctrlMap", "_originalPos", "_originalAlpha"];
 
 if (isNull _ctrlMap || !GVAR(moving)) exitWith {
     (_this select 1) call CBA_fnc_removePerFrameHandler;
