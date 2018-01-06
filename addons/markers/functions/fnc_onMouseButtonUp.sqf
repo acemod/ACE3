@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [CONTROL, 2] call ace_markers_fnc_onMouseButtonUpMap
+ * [CONTROL, 2] call ace_markers_fnc_onMouseButtonUp
  *
  * Public: No
  */
