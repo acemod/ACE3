@@ -55,12 +55,7 @@ TRACE_1("final", _visibleFire);
 if (_visibleFire <= 1.5) exitWith {};
 if ((random (linearConversion [1, 4, GVAR(nvgGeneration), 10, 20])) > _visibleFire) exitWith {};
 
-GVAR(ppEffectCCMuzzleFlash) = ppEffectCreate ["ColorCorrections", 1237];
-GVAR(ppEffectCCMuzzleFlash) ppEffectEnable true;
-GVAR(ppEffectCCMuzzleFlash) ppEffectForceInNVG true;
-
-GVAR(ppEffectCCMuzzleFlash) ppEffectAdjust [1, 1, -1, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
-GVAR(ppEffectCCMuzzleFlash) ppEffectCommit 0;
-
-GVAR(ppEffectCCMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
-GVAR(ppEffectCCMuzzleFlash) ppEffectCommit 0.07;
+QGVAR(cutoff) cutText ["", "BLACK", .1];
+[{
+   QGVAR(cutoff) cutText ["", "PLAIN", 0];
+}, [], 0.07] call CBA_fnc_waitAndExecute;
