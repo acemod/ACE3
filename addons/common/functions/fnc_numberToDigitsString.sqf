@@ -16,20 +16,6 @@
  */
 #include "script_component.hpp"
 
-params ["_number", "_minLength"];
+ACE_DEPRECATED(QFUNC(numberToDigitsString),"3.14.0","CBA_fnc_formatNumber");
 
-_number = _number min 999999;
-_number = str _number;
-
-private _length = count _number;
-
-if (isNil "_minLength") then {_minLength = _length};
-
-_minLength = _minLength min 6;
-
-while {_length < _minLength} do {
-    _number = "0" + _number;
-    _length = _length + 1;
-};
-
-_number
+_this call CBA_fnc_formatNumber

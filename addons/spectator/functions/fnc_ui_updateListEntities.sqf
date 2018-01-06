@@ -51,8 +51,7 @@ private _entities = [true] call FUNC(getTargetEntities);
                     alive _x && { NEEDS_REVIVE(_x) },
                     _name
                 ];
-                nil // Speed loop
-            } count _entitiesGroup;
+            } forEach _entitiesGroup;
 
             // Cache the info of the group itself
             private _groupTexture = [_group] call FUNC(getGroupIcon);
@@ -80,8 +79,7 @@ private _entities = [true] call FUNC(getTargetEntities);
             ((_newList select _sideIndex) select 4) pushBack [_groupInfo, _unitsInfo];
         };
     };
-    nil // Speed loop
-} count allGroups;
+} forEach allGroups;
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
@@ -207,12 +205,9 @@ if !(GVAR(curList) isEqualTo _newList) then {
                     _ctrl tvSetPictureColor [_path, _sideColor];
                     _ctrl tvSetTooltip [_path, _tooltip];
                 };
-                nil // Speed loop
-            } count _nestedUnitData;
-            nil // Speed loop
-        } count _nestedGroupData;
-        nil // Speed loop
-    } count _newList;
+            } forEach _nestedUnitData;
+        } forEach _nestedGroupData;
+    } forEach _newList;
 
     // Store the new list as the current list
     GVAR(curList) = _newList;

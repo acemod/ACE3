@@ -50,8 +50,3 @@ TRACE_3("params",_allMapMarkers,_allMapMarkersProperties);
     };
     false
 } count allMapMarkers;
-
-private _group = group GVAR(localLogic);
-deleteVehicle GVAR(localLogic);
-GVAR(localLogic) = nil;
-deleteGroup _group;

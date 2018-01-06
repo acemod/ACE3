@@ -153,17 +153,12 @@ class GVAR(display) {
             shadow=0;
             colorBackground[]={0,0,0,0.69999999};
             text="";
-            x = QUOTE(safezoneX + safezoneW * 0.50 - 80 * GRID_W);
+            x = QUOTE(0.5 - WIDTH_TOTAL / 2);
             y = QUOTE(safeZoneH + safezoneY - 25 * GRID_H);
-            w = QUOTE(160 * GRID_W);
+            w = QUOTE(WIDTH_TOTAL);
             h = QUOTE(10 * GRID_H);
             sizeEx = QUOTE(5 * GRID_H);
         };
-
-        #define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
-        #define WIDTH_GAP (WIDTH_TOTAL / 100)
-        #define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
-
         class menuBar: RscControlsGroupNoScrollbars {
             idc = IDC_menuBar;
             x = QUOTE(0.5 - WIDTH_TOTAL / 2);
@@ -202,7 +197,7 @@ class GVAR(display) {
                     text = CSTRING(buttonImportText);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
-                class buttonClose: ctrlButtonClose {
+                class buttonClose: ctrlButtonOK {
                     idc = IDC_menuBarClose;
                     colorBackground[] = {0,0,0,0.8};
                     x = QUOTE(5 * WIDTH_GAP + 4 * WIDTH_SINGLE);
@@ -211,8 +206,7 @@ class GVAR(display) {
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
                     sizeEx = QUOTE(5 * GRID_H);
-                    shortcuts[]= {"0x01"};
-                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
+                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 1);
                 };
             };
         };
@@ -775,6 +769,8 @@ class GVAR(loadoutsDisplay) {
                     columns[]={0, 0.05, 0.40, 0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90};
                     drawSideArrows=0;
                     disableOverflow=1;
+                    onSetFocus = QUOTE(GVAR(loadoutsPanelFocus) = true);
+                    onKillFocus = QUOTE(GVAR(loadoutsPanelFocus) = false);
                     onLBSelChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onSelChangedLoadouts));
                     onLBDblClick = QUOTE([ARR_2(ctrlparent (_this select 0), (ctrlParent (_this select 0)) displayCtrl IDC_buttonLoad)] call FUNC(buttonLoadoutsLoad));
                     x = QUOTE(0);
@@ -786,7 +782,7 @@ class GVAR(loadoutsDisplay) {
                 class textTitle: RscText {
                     idc= -1;
                     text="$STR_DISP_GAME_NAME";
-                    x = QUOTE(1 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(15 * GRID_W);
                     h = QUOTE(5 * GRID_H);
@@ -795,9 +791,29 @@ class GVAR(loadoutsDisplay) {
                 };
                 class textEditBox: ctrlEdit {
                     idc= IDC_textEditBox;
-                    x = QUOTE(16 * GRID_W);
+                    x = QUOTE(15 * GRID_W);
                     y = QUOTE(safezoneH - (51 * GRID_H));
-                    w = QUOTE(80 * GRID_W);
+                    w = QUOTE(65 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                };
+                class loadoutsSearchbar: ctrlEdit {
+                    idc = IDC_loadoutsSearchbar;
+                    onSetFocus = QUOTE(GVAR(loadoutsSearchbarFocus) = true);
+                    onKillFocus = QUOTE(GVAR(loadoutsSearchbarFocus) = false);
+                    onMouseButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(clearSearchbar));
+                    x = QUOTE(83 * GRID_W);
+                    y = QUOTE(safezoneH - (51 * GRID_H));
+                    w = QUOTE(72 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                };
+                class loadoutsSearchbarButton: ctrlButtonPicture {
+                    idc = -1;
+                    text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+                    colorBackground[]={0,0,0,0.5};
+                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_loadoutsSearchbar)] call FUNC(handleLoadoutsSearchbar));
+                    x = QUOTE(155 * GRID_W);
+                    y = QUOTE(safezoneH - (51 * GRID_H));
+                    w = QUOTE(5 * GRID_W);
                     h = QUOTE(5 * GRID_H);
                 };
                 class buttonSave: ctrlButton {
