@@ -176,6 +176,13 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca.paa";
                 };
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    condition = QUOTE(!alive _target);
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    exceptions[] = {"isNotSwimming"};
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
             };
 
             class ACE_Torso {
@@ -635,6 +642,22 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
+    class WeaponHolderSimulated: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 2;
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    exceptions[] = {"isNotSwimming"};
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
+    };
+
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
         class EventHandlers {
@@ -688,6 +711,26 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,0,0.500671]";
+            };
+        };
+    };
+
+    class ReammoBox;
+    class WeaponHolder: ReammoBox {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 2;
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    exceptions[] = {"isNotSwimming"};
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
             };
         };
     };
