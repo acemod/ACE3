@@ -107,6 +107,13 @@ class CfgVehicles {
         function = QFUNC(moduleAddSpareWheel);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
+    class GVAR(moduleSetEngineer): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Repair);
+        displayName = CSTRING(ModuleSetEngineer_DisplayName);
+        curatorInfoType = QGVAR(RscSetEngineer);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
+    };
     class GVAR(moduleSetRepairFacility): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Repair);

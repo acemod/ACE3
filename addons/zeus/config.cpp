@@ -57,6 +57,7 @@ class CfgPatches {
         units[] = {
             QGVAR(moduleAddSpareTrack),
             QGVAR(moduleAddSpareWheel),
+            QGVAR(moduleSetEngineer),
             QGVAR(moduleSetRepairVehicle),
             QGVAR(moduleSetRepairFacility)
         };

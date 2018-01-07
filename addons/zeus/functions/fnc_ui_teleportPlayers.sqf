@@ -1,5 +1,5 @@
 /*
- * Author: SilentSpike
+ * Author: SilentSpike, mharis001
  * Initalises the `teleport players` zeus module display
  *
  * Arguments:

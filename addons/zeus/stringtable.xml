@@ -1285,5 +1285,37 @@
             <Russian>Назначить ремонтный комплекс</Russian>
             <Spanish>Asignar instalación de reparación</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetEngineer_DisplayName">
+            <English>Assign Engineer</English>
+            <Chinese>指派工程師</Chinese>
+            <Chinesesimp>指派工程师</Chinesesimp>
+            <Czech>Přiřadit inženýra</Czech>
+            <French>Affecter ingénieur</French>
+            <German>Engineer zuweisen</German>
+            <Hungarian>Engedélyezze a mérnököt</Hungarian>
+            <Italian>Assign Engineer</Italian>
+            <Japanese>担当エンジニア</Japanese>
+            <Korean>엔지니어 지정</Korean>
+            <Polish>Przydziel inżyniera</Polish>
+            <Portuguese>Encarregar o engenheiro</Portuguese>
+            <Russian>Назначить инженера</Russian>
+            <Spanish>Asignar Ingeniero</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetEngineer_skill">
+            <English>Engineer Skill</English>
+            <Chinese>工程師技能</Chinese>
+            <Chinesesimp>工程师技能</Chinesesimp>
+            <Czech>Inženýrská dovednost</Czech>
+            <French>Compétence d'ingénieur</French>
+            <German>Ingenieur Fähigkeit</German>
+            <Hungarian>Mérnöki készség</Hungarian>
+            <Italian>Abilità ingegnere</Italian>
+            <Japanese>エンジニアのスキル</Japanese>
+            <Korean>기술자의 기술</Korean>
+            <Polish>Umiejętność inżyniera</Polish>
+            <Portuguese>Habilidade do engenheiro</Portuguese>
+            <Russian>Инженерное мастерство</Russian>
+            <Spanish>Habilidad de Ingeniero</Spanish>
+        </Key>
     </Package>
 </Project>

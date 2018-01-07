@@ -694,3 +694,45 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
         class ButtonCancel: ButtonCancel {};
     };
 };
+
+class GVAR(RscSetEngineer): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSetEngineer)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSetEngineer)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class setEngineer: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_setEngineer));
+                    idc = 86946;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(1.2);
+                    class controls {
+                        class Label: RscText {
+                            idc = -1;
+                            text = CSTRING(ModuleSetEngineer_skill);
+                            toolTip = ECSTRING(repair,AssignEngineerRole_role_Description);
+                            x = 0;
+                            y = H_PART(0.1);
+                            w = W_PART(8);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class Combo: RscCombo {
+                            idc = 86947;
+                            x = W_PART(8.3);
+                            y = H_PART(0.1);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
