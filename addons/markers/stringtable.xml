@@ -29,14 +29,17 @@
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
             <German>Erlaube Marker zu bewegen für</German>
+            <Japanese>次ユーザーにマーカー移動を許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
             <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
+            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をさせられるか制限できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
             <German>Niemand</German>
+            <Japanese>不許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
