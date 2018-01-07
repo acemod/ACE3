@@ -41,7 +41,7 @@ private _initTrench = {
 // If no object is given apply this to all trenches in 3den
 if (isNull _object) then {
     {
-        if (getNumber(configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(isTrench)) == 1) then {
+        if ([_x] call FUNC(isTrench)) then {
             [_x] call _initTrench;
         };
     } forEach (all3DENEntities select 0);

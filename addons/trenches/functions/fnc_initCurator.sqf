@@ -20,8 +20,8 @@ params [
 
 _logic addEventHandler ["CuratorObjectEdited", {
     params ["_logic", "_object"];
-    
-    if (getNumber(configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(isTrench)) == 1) then {
+
+    if ([_object] call FUNC(isTrench)) then {
         private _texture = [_object] call FUNC(getSurfaceTexturePath);
         _object setObjectTextureGlobal [0, _texture];
     };
