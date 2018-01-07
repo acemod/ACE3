@@ -16,7 +16,7 @@
 */
 #include "script_component.hpp"
 
-if (isNull (GETGVAR(ladder,objNull))) exitWith {};
+if (isNull GETGVAR(ladder,objNull)) exitWith {};
 
 params ["_newPlayer", "_oldPlayer"];
 

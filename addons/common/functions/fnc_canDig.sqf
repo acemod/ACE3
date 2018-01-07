@@ -24,8 +24,14 @@ if ((getPosATL _unit) select 2 > 0.05 || // Walking on objects, such as building
 ) exitWith {false};
 
 private _surfaceClass = (surfaceType _posASL) select [1];
-private _surfaceType = getText (configFile >> "CfgSurfaces" >> _surfaceClass >> "soundEnviron");
-private _surfaceDust = getNumber (configFile >> "CfgSurfaces" >> _surfaceClass >> "dust");
+private _config = configFile >> "CfgSurfaces" >> _surfaceClass;
+private _surfaceType = getText (_config >> "soundEnviron");
+private _surfaceDust = getNumber (_config >> "dust");
+
 TRACE_2("Surface",_surfaceType,_surfaceDust);
 
-!(_surfaceType in DIG_SURFACE_BLACKLIST) && {(_surfaceDust >= 0.1) || {_surfaceType in DIG_SURFACE_WHITELIST}}
+if (isNumber (_config >> "ACE_canDig")) then {
+    getNumber (_config >> "ACE_canDig") // return
+} else {
+    !(_surfaceType in DIG_SURFACE_BLACKLIST) && {(_surfaceDust >= 0.1) || {_surfaceType in DIG_SURFACE_WHITELIST}} // return
+};
