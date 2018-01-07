@@ -56,7 +56,8 @@ class CfgPatches {
     class GVAR(cargoAndRepair): ADDON {
         units[] = {
             QGVAR(moduleAddSpareTrack),
-            QGVAR(moduleAddSpareWheel)
+            QGVAR(moduleAddSpareWheel),
+            QGVAR(moduleSetRepairVehicle)
         };
     };
     class GVAR(fastroping): ADDON {

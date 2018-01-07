@@ -1253,5 +1253,21 @@
             <Russian>Игроки не найдены</Russian>
             <Spanish>No se encontraron jugadores</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetRepairVehicle_DisplayName">
+            <English>Assign Repair Vehicle</English>
+            <Chinese>分配維修車輛</Chinese>
+            <Chinesesimp>分配维修车辆</Chinesesimp>
+            <Czech>Přiřaďte opravárenské vozidlo</Czech>
+            <French>Affecter un véhicule de réparation</French>
+            <German>Fahrzeug reparieren zuweisen</German>
+            <Hungarian>Hozzárendelés javítóműhöz</Hungarian>
+            <Italian>Assegna veicolo di riparazione</Italian>
+            <Japanese>修理車両を割り当てる</Japanese>
+            <Korean>수리 차량 지정</Korean>
+            <Polish>Przydziel pojazd do naprawy</Polish>
+            <Portuguese>Atribuir veículo de reparação</Portuguese>
+            <Russian>Назначить ремонтный автомобиль</Russian>
+            <Spanish>Asignar vehículo de reparación</Spanish>
+        </Key>
     </Package>
 </Project>

@@ -22,6 +22,7 @@ PREP(moduleSearchNearby);
 PREP(moduleSetMedic);
 PREP(moduleSetMedicalVehicle);
 PREP(moduleSetMedicalFacility);
+PREP(moduleSetRepairVehicle);
 PREP(moduleSimulation);
 PREP(moduleSuppressiveFire);
 PREP(moduleSuppressiveFireLocal);
