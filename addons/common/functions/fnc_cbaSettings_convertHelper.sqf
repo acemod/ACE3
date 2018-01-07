@@ -109,16 +109,18 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
     private _gvarName = _varName select [_addonSearchCount];
 
     _output pushBack "";
-    _output pushBack format ["[QGVAR(%1), ""%2"",", _gvarName, _cbaSettingType];
-    _output pushBack format ["[LSTRING(), LSTRING()], // %1, %2", _localizedName, _localizedDescription];
-    _output pushBack format ["""%1"", // %2", ["localize LSTRING()", _category] select _uncat, _category];
-    _output pushBack format ["%1, // %2", _cbaValueInfo, _cbaValueInfoHint];
-    _output pushBack format ["%1, // isGlobal", _cbaIsGlobal];
+    _output pushBack format ["["];
+    _output pushBack format ["    QGVAR(%1), ""%2"",", _gvarName, _cbaSettingType];
+    _output pushBack format ["    [LSTRING(), LSTRING()], // %1, %2", _localizedName, _localizedDescription];
+    _output pushBack format ["    ""%1"", // %2", ["localize LSTRING()", _category] select _uncat, _category];
+    _output pushBack format ["    %1, // %2", _cbaValueInfo, _cbaValueInfoHint];
+    _output pushBack format ["    %1, // isGlobal", _cbaIsGlobal];
     if ((_varName select [0, 4]) == "ACE_") then {
-        _output pushBack format ["{[QGVAR(%1), _this] call EFUNC(common,cbaSettings_settingChanged)}] call CBA_settings_fnc_init;", _gvarName];
+        _output pushBack format ["    {[QGVAR(%1), _this] call EFUNC(common,cbaSettings_settingChanged)}] call CBA_settings_fnc_init;", _gvarName];
     } else {
-        _output pushBack format ["{[""%1"", _this] call ace_common_fnc_cbaSettings_settingChanged}] call CBA_settings_fnc_init;", _varName];
+        _output pushBack format ["    {[""%1"", _this] call ace_common_fnc_cbaSettings_settingChanged}", _varName];
     };
+    _output pushBack "] call CBA_settings_fnc_init;";
 } forEach _settings;
 
 copyToClipboard (_output joinString endl);
