@@ -1269,5 +1269,21 @@
             <Russian>Назначить ремонтный автомобиль</Russian>
             <Spanish>Asignar vehículo de reparación</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetRepairFacility_DisplayName">
+            <English>Assign Repair Facility</English>
+            <Chinese>分配修理設施</Chinese>
+            <Chinesesimp>分配修理设施</Chinesesimp>
+            <Czech>Přiřaďte opravu</Czech>
+            <French>Affecter une installation de réparation</French>
+            <German>Zuweisen von Reparatureinrichtung</German>
+            <Hungarian>Hozzárendelés javításhoz</Hungarian>
+            <Italian>Assegna struttura di riparazione</Italian>
+            <Japanese>修理施設を割り当てる</Japanese>
+            <Korean>수리 시설 지정</Korean>
+            <Polish>Przydziel naprawę</Polish>
+            <Portuguese>Atribuir facilidade de reparação</Portuguese>
+            <Russian>Назначить ремонтный комплекс</Russian>
+            <Spanish>Asignar instalación de reparación</Spanish>
+        </Key>
     </Package>
 </Project>
