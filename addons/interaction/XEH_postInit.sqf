@@ -116,3 +116,18 @@ GVAR(isOpeningDoor) = false;
         }];
     };
 }] call CBA_fnc_addEventHandler;
+
+
+private _action = [
+    // action display name will be overwritten in modifier function
+    QGVAR(takeWeapon), "take", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa",
+    {if (1 == count weaponCargo _target) then {_player action ["TakeWeapon", _target, weaponCargo _target select 0]}},
+    {1 == count weaponCargo _target},
+    nil, nil, nil, nil, nil,
+    {
+        params ["_target", "", "", "_actionData"];
+        if (1 != count weaponCargo _target) exitWith {};
+        _actionData set [1, format [localize "STR_ACTION_TAKE_BAG", getText (configfile >> "CfgWeapons" >> weaponCargo _target select 0 >> "displayName")]];
+    }
+] call ace_interact_menu_fnc_createAction;
+["WeaponHolderSimulated", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
