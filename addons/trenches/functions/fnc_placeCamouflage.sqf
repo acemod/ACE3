@@ -38,7 +38,7 @@ private _fnc_onFinish = {
         };
 
         _placedObjects pushBack _object;
-    } forEach (configProperties [configFile >> "CfgVehicles" >> (typeof _trench) >> "CamouflagePositions"]);
+    } forEach (configProperties [configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(camouflagePositions)]);
 
     _trench setVariable [QGVAR(camouflageObjects), _placedObjects, true];
 

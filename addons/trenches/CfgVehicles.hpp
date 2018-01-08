@@ -52,13 +52,12 @@ class CfgVehicles {
         GVAR(noGeoClass) = "ACE_envelope_small_NoGeo";
         GVAR(placementData)[] = {2,3,0.35};
         GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
-        GVAR(isTrench) = 1;
 
         editorCategory = "EdCat_Things";
         editorSubcategory = "EdSubcat_Military";
         hiddenSelections[] = {"velka"};
 
-        class CamouflagePositions {
+        class GVAR(camouflagePositions) {
             center[] = {0, 1.3, 0};
             left[] = {1.3, -0.8, 0.4};
             right[] = {-1.3,-0.8,0.4};
@@ -123,7 +122,7 @@ class CfgVehicles {
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
 
-        class CamouflagePositions {
+        class GVAR(camouflagePositions) {
             center[] = {-0.4, 0.4, 0.2};
             left[] = {-1.75, 0.2, 0.2};
             right[] = {1.75, 0.2, 0.2};
@@ -140,7 +139,7 @@ class CfgVehicles {
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_gigant.p3d);
 
-        class CamouflagePositions {
+        class GVAR(camouflagePositions) {
             left1[] = {-0.5, 0.3, 0.5};
             left2[] = {-2.7, 0.3, 0.5};
             right1[] = {2.7, 0.15, 0.35};
@@ -158,7 +157,7 @@ class CfgVehicles {
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_vehicle.p3d);
 
-        class CamouflagePositions {};
+        class GVAR(camouflagePositions) {};
         class Attributes {};
     };
 

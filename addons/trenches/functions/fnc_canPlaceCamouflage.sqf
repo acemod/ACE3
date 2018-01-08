@@ -19,4 +19,4 @@ params ["_trench"];
 
 (count (_trench getVariable [QGVAR(camouflageObjects), []]) == 0) &&
 {count (getArray (configFile >> "CfgWorlds" >> worldName >> QGVAR(camouflageObjects))) > 0} &&
-{count (configProperties [configFile >> "CfgVehicles" >> (typeof _trench) >> "CamouflagePositions"]) > 0}
+{count (configProperties [configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(camouflagePositions)]) > 0}

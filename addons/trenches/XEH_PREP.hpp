@@ -15,7 +15,6 @@ PREP(handleUnconscious);
 PREP(initCurator);
 PREP(initTrench);
 PREP(initTrench3DEN);
-PREP(isTrench);
 PREP(placeCamouflage);
 PREP(placeCancel);
 PREP(placeConfirm);
