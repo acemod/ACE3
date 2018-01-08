@@ -24,6 +24,7 @@ params ["_unit"];
 // remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
 GVAR(digPFH) = -1;
+GVAR(currentSurface) = nil;
 
 // remove mouse button actions
 call EFUNC(interaction,hideMouseHint);

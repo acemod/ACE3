@@ -30,8 +30,8 @@ TRACE_1("",GVAR(trenchPlacementData));
 [_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
 [_unit, "blockThrow", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
 
-// create the trench
-private _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
+// create the trench at players position below surface to ensure trench init sets right texture
+private _trench = createVehicle [_noGeoModel, (player modelToWorld [0, 0, -100]), [], 0, "NONE"];
 
 GVAR(trench) = _trench;
 
