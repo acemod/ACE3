@@ -67,7 +67,6 @@ release_dir = ""
 module_root_parent = ""
 optionals_root = ""
 key_name = "ace"
-intercept_folder = "intercept"
 key = ""
 dssignfile = ""
 prefix = "ace"
@@ -346,33 +345,6 @@ def copy_important_files(source_dir,destination_dir):
     finally:
         os.chdir(originalDir)
 
-
-def copy_intercept_plugins(source_dir,destination_dir):
-    originalDir = os.getcwd()
-    
-    # Copy all intercept plugin DLL's
-    try:
-        os.chdir(os.path.join(source_dir))
-        print_blue("\nSearching for intercept plugin DLLs in {}".format(os.getcwd()))
-        filenames = glob.glob("*.dll")
-
-        if not filenames:
-            print ("Empty SET")
-
-        if os.path.exists(destination_dir):
-            shutil.rmtree(destination_dir)
-            
-        os.makedirs(destination_dir)
-
-        for dll in filenames:
-            print_green("Copying intercept plugin dll => {}".format(os.path.join(source_dir,dll)))
-            if os.path.isfile(dll):
-                shutil.copyfile(os.path.join(source_dir,dll),os.path.join(destination_dir,dll))
-    except:
-        print_error("COPYING INTERCEPT PLUGIN DLL FILES.")
-        raise
-    finally:
-        os.chdir(originalDir)        
 
 
 def copy_optionals_for_building(mod,pbos):
@@ -1419,7 +1391,6 @@ See the make.cfg file for additional build options.
 
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
-        copy_intercept_plugins(os.path.join(module_root_parent, intercept_folder),os.path.join(release_dir, project, intercept_folder))
         if (os.path.isdir(optionals_root)):
             cleanup_optionals(optionals_modules)
         if not version_update:
