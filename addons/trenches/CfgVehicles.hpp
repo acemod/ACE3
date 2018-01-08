@@ -47,6 +47,7 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnevlopeSmallDescription);
         model = QPATHTOF(data\trench_small.p3d);
         scope = 2;
+        scopeCurator = 2;
         GVAR(diggingDuration) = 20;
         GVAR(removalDuration) = 12;
         GVAR(noGeoClass) = "ACE_envelope_small_NoGeo";
@@ -163,18 +164,22 @@ class CfgVehicles {
 
     class ACE_envelope_small_NoGeo: ACE_envelope_small {
         scope = 1;
+        scopeCurator = 0;
         model = QPATHTOF(data\trench_small_nogeo.p3d);
     };
     class ACE_envelope_big_NoGeo: ACE_envelope_big {
         scope = 1;
+        scopeCurator = 0;
         model = QPATHTOF(data\trench_big_nogeo.p3d);
     };
     class ACE_envelope_gigant_NoGeo: ACE_envelope_gigant {
         scope = 1;
+        scopeCurator = 0;
         model = QPATHTOF(data\trench_gigant_nogeo.p3d);
     };
     class ACE_envelope_vehicle_NoGeo: ACE_envelope_vehicle {
         scope = 1;
+        scopeCurator = 0;
         model = QPATHTOF(data\trench_vehicle_nogeo.p3d);
     };
 
