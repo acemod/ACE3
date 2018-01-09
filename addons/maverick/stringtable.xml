@@ -12,31 +12,31 @@
                 <Korean>AGM-65 Maverick L, 레이저 유도 대지 미사일</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x1">
-                <English>AGM-65 Maverick L x1</English>
-                <German>AGM-65 Maverick L x1</German>
-                <Italian>AGM-65 Maverick L x1</Italian>
-                <Japanese>AGM-65 マーベリック L x1</Japanese>
-                <Chinese>AGM-65"小牛"飛彈L型 x1</Chinese>
-                <Chinesesimp>AGM-65"小牛"飞弹L型 x1</Chinesesimp>
-                <Korean>AGM-65 Maverick L x1</Korean>
+                <English>AGM-65 Maverick L [ACE]</English>
+                <German>AGM-65 Maverick L [ACE]</German>
+                <Italian>AGM-65 Maverick L [ACE]</Italian>
+                <Japanese>AGM-65 マーベリック L [ACE]</Japanese>
+                <Chinese>AGM-65"小牛"飛彈L型 [ACE]</Chinese>
+                <Chinesesimp>AGM-65"小牛"飞弹L型 [ACE]</Chinesesimp>
+                <Korean>AGM-65 Maverick L [ACE]</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x2">
-                <English>AGM-65 Maverick L x2</English>
-                <German>AGM-65 Maverick L x2</German>
-                <Italian>AGM-65 Maverick L x2</Italian>
-                <Japanese>AGM-65 マーベリック L x2</Japanese>
-                <Chinese>AGM-65"小牛"飛彈L型 x2</Chinese>
-                <Chinesesimp>AGM-65"小牛"飞弹L型 x2</Chinesesimp>
-                <Korean>AGM-65 Maverick L x2</Korean>
+                <English>2x AGM-65 Maverick L [ACE]</English>
+                <German>2x AGM-65 Maverick L [ACE]</German>
+                <Italian>2x AGM-65 Maverick L [ACE]</Italian>
+                <Japanese>2x AGM-65 マーベリック L [ACE]</Japanese>
+                <Chinese>2x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
+                <Chinesesimp>2x AGM-65"小牛"飞弹L型 [ACE]</Chinesesimp>
+                <Korean>2x AGM-65 Maverick L [ACE]</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x3">
-                <English>AGM-65 Maverick L x3</English>
-                <German>AGM-65 Maverick L x3</German>
-                <Italian>AGM-65 Maverick L x3</Italian>
-                <Japanese>AGM-65 マーベリック L x3</Japanese>
-                <Chinese>AGM-65"小牛"飛彈L型 x3</Chinese>
-                <Chinesesimp>AGM-65"小牛"飞弹L型 x3</Chinesesimp>
-                <Korean>AGM-65 Maverick L x3</Korean>
+                <English>3x AGM-65 Maverick L [ACE]</English>
+                <German>3x AGM-65 Maverick L [ACE]</German>
+                <Italian>3x AGM-65 Maverick L [ACE]</Italian>
+                <Japanese>3x AGM-65 マーベリック L [ACE]</Japanese>
+                <Chinese>3x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
+                <Chinesesimp>3x AGM-65"小牛"飞弹L型 [ACE]</Chinesesimp>
+                <Korean>3x AGM-65 Maverick L [ACE]</Korean>
             </Key>
             <Key ID="str_ace_maverick_l_mag_short">
                 <English>Laser Guided</English>
@@ -46,6 +46,15 @@
                 <Chinese>雷射導引</Chinese>
                 <Chinesesimp>雷射导引</Chinesesimp>
                 <Korean>레이저 유도</Korean>
+            </Key>
+            <Key ID="str_ace_maverick_kh25ml_mag_descr">
+                <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
+                <German>Ch-25ML, Lasergelenkte Luft-Boden-Rakete</German>
+            </Key>
+            <Key ID="str_ace_maverick_kh25ml_mag_x1">
+                <English>1x Kh-25ML [ACE]</English>
+                <German>1x Ch-25ML [ACE]</German>
+                <Russian>1x Х-25МЛ [ACE]</Russian>
             </Key>
         </Container>
         <Container name="weapons">
@@ -57,6 +66,11 @@
                 <Chinese>AGM-65"小牛"飛彈L型</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型</Chinesesimp>
                 <Korean>AGM-65 Maverick L</Korean>
+            </Key>
+            <Key ID="str_ace_maverick_kh25ml">
+                <English>Kh-25ML</English>
+                <German>Ch-25ML</English>
+                <Russian>Х-25МЛ</English>
             </Key>
         </Container>
     </Package>

@@ -322,7 +322,7 @@ class CfgVehicles {
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
         editorCategory = "EdCat_Supplies";
-        editorSubcategory = QGVAR(subcategory);
+        editorSubcategory = QEGVAR(main,subcategory);
     };
 
     class ACE_Track: ACE_RepairItem_Base {
@@ -486,8 +486,7 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Quadbike_01_base_F;
-    class B_Quadbike_01_F: Quadbike_01_base_F {
+    class Quadbike_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
     };
     class Hatchback_01_base_F: Car_F {

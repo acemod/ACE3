@@ -1,5 +1,5 @@
 /*
- * Author: commy2
+ * Author: commy2, SilentSpike
  * Transforms a number to an array of the correspondending digits.
  *
  * Arguments:
@@ -18,24 +18,6 @@
 
 params ["_number", "_minLength"];
 
-_number = _number min 999999;
-_number = str _number;
+_number = [_number min 999999, _minLength] call CBA_fnc_formatNumber;
 
-private _length = count _number;
-
-if (isNil "_minLength") then {_minLength = _length};
-
-_minLength = _minLength min 6;
-
-while {_length < _minLength} do {
-    _number = "0" + _number;
-    _length = _length + 1;
-};
-
-private _digits = [];
-
-for "_x" from 0 to (_length - 1) do {
-    _digits pushBack parseNumber (_number select [_x, 1]);
-};
-
-_digits
+(_number splitString "") apply { parseNumber _x }

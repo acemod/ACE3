@@ -12,6 +12,8 @@
 */
 #include "script_component.hpp"
 
+(_this select 1) params ["", "_exitCode"];
+
 GVAR(camera) cameraEffect ["terminate", "back"];
 private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFromTo (getposAtl GVAR(cameraHelper))];
 
@@ -19,9 +21,11 @@ private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFr
 
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
 
-camDestroy GVAR(camera);
-GVAR(center) switchCamera GVAR(cameraView);
+GVAR(camera) cameraEffect ["terminate","back"];
+player switchCamera GVAR(cameraView);
+
 deleteVehicle GVAR(cameraHelper);
+camDestroy GVAR(camera);
 
 if (is3DEN) then {
 
@@ -34,13 +38,13 @@ if (is3DEN) then {
     GVAR(centerOrigin) hideObject false;
 
     // Apply the loadout from the dummy to all selected units
-    {
-        _x setUnitLoadout (getUnitLoadout GVAR(center));
-        _x setFace GVAR(currentFace);
-        _x setSpeaker GVAR(currentVoice);
-    } foreach (get3DENSelected "object");
+    if (_exitCode == 1) then {
+        {
+            _x setUnitLoadout (getUnitLoadout GVAR(center));
+        } foreach (get3DENSelected "object");
 
-    save3DENInventory (get3DENSelected "object");
+        save3DENInventory (get3DENSelected "object");
+    };
 
     deleteVehicle GVAR(light);
     deleteVehicle GVAR(center);
@@ -70,8 +74,6 @@ if (isMultiplayer) then {
 };
 
 if !(isnull curatorCamera) then {
-    curatorcamera setPosAtl (_cameraData select 0);
-    curatorcamera setVectorDir (_cameraData select 1);
     curatorcamera cameraEffect ["internal","back"];
 };
 

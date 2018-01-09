@@ -179,7 +179,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_hmg_Name">
             <English>M-ATV (HMG)</English>
-            <German>M-ATV (SMG)</German>
+            <German>M-ATV (sMG)</German>
             <Spanish>M-ATV (HMG)</Spanish>
             <Polish>M-ATV (CKM)</Polish>
             <Czech>M-ATV (HMG)</Czech>
@@ -483,7 +483,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_hmg_Name">
             <English>Fennek (HMG)</English>
-            <German>Fennek (SMG)</German>
+            <German>Fennek (sMG)</German>
             <Spanish>Fennek (HMG)</Spanish>
             <Polish>Fennek (CKM)</Polish>
             <Czech>Fennek (HMG)</Czech>
@@ -563,7 +563,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_transport_Name">
             <English>KamAZ Transport</English>
-            <German>KamAZ Transport</German>
+            <German>KamAS Transport</German>
             <Spanish>KamAZ de transporte</Spanish>
             <Polish>KamAZ transportowy</Polish>
             <Czech>KamAZ (valník)</Czech>
@@ -579,7 +579,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_covered_Name">
             <English>KamAZ Transport (covered)</English>
-            <German>KamAZ Transport (bedeckt)</German>
+            <German>KamAS Transport (bedeckt)</German>
             <Spanish>KamAZ de transporte (cubierto)</Spanish>
             <Polish>KamAZ Transportowy (zakryty)</Polish>
             <Czech>KamAZ (valník-krytý)</Czech>
@@ -595,7 +595,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
-            <German>KamAZ Munition</German>
+            <German>KamAS Munition</German>
             <Spanish>KamAZ de munición</Spanish>
             <Polish>KamAZ Amunicyjny</Polish>
             <Czech>KamAZ (muniční)</Czech>
@@ -611,7 +611,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_fuel_Name">
             <English>KamAZ Fuel</English>
-            <German>KamAZ Treibstoff</German>
+            <German>KamAS Treibstoff</German>
             <Spanish>KamAZ de combustible</Spanish>
             <Polish>KamAZ cysterna</Polish>
             <Czech>KamAZ (cisterna)</Czech>
@@ -627,7 +627,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_box_Name">
             <English>KamAZ Repair</English>
-            <German>KamAZ Instandsetzung</German>
+            <German>KamAS Instandsetzung</German>
             <Spanish>KamAZ de reparación</Spanish>
             <Polish>KamAZ Naprawczy</Polish>
             <Czech>KamAZ (opravárenský)</Czech>
@@ -643,7 +643,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_medical_Name">
             <English>KamAZ Medical</English>
-            <German>KamAZ Sanitäter</German>
+            <German>KamAS Sanitäter</German>
             <Spanish>KamAZ médico</Spanish>
             <Polish>KamAZ Medyczny</Polish>
             <Czech>KamAZ (zdravotnický)</Czech>
@@ -658,50 +658,50 @@
             <Chinesesimp>"卡玛斯"卡车 (医疗)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
-            <English>Punisher</English>
-            <German>Punisher</German>
-            <Spanish>Punisher</Spanish>
-            <Polish>Punisher</Polish>
-            <Czech>Punisher</Czech>
-            <French>Punisher</French>
+            <English>Karatel</English>
+            <German>Karatel</German>
+            <Spanish>Karatel</Spanish>
+            <Polish>Karatel</Polish>
+            <Czech>Karatel</Czech>
+            <French>Karatel</French>
             <Russian>Kаратель</Russian>
-            <Portuguese>Punisher</Portuguese>
-            <Hungarian>Punisher</Hungarian>
-            <Italian>Punisher</Italian>
+            <Portuguese>Karatel</Portuguese>
+            <Hungarian>Karatel</Hungarian>
+            <Italian>Karatel</Italian>
             <Japanese>パニッシャー</Japanese>
-            <Korean>Punisher</Korean>
+            <Korean>Karatel</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_hmg_Name">
-            <English>Punisher (HMG)</English>
-            <German>Punisher (SMG)</German>
-            <Spanish>Punisher (HMG)</Spanish>
-            <Polish>Punisher (CKM)</Polish>
-            <Czech>Punisher (HMG)</Czech>
-            <French>Punisher (HMG)</French>
+            <English>Karatel (HMG)</English>
+            <German>Karatel (sMG)</German>
+            <Spanish>Karatel (HMG)</Spanish>
+            <Polish>Karatel (CKM)</Polish>
+            <Czech>Karatel (HMG)</Czech>
+            <French>Karatel (HMG)</French>
             <Russian>Kаратель (Пулемёт)</Russian>
-            <Portuguese>Punisher (HMG)</Portuguese>
-            <Hungarian>Punisher (nehézgéppuska)</Hungarian>
-            <Italian>Punisher (HMG)</Italian>
+            <Portuguese>Karatel (HMG)</Portuguese>
+            <Hungarian>Karatel (nehézgéppuska)</Hungarian>
+            <Italian>Karatel (HMG)</Italian>
             <Japanese>パニッシャー (HMG)</Japanese>
-            <Korean>Punisher (HMG)</Korean>
+            <Korean>Karatel (HMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (重機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (重机枪)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_gmg_Name">
-            <English>Punisher (GMG)</English>
-            <German>Punisher (GMW)</German>
-            <Spanish>Punisher (GMG)</Spanish>
-            <Polish>Punisher (GMG)</Polish>
-            <Czech>Punisher (GMG)</Czech>
-            <French>Punisher (GMG)</French>
+            <English>Karatel (GMG)</English>
+            <German>Karatel (GMW)</German>
+            <Spanish>Karatel (GMG)</Spanish>
+            <Polish>Karatel (GMG)</Polish>
+            <Czech>Karatel (GMG)</Czech>
+            <French>Karatel (GMG)</French>
             <Russian>Kаратель (Гранатомёт)</Russian>
-            <Portuguese>Punisher (GMG)</Portuguese>
-            <Hungarian>Punisher (gránátgéppuska)</Hungarian>
-            <Italian>Punisher (GMG)</Italian>
+            <Portuguese>Karatel (GMG)</Portuguese>
+            <Hungarian>Karatel (gránátgéppuska)</Hungarian>
+            <Italian>Karatel (GMG)</Italian>
             <Japanese>パニッシャー (GMG)</Japanese>
-            <Korean>Punisher (GMG)</Korean>
+            <Korean>Karatel (GMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (榴彈機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (榴弹机枪)</Chinesesimp>
         </Key>
@@ -1089,6 +1089,20 @@
             <Chinese>L-159先進輕型戰鬥機 (空對空)</Chinese>
             <Chinesesimp>L-159先进轻型战斗机 (空对空)</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_Plane_Fighter_04_Name">
+            <English>JAS 39 Gripen</English>
+            <German>JAS 39 Gripen</German>
+            <Spanish>JAS 39 Gripen</Spanish>
+            <Polish>JAS 39 Gripen</Polish>
+            <Czech>JAS 39 Gripen</Czech>
+            <French>JAS 39 Gripen</French>
+            <Russian>JAS 39 Грипен</Russian>
+            <Portuguese>JAS 39 Gripen</Portuguese>
+            <Italian>JAS 39 Gripen</Italian>
+            <Japanese>サーブ 39 グリペン</Japanese>
+            <Korean>JAS 39 그리펜</Korean>
+            <Chinese>JAS 39 獅鷲戰鬥機</Chinese>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_Name">
             <English>Ka-60 Kasatka</English>
             <German>Ka-60 Kasatka</German>
@@ -1250,7 +1264,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
-            <German>M83 Rauchgranate (Weiss)</German>
+            <German>M83 Rauchgranate (Weiß)</German>
             <Spanish>Granada de humo M83 (Blanco)</Spanish>
             <Polish>Granat dymny M83 (Biały)</Polish>
             <Czech>M83 Kouřový Granát (Bílý)</Czech>
@@ -1921,20 +1935,20 @@
             <Chinesesimp>CTAR-21卡宾步枪</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
-            <English>TAR-21 EGLM</English>
-            <German>TAR-21 EGLM</German>
-            <Czech>TAR-21 EGLM</Czech>
-            <Polish>TAR-21 EGLM</Polish>
-            <French>TAR-21 EGLM</French>
-            <Hungarian>TAR-21 EGLM</Hungarian>
-            <Spanish>TAR-21 EGLM</Spanish>
-            <Russian>TAR-21 EGLM</Russian>
-            <Portuguese>TAR-21 EGLM</Portuguese>
-            <Italian>TAR-21 EGLM</Italian>
-            <Japanese>TAR-21 EGLM</Japanese>
-            <Korean>TAR-21 EGLM</Korean>
-            <Chinese>TAR-21突擊步槍 (榴彈)</Chinese>
-            <Chinesesimp>TAR-21突击步枪 (榴弹)</Chinesesimp>
+            <English>GTAR-21 EGLM</English>
+            <German>GTAR-21 EGLM</German>
+            <Czech>GTAR-21 EGLM</Czech>
+            <Polish>GTAR-21 EGLM</Polish>
+            <French>GTAR-21 EGLM</French>
+            <Hungarian>GTAR-21 EGLM</Hungarian>
+            <Spanish>GTAR-21 EGLM</Spanish>
+            <Russian>GTAR-21 EGLM</Russian>
+            <Portuguese>GTAR-21 EGLM</Portuguese>
+            <Italian>GTAR-21 EGLM</Italian>
+            <Japanese>GTAR-21 EGLM</Japanese>
+            <Korean>GTAR-21 EGLM</Korean>
+            <Chinese>GTAR-21突擊步槍 (榴彈)</Chinese>
+            <Chinesesimp>GTAR-21突击步枪 (榴弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
@@ -2166,7 +2180,7 @@
             <French>Noreen "Bad News" ULR (Camo)</French>
             <Spanish>Noreen "Bad News" ULR (Camuflaje)</Spanish>
             <Russian>Noreen "Bad News" ULR (Камо)</Russian>
-            <German>Noreen "Bad News" ULR (Camo)</German>
+            <German>Noreen "Bad News" ULR (Tarnmuster)</German>
             <Polish>Noreen "Bad News" ULR (kamuflaż)</Polish>
             <Italian>Noreen "Bad News" ULR (Camo)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Terepmintás)</Hungarian>
@@ -2182,7 +2196,7 @@
             <French>Noreen "Bad News" ULR (Beige)</French>
             <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
             <Russian>Noreen "Bad News" ULR (Песочный)</Russian>
-            <German>Noreen "Bad News" ULR (Sand)</German>
+            <German>Noreen "Bad News" ULR (sandfarben)</German>
             <Polish>Noreen "Bad News" ULR (piaskowy)</Polish>
             <Italian>Noreen "Bad News" ULR (Sabbia)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Homok)</Hungarian>
@@ -2247,7 +2261,7 @@
             <Spanish>SIG 556 (Arena)</Spanish>
             <Russian>SIG 556 (Песочный)</Russian>
             <Polish>SIG 556 (piaskowy)</Polish>
-            <German>SIG 556 (Sand)</German>
+            <German>SIG 556 (sandfarben)</German>
             <Italian>SIG 556 (Sabbia)</Italian>
             <Hungarian>SIG 556 (Homok)</Hungarian>
             <Portuguese>SIG 556 (Deserto)</Portuguese>
@@ -2263,7 +2277,7 @@
             <Spanish>SIG 556 (Camuflaje)</Spanish>
             <Russian>SIG 556 (Камо)</Russian>
             <Polish>SIG 556 (kamuflaż)</Polish>
-            <German>SIG 556 (Camo)</German>
+            <German>SIG 556 (Tarnmuster)</German>
             <Italian>SIG 556 (Camo)</Italian>
             <Hungarian>SIG 556 (Terepmintás)</Hungarian>
             <Portuguese>SIG 556 (Camuflagem)</Portuguese>
@@ -2279,7 +2293,7 @@
             <Spanish>SIG 556 (Bosque)</Spanish>
             <Russian>SIG 556 (Лесной)</Russian>
             <Polish>SIG 556 (leśny)</Polish>
-            <German>SIG 556 (Woodland)</German>
+            <German>SIG 556 (Grünes Tarnmuster)</German>
             <Italian>SIG 556 (Woodland)</Italian>
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
             <Portuguese>SIG 556 (Floresta)</Portuguese>
@@ -2423,7 +2437,7 @@
             <Spanish>M14 (Camuflaje)</Spanish>
             <Russian>M14 (Камо)</Russian>
             <Polish>M14 (kamuflaż)</Polish>
-            <German>M14 (Camo)</German>
+            <German>M14 (Tarnmuster)</German>
             <Italian>M14 (Camo)</Italian>
             <Hungarian>M14 (Terepmintás)</Hungarian>
             <Portuguese>M14 (Camuflagem)</Portuguese>
@@ -2439,7 +2453,7 @@
             <Spanish>M14 (Oliva)</Spanish>
             <Russian>M14 (Олива)</Russian>
             <Polish>M14 (oliwkowy)</Polish>
-            <German>M14 (Olive)</German>
+            <German>M14 (Olivgrün)</German>
             <Italian>M14 (Olive)</Italian>
             <Hungarian>M14 (Olíva)</Hungarian>
             <Portuguese>M14 (Oliva)</Portuguese>
@@ -2551,7 +2565,7 @@
             <Spanish>LWMMG (Arena)</Spanish>
             <Russian>LWMMG (Песочный)</Russian>
             <Polish>LWMMG (piaskowy)</Polish>
-            <German>LWMMG (Sand)</German>
+            <German>LWMMG (sandfarben)</German>
             <Italian>LWMMG (Sabbia)</Italian>
             <Hungarian>LWMMG (Homok)</Hungarian>
             <Portuguese>LWMMG (Deserto)</Portuguese>
@@ -2929,20 +2943,20 @@
             <Chinesesimp>GM6"天猫"反器材狙击步枪 (绿色数位蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_03">
-            <English>M249 SPW</English>
-            <German>M249 SPW</German>
-            <Spanish>M249 SPW</Spanish>
-            <Polish>M249 SPW</Polish>
-            <Czech>M249 SPW</Czech>
-            <French>M249 SPW</French>
-            <Russian>M249 SPW</Russian>
-            <Portuguese>M249 SPW</Portuguese>
-            <Hungarian>M249 SPW</Hungarian>
-            <Italian>M249 SPW</Italian>
-            <Japanese>M249 SPW</Japanese>
-            <Korean>M249 SPW</Korean>
-            <Chinese>M249班用自動機槍</Chinese>
-            <Chinesesimp>M249班用自动机枪</Chinesesimp>
+            <English>FN Minimi SPW</English>
+            <German>FN Minimi SPW</German>
+            <Spanish>FN Minimi SPW</Spanish>
+            <Polish>FN Minimi SPW</Polish>
+            <Czech>FN Minimi SPW</Czech>
+            <French>FN Minimi SPW</French>
+            <Russian>FN Minimi SPW</Russian>
+            <Portuguese>FN Minimi SPW</Portuguese>
+            <Hungarian>FN Minimi SPW</Hungarian>
+            <Italian>FN Minimi SPW</Italian>
+            <Japanese>FN Minimi SPW</Japanese>
+            <Korean>FN Minimi SPW</Korean>
+            <Chinese>FN Minimi班用自動機槍</Chinese>
+            <Chinesesimp>FN Minimi班用自动机枪</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_tna">
             <English>M200 Intervention (Tropic)</English>
@@ -3014,7 +3028,7 @@
             <French>HK416A5 11" (Beige)</French>
             <Spanish>HK416A5 11" (Arena)</Spanish>
             <Russian>HK416A5 11" (Песочный)</Russian>
-            <German>HK416A5 11" (Sand)</German>
+            <German>HK416A5 11" (sandfarben)</German>
             <Polish>HK416A5 11" (piaskowy)</Polish>
             <Italian>HK416A5 11" (Sabbia)</Italian>
             <Hungarian>HK416A5 11" (Homok)</Hungarian>
@@ -3062,7 +3076,7 @@
             <French>HK416A5 11" GL (Beige)</French>
             <Spanish>HK416A5 11" GL (Arena)</Spanish>
             <Russian>HK416A5 11" GL (Песочный)</Russian>
-            <German>HK416A5 11" GL (Sand)</German>
+            <German>HK416A5 11" GL (sandfarben)</German>
             <Polish>HK416A5 11" GL (piaskowy)</Polish>
             <Italian>HK416A5 11" GL (Sabbia)</Italian>
             <Hungarian>HK416A5 11" GL (Homok)</Hungarian>
@@ -3110,7 +3124,7 @@
             <French>HK416A5 14.5" (Beige)</French>
             <Spanish>HK416A5 14.5" (Arena)</Spanish>
             <Russian>HK416A5 14.5" (Песочный)</Russian>
-            <German>HK416A5 14.5" (Sand)</German>
+            <German>HK416A5 14.5" (sandfarben)</German>
             <Polish>HK416A5 14.5" (piaskowy)</Polish>
             <Italian>HK416A5 14.5" (Sabbia)</Italian>
             <Hungarian>HK416A5 14.5" (Homok)</Hungarian>
@@ -3158,7 +3172,7 @@
             <French>HK417A2 20" (Beige)</French>
             <Spanish>HK417A2 20" (Arena)</Spanish>
             <Russian>HK417A2 20" (Песочный)</Russian>
-            <German>HK417A2 20" (Sand)</German>
+            <German>HK417A2 20" (sandfarben)</German>
             <Polish>HK417A2 20" (piaskowy)</Polish>
             <Italian>HK417A2 20" (Sabbia)</Italian>
             <Hungarian>HK417A2 20" (Homok)</Hungarian>
@@ -3215,6 +3229,26 @@
             <Korean>Makarov PM</Korean>
             <Chinese>"馬卡洛夫"手槍</Chinese>
             <Chinesesimp>"马卡洛夫"手枪</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_01_armed">
+            <English>Polaris DAGOR (XM312)</English>
+            <German>Polaris DAGOR (XM312)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
+            <English>Polaris DAGOR</English>
+            <German>Polaris DAGOR</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_01_light">
+            <English>Polaris DAGOR (light)</English>
+            <German>Polaris DAGOR (leicht)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
+            <English>LSV Mk. II (M134)</English>
+            <German>LSV Mk. II (M134)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
+            <English>LSV Mk. II</English>
+            <German>LSV Mk. II</German>
         </Key>
     </Package>
 </Project>
