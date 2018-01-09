@@ -642,11 +642,35 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
+    // weapons dropped from dead body
     class WeaponHolderSimulated: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
-                distance = 2;
+                distance = 3;
+                position = QUOTE(_target worldToModel getPos _target);
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    exceptions[] = {"isNotSwimming"};
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
+    };
+
+    class ReammoBox;
+    // dropped weapons/gear
+    class WeaponHolder: ReammoBox {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 3;
+                position = QUOTE(_target worldToModel getPos _target);
 
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
@@ -711,26 +735,6 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,0,0.500671]";
-            };
-        };
-    };
-
-    class ReammoBox;
-    class WeaponHolder: ReammoBox {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = CSTRING(MainAction);
-                distance = 2;
-
-                class GVAR(Gear) {
-                    displayName = "$STR_ACTION_GEAR";
-                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
-                    exceptions[] = {"isNotSwimming"};
-                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
-                };
             };
         };
     };
