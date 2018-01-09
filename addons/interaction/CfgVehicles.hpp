@@ -178,7 +178,7 @@ class CfgVehicles {
                 };
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
-                    condition = QUOTE(!alive _target);
+                    condition = QUOTE(isNull objectParent _target && {!alive _target || {_target getVariable [ARR_2('ACE_isUnconscious',false)]} || {lifeState _target == 'INCAPACITATED'}});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
                     exceptions[] = {"isNotSwimming"};
                     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
