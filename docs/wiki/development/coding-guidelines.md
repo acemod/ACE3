@@ -178,6 +178,10 @@ Every function should have a header of the following format as the start of thei
  * Arguments:
  * 0: The first argument <STRING>
  * 1: The second argument <OBJECT>
+ * 2: Multiple input types <STRING|ARRAY|CODE>
+ * 3: Optional input <BOOL> (Default: true)
+ * 4: Optional input with multiply types <CODE|STRING> (Default: {true})
+ * 5: Not mendatory input <STRING> (Default: nil)
  *
  * Return Value:
  * The return value <BOOL>
