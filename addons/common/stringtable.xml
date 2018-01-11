@@ -628,14 +628,14 @@
             <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
             <Japanese>武器のレーザー ポインタ/フラッシュライトの永続</Japanese>
             <Italian>Laser/torcia dell'arma costantemente accesi</Italian>
-            <German>Kontinuität des/r Laserpointers/Taschenlampe</German>
+            <German>Kontinuität des Laserpointers/Taktischen Lichts</German>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
             <Russian>Включать ЛЦУ/тактический фонарь после смены оружия или входа/выхода из машины, если он был до этого включен.</Russian>
             <Japanese>銃のライト等を点けていると武器を切り替えた後や車両を乗り降りしても、ライト等を点けたままにします。</Japanese>
             <Italian>Abilita la torcia/laser dopo il cambio dell'arma o l'entrata/uscita del veicolo se precedentemente attiva.</Italian>
-            <German>Aktiviert Laserpointer/Taschenlampe nach einem Waffenwechsel oder dem auf-/absitzen falls es zuvor aktiv war</German>
+            <German>Aktiviert Laserpointer/Taktisches Licht nach einem Waffenwechsel oder dem Auf-/Absitzen, falls es zuvor aktiv war.</German>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>

@@ -356,7 +356,7 @@
         <Key ID="STR_ACE_Arsenal_allowDefaultLoadoutsSetting">
             <English>Allow default loadouts</English>
             <French>Activer l'onglet équipement de base</French>
-            <German>Erlaubt die Benutzung des Standard-Ausrüstungen-Reiters</German>
+            <German>Erlaubt die Benutzung des Standardausrüstungsreiters</German>
             <Polish>Zezwól na użycie domyślnych zestawów</Polish>
             <Japanese>標準の装備を許可</Japanese>
             <Italian>Consenti equipaggiamenti standard</Italian>
@@ -415,7 +415,7 @@
             <Polish>Pokaż / ukryj ikony modów w lewym panelu</Polish>
             <Japanese>左パネルにある MOD アイコンの表示 / 非表示をします</Japanese>
             <Italian>Mostra / nascondi le icone delle mod dal pannello sinistro</Italian>
-            <German>Zeigt/Versteckt Mod-Symbole für die linke Leiste</German>
+            <German>Zeigt/Versteckt Mod-Symbole in der linken Leiste</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightTooltip">
             <English>Change the font height for text in the left / right panels</English>
@@ -443,17 +443,17 @@
         <Key ID="STR_ACE_Arsenal_portLoadoutsText">
             <English>Import BI VA loadouts to ACE Arsenal</English>
             <French>Importe les loadouts de BI VA dans ACE Arsenal</French>
-            <German>Importiert die BI VA Ausrüstungen in das Ace Arsenal</German>
+            <German>Importiert die BI-VA-Ausrüstungen in das Ace-Arsenal</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
-            <German>Keine Spieler Einheit verfügbar. Setze eine Einheit und markiere sie als "Spieler"</German>
+            <German>Keine Spielereinheit verfügbar. Setze eine Einheit und markiere sie als "Spieler".</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
             <French>Aucun loadout à importer.</French>
-            <German>Keine Ausrüstungen zum importieren.</German>
+            <German>Keine Ausrüstungen zum Importieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
             <English>ACE Arsenal</English>

@@ -7,7 +7,7 @@
             <Chinese>觸發倒下前最低需受到多少傷害</Chinese>
             <Chinesesimp>触发倒下前最低需受到多少伤害</Chinesesimp>
             <Japanese>崩れ落ちるまでの最低損傷値</Japanese>
-            <German>Mindestschaden um Sturz auszulösen</German>
+            <German>Mindestschaden, um Sturz auszulösen</German>
         </Key>
     </Package>
 </Project>
