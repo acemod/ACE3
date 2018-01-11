@@ -356,7 +356,7 @@
         <Key ID="STR_ACE_Arsenal_allowDefaultLoadoutsSetting">
             <English>Allow default loadouts</English>
             <French>Activer l'onglet équipement de base</French>
-            <German>Erlaubt die Benutzung des Standardausrüstungsreiters</German>
+            <German>Erlaubt die Benutzung der Standardausrüstungen</German>
             <Polish>Zezwól na użycie domyślnych zestawów</Polish>
             <Japanese>標準の装備を許可</Japanese>
             <Italian>Consenti equipaggiamenti standard</Italian>
@@ -407,7 +407,7 @@
             <Polish>Zezwól na użycie zakładki domyślnych zestawów</Polish>
             <Japanese>標準の装備タブの使用を許可します</Japanese>
             <Italian>Consenti l'uso della sezione per gli equipaggiamenti standard</Italian>
-            <German>Erlaube die Nutzung des Standard Ausrüstungs Reiters</German>
+            <German>Erlaube die Nutzung des Standardausrüstungsreiters</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsTooltip">
             <English>Show / hide mod icons for the left panel</English>
