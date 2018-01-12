@@ -16,6 +16,7 @@ PREP(moduleConfigurePylons);
 PREP(moduleGarrison);
 PREP(moduleGlobalSetSkill);
 PREP(moduleGroupSide);
+PREP(moduleHeal);
 PREP(moduleLoadIntoCargo);
 PREP(moduleRemoveArsenal);
 PREP(moduleSearchNearby);

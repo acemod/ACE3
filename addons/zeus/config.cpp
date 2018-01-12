@@ -45,7 +45,8 @@ class CfgPatches {
             QGVAR(moduleUnconscious),
             QGVAR(moduleSetMedic),
             QGVAR(moduleSetMedicalVehicle),
-            QGVAR(moduleSetMedicalFacility)
+            QGVAR(moduleSetMedicalFacility),
+            QGVAR(moduleHeal)
         };
     };
     class GVAR(cargo): ADDON {

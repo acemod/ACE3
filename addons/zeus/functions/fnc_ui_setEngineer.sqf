@@ -77,7 +77,7 @@ private _fnc_onConfirm = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
-    private _value = lbCursel (_display displayCtrl 86947);
+    private _value = lbCurSel (_display displayCtrl 86947);
     [attachedTo _logic, _value + 1] call FUNC(moduleSetEngineer); // +1 since lbCurSel zero-indexed
 };
 

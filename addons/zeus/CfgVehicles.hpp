@@ -171,6 +171,13 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
     };
+    class GVAR(moduleHeal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Medical);
+        displayName = CSTRING(ModuleHeal_DisplayName);
+        function = QFUNC(moduleHeal);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Heal_ca.paa);
+    };
     class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);

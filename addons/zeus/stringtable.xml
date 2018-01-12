@@ -1317,5 +1317,21 @@
             <Russian>Инженерное мастерство</Russian>
             <Spanish>Habilidad de Ingeniero</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleHeal_DisplayName">
+            <English>Full Heal</English>
+            <Chinese>完全治愈</Chinese>
+            <Chinesesimp>完全治愈</Chinesesimp>
+            <Czech>Plné uzdravení</Czech>
+            <French>Guérison complète</French>
+            <German>Vollständige Heilung</German>
+            <Hungarian>Teljes gyógyítás</Hungarian>
+            <Italian>Guarigione completa</Italian>
+            <Japanese>フルヒール</Japanese>
+            <Korean>완전 치유</Korean>
+            <Polish>Pełne uleczenie</Polish>
+            <Portuguese>Cura completa</Portuguese>
+            <Russian>Полное исцеление</Russian>
+            <Spanish>Totalmente curado</Spanish>
+        </Key>
     </Package>
 </Project>
