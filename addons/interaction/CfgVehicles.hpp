@@ -648,12 +648,11 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 distance = 3;
-                position = QUOTE(_target worldToModel getPos _target);
+                position = QUOTE(_target worldToModel ASLToAGL ATLToASL getPosATL _target);
 
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
-                    exceptions[] = {"isNotSwimming"};
                     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
                 };
             };
@@ -670,12 +669,11 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 distance = 3;
-                position = QUOTE(_target worldToModel getPos _target);
+                position = QUOTE(_target worldToModel ASLToAGL ATLToASL getPosATL _target);
 
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
-                    exceptions[] = {"isNotSwimming"};
                     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
                 };
             };
