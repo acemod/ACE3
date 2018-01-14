@@ -282,17 +282,17 @@ class GVAR(display) {
                 };
                 class statsTitle1: RscText {
                     idc = IDC_statsTitle1;
-                    x = QUOTE(1 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(1 * GRID_H);
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(5 * GRID_H);
                     colorBackground[]={0,0,0,0};
-                    shadow=1;
+                    shadow=2;
                     sizeEx = QUOTE(5 * GRID_H);
                     text = "Completion";
                 };
                 class statsBackground1: ctrlStaticBackground {
-                    idc = -1;
+                    idc = IDC_statsBackground1;
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(7 * GRID_H);
                     w = QUOTE(WIDTH_SINGLE);
@@ -310,17 +310,33 @@ class GVAR(display) {
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(4 * GRID_H);
                 };
+                class statsText1: RscText {
+                    idc = IDC_statsText1;
+                    shadow=0;
+                    colorShadow[]={1,1,1,1};
+                    colorText[]={0,0,0,1};
+                    x = QUOTE(1 * GRID_W);
+                    y = QUOTE(7 * GRID_H);
+                    w = QUOTE(WIDTH_SINGLE);
+                    h = QUOTE(4 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
+                    text = "10 214124";
+                };
                 class statsTitle2: statsTitle1 {
                     idc = IDC_statsTitle2;
                     y = QUOTE(12 * GRID_H);
                     text = "Design";
                 };
                 class statsBackground2: statsBackground1 {
-                    idc = -1;
+                    idc = IDC_statsBackground2;
                     y = QUOTE(18 * GRID_H);
                 };
                 class statsBar2: statsBar1 {
                     idc = IDC_statsBar2;
+                    y = QUOTE(18 * GRID_H);
+                };
+                class statsText2: statsText1 {
+                    idc = IDC_statsText2;
                     y = QUOTE(18 * GRID_H);
                 };
                 class statsTitle3: statsTitle1 {
@@ -329,11 +345,15 @@ class GVAR(display) {
                     text = "Bananas";
                 };
                 class statsBackground3: statsBackground1 {
-                    idc = -1;
+                    idc = IDC_statsBackground3;
                     y = QUOTE(29 * GRID_H);
                 };
                 class statsBar3: statsBar1 {
                     idc = IDC_statsBar3;
+                    y = QUOTE(29 * GRID_H);
+                };
+                class statsText3: statsText1 {
+                    idc = IDC_statsText3;
                     y = QUOTE(29 * GRID_H);
                 };
                 class statsTitle4: statsTitle1 {
@@ -342,11 +362,15 @@ class GVAR(display) {
                     text = "Unicorn resistance";
                 };
                 class statsBackground4: statsBackground1 {
-                    idc = -1;
+                    idc = IDC_statsBackground4;
                     y = QUOTE(40 * GRID_H);
                 };
                 class statsBar4: statsBar1 {
                     idc = IDC_statsBar4;
+                    y = QUOTE(40 * GRID_H);
+                };
+                class statsText4: statsText1 {
+                    idc = IDC_statsText4;
                     y = QUOTE(40 * GRID_H);
                 };
                 class statsTitle5: statsTitle1 {
@@ -355,12 +379,45 @@ class GVAR(display) {
                     text = "By the power of overflow";
                 };
                 class statsBackground5: statsBackground1 {
-                    idc = -1;
+                    idc = IDC_statsBackground5;
                     y = QUOTE(51 * GRID_H);
                 };
                 class statsBar5: statsBar1 {
                     idc = IDC_statsBar5;
                     y = QUOTE(51 * GRID_H);
+                    colorBackground[]={1,1,1,0.15};
+                };
+                class statsText5: statsText1 {
+                    idc = IDC_statsText5;
+                    y = QUOTE(51 * GRID_H);
+                };
+                class statsPreviousPage: ctrlButton {
+                    idc = IDC_statsPreviousPage;
+                    style= 2;
+                    text="<";
+                    colorBackground[]={0,0,0,0};
+                    x = QUOTE(WIDTH_TOTAL / 7.5);
+                    y = QUOTE(1 * GRID_H);
+                    w = QUOTE(4 * GRID_W);
+                    h = QUOTE(4 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H)
+                };
+                class statsNextPage: statsPreviousPage {
+                    idc =  IDC_statsNextPage;
+                    text = ">"
+                    x = QUOTE(WIDTH_TOTAL / 5.7);
+                };
+                class statsCurrentPage: RscText {
+                    idc = IDC_statsCurrentPage;
+                    style = ST_CENTER;
+                    x = QUOTE(WIDTH_TOTAL / 6.6);
+                    y = QUOTE(1 * GRID_H);
+                    w = QUOTE(5 * GRID_W);
+                    h = QUOTE(4 * GRID_H);
+                    colorBackground[]={0,0,0,0};
+                    shadow=2;
+                    sizeEx = QUOTE(5 * GRID_H);
+                    text = "";
                 };
             };
         };
@@ -368,6 +425,7 @@ class GVAR(display) {
             idc = IDC_statsButton;
             style= 2;
             text="»";
+            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonStats));
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);

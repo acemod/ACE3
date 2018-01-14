@@ -54,6 +54,7 @@ GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable [
 
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
+GVAR(showStats) = true;
 
 // Add the items the player has to virtualItems
 for "_index" from 0 to 10 do {
@@ -199,6 +200,8 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_rightSearchbar
 ];
 
+
+//--------------------------------------------- TBR
 {
     _x = _display displayCtrl _x;
 
@@ -210,6 +213,7 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_statsBar4,
     IDC_statsBar5
 ];
+//--------------------------------------------- TBR
 
 //--------------- Camera prep
 cutText ["","plain"];

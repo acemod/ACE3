@@ -10,6 +10,7 @@ PREP(buttonLoadoutsLoad);
 PREP(buttonLoadoutsRename);
 PREP(buttonLoadoutsSave);
 PREP(buttonLoadoutsShare);
+PREP(buttonStats);
 PREP(clearSearchbar);
 PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
