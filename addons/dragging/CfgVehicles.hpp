@@ -239,6 +239,20 @@ class CfgVehicles {
         GVAR(carryDirection) = 0;
     };
 
+    // weapons dropped from dead body
+    class WeaponHolderSimulated: ThingX {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,0.5,1.3};
+        GVAR(carryDirection) = 0;
+
+        // z-position floats from -1.2 to >0
+        // it's OK for carrying but odd for dragging
+        // needs workaround to drag correctly. Disabled ATM
+        GVAR(canDrag) = 0;
+        GVAR(dragPosition[]) = {0,1,0};
+        GVAR(dragDirection) = 0;
+    };
+
     class ReammoBox;
     // dropped weapons/gear
     class WeaponHolder: ReammoBox {
