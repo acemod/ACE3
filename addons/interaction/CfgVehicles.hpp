@@ -647,7 +647,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 distance = 3;
-                position = QUOTE(_target worldToModel ASLToAGL ATLToASL getPosATL _target);
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
 
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
@@ -668,7 +668,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 distance = 3;
-                position = QUOTE(_target worldToModel ASLToAGL ATLToASL getPosATL _target);
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
 
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
