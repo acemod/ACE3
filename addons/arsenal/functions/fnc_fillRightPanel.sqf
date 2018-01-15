@@ -86,7 +86,7 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
                     private _magArray = [_magazineGroups, _x] call CBA_fnc_hashGet;
                     {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
                 } else {
-                    ((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x
+                    ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
                 }
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
         } foreach getArray (_weaponConfig >> "muzzles");
@@ -216,7 +216,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (((GVAR(virtualItems) select 2) apply {toLower _x}) arrayIntersect (_compatibleMagsPrimaryMuzzle apply {toLower _x}));
+            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsPrimaryMuzzle);
         };
     };
 
@@ -224,17 +224,17 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach (((GVAR(virtualItems) select 2) apply {toLower _x}) arrayIntersect (_compatibleMagsSecondaryMuzzle apply {toLower _x}));
+            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsSecondaryMuzzle);
         };
     };
 
     case IDC_buttonMag : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
-        } foreach (((GVAR(virtualItems) select 2) apply {toLower _x}) arrayIntersect (_allCompatibleMags apply {toLower _x}));
+        } foreach ((GVAR(virtualItems) select 2) arrayIntersect _allCompatibleMags);
         {
             ["CfgMagazines", _x, true, true] call _fnc_fill_right_Container;
-        } foreach (((GVAR(virtualItems) select 19) apply {toLower _x}) arrayIntersect (_allCompatibleMags apply {toLower _x}));
+        } foreach ((GVAR(virtualItems) select 19) arrayIntersect _allCompatibleMags);
     };
 
     case IDC_buttonMagALL : {

@@ -4,7 +4,6 @@
 class GVAR(display) {
     idd = IDD_ace_arsenal;
     enableSimulation=1;
-    closeOnMissionEnd = 1;
     onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(display))] call FUNC(onArsenalOpen));
     onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(display))] call FUNC(onArsenalClose));
     onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onKeyDown));
