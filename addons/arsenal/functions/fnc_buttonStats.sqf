@@ -17,14 +17,33 @@
 params ["_display", "_buttonCtrl"];
 
 private _statsCtrlGroupCtrl = _display displayCtrl IDC_statsBox;
+private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
+private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
+private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
 
 if (GVAR(showStats)) then {
     GVAR(showStats) = false;
     _buttonCtrl ctrlSetText ">";
-    _statsCtrlGroupCtrl ctrlShow false;
+
+    {
+        _x ctrlShow false;
+    } foreach [
+        _statsCtrlGroupCtrl,
+        _statsPreviousPageCtrl,
+        _statsNextPageCtrl,
+        _statsCurrentPageCtrl
+    ];
+
 } else {
     GVAR(showStats) = true;
     _buttonCtrl ctrlSetText "<";
-    _statsCtrlGroupCtrl ctrlShow true;
+    
+    {
+        _x ctrlShow true;
+    } foreach [
+        _statsCtrlGroupCtrl,
+        _statsPreviousPageCtrl,
+        _statsNextPageCtrl,
+        _statsCurrentPageCtrl
+    ];
 };
-

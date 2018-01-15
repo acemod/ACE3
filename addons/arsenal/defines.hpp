@@ -121,10 +121,10 @@
 #define IDC_statsBackground5 5118
 #define IDC_statsBar5 5119
 #define IDC_statsText5 5120
-#define IDC_statsPreviousPage 5121
-#define IDC_statsNextPage 5122
-#define IDC_statsCurrentPage 5123
-#define IDC_statsButton 52
+#define IDC_statsPreviousPage 52
+#define IDC_statsNextPage 53
+#define IDC_statsCurrentPage 54
+#define IDC_statsButton 55
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3

@@ -49,9 +49,11 @@ private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
     IDC_buttonCurrentMag2,
     IDC_iconBackgroundCurrentMag,
     IDC_iconBackgroundCurrentMag2,
-    IDC_statsButton
+    IDC_statsButton,
+    IDC_statsPreviousPage,
+    IDC_statsNextPage,
+    IDC_statsCurrentPage
 ];
 
-private _statBoxCtrl = _display displayCtrl
- IDC_statsBox;
+private _statBoxCtrl = _display displayCtrl IDC_statsBox;
 _statBoxCtrl ctrlShow (GVAR(showStats) && {_showToggle});

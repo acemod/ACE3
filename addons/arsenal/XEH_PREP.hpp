@@ -11,6 +11,7 @@ PREP(buttonLoadoutsRename);
 PREP(buttonLoadoutsSave);
 PREP(buttonLoadoutsShare);
 PREP(buttonStats);
+PREP(buttonStatsPage);
 PREP(clearSearchbar);
 PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
