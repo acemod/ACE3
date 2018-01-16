@@ -441,6 +441,7 @@
         <Key ID="STR_ACE_Arsenal_replaceBISTooltip">
             <English>Replace vanilla Virtual Arsenal with ACE Arsenal</English>
             <Russian>Заменить внутриигровой Виртуальный Арсенал на ACE Арсенал</Russian>
+        </Key>
         <Key ID= "STR_ACE_Arsenal_portLoadoutsText">
             <English>Import BI VA loadouts to ACE Arsenal</English>
             <French>Importe les loadouts de BI VA dans ACE Arsenal</French>
