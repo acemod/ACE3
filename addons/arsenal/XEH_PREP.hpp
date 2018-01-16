@@ -14,6 +14,7 @@ PREP(clearSearchbar);
 PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
 PREP(fillRightPanel);
+PREP(handleLoadoutsSearchbar);
 PREP(handleMouse);
 PREP(handleScrollWheel);
 PREP(handleSearchbar);

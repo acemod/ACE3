@@ -1,8 +1,2 @@
-source 'http://rubygems.org'
-
-#require 'json'
-#require 'open-uri'
-#versions = JSON.parse(open('http://pages.github.com/versions.json').read)
-
+source 'https://rubygems.org'
 gem 'github-pages'
-#, versions['github-pages']
