@@ -269,7 +269,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
-            <German>Fügt die "ACE_EarPlugs" zu allen Einheiten mit lauten Waffen hinzu. Wird deaktiviert wenn eine eigene Inventarkonfiguration vorgenommen wurde.</German>
+            <German>Fügt die "ACE_EarPlugs" zu allen Einheiten mit lauten Waffen hinzu. Wird deaktiviert wenn eigene Ausrüstungsprofile verwendet werden.</German>
             <Polish>Dodaje `ACE_EarPlugs` -  stopery - do wszystkich jednostek, które posiadają głośną broń. Można wyłaczyć w przypadku korzystania z niestandardowych loadoutów.</Polish>
             <Russian>Добавляет предмет `ACE_EarPlugs` всем юнитам, которые имеют громкое оружие. Можно отключить при ручной настройке снаряжения.</Russian>
             <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>

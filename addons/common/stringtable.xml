@@ -1151,5 +1151,13 @@
             <Chinesesimp>重量:</Chinesesimp>
             <Chinese>重量:</Chinese>
         </Key>
+        <Key ID="STR_ACE_Common_AllowFadeMusic">
+            <English>Allow turning down music</English>
+            <German>Erlaube Musik leiser stellen</German>
+        </Key>
+        <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
+            <English>Allow ACE scripts to turn down the music.</English>
+            <German>Erlaube ACE-Skripten, die Musik leiser zu stellen.</German>
+        </Key>
     </Package>
 </Project>

@@ -3,6 +3,10 @@
 #define GRID_W (pixelW * pixelGridNoUIScale * pixelScale)
 #define GRID_H (pixelH * pixelGridNoUIScale * pixelScale)
 
+#define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
+#define WIDTH_GAP (WIDTH_TOTAL / 100)
+#define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
+
 // IDCs
 #define IDD_ace_arsenal 1127001
 #define IDC_mouseArea 0
@@ -18,6 +22,7 @@
 #define IDC_totalWeightText 801
 #define IDC_message 9
 #define IDC_menuBar 10
+#define IDC_menuBarClose 1001
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
@@ -106,6 +111,7 @@
 #define IDC_buttonShare 306
 #define IDC_buttonDelete 307
 #define IDC_buttonRename 308
+#define IDC_loadoutsSearchbar 309
 #define IDC_buttonMyLoadoutsBackground 401
 #define IDC_buttonMyLoadouts 402
 #define IDC_buttonDefaultLoadoutsBackground 403
