@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [CONTROL, 2, 0, 0, true, false, false] call ace_markers_fnc_onMouseButtonDownMap
+ * [CONTROL, 2, 0, 0, true, false, false] call ace_markers_fnc_onMouseButtonDown
  *
  * Public: No
  */
@@ -37,5 +37,5 @@ if (_type == "marker" && {_marker find "_USER_DEFINED" != -1 && {call FUNC(canMo
 
     GVAR(moving) = true;
     _marker setMarkerAlphaLocal 0.5;
-    [FUNC(movePFH), 0, [_marker, _ctrlMap, _originalPos, _originalAlpha, _mapGesturesEnabled]] call CBA_fnc_addPerFrameHandler;
+    [FUNC(movePFH), 0, [_marker, _ctrlMap, _originalPos, _originalAlpha]] call CBA_fnc_addPerFrameHandler;
 };
