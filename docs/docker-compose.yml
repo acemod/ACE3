@@ -1,9 +1,13 @@
-version: '2'
+version: "3.2"
 
 services:
   docs:
-    build: .
-    restart: always
+    container_name: ace3mod_jekyll
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - JEKYLLARGS=--incremental
     ports:
       - "4000:4000"
     volumes:

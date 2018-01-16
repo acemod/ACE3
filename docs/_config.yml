@@ -9,8 +9,8 @@ ace:
   version:
     major: 3
     minor: 12
-    patch: 0
-    build: 29
+    patch: 1
+    build: 30
 
 acex:
   githubUrl: https://github.com/acemod/ACEX
@@ -36,7 +36,7 @@ lsi: false
 
 exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:

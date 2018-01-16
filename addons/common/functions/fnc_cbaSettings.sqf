@@ -76,10 +76,12 @@ private _countOptions = count _settingsConfig;
 TRACE_1("Reading settings from configFile",_countOptions);
 for "_index" from 0 to (_countOptions - 1) do {
     private _optionEntry = _settingsConfig select _index;
-    if (isNil (configName _optionEntry)) then {
-        [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
-    } else {
-        WARNING_1("Setting [%1] - Already defined from somewhere else??",_varName);
+    if ((getNumber (_optionEntry >> "movedToSQF")) == 0) then {
+        if (isNil (configName _optionEntry)) then {
+            [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
+        } else {
+            WARNING_1("Setting [%1] - Already defined from somewhere else??",_varName);
+        };
     };
 };
 
@@ -92,7 +94,7 @@ for "_index" from 0 to (_countOptions - 1) do {
     if ((toLower _settingName) in GVAR(cbaSettings_forcedSettings)) then {
         WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",_varName);
     } else {
-        if (isNil _settingName) then {
+        if ((isNil _settingName) && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {
             // New setting, that was first defined in missionConfigFile
             [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
         } else {
