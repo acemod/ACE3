@@ -55,5 +55,4 @@ private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
     IDC_statsCurrentPage
 ];
 
-private _statBoxCtrl = _display displayCtrl IDC_statsBox;
-_statBoxCtrl ctrlShow (GVAR(showStats) && {_showToggle});
+[QGVAR(statsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;

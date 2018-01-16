@@ -402,7 +402,7 @@ class GVAR(display) {
             idc = IDC_statsButton;
             style= 2;
             text="<";
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonStats));
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton),[ARR_2(ctrlparent (_this select 0), _this select 0)]]) call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);

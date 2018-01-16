@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "defines.hpp"
 
 ADDON = false;
 
@@ -17,5 +18,17 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
 [QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
 [QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
 [QGVAR(EnableRPTLog), "CHECKBOX", [LSTRING(printToRPTSetting), LSTRING(printToRPTTooltip)], localize LSTRING(settingCategory), false, false] call CBA_Settings_fnc_init;
+
+[QGVAR(statsToggle), {
+    params ["_display", "_showStats"];
+
+    private _statBoxCtrl = _display displayCtrl IDC_statsBox;
+    _statBoxCtrl ctrlShow (GVAR(showStats) && {_showStats});
+}] call CBA_fnc_addEventHandler;
+
+
+[QGVAR(statsButton), {
+    _this call FUNC(buttonStats);
+}] call CBA_fnc_addEventHandler;
 
 ADDON = true;
