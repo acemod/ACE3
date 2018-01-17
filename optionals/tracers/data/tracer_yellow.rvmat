@@ -6,13 +6,14 @@
 #define _ARMA_
 
 //Class weapons : Data\bullettracer\Data\tracer_yellow.rvmat{
-ambient[] = {1.0,1.0,1.0,3.25};
-diffuse[] = {1.0,1.0,1.0,1.0};
-forcedDiffuse[] = {0.0,0.0,0.0,0.0};
-emmisive[] = {1.0,1.0,1.0,1.0};
-specular[] = {0.0,0.0,0.0,1.0};
-specularPower = 1.0;
-renderFlags[] = {"NoZWrite","AddBlend"};
+ambient[] = {1.0, 1.0, 1.0, 0.1};
+diffuse[] = {1.0, 1.0, 1.0, 1.0};
+forcedDiffuse[] = {0.0, 0.0, 0.0, 0.0};
+emmisive[] = {1000, 1000, 0.0, 1.0};
+specular[] = {0.0, 0.0, 0.0, 1.0};
+specularPower = 100;
+renderFlags[] = {"NoZWrite", "NoAlphaWrite", "AddBlend"};
 PixelShaderID = "Normal";
 VertexShaderID = "Basic";
+
 //};
