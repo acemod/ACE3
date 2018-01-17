@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * ["id", true] call ace_common_fnc_setDisableUserInputStatus
- *
  * Public: Yes
  */
 #include "script_component.hpp"

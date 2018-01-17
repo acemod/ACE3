@@ -29,25 +29,25 @@ params [
 
 // Verify
 if (_identifier == "") exitWith {
-    ERROR("Failed adding custom tag - missing identifier");
+    ACE_LOGERROR("Failed adding custom tag - missing identifier");
 };
 
 if (_displayName == "") exitWith {
-    ERROR_1("Failed adding custom tag: %1 - missing displayName",_identifier);
+    ACE_LOGERROR_1("Failed adding custom tag: %1 - missing displayName",_identifier);
 };
 
 if (_requiredItem == "") exitWith {
-    ERROR_1("Failed adding custom tag: %1 - missing requiredItem",_identifier);
+    ACE_LOGERROR_1("Failed adding custom tag: %1 - missing requiredItem",_identifier);
 };
 if (!isClass (configFile >> "CfgWeapons" >> _requiredItem)) exitWith {
-    ERROR_2("Failed adding custom tag: %1 - requiredItem %2 does not exist",_identifier,_requiredItem);
+    ACE_LOGERROR_2("Failed adding custom tag: %1 - requiredItem %2 does not exist",_identifier,_requiredItem);
 };
 
 if (_textures isEqualTo []) exitWith {
-    ERROR_1("Failed adding custom tag: %1 - missing textures",_identifier);
+    ACE_LOGERROR_1("Failed adding custom tag: %1 - missing textures",_identifier);
 };
 
-_identifier = [_identifier] call CBA_fnc_removeWhitespace;
+_identifier = [_identifier] call EFUNC(common,stringRemoveWhiteSpace);
 _requiredItem = toLower _requiredItem;
 
 // Add

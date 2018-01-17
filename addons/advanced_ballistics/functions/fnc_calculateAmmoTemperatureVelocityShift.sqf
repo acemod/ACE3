@@ -10,9 +10,6 @@
  * Return Value:
  * muzzle velocity shift - m/s <NUMBER>
  *
- * Example:
- * [[], 5] call ace_advanced_ballistics_fnc_calcilateAmmoTemperatureVelocityShift
- *
  * Public: No
  */
 #include "script_component.hpp"

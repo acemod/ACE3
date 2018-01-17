@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob] call ace_tripod_fnc_handleUnconscious
- *
  * Public: No
 */
 #include "script_component.hpp"

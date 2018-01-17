@@ -28,18 +28,13 @@ private _ctrl = _display displayCtrl 100;
 private _selected = (lbCurSel _ctrl) max 0;
 
 if (count _loaded <= _selected) exitWith {};
-private _item = _loaded select _selected; // This can be an object or a classname string
+private _item = _loaded select _selected; //This can be an object or a classname string
 
 if (GVAR(interactionParadrop)) exitWith {
-    // If drop time is 0 don't show a progress bar
-    if (GVAR(paradropTimeCoefficent) == 0) exitWith {
-        [QGVAR(paradropItem), [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
-    };
-
     // Start progress bar - paradrop
     private _size = [_item] call FUNC(getSizeItem);
     [
-        GVAR(paradropTimeCoefficent) * _size,
+        2.5 * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
         {
             (_this select 0) params ["_item", "_target", "_player"];

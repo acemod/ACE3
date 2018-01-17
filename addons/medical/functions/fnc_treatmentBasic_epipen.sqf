@@ -11,9 +11,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentBasic_epipen
- *
  * Public: No
  */
 #include "script_component.hpp"

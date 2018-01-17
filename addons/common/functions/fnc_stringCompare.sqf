@@ -7,10 +7,7 @@
  * 1: stringB <STRING>
  *
  * Return Value:
- * Number of matching characters <NUMBER>
- *
- * Example:
- * ["a", "b"] call ace_common_fnc_stringCompare
+ * Number of matching characters >NUMBER>
  *
  * Public: Yes
  */

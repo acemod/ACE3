@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, "classname"] call ACE_medical_fnc_treatmentTourniquetLocal
- *
  * Public: No
  */
 #include "script_component.hpp"

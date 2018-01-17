@@ -6,11 +6,8 @@
  * 0: The Unit <OBJECT>
  * 1: SelectionName <STRING>
  *
- * Return Value:
+ * ReturnValue:
  * Has tourniquet applied <BOOL>
- *
- * Example:
- * [bob, "leg"] call ace_medical_fnc_hasTourniquetAppliedTo
  *
  * Public: Yes
  */

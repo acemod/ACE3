@@ -7,7 +7,7 @@
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player, (currentWeapon player), (currentMuzzle player)] call ace_recoil_fnc_camShake;

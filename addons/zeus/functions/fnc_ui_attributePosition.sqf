@@ -6,20 +6,19 @@
  * 0: position controls group <CONTROL>
  *
  * Return Value:
- * None
- *
- * Example:
- * [CONTROL] call ace_zeus_fnc_ui_attributePosition
+ * None <NIL>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
+disableSerialization;
+
 //Generic Init:
 params ["_control"];
 private _display = ctrlParent _control;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
 

@@ -6,7 +6,7 @@
  * Nothing
  *
  * Return Value:
- * canShow <BOOL>
+ * canShow (bool)
  *
  * Example:
  * [] call ace_rangecard_fnc_canShowCopy

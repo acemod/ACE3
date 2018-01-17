@@ -6,7 +6,7 @@
  * 0: Building Classname <STRING>
  *
  * Return Value:
- * [[Array of MemPoints], [Array Of Actions]] <ARRAY>
+ * [[Array of MemPoints], [Array Of Actions]]
  *
  * Example:
  * ["Land_i_House_Big_01_V1_F"] call ace_interact_menu_fnc_userActions_getHouseActions

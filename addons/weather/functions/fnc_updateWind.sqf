@@ -3,10 +3,10 @@
  * Updates wind, gusts and waves based on ACE_wind
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [] call ace_weather_fnc_updateWind

@@ -6,11 +6,8 @@
  * 0: The Unit <OBJECT>
  * 1: Time of last computation <NUMBER>
  *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * [bob, 5] call ACE_medical_fnc_vitalLoop
  *
  * Public: No
  */

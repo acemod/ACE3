@@ -3,13 +3,12 @@
  * Shows the Yardage 450 screen elements
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * call ace_yardage450_fnc_acquireTarget
  *
  * Public: No
  */

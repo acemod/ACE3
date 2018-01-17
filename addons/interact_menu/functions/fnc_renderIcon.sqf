@@ -11,9 +11,6 @@
  * Return Value:
  * None
  *
- * Example:
- * ["text", "icon", [5, 6], "text"] call ACE_interact_menu_fnc_renderIcon
- *
  * Public: No
  */
 #include "script_component.hpp"

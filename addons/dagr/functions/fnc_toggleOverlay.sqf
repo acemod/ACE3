@@ -3,13 +3,12 @@
  * Toggles the DAGR overlay
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * call ace_dagr_fnc_toggleOverlay
  *
  * Public: No
  */

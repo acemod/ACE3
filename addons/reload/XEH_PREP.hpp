@@ -1,6 +1,6 @@
 
 PREP(canCheckAmmo);
-PREP(getAmmoToLinkBelt);
+PREP(canLinkBelt);
 PREP(checkAmmo);
 PREP(displayAmmo);
 PREP(startLinkingBelt);

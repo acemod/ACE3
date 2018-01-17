@@ -11,9 +11,6 @@
  * Return Value:
  * retardation - m/(s^2) <NUMBER>
  *
- * Example:
- * [5, 20, 10] call ace_advanced_ballistics_fnc_calculateRetardation
- *
  * Public: No
  */
 #include "script_component.hpp"

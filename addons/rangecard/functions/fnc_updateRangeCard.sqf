@@ -3,17 +3,15 @@
  * Updates the range card data
  *
  * Arguments:
- * 0: zero range <NUMBER>
- * 1: bore height <NUMBER>
- * 2: ammo class <STRING>
- * 3: magazine class <STRING>
- * 4: weapon class <STRING>
+ * 0: ammo class <STRING>
+ * 1: magazine class <STRING>
+ * 2: weapon class <STRING>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * [1, 2, "ammo", "magazine", "weapon"] call ace_rangecard_fnc_openRangeCard
+ * [mode] call ace_rangecard_fnc_openRangeCard
  *
  * Public: No
  */
@@ -22,9 +20,10 @@
 disableSerialization;
 #define __dsp (uiNamespace getVariable "RangleCard_Display")
 
-private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_transonicStabilityCoef", "_barrelLength", "_barrelTwist", "_bc", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_offset", "_row", "_weaponConfig", "_initSpeed", "_initSpeedCoef"];
+private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_barometricPressure", "_barrelLength", "_barrelTwist", "_bc", "_bulletMass", "_boreHeight", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_mv", "_mvShift", "_offset", "_relativeHumidity", "_result", "_row", "_scopeBaseAngle", "_weaponConfig", "_zeroRange", "_initSpeed", "_initSpeedCoef", "_useABConfig"];
+_useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
 
-params ["_zeroRange", "_boreHeight", "_ammoClass", "_magazineClass", "_weaponClass"];
+PARAMS_3(_ammoClass,_magazineClass,_weaponClass);
 
 if (_ammoClass == "" || _magazineClass == "" || _weaponClass == "") exitWith {};
 
@@ -104,11 +103,12 @@ _bc = 0;
 if (count (_ammoConfig select 6) > 0) then {
     _bc = (_ammoConfig select 6) select 0;
 };
-_transonicStabilityCoef = _ammoConfig select 4;
 _dragModel = _ammoConfig select 5;
 _atmosphereModel = _ammoConfig select 8;
+_bulletMass = 5;
+_boreHeight = 3.81;
+_zeroRange = 100;
 
-private _useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
 if (_bc == 0) then {
     _useABConfig = false;
 };
@@ -147,34 +147,33 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     lnbAddRow [770300, ["-15°C", " 10°C", " 35°C", "-15°C", " 10°C", " 35°C"]];
 };
 
-ctrlSetText [77003, format["%1m ZERO", round(_zeroRange)]];
+_barometricPressure = 1013.25;
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    _barometricPressure = 1013.25 * (1 - (0.0065 * EGVAR(common,mapAltitude)) / 288.15) ^ 5.255754495;
+};
+_relativeHumidity = 0.5;
 
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-    ctrlSetText [770001, format["Drop Tables for B.P.: %1mb; Corrected for MVV at Air/Ammo Temperatures -15-35 °C", round(EGVAR(scopes,zeroReferenceBarometricPressure) * 100) / 100]];
-    ctrlSetText [77004 , format["B.P.: %1mb", round(EGVAR(scopes,zeroReferenceBarometricPressure) * 100) / 100]];
+    ctrlSetText [770001, format["Drop Tables for B.P.: %1mb; Corrected for MVV at Air/Ammo Temperatures -15-35 °C", round(_barometricPressure * 100) / 100]];
+    ctrlSetText [77004 , format["B.P.: %1mb", round(_barometricPressure * 100) / 100]];
 } else {
     ctrlSetText [770001, ""];
     ctrlSetText [77004 , ""];
 };
 
-_cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5), _zeroRange, _boreHeight, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
+_cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
 if (isNil {_cacheEntry}) then {
-    private _scopeBaseAngle = if (!_useABConfig) then {
-        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngleVanilla:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
-        (parseNumber _zeroAngle)
-    } else {
-        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngle:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel];
-        (parseNumber _zeroAngle)
-    };
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && missionNamespace getVariable [QEGVAR(advanced_ballistics,ammoTemperatureEnabled), false]) then {
+    _result = [0, 0, _boreHeight, _airFriction, _muzzleVelocity, 15, 1013.25, 0.5, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0, 0, 0, _useABConfig] call FUNC(calculateSolution);
+    _scopeBaseAngle = (_result select 0) / 60;
+    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         {
-            private _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
-            private _mv = _muzzleVelocity + _mvShift;
+            _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
+            _mv = _muzzleVelocity + _mvShift;
 
-            [_scopeBaseAngle,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,_forEachIndex,_useABConfig] call FUNC(calculateRangeCard);
+            [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_mv,_x,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,_forEachIndex,_useABConfig] call FUNC(calculateSolution);
         } forEach [-15, -5, 5, 10, 15, 20, 25, 30, 35];
     } else {
-        [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_transonicStabilityCoef,3,_useABConfig] call FUNC(calculateRangeCard);
+        [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_muzzleVelocity,15,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,3,_useABConfig] call FUNC(calculateSolution);
     };
 
     for "_i" from 0 to 9 do {
@@ -192,7 +191,7 @@ if (isNil {_cacheEntry}) then {
         };
     };
 
-    missionNamespace setVariable [format[QGVAR(%1_%2_%3_%4_%5), _zeroRange, _boreHeight, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]], [GVAR(rangeCardDataElevation), GVAR(rangeCardDataWindage), GVAR(rangeCardDataLead), GVAR(rangeCardDataMVs), GVAR(lastValidRow)]];
+    missionNamespace setVariable [format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]], [GVAR(rangeCardDataElevation), GVAR(rangeCardDataWindage), GVAR(rangeCardDataLead), GVAR(rangeCardDataMVs), GVAR(lastValidRow)]];
 } else {
     GVAR(rangeCardDataElevation) = _cacheEntry select 0;
     GVAR(rangeCardDataWindage)   = _cacheEntry select 1;
@@ -243,7 +242,7 @@ for "_column" from 0 to 8 do {
 
 if (_useABConfig) then {
     ctrlSetText [770020, "For best results keep ammunition at ambient air temperature. Tables calculated for the above listed barrel"];
-    ctrlSetText [770021, format["and load with optic mounted %1'' above line of bore.", round((_boreHeight / 2.54) * 10) / 10]];
+    ctrlSetText [770021, "and load with optic mounted 1.5'' above line of bore."];
 } else {
     ctrlSetText [770020, ""];
     ctrlSetText [770021, ""];

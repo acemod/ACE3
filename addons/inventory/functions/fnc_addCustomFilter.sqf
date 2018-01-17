@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * ["displayname", "filter"] call ACE_inventory_fnc_addCustomFilter
- *
  * Public: No
  */
 #include "script_component.hpp"

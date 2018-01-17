@@ -9,11 +9,8 @@
  * 2: Selection Number <NUMBER>
  * 3: The action to modify <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * [bob, kevin, 2, "action"] call ACE_medical_fnc_modifyMedicalAction
  *
  * Public: No
  */

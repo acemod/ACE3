@@ -10,9 +10,6 @@
  * Return Value:
  * None <NIL>
  *
- * Example:
- * [LOGIC, [bob, kevin], true] call ACE_medical_menu_fnc_module
- *
  * Public: No
  */
 

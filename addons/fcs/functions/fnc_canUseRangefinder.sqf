@@ -8,9 +8,6 @@
  * Return Value:
  * Boolean <BOOL>
  *
- * Example:
- * call ace_fcs_fnc_canUseRangeFinder
- *
  * Public: No
  */
 #include "script_component.hpp"

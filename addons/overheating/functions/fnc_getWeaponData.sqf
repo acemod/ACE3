@@ -10,14 +10,9 @@
  * 1: slowdownFactor <NUMBER>
  * 2: jamChance <NUMBER>
  *
- * Example:
- * ["gun"] call ace_overheating_fnc_getWeaponData
- *
  * Public: No
  */
 #include "script_component.hpp"
-
-params ["_weapon"];
 
 // Look in the cache first
 private _weaponData = GVAR(cacheWeaponData) getVariable _weapon;

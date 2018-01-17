@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [LOGIC, [bob, kevin], true] call ACE_medical_fnc_moduleAssignMedicalVehicle
- *
  * Public: No
  */
 #include "script_component.hpp"

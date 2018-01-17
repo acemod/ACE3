@@ -3,13 +3,10 @@
  * Get the apropriate marker for a group.
  *
  * Arguments:
- * 0: Group <GROUP>
+ * 0: Group
  *
  * Return Value:
  * Marker Type <STRING>
- *
- * Example:
- * ["GROUP"] call ace_common_fnc_getmarkerType
  *
  * Public: No
  */

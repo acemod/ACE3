@@ -3,10 +3,10 @@
  * Saves user data into profileNamespace
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_store_user_data
@@ -28,7 +28,6 @@ profileNamespace setVariable ["ACE_ATragMX_barometricPressure", GVAR(barometricP
 profileNamespace setVariable ["ACE_ATragMX_relativeHumidity", GVAR(relativeHumidity)];
 
 profileNamespace setVariable ["ACE_ATragMX_showWind2", GVAR(showWind2)];
-profileNamespace setVariable ["ACE_ATragMX_showCoriolis", GVAR(showCoriolis)];
 profileNamespace setVariable ["ACE_ATragMX_latitude", GVAR(latitude)];
 profileNamespace setVariable ["ACE_ATragMX_directionOfFire", GVAR(directionOfFire)];
 profileNamespace setVariable ["ACE_ATragMX_windSpeed1", GVAR(windSpeed1)];

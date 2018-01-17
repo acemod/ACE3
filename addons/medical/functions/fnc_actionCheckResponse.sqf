@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, kevin] call ACE_medical_fnc_actionCheckResponse
- *
  * Public: No
  */
 

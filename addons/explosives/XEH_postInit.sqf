@@ -22,19 +22,6 @@
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
 if (isServer) then {
-    [QGVAR(detonate), {
-        params ["_unit", "_explosive", "_delay"];
-        TRACE_3("server detonate EH",_unit,_explosive,_delay);
-        _explosive setShotParents [_unit, _unit];
-        [{
-            params ["_explosive"];
-            TRACE_1("exploding",_explosive);
-            if (!isNull _explosive) then {
-                _explosive setDamage 1;
-            };
-        }, _explosive, _delay] call CBA_fnc_waitAndExecute;
-    }] call CBA_fnc_addEventHandler;
-
     ["ace_unconscious", {
         params ["_unit", "_isUnconscious"];
         if (!_isUnconscious) exitWith {};

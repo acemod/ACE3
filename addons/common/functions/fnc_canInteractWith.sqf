@@ -8,10 +8,7 @@
  * 2: Exceptions. What general conditions are to skip? (default: []) <ARRAY>
  *
  * Return Value:
- * Unit can interact? <BOOL>
- *
- * Example:
- * [bob, target, []] call ace_common_fnc_canInteractWith
+ * Unit can interact?
  *
  * Public: Yes
  */

@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob] call ace_trenches_fnc_handleInteractMenuOpened
- *
  * Public: No
 */
 #include "script_component.hpp"

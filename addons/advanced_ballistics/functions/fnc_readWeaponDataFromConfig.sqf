@@ -7,12 +7,9 @@
  * weapon - classname <STRING>
  *
  * Return Value:
- * 0: _barrelTwist <NUMBER>
- * 1: _twistDirection <NUMBER>
- * 2: _barrelLength <NUMBER>
- *
- * Example:
- * ["weapon"] call ace_advanced_ballistics_fnc_readWeaponDataFromConfig
+ * 0: _barrelTwist
+ * 1: _twistDirection
+ * 2: _barrelLength
  *
  * Public: No
  */
@@ -33,6 +30,6 @@ private _barrelLength = getNumber(_weaponConfig >> "ACE_barrelLength");
 
 private _result = [_barrelTwist, _twistDirection, _barrelLength];
 
-uiNamespace setVariable [format[QGVAR(%1), _this], _result];
+uiNamespace setVariable [format[QGVAR(%1), _weapon], _result];
 
 _result

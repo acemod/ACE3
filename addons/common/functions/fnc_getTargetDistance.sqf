@@ -10,9 +10,6 @@
  * Return Value:
  * Distance in meters <NUMBER>
  *
- * Example:
- * [5,20000,56] call ace_common_fnc_getTargetDistance
- *
  * Public: Yes
  */
 #include "script_component.hpp"

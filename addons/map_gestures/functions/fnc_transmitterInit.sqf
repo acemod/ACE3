@@ -15,9 +15,11 @@
  */
 #include "script_component.hpp"
 
+private ["_mapCtrl", "_unitUID", "_drawPosVariableName"];
+
 disableSerialization;
 
-private _mapCtrl = findDisplay 12 displayCtrl 51;
+_mapCtrl = findDisplay 12 displayCtrl 51;
 
 // MouseMoving EH.
 if (!isNil QGVAR(MouseMoveHandlerID)) then {
@@ -26,7 +28,7 @@ if (!isNil QGVAR(MouseMoveHandlerID)) then {
 };
 GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
     // Don't transmit any data if we're using the map tools
-    if (!GVAR(EnableTransmit) || {(["ace_maptools"] call EFUNC(common,isModLoaded)) && {EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)}}) exitWith {};
+    if (!GVAR(EnableTransmit) || EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)) exitWith {};
 
     params ["_control", "_posX", "_posY"];
 
@@ -34,7 +36,11 @@ GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
         ACE_player setVariable [QGVAR(Transmit), true, true];
     };
 
-    GVAR(pointPosition) = _control ctrlMapScreenToWorld [_posX, _posY];
+    _unitUID = getPlayerUID ACE_player;
+    _drawPosVariableName = if (!isNil "_unitUID" && _unitUID != "") then {format [QGVAR(%1_DrawPos), _unitUID]} else {nil};
+    if (!isNil "_drawPosVariableName") then {
+        missionNamespace setVariable [_drawPosVariableName, _control ctrlMapScreenToWorld [_posX, _posY]];
+    };
 }];
 
 // MouseDown EH

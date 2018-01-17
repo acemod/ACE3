@@ -1,5 +1,5 @@
 /*
- * Author: ACE-Team
+ * Author: ?
  *
  * ?
  *
@@ -7,12 +7,9 @@
  * ?
  *
  * Return Value:
- * None
+ * ?
  *
- * Example:
- * [?] call ace_common_fnc_syncedEventPFH
- *
- * Public: No
+ * Public: ?
  */
 #include "script_component.hpp"
 

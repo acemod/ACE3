@@ -23,4 +23,4 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(EnableTeamManagement), "EnableTeamManagement"] call EFUNC(common,readSettingFromModule);
 
-INFO("Interaction Module Initialized.");
+ACE_LOGINFO("Interaction Module Initialized.");

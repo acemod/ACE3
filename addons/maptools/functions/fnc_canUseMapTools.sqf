@@ -6,10 +6,7 @@
  * None
  *
  * Return Value:
- * Boolean <BOOL>
- *
- * Example:
- * call ACE_maptools_fnc_canUseMapTools
+ * <BOOL>
  *
  * Public: No
  */

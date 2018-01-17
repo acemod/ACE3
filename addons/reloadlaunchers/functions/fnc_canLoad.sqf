@@ -3,16 +3,13 @@
  * Check of the unit can reload the launcher of target unit.
  *
  * Arguments:
- * 0: Unit to do the reloading <OBJECT>
- * 1: Unit eqipped with launcher <OBJECT>
- * 2: weapon name <STRING>
- * 3: missile name <STRING>
+ * 0: Unit to do the reloading (Object)
+ * 1: Unit eqipped with launcher (Object)
+ * 2: weapon name (String)
+ * 3: missile name (String)
  *
  * Return Value:
- * None
- *
- * Example:
- * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_canLoad
+ * NONE
  *
  * Public: No
  */

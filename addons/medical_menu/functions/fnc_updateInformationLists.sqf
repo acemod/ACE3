@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [DISPLAY, [messagecollection], [injurycollection]] call ACE_medical_menu_fnc_updateInformationLists
- *
  * Public: No
  */
 #include "script_component.hpp"

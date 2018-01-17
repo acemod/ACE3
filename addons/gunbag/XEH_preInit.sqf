@@ -2,9 +2,7 @@
 
 ADDON = false;
 
-PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
 
 // restore gunbag info after respawn
 ["CAManBase", "respawn", {

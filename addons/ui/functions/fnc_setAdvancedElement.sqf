@@ -40,7 +40,7 @@ if ((_canUseWeapon && {_location == 2}) || {!_canUseWeapon && {_location == 1}})
         // Display and print info which component forced the element except for default vehicle check
         if (_showHint) then {
             [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
-            INFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_x select 1);
+            ACE_LOGINFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_x select 1);
         };
         _show = false;
     };
@@ -53,7 +53,7 @@ if (!_force) then {
         _setElement params ["_sourceSet", "_showSet"];
         if (_showHint) then {
             [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
-            INFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_sourceSet);
+            ACE_LOGINFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_sourceSet);
         };
         _show = _showSet;
     };

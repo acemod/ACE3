@@ -11,9 +11,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [[], [], [5, 2], []] call ACE_interact_menu_fnc_renderMenu
- *
  * Public: No
  */
 #include "script_component.hpp"

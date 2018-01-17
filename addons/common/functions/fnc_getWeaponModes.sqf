@@ -8,9 +8,6 @@
  * Return Value:
  * Firing Modes <ARRAY>
  *
- * Example:
- * ["gun"] call ace_common_fnc_getWeaponModes
- *
  * Public: Yes
  */
 #include "script_component.hpp"

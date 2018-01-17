@@ -1,19 +1,4 @@
-/*
- * Author: commy2
- *
- *
- * Arguments:
- * 0: Unknown <UNKNOWN>
- *
- * Return Value:
- * None
- *
- * Example:
- * [?] call ace_vector_fnc_showFallOfShot
- *
- * Public: No
- */
-
+// by commy2
 #include "script_component.hpp"
 
 GVAR(FOSState) = _this select 0;

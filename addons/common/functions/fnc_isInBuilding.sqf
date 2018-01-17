@@ -8,9 +8,6 @@
  * Return Value:
  * Is the unit in a building? <BOOL>
  *
- * Example:
- * [bob] call ace_common_fnc_isInBuilding
- *
  * Public: Yes
  */
 #include "script_component.hpp"

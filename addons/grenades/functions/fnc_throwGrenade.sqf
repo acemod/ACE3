@@ -56,12 +56,11 @@ if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
     private _fuzeTime = getNumber (_config >> "explosionTime");
     private _timeToLive = getNumber (_config >> "timeToLive");
 
-    [FUNC(incendiary), [_projectile, _timeToLive, side _unit], _fuzeTime] call CBA_fnc_waitAndExecute; // WE WANT THE OBJECTS SIDE HERE!
+    [FUNC(incendiary), [_projectile, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
 };
 
 // handle throw modes
 if (_unit != ACE_player) exitWith {};
-if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
 private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 

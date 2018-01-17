@@ -7,7 +7,7 @@
  * 1: Fence <OBJECT>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player, berlinWall] call ace_logistics_wirecutter_fnc_cutDownFence

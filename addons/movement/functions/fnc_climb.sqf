@@ -6,7 +6,7 @@
  * 0: The Unit (usually the player) <OBJECT>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player] call ace_movement_fnc_climb

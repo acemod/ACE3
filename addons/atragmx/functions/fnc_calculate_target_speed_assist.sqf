@@ -3,10 +3,10 @@
  * Calculates the target speed and updates the output fields
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_calculate_target_speed_assist

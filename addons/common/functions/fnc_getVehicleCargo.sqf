@@ -8,9 +8,6 @@
  * Return Value:
  * Vehicle cargo positions <ARRAY>
  *
- * Example:
- * [car] call ace_common_fnc_getVehicleCargo
- *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -8,9 +8,6 @@
  * Return Value:
  * Vehicle Copilot Turret indecies <ARRAY>
  *
- * Example:
- * [car] call ace_common_fnc_getTurretCopilot
- *
  * Public: Yes
  */
 #include "script_component.hpp"

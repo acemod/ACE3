@@ -1,19 +1,19 @@
 /*
- * Author: Pabst Mirror
- * Builds a rangeTable line for a certian range, given muzzle velocity and air friction, returns [] if out of range.
- *
- * Arguments:
- * 0: Muzzle Velocity <NUMBER>
- * 1: Air Friction <NUMBER>
- * 2: Range To Hit <NUMBER>
- *
- * Return Value:
- * Range Table Line Data (see return line) <ARRAY>
- *
- * Example:
- * [300, -0.0001, 3000] call ace_mk6mortar_fnc_simulateCalcRangeTableLine
- *
- * Public: No
+Author: Pabst Mirror
+
+Description:
+Builds a rangeTable line for a certian range, given muzzle velocity and air friction, returns [] if out of range.
+
+Parameters:
+0: NUMBER - Muzzle Velocity
+1: NUMBER - Air Friction
+2: NUMBER - Range To Hit
+
+Returns:
+ARRAY - Range Table Line Data (see return line)
+
+Example:
+[300, -0.0001, 3000] call ace_mk6mortar_fnc_simulateCalcRangeTableLine
  */
 #include "script_component.hpp"
 

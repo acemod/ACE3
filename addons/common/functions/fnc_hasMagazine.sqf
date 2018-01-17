@@ -9,9 +9,6 @@
  * Return Value:
  * has Magazine <BOOL>
  *
- * Example:
- * [bob, "magazine"] call ace_common_fnc_hasMagazine
- *
  * Public: yes
  *
  * Note: Case sensitive

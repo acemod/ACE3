@@ -3,10 +3,10 @@
  * Data transfer over a connected cable. Based on page 14 of pdf.
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [] call ace_vector_fnc_dataTransfer

@@ -13,9 +13,6 @@
  * Return Value:
  * Result of the function <ANY>
  *
- * Example:
- * [[array]], {dothings}, NAMESPACE, "UID", 5, "clear"] call ace_common_fnc_cachedCall
- *
  * Public: No
  */
 #include "script_component.hpp"
@@ -36,12 +33,11 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
             missionNamespace setVariable [_varName, _cacheList];
 
             [_event, {
+                // _eventName is defined on the function that calls the event
                 #ifdef DEBUG_MODE_FULL
-                    INFO_1("Clear cached variables on event: %1",_eventName);
+                    ACE_LOGINFO_1("Clear cached variables on event: %1",_eventName);
                 #endif
                 // Get the list of caches to clear
-                //IGNORE_PRIVATE_WARNING ["_eventName"]; 
-                // _eventName is defined on the function that calls the event
                 private _varName = format [QGVAR(clearCache_%1), _eventName];
                 private _cacheList = missionNamespace getVariable [_varName, []];
                 // Erase all the cached results
@@ -58,9 +54,9 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
     };
 
 #ifdef DEBUG_MODE_FULL
-    INFO_2("Calculated result: %1 %2",_namespace,_uid);
+    ACE_LOGINFO_2("Calculated result: %1 %2",_namespace,_uid);
 } else {
-    INFO_2("Cached result: %1 %2",_namespace,_uid);
+    ACE_LOGINFO_2("Cached result: %1 %2",_namespace,_uid);
 #endif
 
 };

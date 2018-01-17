@@ -39,9 +39,7 @@ _leaderVarName = _groupUnit getVariable [QGVAR(leaderVarName), ""];
 if (_leaderVarName != "") exitWith {
     // assign JIP unit as rallypoint leader
     if (str _unit == _leaderVarName) then {
-        if (isNil {_unit getVariable "ACE_canMoveRallypoint"}) then {
-            _unit setVariable ["ACE_canMoveRallypoint", true, true];
-        };
+        _unit setVariable ["ACE_canMoveRallypoint", true, true];
     };
 };
 
@@ -63,6 +61,4 @@ if (_leaderVarName == "") then {
 // prevent group from getting multiple leaders; use this to assign rallypoint moving ability on JIP
 _groupUnit setVariable [QGVAR(leaderVarName), _leaderVarName];
 
-if (isNil {_unit getVariable "ACE_canMoveRallypoint"}) then {
-    _unit setVariable ["ACE_canMoveRallypoint", true, true];
-};
+_unit setVariable ["ACE_canMoveRallypoint", true, true];

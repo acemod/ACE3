@@ -8,8 +8,8 @@
  * 2: Minimum unconscious time <NUMBER> (default: (round(random(10)+5)))
  * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
- * Return Value:
- * None
+ * ReturnValue:
+ * nil
  *
  * Example:
  * [bob, true] call ace_medical_fnc_setUnconscious;

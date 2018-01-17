@@ -7,11 +7,8 @@
  * 1: Patient <OBJECT>
  * 2: Item <STRING>
  *
- * Return Value:
- * None
- *
- * Example:
- * [bob, patient, "bandage"] call ace_medical_fnc_hasItem
+ * ReturnValue:
+ * <NIL>
  *
  * Public: Yes
  */

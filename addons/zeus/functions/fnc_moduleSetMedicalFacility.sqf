@@ -8,10 +8,7 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * None
- *
- * Example:
- * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleSetMedicalFacility
+ * None <NIL>
  *
  * Public: No
  */
@@ -24,23 +21,23 @@ private ["_mouseOver", "_unit"];
 if !(_activated && local _logic) exitWith {};
 
 if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
-    [LSTRING(RequiresAddon)] call FUNC(showMessage);
+    [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
     _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
     if ((_mouseOver select 0) != "OBJECT") then {
-        [LSTRING(NothingSelected)] call FUNC(showMessage);
+        [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
     } else {
         _unit = (_mouseOver select 1);
 
         if (_unit isKindOf "Man" || {!(_unit isKindOf "Building")}) then {
-            [LSTRING(OnlyStructures)] call FUNC(showMessage);
+            [LSTRING(OnlyStructures)] call EFUNC(common,displayTextStructured);
         } else {
             if !(alive _unit) then {
-                [LSTRING(OnlyAlive)] call FUNC(showMessage);
+                [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
             } else {
                 if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
-                    [LSTRING(OnlyNonCaptive)] call FUNC(showMessage);
+                    [LSTRING(OnlyNonCaptive)] call EFUNC(common,displayTextStructured);
                 } else {
                     if (!(GETVAR(_unit,EGVAR(medical,isMedicalFacility),false))) then {
                         _unit setVariable [QEGVAR(medical,isMedicalFacility), true, true];

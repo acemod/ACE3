@@ -6,11 +6,8 @@
  * 0: The caller <OBJECT>
  * 1: The target <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * Can Treat <BOOL>
- *
- * Example:
- * [bob, target] call ace_medical_fnc_canAccessMedicalEquipment
  *
  * Public: Yes
  */

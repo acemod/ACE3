@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, kevin, false] call ACE_medical_fnc_actionUnloadUnit
- *
  * Public: No
  */
 

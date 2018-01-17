@@ -6,10 +6,10 @@
  * unit <OBJECT>
  *
  * Return Value:
- * canShow <BOOL>
+ * canShow (bool)
  *
  * Example:
- * [bob] call ace_rangecard_fnc_canCopy
+ * [] call ace_rangecard_fnc_canCopy
  *
  * Public: No
  */

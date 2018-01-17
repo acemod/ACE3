@@ -8,9 +8,6 @@
  * Return Value:
  * handled <BOOL>
  *
- * Example:
- * [5] call ACE_interaction_fnc_handleScrollWheel
- *
  * Public: No
  */
 #include "script_component.hpp"

@@ -3,17 +3,14 @@
  * Compile the zeus action menu (only to be done once)
  *
  * Arguments:
- * None
+ * nil
  *
  * Return Value:
  * None
  *
- * Example:
- * call ACE_interact_menu_fnc_compileMenuZeus
- *
  * Public: No
  */
-#include "script_component.hpp"
+#include "script_component.hpp";
 
 // Exit if the action menu is already compiled for zeus
 if !(isNil {missionNamespace getVariable [QGVAR(ZeusActions), nil]}) exitWith {};

@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [CONFIG] call ace_common_fnc_setSettingFromConfig
- *
  * Public: No
  */
 #include "script_component.hpp"

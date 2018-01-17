@@ -3,13 +3,11 @@
  * Gets the wave height at a specific location. Uses a logic, so may be performance iffy
  *
  * Arguments:
- * 0: Position ASL to get height at <ARRAY>
+ * 0: Position ASL to get height at
  *
  * Return Value:
- * Wave height in meters <NUMBER>
+ * Wave height in meters
  *
- * Example:
- * [[5, 2, 5]]] call ace_common_fnc_waveHeightAt
  *
  * Public: No
  */

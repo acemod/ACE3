@@ -8,9 +8,6 @@
  * Return Value:
  * Vehicle FFV Turret indecies <ARRAY>
  *
- * Example:
- * [car] call ace_common_fnc_getTurretsFFV
- *
  * Public: Yes
  */
 #include "script_component.hpp"

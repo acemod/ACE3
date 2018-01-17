@@ -9,7 +9,7 @@
  * 3: Is Set (true adds/false removes) <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player, "setCaptive", "reason1", true] call ace_common_fnc_statusEffect_set

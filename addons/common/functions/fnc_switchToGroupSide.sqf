@@ -11,14 +11,11 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, true, "id", SIDE] call ace_common_fnc_switchToGroupSide
- *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull], ["_switch", false], ["_id", ""], ["_side", sideUnknown]];
+params [["_unit", objNull], ["_switch", false], ["_id", ""], ["_side", side _unit]];
 
 private _previousGroupsList = _unit getVariable [QGVAR(previousGroupSwitchTo), []];
 

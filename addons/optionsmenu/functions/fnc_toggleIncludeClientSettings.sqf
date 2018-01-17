@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * call ace_optionsmenu_fnc_toggleIncludeClientSettings
- *
  * Public: No
  */
 

@@ -44,13 +44,7 @@ if (GVAR(interactionParadrop)) then {
     lbClear _ctrl;
     {
         private _class = if (_x isEqualType "") then {_x} else {typeOf _x};
-        private _displayName = getText (configfile >> "CfgVehicles" >> _class >> "displayName");
-        if (GVAR(interactionParadrop)) then {
-            _ctrl lbAdd format ["%1 (%2s)", _displayName, GVAR(paradropTimeCoefficent) * ([_class] call FUNC(getSizeItem))];
-        } else {
-            _ctrl lbAdd _displayName;
-        };
-
+        _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> _class >> "displayName"));
         true
     } count _loaded;
 

@@ -8,14 +8,4 @@ class Cfg3DEN {
             };
         };
     };
-
-    class Group {
-        class AttributeCategories {
-            class ace_attributes {
-                displayName = CSTRING(Options);
-                collapsed = 1;
-                class Attributes {};
-            };
-        };
-    };
 };

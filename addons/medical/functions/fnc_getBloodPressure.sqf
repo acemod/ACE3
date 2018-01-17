@@ -5,12 +5,9 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * 0: BloodPressure Low <NUMBER>
  * 1: BloodPressure High <NUMBER>
- *
- * Example:
- * [bob, kevin] call ACE_medical_fnc_getBloodPressure
  *
  * Public: No
  */

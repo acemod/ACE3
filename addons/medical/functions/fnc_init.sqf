@@ -5,11 +5,8 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * Return Value:
- * None
- *
- * Example:
- * [bob] call ACE_medical_fnc_init
+ * ReturnValue:
+ * nil
  *
  * Public: No
  */

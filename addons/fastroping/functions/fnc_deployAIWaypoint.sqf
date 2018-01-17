@@ -7,7 +7,7 @@
  * 1: Waypoint position <ARRAY>
  *
  * Return Value:
- * true <BOOLEAN>
+ * true
  *
  * Example:
  * [_group, [6560, 12390, 0]] call ace_fastroping_fnc_deployAIWayoint

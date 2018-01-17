@@ -10,9 +10,6 @@
  * Return Value:
  * Currently selected item list box <CONTROL>
  *
- * Example:
- * [DISPLAY] call ACE_inventory_fnc_currentItemListBox
- *
  * Public: No
  */
 #include "script_component.hpp"

@@ -7,7 +7,7 @@
  * 1: Activator Unit (player) <OBJECT>
  * 2: Chemlight class, chemlight shield class <ARRAY>
  *
- * Return Value:
+ * Return value:
  * None
  *
  * Example:

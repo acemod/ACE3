@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, kevin, "selection"] call ace_medical_fnc_actionRemoveTourniquet
- *
  * Public: Yes
  */
 

@@ -5,11 +5,8 @@
  * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * [bob] call ACE_medical_fnc_reviveStateLoop
  *
  * Public: No
  */

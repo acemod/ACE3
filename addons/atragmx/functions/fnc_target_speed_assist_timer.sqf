@@ -3,10 +3,10 @@
  * Shows and starts the target speed assist timer
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_target_speed_assist_timer

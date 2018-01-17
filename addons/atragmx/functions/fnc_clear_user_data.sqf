@@ -3,10 +3,10 @@
  * Removes all user data from the profileNamespace
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_clear_user_data
@@ -28,7 +28,6 @@ profileNamespace setVariable ["ACE_ATragMX_temperature", nil];
 profileNamespace setVariable ["ACE_ATragMX_barometricPressure", nil];
 profileNamespace setVariable ["ACE_ATragMX_relativeHumidity", nil];
 
-profileNamespace setVariable ["ACE_ATragMX_showCoriolis", nil];
 profileNamespace setVariable ["ACE_ATragMX_showWind2", nil];
 profileNamespace setVariable ["ACE_ATragMX_latitude", nil];
 profileNamespace setVariable ["ACE_ATragMX_directionOfFire", nil];

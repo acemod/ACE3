@@ -4,6 +4,7 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
+// #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_ATRAGMX
@@ -16,4 +17,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define ATRAGMX_PROFILE_NAMESPACE_VERSION 2.0
+#define ATRAGMX_PROFILE_NAMESPACE_VERSION 1.7

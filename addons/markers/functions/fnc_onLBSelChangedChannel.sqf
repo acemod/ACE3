@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [CONTROL, 5] call ACE_markers_fnc_onLBSelChangedChannel
- *
  * Public: No
  */
 #include "script_component.hpp"

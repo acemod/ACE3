@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [ACE_player] call ace_common_fnc_fixLoweredRifleAnimation

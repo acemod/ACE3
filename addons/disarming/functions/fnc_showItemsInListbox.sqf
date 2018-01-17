@@ -8,7 +8,7 @@
  * 1: ItemArray [["itemClassnames"],[counts]] <ARRAY>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [theListBox, [["ace_bandage"],[2]]] call ace_disarming_fnc_showItemsInListbox

@@ -2,7 +2,6 @@
 PREP(canShow);
 PREP(doShow);
 PREP(drawNameTagIcon);
-PREP(getCachedFlags);
 PREP(getVehicleData);
 PREP(initIsSpeaking);
 PREP(moduleNameTags);

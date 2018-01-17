@@ -3,7 +3,7 @@
  * Tests if the ATragMX dialog can be shown
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
  * can_show <BOOL>

@@ -10,10 +10,10 @@
  * 2: type of disarm <STRING>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * [bob, kevin, "disarm"] call ace_disarming_fnc_eventTargetStart
+ * eventTargetStart
  *
  * Public: No
  */

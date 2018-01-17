@@ -11,10 +11,7 @@
  * 5: HitPointIndex (-1 for structural) <NUMBER>
  *
  * Return Value:
- * None
- *
- * Example:
- * [bob, "leg", 2, kevin, "bullet", -1] call ACE_medical_fnc_handleDamage_caching
+ * <nil>
  *
  * Public: No
  */

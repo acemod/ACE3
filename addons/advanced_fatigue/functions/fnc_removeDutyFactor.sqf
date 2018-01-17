@@ -7,11 +7,6 @@
  *
  * Return Value:
  * None
- *
- * Example:
- * ["ID"] call ace_advanced_fatigue_fnc_removeDutyFactor
- *
- * Public: No
  */
 #include "script_component.hpp"
 params [["_id", "", [""]]];

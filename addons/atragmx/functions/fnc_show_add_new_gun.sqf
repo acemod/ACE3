@@ -6,10 +6,10 @@
  * visible - <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * false call ace_atragmx_fnc_show_add_new_gun
+ * call ace_atragmx_fnc_show_add_new_gun
  *
  * Public: No
  */

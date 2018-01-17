@@ -4,8 +4,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Delete dummy object <BOOL>(optional)
- * 2: Unholster Weapon <BOOL>(optional)
+ * 1: Delete dummy object <BOOL> (optional)
+ * 2: Unholster Weapon <BOOL> (optional)
  *
  * Return Value:
  * None
@@ -17,13 +17,12 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_unit", objNull, [objNull]],
-    ["_delete", false, [false]],
-    ["_unholster", true, [true]]
-];
+private ["_dummy", "_actionID"];
+params [["_unit", objNull, [objNull]], ["_delete", false, [false]], ["_unholster", true, [true]]];
 
-private _dummy = _unit getVariable [QGVAR(dummy), objNull];
+if (isNull _unit) exitWith {};
+
+_dummy = _unit getVariable [QGVAR(dummy), objNull];
 if !(isNull _dummy) then {
     detach _dummy;
     if (_delete) then {
@@ -32,8 +31,9 @@ if !(isNull _dummy) then {
         _dummy setVelocity [0,0,-0.1];
     };
     _unit setVariable [QGVAR(dummy), objNull];
+    //_unit setVariable [QEGVAR(dragging,isCarrying), false, true]; // breaks things, since it hides interact menu on _target
 };
-private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+_actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
 if (_actionID != -1) then {
     _unit removeAction _actionID;
     _unit setVariable [QGVAR(ReleaseActionID), nil];

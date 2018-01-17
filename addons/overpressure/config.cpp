@@ -14,6 +14,9 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+
+class ACE_newEvents {
+    overpressure = "ace_overpressure";
+};

@@ -3,13 +3,10 @@
  * N/A
  *
  * Arguments:
- * ? <UNKNOWN>
+ * ?
  *
  * Return Value:
- * ? <UNKNOWN>
- *
- * Example:
- * [bob] call ace_common_fnc_requestCallback
+ * ?
  *
  * Public: No
  */

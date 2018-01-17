@@ -12,9 +12,6 @@
  * 0: Light Hitpoints <ARRAY>
  * 1: Selections <ARRAY>
  *
- * Example:
- * [car] call ace_common_fnc_getReflectorsWithSelections
- *
  * Public: Yes
  */
 #include "script_component.hpp"

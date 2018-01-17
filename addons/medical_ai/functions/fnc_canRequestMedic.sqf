@@ -8,9 +8,6 @@
  * Return Value:
  * Can request medic <BOOL>
  *
- * Example:
- * call ACE_medical_ai_fnc_canRequestMedic
- *
  * Public: No
  */
 #include "script_component.hpp"
@@ -22,7 +19,7 @@
 if ([_this] call EFUNC(medical,isMedic) || {vehicle _this != _this}) exitWith {false};
 
 {
-    if ([_x] call EFUNC(medical,isMedic) && {!([_x] call EFUNC(common,isPlayer))}) exitWith {
+    if ([_x] call EFUNC(medical,isMedic)) exitWith {
         _this setVariable [QGVAR(assignedMedic), _x];
         true
     };

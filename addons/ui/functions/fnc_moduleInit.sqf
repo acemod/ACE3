@@ -9,11 +9,6 @@
  *
  * Return Value:
  * None
- *
- * Example:
- * [LOGIC, [bob, kevin], true] call ace_ui_fnc_moduleInit
- *
- * Public: No
  */
 #include "script_component.hpp"
 
@@ -28,7 +23,7 @@ if (!_activated) exitWith {};
 // Basic
 if (isArray (missionConfigFile >> "showHUD")) then {
     // HUD visibility is hardcoded in mission config and showHUD command is overriden
-    INFO("User Interface Module Failed to Initialize Basic settings - showHUD overriden in mission config!");
+    ACE_LOGINFO("User Interface Module Failed to Initialize Basic settings - showHUD overriden in mission config!");
 } else {
     [_logic, QGVAR(soldierVehicleWeaponInfo), "soldierVehicleWeaponInfo"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(vehicleRadar), "vehicleRadar"] call EFUNC(common,readSettingFromModule);
@@ -68,4 +63,4 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 [_logic, QGVAR(vehicleDamage), "vehicleDamage"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleInfoBackground), "vehicleInfoBackground"] call EFUNC(common,readSettingFromModule);
 
-INFO_1("User Interface Module Initialized. Allow client modifications: %1",GVAR(allowSelectiveUI));
+ACE_LOGINFO_1("User Interface Module Initialized. Allow client modifications: %1",GVAR(allowSelectiveUI));

@@ -5,15 +5,12 @@
  * Arguments:
  * 0: caller <OBJECT>
  * 1: target <OBJECT>
- * 2: requestID <STRING>
- * 3: requestMessage Will be localized for other target object. <STRING>
- * 4: callback Code called upon accept or decline. <CODE>
+ * 2: requestID (STRING)
+ * 3: requestMessage Will be localized for other target object. (STRING)
+ * 4: callback Code called upon accept or decline. (CODE)
  *
  * Return Value:
  * None
- *
- * Example:
- * [bob, kevin, "ID", "Message", {callback}] call ace_common_fnc_sendRequest
  *
  * Public: Yes
  */

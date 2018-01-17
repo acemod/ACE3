@@ -97,59 +97,6 @@ class GVAR(RscDefendArea): RscDisplayAttributes {
     };
 };
 
-class GVAR(RscEditableObjects): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscEditableObjects))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscEditableObjects))] call FUNC(zeusAttributes));
-    class Controls: Controls {
-        class Background: Background {};
-        class Title: Title {};
-        class Content: Content {
-            class Controls {
-                class radius: GVAR(AttributeRadius) {};
-                //class position: GVAR(AttributePosition) {};
-                class editableObjects: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_editableObjects));
-                    idc = 26422;
-                    x = 0;
-                    y = 0;
-                    w = W_PART(11.1);
-                    h = H_PART(2.5);
-                    class controls {
-                        class Label: RscText {
-                            idc = -1;
-                            text = CSTRING(ModuleEditableObjects_curators);
-                            toolTip = CSTRING(ModuleEditableObjects_curators_desc);
-                            x = 0;
-                            y = 0;
-                            w = W_PART(10);
-                            h = H_PART(1);
-                            colorBackground[] = {0,0,0,0.5};
-                        };
-                        class AllCurators: RscCheckBox {
-                            idc = 16188;
-                            x = W_PART(10.1);
-                            y = 0;
-                            w = W_PART(1);
-                            h = H_PART(1);
-                        };
-                        class Label2: Label {
-                            text = CSTRING(ModuleEditableObjects_removal);
-                            toolTip = CSTRING(ModuleEditableObjects_removal_desc);
-                            y = H_PART(1.1);
-                        };
-                        class EditingMode: AllCurators {
-                            idc = 16189;
-                            y = H_PART(1.1);
-                        };
-                    };
-                };
-            };
-        };
-        class ButtonOK: ButtonOK {};
-        class ButtonCancel: ButtonCancel {};
-    };
-};
-
 class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGlobalSetSkill)))] call FUNC(zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGlobalSetSkill)))] call FUNC(zeusAttributes));

@@ -7,7 +7,7 @@
  * 1: Player <OBJECT>
  *
  * Return Value:
- * None
+ * No
  *
  * Example:
  * [mortar,bob] call ace_mk6mortar_fnc_toggleMils;

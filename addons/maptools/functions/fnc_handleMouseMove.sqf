@@ -3,16 +3,11 @@
  * Handle mouse movement over the map tool.
  *
  * Arguments:
- * 0: Map Control <CONTROL>
- * 1: Mouse position on screen coordinates <ARRAY>
+ * 0: Map Control
+ * 1: Mouse position on screen coordinates
  *
  * Return Value:
- * true if event was handled <BOOL>
- *
- * Example:
- * [CONTROL, [0, 5, 1]] call ACE_maptools_fnc_handleMouseMove
- *
- * Public: No
+ * Boolean, true if event was handled
  */
 
 #include "script_component.hpp"

@@ -14,9 +14,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [0, false, ""] call ace_common_fnc_checkPBOs
- *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -66,7 +63,7 @@ if (!isServer) then {
 
             //[QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
 
-            ERROR(_error);
+            ACE_LOGERROR(_error);
 
             if (_mode < 2) then {
                 _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];

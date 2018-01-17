@@ -3,10 +3,10 @@
  * Opens the rangetable and fills the charge listbox.
  *
  * Arguments:
- * None
+ * No
  *
  * Return Value:
- * None
+ * No
  *
  * Example:
  * [] call ace_mk6mortar_fnc_rangeTableOpen

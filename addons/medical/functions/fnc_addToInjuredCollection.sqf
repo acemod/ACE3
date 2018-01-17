@@ -1,19 +1,15 @@
 /*
  * Author: Glowbal
- * Enabled the vitals loop for a unit. Deprecated!
+ * Enabled the vitals loop for a unit.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * None
  *
- * Example:
- * [bob] call ACE_medical_fnc_addToInjuredCollection
- *
- * Public: No
+ * Deprecated
  */
-
 #include "script_component.hpp"
 
 ACE_DEPRECATED("ace_medical_fnc_addToInjuredCollection","3.7.0","ace_medical_fnc_addVitalLoop");

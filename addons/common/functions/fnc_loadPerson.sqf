@@ -9,9 +9,6 @@
  * Return Value:
  * the vehicle that the unitToBeloaded has been loaded in. Returns ObjNull if function failed <OBJECT>
  *
- * Example:
- * [bob, kevin] call ace_common_fnc_loadPerson
- *
  * Public: Yes
  */
 #include "script_component.hpp"

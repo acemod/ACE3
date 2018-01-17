@@ -20,7 +20,11 @@ disableSerialization;
 private _weaponIndex = [ACE_player, currentWeapon ACE_player] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
-private _adjustment = ACE_player getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
+private _adjustment = ACE_player getVariable QGVAR(Adjustment);
+if (isNil "_adjustment") then {
+    // [Windage, Elevation, Zero]
+    _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+};
 
 // Display the adjustment knobs
 private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;

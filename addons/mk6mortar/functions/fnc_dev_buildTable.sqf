@@ -7,7 +7,7 @@
  * 1: Air Friction <NUMBER>
  *
  * Return Value:
- * None <Data in clipboard>
+ * <Data in clipboard>
  *
  * Example:
  * [100, -0.0001] spawn ace_mk6mortar_fnc_dev_buildTable; //spawn (scheduled) is slower

@@ -6,10 +6,7 @@
  * 0: The Unit (usually the player) <OBJECT>
  *
  * Return Value:
- * None
- *
- * Example:
- * [bob] call ace_movement_fnc_handleVirtualMass
+ * Nothing
  *
  * Public: No
  */
@@ -30,8 +27,6 @@ private _virtualLoad = 0;
     vestContainer _unit,
     backpackContainer _unit
 ];
-
-_unit setVariable [QGVAR(totalLoad), (loadAbs _unit + _virtualLoad)];
 
 // get absolute vanilla load
 private _absLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");

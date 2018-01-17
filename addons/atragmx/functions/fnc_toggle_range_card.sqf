@@ -3,10 +3,10 @@
  * Toggles the range card screen on/off
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_toggle_range_card

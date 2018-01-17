@@ -6,22 +6,24 @@
  * 0: teleportPlayers controls group <CONTROL>
  *
  * Return Value:
- * None
+ * NONE <NIL>
  *
  * Example:
- * [CONTROL] call ace_zeus_fnc_ui_teleportPlayers
+ * onSetFocus = "_this call ace_zeus_fnc_ui_teleportPlayers"
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
+disableSerialization;
+
 params ["_control"];
 
 //Generic Init:
-private _display = ctrlParent _control;
-private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _display = ctrlparent _control;
+private _ctrlButtonOK = _display displayctrl 1; //IDC_OK
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
 TRACE_1("logicObject",_logic);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
@@ -32,7 +34,7 @@ private _listbox = _display displayCtrl 16189;
     if (alive _x) then {
         _listbox lbSetData [_listbox lbAdd (name _x), getPlayerUID _x];
     };
-} forEach ([] call CBA_fnc_players);
+} forEach allPlayers;
 
 _listbox lbSetCurSel 0;
 (_display displayCtrl 16188) cbSetChecked (_logic getVariable ["tpGroup",false]);

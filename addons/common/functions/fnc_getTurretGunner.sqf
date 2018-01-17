@@ -8,9 +8,6 @@
  * Return Value:
  * Vehicle Gunner Turret indecies <ARRAY>
  *
- * Example:
- * [car] call ace_common_fnc_getTurretGunner
- *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -5,11 +5,8 @@
  * Arguments:
  * 0: The unit <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * [bob] call ace_medical_fnc_itemCheck
  *
  * Public: Yes
  */

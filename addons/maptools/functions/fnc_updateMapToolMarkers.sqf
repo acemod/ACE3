@@ -6,14 +6,15 @@
  * 0: The Map <CONTROL>
  *
  * Return Value:
- * None
- *
- * Example:
- * [CONTROL] call ACE_maptools_fnc_updateMapToolMarkers
+ * Nothing
  *
  * Public: No
  */
 #include "script_component.hpp"
+
+#define TEXTURE_WIDTH_IN_M    6205
+#define CENTER_OFFSET_Y_PERC  0.1606
+#define CONSTANT_SCALE        0.2
 
 params ["_theMap"];
 
@@ -28,8 +29,6 @@ if (GVAR(mapTool_Shown) == 1) then {
     _rotatingTexture = QPATHTOF(data\mapToolRotatingSmall.paa);
     _textureWidth = TEXTURE_WIDTH_IN_M / 2;
 };
-
-if (GVAR(freedrawing)) then {[_theMap, _textureWidth] call FUNC(drawLinesOnRoamer);};
 
 // Update scale of both parts
 getResolution params ["_resWidth", "_resHeight", "", "", "_aspectRatio"];

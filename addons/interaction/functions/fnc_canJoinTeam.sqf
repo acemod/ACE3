@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target"];
+PARAMS_2(_unit,_target);
 
 alive _target
 && {!(_target getVariable ["ACE_isUnconscious", false])}

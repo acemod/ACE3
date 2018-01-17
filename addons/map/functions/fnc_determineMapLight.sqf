@@ -9,9 +9,6 @@
  * 0: Does the map needs shading? <BOOL>
  * 1: Color of the overlay <ARRAY>
  *
- * Example:
- * call ACE_map_fnc_determineMapLight
- *
  * Public: No
  */
 

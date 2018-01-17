@@ -5,11 +5,8 @@
  * Arguments:
  * 0-N: Code, should return a boolean <CODE>
  *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * [[{bob}]] call ace_medical_fnc_addUnconsciousCondition
  *
  * Public: Yes
  */

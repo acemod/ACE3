@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: ID <NUMBER>
- * 1: Show? <BOOL, NUMBER>
+ * 1: Show? <BOOL/NUMBER>
  *
  * Return Value:
  * None

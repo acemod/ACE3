@@ -8,9 +8,6 @@
  * Return Value:
  * Copy of original array <ARRAY>
  *
- * Example:
- * [[array]] call ace_common_fnc_uniqueElements
- *
  * Public: Yes
  */
 #include "script_component.hpp"

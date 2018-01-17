@@ -23,4 +23,4 @@ params ["_logic"];
 [_logic, QGVAR(PunishNonSpecialists),"PunishNonSpecialists"] call EFUNC(Common,readSettingFromModule);
 [_logic, QGVAR(ExplodeOnDefuse),"ExplodeOnDefuse"] call EFUNC(Common,readSettingFromModule);
 
-INFO("Explosive Module Initialized.");
+ACE_LOGINFO("Explosive Module Initialized.");

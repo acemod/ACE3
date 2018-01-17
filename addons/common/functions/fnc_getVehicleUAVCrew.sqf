@@ -8,9 +8,6 @@
  * Return Value:
  * UAV Dummy Crew <ARRAY>
  *
- * Example:
- * [car] call ace_common_fnc_getVehicleUAVCrew
- *
  * Public: Yes
  */
 #include "script_component.hpp"

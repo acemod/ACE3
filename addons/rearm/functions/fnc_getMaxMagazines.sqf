@@ -3,7 +3,7 @@
  * Calculates the maximum number of magazines a turret can hold according to config.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Target <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Magazine Classname <STRING>
  *
@@ -17,13 +17,9 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_vehicle", objNull, [objNull]],
-    ["_turretPath", [], [[]]],
-    ["_magazineClass", "", [""]]
-];
+params [["_target", objNull, [objNull]], ["_turretPath", [], [[]]], ["_magazineClass", "", [""]]];
 
-if (isNull _vehicle) exitWith {0};
+if (isNull _target) exitWith {0};
 
-private _count = {_x == _magazineClass} count ([_vehicle, _turretPath] call FUNC(getVehicleMagazines));
+private _count = {_x == _magazineClass} count ([_target, _turretPath] call FUNC(getConfigMagazines));
 _count

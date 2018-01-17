@@ -35,7 +35,7 @@ if (isNil _name) then {
     };
 } else {
     deleteVehicle _rallypoint;
-    ERROR("Multiple Rallypoints of same type.");
+    ACE_LOGERROR("Multiple Rallypoints of same type.");
 };
 
 // init visible marker

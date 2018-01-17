@@ -3,10 +3,10 @@
  * Calculates the target range and updates the output fields
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_calculate_target_range_assist
@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 private _angle = parseNumber(ctrlText 7012);
-private _targetSize = abs(parseNumber(ctrlText 7010));
+private _targetSize = parseNumber(ctrlText 7010);
 if (GVAR(rangeAssistUseTargetHeight)) then {
     _targetSize = _targetSize * cos(_angle);
 };
@@ -43,7 +43,7 @@ switch (GVAR(rangeAssistImageSizeUnit)) do {
         _imageSize = _imageSize / 60 / 1.047;
     };
 };
-private _estRange = abs(parseNumber(ctrlText 7013));
+private _estRange = parseNumber(ctrlText 7013);
 if (GVAR(currentUnit) == 1) then {
     _estRange = _estRange / 1.0936133;
 };
@@ -52,7 +52,7 @@ switch (_this) do {
     case 0: {
         _targetSize = tan(_imageSize) * _estRange;
 
-        if (GVAR(rangeAssistUseTargetHeight) && cos(_angle) != 0) then {
+        if (GVAR(rangeAssistUseTargetHeight)) then {
             _targetSize = _targetSize / cos(_angle);
         };
 
@@ -71,9 +71,7 @@ switch (_this) do {
         ctrlSetText [7010, Str(Round(_targetSize * 100) / 100)];
     };
     case 1: {
-        if (_estRange > 0) then {
-            _imageSize = atan(_targetSize / _estRange);
-        };
+        _imageSize = atan(_targetSize / _estRange);
 
         switch (GVAR(rangeAssistImageSizeUnit)) do {
             case 0: {
@@ -90,9 +88,7 @@ switch (_this) do {
         ctrlSetText [7011, Str(Round(_imageSize * 100) / 100)];
     };
     case 2: {
-        if (tan(_imageSize) != 0) then {
-            _estRange = _targetSize / tan(_imageSize);
-        };
+        _estRange = _targetSize / tan(_imageSize);
 
         ctrlSetText [7013, Str(Round(_estRange))];
     };

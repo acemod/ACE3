@@ -8,7 +8,7 @@
  * 2: Selection name <STRING>
  * 3: ACE_Medical_Treatments Classname <STRING>
  *
- * Return Value:
+ * ReturnValue:
  * Can Treat <BOOL>
  *
  * Example:

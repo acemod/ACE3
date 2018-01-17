@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [[array]], "top"] call ace_fastroping_fnc_onRopeBreak
- *
  * Public: No
  */
 

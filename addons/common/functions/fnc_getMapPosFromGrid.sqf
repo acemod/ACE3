@@ -6,7 +6,7 @@
  * 0: Grid Cords <STRING>
  * 1: Grid center (true), Grid Bottom Right (false) (default: true) <BOOL>
  *
- * Return Value:
+ * Return values:
  * Position <ARRAY>
  *
  * Example:
@@ -19,7 +19,7 @@
 params ["_inputString", ["_getCenterOfGrid", true]];
 
 if (count GVAR(mapGridData) == 0) exitWith {
-    ERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
+    ACE_LOGERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
     (_this call BIS_fnc_gridToPos) select 0
 };
 

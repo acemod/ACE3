@@ -6,10 +6,10 @@
  * Open copy? <BOOLEAN>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * [true] call ace_rangecard_fnc_openRangeCard
+ * call ace_rangecard_fnc_openRangeCard
  *
  * Public: No
  */
@@ -23,7 +23,7 @@ if (_this) then {
 
         createDialog "ACE_RangeCard_Dialog";
 
-        [GVAR(zeroRangeCopy), GVAR(boreHeightCopy), GVAR(ammoClassCopy), GVAR(magazineClassCopy), GVAR(weaponClassCopy)] call FUNC(updateRangeCard);
+        [GVAR(ammoClassCopy), GVAR(magazineClassCopy), GVAR(weaponClassCopy)] call FUNC(updateRangeCard);
     };
 } else {
     if (ACE_player call FUNC(updateClassNames)) then {
@@ -31,6 +31,6 @@ if (_this) then {
 
         createDialog "ACE_RangeCard_Dialog";
 
-        [GVAR(zeroRange), GVAR(boreHeight), GVAR(ammoClass), GVAR(magazineClass), GVAR(weaponClass)] call FUNC(updateRangeCard);
+        [GVAR(ammoClass), GVAR(magazineClass), GVAR(weaponClass)] call FUNC(updateRangeCard);
     };
 };

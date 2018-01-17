@@ -6,10 +6,7 @@
  * 0: eventName <STRING>
  *
  * Return Value:
- * Boolean of success <BOOL>
- *
- * Example:
- * ["event"] call ace_common_fnc_requestSyncedEvent
+ * Boolean of success
  *
  * Public: No
  */

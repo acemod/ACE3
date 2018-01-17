@@ -3,10 +3,10 @@
  * Updates the atmospheric data fields
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_update_atmo_env_data

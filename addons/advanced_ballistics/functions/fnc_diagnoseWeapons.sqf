@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [] call ace_advanced_ballistics_fnc_diagnoseWeapons
- *
  * Public: No
  */
 #define DEBUG_MODE_FULL

@@ -11,9 +11,6 @@
  * Return Value:
  * Measured distance <NUMBER>
  *
- * Example:
- * [5, 6, 7, true] call ace_fcs_fnc_getRange
- *
  * Public: No
  */
 #include "script_component.hpp"

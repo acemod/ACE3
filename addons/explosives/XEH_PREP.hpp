@@ -2,7 +2,6 @@
 PREP(addCellphoneIED);
 PREP(addClacker);
 PREP(addDetonateActions);
-PREP(addDetonateHandler);
 PREP(addExplosiveActions);
 PREP(addToSpeedDial);
 PREP(addTransmitterActions);

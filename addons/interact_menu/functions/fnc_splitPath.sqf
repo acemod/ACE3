@@ -9,9 +9,6 @@
  * 0: Parent path <ARRAY>
  * 1: Action name <STRING>
  *
- * Example:
- * [[path]] call ACE_interact_menu_fnc_splitPath
- *
  * Public: No
  */
 #include "script_component.hpp"

@@ -6,10 +6,7 @@
  * None
  *
  * Return Value:
- * Boolean <BOOL>
- *
- * Example:
- * call ACE_map_fnc_canUseMapGPS
+ * <BOOL>
  *
  * Public: No
  */

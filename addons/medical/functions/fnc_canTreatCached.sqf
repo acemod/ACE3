@@ -8,11 +8,8 @@
  * 2: Selection name <STRING>
  * 3: ACE_Medical_Treatments Classname <STRING>
  *
- * Return Value:
+ * ReturnValue:
  * Can Treat <BOOL>
- *
- * Example:
- * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_canTreatCached
  *
  * Public: No
  */

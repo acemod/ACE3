@@ -13,9 +13,6 @@
  *   2 = handgun
  *  -1 = other
  *
- * Example:
- * [bob, "gun"] call ace_common_fnc_getWeaponIndex
- *
  * Public: Yes
  */
  #include "script_component.hpp"

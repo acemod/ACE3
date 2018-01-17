@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob] call ACE_medical_fnc_handleDamage_advancedSetDamage
- *
  * Public: No
  */
 

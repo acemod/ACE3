@@ -116,7 +116,6 @@ class CfgVehicles {
                     displayName = CSTRING(JoinGroup);
                     condition = QUOTE(GVAR(EnableTeamManagement) && {[ARR_2(_player,_target)] call DFUNC(canJoinGroup)});
                     statement = QUOTE([_player] joinSilent group _target);
-                    modifierFunction = QUOTE(call FUNC(modifyJoinGroupAction));
                     showDisabled = 0;
                     priority = 2.6;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
@@ -551,7 +550,7 @@ class CfgVehicles {
 
                 class ACE_OpenBox {
                     displayName = CSTRING(OpenBox);
-                    condition = QUOTE((alive _target) && {(getNumber (configFile >> 'CfgVehicles' >> (typeOf _target) >> 'disableInventory')) == 0});
+                    condition = QUOTE(alive _target);
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
                     showDisabled = 0;
                     priority = -1;
@@ -562,13 +561,6 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
     class Slingload_base_F: ReammoBox_F {};
-    class Slingload_01_Base_F: Slingload_base_F {
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions: ACE_MainActions {
-                distance = 5;
-            };
-        };
-    };
     class Pod_Heli_Transport_04_base_F: Slingload_base_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {

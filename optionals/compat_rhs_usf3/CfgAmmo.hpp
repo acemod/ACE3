@@ -31,7 +31,7 @@ class CfgAmmo {
         ACE_caliber = 7.823;
         ACE_bulletLength = 37.821;
         ACE_bulletMass = 14.256;
-        ACE_ammoTempMuzzleVelocityShifts[] = {-5.3, -5.1, -4.6, -4.2, -3.4, -2.6, -1.4, -0.3, 1.4, 3.0, 5.2};
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[] = {0.310};
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
@@ -194,7 +194,7 @@ class CfgAmmo {
 
     class M_Titan_AT;
     class rhs_ammo_M_fgm148_AT: M_Titan_AT {
-        irLock = 1;
+        irLock = 0;
         laserLock = 0;
         airLock = 0;
 
@@ -221,8 +221,6 @@ class CfgAmmo {
             seekerMinRange = 0;
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
-            seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
@@ -272,8 +270,5 @@ class CfgAmmo {
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
-    };
-    class rhs_ammo_smaw_SR: RocketBase {
-        ACE_caliber = 9;
     };
 };

@@ -6,15 +6,15 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(VectorName);
         vehicleClass = "Items";
-        class TransportItems {
-            MACRO_ADDITEM(ACE_Vector,1);
+        class TransportWeapons {
+            MACRO_ADDWEAPON(ACE_Vector,1);
         };
     };
 
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
-        class TransportItems {
-            MACRO_ADDITEM(ACE_Vector,6);
+        class TransportWeapons {
+            MACRO_ADDWEAPON(ACE_Vector,6);
         };
     };
 };

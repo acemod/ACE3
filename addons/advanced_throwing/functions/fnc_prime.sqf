@@ -26,16 +26,7 @@ private _throwableMag = (currentThrowable _unit) select 0;
 _unit removeItem _throwableMag;
 
 private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
-private _muzzle = _unit getVariable [QGVAR(activeMuzzle), ""];
-
-// Set muzzle ammo to 0 to block vanilla throwing (can only be 0 or 1), removeItem above resets it
-_unit setAmmo [_muzzle, 0];
-
-// Handle weird scripted grenades (RHS) which could cause unexpected behaviour
-private _nonInheritedCfg = configProperties [configFile >> "CfgAmmo" >> _throwableType, 'configName _x == QGVAR(replaceWith)', false];
-if ((count _nonInheritedCfg) == 1) then {
-    _throwableType = getText (_nonInheritedCfg select 0);
-};
+private _muzzle = _throwableMag call FUNC(getMuzzle);
 
 // Create actual throwable globally
 private _activeThrowableOld = _unit getVariable [QGVAR(activeThrowable), objNull];
@@ -53,9 +44,6 @@ deleteVehicle _activeThrowableOld;
     _throwableMag, // magazine
     _activeThrowable // projectile
 ]] call CBA_fnc_globalEvent;
-
-// Set prime instigator
-[QEGVAR(common,setShotParents), [_activeThrowable, _unit, _unit]] call CBA_fnc_serverEvent;
 
 if (_showHint) then {
     // Show primed hint

@@ -190,7 +190,7 @@ class GVAR(interface) {
                         1
                     };
                     multiselectEnabled = 0;
-                    disableKeyboardSearch = 1;
+                    maxHistoryDelay = 10e10;
                     onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
                 };
                 class unitFrame: RscFrame {

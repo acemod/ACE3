@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [cam] call ACE_huntir_fnc_cam
- *
  * Public: No
  */
 #include "script_component.hpp"

@@ -5,11 +5,8 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * Should the unit stay unconscious? <BOOL>
- *
- * Example:
- * [bob] call ace_medical_fnc_getUnconsciousCondition
  *
  * Public: Yes
  */

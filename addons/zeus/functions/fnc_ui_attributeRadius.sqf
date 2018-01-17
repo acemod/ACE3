@@ -6,15 +6,14 @@
  * 0: radius controls group <CONTROL>
  *
  * Return Value:
- * None
- *
- * Example:
- * [CONTROL] call ace_zeus_fnc_ui_attributeRadius
+ * None <NIL>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
+
+disableSerialization;
 
 //Generic Init:
 params ["_control"];

@@ -7,12 +7,9 @@
  * 1: Patient <OBJECT>
  * 2: Item <STRING>
  *
- * Return Value:
+ * ReturnValue:
  * 0: success <BOOL>
  * 1: Unit <OBJECT>
- *
- * Example:
- * [unit, patient, "bandage"] call ace_repair_fnc_useItem
  *
  * Public: Yes
  */

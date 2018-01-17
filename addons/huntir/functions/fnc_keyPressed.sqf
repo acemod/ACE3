@@ -3,7 +3,7 @@
  * Handles the HuntIR monitor key interaction
  *
  * Arguments:
- * 0: ? <UNKNOWN>
+ * 0: ?
  * 1: keycode <NUMBER>
  *
  * Return Value:

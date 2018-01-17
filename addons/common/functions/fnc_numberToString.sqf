@@ -8,9 +8,6 @@
  * Return Value:
  * The number as string <STRING>
  *
- * Example:
- * [5] call ace_common_fnc_numberToString
- *
  * Public: Yes
  */
 #include "script_component.hpp"

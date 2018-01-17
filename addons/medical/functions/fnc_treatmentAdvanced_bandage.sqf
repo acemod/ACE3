@@ -13,9 +13,6 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Example:
- * [medic, patient, "Selectionname", "bandage", "bandage", -1] call ace_medical_fnc_treatmentAdvanced_bandage
- *
  * Public: Yes
  */
 

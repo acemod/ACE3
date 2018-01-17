@@ -46,12 +46,19 @@ _positions = [
     [_compassW + _offset, 0]
 ];
 
-_sequence = [
-    [_SW, _WN, _NE, _ES],
-    [_WN, _NE, _ES, _SW],
-    [_NE, _ES, _SW, _WN],
-    [_ES, _SW, _WN, _NE]
-] select floor(_heading/90);
+_sequence = if (_heading < 90) then {
+    [_SW, _WN, _NE, _ES]
+} else {
+    if (_heading < 180) then {
+        [_WN, _NE, _ES, _SW]
+    } else {
+        if (_heading < 270) then {
+            [_NE, _ES, _SW, _WN]
+        } else {
+            [_ES, _SW, _WN, _NE]
+        };
+    };
+};
 
 
 {

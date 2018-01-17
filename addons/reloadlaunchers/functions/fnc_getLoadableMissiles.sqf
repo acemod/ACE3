@@ -3,14 +3,11 @@
  * Return all magazine types from reloaders inventory that are compatible with given weapon.
  *
  * Arguments:
- * 0: Unit to to the reload <OBJECT>
- * 1: A launcher <OBJECT>
+ * 0: Unit to to the reload (Object)
+ * 1: A launcher (String)
  *
  * Return Value:
- * Reloable magazines <ARRAY>
- *
- * Example:
- * [bob, launcher] call ace_reloadlaunchers_fnc_getLoadableMissiles
+ * Reloable magazines (Array)
  *
  * Public: No
  */

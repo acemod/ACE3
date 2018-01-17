@@ -1,4 +1,4 @@
-/*
+ /*
  * Author: PabstMirror
  * Become Leader of group.
  *
@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_unit"];

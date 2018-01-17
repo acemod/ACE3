@@ -11,9 +11,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, "type", "message", [_args]] call ace_medical_fnc_addToLog
- *
  * Public: Yes
  */
 

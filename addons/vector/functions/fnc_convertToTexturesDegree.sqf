@@ -1,18 +1,8 @@
-/*
- * Author: commy2
- * converts azimuth into array of textures for the vectors scripted info control
- *
- * Arguments:
- * 0: Number <NUMBER>
- *
- * Return Value:
- * None
- *
- * Example:
- * [5] call ace_vector_fnc_convertToTexturesDegree
- *
- * Public: No
- */
+/* by commy2
+
+converts azimuth into array of textures for the vectors scripted info control
+
+*/
 
 #include "script_component.hpp"
 

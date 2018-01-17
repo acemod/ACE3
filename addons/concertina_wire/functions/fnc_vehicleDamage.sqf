@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [wire, car] call ace_concertina_wire_fnc_vehicleDamage
- *
  * Public: No
  */
 #include "script_component.hpp"

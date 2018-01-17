@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, kevin] call ace_trenches_fnc_handlePlayerChanged
- *
  * Public: No
 */
 #include "script_component.hpp"

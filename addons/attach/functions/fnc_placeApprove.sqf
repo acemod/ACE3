@@ -16,7 +16,7 @@
  * 5: Starting Pos of dummy item <ARRAY>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * No

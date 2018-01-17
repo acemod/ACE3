@@ -2,6 +2,8 @@
 // weapon config changes, by commy2
 
 /* documentation:
+aiDispersionCoefX = 1.0         Dispersion multiplier for AI units (axis X - left to right).
+aiDispersionCoefY = 1.0         Dispersion multiplier for AI units (axis Y - top-down).
 aiRateOfFire = 5.0              Delay between shots at given aiRateOfFireDistance.
 aiRateOfFireDistance = 500      At shorter distance delay (aiRateOfFire) goes linearly to zero.
 */
@@ -13,12 +15,19 @@ class Mode_FullAuto;
 class CfgWeapons {
 
     // rifles
-    class Rifle_Base_F;
-    class Rifle_Short_Base_F;
-    class Rifle_Long_Base_F;
+    class RifleCore;
+    class Rifle: RifleCore {
+        aiDispersionCoefX = 6;
+        aiDispersionCoefY = 6;
+    };
+
+    class Rifle_Base_F: Rifle {};
+    class Rifle_Long_Base_F: Rifle_Base_F {};
 
     // MX
     class arifle_MX_Base_F: Rifle_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
         modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
@@ -61,6 +70,8 @@ class CfgWeapons {
 
     // MX carbine
     class arifle_MXC_F: arifle_MX_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
 
         class Single: Single {
             minRange = 120;       // 2;
@@ -132,6 +143,8 @@ class CfgWeapons {
 
     // MX machine gun
     class arifle_MX_SW_F: arifle_MX_Base_F {
+        aiDispersionCoefY = 24.0;
+        aiDispersionCoefX = 21.0;
         // Shit is still broken
         //modes[] += {"ACE_Burst_far"};
         modes[] = {"Single","manual","close","short","medium","far_optic1","far_optic2","ACE_Burst_far"};
@@ -167,6 +180,8 @@ class CfgWeapons {
 
     // Katiba
     class arifle_Katiba_Base_F: Rifle_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
         modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
@@ -209,6 +224,8 @@ class CfgWeapons {
 
     // Katiba carbine
     class arifle_Katiba_C_F: arifle_Katiba_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
 
         class Single: Single {
             minRange = 120;       // 2;
@@ -251,6 +268,8 @@ class CfgWeapons {
 
     // F2002
     class mk20_base_F: Rifle_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
         modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
@@ -297,6 +316,8 @@ class CfgWeapons {
 
     // F2002 carbine
     class arifle_Mk20C_F: mk20_base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
 
         class Single: Single {
             minRange = 120;       // 2;
@@ -337,6 +358,8 @@ class CfgWeapons {
 
     // TAR-20
     class Tavor_base_F: Rifle_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
         modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
@@ -384,6 +407,8 @@ class CfgWeapons {
 
     // TAR-21
     class arifle_TRG21_F: Tavor_base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
 
         class Single: Single {
             minRange = 120;        // 2;
@@ -432,6 +457,8 @@ class CfgWeapons {
 
     // SDAR
     class SDAR_base_F: Rifle_Base_F {
+        aiDispersionCoefY = 28.0;
+        aiDispersionCoefX = 20.0;
 
         class Single: Mode_SemiAuto {
             minRange = 10;  //2;
@@ -443,7 +470,9 @@ class CfgWeapons {
     };
 
     // PD2000
-    class pdw2000_base_F: Rifle_Short_Base_F {
+    class pdw2000_base_F: Rifle_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
 
         class Single: Mode_SemiAuto {
             minRange = 100; //2;
@@ -455,7 +484,9 @@ class CfgWeapons {
     };
 
     // Vector
-    class SMG_01_Base: Rifle_Short_Base_F {
+    class SMG_01_Base: Rifle_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
 
         class Single: Mode_SemiAuto {
             minRange = 50;  //2;
@@ -467,7 +498,9 @@ class CfgWeapons {
     };
 
     // Scorpion EVO
-    class SMG_02_base_F: Rifle_Short_Base_F  {
+    class SMG_02_base_F: Rifle_Base_F {
+        aiDispersionCoefY = 18.0;
+        aiDispersionCoefX = 12.0;
 
         class Single: Mode_SemiAuto {
             minRange = 50;  //2;
@@ -482,6 +515,8 @@ class CfgWeapons {
 
     // Stoner
     class LMG_Mk200_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = 24.0;
+        aiDispersionCoefX = 21.0;
         modes[] += {"ACE_Burst_far"};
 
         class medium;
@@ -509,6 +544,8 @@ class CfgWeapons {
 
     // Negev
     class LMG_Zafir_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = 23.0;
+        aiDispersionCoefX = 19.0;
         modes[] += {"ACE_Burst_far"};
 
         class Single: Mode_SemiAuto {
@@ -682,6 +719,8 @@ class CfgWeapons {
 
     // marksmen medium mg
     class MMG_01_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = 25.0;
+        aiDispersionCoefX = 20.0;
         modes[] += {"ACE_Burst_far"};
 
         class manual;
@@ -706,6 +745,8 @@ class CfgWeapons {
     };
 
     class MMG_02_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = 20.0;
+        aiDispersionCoefX = 15.0;
         modes[] += {"ACE_Burst_far"};
 
         class manual;

@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * call ACE_huntir_fnc_huntirCompass
- *
  * Public: No
  */
 #include "script_component.hpp"

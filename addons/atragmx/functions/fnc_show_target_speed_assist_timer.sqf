@@ -6,10 +6,10 @@
  * visible - <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * false call ace_atragmx_fnc_show_target_speed_assist_timer
+ * call ace_atragmx_fnc_show_target_speed_assist_timer
  *
  * Public: No
  */

@@ -3,10 +3,10 @@
  * Updates the range card listbox content
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_update_range_card

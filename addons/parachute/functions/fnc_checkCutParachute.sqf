@@ -3,10 +3,10 @@
  * Reset the parachute system.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Object
  *
  * Return Value:
- * Boolean <BOOL>
+ * Boolean
  *
  * Example:
  * [player] call FUNC(checkCutParachute);

@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * call ACE_map_fnc_updateMapEffects
- *
  * Public: No
  */
 

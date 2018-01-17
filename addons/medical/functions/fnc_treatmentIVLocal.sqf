@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [medic, "Classname"] call ace_medical_fnc_treatmentIVLocal
- *
  * Public: Yes
  */
 

@@ -3,10 +3,10 @@
  * Restores the atmospheric data defaults
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_restore_atmo_default

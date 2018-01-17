@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player] call ACE_Explosives_fnc_addTransmitterActions;

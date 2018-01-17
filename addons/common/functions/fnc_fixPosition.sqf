@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob] call ace_common_fnc_fixPosition
- *
  * Public: No
  */
 #include "script_component.hpp"

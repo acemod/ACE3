@@ -5,11 +5,8 @@
  * Arguments:
  * None
  *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * call ACE_medical_fnc_litterCleanupLoop
  *
  * Public: No
  */

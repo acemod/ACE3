@@ -44,7 +44,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Shield_Empty_DescriptionShort);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = QPATHTOF(UI\ace_chemlight_shield_x_ca.paa);
-        scope = 2;
+        scope = 1;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };

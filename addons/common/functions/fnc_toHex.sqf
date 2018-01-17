@@ -8,9 +8,6 @@
  * Return Value:
  * A hexadecimal number as string <STRING>
  *
- * Example:
- * [154] call ace_common_fnc_toHex
- *
  * Public: Yes
  */
 #include "script_component.hpp"

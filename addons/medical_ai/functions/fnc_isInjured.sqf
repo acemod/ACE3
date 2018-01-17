@@ -8,9 +8,6 @@
  * Return Value:
  * Does unit need treatment <BOOL>
  *
- * Example:
- * call ACE_medical_ai_fnc_isInjured
- *
  * Public: No
  */
 #include "script_component.hpp"

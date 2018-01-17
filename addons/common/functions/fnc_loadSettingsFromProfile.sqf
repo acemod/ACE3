@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * call ace_common_fnc_loadSettingsFromProfile
- *
  * Public: No
  */
 #include "script_component.hpp"

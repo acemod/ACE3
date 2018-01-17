@@ -1,19 +1,10 @@
 /*
- * Author: commy2
- * Handles pressing the special vector keys.
- *
- * Arguments:
- * 0: String <STRING>
- *
- * Return Value:
- * None
- *
- * Example:
- * ["5"] call ace_vector_fnc_onKeyDown
- *
- * Public: No
- */
 
+by commy2
+
+Handles pressing the special vector keys.
+
+*/
 #include "script_component.hpp"
 
 // set vector config settings

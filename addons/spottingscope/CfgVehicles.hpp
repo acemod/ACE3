@@ -43,7 +43,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
-                selection = "main_turret_axis";
+                selection = "main_gun";
                 class ACE_Pickup {
                     selection = "";
                     displayName = CSTRING(PickUp);

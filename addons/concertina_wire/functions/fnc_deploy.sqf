@@ -10,14 +10,11 @@
  * Return Value:
  * None
  *
- * Example:
- * [coil, bob] call ace_concertina_wire_fnc_deploy
- *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_wirecoil", "_unit"];
+PARAMS_2(_wirecoil,_unit);
 
 private _wireNoGeo = "ACE_ConcertinaWireNoGeo" createVehicle [0,0,0];
 {

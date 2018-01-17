@@ -3,10 +3,10 @@
  * Update the ppEffects everytime something changes
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [someEvent] call ace_nightvision_fnc_updatePPEffects

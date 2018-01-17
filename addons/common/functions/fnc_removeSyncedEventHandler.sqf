@@ -6,10 +6,7 @@
  * 0: Name <STRING>
  *
  * Return Value:
- * Boolean of success <BOOL>
- *
- * Example:
- * ["bob"] call ace_common_fnc_removeSyncedEventHandler
+ * Boolean of success
  *
  * Public: No
  */
@@ -18,7 +15,7 @@
 params ["_name"];
 
 if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
-    ERROR_1("Synced event key [%1] not found (removeSyncedEventHandler).", _name);
+    ACE_LOGERROR_1("Synced event key [%1] not found (removeSyncedEventHandler).", _name);
     false
 };
 

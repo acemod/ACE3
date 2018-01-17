@@ -7,7 +7,7 @@
  * 0: Display (RscInGameUI for a weapon) <DISPLAY>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [ACE_RscWeapon_Arco's Display] call ace_optics_fnc_onDrawScope2D

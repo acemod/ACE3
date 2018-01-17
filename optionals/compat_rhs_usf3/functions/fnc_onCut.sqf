@@ -26,15 +26,11 @@ if !(isNull _fries) then {
     [{
         _this animateDoor ["doorRB", 0];
         _this animateDoor ["doorLB", 0];
-        _this animate ["doorHandler_R",0];
-        _this animate ["doorHandler_L",0];
-    }, _vehicle, 2] call CBA_fnc_waitAndExecute;
+    }, _vehicle, 2] call EFUNC(common,waitAndExecute);
 
     4
 } else {
     _vehicle animateDoor ["ramp_anim", 0];
-    _vehicle animate ["ramp_bottom",0];
-    _vehicle animate ["ramp_top",0];
 
     2
 };

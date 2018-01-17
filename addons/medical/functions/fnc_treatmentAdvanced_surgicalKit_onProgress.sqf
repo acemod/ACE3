@@ -12,9 +12,6 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Example:
- * [[bob, kevin], 5, 5] call ACE_medical_fnc_treatmentAdvanced_surgicalKit_onProgress
- *
  * Public: No
  */
 #include "script_component.hpp"

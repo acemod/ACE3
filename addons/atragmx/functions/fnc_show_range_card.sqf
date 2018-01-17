@@ -6,10 +6,10 @@
  * visible - <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * false call ace_atragmx_fnc_show_range_card
+ * call ace_atragmx_fnc_show_range_card
  *
  * Public: No
  */

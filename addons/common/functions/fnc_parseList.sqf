@@ -28,7 +28,7 @@ private _whitespaceList = [];
 
 {
     if (_removeWhitespace) then {
-        _whitespaceList pushBack ([_x] call CBA_fnc_removeWhitespace);
+        _whitespaceList pushBack ([_x] call FUNC(stringRemoveWhiteSpace));
     } else {
         _whitespaceList pushBack ([_x] call CBA_fnc_trim);
     };

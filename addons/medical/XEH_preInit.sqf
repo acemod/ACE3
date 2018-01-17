@@ -2,18 +2,16 @@
 
 ADDON = false;
 
-PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
 
 GVAR(injuredUnitCollection) = [];
 
 private _versionEx = "ace_medical" callExtension "version";
 DFUNC(handleDamage_assignWounds) = if (_versionEx == "") then {
-    INFO_1("Extension %1.dll not installed.","ace_medical");
+    ACE_LOGINFO_1("Extension %1.dll not installed.","ace_medical");
     DFUNC(handleDamage_woundsOld)
 } else {
-    INFO_2("Extension version: %1: %2","ace_medical",_versionEx);
+    ACE_LOGINFO_2("Extension version: %1: %2","ace_medical",_versionEx);
     DFUNC(handleDamage_wounds)
 };
 
@@ -50,9 +48,6 @@ addMissionEventHandler ["Loaded",{
             TRACE_1("preload done",_this);
         }, [_x]] call CBA_fnc_waitUntilAndExecute;
     } forEach GVAR(fixedStatics);
-
-    // Reload configs into extension (handle full game restart)
-    call FUNC(parseConfigForInjuries);
 }];
 
 

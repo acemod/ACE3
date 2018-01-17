@@ -7,7 +7,7 @@
  * 1: Target <OBJECT>
  *
  * Return Value:
- * -1: can't interact 0: empty gunbag 1: full gunbag <NUMBER>
+ * <NUMBER> -1: can't interact 0: empty gunbag 1: full gunbag
  *
  * Example:
  * _canInteract = [player, target] call ace_gunbag_fnc_canInteract

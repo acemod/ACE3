@@ -30,4 +30,4 @@ if (isServer) then {
     [], 0.1] call CBA_fnc_waitAndExecute;
 };
 
-INFO("Friendly Fire Messages Module Initialized.");
+ACE_LOGINFO("Friendly Fire Messages Module Initialized.");

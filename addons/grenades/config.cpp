@@ -28,3 +28,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "Effects.hpp"
+
+class ACE_newEvents {
+    flashbangExplosion = "ace_flashbangExploded";
+};

@@ -8,21 +8,20 @@
  * 2: Explosives to detonate <ARRAY>
  *     0: Explosive <OBJECT>
  *     1: Fuse time <NUMBER>
- * 3: Trigger Item Classname <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, -1, [[c4,0.5]], "ACE_Clacker"] call ACE_Explosives_fnc_detonateExplosiveAll;
+ * [player, -1, [[c4,0.5]]] call ACE_Explosives_fnc_detonateExplosiveAll;
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit", "_range", "_explosivesList", "_triggerClassname"];
-TRACE_4("Params",_unit,_range,_explosivesList,_triggerClassname);
+params ["_unit", "_range", "_explosivesList"];
+TRACE_3("Params",_unit,_range,_explosivesList);
 
 {
-    [_unit,_range,_x,_triggerClassname] call FUNC(detonateExplosive);
+    [_unit,_range,_x] call FUNC(detonateExplosive);
 } forEach _explosivesList;

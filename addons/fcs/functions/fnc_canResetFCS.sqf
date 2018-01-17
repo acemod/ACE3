@@ -3,13 +3,10 @@
  * Called from config. Can player reset FCS?
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
  * Boolean <BOOL>
- *
- * Example:
- * call ace_fcs_fnc_canResetFCS
  *
  * Public: No
  */

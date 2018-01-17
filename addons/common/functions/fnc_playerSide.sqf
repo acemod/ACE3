@@ -8,9 +8,6 @@
  * Return Value:
  * current local side <SIDE>
  *
- * Example:
- * [] call ace_common_fnc_playerSide
- *
  * Public: Yes
  */
 #include "script_component.hpp"

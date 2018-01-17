@@ -16,9 +16,6 @@
  * Return Value:
  * None
  *
- * Example:
- * ["bob", "type", true, "bob", "person", [1,2,3], true, 5] call ace_common_fnc_addSettings
- *
  * Public: No
  */
 #include "script_component.hpp"

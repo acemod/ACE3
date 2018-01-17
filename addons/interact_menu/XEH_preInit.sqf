@@ -2,9 +2,7 @@
 
 ADDON = false;
 
-PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
 
 GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
 GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;

@@ -1,17 +1,14 @@
 /*
- * Author: ACE-Team
+ * Author: ?
  * ?
  *
  * Arguments:
- * <UNKNOWN>
+ * ?
  *
  * Return Value:
- * Something <UNKNOWN>
+ * ?
  *
- * Example:
- * [UNKNOWN] call ace_common_fnc_translateToModelSpace
- *
- * Public: No
+ * Public: ?
  */
 #include "script_component.hpp"
 

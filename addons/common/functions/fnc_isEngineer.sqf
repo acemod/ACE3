@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+private _isEngineer = _unit getVariable ["ACE_isEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1];
 //Handle ace_repair modules setting this to a number
 if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 0};
 

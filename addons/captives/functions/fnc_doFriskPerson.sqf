@@ -7,7 +7,7 @@
  * 1: unit <OBJECT>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player, bob] call ACE_captives_fnc_doFristPerson;

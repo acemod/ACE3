@@ -12,9 +12,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [medic, "Leg", 2, false] call ace_medical_fnc_setHitPointDamage
- *
  * Public: Yes
  */
 

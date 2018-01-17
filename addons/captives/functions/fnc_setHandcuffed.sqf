@@ -7,7 +7,7 @@
  * 1: True to take captive, false to release captive <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [bob, true] call ACE_captives_fnc_setHandcuffed;
@@ -20,7 +20,7 @@ params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
 if (!local _unit) exitWith {
-    WARNING("running setHandcuffed on remote unit");
+    ERROR("running setHandcuffed on remote unit");
 };
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
@@ -35,7 +35,7 @@ if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
 };
 
 if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith {
-    WARNING("setHandcuffed: current state same as new");
+    ERROR("setHandcuffed: current state same as new");
 };
 
 if (_state) then {

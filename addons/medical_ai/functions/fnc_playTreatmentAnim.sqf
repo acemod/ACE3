@@ -8,10 +8,7 @@
  * 2: Is self treatment <BOOL>
  *
  * Return Value:
- * None
- *
- * Example:
- * [bob, true, true] call ACE_medical_ai_fnc_playTreatmentAnim
+ * Nothing
  *
  * Public: No
  */
@@ -35,12 +32,7 @@ if (stance _unit == "PRONE") then {
 };
 
 private _anim = getText (_animConfig >> _configProperty);
-private _wpn = switch (true) do {
-    case ((currentWeapon _unit) == ""): {"non"};
-    case ((currentWeapon _unit) == (primaryWeapon _unit)): {"rfl"};
-    case ((currentWeapon _unit) == (handgunWeapon _unit)): {"pst"};
-    default {"non"};
-};
+private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _unit, handgunWeapon _unit] find (currentWeapon _unit)));
 _anim = [_anim, "[wpn]", _wpn] call CBA_fnc_replace;
 
 [_unit, _anim] call EFUNC(common,doAnimation);

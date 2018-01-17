@@ -7,7 +7,7 @@
  * 1: A captive loaded in a vehicle <OBJECT>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [bob, prisoner] call ACE_captives_fnc_doUnloadCaptive

@@ -3,10 +3,10 @@
  * Deletes the currently selected gun profile from the profileNamespace
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_delete_gun
@@ -28,4 +28,4 @@ GVAR(gunList) = GVAR(gunList) - [0];
 
 lbDelete [6000, _index];
 
-call FUNC(store_gun_list);
+profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(gunList)];

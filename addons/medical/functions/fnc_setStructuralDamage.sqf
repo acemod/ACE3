@@ -5,11 +5,8 @@
  * Arguments:
  * 0: The unit <OBJECT>
  *
- * Return Value:
- * None
- *
- * Example:
- * [bob] call ACE_medical_fnc_setStructuralDamage
+ * ReturnValue:
+ * <NIL>
  *
  * Public: no?
  */

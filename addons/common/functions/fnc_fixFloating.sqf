@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [object] call ace_common_fnc_fixFloating
- *
  * Public: No
  */
 #include "script_component.hpp"

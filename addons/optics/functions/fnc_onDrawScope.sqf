@@ -1,19 +1,4 @@
-/*
- * Author: commy2
- *
- *
- * Arguments:
- * 0: Display <DISPLAY>
- *
- * Return Value:
- * None
- *
- * Example:
- * [DISPLAY] call ace_optics_fnc_onDrawScope
- *
- * Public: No
- */
-
+// by commy2
 #include "script_component.hpp"
 
 disableSerialization;

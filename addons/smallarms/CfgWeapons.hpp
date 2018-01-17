@@ -4,8 +4,7 @@ class Mode_FullAuto;
 
 class CfgWeapons {
     class Rifle_Base_F;
-    class Rifle_Short_Base_F: Rifle_Base_F {};
-    class Rifle_Long_Base_F: Rifle_Base_F {};
+    class Rifle_Long_Base_F;
 
     ///////////////////////////////////////////////////////////////////////////////
     //////////// SMALL ARMS WEAPONS ///////////////////////////////////////////////
@@ -92,7 +91,7 @@ class CfgWeapons {
 
     // SMG Vermin ////////////////////////////////////////////////////
 
-    class SMG_01_Base: Rifle_Short_Base_F {
+    class SMG_01_Base: Rifle_Base_F {
         // http://kriss-usa.com/pdf/operatormanual/
         // 1200 rpm
         class Single: Mode_SemiAuto {
@@ -111,7 +110,7 @@ class CfgWeapons {
 
     // SMG Scorpion ////////////////////////////////////////////////////
 
-    class SMG_02_base_F: Rifle_Short_Base_F  {
+    class SMG_02_base_F: Rifle_Base_F {
         //http://www.czub.cz/zbrojovka/cz-manual/Instruction-Manual-Scorpion-EVO-3-A1_en.pdf
         // 1150 rpm
 
@@ -132,7 +131,7 @@ class CfgWeapons {
 
     // SMG PDW2000 ///////////////////////////////////////////////////
 
-    class pdw2000_base_F: Rifle_Short_Base_F {
+    class pdw2000_base_F: Rifle_Base_F {
         modes[] = {"Single", "FullAuto"}; // No burst on this thing
 
         class Single: Mode_SemiAuto {

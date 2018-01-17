@@ -9,9 +9,6 @@
  * Return Value:
  * Message is Printed <BOOL>
  *
- * Example:
- * [bob, 2] call ace_common_fnc_debug
- *
  * Public: Yes
  */
 #include "script_component.hpp"

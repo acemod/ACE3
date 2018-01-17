@@ -6,10 +6,7 @@
  * None
  *
  * Return Value:
- * None
- *
- * Example:
- * call ACE_medical_ai_fnc_requestMedic
+ * Nothing
  *
  * Public: No
  */

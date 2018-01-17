@@ -4,12 +4,8 @@
  *
  * Arguments:
  * None
- *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * call ACE_medical_fnc_parseConfigForInjuries
  *
  * Public: No
  */

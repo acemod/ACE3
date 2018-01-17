@@ -35,12 +35,6 @@ class CfgVehicles {
                 typeName = "STRING";
                 defaultValue = "";
             };
-            class SetName {
-                displayName = CSTRING(SetName_DisplayName);
-                description = CSTRING(SetName_Description);
-                typeName = "STRING";
-                defaultValue = "";
-            };
             class Duration {
                 displayName = CSTRING(Duration_DisplayName);
                 description = CSTRING(Duration_Description);

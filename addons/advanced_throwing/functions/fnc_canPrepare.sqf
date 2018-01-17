@@ -4,7 +4,6 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Ignore Last Thrown Time <BOOL> (default: false)
  *
  * Return Value:
  * Can Prepare <BOOL>
@@ -16,19 +15,14 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", ["_ignoreLastThrownTime", false]];
-
-// Don't delay when picking up
-if (_ignoreLastThrownTime) then {
-    _unit setVariable [QGVAR(lastThrownTime), -1];
-};
+params ["_unit"];
 
 GVAR(enabled) &&
 
-#ifdef ALLOW_QUICK_THROW
-{true} &&
-#else
+#ifndef DEBUG_MODE_FULL
 {_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2} && // Prevent throwing in quick succession
+#else
+{true} &&
 #endif
 
 {!(call EFUNC(common,isFeatureCameraActive))} &&

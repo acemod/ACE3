@@ -3,7 +3,7 @@
  * Correctly handles toggling of spectator interface elements for clean UX
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * 0: Display
  * 1: Toogle compass <BOOL> <OPTIONAL>
  * 2: Toogle help <BOOL> <OPTIONAL>
  * 3: Toogle interface <BOOL> <OPTIONAL>
@@ -15,7 +15,7 @@
  * None <NIL>
  *
  * Example:
- * [_display, nil, true] call ace_spectator_fnc_toggleInterface
+ * [_dsiplay, nil, true] call ace_spectator_fnc_toggleInterface
  *
  * Public: No
  */

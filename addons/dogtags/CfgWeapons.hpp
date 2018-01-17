@@ -4,7 +4,7 @@
         scope = 1; \
         scopeArsenal = 0; \
         scopeCurator = 0; \
-        descriptionShort = CSTRING(itemName); \
+        descriptionShort = QUOTE(DOGTAGID); \
         GVAR(tagID) = DOGTAGID; \
     }
 

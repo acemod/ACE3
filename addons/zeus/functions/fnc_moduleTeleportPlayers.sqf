@@ -8,7 +8,7 @@
  * 2: Teleport group <BOOL>
  *
  * Return Value:
- * None
+ * None <NIL>
  *
  * Example:
  * [player, "5854854754", false] call ace_zeus_fnc_moduleTeleportPlayers
@@ -36,11 +36,8 @@ if (_group) then {
 
     private _attached = attachedTo _logic;
     if (isNull _attached) then {
-        // Function takes position AGL and must be ran where local
-        [QGVAR(moveToRespawnPosition), [_x, _logic modelToWorld [0,0,0]], _x] call CBA_fnc_targetEvent;
+        [_x, _logic] call BIS_fnc_moveToRespawnPosition;
     } else {
-        [QGVAR(moveToRespawnPosition), [_x, _attached], _x] call CBA_fnc_targetEvent;
+        [_x, _attached] call BIS_fnc_moveToRespawnPosition;
     };
 } forEach _player;
-
-deleteVehicle _logic;

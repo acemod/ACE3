@@ -17,18 +17,29 @@
  */
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
-TRACE_3("params",_logic,_units,_activated);
+private ["_color", "_configurationGroupMappings", "_configurationIndex", "_configurations", "_leadColor"];
 
-if (!_activated) exitWith {};
+params ["_logic", "_units", "_activated"];
+
+if (!_activated || !isServer) exitWith {};
 
 // Transcode string setting into usable array. Example: "1,1,1,1" -> [1, 1, 1, 1]
-private _leadColor = call compile ("[" + (_logic getVariable ["leadColor", ""]) + "]");
+_leadColor = call compile ("[" + (_logic getVariable ["leadColor", ""]) + "]");
 if (!([_leadColor] call FUNC(isValidColorArray))) exitWith {ERROR("leadColor is not a valid color array.")};
-private _color = call compile ("[" + (_logic getVariable ["color", ""]) + "]");
+_color = call compile ("[" + (_logic getVariable ["color", ""]) + "]");
 if (!([_color] call FUNC(isValidColorArray))) exitWith {ERROR("color is not a valid color array.")};
+
+// If we already have color configurations from another source, use those, otherwise use default.
+_configurations = if (isNil QGVAR(GroupColorConfigurations)) then { [] } else { +GVAR(GroupColorConfigurations) };
+_configurationGroupMappings = if(isNil QGVAR(GroupColorConfigurationMapping)) then { [] call CBA_fnc_hashCreate } else { +GVAR(GroupColorConfigurationMapping) };
+
+// Save custom color configuration and keep the index of the entry.
+_configurationIndex = _configurations pushBack [_leadColor, _color];
 
 // Add all synchronized groups and reference custom configuration for them
 {
-    [group _x, _leadColor, _color] call FUNC(addGroupColorMapping);
+    [_configurationGroupMappings, groupID group _x, _configurationIndex] call CBA_fnc_hashSet;
 } forEach _units;
+
+[QGVAR(GroupColorConfigurations), _configurations, false, true] call EFUNC(common,setSetting);
+[QGVAR(GroupColorConfigurationMapping), _configurationGroupMappings, false, true] call EFUNC(common,setSetting);

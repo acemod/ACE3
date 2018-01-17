@@ -26,7 +26,7 @@ params [
 ];
 
 if (_source == "" || {_element == ""}) exitWith {
-    WARNING("Source or Element may not be empty strings!");
+    ACE_LOGWARNING("Source or Element may not be empty strings!");
 };
 
 _element = toLower _element;
@@ -34,7 +34,7 @@ _element = toLower _element;
 // Verify element is bound
 private _cachedElement = GVAR(configCache) getVariable _element;
 if (isNil "_cachedElement") exitWith {
-    WARNING_2("Element '%1' does not exist - modification by '%2' failed.",_element,_source);
+    ACE_LOGWARNING_2("Element '%1' does not exist - modification by '%2' failed.",_element,_source);
 };
 
 private _setElement = GVAR(elementsSet) getVariable _element;
@@ -53,7 +53,7 @@ if (isNil "_setElement") then {
 
     if (_set) then {
         if (GVAR(interfaceInitialized)) then {
-            WARNING_3("Element '%1' already set by '%2' - modification by '%3' failed.",_element,_sourceSet,_source);
+            ACE_LOGWARNING_3("Element '%1' already set by '%2' - modification by '%3' failed.",_element,_sourceSet,_source);
         };
     } else {
         TRACE_3("Unsetting element",_sourceSet,_element,_show);

@@ -6,11 +6,8 @@
  * 0: The Unit <OBJECT>
  * 1: New animation <STRING>
  *
- * Return Value:
+ * ReturnValue:
  * None
- *
- * Example:
- * [bob, "movearm"] call ACE_captives_fnc_handleAnimChangedSurrendered
  *
  * Public: No
  */

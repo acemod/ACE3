@@ -6,10 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Actions <ARRAY>
- *
- * Example:
- * [bob] call ace_explosives_fnc_addExplosiveActions
+ * Actions
  *
  * Public: No
  */

@@ -14,7 +14,6 @@ class CfgPatches {
     };
 };
 
-class CBA_Extended_EventHandlers;
 class CfgVehicles {
     class Logic;
     class Module_F: Logic {
@@ -24,7 +23,6 @@ class CfgVehicles {
     class ACE_Module: Module_F {
         class EventHandlers {
             init = QUOTE(_this call DFUNC(moduleInit));
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
     };
 };

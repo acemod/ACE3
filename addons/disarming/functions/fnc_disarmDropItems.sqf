@@ -10,7 +10,7 @@
  * 3: Do Not Drop Ammo <BOOL><OPTIONAL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player, cursorTarget, ["ace_bandage"]] call ace_disarming_fnc_disarmDropItems

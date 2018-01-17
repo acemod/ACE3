@@ -13,7 +13,8 @@
  * Example:
  * [logic, [unit1, unit2], true] call ace_advanced_throwing_fnc_moduleInit
  *
- * Public: No
+ * Public:
+ * No
  */
 #include "script_component.hpp"
 
@@ -29,4 +30,4 @@ if (!_activated) exitWith {};
 [_logic, QGVAR(enablePickUp), "enablePickUp"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(enablePickUpAttached), "enablePickUpAttached"] call EFUNC(common,readSettingFromModule);
 
-INFO_1("Advanced Throwing Module Initialized. Enabled: %1",GVAR(enabled));
+ACE_LOGINFO_1("Advanced Throwing Module Initialized. Enabled: %1",GVAR(enabled));

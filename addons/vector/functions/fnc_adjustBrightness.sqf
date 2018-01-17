@@ -1,19 +1,4 @@
-/*
- * Author: commy2
- *
- *
- * Arguments:
- * 0: Number <NUMBER>
- *
- * Return Value:
- * None
- *
- * Example:
- * [5] call ace_vector_fnc_adjustBrigthness
- *
- * Public: No
- */
-
+// by commy2
 #include "script_component.hpp"
 
 disableSerialization;

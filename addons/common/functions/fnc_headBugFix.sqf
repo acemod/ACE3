@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [] call ace_common_fnc_headBugFix
- *
  * Public: Yes
  *
  * Note: Has to be spawned not called

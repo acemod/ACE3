@@ -9,18 +9,16 @@ class CfgWeapons {
     class InventoryFlashLightItem_Base_F;
 
     class acc_pointer_IR: ItemCore {
-        MRT_SwitchItemNextClass = "ACE_acc_pointer_red";
-        MRT_SwitchItemPrevClass = "ACE_acc_pointer_red";
-        MRT_switchItemHintText = CSTRING(IRLaser);
+        ACE_nextModeClass = "ACE_acc_pointer_red";
+        ACE_modeDescription = CSTRING(IRLaser);
 
         displayName = CSTRING(red);
         descriptionUse = CSTRING(useLaser);
     };
 
     class ACE_acc_pointer_red: ItemCore {
-        MRT_SwitchItemNextClass = "acc_pointer_IR";
-        MRT_SwitchItemPrevClass = "acc_pointer_IR";
-        MRT_switchItemHintText = CSTRING(Laser);
+        ACE_nextModeClass = "acc_pointer_IR";
+        ACE_modeDescription = CSTRING(Laser);
 
         ACE_laserpointer = 1;
 
@@ -70,9 +68,8 @@ class CfgWeapons {
     };
 
     class ACE_acc_pointer_green_IR: acc_pointer_IR {
-        MRT_SwitchItemNextClass = "ACE_acc_pointer_green";
-        MRT_SwitchItemPrevClass = "ACE_acc_pointer_green";
-        MRT_switchItemHintText = CSTRING(IRLaser);
+        ACE_nextModeClass = "ACE_acc_pointer_green";
+        ACE_modeDescription = CSTRING(IRLaser);
 
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_green";
@@ -81,9 +78,8 @@ class CfgWeapons {
     };
 
     class ACE_acc_pointer_green: ACE_acc_pointer_red {
-        MRT_SwitchItemNextClass = "ACE_acc_pointer_green_IR";
-        MRT_SwitchItemPrevClass = "ACE_acc_pointer_green_IR";
-        MRT_switchItemHintText = CSTRING(Laser);
+        ACE_nextModeClass = "ACE_acc_pointer_green_IR";
+        ACE_modeDescription = CSTRING(Laser);
 
         ACE_laserpointer = 2;
 

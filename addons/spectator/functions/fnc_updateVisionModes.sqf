@@ -29,10 +29,6 @@
 
 #include "script_component.hpp"
 
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [DFUNC(updateVisionModes),_this];
-};
-
 params [["_addModes",[],[[]]], ["_removeModes",[],[[]]]];
 private ["_newModes","_currentModes"];
 

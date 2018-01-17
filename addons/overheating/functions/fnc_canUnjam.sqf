@@ -6,10 +6,7 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * Bool <BOOL>
- *
- * Example:
- * [bob] call ace_overheating_fnc_canUnjam
+ * Bool
  *
  * Public: No
  */

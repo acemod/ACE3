@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, "running"] call ace_common_fnc_handleEngine
- *
  * Public: No
  */
 #include "script_component.hpp"

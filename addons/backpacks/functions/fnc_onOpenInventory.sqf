@@ -7,10 +7,7 @@
  * 1: Backpack <OBJECT>
  *
  * Return Value:
- * false. Always open the inventory dialog. <BOOL>
- *
- * Example:
- * [bob, backpack] call ace_backpacks_fnc_onOpenInventory
+ * false. Always open the inventory dialog. (Bool)
  *
  * Public: No
  */

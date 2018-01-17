@@ -3,13 +3,12 @@
  * DAGR data output loop
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
- * call ace_dagr_fnc_outputData
  *
  * Public: No
  */

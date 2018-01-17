@@ -6,11 +6,8 @@
  * 0: The Unit <OBJECT>
  * 1: Global Sync Values (bloodbags) <BOOL>
  *
- * Return Value:
+ * ReturnValue:
  * Blood volume change (in % total) <NUMBER>
- *
- * Example:
- * [bob, true] call ACE_medical_fnc_getBloodVolumeChange
  *
  * Public: No
  */

@@ -7,9 +7,6 @@
  *
  * Return Value:
  * Parent Entry Class Children <ARRAY>
-
- * Example:
- * [bob] call ace_common_fnc_getChildren
  *
  * Public: Yes
  */

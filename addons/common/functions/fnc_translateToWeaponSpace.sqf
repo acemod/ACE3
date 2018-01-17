@@ -1,17 +1,14 @@
 /*
- * Author: ACE-Team
+ * Author: ?
  * ?
  *
  * Arguments:
- * <UNKOWN>
+ * ?
  *
  * Return Value:
- * Unknown <UNKNOWN>
+ * ?
  *
- * Example:
- * [UNKOWN] call ace_common_fnc_translateToWeaponSpace
- *
- * Public: No
+ * Public: ?
  */
 #include "script_component.hpp"
 

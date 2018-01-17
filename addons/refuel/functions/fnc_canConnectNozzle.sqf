@@ -26,7 +26,6 @@ if (_target isKindOf "AllVehicles") then {
 };
 
 !(isNull _nozzle ||
-    {!alive _target} ||
     {_engine} ||
-    {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
-    {!isNull (_target getVariable [QGVAR(nozzle), objNull])})
+    {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
+    {!isNull (_target getVariable [QGVAR(nozzle), objNull])}) // TODO verify cant connect multiple fuel lines

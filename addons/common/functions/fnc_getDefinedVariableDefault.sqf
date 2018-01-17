@@ -8,9 +8,6 @@
  * Return Value:
  * Default value of variable <ANY>
  *
- * Example:
- * ["name"] call ace_common_fnc_getDefinedVariableDefault
- *
  * Public: Yes
  */
 #include "script_component.hpp"

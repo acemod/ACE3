@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, flag, true] call ace_common_fnc_claim
- *
  * Public: No
  */
 #include "script_component.hpp"
@@ -22,7 +19,7 @@ params ["_unit", "_target", ["_lockTarget", false]];
 private _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
-    ERROR("Claiming already owned object.");
+    ACE_LOGERROR("Claiming already owned object.");
 };
 
 // transfer this immediately

@@ -11,9 +11,6 @@
  * Return Value:
  * Active children <ARRAY>
  *
- * Example:
- * [bob, [array], [array], 5] call ACE_interact_menu_fnc_collectActoveActionTree
- *
  * Public: No
  */
 #include "script_component.hpp"

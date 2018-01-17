@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [CONTROL, 5, "text"] call ACE_interact_menu_fnc_ctrlSetParsedTextCached
- *
  * Public: No
  */
 #include "script_component.hpp"

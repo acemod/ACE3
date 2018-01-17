@@ -3,9 +3,9 @@
  * Calculate the distance to the first intersection of a line
  *
  * Arguments:
- * 0: Pos ASL of origin <ARRAY>
+ * 0: Pos ASL of origin (ARRAY>
  * 1: Direction <ARRAY>
- * 2: Max distance to search <NUMBER>
+ * 2: Max distance to search <Number>
  * 3: Shooter <OBJECT>
  *
  * Return Value:
@@ -38,7 +38,7 @@ private _distance = 999;
 
         if (isNull _intersectObject) then {  //Terrain:
             // Calculate the angle between the terrain and the back blast direction
-            private _angle = 90 - acos (- (_surfaceNormal vectorDotProduct _direction));
+            _angle = 90 - acos (- (_surfaceNormal vectorDotProduct _direction));
             TRACE_3("Terrain Intersect",_surfaceNormal,_direction,_angle);
             // Angles is below 25deg, no backblast at all
             if (_angle < 25) exitWith {_distance = 999};

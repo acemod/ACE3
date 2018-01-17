@@ -3,14 +3,11 @@
  * Create one action per reloadable missile
  *
  * Arguments:
- * 1: Target <OBJECT>
- * 0: Player <OBJECT>
+ * 1: Target (Object)
+ * 0: Player (Object)
  *
  * Return Value:
- * Children actions <ARRAY>
- *
- * Example:
- * [bob, kevin] call ace_reloadlaunchers_fnc_addMissileReloadActions
+ * Children actions (Array)
  *
  * Public: No
  *

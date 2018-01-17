@@ -5,28 +5,22 @@
  * Sets dirt/rain overlay for glasses.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Glasses classname to be applied <STRING>
+ * 0: Glasses classname to be applied <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ace_player, goggles ace_player] call ace_goggles_fnc_applyGlassesEffect
+ * [goggles ace_player] call ace_goggles_fnc_applyGlassesEffect
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_player", "_glasses"];
-TRACE_2("applyGlassesEffect",_player,_glasses);
+params ["_glasses"];
 
 // remove old effect
 call FUNC(removeGlassesEffect);
-
-if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _player) >> "isPlayableLogic")) == 1) exitWith {
-    TRACE_1("skipping playable logic",typeOf _player); // VirtualMan_F (placeable logic zeus / spectator)
-};
 
 private ["_config", "_postProcessColour", "_postProcessTintAmount", "_imagePath"];
 

@@ -11,9 +11,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, thing, "thing"] call ace_overheating_fnc_handleTakeEH
- *
  * Public: No
  */
 #include "script_component.hpp"

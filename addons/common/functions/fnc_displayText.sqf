@@ -11,9 +11,6 @@
  * Return Value:
  * None
  *
- * Example:
- * ["Message", true, 5, 2] call ace_common_fnc_displayText
- *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  * 1: Item classname <STRING>
  *
- * Return Value:
+ * ReturnValue:
  * [Had Item to Use <BOOL>, Unit <OBJECT>] <ARRAY>
  *
  * Example:

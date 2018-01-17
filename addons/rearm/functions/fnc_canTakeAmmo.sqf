@@ -10,21 +10,16 @@
  * Can Pick Up Ammo <BOOL>
  *
  * Example:
- * [ammo_truck, player] call ace_rearm_fnc_canTakeAmmo
+ * [player, tank] call ace_rearm_fnc_canTakeAmmo
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_unit", objNull, [objNull]]
-];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
-(alive _unit)
-&& {_unit isKindOf "CAManBase"}
-&& {local _unit}
-&& {alive _truck}
-&& {(_truck distance _unit) < REARM_ACTION_DISTANCE}
-&& {isNull (_unit getVariable [QGVAR(dummy), objNull])}
-&& {[_unit, _truck, ["IsNotInside"]] call EFUNC(common,canInteractWith)} // manually added actions need this
+!(isNull _unit ||
+    {!(_unit isKindOf "CAManBase")} ||
+    {!local _unit} ||
+    {(_target distance _unit) > REARM_ACTION_DISTANCE} ||
+    {!isNull (_unit getVariable [QGVAR(dummy), objNull])})

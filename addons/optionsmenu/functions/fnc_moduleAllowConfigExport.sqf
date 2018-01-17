@@ -3,13 +3,10 @@
  *
  *
  * Arguments:
- * None
+ * none
  *
  * Return Value:
  * None
- *
- * Example:
- * call ace_optionsmenu_fnc_moduleAllowConfigExport
  *
  * Public: No
  */

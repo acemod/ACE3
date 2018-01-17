@@ -8,9 +8,6 @@
  * Return Value:
  * None
  *
- * Example:
- * call ACE_interact_menu_fnc_setupTextColor
- *
  * Public: No
  */
 #include "script_component.hpp"

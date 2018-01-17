@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * ["ID", {Condition}] call ace_common_fnc_addCanInteractWithCondition
- *
  * Public: No
  */
 #include "script_component.hpp"

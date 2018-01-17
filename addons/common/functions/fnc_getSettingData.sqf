@@ -6,7 +6,7 @@
  * 0: Setting Name <STRING>
  *
  * Return Value:
- * Setting Data <ARRAY>
+ * Setting Data (Array)
  * 0: Name <STRING>
  * 1: Type Name <STRING>
  * 2: Is Client Settable <BOOL>
@@ -16,9 +16,6 @@
  * 6: Is Forced <BOOL>
  * 7: Default Value <ANY>
  * 8: Localized Category <STRING>
- *
- * Example:
- * ["setting"] call ace_common_fnc_getSettingData
  *
  * Public: No
  */

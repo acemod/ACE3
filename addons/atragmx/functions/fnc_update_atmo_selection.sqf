@@ -3,10 +3,10 @@
  * Updates the atmospheric data input method
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_update_atmo_selection

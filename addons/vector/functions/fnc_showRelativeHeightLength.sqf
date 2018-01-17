@@ -1,19 +1,4 @@
-/*
- * Author: commy2
- *
- *
- * Arguments:
- * None
- *
- * Return Value:
- * None
- *
- * Example:
- * call ace_vector_fnc_showRelativeHeightLength
- *
- * Public: No
- */
-
+// by commy2
 #include "script_component.hpp"
 
 disableSerialization;

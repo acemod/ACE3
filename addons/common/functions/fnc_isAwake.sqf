@@ -8,9 +8,6 @@
  * Return Value:
  * if unit is awake <BOOL>
  *
- * Example:
- * [bob] call ace_common_fnc_isAwake
- *
  * Public: Yes
  */
 #include "script_component.hpp"

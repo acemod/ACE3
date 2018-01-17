@@ -3,13 +3,10 @@
  * Check if given unit is in a transitional animation
  *
  * Arguments:
- * 0: A soldier <OBJECT>
+ * 0: A soldier <Object>
  *
  * Return Value:
- * Boolean <BOOL>
- *
- * Example:
- * [bob] call ace_common_fnc_inTransitionAnim
+ * <Bool>
  *
  * Public: Yes
  */

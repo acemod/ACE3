@@ -8,7 +8,7 @@
  * 2: Inclination (Degrees) <NUMBER>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [1000, 45, 1] call ace_microdagr_fnc_recieveRangefinderData
@@ -16,8 +16,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-if (!GVAR(initialised)) exitWith {};
 
 params ["_slopeDistance", "_azimuth", "_inclination"];
 

@@ -18,3 +18,7 @@ class CfgPatches {
 
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+class ACE_newEvents {
+    reloadLauncher = QGVAR(reloadLauncher);
+};

@@ -7,7 +7,7 @@
  * 1: Player <OBJECT>
  * 2: Parameters <ARRAY>
  *
- * Return Value:
+ * Return value:
  * None
  *
  * Example:
@@ -29,7 +29,7 @@ private _chemlights = [_player] call FUNC(getShieldComponents);
     private _icon = getText (_config >> "picture");
     private _shieldClass = getText (_config >> "ACE_Chemlight_Shield");
     private _displayName = getText (configFile >> "CfgWeapons" >> _shieldClass >> "displayName");
-
+    
     _displayName = format [localize LSTRING(Action_Prepare), _displayName];
     private _statement = {_this call FUNC(prepShield)};
 

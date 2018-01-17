@@ -3,13 +3,10 @@
  * Checks if a vehicle is equipped with an FCS and if so, adds the fired event handler. Execute on server.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Vehicle
  *
  * Return Value:
- * None
- *
- * Example:
- * [car] call ace_fcs_fnc_vehicleInit
+ * none
  *
  * Public: No
  */

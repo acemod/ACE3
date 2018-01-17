@@ -3,10 +3,10 @@
  * Creates the DAGR menu dialog
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  *

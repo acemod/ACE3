@@ -3,7 +3,6 @@ class ACE_ZeusActions {
     class ZeusUnits {
         displayName = "$STR_A3_RscDisplayCurator_ModeUnits_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
-        condition = QUOTE((count (curatorSelected select 0)) > 0);
 
         class stance {
             displayName = "$STR_A3_RscAttributeUnitPos_Title";
@@ -11,22 +10,22 @@ class ACE_ZeusActions {
             class prone {
                 displayName = "$STR_Pos_Down";
                 icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusStance),[ARR_2('DOWN',curatorSelected select 0)],curatorSelected select 0)] call CBA_fnc_targetEvent;);
+                statement = "{_x setUnitPos 'DOWN';} forEach (curatorSelected select 0);";
             };
             class crouch {
                 displayName = "$STR_Pos_Crouch";
                 icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusStance),[ARR_2('MIDDLE',curatorSelected select 0)],curatorSelected select 0)] call CBA_fnc_targetEvent;);
+                statement = "{_x setUnitPos 'MIDDLE';} forEach (curatorSelected select 0);";
             };
             class stand {
                 displayName = "$STR_Pos_Up";
                 icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusStance),[ARR_2('UP',curatorSelected select 0)],curatorSelected select 0)] call CBA_fnc_targetEvent;);
+                statement = "{_x setUnitPos 'UP';} forEach (curatorSelected select 0);";
             };
             class auto {
                 displayName = "$STR_Pos_Automatic";
                 icon = "\A3\UI_F_Curator\Data\default_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusStance),[ARR_2('AUTO',curatorSelected select 0)],curatorSelected select 0)] call CBA_fnc_targetEvent;);
+                statement = "{_x setUnitPos 'AUTO';} forEach (curatorSelected select 0);";
             };
         };
 
@@ -40,34 +39,33 @@ class ACE_ZeusActions {
     class ZeusGroups {
         displayName = "$STR_A3_RscDisplayCurator_ModeGroups_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
-        condition = QUOTE((count (curatorSelected select 1)) > 0);
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
 
             class careless {
                 displayName = "$STR_Combat_Careless";
-                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('CARELESS',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{ _x setBehaviour 'CARELESS'; } forEach (curatorSelected select 1);";
             };
             class safe {
                 displayName = "$STR_Combat_Safe";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('CARELESS',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{ _x setBehaviour 'SAFE'; } forEach (curatorSelected select 1);";
             };
             class aware {
                 displayName = "$STR_Combat_Aware";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('AWARE',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{ _x setBehaviour 'AWARE'; } forEach (curatorSelected select 1);";
             };
             class combat {
                 displayName = "$STR_Combat_Combat";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('COMBAT',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{ _x setBehaviour 'COMBAT'; } forEach (curatorSelected select 1);";
             };
             class stealth {
                 displayName = "$STR_Combat_Stealth";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('STEALTH',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{ _x setBehaviour 'STEALTH'; } forEach (curatorSelected select 1);";
             };
         };
 
@@ -77,17 +75,17 @@ class ACE_ZeusActions {
             class limited {
                 displayName = "$STR_Speed_Limited";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusSpeed),[ARR_2('LIMITED',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setSpeedMode 'LIMITED';} forEach (curatorSelected select 1);";
             };
             class normal {
                 displayName = "$STR_Speed_Normal";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusSpeed),[ARR_2('NORMAL',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setSpeedMode 'NORMAL';} forEach (curatorSelected select 1);";
             };
             class full {
                 displayName = "$STR_Speed_Full";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusSpeed),[ARR_2('FULL',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setSpeedMode 'FULL';} forEach (curatorSelected select 1);";
             };
         };
 
@@ -97,47 +95,47 @@ class ACE_ZeusActions {
             class wedge {
                 displayName = "$STR_Wedge";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('WEDGE',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'WEDGE';} forEach (curatorSelected select 1);";
             };
             class vee {
                 displayName = "$STR_Vee";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('VEE',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'VEE';} forEach (curatorSelected select 1);";
             };
             class line {
                 displayName = "$STR_Line";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('LINE',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'LINE';} forEach (curatorSelected select 1);";
             };
             class column {
                 displayName = "$STR_Column";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('COLUMN',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'COLUMN';} forEach (curatorSelected select 1);";
             };
             class file {
                 displayName = "$STR_File";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('FILE',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'FILE';} forEach (curatorSelected select 1);";
             };
             class stag_column {
                 displayName = "$STR_Staggered";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('STAG COLUMN',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'STAG COLUMN';} forEach (curatorSelected select 1);";
             };
             class ech_left {
                 displayName = "$STR_EchL";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('ECH LEFT',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'ECH LEFT';} forEach (curatorSelected select 1);";
             };
             class ech_right {
                 displayName = "$STR_EchR";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('ECH RIGHT',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'ECH RIGHT';} forEach (curatorSelected select 1);";
             };
             class diamond {
                 displayName = "$STR_Diamond";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusFormation),[ARR_2('DIAMOND',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = "{_x setFormation 'DIAMOND';} forEach (curatorSelected select 1);";
             };
         };
     };
@@ -145,34 +143,33 @@ class ACE_ZeusActions {
     class ZeusWaypoints {
         displayName = "Waypoints";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeRecent_ca.paa";
-        condition = QUOTE((count (curatorSelected select 2)) > 0);
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
 
             class careless {
                 displayName = "$STR_Combat_Careless";
-                statement = QUOTE([ARR_2(QQGVAR(zeusBehaviour),[ARR_3('CARELESS',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointBehaviour 'CARELESS'; } forEach (curatorSelected select 2);";
             };
             class safe {
                 displayName = "$STR_Combat_Safe";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusBehaviour),[ARR_3('SAFE',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointBehaviour 'SAFE'; } forEach (curatorSelected select 2);";
             };
             class aware {
                 displayName = "$STR_Combat_Aware";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\aware_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusBehaviour),[ARR_3('AWARE',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointBehaviour 'AWARE'; } forEach (curatorSelected select 2);";
             };
             class combat {
                 displayName = "$STR_Combat_Combat";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\combat_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusBehaviour),[ARR_3('COMBAT',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointBehaviour 'COMBAT'; } forEach (curatorSelected select 2);";
             };
             class stealth {
                 displayName = "$STR_Combat_Stealth";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\stealth_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusBehaviour),[ARR_3('STEALTH',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointBehaviour 'STEALTH'; } forEach (curatorSelected select 2);";
             };
         };
 
@@ -182,17 +179,17 @@ class ACE_ZeusActions {
             class limited {
                 displayName = "$STR_Speed_Limited";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeSpeedMode\limited_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusSpeed),[ARR_3('LIMITED',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointSpeed 'LIMITED'; } forEach (curatorSelected select 2);";
             };
             class normal {
                 displayName = "$STR_Speed_Normal";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeSpeedMode\normal_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusSpeed),[ARR_3('NORMAL',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointSpeed 'NORMAL'; } forEach (curatorSelected select 2);";
             };
             class full {
                 displayName = "$STR_Speed_Full";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeSpeedMode\full_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusSpeed),[ARR_3('FULL',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{ _x setWaypointSpeed 'FULL'; } forEach (curatorSelected select 2);";
             };
         };
 
@@ -202,47 +199,47 @@ class ACE_ZeusActions {
             class wedge {
                 displayName = "$STR_Wedge";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('WEDGE',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'WEDGE';} forEach (curatorSelected select 2);";
             };
             class vee {
                 displayName = "$STR_Vee";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('VEE',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'VEE';} forEach (curatorSelected select 2);";
             };
             class line {
                 displayName = "$STR_Line";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('LINE',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'LINE';} forEach (curatorSelected select 2);";
             };
             class column {
                 displayName = "$STR_Column";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('COLUMN',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'COLUMN';} forEach (curatorSelected select 2);";
             };
             class file {
                 displayName = "$STR_File";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('FILE',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'FILE';} forEach (curatorSelected select 2);";
             };
             class stag_column {
                 displayName = "$STR_Staggered";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('COLUMN',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'STAG COLUMN';} forEach (curatorSelected select 2);";
             };
             class ech_left {
                 displayName = "$STR_EchL";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('LEFT',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'ECH LEFT';} forEach (curatorSelected select 2);";
             };
             class ech_right {
                 displayName = "$STR_EchR";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('RIGHT',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'ECH RIGHT';} forEach (curatorSelected select 2);";
             };
             class diamond {
                 displayName = "$STR_Diamond";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
-                statement = QUOTE([ARR_2(QQGVAR(zeusFormation),[ARR_3('DIAMOND',curatorSelected select 2,true)])] call CBA_fnc_serverEvent;);
+                statement = "{_x setWaypointFormation 'DIAMOND';} forEach (curatorSelected select 2);";
             };
         };
     };
@@ -250,6 +247,5 @@ class ACE_ZeusActions {
     class ZeusMarkers {
         displayName = "$STR_A3_RscDisplayCurator_ModeMarkers_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeMarkers_ca.paa";
-        condition = QUOTE((count (curatorSelected select 3)) > 0);
     };
 };

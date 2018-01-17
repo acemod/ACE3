@@ -3,16 +3,13 @@
  * Calculate FCS solution
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
- * 1: Turret <ARRAY>
- * 2: Target distance <NUMBER>
- * 3: Azimuth offset <UNKNOWN>
+ * 0: Vehicle
+ * 1: Turret
+ * 2: Target distance
+ * 3: Azimuth offset
  *
  * Return Value:
  * None
- *
- * Example:
- * [car, [turret], 5, ?] call ace_fcs_fnc_calculateSolution
  *
  * Public: No
  */
@@ -20,7 +17,6 @@
 params ["_vehicle","_turret","_distance","_angleTarget"];
 TRACE_4("params",_vehicle,_turret,_distance,_angleTarget);
 
-private _FCSInitSpeed = [];
 private _FCSMagazines = [];
 private _FCSElevation = [];
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
@@ -68,7 +64,6 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
         private _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
 
-        _FCSInitSpeed pushBack _initSpeed;
         _FCSMagazines pushBack _magazine;
         _FCSElevation pushBack _offset;
     };
@@ -76,6 +71,5 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
 } count (_vehicle magazinesTurret _turret);
 
 [_vehicle, format ["%1_%2", QGVAR(Distance),  _turret],     _distance] call EFUNC(common,setVariablePublic);
-[_vehicle, format ["%1_%2", QGVAR(InitSpeed), _turret], _FCSInitSpeed] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Magazines), _turret], _FCSMagazines] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call EFUNC(common,setVariablePublic);

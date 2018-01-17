@@ -7,10 +7,7 @@
  * 1: Treatment Classname <STRING>
  *
  * Return Value:
- * None
- *
- * Example:
- * [bob, "classname"] call ACE_medical_fnc_treatmentBasic_bloodbagLocal
+ * nil
  *
  * Public: No
  */

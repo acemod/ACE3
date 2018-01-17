@@ -21,5 +21,3 @@ TRACE_3("Params",_posX,_posY,_posZ);
 private _flare = "ACE_TripFlare_FlareEffect" createVehicle [_posX,_posY,_posZ];
 
 TRACE_1("",_flare);
-
-nil

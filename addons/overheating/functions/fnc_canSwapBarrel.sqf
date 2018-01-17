@@ -5,12 +5,8 @@
  * Arguments:
  * 0: Player <OBJECT>
  * 1: Weapon <STRING>
- *
  * Return Value:
- * Bool <BOOL>
- *
- * Example:
- * [bob, "weapon"] call ace_overheating_fnc_canSwapBarrel
+ * Bool
  *
  * Public: No
  */

@@ -3,10 +3,10 @@
  * Updates all input fields based on the currently selected target
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_update_target_selection

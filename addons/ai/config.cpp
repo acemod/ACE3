@@ -14,4 +14,5 @@ class CfgPatches {
     };
 };
 
+#include "CfgAISkill.hpp"
 #include "CfgWeapons.hpp"

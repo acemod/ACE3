@@ -6,16 +6,12 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * Bool <BOOL>
- *
- * Example:
- * [bob] call ace_overheating_fnc_canCheckSpareBarrelsTemperatures
+ * Bool
  *
  * Public: No
  */
 #include "script_component.hpp"
-
-params ["_player"];
+params ["_unit"];
 
 //Get the classname of the spare barrel for the weapon
 private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(barrelClassname));

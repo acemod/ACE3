@@ -9,9 +9,6 @@
  * Return Value:
  * has Item <BOOL>
  *
- * Example:
- * [[bob, "item"] call ace_common_fnc_hasItem
- *
  * Public: yes
  *
  * Note: Case sensitive

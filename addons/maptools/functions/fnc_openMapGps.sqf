@@ -6,10 +6,7 @@
  * 0: Open GPS? <BOOL>
  *
  * Return Value:
- * None
- *
- * Example:
- * [true] call ACE_maptools_fnc_openMapGps
+ * Nothing
  *
  * Public: No
  */

@@ -12,9 +12,6 @@
  * Return Value:
  * None <NIL>
  *
- * Example:
- * [bob, "leg", 1, kevin, "shot"] call ACE_medical_fnc_handleDamage_woundsOld
- *
  * Public: No
  */
 

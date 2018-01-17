@@ -1,31 +1,44 @@
 class CfgVehicles {
     class All;
+
     class LaserTarget: All {
         // @TODO: Changing the model and simulation hides it, but THEN IT DOESNT SPAWN WTF!?
-        // model = "\A3\Weapons_F\empty.p3d";
+        model = "\A3\Weapons_F\empty.p3d";
+        destrType = "DestructNo";
+        simulation = "LaserTarget";
 
         class EventHandlers {
-            class ADDON {
-                init = QUOTE(_this call FUNC(handleLaserTargetCreation));
-            };
+            init = QUOTE(_this call FUNC(laser_init));
         };
     };
 
-    // laserTarget fails if the turret does not have "primaryGunner" config
-    // This only effects the indfor strider who's commander is not the primaryGunner
-    class LandVehicle;
-    class Car: LandVehicle {
-        class NewTurret;
+    // Visual laserTarget override
+    class ACE_LaserTarget_Visual : LaserTarget {
+        simulation = "LaserTarget";
+        model = "\A3\Weapons_f\laserTgt.p3d";
     };
-    class Car_F: Car {
+
+    // Vehicle lockable configurations
+
+    class AllVehicles;
+    class Air: AllVehicles {
+        class Turrets;
+    };
+
+    class Helicopter: Air {
         class Turrets {
-            class MainTurret: NewTurret {};
+            class MainTurret;
         };
     };
-    class MRAP_03_base_F: Car_F {
+
+    class Helicopter_Base_F: Helicopter {};
+
+    class Heli_Attack_01_base_F: Helicopter_Base_F {};
+
+    class B_Heli_Attack_01_F: Heli_Attack_01_base_F {
         class Turrets: Turrets {
-            class CommanderTurret: MainTurret {
-                primaryGunner = 1;
+            class MainTurret: MainTurret {
+                GVAR(CanLockLaser) = 1;      // Enable laser locking selection
             };
         };
     };

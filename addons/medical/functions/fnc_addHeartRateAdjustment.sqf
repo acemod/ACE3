@@ -11,9 +11,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, 1, 5, {callback}] call ace_medical_fnc_addHeartRateAdjustment
- *
  * Public: Yes
  */
 

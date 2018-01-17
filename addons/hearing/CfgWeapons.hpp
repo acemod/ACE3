@@ -13,42 +13,42 @@ class CfgWeapons {
         };
     };
 
-    #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
-    #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
-    #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
-
     class H_HelmetB;
     class H_HelmetCrew_B: H_HelmetB {
-        HEARING_PROTECTION_VICCREW
+        GVAR(protection) = 1;
+        GVAR(lowerVolume) = 0.80;
     };
 
     class H_CrewHelmetHeli_B: H_HelmetB {
-        HEARING_PROTECTION_VICCREW
+        GVAR(protection) = 0.85;
+        GVAR(lowerVolume) = 0.75;
     };
 
     class H_PilotHelmetHeli_B: H_HelmetB {
-        HEARING_PROTECTION_VICCREW
+        GVAR(protection) = 0.85;
+        GVAR(lowerVolume) = 0.75;
     };
 
     class H_PilotHelmetFighter_B: H_HelmetB {
-        HEARING_PROTECTION_VICCREW
+        GVAR(protection) = 1;
+        GVAR(lowerVolume) = 0.80;
     };
 
     class HelmetBase;
     class H_Cap_headphones: HelmetBase {
-        HEARING_PROTECTION_EARMUFF
+        GVAR(protection) = 0.5;
+        GVAR(lowerVolume) = 0.60;
     };
 
     class H_HelmetB_light: H_HelmetB {
-        HEARING_PROTECTION_PELTOR
-    };
-    class H_HelmetB_camo: H_HelmetB {
-        HEARING_PROTECTION_PELTOR
+        GVAR(protection) = 0.8;
+        GVAR(lowerVolume) = 0.20;
     };
 
     class H_HelmetB_plain_mcamo;
     class H_HelmetSpecB: H_HelmetB_plain_mcamo {
-        HEARING_PROTECTION_PELTOR
+        GVAR(protection) = 0.8;
+        GVAR(lowerVolume) = 0.20;
     };
 
 };

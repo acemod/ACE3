@@ -3,10 +3,10 @@
  * Cycles through the target directions left/right
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_cycle_target_direction

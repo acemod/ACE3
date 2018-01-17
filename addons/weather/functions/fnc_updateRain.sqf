@@ -3,10 +3,10 @@
  * Updates rain based on ACE_RAIN_PARAMS
  *
  * Arguments:
- * None
+ * Nothing
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [] call ace_weather_fnc_updateRain

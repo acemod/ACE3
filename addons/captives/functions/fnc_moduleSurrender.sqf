@@ -9,7 +9,7 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [objNull, [player], true] call ace_captives_fnc_moduleSurrender

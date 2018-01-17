@@ -1,5 +1,5 @@
 
-PREP(calculateRangeCard);
+PREP(calculateSolution);
 PREP(canCopy);
 PREP(canShow);
 PREP(canShowCopy);

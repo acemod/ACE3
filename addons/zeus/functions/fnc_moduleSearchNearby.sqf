@@ -8,10 +8,7 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * None
- *
- * Example:
- * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleSearchNearby
+ * None <NIL>
  *
  * Public: No
  */
@@ -30,7 +27,7 @@ scopeName "Main";
 private _fnc_errorAndClose = {
     params ["_msg"];
     deleteVehicle _logic;
-    [_msg] call FUNC(showMessage);
+    [_msg] call EFUNC(common,displayTextStructured);
     breakOut "Main";
 };
 

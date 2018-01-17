@@ -32,5 +32,5 @@ _dummy setPosATL _pos;
 _dummy setVelocity _velocity;
 
 if (_replaceAdvThrowable) then {
-    ACE_player setVariable [QEGVAR(advanced_throwing,activeThrowable), _dummy];
+    ace_player setVariable [QEGVAR(advancedThrowing,activeThrowable), _dummy];
 };

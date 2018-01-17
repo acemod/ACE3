@@ -69,7 +69,7 @@ class ACE_Settings {
         displayName = CSTRING(simulationInterval_DisplayName);
         description = CSTRING(simulationInterval_Description);
         typeName = "SCALAR";
-        value = 0.05;
+        value = 0.0;
     };
     class GVAR(simulationRadius) {
         category = CSTRING(DisplayName);

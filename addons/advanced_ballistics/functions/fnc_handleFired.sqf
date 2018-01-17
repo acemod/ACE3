@@ -9,9 +9,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [] call ace_advanced_ballistics_fnc_handleFired
- *
  * Public: No
  */
 #include "script_component.hpp"
@@ -44,6 +41,12 @@ if (!GVAR(simulateForEveryone) && !(local _unit)) then {
 };
 //if (!GVAR(vehicleGunnerEnabled) && !(_unit isKindOf "Man")) then { _abort = true; }; // We currently do not have firedEHs on vehicles
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "CfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
+
+if (_abort || !(GVAR(extensionAvailable))) exitWith {
+    if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
+        EGVAR(windDeflection,trackedBullets) pushBack [_projectile, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
+    };
+};
 
 // Get Weapon and Ammo Configurations
 _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
@@ -80,12 +83,6 @@ if (GVAR(ammoTemperatureEnabled) || GVAR(barrelLengthInfluenceEnabled)) then {
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _projectile setVelocity _bulletVelocity;
-    };
-};
-
-if (_abort || !(GVAR(extensionAvailable))) exitWith {
-    if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
-        EGVAR(windDeflection,trackedBullets) pushBack [_projectile, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
     };
 };
 

@@ -6,7 +6,7 @@
  * target <NUMBER>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * 2 call ace_atragmx_fnc_change_target_slot
@@ -17,8 +17,9 @@
 
 private _target = 0 max _this min 3;
 
-[] call FUNC(parse_input);
+call FUNC(parse_input);
 
 GVAR(currentTarget) = _target;
 call FUNC(update_target_selection);
-call FUNC(calculate_target_solution);
+
+[] call FUNC(calculate_target_solution);

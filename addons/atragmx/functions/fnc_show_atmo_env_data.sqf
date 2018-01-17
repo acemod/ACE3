@@ -6,7 +6,7 @@
  * visible - <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * false call ace_atragmx_fnc_show_atmo_env_data

@@ -6,7 +6,7 @@
  * Apply new data? <NUMBER>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_atmo_env_data
@@ -20,11 +20,7 @@ if (ctrlVisible 13000) then {
     true call FUNC(show_main_page);
 
     if (_this == 1) then {
-        GVAR(truingDropDropData) set [0, 0];
-        [true, true] call FUNC(recalculate_muzzle_velocity);
         call FUNC(calculate_target_solution);
-    } else {
-        call FUNC(update_atmo_env_data);
     };
 } else {
     true call FUNC(show_atmo_env_data);

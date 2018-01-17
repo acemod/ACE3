@@ -7,11 +7,6 @@
  *
  * Return Value:
  * None
- *
- * Example:
- * [] call ace_nametags_fnc_moduleNameTags
- *
- * Public: No
  */
 
 #include "script_component.hpp"
@@ -38,4 +33,4 @@ if ((_logic getVariable "showVehicleCrewInfo") != -1) then {
     [_logic, QGVAR(showVehicleCrewInfo),  "showVehicleCrewInfo"         ] call EFUNC(common,readSettingFromModule);
 };
 
-INFO("Nametags Module Initialized.");
+ACE_LOGINFO("Nametags Module Initialized.");

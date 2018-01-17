@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
- * Return Value:
+ * ReturnValue:
  * Is engineering vehicle <BOOL>
  *
  * Example:

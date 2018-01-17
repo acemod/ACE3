@@ -6,7 +6,7 @@
  * 0: Value to attempt to convert to number or if number simply return number. <STRING, NUMBER>
  *
  * Return Value:
- * Number <NUMBER>
+ * <NUMBER>
  *
  * Example:
  * number = ["102"] call ace_common_fnc_toNumber;

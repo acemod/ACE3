@@ -7,7 +7,7 @@
  * 1: UAV <OBJECT>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player, theUAV] call ace_logistics_uavbattery_fnc_refuelUAV

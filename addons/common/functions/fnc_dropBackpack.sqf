@@ -8,9 +8,6 @@
  * Return Value:
  * Ground wepaon holder with backpack <OBJECT>
  *
- * Example:
- * [unit] call ace_common_fnc_dropBackpack
- *
  * Public: Yes
  */
 #include "script_component.hpp"

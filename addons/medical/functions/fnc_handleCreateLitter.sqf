@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * ["litter", [2, 5, 6], bob] call ACE_medical_fnc_handleCreateLitter
- *
  * Public: No
  */
 #include "script_component.hpp"

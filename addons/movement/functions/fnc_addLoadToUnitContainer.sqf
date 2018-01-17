@@ -10,9 +10,6 @@
  * Return Value:
  * Success? <BOOLEAN>
  *
- * Example:
- * [bob, box, 5] call ace_movement_fnc_addLoadToUnitContainer
- *
  * Public: No
  */
 #include "script_component.hpp"

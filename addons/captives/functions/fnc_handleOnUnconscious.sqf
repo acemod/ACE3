@@ -7,7 +7,7 @@
  * 0: Is Unconsisisiouses <BOOL>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [bob, true] call ACE_captives_fnc_handleOnUnconscious

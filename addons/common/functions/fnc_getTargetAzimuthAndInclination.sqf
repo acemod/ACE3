@@ -9,9 +9,6 @@
  * 0: Azimuth <NUMBER>
  * 1: Inclination <NUMBER>
  *
- * Example:
- * [] call ace_common_fnc_getTargetAzimuthAndInclination
- *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -10,9 +10,6 @@
  * Return Value:
  * None
  *
- * Example:
- * [CONTROL, 5] call ACE_inventory_fnc_onLBSelChanged
- *
  * Public: No
  */
 #include "script_component.hpp"

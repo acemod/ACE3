@@ -8,15 +8,11 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob] call ace_common_fnc_setName
- *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit"];
-TRACE_3("setName",_unit,alive _unit,name _unit);
 
 if (isNull _unit || {!alive _unit}) exitWith {};
 

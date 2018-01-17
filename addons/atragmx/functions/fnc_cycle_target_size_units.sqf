@@ -6,7 +6,7 @@
  * step <NUMBER>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * call ace_atragmx_fnc_cycle_target_size_units
