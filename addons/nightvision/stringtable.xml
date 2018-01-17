@@ -258,13 +258,21 @@
             <Italian>Effetto livello NVG</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
-            <English>Blur, grain and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
+            <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
             <Japanese>ぼかしと粒子、明度効果 [0 に設定で全効果を無効化します]</Japanese>
-            <Italian>Effetti di sfocatura, sgranatura e luminosità [Importare a 0 disabiliterà TUTTI gli effetti della visione notturna]</Italian>
+            <Italian>Effetti di sfocatura e luminosità [Importare a 0 disabiliterà TUTTI gli effetti della visione notturna]</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
             <Japanese>照準器を使用時にぼかし</Japanese>
+        </Key>
+        <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
+            <English>NVG Noise Scale</English>
+            <German>Intensität des Bildrauschens</German>
+        </Key>
+        <Key ID="STR_ACE_NightVision_noiseScaling_Description">
+            <English>Image noise intensity when wearing NVGs</English>
+            <German>Intensität des Bildrauschens im Nachtsichtgerät</German>
         </Key>
     </Package>
 </Project>

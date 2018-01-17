@@ -23,7 +23,7 @@ GVAR(ppeffectBlur) = -1;
 
 
 ["ace_settingsInitialized", {
-    TRACE_3("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(effectScaling));
+    TRACE_4("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
 
