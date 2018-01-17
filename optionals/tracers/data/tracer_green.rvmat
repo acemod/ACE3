@@ -6,11 +6,11 @@
 #define _ARMA_
 
 //Class weapons : Data\bullettracer\Data\tracer_green.rvmat{
-ambient[] = {1.0, 1.0, 1.0, 1.0};
-diffuse[] = {1.0, 1.0, 1.0, 1.0};
-forcedDiffuse[] = {0.0, 0.0, 0.0, 0.0};
-emmisive[] = {100, 500, 100, 1.0};
-specular[] = {0.0, 0.0, 0.0, 1.0};
+ambient[] = {1, 1, 1, 1};
+diffuse[] = {1, 1, 1, 1};
+forcedDiffuse[] = {0, 0, 0, 0};
+emmisive[] = {100, 500, 100, 1};
+specular[] = {0, 0, 0, 1};
 specularPower = 100;
 renderFlags[] = {"NoZWrite", "NoAlphaWrite", "AddBlend"};
 PixelShaderID = "Normal";
