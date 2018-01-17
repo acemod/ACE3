@@ -23,6 +23,7 @@
 
 // if use just GVAR here, "Undefined variable" error occurs
 #define WAIT_AND_CHECK_SETTING(func) \
+    if (missionName isEqualTo 'Arsenal') exitWith {_this call DOUBLES(BIS_fnc,func)BIS}; \
     if !(missionNamespace getVariable QEGVAR(common,settingsInitFinished)) exitWith { \
         EGVAR(common,runAtSettingsInitialized) pushBack [ARR_2(LINKFUNC(DOUBLES(wrapper,func)),_this)]; \
         TRACE_1(QUOTE(not ready func),_this);\

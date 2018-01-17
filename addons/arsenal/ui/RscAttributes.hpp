@@ -206,7 +206,7 @@ class GVAR(display) {
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
                     sizeEx = QUOTE(5 * GRID_H);
-                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 1; if (missionname == 'Arsenal') then {endmission 'end1'};);
+                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 1);
                 };
             };
         };
