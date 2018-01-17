@@ -25,7 +25,7 @@ if (isClass _itemCfg) then {
     _ctrlInfo ctrlSetFade 0;
     _ctrlInfo ctrlCommit FADE_DELAY;
 
-    [_display, _control, _curSel, _itemCfg] call FUNC(handleStats);
+    [QGVAR(displayStats), [_display, _control, _curSel, _itemCfg]] call CBA_fnc_localEvent;
 
     // Name + author
     private _ctrlInfoName = _display displayCtrl IDC_infoName;

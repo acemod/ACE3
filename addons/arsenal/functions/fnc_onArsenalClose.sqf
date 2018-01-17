@@ -98,6 +98,9 @@ GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
+GVAR(showStats) = nil;
+GVAR(statsPage) =  nil;
+
 GVAR(center) = nil;
 
 showHUD true;

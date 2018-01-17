@@ -54,7 +54,10 @@ GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable [
 
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
+
 GVAR(showStats) = true;
+GVAR(statsPagesLeft) =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(statsPagesRight) =  [0, 0, 0, 0, 0, 0, 0, 0];
 
 // Add the items the player has to virtualItems
 for "_index" from 0 to 10 do {
@@ -200,20 +203,17 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_rightSearchbar
 ];
 
-
-//--------------------------------------------- TBR
-{
-    _x = _display displayCtrl _x;
-
-    _x progressSetPosition (random [0, 0.5, 1]);
-} foreach [
-    IDC_statsBar1,
-    IDC_statsBar2,
-    IDC_statsBar3,
-    IDC_statsBar4,
-    IDC_statsBar5
+//------------------------------- TBMR
+private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
+_statsBoxCtrl ctrlSetPosition [
+    0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+    safezoneY + 1.8 * GRID_H,
+    WIDTH_TOTAL / 5.1,
+    12 * GRID_H
 ];
-//--------------------------------------------- TBR
+_statsBoxCtrl ctrlEnable false;
+_statsBoxCtrl ctrlCommit 0;
+//------------------------------- TBMR
 
 //--------------- Camera prep
 cutText ["","plain"];

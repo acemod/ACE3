@@ -20,6 +20,7 @@ PREP(handleLoadoutsSearchbar);
 PREP(handleMouse);
 PREP(handleScrollWheel);
 PREP(handleSearchbar);
+PREP(handleStats);
 PREP(initBox);
 PREP(itemInfo);
 PREP(loadoutsChangeTab);
