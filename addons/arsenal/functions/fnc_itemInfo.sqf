@@ -72,6 +72,8 @@ if (isClass _itemCfg) then {
     _ctrlDLCBackground ctrlcommit 0;
 
 } else {
+    [QGVAR(displayStats), [_display, _control, -1, nil]] call CBA_fnc_localEvent;
+
     _ctrlInfo ctrlSetFade 1;
     _ctrlInfo ctrlCommit FADE_DELAY;
 };
