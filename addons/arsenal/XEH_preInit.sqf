@@ -13,7 +13,7 @@ _fnc_mass = {
     private _statValues = [[_config], _stat] call BIS_fnc_configExtremes;
     private _maxValue = (_statValues select 1) select 0;
 
-    format ["%1lb (%2kg)", (round (_maxValue * 0.1 * 100)) / 100, (round (_maxValue * 0.1 * (1/2.2046) * 100)) / 100];
+    format ["%1kg (%2lb)",(round (_maxValue * 0.1 * (1/2.2046) * 100)) / 100, (round (_maxValue * 0.1 * 100)) / 100];
 };
 
 _fnc_hit = {
@@ -34,64 +34,76 @@ _fnc_hit = {
     [sqrt(_hit^2 * _initSpeed), _hit] select (GVAR(currentLeftPanel) == _launcherTabIDC)
 };
 
-_fnc_reloadTime = {
-    
-};
+_fnc_otherBarStat = {
+    params ["_stat", "_config", "_args"];
+    _args params ["_statMinMax", "_barLimits", "_configExtremeBool"];
 
-_fnc_dispersion = {
-    
-};
+    private _statValues = [
+        [_config],
+        [_stat select 0],
+        [_configExtremeBool],
+        [_statMinMax select 0]
+    ] call BIS_fnc_configExtremes;
 
+    linearConversion [_statMinMax select 0, _statMinMax select 1, (_statValues select 1) select 0, _barLimits select 0, _barLimits select 1]
+};
 
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 GVAR(statsListLeftPanel) =  [
     [
         [
-            [["reloadTime"], "string ROF (TBL)", [true, false], [], [{
-
-            }, {}]],
-            [["dispersion"], "Accuracy (TBL)", [true, false], [], [{
-
-            }, {}]],
-            [["maxZeroing"], "Range (TBL)", [true, false], [], [{
-
-            }, {}]],
+            [["reloadTime"], "string ROF (TBL)", [true, false], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["dispersion"], "Accuracy (TBL)", [true, false], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
             [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Primary
     [
         [
-            [["reloadTime"], "string ROF (TBL)", [true, false], [], [{
-
-            }, {}]],
-            [["dispersion"], "Accuracy (TBL)", [true, false], [], [{
-
-            }, {}]],
-            [["maxZeroing"], "Range (TBL)", [true, false], [], [{
-
-            }, {}]],
+            [["reloadTime"], "string ROF (TBL)", [true, false], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["dispersion"], "Accuracy (TBL)", [true, false], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
             [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Handgun
     [
         [
-            [["maxZeroing"], "Range (TBL)", [true, false], [], [{
-
-            }, {}]],
+            [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
             [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Launcher
     [
+        [
+            [["passthrough"], "Ballistic protection (TBL)", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["armor"], "Explosive resistance (TBL)", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["maximumLoad"], "Load (TBL)", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+        ]
     ], // Uniform
     [
+        [
+            [["passthrough"], "Ballistic protection (TBL)", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["armor"], "Explosive resistance (TBL)", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["maximumLoad"], "Load (TBL)", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+        ]
     ], // Vests
     [
+        [
+            [["maximumLoad"], "Load (TBL)", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+        ]
     ], // Backpacks
     [
+        [
+            [["passthrough"], "Ballistic protection (TBL)", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["armor"], "Explosive resistance (TBL)", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+        ]
     ], // Headgear
     [
         [
