@@ -20,6 +20,7 @@ class CfgAmmo {
     class B_556x45_Ball_Tracer_Red: B_556x45_Ball {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_556x45_Ball_Tracer_Green: B_556x45_Ball {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_556x45_Ball_Tracer_Yellow: B_556x45_Ball {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
+    // class B_556x45_Ball_Tracer_White: B_556x45_Ball {model = PATHTOF(ace_TracerWhite2.p3d);}; //New class for testing
 
     class B_65x39_Caseless: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_65x39_Caseless_green: B_65x39_Caseless {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
