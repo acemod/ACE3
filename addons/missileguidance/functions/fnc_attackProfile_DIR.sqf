@@ -1,7 +1,6 @@
 /*
  * Author: jaynus / nou
- * Attack profile: DIR
- * TODO: falls back to Linear
+ * Attack profile: Direct (falls back to seeker target position)
  *
  * Arguments:
  * 0: Seeker Target PosASL <ARRAY>
@@ -19,4 +18,4 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-_this call FUNC(attackProfile_LIN);
+_this select 0

@@ -20,16 +20,17 @@
 
 params ["_shooter","","","","_ammo","","_projectile"];
 
-// Bail on not missile
-if (!(_ammo isKindOf "MissileBase")) exitWith {};
+// Bail if not missile or bomb
+if (!((_ammo isKindOf "MissileBase") or {_ammo isKindOf "LaserBombCore"})) exitWith {};
+private _isBomb = _ammo isKindOf "LaserBombCore";
 
 // Bail if guidance is disabled for this ammo
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
 
-// Bail on locality of the projectile, it should be local to us
+// Bail if projectile is not local
 if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
 
-// Bail if shooter isn't player AND system not enabled for AI:
+// Bail if shooter isn't player AND system is not enabled for AI:
 if ( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith {};
 
 // Verify ammo has explicity added guidance config (ignore inheritances)
@@ -94,26 +95,28 @@ if (_seekLastTargetPos && {!isNil "_target"}) then {
 };
 
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
-private _args = [_this,
-            [   _shooter,
-                [_target, _targetPos, _launchPos],
-                _seekerType,
-                _attackProfile,
-                _lockMode,
-                _laserInfo
-            ],
-            [
-                getNumber ( _config >> "minDeflection" ),
-                getNumber ( _config >> "maxDeflection" ),
-                getNumber ( _config >> "incDeflection" )
-            ],
-            [
-                getNumber ( _config >> "seekerAngle" ),
-                getNumber ( _config >> "seekerAccuracy" ),
-                getNumber ( _config >> "seekerMaxRange" )
-            ],
-            [ diag_tickTime, [], [], _lastKnownPosState]
-        ];
+private _args = [
+    _this,
+    [   _shooter,
+        [_target, _targetPos, _launchPos],
+        _seekerType,
+        _attackProfile,
+        _lockMode,
+        _laserInfo
+    ],
+    [
+        getNumber ( _config >> "minDeflection" ),
+        getNumber ( _config >> "maxDeflection" ),
+        getNumber ( _config >> "incDeflection" ),
+        _isBomb
+    ],
+    [
+        getNumber ( _config >> "seekerAngle" ),
+        getNumber ( _config >> "seekerAccuracy" ),
+        getNumber ( _config >> "seekerMaxRange" )
+    ],
+    [ diag_tickTime, [], [], _lastKnownPosState]
+];
 
 
 // Run the "onFired" function passing the full guidance args array
@@ -129,8 +132,9 @@ if (_onFiredFunc != "") then {
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos"];
-//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
+//      _flightParams params ["_minDeflection", "_maxDeflection", "_incDeflection", "_isBomb"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange"];
+//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 
 
 // Hand off to the guiding unit. We just use local player so local PFH fires for now

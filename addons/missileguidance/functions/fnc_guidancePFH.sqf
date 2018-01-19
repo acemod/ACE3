@@ -25,6 +25,7 @@ params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams"];
+_flightParams params ["_minDeflection","_maxDeflection","","_isBomb"];
 _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
@@ -43,8 +44,8 @@ if (accTime > 0) then {
     _adjustTime = 0;
 };
 
-private _minDeflection = ((_flightParams select 0) - ((_flightParams select 0) * _adjustTime)) max 0;
-private _maxDeflection = (_flightParams select 1) * _adjustTime;
+private _minDeflection = (_minDeflection - (_minDeflection * _adjustTime)) max 0;
+private _maxDeflection = _maxDeflection * _adjustTime;
 // private _incDeflection = _flightParams select 2; // todo
 
 private _projectilePos = getPosASL _projectile;
@@ -62,31 +63,25 @@ if (!(_profileAdjustedTargetPos isEqualTo [0,0,0])) then {
     private _adjustVector = _targetVector vectorDiff (vectorDir _projectile);
     _adjustVector params ["_adjustVectorX", "_adjustVectorY", "_adjustVectorZ"];
 
-    private _yaw = 0;
-    private _pitch = 0;
-    private _roll = 0;
+    // No need to check if higher or lower or none
+    private yaw = if (_adjustVectorX > 0) then {
+        ( (_minDeflection max (_adjustVectorX min _maxDeflection) ) )
+    } else {
+        - ( (_minDeflection max ((abs _adjustVectorX) min _maxDeflection) ) )
+    };
 
-    if (_adjustVectorX < 0) then {
-        _yaw = - ( (_minDeflection max ((abs _adjustVectorX) min _maxDeflection) ) );
+    private _roll = if (_adjustVectorY > 0) then {
+        ( (_minDeflection max (_adjustVectorY min _maxDeflection) ) )
     } else {
-        if (_adjustVectorX > 0) then {
-            _yaw = ( (_minDeflection max (_adjustVectorX min _maxDeflection) ) );
-        };
+        - ( (_minDeflection max ((abs _adjustVectorY) min _maxDeflection) ) )
     };
-    if (_adjustVectorY < 0) then {
-        _roll = - ( (_minDeflection max ((abs _adjustVectorY) min _maxDeflection) ) );
+
+    private _pitch = if (_adjustVector > 0) then {
+        ( (_minDeflection max (_adjustVectorZ min _maxDeflection) ) )
     } else {
-        if (_adjustVectorY > 0) then {
-            _roll = ( (_minDeflection max (_adjustVectorY min _maxDeflection) ) );
-        };
+        - ( (_minDeflection max ((abs _adjustVectorZ) min _maxDeflection) ) )
     };
-    if (_adjustVectorZ < 0) then {
-        _pitch = - ( (_minDeflection max ((abs _adjustVectorZ) min _maxDeflection) ) );
-    } else {
-        if (_adjustVectorZ > 0) then {
-            _pitch = ( (_minDeflection max (_adjustVectorZ min _maxDeflection) ) );
-        };
-    };
+
     private _finalAdjustVector = [_yaw, _roll, _pitch];
 
     TRACE_3("", _pitch, _yaw, _roll);
@@ -103,9 +98,9 @@ if (!(_profileAdjustedTargetPos isEqualTo [0,0,0])) then {
 TRACE_3("",_projectilePos,_seekerTargetPos,_profileAdjustedTargetPos);
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
 
-private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
-_PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
-_PS setDropInterval 3.0;
+private _particlesource = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
+_particlesource setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
+_particlesource setDropInterval 3.0;
 #endif
 
 _stateParams set [0, diag_tickTime];

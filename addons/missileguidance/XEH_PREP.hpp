@@ -1,4 +1,5 @@
 LOG("prep");
+
 PREP(cycleAttackProfileKeyDown);
 
 PREP(changeMissileDirection);
@@ -18,6 +19,7 @@ PREP(handleHandoff);
 
 // Attack Profiles
 PREP(attackProfile_AIR);
+PREP(attackProfile_Ballistic);
 PREP(attackProfile_DIR);
 PREP(attackProfile_HI);
 PREP(attackProfile_LIN);
