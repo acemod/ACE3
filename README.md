@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases/latest">
-        <img src="https://img.shields.io/badge/Version-3.12.0-blue.svg?style=flat-square" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-3.12.1-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">

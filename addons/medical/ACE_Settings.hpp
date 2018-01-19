@@ -124,7 +124,7 @@ class ACE_Settings {
         description = CSTRING(ReviveSettings_maxReviveTime_Description);
         typeName = "SCALAR";
         value = 120;
-        sliderSettings[] = {0, 1200, 120, 0};
+        sliderSettings[] = {0, 3600, 120, 0};
     };
     class GVAR(amountOfReviveLives) {
         category = CSTRING(Category_Medical);

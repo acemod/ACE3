@@ -444,32 +444,39 @@
             <English>Import BI VA loadouts to ACE Arsenal</English>
             <French>Importe les loadouts de BI VA dans ACE Arsenal</French>
             <German>Importiert die BI-VA-Ausrüstungen in das ACE-Arsenal</German>
+            <Japanese>標準の VA 装備から ACE 武器庫へ取り込み</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
             <German>Keine Spielereinheit verfügbar. Setze eine Einheit und markiere sie als "Spieler".</German>
+            <Japanese>プレイヤー ユニットがありません!ユニットを設置しそれを"Player"と名付けてください。</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
             <French>Aucun loadout à importer.</French>
             <German>Keine Ausrüstungen zum Importieren</German>
+            <Japanese>取り込みする装備がありません。</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
             <English>ACE Arsenal</English>
             <German>ACE-Arsenal</German>
+            <Japanese>ACE 武器庫</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_ReturnToArsenal">
             <English>Return to ACE Arsenal.</English>
             <German>Zurück zum ACE-Arsenal.</German>
+            <Japanese>ACE 武器庫へ戻ります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_tooltip">
             <English>Use ACE Arsenal to try out different weapons and equipment.</English>
             <German>Verwende ACE-Arsenal und sieh dir verschiedene Waffen und Ausrüstung an und probiere sie aus.</German>
+            <Japanese>さまざまな武器と装備を試せるよう ACE 武器庫を使用します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_overview">
             <English>Try weapons and equipment and create your own loadouts.</English>
             <German>Probiere verschiedene Waffen und Ausrüstung aus und stelle dir eigene Ausrüstungsprofile zusammen.</German>
+            <Japanese>さまざまな武器と装備を試して、あなただけの装備を作成してください。</Japanese>
         </Key>
     </Package>
 </Project>
