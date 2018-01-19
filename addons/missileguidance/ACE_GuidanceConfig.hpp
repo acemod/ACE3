@@ -41,6 +41,13 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_JAV_TOP);
     };
+    class Ballistic {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(attackProfile_Ballistic);
+    };
 };
 
 class GVAR(SeekerTypes) {

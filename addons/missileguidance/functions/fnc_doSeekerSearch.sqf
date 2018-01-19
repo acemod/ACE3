@@ -11,7 +11,7 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[], [], []] call ace_missileguidance_fnc_seekerType_Optic;
+ * [[], [], []] call ace_missileguidance_fnc_doSeekerSearch;
  *
  * Public: No
  */

@@ -17,7 +17,7 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params ["_projectile", "_v"];
+params ["_projectile", "_v", "_isBomb"];
 
 private _l = sqrt ((_v select 0) ^ 2 + (_v select 1) ^ 2);
 private _r = -(_v select 2) / _l;

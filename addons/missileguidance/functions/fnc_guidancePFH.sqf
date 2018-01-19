@@ -62,35 +62,36 @@ if (!(_profileAdjustedTargetPos isEqualTo [0,0,0])) then {
     private _targetVector = _projectilePos vectorFromTo _profileAdjustedTargetPos;
     private _adjustVector = _targetVector vectorDiff (vectorDir _projectile);
     _adjustVector params ["_adjustVectorX", "_adjustVectorY", "_adjustVectorZ"];
+    TRACE_1("Pre-Adjust",_adjustVector);
 
-    // No need to check if higher or lower or none
-    private yaw = if (_adjustVectorX > 0) then {
-        ( (_minDeflection max (_adjustVectorX min _maxDeflection) ) )
+    // No need to check if higher or lower or none, just higher/lower
+    private _yaw = if (_adjustVectorX > 0) then {
+        _minDeflection max (_adjustVectorX min _maxDeflection)
     } else {
-        - ( (_minDeflection max ((abs _adjustVectorX) min _maxDeflection) ) )
+        - (_minDeflection max ((abs _adjustVectorX) min _maxDeflection) )
     };
 
     private _roll = if (_adjustVectorY > 0) then {
-        ( (_minDeflection max (_adjustVectorY min _maxDeflection) ) )
+        _minDeflection max (_adjustVectorY min _maxDeflection)
     } else {
-        - ( (_minDeflection max ((abs _adjustVectorY) min _maxDeflection) ) )
+        - (_minDeflection max ((abs _adjustVectorY) min _maxDeflection) )
     };
 
-    private _pitch = if (_adjustVector > 0) then {
-        ( (_minDeflection max (_adjustVectorZ min _maxDeflection) ) )
+    private _pitch = if (_adjustVectorZ > 0) then {
+        _minDeflection max (_adjustVectorZ min _maxDeflection)
     } else {
-        - ( (_minDeflection max ((abs _adjustVectorZ) min _maxDeflection) ) )
+        - (_minDeflection max ((abs _adjustVectorZ) min _maxDeflection) )
     };
 
     private _finalAdjustVector = [_yaw, _roll, _pitch];
 
-    TRACE_3("", _pitch, _yaw, _roll);
-    TRACE_3("", _targetVector, _adjustVector, _finalAdjustVector);
+    TRACE_3("Deflect", _pitch, _yaw, _roll);
+    TRACE_3("Final Adjust", _targetVector, _adjustVector, _finalAdjustVector);
 
     if (accTime > 0) then {
         private _changeVector = (vectorDir _projectile) vectorAdd _finalAdjustVector;
         TRACE_2("",_projectile,_changeVector);
-        [_projectile, _changeVector] call FUNC(changeMissileDirection);
+        [_projectile, _changeVector, _isBomb] call FUNC(changeMissileDirection);
     };
 };
 
