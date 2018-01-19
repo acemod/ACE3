@@ -53,7 +53,19 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
 GVAR(statsListLeftPanel) =  [
     [
         [
-            [["reloadTime"], "string ROF (TBL)", [true, false], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["reloadTime"], "string ROF (TBL)", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
+                params ["_stat", "_config", "_args"];
+                _args params ["_statMinMax", "_barLimits"];
+
+                private _statValues = [
+                    [_config],
+                    [_stat select 0],
+                    [false],
+                    [_statMinMax select 0]
+                ] call BIS_fnc_configExtremes;
+
+                format ["%1 rpm", round (60 / ((_statValues select 1) select 0))]
+            }]],
             [["dispersion"], "Accuracy (TBL)", [true, false], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {}]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
@@ -62,7 +74,19 @@ GVAR(statsListLeftPanel) =  [
     ], // Primary
     [
         [
-            [["reloadTime"], "string ROF (TBL)", [true, false], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["reloadTime"], "string ROF (TBL)", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
+                params ["_stat", "_config", "_args"];
+                _args params ["_statMinMax", "_barLimits"];
+
+                private _statValues = [
+                    [_config],
+                    [_stat select 0],
+                    [false],
+                    [_statMinMax select 0]
+                ] call BIS_fnc_configExtremes;
+
+                format ["%1 rpm",round (60 / ((_statValues select 1) select 0))]
+            }]],
             [["dispersion"], "Accuracy (TBL)", [true, false], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {}]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
