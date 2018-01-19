@@ -211,7 +211,7 @@
 {% endif %}
 
 {% if include.component == "maverick" %}
-`ace_hellfire`
+`ace_missileguidance`
 {% endif %}
 
 {% if include.component == "medical" %}

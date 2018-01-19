@@ -27,6 +27,8 @@ _mouseBlockCtrl ctrlCommit 0;
 [_arsenalDisplay] call FUNC(buttonHide);
 
 GVAR(currentLoadoutsTab) = -1;
+GVAR(loadoutsSearchbarFocus) = false;
+GVAR(loadoutsPanelFocus) =  false;
 
 GVAR(previousCameraPos) = GVAR(cameraPosition);
 GVAR(cameraPosition) = [5,0,20,[-0.85,0,0.85]];
