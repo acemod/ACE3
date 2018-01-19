@@ -414,6 +414,7 @@ class GVAR(display) {
             style= 2;
             text="<";
             colorBackground[]={0,0,0,0};
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlparent (_this select 0), _this select 0, false)]]) call CBA_fnc_localEvent);
             x = QUOTE(0.5 - (WIDTH_TOTAL / 3) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(4 * GRID_W);
@@ -423,6 +424,7 @@ class GVAR(display) {
         class statsNextPage: statsPreviousPage {
             idc =  IDC_statsNextPage;
             text = ">"
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlparent (_this select 0), _this select 0, true)]]) call CBA_fnc_localEvent);
             x = QUOTE(0.5 - (WIDTH_TOTAL / 3) + WIDTH_GAP + 9 * GRID_W);
         };
         class statsCurrentPage: RscText {

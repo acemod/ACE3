@@ -213,6 +213,11 @@ GVAR(statsListRightPanel) = [
     _this call FUNC(buttonStats);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(statsChangePage), {
+    _this call FUNC(buttonStatsPage);
+}] call CBA_fnc_addEventHandler;
+
+
 [QGVAR(displayStats), {
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;

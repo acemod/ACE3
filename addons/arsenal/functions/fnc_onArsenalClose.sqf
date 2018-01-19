@@ -99,7 +99,9 @@ GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
 GVAR(showStats) = nil;
-GVAR(statsPage) =  nil;
+GVAR(statsPagesLeft) = nil;
+GVAR(statsPagesRight) = nil;
+GVAR(statsInfo) =  nil;
 
 GVAR(center) = nil;
 

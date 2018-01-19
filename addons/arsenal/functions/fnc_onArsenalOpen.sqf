@@ -58,6 +58,7 @@ GVAR(shiftState) = false;
 GVAR(showStats) = true;
 GVAR(statsPagesLeft) =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsPagesRight) =  [0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
 // Add the items the player has to virtualItems
 for "_index" from 0 to 10 do {

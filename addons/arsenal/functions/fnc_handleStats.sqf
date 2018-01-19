@@ -18,6 +18,9 @@
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
 private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
+private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
+private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
+private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
 
 private _hideUnusedFnc = {
     params ["_numbers"];
@@ -69,15 +72,21 @@ if !(isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
+        private ["_statsArray", "_statsList", "_isLeftPanel", "_currentPage"];
 
-        private _statsList = if (_leftPanel) then {
-            (GVAR(statsListLeftPanel) select _statsIndex) select (GVAR(statsPagesLeft) select _statsIndex)
+        if (_leftPanel) then {
+            _isLeftPanel = true;
+            _statsArray = GVAR(statsListLeftPanel) select _statsIndex;
+            _currentPage = GVAR(statsPagesLeft) select _statsIndex;
+            _statsList = _statsArray select _currentPage;
         } else {
-            (GVAR(statsListRightPanel) select _statsIndex) select (GVAR(statsPagesRight) select _statsIndex)
+            _isLeftPanel = false;
+            _statsArray = GVAR(statsListRightPanel) select _statsIndex;
+            _currentPage = GVAR(statsPagesRight) select _statsIndex;
+            _statsList = _statsArray select _currentPage;
         };
 
         private _statsCount = count _statsList;
-
         switch (_statsCount) do {
             case 0: {
                 [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
@@ -162,6 +171,35 @@ if !(isNil "_itemCfg") then {
             };
         };
 
+        GVAR(statsInfo) = [_isLeftPanel, _statsIndex, _control, _curSel, _itemCfg];
+
+        TRACE_3("count magic", _statsCount, _currentPage, count _statsArray);
+
+        // Toggle page buttons
+        if (_currentPage == 0) then {
+            _statsPreviousPageCtrl ctrlEnable false;
+            _statsPreviousPageCtrl ctrlSetFade 0.4;
+        } else {
+            _statsPreviousPageCtrl ctrlEnable true;
+            _statsPreviousPageCtrl ctrlSetFade 0;
+        };
+
+        if (_currentPage + 1 == count _statsArray) then {
+            _statsNextPageCtrl ctrlEnable false;
+            _statsNextPageCtrl ctrlSetFade 0.4;
+        } else {
+            _statsNextPageCtrl ctrlEnable true;
+            _statsNextPageCtrl ctrlSetFade 0;
+        };
+
+        _statsCurrentPageCtrl ctrlSetFade 0;
+        _statsCurrentPageCtrl ctrlSetText str _currentPage;
+
+        _statsPreviousPageCtrl ctrlCommit 0;
+        _statsNextPageCtrl ctrlCommit 0;
+        _statsCurrentPageCtrl ctrlCommit 0;
+
+        // Handle titles, bars and text
         {
             _x params ["_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
             _bools params ["_showBar", "_showText"];
@@ -311,4 +349,13 @@ if !(isNil "_itemCfg") then {
         12 * GRID_H
     ];
     _statsBoxCtrl ctrlCommit 0;
+
+    {
+        _x ctrlSetFade 1;
+        _x ctrlCommit 0;
+    } foreach [
+        _statsPreviousPageCtrl,
+        _statsNextPageCtrl,
+        _statsCurrentPageCtrl
+    ];
 };
