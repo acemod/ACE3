@@ -47,7 +47,7 @@ cba_diagnostic_projectileMaxLines = 10;
                     private _return = [
                         localize "str_sure",
                         localize "str_a3_rscdisplaymain_buttonexit",
-                        true, false,
+                        true, true,
                         _display, false, true
                     ] call BIS_fnc_GUImessage;
 
