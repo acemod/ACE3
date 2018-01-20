@@ -13,7 +13,8 @@ class CfgPatches {
     };
 };
 
-#include "ACE_GuidanceConfig.hpp"
+#include "ACE_AttackProfiles.hpp"
+#include "ACE_SeekerTypes.hpp"
 
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"

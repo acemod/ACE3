@@ -26,5 +26,5 @@ _projectile setVectorDirAndUp [ _v, [(_v select 0) * _r, (_v select 1) * _r, _l]
 
 // change Velocity only for missiles, let engine handle bombs.
 if (!_isBomb) then {
-	_projectile setVelocity (_v vectorMultiply (vectorMagnitude (velocity _projectile)));
+    _projectile setVelocity (_v vectorMultiply (vectorMagnitude (velocity _projectile)));
 };
