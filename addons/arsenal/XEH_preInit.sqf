@@ -86,7 +86,7 @@ GVAR(statsListLeftPanel) =  [
                     [_statMinMax select 0]
                 ] call BIS_fnc_configExtremes;
 
-                format ["%1 MOA",(((_statValues select 1) select 0) / pi * 10800) ToFixed 2];
+                format ["%1 MOA",(((_statValues select 1) select 0) / pi * 10800) ToFixed 1];
             }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
@@ -119,7 +119,7 @@ GVAR(statsListLeftPanel) =  [
                     [_statMinMax select 0]
                 ] call BIS_fnc_configExtremes;
 
-                format ["%1 MOA",(((_statValues select 1) select 0) / pi * 10800) ToFixed 2];
+                format ["%1 MOA",(((_statValues select 1) select 0) / pi * 10800) ToFixed 1];
             }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
