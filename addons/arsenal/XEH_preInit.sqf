@@ -10,10 +10,19 @@ PREP_RECOMPILE_END;
 _fnc_mass = {
     params ["_stat", "_config"];
 
-    private _statValues = [[_config], _stat] call BIS_fnc_configExtremes;
-    private _maxValue = (_statValues select 1) select 0;
+    private _statValues = [
+        [_config],
+        [_stat select 0],
+        [false]
+    ] call BIS_fnc_configExtremes;
 
-    format ["%1kg (%2lb)",(round (_maxValue * 0.1 * (1/2.2046) * 100)) / 100, (round (_maxValue * 0.1 * 100)) / 100];
+    private _value = (_statValues select 1) select 0;
+
+    if (_value == 0 && {isClass (_config >> "itemInfo")}) then {
+        _value = getNumber (_config >> "itemInfo" >> "mass");
+    };
+
+    format ["%1kg (%2lb)",((_value * 0.1 * (1/2.2046) * 100) / 100) ToFixed 2, ((_value * 0.1 * 100) / 100) ToFixed 2];
 };
 
 _fnc_hit = {
@@ -66,7 +75,19 @@ GVAR(statsListLeftPanel) =  [
 
                 format ["%1 rpm", round (60 / ((_statValues select 1) select 0))]
             }]],
-            [["dispersion"], "Accuracy (TBL)", [true, false], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["dispersion"], "Accuracy (TBL)", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
+                params ["_stat", "_config", "_args"];
+                _args params ["_statMinMax", "_barLimits"];
+
+                private _statValues = [
+                    [_config],
+                    [_stat select 0],
+                    [false],
+                    [_statMinMax select 0]
+                ] call BIS_fnc_configExtremes;
+
+                format ["%1 MOA",(((_statValues select 1) select 0) / pi * 10800) ToFixed 2];
+            }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
             [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
@@ -87,7 +108,19 @@ GVAR(statsListLeftPanel) =  [
 
                 format ["%1 rpm",round (60 / ((_statValues select 1) select 0))]
             }]],
-            [["dispersion"], "Accuracy (TBL)", [true, false], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {}]],
+            [["dispersion"], "Accuracy (TBL)", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
+                params ["_stat", "_config", "_args"];
+                _args params ["_statMinMax", "_barLimits"];
+
+                private _statValues = [
+                    [_config],
+                    [_stat select 0],
+                    [false],
+                    [_statMinMax select 0]
+                ] call BIS_fnc_configExtremes;
+
+                format ["%1 MOA",(((_statValues select 1) select 0) / pi * 10800) ToFixed 2];
+            }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
             [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
