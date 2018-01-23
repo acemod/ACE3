@@ -374,7 +374,7 @@ class CfgVehicles {
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(flip) {
                     displayName = CSTRING(Flip);
-                    condition = QUOTE(1 < (vectorUp _target) vectorDistance (surfaceNormal getPosATL _target) && {0 == {alive _x} count crew _target});
+                    condition = QUOTE(call DFUNC(canFlip));
                     statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
                 };
                 class GVAR(push) {
@@ -390,7 +390,7 @@ class CfgVehicles {
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(flip) {
                     displayName = CSTRING(Flip);
-                    condition = QUOTE(1 < (vectorUp _target) vectorDistance (surfaceNormal getPosATL _target) && {0 == {alive _x} count crew _target});
+                    condition = QUOTE(call DFUNC(canFlip));
                     statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
                 };
                 class GVAR(push) {
@@ -581,7 +581,7 @@ class CfgVehicles {
                 };
                 class GVAR(flip) {
                     displayName = CSTRING(Flip);
-                    condition = QUOTE(1 < (vectorUp _target) vectorDistance (surfaceNormal getPosATL _target) && {0 == {alive _x} count crew _target || {isAutonomous _target}} && {getMass _target <= FLIP_MAX_STATICWEAPON_MASS});
+                    condition = QUOTE(call DFUNC(canFlip));
                     statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
                 };
             };
