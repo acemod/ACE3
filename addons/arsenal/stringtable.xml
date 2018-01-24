@@ -434,17 +434,17 @@
             <Italian>Impossibile aprire l'arsenale ACE</Italian>
             <Japanese>ACE 武器庫を開けません</Japanese>
         </Key>
-        <Key ID= "STR_ACE_Arsenal_portLoadoutsText">
+        <Key ID="STR_ACE_Arsenal_portLoadoutsText">
             <English>Import BI VA loadouts to ACE Arsenal</English>
             <French>Importe les loadouts de BI VA dans ACE Arsenal</French>
             <Japanese>標準の VA 装備から ACE 武器庫へ取り込み</Japanese>
         </Key>
-        <Key ID= "STR_ACE_Arsenal_portLoadoutsPlayerError">
+        <Key ID="STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
             <Japanese>プレイヤー ユニットがありません!ユニットを設置しそれを"Player"と名付けてください。</Japanese>
         </Key>
-        <Key ID= "STR_ACE_Arsenal_portLoadoutsLoadoutError">
+        <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
             <French>Aucun loadout à importer.</French>
             <Japanese>取り込みする装備がありません。</Japanese>
@@ -468,6 +468,18 @@
             <English>Try weapons and equipment and create your own loadouts.</English>
             <German>Probiere verschiedene Waffen und Ausrüstung aus und stelle dir eigene Ausrüstungsprofile zusammen.</German>
             <Japanese>さまざまな武器と装備を試して、あなただけの装備を作成してください。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
+            <English>Open the loadouts screen</English>
+            <French>Affiche la page des équipements</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
+            <English>Export current / default loadouts</English>
+            <French>Exporte l'équipement actuel ou la liste d'équipements de base</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
+            <English>Import current / default loadouts</English>
+            <French>Importer l'équipement actuel ou la liste d'équipements de base</French>
         </Key>
     </Package>
 </Project>

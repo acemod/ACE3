@@ -183,18 +183,21 @@ class GVAR(display) {
                     idc = IDC_buttonLoadouts;
                     x = QUOTE(2 * WIDTH_GAP + 1 * WIDTH_SINGLE);
                     text = CSTRING(buttonLoadoutsText);
+                    tooltip = CSTRING(buttonLoadoutsTooltip);
                     onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
                     idc = IDC_buttonExport;
                     x = QUOTE(3 * WIDTH_GAP + 2 * WIDTH_SINGLE);
                     text = CSTRING(buttonExportText);
+                    tooltip = CSTRING(buttonExportTooltip);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
                 };
                 class buttonImport: buttonHide {
                     idc = IDC_buttonImport;
                     x = QUOTE(4 * WIDTH_GAP + 3 * WIDTH_SINGLE);
                     text = CSTRING(buttonImportText);
+                    tooltip = CSTRING(buttonImportTooltip);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonOK {
