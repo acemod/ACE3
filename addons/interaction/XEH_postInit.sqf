@@ -129,5 +129,5 @@ private _action = [
         if (1 != count weaponCargo _target) exitWith {};
         _actionData set [1, format [localize "STR_ACTION_TAKE_BAG", getText (configfile >> "CfgWeapons" >> weaponCargo _target select 0 >> "displayName")]];
     }
-] call ace_interact_menu_fnc_createAction;
-["WeaponHolderSimulated", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+] call EFUNC(interact_menu,createAction);
+["WeaponHolderSimulated", 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
