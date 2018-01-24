@@ -133,7 +133,7 @@ if (_init) then {
             (_this select 0) setVariable [QGVAR(highlightTime), time + FIRE_HIGHLIGHT_TIME];
 
             // add grenade to tracking
-            [QGVAR(addToGrenadeTracking), [_this select 6]] CBA_fnc_localEvent;
+            [QGVAR(addToGrenadeTracking), [_this select 6]] call CBA_fnc_localEvent;
         }
     ] call CBA_fnc_addEventHandler;
 } else {
