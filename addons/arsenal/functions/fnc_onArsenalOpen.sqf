@@ -200,7 +200,7 @@ _mouseBlockCtrl ctrlEnable false;
 ];
 
 if (isMultiplayer) then {
-    private _importButtonCtrl =  _display displayCtrl IDC_buttonImport;
+    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
     _importButtonCtrl ctrlEnable false;
     _importButtonCtrl ctrlSetFade 0.6;
     _importButtonCtrl ctrlCommit 0;
