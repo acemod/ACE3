@@ -74,10 +74,10 @@ GVAR(comboBoxes) = [];
     private _mag = (getPylonMagazines _aircraft) select _forEachIndex;
     private _mags = _aircraft getCompatiblePylonMagazines (_forEachIndex + 1);
     private _userWhitelist = _aircraft getVariable [QGVAR(magazineWhitelist), _mags];
-	private _userBlacklist = _aircraft getVariable [QGVAR(magazineBlacklist), []];
+    private _userBlacklist = _aircraft getVariable [QGVAR(magazineBlacklist), []];
     
     _mags = _mags arrayIntersect _userWhitelist;
-	_mags = _mags - _userBlacklist;
+    _mags = _mags - _userBlacklist;
     
     private _index = 0;
     {
