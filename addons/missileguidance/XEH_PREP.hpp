@@ -2,6 +2,7 @@ LOG("prep");
 
 PREP(cycleAttackProfileKeyDown);
 
+PREP(changeBombDirection);
 PREP(changeMissileDirection);
 
 PREP(checkSeekerAngle);

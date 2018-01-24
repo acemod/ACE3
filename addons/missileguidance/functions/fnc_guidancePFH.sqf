@@ -91,7 +91,12 @@ if (!(_profileAdjustedTargetPos isEqualTo [0,0,0])) then {
     if (accTime > 0) then {
         private _changeVector = (vectorDir _projectile) vectorAdd _finalAdjustVector;
         TRACE_2("",_projectile,_changeVector);
-        [_projectile, _changeVector, _isBomb] call FUNC(changeMissileDirection);
+
+        if (_isBomb) then {
+        [_projectile, _changeVector] call FUNC(changeBombDirection);
+        } else {
+        [_projectile, _changeVector] call FUNC(changeMissileDirection);
+        };
     };
 };
 

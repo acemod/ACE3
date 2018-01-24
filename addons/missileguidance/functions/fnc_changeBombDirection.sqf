@@ -1,6 +1,6 @@
 /*
- * Author: jaynus / nou
- * Change a projectile's direction, maintaining speed
+ * Author: jaynus / nou / rufix
+ * Change a bombs's direction, maintaining initial velocity vector.
  *
  * Arguments:
  * 0: Projectile <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [missile, [0,1,0]] call ace_missileguidance_fnc_changeMissileDirection;
+ * [bomb, [0,1,0]] call ace_missileguidance_fnc_changeBombDirection;
  *
  * Public: No
  */
@@ -19,10 +19,12 @@
 
 params ["_projectile", "_vector"];
 
+private _velocity = velocity _projectile;
+
 private _l = sqrt ((_vector select 0) ^ 2 + (_vector select 1) ^ 2);
 private _r = -(_vector select 2) / _l;
 
 _projectile setVectorDirAndUp [ _vector, [(_vector select 0) * _r, (_vector select 1) * _r, _l] ];
 
-_projectile setVelocity (_vector vectorMultiply (vectorMagnitude (velocity _projectile)));
-
+// Revert to initial velocity, let engine handle further movement.
+_projectile setVelocity _velocity;

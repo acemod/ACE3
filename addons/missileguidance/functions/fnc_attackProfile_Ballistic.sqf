@@ -22,6 +22,8 @@ params ["_seekerTargetPos", "_args"];
 _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
 
+if (_seekerTargetPos == [0,0,0]) exitWith {_seekerTargetPos};
+
 private _relativeHeight = (_seekerTargetPos select 2) - ((getPosASL _projectile) select 2);
 private _distance2D = _projectile distance2D _seekerTargetPos;
 private _velocity = speed _projectile / 3.6; // m/s
