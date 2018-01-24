@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Pylon Framework
-description: Explains how to set-up pylon whitelist/blacklist
+title: Pylons Framework
+description: Explains how to set-up pylons whitelist/blacklist
 group: framework
 order: 5
 parent: wiki
