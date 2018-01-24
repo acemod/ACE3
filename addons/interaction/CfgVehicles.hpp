@@ -663,9 +663,6 @@ class CfgVehicles {
 
     class FloatingStructure_F;
     class Land_Camping_Light_F: FloatingStructure_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
