@@ -569,16 +569,6 @@ class CfgVehicles {
         GVAR(size) = 50;
     };
 
-    class Ruins_F;
-    class Land_Cargo20_military_ruins_F: Ruins_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
-        GVAR(space) = 49;
-        GVAR(size) = 50;
-    };
-
     class Land_Cargo20_orange_F: Cargo_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
@@ -677,15 +667,6 @@ class CfgVehicles {
         GVAR(size) = 100;
     };
     class Land_Cargo40_military_green_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
-        GVAR(space) = 99;
-        GVAR(size) = 100;
-    };
-
-    class Land_Cargo40_military_ruins_F: Ruins_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
