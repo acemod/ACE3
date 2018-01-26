@@ -8,12 +8,17 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_tacticalladder_fnc_handleUnconscious
+ *
  * Public: No
 */
 #include "script_component.hpp"
 
 params ["_unit"];
 
-if (!isNull (GETMVAR(ladder,objNull)) && {GVAR(ladder) in attachedObjects _unit}) then {
+if (!local _unit) exitWith {};
+
+if (!isNull GETMVAR(ladder,objNull) && {GVAR(ladder) in attachedObjects _unit}) then {
     [_unit, GVAR(ladder)] call FUNC(cancelTLdeploy);
 };

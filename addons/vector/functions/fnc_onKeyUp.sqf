@@ -1,14 +1,22 @@
 /*
+ * Author: commy2
+ * Handles releasing the special vector keys.
+ *
+ * Arguments:
+ * 0: String <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["5"] call ace_vector_fnc_onKeyUp
+ *
+ * Public: No
+ */
 
-by commy2
-
-Handles releasing the special vector keys.
-
-*/
 #include "script_component.hpp"
 
-private "_fnc_setPFH";
-_fnc_setPFH = {
+private _fnc_setPFH = {
     if (GVAR(holdKeyHandler) > -1) then {
         [GVAR(holdKeyHandler)] call CBA_fnc_removePerFrameHandler;
         GVAR(holdKeyHandler) = -1;

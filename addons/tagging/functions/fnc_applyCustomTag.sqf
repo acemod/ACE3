@@ -23,7 +23,7 @@ params ["_identifier", "_displayName", "_requiredItem"];
 
 // Add only if tag not already added (compare identifiers)
 if !(GVAR(cachedTags) select {_x select 0 == _identifier} isEqualTo []) exitWith {
-    ACE_LOGINFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
+    INFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
 };
 
 GVAR(cachedTags) pushBack _this;

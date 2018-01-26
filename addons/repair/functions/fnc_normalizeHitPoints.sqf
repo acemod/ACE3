@@ -19,7 +19,7 @@ params ["_vehicle"];
 TRACE_2("params",_vehicle, typeOf _vehicle);
 
 // Can't execute all commands if the vehicle isn't local, exit if that's so
-if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
+if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
 
@@ -33,7 +33,7 @@ private _dependentHitPointScripts = [];
 {
     if ((_x != "") && {isClass (_config >> _x)} && {!(_x in _realHitPoints)}) then {
         _realHitPoints pushBack _x;
-        if (isText (_config >> _x >> "depends")) then {
+        if (!((getText (_config >> _x >> "depends")) in ["", "0"])) then {
             _dependentHitPoints pushBack _x;
             _dependentHitPointScripts pushBack compile getText (_config >> _x >> "depends");
         };

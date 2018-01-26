@@ -12,16 +12,17 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [[bob, kevin], 5, 5] call ACE_medical_fnc_treatmentAdvanced_surgicalKit_onProgress
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-
-private "_bandagedWounds";
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_caller", "_target"];
 
-_bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
+private _bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
 
 //In case two people stitch up one patient and the last wound has already been closed we can stop already
 if (count _bandagedWounds == 0) exitWith { false };

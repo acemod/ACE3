@@ -8,6 +8,9 @@
  * Return Value:
  * Bitmask <NUMBER>
  *
+ * Example:
+ * [[true, false]] call ace_common_fnc_toBitmask
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -6,19 +6,20 @@
  * 0: position controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [CONTROL] call ace_zeus_fnc_ui_attributePosition
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-disableSerialization;
-
 //Generic Init:
 params ["_control"];
 private _display = ctrlParent _control;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
 
@@ -47,7 +48,7 @@ private _fnc_onDraw = {
 };
 
 private _fnc_onMapClick = {
-    params ["_map","_button","_x","_y","_shift","_ctrl","_alt"];
+    params ["_map","_button"];
 
     if (_button == 0) then {
         private _display = ctrlParent _map;

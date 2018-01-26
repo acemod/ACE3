@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Advanced Missile Guidance Framework
-description: The ACE3 Advanced Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for mod makers to integrate with the missile guidance and targeting mechanisms of ACE3.
+title: Missile Guidance Framework
+description: The ACE3 Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for mod makers to integrate with the missile guidance and targeting mechanisms of ACE3.
 group: framework
 order: 5
 parent: wiki
@@ -88,8 +88,8 @@ class CfgAmmo {
 ### 4.2 Custom Seeker Types
 
 ```cpp
-class ace_missileguidance_attackProfiles {
-    class MyAttackProfile {
+class ace_missileguidance_seekerTypes {
+    class MySeekerType {
         name = "";  // Name
         visualName = "";  // Visual name
         description = "";  // Description
@@ -102,8 +102,8 @@ class ace_missileguidance_attackProfiles {
 ### 4.3 Custom Attack Profiles
 
 ```cpp
-class ace_missileguidance_seekerTypes {
-    class MySeekerType {
+class ace_missileguidance_attackProfiles {
+    class MyAttackProfile {
         name = "";  // Name
         visualName = "";  // Visual name
         description = "";  // Description

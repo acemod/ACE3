@@ -24,4 +24,8 @@ if (_item == "") exitWith {};
 
 _dogtagData params ["_nickName"];
 private _displayText = format [localize LSTRING(takeDogtagSuccess), _nickName];
-[_displayText] call EFUNC(common,displayText);
+
+// display message
+[{
+    [_this, 2.5] call EFUNC(common,displayTextStructured);
+}, _displayText, DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;

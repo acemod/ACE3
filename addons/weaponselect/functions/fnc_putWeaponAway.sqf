@@ -19,4 +19,4 @@ params ["_unit"];
 
 _unit call EFUNC(common,fixLoweredRifleAnimation);
 
-_unit action ["SwitchWeapon", _unit, _unit, 99];
+_unit action ["SwitchWeapon", _unit, _unit, 299];

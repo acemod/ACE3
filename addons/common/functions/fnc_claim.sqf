@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, flag, true] call ace_common_fnc_claim
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -19,7 +22,7 @@ params ["_unit", "_target", ["_lockTarget", false]];
 private _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
-    ACE_LOGERROR("Claiming already owned object.");
+    ERROR("Claiming already owned object.");
 };
 
 // transfer this immediately
@@ -27,10 +30,17 @@ _target setVariable [QGVAR(owner), _unit, true];
 
 // lock target object
 if (_lockTarget) then {
+    private _canBeDisassembled = !([] isEqualTo getArray (_target call CBA_fnc_getObjectConfig >> "assembleInfo" >> "dissasembleTo"));
     if (!isNull _unit) then {
         [QGVAR(lockVehicle), _target, _target] call CBA_fnc_targetEvent;
+        if (_canBeDisassembled) then {
+            _target enableWeaponDisassembly false;
+        };
     } else {
         [QGVAR(unlockVehicle), _target, _target] call CBA_fnc_targetEvent;
+        if (_canBeDisassembled) then {
+            _target enableWeaponDisassembly true;
+        };
     };
 };
 

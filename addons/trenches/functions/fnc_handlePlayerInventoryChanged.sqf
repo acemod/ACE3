@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "weapon"] call ace_trenches_fnc_handlePlayerInverntoryChanged
+ *
  * Public: No
 */
 #include "script_component.hpp"

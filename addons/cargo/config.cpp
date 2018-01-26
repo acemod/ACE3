@@ -15,16 +15,7 @@ class CfgPatches {
 };
 
 #include "ACE_Settings.hpp"
+#include "CfgEden.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "menu.hpp"
-
-class ACE_newEvents {
-    LoadCargo = "ace_loadCargo";
-    cargoUnloaded = "ace_cargoUnloaded";
-    cargoLoaded = "ace_cargoLoaded";
-    AddCargoByClass = "ace_addCargo";
-    ServerUnloadCargo = QGVAR(serverUnload);
-    UnloadCargo = "ace_unloadCargo";
-    cargoAddedByClass = "ace_cargoAdded";
-};

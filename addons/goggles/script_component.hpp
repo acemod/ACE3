@@ -4,7 +4,6 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-// #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_GOGGLES
@@ -38,6 +37,6 @@
 #define DBULLETS 2
 #define DAMOUNT 3
 
-#define GLASSDISPLAY (GETUVAR(GVAR(Display),displayNull))
+#define GLASSDISPLAY GETUVAR(GVAR(Display),displayNull)
 
 #define CLAMP(x,low,high) (if(x > high)then{high}else{if(x < low)then{low}else{x}})

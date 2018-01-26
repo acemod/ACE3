@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [2] call ace_medical_fnc_showBloodEffect
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -17,10 +20,12 @@ params ["_bloodRemaining"];
 disableSerialization;
 
 // get already existing controls, or create them
-private ["_fxBloodControls", "_bloodCtrl1", "_bloodCtrl2", "_bloodCtrl3"];
 
-_fxBloodControls = GETUVAR(GVAR(FXBloodControls),[]);
+private _fxBloodControls = GETUVAR(GVAR(FXBloodControls),[]);
 
+private _bloodCtrl1 = controlNull;
+private _bloodCtrl2 = controlNull;
+private _bloodCtrl3 = controlNull;
 if (count _fxBloodControls != 3) then {
     _bloodCtrl1 = findDisplay 46 ctrlCreate ["RscPicture", -1];
     _bloodCtrl2 = findDisplay 46 ctrlCreate ["RscPicture", -1];
@@ -32,8 +37,7 @@ if (count _fxBloodControls != 3) then {
     _bloodCtrl3 ctrlSetText "A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_upper_ca.paa";
 
     // positions are from config
-    private "_ctrlPosition";
-    _ctrlPosition = [
+    private _ctrlPosition = [
         ((0 * safezoneW) + safezoneX) + ((safezoneW - (2.125 * safezoneW * 3/4)) / 2),
         (-0.0625 * safezoneH) + safezoneY,
         2.125 * safezoneW * 3/4,

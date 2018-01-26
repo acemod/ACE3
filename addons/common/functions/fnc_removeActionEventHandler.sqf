@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "DefaultAction", 5] call ace_common_fnc_removeActionEventHandler
+ *
  * Public: No
  */
 #include "script_component.hpp"

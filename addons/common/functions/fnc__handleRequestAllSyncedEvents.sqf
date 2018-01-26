@@ -8,6 +8,9 @@
  * Return Value:
  * Event is successed <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc__handleRequestAllSyncedEvents
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -15,6 +18,7 @@
 params ["_client"];
 
 [GVAR(syncedEvents), {
+    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
     _value params ["", "_eventLog"];
 
     ["ACEs", [_key, _eventLog], _client] call CBA_fnc_targetEvent;

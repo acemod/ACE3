@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tripod">
         <Key ID="STR_ACE_SpottingScope_DisplayName">
@@ -12,6 +12,10 @@
             <Italian>Spotting Scope</Italian>
             <Hungarian>Megfigyelő távcső</Hungarian>
             <Portuguese>Luneta de observador</Portuguese>
+            <Japanese>観測用スコープ</Japanese>
+            <Korean>감적 망원경</Korean>
+            <Chinesesimp>观测镜</Chinesesimp>
+            <Chinese>觀測鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -24,6 +28,10 @@
             <Italian>Raccogli spottingscope</Italian>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
             <Portuguese>Pegar luneta de observador</Portuguese>
+            <Japanese>観測用スコープを拾う</Japanese>
+            <Korean>감적 망원경 줍기</Korean>
+            <Chinesesimp>捡起观测镜</Chinesesimp>
+            <Chinese>撿起觀測鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -36,6 +44,10 @@
             <Italian>Posiziona spottingscope</Italian>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
             <Portuguese>Colocar luneta de observador</Portuguese>
+            <Japanese>観測用スコープを置く</Japanese>
+            <Korean>감적 망원경 배치</Korean>
+            <Chinesesimp>放置观测镜</Chinesesimp>
+            <Chinese>放置觀測鏡</Chinese>
         </Key>
     </Package>
 </Project>

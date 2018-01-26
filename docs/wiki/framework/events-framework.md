@@ -5,6 +5,7 @@ description: Explains how to use CBA event handlers with ACE3 events used to tri
 group: framework
 order: 5
 parent: wiki
+mod: ace
 ---
 
 ## 1. Event Handlers

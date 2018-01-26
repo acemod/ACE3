@@ -7,18 +7,18 @@
  * 1: Variable new value <ANY>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
- * "ace_zeus_GlobalSkillAI" addPublicVariableEventHandler ace_zeus_fnc_moduleGlobalSetSkill
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleGlobalSetSkill
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-_this params ["_varName","_varValue"];
-_varValue params ["_general","_accuracy","_handling","_spotting","_cover","_combat"];
+params ["_varName", "_varValue"];
+_varValue params ["_general", "_accuracy", "_handling", "_spotting", "_cover", "_combat"];
 TRACE_1("Params",_this);
 
 TRACE_6("AI settings updated",GVAR(GlobalSkillAI));

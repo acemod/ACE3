@@ -1,16 +1,25 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Argument:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_laser_fnc_rotateVectline
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
-private["_d", "_map", "_p", "_theta", "_u"];
-_map = _this select 0;
-_theta = _this select 1;
 
-_p = _map select 0;
-_p1 = _map select 1;
-_p2 = _map select 2;
-
-_q1 = +(_map select 3);
-_q2 = +(_map select 4);
-_u = _map select 5;
-_d = _map select 6;
+params ["_map", "_theta"];
+_map params ["_p", "_p1", "_p2", "_q1", "_q2", "_u", "_d"];
+_q1 = +_q1;
+_q2 = +_q2;
 
 /* Step 4 */
 _q2 set[0, (_q1 select 0) * cos(_theta) - (_q1 select 1) * sin(_theta)];

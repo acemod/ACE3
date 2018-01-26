@@ -1,15 +1,18 @@
 /*
  * Author: commy2
  * Move unit into given vehicle position or switch to that position if the unit is already inside the vehicle.
-  *
-  * Arguments:
+ *
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  * 2: Position ("Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver", "Cargo") <STRING>
  * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") (default: next free index) <NUMBER>
-  *
-  * Return Value:
+ *
+ * Return Value:
  * None
+ *
+ * Example:
+ * [unit, vehicle, "Driver", 5] call ace_common_fnc_getInPosition
  *
  * Public: Yes
  */
@@ -171,8 +174,7 @@ switch (_position) do {
     };
 
     case "cargo" : {
-        private "_positions";
-        _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
+        private _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
 
         {
             if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};

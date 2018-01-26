@@ -18,16 +18,14 @@
 
 params ["_unit", "_weapon"];
 
-private ["_sound", "_position"];
-
-_sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
+private _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
 
 if (_sound isEqualTo []) exitWith {
     playSound "ACE_Sound_Click";
 };
 
 // get position where to play the sound (position of the weapon)
-_position = AGLToASL (_unit modelToWorldVisual (_unit selectionPosition "RightHand"));
+private _position = AGLToASL (_unit modelToWorldVisual (_unit selectionPosition "RightHand"));
 
 _sound params ["_filename", ["_volume", 1], ["_soundPitch", 1], ["_distance", 0]];
 

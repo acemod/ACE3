@@ -64,7 +64,7 @@ private _fnc_onFailure = {
 [(_removeTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench)] call EFUNC(common,progressBar);
 
 private _progressLeft = ((1 - _actualProgress) * 10) + 1;
-private ["_i"];
+
 for "_i" from _progressLeft to 10 do {
     private _vectorDiffZ = _i / 10;
     private _delay = _removeTime * ((_i / 10) - (1 - _actualProgress));

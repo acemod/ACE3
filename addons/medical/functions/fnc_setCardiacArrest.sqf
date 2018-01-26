@@ -6,15 +6,17 @@
  * Arguments:
  * 0: The unit that will be put in cardiac arrest state <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_setCardiacArrest
  *
  * Public: yes
  */
 
 #include "script_component.hpp"
 
-private "_timeInCardiacArrest";
 params ["_unit"];
 
 if (_unit getVariable [QGVAR(inCardiacArrest),false]) exitWith {};
@@ -24,7 +26,7 @@ _unit setVariable [QGVAR(heartRate), 0];
 ["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
 [_unit, true] call FUNC(setUnconscious);
-_timeInCardiacArrest = 120 + round(random(600));
+private _timeInCardiacArrest = 120 + round(random(600));
 
 [{
     params ["_args", "_idPFH"];

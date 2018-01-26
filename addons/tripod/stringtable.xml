@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tripod">
         <Key ID="STR_ACE_Tripod_DisplayName">
@@ -12,6 +12,10 @@
             <Italian>SSWT Kit</Italian>
             <Hungarian>SSWT Készlet</Hungarian>
             <Portuguese>Kit SSWT</Portuguese>
+            <Japanese>SSWT キット</Japanese>
+            <Korean>SSWT 키트</Korean>
+            <Chinesesimp>狙击手专用三脚架</Chinesesimp>
+            <Chinese>狙擊手專用三腳架</Chinese>
         </Key>
         <Key ID="STR_ACE_Tripod_PlaceDown">
             <English>Place SSWT Kit</English>
@@ -24,6 +28,10 @@
             <Italian>Place SSWT Kit</Italian>
             <Hungarian>SSWT készlet elhelyezése</Hungarian>
             <Portuguese>Colocar kit SSWT</Portuguese>
+            <Japanese>SSWT キットを置く</Japanese>
+            <Korean>SSWT 키트 배치</Korean>
+            <Chinesesimp>放置狙击手专用三脚架</Chinesesimp>
+            <Chinese>放置狙擊手專用三腳架</Chinese>
         </Key>
         <Key ID="STR_ACE_Tripod_PickUp">
             <English>Pick up SSWT Kit</English>
@@ -36,6 +44,10 @@
             <Hungarian>SSWT készlet felvétele</Hungarian>
             <Russian>Подобрать снайперский штатив</Russian>
             <Italian>Prendi Kit SSWT</Italian>
+            <Japanese>SSWT キットを拾う</Japanese>
+            <Korean>SSWT 키트 줍기</Korean>
+            <Chinesesimp>捡起狙击手专用三脚架</Chinesesimp>
+            <Chinese>撿起狙擊手專用三腳架</Chinese>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
@@ -48,6 +60,10 @@
             <Hungarian>SSWT készlet állítása</Hungarian>
             <Russian>Выровнять снайперский штатив</Russian>
             <Italian>Aggiusta Kit SSWT</Italian>
+            <Japanese>SSWT キットを調節</Japanese>
+            <Korean>SSWT 키트 조절</Korean>
+            <Chinesesimp>调整狙击手专用三脚架</Chinesesimp>
+            <Chinese>調整狙擊手專用三腳架</Chinese>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
@@ -60,6 +76,10 @@
             <Hungarian>Kész</Hungarian>
             <Russian>Готово</Russian>
             <Italian>Fatto</Italian>
+            <Japanese>完了</Japanese>
+            <Korean>완료</Korean>
+            <Chinesesimp>完成</Chinesesimp>
+            <Chinese>完成</Chinese>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>adjust</English>
@@ -72,6 +92,10 @@
             <Hungarian>szabályzás</Hungarian>
             <Russian>подстройка</Russian>
             <Italian>aggiusta</Italian>
+            <Japanese>調節</Japanese>
+            <Korean>조절</Korean>
+            <Chinesesimp>调整</Chinesesimp>
+            <Chinese>調整</Chinese>
         </Key>
     </Package>
 </Project>

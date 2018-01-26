@@ -12,6 +12,7 @@ class ACE_Settings {
         category = CSTRING(mapGestures_category);
         typeName = "SCALAR";
         value = 7;
+        sliderSettings[] = {0, 50, 7, 1};
     };
     class GVAR(interval) {
         displayName = CSTRING(interval_displayName);
@@ -19,6 +20,7 @@ class ACE_Settings {
         category = CSTRING(mapGestures_category);
         typeName = "SCALAR";
         value = 0.03;
+        sliderSettings[] = {0, 1, 0.03, 2};
     };
     class GVAR(nameTextColor) {
         displayName = CSTRING(nameTextColor_displayName);
@@ -43,19 +45,5 @@ class ACE_Settings {
         isClientSettable = 1;
         typeName = "COLOR";
         value[] = {1, 0.88, 0, 0.7};
-    };
-    class GVAR(groupColorConfigurations) {
-        displayName = CSTRING(groupColorConfigurations_displayName);
-        description = CSTRING(groupColorConfigurations_description);
-        category = CSTRING(mapGestures_category);
-        typeName = "ARRAY";
-        value[] = {};
-    };
-    class GVAR(groupColorConfigurationMapping) {
-        displayName = CSTRING(groupColorConfigurationMapping_displayName);
-        description = CSTRING(groupColorConfigurationMapping_description);
-        category = CSTRING(mapGestures_category);
-        typeName = "ARRAY";
-        value[] = {{}, {}};
     };
 };

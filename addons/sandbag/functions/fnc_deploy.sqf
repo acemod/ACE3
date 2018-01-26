@@ -19,10 +19,10 @@ params ["_unit"];
 
 // prevent the placing unit from running
 [_unit, "forceWalk", "ACE_Sandbag", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Sandbag", true] call EFUNC(common,statusEffect_set);
 
 // create the sandbag
-private "_sandBag";
-_sandBag = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
+private _sandBag = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
 
 GVAR(sandBag) = _sandBag;
 

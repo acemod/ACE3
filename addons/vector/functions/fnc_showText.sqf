@@ -1,10 +1,23 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: String <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["5"] call ace_vector_fnc_showText
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 switch (_this select 0) do {
     case ("config"): {

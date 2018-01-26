@@ -12,7 +12,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(ShowPlayerNames);
         description = CSTRING(ShowPlayerNames_Desc);
-        values[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled), CSTRING(OnlyCursor), CSTRING(OnlyKeypress), CSTRING(OnlyCursorAndKeypress)};
+        values[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled), CSTRING(OnlyCursor), CSTRING(OnlyKeypress), CSTRING(OnlyCursorAndKeypress), CSTRING(FadeOnBorder)};
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(showPlayerRanks) {
@@ -56,12 +56,14 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 0;
         category = CSTRING(Module_DisplayName);
+        sliderSettings[] = {0, 50, 5, 1};
     };
     class GVAR(playerNamesMaxAlpha) {
         value = 0.8;
         typeName = "SCALAR";
         isClientSettable = 0;
         category = CSTRING(Module_DisplayName);
+        sliderSettings[] = {0, 1, 0.8, 2};
     };
     class GVAR(tagSize) {
         value = 2;

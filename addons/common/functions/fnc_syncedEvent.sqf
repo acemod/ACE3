@@ -10,6 +10,9 @@
  * Return Value:
  * Boolean of success <BOOL>
  *
+ * Example:
+ * ["bob", [args], 5] call ace_common_fnc_syncedEvent
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -17,7 +20,7 @@
 params ["_name", "_args", ["_ttl", 0]];
 
 if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
-    ACE_LOGERROR_1("Synced event key [%1] not found (syncedEvent).", _name);
+    ERROR_1("Synced event key [%1] not found (syncedEvent).", _name);
     false
 };
 

@@ -9,6 +9,9 @@
  * Return Value:
  * if magazine has been used. <BOOL>
  *
+ * Example:
+ * [bob, "magazine"] call ace_common_fnc_useMagazine
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

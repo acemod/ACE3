@@ -22,7 +22,7 @@ params ["_sourceUnit", "_fingerPosPrecise", "_distance"];
 private _fingerPos = if (_sourceUnit == ACE_player) then {
     _fingerPosPrecise
 } else {
-    _fingerPosPrecise vectorAdd ([random (2*FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2*FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2*FP_RANDOMIZATION_Y) - FP_RANDOMIZATION_Y] vectorMultiply _distance)
+    _fingerPosPrecise vectorAdd ([random (2 * FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2 * FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2 * FP_RANDOMIZATION_Y) - FP_RANDOMIZATION_Y] vectorMultiply _distance)
 };
 
 TRACE_3("incoming finger:", _sourceUnit, _fingerPosPrecise, _fingerPos);

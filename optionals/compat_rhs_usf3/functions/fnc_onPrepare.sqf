@@ -16,22 +16,25 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_fries", "_waitTime"];
 
 _vehicle setVariable [QEGVAR(fastroping,doorsLocked), true, true];
 
-_waitTime = 2;
+private _waitTime = 2;
 
 _vehicle animateDoor ["doorRB", 1];
 _vehicle animateDoor ["doorLB", 1];
+_vehicle animate ["doorHandler_R",1];
+_vehicle animate ["doorHandler_L",1];
 _vehicle animateDoor ["ramp_anim", 1];
+_vehicle animate ["ramp_bottom",0.56];
+_vehicle animate ["ramp_top",1];
 
-_fries = _vehicle getVariable [QEGVAR(fastroping,FRIES), objNull];
+private _fries = _vehicle getVariable [QEGVAR(fastroping,FRIES), objNull];
 if !(isNull _fries) then {
     [{
         _this animate ["extendHookRight", 1];
         _this animate ["extendHookLeft", 1];
-    }, _fries, 2] call EFUNC(common,waitAndExecute);
+    }, _fries, 2] call CBA_fnc_waitAndExecute;
     _waitTime = 4;
 };
 

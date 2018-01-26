@@ -8,16 +8,17 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleZeusSettings
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
-
-if !(_activated) exitWith {};
+params ["_logic"];
 
 [_logic, QGVAR(zeusAscension), "zeusAscension"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(zeusBird), "zeusBird"] call EFUNC(common,readSettingFromModule);

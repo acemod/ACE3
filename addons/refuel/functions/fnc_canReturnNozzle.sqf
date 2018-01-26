@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Fuel truck <OBJECT>
+ * 1: Fuel Source <OBJECT>
  *
  * Return Value:
  * Can Return Nozzle <BOOL>
@@ -16,8 +16,10 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
 
-private _nozzle = _unit getVariable QGVAR(nozzle);
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 
-(_this call FUNC(canConnectNozzle)) && {_target == (_nozzle getVariable [QGVAR(source), objNull])}
+(!isNull _nozzle) &&
+{([_unit, _source] call EFUNC(interaction,getInteractionDistance)) < REFUEL_ACTION_DISTANCE} &&
+{_source == (_nozzle getVariable [QGVAR(source), objNull])}

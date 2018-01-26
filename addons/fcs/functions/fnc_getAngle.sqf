@@ -14,6 +14,9 @@
  * Return Value:
  * offset from the current angle necessary to hit the target <NUMBER>
  *
+ * Example:
+ * [1, 2, 3, 4, 5, 6, 7] call ace_fcs_fnc_getAngle
+ *
  * Public: No
  */
 #include "script_component.hpp"

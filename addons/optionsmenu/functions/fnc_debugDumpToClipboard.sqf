@@ -15,17 +15,15 @@
  */
 #include "script_component.hpp"
 
-private ["_var", "_unit", "_outputText", "_text"];
-
 #define MIN_ARRAY_SIZE 50
 
-_outputText = {
+private _outputText = {
     diag_log text (_this select 0);
     "ace_clipboard" callExtension ((_this select 0) + "
 ");
 };
 
-_text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
+private _text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
 time = %1
 
 ------Performance------
@@ -57,15 +55,16 @@ if (isNull ace_player) then {"null"} else {animationState ace_player}];
 
 
 _text = format ["
-------ACE Settings------"];
+------ACE's CBA Settings------"];
 [_text] call _outputText;
 
-
+private _aceSettings = cba_settings_allSettings select {((_x select [0,4]) == "ace_") || {(_x select [0,5]) == "acex_"}};
+_aceSettings sort true;
 {
-    _var = missionNamespace getVariable [(_x select 0), "ERROR: Not Defined"];
-    _text = format ["%1 - %2", (_x select 0), _var];
+    _var = missionNamespace getVariable [_x, "ERROR: Not Defined"];
+    _text = format ["%1 - %2", _x, _var];
     [_text] call _outputText;
-} forEach EGVAR(common,settings);
+} forEach _aceSettings;
 
 
 _text = format ["
@@ -82,9 +81,9 @@ _text = format ["
 } forEach (allVariables missionNamespace);
 
 {
-    _unit = _x;
+    private _unit = _x;
     {
-        _var = _unit getVariable [_x, nil];
+        private _var = _unit getVariable [_x, nil];
         if(!isnil "_var" && {_var isEqualType []} && {(count _var) > MIN_ARRAY_SIZE}) then {
             _text = format ["%1 on [%2] - ARRAY SIZE: %3", _x, _unit, (count _var)];
             [_text] call _outputText;

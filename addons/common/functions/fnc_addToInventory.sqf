@@ -12,6 +12,9 @@
  * 0: Added to player <BOOL>
  * 1: weaponholder <OBJECT>
  *
+ * Example:
+ * [bob, "classname", "", 5] call ace_common_fnc_addToInventory
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -20,7 +23,8 @@ params ["_unit", "_classname", ["_container", ""], ["_ammoCount", -1]];
 
 private _type = _classname call FUNC(getItemType);
 
-private ["_canAdd", "_addedToUnit"];
+private _canAdd = false;
+private _addedToUnit = false;
 
 switch (_container) do {
     case "vest": {
@@ -131,7 +135,7 @@ switch (_type select 0) do {
 
     default {
         _addedToUnit = false;
-        ACE_LOGWARNING_2("Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type);
+        WARNING_2("Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type);
     };
 };
 

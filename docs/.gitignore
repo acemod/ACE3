@@ -18,3 +18,5 @@ addons
 CNAME
 
 tools/temp
+
+Gemfile.lock

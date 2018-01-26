@@ -24,6 +24,7 @@ if (_key != 1 || {isNull GVAR(ladder)}) exitWith {};
 
 // enable running again
 [_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
 
 detach GVAR(ladder);
 
@@ -31,6 +32,7 @@ GVAR(ladder) animate ["rotate", 0];
 
 {
     GVAR(ladder) animate [_x, 0];
+    true
 } count __ANIMS;
 
 // remove mouse buttons and hint

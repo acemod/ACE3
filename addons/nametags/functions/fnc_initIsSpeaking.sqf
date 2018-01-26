@@ -37,14 +37,14 @@ if (!hasInterface) exitWith {};
 }] call CBA_fnc_addPlayerEventHandler;
 
 if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
-    ACE_LOGINFO("ACRE Detected.");
+    INFO("ACRE Detected.");
     DFUNC(isSpeaking) = {
         params ["_unit"];
         ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
     };
 } else {
     if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
-        ACE_LOGINFO("TFR Detected.");
+        INFO("TFR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];
             (_unit getVariable ["tf_isSpeaking", false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}
@@ -54,9 +54,8 @@ if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
         //Note: class RscDisplayVoiceChat {idd = 55} - only present when talking
 
         [{
-            private ["_oldSetting", "_newSetting"];
-            _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
-            _newSetting = (!(isNull findDisplay 55));
+            private _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
+            private _newSetting = (!(isNull findDisplay 55));
             if (!(_oldSetting isEqualTo _newSetting)) then {
                 ACE_player setVariable [QGVAR(isSpeakingInGame), _newSetting, true];
             };

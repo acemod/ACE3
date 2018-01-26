@@ -1,4 +1,3 @@
-
 #include "script_component.hpp"
 
 [QEGVAR(common,initSettingsFromModules), {
@@ -10,7 +9,7 @@
         [_x] call {
             params ["_logic"];
             private _logicType = typeOf _logic;
-            _logic hideobject true;
+            _logic hideObject true;
 
             if (_logic getVariable [QGVAR(initalized), false]) exitWith {};
             private _config = (configFile >> "CfgVehicles" >> _logicType);
@@ -18,7 +17,7 @@
 
             private _isGlobal = getNumber (_config >> "isGlobal") > 0;
             private _isDisposable = getNumber (_config >> "isDisposable") > 0;
-            private _isPersistent = getNumber (_config >> "isPersistent") > 0 || getnumber (_config >> "isGlobal") > 1;
+            private _isPersistent = getNumber (_config >> "isPersistent") > 0 || getNumber (_config >> "isGlobal") > 1;
             private _isSingular  = getNumber (_config >> "isSingular") > 0;
             private _function = getText (_config >> "function");
             if (isNil _function) then {
@@ -27,7 +26,7 @@
                 _function = missionNamespace getVariable _function;
             };
             if (_isSingular && {_logicType in _uniqueModulesHandled}) then { //ToDo: should this be an exit?
-                ACE_LOGWARNING_1("Module [%1] - More than 1 singular module placed", _logicType);
+                WARNING_1("Module [%1] - More than 1 singular module placed", _logicType);
             };
             if (_isSingular) then {_uniqueModulesHandled pushBack _logicType;};
 
@@ -40,6 +39,7 @@
             };
 
             if (_isDisposable) then {
+                if (_isGlobal) then {WARNING_1("Deleting Global Module??? [%1]",_logicType);};
                 deleteVehicle _logic;
             };
         };

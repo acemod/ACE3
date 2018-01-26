@@ -1,5 +1,5 @@
 {% for node in pages_list %}
-    {% if group == null or group == node.group  %}
+    {% if node.mod == mod and node.group == group %}
         {% if page.url == node.url or (page.parent != null and node.short == page.parent) %}
             <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
         {% else %}
@@ -8,4 +8,5 @@
     {% endif %}
 {% endfor %}
 {% assign pages_list = nil %}
+{% assign mod = nil %}
 {% assign group = nil %}

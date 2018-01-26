@@ -7,7 +7,7 @@
  * 1: Effect name (or "" to send all) <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, ""] call ace_common_fnc_statusEffect_sendEffects

@@ -15,23 +15,21 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_editText", "_actualPos"];
-
 params ["_keypadButton"];
 
 disableSerialization;
-_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+private _display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
 
 if (isNull _display) exitWith {ERROR("No Display");};
 
 if (GVAR(currentApplicationPage) != APP_MODE_MARK) exitWith {};
 
-_editText = ctrlText (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
+private _editText = ctrlText (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
 
 switch (_keypadButton) do {
 case ("ok"): {
         if ((count GVAR(newWaypointPosition)) == 0) then {
-            _actualPos = [_editText, true] call EFUNC(common,getMapPosFromGrid);
+            private _actualPos = [_editText, true] call EFUNC(common,getMapPosFromGrid);
             _actualPos set [2, (getTerrainHeightASL _actualPos)];
             GVAR(newWaypointPosition) = _actualPos;
             [APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode);

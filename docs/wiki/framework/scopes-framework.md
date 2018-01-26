@@ -19,6 +19,8 @@ class CfgWeapons {
     class InventoryOpticsItem_Base_F; // ItemInfo base class
 
     class YourScope {
+        ace_scopeZeroRange = 100; // Overwrites the ace_setting default zero range
+        ace_scopeHeightAboveRail = 3.8;  // Distance between center of scope and rail in centimeters
         ace_scopeAdjust_vertical[] = {-4, 30};  // Maxmimum vertical adjustment limits
         ace_scopeAdjust_horizontal[] = {-6, 6};  // Maximum horizontal adjustment limits
         ace_scopeAdjust_verticalIncrement = 0.1;  // Vertical increment
@@ -32,5 +34,13 @@ class CfgWeapons {
             };
         };
     };
+    
+    class YourWeapon {
+        ace_railHeightAboveBore = 1.8;  // Distance between center of bore and rail in centimeters
+        ace_railBaseAngle = 0.025; // Angular difference between bore and rail axis in degrees
+        ace_ironSightBaseAngle = -0.138; // Angular difference between bore and iron sight axis in degrees
+    };
 };
 ```
+
+All scope config entries can also be applied directly to the weapon class, in case the weapon comes with an integrated scope.

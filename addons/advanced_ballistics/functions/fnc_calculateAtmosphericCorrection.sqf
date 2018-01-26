@@ -13,15 +13,16 @@
  * Return Value:
  * corrected ballistic coefficient <NUMBER>
  *
+ * Example:
+ * [2, 5, 5, 0.5, "ASM"] call ace_advanced_ballistics_fnc_calculateAtmosphericCorrection
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-private "_airDensity";
-
 params ["_ballisticCoefficient", "_temperature"/*in C*/, "_pressure"/*in hPa*/, "_relativeHumidity"/*as ratio 0-1*/, "_atmosphereModel"/*"ICAO" or "ASM"*/];
 
-_airDensity = [_temperature, _pressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
+private _airDensity = [_temperature, _pressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
 
 if (_atmosphereModel == "ICAO") then {
     (STD_AIR_DENSITY_ICAO / _airDensity) * _ballisticCoefficient

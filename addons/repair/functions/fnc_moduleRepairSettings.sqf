@@ -17,8 +17,6 @@
 
 params ["_logic"];
 
-if (!isServer) exitWith {};
-
 [_logic, QGVAR(engineerSetting_Repair), "engineerSetting_Repair"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(engineerSetting_Wheel), "engineerSetting_Wheel"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(consumeItem_ToolKit), "consumeItem_ToolKit"] call EFUNC(common,readSettingFromModule);
@@ -33,4 +31,4 @@ if (!isServer) exitWith {};
 
 [_logic, QGVAR(wheelRepairRequiredItems), "wheelRepairRequiredItems"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("Repair Module Initialized.");
+INFO("Repair Module Initialized.");

@@ -19,6 +19,7 @@ params ["_unit"];
 
 // enable running again
 [_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
 
 // remove sandbag from inventory
 _unit removeItem "ACE_Sandbag_empty";
@@ -29,14 +30,12 @@ _unit removeItem "ACE_Sandbag_empty";
 
     params ["_unit"];
 
-    private ["_position", "_direction", "_sandBag"];
-
-    _position = getPosASL GVAR(sandBag);
-    _direction = getDir GVAR(sandBag);
+    private _position = getPosASL GVAR(sandBag);
+    private _direction = getDir GVAR(sandBag);
 
     deleteVehicle GVAR(sandBag);
 
-    _sandBag = createVehicle ["ACE_SandbagObject", [0, 0, 0], [], 0, "NONE"];
+    private _sandBag = createVehicle ["ACE_SandbagObject", [0, 0, 0], [], 0, "NONE"];
     _sandBag setPosASL _position;
     _sandBag setDir _direction;
 
