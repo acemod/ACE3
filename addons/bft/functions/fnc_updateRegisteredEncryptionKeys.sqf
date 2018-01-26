@@ -22,12 +22,12 @@ params ["_keys", "_add"];
 if (isNil "_add") then {
     if !(GVAR(registeredEncyptionKeys) isEqualTo _keys) then {
         GVAR(registeredEncyptionKeys) = _keys;
-        ["bft_registeredEncryptionKeysChanged", [_keys,nil]] call EFUNC(common,localEvent);
+        ["bft_registeredEncryptionKeysChanged", [_keys,nil]] call CBA_fnc_localEvent;
     };
 } else {
     private ["_changed"];
     _changed = false;
-    
+
     if (_add) then {
         // figure out the real difference
         _keys = _keys - GVAR(registeredEncyptionKeys);
@@ -44,7 +44,7 @@ if (isNil "_add") then {
         };
     };
     if (_changed) then {
-        ["bft_registeredEncryptionKeysChanged", [_keys,_add]] call EFUNC(common,localEvent);
+        ["bft_registeredEncryptionKeysChanged", [_keys,_add]] call CBA_fnc_localEvent;
     };
 };
 

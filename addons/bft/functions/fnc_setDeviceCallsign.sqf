@@ -23,4 +23,4 @@ if (count _data < 3) exitwith {};
 if (count (_data select 2) < 3) exitwith {};
 if (_callsign isEqualTo (_data select 2) select 2) exitwith {};
 
-["bft_updateDeviceCallsign", [_deviceID, _callsign]] call EFUNC(common,globalEvent);
+["bft_updateDeviceCallsign", [_deviceID, _callsign]] call CBA_fnc_globalEvent;

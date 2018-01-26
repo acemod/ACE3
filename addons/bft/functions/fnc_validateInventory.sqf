@@ -39,7 +39,7 @@ _matchedIDs = [];
         if (!(_magId in GVAR(pendingIdAssignmentList))) then {
             _magazine = (magazines _unit) select _forEachIndex;
             if (getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)) != "") then {
-                ["bft_itemCreated", [_unit, getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)), _magazine, _magID]] call EFUNC(common,serverEvent);
+                ["bft_itemCreated", [_unit, getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)), _magazine, _magID]] call CBA_fnc_serverEvent;
             };
         };
     };
@@ -49,7 +49,7 @@ _unMatchedDevices = _ownedDevices - _matchedIDs;
 {
     systemChat format["validate - no longer has ID: %1 %2", _unit, _x];
     diag_log format["validate - no longer has ID: %1 %2", _unit, _x];
-    ["bft_updateDeviceOwner", [_x, objNull]] call EFUNC(common,globalEvent);
+    ["bft_updateDeviceOwner", [_x, objNull]] call CBA_fnc_globalEvent;
     systemChat format["Dropped a bft device: %1 - %2", _unit, _X];
     diag_log format["Dropped a bft device: %1 - %2", _unit, _X];
 } forEach _unMatchedDevices;

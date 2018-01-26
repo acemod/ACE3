@@ -135,7 +135,7 @@ GVAR(ifOpen) set [11,
         if (_this select 0 == ACE_player && _this select 1) then {
             [] call FUNC(ifClose);
         };
-    }] call EFUNC(common,addEventHandler)
+    }] call CBA_fnc_addEventHandler
 ];
 
 // Register with ACE bft_updateDeviceOwner event
@@ -145,14 +145,12 @@ GVAR(ifOpen) set [12,
         if ((_this select 0 == I_GET_DEVICE) && (_this select 1 != ACE_player)) then {
             [] call FUNC(ifClose);
         };
-    }] call EFUNC(common,addEventHandler)
+    }] call CBA_fnc_addEventHandler
 ];
 
 // Register with ACE playerChanged event
 GVAR(ifOpen) set [13,
-    ["playerChanged",{
-        _this call FUNC(onPlayerChanged);
-    }] call EFUNC(common,addEventHandler)
+    ["unit", FUNC(onPlayerChanged)] call CBA_fnc_addPlayerEventHandler
 ];
 
 // get device owner
@@ -163,15 +161,15 @@ private _deviceAppData = D_GET_APP_DATA(_deviceData);
 // if the device is a personal device, get settings from device appData store
 if (!(_deviceAppData isEqualTo []) && (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase")) then {
     // write settings to local cache
-    HASH_SET(GVAR(settings),_interfaceID,_deviceAppData);
+    [GVAR(settings), _interfaceID, _deviceAppData] call CBA_fnc_hashSet;
 } else {
     // if vehicle device, see if device app data is already cached, if not, retrieve from config
-    if !(HASH_HASKEY(GVAR(settings),_interfaceID)) then {
+    if !([GVAR(settings), _interfaceID] call CBA_fnc_hashHasKey) then {
         // read from config
         _deviceAppData = [_interfaceConfigName] call FUNC(getInterfaceSettingsFromConfig);
 
         // write to cache
-        HASH_SET(GVAR(settings),_interfaceID,_deviceAppData);
+        [GVAR(settings), _interfaceID, _deviceAppData] call CBA_fnc_hashSet;
     };
 };
 

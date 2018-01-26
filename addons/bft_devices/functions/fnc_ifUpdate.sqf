@@ -44,7 +44,7 @@ if (isNil "_settings") then {
     _interfaceInit = true;
 };
 
-private _mode = HASH_GET(_settings,"mode");
+private _mode = [_settings, "mode"] call CBA_fnc_hashGet;
 if (isNil "_mode") then {
     _mode = [_interfaceID,"mode"] call FUNC(getSettings);
     // do not show "Loading" control since we are not switching modes
@@ -59,7 +59,7 @@ if (isNil "_mode") then {
 
 {
     call {
-        private _value = (_settings select 1) select _forEachIndex;
+        private _value = (_settings select 2) select _forEachIndex;
         if (isNil "_value") exitWith {};
 
         // ------------ DISPLAY POSITION ------------
@@ -139,7 +139,7 @@ if (isNil "_mode") then {
                 // call brightness adjustment if this is outside of interface init
                 if (!_interfaceInit) then {
                     private _brightness = [_interfaceID,"brightness"] call FUNC(getSettings);
-                    HASH_SET(_settings,"brightness",_brightness);
+                    [_settings, "brightness", _brightness] call CBA_fnc_hashSet;
                 };
             };
         };
@@ -197,7 +197,7 @@ if (isNil "_mode") then {
                     if (_mode == "BFT") exitWith {
                         private _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
                         private _mapType = [_interfaceID,"mapType"] call FUNC(getSettings);
-                        private _mapIDC = HASH_GET(_mapTypes,_mapType);
+                        private _mapIDC = [_mapTypes, _mapType] call CBA_fnc_hashGet;
 
                         _displayItemsToShow pushBack _mapIDC;
 
@@ -222,9 +222,9 @@ if (isNil "_mode") then {
                         if (!_interfaceInit) then {
                             if (_isDialog) then {
                                 private _mapScale = [_interfaceID,"mapScaleDlg"] call FUNC(getSettings);
-                                HASH_SET(_settings,"mapScaleDlg",_mapScale);
+                                [_settings, "mapScaleDlg", _mapScale] call CBA_fnc_hashSet;
                                 private _mapWorldPos = [_interfaceID,"mapWorldPos"] call FUNC(getSettings);
-                                HASH_SET(_settings,"mapWorldPos",_mapWorldPos);
+                                [_settings, "mapWorldPos", _mapWorldPos] call CBA_fnc_hashSet;
                             };
                         };
                     };
@@ -233,7 +233,7 @@ if (isNil "_mode") then {
                         private _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
                         if (count _mapTypes > 1) then {
                             private _targetMapName = [_interfaceID,"mapType"] call FUNC(getSettings);
-                            private _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
+                            private _targetMapIDC = [_mapTypes, _targetMapName] call CBA_fnc_hashGet;
                             _targetMapCtrl = _display displayCtrl _targetMapIDC;
 
                             // If we find the map to be shown, we are switching away from BFT. Lets save map scale and position
@@ -250,10 +250,10 @@ if (isNil "_mode") then {
                             IDC_UAVMAP
                         ];
                         _btnActCtrl ctrlSetTooltip "View Gunner Optics";
-                        HASH_SET(_settings,"uavListUpdate",true);
+                        [_settings, "uavListUpdate", true] call CBA_fnc_hashSet;
                         if (!_interfaceInit) then {
                             private _uav = [_interfaceID,"uavCam"] call FUNC(getSettings);
-                            HASH_SET(_settings,"uavCam",_uav);
+                            [_settings, "uavCam", _uav] call CBA_fnc_hashSet;
                         };
                     };
                     // ---------- HELMET CAM -----------
@@ -263,10 +263,10 @@ if (isNil "_mode") then {
                             IDC_HCAMMAP
                         ];
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
-                        HASH_SET(_settings,"hCamListUpdate",true);
+                        [_settings, "hCamListUpdate", true] call CBA_fnc_hashSet;
                         if (!_interfaceInit) then {
                             private _hCam = [_interfaceID,"hCam"] call FUNC(getSettings);
-                            HASH_SET(_settings,"hCam",_hCam);
+                            [_settings, "hCam", _hCam] call CBA_fnc_hashSet;
                         };
                     };
                     // ---------- MESSAGING -----------
@@ -295,10 +295,10 @@ if (isNil "_mode") then {
                                 IDC_GROUP_HCAM,
                                 IDC_HCAMMAP
                             ];
-                            HASH_SET(_settings,"hCamListUpdate",true);
+                            [_settings, "hCamListUpdate", true] call CBA_fnc_hashSet;
                             if (!_interfaceInit) then {
                                 private _hCam = [_interfaceID,"hCam"] call FUNC(getSettings);
-                                HASH_SET(_settings,"hCam",_hCam);
+                                [_settings, "hCam", _hCam] call CBA_fnc_hashSet;
                             };
                         };
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
@@ -365,19 +365,19 @@ if (isNil "_mode") then {
         // ------------ MAP TYPE ------------
         if (_x == "mapType") exitWith {
             private _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
-            if ((count (_mapTypes select 0) > 1) && (_mode == "BFT")) then {
+            if ((count (_mapTypes select 1) > 1) && (_mode == "BFT")) then {
                 private _targetMapName = _value;
-                private _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
+                private _targetMapIDC = [_mapTypes, _targetMapName] call CBA_fnc_hashGet;
                 _targetMapCtrl = _display displayCtrl _targetMapIDC;
 
                 if (!_interfaceInit && _isDialog) then {
                     private _previousMapCtrl = controlNull;
                     {
-                        private _previousMapIDC = (_mapTypes select 1) select _forEachIndex;
+                        private _previousMapIDC = (_mapTypes select 2) select _forEachIndex;
                         _previousMapCtrl = _display displayCtrl _previousMapIDC;
                         if (ctrlShown _previousMapCtrl) exitWith {};
                         _previousMapCtrl = controlNull;
-                    } forEach (_mapTypes select 0);
+                    } forEach (_mapTypes select 1);
                     // See if _targetMapCtrl is already being shown
                     if ((!ctrlShown _targetMapCtrl) && (_targetMapCtrl != _previousMapCtrl)) then {
                         // Update _targetMapCtrl to scale and position of _previousMapCtrl
@@ -389,9 +389,9 @@ if (isNil "_mode") then {
                 // Hide all unwanted map types
                 {
                     if (_x != _targetMapName) then {
-                        (_display displayCtrl ((_mapTypes select 1) select _forEachIndex)) ctrlShow false;
+                        (_display displayCtrl ((_mapTypes select 2) select _forEachIndex)) ctrlShow false;
                     };
-                } forEach (_mapTypes select 0);
+                } forEach (_mapTypes select 1);
 
                 // Update OSD element if it exists
                 private _osdCtrl = _display displayCtrl IDC_OSD_MAP_TGGL;
@@ -550,14 +550,14 @@ if (isNil "_mode") then {
         };
         // ----------------------------------
     };
-} forEach (_settings select 0);
+} forEach (_settings select 1);
 
 // update scale and world position if we have to. If so, fill in the blanks and make the changes
 if ((!isNil "_targetMapScale") || (!isNil "_targetMapWorldPos")) then {
     if (isNull _targetMapCtrl) then {
         private _targetMapName = [_interfaceID,"mapType"] call FUNC(getSettings);
         private _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
-        private _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
+        private _targetMapIDC = [_mapTypes, _targetMapName] call CBA_fnc_hashGet;
         _targetMapCtrl = _display displayCtrl _targetMapIDC;
     };
     if (isNil "_targetMapScale") then {
@@ -581,7 +581,7 @@ if (!isNull _loadingCtrl) then {
         // delay moving the mouse cursor by one frame, for some reason its not working without
         [{
             setMousePosition _this;
-        },_mousePos] call EFUNC(common,execNextFrame);
+        },_mousePos] call CBA_fnc_execNextFrame
     };
 
     _loadingCtrl ctrlShow false;

@@ -22,4 +22,4 @@ _assignableInformation = _data select 2;
 _assignableInformation set [0, _elementType select 0];
 _assignableInformation set [1, _elementType select 1];
 
-["bft_deviceDataChanged", [_data, false]] call EFUNC(common,localEvent);
+["bft_deviceDataChanged", [_data, false]] call CBA_fnc_localEvent;

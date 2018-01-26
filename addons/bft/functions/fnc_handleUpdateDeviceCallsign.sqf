@@ -21,4 +21,4 @@ _data = [_deviceID] call FUNC(getDeviceData);
 _deviceAssignableInfo = _data select 2;
 _deviceAssignableInfo set [2, _callsign];
 
-["bft_deviceDataChanged", [_data, false]] call EFUNC(common,localEvent);
+["bft_deviceDataChanged", [_data, false]] call CBA_fnc_localEvent;

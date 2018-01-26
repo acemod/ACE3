@@ -25,7 +25,7 @@ _variable = missionNamespace getvariable [_varName, []];
 _variable pushback _data;
 missionNamespace setvariable [_varName, _variable];
 
-["bft_syncedArrayChanged", [0, _data]] call EFUNC(common,localEvent);
+["bft_syncedArrayChanged", [0, _data]] call CBA_fnc_localEvent;
 
 systemChat format["handleSyncedArrayPushback %1 - %2", _varName, _variable];
 diag_log format["handleSyncedArrayPushback %1 - %2", _varName, _variable];

@@ -9,9 +9,9 @@ if (!hasInterface) exitWith {};
 
 /*
 // register with reporting channels when map is opened
-["visibleMapChanged",{
+["visibleMap",{
     params ["", "_mapIsVisible"];
-    
+
     if (_mapIsVisible) then {
         // set icon size back to default
         [1] call FUNC(updateDrawSize);
@@ -25,4 +25,4 @@ if (!hasInterface) exitWith {};
     } else {
         [false] call EFUNC(bft,updateAvailableDevicesPosition);
     };
-}] call EFUNC(common,addEventHandler);*/
+}] call CBA_fnc_addPlayerEventHandler;*/

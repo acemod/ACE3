@@ -1,5 +1,5 @@
 class CfgWeapons {
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
     class EGVAR(bft_devices,ItemCore);
 
     // DK10 BLUFOR
@@ -8,7 +8,7 @@ class CfgWeapons {
         displayName = CSTRING(DK10_itemName_b);
         model = QUOTE(PATHTOF(data\DK10.p3d));
         picture = QUOTE(PATHTOF(UI\inventory\DK10_icon.paa));
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 40;
         };
         EGVAR(bft,deviceType) = "DK10_b";

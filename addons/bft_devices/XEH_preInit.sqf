@@ -22,6 +22,6 @@ GVAR(mapScaleFactor) = GVAR(worldSize) / 2666.65;
         // still need to figure out if this is really required and how I actually got to this number (too long ago!)
         GVAR(mapScaleFactor) = GVAR(worldSize) / 2666.65;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 ADDON = true;

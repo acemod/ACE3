@@ -22,12 +22,12 @@ params ["_modes", "_add"];
 if (isNil "_add") then {
     if !(GVAR(registeredViewModes) isEqualTo _modes) then {
         GVAR(registeredViewModes) = _modes;
-        ["bft_registeredModeChanged", [_modes,nil]] call EFUNC(common,localEvent);
+        ["bft_registeredModeChanged", [_modes,nil]] call CBA_fnc_localEvent;
     };
 } else {
     private ["_changed"];
     _changed = false;
-    
+
     if (_add) then {
         // figure out the real difference
         _modes = _modes - GVAR(registeredViewModes);
@@ -44,7 +44,7 @@ if (isNil "_add") then {
         };
     };
     if (_changed) then {
-        ["bft_registeredModeChanged", [_modes,_add]] call EFUNC(common,localEvent);
+        ["bft_registeredModeChanged", [_modes,_add]] call CBA_fnc_localEvent;
     };
 };
 

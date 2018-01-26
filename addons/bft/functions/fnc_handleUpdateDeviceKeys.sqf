@@ -21,4 +21,4 @@ _data = [_deviceID] call FUNC(getDeviceData);
 _encryption = _data select 1;
 _encryption set [1, _keys];
 
-["bft_deviceDataChanged", [_data, false]] call EFUNC(common,localEvent);
+["bft_deviceDataChanged", [_data, false]] call CBA_fnc_localEvent;

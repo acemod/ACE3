@@ -23,7 +23,7 @@ disableSerialization;
 
 params ["_displayName", "_offset"];
 _offset params ["_xOffset", "_yOffset"];
-
+systemChat format ["offset %1 %2", _xOffset, _yOffset];
 private _display = uiNamespace getVariable _displayName;
 private _isDialog = I_GET_ISDIALOG;
 

@@ -95,5 +95,5 @@ _deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableI
 diag_log format["Prep raising bft_addDeviceData _deviceInformation with: %1", _deviceInformation];
 [{
     diag_log format["exec bft_addDeviceData _deviceInformation with: %1", _this];
-    ["bft_addDeviceData", _this] call EFUNC(common,globalEvent);
-}, _deviceInformation, 1] call EFUNC(common,waitAndExecute);
+    ["bft_addDeviceData", _this] call CBA_fnc_globalEvent;
+}, _deviceInformation, 1] call CBA_fnc_waitAndExecute;

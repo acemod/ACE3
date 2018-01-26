@@ -33,22 +33,23 @@ private ["_property"];
 params ["_interfaceID", ["_property", ""]];
 
 // Fetch common and device specific property hashes
-private _commonProperties = HASH_GET(GVAR(settings),"COMMON");
-private _deviceAppData = HASH_GET(GVAR(settings),_interfaceID);
+private _commonProperties = [GVAR(settings), "COMMON"] call CBA_fnc_hashGet;
+private _deviceAppData = [GVAR(settings), _interfaceID] call CBA_fnc_hashGet;
 
 // Return value of requested property
 if (_property != "") exitWith {
-    private _value = HASH_GET(_deviceAppData,_property);
+    private _value = [_deviceAppData, _property] call CBA_fnc_hashGet;
     if (isNil "_value") then {
-        _value = HASH_GET(_commonProperties,_property);
+        _value = [_commonProperties, _property] call CBA_fnc_hashGet;
     };
     if (isNil "_value") then {nil} else {_value}
 };
 
 // Return list of all property hashes
 private _combinedProperties = +_commonProperties;
+systemChat format ["Device app data %1", _deviceAppData];
 {
-    HASH_SET(_combinedProperties,_x,(_deviceAppData select 1) select _forEachIndex);
-} forEach (_deviceAppData select 0);
+    [_combinedProperties, _x, (_deviceAppData select 2) select _forEachIndex] call CBA_fnc_hashSet;
+} forEach (_deviceAppData select 1);
 
 _combinedProperties

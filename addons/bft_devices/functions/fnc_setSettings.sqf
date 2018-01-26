@@ -31,44 +31,44 @@
 
 params ["_interfaceID", "_properties", ["_updateInterface", true], ["_forceInterfaceUpdate", false] ];
 
-private _commonProperties = HASH_GET(GVAR(settings),"COMMON");
-private _deviceAppData = HASH_GET(GVAR(settings),_interfaceID);
+private _commonProperties = [GVAR(settings), "COMMON"] call CBA_fnc_hashGet;
+private _deviceAppData = [GVAR(settings), _interfaceID] call CBA_fnc_hashGet;
 
 // Write multiple property pairs. If they exist in _deviceAppData, write them there, else write them to COMMON. Only write if they exist and have changed.
-private _commonPropertiesUpdate = HASH_CREATE;
-private _combinedPropertiesUpdate = HASH_CREATE;
+private _commonPropertiesUpdate = [] call CBA_fnc_hashCreate;
+private _combinedPropertiesUpdate = [] call CBA_fnc_hashCreate;
 {
     private _key = _x select 0;
     private _value = _x select 1;
     call {
-        private _currentValue = HASH_GET(_deviceAppData,_key);
+        private _currentValue = [_deviceAppData, _key] call CBA_fnc_hashGet;
         if (!isNil "_currentValue") exitWith {
             call {
                 if !(_currentValue isEqualTo _value) exitWith {
-                    HASH_SET(_combinedPropertiesUpdate,_key,_value);
-                    HASH_SET(_deviceAppData,_key,_value);
+                    [_combinedPropertiesUpdate,_key,_value] call CBA_fnc_hashSet;
+                    [_deviceAppData, _key, _value] call CBA_fnc_hashSet;
                 };
                 if (_forceInterfaceUpdate) then {
-                    HASH_SET(_combinedPropertiesUpdate,_key,_value);
+                    [_combinedPropertiesUpdate, _key, _value] call CBA_fnc_hashSet;
                 };
             };
         };
-        _currentValue = HASH_GET(_commonProperties,_key);
+        _currentValue = [_commonProperties, _key] call CBA_fnc_hashGet;
         if (!isNil "_currentValue") then {
             call {
                 if !(_currentValue isEqualTo _value) then {
-                    HASH_SET(_commonPropertiesUpdate,_key,_value);
-                    HASH_SET(_commonProperties,_key,_value);
+                    [_commonPropertiesUpdate, _key, _value] call CBA_fnc_hashSet;
+                    [_commonProperties, _key, _value] call CBA_fnc_hashSet;
                 };
                 if (_forceInterfaceUpdate) then {
-                    HASH_SET(_commonPropertiesUpdate,_key,_value);
+                    [_commonPropertiesUpdate, _key, _value] call CBA_fnc_hashSet;
                 };
             };
         };
     };
 } forEach _properties;
-HASH_SET(GVAR(settings),_interfaceID,_deviceAppData);
-HASH_SET(GVAR(settings),"COMMON",_commonProperties);
+[GVAR(settings), _interfaceID, _deviceAppData] call CBA_fnc_hashSet;
+[GVAR(settings), "COMMON", _commonProperties] call CBA_fnc_hashSet;
 
 // Finally, call an interface update for the updated properties, but only if the currently interface uses the same property group, if not, pass changed common properties only.
 if (!I_CLOSED) then {
@@ -83,6 +83,6 @@ if (!I_CLOSED) then {
     };
 };
 
-if (_combinedPropertiesUpdate isEqualTo HASH_CREATE && _combinedPropertiesUpdate isEqualTo HASH_CREATE) exitWith {false};
+if (_combinedPropertiesUpdate isEqualTo ([] call CBA_fnc_hashCreate) && {_combinedPropertiesUpdate isEqualTo ([] call CBA_fnc_hashCreate)}) exitWith {false};
 
 true

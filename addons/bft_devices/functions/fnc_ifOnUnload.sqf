@@ -42,9 +42,9 @@ if !(I_CLOSED) then {
     if (!isNil "_playerKilledEhId") then {_player removeEventHandler ["killed",_playerKilledEhId]};
     if (!isNil "_vehicleGetOutEhId") then {_vehicle removeEventHandler ["GetOut",_vehicleGetOutEhId]};
     if (!isNil "_draw3dEhId") then {removeMissionEventHandler ["Draw3D",_draw3dEhId]};
-    if (!isNil "_aceUnconciousEhId") then {["medical_onUnconscious",_aceUnconciousEhId] call EFUNC(common,removeEventHandler)};
-    if (!isNil "_aceUpdateDeviceOwnerEhId") then {["bft_updateDeviceOwner",_aceUpdateDeviceOwnerEhId] call EFUNC(common,removeEventHandler)};
-    if (!isNil "_acePlayerChangedEhId") then {["playerChanged",_acePlayerChangedEhId] call EFUNC(common,removeEventHandler)};
+    if (!isNil "_aceUnconciousEhId") then {["medical_onUnconscious",_aceUnconciousEhId] call CBA_fnc_removeEventHandler};
+    if (!isNil "_aceUpdateDeviceOwnerEhId") then {["bft_updateDeviceOwner",_aceUpdateDeviceOwnerEhId] call CBA_fnc_removeEventHandler};
+    if (!isNil "_acePlayerChangedEhId") then {["playerChanged",_acePlayerChangedEhId] call CBA_fnc_removeEventHandler};
 
     // remove notification system related PFHs
     if !(isNil QGVAR(processNotificationsPFH)) then {
@@ -56,7 +56,7 @@ if !(I_CLOSED) then {
     if (!GVAR(ifOpenStart)) then {
         if (_isDialog) then {
             // convert mapscale to km
-            _mapScale = GVAR(mapScale) * GVAR(mapScaleFactor) / 0.86 * (safezoneH * 0.8);
+            private _mapScale = GVAR(mapScale) * GVAR(mapScaleFactor) / 0.86 * (safezoneH * 0.8);
 
             // get the current position of the background control
             private _backgroundPosition = [_displayName] call FUNC(getBackgroundPosition);
@@ -84,11 +84,11 @@ if !(I_CLOSED) then {
 
     // if the device is a personal device, save settings to device appData store
     if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") then {
-        [_deviceID,[-1,HASH_GET(GVAR(settings),_interfaceID)]] call EFUNC(bft,handleUpdateDeviceAppData);
+        [_deviceID,[-1, [GVAR(settings),_interfaceID] call CBA_fnc_hashGet]] call EFUNC(bft,handleUpdateDeviceAppData);
     };
 
     // send "bft_deviceClosed" event
-    ["bft_deviceClosed",[_deviceID]] call EFUNC(common,localEvent);
+    ["bft_deviceClosed",[_deviceID]] call CBA_fnc_localEvent;
 
     uiNamespace setVariable [_displayName, displayNull];
     GVAR(ifOpen) = nil;

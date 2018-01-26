@@ -18,4 +18,4 @@ params ["_varName", "_data"];
 
 if (typeName _data == "ARRAY" && (count _data == 0)) exitwith {};
 
-["bft_syncedArrayUpdate", _this] call EFUNC(common,globalEvent);
+["bft_syncedArrayUpdate", _this] call CBA_fnc_globalEvent;

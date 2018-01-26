@@ -22,4 +22,4 @@ _data = [_deviceID] call FUNC(getDeviceData);
 if (count _data < 6) exitwith {};
 if (_newOwner isEqualTo (_data select 5)) exitwith {};
 
-["bft_updateDeviceOwner", [_deviceID, _newOwner]] call EFUNC(common,globalEvent);
+["bft_updateDeviceOwner", [_deviceID, _newOwner]] call CBA_fnc_globalEvent;

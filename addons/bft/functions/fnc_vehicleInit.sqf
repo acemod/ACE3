@@ -27,7 +27,7 @@ systemChat format["VehicleInit devices: %1",_device];
 diag_log format["VehicleInit devices: %1",_device];
 
 if (isClass (configFile >> "ACE_BFT" >> "Devices" >> _device)) then {
-    ["bft_itemCreated", [_vehicle, _device, "", format["%1/%2",_vehicle, _device], STATE_OFFLINE]] call EFUNC(common,serverEvent);
+    ["bft_itemCreated", [_vehicle, _device, "", format["%1/%2",_vehicle, _device], STATE_OFFLINE]] call CBA_fnc_serverEvent;
 };
 
 true

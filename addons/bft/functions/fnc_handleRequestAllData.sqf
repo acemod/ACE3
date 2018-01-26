@@ -19,7 +19,7 @@ diag_log format["handleRequestAllData: Request from Origin: %1", _origin];
 
 {
     diag_log format["handleRequestAllData: Add Device Data to origin: %1", _x];
-    ["bft_addDeviceData", _origin, _x] call EFUNC(common,targetEvent);
+    ["bft_addDeviceData", _origin, _x] call CBA_fnc_targetEvent;
 } forEach GVAR(deviceData);
 
 // Alternative:
@@ -35,7 +35,7 @@ diag_log format["handleRequestAllData: Request from Origin: %1", _origin];
 
     {
         diag_log format["handleRequestAllData: Add synced array variable (%1) value: %2", _varName, _x];
-        ["bft_syncedArrayPushback", _origin, [_varName, _x]] call EFUNC(common,targetEvent);
+        ["bft_syncedArrayPushback", _origin, [_varName, _x]] call CBA_fnc_targetEvent;
     } forEach _variable;
 
     // Alternative:

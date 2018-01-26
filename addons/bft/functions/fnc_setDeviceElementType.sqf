@@ -24,4 +24,4 @@ if (count (_data select 2) < 2) exitwith {};
 if ((_elementType select 0) isEqualTo (_data select 2) select 0) exitwith {};
 if ((_elementType select 1) isEqualTo (_data select 2) select 1) exitwith {};
 
-["bft_updateDeviceElementType", [_deviceID, _elementType]] call EFUNC(common,globalEvent);
+["bft_updateDeviceElementType", [_deviceID, _elementType]] call CBA_fnc_globalEvent;

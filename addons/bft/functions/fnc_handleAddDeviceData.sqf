@@ -40,4 +40,4 @@ if (local (_this select 5)) then {
     diag_log format["handleAdd - not the owner of device: %1", (_this select 5)];
 };
 
-["bft_deviceDataChanged", [_this, true]] call EFUNC(common,localEvent);
+["bft_deviceDataChanged", [_this, true]] call CBA_fnc_localEvent;

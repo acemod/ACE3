@@ -25,8 +25,9 @@
 // ignore function call if the interface has not finished setup
 if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
 
-params ["_function"];
-_function params ["_control", "_selectedIndex"];
+params ["_function", "_controlArguments"];
+_controlArguments params ["_control", "_selectedIndex"];
+systemChat format ["this %1 _control %2 _selectedIndex %3", _this, _control, _selectedIndex];
 
 private _display = ctrlParent _control;
 private _interfaceID = I_GET_ID;

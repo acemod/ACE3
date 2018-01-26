@@ -23,4 +23,4 @@ if (count _data < 2) exitwith {};
 if (count (_data select 1) < 2) exitwith {};
 if (_keys isEqualTo (_data select 1) select 1) exitwith {};
 
-["bft_updateDeviceKeys", [_deviceID, _keys]] call EFUNC(common,globalEvent);
+["bft_updateDeviceKeys", [_deviceID, _keys]] call CBA_fnc_globalEvent;

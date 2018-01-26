@@ -44,23 +44,23 @@ GVAR(UAVlist) = [];
 GVAR(hCamList) = [];
 
 // Define default settings for interface property groups
-GVAR(settings) = HASH_CREATE;
+GVAR(settings) = [] call CBA_fnc_hashCreate;
 
 private ["_tempHash"];
 // COMMON settings
-_tempHash = HASH_CREATE;
-HASH_SET(_tempHash,"mode","BFT");
-HASH_SET(_tempHash,"mapScaleMin",0.1);
-HASH_SET(_tempHash,"mapScaleMax",2 ^ round(sqrt(GVAR(worldSize) / 1024)));
-HASH_SET(GVAR(settings),"COMMON",_tempHash);
+_tempHash = [] call CBA_fnc_hashCreate;
+[_tempHash, "mode", "BFT"] call CBA_fnc_hashSet;
+[_tempHash, "mapScaleMin", 0.1] call CBA_fnc_hashSet;
+[_tempHash, "mapScaleMax", 2 ^ round(sqrt(GVAR(worldSize) / 1024))] call CBA_fnc_hashSet;
+[GVAR(settings), "COMMON", _tempHash] call CBA_fnc_hashSet;
 
 // when main map is opened, close any open interface
-["visibleMapChanged",{
+["visibleMap",{
     params ["", "_mapIsVisible"];
 
     if (_mapIsVisible) then {
         [] call FUNC(ifClose);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addPlayerEventHandler;
 
 #include "initKeybinds.sqf"

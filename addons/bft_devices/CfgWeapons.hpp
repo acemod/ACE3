@@ -1,9 +1,9 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class GVAR(ItemCore): ACE_ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         // cannot do ItemGPS as long as we do have to use magazines for unique items
         // simulation = "ItemGPS";
@@ -27,12 +27,12 @@ class CfgWeapons {
     };*/
 
     class ACE_HelmetCam: ACE_ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         descriptionShort = CSTRING(HelmetCam_itemDescription);
         displayName = CSTRING(HelmetCam_itemName);
         picture = QUOTE(PATHTOF(UI\inventory\HelmetCam_icon.paa));
         scope = 2;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 4;
         };
     };

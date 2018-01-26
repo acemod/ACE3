@@ -26,7 +26,7 @@ _variable = missionNamespace getvariable [_varName, []];
         diag_log format["handleSyncedArrayDelete deleting- %1", _x];
         private ["_removedElement"];
         _removedElement = _variable deleteAt _foreachIndex;
-        ["bft_syncedArrayChanged", [2, _removedElement]] call EFUNC(common,localEvent);
+        ["bft_syncedArrayChanged", [2, _removedElement]] call CBA_fnc_localEvent;
 
     };
 } forEach _variable;

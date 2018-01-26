@@ -1,6 +1,6 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
     class ACE_bftItemBase: ACE_ItemCore {
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
@@ -15,7 +15,7 @@ class CfgWeapons {
         // Magazine type for unique IDs. This is the magazine classname by which this item will be replaced. Will be replaced once BI implements unique Ids for items.
         GVAR(magazineItem) = "ACE_bftMagazineBase";
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };

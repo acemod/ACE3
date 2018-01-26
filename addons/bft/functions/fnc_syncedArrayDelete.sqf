@@ -16,4 +16,4 @@
 
 params ["_varName", "_dataID"];
 
-["bft_syncedArrayDelete", [_varName, _dataID]] call EFUNC(common,globalEvent);
+["bft_syncedArrayDelete", [_varName, _dataID]] call CBA_fnc_globalEvent;

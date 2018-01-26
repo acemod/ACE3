@@ -33,13 +33,15 @@ if (isNil QGVAR(processNotificationsPFH) && !(I_CLOSED) && count GVAR(notificati
         // run every 4 seconds
         GVAR(processNotificationsPFH) = [{
             params ["_args", "_idPFH"];
+            systemChat format ["args %1", _args];
             _args params ["_ctrl"];
 
             if !(I_CLOSED) then {
                 if (count GVAR(notificationCache) != 0) then {
                     // grab and delete the oldest notification
+                    systemChat format ["notification %1", GVAR(notificationCache)];
                     private _notification = GVAR(notificationCache) deleteAt 0;
-                    _notification params ["_ctrl", "_time1", "_time2", "_decayTime", "_counter"];
+                    _notification params ["_type", "_time1", "_time2", "_decayTime", "_counter"];
 
                     private _currentTime = [] call FUNC(currentTime);
                     // see if notification was issued in the same minute, if so, omit showing the time
@@ -49,7 +51,7 @@ if (isNil QGVAR(processNotificationsPFH) && !(I_CLOSED) && count GVAR(notificati
                     if (_counter > 1) then {
                         _text = format ["%1 (x%2)",_text,_counter];
                     };
-
+                    systemChat format ["%1 ctrlsettext %2", _type, _text];
                     // show the notification
                     _ctrl ctrlSetText _text;
                     // make the control visible (it might have had its fade set to 1 before)

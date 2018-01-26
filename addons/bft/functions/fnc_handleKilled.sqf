@@ -22,5 +22,5 @@ private _ownedDevices = _object getvariable [QGVAR(ownedDevices), []];
 {
     systemChat format["raising event vehicleDeviceKilled: %1 ", _x];
     diag_log format["raising event vehicleDeviceKilled: %1 ", _x];
-    ["bft_vehicleDeviceKilled", [_x]] call EFUNC(common,globalEvent);
+    ["bft_vehicleDeviceKilled", [_x]] call CBA_fnc_globalEvent;
 } forEach _ownedDevices;

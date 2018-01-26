@@ -26,7 +26,7 @@ private _configToHash = {
     params ["_config"];
 
     private _configProperties = configProperties [_config];
-    private _configHash = HASH_CREATE;
+    private _configHash = [] call CBA_fnc_hashCreate;
     {
         private _key = configName _x;
 
@@ -47,7 +47,7 @@ private _configToHash = {
             nil
         };
         if !(isNil "_value") then {
-            HASH_SET(_configHash,_key,_value);
+            [_configHash, _key, _value] call CBA_fnc_hashSet;
         };
     } forEach _configProperties;
 

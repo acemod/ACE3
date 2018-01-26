@@ -1,27 +1,27 @@
 #include "script_component.hpp"
 
-["bft_itemCreated", FUNC(handleItemCreated)] call EFUNC(common,addEventHandler);
-["bft_addDeviceData", FUNC(handleAddDeviceData)] call EFUNC(common,addEventHandler);
-["bft_updateDeviceOwner", FUNC(handleUpdateDeviceOwner)] call EFUNC(common,addEventHandler);
-["bft_updateDeviceGroup", FUNC(handleUpdateDeviceGroup)] call EFUNC(common,addEventHandler);
-["bft_updateDeviceElementType", FUNC(handleUpdateDeviceElementType)] call EFUNC(common,addEventHandler);
-["bft_updateDeviceCallsign", FUNC(handleUpdateDeviceCallsign)] call EFUNC(common,addEventHandler);
-["bft_updateDeviceKeys", FUNC(handleUpdateDeviceKeys)] call EFUNC(common,addEventHandler);
-["bft_updateDeviceAppData", FUNC(handleUpdateDeviceAppData)] call EFUNC(common,addEventHandler);
+["bft_itemCreated", FUNC(handleItemCreated)] call CBA_fnc_addEventHandler;
+["bft_addDeviceData", FUNC(handleAddDeviceData)] call CBA_fnc_addEventHandler;
+["bft_updateDeviceOwner", FUNC(handleUpdateDeviceOwner)] call CBA_fnc_addEventHandler;
+["bft_updateDeviceGroup", FUNC(handleUpdateDeviceGroup)] call CBA_fnc_addEventHandler;
+["bft_updateDeviceElementType", FUNC(handleUpdateDeviceElementType)] call CBA_fnc_addEventHandler;
+["bft_updateDeviceCallsign", FUNC(handleUpdateDeviceCallsign)] call CBA_fnc_addEventHandler;
+["bft_updateDeviceKeys", FUNC(handleUpdateDeviceKeys)] call CBA_fnc_addEventHandler;
+["bft_updateDeviceAppData", FUNC(handleUpdateDeviceAppData)] call CBA_fnc_addEventHandler;
 
-["bft_syncedArrayDelete", FUNC(handleSyncedArrayDelete)] call EFUNC(common,addEventHandler);
-["bft_syncedArrayPushback", FUNC(handleSyncedArrayPushback)] call EFUNC(common,addEventHandler);
-["bft_syncedArrayUpdate", FUNC(handleSyncedArrayUpdate)] call EFUNC(common,addEventHandler);
+["bft_syncedArrayDelete", FUNC(handleSyncedArrayDelete)] call CBA_fnc_addEventHandler;
+["bft_syncedArrayPushback", FUNC(handleSyncedArrayPushback)] call CBA_fnc_addEventHandler;
+["bft_syncedArrayUpdate", FUNC(handleSyncedArrayUpdate)] call CBA_fnc_addEventHandler;
 
-["bft_vehicleDeviceKilled", FUNC(handleVehicleDeviceKilled)] call EFUNC(common,addEventHandler);
+["bft_vehicleDeviceKilled", FUNC(handleVehicleDeviceKilled)] call CBA_fnc_addEventHandler;
 
-if(!isServer) then {
+if (!isServer) then {
     ["PlayerJip", {
         diag_log text format["[ACE] * JIP BFT Data Synchronization initialized"];
-        ["bft_requestAllData", [player]] call EFUNC(common,serverEvent);
-    }] call EFUNC(common,addEventHandler);
+        ["bft_requestAllData", [ace_player]] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addEventHandler;
 } else {
-    ["bft_requestAllData", FUNC(handleRequestAllData)] call EFUNC(common,addEventHandler);
+    ["bft_requestAllData", FUNC(handleRequestAllData)] call CBA_fnc_addEventHandler;
 
     /*[QGVAR(messages), [0, "Message content!"]] call FUNC(syncedArrayPushback);
     [QGVAR(messages), ["0/1", "Message content!"]] call FUNC(syncedArrayPushback);
@@ -42,12 +42,13 @@ if(!isServer) then {
 
 if (!hasInterface) exitWith {};
 
-["playerInventoryChanged", FUNC(validateInventory)] call EFUNC(common,addEventHandler);
-["playerChanged", FUNC(validateInventory)] call EFUNC(common,addEventHandler);
+["loadout", FUNC(validateInventory)] call CBA_fnc_addPlayerEventHandler;
+["unit", FUNC(validateInventory)] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[ACE_player, objNull] call FUNC(validateInventory)}] call CBA_fnc_addPlayerEventHandler; // Necessary?
 
-["bft_deviceDataChanged", FUNC(handleDeviceDataChanged)] call EFUNC(common,addEventHandler);
-["bft_registeredEncryptionKeysChanged", FUNC(handleRegisteredEncryptionKeysChanged)] call EFUNC(common,addEventHandler);
-["bft_registeredModeChanged", FUNC(handleRegisteredModeChanged)] call EFUNC(common,addEventHandler);
-["bft_colorFilteringChanged", FUNC(handleColorFilteringChanged)] call EFUNC(common,addEventHandler);
-["bft_deviceOpened", FUNC(handleDeviceOpened)] call EFUNC(common,addEventHandler);
-["bft_deviceClosed", FUNC(handleDeviceClosed)] call EFUNC(common,addEventHandler);
+["bft_deviceDataChanged", FUNC(handleDeviceDataChanged)] call CBA_fnc_addEventHandler;
+["bft_registeredEncryptionKeysChanged", FUNC(handleRegisteredEncryptionKeysChanged)] call CBA_fnc_addEventHandler;
+["bft_registeredModeChanged", FUNC(handleRegisteredModeChanged)] call CBA_fnc_addEventHandler;
+["bft_colorFilteringChanged", FUNC(handleColorFilteringChanged)] call CBA_fnc_addEventHandler;
+["bft_deviceOpened", FUNC(handleDeviceOpened)] call CBA_fnc_addEventHandler;
+["bft_deviceClosed", FUNC(handleDeviceClosed)] call CBA_fnc_addEventHandler;

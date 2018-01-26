@@ -20,4 +20,4 @@ private ["_data"];
 _data = [_deviceID] call FUNC(getDeviceData);
 _data set [3, _newData];
 
-// ["bft_deviceDataChanged", [_data, false]] call EFUNC(common,localEvent);
+// ["bft_deviceDataChanged", [_data, false]] call CBA_fnc_localEvent;
