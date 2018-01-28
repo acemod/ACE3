@@ -7,6 +7,7 @@
             <Chinese>殉爆效果</Chinese>
             <Chinesesimp>殉爆效果</Chinesesimp>
             <Japanese>誘爆</Japanese>
+            <Korean>쿡오프</Korean>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
@@ -120,11 +121,13 @@
             <English>Cook-off probability coefficient</English>
             <Japanese>誘爆の可能性係数</Japanese>
             <Italian>Coefficiente probabilità esplosione</Italian>
+            <Korean>쿡오프 확률 계수</Korean>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
             <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
             <Italian>Moltiplicatore per la probabilità dell'esplosione. Un valore più alto aumenta la probabilità dell'esplosione</Italian>
+            <Korean>쿡오프 확률에 대한 승수. 값이 높을수록 확률이 높아집니다.</Korean>
         </Key>
     </Package>
 </Project>
