@@ -95,7 +95,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    12 * GRID_H
+                    16 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -107,7 +107,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    12 * GRID_H
+                    16 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -119,7 +119,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    23 * GRID_H
+                    27 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -131,7 +131,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    34 * GRID_H
+                    39 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -143,7 +143,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    45 * GRID_H
+                    49 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -154,7 +154,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    56 * GRID_H
+                    61 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -165,7 +165,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    56 * GRID_H
+                    61 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
