@@ -271,7 +271,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
 
             if (isNumber _ammoWeightCfg) then {
 
-                private _ammoWeight = getNumber _ammoWeight;
+                private _ammoWeight = getNumber _ammoWeightCfg;
                 format ["%1g (%2gr)", _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1]
             } else {
                 "Undefined value (TBL)"
