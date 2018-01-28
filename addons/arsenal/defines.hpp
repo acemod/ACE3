@@ -23,6 +23,10 @@
 #define IDC_message 9
 #define IDC_menuBar 10
 #define IDC_menuBarClose 1001
+#define IDC_buttonHide 1002
+#define IDC_buttonLoadouts 1003
+#define IDC_buttonExport 1004
+#define IDC_buttonImport 1005
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
