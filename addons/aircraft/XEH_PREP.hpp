@@ -1,2 +1,3 @@
-PREP(initEjectAction);
 PREP(canShowEject);
+PREP(initEjectAction);
+PREP(switchVehicleFreelook);

@@ -49,5 +49,13 @@
             <Chinese>關閉貨艙門</Chinese>
             <Chinesesimp>关闭货舱门</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Aircraft_SettingDisableVehicleFreelookName">
+            <English>Disable Vehicle Freelook in aircraft</English>
+            <Russian>Откл. Свободный обзор в возд. технике</Russian>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_SettingDisableVehicleFreelookDesc">
+            <English>Disable "Vehicle Freelook" game option when pilot aircraft</English>
+            <Russian>Отключать игровую опцию "Свободный обзор в технике" во время пилотирования воздушной техники</Russian>
+        </Key>
     </Package>
 </Project>
