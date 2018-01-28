@@ -251,15 +251,15 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
 
             getText (_config >> _stat select 0)
         }]],
-        [["ACE_dragModel"], "Drag model (TBL)", [false, true], [], [{}, {
+        [["ACE_dragModel", "ACE_ballisticCoefficients"], "Drag model (TBL)", [false, true], [], [{}, {
             params ["_stat", "_config", ""];
 
             private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo"))); 
-
             private _dragModel = (_ammoCfg >> _stat select 0);
+            private _ballisticCoef = (_ammoCfg >> _stat select 1);
 
-            if (isNumber _dragModel) then {
-                format ["G%1", getNumber _dragModel]
+            if (isNumber _dragModel && {isArray _ballisticCoef}) then {
+                format ["%1 G%2", (getArray _ballisticCoef) select 0 ,getNumber _dragModel]
             } else {
                 "Undefined value (TBL)"
             };
