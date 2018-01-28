@@ -256,14 +256,26 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
 
             private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo"))); 
 
-            format ["G%1", getNumber (_ammoCfg >> _stat select 0)]
+            private _dragModel = (_ammoCfg >> _stat select 0);
+
+            if (isNumber _dragModel) then {
+                format ["G%1", getNumber _dragModel]
+            } else {
+                "Undefined value (TBL)"
+            };
         }]],
         [["ACE_bulletMass"], "Bullet mass (TBL)", [false, true], [], [{}, {
             params ["_stat", "_config"];
 
-            private _ammoWeight = getNumber (configFile >> "CfgAmmo" >> (getText (_config >> "ammo")) >> _stat select 0); 
+            private _ammoWeightCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo")) >> _stat select 0);
 
-            format ["%1g (%2gr)", _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1]
+            if (isNumber _ammoWeightCfg) then {
+
+                private _ammoWeight = getNumber _ammoWeight;
+                format ["%1g (%2gr)", _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1]
+            } else {
+                "Undefined value (TBL)"
+            };
         }]]
     ];
 };
