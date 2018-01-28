@@ -236,6 +236,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSimulation_DisplayName);
         function = QFUNC(moduleSimulation);
     };
+    class GVAR(moduleSuicideBomber): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = "Suicide Bomber";
+        curatorInfoType = QGVAR(RscSuicideBomber);
+    };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Captive);

@@ -22,7 +22,8 @@ class CfgPatches {
             QGVAR(moduleSuppressiveFire),
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),
-            QGVAR(moduleTeleportPlayers)
+            QGVAR(moduleTeleportPlayers),
+            QGVAR(moduleSuicideBomber)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;

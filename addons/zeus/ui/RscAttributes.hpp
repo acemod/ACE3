@@ -9,6 +9,7 @@ class RscCheckBox;
 class RscActivePicture;
 class RscMapControl;
 class RscPicture;
+class ctrlToolbox;
 
 class RscDisplayAttributes {
     class Controls {
@@ -727,6 +728,137 @@ class GVAR(RscSetEngineer): RscDisplayAttributes {
                             y = H_PART(0.1);
                             w = W_PART(10);
                             h = H_PART(1);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscSuicideBomber): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSuicideBomber)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSuicideBomber)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class suicideBomber: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_suicideBomber));
+                    idc = 83470;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(5.8);
+                    class controls {
+                        class ActivationSide: RscControlsGroupNoScrollbars {
+                            idc = 83571;
+                            x = 0;
+                            y = 0;
+                            w = W_PART(26);
+                            h = H_PART(2.5);
+                            class controls {
+                                class Label: RscText {
+                                    idc = -1;
+                                    text = "Activation Side";
+                                    x = 0;
+                                    y = 0;
+                                    w = W_PART(10);
+                                    h = H_PART(2.5);
+                                    colorBackground[] = {0, 0, 0, 0.5};
+                                };
+                                class Background: RscText {
+                                    idc = -1;
+                                    x = W_PART(10);
+                                    y = 0;
+                                    w = W_PART(16);
+                                    h = H_PART(2.5);
+                                    colorBackground[] = {1, 1, 1, 0.1};
+                                };
+                                class BLUFOR: RscActivePicture {
+                                    idc = 83581;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+                                    x = W_PART(12.5);
+                                    y = H_PART(0.25);
+                                    w = W_PART(2);
+                                    h = H_PART(2);
+                                    tooltip = "$STR_WEST";
+                                };
+                                class OPFOR: BLUFOR {
+                                    idc = 83580;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+                                    x = W_PART(15.5);
+                                    tooltip = "$STR_EAST";
+                                };
+                                class Independent: BLUFOR {
+                                    idc = 83582;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+                                    x = W_PART(18.5);
+                                    tooltip = "$STR_guerrila";
+                                };
+                                class Civilian: BLUFOR {
+                                    idc = 83583;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+                                    x = W_PART(21.5);
+                                    tooltip = "$STR_Civilian";
+                                };
+                            };
+                        };
+                        class DistanceLabel: RscText {
+                            idc = -1;
+                            text = "Activation Radius";
+                            x = 0;
+                            y = H_PART(2.6);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class DistanceSlider: RscXSliderH {
+                            idc = 83572;
+                            x = W_PART(10.1);
+                            y = H_PART(2.6);
+                            w = W_PART(13.9);
+                            h = H_PART(1);
+                        };
+                        class DistanceEdit: RscEdit {
+                            idc = 83573;
+                            x = W_PART(24.1);
+                            y = H_PART(2.6);
+                            w = W_PART(1.9);
+                            h = H_PART(1);
+                            autocomplete = "";
+                            maxChars = 3;
+                            canModify = 0;
+                        };
+                        class ExplosionLabel: DistanceLabel {
+                            idc = -1;
+                            text = "Explosion Size";
+                            y = H_PART(3.7);
+                        };
+                        class Explosion: ctrlToolbox {
+                            idc = 83574;
+                            x = W_PART(10.1);
+                            y = H_PART(3.7);
+                            w = W_PART(15.9);
+                            h = H_PART(1);
+                            rows = 1;
+                            columns = 3;
+                            strings[] = {"Small", "Medium", "Large"};
+                        };
+                        class AutoSeekLabel: DistanceLabel {
+                            idc = -1;
+                            text = "Auto Seek";
+                            y = H_PART(4.8);
+                            toolTip = "Unit will actively try to find and move towards nearby units of the activation side.\nThe range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.";
+                        };
+                        class AutoSeek: Explosion {
+                            idc = 83575;
+                            y = H_PART(4.8);
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
                     };
                 };

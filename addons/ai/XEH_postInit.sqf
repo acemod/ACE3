@@ -16,9 +16,10 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(unGarrison), FUNC(unGarrison)] call CBA_fnc_addEventHandler;
+
 [QGVAR(doMove), {
     params ["_unitsArray"];
-    {  
+    {
         _x params ["_unit", "_pos"];
         //_unit doFollow leader _unit;
         _unit setDestination [_pos, "LEADER PLANNED", true];
@@ -26,14 +27,16 @@
         LOG(format [ARR_4("XEH_postInit: %1 doMove %2 | ID %3", _unit, _pos, clientOwner)]);
     } foreach _unitsArray
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(setBehaviour), {
     params ["_groupsArray", "_behaviour"];
-    {  
+    {
         _x params ["_group"];
         _group setBehaviour _behaviour;
         LOG(format [ARR_4("XEH_postInit: %1 setBehaviour %2 | ID %3", _group, _behaviour, clientOwner)]);
     } foreach _groupsArray
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(enableAttack), {
     params ["_unitsArray", "_mode"];
     {
@@ -41,6 +44,26 @@
         _unit enableAttack _mode;
         LOG(format [ARR_4("XEH_postInit: %1 enableAttack %2 | ID %3", _unit, _mode, clientOwner)]);
     } foreach _unitsArray
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setUnitPos), {
+    params ["_unit", "_mode"];
+    _unit setUnitPos _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setSpeedMode), {
+    params ["_unit", "_mode"];
+    _unit setSpeedMode _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setCombatMode), {
+    params ["_unit", "_mode"];
+    _unit setCombatMode _mode;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(allowFleeing), {
+    params ["_unit", "_cowardice"];
+    _unit allowFleeing _cowardice;
 }] call CBA_fnc_addEventHandler;
 
 #ifdef DEBUG_MODE_FULL
