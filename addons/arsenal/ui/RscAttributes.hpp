@@ -361,7 +361,6 @@ class GVAR(display) {
                 class statsTitle4: statsTitle1 {
                     idc = IDC_statsTitle4;
                     y = QUOTE(38 * GRID_H);
-                    text = "Unicorn resistance";
                 };
                 class statsBackground4: statsBackground1 {
                     idc = IDC_statsBackground4;
