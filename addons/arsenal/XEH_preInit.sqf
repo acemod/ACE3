@@ -86,7 +86,8 @@ GVAR(statsListLeftPanel) =  [
                     [_statMinMax select 0]
                 ] call BIS_fnc_configExtremes;
 
-                format ["%1 MIL (%2 MOA)", ((_statValues select 1) select 0) * 1000,(((_statValues select 1) select 0) / pi * 10800) ToFixed 1];
+                _statValues = (_statValues select 1) select 0;
+                format ["%1 MIL (%2 MOA)", _statValues * 1000, (_statValues / pi * 10800) ToFixed 1];
             }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
@@ -119,7 +120,8 @@ GVAR(statsListLeftPanel) =  [
                     [_statMinMax select 0]
                 ] call BIS_fnc_configExtremes;
 
-                format ["%1 MIL (%2 MOA)", ((_statValues select 1) select 0) * 1000,(((_statValues select 1) select 0) / pi * 10800) ToFixed 1];
+                _statValues = (_statValues select 1) select 0;
+                format ["%1 MIL (%2 MOA)", _statValues * 1000, (_statValues / pi * 10800) ToFixed 1];
             }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
@@ -248,6 +250,59 @@ GVAR(statsListRightPanel) = [
         ]
     ] // Misc
 ];
+
+if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
+    {
+        (GVAR(statsListLeftPanel) select _x) pushBack [
+            [["ACE_barrelTwist"], "Barrel twist (TBL)", [false, true], [], [{}, {
+                params ["_stat", "_config", ""];
+
+                private _statValues = [
+                    [_config],
+                    [_stat select 0],
+                    [false]
+                ] call BIS_fnc_configExtremes;
+
+                _statValues = (_statValues select 1) select 0;
+                format ["%1mm (%2in)",_statValues, (_statValues / 25.4) toFixed 1];
+            }]],
+            [["ACE_barrelLength"], "Barrel length (TBL)", [false, true], [], [{}, {
+                params ["_stat", "_config", ""];
+
+                private _statValues = [
+                    [_config],
+                    [_stat select 0],
+                    [false]
+                ] call BIS_fnc_configExtremes;
+
+                _statValues = (_statValues select 1) select 0;
+                format ["%1mm (%2in)",_statValues, (_statValues / 25.4) toFixed 1];
+            }]]
+        ];
+    } foreach [0, 1];
+
+    (GVAR(statsListRightPanel) select 4) pushBack [
+        [["ammo"], "Ammo (TBL)", [false, true], [], [{}, {
+            params ["_stat", "_config", ""];
+
+            getText (_config >> _stat select 0)
+        }]],
+        [["ACE_dragModel"], "Drag model (TBL)", [false, true], [], [{}, {
+            params ["_stat", "_config", ""];
+
+            private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo"))); 
+
+            format ["G%1", getNumber (_ammoCfg >> _stat select 0)]
+        }]],
+        [["ACE_bulletMass"], "Bullet mass (TBL)", [false, true], [], [{}, {
+            params ["_stat", "_config", ""];
+
+            private _ammoWeight = getNumber (configFile >> "CfgAmmo" >> (getText (_config >> "ammo")) >> _stat select 0); 
+
+            format ["%1g (%2gr)", _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1]
+        }]]
+    ];
+};
 
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
 [QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;
