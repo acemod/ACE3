@@ -7,7 +7,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-_fnc_mass = {
+private _fnc_mass = {
     params ["_stat", "_config"];
 
     private _statValues = [
@@ -25,7 +25,7 @@ _fnc_mass = {
     format ["%1kg (%2lb)",((_value * 0.1 * (1/2.2046) * 100) / 100) ToFixed 2, ((_value * 0.1 * 100) / 100) ToFixed 2];
 };
 
-_fnc_hit = {
+private _fnc_hit = {
     params ["_stats", "_config", "_args"];
     _args params ["_hitMinMax", "_initSpeedMinMax", "_launcherTabIDC"];
 
@@ -43,7 +43,7 @@ _fnc_hit = {
     [sqrt(_hit^2 * _initSpeed), _hit] select (GVAR(currentLeftPanel) == _launcherTabIDC)
 };
 
-_fnc_otherBarStat = {
+private _fnc_otherBarStat = {
     params ["_stat", "_config", "_args"];
     _args params ["_statMinMax", "_barLimits", "_configExtremeBool"];
 
@@ -63,31 +63,18 @@ GVAR(statsListLeftPanel) =  [
     [
         [
             [["reloadTime"], "string ROF (TBL)", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
-                params ["_stat", "_config", "_args"];
-                _args params ["_statMinMax", "_barLimits"];
+                params ["_stat", "_config"];
 
-                private _statValues = [
-                    [_config],
-                    [_stat select 0],
-                    [false],
-                    [_statMinMax select 0]
-                ] call BIS_fnc_configExtremes;
+                private _reloadTime = getNumber (_config >> _stat select 0);
 
-                format ["%1 rpm", round (60 / ((_statValues select 1) select 0))]
+                format ["%1 rpm", round (60 / _reloadTime)]
             }]],
             [["dispersion"], "Accuracy (TBL)", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
-                params ["_stat", "_config", "_args"];
-                _args params ["_statMinMax", "_barLimits"];
+                params ["_stat", "_config"];
 
-                private _statValues = [
-                    [_config],
-                    [_stat select 0],
-                    [false],
-                    [_statMinMax select 0]
-                ] call BIS_fnc_configExtremes;
+                private _dispersion = getNumber (_config >> _stat select 0);
 
-                _statValues = (_statValues select 1) select 0;
-                format ["%1 MIL (%2 MOA)", _statValues * 1000, (_statValues / pi * 10800) ToFixed 1];
+                format ["%1 MIL (%2 MOA)", _dispersion * 1000, (_dispersion / pi * 10800) ToFixed 1];
             }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
@@ -97,31 +84,18 @@ GVAR(statsListLeftPanel) =  [
     [
         [
             [["reloadTime"], "string ROF (TBL)", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
-                params ["_stat", "_config", "_args"];
-                _args params ["_statMinMax", "_barLimits"];
+                params ["_stat", "_config"];
 
-                private _statValues = [
-                    [_config],
-                    [_stat select 0],
-                    [false],
-                    [_statMinMax select 0]
-                ] call BIS_fnc_configExtremes;
+                private _reloadTime = getNumber (_config >> _stat select 0);
 
-                format ["%1 rpm",round (60 / ((_statValues select 1) select 0))]
+                format ["%1 rpm", round (60 / _reloadTime)]
             }]],
             [["dispersion"], "Accuracy (TBL)", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
-                params ["_stat", "_config", "_args"];
-                _args params ["_statMinMax", "_barLimits"];
+                params ["_stat", "_config"];
 
-                private _statValues = [
-                    [_config],
-                    [_stat select 0],
-                    [false],
-                    [_statMinMax select 0]
-                ] call BIS_fnc_configExtremes;
+                private _dispersion = getNumber (_config >> _stat select 0);
 
-                _statValues = (_statValues select 1) select 0;
-                format ["%1 MIL (%2 MOA)", _statValues * 1000, (_statValues / pi * 10800) ToFixed 1];
+                format ["%1 MIL (%2 MOA)", _dispersion * 1000, (_dispersion / pi * 10800) ToFixed 1];
             }]],
             [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
             [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
@@ -255,35 +229,25 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
     {
         (GVAR(statsListLeftPanel) select _x) pushBack [
             [["ACE_barrelTwist"], "Barrel twist (TBL)", [false, true], [], [{}, {
-                params ["_stat", "_config", ""];
+                params ["_stat", "_config"];
 
-                private _statValues = [
-                    [_config],
-                    [_stat select 0],
-                    [false]
-                ] call BIS_fnc_configExtremes;
+                private _barrelTwist = getNumber (_config >> _stat select 0);
 
-                _statValues = (_statValues select 1) select 0;
-                format ["%1mm (%2in)",_statValues, (_statValues / 25.4) toFixed 1];
+                format ["%1mm (%2in)",_barrelTwist, (_barrelTwist / 25.4) toFixed 1];
             }]],
             [["ACE_barrelLength"], "Barrel length (TBL)", [false, true], [], [{}, {
-                params ["_stat", "_config", ""];
+                params ["_stat", "_config"];
 
-                private _statValues = [
-                    [_config],
-                    [_stat select 0],
-                    [false]
-                ] call BIS_fnc_configExtremes;
+                private _barrelLength = getNumber (_config >> _stat select 0);
 
-                _statValues = (_statValues select 1) select 0;
-                format ["%1mm (%2in)",_statValues, (_statValues / 25.4) toFixed 1];
+                format ["%1mm (%2in)",_barrelLength, (_barrelLength / 25.4) toFixed 1];
             }]]
         ];
     } foreach [0, 1];
 
     (GVAR(statsListRightPanel) select 4) pushBack [
         [["ammo"], "Ammo (TBL)", [false, true], [], [{}, {
-            params ["_stat", "_config", ""];
+            params ["_stat", "_config"];
 
             getText (_config >> _stat select 0)
         }]],
@@ -295,7 +259,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
             format ["G%1", getNumber (_ammoCfg >> _stat select 0)]
         }]],
         [["ACE_bulletMass"], "Bullet mass (TBL)", [false, true], [], [{}, {
-            params ["_stat", "_config", ""];
+            params ["_stat", "_config"];
 
             private _ammoWeight = getNumber (configFile >> "CfgAmmo" >> (getText (_config >> "ammo")) >> _stat select 0); 
 
