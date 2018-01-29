@@ -22,6 +22,8 @@
 
 params ["_player", "_vehicle"];
 
+if (!hasInterface) exitWith {};
+
 disableSerialization;
 private _displayMission = DISPLAY(IDD_MISSION);
 if (isNull _displayMission) exitWith { // wait for mission start
