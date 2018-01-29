@@ -32,6 +32,6 @@ call {
         };
     };
 };
-[_interfaceID,[["mode",_mode]]] call FUNC(setSettings);
+[_interfaceID, [["mode",_mode]]] call FUNC(setSettings);
 
 true

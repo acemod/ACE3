@@ -80,7 +80,7 @@ class Stage6
 };
 class Stage7
 {
-	texture="a3\data\env_land_co.paa";
+	texture="a3\data_f\env_land_co.paa";
 	uvSource="none";
 //	uvSource="tex";
 //	class uvTransform

@@ -1,5 +1,5 @@
 /*
- * Author: Gundy
+ * Author: Gundy, TheMagnetar
  *
  * Description:
  *   Toggle mapType to the next one in the list of available map types
@@ -20,20 +20,15 @@
 
 params ["_interfaceID"];
 
+// List of available map types
 private _mapTypesHash = [_interfaceID, "mapTypes"] call FUNC(getSettings);
+private _mapTypes = [_mapTypesHash] call CBA_fnc_hashKeys;
 
-private _mapTypes = _mapTypesHash select 1;
-private _mapTypesIndexes = _mapTypesHash select 2;
-systemChat format ["mapTypes %1", _mapTypes];
-systemChat format ["mapTypesIndexes %1", _mapTypesIndexes];
-
+// Current map type
 private _currentMapType = [_interfaceID, "mapType"] call FUNC(getSettings);
 private _currentMapTypeIndex = _mapTypes find _currentMapType;
 
-systemChat format ["currentMapType %1", _currentMapType];
-systemChat format ["currentMapIndex %1", _currentMapTypeIndex];
-
-if (_currentMapTypeIndex == (count _mapTypesIndexes) - 1) then {
+if (_currentMapTypeIndex == (count _mapTypes) - 1) then {
     [_interfaceID, [["mapType", _mapTypes select 0]]] call FUNC(setSettings);
 } else {
     [_interfaceID, [["mapType", _mapTypes select (_currentMapTypeIndex + 1)]]] call FUNC(setSettings);

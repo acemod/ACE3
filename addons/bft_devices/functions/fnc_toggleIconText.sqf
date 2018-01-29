@@ -20,7 +20,7 @@
 
 params ["_interfaceID"];
 
-private _showIconText = !([_interfaceID,"showIconText"] call FUNC(getSettings));
-[_interfaceID,[["showIconText",_showIconText]]] call FUNC(setSettings);
+private _showIconText = !([_interfaceID, "showIconText"] call FUNC(getSettings));
+[_interfaceID, [["showIconText", _showIconText]]] call FUNC(setSettings);
 
 _showIconText

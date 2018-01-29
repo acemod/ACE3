@@ -26,9 +26,10 @@ uiNamespace setVariable [I_GET_NAME, _display];
 
 // setup bft_drawing
 private _mapTypes = [I_GET_ID,"mapTypes"] call FUNC(getSettings);
+
 {
-    0 = [_display displayCtrl _x] call EFUNC(bft_drawing,doBFTDraw);
-} count (_mapTypes select 2);
+    [_display displayCtrl ([_mapTypes, _x] call CBA_fnc_hashGet)] call EFUNC(bft_drawing,doBFTDraw);
+} forEach ([_mapTypes] call CBA_fnc_hashKeys);
 
 // send "bft_deviceOpened" event
 ["bft_deviceOpened",[I_GET_DEVICE]] call CBA_fnc_localEvent;

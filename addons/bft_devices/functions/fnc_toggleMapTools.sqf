@@ -20,7 +20,7 @@
 
 params ["_interfaceID"];
 
-private _newMapTools = !([_interfaceID,"mapTools"] call FUNC(getSettings));
-[_interfaceID,[["mapTools",_newMapTools]]] call FUNC(setSettings);
+private _newMapTools = !([_interfaceID, "mapTools"] call FUNC(getSettings));
+[_interfaceID, [["mapTools", _newMapTools]]] call FUNC(setSettings);
 
 _newMapTools

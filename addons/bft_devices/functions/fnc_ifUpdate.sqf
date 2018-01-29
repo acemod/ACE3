@@ -1,5 +1,5 @@
 /*
- * Author: Gundy
+ * Author: Gundy, TheMagnetar
  *
  * Description:
  *   Update current interface (display or dialog) to match current settings.
@@ -59,7 +59,7 @@ if (isNil "_mode") then {
 
 {
     call {
-        private _value = (_settings select 2) select _forEachIndex;
+        private _value = [_settings, _x] call CBA_fnc_hashGet;
         if (isNil "_value") exitWith {};
 
         // ------------ DISPLAY POSITION ------------
@@ -96,7 +96,7 @@ if (isNil "_mode") then {
                             [0,0]
                         } else {
                             // reset to defaults
-                            _backgroundPosition = [_displayName] call FUNC(getBackgroundPosition);
+                            private _backgroundPosition = [_displayName] call FUNC(getBackgroundPosition);
                             [(_backgroundPosition select 1 select 0) - (_backgroundPosition select 0 select 0),(_backgroundPosition select 1 select 1) - (_backgroundPosition select 0 select 1)]
                         };
                 };
@@ -365,7 +365,7 @@ if (isNil "_mode") then {
         // ------------ MAP TYPE ------------
         if (_x == "mapType") exitWith {
             private _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
-            if ((count (_mapTypes select 1) > 1) && (_mode == "BFT")) then {
+            if ((count ([_mapTypes] call CBA_fnc_hashKeys) > 1) && (_mode == "BFT")) then {
                 private _targetMapName = _value;
                 private _targetMapIDC = [_mapTypes, _targetMapName] call CBA_fnc_hashGet;
                 _targetMapCtrl = _display displayCtrl _targetMapIDC;
@@ -373,11 +373,11 @@ if (isNil "_mode") then {
                 if (!_interfaceInit && _isDialog) then {
                     private _previousMapCtrl = controlNull;
                     {
-                        private _previousMapIDC = (_mapTypes select 2) select _forEachIndex;
+                        private _previousMapIDC = ([_mapTypes, _x] call CBA_fnc_hashGet);
                         _previousMapCtrl = _display displayCtrl _previousMapIDC;
                         if (ctrlShown _previousMapCtrl) exitWith {};
                         _previousMapCtrl = controlNull;
-                    } forEach (_mapTypes select 1);
+                    } forEach ([_mapTypes] call CBA_fnc_hashKeys);
                     // See if _targetMapCtrl is already being shown
                     if ((!ctrlShown _targetMapCtrl) && (_targetMapCtrl != _previousMapCtrl)) then {
                         // Update _targetMapCtrl to scale and position of _previousMapCtrl
@@ -389,9 +389,9 @@ if (isNil "_mode") then {
                 // Hide all unwanted map types
                 {
                     if (_x != _targetMapName) then {
-                        (_display displayCtrl ((_mapTypes select 2) select _forEachIndex)) ctrlShow false;
+                        (_display displayCtrl ([_mapTypes, _x] call CBA_fnc_hashGet)) ctrlShow false;
                     };
-                } forEach (_mapTypes select 1);
+                } forEach ([_mapTypes] call CBA_fnc_hashKeys);
 
                 // Update OSD element if it exists
                 private _osdCtrl = _display displayCtrl IDC_OSD_MAP_TGGL;
@@ -550,7 +550,7 @@ if (isNil "_mode") then {
         };
         // ----------------------------------
     };
-} forEach (_settings select 1);
+} forEach ([_settings] call CBA_fnc_hashKeys);
 
 // update scale and world position if we have to. If so, fill in the blanks and make the changes
 if ((!isNil "_targetMapScale") || (!isNil "_targetMapWorldPos")) then {

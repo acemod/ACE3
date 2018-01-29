@@ -24,7 +24,7 @@ if (GVAR(ifOpenStart) || {GVAR(uavViewActive)} || {!I_CLOSED}) exitWith {false};
 
 private _ownedDevices = [_target] call EFUNC(bft,getOwnedDevices);
 
-if (count _ownedDevices == 0) exitwith {false};
+if (_ownedDevices isEqualTo []) exitwith {false};
 
 private _return = false;
 {

@@ -20,11 +20,15 @@
 
 params ["_interfaceID"];
 
-private _nightMode = [_interfaceID,"nightMode"] call FUNC(getSettings);
+private _nightMode = [_interfaceID, "nightMode"] call FUNC(getSettings);
 
 if (_nightMode != 2) then {
-    if (_nightMode == 0) then {_nightMode = 1} else {_nightMode = 0};
-    [_interfaceID,[["nightMode",_nightMode]]] call FUNC(setSettings);
+    if (_nightMode == 0) then {
+        _nightMode = 1;
+    } else {
+        _nightMode = 0;
+    };
+    [_interfaceID, [["nightMode", _nightMode]]] call FUNC(setSettings);
 };
 
 true

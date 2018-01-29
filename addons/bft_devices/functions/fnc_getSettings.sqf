@@ -49,7 +49,7 @@ if (_property != "") exitWith {
 private _combinedProperties = +_commonProperties;
 systemChat format ["Device app data %1", _deviceAppData];
 {
-    [_combinedProperties, _x, (_deviceAppData select 2) select _forEachIndex] call CBA_fnc_hashSet;
-} forEach (_deviceAppData select 1);
+    [_combinedProperties, _x, [_deviceAppData, _x] call CBA_fnc_hashGet] call CBA_fnc_hashSet;
+} forEach ([_deviceAppData] call CBA_fnc_hashKeys);
 
 _combinedProperties

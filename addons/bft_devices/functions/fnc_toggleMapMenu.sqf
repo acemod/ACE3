@@ -20,7 +20,7 @@
 
 params ["_interfaceID"];
 
-private _showMenu = [_interfaceID,"showMenu"] call FUNC(getSettings);
-[_interfaceID,[["showMenu",!_showMenu]]] call FUNC(setSettings);
+private _showMenu = [_interfaceID, "showMenu"] call FUNC(getSettings);
+[_interfaceID, [["showMenu", !_showMenu]]] call FUNC(setSettings);
 
 true

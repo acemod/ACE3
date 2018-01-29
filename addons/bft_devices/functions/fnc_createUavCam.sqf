@@ -88,9 +88,9 @@ if !(GVAR(UAVcams) isEqualTo []) exitWith {
             {
                 if !(isNil "_x") then {
                     _uav = _x select 0;
-                    _cam = _x select 2;
+                    private _cam = _x select 2;
                     if (alive _uav) then {
-                        _dir = (_uav selectionPosition (_x select 3)) vectorFromTo (_uav selectionPosition (_x select 4));
+                        private _dir = (_uav selectionPosition (_x select 3)) vectorFromTo (_uav selectionPosition (_x select 4));
                         _cam setVectorDirAndUp [_dir,_dir vectorCrossProduct [-(_dir select 1), _dir select 0, 0]];
                     } else {
                         [_cam] call FUNC(deleteUAVcam);
