@@ -22,6 +22,12 @@
 
 params ["_player", "_vehicle"];
 
+disableSerialization;
+private _displayMission = DISPLAY(IDD_MISSION);
+if (isNull _displayMission) exitWith { // wait for mission start
+    [{!isNull DISPLAY(IDD_MISSION)}, FUNC(switchVehicleFreelook), [_player, _vehicle]] call CBA_fnc_waitUntilAndExecute;
+};
+
 private _disableFreelook = 
     _vehicle isKindOf "Air"
     && {!(_vehicle isKindOf "ParachuteBase")}
@@ -32,11 +38,10 @@ private _disableFreelook =
 ;
 if (_disableFreelook isEqualTo GVAR(isVehicleFreelookDisabled)) exitWith {};
 
-disableSerialization;
 private _displayInterrupt = DISPLAY(IDD_INTERRUPT);
 // exit if in aircraft when option becomes enabled - otherwise arma crashes on ctrlActivate
 if (!isNull _displayInterrupt) exitWith {};
-_displayInterrupt = DISPLAY(IDD_MISSION) createDisplay "RscDisplayInterrupt";
+_displayInterrupt = _displayMission createDisplay "RscDisplayInterrupt";
 if (isNil "_displayInterrupt" || {isNull _displayInterrupt}) exitWith {hint "no Interrupt display"};
 
 private _buttonGame = _displayInterrupt displayCtrl IDC_OPTIONS_GAMEOPTIONS;
