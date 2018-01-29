@@ -16,6 +16,10 @@
  */
 #include "script_component.hpp"
 
+#define FULLCREW_UNIT       0
+#define FULLCREW_ROLE       1
+#define FULLCREW_TURRETPATH 3
+
 params ["_unit", "_vehicle"];
 
 _vehicle == vehicle _unit
@@ -23,15 +27,8 @@ _vehicle == vehicle _unit
 && {
     private _ejectVarName = "";
     {
-        if (_unit == _x select 0) exitWith {
-            _x params ["", "_role", "_cargoIndex", "_turretPath"];
-            if (switch (toLower _role) do {
-                case "driver": {!lockedDriver _vehicle};
-                case "cargo": {!(_vehicle lockedCargo _cargoIndex)};
-                default {!(_vehicle lockedTurret _turretPath)};
-            }) then {
-                _ejectVarName = format [QGVAR(ejectAction_%1_%2), _role, _turretPath];
-            };
+        if (_unit == _x select FULLCREW_UNIT) exitWith {
+            _ejectVarName = format [QGVAR(ejectAction_%1_%2), _x select FULLCREW_ROLE, _x select FULLCREW_TURRETPATH];
         };
     } count fullCrew _vehicle;
     _vehicle getVariable [_ejectVarName, false]
