@@ -35,7 +35,7 @@
             {
                 if (_aircraft turretLocal _x) then {
                     TRACE_3("removing",_aircraft,_x,_removeWeapon);
-                    _aircraft removeWeaponTurret [_removeWeapon, [-1]];
+                    _aircraft removeWeaponTurret [_removeWeapon, _x];
                 };
             } forEach [[-1], [0]];
         };
