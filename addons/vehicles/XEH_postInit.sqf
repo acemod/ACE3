@@ -30,3 +30,13 @@ GVAR(isSpeedLimiter) = false;
 },
 {false},
 [211, [false, false, false]], false] call CBA_fnc_addKeybind; //DELETE Key
+
+[
+    "ACE3 Vehicles", QGVAR(toggleVehicleFreelook), localize LSTRING(KeybindToggleVehicleFreelook),
+    {
+        if (isNull objectParent ACE_player && {isNull (ACE_controlledUAV select 0)}) exitWith {false};
+        call FUNC(toggleVehicleFreelook);
+        true
+    },
+    {false}
+] call CBA_fnc_addKeybind;
