@@ -26,7 +26,7 @@ private _hideUnusedFnc = {
     params ["_numbers"];
 
     {
-        private _statsTitleCtrl = _display displayCtrl (5101 + _forEachIndex * 4);
+        private _statsTitleCtrl = _display displayCtrl (5101 + ((_x - 1) * 4));
         private _statsTitleIDC = ctrlIDC _statsTitleCtrl;
 
         private _statsBackgroundCtrl = _display displayCtrl (_statsTitleIDC + 1);
@@ -74,6 +74,7 @@ if !(isNil "_itemCfg") then {
         params ["_statsIndex", "_leftPanel"];
         private ["_statsArray", "_statsList", "_isLeftPanel", "_currentPage"];
 
+        // Get the proper list and page
         if (_leftPanel) then {
             _isLeftPanel = true;
             _statsArray = GVAR(statsListLeftPanel) select _statsIndex;
@@ -86,6 +87,7 @@ if !(isNil "_itemCfg") then {
             _statsList = _statsArray select _currentPage;
         };
 
+        // Hide unused entries
         private _statsCount = count _statsList;
         switch (_statsCount) do {
             case 0: {
@@ -159,6 +161,7 @@ if !(isNil "_itemCfg") then {
                 _statsBoxCtrl ctrlCommit 0;
             };
             default {
+                [[1, 2, 3, 4, 5]] call _showUsedFnc;
                 _statsCount resize 5;
 
                 _statsBoxCtrl ctrlSetPosition [
@@ -172,8 +175,6 @@ if !(isNil "_itemCfg") then {
         };
 
         GVAR(statsInfo) = [_isLeftPanel, _statsIndex, _control, _curSel, _itemCfg];
-
-        TRACE_3("count magic", _statsCount, _currentPage, count _statsArray);
 
         // Toggle page buttons
         if (_currentPage == 0) then {
@@ -219,7 +220,7 @@ if !(isNil "_itemCfg") then {
 
                 _statsBackgroundCtrl ctrlSetFade 0;
                 _statsBarCtrl ctrlSetFade 0;
-                
+
             } else {
                 _statsBackgroundCtrl ctrlSetFade 1;
                 _statsBarCtrl ctrlSetFade 1;
@@ -239,7 +240,9 @@ if !(isNil "_itemCfg") then {
                 } else {
                     _statsTextCtrl ctrlSetText (str _textStatementResult);
                 };
-                
+
+                _statsTextCtrl ctrlSetTextColor ([[1,1,1,1], [0,0,0,1]] select (_showBar));
+
                 _statsTextCtrl ctrlSetFade 0;
             } else {
                 _statsTextCtrl ctrlSetFade 1;

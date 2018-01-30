@@ -251,7 +251,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
 
             getText (_config >> _stat select 0)
         }]],
-        [["ACE_dragModel", "ACE_ballisticCoefficients"], "Drag model (TBL)", [false, true], [], [{}, {
+        [["ACE_dragModel", "ACE_ballisticCoefficients"], "Ballistic coefficient (TBL)", [false, true], [], [{}, {
             params ["_stat", "_config", ""];
 
             private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo"))); 
