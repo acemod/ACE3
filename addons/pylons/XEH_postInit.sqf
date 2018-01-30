@@ -28,8 +28,17 @@
     } forEach GVAR(aircraftWithPylons);
 
     [QGVAR(setPylonLoadOutEvent), {
-        params ["_aircraft", "_pylonIndex", "_pylon", "_turret"];
+        params ["_aircraft", "_pylonIndex", "_pylon", "_turret", "_removeWeapon"];
+        TRACE_5("setPylonLoadOutEvent",_aircraft,_pylonIndex,_pylon,_turret,_removeWeapon);
         _aircraft setPylonLoadOut [_pylonIndex, _pylon, false, _turret];
+        if (_removeWeapon != "") then {
+            {
+                if (_aircraft turretLocal _x) then {
+                    TRACE_3("removing",_aircraft,_x,_removeWeapon);
+                    _aircraft removeWeaponTurret [_removeWeapon, [-1]];
+                };
+            } forEach [[-1], [0]];
+        };
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(setAmmoOnPylonEvent), {

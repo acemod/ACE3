@@ -149,7 +149,10 @@ if (!GVAR(isCurator)) then {
         isNull (GVAR(currentAircraft) getVariable [QGVAR(currentUser), objNull]) ||
         {(ace_player distanceSqr GVAR(currentAircraft)) > GVAR(searchDistanceSqr)}
     }, {
-        [localize LSTRING(TooFar), false, 5] call EFUNC(common,displayText);
+        TRACE_3("disconnect/far",GVAR(currentAircraft), ace_player distance GVAR(currentAircraft),GVAR(currentAircraft) getVariable QGVAR(currentUser));
+        if ((ace_player distanceSqr GVAR(currentAircraft)) > GVAR(searchDistanceSqr)) then {
+            [localize LSTRING(TooFar), false, 5] call EFUNC(common,displayText);
+        };
         call FUNC(onButtonClose);
     }] call CBA_fnc_waitUntilAndExecute;
 };
