@@ -220,7 +220,14 @@ GVAR(statsListRightPanel) = [
     ], // Put
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]],
+            [[""], "Potassium (TBL)", [true, true], [], [{1}, {
+                "A rich source of potassium"
+            }, {
+                params ["", "_config"];
+
+                ((configName _config) == "ACE_Banana")
+            }]]
         ]
     ] // Misc
 ];

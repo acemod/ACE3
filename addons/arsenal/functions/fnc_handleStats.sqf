@@ -80,7 +80,7 @@ if !(isNil "_itemCfg") then {
                 private _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
                 private _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
 
-                if (call _condition) then {
+                if ([_configEntry, _itemCfg, _passedArgs] call _condition) then {
 
                     _statsCount = _statsCount + 1;
                     _statsTitleCtrl ctrlSetText _title;
