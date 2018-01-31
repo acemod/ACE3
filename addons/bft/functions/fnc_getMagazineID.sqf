@@ -15,12 +15,11 @@
 
 params ["_detailsEntry"];
 
-private ["_index", "_value", "_id"];
-_index = _detailsEntry find "[";
-_id = "";
+private _index = _detailsEntry find "[";
+private _id = "";
 
 if (_index > 0) then {
-    _value = toArray _detailsEntry;
+    private _value = toArray _detailsEntry;
     _value deleteRange [0, _index];
     _id = toString _value;
 };

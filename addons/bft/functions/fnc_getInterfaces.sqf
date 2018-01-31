@@ -19,61 +19,61 @@
 
 #include "script_component.hpp"
 
-private ["_deviceData","_deviceOwner","_interfaces","_interface","_deviceType","_vehicleInterfaces","_assignedVehicleRole","_roleIndex","_roleName","_whereAvailable","_found"];
 params ["_deviceID", "_unit"];
 
-_deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
-_deviceOwner = D_GET_OWNER(_deviceData);
+private _deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
+private _deviceOwner = D_GET_OWNER(_deviceData);
 
-_interfaces = [];
+private _interfaces = [];
 
-if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") then {
+if (_deviceOwner isKindOf "ParachuteBase" || {_deviceOwner isKindOf "CAManBase"}) then {
     // personal device
-    _deviceType = D_GET_DEVICETYPE(_deviceData);
+    private _deviceType = D_GET_DEVICETYPE(_deviceData);
     if (isText (configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "interface")) then {
-        _interface = getText (configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "interface");
+        private _interface = getText (configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "interface");
         if (_interface != "") then {
             _interfaces pushBack _interface;
         };
     };
 } else {
     // vehicle device
-    _vehicleInterfaces = _deviceOwner getvariable [QGVAR(vehicleInterfaces), getArray (configFile >> "CfgVehicles" >> typeOf _deviceOwner >> QGVAR(vehicleInterfaces))];
-    
+    private _vehicleInterfaces = _deviceOwner getvariable [QGVAR(vehicleInterfaces), getArray (configFile >> "CfgVehicles" >> typeOf _deviceOwner >> QGVAR(vehicleInterfaces))];
+
     // bail if there are no interfaces defined
     if (isNil "_vehicleInterfaces" || {_vehicleInterfaces isEqualTo []}) exitWith {};
-    
-    _assignedVehicleRole = assignedVehicleRole _unit;
-    
+
+    private _assignedVehicleRole = assignedVehicleRole _unit;
+
     // bail if unit is not in a vehicle
     if (_assignedVehicleRole isEqualTo []) exitWith {};
-    
-    _roleName = _assignedVehicleRole select 0;
-    _roleIndex = call {
+
+    private _roleName = _assignedVehicleRole select 0;
+    private _roleIndex = call {
         if (_roleName == "Cargo") exitWith {_deviceOwner getCargoIndex _unit};
         if (_roleName == "Turret") exitWith {_assignedVehicleRole select 1 select 0};
         0
     };
-    
+
     {
         switch (typeName _x) do {
             case "STRING": {_interfaces pushBack _x};
-            
+
             case "ARRAY": {
                 // whereAvailable test
-                _interface = _x select 0;
-                _whereAvailable = _x select 1;
+                private _interface = _x select 0;
+                private _whereAvailable = _x select 1;
                 {
-                    _found = switch (typeName _x) do {
+                    private _found = false;
+
+                    switch (typeName _x) do {
                         case "STRING": {
-                            if (_x == _roleName) then {true};
+                            if (_x == _roleName) then {_found = true};
                         };
                         case "ARRAY": {
-                            if ((_x select 0) == _roleName && _roleIndex in (_x select 1)) then {true};
+                            if ((_x select 0) == _roleName && _roleIndex in (_x select 1)) then {_found = true};
                         };
-                        default {false};
                     };
-                    
+
                     if (_found) exitWith {_interfaces pushBack _interface};
                 } forEach _whereAvailable;
             };

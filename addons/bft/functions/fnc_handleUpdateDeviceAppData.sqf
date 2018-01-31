@@ -16,8 +16,7 @@
 
 params ["_deviceID", "_newData"];
 
-private ["_data"];
-_data = [_deviceID] call FUNC(getDeviceData);
+private _data = [_deviceID] call FUNC(getDeviceData);
 _data set [3, _newData];
 
 // ["bft_deviceDataChanged", [_data, false]] call CBA_fnc_localEvent;

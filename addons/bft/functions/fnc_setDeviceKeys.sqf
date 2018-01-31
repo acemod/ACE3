@@ -16,8 +16,7 @@
 
 params ["_deviceID", "_keys"];
 
-private ["_data"];
-_data = [_deviceID] call FUNC(getDeviceData);
+private _data = [_deviceID] call FUNC(getDeviceData);
 
 if (count _data < 2) exitwith {};
 if (count (_data select 1) < 2) exitwith {};

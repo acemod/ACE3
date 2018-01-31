@@ -17,15 +17,13 @@
 
 params ["_varName", "_elementID"];
 
-private ["_variable"];
-_variable = missionNamespace getvariable [_varName, []];
+private _variable = missionNamespace getvariable [_varName, []];
 
 {
     if ((_x select 0) isEqualTo _elementID) exitwith {
         systemChat format["handleSyncedArrayDelete deleting- %1", _x];
         diag_log format["handleSyncedArrayDelete deleting- %1", _x];
-        private ["_removedElement"];
-        _removedElement = _variable deleteAt _foreachIndex;
+        private _removedElement = _variable deleteAt _foreachIndex;
         ["bft_syncedArrayChanged", [2, _removedElement]] call CBA_fnc_localEvent;
 
     };

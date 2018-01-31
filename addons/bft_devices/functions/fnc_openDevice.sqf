@@ -43,6 +43,6 @@ if (_return) then {
     if (_interfaces isEqualTo []) exitwith {};
     _interfaces params [ ["_interface", nil] ];
 
-    _interfaceDisplayName = getText (configFile >> "ACE_BFT" >> "Interfaces" >> _interface >> "dialogName");
+    private _interfaceDisplayName = getText (configFile >> "ACE_BFT" >> "Interfaces" >> _interface >> "dialogName");
     [_deviceID, _interface, 0 /* main interface type */,_interfaceDisplayName, true /*Is Dialog*/, _player, _target] call FUNC(ifOpen);
 };

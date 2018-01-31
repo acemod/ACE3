@@ -12,12 +12,10 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID","_refreshRateRX","_deviceData"];
-
 // by default, consider the device not having a receiver
-_refreshRateRX = -1;
-_deviceID = _this select 0;
-_deviceData = [_deviceID] call FUNC(getDeviceData);
+private _refreshRateRX = -1;
+private _deviceID = _this select 0;
+private _deviceData = [_deviceID] call FUNC(getDeviceData);
 GVAR(currentOpenedDevice) = _deviceData;
 if !(_deviceData isEqualTo []) then {
     _refreshRateRX = D_GET_REFRESH_RATE_RX(_deviceData);

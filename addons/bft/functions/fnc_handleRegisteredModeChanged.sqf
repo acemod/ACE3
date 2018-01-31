@@ -12,9 +12,7 @@
 
 #include "script_component.hpp"
 
-private ["_add","_viewModes"];
-_viewModes = _this select 0;
-_add = _this select 1;
+params ["_viewModes", "_add"];
 
 // if _add is nil, rebuild list from scratch
 if (isNil "_add") then {
@@ -27,19 +25,17 @@ if (isNil "_add") then {
 if (count _viewModes == 0) exitWith {};
 
 if (_add) then {
-    private ["_deviceModes","_encryptionKeys","_displayData"];
-
     {
         if !(isNull D_GET_OWNER(_x)) then {
             if (!(D_GET_OWNER(_x) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_x) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_x)) && alive D_GET_OWNER(_data)}) exitwith {};
             if (D_GET_DEVICE_STATE_VALUE(_x) in [STATE_OFFLINE, STATE_DESTROYED]) exitwith {};
-            _deviceModes = D_GET_DEVICEMODES(_x);
+            private _deviceModes = D_GET_DEVICEMODES(_x);
             if !([_deviceModes, _viewModes] call FUNC(encryptionKeyMatch)) exitWith {};
 
-            _encryptionKeys = D_GET_ENCRYPTION(_x);
+            private _encryptionKeys = D_GET_ENCRYPTION(_x);
             if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitWith {};
 
-            _displayData = _x call FUNC(deviceDataToMapData);
+            private _displayData = _x call FUNC(deviceDataToMapData);
             if (count _displayData > 0) then {
                 GVAR(availableDevices) pushback _displayData;
             };

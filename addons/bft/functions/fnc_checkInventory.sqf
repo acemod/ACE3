@@ -19,4 +19,4 @@ if !(local _unit) exitwith {};
 
 {
     [_unit, _x] call FUNC(checkItem);
-}foreach items _unit;
+} foreach items _unit;

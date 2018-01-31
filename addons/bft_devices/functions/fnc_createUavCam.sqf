@@ -77,7 +77,7 @@ if (!alive _uav) exitWith {false};
             };
             _cam camSetFov 0.5; // set default zoom
         };
-        0 = GVAR(UAVcams) pushBack [_uav,_renderTarget,_cam,_camPosMemPt,_camDirMemPt];
+        GVAR(UAVcams) pushBack [_uav,_renderTarget,_cam,_camPosMemPt,_camDirMemPt];
     };
 } count _uavCams;
 

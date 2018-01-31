@@ -25,8 +25,7 @@ if (isNil "_add") then {
         ["bft_registeredModeChanged", [_modes,nil]] call CBA_fnc_localEvent;
     };
 } else {
-    private ["_changed"];
-    _changed = false;
+    private _changed = false;
 
     if (_add) then {
         // figure out the real difference
@@ -43,6 +42,7 @@ if (isNil "_add") then {
             _changed = true;
         };
     };
+
     if (_changed) then {
         ["bft_registeredModeChanged", [_modes,_add]] call CBA_fnc_localEvent;
     };

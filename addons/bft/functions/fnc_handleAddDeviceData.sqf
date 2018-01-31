@@ -18,7 +18,6 @@
 
 #include "script_component.hpp"
 
-private ["_currentDevices"];
 // [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner]
 diag_log format["added to deviceData: %1", _this];
 GVAR(deviceData) pushback _this;
@@ -27,7 +26,7 @@ systemChat format["handleAddDeviceData: %1", _this];
 diag_log format["handleAddDeviceData: %1", _this];
 
 if (local (_this select 5)) then {
-    _currentDevices = (_this select 5) getvariable [QGVAR(ownedDevices), []];
+    private _currentDevices = (_this select 5) getvariable [QGVAR(ownedDevices), []];
     if !((_this select 0) in _currentDevices) then {
         _currentDevices pushback (_this select 0);
         (_this select 5) setvariable [QGVAR(ownedDevices), _currentDevices, true];

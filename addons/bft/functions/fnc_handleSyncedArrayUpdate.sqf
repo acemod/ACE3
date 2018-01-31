@@ -18,15 +18,13 @@
 
 params ["_varName", "_data"];
 
-private ["_elementID", "_variable", "_compareID"];
-
 systemChat format["handleSyncedArrayUpdate - %1", _this];
 diag_log format["handleSyncedArrayUpdate - %1", _this];
 
-_elementID = if (typeName _data == "ARRAY") then {_data select 0} else {_data};
-_variable = missionNamespace getvariable [_varName, []];
+private _elementID = if (typeName _data == "ARRAY") then {_data select 0} else {_data};
+private _variable = missionNamespace getvariable [_varName, []];
 {
-    _compareID = if (typeName _x == "ARRAY") then {_x select 0} else {_x};
+    private _compareID = if (typeName _x == "ARRAY") then {_x select 0} else {_x};
     if (_compareID isEqualTo _elementID) exitwith {
         _variable set[_forEachIndex, _data];
         ["bft_syncedArrayChanged", [1, _data, _x]] call CBA_fnc_localEvent;

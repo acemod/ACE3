@@ -16,8 +16,7 @@
 
 params ["_deviceID", "_newOwner"];
 
-private ["_data"];
-_data = [_deviceID] call FUNC(getDeviceData);
+private _data = [_deviceID] call FUNC(getDeviceData);
 
 if (count _data < 6) exitwith {};
 if (_newOwner isEqualTo (_data select 5)) exitwith {};

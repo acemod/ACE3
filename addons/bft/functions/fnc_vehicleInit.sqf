@@ -20,8 +20,7 @@ diag_log format["VehicleInit: %1",_this];
 
 if !(isServer) exitwith {};
 
-private ["_device"];
-_device = _vehicle getvariable [QGVAR(vehicleDevice), getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(vehicleDevice))];
+private _device = _vehicle getvariable [QGVAR(vehicleDevice), getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(vehicleDevice))];
 
 systemChat format["VehicleInit devices: %1",_device];
 diag_log format["VehicleInit devices: %1",_device];

@@ -28,8 +28,8 @@ private _deviceEncryptionKey = D_GET_ENCRYPTION(_deviceData);
 // compile a list of valid sides
 private _validSides = [];
 {
-    if ([_deviceEncryptionKey,[_x] call EFUNC(bft,getEncryptionKey)] call EFUNC(bft,encryptionKeyMatch)) then {
-        0 = _validSides pushBack _x;
+    if ([_deviceEncryptionKey, [_x] call EFUNC(bft,getEncryptionKey)] call EFUNC(bft,encryptionKeyMatch)) then {
+        _validSides pushBack _x;
     };
 } count ["WEST","EAST","GUER","CIV"];
 
@@ -37,8 +37,8 @@ private _validSides = [];
 private _hcamList = [];
 {
     if (str side _x in _validSides) then {
-        if ("ACE_HelmetCam" in items _x) then {
-            0 = _hcamList pushBack _x;
+        if ("ACE_HelmetCam" in (items _x)) then {
+            _hcamList pushBack _x;
         };
     };
 } count allUnits;

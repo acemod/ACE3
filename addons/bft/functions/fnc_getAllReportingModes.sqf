@@ -15,19 +15,15 @@
 
 #include "script_component.hpp"
 
-private ["_deviceConfigs","_allReportingModes","_deviceReportingModes"];
+private _deviceConfigs = "true" configClasses (configFile >> "ACE_BFT" >> "Devices");
 
-_deviceConfigs = "true" configClasses (configFile >> "ACE_BFT" >> "Devices");
-
-_allReportingModes = [];
+private _allReportingModes = [];
 {
-    if (isClass _x) then {
-        if (isArray (_x >> "reportingModes")) then {
-            _deviceReportingModes = getArray (_x >> "reportingModes");
-            // only append what isn't there already
-            _allReportingModes append (_deviceReportingModes - _allReportingModes);
-        };
-    }
+    if (isClass _x && {isArray (_x >> "reportingModes")}) then {
+        private _deviceReportingModes = getArray (_x >> "reportingModes");
+        // only append what isn't there already
+        _allReportingModes append (_deviceReportingModes - _allReportingModes);
+    };
 } forEach _deviceConfigs;
 
 _allReportingModes

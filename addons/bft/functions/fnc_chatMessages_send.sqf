@@ -17,12 +17,12 @@
 
 #include "script_component.hpp"
 
-params ["_fromId", "_toId", "_message"];
+params ["_deviceId", "_otherDeviceId", "_message"];
 
 private _messagesListKey = [_deviceId, _otherDeviceId] call FUNC(chatMessage_getId);
 
 private _timeStamp = format["00:00"];
 private _messageId = [] call FUNC(generateEncryptionKey); // some random key TODO improve or implement some unique Id generator
-private _constructedMessage = [_messageId, _timestamp, _message, _fromId];
+private _constructedMessage = [_messageId, _timestamp, _message, _deviceId];
 
 [_messagesListKey, _constructedMessage] call FUNC(syncedArrayPushback);

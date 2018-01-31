@@ -16,7 +16,6 @@
 
 params ["_unit", "_deviceID"];
 
-private ["_ownedIDs"];
-_ownedIDs = _unit getvariable [QGVAR(ownedDevices), []];
+private _ownedIDs = _unit getvariable [QGVAR(ownedDevices), []];
 
 (_deviceID in _ownedIDs)

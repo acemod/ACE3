@@ -70,12 +70,12 @@ if (_playerDeviceData isEqualTo [] && _vehicleDeviceData isEqualTo []) exitWith 
 
 // get interface for device
 private _playerDeviceInterface = if !(_playerDeviceData isEqualTo []) then {
-    _interfaces = [_playerDeviceId,ACE_player] call EFUNC(bft,getInterfaces);
+    private _interfaces = [_playerDeviceId,ACE_player] call EFUNC(bft,getInterfaces);
     // select the first device -- for now
     if (count _interfaces > 0) then {_interfaces select 0} else {""};
 } else {""};
 private _vehicleDeviceInterface = if !(_vehicleDeviceData isEqualTo []) then {
-    _interfaces = [_vehicleDeviceId,ACE_player] call EFUNC(bft,getInterfaces);
+    private _interfaces = [_vehicleDeviceId,ACE_player] call EFUNC(bft,getInterfaces);
     // select the first device -- for now
     if (count _interfaces > 0) then {_interfaces select 0} else {""};
 } else {""};

@@ -15,8 +15,7 @@
 
 params ["_groupID"];
 
-private ["_data"];
-_data = [_groupID, "", -1/*parent group ID*/];
+private _data = [_groupID, "", -1/*parent group ID*/];
 {
     if (_x select 0 == _groupID) exitWith {
         _data = _x;

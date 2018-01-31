@@ -15,19 +15,17 @@
 
 params ["_unit"];
 
-private ["_magazine", "_data", "_magID", "_unMatchedDevices", "_ownedDevices", "_matchedIDs"];
-
 if !(local _unit) exitwith {};
 
 {
     [_unit, _x] call FUNC(checkItem);
 } forEach items _unit;
 
-_ownedDevices = _unit getvariable [QGVAR(ownedDevices), []];
-_matchedIDs = [];
+private _ownedDevices = _unit getvariable [QGVAR(ownedDevices), []];
+private _matchedIDs = [];
 {
-    _magID = [_x] call FUNC(getMagazineID);
-    _data = [_magID] call FUNC(getDeviceData);
+    private _magID = [_x] call FUNC(getMagazineID);
+    private _data = [_magID] call FUNC(getDeviceData);
     if (count _data > 0) then {
         if !(_magID in _ownedDevices) then {
             systemChat format["validate - new picked up ID: %1 %2", _unit, _magID];
@@ -37,7 +35,7 @@ _matchedIDs = [];
         _matchedIDs pushback _magID;
     } else {
         if (!(_magId in GVAR(pendingIdAssignmentList))) then {
-            _magazine = (magazines _unit) select _forEachIndex;
+            private _magazine = (magazines _unit) select _forEachIndex;
             if (getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)) != "") then {
                 ["bft_itemCreated", [_unit, getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)), _magazine, _magID]] call CBA_fnc_serverEvent;
             };
@@ -45,7 +43,7 @@ _matchedIDs = [];
     };
 }foreach (magazinesDetail _unit);
 
-_unMatchedDevices = _ownedDevices - _matchedIDs;
+private _unMatchedDevices = _ownedDevices - _matchedIDs;
 {
     systemChat format["validate - no longer has ID: %1 %2", _unit, _x];
     diag_log format["validate - no longer has ID: %1 %2", _unit, _x];

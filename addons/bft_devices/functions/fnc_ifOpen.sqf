@@ -74,7 +74,7 @@ GVAR(ifOpen) = [
 ];
 
 // Only register the GetOut event handler for vehicle displays
-if (_inVehicle && (_isDialog || _displayName in [QGVAR(TAD_dsp)])) then {
+if (_inVehicle && {_isDialog || _displayName in [QGVAR(TAD_dsp)]}) then {
     GVAR(ifOpen) set [9,
         _vehicle addEventHandler ["GetOut",{if (_this select 2 == ACE_player) then {[] call FUNC(ifClose)}}]
     ];

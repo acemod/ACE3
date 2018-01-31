@@ -25,8 +25,7 @@ if (isNil "_add") then {
         ["bft_registeredEncryptionKeysChanged", [_keys,nil]] call CBA_fnc_localEvent;
     };
 } else {
-    private ["_changed"];
-    _changed = false;
+    private _changed = false;
 
     if (_add) then {
         // figure out the real difference

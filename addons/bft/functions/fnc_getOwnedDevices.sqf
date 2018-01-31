@@ -16,8 +16,7 @@
 params ["_owner"];
 
 // Or use OBJECT getvariable [QGVAR(ownedDevices), []]; ?
-private ["_ids"];
-_ids = [];
+private _ids = [];
 
 {
     if ((_x select 5) == _owner) then {

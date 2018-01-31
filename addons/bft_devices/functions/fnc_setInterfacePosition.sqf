@@ -36,20 +36,17 @@ _displayConfigContainers = "true" configClasses _displayConfigContainers;
     if (isClass _x) then {
         private _displayConfigClasses = "true" configClasses _x;
         {
-            if (isClass _x) then {
-                // only move controls that have an IDC
-                if (isNumber (_x >> "idc")) then {
-                    // only move controls that have a positive IDC
-                    private _idc = getNumber (_x >> "idc");
-                    if (_idc > 0) then {
-                        private _ctrl = _display displayCtrl _idc;
-                        private _ctrlPosition = ctrlPosition _ctrl;
-                        _ctrlPosition set [0, (_ctrlPosition select 0) + _xOffset];
-                        _ctrlPosition set [1, (_ctrlPosition select 1) + _yOffset];
-                        _ctrl ctrlSetPosition _ctrlPosition;
-                        _ctrl ctrlCommit 0;
-                    } else {diag_log str ["invalid IDC",_x]};
-                } else {diag_log str ["missing IDC",_x]};
+            if (isClass _x && {isNumber (_x >> "idc")}) then {
+                // only move controls that have a positive IDC
+                private _idc = getNumber (_x >> "idc");
+                if (_idc > 0) then {
+                    private _ctrl = _display displayCtrl _idc;
+                    private _ctrlPosition = ctrlPosition _ctrl;
+                    _ctrlPosition set [0, (_ctrlPosition select 0) + _xOffset];
+                    _ctrlPosition set [1, (_ctrlPosition select 1) + _yOffset];
+                    _ctrl ctrlSetPosition _ctrlPosition;
+                    _ctrl ctrlCommit 0;
+                } else {diag_log str ["invalid IDC",_x]};
             };
         } forEach _displayConfigClasses;
     };

@@ -12,10 +12,9 @@
 
 #include "script_component.hpp"
 
-private ["_data"];
 params ["_deviceId"];
 
-_data = [_deviceId] call FUNC(getDeviceData);
+private _data = [_deviceId] call FUNC(getDeviceData);
 
 systemChat format["handleVehicleDeviceKilled: %1 ", _deviceId];
 diag_log format["handleVehicleDeviceKilled: %1 DATA: %2", _deviceId, _data];

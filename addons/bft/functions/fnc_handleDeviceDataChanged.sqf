@@ -12,9 +12,9 @@
 
 #include "script_component.hpp"
 
-private ["_data", "_deviceID", "_displayData", "_encryptionKeys", "_deviceModes"];
-_data = _this select 0;
-_deviceID = D_GET_ID(_data);
+params ["_data"];
+
+private _deviceID = D_GET_ID(_data);
 diag_log format["hanldeDeviceDataChanged for: %1", _deviceID];
 
 if (isNull D_GET_OWNER(_data)) exitwith { // doesn't have an owner anymore, remove.
@@ -28,8 +28,8 @@ if (isNull D_GET_OWNER(_data)) exitwith { // doesn't have an owner anymore, remo
         } foreach GVAR(availableDevices);
     };
 };
-_encryptionKeys = D_GET_ENCRYPTION(_data);
-_deviceModes = D_GET_DEVICEMODES(_data);
+private _encryptionKeys = D_GET_ENCRYPTION(_data);
+private _deviceModes = D_GET_DEVICEMODES(_data);
 
 if (_this select 1) then { // add new
     if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitwith {
@@ -40,7 +40,7 @@ if (_this select 1) then { // add new
     }; // if the encryption key is not know, the device is not available
     if (!(D_GET_OWNER(_data) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_data) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_data)) && alive D_GET_OWNER(_data)}) exitwith {};
     if (D_GET_DEVICE_STATE_VALUE(_data) in [STATE_OFFLINE, STATE_DESTROYED]) exitwith {};
-    _displayData = _data call FUNC(deviceDataToMapData);
+    private _displayData = _data call FUNC(deviceDataToMapData);
     if (count _displayData > 0) then {
         GVAR(availableDevices) pushback _displayData;
     };
@@ -59,7 +59,7 @@ if (_this select 1) then { // add new
             //    GVAR(availableDevices) deleteAt _forEachIndex; // no longer a match, so we remove it from available devices
             //};
             // we don't know what info has changed, so we just replace it completely.
-            _displayData = _data call FUNC(deviceDataToMapData);
+            private _displayData = _data call FUNC(deviceDataToMapData);
             GVAR(availableDevices) set [_forEachIndex, _displayData];
         };
     } foreach GVAR(availableDevices);

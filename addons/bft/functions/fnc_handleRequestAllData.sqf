@@ -29,9 +29,8 @@ diag_log format["handleRequestAllData: Request from Origin: %1", _origin];
 
 {
     diag_log format["handleRequestAllData: Add synced array variable: %1", _x];
-    private ["_varName", "_variable"];
-    _varName = _x;
-    _variable = missionNamespace getvariable [_varName, []];
+    private _varName = _x;
+    private _variable = missionNamespace getvariable [_varName, []];
 
     {
         diag_log format["handleRequestAllData: Add synced array variable (%1) value: %2", _varName, _x];

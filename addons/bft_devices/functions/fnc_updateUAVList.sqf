@@ -37,7 +37,7 @@ GVAR(UAVlist) = [];
         // check if UAV has matching encryption key
         private _uavEncryption = D_GET_ENCRYPTION(_uavDeviceData);
         if ([_deviceEncryption,_uavEncryption] call EFUNC(BFT,encryptionKeyMatch)) then {
-            0 = GVAR(UAVlist) pushBack [_uavDevice,_uavDeviceData];
+            GVAR(UAVlist) pushBack [_uavDevice,_uavDeviceData];
         };
     };
 } count allUnitsUAV;

@@ -16,13 +16,11 @@
 
 params ["_deviceID", "_newOwner"];
 
-private ["_data", "_newData", "_previousOwner", "_currentDevices"];
-
 systemChat format["handleUpdateDeviceOwner: %1", _this];
 diag_log format["handleUpdateDeviceOwner: %1", _this];
 
-_data = [_deviceID] call FUNC(getDeviceData);
-_previousOwner = _data select 5;
+private _data = [_deviceID] call FUNC(getDeviceData);
+private _previousOwner = _data select 5;
 _data set [5, _newOwner];
 
 ["bft_deviceDataChanged", [_data, isNull _previousOwner]] call CBA_fnc_localEvent;
@@ -30,12 +28,12 @@ _data set [5, _newOwner];
 systemChat format["handleUpdateDeviceOwner - setting new owner from %1 to %2", _previousOwner, _newOwner];
 diag_log format["handleUpdateDeviceOwner - setting new owner from %1 to %2", _previousOwner, _newOwner];
 
-_newData = [_deviceID] call FUNC(getDeviceData);
+private _newData = [_deviceID] call FUNC(getDeviceData);
 systemChat format["handleUpdateDeviceOwner - validate new owner - %1", (_newData select 5) == _newOwner];
 diag_log format["handleUpdateDeviceOwner - validate new owner - %1", (_newData select 5) == _newOwner];
 
 if (!isNull _newOwner && {local _newOwner}) then {
-    _currentDevices = _newOwner getvariable [QGVAR(ownedDevices), []];
+    private _currentDevices = _newOwner getvariable [QGVAR(ownedDevices), []];
     if !(_deviceID in _currentDevices) then {
         _currentDevices pushback _deviceID;
         _newOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];
@@ -47,7 +45,7 @@ if (!isNull _newOwner && {local _newOwner}) then {
 };
 if (!isNull _previousOwner && {local _previousOwner}) then {
     diag_log format["handleUpdateDeviceOwner - removing device (%1) from owner %2 ", _deviceId, _previousOwner];
-    _currentDevices = _previousOwner getvariable [QGVAR(ownedDevices), []];
+    private _currentDevices = _previousOwner getvariable [QGVAR(ownedDevices), []];
     if (_deviceID in _currentDevices) then {
         _currentDevices = _currentDevices - [_deviceID];
         _previousOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];

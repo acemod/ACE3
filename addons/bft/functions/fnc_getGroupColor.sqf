@@ -15,10 +15,9 @@
 
 params ["_groupID"];
 
-private ["_data", "_found", "_color"];
-_data = [_groupID] call FUNC(getGroupData);
-_found = false;
-_color = GVAR(colorWest);
+private _data = [_groupID] call FUNC(getGroupData);
+private _found = false;
+private _color = GVAR(colorWest);
 
 while {!_found} do {
     if (_groupID < 0) exitWith {};

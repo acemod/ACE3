@@ -14,12 +14,10 @@
 
 params ["_side", "_key"];
 
-private ["_variableName", "_keys"];
+private _variableName = format[QGVAR(%1_encryptionKey), _side];
+private _keys = missionNamespace getvariable [_variableName, []];
 
-_variableName = format[QGVAR(%1_encryptionKey), _side];
-_keys = missionNamespace getvariable [_variableName, []];
 if !(_key in _keys) then {
     _keys pushback _key;
-    missionNamespace setvariable [_variableName, _keys];
-    publicVariable "_variableName";
+    missionNamespace setvariable [_variableName, _keys, true];
 };

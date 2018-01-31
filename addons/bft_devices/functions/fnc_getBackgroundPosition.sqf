@@ -39,15 +39,13 @@ private _backgroundPosition = ctrlPosition _backgroundCtrl;
 // get the original position of the background control
 private _backgroundConfigPosition = [];
 {
-    if (isClass _x) then {
-        if (isClass (_x >> _backgroundClassName)) exitWith {
-            _backgroundConfigPosition = [
-                getNumber (_x >> _backgroundClassName >> "x"),
-                getNumber (_x >> _backgroundClassName >> "y"),
-                getNumber (_x >> _backgroundClassName >> "w"),
-                getNumber (_x >> _backgroundClassName >> "h")
-            ];
-        };
+    if (isClass _x && {isClass (_x >> _backgroundClassName)}) exitWith {
+        _backgroundConfigPosition = [
+            getNumber (_x >> _backgroundClassName >> "x"),
+            getNumber (_x >> _backgroundClassName >> "y"),
+            getNumber (_x >> _backgroundClassName >> "w"),
+            getNumber (_x >> _backgroundClassName >> "h")
+        ];
     };
 } forEach _displayConfigContainers;
 

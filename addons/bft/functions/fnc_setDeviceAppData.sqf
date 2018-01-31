@@ -16,8 +16,7 @@
 
 params ["_deviceID", "_deviceData"];
 
-private ["_data"];
-_data = [_deviceID] call FUNC(getDeviceData);
+private _data = [_deviceID] call FUNC(getDeviceData);
 
 if (count _data == 0) exitwith {};
 if (_deviceData isEqualTo (_data select 3)) exitwith {};

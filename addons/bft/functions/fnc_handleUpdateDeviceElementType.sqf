@@ -16,9 +16,8 @@
 
 params ["_deviceID", "_elementType"];
 
-private ["_data", "_assignableInformation"];
-_data = [_deviceID] call FUNC(getDeviceData);
-_assignableInformation = _data select 2;
+private _data = [_deviceID] call FUNC(getDeviceData);
+private _assignableInformation = _data select 2;
 _assignableInformation set [0, _elementType select 0];
 _assignableInformation set [1, _elementType select 1];
 
