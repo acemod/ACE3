@@ -139,7 +139,7 @@ if !(isNil "_itemCfg") then {
             case 0: {
                 [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
                 _statsBoxCtrl ctrlSetPosition [
-                    0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
                     11 * GRID_H
@@ -149,7 +149,7 @@ if !(isNil "_itemCfg") then {
             case 1: {
                 [[2, 3, 4, 5]] call _hideUnusedFnc;
                 _statsBoxCtrl ctrlSetPosition [
-                    0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
                     15 * GRID_H
@@ -159,7 +159,7 @@ if !(isNil "_itemCfg") then {
             case 2: {
                 [[3, 4, 5]] call _hideUnusedFnc;
                 _statsBoxCtrl ctrlSetPosition [
-                    0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
                     25 * GRID_H
@@ -169,7 +169,7 @@ if !(isNil "_itemCfg") then {
             case 3: {
                 [[4, 5]] call _hideUnusedFnc;
                 _statsBoxCtrl ctrlSetPosition [
-                    0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
                     35 * GRID_H
@@ -179,7 +179,7 @@ if !(isNil "_itemCfg") then {
             case 4: {
                 [[5]] call _hideUnusedFnc;
                 _statsBoxCtrl ctrlSetPosition [
-                    0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
                     45 * GRID_H
@@ -188,7 +188,7 @@ if !(isNil "_itemCfg") then {
             };
             case 5: {
                 _statsBoxCtrl ctrlSetPosition [
-                    0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
                     55 * GRID_H
@@ -217,7 +217,7 @@ if !(isNil "_itemCfg") then {
         };
 
         _statsCurrentPageCtrl ctrlSetFade 0;
-        _statsCurrentPageCtrl ctrlSetText str _currentPage;
+        _statsCurrentPageCtrl ctrlSetText (["page", str (_currentPage + 1)] joinString " ");
 
         {
             _x ctrlCommit 0;
@@ -322,7 +322,7 @@ if !(isNil "_itemCfg") then {
 
     [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
     _statsBoxCtrl ctrlSetPosition [
-        0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
+        (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
         safezoneY + 1.8 * GRID_H,
         WIDTH_TOTAL / 5.1,
         12 * GRID_H

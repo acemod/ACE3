@@ -52,7 +52,8 @@ private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
     IDC_statsButton,
     IDC_statsPreviousPage,
     IDC_statsNextPage,
-    IDC_statsCurrentPage
+    IDC_statsCurrentPage,
+    IDC_statsButtonClose
 ];
 
 [QGVAR(statsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;

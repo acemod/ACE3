@@ -304,8 +304,25 @@ if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
 [QGVAR(statsToggle), {
     params ["_display", "_showStats"];
 
-    private _statBoxCtrl = _display displayCtrl IDC_statsBox;
-    _statBoxCtrl ctrlShow (GVAR(showStats) && {_showStats});
+    private _statsCtrlGroupCtrl = _display displayCtrl IDC_statsBox;
+    private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
+    private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
+    private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
+
+    private _statsButtonCtrl = _display displayCtrl IDC_statsButton;
+    private _statsButtonCloseCtrl = _display displayCtrl IDC_statsButtonClose;
+
+    {
+        _x ctrlShow (GVAR(showStats) && {_showStats});
+    } foreach [
+        _statsCtrlGroupCtrl,
+        _statsPreviousPageCtrl,
+        _statsNextPageCtrl,
+        _statsCurrentPageCtrl,
+        _statsButtonCloseCtrl
+    ];
+
+    _statsButtonCtrl ctrlShow (!GVAR(showStats) && {_showStats})
 }] call CBA_fnc_addEventHandler;
 
 

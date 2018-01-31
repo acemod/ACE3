@@ -267,7 +267,7 @@ class GVAR(display) {
         };
         class statsBox: RscControlsGroupNoScrollbars {
             idc = IDC_statsBox;
-            x = QUOTE(0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W);
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(WIDTH_TOTAL / 5.1);
             h = QUOTE(55 * GRID_H);
@@ -396,8 +396,8 @@ class GVAR(display) {
         class statsButton: ctrlButton {
             idc = IDC_statsButton;
             style= 2;
-            text="<";
-            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton),[ARR_2(ctrlparent (_this select 0), _this select 0)]]) call CBA_fnc_localEvent);
+            text=">";
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton), [ctrlparent (_this select 0)]]) call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);
@@ -410,7 +410,7 @@ class GVAR(display) {
             text="<";
             colorBackground[]={0,0,0,0};
             onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlparent (_this select 0), _this select 0, false)]]) call CBA_fnc_localEvent);
-            x = QUOTE(0.5 - (WIDTH_TOTAL / 2.4) + WIDTH_GAP);
+            x = QUOTE(0.5 - (WIDTH_TOTAL / 2.1) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(5 * GRID_H);
@@ -420,19 +420,31 @@ class GVAR(display) {
             idc =  IDC_statsNextPage;
             text = ">"
             onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlparent (_this select 0), _this select 0, true)]]) call CBA_fnc_localEvent);
-            x = QUOTE(0.5 - (WIDTH_TOTAL / 2.4) + WIDTH_GAP + 12 * GRID_W);
+            x = QUOTE(0.5 - (WIDTH_TOTAL / 2.1) + WIDTH_GAP + 17 * GRID_W);
         };
         class statsCurrentPage: RscText {
             idc = IDC_statsCurrentPage;
             style = ST_CENTER;
-            x = QUOTE(0.5 - (WIDTH_TOTAL / 2.4) + WIDTH_GAP + 6 * GRID_W);
+            x = QUOTE(0.5 - (WIDTH_TOTAL / 2.1) + WIDTH_GAP + 6 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
-            w = QUOTE(5 * GRID_W);
+            w = QUOTE(10 * GRID_W);
             h = QUOTE(5 * GRID_H);
             colorBackground[]={0,0,0,0};
             shadow=2;
             sizeEx = QUOTE(5 * GRID_H);
             text = "";
+        };
+        class statsButtonClose: ctrlButton {
+            idc = IDC_statsButtonClose;
+            style= 2;
+            text="X";
+            colorBackground[] = {0.5,0,0,1};
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton), [ctrlparent (_this select 0)]]) call CBA_fnc_localEvent);
+            x = QUOTE(0.5 - (WIDTH_TOTAL / 3.1));
+            y = QUOTE(safezoneY + 2.1 * GRID_H);
+            w = QUOTE(5 * GRID_W);
+            h = QUOTE(4 * GRID_H);
+            sizeEx = QUOTE(5 * GRID_H)
         };
         class mouseBlock: RscText {
             idc = IDC_mouseBlock;
@@ -1028,7 +1040,6 @@ class GVAR(loadoutsDisplay) {
                 };
             };
         };
-        
         class buttonClose: ctrlButton {
             idc = -1;
             x = QUOTE(safezoneW  + safezoneX - 32 * GRID_W);

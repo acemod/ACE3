@@ -125,6 +125,7 @@
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
 #define IDC_statsButton 55
+#define IDC_statsButtonClose 56
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3

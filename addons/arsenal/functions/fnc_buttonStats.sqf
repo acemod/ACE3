@@ -14,36 +14,27 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-params ["_display", "_buttonCtrl"];
+params ["_display"];
 
 private _statsCtrlGroupCtrl = _display displayCtrl IDC_statsBox;
 private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
 private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
 private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
 
-if (GVAR(showStats)) then {
-    GVAR(showStats) = false;
-    _buttonCtrl ctrlSetText ">";
+private _statsButtonCtrl = _display displayCtrl IDC_statsButton;
+private _statsButtonCloseCtrl = _display displayCtrl IDC_statsButtonClose;
 
-    {
-        _x ctrlShow false;
-    } foreach [
-        _statsCtrlGroupCtrl,
-        _statsPreviousPageCtrl,
-        _statsNextPageCtrl,
-        _statsCurrentPageCtrl
-    ];
 
-} else {
-    GVAR(showStats) = true;
-    _buttonCtrl ctrlSetText "<";
-    
-    {
-        _x ctrlShow true;
-    } foreach [
-        _statsCtrlGroupCtrl,
-        _statsPreviousPageCtrl,
-        _statsNextPageCtrl,
-        _statsCurrentPageCtrl
-    ];
-};
+_statsButtonCtrl ctrlShow GVAR(showStats);
+
+GVAR(showStats) = !GVAR(showStats);
+
+{
+    _x ctrlShow GVAR(showStats);
+} foreach [
+    _statsCtrlGroupCtrl,
+    _statsPreviousPageCtrl,
+    _statsNextPageCtrl,
+    _statsCurrentPageCtrl,
+    _statsButtonCloseCtrl
+];
