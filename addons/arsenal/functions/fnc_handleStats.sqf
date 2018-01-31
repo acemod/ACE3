@@ -106,7 +106,6 @@ if !(isNil "_itemCfg") then {
                         } else {
                             _statsTextCtrl ctrlSetText (str _textStatementResult);
                         };
-
                         _statsTextCtrl ctrlSetTextColor ([[1,1,1,1], [0,0,0,1]] select (_showBar));
 
                         _statsTextCtrl ctrlSetFade 0;
@@ -143,7 +142,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    16 * GRID_H
+                    11 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -153,7 +152,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    16 * GRID_H
+                    15 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -163,7 +162,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    27 * GRID_H
+                    25 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -173,7 +172,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    39 * GRID_H
+                    35 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -183,7 +182,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    49 * GRID_H
+                    45 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -192,7 +191,7 @@ if !(isNil "_itemCfg") then {
                     0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W,
                     safezoneY + 1.8 * GRID_H,
                     WIDTH_TOTAL / 5.1,
-                    61 * GRID_H
+                    55 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
             };
@@ -203,7 +202,7 @@ if !(isNil "_itemCfg") then {
         // Toggle page buttons
         if (_currentPage == 0) then {
             _statsPreviousPageCtrl ctrlEnable false;
-            _statsPreviousPageCtrl ctrlSetFade 0.4;
+            _statsPreviousPageCtrl ctrlSetFade 1;
         } else {
             _statsPreviousPageCtrl ctrlEnable true;
             _statsPreviousPageCtrl ctrlSetFade 0;
@@ -211,7 +210,7 @@ if !(isNil "_itemCfg") then {
 
         if (_currentPage + 1 >= count _statsArray) then {
             _statsNextPageCtrl ctrlEnable false;
-            _statsNextPageCtrl ctrlSetFade 0.4;
+            _statsNextPageCtrl ctrlSetFade 1;
         } else {
             _statsNextPageCtrl ctrlEnable true;
             _statsNextPageCtrl ctrlSetFade 0;

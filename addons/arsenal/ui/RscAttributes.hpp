@@ -270,14 +270,14 @@ class GVAR(display) {
             x = QUOTE(0.5 - (WIDTH_TOTAL / 2) + WIDTH_GAP + 6 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(WIDTH_TOTAL / 5.1);
-            h = QUOTE(61 * GRID_H);
+            h = QUOTE(55 * GRID_H);
             class controls {
                 class statsBackground: ctrlStaticBackground {
                     idc = -1;
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(WIDTH_TOTAL / 5.1);
-                    h = QUOTE(61 * GRID_H);
+                    h = QUOTE(55 * GRID_H);
                     colorBackground[]={0.1,0.1,0.1,0.5};
                 };
                 class statsTitle1: RscText {
@@ -288,7 +288,7 @@ class GVAR(display) {
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(5 * GRID_H);
                     colorBackground[]={0,0,0,0};
-                    shadow=2;
+                    colorText[]={0.7,0.7,0.7,1};
                     sizeEx = QUOTE(5 * GRID_H);
                     text = "";
                 };
@@ -296,7 +296,7 @@ class GVAR(display) {
                     idc = IDC_statsBackground1;
                     fade = 1;
                     x = QUOTE(1 * GRID_W);
-                    y = QUOTE(11 * GRID_H);
+                    y = QUOTE(10 * GRID_H);
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(4 * GRID_H);
                     colorBackground[]={1,1,1,0.15};
@@ -309,7 +309,7 @@ class GVAR(display) {
                     colorBar[] = {1,1,1,1};
                     colorFrame[] = {0,0,0,0};
                     x = QUOTE(1 * GRID_W);
-                    y = QUOTE(11 * GRID_H);
+                    y = QUOTE(10 * GRID_H);
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(4 * GRID_H);
                 };
@@ -320,7 +320,7 @@ class GVAR(display) {
                     colorShadow[]={1,1,1,1};
                     colorText[]={0,0,0,1};
                     x = QUOTE(1 * GRID_W);
-                    y = QUOTE(11 * GRID_H);
+                    y = QUOTE(10 * GRID_H);
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(4 * GRID_H);
                     sizeEx = QUOTE(5 * GRID_H);
@@ -328,68 +328,68 @@ class GVAR(display) {
                 };
                 class statsTitle2: statsTitle1 {
                     idc = IDC_statsTitle2;
-                    y = QUOTE(16 * GRID_H);
+                    y = QUOTE(15 * GRID_H);
                 };
                 class statsBackground2: statsBackground1 {
                     idc = IDC_statsBackground2;
-                    y = QUOTE(22 * GRID_H);
+                    y = QUOTE(20 * GRID_H);
                 };
                 class statsBar2: statsBar1 {
                     idc = IDC_statsBar2;
-                    y = QUOTE(22 * GRID_H);
+                    y = QUOTE(20 * GRID_H);
                 };
                 class statsText2: statsText1 {
                     idc = IDC_statsText2;
-                    y = QUOTE(22 * GRID_H);
+                    y = QUOTE(20 * GRID_H);
                 };
                 class statsTitle3: statsTitle1 {
                     idc = IDC_statsTitle3;
-                    y = QUOTE(27 * GRID_H);
+                    y = QUOTE(25 * GRID_H);
                 };
                 class statsBackground3: statsBackground1 {
                     idc = IDC_statsBackground3;
-                    y = QUOTE(33 * GRID_H);
+                    y = QUOTE(30 * GRID_H);
                 };
                 class statsBar3: statsBar1 {
                     idc = IDC_statsBar3;
-                    y = QUOTE(33 * GRID_H);
+                    y = QUOTE(30 * GRID_H);
                 };
                 class statsText3: statsText1 {
                     idc = IDC_statsText3;
-                    y = QUOTE(33 * GRID_H);
+                    y = QUOTE(30 * GRID_H);
                 };
                 class statsTitle4: statsTitle1 {
                     idc = IDC_statsTitle4;
-                    y = QUOTE(38 * GRID_H);
+                    y = QUOTE(35 * GRID_H);
                 };
                 class statsBackground4: statsBackground1 {
                     idc = IDC_statsBackground4;
-                    y = QUOTE(44 * GRID_H);
+                    y = QUOTE(40 * GRID_H);
                 };
                 class statsBar4: statsBar1 {
                     idc = IDC_statsBar4;
-                    y = QUOTE(44 * GRID_H);
+                    y = QUOTE(40 * GRID_H);
                 };
                 class statsText4: statsText1 {
                     idc = IDC_statsText4;
-                    y = QUOTE(44 * GRID_H);
+                    y = QUOTE(40 * GRID_H);
                 };
                 class statsTitle5: statsTitle1 {
                     idc = IDC_statsTitle5;
-                    y = QUOTE(49 * GRID_H);
+                    y = QUOTE(45 * GRID_H);
                 };
                 class statsBackground5: statsBackground1 {
                     idc = IDC_statsBackground5;
-                    y = QUOTE(55 * GRID_H);
+                    y = QUOTE(50 * GRID_H);
                 };
                 class statsBar5: statsBar1 {
                     idc = IDC_statsBar5;
-                    y = QUOTE(55 * GRID_H);
+                    y = QUOTE(50 * GRID_H);
                     colorBackground[]={1,1,1,0.15};
                 };
                 class statsText5: statsText1 {
                     idc = IDC_statsText5;
-                    y = QUOTE(55 * GRID_H);
+                    y = QUOTE(50 * GRID_H);
                 };
             };
         };
