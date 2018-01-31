@@ -62,120 +62,120 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
 GVAR(statsListLeftPanel) =  [
     [
         [
-            [["reloadTime"], "string ROF (TBL)", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
+            [["reloadTime"], localize "str_a3_rscdisplayarsenal_stat_rof", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
                 params ["_stat", "_config"];
 
                 private _reloadTime = getNumber (_config >> _stat select 0);
 
                 format ["%1 rpm", round (60 / _reloadTime)]
             }]],
-            [["dispersion"], "Accuracy (TBL)", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
+            [["dispersion"], localize "str_a3_rscdisplayarsenal_stat_dispersion", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
                 params ["_stat", "_config"];
 
                 private _dispersion = getNumber (_config >> _stat select 0);
 
                 format ["%1 MIL (%2 MOA)", _dispersion * 1000, (_dispersion / pi * 10800) ToFixed 1];
             }]],
-            [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["maxZeroing"], localize "str_a3_rscdisplayarsenal_stat_range", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["hit", "initSpeed"], localize "str_a3_rscdisplayarsenal_stat_impact", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Primary
     [
         [
-            [["reloadTime"], "string ROF (TBL)", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
+            [["reloadTime"], localize "str_a3_rscdisplayarsenal_stat_rof", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
                 params ["_stat", "_config"];
 
                 private _reloadTime = getNumber (_config >> _stat select 0);
 
                 format ["%1 rpm", round (60 / _reloadTime)]
             }]],
-            [["dispersion"], "Accuracy (TBL)", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
+            [["dispersion"], localize "str_a3_rscdisplayarsenal_stat_dispersion", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
                 params ["_stat", "_config"];
 
                 private _dispersion = getNumber (_config >> _stat select 0);
 
                 format ["%1 MIL (%2 MOA)", _dispersion * 1000, (_dispersion / pi * 10800) ToFixed 1];
             }]],
-            [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["maxZeroing"], localize "str_a3_rscdisplayarsenal_stat_dispersion", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["hit", "initSpeed"], localize "str_a3_rscdisplayarsenal_stat_impact", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Handgun
     [
         [
-            [["maxZeroing"], "Range (TBL)", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["hit", "initSpeed"], "Damage (TBL)", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["maxZeroing"], localize "str_a3_rscdisplayarsenal_stat_dispersion", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["hit", "initSpeed"], localize "str_a3_rscdisplayarsenal_stat_impact", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]],
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Launcher
     [
         [
-            [["passthrough"], "Ballistic protection (TBL)", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["armor"], "Explosive resistance (TBL)", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["maximumLoad"], "Load (TBL)", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["passthrough"], localize "str_a3_rscdisplayarsenal_stat_passthrough", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["armor"], localize "str_a3_rscdisplayarsenal_stat_armor", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["maximumLoad"], localize "str_a3_rscdisplayarsenal_stat_load", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Uniform
     [
         [
-            [["passthrough"], "Ballistic protection (TBL)", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["armor"], "Explosive resistance (TBL)", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["maximumLoad"], "Load (TBL)", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["passthrough"], localize "str_a3_rscdisplayarsenal_stat_passthrough", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["armor"], localize "str_a3_rscdisplayarsenal_stat_armor", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["maximumLoad"], localize "str_a3_rscdisplayarsenal_stat_load", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Vests
     [
         [
-            [["maximumLoad"], "Load (TBL)", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["maximumLoad"], localize "str_a3_rscdisplayarsenal_stat_load", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Backpacks
     [
         [
-            [["passthrough"], "Ballistic protection (TBL)", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["armor"], "Explosive resistance (TBL)", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["passthrough"], localize "str_a3_rscdisplayarsenal_stat_passthrough", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["armor"], localize "str_a3_rscdisplayarsenal_stat_armor", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Headgear
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Goggles
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // NVGs
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Binoculars
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Map
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // GPS
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Radio
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Compass
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Watch
     [], // Voices
@@ -185,45 +185,43 @@ GVAR(statsListLeftPanel) =  [
 GVAR(statsListRightPanel) = [
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Optics
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Side accs
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Muzzle
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Bipod
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Mag
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Throw
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]]
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
         ]
     ], // Put
     [
         [
-            [["mass"], "Weight (TBL)", [false, true], [], [{}, _fnc_mass]],
-            [[""], "Potassium (TBL)", [true, true], [], [{1}, {
-                "A rich source of potassium"
-            }, {
+            [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]],
+            [[""], localize LSTRING(statPotassium), [true, false], [], [{1}, {}, {
                 params ["", "_config"];
 
                 ((configName _config) == "ACE_Banana")
@@ -235,14 +233,14 @@ GVAR(statsListRightPanel) = [
 if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
     {
         (GVAR(statsListLeftPanel) select _x) pushBack [
-            [["ACE_barrelTwist"], "Barrel twist (TBL)", [false, true], [], [{}, {
+            [["ACE_barrelTwist"], localize LSTRING(statBarrelTwist), [false, true], [], [{}, {
                 params ["_stat", "_config"];
 
                 private _barrelTwist = getNumber (_config >> _stat select 0);
 
                 format ["%1mm (%2in)",_barrelTwist, (_barrelTwist / 25.4) toFixed 1];
             }]],
-            [["ACE_barrelLength"], "Barrel length (TBL)", [false, true], [], [{}, {
+            [["ACE_barrelLength"], localize LSTRING(statBarrelLength), [false, true], [], [{}, {
                 params ["_stat", "_config"];
 
                 private _barrelLength = getNumber (_config >> _stat select 0);
@@ -253,12 +251,12 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
     } foreach [0, 1];
 
     (GVAR(statsListRightPanel) select 4) pushBack [
-        [["ammo"], "Ammo (TBL)", [false, true], [], [{}, {
+        [["ammo"], localize LSTRING(statAmmo), [false, true], [], [{}, {
             params ["_stat", "_config"];
 
             getText (_config >> _stat select 0)
         }]],
-        [["ACE_dragModel", "ACE_ballisticCoefficients"], "Ballistic coefficient (TBL)", [false, true], [], [{}, {
+        [["ACE_dragModel", "ACE_ballisticCoefficients"], localize LSTRING(statBallisticCoef), [false, true], [], [{}, {
             params ["_stat", "_config", ""];
 
             private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo"))); 
@@ -271,7 +269,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
                 "Undefined value (TBL)"
             };
         }]],
-        [["ACE_bulletMass"], "Bullet mass (TBL)", [false, true], [], [{}, {
+        [["ACE_bulletMass"], localize LSTRING(statBulletMass), [false, true], [], [{}, {
             params ["_stat", "_config"];
 
             private _ammoWeightCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo")) >> _stat select 0);
@@ -289,8 +287,8 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
 
 if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
     (GVAR(statsListLeftPanel) select 6) pushBack [
-        [["ACE_hearing_protection"], "Hearing protection (TBL)", [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-        [["ACE_hearing_lowerVolume"], "Sound muffling (TBL)", [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]]
+        [["ACE_hearing_protection"], localize LSTRING(statHearingProtection), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+        [["ACE_hearing_lowerVolume"], localize LSTRING(statHearingLowerVolume), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]]
     ];
 };
 

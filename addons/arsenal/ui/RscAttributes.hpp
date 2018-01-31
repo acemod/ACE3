@@ -319,7 +319,7 @@ class GVAR(display) {
                     fade = 1;
                     colorShadow[]={1,1,1,1};
                     colorText[]={0,0,0,1};
-                    x = QUOTE(1 * GRID_W);
+                    x = QUOTE(0 * GRID_W);
                     y = QUOTE(10 * GRID_H);
                     w = QUOTE(WIDTH_SINGLE);
                     h = QUOTE(4 * GRID_H);
