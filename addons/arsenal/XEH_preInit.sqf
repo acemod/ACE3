@@ -287,6 +287,13 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
     ];
 };
 
+if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
+    (GVAR(statsListLeftPanel) select 6) pushBack [
+        [["ACE_hearing_protection"], "Hearing protection (TBL)", [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]],
+        [["ACE_hearing_lowerVolume"], "Sound muffling (TBL)", [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]]
+    ];
+};
+
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
 [QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;
 [QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
