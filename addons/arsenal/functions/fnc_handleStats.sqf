@@ -217,7 +217,7 @@ if !(isNil "_itemCfg") then {
         };
 
         _statsCurrentPageCtrl ctrlSetFade 0;
-        _statsCurrentPageCtrl ctrlSetText (["page", str (_currentPage + 1)] joinString " ");
+        _statsCurrentPageCtrl ctrlSetText ([localize LSTRING(page), str (_currentPage + 1)] joinString " ");
 
         {
             _x ctrlCommit 0;

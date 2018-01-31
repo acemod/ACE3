@@ -266,7 +266,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
             if (isNumber _dragModel && {isArray _ballisticCoef}) then {
                 format ["%1 G%2", (getArray _ballisticCoef) select 0 ,getNumber _dragModel]
             } else {
-                "Undefined value (TBL)"
+                localize LSTRING(statUndefined);
             };
         }]],
         [["ACE_bulletMass"], localize LSTRING(statBulletMass), [false, true], [], [{}, {
@@ -279,7 +279,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
                 private _ammoWeight = getNumber _ammoWeightCfg;
                 format ["%1g (%2gr)", _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1]
             } else {
-                "Undefined value (TBL)"
+                localize LSTRING(statUndefined);
             };
         }]]
     ];
