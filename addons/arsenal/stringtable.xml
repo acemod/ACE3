@@ -582,5 +582,9 @@
             <English>Page</English>
             <French>Page</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statExploRange">
+            <English>Explosive range</English>
+            <French>Portée du détonateur</French>
+        </Key>
     </Package>
 </Project>

@@ -219,7 +219,7 @@ GVAR(statsListRightPanel) = [
     [
         [
             [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]],
-            [[""], localize LSTRING(statPotassium), [true, false], [], [{1}, {}, {
+            [[], localize LSTRING(statPotassium), [true, false], [], [{1}, {}, {
                 params ["", "_config"];
 
                 ((configName _config) == "ACE_Banana")
@@ -287,6 +287,21 @@ if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
     (GVAR(statsListLeftPanel) select 6) pushBack [
         [["ACE_hearing_protection"], localize LSTRING(statHearingProtection), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]],
         [["ACE_hearing_lowerVolume"], localize LSTRING(statHearingLowerVolume), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]]
+    ];
+};
+
+if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
+    (GVAR(statsListRightPanel) select 7) pushBack [
+        [["ace_explosives_Range"], "explosive range", [false, true], [], [{}, {
+            params ["_stat", "_config"];
+
+            private _exploRangeStat = getNumber (_config >> _stat select 0);
+            format ["%1m (%2ft)", _exploRangeStat, (_exploRangeStat / 0.3048) toFixed 1];
+        }, {
+            params ["", "_config"];
+
+            (getNumber (_config >> "ace_explosives_Detonator"))  > 0
+        }]]
     ];
 };
 
