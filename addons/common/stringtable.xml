@@ -613,7 +613,7 @@
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
-            <German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standartfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat. </German>
+            <German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standardfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat. </German>
             <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
             <Italian>Il colore del testo dei suggerimenti di ACE. Questo è il colore predefinito per tutto il testo mostrato dal sistema di suggerimenti di ACE quando il colore del testo non ha altro colore specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
@@ -633,6 +633,7 @@
             <Japanese>武器のレーザー ポインタ/フラッシュライトの永続</Japanese>
             <Italian>Laser/torcia dell'arma costantemente accesi</Italian>
             <Korean>무기 레이저 포인터 / 손전등 지속</Korean>
+            <German>Kontinuität des Laserpointers/Taktischen Lichts</German>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -640,6 +641,7 @@
             <Japanese>銃のライト等を点けていると武器を切り替えた後や車両を乗り降りしても、ライト等を点けたままにします。</Japanese>
             <Italian>Abilita la torcia/laser dopo il cambio dell'arma o l'entrata/uscita del veicolo se precedentemente attiva.</Italian>
             <Korean>무기를 바꾸거나 차량에 승하차 할 때 이전에 스위치 켜고 끔을 유지합니다.</Korean>
+            <German>Aktiviert Laserpointer/Taktisches Licht nach einem Waffenwechsel oder dem Auf-/Absitzen, falls es zuvor aktiv war.</German>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>

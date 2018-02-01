@@ -306,7 +306,7 @@
             <English>Show player names</English>
             <Polish>Pokaż imiona graczy</Polish>
             <Spanish>Mostrar nombres de los jugadores</Spanish>
-            <German>Zeigen Sie die Namen der Spieler</German>
+            <German>Zeige einzelne Spielernamen</German>
             <Czech>Zobrazit jména hráčů</Czech>
             <Portuguese>Mostrar os nomes dos jogadores</Portuguese>
             <French>Afficher les noms des joueurs</French>
@@ -322,7 +322,7 @@
             <English>Show individual player names?</English>
             <Polish>Pokaż poszczególne imiona graczy?</Polish>
             <Spanish>Mostrar nombres de los jugadores individuales?</Spanish>
-            <German>Zeigen einzelnen Spielernamen?</German>
+            <German>Zeigt die Namen der einzelnen Spieler an</German>
             <Czech>Zobrazit názvy jednotlivých hráčů?</Czech>
             <Portuguese>Mostrar nomes individuais dos jogadores?</Portuguese>
             <French>Affiche les noms des joueurs individuels ?</French>

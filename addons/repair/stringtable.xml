@@ -1098,7 +1098,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
-            <German>Erweiterter Pionier</German>
+            <German>Instandsetzer</German>
             <Italian>Solo Geniere avanzato</Italian>
             <Japanese>上級工兵のみ</Japanese>
             <Chinesesimp>只有维修专精兵</Chinesesimp>
@@ -1424,7 +1424,7 @@
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
             <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
             <English>Adv. Engineer</English>
-            <German>Erw. Pionier</German>
+            <German>Instandsetzer</German>
             <Italian>Adv. Geniere</Italian>
             <Japanese>上級工兵</Japanese>
             <Chinesesimp>专精</Chinesesimp>
