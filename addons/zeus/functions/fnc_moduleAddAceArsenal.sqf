@@ -1,6 +1,6 @@
 /*
  * Author: alganthe
- * Remove arsenal from an object
+ * Add a full ACE Arsenal to an object
  *
  * Arguments:
  * 0: The module logic <OBJECT>
@@ -9,15 +9,14 @@
  * None
  *
  * Public: No
-*/
-
+ */
 #include "script_component.hpp"
 
 params ["_logic"];
 if (!local _logic) exitWith {};
 
 private _object = attachedTo _logic;
-TRACE_3("moduleRemoveArsenal",_logic,_object,typeOf _object);
+TRACE_3("moduleAddArsenal",_logic,_object,typeOf _object);
 
 switch (true) do {
     case (isNull _object): {
@@ -30,12 +29,7 @@ switch (true) do {
         [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     default {
-
-        TRACE_1("Calling removeVirtualXXXCargo functions", _object);
-        [_object, (_object call BIS_fnc_getVirtualItemCargo), true] call BIS_fnc_removeVirtualItemCargo;
-        [_object, (_object call BIS_fnc_getVirtualWeaponCargo), true] call BIS_fnc_removeVirtualWeaponCargo;
-        [_object, (_object call BIS_fnc_getVirtualMagazineCargo), true] call BIS_fnc_removeVirtualMagazineCargo;
-        [_object, (_object call BIS_fnc_getVirtualBackpackCargo), true] call BIS_fnc_removeVirtualBackpackCargo;
+        [_object, true, true] call EFUNC(arsenal,initBox);
     };
 };
 
