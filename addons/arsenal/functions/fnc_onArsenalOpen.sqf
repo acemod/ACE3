@@ -22,6 +22,11 @@ _args params ["_display"];
 if (isNil QGVAR(center)) then {
     GVAR(center) = player;
 };
+if (!is3DEN && {GVAR(center) != player}) then {
+    GVAR(centerNotPlayer) = true;
+} else {
+    GVAR(centerNotPlayer) = false;
+};
 
 GVAR(mouseButtonState) = [[],[]];
 

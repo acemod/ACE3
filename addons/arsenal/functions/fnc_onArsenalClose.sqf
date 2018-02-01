@@ -99,5 +99,6 @@ GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
 GVAR(center) = nil;
+GVAR(centerNotPlayer) = nil;
 
 showHUD true;
