@@ -89,4 +89,4 @@ call FUNC(updateUniqueItemsList);
 
 [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutLoaded), _loadoutName] joinString " "] call FUNC(message);
 
-[QGVAR(onLoadoutLoad), [_loadout]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutLoad), [_loadout, _loadoutName]] call CBA_fnc_localEvent;
