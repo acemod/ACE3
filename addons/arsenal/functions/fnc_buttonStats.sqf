@@ -16,25 +16,16 @@
 
 params ["_display"];
 
-private _statsCtrlGroupCtrl = _display displayCtrl IDC_statsBox;
-private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
-private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
-private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
-
-private _statsButtonCtrl = _display displayCtrl IDC_statsButton;
-private _statsButtonCloseCtrl = _display displayCtrl IDC_statsButtonClose;
-
-
-_statsButtonCtrl ctrlShow GVAR(showStats);
-
+(_display displayCtrl IDC_statsButton) ctrlShow GVAR(showStats);
 GVAR(showStats) = !GVAR(showStats);
 
 {
-    _x ctrlShow GVAR(showStats);
+    (_display displayCtrl _x) ctrlShow GVAR(showStats);
 } foreach [
-    _statsCtrlGroupCtrl,
-    _statsPreviousPageCtrl,
-    _statsNextPageCtrl,
-    _statsCurrentPageCtrl,
-    _statsButtonCloseCtrl
+    IDC_statsBox,
+    IDC_statsPreviousPage,
+    IDC_statsNextPage,
+    IDC_statsCurrentPage,
+    IDC_statsButtonClose
 ];
+

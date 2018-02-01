@@ -325,7 +325,7 @@ if !(isNil "_itemCfg") then {
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
         safezoneY + 1.8 * GRID_H,
         WIDTH_TOTAL / 5.1,
-        12 * GRID_H
+        11 * GRID_H
     ];
     _statsBoxCtrl ctrlCommit 0;
 
