@@ -324,6 +324,29 @@ if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
     };
 };
 
+if (["ACE_Overpressure"] call EFUNC(common,isModLoaded)) then {
+    private _array =[
+        [["ace_overpressure_angle"], localize LSTRING(statBackblastAngle), [false, true], [], [{}, {
+            params ["_stat", "_config"];
+
+            private _blastAngleStat = getNumber (_config >> _stat select 0);
+            format ["%1°", _blastAngleStat];
+        }]],
+        [["ace_overpressure_range"], localize LSTRING(statBackblastRange), [false, true], [], [{}, {
+            params ["_stat", "_config"];
+
+            private _blastRangeStat = getNumber (_config >> _stat select 0);
+            format ["%1m (%2ft)", _blastRangeStat, (_blastRangeStat / 0.3048) toFixed 1];
+        }]]
+    ];
+
+    if (count ((GVAR(statsListLeftPanel) select 2) select 0) <= 3) then {
+        (GVAR(statsListLeftPanel) select 2) select 0 append _array;
+    } else {
+        (GVAR(statsListLeftPanel) select 2) pushBack _array;
+    };
+};
+
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
 [QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;
 [QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
