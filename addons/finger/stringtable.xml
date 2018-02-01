@@ -8,6 +8,7 @@
             <Chinese>指向指示器</Chinese>
             <Chinesesimp>指向指示器</Chinesesimp>
             <Japanese>指差し</Japanese>
+            <Korean>가리키기</Korean>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

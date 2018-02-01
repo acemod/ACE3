@@ -7,7 +7,7 @@ class CfgVehicles {
                 class GVAR(open) {
                     displayName = CSTRING(activateMonitor);
                     condition = QUOTE([ARR_2(ACE_player,'ACE_HuntIR_monitor')] call EFUNC(common,hasItem));
-                    statement = QUOTE(call FUNC(huntir));
+                    statement = QUOTE([FUNC(huntir)] call CBA_fnc_execNextFrame;);
                     showDisabled = 0;
                     priority = 2;
                     icon = QPATHTOF(UI\w_huntir_monitor_ca.paa);

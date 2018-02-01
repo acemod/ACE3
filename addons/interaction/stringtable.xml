@@ -8,6 +8,7 @@
             <Chinese>互動</Chinese>
             <Chinesesimp>互动</Chinesesimp>
             <Japanese>インタラクション</Japanese>
+            <Korean>상호작용</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -1079,6 +1080,7 @@
             <Russian>Вытащить тело</Russian>
             <Japanese>身体を引き出す</Japanese>
             <Italian>Estrai il corpo</Italian>
+            <Korean>시체 끌기</Korean>
         </Key>
     </Package>
 </Project>

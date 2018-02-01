@@ -35,4 +35,5 @@ GVAR(enabled) &&
 {[_unit, objNull, ["isNotInside", "isNotSwimming", "isNotSitting"/*, "isNotOnLadder"*/]] call EFUNC(common,canInteractWith)} && // Ladder needs positioning fixes on throw
 {_unit call CBA_fnc_canUseWeapon} && // Disable in non-FFV seats due to surface detection issues
 {"" == currentWeapon _unit || {currentWeapon _unit != secondaryWeapon _unit}} &&
-{0 >= _unit getVariable [QEGVAR(common,effect_blockThrow), 0]}
+{0 >= _unit getVariable [QEGVAR(common,effect_blockThrow), 0]} &&
+{isNull (ACE_controlledUAV select 0)}
