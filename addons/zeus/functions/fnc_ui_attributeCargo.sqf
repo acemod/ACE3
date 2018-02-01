@@ -1,5 +1,5 @@
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, mharis001
  * Initalises the ace_cargo attribute of the zeus vehicle attributes display
  * (the display shown on double click)
  *
@@ -28,6 +28,10 @@ TRACE_1("",_loaded);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
 
+private _listbox = _control controlsGroupCtrl 80086;
+
 {
-    (_control controlsGroupCtrl 80086) lbAdd (str _x);
+    private _class = if (_x isEqualType "") then {_x} else {typeOf _x};
+    private _displayName = getText (configFile >> "CfgVehicles" >> _class >> "displayName");
+    _listbox lbAdd _displayName;
 } forEach _loaded;
