@@ -586,5 +586,11 @@
             <English>Explosive range</English>
             <French>Portée du détonateur</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statBackblastRange">
+            <English>Backblast range</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statBackblastAngle">
+            <English>Backblast angle</English>
+        </Key>
     </Package>
 </Project>
