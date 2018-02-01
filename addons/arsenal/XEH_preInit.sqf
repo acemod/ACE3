@@ -292,7 +292,7 @@ if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
 
 if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
     (GVAR(statsListRightPanel) select 7) pushBack [
-        [["ace_explosives_Range"], "explosive range", [false, true], [], [{}, {
+        [["ace_explosives_Range"], localize LSTRING(statExploRange), [false, true], [], [{}, {
             params ["_stat", "_config"];
 
             private _exploRangeStat = getNumber (_config >> _stat select 0);
