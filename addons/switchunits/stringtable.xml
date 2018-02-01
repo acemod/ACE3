@@ -7,6 +7,7 @@
             <Chinese>切換單位</Chinese>
             <Chinesesimp>切换单位</Chinesesimp>
             <Japanese>ユニット切り替え</Japanese>
+            <Korean>병력 전환</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>

@@ -22,11 +22,14 @@ if (!local _this) exitWith {};
 private _hasGravity = simulationEnabled _this && {getText (configFile >> "CfgVehicles" >> typeOf _this >> "simulation") != "house"};
 
 if (!_hasGravity) then {
-    private _posAbove = (getPosATL _this) select 2;
-    TRACE_2("house",_this,_posAbove);
-    if (_posAbove > 0.1) then {
-        private _newPosATL = (getPosATL _this) vectorDiff [0, 0, _posAbove];
-        _this setPosATL _newPosATL;
+    private _positionASL = getPosASL _this;
+    // find height of top surface under object
+    private _surfaces = lineIntersectsSurfaces [_positionASL, ATLToASL [_positionASL select 0, _positionASL select 1, -1], _this];
+    if (_surfaces isEqualTo []) exitWith {};
+    private _surfaceHeight = _surfaces select 0 select 0 select 2;
+    TRACE_2("house",_this,_surfaceHeight);
+    if (_positionASL select 2 > _surfaceHeight + 0.1) then {
+        _this setPosASL [_positionASL select 0, _positionASL select 1, _surfaceHeight];
     };
 };
 

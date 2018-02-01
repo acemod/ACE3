@@ -167,7 +167,7 @@ class GVAR(display) {
             h = QUOTE(7 * GRID_H);
             class controls {
                 class buttonHide: ctrlButton {
-                    idc = -1;
+                    idc = IDC_buttonHide;
                     colorBackground[] = {0,0,0,0.8};
                     x = QUOTE(1 * WIDTH_GAP + 0 * WIDTH_SINGLE);
                     y = QUOTE(0);
@@ -180,21 +180,24 @@ class GVAR(display) {
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
                 };
                 class buttonLoadouts: buttonHide {
-                    idc = -1;
+                    idc = IDC_buttonLoadouts;
                     x = QUOTE(2 * WIDTH_GAP + 1 * WIDTH_SINGLE);
                     text = CSTRING(buttonLoadoutsText);
+                    tooltip = CSTRING(buttonLoadoutsTooltip);
                     onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
-                    idc = -1;
+                    idc = IDC_buttonExport;
                     x = QUOTE(3 * WIDTH_GAP + 2 * WIDTH_SINGLE);
                     text = CSTRING(buttonExportText);
+                    tooltip = CSTRING(buttonExportTooltip);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
                 };
                 class buttonImport: buttonHide {
-                    idc = -1;
+                    idc = IDC_buttonImport;
                     x = QUOTE(4 * WIDTH_GAP + 3 * WIDTH_SINGLE);
                     text = CSTRING(buttonImportText);
+                    tooltip = CSTRING(buttonImportTooltip);
                     onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonOK {

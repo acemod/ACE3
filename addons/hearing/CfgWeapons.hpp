@@ -40,6 +40,22 @@ class CfgWeapons {
         HEARING_PROTECTION_EARMUFF
     };
 
+    class H_Construction_earprot_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_Construction_headset_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_EarProtectors_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+   class H_HeadSet_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
     class H_HelmetB_light: H_HelmetB {
         HEARING_PROTECTION_PELTOR
     };

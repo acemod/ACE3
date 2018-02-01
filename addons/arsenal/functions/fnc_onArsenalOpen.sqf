@@ -204,7 +204,7 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_rightSearchbar
 ];
 
-//------------------------------- TBMR
+// Handle stats
 private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
 _statsBoxCtrl ctrlSetPosition [
     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
@@ -216,7 +216,14 @@ _statsBoxCtrl ctrlEnable false;
 _statsBoxCtrl ctrlCommit 0;
 
 (_display displayCtrl IDC_statsButton) ctrlShow false;
-//------------------------------- TBMR
+
+// Disable import in MP
+if (isMultiplayer) then {
+    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
+    _importButtonCtrl ctrlEnable false;
+    _importButtonCtrl ctrlSetFade 0.6;
+    _importButtonCtrl ctrlCommit 0;
+};
 
 //--------------- Camera prep
 cutText ["","plain"];
