@@ -278,7 +278,6 @@ class Display3DEN {
                 action= QUOTE(['arsenal'] call bis_fnc_3DENEntityMenu);
                 value=0;
                 data="Arsenal";
-                conditionShow="hoverObjectBrain     * (1 - (hoverObjectVehicle))";
                 opensNewWindow=1;
             };
             class aceArsenal: virtualArsenal {
