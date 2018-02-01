@@ -49,20 +49,15 @@ if !(isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
-        private ["_statsArray", "_statsList", "_isLeftPanel", "_currentPage"];
 
         // Get the proper list and page
         if (_leftPanel) then {
-            _isLeftPanel = true;
-            _statsArray = GVAR(statsListLeftPanel) select _statsIndex;
-            _currentPage = GVAR(statsPagesLeft) select _statsIndex;
-            _statsList = _statsArray select _currentPage;
+            [true, GVAR(statsListLeftPanel) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
         } else {
-            _isLeftPanel = false;
-            _statsArray = GVAR(statsListRightPanel) select _statsIndex;
-            _currentPage = GVAR(statsPagesRight) select _statsIndex;
-            _statsList = _statsArray select _currentPage;
-        };
+            [false, GVAR(statsListRightPanel) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
+        } params ["_isLeftPanel", "_statsArray", "_currentPage"];
+
+        private _statsList = _statsArray select _currentPage;
 
         private _statsCount = 0;
 
