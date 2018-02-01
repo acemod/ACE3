@@ -172,7 +172,7 @@ GVAR(currentWeaponType) = switch true do {
     default {-1};
 };
 
-[QGVAR(displayOpened), []] call CBA_fnc_localEvent;
+[QGVAR(displayOpened), [_display]] call CBA_fnc_localEvent;
 
 //--------------- Fade out unused elements
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;
