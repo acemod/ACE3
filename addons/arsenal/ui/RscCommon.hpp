@@ -270,13 +270,11 @@ class ctrlCheckboxToolbar;
 class Display3DEN {
     class ContextMenu :ctrlMenu {
         class Items {
-            class Log;
-            class Arsenal: Log {
-                text="$STR_3den_display3den_entitymenu_arsenal_text";
+            class Arsenal {
                 items[]= {"aceArsenal", "virtualArsenal"};
             };
             class virtualArsenal {
-                text = "BI Virtual arsenal";
+                text = "BI Virtual Arsenal";
                 action= QUOTE(['arsenal'] call bis_fnc_3DENEntityMenu);
                 value=0;
                 data="Arsenal";
