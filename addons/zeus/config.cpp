@@ -23,6 +23,7 @@ class CfgPatches {
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),
             QGVAR(moduleTeleportPlayers),
+            QGVAR(moduleHeal),
             QGVAR(moduleSuicideBomber)
         };
         weapons[] = {};
@@ -46,8 +47,7 @@ class CfgPatches {
             QGVAR(moduleUnconscious),
             QGVAR(moduleSetMedic),
             QGVAR(moduleSetMedicalVehicle),
-            QGVAR(moduleSetMedicalFacility),
-            QGVAR(moduleHeal)
+            QGVAR(moduleSetMedicalFacility)
         };
     };
     class GVAR(cargo): ADDON {

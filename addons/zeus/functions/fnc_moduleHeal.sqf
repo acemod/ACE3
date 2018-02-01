@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Full heal unit
+ * Full heal unit.
  *
  * Arguments:
  * 0: The module logic <OBJECT>
@@ -44,5 +44,10 @@ switch (false) do {
 };
 
 // Heal validated target
-[QEGVAR(medical,treatmentAdvanced_fullHealLocal), [_unit, _unit], _unit] call CBA_fnc_targetEvent;
+if (["ace_medical"] call EFUNC(common,isModLoaded) && {EGVAR(medical,level) > 0}) then {
+    [QEGVAR(medical,treatmentAdvanced_fullHealLocal), [_unit, _unit], _unit] call CBA_fnc_targetEvent;
+} else {
+    _unit setDamage 0;
+};
+
 deleteVehicle _logic;
