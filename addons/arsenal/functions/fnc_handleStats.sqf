@@ -36,13 +36,13 @@ private _hideUnusedFnc = {
         {
             _x ctrlSetFade 1;
             _x ctrlCommit 0;
-        } foreach [
+        } forEach [
             _statsTitleCtrl,
             _statsBackgroundCtrl,
             _statsBarCtrl,
             _statsTextCtrl
         ];
-    } foreach _numbers;
+    } forEach _numbers;
 };
 
 if !(isNil "_itemCfg") then {
@@ -80,58 +80,51 @@ if !(isNil "_itemCfg") then {
                 private _statsBarCtrl = _display displayCtrl (_statsTitleIDC + 2);
                 private _statsTextCtrl = _display displayCtrl (_statsTitleIDC + 3);
 
-                if ([_configEntry, _itemCfg, _passedArgs] call _condition) then {
+                _statsCount = _statsCount + 1;
+                _statsTitleCtrl ctrlSetText _title;
+                _statsTitleCtrl ctrlSetFade 0;
 
-                    _statsCount = _statsCount + 1;
-                    _statsTitleCtrl ctrlSetText _title;
-                    _statsTitleCtrl ctrlSetFade 0;
+                // Handle bars
+                if (_showBar) then {
+                    _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg, _passedArgs] call _barStatement);
 
-                    // Handle bars
-                    if (_showBar) then {
-                        _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg, _passedArgs] call _barStatement);
-
-                        _statsBackgroundCtrl ctrlSetFade 0;
-                        _statsBarCtrl ctrlSetFade 0;
-                    } else {
-                        _statsBackgroundCtrl ctrlSetFade 1;
-                        _statsBarCtrl ctrlSetFade 1;
-                    };
-
-                    // Handle text entries
-                    if (_showText) then {
-                        private _textStatementResult = [_configEntry, _itemCfg, _passedArgs] call _textStatement;
-
-                        if (_textStatementResult isEqualtype "") then {
-                            _statsTextCtrl ctrlSetText _textStatementResult;
-                        } else {
-                            _statsTextCtrl ctrlSetText (str _textStatementResult);
-                        };
-                        _statsTextCtrl ctrlSetTextColor ([[1,1,1,1], [0,0,0,1]] select (_showBar));
-
-                        _statsTextCtrl ctrlSetFade 0;
-                    } else {
-                        _statsTextCtrl ctrlSetFade 1;
-                    };
+                    _statsBackgroundCtrl ctrlSetFade 0;
+                    _statsBarCtrl ctrlSetFade 0;
                 } else {
-                    {
-                        _x ctrlSetFade 1;
-                    } foreach [
-                        _statsTitleCtrl,
-                        _statsBackgroundCtrl,
-                        _statsBarCtrl,
-                        _statsTextCtrl
-                    ];
+                    _statsBackgroundCtrl ctrlSetFade 1;
+                    _statsBarCtrl ctrlSetFade 1;
+                };
+
+                // Handle text entries
+                if (_showText) then {
+                    private _textStatementResult = [_configEntry, _itemCfg, _passedArgs] call _textStatement;
+
+                    if (_textStatementResult isEqualtype "") then {
+                        _statsTextCtrl ctrlSetText _textStatementResult;
+                    } else {
+                        _statsTextCtrl ctrlSetText (str _textStatementResult);
+                    };
+                    _statsTextCtrl ctrlSetTextColor ([[1,1,1,1], [0,0,0,1]] select (_showBar));
+
+                    _statsTextCtrl ctrlSetFade 0;
+                } else {
+                    _statsTextCtrl ctrlSetFade 1;
                 };
 
                 {
                     _x ctrlCommit 0;
-                } foreach [
+                } forEach [
                     _statsTitleCtrl,
                     _statsBackgroundCtrl,
                     _statsBarCtrl,
                     _statsTextCtrl
                 ];
-            } foreach _statsList;
+            } forEach (_statsList select {
+                _x params ["_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
+                _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
+
+                ([_configEntry, _itemCfg, _passedArgs] call _condition)
+            });
         };
 
         // Resize the window
@@ -221,7 +214,7 @@ if !(isNil "_itemCfg") then {
 
         {
             _x ctrlCommit 0;
-        } foreach [
+        } forEach [
             _statsPreviousPageCtrl,
             _statsNextPageCtrl,
             _statsCurrentPageCtrl
@@ -332,7 +325,7 @@ if !(isNil "_itemCfg") then {
     {
         _x ctrlSetFade 1;
         _x ctrlCommit 0;
-    } foreach [
+    } forEach [
         _statsPreviousPageCtrl,
         _statsNextPageCtrl,
         _statsCurrentPageCtrl
