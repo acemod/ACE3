@@ -543,5 +543,9 @@
             <English>Import current / default loadouts</English>
             <French>Importer l'équipement actuel ou la liste d'équipements de base</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
+            <English>Enable the faces / voices / insignias tabs</English>
+            <French>Activer les onglets faces / voix / insignes</French>
+        </Key>
     </Package>
 </Project>

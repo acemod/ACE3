@@ -22,11 +22,6 @@ _args params ["_display"];
 if (isNil QGVAR(center)) then {
     GVAR(center) = player;
 };
-if (!is3DEN && {GVAR(center) != player}) then {
-    GVAR(centerNotPlayer) = true;
-} else {
-    GVAR(centerNotPlayer) = false;
-};
 
 GVAR(mouseButtonState) = [[],[]];
 
@@ -272,6 +267,19 @@ if (is3DEN) then {
 
     _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
+} else {
+    GVAR(centerNotPlayer) = (GVAR(center) != player);
+
+    {
+        private _ctrl = _display displayCtrl _x;
+        _ctrl ctrlEnable GVAR(enableIdentityTabs);
+        _ctrl ctrlSetFade ([0.6, 0] select GVAR(enableIdentityTabs));
+        _ctrl ctrlcommit 0;
+    } foreach [
+        IDC_buttonFace,
+        IDC_buttonVoice,
+        IDC_buttonInsigna
+    ];
 };
 
 //--------------- Prepare the left panel
