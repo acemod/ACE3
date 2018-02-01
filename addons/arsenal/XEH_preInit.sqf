@@ -246,7 +246,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
                 format ["%1mm (%2in)",_barrelLength, (_barrelLength / 25.4) toFixed 1];
             }]]
         ];
-    } foreach [0, 1];
+    } forEach [0, 1];
 
     (GVAR(statsListRightPanel) select 4) pushBack [
         [["ammo"], localize LSTRING(statAmmo), [false, true], [], [{}, {
@@ -327,7 +327,7 @@ if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
 
     {
         _x ctrlShow (GVAR(showStats) && {_showStats});
-    } foreach [
+    } forEach [
         _statsCtrlGroupCtrl,
         _statsPreviousPageCtrl,
         _statsNextPageCtrl,
