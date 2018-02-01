@@ -347,6 +347,44 @@ if (["ACE_Overpressure"] call EFUNC(common,isModLoaded)) then {
     };
 };
 
+if (["ACE_Flashlights"] call EFUNC(common,isModLoaded)) then {
+    private _array =[
+        [["ACE_Flashlight_Colour"], localize LSTRING(statMapLightColor), [false, true], [], [{}, {
+            params ["_stat", "_config"];
+
+            getText (_config >> "itemInfo" >> "FlashLight" >> _stat select 0);
+        }, {
+            params ["_stat", "_config"];
+
+            getText (_config >> "itemInfo" >> "FlashLight" >> _stat select 0) != ""
+        }]]
+    ];
+
+    {
+        if (count ((GVAR(statsListRightPanel) select _x) select 0) <= 4) then {
+            (GVAR(statsListRightPanel) select _x) select 0 append _array;
+        } else {
+            (GVAR(statsListRightPanel) select _x) pushBack _array;
+        };
+    } forEach [1, 7];
+};
+
+if (["ACE_gforces"] call EFUNC(common,isModLoaded)) then {
+    private _array =[
+        [["ACE_GForceCoef"], localize LSTRING(statGReduction), [true, false], [[1, 0], [0.01, 1], false], [_fnc_otherBarStat, {}, {
+            params ["_stat", "_config"];
+
+            getNumber (_config >> _stat select 0) > 0
+        }]]
+    ];
+
+    if (count ((GVAR(statsListLeftPanel) select 3) select 0) <= 4) then {
+        (GVAR(statsListLeftPanel) select 3) select 0 append _array;
+    } else {
+        (GVAR(statsListLeftPanel) select 3) pushBack _array;
+    };
+};
+
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
 [QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;
 [QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;

@@ -592,5 +592,13 @@
         <Key ID="STR_ACE_Arsenal_statBackblastAngle">
             <English>Backblast angle</English>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statMapLightColor">
+            <English>Map light color</English>
+            <French>Couleur de la lampe sur carte</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statGReduction">
+            <English>G-force reduction</English>
+            <French>Reduction des Gs</French>
+        </Key>
     </Package>
 </Project>
