@@ -763,7 +763,7 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
                             class controls {
                                 class Label: RscText {
                                     idc = -1;
-                                    text = "Activation Side";
+                                    text = CSTRING(ModuleSuicideBomber_ActivationSide);
                                     x = 0;
                                     y = 0;
                                     w = W_PART(10);
@@ -809,7 +809,7 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
                         };
                         class DistanceLabel: RscText {
                             idc = -1;
-                            text = "Activation Radius";
+                            text = CSTRING(ModuleSuicideBomber_ActivationRadius);
                             x = 0;
                             y = H_PART(2.6);
                             w = W_PART(10);
@@ -835,7 +835,7 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
                         };
                         class ExplosionLabel: DistanceLabel {
                             idc = -1;
-                            text = "Explosion Size";
+                            text = CSTRING(ModuleSuicideBomber_ExplosionSize);
                             y = H_PART(3.7);
                         };
                         class Explosion: ctrlToolbox {
@@ -846,13 +846,13 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
                             h = H_PART(1);
                             rows = 1;
                             columns = 3;
-                            strings[] = {"Small", "Medium", "Large"};
+                            strings[] = {CSTRING(ModuleSuicideBomber_Small), CSTRING(ModuleSuicideBomber_Medium), CSTRING(ModuleSuicideBomber_Large)};
                         };
                         class AutoSeekLabel: DistanceLabel {
                             idc = -1;
-                            text = "Auto Seek";
+                            text = CSTRING(ModuleSuicideBomber_AutoSeek);
                             y = H_PART(4.8);
-                            toolTip = "Unit will actively try to find and move towards nearby units of the activation side.\nThe range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.";
+                            toolTip = CSTRING(ModuleSuicideBomber_AutoSeek_tooltip);
                         };
                         class AutoSeek: Explosion {
                             idc = 83575;
