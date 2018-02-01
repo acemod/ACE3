@@ -248,7 +248,7 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
         ];
     } forEach [0, 1];
 
-    (GVAR(statsListRightPanel) select 4) pushBack [
+    private _array = [
         [["ammo"], localize LSTRING(statAmmo), [false, true], [], [{}, {
             params ["_stat", "_config"];
 
@@ -281,17 +281,30 @@ if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
             };
         }]]
     ];
+
+    if (count ((GVAR(statsListRightPanel) select 4) select 0) <= 4) then {
+        (GVAR(statsListRightPanel) select 4) select 0 append _array;
+    } else {
+        (GVAR(statsListRightPanel) select 4) pushBack _array;
+    };
 };
 
 if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
-    (GVAR(statsListLeftPanel) select 6) pushBack [
+
+    private _array = [
         [["ACE_hearing_protection"], localize LSTRING(statHearingProtection), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]],
         [["ACE_hearing_lowerVolume"], localize LSTRING(statHearingLowerVolume), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]]
     ];
+
+    if (count ((GVAR(statsListLeftPanel) select 6) select 0) <= 3) then {
+        (GVAR(statsListLeftPanel) select 6) select 0 append _array;
+    } else {
+        (GVAR(statsListLeftPanel) select 6) pushBack _array;
+    };
 };
 
 if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
-    (GVAR(statsListRightPanel) select 7) pushBack [
+    private _array = [
         [["ace_explosives_Range"], localize LSTRING(statExploRange), [false, true], [], [{}, {
             params ["_stat", "_config"];
 
@@ -303,6 +316,12 @@ if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
             (getNumber (_config >> "ace_explosives_Detonator"))  > 0
         }]]
     ];
+
+    if (count ((GVAR(statsListRightPanel) select 7) select 0) <= 4) then {
+        (GVAR(statsListRightPanel) select 7) select 0 append _array;
+    } else {
+        (GVAR(statsListRightPanel) select 7) pushBack _array;
+    };
 };
 
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
