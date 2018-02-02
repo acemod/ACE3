@@ -718,16 +718,19 @@ class GVAR(RscSetEngineer): RscDisplayAttributes {
                             toolTip = ECSTRING(repair,AssignEngineerRole_role_Description);
                             x = 0;
                             y = H_PART(0.1);
-                            w = W_PART(8);
+                            w = W_PART(10);
                             h = H_PART(1);
                             colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class Combo: RscCombo {
+                        class Roles: ctrlToolbox {
                             idc = 86947;
-                            x = W_PART(8.3);
+                            x = W_PART(10.1);
                             y = H_PART(0.1);
-                            w = W_PART(10);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(repair,AssignEngineerRole_role_engineer), ECSTRING(repair,AssignEngineerRole_role_advanced)};
                         };
                     };
                 };

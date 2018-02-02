@@ -16,8 +16,6 @@
 
 #include "script_component.hpp"
 
-disableSerialization;
-
 params ["_control"];
 
 // Generic init
@@ -54,13 +52,6 @@ switch (false) do {
 };
 
 // Specific onLoad stuff
-private _combo = _display displayCtrl 86947;
-
-_combo lbAdd (localize ELSTRING(repair,AssignEngineerRole_role_engineer));
-_combo lbAdd (localize ELSTRING(repair,AssignEngineerRole_role_advanced));
-
-_combo lbSetCurSel 0;
-
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
