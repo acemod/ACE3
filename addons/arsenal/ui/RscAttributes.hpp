@@ -445,17 +445,15 @@ class GVAR(display) {
             sizeEx = QUOTE(5 * GRID_H);
             text = "";
         };
-        class statsButtonClose: ctrlButton {
+        class statsButtonClose: ctrlButtonPicture {
             idc = IDC_statsButtonClose;
-            style= 2;
-            text="X";
-            colorBackground[] = {0.5,0,0,1};
+            colorBackground[]={0,0,0,0};
+            text="\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa";
             onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton), [ctrlParent (_this select 0)]]) call CBA_fnc_localEvent);
-            x = QUOTE(0.5 - (WIDTH_TOTAL / 3.12));
-            y = QUOTE(safezoneY + 2.4 * GRID_H);
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP + 42 * GRID_W);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(5 * GRID_W);
-            h = QUOTE(4 * GRID_H);
-            sizeEx = QUOTE(4 * GRID_H)
+            h = QUOTE(5 * GRID_H);
         };
         class mouseBlock: RscText {
             idc = IDC_mouseBlock;
