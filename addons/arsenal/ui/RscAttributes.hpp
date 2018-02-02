@@ -420,12 +420,13 @@ class GVAR(display) {
             style= 2;
             text="<";
             colorBackground[]={0,0,0,0};
+            colorBackgroundDisabled[]= {0,0,0,0};
             onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, false)]]) call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(5 * GRID_H);
-            sizeEx = QUOTE(5 * GRID_H)
+            sizeEx = QUOTE(5.5 * GRID_H)
         };
         class statsNextPage: statsPreviousPage {
             idc =  IDC_statsNextPage;

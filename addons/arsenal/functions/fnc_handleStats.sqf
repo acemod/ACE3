@@ -188,26 +188,12 @@ if !(isNil "_itemCfg") then {
         GVAR(statsInfo) = [_isLeftPanel, _statsIndex, _control, _curSel, _itemCfg];
 
         // Toggle page buttons
-        if (_currentPage == 0) then {
-            _statsPreviousPageCtrl ctrlEnable false;
-            _statsPreviousPageCtrl ctrlSetFade 1;
-        } else {
-            _statsPreviousPageCtrl ctrlEnable true;
-            _statsPreviousPageCtrl ctrlSetFade 0;
-        };
-
-        if (_currentPage + 1 >= count _statsArray) then {
-            _statsNextPageCtrl ctrlEnable false;
-            _statsNextPageCtrl ctrlSetFade 1;
-        } else {
-            _statsNextPageCtrl ctrlEnable true;
-            _statsNextPageCtrl ctrlSetFade 0;
-        };
-
-        _statsCurrentPageCtrl ctrlSetFade 0;
+        _statsPreviousPageCtrl ctrlEnable !(_currentPage == 0);
+        _statsNextPageCtrl ctrlEnable !(_currentPage + 1 >= count _statsArray);
         _statsCurrentPageCtrl ctrlSetText ([localize LSTRING(page), str (_currentPage + 1)] joinString " ");
 
         {
+            _x ctrlSetFade 0;
             _x ctrlCommit 0;
         } forEach [
             _statsPreviousPageCtrl,
