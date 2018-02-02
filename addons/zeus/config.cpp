@@ -30,7 +30,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common", "ace_ai"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"SilentSpike"};
+        authors[] = {"SilentSpike", "mharis001"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -55,13 +55,17 @@ class CfgPatches {
             QGVAR(moduleLoadIntoCargo)
         };
     };
-    class GVAR(cargoAndRepair): ADDON {
+    class GVAR(repair): ADDON {
         units[] = {
-            QGVAR(moduleAddSpareTrack),
-            QGVAR(moduleAddSpareWheel),
             QGVAR(moduleSetEngineer),
             QGVAR(moduleSetRepairVehicle),
             QGVAR(moduleSetRepairFacility)
+        };
+    };
+    class GVAR(cargoAndRepair): ADDON {
+        units[] = {
+            QGVAR(moduleAddSpareTrack),
+            QGVAR(moduleAddSpareWheel)
         };
     };
     class GVAR(fastroping): ADDON {
@@ -80,6 +84,7 @@ class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
     GVAR(cargo) = "ace_cargo";
+    GVAR(repair) = "ace_repair";
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
     GVAR(fastroping) = "ace_fastroping";
     GVAR(pylons) = "ace_pylons";
