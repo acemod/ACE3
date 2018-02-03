@@ -65,7 +65,7 @@ if !(isNil "_itemCfg") then {
         _statsList = _statsList select [0, 5];
         if !(_statsList isEqualTo []) then {
             {
-                _x params ["_ID", "_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
+                _x params ["_ID", "_configEntry", "_title", "_bools", "_statements"];
                 _bools params ["_showBar", "_showText"];
                 _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
 
@@ -81,7 +81,7 @@ if !(isNil "_itemCfg") then {
 
                 // Handle bars
                 if (_showBar) then {
-                    _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg, _passedArgs] call _barStatement);
+                    _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg] call _barStatement);
 
                     _statsBackgroundCtrl ctrlSetFade 0;
                     _statsBarCtrl ctrlSetFade 0;
@@ -92,7 +92,7 @@ if !(isNil "_itemCfg") then {
 
                 // Handle text entries
                 if (_showText) then {
-                    private _textStatementResult = [_configEntry, _itemCfg, _passedArgs] call _textStatement;
+                    private _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
 
                     if (_textStatementResult isEqualtype "") then {
                         _statsTextCtrl ctrlSetText _textStatementResult;
@@ -115,10 +115,10 @@ if !(isNil "_itemCfg") then {
                     _statsTextCtrl
                 ];
             } forEach (_statsList select {
-                _x params ["_ID","_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
+                _x params ["_ID","_configEntry", "_title", "_bools", "_statements"];
                 _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
 
-                ([_configEntry, _itemCfg, _passedArgs] call _condition)
+                ([_configEntry, _itemCfg] call _condition)
             });
         };
 

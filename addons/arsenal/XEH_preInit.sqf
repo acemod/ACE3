@@ -7,79 +7,11 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-private _fnc_mass = {
-    params ["", "_config"];
-
-    private _mass = getNumber (_config >> "mass");
-
-    if (_mass == 0 && {isClass (_config >> "WeaponSlotsInfo")}) then {
-        _mass = getNumber (_config >> "WeaponSlotsInfo" >> "mass");
-    };
-
-    if (_mass == 0 && {isClass (_config >> "itemInfo")}) then {
-        _mass = getNumber (_config >> "itemInfo" >> "mass");
-    };
-
-    format ["%1kg (%2lb)",((_mass * 0.1 * (1/2.2046) * 100) / 100) ToFixed 2, ((_mass * 0.1 * 100) / 100) ToFixed 2];
-};
-
-private _fnc_hit = {
-    params ["_stats", "_config", "_args"];
-    _args params ["_hitMinMax", "_initSpeedMinMax", "_launcherTabIDC"];
-
-    private _statValues = [
-        [_config],
-        [_stats select 0, _stats select 1],
-        [true, false],
-        [_hitMinMax select 0, _initSpeedMinMax select 0]
-    ] call BIS_fnc_configExtremes;
-    (_statValues select 1) params ["_hit", "_initSpeed"];
-
-    _hit = linearConversion [_hitMinMax select 0, _hitMinMax select 1, _hit, 0.01, 1];
-    _initSpeed = linearConversion [_initSpeedMinMax select 0, _initSpeedMinMax select 1, _initSpeed, 0.01, 1];
-
-    [sqrt(_hit^2 * _initSpeed), _hit] select (GVAR(currentLeftPanel) == _launcherTabIDC)
-};
-
-private _fnc_otherBarStat = {
-    params ["_stat", "_config", "_args"];
-    _args params ["_statMinMax", "_barLimits", "_configExtremeBool"];
-
-    private _statValues = [
-        [_config],
-        [_stat select 0],
-        [_configExtremeBool],
-        [_statMinMax select 0]
-    ] call BIS_fnc_configExtremes;
-
-    linearConversion [_statMinMax select 0, _statMinMax select 1, (_statValues select 1) select 0, _barLimits select 0, _barLimits select 1]
-};
-
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 /*
 {
     (GVAR(statsListLeftPanel) select _x) select 0 append [
-        [["reloadTime"], localize "str_a3_rscdisplayarsenal_stat_rof", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
-            params ["_stat", "_config"];
-
-            private _reloadTime = getNumber (_config >> _stat select 0);
-
-            format ["%1 rpm", round (60 / _reloadTime)]
-        }]],
-        [["dispersion"], localize "str_a3_rscdisplayarsenal_stat_dispersion", [true, true], [[-4, -1.7], [1, 0.01], true], [_fnc_otherBarStat, {
-            params ["_stat", "_config"];
-
-            private _dispersion = getNumber (_config >> _stat select 0);
-
-            format ["%1 MIL (%2 MOA)", _dispersion * 1000, (_dispersion / pi * 10800) ToFixed 1];
-        }]]
-    ];
-} foreach [0, 1];
-
-{
-    (GVAR(statsListLeftPanel) select _x) select 0 append [
-        [["maxZeroing"], localize "str_a3_rscdisplayarsenal_stat_range", [true, false], [[0, 2500], [0.01, 1], false], [_fnc_otherBarStat, {}]],
         [["hit", "initSpeed"], localize "str_a3_rscdisplayarsenal_stat_impact", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]]
     ];
 } foreach [0, 1, 2];
@@ -96,25 +28,6 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
         [["maximumLoad"], localize "str_a3_rscdisplayarsenal_stat_load", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]]
     ];
 } foreach [3, 4, 5];
-
-{
-    (GVAR(statsListLeftPanel) select _x) select 0 append [
-        [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
-    ];
-} foreach [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-
-{
-    (GVAR(statsListRightPanel) select _x) select 0 append [
-        [["mass"], localize "str_a3_rscdisplayarsenal_stat_weight", [false, true], [], [{}, _fnc_mass]]
-    ];
-} foreach [0, 1, 2, 3, 4, 5, 6, 7];
-
-(GVAR(statsListRightPanel) select 7) select 0 append [
-    [[], localize LSTRING(statPotassium), [true, false], [], [{1}, {}, {
-        params ["", "_config"];
-        ((configName _config) == "ACE_Banana")
-    }]]
-];
 
 if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
     {

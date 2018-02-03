@@ -28,6 +28,25 @@ private _fnc_addToTabs = {
     } foreach _tabsToAddTo;
 };
 
+private _fnc_sortLists = {
+    params ["_tabsList"];
+
+    {
+        private _page = _x;
+        {
+            {
+                reverse _x;
+            } foreach _x;
+
+            _x sort false;
+
+            {
+                reverse _x;
+            } foreach _x;
+        } foreach _page;
+    } foreach _tabsList;
+};
+
 private _statsListLeftPanel = uiNamespace getVariable [QGVAR(statsListLeftPanel), [
     [[]], // Primary 0
     [[]], // Handgun 1
@@ -68,26 +87,27 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
     private _displayName = getText (_x >> "displayName");
     private _showBar = getNumber (_x >> "showBar") == 1;
     private _showText = getNumber (_x >> "showText") == 1;
-    private _arguments = getArray (_x >> "arguments");
-    private _condition = (getText (_x >> "condition"));
+    private _condition = getText (_x >> "condition");
+    private _priority = getNumber (_x >> "priority");
     (getArray (_x >> "tabs")) params ["_leftTabsList", "_rightTabsList"];
 
     if (_condition != "") then {
         _condition = compile _condition;
     };
 
-    _finalArray = ["", _stats, _displayName, [_showBar, _showText], _arguments, [{}, {}, _condition]];
-    TRACE_3("stats array", _finalArray, _leftTabsList, _rightTabsList);
+    _finalArray = ["", _stats, _displayName, [_showBar, _showText], [{}, {}, _condition], _priority];
 
     if (_showBar) then {
         private _barStatement = compile (getText (_x >> "barStatement"));
-        (_finalArray select 5) set [0, _barStatement];
+        (_finalArray select 4) set [0, _barStatement];
     };
 
     if (_showText) then {
         private _textStatement = compile (getText (_x >> "textStatement"));
-        (_finalArray select 5) set [1, _textStatement];
+        (_finalArray select 4) set [1, _textStatement];
     };
+
+    TRACE_3("stats array", _finalArray, _leftTabsList, _rightTabsList);
 
     if (count _leftTabsList > 0) then {
         [_statsListLeftPanel, _leftTabsList] call _fnc_addToTabs;
@@ -97,6 +117,9 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
         [_statsListRightPanel, _rightTabsList] call _fnc_addToTabs;
     };
 } foreach _configEntries;
+
+[_statsListLeftPanel] call _fnc_sortLists;
+[_statsListRightPanel] call _fnc_sortLists;
 
 //------------------------- Config Handling
 
