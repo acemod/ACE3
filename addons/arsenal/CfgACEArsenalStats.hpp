@@ -16,7 +16,7 @@ class CfgACEArsenalStats {
         displayName= CSTRING(statPotassium);
         showBar= 1;
         barStatement = "1";
-        condition = "((configName (_this select 1)) == 'ACE_Banana')";
+        condition = QUOTE((configName (_this select 1)) == 'ACE_Banana');
         tabs[]= {{}, {7}};
     };
     class mass: statBase {

@@ -45,3 +45,16 @@ class CfgMineTriggers {
         mineTriggerRange = 1;
     };
 };
+
+class CfgACEArsenalStats {
+    class statBase;
+    class explosiveRange: statBase {
+        scope = 2;
+        stats[]= {"ace_explosives_Range"};
+        displayName= CSTRING(statExploRange);
+        showText= 1;
+        textStatement = QUOTE(params [ARR_2('_stat', '_config')];private _exploRangeStat = getNumber (_config >> _stat select 0);format [ARR_3('%1m (%2ft)', _exploRangeStat, (_exploRangeStat / 0.3048) toFixed 1)]);
+        condition = QUOTE(params [ARR_2('', '_config')];(getNumber (_config >> 'ace_explosives_Detonator'))  > 0);
+        tabs[]= {{}, {7}};
+    };
+};
