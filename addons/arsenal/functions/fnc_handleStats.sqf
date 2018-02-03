@@ -52,9 +52,9 @@ if !(isNil "_itemCfg") then {
 
         // Get the proper list and page
         if (_leftPanel) then {
-            [true, GVAR(statsListLeftPanel) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
+            [true, (uiNamespace getVariable QGVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
         } else {
-            [false, GVAR(statsListRightPanel) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
+            [false, (uiNamespace getVariable QGVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
         } params ["_isLeftPanel", "_statsArray", "_currentPage"];
 
         private _statsList = _statsArray select _currentPage;
@@ -65,7 +65,7 @@ if !(isNil "_itemCfg") then {
         _statsList = _statsList select [0, 5];
         if !(_statsList isEqualTo []) then {
             {
-                _x params ["_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
+                _x params ["_ID", "_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
                 _bools params ["_showBar", "_showText"];
                 _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
 
@@ -115,7 +115,7 @@ if !(isNil "_itemCfg") then {
                     _statsTextCtrl
                 ];
             } forEach (_statsList select {
-                _x params ["_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
+                _x params ["_ID","_configEntry", "_title", "_bools", "_passedArgs", "_statements"];
                 _statements params [["_barStatement", {}, [{}]], ["_textStatement", {}, [{}]], ["_condition", {true}, [{}]]];
 
                 ([_configEntry, _itemCfg, _passedArgs] call _condition)

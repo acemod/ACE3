@@ -57,37 +57,7 @@ private _fnc_otherBarStat = {
 
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
-GVAR(statsListLeftPanel) =  [
-    [[]], // Primary 0
-    [[]], // Handgun 1
-    [[]], // Launcher 2
-    [[]], // Uniform 3
-    [[]], // Vests 4
-    [[]], // Backpacks 5
-    [[]], // Headgear 6
-    [[]], // Goggles 7
-    [[]], // NVGs 8
-    [[]], // Binoculars 9
-    [[]], // Map 10
-    [[]], // GPS 11
-    [[]], // Radio 12
-    [[]], // Compass 13
-    [[]], // Watch 14
-    [], // Voices 15
-    [], // Faces 16
-    [] // Insignias 17
-];
-GVAR(statsListRightPanel) = [
-    [[]], // Optics 0
-    [[]], // Side accs 1
-    [[]], // Muzzle 2
-    [[]], // Bipod 3
-    [[]], // Mag 4
-    [[]], // Throw 5
-    [[]], // Put 6
-    [[]] // Misc 7
-];
-
+/*
 {
     (GVAR(statsListLeftPanel) select _x) select 0 append [
         [["reloadTime"], localize "str_a3_rscdisplayarsenal_stat_rof", [true, true], [[-1.4, 0.31], [1, 0.01], true], [_fnc_otherBarStat, {
@@ -302,6 +272,8 @@ if (["ACE_gforces"] call EFUNC(common,isModLoaded)) then {
         (GVAR(statsListLeftPanel) select 3) pushBack _array;
     };
 };
+
+*/
 
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
 [QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;

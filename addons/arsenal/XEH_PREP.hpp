@@ -13,6 +13,7 @@ PREP(buttonLoadoutsShare);
 PREP(buttonStats);
 PREP(buttonStatsPage);
 PREP(clearSearchbar);
+PREP(compileStats);
 PREP(fillLeftPanel);
 PREP(fillLoadoutsList);
 PREP(fillRightPanel);
