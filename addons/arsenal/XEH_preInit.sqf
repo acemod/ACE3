@@ -10,50 +10,6 @@ PREP_RECOMPILE_END;
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 /*
-if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
-    private _array = [
-        [["ace_explosives_Range"], localize LSTRING(statExploRange), [false, true], [], [{}, {
-            params ["_stat", "_config"];
-
-            private _exploRangeStat = getNumber (_config >> _stat select 0);
-            format ["%1m (%2ft)", _exploRangeStat, (_exploRangeStat / 0.3048) toFixed 1];
-        }, {
-            params ["", "_config"];
-
-            (getNumber (_config >> "ace_explosives_Detonator"))  > 0
-        }]]
-    ];
-
-    if (count ((GVAR(statsListRightPanel) select 7) select 0) <= 4) then {
-        (GVAR(statsListRightPanel) select 7) select 0 append _array;
-    } else {
-        (GVAR(statsListRightPanel) select 7) pushBack _array;
-    };
-};
-
-if (["ACE_Overpressure"] call EFUNC(common,isModLoaded)) then {
-    private _array =[
-        [["ace_overpressure_angle"], localize LSTRING(statBackblastAngle), [false, true], [], [{}, {
-            params ["_stat", "_config"];
-
-            private _blastAngleStat = getNumber (_config >> _stat select 0);
-            format ["%1°", _blastAngleStat];
-        }]],
-        [["ace_overpressure_range"], localize LSTRING(statBackblastRange), [false, true], [], [{}, {
-            params ["_stat", "_config"];
-
-            private _blastRangeStat = getNumber (_config >> _stat select 0);
-            format ["%1m (%2ft)", _blastRangeStat, (_blastRangeStat / 0.3048) toFixed 1];
-        }]]
-    ];
-
-    if (count ((GVAR(statsListLeftPanel) select 2) select 0) <= 3) then {
-        (GVAR(statsListLeftPanel) select 2) select 0 append _array;
-    } else {
-        (GVAR(statsListLeftPanel) select 2) pushBack _array;
-    };
-};
-
 if (["ACE_Flashlights"] call EFUNC(common,isModLoaded)) then {
     private _array =[
         [["ACE_Flashlight_Colour"], localize LSTRING(statMapLightColor), [false, true], [], [{}, {

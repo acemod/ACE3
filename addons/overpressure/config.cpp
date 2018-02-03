@@ -17,3 +17,4 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgACEArsenalStats.hpp"
