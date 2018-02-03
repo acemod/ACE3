@@ -547,25 +547,6 @@
             <English>Potassium levels</English>
             <French>Taux de potassium</French>
         </Key>
-        <Key ID="STR_ACE_Arsenal_statBarrelTwist">
-            <English>Barrel twist</English>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_statBarrelLength">
-            <English>Barrel length</English>
-            <French>Longueur du canon</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_statAmmo">
-            <English>Ammo</English>
-            <French>Munition</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_statBallisticCoef">
-            <English>Ballistic coefficient</English>
-            <French>Coefficient ballistique</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_statBulletMass">
-            <English>Bullet mass</English>
-            <French>Masse d'une balle</French>
-        </Key>
         <Key ID="STR_ACE_Arsenal_statHearingProtection">
             <English>Hearing protection</English>
             <French>Protection auditive</French>

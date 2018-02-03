@@ -10,67 +10,6 @@ PREP_RECOMPILE_END;
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 /*
-if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
-    {
-        (GVAR(statsListLeftPanel) select _x) pushBack [
-            [["ACE_barrelTwist"], localize LSTRING(statBarrelTwist), [false, true], [], [{}, {
-                params ["_stat", "_config"];
-
-                private _barrelTwist = getNumber (_config >> _stat select 0);
-
-                format ["%1mm (%2in)",_barrelTwist, (_barrelTwist / 25.4) toFixed 1];
-            }]],
-            [["ACE_barrelLength"], localize LSTRING(statBarrelLength), [false, true], [], [{}, {
-                params ["_stat", "_config"];
-
-                private _barrelLength = getNumber (_config >> _stat select 0);
-
-                format ["%1mm (%2in)",_barrelLength, (_barrelLength / 25.4) toFixed 1];
-            }]]
-        ];
-    } forEach [0, 1];
-
-    private _array = [
-        [["ammo"], localize LSTRING(statAmmo), [false, true], [], [{}, {
-            params ["_stat", "_config"];
-
-            getText (_config >> _stat select 0)
-        }]],
-        [["ACE_dragModel", "ACE_ballisticCoefficients"], localize LSTRING(statBallisticCoef), [false, true], [], [{}, {
-            params ["_stat", "_config", ""];
-
-            private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo"))); 
-            private _dragModel = (_ammoCfg >> _stat select 0);
-            private _ballisticCoef = (_ammoCfg >> _stat select 1);
-
-            if (isNumber _dragModel && {isArray _ballisticCoef}) then {
-                format ["%1 G%2", (getArray _ballisticCoef) select 0 ,getNumber _dragModel]
-            } else {
-                localize LSTRING(statUndefined);
-            };
-        }]],
-        [["ACE_bulletMass"], localize LSTRING(statBulletMass), [false, true], [], [{}, {
-            params ["_stat", "_config"];
-
-            private _ammoWeightCfg = (configFile >> "CfgAmmo" >> (getText (_config >> "ammo")) >> _stat select 0);
-
-            if (isNumber _ammoWeightCfg) then {
-
-                private _ammoWeight = getNumber _ammoWeightCfg;
-                format ["%1g (%2gr)", _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1]
-            } else {
-                localize LSTRING(statUndefined);
-            };
-        }]]
-    ];
-
-    if (count ((GVAR(statsListRightPanel) select 4) select 0) <= 4) then {
-        (GVAR(statsListRightPanel) select 4) select 0 append _array;
-    } else {
-        (GVAR(statsListRightPanel) select 4) pushBack _array;
-    };
-};
-
 if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
 
     private _array = [
@@ -200,7 +139,6 @@ if (["ACE_gforces"] call EFUNC(common,isModLoaded)) then {
 
     _statsButtonCtrl ctrlShow (!GVAR(showStats) && {_showStats})
 }] call CBA_fnc_addEventHandler;
-
 
 [QGVAR(statsButton), {
     _this call FUNC(buttonStats);

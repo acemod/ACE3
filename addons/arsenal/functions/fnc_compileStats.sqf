@@ -18,11 +18,16 @@ private _fnc_addToTabs = {
         private _currentTab = _tabsList select _x;
         private _availablePagesCount = {count _x < 5} count _currentTab;
 
+        _finalArray set [0, (_class +  str _x)];
+
         if (_availablePagesCount > 0) then {
-            _finalArray set [0,(_class +  str _x)];
-            (_currentTab select 0) append [_finalArray];
+
+            {
+                if (count _x < 5 ) exitWith {
+                    (_currentTab select _forEachIndex) append [_finalArray];
+                };
+            } foreach _currentTab;
         } else {
-            _finalArray set [0, str (_class + _x)];
             _currentTab pushBack [_finalArray];
         };
     } foreach _tabsToAddTo;

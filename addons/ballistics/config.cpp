@@ -18,3 +18,4 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgACEArsenalStats.hpp"
