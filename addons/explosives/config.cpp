@@ -50,6 +50,7 @@ class CfgACEArsenalStats {
     class statBase;
     class explosiveRange: statBase {
         scope = 2;
+        priority = 1;
         stats[]= {"ace_explosives_Range"};
         displayName= CSTRING(statExploRange);
         showText= 1;

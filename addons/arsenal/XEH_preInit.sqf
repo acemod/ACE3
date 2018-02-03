@@ -10,28 +10,6 @@ PREP_RECOMPILE_END;
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 /*
-if (["ACE_Flashlights"] call EFUNC(common,isModLoaded)) then {
-    private _array =[
-        [["ACE_Flashlight_Colour"], localize LSTRING(statMapLightColor), [false, true], [], [{}, {
-            params ["_stat", "_config"];
-
-            getText (_config >> "itemInfo" >> "FlashLight" >> _stat select 0);
-        }, {
-            params ["_stat", "_config"];
-
-            getText (_config >> "itemInfo" >> "FlashLight" >> _stat select 0) != ""
-        }]]
-    ];
-
-    {
-        if (count ((GVAR(statsListRightPanel) select _x) select 0) <= 4) then {
-            (GVAR(statsListRightPanel) select _x) select 0 append _array;
-        } else {
-            (GVAR(statsListRightPanel) select _x) pushBack _array;
-        };
-    } forEach [1, 7];
-};
-
 if (["ACE_gforces"] call EFUNC(common,isModLoaded)) then {
     private _array =[
         [["ACE_GForceCoef"], localize LSTRING(statGReduction), [true, false], [[1, 0], [0.01, 1], false], [_fnc_otherBarStat, {}, {
