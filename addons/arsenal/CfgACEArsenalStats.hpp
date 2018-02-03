@@ -64,12 +64,42 @@ class CfgACEArsenalStats {
     };
     class impact: statBase {
         scope = 2;
-        priority = 3;
+        priority = 2;
         stats[]= {"hit", "initSpeed"};
         displayName= "$STR_a3_rscdisplayarsenal_stat_impact";
         showBar= 1;
         showText= 0;
         barStatement = QUOTE([ARR_3(_this select 0, _this select 1, [ARR_3([ARR_2(0, 3.2)], [ARR_2(-1, 1100)], 2006)])] call FUNC(statBarStatement_impact));
         tabs[]= {{0,1,2}, {}};
+    };
+    class ballisticProtection: statBase {
+        scope = 2;
+        priority = 5;
+        stats[]= {"passthrough"};
+        displayName= "$STR_a3_rscdisplayarsenal_stat_passthrough";
+        showBar= 1;
+        showText= 0;
+        barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(0, 0.63)], [ARR_2(0.01, 1)], false)])] call FUNC(statBarStatement_default));
+        tabs[]= {{3,4,6}, {}};
+    };
+    class explosiveResistance: statBase {
+        scope = 2;
+        priority = 4;
+        stats[]= {"armor"};
+        displayName= "$STR_a3_rscdisplayarsenal_stat_armor";
+        showBar= 1;
+        showText= 0;
+        barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(0, 0.80)], [ARR_2(0.01, 1)], false)])] call FUNC(statBarStatement_default));
+        tabs[]= {{3,4,6}, {}};
+    };
+    class load: statBase {
+        scope = 2;
+        priority = 3;
+        stats[]= {"maximumLoad"};
+        displayName= "$STR_a3_rscdisplayarsenal_stat_load";
+        showBar= 1;
+        showText= 0;
+        barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(0, 500)], [ARR_2(0.01, 1)], false)])] call FUNC(statBarStatement_default));
+        tabs[]= {{3,4,5}, {}};
     };
 };
