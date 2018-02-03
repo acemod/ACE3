@@ -1,3 +1,19 @@
+/*
+ * Author: Alganthe
+ * Accuracy text statement.
+ *
+ * Arguments:
+ * 0: stat (STRING)
+ * 1: item config path (CONFIG)
+ * 2: Args for configExtreme
+ *  2.1: Stat limits (ARRAY of BOOL)
+ *  2.2: Evaluate as a logarithmic number (BOOL)
+ *
+ * Return Value:
+ * Number
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
 params ["_stat", "_config", "_args"];

@@ -1,6 +1,6 @@
 /*
  * Author: Alganthe
- * Text statement for the mass stat
+ * Text statement for the mass stat.
  *
  * Arguments:
  * 0: not used

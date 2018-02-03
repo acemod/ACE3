@@ -3,7 +3,7 @@
  * Generic bar statement for stats.
  *
  * Arguments:
- * 0: stats array (STRING)
+ * 0: stat (STRING)
  * 1: item config path (CONFIG)
  * 2: Args for configExtreme
  *  2.1: Stat limits (ARRAY of BOOL)
@@ -13,7 +13,7 @@
  * Return Value:
  * Number
  *
- * Public: No
+ * Public: Yes
 */
 #include "script_component.hpp"
 
