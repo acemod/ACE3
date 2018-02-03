@@ -59,17 +59,6 @@ private _statsListLeftPanel = uiNamespace getVariable QGVAR(statsListLeftPanel);
 private _statsListRightPanel = uiNamespace getVariable QGVAR(statsListRightPanel);
 private _returnArray = [[], []];
 
-private _fnc_classExist = {
-    {
-        {
-            private _string = _x select 0;
-
-            (_string select [0, (count _string) - 3]) == _class
-        } count _x > 0
-    } count _currentTab > 0
-};
-
-
 private _fnc_addToTabs = {
     params ["_tabsList", "_tabsToAddTo", "_sideString", "_returnIndex"];
     {
@@ -79,9 +68,9 @@ private _fnc_addToTabs = {
         private _finalID = [_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "";
         TRACE_1("final string ID", _finalID);
 
-        if (call _fnc_classExist) then {
+        if ({{_x select 0  == _finalID} count _x > 0} count _currentTab > 0) then {
 
-            TRACE_1("A stat with this ID already exists: %1", _finalID);
+            TRACE_1("A stat with this ID already exists", _finalID);
         } else {
 
             private _arrayToSave = +_finalArray;
