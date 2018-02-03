@@ -13,22 +13,23 @@
 #include "script_component.hpp"
 
 private _fnc_addToTabs = {
-    params ["_tabsList", "_tabsToAddTo"];
+    params ["_tabsList", "_tabsToAddTo", "_sideString"];
     {
         private _currentTab = _tabsList select _x;
         private _availablePagesCount = {count _x < 5} count _currentTab;
 
-        _finalArray set [0, (_class +  str _x)];
+        private _arrayToSave = +_finalArray;
+        _arrayToSave set [0, ([_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "")];
 
         if (_availablePagesCount > 0) then {
 
             {
-                if (count _x < 5 ) exitWith {
-                    (_currentTab select _forEachIndex) append [_finalArray];
+                if (count _x < 5) exitWith {
+                    (_currentTab select _forEachIndex) append [_arrayToSave];
                 };
             } foreach _currentTab;
         } else {
-            _currentTab pushBack [_finalArray];
+            _currentTab pushBack [_arrayToSave];
         };
     } foreach _tabsToAddTo;
 };
@@ -115,11 +116,11 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
     TRACE_3("stats array", _finalArray, _leftTabsList, _rightTabsList);
 
     if (count _leftTabsList > 0) then {
-        [_statsListLeftPanel, _leftTabsList] call _fnc_addToTabs;
+        [_statsListLeftPanel, _leftTabsList, "L"] call _fnc_addToTabs;
     };
 
     if (count _rightTabsList > 0) then {
-        [_statsListRightPanel, _rightTabsList] call _fnc_addToTabs;
+        [_statsListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
 } foreach _configEntries;
 

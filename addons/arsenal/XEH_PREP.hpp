@@ -1,4 +1,5 @@
 PREP(addListBoxItem);
+PREP(addStat);
 PREP(addVirtualItems);
 PREP(buttonCargo);
 PREP(buttonClearAll);
@@ -41,6 +42,7 @@ PREP(open3DEN);
 PREP(openBox);
 PREP(portVALoadouts);
 PREP(removeBox);
+PREP(removeStat);
 PREP(removeVirtualItems);
 PREP(scanConfig);
 PREP(showItem);
