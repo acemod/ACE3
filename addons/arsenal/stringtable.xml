@@ -547,18 +547,6 @@
             <English>Potassium levels</English>
             <French>Taux de potassium</French>
         </Key>
-        <Key ID="STR_ACE_Arsenal_statHearingProtection">
-            <English>Hearing protection</English>
-            <French>Protection auditive</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_statHearingLowerVolume">
-            <English>Volume muffling</English>
-            <French>Étouffement des sons</French>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_statUndefined">
-            <English>Undefined value</English>
-            <French>Valeure non définie</French>
-        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <French>Page</French>

@@ -23,7 +23,7 @@ class CfgACEArsenalStats {
     };
     class mass: statBase {
         scope = 2;
-        priority = 1;
+        priority = 0;
         displayName= "$STR_a3_rscdisplayarsenal_stat_weight";
         showBar= 0;
         showText= 1;

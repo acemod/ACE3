@@ -10,20 +10,6 @@ PREP_RECOMPILE_END;
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 /*
-if (["ACE_Hearing"] call EFUNC(common,isModLoaded)) then {
-
-    private _array = [
-        [["ACE_hearing_protection"], localize LSTRING(statHearingProtection), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-        [["ACE_hearing_lowerVolume"], localize LSTRING(statHearingLowerVolume), [true, false], [[0, 1], [0.01, 1], false], [_fnc_otherBarStat, {}]]
-    ];
-
-    if (count ((GVAR(statsListLeftPanel) select 6) select 0) <= 3) then {
-        (GVAR(statsListLeftPanel) select 6) select 0 append _array;
-    } else {
-        (GVAR(statsListLeftPanel) select 6) pushBack _array;
-    };
-};
-
 if (["ACE_Explosives"] call EFUNC(common,isModLoaded)) then {
     private _array = [
         [["ace_explosives_Range"], localize LSTRING(statExploRange), [false, true], [], [{}, {
