@@ -10,25 +10,6 @@ PREP_RECOMPILE_END;
 // Arsenal
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 /*
-{
-    (GVAR(statsListLeftPanel) select _x) select 0 append [
-        [["hit", "initSpeed"], localize "str_a3_rscdisplayarsenal_stat_impact", [true, false], [[0, 3.2], [-1, 1100], 2006], [_fnc_hit, {}]]
-    ];
-} foreach [0, 1, 2];
-
-{
-    (GVAR(statsListLeftPanel) select _x) select 0 append [
-        [["passthrough"], localize "str_a3_rscdisplayarsenal_stat_passthrough", [true, false], [[0, 0.63], [0.01, 1], false], [_fnc_otherBarStat, {}]],
-        [["armor"], localize "str_a3_rscdisplayarsenal_stat_armor", [true, false], [[0, 0.80], [0.01, 1], false], [_fnc_otherBarStat, {}]]
-    ];
-} foreach [3, 4, 6];
-
-{
-    (GVAR(statsListLeftPanel) select _x) select 0 append [
-        [["maximumLoad"], localize "str_a3_rscdisplayarsenal_stat_load", [true, false], [[0, 500], [0.01, 1], false], [_fnc_otherBarStat, {}]]
-    ];
-} foreach [3, 4, 5];
-
 if (["ACE_Ballistics"] call EFUNC(common,isModLoaded)) then {
     {
         (GVAR(statsListLeftPanel) select _x) pushBack [
@@ -185,7 +166,6 @@ if (["ACE_gforces"] call EFUNC(common,isModLoaded)) then {
         (GVAR(statsListLeftPanel) select 3) pushBack _array;
     };
 };
-
 */
 
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
