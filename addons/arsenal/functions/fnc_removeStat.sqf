@@ -27,7 +27,6 @@ private _statsListRightPanel = uiNamespace getVariable QGVAR(statsListRightPanel
     private _tab = _currentID select [_stringCount - 2, 2];
     _tab = parseNumber _tab;
 
-    TRACE_3("side", _side, _side == "R", _tab);
     private _tabToChange = if (_side == "R") then {
          _statsListRightPanel select _tab
     } else {
@@ -36,21 +35,17 @@ private _statsListRightPanel = uiNamespace getVariable QGVAR(statsListRightPanel
 
     {
         private _currentPage = _x;
-        LOG(str _forEachIndex);
 
         {
-            TRACE_2("strings",_x select 0, _currentID);
             if (_x select 0 == _currentID) then {
-                LOG("deleted");
                 _currentPage deleteAt _forEachIndex;
             };
         } foreach _currentPage;
     } foreach _tabToChange;
 } foreach _IDList;
 
-
-// Clear empty stats arrays
-private _fnc_deleteEmpty = {
+// Clear empty pages
+private _fnc_deleteEmptyPage = {
     {
         private _evaluatedTab = _forEachIndex;
         {
@@ -67,5 +62,5 @@ private _fnc_deleteEmpty = {
 
 private _markedForDeletion = [];
 
-[_statsListLeftPanel] call _fnc_deleteEmpty;
-[_statsListRightPanel] call _fnc_deleteEmpty;
+[_statsListLeftPanel] call _fnc_deleteEmptyPage;
+[_statsListRightPanel] call _fnc_deleteEmptyPage;
