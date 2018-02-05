@@ -7,6 +7,8 @@
             <Chinese>切換單位</Chinese>
             <Chinesesimp>切换单位</Chinesesimp>
             <Japanese>ユニット切り替え</Japanese>
+            <Korean>병력 전환</Korean>
+            <German>Einheitenwechsel</German>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
@@ -232,20 +234,20 @@
             <Chinese>安全區半徑</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
-            <English>The safe zone around players from a different team. Default: 200</English>
-            <Polish>Promień bezpiecznej strefy wokół graczy z innych drużyn. Domyślnie: 200</Polish>
-            <Spanish>La zona segura alrededor de los jugadores de distintos equipos. Por defecto: 200</Spanish>
-            <German>Die Sicherheitszone um Spieler von einem anderen Team. Standard: 200</German>
-            <Czech>Bezpečná zóna kolem hráče z jiných týmu. Výchozí: 200</Czech>
-            <Portuguese>A zona segura ao redor dos jogadores de diferentes equipes. Padrão: 200</Portuguese>
-            <French>Rayon de la zone sécurisée autour de joueurs d'équipe différentes. Défaut: 200</French>
-            <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 200</Hungarian>
-            <Russian>Радиус безопасной зоны вокруг ироков из противоположной команды. По-умолчанию: 200</Russian>
-            <Italian>La zona sicura attorno ai giocatori di un team diverso. Default: 200</Italian>
-            <Japanese>別のチームへのプレイヤーの周囲にある安全地帯の範囲。標準: 200</Japanese>
-            <Korean>다른 진영으로 부터의 플레이어 안전 지대. 기본설정: 200</Korean>
-            <Chinesesimp>安全区的范围。预设值：200</Chinesesimp>
-            <Chinese>安全區的範圍。預設值：200</Chinese>
+            <English>The safe zone around players from a different team. Default: 100</English>
+            <Polish>Promień bezpiecznej strefy wokół graczy z innych drużyn. Domyślnie: 100</Polish>
+            <Spanish>La zona segura alrededor de los jugadores de distintos equipos. Por defecto: 100</Spanish>
+            <German>Die Sicherheitszone um Spieler von einem anderen Team. Standard: 100</German>
+            <Czech>Bezpečná zóna kolem hráče z jiných týmu. Výchozí: 100</Czech>
+            <Portuguese>A zona segura ao redor dos jogadores de diferentes equipes. Padrão: 100</Portuguese>
+            <French>Rayon de la zone sécurisée autour de joueurs d'équipe différentes. Défaut: 100</French>
+            <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 100</Hungarian>
+            <Russian>Радиус безопасной зоны вокруг ироков из противоположной команды. По-умолчанию: 100</Russian>
+            <Italian>La zona sicura attorno ai giocatori di un team diverso. Default: 100</Italian>
+            <Japanese>別のチームへのプレイヤーの周囲にある安全地帯の範囲。標準: 100</Japanese>
+            <Korean>다른 진영으로 부터의 플레이어 안전 지대. 기본설정: 100</Korean>
+            <Chinesesimp>安全区的范围。预设值：100</Chinesesimp>
+            <Chinese>安全區的範圍。預設值：100</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English>Module allows you to switch side during the game.</English>

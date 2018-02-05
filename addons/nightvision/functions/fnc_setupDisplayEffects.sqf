@@ -71,7 +71,3 @@ if (GVAR(ppeffectColorCorrect) != -1) then {
     ppEffectDestroy GVAR(ppeffectColorCorrect);
     GVAR(ppeffectColorCorrect) = -1;
 };
-if (GVAR(ppEffectCCMuzzleFlash) != -1) then {
-    ppEffectDestroy GVAR(ppEffectCCMuzzleFlash);
-    GVAR(ppEffectCCMuzzleFlash) = -1;
-};

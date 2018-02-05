@@ -1,6 +1,7 @@
 TRACE_1("",QUOTE(ADDON));
 
 PREP(cbaSettings);
+PREP(cbaSettings_convertHelper);
 PREP(cbaSettings_loadFromConfig);
 PREP(cbaSettings_settingChanged);
 PREP(cbaSettings_transferUserSettings);

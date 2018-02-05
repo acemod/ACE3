@@ -20,7 +20,6 @@ GVAR(ppeffectGrain) = -1;
 GVAR(ppeffectRadialBlur) = -1;
 GVAR(ppeffectColorCorrect) = -1;
 GVAR(ppeffectBlur) = -1;
-GVAR(ppEffectCCMuzzleFlash) = -1;
 
 
 ["ace_settingsInitialized", {

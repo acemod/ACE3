@@ -199,6 +199,13 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_rightSearchbar
 ];
 
+if (isMultiplayer) then {
+    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
+    _importButtonCtrl ctrlEnable false;
+    _importButtonCtrl ctrlSetFade 0.6;
+    _importButtonCtrl ctrlCommit 0;
+};
+
 //--------------- Camera prep
 cutText ["","plain"];
 showCommandingMenu "";
@@ -246,6 +253,20 @@ if (is3DEN) then {
     GVAR(visionMode)= -2 call bis_fnc_3DENVisionMode;
     ["ShowInterface",false] spawn bis_fnc_3DENInterface;
     if (get3denactionstate "togglemap" > 0) then {do3DENAction "togglemap";};
+
+    {
+        private _ctrl = _display displayctrl _x;
+        _ctrl ctrlEnable false;
+        _ctrl ctrlSetFade 0.6;
+        _ctrl ctrlcommit 0;
+    } foreach [
+        IDC_buttonFace,
+        IDC_buttonVoice,
+        IDC_buttonInsigna
+    ];
+
+    _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
+    _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 };
 
 //--------------- Prepare the left panel

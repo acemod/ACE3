@@ -38,18 +38,22 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
 
         // The setting is not forced, so update the value
         // Read entry and cast it to the correct type from the existing variable
+        (cba_settings_default getVariable [_settingName, []]) params ["", "", ["_settingType", ""]];
         private _validValue = false;
         switch (true) do {
-            case (_typeName == "SCALAR"): {_validValue = true;};
-            case (_typeName == "BOOL"): {
-                _settingValue = _settingValue > 0;
-                _validValue = true;
+            case (_settingType == "LIST");
+            case (_settingType == "SCALAR"): {
+                _validValue = [_settingName, _settingValue] call CBA_settings_fnc_check;
             };
-            //TODO: Handle ARRAY,COLOR,STRING??? (bool/scalar covers most important settings)
+            case (_settingType == "CHECKBOX"): {
+                _settingValue = _settingValue > 0;
+                _validValue = [_settingName, _settingValue] call CBA_settings_fnc_check;
+            }; 
+            // Will not Handle ARRAY,COLOR,STRING??? (bool/scalar covers most important settings)
         };
 
         if (!_validValue) exitWith {
-            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_typeName);
+            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_settingType);
         };
 
         if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
@@ -57,7 +61,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
         };
 
         // Set the setting as a mission setting and force it
-        TRACE_2("setSettingMission from module",_settingName,_value);
-        ["CBA_settings_setSettingMission", [_settingName, _value, true]] call CBA_fnc_localEvent;
+        private _return = ["CBA_settings_setSettingMission", [_settingName, _settingValue, true]] call CBA_fnc_localEvent;
+        TRACE_3("setSettingMission from paramsArray",_settingName,_settingValue,_return);
     };
 } forEach _paramsArray;
