@@ -8,6 +8,7 @@
             <Chinese>俘虜</Chinese>
             <Chinesesimp>俘虏</Chinesesimp>
             <Japanese>捕虜</Japanese>
+            <Korean>포로설정</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>

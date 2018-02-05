@@ -17,7 +17,7 @@ class GVAR(menu) {
         };
         class CenterBackground: HeaderBackground {
             y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            h = "14 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            h = "13.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0.8)";
             colorText[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             colorBackground[] = {0,0,0,"(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
