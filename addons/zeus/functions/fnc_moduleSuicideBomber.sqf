@@ -29,6 +29,9 @@ TRACE_1("params",_this);
 
 if (isNull (_this select 0)) exitWith {};
 
+// Prevent another suicide bomber module being attached
+_unit setVariable [QGVAR(suicideBomber), true, true];
+
 // One time behaviour changes
 if (_autoSeek) then {
     [QEGVAR(ai,setUnitPos), [_unit, "UP"], _unit] call CBA_fnc_targetEvent;

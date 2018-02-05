@@ -1477,5 +1477,21 @@
             <Russian>большой</Russian>
             <Spanish>Grande</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AlreadyBomber">
+            <English>Unit is already a suicide bomber</English>
+            <Chinese>這個單位已經是自殺炸彈手了</Chinese>
+            <Chinesesimp>这个单位已经是自杀炸弹手了</Chinesesimp>
+            <Czech>Jednotka je již samovražedným bombardérem</Czech>
+            <French>L'unité est déjà un kamikaze</French>
+            <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
+            <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
+            <Italian>L'unità è già un kamikaze</Italian>
+            <Japanese>ユニットはすでに自爆テロである</Japanese>
+            <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
+            <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
+            <Portuguese>A unidade já é um suicida</Portuguese>
+            <Russian>Единица уже является террористом-смертником</Russian>
+            <Spanish>La unidad ya es un terrorista suicida</Spanish>
+        </Key>
     </Package>
 </Project>

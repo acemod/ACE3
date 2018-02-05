@@ -54,6 +54,9 @@ switch (false) do {
     case !([_unit] call EFUNC(common,isPlayer)): {
         ["str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call _fnc_errorAndClose;
     };
+    case !(_unit getVariable [QGVAR(suicideBomber), false]): {
+        [LSTRING(ModuleSuicideBomber_AlreadyBomber)] call _fnc_errorAndClose;
+    };
 };
 
 // Specific onLoad stuff
