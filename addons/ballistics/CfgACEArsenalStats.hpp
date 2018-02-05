@@ -22,7 +22,7 @@ class CfgACEArsenalStats {
         scope = 2;
         priority = 5;
         stats[]= {"ammo"};
-        displayName= CSTRING(statAmmo);
+        displayName= "$STR_dn_ammo";
         showText= 1;
         textStatement = QUOTE(params [ARR_2('_stat', '_config')];getText (_config >> _stat select 0));
         tabs[]= {{}, {4}};

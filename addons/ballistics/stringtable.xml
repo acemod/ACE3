@@ -2286,10 +2286,6 @@
             <English>Barrel length</English>
             <French>Longueur du canon</French>
         </Key>
-        <Key ID="STR_ACE_Ballistics_statAmmo">
-            <English>Ammo</English>
-            <French>Munition</French>
-        </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
             <French>Coefficient ballistique</French>
