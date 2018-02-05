@@ -23,7 +23,7 @@ private _deviceState = D_GET_DEVICE_STATE(_data);
 _deviceState set [0, STATE_DESTROYED];
 _deviceState set [1, getPosASL vehicle D_GET_OWNER(_data)];
 _deviceState set [2, direction vehicle D_GET_OWNER(_data)];
-_deviceState set [3, ACE_time];
+_deviceState set [3, CBA_missionTime];
 
 if !(isNull D_GET_OWNER(_data)) then {
 

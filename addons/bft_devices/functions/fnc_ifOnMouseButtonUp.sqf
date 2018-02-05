@@ -100,6 +100,12 @@ switch (_function) do {
     case "toggleInterfaceMode": {
         [] call FUNC(toggleInterfaceMode);
     };
+    case "msgSend" : {
+
+    };
+    case "msgDelete" : {
+
+    };
 };
 
 true

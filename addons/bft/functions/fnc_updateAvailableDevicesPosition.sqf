@@ -40,13 +40,12 @@ if (_startNewLoop) then {
     // start a new position update loop
     GVAR(positionUpdatePFEH) = [{
             {
-                systemChat format ["updating position"];
-                if (ACE_time - (AD_GET_TIME(_x)) >= (AD_GET_REFRESH_RATE(_x))) then {
+                if (CBA_missionTime - (AD_GET_TIME(_x)) >= (AD_GET_REFRESH_RATE(_x))) then {
                     if (AD_GET_DEVICE_STATE_VALUE(_x) isEqualTo STATE_NORMAL) then {
                         private _deviceOwner = AD_GET_OWNER(_x);
                         //if (!(_deviceOwner isKindOf "CAManBAse") && {!(isEngineOn _deviceOwner)}) exitwith {};
                         //systemChat format["updating a device position: %1", _x];
-                        _x set [8, ACE_time];
+                        _x set [8, CBA_missionTime];
                         _x set [4, getPosASL _deviceOwner];
                         _x set [12, direction _deviceOwner];
                     } else {
@@ -54,7 +53,7 @@ if (_startNewLoop) then {
                             diag_log format["state of a device was online but ended up in drawing available devices loop!"];
                         };
                         private _deviceState = AD_GET_DEVICE_STATE(_x);
-                        (_x select 6) set [1, [0.6, 0.6, 0.6, (1 - ((ACE_time - (_deviceState select 3)) / 100)) max 0.4]];
+                        (_x select 6) set [1, [0.6, 0.6, 0.6, (1 - ((CBA_missionTime - (_deviceState select 3)) / 100)) max 0.4]];
                         _x set [4, _deviceState select 1];
                         _x set [12, _deviceState select 2];
                     };
