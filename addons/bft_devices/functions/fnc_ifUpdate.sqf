@@ -550,7 +550,7 @@ if (isNil "_mode") then {
         };
         // ----------------------------------
     };
-} forEach ([_settings] call CBA_fnc_hashKeys);
+} forEach (_settings select 1);
 
 // update scale and world position if we have to. If so, fill in the blanks and make the changes
 if ((!isNil "_targetMapScale") || (!isNil "_targetMapWorldPos")) then {

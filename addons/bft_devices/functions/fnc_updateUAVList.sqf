@@ -40,6 +40,6 @@ GVAR(UAVlist) = [];
             GVAR(UAVlist) pushBack [_uavDevice,_uavDeviceData];
         };
     };
-} count allUnitsUAV;
+} forEach allUnitsUAV;
 
 true

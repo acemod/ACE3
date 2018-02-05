@@ -35,7 +35,7 @@ private _uav = objNull;
         private _uavDeviceData = _x select 1;
         _uav = D_GET_OWNER(_uavDeviceData);
     };
-} count GVAR(UAVlist);
+} forEach GVAR(UAVlist);
 
 // remove exisitng UAV cameras
 [] call FUNC(deleteUAVcam);
@@ -79,7 +79,7 @@ if (!alive _uav) exitWith {false};
         };
         GVAR(UAVcams) pushBack [_uav,_renderTarget,_cam,_camPosMemPt,_camDirMemPt];
     };
-} count _uavCams;
+} forEach _uavCams;
 
 // set up event handler
 if !(GVAR(UAVcams) isEqualTo []) exitWith {

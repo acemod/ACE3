@@ -40,6 +40,7 @@ if (_startNewLoop) then {
     // start a new position update loop
     GVAR(positionUpdatePFEH) = [{
             {
+                systemChat format ["updating position"];
                 if (ACE_time - (AD_GET_TIME(_x)) >= (AD_GET_REFRESH_RATE(_x))) then {
                     if (AD_GET_DEVICE_STATE_VALUE(_x) isEqualTo STATE_NORMAL) then {
                         private _deviceOwner = AD_GET_OWNER(_x);

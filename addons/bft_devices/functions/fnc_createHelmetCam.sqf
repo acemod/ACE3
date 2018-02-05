@@ -28,7 +28,7 @@ private _targetOffSet = [];
 // see if given unit name is still in the list of units with valid helmet cams
 {
     if (_data == str _x) exitWith {_newHost = _x;};
-} count GVAR(hCamList);
+} forEach GVAR(hCamList);
 
 call {
     // should unit not be in a vehicle

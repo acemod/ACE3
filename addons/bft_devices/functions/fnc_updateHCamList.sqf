@@ -31,7 +31,7 @@ private _validSides = [];
     if ([_deviceEncryptionKey, [_x] call EFUNC(bft,getEncryptionKey)] call EFUNC(bft,encryptionKeyMatch)) then {
         _validSides pushBack _x;
     };
-} count ["WEST","EAST","GUER","CIV"];
+} forEach ["WEST","EAST","GUER","CIV"];
 
 // compile list of units with the ACE_HelmetCam item
 private _hcamList = [];
@@ -41,7 +41,7 @@ private _hcamList = [];
             _hcamList pushBack _x;
         };
     };
-} count allUnits;
+} forEach allUnits;
 
 GVAR(hCamList) = _hcamList;
 
