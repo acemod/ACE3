@@ -6,7 +6,16 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Validate SQF And Config style
+          name: Build with armake
+          command: |
+            sudo add-apt-repository ppa:koffeinflummi/armake -y
+            sudo apt-get update -qq
+            sudo apt-get install armake -y
+            make --version
+            armake --version
+            make -j 3
+      - run:
+          name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
   deployment:
     docker:
