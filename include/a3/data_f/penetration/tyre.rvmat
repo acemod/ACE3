@@ -1,0 +1,3 @@
+surfaceInfo="A3\data_f\Penetration\tyre.bisurf";
+diffuse[]={0.1,0.1,0.1,1};
+ambient[]={0.1,0.1,0.1,1};
