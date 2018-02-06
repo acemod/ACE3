@@ -8,6 +8,16 @@ jobs:
       - run:
           name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
+      - run:
+          name: Test Armake
+          command: |
+            wget https://github.com/KoffeinFlummi/armake/releases/download/v0.5.1/armake_v0.5.1.zip -o armake.zip
+            unzip armake.zip
+            rm -f armake.zip
+            rm -f armake*.exe
+            chmod +x armake            
+            armake --version
+
   deployment:
     docker:
       - image: thojkooi/ci-python
