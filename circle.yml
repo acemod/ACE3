@@ -9,11 +9,9 @@ jobs:
           name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
       - run:
-          name: Test Armake
+          name: Build
           command: |
-            armake --version
-            armake --help
-            make
+            make -j 2
 
   deployment:
     docker:
