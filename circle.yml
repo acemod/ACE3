@@ -1,7 +1,7 @@
 version: 2
-#dependencies:
-#  pre:
-#    - sudo add-apt-repository ppa:koffeinflummi/armake; sudo apt-get update; sudo apt-get install armake
+dependencies:
+  pre:
+    - sudo add-apt-repository ppa:koffeinflummi/armake; sudo apt-get update; sudo apt-get install armake
 jobs:
   build:
     docker:
@@ -10,10 +10,9 @@ jobs:
       - checkout
       - run:
           name: Build with armake
-          command: |
-#            make --version
-            armake --version
-#            make -j 3
+          command: armake --version
+            #make --version
+            #make -j 3
       - run:
           name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
