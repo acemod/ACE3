@@ -11,14 +11,14 @@ for /d %%f in (addons\*) do (
     set folder=%%f
     set name=!folder:addons\=!
     echo   PBO  @ace\addons\ace_!name!.pbo
-    !armake! build -i include -w unquoted-string -w redefinition-wo-undef -f !folder! @ace\addons\ace_!name!.pbo
+    !armake! build -i include -w unquoted-string -w redefinition-wo-undef -w excessive-concatenation -f !folder! @ace\addons\ace_!name!.pbo
 )
 
 for /d %%f in (optionals\*) do (
     set folder=%%f
     set name=!folder:optionals\=!
     echo   PBO  @ace\optionals\ace_!name!.pbo
-    !armake! build -i include -w unquoted-string -w redefinition-wo-undef -f !folder! @ace\optionals\ace_!name!.pbo
+    !armake! build -i include -w unquoted-string -w redefinition-wo-undef -w excessive-concatenation -f !folder! @ace\optionals\ace_!name!.pbo
 )
 
 pause

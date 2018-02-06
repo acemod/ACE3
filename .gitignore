@@ -1,4 +1,5 @@
-@ace/*
+@*
+*.zip
 release/*
 tools/temp
 *.cache
@@ -8,5 +9,4 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
-ace3_*.zip
 CHANGELOG.md

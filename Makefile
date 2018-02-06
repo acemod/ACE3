@@ -2,7 +2,7 @@ VERSION = $(shell cat "VERSION")
 PREFIX = ace
 BIN = @ace
 ZIP = ace3
-FLAGS = -i include -w unquoted-string -w redefinition-wo-undef
+FLAGS = -i include -w unquoted-string -w redefinition-wo-undef -w excessive-concatenation
 VERSION_FILES = README.md docs/README_DE.md docs/README_PL.md mod.cpp
 
 MAJOR = $(word 1, $(subst ., ,$(VERSION)))
