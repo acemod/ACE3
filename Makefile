@@ -1,14 +1,16 @@
+VERSION = $(shell cat "VERSION")
 PREFIX = ace
 BIN = @ace
 ZIP = ace3
 FLAGS = -i include -w unquoted-string -w redefinition-wo-undef
+VERSION_FILES = README.md docs/README_DE.md docs/README_PL.md mod.cpp
 
-MAJOR = $(shell grep "^\#define[[:space:]]*MAJOR" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
-MINOR = $(shell grep "^\#define[[:space:]]*MINOR" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
-PATCH = $(shell grep "^\#define[[:space:]]*PATCHLVL" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
-BUILD = $(shell grep "^\#define[[:space:]]*BUILD" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
-VERSION = $(MAJOR).$(MINOR).$(PATCH)
-VERSION_FULL = $(VERSION).$(BUILD)
+MAJOR = $(word 1, $(subst ., ,$(VERSION)))
+MINOR = $(word 2, $(subst ., ,$(VERSION)))
+PATCH = $(word 3, $(subst ., ,$(VERSION)))
+BUILD = $(word 4, $(subst ., ,$(VERSION)))
+VERSION_S = $(MAJOR).$(MINOR).$(PATCH)
+GIT_HASH = $(shell git log -1 --pretty=format:"%H" | head -c 8)
 
 ifeq ($(OS), Windows_NT)
 	ifeq ($(PROCESSOR_ARCHITEW6432), AMD64)
@@ -49,16 +51,18 @@ $(BIN)/keys/%.biprivatekey:
 	@echo "  KEY  $@"
 	@${ARMAKE} keygen -f $(patsubst $(BIN)/keys/%.biprivatekey, $(BIN)/keys/%, $@)
 
-$(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign: $(BIN)/addons/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey
+$(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign: $(BIN)/addons/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey
 	@echo "  SIG  $@"
-	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey $<
+	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
+	@mv "$(subst -$(GIT_HASH),,$@)" $@ # armake does not take bisign name as parameter yet
 
-$(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign: $(BIN)/optionals/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey
+$(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign: $(BIN)/optionals/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey
 	@echo "  SIG  $@"
-	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey $<
+	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
+	@mv "$(subst -$(GIT_HASH),,$@)" $@ # armake does not take bisign name as parameter yet
 
-signatures: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign, $(wildcard addons/*)) \
-		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign, $(wildcard optionals/*))
+signatures: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign, $(wildcard addons/*)) \
+		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign, $(wildcard optionals/*))
 
 extensions: $(wildcard extensions/*/*)
 	cd extensions/build && cmake .. && make
@@ -67,15 +71,32 @@ extensions: $(wildcard extensions/*/*)
 extensions-win64: $(wildcard extensions/*/*)
 	cd extensions/build && CXX=$(eval $(which g++-w64-mingw-i686)) cmake .. && make
 
+version:
+	@echo "  VER  $(VERSION)"
+	$(shell sed -i -r -s 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/$(VERSION)/g' $(VERSION_FILES))
+	$(shell sed -i -r -s 's/[0-9]+\.[0-9]+\.[0-9]+/$(VERSION_S)/g' $(VERSION_FILES))
+	@echo "#define MAJOR $(MAJOR)\n#define MINOR $(MINOR)\n#define PATCHLVL $(PATCH)\n#define BUILD $(BUILD)" > "addons/main/script_version.hpp"
+	$(shell sed -i -r -s 's/ACE_VERSION_MAJOR [0-9]+/ACE_VERSION_MAJOR $(MAJOR)/g' extensions/CMakeLists.txt)
+	$(shell sed -i -r -s 's/ACE_VERSION_MINOR [0-9]+/ACE_VERSION_MINOR $(MINOR)/g' extensions/CMakeLists.txt)
+	$(shell sed -i -r -s 's/ACE_VERSION_REVISION [0-9]+/ACE_VERSION_REVISION $(PATCH)/g' extensions/CMakeLists.txt)
+
+commit:
+	@echo "  GIT  commit release preparation"
+	@git add -A
+	@git diff-index --quiet HEAD || git commit -am "Prepare release $(VERSION_S)" -q
+
+push: commit
+	@echo "  GIT  push release preparation"
+	@git push -q
+
+release: clean version commit
+	@"$(MAKE)" $(MAKEFLAGS) signatures
+	@echo "  ZIP  $(ZIP)_$(VERSION_S).zip"
+	@cp *.dll mod.cpp README.md docs/README_DE.md docs/README_PL.md AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp $(BIN)
+	@cp -r extras/userconfig $(BIN)/optionals
+	@zip -qr $(ZIP)_$(VERSION_S).zip $(BIN)
+
 clean:
 	rm -rf $(BIN) $(ZIP)_*.zip
 
-release:
-	@"$(MAKE)" clean
-	@"$(MAKE)" $(MAKEFLAGS) signatures
-	@echo "  ZIP  $(ZIP)_$(VERSION).zip"
-	@cp *.dll AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp mod.cpp README.md docs/README_DE.md docs/README_PL.md $(BIN)
-	@cp -r extras/userconfig $(BIN)/optionals
-	@zip -r $(ZIP)_$(VERSION).zip $(BIN) &> /dev/null
-
-.PHONY: release
+.PHONY: all filepatching signatures extensions extensions-win64 version commit push release clean
