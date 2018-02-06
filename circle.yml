@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: python:3-alpine
+      - image: thojkooi/ci-python
     steps:
       - checkout
       - run:
@@ -10,7 +10,7 @@ jobs:
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
   deployment:
     docker:
-      - image: python:3-alpine
+      - image: thojkooi/ci-python
     branch: master
     requires:
       - build
@@ -19,5 +19,4 @@ jobs:
       - deploy:
           name: Deploy
           command: |
-            pip install pygithub pygithub3
             python3 tools/deploy.py
