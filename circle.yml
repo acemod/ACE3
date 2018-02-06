@@ -13,6 +13,7 @@ jobs:
           command: |
             armake --version
             armake --help
+            make
 
   deployment:
     docker:
