@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Test Armake
           command: |
-            wget https://github.com/KoffeinFlummi/armake/releases/download/v0.5.1/armake_v0.5.1.zip -o armake.zip
+            wget https://github.com/KoffeinFlummi/armake/releases/download/v0.5.1/armake_v0.5.1.zip -O armake.zip
             unzip armake.zip
             rm -f armake.zip
             rm -f armake*.exe
