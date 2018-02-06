@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MicroDAGR">
         <Key ID="STR_ACE_MicroDAGR_itemName">
@@ -44,7 +44,7 @@
             <Hungarian>Szögmértékegység:</Hungarian>
             <Italian>Unità angolare:</Italian>
             <Portuguese>Unidade Angular:</Portuguese>
-            <Japanese>角度の種類：</Japanese>
+            <Japanese>角度の種類:</Japanese>
             <Korean>각도의 단위:</Korean>
             <Chinesesimp>角密位:</Chinesesimp>
             <Chinese>角密位:</Chinese>
@@ -60,7 +60,7 @@
             <Hungarian>Mil</Hungarian>
             <Italian>Mils</Italian>
             <Portuguese>Mils:</Portuguese>
-            <Japanese>ミリ ラジアン</Japanese>
+            <Japanese>ミル</Japanese>
             <Korean>밀</Korean>
             <Chinesesimp>密位</Chinesesimp>
             <Chinese>密位</Chinese>
@@ -76,7 +76,7 @@
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
             <Portuguese>Mostrar Waypoints no mapa:</Portuguese>
-            <Japanese>地図へｳｪｲﾎﾟｲﾝﾄを表示：</Japanese>
+            <Japanese>地図へｳｪｲﾎﾟｲﾝﾄを表示:</Japanese>
             <Korean>웨이포인트를 지도에 보이기:</Korean>
             <Chinesesimp>显示路径点在地图上:</Chinesesimp>
             <Chinese>顯示路徑點在地圖上:</Chinese>
@@ -140,10 +140,10 @@
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
             <Italian>Introduci griglia coordinate:</Italian>
             <Portuguese>Digite as Ccords. do Grid</Portuguese>
-            <Japanese>座標を入力：</Japanese>
-            <Korean>망 좌표 입력:</Korean>
+            <Japanese>座標を入力:</Japanese>
             <Chinesesimp>输入网格座标:</Chinesesimp>
             <Chinese>輸入網格座標:</Chinese>
+            <Korean>좌표 입력:</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterName">
             <English>Name of [%1]</English>
@@ -173,9 +173,9 @@
             <Italian>Nuovo MGRS</Italian>
             <Portuguese>MGRS-Novo</Portuguese>
             <Japanese>MGRS-New</Japanese>
-            <Korean>MGRS-새 것</Korean>
             <Chinesesimp>军事网格座标系统-新型</Chinesesimp>
             <Chinese>軍事網格座標系統-新型</Chinese>
+            <Korean>MGRS-New</Korean>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlWGD">
             <English>WGD</English>
@@ -204,7 +204,7 @@
             <Hungarian>Távolság:</Hungarian>
             <Italian>Distanza:</Italian>
             <Portuguese>Distância:</Portuguese>
-            <Japanese>距離：</Japanese>
+            <Japanese>距離:</Japanese>
             <Korean>거리:</Korean>
             <Chinesesimp>范围:</Chinesesimp>
             <Chinese>範圍:</Chinese>
@@ -300,7 +300,7 @@
             <Hungarian>UP Beállítása</Hungarian>
             <Italian>Definisci WayPoints</Italian>
             <Portuguese>Definir WP</Portuguese>
-            <Japanese>ウェイポイント設定</Japanese>
+            <Japanese>ｳｪｲﾎﾟｲﾝﾄ設定</Japanese>
             <Korean>웨이포인트 설정</Korean>
             <Chinesesimp>设置路径点</Chinesesimp>
             <Chinese>設置路徑點</Chinese>
@@ -510,8 +510,8 @@
             <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>
             <Japanese>アイテム上で表示されるデータ量を決定します。設定を減らすと地図上での情報が少なくなります。</Japanese>
             <Korean>MicroDAGR에 얼마나 많은 데이터가 들어있는지 정합니다. 적을 수록 지도상에도 비춰지는게 적어집니다.</Korean>
-            <Chinesesimp>设定有多少数据会显示在微型军用GPS接收器上. 这些资料的多寡会反映在迷你地图的显示上.</Chinesesimp>
-            <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上. 這些資料的多寡會反映在迷你地圖的顯示上.</Chinese>
+            <Chinesesimp>设定有多少数据会显示在微型军用GPS接收器上。这些资料的多寡会反映在迷你地图的显示上。</Chinesesimp>
+            <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上。這些資料的多寡會反映在迷你地圖的顯示上。</Chinese>
         </Key>
     </Package>
 </Project>

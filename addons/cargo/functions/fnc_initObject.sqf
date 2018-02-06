@@ -53,20 +53,21 @@ private _condition = {
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
     {locked _target < 2} &&
     {alive _target} &&
-    {[_player, _target, []] call EFUNC(common,canInteractWith)} &&
+    {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
     {0 < {
             private _type = typeOf _x;
             private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
             private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
-            (_hasCargoPublic || _hasCargoConfig) && {_x != _target}
-        } count (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE])}
+            (_hasCargoPublic || _hasCargoConfig) && {_x != _target} &&
+            {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+        } count (nearestObjects [_player, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)])}
 };
 private _statement = {
     params ["_target", "_player"];
     [_player, _target] call FUNC(startLoadIn);
 };
 private _text = localize LSTRING(loadObject);
-private _icon = QPATHTOF(UI\Icon_load.paa);
+private _icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
 
 private _action = [QGVAR(load), _text, _icon, _statement, _condition, {call FUNC(addCargoVehiclesActions)}] call EFUNC(interact_menu,createAction);
 if (_canLoadConfig) then {

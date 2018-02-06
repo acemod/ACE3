@@ -28,8 +28,8 @@
             <French>Configurer le DAGR</French>
             <Japanese>DAGR を設定</Japanese>
             <Korean>DAGR 설정</Korean>
-            <Chinese>軍用GPS接收器設定</Chinese>
-            <Chinesesimp>军用GPS接收器设定</Chinesesimp>
+            <Chinese>設定軍用GPS接收器</Chinese>
+            <Chinesesimp>设定军用GPS接收器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_DAGR_ToggleDAGR">
             <English>Toggle DAGR</English>

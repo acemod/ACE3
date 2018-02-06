@@ -24,7 +24,7 @@ class CfgMagazines {
         count = 1;
         mass = 85;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"B_MISSILE_PYLON", "SCALPEL_1RND_EJECTOR", "B_ASRRAM_EJECTOR", "UNI_SCALPEL"};
+        hardpoints[] = {"B_MISSILE_PYLON", "SCALPEL_1RND_EJECTOR", "B_ASRRAM_EJECTOR", "UNI_SCALPEL", "CUP_NATO_HELO_SMALL", "CUP_NATO_HELO_LARGE", "RHS_HP_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
     class PylonRack_3Rnd_ACE_Hellfire_AGM114K: 6Rnd_ACE_Hellfire_AGM114K { // 3x Launcher Support Rack
@@ -32,7 +32,7 @@ class CfgMagazines {
         count = 3;
         mass = 250;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"B_MISSILE_PYLON", "UNI_SCALPEL"};
+        hardpoints[] = {"B_MISSILE_PYLON", "UNI_SCALPEL", "CUP_NATO_HELO_LARGE", "RHS_HP_LONGBOW_RACK"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
@@ -41,7 +41,7 @@ class CfgMagazines {
         count = 4;
         mass = 340;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"UNI_SCALPEL"};
+        hardpoints[] = {"UNI_SCALPEL", "CUP_NATO_HELO_LARGE", "RHS_HP_HELLFIRE_RACK", "RHS_HP_LONGBOW_RACK"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_4x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 4, 3};
     };

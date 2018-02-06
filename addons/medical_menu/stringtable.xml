@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical Menu">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -73,8 +73,8 @@
             <French>Si autorisé par le serveur, active l'option d'utiliser le menu médical à travers les raccourcis clavier et le menu d'interaction.</French>
             <Japanese>サーバーが有効化を許可している場合は、オプションから有効化でき治療メニューはキー割り当てとインタラクション メニューを無視できます</Japanese>
             <Korean>서버 허가하에 단축키와 상호작용 메뉴로 의료 메뉴사용을 허가합니다</Korean>
-            <Chinesesimp>如果伺服器允许, 只需透过按键即可叫出医疗选单</Chinesesimp>
-            <Chinese>如果伺服器允許, 只需透過按鍵即可叫出醫療選單</Chinese>
+            <Chinesesimp>如果伺服器允许，只需透过按键即可叫出医疗选单</Chinesesimp>
+            <Chinese>如果伺服器允許，只需透過按鍵即可叫出醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>
@@ -341,7 +341,7 @@
             <Portuguese>Alternar (Si mesmo)</Portuguese>
             <Czech>Přepnout (na sebe)</Czech>
             <Italian>Attiva (Te Stesso)</Italian>
-            <Japanese>トグル (自分)</Japanese>
+            <Japanese>切り替え (自分)</Japanese>
             <Korean>토글 (자신)</Korean>
             <Chinesesimp>切换 (自己)</Chinesesimp>
             <Chinese>切換 (自己)</Chinese>
@@ -761,7 +761,7 @@
             <Portuguese>Sangrando</Portuguese>
             <Czech>Krvácí</Czech>
             <Italian>Sanguinamento</Italian>
-            <Japanese>出血</Japanese>
+            <Japanese>出血中</Japanese>
             <Korean>출혈</Korean>
             <Chinesesimp>出血中</Chinesesimp>
             <Chinese>出血中</Chinese>
@@ -791,7 +791,7 @@
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Czech>Ztratil hodně krve</Czech>
             <Italian>Perso molto Sangue</Italian>
-            <Japanese>大量出血している</Japanese>
+            <Japanese>大量失血している</Japanese>
             <Korean>많은 피를 흘림</Korean>
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>

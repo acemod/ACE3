@@ -1,6 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
+        <Key ID="STR_ACE_Captives_DisplayName">
+            <English>Captives</English>
+            <German>Gefangene</German>
+            <Italian>Prigionieri</Italian>
+            <Chinese>俘虜</Chinese>
+            <Chinesesimp>俘虏</Chinesesimp>
+            <Japanese>捕虜</Japanese>
+            <Korean>포로설정</Korean>
+        </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
             <German>Gefangen nehmen</German>
@@ -13,7 +22,7 @@
             <Hungarian>Foglyul ejtés</Hungarian>
             <Russian>Взять в плен</Russian>
             <Japanese>捕虜にする</Japanese>
-            <Korean>사로잡기</Korean>
+            <Korean>포박하기</Korean>
             <Chinese>逮捕俘虜</Chinese>
             <Chinesesimp>逮捕俘虏</Chinesesimp>
         </Key>
@@ -238,8 +247,8 @@
             <Italian>Sincronizza una unità per farla arrendere.</Italian>
             <Japanese>同期されたユニットを投降させます。</Japanese>
             <Korean>투항시키기 위해 동기화합니다.</Korean>
-            <Chinese>同步此模塊到一個單位, 使該單位投降</Chinese>
-            <Chinesesimp>同步此模块到一个单位, 使该单位投降</Chinesesimp>
+            <Chinese>同步此模塊到一個單位，使該單位投降</Chinese>
+            <Chinesesimp>同步此模块到一个单位，使该单位投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
             <English>Make Unit Handcuffed</English>
@@ -252,13 +261,13 @@
             <Spanish>Hacer que la unidad esté esposada</Spanish>
             <French>Rendre une unité captive</French>
             <Japanese>ユニットを拘束する</Japanese>
-            <Korean>수갑을 채우기</Korean>
+            <Korean>포박하기</Korean>
             <Chinese>使單位戴上手銬</Chinese>
             <Chinesesimp>使单位戴上手铐</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
-            <German>Synchronisiere eine Einheit um sie in Handschellen zu legen.</German>
+            <German>Synchronisiere eine Einheit, um sie in Handschellen zu legen.</German>
             <Polish>Zsynchronizuj z jednostką, aby została skuta.</Polish>
             <Portuguese>Sincronizar uma unidade para deixá-la algemada.</Portuguese>
             <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.</Russian>
@@ -283,7 +292,7 @@
             <Russian>Настройки пленения</Russian>
             <Italian>Impostazioni Prigionieri</Italian>
             <Japanese>拘束の設定</Japanese>
-            <Korean>포로 설정</Korean>
+            <Korean>포박 설정</Korean>
             <Chinese>俘虜設定</Chinese>
             <Chinesesimp>俘虏设定</Chinesesimp>
         </Key>
@@ -314,8 +323,8 @@
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
             <Russian>Связать союзника</Russian>
             <Italian>Puoi ammanettare unità alleate</Italian>
-            <Japanese>自陣営への拘束を可能に</Japanese>
-            <Korean>자기편에게 수갑을 채울 수 있게 합니다</Korean>
+            <Japanese>拘束ユニットを自陣営へ</Japanese>
+            <Korean>자기편을 포박 할 수 있습니다.</Korean>
             <Chinese>可以銬住同陣營隊友</Chinese>
             <Chinesesimp>可以铐住同阵营队友</Chinesesimp>
         </Key>
@@ -324,13 +333,13 @@
             <Polish>Czy gracze mogą skuwać sojuszników?</Polish>
             <Spanish>Pueden los jugadores esposar unidades en su propio bando</Spanish>
             <Czech>Mohou hráči spoutat jednotky na své straně</Czech>
-            <German>Spieler können eigene Einheiten fesseln. </German>
+            <German>Spieler können eigene Einheiten fesseln</German>
             <Portuguese>Os jogadores podem algemar unidades do seu lado</Portuguese>
             <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp</French>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
             <Russian>Разрешить игрокам связывать юнитов своей стороны</Russian>
             <Italian>I giocatori possono ammanettare unità alleate</Italian>
-            <Japanese>プレイヤーがユニットを拘束し、彼らの陣営に変更できます。</Japanese>
+            <Japanese>プレイヤーが拘束したユニットの陣営を自陣営に変更させます。</Japanese>
             <Korean>자기편에게 케이블타이를 사용할 수 있게합니다</Korean>
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
             <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
@@ -362,7 +371,7 @@
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
             <Russian>Игроки могут сдаться в плен после того, как уберут оружие</Russian>
             <Italian>I giocatori possono arrendersi dopo aver messo via le proprie armi</Italian>
-            <Japanese>プレイヤーは武器を収めたあとに投降できるようにします。</Japanese>
+            <Japanese>プレイヤーは武器を収めたあと投降できるようにします。</Japanese>
             <Korean>비무장한 플레이어가 투항할 수 있게 합니다</Korean>
             <Chinese>玩家能在收起自己武器後投降</Chinese>
             <Chinesesimp>玩家能在收起自己武器后投降</Chinesesimp>
@@ -393,9 +402,9 @@
             <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
             <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés</French>
             <Japanese>プレイヤーは拘束される前に、投降する必要があります。</Japanese>
-            <Korean>체포하기 전에 플레이어가 투항을 먼저해야만 합니다</Korean>
-            <Chinese>玩家須先要求目標投降, 才可以進行逮捕</Chinese>
-            <Chinesesimp>玩家须先要求目标投降, 才可以进行逮捕</Chinesesimp>
+            <Korean>체포하기 전에 먼저 플레이어가 투항을 해야만 합니다</Korean>
+            <Chinese>玩家須先要求目標投降，才可以進行逮捕</Chinese>
+            <Chinesesimp>玩家须先要求目标投降，才可以进行逮捕</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
@@ -426,6 +435,33 @@
             <Korean>투항 중 혹은 비무장</Korean>
             <Chinese>投降或無武器狀態</Chinese>
             <Chinesesimp>投降或无武器状态</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Captives_KeyComb_Description">
+            <English>Sets the unit under the cursor captive.</English>
+            <German>Nimmt die Einheit unter dem Cursor fest.</German>
+            <Japanese>カーソル先のユニットを拘束</Japanese>
+            <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
+            <Chinese>設置在游標下的單位成俘虜狀態。</Chinese>
+            <Chinesesimp>设置在游标下的单位成俘虏状态。</Chinesesimp>
+            <Korean>커서의 병력을 포박합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
+            <English>Require AI surrendering</English>
+            <German>Benötigt für KI Kapitulation</German>
+            <Italian>Necessita arresa AI</Italian>
+            <Japanese>AI の投降を必要とする</Japanese>
+            <Chinese>需要AI先行投降</Chinese>
+            <Chinesesimp>需要AI先行投降</Chinesesimp>
+            <Korean>AI 항복 필요</Korean>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
+            <English>Require AI to surrender before they can be arrested</English>
+            <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
+            <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
+            <Japanese>AI の拘束は AI が投降している場合に限り可能にします。</Japanese>
+            <Chinese>在逮捕AI之前該AI必須先進入投降狀態。</Chinese>
+            <Chinesesimp>在逮捕AI之前该AI必须先进入投降状态。</Chinesesimp>
+            <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>
         </Key>
     </Package>
 </Project>

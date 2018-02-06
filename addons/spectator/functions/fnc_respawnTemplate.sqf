@@ -1,7 +1,8 @@
 /*
  * Author: SilentSpike
- * The ace_spectator respawn template, handles killed + respawn
- * Can be used via BI's respawn framework, see:
+ * The ace_spectator respawn template, compatible with types 1,2,3,4 & 5
+ *
+ * Handles killed and respawned events as per BI's respawn framework:
  * https://community.bistudio.com/wiki/Arma_3_Respawn
  *
  * Arguments:
@@ -11,7 +12,7 @@
  * 3: Respawn Delay <NUMBER>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [bob, kevin, 3, 6] call ace_spectator_fnc_respawnTemplate
@@ -21,26 +22,22 @@
 
 #include "script_component.hpp"
 
-params [["_unit",objNull,[objNull]], ["_killer",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
+params [["_newCorpse",objNull,[objNull]], ["_oldKiller",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
+TRACE_4("respawnTemplate",_newCorpse,_oldKiller,_respawn,_respawnDelay);
 
-// Some environment information can be used for the initial camera attributes
-if (isNull _killer) then {_killer = _unit};
-private _vision = [-2,-1] select (sunOrMoon < 1);
-private _pos = (getPosATL _unit) vectorAdd [0,0,5];
+// Compatibility handled via spectator display XEH
+if (_respawn in [0,1,4,5]) exitWith {
+    // This only applies to respawn type 1 (BIRD/SPECTATOR)
+    // Remove the seagull (not actually the player, a CfgNonAIVehicles object)
+    if (typeOf _newCorpse == "seagull") then { deleteVehicle _newCorpse; };
+};
 
-// Enter/exit spectator based on the respawn type and whether killed/respawned
-if (alive _unit) then {
-    if (_respawn == 1) then {
-        [_unit] call FUNC(stageSpectator);
-        [2,_killer,_vision,_pos,getDir _unit] call FUNC(setCameraAttributes);
-        [true] call FUNC(setSpectator);
-    } else {
-        [false] call FUNC(setSpectator);
-    };
-} else {
+// Virtual spectators should be ignored by the template (otherwise they break)
+if (_newCorpse isKindOf QGVAR(virtual)) exitWith {};
+
+// If player died while already in spectator, ignore
+if (!GVAR(isSet) || {alive _newCorpse}) then {
     // Negligible respawn delay can result in entering spectator after respawn
-    if (playerRespawnTime <= 1) exitWith {};
-
-    [2,_killer,_vision,_pos,getDir _unit] call FUNC(setCameraAttributes);
-    [true] call FUNC(setSpectator);
+    // So we just use this value rather than living state of the unit
+    [playerRespawnTime > 1] call FUNC(setSpectator);
 };

@@ -22,6 +22,10 @@
 `ace_main`
 {% endif %}
 
+{% if include.component == "arsenal" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "atragmx" %}
 `ACE_Advanced_Ballistics`, `ACE_common`, `ACE_weather`
 {% endif %}
@@ -206,6 +210,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "maverick" %}
+`ace_missileguidance`
+{% endif %}
+
 {% if include.component == "medical" %}
 `ace_interaction`, `ace_apl`
 {% endif %}
@@ -296,6 +304,10 @@
 
 {% if include.component == "parachute" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "pylons" %}
+`ace_interact_menu`
 {% endif %}
 
 {% if include.component == "quickmount" %}
@@ -431,7 +443,7 @@
 {% endif %}
 
 {% if include.component == "zeus" %}
-`ace_common`
+`ace_common`, `ace_ai`
 {% endif %}
 
 {% if include.component == "compat_adr_97" %}
@@ -491,10 +503,6 @@
 {% endif %}
 
 {% if include.component == "particles" %}
-`ace_common`
-{% endif %}
-
-{% if include.component == "server" %}
 `ace_common`
 {% endif %}
 

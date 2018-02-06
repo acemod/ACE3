@@ -26,6 +26,7 @@ class ACE_Settings {
         description = CSTRING(MaxTrack_Desc);
         typeName = "SCALAR";
         value = 10;
+        sliderSettings[] = {0, 50, 10, -1};
     };
     class GVAR(maxTrackPerFrame) {
         category = CSTRING(Module_DisplayName);
@@ -33,5 +34,6 @@ class ACE_Settings {
         description = CSTRING(MaxTrackPerFrame_Desc);
         typeName = "SCALAR";
         value = 10;
+        sliderSettings[] = {0, 50, 10, -1};
     };
 };

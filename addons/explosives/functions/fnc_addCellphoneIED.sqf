@@ -21,39 +21,35 @@
 params ["_unit", "_explosive", "_magazineClass", "_extra"];
 TRACE_4("params",_unit,_explosive,_magazineClass,_extra);
 
-private ["_config", "_detonators", "_hasRequired", "_requiredItems", "_code", "_count", "_codeSet"];
-
 // Config is the last item in the list of passed in items.
-_config = (_this select 3) select (count (_this select 3) - 1);
+private _config = (_this select 3) select (count (_this select 3) - 1);
 
-_requiredItems = getArray(_config >> "requires");
-_hasRequired = true;
-_detonators = [_unit] call FUNC(getDetonators);
+private _requiredItems = getArray (_config >> "requires");
+private _hasRequired = true;
+private _detonators = [_unit] call FUNC(getDetonators);
+
 {
     if !(_x in _detonators) exitWith{
         _hasRequired = false;
     };
 } count _requiredItems;
 
-_codeSet = false;
-while {!_codeSet} do {
-    _code = str(round (random 9999));
-    _count = 4 - count (toArray _code);
-    while {_count > 0} do {
-        _code = "0" + _code;
-        _count = _count - 1;
-    };
-    _codeSet = (count ([_code] call FUNC(getSpeedDialExplosive))) == 0;
+private _code = "";
+while {true} do {
+    _code = [floor(random 10000), 4] call CBA_fnc_formatNumber;
+    if (([_code] call FUNC(getSpeedDialExplosive)) isEqualTo []) exitWith {};
 };
+
 if (isNil QGVAR(CellphoneIEDs)) then {
     GVAR(CellphoneIEDs) = [];
 };
-_count = GVAR(CellphoneIEDs) pushBack [_explosive,_code,GetNumber(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> "Cellphone" >> "FuseTime")];
+
+private _count = GVAR(CellphoneIEDs) pushBack [_explosive, _code, getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> "Cellphone" >> "FuseTime")];
 _count = _count + 1;
 publicVariable QGVAR(CellphoneIEDs);
 
 //display IED number message:
-[format ["IED %1 code: %2", _count,_code]] call EFUNC(common,displayTextStructured);
+[format ["IED %1 code: %2", _count, _code]] call EFUNC(common,displayTextStructured);
 
 if !(_hasRequired) exitWith {};
-[format ["IED %1", _count],_code] call FUNC(addToSpeedDial);
+[format ["IED %1", _count], _code] call FUNC(addToSpeedDial);

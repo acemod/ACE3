@@ -18,4 +18,5 @@
 
 params ["_player", "_unit"];
 
-((vehicle _unit) != _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}
+// Don't show "Unload Captive" if unit is unconscious (already has "Unload Patient")
+(vehicle _unit != _unit) && {vehicle _player == _player} && {_unit getVariable [QGVAR(isHandcuffed), false]} && {!(_unit getVariable ["ACE_isUnconscious", false])}

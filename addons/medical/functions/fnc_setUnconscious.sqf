@@ -26,7 +26,6 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
 };
 
-private ["_animState", "_originalPos", "_startingTime", "_isDead"];
 params ["_unit", ["_set", true], ["_minWaitingTime", DEFAULT_DELAY], ["_force", false]];
 
 // No change, fuck off. (why is there no xor?)
@@ -55,9 +54,9 @@ if (_unit == ACE_player) then {
 };
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
-_isDead = false;
+private _isDead = false;
 if (!([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) && !_force) then {
-    _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
+    private _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
     if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) then {
         [_unit, true] call FUNC(setDead);
         _isDead = true;
@@ -86,7 +85,7 @@ if (vehicle _unit != _unit) then {
 };
 
 //Save current stance:
-_originalPos = unitPos _unit;
+private _originalPos = unitPos _unit;
 
 _unit setUnitPos "DOWN";
 [_unit, true] call EFUNC(common,disableAI);
@@ -98,17 +97,21 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 };
 // Delay Unconscious so the AI dont instant stop shooting on the unit #3121
 if (GVAR(delayUnconCaptive) == 0) then {
-    [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
+    [_unit, "setHidden", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
 } else {
+    // when the Delay is so high that the unit can wake up and get uncon again we need to check if it is the correct wait that got executed
+    private _counter = _unit getVariable [QGVAR(unconsciousCounter), 0];
+    _counter = _counter + 1;
+    _unit setVariable [QGVAR(unconsciousCounter), _counter];
     [{
-        params ["_unit"];
-        if (_unit getVariable ["ACE_isUnconscious", false]) then {
-            [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
+        params ["_unit", "_counter"];
+        if (_unit getVariable ["ACE_isUnconscious", false] && (_unit getVariable [QGVAR(unconsciousCounter), 0]) == _counter) then {
+            [_unit, "setHidden", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
         };
-    },[_unit], GVAR(delayUnconCaptive)] call CBA_fnc_waitAndExecute;
+    },[_unit, _counter], GVAR(delayUnconCaptive)] call CBA_fnc_waitAndExecute;
 };
 
-_anim = [_unit] call EFUNC(common,getDeathAnim);
+private _anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{
     params ["_unit", "_anim"];
@@ -117,7 +120,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     };
 }, [_unit, _anim], 0.5, 0] call CBA_fnc_waitAndExecute;
 
-_startingTime = CBA_missionTime;
+private _startingTime = CBA_missionTime;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 

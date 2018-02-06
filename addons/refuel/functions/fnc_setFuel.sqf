@@ -3,7 +3,7 @@
  * Set the remaining fuel amount.
  *
  * Arguments:
- * 0: Fuel Truck <OBJECT>
+ * 0: Fuel Source <OBJECT>
  * 1: Amount (in liters)<NUMBER>
  *
  * Return Value:
@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_fuel", nil, [0]]];
+params [["_source", objNull, [objNull]], ["_fuel", nil, [0]]];
 
-if (isNull _target ||
+if (isNull _source ||
     {isNil "_fuel"}) exitWith {};
 
-_target setVariable [QGVAR(currentFuelCargo), _fuel, true];
+_source setVariable [QGVAR(currentFuelCargo), _fuel, true];

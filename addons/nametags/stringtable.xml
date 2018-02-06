@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NameTags">
         <Key ID="STR_ACE_NameTags_ShowNames">
@@ -44,7 +44,7 @@
             <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok nevének mutatása csak a kurzoron (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показать имена игроков только под курсором (при включенных именах)</Russian>
-            <Japanese>カーソルを合わせた時だけプレイヤ名を表示 (プレイヤ名が必要</Japanese>
+            <Japanese>カーソルを合わせた時だけプレイヤ名を表示 (プレイヤ名が必要)</Japanese>
             <Korean>커서로 지시할때만 플레이어 이름 표시(플레이어 이름 필요)</Korean>
             <Chinesesimp>仅在准心指到后显示玩家名称 (玩家必须有设定名称)</Chinesesimp>
             <Chinese>僅在準心指到後顯示玩家名稱 (玩家必須有設定名稱)</Chinese>
@@ -126,8 +126,8 @@
             <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
             <Japanese>音波形を表示 (プレイヤ名が必要)</Japanese>
             <Korean>음파 표시 (플레이어 이름 필요)</Korean>
-            <Chinesesimp>当玩家讲话时, 显示声波图案 (玩家必须有设定名称)</Chinesesimp>
-            <Chinese>當玩家講話時, 顯示聲波圖案 (玩家必須有設定名稱)</Chinese>
+            <Chinesesimp>当玩家讲话时，显示声波图案 (玩家必须有设定名称)</Chinesesimp>
+            <Chinese>當玩家講話時，顯示聲波圖案 (玩家必須有設定名稱)</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
             <English>Default Nametag Color (Non Group Members)</English>
@@ -188,10 +188,10 @@
             <Hungarian>Méterben megadott érték a játékosok nevének mutatására. Alapértelmezett: 5</Hungarian>
             <Russian>Дистанция в метрах, на которой отображаются имена игроков. По-умолчанию: 5</Russian>
             <Italian>Distanza in metri a cui sono visibili i nomi giocatori. Default: 5</Italian>
-            <Japanese>プレイヤの周り何メートルまで名札を表示できます。標準：5</Japanese>
+            <Japanese>プレイヤの周り何メートルまで名札を表示できます。標準: 5</Japanese>
             <Korean>플레이어 이름이 표시되는 미터. 기본설정: 5</Korean>
-            <Chinesesimp>设定名称在多少距离以内显示. 预设:5公尺</Chinesesimp>
-            <Chinese>設定名稱在多少距離以內顯示. 預設:5公尺</Chinese>
+            <Chinesesimp>设定名称在多少距离以内显示。预设:5公尺</Chinesesimp>
+            <Chinese>設定名稱在多少距離以內顯示。預設:5公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
             <English>Show name tags for AI?</English>
@@ -204,7 +204,7 @@
             <Hungarian>Névcímkék megjelenítése AI-nál?</Hungarian>
             <Russian>Показывать имена ботов?</Russian>
             <Italian>Mostra etichette nomi per IA?</Italian>
-            <Japanese>AI の名札も表示しますか？</Japanese>
+            <Japanese>AI の名札も表示しますか?</Japanese>
             <Korean>인공지능의 이름도 표시합니까?</Korean>
             <Chinesesimp>显示AI名称?</Chinesesimp>
             <Chinese>顯示AI名稱?</Chinese>
@@ -220,7 +220,7 @@
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
-            <Japanese>友軍の AI にも名前と階級を表示しますか？標準：強制しない</Japanese>
+            <Japanese>友軍の AI にも名前と階級を表示しますか? 標準: 強制しない</Japanese>
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示友军AI的名称和军阶? 预设: 不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
@@ -284,10 +284,10 @@
             <Hungarian>A legénységi adatok mutatása, alapértelmezett esetben a játékos által kiválasztható. Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать информацию об экипаже техники, или по-умолчанию, позволяет игрокам выбрать свою настройку. По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra informazioni sull'equipaggio del veicolo, oppure consenti di default di lasciare che siano i giocatori a scegliere. Default: Non Forzare</Italian>
-            <Japanese>車両の乗員を表示します。標準ではプレイヤ各々が選べられます。標準：強制しない</Japanese>
+            <Japanese>車両の乗員を表示します。標準ではプレイヤ各々が選べられます。標準: 強制しない</Japanese>
             <Korean>승무원 정보를 표시하거나 플레이어가 직접 고르게 냅둡니다. 기본설정: 강제하지 않음</Korean>
-            <Chinesesimp>显示载具成员讯息. 在预设的情况下, 系统允许玩家自己决定开关此讯息. 预设: 不显示</Chinesesimp>
-            <Chinese>顯示載具成員訊息. 在預設的情況下, 系統允許玩家自己決定開關此訊息. 預設: 不顯示</Chinese>
+            <Chinesesimp>显示载具成员讯息。在预设的情况下，系统允许玩家自己决定开关此讯息。预设: 不显示</Chinesesimp>
+            <Chinese>顯示載具成員訊息。在預設的情況下，系統允許玩家自己決定開關此訊息。預設: 不顯示</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
             <English>Show for Vehicles</English>
@@ -315,10 +315,10 @@
             <Russian>Показывать имя командира техники (только, если клиент включил отображение имен). По-умолчанию: Нет</Russian>
             <French>Afficher les étiquettes de nom pour les commandants de véhicule (uniquement si l'affichage est activé pour le client). Défaut: non</French>
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
-            <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準：無効</Japanese>
+            <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準: 無効</Japanese>
             <Korean>차량의 사령관의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화 할시에만 보입니다) 기본설정: 아니요</Korean>
-            <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名称 (仅当客户端的名称功能已启用). 预设: 关闭</Chinesesimp>
-            <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用). 預設: 關閉</Chinese>
+            <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名称 (仅当客户端的名称功能已启用)。预设: 关闭</Chinesesimp>
+            <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English>This module allows you to customize settings and range of Name Tags.</English>
@@ -333,8 +333,8 @@
             <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
             <Japanese>このモジュールは名札の表示範囲と設定を変更できます。</Japanese>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>这个模块允许您设定名称和显示范围等设定.</Chinesesimp>
-            <Chinese>這個模塊允許您設定名稱和顯示範圍等設定.</Chinese>
+            <Chinesesimp>这个模块允许您设定名称和显示范围等设定</Chinesesimp>
+            <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only on Cursor</English>
@@ -475,10 +475,10 @@
             <Hungarian>Mutassa a játékosok nevét és kezelje az aktivációjukat. Alapértelmezett: Engedélyezve</Hungarian>
             <Russian>Показывать имена игроков и установить их активацию. По-умолчанию: Включено</Russian>
             <Italian>Mostra nomi giocatori ed imposta la loro attivazione. Default: Abilitato</Italian>
-            <Japanese>プレイヤ名の表示と設定を有効化します。標準：有効</Japanese>
+            <Japanese>プレイヤ名の表示と設定を有効化します。標準: 有効</Japanese>
             <Korean>플레이어 이름의 표시와 설정을 활성화합니다. 기본설정: 활성화</Korean>
-            <Chinesesimp>显示玩家的名称并设置其启动方式. 预设: 启用</Chinesesimp>
-            <Chinese>顯示玩家的名稱並設置其啟動方式. 預設: 啟用</Chinese>
+            <Chinesesimp>显示玩家的名称并设置其启动方式。预设: 启用</Chinesesimp>
+            <Chinese>顯示玩家的名稱並設置其啟動方式。預設: 啟用</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
@@ -493,8 +493,8 @@
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
             <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。このオプションは TFAR と ACRE2 で動作します。</Japanese>
             <Korean>플레이어가 PTT로 말할시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을때만 적용됩니다.</Korean>
-            <Chinesesimp>当玩家使用按键发话时, 其头上的角色名称旁会显示声波的图案. 此功能可搭配TFAR、ACRE2等模组使用.</Chinesesimp>
-            <Chinese>當玩家使用按鍵發話時, 其頭上的角色名稱旁會顯示聲波的圖案. 此功能可搭配TFAR、ACRE2等模組使用.</Chinese>
+            <Chinesesimp>当玩家使用按键发话时，其头上的角色名称旁会显示声波的图案。此功能可搭配TFAR、ACRE2等模组使用。</Chinesesimp>
+            <Chinese>當玩家使用按鍵發話時，其頭上的角色名稱旁會顯示聲波的圖案。此功能可搭配TFAR、ACRE2等模組使用。</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>

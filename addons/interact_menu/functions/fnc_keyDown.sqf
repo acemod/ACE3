@@ -21,7 +21,7 @@ if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
 // Conditions: canInteract (these don't apply to zeus)
 if ((isNull curatorCamera) && {
-    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith))
+    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
 }) exitWith {false};
 
 while {dialog} do {
@@ -41,6 +41,7 @@ GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
+                      (!(isNull (ACE_controlledUAV select 0))) ||
                       visibleMap ||
                       (!isNull curatorCamera) ||
                       {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
@@ -93,12 +94,20 @@ GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (
 //Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (vehicle ACE_player != ACE_player) then {
-            GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
+        if (!(isNull (ACE_controlledUAV select 0))) then {
+            GVAR(menuDepthPath) = [["ACE_SelfActions", (ACE_controlledUAV select 0)]];
             GVAR(expanded) = true;
             GVAR(expandedTime) = diag_tickTime;
             GVAR(lastPath) = +GVAR(menuDepthPath);
             GVAR(startHoverTime) = -1000;
+        } else {
+            if (vehicle ACE_player != ACE_player) then {
+                GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
+                GVAR(expanded) = true;
+                GVAR(expandedTime) = diag_tickTime;
+                GVAR(lastPath) = +GVAR(menuDepthPath);
+                GVAR(startHoverTime) = -1000;
+            };
         };
     } else {
         GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];

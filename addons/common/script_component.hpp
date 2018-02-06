@@ -32,3 +32,5 @@
     "lino_exp", "int_lino_exp", "int_mat_exp", \
     "wood", "wood_int", "int_wood", "softwood_exp", "int_softwood_exp", "int_solidwood_exp" \
 ]
+
+#define DIG_SURFACE_WHITELIST ["grass", "grasstall_exp", "forest_exp"]

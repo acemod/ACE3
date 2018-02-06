@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ViewDistance">
         <Key ID="STR_ACE_ViewDistance_Module_DisplayName">
@@ -30,8 +30,8 @@
             <Italian>Consente di limitare la distanza visiva massima che può essere impostata dai giocatori.</Italian>
             <Japanese>プレイヤーへ最大の視界距離を制限できます。</Japanese>
             <Korean>플레이어가 볼 수 있는 최대 시야를 제한합니다.</Korean>
-            <Chinesesimp>允许玩家最大的可视距离.</Chinesesimp>
-            <Chinese>允許玩家最大的可視距離.</Chinese>
+            <Chinesesimp>允许玩家最大的可视距离</Chinesesimp>
+            <Chinese>允許玩家最大的可視距離</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_DisplayName">
             <English>Enable ACE viewdistance</English>
@@ -110,8 +110,8 @@
             <Italian>Limite per la distanza visiva del client impostato qui e può essere scavalcato dal modulo</Italian>
             <Japanese>クライアントへの視界距離の設定や、それをモジュールにより上書きできます</Japanese>
             <Korean>클라이언트의 시야를 이 모듈로 치환할 수 있습니다.</Korean>
-            <Chinesesimp>玩家的视距限制可在此设定, 也可透过模块改写</Chinesesimp>
-            <Chinese>玩家的視距限制可在此設定, 也可透過模塊改寫</Chinese>
+            <Chinesesimp>玩家的视距限制可在此设定，也可透过模块改写</Chinesesimp>
+            <Chinese>玩家的視距限制可在此設定，也可透過模塊改寫</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
@@ -174,8 +174,8 @@
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un veicolo terrestre.</Italian>
             <Japanese>プレイヤーが車両の時の視界距離を変更します。</Japanese>
             <Korean>플레이어가 차량 내부일 경우의 시야를 바꿀 수 있습니다.</Korean>
-            <Chinesesimp>改变玩家于地面载具内时的视野距离.</Chinesesimp>
-            <Chinese>改變玩家於地面載具內時的視野距離.</Chinese>
+            <Chinesesimp>改变玩家于地面载具内时的视野距离</Chinesesimp>
+            <Chinese>改變玩家於地面載具內時的視野距離</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_DisplayName">
             <English>Client View Distance (Air Vehicle)</English>
@@ -206,8 +206,8 @@
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un mezzo aereo.</Italian>
             <Japanese>プレイヤーが航空機に乗っている時の視界距離を変更します。</Japanese>
             <Korean>플레이어가 항공기 내부일 경우의 시야를 바꿀 수 있습니다.</Korean>
-            <Chinesesimp>改变玩家于空中载具内时的视野距离.</Chinesesimp>
-            <Chinese>改變玩家於空中載具內時的視野距離.</Chinese>
+            <Chinesesimp>改变玩家于空中载具内时的视野距离</Chinesesimp>
+            <Chinese>改變玩家於空中載具內時的視野距離</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_DisplayName">
             <English>Dynamic Object View Distance</English>
@@ -238,8 +238,8 @@
             <Italian>Imposta la distanza visiva degli oggetti come un coefficiente basato sulla distanza visiva oppure basato sul campo visivo.</Italian>
             <Japanese>視野角を元にするか、視界距離によるオブジェクト描画距離を決定します。視野角を元にするオプションを有効化した場合、視野角により最低と最高値が変動します。</Japanese>
             <Korean>설정된 시야 혹은 시계(FoV)에 계수를 적용해 물체 시야를 적용합니다. 시계를 바탕으로 하는 옵션을 활성화할 경우 시계에 의한 최저와 최고치가 변동됩니다.</Korean>
-            <Chinesesimp>设定物件可被观察的距离, 透过视野距离或是视野角度来决定.</Chinesesimp>
-            <Chinese>設定物件可被觀察的距離, 透過視野距離或是視野角度來決定.</Chinese>
+            <Chinesesimp>设定物件可被观察的距离，透过视野距离或是视野角度来决定。</Chinesesimp>
+            <Chinese>設定物件可被觀察的距離，透過視野距離或是視野角度來決定。</Chinese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_off">
             <English>Off</English>

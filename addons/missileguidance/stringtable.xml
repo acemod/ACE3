@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Title">
@@ -30,8 +30,8 @@
             <Czech>Pokočilé navádění raket (AMG) poskytuje několik vylepšení pro lepší zaměření a následnou střelbu. Je to prvek vyžadovaný u typu zbraní jako jsou rakety.</Czech>
             <Japanese>高度なミサイルの誘導、または AMG はミサイルの捕捉と発射に複数の強化をあたえます。これはミサイルの種類によって、枠組みを必要とします。</Japanese>
             <Korean>고급 미사일 유도 혹은 AMG 는 표적 획득 및 발사를 위한 여러 기능을 제공합니다. 미사일 종류에따라 체계가 필요합니다.</Korean>
-            <Chinesesimp>进阶飞弹制导增强了多种导弹锁定和射击的能力. 此系统适用于所有飞弹类型的武器.</Chinesesimp>
-            <Chinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力. 此系統適用於所有飛彈類型的武器.</Chinese>
+            <Chinesesimp>进阶飞弹制导增强了多种导弹锁定和射击的能力。此系统适用于所有飞弹类型的武器。</Chinesesimp>
+            <Chinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力。此系統適用於所有飛彈類型的武器。</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
@@ -44,7 +44,7 @@
             <Portuguese>Míssil Hydra-70 DAGR </Portuguese>
             <Hungarian>Hydra-70 DAGR rakéta</Hungarian>
             <Russian>Hydra-70 DAGR</Russian>
-            <Japanese>Hydra-70 DAGR ミサイル</Japanese>
+            <Japanese>ハイドラ-70 DAGR ミサイル</Japanese>
             <Korean>Hydra-70 DAGR 미사일</Korean>
             <Chinesesimp>九头蛇-70 直接攻击导引飞弹</Chinesesimp>
             <Chinese>九頭蛇-70 直接攻擊導引飛彈</Chinese>
@@ -76,10 +76,10 @@
             <Portuguese>Míssil guiado a laser Hydra-70 DAGR </Portuguese>
             <Hungarian>Hydra-70 DAGR lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hydra-70 DAGR</Russian>
-            <Japanese>Hydra-70 DAGR レーザ誘導ミサイル</Japanese>
+            <Japanese>ハイドラ-70 DAGR レーザ誘導ミサイル</Japanese>
             <Korean>Hydra-70 DAGR 레이저 유도 미사일</Korean>
-            <Chinesesimp>九头蛇-70 直接攻击雷射导引飞弹e</Chinesesimp>
-            <Chinese>九頭蛇-70 直接攻擊雷射導引飛彈e</Chinese>
+            <Chinesesimp>九头蛇-70 直接攻击雷射导引飞弹</Chinesesimp>
+            <Chinese>九頭蛇-70 直接攻擊雷射導引飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -92,7 +92,7 @@
             <Portuguese>Míssil Hellfire II AGM-114K</Portuguese>
             <Hungarian>Hellfire II AGM-114K rakéta</Hungarian>
             <Russian>Hellfire II AGM-114K</Russian>
-            <Japanese>Hellfire II AGM-114K ミサイル</Japanese>
+            <Japanese>ヘルファイア II AGM-114K ミサイル</Japanese>
             <Korean>Hellfire II AGM-114K 미사일</Korean>
             <Chinesesimp>地狱火II型 AGM-114K 导弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 導彈</Chinese>
@@ -124,7 +124,7 @@
             <Portuguese>Míssil guiado a laser Hellfire II AGM-114K</Portuguese>
             <Hungarian>Hellfire II AGM-114K lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>
-            <Japanese>Hellfire II AGM-114K レーザ誘導ミサイル</Japanese>
+            <Japanese>ヘルファイア II AGM-114K レーザ誘導ミサイル</Japanese>
             <Korean>Hellfire II AGM-114K 레이저 유도 미사일</Korean>
             <Chinesesimp>地狱火II型 AGM-114K 雷射导引飞弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 雷射導引飛彈</Chinese>
@@ -175,6 +175,7 @@
             <Japanese>プレイヤーと AI</Japanese>
             <Chinesesimp>玩家和AI</Chinesesimp>
             <Chinese>玩家和AI</Chinese>
+            <Korean>플레이어와 AI</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Cycle Fire Mode</English>

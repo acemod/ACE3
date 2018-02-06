@@ -1,5 +1,17 @@
 
 class CfgWeapons {
+    class NVGoggles;
+    class rhsusf_ANPVS_14: NVGoggles { // Monocular
+        modelOptics = "";
+        EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
+        EGVAR(nightvision,bluRadius) = 0.13;
+    };
+    class rhsusf_ANPVS_15: rhsusf_ANPVS_14 { // Binocular (same as base)
+        modelOptics = "";        
+        EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_binos_4096.paa);
+        EGVAR(nightvision,bluRadius) = 0.15;
+    };
+
     class Pistol_Base_F;
     class Rifle_Base_F;
     class srifle_EBR_F;
@@ -13,26 +25,27 @@ class CfgWeapons {
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
-        ACE_RailHeightAboveBore = 3.8;
+        ACE_RailHeightAboveBore = 4.18639;
     };
     class rhs_weap_XM2010_Base_F: Rifle_Base_F {
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 609.6;
         ACE_Overheating_dispersion = 0.75;
-        ACE_RailHeightAboveBore = 3.6;
+        ACE_RailHeightAboveBore = 3.1028;
     };
     class rhs_weap_m24sws: rhs_weap_XM2010_Base_F {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
-        ACE_RailHeightAboveBore = 1.8;
+        ACE_RailHeightAboveBore = 2.41891;
     };
     class rhs_weap_m40a5: rhs_weap_XM2010_Base_F {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 635.0; // 25"
-        ACE_RailHeightAboveBore = 2.6;
+        ACE_RailHeightAboveBore = 2.46368;
     };
     class arifle_MX_Base_F;
     class rhs_weap_m4_Base: arifle_MX_Base_F {
+        ACE_RailHeightAboveBore = 2.56518;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.3;
         class M203_GL: UGL_F {
@@ -42,6 +55,7 @@ class CfgWeapons {
     };
     class rhs_weap_m4a1;
     class rhs_weap_hk416d10: rhs_weap_m4a1 {
+        ACE_RailHeightAboveBore = 3.56139;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 254;
     };
@@ -50,31 +64,37 @@ class CfgWeapons {
         ACE_barrelLength = 368.3;
     };
     class rhs_weap_m27iar: rhs_weap_m4a1 {
+        ACE_RailHeightAboveBore = 3.56139;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 419.1;
     };
     class rhs_weap_m4a1_blockII;
     class rhs_weap_mk18: rhs_weap_m4a1_blockII {
+        ACE_RailHeightAboveBore = 2.6068;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 261.62;
     };
     class rhs_weap_m16a4: rhs_weap_m4_Base {
+        ACE_RailHeightAboveBore = 2.59324;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 508.0;
     };
     class rhs_weap_lmg_minimi_railed; // Rifle_Base_F - scope = private;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
+        ACE_RailHeightAboveBore = 4.11044;
         ACE_barrelLength = 348;
         ACE_barrelTwist = 177.8;
         ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m249_pip_L: rhs_weap_lmg_minimi_railed {
+        ACE_RailHeightAboveBore = 4.34899;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
         ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m240_base; // Rifle_Long_Base_F
     class rhs_weap_m240B: rhs_weap_m240_base {
+        ACE_RailHeightAboveBore = 4.3987;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 629.92;
         ACE_Overheating_allowSwapBarrel = 1;
@@ -83,17 +103,17 @@ class CfgWeapons {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;
-        ACE_RailHeightAboveBore = 3.3;
+        ACE_RailHeightAboveBore = 3.08341;
     };
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
-        ACE_RailHeightAboveBore = 3.4;
+        ACE_RailHeightAboveBore = 3.13162;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 508.0;
-        ACE_RailHeightAboveBore = 3.4;
+        ACE_RailHeightAboveBore = 3.13689;
     };
     class rhs_weap_M590_5RD: Rifle_Base_F {
         ACE_barrelTwist = 0.0;
@@ -107,6 +127,7 @@ class CfgWeapons {
     };
     class SMG_02_base_F;
     class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
+        ACE_RailHeightAboveBore = 5;
         ACE_barrelTwist = 160.0;
         ACE_barrelLength = 180.0;
     };
@@ -143,10 +164,10 @@ class CfgWeapons {
         };
     };
     class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
-        ACE_ScopeHeightAboveRail = 2.4;
+        ACE_ScopeHeightAboveRail = 2.62567;
     };
     class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
-        ACE_ScopeHeightAboveRail = 3.8;
+        ACE_ScopeHeightAboveRail = 3.86377;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
@@ -156,11 +177,8 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_LEUPOLDMK4_2_d: rhsusf_acc_LEUPOLDMK4_2 {
-        ACE_ScopeHeightAboveRail = 3.8;
-    };
     class rhsusf_acc_premier: rhsusf_acc_LEUPOLDMK4_2 {
-        ACE_ScopeHeightAboveRail = 5.4;
+        ACE_ScopeHeightAboveRail = 5.26066;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
@@ -171,10 +189,10 @@ class CfgWeapons {
         };
     };
     class rhsusf_acc_premier_low: rhsusf_acc_premier {
-        ACE_ScopeHeightAboveRail = 4.0;
+        ACE_ScopeHeightAboveRail = 3.90899;
     };
     class rhsusf_acc_premier_anpvs27: rhsusf_acc_premier {
-        ACE_ScopeHeightAboveRail = 5.4;
+        ACE_ScopeHeightAboveRail = 5.25066;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_nvg {
@@ -185,7 +203,7 @@ class CfgWeapons {
         };
     };
     class rhsusf_acc_M8541: rhsusf_acc_premier { // http://www.schmidtundbender.de/en/products/police-and-military-forces/3-12x50-pm-iilpmtc.html
-        ACE_ScopeHeightAboveRail = 4.0;
+        ACE_ScopeHeightAboveRail = 4.2235;
         ACE_ScopeAdjust_Vertical[] = {0, 22};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
@@ -200,7 +218,7 @@ class CfgWeapons {
         };
     };
     class rhsusf_acc_M8541_low: rhsusf_acc_M8541 {
-        ACE_ScopeHeightAboveRail = 3.0;
+        ACE_ScopeHeightAboveRail = 2.9789;
     };
     // RHS lauchers
     class rhs_weap_fgm148: launch_O_Titan_F {
@@ -212,7 +230,17 @@ class CfgWeapons {
         lockedTargetSound[] = {"",0,1};
     };
 
-
+    class Launcher_Base_F;
+    class rhs_weap_smaw: Launcher_Base_F {
+        ace_reloadlaunchers_enabled = 1;
+        ace_overpressure_angle = 45;
+    };
+    class rhs_weap_maaws: Launcher_Base_F {
+        ace_reloadlaunchers_enabled = 1;
+        ace_overpressure_range = 15;
+        ace_overpressure_angle = 70;
+        ace_overpressure_damage = 0.75;
+    };
 
     #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
     #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
@@ -371,12 +399,7 @@ class CfgWeapons {
     };
 
 
-    class H_PilotHelmetHeli_B;
-    class H_CrewHelmetHeli_B;
-    class rhsusf_hgu56p: H_PilotHelmetHeli_B {
-        HEARING_PROTECTION_VICCREW
-    };
-    class rhsusf_hgu56p_mask: H_CrewHelmetHeli_B {
+    class rhsusf_hgu56p: rhsusf_opscore_01 {
         HEARING_PROTECTION_VICCREW
     };
 

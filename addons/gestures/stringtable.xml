@@ -1,6 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gestures">
+        <Key ID="STR_ACE_Gestures_ACEKeybindCategoryGestures">
+            <English>ACE Gestures</English>
+            <German>ACE Gesten</German>
+            <Polish>ACE Gesty</Polish>
+            <Czech>ACE Posunky</Czech>
+            <French>ACE Gestes</French>
+            <Hungarian>ACE Kézjelek</Hungarian>
+            <Italian>ACE Gesti</Italian>
+            <Portuguese>ACE Gestos</Portuguese>
+            <Russian>ACE Жесты</Russian>
+            <Spanish>ACE Gestos</Spanish>
+            <Japanese>ACE ジェスチャー</Japanese>
+            <Korean>ACE 수신호</Korean>
+            <Chinesesimp>ACE 手势</Chinesesimp>
+            <Chinese>ACE 手勢</Chinese>
+        </Key>
         <Key ID="STR_ACE_Gestures_Name">
             <English>ACE Gestures</English>
             <German>ACE Gesten</German>
@@ -8,7 +24,7 @@
             <Czech>ACE Posunky</Czech>
             <French>ACE Gestes</French>
             <Hungarian>ACE Kézjelek</Hungarian>
-            <Italian>Gesti ACE</Italian>
+            <Italian>ACE Gesti</Italian>
             <Portuguese>ACE Gestos</Portuguese>
             <Russian>ACE Жесты</Russian>
             <Spanish>ACE Gestos</Spanish>
@@ -277,8 +293,8 @@
             <Russian>Показать жесты в меню взамиодейтсвия с собой или только использовать горячие клавиши, или полностью отключить</Russian>
             <Japanese>キー操作や同時使用を無効化している場合はセルフ インタラクション メニュ上でジェスチャーを表示します</Japanese>
             <Korean>수신호를 상호작용 메뉴에서 보여주거나 혹은 단축키를 지정하거나 아니면 아예 사용하지 않습니다.</Korean>
-            <Chinesesimp>显示手势选项在自己的互动选单上, 或只利用键盘来使用手势, 或完全禁用</Chinesesimp>
-            <Chinese>顯示手勢選項在自己的互動選單上, 或只利用鍵盤來使用手勢, 或完全禁用</Chinese>
+            <Chinesesimp>显示手势选项在自己的互动选单上，或只利用键盘来使用手势，或完全禁用</Chinesesimp>
+            <Chinese>顯示手勢選項在自己的互動選單上，或只利用鍵盤來使用手勢，或完全禁用</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>

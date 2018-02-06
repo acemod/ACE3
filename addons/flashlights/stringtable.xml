@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Flashlights">
         <Key ID="STR_ACE_Flashlights_MX991_DisplayName">
@@ -11,7 +11,7 @@
             <Spanish>Fulton MX-991</Spanish>
             <Italian>Fulton MX-991</Italian>
             <French>Fulton MX-991</French>
-            <Japanese>Fulton MX-991</Japanese>
+            <Japanese>フルトン MX-991</Japanese>
             <Korean>Fulton MX-991</Korean>
             <Chinesesimp>Fulton MX-991</Chinesesimp>
             <Chinese>Fulton MX-991</Chinese>
@@ -28,8 +28,8 @@
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
             <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
-            <Chinesesimp>拥有红色滤光片的手电筒. 用来照亮地图.</Chinesesimp>
-            <Chinese>擁有紅色濾光片的手電筒. 用來照亮地圖.</Chinese>
+            <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
+            <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -41,7 +41,7 @@
             <Spanish>Maglite XL50</Spanish>
             <Italian>Maglite XL50</Italian>
             <French>Maglite XL50</French>
-            <Japanese>Maglite XL50</Japanese>
+            <Japanese>マグライト XL50</Japanese>
             <Korean>Maglite XL50</Korean>
             <Chinesesimp>Maglite XL50</Chinesesimp>
             <Chinese>Maglite XL50</Chinese>
@@ -58,8 +58,8 @@
             <French>Mini lampe torche blanche. Pour utilisation sur carte.</French>
             <Japanese>白色光の小さなフラッシュライト。地図上でつかいます。</Japanese>
             <Korean>하얀색 조그마한 손전등. 지도를 비출때 씁니다.</Korean>
-            <Chinesesimp>白色的迷你手电筒. 用来照亮地图.</Chinesesimp>
-            <Chinese>白色的迷你手電筒. 用來照亮地圖.</Chinese>
+            <Chinesesimp>白色的迷你手电筒。用来照亮地图。</Chinesesimp>
+            <Chinese>白色的迷你手電筒。用來照亮地圖。</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -78,7 +78,7 @@
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
-            <German>Tachenlampe mit rotem Filter zum Kartenlesen.</German>
+            <German>Taschenlampe mit rotem Filter zum Kartenlesen.</German>
             <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy.</Polish>
             <Portuguese>Lanterna com filtro vermelho. Para uso no mapa.</Portuguese>
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
@@ -88,8 +88,8 @@
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
             <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
-            <Chinesesimp>拥有红色滤光片的手电筒. 用来照亮地图.</Chinesesimp>
-            <Chinese>擁有紅色濾光片的手電筒. 用來照亮地圖.</Chinese>
+            <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
+            <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
         </Key>
     </Package>
 </Project>

@@ -16,7 +16,6 @@
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_effectName", "", [""]], ["_ID", "", [""]], ["_set", true, [false]]];
@@ -32,7 +31,7 @@ if (isNull _object) exitWith {TRACE_1("null",_object);};
 
 [_object, true] call FUNC(statusEffect_resetVariables); //Check for mismatch, and set object ref
 
-//check ID case and set globaly if not already set:
+//check ID case and set globally if not already set:
 _ID = toLower _ID;
 private _statusReasons = missionNamespace getVariable [(format [QGVAR(statusEffects_%1), _effectName]), []];
 private _statusIndex = _statusReasons find _ID;
@@ -62,9 +61,13 @@ if (_set isEqualTo (_effectBoolArray select _statusIndex)) exitWith {
 
 TRACE_2("Setting to new value",_set,_effectBoolArray select _statusIndex);
 _effectBoolArray set [_statusIndex, _set];
-_effectNumber = _effectBoolArray call FUNC(toBitmask); //Convert array back to number
+private _newEffectNumber = _effectBoolArray call FUNC(toBitmask); //Convert array back to number
 
-TRACE_2("Saving globaly",_effectVarName,_effectNumber);
-_object setVariable [_effectVarName, _effectNumber, true];
+TRACE_2("Saving globally",_effectVarName,_newEffectNumber);
+_object setVariable [_effectVarName, _newEffectNumber, true];
 
-[_object, _effectName] call FUNC(statusEffect_sendEffects);
+if (_effectNumber == 0 || {_newEffectNumber == 0}) then {
+    [_object, _effectName] call FUNC(statusEffect_sendEffects);
+} else {
+    LOG("not sending more than once");
+};

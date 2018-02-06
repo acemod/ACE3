@@ -201,7 +201,7 @@
             <Chinesesimp>修改旋转地图工具的按键</Chinesesimp>
             <Chinese>修改旋轉地圖工具的按鍵</Chinese>
         </Key>
-        <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
+        <Key ID="STR_ACE_MapTools_drawStraightLines_displayName">
             <English>Draw straight lines with maptools</English>
             <Japanese>マップ ツールを使って直線を書く</Japanese>
             <German>Zeichne gerade Linien mit dem Kartenwerkzeug</German>
@@ -212,7 +212,7 @@
             <Chinesesimp>使用地图工具来绘制直线</Chinesesimp>
             <Chinese>使用地圖工具來繪製直線</Chinese>
         </Key>
-        <Key ID="STR_ACE_MapTools_drawStaightLines_description">
+        <Key ID="STR_ACE_MapTools_drawStraightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
             <Japanese>マップ ツールの端から直線を書きます。メモ：線の中央ホバーすると削除します。</Japanese>
             <German>Zeichne gerade Linien am Rand des Kartenwerkzeugs. Hinweis: zum Löschen über den Mittelpunkt der Linie fahren</German>
@@ -220,8 +220,8 @@
             <Polish>Przeciągnij po krawędzi narzędzi nawigacyjnych by narysować prostą linię. Uwaga: aby usunąć linię - nalezy ustawić kursor nad jej środkiem.</Polish>
             <French>Utiliser le bord des outils de navigation pour tracer des lignes droites. Note: l'on doit survoler le milieu du trait pour pouvoir le supprimer.</French>
             <Italian>Disegna sul bordo degli strumenti di mappatura per disegnare linee dritte. Nota: Deve spostarsi al centro per essere cancellato.</Italian>
-            <Chinesesimp>使用地图工具的边缘来绘制直线. 备注: 要删除直线时, 请把滑鼠移动到该线条的中央即可删除该线.</Chinesesimp>
-            <Chinese>使用地圖工具的邊緣來繪製直線. 備註: 要刪除直線時, 請把滑鼠移動到該線條的中央即可刪除該線.</Chinese>
+            <Chinesesimp>使用地图工具的边缘来绘制直线。备注: 要删除直线时，请把滑鼠移动到该线条的中央即可删除该线。</Chinesesimp>
+            <Chinese>使用地圖工具的邊緣來繪製直線。備註: 要刪除直線時，請把滑鼠移動到該線條的中央即可刪除該線。</Chinese>
         </Key>
     </Package>
 </Project>

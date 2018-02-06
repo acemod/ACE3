@@ -1,6 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
+        <Key ID="STR_ACE_Respawn_DisplayName">
+            <English>Respawn</English>
+            <Italian>Riapparizione</Italian>
+            <Chinese>重生</Chinese>
+            <Chinesesimp>重生</Chinesesimp>
+            <Japanese>リスポン</Japanese>
+        </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
             <French>Déploiement dans 5 secondes...</French>
@@ -108,10 +115,10 @@
             <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
             <Czech>Rallypoint Západ (Základna)</Czech>
             <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
-            <Japanese>ラリーポイント ウエスト (ベース)</Japanese>
-            <Korean>서쪽 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント 同盟軍 (ベース)</Japanese>
             <Chinesesimp>蓝方集合点 (基地)</Chinesesimp>
             <Chinese>藍方集合點 (基地)</Chinese>
+            <Korean>청군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -124,10 +131,10 @@
             <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
             <Czech>Ralllypoint Východ (Základna)</Czech>
             <Portuguese>Ponto de encontro Lest (Base)</Portuguese>
-            <Japanese>ラリーポイント イースト (ベース)</Japanese>
-            <Korean>동쪽 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント OPFOR軍 (ベース)</Japanese>
             <Chinesesimp>红方集合点 (基地)</Chinesesimp>
             <Chinese>紅方集合點 (基地)</Chinese>
+            <Korean>대항군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -140,10 +147,10 @@
             <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
             <Czech>Rallypoint Nezávislý (Základna)</Czech>
             <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
-            <Japanese>ラリーポイント インデペンデント (ベース)</Japanese>
-            <Korean>독립 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント 独立軍 (ベース)</Japanese>
             <Chinesesimp>独立方集合点 (基地)</Chinesesimp>
             <Chinese>獨立方集合點 (基地)</Chinese>
+            <Korean>독립군 집결지 (기지)</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -156,10 +163,10 @@
             <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
             <Czech>Rallypoint Západ</Czech>
             <Portuguese>Ponto de encontro Oeste</Portuguese>
-            <Japanese>ラリーポイント ウエスト</Japanese>
-            <Korean>서쪽 집결지</Korean>
+            <Japanese>ラリーポイント 同盟軍</Japanese>
             <Chinesesimp>蓝方集合点</Chinesesimp>
             <Chinese>藍方集合點</Chinese>
+            <Korean>청군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -172,10 +179,10 @@
             <Hungarian>Gyülekezőpont, Kelet</Hungarian>
             <Czech>Rallypoint Východ</Czech>
             <Portuguese>Ponto de encontro Leste</Portuguese>
-            <Japanese>ラリーポイント イースト</Japanese>
-            <Korean>동쪽 집결지</Korean>
+            <Japanese>ラリーポイント OPFOR軍</Japanese>
             <Chinesesimp>红方集合点</Chinesesimp>
             <Chinese>紅方集合點</Chinese>
+            <Korean>대항군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -188,10 +195,10 @@
             <Hungarian>Gyülekezőpont, Független</Hungarian>
             <Czech>Rallypoint Nezávislý</Czech>
             <Portuguese>Ponto de encontro Independente</Portuguese>
-            <Japanese>ラリーポイント インデペンデント</Japanese>
-            <Korean>독립 집결지</Korean>
+            <Japanese>ラリーポイント 独立軍</Japanese>
             <Chinesesimp>独立方集合点</Chinesesimp>
             <Chinese>獨立方集合點</Chinese>
+            <Korean>독립군 집결지</Korean>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
@@ -220,7 +227,7 @@
             <Hungarian>Felszerelés elmentése?</Hungarian>
             <Russian>Сохранять снаряжение?</Russian>
             <Italian>Salva Equipaggiamento?</Italian>
-            <Japanese>装備を保存？</Japanese>
+            <Japanese>装備を保存?</Japanese>
             <Korean>장비를 저장합니까?</Korean>
             <Chinesesimp>储存装备?</Chinesesimp>
             <Chinese>儲存裝備?</Chinese>
@@ -236,7 +243,7 @@
             <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
             <Russian>Возрождать солдата с тем же снаряжением, которое было на нем при смерти?</Russian>
             <Italian>Respawna con l'equipaggiamento che il soldato aveva appena prima di morire?</Italian>
-            <Japanese>ユニットが死ぬ前に持っていた装備でリスポンしますか？</Japanese>
+            <Japanese>ユニットが死ぬ前に持っていた装備でリスポンしますか?</Japanese>
             <Korean>죽기 전에 가지고 있던 장비로 재배치합니까?</Korean>
             <Chinesesimp>是否在重生时载入死亡前的装备?</Chinesesimp>
             <Chinese>是否在重生時載入死亡前的裝備?</Chinese>
@@ -252,7 +259,7 @@
             <Hungarian>Holttestek eltávolítása?</Hungarian>
             <Russian>Удалять трупы?</Russian>
             <Italian>Rimuovi corpi?</Italian>
-            <Japanese>死体を削除？</Japanese>
+            <Japanese>死体を削除?</Japanese>
             <Korean>시체를 제거합니까?</Korean>
             <Chinesesimp>删除尸体?</Chinesesimp>
             <Chinese>刪除屍體?</Chinese>
@@ -268,10 +275,17 @@
             <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
             <Russian>Удалять трупы игроков после дисконнекта?</Russian>
             <Italian>Rimuovi i corpi dei giocatori quando si disconnettono?</Italian>
-            <Japanese>切断後はプレイヤーの死体を削除しますか？</Japanese>
+            <Japanese>切断後はプレイヤーの死体を削除しますか?</Japanese>
             <Korean>접속이 끊긴 플레이어의 시체를 제거합니까?</Korean>
             <Chinesesimp>要删除已离线的玩家尸体吗?</Chinesesimp>
             <Chinese>要刪除已離線的玩家屍體嗎?</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
+            <English>Body remove timer</English>
+            <Italian>Timer rimozione corpo</Italian>
+            <Chinese>屍體移除計時器</Chinese>
+            <Chinesesimp>尸体移除计时器</Chinesesimp>
+            <Japanese>死体削除タイマー</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
@@ -283,10 +297,10 @@
             <French>Ce module permet de régler les options de Respawn</French>
             <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
             <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
-            <Japanese>あなたが設定した ACE 機能をリスポンへ設定できます。</Japanese>
+            <Japanese>このモジュールを有効化するとリスポンへ ACE 機能を設定できます。</Japanese>
             <Korean>이 모듈은 ACE 재배치의 자세한 설정을 변결할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>该模块使您可以设定ACE的重生功能.</Chinesesimp>
-            <Chinese>該模塊使您可以設定ACE的重生功能.</Chinese>
+            <Chinesesimp>该模块使您可以设定ACE的重生功能</Chinesesimp>
+            <Chinese>該模塊使您可以設定ACE的重生功能</Chinese>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
@@ -316,8 +330,8 @@
             <Spanish>El usar este módulo, todas las muertes por fuego amigo serán indicadas en el chat.</Spanish>
             <Japanese>もし友軍誤射による死者が出た場合は、チャットにてその旨を表示します。</Japanese>
             <Korean>이 모듈은 미션 중 아군사격으로 인한 사망자 발생시 채팅창에 메세지를 표시해줍니다.</Korean>
-            <Chinesesimp>摆放此模块后, 当有发生友军误击致死的事件, 会显示提示讯息在聊天视窗中.</Chinesesimp>
-            <Chinese>擺放此模塊後, 當有發生友軍誤擊致死的事件, 會顯示提示訊息在聊天視窗中.</Chinese>
+            <Chinesesimp>摆放此模块后，当有发生友军误击致死的事件，会显示提示讯息在聊天视窗中。</Chinesesimp>
+            <Chinese>擺放此模塊後，當有發生友軍誤擊致死的事件，會顯示提示訊息在聊天視窗中。</Chinese>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
@@ -347,8 +361,8 @@
             <French>Ce module vous permet d'utiliser les "rally points" auxquels vous pouvez vous téléporter rapidement depuis un drapeau à la base. Il nécessite le placement d'objets spéciaux sur la carte - base et drapeau, disponibles dans la catégorie Vide -&gt; ACE Respawn.</French>
             <Japanese>ミッションでベースから素早く移動できるラリーポイントを使えるようにします。ゲーム内に専用オブジェクトとなるベースとフラッグを設置している必要があります。両オブジェクトは Empty 下の ACE リスポンから設置できます。</Japanese>
             <Korean>이 모듈은 미션 중에 기지 깃발에서 집결지로 빠르게 텔레포트 시켜주는 역활을 합니다. 지도 상에 기지 및 깃발이 필요합니다. 두 가지 모두 Empty-&gt;ACE Respawn 카테고리에서 찾을 수 있습니다.</Korean>
-            <Chinesesimp>摆放此模块后, 你将能在任务中布署集合点, 使你可以快速往返基地与前线. 要使用本功能, 请记得放上空物件-&gt;ACE 重生里面的基地与旗帜.</Chinesesimp>
-            <Chinese>擺放此模塊後, 你將能在任務中佈署集合點, 使你可以快速往返基地與前線. 要使用本功能, 請記得放上空物件-&gt;ACE 重生裡面的基地與旗幟.</Chinese>
+            <Chinesesimp>摆放此模块后，你将能在任务中布署集合点，使你可以快速往返基地与前线。要使用本功能，请记得放上空物件-&gt;ACE 重生里面的基地与旗帜。</Chinesesimp>
+            <Chinese>擺放此模塊後，你將能在任務中佈署集合點，使你可以快速往返基地與前線。要使用本功能，請記得放上空物件-&gt;ACE 重生裡面的基地與旗幟。</Chinese>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>

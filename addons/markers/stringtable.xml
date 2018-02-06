@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Markers">
         <Key ID="STR_ACE_Markers_MarkerDirection">
@@ -12,10 +12,73 @@
             <Hungarian>Irány: %1°</Hungarian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção %1</Portuguese>
-            <Japanese>方位：%1°</Japanese>
+            <Japanese>方位: %1°</Japanese>
             <Korean>방위: %1°</Korean>
             <Chinesesimp>方位: %1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Markers_Module_DisplayName">
+            <English>Markers</English>
+            <German>Markierungen</German>
+            <Japanese>マーカー</Japanese>
+            <Italian>Marcatori</Italian>
+            <Chinese>標誌</Chinese>
+            <Chinesesimp>标志</Chinesesimp>
+            <Korean>맵마커</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction">
+            <English>Allow moving markers for</English>
+            <German>Erlaube Marker zu bewegen für</German>
+            <Japanese>次ユーザーにマーカー移動を許可</Japanese>
+            <Korean>마커 이동 허가</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Description">
+            <English>Restricts which players are able to move markers while holding the Alt key.</English>
+            <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
+            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をさせられるか制限できます。</Japanese>
+            <Korean>Alt 키를 누른 상태에서 마커를 움직일 수있는 플레이어를 제한합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
+            <English>Nobody</English>
+            <German>Niemand</German>
+            <Japanese>不許可</Japanese>
+            <Korean>비활성</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_All">
+            <English>All players</English>
+            <German>Alle Spieler</German>
+            <Japanese>全プレイヤー</Japanese>
+            <Italian>Tutti i giocatori</Italian>
+            <Chinese>所有玩家</Chinese>
+            <Chinesesimp>所有玩家</Chinesesimp>
+            <Korean>모든 플레이어</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
+            <English>Admins</English>
+            <German>Admins</German>
+            <Japanese>管理者</Japanese>
+            <Italian>Amministratori</Italian>
+            <Chinese>管理員</Chinese>
+            <Chinesesimp>管理员</Chinesesimp>
+            <Korean>관리자</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
+            <English>Group leaders</English>
+            <German>Gruppenführer</German>
+            <Japanese>グループ リーダー</Japanese>
+            <Italian>Capigruppo</Italian>
+            <Chinese>小隊長</Chinese>
+            <Chinesesimp>小队长</Chinesesimp>
+            <Korean>분대장</Korean>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
+            <English>Group leaders and Admins</English>
+            <German>Gruppenführer und Admins</German>
+            <Japanese>グループ リーダーと管理者</Japanese>
+            <Italian>Capigruppo e Amministratori</Italian>
+            <Chinese>小隊長與管理員</Chinese>
+            <Chinesesimp>小队长与管理员</Chinesesimp>
+            <Korean>분대장과 관리자</Korean>
         </Key>
     </Package>
 </Project>

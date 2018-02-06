@@ -28,7 +28,7 @@
             <Hungarian>A lőszer ellenőrzése az új tárad behelyezésekor újratöltés közben.</Hungarian>
             <Italian>Controlla le munizioni rimanenti nel caricatore in fase di cambio caricatore.</Italian>
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
-            <Japanese>あたらしく装填された弾倉の弾薬を確認します。</Japanese>
+            <Japanese>新しく装填された弾倉の弾薬を確認します。</Japanese>
             <Korean>재장전시 새탄창에 있는 탄약을 확인합니다.</Korean>
             <Chinesesimp>在重新装填时检查新弹匣上的弹药.</Chinesesimp>
             <Chinese>在重新裝填時檢查新彈匣上的彈藥.</Chinese>
@@ -76,7 +76,7 @@
             <Hungarian>Töltényheveder összekötése</Hungarian>
             <Italian>Attacca la tracolla</Italian>
             <Portuguese>Ligar cintos de munição</Portuguese>
-            <Japanese>ベルト リンク</Japanese>
+            <Japanese>ベルトをつなげる</Japanese>
             <Korean>벨트 연결</Korean>
             <Chinesesimp>连接弹链</Chinesesimp>
             <Chinese>連接彈鏈</Chinese>
@@ -92,7 +92,7 @@
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
             <Italian>Attaccando la tracolla...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
-            <Japanese>ベルトをつなげている・・・</Japanese>
+            <Japanese>ベルトをつなげています・・・</Japanese>
             <Korean>벨트 연결중...</Korean>
             <Chinesesimp>连接弹链中...</Chinesesimp>
             <Chinese>連接彈鏈中...</Chinese>

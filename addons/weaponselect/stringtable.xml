@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
@@ -30,8 +30,8 @@
             <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
             <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
             <Korean>수류탄 투척시 화면에 문자나 힌트를 표시합니다.</Korean>
-            <Chinesesimp>投掷手榴弹时显示提示讯息.</Chinesesimp>
-            <Chinese>投擲手榴彈時顯示提示訊息.</Chinese>
+            <Chinesesimp>投掷手榴弹时显示提示讯息。</Chinesesimp>
+            <Chinese>投擲手榴彈時顯示提示訊息。</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
@@ -364,10 +364,18 @@
             <Russian>Пустить дымовую завесу</Russian>
             <Italian>Lancia fumogeno</Italian>
             <Portuguese>Lançador de fumaça</Portuguese>
-            <Japanese>煙幕発射機を発射</Japanese>
+            <Japanese>発煙弾発射機を発射</Japanese>
             <Korean>연막발사기 박사</Korean>
             <Chinesesimp>发射烟雾发射器</Chinesesimp>
             <Chinese>發射煙霧發射器</Chinese>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_CollisionLights">
+            <English>Toggle Collision Lights</English>
+            <Italian>Attiva Luci di Collisione</Italian>
+            <Korean>충돌 표시등 토글</Korean>
+            <Chinese>切換碰撞燈</Chinese>
+            <Chinesesimp>切换碰撞灯</Chinesesimp>
+            <Japanese>衝突防止灯を切り替え</Japanese>
         </Key>
     </Package>
 </Project>

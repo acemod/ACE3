@@ -12,7 +12,7 @@ class CfgVehicles {
 
     class ACE_Module;
     class ACE_moduleMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(MedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -154,7 +154,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleBasicMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(BasicMedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -196,7 +196,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleAdvancedMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AdvancedMedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -318,7 +318,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleReviveSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(ReviveSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -362,7 +362,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleAssignMedicRoles: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignMedicRoles_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -409,7 +409,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleAssignMedicVehicle: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignMedicVehicle_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -453,7 +453,7 @@ class CfgVehicles {
     };
 
     class ACE_moduleAssignMedicalFacility: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignMedicalFacility_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -522,7 +522,7 @@ class CfgVehicles {
 
         class ACE_Actions {
             // Include actions in body parts for treatment while in the open
-            #define EXCEPTIONS exceptions[] = {};
+            #define EXCEPTIONS exceptions[] = {"isNotSwimming"};
             #define ACTION_CONDITION condition = QUOTE(GVAR(menuTypeStyle) == 0);
             #include "ACE_Medical_Actions.hpp"
 
@@ -538,29 +538,30 @@ class CfgVehicles {
 
                     #undef EXCEPTIONS
                     #undef ACTION_CONDITION
-                    #define EXCEPTIONS exceptions[] = {"isNotInside"};
+                    #define EXCEPTIONS exceptions[] = {"isNotInside", "isNotSwimming"};
                     #define ACTION_CONDITION condition = "true";
                     #include "ACE_Medical_Actions.hpp"
                 };
                 class GVAR(loadPatient) {
                     displayName = CSTRING(LoadPatient);
                     distance = 5;
-                    condition = QUOTE(_target getVariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target == _target);
+                    condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {alive _target} && {vehicle _target == _target});
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionLoadUnit));
                     showDisabled = 0;
                     priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying"};
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotSwimming"};
+                    insertChildren = QUOTE(call DFUNC(addLoadPatientActions));
                 };
                 class GVAR(UnLoadPatient) {
                     displayName = CSTRING(UnloadPatient);
                     distance = 5;
-                    condition = QUOTE(_target getVariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target != _target);
+                    condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {alive _target} && {vehicle _target != _target} && {vehicle _player == _player});
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
                     showDisabled = 0;
                     priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside", "isNotSwimming"};
                 };
             };
         };
@@ -876,14 +877,22 @@ class CfgVehicles {
         };
     };
 
-    class NATO_Box_Base;
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        class ACE_Actions;
+    };
+    class NATO_Box_Base: ReammoBox_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         scopeCurator = 2;
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = QPATHTOF(data\ace_medcrate.p3d);
-        author = ECSTRING(common,ACETeam);
+        author = "ElTyranos";
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);
             MACRO_ADDITEM(ACE_morphine,25);
@@ -892,6 +901,35 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bloodIV_500,15);
             MACRO_ADDITEM(ACE_bloodIV_250,15);
             MACRO_ADDITEM(ACE_bodyBag,10);
+        };
+        class AnimationSources {
+            class Cover {
+                source = "user";
+                animPeriod = 1.5;
+                initPhase = 0;
+                minValue = 0;
+                maxValue = 1;
+            };
+        };
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                selection = "cover_action";
+
+                class ACE_OpenLid {
+                    displayName = CSTRING(openLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' < 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',1]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+                class ACE_CloseLid {
+                    displayName = CSTRING(closeLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' >= 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',0]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+            };
         };
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {

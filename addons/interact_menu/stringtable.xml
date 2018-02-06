@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -222,8 +222,8 @@
             <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
             <Japanese>常にカーソルを中央へ表示させ、オプション メニューが移動します。画面の大きさが制限されている時に使いやすくなります。</Japanese>
             <Korean>커서를 항상 가운데에 두고 메뉴를 움직입니다. 화면의 크기가 제한되있을때 유용합니다.</Korean>
-            <Chinesesimp>保持游标在中心点并平移周遭的选项选单. 这对在荧幕尺寸有限的玩家很有用!</Chinesesimp>
-            <Chinese>保持游標在中心點並平移周遭的選項選單. 這對在螢幕尺寸有限的玩家很有用!</Chinese>
+            <Chinesesimp>保持游标在中心点并平移周遭的选项选单。这对在荧幕尺寸有限的玩家很有用!</Chinesesimp>
+            <Chinese>保持游標在中心點並平移周遭的選項選單。這對在螢幕尺寸有限的玩家很有用!</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
@@ -286,8 +286,8 @@
             <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
             <Japanese>文字への影を設定します。縁取りは設定された影の色を無視します。</Japanese>
             <Korean>문자의 그림자를 조절하는것을 가능케합니다. 외각선은 임의의 그림자색을 무시합니다.</Korean>
-            <Chinesesimp>允许控制文字阴影. 轮廓部分则会忽略自定义的阴影颜色</Chinesesimp>
-            <Chinese>允許控制文字陰影. 輪廓部分則會忽略自定義的陰影顏色</Chinese>
+            <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
+            <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色。</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowOutline">
             <English>Outline</English>
@@ -334,8 +334,8 @@
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
             <Japanese>インタラクション メニューを開いたとき、背景にボケを与えます。</Japanese>
             <Korean>상호작용 메뉴가 열릴시 배경을 흐릿하게 처리합니다.</Korean>
-            <Chinesesimp>当互动选单开启时, 模糊背景画面</Chinesesimp>
-            <Chinese>當互動選單開啟時, 模糊背景畫面</Chinese>
+            <Chinesesimp>当互动选单开启时，模糊背景画面。</Chinesesimp>
+            <Chinese>當互動選單開啟時，模糊背景畫面。</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -398,8 +398,8 @@
             <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
             <Japanese>建物にあるドアの開閉やラダーの昇降といった動作をインタラクションへ追加します。(街などでインタラクション メニューを開くとパフォーマンスが低下します)</Japanese>
             <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
-            <Chinesesimp>增加互动选单的功能在可开启的门与建筑物的梯子上. (注意: 此功能有可能会降低系统效能, 特别是在城镇区更明显)</Chinesesimp>
-            <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上. (注意: 此功能有可能會降低系統效能, 特別是在城鎮區更明顯)</Chinese>
+            <Chinesesimp>增加互动选单的功能在可开启的门与建筑物的梯子上。(注意: 此功能有可能会降低系统效能，特别是在城镇区更明显)</Chinesesimp>
+            <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
@@ -442,8 +442,9 @@
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
             <French>Rend les animations de menu plus rapide et réduit le temps nécessaire à l'affichage des sous menus d'action</French>
             <Japanese>サブ動作が表示されるホバーをした時に、表示されるメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
-            <Chinesesimp>使选单的动画速度更快, 并减少子选项显现出来的时间</Chinesesimp>
-            <Chinese>使選單的動畫速度更快, 並減少子選項顯現出來的時間</Chinese>
+            <Chinesesimp>使选单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
+            <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
+            <Korean>상호 작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져 오는 데 필요한 시간을 줄입니다.</Korean>
         </Key>
     </Package>
 </Project>

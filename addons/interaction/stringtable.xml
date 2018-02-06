@@ -1,6 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
+        <Key ID="STR_ACE_Interaction_DisplayName">
+            <English>Interaction</English>
+            <German>Interaktion</German>
+            <Italian>Interazione</Italian>
+            <Chinese>互動</Chinese>
+            <Chinesesimp>互动</Chinesesimp>
+            <Japanese>インタラクション</Japanese>
+            <Korean>상호작용</Korean>
+        </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
             <German>Interaktionen</German>
@@ -188,7 +197,7 @@
             <Hungarian>Ajtó bezárása</Hungarian>
             <Polish>Zablokuj drzwi</Polish>
             <Czech>Zamknout dveře</Czech>
-            <Japanese>ドアの鍵を閉める</Japanese>
+            <Japanese>ドアの鍵をしめる</Japanese>
             <Korean>문 잠그기</Korean>
             <Chinesesimp>锁门</Chinesesimp>
             <Chinese>鎖門</Chinese>
@@ -204,7 +213,7 @@
             <Hungarian>Zár kinyitása</Hungarian>
             <Polish>Odblokuj drzwi</Polish>
             <Czech>Odemknout dveře</Czech>
-            <Japanese>ドアの鍵を開ける</Japanese>
+            <Japanese>ドアの鍵をあける</Japanese>
             <Korean>잠긴문 열기</Korean>
             <Chinesesimp>解锁门</Chinesesimp>
             <Chinese>解鎖門</Chinese>
@@ -220,7 +229,7 @@
             <Hungarian>Zárt ajtó</Hungarian>
             <Polish>Zablokowano drzwi</Polish>
             <Czech>Zamčené dveře</Czech>
-            <Japanese>ドアの鍵を締めた</Japanese>
+            <Japanese>ドアの鍵をしめた</Japanese>
             <Korean>잠긴 문</Korean>
             <Chinesesimp>门已上锁</Chinesesimp>
             <Chinese>門已上鎖</Chinese>
@@ -236,7 +245,7 @@
             <Hungarian>Nyitott ajtó</Hungarian>
             <Polish>Odblokowano drzwi</Polish>
             <Czech>Odemčené dveře</Czech>
-            <Japanese>ドアの鍵を開けられた</Japanese>
+            <Japanese>ドアの鍵をあけた</Japanese>
             <Korean>열린 문</Korean>
             <Chinesesimp>门未上锁</Chinesesimp>
             <Chinese>門未上鎖</Chinese>
@@ -252,7 +261,7 @@
             <Hungarian>Csatlakozás a csoporthoz</Hungarian>
             <Portuguese>Unir-se ao grupo</Portuguese>
             <Italian>Unisciti alla squadra</Italian>
-            <Japanese>グループにはいる</Japanese>
+            <Japanese>グループに入る</Japanese>
             <Korean>그룹 참여</Korean>
             <Chinesesimp>加入小队</Chinesesimp>
             <Chinese>加入小隊</Chinese>
@@ -268,7 +277,7 @@
             <Hungarian>Csoport elhagyása</Hungarian>
             <Portuguese>Deixar grupo</Portuguese>
             <Italian>Lascia la squadra</Italian>
-            <Japanese>グループをぬける</Japanese>
+            <Japanese>グループを抜ける</Japanese>
             <Korean>그룹 나가기</Korean>
             <Chinesesimp>离开小队</Chinesesimp>
             <Chinese>離開小隊</Chinese>
@@ -300,7 +309,7 @@
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
             <Italian>DANZA!</Italian>
-            <Japanese>おどれ！</Japanese>
+            <Japanese>おどれ!</Japanese>
             <Korean>춤추기!</Korean>
             <Chinesesimp>跳舞</Chinesesimp>
             <Chinese>跳舞</Chinese>
@@ -332,7 +341,7 @@
             <Hungarian>&lt;&lt; Vissza</Hungarian>
             <Portuguese>&lt;&lt; Voltar</Portuguese>
             <Italian>&lt;&lt; Indietro</Italian>
-            <Japanese>&amp;lt;&amp;lt; もどる</Japanese>
+            <Japanese>&lt;&lt;もどる</Japanese>
             <Korean>&lt;&lt;뒤로</Korean>
             <Chinesesimp>&lt;&lt;返回</Chinesesimp>
             <Chinese>&lt;&lt;返回</Chinese>
@@ -364,8 +373,8 @@
             <Hungarian>Vállveregetés</Hungarian>
             <Portuguese>Tocar ombro</Portuguese>
             <Italian>Dai un colpetto</Italian>
-            <Japanese>肩をたたく</Japanese>
-            <Korean>어깨 두드리기</Korean>
+            <Japanese>肩を叩く</Japanese>
+            <Korean>어깨 치기</Korean>
             <Chinesesimp>轻拍肩膀</Chinesesimp>
             <Chinese>輕拍肩膀</Chinese>
         </Key>
@@ -444,7 +453,7 @@
             <Hungarian>Tűnés!</Hungarian>
             <Portuguese>Vá Embora!</Portuguese>
             <Italian>Via di qui!</Italian>
-            <Japanese>うせろ！</Japanese>
+            <Japanese>失せろ!</Japanese>
             <Korean>저리 가!</Korean>
             <Chinesesimp>走开!</Chinesesimp>
             <Chinese>走開!</Chinese>
@@ -460,7 +469,7 @@
             <Russian>Ложись!</Russian>
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
-            <Japanese>ふせろ！</Japanese>
+            <Japanese>伏せろ!</Japanese>
             <Korean>엎드려!</Korean>
             <Chinesesimp>趴下!</Chinesesimp>
             <Chinese>趴下!</Chinese>
@@ -474,7 +483,7 @@
             <French>Sortez !</French>
             <Russian>Выходи</Russian>
             <Czech>Vystupte</Czech>
-            <Japanese>降りる</Japanese>
+            <Japanese>降りろ</Japanese>
             <Korean>나가</Korean>
             <Chinesesimp>出去</Chinesesimp>
             <Chinese>出去</Chinese>
@@ -906,7 +915,7 @@
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
             <Italian>Abilità Management Squadra</Italian>
-            <Japanese>チーム管理をつかう</Japanese>
+            <Japanese>チーム管理を使う</Japanese>
             <Korean>팀 설정 활성화</Korean>
             <Chinesesimp>启用小队管理</Chinesesimp>
             <Chinese>啟用小隊管理</Chinese>
@@ -922,10 +931,28 @@
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
-            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか？標準：はい</Japanese>
+            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか? 標準: 有効化</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_DisableNegativeRating_DisplayName">
+            <English>Disable negative rating</English>
+            <German>Negative Bewertung deaktivieren</German>
+            <Japanese>否定評価を無効化</Japanese>
+            <Italian>Disabilita valutazione negativa</Italian>
+            <Chinese>關閉負面評價</Chinese>
+            <Chinesesimp>关闭负面评价</Chinesesimp>
+            <Korean>부정행위 가중치 사용안함</Korean>
+        </Key>
+        <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
+            <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
+            <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
+            <Japanese>否定評価を受けますか？有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
+            <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
+            <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價。</Chinese>
+            <Chinesesimp>玩家是否会收到负面评价? 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
+            <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 높은 레이팅을 가질때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -940,8 +967,8 @@
             <Italian>Management Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
             <Japanese>チーム管理はチーム メンバーへ色の割り当てや指揮権を取ったり、チームの出入りを許可します。</Japanese>
             <Korean>팀 설정은 팀 멤버에게 색을 부여하거나  팀에 참여 혹은 나가게 할 수 있게 합니다.</Korean>
-            <Chinesesimp>队伍管理系统允许将指定颜色分配到队伍成员上, 接管队长职位或加入/离开队伍.</Chinesesimp>
-            <Chinese>隊伍管理系統允許將指定顏色分配到隊伍成員上, 接管隊長職位或加入/離開隊伍.</Chinese>
+            <Chinesesimp>队伍管理系统允许将指定颜色分配到队伍成员上，接管队长职位或加入/离开队伍</Chinesesimp>
+            <Chinese>隊伍管理系統允許將指定顏色分配到隊伍成員上，接管隊長職位或加入/離開隊伍</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
             <English>Turn on</English>
@@ -953,7 +980,7 @@
             <Czech>Zapnout</Czech>
             <Portuguese>Ligar</Portuguese>
             <Russian>Включить</Russian>
-            <Japanese>中に入る</Japanese>
+            <Japanese>有効化</Japanese>
             <Korean>켜기</Korean>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
@@ -968,7 +995,7 @@
             <Czech>Vypnout</Czech>
             <Portuguese>Desligar</Portuguese>
             <Russian>Выключить</Russian>
-            <Japanese>外に出す</Japanese>
+            <Japanese>無効化</Japanese>
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
@@ -1047,6 +1074,13 @@
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PullOutBody">
+            <English>Pull out body</English>
+            <Russian>Вытащить тело</Russian>
+            <Japanese>身体を引き出す</Japanese>
+            <Italian>Estrai il corpo</Italian>
+            <Korean>시체 끌기</Korean>
         </Key>
     </Package>
 </Project>

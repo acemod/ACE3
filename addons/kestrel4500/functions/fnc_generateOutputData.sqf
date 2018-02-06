@@ -33,48 +33,46 @@
 
 if (diag_tickTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
 
-private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_dayString", "_monthString", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenter", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_textBottomBig", "_textCenterLine1", "_textCenterLine2", "_textCenterLine3", "_textCenterLine4", "_textCenterLine5", "_textCenterLine6"];
-
 [] call FUNC(collectData);
 
-_textTop = GVAR(Menus) select GVAR(Menu);
-_textCenterBig = "";
-_textCenter = "";
+private _textTop = GVAR(Menus) select GVAR(Menu);
+private _textCenterBig = "";
+private _textCenter = "";
 
-_textCenterLine1Left = "";
-_textCenterLine2Left = "";
-_textCenterLine3Left = "";
-_textCenterLine1Right = "";
-_textCenterLine2Right = "";
-_textCenterLine3Right = "";
+private _textCenterLine1Left = "";
+private _textCenterLine2Left = "";
+private _textCenterLine3Left = "";
+private _textCenterLine1Right = "";
+private _textCenterLine2Right = "";
+private _textCenterLine3Right = "";
 
-_textInfoLine1 = "";
-_textInfoLine2 = "";
+private _textInfoLine1 = "";
+private _textInfoLine2 = "";
 
-_textBottomBig = "";
+private _textBottomBig = "";
 
-_textCenterLine1 = "";
-_textCenterLine2 = "";
-_textCenterLine3 = "";
-_textCenterLine4 = "";
-_textCenterLine5 = "";
-_textCenterLine6 = "";
+private _textCenterLine1 = "";
+private _textCenterLine2 = "";
+private _textCenterLine3 = "";
+private _textCenterLine4 = "";
+private _textCenterLine5 = "";
+private _textCenterLine6 = "";
 
-_windSpeed = call FUNC(measureWindSpeed);
-_windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+private _windSpeed = call FUNC(measureWindSpeed);
+private _windDir = (wind select 0) atan2 (wind select 1);
 
-_playerDir = getDir ACE_player;
-_playerAltitude = (getPosASL ACE_player) select 2;
+private _playerDir = getDir ACE_player;
+private _playerAltitude = (getPosASL ACE_player) select 2;
 
-_temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
-_humidity = EGVAR(weather,currentHumidity);
-_barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
-_airDensity = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateAirDensity);
-_densityAltitude = _airDensity call EFUNC(weather,calculateDensityAltitude);
-_chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
-_heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
-_dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
-_wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
+private _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
+private _humidity = EGVAR(weather,currentHumidity);
+private _barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
+private _airDensity = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateAirDensity);
+private _densityAltitude = _airDensity call EFUNC(weather,calculateDensityAltitude);
+private _chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
+private _heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
+private _dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
+private _wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
 
 GVAR(Direction) = 4 * floor(_playerDir / 90);
 if (_playerDir % 90 > 10) then { GVAR(Direction) = GVAR(Direction) + 1};
@@ -87,8 +85,8 @@ if (GVAR(referenceHeadingMenu) == 0) then {
     switch (GVAR(Menu)) do {
         case 0: { // Date
             date params ["_year", "_month", "_day"];
-            _dayString = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] select (date call FUNC(dayOfWeek));
-            _monthString = localize (["str_january","str_february","str_march","str_april","str_may","str_june","str_july","str_august","str_september","str_october","str_november","str_december"] select (_month - 1));
+            private _dayString = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] select (date call FUNC(dayOfWeek));
+            private _monthString = localize (["str_january","str_february","str_march","str_april","str_may","str_june","str_july","str_august","str_september","str_october","str_november","str_december"] select (_month - 1));
             _textTop = _dayString;
             _textCenter = format["%1 %2 %3", _day, _monthString, _year];
             _textBottomBig = [daytime, "HH:MM:SS"] call bis_fnc_timeToString;
@@ -136,8 +134,8 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                     _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(abs(sin(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
-                    _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
+                    _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _windDir) * _windSpeed) * 10) / 10);
+                    _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(180 + _windDir)];
                 };
                 _textInfoLine2 = "- set heading";
             } else {
@@ -168,8 +166,8 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                     _textCenterBig = Str(round(cos(GVAR(RefHeading) - _playerDir) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(cos(GVAR(RefHeading)) * _windSpeed * 10) / 10);
-                    _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
+                    _textCenterBig = Str(round(-cos(GVAR(RefHeading) - _windDir) * _windSpeed * 10) / 10);
+                    _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(180 + _windDir)];
                 };
                 _textInfoLine2 = "- set heading";
             } else {

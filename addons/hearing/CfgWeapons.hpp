@@ -1,14 +1,15 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_EarPlugs: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EarPlugs_Name);
         descriptionShort = CSTRING(EarPlugs_Description);
         model = QPATHTOF(data\ace_earplugs.p3d);
         picture = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
         scope = 2;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -36,6 +37,22 @@ class CfgWeapons {
 
     class HelmetBase;
     class H_Cap_headphones: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_Construction_earprot_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_Construction_headset_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_EarProtectors_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+   class H_HeadSet_base_F: HelmetBase {
         HEARING_PROTECTION_EARMUFF
     };
 

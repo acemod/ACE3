@@ -34,7 +34,7 @@ private _ndy = (abs _dy) / ((abs (_bbY)) - 1);
 private _ndz = (abs _dz) / ((abs (_bbZ)) - 1);
 
 
-private "_pos";
+private _pos = [];
 if (_ndx > _ndy) then {
     if (_ndx > _ndz) then {
         // _ndx is greater, will colide with x plane first
@@ -53,7 +53,11 @@ if (_ndx > _ndy) then {
     };
 };
 
-//Set max height at player's eye level (prevent very high interactin point on choppers)
-_pos set [2, (_pos select 2) min _dz];
+// Set max height at player's eye level (prevent very high interaction point on vehicles)
+// Only when above water level to prevent underwater actions from following player eye level
+if (_cameraPosASL select 2 >= 0) then {
+    _pos set [2, (_pos select 2) min _dz];
+};
 
+TRACE_4("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
 _pos

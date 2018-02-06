@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Fastroping">
         <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
@@ -33,7 +33,7 @@
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
-            <German>Bereite Fast Roping System vor</German>
+            <German>Bereite "Fast Roping"-System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
             <French>Préparer le système de corde lisse</French>
             <Spanish>Preparar el sistema fast roping</Spanish>
@@ -45,6 +45,15 @@
             <Korean>패스트로프 준비</Korean>
             <Chinesesimp>准备快速绳降系统</Chinesesimp>
             <Chinese>準備快速繩降系統</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
+            <English>Stow fast roping system</English>
+            <German>Verstaue "Fast Roping"-System</German>
+            <Italian>Arrotola le corde</Italian>
+            <Japanese>ファスト ロープのシステムを収容</Japanese>
+            <Chinese>收起快速繩降系統</Chinese>
+            <Chinesesimp>收起快速绳降系统</Chinesesimp>
+            <Korean>패스트 로프 시스템 보관</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -132,6 +141,7 @@
             <Polish>ZJAZD NA LINACH</Polish>
             <Chinesesimp>让单位快速绳降</Chinesesimp>
             <Chinese>讓單位快速繩降</Chinese>
+            <Korean>패스트 로프를 놓음</Korean>
         </Key>
     </Package>
 </Project>

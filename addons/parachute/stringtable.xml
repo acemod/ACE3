@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Parachute">
         <Key ID="STR_ACE_Parachute_showAltimeter">
@@ -46,8 +46,8 @@
             <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
             <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
             <Korean>높이와, 하강속도 그리고 시간을 보여줍니다.</Korean>
-            <Chinesesimp>用于显示高度, 下降率和时间.</Chinesesimp>
-            <Chinese>用於顯示高度, 下降率和時間.</Chinese>
+            <Chinesesimp>用于显示高度，下降率和时间。</Chinesesimp>
+            <Chinese>用於顯示高度，下降率和時間。</Chinese>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -96,6 +96,18 @@
             <Korean>예비 낙하산</Korean>
             <Chinesesimp>备用降落伞</Chinesesimp>
             <Chinese>備用降落傘</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter">
+            <English>Hide Freefall Altimeter</English>
+            <German>Freifall-Höhenmesser verstecken</German>
+            <Japanese>降下時に高度計を非表示</Japanese>
+            <Italian>Nascondi Altimetro in Caduta Libera</Italian>
+        </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
+            <English>Hides the altitude and speed shown while free falling or parachuting.</English>
+            <German>Blendet den Höhen- und Geschwindigkeitsmesser während des Fallschirmspringens aus.</German>
+            <Japanese>自由降下時かパラシュート中に高度と速度を非表示にします。</Japanese>
+            <Italian>Nasconde l'altitudine e la velocità mostrate durante la caduta libera o paracadutandosi.</Italian>
         </Key>
     </Package>
 </Project>

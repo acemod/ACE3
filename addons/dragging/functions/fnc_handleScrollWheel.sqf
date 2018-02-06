@@ -30,8 +30,8 @@ private _carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
 //disabled for persons
 if (_carriedItem isKindOf "CAManBase") exitWith {false};
 
-private _position = getPosATL _carriedItem;
-private _maxHeight = (_unit modelToWorldVisual [0,0,0]) select 2;
+private _position = getPosASL _carriedItem;
+private _maxHeight = (_unit modelToWorldVisualWorld [0, 0, 0]) select 2;
 
 _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) max _maxHeight];
 
@@ -39,7 +39,7 @@ _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) 
 detach _carriedItem;
 
 // Uses this method of selecting position because setPosATL did not have immediate effect
-private _positionChange = _position vectorDiff (getPosATL _carriedItem);
+private _positionChange = _position vectorDiff (getPosASL _carriedItem);
 private _selectionPosition = _unit worldToModel (ASLtoAGL getPosWorld _carriedItem);
 _selectionPosition = _selectionPosition vectorAdd _positionChange;
 _carriedItem attachTo [_unit, _selectionPosition];

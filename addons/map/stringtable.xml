@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Map">
         <Key ID="STR_ACE_Map_Module_DisplayName">
@@ -18,20 +18,20 @@
             <Chinese>地圖</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
-            <English>Map illumination?</English>
+            <English>Map illumination</English>
             <German>Kartenbeleuchtung</German>
             <Polish>Oświetlenie mapy</Polish>
-            <Spanish>¿Iluminación de mapa?</Spanish>
+            <Spanish>¿Iluminación de mapa</Spanish>
             <Czech>Osvětlení mapy</Czech>
-            <Portuguese>Iluminação do mapa?</Portuguese>
-            <French>Illumination de la carte ?</French>
-            <Hungarian>Térkép megvilágítása?</Hungarian>
-            <Russian>Освещение карты?</Russian>
-            <Italian>Illuminazione Mappa?</Italian>
-            <Japanese>地図に照明？</Japanese>
-            <Korean>지도에 조명?</Korean>
-            <Chinesesimp>地图照明?</Chinesesimp>
-            <Chinese>地圖照明?</Chinese>
+            <Portuguese>Iluminação do mapa</Portuguese>
+            <French>Illumination de la carte</French>
+            <Hungarian>Térkép megvilágítása</Hungarian>
+            <Russian>Освещение карты</Russian>
+            <Italian>Illuminazione Mappa</Italian>
+            <Japanese>地図に照明</Japanese>
+            <Korean>지도에 조명</Korean>
+            <Chinesesimp>地图照明</Chinesesimp>
+            <Chinese>地圖照明</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
@@ -43,25 +43,25 @@
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
             <Czech>Simulovat nasvícení mapy v závisloti na okolí a předmětů hráče?</Czech>
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
-            <Japanese>環境光やプレイヤーのアイテムにより、地図へ光のシミュレーションをおこないますか？</Japanese>
+            <Japanese>地図へ環境光やプレイヤーのアイテムに基づいた光のシミュレーションをおこないますか?</Japanese>
             <Korean>주변 환경및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
             <Chinesesimp>透过环境光与玩家的物品来决定地图亮度?</Chinesesimp>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
-            <English>Map flashlight glow?</English>
+            <English>Map flashlight glow</English>
             <German>Kartenbeleuchtung durch Dritte erkennbar</German>
             <Polish>Poświata latarki</Polish>
-            <Russian>Свет фонаря на карте?</Russian>
-            <Portuguese>Brilho de lanterna no mapa?</Portuguese>
-            <Spanish>Resplandor de linterna en el mapa?</Spanish>
-            <Czech>Nasvícení mapy pomocí baterky?</Czech>
-            <Italian>Luce della torcia in mappa?</Italian>
-            <French>Lumière de la lampe de carte ?</French>
-            <Japanese>地図をフラッシュライトで照らしますか？</Japanese>
-            <Korean>지도 조명이 빛이 납니까?</Korean>
-            <Chinesesimp>增加地图亮度?</Chinesesimp>
-            <Chinese>增加地圖亮度?</Chinese>
+            <Russian>Свет фонаря на карте</Russian>
+            <Portuguese>Brilho de lanterna no mapa</Portuguese>
+            <Spanish>Resplandor de linterna en el mapa</Spanish>
+            <Czech>Nasvícení mapy pomocí baterky</Czech>
+            <Italian>Luce della torcia in mappa</Italian>
+            <French>Lumière de la lampe de carte</French>
+            <Japanese>地図をライトで照らしますか</Japanese>
+            <Korean>지도 조명이 빛이 납니까</Korean>
+            <Chinesesimp>增加地图亮度</Chinesesimp>
+            <Chinese>增加地圖亮度</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -73,26 +73,26 @@
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
             <Czech>Přidat externí záři hráči který používá baterku v mapě?</Czech>
             <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
-            <Japanese>プレイヤが地図上でフラッシュライトを使うと、照らすようにしますか？</Japanese>
+            <Japanese>プレイヤが地図上でフラッシュライトを使うと、照らすようにしますか?</Japanese>
             <Korean>지도에 불빛을 비치는 플레이어를 조금 더 밝게 합니까?</Korean>
-            <Chinesesimp>当玩家拥有手电筒时, 增加地图亮度?</Chinesesimp>
-            <Chinese>當玩家擁有手電筒時, 增加地圖亮度?</Chinese>
+            <Chinesesimp>当玩家拥有手电筒时，增加地图亮度?</Chinesesimp>
+            <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
-            <English>Map shake?</English>
+            <English>Map shake</English>
             <Polish>Drżenie mapy</Polish>
-            <Spanish>¿Temblor de mapa?</Spanish>
+            <Spanish>¿Temblor de mapa</Spanish>
             <German>Kamerawackeln</German>
-            <Czech>Třesení mapy?</Czech>
-            <Portuguese>Tremor de mapa?</Portuguese>
-            <French>Tremblement de la carte ?</French>
-            <Hungarian>Térkép-rázkódás?</Hungarian>
-            <Russian>Тряска карты?</Russian>
-            <Italian>Scuoti la mappa?</Italian>
-            <Japanese>地図を揺らしますか？</Japanese>
-            <Korean>지도 흔들림?</Korean>
-            <Chinesesimp>地图震动?</Chinesesimp>
-            <Chinese>地圖震動?</Chinese>
+            <Czech>Třesení mapy</Czech>
+            <Portuguese>Tremor de mapa</Portuguese>
+            <French>Tremblement de la carte</French>
+            <Hungarian>Térkép-rázkódás</Hungarian>
+            <Russian>Тряска карты</Russian>
+            <Italian>Scuoti la mappa</Italian>
+            <Japanese>地図を揺らしますか</Japanese>
+            <Korean>지도 흔들림</Korean>
+            <Chinesesimp>地图震动</Chinesesimp>
+            <Chinese>地圖震動</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -105,26 +105,26 @@
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
-            <Japanese>歩いているときは地図を揺らしますか？</Japanese>
+            <Japanese>歩いているときは地図を揺らしますか?</Japanese>
             <Korean>걸을때 지도보면 흔들리게 합니까?</Korean>
             <Chinesesimp>走路时让地图有震动的感觉?</Chinesesimp>
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
-            <English>Limit map zoom?</English>
+            <English>Limit map zoom</English>
             <Polish>Ograniczony zoom</Polish>
-            <Spanish>¿Limitar el zoom de mapa?</Spanish>
+            <Spanish>¿Limitar el zoom de mapa</Spanish>
             <German>Kartenvergrößerung einschränken</German>
-            <Czech>Omezit přiblížení mapy?</Czech>
-            <Portuguese>Limitar zoom do mapa?</Portuguese>
-            <French>Limiter le zoom de la carte ?</French>
-            <Hungarian>Térkép-nagyítás korlátozása?</Hungarian>
-            <Russian>Ограничить приближение карты?</Russian>
-            <Italian>Limita lo zoom in mappa?</Italian>
-            <Japanese>地図の拡大を制限しますか？</Japanese>
-            <Korean>지도 확대 제한?</Korean>
-            <Chinesesimp>限制地图缩放倍率?</Chinesesimp>
-            <Chinese>限制地圖縮放倍率?</Chinese>
+            <Czech>Omezit přiblížení mapy</Czech>
+            <Portuguese>Limitar zoom do mapa</Portuguese>
+            <French>Limiter le zoom de la carte</French>
+            <Hungarian>Térkép-nagyítás korlátozása</Hungarian>
+            <Russian>Ограничить приближение карты</Russian>
+            <Italian>Limita lo zoom in mappa</Italian>
+            <Japanese>地図の拡大を制限しますか</Japanese>
+            <Korean>지도 확대 제한</Korean>
+            <Chinesesimp>限制地图缩放倍率</Chinesesimp>
+            <Chinese>限制地圖縮放倍率</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
@@ -137,26 +137,26 @@
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
             <Russian>Ограничить максимальное приближение, доступное на карте?</Russian>
             <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
-            <Japanese>地図上で利用できる拡大倍率を制限しますか？</Japanese>
+            <Japanese>地図上で利用できる拡大倍率を制限しますか?</Japanese>
             <Korean>지도 확대에 제한을 둡니까?</Korean>
             <Chinesesimp>限制地图上可允许缩放的倍率?</Chinesesimp>
             <Chinese>限制地圖上可允許縮放的倍率?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
-            <English>Show cursor coordinates?</English>
+            <English>Show cursor coordinates</English>
             <Polish>Koordynaty pod kursorem</Polish>
-            <Spanish>¿Mostrar coordenadas de cursor?</Spanish>
-            <German>Zeige Mauszeiger-Koordinaten?</German>
-            <Czech>Zobrazit souřadnice u kurzoru?</Czech>
-            <Portuguese>Mostrar coordenadas no cursor?</Portuguese>
-            <French>Afficher les coordonnées sur le curseur ?</French>
-            <Hungarian>Kurzor-koordináták mutatása?</Hungarian>
-            <Russian>Показывать координаты курсора?</Russian>
-            <Italian>Mostra coordinate sul cursore?</Italian>
-            <Japanese>カーソル先で座標を表示しますか？</Japanese>
-            <Korean>커서에 좌표를 보이게 합니까?</Korean>
-            <Chinesesimp>显示游标的座标?</Chinesesimp>
-            <Chinese>顯示游標的座標?</Chinese>
+            <Spanish>¿Mostrar coordenadas de cursor</Spanish>
+            <German>Zeige Mauszeiger-Koordinaten</German>
+            <Czech>Zobrazit souřadnice u kurzoru</Czech>
+            <Portuguese>Mostrar coordenadas no cursor</Portuguese>
+            <French>Afficher les coordonnées sur le curseur</French>
+            <Hungarian>Kurzor-koordináták mutatása</Hungarian>
+            <Russian>Показывать координаты курсора</Russian>
+            <Italian>Mostra coordinate sul cursore</Italian>
+            <Japanese>カーソル先で座標を表示しますか</Japanese>
+            <Korean>커서에 좌표를 보이게 합니까</Korean>
+            <Chinesesimp>显示游标的座标</Chinesesimp>
+            <Chinese>顯示游標的座標</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
@@ -169,7 +169,7 @@
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
             <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
-            <Japanese>カーソルに合わせた先の地図座標を表示しますか？</Japanese>
+            <Japanese>カーソルに合わせた先を地図座標で表示しますか?</Japanese>
             <Korean>지도에서 커서 옆에 좌표가 뜨게 합니까?</Korean>
             <Chinesesimp>显示滑鼠游标所在的网格座标?</Chinesesimp>
             <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
@@ -185,7 +185,7 @@
             <Russian>Этот модуль позволяет настроить отображение карты.</Russian>
             <Spanish>Este módulo permite personalizar la pantalla del mapa.</Spanish>
             <Italian>Questo modulo ti permette di customizzare lo schermo della mappa.</Italian>
-            <Japanese>モジュールは地図画面をカスタマイズできます。</Japanese>
+            <Japanese>このモジュールは地図画面を変更できます。</Japanese>
             <Korean>이 모듈은 지도 화면을 임의로 설정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>此模块允许自定地图的相关效果.</Chinesesimp>
             <Chinese>此模塊允許自定地圖的相關效果.</Chinese>
@@ -233,7 +233,7 @@
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
             <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
             <Italian>Abilita Blue Force Tracking. Default: No</Italian>
-            <Japanese>ブルー フォース トラッキングを有効化します。標準：無効</Japanese>
+            <Japanese>ブルー フォース トラッキングを有効化します。標準: 無効</Japanese>
             <Korean>GPS피아식별기 켭니다. 기본설정: 아니요</Korean>
             <Chinesesimp>启用显示蓝方踪迹. 预设: 否</Chinesesimp>
             <Chinese>啟用顯示藍方蹤跡. 預設: 否</Chinese>
@@ -265,26 +265,26 @@
             <Hungarian>Milyen gyakran frissüljenek a jelölők (másodpercben)</Hungarian>
             <Russian>Как часто должны обновляться маркеры (в секундах)</Russian>
             <Italian>Quanto spesso vengono aggiornati i marker (in secondi)</Italian>
-            <Japanese>マーカが再描画される間隔を設定できます（秒）</Japanese>
+            <Japanese>マーカが再描画される間隔を設定できます (秒)</Japanese>
             <Korean>몇 초마다 마커를 새로 갱신합니까?</Korean>
             <Chinesesimp>设定每多少时间重新标示出单位位置 (秒)</Chinesesimp>
             <Chinese>設定每多少時間重新標示出單位位置 (秒)</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
-            <English>Hide AI groups?</English>
+            <English>Hide AI groups</English>
             <Polish>Ukryj grupy AI</Polish>
-            <Spanish>¿Ocultar grupos de IA?</Spanish>
-            <German>KI-Gruppen verstecken?</German>
-            <Czech>Skrýt AI skupiny?</Czech>
-            <Portuguese>Esconder grupos de IA?</Portuguese>
-            <French>Cacher les groupes d'IA ?</French>
-            <Hungarian>AI csoportok elrejtése?</Hungarian>
-            <Russian>Скрыть группы ботов?</Russian>
-            <Italian>Nascondere gruppi IA?</Italian>
-            <Japanese>AI グループを非表示にしますか？</Japanese>
-            <Korean>인공지능 그룹을 숨깁니까?</Korean>
-            <Chinesesimp>隐藏AI小队?</Chinesesimp>
-            <Chinese>隱藏AI小隊?</Chinese>
+            <Spanish>¿Ocultar grupos de IA</Spanish>
+            <German>KI-Gruppen verstecken</German>
+            <Czech>Skrýt AI skupiny</Czech>
+            <Portuguese>Esconder grupos de IA</Portuguese>
+            <French>Cacher les groupes d'IA</French>
+            <Hungarian>AI csoportok elrejtése</Hungarian>
+            <Russian>Скрыть группы ботов</Russian>
+            <Italian>Nascondere gruppi IA</Italian>
+            <Japanese>AI グループを非表示にしますか</Japanese>
+            <Korean>인공지능 그룹을 숨깁니까</Korean>
+            <Chinesesimp>隐藏AI小队</Chinesesimp>
+            <Chinese>隱藏AI小隊</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
@@ -297,39 +297,39 @@
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
-            <Japanese>'AI のみ'グループのマーカを隠しますか？</Japanese>
+            <Japanese>'AI のみ'グループのマーカを隠しますか?</Japanese>
             <Korean>인공지능만 있는 그룹의 마커를 숨깁니까?</Korean>
             <Chinesesimp>隐藏'AI小队'的踪迹?</Chinesesimp>
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_DisplayName">
-            <English>Show player names?</English>
-            <Polish>Pokaż imiona graczy?</Polish>
-            <Spanish>Mostrar nombres de los jugadores?</Spanish>
-            <German>Zeigen Sie die Namen der Spieler?</German>
-            <Czech>Zobrazit jména hráčů?</Czech>
-            <Portuguese>Mostrar os nomes dos jogadores?</Portuguese>
-            <French>Afficher les noms des joueurs ?</French>
-            <Hungarian>Itt található az a játékos nevét?</Hungarian>
-            <Russian>Показать имена игроков?</Russian>
-            <Italian>Mostra i nomi dei giocatori?</Italian>
-            <Japanese>プレイヤ名を表示しますか？</Japanese>
-            <Korean>플레이어 이름을 표시합니까?</Korean>
-            <Chinesesimp>显示玩家名称?</Chinesesimp>
-            <Chinese>顯示玩家名稱?</Chinese>
+            <English>Show player names</English>
+            <Polish>Pokaż imiona graczy</Polish>
+            <Spanish>Mostrar nombres de los jugadores</Spanish>
+            <German>Zeige einzelne Spielernamen</German>
+            <Czech>Zobrazit jména hráčů</Czech>
+            <Portuguese>Mostrar os nomes dos jogadores</Portuguese>
+            <French>Afficher les noms des joueurs</French>
+            <Hungarian>Itt található az a játékos nevét</Hungarian>
+            <Russian>Показать имена игроков</Russian>
+            <Italian>Mostra i nomi dei giocatori</Italian>
+            <Japanese>プレイヤ名を表示しますか</Japanese>
+            <Korean>플레이어 이름을 표시합니까</Korean>
+            <Chinesesimp>显示玩家名称</Chinesesimp>
+            <Chinese>顯示玩家名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_Description">
             <English>Show individual player names?</English>
             <Polish>Pokaż poszczególne imiona graczy?</Polish>
             <Spanish>Mostrar nombres de los jugadores individuales?</Spanish>
-            <German>Zeigen einzelnen Spielernamen?</German>
+            <German>Zeigt die Namen der einzelnen Spieler an</German>
             <Czech>Zobrazit názvy jednotlivých hráčů?</Czech>
             <Portuguese>Mostrar nomes individuais dos jogadores?</Portuguese>
             <French>Affiche les noms des joueurs individuels ?</French>
             <Hungarian>Itt található az adott játékos neveket?</Hungarian>
             <Russian>Показать отдельные имена игроков?</Russian>
             <Italian>Mostra i nomi dei giocatori singoli?</Italian>
-            <Japanese>プレイヤの名前を表示しますか？</Japanese>
+            <Japanese>プレイヤの名前を表示しますか?</Japanese>
             <Korean>각 플레이어의 이름을 표시합니까?</Korean>
             <Chinesesimp>显示玩家的个别名称?</Chinesesimp>
             <Chinese>顯示玩家的個別名稱?</Chinese>
@@ -347,8 +347,8 @@
             <Italian>Questo modulo permette il tracciamento di unità alleate con i marker BFT in mappa</Italian>
             <Japanese>モジュールは BFT マップ マーカとともに、同勢力ユニットの追跡を許可します。</Japanese>
             <Korean>이 모듈은 아군을 지도상에서 추적할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>此模块将使你能在地图上看见友方单位的踪迹.</Chinesesimp>
-            <Chinese>此模塊將使你能在地圖上看見友方單位的蹤跡.</Chinese>
+            <Chinesesimp>此模块将使你能在地图上看见友方单位的踪迹</Chinesesimp>
+            <Chinese>此模塊將使你能在地圖上看見友方單位的蹤跡</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
@@ -420,7 +420,7 @@
             <Czech>Zvýšit jas</Czech>
             <Spanish>Aumentar brillo</Spanish>
             <Italian>Aumenta Luminosità</Italian>
-            <Japanese>感度を上げる</Japanese>
+            <Japanese>明度を上げる</Japanese>
             <Korean>밝기 올리기</Korean>
             <Chinesesimp>增加亮度</Chinesesimp>
             <Chinese>增加亮度</Chinese>
@@ -435,7 +435,7 @@
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
             <Italian>Diminuisci Luminosità</Italian>
-            <Japanese>感度を下げる</Japanese>
+            <Japanese>明度を下げる</Japanese>
             <Korean>밝기 내리기</Korean>
             <Chinesesimp>降低亮度</Chinesesimp>
             <Chinese>降低亮度</Chinese>
@@ -521,8 +521,8 @@
             <Polish>Zawsze wyłączaj Blue Force Tracking dla tej grupy.</Polish>
             <French>Désactive en permanence le Blue Force Tracking pour ce groupe.</French>
             <Italian>Disabilita sempre il Blue Force Tracking per questo gruppo.</Italian>
-            <Chinesesimp>对此小队永远关闭友军踪迹显示.</Chinesesimp>
-            <Chinese>對此小隊永遠關閉友軍蹤跡顯示.</Chinese>
+            <Chinesesimp>对此小队永远关闭友军踪迹显示</Chinesesimp>
+            <Chinese>對此小隊永遠關閉友軍蹤跡顯示</Chinese>
         </Key>
     </Package>
 </Project>

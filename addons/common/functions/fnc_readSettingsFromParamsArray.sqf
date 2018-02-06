@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 //paramsArray is a normal variable not a command
@@ -35,29 +36,32 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
         };
 
-        private _settingData = [_settingName] call FUNC(getSettingData);
-        _settingData params ["", "_typeName", "", "", "", "", "_isForced"];
-
-        // Check if it's already forced and quit
-        if (_isForced) exitWith {WARNING_1("readSettingsFromParamsArray - param [%1] is already set and forced", _settingName);};
-
         // The setting is not forced, so update the value
         // Read entry and cast it to the correct type from the existing variable
+        (cba_settings_default getVariable [_settingName, []]) params ["", "", ["_settingType", ""]];
         private _validValue = false;
         switch (true) do {
-            case (_typeName == "SCALAR"): {_validValue = true;};
-            case (_typeName == "BOOL"): {
-                _settingValue = _settingValue > 0;
-                _validValue = true;
+            case (_settingType == "LIST");
+            case (_settingType == "SCALAR"): {
+                _validValue = [_settingName, _settingValue] call CBA_settings_fnc_check;
             };
-            //TODO: Handle ARRAY,COLOR,STRING??? (bool/scalar covers most important settings)
+            case (_settingType == "CHECKBOX"): {
+                _settingValue = _settingValue > 0;
+                _validValue = [_settingName, _settingValue] call CBA_settings_fnc_check;
+            }; 
+            // Will not Handle ARRAY,COLOR,STRING??? (bool/scalar covers most important settings)
         };
 
         if (!_validValue) exitWith {
-            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_typeName);
+            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_settingType);
         };
 
-        // Update the variable globaly and Force
-        [_settingName, _settingValue, true, true] call FUNC(setSetting);
+        if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
+            WARNING_1("Setting [%1] - Already Forced",_settingName);
+        };
+
+        // Set the setting as a mission setting and force it
+        private _return = ["CBA_settings_setSettingMission", [_settingName, _settingValue, true]] call CBA_fnc_localEvent;
+        TRACE_3("setSettingMission from paramsArray",_settingName,_settingValue,_return);
     };
 } forEach _paramsArray;

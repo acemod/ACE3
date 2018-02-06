@@ -36,7 +36,7 @@ class CfgWeapons {
     };
 
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_Chemlight_Shield: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
@@ -45,7 +45,7 @@ class CfgWeapons {
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = QPATHTOF(UI\ace_chemlight_shield_x_ca.paa);
         scope = 2;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
@@ -57,8 +57,9 @@ class CfgWeapons {
         descriptionShort = CSTRING(Shield_Green_DescriptionShort);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = QPATHTOF(UI\ace_chemlight_shield_green_x_ca.paa);
+        ace_arsenal_uniqueBase = "ACE_Chemlight_Shield";
         scope = 1;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "green";
@@ -73,7 +74,7 @@ class CfgWeapons {
         displayName = CSTRING(Shield_Red_DisplayName);
         descriptionShort = CSTRING(Shield_Red_DescriptionShort);
         picture = QPATHTOF(UI\ace_chemlight_shield_red_x_ca.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "red";
@@ -88,7 +89,7 @@ class CfgWeapons {
         displayName = CSTRING(Shield_Blue_DisplayName);
         descriptionShort = CSTRING(Shield_Blue_DescriptionShort);
         picture = QPATHTOF(UI\ace_chemlight_shield_blue_x_ca.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "blue";
@@ -103,7 +104,7 @@ class CfgWeapons {
         displayName = CSTRING(Shield_Yellow_DisplayName);
         descriptionShort = CSTRING(Shield_Yellow_DescriptionShort);
         picture = QPATHTOF(UI\ace_chemlight_shield_yellow_x_ca.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "yellow";
@@ -118,7 +119,7 @@ class CfgWeapons {
         displayName = CSTRING(Shield_Orange_DisplayName);
         descriptionShort = CSTRING(Shield_Orange_DescriptionShort);
         picture = QPATHTOF(UI\ace_chemlight_shield_orange_x_ca.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "orange";
@@ -133,7 +134,7 @@ class CfgWeapons {
         displayName = CSTRING(Shield_White_DisplayName);
         descriptionShort = CSTRING(Shield_White_DescriptionShort);
         picture = QPATHTOF(UI\ace_chemlight_shield_white_x_ca.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "white";

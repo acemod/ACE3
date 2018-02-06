@@ -188,7 +188,7 @@
             <French>Gauche/Droite - Rotation de la caméra</French>
             <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
             <Portuguese>Esquerda/Direita - Rotaciona câmera</Portuguese>
-            <Japanese>Left/Right - カメラを開店</Japanese>
+            <Japanese>Left/Right - カメラ回転</Japanese>
             <Korean>좌/우 - 카메라 돌리기</Korean>
             <Chinesesimp>左/右 - 旋转摄影机</Chinesesimp>
             <Chinese>左/右 - 旋轉攝影機</Chinese>
@@ -252,7 +252,7 @@
             <French>Esc - Sortir de l'aide</French>
             <Hungarian>Exit - Kilépés a súgóból</Hungarian>
             <Portuguese>Esc - Sai do Ajuda</Portuguese>
-            <Japanese>Esc - ヘルプを出る</Japanese>
+            <Japanese>Esc - ヘルプ終了</Japanese>
             <Korean>Esc - 도움말 나가기</Korean>
             <Chinesesimp>Esc - 离开帮助</Chinesesimp>
             <Chinese>Esc - 離開幫助</Chinese>

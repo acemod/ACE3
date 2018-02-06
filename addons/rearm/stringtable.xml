@@ -1,6 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Rearm">
+        <Key ID="STR_ACE_Rearm_DisplayName">
+            <English>Rearm</English>
+            <German>Aufmunitionierung</German>
+            <Italian>Riarmo</Italian>
+            <Chinese>整裝</Chinese>
+            <Chinesesimp>整装</Chinesesimp>
+            <Japanese>再武装</Japanese>
+        </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
             <German>Aufmunitioniereinstellungen</German>
@@ -11,10 +19,10 @@
             <Italian>Impostazioni Riarmo</Italian>
             <Spanish>Parámetros de rearme</Spanish>
             <French>Options de réarmement</French>
-            <Japanese>再武装設定</Japanese>
             <Korean>재보급 설정</Korean>
             <Chinesesimp>整装设定</Chinesesimp>
             <Chinese>整裝設定</Chinese>
+            <Japanese>再武装設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
             <English>This module allows you to tweak rearm system settings.</English>
@@ -108,11 +116,13 @@
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_DisplayName">
             <English>Ammunition supply</English>
-            <German>Munitionsvorat</German>
+            <German>Munitionsvorrat</German>
             <Italian>Scorta munizioni</Italian>
             <Japanese>弾薬の供給</Japanese>
             <Chinesesimp>弹药补给</Chinesesimp>
             <Chinese>彈藥補給</Chinese>
+            <Polish>Zapas amunicji</Polish>
+            <Korean>탄약 보급</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_Description">
             <English>How much ammunition does an ammo truck carry?</English>
@@ -121,22 +131,28 @@
             <Japanese>弾薬トラックがどの位の弾薬を供給できるようにしますか？</Japanese>
             <Chinesesimp>弹药卡车会携带多少的弹药?</Chinesesimp>
             <Chinese>彈藥卡車會攜帶多少的彈藥?</Chinese>
+            <Polish>Ile amunicji przewozi ciężarówka?</Polish>
+            <Korean>탄약 차량은 얼마나 많은 양의 탄약을 가질 수 있음?</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
             <English>Unlimited ammo supply</English>
-            <German>Unbegrenzter Munitionsvorat</German>
+            <German>Unbegrenzter Munitionsvorrat</German>
             <Italian>Scorta munizioni infinita</Italian>
             <Japanese>無制限供給</Japanese>
             <Chinesesimp>无限弹药</Chinesesimp>
             <Chinese>無限彈藥</Chinese>
+            <Polish>Nielimitowany zapas amunicji</Polish>
+            <Korean>무한의 탄약</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_limited">
             <English>Limited ammo supply based on caliber</English>
-            <German>Begrenzter, kaliberabhängiger Munitionsvorat</German>
+            <German>Begrenzter, kaliberabhängiger Munitionsvorrat</German>
             <Italian>Scorta munizioni limitata in base al calibro</Italian>
             <Japanese>口径に基づいた限定的供給</Japanese>
             <Chinesesimp>基于口径限制弹药数量</Chinesesimp>
             <Chinese>基於口徑限制彈藥數量</Chinese>
+            <Polish>Zapas amunicji zależny od kalibru</Polish>
+            <Korean>구경에 따라 제한된 탄약</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
             <English>Only specific Magazines</English>
@@ -145,6 +161,8 @@
             <Japanese>特定の弾薬のみ</Japanese>
             <Chinesesimp>只有指定的弹药</Chinesesimp>
             <Chinese>只有指定的彈藥</Chinese>
+            <Polish>Tylko konkretne magazynki</Polish>
+            <Korean>특정 탄약만</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounter">
             <English>Check remaining ammunition</English>
@@ -153,6 +171,8 @@
             <Japanese>残弾薬を確認</Japanese>
             <Chinesesimp>检查剩余的弹药</Chinesesimp>
             <Chinese>檢查剩餘的彈藥</Chinese>
+            <Polish>Sprawdź ilość amunicji</Polish>
+            <Korean>남은 탄약 확인</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
             <English>Checking remaining ammunition...</English>
@@ -161,6 +181,8 @@
             <Japanese>残弾薬を確認しています・・・</Japanese>
             <Chinesesimp>正在检查剩余的弹药中...</Chinesesimp>
             <Chinese>正在檢查剩餘的彈藥中...</Chinese>
+            <Polish>Sprawdzanie ilości amunicji...</Polish>
+            <Korean>남은 탄약 확인중...</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
             <English>There is ammunition worth %1 points left.</English>
@@ -169,6 +191,8 @@
             <Japanese>この弾薬は%1残っている</Japanese>
             <Chinesesimp>还剩下%1多的弹药.</Chinesesimp>
             <Chinese>還剩下%1多的彈藥.</Chinese>
+            <Polish>Pozostało %1 punktów amunicji.</Polish>
+            <Korean>여기에는 최소 %1 포인트의 탄약이 남았습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
             <English>The following ammunition is left:%1</English>
@@ -177,6 +201,8 @@
             <Japanese>この弾薬の残りは:%1</Japanese>
             <Chinesesimp>以下剩余的弹药:%1</Chinesesimp>
             <Chinese>以下剩餘的彈藥:%1</Chinese>
+            <Polish>Pozostała amunicja: %1</Polish>
+            <Korean>다음의 탄약이 남음 : %1</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_Empty">
             <English>There is no ammunition left.</English>
@@ -185,6 +211,8 @@
             <Japanese>弾薬は残っていません。</Japanese>
             <Chinesesimp>已经没有剩余的弹药了.</Chinesesimp>
             <Chinese>已經沒有剩餘的彈藥了.</Chinese>
+            <Polish>Brak amunicji w zapasie.</Polish>
+            <Korean>여기에는 탄약이 남지 않았습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
@@ -465,7 +493,7 @@
             <Italian>Hydra 70 HE</Italian>
             <Spanish>Hydra 70 HE</Spanish>
             <French>Hydra 70 HE</French>
-            <Japanese>ハイドラ 70 りゅう弾</Japanese>
+            <Japanese>ハイドラ 70 HE</Japanese>
             <Korean>Hydra 70 고폭탄</Korean>
             <Chinesesimp>九头蛇 70 高爆弹</Chinesesimp>
             <Chinese>九頭蛇 70 高爆彈</Chinese>
@@ -480,7 +508,7 @@
             <Italian>S-8 HE</Italian>
             <Spanish>S-8 HE</Spanish>
             <French>S-8 HE</French>
-            <Japanese>S-8 りゅう弾</Japanese>
+            <Japanese>S-8 HE</Japanese>
             <Korean>S-8 고폭탄</Korean>
             <Chinesesimp>S-8 高爆弹</Chinesesimp>
             <Chinese>S-8 高爆彈</Chinese>
@@ -495,7 +523,7 @@
             <Italian>Hydra 70 AP</Italian>
             <Spanish>Hydra 70 AP</Spanish>
             <French>Hydra 70 AP</French>
-            <Japanese>ハイドラ 70 徹甲弾</Japanese>
+            <Japanese>ハイドラ 70 AP</Japanese>
             <Korean>Hydra 70 철갑탄</Korean>
             <Chinesesimp>九头蛇 70 反人员弹</Chinesesimp>
             <Chinese>九頭蛇 70 反人員彈</Chinese>
@@ -510,7 +538,7 @@
             <Italian>S-8 AP</Italian>
             <Spanish>S-8 AP</Spanish>
             <French>S-8 AP</French>
-            <Japanese>S-8 徹甲弾</Japanese>
+            <Japanese>S-8 AP</Japanese>
             <Korean>S-8 철갑탄</Korean>
             <Chinesesimp>S-8 反人员弹</Chinesesimp>
             <Chinese>S-8 反人員彈</Chinese>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_Tagging">
@@ -6,7 +6,7 @@
             <Russian>Маркировка</Russian>
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
-            <German>Markierungssystem</German>
+            <German>Markierungssystem (Spraydose)</German>
             <Korean>뿌리기</Korean>
             <French>Marquage</French>
             <Italian>Marcamento</Italian>
@@ -22,15 +22,15 @@
             <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
             <French>Configure le fonctionnement par défaut du système de marquage.</French>
             <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
-            <Chinesesimp>定义喷漆系统预设设定.</Chinesesimp>
-            <Chinese>定義噴漆系統預設設定.</Chinese>
+            <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
+            <Chinese>定義噴漆系統預設設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
-            <English>Quick Tag</English>
+            <English>Spray Paint - Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
             <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
-            <German>Schnelle Markierung</German>
+            <German>Schnelle Markierung (Spraydose)</German>
             <Korean>빠른 뿌리기</Korean>
             <French>Marquage rapide</French>
             <Italian>Marcamento Rapido</Italian>
@@ -40,19 +40,19 @@
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
-            <Japanese>インタラクション ポインにむけてタグ付けをします。</Japanese>
+            <Japanese>インタラクション ポイントにむけてタグ付けをします。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
             <French>Action réalisé au point de marquage principal.</French>
             <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
-            <Chinesesimp>直接喷漆在互动选单瞄准的点上.</Chinesesimp>
-            <Chinese>直接噴漆在互動選單瞄準的點上.</Chinese>
+            <Chinesesimp>直接喷漆在互动选单瞄准的点上。</Chinesesimp>
+            <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Russian>Повторить последний</Russian>
-            <Japanese>最後の使用</Japanese>
+            <Japanese>前回と同じ</Japanese>
             <Polish>Ostatnio użyte</Polish>
             <German>Zuletzt benutzt</German>
             <Korean>최근 사용</Korean>
@@ -64,7 +64,7 @@
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
             <Russian>Случайный Х</Russian>
-            <Japanese>無作為な X印</Japanese>
+            <Japanese>無作為なX印</Japanese>
             <Polish>Losowy X</Polish>
             <German>Zufällig X</German>
             <Korean>무작위 X</Korean>
@@ -87,7 +87,7 @@
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
-            <German>Markieren</German>
+            <German>Markieren (Spraydose)</German>
             <Spanish>Marcar</Spanish>
             <Polish>Oznakuj</Polish>
             <Italian>Marca</Italian>
@@ -110,7 +110,7 @@
             <Czech>X černě</Czech>
             <Portuguese>X em preto</Portuguese>
             <Russian>Черный Х</Russian>
-            <Japanese>黒の X印</Japanese>
+            <Japanese>黒のX印</Japanese>
             <Korean>검정 X</Korean>
             <Chinesesimp>黑色X标记</Chinesesimp>
             <Chinese>黑色X標記</Chinese>
@@ -125,7 +125,7 @@
             <Czech>X červeně</Czech>
             <Portuguese>X em vermelho</Portuguese>
             <Russian>Красный Х</Russian>
-            <Japanese>赤の X印</Japanese>
+            <Japanese>赤のX印</Japanese>
             <Korean>빨간 X</Korean>
             <Chinesesimp>红色X标记</Chinesesimp>
             <Chinese>紅色X標記</Chinese>
@@ -140,7 +140,7 @@
             <Czech>X zeleně</Czech>
             <Portuguese>X em verde</Portuguese>
             <Russian>Зеленый Х</Russian>
-            <Japanese>緑の X印</Japanese>
+            <Japanese>緑のX印</Japanese>
             <Korean>초록 X</Korean>
             <Chinesesimp>绿色X标记</Chinesesimp>
             <Chinese>綠色X標記</Chinese>
@@ -155,7 +155,7 @@
             <Czech>X modře</Czech>
             <Portuguese>X em azul</Portuguese>
             <Russian>Синий Х</Russian>
-            <Japanese>青の X印</Japanese>
+            <Japanese>青のX印</Japanese>
             <Korean>파랑 X</Korean>
             <Chinesesimp>蓝色X标记</Chinesesimp>
             <Chinese>藍色X標記</Chinese>
@@ -232,8 +232,8 @@
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
             <Japanese>スプレー缶は壁にタグ付できます。</Japanese>
             <Korean>벽에 뿌릴 수 있는 스프레이캔 입니다.</Korean>
-            <Chinesesimp>喷漆可喷涂在墙壁上.</Chinesesimp>
-            <Chinese>噴漆可噴塗在牆壁上.</Chinese>
+            <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
+            <Chinese>噴漆可噴塗在牆壁上</Chinese>
         </Key>
     </Package>
 </Project>

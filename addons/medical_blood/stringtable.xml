@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_blood">
         <Key ID="STR_ACE_medical_blood_enabledFor_OnlyPlayers">
@@ -30,8 +30,9 @@
             <Polish>Włącz lub wyłącz pozostawianie śladów krwi na ziemi kiedy postać odnosi obrażenia bądź krwawi</Polish>
             <French>(Dés)active les gouttes de sang lors d'un saignement ou de blessure</French>
             <Italian>Abilita o disabilita la Perdite di Sangue create sanguinando e prendendo danno</Italian>
-            <Chinesesimp>开启后, 会让受伤时伤口有血液滴落的效果.</Chinesesimp>
-            <Chinese>開啟後, 會讓受傷時傷口有血液滴落的效果.</Chinese>
+            <Chinesesimp>开启后, 会让受伤时伤口有血液滴落的效果</Chinesesimp>
+            <Chinese>開啟後, 會讓受傷時傷口有血液滴落的效果</Chinese>
+            <Korean>출혈이나 부상을 입었을 때, 떨어지는 혈액을 활성화 하거나 비활성화 합니다.</Korean>
         </Key>
     </Package>
 </Project>

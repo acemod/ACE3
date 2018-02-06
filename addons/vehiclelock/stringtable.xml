@@ -1,6 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="VehicleLock">
+        <Key ID="STR_ACE_VehicleLock_DisplayName">
+            <English>Vehicle Lock</English>
+            <Italian>Blocco Veicolo</Italian>
+            <Chinese>載具上鎖</Chinese>
+            <Chinesesimp>载具上锁</Chinesesimp>
+            <Japanese>車両の施錠</Japanese>
+            <Korean>차량 잠금</Korean>
+            <German>Fahrzeugsperre</German>
+        </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
             <German>Fahrzeug aufschließen</German>
@@ -10,7 +19,7 @@
             <Czech>Odemknout vozidlo</Czech>
             <Hungarian>Jármű nyitása</Hungarian>
             <Russian>Открыть машину</Russian>
-            <Italian>Sblocca il veicolo</Italian>
+            <Italian>Sblocca il Veicolo</Italian>
             <Portuguese>Destravar veículo</Portuguese>
             <Japanese>車両の鍵を開ける</Japanese>
             <Korean>차량 잠금열기</Korean>
@@ -26,7 +35,7 @@
             <Czech>Zamknout vozidlo</Czech>
             <Hungarian>Jármű zárása</Hungarian>
             <Russian>Закрыть машину</Russian>
-            <Italian>Chiudi il veicolo a chiave</Italian>
+            <Italian>Chiudi il Veicolo a chiave</Italian>
             <Portuguese>Travar Veículo</Portuguese>
             <Japanese>車両を施錠</Japanese>
             <Korean>차량 잠그기</Korean>
@@ -78,8 +87,8 @@
             <Portuguese>Uma chave específica que abre um veículo específico.</Portuguese>
             <Japanese>カスタム キーは特定車両を開けられます。</Japanese>
             <Korean>특정 차량을 여는 특수 열쇠</Korean>
-            <Chinesesimp>使用指定的钥匙来开启特定的载具.</Chinesesimp>
-            <Chinese>使用指定的鑰匙來開啟特定的載具.</Chinese>
+            <Chinesesimp>使用指定的钥匙来开启特定的载具</Chinesesimp>
+            <Chinese>使用指定的鑰匙來開啟特定的載具</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Master_Description">
             <English>A Master Key will open any lock, no matter what!</English>
@@ -94,8 +103,8 @@
             <Portuguese>Uma chave mestre irá abrir qualquer fechadura, não importa qual!</Portuguese>
             <Japanese>マスター キーは全ての鍵を開けられます。</Japanese>
             <Korean>어떤 차량도 열 수 있는 마스터키 입니다!</Korean>
-            <Chinesesimp>万用解锁钥匙, 能解锁任何载具.</Chinesesimp>
-            <Chinese>萬用解鎖鑰匙, 能解鎖任何載具.</Chinese>
+            <Chinesesimp>万用解锁钥匙，能解锁任何载具</Chinesesimp>
+            <Chinese>萬用解鎖鑰匙，能解鎖任何載具</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Lockpick_Description">
             <English>A lockpick set that can pick the locks of most vehicles.</English>
@@ -110,8 +119,8 @@
             <Portuguese>Um set de chave mixas que pode abrir a maioria dos veículos.</Portuguese>
             <Japanese>ピッキング ツールでは多くの車両をこじ開けられます。</Japanese>
             <Korean>거의 모든 차량을 열 수 있게 해주는 해정도구 모음입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份载具).</Chinesesimp>
-            <Chinese>一組解鎖鑰匙 (可解鎖大部份載具).</Chinese>
+            <Chinesesimp>一组解锁钥匙 (可解锁大部份载具)</Chinesesimp>
+            <Chinese>一組解鎖鑰匙 (可解鎖大部份載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_West_Description">
             <English>A key that should open most WEST vehicles.</English>
@@ -124,10 +133,10 @@
             <Russian>Ключ для открытия большинства машин Красных.</Russian>
             <Italian>Una chiave che apre la maggior parte dei veicoli occidentali</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos ocidentais</Portuguese>
-            <Japanese>このキーは多くの WEST 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くの同盟軍車両を開けられます。</Japanese>
             <Korean>거의 모든 서방진영 차량을 여는 열쇠입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份蓝方载具).</Chinesesimp>
-            <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具).</Chinese>
+            <Chinesesimp>一组解锁钥匙 (可解锁大部份蓝方载具)</Chinesesimp>
+            <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_East_Description">
             <English>A key that should open most EAST vehicle.</English>
@@ -140,10 +149,10 @@
             <Russian>Ключ для открытия большинства машин Синих.</Russian>
             <Italian>Una chaive che apre la maggior parte dei veicoli orientali</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos orientais</Portuguese>
-            <Japanese>このキーは多くの EAST 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くのOPFOR軍車両を開けられます。</Japanese>
             <Korean>거의 모든 동방진영 차량을 여는 열쇠입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份红方载具).</Chinesesimp>
-            <Chinese>一組解鎖鑰匙 (可解鎖大部份紅方載具).</Chinese>
+            <Chinesesimp>一组解锁钥匙 (可解锁大部份红方载具)</Chinesesimp>
+            <Chinese>一組解鎖鑰匙 (可解鎖大部份紅方載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>
@@ -156,10 +165,10 @@
             <Russian>Ключ для открытия большинства машин Независимых.</Russian>
             <Italian>Una chaive che apre la maggior parte dei veicoli degli indipendenti</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos independentes</Portuguese>
-            <Japanese>このキーは多くの INDEP 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くの独立軍車両を開けられます。</Japanese>
             <Korean>거의 모든 중립진영 차량을 여는 열쇠입니다.</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份独立方载具).</Chinesesimp>
-            <Chinese>一組解鎖鑰匙 (可解鎖大部份獨立方載具).</Chinese>
+            <Chinesesimp>一组解锁钥匙 (可解锁大部份独立方载具)</Chinesesimp>
+            <Chinese>一組解鎖鑰匙 (可解鎖大部份獨立方載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Civ_Description">
             <English>A key that should open most CIV vehicle.</English>
@@ -172,10 +181,10 @@
             <Russian>Ключ для открытия большинства машин Гражданских.</Russian>
             <Italian>Una chaive che apr ela maggior parte dei veicoli civili</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos civis.</Portuguese>
-            <Japanese>このキーは多くの CIV 車両を開けられます。</Japanese>
+            <Japanese>このキーは多くの市民車両を開けられます。</Japanese>
             <Korean>거의 모든 민간인 차량을 여는 열쇠입니다</Korean>
-            <Chinesesimp>一组解锁钥匙 (可解锁大部份平民载具).</Chinesesimp>
-            <Chinese>一組解鎖鑰匙 (可解鎖大部份平民載具).</Chinese>
+            <Chinesesimp>一组解锁钥匙 (可解锁大部份平民载具)</Chinesesimp>
+            <Chinese>一組解鎖鑰匙 (可解鎖大部份平民載具)</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_DisplayName">
             <English>Vehicle Lock Setup</English>
@@ -188,7 +197,7 @@
             <Hungarian>Jármű-zár beállítás</Hungarian>
             <Russian>Запирание транспорта</Russian>
             <Italian>Impostazioni Blocco Veicolo</Italian>
-            <Japanese>車両の施錠の設定</Japanese>
+            <Japanese>車両の施錠設定</Japanese>
             <Korean>차량 잠금 설정</Korean>
             <Chinesesimp>载具上锁设置</Chinesesimp>
             <Chinese>載具上鎖設置</Chinese>
@@ -220,10 +229,10 @@
             <Hungarian>Bezárja a zárt járművek rakterét is</Hungarian>
             <Russian>Закрывать инвентарь транспорта, если транспорт закрыт</Russian>
             <Italian>Blocca l'inventario di un veicolo bloccato</Italian>
-            <Japanese>施錠されている車両の、開けないインベントリ</Japanese>
+            <Japanese>施錠されている車両の開けないインベントリ</Japanese>
             <Korean>잠긴 차량의 소지품을 뒤지지못하게 합니다.</Korean>
-            <Chinesesimp>上锁载具的车箱, 使玩家不能拿取/查看载具内的装备</Chinesesimp>
-            <Chinese>上鎖載具的車箱, 使玩家不能拿取/查看載具內的裝備</Chinese>
+            <Chinesesimp>上锁载具的车箱，使玩家不能拿取/查看载具内的装备</Chinesesimp>
+            <Chinese>上鎖載具的車箱，使玩家不能拿取/查看載具內的裝備</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName">
             <English>Vehicle Starting Lock State</English>
@@ -252,7 +261,7 @@
             <Hungarian>Beállítja a zár-állapotot az összes járműhöz (eltávolítja az azonosíthatatlan zárállapotokat)</Hungarian>
             <Russian>Устанавливает начальное состояние замков всех транспортных средств (устраняет неоднозначные состояния)</Russian>
             <Italian>Imposta lo stato di blocco per tutti i veicoli (rimuove stati di blocco ambigui)</Italian>
-            <Japanese>全車両への鍵の状態を設定します。(あいまいな鍵の状態を削除)</Japanese>
+            <Japanese>全車両へ鍵の状態を設定します。(あいまいな鍵の状態を削除)</Japanese>
             <Korean>모든 차량의 잠금 상태를 정합니다. (애매한 잠금 상태는 모두 없앱니다.)</Korean>
             <Chinesesimp>设定所有载具的初始上锁状态 (移除不明确的锁定状态)</Chinesesimp>
             <Chinese>設定所有載具的初始上鎖狀態 (移除不明確的鎖定狀態)</Chinese>
@@ -316,7 +325,7 @@
             <Hungarian>Alapértelmezett zártörő-erősség</Hungarian>
             <Russian>Сила отмычки по-умолчанию</Russian>
             <Italian>Durabilità Default del Grimaldello</Italian>
-            <Japanese>ピッキング ツールの標準の有効度</Japanese>
+            <Japanese>ピッキング ツールの能力設定</Japanese>
             <Korean>기본 해정도구 설정</Korean>
             <Chinesesimp>预设开锁能力</Chinesesimp>
             <Chinese>預設開鎖能力</Chinese>
@@ -332,10 +341,10 @@
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
             <Russian>Время для взлома замка отмычкой (в секундах). По-умолчанию: 10</Russian>
             <Italian>Tempo Default richiesto per forzare serrature (in secondi). Default: 10</Italian>
-            <Japanese>ピッキング ツールに標準の時間を設定。(秒) 標準：10</Japanese>
+            <Japanese>ピッキング ツールを使った作業時間の標準設定。(秒) 標準: 10</Japanese>
             <Korean>해정을 위해 들이는 기본시간입니다(초 단위). 기본설정: 10</Korean>
-            <Chinesesimp>开锁时间(秒). 预设:10</Chinesesimp>
-            <Chinese>開鎖時間(秒). 預設:10</Chinese>
+            <Chinesesimp>开锁时间(秒)。预设:10</Chinesesimp>
+            <Chinese>開鎖時間(秒)。預設:10</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_Description">
             <English>Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.</English>
@@ -348,10 +357,10 @@
             <Hungarian>Beállítások a zártörő erősségére és alapértelmezett zár-állapotra a járműveken. Eltávolítja az azonosíthatatlan zár-állapotokat.</Hungarian>
             <Russian>Настройки силы отмычек и начальное состояние замков транспорта. Устраняет неоднозначные состояния замков.</Russian>
             <Italian>Impostazioni per resistenza iniziale delle serrature e stato di blocco dei veicoli. Rimuove stati di blocco ambigui.</Italian>
-            <Japanese>ピッキング ツールの強さと車両の鍵の初期状態を設定できます。あいまいな鍵の状態を削除します。</Japanese>
+            <Japanese>ピッキング ツールの能力と車両の鍵の初期状態を設定できます。あいまいな鍵の状態を削除します。</Japanese>
             <Korean>해정도구 설정과 시작시 차량의 잠금 상태 그리고 애매한 잠금 상태를 지우는 설정입니다.</Korean>
-            <Chinesesimp>设定开锁能力和初始载具上锁状态. 移除不明确的锁定状态.</Chinesesimp>
-            <Chinese>設定開鎖能力和初始載具上鎖狀態. 移除不明確的鎖定狀態.</Chinese>
+            <Chinesesimp>设定开锁能力和初始载具上锁状态。移除不明确的锁定状态</Chinesesimp>
+            <Chinese>設定開鎖能力和初始載具上鎖狀態。移除不明確的鎖定狀態</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName">
             <English>Vehicle Key Assign</English>
@@ -382,8 +391,8 @@
             <Italian>Sincronizza con veicoli e giocatori. Distribuirà chiavi ai giocatori per ogni veicolo sincronizzato. Valido solo per oggetti presenti ad inizio missione.</Italian>
             <Japanese>車両とプレイヤへ同期します。プレイヤへ同期された車両のカスタム キーを作ります。これはミッション開始時に作成されたオブジェクトでのみ有効です。</Japanese>
             <Korean>차량과 플레이어에게 동기화됩니다. 동기화된 차량은 플레이어에게 열쇠를 지급합니다. 오직 미션 시작시에 생긴 물체들만 유효합니다.</Korean>
-            <Chinesesimp>可同步在载具与玩家身上. 将使被同步的玩家掌握其他被同步载具的钥匙. 此模块只会在任务刚开始时触发.</Chinesesimp>
-            <Chinese>可同步在載具與玩家身上. 將使被同步的玩家掌握其他被同步載具的鑰匙. 此模塊只會在任務剛開始時觸發.</Chinese>
+            <Chinesesimp>可同步在载具与玩家身上。将使被同步的玩家掌握其他被同步载具的钥匙。此模块只会在任务刚开始时触发。</Chinesesimp>
+            <Chinese>可同步在載具與玩家身上。將使被同步的玩家掌握其他被同步載具的鑰匙。此模塊只會在任務剛開始時觸發。</Chinese>
         </Key>
     </Package>
 </Project>

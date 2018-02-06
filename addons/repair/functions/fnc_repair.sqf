@@ -19,14 +19,12 @@
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_hitPoint", "_className"];
-TRACE_4("params",_calller,_target,_hitPoint,_className);
+TRACE_4("params",_caller,_target,_hitPoint,_className);
 
-private ["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray", "_hitPointClassname"];
-
-_config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
 
-_engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
+private _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     getNumber (_config >> "requiredEngineer");
 } else {
     // Check for required class
@@ -46,11 +44,11 @@ if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWi
 };
 
 //Items can be an array of required items or a string to a ACE_Setting array
-_items = if (isArray (_config >> "items")) then {
+private _items = if (isArray (_config >> "items")) then {
     getArray (_config >> "items");
 } else {
-    _settingName = getText (_config >> "items");
-    _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
+    private _settingName = getText (_config >> "items");
+    private _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
     if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
         ERROR("bad setting"); ["BAD"]
     };
@@ -58,9 +56,9 @@ _items = if (isArray (_config >> "items")) then {
 };
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
-_return = true;
+private _return = true;
 if (getText (_config >> "condition") != "") then {
-    _condition = getText (_config >> "condition");
+    private _condition = getText (_config >> "condition");
     if (isNil _condition) then {
         _condition = compile _condition;
     } else {
@@ -74,7 +72,7 @@ if (getText (_config >> "condition") != "") then {
 };
 if (!_return) exitWith {false};
 
-// _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
+// private _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
     // missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
 // } else {
     // getNumber(_config >> "vehicleStateCondition")
@@ -123,7 +121,7 @@ if !(_return && alive _target) exitWith {false};
     [_caller, _x, false] call EFUNC(common,claim);
 } forEach _claimObjectsAvailable;
 
-_consumeItems = if (isNumber (_config >> "itemConsumed")) then {
+private _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
     getNumber (_config >> "itemConsumed");
 } else {
     // Check for required class
@@ -133,13 +131,13 @@ _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
     0;
 };
 
-_usersOfItems = [];
+private _usersOfItems = [];
 if (_consumeItems > 0) then {
     _usersOfItems = ([_caller, _items] call FUNC(useItems)) select 1;
 };
 
 // Parse the config for the progress callback
-_callbackProgress = getText (_config >> "callbackProgress");
+private _callbackProgress = getText (_config >> "callbackProgress");
 if (_callbackProgress == "") then {
     _callbackProgress = "true";
 };
@@ -151,7 +149,7 @@ if (isNil _callbackProgress) then {
 
 
 // Player Animation
-_callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
+private _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
 _caller setVariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
@@ -159,7 +157,7 @@ if (currentWeapon _caller == secondaryWeapon _caller) then {
     _caller selectWeapon (primaryWeapon _caller);
 };
 
-_wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
+private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     if (primaryWeapon _caller == "") then {
@@ -169,16 +167,21 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (stance _caller == "STAND") then {
-        _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
-    } else {
-        _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+    if !(_caller call EFUNC(common,isSwimming)) then {
+        if (stance _caller == "STAND") then {
+            _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+        } else {
+            _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+        };
+        [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
-    [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
+private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selectionPosition "RightHand"));
+["Acts_carFixingWheel", _soundPosition, nil, 50] call EFUNC(common,playConfigSound3D);
+
 // Get repair time
-_repairTime = [
+private _repairTime = [
     configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
     "number",
     -1
@@ -189,7 +192,7 @@ if (_repairTime < 0) then {
         getNumber (_config >> "repairingTime");
     } else {
         if (isText (_config >> "repairingTime")) exitWith {
-            _repairTimeConfig = getText (_config >> "repairingTime");
+            private _repairTimeConfig = getText (_config >> "repairingTime");
             if (isNil _repairTimeConfig) then {
                 _repairTimeConfig = compile _repairTimeConfig;
             } else {
@@ -205,7 +208,7 @@ if (_repairTime < 0) then {
 };
 
 // Find localized string
-_hitPointClassname = if (_hitPoint isEqualType "") then {
+private _hitPointClassname = if (_hitPoint isEqualType "") then {
     _hitPoint
 } else {
     ((getAllHitPointsDamage _target) select 0) select _hitPoint
@@ -224,17 +227,17 @@ TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
     DFUNC(repair_failure),
     _text,
     _callbackProgress,
-    ["isNotOnLadder"]
+    ["isNotSwimming", "isNotOnLadder"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon
-_iconDisplayed = getText (_config >> "actionIconPath");
+private _iconDisplayed = getText (_config >> "actionIconPath");
 if (_iconDisplayed != "") then {
     [QGVAR(repairActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call EFUNC(common,displayIcon);
 };
 
 // handle display of text/hints
-_displayText = "";
+private _displayText = "";
 if (_target != _caller) then {
     _displayText = getText(_config >> "displayTextOther");
 } else {

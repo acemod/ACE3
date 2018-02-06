@@ -10,7 +10,7 @@
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
-                exceptions[] = {"isNotOnLadder"}; \
+                exceptions[] = {"isNotSwimming", "isNotOnLadder"}; \
             }; \
         }; \
     };
@@ -20,7 +20,7 @@ class CBA_Extended_EventHandlers_base;
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRepairSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(moduleName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -32,8 +32,8 @@ class CfgVehicles {
         author = ECSTRING(Common,ACETeam);
         class Arguments {
             class engineerSetting_Repair {
-                displayName = CSTRING(enginerSetting_Repair_name);
-                description = CSTRING(enginerSetting_Repair_description);
+                displayName = CSTRING(engineerSetting_Repair_name);
+                description = CSTRING(engineerSetting_Repair_description);
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
@@ -42,8 +42,8 @@ class CfgVehicles {
                 };
             };
             class engineerSetting_Wheel {
-                displayName = CSTRING(enginerSetting_Wheel_name);
-                description = CSTRING(enginerSetting_Wheel_description);
+                displayName = CSTRING(engineerSetting_Wheel_name);
+                description = CSTRING(engineerSetting_Wheel_description);
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 1; };
@@ -118,7 +118,7 @@ class CfgVehicles {
 
     class Module_F;
     class ACE_moduleAssignEngineerRoles: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -162,7 +162,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleAssignRepairVehicle: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -234,7 +234,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleAddSpareParts: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AddSpareParts_Module_DisplayName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -321,7 +321,8 @@ class CfgVehicles {
 
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
-        destrType = "DesturctNo"; // scripted delayed destruction
+        editorCategory = "EdCat_Supplies";
+        editorSubcategory = QEGVAR(main,subcategory);
     };
 
     class ACE_Track: ACE_RepairItem_Base {
@@ -335,7 +336,7 @@ class CfgVehicles {
         mapSize = 0.5;
 
         // damage handling
-        armor = 0.6;
+        armor = 1000;
         armorStructural = 1;
         minTotalDamageThreshold = 0.01;
         explosionShielding = 1;
@@ -350,6 +351,8 @@ class CfgVehicles {
                 QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
             };
         };
+
+        editorPreview = QPATHTOF(data\preview_track.jpg);
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
@@ -364,7 +367,7 @@ class CfgVehicles {
         mapSize = 0.7;
 
         // damage handling
-        armor = 0.05;
+        armor = 120;
         armorStructural = 1;
         minTotalDamageThreshold = 0.01;
         explosionShielding = 1;
@@ -396,6 +399,8 @@ class CfgVehicles {
                 QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
             };
         };
+
+        editorPreview = QPATHTOF(data\preview_wheel.jpg);
     };
 
     // disable vanilla repair
@@ -481,8 +486,7 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Quadbike_01_base_F;
-    class B_Quadbike_01_F: Quadbike_01_base_F {
+    class Quadbike_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
     };
     class Hatchback_01_base_F: Car_F {

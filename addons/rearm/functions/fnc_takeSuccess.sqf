@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params [["_args", [objNull, "", objNull], [[]], 3]];
+params ["_args"];
 _args params ["_unit", "_magazineClass", "_truck"];
 TRACE_3("takeSuccess",_unit,_magazineClass,_truck);
 
@@ -28,7 +28,8 @@ if (GVAR(supply) > 0) then {
 };
 if !(_success) exitWith {WARNING_2("takeSuccess failed to take [%1] from [%2]",_magazineClass,_truck);};
 
-[_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
 private _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 

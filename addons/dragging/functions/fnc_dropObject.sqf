@@ -46,6 +46,8 @@ if (_target isKindOf "CAManBase") then {
 
 _unit removeWeapon "ACE_FakePrimaryWeapon";
 
+[_unit, "blockThrow", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+
 // prevent object from flipping inside buildings
 if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
@@ -58,7 +60,7 @@ if (_inBuilding) then {
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
 
-// make object accesable for other units
+// make object accessible for other units
 [objNull, _target, true] call EFUNC(common,claim);
 
 if !(_target isKindOf "CAManBase") then {

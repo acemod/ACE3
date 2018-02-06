@@ -24,3 +24,9 @@
     localize "str_channel_vehicle", \
     localize "str_channel_direct" \
 ]
+
+#define MOVE_RESTRICTION_NOBODY -1
+#define MOVE_RESTRICTION_ALL 0
+#define MOVE_RESTRICTION_ADMINS 1
+#define MOVE_RESTRICTION_GROUP_LEADERS 2
+#define MOVE_RESTRICTION_GROUP_LEADERS_ADMINS 3

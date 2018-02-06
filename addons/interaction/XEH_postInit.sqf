@@ -83,7 +83,7 @@ GVAR(isOpeningDoor) = false;
     call EFUNC(interaction,openDoor);
     true
 }, {
-    //Probably don't want any condidtions here, so variable never gets locked down
+    //Probably don't want any conditions here, so variable never gets locked down
     // Statement
     GVAR(isOpeningDoor) = false;
     true
@@ -106,5 +106,13 @@ GVAR(isOpeningDoor) = false;
 {false},
 [20, [true, false, false]], false] call CBA_fnc_addKeybind;
 
-["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSwimming", {!(_this call EFUNC(common,isSwimming))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
+
+["ace_settingsInitialized", {
+    if (GVAR(disableNegativeRating)) then {
+        player addEventHandler ["HandleRating", {
+            (_this select 1) max 0
+        }];
+    };
+}] call CBA_fnc_addEventHandler;

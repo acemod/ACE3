@@ -24,9 +24,7 @@ if ((vehicle _unit) != _unit) exitWith {false};
 private _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 if ((count _attachedList) == 0) exitWith {false};
 
-private ["_inRange"];
-
-_inRange = false;
+private _inRange = false;
 {
     _x params ["_xObject"];
     if (isNull _xObject) exitWith {

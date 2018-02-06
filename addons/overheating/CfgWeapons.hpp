@@ -1,7 +1,4 @@
 class CfgWeapons {
-    class ACE_ItemCore;
-    class InventoryItem_Base_F;
-
     class RifleCore;
     class Rifle: RifleCore {
         //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)

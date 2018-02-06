@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Movement">
         <Key ID="STR_ACE_Movement_UseImperial">
@@ -16,22 +16,6 @@
             <Korean>무게를 파운드(lb)로 보여줍니다</Korean>
             <Chinesesimp>使用磅来显示重量</Chinesesimp>
             <Chinese>使用磅來顯示重量</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Movement_Weight">
-            <English>Weight:</English>
-            <German>Gewicht:</German>
-            <Spanish>Peso:</Spanish>
-            <French>Poids :</French>
-            <Polish>Waga:</Polish>
-            <Czech>Váha:</Czech>
-            <Italian>Peso:</Italian>
-            <Portuguese>Peso:</Portuguese>
-            <Hungarian>Súly:</Hungarian>
-            <Russian>Вес:</Russian>
-            <Japanese>重量：</Japanese>
-            <Korean>무게:</Korean>
-            <Chinesesimp>重量:</Chinesesimp>
-            <Chinese>重量:</Chinese>
         </Key>
         <Key ID="STR_ACE_Movement_Climb">
             <English>Climb</English>
@@ -63,6 +47,7 @@
             <Japanese>ここは登れない</Japanese>
             <Chinesesimp>这里无法攀爬</Chinesesimp>
             <Chinese>這裡無法攀爬</Chinese>
+            <Korean>여기는 올라갈 수 없다</Korean>
         </Key>
     </Package>
 </Project>
