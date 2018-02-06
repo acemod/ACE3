@@ -1,4 +1,7 @@
 version: 2
+dependencies:
+  pre:
+    - sudo add-apt-repository ppa:koffeinflummi/armake; sudo apt-get update; sudo apt-get install armake
 jobs:
   build:
     docker:
