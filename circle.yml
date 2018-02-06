@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: thojkooi/ci-python
+      - image: acemod/armake
     steps:
       - checkout
       - run:
@@ -11,16 +11,12 @@ jobs:
       - run:
           name: Test Armake
           command: |
-            wget https://github.com/KoffeinFlummi/armake/releases/download/v0.5.1/armake_v0.5.1.zip -O armake.zip
-            unzip armake.zip
-            rm -f armake.zip
-            rm -f armake*.exe
-            chmod +x armake            
             armake --version
+            armake --help
 
   deployment:
     docker:
-      - image: thojkooi/ci-python
+      - image: acemod/armake
     branch: master
     requires:
       - build
