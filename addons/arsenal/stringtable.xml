@@ -547,5 +547,9 @@
             <English>Enable the faces / voices / insignias tabs</English>
             <French>Activer les onglets faces / voix / insignes</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
+            <English>Empty the selected container</English>
+            <French>Vider le conteneur selectionné</French>
+        </Key>
     </Package>
 </Project>
