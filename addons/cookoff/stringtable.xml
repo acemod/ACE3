@@ -123,12 +123,16 @@
             <Japanese>誘爆の可能性係数</Japanese>
             <Italian>Coefficiente probabilità esplosione</Italian>
             <German>Faktor für Wahrscheinlichkeit der Durchzündung</German>
+            <Chinese>殉爆發生機率係數</Chinese>
+            <Chinesesimp>殉爆发生机率系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
             <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
             <Italian>Moltiplicatore per la probabilità dell'esplosione. Un valore più alto aumenta la probabilità dell'esplosione</Italian>
             <German>Faktor für Wahrscheinlichkeit der Durchzündung. Ein höherer Wert führt zu höherer Durchzündungswahrscheinlichkeit.</German>
+            <Chinese>調整殉爆發生機率係數。值越高代表越容易發生殉爆。</Chinese>
+            <Chinesesimp>调整殉爆发生机率系数。值越高代表越容易发生殉爆。</Chinesesimp>
         </Key>
     </Package>
 </Project>
