@@ -5,5 +5,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0.1;
         displayName = CSTRING(minDamageToTrigger_displayName);
+        sliderSettings[] = {-1, 1, 0.1, 1};
     };
 };

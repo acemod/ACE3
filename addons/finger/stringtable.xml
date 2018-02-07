@@ -8,6 +8,7 @@
             <Chinese>指向指示器</Chinese>
             <Chinesesimp>指向指示器</Chinesesimp>
             <Japanese>指差し</Japanese>
+            <Korean>가리키기</Korean>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
@@ -155,7 +156,7 @@
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
-            <German>Maximale Reichweite zwischen Spielern, welche das Zeigesymbol des jeweils anderen sehen können. (Standart: 4 Meter)</German>
+            <German>Maximale Reichweite zwischen Spielern, welche das Zeigesymbol des jeweils anderen sehen können. (Standard: 4 Meter).</German>
             <French>Distance maximale entre joueurs pour afficher l'indicateur (défaut: 4 mètres)</French>
             <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m] </Polish>
             <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>

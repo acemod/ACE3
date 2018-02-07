@@ -18,8 +18,8 @@ class GVAR(display) {
     enableSimulation = 1;
     movingEnable = 0;
     closeOnMissionEnd = 1;
-    
-    onLoad = QUOTE(with uiNameSpace do {GVAR(display) = _this select 0};);
+
+    onLoad = QUOTE(_this call FUNC(ui_handleLoad));
 
     onKeyDown = QUOTE(_this call FUNC(ui_handleKeyDown));
     onKeyUp = QUOTE(_this call FUNC(ui_handleKeyUp));

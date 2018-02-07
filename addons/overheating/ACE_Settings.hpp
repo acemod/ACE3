@@ -43,6 +43,7 @@ class ACE_Settings {
         value = 0.1;
         displayName = CSTRING(unJamFailChance_displayName);
         description = CSTRING(unJamFailChance_description);
+        sliderSettings[] = {0, 1, 0.1, 2};
     };
     class GVAR(enabled) {
         category = CSTRING(DisplayName);

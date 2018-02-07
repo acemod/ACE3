@@ -48,15 +48,20 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
-    private _visibility = _object getUnitTrait "camouflageCoef";
+    private _vis = _object getUnitTrait "camouflageCoef";
     if (_set > 0) then {
-        if (_visibility != 0) then {
-            _object setVariable [QGVAR(oldVisibility), _visibility];
+        if (_vis != 0) then {
+            _object setVariable [QGVAR(oldVisibility), _vis];
             _object setUnitTrait ["camouflageCoef", 0];
+            {
+                if (side _x != side group _object) then {
+                    _x forgetTarget _object;
+                };
+            } forEach allGroups;
         };
     } else {
-        _visibility = _object getVariable [QGVAR(oldVisibility), _visibility];
-        _object setUnitTrait ["camouflageCoef", _visibility];
+        _vis = _object getVariable [QGVAR(oldVisibility), _vis];
+        _object setUnitTrait ["camouflageCoef", _vis];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -179,8 +184,8 @@ private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberStrin
 
 // check previous version number from profile
 if (_currentVersion != _previousVersion) then {
-    // do something
-
+    INFO_2("Updating ACE from [%1] to [%2]",_previousVersion,_currentVersion);
+    [_previousVersion] call FUNC(cbaSettings_transferUserSettings);
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
@@ -277,10 +282,10 @@ addMissionEventHandler ["PlayerViewChanged", {
     // On non-server client this command is semi-broken
     // arg index 5 should be the controlled UAV, but it will often be objNull (delay from locality switching?)
     // On PlayerViewChanged event, start polling for new uav state for a few seconds (should be done within a few frames)
-    
+
     params ["", "", "", "", "_newCameraOn", "_UAV"];
     TRACE_2("PlayerViewChanged",_newCameraOn,_UAV);
-    
+
     [{
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
@@ -301,14 +306,14 @@ addMissionEventHandler ["PlayerViewChanged", {
                 _seatAI = gunner _UAV;
             };
         };
-        
+
         private _newArray = [_UAV, _seatAI, _turret, _position];
         if (_newArray isEqualTo ACE_controlledUAV) exitWith {false}; // no change yet
-        
+
         TRACE_2("Seat Change",_newArray,ACE_controlledUAV);
         ACE_controlledUAV = _newArray;
         ["ACE_controlledUAV", _newArray] call CBA_fnc_localEvent;
-        
+
         // stay in the loop as we might switch from gunner -> driver, and there may be a empty position event in-between
         false
     }, {}, [], 3, {TRACE_1("timeout",_this);}] call CBA_fnc_waitUntilAndExecute;

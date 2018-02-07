@@ -116,7 +116,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_DisplayName">
             <English>Ammunition supply</English>
-            <German>Munitionsvorat</German>
+            <German>Munitionsvorrat</German>
             <Italian>Scorta munizioni</Italian>
             <Japanese>弾薬の供給</Japanese>
             <Chinesesimp>弹药补给</Chinesesimp>
@@ -136,7 +136,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
             <English>Unlimited ammo supply</English>
-            <German>Unbegrenzter Munitionsvorat</German>
+            <German>Unbegrenzter Munitionsvorrat</German>
             <Italian>Scorta munizioni infinita</Italian>
             <Japanese>無制限供給</Japanese>
             <Chinesesimp>无限弹药</Chinesesimp>
@@ -146,7 +146,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_limited">
             <English>Limited ammo supply based on caliber</English>
-            <German>Begrenzter, kaliberabhängiger Munitionsvorat</German>
+            <German>Begrenzter, kaliberabhängiger Munitionsvorrat</German>
             <Italian>Scorta munizioni limitata in base al calibro</Italian>
             <Japanese>口径に基づいた限定的供給</Japanese>
             <Chinesesimp>基于口径限制弹药数量</Chinesesimp>

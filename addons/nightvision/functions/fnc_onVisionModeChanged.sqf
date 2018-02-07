@@ -19,6 +19,11 @@
 params ["_unit", "_visionMode"];
 TRACE_2("onVisionModeChanged",_unit,_visionMode);
 
+// handle only brightness if effects are disabled
+if (GVAR(effectScaling) == 0) exitWith {
+    GVAR(ppEffectNVGBrightness) ppEffectEnable (_visionMode == 1);
+};
+
 // Start PFEH when entering night vision mode:
 if (_visionMode == 1) then {
     if (GVAR(PFID) == -1) then {

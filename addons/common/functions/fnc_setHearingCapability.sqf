@@ -47,7 +47,9 @@ if (!_exists && _add) then {
 // in game sounds
 0 fadeSound _lowestVolume;
 0 fadeRadio _lowestVolume;
-0 fadeMusic _lowestVolume;
+if (GVAR(allowFadeMusic)) then {
+    0 fadeMusic _lowestVolume;
+};
 
 // Set Radio mod variables.
 ACE_player setVariable ["tf_globalVolume", _lowestVolume];

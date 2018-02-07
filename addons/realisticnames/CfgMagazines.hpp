@@ -472,7 +472,7 @@ class CfgMagazines {
     };
     class 12Rnd_missiles;
     class PylonRack_12Rnd_missiles: 12Rnd_missiles {
-        displayName = "Hydra 70"; // [vanilla: DAR - missiles_DAR]
+        displayName = "Hydra 70 12x HE"; // [vanilla: DAR - missiles_DAR]
     };
     class PylonRack_20Rnd_Rocket_03_HE_F: 20Rnd_Rocket_03_HE_F {
         displayName = "S-8 20x HE"; // [vanilla: Tratnyr 20x HE - Rocket_03_HE_Plane_CAS_02_F]
