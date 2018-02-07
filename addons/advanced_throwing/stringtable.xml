@@ -28,7 +28,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
             <Russian>Включить улучшенный бросок</Russian>
-            <Japanese>アドバンスド投てきを有効化</Japanese>
+            <Japanese>アドバンスド投てき</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
             <German>Aktiviere erweitertes Wurfsystem</German>
             <Korean>고급 투척 활성화 </Korean>
@@ -100,7 +100,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
             <Russian>Включить подбор гранат</Russian>
-            <Japanese>投てき物の拾い上げを有効化</Japanese>
+            <Japanese>投てき物の拾い上げ</Japanese>
             <Polish>Zezwól na podnoszenie obiektów miotanych</Polish>
             <German>Aktiviere Aufheben von Wurfobjekten</German>
             <Korean>투척물 줍기 활성화</Korean>
@@ -124,7 +124,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
             <Russian>Включить подбор прикрепленных гранат</Russian>
-            <Japanese>拾い上げた投てき物の取り付けを有効化</Japanese>
+            <Japanese>拾った投てき物の取り付け</Japanese>
             <Polish>Zezwól na podnoszenie przyczepionych obiektów miotanych</Polish>
             <German>Aktiviere erneute Aufnahme befestigter Wurfobjekte</German>
             <Korean>부착 투척물 줍기 활성화</Korean>
@@ -172,7 +172,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
             <English>Throwable Drop Mode (Toggle)</English>
             <Russian>Режим броска гранаты (переключить)</Russian>
-            <Japanese>投てきモード (切り替え)</Japanese>
+            <Japanese>投てきモード (切替)</Japanese>
             <Polish>Tryb upuszczania ob. miotanego (przełącz)</Polish>
             <German>Wurfobjekt Fallmodus (umschalten)</German>
             <Korean>투척물 떨어뜨리기 모드(토글)</Korean>
@@ -184,7 +184,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_Primed">
             <English>Primed</English>
             <Russian>Подготовлена</Russian>
-            <Japanese>起動した</Japanese>
+            <Japanese>作動させた</Japanese>
             <Polish>Odbezpieczony</Polish>
             <German>Scharf gemacht</German>
             <Korean>뇌관 작동</Korean>

@@ -139,9 +139,7 @@ private _camPos = AGLToASL positionCameraToWorld [0,0,0];
             SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
         };
     };
-
-    nil // Speed loop
-} count ([] call FUNC(getTargetEntities));
+} forEach ([] call FUNC(getTargetEntities));
 
 GVAR(iconsToDraw) = _iconsToDraw;
 GVAR(entitiesToDraw) = _entitiesToDraw;

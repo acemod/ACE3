@@ -17,8 +17,8 @@
 
 #include "script_component.hpp"
 
-_this params ["_varName","_varValue"];
-_varValue params ["_general","_accuracy","_handling","_spotting","_cover","_combat"];
+params ["_varName", "_varValue"];
+_varValue params ["_general", "_accuracy", "_handling", "_spotting", "_cover", "_combat"];
 TRACE_1("Params",_this);
 
 TRACE_6("AI settings updated",GVAR(GlobalSkillAI));

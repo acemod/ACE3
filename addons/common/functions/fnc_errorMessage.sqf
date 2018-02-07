@@ -38,7 +38,7 @@ if (_textMessage isEqualType "") then {
     _textMessage = parseText _textMessage;
 };
 
-(ARR_SELECT(_this,4,call BIS_fnc_displayMission)) createDisplay "RscDisplayCommonMessagePause";
+ARR_SELECT(_this,4,call BIS_fnc_displayMission) createDisplay "RscDisplayCommonMessagePause";
 
 private _display = uiNamespace getVariable "RscDisplayCommonMessage_display";
 private _ctrlRscMessageBox =          _display displayCtrl 2351;

@@ -32,7 +32,7 @@ if (_state) then {
     //Add Actionmenu to release captive
     private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
     {[(_this select 0), ((_this select 0) getVariable [QGVAR(escortedUnit), objNull]), false] call FUNC(doEscortCaptive);},
-    nil, 20, false, true, "", QUOTE(!isNull (GETVAR(_target,QGVAR(escortedUnit),objNull)))];
+    nil, 20, false, true, "", QUOTE(!isNull GETVAR(_target,QGVAR(escortedUnit),objNull))];
 
     [{
         params ["_args", "_pfID"];

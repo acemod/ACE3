@@ -52,6 +52,6 @@ if (!hasInterface) exitWith {};
 {false},
 [DIK_F1, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + F1
 
-["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
-["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
-["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotEscorting", {!GETVAR(_this select 0,GVAR(isEscorting),false)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotHandcuffed", {!GETVAR(_this select 0,GVAR(isHandcuffed),false)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSurrendering", {!GETVAR(_this select 0,GVAR(isSurrendering),false)}] call EFUNC(common,addCanInteractWithCondition);

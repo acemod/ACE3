@@ -54,6 +54,7 @@ if (_shouldAdd) then {
     private _localShooter = if (isNil "_gunner") then {local _unit} else {local _gunner};
     TRACE_4("",_localShooter,_unit,_ammo,_projectile);
     if (!_localShooter) exitWith {};
+    if (_weapon == "Put") exitWith {}; // Ignore explosives placed without ace_explosives
 
     // Skip if less than 0.5 second from last shot
     if ((CBA_missionTime - (_unit getVariable [QGVAR(lastTrack), -1])) < 0.5) exitWith {};
