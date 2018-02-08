@@ -21,10 +21,10 @@ class CfgACEArsenalStats {
     class ammo: statBase {
         scope = 2;
         priority = 5;
-        stats[]= {"ammo"};
+        stats[]= {"ammo", "displayName"};
         displayName= "$STR_dn_ammo";
         showText= 1;
-        textStatement = QUOTE(params [ARR_2('_stat', '_config')];getText (_config >> _stat select 0));
+        textStatement = QUOTE(params [ARR_2('_stat', '_config')]; private _ammoDisplayName = getText (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 1); [ARR_2(_ammoDisplayName, getText (_config >> _stat select 0))] select (_ammoDisplayName == ''));
         tabs[]= {{}, {4}};
     };
     class ballisticCoef: statBase {
