@@ -82,8 +82,8 @@ class CfgVehicles {
                 class EGVAR(reload,CheckAmmo) {
                     condition = "false";
                 };
-				
-				class GVAR(loadAmmo) {
+                
+                class GVAR(loadAmmo) {
                     insertChildren = QUOTE((_this call FUNC(actionsLoad)) + (_this call FUNC(actionsUnload)));
                 };
                 

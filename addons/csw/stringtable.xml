@@ -133,7 +133,7 @@
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
         </Key>
-		<Key ID="STR_ACE_crewserved_genericDescription">
+        <Key ID="STR_ACE_crewserved_genericDescription">
             <English>Used to reload crew served weapons</English>
         </Key>
         <Key ID="STR_ACE_crewserved_mag_127x108">

@@ -30,25 +30,25 @@ if (isNull GVAR(cswTripod)) then {
             private _weaponPos = getPosATL _weapon;
             _weaponPos set[2, (_weaponPos select 2) + 0.1];
             private _weaponDir = getDir _weapon;
-			
-			{
-				_x params ["_xMag", "_xTurret", "_xAmmo"];
-					
-				while {_xAmmo > 0} do {
-					private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
+            
+            {
+                _x params ["_xMag", "_xTurret", "_xAmmo"];
+                    
+                while {_xAmmo > 0} do {
+                    private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
 
-					if (isNil "_carryMag") then {
-						private _groups = "getNumber (_x >> _xMag) == 1" configClasses (configFile >> QGVAR(groups));
-						_carryMag = configName (_groups param [0, configNull]);
-						GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
-						TRACE_2("setting cache",_xMag,_carryMag);
-					};
-					if (_carryMag == "") exitWith {};
+                    if (isNil "_carryMag") then {
+                        private _groups = "getNumber (_x >> _xMag) == 1" configClasses (configFile >> QGVAR(groups));
+                        _carryMag = configName (_groups param [0, configNull]);
+                        GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
+                        TRACE_2("setting cache",_xMag,_carryMag);
+                    };
+                    if (_carryMag == "") exitWith {};
 
-					[QGVAR(removeTurretMag), [_weapon, _xTurret, player, _carryMag, _xMag]] call CBA_fnc_globalEvent;
-					_xAmmo = ((magazinesAllTurrets _weapon) select _foreachindex) select 2;
-				};
-			} forEach (magazinesAllTurrets _weapon);
+                    [QGVAR(removeTurretMag), [_weapon, _xTurret, player, _carryMag, _xMag]] call CBA_fnc_globalEvent;
+                    _xAmmo = ((magazinesAllTurrets _weapon) select _foreachindex) select 2;
+                };
+            } forEach (magazinesAllTurrets _weapon);
 
             deleteVehicle _weapon;
             

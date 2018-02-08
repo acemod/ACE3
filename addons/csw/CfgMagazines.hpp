@@ -13,7 +13,7 @@ class CfgMagazines {
         count = 100;
         mass = 40;
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
-		ACE_isBelt = 1;
+        ACE_isBelt = 1;
     };
     // The maximum amount of ammo the HMG can hold. Its a dummy since all this purpose is for is to allow for 200 bullets
     class GVAR(HMG_Dummy_200Rnd_mag): 100Rnd_127x99_mag {
@@ -25,9 +25,9 @@ class CfgMagazines {
         count = 200;
         mass = 40;
     };
-	
-	class GVAR(50Rnd_127x108_mag) : 100Rnd_127x99_mag {
-		author = ECSTRING(common, ACETeam);
+    
+    class GVAR(50Rnd_127x108_mag) : 100Rnd_127x99_mag {
+        author = ECSTRING(common, ACETeam);
         displayName = CSTRING(HMGBelt_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         scope = 2;
@@ -35,8 +35,8 @@ class CfgMagazines {
         count = 50;
         mass = 40;
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
-		ACE_isBelt = 1;
-	};
+        ACE_isBelt = 1;
+    };
     
     class GVAR(20Rnd_20mm_G_belt): 40Rnd_20mm_G_belt {
         author = ECSTRING(common, ACETeam);
@@ -47,7 +47,7 @@ class CfgMagazines {
         count = 20;
         mass = 40;
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
-		ACE_isBelt = 1;
+        ACE_isBelt = 1;
     };
     class GVAR(GMG_Dummy_120Rnd_mag): 40Rnd_20mm_G_belt {
         author = ECSTRING(common, ACETeam);

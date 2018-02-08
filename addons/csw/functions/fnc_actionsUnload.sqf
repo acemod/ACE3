@@ -30,13 +30,13 @@ private _statement = {
         [LSTRING(gunnerInWeapon)] call EFUNC(common,displayTextStructured);
     };
     
-	private _weapon = (_vehicle weaponsTurret _turretPath) select 0;
-	
-	private _timeToUnload = 1;
-	if (!isNull(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options))) then {
-		_timeToUnload = getNumber(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options) >> "ammoUnloadTime");
-	};
-	
+    private _weapon = (_vehicle weaponsTurret _turretPath) select 0;
+    
+    private _timeToUnload = 1;
+    if (!isNull(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options))) then {
+        _timeToUnload = getNumber(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options) >> "ammoUnloadTime");
+    };
+    
     [
     _timeToUnload,
     [_target, _turretPath, _player, _carryMag, _vehMag],
@@ -59,7 +59,7 @@ private _condition = {
 // Go through magazines on static weapon and check if any are unloadable
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
-		
+        
     if ((_xAmmo > 0) && {!(_xMag in _handeledMagTypes)}) then {
         _handeledMagTypes pushBack _xMag;
         private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;

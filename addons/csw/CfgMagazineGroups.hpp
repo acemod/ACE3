@@ -8,19 +8,19 @@ class GVAR(groups) {
         rhs_mag_100rnd_127x99_mag = 1;
         rhs_mag_200rnd_127x99_mag = 1;
         CUP_100Rnd_127x99_M = 1;
-		GVAR(HMG_Dummy_200Rnd_mag) = 1;
-		500Rnd_127x99_mag_Tracer_Red = 1;
+        GVAR(HMG_Dummy_200Rnd_mag) = 1;
+        500Rnd_127x99_mag_Tracer_Red = 1;
         200Rnd_127x99_mag_Tracer_Red = 1;
         100Rnd_127x99_mag_Tracer_Red = 1;
         rhs_mag_100rnd_127x99_mag_Tracer_Red = 1;
         rhs_mag_200rnd_127x99_mag_Tracer_Red = 1;
         CUP_100Rnd_TE4_Red_Tracer_127x99_M = 1;
-		500Rnd_127x99_mag_Tracer_Green = 1;
+        500Rnd_127x99_mag_Tracer_Green = 1;
         200Rnd_127x99_mag_Tracer_Green = 1;
         100Rnd_127x99_mag_Tracer_Green = 1;
         rhs_mag_100rnd_127x99_mag_Tracer_Green = 1;
         CUP_100Rnd_TE4_Green_Tracer_127x99_M = 1;
-		500Rnd_127x99_mag_Tracer_Yellow = 1;
+        500Rnd_127x99_mag_Tracer_Yellow = 1;
         200Rnd_127x99_mag_Tracer_Yellow = 1;
         100Rnd_127x99_mag_Tracer_Yellow = 1;
         rhs_mag_100rnd_127x99_mag_Tracer_Yellow = 1;
@@ -42,7 +42,7 @@ class GVAR(groups) {
     class GVAR(20Rnd_20mm_G_belt) {
         40Rnd_20mm_G_belt = 1;
         200Rnd_20mm_G_belt = 1;
-		GVAR(GMG_Dummy_120Rnd_mag) = 1;
+        GVAR(GMG_Dummy_120Rnd_mag) = 1;
     };
 
 
@@ -63,13 +63,13 @@ class GVAR(groups) {
         8Rnd_82mm_Mo_LG = 1;
     };
     
-	// Titan Missiles
+    // Titan Missiles
     class GVAR(1Rnd_GAT_missiles) {
         1Rnd_GAT_missiles = 1;
-		GVAR(TitanAT_Dummy_Missile) = 1;
+        GVAR(TitanAT_Dummy_Missile) = 1;
     };
     class GVAR(1Rnd_GAA_missiles) {
         1Rnd_GAA_missiles = 1;
-		GVAR(TitanAA_Dummy_Missile) = 1;
+        GVAR(TitanAA_Dummy_Missile) = 1;
     };
 };
