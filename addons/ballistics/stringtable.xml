@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Ballistics">
         <!-- QBU -->
@@ -2006,6 +2006,8 @@
             <Hungarian>.338 Scenar</Hungarian>
             <Japanese>338 Scenar</Japanese>
             <Korean>.338 Scenar</Korean>
+            <Chinese>.338 Scenar</Chinese>
+            <Chinesesimp>.338 Scenar</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Rounds: 10</English>
