@@ -33,7 +33,7 @@ class CfgACEArsenalStats {
         stats[]= {"ACE_dragModel","ACE_ballisticCoefficients"};
         displayName= CSTRING(statBallisticCoef);
         showText= 1;
-        textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); private _dragModel = (_ammoCfg >> _stat select 0);private _ballisticCoef = (_ammoCfg >> _stat select 1);format [ARR_3('%1 G%2', (getArray _ballisticCoef) select 0 ,getNumber _dragModel)]);
+        textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); private _dragModel = (_ammoCfg >> _stat select 0); private _ballisticCoef = getArray (_ammoCfg >> _stat select 1); _ballisticCoef sort false; format [ARR_3('%1 G%2', _ballisticCoef select 0 ,getNumber _dragModel)]);
         tabs[]= {{}, {4}};
     };
     class bulletMass: statBase {
