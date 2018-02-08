@@ -136,6 +136,8 @@ class ACE_Settings {
     };
     class GVAR(allowDeadBodyMovement) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_allowDeadBodyMovement_DisplayName);
+        description = CSTRING(MedicalSettings_allowDeadBodyMovement_Description);
         typeName = "BOOL";
         value = 0;
     };
@@ -275,11 +277,15 @@ class ACE_Settings {
     };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);
+        description = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_Description);
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(moveUnitsFromGroupOnUnconscious) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName);
+        description = CSTRING(MedicalSettings_moveUnitsFromGroupOnUnconscious_Description);
         typeName = "BOOL";
         value = 0;
     };
