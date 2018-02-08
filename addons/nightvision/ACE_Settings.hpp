@@ -14,6 +14,14 @@ class ACE_Settings {
         value = 1;
         sliderSettings[] = {0, 2, 1, 1};
     };
+    class GVAR(noiseScaling) {
+        category = CSTRING(Category);
+        displayName = CSTRING(noiseScaling_DisplayName);
+        description = CSTRING(noiseScaling_Description);
+        typeName = "SCALAR";
+        value = 1;
+        sliderSettings[] = {0, 2, 1, 1};
+    };
     class GVAR(effectScaling) {
         category = CSTRING(Category);
         displayName = CSTRING(effectScaling_DisplayName);
