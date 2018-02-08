@@ -45,4 +45,13 @@ class CfgACEArsenalStats {
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoWeight = getNumber (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 0); format [ARR_3('%1g (%2gr)', _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1)]);
         tabs[]= {{}, {4}};
     };
+    class magMuzzleVelocity: statBase {
+        scope = 2;
+        priority = 3;
+        stats[]= {"initSpeed"};
+        displayName= CSTRING(statMuzzleVelocity);
+        showText= 1;
+        textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _initSpeed = getNumber (_config >> _stat select 0); format [ARR_3('%1 m/s (%2 ft/s)', _initSpeed, (_initSpeed * 3.28084) toFixed 0)]);
+        tabs[]= {{}, {4}};
+    };
 };

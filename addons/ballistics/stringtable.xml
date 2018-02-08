@@ -2294,5 +2294,9 @@
             <English>Bullet mass</English>
             <French>Masse d'une balle</French>
         </Key>
+        <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
+            <English>Muzzle velocity</English>
+            <French>Vitesse à la bouche</French>
+        </Key>
     </Package>
 </Project>
