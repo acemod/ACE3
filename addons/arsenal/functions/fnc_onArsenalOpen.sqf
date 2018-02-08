@@ -15,6 +15,11 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
+#ifdef ENABLE_PERF_PROFILING
+    private _scopeArsenal = createProfileScope QFUNC(onArsenalOpen);
+    profilerTrigger;
+#endif
+
 params ["", "_args"];
 _args params ["_display"];
 
