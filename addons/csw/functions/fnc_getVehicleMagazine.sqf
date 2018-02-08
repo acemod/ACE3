@@ -38,3 +38,4 @@ private _vehicleMagCount = -1;
 TRACE_3("best fit",_ammoToAdd,_vehicleMag,_vehicleMagCount);
 
 _vehicleMag
+

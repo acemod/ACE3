@@ -34,3 +34,4 @@ TRACE_2("",local _vehicle, _vehicle turretLocal _turret);
 if (!(_vehicle turretLocal _turret)) exitWith {};
 
 TRACE_1("added",_vehicle magazinesTurret _turret);
+

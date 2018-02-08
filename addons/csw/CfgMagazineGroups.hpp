@@ -73,3 +73,4 @@ class GVAR(groups) {
         GVAR(TitanAA_Dummy_Missile) = 1;
     };
 };
+

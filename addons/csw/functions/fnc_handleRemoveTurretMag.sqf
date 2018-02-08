@@ -42,3 +42,4 @@ _ammoHolder setPosATL _vehiclePos;
 _ammoHolder setVectorUp (surfaceNormal _vehiclePos);
 _ammoHolder setDir random[0, 180, 360];
 _ammoHolder addMagazineAmmoCargo[_carryMag, 1, _maxAmmo];
+

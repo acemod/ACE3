@@ -46,3 +46,4 @@ TRACE_4("calling addTurretMag event", _vehicle, _turret, _vehicleMag, _ammoAvail
 [QGVAR(addTurretMag), [_vehicle, _turret, _vehicleMag, _ammoAvailable]] call CBA_fnc_globalEvent;
 
 TRACE_3("done",_playerMags,_ammoAvailable,_maxAmmo);
+

@@ -32,3 +32,4 @@ private _return = false;
 } forEach (magazinesAllTurrets _vehicle);
 
 _return
+

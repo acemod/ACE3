@@ -57,3 +57,4 @@ if (_checkIfEmpty && GVAR(onlyReloadEmpty)) then {
 };
 
 _canLoad
+

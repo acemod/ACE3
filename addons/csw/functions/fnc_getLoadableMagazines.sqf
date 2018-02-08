@@ -49,3 +49,4 @@ if (_carriedMagazines isEqualTo []) exitWith {_return}; // fast exit if no carry
 // Note: these nested forEach's looks terrible, but most only have one element
 
 _return
+
