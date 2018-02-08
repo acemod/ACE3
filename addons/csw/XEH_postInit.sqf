@@ -8,6 +8,11 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
+[QGVAR(addTurretMag), FUNC(handleAddTurretMag)] call CBA_fnc_addEventHandler;
+[QGVAR(removeTurretMag), FUNC(handleRemoveTurretMag)] call CBA_fnc_addEventHandler;
+
+GVAR(vehicleMagCache) = call CBA_fnc_createNamespace;
+
 [QGVAR(addCSWAmmo), {
     params["_object", "_weapon", "_ammo"];
     _object setAmmo[_weapon, _ammo]; // we dont check if the CSW is local so no issues pop up regarding locality

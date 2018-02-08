@@ -82,6 +82,10 @@ class CfgVehicles {
                 class EGVAR(reload,CheckAmmo) {
                     condition = "false";
                 };
+				
+				class GVAR(loadAmmo) {
+                    insertChildren = QUOTE((_this call FUNC(actionsLoad)) + (_this call FUNC(actionsUnload)));
+                };
                 
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
@@ -111,7 +115,7 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
                         statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
                     };
-                    class GVAR(loadAmmo) {
+                    /*class GVAR(loadAmmo) {
                         displayName = CSTRING(LoadAmmo_displayName);
                         selection = "";
                         distance = 2;
@@ -124,7 +128,7 @@ class CfgVehicles {
                         distance = 2;
                         condition = QUOTE([ARR_2(_target,_this)] call FUNC(canUnloadAmmo));
                         statement = QUOTE([ARR_2({_this call FUNC(unloadAmmo)},[ARR_2(_target,true)])] call CBA_fnc_execNextFrame);
-                    };
+                    };*/
                 };
             };
         };
