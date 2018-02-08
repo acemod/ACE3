@@ -73,11 +73,8 @@
         <Key ID="STR_ACE_CSW_StaticGMGTallBag_displayName">
             <English>[ACE] Static XM307 Gun (High)</English>
         </Key>
-        <Key ID="STR_ACE_CSW_LoadAmmo_displayName">
-            <English>Load Ammo</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_UnloadAmmo_displayName">
-            <English>Unload Ammo</English>
+        <Key ID="STR_ACE_CSW_AmmoHandling_displayName">
+            <English>Handle Ammo</English>
         </Key>
         <Key ID="STR_ACE_CSW_HMGStatic_displayName">
             <English>[ACE] HMG Static</English>
@@ -92,10 +89,10 @@
             <English>[ACE] AA Static</English>
         </Key>
         <Key ID="STR_ACE_CSW_HMGBelt_displayName">
-            <English>[ACE] 12.7mm M2 HMG Belt (100 Rounds)</English>
+            <English>[ACE] 12.7mm M2 HMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
-            <English>[ACE] 20mm Grenade GMG Belt (20 Rounds)</English>
+            <English>[ACE] 20mm Grenade GMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_ATRocket_displayName">
             <English>[ACE] Mini-Spike AT Missile</English>
