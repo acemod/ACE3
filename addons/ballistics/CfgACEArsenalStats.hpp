@@ -54,4 +54,13 @@ class CfgACEArsenalStats {
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _initSpeed = getNumber (_config >> _stat select 0); format [ARR_3('%1 m/s (%2 ft/s)', _initSpeed, (_initSpeed * 3.28084) toFixed 0)]);
         tabs[]= {{}, {4}};
     };
+    class weaponMuzzleVelocity: statBase {
+        scope = 2;
+        priority = 3;
+        stats[]= {"initSpeed"};
+        displayName= CSTRING(statMuzzleVelocity);
+        showText= 1;
+        textStatement = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(statTextStatement_weaponMuzzleVelocity));
+        tabs[]= {{0,1}, {}};
+    };
 };
