@@ -28,7 +28,7 @@ private _magazineAmmoCount = _ammo;
 
 private _wantedAmmo = ((_vehicle magazineTurretAmmo [_vehMag, _turret]) + _magazineAmmoCount);
 // due to an issue with locality, I set the ammo locally so the person who deployed the weapon sees the same result. It does NOT duplicate ammo
-_vehicle setAmmo [_vehicle currentWeaponTurret _turret, _wantedAmmo];
+_vehicle setAmmo [(_vehicle weaponsTurret _turret) select 0, _wantedAmmo];
 
 TRACE_2("",local _vehicle, _vehicle turretLocal _turret);
 if (!(_vehicle turretLocal _turret)) exitWith {};

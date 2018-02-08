@@ -32,7 +32,7 @@ private _magazineAmmoCount = (_ammo select 0) select 1;
 private _maxAmmo = _magazineAmmoCount min _maxMagazineCapacity;
 
 private _ammoRemoved = (_vehicle magazineTurretAmmo [_vehMag, _turretPath]) - _maxAmmo;
-_vehicle setAmmo [_vehicle currentWeaponTurret _turretPath, _ammoRemoved];
+_vehicle setAmmo [(_vehicle weaponsTurret _turretPath) select 0, _ammoRemoved];
 
 private _vehiclePos = _vehicle getRelPos RELATIVE_DIRECTION(270);
 
