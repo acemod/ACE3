@@ -74,7 +74,6 @@ if (isNull GVAR(cswTripod)) then {
         
         private _turretClassname = getArray(configFile >> "CfgVehicles" >> typeof(_weapon) >> "Turrets" >> "MainTurret" >> "weapons") select 0;
         private _deployTime = getNumber(configFile >> "CfgWeapons" >> _turretClassname >> QGVAR(options) >> "pickupTime");
-		_deployTime = 1;
         [_deployTime, [_weapon], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _crewCheck] call EFUNC(common,progressBar);
     }, [_weapon]] call CBA_fnc_execNextFrame;
 };

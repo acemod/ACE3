@@ -26,8 +26,13 @@ private _statement = {
     _params params ["_carryMag", "_weapon", "_turretPath"];
     TRACE_5("Starting load mag progres bar",_target,_turretPath,_player,_carryMag,_weapon);
     
+	private _timeToLoad = 1;
+	if (!isNull(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options))) then {
+		_timeToLoad = getNumber(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options) >> "ammoLoadTime");
+	};
+		
     [
-    1, // This is just putting a mag into the gun, still needs to be "reloaded" on the weapon
+    _timeToLoad, // This is just putting a mag into the gun, still needs to be "reloaded" on the weapon
     [_target, _turretPath, _player, _carryMag, _weapon],
     {TRACE_1("load progressBar finish",_this); (_this select 0) call FUNC(loadMagazine)},
     {TRACE_1("load progressBar fail",_this);},

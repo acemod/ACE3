@@ -23,15 +23,22 @@ private _handeledMagTypes = [];
 
 private _statement = {
     params ["_target", "_player", "_params"];
-    _params params ["_vehMag", "_turretPath", "_carryMag"];
+    _params params ["_vehMag", "_turretPath", "_carryMag", "_vehicle"];
     TRACE_5("Starting unload mag progres bar",_target,_turretPath,_player,_carryMag,_vehMag);
 
     if (!isNull (_target turretUnit _turretPath)) exitWith {
         [LSTRING(gunnerInWeapon)] call EFUNC(common,displayTextStructured);
     };
     
+	private _weapon = (_vehicle weaponsTurret _turretPath) select 0;
+	
+	private _timeToUnload = 1;
+	if (!isNull(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options))) then {
+		_timeToUnload = getNumber(configFile >> "CfgWeapons" >> _weapon >> QGVAR(options) >> "ammoUnloadTime");
+	};
+	
     [
-    1,
+    _timeToUnload,
     [_target, _turretPath, _player, _carryMag, _vehMag],
     {TRACE_1("unload progressBar finish",_this); [QGVAR(removeTurretMag), (_this select 0)] call CBA_fnc_globalEvent;},
     {TRACE_1("unload progressBar fail",_this);},
@@ -67,7 +74,7 @@ private _condition = {
 
         private _displayName = getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName");
         private _picture = getText (configFile >> "CfgMagazines" >> _carryMag >> "picture");
-        private _action = [format ["unload_%1", _forEachIndex], format ["Unload %1", _displayName], _picture, _statement, _condition, {}, [_xMag, _xTurret, _carryMag]] call EFUNC(interact_menu,createAction);
+        private _action = [format ["unload_%1", _forEachIndex], format ["Unload %1", _displayName], _picture, _statement, _condition, {}, [_xMag, _xTurret, _carryMag, _vehicle]] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _target];
     };
 } forEach (magazinesAllTurrets _vehicle);
