@@ -37,6 +37,7 @@ class ACE_Settings {
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(showCursorTagForVehicles) {
+        displayName = CSTRING(showCursorTagForVehicles);
         value = 0;
         typeName = "BOOL";
         isClientSettable = 0;
@@ -52,6 +53,7 @@ class ACE_Settings {
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(playerNamesViewDistance) {
+        displayName = CSTRING(playerNamesViewDistance);
         value = 5;
         typeName = "SCALAR";
         isClientSettable = 0;
@@ -59,6 +61,7 @@ class ACE_Settings {
         sliderSettings[] = {0, 50, 5, 1};
     };
     class GVAR(playerNamesMaxAlpha) {
+        displayName = CSTRING(playerNamesMaxAlpha);
         value = 0.8;
         typeName = "SCALAR";
         isClientSettable = 0;

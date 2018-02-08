@@ -539,5 +539,14 @@
             <Chinesesimp>在荧幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
         </Key>
+        <Key ID="STR_ACE_NameTags_showCursorTagForVehicles">
+            <English>Show tag for Vehicles</English>
+        </Key>
+        <Key ID="STR_ACE_NameTags_playerNamesViewDistance">
+            <English>Player tags distance</English>
+        </Key>
+        <Key ID="STR_ACE_NameTags_playerNamesMaxAlpha">
+            <English>Player tags transparency</English>
+        </Key>
     </Package>
 </Project>
