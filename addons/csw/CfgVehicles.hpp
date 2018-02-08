@@ -111,11 +111,11 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_target,_this)] call FUNC(canDismountWeapon));
                         statement = QUOTE([ARR_2({_this call FUNC(dismountWeapon)},[ARR_2(_target,_this)])] call CBA_fnc_execNextFrame);
                     };
-					class GVAR(loadAmmo) {
-						displayName = CSTRING(AmmoHandling_displayName);
-						distance = 2;
-						insertChildren = QUOTE((_this call FUNC(actionsLoad)) + (_this call FUNC(actionsUnload)));
-					};
+                    class GVAR(loadAmmo) {
+                        displayName = CSTRING(AmmoHandling_displayName);
+                        distance = 2;
+                        insertChildren = QUOTE((_this call FUNC(actionsLoad)) + (_this call FUNC(actionsUnload)));
+                    };
                 };
             };
         };
