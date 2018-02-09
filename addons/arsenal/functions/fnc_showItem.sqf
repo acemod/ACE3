@@ -17,6 +17,8 @@
     private _scopeShowItem = createProfileScope QFUNC(showItem);
 #endif
 
+if (GVAR(centerNotPlayer)) exitWith {};
+
 private _nextAction = switch (GVAR(currentLeftPanel)) do {
 
     case IDC_buttonPrimaryWeapon : {

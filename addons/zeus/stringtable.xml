@@ -1238,5 +1238,11 @@
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
             <Korean>주둔해제</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
+            <English>Add full ACE Arsenal</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
+            <English>Remove ACE Arsenal</English>
+        </Key>
     </Package>
 </Project>

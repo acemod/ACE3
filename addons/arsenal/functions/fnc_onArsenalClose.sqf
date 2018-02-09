@@ -104,5 +104,6 @@ GVAR(statsPagesRight) = nil;
 GVAR(statsInfo) =  nil;
 
 GVAR(center) = nil;
+GVAR(centerNotPlayer) = nil;
 
 showHUD true;
