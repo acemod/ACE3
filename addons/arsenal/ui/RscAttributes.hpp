@@ -717,6 +717,7 @@ class GVAR(display) {
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
             text = QPATHTOF(data\iconClearContainer.paa);
+            tooltip = CSTRING(buttonClearContainerTooltip);
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;

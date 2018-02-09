@@ -266,6 +266,18 @@ class CfgVehicles {
         displayName = CSTRING(ModuleRemoveArsenal_DisplayName);
         function = QFUNC(moduleRemoveArsenal);
     };
+    class GVAR(AddFullAceArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Arsenal);
+        displayName = CSTRING(ModuleAddFullACEArsenal_DisplayName);
+        function = QFUNC(moduleAddAceArsenal);
+    };
+    class GVAR(RemoveFullAceArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Arsenal);
+        displayName = CSTRING(ModuleRemoveACEArsenal_DisplayName);
+        function = QFUNC(moduleRemoveAceArsenal);
+    };
     class ModuleArsenal_F: Module_F {
         function=QFUNC(bi_moduleArsenal);
     };

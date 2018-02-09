@@ -200,6 +200,21 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     IDC_rightTabContentListnBox,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
     IDC_buttonRemoveAll\
+];\
+{\
+    _x = _display displayCtrl _x;\
+    _x ctrlSetPosition [\
+        safezoneX + safezoneW - 93 * GRID_W,\
+        safezoneY + 14 * GRID_H,\
+        80 * GRID_W,\
+        safezoneH - 28 * GRID_H\
+    ];\
+    _x ctrlCommit 0;\
+} foreach [\
+    IDC_rightTabContent,\
+    IDC_rightTabContentListnBox,\
+    IDC_blockRightFrame,\
+    IDC_blockRighttBackground\
 ];
 
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
@@ -232,6 +247,21 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     IDC_buttonCurrentMag2,\
     IDC_iconBackgroundCurrentMag,\
     IDC_iconBackgroundCurrentMag2\
+];\
+{\
+    _x = _display displayCtrl _x;\
+    _x ctrlSetPosition [\
+        safezoneX + safezoneW - 93 * GRID_W,\
+        safezoneY + 14 * GRID_H,\
+        80 * GRID_W,\
+        safezoneH - 34 * GRID_H\
+    ];\
+    _x ctrlCommit 0;\
+} foreach [\
+    IDC_rightTabContent,\
+    IDC_rightTabContentListnBox,\
+    IDC_blockRightFrame,\
+    IDC_blockRighttBackground\
 ];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
