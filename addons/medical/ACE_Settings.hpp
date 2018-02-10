@@ -134,13 +134,15 @@ class ACE_Settings {
         value = -1;
         sliderSettings[] = {-1, 25, -1, -1};
     };
+
+    /*
     class GVAR(allowDeadBodyMovement) {
         category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_allowDeadBodyMovement_DisplayName);
-        description = CSTRING(MedicalSettings_allowDeadBodyMovement_Description);
         typeName = "BOOL";
         value = 0;
     };
+    */
+
     class GVAR(allowLitterCreation) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_allowLitterCreation_DisplayName);

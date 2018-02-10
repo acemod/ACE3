@@ -5623,12 +5623,6 @@
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Korean>뚜껑 닫기</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowDeadBodyMovement_DisplayName">
-            <English>allowDeadBodyMovement</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowDeadBodyMovement_Description">
-            <English>Not referenced anywhere in the source, does nothing ?!</English>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
             <English>Unconscious animation during treatment</English>
         </Key>
