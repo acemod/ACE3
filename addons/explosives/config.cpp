@@ -27,7 +27,7 @@ class CfgPatches {
 #include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
 #include "GUI_VirtualAmmo.hpp"
-#include "CfgACEArsenalStats.hpp"
+#include "ACE_Arsenal_Stats.hpp"
 
 class CfgActions {
     class None;
@@ -46,4 +46,3 @@ class CfgMineTriggers {
         mineTriggerRange = 1;
     };
 };
-

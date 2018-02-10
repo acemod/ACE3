@@ -39,4 +39,4 @@ class Cfg3DEN {
 #include "ui\RscAttributes.hpp"
 #include "CfgEventHandlers.hpp"
 #include "RscDisplayMain.hpp"
-#include "CfgACEArsenalStats.hpp"
+#include "ACE_Arsenal_Stats.hpp"

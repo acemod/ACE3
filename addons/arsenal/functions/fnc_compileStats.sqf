@@ -83,7 +83,7 @@ private _statsListRightPanel = uiNamespace getVariable [QGVAR(statsListRightPane
 ]];
 
 //------------------------- Config handling
-private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> "CfgACEArsenalStats");
+private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> "ACE_Arsenal_Stats");
 
 {
     private _finalArray = [];
