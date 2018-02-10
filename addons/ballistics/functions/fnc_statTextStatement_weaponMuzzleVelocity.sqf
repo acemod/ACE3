@@ -18,19 +18,11 @@ params ["", "_config"];
 if (EGVAR(arsenal,currentLeftPanel) == 2002) then {
     private _primaryMag = primaryWeaponMagazine EGVAR(arsenal,center);
 
-    if (count _primaryMag > 0) then {
-        [primaryWeapon EGVAR(arsenal,center), _primaryMag select 0]
-    } else {
-        [primaryWeapon EGVAR(arsenal,center), ""]
-    };
+    [primaryWeapon EGVAR(arsenal,center), _primaryMag param [0, ""]]
 } else {
     private _primaryMag = handgunMagazine EGVAR(arsenal,center);
 
-    if (count _primaryMag > 0) then {
-        [handgunWeapon EGVAR(arsenal,center), _primaryMag select 0]
-    } else {
-        [handgunWeapon EGVAR(arsenal,center), ""]
-    };
+    [handgunWeapon EGVAR(arsenal,center), _primaryMag param [0, ""]]
 } params ["_weapon", "_magazine"];
 
 private _initSpeed = getNumber (_config >> "initSpeed");
@@ -44,9 +36,9 @@ if (_magazine isEqualTo "") then {
     private _barrelLengthTable = getArray (_ammoCfg >> "ACE_barrelLengths");
 
     if (_barrelLength != 0 && {count _muzzleVelocityTable > 0} && {count _barrelLengthTable > 0}) then {
-            private _muzzleVelocity = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
+        private _muzzleVelocity = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
 
-            format ["%1 m/s (%2 ft/s)", _muzzleVelocity toFixed 0, (_muzzleVelocity * 3.28084) toFixed 0]
+        format ["%1 m/s (%2 ft/s)", _muzzleVelocity toFixed 0, (_muzzleVelocity * 3.28084) toFixed 0]
     } else {
         _initSpeed
     };
