@@ -1,4 +1,4 @@
-class ACE_Arsenal_Stats {
+class GVAR(stats) {
     class statBase {
         scope = 1;
         priority = 0;

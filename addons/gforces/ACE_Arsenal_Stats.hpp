@@ -1,4 +1,4 @@
-class ACE_Arsenal_Stats {
+class EGVAR(arsenal,stats) {
     class statBase;
     class gReduction: statBase {
         scope = 2;
