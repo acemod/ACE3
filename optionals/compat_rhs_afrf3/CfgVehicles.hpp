@@ -52,10 +52,48 @@ class CfgVehicles {
     class rhs_bmp3tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 460;
     };
+
     class rhs_btr_base: Wheeled_APC_F {
         EGVAR(map,vehicleLightColor)[] = {0,0,1,0.1};
         EGVAR(refuel,fuelCapacity) = 300;
+        class EGVAR(interaction,anims) {
+            class wheel_1_unhide {
+                position = "[-0.8,-2,0]";
+                item = "ACE_Wheel";
+            };
+            class wheel_2_unhide {
+                position = "[0.5,-3.3,-0.3]";
+                item = "ACE_Wheel";
+            };
+        };
     };
+    class rhs_btr60_base: rhs_btr_base {
+        EGVAR(refuel,fuelCapacity) = 290;
+    };
+    class rhs_btr70_vmf: rhs_btr_base {
+        EGVAR(refuel,fuelCapacity) = 350;
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class wheel_1_unhide: wheel_1_unhide {
+                position = "[-1.2,-2.5,0.2]";
+            };
+            class wheel_2_unhide: wheel_2_unhide {
+                position = "[0,-4.2,0]";
+            };
+        };
+    };
+    class rhs_btr70_msv: rhs_btr70_vmf {};
+    class rhs_btr80_msv: rhs_btr70_msv {
+        EGVAR(refuel,fuelCapacity) = 300;
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class wheel_1_unhide: wheel_1_unhide {
+                position = "[-1,-2.5,0.7]";
+            };
+            class wheel_2_unhide: wheel_2_unhide {
+                enabled = 0;
+            };
+        };
+    };
+
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
     };
@@ -209,6 +247,12 @@ class CfgVehicles {
     class Truck_F: Car_F {};
     class RHS_Ural_BaseTurret: Truck_F {
         EGVAR(refuel,fuelCapacity) = 360;
+        class EGVAR(interaction,anims) {
+            class spare_hide {
+                selection = "spare";
+                item = "ACE_Wheel";
+            };
+        };
     };
 
     class RHS_Ural_Base: RHS_Ural_BaseTurret {};
@@ -226,6 +270,12 @@ class CfgVehicles {
 
     class rhs_truck: Truck_F {
         EGVAR(refuel,fuelCapacity) = 210;
+        class EGVAR(interaction,anims) {
+            class spare_hide {
+                selection = "spare";
+                item = "ACE_Wheel";
+            };
+        };
     };
 
     class rhs_gaz66_vmf: rhs_truck {};
@@ -239,14 +289,36 @@ class CfgVehicles {
         ace_rearm_defaultSupply = 1200;
     };
 
+    class O_Truck_02_covered_F;
+    class rhs_kamaz5350: O_Truck_02_covered_F {
+        class EGVAR(interaction,anims) {
+            class spare_hide {
+                selection = "spare";
+                item = "ACE_Wheel";
+            };
+        };
+    };
+
     class MRAP_02_base_F;
     class rhs_tigr_base: MRAP_02_base_F {
         EGVAR(refuel,fuelCapacity) = 138;
+        class EGVAR(interaction,anims) {
+            class spare_hide {
+                selection = "spare";
+                item = "ACE_Wheel";
+            };
+        };
     };
 
     class Offroad_01_base_f;
     class RHS_UAZ_Base: Offroad_01_base_f {
         EGVAR(refuel,fuelCapacity) = 78;
+        class EGVAR(interaction,anims) {
+            class spare_hide {
+                selection = "spare";
+                item = "ACE_Wheel";
+            };
+        };
     };
 
     class APC_Tracked_02_base_F: Tank_F {
@@ -257,18 +329,6 @@ class CfgVehicles {
 
     class rhs_zsutank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 515;
-    };
-
-    class rhs_btr60_base: rhs_btr_base {
-        EGVAR(refuel,fuelCapacity) = 290;
-    };
-    class rhs_btr70_vmf: rhs_btr_base {
-        EGVAR(refuel,fuelCapacity) = 350;
-    };
-
-    class rhs_btr70_msv: rhs_btr70_vmf {};
-    class rhs_btr80_msv: rhs_btr70_msv {
-        EGVAR(refuel,fuelCapacity) = 300;
     };
 
     class rhs_2s3tank_base: Tank_F {

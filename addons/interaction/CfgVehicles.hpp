@@ -368,6 +368,16 @@ class CfgVehicles {
         };
     };
 
+    class Car_F: Car {};
+    class Offroad_01_base_F: Car_F {
+        class GVAR(anims) {
+            class HideBackpacks {
+                position[] = {{-1.15,-1.15,-0.2}, {1.1,-1.15,-0.2}, {1.1,-2.5,-0.2}};
+                item[] = {"B_TacticalPack_blk", "B_TacticalPack_blk", "B_Carryall_khk", "B_Carryall_khk"};
+            };
+        };
+    };
+
     class Tank: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {

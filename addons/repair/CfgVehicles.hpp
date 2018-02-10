@@ -456,6 +456,15 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
+    class Offroad_02_base_F: Car_F {
+        class EGVAR(interaction,anims) {
+            class hideSpareWheel {
+                selection = "spare_wheel";
+                item = "ACE_Wheel";
+            };
+        };
+    };
+
     class MRAP_01_base_F: Car_F {
         GVAR(hitpointGroups)[] = { {"HitGlass1", {"HitGlass2", "HitGlass3", "HitGlass4", "HitGlass5", "HitGlass6"}} };
     };
@@ -491,5 +500,15 @@ class CfgVehicles {
     };
     class Hatchback_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = {{"HitBody", {0, 0.7, -0.5}}, {"HitFuel", {0, -1.75, -0.75}}};
+    };
+
+    class Truck_F: Car_F {};
+    class Van_02_base_F: Truck_F {
+        class EGVAR(interaction,anims) {
+            class spare_tyre_hide {
+                position = "[-0.45,-3.5,-0.4]";
+                item = "ACE_Wheel";
+            };
+        };
     };
 };
