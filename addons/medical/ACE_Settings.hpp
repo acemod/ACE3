@@ -32,6 +32,8 @@ class ACE_Settings {
     };
     class GVAR(enableOverdosing) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_enableOverdosing_DisplayName);
+        description = CSTRING(MedicalSettings_enableOverdosing_Description);
         typeName = "BOOL";
         value = 1;
     };

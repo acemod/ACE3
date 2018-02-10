@@ -5635,5 +5635,11 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
             <English>When a group memeber goes unconscious, removes them from their group.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
+            <English>Overdosing</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
+            <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
+        </Key>
     </Package>
 </Project>
