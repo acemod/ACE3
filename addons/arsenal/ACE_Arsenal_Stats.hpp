@@ -11,7 +11,7 @@ class GVAR(stats) {
         condition = "true";
         tabs[] = {{}, {}};
     };
-    class bananaPotassium: statBase {
+    class ACE_bananaPotassium: statBase {
         scope = 2;
         displayName= CSTRING(statPotassium);
         showBar = 1;
@@ -19,14 +19,14 @@ class GVAR(stats) {
         condition = QUOTE((configName (_this select 1)) == 'ACE_Banana');
         tabs[] = {{}, {7}};
     };
-    class mass: statBase {
+    class ACE_mass: statBase {
         scope = 2;
         displayName= "$STR_a3_rscdisplayarsenal_stat_weight";
         showText = 1;
         textStatement = QUOTE([ARR_2(_this select 0, _this select 1)] call FUNC(statTextStatement_mass));
         tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {0,1,2,3,4,5,6,7}};
     };
-    class rateOfFire: statBase {
+    class ACE_rateOfFire: statBase {
         scope = 2;
         priority = 5;
         stats[] = {"reloadTime"};
@@ -37,7 +37,7 @@ class GVAR(stats) {
         textStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_2([ARR_2(-1.4, 0.31)], false)])] call FUNC(statTextStatement_rateOfFire));
         tabs[] = {{0,1}, {}};
     };
-    class accuracy: statBase {
+    class ACE_accuracy: statBase {
         scope = 2;
         priority = 4;
         stats[] = {"dispersion"};
@@ -48,7 +48,7 @@ class GVAR(stats) {
         textStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_2([ARR_2(-4, -1.7)], false)])] call FUNC(statTextStatement_accuracy));
         tabs[] = {{0,1}, {}};
     };
-    class maxZeroing: statBase {
+    class ACE_maxZeroing: statBase {
         scope = 2;
         priority = 3;
         stats[] = {"maxZeroing"};
@@ -57,7 +57,7 @@ class GVAR(stats) {
         barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(0, 2500)], [ARR_2(0.01, 1)], false)])] call FUNC(statBarStatement_default));
         tabs[] = {{0,1,2}, {}};
     };
-    class impact: statBase {
+    class ACE_impact: statBase {
         scope = 2;
         priority = 2;
         stats[] = {"hit", "initSpeed"};
@@ -66,7 +66,7 @@ class GVAR(stats) {
         barStatement = QUOTE([ARR_3(_this select 0, _this select 1, [ARR_3([ARR_2(0, 3.2)], [ARR_2(-1, 1100)], 2006)])] call FUNC(statBarStatement_impact));
         tabs[] = {{0,1,2}, {}};
     };
-    class ballisticProtection: statBase {
+    class ACE_ballisticProtection: statBase {
         scope = 2;
         priority = 5;
         stats[] = {"passthrough"};
@@ -75,7 +75,7 @@ class GVAR(stats) {
         barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(0, 0.63)], [ARR_2(0.01, 1)], false)])] call FUNC(statBarStatement_default));
         tabs[] = {{3,4,6}, {}};
     };
-    class explosiveResistance: statBase {
+    class ACE_explosiveResistance: statBase {
         scope = 2;
         priority = 4;
         stats[] = {"armor"};
@@ -84,7 +84,7 @@ class GVAR(stats) {
         barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(0, 0.80)], [ARR_2(0.01, 1)], false)])] call FUNC(statBarStatement_default));
         tabs[] = {{3,4,6}, {}};
     };
-    class load: statBase {
+    class ACE_load: statBase {
         scope = 2;
         priority = 3;
         stats[] = {"maximumLoad"};

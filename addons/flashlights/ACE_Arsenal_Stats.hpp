@@ -1,6 +1,6 @@
 class EGVAR(arsenal,stats) {
     class statBase;
-    class flashlightColor: statBase {
+    class ACE_flashlightColor: statBase {
         scope = 2;
         priority = 1;
         stats[] = {"ACE_Flashlight_Colour"};

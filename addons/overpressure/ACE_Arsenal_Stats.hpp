@@ -1,6 +1,6 @@
 class EGVAR(arsenal,stats) {
     class statBase;
-    class backblastAngle: statBase {
+    class ACE_backblastAngle: statBase {
         scope = 2;
         priority = 2;
         stats[] = {QGVAR(angle)};
@@ -9,7 +9,7 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE(params [ARR_2('_stat', '_config')]; format [ARR_2('%1°', getNumber (_config >> _stat select 0))]);
         tabs[] = {{2}, {}};
     };
-    class backblastRange: statBase {
+    class ACE_backblastRange: statBase {
         scope = 2;
         priority = 1;
         stats[] = {QGVAR(range)};

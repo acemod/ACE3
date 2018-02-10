@@ -1,6 +1,6 @@
 class EGVAR(arsenal,stats) {
     class statBase;
-    class explosiveRange: statBase {
+    class ACE_explosiveRange: statBase {
         scope = 2;
         priority = 1;
         stats[] = {QGVAR(Range)};

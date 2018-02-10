@@ -1,6 +1,6 @@
 class EGVAR(arsenal,stats) {
     class statBase;
-    class gReduction: statBase {
+    class ACE_gReduction: statBase {
         scope = 2;
         priority = 1;
         stats[] = {"ACE_GForceCoef"};

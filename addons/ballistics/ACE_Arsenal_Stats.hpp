@@ -1,6 +1,6 @@
 class EGVAR(arsenal,stats) {
     class statBase;
-    class barrelTwist: statBase {
+    class ACE_barrelTwist: statBase {
         scope = 2;
         priority = 1;
         stats[] = {"ACE_barrelTwist"};
@@ -9,7 +9,7 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE(params [ARR_2('_stat', '_config')]; private _barrelTwist = getNumber (_config >> _stat select 0); format [ARR_3('%1mm (%2in)',_barrelTwist toFixed 0, (_barrelTwist / 25.4) toFixed 1)]);
         tabs[] = {{0,1}, {}};
     };
-    class barrelLength: statBase {
+    class ACE_barrelLength: statBase {
         scope = 2;
         priority = 0;
         stats[] = {"ACE_barrelLength"};
@@ -18,7 +18,7 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE(params [ARR_2('_stat', '_config')]; private _barrelLength = getNumber (_config >> _stat select 0); format [ARR_3('%1mm (%2in)',_barrelLength toFixed 0, (_barrelLength / 25.4) toFixed 1)]);
         tabs[] = {{0,1}, {}};
     };
-    class ammo: statBase {
+    class ACE_ammo: statBase {
         scope = 2;
         priority = 5;
         stats[] = {"ammo", "displayName"};
@@ -27,7 +27,7 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE(params [ARR_2('_stat', '_config')]; private _ammoDisplayName = getText (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 1); [ARR_2(_ammoDisplayName, getText (_config >> _stat select 0))] select (_ammoDisplayName == ''));
         tabs[] = {{}, {4}};
     };
-    class ballisticCoef: statBase {
+    class ACE_ballisticCoef: statBase {
         scope = 2;
         priority = 4;
         stats[] = {"ACE_dragModel","ACE_ballisticCoefficients", "ACE_standardAtmosphere"};
@@ -36,7 +36,7 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); private _ballisticCoef = getArray (_ammoCfg >> _stat select 1); _ballisticCoef sort false; format [ARR_4('%1 G%2 (%3)', _ballisticCoef select 0 ,getNumber (_ammoCfg >> _stat select 0), getText (_ammoCfg >> _stat select 2))]);
         tabs[] ={{}, {4}};
     };
-    class bulletMass: statBase {
+    class ACE_bulletMass: statBase {
         scope = 2;
         priority = 3;
         stats[] = {"ACE_bulletMass"};
@@ -45,7 +45,7 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoWeight = getNumber (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 0); format [ARR_3('%1g (%2gr)', _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1)]);
         tabs[] = {{}, {4}};
     };
-    class magMuzzleVelocity: statBase {
+    class ACE_magMuzzleVelocity: statBase {
         scope = 2;
         priority = 3;
         stats[] = {"initSpeed"};
@@ -54,7 +54,7 @@ class EGVAR(arsenal,stats) {
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _initSpeed = getNumber (_config >> _stat select 0); format [ARR_3('%1 m/s (%2 ft/s)', _initSpeed, (_initSpeed * 3.28084) toFixed 0)]);
         tabs[] = {{}, {4}};
     };
-    class weaponMuzzleVelocity: statBase {
+    class ACE_weaponMuzzleVelocity: statBase {
         scope = 2;
         priority = 3;
         stats[] = {"initSpeed"};
