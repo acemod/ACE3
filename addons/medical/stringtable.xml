@@ -5633,7 +5633,7 @@
             <English>Move unconscious units from group</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
-            <English>When a group memeber goes unconscious, removes them from their group.</English>
+            <English>When a group member goes unconscious, removes them from their group.</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
