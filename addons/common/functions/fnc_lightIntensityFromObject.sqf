@@ -90,7 +90,7 @@ if (_lightSource isKindOf "CAManBase") then {
         {
             private _position = _lightSource modelToWorld (_lightSource selectionPosition getText (_x >> "name"));
             private _distance = _unitPos distance _position;
-            _lightLevel = _lightLevel max (linearConversion [0, 10, _distance, 1, 0, true]);
+            _lightLevel = _lightLevel max (linearConversion [0, 10, _distance, 1, 0, true] * linearConversion [0, 1300, getNumber (_x >> "intensity"), 0, 1, true]);
         } forEach _markerLights;
     };
 
