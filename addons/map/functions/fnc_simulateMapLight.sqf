@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [CONTROL, 5, [5, 4, 6], []] call ACE_map_fnc_simulateMapLights
+ * [CONTROL, 5, [5, 4, 6], []] call ace_map_fnc_simulateMapLight
  *
  * Public: No
  */
