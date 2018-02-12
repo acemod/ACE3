@@ -21,14 +21,16 @@ if (!_enabled || {!isNil QGVAR(animActionsInitialized)}) exitWith {};
 
 private _statement = {
     params ["_target", "_player", "_params"];
-    _params params ["_anim", "_phase", "_items", "_duration"];
+    _params params ["_anim", "_phase", "_duration"];
     [
         _duration,
-        [_target, _player, _anim, _phase, _items],
+        [_target, _player, _anim, _phase],
         {
-            (_this select 0) params ["_target", "_player", "_anim", "_phase", "_items"];
+            (_this select 0) params ["_target", "_player", "_anim", "_phase"];
             scopeName "main";
-            if !(_items isEqualTo []) then {
+            private _items = _target getVariable [format [QGVAR(animsItem_%1), _anim], [configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(anims) >> _anim >> "item"] call BIS_fnc_getCfgData];
+            if (!isNil "_items") then {
+                if (_items isEqualType "") then {_items = [_items]};
                 private _emptyPosAGL = [_target, _items select 0, _player] call EFUNC(common,findUnloadPosition);
                 if (_emptyPosAGL isEqualTo []) then {
                     [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
@@ -99,19 +101,13 @@ private _condition = {
                 private _phase = [_x >> "phase", "number", 1] call CBA_fnc_getConfigEntry;
                 private _name = [_x >> "name", "text", localize "str_a3_cfgactions_unmountitem0"] call CBA_fnc_getConfigEntry;
                 private _icon = [_x >> "icon", "text", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"] call CBA_fnc_getConfigEntry;
-                private _items = [_x >> "item"] call BIS_fnc_getCfgData;
-                if (isNil "_items") then {
-                    _items = [];
-                } else {
-                    if (_items isEqualType "") then {_items = [_items]};
-                };
                 private _duration = [_x >> "duration", "number", 10] call CBA_fnc_getConfigEntry;
                 private _inherit = 0 != [_x >> "inherit", "number", 1] call CBA_fnc_getConfigEntry;
                 {
                     private _action = [
                         format ["%1%2", _anim, _forEachIndex],
                         _name, _icon, _statement, _condition, {},
-                        [_anim, _phase, _items, _duration],
+                        [_anim, _phase, _duration],
                         _x
                     ] call EFUNC(interact_menu,createAction);
                     [_vehicle, 0, [], _action, _inherit] call EFUNC(interact_menu,addActionToClass);
