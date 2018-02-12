@@ -116,5 +116,3 @@ GVAR(isOpeningDoor) = false;
         }];
     };
 }] call CBA_fnc_addEventHandler;
-
-call FUNC(initAnimActions);

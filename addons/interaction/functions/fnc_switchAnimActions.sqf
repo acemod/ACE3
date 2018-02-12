@@ -1,19 +1,23 @@
 /*
  * Author: Dystopian
- * Initializes animation based interactions.
+ * Controls animation based interactions state.
  *
  * Arguments:
- * None
+ * 0: Enabled <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_interaction_fnc_initAnimActions
+ * true call ace_interaction_fnc_switchAnimActions
  *
  * Public: No
  */
 #include "script_component.hpp"
+
+params ["_enabled"];
+
+if (!_enabled || {!isNil QGVAR(animActionsInitialized)}) exitWith {};
 
 private _statement = {
     params ["_target", "_player", "_params"];
@@ -52,7 +56,8 @@ private _condition = {
     private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _target;
     private _animConfig = _vehicleConfig >> "AnimationSources" >> _anim;
 
-    isClass _animConfig
+    GVAR(animActionsEnabled)
+    && {isClass _animConfig}
     && {0 != [_animConfig >> "scope", "number", 1] call CBA_fnc_getConfigEntry}
     && {0 != [_vehicleConfig >> QGVAR(anims) >> _anim >> "enabled", "number", 1] call CBA_fnc_getConfigEntry}
     && {_target animationPhase _anim != _phase}
@@ -116,3 +121,5 @@ private _condition = {
         } forEach ('true' configClasses (_x >> QGVAR(anims)));
     };
 } forEach ('true' configClasses (configFile >> "CfgVehicles"));
+
+GVAR(animActionsInitialized) = true;

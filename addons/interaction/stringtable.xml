@@ -1080,5 +1080,9 @@
             <Japanese>身体を引き出す</Japanese>
             <Italian>Estrai il corpo</Italian>
         </Key>
+        <Key ID="STR_ACE_Interaction_SettingAnimActionsName">
+            <English>Interaction with animations</English>
+            <Russian>Взаимодействие с анимациями</Russian>
+        </Key>
     </Package>
 </Project>
