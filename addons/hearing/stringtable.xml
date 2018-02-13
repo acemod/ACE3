@@ -289,6 +289,7 @@
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
             <French>Étouffement des sons</French>
+        </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
         </Key>
