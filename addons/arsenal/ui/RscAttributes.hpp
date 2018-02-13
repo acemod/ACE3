@@ -272,14 +272,14 @@ class GVAR(display) {
             idc = IDC_statsBox;
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
-            w = QUOTE(WIDTH_TOTAL / 5.1);
+            w = QUOTE(47 * GRID_W);
             h = QUOTE(55 * GRID_H);
             class controls {
                 class statsStaticBackground1: ctrlStaticBackground {
                     idc = -1;
                     x = QUOTE(0);
                     y = QUOTE(0);
-                    w = QUOTE(WIDTH_TOTAL / 5.1);
+                    w = QUOTE(47 * GRID_W);
                     h = QUOTE(55 * GRID_H);
                     colorBackground[]={0.1,0.1,0.1,0.5};
                 };
@@ -287,7 +287,7 @@ class GVAR(display) {
                     idc = -1;
                     x = QUOTE(0);
                     y = QUOTE(0);
-                    w = QUOTE(WIDTH_TOTAL / 5.1);
+                    w = QUOTE(47 * GRID_W);
                     h = QUOTE(5 * GRID_H);
                     colorBackground[]={0.1,0.1,0.1,0.8};
                 };
@@ -296,7 +296,7 @@ class GVAR(display) {
                     fade = 1;
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(5 * GRID_H);
-                    w = QUOTE(WIDTH_SINGLE);
+                    w = QUOTE(45 * GRID_W);
                     h = QUOTE(5 * GRID_H);
                     colorBackground[]={0,0,0,0};
                     colorText[]={0.7,0.7,0.7,1};
@@ -308,7 +308,7 @@ class GVAR(display) {
                     fade = 1;
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(10 * GRID_H);
-                    w = QUOTE(WIDTH_SINGLE);
+                    w = QUOTE(45 * GRID_W);
                     h = QUOTE(4 * GRID_H);
                     colorBackground[]={1,1,1,0.15};
                 };
@@ -321,7 +321,7 @@ class GVAR(display) {
                     colorFrame[] = {0,0,0,0};
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(10 * GRID_H);
-                    w = QUOTE(WIDTH_SINGLE);
+                    w = QUOTE(45 * GRID_W);
                     h = QUOTE(4 * GRID_H);
                 };
                 class statsText1: RscText {
@@ -332,7 +332,7 @@ class GVAR(display) {
                     colorText[]={0,0,0,1};
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(10 * GRID_H);
-                    w = QUOTE(WIDTH_SINGLE);
+                    w = QUOTE(45 * GRID_W);
                     h = QUOTE(4 * GRID_H);
                     sizeEx = QUOTE(5 * GRID_H);
                     text = "";

@@ -214,7 +214,7 @@ private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
 _statsBoxCtrl ctrlSetPosition [
     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
     safezoneY + 1.8 * GRID_H,
-    WIDTH_TOTAL / 5.1,
+    47 * GRID_W,
     11 * GRID_H
 ];
 _statsBoxCtrl ctrlEnable false;

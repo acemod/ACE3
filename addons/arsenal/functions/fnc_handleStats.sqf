@@ -134,7 +134,7 @@ if !(isNil "_itemCfg") then {
                 _statsBoxCtrl ctrlSetPosition [
                     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
-                    WIDTH_TOTAL / 5.1,
+                    47 * GRID_W,
                     11 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
@@ -144,7 +144,7 @@ if !(isNil "_itemCfg") then {
                 _statsBoxCtrl ctrlSetPosition [
                     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
-                    WIDTH_TOTAL / 5.1,
+                    47 * GRID_W,
                     15 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
@@ -154,7 +154,7 @@ if !(isNil "_itemCfg") then {
                 _statsBoxCtrl ctrlSetPosition [
                     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
-                    WIDTH_TOTAL / 5.1,
+                    47 * GRID_W,
                     25 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
@@ -164,7 +164,7 @@ if !(isNil "_itemCfg") then {
                 _statsBoxCtrl ctrlSetPosition [
                     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
-                    WIDTH_TOTAL / 5.1,
+                    47 * GRID_W,
                     35 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
@@ -174,7 +174,7 @@ if !(isNil "_itemCfg") then {
                 _statsBoxCtrl ctrlSetPosition [
                     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
-                    WIDTH_TOTAL / 5.1,
+                    47 * GRID_W,
                     45 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
@@ -183,7 +183,7 @@ if !(isNil "_itemCfg") then {
                 _statsBoxCtrl ctrlSetPosition [
                     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
                     safezoneY + 1.8 * GRID_H,
-                    WIDTH_TOTAL / 5.1,
+                    47 * GRID_W,
                     55 * GRID_H
                 ];
                 _statsBoxCtrl ctrlCommit 0;
@@ -303,7 +303,7 @@ if !(isNil "_itemCfg") then {
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
         safezoneY + 1.8 * GRID_H,
-        WIDTH_TOTAL / 5.1,
+        47 * GRID_W,
         11 * GRID_H
     ];
     _statsBoxCtrl ctrlCommit 0;
