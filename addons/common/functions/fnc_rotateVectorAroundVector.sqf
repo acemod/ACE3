@@ -11,7 +11,7 @@
  * Transformed Vector <ARRAY>
  *
  * Example:
- * [eyeDirection player, weaponDirection (currentWeapon player), 45] call ace_common_fnc_rotateVector;
+ * [eyeDirection player, weaponDirection (currentWeapon player), 45] call ace_common_fnc_rotateVectorAroundVector;
  *
  * Public: No
  */
@@ -24,9 +24,9 @@ private _normalVector = vectorNormalized _vector2;
 _normalVector params ["_ux", "_uy", "_uz"];
 
 private _rotationMatrix = [
-	[cos(_theta) + ((_ux^2) * (1 - cos(_theta))), (_ux * _uy * (1-cos(_theta))) - (_uz * sin(_theta)), (_ux * _uz * (1 - cos(_theta))) + (_uy * sin (_theta))],
-	[(_uy * _ux * (1-cos(_theta))) + (_uz * sin(_theta)), cos(_theta) + ((_uy^2) * (1 - cos(_theta))), (_uy * _uz * (1 - cos(_theta))) - (_ux * sin (_theta))],
-	[(_uz * _ux * (1-cos(_theta))) - (_uy * sin(_theta)), (_uz * _uy * (1 - cos(_theta))) + (_ux * sin (_theta)), cos(_theta) + ((_uz^2) * (1 - cos(_theta)))]
+    [cos(_theta) + ((_ux^2) * (1 - cos(_theta))), (_ux * _uy * (1-cos(_theta))) - (_uz * sin(_theta)), (_ux * _uz * (1 - cos(_theta))) + (_uy * sin (_theta))],
+    [(_uy * _ux * (1-cos(_theta))) + (_uz * sin(_theta)), cos(_theta) + ((_uy^2) * (1 - cos(_theta))), (_uy * _uz * (1 - cos(_theta))) - (_ux * sin (_theta))],
+    [(_uz * _ux * (1-cos(_theta))) - (_uy * sin(_theta)), (_uz * _uy * (1 - cos(_theta))) + (_ux * sin (_theta)), cos(_theta) + ((_uz^2) * (1 - cos(_theta)))]
 ];
 
 private _vxp = (_vx * ((_rotationMatrix select 0) select 0)) + (_vy * ((_rotationMatrix select 0) select 1)) + (_vz * ((_rotationMatrix select 0) select 2));
