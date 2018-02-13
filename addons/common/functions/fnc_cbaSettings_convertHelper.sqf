@@ -67,6 +67,7 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
                     _valueTitles pushBack (if ((_x select [0, 1]) == "$") then {localize (_x select [1]);} else {_x});
                 } forEach (getArray (_config >> "values"));
                 _cbaValueInfo = [_values, _valueTitles, getNumber (_config >> "value")];
+                _cbaValueInfoHint = "[values, titles, defaultIndex]";
             } else {
                 _cbaSettingType = "SLIDER"; // [_min, _max, _default, _trailingDecimals]
                 _cbaValueInfo = if (isArray (_config >> "sliderSettings")) then {
@@ -116,7 +117,7 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
     _output pushBack format ["    %1, // %2", _cbaValueInfo, _cbaValueInfoHint];
     _output pushBack format ["    %1, // isGlobal", _cbaIsGlobal];
     if ((_varName select [0, 4]) == "ACE_") then {
-        _output pushBack format ["    {[QGVAR(%1), _this] call EFUNC(common,cbaSettings_settingChanged)}] call CBA_settings_fnc_init;", _gvarName];
+        _output pushBack format ["    {[QGVAR(%1), _this] call EFUNC(common,cbaSettings_settingChanged)}", _gvarName];
     } else {
         _output pushBack format ["    {[""%1"", _this] call ace_common_fnc_cbaSettings_settingChanged}", _varName];
     };
