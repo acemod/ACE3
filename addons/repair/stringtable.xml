@@ -1824,5 +1824,11 @@
             <Chinese>設定載具在貨艙內攜帶的備用輪胎數量。</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
+            <English>Auto shut off engine on repair</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
+            <English>Automatically shut off the engine when doing repairs.</English>
+        </Key>
     </Package>
 </Project>
