@@ -85,9 +85,31 @@ if !(_loadoutsDisplay isEqualTo displayNull) then {
             case (_keyPressed == DIK_BACKSPACE): {
                 [_display] call FUNC(buttonHide);
             };
-            // Export button
+            // Export button / export classname
             case (_keyPressed == DIK_C && {_ctrlState}): {
-                [_display] call FUNC(buttonExport);
+                if (GVAR(leftTabFocus) || {GVAR(rightTabFocus)} || {GVAR(rightTabLnBFocus)}) then {
+                    switch true do {
+                        case (GVAR(leftTabFocus)): {
+                            private _control = (_display displayCtrl IDC_leftTabContent);
+                            _control lbData (lbCurSel _control)
+                        };
+                        case (GVAR(rightTabFocus)): {
+                            private _control = (_display displayCtrl IDC_rightTabContent);
+                            _control lbData (lbCurSel _control)
+                        };
+                        case (GVAR(rightTabLnBFocus)): {
+                            private _control = (_display displayCtrl IDC_rightTabContentListnBox);
+                            _control lnbData [(lnbCurSelRow _control), 0]
+                        };
+                    } params ["_className"];
+
+                    "ace_clipboard" callExtension (_className + ";");
+                    "ace_clipboard" callExtension "--COMPLETE--";
+
+                    [_display, localize LSTRING(exportedClassnameText)] call FUNC(message);
+                } else {
+                    [_display] call FUNC(buttonExport);
+                };
             };
             // Import button
             case (_keyPressed == DIK_V && {_ctrlState}): {
@@ -123,6 +145,18 @@ if !(_loadoutsDisplay isEqualTo displayNull) then {
                 };
 
                 playsound ["RscDisplayCurator_visionMode",true];
+            };
+            // Panel up down
+            case (_keyPressed in [DIK_UP, DIK_DOWN]): {
+                if (GVAR(leftTabFocus) || {GVAR(rightTabFocus)} || {GVAR(rightTabLnBFocus)}) then {
+                    _return = false;
+                };
+            };
+            // Right panel lnb + and - buttons
+            case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
+                if (GVAR(rightTabLnBFocus)) then {
+                    [_display, [1, 0] select (_keyPressed == DIK_LEFT)] call FUNC(buttonCargo);
+                };
             };
         };
     } else {
@@ -166,22 +200,6 @@ if !(_loadoutsDisplay isEqualTo displayNull) then {
                 };
             };
         };
-    };
-
-    if (GVAR(leftTabFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
-        _return = false;
-    };
-
-    if (GVAR(rightTabFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
-        _return = false;
-    };
-
-    if (GVAR(rightTabLnBFocus) && {_keyPressed in [DIK_UP, DIK_DOWN]}) then {
-        _return = false;
-    };
-
-    if (GVAR(rightTabLnBFocus) && {_keyPressed in [DIK_LEFT, DIK_RIGHT]}) then {
-        [_display, [1, 0] select (_keyPressed == DIK_LEFT)] call FUNC(buttonCargo);
     };
 };
 

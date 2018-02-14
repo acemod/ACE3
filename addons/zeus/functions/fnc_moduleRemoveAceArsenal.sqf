@@ -1,6 +1,6 @@
 /*
  * Author: alganthe
- * Remove arsenal from an object
+ * Remove ACE Arsenal from an object
  *
  * Arguments:
  * 0: The module logic <OBJECT>
@@ -30,12 +30,7 @@ switch (true) do {
         [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     default {
-
-        TRACE_1("Calling removeVirtualXXXCargo functions", _object);
-        [_object, (_object call BIS_fnc_getVirtualItemCargo), true] call BIS_fnc_removeVirtualItemCargo;
-        [_object, (_object call BIS_fnc_getVirtualWeaponCargo), true] call BIS_fnc_removeVirtualWeaponCargo;
-        [_object, (_object call BIS_fnc_getVirtualMagazineCargo), true] call BIS_fnc_removeVirtualMagazineCargo;
-        [_object, (_object call BIS_fnc_getVirtualBackpackCargo), true] call BIS_fnc_removeVirtualBackpackCargo;
+        [_object, true, true] call EFUNC(arsenal,removeBox);
     };
 };
 

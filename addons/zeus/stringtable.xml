@@ -1494,5 +1494,11 @@
             <Russian>Единица уже является террористом-смертником</Russian>
             <Spanish>La unidad ya es un terrorista suicida</Spanish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
+            <English>Add full ACE Arsenal</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
+            <English>Remove ACE Arsenal</English>
+        </Key>
     </Package>
 </Project>
