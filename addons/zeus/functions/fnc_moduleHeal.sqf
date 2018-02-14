@@ -47,7 +47,13 @@ switch (false) do {
 if (["ace_medical"] call EFUNC(common,isModLoaded) && {EGVAR(medical,level) > 0}) then {
     [QEGVAR(medical,treatmentAdvanced_fullHealLocal), [_unit, _unit], _unit] call CBA_fnc_targetEvent;
 } else {
-    _unit setDamage 0;
+    // BI's scripted revive system
+    if ((missionNamespace getVariable ["bis_revive_mode", 0]) != 0) then {
+        ["#rev", 1, _unit] call BIS_fnc_reviveOnState;
+        _unit setVariable ["#rev", 1, true];
+    } else {
+        _unit setDamage 0;
+    };
 };
 
 deleteVehicle _logic;
