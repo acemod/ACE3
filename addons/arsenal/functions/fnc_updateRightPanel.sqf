@@ -14,7 +14,7 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-#ifdef DEBUG_MODE_FULL
+#ifdef ENABLE_PERF_PROFILING
     private _scopeUpdateRightPanel = createProfileScope QFUNC(updateRightPanel);
 #endif
 
