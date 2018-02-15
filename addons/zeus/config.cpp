@@ -22,6 +22,8 @@ class CfgPatches {
             QGVAR(moduleSuppressiveFire),
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),
+            QGVAR(AddFullAceArsenal),
+            QGVAR(RemoveFullAceArsenal),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};
@@ -69,6 +71,12 @@ class CfgPatches {
             QGVAR(moduleConfigurePylons)
         };
     };
+    class GVAR(arsenal): ADDON {
+        units[] = {
+            QGVAR(AddFullAceArsenal),
+            QGVAR(RemoveFullAceArsenal)
+        };
+    };
 };
 
 class ACE_Curator {
@@ -78,6 +86,7 @@ class ACE_Curator {
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
     GVAR(fastroping) = "ace_fastroping";
     GVAR(pylons) = "ace_pylons";
+    GVAR(arsenal) = "ace_arsenal";
 };
 
 #include "CfgFactionClasses.hpp"

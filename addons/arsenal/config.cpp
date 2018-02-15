@@ -40,3 +40,4 @@ class Cfg3DEN {
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "RscDisplayMain.hpp"
+#include "ACE_Arsenal_Stats.hpp"

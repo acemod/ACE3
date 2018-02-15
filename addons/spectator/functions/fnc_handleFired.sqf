@@ -21,7 +21,7 @@ params [
     ["_weapon", "", [""]],
     "", // Muzzle
     "", // Mode
-    "", // Ammo
+    ["_ammo", "", [""]], // Ammo
     "", // Magazine
     ["_projectile", objNull, [objNull]]
 ];
@@ -36,13 +36,14 @@ if (isNil QGVAR(entitiesToDraw) || {!(_unit in GVAR(entitiesToDraw))}) exitWith 
 // Fire time used for unit icon highlighting
 _unit setVariable [QGVAR(highlightTime), time + FIRE_HIGHLIGHT_TIME];
 
+// expensive, but any non local units might have this as null for 'global' projectiles (like grenades)
+if (isNull _projectile) then {
+    _projectile = nearestObject [_unit, _ammo];
+};
+
 // Store projectiles / grenades for drawing
-if (GVAR(drawProjectiles) && {!isNull _projectile}) then {
-    if (_weapon == "Throw") then {
-        if (count GVAR(grenadesToDraw) > MAX_GRENADES) then { GVAR(grenadesToDraw) deleteAt 0; };
-        GVAR(grenadesToDraw) pushBack _projectile;
-    } else {
-        if (count GVAR(projectilesToDraw) > MAX_PROJECTILES) then { GVAR(projectilesToDraw) deleteAt 0; };
-        GVAR(projectilesToDraw) pushBack [_projectile, [[getPosVisual _projectile, [1,0,0,0]]]];
-    };
+if (_weapon == "Throw") then {
+    [QGVAR(addToGrenadeTracking), [_projectile]] call CBA_fnc_localEvent;
+} else {
+    [QGVAR(addToProjectileTracking), [_projectile]] call CBA_fnc_localEvent;
 };
