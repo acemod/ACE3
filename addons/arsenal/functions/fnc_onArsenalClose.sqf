@@ -98,6 +98,11 @@ GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
+GVAR(showStats) = nil;
+GVAR(statsPagesLeft) = nil;
+GVAR(statsPagesRight) = nil;
+GVAR(statsInfo) =  nil;
+
 GVAR(center) = nil;
 GVAR(centerNotPlayer) = nil;
 

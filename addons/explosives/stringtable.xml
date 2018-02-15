@@ -1019,5 +1019,9 @@
             <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
         </Key>
+        <Key ID="STR_ACE_Explosives_statExploRange">
+            <English>Explosive range</English>
+            <French>Portée du détonateur</French>
+        </Key>
     </Package>
 </Project>
