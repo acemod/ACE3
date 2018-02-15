@@ -413,7 +413,7 @@ class GVAR(display) {
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);
             h = QUOTE(6 * GRID_H);
-            sizeEx = QUOTE(5 * GRID_H)
+            sizeEx = QUOTE(5 * GRID_H);
         };
         class statsPreviousPage: ctrlButton {
             idc = IDC_statsPreviousPage;
@@ -426,11 +426,11 @@ class GVAR(display) {
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(5 * GRID_H);
-            sizeEx = QUOTE(5.5 * GRID_H)
+            sizeEx = QUOTE(5.5 * GRID_H);
         };
         class statsNextPage: statsPreviousPage {
             idc =  IDC_statsNextPage;
-            text = ">"
+            text = ">";
             onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, true)]]) call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP + 30 * GRID_W);
         };
