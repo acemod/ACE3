@@ -66,6 +66,14 @@ class GVAR(stats) {
         barStatement = QUOTE([ARR_3(_this select 0, _this select 1, [ARR_3([ARR_2(0, 3.2)], [ARR_2(-1, 1100)], 2006)])] call FUNC(statBarStatement_impact));
         tabs[] = {{0,1,2}, {}};
     };
+    class ACE_scopeMagnification: statBase {
+        scope = 2;
+        priority = 2;
+        displayName = CSTRING(statMagnification);
+        showText = 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_scopeMag));
+        tabs[] = {{}, {0}};
+    };
     class ACE_ballisticProtection: statBase {
         scope = 2;
         priority = 5;
