@@ -52,6 +52,7 @@ PREP(statBarStatement_impact);
 PREP(statTextStatement_accuracy);
 PREP(statTextStatement_mass);
 PREP(statTextStatement_rateOfFire);
+PREP(statTextStatement_scopeMag);
 PREP(updateCamPos);
 PREP(updateRightPanel);
 PREP(updateUniqueItemsList);

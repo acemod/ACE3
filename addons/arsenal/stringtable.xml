@@ -694,6 +694,22 @@
             <English>Potassium levels</English>
             <French>Taux de potassium</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statMagnification">
+          <English>Magnification</English>
+          <Chinese>放大倍率</Chinese>
+          <French>Grossissement</French>
+          <Spanish>Aumento</Spanish>
+          <Italian>Ingrandimento</Italian>
+          <Polish>Powiększenie</Polish>
+          <Russian>Увеличение</Russian>
+          <German>Vergrößerung</German>
+          <Czech>Zvětšení</Czech>
+          <Portuguese>Aumentox</Portuguese>
+          <Korean>배율</Korean>
+          <Chinesesimp>放大倍数</Chinesesimp>
+          <Japanese>拡大</Japanese>
+          <Turkish>Büyütme</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <French>Page</French>
