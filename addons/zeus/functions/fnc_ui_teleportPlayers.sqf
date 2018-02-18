@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike, mharis001
- * Initalises the `teleport players` zeus module display
+ * Initalizes the "Teleport Players" Zeus module display.
  *
  * Arguments:
  * 0: teleportPlayers controls group <CONTROL>
@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_control"];

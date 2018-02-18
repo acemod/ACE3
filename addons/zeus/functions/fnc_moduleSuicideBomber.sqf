@@ -6,7 +6,7 @@
  * 0: Unit that is suicide bomber <OBJECT>
  * 1: Activation side <SIDE> (default: west)
  * 2: Activation radius <NUMBER> (default: 10)
- * 3: Explosion size: 0 - small / 1 - medium / 2 - large <NUMBER> (default: 0)
+ * 3: Explosion size (0 - Small, 1 - Medium, 2 - Large) <NUMBER> (default: 0)
  * 4: Auto seek <BOOL> (default: false)
  *
  * Return Value:
@@ -17,7 +17,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 #define EXPLOSIVES ["R_TBG32V_F", "M_Mo_120mm_AT", "Bo_GBU12_LGB"]
@@ -45,7 +44,7 @@ if (_autoSeek) then {
 // Run PFH to make unit a suicide bomber
 [{
     params ["_args", "_pfhID"];
-    _args params [["_unit", objNull], "_activationSide", "_activationRadius", "_explosionSize", "_autoSeek"];
+    _args params [["_unit", objNull], ["_activationSide", west], ["_activationRadius", 10], ["_explosionSize", 0], ["_autoSeek", false]];
 
     // Unit deleted or killed
     if (isNull _unit || {!alive _unit}) exitWith {
@@ -53,7 +52,7 @@ if (_autoSeek) then {
         LOG("Unit deleted or killed, PFH removed");
     };
 
-    // --- Detonation
+    // Detonation
     private _nearObjects = (_unit nearObjects _activationRadius) select {side _x == _activationSide && {_x != _unit} && {alive _x}};
     if !(_nearObjects isEqualTo []) then {
         createVehicle [EXPLOSIVES select _explosionSize, getPos _unit, [], 0, "CAN_COLLIDE"];
@@ -61,8 +60,8 @@ if (_autoSeek) then {
         LOG("Explosion created, PFH removed");
     };
 
-    // --- Auto Seek
-    if !(_autoSeek) exitWith {};
+    // Auto Seek
+    if (!_autoSeek) exitWith {};
 
     private _memory = _unit getVariable [QGVAR(suicideBomber_memory), [nil, CBA_missionTime]];
     _memory params ["_lastMove", "_lastTime"];

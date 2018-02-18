@@ -404,7 +404,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             h = H_PART(1);
                             colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class SeachPicture: RscPicture {
+                        class SearchPicture: RscPicture {
                             idc = -1;
                             text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
                             x = 0;

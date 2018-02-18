@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initalizes the `set engineer` zeus module display
+ * Initalizes the "Set Engineer" Zeus module display.
  *
  * Arguments:
  * 0: setEngineer controls group <CONTROL>
@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_control"];

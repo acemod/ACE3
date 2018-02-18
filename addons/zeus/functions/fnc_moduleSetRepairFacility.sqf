@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Assigns object as repair facility
+ * Assigns object as repair facility.
  *
  * Arguments:
  * 0: The module logic <OBJECT>
@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-
  #include "script_component.hpp"
 
  params ["_logic"];

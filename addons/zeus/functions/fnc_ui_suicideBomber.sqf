@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initalizes the `suicide bomber` zeus module display
+ * Initalizes the "Suicide Bomber" Zeus module display.
  *
  * Arguments:
  * 0: suicideBomber controls group <CONTROL>
@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 #define SIDE_IDCs [83580, 83581, 83582, 83583]
@@ -61,7 +60,7 @@ switch (false) do {
 
 // Specific onLoad stuff
 
-// --- Activation side
+// Activation side
 private _fnc_onSelection = {
     params [["_activeCtrl", controlNull, [controlNull]]];
 
@@ -102,7 +101,7 @@ private _fnc_onSelection = {
     _ctrl ctrlAddEventHandler ["ButtonClick", _fnc_onSelection];
 } forEach SIDE_IDCs;
 
-// --- Activation radius
+// Activation radius
 private _fnc_onSliderMove = {
     params ["_slider"];
 
@@ -120,7 +119,7 @@ _edit ctrlSetText "10";
 
 _slider ctrlAddEventHandler ["SliderPosChanged", _fnc_onSliderMove];
 
-// --- Confirm and Cancel
+// Confirm and Cancel
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
