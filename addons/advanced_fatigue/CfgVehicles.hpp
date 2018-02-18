@@ -40,12 +40,6 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
-            class SwayFactor {
-                displayName = CSTRING(SwayFactor);
-                description = CSTRING(SwayFactor_Description);
-                typeName = "NUMBER";
-                defaultValue = 1;
-            };
         };
     };
 };

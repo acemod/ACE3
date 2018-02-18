@@ -42,11 +42,4 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
-    class GVAR(swayFactor) {
-        category = CSTRING(DisplayName);
-        displayName = CSTRING(SwayFactor);
-        description = CSTRING(SwayFactor_Description);
-        typeName = "SCALAR";
-        value = 1;
-    };
 };
