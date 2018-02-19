@@ -15,7 +15,7 @@
  * Example:
  * [cursorTarget, 0, ["ACE_TapShoulderRight"],VulcanPinchAction] call ace_interact_menu_fnc_addActionToObject;
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
