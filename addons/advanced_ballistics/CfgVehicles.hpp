@@ -3,9 +3,9 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_CheckAirTemperature {
-                displayName = CSTRING(CheckTemperature);
-                condition = QUOTE( GVAR(enabled));
-                statement = QUOTE([_player] call FUNC(checkAirTemp));
+                displayName = CSTRING(CheckAirTemperature);
+                condition = QUOTE(GVAR(enabled));
+                statement = QUOTE([_player] call FUNC(getApproximateAirTemp));
                 icon = QPATHTOEF(overheating,UI\temp_ca.paa);
             };
         };
