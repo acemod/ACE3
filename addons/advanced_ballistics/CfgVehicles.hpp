@@ -1,4 +1,16 @@
 class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_CheckAirTemperature {
+                displayName = CSTRING(CheckTemperature);
+                condition = QUOTE( GVAR(enabled));
+                statement = QUOTE([_player] call FUNC(checkAirTemp));
+                icon = QPATHTOEF(overheating,UI\temp_ca.paa);
+            };
+        };
+    };
+    
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
         scope = 1;

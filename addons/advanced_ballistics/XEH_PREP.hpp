@@ -4,6 +4,7 @@ PREP(calculateAtmosphericCorrection);
 PREP(calculateBarrelLengthVelocityShift);
 PREP(calculateRetardation);
 PREP(calculateStabilityFactor);
+PREP(checkAirTemp);
 PREP(diagnoseWeapons);
 PREP(displayProtractor);
 PREP(handleFired);

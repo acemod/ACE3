@@ -275,5 +275,8 @@
             <Chinese>該模塊實現先進的彈道仿真 - 這意味著子彈的軌跡是由空氣溫度、大氣壓力、濕度、重力、彈藥類型以及射擊的武器所影響</Chinese>
             <Chinesesimp>该模块实现先进的弹道仿真 - 这意味着子弹的轨迹是由空气温度、大气压力、湿度、重力、弹药类型以及射击的武器所影响</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Advanced_Ballistics_CheckTemperature">
+            <English>Check Air Temperature</English>
+        </Key>
     </Package>
 </Project>
