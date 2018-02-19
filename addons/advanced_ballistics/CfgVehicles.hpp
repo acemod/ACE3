@@ -6,7 +6,7 @@ class CfgVehicles {
                 displayName = CSTRING(CheckAirTemperature);
                 condition = QUOTE(GVAR(enabled));
                 statement = QUOTE([_player] call FUNC(getApproximateAirTemp));
-                icon = QPATHTOEF(overheating,UI\temp_ca.paa);
+                icon = QPATHTOF(UI\temp_ca.paa);
             };
         };
     };

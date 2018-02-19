@@ -4,20 +4,19 @@
  *
  * Arguments:
  * 0: Temperature <NUMBER>
- * 1: Unit <OBJECT
  * 
  * Return Value:
  * None
  *
  * Example:
- * [ACE_player] call ace_advanced_ballistics_fnc_displayAirTemp
+ * [15.8] call ace_advanced_ballistics_fnc_displayAirTemp
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_temperature", "_unit"];
-TRACE_2("params",_temperature, _unit);
+params ["_apparent_temperature"];
+TRACE_1("params",_temperature);
 
 private _string = "  -40C "; //extra spaces to balance zero point to be middle
 private _text = [_string, [0.1,0.4,1]] call EFUNC(common,stringToColoredText);
@@ -36,9 +35,9 @@ for "_i" from -40 to 40 step 4 do {
     };
 
     if (_i == 0) then {
-        _text = composeText [_text, ["[", [_temp_color select 0, _temp_color select 1, _temp_color select 2]] call EFUNC(common,stringToColoredText)];
+        _text = composeText [_text, ["[", _temp_color] call EFUNC(common,stringToColoredText)];
         _text = composeText [_text, ["0", [0.6, 1, 0.6]] call EFUNC(common,stringToColoredText)];
-        _text = composeText [_text, ["]", [_temp_color select 0, _temp_color select 1, _temp_color select 2]] call EFUNC(common,stringToColoredText)];
+        _text = composeText [_text, ["]", _temp_color] call EFUNC(common,stringToColoredText)];
     } else {
         _string = "|";
     };
@@ -48,4 +47,4 @@ for "_i" from -40 to 40 step 4 do {
 
 _text = composeText [_text, [" +40C", [1,0,0]] call EFUNC(common,stringToColoredText)];
 
-[_text, QPATHTOEF(overheating,UI\temp_ca.paa)] call EFUNC(common,displayTextPicture);
+[_text, QPATHTOF(UI\temp_ca.paa)] call EFUNC(common,displayTextPicture);
