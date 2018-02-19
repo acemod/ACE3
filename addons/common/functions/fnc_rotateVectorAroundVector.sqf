@@ -1,6 +1,6 @@
 /*
  * Author: LorenLuke
- * Rotates the first vector around the second, clockwise by theta
+ * Rotates the first vector around the second, clockwise by angle theta
  *
  * Arguments:
  * 0: Vector <ARRAY>
@@ -18,21 +18,13 @@
 #include "script_component.hpp"
 
 params ["_vector1", "_vector2", "_theta"];
-_vector1 params ["_vx", "_vy", "_vz"];
 
 private _normalVector = vectorNormalized _vector2;
-_normalVector params ["_ux", "_uy", "_uz"];
+private = _s_theta = sin(_theta);
+private = _c_theta = cos(_theta);
 
-private _rotationMatrix = [
-    [cos(_theta) + ((_ux^2) * (1 - cos(_theta))), (_ux * _uy * (1-cos(_theta))) - (_uz * sin(_theta)), (_ux * _uz * (1 - cos(_theta))) + (_uy * sin (_theta))],
-    [(_uy * _ux * (1-cos(_theta))) + (_uz * sin(_theta)), cos(_theta) + ((_uy^2) * (1 - cos(_theta))), (_uy * _uz * (1 - cos(_theta))) - (_ux * sin (_theta))],
-    [(_uz * _ux * (1-cos(_theta))) - (_uy * sin(_theta)), (_uz * _uy * (1 - cos(_theta))) + (_ux * sin (_theta)), cos(_theta) + ((_uz^2) * (1 - cos(_theta)))]
-];
+// Rodrigues Rotation Formula;
+// https://wikimedia.org/api/rest_v1/media/math/render/svg/2d63efa533bdbd776434af1a7af3cdafaff1d578
+private _returnVector = (_vector1 vectorMultiply _c_theta) vectorAdd ((_normalVector vectorCrossProduct _vector1) vectorMultiply _s_theta) vectorAdd (_normalVector vectorMultiply ((_normalVector vectorDotProduct _vector1) * (1 - _c_theta)));
 
-private _vxp = (_vx * ((_rotationMatrix select 0) select 0)) + (_vy * ((_rotationMatrix select 0) select 1)) + (_vz * ((_rotationMatrix select 0) select 2));
-private _vyp = (_vx * ((_rotationMatrix select 1) select 0)) + (_vy * ((_rotationMatrix select 1) select 1)) + (_vz * ((_rotationMatrix select 1) select 2));
-private _vzp = (_vz * ((_rotationMatrix select 2) select 0)) + (_vy * ((_rotationMatrix select 2) select 1)) + (_vz * ((_rotationMatrix select 2) select 2));
-
-private _returnVector = [_vxp, _vyp, _vzp];
-
-[_vxp, _vyp, _vzp];
+_returnVector
