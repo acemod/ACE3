@@ -27,7 +27,7 @@ call FUNC(compileStats);
     _tab = parseNumber _tab;
 
     private _tabToChange = if (_side == "R") then {
-        GVAR(statsListRightPanel select _tab
+        GVAR(statsListRightPanel) select _tab
     } else {
         GVAR(statsListLeftPanel) select _tab
     };
