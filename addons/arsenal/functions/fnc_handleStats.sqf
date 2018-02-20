@@ -50,6 +50,7 @@ private _hideUnusedFnc = {
     } forEach _numbers;
 };
 
+call FUNC(compileStats);
 if !(isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
@@ -57,9 +58,9 @@ if !(isNil "_itemCfg") then {
 
         // Get the proper list and page
         if (_leftPanel) then {
-            [true, (uiNamespace getVariable QGVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
+            [true, (GVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
         } else {
-            [false, (uiNamespace getVariable QGVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
+            [false, (GVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
         } params ["_isLeftPanel", "_statsArray", "_currentPage"];
 
         private _statsList = _statsArray select _currentPage;
