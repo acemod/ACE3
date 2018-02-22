@@ -15,6 +15,11 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
+#ifdef ENABLE_PERF_PROFILING
+    private _scopeArsenal = createProfileScope QFUNC(onArsenalOpen);
+    profilerTrigger;
+#endif
+
 params ["", "_args"];
 _args params ["_display"];
 
@@ -54,6 +59,11 @@ GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable [
 
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
+
+GVAR(showStats) = true;
+GVAR(statsPagesLeft) =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(statsPagesRight) =  [0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
 // Add the items the player has to virtualItems
 for "_index" from 0 to 10 do {
@@ -199,6 +209,20 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_rightSearchbar
 ];
 
+// Handle stats
+private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
+_statsBoxCtrl ctrlSetPosition [
+    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+    safezoneY + 1.8 * GRID_H,
+    47 * GRID_W,
+    11 * GRID_H
+];
+_statsBoxCtrl ctrlEnable false;
+_statsBoxCtrl ctrlCommit 0;
+
+(_display displayCtrl IDC_statsButton) ctrlShow false;
+
+// Disable import in MP
 if (isMultiplayer) then {
     private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
     _importButtonCtrl ctrlEnable false;

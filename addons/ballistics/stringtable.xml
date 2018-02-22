@@ -2281,5 +2281,24 @@
             <Chinese>[ACE] 彈藥補給箱</Chinese>
             <Chinesesimp>[ACE] 弹药补给箱</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Ballistics_statBarrelTwist">
+            <English>Barrel twist</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statBarrelLength">
+            <English>Barrel length</English>
+            <French>Longueur du canon</French>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statBallisticCoef">
+            <English>Ballistic coefficient</English>
+            <French>Coefficient ballistique</French>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statBulletMass">
+            <English>Bullet mass</English>
+            <French>Masse d'une balle</French>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
+            <English>Muzzle velocity</English>
+            <French>Vitesse à la bouche</French>
+        </Key>
     </Package>
 </Project>
