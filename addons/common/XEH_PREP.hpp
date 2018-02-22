@@ -119,6 +119,7 @@ PREP(loadPerson);
 PREP(loadPersonLocal);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
+PREP(moveCursor);
 PREP(muteUnit);
 PREP(muteUnitHandleInitPost);
 PREP(muteUnitHandleRespawn);
