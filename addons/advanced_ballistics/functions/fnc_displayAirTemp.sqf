@@ -25,7 +25,15 @@ private _color = [0.5, 0.5, 0.5];
 for "_i" from -40 to 40 step 4 do {
     _temp_color = _color;
 
-    if (( _i <= 0 && _i >= _apparent_temperature && _apparent_temperature <= 0) || ( _i >= 0 &&_i <= _apparent_temperature && _apparent_temperature >= 0) || abs(_i - _apparent_temperature) < 7) then {
+    if (_i == 0) then {
+        _text = composeText [_text, ["[", _temp_color] call EFUNC(common,stringToColoredText)];
+        _text = composeText [_text, ["0", [0.6, 1, 0.6]] call EFUNC(common,stringToColoredText)];
+        _text = composeText [_text, ["]", _temp_color] call EFUNC(common,stringToColoredText)];
+    } else {
+        _string = "I";
+    };
+    
+    if (abs( _i - _apparent_temperature) < 8.5) then {
         _temp_color = [
         // Colors obtained by quartic regression formula of RGB values at corresponding temperatures as marked on advanced_ballistics rangecard
             ( (((-0.000238348 * (_i ^ 4)) - (0.00865642 * (_i ^ 3)) + (0.794548 * (_i ^2)) - (0.323314 * _i) +6.78445) min 255) /255) max 0,
@@ -34,17 +42,9 @@ for "_i" from -40 to 40 step 4 do {
         ];
     };
 
-    if (_i == 0) then {
-        _text = composeText [_text, ["[", _temp_color] call EFUNC(common,stringToColoredText)];
-        _text = composeText [_text, ["0", [0.6, 1, 0.6]] call EFUNC(common,stringToColoredText)];
-        _text = composeText [_text, ["]", _temp_color] call EFUNC(common,stringToColoredText)];
-    } else {
-        _string = "|";
-    };
-
     _text = composeText [_text, [_string, [_temp_color select 0, _temp_color select 1, _temp_color select 2]] call EFUNC(common,stringToColoredText)];
 };
 
 _text = composeText [_text, [" +40C", [1,0,0]] call EFUNC(common,stringToColoredText)];
 
-[_text, QPATHTOF(UI\temp_ca.paa)] call EFUNC(common,displayTextPicture);
+[_text, QPATHTOF(UI\temp_ca.paa),[1,1,1], ACE_player, 2] call EFUNC(common,displayTextPicture);
