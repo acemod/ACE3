@@ -16,7 +16,7 @@ class CfgVehicles {
         function = QFUNC(bi_moduleRemoteControl);
     };
     class GVAR(moduleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Settings_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa);
         category = "ACE";
@@ -265,5 +265,20 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleRemoveArsenal_DisplayName);
         function = QFUNC(moduleRemoveArsenal);
+    };
+    class GVAR(AddFullAceArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Arsenal);
+        displayName = CSTRING(ModuleAddFullACEArsenal_DisplayName);
+        function = QFUNC(moduleAddAceArsenal);
+    };
+    class GVAR(RemoveFullAceArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Arsenal);
+        displayName = CSTRING(ModuleRemoveACEArsenal_DisplayName);
+        function = QFUNC(moduleRemoveAceArsenal);
+    };
+    class ModuleArsenal_F: Module_F {
+        function=QFUNC(bi_moduleArsenal);
     };
 };

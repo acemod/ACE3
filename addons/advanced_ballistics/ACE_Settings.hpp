@@ -6,43 +6,13 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(simulateForSnipers) {
+    class GVAR(muzzleVelocityVariationEnabled) {
         category = CSTRING(DisplayName);
-        displayName = CSTRING(simulateForSnipers_DisplayName);
-        description = CSTRING(simulateForSnipers_Description);
+        displayName = CSTRING(muzzleVelocityVariationEnabled_DisplayName);
+        description = CSTRING(muzzleVelocityVariationEnabled_Description);
         typeName = "BOOL";
         value = 1;
-    };
-    class GVAR(simulateForGroupMembers) {
-        category = CSTRING(DisplayName);
-        displayName = CSTRING(simulateForGroupMembers_DisplayName);
-        description = CSTRING(simulateForGroupMembers_Description);
-        typeName = "BOOL";
-        value = 0;
-    };
-    class GVAR(simulateForEveryone) {
-        category = CSTRING(DisplayName);
-        displayName = CSTRING(simulateForEveryone_DisplayName);
-        description = CSTRING(simulateForEveryone_Description);
-        typeName = "BOOL";
-        value = 0;
-    };
-    class GVAR(disabledInFullAutoMode) {
-        category = CSTRING(DisplayName);
-        displayName = CSTRING(disabledInFullAutoMod_DisplayName);
-        description = CSTRING(disabledInFullAutoMod_Description);
-        typeName = "BOOL";
-        value = 0;
-    };
-    /* // TODO: We currently do not have firedEHs on vehicles
-    class GVAR(vehicleGunnerEnabled) {
-        category = CSTRING(DisplayName);
-        displayName = "Enabled For Vehicle Gunners";
-        description = "Enables advanced ballistics for vehicle gunners";
-        typeName = "BOOL";
-        value = 0;
-    };
-    */
+    }; 
     class GVAR(ammoTemperatureEnabled) {
         category = CSTRING(DisplayName);
         displayName = CSTRING(ammoTemperatureEnabled_DisplayName);
@@ -70,12 +40,6 @@ class ACE_Settings {
         description = CSTRING(simulationInterval_Description);
         typeName = "SCALAR";
         value = 0.05;
-    };
-    class GVAR(simulationRadius) {
-        category = CSTRING(DisplayName);
-        displayName = CSTRING(simulationRadius_DisplayName);
-        description = CSTRING(simulationRadius_Description);
-        typeName = "SCALAR";
-        value = 3000;
+        sliderSettings[] = {0, 0.2, 0.05, 2};
     };
 };

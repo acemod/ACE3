@@ -1,24 +1,33 @@
 ---
 layout: wiki
 title: Nightvision
-description: Different types of NVGs with different levels of quality.
+description: Adds realistic effects to NVGs.
 group: feature
 category: equipment
 parent: wiki
 mod: ace
 version:
   major: 3
-  minor: 0
+  minor: 12
   patch: 0
 ---
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Changed in 3.12.0.</p>
+</div>
+
 ## 1. Overview
 
-### 1.1 Multiple Generation NVGs
-Adds different night vision devices with varying image quality and field of view. New Classnames for Generations 1, 2, and 4 NVG's (default Arma 3 NVG's represents Generation 3) and a wide view NVG.
+This addon strives to simulate night vision devices more realistically.
 
-### 1.2 Blending effects
-Adds a blending effect depending on ammunition type when firing while using a night vision device. Especially tracer rounds are bright, but you can use the IR-dim tracers from the Ballistics module to reduce tis effect.
+### 1.1 Nightvision effects
+
+The addon will add effects to the player's night vision depending on ambient light and NVG configuration (mono-, bi-, quadocular).
+
+### 1.2 Multiple Generation NVGs
+
+Adds different night vision devices with varying image quality and field of view. New classnames for Generations 1, 2, and 4 NVG's (default Arma 3 NVG's represents Generation 3) and a wide view NVG.
 
 ### 1.3 Brightness adjustment
 Enables the user to manually adjust NVG brightness.

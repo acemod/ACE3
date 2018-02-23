@@ -21,7 +21,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMap);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_Map_ca.paa);
@@ -81,8 +81,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(BFT_Module_DisplayName);
         function = QFUNC(blueForceTrackingModule);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {

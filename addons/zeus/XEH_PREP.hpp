@@ -1,5 +1,6 @@
 
 PREP(addObjectToCurator);
+PREP(bi_moduleArsenal);
 PREP(bi_moduleCurator);
 PREP(bi_moduleMine);
 PREP(bi_moduleProjectile);
@@ -7,6 +8,7 @@ PREP(bi_moduleRemoteControl);
 PREP(getModuleDestination);
 PREP(handleZeusUnitAssigned);
 PREP(moduleAddArsenal);
+PREP(moduleAddAceArsenal);
 PREP(moduleAddSpareTrack);
 PREP(moduleAddSpareWheel);
 PREP(moduleAddOrRemoveFRIES);
@@ -17,6 +19,7 @@ PREP(moduleGlobalSetSkill);
 PREP(moduleGroupSide);
 PREP(moduleLoadIntoCargo);
 PREP(moduleRemoveArsenal);
+PREP(moduleRemoveAceArsenal);
 PREP(moduleSearchNearby);
 PREP(moduleSetMedic);
 PREP(moduleSetMedicalVehicle);

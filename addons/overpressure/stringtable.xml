@@ -23,5 +23,11 @@
             <Chinesesimp>高压影响的范围 [预设: 1]</Chinesesimp>
             <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
         </Key>
+        <Key ID="STR_ACE_overpressure_statBackblastRange">
+            <English>Backblast range</English>
+        </Key>
+        <Key ID="STR_ACE_overpressure_statBackblastAngle">
+            <English>Backblast angle</English>
+        </Key>
     </Package>
 </Project>

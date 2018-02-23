@@ -269,7 +269,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
-            <German>Fügt die "ACE_EarPlugs" zu allen Einheiten mit lauten Waffen hinzu. Wird deaktiviert wenn eine eigene Inventarkonfiguration vorgenommen wurde.</German>
+            <German>Fügt die "ACE_EarPlugs" zu allen Einheiten mit lauten Waffen hinzu. Wird deaktiviert wenn eigene Ausrüstungsprofile verwendet werden.</German>
             <Polish>Dodaje `ACE_EarPlugs` -  stopery - do wszystkich jednostek, które posiadają głośną broń. Można wyłaczyć w przypadku korzystania z niestandardowych loadoutów.</Polish>
             <Russian>Добавляет предмет `ACE_EarPlugs` всем юнитам, которые имеют громкое оружие. Можно отключить при ручной настройке снаряжения.</Russian>
             <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>
@@ -281,6 +281,26 @@
             <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화 할 수 있습니다.</Korean>
             <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位。当你想自定装备时，此功能可被关闭。</Chinesesimp>
             <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位。當你想自定裝備時，此功能可被關閉。</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_statHearingProtection">
+            <English>Hearing protection</English>
+            <French>Protection auditive</French>
+        </Key>
+        <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
+            <English>Volume muffling</English>
+            <French>Étouffement des sons</French>
+        </Key>
+        <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
+            <English>Earplugs Volume</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
+            <English>Volume when using earplugs.</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
+            <English>Unconscious Volume</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
+            <English>Volume when unconscious.</English>
         </Key>
     </Package>
 </Project>

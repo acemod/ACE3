@@ -193,38 +193,6 @@
             <Chinesesimp>定义每个计算之间的时间间隔</Chinesesimp>
             <Chinese>定義每個計算之間的時間間隔</Chinese>
         </Key>
-        <Key ID="STR_ACE_WindDeflection_simulationRadius_DisplayName">
-            <English>Simulation Radius</English>
-            <Polish>Zasięg symulacji</Polish>
-            <Spanish>Radio de simulación</Spanish>
-            <German>Simulationsradius</German>
-            <Czech>Oblast simulace</Czech>
-            <Portuguese>Radio da Simulação</Portuguese>
-            <French>Rayon de simulation</French>
-            <Hungarian>Szimulációs hatókör</Hungarian>
-            <Russian>Радиус симуляции</Russian>
-            <Italian>Raggio Simulazione</Italian>
-            <Japanese>シミュレーション半径</Japanese>
-            <Chinesesimp>模拟半径</Chinesesimp>
-            <Chinese>模擬半徑</Chinese>
-            <Korean>시뮬레이션 범위</Korean>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_simulationRadius_Description">
-            <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
-            <Polish>Określa obszar naokoło gracza (w metrach), na którym pociski są znoszone przez wiatr</Polish>
-            <Spanish>Define el radio alrededor del jugador (en metros) en el cual los proyectiles son desviados por el viento</Spanish>
-            <German>Gibt den Radius (in Metern) um den Spieler an, in dem Projektile vom Wind beeinflusst werden</German>
-            <Czech>Definuje oblast kolem hráče (v metrech) v které je projektil ovlivněn větrem</Czech>
-            <Portuguese>Define o raio ao redor do jogador (em metros) em qual os projéteis são desviados pelo vento</Portuguese>
-            <French>Défini un rayon autour du joueur (en mètres) autour duquel les projectiles sont influencés par le vent</French>
-            <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékeket háríthatja a szél</Hungarian>
-            <Russian>Определяет радиус вокруг игрока (а метрах), в котором снаряды отклоняются ветром</Russian>
-            <Italian>Definisce il raggio attorno al giocatore (in metri) dove viene applicata la deviazione del vento ai proiettili</Italian>
-            <Japanese>弾道が風によって影響される範囲をプレイヤーを中心とした半径で定義します (メートル)</Japanese>
-            <Korean>플레이어 주위로 발사체가 풍향 변화의 영향을 받는 범위를 정합니다 (미터)</Korean>
-            <Chinesesimp>定义玩家多少半径范围内(单位公尺)子弹会受到风偏的引响</Chinesesimp>
-            <Chinese>定義玩家多少半徑範圍內(單位公尺)子彈會受到風偏的引響</Chinese>
-        </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
             <English>Wind influence on projectiles trajectory</English>
             <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>

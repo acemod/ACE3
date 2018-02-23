@@ -42,10 +42,6 @@ params [
     ["_direction",nil,[0]]
 ];
 
-if (count _this > 5) then {
-    ACE_DEPRECATED("Use of ""tilt"", ""zoom"" and ""speed"" camera attributes","3.12.0","N/A")
-};
-
 // Apply if camera exists
 if !(isNil QGVAR(camera)) then {
     // These functions are smart and handle unavailable inputs

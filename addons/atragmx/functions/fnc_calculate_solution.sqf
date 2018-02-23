@@ -58,7 +58,7 @@ private _bulletPos = [0, 0, 0];
 private _bulletVelocity = [0, 0, 0];
 private _bulletAccel = [0, 0, 0];
 private _bulletSpeed = 0;
-private _gravity = [0, sin(_scopeBaseAngle + _inclinationAngle) * -9.80665, cos(_scopeBaseAngle + _inclinationAngle) * -9.80665];
+private _gravity = [0, sin(_scopeBaseAngle + _inclinationAngle) * -GRAVITY, cos(_scopeBaseAngle + _inclinationAngle) * -GRAVITY];
 private _deltaT = 1 / _simSteps;
 
 private _elevation = 0;
@@ -95,7 +95,7 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
 
 private _eoetvoesMultiplier = 0;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-    _eoetvoesMultiplier = 2 * (0.0000729 * _muzzleVelocity / -9.80665) * cos(_latitude) * sin(_directionOfFire);
+    _eoetvoesMultiplier = 2 * (0.0000729 * _muzzleVelocity / -GRAVITY) * cos(_latitude) * sin(_directionOfFire);
 };
 
 _bulletPos set [0, 0];

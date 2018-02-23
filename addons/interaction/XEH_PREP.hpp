@@ -28,6 +28,8 @@ PREP(canTapShoulder);
 PREP(tapShoulder);
 PREP(canPardon);
 PREP(pardon);
+PREP(canPullOutBody);
+PREP(pullOutBody);
 
 // interaction with doors
 PREP(getDoor);

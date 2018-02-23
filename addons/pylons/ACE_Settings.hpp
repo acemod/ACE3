@@ -19,6 +19,7 @@ class ACE_Settings {
         description = CSTRING(SearchDistance_description);
         value = 15;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 50, 15, 1};
     };
     class GVAR(timePerPylon) {
         category = CSTRING(Category_Pylons);
@@ -26,6 +27,7 @@ class ACE_Settings {
         description = CSTRING(TimePerPylon_description);
         value = 5;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 10, 5, 1};
     };
     class GVAR(requireEngineer) {
         category = CSTRING(Category_Pylons);

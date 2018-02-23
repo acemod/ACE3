@@ -12,5 +12,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 2.5;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
+        sliderSettings[] = {0, 10, 2.5, 1};
     };
 };

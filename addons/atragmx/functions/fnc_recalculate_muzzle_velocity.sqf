@@ -33,24 +33,19 @@ private _lookupTableSize = count _lookupTable;
 if (_lookupTableSize < 2) exitWith {};
 _lookupTable sort true;
 
-private _lowerIndex = -1;
-private _upperIndex = -1;
+private _lowerIndex = 0;
+private _upperIndex = 1;
+
 for "_index" from 1 to (_lookupTableSize - 1) do {
     _upperIndex = _index;
     _lowerIndex = _upperIndex - 1;
     if (((_lookupTable select _index) select 0) >= GVAR(temperature)) exitWith {};
 };
 
-private _lowerTemperature    = (_lookupTable select _lowerIndex) select 0;
-private _upperTemperature    = (_lookupTable select _upperIndex) select 0;
-private _lowerMuzzleVelocity = (_lookupTable select _lowerIndex) select 1;
-private _upperMuzzleVelocity = (_lookupTable select _upperIndex) select 1;
-private _muzzleVelocity = _lowerMuzzleVelocity;
-if (_lowerTemperature != _upperTemperature) then {
-    private _slope = (_upperMuzzleVelocity - _lowerMuzzleVelocity) / (_upperTemperature - _lowerTemperature);
-    _muzzleVelocity = _lowerMuzzleVelocity + (GVAR(temperature) - _lowerTemperature) * _slope;
-};
-_muzzleVelocity = 100 max _muzzleVelocity min 1400;
+(_lookupTable select _lowerIndex) params ["_lowerDistance", "_lowerMuzzleVelocity"];
+(_lookupTable select _upperIndex) params ["_upperDistance", "_upperMuzzleVelocity"];
+
+_muzzleVelocity = 100 max (linearConversion [_lowerDistance, _upperDistance, GVAR(temperature), _lowerMuzzleVelocity, _upperMuzzleVelocity]) min 1400;
 
 if (_muzzleVelocity != GVAR(workingMemory) select 1) then {
     GVAR(workingMemory) set [1, _muzzleVelocity];

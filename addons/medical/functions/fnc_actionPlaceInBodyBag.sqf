@@ -43,11 +43,11 @@ _target setPosASL [-5000, -5000, 0];
 
 // move the inventory into the body bag if needed
 private _bodyBag = if (GVAR(moveInventoryToBodyBag)) then {
-    private _bodyBagHolder = createVehicle ["ACE_bodyBagHolderObject", _position, [], 0, ""];
+    private _bodyBagHolder = createVehicle ["ACE_bodyBagHolderObject", _position, [], 0, "NONE"];
     [_target, _bodyBagHolder] call FUNC(addUnitLoadoutToContainer);
     _bodyBagHolder
 } else {
-    createVehicle ["ACE_bodyBagObject", _position, [], 0, ""]
+    createVehicle ["ACE_bodyBagObject", _position, [], 0, "NONE"]
 };
 
 // prevent body bag from flipping

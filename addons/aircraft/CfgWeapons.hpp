@@ -105,10 +105,5 @@ class CfgWeapons {
             dispersion = 0.0064; //0.0023;
             multiplier = 1;
         };
-
-        class close: HighROF {};
-        class short: close {};
-        class medium: LowROF {};
-        class far: medium {};
     };
 };

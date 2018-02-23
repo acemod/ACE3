@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 
 GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
 GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
+GVAR(vehicleIconCache) = call CBA_fnc_createNamespace; // for getVehicleIcon
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
@@ -18,10 +19,8 @@ GVAR(runAtSettingsInitialized) = [];
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings on the server and broadcast them
-if (isServer) then {
-    call FUNC(loadSettingsOnServer);
-};
+// Load ace_settings into CBA Settings
+[] call FUNC(cbaSettings);
 
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
@@ -41,5 +40,7 @@ uiNamespace setVariable ["ACE_player", objNull];
 isHC = !hasInterface && !isDedicated; // deprecated because no tag
 missionNamespace setVariable ["ACE_isHC", ACE_isHC];
 uiNamespace setVariable ["ACE_isHC", ACE_isHC];
+
+#include "initSettings.sqf"
 
 ADDON = true;

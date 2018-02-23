@@ -33,7 +33,7 @@ class ACE_ZeusActions {
         class remoteControl {
             displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
             icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
-            statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,''];";
+            statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,'NONE'];";
         };
     };
 
@@ -52,7 +52,7 @@ class ACE_ZeusActions {
             class safe {
                 displayName = "$STR_Combat_Safe";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeBehaviour\safe_ca.paa";
-                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('CARELESS',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
+                statement = QUOTE([ARR_3(QQGVAR(zeusBehaviour),[ARR_2('SAFE',curatorSelected select 1)],curatorSelected select 1)] call CBA_fnc_targetEvent;);
             };
             class aware {
                 displayName = "$STR_Combat_Aware";

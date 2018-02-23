@@ -228,51 +228,6 @@
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
-            <English>Make Object Loadable</English>
-            <German>Objekt ein/entladbar machen</German>
-            <Polish>Ustaw jako ładowalny</Polish>
-            <Italian>Rendi oggetto caricabile</Italian>
-            <Spanish>Hacer objeto cargable</Spanish>
-            <French>Rendre l'objet chargeable</French>
-            <Czech>Vytvořit objekt nakladatelným</Czech>
-            <Portuguese>Fazer objeto carregável</Portuguese>
-            <Russian>Сделать объект загружаемым</Russian>
-            <Japanese>オブジェクトを積載可能に</Japanese>
-            <Korean>물체를 화물화시키기</Korean>
-            <Chinese>使物件可裝載</Chinese>
-            <Chinesesimp>使物件可装载</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Cargo_makeLoadable_description">
-            <English>Sets the synced object as loadable by the cargo system.</English>
-            <German>Das synchronisierte Objekt wird dem Frachtsystem hinzugefügt und ist ein- und entladbar.</German>
-            <Polish>Ustawia zsynchronizowany obiekt jako możliwy do załadowania poprzez system cargo</Polish>
-            <Italian>Imposta l'oggetto sincronizzato come caricabile dal sistema cargo</Italian>
-            <Spanish>Sincronizar un objecto para hacerlo cargable.</Spanish>
-            <French>Rend l'objet synchronisé comme chargeable par le système de cargaison.</French>
-            <Czech>Nastaví synchronizované objekty nakladatelnými za pomocí Nákladního systému.</Czech>
-            <Portuguese>Seta o objeto sincronizado como carregável</Portuguese>
-            <Russian>Делает синхронизированный объект загружаемым для модуля перевозки грузов.</Russian>
-            <Japanese>オブジェクトを同期させると、カーゴ システムによる積載が可能になります。</Japanese>
-            <Korean>물체를 화물 시스템과 동기화시켜 실을 수 있게 합니다</Korean>
-            <Chinese>使用同步線來使該物件可被裝載.</Chinese>
-            <Chinesesimp>使用同步线来使该物件可被装载.</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
-            <English>Object's Size</English>
-            <German>Objektgröße</German>
-            <Polish>Rozmiar obiektu</Polish>
-            <Italian>Dimensioni dell'oggetto</Italian>
-            <Spanish>Tamaño del objeto</Spanish>
-            <French>Taille de l'objet</French>
-            <Czech>Velikost objektu</Czech>
-            <Portuguese>Tamanho do objeto</Portuguese>
-            <Russian>Размер объекта</Russian>
-            <Japanese>オブジェクトの大きさ</Japanese>
-            <Korean>물체 크기</Korean>
-            <Chinese>物件的大小</Chinese>
-            <Chinesesimp>物件的大小</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
             <German>Frachtraum</German>
@@ -281,6 +236,7 @@
             <Chinese>貨物空間</Chinese>
             <Chinesesimp>货物空间</Chinesesimp>
             <Polish>Przestrzeń ładunkowa</Polish>
+            <Korean>화물 공간</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
@@ -290,6 +246,7 @@
             <Chinese>設定此載具/集裝箱可裝載多少貨物</Chinese>
             <Chinesesimp>设定此载具/集装箱可装载多少货物</Chinesesimp>
             <Polish>Dostępna przestrzeń ładunkowa w tym pojeździe/kontenerze</Polish>
+            <Korean>이 차량/컨테이너에서 사용가능한 화물 공간</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -299,6 +256,7 @@
             <Chinese>貨物的大小</Chinese>
             <Chinesesimp>货物的大小</Chinesesimp>
             <Polish>Wielkość ładunku</Polish>
+            <Korean>화물 크기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
@@ -308,6 +266,7 @@
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
+            <Korean>이 화물을 적재하는데 필요한 공간 (-1=무조건 적재가능)</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -340,6 +299,7 @@
             <Chinese>空投時間係數</Chinese>
             <Chinesesimp>空投时间系数</Chinesesimp>
             <Polish>Współczynnik czasu zrzutu</Polish>
+            <Korean>공중 투하 시간 계수</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
@@ -350,6 +310,7 @@
             <Chinese>設定空投所需消耗的時間.</Chinese>
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
+            <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>
         </Key>
     </Package>
 </Project>

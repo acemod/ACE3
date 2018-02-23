@@ -59,6 +59,8 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_x] call EFUNC(medical,hasMedicalEnabled))}) then {
                 [_x, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
             } else {
+                TRACE_1("",isDamageAllowed _x);
+                if (!isDamageAllowed _x) exitWith {}; // Skip damage if not allowed
                 _x setDamage (damage _x + _damage);
             };
 

@@ -28,7 +28,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class ADDON {
-            respawn = QUOTE(call COMPILE_FILE(XEH_respawn));
+            respawn = QUOTE(call FUNC(handleRespawn));
         };
     };
 };
