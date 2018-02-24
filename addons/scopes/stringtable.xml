@@ -440,5 +440,13 @@
             <Japanese>%1R</Japanese>
             <Korean>%1R</Korean>
         </Key>
+        <Key ID="STR_ACE_Scopes_statHorizontalLimits">
+            <English>Horizontal limits</English>
+            <Chinese>Limites horizontales</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_statVerticalLimits">
+            <English>Vertical limits</English>
+            <Chinese>Limites verticales</Chinese>
+        </Key>
     </Package>
 </Project>
