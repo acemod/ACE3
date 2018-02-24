@@ -1,29 +1,33 @@
 /*
- * Author: SilentSpike
- * Initalises the `patrol area` zeus module display
+ * Author: mharis001
+ * Initalizes the "Set Engineer" Zeus module display.
  *
  * Arguments:
- * 0: dummy controls group <CONTROL>
+ * 0: setEngineer controls group <CONTROL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [CONTROL] call ace_zeus_fnc_ui_patrolArea
+ * [CONTROL] call ace_zeus_fnc_ui_setEngineer
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-//Generic Init:
 params ["_control"];
+
+// Generic init
 private _display = ctrlParent _control;
+private _ctrlButtonOK = _display displayCtrl 1; // IDC_OK
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+TRACE_1("logicObject",_logic);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
 
-//Validate the module target:
-private _unit = effectiveCommander (attachedTo _logic);
+// Validate module target
+private _unit = attachedTo _logic;
+TRACE_1("unit",_unit);
 
 scopeName "Main";
 private _fnc_errorAndClose = {
@@ -46,31 +50,26 @@ switch (false) do {
     };
 };
 
+// Specific onLoad stuff
 private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
-    if (_this select 1 == 2) then {
-        deleteVehicle _logic;
-    };
+    deleteVehicle _logic;
 };
 
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
 
-    private _display = ctrlparent _ctrlButtonOK;
+    private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
-    private _unit = effectiveCommander (attachedTo _logic);
-    private _radius = GETVAR(_display,GVAR(radius),50);
-    private _position = GETVAR(_display,GVAR(position),getPos _logic);
-
-    [QGVAR(modulePatrolArea), [_unit,_position,_radius,5], _unit] call CBA_fnc_targetEvent;
-    deleteVehicle _logic;
+    private _value = lbCurSel (_display displayCtrl 86947);
+    [attachedTo _logic, _value + 1] call FUNC(moduleSetEngineer); // +1 since lbCurSel zero-indexed
 };
 
-_display displayAddEventHandler ["unload", _fnc_onUnload];
-_control ctrlAddEventHandler ["buttonClick", _fnc_onConfirm];
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

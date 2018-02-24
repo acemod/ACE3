@@ -17,7 +17,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 _logic = _this select 0;

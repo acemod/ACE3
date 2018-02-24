@@ -1,27 +1,25 @@
 /*
- * Author: SilentSpike, Glowbal
- * Assigns a medic role from the medical module to a unit
+ * Author: mharis001
+ * Assigns object as repair facility.
  *
  * Arguments:
  * 0: The module logic <OBJECT>
- * 1: Synchronized units <ARRAY>
- * 2: Activated <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleSetMedicalVehicle
+ * [LOGIC] call ace_zeus_fnc_moduleSetRepairFacility
  *
  * Public: No
  */
-#include "script_component.hpp"
+ #include "script_component.hpp"
 
-params ["_logic"];
+ params ["_logic"];
 
-if !(local _logic) exitWith {};
+ if !(local _logic) exitWith {};
 
-if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+if !(["ace_repair"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
     private _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
@@ -31,8 +29,8 @@ if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     } else {
         private _unit = (_mouseOver select 1);
 
-        if (_unit isKindOf "Man" || {_unit isKindOf "Building"}) then {
-            [LSTRING(OnlyVehicles)] call FUNC(showMessage);
+        if (_unit isKindOf "Man" || {!(_unit isKindOf "Building")}) then {
+            [LSTRING(OnlyStructures)] call FUNC(showMessage);
         } else {
             if !(alive _unit) then {
                 [LSTRING(OnlyAlive)] call FUNC(showMessage);
@@ -40,9 +38,8 @@ if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
                 if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
                     [LSTRING(OnlyNonCaptive)] call FUNC(showMessage);
                 } else {
-                    private _medicN = GETVAR(_unit,EGVAR(medical,medicClass),0);
-                    if (_medicN < 1) then {
-                        _unit setVariable [QEGVAR(medical,medicClass), 1, true];
+                    if ((_unit getVariable ["ACE_isRepairFacility", 0]) < 1) then {
+                        _unit setVariable ["ACE_isRepairFacility", 1, true];
                     };
                 };
             };

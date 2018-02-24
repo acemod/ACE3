@@ -1,17 +1,15 @@
 /*
- * Author: SilentSpike
- * Flips the unconscious state of the unit the module is placed on.
+ * Author: mharis001
+ * Assigns object as repair vehicle.
  *
  * Arguments:
  * 0: The module logic <OBJECT>
- * 1: Synchronized units <ARRAY>
- * 2: Activated <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleUnconscious
+ * [LOGIC] call ace_zeus_fnc_moduleSetRepairVehicle
  *
  * Public: No
  */
@@ -21,7 +19,7 @@ params ["_logic"];
 
 if !(local _logic) exitWith {};
 
-if (isNil QEFUNC(medical,setUnconscious)) then {
+if !(["ace_repair"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
     private _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
@@ -29,17 +27,17 @@ if (isNil QEFUNC(medical,setUnconscious)) then {
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);
     } else {
-        private _unit = effectivecommander (_mouseOver select 1);
+        private _unit = _mouseOver select 1;
 
-        if !(_unit isKindOf "CAManBase") then {
-            [LSTRING(OnlyInfantry)] call FUNC(showMessage);
+        if (_unit isKindOf "Man" || (_unit isKindOf "Building")) then {
+            [LSTRING(OnlyVehicles)] call FUNC(showMessage);
         } else {
             if !(alive _unit) then {
                 [LSTRING(OnlyAlive)] call FUNC(showMessage);
             } else {
-                private _conscious = GETVAR(_unit,ACE_isUnconscious,false);
-                // Function handles locality for me
-                [_unit, !_conscious, 10e10, true] call EFUNC(medical,setUnconscious);
+                if !([_unit] call EFUNC(repair,isRepairVehicle)) then {
+                    _unit setVariable ["ACE_isRepairVehicle", 1, true];
+                };
             };
         };
     };
