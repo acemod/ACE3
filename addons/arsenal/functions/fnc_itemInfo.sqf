@@ -16,6 +16,10 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
+#ifdef ENABLE_PERF_PROFILING
+    private _scopeItemInfo = createProfileScope QFUNC(itemInfo);
+#endif
+
 params ["_display", "_control", "_curSel" ,"_itemCfg"];
 
 private _ctrlInfo = _display displayCtrl IDC_infoBox;
@@ -24,6 +28,8 @@ if (isClass _itemCfg) then {
 
     _ctrlInfo ctrlSetFade 0;
     _ctrlInfo ctrlCommit FADE_DELAY;
+
+    [QGVAR(displayStats), [_display, _control, _curSel, _itemCfg]] call CBA_fnc_localEvent;
 
     // Name + author
     private _ctrlInfoName = _display displayCtrl IDC_infoName;
@@ -70,6 +76,8 @@ if (isClass _itemCfg) then {
     _ctrlDLCBackground ctrlcommit 0;
 
 } else {
+    [QGVAR(displayStats), [_display, _control, -1, nil]] call CBA_fnc_localEvent;
+
     _ctrlInfo ctrlSetFade 1;
     _ctrlInfo ctrlCommit FADE_DELAY;
 };

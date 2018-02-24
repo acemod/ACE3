@@ -23,6 +23,10 @@
 #define IDC_message 9
 #define IDC_menuBar 10
 #define IDC_menuBarClose 1001
+#define IDC_buttonHide 1002
+#define IDC_buttonLoadouts 1003
+#define IDC_buttonExport 1004
+#define IDC_buttonImport 1005
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
@@ -100,6 +104,32 @@
 #define IDC_buttonMisc 38
 #define IDC_buttonRemoveAllSelected 39
 #define IDC_buttonRemoveAll 40
+#define IDC_statsBox 51
+#define IDC_statsTitle1 5101
+#define IDC_statsBackground1 5102
+#define IDC_statsBar1 5103
+#define IDC_statsText1 5104
+#define IDC_statsTitle2 5105
+#define IDC_statsBackground2 5106
+#define IDC_statsBar2 5107
+#define IDC_statsText2 5108
+#define IDC_statsTitle3 5109
+#define IDC_statsBackground3 5110
+#define IDC_statsBar3 5111
+#define IDC_statsText3 5112
+#define IDC_statsTitle4 5113
+#define IDC_statsBackground4 5114
+#define IDC_statsBar4 5115
+#define IDC_statsText4 5116
+#define IDC_statsTitle5 5117
+#define IDC_statsBackground5 5118
+#define IDC_statsBar5 5119
+#define IDC_statsText5 5120
+#define IDC_statsPreviousPage 52
+#define IDC_statsNextPage 53
+#define IDC_statsCurrentPage 54
+#define IDC_statsButton 55
+#define IDC_statsButtonClose 56
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3
@@ -196,6 +226,21 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     IDC_rightTabContentListnBox,\
     RIGHT_PANEL_ITEMS_BACKGROUND_IDCS,\
     IDC_buttonRemoveAll\
+];\
+{\
+    _x = _display displayCtrl _x;\
+    _x ctrlSetPosition [\
+        safezoneX + safezoneW - 93 * GRID_W,\
+        safezoneY + 14 * GRID_H,\
+        80 * GRID_W,\
+        safezoneH - 28 * GRID_H\
+    ];\
+    _x ctrlCommit 0;\
+} foreach [\
+    IDC_rightTabContent,\
+    IDC_rightTabContentListnBox,\
+    IDC_blockRightFrame,\
+    IDC_blockRighttBackground\
 ];
 
 #define TOGGLE_RIGHT_PANEL_CONTAINER\
@@ -228,6 +273,21 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     IDC_buttonCurrentMag2,\
     IDC_iconBackgroundCurrentMag,\
     IDC_iconBackgroundCurrentMag2\
+];\
+{\
+    _x = _display displayCtrl _x;\
+    _x ctrlSetPosition [\
+        safezoneX + safezoneW - 93 * GRID_W,\
+        safezoneY + 14 * GRID_H,\
+        80 * GRID_W,\
+        safezoneH - 34 * GRID_H\
+    ];\
+    _x ctrlCommit 0;\
+} foreach [\
+    IDC_rightTabContent,\
+    IDC_rightTabContentListnBox,\
+    IDC_blockRightFrame,\
+    IDC_blockRighttBackground\
 ];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\

@@ -8,6 +8,8 @@ class RscXSliderH;
 class RscCheckBox;
 class RscActivePicture;
 class RscMapControl;
+class RscPicture;
+class ctrlToolbox;
 
 class RscDisplayAttributes {
     class Controls {
@@ -280,7 +282,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class BLUFOR: RscActivePicture {
                             idc = 31200;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\b_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
                             x = W_PART(12.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
@@ -289,7 +291,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class OPFOR: BLUFOR {
                             idc = 31201;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\o_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
                             x = W_PART(15.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
@@ -298,7 +300,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class Independent: BLUFOR {
                             idc = 31202;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
                             x = W_PART(18.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
@@ -307,7 +309,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                         };
                         class Civilian: BLUFOR {
                             idc = 31203;
-                            text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                            text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
                             x = W_PART(21.5);
                             y = H_PART(0.25);
                             w = W_PART(2);
@@ -394,16 +396,41 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             w = W_PART(26);
                             h = H_PART(5.9);
                         };
-                        class Label: Title {
+                        class SearchBackground: RscText {
+                            idc = -1;
+                            x = 0;
+                            y = H_PART(7.1);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class SearchPicture: RscPicture {
+                            idc = -1;
+                            text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
+                            x = 0;
+                            y = H_PART(7.1);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                        };
+                        class Search: RscEdit {
+                            idc = 16190;
+                            x = W_PART(1.2);
+                            y = H_PART(7.1);
+                            w = W_PART(14.5);
+                            h = H_PART(1);
+                            autocomplete = "";
+                        };
+                        class LabelGroup: Title {
                             idc = -1;
                             text = CSTRING(ModuleTeleportPlayers_group);
                             toolTip = CSTRING(ModuleTeleportPlayers_group_desc);
+                            x = W_PART(15.9);
                             y = H_PART(7.1);
-                            w = W_PART(10);
+                            w = W_PART(9);
                         };
                         class UseGroup: RscCheckBox {
                             idc = 16188;
-                            x = W_PART(10.1);
+                            x = W_PART(25);
                             y = H_PART(7.1);
                             w = W_PART(1);
                             h = H_PART(1);
@@ -659,6 +686,182 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                             y = H_PART(2.4);
                             w = W_PART(10.1);
                             h = H_PART(1);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscSetEngineer): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSetEngineer)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSetEngineer)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class setEngineer: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_setEngineer));
+                    idc = 86946;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(1.2);
+                    class controls {
+                        class Label: RscText {
+                            idc = -1;
+                            text = CSTRING(ModuleSetEngineer_skill);
+                            toolTip = ECSTRING(repair,AssignEngineerRole_role_Description);
+                            x = 0;
+                            y = H_PART(0.1);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class Roles: ctrlToolbox {
+                            idc = 86947;
+                            x = W_PART(10.1);
+                            y = H_PART(0.1);
+                            w = W_PART(15.9);
+                            h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(repair,AssignEngineerRole_role_engineer), ECSTRING(repair,AssignEngineerRole_role_advanced)};
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscSuicideBomber): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSuicideBomber)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSuicideBomber)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class suicideBomber: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_suicideBomber));
+                    idc = 83470;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(5.8);
+                    class controls {
+                        class ActivationSide: RscControlsGroupNoScrollbars {
+                            idc = 83571;
+                            x = 0;
+                            y = 0;
+                            w = W_PART(26);
+                            h = H_PART(2.5);
+                            class controls {
+                                class Label: RscText {
+                                    idc = -1;
+                                    text = CSTRING(ModuleSuicideBomber_ActivationSide);
+                                    x = 0;
+                                    y = 0;
+                                    w = W_PART(10);
+                                    h = H_PART(2.5);
+                                    colorBackground[] = {0, 0, 0, 0.5};
+                                };
+                                class Background: RscText {
+                                    idc = -1;
+                                    x = W_PART(10);
+                                    y = 0;
+                                    w = W_PART(16);
+                                    h = H_PART(2.5);
+                                    colorBackground[] = {1, 1, 1, 0.1};
+                                };
+                                class BLUFOR: RscActivePicture {
+                                    idc = 83581;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+                                    x = W_PART(12.5);
+                                    y = H_PART(0.25);
+                                    w = W_PART(2);
+                                    h = H_PART(2);
+                                    tooltip = "$STR_WEST";
+                                };
+                                class OPFOR: BLUFOR {
+                                    idc = 83580;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+                                    x = W_PART(15.5);
+                                    tooltip = "$STR_EAST";
+                                };
+                                class Independent: BLUFOR {
+                                    idc = 83582;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+                                    x = W_PART(18.5);
+                                    tooltip = "$STR_guerrila";
+                                };
+                                class Civilian: BLUFOR {
+                                    idc = 83583;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+                                    x = W_PART(21.5);
+                                    tooltip = "$STR_Civilian";
+                                };
+                            };
+                        };
+                        class DistanceLabel: RscText {
+                            idc = -1;
+                            text = CSTRING(ModuleSuicideBomber_ActivationRadius);
+                            x = 0;
+                            y = H_PART(2.6);
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class DistanceSlider: RscXSliderH {
+                            idc = 83572;
+                            x = W_PART(10.1);
+                            y = H_PART(2.6);
+                            w = W_PART(13.9);
+                            h = H_PART(1);
+                        };
+                        class DistanceEdit: RscEdit {
+                            idc = 83573;
+                            x = W_PART(24.1);
+                            y = H_PART(2.6);
+                            w = W_PART(1.9);
+                            h = H_PART(1);
+                            autocomplete = "";
+                            maxChars = 3;
+                            canModify = 0;
+                        };
+                        class ExplosionLabel: DistanceLabel {
+                            idc = -1;
+                            text = CSTRING(ModuleSuicideBomber_ExplosionSize);
+                            y = H_PART(3.7);
+                        };
+                        class Explosion: ctrlToolbox {
+                            idc = 83574;
+                            x = W_PART(10.1);
+                            y = H_PART(3.7);
+                            w = W_PART(15.9);
+                            h = H_PART(1);
+                            rows = 1;
+                            columns = 3;
+                            strings[] = {CSTRING(ModuleSuicideBomber_Small), CSTRING(ModuleSuicideBomber_Medium), CSTRING(ModuleSuicideBomber_Large)};
+                        };
+                        class AutoSeekLabel: DistanceLabel {
+                            idc = -1;
+                            text = CSTRING(ModuleSuicideBomber_AutoSeek);
+                            y = H_PART(4.8);
+                            toolTip = CSTRING(ModuleSuicideBomber_AutoSeek_tooltip);
+                        };
+                        class AutoSeek: Explosion {
+                            idc = 83575;
+                            y = H_PART(4.8);
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
                     };
                 };

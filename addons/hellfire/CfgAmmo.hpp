@@ -59,9 +59,9 @@ class CfgAmmo {
         displayNameShort = "AGM-114N";
         description = "AGM-114N";
         descriptionShort = "AGM-114N";
-        hit = 1100;
+        hit = 200;
         indirectHit = 200;
-        indirectHitRange = 10;
+        indirectHitRange = 12;
         explosionEffects = "BombExplosion";
         class ace_missileguidance: ace_missileguidance {
             enabled = 1; // Missile Guidance must be explicitly enabled

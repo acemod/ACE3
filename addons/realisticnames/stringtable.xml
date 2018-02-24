@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -1102,6 +1102,7 @@
             <Japanese>JAS 39 グリペン</Japanese>
             <Korean>JAS 39 그리펜</Korean>
             <Chinese>JAS 39 獅鷲戰鬥機</Chinese>
+            <Chinesesimp>JAS 39 狮鹫战斗机</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_Name">
             <English>Ka-60 Kasatka</English>
@@ -3234,26 +3235,36 @@
             <English>Polaris DAGOR (XM312)</English>
             <German>Polaris DAGOR (XM312)</German>
             <Japanese>ポラリス DAGOR (XM312)</Japanese>
+            <Chinese>"北極星"先進佈署越野車 (XM312重機槍)</Chinese>
+            <Chinesesimp>"北极星"先进布署越野车 (XM312重机枪)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
             <German>Polaris DAGOR</German>
             <Japanese>ポラリス DAGOR</Japanese>
+            <Chinese>"北極星"先進佈署越野車</Chinese>
+            <Chinesesimp>"北极星"先进布署越野车</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
             <German>Polaris DAGOR (leicht)</German>
             <Japanese>ポラリス DAGOR (軽)</Japanese>
+            <Chinese>"北極星"先進佈署越野車 (輕型)</Chinese>
+            <Chinesesimp>"北极星"先进布署越野车 (轻型)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
             <German>LSV Mk. II (M134)</German>
             <Japanese>LSV Mk. II (M134)</Japanese>
+            <Chinese>輕型突擊車2式 (M134迷你機炮)</Chinese>
+            <Chinesesimp>轻型突击车2式 (M134迷你机炮)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
             <German>LSV Mk. II</German>
             <Japanese>LSV Mk. II</Japanese>
+            <Chinese>輕型突擊車2式</Chinese>
+            <Chinesesimp>轻型突击车2式</Chinesesimp>
         </Key>
     </Package>
 </Project>
