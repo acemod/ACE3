@@ -28,9 +28,8 @@ ACE_Modifier = 0;
     {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(switchCollisionLight), {
-    params ["_target", "_player", "_state"];
-    _player action [["CollisionLightOff", "CollisionLightOn"] select _state, _target];
+[QGVAR(setCollisionLight), {
+    (_this select 0) setCollisionLight (_this select 1);
 }] call CBA_fnc_addEventHandler;
 
 // Zeus action events

@@ -672,13 +672,13 @@ class CfgVehicles {
                     displayName = CSTRING(TurnOn);
                     icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
                     condition = QUOTE(alive _target && !isCollisionLightOn _target);
-                    statement = QUOTE([ARR_3(QQGVAR(switchCollisionLight),[ARR_3(_target,_player,true)],_target)] call CBA_fnc_targetEvent);
+                    statement = QUOTE([ARR_3(QQGVAR(setCollisionLight),[ARR_2(_target,true)],_target)] call CBA_fnc_targetEvent);
                 };
                 class GVAR(TurnOff) {
                     displayName = CSTRING(TurnOff);
                     icon = "\A3\ui_f\data\igui\cfg\actions\ico_cpt_land_OFF_ca.paa";
                     condition = QUOTE(alive _target && isCollisionLightOn _target);
-                    statement = QUOTE([ARR_3(QQGVAR(switchCollisionLight),[ARR_3(_target,_player,false)],_target)] call CBA_fnc_targetEvent);
+                    statement = QUOTE([ARR_3(QQGVAR(setCollisionLight),[ARR_2(_target,false)],_target)] call CBA_fnc_targetEvent);
                 };
             };
         };
