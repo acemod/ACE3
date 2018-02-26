@@ -2,11 +2,13 @@
 <Project name="ACE">
     <Package name="VehicleLock">
         <Key ID="STR_ACE_VehicleLock_DisplayName">
-            <English>Vehicle Lock</English>
-            <Italian>Blocco Veicolo</Italian>
-            <Chinese>載具上鎖</Chinese>
-            <Chinesesimp>载具上锁</Chinesesimp>
-            <Japanese>車両の施錠</Japanese>
+            <English>ACE Vehicle Lock</English>
+            <Italian>ACE Blocco Veicolo</Italian>
+            <Chinese>ACE 載具上鎖</Chinese>
+            <Chinesesimp>ACE 载具上锁</Chinesesimp>
+            <Japanese>ACE 車両の施錠</Japanese>
+            <Korean>ACE 차량 잠금</Korean>
+            <German>ACE Fahrzeugsperre</German>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>

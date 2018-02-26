@@ -18,7 +18,7 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile);
 
-if ((!GVAR(running)) || {_weapon == "throw"} || {_weapon == "put"}) exitWith {};
+if ((!GVAR(running)) || {!GVAR(shutterEffects)} || {_weapon == "throw"} || {_weapon == "put"}) exitWith {};
 
 private _visibleFireCoef = 1;
 if (_unit == ace_player) then {

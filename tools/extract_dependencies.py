@@ -50,9 +50,9 @@ def main():
 
     open(dependencies_path, "w", newline="\n").close()
     if os.path.exists(addons_path):
-        addons = next(os.walk(addons_path))[1]
+        addons = sorted(next(os.walk(addons_path))[1])
         if os.path.exists(optionals_path):
-            addons += ["."] + next(os.walk(optionals_path))[1]
+            addons += ["."] + sorted(next(os.walk(optionals_path))[1])
 
     dependencies_path_current = dependencies_path
     addons_path_current = addons_path
@@ -60,9 +60,9 @@ def main():
     if "--acex" in sys.argv:
         open(dependenciesx_path, "w", newline="\n").close()
         if os.path.exists(addonsx_path):
-            addons += [".."] + next(os.walk(addonsx_path))[1]
+            addons += [".."] + sorted(next(os.walk(addonsx_path))[1])
             if os.path.exists(optionalsx_path):
-                addons += ["."] + next(os.walk(optionalsx_path))[1]
+                addons += ["."] + sorted(next(os.walk(optionalsx_path))[1])
 
     # Iterate through folders in the addons directories
     for folder in addons:

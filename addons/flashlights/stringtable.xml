@@ -91,5 +91,9 @@
             <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
         </Key>
+        <Key ID="STR_ACE_Flashlights_statMapLightColor">
+            <English>Map light color</English>
+            <French>Couleur de la lampe sur carte</French>
+        </Key>
     </Package>
 </Project>

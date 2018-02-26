@@ -8,6 +8,7 @@
             <Chinese>互動</Chinese>
             <Chinesesimp>互动</Chinesesimp>
             <Japanese>インタラクション</Japanese>
+            <Korean>상호작용</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -831,13 +832,17 @@
             <Polish>Pchnij</Polish>
             <Czech>Tlačit</Czech>
             <Hungarian>Tolás</Hungarian>
-            <Russian>Толкать</Russian>
+            <Russian>Толкнуть</Russian>
             <Portuguese>Empurrar</Portuguese>
             <Italian>Spingere</Italian>
             <Japanese>押す</Japanese>
             <Korean>밀기</Korean>
             <Chinesesimp>推</Chinesesimp>
             <Chinese>推</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Flip">
+            <English>Flip</English>
+            <Russian>Перевернуть</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -946,7 +951,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
-            <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewerungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
+            <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
             <Japanese>否定評価を受けますか？有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
             <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價。</Chinese>
@@ -1079,6 +1084,9 @@
             <Russian>Вытащить тело</Russian>
             <Japanese>身体を引き出す</Japanese>
             <Italian>Estrai il corpo</Italian>
+            <Korean>시체 끌기</Korean>
+            <Chinese>拿出屍體</Chinese>
+            <Chinesesimp>拿出尸体</Chinesesimp>
         </Key>
     </Package>
 </Project>
