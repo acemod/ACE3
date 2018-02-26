@@ -832,13 +832,17 @@
             <Polish>Pchnij</Polish>
             <Czech>Tlačit</Czech>
             <Hungarian>Tolás</Hungarian>
-            <Russian>Толкать</Russian>
+            <Russian>Толкнуть</Russian>
             <Portuguese>Empurrar</Portuguese>
             <Italian>Spingere</Italian>
             <Japanese>押す</Japanese>
             <Korean>밀기</Korean>
             <Chinesesimp>推</Chinesesimp>
             <Chinese>推</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Flip">
+            <English>Flip</English>
+            <Russian>Перевернуть</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>

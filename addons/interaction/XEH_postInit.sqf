@@ -28,6 +28,14 @@ ACE_Modifier = 0;
     {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;
 
+
+[QGVAR(flip), {
+    params ["_vehicle"];
+    private _position = getPosATL _vehicle;
+    _vehicle setVectorUp surfaceNormal _position;
+    _vehicle setPosATL _position;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCollisionLight), {
     (_this select 0) setCollisionLight (_this select 1);
 }] call CBA_fnc_addEventHandler;

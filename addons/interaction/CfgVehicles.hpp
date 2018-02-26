@@ -368,6 +368,40 @@ class CfgVehicles {
         };
     };
 
+    class Car_F: Car{};
+    class Quadbike_01_base_F: Car_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(flip) {
+                    displayName = CSTRING(Flip);
+                    condition = QUOTE(call DFUNC(canFlip));
+                    statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
+                };
+                class GVAR(push) {
+                    displayName = CSTRING(Push);
+                    condition = QUOTE(_target call FUNC(canPush));
+                    statement = QUOTE(call FUNC(push));
+                };
+            };
+        };
+    };
+    class Kart_01_Base_F: Car_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(flip) {
+                    displayName = CSTRING(Flip);
+                    condition = QUOTE(call DFUNC(canFlip));
+                    statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
+                };
+                class GVAR(push) {
+                    displayName = CSTRING(Push);
+                    condition = QUOTE(_target call FUNC(canPush));
+                    statement = QUOTE(call FUNC(push));
+                };
+            };
+        };
+    };
+
     class Tank: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
@@ -544,6 +578,11 @@ class CfgVehicles {
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+                };
+                class GVAR(flip) {
+                    displayName = CSTRING(Flip);
+                    condition = QUOTE(call DFUNC(canFlip));
+                    statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
                 };
             };
         };
