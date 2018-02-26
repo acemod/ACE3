@@ -61,34 +61,11 @@ if (_vehicle getVariable [QGVAR(initVehicle),false]) exitWith {};
 if (_hasCargoConfig) then {
     GVAR(initializedVehicleClasses) pushBack _type;
     TRACE_1("Adding unload cargo action to class", _type);
+    [_type, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
 } else {
     _vehicle setVariable [QGVAR(initVehicle),true];
     TRACE_1("Adding unload cargo action to object", _vehicle);
-};
-
-private _condition = {
-    //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-    GVAR(enable) &&
-    {(_target getVariable [QGVAR(hasCargo), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(hasCargo)) == 1])} &&
-    {locked _target < 2} &&
-    {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE} &&
-    {alive _target} &&
-    {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
-};
-private _statement = {
-    //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-    GVAR(interactionVehicle) = _target;
-    GVAR(interactionParadrop) = false;
-    createDialog QGVAR(menu);
-};
-private _text = localize LSTRING(openMenu);
-private _icon = "";
-
-private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
-if (_hasCargoConfig) then {
-    [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
-} else {
-    [_vehicle, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
+    [_vehicle, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToObject);
 };
 
 // Add the paradrop self interaction for planes and helicopters

@@ -7,6 +7,8 @@
             <Chinese>觸發倒下前最低需受到多少傷害</Chinese>
             <Chinesesimp>触发倒下前最低需受到多少伤害</Chinesesimp>
             <Japanese>崩れ落ちるまでの最低損傷値</Japanese>
+            <Korean>방아쇠를 당기는 최소한의 피해</Korean>
+            <German>Mindestschaden, um Sturz auszulösen</German>
         </Key>
     </Package>
 </Project>

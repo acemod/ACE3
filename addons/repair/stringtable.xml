@@ -1098,7 +1098,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
-            <German>Erweiterter Pionier</German>
+            <German>Instandsetzer</German>
             <Italian>Solo Geniere avanzato</Italian>
             <Japanese>上級工兵のみ</Japanese>
             <Chinesesimp>只有维修专精兵</Chinesesimp>
@@ -1424,7 +1424,7 @@
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
             <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
             <English>Adv. Engineer</English>
-            <German>Erw. Pionier</German>
+            <German>Instandsetzer</German>
             <Italian>Adv. Geniere</Italian>
             <Japanese>上級工兵</Japanese>
             <Chinesesimp>专精</Chinesesimp>
@@ -1797,24 +1797,38 @@
             <German>Ersatzketten</German>
             <Japanese>予備履帯</Japanese>
             <Italian>Cingoli di Scorta</Italian>
+            <Chinese>備用履帶</Chinese>
+            <Chinesesimp>备用履带</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
             <German>Anzahl der Ersatzketten im Laderaum.</German>
             <Japanese>カーゴ内にある予備履帯の数を指定します。</Japanese>
             <Italian>Numero dei cingoli di scorta nel cargo.</Italian>
+            <Chinese>設定載具在貨艙內攜帶的備用履帶數量。</Chinese>
+            <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
             <German>Ersatzreifen</German>
             <Japanese>予備タイヤ</Japanese>
             <Italian>Ruote di Scorta</Italian>
+            <Chinese>備用輪胎</Chinese>
+            <Chinesesimp>备用轮胎</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
             <German>Anzahl der Ersatzreifen im Laderaum.</German>
             <Japanese>カーゴ内にある予備タイヤの数を指定します。</Japanese>
             <Italian>Numero delle ruote di scorta nel cargo.</Italian>
+            <Chinese>設定載具在貨艙內攜帶的備用輪胎數量。</Chinese>
+            <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
+            <English>Auto shut off engine on repair</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
+            <English>Automatically shut off the engine when doing repairs.</English>
         </Key>
     </Package>
 </Project>

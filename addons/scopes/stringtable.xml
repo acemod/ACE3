@@ -217,6 +217,7 @@
             <Chinese>使用舊版介面</Chinese>
             <Chinesesimp>使用旧版介面</Chinesesimp>
             <Japanese>昔の UI を使用</Japanese>
+            <Korean>기존 UI 사용</Korean>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
@@ -225,18 +226,25 @@
             <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
             <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
             <Japanese>印付きの数字で仰角と横風を表示</Japanese>
+            <Korean>기존의 부호가 있는 숫자로 표고와 폭을 표시합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
             <English>Simplified zeroing</English>
             <German>Vereinfachte Nullung</German>
             <Japanese>簡略なゼロイン</Japanese>
             <Italian>Azzeramento semplificato</Italian>
+            <Korean>단순화 된 영점 조정</Korean>
+            <Chinese>簡單歸零</Chinese>
+            <Chinesesimp>简单归零</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
             <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
             <Japanese>標準で使われるライフルスコープ用のゼロイン システムを複製します。</Japanese>
             <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
+            <Korean>라이플스코프 용 바닐라 영점조정 시스템을 복제합니다.</Korean>
+            <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
+            <Chinesesimp>使用原版的归零系统来取代ACE复杂的归零模拟。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -387,6 +395,9 @@
             <German>Nullung zurücksetzen</German>
             <Japanese>ゼロイン調節を初期化</Japanese>
             <Italian>Resetta i valori dell'azzeramento</Italian>
+            <Korean>영점 조정 재설정</Korean>
+            <Chinese>重設歸零</Chinese>
+            <Chinesesimp>重设归零</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
@@ -407,6 +418,7 @@
             <Chinese>%1D</Chinese>
             <Chinesesimp>%1D</Chinesesimp>
             <Japanese>%1D</Japanese>
+            <Korean>%1D</Korean>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
             <English>%1L</English>
@@ -416,6 +428,7 @@
             <Chinese>%1L</Chinese>
             <Chinesesimp>%1L</Chinesesimp>
             <Japanese>%1L</Japanese>
+            <Korean>%1L</Korean>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
             <English>%1R</English>
@@ -425,6 +438,15 @@
             <Chinese>%1R</Chinese>
             <Chinesesimp>%1R</Chinesesimp>
             <Japanese>%1R</Japanese>
+            <Korean>%1R</Korean>
+        </Key>
+        <Key ID="STR_ACE_Scopes_statHorizontalLimits">
+            <English>Horizontal limits</English>
+            <Chinese>Limites horizontales</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_statVerticalLimits">
+            <English>Vertical limits</English>
+            <Chinese>Limites verticales</Chinese>
         </Key>
     </Package>
 </Project>

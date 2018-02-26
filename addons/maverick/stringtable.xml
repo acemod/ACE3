@@ -50,11 +50,17 @@
             <Key ID="str_ace_maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
                 <German>Ch-25ML, Lasergelenkte Luft-Boden-Rakete</German>
+                <Korean>Kh-25ML, 레이저 유도 대공 미사일</Korean>
+                <Chinese>Kh-25ML，雷射導引對地導彈</Chinese>
+                <Chinesesimp>Kh-25ML，雷射导引对地导弹</Chinesesimp>
             </Key>
             <Key ID="str_ace_maverick_kh25ml_mag_x1">
                 <English>1x Kh-25ML [ACE]</English>
                 <German>1x Ch-25ML [ACE]</German>
                 <Russian>1x Х-25МЛ [ACE]</Russian>
+                <Korean>1x Kh-25ML [ACE]</Korean>
+                <Chinese>1x Kh-25ML [ACE]</Chinese>
+                <Chinesesimp>1x Kh-25ML [ACE]</Chinesesimp>
             </Key>
         </Container>
         <Container name="weapons">
@@ -69,8 +75,11 @@
             </Key>
             <Key ID="str_ace_maverick_kh25ml">
                 <English>Kh-25ML</English>
-                <German>Ch-25ML</English>
-                <Russian>Х-25МЛ</English>
+                <German>Ch-25ML</German>
+                <Russian>Х-25МЛ</Russian>
+                <Korean>Kh-25ML</Korean>
+                <Chinese>Kh-25ML</Chinese>
+                <Chinesesimp>Kh-25ML</Chinesesimp>
             </Key>
         </Container>
     </Package>

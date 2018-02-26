@@ -826,5 +826,11 @@
             <Chinesesimp>鼻咽管</Chinesesimp>
             <Chinese>鼻咽管</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_Menu_maxRange">
+            <English>Medical Menu maximum range</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_maxRange_Descr">
+            <English>Maximum distance from where the Medical Menu can be opened.</English>
+        </Key>
     </Package>
 </Project>

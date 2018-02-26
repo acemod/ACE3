@@ -13,9 +13,6 @@ before_script:
 script:
 - python3 tools/sqf_validator.py
 - python3 tools/config_style_checker.py
-- if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
-    python3 tools/deploy.py;
-  fi
 env:
   global:
   - secure: cdxkn5cAx+s1C9Ne5m+odEhde1uuSg6XGMDgepN4DwSAJwtMnUv3ZmDebd5YJC1raZJdep+n09Cj0GoTNICQRkco50DxHKHYNad41wetY0tn0cs9gmPYzyFE5q4vuWiQ47dlGhQQ7IJDyX0nU++gG5E50/PhlZfebdedGSprN/4=
