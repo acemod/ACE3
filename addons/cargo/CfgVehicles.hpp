@@ -421,7 +421,6 @@ class CfgVehicles {
     };
 
     // objects
-    class Lamps_base_F;
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
@@ -429,10 +428,22 @@ class CfgVehicles {
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
     };
+
+    class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
-        GVAR(size) = 1;
+        GVAR(size) = 2;
         GVAR(canLoad) = 1;
     };
+    class FloatingStructure_F;
+    class Land_Camping_Light_F: FloatingStructure_F {
+        GVAR(size) = 0.2;
+        GVAR(canLoad) = 1;
+    };
+    class Land_Camping_Light_off_F: ThingX {
+        GVAR(size) = 0.2;
+        GVAR(canLoad) = 1;
+    };
+
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
