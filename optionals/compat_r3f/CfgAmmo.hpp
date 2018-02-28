@@ -47,13 +47,13 @@ class CfgAmmo {
         typicalSpeed = 850; // R3F config
         airFriction = -0.00110718; // ACE3 value, default -0.00095
         ACE_caliber = 7.823;
-        ACE_bulletLength = 28.956;
-        ACE_bulletMass = 9.4608;
+        ACE_bulletLength = 31.496;
+        ACE_bulletMass = 8.22946157;
         ACE_ammoTempMuzzleVelocityShifts[] = {-18.91, -17.83, -15.21, -12.48, -09.34, -05.16, 0, 6.11, 13.60, 22.81, 33.83};
-        ACE_ballisticCoefficients[] = {0.2};
+        ACE_ballisticCoefficients[] = {0.359};
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
-        ACE_dragModel = 7;
+        ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {850};
         ACE_barrelLengths[] = {650};
     };
