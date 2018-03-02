@@ -70,7 +70,7 @@ private _statsListLeftPanel = [
     [[]], // GPS 11
     [[]], // Radio 12
     [[]], // Compass 13
-    [[]]  // Watch 14
+    [[]] // Watch 14
 ];
 
 private _statsListRightPanel = [
