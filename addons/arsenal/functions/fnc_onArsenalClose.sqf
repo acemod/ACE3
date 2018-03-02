@@ -59,12 +59,7 @@ if (is3DEN) then {
         curatorcamera cameraEffect ["internal","back"];
     } else {
         GVAR(camera) cameraEffect ["terminate","back"];
-
-        if (ACE_player == player) then {
-            player switchCamera GVAR(cameraView);
-        } else {
-            ACE_player switchCamera GVAR(cameraView);
-        };
+        ACE_player switchCamera GVAR(cameraView);
     };
 };
 
