@@ -26,6 +26,11 @@ if (_actualProgress == 0) exitWith {};
 _trench setVariable [QGVAR(digging), true, true];
 
 private _removeTime = getNumber (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(removalDuration));
+_removeTime = missionNamespace getVariable [_removeTime, -1];
+if (_removeTime == -1) then {
+    ERROR_1("No removal duration specified",typeof _trench);
+    _removeTime = 10; // Default value to handle missing config entry
+};
 private _removeTimeLeft = _removeTime * _actualProgress;
 
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];

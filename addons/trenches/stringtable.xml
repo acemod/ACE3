@@ -343,5 +343,21 @@
             <English>Allow digging of envelope vehicle trenches</English>
             <German>Erlaube das Graben von runden Fahrzeuggräben</German>
         </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeDigTime">
+            <English>Dig time (in seconds) for small envelope trenches</English>
+            <German>Zeit (in Sekunden) um kleine runde Gräben zu Graben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeDigTime">
+            <English>Dig time (in seconds) for big envelope trenches</English>
+            <German>Zeit (in Sekunden) um große runde Gräben zu Graben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_GigantEnvelopeDigTime">
+            <English>Dig time (in seconds) for gigant envelope trenches</English>
+            <German>Zeit (in Sekunden) um riesige runde Gräben zu Graben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_VehicleEnvelopeDigTime">
+            <English>Dig time (in seconds) for vehicle envelope trenches</English>
+            <German>Zeit (in Sekunden) um runde Fahrzeuggräben zu Graben</German>
+        </Key>
     </Package>
 </Project>

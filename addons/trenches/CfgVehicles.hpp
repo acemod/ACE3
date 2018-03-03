@@ -51,8 +51,8 @@ class CfgVehicles {
         model = QPATHTOF(data\trench_small.p3d);
         scope = 2;
         scopeCurator = 2;
-        GVAR(diggingDuration) = 20;
-        GVAR(removalDuration) = 12;
+        GVAR(diggingDuration) = QGVAR(smallEnvelopeDigTime);
+        GVAR(removalDuration) = QGVAR(smallEnvelopeRemovalTime);
         GVAR(noGeoClass) = "ACE_envelope_small_NoGeo";
         GVAR(placementData)[] = {2,3,0.35};
         GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
@@ -120,8 +120,8 @@ class CfgVehicles {
         displayName = CSTRING(EnvelopeBigName);
         descriptionShort = CSTRING(EnevlopeBigDescription);
         model = QPATHTOF(data\trench_big.p3d);
-        GVAR(diggingDuration) = 25;
-        GVAR(removalDuration) = 15;
+        GVAR(diggingDuration) = QGVAR(bigEnvelopeDigTime);
+        GVAR(removalDuration) = QGVAR(bigEnvelopeRemovalTime);
         GVAR(noGeoClass) = "ACE_envelope_big_NoGeo";
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
@@ -136,8 +136,8 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeGigantName);
         descriptionShort = CSTRING(EnevlopeGigantDescription);
-        GVAR(diggingDuration) = 30;
-        GVAR(removalDuration) = 20;
+        GVAR(diggingDuration) = QGVAR(gigantEnvelopeDigTime);
+        GVAR(removalDuration) = QGVAR(gigantEnvelopeRemovalTime);
         GVAR(noGeoClass) = "ACE_envelope_gigant_noGeo";
         GVAR(placementData)[] = {15,1.1,0.40};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
@@ -154,8 +154,8 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeVehicleName);
         descriptionShort = CSTRING(EnevlopeVehicleDescription);
-        GVAR(diggingDuration) = 60;
-        GVAR(removalDuration) = 30;
+        GVAR(diggingDuration) = QGVAR(vehicleEnvelopeDigTime);
+        GVAR(removalDuration) = QGVAR(vehicleEnvelopeRemovalTime);
         GVAR(noGeoClass) = "ACE_envelope_vehicle_noGeo";
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
