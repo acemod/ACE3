@@ -274,5 +274,74 @@
             <English>Dig Vehicle Trench</English>
             <German>Grabe Fahrzeug Schützengraben</German>
         </Key>
+
+        <Key ID="STR_ACE_Trenches_SettingCategory">
+            <English>ACE Trenches</English>
+            <German>ACE Trenches</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingAllowDigging_displayName">
+            <English>Allow digging</English>
+            <German>Erlaube den Bau von Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingAllowDigging_tooltip">
+            <English>Allow digging trenches with an entrenchment tool</English>
+            <German>Erlaube den Bau von Gräben mit dem Klappspaten</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingAllowCamouflage_displayName">
+            <English>Allow camouflage</English>
+            <German>Erlaube Tarnung</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingAllowCamouflage_tooltip">
+            <English>Allow camouflaging trenches</English>
+            <German>Erlaube das Tarnen von Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingDigRequireEntrenchmentTool_displayName">
+            <English>Require entrenchment tool for digging</English>
+            <German>Klappspaten für Gräben benötigt</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingDigRequireEntrenchmentTool_tooltip">
+            <English>Require entrenchment tool for digging trenches</English>
+            <German>Fordere Klappspaten für das Graben von Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingCamouflageRequireEntrenchmentTool_displayName">
+            <English>Require entrenchment tool for camouflaging</English>
+            <German>Klappspaten für Tarnen benötigt</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SettingCamouflageRequireEntrenchmentTool_tooltip">
+            <English>Require entrenchment tool for camouflaging</English>
+            <German>Fordere Klappspaten für das Tarnen von Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowSmallEnvelope_displayName">
+            <English>Allow small envelope trenches</English>
+            <German>Erlaube kleine runde Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowSmallEnvelope_tooltip">
+            <English>Allow digging of small envelope trenches</English>
+            <German>Erlaube das Graben von kleinen runden Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowBigEnvelope_displayName">
+            <English>Allow big envelope trenches</English>
+            <German>Erlaube große runde Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowBigEnvelope_tooltip">
+            <English>Allow digging of big envelope trenches</English>
+            <German>Erlaube das Graben von großen runden Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowGigantEnvelope_displayName">
+            <English>Allow giant envelope trenches</English>
+            <German>Erlaube riesige runde Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowGigantEnvelope_tooltip">
+            <English>Allow digging of giant envelope trenches</English>
+            <German>Erlaube das Graben von riesigen runden Gräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowVehicleEnvelope_displayName">
+            <English>Allow vehicle envelope trenches</English>
+            <German>Erlaube runde Fahrzeuggräben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_AllowVehicleEnvelope_tooltip">
+            <English>Allow digging of envelope vehicle trenches</English>
+            <German>Erlaube das Graben von runden Fahrzeuggräben</German>
+        </Key>
     </Package>
 </Project>

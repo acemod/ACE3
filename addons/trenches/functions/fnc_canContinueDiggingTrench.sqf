@@ -18,7 +18,8 @@
 
 params ["_trench", "_unit"];
 
-if !("ACE_EntrenchingTool" in items _unit) exitWith {false};
+if !(GVAR(allowDigging)) exitWith {false};
+if (GVAR(digRequireEntrenchmentTool) && {!("ACE_EntrenchingTool" in items _unit)}) exitWith {false};
 if ((_trench getVariable [QGVAR(progress), 0]) >= 1) exitWith {false};
 
 // Prevent removing/digging trench by more than one person
