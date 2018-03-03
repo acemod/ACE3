@@ -129,67 +129,14 @@ if !(isNil "_itemCfg") then {
         };
 
         // Resize the window
-        switch (_statsCount) do {
-            case 0: {
-                [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    11 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 1: {
-                [[2, 3, 4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    15 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 2: {
-                [[3, 4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    25 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 3: {
-                [[4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    35 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 4: {
-                [[5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    45 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 5: {
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    55 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-        };
+        [[1, 2, 3, 4, 5] select [_statsCount, 5]] call _hideUnusedFnc;
+        _statsBoxCtrl ctrlSetPosition [
+            (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+            safezoneY + 1.8 * GRID_H,
+            47 * GRID_W,
+            ([11, (10 * _statsCount) + 5] select (_statsCount > 0)) * GRID_H
+        ];
+        _statsBoxCtrl ctrlCommit 0;
 
         GVAR(statsInfo) = [_isLeftPanel, _statsIndex, _control, _curSel, _itemCfg];
 
