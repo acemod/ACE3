@@ -19,7 +19,7 @@ params ["_unit"];
 TRACE_1("params",_unit);
 
 if (isNil (format ["%1", _unit getVariable "ACE_airTemperatureBias"])) then {
-    _unit setVariable ["ACE_airTemperatureBias", random(5) - 2.5];
+    _unit setVariable ["ACE_airTemperatureBias", [-(random(3) + 1), random(3) + 1]];
 };
 
 private _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
@@ -65,6 +65,6 @@ private _sigmoid_k = (ln ((_sigmoid_proportion_at_lower_valuation^-1) - 1) ) / _
 private _temperature_sigmoid = _sigmoid_L / (1 + _e^(-_sigmoid_k * (_temperature - _sigmoid_midpoint)));
 
 // Weighted average between windchill and heat index based on sigmoid levels, plus +- 4deg randomisation
-private _apparent_temperature = ((_temperature_sigmoid * _heatIndex) + ((1 - _temperature_sigmoid) * _chill) + random(8) - 4) + (_unit getVariable "ACE_airTemperatureBias");
+private _apparent_temperature = ((_temperature_sigmoid * _heatIndex) + ((1 - _temperature_sigmoid) * _chill) + random(8) - 4);
 
-[_apparent_temperature, _unit] call FUNC(displayAirTemp);
+[_apparent_temperature, (_unit getVariable "ACE_airTemperatureBias")] call FUNC(displayAirTemp);

@@ -140,5 +140,8 @@
             <Japanese>マップを基にした風シミュレーションを有効化 (標準の風を上書き)</Japanese>
             <Korean>지도 기반의 바람 시뮬레이션을 활성화합니다 (바닐라 바람을 덮음)</Korean>
         </Key>
+        <Key ID="STR_ACE_Weather_CheckAirTemperature">
+            <English>Check Air Temperature</English>
+        </Key>
     </Package>
 </Project>
