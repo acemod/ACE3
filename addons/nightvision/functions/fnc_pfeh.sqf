@@ -127,7 +127,8 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // ColorCorrections - Changes brightness, contrast and "green" color of nvg
     // Params: [brightness(0..2), contrast(0..inf), offset(-x..+x), blendArray, colorizeArray, weightArray]
     GVAR(ppeffectColorCorrect) = ppEffectCreate ["ColorCorrections", 2003];
-    GVAR(ppeffectColorCorrect) ppEffectAdjust [_brightFinal, _contrastFinal, 0, [0.0, 0.0, 0.0, 0.0], [1.3, 1.2, 0.0, 0.9], [6, 1, 1, 0.0]];
+    // 4 last Params now operated by Global variables / Watch fnc_refreshGoggleType.sqf fo more clarification / Required for WP supporting (JDT & AleM)
+    GVAR(ppeffectColorCorrect) ppEffectAdjust [_brightFinal, _contrastFinal, GVAR(nvgOffset), GVAR(nvgBlend), GVAR(nvgColorize), GVAR(nvgWeight)];
     GVAR(ppeffectColorCorrect) ppEffectCommit 0;
     GVAR(ppeffectColorCorrect) ppEffectForceInNVG true;
     GVAR(ppeffectColorCorrect) ppEffectEnable true;
