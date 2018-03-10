@@ -5,6 +5,13 @@ class CfgWeapons {
         modelOptics = "";
         GVAR(border) = QPATHTOF(data\nvg_mask_binos_4096.paa);
         GVAR(bluRadius) = 0.15;
+        // It's should prevent from main classes incorrectly work (Set Color Correction Params) / Original ACE3's Green (JDT & AleM)
+        colorPreset[] = {0, {0.0, 0.0, 0.0, 0.0}, {1.3, 1.2, 0.0, 0.9}, {6, 1, 1, 0.0}};
+    };
+    class NVGoggles_WP: NVGoggles { // White Phosphor version for example
+        displayName = "NV Goggles (Gen3 WP tubes, Sand)";
+        descriptionShort = "3rd Generation NVD /w White Phosphor tubes";
+        colorPreset[] = {0.0, {0.0, 0.0, 0.0, 0.0}, {0.7, 0.3, 1.3, 0.9}, {1, 1, 6, 0.0}}; // White Phosphor tube Preset (JDT & AleM)
     };
     class O_NVGoggles_hex_F: NVGoggles { // APEX NVG with multiple lenses (spider eyes)
         modelOptics = "";
