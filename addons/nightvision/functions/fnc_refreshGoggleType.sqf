@@ -26,12 +26,12 @@ private _hideHex = true;
 private _nvgGen = 3;
 private _blurRadius = -1;
 
-// Privated NVD's PP Effects (ColorCorrection) Params / Contains original ACE3's (ST's) by default. (JDT & AleM)
+// Privated NVD's PP Effects (ColorCorrection) Params / Contains original ACE3's (ST's) by default.
 private _offset = 0;
 private _blend = [0.0, 0.0, 0.0, 0.0];
 private _colorize = [1.3, 1.2, 0.0, 0.9];
 private _weight = [6, 1, 1, 0.0];
-// Adds Array of Params / Original ACE3's (ST's) by default. (JDT & AleM)
+// Adds Array of Params / Original ACE3's (ST's) by default.
 private _preset = [0, [0.0, 0.0, 0.0, 0.0], [1.3, 1.2, 0.0, 0.9], [6, 1, 1, 0.0]];
 
 
@@ -69,13 +69,8 @@ if (alive ACE_player) then {
             TRACE_1("souce: binocular",binocular ACE_player); // Source is from player's binocular (Rangefinder/Vector21bNite)
             private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
             if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
-            // Gets proper Params' Array from CfgWeapons (JDT & AleM)
+            // Gets proper Params' Array from CfgWeapons
             if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
-            // Selection from Array (JDT & AleM)
-            _offset = _preset select 0;
-            _blend = _preset select 1;
-            _colorize = _preset select 2;
-            _weight = _preset select 3;
 
         };
 
@@ -93,11 +88,6 @@ if (alive ACE_player) then {
         if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
         // Same as above (JDT & AleM)
         if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
-        // Same as above (JDT & AleM)
-        _offset = _preset select 0;
-        _blend = _preset select 1;
-        _colorize = _preset select 2;
-        _weight = _preset select 3;
 
     } else {
         TRACE_1("source: vehicle - defaults",typeOf vehicle ACE_player);
@@ -109,9 +99,12 @@ systemChat format ["NVG Refresh - Border: %1", _borderImage];
 systemChat format ["EyeCups: %1, HideHex %2, NVGen: %3, BluRadius: %4", _eyeCups, _hideHex, _nvgGen, _blurRadius];
 #endif
 
+// Selection cancelled, params added
+_preset params ["_offset", "_blend", "_colorize", "_weight"]?
+
 GVAR(nvgBlurRadius) = _blurRadius;
 GVAR(nvgGeneration) = _nvgGen;
-// Additional Global variables for Params transfer & supporting (JDT & AleM)
+// Additional Global variables for Params transfer & supporting
 GVAR(nvgOffset) = _offset;
 GVAR(nvgBlend) = _blend;
 GVAR(nvgColorize) = _colorize;
