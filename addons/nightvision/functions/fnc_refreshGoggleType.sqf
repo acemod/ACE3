@@ -71,7 +71,6 @@ if (alive ACE_player) then {
             if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
             // Gets proper Params' Array from CfgWeapons
             if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
-
         };
 
         TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
