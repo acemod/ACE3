@@ -86,7 +86,7 @@ if (alive ACE_player) then {
             if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
         };
         if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
-        // Same as above (JDT & AleM)
+        // Same as at line 72
         if (isArray (_config >> "colorPreset")) then {_preset = getArray (_config >> "colorPreset");};
 
     } else {
