@@ -100,7 +100,7 @@ systemChat format ["EyeCups: %1, HideHex %2, NVGen: %3, BluRadius: %4", _eyeCups
 #endif
 
 // Selection cancelled, params added
-_preset params ["_offset", "_blend", "_colorize", "_weight"]?
+_preset params ["_offset", "_blend", "_colorize", "_weight"];
 
 GVAR(nvgBlurRadius) = _blurRadius;
 GVAR(nvgGeneration) = _nvgGen;
