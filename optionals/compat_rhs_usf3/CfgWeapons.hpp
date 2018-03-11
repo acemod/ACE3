@@ -6,7 +6,7 @@ class CfgWeapons {
         EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
         EGVAR(nightvision,bluRadius) = 0.13;
     };
-    // White Phosphor version (JDT & AleM)
+    // White Phosphor version
     class rhsusf_ANPVS_14_WP: rhsusf_ANPVS_14 {
         author = "JDT & AleM"
         displayName = "AN/PVS-14 (Gen3, WP tube)";
@@ -18,7 +18,7 @@ class CfgWeapons {
         EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_binos_4096.paa);
         EGVAR(nightvision,bluRadius) = 0.15;
     };
-    // White Phosphor version (JDT & AleM)
+    // White Phosphor version
     class rhsusf_ANPVS_15_WP: rhsusf_ANPVS_15 {
         author = "JDT & AleM"
         displayName = "AN/PVS-15 (Gen3, WP tube)";
