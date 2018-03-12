@@ -56,6 +56,37 @@ Examples:
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_removeVirtualItems`
 - `[_box, true, false] call ace_arsenal_fnc_removeVirtualItems`
 
+### 1.3 Arsenal only with items from default loadouts (See section 4)
+
+```cpp
+ * 0: Box <OBJECT>
+ * 1: Items <ARRAY of strings> <BOOL>
+ * 2: Add globally <BOOL> (optional)
+ ```
+
+Built upon the function of section 1.1, this can be used to make an Arsenal only with the items from your precreated loadouts. This is the best choice if you do not want to make a full arsenal available to have your Loadouts spawnable.
+
+```cpp
+ I. Spawn the same amount of units as you have loadouts, give each unit one of them
+ II. Start the mission then press ESC once loaded
+ III. Clear the debug console then enter the following:
+
+
+private _items = allUnits apply {getUnitLoadout _x};
+_items = str _items splitString "[]," joinString ",";
+_items = parseSimpleArray ("[" + _items + "]");
+_items = _items arrayIntersect _items select {_x isEqualType "" && {_x != ""}};
+copyToClipboard str _items;
+
+IV. Paste the created array from your clipboard into the space where the items are listed CTRL+V. The array is created with brackets.
+ ```
+ 
+Examples:
+
+For a new Box: - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_initBox`
+
+For an existing Box: - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
+
 ## 2. Access to ACE Arsenal
 
 ### 2.1 Adding ACE Arsenal to a box
