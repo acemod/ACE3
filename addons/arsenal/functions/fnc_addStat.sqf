@@ -53,7 +53,10 @@ _statements params [
     ["_condition", {true}, [{}]]
 ];
 
-call FUNC(compileStats);
+if (isNil QGVAR(statsListLeftPanel)) then {
+    call FUNC(compileStats);
+};
+
 private _returnArray = [];
 
 private _fnc_addToTabs = {

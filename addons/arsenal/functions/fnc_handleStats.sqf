@@ -50,7 +50,6 @@ private _hideUnusedFnc = {
     } forEach _numbers;
 };
 
-call FUNC(compileStats);
 if !(isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
