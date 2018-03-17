@@ -1,7 +1,9 @@
-ace_nodefaultaction
+ace_nodefaultactionicon
 ===========
 
-Removes default action.
+Removes default action icon.
+
+Integrated from [Gruppe Adler Mod](https://github.com/gruppe-adler/gruppe_adler_mod).
 
 
 ## Maintainers
