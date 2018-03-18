@@ -18,12 +18,10 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     if (strncmp(function, "x", 1)) {
         ip.mi.dx = atoi(&function[1]);
         ip.mi.dy = 0;
-    }
-    else if (strncmp(function, "y", 1)) {
+    } else if (strncmp(function, "y", 1)) {
         ip.mi.dy = atoi(&function[1]);
         ip.mi.dx = 0;
-    }
-    else {
+    } else {
         strncpy_s(output, outputSize, "error", _TRUNCATE);
         return;
     }
