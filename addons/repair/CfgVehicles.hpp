@@ -405,6 +405,16 @@ class CfgVehicles {
 
     // disable vanilla repair
     // "getNumber (_x >> ""transportRepair"") > 0" configClasses (configFile >> "CfgVehicles")
+    class ReammoBox_F;
+    class Land_RepairDepot_01_base_F: ReammoBox_F { // TanksDLC - Repair Depo Thing
+        GVAR(canRepair) = 1;
+        transportRepair = 0; 
+    };
+    class Van_02_base_F;
+    class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
+        GVAR(canRepair) = 1;
+        transportRepair = 0;  
+    };
 
     class Slingload_01_Base_F;
     class B_Slingload_01_Repair_F: Slingload_01_Base_F {

@@ -184,17 +184,18 @@ class CfgAmmo {
         GVAR(dummy) = QGVAR(Bo_Mk82);
     };
 
-    class Bo_GBU12_LGB : LaserBombCore {
+    class ammo_Bomb_LaserGuidedBase: LaserBombCore {};
+    class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
         GVAR(caliber) = 250; // Default caliber for bombs
         GVAR(dummy) = QGVAR(Bo_GBU12_LGB);
     };
 
-    class Bomb_04_F : LaserBombCore {
+    class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
         GVAR(caliber) = 250; // Default caliber for bombs
         GVAR(dummy) = QGVAR(Bomb_04_F);
     };
 
-    class Bomb_03_F : Bomb_04_F {
+    class Bomb_03_F: ammo_Bomb_LaserGuidedBase {
         GVAR(dummy) = QGVAR(Bomb_03_F);
     };
 };

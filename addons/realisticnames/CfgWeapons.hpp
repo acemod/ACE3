@@ -413,9 +413,7 @@ class CfgWeapons {
     };
 
     // bomb
-    class Bomb_04_Plane_CAS_01_F: RocketPods {
-        //displayName = "";
-    };
+    class Bomb_04_Plane_CAS_01_F;
     class Bomb_03_Plane_CAS_02_F: Bomb_04_Plane_CAS_01_F {
         displayName = "FAB-250M-54";
     };
