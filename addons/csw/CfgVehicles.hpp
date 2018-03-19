@@ -1,3 +1,16 @@
+#define ENABLE_CSW_ATTRIBUTE class Attributes { \
+    class GVAR(enableCSW) { \
+        property = QGVAR(enableCSW); \
+        control = "Checkbox"; \
+        displayName = CSTRING(eden_enableCSW); \
+        tooltip = CSTRING(eden_enableCSW_tooltip); \
+        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(enableCSW), _value, true)];); \
+        typeName = "BOOL"; \
+        condition = "objectVehicle"; \
+        defaultValue = true; \
+    }; \
+}
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -27,7 +40,7 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_target,_this)] call FUNC(canPickupTripod));
                     statement = QUOTE([ARR_2(_target,_this)] call FUNC(pickupTripod));
                 };
-                
+
                 class ACE_Position {
                     displayName = CSTRING(Move_displayName);
                     distance = 2;
@@ -519,6 +532,7 @@ class CfgVehicles {
         scope = 1;
         side = 3;
         displayName = CSTRING(StaticATWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticATWeapon): GVAR(staticATWeapon) { side = 1; scope = 2; };
     class GVAR(I_staticATWeapon): GVAR(staticATWeapon) { side = 2; scope = 2; };
@@ -539,6 +553,7 @@ class CfgVehicles {
         scope = 1;
         side = 3;
         displayName = CSTRING(StaticAAWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticAAWeapon): GVAR(staticAAWeapon) { side = 1; scope = 2; };
     class GVAR(I_staticAAWeapon): GVAR(staticAAWeapon) { side = 2; scope = 2; };
@@ -559,6 +574,7 @@ class CfgVehicles {
         scope = 1;
         side = 3;
         displayName = CSTRING(StaticHMGWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticHMGWeapon): GVAR(staticHMGWeapon) { side = 1; scope = 2; };
     class GVAR(I_staticHMGWeapon): GVAR(staticHMGWeapon) { side = 2; scope = 2; };
@@ -579,6 +595,7 @@ class CfgVehicles {
         scope = 1;
         side = 3;
         displayName = CSTRING(StaticAutoHMGWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticAutoHMGWeapon): GVAR(staticAutoHMGWeapon) { side = 1; scope = 2; };
     class GVAR(I_staticAutoHMGWeapon): GVAR(staticAutoHMGWeapon) { side = 2; scope = 2; };
@@ -599,6 +616,7 @@ class CfgVehicles {
         scope = 1;
         side = 3;
         displayName = CSTRING(StaticHMGTallWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticHMGTallWeapon): GVAR(staticHMGTallWeapon) { side = 1; scope = 2; };
     class GVAR(I_staticHMGTallWeapon): GVAR(staticHMGTallWeapon) { side = 2; scope = 2; };
@@ -619,6 +637,7 @@ class CfgVehicles {
         scope = 1;
         side = 3;
         displayName = CSTRING(StaticGMGWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticGMGWeapon): GVAR(staticGMGWeapon) { side = 1; scope = 2; };
     class GVAR(I_staticGMGWeapon): GVAR(staticGMGWeapon) { side = 2; scope = 2; };
@@ -639,6 +658,7 @@ class CfgVehicles {
         scope = 1;
         side = 3;
         displayName = CSTRING(StaticAutoGMGWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticAutoGMGWeapon): GVAR(staticAutoGMGWeapon) { side = 1; scope = 2; };
     class GVAR(I_staticAutoGMGWeapon): GVAR(staticAutoGMGWeapon) { side = 2; scope = 2; };
@@ -659,6 +679,7 @@ class CfgVehicles {
         scope = 2;
         side = 3;
         displayName = CSTRING(StaticGMGTallWeapon_displayName);
+        ENABLE_CSW_ATTRIBUTE;
     };
     class GVAR(B_staticGMGTallWeapon): GVAR(staticGMGTallWeapon) { side = 1; };
     class GVAR(I_staticGMGTallWeapon): GVAR(staticGMGTallWeapon) { side = 2; };

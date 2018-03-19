@@ -19,6 +19,7 @@ params["_weapon"];
 
 if (isNull(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(options) >> "enabled") || {getNumber(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(options) >> "enabled") != 1}) exitWith {};
 if (_weapon getVariable[QGVAR(initialized), false]) exitWith {};
+if (!(_weapon getVariable[QGVAR(enableCSW), false])) exitWith {};
 
 _weapon enableWeaponDisassembly false;
 _weapon setVariable[QGVAR(initialized), true];

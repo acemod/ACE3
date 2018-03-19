@@ -88,8 +88,11 @@
         <Key ID="STR_ACE_CSW_AAStatic_displayName">
             <English>[ACE] AA Static</English>
         </Key>
-        <Key ID="STR_ACE_CSW_HMGBelt_displayName">
-            <English>[ACE] 12.7mm M2 HMG Belt</English>
+        <Key ID="STR_ACE_CSW_127x108_displayName">
+            <English>[ACE] 12.7x108mm M2 HMG Belt</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_127x99_displayName">
+            <English>[ACE] 12.7x99mm M2 HMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[ACE] 20mm Grenade GMG Belt</English>
@@ -129,6 +132,12 @@
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_eden_enableCSW">
+            <English>Enable CSW</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
+            <English>Enables Crew Served ability on this weapon</English>
         </Key>
         <Key ID="STR_ACE_CSW_genericDescription">
             <English>Used to reload crew served weapons</English>

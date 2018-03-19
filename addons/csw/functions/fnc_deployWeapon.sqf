@@ -38,6 +38,8 @@ params["_tripod", "_player"];
 
         // Set the ammo to zero so no config mess-ups will allow for infinite ammo
         _csw setAmmo[(weapons _csw) select 0, 0];
+        
+        _csw setVariable[QGVAR(enableCSW), true, true];
 
         [QGVAR(addObjectToServer), [_csw]] call CBA_fnc_serverEvent;
     };

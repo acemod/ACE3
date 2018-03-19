@@ -6,7 +6,7 @@ class CfgMagazines {
     
     class GVAR(100Rnd_127x99_mag): 100Rnd_127x99_mag {
         author = ECSTRING(common, ACETeam);
-        displayName = CSTRING(HMGBelt_displayName);
+        displayName = CSTRING(127x99_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         scope = 2;
         type = 256;
@@ -28,7 +28,7 @@ class CfgMagazines {
     
     class GVAR(50Rnd_127x108_mag) : 100Rnd_127x99_mag {
         author = ECSTRING(common, ACETeam);
-        displayName = CSTRING(HMGBelt_displayName);
+        displayName = CSTRING(127x108_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
         scope = 2;
         type = 256;
