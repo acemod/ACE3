@@ -27,6 +27,7 @@
 !(
     isNull curatorCamera && // Curator
     {!GETMVAR(EGVAR(spectator,isSet),false)} && // ACE Spectator
+    {GETMVAR(EGVAR(huntir,stop),true)} && // ACE Hunt IR
     {isNull GETMVAR(BIS_EGSpectatorCamera_camera, objNull)} && // BIS Nexus Spectator
     {isNull GETUVAR(BIS_fnc_arsenal_cam, objNull)} && // Arsenal camera
     {isNull GETMVAR(BIS_fnc_establishingShot_fakeUAV, objNull)} && // Establishing shot camera

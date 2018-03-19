@@ -368,6 +368,40 @@ class CfgVehicles {
         };
     };
 
+    class Car_F: Car{};
+    class Quadbike_01_base_F: Car_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(flip) {
+                    displayName = CSTRING(Flip);
+                    condition = QUOTE(call DFUNC(canFlip));
+                    statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
+                };
+                class GVAR(push) {
+                    displayName = CSTRING(Push);
+                    condition = QUOTE(_target call FUNC(canPush));
+                    statement = QUOTE(call FUNC(push));
+                };
+            };
+        };
+    };
+    class Kart_01_Base_F: Car_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(flip) {
+                    displayName = CSTRING(Flip);
+                    condition = QUOTE(call DFUNC(canFlip));
+                    statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
+                };
+                class GVAR(push) {
+                    displayName = CSTRING(Push);
+                    condition = QUOTE(_target call FUNC(canPush));
+                    statement = QUOTE(call FUNC(push));
+                };
+            };
+        };
+    };
+
     class Tank: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
@@ -545,6 +579,11 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
                 };
+                class GVAR(flip) {
+                    displayName = CSTRING(Flip);
+                    condition = QUOTE(call DFUNC(canFlip));
+                    statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
+                };
             };
         };
 
@@ -640,37 +679,48 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
-
-        scope = 2;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
-                selection = "";
                 distance = 2;
-                condition = "true";
-                class ACE_LampTurnOn {
+
+                class GVAR(TurnOn) {
                     displayName = CSTRING(TurnOn);
+                    icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
                     condition = QUOTE(alive _target && !(_target getVariable [ARR_2('ACE_lampOn',true)]));
                     statement = QUOTE(_target call DFUNC(switchLamp));
-                    selection = "";
-                    distance = 2;
                 };
-                class ACE_LampTurnOff {
+                class GVAR(TurnOff) {
                     displayName = CSTRING(TurnOff);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\ico_cpt_land_OFF_ca.paa";
                     condition = QUOTE(alive _target && _target getVariable [ARR_2('ACE_lampOn',true)]);
                     statement = QUOTE(_target call DFUNC(switchLamp));
-                    selection = "";
-                    distance = 2;
                 };
             };
         };
     };
-    class Land_PortableLight_single_off_F: Land_PortableLight_single_F {
-        scope = 1;
-    };
-    class Land_PortableLight_double_F: Land_PortableLight_single_F {};
-    class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
-        scope = 1;
+
+    class FloatingStructure_F;
+    class Land_Camping_Light_F: FloatingStructure_F {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 2;
+
+                class GVAR(TurnOn) {
+                    displayName = CSTRING(TurnOn);
+                    icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
+                    condition = QUOTE(alive _target && !isCollisionLightOn _target);
+                    statement = QUOTE([ARR_3(QQGVAR(setCollisionLight),[ARR_2(_target,true)],_target)] call CBA_fnc_targetEvent);
+                };
+                class GVAR(TurnOff) {
+                    displayName = CSTRING(TurnOff);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\ico_cpt_land_OFF_ca.paa";
+                    condition = QUOTE(alive _target && isCollisionLightOn _target);
+                    statement = QUOTE([ARR_3(QQGVAR(setCollisionLight),[ARR_2(_target,false)],_target)] call CBA_fnc_targetEvent);
+                };
+            };
+        };
     };
 
     class RoadCone_F: ThingX {

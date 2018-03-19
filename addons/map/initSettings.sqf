@@ -57,7 +57,7 @@
     QGVAR(BFT_Enabled),
     "CHECKBOX",
     [localize LSTRING(BFT_Enabled_DisplayName), localize LSTRING(BFT_Enabled_Description)],
-    format ["ACE %1", localize LSTRING(BFT_Module_DisplayName)],
+    [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize LSTRING(BFT_Module_DisplayName)],
     false,
     true
 ] call CBA_settings_fnc_init;
@@ -66,7 +66,7 @@
     QGVAR(BFT_Interval),
     "SLIDER",
     [localize LSTRING(BFT_Interval_DisplayName), localize LSTRING(BFT_Interval_Description)],
-    format ["ACE %1", localize LSTRING(BFT_Module_DisplayName)],
+    [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize LSTRING(BFT_Module_DisplayName)],
     [0, 30, 1, 1],
     true
 ] call CBA_settings_fnc_init;
@@ -75,7 +75,7 @@
     QGVAR(BFT_ShowPlayerNames),
     "CHECKBOX",
     [localize LSTRING(BFT_ShowPlayerNames_DisplayName), localize LSTRING(BFT_ShowPlayerNames_Description)],
-    format ["ACE %1", localize LSTRING(BFT_Module_DisplayName)],
+    [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize LSTRING(BFT_Module_DisplayName)],
     false,
     true
 ] call CBA_settings_fnc_init;
@@ -84,7 +84,7 @@
     QGVAR(BFT_HideAiGroups),
     "CHECKBOX",
     [localize LSTRING(BFT_HideAiGroups_DisplayName), localize LSTRING(BFT_HideAiGroups_Description)],
-    format ["ACE %1", localize LSTRING(BFT_Module_DisplayName)],
+    [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize LSTRING(BFT_Module_DisplayName)],
     false,
     true
 ] call CBA_settings_fnc_init;
