@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Ballistics">
         <!-- QBU -->
@@ -2006,6 +2006,8 @@
             <Hungarian>.338 Scenar</Hungarian>
             <Japanese>338 Scenar</Japanese>
             <Korean>.338 Scenar</Korean>
+            <Chinese>.338 Scenar</Chinese>
+            <Chinesesimp>.338 Scenar</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Rounds: 10</English>
@@ -2278,6 +2280,25 @@
             <Korean>[ACE] 탄약 보급 상자</Korean>
             <Chinese>[ACE] 彈藥補給箱</Chinese>
             <Chinesesimp>[ACE] 弹药补给箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statBarrelTwist">
+            <English>Barrel twist</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statBarrelLength">
+            <English>Barrel length</English>
+            <French>Longueur du canon</French>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statBallisticCoef">
+            <English>Ballistic coefficient</English>
+            <French>Coefficient ballistique</French>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statBulletMass">
+            <English>Bullet mass</English>
+            <French>Masse d'une balle</French>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
+            <English>Muzzle velocity</English>
+            <French>Vitesse à la bouche</French>
         </Key>
     </Package>
 </Project>

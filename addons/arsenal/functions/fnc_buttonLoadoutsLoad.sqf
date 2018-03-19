@@ -88,3 +88,5 @@ call FUNC(updateUniqueItemsList);
 [GVAR(center), GVAR(currentInsignia)] call bis_fnc_setUnitInsignia;
 
 [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutLoaded), _loadoutName] joinString " "] call FUNC(message);
+
+[QGVAR(onLoadoutLoad), [_loadout, _loadoutName]] call CBA_fnc_localEvent;

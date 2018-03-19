@@ -282,5 +282,25 @@
             <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位。当你想自定装备时，此功能可被关闭。</Chinesesimp>
             <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位。當你想自定裝備時，此功能可被關閉。</Chinese>
         </Key>
+        <Key ID="STR_ACE_Hearing_statHearingProtection">
+            <English>Hearing protection</English>
+            <French>Protection auditive</French>
+        </Key>
+        <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
+            <English>Volume muffling</English>
+            <French>Étouffement des sons</French>
+        </Key>
+        <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
+            <English>Earplugs Volume</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
+            <English>Volume when using earplugs.</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
+            <English>Unconscious Volume</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
+            <English>Volume when unconscious.</English>
+        </Key>
     </Package>
 </Project>

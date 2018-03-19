@@ -234,6 +234,8 @@
             <Japanese>簡略なゼロイン</Japanese>
             <Italian>Azzeramento semplificato</Italian>
             <Korean>단순화 된 영점 조정</Korean>
+            <Chinese>簡單歸零</Chinese>
+            <Chinesesimp>简单归零</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
@@ -241,6 +243,8 @@
             <Japanese>標準で使われるライフルスコープ用のゼロイン システムを複製します。</Japanese>
             <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
             <Korean>라이플스코프 용 바닐라 영점조정 시스템을 복제합니다.</Korean>
+            <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
+            <Chinesesimp>使用原版的归零系统来取代ACE复杂的归零模拟。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -392,6 +396,8 @@
             <Japanese>ゼロイン調節を初期化</Japanese>
             <Italian>Resetta i valori dell'azzeramento</Italian>
             <Korean>영점 조정 재설정</Korean>
+            <Chinese>重設歸零</Chinese>
+            <Chinesesimp>重设归零</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
@@ -433,6 +439,14 @@
             <Chinesesimp>%1R</Chinesesimp>
             <Japanese>%1R</Japanese>
             <Korean>%1R</Korean>
+        </Key>
+        <Key ID="STR_ACE_Scopes_statHorizontalLimits">
+            <English>Horizontal limits</English>
+            <Chinese>Limites horizontales</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_statVerticalLimits">
+            <English>Vertical limits</English>
+            <Chinese>Limites verticales</Chinese>
         </Key>
     </Package>
 </Project>

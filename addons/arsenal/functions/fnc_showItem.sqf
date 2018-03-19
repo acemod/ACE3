@@ -13,7 +13,11 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
+#ifdef ENABLE_PERF_PROFILING
+    private _scopeShowItem = createProfileScope QFUNC(showItem);
+#endif
 
+if (GVAR(centerNotPlayer)) exitWith {};
 
 private _nextAction = switch (GVAR(currentLeftPanel)) do {
 

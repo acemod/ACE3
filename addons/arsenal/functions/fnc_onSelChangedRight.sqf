@@ -14,6 +14,10 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
+#ifdef ENABLE_PERF_PROFILING
+    private _scopeOnSelChangedRight = createProfileScope QFUNC(onSelChangedRight);
+#endif
+
 params ["_control", "_curSel"];
 
 if (_curSel < 0) exitwith {};

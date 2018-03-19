@@ -20,9 +20,10 @@ params ["_enabled"];
 if (!_enabled) exitWith {
     if (isNil QGVAR(laserKeyDownEH)) exitWith {};
     ["KeyDown", GVAR(laserKeyDownEH)] call CBA_fnc_removeDisplayHandler;
-    ["weapon", GVAR(laserWeaponEH)] call CBA_fnc_removePlayerEventHandler;
+    ["loadout", GVAR(laserLoadoutEH)] call CBA_fnc_removePlayerEventHandler;
     ["turret", GVAR(laserTurretEH)] call CBA_fnc_removePlayerEventHandler;
     ["vehicle", GVAR(laserVehicleEH)] call CBA_fnc_removePlayerEventHandler;
+    ["weapon", GVAR(laserWeaponEH)] call CBA_fnc_removePlayerEventHandler;
 };
 
 GVAR(laserKeyDownEH) = ["KeyDown", {
@@ -42,7 +43,7 @@ GVAR(laserKeyDownEH) = ["KeyDown", {
 }] call CBA_fnc_addDisplayHandler;
 
 private _laserEH = {
-    if (sunOrMoon > 0.5) exitWith {};
+    if (sunOrMoon == 1) exitWith {};
     params ["_player"];
     private _weaponIndex = [_player, currentWeapon _player] call FUNC(getWeaponIndex);
     if (
@@ -60,6 +61,7 @@ private _laserEH = {
     ] call CBA_fnc_waitUntilAndExecute;
 };
 
-GVAR(laserWeaponEH) = ["weapon", _laserEH] call CBA_fnc_addPlayerEventHandler;
+GVAR(laserLoadoutEH) = ["loadout", _laserEH] call CBA_fnc_addPlayerEventHandler;
 GVAR(laserTurretEH) = ["turret", _laserEH] call CBA_fnc_addPlayerEventHandler;
 GVAR(laserVehicleEH) = ["vehicle", _laserEH] call CBA_fnc_addPlayerEventHandler;
+GVAR(laserWeaponEH) = ["weapon", _laserEH] call CBA_fnc_addPlayerEventHandler;
