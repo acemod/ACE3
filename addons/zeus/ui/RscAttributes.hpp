@@ -1053,7 +1053,7 @@ class GVAR(RscSpectator): RscDisplayAttributes {
                                     h = H_PART(1);
                                 };
                                 class NormalLabel: Label {
-                                    text = CSTRING(ModuleSpectator_Normal);
+                                    text = "$STR_speed_normal";
                                     tooltip = "";
                                     x = W_PART(1);
                                     y = H_PART(1.1);
@@ -1066,7 +1066,7 @@ class GVAR(RscSpectator): RscDisplayAttributes {
                                     y = H_PART(1.1);
                                 };
                                 class NightVisionLabel: NormalLabel {
-                                    text = CSTRING(ModuleSpectator_NightVision);
+                                    text = "$STR_usract_night_vision";
                                     y = H_PART(2.2);
                                 };
                                 class NightVision: Normal {

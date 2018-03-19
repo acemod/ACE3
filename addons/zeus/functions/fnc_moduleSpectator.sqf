@@ -20,6 +20,7 @@
 #include "script_component.hpp"
 
 params ["_force", "_hide", "_sides", "_modes", "_visions"];
+TRACE_1("params",_this);
 
 // Update sides available to spectate
 [_sides, [west, east, independent, civilian] - _sides] call EFUNC(spectator,updateSides);

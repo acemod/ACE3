@@ -1536,12 +1536,6 @@
         <Key ID="STR_ACE_Zeus_ModuleSpectator_VisionModes_tooltip">
             <English>Sets the vision modes that the player can use</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_Normal">
-            <English>Normal</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_NightVision">
-            <English>Night Vision</English>
-        </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
         </Key>
