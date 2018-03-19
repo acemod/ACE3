@@ -21,6 +21,8 @@ QGVAR(GlobalSkillAI) addPublicVariableEventHandler FUNC(moduleGlobalSetSkill);
     _unit enableGunLights _mode;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(moduleSpectator), LINKFUNC(moduleSpectator)] call CBA_fnc_addEventHandler;
+
 // Editable object commands must be ran on server, this events are used in the respective module
 if (isServer) then {
     [QGVAR(equipFries), EFUNC(fastroping,equipFRIES)] call CBA_fnc_addEventHandler;

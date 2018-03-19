@@ -920,6 +920,9 @@
             <Chinese>需要一個不存在的插件</Chinese>
             <Korean>현재 없는 애드온을 필요로 합니다</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_OnlyPlayers">
+            <English>Only Players</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
             <Polish>Dodaj obiekt do kuratora</Polish>
@@ -1499,6 +1502,54 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_DisplayName">
+            <English>ACE Spectator</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface">
+            <English>Force Interface</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_tooltip">
+            <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
+            <English>Hide Player</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_tooltip">
+            <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides">
+            <English>Spectable Sides</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_tooltip">
+            <English>Sets the sides that are available to spectate</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_CameraModes">
+            <English>Camera Modes</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_CameraModes_tooltip">
+            <English>Sets the camera modes that the player can use</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_VisionModes">
+            <English>Vision Modes</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_VisionModes_tooltip">
+            <English>Sets the vision modes that the player can use</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_Normal">
+            <English>Normal</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_NightVision">
+            <English>Night Vision</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
+            <English>White Hot</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_BlackHot">
+            <English>Black Hot</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ToggleAll">
+            <English>Toggle All</English>
         </Key>
     </Package>
 </Project>
