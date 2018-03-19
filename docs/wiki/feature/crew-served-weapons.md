@@ -30,7 +30,8 @@ Static weapons are assembled when a tripod is placed down, and the weapon mounte
 
 - Apporach the static weapon with the relavent ammo in your inventory
 - Interact with the weapon using <kbd>⊞&nbsp;Win</kbd> (ACE3 default) and navigate to the `CSW` menu.
-- Select `Load Ammo` and wait for the timer to complete
+- Select `Handle Ammo`
+- Select `Load X` where X is the ammo you want loaded and wait for the timer to complete
 
 ### 2.2 Unloading ammo
 

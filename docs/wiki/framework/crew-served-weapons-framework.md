@@ -8,7 +8,7 @@ parent: wiki
 mod: ace
 version:
   major: 3
-  minor: ?
+  minor: 13
   patch: 0
 ---
 
@@ -92,6 +92,36 @@ class CfgWeapons {
         magazines[] = { banana_ammo, banana_dummy_ammo }; // You must have both the dummy and real ammunition
     };
 };
+```
+
+### 1.4 CfgMagazineGroups
+
+```cpp
+    class ace_csw_groups { // Ammo that can be loaded into this CSW
+        class ace_csw_default;
+        class banana_ammo : ace_csw_default { // The magazine which will be loaded into the weapon
+            banana_dummy_ammo = 1; // Ammo that is is potentially loaded into the CSW
+        };
+        
+        // Optional
+        class ace_csw_100Rnd_127x99_mag : ace_csw_default { // default magazine that CSW already implements
+            banana_dummy_ammo = 1;
+        };
+        
+        /*
+          Ammo types already defined by CSW:
+            - ace_csw_100Rnd_127x99_mag
+            - ace_csw_50Rnd_127x108_mag
+            - ace_csw_20Rnd_20mm_G_belt
+            - ace_csw_1Rnd_GAT_missiles
+            - ace_csw_1Rnd_GAA_missiles
+            - ACE_1Rnd_82mm_Mo_HE
+            - ACE_1Rnd_82mm_Mo_Smoke
+            - ACE_1Rnd_82mm_Mo_Illum
+            - ACE_1Rnd_82mm_Mo_HE_Guided
+            - ACE_1Rnd_82mm_Mo_HE_LaserGuided
+        */
+    };
 ```
 
 ## 2. Making a new Tripod
