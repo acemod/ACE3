@@ -40,6 +40,7 @@ params["_tripod", "_player"];
         _csw setAmmo[(weapons _csw) select 0, 0];
         
         _csw setVariable[QGVAR(enableCSW), true, true];
+        [_csw] call FUNC(weaponInit);
 
         [QGVAR(addObjectToServer), [_csw]] call CBA_fnc_serverEvent;
     };

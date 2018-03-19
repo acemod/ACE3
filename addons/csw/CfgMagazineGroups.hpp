@@ -1,5 +1,5 @@
 class GVAR(groups) {
-    class GVAR(default) {}
+    class GVAR(default) {};
     // A3 .50 BMG (12.7x99mm)
     class GVAR(100Rnd_127x99_mag) : GVAR(default) {
         500Rnd_127x99_mag = 1;
