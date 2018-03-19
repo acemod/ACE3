@@ -6,9 +6,9 @@
  * Arguments:
  * 0: Static Weapon <OBJECT>
  * 1: Turret Path <ARRAY>
- * 2: Unit doing action <OBJECT>
+ * 2: Magainze Unit Can Carry <STRING>
  * 3: Magazine To Remove From Static <STRING>
- * 4: Magainze Unit Can Carry <STRING>
+ * 4: Ammo Holder <OBJECT>
  *
  * Return Value:
  * None
@@ -20,9 +20,9 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_turretPath", "_unit", "_carryMag", "_vehMag"];
-TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_unit,_carryMag,_vehMag);
+params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_ammoHolder"];
 
+TRACE_6("removeTurretMag EH",_vehicle,_turretPath,_unit,_carryMag,_vehMag);
 TRACE_3("",local _vehicle, _vehicle turretLocal _turretPath,local _unit);
 if (!(_vehicle turretLocal _turretPath)) exitWith {};
 
@@ -32,14 +32,8 @@ private _magazineAmmoCount = (_ammo select 0) select 1;
 private _maxAmmo = _magazineAmmoCount min _maxMagazineCapacity;
 
 private _ammoRemoved = (_vehicle magazineTurretAmmo [_vehMag, _turretPath]) - _maxAmmo;
+
+_ammoHolder addMagazineAmmoCargo[_carryMag, 1, _maxAmmo];
 _vehicle setAmmo [(_vehicle weaponsTurret _turretPath) select 0, _ammoRemoved];
 
-private _vehiclePos = _vehicle getRelPos RELATIVE_DIRECTION(270);
-
-// Create magazine holder and spawn the ammo that was in the weapon
-private _ammoHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
-_ammoHolder setPosATL _vehiclePos;
-_ammoHolder setVectorUp (surfaceNormal _vehiclePos);
-_ammoHolder setDir random[0, 180, 360];
-_ammoHolder addMagazineAmmoCargo[_carryMag, 1, _maxAmmo];
 

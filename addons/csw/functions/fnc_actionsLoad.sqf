@@ -32,7 +32,7 @@ private _statement = {
     };
         
     [
-    _timeToLoad, // This is just putting a mag into the gun, still needs to be "reloaded" on the weapon
+    _timeToLoad,
     [_target, _turretPath, _player, _carryMag, _weapon],
     {TRACE_1("load progressBar finish",_this); (_this select 0) call FUNC(loadMagazine)},
     {TRACE_1("load progressBar fail",_this);},

@@ -33,28 +33,11 @@ private _canLoad = false;
     if (_x == _carryMag) exitWith {_canLoad = true;};
 } forEach (magazines _unit);
 
-// Based on setting, only allow reloading if turret is empty of magazines from same family
-if (_checkIfEmpty && GVAR(onlyReloadEmpty)) then {
-    private _magFamily = if (isArray (configFile >> QGVAR(groups) >> _carryMag >> QGVAR(family))) then {
-        getArray (configFile >> QGVAR(groups) >> _carryMag >> QGVAR(family))
-    } else {
-        [_carryMag]
-    };
 
-    scopeName "searchIfLoaded";
-    {
-        private _carryGroup = configFile >> QGVAR(groups) >> _x;
-        TRACE_2("",_x,_carryGroup);
-        {
-            _x params ["_xMag", "_xTurret", "_xAmmo"];
-            if ((_xAmmo > 0) && {_xTurret isEqualTo _turret} && {(getNumber (_carryGroup >> _xMag)) == 1}) then {
-                _canLoad = false;
-                [LSTRING(removeMagsBeforeReloading)] call EFUNC(common,displayTextStructured);
-                breakOut "searchIfLoaded";
-            };
-        } forEach (magazinesAllTurrets _vehicle);
-    } forEach _magFamily;
-};
+private _currentAmmo = ((magazinesAllTurrets _vehicle) select 1) select 2;
+private _carryMagAmmo = getNumber(configFile >> "CfgMagazines" >> _carryMag >> "count");
+private _maxMagazineAmmo = getNumber(configFile >> "CfgMagazines" >> ((_vehicle magazinesTurret _turret) select 0) >> "count");
+_canLoad = (_currentAmmo + _carryMagAmmo) <= _maxMagazineAmmo;
 
 _canLoad
 

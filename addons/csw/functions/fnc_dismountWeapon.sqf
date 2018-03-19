@@ -24,13 +24,25 @@ if (isNull GVAR(cswTripod)) then {
             params["_args"];
             _args params["_weapon"];
             
+            LOG("start disassemble");
+            
             private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> typeof(_weapon) >> QGVAR(options) >> "disassembleTo");
             private _tripodName = getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QGVAR(options) >> "baseTripod");
+            
+            TRACE_2("disassemble", _carryWeaponClassname, _tripodName);
             
             private _weaponPos = getPosATL _weapon;
             _weaponPos set[2, (_weaponPos select 2) + 0.1];
             private _weaponDir = getDir _weapon;
             
+            // Create magazine holder and spawn the ammo that was in the weapon
+            private _weaponRelPos = _weapon getRelPos RELATIVE_DIRECTION(270);
+            private _ammoHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
+            _ammoHolder setPosATL _weaponRelPos;
+            _ammoHolder setVectorUp (surfaceNormal _weaponRelPos);
+            _ammoHolder setDir random[0, 180, 360];
+            
+            LOG("remove ammo");
             {
                 _x params ["_xMag", "_xTurret", "_xAmmo"];
                     
@@ -45,11 +57,13 @@ if (isNull GVAR(cswTripod)) then {
                     };
                     if (_carryMag == "") exitWith {};
 
-                    [QGVAR(removeTurretMag), [_weapon, _xTurret, player, _carryMag, _xMag]] call CBA_fnc_globalEvent;
+                    [QGVAR(removeTurretMag), [_weapon, _xTurret, _carryMag, _xMag, _ammoHolder]] call CBA_fnc_globalEvent;
                     _xAmmo = ((magazinesAllTurrets _weapon) select _foreachindex) select 2;
                 };
             } forEach (magazinesAllTurrets _weapon);
-
+            
+            LOG("delete weapon");
+            
             deleteVehicle _weapon;
             
             private _cswTripod = createVehicle [_tripodName, [0, 0, 0], [], 0, "NONE"];
@@ -64,17 +78,21 @@ if (isNull GVAR(cswTripod)) then {
             _weaponHolder setDir random[0, 180, 360];
             _weaponHolder addWeaponCargoGlobal[_carryWeaponClassname, 1];
             
+            LOG("end");
         };
         
-        private _crewCheck = {
+        private _condition = {
             params["_args"];
             _args params["_weapon"];
-            ((crew _weapon) isEqualTo [])
+            ((crew _weapon) isEqualTo []) && (alive _weapon)
         };
         
         private _turretClassname = getArray(configFile >> "CfgVehicles" >> typeof(_weapon) >> "Turrets" >> "MainTurret" >> "weapons") select 0;
         private _deployTime = getNumber(configFile >> "CfgWeapons" >> _turretClassname >> QGVAR(options) >> "pickupTime");
-        [_deployTime, [_weapon], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _crewCheck] call EFUNC(common,progressBar);
+        if (isNull (configFile >> "CfgWeapons" >> _turretClassname >> QGVAR(options) >> "pickupTime")) then {
+            _deployTime = 3;
+        };
+        [_deployTime, [_weapon], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
     }, [_weapon]] call CBA_fnc_execNextFrame;
 };
 

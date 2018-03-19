@@ -130,13 +130,13 @@
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
         </Key>
-        <Key ID="STR_ACE_crewserved_genericDescription">
+        <Key ID="STR_ACE_CSW_genericDescription">
             <English>Used to reload crew served weapons</English>
         </Key>
-        <Key ID="STR_ACE_crewserved_mag_127x108">
+        <Key ID="STR_ACE_CSW_mag_127x108">
             <English>12.7 x 108 mm Ammo Belt</English>
         </Key>
-        <Key ID="STR_ACE_crewserved_progressBarLoading">
+        <Key ID="STR_ACE_CSW_progressBarLoading">
             <English>Load %1</English>
             <German>Lade %1</German>
             <Spanish>Load %1</Spanish>
@@ -147,7 +147,7 @@
             <Russian>Загрузить %1</Russian>
             <Hungarian>Load %1</Hungarian>
         </Key>
-        <Key ID="STR_ACE_crewserved_progressBarUnloading">
+        <Key ID="STR_ACE_CSW_progressBarUnloading">
             <English>Unload %1</English>
             <German>Entlade %1</German>
             <Spanish>Unload %1</Spanish>
@@ -158,7 +158,7 @@
             <Russian>Разгрузить %1</Russian>
             <Hungarian>Unload %1</Hungarian>
         </Key>
-        <Key ID="STR_ACE_crewserved_removeMagsBeforeReloading">
+        <Key ID="STR_ACE_CSW_removeMagsBeforeReloading">
             <English>Remove current magazine first</English>
             <Czech>Nejdřív odeberte zásobník</Czech>
             <French>Retirez le chargeur actuel</French>
@@ -169,7 +169,7 @@
             <Russian>Сперва разрядите оружие</Russian>
             <Spanish>Remove current magazine first</Spanish>
         </Key>
-        <Key ID="STR_ACE_crewserved_gunnerInWeapon">
+        <Key ID="STR_ACE_CSW_gunnerInWeapon">
             <English>Weapon occupied</English>
             <German>Waffe besetzt</German>
             <Spanish>Weapon occupied</Spanish>
@@ -180,10 +180,10 @@
             <Russian>Оружие используется</Russian>
             <Hungarian>Foglalt fegyver.</Hungarian>
         </Key>
-        <Key ID="STR_ACE_crewserved_noRoomToUnload">
+        <Key ID="STR_ACE_CSW_noRoomToUnload">
             <English>No room in inventory</English>
         </Key>
-        <Key ID="STR_ACE_crewserved_onlyReloadEmpty_Name">
+        <Key ID="STR_ACE_CSW_onlyReloadEmpty_Name">
             <English>Crew Served: Only reload empty</English>
         </Key>
     </Package>

@@ -1,7 +1,7 @@
 class GVAR(groups) {
+    class GVAR(default) {}
     // A3 .50 BMG (12.7x99mm)
-    class GVAR(100Rnd_127x99_mag) {
-        GVAR(family)[] = {"ACE_100Rnd_127x99_Ball_carryable", "ACE_100Rnd_127x99_Red_carryable", "ACE_100Rnd_127x99_Green_carryable", "ACE_100Rnd_127x99_Yellow_carryable"};
+    class GVAR(100Rnd_127x99_mag) : GVAR(default) {
         500Rnd_127x99_mag = 1;
         200Rnd_127x99_mag = 1;
         100Rnd_127x99_mag = 1;
@@ -28,7 +28,7 @@ class GVAR(groups) {
     };
 
     // Soviet HMG (12.7x108mm)
-    class GVAR(50Rnd_127x108_mag) {
+    class GVAR(50Rnd_127x108_mag) : GVAR(default) {
         rhs_mag_127x108mm_50 = 1;
         rhs_mag_127x108mm_100 = 1;
         rhs_mag_127x108mm_150 = 1;
@@ -39,7 +39,7 @@ class GVAR(groups) {
     };
     
     // A3 20mm GMG
-    class GVAR(20Rnd_20mm_G_belt) {
+    class GVAR(20Rnd_20mm_G_belt) : GVAR(default) {
         40Rnd_20mm_G_belt = 1;
         200Rnd_20mm_G_belt = 1;
         GVAR(GMG_Dummy_120Rnd_mag) = 1;
@@ -47,28 +47,28 @@ class GVAR(groups) {
 
 
     // A3 82mm mortar shells (Allows the normal mk6 to be reloaded from the mk6 ammo handling mags) 
-    class ACE_1Rnd_82mm_Mo_HE {
+    class ACE_1Rnd_82mm_Mo_HE : GVAR(default) {
         8Rnd_82mm_Mo_shells = 1;
     };
-    class ACE_1Rnd_82mm_Mo_Smoke {
+    class ACE_1Rnd_82mm_Mo_Smoke : GVAR(default) {
         8Rnd_82mm_Mo_Smoke_white = 1;
     };
-    class ACE_1Rnd_82mm_Mo_Illum {
+    class ACE_1Rnd_82mm_Mo_Illum : GVAR(default) {
         8Rnd_82mm_Mo_Flare_white = 1;
     };
-    class ACE_1Rnd_82mm_Mo_HE_Guided {
+    class ACE_1Rnd_82mm_Mo_HE_Guided : GVAR(default) {
         8Rnd_82mm_Mo_guided = 1;
     };
-    class ACE_1Rnd_82mm_Mo_HE_LaserGuided {
+    class ACE_1Rnd_82mm_Mo_HE_LaserGuided : GVAR(default) {
         8Rnd_82mm_Mo_LG = 1;
     };
     
     // Titan Missiles
-    class GVAR(1Rnd_GAT_missiles) {
+    class GVAR(1Rnd_GAT_missiles) : GVAR(default) {
         1Rnd_GAT_missiles = 1;
         GVAR(TitanAT_Dummy_Missile) = 1;
     };
-    class GVAR(1Rnd_GAA_missiles) {
+    class GVAR(1Rnd_GAA_missiles) : GVAR(default) {
         1Rnd_GAA_missiles = 1;
         GVAR(TitanAA_Dummy_Missile) = 1;
     };

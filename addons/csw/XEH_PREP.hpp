@@ -3,6 +3,7 @@ PREP(canDeployTripod);
 PREP(canDeployWeapon);
 PREP(canDismountWeapon);
 PREP(canGetIn);
+PREP(canInteract);
 PREP(canMoveTripod);
 PREP(canPickupTripod);
 PREP(deployTripod);

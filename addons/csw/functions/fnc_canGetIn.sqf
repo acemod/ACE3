@@ -17,5 +17,5 @@
 
 params["_weapon"];
 
-((crew _weapon) isEqualTo [] || {!(alive (gunner _weapon))})
+alive _weapon && (((crew _weapon) isEqualTo [] || {!(alive (gunner _weapon))}))
 
