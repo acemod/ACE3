@@ -36,7 +36,7 @@ if (_type in _initializedClasses) exitWith {};
 private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
 private _hitPointsAddedAmount = [];
-private _processedHitpoints = [];
+private _processedSelections = [];
 private _icon = QPATHTOF(ui\repair_0_ca.paa);
 
 {
@@ -45,7 +45,7 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
 
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
-        if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
+        if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
 
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
 
@@ -66,6 +66,8 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(repair)};
         _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
+
+        _processedSelections pushBack _selection;
     } else {
         //Skip glass hitpoints
         if (((toLower _hitPoint) find "glass") != -1) exitWith {
@@ -127,7 +129,7 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
 
         if (_hitpoint in TRACK_HITPOINTS) then {
             // Tracks should always be unique
-            if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
+            if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
             if (_hitpoint == "HitLTrack") then {
                 _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             } else {
@@ -151,7 +153,7 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
             };
         };
 
-        _processedHitPoints pushBack _hitPoint;
+        _processedSelections pushBack _selection;
     };
 } forEach _hitSelections;
 
