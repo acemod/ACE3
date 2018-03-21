@@ -583,42 +583,46 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
         class Title: Title {};
         class Content: Content {
             class Controls {
-                class ToggleNvg: RscControlsGroupNoScrollbars {
+                class toggleNvg: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_toggleNvg));
                     idc = 92854;
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(3);
+                    h = H_PART(2.1);
                     class controls {
-                        class ToggleNvgTitle: Title {
+                        class ToggleLabel: RscText {
                             idc = -1;
                             text = CSTRING(moduleToggleNVG_ToggleNvgTitle);
-                            toolTip = CSTRING(moduleToggleNVG_ToggleNvgTitleTooltip);
-                            x = H_PART(0);
-                            y = H_PART(0);
-                            w = W_PART(7);
+                            tooltip = CSTRING(moduleToggleNVG_ToggleNvgTitleTooltip);
+                            x = 0;
+                            y = 0;
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class ToggleNvgCombo: RscCombo {
+                        class Toggle: ctrlToolbox {
                             idc = 92855;
-                            x = H_PART(6);
-                            y = H_PART(0);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = 0;
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
-                        class ToggleNvgSideTitle: Title {
-                            idc = -1;
+                        class TargetLabel: ToggleLabel {
                             text = CSTRING(moduleToggleNVG_ToggleNvgSide);
-                            x = H_PART(0);
-                            y = H_PART(1.2);
-                            w = W_PART(7);
+                            tooltip = "";
+                            y = H_PART(1.1);
                         };
-                        class ToggleNvgSideCombo: RscCombo {
+                        class Target: RscCombo {
                             idc = 92856;
-                            x = H_PART(6);
-                            y = H_PART(1.2);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = H_PART(1.1);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.7};
                         };
                     };
                 };
