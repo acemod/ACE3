@@ -287,6 +287,7 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(moduleToggleFlashlight_DisplayName);
         curatorInfoType = QGVAR(RscToggleFlashlight);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Flashlight_ca.paa);
     };
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
