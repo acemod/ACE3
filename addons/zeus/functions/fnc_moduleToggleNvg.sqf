@@ -24,7 +24,7 @@ TRACE_1("params",_this);
 private _units = [];
 
 if (_target == -1) then {
-    _units = (units (attachedTo _logic)) select {alive _x && {!([_x] call EFUNC(common,isPlayer))}};
+    _units = (units attachedTo _logic) select {alive _x && {!([_x] call EFUNC(common,isPlayer))}};
 } else {
     private _side = [west, east, independent, civilian] select _target;
     _units = allUnits select {alive _x && {side _x == _side} && {!([_x] call EFUNC(common,isPlayer))}};
@@ -37,7 +37,7 @@ private _cfgWeapons = configFile >> "CfgWeapons";
 if (_toggle) then {
     {
         if (hmd _x isEqualTo "") then {
-            // Get NVG item and helmet from unit's config
+            // Get NVG item and helmet from unit config
             private _linkedItems = getArray (_cfgVehicles >> typeOf _x >> "linkedItems");
             private _nvgItem = _linkedItems select {_x isKindOf ["NVGoggles", _cfgWeapons]};
             private _nvgHelmet = _linkedItems select {!(getArray (_cfgWeapons >> _x >> "subItems") isEqualTo [])};
@@ -58,7 +58,7 @@ if (_toggle) then {
     } forEach _units;
 } else {
     {
-        // Get unit's current NVGs or helmet with NVG built-in
+        // Get unit current NVGs or helmet with NVG built-in
         private _nvgItem = hmd _x;
         private _nvgHelmet = getArray (_cfgWeapons >> headgear _x >> "subItems") isEqualTo [];
 

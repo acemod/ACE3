@@ -641,55 +641,53 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
         class Title: Title {};
         class Content: Content {
             class Controls {
-                class ToggleFlashlight: RscControlsGroupNoScrollbars {
+                class toggleFlashlight: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_toggleFlashlight));
                     idc = 56217;
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(5);
+                    h = H_PART(3.2);
                     class controls {
-                        class ToggleFlashlightTitle: Title {
+                        class ToggleLabel: RscText {
                             idc = -1;
                             text = CSTRING(moduleToggleFlashlight_ToggleFlashlightTitle);
-                            x = H_PART(0);
-                            y = H_PART(0);
-                            w = W_PART(7);
+                            x = 0;
+                            y = 0;
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class ToggleFlashlightCombo: RscCombo {
+                        class Toggle: ctrlToolbox {
                             idc = 56218;
-                            x = H_PART(6);
-                            y = H_PART(0);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = 0;
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
-                        class ToggleFlashlightSideTitle: Title {
-                            idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightSide);
-                            x = H_PART(0);
-                            y = H_PART(1.2);
-                            w = W_PART(7);
-                        };
-                        class ToggleFlashlightSideCombo: RscCombo {
-                            idc = 56219;
-                            x = H_PART(6);
-                            y = H_PART(1.2);
-                            w = W_PART(10.1);
-                            h = H_PART(1);
-                        };
-                        class ToggleFlashlightGearTitle: Title {
-                            idc = -1;
+                        class AddGearLabel: ToggleLabel {
                             text = CSTRING(moduleToggleFlashlight_ToggleFlashlightGear);
-                            x = H_PART(0);
-                            y = H_PART(2.4);
-                            w = W_PART(7);
+                            y = H_PART(1.1);
                         };
-                        class ToggleFlashlightGearCombo: RscCombo {
+                        class AddGear: Toggle {
+                            idc = 56219;
+                            y = H_PART(1.1);
+                            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+                        };
+                        class TargetLabel: ToggleLabel {
+                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightSide);
+                            y = H_PART(2.2);
+                        };
+                        class Target: RscCombo {
                             idc = 56220;
-                            x = H_PART(6);
-                            y = H_PART(2.4);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = H_PART(2.2);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.7};
                         };
                     };
                 };

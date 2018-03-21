@@ -11,8 +11,8 @@
                 _x disableAI _section;
             };
             LOG(format [ARR_4("XEH_postInit: %1 disableAI %2 | ID %3", _x, _section, clientOwner)]);
-        } foreach (_units select {local _x});
-    } foreach _sections
+        } forEach (_units select {local _x});
+    } forEach _sections;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(unGarrison), FUNC(unGarrison)] call CBA_fnc_addEventHandler;
@@ -25,7 +25,7 @@
         _unit setDestination [_pos, "LEADER PLANNED", true];
         _unit doMove _pos;
         LOG(format [ARR_4("XEH_postInit: %1 doMove %2 | ID %3", _unit, _pos, clientOwner)]);
-    } foreach _unitsArray
+    } forEach _unitsArray;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setBehaviour), {
@@ -34,7 +34,7 @@
         _x params ["_group"];
         _group setBehaviour _behaviour;
         LOG(format [ARR_4("XEH_postInit: %1 setBehaviour %2 | ID %3", _group, _behaviour, clientOwner)]);
-    } foreach _groupsArray
+    } forEach _groupsArray;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(enableAttack), {
@@ -43,7 +43,7 @@
         _x params ["_unit"];
         _unit enableAttack _mode;
         LOG(format [ARR_4("XEH_postInit: %1 enableAttack %2 | ID %3", _unit, _mode, clientOwner)]);
-    } foreach _unitsArray
+    } forEach _unitsArray;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setUnitPos), {
@@ -66,14 +66,18 @@
     _unit allowFleeing _cowardice;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(enableGunLights), {
+    params ["_unit", "_mode"];
+    _unit enableGunLights _mode;
+}] call CBA_fnc_addEventHandler;
+
 #ifdef DEBUG_MODE_FULL
     addMissionEventHandler ["Draw3D", {
         private _unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
-
         {
             _x params  ["_unit", "_pos"];
 
-            switch true do {
+            switch (true) do {
                 case (surfaceIsWater (getPos _unit) && {surfaceIsWater _pos}) : {
                     for "_i" from 0 to 3 do {
                         drawLine3D [_unit modelToWorldVisualWorld [0,0,1], (AGLtoASL _pos), [1,0,0,1]];
@@ -102,6 +106,6 @@
                     drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], _pos, 0.75, 0.75, 0.75];
                 };
             };
-        } foreach _unitMoveList;
+        } forEach _unitMoveList;
     }];
 #endif
