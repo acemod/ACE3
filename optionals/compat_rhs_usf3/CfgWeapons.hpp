@@ -8,7 +8,7 @@ class CfgWeapons {
     };
     // White Phosphor version
     class rhsusf_ANPVS_14_WP: rhsusf_ANPVS_14 {
-        author = "JDT & AleM"
+        author = "JDT & AleM";
         displayName = "AN/PVS-14 (Gen3, WP tube)";
         descriptionShort = "AN/PVS-14 Monocular NVD /w White Phosphor tube";
         colorPreset[] = {0.0, {0.0, 0.0, 0.0, 0.0}, {0.7, 0.3, 1.3, 0.9}, {1, 1, 6, 0.0}};
@@ -20,7 +20,7 @@ class CfgWeapons {
     };
     // White Phosphor version
     class rhsusf_ANPVS_15_WP: rhsusf_ANPVS_15 {
-        author = "JDT & AleM"
+        author = "JDT & AleM";
         displayName = "AN/PVS-15 (Gen3, WP tube)";
         descriptionShort = "3rd Generation Binocular NVD /w White Phosphor tubes";
         colorPreset[] = {0.0, {0.0, 0.0, 0.0, 0.0}, {0.7, 0.3, 1.3, 0.9}, {1, 1, 6, 0.0}};
