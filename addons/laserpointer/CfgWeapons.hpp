@@ -36,7 +36,11 @@ class CfgWeapons {
         class ItemInfo: InventoryFlashLightItem_Base_F {
             mass = 6;
 
-            class Pointer {};
+            class Pointer {
+                irLaserPos = "laser pos";
+                irLaserEnd = "laser dir";
+                irDistance = 5;
+            };
 
             class FlashLight {
                 color[] = {0,0,0};
