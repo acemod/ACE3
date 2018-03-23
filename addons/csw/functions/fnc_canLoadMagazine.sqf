@@ -1,5 +1,5 @@
 /*
- * Author: PabstMirror
+ * Author: PabstMirror & TCVM
  * Tests if unit can load a magazine into a static weapon.
  *
  * Arguments:
@@ -34,10 +34,22 @@ private _canLoad = false;
 } forEach (magazines _unit);
 
 
-private _currentAmmo = ((magazinesAllTurrets _vehicle) select 1) select 2;
+private _currentAmmo = ((magazinesAllTurrets _vehicle) select 0) select 2;
 private _carryMagAmmo = getNumber(configFile >> "CfgMagazines" >> _carryMag >> "count");
 private _maxMagazineAmmo = getNumber(configFile >> "CfgMagazines" >> ((_vehicle magazinesTurret _turret) select 0) >> "count");
-_canLoad = (_currentAmmo + _carryMagAmmo) <= _maxMagazineAmmo;
+_canLoad = _canLoad && ((_currentAmmo + _carryMagAmmo) <= _maxMagazineAmmo);
+
+
+private _currentMag = [];
+private _allMagazinesInCSW = magazinesAmmoFull _vehicle;
+{
+    if ((_x select 0) == ((_vehicle magazinesTurret _turret) select 0)) exitWith {
+        _currentMag = _x;
+    };
+} forEach _allMagazinesInCSW;
+
+private _carryGroup = configFile >> QGVAR(groups) >> _carryMag;
+_canLoad = _canLoad && ((count _currentMag) == 0 || {getNumber(_carryGroup >> (_currentMag select 0)) == 1});
 
 _canLoad
 

@@ -23,6 +23,23 @@ params ["_vehicle", "_turret", "_unit", "_carryMag", "_weapon"];
 TRACE_5("loadMagazine",_vehicle,_turret,_unit,_carryMag,_weapon);
 
 private _vehicleMag = [_weapon, _carryMag] call FUNC(getVehicleMagazine);
+
+private _extraParams = [];
+private _carryGroup = configFile >> QGVAR(groups) >> _carryMag;
+
+private _loadedMagazine = [];
+private _allMagazinesInCSW = _vehicle magazinesTurret _turret;
+{
+    if (_x == ((_vehicle magazinesTurret _turret) select 0)) exitWith {
+        _loadedMagazine = _x;
+    };
+} forEach _allMagazinesInCSW;
+
+if (getNumber(_carryGroup >> _loadedMagazine) != 1) then {
+    // Wrong magazine type. Switch vehicle magazine to proper one
+    _extraParams pushBack _loadedMagazine;
+};
+
 private _maxAmmo = getNumber (configFile >> "CfgMagazines" >> _vehicleMag >> "count");
 
 private _addedMagazine = "";
@@ -43,7 +60,7 @@ _unit removeMagazineGlobal _addedMagazine;
 
 // Add ammo to turret (run addMagazineTurret where local)
 TRACE_4("calling addTurretMag event", _vehicle, _turret, _vehicleMag, _ammoAvailable);
-[QGVAR(addTurretMag), [_vehicle, _turret, _vehicleMag, _ammoAvailable]] call CBA_fnc_globalEvent;
+[QGVAR(addTurretMag), [_vehicle, _turret, _vehicleMag, _ammoAvailable, _extraParams]] call CBA_fnc_globalEvent;
 
 TRACE_3("done",_playerMags,_ammoAvailable,_maxAmmo);
 

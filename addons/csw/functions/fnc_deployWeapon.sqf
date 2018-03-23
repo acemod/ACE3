@@ -42,7 +42,7 @@ params["_tripod", "_player"];
         _csw setVariable[QGVAR(enableCSW), true, true];
         [_csw] call FUNC(weaponInit);
 
-        [QGVAR(addObjectToServer), [_csw]] call CBA_fnc_serverEvent;
+        //[QGVAR(addObjectToServer), [_csw]] call CBA_fnc_serverEvent;
     };
     
     private _onFailure = {

@@ -89,10 +89,13 @@
             <English>[ACE] AA Static</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
-            <English>[ACE] 12.7x108mm M2 HMG Belt</English>
+            <English>[ACE] 12.7x108mm HMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
-            <English>[ACE] 12.7x99mm M2 HMG Belt</English>
+            <English>[ACE] 12.7x99mm HMG Belt</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_127x99_red_displayName">
+            <English>[ACE] Tracer 12.7x99mm HMG Belt (Red)</English>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[ACE] 20mm Grenade GMG Belt</English>

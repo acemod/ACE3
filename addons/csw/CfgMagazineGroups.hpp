@@ -9,12 +9,6 @@ class GVAR(groups) {
         rhs_mag_200rnd_127x99_mag = 1;
         CUP_100Rnd_127x99_M = 1;
         GVAR(HMG_Dummy_200Rnd_mag) = 1;
-        500Rnd_127x99_mag_Tracer_Red = 1;
-        200Rnd_127x99_mag_Tracer_Red = 1;
-        100Rnd_127x99_mag_Tracer_Red = 1;
-        rhs_mag_100rnd_127x99_mag_Tracer_Red = 1;
-        rhs_mag_200rnd_127x99_mag_Tracer_Red = 1;
-        CUP_100Rnd_TE4_Red_Tracer_127x99_M = 1;
         500Rnd_127x99_mag_Tracer_Green = 1;
         200Rnd_127x99_mag_Tracer_Green = 1;
         100Rnd_127x99_mag_Tracer_Green = 1;
@@ -27,6 +21,16 @@ class GVAR(groups) {
         CUP_100Rnd_TE4_Yellow_Tracer_127x99_M = 1;
     };
 
+    class GVAR(100Rnd_127x99_mag_red) : GVAR(default) {
+        500Rnd_127x99_mag_Tracer_Red = 1;
+        200Rnd_127x99_mag_Tracer_Red = 1;
+        100Rnd_127x99_mag_Tracer_Red = 1;
+        rhs_mag_100rnd_127x99_mag_Tracer_Red = 1;
+        rhs_mag_200rnd_127x99_mag_Tracer_Red = 1;
+        CUP_100Rnd_TE4_Red_Tracer_127x99_M = 1;
+        GVAR(HMG_Dummy_200Rnd_mag_red) = 1;
+    };
+    
     // Soviet HMG (12.7x108mm)
     class GVAR(50Rnd_127x108_mag) : GVAR(default) {
         rhs_mag_127x108mm_50 = 1;

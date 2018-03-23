@@ -4,7 +4,7 @@
 if (isServer) then {
     [QGVAR(addObjectToServer), {
         params["_object"];
-        _object setOwner SERVER_OWNER_ID;
+        //_object setOwner SERVER_OWNER_ID;
     }] call CBA_fnc_addEventHandler;
 };
 
