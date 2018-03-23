@@ -33,13 +33,6 @@ private _canLoad = false;
     if (_x == _carryMag) exitWith {_canLoad = true;};
 } forEach (magazines _unit);
 
-
-private _currentAmmo = ((magazinesAllTurrets _vehicle) select 0) select 2;
-private _carryMagAmmo = getNumber(configFile >> "CfgMagazines" >> _carryMag >> "count");
-private _maxMagazineAmmo = getNumber(configFile >> "CfgMagazines" >> ((_vehicle magazinesTurret _turret) select 0) >> "count");
-_canLoad = _canLoad && ((_currentAmmo + _carryMagAmmo) <= _maxMagazineAmmo);
-
-
 private _currentMag = [];
 private _allMagazinesInCSW = magazinesAmmoFull _vehicle;
 {
@@ -48,8 +41,17 @@ private _allMagazinesInCSW = magazinesAmmoFull _vehicle;
     };
 } forEach _allMagazinesInCSW;
 
-private _carryGroup = configFile >> QGVAR(groups) >> _carryMag;
-_canLoad = _canLoad && ((count _currentMag) == 0 || {getNumber(_carryGroup >> (_currentMag select 0)) == 1});
+if ((count _currentMag) != 0) then {
+    private _currentAmmo = _currentMag select 1;
+    private _carryMagAmmo = getNumber(configFile >> "CfgMagazines" >> _carryMag >> "count");
+    private _maxMagazineAmmo = getNumber(configFile >> "CfgMagazines" >> ((_vehicle magazinesTurret _turret) select 0) >> "count");
+    _canLoad = _canLoad && ((_currentAmmo + _carryMagAmmo) <= _maxMagazineAmmo);
+
+    private _carryGroup = configFile >> QGVAR(groups) >> _carryMag;
+    _canLoad = _canLoad && (getNumber(_carryGroup >> (_currentMag select 0)) == 1);
+} else {
+    _canLoad = _canLoad && ((count _currentMag) == 0);
+};
 
 _canLoad
 
