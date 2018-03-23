@@ -1,5 +1,9 @@
 class CfgMagazines {
-    class 100Rnd_127x99_mag;
+    class 500Rnd_127x99_mag;
+    class 100Rnd_127x99_mag: 500Rnd_127x99_mag {};
+    class 100Rnd_127x99_mag_Tracer_Red: 100Rnd_127x99_mag {};
+    class 100Rnd_127x99_mag_Tracer_Green: 100Rnd_127x99_mag {};
+    class 100Rnd_127x99_mag_Tracer_Yellow: 100Rnd_127x99_mag {};
     class 1Rnd_GAT_missiles;
     class 40Rnd_20mm_G_belt;
     class 1Rnd_GAA_missiles;
@@ -37,8 +41,51 @@ class CfgMagazines {
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
         ACE_isBelt = 1;
     };
-    // The maximum amount of ammo the HMG can hold. Its a dummy since all this purpose is for is to allow for 200 bullets
-    class GVAR(HMG_Dummy_200Rnd_mag_red): 100Rnd_127x99_mag {
+    class GVAR(HMG_Dummy_200Rnd_mag_red): 100Rnd_127x99_mag_Tracer_Red {
+        author = ECSTRING(common, ACETeam);
+        displayName = CSTRING(DummyMagazine_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        scope = 1;
+        type = 0;
+        count = 200;
+        mass = 40;
+        tracersEvery = 1;
+    };
+    
+    class GVAR(100Rnd_127x99_mag_green): 100Rnd_127x99_mag {
+        author = ECSTRING(common, ACETeam);
+        displayName = CSTRING(127x99_green_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        scope = 2;
+        type = 256;
+        count = 100;
+        mass = 40;
+        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
+        ACE_isBelt = 1;
+    };
+    class GVAR(HMG_Dummy_200Rnd_mag_green): 100Rnd_127x99_mag_Tracer_Green {
+        author = ECSTRING(common, ACETeam);
+        displayName = CSTRING(DummyMagazine_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        scope = 1;
+        type = 0;
+        count = 200;
+        mass = 40;
+        tracersEvery = 1;
+    };
+    
+    class GVAR(100Rnd_127x99_mag_yellow): 100Rnd_127x99_mag {
+        author = ECSTRING(common, ACETeam);
+        displayName = CSTRING(127x99_yellow_displayName);
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
+        scope = 2;
+        type = 256;
+        count = 100;
+        mass = 40;
+        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
+        ACE_isBelt = 1;
+    };
+    class GVAR(HMG_Dummy_200Rnd_mag_yellow): 100Rnd_127x99_mag_Tracer_Yellow {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(DummyMagazine_displayName);
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";

@@ -97,6 +97,12 @@
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[ACE] Tracer 12.7x99mm HMG Belt (Red)</English>
         </Key>
+        <Key ID="STR_ACE_CSW_127x99_green_displayName">
+            <English>[ACE] Tracer 12.7x99mm HMG Belt (Green)</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
+            <English>[ACE] Tracer 12.7x99mm HMG Belt (Yellow)</English>
+        </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[ACE] 20mm Grenade GMG Belt</English>
         </Key>

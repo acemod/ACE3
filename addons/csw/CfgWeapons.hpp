@@ -198,7 +198,7 @@ class CfgWeapons {
         };
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(HMGStatic_displayName);
-        magazines[] = { GVAR(HMG_Dummy_200Rnd_mag), GVAR(HMG_Dummy_200Rnd_mag_red), GVAR(100Rnd_127x99_mag), GVAR(100Rnd_127x99_mag_red) };
+        magazines[] = { GVAR(HMG_Dummy_200Rnd_mag), GVAR(HMG_Dummy_200Rnd_mag_red), GVAR(HMG_Dummy_200Rnd_mag_green), GVAR(HMG_Dummy_200Rnd_mag_yellow), GVAR(100Rnd_127x99_mag), GVAR(100Rnd_127x99_mag_red), GVAR(100Rnd_127x99_mag_green), GVAR(100Rnd_127x99_mag_yellow) };
     };
     
     class GMG_20mm;
