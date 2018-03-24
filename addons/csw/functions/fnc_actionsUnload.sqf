@@ -26,9 +26,9 @@ private _statement = {
     _params params ["_vehMag", "_turretPath", "_carryMag", "_vehicle"];
     TRACE_5("Starting unload mag progres bar",_target,_turretPath,_player,_carryMag,_vehMag);
 
-    if (!isNull (_target turretUnit _turretPath)) exitWith {
+    /*if (!isNull (_target turretUnit _turretPath)) exitWith {
         [LSTRING(gunnerInWeapon)] call EFUNC(common,displayTextStructured);
-    };
+    };*/
     
     private _weapon = (_vehicle weaponsTurret _turretPath) select 0;
     
