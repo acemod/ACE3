@@ -26,6 +26,10 @@ class CfgVehicles {
     
     class ThingX;
     class GVAR(baseTripod): ThingX {
+        ace_dragging_canDrag = 1;
+        ace_dragging_dragPosition[] = {0, 2, 0};
+        ace_dragging_canCarry = 1;
+        ace_dragging_carryPosition[] = {0, 2, 0};
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(Tripod_displayName);
@@ -33,20 +37,12 @@ class CfgVehicles {
                 distance = 2;
                 condition = "true";
                 
-                class ACE_PickUp {
+                class GVAR(pickUp) {
                     displayName = CSTRING(Pickup_displayName);
                     selection = "";
                     distance = 2;
                     condition = QUOTE([ARR_2(_target,_this)] call FUNC(canPickupTripod));
                     statement = QUOTE([ARR_2(_target,_this)] call FUNC(pickupTripod));
-                };
-
-                class ACE_Position {
-                    displayName = CSTRING(Move_displayName);
-                    distance = 2;
-                    condition = QUOTE(_this call FUNC(canMoveTripod));
-                    //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(positionTripod)},[ARR_2(_this,_target)])] call CBA_fnc_execNextFrame);
                 };
                 
                 class GVAR(cswMenu) {

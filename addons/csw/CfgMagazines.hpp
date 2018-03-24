@@ -128,17 +128,6 @@ class CfgMagazines {
         count = 120;
         mass = 40;
     };
-    
-    class GVAR(1Rnd_GAT_missiles): 1Rnd_GAT_missiles {
-        author = ECSTRING(common, ACETeam);
-        displayName = CSTRING(ATRocket_displayName);
-        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope = 2;
-        type = 256;
-        count = 1;
-        mass = 125;
-        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
-    };
     class GVAR(TitanAT_Dummy_Missile): 1Rnd_GAT_missiles {
         author = ECSTRING(common, ACETeam);
         displayName = CSTRING(DummyMagazine_displayName);
@@ -147,17 +136,6 @@ class CfgMagazines {
         type = 0;
         count = 1;
         mass = 125;
-    };
-    
-    class GVAR(1Rnd_GAA_missiles): 1Rnd_GAA_missiles {
-        author = ECSTRING(common, ACETeam);
-        displayName = CSTRING(AARocket_displayName);
-        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d";
-        scope = 2;
-        type = 256;
-        count = 1;
-        mass = 125;
-        picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
     };
     class GVAR(TitanAA_Dummy_Missile): 1Rnd_GAA_missiles {
         author = ECSTRING(common, ACETeam);

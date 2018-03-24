@@ -191,8 +191,8 @@ class CfgWeapons {
     class HMG_Static;
     class GVAR(HMG_Static): HMG_Static {
         class GVAR(options) {
-            deployTime = 15;
-            pickupTime = 10;
+            deployTime = 8;
+            pickupTime = 15;
             ammoLoadTime = 5;
             ammoUnloadTime = 5;
         };
@@ -204,7 +204,7 @@ class CfgWeapons {
     class GMG_20mm;
     class GVAR(GMG_20mm): GMG_20mm {
         class GVAR(options) {
-            deployTime = 20;
+            deployTime = 8;
             pickupTime = 15;
             ammoLoadTime = 5;
             ammoUnloadTime = 5;
@@ -217,8 +217,8 @@ class CfgWeapons {
     class ace_javelin_Titan_Static;
     class GVAR(missiles_titan_static_AT): ace_javelin_Titan_Static {
         class GVAR(options) {
-            deployTime = 25;
-            pickupTime = 20;
+            deployTime = 15;
+            pickupTime = 25;
             ammoLoadTime = 15;
             ammoUnloadTime = 10;
         };
@@ -237,8 +237,8 @@ class CfgWeapons {
     class missiles_titan_static;
     class GVAR(missiles_titan_static_AA): missiles_titan_static {
         class GVAR(options) {
-            deployTime = 25;
-            pickupTime = 20;
+            deployTime = 15;
+            pickupTime = 25;
             ammoLoadTime = 15;
             ammoUnloadTime = 10;
         };

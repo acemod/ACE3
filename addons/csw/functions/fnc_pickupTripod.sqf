@@ -30,6 +30,6 @@ params["_tripod", "_player"];
     
     private _tripodClassname = getText(configFile >> "CfgVehicles" >> typeof(_tripod) >> QGVAR(options) >> "disassembleTo");
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _tripodClassname >> QGVAR(options) >> "pickupTime");
-    [_pickupTime, [_tripod, _player, _tripodClassname], _onFinish, {}, localize LSTRING(PickupTripod_progressBar)] call EFUNC(common,progressBar);
+    [_pickupTime, [_tripod, _player, _tripodClassname], _onFinish, FUNC(canPickupTripod), localize LSTRING(PickupTripod_progressBar)] call EFUNC(common,progressBar);
 }, [_tripod, _player]] call CBA_fnc_execNextFrame;
 

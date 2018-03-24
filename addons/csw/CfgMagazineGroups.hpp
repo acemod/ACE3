@@ -76,11 +76,12 @@ class GVAR(groups) {
     };
     
     // Titan Missiles
-    class GVAR(1Rnd_GAT_missiles) : GVAR(default) {
+    class Titan_AT : GVAR(default) {
         1Rnd_GAT_missiles = 1;
         GVAR(TitanAT_Dummy_Missile) = 1;
     };
-    class GVAR(1Rnd_GAA_missiles) : GVAR(default) {
+    class Titan_AP : Titan_AT {};
+    class Titan_AA : GVAR(default) {
         1Rnd_GAA_missiles = 1;
         GVAR(TitanAA_Dummy_Missile) = 1;
     };
