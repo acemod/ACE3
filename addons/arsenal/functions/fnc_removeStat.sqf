@@ -17,9 +17,7 @@
 
 params ["_IDList"];
 
-if (isNil QGVAR(statsListLeftPanel)) then {
-    call FUNC(compileStats);
-};
+call FUNC(compileStats);
 
 {
     private _currentID = _x;
