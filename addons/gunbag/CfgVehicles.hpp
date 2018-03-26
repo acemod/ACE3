@@ -3,6 +3,14 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_Actions {
             class ACE_MainActions {
+                class GVAR(weaponSwitch) {
+                    displayName = CSTRING(switchWeapon);
+                    condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 1});
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(switchWeapon));
+                    showDisabled = 0;
+                    priority = 0.9;
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
+                };
                 class GVAR(weaponTo) {
                     displayName = CSTRING(ToGunbag);
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 0});
@@ -13,7 +21,7 @@ class CfgVehicles {
                 };
                 class GVAR(weaponOff) {
                     displayName = CSTRING(OffGunbag);
-                    condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 1});
+                    condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 2});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(offGunbag));
                     showDisabled = 0;
                     priority = 1;
@@ -38,7 +46,14 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.1;
                     icon = QPATHTOF(ui\gunbag_icon_ca.paa);
-
+                    class GVAR(weaponSwitch) {
+                        displayName = CSTRING(switchWeapon);
+                        condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 2);
+                        statement = QUOTE([ARR_2(_player,_player)] call FUNC(switchWeapon));
+                        showDisabled = 0;
+                        priority = 0.9;
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
+                    };
                     class GVAR(weaponTo) {
                         displayName = CSTRING(ToGunbag);
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 0);

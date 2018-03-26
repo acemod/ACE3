@@ -79,5 +79,8 @@
             <Chinesesimp>枪袋为空</Chinesesimp>
             <Chinese>槍袋為空</Chinese>
         </Key>
+        <Key ID="STR_ACE_Gunbag_switchWeapon">
+            <English>Switch gunbag Weapon</English>
+        </Key>
     </Package>
 </Project>

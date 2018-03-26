@@ -29,5 +29,7 @@ if ((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo [] && {_weapon != 
 if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon == ""}) then {
     _result = 1;
 };
-
+if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon != ""} && {!(_weapon call FUNC(isMachineGun))}) then {
+    _result = 2;
+};
 _result
