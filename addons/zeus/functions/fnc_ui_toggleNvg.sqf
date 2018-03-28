@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-#define COMBO_ITEMS [[LSTRING(moduleToggleNVG_SelectedGroup), "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"], ["STR_WEST", "\a3\ui_f\data\map\diary\icons\playerwest_ca.paa"], ["STR_EAST", "\a3\ui_f\data\map\diary\icons\playereast_ca.paa"], ["STR_guerrila", "\a3\ui_f\data\map\diary\icons\playerguer_ca.paa"], ["STR_Civilian", "\a3\ui_f\data\map\diary\icons\playerciv_ca.paa"]]
+#define COMBO_ITEMS [[LSTRING(SelectedGroup), "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"], ["STR_WEST", "\a3\ui_f\data\map\diary\icons\playerwest_ca.paa"], ["STR_EAST", "\a3\ui_f\data\map\diary\icons\playereast_ca.paa"], ["STR_guerrila", "\a3\ui_f\data\map\diary\icons\playerguer_ca.paa"], ["STR_Civilian", "\a3\ui_f\data\map\diary\icons\playerciv_ca.paa"]]
 
 params ["_control"];
 

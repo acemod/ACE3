@@ -593,8 +593,8 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
                     class controls {
                         class ToggleLabel: RscText {
                             idc = -1;
-                            text = CSTRING(moduleToggleNVG_ToggleNvgTitle);
-                            tooltip = CSTRING(moduleToggleNVG_ToggleNvgTitleTooltip);
+                            text = CSTRING(ModuleToggleNVG_NvgEquipment);
+                            tooltip = CSTRING(ModuleToggleNVG_NvgEquipment_tooltip);
                             x = 0;
                             y = 0;
                             w = W_PART(10);
@@ -612,8 +612,8 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
                             strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
                         class TargetLabel: ToggleLabel {
-                            text = CSTRING(moduleToggleNVG_ToggleNvgSide);
-                            tooltip = "";
+                            text = CSTRING(ToggleTarget);
+                            tooltip = CSTRING(ToggleTarget_tooltip);
                             y = H_PART(1.1);
                         };
                         class Target: RscCombo {
@@ -651,7 +651,7 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                     class controls {
                         class ToggleLabel: RscText {
                             idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightTitle);
+                            text = CSTRING(ModuleToggleFlashlight_Flashlights);
                             x = 0;
                             y = 0;
                             w = W_PART(10);
@@ -669,7 +669,7 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                             strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
                         class AddGearLabel: ToggleLabel {
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightGear);
+                            text = CSTRING(ModuleToggleFlashlight_AddGear);
                             y = H_PART(1.1);
                         };
                         class AddGear: Toggle {
@@ -678,7 +678,8 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                             strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
                         };
                         class TargetLabel: ToggleLabel {
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightSide);
+                            text = CSTRING(ToggleTarget);
+                            tooltip = CSTRING(ToggleTarget_tooltip);
                             y = H_PART(2.2);
                         };
                         class Target: RscCombo {
