@@ -3346,7 +3346,7 @@
             <Polish>Pomniejsze stłuczenie</Polish>
             <Spanish>Contusión menor</Spanish>
             <Hungarian>Kis zúzódás</Hungarian>
-            <Portuguese>Contusão leve</Portuguese>
+            <Portuguese>Hematoma leve</Portuguese>
             <Czech>Malá modřina</Czech>
             <Japanese>小さな打ち傷</Japanese>
             <Korean>소형 타박상</Korean>
@@ -3362,7 +3362,7 @@
             <Polish>Średnie stłuczenie</Polish>
             <Spanish>Contusión media</Spanish>
             <Hungarian>Közepes zúzódás</Hungarian>
-            <Portuguese>Contusão média</Portuguese>
+            <Portuguese>Hematoma médio</Portuguese>
             <Czech>Středně velká modřina</Czech>
             <Japanese>中くらいの打ち傷</Japanese>
             <Korean>중형 타박상</Korean>
@@ -3378,7 +3378,7 @@
             <Polish>Duże stłuczenie</Polish>
             <Spanish>Contusión severa</Spanish>
             <Hungarian>Nagy zúzódás</Hungarian>
-            <Portuguese>Contusão grave</Portuguese>
+            <Portuguese>Hematoma grave</Portuguese>
             <Czech>Velká modřina</Czech>
             <Japanese>大きな打撲傷</Japanese>
             <Korean>대형 타박상</Korean>
@@ -3394,7 +3394,7 @@
             <Polish>Zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado</Spanish>
             <Hungarian>Zúzott szövet</Hungarian>
-            <Portuguese>Tecido esmagado</Portuguese>
+            <Portuguese>Contusão</Portuguese>
             <Czech>Zhmoždění měkkých tkání</Czech>
             <Japanese>圧挫傷</Japanese>
             <Korean>압궤상</Korean>
@@ -3410,7 +3410,7 @@
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado menor</Spanish>
             <Hungarian>Kis zúzott szövet</Hungarian>
-            <Portuguese>Tecido levemente esmagado</Portuguese>
+            <Portuguese>Contusão leve</Portuguese>
             <Czech>Malé zhmoždění měkkých tkání</Czech>
             <Japanese>小さな圧挫傷</Japanese>
             <Korean>소형 압궤상</Korean>
@@ -3426,7 +3426,7 @@
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado medio</Spanish>
             <Hungarian>Közepes zúzott szövet</Hungarian>
-            <Portuguese>Tecido mediamente esmagado</Portuguese>
+            <Portuguese>Contusão média</Portuguese>
             <Czech>Střední zhmoždění měkkých tkání</Czech>
             <Japanese>中くらいの圧挫傷</Japanese>
             <Korean>중형 압궤상</Korean>
@@ -3442,7 +3442,7 @@
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado severo</Spanish>
             <Hungarian>Nagy zúzött szövet</Hungarian>
-            <Portuguese>Tecido gravemente esmagado</Portuguese>
+            <Portuguese>Contusão grande</Portuguese>
             <Czech>Velké zhmoždění měkkých tkání</Czech>
             <Japanese>大きな圧挫傷</Japanese>
             <Korean>대형 압궤상</Korean>
