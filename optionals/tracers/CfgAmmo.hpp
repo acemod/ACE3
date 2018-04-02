@@ -22,6 +22,9 @@ class CfgAmmo {
     class B_556x45_Ball_Tracer_Yellow: B_556x45_Ball {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
     // class B_556x45_Ball_Tracer_White: B_556x45_Ball {model = PATHTOF(ace_TracerWhite2.p3d);}; //New class for testing
 
+    class B_545x39_Ball_F: BulletBase {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
+    class B_545x39_Ball_Green_F: B_545x39_Ball_F {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
+
     class B_65x39_Caseless: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_65x39_Caseless_green: B_65x39_Caseless {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_65x39_Caseless_yellow: B_65x39_Caseless {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
@@ -34,6 +37,9 @@ class CfgAmmo {
     class B_65x39_Minigun_Caseless_Red_splash;
     class B_65x39_Minigun_Caseless_Yellow_splash: B_65x39_Minigun_Caseless_Red_splash {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
     class B_65x39_Minigun_Caseless_Green_splash: B_65x39_Minigun_Caseless_Red_splash {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
+
+    class B_762x39_Ball_F: BulletBase {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
+    class B_762x39_Ball_Green_F: B_762x39_Ball_F {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
 
     //Battle rifle
     class B_762x51_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
