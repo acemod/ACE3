@@ -5,10 +5,10 @@ class CfgAmmo {
     class SubmunitionBullet;
 
     //No idea
-    class B_56x15_dual: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_56x15_dual: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
 
     //Pistol
-    class B_9x21_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_9x21_Ball: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
     class B_9x21_Ball_Tracer_Green: B_9x21_Ball {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_9x21_Ball_Tracer_Red: B_9x21_Ball_Tracer_Green {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_9x21_Ball_Tracer_Yellow: B_9x21_Ball_Tracer_Green {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
@@ -51,7 +51,7 @@ class CfgAmmo {
     class B_762x39_Ball_Green_F: B_762x39_Ball_F {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
 
     //Battle rifle
-    class B_762x51_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_762x51_Ball: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
     class B_762x51_Tracer_Red: B_762x51_Ball {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_762x51_Tracer_Green: B_762x51_Ball {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_762x51_Tracer_Yellow: B_762x51_Ball {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
@@ -68,7 +68,7 @@ class CfgAmmo {
     class B_762x54_Tracer_Yellow: B_762x54_Ball {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
 
     //Sniper rifle
-    class B_127x99_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_127x99_Ball: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
     class B_127x99_Ball_Tracer_Red: B_127x99_Ball {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_127x99_Ball_Tracer_Green: B_127x99_Ball {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_127x99_Ball_Tracer_Yellow: B_127x99_Ball {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
@@ -92,7 +92,7 @@ class CfgAmmo {
     class B_93x64_Ball: BulletBase {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
 
     //Autocannon
-    class B_19mm_HE: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_19mm_HE: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
 
     class B_30mm_HE;
     class B_30mm_HE_Tracer_Red: B_30mm_HE {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
@@ -112,9 +112,9 @@ class CfgAmmo {
     class B_20mm: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_20mm_Tracer_Red: B_20mm {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
 
-    class B_25mm: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_25mm: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
 
-    class B_30mm_AP: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_30mm_AP: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
     class B_30mm_AP_Tracer_Red: B_30mm_AP {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_30mm_AP_Tracer_Green: B_30mm_AP {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_30mm_AP_Tracer_Yellow: B_30mm_AP {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
@@ -129,7 +129,7 @@ class CfgAmmo {
     class B_40mm_APFSDS_Tracer_Green: B_40mm_APFSDS {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_40mm_APFSDS_Tracer_Yellow: B_40mm_APFSDS {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
 
-    class B_35mm_AA: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
+    class B_35mm_AA: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
     class B_35mm_AA_Tracer_Red: B_35mm_AA {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_35mm_AA_Tracer_Green: B_35mm_AA {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
     class B_35mm_AA_Tracer_Yellow: B_35mm_AA {model = PATHTOF(ace_TracerYellow2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_yellow
@@ -138,12 +138,12 @@ class CfgAmmo {
     class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green.p3d
 
     //Cannon
-    class Sh_120mm_HE: ShellBase {model = PATHTOF(ace_shell_tracer_red.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_white
+    class Sh_120mm_HE: ShellBase {model = PATHTOF(ace_shell_tracer_white.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_white
     class Sh_120mm_HE_Tracer_Red: Sh_120mm_HE {model = PATHTOF(ace_shell_tracer_red.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_red
     class Sh_120mm_HE_Tracer_Green: Sh_120mm_HE {model = PATHTOF(ace_shell_tracer_green.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_green
     class Sh_120mm_HE_Tracer_Yellow: Sh_120mm_HE {model = PATHTOF(ace_shell_tracer_yellow.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_yellow
 
-    class Sh_120mm_APFSDS: ShellBase {model = PATHTOF(ace_shell_tracer_red.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_white
+    class Sh_120mm_APFSDS: ShellBase {model = PATHTOF(ace_shell_tracer_white.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_white
     class Sh_120mm_APFSDS_Tracer_Red: Sh_120mm_APFSDS {model = PATHTOF(ace_shell_tracer_red.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_red
     class Sh_120mm_APFSDS_Tracer_Green: Sh_120mm_APFSDS {model = PATHTOF(ace_shell_tracer_green.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_green
     class Sh_120mm_APFSDS_Tracer_Yellow: Sh_120mm_APFSDS {model = PATHTOF(ace_shell_tracer_yellow.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\shell_tracer_yellow
