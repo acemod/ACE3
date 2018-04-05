@@ -963,6 +963,9 @@
             <Chinesesimp>货物:</Chinesesimp>
             <Chinese>貨物:</Chinese>
         </Key>
+        <Key ID="STR_ACE_Zeus_SelectCargo">
+            <English>Select cargo to unload</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
             <French>Position de la tâche</French>
