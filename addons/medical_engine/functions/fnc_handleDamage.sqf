@@ -141,6 +141,17 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         [QGVAR(woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
     };
 
+    // resetting these single-damage-event tracker vars, if we don't do this then
+    // subsequent wounds will be piled onto the selection which has accumulated
+    // the most wounding
+    {
+        _unit setVariable [_x, 0];
+    } forEach [
+        QGVAR($HitFace),QGVAR($HitNeck),QGVAR($HitHead),
+        QGVAR($HitPelvis),QGVAR($HitAbdomen),QGVAR($HitDiaphragm),QGVAR($HitChest),QGVAR($HitBody),
+        QGVAR($HitLeftArm),QGVAR($HitRightArm),QGVAR($HitLeftLeg),QGVAR($HitRightLeg)
+    ];
+
     0
 };
 
