@@ -733,18 +733,6 @@ class CfgVehicles {
     class I_C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
         displayName = CSTRING(C_Offroad_02_unarmed);
     };
-    class C_Offroad_02_unarmed_F_black: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_black);
-    };
-    class C_Offroad_02_unarmed_F_blue: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_blue);
-    };
-    class C_Offroad_02_unarmed_F_green: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_green);
-    };
-    class C_Offroad_02_unarmed_F_orange: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_orange);
-    };
 
     // Cessna
     class Plane_Civil_01_base_F;
