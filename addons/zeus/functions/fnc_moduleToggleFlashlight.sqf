@@ -51,7 +51,7 @@ if (_toggle) then {
                 // Add flashlight to weapon and enable
                 [QEGVAR(common,addWeaponItem), [_x, _weapon, _flashlightItem], _x] call CBA_fnc_targetEvent;
                 [QEGVAR(ai,enableGunLights), [_x, "forceOn"], _x] call CBA_fnc_targetEvent;
-                TRACE_2("Added flashlight to unit",_unit,_flashlightItem);
+                TRACE_2("Added flashlight to unit",_x,_flashlightItem);
             };
         };
     } forEach _units;

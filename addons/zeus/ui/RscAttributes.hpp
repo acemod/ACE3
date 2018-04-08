@@ -613,7 +613,7 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
                         };
                         class TargetLabel: ToggleLabel {
                             text = CSTRING(ToggleTarget);
-                            tooltip = CSTRING(ToggleTarget_tooltip);
+                            tooltip = CSTRING(ToggleTarget_Tooltip);
                             y = H_PART(1.1);
                         };
                         class Target: RscCombo {
@@ -679,7 +679,7 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                         };
                         class TargetLabel: ToggleLabel {
                             text = CSTRING(ToggleTarget);
-                            tooltip = CSTRING(ToggleTarget_tooltip);
+                            tooltip = CSTRING(ToggleTarget_Tooltip);
                             y = H_PART(2.2);
                         };
                         class Target: RscCombo {

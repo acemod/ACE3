@@ -1100,7 +1100,7 @@
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_ToggleTarget_tooltip">
+        <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
