@@ -61,4 +61,4 @@ if(_magazineClassOptional != "") then {
     [QGVAR(setAmmo), [_static, _magazineClass,_roundsLeft], _static] call CBA_fnc_targetEvent;
 };
 
-_static setVariable [GVAR(inUse), false, true];
+_static setVariable [GVAR(inUse), nil, true];
