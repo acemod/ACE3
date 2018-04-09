@@ -20,7 +20,7 @@ params ["_string", "_color"];
 
 _string = format ["%1", _string];
 
-if (_color isEqualType 0) then {
+if (_color isEqualType []) then {
     _color = "#" + (
         [255 * (_color select 0), 2] call FUNC(toHex)
     ) + (
