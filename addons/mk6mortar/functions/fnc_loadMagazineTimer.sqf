@@ -27,4 +27,4 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call EFUNC(common,doAnimation);
 };
 
-[_timeToLoad, [_static,_unit,_magazineClassOptional], {(_this select 0) call FUNC(loadMagazine)}, {_static setVariable [GVAR(inUse), false, true]}, localize LSTRING(loadingMortar)] call EFUNC(common,progressBar);
+[_timeToLoad, [_static,_unit,_magazineClassOptional], {(_this select 0) call FUNC(loadMagazine)}, {_static setVariable [GVAR(inUse), nil, true]}, localize LSTRING(loadingMortar)] call EFUNC(common,progressBar);
