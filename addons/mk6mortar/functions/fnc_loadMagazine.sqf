@@ -60,3 +60,5 @@ if(_magazineClassOptional != "") then {
     [QGVAR(addMagazine), [_static, _magazineClass]] call CBA_fnc_globalEvent;
     [QGVAR(setAmmo), [_static, _magazineClass,_roundsLeft], _static] call CBA_fnc_targetEvent;
 };
+
+_static setVariable [GVAR(inUse), false, true];
