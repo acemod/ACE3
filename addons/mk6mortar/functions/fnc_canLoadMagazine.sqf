@@ -20,7 +20,7 @@
 params ["_static","_unit",["_magazineClassOptional","",[""]]];
 
 if !(alive _static && GVAR(useAmmoHandling)) exitWith {false};
-if (_static getVariable [GVAR(inUse), false]) exitWith {false};
+if (_static getVariable [QGVAR(inUse), false]) exitWith {false};
 
 private _canLoadMagazine = false;
 private _hasCompatibleMagazine = false;
