@@ -16,10 +16,6 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeHandleStats = createProfileScope QFUNC(handleStats);
-#endif
-
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
 private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
