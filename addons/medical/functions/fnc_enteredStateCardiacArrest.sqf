@@ -14,6 +14,7 @@
 
 params ["_unit"];
 
+// 10% possible variance in cardiac arrest time
 private _time = GVAR(cardiacArrestTime);
 _time = _time + random [_time*-0.1, 0, _time*0.1];
 
