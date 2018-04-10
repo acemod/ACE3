@@ -1,18 +1,18 @@
 /*
  * Author: xrufix, Glowbal
- * Handle set AimCoef calls. Will use highest available setting.
+ * Handle set AimCoef calls. Will use the highest available setting.
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: id <STRING>
- * 2: settings <NUMBER>
- * 3: add [true] OR remove [false] (default: true) <BOOL>
+ * 0: Unit <OBJECT>
+ * 1: Unique ID <STRING>
+ * 2: Aim coefficient (a higher value causes more shaking) <NUMBER>
+ * 3: Add (true) or remove (false) <BOOL> (default: true)
  *
  * Return Value:
  * None
  *
  * Example:
- * [player,"ace_advanced_fatigue", 1, true] call ace_common_fnc_setAimCoef
+ * [player, "ace_advanced_fatigue", 1, true] call ace_common_fnc_setAimCoef
  *
  * Public: Yes
  */
