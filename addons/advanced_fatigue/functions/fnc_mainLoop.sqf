@@ -55,7 +55,7 @@ GVAR(anReserve)  = GVAR(anReserve)  -  _anPower / WATTSPERATP;
 // Increase anearobic fatigue
 // 1264.64 = 0.057 / peakPower with default VO2 max
 // See #6163
-GVAR(anFatigue)  = GVAR(anFatigue) + _anPower * 1264.64 * 1.1;
+GVAR(anFatigue)  = GVAR(anFatigue) + _anPower * (0.057 / 1264.64) * 1.1;
 
 // Aerobic ATP reserve recovery
 GVAR(ae1Reserve) = ((GVAR(ae1Reserve) + OXYGEN * 6.60 * (GVAR(ae1PathwayPower) - _ae1Power) / GVAR(ae1PathwayPower) * GVAR(recoveryFactor)) min AE1_MAXRESERVE) max 0;
