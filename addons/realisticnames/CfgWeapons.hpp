@@ -522,8 +522,8 @@ class CfgWeapons {
     class LMG_coax: LMG_RCWS {
         displayName = "PKT";
     };
-    // class ACE_LMG_coax_PKT_mem2: LMG_coax {};
-    class ACE_LMG_coax_MAG58_mem2: LMG_coax {
+    class LMG_coax_ext: LMG_coax {};
+    class ACE_LMG_coax_ext_MAG58: LMG_coax_ext {
         displayName = "MAG 58M";
     };
     class ACE_LMG_coax_MAG58_mem3: LMG_coax {
