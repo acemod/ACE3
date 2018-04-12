@@ -657,6 +657,10 @@
             <Chinese>"卡瑪斯"卡車 (醫療)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (医疗)</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
+            <English>KamAZ MRL</English>
+            <German>KamAS MRL</German>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
             <German>Karatel</German>

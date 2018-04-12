@@ -257,6 +257,10 @@ class CfgVehicles {
     class I_Truck_02_box_F: Truck_02_box_base_F {
         displayName = CSTRING(Truck_02_box_Name);
     };
+    class Truck_02_MRL_base_F;
+    class I_Truck_02_MRL_F: Truck_02_MRL_base_F {
+        displayName = CSTRING(Truck_02_MRL_Name);
+    };
     class I_Truck_02_medical_F: Truck_02_medical_base_F {
         displayName = CSTRING(Truck_02_medical_Name);
     };
