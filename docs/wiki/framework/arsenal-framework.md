@@ -127,7 +127,7 @@ This loadout list can be exported to the clipboard by using <kbd>Shift</kbd>. + 
 
 ## 5. Stats
 
-Unlike Virtual Arsenal, ACE Arsenal stats can be customized, here's how.
+ACE Arsenal stats are customizable, I will show you how.
 
 ### 5.1. Adding stats via config
 
@@ -135,7 +135,7 @@ Unlike Virtual Arsenal, ACE Arsenal stats can be customized, here's how.
 class ace_arsenal_stats {
     class statBase;
 
-    class TAG_: statBase {
+    class TAG_myStat: statBase {
         scope = 2; // Only scope 2 show up in arsenal, scope 1 is used for base classes.
         displayName= "Test entry title"; // Title of the stat.
         priority = 0; // A higher value means the stat will be displayed higher on the page.
@@ -156,7 +156,7 @@ The arguments passed to the bar, text and condition statements are:
 
 ### 5.2 Adding stats via a function
 
-`ace_arsenal_fnc_addStat`
+To add a stat simply call `ace_arsenal_fnc_addStat`
 ```cpp
 /*
  * Author: Alganthe
@@ -186,6 +186,39 @@ The arguments passed to the bar, text and condition statements are:
         params ["_statsArray", "_itemCfg"];
         getNumber (_itemCfg >> _statsArray select 0)
     }, {true}]] call ACE_arsenal_fnc_addStat
+ *
+ * Public: Yes
+*/
+```
+
+### 5.3 Removing stats via a function
+
+Removing a stat is as simple as adding one, call `ace_arsenal_fnc_removeStat`
+
+Stats IDs are unique, IDs are generated as follows:
+
+`Class + side +  tab`
+
+For example: `testClassL03`
+- Class: `testClass`
+- Side: `L` for the left panel
+- Tab: `03` for the 3rd tab
+
+For config added stats the classname is used, for function added ones the string provided is used.
+
+```cpp
+/*
+ * Author: Alganthe
+ * Remove a stat from ACE Arsenal.
+ *
+ * Arguments:
+ * 0: Array of IDs (ARRAY)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [["scopeStatL00","scopeStatL01","scopeStatL02","scopeStatR07"]] call ace_arsenal_fnc_removeStat;
  *
  * Public: Yes
 */
