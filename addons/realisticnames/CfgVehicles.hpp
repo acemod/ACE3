@@ -807,7 +807,7 @@ class CfgVehicles {
     class O_T_MBT_04_cannon_F : MBT_04_cannon_base_F {
         displayName = CSTRING(MBT_04_cannon);
     };
-    class MBT_04_command_base_F;
+    class MBT_04_command_base_F; // Keep "K" designation for command variant.
     class O_MBT_04_command_F : MBT_04_command_base_F {
         displayName = CSTRING(MBT_04_command);
     };

@@ -1603,6 +1603,18 @@
             <Chinese>"迷你長釘"導彈發射器 (反坦克)</Chinese>
             <Chinesesimp>"迷你长钉"导弹发射器 (反坦克)</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
+            <English>Metis-M (Brown)</English>
+            <German>Metis-M (Braun)</German>
+            <French>Metis-M (Brun)</French>
+            <Russian>Метис-М (Кори́чневый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
+            <English>Metis-M (Green)</English>
+            <German>Metis-M (Grün)</German>
+            <French>Metis-M (Verde)</French>
+            <Russian>Метис-М (Зелёный)</Russian>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
             <German>MX</German>

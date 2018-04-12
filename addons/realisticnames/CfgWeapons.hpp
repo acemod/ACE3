@@ -192,6 +192,14 @@ class CfgWeapons {
         displayName = CSTRING(launch_NLAW_Name);
     };
 
+    class launch_Vorona_base_F;
+    class launch_O_Vorona_brown_F : launch_Vorona_base_F {
+        displayName = CSTRING(launch_Vorona_brown);
+    };
+    class launch_O_Vorona_green_F : launch_Vorona_base_F {
+        displayName = CSTRING(launch_Vorona_green);
+    };
+
     // marksmen marksman
     class DMR_02_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_02); //MAR-10 .338;
