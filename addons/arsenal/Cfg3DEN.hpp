@@ -52,6 +52,7 @@ class Cfg3DEN {
                 };
                 class Category: ctrlToolboxPictureKeepAspect {
                     idc = IDC_ATTRIBUTE_CATEGORY;
+                    onToolBoxSelChanged = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(15 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
@@ -61,8 +62,8 @@ class Cfg3DEN {
                     strings[] = {
                         "\a3\Ui_F_Curator\Data\RscCommon\RscAttributeInventory\filter_0_ca.paa",
                         "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa",
-                        "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa",
                         "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\SecondaryWeapon_ca.paa",
+                        "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Handgun_ca.paa",
                         "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa",
                         "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemAcc_ca.paa",
                         "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemMuzzle_ca.paa",
@@ -107,6 +108,7 @@ class Cfg3DEN {
                 };
                 class ArrowLeft: ctrlButton {
                     idc = IDC_ATTRIBUTE_LIST_LEFT;
+                    onButtonClick = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0),false)] call FUNC(attributeSelect));
                     text = SYMBOL_ITEM_NONE;
                     font = "RobotoCondensedBold";
                     x = QUOTE(-1);
@@ -116,6 +118,7 @@ class Cfg3DEN {
                 };
                 class ArrowRight: ArrowLeft {
                     idc = IDC_ATTRIBUTE_LIST_RIGHT;
+                    onButtonClick = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0),true)] call FUNC(attributeSelect));
                     text = SYMBOL_ITEM_VIRTUAL;
                 };
                 class SearchButton: ctrlButtonPicture {

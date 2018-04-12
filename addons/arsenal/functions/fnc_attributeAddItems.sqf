@@ -57,6 +57,7 @@ if (_category == -1) exitWith {
         if (toLower _displayName find _filter > -1) then {
             private _picture = getText (_config >> "picture");
             private _index = _listbox lnbAddRow ["", _displayName, _modeSymbol];
+            _listbox lnbSetData [[_index, 1], _x];
             _listbox lnbSetPicture [[_index, 0], _picture];
             _listbox lbSetTooltip [_index * (count lnbGetColumnsPosition _listbox), _x];
         };
@@ -110,7 +111,7 @@ private _config = switch (true) do {
         };
 
         private _index = _listbox lnbAddRow ["", _displayName, _symbol];
-        _listbox lnbSetData [[_index, 0], _x];
+        _listbox lnbSetData [[_index, 1], _x];
         _listbox lnbSetPicture [[_index, 0], _picture];
         _listbox lbSetTooltip [_index * (count lnbGetColumnsPosition _listbox), _x];
         _listbox lnbSetColor [[_index, 1], [1, 1, 1, _alpha]];

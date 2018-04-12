@@ -3,6 +3,7 @@ PREP(addStat);
 PREP(addVirtualItems);
 PREP(attributeAddItems);
 PREP(attributeLoad);
+PREP(attributeSelect);
 PREP(buttonCargo);
 PREP(buttonClearAll);
 PREP(buttonExport);
