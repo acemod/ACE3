@@ -28,7 +28,7 @@ private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
 
 // get all hitpoints and selections
-(getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
+(getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
 
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
@@ -41,7 +41,7 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
 
 {
     private _selection = _x;
-    private _hitpoint = _hitPoints select _forEachIndex;
+    private _hitpoint = toLower (_hitPoints select _forEachIndex);
 
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
@@ -68,7 +68,7 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
     } else {
         //Skip glass hitpoints
-        if (((toLower _hitPoint) find "glass") != -1) exitWith {
+        if ((_hitPoint find "glass") != -1) exitWith {
             TRACE_3("Skipping Glass",_hitpoint,_forEachIndex,_selection);
         };
         // Empty selections don't exist
