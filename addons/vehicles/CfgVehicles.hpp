@@ -229,4 +229,27 @@ class CfgVehicles {
             };
         };
     };
+
+    // Wiesel 2
+    class LT_01_base_F : Tank_F {
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {};
+        };
+    };
+    class LT_01_cannon_base_F : LT_01_base_F {
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {};
+        };
+    };
+    class I_LT_01_cannon_F : LT_01_cannon_base_F {
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {
+                weapons[] = {
+                    "SmokeLauncher",
+                    "ACE_LMG_coax_ext_MG3",
+                    "ACE_cannon_20mm_Rh202"
+                };
+            };
+        };
+    };
 };

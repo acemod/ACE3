@@ -495,6 +495,10 @@ class CfgWeapons {
         displayName = "Mini-Spike";
     };
 
+    class missiles_SAAMI : MissileLauncher {
+        displayName = "FIM-92F";
+    };
+
     // mortar
     class mortar_155mm_AMOS: CannonCore {
         displayName = "L/52";
@@ -541,6 +545,9 @@ class CfgWeapons {
     class ACE_LMG_coax_L94A1_mem3: LMG_coax {
         displayName = "L94A1";
     };
+    class ACE_LMG_coax_ext_MG3: LMG_coax {
+        displayName = "MG3";
+    };
 
     // more autocannons
     class autocannon_Base_F;
@@ -584,6 +591,20 @@ class CfgWeapons {
 
         class HE: HE {
             displayName = "L21A1 RARDEN";
+        };
+    };
+
+    class cannon_20mm : autocannon_Base_F {
+        class AP : autocannon_Base_F {};
+        class HE : autocannon_Base_F {};
+    };
+    class ACE_cannon_20mm_Rh202 : cannon_20mm {
+        displayName = "MK20 Rh 202";
+        class AP: AP {
+            displayName = "MK20 Rh 202";
+        };
+        class HE: HE {
+            displayName = "MK20 Rh 202";
         };
     };
 
