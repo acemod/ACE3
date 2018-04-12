@@ -520,6 +520,10 @@ class CfgWeapons {
         class player: player {};
     };
 
+    class ACE_cannon_120mm_GT12: cannon_120mm {
+        displayName = "GT12";
+    };
+
     class cannon_105mm: CannonCore {
         displayName = "M68";
         class player: Mode_SemiAuto {

@@ -230,7 +230,7 @@ class CfgVehicles {
         };
     };
 
-    // Wiesel 2
+    // Tanks DLC Wiesel 2
     class LT_01_base_F : Tank_F {
         class Turrets : Turrets {
             class MainTurret : MainTurret {};
@@ -249,6 +249,46 @@ class CfgVehicles {
                     "ACE_LMG_coax_ext_MG3",
                     "ACE_cannon_20mm_Rh202"
                 };
+            };
+        };
+    };
+
+    // Tanks DLC Rooikat 120
+    class AFV_Wheeled_01_base_F : wheeled_APC_F {
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {};
+        };
+    };
+    class AFV_Wheeled_01_up_base_F : AFV_Wheeled_01_base_F {
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {};
+        };
+    };
+    class B_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
+        class Turrets : Turrets {
+            class MainTurret: MainTurret {
+                weapons[] = {"ACE_cannon_120mm_GT12","MMG_02_coax"};
+            };
+        };
+    };
+    class B_T_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
+        class Turrets : Turrets {
+            class MainTurret: MainTurret {
+                weapons[] = {"ACE_cannon_120mm_GT12","MMG_02_coax"};
+            };
+        };
+    };
+    class B_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
+        class Turrets : Turrets {
+            class MainTurret: MainTurret {
+                weapons[] = {"ACE_cannon_120mm_GT12","MMG_02_coax"};
+            };
+        };
+    };
+    class B_T_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
+        class Turrets : Turrets {
+            class MainTurret: MainTurret {
+                weapons[] = {"ACE_cannon_120mm_GT12","MMG_02_coax"};
             };
         };
     };
