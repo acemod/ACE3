@@ -120,14 +120,14 @@ While in 3DEN you have the ability to save default loadouts in ACE Arsenal, doin
 To do so:
 - Open ACE Arsenal in 3DEN by editing a unit's loadout.
 - Click on the "Loadouts" tab.
-- Click on the "default loadouts" tab.
+- Click on the "Default Loadouts" tab.
 - Enter a loadout name and save.
 
 This loadout list can be exported to the clipboard by using <kbd>Shift</kbd>. + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
 
 ## 5. Stats
 
-ACE Arsenal stats are customizable, I will show you how.
+ACE Arsenal stats are customizable, this will show you how.
 
 ### 5.1. Adding stats via config
 
