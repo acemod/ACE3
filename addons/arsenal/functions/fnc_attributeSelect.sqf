@@ -23,7 +23,7 @@ params ["_controlsGroup", "_addItem"];
 private _listbox = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_LIST;
 private _currentRow = lnbCurSelRow _listbox;
 private _itemClassname = _listbox lnbData [_currentRow, 1];
-TRACE_2("Handle selection",_itemClassname,_addItem);
+TRACE_2("Handling item selection",_itemClassname,_addItem);
 
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 _attributeValue params ["_attributeItems", "_attributeMode"];

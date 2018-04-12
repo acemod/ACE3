@@ -38,6 +38,7 @@ class Cfg3DEN {
                 };
                 class Mode: ctrlToolbox {
                     idc = IDC_ATTRIBUTE_MODE;
+                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0), _this select 1)] call FUNC(attributeMode));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(5 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
