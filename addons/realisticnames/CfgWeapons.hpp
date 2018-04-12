@@ -545,7 +545,7 @@ class CfgWeapons {
     class ACE_LMG_coax_L94A1_mem3: LMG_coax {
         displayName = "L94A1";
     };
-    class ACE_LMG_coax_ext_MG3: LMG_coax {
+    class ACE_LMG_coax_ext_MG3: LMG_coax_ext {
         displayName = "MG3";
     };
 
