@@ -3142,6 +3142,10 @@
             <Chinese>"北極星"先進佈署越野車 (XM312重機槍)</Chinese>
             <Chinesesimp>"北极星"先进布署越野车 (XM312重机枪)</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_01_at">
+            <English>Polaris DAGOR (AT)</English>
+            <German>Polaris DAGOR (AT)</German>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
             <German>Polaris DAGOR</German>
@@ -3162,6 +3166,10 @@
             <Japanese>LSV Mk. II (M134)</Japanese>
             <Chinese>輕型突擊車2式 (M134迷你機炮)</Chinese>
             <Chinesesimp>轻型突击车2式 (M134迷你机炮)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_lsv_02_at">
+            <English>LSV Mk. II (AT)</English>
+            <German>LSV Mk. II (AT)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>

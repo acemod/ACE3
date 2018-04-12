@@ -763,6 +763,9 @@ class CfgVehicles {
     class LSV_01_light_base_F : LSV_01_base_F {
         displayName = CSTRING(lsv_01_light);
     };
+    class LSV_01_AT_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_at);
+    };
 
     // Light Strike Vehicle Mk. II (Qilin)
     class LSV_02_base_F;
@@ -771,6 +774,9 @@ class CfgVehicles {
     };
     class LSV_02_unarmed_base_F : LSV_02_base_F {
         displayName = CSTRING(lsv_02_unarmed);
+    };
+    class LSV_02_AT_base_F : LSV_02_base_F {
+        displayName = CSTRING(lsv_02_at);
     };
 
 };
