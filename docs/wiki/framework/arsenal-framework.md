@@ -223,3 +223,21 @@ For config added stats the classname is used, for function added ones the string
  * Public: Yes
 */
 ```
+
+#### 6.0 Eventhandlers
+
+All are local.
+
+| Name  | Arguments |
+| ------------- | ------------- |
+| ace_arsenal_displayOpened  | Arsenal display (DISPLAY) |
+| ace_arsenal_displayClosed | None |
+| ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
+| ace_arsenal_rightPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
+| ace_arsenal_onLoadoutSave | Loadout index (SCALAR), [loadout name (STRING), loadout data (ARRAY)] |
+| ace_arsenal_onLoadoutLoad | loadout data (ARRAY), loadout name (STRING) |
+|  ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL),, [loadout author (STRING), loadout name (STRING), loadout data (ARRAY)]  |
+|  ace_arsenal_loadoutUnshared | Loadouts list listnBox control (CONTROL), loadout name (STRING) |
+| ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (BOOL), shiftState (BOOL) |
+| ace_arsenal_loadoutImported | Arsenal display (DISPLAY), (import list (BOOL) |
+| ace_arsenal_loadoutExported | Arsenal display (DISPLAY), export list (BOOL) |
