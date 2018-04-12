@@ -1,6 +1,8 @@
 PREP(addListBoxItem);
 PREP(addStat);
 PREP(addVirtualItems);
+PREP(attributeAddItems);
+PREP(attributeLoad);
 PREP(buttonCargo);
 PREP(buttonClearAll);
 PREP(buttonExport);
