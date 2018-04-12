@@ -361,6 +361,9 @@ class CfgWeapons {
     class Missile_AGM_01_Plane_CAS_02_F: Missile_AGM_02_Plane_CAS_01_F {
         displayName = "Kh-25MTP";
     };
+    class missiles_Vorona : MissileLauncher {
+        displayName = CSTRING(missiles_vorona);
+    };
 
     // rockets
     class Rocket_04_HE_Plane_CAS_01_F: RocketPods {
