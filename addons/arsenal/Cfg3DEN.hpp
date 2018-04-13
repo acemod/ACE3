@@ -149,6 +149,14 @@ class Cfg3DEN {
                     y = QUOTE(101.83 * ATTRIBUTE_H);
                     w = QUOTE(25 * ATTRIBUTE_W);
                     h = QUOTE(5 * ATTRIBUTE_H);
+                    colorBackground[] = {0, 0, 0, 0.6};
+                };
+                class ExportButton: ClearButton {
+                    idc = IDC_ATTRIBUTE_EXPORT_BUTTON;
+                    onButtonClick = QUOTE(copyToClipboard str ((uiNamespace getVariable [ARR_2(QQGVAR(attributeValue),[ARR_2([],0)])]) select 0));
+                    text = CSTRING(buttonExportText);
+                    tooltip = CSTRING(AttributeExport_Tooltip);
+                    x = QUOTE(79 * ATTRIBUTE_W);
                 };
             };
         };
@@ -166,7 +174,7 @@ class Cfg3DEN {
                         tooltip = "";
                         expression = QUOTE([ARR_3(_this,_value select 0,true)] call FUNC(initBox););
                         defaultValue = "[[], 0]";
-                        condition = "1";
+                        condition = "object";
                         wikiType = "[[Array]]";
                         value = 0;
                     };
