@@ -633,6 +633,90 @@ class CfgWeapons {
         displayName = "UTG Defender 126";
     };
 
+    class optic_hamr : ItemCore {
+        displayName = CSTRING(optic_hamr);
+    };
+    class optic_Hamr_khk_F : optic_hamr {
+        displayName = CSTRING(optic_hamr_khk);
+    };
+
+    class optic_Arco : ItemCore {
+        displayName = CSTRING(optic_arco);
+    };
+    class optic_Arco_blk_F : optic_Arco {
+        displayName = CSTRING(optic_arco_blk);
+    };
+    class optic_Arco_ghex_F : optic_Arco {
+        displayName = CSTRING(optic_arco_ghex);
+    };
+
+    class optic_ERCO_blk_f : optic_Arco {
+        displayName = CSTRING(optic_erco_blk);
+    };
+    class optic_ERCO_khk_f : optic_ERCO_blk_f {
+        displayName = CSTRING(optic_erco_khk);
+    };
+    class optic_ERCO_snd_f : optic_ERCO_blk_f {
+        displayName = CSTRING(optic_erco_snd);
+    };
+    
+    class optic_LRPS : ItemCore {
+        displayName = CSTRING(optic_lrps);
+    };
+    class optic_LRPS_ghex_F : optic_LRPS {
+        displayName = CSTRING(optic_lrps_ghex);
+    };
+    class optic_LRPS_tna_F : optic_LRPS {
+        displayName = CSTRING(optic_lrps_tna);
+    };
+
+    class optic_DMS : ItemCore {
+        displayName = CSTRING(optic_dms);
+    };
+    class optic_DMS_ghex_F : optic_DMS {
+        displayName = CSTRING(optic_dms_ghex);
+    };
+
+    class optic_holosight : ItemCore {
+        displayName = CSTRING(optic_holosight);
+    };
+    class optic_Holosight_blk_F : optic_holosight {
+        displayName = CSTRING(optic_holosight_blk);
+    };
+    class optic_Holosight_khk_F : optic_holosight {
+        displayName = CSTRING(optic_holosight_khk);
+    };
+    class optic_Holosight_smg : ItemCore {
+        displayName = CSTRING(optic_holosight_smg);
+    };
+    class optic_Holosight_smg_blk_F : optic_Holosight_smg {
+        displayName = CSTRING(optic_holosight_smg_blk);
+    };
+    class optic_Holosight_smg_khk_F : optic_Holosight_smg {
+        displayName = CSTRING(optic_holosight_smg_khk);
+    };
+
+    class optic_MRCO : ItemCore {
+        displayName = CSTRING(optic_MRCO);
+    };
+
+    class optic_Yorris : ItemCore {
+        displayName = CSTRING(optic_Yorris);
+    };
+
+    class optic_ACO : ItemCore {
+        displayName = CSTRING(optic_ACO);
+    };
+    class optic_ACO_grn : ItemCore {
+        displayName = CSTRING(optic_ACO_grn);
+    };
+    class optic_ACO_smg : ItemCore {
+        displayName = CSTRING(optic_ACO_smg);
+    };
+    class optic_ACO_grn_smg : ItemCore {
+        displayName = CSTRING(optic_ACO_grn_smg);
+    };
+
     // APEX/Tanoa
 
     // QBZ-95 and variants

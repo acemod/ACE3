@@ -3242,6 +3242,98 @@
             <English>Wiesel 2 RFCV (Radar)</English>
             <German>Wiesel 2 AFF (Radar)</German>
         </Key>
-
+        <Key ID="STR_ACE_RealisticNames_optic_hamr">
+            <English>Leupold Mark 4 HAMR</English>
+            <German>Leupold Mark 4 HAMR</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
+            <English>Leupold Mark 4 HAMR (Khaki)</English>
+            <German>Leupold Mark 4 HAMR (Khaki)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco">
+            <English>ELCAN SpecterOS (Tan)</English>
+            <German>ELCAN SpecterOS (Beige)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
+            <English>ELCAN SpecterOS (Black)</English>
+            <German>ELCAN SpecterOS (Schwarz)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
+            <English>ELCAN SpecterOS (Green Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
+            <English>SIG BRAVO4 / ROMEO3 (Black)</English>
+            <German>SIG BRAVO4 / ROMEO3 (Schwarz)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
+            <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
+            <German>SIG BRAVO4 / ROMEO3 (Khaki)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
+            <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
+            <German>SIG BRAVO4 / ROMEO3 (Beige)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_lrps">
+            <English>Nightforce NXS</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
+            <English>Nightforce NXS (Grenn Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
+            <English>Nightforce NXS (Jungle)</English>
+            <German>Nightforce NXS (Dschungel)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms">
+            <English>Burris XTR II</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
+            <English>Burris XTR II (Green Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight">
+            <English>EOTech XPS3 (Tan)</English>
+            <German>EOTech XPS3 (Beige)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
+            <English>EOTech XPS3 (Black)</English>
+            <German>EOTech XPS3 (Schwarz)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
+            <English>EOTech XPS3 (Khaki)</English>
+            <German>EOTech XPS3 (Khaki)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
+            <English>EOTech XPS3 SMG (Tan)</English>
+            <German>EOTech XPS3 SMG (Beige)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
+            <English>EOTech XPS3 SMG (Black)</English>
+            <German>EOTech XPS3 SMG (Schwarz)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
+            <English>EOTech XPS3 SMG (Khaki)</English>
+            <German>EOTech XPS3 SMG (Khaki)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrco">
+            <English>IOR-Valada Pitbull 2</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_Yorris">
+            <English>Burris FastFire 2</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ACO">
+            <English>C-More Railway (Red)</English>
+            <German>C-More Railway (Rot)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
+            <English>C-More Railway (Green)</English>
+            <German>C-More Railway (Grün)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
+            <English>C-More Railway SMG (Red)</English>
+            <German>C-More Railway SMG (Rot)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
+            <English>C-More Railway SMG (Green)</English>
+            <German>C-More Railway SMG (Grün)</German>
+        </Key>
     </Package>
 </Project>
