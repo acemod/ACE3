@@ -452,6 +452,11 @@ class CfgWeapons {
         };
     };
 
+    class HMG_127_APC : HMG_127 {};
+    class ACE_HMG_127_KORD : HMG_127_APC {
+        displayName = "6P49 Kord";
+    };
+
     class HMG_01: HMG_127 {
         displayName = "XM312";
     };
@@ -534,6 +539,10 @@ class CfgWeapons {
     class cannon_125mm: CannonCore {
         displayName = "2A46";
     };
+    
+    class cannon_125mm_advanced : cannon_125mm {
+        displayName = "2A82-1M";
+    };
 
     // coax machine guns
     class LMG_coax: LMG_RCWS {
@@ -596,6 +605,10 @@ class CfgWeapons {
         class HE: HE {
             displayName = "L21A1 RARDEN";
         };
+    };
+    
+    class autocannon_30mm_RCWS : autocannon_Base_F {
+        displayName = "2A42";
     };
 
     class cannon_20mm : autocannon_Base_F {

@@ -27,6 +27,9 @@ class CfgWeapons {
         };
     };
 
+    class HMG_127_APC : HMG_127 {};
+    class ACE_HMG_127_KORD : HMG_127_APC {};
+
     // Tanks DLC: weapons for Wiesel and Rooikat
     class CannonCore;
     class autocannon_Base_F : CannonCore {};
@@ -35,4 +38,5 @@ class CfgWeapons {
 
     class cannon_120mm : CannonCore {};
     class ACE_cannon_120mm_GT12 : cannon_120mm {};
+
 };

@@ -292,4 +292,26 @@ class CfgVehicles {
             };
         };
     };
+
+    // Tanks DLC Armata
+    class MBT_04_base_F : Tank_F {
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {
+                class Turrets : Turrets {
+                    class CommanderOptics: CommanderOptics {};
+                };
+            };
+        };
+    };
+    class MBT_04_cannon_base_F : MBT_04_base_F {
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {
+                class Turrets : Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        weapons[] = {"ACE_HMG_127_KORD","SmokeLauncher"};
+                    };
+                };
+            };
+        };
+    };
 };
