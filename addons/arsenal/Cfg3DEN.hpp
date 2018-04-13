@@ -125,7 +125,7 @@ class Cfg3DEN {
                 };
                 class SearchButton: ctrlButtonPicture {
                     idc = IDC_ATTRIBUTE_SEARCH_BUTTON;
-                    onButtonClick = QUOTE(((ctrlParentControlsGroup (_this select 0)) controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR) ctrlSetText ''; [ctrlParentControlsGroup (_this select 0)] call FUNC(attributeClear));
+                    onButtonClick = QUOTE(((ctrlParentControlsGroup (_this select 0)) controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR) ctrlSetText ''; [ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
                     text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
@@ -144,7 +144,7 @@ class Cfg3DEN {
                 class ClearButton: ctrlButton {
                     idc = IDC_ATTRIBUTE_CLEAR_BUTTON;
                     onButtonClick = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeClear));
-                    text = CSTRING(Clear);
+                    text = "$STR_disp_arcmap_clear";
                     x = QUOTE(105 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
                     w = QUOTE(25 * ATTRIBUTE_W);
@@ -172,10 +172,11 @@ class Cfg3DEN {
                         control = QGVAR(attribute);
                         displayName = CSTRING(Mission);
                         tooltip = "";
-                        expression = QUOTE([ARR_3(_this,_value select 0,true)] call FUNC(initBox););
+                        expression = QUOTE(if (!is3DEN) then {[ARR_2(_this,+_value)] call FUNC(attributeInit)});
                         defaultValue = "[[], 0]";
-                        condition = "object";
+                        condition = "1";
                         wikiType = "[[Array]]";
+                        validate = "none";
                         value = 0;
                     };
                 };

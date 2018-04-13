@@ -730,9 +730,6 @@
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
         </Key>
-        <Key ID="STR_ACE_Arsenal_Clear">
-            <English>Clear</English>
-        </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
         </Key>
