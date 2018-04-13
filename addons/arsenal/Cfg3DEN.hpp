@@ -21,6 +21,8 @@ class Cfg3DEN {
     class Attributes {
         class GVAR(attribute): ctrlControlsGroupNoScrollbars {
             idc = -1;
+            // onLoad fixes attributeLoad not happening on multiple selection with different attribute
+            onLoad = QUOTE(private _objects = get3DENSelected 'object'; if (count _objects > 1) then {[ARR_2(_this select 0,((_objects select 0) get3DENAttribute QQGVAR(attribute)) select 0)] call FUNC(attributeLoad)});
             x = QUOTE(0);
             y = QUOTE(0);
             w = QUOTE(130 * ATTRIBUTE_W);
