@@ -718,5 +718,20 @@
             <English>Exported class name to clipboard</English>
             <French>Nom de classe exporté dans le presse papier</French>
         </Key>
+        <Key ID="STR_ACE_Arsenal_Mode">
+            <English>Mode</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Whitelist">
+            <English>Whitelist</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Blacklist">
+            <English>Blacklist</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Items">
+            <English>Items</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Clear">
+            <English>Clear</English>
+        </Key>
     </Package>
 </Project>

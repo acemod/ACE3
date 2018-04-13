@@ -30,7 +30,7 @@ class Cfg3DEN {
             class controls {
                 class ModeTitle: ctrlStatic {
                     idc = -1;
-                    text = "Mode";
+                    text = CSTRING(Mode);
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(0);
                     w = QUOTE(125 * ATTRIBUTE_W);
@@ -45,10 +45,10 @@ class Cfg3DEN {
                     h = QUOTE(5 * ATTRIBUTE_H);
                     rows = 1;
                     columns = 2;
-                    strings[] = {"Whitelist", "Blacklist"};
+                    strings[] = {CSTRING(Whitelist), CSTRING(Blacklist)};
                 };
                 class ItemsTitle: ModeTitle {
-                    text = "Items";
+                    text = CSTRING(Items);
                     y = QUOTE(10 * ATTRIBUTE_H);
                 };
                 class Category: ctrlToolboxPictureKeepAspect {
@@ -99,6 +99,7 @@ class Cfg3DEN {
                     idc = IDC_ATTRIBUTE_LIST;
                     idcLeft = IDC_ATTRIBUTE_LIST_LEFT;
                     idcRight = IDC_ATTRIBUTE_LIST_RIGHT;
+                    onLBDblClick = QUOTE(_this call FUNC(attributeDblClick));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(35.83 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
@@ -124,6 +125,7 @@ class Cfg3DEN {
                 };
                 class SearchButton: ctrlButtonPicture {
                     idc = IDC_ATTRIBUTE_SEARCH_BUTTON;
+                    onButtonClick = QUOTE(((ctrlParentControlsGroup (_this select 0)) controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR) ctrlSetText ''; [ctrlParentControlsGroup (_this select 0)] call FUNC(attributeClear));
                     text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
@@ -133,6 +135,7 @@ class Cfg3DEN {
                 };
                 class SearchBar: ctrlEdit {
                     idc = IDC_ATTRIBUTE_SEARCHBAR;
+                    onKeyUp = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
                     x = QUOTE(11 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
                     w = QUOTE(55 * ATTRIBUTE_W);
@@ -141,7 +144,7 @@ class Cfg3DEN {
                 class ClearButton: ctrlButton {
                     idc = IDC_ATTRIBUTE_CLEAR_BUTTON;
                     onButtonClick = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeClear));
-                    text = "Clear";
+                    text = CSTRING(Clear);
                     x = QUOTE(105 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
                     w = QUOTE(25 * ATTRIBUTE_W);
