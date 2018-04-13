@@ -730,12 +730,25 @@ class CfgVehicles {
     // APEX/Tanoa
 
     // Jeep Wrangler
-    class Offroad_02_unarmed_base_F;
+    class Offroad_02_base_F;
+    class Offroad_02_unarmed_base_F : Offroad_02_base_F {};
     class C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
         displayName = CSTRING(C_Offroad_02_unarmed);
     };
     class I_C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
         displayName = CSTRING(C_Offroad_02_unarmed);
+    };
+    class Offroad_02_at_base_F: Offroad_02_base_F {
+        displayName = CSTRING(C_Offroad_02_at);
+    };
+    class I_C_Offroad_02_at_F: Offroad_02_at_base_F {
+        displayName = CSTRING(C_Offroad_02_at);
+    };
+    class Offroad_02_lmg_base_F: Offroad_02_base_F {
+        displayName = CSTRING(C_Offroad_02_lmg);
+    };
+    class I_C_Offroad_02_lmg_F: Offroad_02_lmg_base_F {
+        displayName = CSTRING(C_Offroad_02_lmg);
     };
 
     // Cessna

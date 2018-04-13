@@ -2613,6 +2613,14 @@
             <Chinese>"牧馬人"吉普車</Chinese>
             <Chinesesimp>"牧马人"吉普车</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_at">
+            <English>Jeep Wrangler (SPG-9)</English>
+            <German>Jeep Wrangler (SPG-9)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
+            <English>Jeep Wrangler (LMG)</English>
+            <German>Jeep Wrangler (LMG)</German>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
             <Czech>Cessna TTx</Czech>
