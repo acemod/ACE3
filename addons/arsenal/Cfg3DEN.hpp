@@ -25,8 +25,8 @@ class Cfg3DEN {
             y = QUOTE(0);
             w = QUOTE(130 * ATTRIBUTE_W);
             h = QUOTE(106.83 * ATTRIBUTE_H);
-            attributeLoad = QUOTE([ARR_2(_this,_value)] call FUNC(attributeLoad));
-            attributeSave = "";
+            attributeLoad = QUOTE([ARR_2(_this,+_value)] call FUNC(attributeLoad));
+            attributeSave = QUOTE(uiNamespace getVariable [ARR_2(QQGVAR(attributeValue),[ARR_2([], 0)])]);
             class controls {
                 class ModeTitle: ctrlStatic {
                     idc = -1;
@@ -140,6 +140,7 @@ class Cfg3DEN {
                 };
                 class ClearButton: ctrlButton {
                     idc = IDC_ATTRIBUTE_CLEAR_BUTTON;
+                    onButtonClick = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeClear));
                     text = "Clear";
                     x = QUOTE(105 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
@@ -160,10 +161,11 @@ class Cfg3DEN {
                         control = QGVAR(attribute);
                         displayName = CSTRING(Mission);
                         tooltip = "";
-                        expression = QUOTE(true);
+                        expression = QUOTE([ARR_3(_this,_value select 0,true)] call FUNC(initBox););
                         defaultValue = "[[], 0]";
                         condition = "1";
                         wikiType = "[[Array]]";
+                        value = 0;
                     };
                 };
             };

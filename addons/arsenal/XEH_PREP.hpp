@@ -2,6 +2,7 @@ PREP(addListBoxItem);
 PREP(addStat);
 PREP(addVirtualItems);
 PREP(attributeAddItems);
+PREP(attributeClear);
 PREP(attributeLoad);
 PREP(attributeMode);
 PREP(attributeSelect);
