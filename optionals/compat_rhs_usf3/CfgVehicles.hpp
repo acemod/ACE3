@@ -196,23 +196,9 @@ class CfgVehicles {
         EGVAR(hellfire,addLaserDesignator) = 1;
     };
 
-    class RHS_AH1Z: RHS_AH1Z_base {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0; // Note: This is still required because of inheritance from Heli_Attack_01_base_F
-            };
-        };
-    };
     class RHS_AH64_base: Heli_Attack_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1420;
         EGVAR(hellfire,addLaserDesignator) = 1;
-    };
-    class RHS_AH64D: RHS_AH64_base {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0; // Note: This is still required because of inheritance from Heli_Attack_01_base_F
-            };
-        };
     };
 
     class MBT_01_arty_base_F;
