@@ -10,6 +10,7 @@ class CfgWeapons {
     class ACE_LMG_coax_MAG58_mem3: LMG_coax {};
     class ACE_LMG_coax_ext_MAG58: LMG_coax_ext {};
     class ACE_LMG_coax_ext_MG3: LMG_coax_ext {};
+    class ACE_LMG_coax_DenelMG4 : LMG_coax {};
 
     class LMG_Minigun: LMG_RCWS {
         // Add the following: "2000Rnd_762x51_Belt_T_Green","2000Rnd_762x51_Belt_T_Red","2000Rnd_762x51_Belt_T_Yellow","5000Rnd_762x51_Belt","5000Rnd_762x51_Yellow_Belt"
