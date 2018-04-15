@@ -124,21 +124,18 @@ private _woundsCreated = [];
             systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, _woundDamage toFixed 2, _woundDamage > PENETRATION_THRESHOLD, _bleeding toFixed 3, _pain toFixed 3];
 #endif
 
-            // Find the new combined wound damage of all wounds on this body part
-            private _combinedDamage = _woundDamage;
+            // Find the weighted combined wound damage
+            private _lethalPercent = _woundDamage * (BODY_PART_DAMAGE_WEIGHTS select _bodyPartNToAdd);
             {
                 _x params ["", "", "_bodyPartN", "", "", "_damage"];
-                if (_bodyPartNToAdd == _bodyPartN) then {
-                    _combinedDamage = _combinedDamage + _damage;
-                };
+                _lethalPercent = _lethalPercent + _damage * (BODY_PART_DAMAGE_WEIGHTS select _bodyPartN);
             } forEach _openWounds;
 #ifdef DEBUG_MODE_FULL
-            systemChat format["combined damage: %1", _combinedDamage toFixed 2];
+            systemChat format["lethal percentage: %1%%", (_lethalPercent * 100) toFixed 0 ];
 #endif
 
             // Handle case where damage becomes lethal (respects lethal injury setting)
-            private _lethalDamage = LETHAL_DAMAGE_THRESHOLDS select _bodyPartNToAdd;
-            if (_combinedDamage > _lethalDamage) then {
+            if (_lethalPercent > LETHAL_DAMAGE_THRESHOLD) then {
                 [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
             };
 
