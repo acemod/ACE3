@@ -15,11 +15,11 @@
  */
 #include "script_component.hpp"
 
-ACE_isMapEnabled     = call {private _config = missionConfigFile >> "showMap";     !isNumber _config || {getNumber _config == 1}};  // default value is 1, so do isNumber check first
-ACE_isCompassEnabled = call {private _config = missionConfigFile >> "showCompass"; !isNumber _config || {getNumber _config == 1}};
-ACE_isWatchEnabled   = call {private _config = missionConfigFile >> "showWatch";   !isNumber _config || {getNumber _config == 1}};
-ACE_isRadioEnabled   = call {private _config = missionConfigFile >> "showRadio";   !isNumber _config || {getNumber _config == 1}};
-ACE_isGPSEnabled     = call {private _config = missionConfigFile >> "showGPS";     !isNumber _config || {getNumber _config == 1}};
+ACE_isMapEnabled     = getMissionConfigValue ["showMap", 1] in [true, 1];
+ACE_isCompassEnabled = getMissionConfigValue ["showCompass", 1] in [true, 1];
+ACE_isWatchEnabled   = getMissionConfigValue ["showWatch", 1] in [true, 1];
+ACE_isRadioEnabled   = getMissionConfigValue ["showRadio", 1] in [true, 1];
+ACE_isGPSEnabled     = getMissionConfigValue ["showGPS", 1] in [true, 1];
 
 GVAR(AssignedItems) = [];
 GVAR(AssignedItemsInfo) = [];
