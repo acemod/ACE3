@@ -74,8 +74,9 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, round(_woundDamage * 100) / 100, _woundDamage > PENETRATION_THRESHOLD, round(_bleeding * 1000) / 1000, round(_pain * 1000) / 1000];
 #endif
 
-    if (_bodyPartNToAdd == 0 && {_woundDamage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
-        TRACE_2("FatalInjury",_unit,_woundDamage);
+    // Check if the incoming wound is lethal by itself
+    private _lethalDamage = LETHAL_DAMAGE_THRESHOLDS select _bodyPartNToAdd;
+    if (_woundDamage > _lethalDamage) then {
         [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
     };
 
@@ -98,6 +99,11 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
                 private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
                 _x set [5, _newDamage];
                 _createNewWound = false;
+
+                // If new damage is lethal then the wound becomes fatal (accounts for many small wounds building up)
+                if (_newDamage > _lethalDamage) then {
+                    [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+                };
             };
         };
     } forEach _openWounds;
