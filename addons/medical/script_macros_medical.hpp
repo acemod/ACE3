@@ -2,7 +2,7 @@
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 
 // How much wound damage is required on each hitpoint to be lethal (corresponds to ALL_BODY_PARTS)
-#define LETHAL_DAMAGE_THRESHOLDS [1, 3, 6, 6, 6, 6]
+#define LETHAL_DAMAGE_THRESHOLDS [1, 5, 10, 10, 10, 10]
 
 #define MEDICAL_ACTION_DISTANCE 1.75
 
