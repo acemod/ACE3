@@ -186,6 +186,13 @@ class CfgVehicles {
     class O_APC_Wheeled_02_base_F : APC_Wheeled_02_base_F {
         displayName = CSTRING(APC_Wheeled_02_rcws_Name);
     };
+    class APC_Wheeled_02_base_v2_F : APC_Wheeled_02_base_F{};
+    class O_APC_Wheeled_02_rcws_v2_F : APC_Wheeled_02_base_v2_F {
+        displayName = CSTRING(APC_Wheeled_02_rcws_Name);
+    };
+    class O_T_APC_Wheeled_02_rcws_v2_ghex_F : APC_Wheeled_02_base_v2_F {
+        displayName = CSTRING(APC_Wheeled_02_rcws_Name);
+    };
 
     class I_APC_Wheeled_03_base_F;
     class I_APC_Wheeled_03_cannon_F: I_APC_Wheeled_03_base_F {
