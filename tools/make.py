@@ -432,9 +432,15 @@ def cleanup_optionals(mod):
 
 
                 if (os.path.isfile(src_file_path)):
+                    if (os.path.isfile(dst_file_path)):
+                        # print("Cleanuping up old file {}".format(dst_file_path))
+                        os.remove(dst_file_path);
                     #print("Preserving {}".format(file_name))
                     os.renames(src_file_path,dst_file_path)
                 if (os.path.isfile(src_sig_path)):
+                    if (os.path.isfile(dst_sig_path)):
+                        # print("Cleanuping up old file {}".format(dst_sig_path))
+                        os.remove(dst_sig_path);
                     #print("Preserving {}".format(sigFile_name))
                     os.renames(src_sig_path,dst_sig_path)
             except FileExistsError:
