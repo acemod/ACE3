@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -3514,7 +3514,7 @@
             <English>In Cardiac Arrest</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_DisplayName">
-            <English>Cardiac Arrest time(s)</English>
+            <English>Cardiac Arrest time (seconds)</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_Description">
             <English>Defines how long it takes to die from cardiac arrest?</English>
