@@ -15,13 +15,12 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_listbox", "_currentRow"];
 TRACE_1("Double click toggle",_currentRow);
 
 // Get toggle mode (add or remove item)
 private _itemClassname = _listbox lnbData [_currentRow, 1];
-private _addItem = [true, false] select (_itemClassname in ((uiNamespace getVariable [QGVAR(attributeValue), [[], 0]]) select 0));
+private _addItem = !(_itemClassname in ((uiNamespace getVariable [QGVAR(attributeValue), [[], 0]]) select 0));
 
 [ctrlParentControlsGroup _listbox, _addItem] call FUNC(attributeSelect);

@@ -15,7 +15,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_object", "_value"];
 _value params ["_items", "_mode"];
