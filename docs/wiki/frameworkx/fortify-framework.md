@@ -64,6 +64,21 @@ class ACEX_Fortify_Presets {
  ```
 
  Then you will have to set the mission preset to `myMissionObjects` with `#fortify blufor myMissionObjects` to enable it.
+ 
+## 1.3 Adding custom deploy handlers
+
+A custom deploy handler allows missions makers to decide if an object can be placed or not.
+
+To verify that an object isn't above a certain terrain height we can check the heigt of the object before it is confirmed as placed. Returning `false` from the code block means that placement is not allowed.
+
+```sqf
+[{
+    params ["_unit", "_object", "_cost"];
+    private _return = (getPosATL _object) select 2 < 1;
+    _return
+}] call acex_fortify_fnc_addDeployHandler;
+```
+
 
 ## 2. Events
 
@@ -73,3 +88,4 @@ Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
 `acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted
+`acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
