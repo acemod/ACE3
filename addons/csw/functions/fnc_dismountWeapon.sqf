@@ -38,7 +38,7 @@ if (isNull GVAR(cswTripod)) then {
             // Create magazine holder and spawn the ammo that was in the weapon
             private _weaponRelPos = _weapon getRelPos RELATIVE_DIRECTION(270);
             private _ammoHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
-            _ammoHolder setPosATL _weaponRelPos;
+            _ammoHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
             _ammoHolder setVectorUp (surfaceNormal _weaponRelPos);
             _ammoHolder setDir random[0, 180, 360];
             
@@ -72,9 +72,9 @@ if (isNull GVAR(cswTripod)) then {
             _cswTripod setVelocity [0, 0, -0.05];
             _cswTripod setVectorUp (surfaceNormal _weaponPos);
                 
-            _weaponPos = _cswTripod getRelPos RELATIVE_DIRECTION(90);
+            _weaponRelPos = _cswTripod getRelPos RELATIVE_DIRECTION(90);
             private _weaponHolder = createVehicle["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
-            _weaponHolder setPosATL _weaponPos;
+            _weaponHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
             _weaponHolder setDir random[0, 180, 360];
             _weaponHolder addWeaponCargoGlobal[_carryWeaponClassname, 1];
             
