@@ -1067,7 +1067,7 @@
             <Chinesesimp>装载到货物中</Chinesesimp>
             <Korean>화물 싣기</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
+        <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Basculer JVN</French>
@@ -1077,8 +1077,8 @@
             <Chinesesimp>切换夜视镜</Chinesesimp>
             <Korean>야시경 토글</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
-            <English>NVG equipment</English>
+        <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment">
+            <English>NVG Equipment</English>
             <German>Nachtsichtgeräte</German>
             <French>Equipment de vision nocturne</French>
             <Italian>Attrezzatura NVG</Italian>
@@ -1087,7 +1087,7 @@
             <Chinesesimp>夜视镜装备</Chinesesimp>
             <Korean>야시경 장비</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
+        <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment_tooltip">
             <English>Add or remove NVGs from units</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
             <French>Ajouter ou retirer JVN des unités</French>
@@ -1097,18 +1097,14 @@
             <Chinesesimp>增加或移除单位的夜视镜</Chinesesimp>
             <Korean>야시경 추가/제거</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
-            <English>Toggle NVG target</English>
-            <German>Wechsle Nachtsichtgeräteziel</German>
-            <French>Cible du basculement</French>
-            <Italian>Attiva obiettivo NVG</Italian>
-            <Japanese>選択先の暗視装置の切り替え</Japanese>
-            <Chinese>切換目標的夜視鏡狀態</Chinese>
-            <Chinesesimp>切换目标的夜视镜状态</Chinesesimp>
-            <Korean>목표의 야시경 토글</Korean>
+        <Key ID="STR_ACE_Zeus_ToggleTarget">
+            <English>Toggle Target</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
-            <English>Selected group</English>
+        <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
+            <English>Units affected by the toggle</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_SelectedGroup">
+            <English>Selected Group</English>
             <German>Ausgewählte Gruppe</German>
             <French>Groupe sélectionné</French>
             <Italian>Gruppo selezionato</Italian>
@@ -1117,8 +1113,8 @@
             <Chinesesimp>选择小队</Chinesesimp>
             <Korean>그룹 선택</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
-            <English>Toggle flashlights</English>
+        <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_DisplayName">
+            <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
             <French>Basculer lampes torches</French>
             <Italian>Attiva torce</Italian>
@@ -1127,18 +1123,8 @@
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Korean>손전등 토글</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
-            <English>Toggle flashlight target</English>
-            <German>Wechsle Nachtsichtgeräteziel</German>
-            <French>Cible du basculement</French>
-            <Italian>Attiva obiettivo torcia</Italian>
-            <Japanese>選択先のフラッシュライトの切り替え</Japanese>
-            <Chinese>切換目標的手電筒狀態</Chinese>
-            <Chinesesimp>切换目标的手电筒状态</Chinesesimp>
-            <Korean>목표의 손전등 토글</Korean>
-        </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
-            <English>Flashlight</English>
+        <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_Flashlights">
+            <English>Flashlights</English>
             <German>Taschenlampe</German>
             <French>Lampe torche</French>
             <Italian>Torcia</Italian>
@@ -1147,8 +1133,8 @@
             <Chinesesimp>手电筒</Chinesesimp>
             <Korean>손전등</Korean>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightGear">
-            <English>Add gear</English>
+        <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_AddGear">
+            <English>Add Gear</English>
             <German>Ausrüstung hinzufügen</German>
             <French>Ajouter équipement</French>
             <Italian>Aggiungi equipaggiamento</Italian>

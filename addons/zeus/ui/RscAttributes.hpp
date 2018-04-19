@@ -583,42 +583,46 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
         class Title: Title {};
         class Content: Content {
             class Controls {
-                class ToggleNvg: RscControlsGroupNoScrollbars {
+                class toggleNvg: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_toggleNvg));
                     idc = 92854;
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(3);
+                    h = H_PART(2.1);
                     class controls {
-                        class ToggleNvgTitle: Title {
+                        class ToggleLabel: RscText {
                             idc = -1;
-                            text = CSTRING(moduleToggleNVG_ToggleNvgTitle);
-                            toolTip = CSTRING(moduleToggleNVG_ToggleNvgTitleTooltip);
-                            x = H_PART(0);
-                            y = H_PART(0);
-                            w = W_PART(7);
+                            text = CSTRING(ModuleToggleNVG_NvgEquipment);
+                            tooltip = CSTRING(ModuleToggleNVG_NvgEquipment_tooltip);
+                            x = 0;
+                            y = 0;
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class ToggleNvgCombo: RscCombo {
+                        class Toggle: ctrlToolbox {
                             idc = 92855;
-                            x = H_PART(6);
-                            y = H_PART(0);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = 0;
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
-                        class ToggleNvgSideTitle: Title {
-                            idc = -1;
-                            text = CSTRING(moduleToggleNVG_ToggleNvgSide);
-                            x = H_PART(0);
-                            y = H_PART(1.2);
-                            w = W_PART(7);
+                        class TargetLabel: ToggleLabel {
+                            text = CSTRING(ToggleTarget);
+                            tooltip = CSTRING(ToggleTarget_Tooltip);
+                            y = H_PART(1.1);
                         };
-                        class ToggleNvgSideCombo: RscCombo {
+                        class Target: RscCombo {
                             idc = 92856;
-                            x = H_PART(6);
-                            y = H_PART(1.2);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = H_PART(1.1);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.7};
                         };
                     };
                 };
@@ -637,55 +641,54 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
         class Title: Title {};
         class Content: Content {
             class Controls {
-                class ToggleFlashlight: RscControlsGroupNoScrollbars {
+                class toggleFlashlight: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_toggleFlashlight));
                     idc = 56217;
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(5);
+                    h = H_PART(3.2);
                     class controls {
-                        class ToggleFlashlightTitle: Title {
+                        class ToggleLabel: RscText {
                             idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightTitle);
-                            x = H_PART(0);
-                            y = H_PART(0);
-                            w = W_PART(7);
+                            text = CSTRING(ModuleToggleFlashlight_Flashlights);
+                            x = 0;
+                            y = 0;
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class ToggleFlashlightCombo: RscCombo {
+                        class Toggle: ctrlToolbox {
                             idc = 56218;
-                            x = H_PART(6);
-                            y = H_PART(0);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = 0;
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
-                        class ToggleFlashlightSideTitle: Title {
-                            idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightSide);
-                            x = H_PART(0);
-                            y = H_PART(1.2);
-                            w = W_PART(7);
+                        class AddGearLabel: ToggleLabel {
+                            text = CSTRING(ModuleToggleFlashlight_AddGear);
+                            y = H_PART(1.1);
                         };
-                        class ToggleFlashlightSideCombo: RscCombo {
+                        class AddGear: Toggle {
                             idc = 56219;
-                            x = H_PART(6);
-                            y = H_PART(1.2);
-                            w = W_PART(10.1);
-                            h = H_PART(1);
+                            y = H_PART(1.1);
+                            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
                         };
-                        class ToggleFlashlightGearTitle: Title {
-                            idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightGear);
-                            x = H_PART(0);
-                            y = H_PART(2.4);
-                            w = W_PART(7);
+                        class TargetLabel: ToggleLabel {
+                            text = CSTRING(ToggleTarget);
+                            tooltip = CSTRING(ToggleTarget_Tooltip);
+                            y = H_PART(2.2);
                         };
-                        class ToggleFlashlightGearCombo: RscCombo {
+                        class Target: RscCombo {
                             idc = 56220;
-                            x = H_PART(6);
-                            y = H_PART(2.4);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = H_PART(2.2);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.7};
                         };
                     };
                 };

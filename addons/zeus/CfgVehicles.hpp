@@ -279,14 +279,15 @@ class CfgVehicles {
     class GVAR(moduleToggleNvg): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(moduleToggleNVG_DisplayName);
+        displayName = CSTRING(ModuleToggleNVG_DisplayName);
         curatorInfoType = QGVAR(RscToggleNvg);
     };
     class GVAR(moduleToggleFlashlight): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(moduleToggleFlashlight_DisplayName);
+        displayName = CSTRING(ModuleToggleFlashlight_DisplayName);
         curatorInfoType = QGVAR(RscToggleFlashlight);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Flashlight_ca.paa);
     };
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
