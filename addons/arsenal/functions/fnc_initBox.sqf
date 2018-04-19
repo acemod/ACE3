@@ -49,7 +49,7 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
             {
                 params ["_target", "_player"];
             
-                [_player, _target, ["isNotSwimming", "isNotCarrying", "isNotDragging", "notOnMap", "isNotEscorting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)
+                [_player, _target] call EFUNC(common,canInteractWith)
             }, 
             {},
             []

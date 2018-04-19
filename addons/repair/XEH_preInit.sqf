@@ -22,13 +22,17 @@ if (isServer) then {
         if (isNil "_spareTracks") then {
             _spareTracks = [0, 1] select (_vehicle isKindOf "Tank"); // must match eden attribute default
         };
-        [_vehicle, _spareTracks, "ACE_Track"] call FUNC(addSpareParts);
+        if (_spareTracks > 0) then {
+            [_vehicle, _spareTracks, "ACE_Track"] call FUNC(addSpareParts);
+        };
 
         private _spareWheels = _vehicle getVariable QGVAR(editorLoadedWheels);
         if (isNil "_spareWheels") then {
             _spareWheels = [0, 1] select (_vehicle isKindOf "Car"); // must match eden attribute default
         };
-        [_vehicle, _spareWheels, "ACE_Wheel"] call FUNC(addSpareParts);
+        if (_spareWheels > 0) then {
+            [_vehicle, _spareWheels, "ACE_Wheel"] call FUNC(addSpareParts);
+        };
     };
 
     ["Tank", "initPost", _fnc_addSpareItems] call CBA_fnc_addClassEventHandler;

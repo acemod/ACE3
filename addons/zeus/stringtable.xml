@@ -7,6 +7,7 @@
             <Chinese>宙斯</Chinese>
             <Chinesesimp>宙斯</Chinesesimp>
             <Japanese>Zeus</Japanese>
+            <Korean>제우스</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>
@@ -1236,6 +1237,268 @@
             <Chinese>解除駐軍駐守狀態</Chinese>
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
             <Korean>주둔해제</Korean>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_noneFound">
+            <English>No players found</English>
+            <Chinese>沒有玩家找到</Chinese>
+            <Chinesesimp>没有玩家找到</Chinesesimp>
+            <Czech>Nije pronađen nijedan igrač</Czech>
+            <French>Aucun joueur trouvé</French>
+            <German>Keine Spieler gefunden</German>
+            <Hungarian>Nincsenek játékosok</Hungarian>
+            <Italian>Nessun giocatore trovato</Italian>
+            <Japanese>プレーヤーが見つかりません</Japanese>
+            <Korean>플레이어가 없습니다.</Korean>
+            <Polish>Nie znaleziono graczy</Polish>
+            <Portuguese>Nenhum jogador encontrado</Portuguese>
+            <Russian>Игроки не найдены</Russian>
+            <Spanish>No se encontraron jugadores</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetRepairVehicle_DisplayName">
+            <English>Assign Repair Vehicle</English>
+            <Chinese>分配維修車輛</Chinese>
+            <Chinesesimp>分配维修车辆</Chinesesimp>
+            <Czech>Přiřaďte opravárenské vozidlo</Czech>
+            <French>Affecter un véhicule de réparation</French>
+            <German>Fahrzeug reparieren zuweisen</German>
+            <Hungarian>Hozzárendelés javítóműhöz</Hungarian>
+            <Italian>Assegna veicolo di riparazione</Italian>
+            <Japanese>修理車両を割り当てる</Japanese>
+            <Korean>수리 차량 지정</Korean>
+            <Polish>Przydziel pojazd do naprawy</Polish>
+            <Portuguese>Atribuir veículo de reparação</Portuguese>
+            <Russian>Назначить ремонтный автомобиль</Russian>
+            <Spanish>Asignar vehículo de reparación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetRepairFacility_DisplayName">
+            <English>Assign Repair Facility</English>
+            <Chinese>分配修理設施</Chinese>
+            <Chinesesimp>分配修理设施</Chinesesimp>
+            <Czech>Přiřaďte opravu</Czech>
+            <French>Affecter une installation de réparation</French>
+            <German>Zuweisen von Reparatureinrichtung</German>
+            <Hungarian>Hozzárendelés javításhoz</Hungarian>
+            <Italian>Assegna struttura di riparazione</Italian>
+            <Japanese>修理施設を割り当てる</Japanese>
+            <Korean>수리 시설 지정</Korean>
+            <Polish>Przydziel naprawę</Polish>
+            <Portuguese>Atribuir facilidade de reparação</Portuguese>
+            <Russian>Назначить ремонтный комплекс</Russian>
+            <Spanish>Asignar instalación de reparación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetEngineer_DisplayName">
+            <English>Assign Engineer</English>
+            <Chinese>指派工程師</Chinese>
+            <Chinesesimp>指派工程师</Chinesesimp>
+            <Czech>Přiřadit inženýra</Czech>
+            <French>Affecter ingénieur</French>
+            <German>Engineer zuweisen</German>
+            <Hungarian>Engedélyezze a mérnököt</Hungarian>
+            <Italian>Assign Engineer</Italian>
+            <Japanese>担当エンジニア</Japanese>
+            <Korean>엔지니어 지정</Korean>
+            <Polish>Przydziel inżyniera</Polish>
+            <Portuguese>Encarregar o engenheiro</Portuguese>
+            <Russian>Назначить инженера</Russian>
+            <Spanish>Asignar Ingeniero</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetEngineer_skill">
+            <English>Engineer Skill</English>
+            <Chinese>工程師技能</Chinese>
+            <Chinesesimp>工程师技能</Chinesesimp>
+            <Czech>Inženýrská dovednost</Czech>
+            <French>Compétence d'ingénieur</French>
+            <German>Ingenieur Fähigkeit</German>
+            <Hungarian>Mérnöki készség</Hungarian>
+            <Italian>Abilità ingegnere</Italian>
+            <Japanese>エンジニアのスキル</Japanese>
+            <Korean>기술자의 기술</Korean>
+            <Polish>Umiejętność inżyniera</Polish>
+            <Portuguese>Habilidade do engenheiro</Portuguese>
+            <Russian>Инженерное мастерство</Russian>
+            <Spanish>Habilidad de Ingeniero</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleHeal_DisplayName">
+            <English>Full Heal</English>
+            <Chinese>完全治愈</Chinese>
+            <Chinesesimp>完全治愈</Chinesesimp>
+            <Czech>Plné uzdravení</Czech>
+            <French>Guérison complète</French>
+            <German>Vollständige Heilung</German>
+            <Hungarian>Teljes gyógyítás</Hungarian>
+            <Italian>Guarigione completa</Italian>
+            <Japanese>フルヒール</Japanese>
+            <Korean>완전 치유</Korean>
+            <Polish>Pełne uleczenie</Polish>
+            <Portuguese>Cura completa</Portuguese>
+            <Russian>Полное исцеление</Russian>
+            <Spanish>Totalmente curado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_DisplayName">
+            <English>Suicide Bomber</English>
+            <Chinese>自殺式炸彈襲擊者</Chinese>
+            <Chinesesimp>自杀式炸弹袭击者</Chinesesimp>
+            <Czech>Samovražedný bombardér</Czech>
+            <French>Kamikaze</French>
+            <German>Selbstmordattentäter</German>
+            <Hungarian>Öngyilkos merénylő</Hungarian>
+            <Italian>Kamikaze</Italian>
+            <Japanese>自爆テロ犯</Japanese>
+            <Korean>자살 폭탄</Korean>
+            <Polish>Samobójca</Polish>
+            <Portuguese>Bombardeiro suicida</Portuguese>
+            <Russian>Террорист-смертник</Russian>
+            <Spanish>Bombardeo suicida</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ActivationSide">
+            <English>Activation Side</English>
+            <Chinese>激活方</Chinese>
+            <Chinesesimp>激活方</Chinesesimp>
+            <Czech>Aktivační strana</Czech>
+            <French>Activation latérale</French>
+            <German>Aktivierungsseite</German>
+            <Hungarian>Aktiválási oldal</Hungarian>
+            <Italian>Lato di attivazione</Italian>
+            <Japanese>アクティベーションサイド</Japanese>
+            <Korean>활성화면</Korean>
+            <Polish>Strona aktywacji</Polish>
+            <Portuguese>Lado de ativação</Portuguese>
+            <Russian>Сторона активации</Russian>
+            <Spanish>Lado de activación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ActivationRadius">
+            <English>Activation Radius</English>
+            <Chinese>激活半徑</Chinese>
+            <Chinesesimp>激活半径</Chinesesimp>
+            <Czech>Aktivační poloměr</Czech>
+            <French>Rayon d'activation</French>
+            <German>Aktivierungsradius</German>
+            <Hungarian>Aktiválási sugár</Hungarian>
+            <Italian>Raggio di attivazione</Italian>
+            <Japanese>活性化半径</Japanese>
+            <Korean>활성화 반경</Korean>
+            <Polish>Promień aktywacji</Polish>
+            <Portuguese>Rádio de ativação</Portuguese>
+            <Russian>Радиус активации</Russian>
+            <Spanish>Radio de activación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ExplosionSize">
+            <English>Explosion Size</English>
+            <Chinese>爆炸尺寸</Chinese>
+            <Chinesesimp>爆炸尺寸</Chinesesimp>
+            <Czech>Velikost výbuchu</Czech>
+            <French>Taille d'explosion</French>
+            <German>Explosionsgröße</German>
+            <Hungarian>Robbanásméret</Hungarian>
+            <Italian>Dimensione di esplosione</Italian>
+            <Japanese>爆発サイズ</Japanese>
+            <Korean>폭발 크기</Korean>
+            <Polish>Rozmiar wybuchu</Polish>
+            <Portuguese>Tamanho da Explosão</Portuguese>
+            <Russian>Размер взрыва</Russian>
+            <Spanish>Tamaño de Explosión</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek">
+            <English>Auto Seek</English>
+            <Chinese>自動尋求</Chinese>
+            <Chinesesimp>自动寻求</Chinesesimp>
+            <Czech>Auto Seek</Czech>
+            <French>Recherche automatique</French>
+            <German>Automatische Suche</German>
+            <Hungarian>Automatikus keresés</Hungarian>
+            <Italian>Ricerca automatica</Italian>
+            <Japanese>オートシーク</Japanese>
+            <Korean>자동 탐색</Korean>
+            <Polish>Auto Seek</Polish>
+            <Portuguese>Busca automática</Portuguese>
+            <Russian>Автоматический поиск</Russian>
+            <Spanish>Búsqueda automática</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek_tooltip">
+            <English>Unit will actively try to find and move towards nearby units of the activation side. The range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.</English>
+            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米。</Chinese>
+            <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
+            <Czech>Jednotka se bude aktivně snažit najít a přejít na blízké jednotky na straně aktivace. Rozsah Auto Seek je založen na dovednosti spotové vzdálenosti jednotky s minimem 100 metrů.</Czech>
+            <French>L'unité essayera activement de trouver et de se déplacer vers les unités à proximité du côté d'activation. La portée d'Auto Seek est basée sur la compétence de distance de l'unité avec un minimum de 100 mètres.</French>
+            <German>Die Einheit versucht aktiv, in der Nähe befindliche Einheiten der Aktivierungsseite zu finden und sich dorthin zu bewegen. Der Bereich der automatischen Suche basiert auf der Fähigkeit der Zielentfernung der Einheit mit einer Mindestentfernung von 100 Metern.</German>
+            <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
+            <Italian>L'unità cercherà attivamente di trovare e spostarsi verso le unità vicine del lato di attivazione. La gamma di Auto Seek si basa sull'abilità a distanza spot dell'unità con un minimo di 100 metri.</Italian>
+            <Japanese>ユニットはアクティベーション側の近くのユニットを見つけて移動しようと積極的に試みます。オートシークの範囲は、ユニットのスポット距離のスキルに基づいており、最低100メートルです。</Japanese>
+            <Korean>유닛은 액티브 측의 근접 유닛을 향해 적극적으로 찾아서 이동하려고 시도합니다. 자동 시크의 범위는 유닛의 스팟 거리 스킬을 기준으로 최소 100 미터입니다.</Korean>
+            <Polish>Jednostka będzie aktywnie próbowała znaleźć i ruszyć w kierunku pobliskich jednostek strony aktywacji. Zasięg Auto Seek opiera się na umiejętności punktowej odległości jednostki z minimum 100 metrów.</Polish>
+            <Portuguese>A unidade tentará ativamente encontrar e se mover para as unidades próximas do lado da ativação. O alcance da Auto Seek é baseado na habilidade de distância do ponto da unidade com um mínimo de 100 metros.</Portuguese>
+            <Russian>Устройство будет активно пытаться найти и перейти к соседним единицам активации. Диапазон автоматического поиска основан на умении снимать расстояние на расстоянии не менее 100 метров.</Russian>
+            <Spanish>La unidad intentará buscar activamente y moverse hacia las unidades cercanas del lado de activación. El rango de Auto Seek se basa en la habilidad de distancia al punto de la unidad con un mínimo de 100 metros.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Small">
+            <English>Small</English>
+            <Chinese>小</Chinese>
+            <Chinesesimp>小</Chinesesimp>
+            <Czech>Malý</Czech>
+            <French>Petit</French>
+            <German>Klein</German>
+            <Hungarian>Kicsi</Hungarian>
+            <Italian>Piccolo</Italian>
+            <Japanese>小さい</Japanese>
+            <Korean>작은</Korean>
+            <Polish>Mały</Polish>
+            <Portuguese>Pequeno</Portuguese>
+            <Russian>Маленький</Russian>
+            <Spanish>Pequeña</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Medium">
+            <English>Medium</English>
+            <Chinese>中</Chinese>
+            <Chinesesimp>中</Chinesesimp>
+            <Czech>Střední</Czech>
+            <French>Moyen</French>
+            <German>Mittel</German>
+            <Hungarian>Közepes</Hungarian>
+            <Italian>medio</Italian>
+            <Japanese>中</Japanese>
+            <Korean>매질</Korean>
+            <Polish>Średni</Polish>
+            <Portuguese>Médio</Portuguese>
+            <Russian>средний</Russian>
+            <Spanish>Medio</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Large">
+            <English>Large</English>
+            <Chinese>大</Chinese>
+            <Chinesesimp>大</Chinesesimp>
+            <Czech>Velký</Czech>
+            <French>Grand</French>
+            <German>Groß</German>
+            <Hungarian>Nagy</Hungarian>
+            <Italian>Grande</Italian>
+            <Japanese>大</Japanese>
+            <Korean>큰</Korean>
+            <Polish>Duży</Polish>
+            <Portuguese>ampla</Portuguese>
+            <Russian>большой</Russian>
+            <Spanish>Grande</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AlreadyBomber">
+            <English>Unit is already a suicide bomber</English>
+            <Chinese>這個單位已經是自殺炸彈手了</Chinese>
+            <Chinesesimp>这个单位已经是自杀炸弹手了</Chinesesimp>
+            <Czech>Jednotka je již samovražedným bombardérem</Czech>
+            <French>L'unité est déjà un kamikaze</French>
+            <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
+            <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
+            <Italian>L'unità è già un kamikaze</Italian>
+            <Japanese>ユニットはすでに自爆テロである</Japanese>
+            <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
+            <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
+            <Portuguese>A unidade já é um suicida</Portuguese>
+            <Russian>Единица уже является террористом-смертником</Russian>
+            <Spanish>La unidad ya es un terrorista suicida</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
+            <English>Add full ACE Arsenal</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
+            <English>Remove ACE Arsenal</English>
         </Key>
     </Package>
 </Project>
