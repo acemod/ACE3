@@ -735,6 +735,38 @@
             <Chinesesimp>枪</Chinesesimp>
             <Chinese>槍</Chinese>
         </Key>
+        <Key ID="STR_ACE_Repair_HitComTurret">
+            <English>Commander Turret</English>
+            <German>Kommandant Turm</German>
+            <Spanish>Comandante Torreta</Spanish>
+            <French>Commander Tourelle</French>
+            <Polish>Dowódca Wieżyczka</Polish>
+            <Czech>Velitel Věž</Czech>
+            <Portuguese>Comandante Torre</Portuguese>
+            <Italian>Comandante Torretta</Italian>
+            <Hungarian>Parancsnok Lövegtorony</Hungarian>
+            <Russian>Башня командира</Russian>
+            <Japanese>指揮官 砲塔</Japanese>
+            <Korean>지휘관 포탑</Korean>
+            <Chinesesimp>指挥官 炮塔</Chinesesimp>
+            <Chinese>指揮官 砲塔</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitComGun">
+            <English>Commander Gun</English>
+            <German>Kommandant Kanone</German>
+            <Spanish>Comandante Cañón</Spanish>
+            <French>Commander Canon</French>
+            <Polish>Dowódca Działo</Polish>
+            <Czech>Velitel Kanón</Czech>
+            <Portuguese>Comandante Canhão</Portuguese>
+            <Italian>Comandante Cannone</Italian>
+            <Hungarian>Parancsnok Ágyú</Hungarian>
+            <Russian>Пушка командира</Russian>
+            <Japanese>指揮官 砲</Japanese>
+            <Korean>지휘관 포</Korean>
+            <Chinesesimp>指挥官 枪</Chinesesimp>
+            <Chinese>指揮官 槍</Chinese>
+        </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
             <German>Rakete</German>
