@@ -25,9 +25,12 @@ private _bloodLossOnBodyPart = 0;
     _x params ["", "", "_bodyPartN", "_amountOf", "_bleeding"];
 
     if (_bodyPartN == _partIndex) then {
-        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (20 * _amountOf * _bleeding);
+        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _bleeding);
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
+
+// Scale the bloodloss up for color representation
+_bloodLossOnBodyPart = _bloodLossOnBodyPart * BLEEDING_COLOR_FACTOR;
 
 private _hasTourniquet = ((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0;
 

@@ -72,7 +72,7 @@ private _allInjuryTexts = [];
 
 {
     _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage", "_category"];
-    _selectionBloodLoss set [_bodyPartN, (_selectionBloodLoss select _bodyPartN) + (20 * _bleeding * _amountOf)];
+    _selectionBloodLoss set [_bodyPartN, (_selectionBloodLoss select _bodyPartN) + (_bleeding * _amountOf)];
     if (_selectionN == _bodyPartN) then {
         // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
         if (_amountOf > 0) then {
@@ -98,6 +98,9 @@ private _allInjuryTexts = [];
         };
     };
 } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
+
+// Scale the bloodloss up for color representation
+_selectionBloodLoss = _selectionBloodLoss apply { _x * BLEEDING_COLOR_FACTOR };
 
 {
     _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage", "_category"];
