@@ -35,7 +35,7 @@ _bloodLossOnBodyPart = _bloodLossOnBodyPart * BLEEDING_COLOR_FACTOR;
 private _hasTourniquet = ((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0;
 
 switch (true) do {
-    case (_bloodLossOnBodyPart >= 0.15): {
+    case (_bloodLossOnBodyPart > 0.5): {
         if (_hasTourniquet) then {
             _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossRed_t.paa)];
         } else {
