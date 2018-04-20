@@ -99,9 +99,6 @@ private _allInjuryTexts = [];
     };
 } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
 
-// Scale the bloodloss up for color representation
-_selectionBloodLoss = _selectionBloodLoss apply { _x * BLEEDING_COLOR_FACTOR };
-
 {
     _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage", "_category"];
     if (_selectionN == _bodyPartN) then {

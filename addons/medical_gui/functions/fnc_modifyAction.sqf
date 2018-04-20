@@ -29,9 +29,6 @@ private _bloodLossOnBodyPart = 0;
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
 
-// Scale the bloodloss up for color representation
-_bloodLossOnBodyPart = _bloodLossOnBodyPart * BLEEDING_COLOR_FACTOR;
-
 private _hasTourniquet = ((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0;
 
 switch (true) do {
