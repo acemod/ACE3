@@ -1,10 +1,10 @@
 /*
- * Author: NouberNou and esteldunedain
- * Render a single interaction icon
+ * Author: NouberNou, esteldunedain, mharis001
+ * Render a single interaction icon.
  *
  * Arguments:
  * 0: Text <STRING>
- * 1: Icon <STRING>
+ * 1: Icon file path or Array of icon file path and hex color <STRING|ARRAY>
  * 2: 2d position <ARRAY>
  * 3: Text Settings <STRING>
  *
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * ["text", "icon", [5, 6], "text"] call ACE_interact_menu_fnc_renderIcon
+ * ["text", "icon", [5, 6], "text"] call ace_interact_menu_fnc_renderIcon
  *
  * Public: No
  */
@@ -33,14 +33,15 @@ if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
 };
 private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 
-if(_icon == "") then {
-    _icon = DEFAULT_ICON;
+_icon params [["_iconFile", "", [""]], ["_iconColor", "#FFFFFF", [""]]];
+if (_iconFile isEqualTo "") then {
+    _iconFile = DEFAULT_ICON;
 };
 
 _text = if (GVAR(UseListMenu)) then {
-    format ["<img image='%1' align='left'/><t %2>%3</t>", _icon, _textSettings, _text]
+    format ["<img image='%1' align='left' color='%2'/><t %3>%4</t>", _iconFile, _iconColor, _textSettings, _text]
 } else {
-    format ["<img image='%1' align='center'/><br/><t %2 align='center'>%3</t>", _icon, _textSettings, "ace_break_line" callExtension _text];
+    format ["<img image='%1' align='center' color='%2'/><br/><t %3 align='center'>%4</t>", _iconFile, _iconColor, _textSettings, "ace_break_line" callExtension _text];
 };
 
 [_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
