@@ -158,30 +158,38 @@ if (_show == 1) then {
         // Handle the body image coloring
         private _availableSelections = [50, 51, 52, 53, 54, 55];
         {
-            private _red = 1;
-            private _green = 1;
-            private _blue = 1;
+            private _colorSelection = [1, 1, 1]; // RGB
 
             private _torniquet = _selectionTourniquet select _forEachIndex;
             if (_torniquet > 0) then {
-                _red = 0;
-                _green = 0;
-                _blue = 0.8;
+                _colorSelection = [0, 0, 0.8];
             } else {
                 private _bloodLoss = _selectionBloodLoss select _forEachIndex;
-                if (_bloodLoss > 0) then {
-                    _green = 0 max (0.8 - _bloodLoss);
-                    _blue = _green;
-                } else {
-                    private _damage = _selectionDamage select _forEachIndex;
-                    if (_damage > 0.1) then {
-                        _blue = 0 max (1 - _damage);
-                        _green = 0.5 max (1 - _damage / 2);
-                    };
-                };
+
+                private _bloodLossRed = 0.5;
+                private _totColors = 10;
+
+                private _frBL = 0 max (_bloodLoss / _bloodLossRed) min 1;
+                private _colorInt = ceil ((_frBL * (_totColors - 1)));
+
+                _colorSelection = [
+                     [1.00, 1.00, 1.00], // #ffffff
+                     [1.00, 0.95, 0.63], // #fff1a1
+                     [1.00, 0.88, 0.46], // #ffe075
+                     [1.00, 0.80, 0.33], // #ffcb55
+                     [1.00, 0.72, 0.24], // #ffb73c
+                     [1.00, 0.63, 0.15], // #ffa127
+                     [1.00, 0.53, 0.08], // #ff8815
+                     [1.00, 0.43, 0.02], // #ff6d05
+                     [1.00, 0.29, 0.00], // #ff4b00
+                     [1.00, 0.00, 0.00]  // #ff0000
+                ] select _colorInt;
             };
 
-            (_display displayCtrl _x) ctrlSetTextColor [_red, _green, _blue, 1.0];
+            // Alpha is always 1
+            _colorSelection pushBack 1;
+
+            (_display displayCtrl _x) ctrlSetTextColor _colorSelection;
         } forEach _availableSelections;
 
         private _lbCtrl = (_display displayCtrl 200);

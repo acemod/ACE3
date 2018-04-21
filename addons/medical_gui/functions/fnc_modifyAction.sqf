@@ -29,28 +29,14 @@ private _bloodLossOnBodyPart = 0;
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
 
-private _hasTourniquet = ((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0;
+private _hasTourniquet = (((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0);
 
-switch (true) do {
-    case (_bloodLossOnBodyPart > 0.5): {
-        if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossRed_t.paa)];
-        } else {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossRed.paa)];
-        };
-    };
+private _bloodLossRed = 0.5;
+private _totColors = 10;
 
-    case (_bloodLossOnBodyPart > 0): {
-        if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossYellow_t.paa)];
-        } else {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossYellow.paa)];
-        };
-    };
+private _frBL = 0 max (_bloodLossOnBodyPart / _bloodLossRed) min 1;
+private _colorInt = ceil ((_frBL * (_totColors - 1)) + 1); // ceil because any bleeding more than zero shouldn't be white
 
-    default {
-        if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_cross_t.paa)];
-        };
-    };
-};
+private _path = [QPATHTOF(ui\icons\b), _colorInt, ["", "t"] select _hasTourniquet, ".paa"] joinString "";
+
+_actionData set [2, _path];
