@@ -55,6 +55,11 @@ GVAR(currentInsignia) = GVAR(center) param [0, objNull, [objNull]] getVariable [
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
+GVAR(showStats) = true;
+GVAR(statsPagesLeft) =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(statsPagesRight) =  [0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
+
 // Add the items the player has to virtualItems
 for "_index" from 0 to 10 do {
     switch (_index) do {
@@ -87,8 +92,8 @@ for "_index" from 0 to 10 do {
                     if (_x != "") then {
                         (GVAR(virtualItems) select _index) select ([2, 1, 0, 3] select _forEachIndex) pushBackUnique _x;
                     };
-                } foreach _x;
-            } foreach _accsArray;
+                } forEach _x;
+            } forEach _accsArray;
 
             {
                 if !(_x isEqualTo []) then {
@@ -101,7 +106,7 @@ for "_index" from 0 to 10 do {
                         (GVAR(virtualItems) select 2) pushBackUnique (_x select 1);
                     };
                 };
-            } foreach _magsArray;
+            } forEach _magsArray;
         };
 
         // Inventory items
@@ -113,7 +118,7 @@ for "_index" from 0 to 10 do {
         default {
             private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
             if !(_array isEqualTo []) then {
-                {(GVAR(virtualItems) select _index) pushBackUnique _x} foreach _array;
+                {(GVAR(virtualItems) select _index) pushBackUnique _x} forEach _array;
             };
         };
     };
@@ -163,7 +168,7 @@ for "_index" from 0 to 15 do {
     private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
 
     GVAR(currentItems) set [_index, _x];
-} foreach (assignedItems GVAR(center));
+} forEach (assignedItems GVAR(center));
 
 GVAR(currentWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == GVAR(currentItems) select 0): {0};
@@ -172,7 +177,7 @@ GVAR(currentWeaponType) = switch true do {
     default {-1};
 };
 
-[QGVAR(displayOpened), []] call CBA_fnc_localEvent;
+[QGVAR(displayOpened), [_display]] call CBA_fnc_localEvent;
 
 //--------------- Fade out unused elements
 private _mouseBlockCtrl = _display displayCtrl IDC_mouseBlock;
@@ -184,7 +189,7 @@ _mouseBlockCtrl ctrlEnable false;
     _x ctrlSetFade 1;
     _x ctrlShow false;
     _x ctrlCommit 0;
-} foreach [
+} forEach [
     IDC_blockRightFrame,
     IDC_blockRighttBackground,
     IDC_loadIndicator,
@@ -198,6 +203,27 @@ _mouseBlockCtrl ctrlEnable false;
     IDC_buttonRemoveAll,
     IDC_rightSearchbar
 ];
+
+// Handle stats
+private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
+_statsBoxCtrl ctrlSetPosition [
+    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+    safezoneY + 1.8 * GRID_H,
+    47 * GRID_W,
+    11 * GRID_H
+];
+_statsBoxCtrl ctrlEnable false;
+_statsBoxCtrl ctrlCommit 0;
+
+(_display displayCtrl IDC_statsButton) ctrlShow false;
+
+// Disable import in MP
+if (isMultiplayer) then {
+    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
+    _importButtonCtrl ctrlEnable false;
+    _importButtonCtrl ctrlSetFade 0.6;
+    _importButtonCtrl ctrlCommit 0;
+};
 
 //--------------- Camera prep
 cutText ["","plain"];
@@ -251,8 +277,8 @@ if (is3DEN) then {
         private _ctrl = _display displayctrl _x;
         _ctrl ctrlEnable false;
         _ctrl ctrlSetFade 0.6;
-        _ctrl ctrlcommit 0;
-    } foreach [
+        _ctrl ctrlCommit 0;
+    } forEach [
         IDC_buttonFace,
         IDC_buttonVoice,
         IDC_buttonInsigna
@@ -260,6 +286,19 @@ if (is3DEN) then {
 
     _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
+} else {
+    GVAR(centerNotPlayer) = (GVAR(center) != player);
+
+    {
+        private _ctrl = _display displayCtrl _x;
+        _ctrl ctrlEnable GVAR(enableIdentityTabs);
+        _ctrl ctrlSetFade ([0.6, 0] select GVAR(enableIdentityTabs));
+        _ctrl ctrlCommit 0;
+    } forEach [
+        IDC_buttonFace,
+        IDC_buttonVoice,
+        IDC_buttonInsigna
+    ];
 };
 
 //--------------- Prepare the left panel
@@ -275,7 +314,7 @@ GVAR(rightTabLnBFocus) = false;
     private _panel = _display displayCtrl _x;
     _panel ctrlSetFontHeight (GVAR(fontHeight) * GRID_H);
     _panel ctrlCommit 0;
-} foreach [IDC_leftTabContent, IDC_rightTabContent, IDC_rightTabContentListnBox];
+} forEach [IDC_leftTabContent, IDC_rightTabContent, IDC_rightTabContentListnBox];
 
 [_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(fillLeftPanel);
 

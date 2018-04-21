@@ -116,4 +116,4 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     };
 #endif
 
-}, localize LSTRING(ModuleSuppressiveFire_DisplayName)] call FUNC(getModuleDestination);
+}, localize LSTRING(ModuleSuppressiveFire_DisplayName), "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1, 0, 0, 1], 45] call FUNC(getModuleDestination);

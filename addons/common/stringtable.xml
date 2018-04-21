@@ -8,6 +8,7 @@
             <Japanese>全般</Japanese>
             <Chinese>通用</Chinese>
             <Chinesesimp>通用</Chinesesimp>
+            <Korean>일반</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -480,6 +481,7 @@
             <Chinese>檢查PBO動作</Chinese>
             <Chinesesimp>检查PBO动作</Chinesesimp>
             <Japanese>PBO 検査の挙動</Japanese>
+            <Korean>PBO 검사</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -487,6 +489,7 @@
             <Chinese>檢查所有PBO</Chinese>
             <Chinesesimp>检查所有PBO</Chinesesimp>
             <Japanese>PBO 全てを検査</Japanese>
+            <Korean>모든 PBO 검사</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -494,6 +497,7 @@
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查PBO白名单</Chinesesimp>
             <Japanese>許可リスト内の PBO を検査</Japanese>
+            <Korean>검사 제외 PBO</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -609,7 +613,7 @@
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
-            <German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standartfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat. </German>
+            <German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standardfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat. </German>
             <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
             <Italian>Il colore del testo dei suggerimenti di ACE. Questo è il colore predefinito per tutto il testo mostrato dal sistema di suggerimenti di ACE quando il colore del testo non ha altro colore specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
@@ -628,12 +632,20 @@
             <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
             <Japanese>武器のレーザー ポインタ/フラッシュライトの永続</Japanese>
             <Italian>Laser/torcia dell'arma costantemente accesi</Italian>
+            <Korean>무기 레이저 포인터 / 손전등 지속</Korean>
+            <German>Kontinuität des Laserpointers/Taktischen Lichts</German>
+            <Chinese>保持武器雷射/手電筒的狀態</Chinese>
+            <Chinesesimp>保持武器雷射/手电筒的状态</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
             <Russian>Включать ЛЦУ/тактический фонарь после смены оружия или входа/выхода из машины, если он был до этого включен.</Russian>
             <Japanese>銃のライト等を点けていると武器を切り替えた後や車両を乗り降りしても、ライト等を点けたままにします。</Japanese>
             <Italian>Abilita la torcia/laser dopo il cambio dell'arma o l'entrata/uscita del veicolo se precedentemente attiva.</Italian>
+            <Korean>무기를 바꾸거나 차량에 승하차 할 때 이전에 스위치 켜고 끔을 유지합니다.</Korean>
+            <German>Aktiviert Laserpointer/Taktisches Licht nach einem Waffenwechsel oder dem Auf-/Absitzen, falls es zuvor aktiv war.</German>
+            <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的的狀態。</Chinese>
+            <Chinesesimp>保存武器雷射/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的的状态。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -1154,10 +1166,16 @@
         <Key ID="STR_ACE_Common_AllowFadeMusic">
             <English>Allow turning down music</English>
             <German>Erlaube Musik leiser stellen</German>
+            <Korean>음악 끄기 허용</Korean>
+            <Chinese>允許調低音樂音量</Chinese>
+            <Chinesesimp>允许调低音乐音量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
             <German>Erlaube ACE-Skripten, die Musik leiser zu stellen.</German>
+            <Korean>ACE 스크립트가 음악을 끌 수 있습니다.</Korean>
+            <Chinese>允許ACE腳本去控制音樂的音量。</Chinese>
+            <Chinesesimp>允许ACE脚本去控制音乐的音量。</Chinesesimp>
         </Key>
     </Package>
 </Project>

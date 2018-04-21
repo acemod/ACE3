@@ -48,7 +48,8 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
-    private _vis = _object getUnitTrait "camouflageCoef";
+    // May report nil. Default to factor 1.
+    private _vis = [_object getUnitTrait "camouflageCoef"] param [0, 1];
     if (_set > 0) then {
         if (_vis != 0) then {
             _object setVariable [QGVAR(oldVisibility), _vis];

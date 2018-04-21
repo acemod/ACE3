@@ -47,9 +47,10 @@ if (isArray _hitpointGroupConfig) then {
         // Exit using found hitpoint group if this hitpoint is leader of any
         if (_masterHitpoint == _hitPointClassname) exitWith {
             {
-                private _subHitIndex = _allHitPoints find _x; //convert hitpoint classname to index
+                private _subHitpoint = _x;
+                private _subHitIndex = _allHitPoints findIf {_x == _subHitpoint}; //convert hitpoint classname to index
                 if (_subHitIndex == -1) then {
-                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_x,_vehicle);
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_vehicle);
                 } else {
                     private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
                     private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;

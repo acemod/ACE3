@@ -14,18 +14,10 @@
 
 (_this select 1) params ["", "_exitCode"];
 
-GVAR(camera) cameraEffect ["terminate", "back"];
 private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFromTo (getposAtl GVAR(cameraHelper))];
 
 [QGVAR(displayClosed), []] call CBA_fnc_localEvent;
-
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
-
-GVAR(camera) cameraEffect ["terminate","back"];
-player switchCamera GVAR(cameraView);
-
-deleteVehicle GVAR(cameraHelper);
-camDestroy GVAR(camera);
 
 if (is3DEN) then {
 
@@ -62,7 +54,17 @@ if (is3DEN) then {
         case 1: {GVAR(center) selectWeapon secondaryWeapon GVAR(center);};
         case 2: {GVAR(center) selectWeapon handgunWeapon GVAR(center);};
     };
+
+    if (!(isnull curatorCamera) && {ACE_player == player}) then {
+        curatorcamera cameraEffect ["internal","back"];
+    } else {
+        GVAR(camera) cameraEffect ["terminate","back"];
+        ACE_player switchCamera GVAR(cameraView);
+    };
 };
+
+deleteVehicle GVAR(cameraHelper);
+camDestroy GVAR(camera);
 
 if (isMultiplayer) then {
 
@@ -71,10 +73,6 @@ if (isMultiplayer) then {
 
     [QGVAR(broadcastVoice), [GVAR(center), GVAR(currentVoice)], QGVAR(center) + "_voice"] call CBA_fnc_globalEventJIP;
     [QGVAR(center) + "_voice", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
-};
-
-if !(isnull curatorCamera) then {
-    curatorcamera cameraEffect ["internal","back"];
 };
 
 GVAR(camera) = nil;
@@ -98,6 +96,12 @@ GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
+GVAR(showStats) = nil;
+GVAR(statsPagesLeft) = nil;
+GVAR(statsPagesRight) = nil;
+GVAR(statsInfo) =  nil;
+
 GVAR(center) = nil;
+GVAR(centerNotPlayer) = nil;
 
 showHUD true;

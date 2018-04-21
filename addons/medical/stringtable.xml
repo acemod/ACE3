@@ -73,7 +73,7 @@
             <French>Adénosine</French>
             <Italian>Inietta andenosina</Italian>
             <Czech>Aplikovat adenosine</Czech>
-            <Portuguese>Injetar Adenosina</Portuguese>
+            <Portuguese>Injetar adenosina</Portuguese>
             <Russian>Ввести аденозин</Russian>
             <Japanese>アデノシンを投与</Japanese>
             <Korean>아데노신 주사</Korean>
@@ -90,7 +90,7 @@
             <Russian>Ввести атропин</Russian>
             <Hungarian>Atropin beadása</Hungarian>
             <Italian>Inietta atropina</Italian>
-            <Portuguese>Injetar Atropina</Portuguese>
+            <Portuguese>Injetar atropina</Portuguese>
             <Japanese>アトロピンを投与</Japanese>
             <Korean>아트로핀 주사</Korean>
             <Chinesesimp>注射阿托品</Chinesesimp>
@@ -105,7 +105,7 @@
             <French>Épinéphrine</French>
             <Russian>Ввести адреналин</Russian>
             <Hungarian>Epinefrin beadása</Hungarian>
-            <Portuguese>Injetar Epinefrina</Portuguese>
+            <Portuguese>Injetar epinefrina</Portuguese>
             <Italian>Inietta adrenalina</Italian>
             <Japanese>アドレナリンを投与</Japanese>
             <Korean>에피네프린 주사</Korean>
@@ -121,7 +121,7 @@
             <Russian>Ввести морфин</Russian>
             <French>Morphine</French>
             <Hungarian>Morfium beadása</Hungarian>
-            <Portuguese>Injetar Morfina</Portuguese>
+            <Portuguese>Injetar morfina</Portuguese>
             <Italian>Inietta morfina</Italian>
             <Japanese>モルヒネを投与</Japanese>
             <Korean>모르핀 주사</Korean>
@@ -137,7 +137,7 @@
             <Russian>Перелить кровь</Russian>
             <French>Transfuser (sang)</French>
             <Hungarian>Infúzió (vér)</Hungarian>
-            <Portuguese>Transfundir Sangue</Portuguese>
+            <Portuguese>Transfundir sangue</Portuguese>
             <Italian>Trasfusione di sangue</Italian>
             <Japanese>輸血する</Japanese>
             <Korean>혈액 수혈</Korean>
@@ -154,7 +154,7 @@
             <Russian>Перелить плазму</Russian>
             <Hungarian>Infúzió (vérplazma)</Hungarian>
             <Italian>Trasfusione di plasma</Italian>
-            <Portuguese>Transfundir Plasma</Portuguese>
+            <Portuguese>Transfundir plasma</Portuguese>
             <Japanese>血しょうを投与</Japanese>
             <Korean>혈장 수혈</Korean>
             <Chinesesimp>输血浆</Chinesesimp>
@@ -170,7 +170,7 @@
             <Russian>Перелить физраствор</Russian>
             <Hungarian>Infúzió (sós víz)</Hungarian>
             <Italian>Trasfusione di soluzione salina</Italian>
-            <Portuguese>Transfundir Soro</Portuguese>
+            <Portuguese>Transfundir soro</Portuguese>
             <Japanese>生理食塩水を投与</Japanese>
             <Korean>생리식염수 수혈</Korean>
             <Chinesesimp>注射生理食盐水</Chinesesimp>
@@ -185,7 +185,7 @@
             <French>Poser garrot</French>
             <Russian>Наложить жгут</Russian>
             <Italian>Applica laccio emostatico</Italian>
-            <Portuguese>Aplicar Torniquete</Portuguese>
+            <Portuguese>Aplicar torniquete</Portuguese>
             <Hungarian>Érszorító alkalmazása</Hungarian>
             <Japanese>止血帯を巻く</Japanese>
             <Korean>지혈대 적용</Korean>
@@ -217,7 +217,7 @@
             <Russian>Перевязать голову</Russian>
             <French>Panser Tête</French>
             <Hungarian>Fej kötözése</Hungarian>
-            <Portuguese>Atar Cabeça</Portuguese>
+            <Portuguese>Atar cabeça</Portuguese>
             <Italian>Benda la testa</Italian>
             <Japanese>包帯を頭へ</Japanese>
             <Korean>머리에 붕대감기</Korean>
@@ -233,7 +233,7 @@
             <Russian>Перевязать торс</Russian>
             <French>Panser Torse</French>
             <Hungarian>Testtörzs kötözése</Hungarian>
-            <Portuguese>Atar Tronco</Portuguese>
+            <Portuguese>Atar tronco</Portuguese>
             <Italian>Benda il torso</Italian>
             <Japanese>包帯を胴体へ</Japanese>
             <Korean>몸통에 붕대감기</Korean>
@@ -249,7 +249,7 @@
             <Russian>Перевязать левую руку</Russian>
             <French>Panser Bras Gauche</French>
             <Hungarian>Bal kar kötözése</Hungarian>
-            <Portuguese>Atar Braço Esquerdo</Portuguese>
+            <Portuguese>Atar braço esquerdo</Portuguese>
             <Italian>Benda il braccio sinistro</Italian>
             <Japanese>包帯を左腕に</Japanese>
             <Korean>왼팔에 붕대감기</Korean>
@@ -265,7 +265,7 @@
             <Russian>Перевязать правую руку</Russian>
             <French>Panser Bras Droit</French>
             <Hungarian>Jobb kar kötözése</Hungarian>
-            <Portuguese>Atar Braço Direito</Portuguese>
+            <Portuguese>Atar braço direito</Portuguese>
             <Italian>Benda il braccio destro</Italian>
             <Japanese>包帯を右腕に</Japanese>
             <Korean>오른팔에 붕대감기</Korean>
@@ -281,7 +281,7 @@
             <Russian>Перевязать левую ногу</Russian>
             <French>Panser Jambe Gauche</French>
             <Hungarian>Bal láb kötözése</Hungarian>
-            <Portuguese>Atar Perna Esquerda</Portuguese>
+            <Portuguese>Atar perna esquerda</Portuguese>
             <Italian>Benda la gamba sinistra</Italian>
             <Japanese>包帯を左足へ</Japanese>
             <Korean>왼쪽 다리에 붕대감기</Korean>
@@ -297,7 +297,7 @@
             <Russian>Перевязать правую ногу</Russian>
             <French>Panser Jambe Droite</French>
             <Hungarian>Jobb láb kötözése</Hungarian>
-            <Portuguese>Atar Perna Direita</Portuguese>
+            <Portuguese>Atar perna direita</Portuguese>
             <Italian>Benda la gamba destra</Italian>
             <Japanese>包帯を右足へ</Japanese>
             <Korean>오른쪽 다리에 붕대감기</Korean>
@@ -313,7 +313,7 @@
             <Russian>Введение морфина...</Russian>
             <French>Injection (morphine)...</French>
             <Hungarian>Morfium beadása...</Hungarian>
-            <Portuguese>Injetando Morfina...</Portuguese>
+            <Portuguese>Injetando morfina...</Portuguese>
             <Italian>Inietto la morfina...</Italian>
             <Japanese>モルヒネを投与しています・・・</Japanese>
             <Korean>모르핀 주사중...</Korean>
@@ -329,7 +329,7 @@
             <Russian>Введение адреналина...</Russian>
             <French>Injection (épinéphrine)...</French>
             <Hungarian>Epinefrin beadása...</Hungarian>
-            <Portuguese>Injetando Epinefrina...</Portuguese>
+            <Portuguese>Injetando epinefrina...</Portuguese>
             <Italian>Inietto l'adrenalina...</Italian>
             <Japanese>アドレナリンを投与しています・・・</Japanese>
             <Korean>에피네프린 주사중...</Korean>
@@ -344,7 +344,7 @@
             <French>Injection (adénosine)...</French>
             <Italian>Inietto l'andenosina</Italian>
             <Czech>Aplikuji adenosine...</Czech>
-            <Portuguese>Injetando Adenosina...</Portuguese>
+            <Portuguese>Injetando adenosina...</Portuguese>
             <Russian>Введение аденозина...</Russian>
             <Japanese>アドネシンを投与しています・・・</Japanese>
             <Korean>아데노신 주사중...</Korean>
@@ -361,7 +361,7 @@
             <Russian>Введение атропина...</Russian>
             <Hungarian>Atropin beadása...</Hungarian>
             <Italian>Inietto l'atropina...</Italian>
-            <Portuguese>Injetando Atropina</Portuguese>
+            <Portuguese>Injetando atropina</Portuguese>
             <Japanese>アトロピンを投与しています・・・</Japanese>
             <Korean>아트리핀 주사중...</Korean>
             <Chinesesimp>阿托品注射中 ...</Chinesesimp>
@@ -376,7 +376,7 @@
             <Russian>Переливание крови...</Russian>
             <French>Transfusion (sang)...</French>
             <Hungarian>Infúzió vérrel...</Hungarian>
-            <Portuguese>Transfundindo Sangue...</Portuguese>
+            <Portuguese>Transfundindo sangue...</Portuguese>
             <Italian>Effettuo la trasfusione di sangue...</Italian>
             <Japanese>輸血しています・・・</Japanese>
             <Korean>혈액 수혈중...</Korean>
@@ -393,7 +393,7 @@
             <Russian>Переливание физраствора...</Russian>
             <Hungarian>Infúzió sós vizzel...</Hungarian>
             <Italian>Effettuo la rasfusione di soluzione salina</Italian>
-            <Portuguese>Transfundindo Soro...</Portuguese>
+            <Portuguese>Transfundindo soro...</Portuguese>
             <Japanese>生理食塩水を投与しています・・・</Japanese>
             <Korean>생리식염수 수혈중...</Korean>
             <Chinesesimp>施打生理食盐水中 ...</Chinesesimp>
@@ -409,7 +409,7 @@
             <Russian>Переливание плазмы...</Russian>
             <Hungarian>Infúzió vérplazmával...</Hungarian>
             <Italian>Effettu la trasfusione di plasma...</Italian>
-            <Portuguese>Transfundindo Plasma...</Portuguese>
+            <Portuguese>Transfundindo plasma...</Portuguese>
             <Japanese>血しょうを投与しています・・・</Japanese>
             <Korean>혈장 수혈중...</Korean>
             <Chinesesimp>输血浆中 ...</Chinesesimp>
@@ -441,7 +441,7 @@
             <Russian>Наложение жгута...</Russian>
             <Hungarian>Érszorító felhelyezése...</Hungarian>
             <Italian>Sto applicando il laccio emostatico...</Italian>
-            <Portuguese>Applicando Torniquete</Portuguese>
+            <Portuguese>Applicando torniquete</Portuguese>
             <Japanese>止血帯を巻いています・・・</Japanese>
             <Korean>지혈대 적용중...</Korean>
             <Chinesesimp>使用军用止血带中 ...</Chinesesimp>
@@ -473,7 +473,7 @@
             <French>Pansement individuel</French>
             <Hungarian>Zárókötszer</Hungarian>
             <Italian>Bendaggio rapido</Italian>
-            <Portuguese>Curativo de Campo</Portuguese>
+            <Portuguese>Curativo de campo</Portuguese>
             <Japanese>緊急圧迫包帯</Japanese>
             <Korean>필드 드레싱</Korean>
             <Chinesesimp>基础绷带</Chinesesimp>
@@ -488,7 +488,7 @@
             <Hungarian>Nyomókötszer</Hungarian>
             <Italian>Bendaggio compressivo</Italian>
             <French>Bande extensible</French>
-            <Portuguese>Bandagem de Compressão</Portuguese>
+            <Portuguese>Atadura de compressão</Portuguese>
             <Czech>Obvaz Tlakový</Czech>
             <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
@@ -505,7 +505,7 @@
             <French>Bande compressive</French>
             <Hungarian>Rögzitő kötszer</Hungarian>
             <Italian>Bendaggio elastico</Italian>
-            <Portuguese>Bandagem Elástica</Portuguese>
+            <Portuguese>Atadura elástica</Portuguese>
             <Japanese>伸縮包帯</Japanese>
             <Korean>압박 붕대</Korean>
             <Chinesesimp>弹性绷带</Chinesesimp>
@@ -521,7 +521,7 @@
             <French>Bandage hémostatique</French>
             <Hungarian>QuikClot</Hungarian>
             <Italian>QuikClot (polvere emostatica)</Italian>
-            <Portuguese>QuikClot</Portuguese>
+            <Portuguese>QuikClot (Agente homeostático)</Portuguese>
             <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯</Korean>
             <Chinesesimp>止血粉</Chinesesimp>
@@ -537,7 +537,7 @@
             <French>Prendre le pouls</French>
             <Hungarian>Pulzus ellenőrzése</Hungarian>
             <Italian>Controlla il polso</Italian>
-            <Portuguese>Checar Pulso</Portuguese>
+            <Portuguese>Checar pulso</Portuguese>
             <Japanese>心拍数をはかる</Japanese>
             <Korean>맥박 확인</Korean>
             <Chinesesimp>检查脉搏</Chinesesimp>
@@ -553,7 +553,7 @@
             <French>Prendre la tension</French>
             <Hungarian>Vérnyomás megmérése</Hungarian>
             <Italian>Controlla pressionsa sanguigna</Italian>
-            <Portuguese>Chegar Pressão Sanguínea</Portuguese>
+            <Portuguese>Chegar pressão sanguínea</Portuguese>
             <Japanese>血圧をはかる</Japanese>
             <Korean>혈압 확인</Korean>
             <Chinesesimp>检查血压</Chinesesimp>
@@ -569,7 +569,7 @@
             <French>Fiche de triage</French>
             <Hungarian>Orvosi lap</Hungarian>
             <Italian>Triage Card</Italian>
-            <Portuguese>Cartão de Triagem</Portuguese>
+            <Portuguese>Cartão de triagem</Portuguese>
             <Japanese>トリアージ カード</Japanese>
             <Korean>부상자 분류 카드</Korean>
             <Chinesesimp>检伤分类卡</Chinesesimp>
@@ -585,7 +585,7 @@
             <Spanish>Sin entradas en esta tarjeta de clasificación.</Spanish>
             <Hungarian>Ez az orvosi lap nem tartalmaz bejegyzést.</Hungarian>
             <Czech>Žádné záznamy na tomto štítku</Czech>
-            <Portuguese>Nenhuma entrada neste cartão de triagem</Portuguese>
+            <Portuguese>Nenhuma entrada neste cartão de triagem.</Portuguese>
             <Japanese>トリアージ カードには何も無い。</Japanese>
             <Korean>부상자 분류 카드에 쓰여있는것이 없습니다.</Korean>
             <Chinesesimp>此检伤分类卡上没有任何资料</Chinesesimp>
@@ -617,7 +617,7 @@
             <French>Enlever garrot</French>
             <Hungarian>Érszorító leszedése</Hungarian>
             <Italian>Rimuovi laccio emostatico</Italian>
-            <Portuguese>Remover Torniquete</Portuguese>
+            <Portuguese>Remover torniquete</Portuguese>
             <Japanese>止血帯をはずす</Japanese>
             <Korean>지혈대 제거</Korean>
             <Chinesesimp>移除军用止血带</Chinesesimp>
@@ -697,7 +697,7 @@
             <Czech>Podat krev. transfúzi (1000ml)</Czech>
             <Hungarian>Vér adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (1˙000ml)</Italian>
-            <Portuguese>Administrar Sangue IV (1000ml)</Portuguese>
+            <Portuguese>Administrar sangue IV (1000ml)</Portuguese>
             <Japanese>血液 IV (1000ml) をあたえる</Japanese>
             <Korean>IV 혈액 수혈 (1000ml)</Korean>
             <Chinesesimp>输血液 (1000ml)</Chinesesimp>
@@ -713,7 +713,7 @@
             <Czech>Podat krev. transfúzi (500ml)</Czech>
             <Hungarian>Vér adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (500ml)</Italian>
-            <Portuguese>Administrar Sangue IV (500ml)</Portuguese>
+            <Portuguese>Administrar sangue IV (500ml)</Portuguese>
             <Japanese>血液 IV (500ml) をあたえる</Japanese>
             <Korean>IV 혈액 수혈 (500ml)</Korean>
             <Chinesesimp>输血液 (500ml)</Chinesesimp>
@@ -729,7 +729,7 @@
             <Czech>Podat krev. transfúzi (250ml)</Czech>
             <Hungarian>Vér adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (250ml)</Italian>
-            <Portuguese>Administrar Sangue IV (250ml)</Portuguese>
+            <Portuguese>Administrar sangue IV (250ml)</Portuguese>
             <Japanese>血液 IV (250ml) をあたえる</Japanese>
             <Korean>IV 혈액 수혈 (250ml)</Korean>
             <Chinesesimp>输血液 (250ml)</Chinesesimp>
@@ -745,7 +745,7 @@
             <Czech>Podat plazmu (1000ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (1˙000ml)</Italian>
-            <Portuguese>Administrar Plasma IV (1000ml)</Portuguese>
+            <Portuguese>Administrar plasma IV (1000ml)</Portuguese>
             <Japanese>血しょう IV (1000ml) をあたえる</Japanese>
             <Korean>IV 혈장 수혈 (1000ml)</Korean>
             <Chinesesimp>输血浆 (1000ml)</Chinesesimp>
@@ -761,7 +761,7 @@
             <Czech>Podat plazmu (500ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (500ml)</Italian>
-            <Portuguese>Administrar Plasma IV (500ml)</Portuguese>
+            <Portuguese>Administrar plasma IV (500ml)</Portuguese>
             <Japanese>血しょう IV (500ml) をあたえる</Japanese>
             <Korean>IV 혈장 수혈 (500ml)</Korean>
             <Chinesesimp>输血浆 (500ml)</Chinesesimp>
@@ -777,7 +777,7 @@
             <Czech>Podat plazmu (250ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (250ml)</Italian>
-            <Portuguese>Administrar Plasma IV (250ml)</Portuguese>
+            <Portuguese>Administrar plasma IV (250ml)</Portuguese>
             <Japanese>血しょう IV (250ml) をあたえる</Japanese>
             <Korean>IV 혈장 수혈 (250ml)</Korean>
             <Chinesesimp>输血浆 (250ml)</Chinesesimp>
@@ -793,7 +793,7 @@
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (1˙000ml)</Italian>
-            <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
+            <Portuguese>Administrar soro IV (1000ml)</Portuguese>
             <Japanese>生理食塩水 IV (1000ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
             <Chinesesimp>注射生理食盐水 (1000ml)</Chinesesimp>
@@ -809,7 +809,7 @@
             <Czech>Podaz fyz. roztok (500ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (500ml)</Italian>
-            <Portuguese>Administrar Soro IV (500ml)</Portuguese>
+            <Portuguese>Administrar soro IV (500ml)</Portuguese>
             <Japanese>生理食塩水 IV (500ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
             <Chinesesimp>注射生理食盐水 (500ml)</Chinesesimp>
@@ -825,7 +825,7 @@
             <Czech>Podaz fyz. roztok (250ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (250ml)</Italian>
-            <Portuguese>Administrar Soro IV (250ml)</Portuguese>
+            <Portuguese>Administrar soro IV (250ml)</Portuguese>
             <Japanese>生理食塩水 IV (250ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
             <Chinesesimp>注射生理食盐水 (250ml)</Chinesesimp>
@@ -1065,7 +1065,7 @@
             <Czech>Obvaz (Standartní)</Czech>
             <Hungarian>Kötszer (Általános)</Hungarian>
             <Italian>Bendaggio (base)</Italian>
-            <Portuguese>Bandagem(Básico)</Portuguese>
+            <Portuguese>Atadura (Básica)</Portuguese>
             <Japanese>包帯 (緊急圧迫)</Japanese>
             <Korean>붕대 (기본)</Korean>
             <Chinesesimp>基础绷带</Chinesesimp>
@@ -1096,7 +1096,7 @@
             <Polish>Opatrunek materiałowy, używany do przykrywania ran, zakładany na ranę po zatamowaniu krwawienia.</Polish>
             <Hungarian>Egy különleges anyagú kötszer sebek betakarására, amelyet a vérzés elállítása után helyeznek fel.</Hungarian>
             <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale viene applicata su di essa una volta fermata l'emorragia.</Italian>
-            <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
+            <Portuguese>Um curativo, material específico usado para cobrir um ferimento assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
             <Japanese>緊急圧迫包帯は傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
@@ -1112,7 +1112,7 @@
             <Polish>Bandaż (uciskowy)</Polish>
             <Hungarian>Nyomókötszer</Hungarian>
             <Italian>Bendaggio compressivo</Italian>
-            <Portuguese>Bandagem de Compressão</Portuguese>
+            <Portuguese>Atadura de compressão</Portuguese>
             <Czech>Obvaz (Tlakový)</Czech>
             <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
@@ -1128,7 +1128,7 @@
             <Polish>Używany w celu opatrywania średnich i dużych ran oraz tamowania krwawienia. Dobrze radzi sobie z tamowaniem ran płatowych oraz postrzałowych.</Polish>
             <Hungarian>Közepestől nagyig terjedő sebek betakarására és vérzés elállítására használt kötszer</Hungarian>
             <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
-            <Portuguese>Usado para o preenchimento de cavidades geradas por ferimentos médios e grandes e estancar o sangramento.</Portuguese>
+            <Portuguese>Usado para atar ferimentos médios ou grandes e estancar sangramentos.</Portuguese>
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
             <Japanese>弾性包帯は粘着フィルム状で、普通から大きめなケガにつかい止血します。</Japanese>
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기위해 쓰입니다</Korean>
@@ -1144,7 +1144,7 @@
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
             <Italian>Un bendaggio usato per coprire la ferita, fermare il sanguinamento e facilitarne la guarigione. Questa tecnica è opzionale su ferite multiple.</Italian>
             <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
-            <Portuguese>Uma bandagem usada para preencher o ferimento para estancar o sangramento e facilitar a cicatrização. Preenchimento de feridas é uma opção em ferimentos de politrauma grandes.</Portuguese>
+            <Portuguese>Atadura usada para atar o ferimento, estancando o sangramento e facilitando a cicatrização. Atar feridas é uma opção em ferimentos de politrauma grandes.</Portuguese>
             <Czech>Tlakový obvaz se skládá se ze sterilní krycí vrstvy, na kterou je přiložena silná vrstva savého materiálu stlačující cévu v ráně a která je přitlačována k ráně a připevněna obinadlem. Slouží k zastavení silnějších krvácení.</Czech>
             <Japanese>包帯をつかうと出血を防ぎ治療を促進させます。また大きめな多発性外傷にたいしても使えます。</Japanese>
             <Korean>출혈을 막고 상처를 치유하기 위한 붕대. 다발성외상의 경우 상처를 채우는것도 한 가지 방법입니다.</Korean>
@@ -1161,7 +1161,7 @@
             <Czech>Obvaz (Elastický)</Czech>
             <Hungarian>Rögzító kötszer</Hungarian>
             <Italian>Benda (elastica)</Italian>
-            <Portuguese>Bandagem (Elástica)</Portuguese>
+            <Portuguese>Atadura (Elástica)</Portuguese>
             <Japanese>包帯 (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
             <Chinesesimp>弹性绷带</Chinesesimp>
@@ -1176,7 +1176,7 @@
             <Polish>Bandaż elastyczny służy do opatrywania ran ciętych oraz kłutych. Dobrze radzi sobie również ze zgniecieniami tkanek miękkich oraz rozerwaniami powierzchni skóry.</Polish>
             <Hungarian>Rugalmas kötszercsomag, "rögzítő"</Hungarian>
             <Italian>Kit di bendaggio, elastico</Italian>
-            <Portuguese>Kit de Bandagem, Elástica</Portuguese>
+            <Portuguese>Kit de ataduras elásticas</Portuguese>
             <Czech>Sada obvazů, Elastická</Czech>
             <Japanese>包帯キット (伸縮)</Japanese>
             <Korean>붕대, 압박</Korean>
@@ -1192,7 +1192,7 @@
             <Spanish>Brinda una compresión uniforme y ofrece soporte extra a una zona lesionada</Spanish>
             <Hungarian>Egyenletes nyomást és támogatást biztosít a sebesült felületnek.</Hungarian>
             <Italian>Permette di comprimere e aiutare la zone ferita.</Italian>
-            <Portuguese>Esta bandagem pode ser utilizada para comprimir o ferimento e diminuir o sangramento e garantir que o ferimento não abra em movimento.</Portuguese>
+            <Portuguese>Esta atadura pode ser utilizada para comprimir o ferimento e diminuir o sangramento e garantir que não se abra em movimento.</Portuguese>
             <Czech>Hodí se k fixačním účelům a to i v oblastech kloubů.</Czech>
             <Japanese>負傷部分へ最大の対応と止血を続けられます。</Japanese>
             <Korean>부상 부위를 골고루 압박해주면서 동시에 고정시켜 줍니다.</Korean>
@@ -1240,7 +1240,7 @@
             <German>Ein Hilfsmittel, das Druck auf Venen und Arterien ausübt und so den Blutfluss verringert.</German>
             <Hungarian>Egy szűkítőeszköz, mely a vénás és artériás nyomás keringés helyi összenyomására szolgál, ezzel lelassítva vagy megállítva az adott területen a vérkeringést. Ez csökkenti a vérvesztés mértékét.</Hungarian>
             <Italian>Un laccio emostatico usato per comprimere le vene e arterie per bloccare o rallentare la circolazione del sangue e quindi rallentare dissanguamenti.</Italian>
-            <Portuguese>A aparelho que comprime as artérias e veias para diminuir a perda de sangue.</Portuguese>
+            <Portuguese>Aparelho que comprime as artérias e veias para diminuir a perda de sangue.</Portuguese>
             <Czech>Zařízení používané ke stlačení venózního a arteriálního oběhu. V důsledku dochází ke zpomalení toku krve a tedy i snížení ztrát krve.</Czech>
             <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れをおそくし、失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
@@ -1303,7 +1303,7 @@
             <French>Auto-injecteur d'adénosine</French>
             <Italian>Autoiniettore di adenosina</Italian>
             <Czech>Auto-adenosine</Czech>
-            <Portuguese>Auto-injetor de Adenosina</Portuguese>
+            <Portuguese>Auto-injetor de adenosina</Portuguese>
             <Russian>Аденозин в пневмошприце</Russian>
             <Japanese>アデノシン注射器</Japanese>
             <Korean>아데노신 자동주사기</Korean>
@@ -1318,7 +1318,7 @@
             <French>Utilisé pour contrer les effets de l'épinéphrine</French>
             <Italian>Usato per contrastare l'effetto dell'epinefrina</Italian>
             <Czech>Slouží jako protiváha Adrenalinu</Czech>
-            <Portuguese>Usado para combater os efeitos da Epinefrina</Portuguese>
+            <Portuguese>Usado para combater os efeitos da epinefrina</Portuguese>
             <Russian>Используется для купирования эффектов адреналина</Russian>
             <Japanese>アドレナリンの反対の効果としてつかいます。</Japanese>
             <Korean>에피네프린 대응책으로 쓰입니다</Korean>
@@ -1333,7 +1333,7 @@
             <French>Un composé utilisé pour contrer les effets de l'épinéphrine</French>
             <Italian>Medicamento usato per contrastare l'effetto dell'epinefrina</Italian>
             <Czech>Droga používaná k tlumení efektu Adrenalinu</Czech>
-            <Portuguese>Uma droga usada para combater os efeitos da Epinefrina</Portuguese>
+            <Portuguese>Uma droga usada para combater os efeitos da epinefrina</Portuguese>
             <Russian>Препарат используется для купирования эффектов адреналина</Russian>
             <Japanese>つかうと、アドレナリンと反対の効果がでます。</Japanese>
             <Korean>에피네프린에 대응용으로 쓰이는 약품</Korean>
@@ -1350,7 +1350,7 @@
             <Czech>Auto-atropine</Czech>
             <Hungarian>Atropin autoinjektor</Hungarian>
             <Italian>Autoiniettore di atropina</Italian>
-            <Portuguese>Auto-injetor de Atropina</Portuguese>
+            <Portuguese>Auto-injetor de atropina</Portuguese>
             <Japanese>アトロピン注射器</Japanese>
             <Korean>아트로핀 자동주사기</Korean>
             <Chinesesimp>阿托品自动注射器</Chinesesimp>
@@ -1428,7 +1428,7 @@
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
             <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen (Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
-            <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
+            <Portuguese>Uma droga que trabalha dilatando os brônquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas (anáfilaticas). Usado em casos de parada cardíaca com poucas chances de recuperação.</Portuguese>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
             <Japanese>薬は気管支を拡張するよう交感神経を拡張させ、心拍数を増加させます。それにアレルギー反応を収める効果もあります（アナフィラキシー ショック）。得られる効果は少ないですが、心停止している場合などにつかわれます。</Japanese>
@@ -1541,7 +1541,7 @@
             <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek (hidegen tárolandó)</Hungarian>
             <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue (conservare al fresco)</Italian>
             <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
-            <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
+            <Portuguese>Sangue intravenoso, para restaurar o volume sanguíneo do paciente.(Manter frio)</Portuguese>
             <Czech>Krevní transfuze pro doplnění pacientovi krve (skladujte v chladu)</Czech>
             <Japanese>血液 IV は、患者へ血液を補給します。(要低温保存)</Japanese>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다. (차갑게 할것)</Korean>
@@ -1556,7 +1556,7 @@
             <Italian>Sangue 0 negativo usato per ripristinare sangue in pazienti in cui si è verificata una perdita di sangue.</Italian>
             <French>Culot sanguin O- utilisé dans de rares et stricts cas pour compléter une perte de sang importante. Administré normalement lors d'un MEDEVAC.</French>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
-            <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento.</Portuguese>
+            <Portuguese>Sangue "O" de fator Rh negativo, utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento.</Portuguese>
             <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
             <Czech>0 Rh negativní krev se používá v vzácných případech k doplnění pacientovy hladiny krve, obvykle při převozu zraněné osoby do nemocnice.</Czech>
             <Japanese>O 型への輸血はまれで厳格であり、通常は治療のための輸送段階で輸血をおこないます。</Japanese>
@@ -1621,7 +1621,7 @@
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
             <Italian>Soluzione salina, usata per ripristinare sangue nei pazienti.</Italian>
             <German>Kochsalzlösung, ein medizinisches Volumenersatzmittel</German>
-            <Portuguese>Solução Salina Intravenosa 0.9%, para restaurar o volume de sangue temporariamente.</Portuguese>
+            <Portuguese>Solução salina intravenosa, para restaurar o volume de sangue.</Portuguese>
             <Czech>Fyziologický roztok se aplikuje intravenózně a slouží k obnově pacientovi krve</Czech>
             <Japanese>生理食塩水 IV は、患者の血液量を補助します</Japanese>
             <Korean>생리식염수, 환자의 혈액량을 보충할때 쓰입니다</Korean>
@@ -1637,7 +1637,7 @@
             <Hungarian>Egy orvosi térfogat-helyreállító készítmény, melyet intravénás módon lehet a szervezetbe juttatni.</Hungarian>
             <Italian>Una soluzione medica per ripristinare il volume del sangue introdotta tramite trasfusione EV.</Italian>
             <German>Ein medizinisches Volumenersatzmittel, dass durch einen intravenösen Zugang in den Blutkreislauf verabreicht wird.</German>
-            <Portuguese>Uma reposição temporaria para restaurar a pressão arterial perdida por perda de sangue.</Portuguese>
+            <Portuguese>Uma reposição temporária para restaurar a pressão arterial perdida por perda de sangue.</Portuguese>
             <Czech>Fyziologický roztok se využívá nejčastěji jako infuze při dehydrataci organismu.</Czech>
             <Japanese>生理食塩水 IV を静脈へ投与し、血液量を増加させることができます。</Japanese>
             <Korean>혈류에 IV로 투여되는 의료 용적 대체 요법</Korean>
@@ -1685,7 +1685,7 @@
             <German>Verbandpäckchen (QuikClot)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
-            <Portuguese>Bandagem básica (Coagulante)</Portuguese>
+            <Portuguese>Atadura básica (Coagulante)</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
             <Korean>필드 드레싱 (퀵 클롯)</Korean>
@@ -1701,7 +1701,7 @@
             <German>Bandage mit Gerinnungsmittel</German>
             <Hungarian>QuikClot kötszer</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
-            <Portuguese>Bandagem com agente coagulante</Portuguese>
+            <Portuguese>Atadura com agente coagulante</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>クイッククロット包帯</Japanese>
             <Korean>퀵 클롯 붕대</Korean>
@@ -1717,7 +1717,7 @@
             <German>Verband mit Gerinnungsmittel, um starke Blutung zu behandeln.</German>
             <Hungarian>Hemostatikus kötszer egy vérzésgátló anyaggal.</Hungarian>
             <Italian>Bendaggio emostatico con coagulante che permette di arrestare perdite di sangue</Italian>
-            <Portuguese>Bandagem Hemostática com coagulante que controla hemorragia médias e grandes com risco de vida.</Portuguese>
+            <Portuguese>Atadura homeostática com coagulante que controla hemorragias médias e grandes.</Portuguese>
             <Czech>Hemostatický obvaz určený k zástavě krvácení</Czech>
             <Japanese>血液凝固剤をふくむ包帯により、止血できます。</Japanese>
             <Korean>지혈시 사용하는 붕대로 혈액 응고제를 포함하고있습니다.</Korean>
@@ -1733,7 +1733,7 @@
             <German>Persönliches Erste-Hilfe-Set</German>
             <Hungarian>Elsősegélycsomag</Hungarian>
             <Italian>Pronto soccorso personale</Italian>
-            <Portuguese>Kit De Primeiros Socorros Pessoal</Portuguese>
+            <Portuguese>Kit de Primeiros Socorros Pessoal</Portuguese>
             <Czech>Osobní lékárnička (PAK)</Czech>
             <Japanese>応急処置キット</Japanese>
             <Korean>개인응급키트</Korean>
@@ -1749,7 +1749,7 @@
             <German>Beinhaltet medizinisches Material für fortgeschrittene Behandlung und zum Nähen.</German>
             <Hungarian>Változatos segédfelszereléseket tartalmaz sebvarráshoz és haladó elsősegélynyújtáshoz</Hungarian>
             <Italian>Include vario materiale medico per trattamenti avanzati.</Italian>
-            <Portuguese>Inclui vários tratamentos materiais para custura e tratamento avançado</Portuguese>
+            <Portuguese>Inclui vários tratamentos materiais para costura e tratamento avançado</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných</Czech>
             <Japanese>縫合や高度な処置に必要とされる、さまざまな治療器具が含まれています。</Japanese>
             <Korean>봉합및 고급 조치에 필요한 다양한 치료 도구가 있습니다.</Korean>
@@ -1797,7 +1797,7 @@
             <German>Operationsset</German>
             <Hungarian>Sebészeti készlet</Hungarian>
             <Italian>Kit chirurgico</Italian>
-            <Portuguese>Kit Cirurgico</Portuguese>
+            <Portuguese>Kit Cirúrgico</Portuguese>
             <Czech>Chirurgická sada</Czech>
             <Japanese>縫合キット</Japanese>
             <Korean>봉합 키트</Korean>
@@ -1829,7 +1829,7 @@
             <French>Trousse chirurgicale pour le traitement sur le terrain</French>
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
-            <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
+            <Portuguese>Kit Cirúrgico para tratamento médico avançado em campo.</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>縫合キットは戦場で高度な処置をするためにつかわれます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
@@ -1861,7 +1861,7 @@
             <German>Leichensack</German>
             <Hungarian>Hullazsák</Hungarian>
             <Italian>Sacca per corpi</Italian>
-            <Portuguese>Saco para cadáver</Portuguese>
+            <Portuguese>Saco mortuário</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋</Japanese>
             <Chinesesimp>尸袋</Chinesesimp>
@@ -1909,7 +1909,7 @@
             <German>Blutdruck</German>
             <Hungarian>Vérnyomás</Hungarian>
             <Italian>Pressione sanguigna</Italian>
-            <Portuguese>Pressão Arterial</Portuguese>
+            <Portuguese>Pressão arterial</Portuguese>
             <Czech>Krevní tlak</Czech>
             <Japanese>血圧を測る</Japanese>
             <Korean>혈압</Korean>
@@ -1925,7 +1925,7 @@
             <German>Blutdruck kontrollieren...</German>
             <Hungarian>Vérnyomás megmérése...</Hungarian>
             <Italian>Controllando la pressione sanguigna..</Italian>
-            <Portuguese>Aferindo Pressão Arterial...</Portuguese>
+            <Portuguese>Aferindo pressão arterial...</Portuguese>
             <Czech>Měřím krevní tlak...</Czech>
             <Japanese>血圧を測定しています・・・</Japanese>
             <Korean>혈압 측정증...</Korean>
@@ -1973,7 +1973,7 @@
             <Italian>Hai riscontrato una pressione di %2/%3</Italian>
             <Polish>Wyczuwasz ciśnienie krwi o wartości %2/%3</Polish>
             <German>Der Blutdruck liegt bei %2/%3</German>
-            <Portuguese>A Pressão Arterial é de %2/%3</Portuguese>
+            <Portuguese>A pressão arterial é de %2/%3</Portuguese>
             <Czech>Naměřil si krevní tlak u %2/%3</Czech>
             <Japanese>血圧は %2/%3</Japanese>
             <Korean>혈압이 %2/%3 이다</Korean>
@@ -1989,7 +1989,7 @@
             <German>Blutdruck ist niedrig</German>
             <Hungarian>A vérnyomás alacsony</Hungarian>
             <Italian>La pressione sanguigna è bassa</Italian>
-            <Portuguese>Pressão Arterial baixa</Portuguese>
+            <Portuguese>Pressão arterial baixa</Portuguese>
             <Czech>Naměřil si nízký krevní tlak</Czech>
             <Japanese>血圧はかなり低い</Japanese>
             <Chinesesimp>发现到低血压</Chinesesimp>
@@ -2005,7 +2005,7 @@
             <German>Blutdruck ist normal</German>
             <Hungarian>A vérnyomás normális</Hungarian>
             <Italian>La pressione sanguigna è normale</Italian>
-            <Portuguese>Pressão Arterial normal</Portuguese>
+            <Portuguese>Pressão arterial normal</Portuguese>
             <Czech>Naměřil si normální krevní tlak</Czech>
             <Japanese>血圧は通常</Japanese>
             <Chinesesimp>发现到正常血压</Chinesesimp>
@@ -2021,7 +2021,7 @@
             <German>Blutdruck ist hoch</German>
             <Hungarian>A vérnyomás magas</Hungarian>
             <Italian>La pressione sanguigna è alta</Italian>
-            <Portuguese>Pressão Arterial Alta</Portuguese>
+            <Portuguese>Pressão arterial alta</Portuguese>
             <Czech>Naměřil si vysoký krevní tlak</Czech>
             <Japanese>血圧はかなり高い</Japanese>
             <Chinesesimp>发现到高血压</Chinesesimp>
@@ -2037,7 +2037,7 @@
             <German>Patient hat keinen Blutdruck</German>
             <Hungarian>Nem észlelhető vérnyomás</Hungarian>
             <Italian>La pressione sanguigna è assente</Italian>
-            <Portuguese>Sem Pressão Arterial</Portuguese>
+            <Portuguese>Sem pressão arterial</Portuguese>
             <Czech>Nenaměřil si žádný krevní tlak</Czech>
             <Japanese>血圧は測れなかった</Japanese>
             <Korean>혈압이 잡히지 않는다</Korean>
@@ -2053,7 +2053,7 @@
             <German>Du konntest keinen Blutdruck feststellen</German>
             <Hungarian>Nem sikerült a vérnyomás megmérése</Hungarian>
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
-            <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
+            <Portuguese>Você falhou em aferir a pressão arterial</Portuguese>
             <Czech>Nedokázal si změřit krevní tlak</Czech>
             <Japanese>血圧を測るのに失敗</Japanese>
             <Korean>혈압을 잡을 수 없었다</Korean>
@@ -2149,7 +2149,7 @@
             <German>Kontrolliere Herzfrequenz...</German>
             <Hungarian>Szívverés-szám mérése...</Hungarian>
             <Italian>Controllando il battito cardiaco...</Italian>
-            <Portuguese>Aferindo Pulso...</Portuguese>
+            <Portuguese>Aferindo pulso...</Portuguese>
             <Czech>Kontroluji srdeční tep...</Czech>
             <Japanese>心拍数を測定しています・・・</Japanese>
             <Korean>맥박 확인중...</Korean>
@@ -2261,7 +2261,7 @@
             <German>Herzfrequenz ist %2</German>
             <Hungarian>A szívverés-szám %2</Hungarian>
             <Italian>Il battito cardiaco è %2</Italian>
-            <Portuguese>A Freqüência Cardíaca é de %2</Portuguese>
+            <Portuguese>A freqüência cardíaca é de %2</Portuguese>
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
             <Japanese>心拍数は %2</Japanese>
             <Chinesesimp>心跳为%2</Chinesesimp>
@@ -2277,7 +2277,7 @@
             <German>Schwacher Puls</German>
             <Hungarian>A szívverés-szám alacsony</Hungarian>
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
-            <Portuguese>Freqüência Cardíaca baixa</Portuguese>
+            <Portuguese>Freqüência cardíaca baixa</Portuguese>
             <Czech>Nahmatal si slabý srdeční puls</Czech>
             <Japanese>自分の心拍数は低い</Japanese>
             <Chinesesimp>心跳微弱</Chinesesimp>
@@ -2293,7 +2293,7 @@
             <German>Starker Puls</German>
             <Hungarian>A szívverés-szám magas</Hungarian>
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
-            <Portuguese>Freqüência Cardíaca normal</Portuguese>
+            <Portuguese>Freqüência cardíaca normal</Portuguese>
             <Czech>Nahmatal si silný srdeční puls</Czech>
             <Japanese>自分の心拍数は強い</Japanese>
             <Chinesesimp>心跳过快</Chinesesimp>
@@ -2309,7 +2309,7 @@
             <German>Normaler Puls</German>
             <Hungarian>A szívverés-szám normális</Hungarian>
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
-            <Portuguese>Freqüência Cardíaca alta</Portuguese>
+            <Portuguese>Freqüência cardíaca alta</Portuguese>
             <Czech>Nahmatal si normální srdeční puls</Czech>
             <Japanese>自分の心拍数は通常</Japanese>
             <Chinesesimp>心跳正常</Chinesesimp>
@@ -2325,7 +2325,7 @@
             <German>Kein Puls gefunden</German>
             <Hungarian>Nem észlelhető szívverés</Hungarian>
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
-            <Portuguese>Sem Freqüência Cardíaca</Portuguese>
+            <Portuguese>Sem freqüência cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
             <Japanese>心拍数を測れなかった</Japanese>
             <Chinesesimp>量不到心跳</Chinesesimp>
@@ -2370,7 +2370,7 @@
             <French>%1 est conscient</French>
             <Spanish>%1 ha reaccionado</Spanish>
             <Polish>%1 jest przytomny</Polish>
-            <German>%1 ist anprechbar</German>
+            <German>%1 ist ansprechbar</German>
             <Hungarian>%1 reakcióképes</Hungarian>
             <Italian>%1 e' cosciente</Italian>
             <Portuguese>%1 está respondendo</Portuguese>
@@ -2565,7 +2565,7 @@
             <Hungarian>Bekötözöd %1-t (%2)</Hungarian>
             <Italian>Stai bendando %1 (%2)</Italian>
             <German>Du verbindest %1 (%2)</German>
-            <Portuguese>Você aplica bandagem no paciente %1 (%2)</Portuguese>
+            <Portuguese>Você aplica atadura no paciente %1 (%2)</Portuguese>
             <Czech>Obvazuješ %1 (%2)</Czech>
             <Japanese>%1 (%2) 包帯をつかった</Japanese>
             <Korean>%1 (%2) 붕대를 감았다</Korean>
@@ -2725,7 +2725,7 @@
             <Russian>Погрузить пациента в</Russian>
             <French>Embarquer le patient</French>
             <Hungarian>Sebesült berakása</Hungarian>
-            <Portuguese>Carregar Paciente Em</Portuguese>
+            <Portuguese>Carregar paciente em</Portuguese>
             <Italian>Carica paziente nel</Italian>
             <Japanese>患者を載せる</Japanese>
             <Korean>환자 싣기</Korean>
@@ -2741,7 +2741,7 @@
             <Russian>Выгрузить пациента</Russian>
             <French>Débarquer le patient</French>
             <Hungarian>Sebesült kihúzása</Hungarian>
-            <Portuguese>Descarregar Paciente</Portuguese>
+            <Portuguese>Descarregar paciente</Portuguese>
             <Italian>Scarica il paziente</Italian>
             <Japanese>患者を降ろす</Japanese>
             <Korean>환자 내리기</Korean>
@@ -2757,7 +2757,7 @@
             <French>Le patient débarque</French>
             <Hungarian>Sebesült kihúzása</Hungarian>
             <Italian>Scarica il paziente</Italian>
-            <Portuguese>Descarregar Paciente</Portuguese>
+            <Portuguese>Descarregar paciente</Portuguese>
             <Czech>Vyložit pacienta</Czech>
             <Japanese>患者を降ろす</Japanese>
             <Korean>환자 내리기</Korean>
@@ -2773,7 +2773,7 @@
             <French>Embarquer le patient</French>
             <Hungarian>Sebesült berakása</Hungarian>
             <Italian>Carica il paziente</Italian>
-            <Portuguese>Carregar Paciente Em</Portuguese>
+            <Portuguese>Carregar paciente em</Portuguese>
             <Czech>Naložit pacienta</Czech>
             <Japanese>患者を載せる</Japanese>
             <Korean>환자 싣기</Korean>
@@ -2789,7 +2789,7 @@
             <French>Mettre le corps dans la housse mortuaire</French>
             <Hungarian>Test hullazsákba helyezése</Hungarian>
             <Italian>Metti il corpo nella sacca per cadaveri</Italian>
-            <Portuguese>Colocar corpo dentro do saco para cadáver</Portuguese>
+            <Portuguese>Colocar corpo dentro do saco mortuário</Portuguese>
             <Czech>Umístni tělo do pytle na mrtvoly</Czech>
             <Japanese>死体袋に入れる</Japanese>
             <Korean>시체 가방에 담기</Korean>
@@ -2805,7 +2805,7 @@
             <French>Placement du corps dans la housse...</French>
             <Hungarian>Test hullazsákba helyezése...</Hungarian>
             <Italian>Stai mettendo il corpo nella sacca...</Italian>
-            <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
+            <Portuguese>Colocando corpo dentro do saco mortuário...</Portuguese>
             <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
             <Japanese>死体袋へ入れています・・・</Japanese>
             <Korean>시체 가방에 담는중...</Korean>
@@ -2821,7 +2821,7 @@
             <French>%1 a pansé le patient</French>
             <Hungarian>%1 bekötözte a pácienst</Hungarian>
             <Italian>%1 ha bendato il paziente</Italian>
-            <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
+            <Portuguese>%1 aplicou atadura no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
             <Japanese>%1 は包帯を巻いた</Japanese>
             <Chinesesimp>%1 已包扎伤者</Chinesesimp>
@@ -2948,7 +2948,7 @@
             <French>Très légèrement blessé</French>
             <Hungarian>Nagyon enyhén sérült</Hungarian>
             <Czech>Velmi lehce raněn</Czech>
-            <Portuguese>Muito levemente ferido</Portuguese>
+            <Portuguese>Ferido muito levemente</Portuguese>
             <Japanese>かなり浅い傷</Japanese>
             <Korean>매우 가벼운 부상</Korean>
             <Chinesesimp>小伤</Chinesesimp>
@@ -2996,7 +2996,7 @@
             <French>Bras gauche</French>
             <Hungarian>Bal kar</Hungarian>
             <Czech>Levá ruka</Czech>
-            <Portuguese>Braço Esquerdo</Portuguese>
+            <Portuguese>Braço esquerdo</Portuguese>
             <Japanese>左腕</Japanese>
             <Korean>왼쪽 팔</Korean>
             <Chinesesimp>左手</Chinesesimp>
@@ -3012,7 +3012,7 @@
             <French>Bras droit</French>
             <Hungarian>Jobb kar</Hungarian>
             <Czech>Pravá ruka</Czech>
-            <Portuguese>Braço Direito</Portuguese>
+            <Portuguese>Braço direito</Portuguese>
             <Japanese>右腕</Japanese>
             <Korean>오른쪽 팔</Korean>
             <Chinesesimp>右手</Chinesesimp>
@@ -3028,7 +3028,7 @@
             <French>Jambe gauche</French>
             <Hungarian>Bal láb</Hungarian>
             <Czech>Levá noha</Czech>
-            <Portuguese>Perna Esquerda</Portuguese>
+            <Portuguese>Perna esquerda</Portuguese>
             <Japanese>左足</Japanese>
             <Korean>왼쪽 다리</Korean>
             <Chinesesimp>左脚</Chinesesimp>
@@ -3044,7 +3044,7 @@
             <French>Jambe droite</French>
             <Hungarian>Jobb láb</Hungarian>
             <Czech>Pravá noha</Czech>
-            <Portuguese>Perna Direita</Portuguese>
+            <Portuguese>Perna direita</Portuguese>
             <Japanese>右足</Japanese>
             <Korean>오른쪽 다리</Korean>
             <Chinesesimp>右脚</Chinesesimp>
@@ -3055,7 +3055,7 @@
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
-            <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
+            <Portuguese>Curar pontos de vida totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
             <French>Soigner les plaies entièrement bandées</French>
@@ -3071,7 +3071,7 @@
             <Polish>Ból jest tymczasowo zwalczany</Polish>
             <Czech>Bolest je potlačena pouze dočasně</Czech>
             <Spanish>El dolor se suprime solo temporalmente</Spanish>
-            <Portuguese>Dor é suprimida somente temporáriamente</Portuguese>
+            <Portuguese>Dor é suprimida somente temporariamente</Portuguese>
             <French>La douleur est temporairement calmée</French>
             <Hungarian>A fájdalom csak ideiglenesen csökken</Hungarian>
             <Russian>Боль приглушается только временно</Russian>
@@ -3090,7 +3090,7 @@
             <Spanish>Tipo de efecto de dolor</Spanish>
             <French>Type d'effet de douleur</French>
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
-            <Portuguese>Tipo do efeito de dor</Portuguese>
+            <Portuguese>Tipo do efeito da dor</Portuguese>
             <Czech>Typ bolesti - efekt</Czech>
             <Japanese>痛みの種類</Japanese>
             <Korean>고통 효과 종류</Korean>
@@ -3123,7 +3123,7 @@
             <French>Aberration chromatique</French>
             <Hungarian>Kromatikus aberráció</Hungarian>
             <Czech>Chromatická aberace</Czech>
-            <Portuguese>Aberração Cromática</Portuguese>
+            <Portuguese>Aberração cromática</Portuguese>
             <Japanese>色の収差</Japanese>
             <Korean>색수차</Korean>
             <Chinesesimp>色差</Chinesesimp>
@@ -3152,7 +3152,7 @@
             <German>Wähle den Menüstil: Standard 3D-Auswahl oder kreisförmig.</German>
             <Russian>Выберите тип меню: стандартный вариант (3D) или радиальный</Russian>
             <Spanish>Selecciona el tipo de menú que prefieres: selecciones 3d por defecto o radial.</Spanish>
-            <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
+            <Portuguese>Selecione o tipo de menu que você prefere; seleções 3d padrão ou radial.</Portuguese>
             <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
             <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
             <Italian>Seleziona il tipo di menù che preferisci: selezione (3D), radiale o disabilitata.</Italian>
@@ -3202,7 +3202,7 @@
             <Polish>Draśnięcie</Polish>
             <Spanish>Arañazo</Spanish>
             <Hungarian>Horzsolás</Hungarian>
-            <Portuguese>Raspão</Portuguese>
+            <Portuguese>Escoriação</Portuguese>
             <Czech>Odřenina</Czech>
             <Japanese>擦り傷</Japanese>
             <Korean>찰과상</Korean>
@@ -3218,7 +3218,7 @@
             <Polish>Pomniejsze draśnięcie</Polish>
             <Spanish>Arañazo menor</Spanish>
             <Hungarian>Kis horzsolás</Hungarian>
-            <Portuguese>Raspão leve</Portuguese>
+            <Portuguese>Escoriação leve</Portuguese>
             <Czech>Malá odřenina</Czech>
             <Japanese>小さな擦り傷</Japanese>
             <Korean>소형 찰과상</Korean>
@@ -3234,7 +3234,7 @@
             <Polish>Średnie draśnięcie</Polish>
             <Spanish>Arañazo medio</Spanish>
             <Hungarian>Közepes horzsolás</Hungarian>
-            <Portuguese>Raspão médio</Portuguese>
+            <Portuguese>Escoriação média</Portuguese>
             <Czech>Středně velká odřenina</Czech>
             <Japanese>中くらいの擦り傷</Japanese>
             <Korean>중형 찰과상</Korean>
@@ -3250,7 +3250,7 @@
             <Polish>Duże draśnięcie</Polish>
             <Spanish>Arañazo severo</Spanish>
             <Hungarian>Nagy horzsolás</Hungarian>
-            <Portuguese>Raspão grave</Portuguese>
+            <Portuguese>Escoriação grave</Portuguese>
             <Czech>Velká odřenina</Czech>
             <Japanese>大きな擦り傷</Japanese>
             <Korean>대형 찰과상</Korean>
@@ -3269,7 +3269,7 @@
             <Portuguese>Avulsão</Portuguese>
             <Czech>Avulze</Czech>
             <Japanese>剥離傷</Japanese>
-            <Korean>열상</Korean>
+            <Korean>적출상</Korean>
             <Chinesesimp>撕脱伤</Chinesesimp>
             <Chinese>撕脫傷</Chinese>
         </Key>
@@ -3285,7 +3285,7 @@
             <Portuguese>Avulsão leve</Portuguese>
             <Czech>Malá avulze</Czech>
             <Japanese>小さな剥離傷</Japanese>
-            <Korean>소형 열상</Korean>
+            <Korean>소형 적출상</Korean>
             <Chinesesimp>小撕脱伤</Chinesesimp>
             <Chinese>小撕脫傷</Chinese>
         </Key>
@@ -3301,7 +3301,7 @@
             <Portuguese>Avulsão média</Portuguese>
             <Czech>Střední avulze</Czech>
             <Japanese>中くらいの剥離傷</Japanese>
-            <Korean>중형 열상</Korean>
+            <Korean>중형 적출상</Korean>
             <Chinesesimp>中撕脱伤</Chinesesimp>
             <Chinese>中撕脫傷</Chinese>
         </Key>
@@ -3317,7 +3317,7 @@
             <Portuguese>Avulsão grave</Portuguese>
             <Czech>Velká avulze</Czech>
             <Japanese>大きな剥離傷</Japanese>
-            <Korean>대형 열상</Korean>
+            <Korean>대형 적출상</Korean>
             <Chinesesimp>大撕脱伤</Chinesesimp>
             <Chinese>大撕脫傷</Chinese>
         </Key>
@@ -3346,7 +3346,7 @@
             <Polish>Pomniejsze stłuczenie</Polish>
             <Spanish>Contusión menor</Spanish>
             <Hungarian>Kis zúzódás</Hungarian>
-            <Portuguese>Contusão leve</Portuguese>
+            <Portuguese>Hematoma leve</Portuguese>
             <Czech>Malá modřina</Czech>
             <Japanese>小さな打ち傷</Japanese>
             <Korean>소형 타박상</Korean>
@@ -3362,7 +3362,7 @@
             <Polish>Średnie stłuczenie</Polish>
             <Spanish>Contusión media</Spanish>
             <Hungarian>Közepes zúzódás</Hungarian>
-            <Portuguese>Contusão média</Portuguese>
+            <Portuguese>Hematoma médio</Portuguese>
             <Czech>Středně velká modřina</Czech>
             <Japanese>中くらいの打ち傷</Japanese>
             <Korean>중형 타박상</Korean>
@@ -3378,7 +3378,7 @@
             <Polish>Duże stłuczenie</Polish>
             <Spanish>Contusión severa</Spanish>
             <Hungarian>Nagy zúzódás</Hungarian>
-            <Portuguese>Contusão grave</Portuguese>
+            <Portuguese>Hematoma grande</Portuguese>
             <Czech>Velká modřina</Czech>
             <Japanese>大きな打撲傷</Japanese>
             <Korean>대형 타박상</Korean>
@@ -3394,10 +3394,10 @@
             <Polish>Zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado</Spanish>
             <Hungarian>Zúzott szövet</Hungarian>
-            <Portuguese>Tecido esmagado</Portuguese>
+            <Portuguese>Contusão</Portuguese>
             <Czech>Zhmoždění měkkých tkání</Czech>
             <Japanese>圧挫傷</Japanese>
-            <Korean>좌상</Korean>
+            <Korean>압궤상</Korean>
             <Chinesesimp>撞伤</Chinesesimp>
             <Chinese>撞傷</Chinese>
         </Key>
@@ -3410,10 +3410,10 @@
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado menor</Spanish>
             <Hungarian>Kis zúzott szövet</Hungarian>
-            <Portuguese>Tecido esmagado leve</Portuguese>
+            <Portuguese>Contusão leve</Portuguese>
             <Czech>Malé zhmoždění měkkých tkání</Czech>
             <Japanese>小さな圧挫傷</Japanese>
-            <Korean>소형 좌상</Korean>
+            <Korean>소형 압궤상</Korean>
             <Chinesesimp>小撞伤</Chinesesimp>
             <Chinese>小撞傷</Chinese>
         </Key>
@@ -3426,10 +3426,10 @@
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado medio</Spanish>
             <Hungarian>Közepes zúzott szövet</Hungarian>
-            <Portuguese>Tecido esmagado médio</Portuguese>
+            <Portuguese>Contusão média</Portuguese>
             <Czech>Střední zhmoždění měkkých tkání</Czech>
             <Japanese>中くらいの圧挫傷</Japanese>
-            <Korean>중형 좌상</Korean>
+            <Korean>중형 압궤상</Korean>
             <Chinesesimp>中撞伤</Chinesesimp>
             <Chinese>中撞傷</Chinese>
         </Key>
@@ -3442,10 +3442,10 @@
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado severo</Spanish>
             <Hungarian>Nagy zúzött szövet</Hungarian>
-            <Portuguese>Tecido esmagado grave</Portuguese>
+            <Portuguese>Contusão grande</Portuguese>
             <Czech>Velké zhmoždění měkkých tkání</Czech>
             <Japanese>大きな圧挫傷</Japanese>
-            <Korean>대형 좌상</Korean>
+            <Korean>대형 압궤상</Korean>
             <Chinesesimp>大撞伤</Chinesesimp>
             <Chinese>大撞傷</Chinese>
         </Key>
@@ -3525,7 +3525,7 @@
             <Portuguese>Ruptura</Portuguese>
             <Czech>Tržná rána</Czech>
             <Japanese>裂傷</Japanese>
-            <Korean>창상</Korean>
+            <Korean>열상</Korean>
             <Chinesesimp>撕裂伤</Chinesesimp>
             <Chinese>撕裂傷</Chinese>
         </Key>
@@ -3541,7 +3541,7 @@
             <Portuguese>Ruptura leve</Portuguese>
             <Czech>Malá tržná rána</Czech>
             <Japanese>小さな裂傷</Japanese>
-            <Korean>소형 창상</Korean>
+            <Korean>소형 열상</Korean>
             <Chinesesimp>小撕裂伤</Chinesesimp>
             <Chinese>小撕裂傷</Chinese>
         </Key>
@@ -3557,7 +3557,7 @@
             <Portuguese>Ruptura média</Portuguese>
             <Czech>Střední tržná rána</Czech>
             <Japanese>中くらいの裂傷</Japanese>
-            <Korean>중형 창상</Korean>
+            <Korean>중형 열상</Korean>
             <Chinesesimp>中撕裂伤</Chinesesimp>
             <Chinese>中撕裂傷</Chinese>
         </Key>
@@ -3573,7 +3573,7 @@
             <Portuguese>Ruptura grave</Portuguese>
             <Czech>Velká tržná rána</Czech>
             <Japanese>大きな裂傷</Japanese>
-            <Korean>대형 창상</Korean>
+            <Korean>대형 열상</Korean>
             <Chinesesimp>大撕裂伤</Chinesesimp>
             <Chinese>大撕裂傷</Chinese>
         </Key>
@@ -3586,7 +3586,7 @@
             <French>Plaie pénétrante</French>
             <Spanish>Herida de bala</Spanish>
             <Hungarian>Lőtt seb</Hungarian>
-            <Portuguese>Ferimento por projétil de arma de fogo</Portuguese>
+            <Portuguese>Trauma balístico</Portuguese>
             <Czech>Střelné poranění</Czech>
             <Japanese>銃創</Japanese>
             <Korean>총상</Korean>
@@ -3602,7 +3602,7 @@
             <Spanish>Herida de bala menor</Spanish>
             <Hungarian>Kis lőtt seb</Hungarian>
             <French>Petite plaie pénétrante</French>
-            <Portuguese>Ferimento leve por projétil de arma de fogo</Portuguese>
+            <Portuguese>Trauma balístico pequeno</Portuguese>
             <Czech>Malé střelné poranění</Czech>
             <Japanese>小さな銃創</Japanese>
             <Korean>소형 총상</Korean>
@@ -3618,7 +3618,7 @@
             <Spanish>Herida de bala media</Spanish>
             <Hungarian>Közepes lőtt seb</Hungarian>
             <French>Moyenne plaie pénétrante</French>
-            <Portuguese>Ferimento médio por projétil de arma de fogo</Portuguese>
+            <Portuguese>Trauma balístico médio</Portuguese>
             <Czech>Střední střelné poranění</Czech>
             <Japanese>中くらいの銃創</Japanese>
             <Korean>중형 총상</Korean>
@@ -3634,7 +3634,7 @@
             <Spanish>Herida de bala severa</Spanish>
             <Hungarian>Nagy lőtt seb</Hungarian>
             <French>Grande plaie pénétrante</French>
-            <Portuguese>Ferimento grave por projétil de arma de fogo</Portuguese>
+            <Portuguese>Trauma balístico grande</Portuguese>
             <Czech>Velké střelné poranění</Czech>
             <Japanese>大きな銃創</Japanese>
             <Korean>대형 총상</Korean>
@@ -3650,10 +3650,10 @@
             <French>Perforation</French>
             <Spanish>Herida punzante</Spanish>
             <Hungarian>Szúrt seb</Hungarian>
-            <Portuguese>Ferimento por perfuração</Portuguese>
+            <Portuguese>Ferimento perfurante</Portuguese>
             <Czech>Bodná rána</Czech>
             <Japanese>刺し傷</Japanese>
-            <Korean>관통상</Korean>
+            <Korean>자상</Korean>
             <Chinesesimp>穿刺伤</Chinesesimp>
             <Chinese>穿刺傷</Chinese>
         </Key>
@@ -3666,10 +3666,10 @@
             <Spanish>Herida punzante menor</Spanish>
             <Hungarian>Kis szúrt seb</Hungarian>
             <French>Petite perforation</French>
-            <Portuguese>Ferimento leve por perfuração</Portuguese>
+            <Portuguese>Ferimento perfurante leve</Portuguese>
             <Czech>Malá bodná rána</Czech>
             <Japanese>小さな刺し傷</Japanese>
-            <Korean>소형 관통상</Korean>
+            <Korean>소형 자상</Korean>
             <Chinesesimp>小穿刺伤</Chinesesimp>
             <Chinese>小穿刺傷</Chinese>
         </Key>
@@ -3682,10 +3682,10 @@
             <Spanish>Herida punzante media</Spanish>
             <Hungarian>Közepes szúrt seb</Hungarian>
             <French>Moyenne perforation</French>
-            <Portuguese>Ferimento médio por perfuração</Portuguese>
+            <Portuguese>Ferimento perfurante médio</Portuguese>
             <Czech>Střední bodná rána</Czech>
             <Japanese>中くらいの刺し傷</Japanese>
-            <Korean>중형 관통상</Korean>
+            <Korean>중형 자상</Korean>
             <Chinesesimp>中穿刺伤</Chinesesimp>
             <Chinese>中穿刺傷</Chinese>
         </Key>
@@ -3698,10 +3698,10 @@
             <Spanish>Herida punzante severa</Spanish>
             <Hungarian>Nagy szúrt seb</Hungarian>
             <French>Grande perforation</French>
-            <Portuguese>Ferimento grave por perfuração</Portuguese>
+            <Portuguese>Ferimento perfurante grave</Portuguese>
             <Czech>Velká bodná rána</Czech>
             <Japanese>大きな刺し傷</Japanese>
-            <Korean>대형 관통상</Korean>
+            <Korean>대형 자상</Korean>
             <Chinesesimp>大穿刺伤</Chinesesimp>
             <Chinese>大穿刺傷</Chinese>
         </Key>
@@ -3950,7 +3950,7 @@
             <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
             <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
             <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
-            <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
+            <Portuguese>Ativar lixo a ser criado após tratamento</Portuguese>
             <French>Activer la création de détrimus au début des traitements</French>
             <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
             <Italian>Abilita la creazione della barella dopo trattamento</Italian>
@@ -3966,7 +3966,7 @@
             <Spanish>Tiempo de vida de los restos médicos</Spanish>
             <German>Dauer des angezeigten Abfalls</German>
             <Czech>Životnost pro odpadky</Czech>
-            <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
+            <Portuguese>Tempo de vida do lixo médico</Portuguese>
             <French>Durée d'affichage des détritus</French>
             <Hungarian>Szemétobjektumok élettartama</Hungarian>
             <Italian>Tempo di vita delle barelle</Italian>
@@ -3982,7 +3982,7 @@
             <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
             <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
             <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
-            <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
+            <Portuguese>Quanto tempo o lixo médico deve permanecer? Em segundos. -1 é para sempre.</Portuguese>
             <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
@@ -4046,7 +4046,7 @@
             <Spanish>¿Cuál es el daño que un jugador puede sufrir antes de morir?</Spanish>
             <German>Wie viel Schaden kann ein Spieler erleiden, bevor er getötet wird?</German>
             <Czech>Jaké poškození může hráč dostat než bude zabit?</Czech>
-            <Portuguese>Qal é o dano que um jogador pode sofrer antes de morrer?</Portuguese>
+            <Portuguese>Qual é o dano que um jogador pode sofrer antes de morrer?</Portuguese>
             <French>Quels dégâts peut subir un joueur avant d'être tué</French>
             <Hungarian>Mennyi sérülést szenvedhet el egy játékos, mielőtt meghal?</Hungarian>
             <Italian>Quanto è il danno che un giocatore può sostenere prima di essere ucciso?</Italian>
@@ -4174,7 +4174,7 @@
             <Spanish>Mover una unidad a inconsciente en vez de a muerta</Spanish>
             <German>Lässt eine Einheit bewusstlos werden anstatt zu sterben</German>
             <Czech>Jednotka upadne do bezvědomí namísto smrti</Czech>
-            <Portuguese>Fazer a unidade ficar inconsciente invés de morrer</Portuguese>
+            <Portuguese>Fazer a unidade ficar inconsciente ao invés de morrer</Portuguese>
             <French>Forcer l'inconscience au lieu de la mort instantanée</French>
             <Hungarian>Egy egység kerüljön eszméletlen állapotba a halott helyett</Hungarian>
             <Italian>Imposta un'unità come incosciente invece di morta</Italian>
@@ -4429,7 +4429,7 @@
             <Spanish>Accidentes de vehículos</Spanish>
             <German>Fahrzeugunfälle</German>
             <Czech>Poškození z kolize</Czech>
-            <Portuguese>Batidas de veículos</Portuguese>
+            <Portuguese>Colisão de veículos</Portuguese>
             <French>Accident en véhicule</French>
             <Hungarian>Járműbalesetek</Hungarian>
             <Italian>Schianto Veicoli</Italian>
@@ -4445,7 +4445,7 @@
             <Spanish>¿Las unidades reciben daño de un accidente de tráfico?</Spanish>
             <German>Verursacht ein Fahrzeugunfall Verletzungen</German>
             <Czech>Dostane jednotka poškození při autonehodě?</Czech>
-            <Portuguese>As unidades recebem dano de uma batida de veículo?</Portuguese>
+            <Portuguese>As unidades recebem dano de uma colisão de veículo?</Portuguese>
             <French>Les unités subissent des dégats lors d'accident</French>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
@@ -4462,7 +4462,7 @@
             <French>Activer l'épinéphrine</French>
             <Italian>Permette epinefrina</Italian>
             <Czech>Povolit adrenalin</Czech>
-            <Portuguese>Permitir Epinefrina</Portuguese>
+            <Portuguese>Permitir epinefrina</Portuguese>
             <Russian>Разрешить Адреналин</Russian>
             <Japanese>アドレナリンの許可</Japanese>
             <Korean>에피네프린 활성화</Korean>
@@ -4477,7 +4477,7 @@
             <French>Qui peut utiliser l'adrénaline pour les soins complets ? (Médical basique seulement)</French>
             <Italian>Chi può usare l'epinefrina per la cura completa? (solo per sistema medico di base)</Italian>
             <Czech>Kdo může použít adrenalin k úplnému vyléčení? (Pouze základní zdravotní systém)</Czech>
-            <Portuguese>Quem pode usar Epinefrina para cura completa? (Somente sistema médico básico)</Portuguese>
+            <Portuguese>Quem pode usar epinefrina para cura completa? (Somente sistema médico básico)</Portuguese>
             <Russian>Кому разрешено использовать адреналин для полного излечения? (Только для базовой медицины)</Russian>
             <Japanese>完全に回復できるよう誰しもがアドレナリンを使えるようにしますか? (ベーシック医療のみ)</Japanese>
             <Korean>완전한 체력회복을 위해 어느 인원이 에피네프린을 쓸 수 있습니까? (기본 의료 전용)</Korean>
@@ -4571,7 +4571,7 @@
             <Spanish>Eliminar EPA después del uso</Spanish>
             <German>Entf. Erste-Hilfe-Set bei Verwendung</German>
             <Czech>Odebrat osobní lékárničku po použití</Czech>
-            <Portuguese>Remover o KPS depois do uso</Portuguese>
+            <Portuguese>Remover o KPS após uso</Portuguese>
             <French>Utilisation unique de la trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag eltávolítása használatkor</Hungarian>
             <Italian>Rimuovi Kit Pronto Soccorso dopo l'uso</Italian>
@@ -4587,7 +4587,7 @@
             <Spanish>El EPA será eliminado después de usarlo</Spanish>
             <German>Sollen Erste-Hilfe-Sets bei Verwendung entfernt werden?</German>
             <Czech>Má se osobní lékárnička odstranit po použití?</Czech>
-            <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
+            <Portuguese>Deve o KPS ser removido após seu uso?</Portuguese>
             <French>La trousse sanitaire doit être consommée à l'utilisation?</French>
             <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
             <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
@@ -4604,7 +4604,7 @@
             <French>Utilisation de l'épinéphrine</French>
             <Italian>Ubicazione epinefrina</Italian>
             <Czech>Oblast k použití adrenalinu</Czech>
-            <Portuguese>Localizações de Epinefrina</Portuguese>
+            <Portuguese>Localizações de epinefrina</Portuguese>
             <Russian>Место использования адреналина</Russian>
             <Japanese>アドレナリンをつかう場所</Japanese>
             <Korean>에피네프린 사용 장소</Korean>
@@ -4619,7 +4619,7 @@
             <French>Où peut être utilisé l'épinéphrine ? (Médical basique)</French>
             <Italian>Dove si può usare l'epinefrina? (Sistema medico di base)</Italian>
             <Czech>Kde může být použit adrenalin? (Pouze základní zdravotní systém)</Czech>
-            <Portuguese>Onde pode-se usar a Epinefrina? (Somente sistema médico básico)</Portuguese>
+            <Portuguese>Onde pode-se usar a epinefrina? (Somente sistema médico básico)</Portuguese>
             <Russian>Где может использоваться адреналин? (Базовая медицина)</Russian>
             <Japanese>どこでもアドレナリンをつかえるようにしますか? (ベーシック医療のみ)</Japanese>
             <Korean>어디에서 에피네프린을 사용할 수 있습니까? (기본 의료)</Korean>
@@ -4713,7 +4713,7 @@
             <Spanish>Vehiculos médicos</Spanish>
             <German>Sanitätsfahrzeuge</German>
             <Czech>Zdravotnická vozidla</Czech>
-            <Portuguese>Veículos médcos</Portuguese>
+            <Portuguese>Veículos médicos</Portuguese>
             <French>Dans les véhicules sanitaires</French>
             <Hungarian>Orvosi járművek</Hungarian>
             <Italian>Veicoli medici</Italian>
@@ -4809,7 +4809,7 @@
             <Spanish>Eliminar el equipo quirúrgico después del uso</Spanish>
             <German>Entferne Operationskästen bei Verwendung?</German>
             <Czech>Odebrat chirurgickou soupravu po použití?</Czech>
-            <Portuguese>Deve o kit cirúrgico ser removido após o uso?</Portuguese>
+            <Portuguese>Deve o kit cirúrgico ser removido após seu uso?</Portuguese>
             <French>La trousse chirurgicale doit être consommée à l'utilisation?</French>
             <Hungarian>Eltávolítódjon a sebészkészlet használatkor?</Hungarian>
             <Italian>Il Kit Chirurgico dev'essere rimosso dopo l'uso?</Italian>
@@ -4888,7 +4888,7 @@
             <Polish>Lecz hitpointy</Polish>
             <Spanish>Curar puntos de vida</Spanish>
             <Russian>Исцелять части тела</Russian>
-            <Portuguese>Curar hitpoints</Portuguese>
+            <Portuguese>Curar pontos de vida</Portuguese>
             <Czech>Léčit hitponty</Czech>
             <Italian>Cura Hitpoints</Italian>
             <French>Soigner les blessures</French>
@@ -4903,7 +4903,7 @@
             <Polish>Po bandażowaniu ulecz hitpointy, usuwając z nich ślady krwi i przywracając im pełną sprawność.</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
-            <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
+            <Portuguese>Curar totalmente pontos de vida enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura Hitpoints completamente bendati</Italian>
             <French>Soigner les plaies entièrement bandées.</French>
@@ -4934,7 +4934,7 @@
             <Polish>Ból jest tylko tymczasowo zwalczany, nie jest usuwany trwale</Polish>
             <Czech>Bolest je potlačena, ale jen dočastně</Czech>
             <Spanish>El dolor se suprime solo temporalmente, no se elimina.</Spanish>
-            <Portuguese>Dor é somente temporáriamente suprimida, não removida</Portuguese>
+            <Portuguese>Dor é somente temporariamente suprimida, não removida</Portuguese>
             <French>La douleur est seulement temporairement calmée</French>
             <Hungarian>A fájdalom csak ideiglenesen csökken, nem távolítódik el</Hungarian>
             <Russian>Боль приглушается только временно</Russian>
@@ -5622,6 +5622,24 @@
             <Chinese>關閉蓋子</Chinese>
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Korean>뚜껑 닫기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
+            <English>Unconscious animation during treatment</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
+            <English>Allow animation of unconscious patients during treatment.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
+            <English>Move unconscious units from group</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
+            <English>When a group member goes unconscious, removes them from their group.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
+            <English>Overdosing</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
+            <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
         </Key>
     </Package>
 </Project>

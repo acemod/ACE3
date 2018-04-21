@@ -42,7 +42,7 @@ class GVAR(display) {
             idc = IDC_arrowMinus;
             text = "-";
             colorBackground[]={0,0,0,0.8};
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), -1)] call FUNC(buttonCargo));
+            onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), -1)] call FUNC(buttonCargo));
             fade = 1;
             enable = 0;
             x = 0.5;
@@ -53,7 +53,7 @@ class GVAR(display) {
         };
         class ArrowRight: ArrowLeft {
             idc = IDC_arrowPlus;
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), 1)] call FUNC(buttonCargo));
+            onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), 1)] call FUNC(buttonCargo));
             text="+";
         };
         class blockLeftFrame: RscFrame {
@@ -167,7 +167,7 @@ class GVAR(display) {
             h = QUOTE(7 * GRID_H);
             class controls {
                 class buttonHide: ctrlButton {
-                    idc = -1;
+                    idc = IDC_buttonHide;
                     colorBackground[] = {0,0,0,0.8};
                     x = QUOTE(1 * WIDTH_GAP + 0 * WIDTH_SINGLE);
                     y = QUOTE(0);
@@ -177,25 +177,28 @@ class GVAR(display) {
                     sizeEx = QUOTE(5 * GRID_H);
                     shortcuts[] = {"0x0E"};
                     tooltip = CSTRING(buttonHideTooltip);
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonHide));
+                    onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(buttonHide));
                 };
                 class buttonLoadouts: buttonHide {
-                    idc = -1;
+                    idc = IDC_buttonLoadouts;
                     x = QUOTE(2 * WIDTH_GAP + 1 * WIDTH_SINGLE);
                     text = CSTRING(buttonLoadoutsText);
+                    tooltip = CSTRING(buttonLoadoutsTooltip);
                     onButtonClick = QUOTE(createDialog QQGVAR(loadoutsDisplay));
                 };
                 class buttonExport: buttonHide {
-                    idc = -1;
+                    idc = IDC_buttonExport;
                     x = QUOTE(3 * WIDTH_GAP + 2 * WIDTH_SINGLE);
                     text = CSTRING(buttonExportText);
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonExport));
+                    tooltip = CSTRING(buttonExportTooltip);
+                    onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(buttonExport));
                 };
                 class buttonImport: buttonHide {
-                    idc = -1;
+                    idc = IDC_buttonImport;
                     x = QUOTE(4 * WIDTH_GAP + 3 * WIDTH_SINGLE);
                     text = CSTRING(buttonImportText);
-                    onButtonClick = QUOTE([ctrlparent (_this select 0)] call FUNC(buttonImport));
+                    tooltip = CSTRING(buttonImportTooltip);
+                    onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(buttonImport));
                 };
                 class buttonClose: ctrlButtonOK {
                     idc = IDC_menuBarClose;
@@ -206,7 +209,7 @@ class GVAR(display) {
                     h = QUOTE(7 * GRID_H);
                     text = CSTRING(buttonCloseText);
                     sizeEx = QUOTE(5 * GRID_H);
-                    onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 1);
+                    onButtonClick = QUOTE(ctrlParent (_this select 0) closeDisplay 1);
                 };
             };
         };
@@ -264,6 +267,194 @@ class GVAR(display) {
                     h = QUOTE(12 * GRID_H);
                 };
             };
+        };
+        class statsBox: RscControlsGroupNoScrollbars {
+            idc = IDC_statsBox;
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(47 * GRID_W);
+            h = QUOTE(55 * GRID_H);
+            class controls {
+                class statsStaticBackground1: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(47 * GRID_W);
+                    h = QUOTE(55 * GRID_H);
+                    colorBackground[]={0.1,0.1,0.1,0.5};
+                };
+                class statsStaticBackground2: ctrlStaticBackground {
+                    idc = -1;
+                    x = QUOTE(0);
+                    y = QUOTE(0);
+                    w = QUOTE(47 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                    colorBackground[]={0.1,0.1,0.1,0.8};
+                };
+                class statsTitle1: RscText {
+                    idc = IDC_statsTitle1;
+                    fade = 1;
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(5 * GRID_H);
+                    w = QUOTE(45 * GRID_W);
+                    h = QUOTE(5 * GRID_H);
+                    colorBackground[]={0,0,0,0};
+                    colorText[]={0.7,0.7,0.7,1};
+                    sizeEx = QUOTE(5 * GRID_H);
+                    text = "";
+                };
+                class statsBackground1: ctrlStaticBackground {
+                    idc = IDC_statsBackground1;
+                    fade = 1;
+                    x = QUOTE(1 * GRID_W);
+                    y = QUOTE(10 * GRID_H);
+                    w = QUOTE(45 * GRID_W);
+                    h = QUOTE(4 * GRID_H);
+                    colorBackground[]={1,1,1,0.15};
+                };
+                class statsBar1: ctrlProgress {
+                    idc = IDC_statsBar1;
+                    fade = 1;
+                    style = 0;
+                    texture = "#(argb,8,8,3)color(1,1,1,1)";
+                    colorBar[] = {1,1,1,1};
+                    colorFrame[] = {0,0,0,0};
+                    x = QUOTE(1 * GRID_W);
+                    y = QUOTE(10 * GRID_H);
+                    w = QUOTE(45 * GRID_W);
+                    h = QUOTE(4 * GRID_H);
+                };
+                class statsText1: RscText {
+                    idc = IDC_statsText1;
+                    shadow=0;
+                    fade = 1;
+                    colorShadow[]={1,1,1,1};
+                    colorText[]={0,0,0,1};
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(10 * GRID_H);
+                    w = QUOTE(45 * GRID_W);
+                    h = QUOTE(4 * GRID_H);
+                    sizeEx = QUOTE(5 * GRID_H);
+                    text = "";
+                };
+                class statsTitle2: statsTitle1 {
+                    idc = IDC_statsTitle2;
+                    y = QUOTE(15 * GRID_H);
+                };
+                class statsBackground2: statsBackground1 {
+                    idc = IDC_statsBackground2;
+                    y = QUOTE(20 * GRID_H);
+                };
+                class statsBar2: statsBar1 {
+                    idc = IDC_statsBar2;
+                    y = QUOTE(20 * GRID_H);
+                };
+                class statsText2: statsText1 {
+                    idc = IDC_statsText2;
+                    y = QUOTE(20 * GRID_H);
+                };
+                class statsTitle3: statsTitle1 {
+                    idc = IDC_statsTitle3;
+                    y = QUOTE(25 * GRID_H);
+                };
+                class statsBackground3: statsBackground1 {
+                    idc = IDC_statsBackground3;
+                    y = QUOTE(30 * GRID_H);
+                };
+                class statsBar3: statsBar1 {
+                    idc = IDC_statsBar3;
+                    y = QUOTE(30 * GRID_H);
+                };
+                class statsText3: statsText1 {
+                    idc = IDC_statsText3;
+                    y = QUOTE(30 * GRID_H);
+                };
+                class statsTitle4: statsTitle1 {
+                    idc = IDC_statsTitle4;
+                    y = QUOTE(35 * GRID_H);
+                };
+                class statsBackground4: statsBackground1 {
+                    idc = IDC_statsBackground4;
+                    y = QUOTE(40 * GRID_H);
+                };
+                class statsBar4: statsBar1 {
+                    idc = IDC_statsBar4;
+                    y = QUOTE(40 * GRID_H);
+                };
+                class statsText4: statsText1 {
+                    idc = IDC_statsText4;
+                    y = QUOTE(40 * GRID_H);
+                };
+                class statsTitle5: statsTitle1 {
+                    idc = IDC_statsTitle5;
+                    y = QUOTE(45 * GRID_H);
+                };
+                class statsBackground5: statsBackground1 {
+                    idc = IDC_statsBackground5;
+                    y = QUOTE(50 * GRID_H);
+                };
+                class statsBar5: statsBar1 {
+                    idc = IDC_statsBar5;
+                    y = QUOTE(50 * GRID_H);
+                    colorBackground[]={1,1,1,0.15};
+                };
+                class statsText5: statsText1 {
+                    idc = IDC_statsText5;
+                    y = QUOTE(50 * GRID_H);
+                };
+            };
+        };
+        class statsButton: ctrlButton {
+            idc = IDC_statsButton;
+            style= 2;
+            text=">";
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton), [ctrlParent (_this select 0)]]) call CBA_fnc_localEvent);
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(6 * GRID_W);
+            h = QUOTE(6 * GRID_H);
+            sizeEx = QUOTE(5 * GRID_H);
+        };
+        class statsPreviousPage: ctrlButton {
+            idc = IDC_statsPreviousPage;
+            style= 2;
+            text="<";
+            colorBackground[]={0,0,0,0};
+            colorBackgroundDisabled[]= {0,0,0,0};
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, false)]]) call CBA_fnc_localEvent);
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(5 * GRID_W);
+            h = QUOTE(5 * GRID_H);
+            sizeEx = QUOTE(5.5 * GRID_H);
+        };
+        class statsNextPage: statsPreviousPage {
+            idc =  IDC_statsNextPage;
+            text = ">";
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, true)]]) call CBA_fnc_localEvent);
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP + 30 * GRID_W);
+        };
+        class statsCurrentPage: RscText {
+            idc = IDC_statsCurrentPage;
+            style = ST_CENTER;
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP + 5 * GRID_W);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(25 * GRID_W);
+            h = QUOTE(5 * GRID_H);
+            colorBackground[]={0,0,0,0};
+            shadow=2;
+            sizeEx = QUOTE(5 * GRID_H);
+            text = "";
+        };
+        class statsButtonClose: ctrlButtonPicture {
+            idc = IDC_statsButtonClose;
+            colorBackground[]={0,0,0,0};
+            text="\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa";
+            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton), [ctrlParent (_this select 0)]]) call CBA_fnc_localEvent);
+            x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP + 42 * GRID_W);
+            y = QUOTE(safezoneY + 1.8 * GRID_H);
+            w = QUOTE(5 * GRID_W);
+            h = QUOTE(5 * GRID_H);
         };
         class mouseBlock: RscText {
             idc = IDC_mouseBlock;
@@ -368,12 +559,13 @@ class GVAR(display) {
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(74 * GRID_W);
             h = QUOTE(6 * GRID_H);
+            sizeEx = QUOTE(6 * GRID_H);
         };
         class leftSearchbarButton: ctrlButtonPicture {
             idc = IDC_leftSearchbarButton;
             text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
             colorBackground[]={0,0,0,0.5};
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_leftSearchbar)] call FUNC(handleSearchbar));
+            onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), ctrlParent (_this select 0) displayCtrl IDC_leftSearchbar)] call FUNC(handleSearchbar));
             x = QUOTE(safezoneX + 87 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);
@@ -387,7 +579,7 @@ class GVAR(display) {
         };
         class rightSearchbarButton: leftSearchbarButton {
             idc = IDC_rightSearchbarButton;
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_rightSearchbar)] call FUNC(handleSearchbar));
+            onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), ctrlParent (_this select 0) displayCtrl IDC_rightSearchbar)] call FUNC(handleSearchbar));
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
         };
         class tabLeft: RscControlsGroupNoScrollbars {
@@ -411,7 +603,7 @@ class GVAR(display) {
                     idc = IDC_buttonPrimaryWeapon;
                     text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\PrimaryWeapon_ca.paa";
                     tooltip="$STR_A3_RscDisplayArsenal_tab_PrimaryWeapon";
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(fillLeftPanel));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(fillLeftPanel));
                     colorBackground[]={0,0,0,0.5};
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(0 * GRID_H);
@@ -604,7 +796,7 @@ class GVAR(display) {
             idc = IDC_buttonOptic;
             tooltip="$STR_A3_RscDisplayArsenal_tab_ItemOptic";
             text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
-            onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(fillRightPanel));
+            onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(fillRightPanel));
             colorBackground[]={0,0,0,0.5};
             x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
@@ -714,6 +906,7 @@ class GVAR(display) {
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
             text = QPATHTOF(data\iconClearContainer.paa);
+            tooltip = CSTRING(buttonClearContainerTooltip);
             colorBackground[]={0,0,0,0.5};
             onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;
@@ -772,7 +965,7 @@ class GVAR(loadoutsDisplay) {
                     onSetFocus = QUOTE(GVAR(loadoutsPanelFocus) = true);
                     onKillFocus = QUOTE(GVAR(loadoutsPanelFocus) = false);
                     onLBSelChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onSelChangedLoadouts));
-                    onLBDblClick = QUOTE([ARR_2(ctrlparent (_this select 0), (ctrlParent (_this select 0)) displayCtrl IDC_buttonLoad)] call FUNC(buttonLoadoutsLoad));
+                    onLBDblClick = QUOTE([ARR_2(ctrlParent (_this select 0), (ctrlParent (_this select 0)) displayCtrl IDC_buttonLoad)] call FUNC(buttonLoadoutsLoad));
                     x = QUOTE(0);
                     y = QUOTE(5 * GRID_H);
                     w = QUOTE(160 * GRID_W);
@@ -795,6 +988,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(65 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(6 * GRID_H);
                 };
                 class loadoutsSearchbar: ctrlEdit {
                     idc = IDC_loadoutsSearchbar;
@@ -805,12 +999,13 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(72 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(6 * GRID_H);
                 };
                 class loadoutsSearchbarButton: ctrlButtonPicture {
                     idc = -1;
                     text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
                     colorBackground[]={0,0,0,0.5};
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), ctrlparent (_this select 0) displayCtrl IDC_loadoutsSearchbar)] call FUNC(handleLoadoutsSearchbar));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), ctrlParent (_this select 0) displayCtrl IDC_loadoutsSearchbar)] call FUNC(handleLoadoutsSearchbar));
                     x = QUOTE(155 * GRID_W);
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(5 * GRID_W);
@@ -825,7 +1020,7 @@ class GVAR(loadoutsDisplay) {
                     text= CSTRING(buttonSaveText);
                     tooltip= CSTRING(buttonSaveTooltip);
                     sizeEx = QUOTE(5 * GRID_H);
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsSave));
                     colorBackground[] = {0,0,0,0.8};
                 };
                 class buttonRename: buttonSave {
@@ -833,21 +1028,21 @@ class GVAR(loadoutsDisplay) {
                     x = QUOTE(32.5 * GRID_W);
                     text= CSTRING(buttonRenameText);
                     tooltip= CSTRING(buttonRenameTooltip);
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
                 };
                 class buttonLoad: buttonSave {
                     idc = IDC_buttonLoad;
                     x = QUOTE(65 * GRID_W);
                     text= CSTRING(buttonLoadText);
                     tooltip= CSTRING(buttonLoadTooltip);
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsLoad));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsLoad));
                 };
                 class buttonShare: buttonSave {
                     idc = IDC_buttonShare;
                     x = QUOTE(97.5 * GRID_W);
                     text= CSTRING(buttonSharePrivateText);
                     tooltip= CSTRING(buttonShareTooltip);
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsShare));
                 };
                 class buttonDelete: buttonSave {
                     idc = IDC_buttonDelete;
@@ -855,11 +1050,10 @@ class GVAR(loadoutsDisplay) {
                     text= CSTRING(buttonDeleteText);
                     tooltip= CSTRING(buttonDeleteTooltip);
                     colorBackgroundActive[] = {0.5,0,0,1};
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsDelete));
                 };
             };
         };
-        
         class buttonClose: ctrlButton {
             idc = -1;
             x = QUOTE(safezoneW  + safezoneX - 32 * GRID_W);
@@ -870,7 +1064,7 @@ class GVAR(loadoutsDisplay) {
             text= CSTRING(buttonCloseText);
             shortcuts[]= {"0x01"};
             tooltip= "";
-            onButtonClick = QUOTE(ctrlparent (_this select 0) closeDisplay 2);
+            onButtonClick = QUOTE(ctrlParent (_this select 0) closeDisplay 2);
         };
         class buttonBar: ctrlControlsGroupNoScrollbars {
             idc = -1;
@@ -897,7 +1091,7 @@ class GVAR(loadoutsDisplay) {
                     sizeEx = QUOTE(5 * GRID_H);
                     text= CSTRING(tabMyLoadoutsText);
                     tooltip= CSTRING(tabMyLoadoutsTooltip);
-                    onButtonClick = QUOTE([ARR_2(ctrlparent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
+                    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(loadoutsChangeTab));
                 };
                 class buttonDefaultLoadoutsBackground: buttonMyLoadoutsBackground {
                     idc = IDC_buttonDefaultLoadoutsBackground;

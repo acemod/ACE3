@@ -210,7 +210,7 @@ if (_items isEqualType true) then {
                     };
                 };
                 case (isClass (configFile >> "CfgVehicles" >> _x)): {
-                    if (getText (configFile >> "CfgVehicles" >> _x >> "vehicleClass") == "Backpacks") then {
+                    if (getNumber (configFile >> "CfgVehicles" >> _x >> "isBackpack") == 1) then {
                         (_cargo select 6) pushBackUnique _x;
                     };
                 };
