@@ -166,11 +166,8 @@ if (_show == 1) then {
             } else {
                 private _bloodLoss = _selectionBloodLoss select _forEachIndex;
 
-                private _bloodLossRed = 0.5;
-                private _totColors = 10;
-
-                private _frBL = 0 max (_bloodLoss / _bloodLossRed) min 1;
-                private _colorInt = ceil ((_frBL * (_totColors - 1)));
+                private _frBL = 0 max (_bloodLoss / BLOOD_LOSS_RED_THRESHOLD) min 1;
+                private _colorInt = ceil ((_frBL * (BLOOD_LOSS_TOTAL_COLORS - 1)));
 
                 _colorSelection = [
                      [1.00, 1.00, 1.00], // #ffffff

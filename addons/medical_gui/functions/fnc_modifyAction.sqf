@@ -31,11 +31,8 @@ private _bloodLossOnBodyPart = 0;
 
 private _hasTourniquet = (((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0);
 
-private _bloodLossRed = 0.5;
-private _totColors = 10;
-
-private _frBL = 0 max (_bloodLossOnBodyPart / _bloodLossRed) min 1;
-private _colorInt = ceil ((_frBL * (_totColors - 1)) + 1); // ceil because any bleeding more than zero shouldn't be white
+private _frBL = 0 max (_bloodLossOnBodyPart / BLOOD_LOSS_RED_THRESHOLD) min 1;
+private _colorInt = ceil ((_frBL * (BLOOD_LOSS_TOTAL_COLORS - 1)) + 1); // ceil because any bleeding more than zero shouldn't be white
 
 private _path = [QPATHTOF(ui\icons\b), _colorInt, ["", "t"] select _hasTourniquet, ".paa"] joinString "";
 
