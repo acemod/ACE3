@@ -1,4 +1,3 @@
-//XEH_clientInit.sqf
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
@@ -12,13 +11,13 @@ GVAR(ParsedTextCached) = [];
 
 ["ace_settingChanged", {
     params ["_name"];
-    if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
+    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
         [] call FUNC(setupTextColors);
     };
 }] call CBA_fnc_addEventHandler;
 
 ["ace_settingsInitialized", {
-    //Setup text/shadow/size/color settings matrix
+    // Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Install the render EH on the main display
     addMissionEventHandler ["Draw3D", {call FUNC(render)}];

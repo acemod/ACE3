@@ -30,10 +30,10 @@ if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
 private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 
 private _pos = if (GVAR(UseListMenu)) then {
-    [_ctrl, GVAR(iconCount), format ["<img image='%1' color='#FF0000' size='1.6'/>", _icon]] call FUNC(ctrlSetParsedTextCached);
+    [_ctrl, GVAR(iconCount), format ["<img image='%1' color='%2' size='1.6'/>", _icon, GVAR(selectorColorHex)]] call FUNC(ctrlSetParsedTextCached);
     [(_sPos select 0)-(0.014*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.05*SafeZoneW, 0.035*SafeZoneW]
 } else {
-    [_ctrl, GVAR(iconCount), format ["<img image='%1' color='#FF0000' size='1.6' align='center'/>", _icon]] call FUNC(ctrlSetParsedTextCached);
+    [_ctrl, GVAR(iconCount), format ["<img image='%1' color='%2' size='1.6' align='center'/>", _icon, GVAR(selectorColorHex)]] call FUNC(ctrlSetParsedTextCached);
     [(_sPos select 0)-(0.050*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.1*SafeZoneW, 0.035*SafeZoneW]
 };
 
