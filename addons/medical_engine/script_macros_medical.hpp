@@ -43,6 +43,8 @@
 // Used to color interaction icons and body image selections
 #define BLOOD_LOSS_RED_THRESHOLD 0.5
 #define BLOOD_LOSS_TOTAL_COLORS 10
+#define DAMAGE_BLUE_THRESHOLD 0.8
+#define DAMAGE_TOTAL_COLORS 10
 
 // --- pain
 #define PAIN_UNCONSCIOUS 0.5
