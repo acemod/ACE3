@@ -209,6 +209,18 @@ class CfgVehicles {
         // Patria = LAV
         GVAR(fuelCapacity) = 269;
     };
+    class APC_Wheeled_02_base_F: Wheeled_APC_F {
+        class EGVAR(interaction,anims);
+    };
+    class APC_Wheeled_02_base_v2_F: APC_Wheeled_02_base_F {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class showCanisters {
+                phase = 0;
+                position[] = {{-1.188,-3.87,-0.769}, {1.638,-3.87,-0.769}};
+                item[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
+            };
+        };
+    };
 
     class Truck_F: Car_F {
         GVAR(fuelCapacity) = 400;
@@ -286,12 +298,14 @@ class CfgVehicles {
     class MBT_01_base_F: Tank_F {
         // Merkava IV
         GVAR(fuelCapacity) = 1400;
+        class EGVAR(interaction,anims);
     };
 
     class MBT_02_base_F: Tank_F {
         // T100 Black Eagle
         // Assuming T80
         GVAR(fuelCapacity) = 1100;
+        class EGVAR(interaction,anims);
     };
 
     class MBT_03_base_F: Tank_F {
@@ -302,11 +316,27 @@ class CfgVehicles {
     class MBT_01_arty_base_F: MBT_01_base_F {
         // Assuming similar 2S3
         GVAR(fuelCapacity) = 830;
+
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class showCanisters {
+                phase = 0;
+                position[] = {{-2,-1.95,-1}, {2,-1.95,-1}, {1.7,-4.898,-0.4}};
+                item[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
+            };
+        };
     };
 
     class MBT_02_arty_base_F: MBT_02_base_F {
         // Assuming similar 2S3
         GVAR(fuelCapacity) = 830;
+
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class showCanisters {
+                phase = 0;
+                position[] = {{1.7,-4.8,-0.5}};
+                item = "Land_CanisterFuel_F";
+            };
+        };
     };
 
     class Heli_Light_02_base_F: Helicopter_Base_H {

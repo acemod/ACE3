@@ -22,13 +22,17 @@ if (!_enabled || {!isNil QGVAR(animActionsInitialized)}) exitWith {};
 private _statement = {
     params ["_target", "_player", "_params"];
     _params params ["_anim", "_phase", "_duration"];
+    TRACE_5("statement",_target,_player,_anim,_phase,_duration);
     [
         _duration,
         [_target, _player, _anim, _phase],
         {
             (_this select 0) params ["_target", "_player", "_anim", "_phase"];
             scopeName "main";
-            private _items = _target getVariable [format [QGVAR(animsItem_%1), _anim], [configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(anims) >> _anim >> "item"] call BIS_fnc_getCfgData];
+            private _items = _target getVariable [
+                format [QGVAR(animsItem_%1), _anim],
+                [configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(anims) >> _anim >> "item"] call BIS_fnc_getCfgData
+            ];
             if (!isNil "_items") then {
                 if (_items isEqualType "") then {_items = [_items]};
                 private _emptyPosAGL = [_target, _items select 0, _player] call EFUNC(common,findUnloadPosition);
@@ -36,8 +40,25 @@ private _statement = {
                     [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
                     breakOut "main";
                 };
+                private ["_weaponHolder"];
                 {
-                    (createVehicle [_x, _emptyPosAGL, [], 0, "NONE"]) setPosASL (AGLtoASL _emptyPosAGL);
+                    switch true do {
+                        case (1 == getNumber (configFile >> "CfgVehicles" >> _x >> "isBackpack")): {
+                            if (isNil "_weaponHolder") then {
+                                _weaponHolder = createVehicle ["GroundWeaponHolder", _emptyPosAGL, [], 0, "CAN_COLLIDE"];
+                            };
+                            _weaponHolder addBackpackCargoGlobal [_x, 1];
+                        };
+                        case (getNumber (configfile >> "CfgWeapons" >> _x >> "type") in [4096,131072]): {
+                            if (isNil "_weaponHolder") then {
+                                _weaponHolder = createVehicle ["GroundWeaponHolder", _emptyPosAGL, [], 0, "CAN_COLLIDE"];
+                            };
+                            _weaponHolder addItemCargoGlobal [_x, 1];
+                        };
+                        default {
+                            createVehicle [_x, _emptyPosAGL];
+                        };
+                    };
                 } forEach _items;
             };
             _target animate [_anim, _phase, true];
@@ -79,23 +100,22 @@ private _condition = {
                 || {_x != _animConfigParent && {0 == [_animConfigParent >> "inherit", "number", 1] call CBA_fnc_getConfigEntry}}
             ) then {
                 private _positions = [_x >> "position"] call BIS_fnc_getCfgData;
-                if (isNil "_positions") then {
-                    if ("" == getText (_x >> "selection")) then {
-                        ERROR_2("No action position for vehicle %1 anim %2",_vehicle,_anim);
-                        breakTo "animLoop";
-                    } else {
-                        _positions = [compile format [
-                            QUOTE(_target selectionPosition getText (configFile >> 'CfgVehicles' >> typeOf _target >> QQGVAR(anims) >> '%1' >> 'selection')),
-                            _anim
-                        ]];
-                    };
-                } else {
+                if (!isNil "_positions") then {
                     if (_positions isEqualType "") then {
                         _positions = [compile format [
                             QUOTE(call compile getText (configFile >> 'CfgVehicles' >> typeOf _target >> QQGVAR(anims) >> '%1' >> 'position')),
                             _anim
                         ]];
                     };
+                } else {
+                    if ("" == getText (_x >> "selection")) then {
+                        ERROR_2("No action position for vehicle %1 anim %2",_vehicle,_anim);
+                        breakTo "animLoop";
+                    };
+                    _positions = [compile format [
+                        QUOTE(_target selectionPosition getText (configFile >> 'CfgVehicles' >> typeOf _target >> QQGVAR(anims) >> '%1' >> 'selection')),
+                        _anim
+                    ]];
                 };
 
                 private _phase = [_x >> "phase", "number", 1] call CBA_fnc_getConfigEntry;

@@ -410,6 +410,39 @@ class CfgVehicles {
         };
     };
 
+    class Wheeled_APC_F;
+    class APC_Wheeled_01_base_F: Wheeled_APC_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                //selection = "vhc_bags";
+                position[] = {{-0.685,-2.863,0.218}, {0.685,-2.863,0.218}};
+                item[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+            };
+        };
+    };
+    class APC_Wheeled_02_base_F: Wheeled_APC_F {
+        class GVAR(anims);
+    };
+    class APC_Wheeled_02_base_v2_F: APC_Wheeled_02_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selection = "vhc_bags";
+                item = "B_Carryall_cbr";
+            };
+        };
+    };
+    class APC_Wheeled_03_base_F: Wheeled_APC_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selection = "vhc_bags";
+                item[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+            };
+        };
+    };
+
     class Tank: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
@@ -434,6 +467,77 @@ class CfgVehicles {
                 condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+            };
+        };
+    };
+    class Tank_F;
+    class LT_01_base_F: Tank_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selection = "vhc_bags";
+                item = "B_Carryall_cbr";
+            };
+            class showBags2: showBags {
+                selection = "vhc_bags2";
+            };
+        };
+    };
+
+    class APC_Tracked_01_base_F: Tank_F {
+        class GVAR(anims);
+    };
+    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
+        class GVAR(anims):GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selection = "vhc_bags";
+                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+            };
+        };
+    };
+    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags: showBags {
+                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+            };
+        };
+    };
+
+    class APC_Tracked_02_base_F: Tank_F {
+        class GVAR(anims);
+    };
+    class O_APC_Tracked_02_base_F: APC_Tracked_02_base_F {};
+    class O_APC_Tracked_02_cannon_F: O_APC_Tracked_02_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selection = "vhc_bags";
+                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+            };
+        };
+    };
+
+    class APC_Tracked_03_base_F: Tank_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selection = "vhc_bags";
+                item[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+            };
+        };
+    };
+
+    class MBT_01_base_F: Tank_F {
+        class GVAR(anims);
+    };
+    class B_MBT_01_base_F: MBT_01_base_F {};
+    class B_MBT_01_cannon_F: B_MBT_01_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selection = "vhc_bags";
+                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };

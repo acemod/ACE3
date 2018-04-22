@@ -452,6 +452,17 @@ class CfgVehicles {
         GVAR(hitpointPositions)[] = {{"HitTurret", {0,-2,0}}};
     };
 
+    class Tank_F;
+    class APC_Tracked_02_base_F: Tank_F {
+        class EGVAR(interaction,anims) {
+            class showTracks {
+                phase = 0;
+                position[] = {{-1.7,-3.875,-0.7}, {1.7,-3.875,-0.7}};
+                item[] = {"ACE_Track", "ACE_Track", "ACE_Track"};
+            };
+        };
+    };
+
     class Car_F;
     class Offroad_01_base_F: Car_F {};
     class Offroad_01_repair_base_F: Offroad_01_base_F {
@@ -509,7 +520,7 @@ class CfgVehicles {
     class Van_02_base_F: Truck_F {
         class EGVAR(interaction,anims) {
             class spare_tyre_hide {
-                position = "[-0.45,-3.5,-0.4]";
+                position[] = {{-0.45,-3.5,-0.4}};
                 item = "ACE_Wheel";
             };
         };
