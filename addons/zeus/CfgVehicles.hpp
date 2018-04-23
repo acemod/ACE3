@@ -239,7 +239,7 @@ class CfgVehicles {
     class GVAR(moduleSpectator): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
-        displayName = CSTRING(ModuleSpectator_DisplayName);
+        displayName = ECSTRING(spectator,Module_DisplayName);
         curatorInfoType = QGVAR(RscSpectator);
     };
     class GVAR(moduleSuicideBomber): GVAR(moduleBase) {

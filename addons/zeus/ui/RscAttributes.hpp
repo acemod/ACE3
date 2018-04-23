@@ -873,8 +873,8 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
 };
 
 class GVAR(RscSpectator): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSpectator)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSpectator)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSpectator))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSpectator))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -890,8 +890,8 @@ class GVAR(RscSpectator): RscDisplayAttributes {
                     class controls {
                         class ForceInterfaceLabel: RscText {
                             idc = -1;
-                            text = CSTRING(ModuleSpectator_ForceInterface);
-                            tooltip = CSTRING(ModuleSpectator_ForceInterface_tooltip);
+                            text = "$STR_a3_cfgvehicles_modulecurator_f_arguments_forced";
+                            tooltip = CSTRING(ModuleSpectator_ForceInterface_Tooltip);
                             x = 0;
                             y = 0;
                             w = W_PART(10);
@@ -910,7 +910,7 @@ class GVAR(RscSpectator): RscDisplayAttributes {
                         };
                         class HidePlayerLabel: ForceInterfaceLabel {
                             text = CSTRING(ModuleSpectator_HidePlayer);
-                            tooltip = CSTRING(ModuleSpectator_HidePlayer_tooltip);
+                            tooltip = CSTRING(ModuleSpectator_HidePlayer_Tooltip);
                             y = H_PART(1.1);
                         };
                         class HidePlayer: ForceInterface {
@@ -926,8 +926,8 @@ class GVAR(RscSpectator): RscDisplayAttributes {
                             class controls {
                                 class Label: RscText {
                                     idc = -1;
-                                    text = CSTRING(ModuleSpectator_SpectableSides);
-                                    tooltip = CSTRING(ModuleSpectator_SpectableSides_tooltip);
+                                    text = "$STR_A3_Spectator_Eden_WhitelistedSides_Name";
+                                    tooltip = CSTRING(ModuleSpectator_SpectableSides_Tooltip);
                                     x = 0;
                                     y = 0;
                                     w = W_PART(10);
@@ -980,8 +980,8 @@ class GVAR(RscSpectator): RscDisplayAttributes {
                             class controls {
                                 class Label: RscText {
                                     idc = -1;
-                                    text = CSTRING(ModuleSpectator_CameraModes);
-                                    tooltip = CSTRING(ModuleSpectator_CameraModes_tooltip);
+                                    text = ECSTRING(spectator,modes_DisplayName);
+                                    tooltip = ECSTRING(spectator,modes_Description);
                                     x = 0;
                                     y = 0;
                                     w = W_PART(10);
@@ -1028,8 +1028,8 @@ class GVAR(RscSpectator): RscDisplayAttributes {
                             class controls {
                                 class Label: RscText {
                                     idc = -1;
-                                    text = CSTRING(ModuleSpectator_VisionModes);
-                                    tooltip = CSTRING(ModuleSpectator_VisionModes_tooltip);
+                                    text = ECSTRING(spectator,visions_DisplayName);
+                                    tooltip = ECSTRING(spectator,visions_Description);
                                     x = 0;
                                     y = 0;
                                     w = W_PART(26);

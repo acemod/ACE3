@@ -1503,38 +1503,17 @@
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_DisplayName">
-            <English>ACE Spectator</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface">
-            <English>Force Interface</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_tooltip">
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
             <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
-            <English>Hide Player</English>
+            <English>Hide player</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_tooltip">
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
             <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides">
-            <English>Spectable Sides</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_tooltip">
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
             <English>Sets the sides that are available to spectate</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_CameraModes">
-            <English>Camera Modes</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_CameraModes_tooltip">
-            <English>Sets the camera modes that the player can use</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_VisionModes">
-            <English>Vision Modes</English>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSpectator_VisionModes_tooltip">
-            <English>Sets the vision modes that the player can use</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
