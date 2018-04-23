@@ -23,9 +23,16 @@ params ["_selectionBloodLoss", "_selectionDamage", "_selectionTourniquet", "_dis
 // Handle the body image coloring
 private _availableSelections = [50, 51, 52, 53, 54, 55];
 {
-    private _colorSelection = [1, 1, 1, 1]; // RGBA
+    // Show/hide the tourniquet icon overlay
+    private _torniquet = _selectionTourniquet select _forEachIndex;
+    if (_tourniquet > 0) then {
+        (_display displayCtrl (_x + 10)) ctrlShow true;
+    } else {
+        (_display displayCtrl (_x + 10)) ctrlShow false;
+    };
 
-    // private _torniquet = _selectionTourniquet select _forEachIndex;
+    // Determine the selection colour based on blood loss and damage
+    private _colorSelection = [1, 1, 1, 1]; // RGBA
 
     private _bloodLoss = _selectionBloodLoss select _forEachIndex;
     if (_bloodLoss > 0) then {

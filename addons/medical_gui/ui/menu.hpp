@@ -309,6 +309,22 @@ class GVAR(medicalMenu) {
             idc = 55;
             text = QPATHTOF(data\body_image\leg_right.paa);
         };
+        class bodyImgArms_l_T: bodyImgArms_l {
+            idc = 62;
+            text = QPATHTOEF(medical_ui,data\body_image\arm_left_T.paa);
+        };
+        class bodyImgArms_r_T: bodyImgArms_r {
+            idc = 63;
+            text = QPATHTOEF(medical_ui,data\body_image\arm_right_T.paa);
+        };
+        class bodyImgLegs_l_T: bodyImgLegs_l {
+            idc = 64;
+            text = QPATHTOEF(medical_ui,data\body_image\leg_left_T.paa);
+        };
+        class bodyImgLegs_r_T: bodyImgLegs_r {
+            idc = 65;
+            text = QPATHTOEF(medical_ui,data\body_image\leg_right_T.paa);
+        };
 
 
         class selectHead: ACE_gui_buttonBase {
