@@ -68,4 +68,8 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR
     };
 
+    class H_Tank_base_F;
+    class H_Tank_black_F: H_Tank_base_F {
+        HEARING_PROTECTION_VICCREW
+    };
 };
