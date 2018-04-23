@@ -1,6 +1,6 @@
 /*
  * Author: mharis001
- * Initalizes the "Suicide Bomber" Zeus module display.
+ * Initializes the "Suicide Bomber" Zeus module display.
  *
  * Arguments:
  * 0: suicideBomber controls group <CONTROL>
