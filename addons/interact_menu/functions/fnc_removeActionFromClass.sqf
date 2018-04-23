@@ -17,7 +17,17 @@
  */
 #include "script_component.hpp"
 
-params ["_objectType", "_typeNum", "_fullPath"];
+params ["_objectType", "_typeNum", "_fullPath", ["_inherit", false, [false]]];
+
+// Call this function for all child classes if inheritance is enabled.
+if (_inherit) then {
+    private _children = (
+        (format ["_class = configName _x; (_class isKindOf '%1') && (_class != '%1')", _objectType]) configClasses (configFile >> "CfgVehicles")
+    ) apply {configName _x};
+    {
+        [_x, _typeNum, _fullPath] call FUNC(removeActionFromClass)
+    } forEach _children;
+};
 
 private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
