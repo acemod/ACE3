@@ -29,23 +29,23 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     x = 0;
     y = 0;
     w = W_PART(26);
-    h = H_PART(1.2);
+    h = H_PART(1.1);
     class controls {
-        class Title1: RscText {
+        class Label: RscText {
             idc = -1;
             text = CSTRING(AttributeRadius);
-            toolTip = CSTRING(AttributeRadius_desc);
+            tooltip = CSTRING(AttributeRadius_Tooltip);
             x = 0;
             y = H_PART(0.1);
             w = W_PART(10);
             h = H_PART(1);
-            colorBackground[] = {0,0,0,0.5};
+            colorBackground[] = {0, 0, 0, 0.5};
         };
         class Radius: RscEdit {
             idc = 26467;
             x = W_PART(10.1);
             y = H_PART(0.1);
-            w = W_PART(15.8);
+            w = W_PART(15.9);
             h = H_PART(1);
             autocomplete = "";
         };
@@ -108,40 +108,43 @@ class GVAR(RscEditableObjects): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
-                //class position: GVAR(AttributePosition) {};
                 class editableObjects: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_editableObjects));
-                    idc = 26422;
+                    idc = 19180;
                     x = 0;
                     y = 0;
-                    w = W_PART(11.1);
-                    h = H_PART(2.5);
+                    w = W_PART(26);
+                    h = H_PART(2.1);
                     class controls {
-                        class Label: RscText {
+                        class EditingModeLabel: RscText {
                             idc = -1;
-                            text = CSTRING(ModuleEditableObjects_curators);
-                            toolTip = CSTRING(ModuleEditableObjects_curators_desc);
+                            text = CSTRING(ModuleEditableObjects_EditingMode);
+                            tooltip = CSTRING(ModuleEditableObjects_EditingMode_Tooltip);
                             x = 0;
                             y = 0;
                             w = W_PART(10);
                             h = H_PART(1);
-                            colorBackground[] = {0,0,0,0.5};
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class AllCurators: RscCheckBox {
-                            idc = 16188;
+                        class EditingMode: ctrlToolbox {
+                            idc = 19181;
                             x = W_PART(10.1);
                             y = 0;
-                            w = W_PART(1);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {CSTRING(ModuleEditableObjects_RemoveObjects), CSTRING(ModuleEditableObjects_AddObjects)};
                         };
-                        class Label2: Label {
-                            text = CSTRING(ModuleEditableObjects_removal);
-                            toolTip = CSTRING(ModuleEditableObjects_removal_desc);
+                        class AllCuratorsLabel: EditingModeLabel {
+                            text = CSTRING(ModuleEditableObjects_AllCurators);
+                            tooltip = CSTRING(ModuleEditableObjects_AllCurators_Tooltip);
                             y = H_PART(1.1);
                         };
-                        class EditingMode: AllCurators {
-                            idc = 16189;
+                        class AllCurators: EditingMode {
+                            idc = 19182;
                             y = H_PART(1.1);
+                            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
                         };
                     };
                 };
