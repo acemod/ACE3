@@ -52,18 +52,18 @@ if (_show == 1) then {
         private _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
         _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 
-        if IS_BLEEDING(_target) then {
+        if (_target getVariable[QEGVAR(medical,isBleeding), false]) then {
             _genericMessages pushback [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
-        if (GET_HEMORRHAGE(_target) > 1) then {
+        if (_target getVariable[QEGVAR(medical,hasLostBlood), 0] > 1) then {
             _genericMessages pushback [localize ELSTRING(medical,Status_Lost_Blood), [1, 0.1, 0.1, 1]];
         };
 
         if (((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
             _genericMessages pushback [localize ELSTRING(medical,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
         };
-        if (EGVAR(medical,showPainInMenu) && {[ACE_player, EGVAR(medical,medicSetting_PainVisualization)] call EFUNC(medical_treatment,isMedic)}) then {
-            private _painLevel = GET_PAIN_PERCEIVED(_target);
+        if (EGVAR(medical,showPainInMenu) && {[ACE_player, EGVAR(medical,medicSetting_PainVisualization)] call EFUNC(medical,isMedic)}) then {
+            private _painLevel = _target call EFUNC(medical,getPainLevel);
             if (_painLevel > 0) then {
                 private _painText = localize ELSTRING(medical,Status_Pain);
                 if (_painLevel < 0.1) then {

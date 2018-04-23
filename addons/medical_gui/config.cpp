@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_medical_treatment", "ace_interact_menu"};
+        requiredAddons[] = {"ace_medical_treatment", "ace_medical_ui", "ace_interact_menu"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Glowbal"};
         url = ECSTRING(main,URL);
@@ -18,6 +18,6 @@ class CfgPatches {
 #include "ui\menu.hpp"
 #include "ACE_Settings.hpp"
 #include "CfgVehicles.hpp"
-#include "ui\ui\RscTitles.hpp"
+#include "ui\RscTitles.hpp"
 #include "ui\ui\CfgInGameUI.hpp"
 #include "ui\ui\triagecard.hpp"

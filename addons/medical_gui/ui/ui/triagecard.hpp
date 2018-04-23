@@ -1,3 +1,10 @@
+<<<<<<< HEAD:addons/medical_gui/ui/ui/triagecard.hpp
+=======
+class ACE_gui_backgroundBase;
+class ACE_gui_buttonBase;
+class ACE_gui_listBoxBase;
+
+>>>>>>> Move patient information display to medical_ui:addons/medical/ui/triagecard.hpp
 class GVAR(triageCard) {
     idd = 7010;
     movingenable = 0;
