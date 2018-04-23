@@ -139,6 +139,7 @@ if (!local _unit) exitWith {
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
 if ((CBA_missionTime - _startingTime) >= _minWaitingTime) exitWith {
+    // TODO: remove? getUnconsciousCondition function does not exist anywhere
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         _unit setVariable ["ACE_isUnconscious", false, true];
