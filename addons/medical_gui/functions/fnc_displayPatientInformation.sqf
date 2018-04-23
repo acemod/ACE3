@@ -159,11 +159,11 @@ if (_show == 1) then {
         private _availableSelections = [50, 51, 52, 53, 54, 55];
         {
             // Show/hide the tourniquet icon overlay
-            private _torniquet = _selectionTourniquet select _forEachIndex;
+            private _tourniquet = _selectionTourniquet select _forEachIndex;
             if (_tourniquet > 0) then {
-                (_display displayCtrl (_x + 10)) ctrlShow true;
+                (_display displayCtrl (_x + 10)) ctrlSetTextColor [0, 0, 0.8, 1];
             } else {
-                (_display displayCtrl (_x + 10)) ctrlShow false;
+                (_display displayCtrl (_x + 10)) ctrlSetTextColor [0, 0, 0.8, 0];
             };
 
             // Determine the selection colour based on blood loss and damage
