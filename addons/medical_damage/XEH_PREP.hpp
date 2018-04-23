@@ -1,4 +1,3 @@
-
 PREP(getTypeOfDamage);
 PREP(parseConfigForInjuries);
 PREP(woundsHandler);

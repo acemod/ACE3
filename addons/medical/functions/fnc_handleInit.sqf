@@ -17,6 +17,7 @@
 
 params ["_unit"];
 
+// TODO: isn't this handled by medical_engine?
 _unit setVariable [
     QGVAR(HandleDamageEHID),
     _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
