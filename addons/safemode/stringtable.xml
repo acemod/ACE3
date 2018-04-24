@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SafeMode">
         <Key ID="STR_ACE_SafeMode_SafeMode">
@@ -14,6 +14,8 @@
             <Portuguese>Modo de segurança</Portuguese>
             <Japanese>安全装置</Japanese>
             <Korean>안전 모드</Korean>
+            <Chinesesimp>保险模式</Chinesesimp>
+            <Chinese>保險模式</Chinese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
@@ -28,6 +30,8 @@
             <Portuguese>Tirar segurança</Portuguese>
             <Japanese>安全装置を外す</Japanese>
             <Korean>안전장치 해제</Korean>
+            <Chinesesimp>开保险</Chinesesimp>
+            <Chinese>開保險</Chinese>
         </Key>
         <Key ID="STR_ACE_SafeMode_PutOnSafety">
             <English>Put on Safety</English>
@@ -36,12 +40,14 @@
             <Polish>Zabezpieczono broń</Polish>
             <Czech>Zbraň zajistěna</Czech>
             <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
-            <Russian>Поставить на предохранитель</Russian>
+            <Russian>Поставлено на предохранитель</Russian>
             <French>Sécurité mise</French>
             <Italian>Sicura inserita</Italian>
             <Portuguese>Colocar Segurança</Portuguese>
             <Japanese>安全装置を掛けた</Japanese>
             <Korean>안전장치 적용</Korean>
+            <Chinesesimp>关保险</Chinesesimp>
+            <Chinese>關保險</Chinese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
             <English>Took off Safety</English>
@@ -50,12 +56,14 @@
             <Polish>Odbezpieczono broń</Polish>
             <Czech>Zbraň odjištěna</Czech>
             <Hungarian>Biztonságos mód megszüntetve</Hungarian>
-            <Russian>Снят с предохранителя</Russian>
+            <Russian>Снято с предохранителя</Russian>
             <French>Sécurité enlevée</French>
             <Italian>Sicura tolta</Italian>
             <Portuguese>Tirou Segurança</Portuguese>
             <Japanese>安全装置を外した</Japanese>
             <Korean>안전장치 해제됨</Korean>
+            <Chinesesimp>已开保险</Chinesesimp>
+            <Chinese>已開保險</Chinese>
         </Key>
     </Package>
 </Project>

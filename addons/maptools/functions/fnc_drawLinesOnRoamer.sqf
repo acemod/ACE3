@@ -7,7 +7,7 @@
  * 1: Roamer Width <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [map, 300] call ace_maptools_fnc_drawLinesOnRoamer
@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(drawStaightLines)) exitWith {};
+if (!GVAR(drawStraightLines)) exitWith {};
 
 params ["_theMap", "_roamerWidth"];
 GVAR(mapTool_pos) params ["_roamerPosX", "_roamerPosY"];

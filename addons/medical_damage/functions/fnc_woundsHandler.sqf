@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-#define MATH_E 2.71828182846
-
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
@@ -39,45 +37,50 @@ private _woundsCreated = [];
 call compile _extensionOutput;
 
 // todo: Make the pain and bleeding calculations part of the extension again
+private _woundDamage = _damage / ((count _woundsCreated) max 1); // If the damage creates multiple wounds
 private _painLevel = 0;
 private _critialDamage = false;
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
 {
     _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd", "", "_bleeding"];
 
-    _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _damage];
+    _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
+    _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
     // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
-    private _nastinessLikelihood = linearConversion [0, 20, _damage, 0.5, 30, true];
-    private _bloodiness   = 0.01 + 0.99 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
-    private _painfullness = 0.05 + 0.95 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
+    private _nastinessLikelihood = linearConversion [0, 20, _woundDamage, 0.5, 30, true];
+    private _bleedingModifier = 0.25 + 8 * exp ((random [-4.5, -5, -6]) / _nastinessLikelihood);
+    private _painModifier = 0.05 + 2 * exp (-2 / _nastinessLikelihood);
 
-    _bleeding = _bleeding * _bloodiness;
-    
-     // wound category (minor, medium, large)
-    private _category = floor ((0 max _bleeding min 0.1) / 0.05);
+    TRACE_3("",_nastinessLikelihood,_bleedingModifier,_painModifier);
+
+    _bleeding = _bleeding * _bleedingModifier;
+    private _pain = (((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _painModifier);
+    _painLevel = _painLevel + _pain;
+
+    // wound category (minor [0..0.5], medium[0.5..1.0], large[1.0+])
+    private _category = floor linearConversion [0, 1, _bleedingModifier, 0, 2, true];
 
     _x set [4, _bleeding];
-    _x set [5, _damage];
+    _x set [5, _woundDamage];
     _x set [6, _category];
 
-    private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _painfullness;
-    _painLevel = _painLevel max _pain;
 
-    if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_damage > PENETRATION_THRESHOLD}}) then {
+    if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_woundDamage > PENETRATION_THRESHOLD}}) then {
         _critialDamage = true;
     };
 #ifdef DEBUG_MODE_FULL
-    systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, round(_damage * 100) / 100, _damage > PENETRATION_THRESHOLD, round(_bleeding * 1000) / 1000, round(_pain * 1000) / 1000];
+    systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, round(_woundDamage * 100) / 100, _woundDamage > PENETRATION_THRESHOLD, round(_bleeding * 1000) / 1000, round(_pain * 1000) / 1000];
 #endif
 
-    if (_bodyPartNToAdd == 0 && {_damage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
+    if (_bodyPartNToAdd == 0 && {_woundDamage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
         [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
     };
 
     // todo `forceWalk` based on leg damage
     private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
-    if (_causeLimping == 1 && {_damage > LIMPING_DAMAGE_THRESHOLD} && {_bodyPartNToAdd > 3}) then {
+    if (_causeLimping == 1 && {_woundDamage > LIMPING_DAMAGE_THRESHOLD} && {_bodyPartNToAdd > 3}) then {
         [_unit, true] call EFUNC(medical_engine,setLimping);
     };
 
@@ -85,13 +88,13 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
     private _createNewWound = true;
     {
         _x params ["", "_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage", "_oldCategory"];
-        if (_woundClassIDToAdd == _classID && {_bodyPartNToAdd == _bodyPartN && {(_damage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}}) then {
+        if (_woundClassIDToAdd == _classID && {_bodyPartNToAdd == _bodyPartN && {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}}) then {
             if (_oldCategory == _category) exitWith {
                 private _newAmountOf = _oldAmountOf + 1;
                 _x set [3, _newAmountOf];
                 private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
                 _x set [4, _newBleeding];
-                private _newDamage = (_oldAmountOf * _oldDamage + _damage) / _newAmountOf;
+                private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
                 _x set [5, _newDamage];
                 _createNewWound = false;
             };
@@ -106,13 +109,13 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
-[_unit, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
+_bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
+
+[_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
+[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
 };
-
-[_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
-[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 
 TRACE_5("exit",_unit,_painLevel,_unit getVariable QEGVAR(medical,pain),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);

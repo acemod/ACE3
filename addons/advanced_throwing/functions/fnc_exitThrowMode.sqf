@@ -34,7 +34,8 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     _activeThrowable setVelocity [0, 0, -0.1];
 
     // Set thrower
-    [QEGVAR(common,setShotParents), [_activeThrowable, _unit, (getShotParents _activeThrowable) select 1]] call CBA_fnc_serverEvent;
+    private _instigator = (getShotParents _activeThrowable) param [1, _unit]; // getShotParents could be [] on replaced grenades (like IR chemlight)
+    [QEGVAR(common,setShotParents), [_activeThrowable, _unit, _instigator]] call CBA_fnc_serverEvent;
 };
 
 // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)

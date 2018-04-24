@@ -9,6 +9,7 @@ PREP(actionDiagnose);
 PREP(actionLoadUnit);
 PREP(actionPlaceInBodyBag);
 PREP(actionUnloadUnit);
+PREP(addLoadPatientActions);
 
 // treaments
 PREP(canTreat);
@@ -19,6 +20,9 @@ PREP(treatment_success);
 
 PREP(treatmentBandage);
 PREP(treatmentBandageLocal);
+PREP(treatmentCPR_failure);
+PREP(treatmentCPR_progress);
+PREP(treatmentCPR_start);
 PREP(treatmentCPR);
 PREP(treatmentCPRLocal);
 PREP(treatmentFullHeal);
@@ -37,15 +41,16 @@ PREP(treatmentTourniquetRemove);
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);
-PREP(addUnloadPatientActions);
 PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);
 PREP(healTime);
+PREP(HealTimeMedkit);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(onMedicationUsage);
+PREP(calculateBlood);
 
 // items
 PREP(checkItems);

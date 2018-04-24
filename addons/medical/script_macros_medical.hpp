@@ -1,6 +1,8 @@
 
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 
+#define MEDICAL_ACTION_DISTANCE 1.75
+
 // scale received pain to 0-2 level to select type of scream
 // below 0.25: 0, from 0.25 to 0.5: 1, more than 0.5: 2
 #define PAIN_TO_SCREAM(pain) (floor (4 * pain) min 2)
@@ -45,7 +47,6 @@
 #define PAIN_SUPPRESSION_FADE_TIME 1800
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
-#define SPONTANEOUS_WAKE_UP_CHANCE 0.2
 #define SPONTANEOUS_WAKE_UP_INTERVAL 15
 
 #define LETHAL_HEAD_DAMAGE_THRESHOLD 1.0

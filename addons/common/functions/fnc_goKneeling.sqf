@@ -1,12 +1,15 @@
 /*
  * Author: commy2
- * Move unit to kneeling position (only if not yet prone).
+ * Move unit to kneeling position (only if not yet prone and not underwater).
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_common_fnc_goKneeling
  *
  * Public: No
  */
@@ -15,7 +18,7 @@
 params ["_unit"];
 
 // Animation changes even inside vehicle post-1.60
-if (stance _unit == "PRONE" || {vehicle ACE_player != ACE_player}) exitWith {};
+if (stance _unit == "PRONE" || {vehicle _unit != _unit} || {_unit call EFUNC(common,isSwimming)}) exitWith {};
 
 [
     _unit,

@@ -9,11 +9,14 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [LOGIC; [bob, kevin], true] call ace_viewdistance_fnc_initModule
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
-
-if (!isServer) exitWith {};
 
 params ["_logic", "_units", "_activated"];
 

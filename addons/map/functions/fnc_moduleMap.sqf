@@ -3,15 +3,18 @@
  * Initializes the Map module.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.)
+ * Whatever the module provides. (I dunno.) <UNKNOWN>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ACE_map_fnc_moduleMap
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
-
-if !(isServer) exitWith {};
 
 params ["_logic", "", "_activated"];
 

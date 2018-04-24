@@ -70,13 +70,6 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Control the breath and press.
  
 ### 3.3 Example with Truing tool
- 
-**Start of the mission:**
-
-- Select `Drag Coef Table` in the `Options` menu.
-- Add the `ZR` and the `C1` (`Gun` column) in the table and `Done`.
-  
-**In position:**
 
 - Open the `Truing Drop` in the `Options` menu. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=23)
 - Add the actual `Target Range` in the `SUPER` column and `Calc`.
@@ -88,23 +81,24 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.png" width="1127" height="600" alt="Calculation" />
  
-- If a new `Target Range` is applied in the `Target` column, select `Drag Coef Table` in the `Options` menu and `Done`.
-- The ballistic coefficient `C1` and the elevation `Elev` will be recalculated.
+- If a new `Target Range` is applied in the `Target` column, the ballistic coefficient `C1` and the elevation `Elev` will be automatically recalculated.
  
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx3.png" width="1123" height="600" alt="Interpolation" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx31.png" width="1123" height="600" alt="Interpolation" />
+
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx31a.png" width="1123" height="600" alt="Extrapolation" />
 
 ### 3.4 Example with overwritten zero distance
 
-- The `Default zero distance` can be overwritten with the [Scopes module]({{ site.baseurl }}/wiki/feature/scopes.html) or the [Settings Framework]({{ site.baseurl }}/wiki/framework/settings-framework.html).
+- The `Default zero distance` can be overwritten with the [Scopes module]({{ site.baseurl }}/wiki/feature/scopes.html), the [Scopes Framework]({{ site.baseurl }}/wiki/framework/scopes-framework.html) or the [CBA Settings System](https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System).
 - In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be automatically updated, NOT the AtragMx.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
  
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx4.png" width="1400" height="600" alt="Zero distance 300m" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx41.png" width="1400" height="600" alt="Zero distance 300m" />
 
 ### 3.5 Example with `Add New Gun` in `GunList`
 
-- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the cartridge, the bullet diameter, the bullet weight and the muzzle velocities.
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the bullet diameter, the bullet weight, the **(bullet Class Name)** and the muzzle velocities.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
 - Select `Add New Gun` in the `GunList`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=25)
 - Add a `New Gun Name` and `Open Gun`.
@@ -115,9 +109,9 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Edit manually the `Muzzle Velocity Table` according with the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
 - The `C1 coefficient` of the bullet can be found with the Eden Editor `Config Viewer`:
 
-> configfile >> "CfgAmmo" >> "Range card cartridge" >> "ACE_ballisticCoefficients"
+> configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "ACE_ballisticCoefficients"
 
-> configfile >> "CfgAmmo" >> "Range card cartridge" >> "ACE_dragModel"
+> configfile >> "CfgAmmo" >> "**bullet Class Name**" >> "ACE_dragModel"
 
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
@@ -125,6 +119,14 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 
 > Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
+
+> Example direct conversion with .408 Cheytac 305 grains G7 BC 0.279 at 2000 meters 15°C:
+
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.png" width="1400" height="600" alt="Conversion G7/G1 BC" />
+
+### 3.6 Adding ATragMX Presets
+
+- [ATragMX Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
 
  
 ## 4. Official Manual and Horus Videos

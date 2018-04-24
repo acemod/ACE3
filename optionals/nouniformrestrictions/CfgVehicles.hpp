@@ -255,4 +255,7 @@ class CfgVehicles {
     class C_Man_casual_1_F: C_man_1 {
         modelSides[] = {6};
     };
+    class C_IDAP_Man_Base_F: Civilian_F {
+        modelSides[] = {6};
+    };
 };

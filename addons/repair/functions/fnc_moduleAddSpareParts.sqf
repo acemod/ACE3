@@ -20,10 +20,9 @@
 params ["_logic"];
 
 if (!isNull _logic) then {
-    private ["_list", "_part", "_amount"];
-    _list = _logic getVariable ["List", ""];
-    _part = _logic getVariable ["Part", 0];
-    _amount = _logic getVariable ["Amount", 1];
+    private _list = _logic getVariable ["List", ""];
+    private _part = _logic getVariable ["Part", 0];
+    private _amount = _logic getVariable ["Amount", 1];
 
     // Parse list
     _list = [_list, true, true] call EFUNC(common,parseList);

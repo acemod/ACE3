@@ -6,7 +6,7 @@
  * 0: The unit <OBJECT>
  * 1: Reason for death <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * None
  *
  * Example:

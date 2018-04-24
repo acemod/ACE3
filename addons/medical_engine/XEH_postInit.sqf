@@ -13,7 +13,10 @@
     } else {
         // Calling this function inside curly brackets allows the usage of
         // "exitWith", which would be broken with "HandleDamage" otherwise.
-        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
+        _unit setVariable [
+            QEGVAR(medical,HandleDamageEHID),
+            _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+        ];
     };
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
@@ -48,6 +51,7 @@
 // needed, because the vanilla INCAPACITATED state does not handle vehicles
 ["CAManBase", "GetInMan", {
     params ["_unit"];
+    if (!local _unit) exitWith {};
 
     if (lifeState _unit == "INCAPACITATED") then {
         [_unit, true] call FUNC(setUnconsciousAnim);

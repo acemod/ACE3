@@ -2,14 +2,13 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_Actions {
-
             class ACE_ApplyHandcuffs {
                 displayName = CSTRING(SetCaptive);
                 selection = "righthand";
                 distance = 2;
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
                 statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
-                exceptions[] = {};
+                exceptions[] = {"isNotSwimming", "isNotInside"};
                 icon = QPATHTOF(UI\handcuff_ca.paa);
             };
 
@@ -20,7 +19,7 @@ class CfgVehicles {
                     distance = 2;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
-                    exceptions[] = {};
+                    exceptions[] = {"isNotSwimming", "isNotInside"};
                     icon = QPATHTOF(UI\handcuff_ca.paa);
                 };
                 class ACE_EscortCaptive {
@@ -28,7 +27,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canEscortCaptive));
                     statement = QUOTE([ARR_3(_player, _target, true)] call FUNC(doEscortCaptive));
-                    exceptions[] = {};
+                    exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.3;
@@ -38,7 +37,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canStopEscorting));
                     statement = QUOTE([ARR_3(_player,_target, false)] call FUNC(doEscortCaptive));
-                    exceptions[] = {"isNotEscorting"};
+                    exceptions[] = {"isNotEscorting", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.3;
@@ -48,16 +47,18 @@ class CfgVehicles {
                     distance = 4;
                     condition = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(canLoadCaptive));
                     statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(doLoadCaptive));
-                    exceptions[] = {"isNotEscorting"};
+                    exceptions[] = {"isNotEscorting", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.2;
+                    insertChildren = QUOTE(call DFUNC(addLoadCaptiveActions));
                 };
                 class GVAR(UnloadCaptive) {
                     displayName = CSTRING(UnloadCaptive);
                     distance = 4;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
+                    exceptions[] = {"isNotSwimming"};
                     priority = 1.2;
                 };
             };
@@ -68,7 +69,7 @@ class CfgVehicles {
                 displayName = CSTRING(StopEscorting);
                 condition = QUOTE([ARR_2(_player, objNull)] call FUNC(canStopEscorting));
                 statement = QUOTE([ARR_3(_player,objNull, false)] call FUNC(doEscortCaptive));
-                exceptions[] = {"isNotEscorting"};
+                exceptions[] = {"isNotEscorting", "isNotSwimming"};
                 showDisabled = 0;
                 priority = 2.3;
             };
@@ -76,7 +77,7 @@ class CfgVehicles {
                 displayName = CSTRING(StartSurrendering);
                 condition = QUOTE([ARR_2(_player, true)] call FUNC(canSurrender));
                 statement = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
-                exceptions[] = {};
+                exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
                 priority = 0;
                 icon = QPATHTOF(UI\Surrender_ca.paa);
@@ -85,7 +86,7 @@ class CfgVehicles {
                 displayName = CSTRING(StopSurrendering);
                 condition = QUOTE([ARR_2(_player, false)] call FUNC(canSurrender));
                 statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrendered));
-                exceptions[] = {"isNotSurrendering"};
+                exceptions[] = {"isNotSurrendering", "isNotSwimming"};
                 showDisabled = 0;
                 priority = 0;
                 icon = QPATHTOF(UI\Surrender_ca.paa);
@@ -101,7 +102,7 @@ class CfgVehicles {
                     distance = 4; \
                     condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                     statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
-                    exceptions[] = {"isNotEscorting"}; \
+                    exceptions[] = {"isNotEscorting", "isNotSwimming"}; \
                     priority = 1.2; \
                 }; \
             }; \
@@ -151,7 +152,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleSurrender_DisplayName);
         function = QFUNC(moduleSurrender);
-        scope = 2;  //show in editor
+        scope = 1;  //show in editor
         isGlobal = 0; //run on server
         isTriggerActivated  = 1; //Wait for triggers
         icon = QPATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa);
@@ -167,7 +168,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleHandcuffed_DisplayName);
         function = QFUNC(moduleHandcuffed);
-        scope = 2;  //show in editor
+        scope = 1;  //show in editor
         isGlobal = 0; //run on server
         isTriggerActivated  = 1; //Wait for triggers
         icon = QPATHTOF(UI\Icon_Module_Make_Unit_Handcuffed_ca.paa);
@@ -185,7 +186,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleSettings_DisplayName);
         function = QFUNC(moduleSettings);
-        scope = 2;
+        scope = 1;
         icon = QPATHTOF(UI\Icon_Module_settings_ca.paa);
         isGlobal = 1;
         isSingular = 1;
@@ -221,6 +222,12 @@ class CfgVehicles {
                         value = 2;
                     };
                 };
+            };
+            class requireSurrenderAi {
+                displayName = CSTRING(ModuleSettings_requireSurrenderAi_name);
+                description = CSTRING(ModuleSettings_requireSurrenderAi_description);
+                typeName = "BOOL";
+                defaultValue = 0;
             };
         };
         class ModuleDescription: ModuleDescription {

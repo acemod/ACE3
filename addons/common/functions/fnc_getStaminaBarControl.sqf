@@ -8,6 +8,9 @@
  * Return Value:
  * Stamina Bar control <CONTROL>
  *
+ * Example:
+ * call ace_common_fnc_getStaminaBarControl
+ *
  * Public: No
  */
 #include "script_component.hpp"

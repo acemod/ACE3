@@ -13,6 +13,8 @@
             <Russian>Десантирование по канатам</Russian>
             <Japanese>FRIES を装備</Japanese>
             <Korean>FRIES 장착</Korean>
+            <Chinesesimp>启用快速绳降及撤离系统</Chinesesimp>
+            <Chinese>啟用快速繩降及撤離系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Module_FRIES_Description">
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
@@ -26,10 +28,12 @@
             <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
             <Japanese>ヘリコプターで Fast Rope Insertion Extraction System を使えるようにします</Japanese>
             <Korean>패스트로프 투입 및 탈출 시스템을 호환되는 헬리콥터에 적용합니다.</Korean>
+            <Chinesesimp>使可相容的直升机启用快速绳降及撤离系统</Chinesesimp>
+            <Chinese>使可相容的直升機啟用快速繩降及撤離系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
-            <German>Bereite Fast Roping System vor</German>
+            <German>Bereite "Fast Roping"-System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
             <French>Préparer le système de corde lisse</French>
             <Spanish>Preparar el sistema fast roping</Spanish>
@@ -39,6 +43,17 @@
             <Russian>Подготовить канаты</Russian>
             <Japanese>ファスト ロープのシステムを準備</Japanese>
             <Korean>패스트로프 준비</Korean>
+            <Chinesesimp>准备快速绳降系统</Chinesesimp>
+            <Chinese>準備快速繩降系統</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
+            <English>Stow fast roping system</English>
+            <German>Verstaue "Fast Roping"-System</German>
+            <Italian>Arrotola le corde</Italian>
+            <Japanese>ファスト ロープのシステムを収容</Japanese>
+            <Chinese>收起快速繩降系統</Chinese>
+            <Chinesesimp>收起快速绳降系统</Chinesesimp>
+            <Korean>패스트 로프 시스템 보관</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -52,6 +67,8 @@
             <Russian>Зацепить канаты</Russian>
             <Japanese>ロープを展開</Japanese>
             <Korean>줄 배치</Korean>
+            <Chinesesimp>部属绳索</Chinesesimp>
+            <Chinese>部屬繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
@@ -65,6 +82,8 @@
             <Russian>Спуститься по канату</Russian>
             <Japanese>ファスト ロープをする</Japanese>
             <Korean>강하하기</Korean>
+            <Chinesesimp>快速绳降</Chinesesimp>
+            <Chinese>快速繩降</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
@@ -78,6 +97,8 @@
             <Russian>Обрезать канаты</Russian>
             <Japanese>ロープを切断</Japanese>
             <Korean>줄 자르기</Korean>
+            <Chinesesimp>剪掉绳索</Chinesesimp>
+            <Chinese>剪掉繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
             <English>Equip helicopter with FRIES</English>
@@ -91,6 +112,8 @@
             <Russian>Снарядить вертолет канатами для спуска</Russian>
             <Japanese>ヘリコプターへ FRIES を装備</Japanese>
             <Korean>헬리콥터에 FRIES 장착</Korean>
+            <Chinesesimp>启用快速绳降及撤离系统给指定的直升机</Chinesesimp>
+            <Chinese>啟用快速繩降及撤離系統給指定的直升機</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES_Tooltip">
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
@@ -104,6 +127,8 @@
             <Russian>Снаряжает выбранный вертолет оборудованием для спуска десанта по канатам</Russian>
             <Japanese>選択されたヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
             <Korean>선택된 헬리콥터에 패스트로프 투입 및 탈출 시스템을 장착합니다.</Korean>
+            <Chinesesimp>使指定的直升机启用快速绳降及撤离系统</Chinesesimp>
+            <Chinese>使指定的直升機啟用快速繩降及撤離系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Waypoint_Fastrope">
             <English>LET UNITS FAST ROPE</English>
@@ -114,6 +139,9 @@
             <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
             <Japanese>ユニットへファスト ロープをさせる</Japanese>
             <Polish>ZJAZD NA LINACH</Polish>
+            <Chinesesimp>让单位快速绳降</Chinesesimp>
+            <Chinese>讓單位快速繩降</Chinese>
+            <Korean>패스트 로프를 놓음</Korean>
         </Key>
     </Package>
 </Project>

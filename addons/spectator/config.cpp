@@ -17,13 +17,13 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "ui\interface.hpp"
+#include "ui.hpp"
 
 class CfgRespawnTemplates {
     class ADDON {
-        displayName = CSTRING(DisplayName);
+        displayName = CSTRING(Settings_DisplayName);
         onPlayerKilled = QFUNC(respawnTemplate);
         onPlayerRespawn = QFUNC(respawnTemplate);
-        respawnTypes[] = {2,3};
+        respawnTypes[] = {1,2,3,4,5};
     };
 };

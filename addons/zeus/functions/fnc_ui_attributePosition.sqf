@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [CONTROL] call ace_zeus_fnc_ui_attributePosition
+ *
  * Public: No
  */
 
@@ -45,7 +48,7 @@ private _fnc_onDraw = {
 };
 
 private _fnc_onMapClick = {
-    params ["_map","_button","_x","_y","_shift","_ctrl","_alt"];
+    params ["_map","_button"];
 
     if (_button == 0) then {
         private _display = ctrlParent _map;

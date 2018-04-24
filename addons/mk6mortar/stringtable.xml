@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Mk6Mortar">
         <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
@@ -14,6 +14,8 @@
             <Italian>Tavola di tiro 82mm</Italian>
             <Japanese>82mm 射表</Japanese>
             <Korean>82mm 사거리표</Korean>
+            <Chinesesimp>82mm迫击炮射表</Chinesesimp>
+            <Chinese>82mm迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the Mk6 82mm Mortar</English>
@@ -28,6 +30,8 @@
             <Italian>Tavola di tiro per il mortaio calibro 82mm Mk6</Italian>
             <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
+            <Chinesesimp>MK6 82mm迫击炮射表</Chinesesimp>
+            <Chinese>MK6 82mm迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -42,6 +46,8 @@
             <Italian>Apri la tavola di tiro 82mm</Italian>
             <Japanese>82mm 射表を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
+            <Chinesesimp>开启82mm迫击炮射表</Chinesesimp>
+            <Chinese>開啟82mm迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
@@ -56,6 +62,16 @@
             <Italian>Carica</Italian>
             <Japanese>装薬</Japanese>
             <Korean>장약</Korean>
+            <Chinesesimp>装药</Chinesesimp>
+            <Chinese>裝藥</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_DisplayName">
+            <English>Mk6 Mortar</English>
+            <German>Mk6 Mörser</German>
+            <Italian>Mortaio Mk6</Italian>
+            <Chinese>MK6迫擊炮</Chinese>
+            <Chinesesimp>MK6迫击炮</Chinesesimp>
+            <Japanese>Mk6 迫撃砲</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -70,6 +86,8 @@
             <Italian>Impostazioni Mk6</Italian>
             <Japanese>Mk6 設定</Japanese>
             <Korean>Mk6 설정</Korean>
+            <Chinesesimp>MK6设定</Chinesesimp>
+            <Chinese>MK6設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
@@ -84,6 +102,8 @@
             <Italian>Resistenza dell'Aria</Italian>
             <Japanese>空気抵抗</Japanese>
             <Korean>공기저항</Korean>
+            <Chinesesimp>空气阻力</Chinesesimp>
+            <Chinese>空氣阻力</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
@@ -98,6 +118,8 @@
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
             <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響をあたえます。</Japanese>
             <Korean>플레이어 사격시 공기저항과 바람에 영향을 받습니다</Korean>
+            <Chinesesimp>设定由玩家射击的迫击炮，将会受到空气阻力与风力的影响</Chinesesimp>
+            <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow Mk6 Computer</English>
@@ -112,6 +134,8 @@
             <Italian>Consenti Computer Mk6</Italian>
             <Japanese>Mk6 コンピュータを許可</Japanese>
             <Korean>Mk6 탄도계산컴퓨터 허가</Korean>
+            <Chinesesimp>允许使用MK6射控电脑</Chinesesimp>
+            <Chinese>允許使用MK6射控電腦</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -126,6 +150,8 @@
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
             <Japanese>コンピュータと距離を表示します (空気抵抗を有効化している場合は必ず削除してください)</Japanese>
             <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을경우 이 항목은 비활성화 되어야만 합니다)</Korean>
+            <Chinesesimp>显示射控电脑和测距仪 (如果有启用空气阻力功能时，须停用此项功能)</Chinesesimp>
+            <Chinese>顯示射控電腦和測距儀 (如果有啟用空氣阻力功能時，須停用此項功能)</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow Mk6 Compass</English>
@@ -140,6 +166,8 @@
             <Italian>Consenti Bussola Mk6</Italian>
             <Japanese>Mk6 への方位磁石を有効化</Japanese>
             <Korean>Mk6 나침반 허용</Korean>
+            <Chinesesimp>允许使用MK6指北针</Chinesesimp>
+            <Chinese>允許使用MK6指北針</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the Mk6 Digital Compass</English>
@@ -154,6 +182,8 @@
             <Italian>Mostra la Bussola Digitale Mk6</Italian>
             <Japanese>Mk6 のデジタル方位磁石を表示</Japanese>
             <Korean>Mk6 에서 전자 나침반을 보여줍니다</Korean>
+            <Chinesesimp>显示MK6的数位指北针</Chinesesimp>
+            <Chinese>顯示MK6的數位指北針</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <English>This module allows you to setup Mk6 mortar settings.</English>
@@ -167,6 +197,8 @@
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
             <Japanese>Mk6 迫撃砲への設定をできます。</Japanese>
             <Korean>이 모듈은 Mk6 설치 설정을 가능케 합니다.</Korean>
+            <Chinesesimp>这个模块允许你设定MK6迫击炮的相关功能</Chinesesimp>
+            <Chinese>這個模塊允許你設定MK6迫擊砲的相關功能</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
             <English>Use Ammunition handling</English>
@@ -179,6 +211,8 @@
             <Russian>Использовать манипуляции с боеприпасами</Russian>
             <Japanese>弾薬の取り扱い</Japanese>
             <Korean>탄약 관리 활성화</Korean>
+            <Chinesesimp>使用手动弹药装卸</Chinesesimp>
+            <Chinese>使用手動彈藥裝卸</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
@@ -191,6 +225,8 @@
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
             <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI 迫撃砲へ影響を与えません。</Japanese>
             <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야만 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
+            <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由AI射击的迫击炮</Chinesesimp>
+            <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -204,6 +240,8 @@
             <Russian>Извлечь снаряд</Russian>
             <Japanese>弾薬を除去</Japanese>
             <Korean>탄약 제거</Korean>
+            <Chinesesimp>卸除弹头</Chinesesimp>
+            <Chinese>卸除彈頭</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -217,6 +255,8 @@
             <Russian>Зарядить миномет</Russian>
             <Japanese>弾薬を装填</Japanese>
             <Korean>탄약 장전</Korean>
+            <Chinesesimp>装载弹头</Chinesesimp>
+            <Chinese>裝載彈頭</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
@@ -229,6 +269,8 @@
             <Russian>Извлечение снаряда</Russian>
             <Japanese>弾薬を除去しています</Japanese>
             <Korean>탄약 제거중</Korean>
+            <Chinesesimp>卸除弹头中</Chinesesimp>
+            <Chinese>卸除彈頭中</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -242,6 +284,8 @@
             <Russian>Подготовка снаряда</Russian>
             <Japanese>事前に装填</Japanese>
             <Korean>탄약 준비중</Korean>
+            <Chinesesimp>准备弹头中</Chinesesimp>
+            <Chinese>準備彈頭中</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
             <English>Load HE</English>
@@ -255,6 +299,8 @@
             <Russian>Зарядить фугасный</Russian>
             <Japanese>りゅう弾を装填</Japanese>
             <Korean>고폭탄 장전</Korean>
+            <Chinesesimp>装载高爆弹</Chinesesimp>
+            <Chinese>裝載高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
             <English>Load Smoke</English>
@@ -268,6 +314,8 @@
             <Russian>Зарядить дымовой</Russian>
             <Japanese>煙幕弾を装填</Japanese>
             <Korean>연막탄 장전</Korean>
+            <Chinesesimp>装载烟雾弹</Chinesesimp>
+            <Chinese>裝載煙霧彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
             <English>Load Illumination</English>
@@ -281,6 +329,8 @@
             <Russian>Зарядить осветительный</Russian>
             <Japanese>照明弾を装填</Japanese>
             <Korean>조명탄 장전</Korean>
+            <Chinesesimp>装载照明弹</Chinesesimp>
+            <Chinese>裝載照明彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
             <English>Load Guided HE</English>
@@ -294,6 +344,8 @@
             <Russian>Зарядить фугасный управляемый</Russian>
             <Japanese>誘導りゅう弾を装填</Japanese>
             <Korean>유도 고폭탄 장전</Korean>
+            <Chinesesimp>装载导引高爆弹</Chinesesimp>
+            <Chinese>裝載導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
             <English>Load Laser Guided HE</English>
@@ -307,6 +359,8 @@
             <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
             <Japanese>レーザ誘導りゅう弾を装填</Japanese>
             <Korean>레이저 유도 고폭탄 장전</Korean>
+            <Chinesesimp>装载雷射导引高爆弹</Chinesesimp>
+            <Chinese>裝載雷射導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>82mm HE Round</English>
@@ -320,6 +374,8 @@
             <Russian>Фугасный снаряд 82мм</Russian>
             <Japanese>82mm りゅう弾</Japanese>
             <Korean>82mm 고폭탄</Korean>
+            <Chinesesimp>82mm高爆弹</Chinesesimp>
+            <Chinese>82mm高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -333,6 +389,8 @@
             <Russian>Дымовой снаряд 82мм</Russian>
             <Japanese>82mm 煙幕弾</Japanese>
             <Korean>82mm 연막탄</Korean>
+            <Chinesesimp>82mm烟雾弹</Chinesesimp>
+            <Chinese>82mm煙霧彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
@@ -346,6 +404,8 @@
             <Russian>Осветительный снаряд 82мм</Russian>
             <Japanese>82mm 照明弾</Japanese>
             <Korean>82mm 조명탄</Korean>
+            <Chinesesimp>82mm照明弹</Chinesesimp>
+            <Chinese>82mm照明彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -359,6 +419,8 @@
             <Russian>Фугасный снаряд управляемый 82мм</Russian>
             <Japanese>82mm 誘導りゅう弾</Japanese>
             <Korean>82mm 유도 고폭탄</Korean>
+            <Chinesesimp>82mm导引高爆弹</Chinesesimp>
+            <Chinese>82mm導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
@@ -372,6 +434,8 @@
             <Russian>Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
             <Japanese>82mm レーザ誘導りゅう弾</Japanese>
             <Korean>82mm 레이저 유도 고폭탄</Korean>
+            <Chinesesimp>82mm雷射导引高爆弹</Chinesesimp>
+            <Chinese>82mm雷射導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -385,6 +449,8 @@
             <Russian>Использовался в миномете Mk6</Russian>
             <Japanese>Mk6 mortar で使います</Japanese>
             <Korean>Mk6 박격포에 사용됨</Korean>
+            <Chinesesimp>用于Mk6迫击炮</Chinesesimp>
+            <Chinese>用於Mk6迫擊砲</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
             <English>[ACE] 82mm HE Rounds Box</English>
@@ -398,6 +464,8 @@
             <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
+            <Chinesesimp>[ACE] 82mm高爆弹药箱</Chinesesimp>
+            <Chinese>[ACE] 82mm高爆彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -411,6 +479,8 @@
             <Russian>[ACE] Ящик дымовых снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm 煙幕弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 연막탄 상자</Korean>
+            <Chinesesimp>[ACE] 82mm烟雾弹药箱</Chinesesimp>
+            <Chinese>[ACE] 82mm煙霧彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -424,6 +494,8 @@
             <Russian>[ACE] Ящик осветительных снарядов 82мм</Russian>
             <Japanese>[ACE] 82mm 照明弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 조명탄 상자</Korean>
+            <Chinesesimp>[ACE] 82mm照明弹药箱</Chinesesimp>
+            <Chinese>[ACE] 82mm照明彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
@@ -437,6 +509,8 @@
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
             <Japanese>[ACE] 82mm 梱包箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
+            <Chinesesimp>[ACE] 82mm预设弹药箱</Chinesesimp>
+            <Chinese>[ACE] 82mm預設彈藥箱</Chinese>
         </Key>
     </Package>
 </Project>

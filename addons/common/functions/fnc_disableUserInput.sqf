@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [true] call ace_common_fnc_disableUserInput
+ *
  * Public: No
  */
 #include "script_component.hpp"

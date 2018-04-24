@@ -9,10 +9,13 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_ui_fnc_moduleInit
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-if (!isServer) exitWith {};
 
 params ["_logic", "_units", "_activated"];
 

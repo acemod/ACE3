@@ -6,7 +6,10 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Actions
+ * Actions <ARRAY>
+ *
+ * Example:
+ * [bob] call ace_explosives_fnc_addExplosiveActions
  *
  * Public: No
  */
@@ -15,15 +18,13 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private ["_mags", "_item", "_index", "_children", "_itemCount", "_list"];
-
-_mags = magazines _unit;
-_list = [];
-_itemCount = [];
+private _mags = magazines _unit;
+private _list = [];
+private _itemCount = [];
 {
-    _item = ConfigFile >> "CfgMagazines" >> _x;
+    private _item = ConfigFile >> "CfgMagazines" >> _x;
     if (getNumber(_item >> QGVAR(Placeable)) == 1) then {
-        _index = _list find _item;
+        private _index = _list find _item;
         if (_index != -1) then {
             _itemCount set [_index, (_itemCount select _index) + 1];
         } else {
@@ -33,7 +34,7 @@ _itemCount = [];
     };
 } forEach _mags;
 
-_children = [];
+private _children = [];
 
 {
     private _name = getText (_x >> "displayNameShort");

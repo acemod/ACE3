@@ -7,6 +7,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [DISPLAY] call ace_advanced_fatigue_fnc_createStaminaBar
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 params ["_display"];

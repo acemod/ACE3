@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Reload">
         <Key ID="STR_ACE_Reload_SettingDisplayTextName">
@@ -14,6 +14,8 @@
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
             <Japanese>再装填された武器の弾薬を確認</Japanese>
             <Korean>재장전시 장탄수 확인</Korean>
+            <Chinesesimp>在重新装填时检查弹药</Chinesesimp>
+            <Chinese>在重新裝填時檢查彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_SettingDisplayTextDesc">
             <English>Check the ammo in your new magazine on magazine reload.</English>
@@ -26,8 +28,10 @@
             <Hungarian>A lőszer ellenőrzése az új tárad behelyezésekor újratöltés közben.</Hungarian>
             <Italian>Controlla le munizioni rimanenti nel caricatore in fase di cambio caricatore.</Italian>
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
-            <Japanese>あたらしく装填された弾倉の弾薬を確認します。</Japanese>
+            <Japanese>新しく装填された弾倉の弾薬を確認します。</Japanese>
             <Korean>재장전시 새탄창에 있는 탄약을 확인합니다.</Korean>
+            <Chinesesimp>在重新装填时检查新弹匣上的弹药.</Chinesesimp>
+            <Chinese>在重新裝填時檢查新彈匣上的彈藥.</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
@@ -42,6 +46,8 @@
             <Russian>Проверить боеприпасы</Russian>
             <Japanese>弾薬を確認</Japanese>
             <Korean>장탄수 확인</Korean>
+            <Chinesesimp>检查弹药</Chinesesimp>
+            <Chinese>檢查彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_Ammo">
             <English>Ammo</English>
@@ -56,6 +62,8 @@
             <Russian>Боеприпасы</Russian>
             <Japanese>弾薬</Japanese>
             <Korean>장탄수</Korean>
+            <Chinesesimp>弹药</Chinesesimp>
+            <Chinese>彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
@@ -68,8 +76,10 @@
             <Hungarian>Töltényheveder összekötése</Hungarian>
             <Italian>Attacca la tracolla</Italian>
             <Portuguese>Ligar cintos de munição</Portuguese>
-            <Japanese>ベルト リンク</Japanese>
+            <Japanese>ベルトをつなげる</Japanese>
             <Korean>벨트 연결</Korean>
+            <Chinesesimp>连接弹链</Chinesesimp>
+            <Chinese>連接彈鏈</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
@@ -82,8 +92,10 @@
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
             <Italian>Attaccando la tracolla...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
-            <Japanese>ベルトをつなげている・・・</Japanese>
+            <Japanese>ベルトをつなげています・・・</Japanese>
             <Korean>벨트 연결중...</Korean>
+            <Chinesesimp>连接弹链中...</Chinesesimp>
+            <Chinese>連接彈鏈中...</Chinese>
         </Key>
     </Package>
 </Project>

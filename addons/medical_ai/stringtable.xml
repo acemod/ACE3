@@ -10,6 +10,9 @@
             <Polish>Tylko serwer i HC</Polish>
             <French>Seulement sur le server ou le HC</French>
             <Italian>Solo Server e HC</Italian>
+            <Chinesesimp>只在伺服器或无头客户端</Chinesesimp>
+            <Chinese>只在伺服器或無頭客戶端</Chinese>
+            <Korean>서버와 헤드리스만</Korean>
         </Key>
     </Package>
 </Project>

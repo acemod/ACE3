@@ -1,412 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
-        <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
-            <English>ACE Options</English>
-            <German>ACE-Optionen</German>
-            <Spanish>Opciones ACE</Spanish>
-            <Polish>Ustawienia ACE</Polish>
-            <Czech>ACE Nastavení</Czech>
-            <French>Options ACE</French>
-            <Russian>ACE Настройки</Russian>
-            <Portuguese>Opções do ACE</Portuguese>
-            <Hungarian>ACE Beállítások</Hungarian>
-            <Italian>Opzioni ACE</Italian>
-            <Japanese>ACE オプション</Japanese>
-            <Korean>ACE 옵션</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_FixAnimation">
-            <English>Fix Animation</English>
-            <German>Behebe Animation</German>
-            <Spanish>Arreglar animación</Spanish>
-            <Russian>Фикс анимации</Russian>
-            <Czech>Opravit animace</Czech>
-            <Polish>Napraw animację</Polish>
-            <French>Corriger animation</French>
-            <Hungarian>Animációk kijavítása</Hungarian>
-            <Italian>Sistema l'animazione</Italian>
-            <Portuguese>Arrumar  Animação</Portuguese>
-            <Japanese>アニメーションを修正</Japanese>
-            <Korean>동작 고정</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_ResetAll">
-            <English>Reset All</English>
-            <German>Alles zurücksetzen</German>
-            <Spanish>Reiniciar todo</Spanish>
-            <Russian>Полный сброс</Russian>
-            <Czech>Vyresetovat vše</Czech>
-            <Polish>Resetuj wszystko</Polish>
-            <French>Défaut</French>
-            <Hungarian>Minden visszaállítása</Hungarian>
-            <Italian>Resetta tutto</Italian>
-            <Portuguese>Resetar Tudo</Portuguese>
-            <Japanese>すべて初期化</Japanese>
-            <Korean>모두 초기화</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TabColors">
-            <English>Colors</English>
-            <French>Couleurs</French>
-            <German>Farben</German>
-            <Spanish>Colores</Spanish>
-            <Russian>Цвета</Russian>
-            <Czech>Barvy</Czech>
-            <Polish>Kolory</Polish>
-            <Hungarian>Színek</Hungarian>
-            <Italian>Colori</Italian>
-            <Portuguese>Cores</Portuguese>
-            <Japanese>色</Japanese>
-            <Korean>색상</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TabOptions">
-            <English>Options</English>
-            <German>Optionen</German>
-            <Spanish>Opciones</Spanish>
-            <Polish>Opcje</Polish>
-            <Czech>Nastavení</Czech>
-            <French>Options</French>
-            <Russian>Настройки</Russian>
-            <Portuguese>Opções</Portuguese>
-            <Hungarian>Beállítások</Hungarian>
-            <Italian>Opzioni</Italian>
-            <Japanese>オプション</Japanese>
-            <Korean>옵션</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TabValues">
-            <English>Values</English>
-            <Spanish>Valores</Spanish>
-            <Russian>Значения</Russian>
-            <Czech>Hodnoty</Czech>
-            <Polish>Wartości</Polish>
-            <French>Valeurs</French>
-            <German>Werte</German>
-            <Hungarian>Értékek</Hungarian>
-            <Italian>Valori</Italian>
-            <Portuguese>Valores</Portuguese>
-            <Japanese>値</Japanese>
-            <Korean>값</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Setting">
-            <English>Setting:</English>
-            <Czech>Nastavení:</Czech>
-            <German>Einstellung:</German>
-            <Russian>Установки:</Russian>
-            <Spanish>Ajuste:</Spanish>
-            <Polish>Ustaw:</Polish>
-            <French>Paramètres</French>
-            <Hungarian>Opció:</Hungarian>
-            <Italian>Parametri:</Italian>
-            <Portuguese>Opção:</Portuguese>
-            <Japanese>設定：</Japanese>
-            <Korean>설정:</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Export">
-            <English>Export</English>
-            <German>Exportieren</German>
-            <Spanish>Exportar</Spanish>
-            <Russian>Экспорт</Russian>
-            <Czech>Exportovat</Czech>
-            <Polish>Eksport</Polish>
-            <French>Exporter</French>
-            <Hungarian>Exportálás</Hungarian>
-            <Italian>Esporta</Italian>
-            <Portuguese>Exportar</Portuguese>
-            <Japanese>出力</Japanese>
-            <Korean>내보내기</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_OpenExport">
-            <English>Open Export Menu</English>
-            <German>Öffne Exportmenü</German>
-            <Spanish>Abrir menú de exportación</Spanish>
-            <Russian>Открыть меню экспорта</Russian>
-            <Czech>Otevřít exportovací menu</Czech>
-            <Polish>Eksport ustawień</Polish>
-            <French>Ouvrir le menu d'exportation</French>
-            <Hungarian>Exportálási menü megnyitása</Hungarian>
-            <Italian>Apri menù esportazione</Italian>
-            <Portuguese>Abrir menu de exportação</Portuguese>
-            <Japanese>出力メニューを開く</Japanese>
-            <Korean>내보내기 메뉴 열기</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_stringType">
-            <English>String input.</English>
-            <German>Zeichenketteneingabe</German>
-            <Spanish>Introducir cadena de texto.</Spanish>
-            <Russian>Строчный ввод.</Russian>
-            <Polish>Wpisywanie tekstu.</Polish>
-            <Czech>Vkládání textu.</Czech>
-            <French>Entrée</French>
-            <Hungarian>String bevitel.</Hungarian>
-            <Italian>Stringa di unput.</Italian>
-            <Portuguese>Input de String</Portuguese>
-            <Japanese>文字列の入力</Japanese>
-            <Korean>문자열 입력</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_arrayType">
-            <English>Array. Seperate elements by using ,.</English>
-            <German>Array. Teile unterschiedliche Elemente mit ,.</German>
-            <Spanish>Matriz. Separa elementos usando ,.</Spanish>
-            <Russian>Массив. Разделяйте элемены, используя запятую.</Russian>
-            <Polish>Tablica. Oddziel elementy używając ,.</Polish>
-            <French>Tableau. Séparation par ,.</French>
-            <Czech>Tabulka. Odděl elementy použitím ,.</Czech>
-            <Hungarian>Array. Válasszad el az elemeket vesszővel.</Hungarian>
-            <Italian>Vettor. Separa gli elementi usando ,.</Italian>
-            <Portuguese>Vetor. Separe elementos usando *,*.</Portuguese>
-            <Japanese>アライ。,を使うことで区別できます。</Japanese>
-            <Korean>배열. 요소를 ,. 로 나눔</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_scalarType">
-            <English>Number</English>
-            <German>Zahl</German>
-            <Spanish>Número</Spanish>
-            <Russian>Число</Russian>
-            <Czech>Číslo</Czech>
-            <Polish>Cyfra</Polish>
-            <French>Nombre</French>
-            <Hungarian>Szám</Hungarian>
-            <Italian>Numero</Italian>
-            <Portuguese>Número</Portuguese>
-            <Japanese>数</Japanese>
-            <Korean>숫자</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_unknownType">
-            <English>Uknown input type</English>
-            <German>Unbekannter Eingabetyp</German>
-            <Spanish>Tipo de entrada desconocida</Spanish>
-            <Russian>Неизвестный тип ввода</Russian>
-            <Czech>Neznámý vstup</Czech>
-            <Polish>Nieznany rodzaj danych</Polish>
-            <French>Type d'entrée inconnue</French>
-            <Hungarian>Ismeretlen beviteli típus</Hungarian>
-            <Italian>Input inserito sconosciuto</Italian>
-            <Portuguese>Tipo desonhecido de input</Portuguese>
-            <Japanese>不明な入力です</Japanese>
-            <Korean>불분명한 입력입니다</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_SaveInput">
-            <English>Save input</English>
-            <German>Speichere Eingabe</German>
-            <Spanish>Guardar entrada</Spanish>
-            <Russian>Сохранить ввод</Russian>
-            <Czech>Uložit vstup</Czech>
-            <Polish>Zapisz dane</Polish>
-            <French>Sauvegarder</French>
-            <Hungarian>Bevitel elmentése</Hungarian>
-            <Italian>Salva input</Italian>
-            <Portuguese>Salvar input</Portuguese>
-            <Japanese>入力を保存</Japanese>
-            <Korean>입력 저장</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_inClientSettings">
-            <English>Include Client Settings</English>
-            <German>Schließe Client-Einstellungen ein</German>
-            <Spanish>Incluir configuración de cliente</Spanish>
-            <Russian>Включить настройки клиента</Russian>
-            <Czech>Zahrnout nastavení klienta</Czech>
-            <Polish>Zaw. ustaw. klienta</Polish>
-            <French>Inclure paramètres client</French>
-            <Hungarian>Kliens-beállítások melléklése</Hungarian>
-            <Italian>Includi i parametri del client</Italian>
-            <Portuguese>Incluir opções do cliente</Portuguese>
-            <Japanese>クライアント設定を含む</Japanese>
-            <Korean>클라이언트 설정 포함</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_exClientSettings">
-            <English>Exclude Client Settings</English>
-            <German>Schließe Client-Einstellungen aus</German>
-            <Spanish>Excluir configuración de cliente</Spanish>
-            <Russian>Исключить настройки клиента</Russian>
-            <Czech>Nezahrnout nastavení klienta</Czech>
-            <Polish>Wyklucz ustawienia klienta</Polish>
-            <French>Exclure paramètres client</French>
-            <Hungarian>Kliens-beállítások elhagyása</Hungarian>
-            <Italian>Escludi i parametri del client</Italian>
-            <Portuguese>Excluir opções do cliente</Portuguese>
-            <Japanese>クライアント設定を実行する</Japanese>
-            <Korean>클라이언트 설정 제외</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_settingsExported">
-            <English>Settings exported to clipboard</English>
-            <German>Einstellungen in die Zwischenablage exportiert</German>
-            <Spanish>Configuración exportada al portapapeles</Spanish>
-            <Russian>Настройки экспортированы в буфер обмена</Russian>
-            <Czech>Nastevení exportována do schránky</Czech>
-            <Polish>Ustawienia wyeksportowano do schowka</Polish>
-            <French>Paramètres exportés dans le presse papier</French>
-            <Hungarian>Beállítások exportálva a vágólapba</Hungarian>
-            <Italian>Parametri esportati alla clipboard</Italian>
-            <Portuguese>Opções exportadas para o clipboard.</Portuguese>
-            <Japanese>クリップボードに設定を出力する</Japanese>
-            <Korean>클립보드로 설정 내보내기</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_uiScaing">
-            <English>Option Menu UI Scaling</English>
-            <French>Menu option: taille de l'UI</French>
-            <Polish>Skalowanie UI menu ustawień</Polish>
-            <Czech>Měřítko UI v menu nastavení</Czech>
-            <Russian>Размер интерфейса меню настройки</Russian>
-            <Spanish>Opción de escalado del menú IU</Spanish>
-            <German>Nutzeroberflächen-Skalierung</German>
-            <Hungarian>Beállításmenü kezelőfelületének skálázása</Hungarian>
-            <Portuguese>Escalar o menu de opções</Portuguese>
-            <Italian>Proporzioni della interfaccia utente</Italian>
-            <Japanese>オプション メニューにあるユーザ インタフェイスの大きさ</Japanese>
-            <Korean>옵션메뉴 UI 비례도</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_DisplayName">
-            <English>Allow Config Export [ACE]</English>
-            <Polish>Pozwól na eksport ustawień</Polish>
-            <Spanish>[ACE] Permitir exportar configuración</Spanish>
-            <German>Erlaube Config-Export [ACE]</German>
-            <Czech>Povolit export natavení [ACE]</Czech>
-            <Portuguese>[ACE] Permitir exportação de configurações</Portuguese>
-            <French>Autoriser l'exportation de la configuration [ACE]</French>
-            <Hungarian>Konfiguráció-exportálás engedélyezése [ACE]</Hungarian>
-            <Russian>Разрешить экспорт настроек [ACE]</Russian>
-            <Italian>Consenti Esportazione del Config [ACE]</Italian>
-            <Japanese>設定の出力を許可 [ACE]</Japanese>
-            <Korean>설정 내보내기 허가 [ACE]</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
-            <English>Allow</English>
-            <Polish>Zezwól</Polish>
-            <Spanish>Permitir</Spanish>
-            <German>Erlaube</German>
-            <Czech>Povolit</Czech>
-            <Portuguese>Permitir</Portuguese>
-            <French>Autoriser</French>
-            <Hungarian>Engedélyezés</Hungarian>
-            <Russian>Разрешить</Russian>
-            <Italian>Consenti</Italian>
-            <Japanese>許可</Japanese>
-            <Korean>허가</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
-            <English>Allow export of all settings to a server config formatted.</English>
-            <Polish>Zezwól na eksport wszystkich ustawień do formatu konfiguracji serwera.</Polish>
-            <Spanish>Permitir la exportación de todos los ajustes de configuración a un servidor con formato.</Spanish>
-            <German>Erlaube alle Einstellungen in einer Server-Config zu exportieren.</German>
-            <Czech>Povolit exportovat všechna nastavení do formátu server configu.</Czech>
-            <Portuguese>Permitir exportação de todas as configurações para uma configuração formatada de servidor.</Portuguese>
-            <French>Autorise l'exportation des toutes les options vers un fichier de configuration</French>
-            <Hungarian>Az összes beállítás szerver-konfigurációba való exportálásának engedélyezése.</Hungarian>
-            <Russian>Разрешить экспорт всех настроек в формате серверного конфига.</Russian>
-            <Italian>Consenti esportazione di tutti i parametri ad config formato per server.</Italian>
-            <Japanese>全ての設定をサーバ用設定の形式へと出力できるようにします。</Japanese>
-            <Korean>모든 설정을 서버 설정 형식으로 내보내는것을 허락합니다.</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
-            <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
-            <Polish>Jeżeli ustawione na zezwól, wtedy będziesz mieć dostęp do ekranu modyfikacji wszystich ustawień i zmiennych ACE, a także będziesz mieć możliwość eksportu tychże ustawień do formatu rozpoznawalnego przez userconfig serwera. Kliknięcie opcji Eksportuj skopiuje wszystkie ustawienia do schowka. Działa tylko w trybie SP.</Polish>
-            <Spanish>Cuando esta permitido, se tiene acceso a los ajustes de modificación y exportación en SP. Pulsar en exportar copiara la configuración al portapapeles.</Spanish>
-            <German>Wenn erlaubt, können die Einstellungsmodifikationen angezeigt und im SP exportiert werden. Wenn auf "Exportieren" geklickt wird, wird eine formatierte Config-Datei in der Zwischenablage abgespeichert.</German>
-            <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
-            <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
-            <French>Quand autorisé, vous pouvez accéder aux modifications et à l'exporation en solo. Cliquer sur exporter placera la configuration dans le presse-papier</French>
-            <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
-            <Russian>Когда разршен, у вас появляется доступ к модификации настроек и экспорту их в одинночном режиме. Нажатие на кнопку Экспорт поместит форматированные настройки в буфер обмена.</Russian>
-            <Italian>Quando consentito, hai accesso alle modifiche delle impostazioni ed esportazione in SP. Cliccando Esporta piazzera il config formattato sul tuo Blocco Note.</Italian>
-            <Japanese>許可の場合、あなたは設定の変更と出力をシングルプレイで可能です。出力をクリックすると、サーバ用設定の形式となっている設定がクリップボードに保存されます。</Japanese>
-            <Korean>허락하는 경우 싱글플레이에서 설정의 변경과 내보내기가 가능해집니다. 내보내기를 눌러서 서버 형성의 설정을 클립보드로 보냅니다.</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Hide">
-            <English>Hide</English>
-            <Polish>Ukryj</Polish>
-            <Spanish>Ocultar</Spanish>
-            <German>Verstecken</German>
-            <Czech>Skrýt</Czech>
-            <Portuguese>Ocultar</Portuguese>
-            <French>Cacher</French>
-            <Hungarian>Elrejtés</Hungarian>
-            <Russian>Скрыть</Russian>
-            <Italian>Nascondi</Italian>
-            <Japanese>非表示</Japanese>
-            <Korean>숨기기</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopRightDown">
-            <English>Top right, downwards</English>
-            <Polish>Po prawej u góry, w dół</Polish>
-            <Spanish>Arriba a la derecha, hacia abajo</Spanish>
-            <German>Oben rechts, nach unten</German>
-            <Czech>Vpravo nahoře, dolů</Czech>
-            <Portuguese>Superior direito, para baixo</Portuguese>
-            <French>Haut droit, vers le bas</French>
-            <Hungarian>Jobb felül, lefele</Hungarian>
-            <Russian>Справа — сверху вниз</Russian>
-            <Italian>In Alto a Destra, verso il Basso</Italian>
-            <Japanese>右上、下側</Japanese>
-            <Korean>오른쪽 위에서 아래로</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
-            <English>Top right, to the left</English>
-            <Polish>Po prawej u góry, do lewej</Polish>
-            <Spanish>Arriba a la derecha, hacia la izquierda</Spanish>
-            <German>Von rechts nach links</German>
-            <Czech>Vpravo nahoře, do leva</Czech>
-            <Portuguese>Superior direito, à esquerda</Portuguese>
-            <French>Haut droit, vers la gauche</French>
-            <Hungarian>Jobb felül, balra</Hungarian>
-            <Russian>Сверху — справа налево</Russian>
-            <Italian>In Alto a Destra, verso Sinistra</Italian>
-            <Japanese>右上、左詰</Japanese>
-            <Korean>오른쪽 위에서 왼쪽으로</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
-            <English>Top left, downwards</English>
-            <Polish>Po lewej u góry, w dół</Polish>
-            <Spanish>Arriba a la izquierda, hacia abajo</Spanish>
-            <German>Von links, nach unten</German>
-            <Czech>Vlevo nahoře, dolů</Czech>
-            <Portuguese>Superior esquerdo, para baixo</Portuguese>
-            <French>Haut gauche, vers le bas</French>
-            <Hungarian>Bal felül, lefele</Hungarian>
-            <Russian>Слева - сверху вниз</Russian>
-            <Italian>In Alto a Sinistra, verso il Basso</Italian>
-            <Japanese>左上、下側</Japanese>
-            <Korean>왼쪽 위에서 아래로</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
-            <English>Top left, to the right</English>
-            <Polish>Po lewej u góry, do prawej</Polish>
-            <Spanish>Arriba a la izquierda, hacia la derecha</Spanish>
-            <German>Oben links nach rechts</German>
-            <Czech>Vlevo nahoře, do prava</Czech>
-            <Portuguese>Superior esquerdo, para a direita</Portuguese>
-            <French>Haut gauche, vers la droite</French>
-            <Hungarian>Bal felül, jobbra</Hungarian>
-            <Russian>Сверху — слева направо</Russian>
-            <Italian>In Alto a Sinistra, verso Destra</Italian>
-            <Japanese>右上、右詰</Japanese>
-            <Korean>왼쪽 위에서 오른쪽으로</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Top">
-            <English>Top</English>
-            <Polish>Góra</Polish>
-            <Spanish>Arriba</Spanish>
-            <German>Oben</German>
-            <Czech>Nahoře</Czech>
-            <Portuguese>Acima</Portuguese>
-            <French>Haut</French>
-            <Hungarian>Fent</Hungarian>
-            <Russian>Сверху</Russian>
-            <Italian>Alto</Italian>
-            <Japanese>上側</Japanese>
-            <Korean>상단</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Bottom">
-            <English>Bottom</English>
-            <Polish>Dół</Polish>
-            <Spanish>Abajo</Spanish>
-            <German>Unten</German>
-            <Czech>Dole</Czech>
-            <Portuguese>Abaixo</Portuguese>
-            <French>Bas</French>
-            <Hungarian>Alul</Hungarian>
-            <Russian>Снизу</Russian>
-            <Italian>Basso</Italian>
-            <Japanese>下側</Japanese>
-            <Korean>하단</Korean>
-        </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
             <Polish>Debug do schowka</Polish>
@@ -418,8 +12,10 @@
             <Hungarian>Debug a vágólapra</Hungarian>
             <Russian>Отладка в буфер обмена</Russian>
             <Italian>Debug su Blocco Note</Italian>
-            <Japanese>クリップボードへデバッグ</Japanese>
+            <Japanese>ｸﾘｯﾌﾟﾎﾞｰﾄﾞにﾃﾞﾊﾞｯｸﾞ</Japanese>
             <Korean>디버그를 클립보드로</Korean>
+            <Chinesesimp>复制除错讯息至剪贴簿</Chinesesimp>
+            <Chinese>複製除錯訊息至剪貼簿</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -432,8 +28,10 @@
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
             <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
             <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
-            <Japanese>デバッグ情報の RPT とクリップボードに送ります。</Japanese>
+            <Japanese>デバッグ情報を RPT とクリップボードに送った。</Japanese>
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
+            <Chinesesimp>复制除错讯息至剪贴簿与RPT报告档中。</Chinesesimp>
+            <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中。</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -448,6 +46,8 @@
             <Italian>Sistema Bug della Testa</Italian>
             <Japanese>ヘッドバグ修正</Japanese>
             <Korean>헤드버그 수정</Korean>
+            <Chinesesimp>修复动作BUG</Chinesesimp>
+            <Chinese>修復動作BUG</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -462,6 +62,8 @@
             <Italian>Resetta il tuo stato animazione</Italian>
             <Japanese>現在のアニメーションの状況を初期化します。</Japanese>
             <Korean>자신의 동작 상태 초기화</Korean>
+            <Chinesesimp>当ACE发生动作BUG时，点此修复。</Chinesesimp>
+            <Chinese>當ACE發生動作BUG時，點此修復。</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -474,8 +76,10 @@
             <Hungarian>ACE hírek</Hungarian>
             <Russian>Новости ACE</Russian>
             <Italian>Novità ACE</Italian>
-            <Japanese>ACE からのお知らせ</Japanese>
+            <Japanese>ACE ニュース</Japanese>
             <Korean>ACE 새소식</Korean>
+            <Chinesesimp>ACE新闻</Chinesesimp>
+            <Chinese>ACE新聞</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -488,21 +92,10 @@
             <Russian>Показывать новости в Главном Меню</Russian>
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
             <Italian>Mostra News nel Menù Princinpale</Italian>
-            <Japanese>メイン メニュにお知らせを表示します</Japanese>
+            <Japanese>メイン画面にニュースを表示します</Japanese>
             <Korean>메인메뉴에 새소식을 표시합니다</Korean>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_category_all">
-            <English>All Categories</English>
-            <German>Alle Kategorien</German>
-            <Polish>Wszystkie kategorie</Polish>
-            <Portuguese>Todas categorias</Portuguese>
-            <Russian>Все категории</Russian>
-            <Czech>Všechny Kategorie</Czech>
-            <Spanish>Todas las categorías</Spanish>
-            <Italian>Tutte le Categorie</Italian>
-            <French>Toutes les catégories</French>
-            <Japanese>全カテゴリ</Japanese>
-            <Korean>모든 카테고리</Korean>
+            <Chinesesimp>显示新闻消息于主选单</Chinesesimp>
+            <Chinese>顯示新聞消息於主選單</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
@@ -516,6 +109,120 @@
             <French>Logistique</French>
             <Japanese>ロジスティクス</Japanese>
             <Korean>보급</Korean>
+            <Chinesesimp>后勤设定</Chinesesimp>
+            <Chinese>後勤設定</Chinese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_Hide">
+            <English>Hide</English>
+            <Polish>Ukryj</Polish>
+            <Spanish>Ocultar</Spanish>
+            <German>Verstecken</German>
+            <Czech>Skrýt</Czech>
+            <Portuguese>Ocultar</Portuguese>
+            <French>Cacher</French>
+            <Hungarian>Elrejtés</Hungarian>
+            <Russian>Скрыть</Russian>
+            <Italian>Nascondi</Italian>
+            <Japanese>非表示</Japanese>
+            <Korean>숨기기</Korean>
+            <Chinesesimp>隐藏</Chinesesimp>
+            <Chinese>隱藏</Chinese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_TopRightDown">
+            <English>Top right, downwards</English>
+            <Polish>Po prawej u góry, w dół</Polish>
+            <Spanish>Arriba a la derecha, hacia abajo</Spanish>
+            <German>Oben rechts, nach unten</German>
+            <Czech>Vpravo nahoře, dolů</Czech>
+            <Portuguese>Superior direito, para baixo</Portuguese>
+            <French>Haut droit, vers le bas</French>
+            <Hungarian>Jobb felül, lefele</Hungarian>
+            <Russian>Справа — сверху вниз</Russian>
+            <Italian>In Alto a Destra, verso il Basso</Italian>
+            <Japanese>右上、下側</Japanese>
+            <Korean>오른쪽 위에서 아래로</Korean>
+            <Chinesesimp>右上角，向下</Chinesesimp>
+            <Chinese>右上角，向下</Chinese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
+            <English>Top right, to the left</English>
+            <Polish>Po prawej u góry, do lewej</Polish>
+            <Spanish>Arriba a la derecha, hacia la izquierda</Spanish>
+            <German>Von rechts nach links</German>
+            <Czech>Vpravo nahoře, do leva</Czech>
+            <Portuguese>Superior direito, à esquerda</Portuguese>
+            <French>Haut droit, vers la gauche</French>
+            <Hungarian>Jobb felül, balra</Hungarian>
+            <Russian>Сверху — справа налево</Russian>
+            <Italian>In Alto a Destra, verso Sinistra</Italian>
+            <Japanese>右上、左詰</Japanese>
+            <Korean>오른쪽 위에서 왼쪽으로</Korean>
+            <Chinesesimp>右上角，向左</Chinesesimp>
+            <Chinese>右上角，向左</Chinese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
+            <English>Top left, downwards</English>
+            <Polish>Po lewej u góry, w dół</Polish>
+            <Spanish>Arriba a la izquierda, hacia abajo</Spanish>
+            <German>Von links, nach unten</German>
+            <Czech>Vlevo nahoře, dolů</Czech>
+            <Portuguese>Superior esquerdo, para baixo</Portuguese>
+            <French>Haut gauche, vers le bas</French>
+            <Hungarian>Bal felül, lefele</Hungarian>
+            <Russian>Слева - сверху вниз</Russian>
+            <Italian>In Alto a Sinistra, verso il Basso</Italian>
+            <Japanese>左上、下側</Japanese>
+            <Korean>왼쪽 위에서 아래로</Korean>
+            <Chinesesimp>左上角，向下</Chinesesimp>
+            <Chinese>左上角，向下</Chinese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
+            <English>Top left, to the right</English>
+            <Polish>Po lewej u góry, do prawej</Polish>
+            <Spanish>Arriba a la izquierda, hacia la derecha</Spanish>
+            <German>Oben links nach rechts</German>
+            <Czech>Vlevo nahoře, do prava</Czech>
+            <Portuguese>Superior esquerdo, para a direita</Portuguese>
+            <French>Haut gauche, vers la droite</French>
+            <Hungarian>Bal felül, jobbra</Hungarian>
+            <Russian>Сверху — слева направо</Russian>
+            <Italian>In Alto a Sinistra, verso Destra</Italian>
+            <Japanese>右上、右詰</Japanese>
+            <Korean>왼쪽 위에서 오른쪽으로</Korean>
+            <Chinesesimp>左上角，向右</Chinesesimp>
+            <Chinese>左上角，向右</Chinese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_Top">
+            <English>Top</English>
+            <Polish>Góra</Polish>
+            <Spanish>Arriba</Spanish>
+            <German>Oben</German>
+            <Czech>Nahoře</Czech>
+            <Portuguese>Acima</Portuguese>
+            <French>Haut</French>
+            <Hungarian>Fent</Hungarian>
+            <Russian>Сверху</Russian>
+            <Italian>Alto</Italian>
+            <Japanese>上側</Japanese>
+            <Korean>상단</Korean>
+            <Chinesesimp>上方</Chinesesimp>
+            <Chinese>上方</Chinese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_Bottom">
+            <English>Bottom</English>
+            <Polish>Dół</Polish>
+            <Spanish>Abajo</Spanish>
+            <German>Unten</German>
+            <Czech>Dole</Czech>
+            <Portuguese>Abaixo</Portuguese>
+            <French>Bas</French>
+            <Hungarian>Alul</Hungarian>
+            <Russian>Снизу</Russian>
+            <Italian>Basso</Italian>
+            <Japanese>下側</Japanese>
+            <Korean>하단</Korean>
+            <Chinesesimp>下方</Chinesesimp>
+            <Chinese>下方</Chinese>
         </Key>
     </Package>
 </Project>

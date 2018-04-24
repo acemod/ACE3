@@ -22,10 +22,10 @@ private _bloodLossOnBodyPart = 0;
 
 // Add all bleeding from wounds on selection
 {
-    _x params ["", "", "_bodyPartN", "_amountOf", "_percentageOpen"];
+    _x params ["", "", "_bodyPartN", "_amountOf", "_bleeding"];
 
     if (_bodyPartN == _partIndex) then {
-        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _percentageOpen);
+        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (20 * _amountOf * _bleeding);
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
 

@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, true] call ace_medical_fnc_displayTriageCard
+ *
  * Public: Yes
  */
 
@@ -16,7 +19,7 @@
 
 params ["_target", ["_show", true]];
 
-GVAR(TriageCardTarget) = if (_show) then {_target} else {ObjNull};
+GVAR(TriageCardTarget) = [objNull, _target] select _show;
 
 if (_show) then {
     //("ACE_MedicalTriageCard" call BIS_fnc_rscLayer) cutRsc [QGVAR(triageCard),"PLAIN"];
@@ -29,7 +32,6 @@ if (_show) then {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
-        disableSerialization;
         private _display = uiNamespace getVariable QGVAR(triageCard);
         if (isNil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
@@ -55,7 +57,7 @@ if (_show) then {
             _triageCardTexts pushBack format["%1x - %2", _amount, _message];
         } forEach _log;
 
-        if (count _triageCardTexts == 0) then {
+        if (_triageCardTexts isEqualTo []) then {
             _lbCtrl lbAdd (localize ELSTRING(medical,TriageCard_NoEntry));
         };
         {

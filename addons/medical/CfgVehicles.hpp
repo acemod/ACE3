@@ -1,6 +1,4 @@
 
-#define MEDICAL_ACTION_DISTANCE 1.75
-
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
@@ -11,7 +9,7 @@ class CfgVehicles {
     };
     class ACE_Module;
     class ACE_moduleMedicalSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(MedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
@@ -127,9 +125,21 @@ class CfgVehicles {
                     };
                     class never {
                         name = ECSTRING(common,Never);
-                        value = 1;
+                        value = 2;
                     };
                 };
+            };
+            class fatalInjuryConditionAI {
+                displayName = CSTRING(MedicalSettings_fatalInjuryConditionAI_DisplayName);
+                description = CSTRING(MedicalSettings_fatalInjuryConditionAI_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class unconsciousConditionAI {
+                displayName = CSTRING(MedicalSettings_unconsciousConditionAI_DisplayName);
+                description = CSTRING(MedicalSettings_unconsciousConditionAI_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
             };
             class cardiacArrestTime {
                 displayName = CSTRING(MedicalSettings_cardiacArrestTime_DisplayName);
@@ -452,6 +462,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class spontaneousWakeUpChance {
+                displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);
+                description = CSTRING(MedicalSettings_spontaneousWakeUpChance_Description);
+                typeName = "SCALAR";
+                defaultValue = 0;
+            };
         };
     };
     class MapBoard_altis_F;
@@ -690,7 +706,15 @@ class CfgVehicles {
         };
     };
 
-    class NATO_Box_Base;
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        class ACE_Actions;
+    };
+    class NATO_Box_Base: ReammoBox_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
         scopeCurator = 2;
@@ -706,6 +730,35 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bloodIV_500,15);
             MACRO_ADDITEM(ACE_bloodIV_250,15);
             MACRO_ADDITEM(ACE_bodyBag,10);
+        };
+        class AnimationSources {
+            class Cover {
+                source = "user";
+                animPeriod = 1.5;
+                initPhase = 0;
+                minValue = 0;
+                maxValue = 1;
+            };
+        };
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                selection = "cover_action";
+
+                class ACE_OpenLid {
+                    displayName = CSTRING(openLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' < 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',1]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+                class ACE_CloseLid {
+                    displayName = CSTRING(closeLid);
+                    condition = QUOTE(alive _target && {_target animationPhase 'Cover' >= 0.5});
+                    statement = QUOTE(_target animate ARR_2(['Cover',0]));
+                    showDisabled = 0;
+                    priority = -1;
+                };
+            };
         };
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {

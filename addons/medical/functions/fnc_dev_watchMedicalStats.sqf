@@ -22,20 +22,23 @@
 
     private _unit = cursorTarget;
     if (!(_unit isKindOf "CAManBase")) then {_unit = cursorObject};
-    if (!(_unit isKindOf "CAManBase")) then {_unit = player};
+    if (!(_unit isKindOf "CAManBase")) then {_unit = ACE_player};
+    if ((_unit != ACE_player) && {ACE_player getVariable ["ACE_isUnconscious", false]}) then {_unit = ACE_player};
     if (!(_unit isKindOf "CAManBase")) exitWith {"No Unit?"};
 
     private _return = [];
 
     // Header:
-    _return pushBack format ["<t size='1.2'><t color='#%1'>%2</t> [%3]", (["00FF00", "0000FF"] select (_unit == player)), [_unit] call EFUNC(common,getName), typeOf _unit];
+    _return pushBack format ["<t size='1.2'><t color='#%1'>%2</t> [%3]", (["00FF00", "0000FF"] select (_unit == ACE_player)), [_unit] call EFUNC(common,getName), typeOf _unit];
     _return pushBack "";
 
     // State:
     private _hasStableVitals = [_unit] call EFUNC(medical,hasStableVitals);
     private _targetState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-    private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"333333"}};
-    _return pushBack format ["<t color='#%1'>State: %2</t> [StableVitals: %3]", _color, _targetState, _hasStableVitals];
+    if (!local _unit) then {_targetState = "NotLocal";};
+    private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"555555"}};
+    private _unconcFlag = if (_unit getVariable ["ACE_isUnconscious", false]) then {"[<t color='#FFFFFF'>U</t>]"} else {""};
+    _return pushBack format ["<t color='#%1'>State: %2</t> [StableVitals: %3] %4", _color, _targetState, _hasStableVitals, _unconcFlag];
 
     // Blood:
     private _bloodVolume = _unit getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
@@ -62,7 +65,7 @@
     private _damage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
     private _limping = if (_unit getVariable [QEGVAR(medical_engine,isLimping), false]) then {"[<t color ='#FFCC22'> Limping </t>]"} else {""};
     _return pushBack format ["Damage: [H: %1] [B: %2] %3", (_damage select 0) toFixed 2, (_damage select 1) toFixed 2, _limping];
-    _return pushBack format ["[LA:%1] [RA: %2] [LL:%1] [RL: %2]", (_damage select 2) toFixed 2, (_damage select 3) toFixed 2, (_damage select 4) toFixed 2, (_damage select 5) toFixed 2];
+    _return pushBack format ["[LA:%1] [RA: %2] [LL:%3] [RL: %4]", (_damage select 2) toFixed 2, (_damage select 3) toFixed 2, (_damage select 4) toFixed 2, (_damage select 5) toFixed 2];
 
 
     // Tourniquets:

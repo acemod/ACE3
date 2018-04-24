@@ -105,28 +105,5 @@ class CfgWeapons {
             dispersion = 0.0064; //0.0023;
             multiplier = 1;
         };
-
-        class close: HighROF {};
-        class short: close {};
-        class medium: LowROF {};
-        class far: medium {};
-    };
-
-    class Gatling_30mm_Plane_CAS_01_F: CannonCore {
-        autoFire = 1;
-        burst = 1;
-
-        class LowROF: Mode_FullAuto {
-            autoFire = 0;
-            burst = 22; //65;
-            reloadTime = 0.0462; //0.0154; //0.034;
-            multiplier = 3;
-        };
-
-        class close: LowROF {};
-        class near: close {};
-        class short: close {};
-        class medium: close {};
-        class far: close {};
     };
 };

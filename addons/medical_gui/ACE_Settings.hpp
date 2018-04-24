@@ -29,5 +29,6 @@ class ACE_Settings {
         value = 3;
         typeName = "SCALAR";
         category = ECSTRING(medical,Category_Medical);
+        sliderSettings[] = {0, 10, 3, 1};
     };
 };

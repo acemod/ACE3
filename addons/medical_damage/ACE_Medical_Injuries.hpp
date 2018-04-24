@@ -16,7 +16,7 @@ class ACE_Medical_Injuries {
         // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
         class Avulsion {
             causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
-            bleeding = 0.5;
+            bleeding = 0.25;
             pain = 1.0;
             minDamage = 0.01;
             causeLimping = 1;
@@ -32,7 +32,7 @@ class ACE_Medical_Injuries {
         // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
         class Crush {
             causes[] = {"falling", "vehiclecrash", "punch", "unknown"};
-            bleeding = 0.1;
+            bleeding = 0.05;
             pain = 0.8;
             minDamage = 0.1;
             causeLimping = 1;
@@ -55,7 +55,7 @@ class ACE_Medical_Injuries {
         // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
         class VelocityWound {
             causes[] = {"bullet", "grenade","explosive", "shell", "unknown"};
-            bleeding = 1.0;
+            bleeding = 0.5;
             pain = 0.9;
             minDamage = 0.35;
             causeLimping = 1;
@@ -63,7 +63,7 @@ class ACE_Medical_Injuries {
         // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
         class PunctureWound {
             causes[] = {"stab", "grenade"};
-            bleeding = 0.1;
+            bleeding = 0.05;
             pain = 0.4;
             minDamage = 0.02;
             causeLimping = 1;

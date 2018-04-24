@@ -7,7 +7,7 @@
  * 1: The finisehd animation <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, "ACE_climb"] call ace_movement_fnc_handleClimb
@@ -24,4 +24,5 @@ private _pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 
 _pos = _pos vectorDiff (_unit selectionPosition "camera");
 
-_unit setPos _pos;
+_unit setPosASL (AGLtoASL _pos);
+TRACE_2("",AGLtoASL _pos,getPosASL _unit);

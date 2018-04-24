@@ -6,7 +6,7 @@
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [fromBisFiredEH] call ace_disposable_fnc_replaceATWeapon;

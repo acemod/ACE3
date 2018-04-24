@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_init
  *
  * Public: No
  */
@@ -39,6 +42,7 @@ _unit setVariable [QGVAR(painSuppressAdjustments), [], true];
 _unit setVariable [QGVAR(openWounds), [], true];
 _unit setVariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(stitchedWounds), [], true];
+_unit setVariable [QEGVAR(medical_engine,isLimping), false, true];
 
 // - Misc ---------------------------------------------------------------------
 _unit setVariable [QGVAR(isUnconscious), false, true];
@@ -59,18 +63,15 @@ _unit setVariable [QGVAR(bodyPartDamage), [0,0,0,0,0,0], true];
 _unit setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
 #endif
 
-// generic medical admin
-private ["_allUsedMedication", "_logs"];
-
 // medication
-_allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
+private _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
 {
    _unit setVariable [_x select 0, nil];
 } forEach _allUsedMedication;
 _unit setVariable [QGVAR(allUsedMedication), [], true];
 
 // TODO move to treatment
-_logs = _unit getVariable [QGVAR(allLogs), []];
+private _logs = _unit getVariable [QGVAR(allLogs), []];
 {
     _unit setVariable [_x, nil];
 } forEach _logs;

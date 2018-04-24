@@ -11,14 +11,24 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.2;
                     //icon = QPATHTOF(UI\...); // TODO
-                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSwimming", "isNotSitting"};
+                };
+                class GVAR(resetZero) {
+                    // Updates the zero reference
+                    displayName = CSTRING(ResetZero);
+                    condition = QUOTE([ACE_player] call FUNC(canResetZero));
+                    statement = QUOTE([ACE_player] call FUNC(resetZero));
+                    showDisabled = 0;
+                    priority = 0.2;
+                    //icon = QPATHTOF(UI\...); // TODO
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSwimming", "isNotSitting"};
                 };
             };
         };
     };
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(DisplayName);
         //icon = ""; // needs an icon
         category = "ACE";
@@ -74,11 +84,17 @@ class CfgVehicles {
                 displayName = CSTRING(zeroReferenceHumidity_DisplayName);
                 description = CSTRING(zeroReferenceHumidity_Description);
                 typeName = "NUMBER";
-                defaultValue = 0.5;
+                defaultValue = 0.0;
             };
             class deduceBarometricPressureFromTerrainAltitude {
                 displayName = CSTRING(deduceBarometricPressureFromTerrainAltitude_DisplayName);
                 description = CSTRING(deduceBarometricPressureFromTerrainAltitude_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class simplifiedZeroing {
+                displayName = CSTRING(simplifiedZeroing_displayName);
+                description = CSTRING(simplifiedZeroing_description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };

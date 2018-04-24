@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Dogtags">
         <Key ID="STR_ACE_Dogtags_itemName">
@@ -11,6 +11,8 @@
             <Korean>군번줄</Korean>
             <French>Plaque d'identification</French>
             <Italian>Piastrina</Italian>
+            <Chinese>兵籍牌</Chinese>
+            <Chinesesimp>兵籍牌</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -22,6 +24,8 @@
             <Korean>군번줄 확인</Korean>
             <French>Vérifier les plaques d'identification</French>
             <Italian>Controlla Piastrina</Italian>
+            <Chinese>檢查兵籍牌</Chinese>
+            <Chinesesimp>检查兵籍牌</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -33,6 +37,8 @@
             <Korean>확인</Korean>
             <French>Vérifier</French>
             <Italian>Controlla</Italian>
+            <Chinese>檢查</Chinese>
+            <Chinesesimp>检查</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -44,28 +50,34 @@
             <Korean>회수</Korean>
             <French>Prendre</French>
             <Italian>Prendi</Italian>
+            <Chinese>拿取</Chinese>
+            <Chinesesimp>拿取</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>
             <Polish>Zabrałeś nieśmiertelnik %1...</Polish>
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
-            <Japanese>%1からドッグ タグを取っている・・・</Japanese>
+            <Japanese>%1からドッグ タグを取っています・・・</Japanese>
             <German>Hundemarke von %1 genommen ...</German>
             <Korean>%1로부터 군번줄을 회수했습니다...</Korean>
             <French>Plaque d'identification pris sur %1...</French>
             <Italian>Piastrina presa da %1...</Italian>
+            <Chinese>從%1身上拿取兵籍牌...</Chinese>
+            <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>
             <Polish>Ktoś już zabrał ten nieśmiertelnik...</Polish>
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
-            <Japanese>すでに誰かがドッグ タグを取っているようだ・・・</Japanese>
+            <Japanese>すでに誰かがドッグ タグを取っていったようだ・・・</Japanese>
             <German>Jemand anderes hat bereits die Hundemarke genommen ...</German>
             <Korean>누군가 이미 군번줄을 회수해갔습니다...</Korean>
             <French>Quelqu'un d'autre a déjâ pris les plaques d'identification...</French>
             <Italian>Qualcun altro ha già preso la piastrina...</Italian>
+            <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
+            <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
         </Key>
     </Package>
 </Project>

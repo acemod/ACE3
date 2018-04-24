@@ -6,7 +6,7 @@
  * option menu id <number>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_evaluate_option_menu_input

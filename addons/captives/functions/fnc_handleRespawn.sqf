@@ -7,7 +7,7 @@
  * 1: Corpse <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [alive, body] call ACE_captives_fnc_handleRespawn;
@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit","_dead"];
+TRACE_2("handleRespawn",_unit,_dead);
 
 if (!local _unit) exitWith {};
 

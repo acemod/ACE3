@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [DISPLAY] call ACE_inventory_fnc_forceitemListUpdate
+ *
  * Public: No
  */
 #include "script_component.hpp"

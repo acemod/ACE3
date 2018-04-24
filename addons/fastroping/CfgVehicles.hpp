@@ -4,7 +4,7 @@
         control = "Checkbox"; \
         displayName = CSTRING(Eden_equipFRIES); \
         tooltip = CSTRING(Eden_equipFRIES_Tooltip); \
-        expression = QUOTE([_this] call FUNC(equipFRIES)); \
+        expression = QUOTE(if (_value) then {[_this] call FUNC(equipFRIES)}); \
         typeName = "BOOL"; \
         condition = "objectVehicle"; \
         defaultValue = false; \
@@ -18,7 +18,7 @@ class CfgVehicles {
     };
     class ACE_Module: Module_F {};
     class ACE_moduleEquipFRIES: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Module_FRIES_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_FRIES_ca.paa);
         category = "ACE";
@@ -42,6 +42,13 @@ class CfgVehicles {
                 displayName = CSTRING(Interaction_prepareFRIES);
                 condition = QUOTE([vehicle _player] call FUNC(canPrepareFRIES));
                 statement = QUOTE([vehicle _player] call FUNC(prepareFRIES));
+                showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_stowFRIES {
+                displayName = CSTRING(Interaction_stowFRIES);
+                condition = QUOTE([vehicle _player] call FUNC(canStowFRIES));
+                statement = QUOTE([vehicle _player] call FUNC(stowFRIES));
                 showDisabled = 0;
                 priority = 1;
             };
@@ -156,6 +163,8 @@ class CfgVehicles {
         class ACE_Actions {};
         class Turrets {};
         class TransportItems {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
     };
 
     class Helicopter_Base_H;

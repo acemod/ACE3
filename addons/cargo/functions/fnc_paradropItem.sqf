@@ -6,7 +6,7 @@
  * 0: Object <OBJECT>
  * 1: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Object unloaded <BOOL>
  *
  * Example:
@@ -32,9 +32,9 @@ private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_cargoSpace + _itemSize), true];
 
 (boundingBoxReal _vehicle) params ["_bb1", "_bb2"];
-private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 3; // 3 meters behind max bounding box
+private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters behind max bounding box
 TRACE_1("",_distBehind);
-private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -1];
+private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
 
 private _itemObject = if (_item isEqualType objNull) then {
@@ -44,12 +44,12 @@ private _itemObject = if (_item isEqualType objNull) then {
     [QGVAR(serverUnload), [_item, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
     _item
 } else {
-    private _newItem = createVehicle [_item, _posBehindVehicleAGL, [], 0, ""];
+    private _newItem = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
     _newItem setPosASL (AGLtoASL _posBehindVehicleAGL);
     _newItem
 };
 
-_itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply 10));
+_itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 
 // open parachute and ir light effect
 [{

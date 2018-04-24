@@ -16,9 +16,8 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_deployedRopes", "_config", "_waitTime"];
 
-_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 {
     _x params ["", "_ropeTop", "_ropeBottom", "_dummy", "_hook", "_occupied"];
 
@@ -40,14 +39,4 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
-_vehicle setVariable [QGVAR(deploymentStage), 1, true];
-
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_waitTime = 0;
-if (isText (_config >> QGVAR(onCut))) then {
-    _waitTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onCut))));
-};
-
-[{
-    _this setVariable [QGVAR(deploymentStage), 0, true];
-}, _vehicle, _waitTime] call CBA_fnc_waitAndExecute;
+_vehicle setVariable [QGVAR(deploymentStage), 2, true];

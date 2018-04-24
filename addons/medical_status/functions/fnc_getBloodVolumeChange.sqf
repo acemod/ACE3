@@ -7,8 +7,11 @@
  * 1: Time since last update <NUMBER>
  * 2: Global Sync Values (bloodbags) <BOOL>
  *
- * ReturnValue:
+ * Return Value:
  * Blood volume change (liters per second) <NUMBER>
+ *
+ * Example:
+ * [player, 1, true] call ACE_medical_fnc_getBloodVolumeChange
  *
  * Public: No
  */

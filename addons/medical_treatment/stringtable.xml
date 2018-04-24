@@ -27,6 +27,14 @@
             <Italian>Abilita la creazione della barella dopo trattamento</Italian>
             <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRcreatesPulse">
+            <English>CPR creates pulse</English>
+            <German>HLW erzeugt einen Puls</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRcreatesPulse_Description">
+            <English>CPR will create a pulse for the patient while performing</English>
+            <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
             <Polish>Detale zużytych medykamentów</Polish>
@@ -78,6 +86,17 @@
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
             <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
+        <Key ID="STR_ACE_Medical_Treatment_PAKTime">
+            <English>How long should PAK take to apply ?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_PAKTime_Description">
+            <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedkitTime">
+            <English>How long should Medkit take to apply ?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedkitTime_Description">
+            <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English> 
         </Key>
     </Package>
 </Project>
