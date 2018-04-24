@@ -6,12 +6,13 @@
  * 0: TypeOf of the class <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Full path of the new action <ARRAY>
+ * 3: Allow inheritance <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [typeOf cursorTarget, 0,["ACE_TapShoulderRight","VulcanPinch"]] call ace_interact_menu_fnc_removeActionFromClass;
+ * [typeOf cursorTarget, 0,["ACE_TapShoulderRight","VulcanPinch"], true] call ace_interact_menu_fnc_removeActionFromClass;
  *
  * Public: No
  */
