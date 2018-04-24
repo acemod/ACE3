@@ -50,7 +50,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
                 condition = "true";
-                icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+                icon = QPATHTOF(data\icons\interact\b1.paa);
                 #define ACTION_CONDITION condition = "true";
                 #include "InteractionBodyParts.hpp"
                 #undef ACTION_CONDITION
@@ -61,7 +61,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotInside", "isNotSwimming"};
                 condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                 statement = QUOTE([_target] call DFUNC(openMenu));
-                icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+                icon = QPATHTOF(data\icons\interact\b1.paa);
             };
         };
 
@@ -77,7 +77,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSwimming"};
                     condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                     statement = QUOTE([_target] call DFUNC(openMenu));
-                    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+                    icon = QPATHTOF(data\icons\interact\b1.paa);
                 };
                 class ACE_Medical_Radial {
                     displayName = CSTRING(Actions_Medical);
@@ -85,7 +85,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
                     condition = QUOTE(((vehicle _target != _target && vehicle _target == vehicle _player) || {EGVAR(medical,menuTypeStyle) == 1}));
-                    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+                    icon = QPATHTOF(data\icons\interact\b1.paa);
                     #define ACTION_CONDITION condition = "true";
                     #include "InteractionBodyParts.hpp"
                     #undef ACTION_CONDITION
@@ -94,7 +94,7 @@ class CfgVehicles {
                     displayName = CSTRING(LoadPatient);
                     condition = "(_target getVariable ['ACE_isUnconscious', false]) && {alive _target} && {vehicle _target == _target}";
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionLoadUnit));
-                    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+                    icon = QPATHTOF(data\icons\interact\b1.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying"};
                     insertChildren = QUOTE(call DEFUNC(medical_treatment,addLoadPatientActions));
                 };
@@ -102,7 +102,7 @@ class CfgVehicles {
                     displayName = CSTRING(UnloadPatient);
                     condition = "(_target getVariable ['ACE_isUnconscious', false]) && {vehicle _target != _target} && {vehicle _player == _player}";
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionUnloadUnit));
-                    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+                    icon = QPATHTOF(data\icons\interact\b1.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
                 };
             };

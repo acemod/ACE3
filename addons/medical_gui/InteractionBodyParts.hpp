@@ -1,7 +1,7 @@
 class ACE_Head {
     displayName = ECSTRING(interaction,Head);
     distance = MEDICAL_ACTION_DISTANCE;
-    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+    icon = QPATHTOF(data\icons\interact\b1.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
@@ -11,7 +11,7 @@ class ACE_Head {
 class ACE_Torso {
     displayName = ECSTRING(interaction,Torso);
     distance = MEDICAL_ACTION_DISTANCE;
-    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+    icon = QPATHTOF(data\icons\interact\b1.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_3(_target,1,1)] call FUNC(displayPatientInformation));
@@ -21,7 +21,7 @@ class ACE_Torso {
 class ACE_ArmLeft {
     displayName = ECSTRING(interaction,ArmLeft);
     distance = MEDICAL_ACTION_DISTANCE;
-    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+    icon = QPATHTOF(data\icons\interact\b1.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_3(_target,1,2)] call FUNC(displayPatientInformation));
@@ -31,7 +31,7 @@ class ACE_ArmLeft {
 class ACE_ArmRight {
     displayName = ECSTRING(interaction,ArmRight);
     distance = MEDICAL_ACTION_DISTANCE;
-    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+    icon = QPATHTOF(data\icons\interact\b1.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_3(_target,1,3)] call FUNC(displayPatientInformation));
@@ -41,7 +41,7 @@ class ACE_ArmRight {
 class ACE_LegLeft {
     displayName = ECSTRING(interaction,LegLeft);
     distance = MEDICAL_ACTION_DISTANCE;
-    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+    icon = QPATHTOF(data\icons\interact\b1.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_3(_target,1,4)] call FUNC(displayPatientInformation));
@@ -51,7 +51,7 @@ class ACE_LegLeft {
 class ACE_LegRight {
     displayName = ECSTRING(interaction,LegRight);
     distance = MEDICAL_ACTION_DISTANCE;
-    icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
+    icon = QPATHTOF(data\icons\interact\b1.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
     statement = QUOTE([ARR_3(_target,1,5)] call FUNC(displayPatientInformation));
