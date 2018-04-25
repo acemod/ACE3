@@ -565,6 +565,11 @@ class CfgVehicles {
         };
     };
 
+    class Boat_F;
+    class Boat_Transport_02_base_F: Boat_F {
+        GVAR(canPush) = 1;
+    };
+
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
