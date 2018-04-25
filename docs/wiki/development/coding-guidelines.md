@@ -792,5 +792,16 @@ The `waitUntil` command shall not be used. Instead, make use of a per-frame hand
 
         // Execute any code
     };
-}, [_unit], 0] call CBA_fnc_addPerFrameHandler;
+}, 0, [_unit]] call CBA_fnc_addPerFrameHandler;
+```
+or use CBA's `CBA_fnc_waitUntilAndExecute`
+```js
+[{
+    params ["_unit"];
+    _unit getVariable [QGVAR(myVariable), false]
+},
+{
+    params ["_unit"];
+    // Execute any code
+}, [_unit]] call CBA_fnc_waitUntilAndExecute;
 ```
