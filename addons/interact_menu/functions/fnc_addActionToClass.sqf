@@ -9,12 +9,13 @@
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  * 4: Use Inheritance <BOOL> (default: false)
+ * 5: Classes excluded from inheritance. <ARRAY> (default: [])
  *
  * Return Value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
  *
  * Example:
- * [typeOf cursorTarget, 0, ["ACE_TapShoulderRight"],VulcanPinchAction] call ace_interact_menu_fnc_addActionToClass;
+ * [typeOf cursorTarget, 0, ["ACE_TapShoulderRight"], VulcanPinchAction] call ace_interact_menu_fnc_addActionToClass;
  *
  * Public: Yes
  */
@@ -27,18 +28,19 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
 TRACE_4("params",_objectType,_typeNum,_parentPath,_action);
 
 if (param [4, false, [false]]) exitwith {
+    private _excluded = param [5, [], [[]]];
     if (isNil QGVAR(inheritedActions)) then {GVAR(inheritedActions) = [];};
     private _index = GVAR(inheritedActions) pushBack [[], _typeNum, _parentPath, _action];
     private _initEH = compile format ['
         params ["_object"];
-        private _typeOf = typeOf _object;
         (GVAR(inheritedActions) select %1) params ["_addedClasses", "_typeNum", "_parentPath", "_action"];
+        private _typeOf = typeOf _object;
         if (_typeOf in _addedClasses) exitWith {};
         _addedClasses pushBack _typeOf;
         [_typeOf, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
     ', _index];
     TRACE_2("Added inheritable action",_objectType,_index);
-    [_objectType, "init", _initEH, true, [], true] call CBA_fnc_addClassEventHandler;
+    [_objectType, "init", _initEH, true, _excluded, true] call CBA_fnc_addClassEventHandler;
 
     // Return the full path
     (_parentPath + [_action select 0])
