@@ -41,7 +41,7 @@ class CfgVehicles {
                 class GVAR(GetIn) { \
                     displayName = "$STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1"; \
                     condition = QUOTE(call DFUNC(canShowFreeSeats)); \
-                    statement = ""; \
+                    statement = QUOTE(call DFUNC(getInNearest)); \
                     exceptions[] = {"isNotSwimming"}; \
                     insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
                 }; \
