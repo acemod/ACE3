@@ -15,16 +15,11 @@ class CfgPatches {
 };
 
 #include "ACE_Settings.hpp"
-#include "ACE_Medical_StateMachine.hpp"
-
 #include "CfgEden.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "UI\CfgInGameUI.hpp"
-#include "UI\RscTitles.hpp"
-#include "UI\triagecard.hpp"
 
 class ACE_Extensions {
     extensions[] += {"ace_medical"};
