@@ -41,8 +41,8 @@
     _return pushBack format ["<t color='#%1'>State: %2</t> [StableVitals: %3] %4", _color, _targetState, _hasStableVitals, _unconcFlag];
 
     // Blood:
-    private _bloodVolume = _unit getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
-    private _bloodLoss = [_unit] call EFUNC(medical,getBloodLoss);
+    private _bloodVolume = GET_BLOOD_VOLUME(_unit);
+    private _bloodLoss = GET_BLOOD_LOSS(_unit);
     private _secondsToHeartstop = if (_bloodLoss != 0) then {format ["[<t color ='#FF9999'>Time Left:</t> %1 sec]", (((_bloodVolume - BLOOD_VOLUME_CLASS_4_HEMORRHAGE) max 0) / _bloodLoss) toFixed 1]} else {""};
     _return pushBack format ["Blood: %1", _bloodVolume toFixed 3];
     _return pushBack format [" - [Loss: %1] %2", _bloodLoss toFixed 5, _secondsToHeartstop];

@@ -52,9 +52,9 @@ _this setVariable [QGVAR(movingToInjured), false];
 _this forceSpeed 0;
 _target forceSpeed 0;
 
-private _needsBandaging = ([_target] call EFUNC(medical,getBloodLoss)) > 0;
-private _needsMorphine  = (_target getVariable [QEGVAR(medical,pain), 0]) > 0.2;
-private _needsEpinephrine = _target getVariable ["ACE_isUnconscious", false];
+private _needsBandaging = GET_BLOOD_LOSS(_target) > 0;
+private _needsMorphine  = GET_PAIN_TOTAL(_target) > 0.2;
+private _needsEpinephrine = IS_UNCONSCIOUS(_target);
 
 switch (true) do {
     case _needsBandaging: {

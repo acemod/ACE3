@@ -21,7 +21,7 @@ if (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME] < BLOOD_VOLUME_
 if (_unit getVariable [QGVAR(inCardiacArrest), false]) exitWith { false };
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
-private _bloodLoss = _unit call FUNC(getBloodLoss);
+private _bloodLoss = GET_BLOOD_LOSS(_unit);
 if (_bloodLoss > (BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput) / 2) exitWith { false };
 
 private _bloodPressure = [_unit] call FUNC(getBloodPressure);

@@ -58,7 +58,7 @@ if (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE) then {
     };
 };
 
-private _bloodLoss = _unit call FUNC(getBloodLoss);
+private _bloodLoss = GET_BLOOD_LOSS(_unit);
 if (_bloodLoss > 0) then {
     _unit setVariable [QGVAR(bloodloss), _bloodLoss, _syncValues];
 

@@ -20,7 +20,7 @@
 params ["_unit", "_deltaT", "_syncValues"];
 
 private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
-private _bloodVolumeChange = -_deltaT * (_unit call FUNC(getBloodLoss));
+private _bloodVolumeChange = -_deltaT * GET_BLOOD_LOSS(_unit);
 
 if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
     private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
