@@ -15,6 +15,7 @@
  * 2: Text <STRING> (default: "")
  * 3: Icon image file <STRING> (default: "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa")
  * 4: Icon color <ARRAY> (default: [1,0,0,1])
+ * 5: Icon Angle <NUMBER> (default: 0)
  *
  * Return Value:
  * None
@@ -26,7 +27,7 @@
  */
 #include "script_component.hpp"
 
-params ["_object", "_code", ["_text", ""], ["_icon", "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa"], ["_color", [1,0,0,1]]];
+params ["_object", "_code", ["_text", ""], ["_icon", "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa"], ["_color", [1,0,0,1]], ["_angle", 0]];
 
 if (missionNamespace getVariable [QGVAR(moduleDestination_running), false]) exitWith {
     [false, _object, [0,0,0], false, false, false] call _code;
@@ -86,16 +87,16 @@ GVAR(moduleDestination_displayEHKeyboard) = [findDisplay 312, "KeyDown", {
 GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw", {
     params ["_mapCtrl"];
     //IGNORE_PRIVATE_WARNING ["_thisArgs"]
-    _thisArgs params ["_object", "_text", "_icon", "_color"];
+    _thisArgs params ["_object", "_text", "_icon", "_color", "_angle"];
 
     private _pos2d = (((findDisplay 312) displayCtrl 50) ctrlMapScreenToWorld getMousePosition);
-    _mapCtrl drawIcon [_icon, _color, _pos2d, 24, 24, 45, _text, 1, 0.03, "TahomaB", "right"];
+    _mapCtrl drawIcon [_icon, _color, _pos2d, 24, 24, _angle, _text, 1, 0.03, "TahomaB", "right"];
     _mapCtrl drawLine [getPos _object, _pos2d, _color];
-}, [_object, _text, _icon, _color]] call CBA_fnc_addBISEventHandler;
+}, [_object, _text, _icon, _color, _angle]] call CBA_fnc_addBISEventHandler;
 
 // Add draw EH for 3D camera view - draws the 3D icon and line
 [{
-    (_this select 0) params ["_object", "_code", "_text", "_icon", "_color"];
+    (_this select 0) params ["_object", "_code", "_text", "_icon", "_color", "_angle"];
     if ((isNull _object) || {isNull findDisplay 312} || {!isNull findDisplay 49}) then {
         TRACE_3("null-exit",isNull _object,isNull findDisplay 312,isNull findDisplay 49);
         GVAR(moduleDestination_running) = false;
@@ -104,7 +105,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw",
     if (GVAR(moduleDestination_running)) then {
         // Draw the 3d icon and line
         private _mousePosAGL = screenToWorld getMousePosition;
-        drawIcon3D [_icon, _color, _mousePosAGL, 1.5, 1.5, 45, _text];
+        drawIcon3D [_icon, _color, _mousePosAGL, 1.5, 1.5, _angle, _text];
         drawLine3D [_mousePosAGL, ASLtoAGL (getPosASL _object), _color];;
     } else {
         TRACE_4("cleaning up",_this select 1,GVAR(moduleDestination_displayEHMouse),GVAR(moduleDestination_displayEHKeyboard),GVAR(moduleDestination_mapDrawEH));
@@ -116,4 +117,4 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw",
         GVAR(moduleDestination_displayEHKeyboard) = nil;
         GVAR(moduleDestination_mapDrawEH) = nil;
     };
-}, 0, [_object, _code, _text, _icon, _color]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_object, _code, _text, _icon, _color, _angle]] call CBA_fnc_addPerFrameHandler;

@@ -1,18 +1,8 @@
 class CfgWeapons {
-    class Launcher;
-    class MissileLauncher;
-
-    class Launcher_Base_F: Launcher {
-        class WeaponSlotsInfo;
-    };
-
-    // @TODO: AA by default, motherfuckers
-    class missiles_titan: MissileLauncher {
-
-    };
-
-    class missiles_titan_at: missiles_titan { };
-    class GVAR(Titan_Static): missiles_titan_at {
+    
+    class missiles_titan_static;
+    class GVAR(Titan_Static): missiles_titan_static {
+        modes[] = {"Player"};
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = QPATHTOF(data\reticle_titan.p3d);
@@ -23,11 +13,7 @@ class CfgWeapons {
         lockedTargetSound[] = {"",0,1};
     };
 
-    // @TODO: AA by default, motherfuckers
-    class launch_Titan_base: Launcher_Base_F {};
-
-    class launch_Titan_short_base: launch_Titan_base {  };
-
+    class launch_Titan_short_base;
     class launch_B_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";

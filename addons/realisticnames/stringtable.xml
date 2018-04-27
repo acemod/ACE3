@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -668,7 +668,7 @@
             <Portuguese>Karatel</Portuguese>
             <Hungarian>Karatel</Hungarian>
             <Italian>Karatel</Italian>
-            <Japanese>パニッシャー</Japanese>
+            <Japanese>カラテル</Japanese>
             <Korean>Karatel</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车</Chinesesimp>
@@ -684,7 +684,7 @@
             <Portuguese>Karatel (HMG)</Portuguese>
             <Hungarian>Karatel (nehézgéppuska)</Hungarian>
             <Italian>Karatel (HMG)</Italian>
-            <Japanese>パニッシャー (HMG)</Japanese>
+            <Japanese>カラテル (HMG)</Japanese>
             <Korean>Karatel (HMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (重機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (重机枪)</Chinesesimp>
@@ -700,7 +700,7 @@
             <Portuguese>Karatel (GMG)</Portuguese>
             <Hungarian>Karatel (gránátgéppuska)</Hungarian>
             <Italian>Karatel (GMG)</Italian>
-            <Japanese>パニッシャー (GMG)</Japanese>
+            <Japanese>カラテル (GMG)</Japanese>
             <Korean>Karatel (GMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (榴彈機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (榴弹机枪)</Chinesesimp>
@@ -1099,9 +1099,10 @@
             <Russian>JAS 39 Грипен</Russian>
             <Portuguese>JAS 39 Gripen</Portuguese>
             <Italian>JAS 39 Gripen</Italian>
-            <Japanese>サーブ 39 グリペン</Japanese>
+            <Japanese>JAS 39 グリペン</Japanese>
             <Korean>JAS 39 그리펜</Korean>
             <Chinese>JAS 39 獅鷲戰鬥機</Chinese>
+            <Chinesesimp>JAS 39 狮鹫战斗机</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_Name">
             <English>Ka-60 Kasatka</English>
@@ -2590,102 +2591,6 @@
             <Chinese>"牧馬人"吉普車</Chinese>
             <Chinesesimp>"牧马人"吉普车</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_black">
-            <English>Jeep Wrangler (Black)</English>
-            <Czech>Jeep Wrangler (Černý)</Czech>
-            <French>Jeep Wrangler (Noir)</French>
-            <Spanish>Jeep Wrangler (Negro)</Spanish>
-            <Russian>Jeep Wrangler (Чёрный)</Russian>
-            <Polish>Jeep Wrangler (czarny)</Polish>
-            <German>Jeep Wrangler (Schwarz)</German>
-            <Italian>Jeep Wrangler (Nero)</Italian>
-            <Hungarian>Jeep Wrangler (Fekete)</Hungarian>
-            <Portuguese>Jeep Wrangler (Preto)</Portuguese>
-            <Japanese>ジープ ラングラー (黒)</Japanese>
-            <Korean>Jeep Wrangler (검정)</Korean>
-            <Chinese>"牧馬人"吉普車 (黑色)</Chinese>
-            <Chinesesimp>"牧马人"吉普车 (黑色)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_blue">
-            <English>Jeep Wrangler (Blue)</English>
-            <German>Jeep Wrangler (Blau)</German>
-            <Spanish>Jeep Wrangler (Azul)</Spanish>
-            <Polish>Jeep Wrangler (niebieski)</Polish>
-            <Czech>Jeep Wrangler (Modrý)</Czech>
-            <French>Jeep Wrangler (Bleue)</French>
-            <Russian>Jeep Wrangler (Синий)</Russian>
-            <Italian>Jeep Wrangler (Azul)</Italian>
-            <Hungarian>Jeep Wrangler (Kék)</Hungarian>
-            <Portuguese>Jeep Wrangler (Blu)</Portuguese>
-            <Japanese>ジープ ラングラー (青)</Japanese>
-            <Korean>Jeep Wrangler (파랑)</Korean>
-            <Chinese>"牧馬人"吉普車 (藍色)</Chinese>
-            <Chinesesimp>"牧马人"吉普车 (蓝色)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_green">
-            <English>Jeep Wrangler (Green)</English>
-            <German>Jeep Wrangler (Grün)</German>
-            <Spanish>Jeep Wrangler (Verde)</Spanish>
-            <Polish>Jeep Wrangler (zielony)</Polish>
-            <Czech>Jeep Wrangler (Zelený)</Czech>
-            <French>Jeep Wrangler (Verte)</French>
-            <Russian>Jeep Wrangler (Зелёный)</Russian>
-            <Italian>Jeep Wrangler (Verde)</Italian>
-            <Hungarian>Jeep Wrangler (Zöld)</Hungarian>
-            <Portuguese>Jeep Wrangler (Verde)</Portuguese>
-            <Japanese>ジープ ラングラー (緑)</Japanese>
-            <Korean>Jeep Wrangler (초록)</Korean>
-            <Chinese>"牧馬人"吉普車 (綠色)</Chinese>
-            <Chinesesimp>"牧马人"吉普车 (绿色)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_orange">
-            <English>Jeep Wrangler (Orange)</English>
-            <German>Jeep Wrangler (Orange)</German>
-            <Spanish>Jeep Wrangler (Naranja)</Spanish>
-            <Polish>Jeep Wrangler (pomarańczowy)</Polish>
-            <Czech>Jeep Wrangler (Oranžový)</Czech>
-            <French>Jeep Wrangler (Orange)</French>
-            <Russian>Jeep Wrangler (Оранжевый)</Russian>
-            <Italian>Jeep Wrangler (Laranja)</Italian>
-            <Hungarian>Jeep Wrangler (Narancssárga)</Hungarian>
-            <Portuguese>Jeep Wrangler (Arancione)</Portuguese>
-            <Japanese>ジープ ラングラー (橙)</Japanese>
-            <Korean>Jeep Wrangler (주황)</Korean>
-            <Chinese>"牧馬人"吉普車 (橘色)</Chinese>
-            <Chinesesimp>"牧马人"吉普车 (橘色)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_red">
-            <English>Jeep Wrangler (Red)</English>
-            <German>Jeep Wrangler (Rot)</German>
-            <Spanish>Jeep Wrangler (Rojo)</Spanish>
-            <Polish>Jeep Wrangler (czerwony)</Polish>
-            <Czech>Jeep Wrangler (Červený)</Czech>
-            <French>Jeep Wrangler (Rouge)</French>
-            <Russian>Jeep Wrangler (Красный)</Russian>
-            <Italian>Jeep Wrangler (Vermelha)</Italian>
-            <Hungarian>Jeep Wrangler (Piros)</Hungarian>
-            <Portuguese>Jeep Wrangler (Rosso)</Portuguese>
-            <Japanese>ジープ ラングラー (赤)</Japanese>
-            <Korean>Jeep Wrangler (빨강)</Korean>
-            <Chinese>"牧馬人"吉普車 (紅色)</Chinese>
-            <Chinesesimp>"牧马人"吉普车 (红色)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_white">
-            <English>Jeep Wrangler (White)</English>
-            <German>Jeep Wrangler (Weiß)</German>
-            <Spanish>Jeep Wrangler (Blanco)</Spanish>
-            <Polish>Jeep Wrangler (biały)</Polish>
-            <Czech>Jeep Wrangler (Bílý)</Czech>
-            <French>Jeep Wrangler (Blanche)</French>
-            <Russian>Jeep Wrangler (Белый)</Russian>
-            <Italian>Jeep Wrangler (Branca)</Italian>
-            <Hungarian>Jeep Wrangler (Fehér)</Hungarian>
-            <Portuguese>Jeep Wrangler (Bianco)</Portuguese>
-            <Japanese>ジープ ラングラー (白)</Japanese>
-            <Korean>Jeep Wrangler (하양)</Korean>
-            <Chinese>"牧馬人"吉普車 (白色)</Chinese>
-            <Chinesesimp>"牧马人"吉普车 (白色)</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
             <Czech>Cessna TTx</Czech>
@@ -2953,7 +2858,7 @@
             <Portuguese>FN Minimi SPW</Portuguese>
             <Hungarian>FN Minimi SPW</Hungarian>
             <Italian>FN Minimi SPW</Italian>
-            <Japanese>FN Minimi SPW</Japanese>
+            <Japanese>FN ミニミ SPW</Japanese>
             <Korean>FN Minimi SPW</Korean>
             <Chinese>FN Minimi班用自動機槍</Chinese>
             <Chinesesimp>FN Minimi班用自动机枪</Chinesesimp>
@@ -3233,22 +3138,37 @@
         <Key ID="STR_ACE_RealisticNames_lsv_01_armed">
             <English>Polaris DAGOR (XM312)</English>
             <German>Polaris DAGOR (XM312)</German>
+            <Japanese>ポラリス DAGOR (XM312)</Japanese>
+            <Chinese>"北極星"先進佈署越野車 (XM312重機槍)</Chinese>
+            <Chinesesimp>"北极星"先进布署越野车 (XM312重机枪)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
             <German>Polaris DAGOR</German>
+            <Japanese>ポラリス DAGOR</Japanese>
+            <Chinese>"北極星"先進佈署越野車</Chinese>
+            <Chinesesimp>"北极星"先进布署越野车</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
             <German>Polaris DAGOR (leicht)</German>
+            <Japanese>ポラリス DAGOR (軽)</Japanese>
+            <Chinese>"北極星"先進佈署越野車 (輕型)</Chinese>
+            <Chinesesimp>"北极星"先进布署越野车 (轻型)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
             <German>LSV Mk. II (M134)</German>
+            <Japanese>LSV Mk. II (M134)</Japanese>
+            <Chinese>輕型突擊車2式 (M134迷你機炮)</Chinese>
+            <Chinesesimp>轻型突击车2式 (M134迷你机炮)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
             <German>LSV Mk. II</German>
+            <Japanese>LSV Mk. II</Japanese>
+            <Chinese>輕型突擊車2式</Chinese>
+            <Chinesesimp>轻型突击车2式</Chinesesimp>
         </Key>
     </Package>
 </Project>

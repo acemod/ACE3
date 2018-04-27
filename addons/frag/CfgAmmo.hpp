@@ -5,8 +5,8 @@
 class CfgAmmo {
 
     // ~~~~ Bombs:
-    class LaserBombCore;
-    class Bo_GBU12_LGB: LaserBombCore {
+    class ammo_Bomb_LaserGuidedBase;
+    class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
         GVAR(enabled) = 1;
 
         GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
@@ -15,7 +15,7 @@ class CfgAmmo {
         GVAR(gurney_c) = 2320;
         GVAR(gurney_k) = 1/2;
     };
-    class Bomb_04_F: LaserBombCore {
+    class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
         GVAR(enabled) = 1;
 
         GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};

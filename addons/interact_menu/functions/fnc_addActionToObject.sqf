@@ -31,6 +31,13 @@ if (_actionList isEqualTo []) then {
     _object setVariable [_varName, _actionList];
 };
 
+// Ensure the config menu was compiled first
+if (_typeNum == 0) then {
+    [_object] call FUNC(compileMenu);
+} else {
+    [_object] call FUNC(compileMenuSelfAction);
+};
+
 if (_parentPath isEqualTo ["ACE_MainActions"]) then {
     [(typeOf _object), _typeNum] call FUNC(addMainAction);
 };

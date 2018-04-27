@@ -350,6 +350,9 @@ class CfgWeapons {
     class Missile_AGM_02_Plane_CAS_01_F: MissileLauncher {
         displayName = "AGM-65 Maverick G";
     };
+     class weapon_AGM_65Launcher: RocketPods {
+        displayName = "AGM-65 Maverick G";
+     };
     class Missile_AGM_01_Plane_CAS_02_F: Missile_AGM_02_Plane_CAS_01_F {
         displayName = "Kh-25MTP";
     };
@@ -413,9 +416,7 @@ class CfgWeapons {
     };
 
     // bomb
-    class Bomb_04_Plane_CAS_01_F: RocketPods {
-        //displayName = "";
-    };
+    class Bomb_04_Plane_CAS_01_F;
     class Bomb_03_Plane_CAS_02_F: Bomb_04_Plane_CAS_01_F {
         displayName = "FAB-250M-54";
     };
@@ -522,8 +523,8 @@ class CfgWeapons {
     class LMG_coax: LMG_RCWS {
         displayName = "PKT";
     };
-    // class ACE_LMG_coax_PKT_mem2: LMG_coax {};
-    class ACE_LMG_coax_MAG58_mem2: LMG_coax {
+    class LMG_coax_ext: LMG_coax {};
+    class ACE_LMG_coax_ext_MAG58: LMG_coax_ext {
         displayName = "MAG 58M";
     };
     class ACE_LMG_coax_MAG58_mem3: LMG_coax {

@@ -109,3 +109,5 @@ if (GVAR(shiftState) && {is3DEN}) then {
         [_display, localize LSTRING(importedCurrent)] call FUNC(message);
     };
 };
+
+[QGVAR(loadoutImported), [_display, (GVAR(shiftState) && {is3DEN})]] call CBA_fnc_localEvent;

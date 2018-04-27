@@ -8,6 +8,7 @@
             <Chinese>旁觀者</Chinese>
             <Chinesesimp>旁观者</Chinesesimp>
             <Japanese>スペクテイター</Japanese>
+            <Korean>관전자</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -115,7 +116,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
-            <German>Sichtmodi</German>
+            <German>Sichtmodus</German>
             <Polish>Tryby wizji</Polish>
             <Portuguese>Modos de visão</Portuguese>
             <Russian>Режимы видения</Russian>

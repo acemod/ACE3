@@ -86,12 +86,20 @@
             <German>Variation der Mündungsgeschwindigkeit aktivieren</German>
             <Japanese>銃口初速の変化</Japanese>
             <Italian>Abilita Variazione Velocità Volata</Italian>
+            <Korean>총구속도 변화적용</Korean>
+            <Chinese>啟用槍口初速變化</Chinese>
+            <Chinesesimp>启用枪口初速变化</Chinesesimp>
+            <French>Activer les variations de la vitesse initiale</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
             <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
             <Japanese>発射毎に僅かな銃口初速の変化をシミュレートします。</Japanese>
             <Italian>Simula lievi variazioni della velocità della volata tra un colpo e l'altro</Italian>
+            <Korean>각 사격 사이에 총구속도 변화를 시뮬레이션 합니다.</Korean>
+            <Chinese>模擬每發子彈的槍口初速都略有不同</Chinese>
+            <Chinesesimp>模拟每发子弹的枪口初速都略有不同</Chinesesimp>
+            <French>Simule les légères variations</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>

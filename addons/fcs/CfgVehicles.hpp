@@ -97,35 +97,4 @@ class CfgVehicles {
             };
         };
     };
-
-    // AIR VEHICLES
-    class Air: AllVehicles {};
-
-    class Helicopter: Air {
-        class Turrets {
-            class MainTurret;
-        };
-    };
-
-    class Helicopter_Base_F: Helicopter {};
-
-    class Heli_Attack_01_base_F: Helicopter_Base_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 1;
-                discreteDistance[] = {};
-                discreteDistanceInitIndex = 0;
-            };
-        };
-    };
-
-    class Heli_Attack_02_base_F: Helicopter_Base_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 1;
-                discreteDistance[] = {};
-                discreteDistanceInitIndex = 0;
-            };
-        };
-    };
 };
