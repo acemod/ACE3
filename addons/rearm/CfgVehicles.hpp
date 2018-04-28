@@ -236,7 +236,4 @@ class CfgVehicles {
     class GVAR(R_60mm_HE): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-    class GVAR(R_Hydra_HE): GVAR(defaultCarriedObject) {
-        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
-    };
 };

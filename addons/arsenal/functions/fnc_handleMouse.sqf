@@ -44,11 +44,6 @@ if (count _LMB > 0) then {
 
     _helperPos set [2,(_helperPos select 2) max ((boundingboxreal GVAR(center) select 0 select 2) + 0.2)];
 
-    //--- Do not let target go below ground
-    private _posZmin = 0.1;
-    private _targetWorldPosZ = (GVAR(center) modeltoworldvisual _helperPos) select 2;
-    if (_targetWorldPosZ < _posZmin) then {_helperPos set [2,(_helperPos select 2) - _targetWorldPosZ + _posZmin];};
-
     GVAR(cameraPosition) set [3,_helperPos];
 };
 

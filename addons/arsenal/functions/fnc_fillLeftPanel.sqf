@@ -14,10 +14,6 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeFillLeftPanel = createProfileScope QFUNC(fillLeftPanel);
-#endif
-
 params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
