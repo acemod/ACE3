@@ -446,5 +446,8 @@
             <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
             <Korean>상호 작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져 오는 데 필요한 시간을 줄입니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelectorColor">
+            <English>Selector Color</English>
+        </Key>
     </Package>
 </Project>
