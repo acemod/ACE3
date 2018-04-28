@@ -82,14 +82,14 @@ version:
 ### 2.1 Unit Unconsciousness
 
 - Determines if a unit should have AI unconsciousness forcefully enabled.
-SetVar: `"ace_medical_enableUnconsciousnessAI"` - true/false or nil
-- false: Disabled
-- true: Enabled
+SetVar: `"ace_medical_enableUnconsciousnessAI"` - 0/2 or nil
+- 0: Disabled
+- 2: Enabled
 - nil: Follow global `Enable Unconsciousness` setting
 
 Examples:
 ```cpp
-bob setVariable ["ace_medical_enableUnconsciousnessAI",true,true]
-bob setVariable ["ace_medical_enableUnconsciousnessAI",false,true]
+bob setVariable ["ace_medical_enableUnconsciousnessAI",2,true]
+bob setVariable ["ace_medical_enableUnconsciousnessAI",0,true]
 bob setVariable ["ace_medical_enableUnconsciousnessAI",nil,true]
 ```
