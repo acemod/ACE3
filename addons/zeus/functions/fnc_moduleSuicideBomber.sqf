@@ -66,8 +66,8 @@ if (_autoSeek) then {
     private _memory = _unit getVariable [QGVAR(suicideBomber_memory), [nil, CBA_missionTime]];
     _memory params ["_lastMove", "_lastTime"];
 
-    private _range = 100 max (200 * (_unit skill "spotDistance")); // 100-200
-    private _nearestObjects = (nearestObjects [_unit, [], _range]) select {side _x == _activationSide && {_x != _unit} && {alive _x}};
+    private _range = 100 + 100 * (_unit skill "spotDistance"); // 100-200
+    private _nearestObjects = nearestObjects [_unit, [], _range] select {side _x == _activationSide && {_x != _unit} && {alive _x}};
 
     #ifdef DEBUG_MODE_FULL
         if !(isNil "_lastMove") then {
@@ -92,11 +92,12 @@ if (_autoSeek) then {
     private _moveToPos = (_nearestObjects select 0) getPos [1, random 360];
 
     if (isNil "_lastMove" || // No move given yet
-        {(_lastMove distance _moveToPos) > DISTANCE_FAR} || // New target is too far from last move
-        {(_lastMove distance _unit) < DISTANCE_CLOSE} || // Unit has reached last move
-        {CBA_missionTime >= _lastTime}) then { // Too much time passed between last move (also acts as a fail-safe if unit gets stuck)
+        {_lastMove distance _moveToPos > DISTANCE_FAR} || // New target is too far from last move
+        {_lastMove distance _unit < DISTANCE_CLOSE} || // Unit has reached last move
+        {CBA_missionTime >= _lastTime} // Too much time passed between last move (also acts as a fail-safe if unit gets stuck)
+    ) then {
         [QEGVAR(ai,doMove), [[[_unit, _moveToPos]]], _unit] call CBA_fnc_targetEvent;
         _unit setVariable [QGVAR(suicideBomber_memory), [_moveToPos, CBA_missionTime + MOVE_TIME]];
         TRACE_2("Moving unit",_moveToPos,CBA_missionTime);
     };
-}, 0, _this] call CBA_fnc_addPerFrameHandler;
+}, 1, _this] call CBA_fnc_addPerFrameHandler;
