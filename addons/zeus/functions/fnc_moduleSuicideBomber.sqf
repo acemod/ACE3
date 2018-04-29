@@ -23,6 +23,11 @@
 #define DISTANCE_FAR 15
 #define DISTANCE_CLOSE 2
 #define MOVE_TIME 10
+#define SCANNING_PERIOD 1
+
+#ifdef DEBUG_MODE_FULL
+    #define SCANNING_PERIOD 0
+#endif
 
 TRACE_1("params",_this);
 
@@ -66,7 +71,7 @@ if (_autoSeek) then {
     private _memory = _unit getVariable [QGVAR(suicideBomber_memory), [nil, CBA_missionTime]];
     _memory params ["_lastMove", "_lastTime"];
 
-    private _range = 100 + 100 * (_unit skill "spotDistance"); // 100-200
+    private _range = 100 max (200 * (_unit skillFinal "spotDistance")); // {0,100; .5,100; .75,150, 1,200}
     private _nearestObjects = nearestObjects [_unit, [], _range] select {side _x == _activationSide && {_x != _unit} && {alive _x}};
 
     #ifdef DEBUG_MODE_FULL
@@ -100,4 +105,4 @@ if (_autoSeek) then {
         _unit setVariable [QGVAR(suicideBomber_memory), [_moveToPos, CBA_missionTime + MOVE_TIME]];
         TRACE_2("Moving unit",_moveToPos,CBA_missionTime);
     };
-}, 1, _this] call CBA_fnc_addPerFrameHandler;
+}, SCANNING_PERIOD, _this] call CBA_fnc_addPerFrameHandler;
