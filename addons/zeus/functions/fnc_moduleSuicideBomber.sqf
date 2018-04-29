@@ -71,7 +71,7 @@ if (_autoSeek) then {
     private _memory = _unit getVariable [QGVAR(suicideBomber_memory), [nil, CBA_missionTime]];
     _memory params ["_lastMove", "_lastTime"];
 
-    private _range = 100 max (200 * (_unit skillFinal "spotDistance")); // {0,100; .5,100; .75,150, 1,200}
+    private _range = 100 + 100 * (_unit skillFinal "spotDistance"); // 100-200
     private _nearestObjects = nearestObjects [_unit, [], _range] select {side _x == _activationSide && {_x != _unit} && {alive _x}};
 
     #ifdef DEBUG_MODE_FULL
