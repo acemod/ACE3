@@ -35,8 +35,7 @@ private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
 private _hitPointsAddedAmount = [];
 private _processedHitpoints = [];
-private _icon = QPATHTOF(ui\repair_0_ca.paa);
-
+private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions));
