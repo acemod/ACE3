@@ -55,7 +55,7 @@ if (_autoSeek) then {
     // Detonation
     private _nearObjects = (_unit nearObjects _activationRadius) select {side _x == _activationSide && {_x != _unit} && {alive _x}};
     if !(_nearObjects isEqualTo []) then {
-        createVehicle [EXPLOSIVES select _explosionSize, getPos _unit, [], 0, "CAN_COLLIDE"];
+        createVehicle [EXPLOSIVES select _explosionSize, _unit, [], 0, "CAN_COLLIDE"];
         [_pfhID] call CBA_fnc_removePerFrameHandler;
         LOG("Explosion created, PFH removed");
     };
