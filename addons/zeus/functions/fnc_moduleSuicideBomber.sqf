@@ -46,11 +46,13 @@ if (_autoSeek) then {
     params ["_args", "_pfhID"];
     _args params [["_unit", objNull], ["_activationSide", west], ["_activationRadius", 10], ["_explosionSize", 0], ["_autoSeek", false]];
 
-    // Unit deleted, killed or unconscious
-    if (isNull _unit || {!alive _unit} || {!([_unit] call EFUNC(common,isAwake))}) exitWith {
+    // Unit deleted or killed
+    if (isNull _unit || {!alive _unit}) exitWith {
         [_pfhID] call CBA_fnc_removePerFrameHandler;
-        LOG("Unit deleted, killed or unconscious, PFH removed");
+        LOG("Unit deleted or killed, PFH removed");
     };
+
+    if (!([_unit] call EFUNC(common,isAwake))) exitWith {};
 
     // Detonation
     private _nearObjects = (_unit nearObjects _activationRadius) select {side _x == _activationSide && {_x != _unit} && {alive _x}};
