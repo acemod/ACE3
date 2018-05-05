@@ -24,7 +24,7 @@ params ["_projectile", "_adjustDir", "_adjustUp", ["_adjustSpeed",0]];
 private _vdir = vectorNormalized velocity _projectile;
 
 // get azimuth and inclination and apply corrections
-private _dir = (_vdir select 0) atan2 (_vdir select 1) + _adjustDir;
+private _dir = ((_vdir select 0) atan2 (_vdir select 1)) + _adjustDir;
 private _up = asin (_vdir select 2) + _adjustUp;
 
 // get new direction vector (this is a unit vector)
