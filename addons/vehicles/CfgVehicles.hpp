@@ -142,6 +142,13 @@ class CfgVehicles {
             };
         };
     };
+    class Boat_Transport_02_base_F: Boat_F {
+        GVAR(ejectDestroyed) = 1;
+    };
+    class Rubber_duck_base_F: Boat_F {
+        GVAR(ejectDestroyed) = 1;
+    };
+
 
     class Truck_F: Car_F {};
 
