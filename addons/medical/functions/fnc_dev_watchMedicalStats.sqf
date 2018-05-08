@@ -57,7 +57,7 @@
     // Pain:
     private _pain = _unit getVariable [QEGVAR(medical,pain), 0];
     private _painSuppress = _unit getVariable [QEGVAR(medical,painSuppress), 0];
-    private _painLevel = [_unit] call EFUNC(medical,getPainLevel);
+    private _painLevel = GET_PAIN_PERCEIVED(_unit);
     _return pushBack format ["Effective Pain: %1", _painLevel toFixed 3];
     _return pushBack format [" - [Pain: %1] [Suppress: %2]", _pain toFixed 3, _painSuppress toFixed 3];
 

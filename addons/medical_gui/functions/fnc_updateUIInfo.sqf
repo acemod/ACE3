@@ -40,7 +40,7 @@ if (((_target getVariable [QEGVAR(medical,tourniquets), [0, 0, 0, 0, 0, 0]]) sel
 };
 
 if (EGVAR(medical,showPainInMenu) && {[ACE_player, EGVAR(medical,medicSetting_PainVisualization)] call EFUNC(medical,isMedic)}) then {
-    private _painLevel = _target call EFUNC(medical,getPainLevel);
+    private _painLevel = GET_PAIN_PERCEIVED(_target);
     if (_painLevel > 0) then {
         private _painText = localize ELSTRING(medical,Status_Pain);
         if (_painLevel < 0.1) then {

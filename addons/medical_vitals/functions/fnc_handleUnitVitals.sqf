@@ -73,7 +73,7 @@ if (_bloodLoss > 0) then {
     };
 };
 
-private _painLevel = [_unit] call FUNC(getPainLevel);
+private _painLevel = GET_PAIN_PERCEIVED(_unit);
 if (_painLevel > 0) then {
     if !(_unit getVariable [QGVAR(hasPain), false]) then {
         _unit setVariable [QGVAR(hasPain), true, true];
