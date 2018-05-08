@@ -1,7 +1,7 @@
-PREP(addHeartRadeAdjustment);
+PREP(addHeartRateAdjustment);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
-PREP(getBloodVolumeChanges);
+PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(getHeartRate);
 PREP(getPainPerceived);
@@ -13,7 +13,7 @@ PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(isInMedicalFacility);
 PREP(isInMedicalVehicle);
-PREP(isInStableoCondition);
+PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(isUnconscious);
