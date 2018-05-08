@@ -34,23 +34,23 @@ private _hasTourniquet = ((_target getVariable [QEGVAR(medical,tourniquets), [0,
 switch (true) do {
     case (_bloodLossOnBodyPart >= 0.15): {
         if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossRed_t.paa)];
+            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossRed_t.paa)];
         } else {
-            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossRed.paa)];
+            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossRed.paa)];
         };
     };
 
     case (_bloodLossOnBodyPart > 0): {
         if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossYellow_t.paa)];
+            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossYellow_t.paa)];
         } else {
-            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossYellow.paa)];
+            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossYellow.paa)];
         };
     };
 
     default {
         if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_cross_t.paa)];
+            _actionData set [2, QPATHTOF(ui\ui\icons\medical_cross_t.paa)];
         };
     };
 };
