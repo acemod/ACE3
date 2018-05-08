@@ -33,7 +33,7 @@
     _return pushBack "";
 
     // State:
-    private _hasStableVitals = [_unit] call EFUNC(medical,hasStableVitals);
+    private _hasStableVitals = [_unit] call EFUNC(medical_status,hasStableVitals);
     private _targetState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
     if (!local _unit) then {_targetState = "NotLocal";};
     private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"555555"}};
@@ -48,8 +48,8 @@
     _return pushBack format [" - [Loss: %1] %2", _bloodLoss toFixed 5, _secondsToHeartstop];
 
     // Heart:
-    private _cardiacOutput = [_unit] call EFUNC(medical,getCardiacOutput);
-    private _heartRate = _unit getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
+    private _cardiacOutput = [_unit] call EFUNC(medical_status,getCardiacOutput);
+    private _heartRate = GET_HEART_RATE(_unit);
     GET_BLOOD_PRESSURE(_unit) params ["_bpLow", "_bpHigh"];
     _return pushBack format ["CardiacOutput %1", _cardiacOutput toFixed 5];
     _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpLow toFixed 1, _bpHigh toFixed 1];

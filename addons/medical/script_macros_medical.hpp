@@ -60,11 +60,16 @@
 // - Status macro functions ---------------------------------------------------
 // These macros provide the same functionality as the functions in the status
 // component, but are slightly faster (because most are just object variables)
-#define GET_PAIN_TOTAL(unit)     (unit getVariable [QEGVAR(medical_status,pain), 0])
-#define GET_PAIN_PERCEIVED(unit) ([unit] call EFUNC(medical_status,getPainPerceived)) // Just for consistency
-#define GET_HEART_RATE(unit)     (unit getVariable [QEGVAR(medical_status,heartRate), DEFAULT_HEART_RATE])
-#define GET_BLOOD_VOLUME(unit)   (unit getVariable [QEGVAR(medical_status,bloodVolume), DEFAULT_BLOOD_VOLUME])
 #define GET_BLOOD_LOSS(unit)     ([unit] call EFUNC(medical_status,getBloodLoss)) // Just for consistency
 #define GET_BLOOD_PRESSURE(unit) ([unit] call EFUNC(medical_status,getBloodPressure)) // Just for consistency
-#define IS_UNCONSCIOUS(unit)     (unit getVariable [QEGVAR(medical_status,isUnconscious), false])
+#define GET_BLOOD_VOLUME(unit)   (unit getVariable [QEGVAR(medical_status,bloodVolume), DEFAULT_BLOOD_VOLUME])
+#define GET_HEART_RATE(unit)     (unit getVariable [QEGVAR(medical_status,heartRate), DEFAULT_HEART_RATE])
+#define GET_PAIN_PERCEIVED(unit) ([unit] call EFUNC(medical_status,getPainPerceived)) // Just for consistency
+#define GET_PAIN_TOTAL(unit)     (unit getVariable [QEGVAR(medical_status,pain), 0])
 #define IS_IN_PAIN(unit)         (GET_PAIN_PERCEIVED(unit) > 0)
+#define IS_UNCONSCIOUS(unit)     (unit getVariable [QEGVAR(medical_status,isUnconscious), false])
+// Setters have overloaded versions for locality handling
+#define SET_HEART_RATE(unit,value) unit setVariable [QEGVAR(medical_status,heartRate), value, true]
+#define SET_HEART_RATE(unit,value,sync) unit setVariable [QEGVAR(medical_status,heartRate), value, sync]
+#define SET_PAIN_TOTAL(unit,value) unit setVariable [QEGVAR(medical_status,pain), 0 max (value) min 1, true]
+#define SET_PAIN_TOTAL(unit,value,sync) unit setVariable [QEGVAR(medical_status,pain), 0 max (value) min 1, sync]

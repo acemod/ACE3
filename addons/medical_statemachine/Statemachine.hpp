@@ -51,7 +51,7 @@ class ACE_Medical_StateMachine {
         };
         class WakeUp {
             targetState = "Injured";
-            condition = QUOTE(_this call FUNC(hasStableVitals));
+            condition = QUOTE(_this call EFUNC(medical_status,hasStableVitals));
             events[] = {QGVAR(WakeUp)};
             onTransition = QUOTE([ARR_2(_this,(false))] call FUNC(setUnconsciousStatemachine));
         };

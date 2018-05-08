@@ -9,7 +9,7 @@
  * Is unit in medical vehicle? <BOOL>
  *
  * Example:
- * [player] call ace_medical_fnc_isInMedicalVehicle
+ * [player] call ace_medical_status_fnc_isInMedicalVehicle
  *
  * Public: Yes
  */

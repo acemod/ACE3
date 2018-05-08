@@ -23,7 +23,7 @@ if (damage _unit > 0) then {
 
 // - Blood and heart ----------------------------------------------------------
 _unit setVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME, true];
-_unit setVariable [QGVAR(heartRate), DEFAULT_HEART_RATE, true];
+SET_HEART_RATE(_unit,DEFAULT_HEART_RATE);
 _unit setVariable [QGVAR(heartRateAdjustments), [], true];
 _unit setVariable [QGVAR(bloodPressure), [80, 120], true];
 _unit setVariable [QGVAR(peripheralResistance), 100, true];
@@ -33,7 +33,7 @@ _unit setVariable [QGVAR(hasLostBlood), 0, true];
 _unit setVariable [QGVAR(isBleeding), false, true];
 
 // - Pain ---------------------------------------------------------------------
-_unit setVariable [QGVAR(pain), 0, true];
+SET_PAIN_TOTAL(_unit,0);
 _unit setVariable [QGVAR(hasPain), false, true];
 _unit setVariable [QGVAR(painSuppress), 0, true];
 _unit setVariable [QGVAR(painSuppressAdjustments), [], true];

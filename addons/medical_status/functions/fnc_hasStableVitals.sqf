@@ -9,7 +9,7 @@
  * Has stable vitals <BOOL>
  *
  * Example:
- * [player] call ace_medical_fnc_hasStableVitals
+ * [player] call ace_medical_status_fnc_hasStableVitals
  *
  * Public: No
  */
@@ -28,7 +28,7 @@ private _bloodPressure = GET_BLOOD_PRESSURE(_unit);
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 if (_bloodPressureL < 50 || {_bloodPressureH < 60}) exitWith { false };
 
-private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
+private _heartRate = GET_HEART_RATE(_unit);
 if (_heartRate < 40) exitWith { false };
 
 true

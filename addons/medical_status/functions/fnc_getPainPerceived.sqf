@@ -14,7 +14,7 @@
 
 params ["_unit"];
 
-private _pain = _unit getVariable [QGVAR(pain), 0];
+private _pain = GET_PAIN_TOTAL(_unit);
 private _painSuppress = _unit getVariable [QGVAR(painSuppress), 0];
 
 (0 max (_pain - _painSuppress) min 1)

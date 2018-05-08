@@ -24,8 +24,6 @@ TRACE_2("adjustPainLevel",_unit,_desiredPainLevel);
 
 _desiredPainLevel = _desiredPainLevel * GVAR(painCoefficient);
 
-private _pain = _unit getVariable [QGVAR(pain), 0];
+private _pain = GET_PAIN_TOTAL(_unit);
 
-_pain = 0 max (_pain max _desiredPainLevel) min 1;
-
-_unit setVariable [QGVAR(pain), _pain];
+SET_PAIN_TOTAL(_unit,_pain max _desiredPainLevel,false);

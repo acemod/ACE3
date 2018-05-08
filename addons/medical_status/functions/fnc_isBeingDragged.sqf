@@ -9,7 +9,7 @@
  * Is being dragged <BOOL>
  *
  * Example:
- * [bob] call ace_medical_fnc_isBeingDragged
+ * [bob] call ace_medical_status_fnc_isBeingDragged
  *
  * Public: No
  */

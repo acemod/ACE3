@@ -9,7 +9,7 @@
  * Is in medical facility <BOOL>
  *
  * Example:
- * [player] call ace_medical_fnc_isInMedicalFacility
+ * [player] call ace_medical_status_fnc_isInMedicalFacility
  *
  * Public: Yes
  */

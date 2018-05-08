@@ -21,4 +21,4 @@ _time = _time + random [_time*-0.1, 0, _time*0.1];
 _unit setVariable [QGVAR(cardiacArrestTime), _time];
 _unit setVariable [QGVAR(cardiacArrestStart), CBA_missionTime];
 
-[_unit] call FUNC(setCardiacArrest);
+[_unit] call EFUNC(medical_status,setCardiacArrest);

@@ -32,7 +32,7 @@ if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
 
-private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + ([_unit, _deltaT, _syncValues] call FUNC(getBloodVolumeChange));
+private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + ([_unit, _deltaT, _syncValues] call EFUNC(medical_status,getBloodVolumeChange));
 _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
 
 // @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
@@ -98,7 +98,7 @@ private _heartRate = [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 private _bloodPressure = GET_BLOOD_PRESSURE(_unit);
 _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
-private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
+private _cardiacOutput = [_unit] call EFUNC(medical_status,getCardiacOutput);
 if (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput) then {
     [QGVAR(CriticalVitals), _unit] call CBA_fnc_localEvent;
 };

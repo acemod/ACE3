@@ -41,14 +41,14 @@ if (!isNull _instigator) then {
 
 #ifdef DEBUG_TESTRESULTS
 private _startDmg = +(_unit getVariable [QGVAR(bodyPartDamage), [-1]]);
-private _startPain = _unit getVariable [QGVAR(pain), 0];
+private _startPain = GET_PAIN_TOTAL(_unit);
 #endif
 
 [QEGVAR(medical_engine,woundReceived), [_unit, _bodyPart, _damageToAdd, _instigator, _typeOfDamage]] call CBA_fnc_localEvent;
 
 #ifdef DEBUG_TESTRESULTS
 private _endDmg = _unit getVariable [QGVAR(bodyPartDamage), [-1]];
-private _endPain = _unit getVariable [QGVAR(pain), 0];
+private _endPain = GET_PAIN_TOTAL(_unit);
 private _typeOfDamageAdj = _typeOfDamage call EFUNC(medical_damage,getTypeOfDamage);
 private _config = configFile >> "ACE_Medical_Injuries" >> "damageTypes" >> _typeOfDamageAdj;
 private _selectionSpecific = true;

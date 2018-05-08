@@ -44,7 +44,7 @@ if (!(_adjustment isEqualTo [])) then {
     _unit setVariable [QGVAR(heartRateAdjustments), _adjustment, _syncValue];
 };
 
-private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
+private _heartRate = GET_HEART_RATE(_unit);
 
 if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
     private _hrChange = 0;
@@ -75,7 +75,7 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
     _heartRate = (_heartRate + _deltaT * _hrChange) max 0;
 };
 
-_unit setVariable [QGVAR(heartRate), _heartRate, _syncValue];
+SET_HEART_RATE(_unit,_heartRate,_syncValue);
 
 _heartRate
 

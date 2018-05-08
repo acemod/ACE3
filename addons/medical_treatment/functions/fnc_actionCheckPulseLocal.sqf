@@ -18,7 +18,7 @@ params ["_caller", "_target", "_bodyPart"];
 
 private _heartRate = 0;
 
-if (alive _target && !([_target, _bodyPart] call EFUNC(medical,hasTourniquetAppliedTo))) then {
+if (alive _target && !([_target, _bodyPart] call EFUNC(medical_status,hasTourniquetAppliedTo))) then {
     _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
 };
 
@@ -26,7 +26,7 @@ private _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_5);
 private _logOutPut = ELSTRING(medical,Check_Pulse_None);
 
 if (_heartRate > 1.0) then {
-    if (_caller call EFUNC(medical,isMedic)) then {
+    if (_caller call EFUNC(medical_status,isMedic)) then {
         _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_1);
         _logOutPut = format ["%1", round(_heartRate)];
     } else {

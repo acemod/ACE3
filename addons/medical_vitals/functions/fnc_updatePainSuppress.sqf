@@ -44,8 +44,8 @@ if (!(_adjustment isEqualTo [])) then {
 };
 
 // Handle continuous pain reduction
-private _pain = _unit getVariable [QGVAR(pain), 0];
-_unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT / PAIN_FADE_TIME), _syncValue];
+private _pain = GET_PAIN_TOTAL(_unit);
+_unit setVariable [QEGVAR(medical_status,pain), 0 max (_pain - _deltaT / PAIN_FADE_TIME), _syncValue];
 
 // Handles simple medication
 if (!GVAR(advancedMedication)) then {

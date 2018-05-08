@@ -10,7 +10,7 @@
  * Has tourniquet applied <BOOL>
  *
  * Example:
- * [player, "leftleg"] call ace_medical_fnc_hasTourniquetAppliedTo
+ * [player, "leftleg"] call ace_medical_status_fnc_hasTourniquetAppliedTo
  *
  * Public: Yes
  */

@@ -9,7 +9,7 @@ if (!alive _unit) exitWith {};
 
 // If locality changed, broadcast the last medical state and finish the local loop
 if (!local _unit) exitWith {
-    _unit setVariable [QGVAR(heartRate), _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE], true];
+    SET_HEART_RATE(_unit,GET_HEART_RATE(_unit));
     _unit setVariable [QGVAR(bloodPressure), _unit getVariable [QGVAR(bloodPressure), [80, 120]], true];
     _unit setVariable [QGVAR(bloodVolume), _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME], true];
 };
@@ -23,7 +23,7 @@ if (_painLevel > 0) then {
 
 // Handle spontaneous wakeup from unconsciousness
 if (GVAR(spontaneousWakeUpChance) > 0) then {
-    if (_unit call FUNC(hasStableVitals)) then {
+    if (_unit call EFUNC(medical_status,hasStableVitals)) then {
         private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
         if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
             TRACE_2("Checking for wake up",_unit,GVAR(spontaneousWakeUpChance));

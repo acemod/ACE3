@@ -16,5 +16,5 @@ params ["_unit"];
 
 _unit setVariable [QGVAR(inCardiacArrest), false, true];
 _unit setVariable [QGVAR(cardiacArrestStart), nil];
-_unit setVariable [QGVAR(heartRate), 40, true];
+SET_HEART_RATE(_unit,40);
 _unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];

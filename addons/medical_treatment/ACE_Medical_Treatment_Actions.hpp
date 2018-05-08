@@ -77,7 +77,7 @@ class GVAR(Actions) {
         items[] = {"ACE_tourniquet"};
         treatmentTime = 7;
         callbackSuccess = QFUNC(treatmentTourniquet);
-        condition = QUOTE(!([ARR_2(_target,_bodyPart)] call EFUNC(medical,hasTourniquetAppliedTo)));
+        condition = QUOTE(!([ARR_2(_target,_bodyPart)] call EFUNC(medical_status,hasTourniquetAppliedTo)));
         litter[] = {};
     };
     class RemoveTourniquet: Tourniquet {
@@ -85,7 +85,7 @@ class GVAR(Actions) {
         displayNameProgress = ECSTRING(medical,RemovingTourniquet);
         items[] = {};
         callbackSuccess = QFUNC(treatmentTourniquetRemove);
-        condition = QUOTE([ARR_2(_target,_bodyPart)] call EFUNC(medical,hasTourniquetAppliedTo));
+        condition = QUOTE([ARR_2(_target,_bodyPart)] call EFUNC(medical_status,hasTourniquetAppliedTo));
     };
 
     // --- syringes
@@ -282,7 +282,7 @@ class GVAR(Actions) {
         displayName = ECSTRING(medical,Use_Aid_Kit);
         displayNameProgress = ECSTRING(medical,TreatmentAction);
         category = "advanced";
-        condition = QUOTE(_target call EFUNC(medical,isInStableCondition));
+        condition = QUOTE(_target call EFUNC(medical_status,isInStableCondition));
         items[] = {"ACE_personalAidKit"};
         treatmentLocations[] = {QEGVAR(medical,useLocation_PAK)};
         requiredMedic = QEGVAR(medical,medicSetting_PAK);

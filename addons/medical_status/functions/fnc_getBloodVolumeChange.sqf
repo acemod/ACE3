@@ -11,7 +11,7 @@
  * Blood volume change (liters per second) <NUMBER>
  *
  * Example:
- * [player, 1, true] call ACE_medical_fnc_getBloodVolumeChange
+ * [player, 1, true] call ACE_medical_status_fnc_getBloodVolumeChange
  *
  * Public: No
  */

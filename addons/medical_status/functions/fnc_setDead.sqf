@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob, "bloodloss"] call ace_medical_fnc_setDead;
+ * [bob, "bloodloss"] call ace_medical_status_fnc_setDead;
  *
  * Public: No
  */

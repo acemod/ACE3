@@ -9,7 +9,7 @@
  * Current cardiac output (liter per second) <NUMBER>
  *
  * Example:
- * [player] call ace_medical_fnc_getCardiacOutput
+ * [player] call ace_medical_status_fnc_getCardiacOutput
  *
  * Public: No
  */
@@ -26,8 +26,8 @@
 
 params ["_unit"];
 
-private _bloodVolume = ((_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) / DEFAULT_BLOOD_VOLUME) * 100;
-private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
+private _bloodVolume = (GET_BLOOD_VOLUME(_unit) / DEFAULT_BLOOD_VOLUME) * 100;
+private _heartRate = GET_HEART_RATE(_unit);
 private _cardiacOutput = ((_bloodVolume / MODIFIER_CARDIAC_OUTPUT) + ((_heartRate / DEFAULT_HEART_RATE) - 1)) / 60;
 
 (0 max _cardiacOutput)

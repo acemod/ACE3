@@ -50,10 +50,10 @@ if (!alive _unit) exitWith {
 
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
 if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
-    TRACE_7("ACE_DEBUG_Unconscious_PFH",_unit, _args, [_unit] call FUNC(isBeingCarried), [_unit] call FUNC(isBeingDragged), _idPFH, _unit getVariable QGVAR(unconsciousArguments),animationState _unit);
+    TRACE_7("ACE_DEBUG_Unconscious_PFH",_unit, _args, [_unit] call EFUNC(medical_status,isBeingCarried), [_unit] call EFUNC(medical_status,isBeingDragged), _idPFH, _unit getVariable QGVAR(unconsciousArguments),animationState _unit);
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
-    if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
+    if !(([_unit] call EFUNC(medical_status,isBeingCarried)) || ([_unit] call EFUNC(medical_status,isBeingDragged))) then {
         if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
             TRACE_1("Removing fake weapon [on wakeup]",_unit);
             _unit removeWeapon "ACE_FakePrimaryWeapon";

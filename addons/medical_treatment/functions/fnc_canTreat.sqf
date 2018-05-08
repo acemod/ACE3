@@ -52,7 +52,7 @@ if (isNumber (_config >> "requiredMedic")) then {
     };
 };
 
-if !([_caller, _medicRequired] call EFUNC(medical,isMedic)) exitWith {false};
+if !([_caller, _medicRequired] call EFUNC(medical_status,isMedic)) exitWith {false};
 
 // check selection
 private _allowedSelections = getArray (_config >> "allowedSelections") apply {toLower _x};
@@ -92,8 +92,8 @@ private _locations = getArray (_config >> "treatmentLocations") apply {toLower _
 if ("all" in _locations) then {
     _locations = true;
 } else {
-    private _medFacility = {([_caller] call EFUNC(medical,isInMedicalFacility)) || ([_target] call EFUNC(medical,isInMedicalFacility))};
-    private _medVeh = {([_caller] call EFUNC(medical,isInMedicalVehicle)) || ([_target] call EFUNC(medical,isInMedicalVehicle))};
+    private _medFacility = {([_caller] call EFUNC(medical_status,isInMedicalFacility)) || ([_target] call EFUNC(medical_status,isInMedicalFacility))};
+    private _medVeh = {([_caller] call EFUNC(medical_status,isInMedicalVehicle)) || ([_target] call EFUNC(medical_status,isInMedicalVehicle))};
 
     {
         if (_x == "field") exitWith { _locations = true; };
