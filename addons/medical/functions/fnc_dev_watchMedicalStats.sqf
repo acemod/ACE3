@@ -18,7 +18,7 @@
 ["medical", {
 
     // Hide when patient display is up because they might overlap
-    if (!isNull EGVAR(medical,displayPatientInformationTarget)) exitWith {""};
+    if (!isNull EGVAR(medical_gui,displayPatientInformationTarget)) exitWith {""};
 
     private _unit = cursorTarget;
     if (!(_unit isKindOf "CAManBase")) then {_unit = cursorObject};

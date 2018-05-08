@@ -4,7 +4,7 @@ class ACE_Head {
     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
-    statement = QUOTE([ARR_3(_target,1,0)] call EFUNC(medical,displayPatientInformation));
+    statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,0,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
@@ -14,7 +14,7 @@ class ACE_Torso {
     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
-    statement = QUOTE([ARR_3(_target,1,1)] call EFUNC(medical,displayPatientInformation));
+    statement = QUOTE([ARR_3(_target,1,1)] call FUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,1,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
@@ -24,7 +24,7 @@ class ACE_ArmLeft {
     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
-    statement = QUOTE([ARR_3(_target,1,2)] call EFUNC(medical,displayPatientInformation));
+    statement = QUOTE([ARR_3(_target,1,2)] call FUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,2,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
@@ -34,7 +34,7 @@ class ACE_ArmRight {
     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
-    statement = QUOTE([ARR_3(_target,1,3)] call EFUNC(medical,displayPatientInformation));
+    statement = QUOTE([ARR_3(_target,1,3)] call FUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,3,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
@@ -44,7 +44,7 @@ class ACE_LegLeft {
     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
-    statement = QUOTE([ARR_3(_target,1,4)] call EFUNC(medical,displayPatientInformation));
+    statement = QUOTE([ARR_3(_target,1,4)] call FUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,4,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };
@@ -54,7 +54,7 @@ class ACE_LegRight {
     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
     exceptions[] = {"isNotInside", "isNotSitting"};
     ACTION_CONDITION
-    statement = QUOTE([ARR_3(_target,1,5)] call EFUNC(medical,displayPatientInformation));
+    statement = QUOTE([ARR_3(_target,1,5)] call FUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,5,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
 };

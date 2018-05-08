@@ -1,8 +1,6 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-["ace_interactMenuClosed", {[objNull, 0] call FUNC(displayPatientInformation);}] call CBA_fnc_addEventHandler;
-
 //Handle Deleting Bodies and creating litter on Server:
 if (isServer) then {
     ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;

@@ -48,7 +48,7 @@ class CfgVehicles {
                 displayName = ECSTRING(medical,Actions_Medical);
                 runOnHover = 1;
                 exceptions[] = {"isNotInside", "isNotSitting"};
-                statement = QUOTE([ARR_3(_target,1,0)] call EFUNC(medical,displayPatientInformation));
+                statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
                 condition = "true";
                 icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
                 #define ACTION_CONDITION condition = "true";
@@ -83,7 +83,7 @@ class CfgVehicles {
                     displayName = ECSTRING(medical,Actions_Medical);
                     runOnHover = 1;
                     exceptions[] = {"isNotInside", "isNotSitting"};
-                    statement = QUOTE([ARR_3(_target,1,0)] call EFUNC(medical,displayPatientInformation));
+                    statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
                     condition = QUOTE(((vehicle _target != _target && vehicle _target == vehicle _player) || {EGVAR(medical,menuTypeStyle) == 1}));
                     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
                     #define ACTION_CONDITION condition = "true";
