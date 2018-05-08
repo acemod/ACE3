@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Medical_ui">
-        <Key ID="STR_ACE_Medical_ui_painEffectType">
+    <Package name="Medical Feedback">
+        <Key ID="STR_ACE_Medical_feedback_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
@@ -15,10 +15,10 @@
             <Japanese>痛みの種類</Japanese>
             <Korean>고통 효과 종류</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_ui_painEffectType_whiteFlashing">
+        <Key ID="STR_ACE_Medical_feedback_painEffectType_whiteFlashing">
             <English>White flashing</English>
         </Key>
-        <Key ID="STR_ACE_Medical_ui_painEffectType_pulsingBlur">
+        <Key ID="STR_ACE_Medical_feedback_painEffectType_pulsingBlur">
             <English>Pulsing blur</English>
         </Key>
     </Package>
