@@ -30,10 +30,10 @@ private _actionPathPositions = ["spine3", "pilot", "LeftForeArm", "RightForeArm"
     private _actionName = QUOTE(ADDON) + "_" + configName _config;
     private _displayName = getText (_config >> "displayName");
     private _icon = switch (getText (_config >> "category")) do {
-        case "bandage": {QPATHTOEF(medical,UI\icons\bandage.paa)};
-        case "medication": {QPATHTOEF(medical,UI\icons\autoInjector.paa)};
+        case "bandage": {QPATHTOF(ui\ui\icons\bandage.paa)};
+        case "medication": {QPATHTOF(ui\ui\icons\autoInjector.paa)};
         // Currently category advanced which includes body bag :/
-        // case "iv": {QPATHTOF(UI\icons\iv.paa)};
+        // case "iv": {QPATHTOF(ui\ui\icons\iv.paa)};
         default {""};
     };
 
