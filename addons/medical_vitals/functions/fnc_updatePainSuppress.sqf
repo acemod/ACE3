@@ -7,8 +7,8 @@
  * 1: Time since last update <NUMBER>
  * 2: Sync value? <BOOL>
  *
- * ReturnValue:
- * nothing
+ * Return Value:
+ * None
  *
  * Public: No
  */
@@ -39,7 +39,7 @@ if (!(_adjustment isEqualTo [])) then {
 
     _adjustment = _adjustment - [ObjNull];
     _unit setVariable [QGVAR(painSupressAdjustments), _adjustment, (_syncValue || {_adjustment isEqualTo []})]; // always sync on last run
-    
+
     _unit setVariable [QGVAR(painSuppress), 0 max _painSupressAdjustment, _syncValue];
 };
 

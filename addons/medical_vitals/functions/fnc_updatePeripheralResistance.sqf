@@ -7,8 +7,8 @@
  * 1: Time since last update <NUMBER>
  * 2: Sync value? <BOOL>
  *
- * ReturnValue:
- * nothing
+ * Return Value:
+ * None
  *
  * Public: No
  */

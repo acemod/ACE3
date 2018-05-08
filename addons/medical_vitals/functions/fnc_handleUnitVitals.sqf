@@ -9,10 +9,7 @@
  * None
  *
  * Example:
- * [bob] call ACE_medical_fnc_handleUnitVitals
- *
- * Example:
- * [player] call ace_medical_fnc_handleUnitVitals
+ * [player] call ace_medical_vitals_fnc_handleUnitVitals
  *
  * Public: No
  */

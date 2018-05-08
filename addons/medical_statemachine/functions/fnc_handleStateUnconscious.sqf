@@ -14,7 +14,7 @@ if (!local _unit) exitWith {
     _unit setVariable [QGVAR(bloodVolume), _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME], true];
 };
 
-[_unit] call FUNC(handleUnitVitals);
+[_unit] call EFUNC(medical_vitals,handleUnitVitals);
 
 private _painLevel = GET_PAIN_PERCEIVED(_unit);
 if (_painLevel > 0) then {

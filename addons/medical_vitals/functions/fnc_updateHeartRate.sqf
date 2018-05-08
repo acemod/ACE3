@@ -11,7 +11,7 @@
  * Current Heart Rate <NUMBER>
  *
  * Example:
- * [player, 1, false] call ace_medical_fnc_updateHeartRate
+ * [player, 1, false] call ace_medical_vitals_fnc_updateHeartRate
  *
  * Public: No
  */
