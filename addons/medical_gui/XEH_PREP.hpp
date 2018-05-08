@@ -1,4 +1,3 @@
-
 PREP(canOpenMenu);
 PREP(openMenu);
 PREP(onMenuOpen);

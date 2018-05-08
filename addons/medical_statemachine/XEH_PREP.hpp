@@ -4,4 +4,4 @@ PREP(handleStateDefault);
 PREP(handleStateInjured);
 PREP(handleStateUnconscious);
 PREP(leftStateCardiacArrest);
-PREP(transitionStateSecondChance);
+PREP(transitionSecondChance);

@@ -5,7 +5,7 @@ class ACE_Medical_StateMachine {
     skipNull = 1;
 
     class Default {
-        onState = QUOTE(DFUNC(handleStateDefault));
+        onState = QFUNC(handleStateDefault);
         class Injury {
             targetState = "Injured";
             events[] = {QGVAR(Injury)};
@@ -24,7 +24,7 @@ class ACE_Medical_StateMachine {
         };
     };
     class Injured {
-        onState = QUOTE(DFUNC(handleStateInjured));
+        onState = QFUNC(handleStateInjured);
         class FullHeal {
             targetState = "Default";
             events[] = {QGVAR(FullHeal)};
@@ -43,7 +43,7 @@ class ACE_Medical_StateMachine {
         };
     };
     class Unconscious {
-        onState = QUOTE(DFUNC(handleStateUnconscious));
+        onState = QFUNC(handleStateUnconscious);
         onStateEntered = QUOTE([ARR_2(_this,(true))] call FUNC(setUnconsciousStatemachine));
         class DeathAI {
             targetState = "Dead";
@@ -67,7 +67,7 @@ class ACE_Medical_StateMachine {
     class FatalInjury {
         // Transition state for handling instant death
         // This state raises the next transition in the same frame
-        onStateEntered = QUOTE(DFUNC(enteredStateFatalInjury));
+        onStateEntered = QFUNC(enteredStateFatalInjury);
         class DeathAI {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
             targetState = "Dead";
@@ -77,7 +77,7 @@ class ACE_Medical_StateMachine {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
             targetState = "CardiacArrest";
             condition = QUOTE(GVAR(fatalInjuryCondition) > 0);
-            onTransition = QUOTE(DFUNC(transitionSecondChance));
+            onTransition = QFUNC(transitionSecondChance);
         };
         class Death {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
@@ -86,15 +86,15 @@ class ACE_Medical_StateMachine {
         };
     };
     class CardiacArrest {
-        onStateEntered = QUOTE(DFUNC(enteredStateCardiacArrest));
-        onStateLeaving = QUOTE(DFUNC(leftStateCardiacArrest));
+        onStateEntered = QFUNC(enteredStateCardiacArrest);
+        onStateLeaving = QFUNC(leftStateCardiacArrest);
         class DeathAI {
             targetState = "Dead";
             condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
         };
         class Timeout {
             targetState = "Dead";
-            condition = QUOTE(DFUNC(conditionCardiacArrestTimer));
+            condition = QEFUNC(medical,conditionCardiacArrestTimer);
         };
         class Reanimation {
             targetState = "Unconscious";
@@ -102,7 +102,7 @@ class ACE_Medical_StateMachine {
         };
         class Execution {
             targetState = "Dead";
-            condition = QUOTE(DFUNC(conditionExecutionDeath));
+            condition = QEFUNC(medical,conditionExecutionDeath);
             events[] = {QGVAR(FatalInjury)};
         };
     };

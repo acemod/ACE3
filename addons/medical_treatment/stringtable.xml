@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
         <Key ID="STR_ACE_Medical_Treatment_allowLitterCreation">
@@ -96,7 +96,7 @@
             <English>How long should Medkit take to apply ?</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedkitTime_Description">
-            <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English> 
+            <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English>
         </Key>
     </Package>
 </Project>

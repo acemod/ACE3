@@ -23,11 +23,11 @@ switch (true) do {
     case (_heartRate > 160): {
         // playSound SND_HEARBEAT_FAST; // Array doesn't blend together well, just play one file consistently
         playSound "ACE_heartbeat_fast_1";
-        [DFUNC(effectHeartBeat), [], _waitTime] call CBA_fnc_waitAndExecute;
+        [FUNC(effectHeartBeat), [], _waitTime] call CBA_fnc_waitAndExecute;
     };
     case (_heartRate < 60): {
         playSound SND_HEARBEAT_SLOW;
-        [DFUNC(effectHeartBeat), [], _waitTime] call CBA_fnc_waitAndExecute;
+        [FUNC(effectHeartBeat), [], _waitTime] call CBA_fnc_waitAndExecute;
 
     };
     default {
