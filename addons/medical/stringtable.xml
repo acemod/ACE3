@@ -3740,22 +3740,6 @@
             <Chinesesimp>基本医疗设定 [ACE]</Chinesesimp>
             <Chinese>基本醫療設定 [ACE]</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_Module_DisplayName">
-            <English>Advanced Medical Settings [ACE]</English>
-            <Russian>Настройки усложненной медицины [ACE]</Russian>
-            <Polish>Zaawansowane ustawienia medyczne</Polish>
-            <Spanish>Ajustes médicos avanzados [ACE]</Spanish>
-            <German>Erweiterte Sanitätseinstellungen [ACE]</German>
-            <Czech>Pokročilé zdravotnické nastavení [ACE]</Czech>
-            <Portuguese>Ajustes médicos avançados [ACE]</Portuguese>
-            <French>Paramètres des soins avancés</French>
-            <Hungarian>Fejlett orvosi beállítások [ACE]</Hungarian>
-            <Italian>Impostazioni Mediche Avanzate [ACE]</Italian>
-            <Japanese>アドバンスド医療設定 [ACE]</Japanese>
-            <Korean>고급 의료 설정 [ACE]</Korean>
-            <Chinesesimp>进阶医疗设定 [ACE]</Chinesesimp>
-            <Chinese>進階醫療設定 [ACE]</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
             <Russian>Включено для</Russian>
@@ -4365,21 +4349,6 @@
             <Chinesesimp>设定ACE基本医疗的规则</Chinesesimp>
             <Chinese>設定ACE基本醫療的規則</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
-            <English>Configure the treatment settings from ACE Advanced Medical</English>
-            <Russian>Настройка лечения в усложненной медицинской системе ACE</Russian>
-            <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
-            <Spanish>Configure las opciones de tratamiento del sistema médico avanzado de ACE</Spanish>
-            <German>Behandlungseinstellungen vom ACE-Medizin konfigurieren</German>
-            <Czech>Konfigurace nastavení léčby ze zdravotnické systému ACE</Czech>
-            <Portuguese>Configure as opções de tratamento do ACE Médico</Portuguese>
-            <French>Configure les réglages de traitement dans dans ACE médical avancé</French>
-            <Hungarian>Kezelési lehetőségek konfigurálása az ACE Orvosi rendszerből</Hungarian>
-            <Italian>Configura le impostazioni trattamenti per ACE Medical</Italian>
-            <Japanese>ACE アドバンスド医療による設定で、治療を設定する</Japanese>
-            <Korean>ACE 고급 의료에 대한 치료 설정 수정</Korean>
-            <Chinesesimp>设定ACE进阶医疗的规则</Chinesesimp>
-            <Chinese>設定ACE進階醫療的規則</Chinese>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_DisplayName">
             <English>Set Medic Class [ACE]</English>
             <Russian>Сделать медиком [ACE]</Russian>
