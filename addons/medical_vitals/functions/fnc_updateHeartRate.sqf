@@ -50,7 +50,7 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
     private _hrChange = 0;
     private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
     if (_bloodVolume > BLOOD_VOLUME_CLASS_4_HEMORRHAGE) then {
-        ([_unit] call FUNC(getBloodPressure)) params ["_bloodPressureL", "_bloodPressureH"];
+        GET_BLOOD_PRESSURE(_unit) params ["_bloodPressureL", "_bloodPressureH"];
         private _meanBP = (2/3) * _bloodPressureH + (1/3) * _bloodPressureL;
         private _painLevel = GET_PAIN_PERCEIVED(_unit);
 

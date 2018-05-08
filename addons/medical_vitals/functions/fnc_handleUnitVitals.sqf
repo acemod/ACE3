@@ -95,7 +95,7 @@ private _heartRate = [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
 [_unit, _deltaT, _syncValues] call FUNC(updatePeripheralResistance);
 
-private _bloodPressure = [_unit] call FUNC(getBloodPressure);
+private _bloodPressure = GET_BLOOD_PRESSURE(_unit);
 _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);

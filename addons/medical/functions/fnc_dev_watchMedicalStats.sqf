@@ -50,13 +50,13 @@
     // Heart:
     private _cardiacOutput = [_unit] call EFUNC(medical,getCardiacOutput);
     private _heartRate = _unit getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
-    ([_unit] call EFUNC(medical,getBloodPressure)) params ["_bpLow", "_bpHigh"];
+    GET_BLOOD_PRESSURE(_unit) params ["_bpLow", "_bpHigh"];
     _return pushBack format ["CardiacOutput %1", _cardiacOutput toFixed 5];
     _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpLow toFixed 1, _bpHigh toFixed 1];
 
     // Pain:
-    private _pain = _unit getVariable [QEGVAR(medical,pain), 0];
-    private _painSuppress = _unit getVariable [QEGVAR(medical,painSuppress), 0];
+    private _pain = GET_PAIN_TOTAL(_unit);
+    private _painSuppress = _unit getVariable [QEGVAR(medical_status,painSuppress), 0];
     private _painLevel = GET_PAIN_PERCEIVED(_unit);
     _return pushBack format ["Effective Pain: %1", _painLevel toFixed 3];
     _return pushBack format [" - [Pain: %1] [Suppress: %2]", _pain toFixed 3, _painSuppress toFixed 3];

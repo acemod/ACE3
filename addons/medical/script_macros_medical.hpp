@@ -65,5 +65,6 @@
 #define GET_HEART_RATE(unit)     (unit getVariable [QEGVAR(medical_status,heartRate), DEFAULT_HEART_RATE])
 #define GET_BLOOD_VOLUME(unit)   (unit getVariable [QEGVAR(medical_status,bloodVolume), DEFAULT_BLOOD_VOLUME])
 #define GET_BLOOD_LOSS(unit)     ([unit] call EFUNC(medical_status,getBloodLoss)) // Just for consistency
+#define GET_BLOOD_PRESSURE(unit) ([unit] call EFUNC(medical_status,getBloodPressure)) // Just for consistency
 #define IS_UNCONSCIOUS(unit)     (unit getVariable [QEGVAR(medical_status,isUnconscious), false])
 #define IS_IN_PAIN(unit)         (GET_PAIN_PERCEIVED(unit) > 0)
