@@ -2,11 +2,6 @@
 #include "script_component.hpp"
 
 // eject destroyed vehicle init
-[QGVAR(ejectDestroyed),{
-    TRACE_2("ejectDestroyed event",_this,typeOf _this);
-    _this removeEventHandler ["HandleDamage", _this getVariable QGVAR(ejectDestroyedHDEH)];
-    _this setVariable [QGVAR(ejectDestroyedHDEH), nil];
-}] call CBA_fnc_addEventHandler;
 private _ejectDestroyedClasses = [];
 {
     private _ejectDestroyedClass = configName _x;
@@ -17,19 +12,18 @@ private _ejectDestroyedClasses = [];
             params ["_vehicle"];
             if (!alive _vehicle) exitWith {};
             TRACE_2("init ejectDestroyed vehicle",_vehicle,typeOf _vehicle);
-            private _eh = _vehicle addEventHandler ["HandleDamage", {
+            _vehicle addEventHandler ["HandleDamage", {
                 params ["_vehicle"];
                 if (!alive _vehicle) then {
-                    TRACE_1("ejectDestroyed ejectDestroyedHDEH",_this);
+                    TRACE_2("ejectDestroyed HDEH",typeOf _vehicle,_this);
                     {
                         if (alive _x) then {
                             moveOut _x;
                         };
                     } forEach crew _vehicle;
-                    [QGVAR(ejectDestroyed), _vehicle] call CBA_fnc_globalEvent;
+                    _vehicle removeEventHandler ["HandleDamage", _thisEventHandler];
                 };
             }];
-            _vehicle setVariable [QGVAR(ejectDestroyedHDEH), _eh];
         }, true, [], true] call CBA_fnc_addClassEventHandler;
     };
 } forEach (QUOTE(1 == getNumber (_x >> QQGVAR(ejectDestroyed))) configClasses (configFile >> "CfgVehicles"));
