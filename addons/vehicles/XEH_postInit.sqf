@@ -14,17 +14,16 @@ private _ejectDestroyedClasses = [];
             TRACE_2("init ejectDestroyed vehicle",_vehicle,typeOf _vehicle);
             _vehicle addEventHandler ["HandleDamage", {
                 params ["_vehicle", "", "", "", "_ammo"];
-                if (!alive _vehicle) then {
-                    TRACE_2("ejectDestroyed HDEH",typeOf _vehicle,_this);
-                    if (0.5 >= getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive")) then {
-                        {
-                            if (alive _x) then {
-                                moveOut _x;
-                            };
-                        } forEach crew _vehicle;
-                    };
-                    _vehicle removeEventHandler ["HandleDamage", _thisEventHandler];
+                if (alive _vehicle) exitWith {};
+                TRACE_2("ejectDestroyed HDEH",typeOf _vehicle,_this);
+                if (0.5 >= getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive")) then {
+                    {
+                        if (alive _x) then {
+                            moveOut _x;
+                        };
+                    } forEach crew _vehicle;
                 };
+                _vehicle removeEventHandler ["HandleDamage", _thisEventHandler];
             }];
         }, true, [], true] call CBA_fnc_addClassEventHandler;
     };
