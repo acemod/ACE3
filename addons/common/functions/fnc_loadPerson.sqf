@@ -29,7 +29,15 @@ if (isNull _vehicle) then {
 };
 
 if (!isNull _vehicle) then {
-    [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
+    switch (true) do {
+        case ((crew _vehicle isEqualTo []) && {side _caller != side _unit}): {
+            [_unit, true, GROUP_SWITCH_ID, side _caller] call FUNC(switchToGroupSide);
+        };
+        case (side _vehicle != side _unit): {
+            [_unit, true, GROUP_SWITCH_ID, side _vehicle] call FUNC(switchToGroupSide);
+        };
+    };
+
     ["ace_loadPersonEvent", [_unit, _vehicle, _caller], _unit] call CBA_fnc_targetEvent;
 };
 
