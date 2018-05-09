@@ -26,4 +26,4 @@ SET_HEART_RATE(_unit,0);
 
 ["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
-[_unit, true] call FUNC(setUnconsciousStatemachine);
+[_unit, true] call EFUNC(medical,setUnconsciousStatemachine);

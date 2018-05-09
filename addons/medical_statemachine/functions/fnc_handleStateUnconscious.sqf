@@ -22,13 +22,13 @@ if (_painLevel > 0) then {
 };
 
 // Handle spontaneous wakeup from unconsciousness
-if (GVAR(spontaneousWakeUpChance) > 0) then {
+if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
     if (_unit call EFUNC(medical_status,hasStableVitals)) then {
         private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
         if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
-            TRACE_2("Checking for wake up",_unit,GVAR(spontaneousWakeUpChance));
+            TRACE_2("Checking for wake up",_unit,EGVAR(medical,spontaneousWakeUpChance));
             _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-            if ((random 1) < GVAR(spontaneousWakeUpChance)) then {
+            if ((random 1) < EGVAR(medical,spontaneousWakeUpChance)) then {
                 TRACE_1("Spontaneous wake up!",_unit);
                 [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
             };

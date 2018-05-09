@@ -21,11 +21,11 @@ params ["_unit", ["_medicN", 1]];
 
 private _class = _unit getVariable [QGVAR(medicClass), [0, 1] select (_unit getUnitTrait "medic")];
 
-if (_class >= _medicN min GVAR(medicSetting)) exitWith {true};
-if (!GVAR(increaseTrainingInLocations)) exitWith {false};
+if (_class >= _medicN min EGVAR(medical,medicSetting)) exitWith {true};
+if (!EGVAR(medical,increaseTrainingInLocations)) exitWith {false};
 
 if (([_unit] call FUNC(isInMedicalVehicle)) || {[_unit] call FUNC(isInMedicalFacility)}) then {
     _class = _class + 1; //boost by one: untrained becomes medic, medic becomes doctor
 };
 
-_class >= _medicN min GVAR(medicSetting)
+_class >= _medicN min EGVAR(medical,medicSetting)

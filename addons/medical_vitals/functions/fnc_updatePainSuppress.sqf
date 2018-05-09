@@ -48,7 +48,7 @@ private _pain = GET_PAIN_TOTAL(_unit);
 _unit setVariable [QEGVAR(medical_status,pain), 0 max (_pain - _deltaT / PAIN_FADE_TIME), _syncValue];
 
 // Handles simple medication
-if (!GVAR(advancedMedication)) then {
+if (!EGVAR(medical,advancedMedication)) then {
     private _painSupress = _unit getVariable [QGVAR(painSuppress), 0];
     _painSupress = _painSupress - _deltaT / PAIN_SUPPRESSION_FADE_TIME;
     _unit setVariable [QGVAR(painSuppress), 0 max _painSupress, _syncValue];

@@ -15,10 +15,10 @@
 params ["_unit"];
 
 // 10% possible variance in cardiac arrest time
-private _time = GVAR(cardiacArrestTime);
+private _time = EGVAR(medical,cardiacArrestTime);
 _time = _time + random [_time*-0.1, 0, _time*0.1];
 
-_unit setVariable [QGVAR(cardiacArrestTime), _time];
-_unit setVariable [QGVAR(cardiacArrestStart), CBA_missionTime];
+_unit setVariable [QEGVAR(medical,cardiacArrestTime), _time];
+_unit setVariable [QEGVAR(medical,cardiacArrestStart), CBA_missionTime];
 
 [_unit] call EFUNC(medical_status,setCardiacArrest);

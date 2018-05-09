@@ -37,4 +37,4 @@ _limbBleedingRate = _limbBleedingRate * (1 - _bodyBleedingRate);
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
 
-((_bodyBleedingRate + _limbBleedingRate) * _cardiacOutput * GVAR(bleedingCoefficient))
+((_bodyBleedingRate + _limbBleedingRate) * _cardiacOutput * EGVAR(medical,bleedingCoefficient))
