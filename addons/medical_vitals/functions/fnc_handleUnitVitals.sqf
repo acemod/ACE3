@@ -89,7 +89,7 @@ private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
         _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
     };
 } forEach _tourniquets;
-[_unit, _tourniquetPain] call FUNC(adjustPainLevel);
+[_unit, _tourniquetPain] call EFUNC(medical,adjustPainLevel);
 
 private _heartRate = [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
