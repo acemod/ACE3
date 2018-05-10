@@ -83,7 +83,7 @@
             <English>Headphones Connected</English>
             <Russian>Наушники подключены</Russian>
             <Czech>Sluchátka připojena</Czech>
-            <Japanese>ヘッドホンへ接続された</Japanese>
+            <Japanese>ヘッドホンに接続しました</Japanese>
             <Polish>Słuchawki podpięte</Polish>
             <German>Kopfhörer verbunden</German>
             <Korean>헤드폰 연결됨</Korean>
@@ -96,7 +96,7 @@
             <English>Headphones Disconnected</English>
             <Russian>Наушники отключены</Russian>
             <Czech>Sluchátka odpojena</Czech>
-            <Japanese>ヘッドホンから外された</Japanese>
+            <Japanese>ヘッドホンから外しました</Japanese>
             <Polish>Słuchawki odpięte</Polish>
             <German>Kopfhörer getrennt</German>
             <Korean>헤드폰 연결끊김</Korean>
