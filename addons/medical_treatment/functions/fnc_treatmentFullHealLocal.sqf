@@ -17,8 +17,8 @@ params ["_caller", "_target"];
 
 if (!alive _target) exitWith {};
 
-_target setVariable [QEGVAR(medical,pain), 0, true];
-_target setVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME, true];
+SET_PAIN_TOTAL(_target,0);
+SET_BLOOD_VOLUME(_target,DEFAULT_BLOOD_VOLUME);
 
 // tourniquets
 _target setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];

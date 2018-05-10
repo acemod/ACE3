@@ -10,7 +10,7 @@ if (!alive _unit) exitWith {};
 if (!local _unit) exitWith {
     SET_HEART_RATE(_unit,GET_HEART_RATE(_unit));
     _unit setVariable [QGVAR(bloodPressure), _unit getVariable [QGVAR(bloodPressure), [80, 120]], true];
-    _unit setVariable [QGVAR(bloodVolume), _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME], true];
+    SET_BLOOD_VOLUME(_unit,GET_BLOOD_VOLUME(_unit));
 };
 
 [_unit] call EFUNC(medical_vitals,handleUnitVitals);

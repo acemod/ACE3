@@ -91,10 +91,10 @@ private _woundsCreated = [];
             _oldInjury params ["_woundClassIDToAdd", "", "_injuryBleedingRate", "_injuryPain"];
 
             private _bodyPartNToAdd = [floor random 6, _bodyPartN] select _isSelectionSpecific; // 6 == count ALL_BODY_PARTS
-            
+
             _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
-            
+
             // Create a new injury. Format [ID, classID, bodypart, percentage treated, bleeding rate]
             _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
 
@@ -176,4 +176,4 @@ if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
 };
 
-TRACE_5("exit",_unit,_painLevel,_unit getVariable QEGVAR(medical,pain),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_5("exit",_unit,_painLevel,GET_PAIN_TOTAL(_unit),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);

@@ -118,4 +118,4 @@ if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
 };
 
-TRACE_5("exit",_unit,_painLevel,_unit getVariable QEGVAR(medical,pain),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_5("exit",_unit,_painLevel,GET_PAIN_TOTAL(_unit),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);

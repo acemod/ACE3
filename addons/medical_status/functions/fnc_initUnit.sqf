@@ -22,7 +22,7 @@ if (damage _unit > 0) then {
 };
 
 // - Blood and heart ----------------------------------------------------------
-_unit setVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME, true];
+SET_BLOOD_VOLUME(_unit,DEFAULT_BLOOD_VOLUME);
 SET_HEART_RATE(_unit,DEFAULT_HEART_RATE);
 _unit setVariable [QGVAR(heartRateAdjustments), [], true];
 _unit setVariable [QGVAR(bloodPressure), [80, 120], true];
