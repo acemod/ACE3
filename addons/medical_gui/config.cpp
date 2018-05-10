@@ -18,3 +18,4 @@ class CfgPatches {
 #include "ui\menu.hpp"
 #include "ACE_Settings.hpp"
 #include "CfgVehicles.hpp"
+#include "ui\ui\RscTitles.hpp"
