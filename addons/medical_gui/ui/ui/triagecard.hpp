@@ -3,8 +3,8 @@ class ACE_gui_buttonBase;
 class GVAR(triageCard) {
     idd = 7010;
     movingenable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(triageCard))), _this select 0)]);
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QUOTE(GVAR(triageCard))), nil)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(triageCard), _this select 0)]);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(triageCard), nil)]);
     class controlsBackground {
         class Background: ACE_gui_backgroundBase {
             idc = -1;
@@ -30,11 +30,11 @@ class GVAR(triageCard) {
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {1,1,0,1};
             colorBackground[] = {0,0,0,0};
-            text = QPATHTOF(ui\triage_card_corner_l.paa);
+            text = QPATHTOF(ui\ui\triage_card_corner_l.paa);
         };
         class cornor_top_r: cornor_top_l {
             x = "20 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QPATHTOF(ui\triage_card_corner_r.paa);
+            text = QPATHTOF(ui\ui\triage_card_corner_r.paa);
         };
 
         class TriageCardLabel {

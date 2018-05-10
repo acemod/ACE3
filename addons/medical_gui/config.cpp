@@ -19,3 +19,5 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgVehicles.hpp"
 #include "ui\ui\RscTitles.hpp"
+#include "ui\ui\CfgInGameUI.hpp"
+#include "ui\ui\triagecard.hpp"

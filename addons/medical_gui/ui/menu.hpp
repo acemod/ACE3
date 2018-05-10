@@ -3,7 +3,7 @@
 class GVAR(medicalMenu) {
     idd = 314412;
     movingEnable = true;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(medicalMenu)), _this select 0)]; [_this select 0] call FUNC(onMenuOpen););
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(medicalMenu), _this select 0)]; [_this select 0] call FUNC(onMenuOpen););
     onUnload = QUOTE([] call FUNC(onMenuClose));
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase {
