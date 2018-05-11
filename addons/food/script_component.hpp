@@ -1,0 +1,19 @@
+#define COMPONENT food
+#define COMPONENT_BEAUTIFIED Food
+#include "\z\ace\addons\main\script_mod.hpp"
+
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
+
+#ifdef DEBUG_ENABLED_FOOD
+    #define DEBUG_MODE_FULL
+#endif
+
+#ifdef DEBUG_ENABLED_FOOD
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_FOOD
+#endif
+
+#include "\z\ace\addons\main\script_macros.hpp"
+
+#define GET_CFG_VAR(CFG, ITEM, VAR) (getText (configFile >> CFG >> ITEM >> VAR))
