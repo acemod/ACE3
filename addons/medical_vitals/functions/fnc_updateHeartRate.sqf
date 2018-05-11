@@ -21,14 +21,14 @@
 params ["_unit", "_deltaT", "_syncValue"];
 
 private _hrTargetAdjustment = 0;
-private _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
+private _adjustments = GETVAR(_unit,VAR_HEART_RATE_ADJ,[]);
 
-if (!(_adjustment isEqualTo [])) then {
+if !(_adjustments isEqualTo []) then {
     {
         _x params ["_value", "_timeTillMaxEffect", "_maxTimeInSystem", "_timeInSystem"];
-        if (abs _value > 0 && {_maxTimeInSystem > 0}) then {
+        if (_value != 0 && {_maxTimeInSystem > 0}) then {
             if (_timeInSystem >= _maxTimeInSystem) then {
-                _adjustment set [_forEachIndex, ObjNull];
+                _adjustments set [_forEachIndex, nil];
             } else {
                 _timeInSystem = _timeInSystem + _deltaT;
                 private _effectRatio = ((_timeInSystem / (1 max _timeTillMaxEffect)) ^ 2) min 1;
@@ -36,17 +36,16 @@ if (!(_adjustment isEqualTo [])) then {
                 _x set [3, _timeInSystem];
             };
         } else {
-            _adjustment set [_forEachIndex, ObjNull];
+            _adjustments set [_forEachIndex, nil];
         };
-    } forEach _adjustment;
+    } forEach _adjustments;
 
-    _adjustment = _adjustment - [ObjNull];
-    _unit setVariable [QGVAR(heartRateAdjustments), _adjustment, _syncValue];
+    _unit setVariable [VAR_HEART_RATE_ADJ, _adjustments - [nil], _syncValue];
 };
 
 private _heartRate = GET_HEART_RATE(_unit);
 
-if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
+if !(_unit getVariable [QGVAR(inCardiacArrest), false]) then {
     private _hrChange = 0;
     private _bloodVolume = GET_BLOOD_VOLUME(_unit);
     if (_bloodVolume > BLOOD_VOLUME_CLASS_4_HEMORRHAGE) then {
@@ -59,7 +58,7 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
             _targetBP = _targetBP * (_bloodVolume / DEFAULT_BLOOD_VOLUME);
         };
 
-        private _targetHR = 80;
+        private _targetHR = DEFAULT_HEART_RATE;
         if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) then {
             _targetHR = _heartRate * (_targetBP / (45 max _meanBP));
         };

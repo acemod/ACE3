@@ -14,7 +14,7 @@
 #include "script_component.hpp"
 params ["_unit", "_change", "_timeToMaxEffect", "_maxTimeInSystem"];
 
-private _adjustments = _unit getVariable [QGVAR(heartRateAdjustments), []];
+private _adjustments = GETVAR(_unit,VAR_HEART_RATE_ADJ,[]);
 // The last number indicates the time the adjustment is already in the system
 _adjustments pushBack [_change, _timeToMaxEffect, _maxTimeInSystem, 0];
-_unit setVariable [QGVAR(heartRateAdjustments), _heartRateAdjustments];
+_unit setVariable [VAR_HEART_RATE_ADJ, _adjustments];

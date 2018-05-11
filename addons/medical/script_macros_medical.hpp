@@ -63,11 +63,14 @@
 // These variables get stored in object space and used across components
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)
 #define VAR_BLOOD_PRESS QEGVAR(medical,bloodPressure)
-#define VAR_BLOOD_VOL QEGVAR(medical,bloodVolume)
-#define VAR_HEART_RATE QEGVAR(medical,heartRate)
-#define VAR_PAIN QEGVAR(medical,pain)
-#define VAR_PAIN_SUPP QEGVAR(medical,painSuppress)
-#define VAR_UNCON QEGVAR(medical,isUnconscious)
+#define VAR_BLOOD_VOL   QEGVAR(medical,bloodVolume)
+#define VAR_HEART_RATE  QEGVAR(medical,heartRate)
+#define VAR_PAIN        QEGVAR(medical,pain)
+#define VAR_PAIN_SUPP   QEGVAR(medical,painSuppress)
+#define VAR_UNCON       QEGVAR(medical,isUnconscious)
+// These variables track gradual adjustments (from medication, etc.)
+#define VAR_HEART_RATE_ADJ  QEGVAR(medical,heartRateAdjustments)
+#define VAR_PAIN_SUPP_ADJ   QEGVAR(medical,painSuppressAdjustments)
 
 
 // - Unit Functions ---------------------------------------------------

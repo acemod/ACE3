@@ -73,23 +73,23 @@ if (isClass (_medicationConfig >> _className)) then {
 };
 
 if (alive _target) then {
-    private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
+    private _heartRate = GET_HEART_RATE(_target);
     private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNorm, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
     _hrIncrease params ["_minIncrease", "_maxIncrease"];
     private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
 
     // Adjust the heart rate based upon config entry
     if (_heartRateChange != 0) then {
-        private _heartRateAdjustments = _target getVariable [QEGVAR(medical,heartRateAdjustments), []];
+        private _heartRateAdjustments = GETVAR(_target,VAR_HEART_RATE_ADJ,[]);
         _heartRateAdjustments pushBack [_heartRateChange, _timeTillMaxEffect, _timeInSystem, 0];
-        _target setVariable [QEGVAR(medical,heartRateAdjustments), _heartRateAdjustments];
+        _target setVariable [VAR_HEART_RATE_ADJ, _heartRateAdjustments];
     };
 
     // Adjust the pain suppression based upon config entry
     if (_painReduce > 0) then {
-        private _painSupressAdjustments = _target getVariable [QEGVAR(medical,painSupressAdjustments), []];
-        _painSupressAdjustments pushBack [_painReduce, _timeTillMaxEffect, _timeInSystem, 0];
-        _target setVariable [QEGVAR(medical,painSupressAdjustments), _painSupressAdjustments];
+        private _adjustments = _target getVariable [VAR_PAIN_SUPP_ADJ, []];
+        _adjustments pushBack [_painReduce, _timeTillMaxEffect, _timeInSystem, 0];
+        _target setVariable [VAR_PAIN_SUPP_ADJ, _adjustments];
     };
 
     // Adjust the peripheral resistance based upon config entry

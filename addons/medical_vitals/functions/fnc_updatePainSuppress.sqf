@@ -18,7 +18,7 @@
 params ["_unit", "_deltaT", "_syncValue"];
 
 private _painSupressAdjustment = 0;
-private _adjustment = _unit getVariable [QGVAR(painSupressAdjustments), []];
+private _adjustment = _unit getVariable [VAR_PAIN_SUPP_ADJ, []];
 
 if (!(_adjustment isEqualTo [])) then {
     {
@@ -38,7 +38,7 @@ if (!(_adjustment isEqualTo [])) then {
     } forEach _adjustment;
 
     _adjustment = _adjustment - [ObjNull];
-    _unit setVariable [QGVAR(painSupressAdjustments), _adjustment, (_syncValue || {_adjustment isEqualTo []})]; // always sync on last run
+    _unit setVariable [VAR_PAIN_SUPP_ADJ, _adjustment, (_syncValue || {_adjustment isEqualTo []})]; // always sync on last run
 
     _unit setVariable [VAR_PAIN_SUPP, 0 max _painSupressAdjustment, _syncValue];
 };

@@ -18,7 +18,7 @@
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-_target setVariable [QEGVAR(medical,heartRate), 0, true];
+_target setVariable [VAR_HEART_RATE, 0, true];
 _target setVariable [QGVAR(receiveCPR), false, true]; // CPR finished
 [_target] call FUNC(calculateBlood);
 
