@@ -15,5 +15,3 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-#define GET_CFG_VAR(CFG, ITEM, VAR) (getText (configFile >> CFG >> ITEM >> VAR))

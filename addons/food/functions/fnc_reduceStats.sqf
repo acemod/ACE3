@@ -3,7 +3,7 @@
 	Author: Jak Keen
 */
 
-#include "../script_component.hpp"
+#include "script_component.hpp"
 
 private ["_player", "_speed", "_animStateChars", "_animP", "_amount"];
 
@@ -22,8 +22,19 @@ if ((vehicle _player) == _player) then {
 
 if([] call FUNC(hasCamelbak)) then {
     _amount = 100 - GVAR(water);
-    GVAR(camelbak) = GVAR(camelbak) - _amount;
-    GVAR(water) = water + _amount;
+
+    if(GVAR(camelbak) - _amount >= 0) then {
+        GVAR(camelbak) = GVAR(camelbak) - _amount;
+        GVAR(water) = water + _amount;
+    };
+};
+
+if (GVAR(water) < 20) then {
+    hint "I am feeling thirsty";
+};
+
+if (GVAR(food) < 20) then {
+    hint "I am feeling hungry";
 };
 
 if (GVAR(water) < 20 || GVAR(food) < 20) then {

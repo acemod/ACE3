@@ -3,19 +3,10 @@
 	Author: Jak Keen
 */
 
-#include "../script_component.hpp"
-
-private ["_item", "_return"];
-
-_item = "";
-_return = false;
+#include "script_component.hpp"
 
 if(GVAR(camelbak_item) in (items player)) exitwith {
-    _item = _x;
+	true;
 };
 
-if(!(_item == "")) then {
-    _return = true;
-};
-
-_return;
+false;

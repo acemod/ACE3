@@ -1,7 +1,7 @@
 ace_food
 ========
 
-Custom fonts including fixed-width font.
+Field rations module
 
 
 ## Maintainers

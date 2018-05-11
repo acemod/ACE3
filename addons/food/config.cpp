@@ -73,20 +73,21 @@ class RscTitles {
 class CfgSounds {
     sounds[] = {};
 
-    class eating {
-        name = "eating";
+    class ACE_Eating {
+        name = "ACE_Eating";
         sound[] = {QPATHTOF(sounds\eating.ogg), 1, 1, 3};
         titles[] = {0, ""};
     };
 
-    class drinking {
-        name = "drinking";
+    class ACE_Drinking {
+        name = "ACE_Drinking";
         sound[] = {QPATHTOF(sounds\drinking.ogg), 1, 1, 3};
         titles[] = {0, ""};
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgUIGrids.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Settings.hpp"

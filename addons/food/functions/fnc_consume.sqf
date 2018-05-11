@@ -3,15 +3,12 @@
 	Author: Jak Keen
 */
 
-#include "../script_component.hpp"
+#include "script_component.hpp"
 
-private ["_player", "_mode"];
-
-_player = _this select 1;
-_mode = _this select 2;
+params ["_target", "_player", "_mode"];
 
 switch (_mode) do {
-    case "eat": {
+    case 0: {
         private ["_mre"];
 
         _mre == "";
@@ -22,8 +19,8 @@ switch (_mode) do {
             };
         } forEach GVAR(food_items);
 
-        if(!(_mre == "")) then {
-            player say3D "eating";
+        if(_mre != "") then {
+            player say3D "ACE_Eating";
             _player removeItem _mre;
 
             GVAR(food) = GVAR(food) + 50;
@@ -35,7 +32,7 @@ switch (_mode) do {
         };
     };
 
-    case "drink": {
+    case 1: {
         private ["_drink"];
 
         _drink == "";
@@ -50,9 +47,10 @@ switch (_mode) do {
             hint "You need to have a drink on you before you can drink";
         };
 
-        player say3D "drinking";
+        player say3D "ACE_Drinking";
         _player removeItem _drink;
-        _item = GET_CFG_VAR("CfgWeapons", _drink, "ace_onDrink");
+        _item = getText (configFile >> "CfgWeapons" >> _drink >> QGVAR(onDrink));
+
         _player addItem _item;
 
         GVAR(water) = GVAR(water) + 40;

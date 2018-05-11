@@ -1,7 +1,7 @@
 PREP(addActions);
 PREP(consume);
 PREP(hasCamelbak);
-PREP(onCloseInventory);
+PREP(onUpdateInventory);
 PREP(reduceStats);
 PREP(refill);
 PREP(updatePlayerHud);

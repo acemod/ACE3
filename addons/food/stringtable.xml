@@ -25,5 +25,85 @@
             <English>Enable/Disable the field rations system for players</English>
             <Russian>Сложность медицины</Russian>
         </Key>
+
+        <Key ID="STR_ACE_Food_Settings_EnableHUD_DisplayName">
+            <English>Enable Player HUD</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_Settings_EnableHUD_Description">
+            <English>Allows users to enable/disable the player food rations HUD</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_Settings_FoodDecentRate_DisplayName">
+            <English>Food Decent Rate</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_Settings_FoodDecentRate_Description">
+            <English>Allows mission makers to set the food decent rates of units</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_Settings_WaterDecentRate_DisplayName">
+            <English>Water Decent Rate</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_Settings_WaterDecentRate_Description">
+            <English>Allows mission makers to set the water decent rates of units</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemName_Waterbottle_Full">
+            <English>Water Bottle (Full)</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemName_Waterbottle_Part">
+            <English>Water Bottle (Half Full)</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemName_Waterbottle_Empty">
+            <English>Water Bottle (Empty)</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemDesc_Waterbottle_Full">
+            <English>A full waterbottle</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemDesc_Waterbottle_Part">
+            <English>A half full waterbottle</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemDesc_Waterbottle_Empty">
+            <English>An empty waterbottle</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemName_MRE_Type1">
+            <English>MRE: Lamb Curry</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemName_MRE_Type2">
+            <English>MRE: Vegetable Pasta</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemDesc_MRE_Type1">
+            <English>A delicious Meal Ready to Eat (lamb curry)</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Food_ItemDesc_MRE_Type2">
+            <English>A delicious Meal Ready to Eat (vegetable pasta)</English>
+            <Russian>Сложность медицины</Russian>
+        </Key>
     </Package>
 </Project>

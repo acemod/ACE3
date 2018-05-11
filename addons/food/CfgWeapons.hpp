@@ -1,8 +1,8 @@
 class CfgWeapons {
-    class Default;
+    class ACE_ItemCore;
     class InventoryItem_Base_F;
     
-    class ItemCore: Default {
+    class ACE_ItemCore_Food: ACE_ItemCore {
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = "\A3\Weapons_F\Data\clear_empty.paa";
         muzzles[] = {};
@@ -21,7 +21,7 @@ class CfgWeapons {
     };
 
     // Camelbaks
-    class ACE_Camelbak: ItemCore {
+    class ACE_Camelbak: ACE_ItemCore_Food {
         displayName = "Camelbak";
         picture = QPATHTOF(data\icons\camelbak_full.paa);
         descriptionShort = "A camelbak";
@@ -32,7 +32,7 @@ class CfgWeapons {
         };
     };
 
-    /*class ACE_Camelbak_Part: ItemCore
+    /*class ACE_Camelbak_Part: ACE_ItemCore_Food
     {
         displayName = "Camelbak (Half Full) - AN UNUSED ITEM FOR THE MOMENT";
         picture = QPATHTOF(data\icons\camelbak_full.paa);
@@ -48,7 +48,7 @@ class CfgWeapons {
         };
     };
 
-    class ACE_Camelbak_Empty: ItemCore
+    class ACE_Camelbak_Empty: ACE_ItemCore_Food
     {
         displayName = "Camelbak (Empty) - AN UNUSED ITEM FOR THE MOMENT";
         picture = QPATHTOF(data\icons\camelbak_empty.paa);
@@ -64,23 +64,23 @@ class CfgWeapons {
     };*/
 
     // Waterbottles
-    class ACE_Waterbottle_Full: ItemCore {
-        displayName = "Water Bottle (Full)";
+    class ACE_Waterbottle_Full: ACE_ItemCore_Food {
+        displayName = CSTRING(ItemName_Waterbottle_Full);
         picture = QPATHTOF(data\icons\waterbottle_full.paa);
         model = "\A3\Structures_F_EPA\Items\Food\BottlePlastic_V2_F.p3d";
-        descriptionShort = "A full waterbottle";
+        descriptionShort = CSTRING(ItemDesc_Waterbottle_Full);
 
-        ace_onDrink = "ACE_Waterbottle_Part";
+        GVAR(onDrink) = "ACE_Waterbottle_Part";
     };
 
-    class ACE_Waterbottle_Part: ItemCore {
-        displayName = "Water Bottle (Half Full)";
+    class ACE_Waterbottle_Part: ACE_ItemCore_Food {
+        displayName = CSTRING(ItemName_Waterbottle_Part);
         picture = QPATHTOF(data\icons\waterbottle_full.paa);
         model = "\A3\Structures_F_EPA\Items\Food\BottlePlastic_V2_F.p3d";
-        descriptionShort = "A half full waterbottle";
+        descriptionShort = CSTRING(ItemDesc_Waterbottle_Part);
 
-        ace_onDrink = "ACE_Waterbottle_Empty";
-        ace_onFill = "ACE_Waterbottle_Full";
+        GVAR(onDrink) = "ACE_Waterbottle_Empty";
+        GVAR(onFill) = "ACE_Waterbottle_Full";
 
         class ItemInfo: InventoryItem_Base_F {
             mass= 3;
@@ -88,13 +88,13 @@ class CfgWeapons {
         };
     };
 
-    class ACE_Waterbottle_Empty: ItemCore {
-        displayName = "Water Bottle (Empty)";
+    class ACE_Waterbottle_Empty: ACE_ItemCore_Food {
+        displayName = CSTRING(ItemName_Waterbottle_Empty);
         picture = QPATHTOF(data\icons\waterbottle_empty.paa);
         model = "\A3\Structures_F_EPA\Items\Food\BottlePlastic_V2_F.p3d";
-        descriptionShort = "An empty waterbottle";
+        descriptionShort = CSTRING(ItemDesc_Waterbottle_Empty);
 
-        ace_onFill = "ACE_Waterbottle_Full";
+        GVAR(onFill) = "ACE_Waterbottle_Full";
 
         class ItemInfo: InventoryItem_Base_F {
             mass= 1;
@@ -103,21 +103,21 @@ class CfgWeapons {
     };
     
     // MREs
-    class ACE_MRE_Type1: ItemCore {
-        displayName = "MRE: Lamb Curry";
+    class ACE_MRE_Type1: ACE_ItemCore_Food {
+        displayName = CSTRING(ItemName_MRE_Type1);
         picture = QPATHTOF(data\icons\mre_type1.paa);
         model = QPATHTOF(data\mre.p3d);
-        descriptionShort = "A delicious Meal Ready to Eat (lamb curry)";
+        descriptionShort = CSTRING(ItemDesc_MRE_Type1);
         
         hiddenSections[] = {"Type"};
         hiddenSectionsTextures[] = {QPATHTOF(data\mre_type1.paa)};
     };
     
-    class ACE_MRE_Type2: ItemCore {
-        displayName = "MRE: Vegetable Pasta";
+    class ACE_MRE_Type2: ACE_ItemCore_Food {
+        displayName = CSTRING(ItemName_MRE_Type2);
         picture = QPATHTOF(data\icons\mre_type2.paa);
         model = QPATHTOF(data\mre.p3d);
-        descriptionShort = "A delicious Meal Ready to Eat (vegetable pasta)";
+        descriptionShort = CSTRING(ItemDesc_MRE_Type2);
         
         hiddenSections[] = {"Type"};
         hiddenSectionsTextures[] = {QPATHTOF(data\mre_type2.paa)};
