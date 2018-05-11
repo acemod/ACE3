@@ -9,9 +9,9 @@ if (!alive _unit) exitWith {};
 
 // If locality changed, broadcast the last medical state and finish the local loop
 if (!local _unit) exitWith {
-    SET_HEART_RATE(_unit,GET_HEART_RATE(_unit));
-    _unit setVariable [QGVAR(bloodPressure), _unit getVariable [QGVAR(bloodPressure), [80, 120]], true];
-    SET_BLOOD_VOLUME(_unit,GET_BLOOD_VOLUME(_unit));
+    _unit setVariable [VAR_HEART_RATE, GET_HEART_RATE(_unit), true];
+    _unit setVariable [VAR_BLOOD_PRESS, _unit getVariable [VAR_BLOOD_PRESS, [80, 120]], true];
+    _unit setVariable [VAR_BLOOD_VOL, GET_BLOOD_VOLUME(_unit), true];
 };
 
 [_unit] call EFUNC(medical_vitals,handleUnitVitals);

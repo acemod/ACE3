@@ -17,8 +17,8 @@ params ["_caller", "_target"];
 
 if (!alive _target) exitWith {};
 
-SET_PAIN_TOTAL(_target,0);
-SET_BLOOD_VOLUME(_target,DEFAULT_BLOOD_VOLUME);
+_unit setVariable [VAR_PAIN, 0, true];
+_unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
 // tourniquets
 _target setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
@@ -52,7 +52,7 @@ _target setVariable ["ACE_isUnconscious", false, true];
 _target setVariable [QEGVAR(medical,hasLostBlood), 0, true];
 _target setVariable [QEGVAR(medical,isBleeding), false, true];
 _target setVariable [QEGVAR(medical,hasPain), false, true];
-_target setVariable [QEGVAR(medical,painSuppress), 0, true];
+_target setVariable [VAR_PAIN_SUPP, 0, true];
 _target setVariable [QGVAR(painSuppressAdjustments), [], true];
 _target setVariable [QGVAR(partialHealCounter), 0, true];
 

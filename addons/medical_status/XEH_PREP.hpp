@@ -3,7 +3,6 @@ PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
-PREP(getPainPerceived);
 PREP(hasStableVitals);
 PREP(hasTourniquetAppliedTo);
 PREP(initUnit);

@@ -20,6 +20,6 @@ params ["_unit"];
 
 if (!local _unit) exitWith {};
 
-SET_PAIN_TOTAL(_unit,0);
-SET_HEART_RATE(_unit,0);
-_unit setVariable [QGVAR(bloodPressure), [0, 0], true];
+_unit setVariable [VAR_PAIN, 0, true];
+_unit setVariable [VAR_HEART_RATE, 0, true];
+_unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];

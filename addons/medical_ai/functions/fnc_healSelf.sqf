@@ -23,7 +23,7 @@ if IS_UNCONSCIOUS(_this) exitWith {};
 if ((_this getVariable [QGVAR(treatmentOverAt), CBA_missionTime]) > CBA_missionTime) exitWith {};
 
 private _needsBandaging = GET_BLOOD_LOSS(_this) > 0;
-private _needsMorphine  = GET_PAIN_TOTAL(_this) > 0.2;
+private _needsMorphine  = GET_PAIN(_this) > 0.2;
 
 switch (true) do {
     case _needsBandaging: {

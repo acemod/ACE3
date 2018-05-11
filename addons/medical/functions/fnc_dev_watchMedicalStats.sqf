@@ -55,8 +55,8 @@
     _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpLow toFixed 1, _bpHigh toFixed 1];
 
     // Pain:
-    private _pain = GET_PAIN_TOTAL(_unit);
-    private _painSuppress = _unit getVariable [QEGVAR(medical_status,painSuppress), 0];
+    private _pain = GET_PAIN(_unit);
+    private _painSuppress = GET_PAIN_SUPPRESS(_unit);
     private _painLevel = GET_PAIN_PERCEIVED(_unit);
     _return pushBack format ["Effective Pain: %1", _painLevel toFixed 3];
     _return pushBack format [" - [Pain: %1] [Suppress: %2]", _pain toFixed 3, _painSuppress toFixed 3];

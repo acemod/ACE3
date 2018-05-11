@@ -75,7 +75,7 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
     _heartRate = (_heartRate + _deltaT * _hrChange) max 0;
 };
 
-SET_HEART_RATE(_unit,_heartRate,_syncValue);
+_unit setVariable [VAR_HEART_RATE, _heartRate, _syncValue];
 
 _heartRate
 

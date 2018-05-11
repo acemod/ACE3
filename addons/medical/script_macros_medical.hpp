@@ -57,21 +57,32 @@
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 
-// - Status macro functions ---------------------------------------------------
-// These macros provide the same functionality as the functions in the status
-// component, but are slightly faster (because most are just object variables)
-#define GET_BLOOD_LOSS(unit)     ([unit] call EFUNC(medical_status,getBloodLoss)) // Just for consistency
-#define GET_BLOOD_PRESSURE(unit) ([unit] call EFUNC(medical_status,getBloodPressure)) // Just for consistency
-#define GET_BLOOD_VOLUME(unit)   (unit getVariable [QEGVAR(medical_status,bloodVolume), DEFAULT_BLOOD_VOLUME])
-#define GET_HEART_RATE(unit)     (unit getVariable [QEGVAR(medical_status,heartRate), DEFAULT_HEART_RATE])
-#define GET_PAIN_PERCEIVED(unit) ([unit] call EFUNC(medical_status,getPainPerceived)) // Just for consistency
-#define GET_PAIN_TOTAL(unit)     (unit getVariable [QEGVAR(medical_status,pain), 0])
-#define IS_IN_PAIN(unit)         (GET_PAIN_PERCEIVED(unit) > 0)
-#define IS_UNCONSCIOUS(unit)     (unit getVariable [QEGVAR(medical_status,isUnconscious), false])
-// Setters have overloaded versions for locality handling
-#define SET_BLOOD_VOLUME(unit,value) unit setVariable [QEGVAR(medical_status,bloodVolume), 0 max value min DEFAULT_BLOOD_VOLUME, true]
-#define SET_BLOOD_VOLUME(unit,value,sync) unit setVariable [QEGVAR(medical_status,bloodVolume), 0 max value min DEFAULT_BLOOD_VOLUME, sync]
-#define SET_HEART_RATE(unit,value) unit setVariable [QEGVAR(medical_status,heartRate), value, true]
-#define SET_HEART_RATE(unit,value,sync) unit setVariable [QEGVAR(medical_status,heartRate), value, sync]
-#define SET_PAIN_TOTAL(unit,value) unit setVariable [QEGVAR(medical_status,pain), 0 max (value) min 1, true]
-#define SET_PAIN_TOTAL(unit,value,sync) unit setVariable [QEGVAR(medical_status,pain), 0 max (value) min 1, sync]
+
+
+// - Unit Variables ----------------------------------------------------
+// These variables get stored in object space and used across components
+// Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)
+#define VAR_BLOOD_PRESS QEGVAR(medical,bloodPressure)
+#define VAR_BLOOD_VOL QEGVAR(medical,bloodVolume)
+#define VAR_HEART_RATE QEGVAR(medical,heartRate)
+#define VAR_PAIN QEGVAR(medical,pain)
+#define VAR_PAIN_SUPP QEGVAR(medical,painSuppress)
+#define VAR_UNCON QEGVAR(medical,isUnconscious)
+
+
+// - Unit Functions ---------------------------------------------------
+// Retrieval macros for common unit values
+// Defined for easy consistency and speed
+#define GET_BLOOD_VOLUME(unit)      (GETVAR(unit,VAR_BLOOD_VOL,DEFAULT_BLOOD_VOLUME))
+#define GET_HEART_RATE(unit)        (GETVAR(unit,VAR_HEART_RATE,DEFAULT_HEART_RATE))
+#define GET_PAIN(unit)              (GETVAR(unit,VAR_PAIN,0))
+#define GET_PAIN_SUPPRESS(unit)     (GETVAR(unit,VAR_PAIN_SUPP,0))
+#define IS_UNCONSCIOUS(unit)        (GETVAR(unit,VAR_UNCON,false))
+
+// The following function calls are defined here just for consistency
+#define GET_BLOOD_LOSS(unit)        ([unit] call EFUNC(medical_status,getBloodLoss))
+#define GET_BLOOD_PRESSURE(unit)    ([unit] call EFUNC(medical_status,getBloodPressure))
+
+// Derivative unit values commonly used
+#define GET_PAIN_PERCEIVED(unit)    (0 max (GET_PAIN(unit) - GET_PAIN_SUPPRESS(unit)) min 1)
+#define IS_IN_PAIN(unit)            (GET_PAIN_PERCEIVED(unit) > 0)

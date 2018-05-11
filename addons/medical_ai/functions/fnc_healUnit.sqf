@@ -53,7 +53,7 @@ _this forceSpeed 0;
 _target forceSpeed 0;
 
 private _needsBandaging = GET_BLOOD_LOSS(_target) > 0;
-private _needsMorphine  = GET_PAIN_TOTAL(_target) > 0.2;
+private _needsMorphine  = GET_PAIN(_target) > 0.2;
 private _needsEpinephrine = IS_UNCONSCIOUS(_target);
 
 switch (true) do {

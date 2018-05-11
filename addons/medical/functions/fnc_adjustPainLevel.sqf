@@ -24,6 +24,7 @@ TRACE_2("adjustPainLevel",_unit,_desiredPainLevel);
 
 _desiredPainLevel = _desiredPainLevel * GVAR(painCoefficient);
 
-private _pain = GET_PAIN_TOTAL(_unit);
+private _pain = GET_PAIN(_unit);
+_pain = 0 max (_pain max _desiredPainLevel) min 1;
 
-SET_PAIN_TOTAL(_unit,_pain max _desiredPainLevel,false);
+_unit setVariable [VAR_PAIN, _pain];
