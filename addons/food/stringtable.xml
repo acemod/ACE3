@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-	<Package name="Food">
-		<Key ID="STR_ACE_Food_SupplyCrateMaster">
-			<English>[ACE] Master Field Rations Supply Crate</English>
+    <Package name="Food">
+        <Key ID="STR_ACE_Food_SupplyCrateMaster">
+            <English>[ACE] Master Field Rations Supply Crate</English>
             <Russian>Сложность медицины</Russian>
-		</Key>
+        </Key>
 
-		<Key ID="STR_ACE_Food_SupplyCrateNormal">
-			<English>[ACE] Field Rations Supply Crate</English>
+        <Key ID="STR_ACE_Food_SupplyCrateNormal">
+            <English>[ACE] Field Rations Supply Crate</English>
             <Russian>Сложность медицины</Russian>
-		</Key>
+        </Key>
 
-		<Key ID="STR_ACE_Food_Settings_Food">
-			<English>Field Rations</English>
+        <Key ID="STR_ACE_Food_Settings_Food">
+            <English>Field Rations</English>
             <Russian>Сложность медицины</Russian>
-		</Key>
+        </Key>
 
-		<Key ID="STR_ACE_Food_Settings_Enable_DisplayName">
-			<English>Enable Module</English>
+        <Key ID="STR_ACE_Food_Settings_Enable_DisplayName">
+            <English>Enable Module</English>
             <Russian>Сложность медицины</Russian>
-		</Key>
+        </Key>
 
-		<Key ID="STR_ACE_Food_Settings_Enable_Description">
-			<English>Enable/Disable the field rations system for players</English>
+        <Key ID="STR_ACE_Food_Settings_Enable_Description">
+            <English>Enable/Disable the field rations system for players</English>
             <Russian>Сложность медицины</Russian>
-		</Key>
-	</Package>
+        </Key>
+    </Package>
 </Project>
