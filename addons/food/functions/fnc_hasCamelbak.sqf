@@ -6,7 +6,7 @@
 #include "script_component.hpp"
 
 if(GVAR(camelbak_item) in (items player)) exitwith {
-	true;
+    true;
 };
 
 false;

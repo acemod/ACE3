@@ -16,8 +16,8 @@ GVAR(refill_sources) = ["Land_BarrelWater_F"];
 
 // Init player HUD
 if(GVAR(enableHUD)) then {
-	101 cutRsc ["ACE_FoodStats","PLAIN"];
-	[{call FUNC(updatePlayerHud)}, 1, []] call CBA_fnc_addPerFrameHandler;
+    101 cutRsc ["ACE_FoodStats","PLAIN"];
+    [{call FUNC(updatePlayerHud)}, 1, []] call CBA_fnc_addPerFrameHandler;
 };
 
 // Add eat/drink actions
