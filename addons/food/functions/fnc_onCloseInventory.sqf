@@ -13,5 +13,5 @@ GVAR(inventory) = (items player);
 _result = [] call FUNC(hasCamelbak);
 
 if(!(_result)) then {
-	GVAR(camelbak) = 0;
+    GVAR(camelbak) = 0;
 };

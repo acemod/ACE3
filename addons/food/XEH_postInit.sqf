@@ -30,12 +30,12 @@ GVAR(inventory) = [];
 
 // Init reduction of stats
 ["itemAdd", ["ACE_FoodStats_Loop", {
-	if (alive player) then {
-		[player] call FUNC(reduceStats);
-	};
+    if (alive player) then {
+        [player] call FUNC(reduceStats);
+    };
 }, 4]] call BIS_fnc_loop;
 
 // Inventory event handler
 [player, "InventoryClosed", {
-	[] call FUNC(onCloseInventory);
+    [] call FUNC(onCloseInventory);
 }] call CBA_fnc_addBISEventHandler;

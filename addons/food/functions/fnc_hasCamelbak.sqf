@@ -11,11 +11,11 @@ _item = "";
 _return = false;
 
 if(GVAR(camelbak_item) in (items player)) exitwith {
-	_item = _x;
+    _item = _x;
 };
 
 if(!(_item == "")) then {
-	_return = true;
+    _return = true;
 };
 
 _return;
