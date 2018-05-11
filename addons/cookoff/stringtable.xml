@@ -112,7 +112,7 @@
             <German>Faktor für die Munitionsdurchzündungsdauer [0 zum Deaktivieren]</German>
             <French>Multiplicateur de la durée du cook-off des munitions [Une valeur de 0 désactive l'effet]</French>
             <Polish>Mnożnik decydujący jak długo ma trwać samozapłon amunicji [Ustawienie na 0 spowoduje wyłącznie samozapłonu]</Polish>
-            <Japanese>誘爆の持続時間を乗数で設定。[0 に設定で誘爆を無効化]</Japanese>
+            <Japanese>誘爆の持続時間を乗数で設定します。[0 に設定で誘爆を無効化]</Japanese>
             <Italian>Moltiplicatore della durata dell'esplosione [Impostare 0 disabiliterà l'esplosione delle munizioni]</Italian>
             <Chinese>設定彈藥殉爆效果會持續多久時間 [輸入0來關閉殉爆效果]</Chinese>
             <Chinesesimp>设定弹药殉爆效果会持续多久时间 [输入0来关闭殉爆效果]</Chinesesimp>

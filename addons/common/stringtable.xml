@@ -1169,6 +1169,7 @@
             <Korean>음악 끄기 허용</Korean>
             <Chinese>允許調低音樂音量</Chinese>
             <Chinesesimp>允许调低音乐音量</Chinesesimp>
+            <Japanese>音楽の音量低下を許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1176,6 +1177,7 @@
             <Korean>ACE 스크립트가 음악을 끌 수 있습니다.</Korean>
             <Chinese>允許ACE腳本去控制音樂的音量。</Chinese>
             <Chinesesimp>允许ACE脚本去控制音乐的音量。</Chinesesimp>
+            <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
         </Key>
     </Package>
 </Project>

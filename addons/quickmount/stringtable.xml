@@ -25,7 +25,7 @@
             <English>Quickly enter the vehicle you are directly looking at.</English>
             <German>Schnellzugang in das Fahrzeug, welches man direkt anschaut.</German>
             <Italian>Entra velocemente nel veicolo che stai guardando.</Italian>
-            <Japanese>直接見ている車両へ迅速に搭乗します。</Japanese>
+            <Japanese>見ている車両へ迅速に搭乗します。</Japanese>
             <Chinesesimp>快速进入你正在看的载具之中</Chinesesimp>
             <Chinese>快速進入你正在看的載具之中</Chinese>
             <Polish>Szybko wsiądź do pojazdu, na który patrzysz.</Polish>
@@ -35,7 +35,7 @@
             <English>Vehicle Full</English>
             <German>Fahrzeug voll</German>
             <Italian>Veicolo Pieno</Italian>
-            <Japanese>車両は満員</Japanese>
+            <Japanese>車両は満員です</Japanese>
             <Chinesesimp>载具已满</Chinesesimp>
             <Chinese>載具已滿</Chinese>
             <Polish>Pojazd pełny</Polish>
@@ -65,7 +65,7 @@
             <English>Vehicle Locked</English>
             <German>Fahrzeug abgeschlossen</German>
             <Italian>Veicolo Bloccato.</Italian>
-            <Japanese>車両は施錠されている</Japanese>
+            <Japanese>車両は施錠されています</Japanese>
             <Chinesesimp>载具已上锁</Chinesesimp>
             <Chinese>載具已上鎖</Chinese>
             <Polish>Pojazd zablokowany</Polish>
@@ -105,7 +105,7 @@
             <English>Seat priority on entry</English>
             <German>Priorisierter Sitzplatz zum Schnellzugang</German>
             <Italian>Priorità del sedile in entrata</Italian>
-            <Japanese>搭乗の際の優先順位</Japanese>
+            <Japanese>搭乗時の優先順位</Japanese>
             <Chinesesimp>优先想进入哪个座位。</Chinesesimp>
             <Chinese>優先想進入哪個座位。</Chinese>
             <Polish>Priorytet pozycji w pojeździe</Polish>

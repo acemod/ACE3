@@ -76,7 +76,7 @@
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックス</Japanese>
+            <Japanese>アドバンスド バリスティックスを有効化</Japanese>
             <Korean>고급 탄도학을 적용합니다</Korean>
             <Chinese>啟用先進彈道系統</Chinese>
             <Chinesesimp>启用先进弹道系统</Chinesesimp>
@@ -94,7 +94,7 @@
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
             <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
-            <Japanese>発射毎に僅かな銃口初速の変化をシミュレートします。</Japanese>
+            <Japanese>発射毎に銃口初速の僅かな変化をシミュレートします</Japanese>
             <Italian>Simula lievi variazioni della velocità della volata tra un colpo e l'altro</Italian>
             <Korean>각 사격 사이에 총구속도 변화를 시뮬레이션 합니다.</Korean>
             <Chinese>模擬每發子彈的槍口初速都略有不同</Chinese>
@@ -272,7 +272,7 @@
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>
             <Spanish>Este módulo permite la simulación balística avanzada - es decir, la trayectoria de los proyectiles está influenciada por variables como la temperatura del aire, la presión atmosférica, la humedad, la gravedad, el tipo de municiones y el arma desde el que fue disparada.</Spanish>
             <Italian>Questo modulo abilita la simulazione della Balistica Avanzata - cioè la traiettoria dei proiettili è influenzata da variabili come la temperatura dell'aria, pressione atmosferica, umidità, gravità, il tipo di munizione e l'arma da cui è sparata</Italian>
-            <Japanese>このモジュールはアドバンスド バリスティックスを有効化します。弾道は気温や気圧、湿度、重力、弾薬の種類、発射する武器から影響を受けるようになります。</Japanese>
+            <Japanese>アドバンスド バリスティックスを有効化します。弾道は気温や気圧、湿度、重力、弾薬の種類、発射する武器から影響を受けるようになります。</Japanese>
             <Korean>이 모듈은 고급 탄도학을 적용시킵니다 - 이는 발사체의 궤적이 기온, 대기압, 습도, 중력, 탄환의 종류와 어느 무기에서 발사되는지에 따라 영향을 받습니다.</Korean>
             <Chinese>該模塊實現先進的彈道仿真 - 這意味著子彈的軌跡是由空氣溫度、大氣壓力、濕度、重力、彈藥類型以及射擊的武器所影響</Chinese>
             <Chinesesimp>该模块实现先进的弹道仿真 - 这意味着子弹的轨迹是由空气温度、大气压力、湿度、重力、弹药类型以及射击的武器所影响</Chinesesimp>
