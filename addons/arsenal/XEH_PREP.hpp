@@ -47,6 +47,7 @@ PREP(removeVirtualItems);
 PREP(scanConfig);
 PREP(showItem);
 PREP(sortPanel);
+PREP(statBarStatement_accuracy);
 PREP(statBarStatement_default);
 PREP(statBarStatement_impact);
 PREP(statTextStatement_accuracy);
