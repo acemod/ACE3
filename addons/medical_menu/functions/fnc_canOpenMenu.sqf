@@ -20,6 +20,6 @@ params ["_caller", "_target"];
 
 (alive _caller)
 && {!isNull _target}
-&& {((_caller distance _target) < GVAR(maxRange)) || {(vehicle _caller) == (vehicle _target)} || {_caller in allCurators}} //for now, ignore range when in same vehicle or zeus
+&& {((_caller distance _target) < GVAR(maxRange)) || {(vehicle _caller) == (vehicle _target)} || {!isNull findDisplay 312}} //for now, ignore range when in same vehicle or zeus
 && {(GVAR(allow) == 1) || {(GVAR(allow) == 2) && {(vehicle _caller != _caller) || {vehicle _target != _target}}}}
 && {(GVAR(useMenu) == 1) || {(GVAR(useMenu) == 2) && {(vehicle _caller != _caller) || {vehicle _target != _target}}}}
