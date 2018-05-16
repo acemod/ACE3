@@ -19,11 +19,14 @@
 params ["_target", "_player"];
 TRACE_2("params",_target,_player);
 
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgWeapons = configFile >> "CfgWeapons";
+
 private _actions = [];
 
 private _magazines = magazines _player;
 {
-    private _config = configFile >> "CfgMagazines" >> _x;
+    private _config = _cfgMagazines >> _x;
     if (getText (_config >> "ACE_Attachable") != "") then {
         private _displayName = getText (_config >> "displayName");
         private _picture = getText (_config >> "picture");
@@ -33,7 +36,7 @@ private _magazines = magazines _player;
 } forEach (_magazines arrayIntersect _magazines);
 
 {
-    private _config = configFile >> "CfgWeapons" >> _x;
+    private _config = _cfgWeapons >> _x;
     if (getText (_config >> "ACE_Attachable") != "") then {
         private _displayName = getText (_config >> "displayName");
         private _picture = getText (_config >> "picture");
