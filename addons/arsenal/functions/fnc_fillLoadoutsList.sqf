@@ -115,6 +115,6 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     } foreach (_sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x});
 };
 
-[QGVAR(loadoutsListFilled), [_display]] call CBA_fnc_localEvent;
+[QGVAR(loadoutsListFilled), [_display, _control]] call CBA_fnc_localEvent;
 
 _contentPanelCtrl lnbSort [1, false];
