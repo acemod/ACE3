@@ -33,11 +33,7 @@ call FUNC(compileStats);
     };
 
     {
-        private _currentIDIndex = _x findIf (_x select 0 == _currentID);
-
-        if (_currentIDIndex > -1) then {
-            _x deleteAt _currentIDIndex;
-        };
+        _x deleteAt (_x findIf {_x select 0 == _currentID});
     } foreach _tabToChange;
 } foreach _IDList;
 
