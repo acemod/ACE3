@@ -25,7 +25,7 @@ params ["_params", "_function", "_namespace", "_uid", "_duration", "_event"];
 if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
     _namespace setVariable [_uid, [diag_tickTime + _duration, _params call _function]];
 
-    // Does the cache needs to be cleared on an event?
+    // Does the cache need to be cleared on an event?
     if (!isNil "_event") then {
         private _varName = format [QGVAR(clearCache_%1), _event];
         private _cacheList = missionNamespace getVariable _varName;
