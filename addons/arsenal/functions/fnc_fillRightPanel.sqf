@@ -286,9 +286,7 @@ switch (_ctrlIDC) do {
     };
 };
 
-if (GVAR(currentRightPanel) != _ctrlIDC) then {
-    (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
-};
+(_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
