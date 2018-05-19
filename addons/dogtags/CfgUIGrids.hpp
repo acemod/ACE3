@@ -3,12 +3,21 @@ class CfgUIGrids {
         class Presets {
             class Arma3 {
                 class Variables {
-                    grid_ACE_dogtags[] = {{"(safeZoneX + safeZoneW) - (12.9 * ((safeZoneW / safeZoneH) min 1.2) / 40)", "safeZoneY + 0.175 * safeZoneH", "8 * (((safeZoneW / safeZoneH) min 1.2) / 40)", "8 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)"}, "(((safeZoneW / safeZoneH) min 1.2) / 40)", "((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)"};
+                    GVAR(grid)[] = {
+                        {
+                            (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W,
+                            safeZoneY + 0.175 * safeZoneH,
+                            8 * GUI_GRID_W,
+                            8 * GUI_GRID_H
+                        },
+                        GUI_GRID_W,
+                        GUI_GRID_H
+                    };
                 };
             };
         };
         class Variables {
-            class grid_ACE_dogtags {
+            class GVAR(grid) {
                 displayName = COMPONENT_NAME;
                 description = CSTRING(IGUI_Description);
                 preview = QPATHTOF(ui\igui_preview.paa);
