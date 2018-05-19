@@ -80,15 +80,17 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
         {
             private _subIndex = _forEachIndex;
             {
-                // Magazine group
-                if !(isClass (configFile >> "CfgMagazines" >> _x)) then {
-                    private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
-                    private _magArray = [_magazineGroups, _x] call CBA_fnc_hashGet;
-                    {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
-                } else {
-                    ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
-                }
+                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
+
+            // Magazine groups
+            {
+                private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
+                private _magArray = [_magazineGroups, _x] call CBA_fnc_hashGet;
+                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
+            } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
+
+
         } foreach getArray (_weaponConfig >> "muzzles");
     };
 } foreach [primaryWeapon GVAR(center), handgunWeapon GVAR(center), secondaryWeapon GVAR(center)];
