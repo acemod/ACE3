@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * _this call ace_vehicles_fnc_handleDamageEjectDestroyed
+ * _this call ace_cookoff_fnc_handleDamageEjectIfDestroyed
  *
  * Public: No
  */
@@ -20,7 +20,7 @@ params ["_vehicle", "", "", "", "_ammo"];
 
 if (alive _vehicle) exitWith {};
 
-TRACE_2("ejectDestroyed HDEH",typeOf _vehicle,_this);
+TRACE_2("ejectIfDestroyed HDEH",typeOf _vehicle,_this);
 
 if (0.5 >= getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive")) then {
     {

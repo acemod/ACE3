@@ -1,18 +1,7 @@
 // by esteldunedain
 #include "script_component.hpp"
 
-// eject destroyed vehicle init
-{
-    [_x, "init", {
-        params ["_vehicle"];
-        if (!alive _vehicle) exitWith {};
-        _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectDestroyed)}];
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach ["Boat_Transport_02_base_F", "Rubber_duck_base_F"];
-
-
 if (!hasInterface) exitWith {};
-
 GVAR(isSpeedLimiter) = false;
 // Add keybinds
 ["ACE3 Vehicles", QGVAR(speedLimiter), localize LSTRING(SpeedLimiter),

@@ -6,3 +6,4 @@ PREP(cookOffBox);
 PREP(blowOffTurret);
 PREP(detonateAmmunition);
 PREP(getVehicleAmmo);
+PREP(handleDamageEjectIfDestroyed);
