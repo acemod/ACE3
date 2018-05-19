@@ -18,20 +18,24 @@
 #include "script_component.hpp"
 
 private _focus = vehicle (param [0, objNull, [objNull]]);
+TRACE_1("cam_prepareTarget",_focus);
 
 if !(isNull _focus) then {
-    // Interpolate zoom
+    // Zooming takes place smoothly over multiple frames
+    // _zoom is target set by user, _zoomTrue is actual value each frame
     private _zoom = [0, GVAR(camDistance)] select (GVAR(camMode) == MODE_FOLLOW);
-    private _zoomTemp = GVAR(camDistanceTemp);
+    private _zoomTrue = GVAR(camDistanceTrue);
 
-    if (_zoomTemp != _zoom) then {
-        _zoomTemp = [_zoomTemp, _zoom, 10, GVAR(camDeltaTime)] call BIS_fnc_lerp;
-        GVAR(camDistanceTemp) = _zoomTemp;
+    // Interpolate zoom each frame until desired zoom is reached
+    if (_zoomTrue != _zoom) then {
+        _zoomTrue = (_zoomTrue * (1 - GVAR(camDeltaTime) * 10)) + (_zoom * GVAR(camDeltaTime) * 10);
+        GVAR(camDistanceTrue) = _zoomTrue;
+        TRACE_2("new zoom",GVAR(camDeltaTime),_zoomTrue);
     };
 
     // The distance at which to place camera from the focus pivot
     private _bbd = [_focus] call BIS_fnc_getObjectBBD;
-    private _distance = (_bbd select 1) + _zoomTemp;
+    private _distance = (_bbd select 1) + _zoomTrue;
 
     // The pivot on the target vehicle
     private _isMan = _focus isKindOf "Man";

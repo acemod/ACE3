@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {"ACE_Comanche_Test"};
+        units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_laser"};
@@ -14,7 +14,6 @@ class CfgPatches {
 };
 
 #include "ACE_GuidanceConfig.hpp"
-#include "ACE_Settings.hpp"
 
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"

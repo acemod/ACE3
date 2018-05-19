@@ -204,7 +204,7 @@
             <Hungarian>Névcímkék megjelenítése AI-nál?</Hungarian>
             <Russian>Показывать имена ботов?</Russian>
             <Italian>Mostra etichette nomi per IA?</Italian>
-            <Japanese>AI の名札も表示しますか？</Japanese>
+            <Japanese>AI の名札も表示しますか?</Japanese>
             <Korean>인공지능의 이름도 표시합니까?</Korean>
             <Chinesesimp>显示AI名称?</Chinesesimp>
             <Chinese>顯示AI名稱?</Chinese>
@@ -220,7 +220,7 @@
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
-            <Japanese>友軍の AI にも名前と階級を表示しますか？標準: 強制しない</Japanese>
+            <Japanese>友軍の AI にも名前と階級を表示しますか? 標準: 強制しない</Japanese>
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示友军AI的名称和军阶? 预设: 不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
@@ -331,7 +331,7 @@
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
             <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
-            <Japanese>このモジュールは名札の表示範囲と設定を変更できます。</Japanese>
+            <Japanese>これは名札の表示範囲と設定を変更できます。</Japanese>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>这个模块允许您设定名称和显示范围等设定</Chinesesimp>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
@@ -538,6 +538,10 @@
             <Italian>Sfocatura nei bordi dello schermo</Italian>
             <Chinesesimp>在荧幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_playerNamesMaxAlpha">
+            <English>Player tags transparency</English>
+            <Japanese>プレイヤー名札の透明度</Japanese>
         </Key>
     </Package>
 </Project>

@@ -234,7 +234,7 @@ class CfgVehicles {
         };
     };
     class ACE_moduleAddSpareParts: Module_F {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(AddSpareParts_Module_DisplayName);
         icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
@@ -321,7 +321,8 @@ class CfgVehicles {
 
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
-        destrType = "DesturctNo"; // scripted delayed destruction
+        editorCategory = "EdCat_Supplies";
+        editorSubcategory = QEGVAR(main,subcategory);
     };
 
     class ACE_Track: ACE_RepairItem_Base {
@@ -335,7 +336,7 @@ class CfgVehicles {
         mapSize = 0.5;
 
         // damage handling
-        armor = 0.6;
+        armor = 1000;
         armorStructural = 1;
         minTotalDamageThreshold = 0.01;
         explosionShielding = 1;
@@ -350,6 +351,8 @@ class CfgVehicles {
                 QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
             };
         };
+
+        editorPreview = QPATHTOF(data\preview_track.jpg);
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
@@ -364,7 +367,7 @@ class CfgVehicles {
         mapSize = 0.7;
 
         // damage handling
-        armor = 0.05;
+        armor = 120;
         armorStructural = 1;
         minTotalDamageThreshold = 0.01;
         explosionShielding = 1;
@@ -396,10 +399,22 @@ class CfgVehicles {
                 QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
             };
         };
+
+        editorPreview = QPATHTOF(data\preview_wheel.jpg);
     };
 
     // disable vanilla repair
     // "getNumber (_x >> ""transportRepair"") > 0" configClasses (configFile >> "CfgVehicles")
+    class ReammoBox_F;
+    class Land_RepairDepot_01_base_F: ReammoBox_F { // TanksDLC - Repair Depo Thing
+        GVAR(canRepair) = 1;
+        transportRepair = 0; 
+    };
+    class Van_02_base_F;
+    class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
+        GVAR(canRepair) = 1;
+        transportRepair = 0;  
+    };
 
     class Slingload_01_Base_F;
     class B_Slingload_01_Repair_F: Slingload_01_Base_F {
@@ -409,7 +424,7 @@ class CfgVehicles {
 
     class Helicopter_Base_H;
     class Heli_Transport_04_base_F: Helicopter_Base_H {
-        GVAR(hitpointGroups)[] = { {"HitEngine", {"HitEngine1", "HitEngine2"}}, {"Glass_1_hitpoint", {"Glass_2_hitpoint", "Glass_3_hitpoint", "Glass_4_hitpoint", "Glass_5_hitpoint", "Glass_6_hitpoint", "Glass_7_hitpoint", "Glass_8_hitpoint", "Glass_9_hitpoint", "Glass_10_hitpoint", "Glass_11_hitpoint", "Glass_12_hitpoint", "Glass_13_hitpoint", "Glass_14_hitpoint", "Glass_15_hitpoint", "Glass_16_hitpoint", "Glass_17_hitpoint", "Glass_18_hitpoint", "Glass_19_hitpoint", "Glass_20_hitpoint"}} };
+        GVAR(hitpointGroups)[] = { {"HitEngine", {"HitEngine1", "HitEngine2"}} };
     };
     class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
         GVAR(canRepair) = 1;
@@ -443,16 +458,10 @@ class CfgVehicles {
     };
 
     class Car_F;
-    class Offroad_01_base_F: Car_F {
-        GVAR(hitpointGroups)[] = { {"HitGlass1", {"HitGlass2"}} };
-    };
+    class Offroad_01_base_F: Car_F {};
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
-    };
-
-    class MRAP_01_base_F: Car_F {
-        GVAR(hitpointGroups)[] = { {"HitGlass1", {"HitGlass2", "HitGlass3", "HitGlass4", "HitGlass5", "HitGlass6"}} };
     };
 
     class B_Truck_01_mover_F;
@@ -481,8 +490,7 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Quadbike_01_base_F;
-    class B_Quadbike_01_F: Quadbike_01_base_F {
+    class Quadbike_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
     };
     class Hatchback_01_base_F: Car_F {

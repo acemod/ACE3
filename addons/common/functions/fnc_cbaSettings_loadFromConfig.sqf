@@ -61,6 +61,7 @@ case ("SCALAR"): { // ACE's Scalar can be a float or an index for a list
             _cbaValueInfo = if (isArray (_config >> "sliderSettings")) then {
                 getArray (_config >> "sliderSettings");
             } else {
+                INFO_1("Using auto min/max for [%1]",_varName);
                 [-1, 5000, 0, 1]
             };
             _cbaValueInfo set [2, getNumber (_config >> "value")];
@@ -90,8 +91,8 @@ if (_category == "") then {
     // WARNING_1("Setting [%1] - no category",_varName);
     _category = "Uncategorized";
 };
-if (((_varName select [0, 4]) == "ACE_") && {(_category select [0, 3]) != "ACE"}) then {_category = format ["ACE - %1", _category];};
-if (((_varName select [0, 5]) == "ACEX_") && {(_category select [0, 4]) != "ACEX"}) then {_category = format ["ACEX - %1", _category];};
+if (((_varName select [0, 4]) == "ACE_") && {(_category select [0, 3]) != "ACE"}) then {_category = format ["ACE %1", _category];};
+if (((_varName select [0, 5]) == "ACEX_") && {(_category select [0, 4]) != "ACEX"}) then {_category = format ["ACEX %1", _category];};
 
 private _code = compile format ['["%1", _this] call FUNC(cbaSettings_settingChanged)', _varName];
 

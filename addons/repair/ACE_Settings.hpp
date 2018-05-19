@@ -29,6 +29,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0.6;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
+        sliderSettings[] = {0, 1, 0.6, 2};
     };
     class GVAR(repairDamageThreshold_engineer) {
         displayName = CSTRING(repairDamageThreshold_Engineer_name);
@@ -36,6 +37,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0.4;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
+        sliderSettings[] = {0, 1, 0.4, 2};
     };
     class GVAR(consumeItem_toolKit) {
         displayName = CSTRING(consumeItem_ToolKit_name);
@@ -78,6 +80,8 @@ class ACE_Settings {
         _values[] = {{}, {"ToolKit"}};
     };
     class GVAR(autoShutOffEngineWhenStartingRepair) {
+        displayName = CSTRING(autoShutOffEngineWhenStartingRepair_name);
+        description = CSTRING(autoShutOffEngineWhenStartingRepair_description);
         typeName = "BOOL";
         value = 0;
         category = ECSTRING(OptionsMenu,CategoryLogistics);

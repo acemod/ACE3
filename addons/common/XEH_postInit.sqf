@@ -19,37 +19,64 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
     TRACE_2("forceWalk EH",_object,_set);
     _object forceWalk (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockSprint), { //Name reversed from `allowSprint` because we want NOR logic
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
     _object setCaptive (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setHidden), {
+    params ["_object", "_set"];
+    TRACE_2("setHidden EH",_object,_set);
+    // May report nil. Default to factor 1.
+    private _vis = [_object getUnitTrait "camouflageCoef"] param [0, 1];
+    if (_set > 0) then {
+        if (_vis != 0) then {
+            _object setVariable [QGVAR(oldVisibility), _vis];
+            _object setUnitTrait ["camouflageCoef", 0];
+            {
+                if (side _x != side group _object) then {
+                    _x forgetTarget _object;
+                };
+            } forEach allGroups;
+        };
+    } else {
+        _vis = _object getVariable [QGVAR(oldVisibility), _vis];
+        _object setUnitTrait ["camouflageCoef", _vis];
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
     params ["_object", "_set"];
     if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
         TRACE_2("blockDamage EH (using medical)",_object,_set);
-       _object setvariable [QEGVAR(medical,allowDamage), (_set == 0), true];
+       _object setVariable [QEGVAR(medical,allowDamage), (_set == 0), true];
     } else {
         TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
        _object allowDamage (_set == 0);
     };
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockEngine), {
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
@@ -158,8 +185,8 @@ private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberStrin
 
 // check previous version number from profile
 if (_currentVersion != _previousVersion) then {
-    // do something
-
+    INFO_2("Updating ACE from [%1] to [%2]",_previousVersion,_currentVersion);
+    [_previousVersion] call FUNC(cbaSettings_transferUserSettings);
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
@@ -256,10 +283,10 @@ addMissionEventHandler ["PlayerViewChanged", {
     // On non-server client this command is semi-broken
     // arg index 5 should be the controlled UAV, but it will often be objNull (delay from locality switching?)
     // On PlayerViewChanged event, start polling for new uav state for a few seconds (should be done within a few frames)
-    
+
     params ["", "", "", "", "_newCameraOn", "_UAV"];
     TRACE_2("PlayerViewChanged",_newCameraOn,_UAV);
-    
+
     [{
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
@@ -280,14 +307,14 @@ addMissionEventHandler ["PlayerViewChanged", {
                 _seatAI = gunner _UAV;
             };
         };
-        
+
         private _newArray = [_UAV, _seatAI, _turret, _position];
         if (_newArray isEqualTo ACE_controlledUAV) exitWith {false}; // no change yet
-        
+
         TRACE_2("Seat Change",_newArray,ACE_controlledUAV);
         ACE_controlledUAV = _newArray;
         ["ACE_controlledUAV", _newArray] call CBA_fnc_localEvent;
-        
+
         // stay in the loop as we might switch from gunner -> driver, and there may be a empty position event in-between
         false
     }, {}, [], 3, {TRACE_1("timeout",_this);}] call CBA_fnc_waitUntilAndExecute;

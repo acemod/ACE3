@@ -84,6 +84,11 @@
         <Key ID="STR_ACE_Weather_enabled_Description">
             <English>Expands the existing weather by temperature, humidity and air pressure.</English>
             <German>Erweitert das vorhandene Wetter um Temperatur, Luftfeuchtigkeit und Luftdruck.</German>
+            <Italian>Espande il tempo esistente per temperatura, umidità e pressione dell'aria.</Italian>
+            <Chinese>透過增加濕度、溫度與氣壓來增強天氣模擬的表現。</Chinese>
+            <Chinesesimp>透过增加湿度、温度与气压来增强天气模拟的表现。</Chinesesimp>
+            <Japanese>気温や湿度、大気圧によって既存の天候を拡張します。</Japanese>
+            <Korean>온도, 습도 및 기압에 따라 기존 날씨를 확장합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -95,7 +100,7 @@
             <French>Intervalle de synchronisation</French>
             <Hungarian>Frissítési intervallum</Hungarian>
             <Russian>Интервал обновления</Russian>
-            <Italian>Intervallo Aggiornamenti</Italian>
+            <Italian>Intervallo Aggiornamento</Italian>
             <Japanese>更新間隔</Japanese>
             <Korean>갱신 간격</Korean>
             <Chinesesimp>更新间隔</Chinesesimp>
@@ -111,7 +116,7 @@
             <French>Défini un intervalle (secondes) entre deux synchronisations</French>
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
-            <Italian>Definisce l'intervallo (in secondi) tra aggiornamenti del meteo</Italian>
+            <Italian>Definisce l'intervallo(in secondi) tra aggiornamenti del meteo</Italian>
             <Japanese>天候を更新する間隔を定義します。(秒)</Japanese>
             <Korean>기후를 갱신 하는 간격을 초 단위로 정합니다.</Korean>
             <Chinesesimp>设定天气更新的时间间隔(秒)</Chinesesimp>
@@ -120,10 +125,20 @@
         <Key ID="STR_ACE_Weather_windSimulation_DisplayName">
             <English>Wind Simulation (map based)</English>
             <German>Wind Simulation (kartenbasiert)</German>
+            <Italian>Simulazione del Vento (basato sulla mappa)</Italian>
+            <Chinese>風力模擬(基於地圖)</Chinese>
+            <Chinesesimp>风力模拟(基于地图)</Chinesesimp>
+            <Japanese>風シミュレーション (マップを基に)</Japanese>
+            <Korean>바람 시뮬레이션 (지도 기반)</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
             <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
             <German>Aktiviert die kartenbasierte Windsimulation (überschreibt Vanilla Wind)</German>
+            <Italian>Abilita la simulazione del vento basato sulla mappa (sovrascrive il vento vanilla)</Italian>
+            <Chinese>啟用後將遵照地圖特色進行風力模擬(覆蓋掉官方原版的風力模擬)</Chinese>
+            <Chinesesimp>启用后将遵照地图特色进行风力模拟(覆盖掉官方原版的风力模拟)</Chinesesimp>
+            <Japanese>マップを基にした風シミュレーションを有効化 (標準の風を上書き)</Japanese>
+            <Korean>지도 기반의 바람 시뮬레이션을 활성화합니다 (바닐라 바람을 덮음)</Korean>
         </Key>
     </Package>
 </Project>

@@ -48,7 +48,7 @@ To add a preset via code you use the function `call acex_fortify_fnc_registerObj
 * None
 *
 * Example:
-* [west, 5000, [["Sandbag", 5], ["Bunker", 50]]] call acex_fortify_fnc_registerObjects
+* [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call acex_fortify_fnc_registerObjects
 ```
 
 Adding it through `description.ext` you use:
@@ -64,3 +64,12 @@ class ACEX_Fortify_Presets {
  ```
 
  Then you will have to set the mission preset to `myMissionObjects` with `#fortify blufor myMissionObjects` to enable it.
+
+## 2. Events
+
+### 2.1 Listenable
+
+Event Name | Passed Parameter(s) | Locality | Description
+---------- | ----------- | ------------------- | --------
+`acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
+`acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted

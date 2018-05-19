@@ -35,26 +35,31 @@ private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage"];
 private _vertical = _display displayCtrl 12;
 private _horizontal = _display displayCtrl 13;
-if (GVAR(useLegacyUI)) then {
-    _vertical ctrlSetText (str _elevation);
-    _horizontal ctrlSetText (str _windage);
+if (GVAR(simplifiedZeroing)) then {
+    _vertical ctrlSetText format["%1 m", round(_elevation)];
+    _horizontal ctrlSetText "";
 } else {
-    if (_elevation == 0) then {
-        _vertical ctrlSetText "0";
+    if (GVAR(useLegacyUI)) then {
+        _vertical ctrlSetText (str _elevation);
+        _horizontal ctrlSetText (str _windage);
     } else {
-        if (_elevation > 0) then {
-            _vertical ctrlSetText (str _elevation);
+        if (_elevation == 0) then {
+            _vertical ctrlSetText "0";
         } else {
-            _vertical ctrlSetText format[localize LSTRING(DisplayAdjustmentDown), abs(_elevation)];
+            if (_elevation > 0) then {
+                _vertical ctrlSetText (str _elevation);
+            } else {
+                _vertical ctrlSetText format[localize LSTRING(DisplayAdjustmentDown), abs(_elevation)];
+            };
         };
-    };
-    if (_windage == 0) then {
-        _horizontal ctrlSetText "0";
-    } else {
-        if (_windage > 0) then {
-            _horizontal ctrlSetText format[localize LSTRING(DisplayAdjustmentRight), abs(_windage)];
+        if (_windage == 0) then {
+            _horizontal ctrlSetText "0";
         } else {
-            _horizontal ctrlSetText format[localize LSTRING(DisplayAdjustmentLeft), abs(_windage)];
+            if (_windage > 0) then {
+                _horizontal ctrlSetText format[localize LSTRING(DisplayAdjustmentRight), abs(_windage)];
+            } else {
+                _horizontal ctrlSetText format[localize LSTRING(DisplayAdjustmentLeft), abs(_windage)];
+            };
         };
     };
 };

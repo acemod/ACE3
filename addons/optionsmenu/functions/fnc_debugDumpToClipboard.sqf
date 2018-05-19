@@ -55,15 +55,16 @@ if (isNull ace_player) then {"null"} else {animationState ace_player}];
 
 
 _text = format ["
-------ACE Settings------"];
+------ACE's CBA Settings------"];
 [_text] call _outputText;
 
-
+private _aceSettings = cba_settings_allSettings select {((_x select [0,4]) == "ace_") || {(_x select [0,5]) == "acex_"}};
+_aceSettings sort true;
 {
-    _var = missionNamespace getVariable [(_x select 0), "ERROR: Not Defined"];
-    _text = format ["%1 - %2", (_x select 0), _var];
+    _var = missionNamespace getVariable [_x, "ERROR: Not Defined"];
+    _text = format ["%1 - %2", _x, _var];
     [_text] call _outputText;
-} forEach EGVAR(common,settings);
+} forEach _aceSettings;
 
 
 _text = format ["

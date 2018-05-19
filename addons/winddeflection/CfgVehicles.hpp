@@ -30,12 +30,6 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 0.05;
             };
-            class simulationRadius {
-                displayName = CSTRING(simulationRadius_DisplayName);
-                description = CSTRING(simulationRadius_Description);
-                typeName = "NUMBER";
-                defaultValue = 3000;
-            };
         };
         class ModuleDescription {
             description = CSTRING(windDeflection_Description);

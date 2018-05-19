@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laserpointer">
+        <Key ID="STR_ACE_Laserpointer_DisplayName">
+            <English>Laser Pointer</English>
+            <French>Pointeur laser</French>
+            <German>Laserpointer</German>
+            <Russian>Лазерный прицел</Russian>
+            <Czech>Laserové ukazovátko</Czech>
+            <Polish>Wskaźnik laserowy</Polish>
+            <Hungarian>Lézer-pointer</Hungarian>
+            <Spanish>Puntero láser</Spanish>
+            <Italian>Puntatore laser</Italian>
+            <Portuguese>Laser</Portuguese>
+            <Japanese>レーザ ポインタ</Japanese>
+            <Korean>레이저 지시기</Korean>
+            <Chinesesimp>雷射指示器</Chinesesimp>
+            <Chinese>雷射指示器</Chinese>
+        </Key>
         <Key ID="STR_ACE_Laserpointer_red">
             <English>Laser Pointer (red)</English>
             <French>Pointeur laser (rouge)</French>

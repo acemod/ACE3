@@ -41,13 +41,14 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
-        [_onAttachText] call EFUNC(common,displayTextStructured);
+        [_onAttachText, 2] call EFUNC(common,displayTextStructured);
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
     [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockThrow", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
 
     [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
@@ -85,6 +86,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             [_unit, "forceWalk", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
+            [_unit, "blockThrow", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
             [] call EFUNC(interaction,hideMouseHint);
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             _unit removeAction _actionID;

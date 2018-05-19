@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_ladder] call ace_tacticalladder_fnc_cancelTLdeploy
+ * [player, 1] call ace_tacticalladder_fnc_cancelTLdeploy
  *
  * Public: No
  */
@@ -24,6 +24,7 @@ if (_key != 1 || {isNull GVAR(ladder)}) exitWith {};
 
 // enable running again
 [_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
 
 detach GVAR(ladder);
 

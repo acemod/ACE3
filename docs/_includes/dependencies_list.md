@@ -22,6 +22,10 @@
 `ace_main`
 {% endif %}
 
+{% if include.component == "arsenal" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "atragmx" %}
 `ACE_Advanced_Ballistics`, `ACE_common`, `ACE_weather`
 {% endif %}
@@ -207,7 +211,7 @@
 {% endif %}
 
 {% if include.component == "maverick" %}
-`ace_hellfire`
+`ace_missileguidance`
 {% endif %}
 
 {% if include.component == "medical" %}
@@ -499,10 +503,6 @@
 {% endif %}
 
 {% if include.component == "particles" %}
-`ace_common`
-{% endif %}
-
-{% if include.component == "server" %}
 `ace_common`
 {% endif %}
 

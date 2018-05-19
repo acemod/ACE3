@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 
 GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
 GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
+GVAR(vehicleIconCache) = call CBA_fnc_createNamespace; // for getVehicleIcon
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
@@ -39,5 +40,7 @@ uiNamespace setVariable ["ACE_player", objNull];
 isHC = !hasInterface && !isDedicated; // deprecated because no tag
 missionNamespace setVariable ["ACE_isHC", ACE_isHC];
 uiNamespace setVariable ["ACE_isHC", ACE_isHC];
+
+#include "initSettings.sqf"
 
 ADDON = true;

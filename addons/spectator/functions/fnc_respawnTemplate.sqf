@@ -12,7 +12,7 @@
  * 3: Respawn Delay <NUMBER>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [bob, kevin, 3, 6] call ace_spectator_fnc_respawnTemplate

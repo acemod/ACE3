@@ -49,12 +49,13 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(DisplayName);
         model = QPATHTOF(data\sniper_tripod.p3d);
+        icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";
 
         class AnimationSources {
             class slide_down_tripod {
                 source = "user";
                 animPeriod = 0.02;
-                initPhase = 0;
+                initPhase = 0.5;
                 minValue = 0;
                 maxValue = 1;
             };
@@ -65,15 +66,15 @@ class CfgVehicles {
 
         class ACE_Actions {
             class ACE_MainActions {
-                selection = "";
+                selection = "interaction_point";
                 distance = 5;
-                condition = "true";
+                condition = "(true)";
 
                 class ACE_Pickup {
                     selection = "";
                     displayName = CSTRING(PickUp);
                     distance = 5;
-                    condition = "true";
+                    condition = "(true)";
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -85,7 +86,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = CSTRING(Adjust);
                     distance = 5;
-                    condition = "true";
+                    condition = "(true)";
                     //wait a frame to handle "Do When releasing action menu key" option:
                     statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
@@ -95,5 +96,9 @@ class CfgVehicles {
                 };
             };
         };
+
+        editorCategory = "EdCat_Supplies";
+        editorSubcategory = QEGVAR(main,subcategory);
+        editorPreview = QPATHTOF(data\preview_tripod.jpg);
     };
 };
