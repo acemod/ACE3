@@ -22,7 +22,7 @@ if (alive _vehicle) exitWith {};
 
 TRACE_2("ejectIfDestroyed HDEH",typeOf _vehicle,_this);
 
-if (0.5 >= getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive")) then {
+if (!IS_EXPLOSIVE_AMMO(_ammo)) then {
     {
         if (alive _x) then {
             moveOut _x;
