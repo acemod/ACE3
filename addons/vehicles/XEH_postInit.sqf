@@ -2,32 +2,13 @@
 #include "script_component.hpp"
 
 // eject destroyed vehicle init
-private _ejectDestroyedClasses = [];
 {
-    private _ejectDestroyedClass = configName _x;
-    if (-1 == _ejectDestroyedClasses findIf {_ejectDestroyedClass isKindOf _x}) then {
-        TRACE_1("init ejectDestroyed class",_ejectDestroyedClass);
-        _ejectDestroyedClasses pushBack _ejectDestroyedClass;
-        [_ejectDestroyedClass, "init", {
-            params ["_vehicle"];
-            if (!alive _vehicle) exitWith {};
-            TRACE_2("init ejectDestroyed vehicle",_vehicle,typeOf _vehicle);
-            _vehicle addEventHandler ["HandleDamage", {
-                params ["_vehicle", "", "", "", "_ammo"];
-                if (alive _vehicle) exitWith {};
-                TRACE_2("ejectDestroyed HDEH",typeOf _vehicle,_this);
-                if (0.5 >= getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive")) then {
-                    {
-                        if (alive _x) then {
-                            moveOut _x;
-                        };
-                    } forEach crew _vehicle;
-                };
-                _vehicle removeEventHandler ["HandleDamage", _thisEventHandler];
-            }];
-        }, true, [], true] call CBA_fnc_addClassEventHandler;
-    };
-} forEach (QUOTE(1 == getNumber (_x >> QQGVAR(ejectDestroyed))) configClasses (configFile >> "CfgVehicles"));
+    [_x, "init", {
+        params ["_vehicle"];
+        if (!alive _vehicle) exitWith {};
+        _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectDestroyed)}];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ["Boat_Transport_02_base_F", "Rubber_duck_base_F"];
 
 
 if (!hasInterface) exitWith {};
