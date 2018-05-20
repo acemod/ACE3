@@ -15,15 +15,6 @@ jobs:
           name: Build
           command: |
             make -j 2
-
-  deployment:
-    docker:
-      - image: acemod/armake
-    branch: master
-    requires:
-      - build
-    steps:
-      - checkout
       - deploy:
           name: Update documentation and translation statistics
           command: |
