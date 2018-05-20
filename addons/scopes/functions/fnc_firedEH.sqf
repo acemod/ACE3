@@ -24,11 +24,8 @@ private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponI
 if (_weaponIndex < 0) exitWith {};
 
 private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
-private _zeroing = +(_adjustment select _weaponIndex);
+private _zeroing = (_adjustment select _weaponIndex) vectorMultiply 0.05729578; // Convert zeroing from mils to degrees (value of MRAD_TO_DEG(1))
 TRACE_1("Adjusting With",_zeroing);
-
-// Convert zeroing from mils to degrees
-_zeroing = _zeroing vectorMultiply MRAD_TO_DEG(1);
 
 if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
@@ -39,6 +36,8 @@ if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
     private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
     if (isNil "_zeroCorrection") then {
          _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
+         TRACE_7("new calc",_oldZeroRange,_newZeroRange,_boreHeight,_weapon,_ammo,_magazine,_advancedBallistics);
+         TRACE_1("",_zeroCorrection);
     };
     if (GVAR(simplifiedZeroing)) then {
         _zeroing = [0, 0, _zeroCorrection - _baseAngle];
@@ -50,6 +49,7 @@ if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
 #endif
 };
 
+TRACE_1("",_zeroing);
 if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 
 _zeroing params ["_elevation", "_windage", "_zero"];

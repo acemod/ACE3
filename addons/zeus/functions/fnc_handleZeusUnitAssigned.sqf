@@ -19,7 +19,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 if !(isClass (configFile >> "ACE_Curator")) exitWith { ERROR("The ACE_Curator class does not exist") };

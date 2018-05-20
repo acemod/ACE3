@@ -35,7 +35,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_EdenDescription">
             <English>Influences the overall performance of this unit. Higher means better.</English>
             <German>Beinflusst die Leistungsfähigkeit dieser Einheit. Ein höherer Wert bedeutet bessere Leistung.</German>
-            <Japanese>このユニットの全体的な動作に影響させます。高いほど良い効果があります。</Japanese>
+            <Japanese>ユニットの全体的な動作に影響させます。高いほど良い効果があります。</Japanese>
             <Polish>Wpływa na ogólną wydolność tej jednostki. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 이 단위로 영향을 받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Influence les performances générales de cette unité. Une valeur plus élevée implique de meilleures performances.</French>
@@ -101,13 +101,19 @@
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
             <English>Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.</English>
             <German>Beeinflusst, wie stark Steigungen den Ausdauerverbrauch erhöhen. Ein höherer Wert erhöht den Ausdauerverbrauch.</German>
-            <Japanese>地形によって影響する体力の消費量を決定します。高数値ではより体力を消費します。</Japanese>
+            <Japanese>地形によって体力の消費量を決定します。高数値ではより体力を消費します。</Japanese>
             <Polish>Wpływa na to w jakim stopniu stromy teren wpływa na utratę wytrzymałości. Więcej oznacza szybszą utratę wytrzymałości.</Polish>
             <Korean>경사도에 따라 얼마나 피로해지는지를 정합니다.  값이 클수록 더 많은 피로를 유발합니다.</Korean>
             <French>Configure l'influence de l'inclinaison du terrain sur la perte d'endurance. Une valeur plus élevée implique une perte d'endurance plus importante.</French>
             <Italian>Stabilisce quanto la pendenza del terreno incrementa la perdita della stamina. Maggiore significa più stamina persa.</Italian>
             <Chinese>設定陡峭的地形將會影響多少體力的流失，值越高代表體力流失越快</Chinese>
             <Chinesesimp>设定陡峭的地形将会影响多少体力的流，失值越高代表体力流失越快</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor">
+            <English>Sway factor</English>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
+            <English>Influences the amount of weapon sway. Higher means more sway.</English>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>

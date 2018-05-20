@@ -16,4 +16,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define TRACK_HITPOINTS ["HitLTrack", "HitRTrack"]
+#define TRACK_HITPOINTS ["hitltrack", "hitrtrack"]

@@ -80,6 +80,8 @@ class ACE_Settings {
         _values[] = {{}, {"ToolKit"}};
     };
     class GVAR(autoShutOffEngineWhenStartingRepair) {
+        displayName = CSTRING(autoShutOffEngineWhenStartingRepair_name);
+        description = CSTRING(autoShutOffEngineWhenStartingRepair_description);
         typeName = "BOOL";
         value = 0;
         category = ECSTRING(OptionsMenu,CategoryLogistics);

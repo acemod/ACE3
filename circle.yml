@@ -9,6 +9,9 @@ jobs:
           name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
       - run:
+          name: Version
+          command: armake --version
+      - run:
           name: Build
           command: |
             make -j 2
@@ -22,6 +25,11 @@ jobs:
     steps:
       - checkout
       - deploy:
-          name: Deploy
+          name: Update documentation and translation statistics
           command: |
-            python3 tools/deploy.py
+            if [ "${CIRCLE_BRANCH}" == "master" ] && [ "${CIRCLE_PROJECT_USERNAME}" == "acemod" ]; then
+              pip install pygithub pygithub3
+              python3 tools/deploy.py
+            else
+              echo "Skipping, not on acemod/ACE3 master branch..."
+            fi

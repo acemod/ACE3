@@ -8,6 +8,7 @@
             <Chinese>整裝</Chinese>
             <Chinesesimp>整装</Chinesesimp>
             <Japanese>再武装</Japanese>
+            <Japanese>再武装</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
@@ -64,7 +65,7 @@
             <Italian>Quanto velocemente dovrebbe essere riarmato un veicolo?</Italian>
             <Spanish>Cuán rápido es el proceso de rearme?</Spanish>
             <French>A quelle vitesse devrait être réarmé un véhicule ?</French>
-            <Japanese>車両を再武装する速さを設定しますか？</Japanese>
+            <Japanese>車両を再武装する速さを設定しますか?</Japanese>
             <Korean>차량을 얼마나 빨리 재보급 시킵니까?</Korean>
             <Chinesesimp>载具多快会整装完毕?</Chinesesimp>
             <Chinese>載具多快會整裝完畢?</Chinese>
@@ -128,7 +129,7 @@
             <English>How much ammunition does an ammo truck carry?</English>
             <German>Wie viel Munition transportiert ein Munitionslaster?</German>
             <Italian>Quante munizioni può trasportare un camion?</Italian>
-            <Japanese>弾薬トラックがどの位の弾薬を供給できるようにしますか？</Japanese>
+            <Japanese>弾薬トラックがどの位の弾薬を供給できるようにしますか?</Japanese>
             <Chinesesimp>弹药卡车会携带多少的弹药?</Chinesesimp>
             <Chinese>彈藥卡車會攜帶多少的彈藥?</Chinese>
             <Polish>Ile amunicji przewozi ciężarówka?</Polish>
@@ -188,7 +189,7 @@
             <English>There is ammunition worth %1 points left.</English>
             <German>Es ist noch Munition für %1 Punkte übrig.</German>
             <Italian>E' presente una penalità delle munizioni %1 punti rimanenti.</Italian>
-            <Japanese>この弾薬は%1残っている</Japanese>
+            <Japanese>弾薬は%1残っています。</Japanese>
             <Chinesesimp>还剩下%1多的弹药.</Chinesesimp>
             <Chinese>還剩下%1多的彈藥.</Chinese>
             <Polish>Pozostało %1 punktów amunicji.</Polish>
@@ -239,7 +240,7 @@
             <Italian>Riarmando %1 con %2...</Italian>
             <Spanish>Rearmando %1 con %2...</Spanish>
             <French>Réarmement de %1 avec %2...</French>
-            <Japanese>%1を%2により再武装する。</Japanese>
+            <Japanese>%1を%2により再武装しています・・・</Japanese>
             <Korean>%2을 %1에 재보급중...</Korean>
             <Chinesesimp>%2正整装到%1中...</Chinesesimp>
             <Chinese>%2正整裝到%1中...</Chinese>
@@ -254,7 +255,7 @@
             <Italian>Riarmando %1...</Italian>
             <Spanish>Rearmando %1...</Spanish>
             <French>Réarmement de %1...</French>
-            <Japanese>%1を再武装中・・・</Japanese>
+            <Japanese>%1を再武装しています・・・</Japanese>
             <Korean>%1 재보급중...</Korean>
             <Chinesesimp>整装%1中...</Chinesesimp>
             <Chinese>整裝%1中...</Chinese>
@@ -284,7 +285,7 @@
             <Italian>Prendi munizioni</Italian>
             <Spanish>Tomar munición</Spanish>
             <French>Prendre la munition</French>
-            <Japanese>弾薬をとる</Japanese>
+            <Japanese>弾薬を取る</Japanese>
             <Korean>탄약 가지기</Korean>
             <Chinesesimp>取得弹药</Chinesesimp>
             <Chinese>取得彈藥</Chinese>
@@ -343,7 +344,7 @@
             <Italian>Sto raccogliendo le munizioni...</Italian>
             <Spanish>Levantando munición...</Spanish>
             <French>Ramassage des munitions...</French>
-            <Japanese>弾薬を拾っている・・・</Japanese>
+            <Japanese>弾薬を拾っています・・・</Japanese>
             <Korean>탄약 줍는중...</Korean>
             <Chinesesimp>捡起弹药中...</Chinesesimp>
             <Chinese>撿起彈藥中...</Chinese>
@@ -358,7 +359,7 @@
             <Italian>Riarmati %1 colpi di %2 su %3</Italian>
             <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
             <French>%1 balles réarmées de %2 dans %3</French>
-            <Japanese>%1発の%2を%3から装填した</Japanese>
+            <Japanese>%1発の%2を%3から装填しました</Japanese>
             <Korean>%3에 2%의 %1 탄약 재보급</Korean>
             <Chinesesimp>整装了%1发%2到%3上</Chinesesimp>
             <Chinese>整裝了%1發%2到%3上</Chinese>
@@ -493,7 +494,7 @@
             <Italian>Hydra 70 HE</Italian>
             <Spanish>Hydra 70 HE</Spanish>
             <French>Hydra 70 HE</French>
-            <Japanese>ハイドラ 70 HE</Japanese>
+            <Japanese>ハイドラ 70 りゅう弾</Japanese>
             <Korean>Hydra 70 고폭탄</Korean>
             <Chinesesimp>九头蛇 70 高爆弹</Chinesesimp>
             <Chinese>九頭蛇 70 高爆彈</Chinese>
@@ -508,7 +509,7 @@
             <Italian>S-8 HE</Italian>
             <Spanish>S-8 HE</Spanish>
             <French>S-8 HE</French>
-            <Japanese>S-8 HE</Japanese>
+            <Japanese>S-8 りゅう弾</Japanese>
             <Korean>S-8 고폭탄</Korean>
             <Chinesesimp>S-8 高爆弹</Chinesesimp>
             <Chinese>S-8 高爆彈</Chinese>
@@ -522,7 +523,7 @@
             <Czech>Hydra 70 AP</Czech>
             <Italian>Hydra 70 AP</Italian>
             <Spanish>Hydra 70 AP</Spanish>
-            <French>Hydra 70 AP</French>
+            <French>Hydra 70 徹甲弾</French>
             <Japanese>ハイドラ 70 AP</Japanese>
             <Korean>Hydra 70 철갑탄</Korean>
             <Chinesesimp>九头蛇 70 反人员弹</Chinesesimp>
@@ -538,7 +539,7 @@
             <Italian>S-8 AP</Italian>
             <Spanish>S-8 AP</Spanish>
             <French>S-8 AP</French>
-            <Japanese>S-8 AP</Japanese>
+            <Japanese>S-8 徹甲弾</Japanese>
             <Korean>S-8 철갑탄</Korean>
             <Chinesesimp>S-8 反人员弹</Chinesesimp>
             <Chinese>S-8 反人員彈</Chinese>

@@ -331,7 +331,7 @@
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
             <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
-            <Japanese>このモジュールは名札の表示範囲と設定を変更できます。</Japanese>
+            <Japanese>これは名札の表示範囲と設定を変更できます。</Japanese>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>这个模块允许您设定名称和显示范围等设定</Chinesesimp>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
@@ -538,6 +538,10 @@
             <Italian>Sfocatura nei bordi dello schermo</Italian>
             <Chinesesimp>在荧幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_playerNamesMaxAlpha">
+            <English>Player tags transparency</English>
+            <Japanese>プレイヤー名札の透明度</Japanese>
         </Key>
     </Package>
 </Project>

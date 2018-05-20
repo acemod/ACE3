@@ -131,7 +131,7 @@
             <Italian>Scollega manicotto benzina</Italian>
             <Spanish>Desconectar surtidor</Spanish>
             <French>Déconnecter la pompe</French>
-            <Japanese>給油ノズルを外した</Japanese>
+            <Japanese>給油ノズルを外しました</Japanese>
             <Korean>주유기 뽑기</Korean>
             <Chinesesimp>断开燃料喷嘴</Chinesesimp>
             <Chinese>斷開燃料噴嘴</Chinese>
@@ -191,7 +191,7 @@
             <Italian>Sono rimasti %1 litri.</Italian>
             <Spanish>Quedan %1 litros.</Spanish>
             <French>Il reste %1 litres.</French>
-            <Japanese>後 %1 リットル残っている。</Japanese>
+            <Japanese>後 %1 リットル残っています。</Japanese>
             <Korean>%1 리터 남음</Korean>
             <Chinesesimp>剩下%1公升的燃料。</Chinesesimp>
             <Chinese>剩下%1公升的燃料。</Chinese>
@@ -206,7 +206,7 @@
             <Italian>Non è rimasta più benzina.</Italian>
             <Spanish>No queda combustible.</Spanish>
             <French>Il n'y a plus de carburant.</French>
-            <Japanese>もう燃料は残っていない。</Japanese>
+            <Japanese>もう燃料は残っていません。</Japanese>
             <Korean>연료 없음.</Korean>
             <Chinesesimp>没有剩余的燃料</Chinesesimp>
             <Chinese>沒有剩餘的燃料</Chinese>
@@ -251,7 +251,7 @@
             <Italian>Ferma rifornimento</Italian>
             <Spanish>Detener reabastecimiento</Spanish>
             <French>Arrêter le ravitaillement</French>
-            <Japanese>給油をやめる</Japanese>
+            <Japanese>給油を止める</Japanese>
             <Korean>그만 재급유하기</Korean>
             <Chinesesimp>停止加油</Chinesesimp>
             <Chinese>停止加油</Chinese>
@@ -275,7 +275,7 @@
             <English>Couldn't turn on fuel nozzle</English>
             <German>Kann Zapfpistole nicht anschalten</German>
             <Italian>Impossibile iniziare il rifornimento</Italian>
-            <Japanese>給油を始められなかった</Japanese>
+            <Japanese>給油を始められませんでした</Japanese>
             <Chinese>無法開啟燃料噴嘴</Chinese>
             <Chinesesimp>无法开启燃料喷嘴</Chinesesimp>
             <Korean>주유기를 켤 수 없습니다.</Korean>
@@ -290,7 +290,7 @@
             <Italian>%1 litri riforniti</Italian>
             <Spanish>%1 lt reabastecido</Spanish>
             <French>%1 litres ravitaillés</French>
-            <Japanese>%1 リッターを給油した</Japanese>
+            <Japanese>%1 リッターを給油しました</Japanese>
             <Korean>%1 리터 재급유됨</Korean>
             <Chinesesimp>已加入%1公升的燃料</Chinesesimp>
             <Chinese>已加入%1公升的燃料</Chinese>
@@ -320,7 +320,7 @@
             <Italian>Distanza massima della pompa raggiunta.</Italian>
             <Spanish>Máxima longitud de manguera alcanzada.</Spanish>
             <French>Tuyau tendu au maximum</French>
-            <Japanese>給油ホースはもうこれ以上届かない。</Japanese>
+            <Japanese>給油ホースはもうこれ以上届きません。</Japanese>
             <Korean>주유기 호스 최대 거리에 도달함.</Korean>
             <Chinesesimp>已加满至最大油量。</Chinesesimp>
             <Chinese>已加滿至最大油量。</Chinese>
@@ -335,7 +335,7 @@
             <Italian>Rifornimento completato</Italian>
             <Spanish>Reabastecimiento completado</Spanish>
             <French>Ravitaillement terminé</French>
-            <Japanese>給油完了</Japanese>
+            <Japanese>給油を完了しました</Japanese>
             <Korean>재급유 완료함</Korean>
             <Chinesesimp>加油完毕</Chinesesimp>
             <Chinese>加油完畢</Chinese>
@@ -350,7 +350,7 @@
             <Italian>Rifornimento fermato</Italian>
             <Spanish>Reabastecimiento detenido</Spanish>
             <French>Ravitaillement stoppé</French>
-            <Japanese>給油を止めた</Japanese>
+            <Japanese>給油を止めました</Japanese>
             <Korean>재급유 멈춤</Korean>
             <Chinesesimp>已停止加油</Chinesesimp>
             <Chinese>已停止加油</Chinese>
@@ -365,7 +365,7 @@
             <Italian>Rifornimento iniziato</Italian>
             <Spanish>Comenzó el reabastecimiento</Spanish>
             <French>Ravitaillement débuté</French>
-            <Japanese>給油を始めた</Japanese>
+            <Japanese>給油を始めました</Japanese>
             <Korean>재급유 시작함</Korean>
             <Chinesesimp>已开始加油</Chinesesimp>
             <Chinese>已開始加油</Chinese>
@@ -425,7 +425,7 @@
             <Italian>%1 litri sono stati riforniti.</Italian>
             <Spanish>Se reabastecieron %1 lt </Spanish>
             <French>%1 litres ont été écoulés.</French>
-            <Japanese>%1 リッターが給油された</Japanese>
+            <Japanese>%1 リッターが給油されました。</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
             <Chinesesimp>已加入%1公升</Chinesesimp>
             <Chinese>已加入%1公升</Chinese>
@@ -456,7 +456,7 @@
             <English>The fuel volume available for refueling (-1 disable, -10 if infinite)</English>
             <German>Das Tankvolumen, welches zum Nachtanken verfügbar ist (-1 deaktiviert, -10 unendlich)</German>
             <Russian>Объем топлива, доступный для заправки других машин (-1 отключить, -10 если неограничен)</Russian>
-            <Japanese>給油用の貯油量を設定 (-1で無効、-10で無限)</Japanese>
+            <Japanese>給油用の貯油量を設定できます (-1で無効、-10で無限)</Japanese>
             <Italian>La capacità del carburante disponibile per il rifornimento (-1 disabilita, -10 se infinito)</Italian>
             <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
             <Chinesesimp>设定有多少油料可供载具进行加油(-1时关闭，-10为无限油量)</Chinesesimp>
@@ -476,7 +476,7 @@
             <English>Model coordinates used to attach refuel hose</English>
             <German>Modelkoordinaten zum Anheften der Zapfpistole</German>
             <Russian>Координаты модели, куда крепится заправочный шланг</Russian>
-            <Japanese>給油ノズルの取り付けにモデル座標を使用</Japanese>
+            <Japanese>給油ノズルの取り付けにモデル座標を使用します</Japanese>
             <Italian>Coordinate del modello utilizzate per il fissaggio del tubo</Italian>
             <Chinese>設定加油軟管會安裝到模型的哪個位置上</Chinese>
             <Chinesesimp>设定加油软管会安装到模型的哪个位置上</Chinesesimp>

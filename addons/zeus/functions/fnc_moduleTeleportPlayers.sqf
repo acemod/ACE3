@@ -15,7 +15,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_logic","_uid","_group"];
