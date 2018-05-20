@@ -2,15 +2,20 @@ version: 2
 jobs:
   build:
     docker:
-      - image: thojkooi/ci-python
+      - image: acemod/armake
     steps:
       - checkout
       - run:
           name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
+      - run:
+          name: Build
+          command: |
+            make -j 2
+
   deployment:
     docker:
-      - image: thojkooi/ci-python
+      - image: acemod/armake
     branch: master
     requires:
       - build
