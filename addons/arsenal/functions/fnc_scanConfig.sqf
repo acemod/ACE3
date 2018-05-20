@@ -171,13 +171,17 @@ private _putList = [];
 
 private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
 
+private _cfgMagazines = configFile >> "CfgMagazines";
+
 {
     private _magList = [];
     {
-        _magList append getArray _x;
+        private _magazines = (getArray _x) select {isClass (_cfgMagazines >> _x)}; //filter out non-existent magazines
+        _magazines = _magazines apply {configName (_cfgMagazines >> _x)}; //Make sure classname case is correct
+        _magList append _magazines;
     } foreach configProperties [_x, "isArray _x", true];
 
-    [_magazineGroups, configName _x, _magList arrayIntersect _magList] call CBA_fnc_hashSet;
+    [_magazineGroups, toLower configName _x, _magList arrayIntersect _magList] call CBA_fnc_hashSet;
 } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];
