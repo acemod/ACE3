@@ -43,7 +43,7 @@
         interval = 1; \
     }; \
 }
-#define MERGE(var1,var2) var1##var2
+#define MERGE(var1,var2) var1####var2
 #define EFFECT_AFTER_WATER(color) class ACE_SmokeAfterWater##color: ACE_SmokeAfterWaterWhite { \
     class SmokeAfterWater: SmokeAfterWater { \
         type = QUOTE(MERGE(ACE_SmokeAfterWater,color)); \
