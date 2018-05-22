@@ -47,11 +47,11 @@ _target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
 #endif
 
 // generic medical admin
-_target setVariable [QEGVAR(medical,inCardiacArrest), false, true];
+_target setVariable [VAR_CRDC_ARRST, false, true];
 _target setVariable [VAR_UNCON, false, true];
 _target setVariable [QEGVAR(medical,hasLostBlood), 0, true];
-_target setVariable [QEGVAR(medical,isBleeding), false, true];
-_target setVariable [QEGVAR(medical,hasPain), false, true];
+_target setVariable [VAR_IS_BLEEDING, false, true];
+_target setVariable [VAR_IN_PAIN, false, true];
 _target setVariable [VAR_PAIN_SUPP, 0, true];
 _target setVariable [VAR_PAIN_SUPP_ADJ, [], true];
 _target setVariable [QGVAR(partialHealCounter), 0, true];

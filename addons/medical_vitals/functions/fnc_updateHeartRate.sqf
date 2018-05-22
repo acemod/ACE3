@@ -45,7 +45,7 @@ if !(_adjustments isEqualTo []) then {
 
 private _heartRate = GET_HEART_RATE(_unit);
 
-if !(_unit getVariable [QGVAR(inCardiacArrest), false]) then {
+if !IN_CRDC_ARRST(_unit) then {
     private _hrChange = 0;
     private _bloodVolume = GET_BLOOD_VOLUME(_unit);
     if (_bloodVolume > BLOOD_VOLUME_CLASS_4_HEMORRHAGE) then {

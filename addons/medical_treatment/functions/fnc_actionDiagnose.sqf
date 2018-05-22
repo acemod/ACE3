@@ -34,7 +34,7 @@ if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 0) then {
 };
 
 if (alive _target) then {
-    if (_target getVariable[QEGVAR(medical,hasPain), false]) then {
+    if IS_IN_PAIN(_target) then {
         _genericMessages pushBack ELSTRING(medical,inPain);
     } else {
         _genericMessages pushBack ELSTRING(medical,noPain);

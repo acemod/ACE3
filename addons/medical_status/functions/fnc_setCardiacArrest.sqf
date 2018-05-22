@@ -19,9 +19,9 @@
 
 params ["_unit"];
 
-if (_unit getVariable [QGVAR(inCardiacArrest), false]) exitWith {};
+if IN_CRDC_ARRST(_unit) exitWith {};
 
-_unit setVariable [QGVAR(inCardiacArrest), true, true];
+_unit setVariable [VAR_CRDC_ARRST, true, true];
 _unit setVariable [VAR_HEART_RATE, 0, true];
 
 ["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;

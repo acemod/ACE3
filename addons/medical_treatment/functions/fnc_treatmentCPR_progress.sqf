@@ -21,7 +21,7 @@ _args params ["_caller", "_target"];
 
 // If the patient awakes by mysterious force, no cpr is needed!
 if (_target call EFUNC(common,isAwake)) exitWith {false};
-if (!(_target getVariable [QEGVAR(medical,inCardiacArrest), false])) exitWith {false};
+if !IN_CRDC_ARRST(_target) exitWith {false};
 
 [_target] call FUNC(calculateBlood); // Calculate blood volume. If their is no pulse, nothing happens!
 

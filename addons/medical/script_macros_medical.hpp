@@ -64,6 +64,7 @@
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)
 #define VAR_BLOOD_PRESS QEGVAR(medical,bloodPressure)
 #define VAR_BLOOD_VOL   QEGVAR(medical,bloodVolume)
+#define VAR_CRDC_ARRST  QEGVAR(medical,inCardiacArrest)
 #define VAR_HEART_RATE  QEGVAR(medical,heartRate)
 #define VAR_PAIN        QEGVAR(medical,pain)
 #define VAR_PAIN_SUPP   QEGVAR(medical,painSuppress)
@@ -71,6 +72,9 @@
 // These variables track gradual adjustments (from medication, etc.)
 #define VAR_HEART_RATE_ADJ  QEGVAR(medical,heartRateAdjustments)
 #define VAR_PAIN_SUPP_ADJ   QEGVAR(medical,painSuppressAdjustments)
+// These variables track the current state of status values
+#define VAR_IN_PAIN     QEGVAR(medical,inPain)
+#define VAR_IS_BLEEDING QEGVAR(medical,isBleeding)
 
 
 // - Unit Functions ---------------------------------------------------
@@ -80,6 +84,9 @@
 #define GET_HEART_RATE(unit)        (GETVAR(unit,VAR_HEART_RATE,DEFAULT_HEART_RATE))
 #define GET_PAIN(unit)              (GETVAR(unit,VAR_PAIN,0))
 #define GET_PAIN_SUPPRESS(unit)     (GETVAR(unit,VAR_PAIN_SUPP,0))
+#define IN_CRDC_ARRST(unit)         (GETVAR(unit,VAR_CRDC_ARRST,false))
+#define IS_BLEEDING(unit)           (GETVAR(unit,VAR_IS_BLEEDING,false))
+#define IS_IN_PAIN(unit)            (GETVAR(unit,VAR_HAS_PAIN,false))
 #define IS_UNCONSCIOUS(unit)        (GETVAR(unit,VAR_UNCON,false))
 
 // The following function calls are defined here just for consistency
@@ -88,4 +95,3 @@
 
 // Derivative unit values commonly used
 #define GET_PAIN_PERCEIVED(unit)    (0 max (GET_PAIN(unit) - GET_PAIN_SUPPRESS(unit)) min 1)
-#define IS_IN_PAIN(unit)            (GET_PAIN_PERCEIVED(unit) > 0)

@@ -61,24 +61,18 @@ if (_bloodLoss > 0) then {
 
     [QGVAR(Injury), _unit] call CBA_fnc_localEvent;
 
-    if !(_unit getVariable [QGVAR(isBleeding), false]) then {
-        _unit setVariable [QGVAR(isBleeding), true, true];
+    if !IS_BLEEDING(_unit) then {
+        _unit setVariable [VAR_IS_BLEEDING, true, true];
     };
 } else {
-    if (_unit getVariable [QGVAR(isBleeding), false]) then {
-        _unit setVariable [QGVAR(isBleeding), false, true];
+    if IS_BLEEDING(_unit) then {
+        _unit setVariable [VAR_IS_BLEEDING, false, true];
     };
 };
 
-private _painLevel = GET_PAIN_PERCEIVED(_unit);
-if (_painLevel > 0) then {
-    if !(_unit getVariable [QGVAR(hasPain), false]) then {
-        _unit setVariable [QGVAR(hasPain), true, true];
-    };
-} else {
-    if (_unit getVariable [QGVAR(hasPain), false]) then {
-        _unit setVariable [QGVAR(hasPain), false, true];
-    };
+private _inPain = GET_PAIN_PERCEIVED(_unit) > 0;
+if !(_inPain isEqualTo IS_IN_PAIN(_unit)) then {
+    _unit setVariable [VAR_IN_PAIN, _inPain, true];
 };
 
 // Handle pain due tourniquets, that have been applied more than 120 s ago

@@ -18,7 +18,7 @@
 params ["_unit"];
 
 if (GET_BLOOD_VOLUME(_unit) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) exitWith { false };
-if (_unit getVariable [QGVAR(inCardiacArrest), false]) exitWith { false };
+if IN_CRDC_ARRST(_unit) exitWith { false };
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
 private _bloodLoss = GET_BLOOD_LOSS(_unit);

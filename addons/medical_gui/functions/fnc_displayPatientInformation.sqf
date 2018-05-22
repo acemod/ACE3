@@ -52,7 +52,7 @@ if (_show == 1) then {
         private _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
         _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 
-        if (_target getVariable[QEGVAR(medical,isBleeding), false]) then {
+        if IS_BLEEDING(_target) then {
             _genericMessages pushback [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
         if (_target getVariable[QEGVAR(medical,hasLostBlood), 0] > 1) then {

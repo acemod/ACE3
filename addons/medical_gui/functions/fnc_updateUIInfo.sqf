@@ -27,7 +27,7 @@ private _genericMessages = [];
 private _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
 _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
 
-if (_target getVariable [QEGVAR(medical,isBleeding), false]) then {
+if IS_BLEEDING(_target) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
 };
 

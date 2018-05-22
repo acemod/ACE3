@@ -28,13 +28,13 @@ _unit setVariable [VAR_HEART_RATE_ADJ, [], true];
 _unit setVariable [VAR_BLOOD_PRESS, [80, 120], true];
 _unit setVariable [QGVAR(peripheralResistance), 100, true];
 _unit setVariable [QGVAR(peripheralResistanceAdjustments), [], true];
-_unit setVariable [QGVAR(inCardiacArrest), false, true];
+_unit setVariable [VAR_CRDC_ARRST, false, true];
 _unit setVariable [QGVAR(hasLostBlood), 0, true];
-_unit setVariable [QGVAR(isBleeding), false, true];
+_unit setVariable [VAR_IS_BLEEDING, false, true];
 
 // - Pain ---------------------------------------------------------------------
 _unit setVariable [VAR_PAIN, 0, true];
-_unit setVariable [QGVAR(hasPain), false, true];
+_unit setVariable [VAR_IN_PAIN, false, true];
 _unit setVariable [VAR_PAIN_SUPP, 0, true];
 _unit setVariable [VAR_PAIN_SUPP_ADJ, [], true];
 
