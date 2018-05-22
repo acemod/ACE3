@@ -29,12 +29,12 @@ endif
 $(BIN)/addons/$(PREFIX)_%.pbo: addons/%
 	@mkdir -p $(BIN)/addons
 	@echo "  PBO  $@"
-	@${ARMAKE} build ${FLAGS} -f $< $@
+	@${ARMAKE} build ${FLAGS} -f -e "version=$(GIT_HASH)" $< $@
 
 $(BIN)/optionals/$(PREFIX)_%.pbo: optionals/%
 	@mkdir -p $(BIN)/optionals
 	@echo "  PBO  $@"
-	@${ARMAKE} build ${FLAGS} -f $< $@
+	@${ARMAKE} build ${FLAGS} -f -e "version=$(GIT_HASH)" $< $@
 
 # Shortcut for building single addons (eg. "make <component>.pbo")
 %.pbo:
@@ -53,13 +53,11 @@ $(BIN)/keys/%.biprivatekey:
 
 $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign: $(BIN)/addons/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey
 	@echo "  SIG  $@"
-	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
-	@mv "$(subst -$(GIT_HASH),,$@)" $@ # armake does not take bisign name as parameter yet
+	@${ARMAKE} sign -f -s $@ $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
 
 $(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign: $(BIN)/optionals/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey
 	@echo "  SIG  $@"
-	@${ARMAKE} sign -f $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
-	@mv "$(subst -$(GIT_HASH),,$@)" $@ # armake does not take bisign name as parameter yet
+	@${ARMAKE} sign -f -s $@ $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
 
 signatures: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign, $(wildcard optionals/*))
