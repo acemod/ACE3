@@ -31,7 +31,7 @@ if IS_BLEEDING(_target) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
 };
 
-if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 1) then {
+if (GET_HEMORRHAGE(_target) > 1) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood), [1, 0.1, 0.1, 1]];
 };
 

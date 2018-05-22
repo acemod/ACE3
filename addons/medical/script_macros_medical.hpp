@@ -72,9 +72,10 @@
 // These variables track gradual adjustments (from medication, etc.)
 #define VAR_HEART_RATE_ADJ  QEGVAR(medical,heartRateAdjustments)
 #define VAR_PAIN_SUPP_ADJ   QEGVAR(medical,painSuppressAdjustments)
-// These variables track the current state of status values
-#define VAR_IN_PAIN     QEGVAR(medical,inPain)
-#define VAR_IS_BLEEDING QEGVAR(medical,isBleeding)
+// These variables track the current state of status values above
+#define VAR_HEMORRHAGE      QEGVAR(medical,hemorrhage)
+#define VAR_IN_PAIN         QEGVAR(medical,inPain)
+#define VAR_IS_BLEEDING     QEGVAR(medical,isBleeding)
 
 
 // - Unit Functions ---------------------------------------------------
@@ -82,6 +83,7 @@
 // Defined for easy consistency and speed
 #define GET_BLOOD_VOLUME(unit)      (GETVAR(unit,VAR_BLOOD_VOL,DEFAULT_BLOOD_VOLUME))
 #define GET_HEART_RATE(unit)        (GETVAR(unit,VAR_HEART_RATE,DEFAULT_HEART_RATE))
+#define GET_HEMORRHAGE(unit)        (GETVAR(unit,VAR_HEMORRHAGE,0))
 #define GET_PAIN(unit)              (GETVAR(unit,VAR_PAIN,0))
 #define GET_PAIN_SUPPRESS(unit)     (GETVAR(unit,VAR_PAIN_SUPP,0))
 #define IN_CRDC_ARRST(unit)         (GETVAR(unit,VAR_CRDC_ARRST,false))

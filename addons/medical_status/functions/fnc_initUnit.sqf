@@ -29,7 +29,7 @@ _unit setVariable [VAR_BLOOD_PRESS, [80, 120], true];
 _unit setVariable [QGVAR(peripheralResistance), 100, true];
 _unit setVariable [QGVAR(peripheralResistanceAdjustments), [], true];
 _unit setVariable [VAR_CRDC_ARRST, false, true];
-_unit setVariable [QGVAR(hasLostBlood), 0, true];
+_unit setVariable [VAR_HEMORRHAGE, 0, true];
 _unit setVariable [VAR_IS_BLEEDING, false, true];
 
 // - Pain ---------------------------------------------------------------------

@@ -39,20 +39,13 @@ _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
 _unit setVariable [VAR_BLOOD_VOL, _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
-if (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE) then {
-    if (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE) then {
-        if (_unit getVariable [QGVAR(hasLostBlood), 0] != 2) then {
-            _unit setVariable [QGVAR(hasLostBlood), 2, true];
-        };
-    } else {
-        if (_unit getVariable [QGVAR(hasLostBlood), 0] != 1) then {
-            _unit setVariable [QGVAR(hasLostBlood), 1, true];
-        };
-    };
-} else {
-    if (_unit getVariable [QGVAR(hasLostBlood), 0] != 0) then {
-        _unit setVariable [QGVAR(hasLostBlood), 0, true];
-    };
+private _hemorrhage = [
+    0,
+    [1, 3] select (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE)
+] select (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE);
+
+if (_hemorrhage != GET_HEMORRHAGE(_unit)) then {
+    _unit setVariable [VAR_HEMORRHAGE, _hemorrhageClass, true];
 };
 
 private _bloodLoss = GET_BLOOD_LOSS(_unit);
