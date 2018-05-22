@@ -67,7 +67,7 @@
 #define VAR_HEART_RATE  QEGVAR(medical,heartRate)
 #define VAR_PAIN        QEGVAR(medical,pain)
 #define VAR_PAIN_SUPP   QEGVAR(medical,painSuppress)
-#define VAR_UNCON       QEGVAR(medical,isUnconscious)
+#define VAR_UNCON       "ACE_isUnconscious"
 // These variables track gradual adjustments (from medication, etc.)
 #define VAR_HEART_RATE_ADJ  QEGVAR(medical,heartRateAdjustments)
 #define VAR_PAIN_SUPP_ADJ   QEGVAR(medical,painSuppressAdjustments)

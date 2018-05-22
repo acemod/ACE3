@@ -34,7 +34,7 @@ if (!alive _unit) exitWith {
         _unit removeWeapon "ACE_FakePrimaryWeapon";
     };
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
-        [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+        [_unit, false, VAR_UNCON, side group _unit] call EFUNC(common,switchToGroupSide);
     };
     [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
@@ -49,7 +49,7 @@ if (!alive _unit) exitWith {
 };
 
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
-if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
+if !IS_UNCONSCIOUS(_unit) exitWith {
     TRACE_7("ACE_DEBUG_Unconscious_PFH",_unit, _args, [_unit] call EFUNC(medical_status,isBeingCarried), [_unit] call EFUNC(medical_status,isBeingDragged), _idPFH, _unit getVariable QGVAR(unconsciousArguments),animationState _unit);
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
@@ -109,7 +109,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:
         if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
-            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+            [_unit, false, VAR_UNCON, side group _unit] call EFUNC(common,switchToGroupSide);
         };
         [_unit, false] call EFUNC(common,disableAI);
         _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
@@ -141,6 +141,6 @@ if (!local _unit) exitWith {
 if ((CBA_missionTime - _startingTime) >= _minWaitingTime) exitWith {
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
-        _unit setVariable ["ACE_isUnconscious", false, true];
+        _unit setVariable [VAR_UNCON, false, true];
     };
 };

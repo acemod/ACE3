@@ -21,9 +21,9 @@
 params ["_unit", "_knockOut"];
 TRACE_2("setUnconsciousStatemachine",_unit,_knockOut);
 
-if (_knockOut isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {TRACE_1("No Change - Exiting",_knockOut);};
+if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {TRACE_1("No Change - Exiting",_knockOut);};
 
-_unit setVariable ["ACE_isUnconscious", _knockOut, true];
+_unit setVariable [VAR_UNCON, _knockOut, true];
 ["ace_unconscious", [_unit, _knockOut]] call CBA_fnc_globalEvent;
 [_unit, _knockOut] call EFUNC(medical_engine,setUnconsciousAnim);
 

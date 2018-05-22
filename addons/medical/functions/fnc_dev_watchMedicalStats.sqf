@@ -23,7 +23,7 @@
     private _unit = cursorTarget;
     if (!(_unit isKindOf "CAManBase")) then {_unit = cursorObject};
     if (!(_unit isKindOf "CAManBase")) then {_unit = ACE_player};
-    if ((_unit != ACE_player) && {ACE_player getVariable ["ACE_isUnconscious", false]}) then {_unit = ACE_player};
+    if ((_unit != ACE_player) && {IS_UNCONSCIOUS(ACE_player)}) then {_unit = ACE_player};
     if (!(_unit isKindOf "CAManBase")) exitWith {"No Unit?"};
 
     private _return = [];
@@ -37,7 +37,7 @@
     private _targetState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
     if (!local _unit) then {_targetState = "NotLocal";};
     private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"555555"}};
-    private _unconcFlag = if (_unit getVariable ["ACE_isUnconscious", false]) then {"[<t color='#FFFFFF'>U</t>]"} else {""};
+    private _unconcFlag = if IS_UNCONSCIOUS(_unit) then {"[<t color='#FFFFFF'>U</t>]"} else {""};
     _return pushBack format ["<t color='#%1'>State: %2</t> [StableVitals: %3] %4", _color, _targetState, _hasStableVitals, _unconcFlag];
 
     // Blood:

@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // Can't heal other units when unconscious
-if (_this getVariable ["ACE_isUnconscious", false]) exitWith {};
+if IS_UNCONSCIOUS(_this) exitWith {};
 // Check if we're still treating
 if ((_this getVariable [QGVAR(treatmentOverAt), CBA_missionTime]) > CBA_missionTime) exitWith {};
 

@@ -21,7 +21,7 @@ params ["_unit"];
 [_unit] call FUNC(init);
 
 // Reset captive status for respawning unit
-if (!(_unit getVariable ["ACE_isUnconscious", false])) then {
+if !IS_UNCONSCIOUS(_unit) then {
     [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
 };
 

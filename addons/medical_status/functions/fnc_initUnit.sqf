@@ -45,7 +45,7 @@ _unit setVariable [QGVAR(stitchedWounds), [], true];
 _unit setVariable [QEGVAR(medical_engine,isLimping), false, true];
 
 // - Misc ---------------------------------------------------------------------
-_unit setVariable [QGVAR(isUnconscious), false, true];
+_unit setVariable [VAR_UNCON, false, true];
 
 // - Treatments ---------------------------------------------------------------
 _unit setVariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];

@@ -61,7 +61,7 @@ if (isNil _callbackProgress) then {
 // play patient animation
 private _patientAnim = getText (_config >> "animationPatient");
 
-if (_target getVariable ["ACE_isUnconscious", false] && EGVAR(medical,allowUnconsciousAnimationOnTreatment)) then {
+if (IS_UNCONSCIOUS(_target) && EGVAR(medical,allowUnconsciousAnimationOnTreatment)) then {
     if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };
@@ -70,7 +70,7 @@ if (_target getVariable ["ACE_isUnconscious", false] && EGVAR(medical,allowUncon
 private _isSelf = _caller isEqualTo _target;
 
 if (!_isSelf && {vehicle _target == _target} && {_patientAnim != ""}) then {
-    if (_target getVariable ["ACE_isUnconscious", false]) then {
+    if IS_UNCONSCIOUS(_target) then {
         [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
     } else {
         [_target, _patientAnim, 1, true] call EFUNC(common,doAnimation);
