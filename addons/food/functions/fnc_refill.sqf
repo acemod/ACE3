@@ -19,6 +19,10 @@ switch (_mode) do {
     };
 
     case 1: {
+        if(count (nearestObjects [player, GVAR(refill_sources), 2]) > 0) exitwith {
+            GVAR(camelbak) = 100;
+        };
+
         {
             if (_x in (items player)) exitwith {
                 private _item = getText(configFile >> "CfgWeapons" >> _x >> QGVAR(onDrink));
@@ -32,6 +36,16 @@ switch (_mode) do {
                 };
             };
         } forEach GVAR(drink_items);
+    };
+
+    // If camelbak on and water is below 100
+    case 2: {
+        private _amount = 100 - GVAR(water);
+
+        if((GVAR(camelbak) - _amount) >= 0) then {
+            GVAR(water) = 100;
+            GVAR(camelbak) = GVAR(camelbak) - _amount;
+        };
     };
 
     default {

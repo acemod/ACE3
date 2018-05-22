@@ -5,27 +5,36 @@
 
 #include "script_component.hpp"
 
-private ["_player", "_speed", "_animStateChars", "_animP", "_amount"];
+private ["_speed", "_animStateChars", "_animP", "_amount", "_decent"];
+params ["_player"];
 
-_player = (_this select 0);
 _speed = abs(speed _player);
 
 if ((vehicle _player) == _player) then {
-    if (_speed > 1) then {
-        GVAR(food) = GVAR(food) - (GVAR(food_decent_rate) + (_speed / 1000) + ((load _player) / 30));
-        GVAR(water) = GVAR(water) - (GVAR(water_decent_rate) + (_speed / 450) + ((load _player) / 20));
+    GVAR(food) = GVAR(food) - (GVAR(food_decent_rate) + (_speed / 1000) + ((load _player) / 30));
+
+    _decent = (GVAR(water_decent_rate) + (_speed / 450) + ((load _player) / 20));
+
+    if(([] call FUNC(hasCamelbak)) && ((GVAR(camelbak) - _decent) >= 0)) then {
+        GVAR(camelbak) = GVAR(camelbak) - _decent;
+
+        if(GVAR(water) < 100) then {
+            [nil, nil, 2] call FUNC(refill);
+        };
     } else {
-        GVAR(food) = GVAR(food) - (GVAR(food_decent_rate) + ((load _player) / 30));
-        GVAR(water) = GVAR(water) - (GVAR(water_decent_rate) + ((load _player) / 20));
+        GVAR(water) = GVAR(water) - _decent;
     };
-};
+} else {
+    GVAR(food) = GVAR(food) - GVAR(food_decent_rate);
 
-if([] call FUNC(hasCamelbak)) then {
-    _amount = 100 - GVAR(water);
+    if(([] call FUNC(hasCamelbak)) && ((GVAR(camelbak) - _decent) >= 0)) then {
+        GVAR(camelbak) = GVAR(camelbak) - GVAR(water_decent_rate);
 
-    if(GVAR(camelbak) - _amount >= 0) then {
-        GVAR(camelbak) = GVAR(camelbak) - _amount;
-        GVAR(water) = water + _amount;
+        if(GVAR(water) < 100) then {
+            [nil, nil, 2] call FUNC(refill);
+        };
+    } else {
+        GVAR(water) = GVAR(water) - GVAR(water_decent_rate);
     };
 };
 

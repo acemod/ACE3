@@ -14,6 +14,7 @@ class ACE_Settings {
         description = CSTRING(Settings_EnableHUD_Description);
         value = 1;
         typeName = "BOOL";
+        isClientSettable = 1;
     };
     
     class GVAR(food_decent_rate) {

@@ -22,10 +22,14 @@ class ACE_BackgroundBase {
     idc = -1;
     style = 48;
     colorBackground[] = {0,0,0,0};
-    colorText[] = {1,1,1,1};
+    colorText[] = {0,1,0,1};
     font = "RobotoCondensed";
     text = "";
     sizeEx = 0.032;
+
+    x = "0.970976 * safezoneW + safezoneX";
+    w = "0.0192628 * safezoneW";
+    h = "0.046183 * safezoneH";
 };
 
 class RscTitles {
@@ -39,32 +43,23 @@ class RscTitles {
         class controlsBackground {
             class ACE_FoodStatus: ACE_BackgroundBase {
                 text = QPATHTOF(data\gui\food.paa);
-                colorText[] = {0,1,0,1};
                 idc = 11131;
-                x = "0.955313 * safezoneW + safezoneX";
-                y = "0.90 * safezoneH + safezoneY";
-                w = 0.05;
-                h = 0.09;
+
+                y = "0.891455 * safezoneH + safezoneY";
             };
             
             class ACE_DrinkStatus: ACE_BackgroundBase {
                 text = QPATHTOF(data\gui\water.paa);
-                colorText[] = {0,1,0,1};
                 idc = 11132;
-                x = "0.955313 * safezoneW + safezoneX";
-                y = "0.85 * safezoneH + safezoneY";
-                w = 0.05;
-                h = 0.09;
+
+                y = "0.840874 * safezoneH + safezoneY";
             };
             
             class ACE_Camelbak: ACE_BackgroundBase {
                 text = QPATHTOF(data\gui\camelbak.paa);
-                colorText[] = {0,1,0,1};
                 idc = 11133;
-                x = "0.955313 * safezoneW + safezoneX";
-                y = "0.80 * safezoneH + safezoneY";
-                w = 0.05;
-                h = 0.09;
+
+                y = "0.79689 * safezoneH + safezoneY";
             };
         };
     };
@@ -87,7 +82,6 @@ class CfgSounds {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgUIGrids.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Settings.hpp"

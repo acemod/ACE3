@@ -20,6 +20,18 @@ if(GVAR(enableHUD)) then {
     [{call FUNC(updatePlayerHud)}, 1, []] call CBA_fnc_addPerFrameHandler;
 };
 
+["CBA_SettingChanged", {
+    if(GVAR(enableHUD)) then {
+        101 cutRsc ["ACE_FoodStats","PLAIN"];
+        private _handle = [{call FUNC(updatePlayerHud)}, 1, []] call CBA_fnc_addPerFrameHandler;
+    } else {
+        if(!isNil "_handle") then {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+        };
+        101 cutRsc ["","PLAIN"];
+    };
+}] call CBA_fnc_addEventHandler;
+
 // Add eat/drink actions
 [] call FUNC(addActions);
 

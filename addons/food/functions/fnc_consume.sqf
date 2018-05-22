@@ -7,6 +7,8 @@
 
 params ["_target", "_player", "_mode"];
 
+if(isNil "_mode") exitwith {};
+
 switch (_mode) do {
     case 0: {
         private ["_mre"];
@@ -27,6 +29,8 @@ switch (_mode) do {
             if(GVAR(food) > 100) then {
                 GVAR(food) = 100;
             };
+
+            GVAR(water) = GVAR(water) - 2;
         } else {
             hint "You need to have food on you before you can eat";
         };
@@ -57,9 +61,7 @@ switch (_mode) do {
         if(GVAR(water) > 100) then {
             GVAR(water) = 100;
         };
-    };
 
-    default {
-        hint "Error no consume mode selected";
+        GVAR(food) = GVAR(food) - 2;
     };
 };

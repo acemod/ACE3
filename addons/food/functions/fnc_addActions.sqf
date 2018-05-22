@@ -69,13 +69,17 @@ _children = {
             };
         } forEach GVAR(drink_items);
 
+        if(count (nearestObjects [player, GVAR(refill_sources), 2]) > 0) then {
+            _con = true;
+        };
+
         _con;
     };
 
-    _action = ["drink", "Drink Water", QPATHTOF(data\gui\water.paa), {call FUNC(consume)}, _conDrink, {}, 0] call EFUNC(interact_menu,createAction);
+    _action = ["drink", "Drink Water", QPATHTOF(data\gui\water.paa), {call FUNC(consume)}, _conDrink, {}, 1] call EFUNC(interact_menu,createAction);
     _actions pushBack [_action, [], _player];
 
-    _action = ["eat", "Eat MRE", QPATHTOF(data\gui\food.paa), {call FUNC(consume)}, _conEat, {}, 1] call EFUNC(interact_menu,createAction);
+    _action = ["eat", "Eat MRE", QPATHTOF(data\gui\food.paa), {call FUNC(consume)}, _conEat, {}, 0] call EFUNC(interact_menu,createAction);
     _actions pushBack [_action, [], _player];
 
     _action = ["refill", "Refill Bottle", QPATHTOF(data\gui\water.paa), {call FUNC(refill)}, _conRefill, {}, 0] call EFUNC(interact_menu,createAction);

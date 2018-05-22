@@ -26,13 +26,13 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(SupplyCrateNormal);
         author = "Jak Keen";
-        maximumLoad = 3000;
+        maximumLoad = 10000;
 
         class TransportItems {
-            MACRO_ADDITEM(ACE_MRE_Type1,150);
-            MACRO_ADDITEM(ACE_MRE_Type2,150);
-            MACRO_ADDITEM(ACE_Camelbak,150);
-            MACRO_ADDITEM(ACE_Waterbottle_Full,400);
+            MACRO_ADDITEM(ACE_MRE_Type1,100);
+            MACRO_ADDITEM(ACE_MRE_Type2,100);
+            MACRO_ADDITEM(ACE_Camelbak,100);
+            MACRO_ADDITEM(ACE_Waterbottle_Full,200);
         };
 
         class TransportWeapons {};

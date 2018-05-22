@@ -72,12 +72,12 @@
         </Key>
 
         <Key ID="STR_ACE_Food_ItemDesc_Waterbottle_Full">
-            <English>A full waterbottle</English>
+            <English>A full waterbottle. Can make you quite hungry when drunk though</English>
             <Russian>Сложность медицины</Russian>
         </Key>
 
         <Key ID="STR_ACE_Food_ItemDesc_Waterbottle_Part">
-            <English>A half full waterbottle</English>
+            <English>A half full waterbottle. Can make you quite hungry when drunk though</English>
             <Russian>Сложность медицины</Russian>
         </Key>
 
@@ -97,12 +97,12 @@
         </Key>
 
         <Key ID="STR_ACE_Food_ItemDesc_MRE_Type1">
-            <English>A delicious Meal Ready to Eat (lamb curry)</English>
+            <English>A delicious Meal Ready to Eat (lamb curry). Can make you quite thirsty though</English>
             <Russian>Сложность медицины</Russian>
         </Key>
 
         <Key ID="STR_ACE_Food_ItemDesc_MRE_Type2">
-            <English>A delicious Meal Ready to Eat (vegetable pasta)</English>
+            <English>A delicious Meal Ready to Eat (vegetable pasta). Can make you quite thirsty though</English>
             <Russian>Сложность медицины</Russian>
         </Key>
     </Package>
