@@ -45,7 +45,7 @@ if (_cargo isKindOf "CAManBase") then {
 } else {
     //`sizeOf` is unreliable, and does not work with object types that don't exist on map, so estimate size based on cargo size
     private _typeOfCargo = if (_cargo isEqualType "") then {_cargo} else {typeOf _cargo};
-    private _itemSize = if (isNumber (configFile >> "CfgVehicles" >> [_typeOfCargo] select (_cargo isEqualType "") >> QEGVAR(cargo,size))) then {
+    private _itemSize = if (isNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size))) then {
         getNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size));
     } else {
         [_cargo] call EFUNC(cargo,getSizeItem);
