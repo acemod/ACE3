@@ -16,6 +16,7 @@
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
 
 #define DEFAULT_HEART_RATE 80
+#define DEFAULT_PERIPH_RES 100
 
 // --- blood
 // 0.077 l/kg * 80kg = 6.16l
@@ -68,10 +69,12 @@
 #define VAR_HEART_RATE  QEGVAR(medical,heartRate)
 #define VAR_PAIN        QEGVAR(medical,pain)
 #define VAR_PAIN_SUPP   QEGVAR(medical,painSuppress)
+#define VAR_PERIPH_RES  QEGVAR(medical,peripheralResistance)
 #define VAR_UNCON       "ACE_isUnconscious"
 // These variables track gradual adjustments (from medication, etc.)
 #define VAR_HEART_RATE_ADJ  QEGVAR(medical,heartRateAdjustments)
 #define VAR_PAIN_SUPP_ADJ   QEGVAR(medical,painSuppressAdjustments)
+#define VAR_PERIPH_RES_ADJ  QEGVAR(medical,peripheralResistanceAdjustments)
 // These variables track the current state of status values above
 #define VAR_HEMORRHAGE      QEGVAR(medical,hemorrhage)
 #define VAR_IN_PAIN         QEGVAR(medical,inPain)

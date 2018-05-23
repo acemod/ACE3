@@ -18,14 +18,14 @@
 params ["_unit", "_deltaT", "_syncValue"];
 
 private _peripheralResistanceAdjustment = 0;
-private _adjustment = _unit getVariable [QGVAR(peripheralResistanceAdjustments), []];
+private _adjustments = _unit getVariable [VAR_PERIPH_RES_ADJ, []];
 
-if (!(_adjustment isEqualTo [])) then {
+if !(_adjustments isEqualTo []) then {
     {
         _x params ["_value", "_timeTillMaxEffect", "_maxTimeInSystem", "_timeInSystem"];
-        if (abs _value > 0 && {_maxTimeInSystem > 0}) then {
+        if (_value != 0 && {_maxTimeInSystem > 0}) then {
             if (_timeInSystem >= _maxTimeInSystem) then {
-                 _adjustment set [_forEachIndex, ObjNull];
+                 _adjustments set [_forEachIndex, nil];
             } else {
                 _timeInSystem = _timeInSystem + _deltaT;
                 private _effectRatio = ((_timeInSystem / (1 max _timeTillMaxEffect)) ^ 2) min 1;
@@ -33,13 +33,12 @@ if (!(_adjustment isEqualTo [])) then {
                 _x set [3, _timeInSystem];
             };
         } else {
-            _adjustment set [_forEachIndex, ObjNull];
+            _adjustments set [_forEachIndex, nil];
         };
-    } forEach _adjustment;
+    } forEach _adjustments;
 
-    _adjustment = _adjustment - [ObjNull];
-    _unit setVariable [QGVAR(peripheralResistanceAdjustments), _adjustment, _syncValue];
+    _unit setVariable [VAR_PERIPH_RES_ADJ, _adjustments - [nil], _syncValue];
 
      // always sync on last run
-    _unit SetVariable [QGVAR(peripheralResistance), 0 max (100 + _peripheralResistanceAdjustment), _syncValue || {_adjustment isEqualTo []}];
+    _unit setVariable [VAR_PERIPH_RES, 0 max (DEFAULT_PERIPH_RES + _peripheralResistanceAdjustment), _syncValue || {_adjustments isEqualTo []}];
 };

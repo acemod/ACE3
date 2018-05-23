@@ -34,8 +34,8 @@ _target setVariable [QEGVAR(medical_engine,isLimping), false, true];
 _target setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
 _target setVariable [VAR_HEART_RATE_ADJ, [], true];
 _target setVariable [VAR_BLOOD_PRESS, [80, 120], true];
-_target setVariable [QEGVAR(medical,peripheralResistance), 100, true];
-_target setVariable [QGVAR(peripheralResistanceAdjustments), [], true];
+_target setVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES, true];
+_target setVariable [VAR_PERIPH_RES_ADJ, [], true];
 
 // IVs
 _target setVariable [QEGVAR(medical,ivBags), nil, true];
