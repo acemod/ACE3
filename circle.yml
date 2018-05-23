@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Build
           command: |
-            make -j 2
+            make -j 4
       - deploy:
           name: Update documentation and translation statistics
           command: |
