@@ -88,7 +88,7 @@
 #define GET_PAIN_SUPPRESS(unit)     (GETVAR(unit,VAR_PAIN_SUPP,0))
 #define IN_CRDC_ARRST(unit)         (GETVAR(unit,VAR_CRDC_ARRST,false))
 #define IS_BLEEDING(unit)           (GETVAR(unit,VAR_IS_BLEEDING,false))
-#define IS_IN_PAIN(unit)            (GETVAR(unit,VAR_HAS_PAIN,false))
+#define IS_IN_PAIN(unit)            (GETVAR(unit,VAR_IN_PAIN,false))
 #define IS_UNCONSCIOUS(unit)        (GETVAR(unit,VAR_UNCON,false))
 
 // The following function calls are defined here just for consistency
