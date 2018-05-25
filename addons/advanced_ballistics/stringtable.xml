@@ -12,10 +12,10 @@
             <Hungarian>Széladatok mutatása</Hungarian>
             <Czech>Zobrazit údaje o větru</Czech>
             <Portuguese>Mostrar Informação do Vento</Portuguese>
+            <Japanese>風の情報を表示する</Japanese>
             <Korean>바람의 정보를 표시</Korean>
             <Chinese>顯示風況</Chinese>
             <Chinesesimp>显示风况</Chinesesimp>
-            <Japanese>風の情報を表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ProtractorKey">
             <English>Show Protractor</English>
