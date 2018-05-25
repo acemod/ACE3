@@ -48,13 +48,13 @@ if (_cargo isKindOf "CAManBase") then {
     private _itemSize = if (isNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size))) then {
         getNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size));
     } else {
-        if (["ace_cargo"] call EFUNC(common,isModLoaded)) then {
+        if (["ace_cargo"] call FUNC(isModLoaded)) then {
             [_cargo] call EFUNC(cargo,getSizeItem);
         } else {
             _radiusOfItem;
         };
     };
-    if !(_itemSize isEqualTo -1) then {
+    if (_itemSize != -1) then {
         _radiusOfItem = (_itemSize ^ 0.35) max 0.75;
     };
 };
