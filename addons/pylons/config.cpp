@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interact_menu"};
+        requiredAddons[] = {"ace_interact_menu", "ace_zeus"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"654wak654"};
         url = ECSTRING(main,URL);
@@ -14,6 +14,5 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "menu.hpp"
