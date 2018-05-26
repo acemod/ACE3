@@ -14,5 +14,6 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.cpp"
 #include "CfgEventHandlers.hpp"
 #include "menu.hpp"
