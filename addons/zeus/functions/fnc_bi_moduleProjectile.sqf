@@ -1,5 +1,5 @@
 /*
- * Author: Bohemia Interactive
+ * Author: Bohemia Interactive, optimized by Anton
  * Module function for spawning projectiles
  * Used by Curator artillery modules etc
  * Edited to remove radio warning and add ballistics support
@@ -98,7 +98,7 @@ if (_activated) then {
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
                             if (CBA_missionTime > _x getVariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
-                                [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call bis_fnc_mp;
+                                [_side, _radio, "side"] remoteExecCall ["bis_fnc_sayMessage", _x];
                                 _x setVariable ["BIS_fnc_moduleProjectile_radio",CBA_missionTime + _delay];
                             };
                         };
@@ -107,7 +107,7 @@ if (_activated) then {
             };
         };
         if (count _hint > 0 && {count objectcurators _logic > 0}) then {
-            [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectcurators _logic] call bis_fnc_mp;
+            [_hint, nil, nil, nil, nil, nil, nil, true] remoteExecCall ["bis_fnc_advHint", objectcurators _logic];
         };
         if (count _velocity == 3) then {
             _altitude = (_logic getvariable ["altitude",_altitude]) call bis_fnc_parsenumber;
@@ -126,7 +126,7 @@ if (_activated) then {
             };
 
             //--- Play sound
-            if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call bis_fnc_mp;};
+            if (_sound != "") then {[_logic, _sound, "say3D"] remoteExecCall ["bis_fnc_sayMessage"];};
 
             //--- Create sound source
             _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
@@ -170,7 +170,7 @@ if (_activated) then {
                 //--- Delete curator spawned logic
                 if (_shakeStrength > 0) then {
                     if (_simulation == "shotsubmunitions") then {sleep 0.5;};
-                    [[_shakeStrength,0.7,[position _logic,_shakeRadius]],"bis_fnc_shakeCuratorCamera"] call bis_fnc_mp;
+                    [_shakeStrength, 0.7, [position _logic, _shakeRadius]] remoteExec ["bis_fnc_shakeCuratorCamera"];
                 };
                 deletevehicle _logic;
             } else {
