@@ -1,5 +1,5 @@
 /*
- * Author: Bohemia Interactive
+ * Author: Bohemia Interactive, optimized by Anton
  * Module function for remote controlling units as zeus
  * Edited to remove global wind sound
  *
@@ -58,7 +58,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             // Added by ace_zeus to toggle remote control wind sound
             if (GVAR(remoteWind)) then {
                 //--- Play wind cue to all players
-                [format ["wind%1",ceil random 5],"bis_fnc_playsound"] call bis_fnc_mp;
+                format ["wind%1", ceil random 5] remoteExecCall ["bis_fnc_playsound"];
             };
 
             _blur = ppeffectcreate ["RadialBlur",144];
