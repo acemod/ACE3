@@ -1,5 +1,5 @@
 /*
- * Author: Dystopian
+ * Author: Dystopian, optimized by Anton
  * Controls persistent laser state.
  *
  * Arguments:
@@ -28,16 +28,17 @@ if (!_enabled) exitWith {
 
 GVAR(laserKeyDownEH) = ["KeyDown", {
     if !((_this select 1) in actionKeys "headlights") exitWith {false};
-    private _weapon = currentWeapon ACE_player;
+    private _unit = ACE_player;
+    private _weapon = currentWeapon _unit;
     [
         {
             params ["_weapon", "_laserWasEnabled"];
-            private _laserEnabled = ACE_player isIRLaserOn _weapon || {ACE_player isFlashlightOn _weapon};
+            private _laserEnabled = _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weapon};
             if (_laserEnabled && {_laserWasEnabled} || {!_laserEnabled && {!_laserWasEnabled}}) exitWith {};
-            private _weaponIndex = [ACE_player, _weapon] call FUNC(getWeaponIndex);
-            ACE_player setVariable [QGVAR(laserEnabled_) + str _weaponIndex, [nil, true] select _laserEnabled];
+            private _weaponIndex = [_unit, _weapon] call FUNC(getWeaponIndex);
+            _unit setVariable [QGVAR(laserEnabled_) + str _weaponIndex, [nil, true] select _laserEnabled];
         },
-        [_weapon, ACE_player isIRLaserOn _weapon || {ACE_player isFlashlightOn _weapon}]
+        [_weapon, _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weapon}]
     ] call CBA_fnc_execNextFrame;
     false
 }] call CBA_fnc_addDisplayHandler;
