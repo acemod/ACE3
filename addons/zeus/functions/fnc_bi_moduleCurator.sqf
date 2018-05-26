@@ -1,5 +1,5 @@
 /*
- * Author: Bohemia Interactive
+ * Author: Bohemia Interactive, optimized by Anton
  * Module function for initalizing zeus
  * Edited to remove eagle and global ascension message
  * Added "zeusUnitAssigned" event call
@@ -25,7 +25,7 @@ if (_activated) then {
 
     //--- Terminate when not created on the server
     if (!isserver && local _logic && isnull (getassignedcuratorunit _logic)) exitwith {
-        [format ["%1 is trying to create curator logic ModuleCurator_F",profilename],"bis_fnc_error",false] call bis_fnc_mp;
+        format ["%1 is trying to create curator logic ModuleCurator_F", profilename] remoteExecCall ["bis_fnc_error", 2];
         deletevehicle _logic;
     };
 
@@ -162,7 +162,7 @@ if (_activated) then {
                     if ((_logic getVariable ["showNotification",true]) && GVAR(zeusAscension)) then {
                         {
                             if (isplayer _x) then {
-                                [["CuratorAssign",[_name,name _player]],"bis_fnc_showNotification",_x] call bis_fnc_mp;
+                                ["CuratorAssign", [_name, name _player]] remoteExecCall ["bis_fnc_showNotification", _x];
                             };
                         } forEach (curatoreditableobjects _logic);
                     };
