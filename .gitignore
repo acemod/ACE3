@@ -2,6 +2,7 @@
 *.zip
 release/*
 tools/temp
+tools/armake.exe
 *.cache
 *.pbo
 texHeaders.bin
