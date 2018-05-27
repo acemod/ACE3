@@ -3,7 +3,7 @@
  * Checks if the player can get in the weapon
  *
  * Arguments:
- * 0: Weapon <OBJECT>
+ * 0: Static Weapon <OBJECT>
  *
  * Return Value:
  * None
@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-params["_weapon"];
+params ["_staticWeapon"];
 
-alive _weapon && (((crew _weapon) isEqualTo [] || {!(alive (gunner _weapon))}))
+alive _staticWeapon && (((crew _staticWeapon) isEqualTo [] || {!(alive (gunner _staticWeapon))}))
 

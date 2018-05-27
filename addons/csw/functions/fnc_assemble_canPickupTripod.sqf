@@ -10,13 +10,13 @@
  * Can pickup <BOOL>
  *
  * Example:
- * [tripod, player] call ace_csw_fnc_canPickupTripod
+ * [tripod, player] call ace_csw_fnc_assemble_canPickupTripod
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params["_tripod", "_player"];
+params ["_tripod", "_player"];
 
-((secondaryWeapon(_player select 1)) == (""))
+((secondaryWeapon _player) == "") && {alive _tripod}
 

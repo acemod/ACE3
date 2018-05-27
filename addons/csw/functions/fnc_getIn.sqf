@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params["_player", "_weapon"];
+params ["_player", "_staticWeapon"];
 
-(_player select 1) moveInTurret [_weapon, [0]];
+_player moveInTurret [_staticWeapon, [0]];
 

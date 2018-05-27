@@ -121,9 +121,6 @@
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
         </Key>
-        <Key ID="STR_ACE_CSW_DummyMagazine_displayName">
-            <English>Dummy Magazine (SHOULD NOT SEE THIS)</English>
-        </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
         </Key>

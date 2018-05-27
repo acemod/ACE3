@@ -13,17 +13,16 @@
  * <BOOL>
  *
  * Example:
- * [cursorTarget, [0], player, "ACE_100Rnd_127x99_ball_carryable", "200Rnd_127x99_mag_Tracer_Red"] call ace_crewserved_fnc_canUnloadMagazine
+ * [cursorTarget, [0], player, "ACE_csw_100Rnd_127x99_mag_red", "200Rnd_127x99_mag_Tracer_Red"] call ace_csw_fnc_reload_canUnloadMagazine
  *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_vehicle", "_turretPath", "_unit", "_carryMag", "_vehMag"];
-// TRACE_5("canLoadMagazine",_vehicle,_turretPath,_unit,_carryMag,_vehMag);
 
 // handle disassembled or deleted
-if ((isNull _vehicle) || {(_vehicle distance _unit) > 5}) exitWith {false}; 
+if ((!alive _vehicle) || {(_vehicle distance _unit) > 5}) exitWith {false}; 
 
 private _return = false;
 {
@@ -32,4 +31,3 @@ private _return = false;
 } forEach (magazinesAllTurrets _vehicle);
 
 _return
-

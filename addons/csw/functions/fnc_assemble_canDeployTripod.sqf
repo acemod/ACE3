@@ -9,7 +9,7 @@
  * Can deploy <BOOL>
  *
  * Example:
- * [player] call ace_csw_fnc_canDeploy
+ * [player] call ace_csw_fnc_canDeployTripod
  *
  * Public: No
  */
@@ -17,5 +17,5 @@
 
 params ["_player"];
 
-(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QGVAR(options) >> "type") == "mount");
+(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QUOTE(ADDON) >> "type") == "mount")
 

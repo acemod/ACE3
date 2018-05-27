@@ -7,10 +7,11 @@
  * 1: Player <OBJECT>
  *
  * Return Value:
- * None
+ * Mags <ARRAY>
+ * [Carry Magazine <STRING>, Turret Path <ARRAY>, Ammo Needed <NUMBER>]
  *
  * Example:
- * [cursorObject, player] call ace_crewserved_fnc_getLoadableMagazines
+ * [cursorObject, player] call ace_csw_fnc_reload_getLoadableMagazines
  *
  * Public: No
  */
@@ -18,7 +19,6 @@
 
 params ["_vehicle", "_player"];
 
-private _return = [];
 private _carriedMagazines = [];
 
 {
@@ -26,10 +26,11 @@ private _carriedMagazines = [];
         _carriedMagazines pushBackUnique _x;
     };
 } forEach (magazines _player);
-TRACE_1("",_carriedMagazines);
 
-if (_carriedMagazines isEqualTo []) exitWith {_return}; // fast exit if no carry mags
+if (_carriedMagazines isEqualTo []) exitWith { [] }; // fast exit if no carry mags
 
+private _loadInfo = [];
+private _return = [];
 // Go through turrets and find weapons that we could reload
 {
     private _turretPath = _x;
@@ -39,8 +40,8 @@ if (_carriedMagazines isEqualTo []) exitWith {_return}; // fast exit if no carry
             private _carryMag = _x;
             private _carryGroup = configFile >> QGVAR(groups) >> _carryMag;
             {
-                if (((getNumber (_carryGroup >> _x)) == 1) && {[_vehicle, _turretPath, _player, _carryMag, _weapon, false] call FUNC(canLoadMagazine)}) exitWith {
-                    _return pushBack [_carryMag, _weapon, _turretPath];
+                if (((getNumber (_carryGroup >> _x)) == 1) && {_loadInfo = [_vehicle, _turretPath, _carryMag, _player] call FUNC(reload_canLoadMagazine); _loadInfo select 0}) exitWith {
+                    _return pushBack [_carryMag, _turretPath, _loadInfo];
                 };
             } forEach (getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines"));
         } forEach _carriedMagazines;
@@ -49,4 +50,3 @@ if (_carriedMagazines isEqualTo []) exitWith {_return}; // fast exit if no carry
 // Note: these nested forEach's looks terrible, but most only have one element
 
 _return
-
