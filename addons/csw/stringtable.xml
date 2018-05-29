@@ -10,6 +10,9 @@
         <Key ID="STR_ACE_CSW_TripodFolded_displayName">
             <English>CSW Deployable Tripod</English>
         </Key>
+        <Key ID="STR_ACE_CSW_TripodLowFolded_displayName">
+            <English>CSW Deployable Tripod (Low)</English>
+        </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
         </Key>
@@ -18,9 +21,6 @@
         </Key>
         <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_confirmDeployment_hint">
-            <English>Confirm Placement</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticMortarBag_displayName">
             <English>[ACE] Mk6 Mortar Tube</English>
@@ -172,34 +172,6 @@
             <Italian>Unload %1</Italian>
             <Russian>Разгрузить %1</Russian>
             <Hungarian>Unload %1</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_CSW_removeMagsBeforeReloading">
-            <English>Remove current magazine first</English>
-            <Czech>Nejdřív odeberte zásobník</Czech>
-            <French>Retirez le chargeur actuel</French>
-            <German>Waffe muss entladen werden</German>
-            <Hungarian>Először távolítsd el a tárat.</Hungarian>
-            <Italian>Rimuovi il caricatore Correntre prima</Italian>
-            <Polish>Najpierw rozładuj amunicję</Polish>
-            <Russian>Сперва разрядите оружие</Russian>
-            <Spanish>Remove current magazine first</Spanish>
-        </Key>
-        <Key ID="STR_ACE_CSW_gunnerInWeapon">
-            <English>Weapon occupied</English>
-            <German>Waffe besetzt</German>
-            <Spanish>Weapon occupied</Spanish>
-            <Czech>Zbraň obsazena</Czech>
-            <French>Arme occupée</French>
-            <Polish>Broń jest obsługiwana</Polish>
-            <Italian>Arma Occupata </Italian>
-            <Russian>Оружие используется</Russian>
-            <Hungarian>Foglalt fegyver.</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_CSW_noRoomToUnload">
-            <English>No room in inventory</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_onlyReloadEmpty_Name">
-            <English>Crew Served: Only reload empty</English>
         </Key>
     </Package>
 </Project>

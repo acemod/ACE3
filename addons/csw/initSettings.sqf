@@ -28,8 +28,8 @@
 // ] call CBA_settings_fnc_init;
 
 
-GVAR(defaultAssemblyMode) = false;
-// GVAR(defaultAssemblyMode) = true;
+// GVAR(defaultAssemblyMode) = false;
+GVAR(defaultAssemblyMode) = true;
 
 
 

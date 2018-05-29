@@ -17,7 +17,7 @@ GVAR(vehicleMagCache) = call CBA_fnc_createNamespace;
 
 [QGVAR(addTurretMag), LINKFUNC(reload_handleAddTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(removeTurretMag), LINKFUNC(reload_handleRemoveTurretMag)] call CBA_fnc_addEventHandler;
-[QGVAR(returnAmmo), LINKFUNC(reload_hanldeReturnAmmo)] call CBA_fnc_addEventHandler;
+[QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
 
 
 

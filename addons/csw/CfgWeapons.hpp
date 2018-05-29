@@ -4,6 +4,8 @@ class CfgWeapons {
         class WeaponSlotsInfo;
     };
 
+
+    // Tripods:
     class GVAR(m3CarryTripod): Launcher_Base_F {
         class ADDON {
             type = "mount";
@@ -22,14 +24,22 @@ class CfgWeapons {
         picture = QPATHTOF(UI\Tripod_Icon.paa);
     };
 
+    class GVAR(m3CarryTripodLow): GVAR(m3CarryTripod) {
+        class ADDON: ADDON {
+            deploy = QGVAR(m3TripodLow);
+        };
+        displayName = CSTRING(TripodLowFolded_displayName);
+    };
 
+
+    // Weapons:
     class GVAR(staticATCarry): Launcher_Base_F {
         class ADDON {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(m3Tripod) = GVAR(staticATWeapon);
+                GVAR(m3Tripod) = "B_static_AT_F";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -49,7 +59,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(m3Tripod) = GVAR(staticAAWeapon);
+                GVAR(m3Tripod) = "B_static_AA_F";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -70,6 +80,7 @@ class CfgWeapons {
             pickupTime = 4;
             class assembleTo {
                 GVAR(m3Tripod) = "B_HMG_01_high_F";
+                GVAR(m3TripodLow) = "B_HMG_01_F";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -89,7 +100,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(m3Tripod) = GVAR(staticGMGWeapon);
+                GVAR(m3Tripod) = "B_GMG_01_high_F";
+                GVAR(m3TripodLow) = "B_GMG_01_F";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {

@@ -16,8 +16,8 @@
 #include "script_component.hpp"
 
 [{
-    params ["_staticWeapon"];
-    TRACE_1("assemble_pickupWeapon",_staticWeapon);
+    params ["_staticWeapon", "_player"];
+    TRACE_2("assemble_pickupWeapon",_staticWeapon,_player);
 
     private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "disassembleWeapon");
     private _turretClassname = getText(configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "disassembleTurret");
@@ -28,19 +28,12 @@
 
     private _onFinish = {
         params ["_args"];
-        _args params ["_staticWeapon", "_carryWeaponClassname", "_turretClassname"];
-        TRACE_3("disassemble finish",_staticWeapon,_carryWeaponClassname,_turretClassname);
+        _args params ["_staticWeapon", "_player", "_carryWeaponClassname", "_turretClassname"];
+        TRACE_4("disassemble finish",_staticWeapon,_player,_carryWeaponClassname,_turretClassname);
 
         private _weaponPos = getPosATL _staticWeapon;
         _weaponPos set [2, (_weaponPos select 2) + 0.1];
         private _weaponDir = getDir _staticWeapon;
-
-        // Create magazine holder and spawn the ammo that was in the weapon
-        private _weaponRelPos = _staticWeapon getRelPos RELATIVE_DIRECTION(270);
-        private _ammoHolder = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
-        _ammoHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
-        _ammoHolder setVectorUp (surfaceNormal _weaponRelPos);
-        _ammoHolder setDir random [0, 180, 360];
 
         LOG("remove ammo");
         {
@@ -53,15 +46,12 @@
                 GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
                 TRACE_2("setting cache",_xMag,_carryMag);
             };
-            if (_carryMag != "") then {
-                private _carryMagAmmo = getNumber(configFile >> "CfgMagazines" >> _carryMag >> "count");
-                private _bulletsRemaining = _xAmmo % _carryMagAmmo;
-
-                _ammoHolder addMagazineAmmoCargo [_carryMag, floor(_xAmmo / _carryMagAmmo), _carryMagAmmo];
-                _ammoHolder addMagazineAmmoCargo [_carryMag, 1, _bulletsRemaining];
+            if ((_xAmmo > 0) && {_carryMag != ""}) then {
+                TRACE_2("Removing ammo",_xMag,_carryMag);
+                [_player, _carryMag, _xAmmo] call FUNC(reload_handleReturnAmmo);
             };
         } forEach (magazinesAllTurrets _staticWeapon);
-        
+
         LOG("delete weapon");
 
         deleteVehicle _staticWeapon;
@@ -87,6 +77,6 @@
         ((crew _staticWeapon) isEqualTo []) && (alive _staticWeapon)
     };
 
-    [TIME_PROGRESSBAR(_pickupTime), [_staticWeapon, _carryWeaponClassname, _turretClassname], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_pickupTime), [_staticWeapon, _player, _carryWeaponClassname, _turretClassname], _onFinish, {}, localize LSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
 

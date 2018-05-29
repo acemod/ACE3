@@ -20,7 +20,7 @@ PREP(reload_getLoadableMagazines);
 PREP(reload_getVehicleMagazine);
 PREP(reload_handleAddTurretMag);
 PREP(reload_handleRemoveTurretMag);
-PREP(reload_hanldeReturnAmmo);
+PREP(reload_handleReturnAmmo);
 PREP(reload_loadMagazine);
 
 PREP(staticWeaponInit);
