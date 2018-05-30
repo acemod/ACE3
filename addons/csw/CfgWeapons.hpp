@@ -23,12 +23,28 @@ class CfgWeapons {
         modes[] = {};
         picture = QPATHTOF(UI\Tripod_Icon.paa);
     };
-
     class GVAR(m3CarryTripodLow): GVAR(m3CarryTripod) {
         class ADDON: ADDON {
             deploy = QGVAR(m3TripodLow);
         };
         displayName = CSTRING(TripodLowFolded_displayName);
+    };
+    class GVAR(carryMortarBaseplate): Launcher_Base_F {
+        class ADDON {
+            type = "mount";
+            deployTime = 4;
+            pickupTime = 4;
+            deploy = QGVAR(mortarBaseplate);
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 440; // todo
+        };
+        displayName = CSTRING(mortarBaseplate_displayName);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
+        modes[] = {};
+        picture = QPATHTOF(UI\Tripod_Icon.paa); // todo
     };
 
 
@@ -115,6 +131,28 @@ class CfgWeapons {
         picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
     };
 
+
+    class GVAR(staticMortarCarry): Launcher_Base_F {
+        class ADDON {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                GVAR(mortarBaseplate) = "B_Mortar_01_F";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 910; // M252 Mortar Weight
+        };
+        displayName = CSTRING(StaticMortarBag_displayName);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
+        modes[] = {};
+        picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
+    };
+
+
     /*
     class GVAR(staticAutoHMGCarry): Launcher_Base_F {
         class ADDON {
@@ -156,25 +194,6 @@ class CfgWeapons {
         picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
     };
 
-
-
-    class GVAR(staticMortarCarry): Launcher_Base_F {
-        class GVAR(options) {
-            assembleTo = "B_Mortar_01_F";
-            baseTripod = QGVAR(m3Tripod);
-            type = "weapon";
-        };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 910; // M252 Mortar Weight
-        };
-
-        displayName = CSTRING(StaticMortarBag_displayName);
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOF(data\ACE_CSW_WeaponBag.p3d);
-        modes[] = {};
-        picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
-    };
  */
 };
 

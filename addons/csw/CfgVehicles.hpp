@@ -79,6 +79,15 @@ class CfgVehicles {
             disassembleTo = QGVAR(m3CarryTripodLow);
         };
     };
+    class GVAR(mortarBaseplate): GVAR(m3Tripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOF(data\ACE_CSW_mortarBaseplate.p3d);
+        displayName = CSTRING(mortarBaseplate_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(carryMortarBaseplate);
+        };
+    };
 
 
     // Static Weapons:
@@ -106,7 +115,7 @@ class CfgVehicles {
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticHMGCarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3TripodLow); // turret [CfgVehicles]
-            desiredAmmo = 100; 
+            desiredAmmo = 100;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
         };
@@ -142,7 +151,7 @@ class CfgVehicles {
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticGMGCarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3TripodLow); // turret [CfgVehicles]
-            desiredAmmo = 40; 
+            desiredAmmo = 40;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
         };
@@ -204,20 +213,20 @@ class CfgVehicles {
     class O_static_AA_F: AA_01_base_F { class ADDON: ADDON {}; };
 
 
-    // class StaticMortar: StaticWeapon {};
-    // class Mortar_01_base_F: StaticMortar {
-        // class ADDON {
-            // enabled = 1;
-            // magazineLocation = "";
-            // disassembleWeapon = QGVAR(mk6Weapon); // carry weapon [CfgWeapons]
-            // disassembleTurret = QGVAR(mk6Base); // turret [CfgVehicles]
-            // desiredAmmo = 40;
-            // ammoLoadTime = 3;
-            // ammoUnloadTime = 3;
-        // };
-    // };
-    // class B_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
-    // class O_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
-    // class I_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
-    // class I_G_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
+    class StaticMortar: StaticWeapon {};
+    class Mortar_01_base_F: StaticMortar {
+        class ADDON {
+            enabled = 1;
+            magazineLocation = "";
+            disassembleWeapon = QGVAR(staticMortarCarry); // carry weapon [CfgWeapons]
+            disassembleTurret = QGVAR(mortarBaseplate); // turret [CfgVehicles]
+            desiredAmmo = 1;
+            ammoLoadTime = 3;
+            ammoUnloadTime = 3;
+        };
+    };
+    class B_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
+    class O_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
+    class I_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
+    class I_G_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
 };
