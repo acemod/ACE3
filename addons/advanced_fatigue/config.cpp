@@ -14,6 +14,7 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgEden.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMovesMaleSdr.hpp"
