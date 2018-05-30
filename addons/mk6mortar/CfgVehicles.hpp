@@ -7,7 +7,6 @@ class CfgVehicles {
                     displayName = CSTRING(rangetable_action);
                     condition = QUOTE(_this call FUNC(rangeTableCanUse));
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
-                    priority = 0;
                     icon = QPATHTOF(UI\icon_rangeTable.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
