@@ -2,13 +2,13 @@
 <Project name="ACE">
     <Package name="Advanced_Fatigue">
         <Key ID="STR_ACE_Advanced_Fatigue_DisplayName">
-            <English>Advanced Fatigue</English>
-            <German>Erweiterte Ausdauer</German>
-            <Chinese>進階疲勞</Chinese>
-            <Chinesesimp>进阶疲劳</Chinesesimp>
-            <Japanese>アドバンスド疲労</Japanese>
-            <Italian>Fatica Avanzata</Italian>
-            <Korean>고급 피로도</Korean>
+            <English>ACE Advanced Fatigue</English>
+            <German>ACE Erweiterte Ausdauer</German>
+            <Chinese>ACE 進階疲勞</Chinese>
+            <Chinesesimp>ACE 进阶疲劳</Chinesesimp>
+            <Japanese>ACE アドバンスド疲労</Japanese>
+            <Italian>ACE Fatica Avanzata</Italian>
+            <Korean>ACE 고급 피로도</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
             <English>Performance Factor</English>
