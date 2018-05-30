@@ -43,7 +43,7 @@ if (_pylon > 0) exitWith {
         TRACE_2("",_pylon,_magazineClass,_newCount);
         _vehicle setPylonLoadOut [_pylon, _magazineClass, true, _turretPath];
         _vehicle setAmmoOnPylon [_pylon, _newCount];
-        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _newCount,
+        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
             getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
     };
