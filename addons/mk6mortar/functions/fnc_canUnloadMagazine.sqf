@@ -19,6 +19,8 @@
 params ["_static","_unit"];
 
 if !(alive _static && GVAR(useAmmoHandling) && _static getVariable [QGVAR(initialized),false]) exitWith {false};
+if (_static getVariable [QGVAR(inUse), false]) exitWith {false};
+
 private _canUnloadMagazine = false;
 
 private _ammoCount = ((magazinesAllTurrets _static) select 1) select 2;
