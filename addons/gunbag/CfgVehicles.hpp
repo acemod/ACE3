@@ -8,7 +8,6 @@ class CfgVehicles {
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 0});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(toGunbag));
                     showDisabled = 0;
-                    priority = 1;
                     icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
                 class GVAR(weaponOff) {
@@ -16,7 +15,6 @@ class CfgVehicles {
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 1});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(offGunbag));
                     showDisabled = 0;
-                    priority = 1;
                     icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
                 class GVAR(status) {
@@ -24,7 +22,6 @@ class CfgVehicles {
                     condition = QUOTE([_target] call FUNC(hasGunbag));
                     statement = QUOTE([_target] call FUNC(status));
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
             };
@@ -36,15 +33,12 @@ class CfgVehicles {
                     displayName = CSTRING(Displayname);
                     condition = QUOTE([_player] call FUNC(hasGunbag));
                     showDisabled = 0;
-                    priority = 0.1;
                     icon = QPATHTOF(ui\gunbag_icon_ca.paa);
-
                     class GVAR(weaponTo) {
                         displayName = CSTRING(ToGunbag);
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 0);
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(toGunbag));
                         showDisabled = 0;
-                        priority = 1;
                         icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
                     class GVAR(weaponOff) {
@@ -52,7 +46,6 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 1);
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(offGunbag));
                         showDisabled = 0;
-                        priority = 1;
                         icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
                     class GVAR(status) {
@@ -60,7 +53,6 @@ class CfgVehicles {
                         condition = QUOTE([_player] call FUNC(hasGunbag));
                         statement = QUOTE([_player] call FUNC(status));
                         showDisabled = 0;
-                        priority = 2;
                         icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
                 };

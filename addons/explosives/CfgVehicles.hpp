@@ -11,10 +11,8 @@ class CfgVehicles {
                 statement = "";
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;
-                priority = 4;
                 icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
                 insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
-                //Sub-menu items
                 class ACE_Place {
                     displayName = CSTRING(Place);
                     condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
@@ -23,7 +21,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 1;
                     icon = QPATHTOF(UI\Place_Explosive_ca.paa);
-                    priority = 1;
                 };
                 class ACE_Cellphone {
                     displayName = CSTRING(cellphone_displayName);
@@ -32,7 +29,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
                     icon = QPATHTOF(Data\UI\Cellphone_UI.paa);
-                    priority = 0.8;
                 };
             };
         };
@@ -95,7 +91,6 @@ class CfgVehicles {
                     insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
-                    priority = 5;
                     icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
                 };
                 class ACE_PickUp {
@@ -105,7 +100,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
-                    priority = 5;
                     icon = "\A3\ui_f\data\IGUI\Cfg\Actions\Obsolete\ui_action_takemine_ca.paa";
                 };
             };

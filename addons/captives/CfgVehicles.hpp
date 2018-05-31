@@ -30,7 +30,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
-                    priority = 2.3;
                 };
                 class ACE_StopEscorting {
                     displayName = CSTRING(StopEscorting);
@@ -40,7 +39,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotEscorting", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
-                    priority = 2.3;
                 };
                 class ACE_LoadCaptive {
                     displayName = CSTRING(LoadCaptive);
@@ -50,7 +48,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotEscorting", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
-                    priority = 2.2;
                     insertChildren = QUOTE(call DFUNC(addLoadCaptiveActions));
                 };
                 class GVAR(UnloadCaptive) {
@@ -59,7 +56,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
                     exceptions[] = {"isNotSwimming"};
-                    priority = 1.2;
                 };
             };
         };
@@ -71,7 +67,6 @@ class CfgVehicles {
                 statement = QUOTE([ARR_3(_player,objNull, false)] call FUNC(doEscortCaptive));
                 exceptions[] = {"isNotEscorting", "isNotSwimming"};
                 showDisabled = 0;
-                priority = 2.3;
             };
             class ACE_StartSurrenderingSelf {
                 displayName = CSTRING(StartSurrendering);
@@ -79,7 +74,6 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
-                priority = 0;
                 icon = QPATHTOF(UI\Surrender_ca.paa);
             };
             class ACE_StopSurrenderingSelf {
@@ -88,7 +82,6 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrendered));
                 exceptions[] = {"isNotSurrendering", "isNotSwimming"};
                 showDisabled = 0;
-                priority = 0;
                 icon = QPATHTOF(UI\Surrender_ca.paa);
             };
         };
@@ -103,7 +96,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                     statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
                     exceptions[] = {"isNotEscorting", "isNotSwimming"}; \
-                    priority = 1.2; \
                 }; \
             }; \
         };

@@ -4,21 +4,18 @@
             displayName = CSTRING(Action_UnLock); \
             condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
             statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,false)], [_target])] call CBA_fnc_targetEvent); \
-            priority = 0.3; \
             icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
         }; \
         class ACE_lockVehicle { \
             displayName = CSTRING(Action_Lock); \
             condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
             statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,true)], [_target])] call CBA_fnc_targetEvent); \
-            priority = 0.2; \
             icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
         }; \
         class ACE_lockpickVehicle { \
             displayName = CSTRING(Action_Lockpick); \
             condition = QUOTE([ARR_3(_player, _target, 'canLockpick')] call FUNC(lockpick)); \
             statement = QUOTE([ARR_3(_player, _target, 'startLockpick')] call FUNC(lockpick)); \
-            priority = 0.1; \
         }; \
     }; \
     class ACE_Actions { \
@@ -29,7 +26,6 @@
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
                 statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,false)], [_target])] call CBA_fnc_targetEvent); \
                 exceptions[] = {"isNotSwimming"}; \
-                priority = 0.3; \
                 icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
             }; \
             class ACE_lockVehicle { \
@@ -38,7 +34,6 @@
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
                 statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,true)], [_target])] call CBA_fnc_targetEvent); \
                 exceptions[] = {"isNotSwimming"}; \
-                priority = 0.2; \
                 icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
             }; \
             class ACE_lockpickVehicle { \
@@ -47,7 +42,6 @@
                 condition = QUOTE([ARR_3(_player, _target, 'canLockpick')] call FUNC(lockpick)); \
                 statement = QUOTE([ARR_3(_player, _target, 'startLockpick')] call FUNC(lockpick)); \
                 exceptions[] = {"isNotSwimming"}; \
-                priority = 0.1; \
             }; \
         }; \
     };
