@@ -80,9 +80,6 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _grainIntensityFinal = _effectMod * linearConversion [1, 0, _effectiveLight, ST_NVG_NOISEINTENSITY_MIN, ST_NVG_NOISEINTENSITY_MAX, true];
     private _noiseSharpnessFinal = linearConversion [1, 0, _effectiveLight, ST_NVG_NOISESHARPNESS_MIN, ST_NVG_NOISESHARPNESS_MAX, true];
 
-    private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
-    _brightFinal = _brightFinal + (_playerBrightSetting / 20);
-
     private _fogApply = linearConversion [0, 1, _effectiveLight, ST_NVG_MAXFOG, ST_NVG_MINFOG, true];
 
     // Modify blur if looking down scope
@@ -96,6 +93,10 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _radialBlurPower = 0.0025 * GVAR(effectScaling);
     _brightFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _brightFinal];
     _contrastFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _contrastFinal];
+
+    // Add adjusted NVG brightness
+    private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
+    _brightFinal = _brightFinal + (_playerBrightSetting / 20);
 
     // Scale grain effects based on ace_nightvision_noiseScaling setting
     _grainIntensityFinal = _grainIntensityFinal * GVAR(noiseScaling);
