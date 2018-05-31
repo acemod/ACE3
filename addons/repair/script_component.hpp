@@ -17,3 +17,5 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define TRACK_HITPOINTS ["hitltrack", "hitrtrack"]
+
+#define DAMAGE_COLOR_SCALE ["#FFFFFF", "#FFFF7E", "#FFEC4D", "#FFD52C", "#FCB121", "#FF9916", "#FF7D16", "#FF4400", "#FF0000"]
