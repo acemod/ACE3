@@ -31,6 +31,9 @@ class CfgPatches {
 
 class CfgActions {
     class None;
+    class ActivateMine: None {
+        show = 0;
+    };
     class Deactivate:None {
         show = 0;
     };
