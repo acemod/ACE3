@@ -134,6 +134,12 @@ switch (GVAR(currentLeftPanel)) do {
     };
 };
 
+// Force a "refresh" animation of the panel
+_ctrlPanel ctrlSetFade 1;
+_ctrlPanel ctrlCommit 0;
+_ctrlPanel ctrlSetFade 0;
+_ctrlPanel ctrlCommit FADE_DELAY;
+
 _itemsToCheck = _itemsToCheck apply {toLower _x};
 _compatibleItems =  _compatibleItems apply {toLower _x};
 
@@ -280,9 +286,7 @@ switch (_ctrlIDC) do {
     };
 };
 
-if (GVAR(currentRightPanel) != _ctrlIDC) then {
-    (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
-};
+(_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
 
 GVAR(currentRightPanel) = _ctrlIDC;
 
