@@ -548,7 +548,6 @@ class CfgVehicles {
                     condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {alive _target} && {vehicle _target == _target});
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionLoadUnit));
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotSwimming"};
                     insertChildren = QUOTE(call DFUNC(addLoadPatientActions));
@@ -559,7 +558,6 @@ class CfgVehicles {
                     condition = QUOTE(_target getVariable [ARR_2(QUOTE(QUOTE(ACE_isUnconscious)), false)] && {alive _target} && {vehicle _target != _target} && {vehicle _player == _player});
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside", "isNotSwimming"};
                 };
@@ -914,20 +912,17 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 selection = "cover_action";
-
                 class ACE_OpenLid {
                     displayName = CSTRING(openLid);
                     condition = QUOTE(alive _target && {_target animationPhase 'Cover' < 0.5});
                     statement = QUOTE(_target animate ARR_2(['Cover',1]));
                     showDisabled = 0;
-                    priority = -1;
                 };
                 class ACE_CloseLid {
                     displayName = CSTRING(closeLid);
                     condition = QUOTE(alive _target && {_target animationPhase 'Cover' >= 0.5});
                     statement = QUOTE(_target animate ARR_2(['Cover',0]));
                     showDisabled = 0;
-                    priority = -1;
                 };
             };
         };

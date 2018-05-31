@@ -49,5 +49,5 @@ if (isServer) then {
     GVAR(currentAircraftNamespace) = true call CBA_fnc_createNamespace;
     publicVariable QGVAR(currentAircraftNamespace);
 
-    addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleDisconnect)];
+    addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 };

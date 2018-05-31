@@ -8,7 +8,6 @@
                 insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions)); \
                 exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
-                priority = 0; \
                 icon = QPATHTOF(UI\attach_ca.paa); \
             }; \
             class GVAR(DetachVehicle) { \
@@ -17,7 +16,6 @@
                 statement = QUOTE(_this call FUNC(detach) ); \
                 exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
-                priority = 0.1; \
                 icon = QPATHTOF(UI\detach_ca.paa); \
             }; \
         }; \
@@ -57,7 +55,6 @@ class CfgVehicles {
                     insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions));
                     exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
-                    priority = 5;
                     icon = QPATHTOF(UI\attach_ca.paa);
                 };
                 class GVAR(Detach) {
@@ -66,7 +63,6 @@ class CfgVehicles {
                     statement = QUOTE(_this call FUNC(detach));
                     exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
-                    priority = 5;
                     icon = QPATHTOF(UI\detach_ca.paa);
                 };
             };
