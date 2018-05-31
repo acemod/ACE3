@@ -17,4 +17,5 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
-#include "Dogtag.hpp"
+#include "RscTitles.hpp"
+#include "CfgUIGrids.hpp"
