@@ -50,10 +50,10 @@
     LSTRING(Category_Pylons),
     [5, 50, 15, 0],
     true,
-	{
-		params ["_searchDistance"];
-		GVAR(searchDistanceSqr) = _searchDistance ^ 2;
-	}
+    {
+        params ["_searchDistance"];
+        GVAR(searchDistanceSqr) = _searchDistance ^ 2;
+    }
 ] call CBA_Settings_fnc_init;
 
 [
