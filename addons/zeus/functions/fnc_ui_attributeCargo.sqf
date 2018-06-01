@@ -50,12 +50,13 @@ private _fnc_onButtonUnload = {
 
     // Handle selection
     private _index = lbCurSel ((ctrlParent _button) displayCtrl 80086);
-    if (_index == -1) exitWith {
+    private _cargoArray = _vehicle getVariable [QEGVAR(cargo,loaded), []];
+    if ((_index < 0) || {_index >= (count _cargoArray)}) exitWith {
         [LSTRING(SelectCargo)] call FUNC(showMessage);
     };
 
     // Unload selected cargo
-    private _item = (_vehicle getVariable [QEGVAR(cargo,loaded), []]) select _index;
+    private _item = _cargoArray select _index;
     private _class = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _itemName = getText (configFile >> "CfgVehicles" >> _class >> "displayName");
     if ([_item, _vehicle] call EFUNC(cargo,unloadItem)) then {
