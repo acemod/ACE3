@@ -238,11 +238,6 @@ class CfgVehicles {
     };
     class LT_01_cannon_base_F : LT_01_base_F {
         class Turrets : Turrets {
-            class MainTurret : MainTurret {};
-        };
-    };
-    class I_LT_01_cannon_F : LT_01_cannon_base_F {
-        class Turrets : Turrets {
             class MainTurret : MainTurret {
                 weapons[] = {
                     "SmokeLauncher",
@@ -255,40 +250,6 @@ class CfgVehicles {
 
     // Tanks DLC Rooikat 120
     class AFV_Wheeled_01_base_F : wheeled_APC_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {};
-        };
-    };
-    class AFV_Wheeled_01_up_base_F : AFV_Wheeled_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {};
-        };
-    };
-    class B_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret: MainTurret {
-                weapons[] = {"ACE_cannon_120mm_GT12","ACE_LMG_coax_DenelMG4"};
-                magazines[] = {"12Rnd_120mm_APFSDS_shells_Tracer_Red","8Rnd_120mm_HE_shells_Tracer_Red","8Rnd_120mm_HEAT_MP_T_Red","4Rnd_120mm_LG_cannon_missiles","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red"};
-            };
-        };
-    };
-    class B_T_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret: MainTurret {
-                weapons[] = {"ACE_cannon_120mm_GT12","ACE_LMG_coax_DenelMG4"};
-                magazines[] = {"12Rnd_120mm_APFSDS_shells_Tracer_Red","8Rnd_120mm_HE_shells_Tracer_Red","8Rnd_120mm_HEAT_MP_T_Red","4Rnd_120mm_LG_cannon_missiles","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red"};
-            };
-        };
-    };
-    class B_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
-        class Turrets : Turrets {
-            class MainTurret: MainTurret {
-                weapons[] = {"ACE_cannon_120mm_GT12","ACE_LMG_coax_DenelMG4"};
-                magazines[] = {"12Rnd_120mm_APFSDS_shells_Tracer_Red","8Rnd_120mm_HE_shells_Tracer_Red","8Rnd_120mm_HEAT_MP_T_Red","4Rnd_120mm_LG_cannon_missiles","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red"};
-            };
-        };
-    };
-    class B_T_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
         class Turrets : Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"ACE_cannon_120mm_GT12","ACE_LMG_coax_DenelMG4"};
