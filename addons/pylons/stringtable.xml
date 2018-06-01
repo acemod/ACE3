@@ -91,23 +91,23 @@
             <Japanese>車両が遠すぎます</Japanese>
             <German>Fahrzeug zu weit entfernt</German>
         </Key>
-        <Key ID="STR_ACE_Pylons_Enabled">
-            <English>Enable Pylons Menu</English>
-            <Japanese>パイロン メニューを有効化</Japanese>
-            <Italian>Abilita Menu Piloni</Italian>
-            <Chinese>啟用派龍架選單</Chinese>
-            <Chinesesimp>启用派龙架选单</Chinesesimp>
-            <Korean>파일런 메뉴 활성</Korean>
-            <German>Aktiviere das Menü für Außenlaststationen.</German>
+        <Key ID="STR_ACE_Pylons_EnabledForZeus">
+            <English>Enable Pylons Menu for Zeus</English>
         </Key>
-        <Key ID="STR_ACE_Pylons_Enabled_description">
-            <English>Enable pylon configuration menu for aircraft.</English>
-            <Japanese>航空機へのパイロン設定メニューを有効化します。</Japanese>
-            <Italian>Abilita il menù di configurazione piloni per aereo.</Italian>
-            <Chinese>啟用後可透過派龍架選單來定義飛機的武裝配置。</Chinese>
-            <Chinesesimp>启用后可透过派龙架选单来定义飞机的武装配置。</Chinesesimp>
-            <Korean>항공기의 파일런 설정 메뉴를 활성합니다.</Korean>
-            <German>Aktiviert die Konfiguration der Außenlaststationen. für Fluggeräte.</German>
+        <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
+            <English>Enables use of the zeus module.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
+            <English>Enable Pylons Menu from Ammo Trucks</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
+            <English>Enables use of pylons menu from ammo trucks.</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
+            <English>This aircraft doesn't have pylons</English>
+        </Key>
+        <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
+            <English>Configure pylons module is disabled for zeus</English>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>

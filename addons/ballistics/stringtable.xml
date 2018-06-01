@@ -2283,22 +2283,27 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelTwist">
             <English>Barrel twist</English>
+            <Japanese>銃身の転度</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
             <French>Longueur du canon</French>
+            <Japanese>銃身長</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
             <French>Coefficient ballistique</French>
+            <Japanese>弾道係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
             <French>Masse d'une balle</French>
+            <Japanese>弾丸重量</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
             <French>Vitesse à la bouche</French>
+            <Japanese>銃口初速</Japanese>
         </Key>
     </Package>
 </Project>

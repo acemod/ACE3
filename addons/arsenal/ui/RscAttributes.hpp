@@ -559,6 +559,7 @@ class GVAR(display) {
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(74 * GRID_W);
             h = QUOTE(6 * GRID_H);
+            sizeEx = QUOTE(6 * GRID_H);
         };
         class leftSearchbarButton: ctrlButtonPicture {
             idc = IDC_leftSearchbarButton;
@@ -987,6 +988,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(65 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(6 * GRID_H);
                 };
                 class loadoutsSearchbar: ctrlEdit {
                     idc = IDC_loadoutsSearchbar;
@@ -997,6 +999,7 @@ class GVAR(loadoutsDisplay) {
                     y = QUOTE(safezoneH - (51 * GRID_H));
                     w = QUOTE(72 * GRID_W);
                     h = QUOTE(5 * GRID_H);
+                    sizeEx = QUOTE(6 * GRID_H);
                 };
                 class loadoutsSearchbarButton: ctrlButtonPicture {
                     idc = -1;

@@ -214,7 +214,7 @@
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
-            <Japanese>マップ ツールの端から直線を書きます。メモ：線の中央ホバーすると削除します。</Japanese>
+            <Japanese>マップ ツールの端から直線を書きます。メモ: 線の中央ホバーすると削除します。</Japanese>
             <German>Zeichne gerade Linien am Rand des Kartenwerkzeugs. Hinweis: zum Löschen über den Mittelpunkt der Linie fahren</German>
             <Korean>독도용 도구 가장자리에 직선을 그립니다. 주의: 삭제하기 위해선 선의 중앙에 가져다 대십시요</Korean>
             <Polish>Przeciągnij po krawędzi narzędzi nawigacyjnych by narysować prostą linię. Uwaga: aby usunąć linię - nalezy ustawić kursor nad jej środkiem.</Polish>

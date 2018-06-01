@@ -179,7 +179,6 @@ class CfgVehicles {
                 statement = QUOTE(_this call FUNC(grabAmmo));
                 exceptions[] = {"isNotInside"};
                 showDisabled = 0;
-                priority = 2;
                 icon = QPATHTOF(ui\icon_rearm_interact.paa);
             };
         };
@@ -234,9 +233,6 @@ class CfgVehicles {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
     class GVAR(R_60mm_HE): GVAR(defaultCarriedObject) {
-        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
-    };
-    class GVAR(R_Hydra_HE): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
 };

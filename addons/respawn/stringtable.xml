@@ -35,7 +35,7 @@
             <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
             <Italian>Rallypoint dispiegato</Italian>
             <Portuguese>Rallypoints posicionado</Portuguese>
-            <Japanese>ラリーポイントを設置した</Japanese>
+            <Japanese>ラリーポイントを設置しました</Japanese>
             <Korean>집결지 배치됨</Korean>
             <Chinesesimp>集合点布署完成</Chinesesimp>
             <Chinese>集合點佈署完成</Chinese>
@@ -83,7 +83,7 @@
             <Hungarian>Bázisra teleportálva</Hungarian>
             <Italian>Teleportato alla base</Italian>
             <Portuguese>Teletransportado para a Base</Portuguese>
-            <Japanese>ベースへ移動した</Japanese>
+            <Japanese>ベースへ移動しました</Japanese>
             <Korean>기지로 순간이동함</Korean>
             <Chinesesimp>已传送至基地</Chinesesimp>
             <Chinese>已傳送至基地</Chinese>
@@ -99,7 +99,7 @@
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
             <Italian>Teleportato al rallypoint</Italian>
             <Portuguese>Teletransportado para o Rallypoints</Portuguese>
-            <Japanese>ラリーポイントへ移動した</Japanese>
+            <Japanese>ラリーポイントへ移動しました</Japanese>
             <Korean>집결지로 순간이동함</Korean>
             <Chinesesimp>已传送至集合点</Chinesesimp>
             <Chinese>已傳送至集合點</Chinese>
@@ -297,7 +297,7 @@
             <French>Ce module permet de régler les options de Respawn</French>
             <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
             <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
-            <Japanese>このモジュールを有効化するとリスポンへ ACE 機能を設定できます。</Japanese>
+            <Japanese>有効化するとリスポンへ ACE 機能を設定できます。</Japanese>
             <Korean>이 모듈은 ACE 재배치의 자세한 설정을 변결할 수 있게 해줍니다.</Korean>
             <Chinesesimp>该模块使您可以设定ACE的重生功能</Chinesesimp>
             <Chinese>該模塊使您可以設定ACE的重生功能</Chinese>

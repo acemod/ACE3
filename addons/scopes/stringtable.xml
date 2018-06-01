@@ -443,10 +443,12 @@
         <Key ID="STR_ACE_Scopes_statHorizontalLimits">
             <English>Horizontal limits</English>
             <Chinese>Limites horizontales</Chinese>
+            <Japanese>水平制限</Japanese>
         </Key>
         <Key ID="STR_ACE_Scopes_statVerticalLimits">
             <English>Vertical limits</English>
             <Chinese>Limites verticales</Chinese>
+            <Japanese>垂直制限</Japanese>
         </Key>
     </Package>
 </Project>

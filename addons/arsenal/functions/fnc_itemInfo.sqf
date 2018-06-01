@@ -16,10 +16,6 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeItemInfo = createProfileScope QFUNC(itemInfo);
-#endif
-
 params ["_display", "_control", "_curSel" ,"_itemCfg"];
 
 private _ctrlInfo = _display displayCtrl IDC_infoBox;

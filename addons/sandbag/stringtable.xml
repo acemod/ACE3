@@ -44,7 +44,7 @@
             <Italian>Impossibile costruire qui</Italian>
             <Hungarian>Nem teheted ide</Hungarian>
             <Portuguese>Não pode contruir aqui</Portuguese>
-            <Japanese>ここでは作れない</Japanese>
+            <Japanese>ここでは作れません</Japanese>
             <Korean>여기에 지을 수 없습니다</Korean>
             <Chinesesimp>无法放置在此</Chinesesimp>
             <Chinese>無法放置在此</Chinese>
@@ -140,7 +140,7 @@
             <Italian>Cancella Posizionamento</Italian>
             <Hungarian>Visszavonás</Hungarian>
             <Portuguese>Cancelar implantação</Portuguese>
-            <Japanese>作るのをやめる</Japanese>
+            <Japanese>作るのを止める</Japanese>
             <Korean>설치 취소</Korean>
             <Chinesesimp>取消布署</Chinesesimp>
             <Chinese>取消佈署</Chinese>
@@ -188,7 +188,7 @@
             <Italian>Qui non cè Sabbia</Italian>
             <Hungarian>Itt nincs homok</Hungarian>
             <Portuguese>Aqui não tem areia</Portuguese>
-            <Japanese>ここに土は無い</Japanese>
+            <Japanese>ここに土はありません</Japanese>
             <Korean>흙이 없습니다</Korean>
             <Chinesesimp>这里没有沙</Chinesesimp>
             <Chinese>這裡沒有沙</Chinese>

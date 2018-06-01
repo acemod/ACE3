@@ -116,7 +116,7 @@
             <French>Renomme l'équipement sélectionné</French>
             <German>Ausgewählte Ausrüstung umbenennen</German>
             <Polish>Zmień nazwę wybranego zestawu</Polish>
-            <Japanese>現在選択中の装備を改名します</Japanese>
+            <Japanese>選択中の装備を改名します</Japanese>
             <Italian>Rinomina l'equipaggiamento selezionato</Italian>
             <Korean>선택한 로드아웃의 이름 바꾸기</Korean>
             <Chinese>重新命名當前選擇的裝備</Chinese>
@@ -138,7 +138,7 @@
             <French>Charger l'équipement sélectionné</French>
             <German>Ausgewählte Ausrüstung laden</German>
             <Polish>Wczytaj wybrany zestaw</Polish>
-            <Japanese>現在選択中の装備を読み込みます</Japanese>
+            <Japanese>選択中の装備を読み込みます</Japanese>
             <Italian>Carica l'equipaggiamento selezionato</Italian>
             <Korean>선택한 로드아웃 불러오기</Korean>
             <Chinese>載入當前選擇的裝備</Chinese>
@@ -160,7 +160,7 @@
             <French>Supprimer l'équipement sélectionné</French>
             <German>Ausgewählte Ausrüstung entfernen</German>
             <Polish>Skasuj wybrany zestaw</Polish>
-            <Japanese>現在選択中の装備を削除します</Japanese>
+            <Japanese>選択中の装備を削除します</Japanese>
             <Italian>Elimina l'equipaggiamento selezionato</Italian>
             <Korean>선택한 로드아웃 삭제하기</Korean>
             <Chinese>刪除當前選擇的裝備</Chinese>
@@ -182,7 +182,7 @@
             <French>Équipements enregistrés dans votre profil</French>
             <German>Ausrüstungen, die in deinem Profil gespeichert sind</German>
             <Polish>Zestawy zapisane w Twoim profilu</Polish>
-            <Japanese>自プロフィールに保存された装備です</Japanese>
+            <Japanese>プロフィールに保存された装備です</Japanese>
             <Italian>Gli equipaggiamenti salvati nel tuo profilo</Italian>
             <Korean>프로필에 저장된 로드아웃</Korean>
             <Chinese>裝備已保存到你的設定檔中</Chinese>
@@ -618,7 +618,7 @@
             <English>No player unit available! Place a unit and mark it as "Player".</English>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
             <German>Keine Spielereinheit verfügbar. Setze eine Einheit und markiere sie als "Spieler".</German>
-            <Japanese>プレイヤー ユニットがありません!ユニットを設置しそれを"Player"と名付けてください。</Japanese>
+            <Japanese>プレイヤー ユニットがありません!ユニットを設置し"Player"と名付けてください。</Japanese>
             <Korean>플레이어 유닛을 사용할 수 없습니다! 유닛을 놓고 "플레이어"라고 표시하십시오.</Korean>
             <Chinese>沒有可用的玩家單位!請擺放一個單位並設定成"玩家"。</Chinese>
             <Chinesesimp>没有可用的玩家单位!请摆放一个单位并设定成"玩家"。</Chinesesimp>
@@ -669,22 +669,26 @@
             <French>Affiche la page des équipements</French>
             <Chinese>開啟裝備選單</Chinese>
             <Chinesesimp>开启装备选单</Chinesesimp>
+            <Japanese>装備画面を開く</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
             <French>Exporte l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯出當前/預設的裝備</Chinese>
             <Chinesesimp>汇出当前/预设的装备</Chinesesimp>
+            <Japanese>現在 / 標準装備を出力</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
             <English>Import current / default loadouts</English>
             <French>Importer l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯入當前/預設的裝備</Chinese>
             <Chinesesimp>汇入当前/预设的装备</Chinesesimp>
+            <Japanese>現在 / 標準装備を取込</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statPotassium">
             <English>Potassium levels</English>
             <French>Taux de potassium</French>
+            <Japanese>カリウム レベル</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
           <English>Magnification</English>
@@ -699,24 +703,28 @@
           <Portuguese>Aumentox</Portuguese>
           <Korean>배율</Korean>
           <Chinesesimp>放大倍数</Chinesesimp>
-          <Japanese>拡大</Japanese>
+          <Japanese>拡大倍率</Japanese>
           <Turkish>Büyütme</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <French>Page</French>
+            <Japanese>ページ</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
             <French>Activer les onglets faces / voix / insignes</French>
+            <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
             <French>Vider le conteneur selectionné</French>
+            <Japanese>選択されたコンテナは空です</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
             <French>Nom de classe exporté dans le presse papier</French>
+            <Japanese>クリップボードへクラスネームを出力</Japanese>
         </Key>
     </Package>
 </Project>

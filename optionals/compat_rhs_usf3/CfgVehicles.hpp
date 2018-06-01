@@ -44,30 +44,10 @@ class CfgVehicles {
         };
     };
 
-#define ERA(num) QUOTE(era_##num##_hitpoint)
-#define ERA_2_34 ERA(2), ERA(3), ERA(4), ERA(5), ERA(6), ERA(7), ERA(8), ERA(9), ERA(10), ERA(11), ERA(12), ERA(13), ERA(14), ERA(15), ERA(16), ERA(17), ERA(18), ERA(19), ERA(20), ERA(21), ERA(22), ERA(23), ERA(24), ERA(25), ERA(26), ERA(27), ERA(28), ERA(29), ERA(30), ERA(31), ERA(32), ERA(33), ERA(34)
-#define ERA_2_45 ERA_2_34, ERA(35), ERA(36), ERA(37), ERA(38), ERA(39), ERA(40), ERA(41), ERA(42), ERA(43), ERA(44), ERA(45)
-#define ERA_2_46 ERA_2_45, ERA(46)
-#define ERA_2_59 ERA_2_46, ERA(47), ERA(48), ERA(49), ERA(50), ERA(51), ERA(52), ERA(53), ERA(54), ERA(55), ERA(56), ERA(57), ERA(58), ERA(59)
-
     class MBT_01_base_F: Tank_F {};
     class rhsusf_m1a1tank_base: MBT_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1909;
     };
-    class rhsusf_m1a1aim_tuski_wd: rhsusf_m1a1tank_base {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_34}}};
-    };
-    class rhsusf_m1a2tank_base;
-    class rhsusf_m1a2sep1tuskid_usarmy: rhsusf_m1a2tank_base {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_34}}};
-    };
-    class rhsusf_m1a2sep1tuskiiwd_usarmy: rhsusf_m1a2sep1tuskid_usarmy {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_46}}};
-    };
-
     class Helicopter_Base_F: Helicopter {
         class Eventhandlers;
     };
@@ -196,23 +176,9 @@ class CfgVehicles {
         EGVAR(hellfire,addLaserDesignator) = 1;
     };
 
-    class RHS_AH1Z: RHS_AH1Z_base {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0; // Note: This is still required because of inheritance from Heli_Attack_01_base_F
-            };
-        };
-    };
     class RHS_AH64_base: Heli_Attack_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1420;
         EGVAR(hellfire,addLaserDesignator) = 1;
-    };
-    class RHS_AH64D: RHS_AH64_base {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0; // Note: This is still required because of inheritance from Heli_Attack_01_base_F
-            };
-        };
     };
 
     class MBT_01_arty_base_F;
@@ -305,20 +271,6 @@ class CfgVehicles {
     class APC_Tracked_03_base_F;
     class RHS_M2A2_Base: APC_Tracked_03_base_F {
         EGVAR(refuel,fuelCapacity) = 746;
-    };
-    class RHS_M2A2: RHS_M2A2_Base {};
-    class RHS_M2A2_BUSKI: RHS_M2A2 {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_45}}};
-    };
-    class RHS_M2A3: RHS_M2A2 {};
-    class RHS_M2A3_BUSKI: RHS_M2A3 {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_45}}};
-    };
-    class RHS_M2A3_BUSKIII: RHS_M2A3_BUSKI {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_59}}};
     };
 
     class Plane_CAS_01_base_F;
