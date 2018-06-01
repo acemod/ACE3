@@ -310,4 +310,11 @@ class ACE_Settings {
         value = 3;
         sliderSettings[] = {0, 30, 3, 0};
     };
+    class GVAR(moveInventoryToBodyBag) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_moveInventoryToBodyBag_DisplayName);
+        description = CSTRING(MedicalSettings_moveInventoryToBodyBag_Description);
+        typeName = "BOOL";
+        value = 0;
+    };
 };
