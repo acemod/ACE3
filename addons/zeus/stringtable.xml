@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_DisplayName">
@@ -960,6 +960,9 @@
             <Italian>Cargo:</Italian>
             <Chinesesimp>货物:</Chinesesimp>
             <Chinese>貨物:</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_SelectCargo">
+            <English>Select cargo to unload</English>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
