@@ -83,7 +83,7 @@ if (hasInterface) then {
 
     private _action = [
         QGVAR(create),
-        localize LSTRING(CreateZeus),
+        LLSTRING(CreateZeus),
         "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa",
         {
             GVAR(zeus) = objNull;
@@ -98,7 +98,7 @@ if (hasInterface) then {
 
     _action = [
         QGVAR(delete),
-        localize LSTRING(DeleteZeus),
+        LLSTRING(DeleteZeus),
         "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa",
         {
             deleteVehicle GVAR(zeus);

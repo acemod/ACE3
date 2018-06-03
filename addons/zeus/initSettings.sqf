@@ -1,8 +1,8 @@
 [
     QGVAR(canCreateZeus),
     "LIST",
-    format [localize LSTRING(MenuSetting), localize LSTRING(CreateZeus)],
-    format ["ACE %1", localize LSTRING(DisplayName)],
+    format [LLSTRING(MenuSetting), LLSTRING(CreateZeus)],
+    format ["ACE %1", LLSTRING(DisplayName)],
     [
         [
             CAN_CREATE_NONE,
