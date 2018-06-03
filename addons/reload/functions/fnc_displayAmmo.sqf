@@ -95,7 +95,7 @@ private _ammoBarsStructuredText = if (_showNumber) then {
         _string = _string + "|";
     };
 
-    composeText [_text, [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredText)];
+    composeText [_text, [_string, "#808080"] call EFUNC(common,stringToColoredText)];
 };
 
 

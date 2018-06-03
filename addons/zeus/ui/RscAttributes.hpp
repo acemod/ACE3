@@ -10,6 +10,7 @@ class RscActivePicture;
 class RscMapControl;
 class RscPicture;
 class ctrlToolbox;
+class RscButton;
 
 class RscDisplayAttributes {
     class Controls {
@@ -29,67 +30,38 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     x = 0;
     y = 0;
     w = W_PART(26);
-    h = H_PART(1.2);
+    h = H_PART(1.1);
     class controls {
-        class Title1: RscText {
+        class Label: RscText {
             idc = -1;
             text = CSTRING(AttributeRadius);
-            toolTip = CSTRING(AttributeRadius_desc);
+            tooltip = CSTRING(AttributeRadius_Tooltip);
             x = 0;
             y = H_PART(0.1);
             w = W_PART(10);
             h = H_PART(1);
-            colorBackground[] = {0,0,0,0.5};
+            colorBackground[] = {0, 0, 0, 0.5};
         };
         class Radius: RscEdit {
             idc = 26467;
             x = W_PART(10.1);
             y = H_PART(0.1);
-            w = W_PART(15.8);
+            w = W_PART(15.9);
             h = H_PART(1);
             autocomplete = "";
         };
     };
 };
 
-class GVAR(AttributePosition): RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE(_this call FUNC(ui_attributePosition));
-    idc = 26468;
-    x = 0;
-    y = 0;
-    w = W_PART(26);
-    h = H_PART(26);
-    class controls {
-        class Title1: RscText {
-            idc = -1;
-            text = CSTRING(AttributePosition);
-            toolTip = CSTRING(AttributePosition_desc);
-            x = 0;
-            y = 0;
-            w = W_PART(26);
-            h = H_PART(1);
-            colorBackground[] = {0,0,0,0.5};
-        };
-        class Position: RscMapControl {
-            idc = 26469;
-            x = W_PART(0.5);
-            y = H_PART(1.1);
-            w = W_PART(25);
-            h = H_PART(24.8);
-        };
-    };
-};
-
 class GVAR(RscDefendArea): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscDefendArea)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscDefendArea)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscDefendArea))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscDefendArea))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
-                //class position: GVAR(AttributePosition) {};
             };
         };
         class ButtonOK: ButtonOK {
@@ -108,40 +80,43 @@ class GVAR(RscEditableObjects): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
-                //class position: GVAR(AttributePosition) {};
                 class editableObjects: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_editableObjects));
-                    idc = 26422;
+                    idc = 19180;
                     x = 0;
                     y = 0;
-                    w = W_PART(11.1);
-                    h = H_PART(2.5);
+                    w = W_PART(26);
+                    h = H_PART(2.1);
                     class controls {
-                        class Label: RscText {
+                        class EditingModeLabel: RscText {
                             idc = -1;
-                            text = CSTRING(ModuleEditableObjects_curators);
-                            toolTip = CSTRING(ModuleEditableObjects_curators_desc);
+                            text = CSTRING(ModuleEditableObjects_EditingMode);
+                            tooltip = CSTRING(ModuleEditableObjects_EditingMode_Tooltip);
                             x = 0;
                             y = 0;
                             w = W_PART(10);
                             h = H_PART(1);
-                            colorBackground[] = {0,0,0,0.5};
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class AllCurators: RscCheckBox {
-                            idc = 16188;
+                        class EditingMode: ctrlToolbox {
+                            idc = 19181;
                             x = W_PART(10.1);
                             y = 0;
-                            w = W_PART(1);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {CSTRING(ModuleEditableObjects_RemoveObjects), CSTRING(ModuleEditableObjects_AddObjects)};
                         };
-                        class Label2: Label {
-                            text = CSTRING(ModuleEditableObjects_removal);
-                            toolTip = CSTRING(ModuleEditableObjects_removal_desc);
+                        class AllCuratorsLabel: EditingModeLabel {
+                            text = CSTRING(ModuleEditableObjects_AllCurators);
+                            tooltip = CSTRING(ModuleEditableObjects_AllCurators_Tooltip);
                             y = H_PART(1.1);
                         };
-                        class EditingMode: AllCurators {
-                            idc = 16189;
+                        class AllCurators: EditingMode {
+                            idc = 19182;
                             y = H_PART(1.1);
+                            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
                         };
                     };
                 };
@@ -153,8 +128,8 @@ class GVAR(RscEditableObjects): RscDisplayAttributes {
 };
 
 class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGlobalSetSkill)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGlobalSetSkill)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGlobalSetSkill))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGlobalSetSkill))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -248,8 +223,8 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
 };
 
 class GVAR(RscGroupSide): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGroupSide)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGroupSide)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGroupSide))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGroupSide))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -326,15 +301,14 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
 };
 
 class GVAR(RscPatrolArea): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscPatrolArea)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscPatrolArea)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscPatrolArea))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscPatrolArea))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
-                //class position: GVAR(AttributePosition) {};
             };
         };
         class ButtonOK: ButtonOK {
@@ -345,15 +319,14 @@ class GVAR(RscPatrolArea): RscDisplayAttributes {
 };
 
 class GVAR(RscSearchArea): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSearchArea)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSearchArea)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSearchArea))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSearchArea))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
-                //class position: GVAR(AttributePosition) {};
             };
         };
         class ButtonOK: ButtonOK {
@@ -364,8 +337,8 @@ class GVAR(RscSearchArea): RscDisplayAttributes {
 };
 
 class GVAR(RscTeleportPlayers): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscTeleportPlayers))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscTeleportPlayers))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -458,7 +431,7 @@ class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
             x = 0;
             y = 0;
             w = W_PART(10);
-            h = H_PART(3);
+            h = H_PART(2);
             colorBackground[] = {0,0,0,0.5};
         };
         class Background: RscText {
@@ -476,7 +449,15 @@ class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
             w = W_PART(16);
             h = H_PART(3);
         };
-
+        class Unload: RscButton {
+            idc = 80087;
+            text = ECSTRING(cargo,unloadObject);
+            x = 0;
+            y = H_PART(2);
+            w = W_PART(10);
+            h = H_PART(1);
+            colorBackground[] = {0, 0, 0, 0.7};
+        };
     };
 };
 
@@ -501,8 +482,8 @@ class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
 };
 
 class GVAR(RscGarrison): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGarrison)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGarrison)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscGarrison))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscGarrison))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -576,49 +557,53 @@ class GVAR(RscGarrison): RscDisplayAttributes {
 };
 
 class GVAR(RscToggleNvg): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscToggleNvg)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscToggleNvg)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscToggleNvg))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscToggleNvg))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
             class Controls {
-                class ToggleNvg: RscControlsGroupNoScrollbars {
+                class toggleNvg: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_toggleNvg));
                     idc = 92854;
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(3);
+                    h = H_PART(2.1);
                     class controls {
-                        class ToggleNvgTitle: Title {
+                        class ToggleLabel: RscText {
                             idc = -1;
-                            text = CSTRING(moduleToggleNVG_ToggleNvgTitle);
-                            toolTip = CSTRING(moduleToggleNVG_ToggleNvgTitleTooltip);
-                            x = H_PART(0);
-                            y = H_PART(0);
-                            w = W_PART(7);
+                            text = CSTRING(ModuleToggleNVG_NvgEquipment);
+                            tooltip = CSTRING(ModuleToggleNVG_NvgEquipment_tooltip);
+                            x = 0;
+                            y = 0;
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class ToggleNvgCombo: RscCombo {
+                        class Toggle: ctrlToolbox {
                             idc = 92855;
-                            x = H_PART(6);
-                            y = H_PART(0);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = 0;
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
-                        class ToggleNvgSideTitle: Title {
-                            idc = -1;
-                            text = CSTRING(moduleToggleNVG_ToggleNvgSide);
-                            x = H_PART(0);
-                            y = H_PART(1.2);
-                            w = W_PART(7);
+                        class TargetLabel: ToggleLabel {
+                            text = CSTRING(ToggleTarget);
+                            tooltip = CSTRING(ToggleTarget_Tooltip);
+                            y = H_PART(1.1);
                         };
-                        class ToggleNvgSideCombo: RscCombo {
+                        class Target: RscCombo {
                             idc = 92856;
-                            x = H_PART(6);
-                            y = H_PART(1.2);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = H_PART(1.1);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.7};
                         };
                     };
                 };
@@ -630,62 +615,61 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
 };
 
 class GVAR(RscToggleFlashlight): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscToggleFlashlight)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscToggleFlashlight)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscToggleFlashlight))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscToggleFlashlight))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
         class Content: Content {
             class Controls {
-                class ToggleFlashlight: RscControlsGroupNoScrollbars {
+                class toggleFlashlight: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_toggleFlashlight));
                     idc = 56217;
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(5);
+                    h = H_PART(3.2);
                     class controls {
-                        class ToggleFlashlightTitle: Title {
+                        class ToggleLabel: RscText {
                             idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightTitle);
-                            x = H_PART(0);
-                            y = H_PART(0);
-                            w = W_PART(7);
+                            text = CSTRING(ModuleToggleFlashlight_Flashlights);
+                            x = 0;
+                            y = 0;
+                            w = W_PART(10);
+                            h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class ToggleFlashlightCombo: RscCombo {
+                        class Toggle: ctrlToolbox {
                             idc = 56218;
-                            x = H_PART(6);
-                            y = H_PART(0);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = 0;
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled)};
                         };
-                        class ToggleFlashlightSideTitle: Title {
-                            idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightSide);
-                            x = H_PART(0);
-                            y = H_PART(1.2);
-                            w = W_PART(7);
+                        class AddGearLabel: ToggleLabel {
+                            text = CSTRING(ModuleToggleFlashlight_AddGear);
+                            y = H_PART(1.1);
                         };
-                        class ToggleFlashlightSideCombo: RscCombo {
+                        class AddGear: Toggle {
                             idc = 56219;
-                            x = H_PART(6);
-                            y = H_PART(1.2);
-                            w = W_PART(10.1);
-                            h = H_PART(1);
+                            y = H_PART(1.1);
+                            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
                         };
-                        class ToggleFlashlightGearTitle: Title {
-                            idc = -1;
-                            text = CSTRING(moduleToggleFlashlight_ToggleFlashlightGear);
-                            x = H_PART(0);
-                            y = H_PART(2.4);
-                            w = W_PART(7);
+                        class TargetLabel: ToggleLabel {
+                            text = CSTRING(ToggleTarget);
+                            tooltip = CSTRING(ToggleTarget_Tooltip);
+                            y = H_PART(2.2);
                         };
-                        class ToggleFlashlightGearCombo: RscCombo {
+                        class Target: RscCombo {
                             idc = 56220;
-                            x = H_PART(6);
-                            y = H_PART(2.4);
-                            w = W_PART(10.1);
+                            x = W_PART(10.1);
+                            y = H_PART(2.2);
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            colorBackground[] = {0, 0, 0, 0.7};
                         };
                     };
                 };
@@ -697,8 +681,8 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
 };
 
 class GVAR(RscSetEngineer): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSetEngineer)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSetEngineer)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSetEngineer))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSetEngineer))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};
@@ -742,8 +726,8 @@ class GVAR(RscSetEngineer): RscDisplayAttributes {
 };
 
 class GVAR(RscSuicideBomber): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSuicideBomber)))] call FUNC(zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSuicideBomber)))] call FUNC(zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSuicideBomber))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSuicideBomber))] call FUNC(zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};

@@ -29,7 +29,6 @@ class CfgVehicles {
                 condition = QUOTE(_player call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
-                priority = 1;
                 icon = "";
             };
         };
@@ -42,7 +41,6 @@ class CfgVehicles {
                 condition = QUOTE(_player call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
-                priority = 1;
                 icon = "";
             };
         };
@@ -94,37 +92,6 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
                 magazines[] += {"ACE_120Rnd_35mm_ABM_shells_Tracer_Green"};
-            };
-        };
-    };
-
-    // AIR VEHICLES
-    class Air: AllVehicles {};
-
-    class Helicopter: Air {
-        class Turrets {
-            class MainTurret;
-        };
-    };
-
-    class Helicopter_Base_F: Helicopter {};
-
-    class Heli_Attack_01_base_F: Helicopter_Base_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 1;
-                discreteDistance[] = {};
-                discreteDistanceInitIndex = 0;
-            };
-        };
-    };
-
-    class Heli_Attack_02_base_F: Helicopter_Base_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(Enabled) = 1;
-                discreteDistance[] = {};
-                discreteDistanceInitIndex = 0;
             };
         };
     };

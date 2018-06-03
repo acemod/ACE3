@@ -23,7 +23,7 @@ private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 private _usableRope = _deployedRopes select 0;
 private _usableRopeIndex = 0;
 {
-    if !(_x select 5) exitWith {
+    if (!(_x select 5) && !(_x select 6)) exitWith {
         _usableRope = _x;
         _usableRopeIndex = _forEachIndex;
     };

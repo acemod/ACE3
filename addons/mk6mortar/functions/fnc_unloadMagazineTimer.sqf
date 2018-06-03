@@ -20,9 +20,11 @@
 
 params ["_static","_unit","_timeToUnload"];
 
+_static setVariable [QGVAR(inUse), true, true];
+
 //Move player into animation if player is standing
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call EFUNC(common,doAnimation);
 };
 
-[_timeToUnload, [_static,_unit], {(_this select 0) call FUNC(unloadMagazine)}, {}, localize LSTRING(unloadingMortar)] call EFUNC(common,progressBar);
+[_timeToUnload, [_static,_unit], {(_this select 0) call FUNC(unloadMagazine); ((_this select 0) select 0) setVariable [QGVAR(inUse), nil, true]}, {((_this select 0) select 0) setVariable [QGVAR(inUse), nil, true]}, localize LSTRING(unloadingMortar)] call EFUNC(common,progressBar);

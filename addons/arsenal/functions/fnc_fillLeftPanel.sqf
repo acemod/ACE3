@@ -14,10 +14,6 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeFillLeftPanel = createProfileScope QFUNC(fillLeftPanel);
-#endif
-
 params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
@@ -32,6 +28,12 @@ private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
 private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
 _ctrlBackground ctrlSetFade 0;
 _ctrlBackground ctrlCommit FADE_DELAY;
+
+// Force a "refresh" animation of the panel
+_ctrlPanel ctrlSetFade 1;
+_ctrlPanel ctrlCommit 0;
+_ctrlPanel ctrlSetFade 0;
+_ctrlPanel ctrlCommit FADE_DELAY;
 
 _ctrlPanel lbSetCurSel -1;
 

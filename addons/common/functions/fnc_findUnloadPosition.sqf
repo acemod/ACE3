@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Source Vehicle <OBJECT>
- * 1: Cargo Classname <STRING>
+ * 1: Cargo <OBJECT> or <STRING>
  * 2: Unloader (player) <OBJECT> (default: objNull)
  * 3: Max Distance (meters) <NUMBER> (default: 10)
  * 4: Check Vehicle is Stable <BOOL> (default: true)
@@ -27,8 +27,8 @@
 //Manual collision tests (count and radius):
 #define COL_TEST_COUNT 12
 
-params ["_vehicle", "_typeOfCargo", ["_theUnloader", objNull], ["_maxDistance", 10], ["_checkVehicleIsStable", true]];
-TRACE_5("params",_vehicle,_typeOfCargo,_theUnloader,_maxDistance,_checkVehicleIsStable);
+params ["_vehicle", "_cargo", ["_theUnloader", objNull], ["_maxDistance", 10], ["_checkVehicleIsStable", true]];
+TRACE_5("params",_vehicle,_cargo,_theUnloader,_maxDistance,_checkVehicleIsStable);
 
 scopeName "main";
 
@@ -40,12 +40,22 @@ if (_checkVehicleIsStable) then {
 };
 
 private _radiusOfItem = 1;
-if (_typeOfCargo isKindOf "CAManBase") then {
+if (_cargo isKindOf "CAManBase") then {
     _radiusOfItem = 1.1;
 } else {
     //`sizeOf` is unreliable, and does not work with object types that don't exist on map, so estimate size based on cargo size
-    if (isNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size))) then {
-        _radiusOfItem = (((getNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size))) ^ 0.35) max 0.75);
+    private _typeOfCargo = if (_cargo isEqualType "") then {_cargo} else {typeOf _cargo};
+    private _itemSize = if (isNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size)) && {getNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size)) != -1}) then {
+        getNumber (configFile >> "CfgVehicles" >> _typeOfCargo >> QEGVAR(cargo,size));
+    } else {
+        if (["ace_cargo"] call FUNC(isModLoaded)) then {
+            [_cargo] call EFUNC(cargo,getSizeItem);
+        } else {
+            _radiusOfItem;
+        };
+    };
+    if (_itemSize != -1) then {
+        _radiusOfItem = (_itemSize ^ 0.35) max 0.75;
     };
 };
 

@@ -42,7 +42,6 @@ PREP(moduleUnGarrison);
 PREP(moduleZeusSettings);
 PREP(showMessage);
 PREP(ui_attributeCargo);
-//PREP(ui_attributePosition);
 PREP(ui_attributeRadius);
 PREP(ui_defendArea);
 PREP(ui_garrison);

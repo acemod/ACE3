@@ -63,7 +63,7 @@
             <Portuguese>Reorganizando Carregadores...</Portuguese>
             <Hungarian>Újratárazás...</Hungarian>
             <Russian>Перепаковка магазинов...</Russian>
-            <Japanese>弾倉を詰め替え中・・・</Japanese>
+            <Japanese>弾倉を詰め替えしています・・・</Japanese>
             <Korean>다시 채우는중...</Korean>
             <Chinesesimp>重新整理弹匣中 ...</Chinesesimp>
             <Chinese>重新整理彈匣中 ...</Chinese>
@@ -79,7 +79,7 @@
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
-            <Japanese>%1 個の満杯な弾倉とあふれた %2 発の弾薬</Japanese>
+            <Japanese>%1 個の満杯の弾倉とあふれた %2 発の弾薬</Japanese>
             <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
             <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
             <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
@@ -95,7 +95,7 @@
             <Hungarian>Újratárazás befejezve</Hungarian>
             <Italian>Caricatori Riempiti</Italian>
             <Portuguese>Reorganização Terminada</Portuguese>
-            <Japanese>詰め替えが完了</Japanese>
+            <Japanese>詰め替えが完了しました</Japanese>
             <Korean>탄창 채우기 끝남</Korean>
             <Chinesesimp>重整完成</Chinesesimp>
             <Chinese>重整完成</Chinese>
@@ -111,7 +111,7 @@
             <Hungarian>Újratárazás megszakítva</Hungarian>
             <Italian>Riempimento Interrotto</Italian>
             <Portuguese>Reorganização Interrompida</Portuguese>
-            <Japanese>詰め替えを中断した</Japanese>
+            <Japanese>詰め替えを中断しました</Japanese>
             <Korean>탄창 채우기 방해받음</Korean>
             <Chinesesimp>重整被中断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>

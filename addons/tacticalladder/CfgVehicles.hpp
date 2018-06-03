@@ -12,7 +12,6 @@ class CfgVehicles {
                     statement = QUOTE([_player] call FUNC(deployTL));
                     exceptions[] = {};
                     showDisabled = 1;
-                    priority = 4;
                 };
             };
         };
@@ -86,7 +85,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickupTL));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                 };
 
                 class ACE_Position {
@@ -98,7 +96,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(positionTL)},[ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                 };
             };
         };
