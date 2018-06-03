@@ -86,7 +86,7 @@ if (hasInterface) then {
         LLSTRING(CreateZeus),
         "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa",
         {
-            GVAR(zeus) = objNull;
+            GVAR(zeus) = objNull; // to disable menu while zeus is being created
             [QGVAR(createZeus), ACE_player] call CBA_fnc_serverEvent;
         },
         {
@@ -104,11 +104,7 @@ if (hasInterface) then {
             deleteVehicle GVAR(zeus);
             GVAR(zeus) = nil;
         },
-        {
-            call FUNC(canCreateZeus)
-            && {!isNil QGVAR(zeus)}
-            && {!isNull GVAR(zeus)}
-        }
+        {!(isNil QGVAR(zeus) || {isNull GVAR(zeus)})}
     ] call EFUNC(interact_menu,createAction);
     ["CAManBase", 1, ["ACE_SelfActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
 };
