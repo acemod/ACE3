@@ -37,8 +37,7 @@ class ACE_ZeusActions {
         };
 
         class medicalMenu {
-          displayName = "Open Medical Menu"; // TODO - localize
-          //icon = QPATHTOEF(medical_menu\data\icons\triage_card_small.paa);
+          displayName = ECSTRING(Medical_Menu,OpenMenu);
           statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) ) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; [{isNull (findDisplay 91919)},{params ['_unit']; _unit call ace_medical_menu_fnc_openMenu;}, [_unit],3] call CBA_fnc_waitUntilAndExecute;";
         };
     };
