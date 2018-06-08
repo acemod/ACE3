@@ -31,7 +31,7 @@ GVAR(isSpeedLimiter) = false;
 {false},
 [211, [false, false, false]], false] call CBA_fnc_addKeybind; //DELETE Key
 
-["ACE3 Vehicles", QGVAR(scrollUp), LSTRING(IncreaseSpeedLimit), {
+["ACE3 Vehicles", QGVAR(scrollUp), localize LSTRING(IncreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) + 1) max 5;
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
@@ -39,7 +39,7 @@ GVAR(isSpeedLimiter) = false;
     };
 }, {false}, [0xF8, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + Mouse Wheel Scroll Up
 
-["ACE3 Vehicles", QGVAR(scrollDown), LSTRING(DecreaseSpeedLimit), {
+["ACE3 Vehicles", QGVAR(scrollDown), localize LSTRING(DecreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) - 1) max 5;
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
