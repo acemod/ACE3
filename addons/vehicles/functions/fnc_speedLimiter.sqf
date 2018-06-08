@@ -28,11 +28,11 @@ if (GVAR(isSpeedLimiter)) exitWith {
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-private _maxSpeed = speed _vehicle max 5;
+GVAR(speedLimit) = speed _vehicle max 5;
 
 [{
     params ["_args", "_idPFH"];
-    _args params ["_driver", "_vehicle", "_maxSpeed"];
+    _args params ["_driver", "_vehicle"];
 
     if (GVAR(isUAV)) then {
         private _uavControll = UAVControl _vehicle;
@@ -51,8 +51,8 @@ private _maxSpeed = speed _vehicle max 5;
 
     private _speed = speed _vehicle;
 
-    if (_speed > _maxSpeed) then {
-        _vehicle setVelocity ((velocity _vehicle) vectorMultiply ((_maxSpeed / _speed) - 0.00001));  // fix 1.42-hotfix PhysX libraries applying force in previous direction when turning
+    if (_speed > GVAR(speedLimit)) then {
+        _vehicle setVelocity ((velocity _vehicle) vectorMultiply ((GVAR(speedLimit) / _speed) - 0.00001));  // fix 1.42-hotfix PhysX libraries applying force in previous direction when turning
     };
 
-} , 0, [_driver, _vehicle, _maxSpeed]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_driver, _vehicle]] call CBA_fnc_addPerFrameHandler;

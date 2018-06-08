@@ -33,6 +33,9 @@
             <Chinesesimp>停用速度限制</Chinesesimp>
             <Chinese>停用速度限制</Chinese>
         </Key>
+        <Key ID="STR_ACE_Vehicles_SpeedLimit">
+            <English>Speed Limit</English>
+        </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
             <German>Begrenzer</German>
@@ -48,6 +51,12 @@
             <Korean>속도 제한기</Korean>
             <Chinesesimp>速度限制器</Chinesesimp>
             <Chinese>速度限制器</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
+            <English>Increase Speed Limit</English>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
+            <English>Decrease Speed Limit</English>
         </Key>
     </Package>
 </Project>
