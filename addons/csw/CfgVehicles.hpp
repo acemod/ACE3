@@ -120,9 +120,6 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    class B_HMG_01_F: HMG_01_base_F { class ADDON: ADDON {}; };
-    class I_HMG_01_F: HMG_01_base_F { class ADDON: ADDON {}; };
-    class O_HMG_01_F: HMG_01_base_F { class ADDON: ADDON {}; };
 
     class HMG_01_high_base_F: HMG_01_base_F {
         class ADDON {
@@ -135,14 +132,12 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    class B_HMG_01_high_F: HMG_01_high_base_F { class ADDON: ADDON {}; };
-    class I_HMG_01_high_F: HMG_01_high_base_F { class ADDON: ADDON {}; };
-    class O_HMG_01_high_F: HMG_01_high_base_F { class ADDON: ADDON {}; };
 
-    // class HMG_01_A_base_F: HMG_01_base_F {};
-    // class B_HMG_01_A_F: HMG_01_A_base_F { class ADDON: ADDON {}; };
-    // class I_HMG_01_A_F: HMG_01_A_base_F { class ADDON: ADDON {}; };
-    // class O_HMG_01_A_F: HMG_01_A_base_F { class ADDON: ADDON {}; };
+    class HMG_01_A_base_F: HMG_01_base_F {
+        class ADDON {
+            enabled = 0;
+        };
+    };
 
 
     class GMG_01_base_F: StaticMGWeapon {
@@ -156,9 +151,6 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    class B_GMG_01_F: GMG_01_base_F { class ADDON: ADDON {}; };
-    class I_GMG_01_F: GMG_01_base_F { class ADDON: ADDON {}; };
-    class O_GMG_01_F: GMG_01_base_F { class ADDON: ADDON {}; };
 
     class GMG_01_high_base_F: GMG_01_base_F {
         class ADDON {
@@ -171,14 +163,12 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    class B_GMG_01_high_F: GMG_01_high_base_F { class ADDON: ADDON {}; };
-    class I_GMG_01_high_F: GMG_01_high_base_F { class ADDON: ADDON {}; };
-    class O_GMG_01_high_F: GMG_01_high_base_F { class ADDON: ADDON {}; };
 
-    // class GMG_01_A_base_F: GMG_01_base_F { };
-    // class B_GMG_01_A_F: GMG_01_A_base_F {class ADDON: ADDON {}; };
-    // class I_GMG_01_A_F: GMG_01_A_base_F {class ADDON: ADDON {}; };
-    // class O_GMG_01_A_F: GMG_01_A_base_F {class ADDON: ADDON {}; };
+    class GMG_01_A_base_F: GMG_01_base_F { 
+        class ADDON {
+            enabled = 0;
+        };
+    };
 
 
     class AT_01_base_F: StaticMGWeapon {
@@ -192,9 +182,6 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    class B_static_AT_F: AT_01_base_F { class ADDON: ADDON {}; };
-    class I_static_AT_F: AT_01_base_F { class ADDON: ADDON {}; };
-    class O_static_AT_F: AT_01_base_F { class ADDON: ADDON {}; };
 
     class AA_01_base_F: StaticMGWeapon {
         class ADDON {
@@ -207,10 +194,6 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    class B_static_AA_F: AA_01_base_F { class ADDON: ADDON {}; };
-    class B_T_Static_AA_F: B_static_AA_F { class ADDON: ADDON {}; };
-    class I_static_AA_F: AA_01_base_F { class ADDON: ADDON {}; };
-    class O_static_AA_F: AA_01_base_F { class ADDON: ADDON {}; };
 
 
     class StaticMortar: StaticWeapon {};
@@ -225,8 +208,4 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    class B_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
-    class O_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
-    class I_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
-    class I_G_Mortar_01_F: Mortar_01_base_F { class ADDON: ADDON {}; };
 };

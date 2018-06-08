@@ -13,6 +13,9 @@
         <Key ID="STR_ACE_CSW_TripodLowFolded_displayName">
             <English>CSW Deployable Tripod (Low)</English>
         </Key>
+        <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
+            <English>Mk6 Mortar Baseplate</English>
+        </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
         </Key>

@@ -47,7 +47,7 @@ if (isNull _container) then {
 if (isNull _container) then {
     // Create ground weapon holder container
     private _weaponRelPos = _unloadTo getRelPos RELATIVE_DIRECTION(270);
-    _weaponRelPos set [2, ((getPosATL _unloadTo) select 2) + 0.1];
+    _weaponRelPos set [2, ((getPosATL _unloadTo) select 2) + 0.05];
     _container = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
     // ToDo: Unload to ammo box??
     _unloadTo setVariable [QGVAR(container), container, true];

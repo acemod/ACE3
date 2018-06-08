@@ -42,7 +42,7 @@ CfgVehicles:
         
     class Mortar_01_base_F: // Static Weapon Example
         class ADDON {
-            enabled = 1; // explicit
+            enabled = 1;
             magazineLocation = "";
             disassembleWeapon = ""; // secondary weapon classname
             disassembleTurret = ""; // CfgVehicle
