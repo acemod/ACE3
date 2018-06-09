@@ -29,4 +29,4 @@ private _fireRate = [];
 _fireRate sort true;
 _fireRate = _fireRate select 0;
 
-format ["%1 rpm", round (60 / _fireRate]
+format ["%1 rpm", round (60 / _fireRate)]
