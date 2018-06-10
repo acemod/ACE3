@@ -618,6 +618,29 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
                             w = W_PART(15.9);
                             h = H_PART(1);
                             colorBackground[] = {0, 0, 0, 0.7};
+                            class Items {
+                                class Group {
+                                    text = CSTRING(SelectedGroup);
+                                    picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa";
+                                    default = 1;
+                                };
+                                class BLUFOR {
+                                    text = "$STR_WEST";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playerwest_ca.paa";
+                                };
+                                class OPFOR {
+                                    text = "$STR_EAST";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playereast_ca.paa";
+                                };
+                                class Independent {
+                                    text = "$STR_guerrila";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playerguer_ca.paa";
+                                };
+                                class Civilian {
+                                    text = "$STR_Civilian";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playerciv_ca.paa";
+                                };
+                            };
                         };
                     };
                 };
@@ -684,6 +707,29 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
                             w = W_PART(15.9);
                             h = H_PART(1);
                             colorBackground[] = {0, 0, 0, 0.7};
+                            class Items {
+                                class Group {
+                                    text = CSTRING(SelectedGroup);
+                                    picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa";
+                                    default = 1;
+                                };
+                                class BLUFOR {
+                                    text = "$STR_WEST";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playerwest_ca.paa";
+                                };
+                                class OPFOR {
+                                    text = "$STR_EAST";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playereast_ca.paa";
+                                };
+                                class Independent {
+                                    text = "$STR_guerrila";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playerguer_ca.paa";
+                                };
+                                class Civilian {
+                                    text = "$STR_Civilian";
+                                    picture = "\a3\ui_f\data\map\diary\icons\playerciv_ca.paa";
+                                };
+                            };
                         };
                     };
                 };
