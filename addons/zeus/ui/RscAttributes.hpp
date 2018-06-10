@@ -371,7 +371,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             y = 0;
                             w = W_PART(26);
                             h = H_PART(1);
-                            colorBackground[] = {0,0,0,0.5};
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
                         class Unit: RscListbox {
                             idc = 16189;
@@ -500,63 +500,66 @@ class GVAR(RscGarrison): RscDisplayAttributes {
         class Title: Title {};
         class Content: Content {
             class Controls {
+                class radius: GVAR(AttributeRadius) {};
                 class Garrison: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_garrison));
                     idc = 73060;
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(8.5);
+                    h = H_PART(6.2);
                     class controls {
-                        class radius: GVAR(AttributeRadius) {};
-                        class TopDownFillingTitle: Title {
-                            idc = -1;
-                            text = CSTRING(ModuleGarrison_TopDownFillingText);
-                            toolTip = CSTRING(ModuleGarrison_TopDownFillingTooltip);
-                            x = 0;
-                            y = H_PART(1.2);
-                            w = W_PART(10);
-                            h = H_PART(1);
-                            colorBackground[] = {0,0,0,0.5};
-                        };
-                        class TopDownFilling: RscCheckBox {
-                            idc = 73061;
-                            x = W_PART(10.1);
-                            y = H_PART(1.2);
-                            w = W_PART(1);
-                            h = H_PART(1);
-                        };
-                        class TeleportTitle: Title {
+                        class TeleportLabel: RscText {
                             idc = -1;
                             text = CSTRING(ModuleGarrison_TeleportText);
                             x = 0;
-                            y = H_PART(2.3);
+                            y = 0;
                             w = W_PART(10);
                             h = H_PART(1);
-                            colorBackground[] = {0,0,0,0.5};
+                            colorBackground[] = {0, 0, 0, 0.5};
                         };
-                        class Teleport: RscCheckBox {
-                            idc = 73062;
+                        class Teleport: ctrlToolbox {
+                            idc = 73061;
                             x = W_PART(10.1);
-                            y = H_PART(2.3);
-                            w = W_PART(1);
+                            y = 0;
+                            w = W_PART(15.9);
                             h = H_PART(1);
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
                         };
-                        class FillingModeTitle: RscText {
-                            idc = -1;
+                        class TopDownLabel: TeleportLabel {
+                            text = CSTRING(ModuleGarrison_TopDownFillingText);
+                            tooltip = CSTRING(ModuleGarrison_TopDownFillingTooltip);
+                            y = H_PART(1.1);
+                        };
+                        class TopDown: Teleport {
+                            idc = 73062;
+                            y = H_PART(1.1);
+                        };
+                        class FillingModeLabel: TeleportLabel {
                             text = CSTRING(ModuleGarrison_FillingModeText);
-                            x = 0;
-                            y = H_PART(3.5);
+                            y = H_PART(2.2);
                             w = W_PART(26);
-                            h = H_PART(1);
-                            colorBackground[] = {0,0,0,0.5};
                         };
                         class FillingMode: RscListbox {
                             idc = 73063;
                             x = 0;
-                            y = H_PART(4.5);
+                            y = H_PART(3.2);
                             w = W_PART(26);
-                            h = H_PART(4);
+                            h = H_PART(3);
+                            class Items {
+                                class Even {
+                                    text = CSTRING(ModuleGarrison_FillingModeEven);
+                                    default = 1;
+                                };
+                                class Building {
+                                    text = CSTRING(ModuleGarrison_FillingModeBuilding);
+                                };
+                                class Random {
+                                    text = CSTRING(ModuleGarrison_FillingModeRandom);
+                                };
+                            };
                         };
                     };
                 };
