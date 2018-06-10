@@ -86,7 +86,7 @@ class GVAR(RscEditableObjects): RscDisplayAttributes {
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(2.1);
+                    h = H_PART(3.2);
                     class controls {
                         class EditingModeLabel: RscText {
                             idc = -1;
@@ -117,6 +117,17 @@ class GVAR(RscEditableObjects): RscDisplayAttributes {
                             idc = 19182;
                             y = H_PART(1.1);
                             strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+                        };
+                        class AdditionalObjectsLabel: EditingModeLabel {
+                            text = CSTRING(ModuleEditableObjects_AdditionalObjects);
+                            tooltip = CSTRING(ModuleEditableObjects_AdditionalObjects_Tooltip);
+                            y = H_PART(2.2);
+                        };
+                        class AdditionalObjects: EditingMode {
+                            idc = 19183;
+                            y = H_PART(2.2);
+                            columns = 3;
+                            strings[] = {CSTRING(None), CSTRING(Players), CSTRING(PlayersAndAI)};
                         };
                     };
                 };

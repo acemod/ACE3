@@ -315,6 +315,12 @@
             <Chinesesimp>确认变更给所有编辑者</Chinesesimp>
             <Chinese>確認變更給所有編輯者</Chinese>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
+            <English>Additional Objects</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
+            <English>Additional objects to include in the action regardless of Task Radius</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
             <French>Compétence global de l'IA</French>
@@ -917,6 +923,15 @@
             <Chinesesimp>需要一个不存在的插件</Chinesesimp>
             <Chinese>需要一個不存在的插件</Chinese>
             <Korean>현재 없는 애드온을 필요로 합니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_Zeus_None">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_Players">
+            <English>Players</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_PlayersAndAI">
+            <English>Players and AI</English>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
