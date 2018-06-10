@@ -62,7 +62,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
                 if (!(_x in _fencesHelped) && {_x call FUNC(isFence)}) then {
                     _fencesHelped pushBack _x;
                     private _helper = "ACE_LogicDummy" createVehicleLocal [0, 0, 0];
-                    private _action = [QGVAR(helperCutFence), localize LSTRING(CutFence), QPATHTOF(ui\wirecutter_ca.paa), _fncStatement, _fncCondition, {}, _x, {[0,0,0]}, 5.5, [false, false, false, false, true]] call EFUNC(interact_menu,createAction);
+                    private _action = [QGVAR(helperCutFence), localize LSTRING(CutFence), QPATHTOF(ui\wirecutter_ca.paa), _fncStatement, _fncCondition, {}, _x, {[0, 0, 0]}, 5.5, [false, false, false, false, true]] call EFUNC(interact_menu,createAction);
                     [_helper, 0, [], _action] call EFUNC(interact_menu,addActionToObject);
                     _helper setPosASL (getPosASL _x vectorAdd [0, 0, 1.25]);
                     _addedHelpers pushBack _helper;
