@@ -31,7 +31,7 @@ if (_unloadTo isKindOf "CaManBase") then {
     };
     if ((_bulletsRemaining > 0) && {_unloadTo canAdd _carryMag}) then {
         _unloadTo addMagazine [_carryMag, _bulletsRemaining];
-		_bulletsRemaining = 0;
+        _bulletsRemaining = 0;
     };
 };
 
