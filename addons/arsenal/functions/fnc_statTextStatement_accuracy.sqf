@@ -27,6 +27,6 @@ private _dispersion = [];
 } foreach _fireModes;
 
 _dispersion sort true;
-_dispersion = _dispersion select 0;
+_dispersion = _dispersion param [0, 0];
 
 format ["%1 MIL (%2 MOA)", (_dispersion * 1000) toFixed 2, (_dispersion / pi * 10800) ToFixed 1];

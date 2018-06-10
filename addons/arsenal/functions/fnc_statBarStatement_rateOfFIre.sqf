@@ -28,4 +28,4 @@ private _fireRate = [];
 
 _fireRate sort true;
 
-linearConversion [_statMinMax select 0, _statMinMax select 1, _fireRate select 0, _barLimits select 0, _barLimits select 1]
+linearConversion [_statMinMax select 0, _statMinMax select 1, _fireRate param [0, 0], _barLimits select 0, _barLimits select 1]

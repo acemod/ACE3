@@ -28,4 +28,4 @@ private _dispersion = [];
 
 _dispersion sort true;
 
-linearConversion [_statMinMax select 0, _statMinMax select 1, _dispersion select 0, _barLimits select 0, _barLimits select 1]
+linearConversion [_statMinMax select 0, _statMinMax select 1, _dispersion param [0, 0], _barLimits select 0, _barLimits select 1]

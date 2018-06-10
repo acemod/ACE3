@@ -27,6 +27,6 @@ private _fireRate = [];
 } foreach _fireModes;
 
 _fireRate sort true;
-_fireRate = _fireRate select 0;
+_fireRate = _fireRate param [0, 0];
 
 format ["%1 rpm", round (60 / _fireRate)]
