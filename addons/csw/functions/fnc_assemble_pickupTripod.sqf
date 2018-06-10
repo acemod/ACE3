@@ -29,8 +29,8 @@
         TRACE_3("assemble_pickupTripod finish",_tripod,_player,_tripodClassname);
         
         deleteVehicle _tripod;
-        (_player select 1) addWeaponGlobal _tripodClassname;
-        [(_player select 1), "PutDown"] call EFUNC(common,doGesture);
+        _player addWeaponGlobal _tripodClassname;
+        [_player, "PutDown"] call EFUNC(common,doGesture);
     };
     
     TRACE_3("",_pickupTime,typeOf _tripod,_tripodClassname);
