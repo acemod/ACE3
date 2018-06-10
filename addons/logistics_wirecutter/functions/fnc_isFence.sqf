@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 params ["_object"];
-TRACE_1("params",_object);
+TRACE_1("Checking if fence",_object);
 
 private _typeOf = typeOf _object;
 
