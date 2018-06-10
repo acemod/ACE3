@@ -1137,7 +1137,7 @@
             <Korean>장비 추가</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
-            <English>Garrison group</English>
+            <English>Garrison Group</English>
             <French>Garnir zone</French>
             <Japanese>歩哨グループ</Japanese>
             <Italian>Proteggi gruppo</Italian>
@@ -1209,7 +1209,7 @@
             <Korean>순간이동</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
-            <English>Un-garrison group</English>
+            <English>Un-garrison Group</English>
             <French>Dégarnir zone</French>
             <Japanese>非歩哨グループ</Japanese>
             <Italian>Non proteggere gruppo</Italian>

@@ -24,7 +24,7 @@ if (isServer) then {
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 
-        if !(isNull _curator) exitWith { _curator addCuratorEditableObjects [_objects, true]; };
+        if (!isNull _curator) exitWith {_curator addCuratorEditableObjects [_objects, true]};
 
         {
             _x addCuratorEditableObjects [_objects, true];
@@ -33,7 +33,7 @@ if (isServer) then {
     [QGVAR(removeObjects), {
         params ["_objects", ["_curator", objNull]];
 
-        if !(isNull _curator) exitWith { _curator removeCuratorEditableObjects [_objects, true]; };
+        if (!isNull _curator) exitWith {_curator removeCuratorEditableObjects [_objects, true]};
 
         {
             _x removeCuratorEditableObjects [_objects, true];

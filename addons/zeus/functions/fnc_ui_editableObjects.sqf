@@ -47,7 +47,7 @@ private _fnc_onConfirm = {
 
     private _radius = GETVAR(_display,GVAR(radius),100);
     private _editingMode = lbCurSel (_display displayCtrl 19181) > 0;
-    private _allCurators = [getAssignedCuratorLogic player, objNull] select (lbCurSel (_display displayCtrl 19182));
+    private _allCurators = [getAssignedCuratorLogic player, objNull] select lbCurSel (_display displayCtrl 19182);
     private _additionalObjects = lbCurSel (_display displayCtrl 19183);
 
     private _objects = nearestObjects [_logic, ["All"], _radius];
@@ -58,7 +58,6 @@ private _fnc_onConfirm = {
             _objects append (allUnits + allDeadMen select {!(_x isKindOf "HeadlessClient_F")});
         };
     };
-    _objects arrayIntersect _objects; // Incase additional objects were also in radius
 
     if (_editingMode) then {
         [QGVAR(addObjects), [_objects, _allCurators]] call CBA_fnc_serverEvent;
