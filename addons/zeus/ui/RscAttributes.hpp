@@ -361,7 +361,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                     x = 0;
                     y = 0;
                     w = W_PART(26);
-                    h = H_PART(8.5);
+                    h = H_PART(8.1);
                     class controls {
                         class Title: RscText {
                             idc = -1;
@@ -844,7 +844,7 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
                             h = H_PART(1);
                             rows = 1;
                             columns = 3;
-                            strings[] = {CSTRING(ModuleSuicideBomber_Small), CSTRING(ModuleSuicideBomber_Medium), CSTRING(ModuleSuicideBomber_Large)};
+                            strings[] = {"$STR_small", "$STR_medium", "$STR_large"};
                         };
                         class AutoSeekLabel: DistanceLabel {
                             idc = -1;

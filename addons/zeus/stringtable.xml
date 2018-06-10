@@ -1409,54 +1409,6 @@
             <Russian>Устройство будет активно пытаться найти и перейти к соседним единицам активации. Диапазон автоматического поиска основан на умении снимать расстояние на расстоянии не менее 100 метров.</Russian>
             <Spanish>La unidad intentará buscar activamente y moverse hacia las unidades cercanas del lado de activación. El rango de Auto Seek se basa en la habilidad de distancia al punto de la unidad con un mínimo de 100 metros.</Spanish>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Small">
-            <English>Small</English>
-            <Chinese>小</Chinese>
-            <Chinesesimp>小</Chinesesimp>
-            <Czech>Malý</Czech>
-            <French>Petit</French>
-            <German>Klein</German>
-            <Hungarian>Kicsi</Hungarian>
-            <Italian>Piccolo</Italian>
-            <Japanese>小</Japanese>
-            <Korean>작은</Korean>
-            <Polish>Mały</Polish>
-            <Portuguese>Pequeno</Portuguese>
-            <Russian>Маленький</Russian>
-            <Spanish>Pequeña</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Medium">
-            <English>Medium</English>
-            <Chinese>中</Chinese>
-            <Chinesesimp>中</Chinesesimp>
-            <Czech>Střední</Czech>
-            <French>Moyen</French>
-            <German>Mittel</German>
-            <Hungarian>Közepes</Hungarian>
-            <Italian>medio</Italian>
-            <Japanese>中</Japanese>
-            <Korean>매질</Korean>
-            <Polish>Średni</Polish>
-            <Portuguese>Médio</Portuguese>
-            <Russian>средний</Russian>
-            <Spanish>Medio</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Large">
-            <English>Large</English>
-            <Chinese>大</Chinese>
-            <Chinesesimp>大</Chinesesimp>
-            <Czech>Velký</Czech>
-            <French>Grand</French>
-            <German>Groß</German>
-            <Hungarian>Nagy</Hungarian>
-            <Italian>Grande</Italian>
-            <Japanese>大</Japanese>
-            <Korean>큰</Korean>
-            <Polish>Duży</Polish>
-            <Portuguese>ampla</Portuguese>
-            <Russian>большой</Russian>
-            <Spanish>Grande</Spanish>
-        </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AlreadyBomber">
             <English>Unit is already a suicide bomber</English>
             <Chinese>這個單位已經是自殺炸彈手了</Chinese>
