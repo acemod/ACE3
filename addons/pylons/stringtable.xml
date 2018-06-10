@@ -29,13 +29,13 @@
             <German>Konfiguriere Außenlaststationen</German>
         </Key>
         <Key ID="STR_ACE_Pylons_Category_Pylons">
-            <English>Pylons</English>
-            <Japanese>パイロン</Japanese>
-            <Italian>Piloni</Italian>
-            <Chinese>派龍架</Chinese>
-            <Chinesesimp>派龙架</Chinesesimp>
-            <Korean>파일런</Korean>
-            <German>Außenlaststationen</German>
+            <English>ACE Pylons</English>
+            <Japanese>ACE パイロン</Japanese>
+            <Italian>ACE Piloni</Italian>
+            <Chinese>ACE 派龍架</Chinese>
+            <Chinesesimp>ACE 派龙架</Chinesesimp>
+            <Korean>ACE 파일런</Korean>
+            <German>ACE Außenlaststationen</German>
         </Key>
         <Key ID="STR_ACE_Pylons_Empty">
             <English>&lt;empty&gt;</English>
