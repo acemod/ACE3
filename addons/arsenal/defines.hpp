@@ -237,8 +237,6 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     ];\
     _x ctrlCommit 0;\
 } foreach [\
-    IDC_rightTabContent,\
-    IDC_rightTabContentListnBox,\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];
@@ -284,8 +282,6 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     ];\
     _x ctrlCommit 0;\
 } foreach [\
-    IDC_rightTabContent,\
-    IDC_rightTabContentListnBox,\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];
