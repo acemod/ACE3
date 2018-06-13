@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_player, _fence] call ace_logistics_wirecutter_fnc_cutDownFence
+ * [player, cursorObject] call ace_logistics_wirecutter_fnc_cutDownFence
  *
  * Public: No
  */
@@ -19,7 +19,6 @@
 params ["_unit", "_fence"];
 TRACE_2("Fence cutting started",_unit,_fence);
 
-// Exit if unit is not player
 if (_unit != ACE_player) exitWith {};
 
 // Get cut time based on if unit is a engineer

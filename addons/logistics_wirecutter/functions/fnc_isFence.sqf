@@ -10,7 +10,7 @@
  * Is fence <BOOL>
  *
  * Example:
- * [_fence] call ace_logistics_wirecutter_fnc_isFence
+ * [cursorObject] call ace_logistics_wirecutter_fnc_isFence
  *
  * Public: No
  */

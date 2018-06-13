@@ -21,7 +21,11 @@ params ["_interactionType"];
 // Ignore self-interaction menu or mounted vehicle interaction
 // For performance reasons only add PFH if player has wirecutter item
 // If player somehow gets a wirecutter during keyDown, they will just have to reopen menu
-if (_interactionType != 0 || {vehicle ACE_player != ACE_player} || {!("ACE_wirecutter" in ([ACE_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems))}) exitWith {};
+if (
+    _interactionType != 0
+    || {vehicle ACE_player != ACE_player}
+    || {!("ACE_wirecutter" in ([ACE_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems))}
+) exitWith {};
 
 TRACE_1("Starting wirecuter interact PFH",_interactionType);
 
