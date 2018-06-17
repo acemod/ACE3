@@ -1,4 +1,3 @@
-
 class RadioProtocolBase {
     class Words;
 };

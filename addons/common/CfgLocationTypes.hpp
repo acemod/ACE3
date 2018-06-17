@@ -1,5 +1,5 @@
-//Create a location type that won't be drawn on the map
-//Ref: https://community.bistudio.com/wiki/Location
+// Create a location type that won't be drawn on the map
+// Ref: https://community.bistudio.com/wiki/Location
 
 class CfgLocationTypes {
     class ACE_HashLocation {

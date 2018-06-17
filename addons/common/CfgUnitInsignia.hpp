@@ -1,4 +1,3 @@
-
 class CfgUnitInsignia {
     class ACE_insignia_logo {
         displayName = "ACE3";

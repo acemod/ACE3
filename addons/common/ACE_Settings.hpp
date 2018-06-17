@@ -52,16 +52,6 @@ class ACE_Settings {
         description = CSTRING(SettingFeedbackIconsDesc);
         values[] = {ECSTRING(optionsmenu,Hide), ECSTRING(optionsmenu,TopRightDown), ECSTRING(optionsmenu,TopRightLeft), ECSTRING(optionsmenu,TopLeftDown), ECSTRING(optionsmenu,TopLeftRight)};
     };
-    class GVAR(settingProgressBarLocation) {
-        category = CSTRING(DisplayName);
-        value = 0;
-        typeName = "SCALAR";
-        force = 0;
-        isClientSettable = 1;
-        displayName = CSTRING(SettingProgressbarLocationName);
-        description = CSTRING(SettingProgressbarLocationDesc);
-        values[] = {ECSTRING(optionsmenu,Top), ECSTRING(optionsmenu,Bottom)};
-    };
     class GVAR(displayTextColor) {
         category = CSTRING(DisplayName);
         value[] = {0,0,0,0.1};

@@ -1,22 +1,22 @@
 /*
- * Author: commy2, Glowbal, PabstMirror
- * Draw progress bar and execute given function if succesful.
- * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
+ * Author: commy2, Glowbal, PabstMirror, mharis001
+ * Creates a progress and executes given functions on success or failure.
+ * Finish, fail, and condition are all passed [_args, _elapsedTime, _totalTime, _errorCode].
  *
  * Arguments:
- * 0: Total Time (in game "time" seconds) <NUMBER>
- * 1: Arguments, passed to condition, fail and finish <ARRAY>
- * 2: On Finish: Code called or STRING raised as event. <CODE, STRING>
- * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
- * 4: (Optional) Localized Title <STRING>
- * 5: Code to check each frame (Optional) <CODE>
- * 6: Exceptions for checking EFUNC(common,canInteractWith) (Optional)<ARRAY>
+ * 0: Total Time (in-game "time" seconds) <NUMBER>
+ * 1: Arguments passed to finish, fail, and condition code <ARRAY>
+ * 2: On Finish: code called or STRING raised as event <CODE|STRING>
+ * 3: On Failure: code called or STRING raised as event <CODE|STRING>
+ * 4: Localized title <STRING> (default: "")
+ * 5: Condition: code to check each frame <CODE> (default: {true})
+ * 6: Exceptions for checking EFUNC(common,canInteractWith) <ARRAY> (default: [])
  *
  * Return Value:
  * None
  *
  * Example:
- * [5, [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call ace_common_fnc_progressBar
+ * [5, [], {hint "Finished!"}, {hint "Failure!"}, "My Title"] call ace_common_fnc_progressBar
  *
  * Public: Yes
  */
@@ -26,34 +26,27 @@ params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], 
 
 private _player = ACE_player;
 
-//Open Dialog and set the title
+// Create the progress bar dialog and set the title
 closeDialog 0;
-createDialog QGVAR(ProgressBar_Dialog);
-
-(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText _localizedTitle;
-
-//Adjust position based on user setting:
-private _ctrlPos = ctrlPosition (uiNamespace getVariable QGVAR(ctrlProgressBarTitle));
-_ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))];
-
-(uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlSetPosition _ctrlPos;
-(uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlCommit 0;
-(uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlSetPosition _ctrlPos;
-(uiNamespace getVariable QGVAR(ctrlProgressBar)) ctrlCommit 0;
-(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetPosition _ctrlPos;
-(uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
+createDialog QGVAR(progressBarDialog);
+GETUVAR(GVAR(progressTitle),controlNull) ctrlSetText _localizedTitle;
 
 [{
     (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions"];
 
+    private _progressBar = GETUVAR(GVAR(progressBar),controlNull);
     private _elapsedTime = CBA_missionTime - _startTime;
     private _errorCode = -1;
 
-    // this does not check: target fell unconscious, target died, target moved inside vehicle / left vehicle, target moved outside of players range, target moves at all.
-    if (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
+    // Check for errors (or success), this does not check if target:
+    // - died or went unconscious
+    // - moved inside or left vehicle
+    // - moved outside of the player's range
+    // - moved at all
+    if (isNull _progressBar) then {
         _errorCode = 1;
     } else {
-        if (ACE_player != _player || !alive _player) then {
+        if !(_player isEqualTo ACE_player && {alive _player}) then {
             _errorCode = 2;
         } else {
             if !([_args, _elapsedTime, _totalTime, _errorCode] call _condition) then {
@@ -71,14 +64,9 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
     };
 
     if (_errorCode != -1) then {
-        //Error or Success, close dialog and remove PFEH
-
-        //Only close dialog if it's the progressBar:
-        if (!isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
-            closeDialog 0;
-        };
-
+        // Error or success, remove PFH and close dialog if its still open
         [_this select 1] call CBA_fnc_removePerFrameHandler;
+        if (!isNull _progressBar) then {closeDialog 0};
 
         if (_errorCode == 0) then {
             if (_onFinish isEqualType "") then {
@@ -94,7 +82,11 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
             };
         };
     } else {
-        //Update Progress Bar (ratio of elepased:total)
-        (uiNamespace getVariable QGVAR(ctrlProgressBar)) progressSetPosition (_elapsedTime / _totalTime);
+        // Update progress bar's position (ratio of elepased:total)
+        private _progress = _elapsedTime / _totalTime;
+        _progressBar progressSetPosition _progress;
+        if (GVAR(colorfulProgressBar)) then {
+            _progressBar ctrlSetTextColor [2 * (1 - _progress), 2 * _progress, 0, 0.8];
+        };
     };
 }, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;

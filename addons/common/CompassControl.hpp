@@ -1,22 +1,16 @@
-#include "\a3\ui_f\hpp\defineCommonGrids.inc"
-
 #define TEXTURE_0 "\a3\ui_f_curator\Data\CfgIngameUI\Compass\texture0_ca.paa"
 #define TEXTURE_1 "\a3\ui_f_curator\Data\CfgIngameUI\Compass\texture90_ca.paa"
 #define TEXTURE_2 "\a3\ui_f_curator\Data\CfgIngameUI\Compass\texture180_ca.paa"
 #define TEXTURE_3 "\a3\ui_f_curator\Data\CfgIngameUI\Compass\texture270_ca.paa"
 
-#define BACKGROUND_COLOR {0.1,0.1,0.1,0.4}
-#define POINTER_COLOR {0.1,0.1,0.1,1}
-#define POINTER_WIDTH_FACTOR (1/128)
+#define BACKGROUND_COLOR {0.1, 0.1, 0.1, 0.4}
+#define POINTER_COLOR {0.1, 0.1, 0.1, 1}
+#define POINTER_WIDTH_FACTOR (1 / 128)
 
 #define LEFT (0.5 - 8 * GUI_GRID_W)
-#define TOP (safezoneY + 1.6 * GUI_GRID_H)
+#define TOP (safeZoneY + 1.6 * GUI_GRID_H)
 #define WIDTH (16 * GUI_GRID_W)
 #define HEIGHT (0.5 * GUI_GRID_H)
-
-class RscText;
-class RscPicture;
-class RscControlsGroupNoScrollbars;
 
 class GVAR(CompassControl): RscControlsGroupNoScrollbars {
     onLoad = QUOTE(\
@@ -41,21 +35,20 @@ class GVAR(CompassControl): RscControlsGroupNoScrollbars {
     y = TOP;
     w = WIDTH;
     h = HEIGHT;
-
     class controls {
         class Background: RscText {
-            colorBackground[] = BACKGROUND_COLOR;
             x = 0;
             y = 0;
             w = WIDTH;
             h = HEIGHT;
+            colorBackground[] = BACKGROUND_COLOR;
         };
         class Pointer: RscText {
-            colorBackground[] = POINTER_COLOR;
-            x = WIDTH/2 - WIDTH*POINTER_WIDTH_FACTOR/2;
+            x = WIDTH / 2 - WIDTH * POINTER_WIDTH_FACTOR / 2;
             y = 0;
             w = WIDTH*POINTER_WIDTH_FACTOR;
             h = HEIGHT;
+            colorBackground[] = POINTER_COLOR;
         };
         class CompassGroup: RscControlsGroupNoScrollbars {
             onLoad = QUOTE(\
@@ -65,15 +58,15 @@ class GVAR(CompassControl): RscControlsGroupNoScrollbars {
             );
             x = 0;
             y = 0;
-            w = 2*WIDTH;
-            h = 2*HEIGHT;
+            w = 2 * WIDTH;
+            h = 2 * HEIGHT;
 
             class controls {
                 class Compass0: RscPicture {
                     text = TEXTURE_0;
                     x = 0 * (WIDTH / 4);
                     y = 0;
-                    w = WIDTH/4;
+                    w = WIDTH / 4;
                     h = HEIGHT;
                 };
                 class Compass1: Compass0 {

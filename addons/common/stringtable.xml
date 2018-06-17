@@ -531,38 +531,6 @@
             <Chinese>選擇位置或取消回饋圖標顯示在螢幕上。這些圖標將顯示出你角色額外的狀態與行動等資訊。</Chinese>
             <Chinesesimp>选择位置或取消回馈图标显示在荧幕上。这些图标将显示出你角色额外的状态与行动等资讯。</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
-            <English>Progress bar location</English>
-            <German>Position der Fortschrittsanzeige</German>
-            <Spanish>Ubicación de la barra de progreso</Spanish>
-            <Italian>Posizione della barra di avanzamento</Italian>
-            <Russian>Положение прогресс-бара</Russian>
-            <Polish>Lokalizacja paska postępu</Polish>
-            <French>Position de la barre de progression</French>
-            <Czech>Pozice ukazetele průběhu činnosti</Czech>
-            <Hungarian>Állapotjelző sáv helyzete</Hungarian>
-            <Portuguese>Local da barra de progresso</Portuguese>
-            <Japanese>プログレス バーの位置</Japanese>
-            <Korean>진행 막대의 위치</Korean>
-            <Chinese>進度欄位置</Chinese>
-            <Chinesesimp>进度栏位置</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
-            <English>Set the desired location of the progress bar on your screen.</English>
-            <German>Setze die gewünschte Position der Fortschrittsanzeige fest.</German>
-            <Spanish>Seleccionar la ubicación deseada de la barra de progreso en tu pantalla</Spanish>
-            <Italian>Modifica la posizione della barra di avanzamernto sullo schermo</Italian>
-            <Russian>Установите желаемое положение строки состояния на экране.</Russian>
-            <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
-            <French>Appliquer la position de la barre de progression sur l'écran</French>
-            <Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
-            <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
-            <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
-            <Japanese>画面上に表示されるプログレス バーの位置を設定できます。</Japanese>
-            <Korean>진행 막대를 원하는 곳에 배치합니다.</Korean>
-            <Chinese>設定進度欄在畫面中的位置</Chinese>
-            <Chinesesimp>设定进度栏在画面中的位置</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
             <German>Hintergrundfarbe der Hinweise</German>
@@ -1178,6 +1146,24 @@
             <Chinese>允許ACE腳本去控制音樂的音量。</Chinese>
             <Chinesesimp>允许ACE脚本去控制音乐的音量。</Chinesesimp>
             <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Common_DisplayTextPosition">
+            <English>ACE Hint</English>
+        </Key>
+        <Key ID="STR_ACE_Common_DisplayTextPosition_Description">
+            <English>Textual in game feedback to the player.</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ProgressBarPosition">
+            <English>ACE Progress Bar</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ProgressBarPosition_Description">
+            <English>Indicates the current progress of an action.</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ColorfulProgressBar">
+            <English>Colorful Progress Bar</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ColorfulProgressBar_Description">
+            <English>Makes the ACE Progress Bar change color based on progress.</English>
         </Key>
     </Package>
 </Project>

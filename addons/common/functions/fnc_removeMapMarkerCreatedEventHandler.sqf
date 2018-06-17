@@ -15,20 +15,6 @@
  */
 #include "script_component.hpp"
 
-params ["_id"];
+ACE_DEPRECATED(QFUNC(removeMapMarkerCreatedEventHandler),"3.14.0","CBA_fnc_removeMarkerEventHandler");
 
-private _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
-
-_actionsVar params ["_currentId", "_actionIDs", "_actions"];
-
-_id = _actionIDs find _id;
-
-if (_id == -1) exitWith {};
-
-_actionIDs set [_id, -1];
-_actionIDs = _actionIDs - [-1];
-
-_actions set [_id, []];//{}
-_actions = _actions - [[]];//[{}]
-
-missionNamespace setVariable ["ACE_EventHandler_MapMarker", [_currentId, _actionIDs, _actions]];
+["created", param [0, -1]] call CBA_fnc_removeMarkerEventHandler;

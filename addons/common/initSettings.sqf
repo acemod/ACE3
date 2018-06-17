@@ -16,3 +16,12 @@
     true,
     true
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(colorfulProgressBar),
+    "CHECKBOX",
+    [LSTRING(ColorfulProgressBar), LSTRING(ColorfulProgressBar_Description)],
+    localize LSTRING(ACEKeybindCategoryCommon),
+    false,
+    false
+] call CBA_settings_fnc_init;

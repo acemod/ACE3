@@ -20,7 +20,7 @@ params ["_state"];
 if (_state) then {
     disableSerialization;
 
-    if (!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])) exitWith {};
+    if (!isNull (uiNamespace getVariable [QGVAR(disableInputDialog), displayNull])) exitWith {};
     if (!isNil QGVAR(disableInputPFH)) exitWith {};
 
     // end TFAR and ACRE2 radio transmissions
@@ -32,9 +32,9 @@ if (_state) then {
     };
 
     closeDialog 0;
-    createDialog QGVAR(DisableMouse_Dialog);
+    createDialog QGVAR(disableInputDialog);
 
-    private _dlg = uiNamespace getVariable QGVAR(dlgDisableMouse);
+    private _dlg = uiNamespace getVariable QGVAR(disableInputDialog);
 
     _dlg displayAddEventHandler ["KeyDown", {
         params ["", "_key"];
@@ -51,7 +51,7 @@ if (_state) then {
             };
 
             private _ctrl = _dlg displayctrl 103;
-            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
+            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(disableInputDialog)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
             _ctrl ctrlEnable true;
             _ctrl ctrlSetText "ABORT";
             _ctrl ctrlSetTooltip "Abort.";
@@ -64,7 +64,7 @@ if (_state) then {
         };
 
         if (_key in actionKeys "TeamSwitch" && {teamSwitchEnabled}) then {
-            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+            (uiNamespace getVariable [QGVAR(disableInputDialog), displayNull]) closeDisplay 0;
 
             private _acc = accTime;
             teamSwitch;
@@ -72,12 +72,12 @@ if (_state) then {
         };
 
         if (_key in actionKeys "CuratorInterface" && {getAssignedCuratorLogic player in allCurators}) then {
-            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+            (uiNamespace getVariable [QGVAR(disableInputDialog), displayNull]) closeDisplay 0;
             openCuratorInterface;
         };
 
         if (_key in actionKeys "ShowMap" && {player getVariable ["ACE_canSwitchUnits", false]}) then {
-            (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+            (uiNamespace getVariable [QGVAR(disableInputDialog), displayNull]) closeDisplay 0;
             openMap true;
         };
 
@@ -93,7 +93,7 @@ if (_state) then {
     _dlg displayAddEventHandler ["KeyUp", {true}];
 
     GVAR(disableInputPFH) = [{
-        if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && isNull findDisplay 49 && isNull findDisplay 312 && isNull findDisplay 632}) then {
+        if (isNull (uiNamespace getVariable [QGVAR(disableInputDialog), displayNull]) && {!visibleMap && isNull findDisplay 49 && isNull findDisplay 312 && isNull findDisplay 632}) then {
             [GVAR(disableInputPFH)] call CBA_fnc_removePerFrameHandler;
             GVAR(disableInputPFH) = nil;
             [true] call FUNC(disableUserInput);
@@ -105,5 +105,5 @@ if (_state) then {
         GVAR(disableInputPFH) = nil;
     };
 
-    (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
+    (uiNamespace getVariable [QGVAR(disableInputDialog), displayNull]) closeDisplay 0;
 };

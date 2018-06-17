@@ -1,5 +1,5 @@
 /*
- * Author: commy2, Glowbal, GitHawk
+ * Author: commy2, Glowbal, GitHawk, mharis001
  * Display a structured text.
  *
  * Arguments:
@@ -13,7 +13,7 @@
  *
  * Example:
  * [["Test: %1", 123], 1.5] call ace_common_fnc_displayTextStructured
- * ["wow", 1, ace_player, 3] call ace_common_fnc_displayTextStructured
+ * ["wow", 1, ACE_player, 3] call ace_common_fnc_displayTextStructured
  *
  * Public: Yes
  */
@@ -24,15 +24,13 @@ params [["_text", ""], ["_size", 1.5, [0]], ["_target", ACE_player, [objNull]], 
 if (_target != ACE_player) exitWith {};
 
 if (typeName _text != "TEXT") then {
-    if (_text isEqualType []) then {
-        if (count _text > 0) then {
-            {
-                if (_x isEqualType "" && {isLocalized _x}) then {
-                    _text set [_foreachIndex, localize _x];
-                };
-            }foreach _text;
-            _text = format _text;
-        };
+    if (_text isEqualType [] && {!(_text isEqualTo [])}) then {
+        {
+            if (_x isEqualType "" && {isLocalized _x}) then {
+                _text set [_forEachIndex, localize _x];
+            };
+        } forEach _text;
+        _text = format _text;
     };
     if (_text isEqualType "" && {isLocalized _text}) then {
         _text = localize _text;
@@ -40,36 +38,28 @@ if (typeName _text != "TEXT") then {
     _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
 };
 
-private _isShown = ctrlShown (uiNamespace getVariable ["ACE_ctrlHint", controlNull]);
-
 ("ACE_RscHint" call BIS_fnc_rscLayer) cutRsc ["ACE_RscHint", "PLAIN", 0, true];
-
-disableSerialization;
-private _ctrlHint = uiNamespace getVariable "ACE_ctrlHint";
+private _ctrlHint = GETUVAR(ACE_ctrlHint,controlNull);
 
 _ctrlHint ctrlSetBackgroundColor GVAR(displayTextColor);
 _ctrlHint ctrlSetTextColor GVAR(displayTextFontColor);
 
-// Use profile settings from CfgUIGrids.hpp
-private _xPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_X", ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))];
-private _yPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_Y", safeZoneY + 0.175 * safezoneH];
-private _wPos =  (_width *(((safezoneW / safezoneH) min 1.2) / 40));
-private _hPos = _size * (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+// Position display based profile settings
+private _xPos = profileNamespace getVariable ['TRIPLES(IGUI,GVAR(gridDisplayText),X)', safeZoneX + safeZoneW - 12.9 * GUI_GRID_W];
+private _yPos = profileNamespace getVariable ['TRIPLES(IGUI,GVAR(gridDisplayText),Y)', safeZoneY + 0.175 * safeZoneH];
+private _wPos = _width * GUI_GRID_W;
+private _hPos = _size * 2 * GUI_GRID_H;
 
-// Ensure still in bounds for large width/height
-_xPos = safezoneX max (_xPos min (safezoneX + safezoneW - _wPos));
-_yPos = safeZoneY max (_yPos min (safeZoneY + safezoneH - _hPos));
+// Ensure control is still in bounds of screen
+_xPos = safeZoneX max (_xPos min (safeZoneX + safeZoneW - _wPos));
+_yPos = safeZoneY max (_yPos min (safeZoneY + safeZoneH - _hPos));
 
-// Zeus Interface Open and Display would be under the "CREATE" list
+// Ensure control will not be under the "CREATE" list in the Zeus interface
 if (!isNull curatorCamera) then {
-    _xPos = _xPos min ((safezoneX + safezoneW - 12.5 * (((safezoneW / safezoneH) min 1.2) / 40)) - _wPos);
+    _xPos = _xPos min (safeZoneX + safeZoneW - 12.5 * GUI_GRID_W - _wPos);
 };
 
 private _position = [_xPos, _yPos, _wPos, _hPos];
-
-_ctrlHint ctrlSetPosition _position;
-_ctrlHint ctrlCommit 0;
-
 _ctrlHint ctrlSetStructuredText _text;
 _ctrlHint ctrlSetPosition _position;
-_ctrlHint ctrlCommit ([0.5, 0] select _isShown);
+_ctrlHint ctrlCommit 0;

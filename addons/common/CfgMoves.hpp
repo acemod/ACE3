@@ -1,4 +1,3 @@
-
 class CfgMovesBasic {
     class Default;
     class Actions {

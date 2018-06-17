@@ -16,10 +16,12 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
+
 #define VERSION_CONFIG_COMMON VERSION_CONFIG;\
     versionDesc = "ACE 3";\
     versionAct = QUOTE(call COMPILE_FILE(init_versionTooltip))
-
 
 #define DIG_SURFACE_BLACKLIST [ \
     "concrete", "concrete_exp", "concrete_int", "int_concrete", "int_concrete_exp", \
