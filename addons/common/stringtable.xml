@@ -1179,5 +1179,11 @@
             <Chinesesimp>允许ACE脚本去控制音乐的音量。</Chinesesimp>
             <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
         </Key>
+        <Key ID="STR_ACE_Common_FlagBlack">
+            <English>Flag (ACE - Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Common_FlagWhite">
+            <English>Flag (ACE - White)</English>
+        </Key>
     </Package>
 </Project>
