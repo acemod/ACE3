@@ -24,7 +24,6 @@ TRACE_2("params",_item,_vehicle);
 if !([_item, _vehicle, _ignoreInteraction] call FUNC(canLoadItemIn)) exitWith {TRACE_2("cannot load",_item,_vehicle); false};
 
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
-TRACE_1("before loaded array",_loaded);
 _loaded pushBack _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
