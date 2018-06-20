@@ -1076,10 +1076,12 @@
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
             <Japanese>目標を切り替え</Japanese>
+			<Chinesesimp>切换目标</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
             <Japanese>ユニットは切り替えに影響を受けます</Japanese>
+			<Chinesesimp>被选单位受切换影响</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1461,10 +1463,12 @@
         <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
             <English>Add full ACE Arsenal</English>
             <Japanese>ACE 武器庫を追加</Japanese>
+			<Chinesesimp>添加ACE模式军火库</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
             <Japanese>ACE 武器庫を削除</Japanese>
+			<Chinesesimp>删除ACE模式军火库</Chinesesimp>
         </Key>
     </Package>
 </Project>
