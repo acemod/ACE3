@@ -689,6 +689,7 @@
             <English>Potassium levels</English>
             <French>Taux de potassium</French>
             <Japanese>カリウム レベル</Japanese>
+			<Chinesesimp>钾水平</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
           <English>Magnification</English>
