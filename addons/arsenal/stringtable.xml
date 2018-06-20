@@ -710,21 +710,25 @@
             <English>Page</English>
             <French>Page</French>
             <Japanese>ページ</Japanese>
+            <Chinesesimp>页面</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
             <French>Activer les onglets faces / voix / insignes</French>
             <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
+            <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
             <French>Vider le conteneur selectionné</French>
             <Japanese>選択されたコンテナは空です</Japanese>
+            <Chinesesimp>选择的箱子是空的</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
             <French>Nom de classe exporté dans le presse papier</French>
             <Japanese>クリップボードへクラスネームを出力</Japanese>
+            <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
         </Key>
     </Package>
 </Project>
