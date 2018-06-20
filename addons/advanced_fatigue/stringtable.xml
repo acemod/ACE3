@@ -112,10 +112,12 @@
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor">
             <English>Sway factor</English>
             <Japanese>手ぶれ因数</Japanese>
+			<Chinesesimp>抖动因数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
             <English>Influences the amount of weapon sway. Higher means more sway.</English>
             <Japanese>武器を持つ手のぶれ度合いを設定します。 値が高ければ高いほど、手ぶれが強くなります。</Japanese>
+			<Chinesesimp>影响手持武器的晃动程度,数值越高,抖动的越厉害.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
