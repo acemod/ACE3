@@ -829,10 +829,11 @@
         <Key ID="STR_ACE_Medical_Menu_maxRange">
             <English>Medical Menu maximum range</English>
             <Japanese>治療メニューの最大範囲</Japanese>
+			<Chinesesimp>医疗菜单最大范围</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_maxRange_Descr">
             <English>Maximum distance from where the Medical Menu can be opened.</English>
-            <Japanese>治療メニューを開く事ができる最大範囲</Japanese>
+            <Japanese>你可以打开医疗菜单的最大范围</Japanese>
         </Key>
     </Package>
 </Project>

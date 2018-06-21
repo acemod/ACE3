@@ -46,7 +46,7 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
             <Japanese>医療廃棄物シミュレーション詳細度</Japanese>
             <Korean>의료폐기물 재현 상세도</Korean>
-            <Chinesesimp>医疗废弃物模拟细节</Chinesesimp>
+            <Chinesesimp>模拟医疗废弃物细节</Chinesesimp>
             <Chinese>醫療廢棄物模擬細節</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
@@ -62,7 +62,7 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
             <Japanese>医療廃棄物シミュレーションは各クライアントでローカルに作成される、医療廃棄物の詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
             <Korean>의료폐기물 재현 상세도의 경우 얼마나 많은 수의 폐기물이 클라이언트 주변에 생성되는지를 정합니다. 매우 많은 수의 지역은 프레임드랍을 유발할 수 있습니다, 고로 이는 클라이언트 전용 설정입니다.</Korean>
-            <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会导致画面更新率延迟，因此这由用户端来设定。</Chinesesimp>
+            <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会降低FPS，因此这由用户端性能来设定。</Chinesesimp>
             <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定。</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
@@ -5587,7 +5587,7 @@
             <Japanese>AI はプレイヤーが医療的な理由で気絶している場合にかぎり、撃つのをためらいます。</Japanese>
             <Polish>Opóźnij stan wstrzymania ognia u AI kiedy gracz jest nieprzytomny z powodów medycznych.</Polish>
             <Korean>의료상의 이유로 플레이어가 기절할 경우 인공지능이 발사를 지연합니다.</Korean>
-            <Chinesesimp>当玩家为无意识的状态时, 延长AI的停火时间</Chinesesimp>
+            <Chinesesimp>当玩家为无意识的状态时, 延长AI的开火时间</Chinesesimp>
             <Chinese>當玩家為無意識的狀態時, 延長AI的停火時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
@@ -5602,7 +5602,7 @@
             <Russian>Задержка прекращения огня ботами при потере сознания</Russian>
             <Japanese>AI が気絶者へためらってから射撃</Japanese>
             <Korean>기절할 경우 인공지능이 발사를 지연합니다</Korean>
-            <Chinesesimp>延长AI对已无意识玩家的停火时间</Chinesesimp>
+            <Chinesesimp>延长AI对已无意识玩家的开火时间</Chinesesimp>
             <Chinese>延長AI對已無意識玩家的停火時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
@@ -5626,26 +5626,32 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
             <English>Unconscious animation during treatment</English>
             <Japanese>処置中に気絶アニメーション</Japanese>
+			<Chinesesimp>治疗时死亡动画</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow animation of unconscious patients during treatment.</English>
             <Japanese>患者の処置中に気絶アニメーションを許可します。</Japanese>
+			<Chinesesimp>在无意识患者治疗时死亡,会播放死亡动画?</Chinesesimp>			
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
             <English>Move unconscious units from group</English>
             <Japanese>グループから気絶ユニットを移動</Japanese>
+			<Chinesesimp>从小队中移除无意识伤者</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
             <English>When a group member goes unconscious, removes them from their group.</English>
             <Japanese>グループのメンバーが気絶すると、グループから退出させます。</Japanese>
+			<Chinesesimp>当一个队员失去意识时,他将被移除出小队</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
             <Japanese>過剰投与</Japanese>
+			<Chinesesimp>过量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
             <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
             <Japanese>モルヒネ/アドレナリン/アトロピンの過剰投与により患者を脆弱にします。</Japanese>
+			<Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
         </Key>
     </Package>
 </Project>

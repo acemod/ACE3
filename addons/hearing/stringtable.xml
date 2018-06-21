@@ -286,27 +286,33 @@
             <English>Hearing protection</English>
             <French>Protection auditive</French>
             <Japanese>聴覚保護</Japanese>
+			<Chinesesimp>听力保护</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
             <French>Étouffement des sons</French>
             <Japanese>音量低下</Japanese>
+			<Chinesesimp>降低音量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
             <Japanese>耳栓時の音量</Japanese>
+			<Chinesesimp>耳塞时音量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
             <Japanese>耳栓使用時の音量を決定します。</Japanese>
+			<Chinesesimp>决定带上耳塞时的音量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
             <Japanese>気絶時の音量</Japanese>
+			<Chinesesimp>无意识时音量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
             <Japanese>気絶時の音量を決定します。</Japanese>
+			<Chinesesimp>决定处于无意识时的音量</Chinesesimp>
         </Key>
     </Package>
 </Project>

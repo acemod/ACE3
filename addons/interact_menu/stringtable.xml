@@ -142,7 +142,7 @@
             <Portuguese>Interação - Max. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の色</Japanese>
             <Korean>상호작용 - 문자색깔</Korean>
-            <Chinesesimp>互动 - 文字最大化</Chinesesimp>
+            <Chinesesimp>互动-文字颜色最大值</Chinesesimp>
             <Chinese>互動 - 文字最大化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
@@ -158,7 +158,7 @@
             <Portuguese>Interação - Min. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の背景色</Japanese>
             <Korean>상호작용 - 문자배경색</Korean>
-            <Chinesesimp>互动 - 文字最小化</Chinesesimp>
+            <Chinesesimp>互动-文字颜色最小值</Chinesesimp>
             <Chinese>互動 - 文字最小化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
@@ -174,7 +174,7 @@
             <Portuguese>Interação - Max. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の色</Japanese>
             <Korean>상호작용 - 문자그림자색</Korean>
-            <Chinesesimp>互动 - 阴影最大化</Chinesesimp>
+            <Chinesesimp>互动 - 阴影最大值</Chinesesimp>
             <Chinese>互動 - 陰影最大化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
@@ -190,7 +190,7 @@
             <Portuguese>Interação - Min. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の最低色</Japanese>
             <Korean>상호작용 - 문자그림자배경색</Korean>
-            <Chinesesimp>互动 - 阴影最小化</Chinesesimp>
+            <Chinesesimp>互动 - 阴影最小值</Chinesesimp>
             <Chinese>互動 - 陰影最小化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
@@ -449,6 +449,7 @@
         <Key ID="STR_ACE_Interact_Menu_SelectorColor">
             <English>Selector Color</English>
             <Japanese>セレクターの色</Japanese>
+			<Chinesesimp>选择器颜色</Chinesesimp>
         </Key>
     </Package>
 </Project>
