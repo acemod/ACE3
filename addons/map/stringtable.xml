@@ -107,7 +107,7 @@
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
             <Japanese>歩いているときは地図を揺らしますか?</Japanese>
             <Korean>걸을때 지도보면 흔들리게 합니까?</Korean>
-            <Chinesesimp>走路时让地图会晃动.</Chinesesimp>
+            <Chinesesimp>走路时打开地图会产生晃动.</Chinesesimp>
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
