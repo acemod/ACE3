@@ -140,7 +140,8 @@ class CfgVehicles {
     };
 
 
-    class GMG_01_base_F: StaticMGWeapon {
+    class GMG_TriPod;
+    class GMG_01_base_F: GMG_TriPod {
         class ADDON {
             enabled = 1;
             magazineLocation = "_target selectionPosition 'magazine'";
@@ -164,7 +165,7 @@ class CfgVehicles {
         };
     };
 
-    class GMG_01_A_base_F: GMG_01_base_F { 
+    class GMG_01_A_base_F: GMG_01_base_F {
         class ADDON {
             enabled = 0;
         };
