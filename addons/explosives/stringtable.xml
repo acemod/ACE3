@@ -1024,5 +1024,8 @@
             <French>Portée du détonateur</French>
             <Japanese>爆発範囲</Japanese>
         </Key>
+        <Key ID="STR_ACE_Explosives_ExplosiveTimer">
+            <English>Explosive Timer</English>
+        </Key>
     </Package>
 </Project>
