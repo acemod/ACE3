@@ -1608,18 +1608,21 @@
             <German>Metis-M</German>
             <French>Metis-M</French>
             <Russian>Метис-М</Russian>
+			<Chinese>Метис-М反坦克系统</Chinese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
             <German>Metis-M (Braun)</German>
             <French>Metis-M (Brun)</French>
             <Russian>Метис-М (Кори́чневый)</Russian>
+			<Chinese>Метис-М反坦克系统(棕色)</Chinese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
             <German>Metis-M (Grün)</German>
             <French>Metis-M (Verde)</French>
             <Russian>Метис-М (Зелёный)</Russian>
+			<Chinese>Метис-М反坦克系统(绿色)</Chinese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -2616,10 +2619,13 @@
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_at">
             <English>Jeep Wrangler (SPG-9)</English>
             <German>Jeep Wrangler (SPG-9)</German>
+			<Chinesesimp>"牧马人"吉普车(SPG-9火箭筒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
             <German>Jeep Wrangler (LMG)</German>
+			<Chinesesimp>"牧马人"吉普车(轻机枪)</Chinesesimp>
+			
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -3175,6 +3181,7 @@
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
             <German>Polaris DAGOR (Mini-Spike PzAbw)</German>
+			<Chinesesimp>"北极星"先进布署越野车 (反坦克)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3200,6 +3207,7 @@
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
             <German>LSV Mk. II (Metis-M)</German>
+			<Chinesesimp>轻型突击车2式(反坦克)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -3211,36 +3219,44 @@
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
             <German>Rooikat 120</German>
+			<Chinesesimp>"山猫"重型轮式装甲车</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
             <German>Rooikat 120 UP</German>
+			<Chinesesimp>"山猫"重型轮式装甲车(栏栅版)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
             <German>T-14 Armata</German>
             <Russian>Т-14 Армата</Russian>
+			<Chinesesimp>Т-14 主战坦克</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
             <German>T-14K Armata</German>
             <Russian>Т-14К Армата</Russian>
+			<Chinesesimp>Т-14K 主战坦克</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
             <German>Wiesel 2 Ozelot (FlaRaWaTrg)</German>
+			<Chinesesimp>"豹猫"装甲车(防空)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
             <German>Wiesel 2 (PzAbw)</German>
+			<Chinesesimp>"鼹鼠"装甲车(反坦克)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
             <German>Wiesel 2 (MK20)</German>
+			<Chinesesimp>"鼹鼠"装甲车(MK20机炮)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
             <German>Wiesel 2 AFF (Radar)</German>
+			<Chinesesimp>"鼹鼠"装甲车(成像雷达)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>

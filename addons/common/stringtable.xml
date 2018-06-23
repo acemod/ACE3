@@ -1181,9 +1181,11 @@
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
+			<Chinesesimp>旗帜(ACE-黑色):</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
+			<Chinesesimp>旗帜(ACE-白色):</Chinesesimp>
         </Key>
     </Package>
 </Project>

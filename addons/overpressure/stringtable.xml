@@ -26,10 +26,12 @@
         <Key ID="STR_ACE_overpressure_statBackblastRange">
             <English>Backblast range</English>
             <Japanese>後方噴射の範囲</Japanese>
+			<Chinesesimp>向后喷射的范围</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_overpressure_statBackblastAngle">
             <English>Backblast angle</English>
             <Japanese>後方噴射の角度</Japanese>
+			<Chinesesimp>向后喷射的角度</Chinesesimp>
         </Key>
     </Package>
 </Project>
