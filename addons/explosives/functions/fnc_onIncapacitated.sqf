@@ -21,7 +21,7 @@ TRACE_1("params",_unit);
 
 if (_unit == ace_player) then {
     // close cellphone if open
-    closeDialog 0;
+    findDisplay 8855 closeDisplay 0;
 };
 
 // Exit if no item:
