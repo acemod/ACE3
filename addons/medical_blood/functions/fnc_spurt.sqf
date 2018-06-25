@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Sickboy
  * Spurt blood on the ground
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define MAXIMUM_DROPS 4
 #define DISTANCE_BETWEEN_DROPS 0.20
