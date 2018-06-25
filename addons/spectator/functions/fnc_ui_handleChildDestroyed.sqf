@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte
  * Function used to handle child destroyed event
@@ -17,8 +18,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_display","_child","_exitCode"];
 

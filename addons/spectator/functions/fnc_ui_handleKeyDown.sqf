@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to handle key down event
@@ -17,8 +18,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #include "\A3\ui_f\hpp\defineDIKCodes.inc"
 
 params ["","_key","_shift","_ctrl","_alt"];

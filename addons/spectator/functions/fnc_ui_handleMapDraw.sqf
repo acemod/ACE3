@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO
  * Function used to handle map draw
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MAP_MIN_ENTITY_DISTANCE 30
 
 // Moved timer into map controls group, update here

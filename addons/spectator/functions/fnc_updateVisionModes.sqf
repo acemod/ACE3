@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Adds or removes spectator vision modes from the selection available to the local player.
@@ -28,8 +29,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [DFUNC(updateVisionModes),_this];

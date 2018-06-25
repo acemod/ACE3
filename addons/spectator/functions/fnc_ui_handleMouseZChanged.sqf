@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO
  * Function used to handle mouse scroll event
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define FOLLOW_CAMERA_MAX_DISTANCE 5
 
 if (GVAR(camMode) == MODE_FOLLOW) then {

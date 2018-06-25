@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Gets the possible entities to spectate based on settings.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // Include dead units if specified (used by entity list)
 private _entities = allUnits;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to draw the 3D icons and track the cursor object
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define HEIGHT_OFFSET 1.5
 
 BEGIN_COUNTER(updateCursor);

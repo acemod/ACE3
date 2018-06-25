@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Sets the spectator camera attributes as desired. Local effect.
@@ -31,8 +32,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params [
     ["_mode",nil,[0]],

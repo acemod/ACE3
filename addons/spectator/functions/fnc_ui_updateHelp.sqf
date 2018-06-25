@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, SilentSpike
  * Updates spectator UI help element
@@ -17,8 +18,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #include "\A3\ui_f\hpp\defineDIKCodes.inc"
 #define MAX_CONTROLS_HELP_ENTRIES 12
 

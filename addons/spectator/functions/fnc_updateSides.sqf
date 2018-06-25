@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Adds or removes sides from the selection available to spectate. Local effect.
@@ -16,8 +17,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params [["_addSides",[],[[]]], ["_removeSides",[],[[]]]];
 

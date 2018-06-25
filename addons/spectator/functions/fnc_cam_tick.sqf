@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to perform camera ticks
@@ -18,8 +19,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 BEGIN_COUNTER(camTick);
 private _cameraMode = GVAR(camMode);
