@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Draw a Laser Point
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_range", "_isGreen", "_brightness"];
 
