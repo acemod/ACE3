@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Hope Johnson and commy2
  * Takes out earplugs.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
 
