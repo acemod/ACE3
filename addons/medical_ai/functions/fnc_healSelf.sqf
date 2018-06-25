@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Makes the unit heal itself.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Player will have to do this manually of course
 if ([_this] call EFUNC(common,isPlayer)) exitWith {};

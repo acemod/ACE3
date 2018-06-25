@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if there is a medic available in the unit's group.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Note: Although an unconscious unit cannot call for a medic itself,
 //   we ignore this here. We need to "notice" the medic that he should

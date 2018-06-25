@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Makes a medic heal the next unit that needs treatment.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Can't heal other units when unconscious
 if (_this getVariable ["ACE_isUnconscious", false]) exitWith {};
