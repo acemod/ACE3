@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Main looping function that updates fatigue values.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle null (Map intros)
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
     private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];

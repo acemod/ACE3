@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles visual changes of the stamina bar.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_stamina"];
 
 private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];

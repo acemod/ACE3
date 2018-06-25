@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Initializes the module settings.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_logic"];
 
 [_logic, QGVAR(enabled), "Enabled"] call EFUNC(common,readSettingFromModule);
