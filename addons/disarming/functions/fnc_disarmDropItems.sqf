@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define TIME_MAX_WAIT 5
 

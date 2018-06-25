@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_startA", "_endA", "_startB", "_endB"];
 
