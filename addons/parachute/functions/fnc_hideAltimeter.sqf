@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Removes the altimeter from the screen.
@@ -13,6 +14,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 GVAR(AltimeterActive) = false;
 "ACE_Altimeter" cutText ["","PLAIN",0,true];
