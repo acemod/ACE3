@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Winter
  * Sets the player's current view distance according to whether s/he is on foot, in a land vehicle or in an air vehicle.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_showPrompt"];
 
