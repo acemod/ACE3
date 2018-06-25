@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Waits for the flashbang grenade fuze to trigger and 'explode'
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_projectile"];
 TRACE_1("params",_projectile);

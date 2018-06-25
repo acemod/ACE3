@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Creates the flashbang effect and knock out AI units.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_grenadePosASL"];
 TRACE_1("params",_grenadePosASL);

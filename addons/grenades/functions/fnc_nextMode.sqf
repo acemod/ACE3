@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Select the next throwing mode and display message.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
