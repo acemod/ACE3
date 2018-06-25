@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Saves the current mode and sets a new mode
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_newMode"];
 
 disableSerialization;

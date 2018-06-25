@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Tests if the dagr can be shown in a mode
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_showType"];
 
 private _returnValue = false;
