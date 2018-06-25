@@ -39,15 +39,15 @@ if (
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent Rare Error when ending mission with interact key down:
-        if (isNull ACE_player) exitWith {};
         private _player = ACE_player;
+        if (isNull _player) exitWith {};
         private _playerPos = getPosASL _player;
 
         // Rescan if player has moved more than 5 meters from last position
-        if (_playerPos distance _setPosition > 5) then {
+        if (_playerPos distanceSqr _setPosition > 25) then {
             private _cfgAmmo = configFile >> "CfgAmmo";
             {
-                if (_x distance _player < 15 && {!(_x in _minesHelped)} && {!(getModelInfo _x select 0 isEqualTo "empty.p3d")}) then {
+                if (_x distanceSqr _player < 225 && {!(_x in _minesHelped)} && {!(getModelInfo _x select 0 isEqualTo "empty.p3d")}) then {
                     private _config = _cfgAmmo >> typeOf _x;
                     private _size = getNumber (_config >> QGVAR(size));
                     private _defuseClass = ["ACE_DefuseObject", "ACE_DefuseObject_Large"] select (_size == 1);
