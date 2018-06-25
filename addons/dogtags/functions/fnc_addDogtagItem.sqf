@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SzwedzikPL
  * Adds dogtag item to unit (triggered by server).
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_item", "_dogtagData"];
 

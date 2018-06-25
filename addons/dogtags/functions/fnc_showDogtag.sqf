@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SzwedzikPL
  * Shows dogtag.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 

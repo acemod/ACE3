@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SzwedzikPL
  * Server: creates new dogtag item and send it to client.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if(!isServer) exitWith {};
 
