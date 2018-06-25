@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Define a variable for the ACE variable framework
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_name", "_value", "_defaultGlobal", "_category", ["_code", 0], ["_persistent", false]];
 

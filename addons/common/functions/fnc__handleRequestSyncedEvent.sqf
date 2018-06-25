@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //SEH_s
 if (isServer) then {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain, Jaynus
  * Returns the result of the function and caches it up to a given time or event
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_params", "_function", "_namespace", "_uid", "_duration", "_event"];
 

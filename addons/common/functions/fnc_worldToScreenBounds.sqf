@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: zGuba 2011
  * Function helper for framing objects on screen.
@@ -24,7 +25,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_margins", "_offsets"];
 

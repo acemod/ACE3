@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: AACO
  * Function used to get the vehicle icon for provided object (cached for repeat use)
@@ -13,8 +14,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 #define DEFAULT_TEXTURE "\A3\ui_f\data\Map\VehicleIcons\iconVehicle_ca.paa"
 
 params [["_object", objNull, [objNull, ""]]];

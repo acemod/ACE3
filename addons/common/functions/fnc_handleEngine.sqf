@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Blocks turning on the vehicles engine if set by the status effect handler.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_vehicle", "_engineOn"];
 
 if (local _vehicle && {_engineOn} && {_vehicle getVariable [QGVAR(blockEngine), false]}) then {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Stack group switches. Will always trace back to original group.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull], ["_switch", false], ["_id", ""], ["_side", sideUnknown]];
 

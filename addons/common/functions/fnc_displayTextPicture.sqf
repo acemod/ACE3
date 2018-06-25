@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Glowbal
  * Display a structured text with image.
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_text", ""], ["_image", "", [""]], ["_imageColor", [1,1,1], [[]]], ["_target", ACE_player, [objNull]], ["_size", 2, [0]]];
 

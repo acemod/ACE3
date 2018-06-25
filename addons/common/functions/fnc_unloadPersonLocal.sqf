@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ViperMaul
  * Unload a person from a vehicle, local
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 

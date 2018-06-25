@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ?
  * Dumps an array to the RPT, showing the depth of each element.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_var", ["_depth", 0, [0]]];
 

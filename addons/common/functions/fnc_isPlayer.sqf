@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578, commy2, akalegman
  * Checks if a unit is a player / curator controlled unit.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", ["_excludeRemoteControlled", false]];
 

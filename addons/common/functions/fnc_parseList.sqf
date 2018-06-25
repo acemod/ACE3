@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, Jonpas
  * Makes a list from a string using comma as a delimiter, optionally trim or remove whitespace and check each for object existence.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_list", ["_removeWhitespace", false], ["_checkNil", false]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Returns the metadata of a setting if it exists
@@ -22,7 +23,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name"];
 

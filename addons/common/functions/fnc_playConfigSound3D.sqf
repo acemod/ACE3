@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Plays a sound defined in CfgSounds using playSound3D, with global effect.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_soundClass", "_posASL", "_volume", "_distance"];
 

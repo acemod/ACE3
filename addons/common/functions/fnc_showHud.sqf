@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Allows multiple sources to not overwrite showHud command.
@@ -25,7 +26,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {[-1]};
 

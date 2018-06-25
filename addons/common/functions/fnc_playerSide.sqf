@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Return the current side of the player
@@ -13,6 +14,5 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 side group ACE_player

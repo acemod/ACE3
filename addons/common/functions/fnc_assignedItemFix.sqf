@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Initialized the assigned item fix.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ACE_isMapEnabled     = getMissionConfigValue ["showMap", 1] in [true, 1];
 ACE_isCompassEnabled = getMissionConfigValue ["showCompass", 1] in [true, 1];

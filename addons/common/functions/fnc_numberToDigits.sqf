@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, SilentSpike
  * Transforms a number to an array of the correspondending digits.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_number", "_minLength"];
 

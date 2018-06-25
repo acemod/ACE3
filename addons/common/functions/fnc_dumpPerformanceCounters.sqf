@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ?
  * Dumps performance counter statistics into Logs.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 diag_log text format ["REGISTERED ACE PFH HANDLERS"];
 diag_log text format ["-------------------------------------------"];

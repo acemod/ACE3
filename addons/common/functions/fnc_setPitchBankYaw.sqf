@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive edit by KoffeinFlummi
  * Sets the value of an ACE_Parameter and makes it public.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_object", "_aroundX", "_aroundY", "_aroundZ"];
 

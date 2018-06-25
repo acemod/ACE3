@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Sets the value of an ACE_Parameter and makes it public.
@@ -16,7 +17,6 @@
  *
  * Deprecated
  */
-#include "script_component.hpp"
 
 params ["_name", "_value"];
 
