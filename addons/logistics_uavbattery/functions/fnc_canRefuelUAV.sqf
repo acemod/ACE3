@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: marc_book
  * Tests if unit can refuel the target UAV
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 
