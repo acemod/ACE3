@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  *
@@ -25,7 +26,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("Reading Ammo Config",_this);
 
