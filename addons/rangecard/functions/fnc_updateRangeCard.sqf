@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Authors: Ruthberg
  * Updates the range card data
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 #define __dsp (uiNamespace getVariable "RangleCard_Display")

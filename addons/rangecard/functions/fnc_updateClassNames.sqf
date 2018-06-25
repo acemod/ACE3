@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Authors: Ruthberg
  * Updates the ammo and weapon class names
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _unit = _this;
 
