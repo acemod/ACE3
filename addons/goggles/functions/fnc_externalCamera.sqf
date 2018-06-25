@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Returns if the camera is external or not.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 // Handle the ThreeDen Editor Camera
 if (is3DEN) exitWith {true};

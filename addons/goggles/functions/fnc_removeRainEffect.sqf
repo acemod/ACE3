@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Removes rain effects from the screen.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!isNull GVAR(RainDrops)) then {
     deleteVehicle GVAR(RainDrops);
