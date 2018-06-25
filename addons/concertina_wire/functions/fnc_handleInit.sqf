@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko
  * Handles wire Init
@@ -13,6 +14,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_wire"];
 _wire addEventHandler ["HandleDamage", {call FUNC(handleDamage)}];
