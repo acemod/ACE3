@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Collect a entire tree of active actions
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_origAction", "_parentPath", "_distanceToBasePoint"];
 _origAction params ["_origActionData", "_origActionChildren"];
