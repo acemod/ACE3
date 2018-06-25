@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /**
  * XEH_preInit.sqf
  * @Descr: N/A
@@ -7,8 +8,6 @@
  * @Return:
  * @PublicAPI: false
  */
-
-#include "script_component.hpp"
 
 ADDON = false;
 
