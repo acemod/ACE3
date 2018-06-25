@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Detonates ammunition from a vehicle until no ammo left
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 #define MAX_TIME_BETWEEN_AMMO_DET 25
 
 params ["_vehicle", "_magazines", "_totalAmmo"];

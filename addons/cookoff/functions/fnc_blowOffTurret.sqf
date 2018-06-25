@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Blow off turret effect.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // delayed so the object is spawned after the model changes to a wreck
 // the sudden change in the model would cause nearby physx objects to get stuck
