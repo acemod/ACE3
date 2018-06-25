@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Refuels the vehicle.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 

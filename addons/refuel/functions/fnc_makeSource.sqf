@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Makes an object into a refuel source.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!isServer) exitWith {};
 

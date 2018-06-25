@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * PFH while nozzle is in hands.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define DROP_NOZZLE [_unit, _nozzle] call FUNC(dropNozzle);
 #define UNHOLSTER_WEAPON \

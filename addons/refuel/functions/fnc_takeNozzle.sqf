@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Take a fuel nozzle either from a fuel truck/station or from the ground.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [
     ["_unit", objNull, [objNull]],

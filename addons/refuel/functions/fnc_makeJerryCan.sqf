@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Makes an object into a jerry can.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_target", objNull, [objNull]], ["_fuelAmount", 20, [0]]];
 

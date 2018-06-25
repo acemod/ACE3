@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Get the remaining fuel amount.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_source", objNull, [objNull]]];
 
