@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * PFH for Drag Object
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #ifdef DEBUG_ENABLED_DRAGGING
     systemChat format ["%1 dragObjectPFH running", CBA_missionTime];

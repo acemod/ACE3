@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Enable the object to be carried.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_object", "_enableCarry", "_position", "_direction"];
 

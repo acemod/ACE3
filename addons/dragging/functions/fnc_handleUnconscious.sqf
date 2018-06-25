@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle the Unconscious of a Unit while Dragging
@@ -13,7 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_unit"];
 

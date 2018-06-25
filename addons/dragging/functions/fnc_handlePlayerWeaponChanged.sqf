@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle the Weapon Changed Event
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 TRACE_2("params",_unit,_weapon);
