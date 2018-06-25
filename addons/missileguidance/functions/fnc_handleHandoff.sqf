@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  * Not currently used
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_target", "_args"];
 
 if (isNil "_target" || {isNull _target} || {!local _target} ) exitWith { false };

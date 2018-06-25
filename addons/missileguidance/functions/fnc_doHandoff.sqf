@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE
  * Not currently used
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_target", "_args"];
 
 [QGVAR(handoff), [_target, _args]] call CBA_fnc_globalEvent;
