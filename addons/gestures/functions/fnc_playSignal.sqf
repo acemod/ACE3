@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: joko // Jonas, Emperias, Zigomarvin
  * Detect if the player and play the Gesture Animation
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("params",_this);
 
