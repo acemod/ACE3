@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voioper
  * Switch flashlight on/off.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_newFlashlight"];
 

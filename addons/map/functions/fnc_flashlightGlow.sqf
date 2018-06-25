@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Add or remove global flashlight glow for when player is looking at map.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_flashlightType", ["_set", true]];
 

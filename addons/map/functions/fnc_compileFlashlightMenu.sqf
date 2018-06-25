@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Compile list of flashlight classnames and add to the "Flashlight" parent menu.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["", "_player"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  *
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 ((_this select 0) displayCtrl 1016) ctrlShow GVAR(mapShowCursorCoordinates);
 
