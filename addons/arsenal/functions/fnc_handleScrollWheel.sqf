@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handle the mouse wheel.
@@ -12,7 +13,6 @@
  *
  * Public: No
 */
-#include "..\defines.hpp"
 
 params ["", "_args"];
 _args params ["", "_zPos"];

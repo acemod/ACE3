@@ -1,4 +1,6 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
+#include "\A3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: Alganthe
  * Handles keyboard inputs in arsenal.
@@ -15,8 +17,6 @@
  *
  * Public: No
 */
-#include "..\defines.hpp"
-#include "\A3\ui_f\hpp\defineDIKCodes.inc"
 
 params ["", "_args"];
 _args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState"];

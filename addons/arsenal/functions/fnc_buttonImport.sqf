@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Import loadout / default loadouts list from clipboard.
@@ -11,7 +12,6 @@
  *
  * Public: No
 */
-#include "..\defines.hpp"
 
 params ["_display"];
 

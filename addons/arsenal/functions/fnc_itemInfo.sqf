@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Update arsenal's info box.
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "..\defines.hpp"
 
 params ["_display", "_control", "_curSel" ,"_itemCfg"];
 

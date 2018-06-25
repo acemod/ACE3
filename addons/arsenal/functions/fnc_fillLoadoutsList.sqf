@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Fill loadouts list.
@@ -12,7 +13,6 @@
  *
  * Public: No
 */
-#include "..\defines.hpp"
 
 params ["_display", "_control"];
 

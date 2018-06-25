@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Clear the current container.
@@ -11,7 +12,6 @@
  *
  * Public: No
 */
-#include "..\defines.hpp"
 
 params ["_display"];
 

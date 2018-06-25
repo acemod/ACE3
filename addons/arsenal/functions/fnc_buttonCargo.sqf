@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Add or remove item(s) when the + or - button is pressed in the right panel.
@@ -12,7 +13,6 @@
  *
  * Public: No
 */
-#include "..\defines.hpp"
 
 params ["_display", "_addOrRemove"];
 
