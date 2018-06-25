@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Primes the throwable, creates global throwable vehicle and throws Fired XEH.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", ["_showHint", false]];
 TRACE_2("params",_unit,_showHint);
