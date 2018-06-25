@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 params ["_huntIR"];
