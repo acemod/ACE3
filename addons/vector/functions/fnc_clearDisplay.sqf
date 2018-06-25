@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Clears the vectors control items.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 disableSerialization;
 private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);

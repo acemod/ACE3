@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  *
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _distanceP1 = GVAR(pData) select 0;
 private _directionP1 = GVAR(pData) select 1;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Data transfer over a connected cable. Based on page 14 of pdf.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _distance = call FUNC(getDistance);
 private _direction = call FUNC(getDirection);
