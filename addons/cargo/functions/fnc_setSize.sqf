@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Set the cargo size of any object. Has global effect.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 // Only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {

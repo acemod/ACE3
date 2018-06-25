@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Start load item.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player", "_object", ["_cargoVehicle", objNull]];
 TRACE_3("params",_player,_object,_cargoVehicle);

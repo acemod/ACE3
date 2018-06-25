@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: marc_book, commy2, CAA-Picard
  * Unload and paradrop object from plane or helicopter.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_item", "_vehicle"];
 TRACE_2("params",_item,_vehicle);
