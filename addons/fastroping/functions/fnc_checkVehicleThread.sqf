@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the given helicopter still exits, and if not, destroys the FRIES.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle", "_fries"];
 
 if (isNull _vehicle) then {

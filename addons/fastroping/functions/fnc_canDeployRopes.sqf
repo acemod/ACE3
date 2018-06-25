@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the unit can deploy ropes from the helicopter.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_unit", "_vehicle"];
 
 private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;

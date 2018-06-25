@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Server PerFrameHandler during fast roping.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_arguments", "_pfhHandle"];
 _arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex", "_hasBeenAttached"];
 _rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook"];

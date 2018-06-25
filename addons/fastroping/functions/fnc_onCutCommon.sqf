@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Function for closing doors and retracting the hook for most vanilla and older Arma helos.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
 private _fries = _vehicle getVariable [QGVAR(FRIES), objNull];
