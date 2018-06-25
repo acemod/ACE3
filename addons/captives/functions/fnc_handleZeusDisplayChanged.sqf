@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles ZeusDisplayChanged event
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if ((ACE_player getVariable [QGVAR(isHandcuffed), false]) || {ACE_player getVariable [QGVAR(isSurrendering), false]}) then {
     TRACE_1("Player Change (showHUD false)",ACE_player);
