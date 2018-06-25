@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2
  * Make the unit clear the jam from a weapon
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon", ["_skipAnim", false]];
 TRACE_3("params",_unit,_weapon,_skipAnim);

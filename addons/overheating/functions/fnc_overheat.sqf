@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Handle weapon fire, heat up the weapon
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
 TRACE_4("params",_unit,_weapon,_ammo,_projectile);
