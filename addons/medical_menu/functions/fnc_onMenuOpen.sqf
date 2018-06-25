@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handle medical menu opened
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 #define MAX_DISTANCE 10
 
 params ["_display"];
