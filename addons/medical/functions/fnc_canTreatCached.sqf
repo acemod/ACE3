@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Cached Check if the treatment action can be performed.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define MAX_DURATION_CACHE 2
 params ["", "_target", "_selection", "_classname"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Callback when the morphine treatment is complete
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MORPHINEHEAL 0.4
 
 params ["_caller", "_target"];

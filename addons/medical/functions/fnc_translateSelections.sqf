@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Translate selection names into medical usable hit selection names.
@@ -20,7 +21,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define HEAD_SELECTIONS ["face_hub", "neck", "head"]
 #define HEAD_HITPOINTS ["hitface", "hitneck", "hithead"]

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * PFH logic for unconscious state
@@ -20,8 +21,6 @@
  *
  * Public: yes
  */
-
-#include "script_component.hpp"
 
 params ["_args", "_idPFH"];
 _args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];

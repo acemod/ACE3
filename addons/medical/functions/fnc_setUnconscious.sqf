@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -16,8 +17,6 @@
  *
  * Public: yes
  */
-
-#include "script_component.hpp"
 
 #define DEFAULT_DELAY (round(random(10)+5))
 

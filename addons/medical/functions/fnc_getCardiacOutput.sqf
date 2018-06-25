@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the cardiac output from the Heart, based on current Heart Rate and Blood Volume.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 /*
     Cardiac output (Q or or CO ) is the volume of blood being pumped by the heart, in particular by a left or right ventricle in the CBA_missionTime interval of one minute. CO may be measured in many ways, for example dm3/min (1 dm3 equals 1 litre).

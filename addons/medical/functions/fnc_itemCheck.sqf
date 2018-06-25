@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Replaces vanilla items with ACE ones.
@@ -13,8 +14,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

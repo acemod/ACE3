@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handling of the airway injuries upon the handleDamage eventhandler.
@@ -17,8 +18,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
 private _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);

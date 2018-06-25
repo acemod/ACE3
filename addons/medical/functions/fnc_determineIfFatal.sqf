@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Determine If Fatal
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define INCREASE_CHANCE_HEAD 0.05
 #define INCREASE_CHANCE_TORSO 0.03

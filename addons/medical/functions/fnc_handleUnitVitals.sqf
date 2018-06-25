@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Is expected to be called every second.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_interval"];
 TRACE_3("ACE_DEBUG",_unit,_interval,_unit);

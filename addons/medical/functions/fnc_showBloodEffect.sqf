@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Does the blood screen effect, just like BIS_fnc_bloodeffect, but in non-sheduled environment.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_bloodRemaining"];
 

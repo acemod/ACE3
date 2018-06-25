@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Local callback when the bloodbag treatment is complete
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define BLOODBAGHEAL 70
 
 params ["_target", "_treatmentClassname"];

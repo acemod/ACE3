@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if vehicle is a medical vehicle
@@ -13,8 +14,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_vehicle"];
 

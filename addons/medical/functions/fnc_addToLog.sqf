@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Add an entry to the specified log
@@ -16,8 +17,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_type", "_message", "_arguments"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the bandage of a patient.
@@ -18,8 +19,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -18,8 +19,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_viscosityChange", "_painReduce"];
 TRACE_8("params",_target,_className,_variable,_maxDosage,_timeInSystem,_incompatabileMeds,_viscosityChange,_painReduce);

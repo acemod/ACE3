@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Enabled the vitals loop for a unit.
@@ -13,8 +14,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit", ["_force", false]];
 

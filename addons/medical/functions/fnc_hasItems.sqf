@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if all items are present between the patient and the medic.
@@ -15,8 +16,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_medic", "_patient", "_items"];
 

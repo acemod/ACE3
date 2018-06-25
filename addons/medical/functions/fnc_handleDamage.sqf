@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal, commy2
  * Main HandleDamage EH function.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 _this = _this select [0, 7];
 params ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_hitPointIndex"];

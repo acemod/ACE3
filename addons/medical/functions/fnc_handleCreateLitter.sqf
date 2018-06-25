@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * handle Litter Create
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_litterClass", "_position", "_direction"];
 TRACE_3("params",_litterClass,_position,_direction);

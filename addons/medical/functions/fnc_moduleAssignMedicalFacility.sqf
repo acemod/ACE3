@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Register synchronized objects from passed object as a medical facility
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params [["_logic", objNull, [objNull]]];
 if (!isNull _logic) then {

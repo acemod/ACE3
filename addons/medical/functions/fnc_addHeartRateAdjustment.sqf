@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Increase the Heart Rate of a local unit by given number within given amount of seconds.
@@ -16,8 +17,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_value", 0, [0]], ["_time", 1, [0]], ["_callBack", {}, [{}]]];
 
