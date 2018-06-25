@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Cycles fire mode for any missileGuidance enabled ammo that has multiple attack profiles
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 TRACE_1("cycle fire mode",_this);
 

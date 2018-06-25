@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Sends all status effects for an object (can be run on non-local objects)
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_effectName", "", [""]]];
 TRACE_2("params",_object,_effectName);

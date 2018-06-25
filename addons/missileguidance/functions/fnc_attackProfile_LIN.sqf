@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou
  * Attack profile: Linear (used by DAGR)
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_seekerTargetPos", "_args"];
 _args params ["_firedEH"];

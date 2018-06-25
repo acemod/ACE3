@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Shows multiple watched variables on the main display (for easy debugging).
@@ -25,8 +26,6 @@
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 #define TEXT_HEIGHT 16
 

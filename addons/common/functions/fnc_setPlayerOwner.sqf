@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Sets the player's owner id as a variable on his player ojbect.
@@ -15,9 +16,6 @@
  *
  * Public: No
  */
-
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 if (missionNameSpace getVariable [QGVAR(setPlayerOwnerRunning), false]) exitWith {};
 GVAR(setPlayerOwnerRunning) = true;

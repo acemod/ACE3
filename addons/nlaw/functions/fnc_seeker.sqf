@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the top down attack seeker for missile guidance.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["", "_args", "_seekerStateParams"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Publish a variable if it's different enough from the previously published value.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_object", "_varName", "_value", "_tolerance"];
 TRACE_4("params",_object,_varName,_value,_tolerance);

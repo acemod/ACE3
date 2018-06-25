@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou
  * Seeker Type: SALH (Laser)
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["", "_args"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams"];

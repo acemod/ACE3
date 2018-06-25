@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus, PabstMirror
  * Main loop, handles scaning for targets and drawing the javelin optic
@@ -17,8 +18,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 // TRACE_1("onOpticDraw",diag_frameno);
 
