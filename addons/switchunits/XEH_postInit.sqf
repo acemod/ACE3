@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Initializes the SwitchUnits pbo.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 
 if (missionNamespace getVariable [QGVAR(EnableSwitchUnits), false]) then {
