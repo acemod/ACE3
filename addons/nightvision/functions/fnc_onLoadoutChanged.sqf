@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Refreshes nvg effect if switching NVG goggles.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
 TRACE_1("onLoadoutChange",_player);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Handles setting up the effects: fog, ppEffects and the RscTittle.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_activated"];
 TRACE_1("setupDisplayEffects",_activated);

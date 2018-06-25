@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Disables/re-enables NVGs when the player starts/stops aiming down his sight.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_cameraView"];
 TRACE_2("onCameraViewChanged",_unit,_cameraView);
