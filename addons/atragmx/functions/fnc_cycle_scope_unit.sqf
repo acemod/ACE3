@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Cycles through the scope units
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(currentScopeUnit) = (GVAR(currentScopeUnit) + 1) % (count GVAR(scopeUnits));
 GVAR(workingMemory) set [6, GVAR(currentScopeUnit)];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Creates the ATragMX dialog
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "ATragMX_Display")
 #define __ctrlBackground (__dsp displayCtrl 720000)

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Cycles through the target size units
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(rangeAssistTargetSizeUnit) = (GVAR(rangeAssistTargetSizeUnit) + 1) % (count GVAR(rangeAssistTargetSizeUnits));
 ctrlSetText [7014, GVAR(rangeAssistTargetSizeUnits) select GVAR(rangeAssistTargetSizeUnit)];

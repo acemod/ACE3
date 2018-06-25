@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the gun ammo data fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 12008);
 

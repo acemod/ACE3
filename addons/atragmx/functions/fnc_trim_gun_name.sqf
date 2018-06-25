@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Trims the gun name input field
@@ -13,6 +14,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ctrlSetText [11001, (ctrlText 11001) select [0, 14]];

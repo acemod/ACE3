@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shifts all muzzle velocity entries in the muzzle velocity vs. temperature interpolation table
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (_this == 0) exitWith {};
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all gun column input fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ctrlSetText [1000, GVAR(workingMemory) select 0];
 if (GVAR(currentUnit) != 2) then {

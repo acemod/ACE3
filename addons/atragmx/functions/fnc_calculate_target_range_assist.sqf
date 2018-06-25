@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the target range and updates the output fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _angle = parseNumber(ctrlText 7012);
 private _targetSize = abs(parseNumber(ctrlText 7010));

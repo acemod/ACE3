@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Reads user data from profileNamespace
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(currentUnit) = 0 max (profileNamespace getVariable ["ACE_ATragMX_currentUnit", 2]) min 2;
 [(profileNamespace getVariable ["ACE_ATragMX_currentGun", 0]), true, false] call FUNC(change_gun);

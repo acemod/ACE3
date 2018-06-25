@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the scope unit fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ctrlSetText [2000, GVAR(scopeUnits) select GVAR(currentScopeUnit)];
 ctrlSetText [2001, Str(GVAR(currentScopeClickNumber))];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the gun list screen on/off
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (ctrlVisible 6000) then {
     false call FUNC(show_gun_list);

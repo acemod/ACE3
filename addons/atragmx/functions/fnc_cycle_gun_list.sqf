@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Cycles through the gun list
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!(GVAR(showMainPage) || GVAR(showGunList))) exitWith {};
 

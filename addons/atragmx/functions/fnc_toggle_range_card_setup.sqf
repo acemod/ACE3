@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the range card setup screen on/off
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (ctrlVisible 10000) then {
     false call FUNC(show_range_card_setup);

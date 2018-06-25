@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Clears the muzzle velocity data fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Temperatures
 {ctrlSetText [_x, "0"]} forEach [160021, 160022, 160023, 160024, 160025, 160026, 160027];

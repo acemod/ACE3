@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the inclination angle input fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) min 1;
 private _inclinationAngleDegree = -60 max parseNumber(ctrlText 140040) min 60;

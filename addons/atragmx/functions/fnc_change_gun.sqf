@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Selects a new gun profile and updates the gun column and the result input/output fields
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_gunID", "_restoreMemory", "_updateDisplay"];
 
