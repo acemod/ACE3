@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if unit has a spare magazine for the specified weapon.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_player", "_target", "_weapon"];
 
 if (!GVAR(enableMagazinePassing)) exitWith {false};

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Phyma
  * Get door animations.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_house", "_door"];
 

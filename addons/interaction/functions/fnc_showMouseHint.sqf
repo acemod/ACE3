@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth de Wet (LH)
  * Shows the interaction helper text with the mouse buttons at the bottom middle of the screen.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define GUI_GRID_W  (0.025)
 #define GUI_GRID_H  (0.04)

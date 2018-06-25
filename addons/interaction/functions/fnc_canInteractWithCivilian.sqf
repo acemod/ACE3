@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Checks if the unit can interact with civilian
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target", ["_isCivilian", true]];
 alive _target && [side _target != side _unit, side group _target == civilian] select _isCivilian // return
