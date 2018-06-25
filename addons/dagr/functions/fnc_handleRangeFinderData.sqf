@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Handles incoming data packets from the Vectronix Vector LRF
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define EMP_RF_ACC 5 // Rangefinder Accuracy
 

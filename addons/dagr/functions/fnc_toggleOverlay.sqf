@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Toggles the DAGR overlay
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(run) = !GVAR(run);
 
