@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Displays messages in arsenal.
@@ -11,7 +12,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 #include "..\defines.hpp"
 
 params ["_display", "_message"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Remove virtual items to the provided target.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [ ["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]] ];
 

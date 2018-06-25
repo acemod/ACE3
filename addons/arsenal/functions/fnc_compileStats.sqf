@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Create the internal stats arrays when needed for the first time
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 if (!isNil QGVAR(statsListLeftPanel)) exitWith {};
 

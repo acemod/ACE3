@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * onUnLoad EH for arsenal loadouts display.
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 #include "..\defines.hpp"
 
 GVAR(currentLoadoutsTab) = nil;

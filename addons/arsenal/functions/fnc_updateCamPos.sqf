@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Karel Moricky, modified by Alganthe
  * Update camera position
@@ -11,7 +12,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 GVAR(cameraPosition)  params ["_distance", "_dirH", "_dirV"];
 [GVAR(cameraHelper), [_dirH + 180, - _dirV, 0]] call bis_fnc_setobjectrotation;

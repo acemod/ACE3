@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Open arsenal.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mode", false, [false]]];
 

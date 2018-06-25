@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Rate of fire text statement.
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_stat", "_config", "_args"];
 _args params ["_statMinMax", "_configExtremeBool"];

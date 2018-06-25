@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Text statement for the mass stat.
@@ -11,7 +12,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["", "_config"];
 

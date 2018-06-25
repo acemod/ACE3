@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Handles the previous / next page buttons for stats
@@ -11,7 +12,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 #include "..\defines.hpp"
 
 params ["_display", "_control", "_nextPage"];

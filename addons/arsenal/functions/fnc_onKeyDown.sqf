@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Handles keyboard inputs in arsenal.
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 #include "..\defines.hpp"
 #include "\A3\ui_f\hpp\defineDIKCodes.inc"
 

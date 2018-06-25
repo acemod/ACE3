@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Generic bar statement for stats.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params ["_stat", "_config", "_args"];
 _args params ["_statMinMax", "_barLimits", "_configExtremeBool"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Remove a stat from ACE Arsenal.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params ["_IDList"];
 

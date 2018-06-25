@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Remove arsenal from target.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_global", true, [true]]];
 
