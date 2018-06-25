@@ -24,7 +24,7 @@ if (_unit == ace_player) then {
     findDisplay 8855 closeDisplay 0;
 };
 
-// Exit if no item:
+// Exit if no item
 if (({_x == "ACE_DeadManSwitch"} count (items _unit)) == 0) exitWith {};
 
 private _range = getNumber (configFile >> "CfgWeapons" >> "ACE_DeadManSwitch" >> QGVAR(range));
