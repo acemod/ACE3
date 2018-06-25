@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Draws the current temp marker.  Allows rotation.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_theMap"];
 // TRACE_1("params",_theMap);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets newly placed marker
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_marker", "_data"];
 TRACE_2("params",_marker,_data);

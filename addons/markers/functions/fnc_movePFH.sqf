@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * When the marker is being moved.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 (_this select 0) params ["_marker", "_ctrlMap", "_originalPos", "_originalAlpha"];
 

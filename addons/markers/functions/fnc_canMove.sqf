@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * Checks whether the player can move markers.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 switch (GVAR(moveRestriction)) do {
     case MOVE_RESTRICTION_NOBODY: {false};
