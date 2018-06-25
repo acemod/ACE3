@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Handler function for finding position and direction of a vanilla laser.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "", "", "", "", "", "_methodArgs"];
 _methodArgs params ["_ownerSelection"];

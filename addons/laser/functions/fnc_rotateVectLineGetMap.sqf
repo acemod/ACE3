@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_p", "_p1", "_p2"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou, PabstMirror
  * Shoots a ray from a source to a direction and finds first intersction and distance.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 BEGIN_COUNTER(shootRay);
 

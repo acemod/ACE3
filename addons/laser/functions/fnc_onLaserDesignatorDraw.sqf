@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou
  * Update distance when rangefinder laser is on
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _laserCode = ACE_player getVariable[QGVAR(code), ACE_DEFAULT_LASER_CODE];
 if (!isNil "_laserCode") then {
