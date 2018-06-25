@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
 * Author: 654wak654
 * Shows the aircraft loadout dialog for given aircraft.
@@ -14,7 +15,6 @@
 *
 * Public: Yes
 */
-#include "script_component.hpp"
 
 params ["_aircraft", ["_isCurator", false]];
 
