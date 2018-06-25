@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function to open a full arsenal on a unit
@@ -16,7 +17,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_logic", "", "_activated"];
 

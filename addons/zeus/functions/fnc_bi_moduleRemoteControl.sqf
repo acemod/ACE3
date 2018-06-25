@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for remote controlling units as zeus
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 _logic = _this select 0;
 _units = _this select 1;

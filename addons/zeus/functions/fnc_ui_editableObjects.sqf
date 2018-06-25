@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Fisher, SilentSpike, mharis001
  * Initializes the "Editable Objects" Zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_control"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe, mharis001
  * Zeus module function to toggle flashlights.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_toggle", "_addGear", "_target"];
 TRACE_1("params",_this);

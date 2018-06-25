@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Initalises the "Garrison" zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 disableSerialization;
 

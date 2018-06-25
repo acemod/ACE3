@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for spawning projectiles
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 _logic = _this select 0;
 _units = _this select 1;
