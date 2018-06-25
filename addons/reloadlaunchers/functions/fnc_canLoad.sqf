@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check of the unit can reload the launcher of target unit.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target", "_weapon", "_magazine"];
 TRACE_4("params",_unit,_target,_weapon,_magazine);
