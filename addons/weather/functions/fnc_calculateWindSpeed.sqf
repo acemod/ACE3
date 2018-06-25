@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the true wind speed at a given world position
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_position", "_windGradientEnabled", "_terrainEffectEnabled", "_obstacleEffectEnabled"];
 

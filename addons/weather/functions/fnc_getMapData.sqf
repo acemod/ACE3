@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg, esteldunedain
  * Get the weather data for the current map
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _worldName = toLower worldName;
 TRACE_1("getting map data",_worldName);

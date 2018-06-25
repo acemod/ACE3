@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE2 Team, esteldunedain, Ruthberg
  * Updates the weather evolution on the server. Broadcasts relevant weather information to the clients.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 missionNamespace setVariable [QGVAR(currentOvercast), overcast, true];
 
