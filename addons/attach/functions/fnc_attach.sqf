@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: eRazeri, esteldunedain, PabstMirror
  * Attach an item to the unit
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_attachToVehicle","_unit","_args", ["_silentScripted", false]];
 _args params [["_itemClassname","", [""]]];

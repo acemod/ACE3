@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: eRazeri and esteldunedain
  * Detach an item from a unit
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_attachToVehicle","_unit"],
 TRACE_2("params",_attachToVehicle,_unit);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if a unit has an item attached and if it can remove that item.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_attachToVehicle", "_unit"];
 TRACE_2("params",_attachToVehicle,_unit);
