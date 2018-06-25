@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Calculate and apply backblast damage to potentially affected local units
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
