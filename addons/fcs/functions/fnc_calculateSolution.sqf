@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Calculate FCS solution
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_vehicle","_turret","_distance","_angleTarget"];
 TRACE_4("params",_vehicle,_turret,_distance,_angleTarget);
 

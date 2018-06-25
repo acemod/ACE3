@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Update compatible info elements.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 private _dlgRangefinder = uiNamespace getVariable ["ACE_dlgRangefinder", displayNull];

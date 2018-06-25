@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Read laser distance measurement from engine.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_accuracy",1], ["_maxDistance",5000], ["_minDistance",0], ["_blank",false]];
 
