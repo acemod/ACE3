@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578, commy2
  * Restores previously saved gear.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_allGear", "_activeWeaponAndMuzzle"];
 TRACE_3("restoreGear",_unit, count _allGear, _activeWeaponAndMuzzle);
