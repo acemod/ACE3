@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Pabst Mirror
  * Builds a rangeTable line for a certian range, given muzzle velocity and air friction, returns [] if out of range.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define TIME_STEP (1/50)
 

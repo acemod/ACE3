@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Called when listbox selection changes.  Updates the rangetable with new values.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define RANGE_TABLE       ((uiNamespace getVariable "ACE_82mm_RangeTable_Dialog") displayCtrl 20001)
 #define LIST_CHARGE       ((uiNamespace getVariable "ACE_82mm_RangeTable_Dialog") displayCtrl 1501)

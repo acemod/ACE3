@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Pabst Mirror
  * Converts numbers into nicely formated strings.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_theNumber", "_inputType", "_convertToMils"];
 

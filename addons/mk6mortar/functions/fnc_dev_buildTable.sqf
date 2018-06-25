@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * DEV function to build mortar tables, very cpu intensive (never used durring normal gameplay)
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _muzzleVelocity = _this select 0;
 private _airFriction = _this select 1;
