@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, esteldunedain, Ruthberg
  *
@@ -5,7 +6,6 @@
  * Defines key bindings
  *
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
