@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Called at pre-init: Loads all ace_settings and converts them to CBA Settings.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 LOG("Adding ACE_Settings to CBA_settings");
 

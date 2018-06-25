@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Master single PFH abstraction for all rounds being tracked by frag/spall.
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-
-//#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 BEGIN_COUNTER(PFH);
 
