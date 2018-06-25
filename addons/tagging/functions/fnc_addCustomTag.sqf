@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Adds custom tag. Has to be executed on one machine only.
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [
     ["_identifier", "", [""]],

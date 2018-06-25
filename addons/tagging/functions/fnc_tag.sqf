@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag on a wall that is on the closest surface within 2m on front of the unit.
@@ -14,8 +15,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params [
     ["_unit", objNull, [objNull]],

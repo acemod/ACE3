@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Selects random tag and applies it.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // Exit if Quick Tag disabled
 if (GVAR(quickTag) == 0) exitWith {};
