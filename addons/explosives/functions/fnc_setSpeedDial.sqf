@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Sets the speed dial for the UI.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
 if (_speedDial isEqualTo []) exitWith {};

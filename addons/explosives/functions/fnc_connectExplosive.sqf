@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Add preplaced explosives to a unit's detonator.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_object", "_detonator"];
 TRACE_3("Params",_unit,_object,_detonator);

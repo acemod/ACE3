@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Returns all the detonators of the unit
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_detonators);
 
 params ["_unit"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Opens the UI for explosive trigger selection
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_magazine", "_explosive"];
 TRACE_2("params",_magazine,_explosive);

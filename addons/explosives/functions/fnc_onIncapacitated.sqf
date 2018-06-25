@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Detonates all attached deadman's switched triggered explosives.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //NOTE: Extended_Killed_EventHandlers runs only where _unit is local
 params ["_unit"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Performs the dial tones and detonation of explosive.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args", "_pfID"];
 _args params ["_unit", "_i", "_arr", "_code"];

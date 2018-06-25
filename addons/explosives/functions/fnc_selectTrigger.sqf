@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Selects a trigger for an explosive.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_explosive", "_magazine", "_trigger"];
 TRACE_3("params",_explosive,_magazine,_trigger);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Opens the UI for timer setting of an explosive
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_explosive", "_mag"];
 TRACE_2("params",_explosive,_mag);
