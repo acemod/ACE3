@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the Kestrel 4500 dialog text boxes.
@@ -12,7 +13,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "Kestrel4500_Display")
 #define __ctrlCenterLine3 (__dsp displayCtrl 74602)

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Opens the Kestrel 4500 dialog
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (GVAR(Kestrel4500)) exitWith { false };
 if (underwater ACE_player) exitWith { false };
