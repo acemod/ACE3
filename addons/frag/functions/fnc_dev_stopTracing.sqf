@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  * Dev things
@@ -12,8 +13,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 if (!GVAR(tracesStarted)) exitWith {};
 
