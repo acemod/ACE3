@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Used to un-garrison units.
@@ -14,7 +15,6 @@
  * Public: Yes
  *
 */
-#include "script_component.hpp"
 
 params [["_units", [], [[]]]];
 
