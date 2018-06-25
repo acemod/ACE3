@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Tuupertunut
  * Returns all turrets in a vehicle.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 

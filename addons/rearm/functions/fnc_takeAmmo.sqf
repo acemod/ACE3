@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Starts progress bar for picking up a specific kind of magazine from an ammo truck.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_unit", "_args"];
 _args params ["_magazineClass", "_vehicle"];

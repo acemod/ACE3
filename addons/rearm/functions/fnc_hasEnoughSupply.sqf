@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
 * Author: GitHawk
 * Check whether enough supply is left to take the magazine.
@@ -14,7 +15,6 @@
 *
 * Public: No
 */
-#include "script_component.hpp"
 
 params ["_truck", "_magazineClass"];
 

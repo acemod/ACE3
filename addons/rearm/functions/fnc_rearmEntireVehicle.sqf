@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Starts progress bar for rearming an entire vehicle.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_player", "_vehicle"];
 TRACE_3("rearmEntireVehicle",_truck,_player,_vehicle);

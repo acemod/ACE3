@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Sets the supply count. [Global Effects]
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the settings are initialized
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setSupplyCount), _this];

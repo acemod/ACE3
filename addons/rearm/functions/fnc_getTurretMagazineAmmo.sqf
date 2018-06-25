@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Tuupertunut
  * Returns the current ammo counts in all magazines of given class in turret.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turretPath", "_magazineClass"];
 
