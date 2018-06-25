@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets the structural damage of a vehicle without altering the hitPoints, requires local vehicle.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_damage"];
 TRACE_2("params",_vehicle,_damage);

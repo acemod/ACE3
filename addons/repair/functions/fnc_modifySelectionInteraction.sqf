@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654, mharis001
  * Modifies interaction icon color of vehicle selection to show its current damage.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "", "_args", "_actionData"];
 

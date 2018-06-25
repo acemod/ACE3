@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Spawns an object of specified string, at specified position with specified damage taken.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_item", "_position", ["_damage", 0]];
 TRACE_3("params",_item,_position,_damage);

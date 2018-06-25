@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", true]];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);

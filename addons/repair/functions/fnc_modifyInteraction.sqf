@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Modifies the base interaction point for repair items to show its current damage.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "", "", "_actionData"];
 

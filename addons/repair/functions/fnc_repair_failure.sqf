@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Callback when repair fails.
@@ -20,7 +21,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args"];
 _args params ["_caller", "_target","_selectionName","_className","","_usersOfItems", "_claimedObjects"];
