@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: gpgpgpgp, edited by commy2, PabstMirror
  * Starts cutting down a fence
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_fenceObject"];
 TRACE_2("params",_unit,_fenceObject);
