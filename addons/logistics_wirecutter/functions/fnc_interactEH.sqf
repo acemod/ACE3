@@ -42,7 +42,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
         if (isNull ACE_player) exitWith {};
 
         // Rescan if player has moved more than 5 meters from last position
-        if (getPosASL ACE_player distance _setPosition > 5) then {
+        if (getPosASL ACE_player distanceSqr _setPosition > 25) then {
             private _fncStatement = {
                 params ["", "_player", "_attachedFence"];
 
@@ -77,4 +77,4 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
         };
     };
     END_COUNTER(interactEH);
-}, 0.1, [getPosASL ACE_player vectorAdd [-100, 0, 0], [], []]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [getPosASL ACE_player vectorAdd [-100, 0, 0], [], []]] call CBA_fnc_addPerFrameHandler;
