@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MapTools">
         <Key ID="STR_ACE_MapTools_Name">
@@ -221,7 +221,7 @@
             <French>Utiliser le bord des outils de navigation pour tracer des lignes droites. Note: l'on doit survoler le milieu du trait pour pouvoir le supprimer.</French>
             <Italian>Disegna sul bordo degli strumenti di mappatura per disegnare linee dritte. Nota: Deve spostarsi al centro per essere cancellato.</Italian>
             <Chinesesimp>使用地图工具的边缘来绘制直线。备注: 要删除直线时，请把滑鼠移动到该线条的中央即可删除该线。</Chinesesimp>
-            <Chinese>使用地圖工具的邊緣來繪製直線。備註: 要刪除直線時，請把滑鼠移動到該線條的中央即可刪除該線。</Chinese>
+            <Chinese>使用地圖工具的邊緣來繪製直線。備註: 要刪除直線時，請把滑鼠移動到該線條的中央即可刪除該線</Chinese>
         </Key>
     </Package>
 </Project>
