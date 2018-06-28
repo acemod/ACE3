@@ -24,6 +24,8 @@ PREP(canTreat);
 PREP(canTreatCached);
 PREP(canTreatOrthopedicCast);
 PREP(canTreatSAMSplint);
+PREP(clearExpired);
+PREP(clearFinished);
 PREP(determineIfFatal);
 PREP(getBloodLoss);
 PREP(getBloodPressure);

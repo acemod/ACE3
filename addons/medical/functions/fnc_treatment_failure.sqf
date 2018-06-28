@@ -23,6 +23,9 @@
 params ["_args"];
 _args params ["_caller", "_target", "_selectionName", "_className", "_items", "_usersOfItems"];
 
+// remove finished action from list
+[_caller, _target] call FUNC(clearFinished);
+
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
