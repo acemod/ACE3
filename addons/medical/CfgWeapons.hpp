@@ -256,4 +256,28 @@ class CfgWeapons {
             mass = 7;
         };
     };
+	class ACE_samSplint: ACE_ItemCore {
+		scope = 2;
+        author = ECSTRING(common,ACETeam);
+		displayName = CSTRING(samSplint_display);
+		picture = ""; // need icon
+		model = ""; // need model
+		descriptionShort = CSTRING(samSplint_short);
+		descriptionUse = CSTRING(samSplint_use);
+		class ItemInfo: CBA_MiscItem_ItemInfo {
+			mass = 2;
+		};
+	};
+	class ACE_orthopedicCast: ACE_ItemCore {
+		scope = 2;
+        author = ECSTRING(common,ACETeam);
+		displayName = CSTRING(orthopedicCast_display);
+		picture = ""; // need icon
+		model = ""; // need model
+		descriptionShort = CSTRING(orthopedicCast_short);
+		descriptionUse = CSTRING(orthopedicCast_use);
+		class ItemInfo: CBA_MiscItem_ItemInfo {
+			mass = 5;
+		};
+	};
 };

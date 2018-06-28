@@ -402,6 +402,30 @@ class ACE_Medical_Actions {
             itemConsumed = 1;
             litter[] = {};
         };
+        class SAMSplint: fieldDressing {
+            displayName = CSTRING(apply_samSplint);
+            displayNameProgress = CSTRING(applying_samSplint);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowSelfTreatment = 0;
+			requiredMedic = 0;
+            items[] = {"ACE_samSplint"};
+            treatmentTime = 10;
+            callbackSuccess = QUOTE(DFUNC(treatmentSAMSplint));
+            condition = "[_this select 1, _this select 2] call ace_medical_fnc_canTreatSAMSplint";
+            litter[] = {};
+        };
+        class OrthopedicCast: fieldDressing {
+            displayName = CSTRING(apply_orthopedicCast);
+            displayNameProgress = CSTRING(applyinging_orthopedicCast);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowSelfTreatment = 0;
+			requiredMedic = 1;
+            items[] = {"ACE_orthopedicCast"};
+            treatmentTime = 20;
+            callbackSuccess = QUOTE(DFUNC(treatmentOrthopedicCast));
+            condition = "[_this select 1, _this select 2, false] call ace_medical_fnc_canTreatOrthopedicCast";
+            litter[] = {};
+        };
     };
 };
 

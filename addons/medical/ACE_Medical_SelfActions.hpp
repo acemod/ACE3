@@ -236,6 +236,13 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(treatment));
         };
+        class samSplint: fieldDressing {
+            displayName = CSTRING(apply_samSplint);
+            condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside", "isNotSwimming"};
+            statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(treatment));
+            icon = ""; // need icon
+        };
     };
     class ACE_ArmRight {
         displayName = ECSTRING(interaction,ArmRight);
@@ -337,6 +344,13 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(treatment));
         };
+        class samSplint: fieldDressing {
+            displayName = CSTRING(apply_samSplint);
+            condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside", "isNotSwimming"};
+            statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(treatment));
+            icon = ""; // need icon
+        };
     };
     class ACE_LegLeft {
         displayName = ECSTRING(interaction,LegLeft);
@@ -427,6 +441,13 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(treatment));
         };
+        class samSplint: fieldDressing {
+            displayName = CSTRING(apply_samSplint);
+            condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside", "isNotSwimming"};
+            statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(treatment));
+            icon = ""; // need icon
+        };
     };
     class ACE_LegRight {
         displayName = ECSTRING(interaction,LegRight);
@@ -515,6 +536,13 @@ class Medical {
             condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(treatment));
+        };
+        class samSplint: fieldDressing {
+            displayName = CSTRING(apply_samSplint);
+            condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside", "isNotSwimming"};
+            statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(treatment));
+            icon = ""; // need icon
         };
     };
 };

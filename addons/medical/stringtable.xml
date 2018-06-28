@@ -5659,5 +5659,58 @@
             <Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
             <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_samSplint_display">
+            <English>SAM Splint</English>
+            <Korean>SAM 부목</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_samSplint_short">
+            <English>Temporarily enables fractured limb usable</English>
+            <Korean>일시적으로 골절된 부위를 사용할 수 있게 해줍니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_samSplint_use">
+            <English>A compact, lightweight, highly versatile device designed for immobilizing bone and soft tissue injuries in emergency settings.</English>
+            <Korean>긴급한 상황에 골절된 부위를 움직이지 않게 고정하는 작고, 가벼운 도구입니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_apply_samSplint">
+            <English>Apply SAM Splint</English>
+            <Korean>SAM 부목 부착</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_applying_samSplint">
+            <English>Applying SAM Splint...</English>
+            <Korean>SAM 부목 부착중...</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_appliedSAMSplint">
+            <English>%1 applied a SAM splint</English>
+            <Korean>%1 (이)가 SAM 부목을 부착함</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_SAMSplint_Applied">
+            <English>Splint [SAM]</English>
+            <Korean>부목 [SAM]</Korean>
+        </Key>
+
+        <Key ID="STR_ACE_Medical_orthopedicCast_display">
+            <English>Orthopedic Cast</English>
+            <Korean>깁스</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_orthopedicCast_short">
+            <English>Permanently fixes fractured limb</English>
+            <Korean>골절된 부위를 영구적으로 접합시킵니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_orthopedicCast_use">
+            <English>A shell, frequently made from plaster or fiberglass, encasing a limb to stabilize and hold anatomical structures in place.</English>
+            <Korean>사지를 안정화시키고 골격 구조물을 고정시키는데 사용되는 석고나 유리섬유로 제작된 껍질입니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_apply_orthopedicCast">
+            <English>Apply Orthopedic Cast</English>
+            <Korean>깁스 착용</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_applyinging_orthopedicCast">
+            <English>Applying Orthopedic Cast...</English>
+            <Korean>깁스 착용중...</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_appliedOrthopedicCast">
+            <English>%1 applied a orthopedic cast</English>
+            <Korean>%1 (이)가 석고를 부착함</Korean>
+        </Key>
     </Package>
 </Project>

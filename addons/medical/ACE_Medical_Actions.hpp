@@ -336,6 +336,20 @@ class ACE_ArmLeft {
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'RemoveTourniquet')] call DFUNC(treatment));
         EXCEPTIONS
     };
+    class samSplint: fieldDressing {
+        displayName = CSTRING(apply_samSplint);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'SAMSplint')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
+    };
+    class orthopedicCast: fieldDressing {
+        displayName = CSTRING(apply_orthopedicCast);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'OrthopedicCast')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'OrthopedicCast')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
+    };
 };
 class ACE_ArmRight {
     displayName = ECSTRING(interaction,ArmRight);
@@ -494,7 +508,20 @@ class ACE_ArmRight {
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'RemoveTourniquet')] call DFUNC(treatment));
         EXCEPTIONS
     };
-
+    class samSplint: fieldDressing {
+        displayName = CSTRING(apply_samSplint);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'SAMSplint')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'SAMSplint')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
+    };
+    class orthopedicCast: fieldDressing {
+        displayName = CSTRING(apply_orthopedicCast);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'OrthopedicCast')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'OrthopedicCast')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
+    };
 };
 class ACE_LegLeft {
     displayName = ECSTRING(interaction,LegLeft);
@@ -641,6 +668,20 @@ class ACE_LegLeft {
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'RemoveTourniquet')] call DFUNC(treatment));
         EXCEPTIONS
     };
+    class samSplint: fieldDressing {
+        displayName = CSTRING(apply_samSplint);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'SAMSplint')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'SAMSplint')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
+    };
+    class orthopedicCast: fieldDressing {
+        displayName = CSTRING(apply_orthopedicCast);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'OrthopedicCast')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'OrthopedicCast')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
+    };
 };
 class ACE_LegRight {
     displayName = ECSTRING(interaction,LegRight);
@@ -785,5 +826,19 @@ class ACE_LegRight {
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'RemoveTourniquet')] call DFUNC(treatment));
         EXCEPTIONS
+    };
+    class samSplint: fieldDressing {
+        displayName = CSTRING(apply_samSplint);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'SAMSplint')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'SAMSplint')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
+    };
+    class orthopedicCast: fieldDressing {
+        displayName = CSTRING(apply_orthopedicCast);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'OrthopedicCast')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'OrthopedicCast')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = ""; // need icon
     };
 };
