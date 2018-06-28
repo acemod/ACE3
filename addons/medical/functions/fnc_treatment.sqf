@@ -236,6 +236,7 @@ if (GVAR(level) >= 2) then {
 
 _treatmentType = getText (configFile >> "ACE_Medical_Actions" >> _medicalLevel >> _className >> "treatmentType");
 
+private _medicalLevel = ["Basic", "Advanced"] select (GVAR(level) >= 2);
 switch (_selectionName) do {
     case ("head"): {
         _partName = "Head";

@@ -19,15 +19,6 @@
 params ["_target"];
 
 private _joint = _target getVariable [QGVAR(jointTreatment), []];
-private _itemCount = 0;
+private _jointNew = _joint select {(_x select 3) > CBA_missionTime};
 
-if (!(_joint isEqualTo [])) then {
-    {
-        if ((_x select 3) < CBA_missionTime) then {
-            _joint deleteAt _itemCount;
-        };
-        _itemCount = _itemCount + 1;
-    } forEach _joint;
-};
-
-_target setVariable [QGVAR(jointTreatment), _joint, true];
+_target setVariable [QGVAR(jointTreatment), _jointNew, true];

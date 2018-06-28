@@ -21,7 +21,7 @@
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-if (count _items == 0) exitWith {false};
+if (_items isEqualTo []) exitWith {false};
 
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part == 0 || _part == 1) exitWith {false};

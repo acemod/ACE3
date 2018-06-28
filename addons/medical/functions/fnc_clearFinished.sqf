@@ -22,7 +22,7 @@ params ["_caller", "_target"];
 private _joint = _target getVariable [QGVAR(jointTreatment), []];
 private _itemCount = 0;
 
-if (!(_joint isEqualTo [])) then {
+if !(_joint isEqualTo []) then {
     {
         if ((_x select 0) isEqualTo _caller) then {
             _joint deleteAt _itemCount;

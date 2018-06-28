@@ -33,8 +33,8 @@ _sam set [_part, [0, 0]];
 _target setVariable [QGVAR(samSplint), _sam, true];
 
 // _cast set [_part, [CBA_missionTime, _damage select _part]];
-_dagage set [_part, 0];
+_damage set [_part, 0];
 // _target setVariable [QGVAR(orthopedicCast), _cast, true];
-_target setVariable [QGVAR(bodyPartStatus), _dagage, true];
+_target setVariable [QGVAR(bodyPartStatus), _damage, true];
 
 [_target] call FUNC(handleDamage_advancedSetDamage);
