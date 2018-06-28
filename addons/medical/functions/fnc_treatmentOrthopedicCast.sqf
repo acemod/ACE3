@@ -26,18 +26,18 @@ if (count _items == 0) exitWith {false};
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part == 0 || _part == 1) exitWith {false};
 
-// private _cast = _target getVariable [QGVAR(orbis_orthopedicCast), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
+// private _cast = _target getVariable [QGVAR(orthopedicCast), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
 // if ((_cast select _part select 0) > 0) exitWith {false};
 
 private _removeItem = _items select 0;
 if (local _target) then {
-    ["orbis_event_treatmentOrthopedicCastLocal", [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
+    [QGVAR(treatmentOrthopedicCastLocal), [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
 } else {
-    ["orbis_event_treatmentOrthopedicCastLocal", [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
+    [QGVAR(treatmentOrthopedicCastLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
 };
 
 [_target, _removeItem] call FUNC(addToTriageCard);
-[_target, "activity", "STR_kg_optic_medical_config_appliedOrthopedicCast", [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", "STR_kg_optic_medical_config_appliedOrthopedicCast", [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity", LSTRING(appliedOrthopedicCast), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(appliedOrthopedicCast), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
 true

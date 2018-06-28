@@ -25,16 +25,16 @@ params ["_target", "_item", "_selectionName"];
 
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 
-// private _cast = _target getVariable [QGVAR(orbis_orthopedicCast), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
+// private _cast = _target getVariable [QGVAR(orthopedicCast), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
 private _damage = _target getVariable [QGVAR(bodyPartStatus), [0, 0, 0, 0, 0, 0]];
 
-private _sam = _target getVariable [QGVAR(orbis_samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
+private _sam = _target getVariable [QGVAR(samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
 _sam set [_part, [0, 0]];
-_target setVariable [QGVAR(orbis_samSplint), _sam, true];
+_target setVariable [QGVAR(samSplint), _sam, true];
 
 // _cast set [_part, [CBA_missionTime, _damage select _part]];
 _dagage set [_part, 0];
-// _target setVariable [QGVAR(orbis_orthopedicCast), _cast, true];
+// _target setVariable [QGVAR(orthopedicCast), _cast, true];
 _target setVariable [QGVAR(bodyPartStatus), _dagage, true];
 
 [_target] call FUNC(handleDamage_advancedSetDamage);

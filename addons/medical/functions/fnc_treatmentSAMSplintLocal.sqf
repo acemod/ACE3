@@ -25,15 +25,15 @@ params ["_target", "_item", "_selectionName"];
 
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 
-private _sam = _target getVariable [QGVAR(orbis_samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
+private _sam = _target getVariable [QGVAR(samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
 private _damage = _target getVariable [QGVAR(bodyPartStatus), [0, 0, 0, 0, 0, 0]];
 
 _sam set [_part, [CBA_missionTime, _damage select _part]];
 _dagage set [_part, 0];
-_target setVariable [QGVAR(orbis_samSplint), _sam, true];
+_target setVariable [QGVAR(samSplint), _sam, true];
 _target setVariable [QGVAR(bodyPartStatus), _dagage, true];
 
 [_target] call FUNC(handleDamage_advancedSetDamage);
 
 private _time = 480 + (CBA_missionTime random 240);
-[{_this call orbis_fnc_treatmentSAMSplintTimeout}, [_target, _part, CBA_missionTime], _time] call CBA_fnc_waitAndExecute;
+[{_this call FUNC(treatmentSAMSplintTimeout)}, [_target, _part, CBA_missionTime], _time] call CBA_fnc_waitAndExecute;

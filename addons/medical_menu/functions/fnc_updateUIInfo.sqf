@@ -39,7 +39,7 @@ if (((_target getVariable [QEGVAR(medical,tourniquets), [0, 0, 0, 0, 0, 0]]) sel
     _genericMessages pushBack [localize ELSTRING(medical,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
 
-if (((_target getVariable [QEGVAR(medical,orbis_samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]]) select _selectionN select 0) > 0) then {
+if (((_target getVariable [QEGVAR(medical,samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]]) select _selectionN select 0) > 0) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_SAMSplint_Applied), [0.77, 0.51, 0.08, 1]];
 };
 

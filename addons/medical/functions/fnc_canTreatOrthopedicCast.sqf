@@ -29,7 +29,7 @@ if !(_part isEqualType 0) then {
 private _damage = _target getVariable [QGVAR(bodyPartStatus), [0, 0, 0, 0, 0, 0]];
 private _hasDamage = (_damage select _part) > 0;
 
-private _sam = _target getVariable [QGVAR(orbis_samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
+private _sam = _target getVariable [QGVAR(samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
 private _hasSAM = ((_sam select _part) select 0) > 0;
 
 private _openWounds = _target getVariable [QGVAR(openWounds), []];
