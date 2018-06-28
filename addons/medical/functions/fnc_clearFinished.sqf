@@ -23,12 +23,12 @@ private _joint = _target getVariable [QGVAR(jointTreatment), []];
 private _itemCount = 0;
 
 if (!(_joint isEqualTo [])) then {
-	{
-		if ((_x select 0) isEqualTo _caller) then {
-			_joint deleteAt _itemCount;
-		};
-		_itemCount = _itemCount + 1;
-	} forEach _joint;
+    {
+        if ((_x select 0) isEqualTo _caller) then {
+            _joint deleteAt _itemCount;
+        };
+        _itemCount = _itemCount + 1;
+    } forEach _joint;
 };
 
 _target setVariable [QGVAR(jointTreatment), _joint, true];
