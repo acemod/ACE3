@@ -227,16 +227,9 @@ private _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
 ] call EFUNC(common,progressBar);
 
 // add current action to display list
-private ["_medicalLevel", "_treatmentType", "_partName", "_itemClass", "_action", "_treatment"];
-
-_medicalLevel = "Basic";
-if (GVAR(level) >= 2) then {
-    _medicalLevel = "Advanced";
-};
-
-_treatmentType = getText (configFile >> "ACE_Medical_Actions" >> _medicalLevel >> _className >> "treatmentType");
-
 private _medicalLevel = ["Basic", "Advanced"] select (GVAR(level) >= 2);
+private _treatmentType = getText (configFile >> "ACE_Medical_Actions" >> _medicalLevel >> _className >> "treatmentType");
+private _partName = "";
 switch (_selectionName) do {
     case ("head"): {
         _partName = "Head";
@@ -258,6 +251,8 @@ switch (_selectionName) do {
     };
 };
 
+private _action = "";
+private _treatment = "";;
 switch (_treatmentType) do {
     case ("Bandage"): {
         _action = "Bandaging";
