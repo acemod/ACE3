@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Starts the setup process for the passed explosive. Player only.
@@ -15,8 +16,6 @@
  *
  * Public: Yes
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 #define PLACE_RANGE_MAX 1
 #define PLACE_RANGE_MIN 0.025

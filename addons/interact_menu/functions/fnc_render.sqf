@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Render all available nearby interactions
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 BEGIN_COUNTER(fnc_render);
 

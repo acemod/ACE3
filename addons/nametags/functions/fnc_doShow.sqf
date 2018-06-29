@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "common.hpp"
 /*
  * Author: aeroson
  * Shows the actual text and sets text the crew info.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "common.hpp"
 
 private _player = ACE_player;
 private _vehicle = vehicle _player;

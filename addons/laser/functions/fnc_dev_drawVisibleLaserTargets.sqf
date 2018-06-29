@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 /*
  * Author: ACE-Team
  *
@@ -22,8 +24,6 @@
 //     Yellow - Array (vehicle pos/weapon) Laser Targets
 //     Green - Rays
 //     Blue - Seeker Locks
-
-#include "script_component.hpp"
 
 // Try searching for lasers from a given vehicle position [BLUE]:
 private _seekerVehicle = vehicle ace_player;

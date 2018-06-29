@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Manually Apply Damage to a unit (can cause lethal damage)
@@ -18,9 +19,7 @@
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
 // #define DEBUG_TESTRESULTS
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_selection", "", [""]], ["_typeOfDamage", "", [""]]];
 TRACE_4("params",_unit,_damageToAdd,_selection,_typeOfDamage);

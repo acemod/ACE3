@@ -1,3 +1,5 @@
+#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Dev function: Converts ace_settings to code, outputs to clipboard
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_addon"];
 

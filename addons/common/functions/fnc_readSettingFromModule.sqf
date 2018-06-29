@@ -1,3 +1,5 @@
+#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Reads a setting value from a module, set it and force it. Logs if the setting is missing from the module.
@@ -16,8 +18,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_logic", "_settingName", "_moduleVariable"];
 

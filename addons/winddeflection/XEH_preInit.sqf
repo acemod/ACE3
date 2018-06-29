@@ -1,13 +1,4 @@
 #include "script_component.hpp"
-/**
- * XEH_preInit.sqf
- * @Descr: N/A
- * @Author: Glowbal
- *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
- */
 
 ADDON = false;
 
