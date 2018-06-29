@@ -17,8 +17,7 @@
 
 #include "script_component.hpp"
 
-private _target = _this select 0;
-private _part = _this select 1;
+params ["_target", "_part"];
 
 if !(_part isEqualType 0) then {
     _part = [_part] call FUNC(selectionNameToNumber);
