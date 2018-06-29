@@ -268,16 +268,4 @@ class CfgWeapons {
             mass = 2;
         };
     };
-    class ACE_orthopedicCast: ACE_ItemCore {
-        scope = 2;
-        author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(orthopedicCast_display);
-        picture = ""; // need icon
-        model = ""; // need model
-        descriptionShort = CSTRING(orthopedicCast_short);
-        descriptionUse = CSTRING(orthopedicCast_use);
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
-        };
-    };
 };

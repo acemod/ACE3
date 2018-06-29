@@ -35,5 +35,5 @@ _target setVariable [QGVAR(bodyPartStatus), _dagage, true];
 
 [_target] call FUNC(handleDamage_advancedSetDamage);
 
-private _time = 480 + (CBA_missionTime random 240);
+private _time = 1200 + (CBA_missionTime random 300);
 [{_this call FUNC(treatmentSAMSplintTimeout)}, [_target, _part, CBA_missionTime], _time] call CBA_fnc_waitAndExecute;

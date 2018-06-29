@@ -37,23 +37,19 @@ if (!local _unit) exitWith {
 // remove old actions
 [_unit] call FUNC(clearExpired);
 
-// Check damage or bleeing for Splint and Cast
+// Check damage or bleeing for Splint
 private _damage = _unit getVariable [QGVAR(bodyPartStatus), [0, 0, 0, 0, 0, 0]];
 private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0, 0, 0, 0, 0, 0]];
 private _openWounds = _unit getVariable [QGVAR(openWounds), []];
-private _sam = _unit getVariable [QGVAR(orbis_samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
-// private _cast = _unit getVariable [QGVAR(orbis_orthopedicCast), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
+private _splint = _unit getVariable [QGVAR(samSplint), [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]];
 for "_i" from 0 to 5 do {
     private _hasDamage = (_damage select _i) > 0;
     private _hasTourniquet = (_tourniquets select _part) != 0;
     private _bleedingWound = {((_x select 2) isEqualTo _part) && ((_x select 4) * (_x select 3) > 0)} count ([_openWounds, _bandagedWounds] select _bandagedAlso) > 0;
 
-    if ((_hasDamage || (!_hasTourniquet && _bleedingWound)) && ((_sam select _i select 0) > 0)) then {
+    if ((_hasDamage || (!_hasTourniquet && _bleedingWound)) && ((_splint select _i select 0) > 0)) then {
         [_unit, _i] call FUNC(treatmentSAMSplintDamaged);
     };
-    /* if ((_bleedingWound || _hasDamage) && ((_cast select _i) > 0)) then {
-        [_unit, _i] call orbis_fnc_treatmentOrthopedicCastDamaged;
-    }; */
 };
 
 // Play injured sounds

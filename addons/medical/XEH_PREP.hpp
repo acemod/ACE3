@@ -98,8 +98,6 @@ PREP(treatmentBasic_morphine);
 PREP(treatmentBasic_morphineLocal);
 PREP(treatmentIV);
 PREP(treatmentIVLocal);
-PREP(treatmentOrthopedicCast);
-PREP(treatmentOrthopedicCastLocal);
 PREP(treatmentSAMSplint);
 PREP(treatmentSAMSplintDamaged);
 PREP(treatmentSAMSplintLocal);
