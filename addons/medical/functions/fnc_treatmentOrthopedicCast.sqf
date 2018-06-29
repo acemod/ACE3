@@ -30,11 +30,7 @@ if (_part == 0 || _part == 1) exitWith {false};
 // if ((_cast select _part select 0) > 0) exitWith {false};
 
 private _removeItem = _items select 0;
-if (local _target) then {
-    [QGVAR(treatmentOrthopedicCastLocal), [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
-} else {
-    [QGVAR(treatmentOrthopedicCastLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
-};
+[QGVAR(treatmentOrthopedicCastLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
 
 [_target, _removeItem] call FUNC(addToTriageCard);
 [_target, "activity", LSTRING(appliedOrthopedicCast), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);

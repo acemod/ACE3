@@ -252,7 +252,7 @@ switch (_selectionName) do {
 };
 
 private _action = "";
-private _treatment = "";;
+private _treatment = "";
 switch (_treatmentType) do {
     case ("Bandage"): {
         _action = "Bandaging";

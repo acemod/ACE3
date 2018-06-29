@@ -30,11 +30,7 @@ private _sam = _target getVariable [QGVAR(samSplint), [[0, 0], [0, 0], [0, 0], [
 if ((_sam select _part select 0) > 0) exitWith {false};
 
 private _removeItem = _items select 0;
-if (local _target) then {
-    [QGVAR(treatmentSAMSplintLocal), [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
-} else {
-    [QGVAR(treatmentSAMSplintLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
-};
+[QGVAR(treatmentSAMSplintLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
 
 [_target, _removeItem] call FUNC(addToTriageCard);
 [_target, "activity", LSTRING(appliedSAMSplint), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
