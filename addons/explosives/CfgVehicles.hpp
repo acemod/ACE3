@@ -1,4 +1,3 @@
-
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
@@ -15,12 +14,11 @@ class CfgVehicles {
                 insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
                 class ACE_Place {
                     displayName = CSTRING(Place);
-                    condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
                     statement = "";
-                    insertChildren = QUOTE([_player] call FUNC(addExplosiveActions););
+                    condition = "true";
                     exceptions[] = {"isNotSwimming"};
-                    showDisabled = 1;
                     icon = QPATHTOF(UI\Place_Explosive_ca.paa);
+                    insertChildren = QUOTE(_player call FUNC(addExplosiveActions));
                 };
                 class ACE_Cellphone {
                     displayName = CSTRING(cellphone_displayName);
