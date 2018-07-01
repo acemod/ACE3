@@ -25,7 +25,7 @@ if (_unit == ace_player) then {
 };
 
 // Exit if no item
-if (({_x == "ACE_DeadManSwitch"} count (items _unit)) == 0) exitWith {};
+if !("ACE_DeadManSwitch" in (_unit call EFUNC(common,uniqueItems))) exitWith {};
 
 private _range = getNumber (configFile >> "CfgWeapons" >> "ACE_DeadManSwitch" >> QGVAR(range));
 private _deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);

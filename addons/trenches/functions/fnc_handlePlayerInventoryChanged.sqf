@@ -19,7 +19,7 @@
 params ["_unit"];
 
 if (_unit getVariable [QGVAR(isPlacing), false]) then {
-    if !("ACE_EntrenchingTool" in items _unit) then {
+    if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) then {
         [_unit] call FUNC(placeCancel);
     };
 };

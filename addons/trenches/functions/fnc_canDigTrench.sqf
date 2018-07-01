@@ -17,6 +17,6 @@
 
 params ["_unit"];
 
-if !("ACE_EntrenchingTool" in items _unit) exitWith {false};
+if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
 _unit call EFUNC(common,canDig)
