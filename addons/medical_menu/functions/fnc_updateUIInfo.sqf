@@ -60,7 +60,7 @@ if (_totalIvVolume >= 1) then {
 
 // show current actions by other players
 private _joint = _target getVariable [QEGVAR(medical,jointTreatment), []];
-if (!(_joint isEqualTo [])) then {
+if !(_joint isEqualTo []) then {
     {
         if ((_x select 2) == "") then {
             _genericMessages pushBack [(format ["%1 is %2", name (_x select 0), (_x select 1)]), [1, 1, 1, 1]];
