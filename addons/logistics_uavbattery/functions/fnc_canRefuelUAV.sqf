@@ -18,4 +18,4 @@
 
 params ["_caller", "_target"];
 
-("ACE_UAVBattery" in (items _caller)) && {(fuel _target) < 1} && {(speed _target) < 1} && {!(isEngineOn _target)} && {(_target distance _caller) <= 4}
+("ACE_UAVBattery" in (_caller call EFUNC(common,uniqueItems))) && {(fuel _target) < 1} && {(speed _target) < 1} && {!(isEngineOn _target)} && {(_target distance _caller) <= 4}

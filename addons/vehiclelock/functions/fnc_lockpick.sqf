@@ -30,7 +30,7 @@ if (isNull _veh) exitWith {ERROR("null vehicle"); false};
 if ((locked _veh) == 0) exitWith {false};
 
 //need lockpick item
-if (!("ACE_key_lockpick" in (items _unit))) exitWith {false};
+if !("ACE_key_lockpick" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
 private _vehLockpickStrenth = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
 if (!(_vehLockpickStrenth isEqualType 0)) exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};

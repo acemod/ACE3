@@ -19,7 +19,7 @@
 params ["_unit"];
 
 if (_unit getVariable [QGVAR(isDeploying), false]) then {
-    if !("ACE_Sandbag_empty" in items _unit) then {
+    if !("ACE_Sandbag_empty" in (_unit call EFUNC(common,uniqueItems))) then {
         [_unit] call FUNC(deployCancel);
     };
 };

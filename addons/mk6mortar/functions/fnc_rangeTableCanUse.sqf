@@ -18,4 +18,4 @@
 
 params ["_vehicle", "_player"];
 
-"ACE_RangeTable_82mm" in (items _player);
+"ACE_RangeTable_82mm" in (_player call EFUNC(common,uniqueItems));

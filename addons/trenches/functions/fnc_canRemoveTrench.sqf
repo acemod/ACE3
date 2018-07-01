@@ -18,7 +18,7 @@
 
 params ["_trench", "_unit"];
 
-if !("ACE_EntrenchingTool" in items _unit) exitWith {false};
+if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
 // Prevent removing/digging trench by more than one person
 if (_trench getVariable [QGVAR(digging), false]) exitWith {false};
