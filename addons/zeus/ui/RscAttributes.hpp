@@ -10,6 +10,7 @@ class RscActivePicture;
 class RscMapControl;
 class RscPicture;
 class ctrlToolbox;
+class RscButton;
 
 class RscDisplayAttributes {
     class Controls {
@@ -430,7 +431,7 @@ class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
             x = 0;
             y = 0;
             w = W_PART(10);
-            h = H_PART(3);
+            h = H_PART(2);
             colorBackground[] = {0,0,0,0.5};
         };
         class Background: RscText {
@@ -448,7 +449,15 @@ class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
             w = W_PART(16);
             h = H_PART(3);
         };
-
+        class Unload: RscButton {
+            idc = 80087;
+            text = ECSTRING(cargo,unloadObject);
+            x = 0;
+            y = H_PART(2);
+            w = W_PART(10);
+            h = H_PART(1);
+            colorBackground[] = {0, 0, 0, 0.7};
+        };
     };
 };
 

@@ -34,7 +34,6 @@ private _cargo = [
 ];
 
 private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
-private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
 
 {
     private _configItemInfo = _x >> "ItemInfo";
@@ -158,14 +157,6 @@ private _putList = [];
             (_cargo select 16) pushBackUnique _className;
         };
     };
-
-    if (isArray (_x >> "magazineGroup")) then {
-        {
-            private _entry = [_magazineGroups, _x] call CBA_fnc_hashGet;
-            _entry pushBackUnique _className;
-            [_magazineGroups, _x, _entry] call CBA_fnc_hashSet;
-        } forEach getArray (_x >> "magazineGroup")
-    };
 } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
 {
@@ -177,6 +168,21 @@ private _putList = [];
 {
     (_cargo select 7) pushBackUnique (configName _x);
 } foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
+
+private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
+
+private _cfgMagazines = configFile >> "CfgMagazines";
+
+{
+    private _magList = [];
+    {
+        private _magazines = (getArray _x) select {isClass (_cfgMagazines >> _x)}; //filter out non-existent magazines
+        _magazines = _magazines apply {configName (_cfgMagazines >> _x)}; //Make sure classname case is correct
+        _magList append _magazines;
+    } foreach configProperties [_x, "isArray _x", true];
+
+    [_magazineGroups, toLower configName _x, _magList arrayIntersect _magList] call CBA_fnc_hashSet;
+} foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];
 uiNamespace setVariable [QGVAR(magazineGroups), _magazineGroups];

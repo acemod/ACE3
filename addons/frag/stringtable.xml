@@ -122,7 +122,7 @@
             <Italian>Numero massimo di Proiettili Tracciati</Italian>
             <Japanese>最大弾頭追跡数</Japanese>
             <Korean>최대 발사체 추적수</Korean>
-            <Chinesesimp>最大碎片/剥落粒子追踪数量</Chinesesimp>
+            <Chinesesimp>最大碎片粒子追踪数量</Chinesesimp>
             <Chinese>最大碎片/剝落粒子追蹤數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack_Desc">
@@ -138,7 +138,7 @@
             <Italian>Questo parametro controlla il numero massimo di proiettili che la frammentazione e il sistema di spalling tracciano in ogni momento. Se più proiettili sono sparati, non verranno tracciati. Abbassa questo parametro se non vuoi cali di FPS in scenari con molti proiettili (&gt;200 proiettili in aria contemporaneamente)</Italian>
             <Japanese>時間が許すかぎり、破片と剥離システムの最大数を設定できます。設定数以上の弾丸が発射された場合、それは対象になりません。もし多い弾数による FPS の低下を望まない場合は、低い数へ設定にします。( &amp;gt;一度に空中内で200発)</Japanese>
             <Korean>이 설정은 조각 및 파편 시스템으로 인해 생긴 발사체의 수를 결정합니다. 만약 더 많은 발사체가 나올경우 정해진 수 이외에는 추적하지 않습니다. 이 설정을 낮춤으로써 파편이 많은 시나리오를 실행할때 더욱 원활히 진행할 수 있습니다 (한 번에 200개 이하) </Korean>
-            <Chinesesimp>设定在指定时间内，系统最大可追踪的碎片/剥落粒子数量。如有更多的碎片在这之后产生，这些粒子将不会被追踪。如果你想要维持好的帧数，此设定勿调的过高。( &gt;一次200颗粒子)</Chinesesimp>
+            <Chinesesimp>设定在指定时间内，系统最大可追踪的碎片粒子数量。如有更多的碎片在这之后产生，这些粒子将不会被追踪。如果你想要维持好的帧数，此设定勿调的过高。( &gt;一次200颗粒子)</Chinesesimp>
             <Chinese>設定在指定時間內，系統最大可追蹤的碎片/剝落粒子數量。如有更多的碎片在這之後產生，這些粒子將不會被追蹤。如果你想要維持好的幀數，此設定勿調的過高。( &gt;一次200顆粒子)</Chinese>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame">
@@ -154,7 +154,7 @@
             <Italian>Numero massimo di proiettili per Frame</Italian>
             <Japanese>フレームごとの最大弾頭数</Japanese>
             <Korean>프레임당 최대 발사체 수</Korean>
-            <Chinesesimp>每一帧数(FPS)最大碎片/剥落粒子数量</Chinesesimp>
+            <Chinesesimp>每一帧数(FPS)最大碎片粒子数量</Chinesesimp>
             <Chinese>每一幀數(FPS)最大碎片/剝落粒子數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame_Desc">
@@ -170,8 +170,8 @@
             <Italian>Il numero di calcoli per tracciamento di spalling ad ogni frame. Questo aiuta a distribuire l'impatto del tracciamento dello spalling su più frame, limitando ancora di più l'impatto.</Italian>
             <Japanese>与えられたフレームごとに追跡する剥離の数を決定します。FPS に影響をあたえないよう、剥離を複数のフレームで追跡し、分散させています。</Japanese>
             <Korean>가능한 프레임마다 파편을 추적 및 계산합니다. 여러 프레임에 걸쳐 파편난 발사체를 추적하여 FPS에 도움을 줍니다. 이를 제한함으로써 더욱 큰 효과를 볼 수 있습니다.</Korean>
-            <Chinesesimp>设定在每一帧数内，系统最大可追踪的碎片/剥落粒子数量。此设定可有效帮助系统减低计算压力。</Chinesesimp>
-            <Chinese>設定在每一幀數內，系統最大可追蹤的碎片/剝落粒子數量。此設定可有效幫助系統減低計算壓力。</Chinese>
+            <Chinesesimp>设定在每一帧数内，系统最大可追踪的碎片粒子数量。此设定可有效帮助系统减低计算压力。</Chinesesimp>
+            <Chinese>設定在每一幀數內，系統最大可追蹤的碎片/剝落粒子數量。此設定可有效幫助系統減低計算壓力</Chinese>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
@@ -186,7 +186,7 @@
             <Italian>(Solo SP) Debug Tracciamento Frag/Spall</Italian>
             <Japanese>(SP のみ) 破片/剥離のデバッグ用表示</Japanese>
             <Korean>(싱글플레이 전용) 조각/파편 디버그 추적화</Korean>
-            <Chinesesimp>(仅在单人模式) 碎片/剥落除错追踪</Chinesesimp>
+            <Chinesesimp>(仅在单人模式) 追踪显示碎片粒子</Chinesesimp>
             <Chinese>(僅在單人模式) 碎片/剝落除錯追蹤</Chinese>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
@@ -201,8 +201,8 @@
             <Russian>(Только для одиночной игры) Требует перезапуска миссии/редактора. Включает визуальные следы от осколков и обломков в режиме одиночной игры.</Russian>
             <Italian>(Solo SP) Richiede un restart editor/missione. Abilita il tracciamento visivo di schegge da frammentazione/spalling in modalità Giocatore Singolo.</Italian>
             <Japanese>(SP のみ) ミッションとエディタの再起動が必要です。有効化すると、シングルプレイでのみ破片と剥離の弾頭が見えるようになります。</Japanese>
-            <Chinesesimp>(仅在单人模式) 让你在单人模式下可观察到碎片/剥落粒子的移动轨迹。</Chinesesimp>
-            <Chinese>(僅在單人模式) 讓你在單人模式下可觀察到碎片/剝落粒子的移動軌跡。</Chinese>
+            <Chinesesimp>(仅在单人模式) 激活后,只有在单人模式下才可观察到碎片粒子的移动轨迹。</Chinesesimp>
+            <Chinese>(僅在單人模式) 讓你在單人模式下可觀察到碎片/剝落粒子的移動軌跡</Chinese>
             <Korean>(SP 전용) 임무 / 편집자가 다시 시작해야합니다. SP 게임 모드에서만 조각화 및 스 폴링 라운드의 시각적 추적을 가능하게합니다.</Korean>
         </Key>
     </Package>

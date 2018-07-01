@@ -43,35 +43,30 @@ class CfgVehicles {
                 condition = QUOTE([vehicle _player] call FUNC(canPrepareFRIES));
                 statement = QUOTE([vehicle _player] call FUNC(prepareFRIES));
                 showDisabled = 0;
-                priority = 1;
             };
             class ACE_stowFRIES {
                 displayName = CSTRING(Interaction_stowFRIES);
                 condition = QUOTE([vehicle _player] call FUNC(canStowFRIES));
                 statement = QUOTE([vehicle _player] call FUNC(stowFRIES));
                 showDisabled = 0;
-                priority = 1;
             };
             class ACE_deployRopes {
                 displayName = CSTRING(Interaction_deployRopes);
                 condition = QUOTE([ARR_2(_player, vehicle _player)] call FUNC(canDeployRopes));
                 statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [vehicle _player])] call CBA_fnc_serverEvent);
                 showDisabled = 0;
-                priority = 1;
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
                 condition = [vehicle _player] call FUNC(canCutRopes);
                 statement = [vehicle _player] call FUNC(cutRopes);
                 showDisabled = 0;
-                priority = 1;
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
                 condition = [_player, vehicle _player] call FUNC(canFastRope);
                 statement = [_player, vehicle _player] call FUNC(fastRope);
                 showDisabled = 0;
-                priority = 1;
             };
         };
     };
@@ -84,6 +79,10 @@ class CfgVehicles {
         class ACE_SelfActions {};
         EGVAR(cargo,hasCargo) = 0;
         EGVAR(cargo,space) = 0;
+        // ACRE 2.6.0 Compatibility
+        acre_hasInfantryPhone = 0;
+        class AcreRacks {};
+        class AcreIntercoms {};
     };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
@@ -165,6 +164,10 @@ class CfgVehicles {
         class TransportItems {};
         EGVAR(cargo,hasCargo) = 0;
         EGVAR(cargo,space) = 0;
+        // ACRE 2.6.0 Compatibility
+        acre_hasInfantryPhone = 0;
+        class AcreRacks {};
+        class AcreIntercoms {};
     };
 
     class Helicopter_Base_H;
