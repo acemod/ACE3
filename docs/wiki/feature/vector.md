@@ -96,7 +96,7 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 Polish version of this manual with some comments and small additional section
 /polska wersja tego dokumentu opatrzona komentarzami oraz niewielkim dodatkiem:
 
-http://http://pgm.armaonline.pl/forum/viewtopic.php?f=15&t=548
+http://pgm.armaonline.pl/forum/viewtopic.php?f=15&t=548
 
 ## 4. Dependencies
 
