@@ -31,7 +31,7 @@
             <Japanese>高度なミサイルの誘導、または AMG はミサイルの捕捉と発射に複数の強化をあたえます。これはミサイルの種類によって、枠組みを必要とします。</Japanese>
             <Korean>고급 미사일 유도 혹은 AMG 는 표적 획득 및 발사를 위한 여러 기능을 제공합니다. 미사일 종류에따라 체계가 필요합니다.</Korean>
             <Chinesesimp>进阶飞弹制导增强了多种导弹锁定和射击的能力。此系统适用于所有飞弹类型的武器。</Chinesesimp>
-            <Chinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力。此系統適用於所有飛彈類型的武器。</Chinese>
+            <Chinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力。此系統適用於所有飛彈類型的武器</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
@@ -62,7 +62,7 @@
             <Russian>DAGR</Russian>
             <Japanese>DAGR</Japanese>
             <Korean>DAGR</Korean>
-            <Chinesesimp>直接攻击导引飞弹</Chinesesimp>
+            <Chinesesimp>直接攻击制导火箭弹</Chinesesimp>
             <Chinese>直接攻擊導引飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
@@ -78,7 +78,7 @@
             <Russian>Управляемая ракета лазерного наведения Hydra-70 DAGR</Russian>
             <Japanese>ハイドラ-70 DAGR レーザ誘導ミサイル</Japanese>
             <Korean>Hydra-70 DAGR 레이저 유도 미사일</Korean>
-            <Chinesesimp>九头蛇-70 直接攻击雷射导引飞弹</Chinesesimp>
+            <Chinesesimp>九头蛇-70mm 制导航空火箭弹</Chinesesimp>
             <Chinese>九頭蛇-70 直接攻擊雷射導引飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
@@ -94,7 +94,7 @@
             <Russian>Hellfire II AGM-114K</Russian>
             <Japanese>ヘルファイア II AGM-114K ミサイル</Japanese>
             <Korean>Hellfire II AGM-114K 미사일</Korean>
-            <Chinesesimp>地狱火II型 AGM-114K 导弹</Chinesesimp>
+            <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 導彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
@@ -110,7 +110,7 @@
             <Russian>AGM-114K</Russian>
             <Japanese>AGM-114K</Japanese>
             <Korean>AGM-114K</Korean>
-            <Chinesesimp>AGM-114K</Chinesesimp>
+            <Chinesesimp>AGM-114K制导破甲弹</Chinesesimp>
             <Chinese>AGM-114K</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
@@ -126,7 +126,7 @@
             <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>
             <Japanese>ヘルファイア II AGM-114K レーザ誘導ミサイル</Japanese>
             <Korean>Hellfire II AGM-114K 레이저 유도 미사일</Korean>
-            <Chinesesimp>地狱火II型 AGM-114K 雷射导引飞弹</Chinesesimp>
+            <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 雷射導引飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Off">

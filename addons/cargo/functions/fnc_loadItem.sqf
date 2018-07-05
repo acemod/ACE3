@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
+ * 2: Ignore interaction distance <BOOL>
  *
  * Return Value:
  * Object loaded <BOOL>
@@ -17,10 +18,10 @@
  */
 #include "script_component.hpp"
 
-params [["_item","",[objNull,""]], ["_vehicle",objNull,[objNull]]];
+params [["_item","",[objNull,""]], ["_vehicle",objNull,[objNull]], ["_ignoreInteraction", false]];
 TRACE_2("params",_item,_vehicle);
 
-if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {TRACE_2("cannot load",_item,_vehicle); false};
+if !([_item, _vehicle, _ignoreInteraction] call FUNC(canLoadItemIn)) exitWith {TRACE_2("cannot load",_item,_vehicle); false};
 
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded pushBack _item;

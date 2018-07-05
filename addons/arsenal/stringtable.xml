@@ -620,7 +620,7 @@
             <German>Keine Spielereinheit verfügbar. Setze eine Einheit und markiere sie als "Spieler".</German>
             <Japanese>プレイヤー ユニットがありません!ユニットを設置し"Player"と名付けてください。</Japanese>
             <Korean>플레이어 유닛을 사용할 수 없습니다! 유닛을 놓고 "플레이어"라고 표시하십시오.</Korean>
-            <Chinese>沒有可用的玩家單位!請擺放一個單位並設定成"玩家"。</Chinese>
+            <Chinese>沒有可用的玩家單位!請擺放一個單位並設定成"玩家"</Chinese>
             <Chinesesimp>没有可用的玩家单位!请摆放一个单位并设定成"玩家"。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
@@ -629,7 +629,7 @@
             <German>Keine Ausrüstungen zum Importieren</German>
             <Japanese>取り込みする装備がありません。</Japanese>
             <Korean>가져올 로드 아웃이 없습니다.</Korean>
-            <Chinese>沒有裝備被匯入。</Chinese>
+            <Chinese>沒有裝備被匯入</Chinese>
             <Chinesesimp>没有装备被汇入。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
@@ -645,7 +645,7 @@
             <German>Zurück zum ACE-Arsenal.</German>
             <Japanese>ACE 武器庫へ戻ります。</Japanese>
             <Korean>ACE 아스날로 돌아가기</Korean>
-            <Chinese>返回到ACE虛擬軍火庫。</Chinese>
+            <Chinese>返回到ACE虛擬軍火庫</Chinese>
             <Chinesesimp>返回到ACE虚拟军火库。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_tooltip">
@@ -653,7 +653,7 @@
             <German>Verwende ACE-Arsenal und sieh dir verschiedene Waffen und Ausrüstung an und probiere sie aus.</German>
             <Japanese>さまざまな武器と装備を試せるよう ACE 武器庫を使用します。</Japanese>
             <Korean>ACE Arsenal을 사용하여 다른 무기와 장비를 시험해보십시오.</Korean>
-            <Chinese>使用ACE虛擬軍火庫來嘗試不同的武器與裝備。</Chinese>
+            <Chinese>使用ACE虛擬軍火庫來嘗試不同的武器與裝備</Chinese>
             <Chinesesimp>使用ACE虚拟军火库来尝试不同的武器与装备。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_overview">
@@ -661,7 +661,7 @@
             <German>Probiere verschiedene Waffen und Ausrüstung aus und stelle dir eigene Ausrüstungsprofile zusammen.</German>
             <Japanese>さまざまな武器と装備を試して、あなただけの装備を作成してください。</Japanese>
             <Korean>무기와 장비를 사용해보고 자신의 로드아웃을 만듭니다.</Korean>
-            <Chinese>嘗試不同的武器與裝備來組合你個人的裝備配置。</Chinese>
+            <Chinese>嘗試不同的武器與裝備來組合你個人的裝備配置</Chinese>
             <Chinesesimp>尝试不同的武器与装备来组合你个人的装备配置。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
@@ -689,42 +689,52 @@
             <English>Potassium levels</English>
             <French>Taux de potassium</French>
             <Japanese>カリウム レベル</Japanese>
+            <Chinesesimp>钾水平</Chinesesimp>
+            <Chinese>鉀水平</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
-          <English>Magnification</English>
-          <Chinese>放大倍率</Chinese>
-          <French>Grossissement</French>
-          <Spanish>Aumento</Spanish>
-          <Italian>Ingrandimento</Italian>
-          <Polish>Powiększenie</Polish>
-          <Russian>Увеличение</Russian>
-          <German>Vergrößerung</German>
-          <Czech>Zvětšení</Czech>
-          <Portuguese>Aumentox</Portuguese>
-          <Korean>배율</Korean>
-          <Chinesesimp>放大倍数</Chinesesimp>
-          <Japanese>拡大倍率</Japanese>
-          <Turkish>Büyütme</Turkish>
+            <English>Magnification</English>
+            <Chinese>放大倍率</Chinese>
+            <French>Grossissement</French>
+            <Spanish>Aumento</Spanish>
+            <Italian>Ingrandimento</Italian>
+            <Polish>Powiększenie</Polish>
+            <Russian>Увеличение</Russian>
+            <German>Vergrößerung</German>
+            <Czech>Zvětšení</Czech>
+            <Portuguese>Aumentox</Portuguese>
+            <Korean>배율</Korean>
+            <Chinesesimp>放大倍数</Chinesesimp>
+            <Japanese>拡大倍率</Japanese>
+            <Turkish>Büyütme</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <French>Page</French>
             <Japanese>ページ</Japanese>
+            <Chinesesimp>页面</Chinesesimp>
+            <Chinese>頁面</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
             <French>Activer les onglets faces / voix / insignes</French>
             <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
+            <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
+            <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
             <French>Vider le conteneur selectionné</French>
             <Japanese>選択されたコンテナは空です</Japanese>
+            <Chinesesimp>选择的箱子是空的</Chinesesimp>
+            <Chinese>清空選擇的箱子</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
             <French>Nom de classe exporté dans le presse papier</French>
             <Japanese>クリップボードへクラスネームを出力</Japanese>
+            <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
+            <Chinese>輸出 class name 到剪貼簿上</Chinese>
         </Key>
     </Package>
 </Project>
