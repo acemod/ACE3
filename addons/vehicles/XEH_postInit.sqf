@@ -18,7 +18,7 @@ GVAR(isSpeedLimiter) = false;
         if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
         // Conditions: specific
         if !(ACE_player == driver vehicle ACE_player &&
-        {vehicle ACE_player isKindOf 'Car' ||
+            {vehicle ACE_player isKindOf 'Car' ||
             {vehicle ACE_player isKindOf 'Tank'}}) exitWith {false};
 
             GVAR(isUAV) = false;
@@ -30,3 +30,19 @@ GVAR(isSpeedLimiter) = false;
 },
 {false},
 [211, [false, false, false]], false] call CBA_fnc_addKeybind; //DELETE Key
+
+["ACE3 Vehicles", QGVAR(scrollUp), localize LSTRING(IncreaseSpeedLimit), {
+    if (GVAR(isSpeedLimiter)) then {
+        GVAR(speedLimit) = round (GVAR(speedLimit) + 1) max 5;
+        [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
+        true
+    };
+}, {false}, [MOUSE_SCROLL_UP, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + Mouse Wheel Scroll Up
+
+["ACE3 Vehicles", QGVAR(scrollDown), localize LSTRING(DecreaseSpeedLimit), {
+    if (GVAR(isSpeedLimiter)) then {
+        GVAR(speedLimit) = round (GVAR(speedLimit) - 1) max 5;
+        [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
+        true
+    };
+}, {false}, [MOUSE_SCROLL_DOWN, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + Mouse Wheel Scroll Down
