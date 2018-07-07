@@ -29,9 +29,9 @@ private _sam = _target getVariable [QGVAR(samSplint), [[0, 0], [0, 0], [0, 0], [
 private _damage = _target getVariable [QGVAR(bodyPartStatus), [0, 0, 0, 0, 0, 0]];
 
 _sam set [_part, [CBA_missionTime, _damage select _part]];
-_dagage set [_part, 0];
+_damage set [_part, 0];
 _target setVariable [QGVAR(samSplint), _sam, true];
-_target setVariable [QGVAR(bodyPartStatus), _dagage, true];
+_target setVariable [QGVAR(bodyPartStatus), _damage, true];
 
 [_target] call FUNC(handleDamage_advancedSetDamage);
 
