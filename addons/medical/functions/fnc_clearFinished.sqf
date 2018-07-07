@@ -20,15 +20,8 @@
 params ["_caller", "_target"];
 
 private _joint = _target getVariable [QGVAR(jointTreatment), []];
-private _itemCount = 0;
+private _jointNew = _joint select {(_x select 0) isEqualTo _caller};
 
-if !(_joint isEqualTo []) then {
-    {
-        if ((_x select 0) isEqualTo _caller) then {
-            _joint deleteAt _itemCount;
-        };
-        _itemCount = _itemCount + 1;
-    } forEach _joint;
+if !(_jointNew isEqualTo _joint) then {
+    _target setVariable [QGVAR(jointTreatment), _jointNew, true];
 };
-
-_target setVariable [QGVAR(jointTreatment), _joint, true];
