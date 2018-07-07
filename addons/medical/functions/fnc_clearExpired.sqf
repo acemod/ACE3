@@ -21,4 +21,6 @@ params ["_target"];
 private _joint = _target getVariable [QGVAR(jointTreatment), []];
 private _jointNew = _joint select {(_x select 3) > CBA_missionTime};
 
-_target setVariable [QGVAR(jointTreatment), _jointNew, true];
+if !(_jointNew isEqualTo _joint) then {
+    _target setVariable [QGVAR(jointTreatment), _jointNew, true];
+};
