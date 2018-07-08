@@ -370,7 +370,7 @@
             <German>Folgende Ausrüstung ist nicht mehr öffentlich:</German>
             <Polish>Następujący zestaw nie jest już publiczny:</Polish>
             <Japanese>次の装備は非公開になりました:</Japanese>
-            <Italian>Il seguente eequipaggiamento non è più pubblico:</Italian>
+            <Italian>Il seguente equipaggiamento non è più pubblico:</Italian>
             <Korean>다음 로드아웃이 더이상 공용이 아님:</Korean>
             <Chinese>以下的裝備已不再被分享:</Chinese>
             <Chinesesimp>以下的装备已不再被分享:</Chinesesimp>
@@ -639,6 +639,7 @@
             <Korean>ACE 아스날</Korean>
             <Chinese>ACE虛擬軍火庫</Chinese>
             <Chinesesimp>ACE虚拟军火库</Chinesesimp>
+            <Italian>ACE Arsenale</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_ReturnToArsenal">
             <English>Return to ACE Arsenal.</English>
