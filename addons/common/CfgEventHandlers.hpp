@@ -23,6 +23,9 @@ class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMission {
         ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
     };
+    class RscUnitInfo {
+        ADDON = QUOTE([ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call CBA_fnc_localEvent;);
+    };
 };
 
 class Extended_InitPost_EventHandlers {
