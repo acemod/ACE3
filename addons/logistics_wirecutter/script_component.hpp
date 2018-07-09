@@ -28,19 +28,19 @@
     "wired_fence_8m_f.p3d",\
     "new_wiredfence_5m_f.p3d",\
     "new_wiredfence_10m_f.p3d",\
-	"wiredfence_01_4m_f.p3d",\
-	"wiredfence_01_8m_f.p3d",\
-	"wiredfence_01_16m_f.p3d",\
-	"mil_wiredfence_f.p3d",\
-	"sportground_fence_f.p3d",\
-	"sportground_fence_nolc_f.p3d",\
-	"indfnc_3_f.p3d",\
-	"indfnc_3_hole_f.p3d",\
-	"indfnc_9_f.p3d",\
-	"indfnc_corner_f.p3d",\
-	"slums01_8m.p3d",\
-	"razorwire_f.p3d",\
-	// special rest
+    "wiredfence_01_4m_f.p3d",\
+    "wiredfence_01_8m_f.p3d",\
+    "wiredfence_01_16m_f.p3d",\
+    "mil_wiredfence_f.p3d",\
+    "sportground_fence_f.p3d",\
+    "sportground_fence_nolc_f.p3d",\
+    "indfnc_3_f.p3d",\
+    "indfnc_3_hole_f.p3d",\
+    "indfnc_9_f.p3d",\
+    "indfnc_corner_f.p3d",\
+    "slums01_8m.p3d",\
+    "razorwire_f.p3d",\
+    // special rest
     "wall_indfnc_3.p3d",\
     "wall_indfnc_9.p3d",\
     "wall_indfnc_corner.p3d",\
