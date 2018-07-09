@@ -17,6 +17,11 @@
 
 #include "script_component.hpp"
 
+#define INDEX_PART 2
+#define INDEX_RATIO 3
+#define INDEX_BLEEDING 4
+#define INDEX_TIME 0 // value equals to 0 if not applied
+
 params ["_unit", "_lastTime"];
 
 // If the unit died the loop is finished
@@ -45,9 +50,9 @@ private _splint = _unit getVariable [QGVAR(samSplint), [[0, 0], [0, 0], [0, 0], 
 for "_i" from 0 to 5 do {
     private _hasDamage = (_damage select _i) > 0;
     private _hasTourniquet = (_tourniquets select _part) != 0;
-    private _bleedingWound = {((_x select 2) isEqualTo _part) && ((_x select 4) * (_x select 3) > 0)} count _openWounds > 0;
+    private _bleedingWound = {((_x select INDEX_PART) isEqualTo _part) && ((_x select INDEX_BLEEDING) * (_x select INDEX_RATIO) > 0)} count _openWounds > 0;
 
-    if ((_hasDamage || (!_hasTourniquet && _bleedingWound)) && ((_splint select _i select 0) > 0)) then {
+    if ((_hasDamage || (!_hasTourniquet && _bleedingWound)) && ((_splint select _i select INDEX_TIME) > 0)) then {
         [_unit, _i] call FUNC(treatmentSAMSplintDamaged);
     };
 };
