@@ -20,14 +20,14 @@
 //find is case sensitive, so keep everything lowercase
 #define FENCE_P3DS [\
     // also set as isFence, but if the model is reused like for xcam
-	"net_fence_4m_f.p3d",\
-	"net_fence_8m_f.p3d",\
-	"netfence_01_m_4m_f.p3d",\
-	"netfence_01_m_8m_f.p3d",\
-	"wired_fence_4m_f.p3d",\
-	"wired_fence_8m_f.p3d",\
-	"new_wiredfence_5m_f.p3d",\
-	"new_wiredfence_10m_f.p3d",\
+    "net_fence_4m_f.p3d",\
+    "net_fence_8m_f.p3d",\
+    "netfence_01_m_4m_f.p3d",\
+    "netfence_01_m_8m_f.p3d",\
+    "wired_fence_4m_f.p3d",\
+    "wired_fence_8m_f.p3d",\
+    "new_wiredfence_5m_f.p3d",\
+    "new_wiredfence_10m_f.p3d",\
 	"wiredfence_01_4m_f.p3d",\
 	"wiredfence_01_8m_f.p3d",\
 	"wiredfence_01_16m_f.p3d",\
