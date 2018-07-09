@@ -290,6 +290,13 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
         {((_this select 0) getVariable ["ACE_isDead", false])}
     ] call FUNC(addUnconsciousCondition);
 
+    ["ace_settingChanged", {
+        params ["_name"];
+
+        if (_name in [QGVAR(CPRLowerLimit), QGVAR(CPRUpperLimit)] && {GVAR(CPRLowerLimit) > GVAR(CPRUpperLimit)}) then {
+            // TODO: Don't allow for this somehow. Maybe go back to defaults?
+        };
+    }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
 
 // Prevent all types of interaction while unconscious
