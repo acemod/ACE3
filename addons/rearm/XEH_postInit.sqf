@@ -9,6 +9,8 @@ GVAR(configTypesAdded) = [];
 }] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
+[QGVAR(initSupplyVehicle), LINKFUNC(initSupplyVehicle)] call CBA_fnc_addEventHandler;
+
 ["vehicle", {
     params ["_unit"];
     [_unit] call FUNC(dropAmmo);

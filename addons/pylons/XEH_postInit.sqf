@@ -15,10 +15,14 @@ GVAR(aircraftWithPylons) = (_filter configClasses (configFile >> "CfgVehicles"))
                 if (!GVAR(enabledFromAmmoTrucks)) exitWith {false};
 
                 private _vehicles = nearestObjects [_target, ["Air", "LandVehicle", "Slingload_base_F", "ReammoBox_F"], GVAR(searchDistance) + 10];
-                private _filter = ["transportAmmo", QEGVAR(rearm,defaultSupply)] select (["ace_rearm"] call EFUNC(common,isModLoaded));
-                private _rearmVehicles = {(getNumber (configFile >> "CfgVehicles" >> typeOf _x >> _filter)) > 0} count _vehicles;
-
-                (_rearmVehicles > 0 && {[ace_player, _target] call FUNC(canConfigurePylons)})
+                private _isRearmVehicle = if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
+                    _vehicles findIf {[_x] call EFUNC(rearm,isSource)} != -1;
+                } else {
+                    private _cfgVehicle = configFile >> "CfgVehicles";
+                    _vehicles findIf {getNumber (_cfgVehicle >> typeOf _x >> "transportAmmo") > 0} != -1;
+                };
+                
+                (_isRearmVehicle && {[ace_player, _target] call FUNC(canConfigurePylons)})
             }
         ] call EFUNC(interact_menu,createAction);
 
