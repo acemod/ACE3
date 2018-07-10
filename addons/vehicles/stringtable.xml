@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vehicles">
         <Key ID="STR_ACE_Vehicles_On">
@@ -35,6 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
+            <Italian>Limite di velocità</Italian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -54,9 +55,11 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
+            <Italian>Aumenta limite di velocità</Italian>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
+            <Italian>Diminuisce limite di velocità</Italian>
         </Key>
     </Package>
 </Project>
