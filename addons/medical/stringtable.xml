@@ -408,7 +408,7 @@
             <French>Transfusion (plasma)...</French>
             <Russian>Переливание плазмы...</Russian>
             <Hungarian>Infúzió vérplazmával...</Hungarian>
-            <Italian>Effettu la trasfusione di plasma...</Italian>
+            <Italian>Effettuo la trasfusione di plasma...</Italian>
             <Portuguese>Transfundindo plasma...</Portuguese>
             <Japanese>血しょうを投与しています・・・</Japanese>
             <Korean>혈장 수혈중...</Korean>
@@ -5628,36 +5628,42 @@
             <Japanese>処置中に気絶アニメーション</Japanese>
             <Chinesesimp>治疗时死亡动画</Chinesesimp>
             <Chinese>醫療時加入的昏迷動作</Chinese>
+            <Italian>Animazione da svenuto durante la cura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow animation of unconscious patients during treatment.</English>
             <Japanese>患者の処置中に気絶アニメーションを許可します。</Japanese>
             <Chinesesimp>在无意识患者治疗时死亡,会播放死亡动画?</Chinesesimp>
             <Chinese>允許醫療時加入昏迷的動作</Chinese>
+            <Italian>Permette l'animazione da svenuto dei pazioenti durante loro la cura.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
             <English>Move unconscious units from group</English>
             <Japanese>グループから気絶ユニットを移動</Japanese>
             <Chinesesimp>从小队中移除无意识伤者</Chinesesimp>
             <Chinese>從小隊中移動昏迷的單位</Chinese>
+            <Italian>Toglie le unità svenute dal grouppo</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
             <English>When a group member goes unconscious, removes them from their group.</English>
             <Japanese>グループのメンバーが気絶すると、グループから退出させます。</Japanese>
             <Chinesesimp>当一个队员失去意识时,他将被移除出小队</Chinesesimp>
             <Chinese>當隊員昏迷時，將被他的小組中刪除</Chinese>
+            <Italian>Quando un membro del gruppo sviene, viene tolto dal gruppo.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
             <Japanese>過剰投与</Japanese>
             <Chinesesimp>过量</Chinesesimp>
             <Chinese>過量</Chinese>
+            <Italian>Overdose</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
             <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
             <Japanese>モルヒネ/アドレナリン/アトロピンの過剰投与により患者を脆弱にします。</Japanese>
             <Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
             <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
+            <Italian>Rende il paziente suscettibile di overdose da morfina, epinefrina o atropina.</Italian>
         </Key>
     </Package>
 </Project>

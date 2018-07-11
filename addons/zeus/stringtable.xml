@@ -276,14 +276,17 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
             <Chinese>編輯模式</Chinese>
+            <Italian>Modalità per editare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
             <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
             <Chinese>新增物件</Chinese>
+            <Italian>Aggiungi Oggetti</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -967,6 +970,7 @@
         <Key ID="STR_ACE_Zeus_SelectCargo">
             <English>Select cargo to unload</English>
             <Chinese>選擇要卸載的貨物</Chinese>
+            <Italian>Scegli il carico da scaricare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1082,12 +1086,14 @@
             <Japanese>目標を切り替え</Japanese>
             <Chinesesimp>切换目标</Chinesesimp>
             <Chinese>切換目標</Chinese>
+            <Italian>Scambia obiettivo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
             <Japanese>ユニットは切り替えに影響を受けます</Japanese>
             <Chinesesimp>被选单位受切换影响</Chinesesimp>
             <Chinese>受切換所影響的單位</Chinese>
+            <Italian>Unità influenzate dallo scambio</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1471,12 +1477,14 @@
             <Japanese>ACE 武器庫を追加</Japanese>
             <Chinesesimp>添加ACE模式军火库</Chinesesimp>
             <Chinese>增加完整的ACE軍火庫</Chinese>
+            <Italian>Aggiungi l'arsenale ACE completo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
             <Japanese>ACE 武器庫を削除</Japanese>
             <Chinesesimp>删除ACE模式军火库</Chinesesimp>
             <Chinese>移除ACE軍火庫</Chinese>
+            <Italian>Rimuovi l'arsenale ACE</Italian>
         </Key>
     </Package>
 </Project>
