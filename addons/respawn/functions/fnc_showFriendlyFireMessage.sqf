@@ -29,7 +29,7 @@ if (_unit != _killer && {side group _unit in [side group ACE_player, civilian]} 
         ];
     
     systemChat _msg;
-    diag_log _msg;
+    diag_log text _msg;
 
     // Raise ACE globalEvent
     ["ace_killedByFriendly", [_unit, _killer]] call CBA_fnc_globalEvent;
