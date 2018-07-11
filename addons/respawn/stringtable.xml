@@ -4,9 +4,9 @@
         <Key ID="STR_ACE_Respawn_DisplayName">
             <English>ACE Respawn</English>
             <Italian>ACE Riapparizione</Italian>
-            <Chinese>重生</Chinese>
-            <Chinesesimp>重生</Chinesesimp>
-            <Japanese>リスポン</Japanese>
+            <Chinese>ACE 重生</Chinese>
+            <Chinesesimp>ACE 重生</Chinesesimp>
+            <Japanese>ACE リスポン</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
