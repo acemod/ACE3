@@ -37,7 +37,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(FriendlyFire_Module_DisplayName);
         function = QFUNC(moduleFriendlyFire);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_FriendlyFire_ca.paa);
 
