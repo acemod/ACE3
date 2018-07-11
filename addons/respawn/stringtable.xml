@@ -334,21 +334,20 @@
             <Chinese>擺放此模塊後，當有發生友軍誤擊致死的事件，會顯示提示訊息在聊天視窗中</Chinese>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Message">
-          <Original>%1 was killed by %2</Original>
-          <French>%1 a été tué par %2</French>
-          <Spanish>%1 asesinado por %2</Spanish>
-          <Italian>%1 è stato ucciso da %2</Italian>
-          <Polish>%1 został zabity przez %2</Polish>
-          <Russian>%1 убит игроком %2</Russian>
-          <German>%1 wurde von %2 getötet</German>
-          <Czech>%1 byl zabit %2</Czech>
-          <English>%1 was killed by %2</English>
-          <Chinese>%1 被 %2 擊殺了</Chinese>
-          <Portuguese>%1 foi morto por %2</Portuguese>
-          <Korean>%1 사망(공격자: %2)</Korean>
-          <Chinesesimp>%1 被 %2 杀死</Chinesesimp>
-          <Turkish>%1, %2 tarafından öldürüldü</Turkish>
-          <Japanese>%1は%2に殺された</Japanese>
+            <English>%1 was killed by %2</English>
+            <French>%1 a été tué par %2</French>
+            <Spanish>%1 asesinado por %2</Spanish>
+            <Italian>%1 è stato ucciso da %2</Italian>
+            <Polish>%1 został zabity przez %2</Polish>
+            <Russian>%1 убит игроком %2</Russian>
+            <German>%1 wurde von %2 getötet</German>
+            <Czech>%1 byl zabit %2</Czech>
+            <Chinese>%1 被 %2 擊殺了</Chinese>
+            <Portuguese>%1 foi morto por %2</Portuguese>
+            <Korean>%1 사망(공격자: %2)</Korean>
+            <Chinesesimp>%1 被 %2 杀死</Chinesesimp>
+            <Turkish>%1, %2 tarafından öldürüldü</Turkish>
+            <Japanese>%1は%2に殺された</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
