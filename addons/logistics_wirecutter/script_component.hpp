@@ -18,8 +18,8 @@
 
 
 // find is case sensitive, so keep everything lowercase
+// also set as isFence, but if the model is reused like for xcam
 #define FENCE_P3DS [\
-    // also set as isFence, but if the model is reused like for xcam
     "net_fence_4m_f.p3d",\
     "net_fence_8m_f.p3d",\
     "netfence_01_m_4m_f.p3d",\
@@ -44,7 +44,6 @@
     "backalley_01_l_1m_f.p3d",\
     "plasticnetfence_01_short_f.p3d",\
     "plasticnetfence_01_long_f.p3d",\
-    // special rest
     "wall_indfnc_3.p3d",\
     "wall_indfnc_9.p3d",\
     "wall_indfnc_corner.p3d",\
