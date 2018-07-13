@@ -54,4 +54,6 @@
     "fence.p3d"\
 ]
 
-#define SOUND_CLIP_TIME_SPACEING    1.5
+#define SOUND_CLIP_TIME_SPACING 1.5
+#define CUT_TIME_DEFAULT 11
+#define CUT_TIME_ENGINEER 7.5
