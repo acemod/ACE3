@@ -1,5 +1,6 @@
 
 class RscInGameUI {
+    class RscUnitInfo;
     class RscUnitInfoNoHUD {
         onLoad = QUOTE([ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call CBA_fnc_localEvent;);
     };
