@@ -355,6 +355,27 @@ Author:
 #define MESSAGE_WITH_TITLE(TITLE,MESSAGE) LOG_SYS_FILELINENUMBERS(TITLE,MESSAGE)
 
 /* -------------------------------------------
+Macro: RETDEF()
+    If a variable is undefined, return the default value. Otherwise, return the
+    variable itself.
+
+Parameters:
+    VARIABLE - the variable to check
+    DEFAULT_VALUE - the default value to use if variable is undefined
+
+Example:
+    (begin example)
+        // _var is undefined
+        hintSilent format ["_var=%1", RETDEF(_var,5)]; // "_var=5"
+        _var = 7;
+        hintSilent format ["_var=%1", RETDEF(_var,5)]; // "_var=7"
+    (end example)
+Author:
+    654wak654
+------------------------------------------- */
+#define RETDEF(VARIABLE,DEFAULT_VALUE) (if (isNil {VARIABLE}) then [{DEFAULT_VALUE}, {VARIABLE}])
+
+/* -------------------------------------------
 Macro: RETNIL()
     If a variable is undefined, return the value nil. Otherwise, return the
     variable itself.
@@ -365,13 +386,13 @@ Parameters:
 Example:
     (begin example)
         // _var is undefined
-        hintSilent format ["_var=%1", RETNIL(_var) ]; // "_var=any"
+        hintSilent format ["_var=%1", RETNIL(_var)]; // "_var=any"
     (end example)
 
 Author:
     Alef (see CBA issue #8514)
 ------------------------------------------- */
-#define RETNIL(VARIABLE) if (isNil{VARIABLE}) then {nil} else {VARIABLE}
+#define RETNIL(VARIABLE) RETDEF(VARIABLE,nil)
 
 /* -------------------------------------------
 Macros: TRACE_n()
@@ -1039,7 +1060,7 @@ Parameters:
 Author:
     Spooner
 ------------------------------------------- */
-#define IS_META_SYS(VAR,TYPE) (if (isNil {VAR}) then { false } else { (VAR) isEqualType TYPE })
+#define IS_META_SYS(VAR,TYPE) (if (isNil {VAR}) then {false} else {(VAR) isEqualType TYPE})
 #define IS_ARRAY(VAR)    IS_META_SYS(VAR,[])
 #define IS_BOOL(VAR)     IS_META_SYS(VAR,false)
 #define IS_CODE(VAR)     IS_META_SYS(VAR,{})
@@ -1057,10 +1078,10 @@ Author:
 
 #define IS_BOOLEAN(VAR)  IS_BOOL(VAR)
 #define IS_FUNCTION(VAR) IS_CODE(VAR)
-#define IS_INTEGER(VAR)  if ( IS_SCALAR(VAR) ) then { (floor(VAR) == (VAR)) } else { false }
+#define IS_INTEGER(VAR)  (if (IS_SCALAR(VAR)) then {floor (VAR) == (VAR)} else {false})
 #define IS_NUMBER(VAR)   IS_SCALAR(VAR)
 
-#define FLOAT_TO_STRING(num)    (str parseNumber (str (_this%_this) + str floor abs _this) + "." + (str (abs _this-floor abs _this) select [2]) + "0")
+#define FLOAT_TO_STRING(num)    (if (_this == 0) then {"0"} else {str parseNumber (str (_this % _this) + str floor abs _this) + "." + (str (abs _this - floor abs _this) select [2]) + "0"})
 
 /* -------------------------------------------
 Macro: SCRIPT()
@@ -1173,6 +1194,9 @@ Author:
     #define ELSTRING(var1,var2) QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
     #define CSTRING(var1) QUOTE(TRIPLES($STR,ADDON,var1))
     #define ECSTRING(var1,var2) QUOTE(TRIPLES($STR,DOUBLES(PREFIX,var1),var2))
+
+    #define LLSTRING(var1) localize QUOTE(TRIPLES(STR,ADDON,var1))
+    #define LELSTRING(var1,var2) localize QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
 #endif
 
 
@@ -1704,3 +1728,36 @@ Author:
     commy2
 ------------------------------------------- */
 #define IS_ADMIN_LOGGED serverCommandAvailable "#shutdown"
+
+/* -------------------------------------------
+Macro: FILE_EXISTS
+    Check if a file exists on machines with interface
+
+    Reports "false" if the file does not exist and throws an error in RPT.
+
+Parameters:
+    FILE - Path to the file
+
+Example:
+    (begin example)
+        // print "true" if file exists
+        systemChat str FILE_EXISTS("\A3\ui_f\data\igui\cfg\cursors\weapon_ca.paa");
+    (end)
+
+Author:
+    commy2
+------------------------------------------- */
+#define FILE_EXISTS(FILE) (call {\
+    private _return = false;\
+    isNil {\
+        private _control = (uiNamespace getVariable ["RscDisplayMain", displayNull]) ctrlCreate ["RscHTML", -1];\
+        if (isNull _control) then {\
+            _return = loadFile (FILE) != "";\
+        } else {\
+            _control htmlLoad (FILE);\
+            _return = ctrlHTMLLoaded _control;\
+            ctrlDelete _control;\
+        };\
+    };\
+    _return\
+})
