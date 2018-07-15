@@ -39,6 +39,6 @@ switch (toLower _selection) do {
         _unit setHitPointDamage ["HitHands", _damage];
     };
     case ("legs"): {
-        _unit setHitPointDamage ["HitLegs", _damage + ([0, LIMPING_MIN_DAMAGE] select (_unit getVariable [QGVAR(isLimping), false]))];
+        _unit setHitPointDamage ["HitLegs", _damage + ([0, LIMPING_MIN_DAMAGE] select (_unit getVariable [QEGVAR(medical,isLimping), false]))];
     };
 };

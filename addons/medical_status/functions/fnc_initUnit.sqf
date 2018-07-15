@@ -42,7 +42,7 @@ _unit setVariable [VAR_PAIN_SUPP_ADJ, [], true];
 _unit setVariable [QEGVAR(medical,openWounds), [], true];
 _unit setVariable [QEGVAR(medical,bandagedWounds), [], true];
 _unit setVariable [QEGVAR(medical,stitchedWounds), [], true];
-_unit setVariable [QEGVAR(medical_engine,isLimping), false, true];
+_unit setVariable [QEGVAR(medical,isLimping), false, true];
 
 // - Misc ---------------------------------------------------------------------
 _unit setVariable [VAR_UNCON, false, true];
