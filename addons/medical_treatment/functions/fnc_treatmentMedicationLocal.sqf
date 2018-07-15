@@ -80,21 +80,21 @@ if (alive _target) then {
 
     // Adjust the heart rate based upon config entry
     if (_heartRateChange != 0) then {
-        private _adjustments = GETVAR(_target,VAR_HEART_RATE_ADJ,[]);
+        private _adjustments = _target getVariable [VAR_HEART_RATE_ADJ,[]];
         _adjustments pushBack [_heartRateChange, _timeTillMaxEffect, _timeInSystem, 0];
         _target setVariable [VAR_HEART_RATE_ADJ, _adjustments];
     };
 
     // Adjust the pain suppression based upon config entry
     if (_painReduce > 0) then {
-        private _adjustments = GETVAR(_target,VAR_PAIN_SUPP_ADJ,[]);
+        private _adjustments = _target getVariable [VAR_PAIN_SUPP_ADJ,[]];
         _adjustments pushBack [_painReduce, _timeTillMaxEffect, _timeInSystem, 0];
         _target setVariable [VAR_PAIN_SUPP_ADJ, _adjustments];
     };
 
     // Adjust the peripheral resistance based upon config entry
     if (_viscosityChange != 0) then {
-        private _adjustments = GETVAR(_target,VAR_PERIPH_RES_ADJ,[]);
+        private _adjustments = _target getVariable [VAR_PERIPH_RES_ADJ,[]];
         _adjustments pushBack [_viscosityChange, _timeTillMaxEffect, _timeInSystem, 0];
         _target setVariable [VAR_PERIPH_RES_ADJ, _adjustments];
     };
