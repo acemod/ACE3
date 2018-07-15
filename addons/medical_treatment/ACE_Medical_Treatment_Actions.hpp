@@ -96,7 +96,7 @@ class GVAR(Actions) {
         category = "medication";
         items[] = {"ACE_morphine"};
         condition = "";
-        treatmentTime = 9;
+        treatmentTime = 5;
         callbackSuccess = QFUNC(treatmentMedication);
         animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
