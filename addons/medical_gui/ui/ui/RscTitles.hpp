@@ -1,6 +1,3 @@
-class ACE_gui_backgroundBase;
-class ACE_gui_listBoxBase;
-
 class RscTitles {
     class GVAR(DisplayInformation) {
         duration = 10e10;
