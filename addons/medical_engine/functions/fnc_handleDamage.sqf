@@ -138,7 +138,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // Don't trigger for minor damage.
     if (_receivedDamage > 1E-3) then {
-        [QEGVAR(medical,(woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
+        [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
     };
 
     0
