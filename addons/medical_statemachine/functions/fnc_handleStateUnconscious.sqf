@@ -30,7 +30,7 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
             _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
             if ((random 1) < EGVAR(medical,spontaneousWakeUpChance)) then {
                 TRACE_1("Spontaneous wake up!",_unit);
-                [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
+                [QEGVAR(medical,WakeUp), _unit] call CBA_fnc_localEvent;
             };
         };
     } else {

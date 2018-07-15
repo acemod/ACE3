@@ -13,4 +13,4 @@
 #include "script_component.hpp"
 params ["_unit"];
 
-[QGVAR(FatalInjuryInstantTransition), _unit] call CBA_fnc_localEvent;
+[QEGVAR(medical,FatalInjuryInstantTransition), _unit] call CBA_fnc_localEvent;

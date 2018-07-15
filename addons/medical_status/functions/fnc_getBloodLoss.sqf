@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+private _tourniquets = _unit getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 private _bodyPartBleeding = [0,0,0,0,0,0];
 {
     _x params ["", "", "_bodyPart", "_amountOf", "_bleeeding"];
