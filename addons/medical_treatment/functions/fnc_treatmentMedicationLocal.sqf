@@ -13,21 +13,22 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+#define MORPHINE_PAIN_SUPPRESSION 0.6
 
 params ["_target", "_className", "_partIndex"];
 TRACE_3("params",_target,_className,_partIndex);
 
 if (!EGVAR(medical,advancedMedication)) exitWith {
+    TRACE_1("MedicalSettingAdvancedMedication is:", EGVAR(medical,advancedMedication));
     if (_className == "Morphine") exitWith {
-        #define MORPHINE_PAIN_SUPPRESSION 0.6
         private _painSupress = GET_PAIN_SUPPRESS(_target);
         _target setVariable [VAR_PAIN_SUPP, (_painSupress + MORPHINE_PAIN_SUPPRESSION) min 1, true];
     };
-
     if (_className == "Epinephrine") exitWith {
         [QEGVAR(medical,WakeUp), _target] call CBA_fnc_localEvent;
     };
 };
+TRACE_1("Running treatmentMedicationLocal with Advanced configuration for", _target);
 
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 
@@ -80,6 +81,7 @@ if (alive _target) then {
 
     // Adjust the heart rate based upon config entry
     if (_heartRateChange != 0) then {
+        TRACE_1("heartRateChange", _heartRateChange);
         private _adjustments = _target getVariable [VAR_HEART_RATE_ADJ,[]];
         _adjustments pushBack [_heartRateChange, _timeTillMaxEffect, _timeInSystem, 0];
         _target setVariable [VAR_HEART_RATE_ADJ, _adjustments];
@@ -87,6 +89,7 @@ if (alive _target) then {
 
     // Adjust the pain suppression based upon config entry
     if (_painReduce > 0) then {
+        TRACE_1("painReduce", _painReduce);
         private _adjustments = _target getVariable [VAR_PAIN_SUPP_ADJ,[]];
         _adjustments pushBack [_painReduce, _timeTillMaxEffect, _timeInSystem, 0];
         _target setVariable [VAR_PAIN_SUPP_ADJ, _adjustments];
@@ -94,6 +97,7 @@ if (alive _target) then {
 
     // Adjust the peripheral resistance based upon config entry
     if (_viscosityChange != 0) then {
+        TRACE_1("viscosityChange", _viscosityChange);
         private _adjustments = _target getVariable [VAR_PERIPH_RES_ADJ,[]];
         _adjustments pushBack [_viscosityChange, _timeTillMaxEffect, _timeInSystem, 0];
         _target setVariable [VAR_PERIPH_RES_ADJ, _adjustments];

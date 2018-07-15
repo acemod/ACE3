@@ -3,6 +3,8 @@
 
 params ["_unit", "_stateName"];
 
+TRACE_2("defaultState:", _unit, _stateName);
+
 // If the unit died the loop is finished
 if (!alive _unit) exitWith {};
 
