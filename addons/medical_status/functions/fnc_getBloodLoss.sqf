@@ -17,14 +17,14 @@
 
 params ["_unit"];
 
-private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+private _tourniquets = _unit getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 private _bodyPartBleeding = [0,0,0,0,0,0];
 {
     _x params ["", "", "_bodyPart", "_amountOf", "_bleeeding"];
     if (_tourniquets select _bodyPart == 0) then {
         _bodyPartBleeding set [_bodyPart, (_bodyPartBleeding select _bodyPart) + (_amountOf * _bleeeding)];
     };
-} forEach (_unit getVariable [QGVAR(openWounds), []]);
+} forEach (_unit getVariable [QEGVAR(medical,openWounds), []]);
 
 if (_bodyPartBleeding isEqualTo [0,0,0,0,0,0]) exitWith { 0 };
 

@@ -21,7 +21,7 @@
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 #ifdef DEBUG_MODE_FULL
-[QGVAR(woundReceived), {
+[QEGVAR(medical,woundReceived), {
     params ["_unit", "_woundedHitPoint", "_receivedDamage", "_shooter", "_ammo"];
     TRACE_5("wound",_unit,_woundedHitPoint, _receivedDamage, _shooter, _ammo);
     //systemChat str _this;

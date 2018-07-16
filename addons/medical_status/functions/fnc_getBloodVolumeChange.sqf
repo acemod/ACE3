@@ -22,9 +22,9 @@ params ["_unit", "_deltaT", "_syncValues"];
 private _bloodVolume = GET_BLOOD_VOLUME(_unit);
 private _bloodVolumeChange = -_deltaT * GET_BLOOD_LOSS(_unit);
 
-if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
-    private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
-    private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+if (!isNil {_unit getVariable QEGVAR(medical,ivBags)}) then {
+    private _bloodBags = _unit getVariable [QEGVAR(medical,ivBags), []];
+    private _tourniquets = _unit getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 
     _bloodBags = _bloodBags apply {
         _x params ["_bagVolumeRemaining", "_type", "_bodyPart"];
@@ -45,9 +45,9 @@ if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
     _bloodBags = _bloodBags - [[]]; // remove empty bags
 
     if (_bloodBags isEqualTo []) then {
-        _unit setVariable [QGVAR(ivBags), nil, true]; // no bags left - clear variable (always globaly sync this)
+        _unit setVariable [QEGVAR(medical,ivBags), nil, true]; // no bags left - clear variable (always globaly sync this)
     } else {
-        _unit setVariable [QGVAR(ivBags), _bloodBags, _syncValues];
+        _unit setVariable [QEGVAR(medical,ivBags), _bloodBags, _syncValues];
     };
 };
 

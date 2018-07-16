@@ -69,7 +69,7 @@ if (_highestPossibleSpot < 0) exitWith {};
 
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
-private _woundID = _unit getVariable [QGVAR(lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
+private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
 
 private _painLevel = 0;
 private _critialDamage = false;

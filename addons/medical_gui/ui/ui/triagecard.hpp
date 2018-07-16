@@ -1,5 +1,3 @@
-class ACE_gui_buttonBase;
-
 class GVAR(triageCard) {
     idd = 7010;
     movingenable = 0;

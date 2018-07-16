@@ -28,7 +28,7 @@ _target setVariable [QGVAR(occludedMedications), nil, true];
 _target setVariable [QEGVAR(medical,openWounds), [], true];
 _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
 _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
-_target setVariable [QEGVAR(medical_engine,isLimping), false, true];
+_target setVariable [QEGVAR(medical,isLimping), false, true];
 
 // vitals
 _target setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];

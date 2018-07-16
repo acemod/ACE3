@@ -39,43 +39,43 @@ _unit setVariable [VAR_PAIN_SUPP, 0, true];
 _unit setVariable [VAR_PAIN_SUPP_ADJ, [], true];
 
 // - Wounds -------------------------------------------------------------------
-_unit setVariable [QGVAR(openWounds), [], true];
-_unit setVariable [QGVAR(bandagedWounds), [], true];
-_unit setVariable [QGVAR(stitchedWounds), [], true];
-_unit setVariable [QEGVAR(medical_engine,isLimping), false, true];
+_unit setVariable [QEGVAR(medical,openWounds), [], true];
+_unit setVariable [QEGVAR(medical,bandagedWounds), [], true];
+_unit setVariable [QEGVAR(medical,stitchedWounds), [], true];
+_unit setVariable [QEGVAR(medical,isLimping), false, true];
 
 // - Misc ---------------------------------------------------------------------
 _unit setVariable [VAR_UNCON, false, true];
 
 // - Treatments ---------------------------------------------------------------
-_unit setVariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
-_unit setVariable [QGVAR(occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
-_unit setVariable [QGVAR(ivBags), nil, true];
-_unit setVariable [QGVAR(partialHealCounter), 0, true];
+_unit setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
+_unit setVariable [QEGVAR(medical,occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
+_unit setVariable [QEGVAR(medical,ivBags), nil, true];
+_unit setVariable [QEGVAR(medical,partialHealCounter), 0, true];
 
 // triage card and logs
-_unit setVariable [QGVAR(triageLevel), 0, true];
-_unit setVariable [QGVAR(triageCard), [], true];
+_unit setVariable [QEGVAR(medical,triageLevel), 0, true];
+_unit setVariable [QEGVAR(medical,triageCard), [], true];
 
 // damage storage
-_unit setVariable [QGVAR(bodyPartDamage), [0,0,0,0,0,0], true];
+_unit setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
 #ifdef DEBUG_TESTRESULTS
-_unit setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
+_unit setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
 #endif
 
 // medication
-private _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
+private _allUsedMedication = _unit getVariable [QEGVAR(medical,allUsedMedication), []];
 {
    _unit setVariable [_x select 0, nil];
 } forEach _allUsedMedication;
-_unit setVariable [QGVAR(allUsedMedication), [], true];
+_unit setVariable [QEGVAR(medical,allUsedMedication), [], true];
 
 // TODO move to treatment
-private _logs = _unit getVariable [QGVAR(allLogs), []];
+private _logs = _unit getVariable [QEGVAR(medical,allLogs), []];
 {
     _unit setVariable [_x, nil];
 } forEach _logs;
-_unit setVariable [QGVAR(allLogs), [], true];
+_unit setVariable [QEGVAR(medical,allLogs), [], true];
 
 [{
     params ["_unit"];

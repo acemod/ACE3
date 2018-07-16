@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 params ["_unit"];
 
-_unit setVariable [QGVAR(deathBlocked), true];
+_unit setVariable [QEGVAR(medical,deathBlocked), true];
 [{
-    _this setVariable [QGVAR(deathBlocked), false];
+    _this setVariable [QEGVAR(medical,deathBlocked), false];
 }, _unit, 1] call CBA_fnc_waitAndExecute;

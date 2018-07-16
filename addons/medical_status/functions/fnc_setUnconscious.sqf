@@ -34,7 +34,7 @@ if ((isNull _unit) || {!alive _unit} || {!(_unit isKindOf "CAManBase")}) exitWit
     false
 };
 if (!local _unit) exitWith {
-    [QGVAR(setUnconscious), [_unit, _knockOut], _unit] call CBA_fnc_targetEvent;
+    [QEGVAR(medical,setUnconscious), [_unit, _knockOut], _unit] call CBA_fnc_targetEvent;
     true
 };
 if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
@@ -42,7 +42,7 @@ if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
     false
 };
 
-private _beforeState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+private _beforeState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
 
 
 if (_knockOut) then {
@@ -60,7 +60,7 @@ if (_knockOut) then {
             }, [_unit], _minWaitingTime] call CBA_fnc_waitAndExecute;
         };
         if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
-            _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime + _minWaitingTime - SPONTANEOUS_WAKE_UP_INTERVAL];
+            _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime + _minWaitingTime - SPONTANEOUS_WAKE_UP_INTERVAL];
         };
     };
 
@@ -69,7 +69,7 @@ if (_knockOut) then {
     [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
 };
 
-private _afterState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+private _afterState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
 TRACE_2("state change",_beforeState,_afterState);
 
 true

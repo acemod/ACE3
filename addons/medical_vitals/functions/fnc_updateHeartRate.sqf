@@ -21,7 +21,7 @@
 params ["_unit", "_deltaT", "_syncValue"];
 
 private _hrTargetAdjustment = 0;
-private _adjustments = GETVAR(_unit,VAR_HEART_RATE_ADJ,[]);
+private _adjustments = _unit getVariable [VAR_HEART_RATE_ADJ,[]];
 
 if !(_adjustments isEqualTo []) then {
     {

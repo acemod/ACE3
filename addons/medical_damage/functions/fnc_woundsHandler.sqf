@@ -24,7 +24,7 @@ if (_typeOfDamage isEqualTo "") then {
 
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
-private _woundID = _unit getVariable [QGVAR(lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
+private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
 
 TRACE_4("extension call",_bodyPart,_damage,_typeOfDamage,_woundID);
 private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _bodyPart, _damage, _typeOfDamage, _woundID];

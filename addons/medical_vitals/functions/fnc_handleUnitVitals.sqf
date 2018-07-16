@@ -52,7 +52,7 @@ private _bloodLoss = GET_BLOOD_LOSS(_unit);
 if (_bloodLoss > 0) then {
     _unit setVariable [QGVAR(bloodloss), _bloodLoss, _syncValues];
 
-    [QGVAR(Injury), _unit] call CBA_fnc_localEvent;
+    [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
 
     if !IS_BLEEDING(_unit) then {
         _unit setVariable [VAR_IS_BLEEDING, true, true];
@@ -70,7 +70,7 @@ if !(_inPain isEqualTo IS_IN_PAIN(_unit)) then {
 
 // Handle pain due tourniquets, that have been applied more than 120 s ago
 private _tourniquetPain = 0;
-private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+private _tourniquets = _unit getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 {
     if (_x > 0 && {CBA_missionTime - _x > 120}) then {
         _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
@@ -87,7 +87,7 @@ _unit setVariable [VAR_BLOOD_PRESS, _bloodPressure, _syncValues];
 
 private _cardiacOutput = [_unit] call EFUNC(medical_status,getCardiacOutput);
 if (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput) then {
-    [QGVAR(CriticalVitals), _unit] call CBA_fnc_localEvent;
+    [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
 };
 
 #ifdef DEBUG_MODE_FULL
@@ -98,10 +98,10 @@ if (!isPlayer _unit) then {
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 if (_bloodPressureL < 40 || {_heartRate < 30}) then {
-    [QGVAR(CriticalVitals), _unit] call CBA_fnc_localEvent;
+    [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
 };
 if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {
-    [QGVAR(FatalVitals), _unit] call CBA_fnc_localEvent;
+    [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
 };
 
 END_COUNTER(Vitals);

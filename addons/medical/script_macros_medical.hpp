@@ -84,15 +84,15 @@
 // - Unit Functions ---------------------------------------------------
 // Retrieval macros for common unit values
 // Defined for easy consistency and speed
-#define GET_BLOOD_VOLUME(unit)      (GETVAR(unit,VAR_BLOOD_VOL,DEFAULT_BLOOD_VOLUME))
-#define GET_HEART_RATE(unit)        (GETVAR(unit,VAR_HEART_RATE,DEFAULT_HEART_RATE))
-#define GET_HEMORRHAGE(unit)        (GETVAR(unit,VAR_HEMORRHAGE,0))
-#define GET_PAIN(unit)              (GETVAR(unit,VAR_PAIN,0))
-#define GET_PAIN_SUPPRESS(unit)     (GETVAR(unit,VAR_PAIN_SUPP,0))
-#define IN_CRDC_ARRST(unit)         (GETVAR(unit,VAR_CRDC_ARRST,false))
-#define IS_BLEEDING(unit)           (GETVAR(unit,VAR_IS_BLEEDING,false))
-#define IS_IN_PAIN(unit)            (GETVAR(unit,VAR_IN_PAIN,false))
-#define IS_UNCONSCIOUS(unit)        (GETVAR(unit,VAR_UNCON,false))
+#define GET_BLOOD_VOLUME(unit)      (unit getVariable [VAR_BLOOD_VOL,DEFAULT_BLOOD_VOLUME])
+#define GET_HEART_RATE(unit)        (unit getVariable [VAR_HEART_RATE,DEFAULT_HEART_RATE])
+#define GET_HEMORRHAGE(unit)        (unit getVariable [VAR_HEMORRHAGE,0])
+#define GET_PAIN(unit)              (unit getVariable [VAR_PAIN,0])
+#define GET_PAIN_SUPPRESS(unit)     (unit getVariable [VAR_PAIN_SUPP,0])
+#define IN_CRDC_ARRST(unit)         (unit getVariable [VAR_CRDC_ARRST,false])
+#define IS_BLEEDING(unit)           (unit getVariable [VAR_IS_BLEEDING,false])
+#define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN,false])
+#define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON,false])
 
 // The following function calls are defined here just for consistency
 #define GET_BLOOD_LOSS(unit)        ([unit] call EFUNC(medical_status,getBloodLoss))
