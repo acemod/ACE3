@@ -5,7 +5,8 @@ class ACE_Medical_StateMachine {
     skipNull = 1;
 
     class Default {
-        onState = QUOTE(call FUNC(handleStateDefault));
+        onStateEntered = "systemChat format ['entered default'];"
+        onState = QFUNC(handleStateDefault);
         class Injury {
             targetState = "Injured";
             events[] = {QEGVAR(medical,Injury)};
@@ -24,7 +25,8 @@ class ACE_Medical_StateMachine {
         };
     };
     class Injured {
-        onState = QUOTE(call FUNC(handleStateInjured));
+        onStateEntered = "systemChat format ['entered injured'];"
+        onState = QFUNC(handleStateInjured);
         class FullHeal {
             targetState = "Default";
             events[] = {QEGVAR(medical,FullHeal)};
@@ -43,7 +45,7 @@ class ACE_Medical_StateMachine {
         };
     };
     class Unconscious {
-        onState = QUOTE(call FUNC(handleStateUnconscious));
+        onState = QFUNC(handleStateUnconscious);
         onStateEntered = QUOTE([ARR_2(_this,(true))] call EFUNC(medical,setUnconsciousStatemachine));
         class DeathAI {
             targetState = "Dead";
@@ -51,7 +53,7 @@ class ACE_Medical_StateMachine {
         };
         class WakeUp {
             targetState = "Injured";
-            condition = QUOTE(_this call EFUNC(medical_status,hasStableVitals));
+            condition = QEFUNC(medical_status,hasStableVitals);
             events[] = {QEGVAR(medical,WakeUp)};
             onTransition = QUOTE([ARR_2(_this,(false))] call EFUNC(medical,setUnconsciousStatemachine));
         };
@@ -67,7 +69,7 @@ class ACE_Medical_StateMachine {
     class FatalInjury {
         // Transition state for handling instant death
         // This state raises the next transition in the same frame
-        onStateEntered = QUOTE(call FUNC(enteredStateFatalInjury));
+        onStateEntered = QFUNC(enteredStateFatalInjury);
         class DeathAI {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "Dead";
@@ -77,7 +79,7 @@ class ACE_Medical_StateMachine {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "CardiacArrest";
             condition = QUOTE(EGVAR(medical,fatalInjuryCondition) > 0);
-            onTransition = QUOTE(call FUNC(transitionSecondChance));
+            onTransition = QFUNC(transitionSecondChance);
         };
         class Death {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
@@ -86,15 +88,15 @@ class ACE_Medical_StateMachine {
         };
     };
     class CardiacArrest {
-        onStateEntered = QUOTE(call FUNC(enteredStateCardiacArrest));
-        onStateLeaving = QUOTE(call FUNC(leftStateCardiacArrest));
+        onStateEntered = QFUNC(enteredStateCardiacArrest);
+        onStateLeaving = QFUNC(leftStateCardiacArrest);
         class DeathAI {
             targetState = "Dead";
             condition = QUOTE(!isPlayer _this && {EGVAR(medical,fatalInjuryConditionAI)});
         };
         class Timeout {
             targetState = "Dead";
-            condition = QUOTE(call EFUNC(medical,conditionCardiacArrestTimer));
+            condition = QEFUNC(medical,conditionCardiacArrestTimer);
         };
         class Reanimation {
             targetState = "Unconscious";
@@ -102,7 +104,7 @@ class ACE_Medical_StateMachine {
         };
         class Execution {
             targetState = "Dead";
-            condition = QUOTE(call EFUNC(medical,conditionExecutionDeath));
+            condition = QEFUNC(medical,conditionExecutionDeath);
             events[] = {QEGVAR(medical,FatalInjury)};
         };
     };
