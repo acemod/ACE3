@@ -51,11 +51,11 @@ if (!hasInterface) exitWith {};
         uiNamespace setVariable [QGVAR(debugControl), _ctrl];
 
         [{
-            private _playerState = [ACE_player, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+            private _playerState = [ACE_player, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
             (uiNamespace getVariable [QGVAR(debugControl), controlNull]) ctrlSetText format ["Player state: %1", _playerState];
 
             if (!isNull cursorTarget && {cursorTarget isKindOf "CAManBase"}) then {
-                private _targetState = [cursorTarget, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+                private _targetState = [cursorTarget, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
                 drawIcon3D ["", [0.6, 0, 0, 1], cursorTarget modelToWorldVisual (cursorTarget selectionPosition "pelvis"), 0, 0, 0, format ["State: %1", _targetState], 2, 40 * pixelH, "RobotoCondensed"];
             };
         }, 0 ,[]] call CBA_fnc_addPerFrameHandler;

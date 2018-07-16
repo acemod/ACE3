@@ -34,7 +34,7 @@
 
     // State:
     private _hasStableVitals = [_unit] call EFUNC(medical_status,hasStableVitals);
-    private _targetState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
+    private _targetState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
     if (!local _unit) then {_targetState = "NotLocal";};
     private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"555555"}};
     private _unconcFlag = if IS_UNCONSCIOUS(_unit) then {"[<t color='#FFFFFF'>U</t>]"} else {""};
