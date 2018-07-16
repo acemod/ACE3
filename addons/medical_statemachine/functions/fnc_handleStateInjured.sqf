@@ -19,3 +19,4 @@ private _painLevel = GET_PAIN_PERCEIVED(_unit);
 if (_painLevel > 0) then {
     [_unit, "moan", PAIN_TO_MOAN(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 };
+
