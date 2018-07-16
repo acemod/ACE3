@@ -5,7 +5,6 @@ class ACE_Medical_StateMachine {
     skipNull = 1;
 
     class Default {
-        onStateEntered = "systemChat format ['entered default'];"
         onState = QFUNC(handleStateDefault);
         class Injury {
             targetState = "Injured";
@@ -25,7 +24,6 @@ class ACE_Medical_StateMachine {
         };
     };
     class Injured {
-        onStateEntered = "systemChat format ['entered injured'];"
         onState = QFUNC(handleStateInjured);
         class FullHeal {
             targetState = "Default";
