@@ -21,5 +21,3 @@ class CfgPatches {
 #include "CfgExtendedAnimation.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgInGameUI.hpp"
-#include "RscTitles.hpp"
