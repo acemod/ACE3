@@ -1031,6 +1031,15 @@
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_Status_Lost_Blood2">
+            <English>Lost some blood Class II Hemorrhage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_Lost_Blood3">
+            <English>Lost a lot of blood Class III Hemorrhage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_Lost_Blood4">
+            <English>Lost a massive amount of blood Class IV Hemorrhage</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
             <German>Tourniquet [CAT]</German>
