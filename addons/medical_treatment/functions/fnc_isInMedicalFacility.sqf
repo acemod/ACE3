@@ -9,9 +9,9 @@
  * Is in medical facility <BOOL>
  *
  * Example:
- * [player] call ace_medical_status_fnc_isInMedicalFacility
+ * [player] call ace_medical_treatment_fnc_isInMedicalFacility
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 

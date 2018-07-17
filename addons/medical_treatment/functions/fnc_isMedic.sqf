@@ -10,9 +10,9 @@
  * Is in of medic class <BOOL>
  *
  * Example:
- * [player] call ace_medical_status_fnc_isMedic
+ * [player] call ace_medical_treatment_fnc_isMedic
  *
- * Public: Yes
+ * Public: No
  */
 
 #include "script_component.hpp"

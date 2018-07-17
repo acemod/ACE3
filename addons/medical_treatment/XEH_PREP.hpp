@@ -46,8 +46,13 @@ PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);
+PREP(hasTourniquetAppliedTo);
 PREP(healTime);
 PREP(HealTimeMedkit);
+PREP(isInMedicalFacility);
+PREP(isInMedicalVehicle);
+PREP(isMedic);
+PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
 
 // items
