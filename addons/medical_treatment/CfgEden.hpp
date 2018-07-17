@@ -35,7 +35,7 @@ class Cfg3DEN {
                         control = QGVAR(isMedicControl);
                         displayName = CSTRING(AssignMedicRoles_role_DisplayName);
                         tooltip = CSTRING(Attributes_isMedic_Description);
-                        expression = QUOTE(if (_value > -1) then {_this setVariable [ARR_3(QUOTE(QGVAR(medicClass)),_value, true)];};);
+                        expression = QUOTE(if (_value > -1) then {_this setVariable [ARR_3(QQEGVAR(medical,medicClass),_value,true)];};);
                         typeName = "NUMBER";
                         condition = "objectBrain";
                         defaultValue = "-1";
@@ -46,7 +46,7 @@ class Cfg3DEN {
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignMedicVehicle_enabled_DisplayName);
                         tooltip = CSTRING(Attributes_isMedicalVehicle_Description);
-                        expression = QUOTE(_this setVariable [ARR_3(QUOTE(QGVAR(medicClass)),_value, true)];);
+                        expression = QUOTE(_this setVariable [ARR_3(QQEGVAR(medical,medicClass),_value,true)];);
                         typeName = "NUMBER";
                         condition = "objectVehicle";
                         defaultValue = 0;
@@ -57,7 +57,7 @@ class Cfg3DEN {
                         control = "Checkbox";
                         displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName);
                         tooltip = CSTRING(AssignMedicalFacility_enabled_Description);
-                        expression = QUOTE(_this setVariable [ARR_3(QUOTE(QGVAR(isMedicalFacility)),_value, true)];);
+                        expression = QUOTE(_this setVariable [ARR_3(QQEQGVAR(medical,isMedicalFacility),_value,true)];);
                         typeName = "BOOL";
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
                         defaultValue = "false";

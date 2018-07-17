@@ -1,6 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
+        <Key ID="STR_ACE_Medical_Treatment_Attributes_isMedic_Description">
+            <English>Medical training</English>
+            <Polish>Wyszkolenie medyczne</Polish>
+            <Italian>Addestramento Medico</Italian>
+            <German>Sanitätsausbildung</German>
+            <Spanish>Entrenamiento médico</Spanish>
+            <French>Entraînement médical</French>
+            <Czech>Lékařský výcvik</Czech>
+            <Portuguese>Treino médico</Portuguese>
+            <Russian>Медицинская подготовка</Russian>
+            <Japanese>治療の訓練</Japanese>
+            <Korean>의료 훈련</Korean>
+            <Chinesesimp>医疗训练</Chinesesimp>
+            <Chinese>醫療訓練</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_DisplayName">
+            <English>Is Medic</English>
+            <Russian>Является медиком</Russian>
+            <Polish>Klasa medyczna</Polish>
+            <Spanish>Es médico</Spanish>
+            <German>Ist Sanitäter</German>
+            <Czech>Je zdravotník</Czech>
+            <Portuguese>É médico</Portuguese>
+            <French>Est infirmier</French>
+            <Hungarian>Orvos-e</Hungarian>
+            <Italian>E' Medico</Italian>
+            <Japanese>衛生兵として</Japanese>
+            <Korean>의무병</Korean>
+            <Chinesesimp>是医疗兵</Chinesesimp>
+            <Chinese>是醫療兵</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_Description">
+            <English>This module allows you to assign the medic class to selected units.</English>
+            <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
+            <German>Dieses Modul legt fest, welche Einheiten Sanitäter sind.</German>
+            <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
+            <Portuguese>Este módulo determina qual unidade é um paramédico.</Portuguese>
+            <French>Ce module permet d'assigner la classe médicale à une unité sélectionnée</French>
+            <Hungarian>Ez a modul engedélyezi az orvosi jelző hozzárendelését kiválasztott egységekhez.</Hungarian>
+            <Russian>Этот модуль позволяет назначить класс медика выбранным юнитам.</Russian>
+            <Spanish>Este módulo permite asignar la clase médico a las unidades seleccionadas.</Spanish>
+            <Italian>Questo modulo ti permette di assegnare la classe Medico alle unità selezionate.</Italian>
+            <Japanese>選択されたユニットを衛生兵として指定します。</Japanese>
+            <Korean>이 모듈은 선택한 보직이 의무병을 할 수 있게 해줍니다.</Korean>
+            <Chinesesimp>本模块可让被同步的单位成为医疗兵</Chinesesimp>
+            <Chinese>本模塊可讓被同步的單位成為醫療兵</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_none">
+            <English>None</English>
+            <Russian>Нет</Russian>
+            <Polish>Żadna</Polish>
+            <Spanish>Nada</Spanish>
+            <German>Keine</German>
+            <Czech>Žádný</Czech>
+            <Portuguese>Nada</Portuguese>
+            <French>Aucun</French>
+            <Hungarian>Nincs</Hungarian>
+            <Italian>Nessuno</Italian>
+            <Japanese>なし</Japanese>
+            <Korean>없음</Korean>
+            <Chinesesimp>无</Chinesesimp>
+            <Chinese>無</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_medic">
+            <English>Regular medic</English>
+            <Russian>Обычный медик</Russian>
+            <Polish>Zwykły medyk</Polish>
+            <Spanish>Médico regular</Spanish>
+            <German>Normaler Sanitäter</German>
+            <Czech>Řadový zdravotník</Czech>
+            <Portuguese>Médico regular</Portuguese>
+            <French>Infirmier</French>
+            <Hungarian>Hagyományos orvos</Hungarian>
+            <Italian>Medico Regolare</Italian>
+            <Japanese>通常の衛生兵</Japanese>
+            <Korean>일반 의무병</Korean>
+            <Chinesesimp>普通医疗兵</Chinesesimp>
+            <Chinese>普通醫療兵</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicVehicle_enabled_DisplayName">
+            <English>Is Medical Vehicle</English>
+            <Russian>Является медицинским транспортом</Russian>
+            <Polish>Jest pojazdem medycznym</Polish>
+            <Spanish>Es vehículo médico</Spanish>
+            <German>Ist medizinisches Fahrzeug</German>
+            <Czech>Zdravotnické vozidlo</Czech>
+            <Portuguese>É um veículo médico</Portuguese>
+            <French>Véhicule médical</French>
+            <Hungarian>Orvosi jármű-e</Hungarian>
+            <Italian>E' Veicolo Medico</Italian>
+            <Japanese>医療車両として</Japanese>
+            <Korean>의료 차량</Korean>
+            <Chinesesimp>是医疗载具</Chinesesimp>
+            <Chinese>是醫療載具</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicalFacility_enabled_DisplayName">
+            <English>Is Medical Facility</English>
+            <Russian>Является госпиталем</Russian>
+            <Polish>Jest budynkiem medycznym</Polish>
+            <Spanish>Es centro médico</Spanish>
+            <German>Ist eine medizinische Einrichtung</German>
+            <Czech>Zdravotnické zařízení</Czech>
+            <Portuguese>É uma instalação médica</Portuguese>
+            <French>Est une installation médical</French>
+            <Hungarian>Orvosi létesítmény-e</Hungarian>
+            <Italian>E' Struttura Medica</Italian>
+            <Japanese>医療施設として</Japanese>
+            <Korean>의료시설</Korean>
+            <Chinesesimp>是医疗设施</Chinesesimp>
+            <Chinese>是醫療設施</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicalFacility_enabled_Description">
+            <English>Registers an object as a medical facility</English>
+            <Russian>Определяет объект в качестве госпиталя</Russian>
+            <Polish>Przypisuje danemu obiektowi status budynku medycznego</Polish>
+            <Spanish>Registra un objeto como un centro médico</Spanish>
+            <German>Definiert ein Objekt als medizinische Einrichtung</German>
+            <Czech>Registruje objekt jako zdravotnické zařízení</Czech>
+            <Portuguese>Registra um objeto como instalacão médica</Portuguese>
+            <French>Enregistrer un objet comme une installation médical</French>
+            <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
+            <Italian>Registra un oggetto come struttura medica</Italian>
+            <Japanese>オブジェクトを医療施設として割り当てる</Japanese>
+            <Korean>물체를 의료시설로 등록합니다</Korean>
+            <Chinesesimp>指定一个物件作为医疗设施</Chinesesimp>
+            <Chinese>指定一個物件作為醫療設施</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctor">
+            <English>Doctor (Only Advanced Medics)</English>
+            <Russian>Врач (только усложн.)</Russian>
+            <Polish>Doktor (tylko zaawansowani medycy)</Polish>
+            <Spanish>Doctor (Solo medicina avanzada)</Spanish>
+            <German>Arzt (Nur erweitertes Sanitätssystem)</German>
+            <Czech>Doktor (Pouze pokročilý zdravotníci)</Czech>
+            <Portuguese>Doutor (Somente médicos avançados)</Portuguese>
+            <French>Médecin (traitements avancés uniquement)</French>
+            <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
+            <Italian>Dottore (Solo Medici Avanzati)</Italian>
+            <Japanese>医師 (アドバンスド医療のみ)</Japanese>
+            <Korean>의사 (오직 고급 의료에서만)</Korean>
+            <Chinesesimp>军医 (只限进阶医疗系统)</Chinesesimp>
+            <Chinese>軍醫 (只限進階醫療系統)</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctorShort">
+            <English>Doctor</English>
+            <Russian>Врач</Russian>
+            <Polish>Doktor</Polish>
+            <Spanish>Doctor</Spanish>
+            <German>Arzt</German>
+            <Czech>Doktor</Czech>
+            <Portuguese>Doutor</Portuguese>
+            <French>Médecin</French>
+            <Hungarian>Doktor</Hungarian>
+            <Italian>Dottore</Italian>
+            <Japanese>医師</Japanese>
+            <Korean>의사</Korean>
+            <Chinesesimp>军医</Chinesesimp>
+            <Chinese>軍醫</Chinese>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_allowLitterCreation">
             <English>Enable Litter</English>
             <Russian>Включить мусор</Russian>
