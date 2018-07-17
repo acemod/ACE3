@@ -18,7 +18,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
 
 class ACE_Extensions {
     extensions[] += {"ace_medical"};
