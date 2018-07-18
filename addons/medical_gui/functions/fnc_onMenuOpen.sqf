@@ -60,7 +60,6 @@ disableSerialization;
 (_display displayCtrl 2001) ctrlSetTooltip localize LSTRING(SELECT_TRIAGE_STATUS);
 
 (_display displayCtrl 1) ctrlSetText format ["%1", [_target] call EFUNC(common,getName)];
-setMousePosition [0.4, 0.4];
 
 if (GVAR(MenuPFHID) != -1) exitWith {ERROR("PFID already running");};
 
