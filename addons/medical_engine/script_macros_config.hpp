@@ -1,7 +1,7 @@
 /*
     Usage:
 
-    #include "\z\ace\addons\medical\script_macros_config.hpp"
+    #include "\z\ace\addons\medical_engine\script_macros_config.hpp"
 
     class CfgVehicles {
         class My_AwesomeUnit_base;
