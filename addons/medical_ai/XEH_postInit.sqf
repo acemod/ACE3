@@ -19,7 +19,7 @@
 
             private _medic = objNull;
             {
-                if ((!isPlayer _x) && {[_x] call EFUNC(medical_status,isMedic)}) exitWith {
+                if ((!isPlayer _x) && {[_x] call EFUNC(medical_treatment,isMedic)}) exitWith {
                     _medic = _x;
                 };
             } forEach (units _unit);

@@ -9,9 +9,9 @@
  * Is unit in medical vehicle? <BOOL>
  *
  * Example:
- * [player] call ace_medical_status_fnc_isInMedicalVehicle
+ * [player] call ace_medical_treatment_fnc_isInMedicalVehicle
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
