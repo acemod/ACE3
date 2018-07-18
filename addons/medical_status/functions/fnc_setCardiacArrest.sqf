@@ -26,4 +26,4 @@ _unit setVariable [VAR_HEART_RATE, 0, true];
 
 ["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
-[_unit, true] call EFUNC(medical,setUnconsciousStatemachine);
+[_unit, true] call FUNC(setUnconsciousStatemachine);

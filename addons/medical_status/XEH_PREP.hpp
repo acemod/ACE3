@@ -15,4 +15,4 @@ PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(setCardiacArrest);
 PREP(setDead);
-PREP(setUnconscious);
+PREP(setUnconsciousStatemachine);

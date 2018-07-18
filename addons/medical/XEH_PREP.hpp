@@ -1,9 +1,6 @@
 PREP(addDamageToUnit);
-PREP(addStateHandler);
 PREP(adjustPainLevel);
 PREP(dev_watchMedicalStats);
-PREP(displayTriageCard);
 PREP(getUnitState);
-PREP(handleIncapacitation);
 PREP(moduleMedicalSettings);
-PREP(setUnconsciousStatemachine);
+PREP(setUnconscious);

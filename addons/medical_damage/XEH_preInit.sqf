@@ -26,8 +26,6 @@ if ("ace_medical" callExtension "version" != "") then {
 
     private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
     [_unit, _woundedHitPoint, _receivedDamage, _typeOfDamage] call FUNC(woundsHandlerActive);
-
-    // [_unit, EGVAR(medical,STATE_MACHINE)] call EFUNC(medical,addStateHandler);
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;
