@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
-        <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
+        <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (podstawowa)</Polish>
@@ -17,7 +17,7 @@
             <Chinesesimp>[ACE] 医疗补给箱（基本）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（基本）</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate_advanced">
+        <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate_advanced">
             <English>[ACE] Medical Supply Crate (Advanced)</English>
             <Russian>[ACE] Ящик с медикаментами (усложн. медицина)</Russian>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (zaawansowana)</Polish>
@@ -33,7 +33,7 @@
             <Chinesesimp>[ACE] 医疗补给箱（进阶）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（進階）</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Attributes_isMedic_Description">
+        <Key ID="STR_ACE_Medical_treatment_Attributes_isMedic_Description">
             <English>Medical training</English>
             <Polish>Wyszkolenie medyczne</Polish>
             <Italian>Addestramento Medico</Italian>
@@ -48,7 +48,7 @@
             <Chinesesimp>医疗训练</Chinesesimp>
             <Chinese>醫療訓練</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_DisplayName">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicRoles_role_DisplayName">
             <English>Is Medic</English>
             <Russian>Является медиком</Russian>
             <Polish>Klasa medyczna</Polish>
@@ -64,7 +64,7 @@
             <Chinesesimp>是医疗兵</Chinesesimp>
             <Chinese>是醫療兵</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_Description">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicRoles_role_Description">
             <English>This module allows you to assign the medic class to selected units.</English>
             <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
             <German>Dieses Modul legt fest, welche Einheiten Sanitäter sind.</German>
@@ -80,7 +80,7 @@
             <Chinesesimp>本模块可让被同步的单位成为医疗兵</Chinesesimp>
             <Chinese>本模塊可讓被同步的單位成為醫療兵</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_none">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicRoles_role_none">
             <English>None</English>
             <Russian>Нет</Russian>
             <Polish>Żadna</Polish>
@@ -96,7 +96,7 @@
             <Chinesesimp>无</Chinesesimp>
             <Chinese>無</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_medic">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicRoles_role_medic">
             <English>Regular medic</English>
             <Russian>Обычный медик</Russian>
             <Polish>Zwykły medyk</Polish>
@@ -112,7 +112,7 @@
             <Chinesesimp>普通医疗兵</Chinesesimp>
             <Chinese>普通醫療兵</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicVehicle_enabled_DisplayName">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicVehicle_enabled_DisplayName">
             <English>Is Medical Vehicle</English>
             <Russian>Является медицинским транспортом</Russian>
             <Polish>Jest pojazdem medycznym</Polish>
@@ -128,7 +128,7 @@
             <Chinesesimp>是医疗载具</Chinesesimp>
             <Chinese>是醫療載具</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicalFacility_enabled_DisplayName">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicalFacility_enabled_DisplayName">
             <English>Is Medical Facility</English>
             <Russian>Является госпиталем</Russian>
             <Polish>Jest budynkiem medycznym</Polish>
@@ -144,7 +144,7 @@
             <Chinesesimp>是医疗设施</Chinesesimp>
             <Chinese>是醫療設施</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicalFacility_enabled_Description">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicalFacility_enabled_Description">
             <English>Registers an object as a medical facility</English>
             <Russian>Определяет объект в качестве госпиталя</Russian>
             <Polish>Przypisuje danemu obiektowi status budynku medycznego</Polish>
@@ -160,7 +160,7 @@
             <Chinesesimp>指定一个物件作为医疗设施</Chinesesimp>
             <Chinese>指定一個物件作為醫療設施</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctor">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicRoles_role_doctor">
             <English>Doctor (Only Advanced Medics)</English>
             <Russian>Врач (только усложн.)</Russian>
             <Polish>Doktor (tylko zaawansowani medycy)</Polish>
@@ -176,7 +176,7 @@
             <Chinesesimp>军医 (只限进阶医疗系统)</Chinesesimp>
             <Chinese>軍醫 (只限進階醫療系統)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AssignMedicRoles_role_doctorShort">
+        <Key ID="STR_ACE_Medical_treatment_AssignMedicRoles_role_doctorShort">
             <English>Doctor</English>
             <Russian>Врач</Russian>
             <Polish>Doktor</Polish>
@@ -192,7 +192,7 @@
             <Chinesesimp>军医</Chinesesimp>
             <Chinese>軍醫</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_allowLitterCreation">
+        <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
             <English>Enable Litter</English>
             <Russian>Включить мусор</Russian>
             <Polish>Aktywuj odpadki</Polish>
@@ -205,7 +205,7 @@
             <Italian>Abilita Barella</Italian>
             <Japanese>医療廃棄物の表示を有効化</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_allowLitterCreation_Description">
+        <Key ID="STR_ACE_Medical_treatment_allowLitterCreation_Description">
             <English>Enable litter being created upon treatment</English>
             <Russian>Включить появление мусора после лечения</Russian>
             <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
@@ -218,15 +218,15 @@
             <Italian>Abilita la creazione della barella dopo trattamento</Italian>
             <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRcreatesPulse">
+        <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
             <English>CPR creates pulse</English>
             <German>HLW erzeugt einen Puls</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRcreatesPulse_Description">
+        <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
             <English>CPR will create a pulse for the patient while performing</English>
             <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_litterSimulationDetail">
+        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
             <Polish>Detale zużytych medykamentów</Polish>
             <Spanish>Detalle de simulación de basura</Spanish>
@@ -239,7 +239,7 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
             <Japanese>医療廃棄物を再現する詳細度</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_litterSimulationDetail_Description">
+        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Description">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
             <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
@@ -252,7 +252,7 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
             <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_litterCleanUpDelay">
+        <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay">
             <English>Life time of litter objects</English>
             <Russian>Время удаления мусора</Russian>
             <Polish>Długość życia odpadków</Polish>
@@ -265,7 +265,7 @@
             <Italian>Tempo di vita delle barelle</Italian>
             <Japanese>医療廃棄物の作成限界数を設定</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_litterCleanUpDelay_Description">
+        <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay_Description">
             <English>How long should litter objects stay? In seconds. -1 is forever.</English>
             <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
             <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
@@ -278,19 +278,19 @@
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
             <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_PAKTime">
+        <Key ID="STR_ACE_Medical_treatment_PAKTime">
             <English>How long should PAK take to apply ?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_PAKTime_Description">
+        <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
             <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_MedkitTime">
+        <Key ID="STR_ACE_Medical_treatment_MedkitTime">
             <English>How long should Medkit take to apply ?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_MedkitTime_Description">
+        <Key ID="STR_ACE_Medical_treatment_MedkitTime_Description">
             <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Bandage_Basic_Display">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
             <German>Bandage (Einfach)</German>
             <Russian>Повязка (обычная)</Russian>
@@ -306,7 +306,7 @@
             <Chinesesimp>基础绷带</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_Basic_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_Basic_Desc_Short">
             <English>Used to cover a wound</English>
             <Russian>Для перевязки ран</Russian>
             <Spanish>Utilizado para cubrir una herida</Spanish>
@@ -322,7 +322,7 @@
             <Chinesesimp>用于覆盖伤口</Chinesesimp>
             <Chinese>用於覆蓋傷口</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_Basic_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_Basic_Desc_Use">
             <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound once bleeding has been stemmed.</English>
             <German>Ein Verband, der aus einem besonderen Material besteht um die Wunde zu schützen, nachdem die Blutung gestoppt wurde.</German>
             <Russian>Повязка, накладываемая поверх раны после остановки кровотечения.</Russian>
@@ -338,7 +338,7 @@
             <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Display">
+        <Key ID="STR_ACE_Medical_treatment_Packing_Bandage_Display">
             <English>Packing Bandage</English>
             <German>Mullbinde</German>
             <Russian>Тампонирующая повязка</Russian>
@@ -354,7 +354,7 @@
             <Chinesesimp>包扎绷带</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
             <German>Wird verwendet, um mittlere bis große Wunden abzudecken und Blutungen zu stoppen</German>
             <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
@@ -370,7 +370,7 @@
             <Chinesesimp>用于包扎中到大型伤口, 并防止出血</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Packing_Bandage_Desc_Use">
             <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is an option in large polytrauma injuries.</English>
             <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжёлых сочетанных ранениях возможно тампонирование раны.</Russian>
             <Spanish>Se utiliza para detener la hemorragia de una herida y favorecer su cicatrización. Se usa en grandes lesiones o politraumatismos.</Spanish>
@@ -386,7 +386,7 @@
             <Chinesesimp>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Display">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_Elastic_Display">
             <English>Bandage (Elastic)</English>
             <German>Bandage (Elastisch)</German>
             <Russian>Повязка (давящая)</Russian>
@@ -402,7 +402,7 @@
             <Chinesesimp>弹性绷带</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_Elastic_Desc_Short">
             <English>Bandage kit, Elastic</English>
             <German>Elastische Binde (Kompressionsbinde)</German>
             <Russian>Давящая повязка</Russian>
@@ -418,7 +418,7 @@
             <Chinesesimp>弹性绷带</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_Elastic_Desc_Use">
             <English>Allows an even compression and extra support to the injured area.</English>
             <German>Ermöglicht eine gleichmäßige Kompression und zusätzliche Unterstützung für den verletzten Bereich.</German>
             <Russian>Давящая повязка обеспечивает равномерное сжатие и дополнительную поддержку повреждённой области</Russian>
@@ -434,7 +434,7 @@
             <Chinesesimp>可对伤口持续压迫并固定以防止伤口情况变严重</Chinesesimp>
             <Chinese>可對傷口持續壓迫並固定以防止傷口情況變嚴重</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Tourniquet_Display">
+        <Key ID="STR_ACE_Medical_treatment_Tourniquet_Display">
             <English>Tourniquet (CAT)</English>
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
@@ -450,7 +450,7 @@
             <Chinesesimp>军用止血带</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Tourniquet_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Tourniquet_Desc_Short">
             <English>Slows down blood loss when bleeding</English>
             <Russian>Замедляет кровопотерю при кровотечении</Russian>
             <Spanish>Reduce la velocidad de pérdida de sangre</Spanish>
@@ -466,7 +466,7 @@
             <Chinesesimp>减缓失血的速度</Chinesesimp>
             <Chinese>減緩失血的速度</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Tourniquet_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Tourniquet_Desc_Use">
             <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or slowing blood flow and therefore decreasing loss of blood.</English>
             <Russian>Жгут используется для прижатия сосудов к костным выступам, которое приводит к остановке или значительному уменьшению кровотечения</Russian>
             <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre</Spanish>
@@ -482,7 +482,7 @@
             <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的</Chinesesimp>
             <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
+        <Key ID="STR_ACE_Medical_treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
             <German>Morphium-Autoinjektor</German>
             <Russian>Морфин в пневмошприце</Russian>
@@ -498,7 +498,7 @@
             <Chinesesimp>吗啡自动注射器</Chinesesimp>
             <Chinese>嗎啡自動注射器</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Morphine_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Morphine_Desc_Short">
             <English>Used to combat moderate to severe pain experiences</English>
             <German>Wird verwendet um moderate bis starke Schmerzen zu lindern.</German>
             <Russian>Для снятия средних и сильных болевых ощущений</Russian>
@@ -514,7 +514,7 @@
             <Chinesesimp>减低中度至重度的疼痛感</Chinesesimp>
             <Chinese>減低中度至重度的疼痛感</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Morphine_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Morphine_Desc_Use">
             <English>An analgesic used to combat moderate to severe pain experiences.</English>
             <Russian>Обезболивающее для снятия средних и сильных болевых ощущений.</Russian>
             <Spanish>Analgésico usado para combatir los estados dolorosos de moderados a severos.</Spanish>
@@ -530,7 +530,7 @@
             <Chinesesimp>止痛药的一种, 用于减低中度至重度的疼痛感</Chinesesimp>
             <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Adenosine_Display">
+        <Key ID="STR_ACE_Medical_treatment_Adenosine_Display">
             <English>Adenosine autoinjector</English>
             <German>Adenosin-Autoinjektor</German>
             <Spanish>Asenosina auto-inyectable</Spanish>
@@ -545,7 +545,7 @@
             <Chinesesimp>腺苷自动注射器</Chinesesimp>
             <Chinese>腺苷自動注射器</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
             <German>Wird verwendet um die Symptome von Epiniphrin zu lindern</German>
             <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
@@ -560,7 +560,7 @@
             <Chinesesimp>用来对付肾上腺素的影响</Chinesesimp>
             <Chinese>用來對付腎上腺素的影響</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
             <German>Ein Medikament, das die Symptome von Epiniphrin bekämpft.</German>
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
@@ -575,7 +575,7 @@
             <Chinesesimp>一种药物用于减低肾上腺素的效果</Chinesesimp>
             <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Atropine_Display">
+        <Key ID="STR_ACE_Medical_treatment_Atropine_Display">
             <English>Atropine autoinjector</English>
             <Russian>Атропин в пневмошприце</Russian>
             <Spanish>Atropina auto-inyectable</Spanish>
@@ -591,7 +591,7 @@
             <Chinesesimp>阿托品自动注射器</Chinesesimp>
             <Chinese>阿托品自動注射器</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Atropine_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Atropine_Desc_Short">
             <English>Used in NBC scenarios</English>
             <Russian>Применяется для защиты от ОМП</Russian>
             <Spanish>Usado en escenarios NBQ</Spanish>
@@ -607,7 +607,7 @@
             <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
             <Chinese>使用於核生化汙染的情況</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Atropine_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Atropine_Desc_Use">
             <English>A drug used by the Military in NBC scenarios.</English>
             <Russian>Препарат, используемый в войсках для защиты от оружия массового поражения.</Russian>
             <Spanish>Medicamento usado por militares en escenarios NBQ</Spanish>
@@ -623,7 +623,7 @@
             <Chinesesimp>军用神经解毒针, 用来应付核生化污染的情况.</Chinesesimp>
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Display">
+        <Key ID="STR_ACE_Medical_treatment_Epinephrine_Display">
             <English>Epinephrine autoinjector</English>
             <Russian>Адреналин в пневмошприце</Russian>
             <Spanish>Epinefrina auto-inyectable</Spanish>
@@ -639,7 +639,7 @@
             <Chinesesimp>肾上腺素自动注射器</Chinesesimp>
             <Chinese>腎上腺素自動注射器</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Epinephrine_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Epinephrine_Desc_Short">
             <English>Increase heart rate and counter effects given by allergic reactions</English>
             <Russian>Стимулирует работу сердца и купирует аллергические реакции</Russian>
             <Spanish>Aumenta la frecuencia cardiaca y contraresta los efectos de las reacciones alérgicas</Spanish>
@@ -655,7 +655,7 @@
             <Chinesesimp>增加心跳速率的一种药物</Chinesesimp>
             <Chinese>增加心跳速率的一種藥物</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Epinephrine_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Epinephrine_Desc_Use">
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
             <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при остановке сердца с уменьшенной вероятностью благоприятного исхода.</Russian>
             <Spanish>Medicamento que dilata los bronquios, aumenta la frecuencia cardiaca y contrarresta los efectos de las reacciones alérgicas (anafilaxis). Se utiliza en caso de paros cardiacos repentinos.</Spanish>
@@ -671,7 +671,7 @@
             <Chinesesimp>俗称强心针, 为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应(过敏性休克), 在心跳骤停时有恢复心跳的效果!</Chinesesimp>
             <Chinese>俗稱強心針, 為一種支氣管擴張藥物, 會增加心跳速率並減緩過敏反應(過敏性休克), 在心跳驟停時有恢復心跳的效果!</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Plasma_IV">
+        <Key ID="STR_ACE_Medical_treatment_Plasma_IV">
             <English>Plasma IV (1000ml)</English>
             <Russian>Плазма для в/в вливания (1000 мл)</Russian>
             <Spanish>Plasma IV (1000ml)</Spanish>
@@ -687,7 +687,7 @@
             <Chinesesimp>血浆 (1000ml)</Chinesesimp>
             <Chinese>血漿 (1000ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Plasma_IV_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Plasma_IV_Desc_Short">
             <English>A volume-expanding blood supplement.</English>
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
@@ -703,7 +703,7 @@
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Chinese>可快速得到血液補充</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Plasma_IV_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Plasma_IV_Desc_Use">
             <English>A volume-expanding blood supplement.</English>
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
@@ -719,7 +719,7 @@
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Chinese>可快速得到血液補充</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Plasma_IV_500">
+        <Key ID="STR_ACE_Medical_treatment_Plasma_IV_500">
             <English>Plasma IV (500ml)</English>
             <Russian>Плазма для в/в вливания (500 мл)</Russian>
             <Spanish>Plasma IV (500ml)</Spanish>
@@ -735,7 +735,7 @@
             <Chinesesimp>血浆 (500ml)</Chinesesimp>
             <Chinese>血漿 (500ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Plasma_IV_250">
+        <Key ID="STR_ACE_Medical_treatment_Plasma_IV_250">
             <English>Plasma IV (250ml)</English>
             <Russian>Плазма для в/в вливания (250 мл)</Russian>
             <Spanish>Plasma IV (250ml)</Spanish>
@@ -751,7 +751,7 @@
             <Chinesesimp>血浆 (250ml)</Chinesesimp>
             <Chinese>血漿 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Blood_IV">
+        <Key ID="STR_ACE_Medical_treatment_Blood_IV">
             <English>Blood IV (1000ml)</English>
             <Russian>Кровь для переливания (1000 мл)</Russian>
             <Spanish>Sangre IV (1000ml)</Spanish>
@@ -767,7 +767,7 @@
             <Chinesesimp>血液 (1000ml)</Chinesesimp>
             <Chinese>血液 (1000ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Blood_IV_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood (keep cold)</English>
             <Russian>Пакет крови для возмещения объёма потерянной крови (хранить в холодильнике)</Russian>
             <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
@@ -783,7 +783,7 @@
             <Chinesesimp>血液, 用于补充伤者流失的血液 (需冷藏)</Chinesesimp>
             <Chinese>血液, 用於補充傷者流失的血液 (需冷藏)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Blood_IV_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Blood_IV_Desc_Use">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>
             <Russian>Кровь I группы, резус-отрицательная, применяется по жизненным показаниям для возмещения объема потерянной крови на догоспитальном этапе оказания медицинской помощи.</Russian>
             <Polish>Krew 0 Rh-, używana w rzadkich i szczególnych przypadkach do uzupełnienia krwi u pacjenta, zazwyczaj w trakcie fazie transportu rannej osoby do szpitala.</Polish>
@@ -799,7 +799,7 @@
             <Chinesesimp>O型负值注射用血液, 在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
             <Chinese>O型負值注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Blood_IV_500">
+        <Key ID="STR_ACE_Medical_treatment_Blood_IV_500">
             <English>Blood IV (500ml)</English>
             <Russian>Кровь для переливания (500 мл)</Russian>
             <Spanish>Sangre IV (500ml)</Spanish>
@@ -815,7 +815,7 @@
             <Chinesesimp>血液 (500ml)</Chinesesimp>
             <Chinese>血液 (500ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Blood_IV_250">
+        <Key ID="STR_ACE_Medical_treatment_Blood_IV_250">
             <English>Blood IV (250ml)</English>
             <Russian>Кровь для переливания (250 мл)</Russian>
             <Spanish>Sangre IV (250ml)</Spanish>
@@ -831,7 +831,7 @@
             <Chinesesimp>血液 (250ml)</Chinesesimp>
             <Chinese>血液 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Saline_IV">
+        <Key ID="STR_ACE_Medical_treatment_Saline_IV">
             <English>Saline IV (1000ml)</English>
             <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
             <Spanish>Salino IV (1000ml)</Spanish>
@@ -847,7 +847,7 @@
             <Chinesesimp>生理食盐水 (1000ml)</Chinesesimp>
             <Chinese>生理食鹽水 (1000ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Saline_IV_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
             <Russian>Пакет физраствора для возмещения объёма потерянной крови</Russian>
             <Spanish>Solución salina intravenosa, para restaurar el volumen sanguíneo</Spanish>
@@ -863,7 +863,7 @@
             <Chinesesimp>生理食盐水, 用于恢复伤者血液</Chinesesimp>
             <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Saline_IV_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Saline_IV_Desc_Use">
             <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.</English>
             <Russian>Пакет физиологического раствора для возмещения объёма потерянной крови путем внутривенного вливания</Russian>
             <Spanish>Suero fisiológico inoculado al torrente sanguíneo de forma intravenosa.</Spanish>
@@ -879,7 +879,7 @@
             <Chinesesimp>利用静脉注射进入人体血液系统, 帮助伤者血液恢复</Chinesesimp>
             <Chinese>利用靜脈注射進入人體血液系統, 幫助傷者血液恢復</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Saline_IV_500">
+        <Key ID="STR_ACE_Medical_treatment_Saline_IV_500">
             <English>Saline IV (500ml)</English>
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
             <Spanish>Salino IV (500ml)</Spanish>
@@ -895,7 +895,7 @@
             <Chinesesimp>生理食盐水 (500ml)</Chinesesimp>
             <Chinese>生理食鹽水 (500ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Saline_IV_250">
+        <Key ID="STR_ACE_Medical_treatment_Saline_IV_250">
             <English>Saline IV (250ml)</English>
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
             <Spanish>Salino IV (250ml)</Spanish>
@@ -911,7 +911,7 @@
             <Chinesesimp>生理食盐水 (250ml)</Chinesesimp>
             <Chinese>生理食鹽水 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_QuikClot_Display">
+        <Key ID="STR_ACE_Medical_treatment_QuikClot_Display">
             <English>Basic Field Dressing (QuikClot)</English>
             <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
             <Spanish>Vendaje básico (QuickClot)</Spanish>
@@ -927,7 +927,7 @@
             <Chinesesimp>基本战地包扎 (止血粉)</Chinesesimp>
             <Chinese>基本戰地包紮 (止血粉)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_QuikClot_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_QuikClot_Desc_Short">
             <English>QuikClot bandage</English>
             <Russian>Гемостатический пакет QuikClot</Russian>
             <Spanish>Vendaje QuikClot</Spanish>
@@ -943,7 +943,7 @@
             <Chinesesimp>止血粉绷带</Chinesesimp>
             <Chinese>止血粉繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_QuikClot_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_QuikClot_Desc_Use">
             <English>Hemostatic bandage with coagulant that stops bleeding.</English>
             <Russian>Медицинский коагулянт для экстренной остановки кровотечения</Russian>
             <French>Un bandage aidant à coaguler les saignements mineurs à moyens.</French>
@@ -959,19 +959,19 @@
             <Chinesesimp>包含止血粉成分的止血绷带, 可用于止血</Chinesesimp>
             <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Med_Kit_Display">
+        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Display">
             <English>Medkit</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Med_Kit_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Desc_Short">
             <English>...</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Med_Kit_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Desc_Use">
             <English>...</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Use_Med_Kit">
+        <Key ID="STR_ACE_Medical_treatment_Use_Med_Kit">
             <English>Use Medkit</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Aid_Kit_Display">
+        <Key ID="STR_ACE_Medical_treatment_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
             <Russian>Аптечка</Russian>
             <French>Trousse sanitaire</French>
@@ -987,7 +987,7 @@
             <Chinesesimp>个人急救包</Chinesesimp>
             <Chinese>個人急救包</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Aid_Kit_Desc_Short">
             <English>Includes various treatment kit needed for stitching or advanced treatment</English>
             <Russian>Содержит различные материалы и инструменты для зашивания ран и оказания специальной медпомощи.</Russian>
             <Spanish>Incluye material médico para tratamientos avanzados</Spanish>
@@ -1003,7 +1003,7 @@
             <Chinesesimp>包含各种医疗套件, 以及进阶伤口系统需要的缝合用品</Chinesesimp>
             <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Aid_Kit_Desc_Use">
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
             <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
@@ -1019,7 +1019,7 @@
             <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用</Chinesesimp>
             <Chinese>個人急救包可用於戰地縫合手術或進階傷口系統使用</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Use_Aid_Kit">
+        <Key ID="STR_ACE_Medical_treatment_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
             <German>Erste-Hilfe-Set benutzen</German>
             <Russian>Использовать аптечку</Russian>
@@ -1035,7 +1035,7 @@
             <Chinesesimp>使用个人急救包</Chinesesimp>
             <Chinese>使用個人急救包</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_SurgicalKit_Display">
+        <Key ID="STR_ACE_Medical_treatment_SurgicalKit_Display">
             <English>Surgical Kit</English>
             <French>Trousse chirurgicale</French>
             <Russian>Хирургический набор</Russian>
@@ -1051,7 +1051,7 @@
             <Chinesesimp>手术包</Chinesesimp>
             <Chinese>手術包</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_SurgicalKit_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_SurgicalKit_Desc_Short">
             <English>Surgical Kit for in field advanced medical treatment</English>
             <French>Trousse chirurgicale pour le traitement sur le terrain</French>
             <Russian>Набор для хирургической помощи в полевых условиях</Russian>
@@ -1067,7 +1067,7 @@
             <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_SurgicalKit_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_SurgicalKit_Desc_Use">
             <English>Surgical Kit for in field advanced medical treatment</English>
             <Russian>Набор для хирургической помощи в полевых условиях</Russian>
             <Spanish>Kit quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
@@ -1083,7 +1083,7 @@
             <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Use_SurgicalKit">
+        <Key ID="STR_ACE_Medical_treatment_Use_SurgicalKit">
             <English>Use Surgical Kit</English>
             <German>Operationsset benutzen</German>
             <Italian>Usa kit chirurgico</Italian>
@@ -1099,7 +1099,7 @@
             <Chinesesimp>使用手术包</Chinesesimp>
             <Chinese>使用手術包</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
+        <Key ID="STR_ACE_Medical_treatment_Bodybag_Display">
             <English>Bodybag</English>
             <French>Housse mortuaire</French>
             <Russian>Мешок для трупов</Russian>
@@ -1115,7 +1115,7 @@
             <Chinesesimp>尸袋</Chinesesimp>
             <Chinese>屍袋</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bodybag_Desc_Short">
+        <Key ID="STR_ACE_Medical_treatment_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
             <French>Housse de transport des corps</French>
             <Russian>Мешок для упаковки трупов</Russian>
@@ -1131,7 +1131,7 @@
             <Chinesesimp>用来装尸体用</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bodybag_Desc_Use">
+        <Key ID="STR_ACE_Medical_treatment_Bodybag_Desc_Use">
             <English>A bodybag for dead bodies</English>
             <French>Housse de transport des corps</French>
             <Russian>Мешок для упаковки трупов</Russian>
@@ -1147,7 +1147,7 @@
             <Chinesesimp>用来装尸体用</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
+        <Key ID="STR_ACE_Medical_treatment_NoInjuriesBodypart">
             <English>No injuries on this bodypart...</English>
             <German>Körperteil nicht verletzt...</German>
             <Italian>Non ci sono ferite in questa parte del corpo...</Italian>
@@ -1163,7 +1163,7 @@
             <Chinesesimp>此身体部位没有受伤</Chinesesimp>
             <Chinese>此身體部位沒有受傷</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_litterSimulationDetail">
+        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
             <Polish>Detale zużytych medykamentów</Polish>
             <Spanish>Detalle de simulación de basura</Spanish>
@@ -1179,7 +1179,7 @@
             <Chinesesimp>医疗废弃物模拟细节</Chinesesimp>
             <Chinese>醫療廢棄物模擬細節</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
+        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
             <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
@@ -1195,7 +1195,7 @@
             <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会导致画面更新率延迟，因此这由用户端来设定。</Chinesesimp>
             <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定。</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Inject_Adenosine">
+        <Key ID="STR_ACE_Medical_treatment_Inject_Adenosine">
             <English>Inject Adenosine</English>
             <German>Adenosin injizieren</German>
             <Spanish>Inyectar Adenosina</Spanish>
@@ -1210,7 +1210,7 @@
             <Chinesesimp>注射腺苷</Chinesesimp>
             <Chinese>注射腺苷</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Inject_Atropine">
+        <Key ID="STR_ACE_Medical_treatment_Inject_Atropine">
             <English>Inject Atropine</English>
             <German>Atropin injizieren</German>
             <Spanish>Inyectar Atropina</Spanish>
@@ -1226,7 +1226,7 @@
             <Chinesesimp>注射阿托品</Chinesesimp>
             <Chinese>注射阿托品</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Inject_Epinephrine">
+        <Key ID="STR_ACE_Medical_treatment_Inject_Epinephrine">
             <English>Inject Epinephrine</English>
             <German>Epinephrine injizieren</German>
             <Spanish>Inyectar Epinefrina</Spanish>
@@ -1242,7 +1242,7 @@
             <Chinesesimp>注射肾上腺素</Chinesesimp>
             <Chinese>注射腎上腺素</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Inject_Morphine">
+        <Key ID="STR_ACE_Medical_treatment_Inject_Morphine">
             <English>Inject Morphine</English>
             <German>Morphin injizieren</German>
             <Spanish>Inyectar Morfina</Spanish>
@@ -1258,7 +1258,7 @@
             <Chinesesimp>注射吗啡</Chinesesimp>
             <Chinese>注射嗎啡</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Transfuse_Blood">
+        <Key ID="STR_ACE_Medical_treatment_Transfuse_Blood">
             <English>Transfuse Blood</English>
             <German>Bluttransfusion</German>
             <Spanish>Transfundir sangre</Spanish>
@@ -1274,7 +1274,7 @@
             <Chinesesimp>输血液</Chinesesimp>
             <Chinese>輸血液</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Transfuse_Plasma">
+        <Key ID="STR_ACE_Medical_treatment_Transfuse_Plasma">
             <English>Transfuse Plasma</English>
             <German>Plasmatransfusion</German>
             <Spanish>Transfundir plasma</Spanish>
@@ -1290,7 +1290,7 @@
             <Chinesesimp>输血浆</Chinesesimp>
             <Chinese>輸血漿</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Transfuse_Saline">
+        <Key ID="STR_ACE_Medical_treatment_Transfuse_Saline">
             <English>Transfuse Saline</English>
             <German>Salzlösungstransfusion</German>
             <Spanish>Transfundir salino</Spanish>
@@ -1306,7 +1306,7 @@
             <Chinesesimp>注射生理食盐水</Chinesesimp>
             <Chinese>注射生理食鹽水</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Apply_Tourniquet">
+        <Key ID="STR_ACE_Medical_treatment_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
             <German>Tourniquet anwenden</German>
             <Spanish>Aplicar torniquete</Spanish>
@@ -1322,7 +1322,7 @@
             <Chinesesimp>使用军用止血带</Chinesesimp>
             <Chinese>使用軍用止血帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage">
+        <Key ID="STR_ACE_Medical_treatment_Bandage">
             <English>Bandage</English>
             <German>Verbinden</German>
             <Spanish>Venda</Spanish>
@@ -1338,7 +1338,7 @@
             <Chinesesimp>绷带</Chinesesimp>
             <Chinese>繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_HitHead">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_HitHead">
             <English>Bandage Head</English>
             <German>Kopf verbinden</German>
             <Spanish>Vendar la cabeza</Spanish>
@@ -1354,7 +1354,7 @@
             <Chinesesimp>绷带包扎 头部</Chinesesimp>
             <Chinese>繃帶包紮 頭部</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_HitBody">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_HitBody">
             <English>Bandage Torso</English>
             <German>Torso verbinden</German>
             <Spanish>Vendar el torso</Spanish>
@@ -1370,7 +1370,7 @@
             <Chinesesimp>绷带包扎 身体</Chinesesimp>
             <Chinese>繃帶包紮 身體</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_HitLeftArm">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_HitLeftArm">
             <English>Bandage Left Arm</English>
             <German>Linken Arm verbinden</German>
             <Spanish>Vendar el brazo izquierdo</Spanish>
@@ -1386,7 +1386,7 @@
             <Chinesesimp>绷带包扎 左手</Chinesesimp>
             <Chinese>繃帶包紮 左手</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_HitRightArm">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_HitRightArm">
             <English>Bandage Right Arm</English>
             <German>Rechten Arm verbinden</German>
             <Spanish>Vendar el brazo derecho</Spanish>
@@ -1402,7 +1402,7 @@
             <Chinesesimp>绷带包扎 右手</Chinesesimp>
             <Chinese>繃帶包紮 右手</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_HitLeftLeg">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_HitLeftLeg">
             <English>Bandage Left Leg</English>
             <German>Linkes Bein verbinden</German>
             <Spanish>Vendar la pierna izquierda</Spanish>
@@ -1418,7 +1418,7 @@
             <Chinesesimp>绷带包扎 左脚</Chinesesimp>
             <Chinese>繃帶包紮 左腳</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_HitRightLeg">
+        <Key ID="STR_ACE_Medical_treatment_Bandage_HitRightLeg">
             <English>Bandage Right Leg</English>
             <German>Rechtes Bein verbinden</German>
             <Spanish>Vendar la pierna derecha</Spanish>
@@ -1434,7 +1434,7 @@
             <Chinesesimp>绷带包扎 右脚</Chinesesimp>
             <Chinese>繃帶包紮 右腳</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Injecting_Morphine">
+        <Key ID="STR_ACE_Medical_treatment_Injecting_Morphine">
             <English>Injecting Morphine...</English>
             <German>Morphin injizieren...</German>
             <Spanish>Inyectando Morfina...</Spanish>
@@ -1450,7 +1450,7 @@
             <Chinesesimp>吗啡注射中...</Chinesesimp>
             <Chinese>嗎啡注射中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
+        <Key ID="STR_ACE_Medical_treatment_Injecting_Epinephrine">
             <English>Injecting Epinephrine...</English>
             <German>Epinephrin injizieren...</German>
             <Spanish>Inyectando Epinefrina...</Spanish>
@@ -1466,7 +1466,7 @@
             <Chinesesimp>肾上腺素注射中...</Chinesesimp>
             <Chinese>腎上腺素注射中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Injecting_Adenosine">
+        <Key ID="STR_ACE_Medical_treatment_Injecting_Adenosine">
             <English>Injecting Adenosine...</English>
             <German>Adenosin injizieren...</German>
             <Spanish>Inyectando Adenosina...</Spanish>
@@ -1481,7 +1481,7 @@
             <Chinesesimp>腺苷注射中...</Chinesesimp>
             <Chinese>腺苷注射中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Injecting_Atropine">
+        <Key ID="STR_ACE_Medical_treatment_Injecting_Atropine">
             <English>Injecting Atropine...</English>
             <German>Atropin injizieren...</German>
             <Spanish>Inyectando Atropina...</Spanish>
@@ -1497,7 +1497,7 @@
             <Chinesesimp>阿托品注射中 ...</Chinesesimp>
             <Chinese>阿托品注射中 ...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Transfusing_Blood">
+        <Key ID="STR_ACE_Medical_treatment_Transfusing_Blood">
             <English>Transfusing Blood...</English>
             <German>Bluttransfusion...</German>
             <Spanish>Transfusión de sangre...</Spanish>
@@ -1513,7 +1513,7 @@
             <Chinesesimp>输血液中 ...</Chinesesimp>
             <Chinese>輸血液中 ...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Transfusing_Saline">
+        <Key ID="STR_ACE_Medical_treatment_Transfusing_Saline">
             <English>Transfusing Saline...</English>
             <German>Salzlösungtransfusion...</German>
             <Spanish>Transfusión de salino...</Spanish>
@@ -1529,7 +1529,7 @@
             <Chinesesimp>施打生理食盐水中 ...</Chinesesimp>
             <Chinese>施打生理食鹽水中 ...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Transfusing_Plasma">
+        <Key ID="STR_ACE_Medical_treatment_Transfusing_Plasma">
             <English>Transfusing Plasma...</English>
             <German>Plasmatransfusion...</German>
             <Spanish>Transfusión de plasma...</Spanish>
@@ -1545,7 +1545,7 @@
             <Chinesesimp>输血浆中 ...</Chinesesimp>
             <Chinese>輸血漿中 ...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandaging">
+        <Key ID="STR_ACE_Medical_treatment_Bandaging">
             <English>Bandaging...</English>
             <German>Verbinden...</German>
             <Spanish>Vendando...</Spanish>
@@ -1561,7 +1561,7 @@
             <Chinesesimp>绷带包扎中 ...</Chinesesimp>
             <Chinese>繃帶包紮中 ...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Applying_Tourniquet">
+        <Key ID="STR_ACE_Medical_treatment_Applying_Tourniquet">
             <English>Applying Tourniquet...</English>
             <German>Setze Tourniquet an...</German>
             <Spanish>Aplicando torniquete...</Spanish>
@@ -1577,23 +1577,7 @@
             <Chinesesimp>使用军用止血带中 ...</Chinesesimp>
             <Chinese>使用軍用止血帶中 ...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Medical">
-            <English>Medical</English>
-            <Czech>Lékařské</Czech>
-            <French>Médical</French>
-            <German>Sanitäter</German>
-            <Italian>Medico</Italian>
-            <Polish>Medyczne</Polish>
-            <Portuguese>Médico</Portuguese>
-            <Russian>Медик</Russian>
-            <Spanish>Médico</Spanish>
-            <Hungarian>Orvosi</Hungarian>
-            <Japanese>治療</Japanese>
-            <Korean>치료</Korean>
-            <Chinesesimp>医疗</Chinesesimp>
-            <Chinese>醫療</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Actions_FieldDressing">
+        <Key ID="STR_ACE_Medical_treatment_Actions_FieldDressing">
             <English>Field Dressing</English>
             <German>Wundverband</German>
             <Spanish>Compresa de campaña</Spanish>
@@ -1609,7 +1593,7 @@
             <Chinesesimp>基础绷带</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_PackingBandage">
+        <Key ID="STR_ACE_Medical_treatment_Actions_PackingBandage">
             <English>Packing Bandage</English>
             <German>Mullbinde</German>
             <Spanish>Vendaje compresivo</Spanish>
@@ -1625,7 +1609,7 @@
             <Chinesesimp>包扎绷带</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_ElasticBandage">
+        <Key ID="STR_ACE_Medical_treatment_Actions_ElasticBandage">
             <English>Elastic Bandage</English>
             <German>Elastischer Verband</German>
             <Spanish>Vendaje elástico</Spanish>
@@ -1641,7 +1625,7 @@
             <Chinesesimp>弹性绷带</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_QuikClot">
+        <Key ID="STR_ACE_Medical_treatment_Actions_QuikClot">
             <English>QuikClot</English>
             <German>QuikClot</German>
             <Spanish>QuikClot</Spanish>
@@ -1657,7 +1641,7 @@
             <Chinesesimp>止血粉</Chinesesimp>
             <Chinese>止血粉</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_CheckPulse">
+        <Key ID="STR_ACE_Medical_treatment_Actions_CheckPulse">
             <English>Check Pulse</English>
             <German>Puls überprüfen</German>
             <Spanish>Comprobar pulso</Spanish>
@@ -1673,7 +1657,7 @@
             <Chinesesimp>检查脉搏</Chinesesimp>
             <Chinese>檢查脈搏</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_CheckBloodPressure">
+        <Key ID="STR_ACE_Medical_treatment_Actions_CheckBloodPressure">
             <English>Check Blood Pressure</English>
             <German>Blutdruck überprüfen</German>
             <Spanish>Comprobar presión arterial</Spanish>
@@ -1689,7 +1673,7 @@
             <Chinesesimp>检查血压</Chinesesimp>
             <Chinese>檢查血壓</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_TriageCard">
+        <Key ID="STR_ACE_Medical_treatment_Actions_TriageCard">
             <English>Triage Card</English>
             <German>Triagekarte</German>
             <Spanish>Tarjeta de clasificación</Spanish>
@@ -1705,7 +1689,7 @@
             <Chinesesimp>检伤分类卡</Chinesesimp>
             <Chinese>檢傷分類卡</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_TriageCard_NoEntry">
+        <Key ID="STR_ACE_Medical_treatment_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
             <German>Keine Einträge auf der Triagekarte</German>
             <Italian>Nessuna voce sulla Triage Card</Italian>
@@ -1721,7 +1705,7 @@
             <Chinesesimp>此检伤分类卡上没有任何资料</Chinesesimp>
             <Chinese>此檢傷分類卡上沒有任何資料</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Tourniquet">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Tourniquet">
             <English>Tourniquet</English>
             <German>Tourniquet</German>
             <Spanish>Torniquete</Spanish>
@@ -1737,7 +1721,7 @@
             <Chinesesimp>军用止血带</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_RemoveTourniquet">
+        <Key ID="STR_ACE_Medical_treatment_Actions_RemoveTourniquet">
             <English>Remove Tourniquet</English>
             <German>Tourniquet entfernen</German>
             <Spanish>Quitar torniquete</Spanish>
@@ -1753,7 +1737,7 @@
             <Chinesesimp>移除军用止血带</Chinesesimp>
             <Chinese>移除軍用止血帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Diagnose">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Diagnose">
             <English>Diagnose</English>
             <German>Diagnose</German>
             <Italian>Diagnosi</Italian>
@@ -1769,7 +1753,7 @@
             <Chinesesimp>诊断</Chinesesimp>
             <Chinese>診斷</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Diagnosing">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Diagnosing">
             <English>Diagnosing...</English>
             <German>Diagnostizieren...</German>
             <Italian>Diagnosi in corso...</Italian>
@@ -1785,7 +1769,7 @@
             <Chinesesimp>诊断中...</Chinesesimp>
             <Chinese>診斷中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_CPR">
+        <Key ID="STR_ACE_Medical_treatment_Actions_CPR">
             <English>CPR</English>
             <German>HLW</German>
             <Italian>RCP</Italian>
@@ -1801,7 +1785,7 @@
             <Chinesesimp>心肺复苏术</Chinesesimp>
             <Chinese>心肺復甦術</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_PerformingCPR">
+        <Key ID="STR_ACE_Medical_treatment_Actions_PerformingCPR">
             <English>Performing CPR...</English>
             <German>HLW durchführen...</German>
             <Italian>Eseguendo RCP...</Italian>
@@ -1817,7 +1801,7 @@
             <Chinesesimp>进行心肺复苏术中...</Chinesesimp>
             <Chinese>進行心肺復甦術中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Blood4_1000">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
             <German>Bluttransfusion IV (1000ml)</German>
             <Spanish>Dar Sangre IV (1000ml)</Spanish>
@@ -1833,7 +1817,7 @@
             <Chinesesimp>输血液 (1000ml)</Chinesesimp>
             <Chinese>輸血液 (1000ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Blood4_500">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Blood4_500">
             <English>Give Blood IV (500ml)</English>
             <German>Bluttransfusion IV (500ml)</German>
             <Spanish>Dar Sangre IV (500ml)</Spanish>
@@ -1849,7 +1833,7 @@
             <Chinesesimp>输血液 (500ml)</Chinesesimp>
             <Chinese>輸血液 (500ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Blood4_250">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Blood4_250">
             <English>Give Blood IV (250ml)</English>
             <German>Bluttransfusion IV (250ml)</German>
             <Spanish>Dar Sangre IV (250ml)</Spanish>
@@ -1865,7 +1849,7 @@
             <Chinesesimp>输血液 (250ml)</Chinesesimp>
             <Chinese>輸血液 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Plasma4_1000">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Plasma4_1000">
             <English>Give Plasma IV (1000ml)</English>
             <German>Plasmatransfusion IV (1000ml)</German>
             <Spanish>Dar Plasma IV (1000ml)</Spanish>
@@ -1881,7 +1865,7 @@
             <Chinesesimp>输血浆 (1000ml)</Chinesesimp>
             <Chinese>輸血漿 (1000ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Plasma4_500">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Plasma4_500">
             <English>Give Plasma IV (500ml)</English>
             <German>Plasmatransfusion IV (500ml)</German>
             <Spanish>Dar Plasma IV (500ml)</Spanish>
@@ -1897,7 +1881,7 @@
             <Chinesesimp>输血浆 (500ml)</Chinesesimp>
             <Chinese>輸血漿 (500ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Plasma4_250">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Plasma4_250">
             <English>Give Plasma IV (250ml)</English>
             <German>Plasmatransfusion IV (250ml)</German>
             <Spanish>Dar Plasma IV (250ml)</Spanish>
@@ -1913,7 +1897,7 @@
             <Chinesesimp>输血浆 (250ml)</Chinesesimp>
             <Chinese>輸血漿 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Saline4_1000">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Saline4_1000">
             <English>Give Saline IV (1000ml)</English>
             <German>Kochsalzlösung IV (1000ml)</German>
             <Spanish>Dar Salino IV (1000ml)</Spanish>
@@ -1929,7 +1913,7 @@
             <Chinesesimp>注射生理食盐水 (1000ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (1000ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Saline4_500">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Saline4_500">
             <English>Give Saline IV (500ml)</English>
             <German>Kochsalzlösung IV (500ml)</German>
             <Spanish>Dar Salino IV (500ml)</Spanish>
@@ -1945,7 +1929,7 @@
             <Chinesesimp>注射生理食盐水 (500ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (500ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Actions_Saline4_250">
+        <Key ID="STR_ACE_Medical_treatment_Actions_Saline4_250">
             <English>Give Saline IV (250ml)</English>
             <German>Kochsalzlösung IV (250ml)</German>
             <Spanish>Dar Salino IV (250ml)</Spanish>
@@ -1961,7 +1945,7 @@
             <Chinesesimp>注射生理食盐水 (250ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Triage_Status_Minor">
+        <Key ID="STR_ACE_Medical_treatment_Triage_Status_Minor">
             <English>Minor</English>
             <German>Gering</German>
             <Spanish>Menor</Spanish>
@@ -1977,7 +1961,7 @@
             <Chinesesimp>轻微</Chinesesimp>
             <Chinese>輕微</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Triage_Status_Delayed">
+        <Key ID="STR_ACE_Medical_treatment_Triage_Status_Delayed">
             <English>Delayed</English>
             <Spanish>Retrasado</Spanish>
             <Russian>Срочная помощь</Russian>
@@ -1993,7 +1977,7 @@
             <Chinesesimp>延后</Chinesesimp>
             <Chinese>延後</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Triage_Status_Immediate">
+        <Key ID="STR_ACE_Medical_treatment_Triage_Status_Immediate">
             <English>Immediate</English>
             <Spanish>Inmediato</Spanish>
             <Russian>Неотложная помощь</Russian>
@@ -2009,7 +1993,7 @@
             <Chinesesimp>紧急</Chinesesimp>
             <Chinese>緊急</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Triage_Status_Deceased">
+        <Key ID="STR_ACE_Medical_treatment_Triage_Status_Deceased">
             <English>Deceased</English>
             <Spanish>Fallecido</Spanish>
             <Russian>Труп</Russian>
@@ -2025,7 +2009,7 @@
             <Chinesesimp>死亡</Chinesesimp>
             <Chinese>死亡</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Triage_Status_None">
+        <Key ID="STR_ACE_Medical_treatment_Triage_Status_None">
             <English>None</English>
             <Spanish>Ninguno</Spanish>
             <Russian>Отсутствует</Russian>
@@ -2041,7 +2025,7 @@
             <Chinesesimp>未分类</Chinesesimp>
             <Chinese>未分類</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Normal_Breathing">
+        <Key ID="STR_ACE_Medical_treatment_Normal_Breathing">
             <English>Normal breathing</English>
             <Russian>Дыхание в норме</Russian>
             <Spanish>Respiración normal</Spanish>
@@ -2057,7 +2041,7 @@
             <Chinesesimp>呼吸正常</Chinesesimp>
             <Chinese>呼吸正常</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_No_Breathing">
+        <Key ID="STR_ACE_Medical_treatment_No_Breathing">
             <English>No breathing</English>
             <German>Keine Atmung</German>
             <Russian>Дыхание отсутствует</Russian>
@@ -2073,7 +2057,7 @@
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Chinese>沒有呼吸</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Difficult_Breathing">
+        <Key ID="STR_ACE_Medical_treatment_Difficult_Breathing">
             <English>Difficult breathing</English>
             <Russian>Дыхание затруднено</Russian>
             <Spanish>Dificultad para respirar</Spanish>
@@ -2089,7 +2073,7 @@
             <Chinesesimp>呼吸困难</Chinesesimp>
             <Chinese>呼吸困難</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Almost_No_Breathing">
+        <Key ID="STR_ACE_Medical_treatment_Almost_No_Breathing">
             <English>Almost no breathing</English>
             <German>Beinahe keine Atmung</German>
             <Russian>Дыхание очень слабое</Russian>
@@ -2105,7 +2089,7 @@
             <Chinesesimp>快要没呼吸</Chinesesimp>
             <Chinese>快要沒呼吸</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Status_Bleeding">
+        <Key ID="STR_ACE_Medical_treatment_Status_Bleeding">
             <English>Bleeding</English>
             <German>Blutet</German>
             <Russian>Кровотечение</Russian>
@@ -2121,11 +2105,11 @@
             <Chinesesimp>流血中</Chinesesimp>
             <Chinese>流血中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Status_MildPain">
+        <Key ID="STR_ACE_Medical_treatment_Status_MildPain">
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Status_Pain">
+        <Key ID="STR_ACE_Medical_treatment_Status_Pain">
             <English>In pain</English>
             <German>Hat Schmerzen</German>
             <Russian>Испытывает боль</Russian>
@@ -2141,11 +2125,11 @@
             <Chinesesimp>疼痛中</Chinesesimp>
             <Chinese>疼痛中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Status_SeverePain">
+        <Key ID="STR_ACE_Medical_treatment_Status_SeverePain">
             <English>In severe pain</English>
             <German>Hat starke Schmerzen</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Status_Lost_Blood">
+        <Key ID="STR_ACE_Medical_treatment_Status_Lost_Blood">
             <English>Lost a lot of Blood</English>
             <German>Hat eine große Menge Blut verloren</German>
             <Russian>Большая кровопотеря</Russian>
@@ -2161,7 +2145,7 @@
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Status_Tourniquet_Applied">
+        <Key ID="STR_ACE_Medical_treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
@@ -2177,7 +2161,7 @@
             <Chinesesimp>军用止血带</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_receivingIvVolume">
+        <Key ID="STR_ACE_Medical_treatment_receivingIvVolume">
             <English>Receiving IV [%1ml]</English>
             <German>Erhalte IV [%1ml]</German>
             <Spanish>Recibiendo IV [%1ml]</Spanish>
@@ -2193,7 +2177,7 @@
             <Chinesesimp>接收静脉注射液中 [%1ml]</Chinesesimp>
             <Chinese>接收靜脈注射液中 [%1ml]</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure">
             <English>Blood Pressure</English>
             <French>Tension artérielle</French>
             <Russian>Артериальное давление</Russian>
@@ -2209,7 +2193,7 @@
             <Chinesesimp>血压</Chinesesimp>
             <Chinese>血壓</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Content">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
             <French>Prise de la tension...</French>
             <Russian>Проверка артериального давления...</Russian>
@@ -2225,7 +2209,7 @@
             <Chinesesimp>检查血压中...</Chinesesimp>
             <Chinese>檢查血壓中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Log">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
             <German>%1 kontrollierte Blutdruck: %2</German>
             <Italian>%1 controllata pressione sanguigna: %2</Italian>
@@ -2241,7 +2225,7 @@
             <Chinesesimp>已由%1确认血压: %2</Chinesesimp>
             <Chinese>已由%1確認血壓: %2</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Checked_Medic">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Checked_Medic">
             <English>You checked %1</English>
             <French>Vous examinez %1</French>
             <Russian>Вы осмотрели раненого %1</Russian>
@@ -2257,7 +2241,7 @@
             <Chinesesimp>你已经检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_1">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
             <French>Vous avez mesuré une tension de %2/%3</French>
             <Russian>Артериальное давление %2/%3</Russian>
@@ -2273,7 +2257,7 @@
             <Chinesesimp>血压为%2/%3</Chinesesimp>
             <Chinese>血壓為%2/%3</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_2">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
             <French>Tension basse</French>
             <Russian>Давление низкое</Russian>
@@ -2289,7 +2273,7 @@
             <Chinesesimp>发现到低血压</Chinesesimp>
             <Chinese>發現到低血壓</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_3">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
             <French>Tension normale</French>
             <Russian>Давление нормальное</Russian>
@@ -2305,7 +2289,7 @@
             <Chinesesimp>发现到正常血压</Chinesesimp>
             <Chinese>發現到正常血壓</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_4">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
             <French>Tension élevée</French>
             <Russian>Давление высокое</Russian>
@@ -2321,7 +2305,7 @@
             <Chinesesimp>发现到高血压</Chinesesimp>
             <Chinese>發現到高血壓</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_5">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
             <French>Pas de tension</French>
             <Russian>Давления нет</Russian>
@@ -2337,7 +2321,7 @@
             <Chinesesimp>量不到血压</Chinesesimp>
             <Chinese>量不到血壓</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_6">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Output_6">
             <English>You fail to find a blood pressure</English>
             <French>Vous n'avez pas pu mesurer de tension</French>
             <Russian>Артериальное давление не определяется</Russian>
@@ -2353,7 +2337,7 @@
             <Chinesesimp>检查血压的动作失败</Chinesesimp>
             <Chinese>檢查血壓的動作失敗</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Low">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Low">
             <English>Low</English>
             <German>Niedrig</German>
             <Italian>Bassa</Italian>
@@ -2369,7 +2353,7 @@
             <Chinesesimp>低</Chinesesimp>
             <Chinese>低</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_Normal">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_Normal">
             <English>Normal</English>
             <German>Normal</German>
             <Italian>Normale</Italian>
@@ -2385,7 +2369,7 @@
             <Chinesesimp>正常</Chinesesimp>
             <Chinese>正常</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_High">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_High">
             <English>High</English>
             <German>Hoch</German>
             <Italian>Alta</Italian>
@@ -2401,7 +2385,7 @@
             <Chinesesimp>高</Chinesesimp>
             <Chinese>高</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Bloodpressure_NoBloodpressure">
+        <Key ID="STR_ACE_Medical_treatment_Check_Bloodpressure_NoBloodpressure">
             <English>No Blood Pressure</English>
             <German>Kein Blutdruck</German>
             <Italian>Nessuna Pressione Sanguigna</Italian>
@@ -2417,7 +2401,7 @@
             <Chinesesimp>无血压</Chinesesimp>
             <Chinese>無血壓</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse">
             <English>Pulse</English>
             <Russian>Пульс</Russian>
             <French>Pouls</French>
@@ -2433,7 +2417,7 @@
             <Chinesesimp>脉搏</Chinesesimp>
             <Chinese>脈搏</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Content">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Content">
             <English>Checking Heart Rate...</English>
             <French>Vérification du pouls...</French>
             <Russian>Проверка пульса...</Russian>
@@ -2449,7 +2433,7 @@
             <Chinesesimp>检查心跳中...</Chinesesimp>
             <Chinese>檢查心跳中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Checked_Medic">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Checked_Medic">
             <English>You checked %1</English>
             <Russian>Вы осмотрели раненого %1</Russian>
             <French>Vous examinez %1</French>
@@ -2465,7 +2449,7 @@
             <Chinesesimp>你已经检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Log">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Log">
             <English>%1 checked Heart Rate: %2</English>
             <German>%1 kontrollierte Herzfrequenz: %2</German>
             <Italian>%1 Controllata Frequenza Cardiaca: %2</Italian>
@@ -2481,7 +2465,7 @@
             <Chinesesimp>已由%1确认心跳: %2</Chinesesimp>
             <Chinese>已由%1確認心跳: %2</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_None">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_None">
             <English>None</English>
             <Russian>Нет</Russian>
             <Polish>Żadna</Polish>
@@ -2497,7 +2481,7 @@
             <Chinesesimp>无</Chinesesimp>
             <Chinese>無</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Weak">
             <English>Weak</English>
             <German>Schwach</German>
             <Italian>Lento</Italian>
@@ -2513,7 +2497,7 @@
             <Chinesesimp>微弱</Chinesesimp>
             <Chinese>微弱</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Normal">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Normal">
             <English>Normal</English>
             <German>Normal</German>
             <Italian>Normale</Italian>
@@ -2529,7 +2513,7 @@
             <Chinesesimp>正常</Chinesesimp>
             <Chinese>正常</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Strong">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Strong">
             <English>Strong</English>
             <German>Stark</German>
             <Italian>Veloce</Italian>
@@ -2545,7 +2529,7 @@
             <Chinesesimp>过快</Chinesesimp>
             <Chinese>過快</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Output_1">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Output_1">
             <English>You find a Heart Rate of %2</English>
             <French>%2 battements par minute</French>
             <Russian>Пульс %2 уд./мин.</Russian>
@@ -2561,7 +2545,7 @@
             <Chinesesimp>心跳为%2</Chinesesimp>
             <Chinese>心跳為%2</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Output_2">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
             <French>Poulslent</French>
             <Russian>Пульс слабый</Russian>
@@ -2577,7 +2561,7 @@
             <Chinesesimp>心跳微弱</Chinesesimp>
             <Chinese>心跳微弱</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Output_3">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
             <French>pouls rapide</French>
             <Russian>Пульс учащенный</Russian>
@@ -2593,7 +2577,7 @@
             <Chinesesimp>心跳过快</Chinesesimp>
             <Chinese>心跳過快</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Output_4">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
             <French>pouls normal</French>
             <Russian>Пульс в норме</Russian>
@@ -2609,7 +2593,7 @@
             <Chinesesimp>心跳正常</Chinesesimp>
             <Chinese>心跳正常</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Pulse_Output_5">
+        <Key ID="STR_ACE_Medical_treatment_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
             <French>pas de pouls</French>
             <Russian>Пульс не прощупывается</Russian>
@@ -2625,7 +2609,7 @@
             <Chinesesimp>量不到心跳</Chinesesimp>
             <Chinese>量不到心跳</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Response">
+        <Key ID="STR_ACE_Medical_treatment_Check_Response">
             <English>Response</English>
             <French>Conscience</French>
             <Russian>Реакция</Russian>
@@ -2641,7 +2625,7 @@
             <Chinesesimp>反应</Chinesesimp>
             <Chinese>反應</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Response_Content">
+        <Key ID="STR_ACE_Medical_treatment_Check_Response_Content">
             <English>You check response of patient</English>
             <French>Vous évaluez l'état de conscience</French>
             <Russian>Вы проверяете реакцию раненого</Russian>
@@ -2657,7 +2641,7 @@
             <Chinesesimp>检查伤者的反应</Chinesesimp>
             <Chinese>檢查傷者的反應</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Response_Responsive">
+        <Key ID="STR_ACE_Medical_treatment_Check_Response_Responsive">
             <English>%1 is responsive</English>
             <Russian>%1 реагирует на раздражители</Russian>
             <French>%1 est conscient</French>
@@ -2673,7 +2657,7 @@
             <Chinesesimp>%1 有反应</Chinesesimp>
             <Chinese>%1 有反應</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Response_Unresponsive">
+        <Key ID="STR_ACE_Medical_treatment_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
             <Russian>%1 не реагирует на раздражители</Russian>
             <French>%1 est inconscient</French>
@@ -2689,7 +2673,7 @@
             <Chinesesimp>%1 没有反应</Chinesesimp>
             <Chinese>%1 沒有反應</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Check_Response_You_Checked">
+        <Key ID="STR_ACE_Medical_treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
             <Russian>Вы осмотрели раненого %1</Russian>
             <French>Vous avez examiné %1</French>
@@ -2705,7 +2689,7 @@
             <Chinesesimp>你已经检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_diagnoseMessage">
+        <Key ID="STR_ACE_Medical_treatment_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
             <Italian>Il paziente %1&lt;br/&gt;è %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Italian>
             <Russian>Пациент %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Russian>
@@ -2721,7 +2705,7 @@
             <Chinesesimp>伤者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinesesimp>
             <Chinese>傷者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_diagnoseAlive">
+        <Key ID="STR_ACE_Medical_treatment_diagnoseAlive">
             <English>alive</English>
             <Italian>vivo</Italian>
             <Russian>жив</Russian>
@@ -2737,7 +2721,7 @@
             <Chinesesimp>活着</Chinesesimp>
             <Chinese>活著</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_diagnoseDead">
+        <Key ID="STR_ACE_Medical_treatment_diagnoseDead">
             <English>dead</English>
             <Italian>morto</Italian>
             <Russian>мёртв</Russian>
@@ -2753,7 +2737,7 @@
             <Chinesesimp>死亡</Chinesesimp>
             <Chinese>死亡</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_lostBlood">
+        <Key ID="STR_ACE_Medical_treatment_lostBlood">
             <English>He's lost some blood</English>
             <Italian>Ha perso poco sangue</Italian>
             <Spanish>Ha perdido un poco de sangre</Spanish>
@@ -2769,7 +2753,7 @@
             <Chinesesimp>他流失一些血液</Chinesesimp>
             <Chinese>他流失一些血液</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_lostBloodALot">
+        <Key ID="STR_ACE_Medical_treatment_lostBloodALot">
             <English>He's lost a lot of blood</English>
             <German>Er hat viel Blut verloren</German>
             <Hungarian>Sok vért vesztett</Hungarian>
@@ -2785,7 +2769,7 @@
             <Chinesesimp>他流失大量血液</Chinesesimp>
             <Chinese>他流失大量血液</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_noBloodloss">
+        <Key ID="STR_ACE_Medical_treatment_noBloodloss">
             <English>He hasn't lost blood</English>
             <Italian>Non ha perso sangue</Italian>
             <Russian>Нет кровопотери</Russian>
@@ -2801,7 +2785,7 @@
             <Chinesesimp>他并没有失血</Chinesesimp>
             <Chinese>他並沒有失血</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_inPain">
+        <Key ID="STR_ACE_Medical_treatment_inPain">
             <English>He is in pain</English>
             <Italian>Sente dolori</Italian>
             <Russian>Испытывает боль</Russian>
@@ -2817,7 +2801,7 @@
             <Chinesesimp>他感到疼痛</Chinesesimp>
             <Chinese>他感到疼痛</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_noPain">
+        <Key ID="STR_ACE_Medical_treatment_noPain">
             <English>He is not in pain</English>
             <Italian>Non sente dolori</Italian>
             <Russian>Не испытывает боли</Russian>
@@ -2833,7 +2817,7 @@
             <Chinesesimp>他不会疼痛</Chinesesimp>
             <Chinese>他不會疼痛</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandaged">
+        <Key ID="STR_ACE_Medical_treatment_Bandaged">
             <English>Bandaged</English>
             <French>Pansé</French>
             <Russian>Повязка наложена</Russian>
@@ -2849,7 +2833,7 @@
             <Chinesesimp>绷带</Chinesesimp>
             <Chinese>繃帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Apply_Bandage">
+        <Key ID="STR_ACE_Medical_treatment_Apply_Bandage">
             <English>You bandage %1 (%2)</English>
             <French>Vous pansez %1 (%2)</French>
             <Russian>Вы перевязали раненого %1 (%2)</Russian>
@@ -2865,7 +2849,7 @@
             <Chinesesimp>你正在对 %1 (%2) 包扎绷带中</Chinesesimp>
             <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Is_Bandaging_You">
+        <Key ID="STR_ACE_Medical_treatment_Is_Bandaging_You">
             <English>%1 is bandaging you</English>
             <French>%1 vous panse</French>
             <Russian>%1 перевязывает вас</Russian>
@@ -2881,7 +2865,7 @@
             <Chinesesimp>%1 正在对你包扎绷带中</Chinesesimp>
             <Chinese>%1 正在對你包紮繃帶中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Start_Stitching_Injuries">
+        <Key ID="STR_ACE_Medical_treatment_Start_Stitching_Injuries">
             <English>You start stitching injuries from %1 (%2)</English>
             <Russian>Вы зашиваете ранения от %1 (%2)</Russian>
             <German>Du nähst die Wunden von %1 (%2)</German>
@@ -2897,7 +2881,7 @@
             <Chinesesimp>你正开始对 %1 (%2) 缝合伤口中</Chinesesimp>
             <Chinese>你正開始對 %1 (%2) 縫合傷口中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Stitching">
+        <Key ID="STR_ACE_Medical_treatment_Stitching">
             <English>Stitching</English>
             <Russian>Наложение швов</Russian>
             <Spanish>Suturando</Spanish>
@@ -2913,7 +2897,7 @@
             <Chinesesimp>缝合中</Chinesesimp>
             <Chinese>縫合中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_You_Treat_Airway">
+        <Key ID="STR_ACE_Medical_treatment_You_Treat_Airway">
             <English>You treat the airway of %1</English>
             <Russian>Вы интубируете раненого %1</Russian>
             <Spanish>Estás intubando a %1</Spanish>
@@ -2929,7 +2913,7 @@
             <Chinesesimp>你治疗 %1 的呼吸道</Chinesesimp>
             <Chinese>你治療 %1 的呼吸道</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Airway">
+        <Key ID="STR_ACE_Medical_treatment_Airway">
             <English>Airway</English>
             <Russian>Дыхательные пути</Russian>
             <Spanish>Vías aéreas</Spanish>
@@ -2945,7 +2929,7 @@
             <Chinesesimp>呼吸道</Chinesesimp>
             <Chinese>呼吸道</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Is_Treating_Your_Airway">
+        <Key ID="STR_ACE_Medical_treatment_Is_Treating_Your_Airway">
             <English>%1 is treating your airway</English>
             <Russian>%1 проводит вам интубацию</Russian>
             <French>%1 traite vos voies respiratoires</French>
@@ -2961,7 +2945,7 @@
             <Chinesesimp>%1 正在治疗你的呼吸道</Chinesesimp>
             <Chinese>%1 正在治療你的呼吸道</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Drag">
+        <Key ID="STR_ACE_Medical_treatment_Drag">
             <English>Drag</English>
             <German>Ziehen</German>
             <Spanish>Arrastrar</Spanish>
@@ -2977,7 +2961,7 @@
             <Chinesesimp>拖拉</Chinesesimp>
             <Chinese>拖拉</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Carry">
+        <Key ID="STR_ACE_Medical_treatment_Carry">
             <English>Carry</English>
             <German>Tragen</German>
             <Spanish>Cargar</Spanish>
@@ -2993,7 +2977,7 @@
             <Chinesesimp>背起</Chinesesimp>
             <Chinese>背起</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Release">
+        <Key ID="STR_ACE_Medical_treatment_Release">
             <English>Release</English>
             <German>Loslassen</German>
             <Spanish>Soltar</Spanish>
@@ -3009,7 +2993,7 @@
             <Chinesesimp>放下</Chinesesimp>
             <Chinese>放下</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Load">
+        <Key ID="STR_ACE_Medical_treatment_Load">
             <English>Load Patient Into</English>
             <German>Patient einladen</German>
             <Spanish>Cargar al paciente en</Spanish>
@@ -3025,7 +3009,7 @@
             <Chinesesimp>将伤者放入</Chinesesimp>
             <Chinese>將傷者放入</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Unload">
+        <Key ID="STR_ACE_Medical_treatment_Unload">
             <English>Unload Patient</English>
             <German>Patient ausladen</German>
             <Spanish>Descargar al paciente</Spanish>
@@ -3041,39 +3025,7 @@
             <Chinesesimp>将伤者背出</Chinesesimp>
             <Chinese>將傷者背出</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_UnloadPatient">
-            <English>Unload patient</English>
-            <Spanish>Descargar al paciente</Spanish>
-            <Russian>Выгрузить пациента</Russian>
-            <German>Patient ausladen</German>
-            <Polish>Wyładuj pacjenta</Polish>
-            <French>Le patient débarque</French>
-            <Hungarian>Sebesült kihúzása</Hungarian>
-            <Italian>Scarica il paziente</Italian>
-            <Portuguese>Descarregar Paciente</Portuguese>
-            <Czech>Vyložit pacienta</Czech>
-            <Japanese>患者を降ろす</Japanese>
-            <Korean>환자 내리기</Korean>
-            <Chinesesimp>将伤者背出</Chinesesimp>
-            <Chinese>將傷者背出</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_LoadPatient">
-            <English>Load patient</English>
-            <Spanish>Cargar al paciente en</Spanish>
-            <Russian>Погрузить пациента</Russian>
-            <German>Patient einladen</German>
-            <Polish>Załaduj pacjenta</Polish>
-            <French>Embarquer le patient</French>
-            <Hungarian>Sebesült berakása</Hungarian>
-            <Italian>Carica il paziente</Italian>
-            <Portuguese>Carregar Paciente Em</Portuguese>
-            <Czech>Naložit pacienta</Czech>
-            <Japanese>患者を載せる</Japanese>
-            <Korean>환자 싣기</Korean>
-            <Chinesesimp>将伤者放入</Chinesesimp>
-            <Chinese>將傷者放入</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_PlaceInBodyBag">
+        <Key ID="STR_ACE_Medical_treatment_PlaceInBodyBag">
             <English>Place body in bodybag</English>
             <Spanish>Colocar cuerpo en bolsa para cadáveres</Spanish>
             <Russian>Поместить тело в мешок для трупов</Russian>
@@ -3089,7 +3041,7 @@
             <Chinesesimp>将尸体放入尸袋</Chinesesimp>
             <Chinese>將屍體放入屍袋</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_PlacingInBodyBag">
+        <Key ID="STR_ACE_Medical_treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
             <Spanish>Colocando cuerpo en bolsa para cadáveres...</Spanish>
             <Russian>Упаковка тела...</Russian>
@@ -3105,7 +3057,7 @@
             <Chinesesimp>将尸体放入尸袋中...</Chinesesimp>
             <Chinese>將屍體放入屍袋中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
+        <Key ID="STR_ACE_Medical_treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
             <Spanish>%1 has vendado al paciente</Spanish>
             <Russian>%1 перевязал пациента</Russian>
@@ -3121,7 +3073,7 @@
             <Chinesesimp>%1 已包扎伤者</Chinesesimp>
             <Chinese>%1 已包紮傷者</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_CPR">
+        <Key ID="STR_ACE_Medical_treatment_Activity_CPR">
             <English>%1 performed CPR</English>
             <Polish>%1 wykonał cykl RKO</Polish>
             <Czech>%1 provádí CPR</Czech>
@@ -3136,7 +3088,7 @@
             <Chinesesimp>%1 已执行心肺复苏术</Chinesesimp>
             <Chinese>%1 已執行心肺復甦術</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_usedItem">
+        <Key ID="STR_ACE_Medical_treatment_Activity_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
             <German>%1 benutzt %2</German>
@@ -3152,7 +3104,7 @@
             <Chinesesimp>%1 已使用 %2</Chinesesimp>
             <Chinese>%1 已使用 %2</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_gaveIV">
+        <Key ID="STR_ACE_Medical_treatment_Activity_gaveIV">
             <English>%1 has given an IV</English>
             <Russian>%1 провёл переливание</Russian>
             <Spanish>%1 ha puesto una IV</Spanish>
@@ -3168,7 +3120,7 @@
             <Chinesesimp>%1 已经给予静脉注射液</Chinesesimp>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_appliedTourniquet">
+        <Key ID="STR_ACE_Medical_treatment_Activity_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
             <Spanish>%1 aplicado torniquete</Spanish>
             <Russian>%1 наложил жгут</Russian>
@@ -3184,10 +3136,10 @@
             <Chinesesimp>%1 已经绑上止血带</Chinesesimp>
             <Chinese>%1 已經綁上止血帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_partialHeal">
+        <Key ID="STR_ACE_Medical_treatment_Activity_partialHeal">
             <English>%1 used Medkit</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_fullHeal">
+        <Key ID="STR_ACE_Medical_treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
             <German>%1 hat das eigene Erste-Hilfe-Set verwendet</German>
             <Polish>%1 użył apteczki</Polish>
@@ -3202,7 +3154,7 @@
             <Chinesesimp>%1 已使用了个人急救包</Chinesesimp>
             <Chinese>%1 已使用了個人急救包</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_HeavilyWounded">
+        <Key ID="STR_ACE_Medical_treatment_HeavilyWounded">
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
             <Polish>Ciężko ranny</Polish>
@@ -3218,7 +3170,7 @@
             <Chinesesimp>重伤</Chinesesimp>
             <Chinese>重傷</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_LightlyWounded">
+        <Key ID="STR_ACE_Medical_treatment_LightlyWounded">
             <English>Lightly wounded</English>
             <German>Leicht verwundet:</German>
             <Polish>Lekko ranny</Polish>
@@ -3234,7 +3186,7 @@
             <Chinesesimp>轻伤</Chinesesimp>
             <Chinese>輕傷</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_VeryLightlyWounded">
+        <Key ID="STR_ACE_Medical_treatment_VeryLightlyWounded">
             <English>Very lightly wounded</English>
             <German>Sehr leicht verwundet:</German>
             <Polish>B. lekko ranny</Polish>
@@ -3250,7 +3202,7 @@
             <Chinesesimp>小伤</Chinesesimp>
             <Chinese>小傷</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Head">
+        <Key ID="STR_ACE_Medical_treatment_Head">
             <English>Head</English>
             <German>Kopf</German>
             <Polish>Głowa</Polish>
@@ -3266,7 +3218,7 @@
             <Chinesesimp>头部</Chinesesimp>
             <Chinese>頭部</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Torso">
+        <Key ID="STR_ACE_Medical_treatment_Torso">
             <English>Torso</English>
             <German>Torso</German>
             <Polish>Tors</Polish>
@@ -3282,7 +3234,7 @@
             <Chinesesimp>身体</Chinesesimp>
             <Chinese>身體</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_LeftArm">
+        <Key ID="STR_ACE_Medical_treatment_LeftArm">
             <English>Left Arm</English>
             <German>Linker Arm</German>
             <Polish>Lewe ramię</Polish>
@@ -3298,7 +3250,7 @@
             <Chinesesimp>左手</Chinesesimp>
             <Chinese>左手</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_RightArm">
+        <Key ID="STR_ACE_Medical_treatment_RightArm">
             <English>Right Arm</English>
             <German>Rechter Arm</German>
             <Polish>Prawe ramię</Polish>
@@ -3314,7 +3266,7 @@
             <Chinesesimp>右手</Chinesesimp>
             <Chinese>右手</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_LeftLeg">
+        <Key ID="STR_ACE_Medical_treatment_LeftLeg">
             <English>Left Leg</English>
             <German>Linkes Bein</German>
             <Polish>Lewa noga</Polish>
@@ -3330,7 +3282,7 @@
             <Chinesesimp>左脚</Chinesesimp>
             <Chinese>左腳</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_RightLeg">
+        <Key ID="STR_ACE_Medical_treatment_RightLeg">
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
             <Polish>Prawa noga</Polish>
@@ -3346,7 +3298,7 @@
             <Chinesesimp>右脚</Chinesesimp>
             <Chinese>右腳</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_healHitPointAfterAdvBandage">
+        <Key ID="STR_ACE_Medical_treatment_healHitPointAfterAdvBandage">
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
@@ -3361,7 +3313,7 @@
             <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
             <Chinese>完全醫療包紮的部位至痊癒</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_menuTypeDisplay">
+        <Key ID="STR_ACE_Medical_treatment_menuTypeDisplay">
             <English>Style of menu (Medical)</English>
             <Polish>Styl menu medycznego</Polish>
             <French>Style de menu (médical)</French>
@@ -3377,7 +3329,7 @@
             <Chinesesimp>选单样式 (医疗)</Chinesesimp>
             <Chinese>選單樣式 (醫療)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_menuTypeDescription">
+        <Key ID="STR_ACE_Medical_treatment_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
             <Polish>Wybierz rodzaj menu, który preferujesz: domyślne pozycje 3D lub radialne</Polish>
             <French>Sélectionne le type de menu préféré; par défaut la sélection 3D ou radiale</French>
@@ -3393,7 +3345,7 @@
             <Chinesesimp>选择你喜欢的选单样式; 预设为3D选项或放射状</Chinesesimp>
             <Chinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_useSelection">
+        <Key ID="STR_ACE_Medical_treatment_useSelection">
             <English>Selections (3d)</English>
             <Polish>Pozycje (3D)</Polish>
             <French>Sélection (3D)</French>
@@ -3409,7 +3361,7 @@
             <Chinesesimp>选择 (3D)</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_useRadial">
+        <Key ID="STR_ACE_Medical_treatment_useRadial">
             <English>Radial</English>
             <Polish>Radialne</Polish>
             <French>Radial</French>
@@ -3441,7 +3393,7 @@
             <Chinesesimp>治疗中...</Chinesesimp>
             <Chinese>治療中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_RemovingTourniquet">
+        <Key ID="STR_ACE_Medical_treatment_RemovingTourniquet">
             <English>Removing Tourniquet...</English>
             <German>Tourniquet entfernen...</German>
             <Polish>Zdejmowanie stazy...</Polish>

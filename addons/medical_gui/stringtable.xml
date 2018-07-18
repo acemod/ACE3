@@ -16,6 +16,54 @@
             <Chinesesimp>医疗选单</Chinesesimp>
             <Chinese>醫療選單</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Actions_Medical">
+            <English>Medical</English>
+            <Czech>Lékařské</Czech>
+            <French>Médical</French>
+            <German>Sanitäter</German>
+            <Italian>Medico</Italian>
+            <Polish>Medyczne</Polish>
+            <Portuguese>Médico</Portuguese>
+            <Russian>Медик</Russian>
+            <Spanish>Médico</Spanish>
+            <Hungarian>Orvosi</Hungarian>
+            <Japanese>治療</Japanese>
+            <Korean>치료</Korean>
+            <Chinesesimp>医疗</Chinesesimp>
+            <Chinese>醫療</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_UnloadPatient">
+            <English>Unload patient</English>
+            <Spanish>Descargar al paciente</Spanish>
+            <Russian>Выгрузить пациента</Russian>
+            <German>Patient ausladen</German>
+            <Polish>Wyładuj pacjenta</Polish>
+            <French>Le patient débarque</French>
+            <Hungarian>Sebesült kihúzása</Hungarian>
+            <Italian>Scarica il paziente</Italian>
+            <Portuguese>Descarregar Paciente</Portuguese>
+            <Czech>Vyložit pacienta</Czech>
+            <Japanese>患者を降ろす</Japanese>
+            <Korean>환자 내리기</Korean>
+            <Chinesesimp>将伤者背出</Chinesesimp>
+            <Chinese>將傷者背出</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LoadPatient">
+            <English>Load patient</English>
+            <Spanish>Cargar al paciente en</Spanish>
+            <Russian>Погрузить пациента</Russian>
+            <German>Patient einladen</German>
+            <Polish>Załaduj pacjenta</Polish>
+            <French>Embarquer le patient</French>
+            <Hungarian>Sebesült berakása</Hungarian>
+            <Italian>Carica il paziente</Italian>
+            <Portuguese>Carregar Paciente Em</Portuguese>
+            <Czech>Naložit pacienta</Czech>
+            <Japanese>患者を載せる</Japanese>
+            <Korean>환자 싣기</Korean>
+            <Chinesesimp>将伤者放入</Chinesesimp>
+            <Chinese>將傷者放入</Chinese>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_allow">
             <English>Allow Medical Menu</English>
             <German>Erlaube Sanitätsmenü</German>
