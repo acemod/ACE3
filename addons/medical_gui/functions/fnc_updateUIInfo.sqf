@@ -31,8 +31,23 @@ if IS_BLEEDING(_target) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
 };
 
-if (GET_HEMORRHAGE(_target) > 1) then {
-    _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood), [1, 0.1, 0.1, 1]];
+// Show more information if advancedDiagnose is enabled
+if (EGVAR(medical,advancedDiagnose)) then {
+    switch (GET_HEMORRHAGE(_target)) do {
+        case 1: {
+            _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood2), [1, 0.1, 0.1, 1]];
+        };
+        case 2: {
+            _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood3), [1, 0.1, 0.1, 1]];
+        };
+        case 3: {
+            _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood4), [1, 0.1, 0.1, 1]];
+        };
+    };
+} else {
+    if (GET_HEMORRHAGE(_target) > 1) then {
+        _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood), [1, 0.1, 0.1, 1]];
+    };
 };
 
 if (((_target getVariable [QEGVAR(medical,tourniquets), [0, 0, 0, 0, 0, 0]]) select _selectionN) > 0) then {

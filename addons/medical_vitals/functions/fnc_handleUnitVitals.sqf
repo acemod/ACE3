@@ -39,13 +39,16 @@ _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
 _unit setVariable [VAR_BLOOD_VOL, _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
-private _hemorrhage = [
-    0,
-    [1, 3] select (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE)
-] select (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE);
+private _hemorrhage = switch (true) do {
+    case (_bloodVolume < BLOOD_VOLUME_CLASS_4_HEMORRHAGE): { 3 };
+    case (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE): { 2 };
+    case (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE): { 1 };
+    case (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE): { 1 };
+    default {0};
+};
 
 if (_hemorrhage != GET_HEMORRHAGE(_unit)) then {
-    _unit setVariable [VAR_HEMORRHAGE, _hemorrhageClass, true];
+    _unit setVariable [VAR_HEMORRHAGE, _hemorrhage, true];
 };
 
 private _bloodLoss = GET_BLOOD_LOSS(_unit);
@@ -122,6 +125,7 @@ switch (true) do {
 
 #ifdef DEBUG_MODE_FULL
 if (!isPlayer _unit) then {
+    private _painLevel = _unit getVariable [VAR_PAIN, 0];
     hintSilent format["blood volume: %1, blood loss: [%2, %3]\nhr: %4, bp: %5, pain: %6", round(_bloodVolume * 100) / 100, round(_bloodLoss * 1000) / 1000, round((_bloodLoss / (0.001 max _cardiacOutput)) * 100) / 100, round(_heartRate), _bloodPressure, round(_painLevel * 100) / 100];
 };
 #endif
