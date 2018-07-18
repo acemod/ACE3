@@ -502,20 +502,20 @@
             <German>Wegpunkt Genauigkeit</German>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
-            <English>Controls how precise the waypointdistance can be displayed.</English>
-            <German>Legt die Genauigkeit der Entfernung von Wegpunkten fest.</German>
+            <English>Controls how precise the waypointdistance can be displayed</English>
+            <German>Legt die Genauigkeit der Entfernung von Wegpunkten fest</German>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
-            <English>100m.</English>
-            <German>100m.</German>
+            <English>100m</English>
+            <German>100m</German>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
-            <English>10m.</English>
-            <German>10m.</German>
+            <English>10m</English>
+            <German>10m</German>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
-            <English>1m.</English>
-            <German>1m.</German>
+            <English>1m</English>
+            <German>1m</German>
         </Key>
 
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
