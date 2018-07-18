@@ -106,7 +106,7 @@ switch (true) do {
         private _lastCheck = _unit getVariable [QGVAR(lastCheckCriticalHeartRate), CBA_missionTime];
         private _enterCardiacArrest = false;
         if (_lastCheck <= CBA_missionTime) then {
-            _enterCardiacArrest = random 1 < (0.2 + 0.75*(30 - _heartRate)/10);  // Variable chance of getting into cardiac arrest
+            _enterCardiacArrest = random 1 < (0.4 + 0.6*(30 - _heartRate)/10);  // Variable chance of getting into cardiac arrest.
             _unit setVariable [QGVAR(lastCheckCriticalHeartRate), CBA_missionTime + 5];
         };
         if (_enterCardiacArrest) then {
