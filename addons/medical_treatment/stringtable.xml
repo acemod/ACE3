@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
+        <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
+            <English>[ACE] Medical Supply Crate (Basic)</English>
+            <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
+            <Polish>[ACE] Skrzynka z zapasami medycznymi (podstawowa)</Polish>
+            <Spanish>[ACE] Caja de suministros médicos (Básica)</Spanish>
+            <German>[ACE] Sanitätskiste (Standard)</German>
+            <Czech>[ACE] Zdravotnické zásoby (základní)</Czech>
+            <Portuguese>[ACE] Caixa com suprimentos médicos</Portuguese>
+            <French>[ACE] Caisse médicale (basique)</French>
+            <Hungarian>[ACE] Orvosi láda (Alap)</Hungarian>
+            <Italian>[ACE] Cassa Rifornimenti Medici (Basico)</Italian>
+            <Japanese>[ACE] 医療物資箱 (ベーシック)</Japanese>
+            <Korean>[ACE] 의료 물자 (기본)</Korean>
+            <Chinesesimp>[ACE] 医疗补给箱（基本）</Chinesesimp>
+            <Chinese>[ACE] 醫療補給箱（基本）</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate_advanced">
+            <English>[ACE] Medical Supply Crate (Advanced)</English>
+            <Russian>[ACE] Ящик с медикаментами (усложн. медицина)</Russian>
+            <Polish>[ACE] Skrzynka z zapasami medycznymi (zaawansowana)</Polish>
+            <Spanish>[ACE] Caja de suministros médicos (Avanzada)</Spanish>
+            <German>[ACE] Sanitätskiste (erweitert)</German>
+            <Czech>[ACE] Zdravotnické zásoby (pokročilé)</Czech>
+            <Portuguese>[ACE] Caixa com suprimentos médicos (Avançados)</Portuguese>
+            <French>[ACE] Caisse médicale (avancée)</French>
+            <Hungarian>[ACE] Orvosi láda (Fejlett)</Hungarian>
+            <Italian>[ACE] Cassa Rifornimenti Medici (Avanzato)</Italian>
+            <Japanese>[ACE] 医療物資箱 (アドバンスド)</Japanese>
+            <Korean>[ACE] 의료 물자 (고급)</Korean>
+            <Chinesesimp>[ACE] 医疗补给箱（进阶）</Chinesesimp>
+            <Chinese>[ACE] 醫療補給箱（進階）</Chinese>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Attributes_isMedic_Description">
             <English>Medical training</English>
             <Polish>Wyszkolenie medyczne</Polish>
@@ -258,7 +290,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedkitTime_Description">
             <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
             <German>Bandage (Einfach)</German>
             <Russian>Повязка (обычная)</Russian>
@@ -306,7 +338,7 @@
             <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Packing_Bandage_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Display">
             <English>Packing Bandage</English>
             <German>Mullbinde</German>
             <Russian>Тампонирующая повязка</Russian>
@@ -354,7 +386,7 @@
             <Chinesesimp>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bandage_Elastic_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Display">
             <English>Bandage (Elastic)</English>
             <German>Bandage (Elastisch)</German>
             <Russian>Повязка (давящая)</Russian>
@@ -402,7 +434,7 @@
             <Chinesesimp>可对伤口持续压迫并固定以防止伤口情况变严重</Chinesesimp>
             <Chinese>可對傷口持續壓迫並固定以防止傷口情況變嚴重</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Tourniquet_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Tourniquet_Display">
             <English>Tourniquet (CAT)</English>
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
@@ -450,7 +482,7 @@
             <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的</Chinesesimp>
             <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Morphine_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
             <German>Morphium-Autoinjektor</German>
             <Russian>Морфин в пневмошприце</Russian>
@@ -498,7 +530,7 @@
             <Chinesesimp>止痛药的一种, 用于减低中度至重度的疼痛感</Chinesesimp>
             <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Adenosine_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Adenosine_Display">
             <English>Adenosine autoinjector</English>
             <German>Adenosin-Autoinjektor</German>
             <Spanish>Asenosina auto-inyectable</Spanish>
@@ -543,7 +575,7 @@
             <Chinesesimp>一种药物用于减低肾上腺素的效果</Chinesesimp>
             <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Atropine_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Atropine_Display">
             <English>Atropine autoinjector</English>
             <Russian>Атропин в пневмошприце</Russian>
             <Spanish>Atropina auto-inyectable</Spanish>
@@ -591,7 +623,7 @@
             <Chinesesimp>军用神经解毒针, 用来应付核生化污染的情况.</Chinesesimp>
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Epinephrine_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Display">
             <English>Epinephrine autoinjector</English>
             <Russian>Адреналин в пневмошприце</Russian>
             <Spanish>Epinefrina auto-inyectable</Spanish>
@@ -879,7 +911,7 @@
             <Chinesesimp>生理食盐水 (250ml)</Chinesesimp>
             <Chinese>生理食鹽水 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_QuikClot_Display">
+        <Key ID="STR_ACE_Medical_Treatment_QuikClot_Display">
             <English>Basic Field Dressing (QuikClot)</English>
             <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
             <Spanish>Vendaje básico (QuickClot)</Spanish>
@@ -927,7 +959,7 @@
             <Chinesesimp>包含止血粉成分的止血绷带, 可用于止血</Chinesesimp>
             <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Med_Kit_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Med_Kit_Display">
             <English>Medkit</English>
         </Key>
         <Key ID="STR_ACE_Medical_Med_Kit_Desc_Short">
@@ -939,7 +971,7 @@
         <Key ID="STR_ACE_Medical_Use_Med_Kit">
             <English>Use Medkit</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Aid_Kit_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
             <Russian>Аптечка</Russian>
             <French>Trousse sanitaire</French>
@@ -1003,7 +1035,7 @@
             <Chinesesimp>使用个人急救包</Chinesesimp>
             <Chinese>使用個人急救包</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_SurgicalKit_Display">
+        <Key ID="STR_ACE_Medical_Treatment_SurgicalKit_Display">
             <English>Surgical Kit</English>
             <French>Trousse chirurgicale</French>
             <Russian>Хирургический набор</Russian>
@@ -1067,7 +1099,7 @@
             <Chinesesimp>使用手术包</Chinesesimp>
             <Chinese>使用手術包</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Bodybag_Display">
+        <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
             <English>Bodybag</English>
             <French>Housse mortuaire</French>
             <Russian>Мешок для трупов</Russian>

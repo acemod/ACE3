@@ -10,7 +10,5 @@ PREP(handleKilled);
 PREP(handleLocal);
 PREP(handleRespawn);
 PREP(install);
-PREP(moduleAssignMedicalVehicle);
-PREP(moduleAssignMedicRoles);
 PREP(moduleMedicalSettings);
 PREP(setUnconsciousStatemachine);
