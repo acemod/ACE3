@@ -6,3 +6,4 @@ PREP(effectPain);
 PREP(effectUnconscious);
 PREP(handleEffects);
 PREP(initEffects);
+PREP(playInjuredSound);

@@ -15,4 +15,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgInGameUI.hpp"
 #include "CfgSounds.hpp"
+#include "CfgVehicles.hpp"
+#include "RscTitles.hpp"
