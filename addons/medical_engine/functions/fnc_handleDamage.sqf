@@ -46,6 +46,9 @@ if (_hitPointIndex < 0) then {
     _unit setVariable [HIT_CRASH, -1];
 };
 
+// Damage can be disabled with old variable or via sqf command allowDamage
+if !(isDamageAllowed _unit && _unit getVariable [QEGVAR(medical,allowDamage), true]) exitWith {_oldDamage};
+
 private _newDamage = _damage - _oldDamage;
 _unit setVariable [format [QGVAR($%1), _hitPoint], _newDamage];
 
