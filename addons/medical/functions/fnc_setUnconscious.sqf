@@ -69,7 +69,4 @@ if (_knockOut) then {
     [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
 };
 
-private _afterState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-TRACE_2("state change",_beforeState,_afterState);
-
 true

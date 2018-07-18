@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_medical"};
+        requiredAddons[] = {"ace_medical_status", "ace_medical_damage", "ace_apl"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Glowbal", "KoffeinFlummi", "Arcanum"};
         url = ECSTRING(main,URL);
