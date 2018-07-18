@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, "hit", 1] call ace_medical_engine_fnc_playInjuredSound
+ * [player, "hit", 1] call ace_medical_feedback_fnc_playInjuredSound
  *
  * Public: No
  */

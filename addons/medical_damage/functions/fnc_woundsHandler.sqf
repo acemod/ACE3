@@ -112,7 +112,7 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
 [_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
-[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_feedback,playInjuredSound);
+[QGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
