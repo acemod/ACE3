@@ -2,8 +2,6 @@ PREP(addDamageToUnit);
 PREP(addStateHandler);
 PREP(adjustPainLevel);
 PREP(bodyCleanupLoop);
-PREP(conditionCardiacArrestTimer);
-PREP(conditionExecutionDeath);
 PREP(dev_watchMedicalStats);
 PREP(displayTriageCard);
 PREP(getUnitState);

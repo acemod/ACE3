@@ -94,7 +94,7 @@ class ACE_Medical_StateMachine {
         };
         class Timeout {
             targetState = "Dead";
-            condition = QEFUNC(medical,conditionCardiacArrestTimer);
+            condition = QFUNC(conditionCardiacArrestTimer);
         };
         class Reanimation {
             targetState = "Unconscious";
@@ -102,7 +102,7 @@ class ACE_Medical_StateMachine {
         };
         class Execution {
             targetState = "Dead";
-            condition = QEFUNC(medical,conditionExecutionDeath);
+            condition = QFUNC(conditionExecutionDeath);
             events[] = {QEGVAR(medical,FatalInjury)};
         };
     };
