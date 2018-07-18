@@ -58,16 +58,16 @@ if (_show == 1) then {
 
         // Show more information if advancedDiagnose is enabled
         if (EGVAR(medical,advancedDiagnose)) then {
-            if (GET_HEMORRHAGE(_target) == 1) then {
-                _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood2), [1, 0.1, 0.1, 1]];
-            };
-
-            if (GET_HEMORRHAGE(_target) == 2) then {
-                _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood3), [1, 0.1, 0.1, 1]];
-            };
-
-            if (GET_HEMORRHAGE(_target) == 3) then {
-                _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood4), [1, 0.1, 0.1, 1]];
+            switch (GET_HEMORRHAGE(_target)) do {
+                case 1: {
+                    _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood2), [1, 0.1, 0.1, 1]];
+                };
+                case 2: {
+                    _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood3), [1, 0.1, 0.1, 1]];
+                };
+                case 3: {
+                    _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood4), [1, 0.1, 0.1, 1]];
+                };
             };
         } else {
             if (GET_HEMORRHAGE(_target) > 1) then {
