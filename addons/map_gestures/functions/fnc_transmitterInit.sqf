@@ -45,9 +45,11 @@ if (!isNil QGVAR(MouseDownHandlerID)) then {
 GVAR(MouseDownHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
     if (!GVAR(enabled)) exitWith {};
 
-    params ["", "_button"];
+    params ["", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
 
-    if (_button == 0) then {call FUNC(initTransmit);};
+    if (_button == 0 && {[_shift, _ctrl, _alt] isEqualTo [false, false, false]}) then {
+        call FUNC(initTransmit);
+    };
 }];
 
 // MouseUp EH
@@ -60,5 +62,7 @@ GVAR(MouseUpHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
 
     params ["", "_button"];
 
-    if (_button == 0) then {call FUNC(endTransmit);};
+    if (_button == 0) then {
+        call FUNC(endTransmit);
+    };
 }];

@@ -26,9 +26,10 @@ private _relPos = _target worldToModelVisual ASLToAGL _cameraPosASL;
 #endif
 _relPos params ["_dx", "_dy", "_dz"];
 
-private _ndx = (abs _dx) / ((abs (_bbx)) - 1);
-private _ndy = (abs _dy) / ((abs (_bbY)) - 1);
-private _ndz = (abs _dz) / ((abs (_bbZ)) - 1);
+private _ndx = (abs _dx) / (((abs (_bbX)) - 1) max 1);
+private _ndy = (abs _dy) / (((abs (_bbY)) - 1) max 1);
+private _ndz = (abs _dz) / (((abs (_bbZ)) - 1) max 1);
+
 
 private _pos = [];
 if (_ndx > _ndy) then {

@@ -115,6 +115,7 @@ if (count _controls > MAX_CONTROLS_HELP_ENTRIES) then {
     _controls resize MAX_CONTROLS_HELP_ENTRIES;
 };
 
+disableSerialization; // This function could run scheduled as a result of public API
 private _help = CTRL_HELP;
 
 _help ctrlEnable false;

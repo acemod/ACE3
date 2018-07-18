@@ -41,38 +41,9 @@ if (_object getVariable [QGVAR(initObject),false]) exitWith {};
 if (_canLoadConfig) then {
     GVAR(initializedItemClasses) pushBack _type;
     TRACE_1("Adding load cargo action to class", _type);
+    [_type, 0, ["ACE_MainActions"], GVAR(objectAction)] call EFUNC(interact_menu,addActionToClass);
 } else {
     _object setVariable [QGVAR(initObject),true];
     TRACE_1("Adding load cargo action to object", _object);
+    [_object, 0, ["ACE_MainActions"], GVAR(objectAction)] call EFUNC(interact_menu,addActionToObject);
 };
-
-// Vehicles with passengers inside are prevented from being loaded in `fnc_canLoadItemIn`
-private _condition = {
-    //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-    GVAR(enable) &&
-    {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
-    {locked _target < 2} &&
-    {alive _target} &&
-    {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-    {0 < {
-            private _type = typeOf _x;
-            private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
-            private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
-            (_hasCargoPublic || _hasCargoConfig) && {_x != _target} &&
-            {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
-        } count (nearestObjects [_player, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)])}
-};
-private _statement = {
-    params ["_target", "_player"];
-    [_player, _target] call FUNC(startLoadIn);
-};
-private _text = localize LSTRING(loadObject);
-private _icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
-
-private _action = [QGVAR(load), _text, _icon, _statement, _condition, {call FUNC(addCargoVehiclesActions)}] call EFUNC(interact_menu,createAction);
-if (_canLoadConfig) then {
-    [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
-} else {
-    [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
-};
-

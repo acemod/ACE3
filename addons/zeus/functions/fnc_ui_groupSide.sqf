@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 #define IDCs [31201,31200,31202,31203]
 

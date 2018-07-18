@@ -29,15 +29,3 @@ if (isNull (attachedTo _explosive)) then {
     //Attaching to a vehicle (dirAndUp based on vehicle)
     _explosive setVectorDirAndUp [[0,0,1],[(sin _direction),(cos _direction),0]];
 };
-
-if (isServer) then {
-    // Store the orientation to broadcast it later to JIP players
-    GVAR(explosivesOrientations) pushBack [_explosive, _direction, _pitch];
-
-    // This is a good time to filter the array and remove explosives that no longer exist
-    GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
-        _x params ["_explosive"];
-        (!isNull _explosive && {alive _explosive})
-    };
-    TRACE_1("setPosition",GVAR(explosivesOrientations));
-};

@@ -13,7 +13,7 @@
             <French>Gestes de carte</French>
             <Japanese>マップ ジェスチャ</Japanese>
             <Korean>지도 신호</Korean>
-            <Chinesesimp>地图指示器</Chinesesimp>
+            <Chinesesimp>地图标识器</Chinesesimp>
             <Chinese>地圖指示器</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_enabled_displayName">
@@ -43,7 +43,7 @@
             <French>Distance max. des gestes de carte</French>
             <Japanese>マップ ジェスチャの最大範囲</Japanese>
             <Korean>지도 신호 최대 거리</Korean>
-            <Chinesesimp>地图指示器最大范围</Chinesesimp>
+            <Chinesesimp>地图标识器最大范围</Chinesesimp>
             <Chinese>地圖指示器最大範圍</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_maxRange_description">
@@ -58,7 +58,7 @@
             <French>Distance max. entre les joueurs pour montrer le pointage sur carte. (Défaut : 7m)</French>
             <Japanese>プレイヤのマップ ジェスチャによる表示範囲を設定します [標準：7 メートル]</Japanese>
             <Korean>플레이어간에 지도 신호 표시거리를 설정합니다. [기본: 7 미터]</Korean>
-            <Chinesesimp>设定地图指示器显示的最大范围距离 [预设: 7公尺]</Chinesesimp>
+            <Chinesesimp>设定地图标识器显示的最大范围距离 [预设: 7公尺]</Chinesesimp>
             <Chinese>設定地圖指示器顯示的最大範圍距離 [預設: 7公尺]</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
@@ -87,7 +87,7 @@
             <French>Couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage pour le groupe. (Module : laisser vide pour ne pas forcer chez les clients)</French>
             <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
-            <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的指示器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
+            <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
@@ -116,7 +116,7 @@
             <French>Couleur par défaut quand il n'y a pas de réglage pour le groupe. (Module : laisser vide pour ne pas forcer chez les clients)</French>
             <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없을 경우의 예비 색상입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
-            <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的指示器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
+            <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_displayName">
@@ -145,8 +145,8 @@
             <French>Couleur pour les chefs de groupe des groupes synchronisés avec le module.</French>
             <Japanese>モジュールで同期されたグループのリーダー用に色の値を決定します。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을때의 리더 색상입니다.</Korean>
-            <Chinesesimp>改变与此同步小队队长的指示器颜色。</Chinesesimp>
-            <Chinese>改變與此同步小隊隊長的指示器顏色。</Chinese>
+            <Chinesesimp>改变与此同步小队队长的标识器颜色。</Chinesesimp>
+            <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_color_displayName">
             <English>Color</English>
@@ -174,7 +174,7 @@
             <French>Couleur pour les membres du groupe synchronisé avec ce module.</French>
             <Japanese>モジュールで同期されたグループのメンバ用に色の値を決定します。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을때의 멤버 색상입니다.</Korean>
-            <Chinesesimp>改变与此同步小队队员的指示器颜色</Chinesesimp>
+            <Chinesesimp>改变与此同步小队队员的标识器颜色</Chinesesimp>
             <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_moduleGroupSettings_displayName">
@@ -189,7 +189,7 @@
             <French>Gestes de carte - réglages de groupe</French>
             <Japanese>マップ ジェスチャ - グループ設定</Japanese>
             <Korean>지도 신호 - 그룹 설정</Korean>
-            <Chinesesimp>地图指示器 - 队伍设定</Chinesesimp>
+            <Chinesesimp>地图标识器 - 队伍设定</Chinesesimp>
             <Chinese>地圖指示器 - 隊伍設定</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_interval_displayName">
@@ -220,7 +220,7 @@
             <Japanese>データの更新間隔</Japanese>
             <Korean>데이터 갱신 간격</Korean>
             <Chinesesimp>定义每次更新数据的时间.</Chinesesimp>
-            <Chinese>定義每次更新數據的時間.</Chinese>
+            <Chinese>定義每次更新數據的時間</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
@@ -234,7 +234,7 @@
             <French>Activer les gestes de carte</French>
             <Japanese>マップ ジェスチャを有効化</Japanese>
             <Korean>지도 신호 활성화</Korean>
-            <Chinesesimp>启用地图指示器</Chinesesimp>
+            <Chinesesimp>启用地图标识器</Chinesesimp>
             <Chinese>啟用地圖指示器</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_nameTextColor_displayName">
@@ -263,8 +263,8 @@
             <French>Couleur des tags de nom à côté de marqueur de pointage sur carte.</French>
             <Japanese>マップ ジェスチャに表示される、名前の色を決定します。</Japanese>
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
-            <Chinesesimp>定义名称文字颜色。使其与地图指示器颜色有所区别。</Chinesesimp>
-            <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別。</Chinese>
+            <Chinesesimp>定义名称文字颜色。使其与地图标识器颜色有所区别。</Chinesesimp>
+            <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_mapGestures_category">
             <English>Map Gestures</English>
@@ -278,7 +278,7 @@
             <French>Gestes de carte</French>
             <Japanese>マップ ジェスチャ</Japanese>
             <Korean>지도 신호</Korean>
-            <Chinesesimp>地图指示器</Chinesesimp>
+            <Chinesesimp>地图标识器</Chinesesimp>
             <Chinese>地圖指示器</Chinese>
         </Key>
     </Package>

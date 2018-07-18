@@ -60,13 +60,13 @@ private _fnc_weaponCheck = {
                     if (isClass (_magCfg >> _mag)) then {
                         if !(_mag in (GVAR(virtualItems) select 2)) then {
 
-                            _unavailableItemsList pushBackUnique _item;
+                            _unavailableItemsList pushBackUnique _mag;
                             _dataPath set [_forEachIndex, []];
                             _unavailableItemsAmount = _unavailableItemsAmount + 1;
                         };
                     } else {
 
-                        _nullItemsList pushBackUnique _item;
+                        _nullItemsList pushBackUnique _mag;
                         _dataPath set [_forEachIndex, []];
                         _nullItemsAmount = _nullItemsAmount + 1;
                     };

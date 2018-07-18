@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 // init marker types
 if (isNil QGVAR(MarkersCache)) then {
     GVAR(MarkersCache) = [];

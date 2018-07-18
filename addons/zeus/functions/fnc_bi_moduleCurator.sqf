@@ -17,7 +17,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];

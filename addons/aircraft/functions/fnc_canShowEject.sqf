@@ -23,6 +23,7 @@
 params ["_unit", "_vehicle"];
 
 _vehicle == vehicle _unit
+&& {2 > locked _vehicle}
 && {
     private _ejectVarName = "";
     {

@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-
+if (GVAR(centerNotPlayer)) exitWith {};
 
 private _nextAction = switch (GVAR(currentLeftPanel)) do {
 

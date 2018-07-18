@@ -55,6 +55,15 @@ The color coding for loadouts is as follows:
 - Grey: Some items in that loadout are not available in that box.
 - Red: Missing mods / class not defined, this takes precedence over grey if there is also unavailable items.
 
+#### 1.2.1 Importing loadouts from Virtual Arsenal
+
+You can import loadouts from Virtual Arsenal into ACE Arsenal, face, voice, insignias, and items from mods that aren't loaded won't be ported.
+
+- Go in 3DEN
+- Place down a player unit
+- In the 3DEN top toolbar, click on the `TOOLS` tab
+- Click on `Import BI VA Loadouts to Ace Arsenal`
+
 ## 2. Shortcuts
 
 <div class="panel callout">

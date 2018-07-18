@@ -64,7 +64,7 @@ if (_state) then {
                 TRACE_1("removing animChanged EH",_animChangedEHID);
                 _unit removeEventHandler ["AnimChanged", _animChangedEHID];
             };
-            _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedSurrendered)];
+            _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedSurrendered)}];
             _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
         };
     }, [_unit], 0.01] call CBA_fnc_waitAndExecute;

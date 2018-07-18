@@ -311,7 +311,7 @@
             <Korean>켐라이트를 위한 가림막입니다. 켐라이트와 같이 사용하여  읽을 때 씁니다.</Korean>
             <French>Étui pour cyalume. Combiné avec un cyalume pour obtennir un lampe de lecture.</French>
             <Italian>Scudo per luci chimiche. Combina con una luce chimica per una luce da lettura.</Italian>
-            <Chinese>螢光棒的保護殼. 與螢光棒結合後可充當閱讀燈.</Chinese>
+            <Chinese>螢光棒的保護殼. 與螢光棒結合後可充當閱讀燈</Chinese>
             <Chinesesimp>萤光棒的保护壳. 与萤光棒结合后可充当阅读灯.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DisplayName">
@@ -333,7 +333,7 @@
             <Korean>초록빛 조명</Korean>
             <French>Lampe d'orientation verte.</French>
             <Italian>Luce da lettura Verde.</Italian>
-            <Chinese>綠色閱讀燈。</Chinese>
+            <Chinese>綠色閱讀燈</Chinese>
             <Chinesesimp>绿色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DisplayName">
@@ -355,7 +355,7 @@
             <Korean>빨간색 조명</Korean>
             <French>Lampe d'orientation rouge.</French>
             <Italian>Luce da lettura Rossa.</Italian>
-            <Chinese>紅色閱讀燈。</Chinese>
+            <Chinese>紅色閱讀燈</Chinese>
             <Chinesesimp>红色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DisplayName">
@@ -377,7 +377,7 @@
             <Korean>파란색 조명</Korean>
             <French>Lampe d'orientation bleue.</French>
             <Italian>Luce da lettura Blu.</Italian>
-            <Chinese>藍色閱讀燈。</Chinese>
+            <Chinese>藍色閱讀燈</Chinese>
             <Chinesesimp>蓝色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DisplayName">
@@ -399,7 +399,7 @@
             <Korean>노란색 조명</Korean>
             <French>Lampe d'orientation jaune.</French>
             <Italian>Luce da lettura Gialla.</Italian>
-            <Chinese>黃色閱讀燈。</Chinese>
+            <Chinese>黃色閱讀燈</Chinese>
             <Chinesesimp>黄色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DisplayName">
@@ -421,7 +421,7 @@
             <Korean>주황색 조명</Korean>
             <French>Lampe d'orientation orange.</French>
             <Italian>Luce da lettura Arancione.</Italian>
-            <Chinese>橘色閱讀燈。</Chinese>
+            <Chinese>橘色閱讀燈</Chinese>
             <Chinesesimp>橘色阅读灯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DisplayName">
@@ -443,7 +443,7 @@
             <Korean>주황색 조명</Korean>
             <French>Lampe d'orientation blanche.</French>
             <Italian>Luce da lettura Bianca.</Italian>
-            <Chinese>白色閱讀燈。</Chinese>
+            <Chinese>白色閱讀燈</Chinese>
             <Chinesesimp>白色阅读灯。</Chinesesimp>
         </Key>
     </Package>

@@ -2,7 +2,6 @@
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
-
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
@@ -15,7 +14,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting"};
                     insertChildren = QUOTE(_this call DFUNC(compileChemlightMenu));
                     showDisabled = 0;
-                    priority = 99;
                 };
             };
         };

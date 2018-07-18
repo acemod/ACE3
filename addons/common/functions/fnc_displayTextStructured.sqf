@@ -49,25 +49,23 @@ private _ctrlHint = uiNamespace getVariable "ACE_ctrlHint";
 
 _ctrlHint ctrlSetBackgroundColor GVAR(displayTextColor);
 _ctrlHint ctrlSetTextColor GVAR(displayTextFontColor);
-/*
-// This does not function at the moment. Has been disabled until it fixed.
+
+// Use profile settings from CfgUIGrids.hpp
 private _xPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_X", ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))];
 private _yPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_Y", safeZoneY + 0.175 * safezoneH];
-private _wPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_W", (10 *(((safezoneW / safezoneH) min 1.2) / 40))];
-private _hPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_H", (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))];
-*/
-
-private _xPos = ((safezoneX + safezoneW) - (_width *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40));
-private _yPos = safeZoneY + 0.175 * safezoneH;
 private _wPos =  (_width *(((safezoneW / safezoneH) min 1.2) / 40));
-private _hPos = (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+private _hPos = _size * (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+
+// Ensure still in bounds for large width/height
+_xPos = safezoneX max (_xPos min (safezoneX + safezoneW - _wPos));
+_yPos = safeZoneY max (_yPos min (safeZoneY + safezoneH - _hPos));
 
 // Zeus Interface Open and Display would be under the "CREATE" list
 if (!isNull curatorCamera) then {
     _xPos = _xPos min ((safezoneX + safezoneW - 12.5 * (((safezoneW / safezoneH) min 1.2) / 40)) - _wPos);
 };
 
-private _position = [_xPos, _yPos, _wPos, _size * _hPos];
+private _position = [_xPos, _yPos, _wPos, _hPos];
 
 _ctrlHint ctrlSetPosition _position;
 _ctrlHint ctrlCommit 0;

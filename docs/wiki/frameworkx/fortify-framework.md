@@ -64,3 +64,12 @@ class ACEX_Fortify_Presets {
  ```
 
  Then you will have to set the mission preset to `myMissionObjects` with `#fortify blufor myMissionObjects` to enable it.
+
+## 2. Events
+
+### 2.1 Listenable
+
+Event Name | Passed Parameter(s) | Locality | Description
+---------- | ----------- | ------------------- | --------
+`acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
+`acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted

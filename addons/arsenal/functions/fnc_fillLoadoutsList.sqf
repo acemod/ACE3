@@ -22,6 +22,12 @@ _textEditBoxCtrl ctrlSetText "";
 private _sharingEnabled = (GVAR(allowSharedLoadouts) && {isMultiplayer});
 private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
 
+// Force a "refresh" animation of the panel
+_contentPanelCtrl ctrlSetFade 1;
+_contentPanelCtrl ctrlCommit 0;
+_contentPanelCtrl ctrlSetFade 0;
+_contentPanelCtrl ctrlCommit FADE_DELAY;
+
 _contentPanelCtrl lnbSetCurSelRow -1;
 lnbClear _contentPanelCtrl;
 
@@ -114,5 +120,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         };
     } foreach (_sharedLoadoutsVars apply {GVAR(sharedLoadoutsNamespace) getVariable _x});
 };
+
+[QGVAR(loadoutsListFilled), [_display, _control]] call CBA_fnc_localEvent;
 
 _contentPanelCtrl lnbSort [1, false];

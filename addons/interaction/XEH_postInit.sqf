@@ -28,6 +28,18 @@ ACE_Modifier = 0;
     {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;
 
+
+[QGVAR(flip), {
+    params ["_vehicle"];
+    private _position = getPosATL _vehicle;
+    _vehicle setVectorUp surfaceNormal _position;
+    _vehicle setPosATL _position;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setCollisionLight), {
+    (_this select 0) setCollisionLight (_this select 1);
+}] call CBA_fnc_addEventHandler;
+
 // Zeus action events
 [QGVAR(zeusStance),{
     { _x setUnitPos (_this select 0); } forEach (_this select 1);
@@ -116,3 +128,21 @@ GVAR(isOpeningDoor) = false;
         }];
     };
 }] call CBA_fnc_addEventHandler;
+
+
+// to make "Camping Lantern (Off)" be turned on we replace it with "Camping Lantern"
+private _action = [
+    QGVAR(TurnOn),
+    localize LSTRING(TurnOn),
+    "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa",
+    {
+        private _position = getPosATL _target;
+        private _vectorDirAndUp = [vectorDir _target, vectorUp _target];
+        deleteVehicle _target;
+        private _newLamp = "Land_Camping_Light_F" createVehicle [0,0,0];
+        _newLamp setPosATL _position;
+        _newLamp setVectorDirAndUp _vectorDirAndUp;
+    },
+    {alive _target}
+] call EFUNC(interact_menu,createAction);
+["Land_Camping_Light_off_F", 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);

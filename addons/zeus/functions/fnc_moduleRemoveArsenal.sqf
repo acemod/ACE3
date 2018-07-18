@@ -10,7 +10,6 @@
  *
  * Public: No
 */
-
 #include "script_component.hpp"
 
 params ["_logic"];
@@ -31,17 +30,11 @@ switch (true) do {
     };
     default {
 
-        if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
-
-            [_object, true, true] call EFUNC(arsenal,removeBox);
-        } else {
-
-            TRACE_1("Calling removeVirtualXXXCargo functions",_object);
-            [_object, (_object call BIS_fnc_getVirtualItemCargo), true] call BIS_fnc_removeVirtualItemCargo;
-            [_object, (_object call BIS_fnc_getVirtualWeaponCargo), true] call BIS_fnc_removeVirtualWeaponCargo;
-            [_object, (_object call BIS_fnc_getVirtualMagazineCargo), true] call BIS_fnc_removeVirtualMagazineCargo;
-            [_object, (_object call BIS_fnc_getVirtualBackpackCargo), true] call BIS_fnc_removeVirtualBackpackCargo;
-        };
+        TRACE_1("Calling removeVirtualXXXCargo functions", _object);
+        [_object, (_object call BIS_fnc_getVirtualItemCargo), true] call BIS_fnc_removeVirtualItemCargo;
+        [_object, (_object call BIS_fnc_getVirtualWeaponCargo), true] call BIS_fnc_removeVirtualWeaponCargo;
+        [_object, (_object call BIS_fnc_getVirtualMagazineCargo), true] call BIS_fnc_removeVirtualMagazineCargo;
+        [_object, (_object call BIS_fnc_getVirtualBackpackCargo), true] call BIS_fnc_removeVirtualBackpackCargo;
     };
 };
 
