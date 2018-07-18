@@ -3,9 +3,10 @@
 [QEGVAR(medical,initialized), FUNC(checkItems)] call CBA_fnc_addEventHandler;
 ["loadout", FUNC(checkItems)] call CBA_fnc_addPlayerEventHandler;
 
-
+// Handle bodybags and litter on server
 if (isServer) then {
     [QGVAR(createLitterServer), FUNC(litterHandleCreate)] call CBA_fnc_addEventHandler;
+    ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
 };
 
 // treatment events

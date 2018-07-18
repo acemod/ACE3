@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal, esteldunedain
- * Loop that cleans up litter
+ * Loop that cleans up player bodies that were replaced by bodybags
  *
  * Arguments:
  * None

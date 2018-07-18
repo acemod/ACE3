@@ -1,7 +1,6 @@
 PREP(addDamageToUnit);
 PREP(addStateHandler);
 PREP(adjustPainLevel);
-PREP(bodyCleanupLoop);
 PREP(dev_watchMedicalStats);
 PREP(displayTriageCard);
 PREP(getUnitState);
@@ -14,5 +13,4 @@ PREP(install);
 PREP(moduleAssignMedicalVehicle);
 PREP(moduleAssignMedicRoles);
 PREP(moduleMedicalSettings);
-PREP(serverRemoveBody);
 PREP(setUnconsciousStatemachine);

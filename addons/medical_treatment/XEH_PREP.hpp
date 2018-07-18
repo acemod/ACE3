@@ -41,6 +41,7 @@ PREP(treatmentTourniquetRemove);
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);
+PREP(bodyCleanupLoop);
 PREP(calculateBlood);
 PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
@@ -49,6 +50,7 @@ PREP(handleBandageOpening);
 PREP(healTime);
 PREP(HealTimeMedkit);
 PREP(onMedicationUsage);
+PREP(serverRemoveBody);
 
 // items
 PREP(checkItems);

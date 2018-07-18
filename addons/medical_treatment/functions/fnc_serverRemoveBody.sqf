@@ -20,7 +20,7 @@
 params ["_target"];
 TRACE_2("",_target,isPlayer _target);
 
-//Hide the body globaly
+// Hide the body globaly
 [QEGVAR(common,hideObjectGlobal), [_target, true]] call CBA_fnc_serverEvent;
 
 if (isNil QGVAR(bodiesToDelete)) then {GVAR(bodiesToDelete) = [];};
