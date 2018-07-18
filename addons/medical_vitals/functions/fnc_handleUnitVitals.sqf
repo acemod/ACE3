@@ -94,11 +94,7 @@ switch (true) do {
         TRACE_3("BloodVolume Fatal",_unit,BLOOD_VOLUME_FATAL,_bloodVolume);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
-    case (_heartRate < 20): {
-        TRACE_2("heartRate Fatal",_unit,_heartRate);
-        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
-    };
-    case (_heartRate < 20): {
+    case (_heartRate < 20 || {_heartRate > 220}): {
         TRACE_2("heartRate Fatal",_unit,_heartRate);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
