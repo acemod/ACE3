@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // Can't heal other units when unconscious
-if (_this getVariable ["ACE_isUnconscious", false]) exitWith {};
+if IS_UNCONSCIOUS(_this) exitWith {};
 // Check if we're still treating
 if ((_this getVariable [QGVAR(treatmentOverAt), CBA_missionTime]) > CBA_missionTime) exitWith {};
 
@@ -52,9 +52,9 @@ _this setVariable [QGVAR(movingToInjured), false];
 _this forceSpeed 0;
 _target forceSpeed 0;
 
-private _needsBandaging = ([_target] call EFUNC(medical,getBloodLoss)) > 0;
-private _needsMorphine  = (_target getVariable [QEGVAR(medical,pain), 0]) > 0.2;
-private _needsEpinephrine = _target getVariable ["ACE_isUnconscious", false];
+private _needsBandaging = GET_BLOOD_LOSS(_target) > 0;
+private _needsMorphine  = GET_PAIN(_target) > 0.2;
+private _needsEpinephrine = IS_UNCONSCIOUS(_target);
 
 switch (true) do {
     case _needsBandaging: {

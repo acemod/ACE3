@@ -23,8 +23,9 @@ if (alive _target) then {
     _genericMessages pushBack ELSTRING(medical,diagnoseDead);
 };
 
-if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 0) then {
-    if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 1) then {
+private _hemorrhage = GET_HEMORRHAGE(_target);
+if (_hemorrhage > 0) then {
+    if (_hemorrhage > 1) then {
         _genericMessages pushBack ELSTRING(medical,lostBloodALot);
     } else {
         _genericMessages pushBack ELSTRING(medical,lostBlood);
@@ -34,7 +35,7 @@ if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 0) then {
 };
 
 if (alive _target) then {
-    if (_target getVariable[QEGVAR(medical,hasPain), false]) then {
+    if IS_IN_PAIN(_target) then {
         _genericMessages pushBack ELSTRING(medical,inPain);
     } else {
         _genericMessages pushBack ELSTRING(medical,noPain);

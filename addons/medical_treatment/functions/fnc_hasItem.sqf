@@ -33,7 +33,7 @@ if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
 
 private _return = false;
 
-if (vehicle _medic != _medic && {vehicle _medic call EFUNC(medical,isMedicalVehicle)}) then {
+if (vehicle _medic != _medic && {vehicle _medic call FUNC(isMedicalVehicle)}) then {
     {
         if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {[_x, _item] call EFUNC(common,hasItem)}) exitWith {
             _return = true;

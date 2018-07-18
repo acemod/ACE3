@@ -20,10 +20,10 @@ PREP(treatment_success);
 
 PREP(treatmentBandage);
 PREP(treatmentBandageLocal);
+PREP(treatmentCPR);
 PREP(treatmentCPR_failure);
 PREP(treatmentCPR_progress);
 PREP(treatmentCPR_start);
-PREP(treatmentCPR);
 PREP(treatmentCPRLocal);
 PREP(treatmentFullHeal);
 PREP(treatmentFullHealLocal);
@@ -41,16 +41,21 @@ PREP(treatmentTourniquetRemove);
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);
+PREP(bodyCleanupLoop);
+PREP(calculateBlood);
 PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);
+PREP(hasTourniquetAppliedTo);
 PREP(healTime);
 PREP(HealTimeMedkit);
-PREP(isBeingCarried);
-PREP(isBeingDragged);
+PREP(isInMedicalFacility);
+PREP(isInMedicalVehicle);
+PREP(isMedic);
+PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
-PREP(calculateBlood);
+PREP(serverRemoveBody);
 
 // items
 PREP(checkItems);

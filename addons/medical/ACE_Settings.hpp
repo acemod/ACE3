@@ -60,7 +60,6 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_advancedDiagnose_Description);
         typeName = "BOOL";
         value = 1;
-        sliderSettings[] = {0, 25, 1, 1};
     };
     class GVAR(woundReopening) {
         category = CSTRING(Category_Medical);
@@ -68,7 +67,6 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_enableAdvancedWounds_Description);
         typeName = "BOOL";
         value = 1;
-        sliderSettings[] = {0, 25, 1, 1};
     };
     /* @todo
     class GVAR(enableVehicleCrashes) {
@@ -98,16 +96,16 @@ class ACE_Settings {
         displayName = CSTRING(MedicalSettings_playerDamageThreshold_DisplayName);
         description = CSTRING(MedicalSettings_playerDamageThreshold_Description);
         typeName = "SCALAR";
-        value = 120;
-        sliderSettings[] = {0, 1200, 120, 0};
+        value = 1.0;
+        sliderSettings[] = {0, 25, 1, 2};
     };
     class GVAR(AIDamageThreshold) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_AIDamageThreshold_DisplayName);
         description = CSTRING(MedicalSettings_AIDamageThreshold_Description);
         typeName = "SCALAR";
-        value = -1;
-        sliderSettings[] = {-1, 25, -1, -1};
+        value = 1.0;
+        sliderSettings[] = {0, 25, 1, 2};
     };
     class GVAR(fatalInjuryCondition) {
         category = CSTRING(Category_Medical);
@@ -137,6 +135,7 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_cardiacArrestTime_Description);
         value = 30;
         typeName = "SCALAR";
+        sliderSettings[] = {1, 3600, 30, 0};
     };
     class GVAR(medicSetting_PainVisualization) {
         category = CSTRING(Category_Medical);
@@ -153,7 +152,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
         values[] = {"Anyone", "Medics only", "Doctors only"};
-        sliderSettings[] = {-1, 3600, 0, 0};
     };
     class GVAR(medicSetting_Medkit) {
         category = CSTRING(Category_Medical);
@@ -240,7 +238,8 @@ class ACE_Settings {
         displayName = CSTRING(MedicalSettings_remainingDamage_Medkit_DisplayName);
         description = CSTRING(MedicalSettings_remainingDamage_Medkit_Description);
         typeName = "SCALAR";
-        value = 0.1;
+        value = 0.0;
+        sliderSettings[] = {0, 1, 0.1, 2};
     };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
         category = CSTRING(Category_Medical);
@@ -277,7 +276,7 @@ class ACE_Settings {
         displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);
         description = CSTRING(MedicalSettings_spontaneousWakeUpChance_Description);
         typeName = "SCALAR";
-        value = 3;
-        sliderSettings[] = {0, 30, 3, 0};
+        value = 0.05
+        sliderSettings[] = {0, 1, 0.05, 2};
     };
 };

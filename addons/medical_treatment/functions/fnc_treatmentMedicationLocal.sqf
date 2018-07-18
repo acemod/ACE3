@@ -13,21 +13,22 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+#define MORPHINE_PAIN_SUPPRESSION 0.6
 
 params ["_target", "_className", "_partIndex"];
 TRACE_3("params",_target,_className,_partIndex);
 
 if (!EGVAR(medical,advancedMedication)) exitWith {
+    TRACE_1("MedicalSettingAdvancedMedication is:", EGVAR(medical,advancedMedication));
     if (_className == "Morphine") exitWith {
-        #define MORPHINE_PAIN_SUPPRESSION 0.6
-        private _painSupress = _target getVariable [QEGVAR(medical,painSuppress), 0];
-        _target setVariable [QEGVAR(medical,painSuppress), (_painSupress + MORPHINE_PAIN_SUPPRESSION) min 1, true];
+        private _painSupress = GET_PAIN_SUPPRESS(_target);
+        _target setVariable [VAR_PAIN_SUPP, (_painSupress + MORPHINE_PAIN_SUPPRESSION) min 1, true];
     };
-
     if (_className == "Epinephrine") exitWith {
         [QEGVAR(medical,WakeUp), _target] call CBA_fnc_localEvent;
     };
 };
+TRACE_1("Running treatmentMedicationLocal with Advanced configuration for", _target);
 
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 
@@ -73,30 +74,33 @@ if (isClass (_medicationConfig >> _className)) then {
 };
 
 if (alive _target) then {
-    private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
+    private _heartRate = GET_HEART_RATE(_target);
     private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNorm, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
     _hrIncrease params ["_minIncrease", "_maxIncrease"];
     private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
-    
+
     // Adjust the heart rate based upon config entry
     if (_heartRateChange != 0) then {
-        private _heartRateAdjustments = _target getVariable [QEGVAR(medical,heartRateAdjustments), []];
-        _heartRateAdjustments pushBack [_heartRateChange, _timeTillMaxEffect, _timeInSystem, 0];
-        _target setVariable [QEGVAR(medical,heartRateAdjustments), _heartRateAdjustments];
+        TRACE_1("heartRateChange", _heartRateChange);
+        private _adjustments = _target getVariable [VAR_HEART_RATE_ADJ,[]];
+        _adjustments pushBack [_heartRateChange, _timeTillMaxEffect, _timeInSystem, 0];
+        _target setVariable [VAR_HEART_RATE_ADJ, _adjustments];
     };
-    
+
     // Adjust the pain suppression based upon config entry
     if (_painReduce > 0) then {
-        private _painSupressAdjustments = _target getVariable [QEGVAR(medical,painSupressAdjustments), []];
-        _painSupressAdjustments pushBack [_painReduce, _timeTillMaxEffect, _timeInSystem, 0];
-        _target setVariable [QEGVAR(medical,painSupressAdjustments), _painSupressAdjustments];
+        TRACE_1("painReduce", _painReduce);
+        private _adjustments = _target getVariable [VAR_PAIN_SUPP_ADJ,[]];
+        _adjustments pushBack [_painReduce, _timeTillMaxEffect, _timeInSystem, 0];
+        _target setVariable [VAR_PAIN_SUPP_ADJ, _adjustments];
     };
 
     // Adjust the peripheral resistance based upon config entry
     if (_viscosityChange != 0) then {
-        private _peripheralResistanceAdjustments = _target getVariable [QEGVAR(medical,peripheralResistanceAdjustments), []];
-        _peripheralResistanceAdjustments pushBack [_viscosityChange, _timeTillMaxEffect, _timeInSystem, 0];
-        _target setVariable [QEGVAR(medical,peripheralResistanceAdjustments), _peripheralResistanceAdjustments];
+        TRACE_1("viscosityChange", _viscosityChange);
+        private _adjustments = _target getVariable [VAR_PERIPH_RES_ADJ,[]];
+        _adjustments pushBack [_viscosityChange, _timeTillMaxEffect, _timeInSystem, 0];
+        _target setVariable [VAR_PERIPH_RES_ADJ, _adjustments];
     };
 };
 

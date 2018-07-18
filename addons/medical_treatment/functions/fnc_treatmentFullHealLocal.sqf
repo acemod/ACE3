@@ -17,8 +17,8 @@ params ["_caller", "_target"];
 
 if (!alive _target) exitWith {};
 
-_target setVariable [QEGVAR(medical,pain), 0, true];
-_target setVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME, true];
+_unit setVariable [VAR_PAIN, 0, true];
+_unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
 // tourniquets
 _target setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
@@ -28,14 +28,14 @@ _target setVariable [QGVAR(occludedMedications), nil, true];
 _target setVariable [QEGVAR(medical,openWounds), [], true];
 _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
 _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
-_target setVariable [QEGVAR(medical_engine,isLimping), false, true];
+_target setVariable [QEGVAR(medical,isLimping), false, true];
 
 // vitals
-_target setVariable [QEGVAR(medical,heartRate), 80, true];
-_target setVariable [QEGVAR(medical,heartRateAdjustments), [], true];
-_target setVariable [QEGVAR(medical,bloodPressure), [80, 120], true];
-_target setVariable [QEGVAR(medical,peripheralResistance), 100, true];
-_target setVariable [QGVAR(peripheralResistanceAdjustments), [], true];
+_target setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
+_target setVariable [VAR_HEART_RATE_ADJ, [], true];
+_target setVariable [VAR_BLOOD_PRESS, [80, 120], true];
+_target setVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES, true];
+_target setVariable [VAR_PERIPH_RES_ADJ, [], true];
 
 // IVs
 _target setVariable [QEGVAR(medical,ivBags), nil, true];
@@ -47,13 +47,13 @@ _target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
 #endif
 
 // generic medical admin
-_target setVariable [QEGVAR(medical,inCardiacArrest), false, true];
-_target setVariable ["ACE_isUnconscious", false, true];
-_target setVariable [QEGVAR(medical,hasLostBlood), 0, true];
-_target setVariable [QEGVAR(medical,isBleeding), false, true];
-_target setVariable [QEGVAR(medical,hasPain), false, true];
-_target setVariable [QEGVAR(medical,painSuppress), 0, true];
-_target setVariable [QGVAR(painSuppressAdjustments), [], true];
+_target setVariable [VAR_CRDC_ARRST, false, true];
+_target setVariable [VAR_UNCON, false, true];
+_target setVariable [VAR_HEMORRHAGE, 0, true];
+_target setVariable [VAR_IS_BLEEDING, false, true];
+_target setVariable [VAR_IN_PAIN, false, true];
+_target setVariable [VAR_PAIN_SUPP, 0, true];
+_target setVariable [VAR_PAIN_SUPP_ADJ, [], true];
 _target setVariable [QGVAR(partialHealCounter), 0, true];
 
 // medication

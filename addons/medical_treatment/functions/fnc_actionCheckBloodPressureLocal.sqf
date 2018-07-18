@@ -18,8 +18,8 @@ params ["_caller", "_target", "_bodyPart"];
 
 private _bloodPressure = [0, 0];
 
-if (alive _target && !([_target, _bodyPart] call EFUNC(medical,hasTourniquetAppliedTo))) then {
-    _bloodPressure = _target call EFUNC(medical,getBloodPressure);
+if (alive _target && !([_target, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
+    _bloodPressure = GET_BLOOD_PRESSURE(_target);
 };
 
 private _bloodPressureOutput = ELSTRING(medical,Check_Bloodpressure_Output_6);
@@ -28,7 +28,7 @@ private _logOutPut = ELSTRING(medical,Check_Bloodpressure_NoBloodpressure);
 _bloodPressure params ["_bloodPressureLow", "_bloodPressureHigh"];
 
 if (_bloodPressureHigh > 20) then {
-    if (_caller call EFUNC(medical,isMedic)) then {
+    if (_caller call FUNC(isMedic)) then {
         _bloodPressureOutput = ELSTRING(medical,Check_Bloodpressure_Output_1);
         _logOutPut = format ["%1/%2", round _bloodPressureHigh, round _bloodPressureLow];
     } else {

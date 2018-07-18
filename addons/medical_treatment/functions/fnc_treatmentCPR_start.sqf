@@ -16,8 +16,8 @@
 params ["_caller", "_target"];
 
 _target setVariable [QGVAR(receiveCPR), true, true]; // Target receives CPR
-if (EGVAR(medical,CPRcreatesPulse) && {_target getVariable [QEGVAR(medical,heartRate), 80] == 0}) then {
-    _target setVariable [QEGVAR(medical,heartRate), round (30 + random [-5, 0, 5])  , true]; // And we have a (random) pulse
+if (EGVAR(medical,CPRcreatesPulse) && {GET_HEART_RATE(_target) == 0}) then {
+    _target setVariable [VAR_HEART_RATE, round (30 + random [-5, 0, 5])  , true]; // And we have a (random) pulse
 };
 
 _target setVariable [QEGVAR(medical,lastTimeUpdated), CBA_missionTime, true];

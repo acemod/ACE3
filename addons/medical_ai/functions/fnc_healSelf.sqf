@@ -18,12 +18,12 @@
 // Player will have to do this manually of course
 if ([_this] call EFUNC(common,isPlayer)) exitWith {};
 // Can't heal self when unconscious
-if (_this getVariable ["ACE_isUnconscious", false]) exitWith {};
+if IS_UNCONSCIOUS(_this) exitWith {};
 // Check if we're still treating
 if ((_this getVariable [QGVAR(treatmentOverAt), CBA_missionTime]) > CBA_missionTime) exitWith {};
 
-private _needsBandaging = ([_this] call EFUNC(medical,getBloodLoss)) > 0;
-private _needsMorphine  = (_this getVariable [QEGVAR(medical,pain), 0]) > 0.2;
+private _needsBandaging = GET_BLOOD_LOSS(_this) > 0;
+private _needsMorphine  = GET_PAIN(_this) > 0.2;
 
 switch (true) do {
     case _needsBandaging: {

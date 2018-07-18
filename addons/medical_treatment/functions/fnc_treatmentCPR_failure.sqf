@@ -15,8 +15,8 @@
 
 params ["_caller", "_target"];
 
-if (!(_target call EFUNC(common,isAwake)) || {_target getVariable [QEGVAR(medical,inCardiacArrest), false]}) then {
-    _target setVariable [QEGVAR(medical,heartRate), 0, true];
+if (!(_target call EFUNC(common,isAwake)) || {IN_CRDC_ARRST(_target)}) then {
+    _target setVariable [VAR_HEART_RATE, 0, true];
 };
 _target setVariable [QGVAR(receiveCPR), false, true];
 [_target] call FUNC(calculateBlood);

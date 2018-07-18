@@ -69,7 +69,7 @@ if (_highestPossibleSpot < 0) exitWith {};
 
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
-private _woundID = _unit getVariable [QGVAR(lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
+private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
 
 private _painLevel = 0;
 private _critialDamage = false;
@@ -91,10 +91,10 @@ private _woundsCreated = [];
             _oldInjury params ["_woundClassIDToAdd", "", "_injuryBleedingRate", "_injuryPain"];
 
             private _bodyPartNToAdd = [floor random 6, _bodyPartN] select _isSelectionSpecific; // 6 == count ALL_BODY_PARTS
-            
+
             _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
-            
+
             // Create a new injury. Format [ID, classID, bodypart, percentage treated, bleeding rate]
             _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
 
@@ -125,6 +125,7 @@ private _woundsCreated = [];
 #endif
 
             if (_bodyPartNToAdd == 0 && {_woundDamage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
+                TRACE_2("FatalInjury",_unit,_woundDamage);
                 [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
             };
 
@@ -170,10 +171,10 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
 [_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
-[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
+[QGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
-    [_unit] call EFUNC(medical,handleIncapacitation);
+    [_unit] call FUNC(handleIncapacitation);
 };
 
-TRACE_5("exit",_unit,_painLevel,_unit getVariable QEGVAR(medical,pain),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_5("exit",_unit,_painLevel,GET_PAIN(_unit),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);

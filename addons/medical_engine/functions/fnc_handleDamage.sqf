@@ -138,8 +138,19 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // Don't trigger for minor damage.
     if (_receivedDamage > 1E-3) then {
-        [QGVAR(woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
+        [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
     };
+
+    // resetting these single-damage-event tracker vars, if we don't do this then
+    // subsequent wounds will be piled onto the selection which has accumulated
+    // the most wounding
+    {
+        _unit setVariable [_x, 0];
+    } forEach [
+        QGVAR($HitFace),QGVAR($HitNeck),QGVAR($HitHead),
+        QGVAR($HitPelvis),QGVAR($HitAbdomen),QGVAR($HitDiaphragm),QGVAR($HitChest),QGVAR($HitBody),
+        QGVAR($HitLeftArm),QGVAR($HitRightArm),QGVAR($HitLeftLeg),QGVAR($HitRightLeg)
+    ];
 
     0
 };
@@ -147,14 +158,14 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 // Check for drowning damage.
 // Don't change the third expression. Safe method for FLOATs.
 if (_hitPoint isEqualTo "#structural" && {getOxygenRemaining _unit <= 0.5} && {_damage isEqualTo (_oldDamage + 0.005)}) exitWith {
-    [QGVAR(woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning"]] call CBA_fnc_localEvent;
 
     0
 };
 
 // Handle vehicle crashes
 if (_isCrash) exitWith {
-    [QGVAR(woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash"]] call CBA_fnc_localEvent;
 
     0
 };

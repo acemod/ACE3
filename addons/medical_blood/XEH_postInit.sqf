@@ -38,5 +38,5 @@ if (isServer) then {
     private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;
     [_stateMachine, {call FUNC(onBleeding)}, {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
-    [QEGVAR(medical_engine,woundReceived), FUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
+    [QEGVAR(medical,woundReceived), FUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;

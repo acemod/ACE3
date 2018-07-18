@@ -4,7 +4,7 @@
     TRACE_1("settingsInitialized", GVAR(enabledFor));
     if (GVAR(enabledFor) == 0) exitWith {}; // 0: disabled
     if ((GVAR(enabledFor) == 1) && {!isServer} && {hasInterface}) exitWith {}; // 1: Don't Run on non-hc Clients
-    
+
     // Only run for AI that does not have to deal with advanced medical
     if (EGVAR(medical,enableFor) == 1 || {hasInterface}) exitWith {};
 
@@ -19,7 +19,7 @@
 
             private _medic = objNull;
             {
-                if ((!isPlayer _x) && {[_x] call EFUNC(medical,isMedic)}) exitWith {
+                if ((!isPlayer _x) && {[_x] call EFUNC(medical_treatment,isMedic)}) exitWith {
                     _medic = _x;
                 };
             } forEach (units _unit);

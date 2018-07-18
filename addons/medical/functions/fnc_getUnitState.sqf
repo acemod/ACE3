@@ -19,4 +19,4 @@ params ["_unit"];
 
 if (!local _unit) exitWith { ERROR("unit is not local"); };
 
-[_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState
+[_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState

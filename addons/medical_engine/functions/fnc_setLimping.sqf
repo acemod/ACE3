@@ -22,7 +22,7 @@ if (!local _unit) exitWith {
     ERROR("Unit not local or null");
 };
 
-_unit setVariable [QGVAR(isLimping), _isLimping, true];
+_unit setVariable [QEGVAR(medical,isLimping), _isLimping, true];
 
 // refresh
 private _isDamaged = _unit getHitPointDamage "HitLegs" >= DAMAGED_MIN_THRESHOLD && {_unit getHitPointDamage "HitLegs" != LIMPING_MIN_DAMAGE};

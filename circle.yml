@@ -2,22 +2,21 @@ version: 2
 jobs:
   build:
     docker:
-      - image: python:3-alpine
+      - image: acemod/armake
     steps:
       - checkout
       - run:
           name: Validate SQF And Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
-  deployment:
-    docker:
-      - image: python:3-alpine
-    branch: master
-    requires:
-      - build
-    steps:
-      - checkout
+      - run:
+          name: Build
+          command: armake --version
       - deploy:
-          name: Deploy
+          name: Update documentation and translation statistics
           command: |
-            pip install pygithub pygithub3
-            python3 tools/deploy.py
+            if [ "${CIRCLE_BRANCH}" == "master" ] && [ "${CIRCLE_PROJECT_USERNAME}" == "acemod" ]; then
+              pip install pygithub pygithub3
+              python3 tools/deploy.py
+            else
+              echo "Skipping, not on acemod/ACE3 master branch..."
+            fi

@@ -20,7 +20,7 @@ params ["_target", "_treatmentClassname", "_bodyPart"];
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 if (_partIndex < 0) exitWith { false };
 
-private _bloodVolume = _target getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
+private _bloodVolume = GET_BLOOD_VOLUME(_target);
 
 if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {};
 
