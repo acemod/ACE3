@@ -36,11 +36,11 @@ private _availableSelections = [50, 51, 52, 53, 54, 55];
 
     private _bloodLoss = _selectionBloodLoss select _forEachIndex;
     if (_bloodLoss > 0) then {
-        _colorSelection = [_bloodLoss] call EFUNC(medical_ui,bloodLossToRGBA);
+        _colorSelection = [_bloodLoss] call FUNC(bloodLossToRGBA);
     } else {
         private _damage = _selectionDamage select _forEachIndex;
 
-        _colorSelection = [_damage] call EFUNC(medical_ui,damageToRGBA);
+        _colorSelection = [_damage] call FUNC(damageToRGBA);
     };
 
     (_display displayCtrl _x) ctrlSetTextColor _colorSelection;

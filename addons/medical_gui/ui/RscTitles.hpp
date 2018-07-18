@@ -1,4 +1,4 @@
-class Rsctitles {
+class RscTitles {
     class GVAR(DisplayInformation) {
         duration = 10e10;
         idd = 1111;

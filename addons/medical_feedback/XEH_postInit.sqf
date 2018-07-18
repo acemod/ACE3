@@ -39,6 +39,3 @@ GVAR(heartBeatEffectRunning) = false;
     [_status, 0] call FUNC(effectUnconscious);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addPlayerEventHandler;
-
-// Close patient information when interact menu is closed
-["ace_interactMenuClosed", {[objNull, 0] call FUNC(displayPatientInformation);}] call CBA_fnc_addEventHandler;
