@@ -8,7 +8,6 @@ PREP(handleIncapacitation);
 PREP(handleInit);
 PREP(handleKilled);
 PREP(handleLocal);
-PREP(handleRespawn);
 PREP(install);
 PREP(moduleMedicalSettings);
 PREP(setUnconsciousStatemachine);
