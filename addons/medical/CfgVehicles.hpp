@@ -12,12 +12,10 @@ class CfgVehicles {
         scope = 1;
         displayName = CSTRING(MedicalSettings_Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
-        category = "ACE_medical";
-        function = QUOTE(DFUNC(moduleMedicalSettings));
+        category = "ACE";
+        function = QFUNC(moduleMedicalSettings);
         functionPriority = 1;
         isGlobal = 1;
-        isSingular = 1;
-        isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
 
         class Arguments {
