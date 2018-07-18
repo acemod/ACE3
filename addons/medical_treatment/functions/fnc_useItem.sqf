@@ -33,7 +33,7 @@ if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
 
 private _return = [false, objNull];
 
-if (vehicle _medic != _medic && {vehicle _medic call EFUNC(medical_status,isMedicalVehicle)}) then {
+if (vehicle _medic != _medic && {vehicle _medic call FUNC(isMedicalVehicle)}) then {
     {
         if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {[_x, _item] call EFUNC(common,hasItem)}) exitWith {
             ["ace_useItem", [_x, _item], _x] call CBA_fnc_targetEvent;

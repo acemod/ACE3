@@ -18,7 +18,7 @@ params ["_caller", "_target", "_bodyPart"];
 
 private _heartRate = 0;
 
-if (alive _target && !([_target, _bodyPart] call EFUNC(medical_status,hasTourniquetAppliedTo))) then {
+if (alive _target && !([_target, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
     _heartRate = GET_HEART_RATE(_target);
 };
 
@@ -26,7 +26,7 @@ private _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_5);
 private _logOutPut = ELSTRING(medical,Check_Pulse_None);
 
 if (_heartRate > 1.0) then {
-    if (_caller call EFUNC(medical_status,isMedic)) then {
+    if (_caller call FUNC(isMedic)) then {
         _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_1);
         _logOutPut = format ["%1", round(_heartRate)];
     } else {

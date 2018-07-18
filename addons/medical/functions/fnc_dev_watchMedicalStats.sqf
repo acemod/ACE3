@@ -75,7 +75,7 @@
     {
         private _tPartNum = _forEachIndex;
         if (_x != 0) then {
-            _return pushBack format ["%1 [Time On: %2]", GVAR(SELECTIONS) select _tPartNum, (CBA_missionTime - _x) toFixed 1];
+            _return pushBack format ["%1 [Time On: %2]", ALL_SELECTIONS select _tPartNum, (CBA_missionTime - _x) toFixed 1];
         };
         {
             _x params ["", "_medClassname", "_medPartNum"];
@@ -91,7 +91,7 @@
     private _wounds = _unit getVariable [QEGVAR(medical,openWounds), []];
     {
         _x params ["", "_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage", "_xCategory"];
-        _return pushBack format ["%1: [%2-%3] [x%4] [Bld: %5] [Dmg: %6]", GVAR(SELECTIONS) select _xBodyPartN, _xClassID, _xCategory, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        _return pushBack format ["%1: [%2-%3] [x%4] [Bld: %5] [Dmg: %6]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xCategory, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
     } forEach _wounds;
 
 
@@ -100,7 +100,7 @@
     private _ivBags = _unit getVariable [QEGVAR(medical,ivBags), []];
     {
         _x params ["_xVolumeAdded", "_xType", "_xBodyPartN"];
-        _return pushBack format ["%1: %2 [%3 ml]", GVAR(SELECTIONS) select _xBodyPartN, _xType, _xVolumeAdded];
+        _return pushBack format ["%1: %2 [%3 ml]", ALL_SELECTIONS select _xBodyPartN, _xType, _xVolumeAdded];
     } forEach _ivBags;
 
     // Footer:
