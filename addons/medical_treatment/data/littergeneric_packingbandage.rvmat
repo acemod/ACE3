@@ -7,7 +7,7 @@ PixelShaderID="NormalMapSpecularDIMap";
 VertexShaderID="NormalMap";
 class Stage1
 {
-    texture="z\ace\addons\medical\data\littergeneric_packingbandage_nohq.paa";
+    texture="z\ace\addons\medical_treatment\data\littergeneric_packingbandage_nohq.paa";
     uvSource="tex";
     class uvTransform
     {

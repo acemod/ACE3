@@ -8,7 +8,7 @@ PixelShaderID="NormalMapSpecularDIMap";
 VertexShaderID="NormalMap";
 class Stage1
 {
-	texture="z\ace\addons\medical\data\bodybagItem_nohq.paa";
+	texture="z\ace\addons\medical_treatment\data\bodybagItem_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -20,7 +20,7 @@ class Stage1
 };
 class Stage2
 {
-	texture="z\ace\addons\medical\data\bodybagItem_smdi.paa";
+	texture="z\ace\addons\medical_treatment\data\bodybagItem_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{

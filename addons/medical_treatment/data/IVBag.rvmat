@@ -14,7 +14,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "z\ace\addons\medical\data\IVBag_nohq.paa";
+	texture = "z\ace\addons\medical_treatment\data\IVBag_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
