@@ -125,6 +125,7 @@ private _woundsCreated = [];
 #endif
 
             if (_bodyPartNToAdd == 0 && {_woundDamage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
+                TRACE_2("FatalInjury",_unit,_woundDamage);
                 [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
             };
 

@@ -9,7 +9,7 @@
  * Is in of medic class <BOOL>
  *
  * Example:
- * [cursorObject] call ace_medical_status_fnc_isMedicalVehicle
+ * [cursorObject] call ace_medical_treatment_fnc_isMedicalVehicle
  *
  * Public: Yes
  */

@@ -77,7 +77,7 @@ class GVAR(Actions) {
         items[] = {"ACE_tourniquet"};
         treatmentTime = 7;
         callbackSuccess = QFUNC(treatmentTourniquet);
-        condition = QUOTE(!([ARR_2(_target,_bodyPart)] call EFUNC(medical_status,hasTourniquetAppliedTo)));
+        condition = QUOTE(!([ARR_2(_target,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
         litter[] = {};
     };
     class RemoveTourniquet: Tourniquet {
@@ -85,7 +85,7 @@ class GVAR(Actions) {
         displayNameProgress = CSTRING(RemovingTourniquet);
         items[] = {};
         callbackSuccess = QFUNC(treatmentTourniquetRemove);
-        condition = QUOTE([ARR_2(_target,_bodyPart)] call EFUNC(medical_status,hasTourniquetAppliedTo));
+        condition = QUOTE([ARR_2(_target,_bodyPart)] call FUNC(hasTourniquetAppliedTo));
     };
 
     // --- syringes
