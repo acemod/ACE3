@@ -45,7 +45,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class Medical {
-                displayName = ECSTRING(medical,Actions_Medical);
+                displayName = CSTRING(Actions_Medical);
                 runOnHover = 1;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
@@ -80,7 +80,7 @@ class CfgVehicles {
                     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
                 };
                 class ACE_Medical_Radial {
-                    displayName = ECSTRING(medical,Actions_Medical);
+                    displayName = CSTRING(Actions_Medical);
                     runOnHover = 1;
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
@@ -91,7 +91,7 @@ class CfgVehicles {
                     #undef ACTION_CONDITION
                 };
                 class  ACE_Medical_loadPatient {
-                    displayName = ECSTRING(medical,LoadPatient);
+                    displayName = CSTRING(LoadPatient);
                     condition = "(_target getVariable ['ACE_isUnconscious', false]) && {alive _target} && {vehicle _target == _target}";
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionLoadUnit));
                     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
@@ -99,7 +99,7 @@ class CfgVehicles {
                     insertChildren = QUOTE(call DEFUNC(medical_treatment,addLoadPatientActions));
                 };
                 class ACE_Medical_UnLoadPatient {
-                    displayName = ECSTRING(medical,UnloadPatient);
+                    displayName = CSTRING(UnloadPatient);
                     condition = "(_target getVariable ['ACE_isUnconscious', false]) && {vehicle _target != _target} && {vehicle _player == _player}";
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionUnloadUnit));
                     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);

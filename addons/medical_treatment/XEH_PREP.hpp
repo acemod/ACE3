@@ -41,6 +41,7 @@ PREP(treatmentTourniquetRemove);
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);
+PREP(bodyCleanupLoop);
 PREP(calculateBlood);
 PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
@@ -54,6 +55,7 @@ PREP(isInMedicalVehicle);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
+PREP(serverRemoveBody);
 
 // items
 PREP(checkItems);

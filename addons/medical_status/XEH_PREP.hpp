@@ -10,4 +10,4 @@ PREP(isBeingDragged);
 PREP(isInStableCondition);
 PREP(setCardiacArrest);
 PREP(setDead);
-PREP(setUnconscious);
+PREP(setUnconsciousStatemachine);
