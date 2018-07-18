@@ -1,3 +1,4 @@
+class CBA_Extended_EventHandlers;
 class CfgVehicles {
     // Bodybag vehicle
     class MapBoard_altis_F;

@@ -1,6 +1,3 @@
-
-class CBA_Extended_EventHandlers;
-
 class CfgVehicles {
     class Logic;
     class Module_F: Logic {
