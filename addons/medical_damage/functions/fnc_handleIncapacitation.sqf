@@ -30,7 +30,7 @@ _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightA
 private _damageThreshold = if (isPlayer _unit) then {
     EGVAR(medical,playerDamageThreshold)
 } else {
-    EGVAR(medicalAIDamageThreshold)
+    EGVAR(medical,AIDamageThreshold)
 };
 
 if ((_headDamage > _damageThreshold / 2) || {_bodyDamage > _damageThreshold} || {(_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < 0.1}}) then {
