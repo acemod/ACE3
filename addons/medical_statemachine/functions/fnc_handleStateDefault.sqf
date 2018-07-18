@@ -19,5 +19,5 @@ if (!local _unit) exitWith {
 
 private _painLevel = GET_PAIN_PERCEIVED(_unit);
 if (_painLevel > 0) then {
-    [QGVAR(medical,moan), [_unit, _painLevel]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,moan), [_unit, _painLevel]] call CBA_fnc_localEvent;
 };

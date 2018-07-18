@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 
-[QGVAR(medical,injured), {
+[QEGVAR(medical,injured), {
     params ["_unit", "_painLevel"];
     [_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call FUNC(playInjuredSound);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(medical,moan), {
+[QEGVAR(medical,moan), {
     params ["_unit", "_painLevel"];
     [_unit, "moan", PAIN_TO_MOAN(_painLevel)] call FUNC(playInjuredSound);
 }] call CBA_fnc_addEventHandler;

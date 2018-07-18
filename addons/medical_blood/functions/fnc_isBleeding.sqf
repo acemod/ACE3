@@ -18,7 +18,7 @@
 params ["_unit"];
 
 if (GVAR(useAceMedical)) exitWith {
-    IS_BLEEDING(_unit)
+    IS_BLEEDING(_unit);
 };
 
 alive _unit && {getDammage _unit > 0.3}
