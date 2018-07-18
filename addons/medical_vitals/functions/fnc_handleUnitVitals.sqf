@@ -99,7 +99,11 @@ switch (true) do {
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_bloodPressureH < 50 && {_bloodPressureL < 40} && {_heartRate < 40}): {
-        TRACE_2("bloodPressure (H & L) + heartRate Fatal",_unit,_bloodPressureH);
+        TRACE_4("bloodPressure (H & L) + heartRate Fatal",_unit,_bloodPressureH,_bloodPressureL,_heartRate);
+        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_bloodPressureL => 190) {
+        TRACE_2("bloodPressure L above limits",_unit,_bloodPressureL);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_heartRate < 30): {  // With a heart rate below 30 but bigger than 20 there is a chance to enter the cardiac arrest state
