@@ -1,22 +1,6 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-["ace_unconscious", {
-    params ["_unit", "_status"];
-
-    if (local _unit) then {
-        if (_status) then {
-            _unit setVariable ["tf_voiceVolume", 0, true];
-            _unit setVariable ["tf_unable_to_use_radio", true, true];
-            _unit setVariable ["acre_sys_core_isDisabled", true, true];
-        } else {
-            _unit setVariable ["tf_voiceVolume", 1, true];
-            _unit setVariable ["tf_unable_to_use_radio", false, true];
-            _unit setVariable ["acre_sys_core_isDisabled", false, true];
-        };
-    };
-}] call CBA_fnc_addEventHandler;
-
 if (!hasInterface) exitWith {};
 
 [missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
