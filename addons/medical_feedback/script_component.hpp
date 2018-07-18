@@ -15,7 +15,16 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-#include "\z\ace\addons\medical\script_macros_medical.hpp"
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+
+#define EMPTY_SOUND {"A3\Sounds_F\dummysound.wss",1,1}
+#define NAMESPACE_NULL locationNull
+
+#define DISABLE_VANILLA_SCREAMS
+#define DISABLE_VANILLA_MOANS
+#define DISABLE_VANILLA_HEARTBEAT
+#define DISABLE_VANILLA_BLOOD_TEXTURES
+#define DISABLE_VANILLA_DAMAGE_EFFECTS
 
 #define FX_PAIN_FADE_IN   0.3
 #define FX_PAIN_FADE_OUT  0.7

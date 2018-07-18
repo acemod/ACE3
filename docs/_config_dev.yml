@@ -1,5 +1,3 @@
-#baseurl: /ACE3
-
 name: ACE3
 description: ACE3 is a joint effort by the teams behind ACE 2, AGM and CSE to improve the realism and authenticity of Arma 3.
 keywords: Advanced Combat Enhancement 3, ACE, ACE3, Arma, Arma 3, Mod, Modification, Realism, AGM, CSE, Bohemia, Interactive
@@ -11,8 +9,8 @@ ace:
   version:
     major: 3
     minor: 12
-    patch: 0
-    build: 29
+    patch: 1
+    build: 31
 
 acex:
   githubUrl: https://github.com/acemod/ACEX
@@ -38,7 +36,7 @@ lsi: false
 
 exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:

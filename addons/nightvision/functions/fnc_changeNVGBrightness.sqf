@@ -19,22 +19,23 @@
 params ["_player", "_changeInBrightness"];
 TRACE_2("changeNVGBrightness",_player,_changeInBrightness);
 
-private _areEffectsDisabled = GVAR(effectScaling) == 0;
-private _brightness = _player getVariable [QGVAR(NVGBrightness), [0, -3] select _areEffectsDisabled];
+private _effectsEnabled    = GVAR(effectScaling) != 0;
+private _defaultBrightness = [-3, 0] select _effectsEnabled;
 
+private _brightness = _player getVariable [QGVAR(NVGBrightness), _defaultBrightness];
 _brightness = ((_brightness + _changeInBrightness) min 0) max -6;
-
 _player setVariable [QGVAR(NVGBrightness), _brightness, false];
 
-[format [(localize LSTRING(NVGBrightness)), _brightness]] call EFUNC(common,displayTextStructured);
+// Display default setting as 0
+[format [LLSTRING(NVGBrightness), _brightness - _defaultBrightness]] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
 
-// handle only brightness if effects are disabled
-if (_areEffectsDisabled) exitWith {
-    // here we take (-6; 0) _brightness range and alter it to (0.4; 1.6)
-    GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (_brightness+3)/5 + 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
+// Handle brightness only if effects are disabled
+if (!_effectsEnabled) exitWith {
+    _brightness = linearConversion [-6, 0, _brightness, 0.4, 1.6, true];
+    GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, _brightness, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
     GVAR(ppEffectNVGBrightness) ppEffectCommit 0;
 };
 
-// Trigger full ppEffects update next time run in the PFEH:
+// Trigger full ppEffects update next time run in the PFEH
 GVAR(nextEffectsUpdate) = -1;

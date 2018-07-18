@@ -15,11 +15,8 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-#include "\z\ace\addons\medical\script_macros_medical.hpp"
-#include "\z\ace\addons\medical\script_macros_config.hpp"
-
-#define EMPTY_SOUND {"A3\Sounds_F\dummysound.wss",1,1}
-#define NAMESPACE_NULL locationNull
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "\z\ace\addons\medical_engine\script_macros_config.hpp"
 
 #define PRELOAD_CLASS(class) \
     diag_log format["Starting preload for ""%1""",class];\
@@ -28,12 +25,6 @@
     }, {\
         diag_log format ["Preload done for ""%1""",_this];\
     }, class] call CBA_fnc_waitUntilAndExecute
-
-#define DISABLE_VANILLA_SCREAMS
-#define DISABLE_VANILLA_MOANS
-#define DISABLE_VANILLA_HEARTBEAT
-#define DISABLE_VANILLA_BLOOD_TEXTURES
-#define DISABLE_VANILLA_DAMAGE_EFFECTS
 
 #define PRIORITY_HEAD       3
 #define PRIORITY_BODY       4

@@ -54,9 +54,6 @@ if (_hemorrhage != GET_HEMORRHAGE(_unit)) then {
 private _bloodLoss = GET_BLOOD_LOSS(_unit);
 if (_bloodLoss > 0) then {
     _unit setVariable [QGVAR(bloodloss), _bloodLoss, _syncValues];
-
-    [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
-
     if !IS_BLEEDING(_unit) then {
         _unit setVariable [VAR_IS_BLEEDING, true, true];
     };
@@ -88,9 +85,42 @@ private _heartRate = [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 private _bloodPressure = GET_BLOOD_PRESSURE(_unit);
 _unit setVariable [VAR_BLOOD_PRESS, _bloodPressure, _syncValues];
 
+_bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
+
 private _cardiacOutput = [_unit] call EFUNC(medical_status,getCardiacOutput);
-if (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput) then {
-    [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+
+switch (true) do {
+    case (_bloodVolume < BLOOD_VOLUME_FATAL): {
+        TRACE_3("BloodVolume Fatal",_unit,BLOOD_VOLUME_FATAL,_bloodVolume);
+        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_heartRate < 20): {
+        TRACE_2("heartRate Fatal",_unit,_heartRate);
+        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_heartRate < 20): {
+        TRACE_2("heartRate Fatal",_unit,_heartRate);
+        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_bloodPressureH < 50): {
+        TRACE_2("bloodPressureH Fatal",_unit,_bloodPressureH);
+        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_bloodPressureL < 40): {
+        [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_heartRate < 30): {
+        [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput): {
+        [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+    };
+    case (_bloodLoss > 0): {
+        [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
+    };
+    case (_inPain): {
+        [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
+    };
 };
 
 #ifdef DEBUG_MODE_FULL
@@ -99,13 +129,5 @@ if (!isPlayer _unit) then {
     hintSilent format["blood volume: %1, blood loss: [%2, %3]\nhr: %4, bp: %5, pain: %6", round(_bloodVolume * 100) / 100, round(_bloodLoss * 1000) / 1000, round((_bloodLoss / (0.001 max _cardiacOutput)) * 100) / 100, round(_heartRate), _bloodPressure, round(_painLevel * 100) / 100];
 };
 #endif
-
-_bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
-if (_bloodPressureL < 40 || {_heartRate < 30}) then {
-    [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
-};
-if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {
-    [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
-};
 
 END_COUNTER(Vitals);

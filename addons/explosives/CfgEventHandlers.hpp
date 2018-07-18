@@ -24,7 +24,7 @@ class Extended_Killed_EventHandlers {
 
 class Extended_Take_EventHandlers {
     class CAManBase {
-        GVAR(takeHandler) = QUOTE([ARR_3(_this select 0, _this select 1, _this select 2)] call FUNC(onInventoryChanged));
+        GVAR(takeHandler) = QUOTE(call FUNC(onInventoryChanged));
     };
 };
 class Extended_Put_EventHandlers {

@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_medical"};
+        requiredAddons[] = {"ace_medical_status"};
         author = ECSTRING(common,ACETeam);
         authors[] = {""};
         url = ECSTRING(main,URL);
@@ -15,4 +15,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgInGameUI.hpp"
 #include "CfgSounds.hpp"
+#include "CfgVehicles.hpp"
+#include "RscTitles.hpp"

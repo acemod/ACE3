@@ -80,9 +80,6 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _grainIntensityFinal = _effectMod * linearConversion [1, 0, _effectiveLight, ST_NVG_NOISEINTENSITY_MIN, ST_NVG_NOISEINTENSITY_MAX, true];
     private _noiseSharpnessFinal = linearConversion [1, 0, _effectiveLight, ST_NVG_NOISESHARPNESS_MIN, ST_NVG_NOISESHARPNESS_MAX, true];
 
-    private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
-    _brightFinal = _brightFinal + (_playerBrightSetting / 20);
-
     private _fogApply = linearConversion [0, 1, _effectiveLight, ST_NVG_MAXFOG, ST_NVG_MINFOG, true];
 
     // Modify blur if looking down scope
@@ -92,13 +89,18 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
         if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL]}; // Pistols aren't so bad
     };
 
-    // Scale effects based on ace_nightvision_effectScaling setting
-    _grainIntensityFinal = _grainIntensityFinal * GVAR(effectScaling);
-    _noiseSharpnessFinal = linearConversion [0, 1, GVAR(effectScaling), 2.5, _noiseSharpnessFinal];
+    // Scale general effects based on ace_nightvision_effectScaling setting
     private _radialBlurPower = 0.0025 * GVAR(effectScaling);
     _brightFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _brightFinal];
     _contrastFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _contrastFinal];
 
+    // Add adjusted NVG brightness
+    private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
+    _brightFinal = _brightFinal + (_playerBrightSetting / 20);
+
+    // Scale grain effects based on ace_nightvision_noiseScaling setting
+    _grainIntensityFinal = _grainIntensityFinal * GVAR(noiseScaling);
+    _noiseSharpnessFinal = linearConversion [0, 1, GVAR(noiseScaling), 2.5, _noiseSharpnessFinal];
 
     // Setup all effects
     // This is hacky but... works. This prevents the effects from being cancelled by various things - alt-tabbing, resizing, going into AT sights, etc. A nicer method would be welcome but I don't have time to spend on it. TODO.
@@ -152,7 +154,18 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
 
     #ifdef DEBUG_MODE_FULL
     private _aceAmbient = [] call EFUNC(common,ambientBrightness);
-    hintSilent format ["EffectiveLight %1\nLight: %2\nACE Ambient: %3\nBrightness: %4\nContrast: %5\nGrain: %6\nBlur: %7\nFog: %8\nScaling %9", _effectiveLight, _lightFinal, _aceAmbient, _brightFinal, _contrastFinal, [_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal], _blurFinal, _fogApply, [GVAR(effectScaling),GVAR(fogScaling)]];
+    hintSilent format [
+        "EffectiveLight %1\nLight: %2\nACE Ambient: %3\nBrightness: %4\nContrast: %5\nGrain: %6\nBlur: %7\nFog: %8\nScaling %9",
+        _effectiveLight,
+        _lightFinal,
+        _aceAmbient,
+        _brightFinal,
+        _contrastFinal,
+        [_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal],
+        _blurFinal,
+        _fogApply,
+        [GVAR(effectScaling), GVAR(fogScaling), GVAR(noiseScaling)]
+    ];
     #endif
 
     END_COUNTER(updateAllEffects);

@@ -17,7 +17,6 @@
  *
  * Public: No
 */
-
 #include "script_component.hpp"
 
 params ["_logic", "_pos", "_radius" ,"_mode" , "_topDownMode", "_teleport"];

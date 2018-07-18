@@ -49,3 +49,5 @@ if (GVAR(shiftState)) then {
 
     [_display, localize LSTRING(exportCurrent)] call FUNC(message);
 };
+
+[QGVAR(loadoutExported), [_display, GVAR(shiftState)]] call CBA_fnc_localEvent;

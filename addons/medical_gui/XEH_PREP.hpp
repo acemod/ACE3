@@ -2,6 +2,7 @@ PREP(canOpenMenu);
 PREP(collectActions);
 PREP(collectActions3D);
 PREP(displayPatientInformation);
+PREP(displayTriageCard);
 PREP(getTreatmentOptions);
 PREP(handleUI_DisplayOptions);
 PREP(handleUI_dropDownTriageCard);

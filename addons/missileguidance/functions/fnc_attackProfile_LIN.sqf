@@ -48,15 +48,10 @@ if ((((ASLtoAGL _projectilePos) select 2) < 5) && {_distanceToShooter < 15}) the
     };
 };
 
-// Handle arcing terminal low for high decent (when projectile above target)
+// Projectile above target
 if ((_projectilePos select 2) > (_seekerTargetPos select 2)) then {
-    if (_distanceToTarget < 100) then {
-        _addHeight = _addHeight vectorDiff [0,0, ((_projectilePos select 2) - (_seekerTargetPos select 2)) * 0.5];
-        TRACE_1("above - close",_addHeight);
-    } else {
-        TRACE_1("above - far",_addHeight);
-        _addHeight = _addHeight vectorAdd [0,0, _distanceToTarget*0.02];
-    };
+    TRACE_1("above - far",_addHeight);
+    _addHeight = _addHeight vectorAdd [0,0, _distanceToTarget / 50];
 };
 
 private _returnTargetPos = _seekerTargetPos vectorAdd _addHeight;

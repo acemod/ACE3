@@ -65,7 +65,7 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
 
     private _velocity = velocity _item;
 
-    _item attachTo [_parachute, [0,0,-1]];
+    _item attachTo [_parachute, [0,0,1]];
     _parachute setVelocity _velocity;
 
     private _light = "Chemlight_yellow" createVehicle [0,0,0];

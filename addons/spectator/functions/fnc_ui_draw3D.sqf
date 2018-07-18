@@ -72,9 +72,7 @@ if !(GVAR(uiMapVisible)) then {
 
             // Draw icon
             drawIcon3D _icon;
-
-            nil // Speed loop
-        } count GVAR(iconsToDraw);
+        } forEach GVAR(iconsToDraw);
         END_COUNTER(drawTags);
     };
 
@@ -119,13 +117,9 @@ if !(GVAR(uiMapVisible)) then {
                         drawLine3D [_oldLoc, _locNew, _colorNew];
                     };
                     _oldLoc = _locNew;
-
-                    nil // Speed loop
-                } count _segments;
+                } forEach _segments;
             };
-
-            nil // Speed loop
-        } count GVAR(projectilesToDraw);
+        } forEach GVAR(projectilesToDraw);
         GVAR(projectilesToDraw) = _projectilesNew;
 
         {
@@ -138,9 +132,7 @@ if !(GVAR(uiMapVisible)) then {
                 // Store grenade for next frame
                 _grenadesNew pushBack _x;
             };
-
-            nil // Speed loop
-        } count GVAR(grenadesToDraw);
+        } forEach GVAR(grenadesToDraw);
 
         GVAR(grenadesToDraw) = _grenadesNew;
         END_COUNTER(drawTracers);

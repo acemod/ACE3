@@ -45,8 +45,8 @@ private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
     _ropeTop addEventHandler ["RopeBreak", {[_this, "top"] call FUNC(onRopeBreak)}];
     _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
 
-    //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, occupied
-    _deployedRopes pushBack [_ropeOrigin, _ropeTop, _ropeBottom, _dummy, _hook, false];
+    //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, occupied, broken
+    _deployedRopes pushBack [_ropeOrigin, _ropeTop, _ropeBottom, _dummy, _hook, false, false];
 
     false
 } count _ropeOrigins;

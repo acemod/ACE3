@@ -40,7 +40,7 @@ GVAR(AltimeterActive) = true;
     private _timeDiff = _curTime - _prevTime;
     private _descentRate = if (_timeDiff > 0) then {floor((_oldHeight - _height) / _timeDiff)} else {0};
 
-    _TimeText ctrlSetText (format ["%1:%2",[_hour, 2] call EFUNC(common,numberToDigitsString),[_minute, 2] call EFUNC(common,numberToDigitsString)]);
+    _TimeText ctrlSetText (format ["%1:%2", [_hour, 2] call CBA_fnc_formatNumber, [_minute, 2] call CBA_fnc_formatNumber]);
     _HeightText ctrlSetText (format ["%1", floor _height]);
     _DecendRate ctrlSetText (format ["%1", _descentRate max 0]);
 

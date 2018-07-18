@@ -44,9 +44,11 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
     [ ] // InventoryItems 17
 ]];
 
-if (_items isEqualType true && {_items}) then {
-    [_object, _global] call FUNC(removeBox);
-    _object setVariable [QGVAR(virtualItems), nil, _global];
+if (_items isEqualType true) then {
+    if (_items) then {
+        [_object, _global] call FUNC(removeBox);
+        _object setVariable [QGVAR(virtualItems), nil, _global];
+    };
 } else {
 
     // Make sure all items are in string form

@@ -25,7 +25,7 @@ if (GVAR(currentUnit) != 2) then {
 if (GVAR(currentUnit) != 2) then {
     ctrlSetText [120010, Str(Round((GVAR(workingMemory) select 12) * 15.4323584))];
 } else {
-    ctrlSetText [120010, Str(Round(GVAR(workingMemory) select 12))];
+    ctrlSetText [120010, Str(Round((GVAR(workingMemory) select 12) * 10) / 10)];
 };
 if (GVAR(currentUnit) != 2) then {
     ctrlSetText [120020, Str(Round((GVAR(workingMemory) select 13) / 10 / 2.54 * 1000) / 1000)];

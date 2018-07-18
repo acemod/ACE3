@@ -2,7 +2,7 @@
 #define COMPONENT_BEAUTIFIED Medical Vitals
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
@@ -15,4 +15,4 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-#include "\z\ace\addons\medical\script_macros_medical.hpp"
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"

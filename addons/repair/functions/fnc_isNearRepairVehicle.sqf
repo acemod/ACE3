@@ -22,7 +22,7 @@ private _nearObjects = nearestObjects [_unit, ["Air", "LandVehicle", "Slingload_
 
 private _return = false;
 {
-    if ([_x] call FUNC(isRepairVehicle)) exitWith {_return = true;};
+    if (alive _x && {[_x] call FUNC(isRepairVehicle)}) exitWith {_return = true;};
 } forEach _nearObjects;
 
 _return;

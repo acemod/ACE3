@@ -73,7 +73,7 @@ if (_state) then {
             TRACE_1("removing animChanged EH",_animChangedEHID);
             _unit removeEventHandler ["AnimChanged", _animChangedEHID];
         };
-        _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedHandcuffed)];
+        _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedHandcuffed)}];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
 

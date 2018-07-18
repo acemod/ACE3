@@ -6,7 +6,7 @@
  * This function just adds driver turret to the array returned by "allTurrets".
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Vehicle <OBJECT><STRING>
  *
  * Return Value:
  * Turret paths <ARRAY>
@@ -20,7 +20,11 @@
 
 params ["_vehicle"];
 
-private _turrets = allTurrets _vehicle;
+private _turrets = if (_vehicle isEqualType objNull) then {
+    allTurrets _vehicle;
+} else {
+    [_vehicle] call BIS_fnc_allTurrets; // "Does what allTurrets command does, except the param is vehicle's config class name"
+};
 
 // Adding the driver turret "[-1]".
 _turrets pushBack [-1];

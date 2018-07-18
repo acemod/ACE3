@@ -20,11 +20,10 @@ GVAR(ppeffectGrain) = -1;
 GVAR(ppeffectRadialBlur) = -1;
 GVAR(ppeffectColorCorrect) = -1;
 GVAR(ppeffectBlur) = -1;
-GVAR(ppEffectCCMuzzleFlash) = -1;
 
 
 ["ace_settingsInitialized", {
-    TRACE_3("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(effectScaling));
+    TRACE_4("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
 

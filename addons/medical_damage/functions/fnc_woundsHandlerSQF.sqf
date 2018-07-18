@@ -125,6 +125,7 @@ private _woundsCreated = [];
 #endif
 
             if (_bodyPartNToAdd == 0 && {_woundDamage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
+                TRACE_2("FatalInjury",_unit,_woundDamage);
                 [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
             };
 
@@ -170,10 +171,10 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
 [_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
-[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
+[QGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
-    [_unit] call EFUNC(medical,handleIncapacitation);
+    [_unit] call FUNC(handleIncapacitation);
 };
 
 TRACE_5("exit",_unit,_painLevel,GET_PAIN(_unit),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
