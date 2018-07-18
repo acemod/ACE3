@@ -19,8 +19,8 @@
 
 params ["_caller", "_target", "_bodyPart", "_className", "_items", "", ["_specificSpot", -1]];
 
-[_target, "activity", ELSTRING(medical,Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", ELSTRING(medical,Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", ELSTRING(medical_treatment,Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", ELSTRING(medical_treatment,Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
 [QGVAR(treatmentBandageLocal), [_target, _className, _bodyPart, _specificSpot], _target] call CBA_fnc_targetEvent;
 
