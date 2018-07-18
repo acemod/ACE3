@@ -37,7 +37,5 @@ if ((_bodyPartDamage select 4) < 0.3 && {(_bodyPartDamage select 5) < 0.3}) then
 // Resetting damage
 _target setDamage 0;
 
-//[QEGVAR(medical,FullHeal), _target] call CBA_fnc_localEvent;
-
-[_target, "activity", ELSTRING(medical,Activity_partialHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", ELSTRING(medical,Activity_partialHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", ELSTRING(medical_treatment,Activity_partialHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", ELSTRING(medical_treatment,Activity_partialHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message

@@ -18,7 +18,7 @@
 
 params ["_caller", "_target"];
 
-private _output = [ELSTRING(medical,Check_Response_Unresponsive), ELSTRING(medical,Check_Response_Responsive)] select (_target call EFUNC(common,isAwake));
+private _output = [ELSTRING(medical_treatment,Check_Response_Unresponsive), ELSTRING(medical_treatment,Check_Response_Responsive)] select (_target call EFUNC(common,isAwake));
 
 [QEGVAR(common,displayTextStructured), [[_output, _target call EFUNC(common,getName)], 2, _caller], _caller] call CBA_fnc_targetEvent;
 

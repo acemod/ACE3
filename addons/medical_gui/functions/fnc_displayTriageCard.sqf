@@ -58,7 +58,7 @@ if (_show) then {
         } forEach _log;
 
         if (_triageCardTexts isEqualTo []) then {
-            _lbCtrl lbAdd (localize ELSTRING(medical,TriageCard_NoEntry));
+            _lbCtrl lbAdd (localize ELSTRING(medical_treatment,TriageCard_NoEntry));
         };
         {
             _lbCtrl lbAdd _x;

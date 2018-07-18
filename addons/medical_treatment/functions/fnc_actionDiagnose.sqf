@@ -15,30 +15,30 @@
 
 params ["_caller", "_target"];
 
-private _genericMessages = [ELSTRING(medical,diagnoseMessage), _target call EFUNC(common,getName)];
+private _genericMessages = [ELSTRING(medical_treatment,diagnoseMessage), _target call EFUNC(common,getName)];
 
 if (alive _target) then {
-    _genericMessages pushBack ELSTRING(medical,diagnoseAlive);
+    _genericMessages pushBack ELSTRING(medical_treatment,diagnoseAlive);
 } else {
-    _genericMessages pushBack ELSTRING(medical,diagnoseDead);
+    _genericMessages pushBack ELSTRING(medical_treatment,diagnoseDead);
 };
 
 private _hemorrhage = GET_HEMORRHAGE(_target);
 if (_hemorrhage > 0) then {
     if (_hemorrhage > 1) then {
-        _genericMessages pushBack ELSTRING(medical,lostBloodALot);
+        _genericMessages pushBack ELSTRING(medical_treatment,lostBloodALot);
     } else {
-        _genericMessages pushBack ELSTRING(medical,lostBlood);
+        _genericMessages pushBack ELSTRING(medical_treatment,lostBlood);
     };
 } else {
-    _genericMessages pushBack ELSTRING(medical,noBloodloss);
+    _genericMessages pushBack ELSTRING(medical_treatment,noBloodloss);
 };
 
 if (alive _target) then {
     if IS_IN_PAIN(_target) then {
-        _genericMessages pushBack ELSTRING(medical,inPain);
+        _genericMessages pushBack ELSTRING(medical_treatment,inPain);
     } else {
-        _genericMessages pushBack ELSTRING(medical,noPain);
+        _genericMessages pushBack ELSTRING(medical_treatment,noPain);
     };
 };
 

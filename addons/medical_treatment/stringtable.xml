@@ -2089,22 +2089,6 @@
             <Chinesesimp>快要没呼吸</Chinesesimp>
             <Chinese>快要沒呼吸</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_Status_Bleeding">
-            <English>Bleeding</English>
-            <German>Blutet</German>
-            <Russian>Кровотечение</Russian>
-            <Spanish>Sangrando</Spanish>
-            <French>Saignement</French>
-            <Polish>Krwawienie zewnętrzne</Polish>
-            <Czech>Krvácí</Czech>
-            <Hungarian>Vérzik</Hungarian>
-            <Italian>Sanguinando</Italian>
-            <Portuguese>Sangrando</Portuguese>
-            <Japanese>出血している</Japanese>
-            <Korean>출혈</Korean>
-            <Chinesesimp>流血中</Chinesesimp>
-            <Chinese>流血中</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_treatment_Status_MildPain">
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>

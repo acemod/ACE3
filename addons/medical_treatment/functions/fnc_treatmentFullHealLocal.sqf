@@ -73,5 +73,5 @@ _target setDamage 0;
 
 [QEGVAR(medical,FullHeal), _target] call CBA_fnc_localEvent;
 
-[_target, "activity", ELSTRING(medical,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", ELSTRING(medical,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message

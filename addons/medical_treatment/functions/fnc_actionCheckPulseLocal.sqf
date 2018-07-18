@@ -22,25 +22,25 @@ if (alive _target && !([_target, _bodyPart] call FUNC(hasTourniquetAppliedTo))) 
     _heartRate = GET_HEART_RATE(_target);
 };
 
-private _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_5);
-private _logOutPut = ELSTRING(medical,Check_Pulse_None);
+private _heartRateOutput = ELSTRING(medical_treatment,Check_Pulse_Output_5);
+private _logOutPut = ELSTRING(medical_treatment,Check_Pulse_None);
 
 if (_heartRate > 1.0) then {
     if (_caller call FUNC(isMedic)) then {
-        _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_1);
+        _heartRateOutput = ELSTRING(medical_treatment,Check_Pulse_Output_1);
         _logOutPut = format ["%1", round(_heartRate)];
     } else {
         // non medical personel will only find a pulse/HR
-        _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_2);
-        _logOutPut = ELSTRING(medical,Check_Pulse_Weak);
+        _heartRateOutput = ELSTRING(medical_treatment,Check_Pulse_Output_2);
+        _logOutPut = ELSTRING(medical_treatment,Check_Pulse_Weak);
 
         if (_heartRate > 60) then {
             if (_heartRate > 100) then {
-                _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_3);
-                _logOutPut = ELSTRING(medical,Check_Pulse_Strong);
+                _heartRateOutput = ELSTRING(medical_treatment,Check_Pulse_Output_3);
+                _logOutPut = ELSTRING(medical_treatment,Check_Pulse_Strong);
             } else {
-                _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_4);
-                _logOutPut = ELSTRING(medical,Check_Pulse_Normal);
+                _heartRateOutput = ELSTRING(medical_treatment,Check_Pulse_Output_4);
+                _logOutPut = ELSTRING(medical_treatment,Check_Pulse_Normal);
             };
         };
     };
@@ -49,6 +49,6 @@ if (_heartRate > 1.0) then {
 [QEGVAR(common,displayTextStructured), [[_heartRateOutput, _target call EFUNC(common,getName), round _heartRate], 1.5, _caller], _caller] call CBA_fnc_targetEvent;
 
 if (_logOutPut != "") then {
-    [_target, "activity", ELSTRING(medical,Check_Pulse_Log), [_caller call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
-    [_target, "quick_view", ELSTRING(medical,Check_Pulse_Log), [_caller call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+    [_target, "activity", ELSTRING(medical_treatment,Check_Pulse_Log), [_caller call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+    [_target, "quick_view", ELSTRING(medical_treatment,Check_Pulse_Log), [_caller call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
 };

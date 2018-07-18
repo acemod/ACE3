@@ -35,5 +35,5 @@ private _amountOfGeneric = count _genericMessages;
 } forEach _allInjuryTexts;
 
 if (_allInjuryTexts isEqualTo []) then {
-    _lbCtrl lbAdd localize ELSTRING(medical,NoInjuriesBodypart);
+    _lbCtrl lbAdd localize ELSTRING(medical_treatment,NoInjuriesBodypart);
 };

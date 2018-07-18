@@ -26,8 +26,8 @@ private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
-        [_target, "activity", ELSTRING(medical,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
-        [_target, "activity_view", ELSTRING(medical,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity", ELSTRING(medical_treatment,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", ELSTRING(medical_treatment,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
 } forEach _items;
 

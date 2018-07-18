@@ -49,11 +49,11 @@ if (_show == 1) then {
         private _allInjuryTexts = [];
         private _genericMessages = [];
 
-        private _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
+        private _partText = [ELSTRING(medical_gui,Head), ELSTRING(medical_gui,Torso), ELSTRING(medical_gui,LeftArm) ,ELSTRING(medical_gui,RightArm) ,ELSTRING(medical_gui,LeftLeg), ELSTRING(medical_gui,RightLeg)] select _selectionN;
         _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 
         if IS_BLEEDING(_target) then {
-            _genericMessages pushback [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
 
         // Show more information if advancedDiagnose is enabled
@@ -215,7 +215,7 @@ if (_show == 1) then {
             _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _color];
         } foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
-            _lbCtrl lbAdd (localize ELSTRING(medical,NoInjuriesBodypart));
+            _lbCtrl lbAdd (localize ELSTRING(medical_treatment,NoInjuriesBodypart));
         };
 
         private _logCtrl = (_display displayCtrl 302);

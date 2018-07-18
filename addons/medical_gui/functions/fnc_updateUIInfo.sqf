@@ -24,7 +24,7 @@ private _selectionN = GVAR(selectedBodyPart);
 if (_selectionN < 0 || {_selectionN > 5}) exitWith {};
 
 private _genericMessages = [];
-private _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
+private _partText = [ELSTRING(medical_treatment,Head), ELSTRING(medical_treatment,Torso), ELSTRING(medical_treatment,LeftArm) ,ELSTRING(medical_treatment,RightArm) ,ELSTRING(medical_treatment,LeftLeg), ELSTRING(medical_treatment,RightLeg)] select _selectionN;
 _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
 
 if IS_BLEEDING(_target) then {

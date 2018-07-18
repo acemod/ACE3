@@ -23,7 +23,7 @@ private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,
 
 // Check if there is a tourniquet on this bodypart
 if (_tourniquets select _partIndex == 0) exitWith {
-    [QEGVAR(common,displayTextStructured), [ELSTRING(medical,noTourniquetOnBodyPart), 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
+    [QEGVAR(common,displayTextStructured), [ELSTRING(medical_treatment,noTourniquetOnBodyPart), 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 // Removing the tourniquet

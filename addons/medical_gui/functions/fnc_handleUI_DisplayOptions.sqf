@@ -79,7 +79,7 @@ if (_name isEqualTo "triage") exitWith {
     } count _log;
 
     if (count _triageCardTexts == 0) exitWith {
-        lbAdd [212,(localize ELSTRING(medical,TriageCard_NoEntry))];
+        lbAdd [212,(localize ELSTRING(medical_treatment,TriageCard_NoEntry))];
     };
     {
         lbAdd [212,_x];
