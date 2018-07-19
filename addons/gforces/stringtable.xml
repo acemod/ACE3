@@ -35,7 +35,9 @@
             <English>G-force reduction</English>
             <French>Reduction des Gs</French>
             <Japanese>耐 G 性</Japanese>
-			<Chinesesimp>减少G力</Chinesesimp>
+            <Chinesesimp>减少G力</Chinesesimp>
+            <Chinese>減少G力</Chinese>
+            <Italian>Riduzione forza G</Italian>
         </Key>
     </Package>
 </Project>

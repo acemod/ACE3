@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_NightVision_Category">
             <English>ACE Nightvision</English>
             <Japanese>ACE 暗視装置</Japanese>
-            <Italian>Visione notturna ACE</Italian>
+            <Italian>ACE Visione notturna</Italian>
             <German>ACE-Nachtsicht</German>
             <Chinese>ACE夜視鏡</Chinese>
             <Chinesesimp>ACE夜视镜</Chinesesimp>
@@ -213,7 +213,7 @@
             <Japanese>暗視装置の設定をします。</Japanese>
             <Korean>야간투시경 설정</Korean>
             <Chinesesimp>设定夜视选项.</Chinesesimp>
-            <Chinese>設定夜視選項.</Chinese>
+            <Chinese>設定夜視選項</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
@@ -243,7 +243,7 @@
             <Japanese>スコープで狙いを付けると、暗視装置を無効化します。</Japanese>
             <Korean>조준시 야투경의 사용을 제한합니다.</Korean>
             <Chinesesimp>此功能开启后，当要使用瞄准镜时，为避免夜视镜镜头碰撞到瞄准镜，会先拿开夜视镜后再进行瞄准镜瞄准。</Chinesesimp>
-            <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準。</Chinese>
+            <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_DisplayName">
             <English>NVG Fog Scale</English>
@@ -258,7 +258,7 @@
             <Japanese>霧は視界制限のために使われます。</Japanese>
             <Italian>La nebbia viene utilizzata per limitare la visibilità.</Italian>
             <German>Nebel wird genutzt, um die Sichtbarkeit einzuschränken.</German>
-            <Chinese>透過霧氣來縮減夜視鏡的可視距離。</Chinese>
+            <Chinese>透過霧氣來縮減夜視鏡的可視距離</Chinese>
             <Chinesesimp>透过雾气来缩减夜视镜的可视距离。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
@@ -301,12 +301,14 @@
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
             <Japanese>シャッター効果</Japanese>
-			<Chinesesimp>快门效果</Chinesesimp>
+            <Chinesesimp>快门效果</Chinesesimp>
+            <Chinese>快門效果</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
             <Japanese>発射炎が作るローリング シャッター効果です</Japanese>
-			<Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
+            <Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
+            <Chinese>槍開火時瞬間產生快門效果</Chinese>
         </Key>
     </Package>
 </Project>

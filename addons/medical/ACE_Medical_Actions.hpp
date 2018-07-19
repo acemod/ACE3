@@ -561,7 +561,7 @@ class ACE_LegLeft {
         icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Adenosine: Morphine {
-        displayName = CSTRING(Inject_Atropine);
+        displayName = CSTRING(Inject_Adenosine);
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(treatment));
         EXCEPTIONS
@@ -707,7 +707,7 @@ class ACE_LegRight {
         icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Adenosine: Morphine {
-        displayName = CSTRING(Inject_Atropine);
+        displayName = CSTRING(Inject_Adenosine);
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(treatment));
         EXCEPTIONS

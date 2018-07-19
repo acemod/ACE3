@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_DisplayName">
@@ -275,12 +275,18 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
+            <Chinese>編輯模式</Chinese>
+            <Italian>Modalità per editare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
+            <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
+            <Chinese>新增物件</Chinese>
+            <Italian>Aggiungi Oggetti</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -963,6 +969,8 @@
         </Key>
         <Key ID="STR_ACE_Zeus_SelectCargo">
             <English>Select cargo to unload</English>
+            <Chinese>選擇要卸載的貨物</Chinese>
+            <Italian>Scegli il carico da scaricare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1076,12 +1084,16 @@
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
             <Japanese>目標を切り替え</Japanese>
-			<Chinesesimp>切换目标</Chinesesimp>
+            <Chinesesimp>切换目标</Chinesesimp>
+            <Chinese>切換目標</Chinese>
+            <Italian>Scambia obiettivo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
             <Japanese>ユニットは切り替えに影響を受けます</Japanese>
-			<Chinesesimp>被选单位受切换影响</Chinesesimp>
+            <Chinesesimp>被选单位受切换影响</Chinesesimp>
+            <Chinese>受切換所影響的單位</Chinese>
+            <Italian>Unità influenzate dallo scambio</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1382,7 +1394,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek_tooltip">
             <English>Unit will actively try to find and move towards nearby units of the activation side. The range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.</English>
-            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米。</Chinese>
+            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
             <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
             <Czech>Jednotka se bude aktivně snažit najít a přejít na blízké jednotky na straně aktivace. Rozsah Auto Seek je založen na dovednosti spotové vzdálenosti jednotky s minimem 100 metrů.</Czech>
             <French>L'unité essayera activement de trouver et de se déplacer vers les unités à proximité du côté d'activation. La portée d'Auto Seek est basée sur la compétence de distance de l'unité avec un minimum de 100 mètres.</French>
@@ -1463,12 +1475,16 @@
         <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
             <English>Add full ACE Arsenal</English>
             <Japanese>ACE 武器庫を追加</Japanese>
-			<Chinesesimp>添加ACE模式军火库</Chinesesimp>
+            <Chinesesimp>添加ACE模式军火库</Chinesesimp>
+            <Chinese>增加完整的ACE軍火庫</Chinese>
+            <Italian>Aggiungi l'arsenale ACE completo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
             <Japanese>ACE 武器庫を削除</Japanese>
-			<Chinesesimp>删除ACE模式军火库</Chinesesimp>
+            <Chinesesimp>删除ACE模式军火库</Chinesesimp>
+            <Chinese>移除ACE軍火庫</Chinese>
+            <Italian>Rimuovi l'arsenale ACE</Italian>
         </Key>
     </Package>
 </Project>

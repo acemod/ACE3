@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -307,7 +307,7 @@
             <Japanese>カーゴ アイテムを空中投下するまでの時間を変更します。</Japanese>
             <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
             <French>Modifier le temps qu'il faut pour larguer la cargaison.</French>
-            <Chinese>設定空投所需消耗的時間.</Chinese>
+            <Chinese>設定空投所需消耗的時間</Chinese>
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
             <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>

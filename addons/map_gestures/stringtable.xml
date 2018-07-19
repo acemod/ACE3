@@ -146,7 +146,7 @@
             <Japanese>モジュールで同期されたグループのリーダー用に色の値を決定します。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을때의 리더 색상입니다.</Korean>
             <Chinesesimp>改变与此同步小队队长的标识器颜色。</Chinesesimp>
-            <Chinese>改變與此同步小隊隊長的指示器顏色。</Chinese>
+            <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_color_displayName">
             <English>Color</English>
@@ -220,7 +220,7 @@
             <Japanese>データの更新間隔</Japanese>
             <Korean>데이터 갱신 간격</Korean>
             <Chinesesimp>定义每次更新数据的时间.</Chinesesimp>
-            <Chinese>定義每次更新數據的時間.</Chinese>
+            <Chinese>定義每次更新數據的時間</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
@@ -264,7 +264,7 @@
             <Japanese>マップ ジェスチャに表示される、名前の色を決定します。</Japanese>
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
             <Chinesesimp>定义名称文字颜色。使其与地图标识器颜色有所区别。</Chinesesimp>
-            <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別。</Chinese>
+            <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
         </Key>
         <Key ID="STR_ACE_map_gestures_mapGestures_category">
             <English>Map Gestures</English>

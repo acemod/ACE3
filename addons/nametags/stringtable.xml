@@ -542,7 +542,9 @@
         <Key ID="STR_ACE_NameTags_playerNamesMaxAlpha">
             <English>Player tags transparency</English>
             <Japanese>プレイヤー名札の透明度</Japanese>
-			<Chinesesimp>玩家名字标签透明度</Chinesesimp>
+            <Chinesesimp>玩家名字标签透明度</Chinesesimp>
+            <Chinese>玩家名稱透明度</Chinese>
+            <Italian>Trasparenza Etichette Nome</Italian>
         </Key>
     </Package>
 </Project>

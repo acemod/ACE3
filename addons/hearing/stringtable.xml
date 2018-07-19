@@ -31,7 +31,7 @@
             <Japanese>着けることにより、近くの大きな銃声から聴覚を保護します。</Japanese>
             <Korean>보호용 귀마개는 화기로부터의 큰소리로부터 사용자의 청력을 보호합니다.</Korean>
             <Chinesesimp>配戴防护耳塞，遇到大声的武器发射时也不会损害听力。</Chinesesimp>
-            <Chinese>配戴防護耳塞，遇到大聲的武器發射時也不會損害聽力。</Chinese>
+            <Chinese>配戴防護耳塞，遇到大聲的武器發射時也不會損害聽力</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_On">
             <English>Earplugs in</English>
@@ -286,33 +286,45 @@
             <English>Hearing protection</English>
             <French>Protection auditive</French>
             <Japanese>聴覚保護</Japanese>
-			<Chinesesimp>听力保护</Chinesesimp>
+            <Chinesesimp>听力保护</Chinesesimp>
+            <Chinese>聽力保護</Chinese>
+            <Italian>Protezione auditiva</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
             <French>Étouffement des sons</French>
             <Japanese>音量低下</Japanese>
-			<Chinesesimp>降低音量</Chinesesimp>
+            <Chinesesimp>降低音量</Chinesesimp>
+            <Chinese>進低音量</Chinese>
+            <Italian>Volume attenuazione</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
             <Japanese>耳栓時の音量</Japanese>
-			<Chinesesimp>耳塞时音量</Chinesesimp>
+            <Chinesesimp>耳塞时音量</Chinesesimp>
+            <Chinese>耳塞時音量</Chinese>
+            <Italian>Volume tappi per le orecchie</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
             <Japanese>耳栓使用時の音量を決定します。</Japanese>
-			<Chinesesimp>决定带上耳塞时的音量</Chinesesimp>
+            <Chinesesimp>决定带上耳塞时的音量</Chinesesimp>
+            <Chinese>使用耳塞時音量</Chinese>
+            <Italian>Volume audio quandi si indossano i tappi per le orecchie.</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
             <Japanese>気絶時の音量</Japanese>
-			<Chinesesimp>无意识时音量</Chinesesimp>
+            <Chinesesimp>无意识时音量</Chinesesimp>
+            <Chinese>昏迷時音量</Chinese>
+            <Italian>Volume quando incoscente</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
             <Japanese>気絶時の音量を決定します。</Japanese>
-			<Chinesesimp>决定处于无意识时的音量</Chinesesimp>
+            <Chinesesimp>决定处于无意识时的音量</Chinesesimp>
+            <Chinese>昏迷時使用耳塞的音量</Chinese>
+            <Italian>Volume quando incoscente.</Italian>
         </Key>
     </Package>
 </Project>

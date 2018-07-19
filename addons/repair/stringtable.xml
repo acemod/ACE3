@@ -1837,7 +1837,7 @@
             <German>Anzahl der Ersatzketten im Laderaum.</German>
             <Japanese>カーゴ内にある予備履帯の数を指定します。</Japanese>
             <Italian>Numero dei cingoli di scorta nel cargo.</Italian>
-            <Chinese>設定載具在貨艙內攜帶的備用履帶數量。</Chinese>
+            <Chinese>設定載具在貨艙內攜帶的備用履帶數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
@@ -1853,18 +1853,22 @@
             <German>Anzahl der Ersatzreifen im Laderaum.</German>
             <Japanese>カーゴ内にある予備タイヤの数を指定します。</Japanese>
             <Italian>Numero delle ruote di scorta nel cargo.</Italian>
-            <Chinese>設定載具在貨艙內攜帶的備用輪胎數量。</Chinese>
+            <Chinese>設定載具在貨艙內攜帶的備用輪胎數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
             <Japanese>修理時にエンジン自動停止</Japanese>
-			<Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
+            <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
+            <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Motore spento automaticamente durante la riparazione</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
             <Japanese>修理時にエンジンを自動で停止します。</Japanese>
-			<Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
+            <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
+            <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
         </Key>
     </Package>
 </Project>
