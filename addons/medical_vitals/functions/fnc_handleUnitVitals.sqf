@@ -107,9 +107,9 @@ switch (true) do {
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_heartRate < 30): {  // With a heart rate below 30 but bigger than 20 there is a chance to enter the cardiac arrest state
-        private _lastCheck = _unit getVariable [QGVAR(lastCheckCriticalHeartRate), CBA_missionTime];
+        private _nextCheck = _unit getVariable [QGVAR(lastCheckCriticalHeartRate), CBA_missionTime];
         private _enterCardiacArrest = false;
-        if (_lastCheck <= CBA_missionTime) then {
+        if (CBA_missionTime >= _nextCheck) then {
             _enterCardiacArrest = random 1 < (0.4 + 0.6*(30 - _heartRate)/10);  // Variable chance of getting into cardiac arrest.
             _unit setVariable [QGVAR(lastCheckCriticalHeartRate), CBA_missionTime + 5];
         };
