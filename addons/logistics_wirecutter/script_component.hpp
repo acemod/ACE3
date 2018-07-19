@@ -16,7 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-
 // find is case sensitive, so keep everything lowercase
 // also set as isFence, but if the model is reused like for xcam
 #define FENCE_P3DS [\
