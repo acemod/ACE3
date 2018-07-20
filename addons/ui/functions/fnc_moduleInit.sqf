@@ -33,6 +33,7 @@ if (isArray (missionConfigFile >> "showHUD")) then {
     [_logic, QGVAR(vehicleCompass), "vehicleCompass"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(commandMenu), "commandMenu"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(groupBar), "groupBar"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(squadRadar), "squadRadar"] call EFUNC(common,readSettingFromModule);
 };
 
 // Advanced

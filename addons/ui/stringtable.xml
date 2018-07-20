@@ -140,6 +140,9 @@
             <Chinesesimp>小队状态栏</Chinesesimp>
             <Chinese>小隊狀態欄</Chinese>
         </Key>
+        <Key ID="STR_ACE_UI_SquadRadar">
+            <English>Squad Radar</English>
+        </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
             <Czech>Název zbraně</Czech>

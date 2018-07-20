@@ -42,6 +42,11 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
+            class squadRadar {
+                displayName = CSTRING(SquadRadar);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
 
             // ADVANCED
             // Soldier
