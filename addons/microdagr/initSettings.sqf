@@ -1,4 +1,3 @@
-
 [
     QGVAR(waypointPrecision),
     "LIST",
