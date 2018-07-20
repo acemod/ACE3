@@ -47,7 +47,7 @@ if (_state) then {
     [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
 
     if (_unit == ACE_player) then {
-        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
+        ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
     };
 
     [_unit] call EFUNC(common,fixLoweredRifleAnimation);
