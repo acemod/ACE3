@@ -35,6 +35,18 @@ GVAR(heartBeatEffectRunning) = false;
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addEventHandler;
 
+// Reset volume upon death for spectators
+[QEGVAR(medical,death), {
+    params ["_unit"];
+
+    if (_unit != ACE_player) exitWith {};
+
+    _unit setVariable ["tf_voiceVolume", 1, true];
+    _unit setVariable ["tf_unable_to_use_radio", false, true];
+    _unit setVariable ["acre_sys_core_isDisabled", false, true];
+    [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
+}] call CBA_fnc_addEventHandler;
+
 // Update effects to match new unit's current status (this also handles respawn)
 ["unit", {
     params ["_new", "_old"];
