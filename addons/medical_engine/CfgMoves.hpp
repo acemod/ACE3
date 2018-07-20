@@ -13,7 +13,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         // wake me up inside
         class Unconscious: Default {
-            InterpolateTo[] = {"DeadState",0.1,"ACE_UnconsciousOutProne",0.2};
+            InterpolateTo[] = {"DeadState",0.1};
         };
 
         class AmovPpneMstpSnonWnonDnon;
