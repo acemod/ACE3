@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Handles double clicking a row in 3DEN attribute listbox.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_listbox", "_currentRow"];
 TRACE_1("Double click toggle",_currentRow);

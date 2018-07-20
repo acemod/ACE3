@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: mharis001
  * Handles changing the mode in 3DEN attribute.
@@ -14,8 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_controlsGroup", "_mode"];
 TRACE_1("Changing attribute mode",_mode);

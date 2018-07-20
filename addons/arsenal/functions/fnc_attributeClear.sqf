@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: mharis001
  * Clears all items from current category in 3DEN attribute.
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_controlsGroup"];
 

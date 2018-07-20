@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: mharis001
  * Initializes the 3DEN attribute.
@@ -14,8 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_controlsGroup", "_value"];
 TRACE_1("Initializing 3DEN attribute",_value);

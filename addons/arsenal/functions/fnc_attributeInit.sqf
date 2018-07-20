@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the objects 3DEN attribute at scenario start.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_value"];
 _value params ["_items", "_mode"];

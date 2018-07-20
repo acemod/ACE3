@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: mharis001
  * Populates 3DEN attribute listbox with items of given category.
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_controlsGroup"];
 

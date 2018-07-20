@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: mharis001
  * Handles adding/removing an item from 3DEN attribute list.
@@ -14,8 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_controlsGroup", "_addItem"];
 
