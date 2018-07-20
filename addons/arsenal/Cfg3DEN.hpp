@@ -176,7 +176,7 @@ class Cfg3DEN {
                         tooltip = "";
                         expression = QUOTE(if (!is3DEN) then {[ARR_2(_this,+_value)] call FUNC(attributeInit)});
                         defaultValue = "[[], 0]";
-                        condition = "1";
+                        condition = "1 - objectControllable";
                         wikiType = "[[Array]]";
                         validate = "none";
                         value = 0;
