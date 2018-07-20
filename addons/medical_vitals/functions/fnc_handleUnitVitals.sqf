@@ -98,15 +98,28 @@ switch (true) do {
         TRACE_2("heartRate Fatal",_unit,_heartRate);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
-    case (_bloodPressureH < 50): {
-        TRACE_2("bloodPressureH Fatal",_unit,_bloodPressureH);
+    case (_bloodPressureH < 50 && {_bloodPressureL < 40} && {_heartRate < 40}): {
+        TRACE_4("bloodPressure (H & L) + heartRate Fatal",_unit,_bloodPressureH,_bloodPressureL,_heartRate);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
-    case (_bloodPressureL < 40): {
-        [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+    case (_bloodPressureL => 190) {
+        TRACE_2("bloodPressure L above limits",_unit,_bloodPressureL);
+        [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
-    case (_heartRate < 30): {
-        [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+    case (_heartRate < 30): {  // With a heart rate below 30 but bigger than 20 there is a chance to enter the cardiac arrest state
+        private _nextCheck = _unit getVariable [QGVAR(lastCheckCriticalHeartRate), CBA_missionTime];
+        private _enterCardiacArrest = false;
+        if (CBA_missionTime >= _nextCheck) then {
+            _enterCardiacArrest = random 1 < (0.4 + 0.6*(30 - _heartRate)/10);  // Variable chance of getting into cardiac arrest.
+            _unit setVariable [QGVAR(lastCheckCriticalHeartRate), CBA_missionTime + 5];
+        };
+        if (_enterCardiacArrest) then {
+            TRACE_2("Heart rate critical. Cardiac arrest",_unit,_heartRate);
+            [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
+        } else {
+            TRACE_2("Heart rate critical. Critical vitals",_unit,_heartRate);
+            [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
+        };
     };
     case (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput): {
         [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
