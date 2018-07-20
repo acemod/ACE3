@@ -21,6 +21,7 @@ GVAR(heartBeatEffectRunning) = false;
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
 
+    // Toggle unit's ability to talk in radio addons
     if (local _unit) then {
         _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
         _unit setVariable ["tf_unable_to_use_radio", _unconscious, true];
@@ -31,11 +32,18 @@ GVAR(heartBeatEffectRunning) = false;
 
     [_unconscious, 1] call FUNC(effectUnconscious);
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
+
+    // Greatly reduce players hearing ability while unconscious (affects radio addons)
+    [QUOTE(ADDON), VOL_UNCONSCIOUS, _unconscious] call EFUNC(common,setHearingCapability);
 }] call CBA_fnc_addEventHandler;
 
+// Update effects to match new unit's current status
 ["unit", {
     params ["_new", "_old"];
+
     private _status = _new getVariable ["ace_unconscious", false];
+
     [_status, 0] call FUNC(effectUnconscious);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
+    [QUOTE(ADDON), VOL_UNCONSCIOUS, _status] call EFUNC(common,setHearingCapability);
 }] call CBA_fnc_addPlayerEventHandler;
