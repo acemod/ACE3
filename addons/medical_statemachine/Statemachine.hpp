@@ -107,8 +107,7 @@ class ACE_Medical_StateMachine {
         };
     };
     class Dead {
-        // TODO: this needs to be handled by a function instead of inline scripts
-        // Probably also needs additional logic to deal with edge cases
-        onStateEntered = "_this setDamage 1"; // killing a unit also exits the state machine for this unit
+        // When the unit is killed it's no longer handled by the statemachine
+        onStateEntered = QFUNC(enteredStateDeath);
     };
 };
