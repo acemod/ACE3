@@ -498,8 +498,8 @@
             <Chinese>無 (無法檢視地圖)</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_DisplayName">
-            <English>Waypoint Precision</English>
-            <German>Wegpunkt Genauigkeit</German>
+            <English>MicroDAGR - Waypoint Precision</English>
+            <German>MicroDAGR - Wegpunkt Genauigkeit</German>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>

@@ -1,10 +1,9 @@
 
-[GVAR(waypointPrecision),
-"LIST",
-[LSTRING(WaypointPrecision_DisplayName), CSTRING(WaypointPrecision_Description)],
-"My Category",
 [
-  [0, 1, 2],
-  [CSTRING(WaypointPrecision_medium, CSTRING(WaypointPrecision_close), CSTRING(WaypointPrecision_exact)],
-  2]
+    QGVAR(waypointPrecision),
+    "LIST",
+    [LSTRING(WaypointPrecision_DisplayName), LSTRING(WaypointPrecision_Description)],
+    "ACE Uncategorized",
+    [[0, 1, 2], [LSTRING(WaypointPrecision_medium), LSTRING(WaypointPrecision_close), LSTRING(WaypointPrecision_exact)], 2],
+    true
 ] call cba_settings_fnc_init;
