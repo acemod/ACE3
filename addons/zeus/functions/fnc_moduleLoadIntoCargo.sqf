@@ -52,7 +52,7 @@ if (!alive _cargo) exitWith {
         };
 
         private _displayName = [_cargo] call EFUNC(common,getName);
-        if ([_cargo, _holder] call EFUNC(cargo,loadItem)) then {
+        if ([_cargo, _holder, true] call EFUNC(cargo,loadItem)) then {
             private _loadedItem = [localize ELSTRING(cargo,LoadedItem), "<br/>", " "] call CBA_fnc_replace;
             private _holderDisplayName = [_holder] call EFUNC(common,getName);
             [_loadedItem, _displayName, _holderDisplayName] call FUNC(showMessage);
