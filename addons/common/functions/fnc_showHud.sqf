@@ -15,12 +15,14 @@
  * - menu: Boolean - show commanding menu (hides HC related menus)
  * - group: Boolean - show group info bar (hides squad leader info bar)
  * - cursors: Boolean - show HUD weapon cursors (connected with scripted HUD)
+ * - panels: Boolean - show vehicle panels / GPS
+ * - ???: Boolean - Possibly related to changelog entry `Added: A new showKillConfirmations parameter for the showHud command`
  *
  * Return Value:
  * Resulting ShowHud Array <ARRAY>
  *
  * Example:
- * ["hideHud", [false, true, true, true, true, true, true, false]] call ace_common_fnc_showHud; //This is equivalent to the old showHud false
+ * ["hideHud", [false, true, true, true, true, true, true, false, true, true]] call ace_common_fnc_showHud; //This is equivalent to the old showHud false
  * [] call ace_common_fnc_showHud; //sets `showHud` and returns the result array used
  *
  * Public: Yes
@@ -29,7 +31,7 @@
 
 if (!hasInterface) exitWith {[-1]};
 
-params [["_reason", "", [""]], ["_mask", [], [[]], [0,8]]];
+params [["_reason", "", [""]], ["_mask", [], [[]]]];
 
 if (isArray (missionConfigFile >> "showHUD")) then {
     //(showHud = 0;) is fine - the array is the problem
@@ -39,10 +41,11 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 if (_reason != "") then {
     _reason = toLower _reason;
     if (_mask isEqualTo []) then {
-        TRACE_2("Setting", _reason, _mask);
+        TRACE_2("Removing", _reason, _mask);
         [GVAR(showHudHash), _reason] call CBA_fnc_hashRem;
     } else {
-        TRACE_2("Removing", _reason, _mask);
+        while {(count _mask) < 10} do { _mask pushBack true; };
+        TRACE_2("Setting", _reason, _mask);
         [GVAR(showHudHash), _reason, _mask] call CBA_fnc_hashSet;
     };
 };
@@ -50,7 +53,7 @@ if (_reason != "") then {
 GVAR(showHudHash) params ["", "_reasons", "_masks"];
 private _resultMask = [];
 
-for "_index" from 0 to 7 do {
+for "_index" from 0 to 9 do {
     private _set = true; //Default to true
     {
         if (!(_x select _index)) exitWith {
