@@ -56,3 +56,8 @@
 #define SOUND_CLIP_TIME_SPACING 1.5
 #define CUT_TIME_DEFAULT 11
 #define CUT_TIME_ENGINEER 7.5
+
+#define HAS_WIRECUTTER(unit) (\
+    "ACE_wirecutter" in ([ARR_6(unit, false, true, true, true, false)] call CBA_fnc_uniqueUnitItems) \
+    || {backpack unit isKindOf "rhs_assault_umbts_engineer"} \
+)

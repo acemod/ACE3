@@ -60,7 +60,7 @@ if !(_unit call EFUNC(common,isSwimming)) then {
 
         !isNull _fence
         && {damage _fence < 1}
-        && {"ACE_wirecutter" in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems)}
+        && {HAS_WIRECUTTER(_player)}
     },
     ["isNotSwimming"]
 ] call EFUNC(common,progressBar);
