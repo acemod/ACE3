@@ -45,6 +45,8 @@ PREP(bodyCleanupLoop);
 PREP(calculateBlood);
 PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
+PREP(findMostEffectiveWound);
+PREP(getBandageTime);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);
 PREP(hasTourniquetAppliedTo);

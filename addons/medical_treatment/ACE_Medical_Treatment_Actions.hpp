@@ -9,7 +9,7 @@ class GVAR(Actions) {
         allowedSelections[] = {"All"};
         allowSelfTreatment = 1;
         requiredMedic = 0;
-        treatmentTime = 8;
+        treatmentTime = QFUNC(getBandageTime);
         treatmentTimeSelfCoef = 1;
         items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
         condition = QUOTE(!EGVAR(medical,advancedBandages));
