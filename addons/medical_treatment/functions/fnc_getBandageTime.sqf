@@ -23,7 +23,7 @@ _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
 // Everything is patched up on this body part already
 if (_wound isEqualTo []) exitWith { 0 };
 
-_wound params ["", "", "", "_amountOf", "_bloodloss", "_damage", "_category"]
+_wound params ["", "", "", "_amountOf", "_bloodloss", "_damage", "_category"];
 
 // Base bandage time is based on wound category
 private _bandageTime = ([4, 6, 8] select _category) * _amountOf;
