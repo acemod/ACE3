@@ -64,7 +64,7 @@ class CfgVehicles {
     class GVAR(m3Tripod): GVAR(baseTripod) {
         author = ECSTRING(common,ACETeam);
         scope = 2;
-        model = QPATHTOF(data\ACE_CSW_Tripod.p3d);
+        model = QPATHTOF(data\ACE_CSW_m3_tripod.p3d);
         displayName = CSTRING(Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m3CarryTripod);
@@ -73,7 +73,7 @@ class CfgVehicles {
     class GVAR(m3TripodLow): GVAR(m3Tripod) {
         author = ECSTRING(common,ACETeam);
         scope = 2;
-        model = QPATHTOF(data\ACE_CSW_Tripod.p3d);
+        model = QPATHTOF(data\ACE_CSW_m3_tripod.p3d);
         displayName = CSTRING(Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m3CarryTripodLow);
@@ -210,3 +210,4 @@ class CfgVehicles {
         };
     };
 };
+
