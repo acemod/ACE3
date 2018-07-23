@@ -17,11 +17,14 @@
 
 params ["_medic", "_patient", "_bodypart", "_bandage"];
 
-private _targetWound = [_target, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
+private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+if (_partIndex < 0) exitWith { 0 };
+
+private _targetWound = [_patient, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
 _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
 
 // Everything is patched up on this body part already
-if (_wound isEqualTo []) exitWith { 0 };
+if (_wound isEqualTo EMPTY_WOUND) exitWith { 0 };
 
 _wound params ["", "", "", "_amountOf", "_bloodloss", "_damage", "_category"];
 
