@@ -39,9 +39,6 @@ if (!local _unit) exitWith {
 // Handle unit vitals
 [_unit, CBA_missionTime - _lastTime] call FUNC(handleUnitVitals);
 
-// remove old actions
-[_unit] call FUNC(clearExpired);
-
 // Check damage or bleeing for Splint
 private _damage = _unit getVariable [QGVAR(bodyPartStatus), [0, 0, 0, 0, 0, 0]];
 private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0, 0, 0, 0, 0, 0]];

@@ -226,65 +226,6 @@ private _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
     ["isNotInside", "isNotSwimming"]
 ] call EFUNC(common,progressBar);
 
-// add current action to display list
-private _medicalLevel = ["Basic", "Advanced"] select (GVAR(level) >= 2);
-private _treatmentType = getText (configFile >> "ACE_Medical_Actions" >> _medicalLevel >> _className >> "treatmentType");
-private _partName = "";
-switch (_selectionName) do {
-    case ("head"): {
-        _partName = "Head";
-    };
-    case ("body"): {
-        _partName = "Torso";
-    };
-    case ("hand_l"): {
-        _partName = "Left Arm";
-    };
-    case ("hand_r"): {
-        _partName = "Right Arm";
-    };
-    case ("leg_l"): {
-        _partName = "Left Leg";
-    };
-    case ("leg_r"): {
-        _partName = "Right Leg";
-    };
-};
-
-private _action = "";
-private _treatment = "";
-switch (_treatmentType) do {
-    case ("Bandage"): {
-        _action = "Bandaging";
-        _treatment = _partName;
-    };
-    case ("TourniquetOn"): {
-        _action = "Applying Tourniquet on";
-        _treatment = _partName;
-    };
-    case ("TourniquetOff"): {
-        _action = "Removing Tourniquet from";
-        _treatment = _partName;
-    };
-    case ("Injection"): {
-        _action = "Injecting";
-        _treatment = getText (configFile >> "ACE_Medical_Actions" >> _medicalLevel >> _className >> "treatmentDisplay");
-    };
-    case ("Others"): {
-        _action = getText (configFile >> "ACE_Medical_Actions" >> _medicalLevel >> _className >> "treatmentDisplay");
-        _treatment = "";
-    };
-    default {
-        _treatmentType = "none";
-    };
-};
-
-if (_treatmentType != "none") then {
-    private _joint = _target getVariable [QGVAR(jointTreatment), []];
-    _joint pushback [_caller, _action, _treatment, CBA_missionTime + _treatmentTime];
-    _target setVariable [QGVAR(jointTreatment), _joint, true];
-};
-
 // Display Icon
 private _iconDisplayed = getText (_config >> "actionIconPath");
 if (_iconDisplayed != "") then {

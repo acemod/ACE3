@@ -58,18 +58,6 @@ if (_totalIvVolume >= 1) then {
     _genericMessages pushBack [format [localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
 };
 
-// show current actions by other players
-private _joint = _target getVariable [QEGVAR(medical,jointTreatment), []];
-if !(_joint isEqualTo []) then {
-    {
-        if ((_x select 2) == "") then {
-            _genericMessages pushBack [(format ["%1 is %2", name (_x select 0), (_x select 1)]), [1, 1, 1, 1]];
-        } else {
-            _genericMessages pushBack [(format ["%1 is %2 %3", name (_x select 0), (_x select 1), (_x select 2)]), [1, 1, 1, 1]];
-        };
-    } forEach _joint;
-};
-
 private _damaged = [false, false, false, false, false, false];
 private _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
 
