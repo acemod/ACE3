@@ -31,18 +31,13 @@ _wound params ["", "", "", "_amountOf", "_bloodloss", "_damage", "_category"];
 // Base bandage time is based on wound category
 private _bandageTime = ([4, 6, 8] select _category) * _amountOf;
 
-// Head and torso wounds take slightly longer to bandage
-if (_bodypart in ["head", "body"]) then {
-    _bandageTime = _bandageTime + ([2, 4] select (_bodypart == "body"));
-};
-
 // Medically unskilled units aren't so practised at applying bandages
 if !([_medic] call FUNC(isMedic)) then {
     _bandageTime = _bandageTime + 3;
 };
 
-// Bandaging yourself or an unconscious person requires more work
-if (_medic == _patient || {IS_UNCONSCIOUS(_patient)}) then {
+// Bandaging yourself requires more work
+if (_medic == _patient) then {
     _bandageTime = _bandageTime + 2;
 };
 
