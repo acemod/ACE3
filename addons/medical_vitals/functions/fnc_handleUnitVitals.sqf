@@ -89,7 +89,7 @@ _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 
 private _cardiacOutput = [_unit] call EFUNC(medical_status,getCardiacOutput);
 
-// More leathal events need to be checked first here
+// Most lethal events need to be checked first here
 switch (true) do {
     case (_bloodVolume < BLOOD_VOLUME_FATAL): {
         TRACE_3("BloodVolume Fatal",_unit,BLOOD_VOLUME_FATAL,_bloodVolume);
