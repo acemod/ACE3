@@ -74,38 +74,6 @@
             <Chinesesimp>选择需要的医疗模拟等级</Chinesesimp>
             <Chinese>選擇需要的醫療模擬等級</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_DisplayName">
-            <English>Medics setting</English>
-            <Russian>Настройки медиков</Russian>
-            <Polish>Poziom medyków</Polish>
-            <Spanish>Configuración médica</Spanish>
-            <German>Sanitätseinstellungen</German>
-            <Czech>Úroveň zdravotníků</Czech>
-            <Portuguese>Configuração médica</Portuguese>
-            <French>Règlage des infirmiers</French>
-            <Hungarian>Orvosok beállítása</Hungarian>
-            <Italian>Parametri Medici</Italian>
-            <Japanese>治療の設定</Japanese>
-            <Korean>의료 설정</Korean>
-            <Chinesesimp>医护兵等级</Chinesesimp>
-            <Chinese>醫護兵等級</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Description">
-            <English>What is the level of detail prefered for medics?</English>
-            <German>Wie hoch soll das Simulationslevel für Sanitäter sein?</German>
-            <Russian>Каков уровень подробностей для медиков?</Russian>
-            <Polish>Jaki jest poziom detali medycznych wyświetlanych dla medyków?</Polish>
-            <Spanish>¿Cuál es el nivel de detalle preferido para los médicos?</Spanish>
-            <Czech>Jaká úroveň detailů je preferována pro zdravotníky?</Czech>
-            <Portuguese>Qual o nível de detalhe preferido para os médicos?</Portuguese>
-            <French>Quel niveau de détail voulez-vous pour les infirmiers?</French>
-            <Hungarian>Mi a javasolt részletesség orvosok számára?</Hungarian>
-            <Italian>Qual'è il livello di dettagli preferito per i medici?</Italian>
-            <Japanese>衛生兵への再現度をどのくらいに設定しますか?</Japanese>
-            <Korean>의무병의 시뮬레이션 정도?</Korean>
-            <Chinesesimp>设定医护兵的预设医疗水平(医疗兵, 军医)</Chinesesimp>
-            <Chinese>設定醫護兵的預設醫療水平(醫療兵, 軍醫)</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_DisplayName">
             <English>Locations boost training</English>
             <Czech>Místa pro vylepšení zkušeností</Czech>

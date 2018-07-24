@@ -1,12 +1,4 @@
 class ACE_Settings {
-    class GVAR(medicSetting) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_medicSetting_DisplayName);
-        description = CSTRING(MedicalSettings_medicSetting_Description);
-        value = 0;
-        typeName = "SCALAR";
-        values[] = {"Disabled", "Normal", "Advanced"};
-    };
     class GVAR(increaseTrainingInLocations) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_increaseTrainingInLocations_DisplayName);
