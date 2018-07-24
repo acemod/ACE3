@@ -28,6 +28,9 @@ if (alive _target) exitWith {
     // tourniquets
     _target setVariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 
+    // splints
+    _target setVariable [QGVAR(samSplint), [0,0,0,0,0,0], true];
+
     // wounds and injuries
     _target setVariable [QGVAR(openWounds), [], true];
     _target setVariable [QGVAR(bandagedWounds), [], true];
