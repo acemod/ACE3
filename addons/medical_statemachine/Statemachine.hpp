@@ -105,6 +105,10 @@ class ACE_Medical_StateMachine {
             condition = QFUNC(conditionExecutionDeath);
             events[] = {QEGVAR(medical,FatalInjury)};
         };
+        class Bleedout {
+            targetState = "Dead";
+            events[] = {QEGVAR(medical,Bleedout)};
+        };
     };
     class Dead {
         // When the unit is killed it's no longer handled by the statemachine

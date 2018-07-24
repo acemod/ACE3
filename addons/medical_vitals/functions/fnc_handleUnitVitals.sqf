@@ -40,9 +40,9 @@ _unit setVariable [VAR_BLOOD_VOL, _bloodVolume, _syncValues];
 
 // Set variables for synchronizing information across the net
 private _hemorrhage = switch (true) do {
-    case (_bloodVolume < BLOOD_VOLUME_CLASS_4_HEMORRHAGE): { 3 };
-    case (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE): { 2 };
-    case (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE): { 1 };
+    case (_bloodVolume < BLOOD_VOLUME_CLASS_4_HEMORRHAGE): { 4 };
+    case (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE): { 3 };
+    case (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE): { 2 };
     case (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE): { 1 };
     default {0};
 };
@@ -92,6 +92,10 @@ private _cardiacOutput = [_unit] call EFUNC(medical_status,getCardiacOutput);
 switch (true) do {
     case (_bloodVolume < BLOOD_VOLUME_FATAL): {
         TRACE_3("BloodVolume Fatal",_unit,BLOOD_VOLUME_FATAL,_bloodVolume);
+        [QEGVAR(medical,Bleedout), _unit] call CBA_fnc_localEvent;
+    };
+    case (_hemorrhage == 4): {
+        TRACE_3("Class IV Hemorrhage",_unit,_hemorrhage,_bloodVolume);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_heartRate < 20 || {_heartRate > 220}): {
