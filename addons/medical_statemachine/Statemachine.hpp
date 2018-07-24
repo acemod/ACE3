@@ -16,7 +16,7 @@ class ACE_Medical_StateMachine {
         };
         class FatalVitals {
             targetState = "CardiacArrest";
-            events[] = {QEGVAR(medical,FatalVitals)};
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
