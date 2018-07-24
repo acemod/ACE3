@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SilentSpike
- * Calculates the time to bandage a wound based on it's location, size, the patient and the medic.
+ * Calculates the time to bandage a wound based on it's size, the patient and the medic.
  *
  * Arguments:
  * 0: The medic <OBJECT>
@@ -28,17 +28,21 @@ if (_wound isEqualTo EMPTY_WOUND) exitWith { 0 };
 
 _wound params ["", "", "", "_amountOf", "_bloodloss", "_damage", "_category"];
 
-// Base bandage time is based on wound category
-private _bandageTime = ([4, 6, 8] select _category) * _amountOf;
+// Base bandage time is based on wound size and remaining percentage
+private _bandageTime = ([
+    BANDAGE_TIME_S,
+    BANDAGE_TIME_M,
+    BANDAGE_TIME_L
+] select _category) * _amountOf;
 
-// Medically unskilled units aren't so practised at applying bandages
-if !([_medic] call FUNC(isMedic)) then {
-    _bandageTime = _bandageTime + 3;
+// Medics are more practised at applying bandages
+if ([_medic] call FUNC(isMedic)) then {
+    _bandageTime = _bandageTime + BANDAGE_TIME_MOD_MEDIC;
 };
 
 // Bandaging yourself requires more work
 if (_medic == _patient) then {
-    _bandageTime = _bandageTime + 2;
+    _bandageTime = _bandageTime + BANDAGE_TIME_MOD_SELF;
 };
 
 // Nobody can bandage instantly
