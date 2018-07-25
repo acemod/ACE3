@@ -16,7 +16,7 @@ class ACE_Medical_StateMachine {
         };
         class FatalVitals {
             targetState = "CardiacArrest";
-            events[] = {QEGVAR(medical,FatalVitals)};
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
@@ -35,7 +35,7 @@ class ACE_Medical_StateMachine {
         };
         class FatalVitals {
             targetState = "CardiacArrest";
-            events[] = {QEGVAR(medical,FatalVitals)};
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
@@ -57,7 +57,7 @@ class ACE_Medical_StateMachine {
         };
         class FatalTransitions {
             targetState = "CardiacArrest";
-            events[] = {QEGVAR(medical,FatalVitals)};
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
@@ -104,6 +104,10 @@ class ACE_Medical_StateMachine {
             targetState = "Dead";
             condition = QFUNC(conditionExecutionDeath);
             events[] = {QEGVAR(medical,FatalInjury)};
+        };
+        class Bleedout {
+            targetState = "Dead";
+            events[] = {QEGVAR(medical,Bleedout)};
         };
     };
     class Dead {
