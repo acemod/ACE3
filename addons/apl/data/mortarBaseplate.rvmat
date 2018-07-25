@@ -8,7 +8,7 @@ PixelShaderID="super";
 VertexShaderID="super";
 class Stage1
 {
-	texture="z\ace\addons\csw\data\mortarBaseplate_nohq.paa";
+	texture="z\ace\addons\apl\data\mortarBaseplate_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="z\ace\addons\csw\data\mortarBaseplate_as.paa";
+	texture="z\ace\addons\apl\data\mortarBaseplate_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="z\ace\addons\csw\data\mortarBaseplate_smdi.paa";
+	texture="z\ace\addons\apl\data\mortarBaseplate_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{
