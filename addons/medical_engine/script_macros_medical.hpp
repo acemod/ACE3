@@ -61,6 +61,16 @@
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 
+// Empty wound data, used for some default return values
+// [ID, classID, bodypartIndex, amountOf, bloodloss, damage, category]
+#define EMPTY_WOUND [-1, -1, -1, 0, 0, 0, 0]
+
+// Base time to bandage each wound category
+#define BANDAGE_TIME_S 4
+#define BANDAGE_TIME_M 6
+#define BANDAGE_TIME_L 8
+#define BANDAGE_TIME_MOD_MEDIC -2
+#define BANDAGE_TIME_MOD_SELF 4
 
 
 // - Unit Variables ----------------------------------------------------
