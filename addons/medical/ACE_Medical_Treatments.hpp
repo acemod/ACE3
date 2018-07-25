@@ -446,7 +446,7 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentSAMSplint));
             treatmentType = "Others";
             treatmentDisplay = "Applying SAM Splint";
-            condition = "[_this select 1, _this select 2] call ace_medical_fnc_canTreatSAMSplint";
+            condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(canTreatSAMSplint));
             litter[] = {};
         };
     };
