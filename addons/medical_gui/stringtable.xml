@@ -844,6 +844,34 @@
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
         </Key>
+        <!--
+            Strings above and below this seem to differ in some languages, determine which is best to use
+        -->
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
+            <English>Lost a lot of Blood</English>
+            <German>Hat eine große Menge Blut verloren</German>
+            <Russian>Большая кровопотеря</Russian>
+            <Spanish>Mucha sangre perdida</Spanish>
+            <French>A perdu beaucoup de sang</French>
+            <Polish>Stracił dużo krwi</Polish>
+            <Czech>Ztratil hodně krve</Czech>
+            <Hungarian>Sok vért vesztett</Hungarian>
+            <Italian>Ha perso parecchio sangue</Italian>
+            <Portuguese>Perdeu muito sangue</Portuguese>
+            <Japanese>大量失血している</Japanese>
+            <Korean>많은 양의 혈액을 잃음</Korean>
+            <Chinesesimp>大量失血中</Chinesesimp>
+            <Chinese>大量失血中</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
+            <English>Lost some blood</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood3">
+            <English>Lost a lot of blood</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
+            <English>Lost a large amount of blood</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
             <German>Tourniquet [CAT]</German>
