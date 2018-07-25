@@ -301,13 +301,4 @@ class GVAR(Actions) {
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
         };
     };
-    class MedKit: PersonalAidKit {
-        displayName = CSTRING(Use_Med_Kit);
-        items[] = {"ACE_medKit"};
-        treatmentLocations[] = {QEGVAR(medical,useLocation_MedKit)};
-        requiredMedic = QEGVAR(medical,medicSetting_MedKit);
-        treatmentTime = QUOTE(_target call FUNC(HealTimeMedkit));
-        callbackSuccess = QFUNC(treatmentPartialHeal);
-        itemConsumed = QEGVAR(medical,consumeItem_MedKit);
-    };
 };

@@ -198,16 +198,6 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_quikclot,1);
         };
     };
-    class ACE_medKitItem: Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
-        displayName = CSTRING(Med_Kit_Display);
-        author = ECSTRING(common,ACETeam);
-        vehicleClass = "Items";
-        class TransportItems {
-            MACRO_ADDITEM(ACE_medKit,1);
-        };
-    };
     class ACE_personalAidKitItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -316,7 +306,6 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bloodIV_500,7);
             MACRO_ADDITEM(ACE_bloodIV_250,7);
             MACRO_ADDITEM(ACE_quikClot,20);
-            MACRO_ADDITEM(ACE_medKit,20);
             MACRO_ADDITEM(ACE_personalAidKit,3);
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,5);
