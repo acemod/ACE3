@@ -18,7 +18,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";
-            treatmentType = "Bandage";
 
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
@@ -41,8 +40,6 @@ class ACE_Medical_Actions {
             treatmentTime = 2;
             items[] = {"ACE_morphine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
-            treatmentType = "Injection";
-            treatmentDisplay = "Morphine";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         };
@@ -56,8 +53,6 @@ class ACE_Medical_Actions {
             treatmentTime = 3;
             items[] = {"ACE_epinephrine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
-            treatmentType = "Injection";
-            treatmentDisplay = "Epinephrine";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
             treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
@@ -73,8 +68,6 @@ class ACE_Medical_Actions {
             items[] = {"ACE_bloodIV"};
             // callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
-            treatmentType = "Injection";
-            treatmentDisplay = "IV";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };
@@ -98,8 +91,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";
             callbackProgress = "";
-            treatmentType = "Others";
-            treatmentDisplay = "Placing in Bodybag";
             animationPatient = "";
             animationPatientUnconscious = "";
             itemConsumed = 1;
@@ -117,8 +108,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(actionDiagnose));
             callbackFailure = "";
             callbackProgress = "";
-            treatmentType = "none";
-            treatmentDisplay = "";
             animationPatient = "";
             animationCaller = ""; // TODO
             itemConsumed = 0;
@@ -138,8 +127,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
             callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
-            treatmentType = "Others";
-            treatmentDisplay = "Performing CPR";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -172,7 +159,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";
-            treatmentType = "Bandage";
             itemConsumed = 1;
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
@@ -215,7 +201,6 @@ class ACE_Medical_Actions {
             items[] = {"ACE_tourniquet"};
             treatmentTime = 4;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
-            treatmentType = "TourniquetOn";
             condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
             litter[] = {};
         };
@@ -227,29 +212,24 @@ class ACE_Medical_Actions {
             items[] = {"ACE_morphine"};
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
-            treatmentType = "Injection";
-            treatmentDisplay = "Morphine";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         };
         class Adenosine: Morphine {
             displayName = CSTRING(Inject_Adenosine);
             displayNameProgress = CSTRING(Injecting_Adenosine);
-            treatmentDisplay = "Adenosine";
             items[] = {"ACE_adenosine"};
             litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
         };
         class Atropine: Morphine {
             displayName = CSTRING(Inject_Atropine);
             displayNameProgress = CSTRING(Injecting_Atropine);
-            treatmentDisplay = "Atropine";
             items[] = {"ACE_atropine"};
             litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
         };
         class Epinephrine: Morphine {
             displayName = CSTRING(Inject_Epinephrine);
             displayNameProgress = CSTRING(Injecting_Epinephrine);
-            treatmentDisplay = "Epinephrine";
             items[] = {"ACE_epinephrine"};
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
         };
@@ -263,8 +243,6 @@ class ACE_Medical_Actions {
             requiredMedic = 1;
             treatmentTime = 7;
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
-            treatmentType = "Injection";
-            treatmentDisplay = "IV";
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };
@@ -316,8 +294,6 @@ class ACE_Medical_Actions {
             treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 5)";
             callbackSuccess = "";
             callbackProgress = QUOTE(DFUNC(treatmentAdvanced_surgicalKit_onProgress));
-            treatmentType = "Others";
-            treatmentDisplay = "Using SurgicalKit";
             itemConsumed = QGVAR(consumeItem_SurgicalKit);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
@@ -333,8 +309,6 @@ class ACE_Medical_Actions {
             patientStateCondition = QGVAR(useCondition_PAK);
             treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
-            treatmentType = "Others";
-            treatmentDisplay = "Using PAK";
             itemConsumed = QGVAR(consumeItem_PAK);
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
@@ -360,8 +334,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(actionCheckPulse));
             callbackFailure = "";
             callbackProgress = "";
-            treatmentType = "none";
-            treatmentDisplay = "";
             animationPatient = "";
             animationCaller = ""; // TODO
             animationCallerProne = "";
@@ -385,7 +357,6 @@ class ACE_Medical_Actions {
             items[] = {};
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
-            treatmentType = "TourniquetOff";
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
             displayNameProgress = CSTRING(RemovingTourniquet);
             litter[] = {};
@@ -404,8 +375,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
             callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
-            treatmentType = "Others";
-            treatmentDisplay = "Performing CPR";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -428,8 +397,6 @@ class ACE_Medical_Actions {
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";
             callbackProgress = "";
-            treatmentType = "Others";
-            treatmentDisplay = "Placing in Bodybag";
             animationPatient = "";
             animationPatientUnconscious = "";
             itemConsumed = 1;
@@ -444,8 +411,6 @@ class ACE_Medical_Actions {
             items[] = {"ACE_samSplint"};
             treatmentTime = 10;
             callbackSuccess = QUOTE(DFUNC(treatmentSAMSplint));
-            treatmentType = "Others";
-            treatmentDisplay = "Applying SAM Splint";
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(canTreatSAMSplint));
             litter[] = {};
         };
