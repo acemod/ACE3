@@ -32,7 +32,7 @@ private _damageTypeInfo = [GVAR(allDamageTypesData) getVariable _typeOfDamage] p
 _damageTypeInfo params ["_thresholds", "_isSelectionSpecific", "_woundTypes"];
 
 // It appears we are dealing with an unknown type of damage.
-if (count _woundTypes == 0) then {
+if (_woundTypes isEqualTo []) then {
     // grabbing the configuration for unknown damage type
     _damageTypeInfo = [GVAR(allDamageTypesData) getVariable "unknown"] param [0, [[], false, []]];
     _woundTypes = _damageTypeInfo select 2;
@@ -124,19 +124,23 @@ private _woundsCreated = [];
             systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, _woundDamage toFixed 2, _woundDamage > PENETRATION_THRESHOLD, _bleeding toFixed 3, _pain toFixed 3];
 #endif
 
-            // Find the weighted combined wound damage
-            private _lethalPercent = _woundDamage * (BODY_PART_DAMAGE_WEIGHTS select _bodyPartNToAdd);
-            {
-                _x params ["", "", "_bodyPartN", "", "", "_damage"];
-                _lethalPercent = _lethalPercent + _damage * (BODY_PART_DAMAGE_WEIGHTS select _bodyPartN);
-            } forEach _openWounds;
-#ifdef DEBUG_MODE_FULL
-            systemChat format["lethal percentage: %1%%", (_lethalPercent * 100) toFixed 0 ];
-#endif
-
-            // Handle case where damage becomes lethal (respects lethal injury setting)
-            if (_lethalPercent > LETHAL_DAMAGE_THRESHOLD) then {
-                [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+            // Emulate damage to vital organs
+            if (_bodyPartNToAdd in [0,1] && {_woundDamage > ORGAN_DAMAGE_THRESHOLD}) then {
+                switch (_bodyPartNToAdd) do {
+                    // Fatal damage to the head is guaranteed death
+                    case 0: {
+                        TRACE_1("lethal headshot",_woundDamage toFixed 2);
+                        [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+                    };
+                    // Fatal damage to torso has various results based on organ hit
+                    case 1: {
+                        // Heart shot is lethal
+                        if (random 1 < HEART_HIT_CHANCE) then {
+                            TRACE_1("lethal heartshot",_woundDamage toFixed 2);
+                            [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+                        };
+                    };
+                };
             };
 
             // todo `forceWalk` based on leg damage

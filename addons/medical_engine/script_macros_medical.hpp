@@ -3,11 +3,11 @@
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
 #define ALL_HITPOINTS ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
 
-// Weights applied to wound damage of each body part on lethality check (corresponds to ALL_BODY_PARTS)
-// Worth noting these aren't proportional to eachother, since each body part has built in damage weighting
-// todo: check if we can just adjust the threshold to meet the built in damage weighting
-#define BODY_PART_DAMAGE_WEIGHTS [1, 0.2, 0.1, 0.1, 0.1, 0.1]
-#define LETHAL_DAMAGE_THRESHOLD 1
+// Damage threshold above which fatal organ damage can occur
+#define ORGAN_DAMAGE_THRESHOLD 1
+// Chance to hit heart based on ratio of 70kg (approx. 70L) body to 70mL stroke volume of heart
+// Assuming torso is 50% of the body volume (35L)
+#define HEART_HIT_CHANCE 0.005
 
 #define MEDICAL_ACTION_DISTANCE 1.75
 
