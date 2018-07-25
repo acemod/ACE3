@@ -845,10 +845,13 @@
             <Chinese>大量失血</Chinese>
         </Key>
         <!--
-            Strings above and below this seem to differ in some languages, determine which is best to use
+            Strings above match Blood2 but seem to differ in some languages, determine which is best to use
         -->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
-            <English>Lost a lot of Blood</English>
+            <English>Lost some blood</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
+            <English>Lost a lot of blood</English>
             <German>Hat eine große Menge Blut verloren</German>
             <Russian>Большая кровопотеря</Russian>
             <Spanish>Mucha sangre perdida</Spanish>
@@ -863,14 +866,11 @@
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
-            <English>Lost some blood</English>
-        </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood3">
-            <English>Lost a lot of blood</English>
+            <English>Lost a large amount of blood</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
-            <English>Lost a large amount of blood</English>
+            <English>Lost a fatal amount of blood</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
