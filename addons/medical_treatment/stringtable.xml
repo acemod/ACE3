@@ -284,12 +284,6 @@
         <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
             <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedkitTime">
-            <English>How long should Medkit take to apply ?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedkitTime_Description">
-            <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English>
-        </Key>
         <Key ID="STR_ACE_Medical_treatment_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
             <German>Bandage (Einfach)</German>
@@ -958,18 +952,6 @@
             <Korean>지혈시 사용하는 붕대로 혈액 응고제를 포함하고있습니다.</Korean>
             <Chinesesimp>包含止血粉成分的止血绷带, 可用于止血</Chinesesimp>
             <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Display">
-            <English>Medkit</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Desc_Short">
-            <English>...</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Desc_Use">
-            <English>...</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Use_Med_Kit">
-            <English>Use Medkit</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
@@ -3103,9 +3085,6 @@
             <Korean>%1 (이)가 지혈대를 적용했다</Korean>
             <Chinesesimp>%1 已经绑上止血带</Chinesesimp>
             <Chinese>%1 已經綁上止血帶</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Activity_partialHeal">
-            <English>%1 used Medkit</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>

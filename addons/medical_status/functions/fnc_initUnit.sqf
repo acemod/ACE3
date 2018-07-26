@@ -51,7 +51,6 @@ _unit setVariable [VAR_UNCON, false, true];
 _unit setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
 _unit setVariable [QEGVAR(medical,occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
 _unit setVariable [QEGVAR(medical,ivBags), nil, true];
-_unit setVariable [QEGVAR(medical,partialHealCounter), 0, true];
 
 // triage card and logs
 _unit setVariable [QEGVAR(medical,triageLevel), 0, true];

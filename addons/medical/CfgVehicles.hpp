@@ -182,26 +182,6 @@ class CfgVehicles {
                     };
                 };
             };
-            class medicSetting_Medkit {
-                displayName = CSTRING(MedicalSettings_medicSetting_Medkit_DisplayName);
-                description = CSTRING(MedicalSettings_medicSetting_Medkit_Description);
-                typeName = "SCALAR";
-                class values {
-                    class anyone {
-                        name = CSTRING(MedicalSettings_anyone);
-                        value = 0;
-                        default = 1;
-                    };
-                    class onlymedics {
-                        name = CSTRING(MedicalSettings_Medic);
-                        value = 1;
-                    };
-                    class onlydoctors {
-                        name = CSTRING(MedicalSettings_Special);
-                        value = 2;
-                    };
-                };
-            };
             class medicSetting_PAK {
                 displayName = CSTRING(MedicalSettings_medicSetting_PAK_DisplayName);
                 description = CSTRING(MedicalSettings_medicSetting_PAK_Description);
@@ -242,22 +222,6 @@ class CfgVehicles {
                     };
                 };
             };
-            class consumeItem_Medkit {
-                displayName = CSTRING(MedicalSettings_consumeItem_Medkit_DisplayName);
-                description = CSTRING(MedicalSettings_consumeItem_Medkit_Description);
-                typeName = "SCALAR";
-                class values {
-                    class no {
-                        name = ECSTRING(common,No);
-                        value = 0;
-                    };
-                    class yes {
-                        name = ECSTRING(common,Yes);
-                        value = 1;
-                        default = 1;
-                    };
-                };
-            };
             class consumeItem_PAK {
                 displayName = CSTRING(MedicalSettings_consumeItem_PAK_DisplayName);
                 description = CSTRING(MedicalSettings_consumeItem_PAK_Description);
@@ -293,34 +257,6 @@ class CfgVehicles {
             class useLocation_Epi {
                 displayName = CSTRING(BasicMedicalSettings_useLocation_Epi_DisplayName);
                 description = CSTRING(BasicMedicalSettings_useLocation_Epi_Description);
-                typeName = "SCALAR";
-                class values {
-                    class anywhere {
-                        name = ECSTRING(common,Anywhere);
-                        value = 0;
-                        default = 1;
-                    };
-                    class vehicle {
-                        name = ECSTRING(common,Vehicle);
-                        value = 1;
-                    };
-                    class facility {
-                        name = CSTRING(MedicalSettings_facility);
-                        value = 2;
-                    };
-                    class vehicleAndFacility {
-                        name = CSTRING(MedicalSettings_vehicleAndFacility);
-                        value = 3;
-                    };
-                    class disabled {
-                        name = ECSTRING(common,Disabled);
-                        value = 4;
-                    };
-                };
-            };
-            class useLocation_Medkit {
-                displayName = CSTRING(MedicalSettings_useLocation_Medkit_DisplayName);
-                description = CSTRING(MedicalSettings_useLocation_Medkit_Description);
                 typeName = "SCALAR";
                 class values {
                     class anywhere {
@@ -401,12 +337,6 @@ class CfgVehicles {
                         value = 4;
                     };
                 };
-            };
-            class remainingDamage_Medkit {
-                displayName = CSTRING(MedicalSettings_remainingDamage_Medkit_DisplayName);
-                description = CSTRING(MedicalSettings_remainingDamage_Medkit_Description);
-                typeName = "SCALAR";
-                defaultValue = 0.1;
             };
             class allowUnconsciousAnimationOnTreatment {
                 displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);

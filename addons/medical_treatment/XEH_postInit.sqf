@@ -15,7 +15,6 @@ if (isServer) then {
 [QGVAR(treatmentMedicationLocal), FUNC(treatmentMedicationLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentIVLocal), FUNC(treatmentIVLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentCPRLocal), FUNC(treatmentCPRLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentPartialHealLocal), FUNC(treatmentPartialHealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentFullHealLocal), FUNC(treatmentFullHealLocal)] call CBA_fnc_addEventHandler;
 
 // action events

@@ -54,7 +54,6 @@ _target setVariable [VAR_IS_BLEEDING, false, true];
 _target setVariable [VAR_IN_PAIN, false, true];
 _target setVariable [VAR_PAIN_SUPP, 0, true];
 _target setVariable [VAR_PAIN_SUPP_ADJ, [], true];
-_target setVariable [QGVAR(partialHealCounter), 0, true];
 
 // medication
 private _allUsedMedication = _target getVariable [QEGVAR(medical,allUsedMedication), []];
