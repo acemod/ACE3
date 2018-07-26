@@ -3,8 +3,9 @@
  * Check if can treat Splint
  *
  * Arguments:
- * 0: The patient <OBJECT>
- * 1: SelectionName <STRING>
+ * 1: The caller (not used, can pass nil) <OBJECT>
+ * 1: The patient <OBJECT>
+ * 2: SelectionName <STRING>
  *
  * Return Value:
  * None
@@ -17,7 +18,7 @@
 
 #include "script_component.hpp"
 
-params ["_target", "_part"];
+params ["_caller", "_target", "_part"];
 
 if !(_part isEqualType 0) then {
     _part = [_part] call FUNC(selectionNameToNumber);

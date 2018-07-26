@@ -410,8 +410,8 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             items[] = {"ACE_samSplint"};
             treatmentTime = 10;
-            callbackSuccess = QUOTE(DFUNC(treatmentSAMSplint));
-            condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(canTreatSAMSplint));
+            callbackSuccess = QFUNC(treatmentSAMSplint);
+            condition = QFUNC(canTreatSAMSplint);
             litter[] = {};
         };
     };
