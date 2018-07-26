@@ -59,5 +59,6 @@
 
 #define HAS_WIRECUTTER(unit) (\
     "ACE_wirecutter" in ([ARR_6(unit, false, true, true, true, false)] call CBA_fnc_uniqueUnitItems) \
-    || {backpack unit isKindOf "rhs_assault_umbts_engineer"} \
+    || {1 == getNumber (configFile >> "CfgVehicles" >> (backpack unit) >> QGVAR(hasWirecutter))} \
+    || {1 == getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter))} \
 )
