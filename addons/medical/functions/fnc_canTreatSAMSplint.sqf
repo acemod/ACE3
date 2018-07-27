@@ -3,7 +3,7 @@
  * Check if can treat Splint
  *
  * Arguments:
- * 1: The caller (not used, can pass nil) <OBJECT>
+ * 1: The caller <OBJECT>
  * 1: The patient <OBJECT>
  * 2: SelectionName <STRING>
  *
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [patient, "SelectionName"] call ace_medical_fnc_canTreatSAMSplint
+ * [caller, patient, "SelectionName"] call ace_medical_fnc_canTreatSAMSplint
  *
  * Public: Yes
  */
