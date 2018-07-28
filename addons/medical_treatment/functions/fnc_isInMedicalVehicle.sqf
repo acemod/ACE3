@@ -21,4 +21,4 @@ private _vehicle = vehicle _unit;
 if (_unit == _vehicle) exitWith {false};
 if (_unit in [driver _vehicle, gunner _vehicle, commander _vehicle]) exitWith {false};
 
-[_vehicle] call FUNC(isMedicalVehicle)
+[_vehicle] call FUNC(isMedicalVehicle);

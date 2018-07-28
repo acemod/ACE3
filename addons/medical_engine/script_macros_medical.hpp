@@ -79,6 +79,10 @@
 #define BANDAGE_TIME_MOD_SELF 4
 
 
+#define DEFAULT_BANDAGE_REOPENING_CHANCE 0.1
+#define DEFAULT_BANDAGE_REOPENING_MIN_DELAY 120
+#define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
+
 // - Unit Variables ----------------------------------------------------
 // These variables get stored in object space and used across components
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)

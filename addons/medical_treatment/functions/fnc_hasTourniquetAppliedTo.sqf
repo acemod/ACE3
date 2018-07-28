@@ -22,4 +22,4 @@ private _index = ALL_BODY_PARTS find toLower _bodyPart;
 
 if (_index < 0) exitWith { false };
 
-((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _index) > 0
+((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _index) > 0;

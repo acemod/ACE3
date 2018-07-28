@@ -28,4 +28,4 @@ if (([_unit] call FUNC(isInMedicalVehicle)) || {[_unit] call FUNC(isInMedicalFac
     _class = _class + 1; //boost by one: untrained becomes medic, medic becomes doctor
 };
 
-_class >= _medicN min EGVAR(medical,medicSetting)
+_class >= _medicN min EGVAR(medical,medicSetting);

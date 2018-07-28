@@ -21,12 +21,12 @@ params ["_caller", "_target"];
 
 private _accessLevel = _target getVariable [QGVAR(allowSharedEquipmentAccess), -1];
 
-private _return = false;
+private _canAccess = false;
 
 if (_accessLevel >= 0) then {
-    if (_accessLevel == 0) exitWith { _return = true; };
-    if (_accessLevel == 1) exitWith { _return = (side _target == side _caller); };
-    if (_accessLevel == 2) exitWith { _return = (group _target == group _caller); };
+    if (_accessLevel == 0) exitWith { _canAccess = true; };
+    if (_accessLevel == 1) exitWith { _canAccess = (side _target == side _caller); };
+    if (_accessLevel == 2) exitWith { _canAccess = (group _target == group _caller); };
 };
 
-_return;
+_canAccess;

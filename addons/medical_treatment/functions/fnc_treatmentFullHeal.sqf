@@ -18,6 +18,9 @@
 
 params ["_caller", "_target"];
 
-[QGVAR(treatmentFullHealLocal), [_caller, _target], _target] call CBA_fnc_targetEvent;
+[QGVAR(treatmentFullHealLocal), [_target], _target] call CBA_fnc_targetEvent;
+
+[_target, "activity", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
 true

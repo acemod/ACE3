@@ -3,8 +3,7 @@
  * Handles full heal of a patient.
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
+ * 0: The patient <OBJECT>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -13,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-params ["_caller", "_target"];
+params ["_target"];
 
 if (!alive _target) exitWith {};
 
@@ -71,6 +70,3 @@ _target setVariable [QEGVAR(medical,triageCard), [], true];
 _target setDamage 0;
 
 [QEGVAR(medical,FullHeal), _target] call CBA_fnc_localEvent;
-
-[_target, "activity", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
