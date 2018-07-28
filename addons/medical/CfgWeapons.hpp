@@ -260,8 +260,8 @@ class CfgWeapons {
         scope = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(samSplint_display);
-        picture = ""; // need icon
-        model = ""; // need model
+        model = QPATHTOF(data\ace_splint.p3d);
+        picture =  QPATHTOF(ui\items\splint_x_ca.paa);
         descriptionShort = CSTRING(samSplint_short);
         descriptionUse = CSTRING(samSplint_use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
