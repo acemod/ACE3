@@ -261,6 +261,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(samSplint_display);
         model = QPATHTOF(data\ace_splint.p3d);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\ace_splint_co.paa)};
         picture =  QPATHTOF(ui\items\splint_x_ca.paa);
         descriptionShort = CSTRING(samSplint_short);
         descriptionUse = CSTRING(samSplint_use);
