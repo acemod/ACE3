@@ -28,6 +28,28 @@ REPONAME = "ACE3"
 REPOPATH = "{}/{}".format(REPOUSER,REPONAME)
 
 
+def sort_stringtables(repo):
+    sp.run(["python3", "tools/sort_stringtables.py"])
+    diff = sp.check_output(["git", "diff", "--name-only"])
+    diff = str(diff, "utf-8")
+
+    if diff != "":
+        for file in diff.split("\n"):
+            sha = repo.get_contents(file).sha
+            with open(file) as f:
+                new_content = f.read()
+            rel_path = os.path.basename(os.path.normpath(os.path.split(file)[0]))
+            repo.update_file(
+                path="/{}".format(file),
+                message="[Auto] Sort {} stringtable.xml\nAutomatically committed through Travis CI.\n\n[ci skip]".format(file),
+                content=new_content, sha=sha, committer=InputGitAuthor("ace3mod", "ace3mod@gmail.com")
+            )
+
+        print("Stringtables successfully sorted.")
+    else:
+        print("Stringtable sorting skipped - already sorted.")
+
+
 def update_translations(repo):
     diag = sp.check_output(["python3", "tools/stringtablediag.py", "--markdown"])
     diag = str(diag, "utf-8")
@@ -66,6 +88,14 @@ def main():
         return 1
     else:
         print("Token sucessfully obtained.")
+
+    print("\nSorting stringtables ...")
+    try:
+        sort_stringtables(repo)
+    except:
+        print("Failed to sort stringtables.")
+        print(traceback.format_exc())
+        return 1
 
     print("\nUpdating translation issue ...")
     try:
