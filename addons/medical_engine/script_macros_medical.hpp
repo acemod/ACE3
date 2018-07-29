@@ -3,6 +3,14 @@
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
 #define ALL_HITPOINTS ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
 
+// Damage threshold above which fatal organ damage can occur
+#define HEAD_DAMAGE_THRESHOLD 1
+#define ORGAN_DAMAGE_THRESHOLD 0.6
+
+// Chance to hit heart based on ratio of 70kg (approx. 70L) body to 70mL stroke volume of heart
+// Assuming torso is 50% of the body volume (35L)
+#define HEART_HIT_CHANCE 0.05
+
 #define MEDICAL_ACTION_DISTANCE 1.75
 
 // scale received pain to 0-2 level to select type of scream
@@ -52,8 +60,6 @@
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
 #define SPONTANEOUS_WAKE_UP_INTERVAL 15
-
-#define LETHAL_HEAD_DAMAGE_THRESHOLD 1.0
 
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD 0.30
