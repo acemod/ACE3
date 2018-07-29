@@ -36,5 +36,6 @@ private _limbBleedingRate = ((_leftArmBleeding min 0.3) + (_rightArmBleeding min
 _limbBleedingRate = _limbBleedingRate * (1 - _bodyBleedingRate);
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
+private _resistance = _unit getVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES];
 
-((_bodyBleedingRate + _limbBleedingRate) * _cardiacOutput * EGVAR(medical,bleedingCoefficient))
+((_bodyBleedingRate + _limbBleedingRate) * _cardiacOutput * EGVAR(medical,bleedingCoefficient)) * (2 - (_resistance/100) min 0.1)
