@@ -107,7 +107,7 @@ switch (true) do {
         TRACE_4("bloodPressure (H & L) + heartRate Fatal",_unit,_bloodPressureH,_bloodPressureL,_heartRate);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
-    case (_bloodPressureL => 190) {
+    case (_bloodPressureL >= 190): {
         TRACE_2("bloodPressure L above limits",_unit,_bloodPressureL);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
     };
