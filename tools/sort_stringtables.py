@@ -56,12 +56,12 @@ def main():
 
         # Verify that stringtable is structured as expected
         if xml_root.tag != 'Project':
-            print('Missing "Project" root tag: {}'.format(filepath))
+            #print('Missing "Project" root tag: {}'.format(os.path.join(folder, 'stringtable.xml')))
             continue
 
         sort_children(xml_root)
         indent_pretty(xml_root)
-        print('Sorted: {}'.format(filepath))
+        #print('Sorted: {}'.format(os.path.join(folder, 'stringtable.xml')))
 
         tree.write(filepath, encoding='utf-8', xml_declaration=True, method='xml')
 
