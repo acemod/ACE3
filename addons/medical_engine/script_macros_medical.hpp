@@ -128,3 +128,7 @@
 #define GET_PAIN_PERCEIVED(unit)    (0 max (GET_PAIN(unit) - GET_PAIN_SUPPRESS(unit)) min 1)
 
 #define HAS_TOURNIQUET_APPLIED_ON(unit,index) ((GET_TOURNIQUETS(unit) select index) > 0)
+
+// Cache expiry values, in seconds
+#define IN_MEDICAL_FACILITY_CACHE_EXPIRY 1
+#define CAN_TREAT_CONDITION_CACHE_EXPIRY 2

@@ -48,6 +48,7 @@ private _objects = (lineIntersectsWith [_unit modelToWorldVisual [0, 0, (_eyePos
         _isInBuilding = true;
     };
 } forEach _objects;
+
 if (!_isInBuilding) then {
     _objects = _unit nearObjects 7.5;
     {
@@ -57,7 +58,6 @@ if (!_isInBuilding) then {
     } forEach _objects;
 };
 
-//Save the results (with a 1 second expiry)
-_unit setVariable [QGVAR(cacheInFacility), [CBA_missionTime + 1, _isInBuilding]];
+_unit setVariable [QGVAR(cacheInFacility), [CBA_missionTime + IN_MEDICAL_FACILITY_CACHE_EXPIRY, _isInBuilding]];
 
 _isInBuilding;

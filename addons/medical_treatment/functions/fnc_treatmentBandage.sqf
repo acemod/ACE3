@@ -23,10 +23,4 @@ params ["_caller", "_target", "_bodyPart", "_className", "_items"];
 
 [QGVAR(treatmentBandageLocal), [_target, _className, _bodyPart], _target] call CBA_fnc_targetEvent;
 
-/*{
-    if (_x != "") then {
-        [_target, _x] call FUNC(addToTriageCard);
-    };
-} forEach _items;*/
-
 true
