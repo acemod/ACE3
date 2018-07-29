@@ -20,28 +20,51 @@ def indent_pretty(parent, level=0):
     for child in parent:
         indent_pretty(child, level+1)
         if child == last_child:
-            child.tail = '\n' + "".join(['    '] * level)
+            child.tail = parent.tail
 
 
 def main():
-    for root, dirs, files in os.walk('../addons/'):
-        for file in files:
-            if file == 'stringtable.xml':
-                filepath = root + '/' + file
+    # Mod paths
+    script_path = os.path.realpath(__file__)
+    project_path = os.path.dirname(os.path.dirname(script_path))
+    addons_path = os.path.join(project_path, 'addons')
+    optionals_path = os.path.join(project_path, 'optionals')
 
-                tree = ET.parse(filepath)
-                xml_root = tree.getroot()
+    if os.path.exists(addons_path):
+        addons = sorted(next(os.walk(addons_path))[1])
+        if os.path.exists(optionals_path):
+            addons += ['.'] + sorted(next(os.walk(optionals_path))[1])
 
-                # Verify that stringtable is structured as expected
-                if xml_root.tag != 'Project':
-                    print('Missing "Project" root tag: {}'.format(filepath))
+    addons_path_current = addons_path
 
+    for folder in addons:
+        # Change to optionals list on "." separator
+        if folder == '.':
+            if addons_path_current == addons_path:
+                addons_path_current = optionals_path
+            continue
 
-                print('Sorting: {}'.format(filepath))
-                sort_children(xml_root)
-                indent_pretty(xml_root)
+        # All stringtables have the same filename in addon root
+        filepath = os.path.join(addons_path_current, folder, 'stringtable.xml')
 
-                tree.write(filepath, encoding='utf-8', xml_declaration=True, method='xml')
+        # Not all addons have stringtable.xml
+        if not os.path.isfile(filepath):
+            continue
+
+        tree = ET.parse(filepath)
+        xml_root = tree.getroot()
+
+        # Verify that stringtable is structured as expected
+        if xml_root.tag != 'Project':
+            print('Missing "Project" root tag: {}'.format(filepath))
+            continue
+
+        sort_children(xml_root)
+        indent_pretty(xml_root)
+        print('Sorted: {}'.format(filepath))
+
+        tree.write(filepath, encoding='utf-8', xml_declaration=True, method='xml')
+
 
 
 if __name__ == "__main__":
