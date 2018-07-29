@@ -125,20 +125,18 @@ private _woundsCreated = [];
 #endif
 
             // Emulate damage to vital organs
-            if (_bodyPartNToAdd in [0,1] && {_woundDamage > ORGAN_DAMAGE_THRESHOLD}) then {
-                switch (_bodyPartNToAdd) do {
-                    // Fatal damage to the head is guaranteed death
-                    case 0: {
-                        TRACE_1("lethal headshot",_woundDamage toFixed 2);
+            switch (true) do {
+                // Fatal damage to the head is guaranteed death
+                case (_bodyPartNToAdd == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD}): {
+                    TRACE_1("lethal headshot",_woundDamage toFixed 2);
+                    [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+                };
+                // Fatal damage to torso has various results based on organ hit
+                case (_bodyPartNToAdd == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD}): {
+                    // Heart shot is lethal
+                    if (random 1 < HEART_HIT_CHANCE) then {
+                        TRACE_1("lethal heartshot",_woundDamage toFixed 2);
                         [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-                    };
-                    // Fatal damage to torso has various results based on organ hit
-                    case 1: {
-                        // Heart shot is lethal
-                        if (random 1 < HEART_HIT_CHANCE) then {
-                            TRACE_1("lethal heartshot",_woundDamage toFixed 2);
-                            [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-                        };
                     };
                 };
             };
