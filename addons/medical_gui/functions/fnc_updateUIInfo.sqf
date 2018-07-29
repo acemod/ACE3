@@ -28,7 +28,7 @@ private _partText = [ELSTRING(medical_treatment,Head), ELSTRING(medical_treatmen
 _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
 
 if IS_BLEEDING(_target) then {
-    _genericMessages pushBack [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
+    _genericMessages pushBack [LLSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
 };
 
 // Give a qualitative description of the blood volume lost
@@ -48,18 +48,18 @@ switch (GET_HEMORRHAGE(_target)) do {
 };
 
 if (((_target getVariable [QEGVAR(medical,tourniquets), [0, 0, 0, 0, 0, 0]]) select _selectionN) > 0) then {
-    _genericMessages pushBack [localize ELSTRING(medical,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
+    _genericMessages pushBack [localize ELSTRING(medical_treatment,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
 
 if (EGVAR(medical,showPainInMenu) && {[ACE_player, EGVAR(medical,medicSetting_PainVisualization)] call EFUNC(medical_treatment,isMedic)}) then {
     private _painLevel = GET_PAIN_PERCEIVED(_target);
     if (_painLevel > 0) then {
-        private _painText = localize ELSTRING(medical,Status_Pain);
+        private _painText = localize ELSTRING(medical_treatment,Status_Pain);
         if (_painLevel < 0.1) then {
-            _painText = localize ELSTRING(medical,Status_MildPain);
+            _painText = localize ELSTRING(medical_treatment,Status_MildPain);
         } else {
             if (_painLevel > 0.5) then {
-                _painText = localize ELSTRING(medical,Status_SeverePain);
+                _painText = localize ELSTRING(medical_treatment,Status_SeverePain);
             };
         };
         _genericMessages pushback [_painText, [1, 1, 1, 1]];
@@ -74,7 +74,7 @@ private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
 } foreach _bloodBags;
 
 if (_totalIvVolume >= 1) then {
-    _genericMessages pushBack [format [localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+    _genericMessages pushBack [format [localize ELSTRING(medical_treatment,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
 };
 
 private _selectionTourniquet = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
