@@ -72,7 +72,7 @@ if (_show == 1) then {
             };
         };
 
-        if (((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
+        if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
             _genericMessages pushback [localize ELSTRING(medical_treatment,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
         };
         if (EGVAR(medical,showPainInMenu) && {[ACE_player, EGVAR(medical,medicSetting_PainVisualization)] call EFUNC(medical_treatment,isMedic)}) then {
@@ -100,7 +100,7 @@ if (_show == 1) then {
             _genericMessages pushback [format[localize ELSTRING(medical_treatment,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
-        private _selectionTourniquet = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+        private _selectionTourniquet = GET_TOURNIQUETS(_target);
         private _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
         private _selectionDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
         private _allInjuryTexts = [];

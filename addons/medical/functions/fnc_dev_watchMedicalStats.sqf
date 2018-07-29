@@ -70,7 +70,7 @@
 
     // Tourniquets:
     _return pushBack "------- Tourniquets: -------";
-    private _tourniquets = _unit getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+    private _tourniquets = GET_TOURNIQUETS(_unit);
     private _occludedMedications = _unit getVariable [QEGVAR(medical,occludedMedications), []];
     {
         private _tPartNum = _forEachIndex;

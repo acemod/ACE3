@@ -20,7 +20,7 @@ _unit setVariable [VAR_PAIN, 0, true];
 _unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
 // tourniquets
-_target setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
+_target setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _target setVariable [QGVAR(occludedMedications), nil, true];
 
 // wounds and injuries

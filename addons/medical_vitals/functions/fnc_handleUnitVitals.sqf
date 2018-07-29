@@ -70,7 +70,7 @@ if !(_inPain isEqualTo IS_IN_PAIN(_unit)) then {
 
 // Handle pain due tourniquets, that have been applied more than 120 s ago
 private _tourniquetPain = 0;
-private _tourniquets = _unit getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+private _tourniquets = GET_TOURNIQUETS(_unit);
 {
     if (_x > 0 && {CBA_missionTime - _x > 120}) then {
         _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
