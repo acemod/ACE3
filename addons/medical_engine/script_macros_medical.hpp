@@ -78,6 +78,11 @@
 #define BANDAGE_TIME_MOD_MEDIC -2
 #define BANDAGE_TIME_MOD_SELF 4
 
+#define DEFAULT_BANDAGE_REOPENING_CHANCE 0.1
+#define DEFAULT_BANDAGE_REOPENING_MIN_DELAY 120
+#define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
+
+#define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 
 // - Unit Variables ----------------------------------------------------
 // These variables get stored in object space and used across components
@@ -98,6 +103,7 @@
 #define VAR_HEMORRHAGE      QEGVAR(medical,hemorrhage)
 #define VAR_IN_PAIN         QEGVAR(medical,inPain)
 #define VAR_IS_BLEEDING     QEGVAR(medical,isBleeding)
+#define VAR_TOURNIQUET      QEGVAR(medical,tourniquets)
 
 
 // - Unit Functions ---------------------------------------------------
@@ -108,6 +114,7 @@
 #define GET_HEMORRHAGE(unit)        (unit getVariable [VAR_HEMORRHAGE,0])
 #define GET_PAIN(unit)              (unit getVariable [VAR_PAIN,0])
 #define GET_PAIN_SUPPRESS(unit)     (unit getVariable [VAR_PAIN_SUPP,0])
+#define GET_TOURNIQUETS(unit)       (unit getVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES])
 #define IN_CRDC_ARRST(unit)         (unit getVariable [VAR_CRDC_ARRST,false])
 #define IS_BLEEDING(unit)           (unit getVariable [VAR_IS_BLEEDING,false])
 #define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN,false])
@@ -119,3 +126,9 @@
 
 // Derivative unit values commonly used
 #define GET_PAIN_PERCEIVED(unit)    (0 max (GET_PAIN(unit) - GET_PAIN_SUPPRESS(unit)) min 1)
+
+#define HAS_TOURNIQUET_APPLIED_ON(unit,index) ((GET_TOURNIQUETS(unit) select index) > 0)
+
+// Cache expiry values, in seconds
+#define IN_MEDICAL_FACILITY_CACHE_EXPIRY 1
+#define CAN_TREAT_CONDITION_CACHE_EXPIRY 2

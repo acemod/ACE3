@@ -48,7 +48,7 @@ _unit setVariable [QEGVAR(medical,isLimping), false, true];
 _unit setVariable [VAR_UNCON, false, true];
 
 // - Treatments ---------------------------------------------------------------
-_unit setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
+_unit setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _unit setVariable [QEGVAR(medical,occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
 _unit setVariable [QEGVAR(medical,ivBags), nil, true];
 
