@@ -10,6 +10,7 @@
  * Return Value:
  * None
  */
+
 params ["_enable", "_intensity"];
 
 if ((!_enable) || {_intensity == 0}) exitWith {

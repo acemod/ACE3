@@ -11,6 +11,7 @@
  *
  * Public: No
  */
+
 params ["_unit"];
 
 _unit setVariable [QEGVAR(medical,deathBlocked), true];

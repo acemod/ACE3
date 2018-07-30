@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 #define MAX_DISTANCE 10
 
 params ["_display"];

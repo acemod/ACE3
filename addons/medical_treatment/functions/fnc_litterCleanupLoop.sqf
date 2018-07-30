@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ACE_medical_fnc_litterCleanupLoop
+ * call ACE_medical_treatment_fnc_litterCleanupLoop
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [cursorTarget] call ace_medical_fnc_serverRemoveBody
+ * [cursorTarget] call ace_medical_treatment_fnc_serverRemoveBody
  *
  * Public: No
  */

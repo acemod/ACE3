@@ -1,7 +1,18 @@
-
 #include "script_component.hpp"
+/*
+ * Author: BaerMitUmlaut
+ *
+ *
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 
-params ["_unit", "_stateName"];
+params ["_unit"];
 
 // If the unit died the loop is finished
 if (!alive _unit) exitWith {};

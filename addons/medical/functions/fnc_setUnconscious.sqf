@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -18,8 +19,8 @@
  *
  * Public: yes
  */
+
 // #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 // only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {

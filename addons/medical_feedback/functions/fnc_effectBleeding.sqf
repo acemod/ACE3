@@ -10,6 +10,7 @@
  * Return Value:
  * None
  */
+
 params ["_enable", "_bloodloss"];
 if (isNull findDisplay 46) exitWith {};
 

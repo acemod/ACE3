@@ -11,6 +11,7 @@
  *
  * Public: No
  */
+
 params ["_unit"];
 
 [QEGVAR(medical,FatalInjuryInstantTransition), _unit] call CBA_fnc_localEvent;

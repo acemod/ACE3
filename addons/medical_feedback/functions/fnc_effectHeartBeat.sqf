@@ -9,6 +9,7 @@
  * Return Value:
  * None
  */
+
 params ["_heartRate"];
 
 if (_heartRate == 0) exitWith {

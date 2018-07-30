@@ -11,6 +11,7 @@
  *
  * Public: No
  */
+
 params ["_unit"];
 
 (GVAR(fatalInjuryCondition) < 2) && {!(_unit getVariable [QGVAR(deathBlocked), false])}

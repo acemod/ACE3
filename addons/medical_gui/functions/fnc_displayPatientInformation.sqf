@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 #define MAX_DISTANCE 10
 
 params ["_target", ["_show", 0], ["_selectionN", 0]];

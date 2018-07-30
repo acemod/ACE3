@@ -13,6 +13,7 @@
  *
  * Public: Yes
  */
+
 #define MORPHINE_PAIN_SUPPRESSION 0.6
 
 params ["_target", "_className", "_partIndex"];

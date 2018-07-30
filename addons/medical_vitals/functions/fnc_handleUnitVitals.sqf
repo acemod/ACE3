@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Called from the statemachine's onState functions.
@@ -13,8 +14,8 @@
  *
  * Public: No
  */
+
 // #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_unit"];
 

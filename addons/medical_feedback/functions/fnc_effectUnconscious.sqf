@@ -10,6 +10,7 @@
  * Return Value:
  * None
  */
+
 params ["_enable", "_mode"];
 
 switch (_mode) do {
