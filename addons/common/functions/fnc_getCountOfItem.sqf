@@ -5,11 +5,11 @@
  * Doesn't count assignedItems, weapons, weapon attachments, magazines in weapons
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Classname of item (Case-Sensitive) <STRING>
  *
  * Return Value:
- * itemCount <NUMBER>
+ * Item Count <NUMBER>
  *
  * Example:
  * [bob, "FirstAidKit"] call ace_common_fnc_getCountOfItem
