@@ -14,10 +14,10 @@
 
 params ["_unit"];
 
-private _countFirstAidKit = {_x == "FirstAidKit"} count items _unit;
+private _countFirstAidKit = [_unit, "FirstAidKit"] call EFUNC(common,getCountOfItem);
 _unit removeItems "FirstAidKit";
 
-private _countMedikit = {_x == "Medikit"} count items _unit;
+private _countMedikit = [_unit, "Medikit"] call EFUNC(common,getCountOfItem);
 _unit removeItems "Medikit";
 
 for "_i" from 1 to _countFirstAidKit do {
