@@ -8,7 +8,7 @@ class CfgVehicles {
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 1;
         displayName = CSTRING(MedicalSettings_Module_DisplayName);
-        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
+        icon = "";
         category = "ACE";
         function = QFUNC(moduleMedicalSettings);
         functionPriority = 1;
