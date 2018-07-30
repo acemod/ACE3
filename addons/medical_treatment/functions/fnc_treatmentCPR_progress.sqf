@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zakant
  * Handles the progress of the CPR treatment.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_caller", "_target"];

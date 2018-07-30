@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles full heal of a patient.
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_knockOut"];
 TRACE_2("setUnconsciousStatemachine",_unit,_knockOut);

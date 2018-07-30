@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Displays the patient information for given unit.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MAX_DISTANCE 10
 
 params ["_target", ["_show", 0], ["_selectionN", 0]];

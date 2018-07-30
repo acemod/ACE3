@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
