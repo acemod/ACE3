@@ -27,12 +27,26 @@ TRACE_7("rearmSuccessLocal",_vehicle,_unit,_turretPath,_numMagazines,_magazineCl
 private _rounds = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count");
 
 if (_pylon > 0) exitWith {
-    if (_turretPath isEqualTo [-1]) then {_turretPath = [];}; // Convert back to pylon turret format
-    private _currentCount = _vehicle ammoOnPylon _pylon;
-    private _newCount = ((_currentCount max 0) + _numRounds) min _rounds;
-    TRACE_2("",_pylon,_magazineClass,_newCount);
-    _vehicle setPylonLoadOut [_pylon, _magazineClass, false, _turretPath];
-    _vehicle setAmmoOnPylon [_pylon, _newCount];
+    if (GVAR(level) == 1) then {
+        // Fill magazine completely
+        if (_turretPath isEqualTo [-1]) then {_turretPath = [];}; // Convert back to pylon turret format
+        TRACE_2("",_pylon,_magazineClass,_rounds);
+        _vehicle setPylonLoadOut [_pylon, _magazineClass, true, _turretPath];
+        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _rounds,
+            getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
+            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
+    } else {
+        // Fill only at most _numRounds
+        if (_turretPath isEqualTo [-1]) then {_turretPath = [];}; // Convert back to pylon turret format
+        private _currentCount = _vehicle ammoOnPylon _pylon;
+        private _newCount = ((_currentCount max 0) + _numRounds) min _rounds;
+        TRACE_2("",_pylon,_magazineClass,_newCount);
+        _vehicle setPylonLoadOut [_pylon, _magazineClass, true, _turretPath];
+        _vehicle setAmmoOnPylon [_pylon, _newCount];
+        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
+            getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
+            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
+    };
 };
 
 private _currentRounds = 0;

@@ -24,7 +24,7 @@ params ["_interactionType"];
 if (
     _interactionType != 0
     || {vehicle ACE_player != ACE_player}
-    || {!("ACE_wirecutter" in ([ACE_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems))}
+    || {!HAS_WIRECUTTER(ACE_player)}
 ) exitWith {};
 
 TRACE_1("Starting wirecuter interact PFH",_interactionType);
@@ -53,7 +53,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
 
                 !isNull _attachedFence
                 && {damage _attachedFence < 1}
-                && {"ACE_wirecutter" in ([_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems)}
+                && {HAS_WIRECUTTER(_player)}
                 && {[_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
                 && {
                     // Custom LOS check for fence

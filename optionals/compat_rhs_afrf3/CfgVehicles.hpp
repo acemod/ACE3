@@ -218,4 +218,9 @@ class CfgVehicles {
     class OTR21_Base: Truck_F {
         EGVAR(refuel,fuelCapacity) = 500;
     };
+
+    class rhs_assault_umbts;
+    class rhs_assault_umbts_engineer: rhs_assault_umbts {
+        EGVAR(logistics_wirecutter,hasWirecutter) = 1;
+    };
 };

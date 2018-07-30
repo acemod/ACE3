@@ -54,15 +54,15 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
             (_cargo select 1) select ([201,301,101,302] find _itemInfoType) pushBackUnique _className;
         };
         /* Headgear */
-        case (_hasItemInfo && {_itemInfoType == 605}): {
+        case (_itemInfoType == 605): {
             (_cargo select 3) pushBackUnique _className;
         };
         /* Uniform */\
-        case (_hasItemInfo && {_itemInfoType == 801}): {
+        case (_itemInfoType == 801): {
             (_cargo select 4) pushBackUnique _className;
         };
         /* Vest */
-        case (_hasItemInfo && {_itemInfoType == 701}): {
+        case (_itemInfoType == 701): {
             (_cargo select 5) pushBackUnique _className;
         };
         /* NVgs */
@@ -95,7 +95,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
             (_cargo select 14) pushBackUnique _className;
         };
         /* UAV terminals */
-        case (_hasItemInfo && {_itemInfoType == 621}): {
+        case (_itemInfoType == 621): {
             (_cargo select 14) pushBackUnique _className;
         };
         /* Weapon, at the bottom to avoid adding binos */
