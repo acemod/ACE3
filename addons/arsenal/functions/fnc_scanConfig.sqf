@@ -46,23 +46,23 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         /* Weapon acc */
         case (
                 _hasItemInfo &&
-                {_itemInfoType in [101, 201, 301, 302]} &&
+                {_itemInfoType in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} &&
                 {!(configName _x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}
             ): {
 
             //Convert type to array index
-            (_cargo select 1) select ([201,301,101,302] find _itemInfoType) pushBackUnique _className;
+            (_cargo select 1) select ([TYPE_OPTICS,TYPE_FLASHLIGHT,TYPE_MUZZLE,TYPE_BIPOD] find _itemInfoType) pushBackUnique _className;
         };
         /* Headgear */
-        case (_itemInfoType == 605): {
+        case (_itemInfoType == TYPE_HEADGEAR): {
             (_cargo select 3) pushBackUnique _className;
         };
         /* Uniform */\
-        case (_itemInfoType == 801): {
+        case (_itemInfoType == TYPE_UNIFORM): {
             (_cargo select 4) pushBackUnique _className;
         };
         /* Vest */
-        case (_itemInfoType == 701): {
+        case (_itemInfoType == TYPE_VEST): {
             (_cargo select 5) pushBackUnique _className;
         };
         /* NVgs */
@@ -95,7 +95,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
             (_cargo select 14) pushBackUnique _className;
         };
         /* UAV terminals */
-        case (_itemInfoType == 621): {
+        case (_itemInfoType == TYPE_UAV_TERMINAL): {
             (_cargo select 14) pushBackUnique _className;
         };
         /* Weapon, at the bottom to avoid adding binos */
@@ -116,9 +116,9 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         /* Misc items */
         case (
                 _hasItemInfo &&
-                (_itemInfoType in [101, 201, 301, 302] &&
+                (_itemInfoType in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] &&
                 {(_className isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
-                {_itemInfoType in [401, 619, 620]} ||
+                {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
                 {(getText ( _x >> "simulation")) == "ItemMineDetector"}
             ): {
             (_cargo select 17) pushBackUnique _className;
