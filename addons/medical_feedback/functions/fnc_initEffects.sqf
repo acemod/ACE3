@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Initializes visual effects of medical.
@@ -8,7 +9,6 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
 
 params [["_justPain", false]];
 

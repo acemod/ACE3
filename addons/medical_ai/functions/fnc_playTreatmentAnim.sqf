@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Plays the corresponding treatment animation.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit", "_isBandage", "_isSelfTreatment"];
 
 if (vehicle _unit != _unit) exitWith {};

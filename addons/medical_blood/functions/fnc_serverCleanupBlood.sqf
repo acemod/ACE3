@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Loop that cleans up blood
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
         
 (GVAR(bloodDrops) deleteAt 0) params ["", "_deletedBloodDrop"];
 deleteVehicle _deletedBloodDrop;

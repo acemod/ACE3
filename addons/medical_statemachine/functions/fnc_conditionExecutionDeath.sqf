@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Condition for an execution caused death.
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit"];
 
 (GVAR(fatalInjuryCondition) < 2) && {!(_unit getVariable [QGVAR(deathBlocked), false])}

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -17,8 +18,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_className", "_variable", "_maxDosage", "_incompatabileMeds"];
 TRACE_5("params",_target,_className,_variable,_maxDosage,_incompatabileMeds);

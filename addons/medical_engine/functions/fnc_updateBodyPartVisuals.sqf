@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Damages a body part of a local unit. Does not kill the unit.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_updateHead", "_updateBody", "_updateArms", "_updateLegs"];
 TRACE_5("updateBodyPartVisuals",_unit,_updateHead,_updateBody,_updateArms,_updateLegs);

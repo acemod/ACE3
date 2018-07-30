@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Callback when the treatment fails
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args"];
 _args params ["_caller", "_target", "_bodyPart", "_className", "_items", "_usersOfItems"];
