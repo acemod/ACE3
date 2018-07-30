@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the cardiac arrest timer ran out.
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit"];
 
 private _startTime = _unit getVariable [QGVAR(cardiacArrestStart), CBA_missionTime];

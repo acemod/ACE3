@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zakant
  * Gets the name of the current medical state of an unit. Unit has to be local to the caller.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the triage status and information from a unit
@@ -12,8 +13,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 private ["_unit","_return","_status"];
 params ["_unit"];
