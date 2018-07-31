@@ -20,16 +20,7 @@
 // Function only matters on player clients
 if (!hasInterface) exitWith {};
 
-params [["_addUnits",[],[[]]], ["_removeUnits",[],[[], true]]];
-
-// Deprecated parameter (remember to remove bool from params when removed)
-if (_removeUnits isEqualType true) then {
-    ACE_DEPRECATED("Boolean parameter","3.12.0","array (see function header or doc)");
-    if (_removeUnits) then {
-        _removeUnits = _addUnits;
-        _addUnits = [];
-    };
-};
+params [["_addUnits",[],[[]]], ["_removeUnits",[],[[]]]];
 
 // Add to the whitelist and prevent list overlap
 GVAR(unitBlacklist) = GVAR(unitBlacklist) - _addUnits;

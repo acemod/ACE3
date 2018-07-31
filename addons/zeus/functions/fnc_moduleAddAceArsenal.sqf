@@ -29,6 +29,7 @@ switch (true) do {
         [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     default {
+        [_object, true] call EFUNC(arsenal,removeBox);
         [_object, true, true] call EFUNC(arsenal,initBox);
     };
 };

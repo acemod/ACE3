@@ -15,11 +15,6 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeArsenal = createProfileScope QFUNC(onArsenalOpen);
-    profilerTrigger;
-#endif
-
 params ["", "_args"];
 _args params ["_display"];
 
@@ -236,7 +231,7 @@ showCommandingMenu "";
 
 GVAR(cameraView) = cameraView;
 GVAR(center) switchCamera "internal";
-showHUD false;
+[QUOTE(ADDON), [false, true, true, true, true, true, true, false, true, true]] call EFUNC(common,showHud);
 
 private _mouseAreaCtrl = _display displayCtrl IDC_mouseArea;
 ctrlSetFocus _mouseAreaCtrl;

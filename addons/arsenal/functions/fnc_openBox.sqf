@@ -22,7 +22,7 @@ params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mod
 if (
     isNull _object ||
     {isNull _center} ||
-    {!(_center isKindOf "Man")} ||
+    {!(_center isKindOf "CAManBase")} ||
     {!(isNull objectParent _center) && {!is3DEN}}
 ) exitWith {};
 

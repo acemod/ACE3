@@ -229,7 +229,7 @@
             <Hungarian>Zárt ajtó</Hungarian>
             <Polish>Zablokowano drzwi</Polish>
             <Czech>Zamčené dveře</Czech>
-            <Japanese>ドアの鍵をしめた</Japanese>
+            <Japanese>ドアの鍵をしめました</Japanese>
             <Korean>잠긴 문</Korean>
             <Chinesesimp>门已上锁</Chinesesimp>
             <Chinese>門已上鎖</Chinese>
@@ -245,7 +245,7 @@
             <Hungarian>Nyitott ajtó</Hungarian>
             <Polish>Odblokowano drzwi</Polish>
             <Czech>Odemčené dveře</Czech>
-            <Japanese>ドアの鍵をあけた</Japanese>
+            <Japanese>ドアの鍵をあけました</Japanese>
             <Korean>열린 문</Korean>
             <Chinesesimp>门未上锁</Chinesesimp>
             <Chinese>門未上鎖</Chinese>
@@ -389,7 +389,7 @@
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
-            <Japanese>右肩を叩かれた</Japanese>
+            <Japanese>右肩を叩かれました</Japanese>
             <Korean>누군가 오른쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的右肩膀被輕拍了一下</Chinese>
@@ -405,7 +405,7 @@
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
-            <Japanese>左肩を叩かれた</Japanese>
+            <Japanese>左肩を叩かれました</Japanese>
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的左肩膀被輕拍了一下</Chinese>
@@ -707,7 +707,7 @@
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
             <Italian>Sei entrato nel team %1</Italian>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
-            <Japanese>チーム %1 に入った</Japanese>
+            <Japanese>チーム %1 に入りました</Japanese>
             <Korean>당신은 %1팀에 참여했습니다</Korean>
             <Chinesesimp>你已加入%1组</Chinesesimp>
             <Chinese>你已加入%1組</Chinese>
@@ -739,7 +739,7 @@
             <Portuguese>Você deixou a Equipe</Portuguese>
             <Italian>Hai lasciato il team</Italian>
             <Hungarian>Elhagytad a csapatot</Hungarian>
-            <Japanese>チームを抜けた</Japanese>
+            <Japanese>チームを抜けました</Japanese>
             <Korean>팀을 나갔습니다</Korean>
             <Chinesesimp>你已离开小队</Chinesesimp>
             <Chinese>你已離開小隊</Chinese>
@@ -843,6 +843,9 @@
         <Key ID="STR_ACE_Interaction_Flip">
             <English>Flip</English>
             <Russian>Перевернуть</Russian>
+            <Japanese>ひっくり返す</Japanese>
+            <Chinese>拋</Chinese>
+            <Italian>Gira</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -952,9 +955,9 @@
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
             <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
-            <Japanese>否定評価を受けますか？有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
+            <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしても AI からの攻撃を防ぎます。</Japanese>
             <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
-            <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價。</Chinese>
+            <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价? 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
             <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 높은 레이팅을 가질때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
         </Key>

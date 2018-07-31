@@ -14,10 +14,6 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeUpdateRightPanel = createProfileScope QFUNC(updateRightPanel);
-#endif
-
 params ["_control", "_maxLoad"];
 
 private _loadIndicatorBarCtrl = _display displayCtrl IDC_loadIndicatorBar;

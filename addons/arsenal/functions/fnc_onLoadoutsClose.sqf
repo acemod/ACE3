@@ -28,4 +28,6 @@ _mouseBlockCtrl ctrlCommit 0;
 
 [_arsenalDisplay] call FUNC(buttonHide);
 
+[QGVAR(loadoutsDisplayClosed), []] call CBA_fnc_localEvent;
+
 [_arsenalDisplay , _arsenalDisplay displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);

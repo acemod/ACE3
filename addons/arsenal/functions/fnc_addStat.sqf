@@ -54,6 +54,7 @@ _statements params [
 ];
 
 call FUNC(compileStats);
+
 private _returnArray = [];
 
 private _fnc_addToTabs = {

@@ -33,14 +33,16 @@
             <Korean>마커 이동 허가</Korean>
             <Chinese>誰可以移動標誌</Chinese>
             <Chinesesimp>谁可以移动标志</Chinesesimp>
+            <Italian>Permetti di spostare i marcatori a:</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
             <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
             <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をさせられるか制限できます。</Japanese>
             <Korean>Alt 키를 누른 상태에서 마커를 움직일 수있는 플레이어를 제한합니다.</Korean>
-            <Chinese>設定誰可以透過按住Alt鍵來移動標誌。</Chinese>
+            <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
             <Chinesesimp>设定谁可以透过按住Alt键来移动标志。</Chinesesimp>
+            <Italian>Limita quali giocatori possono spostare i marcatori mentre premono il tasto Alt.</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -49,6 +51,7 @@
             <Korean>비활성</Korean>
             <Chinese>沒有人</Chinese>
             <Chinesesimp>没有人</Chinesesimp>
+            <Italian>Nessuno</Italian>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>

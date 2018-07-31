@@ -28,7 +28,7 @@ if (GVAR(openedMenuType) >= 0) then {
     // Render all available nearby interactions
     call FUNC(renderActionPoints);
 
-    // Draw the red selector only when there's no cursor
+    // Draw the selector only when there's no cursor
     if !(uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
         [[0.5,0.5], "\a3\ui_f\data\IGUI\Cfg\Cursors\selected_ca.paa"] call FUNC(renderSelector);
     };

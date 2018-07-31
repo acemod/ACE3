@@ -90,7 +90,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(dismount));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
@@ -137,7 +136,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [ARR_2(_target,_player)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };

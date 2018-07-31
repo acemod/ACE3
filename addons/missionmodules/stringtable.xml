@@ -18,20 +18,20 @@
             <Chinese>ACE 任務模塊</Chinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
-            <English>Ambiance Sounds [ACE]</English>
-            <Polish>Dźwięki [ACE]</Polish>
-            <Spanish>[ACE] Sonidos ambiente</Spanish>
-            <German>Umgebungsgeräusche [ACE]</German>
-            <Czech>Zvuky prostředí [ACE]</Czech>
-            <Portuguese>[ACE] Sons ambientes</Portuguese>
-            <French>Sons d'ambiance [ACE]</French>
-            <Hungarian>Ambiens hangok [ACE]</Hungarian>
-            <Russian>Звук окружения [ACE]</Russian>
-            <Italian>Souni Ambientali [ACE]</Italian>
-            <Japanese>環境音 [ACE]</Japanese>
-            <Korean>환경 효과음 [ACE]</Korean>
-            <Chinesesimp>环境声音 [ACE]</Chinesesimp>
-            <Chinese>環境聲音 [ACE]</Chinese>
+            <English>Ambiance Sounds</English>
+            <Polish>Dźwięki</Polish>
+            <Spanish>Sonidos ambiente</Spanish>
+            <German>Umgebungsgeräusche</German>
+            <Czech>Zvuky prostředí</Czech>
+            <Portuguese>Sons ambientes</Portuguese>
+            <French>Sons d'ambiance</French>
+            <Hungarian>Ambiens hangok</Hungarian>
+            <Russian>Звук окружения</Russian>
+            <Italian>Souni Ambientali</Italian>
+            <Japanese>環境音</Japanese>
+            <Korean>환경 효과음</Korean>
+            <Chinesesimp>环境声音</Chinesesimp>
+            <Chinese>環境聲音</Chinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>

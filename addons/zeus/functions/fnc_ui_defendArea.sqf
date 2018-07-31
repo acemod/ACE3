@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Initalises the `defend area` zeus module display
+ * Initializes the "Defend Area" Zeus module display.
  *
  * Arguments:
  * 0: dummy controls group <CONTROL>
@@ -15,14 +15,14 @@
  */
 #include "script_component.hpp"
 
-//Generic Init:
+// Generic init
 params ["_control"];
 private _display = ctrlParent _control;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
-//Validate the module target:
+// Validate module target
 private _unit = effectiveCommander (attachedTo _logic);
 
 scopeName "Main";
@@ -47,30 +47,28 @@ switch (false) do {
 };
 
 private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
-    if (_this select 1 == 2) then {
-        deleteVehicle _logic;
-    };
+    deleteVehicle _logic;
 };
 
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
 
-    private _display = ctrlparent _ctrlButtonOK;
+    private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
     private _unit = effectiveCommander (attachedTo _logic);
-    private _radius = GETVAR(_display,GVAR(radius),50);
-    private _position = GETVAR(_display,GVAR(position),getPos _logic);
+    private _radius = GETVAR(_display,GVAR(radius),100);
+    private _position = getPos _logic;
 
-    [QGVAR(moduleDefendArea), [_unit,_position,_radius], _unit] call CBA_fnc_targetEvent;
+    [QGVAR(moduleDefendArea), [_unit, _position, _radius], _unit] call CBA_fnc_targetEvent;
     deleteVehicle _logic;
 };
 
-_display displayAddEventHandler ["unload", _fnc_onUnload];
-_control ctrlAddEventHandler ["buttonClick", _fnc_onConfirm];
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_control ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

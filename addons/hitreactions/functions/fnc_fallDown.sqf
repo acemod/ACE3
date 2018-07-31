@@ -38,7 +38,7 @@ if (_unit == ACE_player) then {
 
 // play scream sound
 if (!isNil QEFUNC(medical,playInjuredSound)) then {
-    [_unit] call EFUNC(medical,playInjuredSound);
+    [_unit,_damage] call EFUNC(medical,playInjuredSound);
 };
 
 private _vehicle = vehicle _unit;

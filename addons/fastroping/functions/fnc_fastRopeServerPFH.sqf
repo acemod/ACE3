@@ -85,7 +85,7 @@ if (
 
     //Update deployedRopes array
     private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
-    _deployedRopes set [_ropeIndex, [_attachmentPoint, _ropeTop, _ropeBottom, _dummy, _hook, false]];
+    _deployedRopes set [_ropeIndex, [_attachmentPoint, _ropeTop, _ropeBottom, _dummy, _hook, false, false]];
     _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;

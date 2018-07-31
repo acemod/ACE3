@@ -18,7 +18,15 @@
 
 params ["_aircraft", ["_isCurator", false]];
 
-if (!GVAR(enabled) || {!(typeOf _aircraft in GVAR(aircraftWithPylons))}) exitWith {};
+if !(typeOf _aircraft in GVAR(aircraftWithPylons)) exitWith {
+    if (_isCurator) then {
+        [LSTRING(AircraftDoesntHavePylons)] call EFUNC(zeus,showMessage);
+    };
+};
+
+if (_isCurator && {!GVAR(enabledForZeus)}) exitWith {
+    [LSTRING(ConfigurePylonsDisabledForZeus)] call EFUNC(zeus,showMessage);
+};
 
 private _currentUser = _aircraft getVariable [QGVAR(currentUser), objNull];
 if (!isNull _currentUser) exitWith {
@@ -75,10 +83,10 @@ GVAR(comboBoxes) = [];
     private _mags = _aircraft getCompatiblePylonMagazines (_forEachIndex + 1);
     private _userWhitelist = _aircraft getVariable [QGVAR(magazineWhitelist), _mags];
     private _userBlacklist = _aircraft getVariable [QGVAR(magazineBlacklist), []];
-    
+
     _mags = _mags arrayIntersect _userWhitelist;
     _mags = _mags - _userBlacklist;
-    
+
     private _index = 0;
     {
         _combo lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayName");

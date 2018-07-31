@@ -3,7 +3,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Wersja-3.12.1-blue.svg?style=flat-square" alt="ACE3 Wersja">
+        <img src="https://img.shields.io/badge/Wersja-3.12.2-blue.svg?style=flat-square" alt="ACE3 Wersja">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Zagadnienia&style=flat-square" alt="ACE3 Zagadnienia">

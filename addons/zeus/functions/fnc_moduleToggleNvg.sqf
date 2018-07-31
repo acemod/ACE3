@@ -1,68 +1,76 @@
 /*
- * Author: alganthe
- * Zeus module function to toggle NVGs
+ * Author: alganthe, mharis001
+ * Zeus module function to toggle NVGs.
  *
  * Arguments:
  * 0: Logic object <OBJECT>
  * 1: Toggle mode <BOOL>
- * 2: Target of the toggle <SCALAR> 0: blufor; 1: opfor; 2: indep; 3: civ; 4: selected group
+ * 2: Target units (-1 - Selected group, 0 - BLUFOR, 1 - OPFOR, 2 - Independent, 3 - Civilian) <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [LOGIC, true, 4] call ace_zeus_fnc_moduleToggleNvg
+ * [LOGIC, true, -1] call ace_zeus_fnc_moduleToggleNvg
  *
  * Public: No
-*/
+ */
 #include "script_component.hpp"
 
 params ["_logic", "_toggle", "_target"];
+TRACE_1("params",_this);
 
+// Create array of target units
 private _units = [];
 
-if (_target == 4) then {
-    _units = units (attachedTo _logic);
+if (_target == -1) then {
+    _units = (units attachedTo _logic) select {alive _x && {!([_x] call EFUNC(common,isPlayer))}};
 } else {
-    _units = allUnits select {alive _x && {side _x == ([blufor, opfor, independent, civilian] select _target)}},
+    private _side = [west, east, independent, civilian] select _target;
+    _units = allUnits select {alive _x && {side _x == _side} && {!([_x] call EFUNC(common,isPlayer))}};
 };
+
+// Add or remove NVGs from units
+private _cfgVehicles = configFile >> "CfgVehicles";
+private _cfgWeapons = configFile >> "CfgWeapons";
 
 if (_toggle) then {
     {
-        if (!isplayer _x && {hmd _x isEqualTo ""}) then {
-            private _cfgArray = getArray (configFile >> 'CfgVehicles' >> typeOf _x >>'linkedItems');
+        if (hmd _x isEqualTo "") then {
+            // Get NVG item and helmet from unit config
+            private _linkedItems = getArray (_cfgVehicles >> typeOf _x >> "linkedItems");
+            private _nvgItem = _linkedItems select {_x isKindOf ["NVGoggles", _cfgWeapons]};
+            private _nvgHelmet = _linkedItems select {!(getArray (_cfgWeapons >> _x >> "subItems") isEqualTo [])};
 
-            private _nvgClass = _cfgArray select {_x isKindOf ["NVGoggles",(configFile >> "CfgWeapons")]};
-            private _nvgHelmet =_cfgArray select {count (getArray (configFile >> "CfgWeapons" >> _x >> "subItems")) > 0};
-
-            // Can't have more than 1 assigned by default
-            if (count _nvgClass == 1 || {count _nvgHelmet == 1}) then {
-                if (count _nvgHelmet == 1) then {
-                    _x addHeadgear (_nvgHelmet select 0);
-                } else {
-                    _x linkItem  (_nvgClass select 0);
-                };
-
-            } else {
-                _x linkItem "NVGoggles";
+            // Add NVG helmet if defined
+            if !(_nvgHelmet isEqualTo []) exitWith {
+                _x addHeadgear (_nvgHelmet select 0);
             };
-        };
-    } foreach _units;
 
+            // Add NVGs if defined
+            if !(_nvgItem isEqualTo []) exitWith {
+                _x linkItem (_nvgItem select 0);
+            };
+
+            // Default: add basic NVGs
+            _x linkItem "NVGoggles";
+        };
+    } forEach _units;
 } else {
     {
-        if (!isplayer _x) then {
-            private _cfgArray = getArray (configFile >> 'CfgVehicles' >> typeOf _x >>'linkedItems');
+        // Get unit current NVGs or helmet with NVG built-in
+        private _nvgItem = hmd _x;
+        private _nvgHelmet = getArray (_cfgWeapons >> headgear _x >> "subItems") isEqualTo [];
 
-            private _nvgHelmet =_cfgArray select {count (getArray (configFile >> "CfgWeapons" >> _x >> "subItems")) > 0};
-
-            if (count _nvgHelmet == 1) then {
-                removeHeadgear _x;
-            } else {
-                _x unlinkItem (hmd _x);
-            };
+        // Remove NVG equipment from unit
+        if !(_nvgHelmet) then {
+            removeHeadgear _x;
         };
-    } foreach _units;
+
+        if !(_nvgItem isEqualTo "") then {
+            _x unlinkItem _nvgItem;
+        };
+    } forEach _units;
 };
 
 deleteVehicle _logic;

@@ -1,6 +1,6 @@
 /*
- * Author: Fisher, SilentSpike
- * Updated all/local curator with objects in the module radius.
+ * Author: Fisher, SilentSpike, mharis001
+ * Initializes the "Editable Objects" Zeus module display.
  *
  * Arguments:
  * 0: editableObjects controls group <CONTROL>
@@ -17,24 +17,23 @@
 
 params ["_control"];
 
-//Generic Init:
+// Generic Init
 private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
-TRACE_1("logicObject",_logic);
+TRACE_1("Logic Object",_logic);
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
-//Specific on-load stuff:
-(_display displayCtrl 16188) cbSetChecked true;
+// Specific onLoad stuff
+(_display displayCtrl 19181) lbSetCurSel 1;
+(_display displayCtrl 19182) lbSetCurSel 1;
 
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
-    if (_this select 1 == 2) then {
-        deleteVehicle _logic;
-    };
+    deleteVehicle _logic;
 };
 
 private _fnc_onConfirm = {
@@ -46,22 +45,19 @@ private _fnc_onConfirm = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
-    private _radius = GETVAR(_display,GVAR(radius),50);
-    private _position = GETVAR(_display,GVAR(position),getPos _logic);
-    private _allCurators = cbChecked (_display displayCtrl 16188);
-    private _removeObjects = cbChecked (_display displayCtrl 16189);
+    private _radius = GETVAR(_display,GVAR(radius),100);
+    private _editingMode = lbCurSel (_display displayCtrl 19181) > 0;
+    private _allCurators = [getAssignedCuratorLogic player, objNull] select (lbCurSel (_display displayCtrl 19182));
+    private _objects = nearestObjects [getPos _logic, ["All"], _radius];
 
-    private _objects = nearestObjects [_position, ["All"], _radius];
-    private _localCurator = [getAssignedCuratorLogic player, objNull] select _allCurators;
-
-    if (_removeObjects) then {
-        [QGVAR(removeObjects), [_objects, _localCurator]] call CBA_fnc_serverEvent;
+    if (_editingMode) then {
+        [QGVAR(addObjects), [_objects, _allCurators]] call CBA_fnc_serverEvent;
     } else {
-        [QGVAR(addObjects), [_objects, _localCurator]] call CBA_fnc_serverEvent;
+        [QGVAR(removeObjects), [_objects, _allCurators]] call CBA_fnc_serverEvent;
     };
 
     deleteVehicle _logic;
 };
 
-_display displayAddEventHandler ["unload", _fnc_onUnload];
-_ctrlButtonOK ctrlAddEventHandler ["buttonClick", _fnc_onConfirm];
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

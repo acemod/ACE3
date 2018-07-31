@@ -48,7 +48,6 @@ class CfgVehicles {
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    priority = 3.3;
                     icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargomag_ca.paa";
 
                     class ACE_PassMagazinePrimary {
@@ -57,7 +56,6 @@ class CfgVehicles {
                         statement = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(passMagazine));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 0;
-                        priority = 3;
                         icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryweapon_ca.paa";
                     };
                     class ACE_PassMagazineHandgun {
@@ -66,7 +64,6 @@ class CfgVehicles {
                         statement = QUOTE([ARR_3(_player,_target,handgunWeapon _target)] call FUNC(passMagazine));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 0;
-                        priority = 1;
                         icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\handgun_ca.paa";
                     };
                 };
@@ -77,7 +74,6 @@ class CfgVehicles {
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    priority = 3.2;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                     class ACE_AssignTeamRed {
@@ -87,7 +83,6 @@ class CfgVehicles {
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_red_ca.paa);
-                        priority = 2.4;
                     };
                     class ACE_AssignTeamGreen {
                         displayName = CSTRING(AssignTeamGreen);
@@ -96,7 +91,6 @@ class CfgVehicles {
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_green_ca.paa);
-                        priority = 2.3;
                     };
                     class ACE_AssignTeamBlue {
                         displayName = CSTRING(AssignTeamBlue);
@@ -105,7 +99,6 @@ class CfgVehicles {
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_blue_ca.paa);
-                        priority = 2.2;
                     };
                     class ACE_AssignTeamYellow {
                         displayName = CSTRING(AssignTeamYellow);
@@ -114,7 +107,6 @@ class CfgVehicles {
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_yellow_ca.paa);
-                        priority = 2.1;
                     };
                     class ACE_UnassignTeam {
                         displayName = CSTRING(LeaveTeam);
@@ -123,7 +115,6 @@ class CfgVehicles {
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_white_ca.paa);
-                        priority = 2.5;
                     };
                 };
 
@@ -134,7 +125,6 @@ class CfgVehicles {
                     modifierFunction = QUOTE(call FUNC(modifyJoinGroupAction));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    priority = 2.6;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
                 class ACE_GetDown {
@@ -142,7 +132,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(getDown));
                     showDisabled = 0;
-                    priority = 2.2;
                 };
                 class ACE_SendAway {
                     displayName = CSTRING(SendAway);
@@ -150,7 +139,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(sendAway));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    priority = 2.0;
                 };
                 class ACE_Pardon {
                     displayName = CSTRING(Pardon);
@@ -158,7 +146,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(pardon));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    priority = 2.5;
                 };
                 class ACE_GetOut {
                     displayName = CSTRING(GetOut);
@@ -166,7 +153,6 @@ class CfgVehicles {
                     statement = QUOTE([_target] call EFUNC(common,unloadPerson));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    priority = 2.6;
                 };
 
                 class GVAR(PullOutBody) {
@@ -259,7 +245,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                 statement = "";
                 showDisabled = 1;
-                priority = 3.2;
                 icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                 class ACE_JoinTeamRed {
@@ -268,7 +253,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    priority = 2.4;
                     icon = QPATHTOF(UI\team\team_red_ca.paa);
                 };
                 class ACE_JoinTeamGreen {
@@ -277,7 +261,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    priority = 2.3;
                     icon = QPATHTOF(UI\team\team_green_ca.paa);
                 };
                 class ACE_JoinTeamBlue {
@@ -286,7 +269,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    priority = 2.2;
                     icon = QPATHTOF(UI\team\team_blue_ca.paa);
                 };
                 class ACE_JoinTeamYellow {
@@ -295,7 +277,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    priority = 2.1;
                     icon = QPATHTOF(UI\team\team_yellow_ca.paa);
                 };
                 class ACE_LeaveTeam {
@@ -304,7 +285,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    priority = 2.5;
                     icon = QPATHTOF(UI\team\team_white_ca.paa);
                 };
                 class ACE_BecomeLeader {
@@ -313,7 +293,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE(_this call DFUNC(doBecomeLeader));
                     showDisabled = 1;
-                    priority = 1.0;
                     icon = QPATHTOF(UI\team\team_white_ca.paa);
                 };
                 class ACE_LeaveGroup {
@@ -322,7 +301,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
                     showDisabled = 1;
-                    priority = 1.2;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
             };
@@ -333,7 +311,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                 statement = "";
                 showDisabled = 1;
-                priority = 4.5;
                 icon = "";  // @todo
             };
         };
@@ -543,7 +520,6 @@ class CfgVehicles {
                     statement = QUOTE(_this call FUNC(push));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    priority = -1;
                 };
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -563,6 +539,11 @@ class CfgVehicles {
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
         };
+    };
+
+    class Boat_F;
+    class Boat_Transport_02_base_F: Boat_F {
+        GVAR(canPush) = 1;
     };
 
     class StaticWeapon: LandVehicle {
@@ -632,17 +613,14 @@ class CfgVehicles {
                 selection = "";
                 distance = 2;
                 condition = "true";
-
                 class ACE_OpenBox {
                     displayName = CSTRING(OpenBox);
                     condition = QUOTE((alive _target) && {(getNumber (configFile >> 'CfgVehicles' >> (typeOf _target) >> 'disableInventory')) == 0});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
                     showDisabled = 0;
-                    priority = -1;
                 };
             };
         };
-
         class ACE_SelfActions {};
     };
     class Slingload_base_F: ReammoBox_F {};

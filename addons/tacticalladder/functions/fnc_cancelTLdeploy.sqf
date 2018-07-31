@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_ladder] call ace_tacticalladder_fnc_cancelTLdeploy
+ * [player, 1] call ace_tacticalladder_fnc_cancelTLdeploy
  *
  * Public: No
  */

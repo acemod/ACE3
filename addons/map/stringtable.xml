@@ -45,7 +45,7 @@
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
             <Japanese>地図へ環境光やプレイヤーのアイテムに基づいた光のシミュレーションをおこないますか?</Japanese>
             <Korean>주변 환경및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
-            <Chinesesimp>透过环境光与玩家的物品来决定地图亮度?</Chinesesimp>
+            <Chinesesimp>透过环境光与玩家的手电筒来决定地图亮度.</Chinesesimp>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
@@ -75,7 +75,7 @@
             <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
             <Japanese>プレイヤが地図上でフラッシュライトを使うと、照らすようにしますか?</Japanese>
             <Korean>지도에 불빛을 비치는 플레이어를 조금 더 밝게 합니까?</Korean>
-            <Chinesesimp>当玩家拥有手电筒时，增加地图亮度?</Chinesesimp>
+            <Chinesesimp>当玩家打开手电筒时，增加地图亮度.</Chinesesimp>
             <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
@@ -107,7 +107,7 @@
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
             <Japanese>歩いているときは地図を揺らしますか?</Japanese>
             <Korean>걸을때 지도보면 흔들리게 합니까?</Korean>
-            <Chinesesimp>走路时让地图有震动的感觉?</Chinesesimp>
+            <Chinesesimp>走路时打开地图会产生晃动.</Chinesesimp>
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">

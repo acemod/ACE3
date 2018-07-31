@@ -1,6 +1,6 @@
 /*
  * Author: ACE-Team
- *
+ * Handles the HitPart event
  *
  * Arguments:
  * None

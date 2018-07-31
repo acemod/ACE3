@@ -10,7 +10,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 insertChildren = QUOTE(_this call DFUNC(compileFlashlightMenu));
                 showDisabled = 0;
-                priority = 99;
             };
         };
     };

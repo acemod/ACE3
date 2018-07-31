@@ -74,7 +74,7 @@
             <Spanish>Rueda cambiada</Spanish>
             <Italian>Ruota sostituita</Italian>
             <French>Roue remplacée</French>
-            <Japanese>タイヤを交換した</Japanese>
+            <Japanese>タイヤを交換しました</Japanese>
             <Korean>바퀴 교체됨</Korean>
             <Chinesesimp>轮胎更换完毕</Chinesesimp>
             <Chinese>輪胎更換完畢</Chinese>
@@ -120,7 +120,7 @@
             <Spanish>Rueda quitada</Spanish>
             <Italian>Ruota rimossa</Italian>
             <French>Roue démontée</French>
-            <Japanese>タイヤを外した</Japanese>
+            <Japanese>タイヤを外しました</Japanese>
             <Korean>바퀴 제거됨</Korean>
             <Chinesesimp>轮胎卸下完毕</Chinesesimp>
             <Chinese>輪胎卸下完畢</Chinese>
@@ -165,7 +165,7 @@
             <Spanish>Oruga cambiada</Spanish>
             <Italian>Cingolo sostituito</Italian>
             <French>Chenille remplacée</French>
-            <Japanese>履帯を交換した</Japanese>
+            <Japanese>履帯を交換しました</Japanese>
             <Korean>궤도 교체됨</Korean>
             <Chinesesimp>履带更换完毕</Chinesesimp>
             <Chinese>履帶更換完畢</Chinese>
@@ -210,7 +210,7 @@
             <Spanish>Oruga quitada</Spanish>
             <Italian>Cingolo rimosso</Italian>
             <French>Chenille enlevée</French>
-            <Japanese>履帯を外した</Japanese>
+            <Japanese>履帯を外しました</Japanese>
             <Korean>궤도 제거됨</Korean>
             <Chinesesimp>履带卸下完毕</Chinesesimp>
             <Chinese>履帶卸下完畢</Chinese>
@@ -376,7 +376,7 @@
             <Czech>Zobrazit oznámení kdykoliv opravíš vozidlo</Czech>
             <Italian>Mostra una notifica quando stai riparando un veicolo</Italian>
             <French>Afficher une notification lorsque l'on répare un véhicule</French>
-            <Japanese>あなたが車両の修理を始めると、画面に通知を出します</Japanese>
+            <Japanese>車両の修理を始めると、画面に通知を出します</Japanese>
             <Korean>수리시 화면에 글자로 알림이 뜹니다</Korean>
             <Chinesesimp>每当维修载具时显示通知</Chinesesimp>
             <Chinese>每當維修載具時顯示通知</Chinese>
@@ -424,7 +424,7 @@
             <Italian>%1 Riparata/o</Italian>
             <Hungarian>%1 megjavítva</Hungarian>
             <Russian>%1 отремонтирован</Russian>
-            <Japanese>%1 を修理した</Japanese>
+            <Japanese>%1 を修理しました</Japanese>
             <Korean>%1 수리됨</Korean>
             <Chinesesimp>已维修%1</Chinesesimp>
             <Chinese>已維修%1</Chinese>
@@ -454,7 +454,7 @@
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
             <French>%1 pratiquement réparée</French>
-            <Japanese>%1 を部分的に修理した</Japanese>
+            <Japanese>%1 を部分的に修理しました</Japanese>
             <Korean>%1 부분적으로 수리됨</Korean>
             <Chinesesimp>%1已完成部分维修</Chinesesimp>
             <Chinese>%1已完成部分維修</Chinese>
@@ -469,7 +469,7 @@
             <Spanish>Totalmente reparada %1</Spanish>
             <Italian>%1 completamente riparato</Italian>
             <French>%1 entièrement réparée</French>
-            <Japanese>%1 を完全に修理した</Japanese>
+            <Japanese>%1 を完全に修理しました</Japanese>
             <Korean>%1 완전히 수리됨</Korean>
             <Chinesesimp>%1已完整维修</Chinesesimp>
             <Chinese>%1已完整維修</Chinese>
@@ -484,7 +484,7 @@
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
             <French>%1 pratiquement réparée</French>
-            <Japanese>%1 を部分的に修理した</Japanese>
+            <Japanese>%1 を部分的に修理しました</Japanese>
             <Korean>%1 부분적으로 수리됨</Korean>
             <Chinesesimp>%1已完成部分维修</Chinesesimp>
             <Chinese>%1已完成部分維修</Chinese>
@@ -735,6 +735,38 @@
             <Chinesesimp>枪</Chinesesimp>
             <Chinese>槍</Chinese>
         </Key>
+        <Key ID="STR_ACE_Repair_HitComTurret">
+            <English>Commander Turret</English>
+            <German>Kommandant Turm</German>
+            <Spanish>Comandante Torreta</Spanish>
+            <French>Commander Tourelle</French>
+            <Polish>Dowódca Wieżyczka</Polish>
+            <Czech>Velitel Věž</Czech>
+            <Portuguese>Comandante Torre</Portuguese>
+            <Italian>Comandante Torretta</Italian>
+            <Hungarian>Parancsnok Lövegtorony</Hungarian>
+            <Russian>Башня командира</Russian>
+            <Japanese>車長の砲塔</Japanese>
+            <Korean>지휘관 포탑</Korean>
+            <Chinesesimp>指挥官 炮塔</Chinesesimp>
+            <Chinese>指揮官 砲塔</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitComGun">
+            <English>Commander Gun</English>
+            <German>Kommandant Kanone</German>
+            <Spanish>Comandante Cañón</Spanish>
+            <French>Commander Canon</French>
+            <Polish>Dowódca Działo</Polish>
+            <Czech>Velitel Kanón</Czech>
+            <Portuguese>Comandante Canhão</Portuguese>
+            <Italian>Comandante Cannone</Italian>
+            <Hungarian>Parancsnok Ágyú</Hungarian>
+            <Russian>Пушка командира</Russian>
+            <Japanese>車長の砲</Japanese>
+            <Korean>지휘관 포</Korean>
+            <Chinesesimp>指挥官 枪</Chinesesimp>
+            <Chinese>指揮官 槍</Chinese>
+        </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
             <German>Rakete</German>
@@ -953,7 +985,7 @@
             <Italian>Rotore di coda</Italian>
             <Hungarian>Farokrotor</Hungarian>
             <Russian>Рулевой винт</Russian>
-            <Japanese>尾翼ローター</Japanese>
+            <Japanese>テイル ローター</Japanese>
             <Korean>꼬리 로터</Korean>
             <Chinesesimp>尾桨</Chinesesimp>
             <Chinese>尾槳</Chinese>
@@ -1061,7 +1093,7 @@
             <Czech>Poskytuje rozsáhlý systém oprav pro všechny typy vozidel.</Czech>
             <Italian>Fornisce un sistema di riparazione per tutti i tipi di veicoli.</Italian>
             <French>Fournit un système de réparation pour tous les types de véhicules.</French>
-            <Japanese>車両の全種類に修理システムを適用しますか?</Japanese>
+            <Japanese>全種類の車両に修理システムを適用しますか?</Japanese>
             <Korean>모든 차량에 대해 수리 시스템을 제공합니다.</Korean>
             <Chinesesimp>提供修复系统给所有载具</Chinesesimp>
             <Chinese>提供修復系統給所有載具</Chinese>
@@ -1805,7 +1837,7 @@
             <German>Anzahl der Ersatzketten im Laderaum.</German>
             <Japanese>カーゴ内にある予備履帯の数を指定します。</Japanese>
             <Italian>Numero dei cingoli di scorta nel cargo.</Italian>
-            <Chinese>設定載具在貨艙內攜帶的備用履帶數量。</Chinese>
+            <Chinese>設定載具在貨艙內攜帶的備用履帶數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
@@ -1821,14 +1853,22 @@
             <German>Anzahl der Ersatzreifen im Laderaum.</German>
             <Japanese>カーゴ内にある予備タイヤの数を指定します。</Japanese>
             <Italian>Numero delle ruote di scorta nel cargo.</Italian>
-            <Chinese>設定載具在貨艙內攜帶的備用輪胎數量。</Chinese>
+            <Chinese>設定載具在貨艙內攜帶的備用輪胎數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
+            <Japanese>修理時にエンジン自動停止</Japanese>
+            <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
+            <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Motore spento automaticamente durante la riparazione</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
+            <Japanese>修理時にエンジンを自動で停止します。</Japanese>
+            <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
+            <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
         </Key>
     </Package>
 </Project>
