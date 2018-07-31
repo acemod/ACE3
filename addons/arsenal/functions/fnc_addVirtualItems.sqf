@@ -120,7 +120,7 @@ if (_items isEqualType true) then {
                         };
                         /* Binos */
                         case (_simulationType == "Binocular" ||
-                            {(_simulationType == 'Weapon') && {(getNumber (_configCfgWeapons >> _x >> 'type') == 4096)}}): {
+                            {(_simulationType == 'Weapon') && {(getNumber (_configCfgWeapons >> _x >> 'type') == TYPE_BINOCULAR_AND_NVG)}}): {
                             (_cargo select 9) pushBackUnique _x;
                         };
                         /* Map */
@@ -150,15 +150,15 @@ if (_items isEqualType true) then {
                         };
                         /* Weapon, at the bottom to avoid adding binos */
                         case (isClass (_configCfgWeapons >> _x >> "WeaponSlotsInfo") &&
-                            {getNumber (_configCfgWeapons >> _x >> 'type') != 4096}): {
+                            {getNumber (_configCfgWeapons >> _x >> 'type') != TYPE_BINOCULAR_AND_NVG}): {
                             switch (getNumber (_configCfgWeapons >> _x >> "type")) do {
-                                case 1: {
+                                case TYPE_WEAPON_PRIMARY: {
                                     (_cargo select 0) select 0 pushBackUnique  ([_x] call bis_fnc_baseWeapon);
                                 };
-                                case 2: {
+                                case TYPE_WEAPON_HANDGUN: {
                                     (_cargo select 0) select 2 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
-                                case 4: {
+                                case TYPE_WEAPON_SECONDARY: {
                                     (_cargo select 0) select 1 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
                             };
@@ -193,7 +193,7 @@ if (_items isEqualType true) then {
                     switch true do {
                         // Rifle, handgun, secondary weapons mags
                         case (
-                                (getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [256,512,1536,16]) &&
+                                (getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) &&
                                 {!(_x in _grenadeList)} &&
                                 {!(_x in _putList)}
                             ): {

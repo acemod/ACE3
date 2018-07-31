@@ -38,13 +38,13 @@ private _default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
 
 switch (true) do {
     case (_type == 0): {[_default, "unknown"]};
-    case (_type == 2^0): {["weapon", "primary"]};
-    case (_type == 2^1): {["weapon", "handgun"]};
-    case (_type == 2^2): {["weapon", "secondary"]};
-    case (_type  < 2^4): {["weapon", "unknown"]};
-    case (_type == 2^4): {["magazine", "handgun"]}; // handgun
-    case (_type == 2^8): {["magazine", "primary"]}; // rifle
-    case (_type == 2^9): {["magazine", "secondary"]}; // rpg, mg, mines
+    case (_type == TYPE_WEAPON_PRIMARY): {["weapon", "primary"]};
+    case (_type == TYPE_WEAPON_HANDGUN): {["weapon", "handgun"]};
+    case (_type == TYPE_WEAPON_SECONDARY): {["weapon", "secondary"]};
+    case (_type  < TYPE_MAGAZINE_HANDGUN_AND_GL): {["weapon", "unknown"]};
+    case (_type == TYPE_MAGAZINE_HANDGUN_AND_GL): {["magazine", "handgun"]}; // handgun
+    case (_type == TYPE_MAGAZINE_PRIMARY_AND_THROW): {["magazine", "primary"]}; // rifle
+    case (_type == TYPE_MAGAZINE_SECONDARY_AND_PUT): {["magazine", "secondary"]}; // rpg, mg, mines
     //case (_type  < 2^11): {["magazine", "unknown"]};
 
     case (_type == TYPE_MUZZLE): {["item", "muzzle"]};
@@ -66,7 +66,7 @@ switch (true) do {
     case (_type == TYPE_VEST): {["item", "vest"]};
     case (_type == TYPE_UNIFORM): {["item", "uniform"]};
 
-    case (_type == 2^12): {
+    case (_type == TYPE_BINOCULAR_AND_NVG): {
         switch (toLower _simulation) do {
             case ("weapon"): {["weapon", "binocular"]};
             case ("binocular"): {["weapon", "binocular"]};
@@ -76,8 +76,8 @@ switch (true) do {
         };
     };
 
-    case (_type == 2^16): {["weapon", "vehicle"]};
-    case (_type == 2^17): {
+    case (_type == TYPE_WEAPON_VEHICLE): {["weapon", "vehicle"]};
+    case (_type == TYPE_ITEM): {
         switch (toLower _simulation) do {
             case ("itemmap"): {["item", "map"]};
             case ("itemgps"): {["item", "gps"]};

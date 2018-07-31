@@ -71,7 +71,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         };
         /* Binos */
         case (_simulationType == "Binocular" ||
-        ((_simulationType == 'Weapon') && {(getNumber (_x >> 'type') == 4096)})): {
+        ((_simulationType == 'Weapon') && {(getNumber (_x >> 'type') == TYPE_BINOCULAR_AND_NVG)})): {
             (_cargo select 9) pushBackUnique _className;
         };
         /* Map */
@@ -100,15 +100,15 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         };
         /* Weapon, at the bottom to avoid adding binos */
         case (isClass (_x >> "WeaponSlotsInfo") &&
-            {getNumber (_x >> 'type') != 4096}): {
+            {getNumber (_x >> 'type') != TYPE_BINOCULAR_AND_NVG}): {
             switch (getNumber (_x >> "type")) do {
-                case 1: {
+                case TYPE_WEAPON_PRIMARY: {
                     (_cargo select 0) select 0 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
-                case 2: {
+                case TYPE_WEAPON_HANDGUN: {
                     (_cargo select 0) select 2 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
-                case 4: {
+                case TYPE_WEAPON_SECONDARY: {
                     (_cargo select 0) select 1 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
             };
@@ -142,7 +142,7 @@ private _putList = [];
     switch true do {
         // Rifle, handgun, secondary weapons mags
         case (
-                (getNumber (_x >> "type") in [256,512,1536,16]) &&
+                (getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) &&
                 {!(_className in _grenadeList)} &&
                 {!(_className in _putList)}
             ): {
