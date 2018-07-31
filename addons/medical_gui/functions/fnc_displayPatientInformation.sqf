@@ -16,7 +16,6 @@
  *
  * Public: No
  */
-
 #define MAX_DISTANCE 10
 
 params ["_target", ["_show", 0], ["_selectionN", 0]];
@@ -49,7 +48,7 @@ if (_show == 1) then {
         private _allInjuryTexts = [];
         private _genericMessages = [];
 
-        private _partText = [ELSTRING(medical_gui,Head), ELSTRING(medical_gui,Torso), ELSTRING(medical_gui,LeftArm) ,ELSTRING(medical_gui,RightArm) ,ELSTRING(medical_gui,LeftLeg), ELSTRING(medical_gui,RightLeg)] select _selectionN;
+        private _partText = [ELSTRING(medical_gui,Head), ELSTRING(medical_gui,Torso), ELSTRING(medical_gui,LeftArm), ELSTRING(medical_gui,RightArm), ELSTRING(medical_gui,LeftLeg), ELSTRING(medical_gui,RightLeg)] select _selectionN;
         _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 
         if IS_BLEEDING(_target) then {

@@ -17,7 +17,6 @@
  *
  * Public: No
  */
-
 #define TIME_OUT_HIT 1
 #define TIME_OUT_MOAN 5
 

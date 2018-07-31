@@ -16,7 +16,6 @@
  *
  * Public: No
  */
-
 #define MAXIMUM_DROPS 4
 #define DISTANCE_BETWEEN_DROPS 0.20
 #define OFFSET 0.25
