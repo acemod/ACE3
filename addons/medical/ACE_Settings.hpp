@@ -9,13 +9,6 @@ class ACE_Settings {
         values[] = {"Players only", "Players and AI"};
     };
     */
-    class GVAR(advancedBandages) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_advancedBandages_DisplayName);
-        description = CSTRING(MedicalSettings_advancedBandages_Description);
-        typeName = "BOOL";
-        value = 1;
-    };
     class GVAR(advancedMedication) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_advancedMedication_DisplayName);

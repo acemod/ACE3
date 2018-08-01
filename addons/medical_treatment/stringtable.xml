@@ -1,36 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
-        <Key ID="STR_ACE_Medical_Treatment_increaseTrainingInLocations_DisplayName">
-            <English>Locations boost training</English>
-            <Czech>Místa pro vylepšení zkušeností</Czech>
-            <Italian>Località aumentano addestramento</Italian>
-            <German>Örtliche Trainingssteigerung</German>
-            <Spanish>Ubicación mejora entrenamiento.</Spanish>
-            <Polish>Miejsca zwiększają wyszkolenie</Polish>
-            <Portuguese>Localização melhora treinamento</Portuguese>
-            <French>Le lieu améliore l'efficacité</French>
-            <Russian>Места ускоренного обучения</Russian>
-            <Japanese>衛生兵としての能力を与える場所</Japanese>
-            <Korean>교육 증가 지역</Korean>
-            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
-            <Chinese>受所在位置影響提升醫療能力</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_increaseTrainingInLocations_Description">
-            <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
-            <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem]</Czech>
-            <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
-            <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
-            <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
-            <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
-            <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
-            <French>Améliore l'efficacité des soins dans les véhicules ou structures de soins [non formés deviennent médecins, médecins deviennent docteurs]</French>
-            <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
-            <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる (未訓練は衛生兵に、衛生兵は医師に)</Japanese>
-            <Korean>의무병의 수준이 주변의 차량이나 의료시설에 따라 증가합니다. [비교육자가 의무병이되고, 의무병이 의사가 됩니다]</Korean>
-            <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
-            <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
-        </Key>
+        <Container name="Settings">
+            <Key ID="STR_ACE_Medical_Treatment_advancedBandages_DisplayName">
+                <English>Advanced Bandages</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_Treatment_advancedBandages_Description">
+                <English>Enable advanced bandages (required for wound reopening)</English>
+            </Key>
+            <!-- The advanced bandages strings are terribly ambigious and should be changed -->
+            <Key ID="STR_ACE_Medical_Treatment_increaseTrainingInLocations_DisplayName">
+                <English>Locations boost training</English>
+                <Czech>Místa pro vylepšení zkušeností</Czech>
+                <Italian>Località aumentano addestramento</Italian>
+                <German>Örtliche Trainingssteigerung</German>
+                <Spanish>Ubicación mejora entrenamiento.</Spanish>
+                <Polish>Miejsca zwiększają wyszkolenie</Polish>
+                <Portuguese>Localização melhora treinamento</Portuguese>
+                <French>Le lieu améliore l'efficacité</French>
+                <Russian>Места ускоренного обучения</Russian>
+                <Japanese>衛生兵としての能力を与える場所</Japanese>
+                <Korean>교육 증가 지역</Korean>
+                <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
+                <Chinese>受所在位置影響提升醫療能力</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_Treatment_increaseTrainingInLocations_Description">
+                <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
+                <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem]</Czech>
+                <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
+                <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
+                <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
+                <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
+                <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
+                <French>Améliore l'efficacité des soins dans les véhicules ou structures de soins [non formés deviennent médecins, médecins deviennent docteurs]</French>
+                <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
+                <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる (未訓練は衛生兵に、衛生兵は医師に)</Japanese>
+                <Korean>의무병의 수준이 주변의 차량이나 의료시설에 따라 증가합니다. [비교육자가 의무병이되고, 의무병이 의사가 됩니다]</Korean>
+                <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
+                <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
+                <English>Enable Litter</English>
+                <Russian>Включить мусор</Russian>
+                <Polish>Aktywuj odpadki</Polish>
+                <Spanish>Activar restos médicos</Spanish>
+                <German>Abfälle aktivieren</German>
+                <Czech>Povolit odpadky</Czech>
+                <Portuguese>Ativar lixo médico</Portuguese>
+                <French>Activer les détritus</French>
+                <Hungarian>Szemét engedélyezése</Hungarian>
+                <Italian>Abilita Barella</Italian>
+                <Japanese>医療廃棄物の表示を有効化</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowLitterCreation_Description">
+                <English>Enable litter being created upon treatment</English>
+                <Russian>Включить появление мусора после лечения</Russian>
+                <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
+                <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
+                <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
+                <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
+                <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
+                <French>Activer la création de détrimus au début des traitements</French>
+                <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
+                <Italian>Abilita la creazione della barella dopo trattamento</Italian>
+                <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
+                <English>CPR creates pulse</English>
+                <German>HLW erzeugt einen Puls</German>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
+                <English>CPR will create a pulse for the patient while performing</English>
+                <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
+                <English>Litter Simulation Detail</English>
+                <Polish>Detale zużytych medykamentów</Polish>
+                <Spanish>Detalle de simulación de basura</Spanish>
+                <Russian>Количество мусора от медицины</Russian>
+                <Italian>Dettagli Simulazione Rifiuti</Italian>
+                <French>Niveau de simulation des détritus</French>
+                <German>Abfall-Detaillevel</German>
+                <Hungarian>Hulladékszimuláció részletessége</Hungarian>
+                <Portuguese>Detalhe da simulação de sujeira</Portuguese>
+                <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
+                <Japanese>医療廃棄物を再現する詳細度</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Description">
+                <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
+                <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
+                <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
+                <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
+                <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
+                <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
+                <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
+                <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
+                <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
+                <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
+                <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay">
+                <English>Life time of litter objects</English>
+                <Russian>Время удаления мусора</Russian>
+                <Polish>Długość życia odpadków</Polish>
+                <Spanish>Tiempo de vida de los restos médicos</Spanish>
+                <German>Dauer des angezeigten Abfalls</German>
+                <Czech>Životnost pro odpadky</Czech>
+                <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
+                <French>Durée d'affichage des détritus</French>
+                <Hungarian>Szemétobjektumok élettartama</Hungarian>
+                <Italian>Tempo di vita delle barelle</Italian>
+                <Japanese>医療廃棄物の作成限界数を設定</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay_Description">
+                <English>How long should litter objects stay? In seconds. -1 is forever.</English>
+                <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
+                <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
+                <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
+                <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
+                <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
+                <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
+                <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
+                <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
+                <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
+                <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_PAKTime">
+                <English>How long should PAK take to apply ?</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
+                <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
+            </Key>
+        </Container>
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
@@ -221,98 +322,6 @@
             <Korean>의사</Korean>
             <Chinesesimp>军医</Chinesesimp>
             <Chinese>軍醫</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
-            <English>Enable Litter</English>
-            <Russian>Включить мусор</Russian>
-            <Polish>Aktywuj odpadki</Polish>
-            <Spanish>Activar restos médicos</Spanish>
-            <German>Abfälle aktivieren</German>
-            <Czech>Povolit odpadky</Czech>
-            <Portuguese>Ativar lixo médico</Portuguese>
-            <French>Activer les détritus</French>
-            <Hungarian>Szemét engedélyezése</Hungarian>
-            <Italian>Abilita Barella</Italian>
-            <Japanese>医療廃棄物の表示を有効化</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_allowLitterCreation_Description">
-            <English>Enable litter being created upon treatment</English>
-            <Russian>Включить появление мусора после лечения</Russian>
-            <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
-            <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
-            <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
-            <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
-            <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
-            <French>Activer la création de détrimus au début des traitements</French>
-            <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
-            <Italian>Abilita la creazione della barella dopo trattamento</Italian>
-            <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
-            <English>CPR creates pulse</English>
-            <German>HLW erzeugt einen Puls</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
-            <English>CPR will create a pulse for the patient while performing</English>
-            <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
-            <English>Litter Simulation Detail</English>
-            <Polish>Detale zużytych medykamentów</Polish>
-            <Spanish>Detalle de simulación de basura</Spanish>
-            <Russian>Количество мусора от медицины</Russian>
-            <Italian>Dettagli Simulazione Rifiuti</Italian>
-            <French>Niveau de simulation des détritus</French>
-            <German>Abfall-Detaillevel</German>
-            <Hungarian>Hulladékszimuláció részletessége</Hungarian>
-            <Portuguese>Detalhe da simulação de sujeira</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
-            <Japanese>医療廃棄物を再現する詳細度</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Description">
-            <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
-            <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
-            <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
-            <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
-            <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
-            <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
-            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
-            <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
-            <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
-            <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay">
-            <English>Life time of litter objects</English>
-            <Russian>Время удаления мусора</Russian>
-            <Polish>Długość życia odpadków</Polish>
-            <Spanish>Tiempo de vida de los restos médicos</Spanish>
-            <German>Dauer des angezeigten Abfalls</German>
-            <Czech>Životnost pro odpadky</Czech>
-            <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
-            <French>Durée d'affichage des détritus</French>
-            <Hungarian>Szemétobjektumok élettartama</Hungarian>
-            <Italian>Tempo di vita delle barelle</Italian>
-            <Japanese>医療廃棄物の作成限界数を設定</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay_Description">
-            <English>How long should litter objects stay? In seconds. -1 is forever.</English>
-            <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
-            <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
-            <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
-            <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
-            <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
-            <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
-            <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
-            <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
-            <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
-            <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_PAKTime">
-            <English>How long should PAK take to apply ?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
-            <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>

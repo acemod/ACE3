@@ -370,12 +370,6 @@
             <Chinesesimp>伤者最严重只会立即进入昏迷，而非立即死亡</Chinesesimp>
             <Chinese>傷者最嚴重只會立即進入昏迷，而非立即死亡</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_advancedBandages_DisplayName">
-            <English>Advanced Bandages</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_advancedBandages_Description">
-            <English>Enable advanced bandages (required for wound reopening)</English>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_advancedMedication_DisplayName">
             <English>Advanced Medication</English>
         </Key>

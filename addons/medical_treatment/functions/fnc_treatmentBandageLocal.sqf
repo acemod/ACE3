@@ -39,7 +39,7 @@ _openWounds set [_woundIndex, _wound];
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
 // Handle the reopening of bandaged wounds
-if (_impact > 0 && {EGVAR(medical,advancedBandages) && {EGVAR(medical,woundReopening)}}) then {
+if (_impact > 0 && {GVAR(advancedBandages) && {EGVAR(medical,woundReopening)}}) then {
     [_target, _impact, _partIndex, _woundIndex, _wound, _bandage] call FUNC(handleBandageOpening);
 };
 

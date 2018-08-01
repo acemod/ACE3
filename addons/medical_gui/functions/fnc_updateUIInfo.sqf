@@ -97,7 +97,7 @@ private _allInjuryTexts = [];
                 _allInjuryTexts pushBack [format["Partial %1", _woundDescription], [1,1,1,1]];
             };
         } else {
-            if (!EGVAR(medical,advancedBandages) || {!EGVAR(medical,woundReopening)}) then {
+            if (!EGVAR(medical_treatment,advancedBandages) || {!EGVAR(medical,woundReopening)}) then {
                 private _className = (EGVAR(medical_damage,woundsData) select _woundClassID) select 6;
                 private _postfix = ["Minor", "Medium", "Large"] select _category;
                 private _woundDescription = localize format [ELSTRING(medical_damage,%1_%2), _className, _postfix];
