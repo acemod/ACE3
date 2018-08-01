@@ -18,36 +18,6 @@ class ACE_Settings {
         value = 1;
     };
     */
-    class GVAR(fatalInjuryCondition) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_fatalInjuryCondition_DisplayName);
-        description = CSTRING(MedicalSettings_fatalInjuryCondition_Description);
-        value = 0;
-        typeName = "SCALAR";
-        values[] = {"Always", "In Cardiac Arrest", "Never"};
-    };
-    class GVAR(fatalInjuryConditionAI) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_fatalInjuryConditionAI_DisplayName);
-        description = CSTRING(MedicalSettings_fatalInjuryConditionAI_Description);
-        value = 1;
-        typeName = "BOOL";
-    };
-    class GVAR(unconsciousConditionAI) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_unconsciousConditionAI_DisplayName);
-        description = CSTRING(MedicalSettings_unconsciousConditionAI_Description);
-        value = 1;
-        typeName = "BOOL";
-    };
-    class GVAR(cardiacArrestTime) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_cardiacArrestTime_DisplayName);
-        description = CSTRING(MedicalSettings_cardiacArrestTime_Description);
-        value = 30;
-        typeName = "SCALAR";
-        sliderSettings[] = {1, 3600, 30, 0};
-    };
     class GVAR(medicSetting_PainVisualization) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_medicSetting_PainVisualization_DisplayName);
