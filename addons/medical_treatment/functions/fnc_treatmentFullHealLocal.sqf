@@ -1,19 +1,18 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles full heal of a patient.
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
+ * 0: The patient <OBJECT>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_caller", "_target"];
+params ["_target"];
 
 if (!alive _target) exitWith {};
 
@@ -21,7 +20,7 @@ _unit setVariable [VAR_PAIN, 0, true];
 _unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
 // tourniquets
-_target setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
+_target setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _target setVariable [QGVAR(occludedMedications), nil, true];
 
 // wounds and injuries
@@ -54,7 +53,6 @@ _target setVariable [VAR_IS_BLEEDING, false, true];
 _target setVariable [VAR_IN_PAIN, false, true];
 _target setVariable [VAR_PAIN_SUPP, 0, true];
 _target setVariable [VAR_PAIN_SUPP_ADJ, [], true];
-_target setVariable [QGVAR(partialHealCounter), 0, true];
 
 // medication
 private _allUsedMedication = _target getVariable [QEGVAR(medical,allUsedMedication), []];
@@ -72,6 +70,3 @@ _target setVariable [QEGVAR(medical,triageCard), [], true];
 _target setDamage 0;
 
 [QEGVAR(medical,FullHeal), _target] call CBA_fnc_localEvent;
-
-[_target, "activity", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", ELSTRING(medical_treatment,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message

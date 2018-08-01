@@ -9,7 +9,7 @@ class GVAR(Actions) {
         allowedSelections[] = {"All"};
         allowSelfTreatment = 1;
         requiredMedic = 0;
-        treatmentTime = 8;
+        treatmentTime = QFUNC(getBandageTime);
         treatmentTimeSelfCoef = 1;
         items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
         condition = QUOTE(!EGVAR(medical,advancedBandages));
@@ -300,14 +300,5 @@ class GVAR(Actions) {
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
         };
-    };
-    class MedKit: PersonalAidKit {
-        displayName = CSTRING(Use_Med_Kit);
-        items[] = {"ACE_medKit"};
-        treatmentLocations[] = {QEGVAR(medical,useLocation_MedKit)};
-        requiredMedic = QEGVAR(medical,medicSetting_MedKit);
-        treatmentTime = QUOTE(_target call FUNC(HealTimeMedkit));
-        callbackSuccess = QFUNC(treatmentPartialHeal);
-        itemConsumed = QEGVAR(medical,consumeItem_MedKit);
     };
 };

@@ -8,7 +8,7 @@ class ACE_Medical_StateMachine {
         onState = QFUNC(handleStateDefault);
         class Injury {
             targetState = "Injured";
-            events[] = {QEGVAR(medical,Injury)};
+            events[] = {QEGVAR(medical,injured)};
         };
         class CriticalInjuryOrVitals {
             targetState = "Unconscious";
@@ -16,7 +16,7 @@ class ACE_Medical_StateMachine {
         };
         class FatalVitals {
             targetState = "CardiacArrest";
-            events[] = {QEGVAR(medical,FatalVitals)};
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
@@ -35,7 +35,7 @@ class ACE_Medical_StateMachine {
         };
         class FatalVitals {
             targetState = "CardiacArrest";
-            events[] = {QEGVAR(medical,FatalVitals)};
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
@@ -57,7 +57,7 @@ class ACE_Medical_StateMachine {
         };
         class FatalTransitions {
             targetState = "CardiacArrest";
-            events[] = {QEGVAR(medical,FatalVitals)};
+            events[] = {QEGVAR(medical,FatalVitals), QEGVAR(medical,Bleedout)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
@@ -105,10 +105,13 @@ class ACE_Medical_StateMachine {
             condition = QFUNC(conditionExecutionDeath);
             events[] = {QEGVAR(medical,FatalInjury)};
         };
+        class Bleedout {
+            targetState = "Dead";
+            events[] = {QEGVAR(medical,Bleedout)};
+        };
     };
     class Dead {
-        // TODO: this needs to be handled by a function instead of inline scripts
-        // Probably also needs additional logic to deal with edge cases
-        onStateEntered = "_this setDamage 1"; // killing a unit also exits the state machine for this unit
+        // When the unit is killed it's no longer handled by the statemachine
+        onStateEntered = QFUNC(enteredStateDeath);
     };
 };

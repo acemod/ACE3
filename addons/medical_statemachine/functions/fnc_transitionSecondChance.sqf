@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Gives the unit a second chance and prevents death for 1 second.
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit"];
 
 _unit setVariable [QEGVAR(medical,deathBlocked), true];

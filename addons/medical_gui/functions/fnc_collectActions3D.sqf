@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Creates actions for the given treatments and adds them to the interaction menu.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _actionsConfig = configFile >> QEGVAR(medical_treatment,actions);
 private _actionPaths = ["ACE_Head", "ACE_Torso", "ACE_ArmLeft", "ACE_ArmRight", "ACE_LegLeft", "ACE_LegRight"];

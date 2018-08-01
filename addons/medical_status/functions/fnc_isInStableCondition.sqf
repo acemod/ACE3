@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if a unit is in a stable condition
@@ -14,13 +15,9 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_unit"];
 
-if (!alive _unit) exitWith { false };
-if IS_UNCONSCIOUS(_unit) exitWith { false };
-if (GET_BLOOD_LOSS(_unit) > 0) exitWith { false };
-if (!(_unit call FUNC(hasStableVitals))) exitWith { false };
-
-true
+(alive _unit
+    && {!IS_UNCONSCIOUS(_unit)}
+    && {GET_BLOOD_LOSS(_unit) == 0}
+    && {_unit call FUNC(hasStableVitals)})

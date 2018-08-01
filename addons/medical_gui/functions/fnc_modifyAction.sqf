@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Modify the visuals of a medical action point.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_player", "_partIndex", "_actionData"];
 
@@ -29,7 +29,7 @@ private _bloodLossOnBodyPart = 0;
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
 
-private _hasTourniquet = ((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0;
+private _hasTourniquet = HAS_TOURNIQUET_APPLIED_ON(_target,_partIndex);
 
 switch (true) do {
     case (_bloodLossOnBodyPart >= 0.15): {

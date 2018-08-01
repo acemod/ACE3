@@ -37,13 +37,6 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
     };
-    class EGVAR(medical,MedkitTime) {
-        category = ECSTRING(medical,Category_Medical);
-        displayName = CSTRING(MedkitTime);
-        description = CSTRING(MedkitTime_Description);
-        typeName = "SCALAR";
-        value = 0;
-    };
     class EGVAR(medical,PAKTime) {
         category = ECSTRING(medical,Category_Medical);
         displayName = CSTRING(PAKTime);

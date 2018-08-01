@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Check if a unit is any medical class
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", ["_medicN", 1]];
 

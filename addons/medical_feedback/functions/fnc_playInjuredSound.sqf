@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Play random injured sound for a unit. The sound is broadcasted across MP.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define TIME_OUT_HIT 1
 #define TIME_OUT_MOAN 5

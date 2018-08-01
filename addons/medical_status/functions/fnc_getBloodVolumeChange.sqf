@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Calculates the blood volume change and decreases the IVs given to the unit.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_deltaT", "_syncValues"];
 
@@ -24,7 +24,7 @@ private _bloodVolumeChange = -_deltaT * GET_BLOOD_LOSS(_unit);
 
 if (!isNil {_unit getVariable QEGVAR(medical,ivBags)}) then {
     private _bloodBags = _unit getVariable [QEGVAR(medical,ivBags), []];
-    private _tourniquets = _unit getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+    private _tourniquets = GET_TOURNIQUETS(_unit);
 
     _bloodBags = _bloodBags apply {
         _x params ["_bagVolumeRemaining", "_type", "_bodyPart"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Initializes unit variables.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -48,10 +48,9 @@ _unit setVariable [QEGVAR(medical,isLimping), false, true];
 _unit setVariable [VAR_UNCON, false, true];
 
 // - Treatments ---------------------------------------------------------------
-_unit setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
+_unit setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _unit setVariable [QEGVAR(medical,occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
 _unit setVariable [QEGVAR(medical,ivBags), nil, true];
-_unit setVariable [QEGVAR(medical,partialHealCounter), 0, true];
 
 // triage card and logs
 _unit setVariable [QEGVAR(medical,triageLevel), 0, true];

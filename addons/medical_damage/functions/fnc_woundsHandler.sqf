@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
@@ -71,12 +71,24 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         _critialDamage = true;
     };
 #ifdef DEBUG_MODE_FULL
-    systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, round(_woundDamage * 100) / 100, _woundDamage > PENETRATION_THRESHOLD, round(_bleeding * 1000) / 1000, round(_pain * 1000) / 1000];
+    systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, _woundDamage toFixed 2, _woundDamage > PENETRATION_THRESHOLD, _bleeding toFixed 3, _pain toFixed 3];
 #endif
 
-    if (_bodyPartNToAdd == 0 && {_woundDamage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
-        TRACE_2("FatalInjury",_unit,_woundDamage);
-        [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+    // Emulate damage to vital organs
+    switch (true) do {
+        // Fatal damage to the head is guaranteed death
+        case (_bodyPartNToAdd == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD}): {
+            TRACE_1("lethal headshot",_woundDamage toFixed 2);
+            [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+        };
+        // Fatal damage to torso has various results based on organ hit
+        case (_bodyPartNToAdd == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD}): {
+            // Heart shot is lethal
+            if (random 1 < HEART_HIT_CHANCE) then {
+                TRACE_1("lethal heartshot",_woundDamage toFixed 2);
+                [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+            };
+        };
     };
 
     // todo `forceWalk` based on leg damage

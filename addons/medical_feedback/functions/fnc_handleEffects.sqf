@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles any visual effects of medical.
@@ -9,7 +10,6 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
 
 if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false, 0] call FUNC(effectUnconscious);

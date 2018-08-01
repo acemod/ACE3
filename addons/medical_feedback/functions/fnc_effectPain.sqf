@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Triggers the pain effect (single flash).
@@ -9,7 +10,6 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
 params ["_enable", "_intensity"];
 
 if (!_enable || {_intensity == 0}) exitWith {

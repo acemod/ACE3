@@ -17,15 +17,6 @@
             <Chinesesimp>受伤</Chinesesimp>
             <Chinese>受傷</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Status_Lost_Blood2">
-            <English>Lost some blood</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Status_Lost_Blood3">
-            <English>Lost a lot of blood</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Status_Lost_Blood4">
-            <English>Lost a large amount of blood</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Category_DisplayName">
             <English>ACE Medical</English>
             <Russian>ACE: медицина</Russian>
@@ -592,15 +583,6 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Epi_Description">
             <English>Who can use Epinephrine?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Medkit_DisplayName">
-            <English>Allow Medkit</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Medkit_Description">
-            <English>Who can use the Medkit for partial heal?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_PAK_DisplayName">
-            <English>Who can use the Medkit for partial heal?</English>
-        </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
             <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
@@ -696,12 +678,6 @@
             <Chinesesimp>只限军医</Chinesesimp>
             <Chinese>只限軍醫</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_Medkit_DisplayName">
-            <English>Remove Medkit on use</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_Medkit_Description">
-            <English>Should Medkit be removed on usage?</English>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_PAK_DisplayName">
             <English>Remove PAK on use</English>
             <Russian>Удалять аптечки после использования</Russian>
@@ -751,15 +727,6 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_Epi_Description">
             <English>Where can the Epinephrine be used?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_Medkit_DisplayName">
-            <English>Locations Medkit</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_Medkit_Description">
-            <English>Where can the Medkit be used?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_PAK_DisplayName">
-            <English>Where can the Medkit be used?</English>
         </Key>
 
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
@@ -968,12 +935,6 @@
             <Korean>어디에서 봉합키트를 사용할 수 있게 합니까?</Korean>
             <Chinesesimp>定义手术包可被使用的地方?</Chinesesimp>
             <Chinese>定義手術包可被使用的地方?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_remainingDamage_Medkit_DisplayName">
-            <English>Remaining Damage</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_remainingDamage_Medkit_Description">
-            <English>Remaining damage on Medkit usage (increases with every use)?</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>

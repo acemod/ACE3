@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the personal aid kit treatment time based on amount of damage to heal
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -23,6 +23,7 @@ private _treatTime = 0;
 {
     _totalDamage = _totalDamage + _x;
 } forEach (_unit getVariable [QEGVAR(medical,bodyPartDamage), []]);
+
 if (EGVAR(medical,PAKTime) > 0) then {
     _treatTime = EGVAR(medical,PAKTime);
 } else {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Apply a tourniquet to the patient
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_bodyPart", "_className", "_items"];
 
@@ -21,7 +21,7 @@ if (count _items == 0) exitWith {false};
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
-private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+private _tourniquets = GET_TOURNIQUETS(_target);
 
 if (_tourniquets select _partIndex > 0) exitWith {
    private _output = "There is already a tourniquet on this body part!"; // TODO localization
