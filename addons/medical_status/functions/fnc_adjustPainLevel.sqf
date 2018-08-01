@@ -10,9 +10,9 @@
  * nothing
  *
  * Example:
- * [guy, 0.5] call ace_medical_fnc_adjustPainLevel
+ * [guy, 0.5] call ace_medical_status_fnc_adjustPainLevel
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -22,7 +22,7 @@ if (!local _unit) exitWith { ERROR("unit is not local"); };
 
 TRACE_2("adjustPainLevel",_unit,_desiredPainLevel);
 
-_desiredPainLevel = _desiredPainLevel * GVAR(painCoefficient);
+_desiredPainLevel = _desiredPainLevel * EGVAR(medical,painCoefficient);
 
 private _pain = GET_PAIN(_unit);
 _pain = 0 max (_pain max _desiredPainLevel) min 1;
