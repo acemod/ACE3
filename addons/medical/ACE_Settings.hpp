@@ -9,22 +9,6 @@ class ACE_Settings {
         values[] = {"Players only", "Players and AI"};
     };
     */
-    class GVAR(bleedingCoefficient) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_bleedingCoefficient_DisplayName);
-        description = CSTRING(MedicalSettings_bleedingCoefficient_Description);
-        typeName = "SCALAR";
-        value = 1;
-        sliderSettings[] = {0, 25, 1, 1};
-    };
-    class GVAR(painCoefficient) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_painCoefficient_DisplayName);
-        description = CSTRING(MedicalSettings_painCoefficient_Description);
-        typeName = "SCALAR";
-        value = 1;
-        sliderSettings[] = {0, 25, 1, 1};
-    };
     class GVAR(advancedBandages) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_advancedBandages_DisplayName);
