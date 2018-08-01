@@ -9,13 +9,6 @@ class ACE_Settings {
         values[] = {"Players only", "Players and AI"};
     };
     */
-    class GVAR(woundReopening) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_enableAdvancedWounds_DisplayName);
-        description = CSTRING(MedicalSettings_enableAdvancedWounds_Description);
-        typeName = "BOOL";
-        value = 1;
-    };
     /* @todo
     class GVAR(enableVehicleCrashes) {
         category = CSTRING(Category_Medical);
@@ -25,13 +18,6 @@ class ACE_Settings {
         value = 1;
     };
     */
-    class GVAR(enableScreams) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_enableScreams_DisplayName);
-        description = CSTRING(MedicalSettings_enableScreams_Description);
-        typeName = "BOOL";
-        value = 1;
-    };
     class GVAR(showPainInMenu) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_showPainInMenu_DisplayName);

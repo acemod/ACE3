@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Feedback">
+        <Container name="Settings">
+            <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
+                <English>Enable Screams</English>
+                <Russian>Включить крики</Russian>
+                <Polish>Aktywuj wrzaski</Polish>
+                <Spanish>Activar gritos</Spanish>
+                <German>Schreie aktivieren</German>
+                <Czech>Povolit křik</Czech>
+                <Portuguese>Ativar gritos</Portuguese>
+                <French>Activer les hurlements</French>
+                <Hungarian>Kiáltások engedélyezése</Hungarian>
+                <Italian>Abilita Grida</Italian>
+                <Japanese>叫びを有効化</Japanese>
+                <Korean>비명 활성화</Korean>
+                <Chinesesimp>启用尖叫</Chinesesimp>
+                <Chinese>啟用尖叫</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_feedback_enableScreams_Description">
+                <English>Enable screaming by injured units</English>
+                <Russian>Включить крики раненных бойцов</Russian>
+                <Polish>Aktywuj wrzeszczenie z bólu przez ranne jednostki</Polish>
+                <Spanish>Activar gritos para unidades heridas</Spanish>
+                <German>Aktiviere Schreie bei verletzten Einheiten</German>
+                <Czech>Povolit křičení zraněných jednotek</Czech>
+                <Portuguese>Ativa gritos para unidades feridas</Portuguese>
+                <French>Active les hurlements d'unités blessées</French>
+                <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
+                <Italian>Abilita Grida da parte delle unità ferite</Italian>
+                <Japanese>負傷したユニットが叫ぶように</Japanese>
+                <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
+                <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
+                <Chinese>啟用傷者的尖叫聲</Chinese>
+            </Key>
+        </Container>
         <Key ID="STR_ACE_Medical_feedback_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>

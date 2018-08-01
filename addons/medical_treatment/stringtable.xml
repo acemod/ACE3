@@ -2,25 +2,25 @@
 <Project name="ACE">
     <Package name="Medical_Treatment">
         <Container name="Settings">
-            <Key ID="STR_ACE_Medical_Treatment_advancedBandages_DisplayName">
+            <Key ID="STR_ACE_Medical_treatment_advancedBandages_DisplayName">
                 <English>Advanced Bandages</English>
             </Key>
-            <Key ID="STR_ACE_Medical_Treatment_advancedBandages_Description">
+            <Key ID="STR_ACE_Medical_treatment_advancedBandages_Description">
                 <English>Enable advanced bandages (required for wound reopening)</English>
             </Key>
-            <Key ID="STR_ACE_Medical_Treatment_advancedDiagnose_DisplayName">
+            <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_DisplayName">
                 <English>Advanced Diagnose</English>
             </Key>
-            <Key ID="STR_ACE_Medical_Treatment_advancedDiagnose_Description">
+            <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_Description">
                 <English>Enable advanced diagnose</English>
             </Key>
-            <Key ID="STR_ACE_Medical_Treatment_advancedMedication_DisplayName">
+            <Key ID="STR_ACE_Medical_treatment_advancedMedication_DisplayName">
                 <English>Advanced Medication</English>
             </Key>
-            <Key ID="STR_ACE_Medical_Treatment_advancedMedication_Description">
+            <Key ID="STR_ACE_Medical_treatment_advancedMedication_Description">
                 <English>Enable advanced medication</English>
             </Key>
-            <Key ID="STR_ACE_Medical_Treatment_increaseTrainingInLocations_DisplayName">
+            <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_DisplayName">
                 <English>Locations boost training</English>
                 <Czech>Místa pro vylepšení zkušeností</Czech>
                 <Italian>Località aumentano addestramento</Italian>
@@ -35,7 +35,7 @@
                 <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
                 <Chinese>受所在位置影響提升醫療能力</Chinese>
             </Key>
-            <Key ID="STR_ACE_Medical_Treatment_increaseTrainingInLocations_Description">
+            <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_Description">
                 <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
                 <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem]</Czech>
                 <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
@@ -137,10 +137,42 @@
                 <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime">
-                <English>How long should PAK take to apply ?</English>
+                <English>How long should PAK take to apply?</English>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
-                <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
+                <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_woundReopening_DisplayName">
+                <English>Enable Advanced wounds</English>
+                <Russian>Усложненные раны</Russian>
+                <Polish>Aktywuj zaawansowane rany</Polish>
+                <Spanish>Activa heridas avanzadas</Spanish>
+                <German>Aktiviere erweiterte Wunden</German>
+                <Czech>Povolit pokročilé zranění</Czech>
+                <Portuguese>Ativar ferimentos avançados</Portuguese>
+                <French>Activer les plaies compliquées</French>
+                <Hungarian>Komplex sebek engedélyezése</Hungarian>
+                <Italian>Abilita ferite Avanzate</Italian>
+                <Japanese>アドバンスドな傷を有効化</Japanese>
+                <Korean>고급 부상 활성화</Korean>
+                <Chinesesimp>启用进阶伤口系统</Chinesesimp>
+                <Chinese>啟用進階傷口系統</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_woundReopening_Description">
+                <English>Allow reopening of bandaged wounds?</English>
+                <Russian>Будут ли открываться уже перевязанные раны?</Russian>
+                <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
+                <Spanish>Permitir la reapertura de las heridas vendadas?</Spanish>
+                <German>Erlaube das Öffnen von bandagierten Wunden?</German>
+                <Czech>Umožnit znovuotevření zavázané rány?</Czech>
+                <Portuguese>Permitr reabertura de ferimentos enfaixados?</Portuguese>
+                <French>Les plaies peuvent se rouvrir</French>
+                <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
+                <Italian>Permetti la riapertura di ferite bendate?</Italian>
+                <Japanese>包帯で巻かれた傷を再び開くようにしますか?</Japanese>
+                <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
+                <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
+                <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
             </Key>
         </Container>
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">

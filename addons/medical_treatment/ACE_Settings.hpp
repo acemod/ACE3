@@ -66,4 +66,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
     };
+    class GVAR(woundReopening) {
+        displayName = CSTRING(woundReopening_DisplayName);
+        description = CSTRING(woundReopening_Description);
+        typeName = "BOOL";
+        value = 1;
+    };
 };

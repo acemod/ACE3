@@ -145,38 +145,6 @@
             <Chinesesimp>定义医疗废弃物存在时间，以秒为单位，-1为永远存在。</Chinesesimp>
             <Chinese>定義醫療廢棄物存在時間，以秒為單位，-1為永遠存在。</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_DisplayName">
-            <English>Enable Screams</English>
-            <Russian>Включить крики</Russian>
-            <Polish>Aktywuj wrzaski</Polish>
-            <Spanish>Activar gritos</Spanish>
-            <German>Schreie aktivieren</German>
-            <Czech>Povolit křik</Czech>
-            <Portuguese>Ativar gritos</Portuguese>
-            <French>Activer les hurlements</French>
-            <Hungarian>Kiáltások engedélyezése</Hungarian>
-            <Italian>Abilita Grida</Italian>
-            <Japanese>叫びを有効化</Japanese>
-            <Korean>비명 활성화</Korean>
-            <Chinesesimp>启用尖叫</Chinesesimp>
-            <Chinese>啟用尖叫</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_Description">
-            <English>Enable screaming by injured units</English>
-            <Russian>Включить крики раненных бойцов</Russian>
-            <Polish>Aktywuj wrzeszczenie z bólu przez ranne jednostki</Polish>
-            <Spanish>Activar gritos para unidades heridas</Spanish>
-            <German>Aktiviere Schreie bei verletzten Einheiten</German>
-            <Czech>Povolit křičení zraněných jednotek</Czech>
-            <Portuguese>Ativa gritos para unidades feridas</Portuguese>
-            <French>Active les hurlements d'unités blessées</French>
-            <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
-            <Italian>Abilita Grida da parte delle unità ferite</Italian>
-            <Japanese>負傷したユニットが叫ぶように</Japanese>
-            <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
-            <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
-            <Chinese>啟用傷者的尖叫聲</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_showPainInMenu_DisplayName">
             <English>Show pain</English>
         </Key>
@@ -476,38 +444,6 @@
             <Korean>플레이어 및 인공지능</Korean>
             <Chinesesimp>玩家与AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_enableAdvancedWounds_DisplayName">
-            <English>Enable Advanced wounds</English>
-            <Russian>Усложненные раны</Russian>
-            <Polish>Aktywuj zaawansowane rany</Polish>
-            <Spanish>Activa heridas avanzadas</Spanish>
-            <German>Aktiviere erweiterte Wunden</German>
-            <Czech>Povolit pokročilé zranění</Czech>
-            <Portuguese>Ativar ferimentos avançados</Portuguese>
-            <French>Activer les plaies compliquées</French>
-            <Hungarian>Komplex sebek engedélyezése</Hungarian>
-            <Italian>Abilita ferite Avanzate</Italian>
-            <Japanese>アドバンスドな傷を有効化</Japanese>
-            <Korean>고급 부상 활성화</Korean>
-            <Chinesesimp>启用进阶伤口系统</Chinesesimp>
-            <Chinese>啟用進階傷口系統</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_enableAdvancedWounds_Description">
-            <English>Allow reopening of bandaged wounds?</English>
-            <Russian>Будут ли открываться уже перевязанные раны?</Russian>
-            <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
-            <Spanish>Permitir la reapertura de las heridas vendadas?</Spanish>
-            <German>Erlaube das Öffnen von bandagierten Wunden?</German>
-            <Czech>Umožnit znovuotevření zavázané rány?</Czech>
-            <Portuguese>Permitr reabertura de ferimentos enfaixados?</Portuguese>
-            <French>Les plaies peuvent se rouvrir</French>
-            <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
-            <Italian>Permetti la riapertura di ferite bendate?</Italian>
-            <Japanese>包帯で巻かれた傷を再び開くようにしますか?</Japanese>
-            <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
-            <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
-            <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableVehicleCrashes_DisplayName">
             <English>Vehicle Crashes</English>
