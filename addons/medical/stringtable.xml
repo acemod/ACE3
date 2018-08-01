@@ -370,12 +370,6 @@
             <Chinesesimp>伤者最严重只会立即进入昏迷，而非立即死亡</Chinesesimp>
             <Chinese>傷者最嚴重只會立即進入昏迷，而非立即死亡</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_advancedDiagnose_DisplayName">
-            <English>Advanced Diagnose</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_advancedDiagnose_Description">
-            <English>Enable advanced diagnose</English>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
             <Russian>Включает медицинскую систему как для игроков, так и для ботов.</Russian>
