@@ -25,22 +25,6 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(playerDamageThreshold) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_playerDamageThreshold_DisplayName);
-        description = CSTRING(MedicalSettings_playerDamageThreshold_Description);
-        typeName = "SCALAR";
-        value = 1.0;
-        sliderSettings[] = {0, 25, 1, 2};
-    };
-    class GVAR(AIDamageThreshold) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_AIDamageThreshold_DisplayName);
-        description = CSTRING(MedicalSettings_AIDamageThreshold_Description);
-        typeName = "SCALAR";
-        value = 1.0;
-        sliderSettings[] = {0, 25, 1, 2};
-    };
     class GVAR(fatalInjuryCondition) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_fatalInjuryCondition_DisplayName);
