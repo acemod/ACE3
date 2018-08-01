@@ -8,7 +8,12 @@
             <Key ID="STR_ACE_Medical_Treatment_advancedBandages_Description">
                 <English>Enable advanced bandages (required for wound reopening)</English>
             </Key>
-            <!-- The advanced bandages strings are terribly ambigious and should be changed -->
+            <Key ID="STR_ACE_Medical_Treatment_advancedMedication_DisplayName">
+                <English>Advanced Medication</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_Treatment_advancedMedication_Description">
+                <English>Enable advanced medication</English>
+            </Key>
             <Key ID="STR_ACE_Medical_Treatment_increaseTrainingInLocations_DisplayName">
                 <English>Locations boost training</English>
                 <Czech>Místa pro vylepšení zkušeností</Czech>

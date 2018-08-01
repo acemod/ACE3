@@ -1,13 +1,19 @@
 class ACE_Settings {
     // Settings without EGVAR are new and don't need backwards compat
     class GVAR(advancedBandages) {
-        category = CSTRING(Category_Medical);
         displayName = CSTRING(advancedBandages_DisplayName);
         description = CSTRING(advancedBandages_Description);
         typeName = "BOOL";
         value = 1;
         // I don't like that wound reopening requires this setting to be enabled, they should be independent
     };
+    class GVAR(advancedMedication) {
+        displayName = CSTRING(advancedMedication_DisplayName);
+        description = CSTRING(advancedMedication_Description);
+        typeName = "BOOL";
+        value = 1;
+    };
+    // The strings for all three advanced bandages/medication/diagnose settings are terribly ambigious
     class EGVAR(medical,allowLitterCreation) {
         category = ECSTRING(medical,Category_Medical);
         displayName = CSTRING(allowLitterCreation);

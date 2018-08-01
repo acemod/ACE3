@@ -105,14 +105,14 @@ class GVAR(Actions) {
     class Adenosine: Morphine {
         displayName = CSTRING(Inject_Adenosine);
         displayNameProgress = CSTRING(Injecting_Adenosine);
-        condition = QEGVAR(medical,advancedMedication);
+        condition = QGVAR(advancedMedication);
         items[] = {"ACE_adenosine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
     };
     class Atropine: Morphine {
         displayName = CSTRING(Inject_Atropine);
         displayNameProgress = CSTRING(Injecting_Atropine);
-        condition = QEGVAR(medical,advancedMedication);
+        condition = QGVAR(advancedMedication);
         items[] = {"ACE_atropine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
     };
