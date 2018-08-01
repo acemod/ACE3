@@ -31,4 +31,10 @@ class ACE_Settings {
         category = ECSTRING(medical,Category_Medical);
         sliderSettings[] = {0, 10, 3, 1};
     };
+    class GVAR(showPainInMenu) {
+        displayName = CSTRING(showPainInMenu_DisplayName);
+        description = CSTRING(showPainInMenu_Description);
+        typeName = "BOOL";
+        value = 0;
+    };
 };

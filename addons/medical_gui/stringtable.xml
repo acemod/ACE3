@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical GUI">
+        <Container name="Settings">
+            <Key ID="STR_ACE_Medical_gui_showPainInMenu_DisplayName">
+                <English>Show pain</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_gui_showPainInMenu_Description">
+                <English>Show pain status in the medical menu</English>
+            </Key>
+        </Container>
         <Key ID="STR_ACE_Medical_GUI_OpenMenu">
             <English>Medical Menu</English>
             <German>Sanitätsmenü</German>

@@ -18,13 +18,6 @@ class ACE_Settings {
         value = 1;
     };
     */
-    class GVAR(showPainInMenu) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_showPainInMenu_DisplayName);
-        description = CSTRING(MedicalSettings_showPainInMenu_Description);
-        typeName = "BOOL";
-        value = 0;
-    };
     class GVAR(fatalInjuryCondition) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_fatalInjuryCondition_DisplayName);
