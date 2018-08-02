@@ -18,28 +18,6 @@ class ACE_Settings {
         value = 1;
     };
     */
-    class GVAR(allowUnconsciousAnimationOnTreatment) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);
-        typeName = "BOOL";
-        value = 0;
-    };
-    class GVAR(menuTypeStyle) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(menuTypeDisplay);
-        description = CSTRING(menuTypeDescription);
-        typeName = "SCALAR";
-        value = 0;
-        values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
-        isClientSettable = 1;
-    };
-    class GVAR(ivFlowRate) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_ivFlowRate_DisplayName);
-        description = CSTRING(MedicalSettings_ivFlowRate_Description);
-        typeName = "SCALAR";
-        value = 1;
-    };
     class GVAR(spontaneousWakeUpChance) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);

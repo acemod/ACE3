@@ -14,6 +14,70 @@
             <Key ID="STR_ACE_Medical_gui_painVisualization_Description">
                 <English>Who can see pain in the menu?</English>
             </Key>
+            <Key ID="STR_ACE_Medical_gui_menuTypeDisplay">
+                <English>Style of menu (Medical)</English>
+                <Polish>Styl menu medycznego</Polish>
+                <French>Style de menu (médical)</French>
+                <German>Menüstil (Medizin)</German>
+                <Russian>Вид меню (медицина)</Russian>
+                <Spanish>Tipo de menú (Medico)</Spanish>
+                <Czech>Styl menu (Zdravotní)</Czech>
+                <Portuguese>Estilo do menu (Médico)</Portuguese>
+                <Hungarian>Menü stílusa (Orvosi)</Hungarian>
+                <Italian>Stile del menù (medico)</Italian>
+                <Japanese>メニューの表示形式 (治療)</Japanese>
+                <Korean>메뉴의 스타일 (의료)</Korean>
+                <Chinesesimp>选单样式 (医疗)</Chinesesimp>
+                <Chinese>選單樣式 (醫療)</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_gui_menuTypeDescription">
+                <English>Select the type of menu you prefer; default 3d selections or radial.</English>
+                <Polish>Wybierz rodzaj menu, który preferujesz: domyślne pozycje 3D lub radialne</Polish>
+                <French>Sélectionne le type de menu préféré; par défaut la sélection 3D ou radiale</French>
+                <German>Wähle den Menüstil: Standard 3D-Auswahl oder kreisförmig.</German>
+                <Russian>Выберите тип меню: стандартный вариант (3D) или радиальный</Russian>
+                <Spanish>Selecciona el tipo de menú que prefieres: selecciones 3d por defecto o radial.</Spanish>
+                <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
+                <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
+                <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
+                <Italian>Seleziona il tipo di menù che preferisci: selezione (3D), radiale o disabilitata.</Italian>
+                <Japanese>好みに応じてメニューの表示形式を選んでください。標準では 3D 選択か円状です。</Japanese>
+                <Korean>선호하는 종류의 메뉴를 고르세요; 기본 3d 선택형 혹은 다이얼형</Korean>
+                <Chinesesimp>选择你喜欢的选单样式; 预设为3D选项或放射状</Chinesesimp>
+                <Chinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_gui_useSelection">
+                <English>Selections (3d)</English>
+                <Polish>Pozycje (3D)</Polish>
+                <French>Sélection (3D)</French>
+                <German>3D-Auswahl</German>
+                <Russian>Стандартный (3D)</Russian>
+                <Spanish>Selecciones (3d)</Spanish>
+                <Portuguese>Seleção (3d)</Portuguese>
+                <Hungarian>Választékok (3D)</Hungarian>
+                <Czech>3D výběr</Czech>
+                <Italian>Selezione (3D)</Italian>
+                <Japanese>選択 (3d)</Japanese>
+                <Korean>선택 (3d)</Korean>
+                <Chinesesimp>选择 (3D)</Chinesesimp>
+                <Chinese>選擇 (3D)</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_gui_useRadial">
+                <English>Radial</English>
+                <Polish>Radialne</Polish>
+                <French>Radial</French>
+                <German>Kreisförmig</German>
+                <Russian>Радиальный</Russian>
+                <Spanish>Radial</Spanish>
+                <Portuguese>Radial</Portuguese>
+                <Hungarian>Kerek</Hungarian>
+                <Czech>Kruhový</Czech>
+                <Italian>Radiale</Italian>
+                <Japanese>円状</Japanese>
+                <Korean>다이얼형</Korean>
+                <Chinesesimp>放射状</Chinesesimp>
+                <Chinese>放射狀</Chinese>
+            </Key>
         </Container>
         <Key ID="STR_ACE_Medical_GUI_OpenMenu">
             <English>Medical Menu</English>

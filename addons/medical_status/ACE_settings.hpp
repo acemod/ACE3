@@ -15,4 +15,10 @@ class ACE_Settings {
         value = 1;
         sliderSettings[] = {0, 25, 1, 1};
     };
+    class GVAR(ivFlowRate) {
+        displayName = CSTRING(ivFlowRate_DisplayName);
+        description = CSTRING(ivFlowRate_Description);
+        typeName = "SCALAR";
+        value = 1;
+    };
 };

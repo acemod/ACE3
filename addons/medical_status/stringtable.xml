@@ -66,6 +66,12 @@
                 <Chinesesimp>修改疼痛强度的系数</Chinesesimp>
                 <Chinese>修改疼痛強度的係數</Chinese>
             </Key>
+            <Key ID="STR_ACE_Medical_treatment_ivFlowRate_DisplayName">
+                <English>IV Transfusion Flow Rate</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_ivFlowRate_Description">
+                <English>Effects how quickly IV Bags will have effect</English>
+            </Key>
         </Container>
     </Package>
 </Project>

@@ -31,6 +31,15 @@ class ACE_Settings {
         category = ECSTRING(medical,Category_Medical);
         sliderSettings[] = {0, 10, 3, 1};
     };
+    class EGVAR(medical,menuTypeStyle) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(menuTypeDisplay);
+        description = CSTRING(menuTypeDescription);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
+        isClientSettable = 1;
+    };
     class GVAR(painVisualization) {
         displayName = CSTRING(painVisualization_DisplayName);
         description = CSTRING(painVisualization_Description);

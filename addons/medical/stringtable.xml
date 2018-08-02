@@ -225,12 +225,6 @@
             <Chinesesimp>医疗系统将同时对玩家与AI发生作用</Chinesesimp>
             <Chinese>醫療系統將同時對玩家與AI發生作用</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_ivFlowRate_DisplayName">
-            <English>IV Transfusion Flow Rate</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_ivFlowRate_Description">
-            <English>Effects how quickly IV Bags will have effect</English>
-        </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
             <German>Standard Sanitätseinstellungen [ACE]</German>
@@ -697,12 +691,6 @@
             <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
             <Chinesesimp>是否使该载具为医疗载具?</Chinesesimp>
             <Chinese>是否使該載具為醫療載具?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
-            <English>Allow Unconscious Animation</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
-            <English>Allow Unconscious Animation on Treatment.</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
