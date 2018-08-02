@@ -50,6 +50,60 @@
                 <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
                 <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
             </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_DisplayName">
+                <English>Self IV Transfusion</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
+                <English>Allows using IV Transfusions on yourself</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_DisplayName">
+                <English>Allow Unconscious Animation</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_Description">
+                <English>Allow Unconscious Animation on Treatment.</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
+                <English>CPR creates pulse</English>
+                <German>HLW erzeugt einen Puls</German>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
+                <English>CPR will create a pulse for the patient while performing</English>
+                <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_woundReopening_DisplayName">
+                <English>Enable Advanced wounds</English>
+                <Russian>Усложненные раны</Russian>
+                <Polish>Aktywuj zaawansowane rany</Polish>
+                <Spanish>Activa heridas avanzadas</Spanish>
+                <German>Aktiviere erweiterte Wunden</German>
+                <Czech>Povolit pokročilé zranění</Czech>
+                <Portuguese>Ativar ferimentos avançados</Portuguese>
+                <French>Activer les plaies compliquées</French>
+                <Hungarian>Komplex sebek engedélyezése</Hungarian>
+                <Italian>Abilita ferite Avanzate</Italian>
+                <Japanese>アドバンスドな傷を有効化</Japanese>
+                <Korean>고급 부상 활성화</Korean>
+                <Chinesesimp>启用进阶伤口系统</Chinesesimp>
+                <Chinese>啟用進階傷口系統</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_woundReopening_Description">
+                <English>Allow reopening of bandaged wounds?</English>
+                <Russian>Будут ли открываться уже перевязанные раны?</Russian>
+                <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
+                <Spanish>Permitir la reapertura de las heridas vendadas?</Spanish>
+                <German>Erlaube das Öffnen von bandagierten Wunden?</German>
+                <Czech>Umožnit znovuotevření zavázané rány?</Czech>
+                <Portuguese>Permitr reabertura de ferimentos enfaixados?</Portuguese>
+                <French>Les plaies peuvent se rouvrir</French>
+                <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
+                <Italian>Permetti la riapertura di ferite bendate?</Italian>
+                <Japanese>包帯で巻かれた傷を再び開くようにしますか?</Japanese>
+                <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
+                <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
+                <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
+            </Key>
+        </Container>
+        <Container name="SettingsItems">
             <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_DisplayName">
                 <English>Allow Epinephrine</English>
                 <German>Erlaube Epiniphrin</German>
@@ -230,18 +284,14 @@
             <Key ID="STR_ACE_Medical_treatment_useLocation_Epi_Description">
                 <English>Where can the Epinephrine be used?</English>
             </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_DisplayName">
-                <English>Self IV Transfusion</English>
+            <Key ID="STR_ACE_Medical_treatment_PAKTime">
+                <English>How long should PAK take to apply?</English>
             </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
-                <English>Allows using IV Transfusions on yourself</English>
+            <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
+                <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
             </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_DisplayName">
-                <English>Allow Unconscious Animation</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_Description">
-                <English>Allow Unconscious Animation on Treatment.</English>
-            </Key>
+        </Container>
+        <Container name="SettingsLitter">
             <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
                 <English>Enable Litter</English>
                 <Russian>Включить мусор</Russian>
@@ -267,14 +317,6 @@
                 <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
                 <Italian>Abilita la creazione della barella dopo trattamento</Italian>
                 <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
-                <English>CPR creates pulse</English>
-                <German>HLW erzeugt einen Puls</German>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
-                <English>CPR will create a pulse for the patient while performing</English>
-                <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
                 <English>Litter Simulation Detail</English>
@@ -327,44 +369,6 @@
                 <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
                 <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
                 <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_PAKTime">
-                <English>How long should PAK take to apply?</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
-                <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_woundReopening_DisplayName">
-                <English>Enable Advanced wounds</English>
-                <Russian>Усложненные раны</Russian>
-                <Polish>Aktywuj zaawansowane rany</Polish>
-                <Spanish>Activa heridas avanzadas</Spanish>
-                <German>Aktiviere erweiterte Wunden</German>
-                <Czech>Povolit pokročilé zranění</Czech>
-                <Portuguese>Ativar ferimentos avançados</Portuguese>
-                <French>Activer les plaies compliquées</French>
-                <Hungarian>Komplex sebek engedélyezése</Hungarian>
-                <Italian>Abilita ferite Avanzate</Italian>
-                <Japanese>アドバンスドな傷を有効化</Japanese>
-                <Korean>고급 부상 활성화</Korean>
-                <Chinesesimp>启用进阶伤口系统</Chinesesimp>
-                <Chinese>啟用進階傷口系統</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_woundReopening_Description">
-                <English>Allow reopening of bandaged wounds?</English>
-                <Russian>Будут ли открываться уже перевязанные раны?</Russian>
-                <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
-                <Spanish>Permitir la reapertura de las heridas vendadas?</Spanish>
-                <German>Erlaube das Öffnen von bandagierten Wunden?</German>
-                <Czech>Umožnit znovuotevření zavázané rány?</Czech>
-                <Portuguese>Permitr reabertura de ferimentos enfaixados?</Portuguese>
-                <French>Les plaies peuvent se rouvrir</French>
-                <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
-                <Italian>Permetti la riapertura di ferite bendate?</Italian>
-                <Japanese>包帯で巻かれた傷を再び開くようにしますか?</Japanese>
-                <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
-                <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
-                <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
             </Key>
         </Container>
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
