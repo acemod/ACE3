@@ -46,7 +46,7 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
             <Japanese>医療廃棄物シミュレーション詳細度</Japanese>
             <Korean>의료폐기물 재현 상세도</Korean>
-            <Chinesesimp>医疗废弃物模拟细节</Chinesesimp>
+            <Chinesesimp>模拟医疗废弃物细节</Chinesesimp>
             <Chinese>醫療廢棄物模擬細節</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
@@ -62,8 +62,8 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
             <Japanese>医療廃棄物シミュレーションは各クライアントでローカルに作成される、医療廃棄物の詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
             <Korean>의료폐기물 재현 상세도의 경우 얼마나 많은 수의 폐기물이 클라이언트 주변에 생성되는지를 정합니다. 매우 많은 수의 지역은 프레임드랍을 유발할 수 있습니다, 고로 이는 클라이언트 전용 설정입니다.</Korean>
-            <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会导致画面更新率延迟，因此这由用户端来设定。</Chinesesimp>
-            <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定。</Chinese>
+            <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会降低FPS，因此这由用户端性能来设定。</Chinesesimp>
+            <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
@@ -408,7 +408,7 @@
             <French>Transfusion (plasma)...</French>
             <Russian>Переливание плазмы...</Russian>
             <Hungarian>Infúzió vérplazmával...</Hungarian>
-            <Italian>Effettu la trasfusione di plasma...</Italian>
+            <Italian>Effettuo la trasfusione di plasma...</Italian>
             <Portuguese>Transfundindo plasma...</Portuguese>
             <Japanese>血しょうを投与しています・・・</Japanese>
             <Korean>혈장 수혈중...</Korean>
@@ -1101,7 +1101,7 @@
             <Japanese>緊急圧迫包帯は傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <Chinesesimp>用于覆盖伤口以防止出血，透过敷料的止血剂来让出血慢慢停止。</Chinesesimp>
-            <Chinese>用於覆蓋傷口以防止出血，透過敷料的止血劑來讓出血慢慢停止。</Chinese>
+            <Chinese>用於覆蓋傷口以防止出血，透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Display">
             <English>Packing Bandage</English>
@@ -1245,7 +1245,7 @@
             <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れをおそくし、失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
             <Chinesesimp>用于压迫静脉与动脉的血液流动，达到减缓失血速度的目的。</Chinesesimp>
-            <Chinese>用於壓迫靜脈與動脈的血液流動，達到減緩失血速度的目的。</Chinese>
+            <Chinese>用於壓迫靜脈與動脈的血液流動，達到減緩失血速度的目的</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1293,7 +1293,7 @@
             <Japanese>戦闘が収まったとき、モルヒネを痛みにたいしてつかいます。</Japanese>
             <Korean>심한 통증을 완화하기 위해 쓰이는 진통제입니다.</Korean>
             <Chinesesimp>止痛药的一种，用于减低中度至重度的疼痛感。</Chinesesimp>
-            <Chinese>止痛藥的一種，用於減低中度至重度的疼痛感。</Chinese>
+            <Chinese>止痛藥的一種，用於減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
@@ -1386,7 +1386,7 @@
             <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰이는 군용 약품</Korean>
             <Chinesesimp>军用神经解毒针，用来应付核生化污染的情况。</Chinesesimp>
-            <Chinese>軍用神經解毒針，用來應付核生化汙染的情況。</Chinese>
+            <Chinese>軍用神經解毒針，用來應付核生化汙染的情況</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Display">
             <English>Epinephrine autoinjector</English>
@@ -5587,7 +5587,7 @@
             <Japanese>AI はプレイヤーが医療的な理由で気絶している場合にかぎり、撃つのをためらいます。</Japanese>
             <Polish>Opóźnij stan wstrzymania ognia u AI kiedy gracz jest nieprzytomny z powodów medycznych.</Polish>
             <Korean>의료상의 이유로 플레이어가 기절할 경우 인공지능이 발사를 지연합니다.</Korean>
-            <Chinesesimp>当玩家为无意识的状态时, 延长AI的停火时间</Chinesesimp>
+            <Chinesesimp>当玩家为无意识的状态时, 延长AI的开火时间</Chinesesimp>
             <Chinese>當玩家為無意識的狀態時, 延長AI的停火時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
@@ -5602,7 +5602,7 @@
             <Russian>Задержка прекращения огня ботами при потере сознания</Russian>
             <Japanese>AI が気絶者へためらってから射撃</Japanese>
             <Korean>기절할 경우 인공지능이 발사를 지연합니다</Korean>
-            <Chinesesimp>延长AI对已无意识玩家的停火时间</Chinesesimp>
+            <Chinesesimp>延长AI对已无意识玩家的开火时间</Chinesesimp>
             <Chinese>延長AI對已無意識玩家的停火時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
@@ -5626,26 +5626,44 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
             <English>Unconscious animation during treatment</English>
             <Japanese>処置中に気絶アニメーション</Japanese>
+            <Chinesesimp>治疗时死亡动画</Chinesesimp>
+            <Chinese>醫療時加入的昏迷動作</Chinese>
+            <Italian>Animazione da svenuto durante la cura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow animation of unconscious patients during treatment.</English>
             <Japanese>患者の処置中に気絶アニメーションを許可します。</Japanese>
+            <Chinesesimp>在无意识患者治疗时死亡,会播放死亡动画?</Chinesesimp>
+            <Chinese>允許醫療時加入昏迷的動作</Chinese>
+            <Italian>Permette l'animazione da svenuto dei pazioenti durante loro la cura.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
             <English>Move unconscious units from group</English>
             <Japanese>グループから気絶ユニットを移動</Japanese>
+            <Chinesesimp>从小队中移除无意识伤者</Chinesesimp>
+            <Chinese>從小隊中移動昏迷的單位</Chinese>
+            <Italian>Toglie le unità svenute dal grouppo</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
             <English>When a group member goes unconscious, removes them from their group.</English>
             <Japanese>グループのメンバーが気絶すると、グループから退出させます。</Japanese>
+            <Chinesesimp>当一个队员失去意识时,他将被移除出小队</Chinesesimp>
+            <Chinese>當隊員昏迷時，將被他的小組中刪除</Chinese>
+            <Italian>Quando un membro del gruppo sviene, viene tolto dal gruppo.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
             <Japanese>過剰投与</Japanese>
+            <Chinesesimp>过量</Chinesesimp>
+            <Chinese>過量</Chinese>
+            <Italian>Overdose</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
             <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
             <Japanese>モルヒネ/アドレナリン/アトロピンの過剰投与により患者を脆弱にします。</Japanese>
+            <Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
+            <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
+            <Italian>Rende il paziente suscettibile di overdose da morfina, epinefrina o atropina.</Italian>
         </Key>
     </Package>
 </Project>

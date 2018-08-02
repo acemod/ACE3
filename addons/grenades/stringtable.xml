@@ -143,7 +143,7 @@
             <Japanese>フラッシュバンとも知られています。即時に失明と難聴、耳鳴り、内耳障害を引き起こします。</Japanese>
             <Korean>플래시뱅이라고도 알려져있습니다. 사용즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
-            <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果。</Chinese>
+            <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
@@ -371,7 +371,7 @@
             <French>Grenade incendiaire utilisé pour détruire des armes, munitions et autres équipements.</French>
             <Italian>Granata incendiaria usata per distruggere armi, munizioni e altri equipaggiamenti.</Italian>
             <Chinesesimp>燃烧手榴弹是用来摧毁武器，弹药以及其他装备的好帮手。</Chinesesimp>
-            <Chinese>燃燒手榴彈是用來摧毀武器，彈藥以及其他裝備的好幫手。</Chinese>
+            <Chinese>燃燒手榴彈是用來摧毀武器，彈藥以及其他裝備的好幫手</Chinese>
         </Key>
     </Package>
 </Project>

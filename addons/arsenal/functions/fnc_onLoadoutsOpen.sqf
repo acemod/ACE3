@@ -57,4 +57,6 @@ if !(GVAR(allowSharedLoadouts) && {isMultiplayer}) then {
     _buttonShareLoadoutsBackgroundCtrl ctrlCommit 0;
 };
 
+[QGVAR(loadoutsDisplayOpened), [_display]] call CBA_fnc_localEvent;
+
 [_display, _display displayCtrl IDC_buttonMyLoadouts] call FUNC(loadoutsChangeTab);

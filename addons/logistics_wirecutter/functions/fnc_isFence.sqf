@@ -1,32 +1,32 @@
 /*
  * Author: PabstMirror
- * Checks if object is a fence.  Should work on any fence type, even (typeOf == "").
- * Call is fairly expensive because of all of the string checking.
+ * Checks if object is a fence. Should work on any fence type, even when (typeOf == "").
+ * Call is fairly expensive because of string checking.
  *
  * Arguments:
- * 0: An Object To Test <OBJECT>
+ * 0: Object to test <OBJECT>
  *
  * Return Value:
- * Is it a fence <BOOL>
+ * Is fence <BOOL>
  *
  * Example:
- * [aFence] call ace_logistics_wirecutter_fnc_isFence
+ * [cursorObject] call ace_logistics_wirecutter_fnc_isFence
  *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_object"];
-TRACE_1("params",_object);
+TRACE_1("Checking if fence",_object);
 
 private _typeOf = typeOf _object;
 
 private _returnValue = if (_typeOf != "") then {
-    //If the fence has configEntry we can check it directly
-    (1 == (getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(isFence))));
+    // Check for isFence entry since we have valid typeOf
+    1 == getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(isFence));
 } else {
-    //Check the p3d name against list (in script_component.hpp)
-    ((getModelInfo _object) select 0) in FENCE_P3DS;
+    // Check the p3d name against list (in script_component.hpp)
+    (getModelInfo _object select 0) in FENCE_P3DS;
 };
 
 _returnValue

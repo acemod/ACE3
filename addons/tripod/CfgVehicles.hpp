@@ -11,7 +11,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
                     statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
             };
@@ -78,7 +77,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
 
@@ -91,7 +89,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
             };

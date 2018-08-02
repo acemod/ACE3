@@ -20,10 +20,8 @@
 params ["_item", "_vehicle", ["_unloader", objNull]];
 TRACE_3("params",_item,_vehicle,_unloader);
 
-private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
-
 //This covers testing vehicle stability and finding a safe position
-private _emptyPosAGL = [_vehicle, _itemClass, _unloader] call EFUNC(common,findUnloadPosition);
+private _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
 TRACE_1("findUnloadPosition",_emptyPosAGL);
 
 if ((count _emptyPosAGL) != 3) exitWith {

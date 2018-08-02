@@ -142,7 +142,7 @@
             <Portuguese>Interação - Max. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の色</Japanese>
             <Korean>상호작용 - 문자색깔</Korean>
-            <Chinesesimp>互动 - 文字最大化</Chinesesimp>
+            <Chinesesimp>互动-文字颜色最大值</Chinesesimp>
             <Chinese>互動 - 文字最大化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
@@ -158,7 +158,7 @@
             <Portuguese>Interação - Min. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の背景色</Japanese>
             <Korean>상호작용 - 문자배경색</Korean>
-            <Chinesesimp>互动 - 文字最小化</Chinesesimp>
+            <Chinesesimp>互动-文字颜色最小值</Chinesesimp>
             <Chinese>互動 - 文字最小化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
@@ -174,7 +174,7 @@
             <Portuguese>Interação - Max. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の色</Japanese>
             <Korean>상호작용 - 문자그림자색</Korean>
-            <Chinesesimp>互动 - 阴影最大化</Chinesesimp>
+            <Chinesesimp>互动 - 阴影最大值</Chinesesimp>
             <Chinese>互動 - 陰影最大化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
@@ -190,7 +190,7 @@
             <Portuguese>Interação - Min. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の最低色</Japanese>
             <Korean>상호작용 - 문자그림자배경색</Korean>
-            <Chinesesimp>互动 - 阴影最小化</Chinesesimp>
+            <Chinesesimp>互动 - 阴影最小值</Chinesesimp>
             <Chinese>互動 - 陰影最小化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
@@ -287,7 +287,7 @@
             <Japanese>文字への影を設定します。縁取りは設定された影の色を無視します。</Japanese>
             <Korean>문자의 그림자를 조절하는것을 가능케합니다. 외각선은 임의의 그림자색을 무시합니다.</Korean>
             <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
-            <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色。</Chinese>
+            <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowOutline">
             <English>Outline</English>
@@ -335,7 +335,7 @@
             <Japanese>インタラクション メニューを開いたとき、背景にボケを与えます。</Japanese>
             <Korean>상호작용 메뉴가 열릴시 배경을 흐릿하게 처리합니다.</Korean>
             <Chinesesimp>当互动选单开启时，模糊背景画面。</Chinesesimp>
-            <Chinese>當互動選單開啟時，模糊背景畫面。</Chinese>
+            <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -449,6 +449,9 @@
         <Key ID="STR_ACE_Interact_Menu_SelectorColor">
             <English>Selector Color</English>
             <Japanese>セレクターの色</Japanese>
+            <Chinesesimp>选择器颜色</Chinesesimp>
+            <Chinese>選單的顏色</Chinese>
+            <Italian>Controllo Settore</Italian>
         </Key>
     </Package>
 </Project>

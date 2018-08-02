@@ -5,6 +5,7 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Holder Object (Vehicle) <OBJECT>
+ * 2: Ignore interaction distance <BOOL>
  *
  * Return Value:
  * Can load in <BOOL>
@@ -16,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params [["_item", "", [objNull,""]], "_vehicle"];
+params [["_item", "", [objNull,""]], "_vehicle", ["_ignoreInteraction", false]];
 
 if (speed _vehicle > 1 || {((getPos _vehicle) select 2) > 3}) exitWith {TRACE_1("vehicle not stable",_vehicle); false};
 
@@ -34,7 +35,7 @@ if (_item  isEqualType "") then {
 } else {
     _validItem =
         (alive _item) &&
-        {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE};
+        {_ignoreInteraction || {([_item, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}};
 };
 
 _validItem &&
