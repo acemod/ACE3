@@ -348,12 +348,6 @@
             <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_PainVisualization_DisplayName">
-            <English>Allow Pain visualization</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_PainVisualization_Description">
-            <English>Who can see pain in the menu?</English>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Epi_DisplayName">
             <English>Allow Epinephrine</English>
             <German>Erlaube Epiniphrin</German>

@@ -8,6 +8,12 @@
             <Key ID="STR_ACE_Medical_gui_showPainInMenu_Description">
                 <English>Show pain status in the medical menu</English>
             </Key>
+            <Key ID="STR_ACE_Medical_gui_painVisualization_DisplayName">
+                <English>Allow Pain visualization</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_gui_painVisualization_Description">
+                <English>Who can see pain in the menu?</English>
+            </Key>
         </Container>
         <Key ID="STR_ACE_Medical_GUI_OpenMenu">
             <English>Medical Menu</English>

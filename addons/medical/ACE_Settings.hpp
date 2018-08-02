@@ -18,14 +18,6 @@ class ACE_Settings {
         value = 1;
     };
     */
-    class GVAR(medicSetting_PainVisualization) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_medicSetting_PainVisualization_DisplayName);
-        description = CSTRING(MedicalSettings_medicSetting_PainVisualization_Description);
-        typeName = "SCALAR";
-        value = 0;
-        values[] = {"Anyone", "Medics only", "Doctors only"};
-    };
     class GVAR(medicSetting_Epi) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_medicSetting_Epi_DisplayName);
