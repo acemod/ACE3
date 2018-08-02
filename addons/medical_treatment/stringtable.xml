@@ -50,6 +50,186 @@
                 <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
                 <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
             </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_DisplayName">
+                <English>Allow Epinephrine</English>
+                <German>Erlaube Epiniphrin</German>
+                <Spanish>Permitir Epinefrina</Spanish>
+                <Polish>Ograniczenia adrenaliny</Polish>
+                <French>Activer l'épinéphrine</French>
+                <Italian>Permette epinefrina</Italian>
+                <Czech>Povolit adrenalin</Czech>
+                <Portuguese>Permitir Epinefrina</Portuguese>
+                <Russian>Разрешить Адреналин</Russian>
+                <Japanese>アドレナリンの許可</Japanese>
+                <Korean>에피네프린 활성화</Korean>
+                <Chinesesimp>允许使用肾上腺素</Chinesesimp>
+                <Chinese>允許使用腎上腺素</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_Description">
+                <English>Who can use Epinephrine?</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_DisplayName">
+                <English>Allow PAK</English>
+                <Russian>Использование аптечки</Russian>
+                <Polish>Ustawienie apteczek osobistych</Polish>
+                <Spanish>Permitir EPA</Spanish>
+                <German>Erlaube Erste-Hilfe-Set</German>
+                <Czech>Povolit osobní lékárničky (PAK)</Czech>
+                <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
+                <French>Activer la trousse sanitaire</French>
+                <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
+                <Italian>Consenti Kit di Pronto Soccorso</Italian>
+                <Japanese>応急処置キットの許可</Japanese>
+                <Korean>개인응급키트 활성화</Korean>
+                <Chinesesimp>允许使用个人急救包</Chinesesimp>
+                <Chinese>允許使用個人急救包</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_Description">
+                <English>Who can use the PAK for full heal?</English>
+                <Russian>Кому разрешено выполнять полное лечение с помощью аптечки?</Russian>
+                <Polish>Kto może skorzystać z apteczki osobistej w celu pełnego uleczenia?</Polish>
+                <Spanish>¿Quién puede utilizar el EPA para una cura completa?</Spanish>
+                <German>Wer kann das Erste-Hilfe-Set für eine Endheilung verwenden?</German>
+                <Czech>Kdo může použít osobní lékárničku pro plné vyléčení?</Czech>
+                <Portuguese>Quem pode usar o KPS para cura completa?</Portuguese>
+                <French>Qui peut utilier la trousse sanitaire pour des soins complets?</French>
+                <Hungarian>Ki használhatja az elsősegélycsomagot teljes gyógyításra?</Hungarian>
+                <Italian>Chi può usare il KPS per cura completa?</Italian>
+                <Japanese>完全に回復できるよう誰しもが応急処置キットを使えるようにしますか?</Japanese>
+                <Korean>완전한 체력회복을 위해 어느 인원이 개인응급키트을 쓸 수 있습니까? (기본 의료 전용)</Korean>
+                <Chinesesimp>谁能够使用个人急救包来达到完整医疗?</Chinesesimp>
+                <Chinese>誰能夠使用個人急救包來達到完整醫療?</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_anyone">
+                <English>Anyone</English>
+                <Russian>Кем угодно</Russian>
+                <Polish>Wszyscy</Polish>
+                <Spanish>Nadie</Spanish>
+                <German>Jeder</German>
+                <Czech>Kdokoliv</Czech>
+                <Portuguese>Qualquer um</Portuguese>
+                <French>Tous</French>
+                <Hungarian>Akárki</Hungarian>
+                <Italian>Chiunque</Italian>
+                <Japanese>だれでも</Japanese>
+                <Korean>모두</Korean>
+                <Chinesesimp>任何人</Chinesesimp>
+                <Chinese>任何人</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicsOnly">
+                <English>Medics only</English>
+                <Russian>Только медиками</Russian>
+                <Polish>Tylko medycy</Polish>
+                <Spanish>Solo médicos</Spanish>
+                <German>Nur Sanitäter</German>
+                <Czech>Pouze zdravotník</Czech>
+                <Portuguese>Somente médicos</Portuguese>
+                <French>Infirmiers  uniquement</French>
+                <Hungarian>Csak orvosok</Hungarian>
+                <Italian>Solo medici</Italian>
+                <Japanese>衛生兵のみ</Japanese>
+                <Korean>의무병만</Korean>
+                <Chinesesimp>只限医疗兵</Chinesesimp>
+                <Chinese>只限醫療兵</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_doctorsOnly">
+                <English>Doctors only</English>
+                <Russian>Только врачами</Russian>
+                <Polish>Tylko doktorzy</Polish>
+                <Spanish>Solo doctores</Spanish>
+                <German>Nur Ärzte</German>
+                <Czech>Pouze doktor</Czech>
+                <Portuguese>Somente doutores</Portuguese>
+                <French>Médecins uniquement</French>
+                <Hungarian>Csak doktorok</Hungarian>
+                <Italian>Solo dottori</Italian>
+                <Japanese>医師のみ</Japanese>
+                <Korean>오직 의사만</Korean>
+                <Chinesesimp>只限军医</Chinesesimp>
+                <Chinese>只限軍醫</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicalFacility">
+                <English>Medical facility</English>
+                <Russian>В госпитале</Russian>
+                <Polish>Budynki medyczne</Polish>
+                <Spanish>Centro médico</Spanish>
+                <German>Medizinische Einrichtungen</German>
+                <Czech>Zdravotnické zařízení</Czech>
+                <Portuguese>Instalação médica</Portuguese>
+                <French>Dans les structures sanitaires</French>
+                <Hungarian>Orvosi létesítmény</Hungarian>
+                <Italian>Strutture mediche</Italian>
+                <Japanese>医療施設でのみ</Japanese>
+                <Korean>의료시설</Korean>
+                <Chinesesimp>医疗设施</Chinesesimp>
+                <Chinese>醫療設施</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_vehicleAndFacility">
+                <English>Vehicles &amp; facility</English>
+                <Russian>В транспорте и госпитале</Russian>
+                <Polish>Pojazdy i budynki medyczne</Polish>
+                <Spanish>Vehículos y centros</Spanish>
+                <German>Fahrzeuge &amp; Einrichtungen</German>
+                <Czech>Vozidla a zařízení</Czech>
+                <Portuguese>Veículos e instalações</Portuguese>
+                <French>Dans les véhicules et les structures sanitaires</French>
+                <Hungarian>Járművek &amp; létesítmény</Hungarian>
+                <Italian>Veicoli e Strutture</Italian>
+                <Japanese>車両 &amp; 施設</Japanese>
+                <Korean>차량 및 시설</Korean>
+                <Chinesesimp>医疗载具 &amp; 医疗设施</Chinesesimp>
+                <Chinese>醫療載具 &amp; 醫療設施</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_consumeItem_PAK_DisplayName">
+                <English>Remove PAK on use</English>
+                <Russian>Удалять аптечки после использования</Russian>
+                <Polish>Usuń apteczkę po użyciu</Polish>
+                <Spanish>Eliminar EPA después del uso</Spanish>
+                <German>Entf. Erste-Hilfe-Set bei Verwendung</German>
+                <Czech>Odebrat osobní lékárničku po použití</Czech>
+                <Portuguese>Remover o KPS depois do uso</Portuguese>
+                <French>Utilisation unique de la trousse sanitaire</French>
+                <Hungarian>Elsősegélycsomag eltávolítása használatkor</Hungarian>
+                <Italian>Rimuovi Kit Pronto Soccorso dopo l'uso</Italian>
+                <Japanese>応急処置キットの削除</Japanese>
+                <Korean>개인응급키트 사용후 사라짐</Korean>
+                <Chinesesimp>在使用后删除个人急救包</Chinesesimp>
+                <Chinese>在使用後刪除個人急救包</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_consumeItem_PAK_Description">
+                <English>Should PAK be removed on usage?</English>
+                <Russian>Нужно ли удалять аптечки после использования?</Russian>
+                <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
+                <Spanish>El EPA será eliminado después de usarlo</Spanish>
+                <German>Sollen Erste-Hilfe-Sets bei Verwendung entfernt werden?</German>
+                <Czech>Má se osobní lékárnička odstranit po použití?</Czech>
+                <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
+                <French>La trousse sanitaire doit être consommée à l'utilisation?</French>
+                <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
+                <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
+                <Japanese>応急処置キットを使うと削除しますか?</Japanese>
+                <Korean>개인응급키트를 사용하고 나서 제거합니까?</Korean>
+                <Chinesesimp>要在使用后删除个人急救包吗?</Chinesesimp>
+                <Chinese>要在使用後刪除個人急救包嗎?</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_useLocation_Epi_DisplayName">
+                <English>Locations Epinephrine</English>
+                <German>Orte für Epiniphrin</German>
+                <Spanish>Ubicaciones epinefrina</Spanish>
+                <Polish>Ograniczenia adrenaliny</Polish>
+                <French>Utilisation de l'épinéphrine</French>
+                <Italian>Ubicazione epinefrina</Italian>
+                <Czech>Oblast k použití adrenalinu</Czech>
+                <Portuguese>Localizações de Epinefrina</Portuguese>
+                <Russian>Место использования адреналина</Russian>
+                <Japanese>アドレナリンをつかう場所</Japanese>
+                <Korean>에피네프린 사용 장소</Korean>
+                <Chinesesimp>肾上腺素使用地点</Chinesesimp>
+                <Chinese>腎上腺素使用地點</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_useLocation_Epi_Description">
+                <English>Where can the Epinephrine be used?</English>
+            </Key>
             <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
                 <English>Enable Litter</English>
                 <Russian>Включить мусор</Russian>

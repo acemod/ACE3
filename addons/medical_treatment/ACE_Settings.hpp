@@ -72,4 +72,60 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class EGVAR(medical,medicSetting_Epi) {
+        displayName = CSTRING(medicSetting_Epi_DisplayName);
+        description = CSTRING(medicSetting_Epi_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {CSTRING(anyone), CSTRING(medicsOnly), CSTRING(doctorsOnly)};
+    };
+    class EGVAR(medical,medicSetting_PAK) {
+        displayName = CSTRING(medicSetting_PAK_DisplayName);
+        description = CSTRING(medicSetting_PAK_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {CSTRING(anyone), CSTRING(medicsOnly), CSTRING(doctorsOnly)};
+    };
+    class EGVAR(medical,medicSetting_SurgicalKit) {
+        displayName = CSTRING(medicSetting_SurgicalKit_DisplayName);
+        description = CSTRING(medicSetting_SurgicalKit_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {CSTRING(anyone), CSTRING(medicsOnly), CSTRING(doctorsOnly)};
+    };
+    class EGVAR(medical,consumeItem_PAK) {
+        displayName = CSTRING(consumeItem_PAK_DisplayName);
+        description = CSTRING(consumeItem_PAK_Description);
+        typeName = "SCALAR";
+        value = 1;
+        values[] = {"No", "Yes"};
+    };
+    class EGVAR(medical,consumeItem_SurgicalKit) {
+        displayName = CSTRING(consumeItem_SurgicalKit_DisplayName);
+        description = CSTRING(consumeItem_SurgicalKit_Description);
+        typeName = "SCALAR";
+        value = 1;
+        values[] = {"No", "Yes"};
+    };
+    class EGVAR(medical,useLocation_Epi) {
+        displayName = CSTRING(useLocation_Epi_DisplayName);
+        description = CSTRING(useLocation_Epi_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {ECSTRING(common,Anywhere), ECSTRING(common,Vehicle), CSTRING(medicalFacility), CSTRING(vehicleAndFacility), ECSTRING(common,Disabled)};
+    };
+    class EGVAR(medical,useLocation_PAK) {
+        displayName = CSTRING(useLocation_PAK_DisplayName);
+        description = CSTRING(useLocation_PAK_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {ECSTRING(common,Anywhere), ECSTRING(common,Vehicle), CSTRING(medicalFacility), CSTRING(vehicleAndFacility), ECSTRING(common,Disabled)};
+    };
+    class EGVAR(medical,useLocation_SurgicalKit) {
+        displayName = CSTRING(useLocation_SurgicalKit_DisplayName);
+        description = CSTRING(useLocation_SurgicalKit_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {ECSTRING(common,Anywhere), ECSTRING(common,Vehicle), CSTRING(medicalFacility), CSTRING(vehicleAndFacility), ECSTRING(common,Disabled)};
+    };
 };
