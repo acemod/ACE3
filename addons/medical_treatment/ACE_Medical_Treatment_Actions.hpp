@@ -130,7 +130,7 @@ class GVAR(Actions) {
         displayName = CSTRING(Actions_Blood4_1000);
         displayNameProgress = CSTRING(Transfusing_Blood);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        allowSelfTreatment = QEGVAR(medical,allowSelfIV);
+        allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
         requiredMedic = 1;
         treatmentTime = 12;

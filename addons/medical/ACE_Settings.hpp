@@ -40,14 +40,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
-    class GVAR(allowSelfIV) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_allowSelfIV_DisplayName);
-        description = CSTRING(MedicalSettings_allowSelfIV_Description);
-        typeName = "SCALAR";
-        value = 0;
-        values[] = {"No", "Yes"};
-    };
     class GVAR(spontaneousWakeUpChance) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);

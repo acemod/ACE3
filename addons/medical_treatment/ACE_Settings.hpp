@@ -128,4 +128,11 @@ class ACE_Settings {
         value = 0;
         values[] = {ECSTRING(common,Anywhere), ECSTRING(common,Vehicle), CSTRING(medicalFacility), CSTRING(vehicleAndFacility), ECSTRING(common,Disabled)};
     };
+    class GVAR(allowSelfIV) {
+        displayName = CSTRING(allowSelfIV_DisplayName);
+        description = CSTRING(allowSelfIV_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"No", "Yes"};
+    };
 };

@@ -230,6 +230,12 @@
             <Key ID="STR_ACE_Medical_treatment_useLocation_Epi_Description">
                 <English>Where can the Epinephrine be used?</English>
             </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_DisplayName">
+                <English>Self IV Transfusion</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
+                <English>Allows using IV Transfusions on yourself</English>
+            </Key>
             <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
                 <English>Enable Litter</English>
                 <Russian>Включить мусор</Russian>

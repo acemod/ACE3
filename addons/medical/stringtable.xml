@@ -231,12 +231,6 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_ivFlowRate_Description">
             <English>Effects how quickly IV Bags will have effect</English>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowSelfIV_DisplayName">
-            <English>Self IV Transfusion</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowSelfIV_Description">
-            <English>Allows using IV Transfusions on yourself</English>
-        </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
             <German>Standard Sanitätseinstellungen [ACE]</German>
