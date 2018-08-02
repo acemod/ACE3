@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 params ["_unit", "_isBandage", "_isSelfTreatment"];
 
 if (vehicle _unit != _unit) exitWith {};

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ACE_medical_fnc_bodyCleanupLoop
+ * call ACE_medical_treatment_fnc_bodyCleanupLoop
  *
  * Public: No
  */

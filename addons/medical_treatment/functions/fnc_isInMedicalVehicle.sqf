@@ -16,6 +16,7 @@
  */
 
 params ["_unit"];
+
 private _vehicle = vehicle _unit;
 
 if (_unit == _vehicle) exitWith {false};

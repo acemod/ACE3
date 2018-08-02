@@ -11,6 +11,7 @@
  *
  * Public: No
  */
+
 params ["_unit"];
 
 private _startTime = _unit getVariable [QGVAR(cardiacArrestStart), CBA_missionTime];

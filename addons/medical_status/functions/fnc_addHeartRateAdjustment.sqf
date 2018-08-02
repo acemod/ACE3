@@ -12,6 +12,7 @@
  * Return Value:
  * None
  */
+
 params ["_unit", "_change", "_timeToMaxEffect", "_maxTimeInSystem"];
 
 private _adjustments = _unit getVariable [VAR_HEART_RATE_ADJ,[]];

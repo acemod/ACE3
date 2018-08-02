@@ -11,7 +11,6 @@
  *
  * Public: No
  */
-
 // for travis
 #define HIT_STRUCTURAL QGVAR($#structural)
 #define HIT_CRASH QGVAR($#crash)
