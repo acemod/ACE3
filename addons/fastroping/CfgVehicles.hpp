@@ -50,11 +50,40 @@ class CfgVehicles {
                 statement = QUOTE([vehicle _player] call FUNC(stowFRIES));
                 showDisabled = 0;
             };
-            class ACE_deployRopes {
-                displayName = CSTRING(Interaction_deployRopes);
-                condition = QUOTE([ARR_2(_player, vehicle _player)] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [vehicle _player])] call CBA_fnc_serverEvent);
+            class ACE_deployRopes12 {
+                displayName = CSTRING(Interaction_deployRopes12);
+                condition = (('ACE_rope12' in (backpackItems _player)) || ('ACE_rope12' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
+                statement = [QGVAR(deployRopes), [vehicle _player, 12]] call CBA_fnc_serverEvent;
                 showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_deployRopes15 {
+                displayName = CSTRING(Interaction_deployRopes15);
+                condition = (('ACE_rope15' in (backpackItems _player)) || ('ACE_rope15' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
+                statement = [QGVAR(deployRopes), [vehicle _player, 15]] call CBA_fnc_serverEvent;
+                showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_deployRopes18 {
+                displayName = CSTRING(Interaction_deployRopes18);
+                condition = (('ACE_rope18' in (backpackItems _player)) || ('ACE_rope18' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
+                statement = [QGVAR(deployRopes), [vehicle _player, 18]] call CBA_fnc_serverEvent;
+                showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_deployRopes27 {
+                displayName = CSTRING(Interaction_deployRopes27);
+                condition = (('ACE_rope27' in (backpackItems _player)) || ('ACE_rope27' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
+                statement = [QGVAR(deployRopes), [vehicle _player, 27]] call CBA_fnc_serverEvent;
+                showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_deployRopes36 {
+                displayName = CSTRING(Interaction_deployRopes36);
+                condition = (('ACE_rope36' in (backpackItems _player)) || ('ACE_rope36' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
+                statement = [QGVAR(deployRopes), [vehicle _player, 36]] call CBA_fnc_serverEvent;
+                showDisabled = 0;
+                priority = 1;
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
@@ -250,6 +279,22 @@ class CfgVehicles {
             class Ramp_Close: CloseDoor_6 {
                 condition = QUOTE([ARR_6(this,'Door_6_source',[[0],[1],[2],[3]])] call FUNC(canCloseRamp));
             };
+        };
+    };
+    class NATO_Box_Base;
+    class ACE_fastropingSupplyCrate: NATO_Box_Base {
+        scope = 2;
+        scopeCurator = 2;
+        accuracy = 1000;
+        displayName = CSTRING(Ropesupply);
+        model = "\A3\Weapons_F\AmmoBoxes\Box_NATO_AmmoVeh_F.p3d";
+        author = ECSTRING(common,ACETeam);
+        class TransportItems {
+            MACRO_ADDITEM(ACE_rope12,15);
+            MACRO_ADDITEM(ACE_rope15,15);
+            MACRO_ADDITEM(ACE_rope18,15);
+            MACRO_ADDITEM(ACE_rope27,15);
+            MACRO_ADDITEM(ACE_rope36,15);
         };
     };
 };
