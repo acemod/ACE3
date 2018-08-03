@@ -96,36 +96,42 @@
             <Chinesesimp>启用宙斯导弹挂架菜单</Chinesesimp>
             <Chinese>啟用派龍架選單給宙斯</Chinese>
             <Italian>Abilita Menù Piloni da Zeus</Italian>
+            <Japanese>Zeus でパイロン メニューを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
             <Chinesesimp>允许启用宙斯模组</Chinesesimp>
             <Chinese>允啟使用宙斯模塊</Chinese>
             <Italian>Abilita l'uso dal modulo di Zeus</Italian>
+            <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
             <Chinesesimp>启用弹药车导弹挂架菜单</Chinesesimp>
             <Chinese>啟用從彈藥卡車使用派龍架選單</Chinese>
             <Italian>Abilita Menù Piloni da mezzi rifornimento munizioni</Italian>
+            <Japanese>弾薬トラックからパイロン メニューを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
             <Chinesesimp>允许在弹药车上启用导弹挂架菜单</Chinesesimp>
             <Chinese>允許從彈藥卡車使用派龍架選單</Chinese>
             <Italian>Abilita l'uso del Menù Piloni da mezzi rifornimento munizioni</Italian>
+            <Japanese>弾薬給弾トラックからパイロン メニューを利用できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
             <Chinesesimp>这架飞机没有导弹挂架</Chinesesimp>
             <Chinese>這架飛機沒有派龍架</Chinese>
             <Italian>Questo aereo non ha piloni</Italian>
+            <Japanese>航空機にパイロンがありません</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
             <Chinesesimp>宙斯模组的导弹挂架已禁用</Chinesesimp>
             <Chinese>宙斯模塊的派龍架設定已被禁用</Chinese>
             <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
+            <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -174,7 +180,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance_description">
             <English>The distance an aircraft needs to be from a rearm vehicle.</English>
-            <Japanese>補給車両から航空機までの必要な距離。</Japanese>
+            <Japanese>航空機と補給車両との間に必要な距離です。</Japanese>
             <Italian>La distanza necessaria per un aereo da un veicolo di riarmo.</Italian>
             <Chinese>設定飛機必須距離整補載具多少公尺才能進行彈藥整補</Chinese>
             <Chinesesimp>设定飞机必须距离整装载具多少公尺才能进行弹药整装。</Chinesesimp>
