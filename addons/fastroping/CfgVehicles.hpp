@@ -52,36 +52,36 @@ class CfgVehicles {
             };
             class ACE_deployRopes12 {
                 displayName = CSTRING(Interaction_deployRopes12);
-                condition = (('ACE_rope12' in (backpackItems _player)) || ('ACE_rope12' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [QGVAR(deployRopes), [vehicle _player, 12]] call CBA_fnc_serverEvent;
+                condition = QUOTE((('ACE_rope12' in (backpackItems _player)) || ('ACE_rope12' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes));
+                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 12]] call CBA_fnc_serverEvent);
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_deployRopes15 {
                 displayName = CSTRING(Interaction_deployRopes15);
-                condition = (('ACE_rope15' in (backpackItems _player)) || ('ACE_rope15' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [QGVAR(deployRopes), [vehicle _player, 15]] call CBA_fnc_serverEvent;
+                condition = QUOTE((('ACE_rope15' in (backpackItems _player)) || ('ACE_rope15' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes));
+                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 15]] call CBA_fnc_serverEvent);
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_deployRopes18 {
                 displayName = CSTRING(Interaction_deployRopes18);
-                condition = (('ACE_rope18' in (backpackItems _player)) || ('ACE_rope18' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [QGVAR(deployRopes), [vehicle _player, 18]] call CBA_fnc_serverEvent;
+                condition = QUOTE((('ACE_rope18' in (backpackItems _player)) || ('ACE_rope18' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes));
+                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 18]] call CBA_fnc_serverEvent);
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_deployRopes27 {
                 displayName = CSTRING(Interaction_deployRopes27);
-                condition = (('ACE_rope27' in (backpackItems _player)) || ('ACE_rope27' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [QGVAR(deployRopes), [vehicle _player, 27]] call CBA_fnc_serverEvent;
+                condition = QUOTE((('ACE_rope27' in (backpackItems _player)) || ('ACE_rope27' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes));
+                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 27]] call CBA_fnc_serverEvent);
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_deployRopes36 {
                 displayName = CSTRING(Interaction_deployRopes36);
-                condition = (('ACE_rope36' in (backpackItems _player)) || ('ACE_rope36' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [QGVAR(deployRopes), [vehicle _player, 36]] call CBA_fnc_serverEvent;
+                condition = QUOTE((('ACE_rope36' in (backpackItems _player)) || ('ACE_rope36' in (ItemCargo vehicle _player))) && [_player, vehicle _player] call FUNC(canDeployRopes));
+                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 36]] call CBA_fnc_serverEvent);
                 showDisabled = 0;
                 priority = 1;
             };
@@ -288,7 +288,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(Ropesupply);
         model = "\A3\Weapons_F\AmmoBoxes\Box_NATO_AmmoVeh_F.p3d";
-        author = ECSTRING(common,ACETeam);
+        author = "Pokertour";
         class TransportItems {
             MACRO_ADDITEM(ACE_rope12,15);
             MACRO_ADDITEM(ACE_rope15,15);
