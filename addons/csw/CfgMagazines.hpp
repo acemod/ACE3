@@ -7,7 +7,7 @@ class CfgMagazines {
         scope = 2;
         type = 256;
         count = 100;
-        mass = 40;
+        mass = 96;
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
         ACE_isBelt = 1;
     };
@@ -28,7 +28,7 @@ class CfgMagazines {
         scope = 2;
         type = 256;
         count = 50;
-        mass = 40;
+        mass = 50;
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
         ACE_isBelt = 1;
     };
@@ -41,7 +41,7 @@ class CfgMagazines {
         scope = 2;
         type = 256;
         count = 20;
-        mass = 40;
+        mass = 96;
         picture = QPATHTOF(UI\ammoBox_50bmg_ca.paa);
         ACE_isBelt = 1;
     };

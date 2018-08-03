@@ -37,7 +37,7 @@ class CfgWeapons {
             deploy = QGVAR(mortarBaseplate);
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 440; // todo
+            mass = 290; // M3A1 baseblate weight
         };
         displayName = CSTRING(mortarBaseplate_displayName);
         author = ECSTRING(common,ACETeam);
@@ -142,7 +142,7 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 910; // M252 Mortar Weight
+            mass = 620; // M252 Mortar Weight
         };
         displayName = CSTRING(StaticMortarBag_displayName);
         author = ECSTRING(common,ACETeam);
