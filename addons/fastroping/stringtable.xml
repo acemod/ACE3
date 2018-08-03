@@ -143,5 +143,89 @@
             <Chinese>讓單位快速繩降</Chinese>
             <Korean>패스트 로프를 놓음</Korean>
         </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
+            <English>Deploy 12m ropes</English>
+            <French>Déployer les cordes 12m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
+            <English>Deploy 15m ropes</English>
+            <French>Déployer les cordes 15m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
+            <English>Deploy 18m ropes</English>
+            <French>Déployer les cordes 18m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
+            <English>Deploy 27m ropes</English>
+            <French>Déployer les cordes 27m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
+            <English>Deploy 36m ropes</English>
+            <French>Déployer les cordes 36m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Ropesupply">
+            <English>[ACE] Ropes Supply crate</English>
+            <French>[ACE] Caisse de Cordes</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_12_Display">
+            <English>Rope 12.2 meters</English>
+            <French>Corde 12.2 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_12_Desc_Short">
+            <English>Fastroping Rope 12.2 meters</English>
+            <French>Corde Fastrope 12.2 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_12_Desc_Use">
+            <English>Used to do a 12.2 meters fastroping.</English>
+            <French>Utilisé pour faire une fastrope de 12.2 mètres.</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_15_Display">
+            <English>Rope 15.2 meters</English>
+            <French>Corde 15.2 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_15_Desc_Short">
+            <English>Fastroping Rope 15.2 meters</English>
+            <French>Corde Fastrope 15.2 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_15_Desc_Use">
+            <English>Used to do a 15.2 meters fastroping.</English>
+            <French>Utilisé pour faire une fastrope de 15.2 mètres.</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_18_Display">
+            <English>Rope 18.3 meters</English>
+            <French>Corde 18.3 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_18_Desc_Short">
+            <English>Fastroping Rope 18.3 meters</English>
+            <French>Corde Fastrope 18.3 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_18_Desc_Use">
+            <English>Used to do a 18.3 meters fastroping.</English>
+            <French>Utilisé pour faire une fastrope de 18.3 mètres.</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_27_Display">
+            <English>Rope 27.4 meters</English>
+            <French>Corde 27.4 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_27_Desc_Short">
+            <English>Fastroping Rope 27.4 meters</English>
+            <French>Corde Fastrope 27.4 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_27_Desc_Use">
+            <English>Used to do a 27.4 meters fastroping.</English>
+            <French>Utilisé pour faire une fastrope de 27.4 mètres.</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_36_Display">
+            <English>Rope 36.6 meters</English>
+            <French>Corde 36.6 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_36_Desc_Short">
+            <English>Fastroping Rope 36.6 meters</English>
+            <French>Corde Fastrope 36.6 mètres</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_36_Desc_Use">
+            <English>Used to do a 36.6 meters fastroping.</English>
+            <French>Utilisé pour faire une fastrope de 36.6 mètres.</French>
+        </Key>
     </Package>
 </Project>
