@@ -16,9 +16,9 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0.0005;
-            maxDeflection = 0.01;
-            incDeflection = 0.005;
+            minDeflection = 0;
+            maxDeflection = 0.002;
+            incDeflection = 0.001;
 
             canVanillaLock = 0;
 
@@ -49,9 +49,9 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0.0005;
-            maxDeflection = 0.01;
-            incDeflection = 0.005;
+            minDeflection = 0;
+            maxDeflection = 0.002;
+            incDeflection = 0.001;
 
             canVanillaLock = 0;
 

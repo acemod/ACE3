@@ -33,7 +33,7 @@
             <Polish>Aktywuje efekt samozapłonu amunicji na zniszczonych pojazdach.</Polish>
             <French>Active le cook-off (autocombustion des munitions) et les effets de destruction liés.</French>
             <Italian>Abilita l'esplosione e i relativi effetti di distruzione del veicolo.</Italian>
-            <Chinese>開啟此功能後，將使有關載具在損毀時有殉爆的效果。</Chinese>
+            <Chinese>開啟此功能後，將使有關載具在損毀時有殉爆的效果</Chinese>
             <Chinesesimp>开启此功能后，将使有关载具在损毁时有殉爆的效果。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
@@ -92,7 +92,7 @@
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
             <French>Mets à feu les munitions lorsqu'un véhicule est en feu et contient des munitions.</French>
             <Italian>Abilita l'esplosione delle munizioni. Spara munizioni di proiettili quando il veicolo va a fuoco e contiene munizioni.</Italian>
-            <Chinese>開啟彈藥殉爆效果。當一台載有彈藥的載具起火時, 將會有殉爆的效果。</Chinese>
+            <Chinese>開啟彈藥殉爆效果。當一台載有彈藥的載具起火時, 將會有殉爆的效果</Chinese>
             <Chinesesimp>开启弹药殉爆效果。当一台载有弹药的载具起火时, 将会有殉爆的效果。</Chinesesimp>
             <Korean>쿡오프 현상을 활성화 합니다. 이것은 탄약에 불이 붙어있는 동안 주변에 발사체를 발사합니다.</Korean>
         </Key>
@@ -112,7 +112,7 @@
             <German>Faktor für die Munitionsdurchzündungsdauer [0 zum Deaktivieren]</German>
             <French>Multiplicateur de la durée du cook-off des munitions [Une valeur de 0 désactive l'effet]</French>
             <Polish>Mnożnik decydujący jak długo ma trwać samozapłon amunicji [Ustawienie na 0 spowoduje wyłącznie samozapłonu]</Polish>
-            <Japanese>誘爆の持続時間を乗数で設定。[0 に設定で誘爆を無効化]</Japanese>
+            <Japanese>誘爆の持続時間を乗数で設定します。[0 に設定で誘爆を無効化]</Japanese>
             <Italian>Moltiplicatore della durata dell'esplosione [Impostare 0 disabiliterà l'esplosione delle munizioni]</Italian>
             <Chinese>設定彈藥殉爆效果會持續多久時間 [輸入0來關閉殉爆效果]</Chinese>
             <Chinesesimp>设定弹药殉爆效果会持续多久时间 [输入0来关闭殉爆效果]</Chinesesimp>
@@ -131,7 +131,7 @@
             <Japanese>誘爆する可能性の乗数。高い値では誘爆する可能性が高まります。</Japanese>
             <Italian>Moltiplicatore per la probabilità dell'esplosione. Un valore più alto aumenta la probabilità dell'esplosione</Italian>
             <German>Faktor für Wahrscheinlichkeit der Durchzündung. Ein höherer Wert führt zu höherer Durchzündungswahrscheinlichkeit.</German>
-            <Chinese>調整殉爆發生機率係數。值越高代表越容易發生殉爆。</Chinese>
+            <Chinese>調整殉爆發生機率係數。值越高代表越容易發生殉爆</Chinese>
             <Chinesesimp>调整殉爆发生机率系数。值越高代表越容易发生殉爆。</Chinesesimp>
         </Key>
     </Package>

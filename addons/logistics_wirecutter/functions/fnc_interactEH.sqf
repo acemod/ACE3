@@ -1,9 +1,10 @@
 /*
- * Author: PabstMirror
- * When interact_menu starts rendering (from "interact_keyDown" event)
+ * Author: PabstMirror, mharis001
+ * Dynamically adds "Cut Fence" actions to nearby fences when interact_menu is opened.
+ * Called by the "ace_interactMenuOpened" event.
  *
  * Arguments:
- * Interact Menu Type (0 - world, 1 - self) <NUMBER>
+ * Interact Menu Type (0 - World, 1 - Self) <NUMBER>
  *
  * Return Value:
  * None
@@ -11,65 +12,69 @@
  * Example:
  * [0] call ace_logistics_wirecutter_fnc_interactEH
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
 params ["_interactionType"];
 
-//Ignore self-interaction menu or mounted vehicle interaction
-if ((_interactionType != 0) || {(vehicle ACE_player) != ACE_player}) exitWith {};
+// Ignore self-interaction menu or mounted vehicle interaction
+// For performance reasons only add PFH if player has wirecutter item
+// If player somehow gets a wirecutter during keyDown, they will just have to reopen menu
+if (
+    _interactionType != 0
+    || {vehicle ACE_player != ACE_player}
+    || {!HAS_WIRECUTTER(ACE_player)}
+) exitWith {};
 
-//for performance only do stuff it they have a wirecutter item
-//(if they somehow get one durring keydown they'll just have to reopen)
-if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
-
-TRACE_1("Starting wire-cut action PFEH",_interactionType);
+TRACE_1("Starting wirecuter interact PFH",_interactionType);
 
 [{
-    params ["_args", "_pfID"];
+    BEGIN_COUNTER(interactEH);
+    params ["_args", "_pfhID"];
     _args params ["_setPosition", "_addedHelpers", "_fencesHelped"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
-        {deleteVehicle _x; nil} count _addedHelpers;
-        [_pfID] call CBA_fnc_removePerFrameHandler;
+        {deleteVehicle _x} forEach _addedHelpers;
+        [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
-        // Prevent Rare Error when ending mission with interact key down:
-        if (isNull ace_player) exitWith {};
+        // Prevent rare error when ending mission with interact key down
+        if (isNull ACE_player) exitWith {};
 
-        //If player moved >5 meters from last pos, then rescan
-        if (((getPosASL ace_player) distance _setPosition) > 5) then {
-
+        // Rescan if player has moved more than 5 meters from last position
+        if (getPosASL ACE_player distanceSqr _setPosition > 25) then {
             private _fncStatement = {
                 params ["", "_player", "_attachedFence"];
+
                 [_player, _attachedFence] call FUNC(cutDownFence);
             };
             private _fncCondition = {
                 params ["_helper", "_player", "_attachedFence"];
-                if (!([_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith))) exitWith {false};
-                ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))} && {
-                    //Custom LOS check for fence
-                    private _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
-                    ((!(lineIntersects [AGLtoASL _headPos, AGLtoASL (_helper modelToWorldVisual [0,0,1.25]), _attachedFence, ACE_player])) ||
-                    {!(lineIntersects [AGLtoASL _headPos, getPosASL _attachedFence, _attachedFence, ACE_player])})
-                })
+
+                !isNull _attachedFence
+                && {damage _attachedFence < 1}
+                && {HAS_WIRECUTTER(_player)}
+                && {[_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+                && {
+                    // Custom LOS check for fence
+                    private _headPos = AGLtoASL (_player modelToWorldVisual (_player selectionPosition "pilot"));
+                    !lineIntersects [_headPos, AGLtoASL (_helper modelToWorldVisual [0, 0, 1.25]), _attachedFence, _player]
+                    || {!lineIntersects [_headPos, getPosASL _attachedFence, _attachedFence, _player]}
+                }
             };
-
             {
-                if (!(_x in _fencesHelped)) then {
-                    if ([_x] call FUNC(isFence)) then {
-                        _fencesHelped pushBack _x;
-                        private _helper = "ACE_LogicDummy" createVehicleLocal (getpos _x);
-                        private _action = [QGVAR(helperCutFence), (localize LSTRING(CutFence)), QPATHTOF(ui\wirecutter_ca.paa), _fncStatement, _fncCondition, {}, _x, {[0,0,0]}, 5.5, [false, false, false, false, true]] call EFUNC(interact_menu,createAction);
-                        [_helper, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
-                        _helper setPosASL ((getPosASL _x) vectorAdd [0,0,1.25]);
-                        _addedHelpers pushBack _helper;
-                    };
+                if (!(_x in _fencesHelped) && {_x call FUNC(isFence)}) then {
+                    _fencesHelped pushBack _x;
+                    private _helper = "ACE_LogicDummy" createVehicleLocal [0, 0, 0];
+                    private _action = [QGVAR(helperCutFence), localize LSTRING(CutFence), QPATHTOF(ui\wirecutter_ca.paa), _fncStatement, _fncCondition, {}, _x, {[0, 0, 0]}, 5.5, [false, false, false, false, true]] call EFUNC(interact_menu,createAction);
+                    [_helper, 0, [], _action] call EFUNC(interact_menu,addActionToObject);
+                    _helper setPosASL (getPosASL _x vectorAdd [0, 0, 1.25]);
+                    _addedHelpers pushBack _helper;
                 };
-                nil
-            } count nearestObjects [ace_player, [], 15];
+            } forEach nearestObjects [ACE_player, [], 15];
 
-            _args set [0, (getPosASL ace_player)];
+            _args set [0, getPosASL ACE_player];
         };
     };
-}, 0.1, [((getPosASL ace_player) vectorAdd [-100,0,0]), [], []]] call CBA_fnc_addPerFrameHandler;
+    END_COUNTER(interactEH);
+}, 0.5, [getPosASL ACE_player vectorAdd [-100, 0, 0], [], []]] call CBA_fnc_addPerFrameHandler;

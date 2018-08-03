@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_NightVision_Category">
             <English>ACE Nightvision</English>
             <Japanese>ACE 暗視装置</Japanese>
-            <Italian>Visione notturna ACE</Italian>
+            <Italian>ACE Visione notturna</Italian>
             <German>ACE-Nachtsicht</German>
             <Chinese>ACE夜視鏡</Chinese>
             <Chinesesimp>ACE夜视镜</Chinesesimp>
@@ -210,10 +210,10 @@
             <Italian>Impostazioni per visione notturna.</Italian>
             <Spanish>Parámetros para visión nocturna</Spanish>
             <French>Réglage pour la vision nocturne</French>
-            <Japanese>暗視装置の設定。</Japanese>
+            <Japanese>暗視装置の設定をします。</Japanese>
             <Korean>야간투시경 설정</Korean>
             <Chinesesimp>设定夜视选项.</Chinesesimp>
-            <Chinese>設定夜視選項.</Chinese>
+            <Chinese>設定夜視選項</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
@@ -240,10 +240,10 @@
             <Italian>Blocca l'uso di visori notturni mentre miri con ottiche.</Italian>
             <Spanish>Desactiva el uso de gafas visión nocturna cuando se utilizan miras normales.</Spanish>
             <French>Bloque l'usage des JVN pendant la visée.</French>
-            <Japanese>スコープを使い狙いを付けると、暗視装置を無効化します。</Japanese>
+            <Japanese>スコープで狙いを付けると、暗視装置を無効化します。</Japanese>
             <Korean>조준시 야투경의 사용을 제한합니다.</Korean>
             <Chinesesimp>此功能开启后，当要使用瞄准镜时，为避免夜视镜镜头碰撞到瞄准镜，会先拿开夜视镜后再进行瞄准镜瞄准。</Chinesesimp>
-            <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準。</Chinese>
+            <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_DisplayName">
             <English>NVG Fog Scale</English>
@@ -258,7 +258,7 @@
             <Japanese>霧は視界制限のために使われます。</Japanese>
             <Italian>La nebbia viene utilizzata per limitare la visibilità.</Italian>
             <German>Nebel wird genutzt, um die Sichtbarkeit einzuschränken.</German>
-            <Chinese>透過霧氣來縮減夜視鏡的可視距離。</Chinese>
+            <Chinese>透過霧氣來縮減夜視鏡的可視距離</Chinese>
             <Chinesesimp>透过雾气来缩减夜视镜的可视距离。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
@@ -279,7 +279,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
-            <Japanese>照準器を使用時にぼかし</Japanese>
+            <Japanese>照準器を覗く時にぼかし</Japanese>
             <German>Visierunschärfe</German>
             <Chinese>瞄準具模糊程度</Chinese>
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
@@ -289,18 +289,26 @@
             <German>Intensität des Bildrauschens</German>
             <Chinese>夜視鏡雜訊程度</Chinese>
             <Chinesesimp>夜视镜杂讯程度</Chinesesimp>
+            <Japanese>暗視装置のノイズ度</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
             <German>Intensität des Bildrauschens im Nachtsichtgerät</German>
             <Chinese>調整配戴夜視鏡時畫面雜訊的多寡。</Chinese>
             <Chinesesimp>调整配戴夜视镜时画面杂讯的多寡。</Chinesesimp>
+            <Japanese>暗視装置を使用時に起きる画像ノイズの強度です</Japanese>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
+            <Japanese>シャッター効果</Japanese>
+            <Chinesesimp>快门效果</Chinesesimp>
+            <Chinese>快門效果</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
+            <Japanese>発射炎が作るローリング シャッター効果です</Japanese>
+            <Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
+            <Chinese>槍開火時瞬間產生快門效果</Chinese>
         </Key>
     </Package>
 </Project>

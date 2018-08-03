@@ -511,7 +511,7 @@
             <Japanese>アイテム上で表示されるデータ量を決定します。設定を減らすと地図上での情報が少なくなります。</Japanese>
             <Korean>MicroDAGR에 얼마나 많은 데이터가 들어있는지 정합니다. 적을 수록 지도상에도 비춰지는게 적어집니다.</Korean>
             <Chinesesimp>设定有多少数据会显示在微型军用GPS接收器上。这些资料的多寡会反映在迷你地图的显示上。</Chinesesimp>
-            <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上。這些資料的多寡會反映在迷你地圖的顯示上。</Chinese>
+            <Chinese>設定有多少數據會顯示在微型軍用GPS接收器上。這些資料的多寡會反映在迷你地圖的顯示上</Chinese>
         </Key>
     </Package>
 </Project>

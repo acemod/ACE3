@@ -37,7 +37,11 @@ private _recurseFnc = {
             private _distance = _parentDistance;
             if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
             // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3", configName _entryCfg, _distance, _parentDistance);};
-            private _icon = getText (_entryCfg >> "icon");
+            private _icon = if (isArray (_entryCfg >> "icon")) then {
+                getArray (_entryCfg >> "icon");
+            } else {
+                [getText (_entryCfg >> "icon"), "#FFFFFF"];
+            };
             private _statement = compile (getText (_entryCfg >> "statement"));
 
             // If the position entry is present, compile it

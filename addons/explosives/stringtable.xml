@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -122,7 +122,7 @@
             <Italian>Bloccato</Italian>
             <German>Blockiert</German>
             <French>Bloqué</French>
-            <Japanese>取り付けできない</Japanese>
+            <Japanese>取り付け不可</Japanese>
             <Korean>막힘</Korean>
             <Chinesesimp>断开</Chinesesimp>
             <Chinese>斷開</Chinese>
@@ -698,7 +698,7 @@
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
             <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
-            <Japanese>点火装置を離すと遠隔で起爆したいときに使います。</Japanese>
+            <Japanese>点火装置を遠隔から離すと起爆したいときに使います。</Japanese>
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
             <Chinesesimp>当放开按钮时, 将会引爆炸弹.</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
@@ -842,7 +842,7 @@
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
             <Italian>Questo modulo cambia le impostazioni relative agli esplosivi</Italian>
-            <Japanese>このモジュールを調節し爆発物に設定を反映させます。</Japanese>
+            <Japanese>モジュールを調節し爆発物に設定を反映させます。</Japanese>
             <Korean>이 모듈은 폭발물에 관한 설정을 수정할 수 있게합니다.</Korean>
             <Chinesesimp>此模块用来调整炸药的相关设定</Chinesesimp>
             <Chinese>此模塊用來調整炸藥的相關設定</Chinese>
@@ -1022,6 +1022,10 @@
         <Key ID="STR_ACE_Explosives_statExploRange">
             <English>Explosive range</English>
             <French>Portée du détonateur</French>
+            <Japanese>爆発範囲</Japanese>
+            <Chinesesimp>爆炸范围</Chinesesimp>
+            <Chinese>爆炸範圍</Chinese>
+            <Italian>Raggio di detonazione</Italian>
         </Key>
     </Package>
 </Project>

@@ -33,13 +33,7 @@ call FUNC(compileStats);
     };
 
     {
-        private _currentPage = _x;
-
-        {
-            if (_x select 0 == _currentID) then {
-                _currentPage deleteAt _forEachIndex;
-            };
-        } foreach _currentPage;
+        _x deleteAt (_x findIf {_x select 0 == _currentID});
     } foreach _tabToChange;
 } foreach _IDList;
 

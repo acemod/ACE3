@@ -9,7 +9,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
                     showDisabled = 0;
-                    priority = 2.5;
                     icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
                 };
                 class ACE_RemoveEarplugs {
@@ -18,7 +17,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
                     showDisabled = 0;
-                    priority = 2.5;
                     icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
                 };
             };

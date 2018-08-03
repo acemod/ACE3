@@ -17,7 +17,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkDogtag));
                     exceptions[] = {"isNotSwimming", "isNotInside"};
                     showDisabled = 0;
-                    priority = 3;
                     icon = QPATHTOF(data\dogtag_icon_ca.paa);
                 };
                 class ACE_TakeDogtag {
@@ -26,7 +25,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeDogtag));
                     exceptions[] = {"isNotSwimming", "isNotInside"};
                     showDisabled = 0;
-                    priority = 3;
                     icon = QPATHTOF(data\dogtag_icon_ca.paa);
                 };
             };

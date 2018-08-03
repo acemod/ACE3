@@ -41,7 +41,7 @@
             <Czech>Povolit klientům používat zdravotnickou nabídku</Czech>
             <Italian>Consenti ai clients di usare il Menù Medico</Italian>
             <French>Autoriser les clients à utiliser le menu médical</French>
-            <Japanese>すべてのクライアントが治療メニューをつかえるようにする</Japanese>
+            <Japanese>全クライアントが治療メニューを使えるようにします</Japanese>
             <Korean>클라이언트가 의료 메뉴를 쓰는것을 허락합니다</Korean>
             <Chinesesimp>允许客户端使用医疗选单</Chinesesimp>
             <Chinese>允許客戶端使用醫療選單</Chinese>
@@ -56,7 +56,7 @@
             <Czech>Použít zdravotnickou nabídku</Czech>
             <Italian>Usa Menù Medico</Italian>
             <French>Utiliser le menu médical</French>
-            <Japanese>治療メニューをつかう</Japanese>
+            <Japanese>治療メニューを使う</Japanese>
             <Korean>의료 메뉴 사용</Korean>
             <Chinesesimp>使用医疗选单</Chinesesimp>
             <Chinese>使用醫療選單</Chinese>
@@ -71,7 +71,7 @@
             <Czech>Pokud je povoleno serverem, umožní použít zdravotnickou nabídku skrze kláv. zkratku a interakční menu</Czech>
             <Italian>Se consentito dal server, abilita l'opzione di usare il Menù Medico attraverso hotkeys e menù interazione</Italian>
             <French>Si autorisé par le serveur, active l'option d'utiliser le menu médical à travers les raccourcis clavier et le menu d'interaction.</French>
-            <Japanese>サーバーが有効化を許可している場合は、オプションから有効化でき治療メニューはキー割り当てとインタラクション メニューを無視できます</Japanese>
+            <Japanese>サーバーが有効化を許可している場合はオプションから有効化でき、治療メニューはキー割り当てとインタラクション メニューを無視できます</Japanese>
             <Korean>서버 허가하에 단축키와 상호작용 메뉴로 의료 메뉴사용을 허가합니다</Korean>
             <Chinesesimp>如果伺服器允许，只需透过按键即可叫出医疗选单</Chinesesimp>
             <Chinese>如果伺服器允許，只需透過按鍵即可叫出醫療選單</Chinese>
@@ -86,7 +86,7 @@
             <Czech>Znovu otevřít zdravotnickou nabídku</Czech>
             <Italian>Ri-apri Menù Medico</Italian>
             <French>Ré-ouvrir le menu médical</French>
-            <Japanese>治療メニューを再びひらく</Japanese>
+            <Japanese>治療メニューを再び開く</Japanese>
             <Korean>의료 메뉴 다시 열기</Korean>
             <Chinesesimp>重新开启医疗选单</Chinesesimp>
             <Chinese>重新開啟醫療選單</Chinese>
@@ -101,7 +101,7 @@
             <Czech>Znovu otevřít zdravotnickou nabídku po úspěšné léčbě </Czech>
             <Italian>Ri-Apri il Menù Medico dopo un trattamento riuscito</Italian>
             <French>Ré-ouvrir le menu médical après un traitement réussi</French>
-            <Japanese>治療が終わったあと、再び治療メニューをひらく</Japanese>
+            <Japanese>治療が終わった後、再び治療メニューを開きます</Japanese>
             <Korean>성공적으로 치료한후에 의료 메뉴를 다시 엽니다</Korean>
             <Chinesesimp>当治疗成功后重新打开医疗选单</Chinesesimp>
             <Chinese>當治療成功後重新打開醫療選單</Chinese>
@@ -116,7 +116,7 @@
             <Czech>Otevřít zdravotnickou nabídku</Czech>
             <Italian>Apri Menù Medico</Italian>
             <French>Ouvir le menu médical</French>
-            <Japanese>治療メニューをひらく</Japanese>
+            <Japanese>治療メニューを開く</Japanese>
             <Korean>의료 메뉴 열기</Korean>
             <Chinesesimp>开起医疗选单</Chinesesimp>
             <Chinese>開起醫療選單</Chinese>
@@ -146,7 +146,7 @@
             <Czech>Konfigurace využití zdravotnické nabídky</Czech>
             <Italian>Configura l'uso del Menù Medico</Italian>
             <French>Configurer l'utilisation du menu médical</French>
-            <Japanese>治療メニューを使うための設定</Japanese>
+            <Japanese>治療メニュー用の設定</Japanese>
             <Korean>의료 메뉴 사용의 설정</Korean>
             <Chinesesimp>设置医疗选单的使用</Chinesesimp>
             <Chinese>設置醫療選單的使用</Chinese>
@@ -611,7 +611,7 @@
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
-            <Japanese>開いている傷口が %2 %1 ほどあるようだ</Japanese>
+            <Japanese>開いている傷口が %2 %1 ほどあります</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 %2 %1 开放性伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
@@ -641,7 +641,7 @@
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
             <Czech>Je zde částečně %1 otevřená rána</Czech>
             <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
-            <Japanese>部分的に開いている %1 の傷口がある</Japanese>
+            <Japanese>部分的に開いている %1 の傷口があります</Japanese>
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有部分 %1 开放性伤口</Chinesesimp>
             <Chinese>有部分 %1 開放性傷口</Chinese>
@@ -656,7 +656,7 @@
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Bendate</Italian>
-            <Japanese>ここには %2 %1 の処置された傷がある</Japanese>
+            <Japanese>ここには %2 %1 の処置された傷があります</Japanese>
             <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有 %2 %1 包扎过伤口</Chinesesimp>
             <Chinese>有 %2 %1 包紮過傷口</Chinese>
@@ -686,7 +686,7 @@
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
             <Czech>Je zde částěčně %1 ovázaná rána</Czech>
             <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
-            <Japanese>患者には %1 の包帯で処置された傷がある</Japanese>
+            <Japanese>患者には %1 の包帯で処置された傷があります</Japanese>
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有部分 %1 包扎过伤口</Chinesesimp>
             <Chinese>有部分 %1 包紮過傷口</Chinese>
@@ -716,7 +716,7 @@
             <Portuguese>Sem respiração</Portuguese>
             <Czech>Nedýchá</Czech>
             <Italian>Nessuna Respirazione</Italian>
-            <Japanese>息をしていない</Japanese>
+            <Japanese>息をしていません</Japanese>
             <Korean>호흡이 없음</Korean>
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Chinese>沒有呼吸</Chinese>
@@ -731,7 +731,7 @@
             <Portuguese>Dificuldade para respirar</Portuguese>
             <Czech>Potíže s dýcháním</Czech>
             <Italian>Difficoltà Respiratorie</Italian>
-            <Japanese>呼吸が難しそうだ</Japanese>
+            <Japanese>呼吸が難しそうです</Japanese>
             <Korean>호흡 곤란</Korean>
             <Chinesesimp>呼吸困难</Chinesesimp>
             <Chinese>呼吸困難</Chinese>
@@ -746,7 +746,7 @@
             <Portuguese>Quase sem respiração</Portuguese>
             <Czech>Téměř nedýchá</Czech>
             <Italian>Quasi nessuna Respirazione</Italian>
-            <Japanese>ほとんど呼吸していない</Japanese>
+            <Japanese>ほとんど呼吸していません</Japanese>
             <Korean>호흡이 거의 없음</Korean>
             <Chinesesimp>几乎没有呼吸</Chinesesimp>
             <Chinese>幾乎沒有呼吸</Chinese>
@@ -791,7 +791,7 @@
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Czech>Ztratil hodně krve</Czech>
             <Italian>Perso molto Sangue</Italian>
-            <Japanese>大量失血している</Japanese>
+            <Japanese>大量失血しています</Japanese>
             <Korean>많은 피를 흘림</Korean>
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
@@ -828,9 +828,17 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_maxRange">
             <English>Medical Menu maximum range</English>
+            <Japanese>治療メニューの最大範囲</Japanese>
+            <Chinesesimp>医疗菜单最大范围</Chinesesimp>
+            <Chinese>醫療選單最大範圍</Chinese>
+            <Italian>Dirstanza menù medico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_maxRange_Descr">
             <English>Maximum distance from where the Medical Menu can be opened.</English>
+            <Japanese>你可以打开医疗菜单的最大范围</Japanese>
+            <Chinese>醫療選單可以開啟的最大距離</Chinese>
+            <Chinesesimp>医疗选单可以开启的最大距离</Chinesesimp>
+            <Italian>Massima distanza dalla quale si può aprire il menù medico.</Italian>
         </Key>
     </Package>
 </Project>

@@ -275,12 +275,18 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
+            <Chinese>編輯模式</Chinese>
+            <Italian>Modalità per editare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
+            <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
+            <Chinese>新增物件</Chinese>
+            <Italian>Aggiungi Oggetti</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -953,13 +959,18 @@
             <French>Cargo :</French>
             <Russian>Груз:</Russian>
             <Czech>Náklad:</Czech>
-            <Japanese>カーゴ: </Japanese>
+            <Japanese>カーゴ:</Japanese>
             <Polish>Ładunek:</Polish>
             <German>Ladung:</German>
             <Korean>화물:</Korean>
             <Italian>Cargo:</Italian>
             <Chinesesimp>货物:</Chinesesimp>
             <Chinese>貨物:</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_SelectCargo">
+            <English>Select cargo to unload</English>
+            <Chinese>選擇要卸載的貨物</Chinese>
+            <Italian>Scegli il carico da scaricare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1072,9 +1083,17 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
+            <Japanese>目標を切り替え</Japanese>
+            <Chinesesimp>切换目标</Chinesesimp>
+            <Chinese>切換目標</Chinese>
+            <Italian>Scambia obiettivo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
+            <Japanese>ユニットは切り替えに影響を受けます</Japanese>
+            <Chinesesimp>被选单位受切换影响</Chinesesimp>
+            <Chinese>受切換所影響的單位</Chinese>
+            <Italian>Unità influenzate dallo scambio</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1286,7 +1305,7 @@
             <German>Vollständige Heilung</German>
             <Hungarian>Teljes gyógyítás</Hungarian>
             <Italian>Guarigione completa</Italian>
-            <Japanese>フルヒール</Japanese>
+            <Japanese>完全に回復</Japanese>
             <Korean>완전 치유</Korean>
             <Polish>Pełne uleczenie</Polish>
             <Portuguese>Cura completa</Portuguese>
@@ -1318,7 +1337,7 @@
             <German>Aktivierungsseite</German>
             <Hungarian>Aktiválási oldal</Hungarian>
             <Italian>Lato di attivazione</Italian>
-            <Japanese>アクティベーションサイド</Japanese>
+            <Japanese>対象陣営</Japanese>
             <Korean>활성화면</Korean>
             <Polish>Strona aktywacji</Polish>
             <Portuguese>Lado de ativação</Portuguese>
@@ -1366,7 +1385,7 @@
             <German>Automatische Suche</German>
             <Hungarian>Automatikus keresés</Hungarian>
             <Italian>Ricerca automatica</Italian>
-            <Japanese>オートシーク</Japanese>
+            <Japanese>自動誘導</Japanese>
             <Korean>자동 탐색</Korean>
             <Polish>Auto Seek</Polish>
             <Portuguese>Busca automática</Portuguese>
@@ -1375,14 +1394,14 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek_tooltip">
             <English>Unit will actively try to find and move towards nearby units of the activation side. The range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.</English>
-            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米。</Chinese>
+            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
             <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
             <Czech>Jednotka se bude aktivně snažit najít a přejít na blízké jednotky na straně aktivace. Rozsah Auto Seek je založen na dovednosti spotové vzdálenosti jednotky s minimem 100 metrů.</Czech>
             <French>L'unité essayera activement de trouver et de se déplacer vers les unités à proximité du côté d'activation. La portée d'Auto Seek est basée sur la compétence de distance de l'unité avec un minimum de 100 mètres.</French>
             <German>Die Einheit versucht aktiv, in der Nähe befindliche Einheiten der Aktivierungsseite zu finden und sich dorthin zu bewegen. Der Bereich der automatischen Suche basiert auf der Fähigkeit der Zielentfernung der Einheit mit einer Mindestentfernung von 100 Metern.</German>
             <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
             <Italian>L'unità cercherà attivamente di trovare e spostarsi verso le unità vicine del lato di attivazione. La gamma di Auto Seek si basa sull'abilità a distanza spot dell'unità con un minimo di 100 metri.</Italian>
-            <Japanese>ユニットはアクティベーション側の近くのユニットを見つけて移動しようと積極的に試みます。オートシークの範囲は、ユニットのスポット距離のスキルに基づいており、最低100メートルです。</Japanese>
+            <Japanese>対象陣営ユニットを見つけて移動しようと積極的に試みます。自動誘導の範囲は、ユニットの索敵能力に基づいており、最低100メートルです。</Japanese>
             <Korean>유닛은 액티브 측의 근접 유닛을 향해 적극적으로 찾아서 이동하려고 시도합니다. 자동 시크의 범위는 유닛의 스팟 거리 스킬을 기준으로 최소 100 미터입니다.</Korean>
             <Polish>Jednostka będzie aktywnie próbowała znaleźć i ruszyć w kierunku pobliskich jednostek strony aktywacji. Zasięg Auto Seek opiera się na umiejętności punktowej odległości jednostki z minimum 100 metrów.</Polish>
             <Portuguese>A unidade tentará ativamente encontrar e se mover para as unidades próximas do lado da ativação. O alcance da Auto Seek é baseado na habilidade de distância do ponto da unidade com um mínimo de 100 metros.</Portuguese>
@@ -1398,7 +1417,7 @@
             <German>Klein</German>
             <Hungarian>Kicsi</Hungarian>
             <Italian>Piccolo</Italian>
-            <Japanese>小さい</Japanese>
+            <Japanese>小</Japanese>
             <Korean>작은</Korean>
             <Polish>Mały</Polish>
             <Portuguese>Pequeno</Portuguese>
@@ -1446,7 +1465,7 @@
             <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
             <Italian>L'unità è già un kamikaze</Italian>
-            <Japanese>ユニットはすでに自爆テロである</Japanese>
+            <Japanese>すでに自爆ユニットです</Japanese>
             <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
             <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
             <Portuguese>A unidade já é um suicida</Portuguese>
@@ -1455,9 +1474,17 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
             <English>Add full ACE Arsenal</English>
+            <Japanese>ACE 武器庫を追加</Japanese>
+            <Chinesesimp>添加ACE模式军火库</Chinesesimp>
+            <Chinese>增加完整的ACE軍火庫</Chinese>
+            <Italian>Aggiungi l'arsenale ACE completo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
+            <Japanese>ACE 武器庫を削除</Japanese>
+            <Chinesesimp>删除ACE模式军火库</Chinesesimp>
+            <Chinese>移除ACE軍火庫</Chinese>
+            <Italian>Rimuovi l'arsenale ACE</Italian>
         </Key>
     </Package>
 </Project>

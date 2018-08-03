@@ -47,7 +47,7 @@
             <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
             <Korean>높이와, 하강속도 그리고 시간을 보여줍니다.</Korean>
             <Chinesesimp>用于显示高度，下降率和时间。</Chinesesimp>
-            <Chinese>用於顯示高度，下降率和時間。</Chinese>
+            <Chinese>用於顯示高度，下降率和時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -108,9 +108,9 @@
         <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
             <English>Hides the altitude and speed shown while free falling or parachuting.</English>
             <German>Blendet den Höhen- und Geschwindigkeitsmesser während des Fallschirmspringens aus.</German>
-            <Japanese>自由降下時かパラシュート中に高度と速度を非表示にします。</Japanese>
+            <Japanese>自由降下時とパラシュート中に高度と速度を非表示にします。</Japanese>
             <Italian>Nasconde l'altitudine e la velocità mostrate durante la caduta libera o paracadutandosi.</Italian>
-            <Chinese>在自由落體時或開傘下隱藏自由落體高度計。</Chinese>
+            <Chinese>在自由落體時或開傘下隱藏自由落體高度計</Chinese>
             <Chinesesimp>在自由落体时或开伞下隐藏自由落体高度计。</Chinesesimp>
         </Key>
     </Package>

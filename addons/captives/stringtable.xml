@@ -85,7 +85,7 @@
             <Portuguese>Você deve tomá-lo como prisioneiro primeiro!</Portuguese>
             <Hungarian>Először foglyul kell ejtened őt!</Hungarian>
             <Russian>Вы должны сначала взять его в плен!</Russian>
-            <Japanese>あなたは先に捕虜を取る必要があります。</Japanese>
+            <Japanese>捕虜を取っている必要があります!</Japanese>
             <Korean>먼저 포로로 만들어야합니다!</Korean>
             <Chinese>你必須先逮捕他!</Chinese>
             <Chinesesimp>你必须先逮捕他!</Chinesesimp>
@@ -441,7 +441,7 @@
             <German>Nimmt die Einheit unter dem Cursor fest.</German>
             <Japanese>カーソル先のユニットを拘束</Japanese>
             <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
-            <Chinese>設置在游標下的單位成俘虜狀態。</Chinese>
+            <Chinese>設置在游標下的單位成俘虜狀態</Chinese>
             <Chinesesimp>设置在游标下的单位成俘虏状态。</Chinesesimp>
             <Korean>커서의 병력을 포박합니다.</Korean>
         </Key>
@@ -459,7 +459,7 @@
             <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
             <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
             <Japanese>AI の拘束は AI が投降している場合に限り可能にします。</Japanese>
-            <Chinese>在逮捕AI之前該AI必須先進入投降狀態。</Chinese>
+            <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在逮捕AI之前该AI必须先进入投降状态。</Chinesesimp>
             <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>
         </Key>

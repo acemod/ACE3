@@ -81,7 +81,7 @@
             <Czech>Částicové efekty přehřívání pro všechny</Czech>
             <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
             <Russian>Эффект частиц при перегреве для всех</Russian>
-            <Japanese>過熱の視覚表現を全体に与えます</Japanese>
+            <Japanese>過熱の視覚表現を全員に与えます</Japanese>
             <Korean>모두에게 과열 입자 효과 적용</Korean>
             <Chinesesimp>显示其他玩家的枪管过热特效</Chinesesimp>
             <Chinese>顯示其他玩家的槍管過熱特效</Chinese>
@@ -126,7 +126,7 @@
             <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
             <Russian>Перегретое оружие будет менее точным, а дульная скорость будет снижена. Применяется ко всем игрокам.</Russian>
             <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
-            <Japanese>過熱は精度を減少させたり、初速を低下させます、これは全プレイヤに適用します。</Japanese>
+            <Japanese>過熱は精度を減少させたり、初速を低下させます。これは全プレイヤに適用します。</Japanese>
             <Korean>무기 과열시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
             <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况。适用于所有玩家</Chinesesimp>
             <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
@@ -218,7 +218,7 @@
             <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
             <Portuguese>Use para trocar o cano/estriamento.</Portuguese>
             <Italian>Usata per cambiare la canna.</Italian>
-            <Japanese>予備銃身に交換する。</Japanese>
+            <Japanese>予身の交換に使用します。</Japanese>
             <Korean>총열을 바꿀때 사용합니다.</Korean>
             <Chinesesimp>用来更换枪管</Chinesesimp>
             <Chinese>用來更換槍管</Chinese>
@@ -266,7 +266,7 @@
             <Hungarian>Akadás elhárítva</Hungarian>
             <Portuguese>Arma destravada</Portuguese>
             <Italian>Arma pronta al fuoco</Italian>
-            <Japanese>弾詰りが除去された</Japanese>
+            <Japanese>弾詰りが除去されました</Japanese>
             <Korean>탄걸림 해결됨</Korean>
             <Chinesesimp>卡弹已清除</Chinesesimp>
             <Chinese>卡彈已清除</Chinese>
@@ -281,7 +281,7 @@
             <Czech>Zbrań se nepodařilo uvolnit</Czech>
             <Portuguese>Falha no desemperramento</Portuguese>
             <Russian>Не удалось исправить клин</Russian>
-            <Japanese>弾詰りの除去に失敗した</Japanese>
+            <Japanese>弾詰りの除去に失敗しました</Japanese>
             <Korean>탄걸림 해결 실패</Korean>
             <Chinesesimp>卡弹未能清除</Chinesesimp>
             <Chinese>卡彈未能清除</Chinese>
@@ -329,7 +329,7 @@
             <Hungarian>Cső kicserélve</Hungarian>
             <Portuguese>Cano substituído</Portuguese>
             <Italian>Canna sostituita</Italian>
-            <Japanese>銃身を交換した</Japanese>
+            <Japanese>銃身を交換しました</Japanese>
             <Korean>교체된 총열</Korean>
             <Chinesesimp>完成换枪管</Chinesesimp>
             <Chinese>完成換槍管</Chinese>
