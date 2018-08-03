@@ -263,8 +263,8 @@ Right tabs:
 
 All are local.
 
-| Name  | Arguments |
-| ------------- | ------------- |
+| Name  | Arguments | Added in |
+| ------------- | ------------- | ------------- |
 | ace_arsenal_displayOpened | Arsenal display (DISPLAY) |
 | ace_arsenal_displayClosed | None |
 | ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
@@ -276,7 +276,7 @@ All are local.
 | ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (BOOL), shiftState (BOOL) |
 | ace_arsenal_loadoutImported | Arsenal display (DISPLAY), (import list (BOOL) |
 | ace_arsenal_loadoutExported | Arsenal display (DISPLAY), export list (BOOL) |
-| ace_arsenal_loadoutsDisplayOpened | loadouts screen display (DISPLAY) |
-| ace_arsenal_loadoutsDisplayClosed | None |
-| ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) |
-| ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) |
+| ace_arsenal_loadoutsDisplayOpened | loadouts screen display (DISPLAY) | 3.12.3 |
+| ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
+| ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
