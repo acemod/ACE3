@@ -221,16 +221,6 @@ class CfgWeapons {
             mass = 2;
         };
     };
-    class ACE_medKit: ACE_ItemCore {
-        scope = 2;
-        displayName = CSTRING(Med_Kit_Display);
-        picture = QPATHTOF(ui\items\personal_aid_kit_x_ca.paa); // todo: new picture
-        descriptionShort = CSTRING(Med_Kit_Desc_Short);
-        descriptionUse = CSTRING(Med_Kit_Desc_Use);
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 10;
-        };
-    };
     class ACE_personalAidKit: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);

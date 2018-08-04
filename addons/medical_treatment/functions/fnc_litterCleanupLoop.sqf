@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain
  * Loop that cleans up litter
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * call ACE_medical_fnc_litterCleanupLoop
+ * call ACE_medical_treatment_fnc_litterCleanupLoop
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 {
     _x params ["_time", "_objects"];

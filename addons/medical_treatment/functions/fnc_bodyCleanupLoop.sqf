@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain
  * Loop that cleans up player bodies that were replaced by bodybags
@@ -9,12 +10,10 @@
  * None
  *
  * Example:
- * call ACE_medical_fnc_bodyCleanupLoop
+ * call ACE_medical_treatment_fnc_bodyCleanupLoop
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 {
     TRACE_2("body",_x,isPlayer _x);

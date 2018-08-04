@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Check if a unit is any medical class
@@ -15,8 +16,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_unit", ["_medicN", 1]];
 
 private _class = _unit getVariable [QEGVAR(medical,medicClass), [0, 1] select (_unit getUnitTrait "medic")];
@@ -28,4 +27,4 @@ if (([_unit] call FUNC(isInMedicalVehicle)) || {[_unit] call FUNC(isInMedicalFac
     _class = _class + 1; //boost by one: untrained becomes medic, medic becomes doctor
 };
 
-_class >= _medicN min EGVAR(medical,medicSetting)
+_class >= _medicN min EGVAR(medical,medicSetting);

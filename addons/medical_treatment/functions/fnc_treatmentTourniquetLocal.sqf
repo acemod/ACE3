@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Apply a tourniquet to the patient, local callback.
@@ -12,15 +13,14 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_tourniquetItem", "_bodyPart"];
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
 // Place a tourniquet on the bodypart
-private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+private _tourniquets = GET_TOURNIQUETS(_target);
 
 _tourniquets set [_partIndex, CBA_missionTime];
 
-_target setVariable [QEGVAR(medical,tourniquets), _tourniquets, true];
+_target setVariable [VAR_TOURNIQUET, _tourniquets, true];

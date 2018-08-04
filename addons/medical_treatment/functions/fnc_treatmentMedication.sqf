@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * IV Treatment callback
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_bodyPart", "_className", "_items"];
 TRACE_5("params",_caller,_target,_bodyPart,_className,_items);
@@ -26,8 +26,8 @@ private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
-        [_target, "activity", ELSTRING(medical,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
-        [_target, "activity_view", ELSTRING(medical,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity", ELSTRING(medical_treatment,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", ELSTRING(medical_treatment,Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
 } forEach _items;
 

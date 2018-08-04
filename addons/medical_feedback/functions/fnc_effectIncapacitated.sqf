@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Creates the incapacitation effect.
@@ -8,7 +9,6 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
 
 GVAR(ppIncapacitationBlur)  ppEffectEnable true;
 GVAR(ppIncapacitationGlare) ppEffectEnable true;

@@ -284,12 +284,6 @@
         <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
             <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedkitTime">
-            <English>How long should Medkit take to apply ?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedkitTime_Description">
-            <English>How long should Medkit take to apply ? Use 0 for default (based on damage)</English>
-        </Key>
         <Key ID="STR_ACE_Medical_treatment_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
             <German>Bandage (Einfach)</German>
@@ -958,18 +952,6 @@
             <Korean>지혈시 사용하는 붕대로 혈액 응고제를 포함하고있습니다.</Korean>
             <Chinesesimp>包含止血粉成分的止血绷带, 可用于止血</Chinesesimp>
             <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Display">
-            <English>Medkit</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Desc_Short">
-            <English>...</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Med_Kit_Desc_Use">
-            <English>...</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Use_Med_Kit">
-            <English>Use Medkit</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
@@ -2089,22 +2071,6 @@
             <Chinesesimp>快要没呼吸</Chinesesimp>
             <Chinese>快要沒呼吸</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_Status_Bleeding">
-            <English>Bleeding</English>
-            <German>Blutet</German>
-            <Russian>Кровотечение</Russian>
-            <Spanish>Sangrando</Spanish>
-            <French>Saignement</French>
-            <Polish>Krwawienie zewnętrzne</Polish>
-            <Czech>Krvácí</Czech>
-            <Hungarian>Vérzik</Hungarian>
-            <Italian>Sanguinando</Italian>
-            <Portuguese>Sangrando</Portuguese>
-            <Japanese>出血している</Japanese>
-            <Korean>출혈</Korean>
-            <Chinesesimp>流血中</Chinesesimp>
-            <Chinese>流血中</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_treatment_Status_MildPain">
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>
@@ -2128,22 +2094,6 @@
         <Key ID="STR_ACE_Medical_treatment_Status_SeverePain">
             <English>In severe pain</English>
             <German>Hat starke Schmerzen</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Status_Lost_Blood">
-            <English>Lost a lot of Blood</English>
-            <German>Hat eine große Menge Blut verloren</German>
-            <Russian>Большая кровопотеря</Russian>
-            <Spanish>Mucha sangre perdida</Spanish>
-            <French>A perdu beaucoup de sang</French>
-            <Polish>Stracił dużo krwi</Polish>
-            <Czech>Ztratil hodně krve</Czech>
-            <Hungarian>Sok vért vesztett</Hungarian>
-            <Italian>Ha perso parecchio sangue</Italian>
-            <Portuguese>Perdeu muito sangue</Portuguese>
-            <Japanese>大量失血している</Japanese>
-            <Korean>많은 양의 혈액을 잃음</Korean>
-            <Chinesesimp>大量失血中</Chinesesimp>
-            <Chinese>大量失血中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -3136,9 +3086,6 @@
             <Chinesesimp>%1 已经绑上止血带</Chinesesimp>
             <Chinese>%1 已經綁上止血帶</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_Activity_partialHeal">
-            <English>%1 used Medkit</English>
-        </Key>
         <Key ID="STR_ACE_Medical_treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
             <German>%1 hat das eigene Erste-Hilfe-Set verwendet</German>
@@ -3201,102 +3148,6 @@
             <Korean>매우 가벼운 부상</Korean>
             <Chinesesimp>小伤</Chinesesimp>
             <Chinese>小傷</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Head">
-            <English>Head</English>
-            <German>Kopf</German>
-            <Polish>Głowa</Polish>
-            <Russian>Головы</Russian>
-            <Italian>Testa</Italian>
-            <Spanish>Cabeza</Spanish>
-            <French>Tête</French>
-            <Hungarian>Fej</Hungarian>
-            <Czech>Hlava</Czech>
-            <Portuguese>Cabeça</Portuguese>
-            <Japanese>頭部</Japanese>
-            <Korean>머리</Korean>
-            <Chinesesimp>头部</Chinesesimp>
-            <Chinese>頭部</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_Torso">
-            <English>Torso</English>
-            <German>Torso</German>
-            <Polish>Tors</Polish>
-            <Russian>Торса</Russian>
-            <Italian>Torso</Italian>
-            <Spanish>Torso</Spanish>
-            <French>Torse</French>
-            <Hungarian>Testtörzs</Hungarian>
-            <Czech>Trup</Czech>
-            <Portuguese>Torso</Portuguese>
-            <Japanese>胴体</Japanese>
-            <Korean>몸통</Korean>
-            <Chinesesimp>身体</Chinesesimp>
-            <Chinese>身體</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_LeftArm">
-            <English>Left Arm</English>
-            <German>Linker Arm</German>
-            <Polish>Lewe ramię</Polish>
-            <Russian>Левой руки</Russian>
-            <Italian>Braccio sinistro</Italian>
-            <Spanish>Brazo izquierdo</Spanish>
-            <French>Bras gauche</French>
-            <Hungarian>Bal kar</Hungarian>
-            <Czech>Levá ruka</Czech>
-            <Portuguese>Braço Esquerdo</Portuguese>
-            <Japanese>左腕</Japanese>
-            <Korean>왼쪽 팔</Korean>
-            <Chinesesimp>左手</Chinesesimp>
-            <Chinese>左手</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_RightArm">
-            <English>Right Arm</English>
-            <German>Rechter Arm</German>
-            <Polish>Prawe ramię</Polish>
-            <Russian>Правой руки</Russian>
-            <Italian>Braccio destro</Italian>
-            <Spanish>Brazo derecho</Spanish>
-            <French>Bras droit</French>
-            <Hungarian>Jobb kar</Hungarian>
-            <Czech>Pravá ruka</Czech>
-            <Portuguese>Braço Direito</Portuguese>
-            <Japanese>右腕</Japanese>
-            <Korean>오른쪽 팔</Korean>
-            <Chinesesimp>右手</Chinesesimp>
-            <Chinese>右手</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_LeftLeg">
-            <English>Left Leg</English>
-            <German>Linkes Bein</German>
-            <Polish>Lewa noga</Polish>
-            <Russian>Левой ноги</Russian>
-            <Italian>Gamba sinistra</Italian>
-            <Spanish>Pierna izquierda</Spanish>
-            <French>Jambe gauche</French>
-            <Hungarian>Bal láb</Hungarian>
-            <Czech>Levá noha</Czech>
-            <Portuguese>Perna Esquerda</Portuguese>
-            <Japanese>左足</Japanese>
-            <Korean>왼쪽 다리</Korean>
-            <Chinesesimp>左脚</Chinesesimp>
-            <Chinese>左腳</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_RightLeg">
-            <English>Right Leg</English>
-            <German>Rechtes Bein</German>
-            <Polish>Prawa noga</Polish>
-            <Russian>Правой ноги</Russian>
-            <Italian>Gamba destra</Italian>
-            <Spanish>Pierna derecha</Spanish>
-            <French>Jambe droite</French>
-            <Hungarian>Jobb láb</Hungarian>
-            <Czech>Pravá noha</Czech>
-            <Portuguese>Perna Direita</Portuguese>
-            <Japanese>右足</Japanese>
-            <Korean>오른쪽 다리</Korean>
-            <Chinesesimp>右脚</Chinesesimp>
-            <Chinese>右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_healHitPointAfterAdvBandage">
             <English>Heal fully bandaged hitpoints</English>

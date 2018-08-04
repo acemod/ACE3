@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if unit has a tourniquet applied to the specified bodypart
@@ -14,12 +15,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_bodyPart"];
 
 private _index = ALL_BODY_PARTS find toLower _bodyPart;
 
-if (_index < 0) exitWith { false };
-
-((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _index) > 0
+_index >= 0 && {HAS_TOURNIQUET_APPLIED_ON(_target,_index)}

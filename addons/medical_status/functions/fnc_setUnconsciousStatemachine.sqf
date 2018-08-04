@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_unit", "_knockOut"];
 TRACE_2("setUnconsciousStatemachine",_unit,_knockOut);
@@ -30,7 +29,7 @@ _unit setVariable [VAR_UNCON, _knockOut, true];
 
 if (_knockOut) then {
     // --- knock out
-    if (GVAR(spontaneousWakeUpChance) > 0) then { // Don't bother setting this if not used
+    if (EGVAR(medical,spontaneousWakeUpChance) > 0) then { // Don't bother setting this if not used
         private _lastWakeUpCheck = CBA_missiontime max (_unit getVariable [QGVAR(lastWakeUpCheck), 0]);
         TRACE_2("setting lastWakeUpCheck",_lastWakeUpCheck,(_lastWakeUpCheck - CBA_missiontime));
         _unit setVariable [QGVAR(lastWakeUpCheck), _lastWakeUpCheck];
@@ -43,7 +42,7 @@ if (_knockOut) then {
             closeDialog 0;
         };
     };
-    [QGVAR(Unconscious), _unit] call CBA_fnc_localEvent;
+    [QEGVAR(medical,Unconscious), _unit] call CBA_fnc_localEvent;
 } else {
     // --- wake up
     _unit setVariable [QGVAR(lastWakeUpCheck), nil]; // clear this now (min wait time could be set to a very high value)

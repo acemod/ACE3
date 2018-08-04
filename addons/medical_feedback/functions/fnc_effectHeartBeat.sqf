@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles the hear beat sound.
@@ -8,7 +9,7 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
+
 params ["_heartRate"];
 
 if (_heartRate == 0) exitWith {

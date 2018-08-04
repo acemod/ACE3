@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Display the available treatment options in category
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define START_IDC 20
 #define END_IDC 27
@@ -29,7 +29,7 @@ private _display = uiNamespace getVariable QGVAR(medicalMenu);
 if (isNil "_display") exitWith {}; // no valid dialog present
 
 if (_name isEqualTo "toggle") exitWith {
-    _newTarget = ACE_player;
+    private _newTarget = ACE_player;
     //If we are on the player, and only if our old target is still valid, switch to it:
     if ((GVAR(INTERACTION_TARGET) == ACE_player) &&
             {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
@@ -79,7 +79,7 @@ if (_name isEqualTo "triage") exitWith {
     } count _log;
 
     if (count _triageCardTexts == 0) exitWith {
-        lbAdd [212,(localize ELSTRING(medical,TriageCard_NoEntry))];
+        lbAdd [212,(localize ELSTRING(medical_treatment,TriageCard_NoEntry))];
     };
     {
         lbAdd [212,_x];
@@ -89,12 +89,12 @@ if (_name isEqualTo "triage") exitWith {
 
 ctrlEnable [212, false];
 
-_entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTreatmentOptions);
+private _entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTreatmentOptions);
 
 {
     //player sidechat format["TRIGGERED: %1",_x];
     if (_forEachIndex > END_IDC) exitWith {};
-    _ctrl = (_display displayCtrl (START_IDC + _forEachIndex));
+    private _ctrl = (_display displayCtrl (START_IDC + _forEachIndex));
     if (!(_forEachIndex > AMOUNT_OF_ENTRIES)) then {
         _ctrl ctrlSetText (_x select 0);
         private _code = format ["ace_medical_menu_pendingReopen = true; call %1;", (_x select 3)];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if is bleeding
@@ -13,12 +14,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
 if (GVAR(useAceMedical)) exitWith {
-    IS_BLEEDING(_unit)
+    IS_BLEEDING(_unit);
 };
 
 alive _unit && {getDammage _unit > 0.3}

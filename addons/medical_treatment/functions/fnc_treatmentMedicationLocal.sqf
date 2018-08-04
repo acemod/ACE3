@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -12,7 +13,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 #define MORPHINE_PAIN_SUPPRESSION 0.6
 
 params ["_target", "_className", "_partIndex"];
@@ -30,7 +30,7 @@ if (!EGVAR(medical,advancedMedication)) exitWith {
 };
 TRACE_1("Running treatmentMedicationLocal with Advanced configuration for", _target);
 
-private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+private _tourniquets = GET_TOURNIQUETS(_target);
 
 if (_tourniquets select _partIndex > 0) exitWith {
     TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);

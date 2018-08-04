@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Display triage card for a unit
@@ -14,8 +15,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_target", ["_show", true]];
 
@@ -58,7 +57,7 @@ if (_show) then {
         } forEach _log;
 
         if (_triageCardTexts isEqualTo []) then {
-            _lbCtrl lbAdd (localize ELSTRING(medical,TriageCard_NoEntry));
+            _lbCtrl lbAdd (localize ELSTRING(medical_treatment,TriageCard_NoEntry));
         };
         {
             _lbCtrl lbAdd _x;

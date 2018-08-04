@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles the unconscious effect.
@@ -9,7 +10,7 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
+
 params ["_enable", "_mode"];
 
 switch (_mode) do {

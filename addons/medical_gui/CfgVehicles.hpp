@@ -5,7 +5,7 @@ class CfgVehicles {
     class ACE_moduleMedicalMenuSettings: ACE_Module {
         scope = 1;
         displayName = CSTRING(module_DisplayName);
-        icon = QPATHTOEF(medical,UI\Icon_Module_Medical_ca.paa);
+        icon = "";
         category = "ACE_medical";
         function = QUOTE(DFUNC(module));
         functionPriority = 1;

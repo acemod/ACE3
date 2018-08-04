@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use Equipment items if any is available. Priority: 1) Medic, 2) Patient. If in vehicle: 3) Crew
@@ -16,7 +17,9 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
+
+#define HAS_USED_ITEM(itemUsedInfo)    (itemUsedInfo select 0)
+#define GET_ITEM_USED_BY(itemUsedInfo) (itemUsedInfo select 1)
 
 params ["_medic", "_patient", "_items"];
 
@@ -28,8 +31,8 @@ private _itemsUsedBy = [];
         {
             private _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
 
-            if (_itemUsedInfo select 0) exitWith {
-                _itemsUsedBy pushBack [_itemUsedInfo select 1, _x];
+            if (HAS_USED_ITEM(_itemUsedInfo)) exitWith {
+                _itemsUsedBy pushBack [GET_ITEM_USED_BY(_itemUsedInfo), _x];
             };
         } forEach _x;
     };
@@ -38,8 +41,8 @@ private _itemsUsedBy = [];
     if (_x isEqualType "") then {
         private _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
 
-        if (_itemUsedInfo select 0) exitWith {
-            _itemsUsedBy pushBack [_itemUsedInfo select 1, _x];
+        if (HAS_USED_ITEM(_itemUsedInfo)) exitWith {
+            _itemsUsedBy pushBack [GET_ITEM_USED_BY(_itemUsedInfo), _x];
         };
     };
 } forEach _items;

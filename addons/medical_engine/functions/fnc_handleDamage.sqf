@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Main HandleDamage EH function for soldiers.
@@ -10,8 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
 // for travis
 #define HIT_STRUCTURAL QGVAR($#structural)
 #define HIT_CRASH QGVAR($#crash)

@@ -497,7 +497,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = ECSTRING(Medical,Triage_Status_None);
+            text = ECSTRING(medical_treatment,Triage_Status_None);
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -516,7 +516,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = ECSTRING(Medical,Triage_Status_Minor);
+            text = ECSTRING(medical_treatment,Triage_Status_Minor);
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -534,7 +534,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = ECSTRING(Medical,Triage_Status_Delayed);
+            text = ECSTRING(medical_treatment,Triage_Status_Delayed);
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -552,7 +552,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = ECSTRING(Medical,Triage_Status_Immediate);
+            text = ECSTRING(medical_treatment,Triage_Status_Immediate);
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -570,7 +570,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = ECSTRING(Medical,Triage_Status_Deceased);
+            text = ECSTRING(medical_treatment,Triage_Status_Deceased);
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";

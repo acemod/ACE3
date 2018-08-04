@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the item is present between the patient and the medic
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_medic", "_patient", "_item"];
 
@@ -31,14 +31,14 @@ if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
     true
 };
 
-private _return = false;
+private _hasItem = false;
 
 if (vehicle _medic != _medic && {vehicle _medic call FUNC(isMedicalVehicle)}) then {
     {
         if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {[_x, _item] call EFUNC(common,hasItem)}) exitWith {
-            _return = true;
+            _hasItem = true;
         };
     } forEach crew vehicle _medic;
 };
 
-_return
+_hasItem

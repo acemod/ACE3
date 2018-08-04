@@ -57,6 +57,7 @@ PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAwakeAnim);
+PREP(getCountOfItem);
 PREP(getDeathAnim);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);

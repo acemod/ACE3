@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Parse the ACE_Medical_Advanced config for all injury types.
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _injuriesConfigRoot = configFile >> "ACE_Medical_Injuries";
 

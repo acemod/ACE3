@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zakant
  * Calculate the blood lost and blood volume for a unit. Used from CPR to simulate a heart rate while in cardiac arrest.
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params["_unit"];
 

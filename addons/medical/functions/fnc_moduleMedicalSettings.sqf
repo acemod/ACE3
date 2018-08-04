@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Module for adjusting the medical damage settings
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 
@@ -41,18 +40,14 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(cardiacArrestTime), "cardiacArrestTime"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting_PainVisualization), "painVisualization"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting_Epi), "medicSetting_Epi"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(medicSetting_Medkit), "medicSetting_Medkit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting_PAK), "medicSetting_PAK"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting_SurgicalKit), "medicSetting_SurgicalKit"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(consumeItem_Medkit), "consumeItem_Medkit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(consumeItem_PAK), "consumeItem_PAK"] call EFUNC(common,readSettingFromModule);
 
 [_logic, QGVAR(consumeItem_SurgicalKit), "consumeItem_SurgicalKit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(useLocation_Epi), "useLocation_Epi"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(useLocation_Medkit), "useLocation_Medkit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(useLocation_PAK), "useLocation_PAK"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(useLocation_SurgicalKit), "useLocation_SurgicalKit"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(remainingDamage_Medkit), "remainingDamage_Medkit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowUnconsciousAnimationOnTreatment), "allowUnconsciousAnimationOnTreatment"] call EFUNC(common,readSettingFromModule);
 
 [_logic, QGVAR(menuTypeStyle), "menuTypeStyle"] call EFUNC(common,readSettingFromModule);

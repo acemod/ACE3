@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the bandage of a patient.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 
@@ -25,10 +25,9 @@ private _category = _injury select 6;
 private _postfix = ["Minor", "Medium", "Large"] select _category;
 private _className = format ["%1%2", EGVAR(medical_damage,woundClassNames) select _classID, _postfix];
         
-// default, just in case..
-private _reopeningChance = 0.1;
-private _reopeningMinDelay = 120;
-private _reopeningMaxDelay = 200;
+private _reopeningChance = DEFAULT_BANDAGE_REOPENING_CHANCE;
+private _reopeningMinDelay = DEFAULT_BANDAGE_REOPENING_MIN_DELAY;
+private _reopeningMaxDelay = DEFAULT_BANDAGE_REOPENING_MAX_DELAY;
 
 // Get the default values for the used bandage
 private _config = configFile >> QUOTE(ADDON) >> "Bandaging";

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Cached Check if the treatment action can be performed.
@@ -17,10 +18,7 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
-#define MAX_DURATION_CACHE 2
 params ["", "_target", "_selection", "_classname"];
 
 // parameters, function, namespace, uid
-[_this, DFUNC(canTreat), _target, format [QGVAR(canTreat_%1_%2), _selection, _classname], MAX_DURATION_CACHE, QEGVAR(interact_menu,clearConditionCaches)] call EFUNC(common,cachedCall);
+[_this, DFUNC(canTreat), _target, format [QGVAR(canTreat_%1_%2), _selection, _classname], CAN_TREAT_CONDITION_CACHE_EXPIRY, QEGVAR(interact_menu,clearConditionCaches)] call EFUNC(common,cachedCall);

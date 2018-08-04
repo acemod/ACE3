@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Update the treatment information list
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display", "_genericMessages", "_allInjuryTexts"];
 
@@ -35,5 +35,5 @@ private _amountOfGeneric = count _genericMessages;
 } forEach _allInjuryTexts;
 
 if (_allInjuryTexts isEqualTo []) then {
-    _lbCtrl lbAdd localize ELSTRING(medical,NoInjuriesBodypart);
+    _lbCtrl lbAdd localize ELSTRING(medical_treatment,NoInjuriesBodypart);
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Starts the treatment process
@@ -11,9 +12,8 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_bodyPart", "_className"];
 
@@ -133,10 +133,9 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     _caller setVariable [QGVAR(endInAnim), _endInAnim];
 };
 
-// get treatment time
+// get treatment time from config - also supports variables and code expressions
 private _treatmentTime = 0;
 
-// reads number from config. supports variables and code expressions
 if (isNumber (_config >> "treatmentTime")) then {
     _treatmentTime = getNumber (_config >> "treatmentTime");
 } else {
