@@ -2318,6 +2318,7 @@
         <Key ID="STR_ACE_Ballistics_statsNoMagazine">
             <English>No magazine</English>
             <French>Aucun chargeur</French>
+            <German>Kein Magazin</German>
         </Key>
     </Package>
 </Project>
