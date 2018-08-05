@@ -26,7 +26,7 @@ if (EGVAR(arsenal,currentLeftPanel) == 2002) then {
 } params ["_weapon", "_magazine"];
 
 if (_magazine isEqualTo "") then {
-    localize LSTRING(statsNoMagazine)
+    localize "str_empty";
 } else {
     private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (configFile >> "CfgMagazines" >> _magazine >> "ammo")));
     private _barrelLength = getNumber (_config >> "ACE_barrelLength");
@@ -38,6 +38,6 @@ if (_magazine isEqualTo "") then {
 
         format ["%1 m/s (%2 ft/s)", _muzzleVelocity toFixed 0, (_muzzleVelocity * 3.28084) toFixed 0]
     } else {
-        localize LSTRING(statsNoMagazine)
+        localize "str_empty";
     };
 };

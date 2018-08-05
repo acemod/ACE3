@@ -2315,10 +2315,5 @@
             <Chinesesimp>枪口初速</Chinesesimp>
             <Chinese>槍口初速</Chinese>
         </Key>
-        <Key ID="STR_ACE_Ballistics_statsNoMagazine">
-            <English>No magazine</English>
-            <French>Aucun chargeur</French>
-            <German>Kein Magazin</German>
-        </Key>
     </Package>
 </Project>
