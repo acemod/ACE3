@@ -76,7 +76,7 @@ private _tourniquets = GET_TOURNIQUETS(_unit);
         _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
     };
 } forEach _tourniquets;
-[_unit, _tourniquetPain] call EFUNC(medical,adjustPainLevel);
+[_unit, _tourniquetPain] call EFUNC(medical_status,adjustPainLevel);
 
 private _heartRate = [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);

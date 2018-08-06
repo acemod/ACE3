@@ -1,6 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
+        <Container name="Settings">
+            <Key ID="STR_ACE_Medical_treatment_advancedBandages_DisplayName">
+                <English>Advanced Bandages</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_advancedBandages_Description">
+                <English>Enable advanced bandages (required for wound reopening)</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_DisplayName">
+                <English>Advanced Diagnose</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_Description">
+                <English>Enable advanced diagnose</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_advancedMedication_DisplayName">
+                <English>Advanced Medication</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_advancedMedication_Description">
+                <English>Enable advanced medication</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_DisplayName">
+                <English>Locations boost training</English>
+                <Czech>Místa pro vylepšení zkušeností</Czech>
+                <Italian>Località aumentano addestramento</Italian>
+                <German>Örtliche Trainingssteigerung</German>
+                <Spanish>Ubicación mejora entrenamiento.</Spanish>
+                <Polish>Miejsca zwiększają wyszkolenie</Polish>
+                <Portuguese>Localização melhora treinamento</Portuguese>
+                <French>Le lieu améliore l'efficacité</French>
+                <Russian>Места ускоренного обучения</Russian>
+                <Japanese>衛生兵としての能力を与える場所</Japanese>
+                <Korean>교육 증가 지역</Korean>
+                <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
+                <Chinese>受所在位置影響提升醫療能力</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_Description">
+                <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
+                <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem]</Czech>
+                <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
+                <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
+                <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
+                <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
+                <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
+                <French>Améliore l'efficacité des soins dans les véhicules ou structures de soins [non formés deviennent médecins, médecins deviennent docteurs]</French>
+                <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
+                <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる (未訓練は衛生兵に、衛生兵は医師に)</Japanese>
+                <Korean>의무병의 수준이 주변의 차량이나 의료시설에 따라 증가합니다. [비교육자가 의무병이되고, 의무병이 의사가 됩니다]</Korean>
+                <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
+                <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_DisplayName">
+                <English>Self IV Transfusion</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
+                <English>Allows using IV Transfusions on yourself</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_DisplayName">
+                <English>Allow Unconscious Animation</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_Description">
+                <English>Allow Unconscious Animation on Treatment.</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
+                <English>CPR creates pulse</English>
+                <German>HLW erzeugt einen Puls</German>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
+                <English>CPR will create a pulse for the patient while performing</English>
+                <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_woundReopening_DisplayName">
+                <English>Enable Advanced wounds</English>
+                <Russian>Усложненные раны</Russian>
+                <Polish>Aktywuj zaawansowane rany</Polish>
+                <Spanish>Activa heridas avanzadas</Spanish>
+                <German>Aktiviere erweiterte Wunden</German>
+                <Czech>Povolit pokročilé zranění</Czech>
+                <Portuguese>Ativar ferimentos avançados</Portuguese>
+                <French>Activer les plaies compliquées</French>
+                <Hungarian>Komplex sebek engedélyezése</Hungarian>
+                <Italian>Abilita ferite Avanzate</Italian>
+                <Japanese>アドバンスドな傷を有効化</Japanese>
+                <Korean>고급 부상 활성화</Korean>
+                <Chinesesimp>启用进阶伤口系统</Chinesesimp>
+                <Chinese>啟用進階傷口系統</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_woundReopening_Description">
+                <English>Allow reopening of bandaged wounds?</English>
+                <Russian>Будут ли открываться уже перевязанные раны?</Russian>
+                <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
+                <Spanish>Permitir la reapertura de las heridas vendadas?</Spanish>
+                <German>Erlaube das Öffnen von bandagierten Wunden?</German>
+                <Czech>Umožnit znovuotevření zavázané rány?</Czech>
+                <Portuguese>Permitr reabertura de ferimentos enfaixados?</Portuguese>
+                <French>Les plaies peuvent se rouvrir</French>
+                <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
+                <Italian>Permetti la riapertura di ferite bendate?</Italian>
+                <Japanese>包帯で巻かれた傷を再び開くようにしますか?</Japanese>
+                <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
+                <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
+                <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
+            </Key>
+        </Container>
+        <Container name="SettingsItems">
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_DisplayName">
+                <English>Allow Epinephrine</English>
+                <German>Erlaube Epiniphrin</German>
+                <Spanish>Permitir Epinefrina</Spanish>
+                <Polish>Ograniczenia adrenaliny</Polish>
+                <French>Activer l'épinéphrine</French>
+                <Italian>Permette epinefrina</Italian>
+                <Czech>Povolit adrenalin</Czech>
+                <Portuguese>Permitir Epinefrina</Portuguese>
+                <Russian>Разрешить Адреналин</Russian>
+                <Japanese>アドレナリンの許可</Japanese>
+                <Korean>에피네프린 활성화</Korean>
+                <Chinesesimp>允许使用肾上腺素</Chinesesimp>
+                <Chinese>允許使用腎上腺素</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_Description">
+                <English>Who can use Epinephrine?</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_DisplayName">
+                <English>Allow PAK</English>
+                <Russian>Использование аптечки</Russian>
+                <Polish>Ustawienie apteczek osobistych</Polish>
+                <Spanish>Permitir EPA</Spanish>
+                <German>Erlaube Erste-Hilfe-Set</German>
+                <Czech>Povolit osobní lékárničky (PAK)</Czech>
+                <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
+                <French>Activer la trousse sanitaire</French>
+                <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
+                <Italian>Consenti Kit di Pronto Soccorso</Italian>
+                <Japanese>応急処置キットの許可</Japanese>
+                <Korean>개인응급키트 활성화</Korean>
+                <Chinesesimp>允许使用个人急救包</Chinesesimp>
+                <Chinese>允許使用個人急救包</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_Description">
+                <English>Who can use the PAK for full heal?</English>
+                <Russian>Кому разрешено выполнять полное лечение с помощью аптечки?</Russian>
+                <Polish>Kto może skorzystać z apteczki osobistej w celu pełnego uleczenia?</Polish>
+                <Spanish>¿Quién puede utilizar el EPA para una cura completa?</Spanish>
+                <German>Wer kann das Erste-Hilfe-Set für eine Endheilung verwenden?</German>
+                <Czech>Kdo může použít osobní lékárničku pro plné vyléčení?</Czech>
+                <Portuguese>Quem pode usar o KPS para cura completa?</Portuguese>
+                <French>Qui peut utilier la trousse sanitaire pour des soins complets?</French>
+                <Hungarian>Ki használhatja az elsősegélycsomagot teljes gyógyításra?</Hungarian>
+                <Italian>Chi può usare il KPS per cura completa?</Italian>
+                <Japanese>完全に回復できるよう誰しもが応急処置キットを使えるようにしますか?</Japanese>
+                <Korean>완전한 체력회복을 위해 어느 인원이 개인응급키트을 쓸 수 있습니까? (기본 의료 전용)</Korean>
+                <Chinesesimp>谁能够使用个人急救包来达到完整医疗?</Chinesesimp>
+                <Chinese>誰能夠使用個人急救包來達到完整醫療?</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_anyone">
+                <English>Anyone</English>
+                <Russian>Кем угодно</Russian>
+                <Polish>Wszyscy</Polish>
+                <Spanish>Nadie</Spanish>
+                <German>Jeder</German>
+                <Czech>Kdokoliv</Czech>
+                <Portuguese>Qualquer um</Portuguese>
+                <French>Tous</French>
+                <Hungarian>Akárki</Hungarian>
+                <Italian>Chiunque</Italian>
+                <Japanese>だれでも</Japanese>
+                <Korean>모두</Korean>
+                <Chinesesimp>任何人</Chinesesimp>
+                <Chinese>任何人</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicsOnly">
+                <English>Medics only</English>
+                <Russian>Только медиками</Russian>
+                <Polish>Tylko medycy</Polish>
+                <Spanish>Solo médicos</Spanish>
+                <German>Nur Sanitäter</German>
+                <Czech>Pouze zdravotník</Czech>
+                <Portuguese>Somente médicos</Portuguese>
+                <French>Infirmiers  uniquement</French>
+                <Hungarian>Csak orvosok</Hungarian>
+                <Italian>Solo medici</Italian>
+                <Japanese>衛生兵のみ</Japanese>
+                <Korean>의무병만</Korean>
+                <Chinesesimp>只限医疗兵</Chinesesimp>
+                <Chinese>只限醫療兵</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_doctorsOnly">
+                <English>Doctors only</English>
+                <Russian>Только врачами</Russian>
+                <Polish>Tylko doktorzy</Polish>
+                <Spanish>Solo doctores</Spanish>
+                <German>Nur Ärzte</German>
+                <Czech>Pouze doktor</Czech>
+                <Portuguese>Somente doutores</Portuguese>
+                <French>Médecins uniquement</French>
+                <Hungarian>Csak doktorok</Hungarian>
+                <Italian>Solo dottori</Italian>
+                <Japanese>医師のみ</Japanese>
+                <Korean>오직 의사만</Korean>
+                <Chinesesimp>只限军医</Chinesesimp>
+                <Chinese>只限軍醫</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_medicalFacility">
+                <English>Medical facility</English>
+                <Russian>В госпитале</Russian>
+                <Polish>Budynki medyczne</Polish>
+                <Spanish>Centro médico</Spanish>
+                <German>Medizinische Einrichtungen</German>
+                <Czech>Zdravotnické zařízení</Czech>
+                <Portuguese>Instalação médica</Portuguese>
+                <French>Dans les structures sanitaires</French>
+                <Hungarian>Orvosi létesítmény</Hungarian>
+                <Italian>Strutture mediche</Italian>
+                <Japanese>医療施設でのみ</Japanese>
+                <Korean>의료시설</Korean>
+                <Chinesesimp>医疗设施</Chinesesimp>
+                <Chinese>醫療設施</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_vehicleAndFacility">
+                <English>Vehicles &amp; facility</English>
+                <Russian>В транспорте и госпитале</Russian>
+                <Polish>Pojazdy i budynki medyczne</Polish>
+                <Spanish>Vehículos y centros</Spanish>
+                <German>Fahrzeuge &amp; Einrichtungen</German>
+                <Czech>Vozidla a zařízení</Czech>
+                <Portuguese>Veículos e instalações</Portuguese>
+                <French>Dans les véhicules et les structures sanitaires</French>
+                <Hungarian>Járművek &amp; létesítmény</Hungarian>
+                <Italian>Veicoli e Strutture</Italian>
+                <Japanese>車両 &amp; 施設</Japanese>
+                <Korean>차량 및 시설</Korean>
+                <Chinesesimp>医疗载具 &amp; 医疗设施</Chinesesimp>
+                <Chinese>醫療載具 &amp; 醫療設施</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_consumeItem_PAK_DisplayName">
+                <English>Remove PAK on use</English>
+                <Russian>Удалять аптечки после использования</Russian>
+                <Polish>Usuń apteczkę po użyciu</Polish>
+                <Spanish>Eliminar EPA después del uso</Spanish>
+                <German>Entf. Erste-Hilfe-Set bei Verwendung</German>
+                <Czech>Odebrat osobní lékárničku po použití</Czech>
+                <Portuguese>Remover o KPS depois do uso</Portuguese>
+                <French>Utilisation unique de la trousse sanitaire</French>
+                <Hungarian>Elsősegélycsomag eltávolítása használatkor</Hungarian>
+                <Italian>Rimuovi Kit Pronto Soccorso dopo l'uso</Italian>
+                <Japanese>応急処置キットの削除</Japanese>
+                <Korean>개인응급키트 사용후 사라짐</Korean>
+                <Chinesesimp>在使用后删除个人急救包</Chinesesimp>
+                <Chinese>在使用後刪除個人急救包</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_consumeItem_PAK_Description">
+                <English>Should PAK be removed on usage?</English>
+                <Russian>Нужно ли удалять аптечки после использования?</Russian>
+                <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
+                <Spanish>El EPA será eliminado después de usarlo</Spanish>
+                <German>Sollen Erste-Hilfe-Sets bei Verwendung entfernt werden?</German>
+                <Czech>Má se osobní lékárnička odstranit po použití?</Czech>
+                <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
+                <French>La trousse sanitaire doit être consommée à l'utilisation?</French>
+                <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
+                <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
+                <Japanese>応急処置キットを使うと削除しますか?</Japanese>
+                <Korean>개인응급키트를 사용하고 나서 제거합니까?</Korean>
+                <Chinesesimp>要在使用后删除个人急救包吗?</Chinesesimp>
+                <Chinese>要在使用後刪除個人急救包嗎?</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_useLocation_Epi_DisplayName">
+                <English>Locations Epinephrine</English>
+                <German>Orte für Epiniphrin</German>
+                <Spanish>Ubicaciones epinefrina</Spanish>
+                <Polish>Ograniczenia adrenaliny</Polish>
+                <French>Utilisation de l'épinéphrine</French>
+                <Italian>Ubicazione epinefrina</Italian>
+                <Czech>Oblast k použití adrenalinu</Czech>
+                <Portuguese>Localizações de Epinefrina</Portuguese>
+                <Russian>Место использования адреналина</Russian>
+                <Japanese>アドレナリンをつかう場所</Japanese>
+                <Korean>에피네프린 사용 장소</Korean>
+                <Chinesesimp>肾上腺素使用地点</Chinesesimp>
+                <Chinese>腎上腺素使用地點</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_useLocation_Epi_Description">
+                <English>Where can the Epinephrine be used?</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_PAKTime">
+                <English>How long should PAK take to apply?</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
+                <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
+            </Key>
+        </Container>
+        <Container name="SettingsLitter">
+            <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
+                <English>Enable Litter</English>
+                <Russian>Включить мусор</Russian>
+                <Polish>Aktywuj odpadki</Polish>
+                <Spanish>Activar restos médicos</Spanish>
+                <German>Abfälle aktivieren</German>
+                <Czech>Povolit odpadky</Czech>
+                <Portuguese>Ativar lixo médico</Portuguese>
+                <French>Activer les détritus</French>
+                <Hungarian>Szemét engedélyezése</Hungarian>
+                <Italian>Abilita Barella</Italian>
+                <Japanese>医療廃棄物の表示を有効化</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_allowLitterCreation_Description">
+                <English>Enable litter being created upon treatment</English>
+                <Russian>Включить появление мусора после лечения</Russian>
+                <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
+                <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
+                <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
+                <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
+                <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
+                <French>Activer la création de détrimus au début des traitements</French>
+                <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
+                <Italian>Abilita la creazione della barella dopo trattamento</Italian>
+                <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
+                <English>Litter Simulation Detail</English>
+                <Polish>Detale zużytych medykamentów</Polish>
+                <Spanish>Detalle de simulación de basura</Spanish>
+                <Russian>Количество мусора от медицины</Russian>
+                <Italian>Dettagli Simulazione Rifiuti</Italian>
+                <French>Niveau de simulation des détritus</French>
+                <German>Abfall-Detaillevel</German>
+                <Hungarian>Hulladékszimuláció részletessége</Hungarian>
+                <Portuguese>Detalhe da simulação de sujeira</Portuguese>
+                <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
+                <Japanese>医療廃棄物を再現する詳細度</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Description">
+                <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
+                <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
+                <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
+                <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
+                <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
+                <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
+                <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
+                <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
+                <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
+                <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
+                <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay">
+                <English>Life time of litter objects</English>
+                <Russian>Время удаления мусора</Russian>
+                <Polish>Długość życia odpadków</Polish>
+                <Spanish>Tiempo de vida de los restos médicos</Spanish>
+                <German>Dauer des angezeigten Abfalls</German>
+                <Czech>Životnost pro odpadky</Czech>
+                <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
+                <French>Durée d'affichage des détritus</French>
+                <Hungarian>Szemétobjektumok élettartama</Hungarian>
+                <Italian>Tempo di vita delle barelle</Italian>
+                <Japanese>医療廃棄物の作成限界数を設定</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay_Description">
+                <English>How long should litter objects stay? In seconds. -1 is forever.</English>
+                <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
+                <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
+                <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
+                <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
+                <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
+                <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
+                <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
+                <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
+                <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
+                <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
+            </Key>
+        </Container>
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
@@ -191,98 +561,6 @@
             <Korean>의사</Korean>
             <Chinesesimp>军医</Chinesesimp>
             <Chinese>軍醫</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
-            <English>Enable Litter</English>
-            <Russian>Включить мусор</Russian>
-            <Polish>Aktywuj odpadki</Polish>
-            <Spanish>Activar restos médicos</Spanish>
-            <German>Abfälle aktivieren</German>
-            <Czech>Povolit odpadky</Czech>
-            <Portuguese>Ativar lixo médico</Portuguese>
-            <French>Activer les détritus</French>
-            <Hungarian>Szemét engedélyezése</Hungarian>
-            <Italian>Abilita Barella</Italian>
-            <Japanese>医療廃棄物の表示を有効化</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_allowLitterCreation_Description">
-            <English>Enable litter being created upon treatment</English>
-            <Russian>Включить появление мусора после лечения</Russian>
-            <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
-            <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
-            <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
-            <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
-            <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
-            <French>Activer la création de détrimus au début des traitements</French>
-            <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
-            <Italian>Abilita la creazione della barella dopo trattamento</Italian>
-            <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
-            <English>CPR creates pulse</English>
-            <German>HLW erzeugt einen Puls</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
-            <English>CPR will create a pulse for the patient while performing</English>
-            <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
-            <English>Litter Simulation Detail</English>
-            <Polish>Detale zużytych medykamentów</Polish>
-            <Spanish>Detalle de simulación de basura</Spanish>
-            <Russian>Количество мусора от медицины</Russian>
-            <Italian>Dettagli Simulazione Rifiuti</Italian>
-            <French>Niveau de simulation des détritus</French>
-            <German>Abfall-Detaillevel</German>
-            <Hungarian>Hulladékszimuláció részletessége</Hungarian>
-            <Portuguese>Detalhe da simulação de sujeira</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
-            <Japanese>医療廃棄物を再現する詳細度</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Description">
-            <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
-            <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
-            <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
-            <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
-            <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
-            <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
-            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
-            <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
-            <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
-            <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay">
-            <English>Life time of litter objects</English>
-            <Russian>Время удаления мусора</Russian>
-            <Polish>Długość życia odpadków</Polish>
-            <Spanish>Tiempo de vida de los restos médicos</Spanish>
-            <German>Dauer des angezeigten Abfalls</German>
-            <Czech>Životnost pro odpadky</Czech>
-            <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
-            <French>Durée d'affichage des détritus</French>
-            <Hungarian>Szemétobjektumok élettartama</Hungarian>
-            <Italian>Tempo di vita delle barelle</Italian>
-            <Japanese>医療廃棄物の作成限界数を設定</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay_Description">
-            <English>How long should litter objects stay? In seconds. -1 is forever.</English>
-            <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
-            <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
-            <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
-            <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
-            <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
-            <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
-            <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
-            <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
-            <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
-            <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_PAKTime">
-            <English>How long should PAK take to apply ?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
-            <English>How long should PAK take to apply ? Use 0 for default (based on damage)</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
@@ -3163,70 +3441,6 @@
             <Korean>붕대를 감은후 체력을 회복함</Korean>
             <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
             <Chinese>完全醫療包紮的部位至痊癒</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_menuTypeDisplay">
-            <English>Style of menu (Medical)</English>
-            <Polish>Styl menu medycznego</Polish>
-            <French>Style de menu (médical)</French>
-            <German>Menüstil (Medizin)</German>
-            <Russian>Вид меню (медицина)</Russian>
-            <Spanish>Tipo de menú (Medico)</Spanish>
-            <Czech>Styl menu (Zdravotní)</Czech>
-            <Portuguese>Estilo do menu (Médico)</Portuguese>
-            <Hungarian>Menü stílusa (Orvosi)</Hungarian>
-            <Italian>Stile del menù (medico)</Italian>
-            <Japanese>メニューの表示形式 (治療)</Japanese>
-            <Korean>메뉴의 스타일 (의료)</Korean>
-            <Chinesesimp>选单样式 (医疗)</Chinesesimp>
-            <Chinese>選單樣式 (醫療)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_menuTypeDescription">
-            <English>Select the type of menu you prefer; default 3d selections or radial.</English>
-            <Polish>Wybierz rodzaj menu, który preferujesz: domyślne pozycje 3D lub radialne</Polish>
-            <French>Sélectionne le type de menu préféré; par défaut la sélection 3D ou radiale</French>
-            <German>Wähle den Menüstil: Standard 3D-Auswahl oder kreisförmig.</German>
-            <Russian>Выберите тип меню: стандартный вариант (3D) или радиальный</Russian>
-            <Spanish>Selecciona el tipo de menú que prefieres: selecciones 3d por defecto o radial.</Spanish>
-            <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
-            <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
-            <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
-            <Italian>Seleziona il tipo di menù che preferisci: selezione (3D), radiale o disabilitata.</Italian>
-            <Japanese>好みに応じてメニューの表示形式を選んでください。標準では 3D 選択か円状です。</Japanese>
-            <Korean>선호하는 종류의 메뉴를 고르세요; 기본 3d 선택형 혹은 다이얼형</Korean>
-            <Chinesesimp>选择你喜欢的选单样式; 预设为3D选项或放射状</Chinesesimp>
-            <Chinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_useSelection">
-            <English>Selections (3d)</English>
-            <Polish>Pozycje (3D)</Polish>
-            <French>Sélection (3D)</French>
-            <German>3D-Auswahl</German>
-            <Russian>Стандартный (3D)</Russian>
-            <Spanish>Selecciones (3d)</Spanish>
-            <Portuguese>Seleção (3d)</Portuguese>
-            <Hungarian>Választékok (3D)</Hungarian>
-            <Czech>3D výběr</Czech>
-            <Italian>Selezione (3D)</Italian>
-            <Japanese>選択 (3d)</Japanese>
-            <Korean>선택 (3d)</Korean>
-            <Chinesesimp>选择 (3D)</Chinesesimp>
-            <Chinese>選擇 (3D)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_useRadial">
-            <English>Radial</English>
-            <Polish>Radialne</Polish>
-            <French>Radial</French>
-            <German>Kreisförmig</German>
-            <Russian>Радиальный</Russian>
-            <Spanish>Radial</Spanish>
-            <Portuguese>Radial</Portuguese>
-            <Hungarian>Kerek</Hungarian>
-            <Czech>Kruhový</Czech>
-            <Italian>Radiale</Italian>
-            <Japanese>円状</Japanese>
-            <Korean>다이얼형</Korean>
-            <Chinesesimp>放射状</Chinesesimp>
-            <Chinese>放射狀</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
             <English>Treating...</English>

@@ -27,11 +27,10 @@ _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightA
     };
 } forEach (_unit getVariable [QEGVAR(medical,openWounds), []]);
 
-private _damageThreshold = if (isPlayer _unit) then {
+private _damageThreshold = [
+    EGVAR(medical,AIDamageThreshold),
     EGVAR(medical,playerDamageThreshold)
-} else {
-    EGVAR(medical,AIDamageThreshold)
-};
+] select (isPlayer _unit);
 
 if ((_headDamage > _damageThreshold / 2) || {_bodyDamage > _damageThreshold} || {(_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < 0.1}}) then {
     [QEGVAR(medical,CriticalInjury), _unit] call CBA_fnc_localEvent;

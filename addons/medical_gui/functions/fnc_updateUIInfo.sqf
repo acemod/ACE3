@@ -51,7 +51,7 @@ if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
     _genericMessages pushBack [localize ELSTRING(medical_treatment,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
 
-if (EGVAR(medical,showPainInMenu) && {[ACE_player, EGVAR(medical,medicSetting_PainVisualization)] call EFUNC(medical_treatment,isMedic)}) then {
+if (GVAR(showPainInMenu) && {[ACE_player, EGVAR(medical,medicSetting_PainVisualization)] call EFUNC(medical_treatment,isMedic)}) then {
     private _painLevel = GET_PAIN_PERCEIVED(_target);
     if (_painLevel > 0) then {
         private _painText = localize ELSTRING(medical_treatment,Status_Pain);
@@ -97,7 +97,7 @@ private _allInjuryTexts = [];
                 _allInjuryTexts pushBack [format["Partial %1", _woundDescription], [1,1,1,1]];
             };
         } else {
-            if (!EGVAR(medical,advancedBandages) || {!EGVAR(medical,woundReopening)}) then {
+            if (!EGVAR(medical_treatment,advancedBandages) || {!EGVAR(medical,woundReopening)}) then {
                 private _className = (EGVAR(medical_damage,woundsData) select _woundClassID) select 6;
                 private _postfix = ["Minor", "Medium", "Large"] select _category;
                 private _woundDescription = localize format [ELSTRING(medical_damage,%1_%2), _className, _postfix];

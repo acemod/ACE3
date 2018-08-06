@@ -71,12 +71,12 @@ class ACE_Medical_StateMachine {
         class DeathAI {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "Dead";
-            condition = QUOTE(!isPlayer _this && {EGVAR(medical,fatalInjuryConditionAI)});
+            condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
         };
         class SecondChance {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "CardiacArrest";
-            condition = QUOTE(EGVAR(medical,fatalInjuryCondition) > 0);
+            condition = QUOTE(GVAR(fatalInjuryCondition) > 0);
             onTransition = QFUNC(transitionSecondChance);
         };
         class Death {
@@ -90,7 +90,7 @@ class ACE_Medical_StateMachine {
         onStateLeaving = QFUNC(leftStateCardiacArrest);
         class DeathAI {
             targetState = "Dead";
-            condition = QUOTE(!isPlayer _this && {EGVAR(medical,fatalInjuryConditionAI)});
+            condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
         };
         class Timeout {
             targetState = "Dead";

@@ -12,7 +12,7 @@ class GVAR(Actions) {
         treatmentTime = QFUNC(getBandageTime);
         treatmentTimeSelfCoef = 1;
         items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
-        condition = QUOTE(!EGVAR(medical,advancedBandages));
+        condition = QUOTE(!GVAR(advancedBandages));
         itemConsumed = 1;
         callbackSuccess = QFUNC(treatmentBandage);
         callbackFailure = "";
@@ -33,7 +33,7 @@ class GVAR(Actions) {
     class FieldDressing: BasicBandage {
         displayName = CSTRING(Actions_FieldDressing);
         items[] = {"ACE_fieldDressing"};
-        condition = QEGVAR(medical,advancedBandages);
+        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
@@ -42,7 +42,7 @@ class GVAR(Actions) {
     class PackingBandage: BasicBandage {
         displayName = CSTRING(Actions_PackingBandage);
         items[] = {"ACE_packingBandage"};
-        condition = QEGVAR(medical,advancedBandages);
+        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "", {"ACE_MedicalLitter_packingBandage"}},
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -52,7 +52,7 @@ class GVAR(Actions) {
     class ElasticBandage: BasicBandage {
         displayName = CSTRING(Actions_ElasticBandage);
         items[] = {"ACE_elasticBandage"};
-        condition = QEGVAR(medical,advancedBandages);
+        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
@@ -61,7 +61,7 @@ class GVAR(Actions) {
     class QuikClot: BasicBandage {
         displayName = CSTRING(Actions_QuikClot);
         items[] = {"ACE_quikclot"};
-        condition = QEGVAR(medical,advancedBandages);
+        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "", {"ACE_MedicalLitter_QuickClot"}},
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -105,14 +105,14 @@ class GVAR(Actions) {
     class Adenosine: Morphine {
         displayName = CSTRING(Inject_Adenosine);
         displayNameProgress = CSTRING(Injecting_Adenosine);
-        condition = QEGVAR(medical,advancedMedication);
+        condition = QGVAR(advancedMedication);
         items[] = {"ACE_adenosine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
     };
     class Atropine: Morphine {
         displayName = CSTRING(Inject_Atropine);
         displayNameProgress = CSTRING(Injecting_Atropine);
-        condition = QEGVAR(medical,advancedMedication);
+        condition = QGVAR(advancedMedication);
         items[] = {"ACE_atropine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
     };
@@ -130,7 +130,7 @@ class GVAR(Actions) {
         displayName = CSTRING(Actions_Blood4_1000);
         displayNameProgress = CSTRING(Transfusing_Blood);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        allowSelfTreatment = QEGVAR(medical,allowSelfIV);
+        allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
         requiredMedic = 1;
         treatmentTime = 12;
@@ -187,7 +187,7 @@ class GVAR(Actions) {
         requiredMedic = 0;
         treatmentTime = 2.5;
         items[] = {};
-        condition = QUOTE(!EGVAR(medical,advancedDiagnose));
+        condition = QUOTE(!GVAR(advancedDiagnose));
         callbackSuccess = QFUNC(actionDiagnose);
         callbackFailure = "";
         callbackProgress = "";
@@ -200,7 +200,7 @@ class GVAR(Actions) {
         displayName = CSTRING(Actions_CheckPulse);
         displayNameProgress = CSTRING(Check_Pulse_Content);
         allowedSelections[] = {"All"};
-        condition = QEGVAR(medical,advancedDiagnose);
+        condition = QGVAR(advancedDiagnose);
         callbackSuccess = QFUNC(actionCheckPulse);
         animationCallerProne = "";
         animationCallerSelfProne = "";
