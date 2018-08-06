@@ -778,13 +778,14 @@
             <Hungarian>Fehérlista</Hungarian>
             <Russian>Вайтлист</Russian>
             <Italian>Lista Bianca</Italian>
-            <Japanese>許可制</Japanese>
+            <Japanese>許可リスト</Japanese>
             <Korean>화이트리스트</Korean>
             <Chinese>白名單</Chinese>
             <Chinesesimp>白名单</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_Blacklist">
             <English>Blacklist</English>
+            <Japanese>禁止リスト</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
@@ -804,6 +805,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
+            <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
         </Key>
     </Package>
 </Project>
