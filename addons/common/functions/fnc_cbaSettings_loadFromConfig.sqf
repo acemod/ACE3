@@ -33,6 +33,7 @@ private _isForced = (getNumber (_config >> "force")) > 0;
 private _category = getText (_config >> "category");
 
 private _cbaIsGlobal = (!_isClientSettable) || _isForced;
+private _warnIfChangedMidMission = _cbaIsGlobal && {(getNumber (_config >> "canBeChanged")) == 0};
 if (_isForced) then {GVAR(cbaSettings_forcedSettings) pushBack (toLower _varName);};
 
 // Basic handling of setting types CBA doesn't support:
@@ -98,7 +99,7 @@ private _code = compile format ['["%1", _this] call FUNC(cbaSettings_settingChan
 
 TRACE_2("setting",_cbaSettingType,_cbaValueInfo);
 TRACE_4("",_isForced,_cbaIsGlobal,_category,_cbaValueInfo);
-private _return = [_varName, _cbaSettingType, [_localizedName, _localizedDescription], _category, _cbaValueInfo, _cbaIsGlobal, _code] call CBA_settings_fnc_init;
+private _return = [_varName, _cbaSettingType, [_localizedName, _localizedDescription], _category, _cbaValueInfo, _cbaIsGlobal, _code, _warnIfChangedMidMission] call CBA_settings_fnc_init;
 TRACE_1("returned",_return);
 if ((isNil "_return") || {_return != 0}) then {ERROR_1("Setting [%1] - CBA Error",_varName);};
 _return
