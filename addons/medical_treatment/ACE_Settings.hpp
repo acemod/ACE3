@@ -52,7 +52,7 @@ class ACE_Settings {
         values[] = {"Off", "Low", "Medium", "High", "Ultra"};
         _values[] = { 0, 50, 100, 1000, 5000 };
     };
-    class GVAR(medical,increaseTrainingInLocations) {
+    class EGVAR(medical,increaseTrainingInLocations) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(increaseTrainingInLocations_DisplayName);
         description = CSTRING(increaseTrainingInLocations_Description);
