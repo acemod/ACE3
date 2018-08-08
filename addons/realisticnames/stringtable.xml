@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -3333,7 +3333,7 @@
             <German>SIG BRAVO4 / ROMEO3 (Khaki)</German>
             <Chinese>SIG BRAVO4 / ROMEO3 (卡其色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3 (卡其色)</Chinesesimp>
-           <Japanese>SIG BRAVO4 / ROMEO3 (土埃)</Japanese> 
+           <Japanese>SIG BRAVO4 / ROMEO3 (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -3352,14 +3352,14 @@
             <English>Nightforce NXS (Green Hex)</English>
             <Chinese>Nightforce NXS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Nightforce NXS (绿色数位蜂巢迷彩)</Chinesesimp>
-            <Japanese>Nightforce NXS (緑蜂巣)/Japanese>
+            <Japanese>Nightforce NXS (緑蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
             <German>Nightforce NXS (Dschungel)</German>
             <Chinese>Nightforce NXS (叢林色)</Chinese>
             <Chinesesimp>Nightforce NXS (丛林色)</Chinesesimp>
-            <Japanese>Nightforce NXS (熱帯)Japanese>
+            <Japanese>Nightforce NXS (熱帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
