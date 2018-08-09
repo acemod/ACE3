@@ -224,13 +224,48 @@ For config added stats the classname is used, for function added ones the string
 */
 ```
 
+### 5.4 Stat tab numbers
+
+Left tabs:
+
+| Index  | Name |
+| ---- | ---- |
+| 0 | Primary |
+| 1 | Handgun |
+| 2 | Launcher |
+| 3 | Uniform |
+| 4 | Vests |
+| 5 | Backpacks |
+| 6 | Headgear |
+| 7 | Goggles |
+| 8 | NVGs |
+| 9 | Binoculars |
+| 10 | Map |
+| 11 | GPS |
+| 12 | Radio |
+| 13 | Compass |
+| 14 | Watch |
+
+Right tabs:
+
+| Index  | Name |
+| ---- | ---- |
+| 0 | Optics |
+| 1 | Side accs |
+| 2 | Muzzle |
+| 3 | Bipod |
+| 4 | Mag |
+| 5 | Throw |
+| 6 | Put |
+| 7 | Misc |
+
 #### 6.0 Eventhandlers
 
 All are local.
 
-| Name  | Arguments |
-| ------------- | ------------- |
-| ace_arsenal_displayOpened  | Arsenal display (DISPLAY) |
+| Name  | Arguments | Added in |
+| ------------- | ------------- | ------------- |
+| ace_arsenal_displayOpened | Arsenal display (DISPLAY) |
 | ace_arsenal_displayClosed | None |
 | ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
 | ace_arsenal_rightPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
@@ -241,3 +276,7 @@ All are local.
 | ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (BOOL), shiftState (BOOL) |
 | ace_arsenal_loadoutImported | Arsenal display (DISPLAY), (import list (BOOL) |
 | ace_arsenal_loadoutExported | Arsenal display (DISPLAY), export list (BOOL) |
+| ace_arsenal_loadoutsDisplayOpened | loadouts screen display (DISPLAY) | 3.12.3 |
+| ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
+| ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
