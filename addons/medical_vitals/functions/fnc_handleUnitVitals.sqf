@@ -130,10 +130,10 @@ switch (true) do {
         [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_bloodLoss > 0): {
-        [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
+        [QEGVAR(medical,Injured), _unit] call CBA_fnc_localEvent;
     };
     case (_inPain): {
-        [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
+        [QEGVAR(medical,Injured), _unit] call CBA_fnc_localEvent;
     };
 };
 

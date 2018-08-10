@@ -15,7 +15,7 @@
 params ["_unit"];
 
 // 10% possible variance in cardiac arrest time
-private _time = EGVAR(medical,cardiacArrestTime);
+private _time = GVAR(cardiacArrestTime);
 _time = _time + random [_time*-0.1, 0, _time*0.1];
 
 _unit setVariable [QGVAR(cardiacArrestTime), _time];
