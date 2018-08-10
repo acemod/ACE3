@@ -2,8 +2,6 @@
 
 [QEGVAR(medical,injured), {
     params ["_unit", "_painLevel"];
-    //Don't send if no painlevel, it means it got sent from handleVitals
-    if (isNil "_painLevel") exitWith {};
     [_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call FUNC(playInjuredSound);
 }] call CBA_fnc_addEventHandler;
 

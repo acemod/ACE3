@@ -8,7 +8,7 @@ class ACE_Medical_StateMachine {
         onState = QFUNC(handleStateDefault);
         class Injury {
             targetState = "Injured";
-            events[] = {QEGVAR(medical,injured)};
+            events[] = {QEGVAR(medical,injured), QEGVAR(medical,LoweredVitals)};
         };
         class CriticalInjuryOrVitals {
             targetState = "Unconscious";

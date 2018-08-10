@@ -18,8 +18,6 @@
 
 params ["_unit", "_desiredPainLevel"];
 
-if (isNil "_desiredPainLevel") exitWith {};
-
 if (!local _unit) exitWith { ERROR("unit is not local"); };
 
 TRACE_2("adjustPainLevel",_unit,_desiredPainLevel);
