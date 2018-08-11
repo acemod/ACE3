@@ -102,13 +102,13 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                 _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body", "Head"];
             };
             _ammo = "#falling";
-            TRACE_4("Fall Damage",_shooter,_instigator,_damage,_receivedDamage);
+            TRACE_5("Fall Damage",_unit,_shooter,_instigator,_damage,_receivedDamage);
         } else {
             // Getting hit by a vehicle lists the driver as the shooter
             if !(isNull _shooter) then {
                 _woundedHitPoint = "Body";
                 _ammo = "#vehiclecrash";
-                TRACE_4("Collision Damage",_shooter,_instigator,_damage,_receivedDamage);
+                TRACE_5("Collision Damage",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
                 // Anything else is probably fire damage
                 _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
@@ -118,7 +118,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                     // if the new sum is large enough, reset variable and continue with it added in
                     _unit setVariable [QGVAR(trivialDamage), 0];
                     _receivedDamage = _combinedDamage;
-                    TRACE_4("Burning",_shooter,_instigator,_damage,_receivedDamage);
+                    TRACE_5("Burning",_unit,_shooter,_instigator,_damage,_receivedDamage);
                 } else {
                     // otherwise just save the new sum into the variable and exit
                     _unit setVariable [QGVAR(trivialDamage), _combinedDamage];
@@ -154,7 +154,7 @@ if (
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
     [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning"]] call CBA_fnc_localEvent;
-    TRACE_4("Drowning",_shooter,_instigator,_damage,_newDamage);
+    TRACE_5("Drowning",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
 };
@@ -167,9 +167,10 @@ if (
     _ammo isEqualTo "" &&
     {_vehicle != _unit} &&
     {vectorMagnitude (velocity _vehicle) > 5}
+    // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
     [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash"]] call CBA_fnc_localEvent;
-    TRACE_4("Vehicle Crash",_shooter,_instigator,_damage,_newDamage);
+    TRACE_5("Vehicle Crash",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
 };
