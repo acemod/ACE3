@@ -1,6 +1,5 @@
 [
     QGVAR(enabledFor),
-    "CHECKBOX",
     "LIST",
     [LLSTRING(enableFor_title), LLSTRING(enableFor_desc)],
     LLSTRING(settingCategory),

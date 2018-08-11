@@ -57,7 +57,7 @@ class Cfg3DEN {
                         control = "Checkbox";
                         displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName);
                         tooltip = CSTRING(AssignMedicalFacility_enabled_Description);
-                        expression = QUOTE(_this setVariable [ARR_3(QQEQGVAR(medical,isMedicalFacility),_value,true)];);
+                        expression = QUOTE(_this setVariable [ARR_3(QQEGVAR(medical,isMedicalFacility),_value,true)];);
                         typeName = "BOOL";
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
                         defaultValue = "false";
