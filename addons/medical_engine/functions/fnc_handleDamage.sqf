@@ -15,7 +15,6 @@
  */
 // for travis
 #define HIT_STRUCTURAL QGVAR($#structural)
-#define HIT_CRASH QGVAR($#crash)
 
 params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint"];
 
@@ -24,24 +23,12 @@ if !(local _unit) exitWith {nil};
 
 // Get missing meta info
 private _oldDamage = 0;
-private _isCrash = false;
 
-if (_hitPointIndex < 0) then {
+if (_hitPoint isEqualTo "") then {
     _hitPoint = "#structural";
     _oldDamage = damage _unit;
-
-    // Handle vehicle crashes
-    if (_damage == _unit getVariable [HIT_CRASH, -1]) then {
-        _isCrash = (_ammo == "");
-        _unit setVariable [HIT_CRASH, -1];
-    } else {
-        _unit setVariable [HIT_CRASH, _damage];
-    };
 } else {
     _oldDamage = _unit getHitIndex _hitPointIndex;
-
-    // No crash, reset
-    _unit setVariable [HIT_CRASH, -1];
 };
 
 // Damage can be disabled with old variable or via sqf command allowDamage
@@ -106,8 +93,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     // Check for environmental damage sources (EH doesn't explicitly know)
     if (_ammo isEqualTo "") then {
         // Downward velocity indicates falling damage
-        // todo: check that this doesn't trigger for units in vehicles
-        if (velocity _unit select 2 < -2) then {
+        if ((vehicle _unit == _unit) && {velocity _unit select 2 < -2}) then {
             if (_receivedDamage < 0.35) then {
                 // Less than ~ 5 m
                 _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg"];
@@ -116,21 +102,23 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                 _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body", "Head"];
             };
             _ammo = "#falling";
+            TRACE_4("Fall Damage",_shooter,_instigator,_damage,_receivedDamage);
         } else {
-            // Significant damage is probably a collision
-            if (_receivedDamage > 0.1) then {
+            // Getting hit by a vehicle lists the driver as the shooter
+            if !(isNull _shooter) then {
                 _woundedHitPoint = "Body";
                 _ammo = "#vehiclecrash";
+                TRACE_4("Collision Damage",_shooter,_instigator,_damage,_receivedDamage);
             } else {
-                // Probably fire damage
+                // Anything else is probably fire damage
                 _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
                 _ammo = "#unknown";
                 private _combinedDamage = _receivedDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
                 if (_combinedDamage > 0.1) then {
                     // if the new sum is large enough, reset variable and continue with it added in
                     _unit setVariable [QGVAR(trivialDamage), 0];
-                    TRACE_2("Using sum of trivialDamage",_receivedDamage,_combinedDamage);
                     _receivedDamage = _combinedDamage;
+                    TRACE_4("Burning",_shooter,_instigator,_damage,_receivedDamage);
                 } else {
                     // otherwise just save the new sum into the variable and exit
                     _unit setVariable [QGVAR(trivialDamage), _combinedDamage];
@@ -158,17 +146,30 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     0
 };
 
-// Check for drowning damage.
-// Don't change the third expression. Safe method for FLOATs.
-if (_hitPoint isEqualTo "#structural" && {getOxygenRemaining _unit <= 0.5} && {_damage isEqualTo (_oldDamage + 0.005)}) exitWith {
+// Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
+// Damage occurs in consistent increments
+if (
+    _hitPoint isEqualTo "#structural" &&
+    {getOxygenRemaining _unit <= 0.5} &&
+    {_damage isEqualTo (_oldDamage + 0.005)}
+) exitWith {
     [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning"]] call CBA_fnc_localEvent;
+    TRACE_4("Drowning",_shooter,_instigator,_damage,_newDamage);
 
     0
 };
 
-// Handle vehicle crashes
-if (_isCrash) exitWith {
+// Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
+// It does fire the EH multiple times, but this seems to scale with the intensity of the crash
+private _vehicle = vehicle _unit;
+if (
+    _hitPoint isEqualTo "#structural" &&
+    _ammo isEqualTo "" &&
+    {_vehicle != _unit} &&
+    {vectorMagnitude (velocity _vehicle) > 5}
+) exitWith {
     [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash"]] call CBA_fnc_localEvent;
+    TRACE_4("Vehicle Crash",_shooter,_instigator,_damage,_newDamage);
 
     0
 };
