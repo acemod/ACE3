@@ -1,5 +1,5 @@
 // Manual transitions applied to this statemachine
-//  - medical_fnc_handleRespawn:18
+//  - fnc_resetStateDefault on unit respawn
 class ACE_Medical_StateMachine {
     list = "allUnits select {local _x}";
     skipNull = 1;
