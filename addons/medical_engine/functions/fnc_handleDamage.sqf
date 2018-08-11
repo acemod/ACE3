@@ -1,7 +1,9 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
- * Main HandleDamage EH function for soldiers.
+ * Author: commy2, SilentSpike
+ * HandleDamage EH where wound events are raised based on incoming damage.
+ * Be aware that for each source of damage, the EH can fire multiple times (once for each hitpoint).
+ * We store these incoming damages and compare them on our final hitpoint: "ace_hdbracket".
  *
  * Arguments:
  * Handle damage EH
@@ -15,17 +17,15 @@
 #define HIT_STRUCTURAL QGVAR($#structural)
 #define HIT_CRASH QGVAR($#crash)
 
-params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator"];
-//diag_log text str _this;
+params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint"];
 
 // HD sometimes triggers for remote units - ignore.
-if (!local _unit) exitWith {nil};
+if !(local _unit) exitWith {nil};
 
 // Get missing meta info
-private ["_hitPoint", "_oldDamage"];
+private _oldDamage = 0;
 private _isCrash = false;
 
-// Store
 if (_hitPointIndex < 0) then {
     _hitPoint = "#structural";
     _oldDamage = damage _unit;
@@ -38,7 +38,6 @@ if (_hitPointIndex < 0) then {
         _unit setVariable [HIT_CRASH, _damage];
     };
 } else {
-    _hitPoint = toLower (getAllHitPointsDamage _unit select 0 select _hitPointIndex);
     _oldDamage = _unit getHitIndex _hitPointIndex;
 
     // No crash, reset
@@ -48,14 +47,16 @@ if (_hitPointIndex < 0) then {
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && _unit getVariable [QEGVAR(medical,allowDamage), true]) exitWith {_oldDamage};
 
+// Damages are stored for "ace_hdbracket" event triggered last
 private _newDamage = _damage - _oldDamage;
 _unit setVariable [format [QGVAR($%1), _hitPoint], _newDamage];
 
-// These control blood material visuals.
-// If damage is in dummy hitpoints, "hands" and "legs", don't change anything
+// Engine damage to these hitpoints controls blood visuals, limping, weapon sway
+// Handled in fnc_damageBodyPart, persist here
 if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {_oldDamage};
 
-// Add injury
+// This hitpoint is set to trigger last, evaluate all the stored damage values
+// to determine where wounds are applied
 if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     _unit setVariable [QGVAR(lastShooter), _shooter];
     _unit setVariable [QGVAR(lastInstigator), _instigator];
@@ -80,10 +81,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     private _damageLeftLeg = _unit getVariable [QGVAR($HitLeftLeg), 0];
     private _damageRightLeg = _unit getVariable [QGVAR($HitRightLeg), 0];
 
-    // Find hit point that received the maxium damage.
-    // second param is a priority. should multiple hitpoints receive the same
-    // amount of damage (e.g. max which is 4), we don't want them to be sorted
-    // alphabetically (which would mean that RightLeg is always chosen)
+    // Find hit point that received the maxium damage
+    // Priority used for sorting if incoming damage is equivalent (e.g. max which is 4)
     private _allDamages = [
         [_damageHead,     PRIORITY_HEAD,      "Head"],
         [_damageBody,     PRIORITY_BODY,      "Body"],
@@ -97,14 +96,17 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     _allDamages sort false;
     (_allDamages select 0) params ["_receivedDamage", "", "_woundedHitPoint"];
 
+    // We know it's structural when no specific hitpoint is damaged
     if (_receivedDamage == 0) then {
         _receivedDamage = _damageStructural;
         _woundedHitPoint = "Body";
     };
     TRACE_2("received",_receivedDamage,_woundedHitPoint);
 
-    // Check for falling damage.
+    // Check for environmental damage sources (EH doesn't explicitly know)
     if (_ammo isEqualTo "") then {
+        // Downward velocity indicates falling damage
+        // todo: check that this doesn't trigger for units in vehicles
         if (velocity _unit select 2 < -2) then {
             if (_receivedDamage < 0.35) then {
                 // Less than ~ 5 m
@@ -115,12 +117,12 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
             _ammo = "#falling";
         } else {
+            // Significant damage is probably a collision
             if (_receivedDamage > 0.1) then {
-                // Assume collision damage.
                 _woundedHitPoint = "Body";
                 _ammo = "#vehiclecrash";
             } else {
-                // Probably fire damage:
+                // Probably fire damage
                 _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
                 _ammo = "#unknown";
                 private _combinedDamage = _receivedDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
@@ -138,16 +140,15 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         };
     };
 
-    // Don't trigger for minor damage.
+    // No wounds for minor damage
     if (_receivedDamage > 1E-3) then {
         [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
     };
 
-    // resetting these single-damage-event tracker vars, if we don't do this then
-    // subsequent wounds will be piled onto the selection which has accumulated
-    // the most wounding
+    // Clear stored damages otherwise they will influence future damage events
+    // (aka wounds will pile onto the historically most damaged hitpoint)
     {
-        _unit setVariable [_x, 0];
+        _unit setVariable [_x, nil];
     } forEach [
         QGVAR($HitFace),QGVAR($HitNeck),QGVAR($HitHead),
         QGVAR($HitPelvis),QGVAR($HitAbdomen),QGVAR($HitDiaphragm),QGVAR($HitChest),QGVAR($HitBody),
@@ -172,4 +173,5 @@ if (_isCrash) exitWith {
     0
 };
 
+// We store our own damage values so engine damage is unnecessary
 0
