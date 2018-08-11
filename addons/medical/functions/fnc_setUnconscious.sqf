@@ -76,7 +76,10 @@ if (vehicle _unit == _unit) then {
     if (primaryWeapon _unit == "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
     };
-    _unit selectWeapon (primaryWeapon _unit);
+
+    if (currentWeapon _unit != primaryWeapon _unit) then {
+        _unit selectWeapon primaryWeapon _unit;
+    };
 };
 
 // We are storing the current animation, so we can use it later on when waking the unit up inside a vehicle
