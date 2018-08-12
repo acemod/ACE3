@@ -25,6 +25,7 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened), false]) exi
 if !([_caller, _target, _bodyPart, _className] call FUNC(canTreat)) exitWith {false};
 
 private _config = configFile >> QGVAR(Actions) >> _className;
+private _isSelf = _caller isEqualTo _target;
 
 // handle items
 private _items = getArray (_config >> "items");
@@ -58,32 +59,11 @@ if (isNil _callbackProgress) then {
     _callbackProgress = missionNamespace getVariable _callbackProgress;
 };
 
-// play patient animation
-private _patientAnim = getText (_config >> "animationPatient");
-
-if (IS_UNCONSCIOUS(_target) && EGVAR(medical,allowUnconsciousAnimationOnTreatment)) then {
-    if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
-        _patientAnim = getText (_config >> "animationPatientUnconscious");
-    };
-};
-
-private _isSelf = _caller isEqualTo _target;
-
-if (!_isSelf && {vehicle _target == _target} && {_patientAnim != ""}) then {
-    if IS_UNCONSCIOUS(_target) then {
-        [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
-    } else {
-        [_target, _patientAnim, 1, true] call EFUNC(common,doAnimation);
-    };
-};
-
 // play animation
-private "_callerAnim";
-
-if (_isSelf) then {
-    _callerAnim = getText (_config >> ["animationCallerSelf", "animationCallerSelfProne"] select (stance _caller == "PRONE"));
+private _callerAnim = if (_isSelf) then {
+    getText (_config >> ["animationCallerSelf", "animationCallerSelfProne"] select (stance _caller == "PRONE"));
 } else {
-    _callerAnim = getText (_config >> ["animationCaller", "animationCallerProne"] select (stance _caller == "PRONE"));
+    getText (_config >> ["animationCaller", "animationCallerProne"] select (stance _caller == "PRONE"));
 };
 
 _caller setVariable [QGVAR(selectedWeaponOnTreatment), weaponState _caller];

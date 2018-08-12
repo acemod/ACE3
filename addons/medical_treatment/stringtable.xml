@@ -56,12 +56,6 @@
             <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
                 <English>Allows using IV Transfusions on yourself</English>
             </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_DisplayName">
-                <English>Allow Unconscious Animation</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowUnconsciousAnimationOnTreatment_Description">
-                <English>Allow Unconscious Animation on Treatment.</English>
-            </Key>
             <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
                 <English>CPR creates pulse</English>
                 <German>HLW erzeugt einen Puls</German>

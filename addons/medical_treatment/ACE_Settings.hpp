@@ -135,9 +135,4 @@ class ACE_Settings {
         value = 0;
         values[] = {"No", "Yes"};
     };
-    class EGVAR(medical,allowUnconsciousAnimationOnTreatment) {
-        displayName = CSTRING(allowUnconsciousAnimationOnTreatment_DisplayName);
-        typeName = "BOOL";
-        value = 0;
-    };
 };

@@ -18,9 +18,6 @@ class GVAR(Actions) {
         callbackFailure = "";
         callbackProgress = "";
 
-        animationPatient = "";
-        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-        animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
         animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
         animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
@@ -191,7 +188,6 @@ class GVAR(Actions) {
         callbackSuccess = QFUNC(actionDiagnose);
         callbackFailure = "";
         callbackProgress = "";
-        animationPatient = "";
         animationCaller = ""; // TODO
         itemConsumed = 0;
         litter[] = {};
@@ -233,8 +229,6 @@ class GVAR(Actions) {
         callbackSuccess = QFUNC(actionPlaceInBodyBag);
         callbackFailure = "";
         callbackProgress = "";
-        animationPatient = "";
-        animationPatientUnconscious = "";
         itemConsumed = 1;
         litter[] = {};
     };
@@ -253,8 +247,6 @@ class GVAR(Actions) {
         callbackFailure = QFUNC(treatmentCPR_failure);
         callbackProgress = QFUNC(treatmentCPR_progress);
         callbackStart = QFUNC(treatmentCPR_start);
-        animationPatient = "";
-        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
         animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         animationCallerSelf = "";
@@ -289,8 +281,6 @@ class GVAR(Actions) {
         treatmentTime = QUOTE(_target call FUNC(healTime));
         callbackSuccess = QFUNC(treatmentFullHeal);
         itemConsumed = QEGVAR(medical,consumeItem_PAK);
-        animationPatient = "";
-        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
         animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
         animationCallerSelf = "";
