@@ -69,7 +69,7 @@ if (IS_UNCONSCIOUS(_target) && EGVAR(medical,allowUnconsciousAnimationOnTreatmen
 
 private _isSelf = _caller isEqualTo _target;
 
-if (!_isSelf && {vehicle _target == _target} && {_patientAnim != ""}) then {
+if (!_isSelf && {vehicle _target == _target} && {_patientAnim != ""} && {alive _target}) then {
     if IS_UNCONSCIOUS(_target) then {
         [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
     } else {
