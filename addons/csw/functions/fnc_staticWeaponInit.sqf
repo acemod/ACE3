@@ -53,13 +53,16 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     };
 
     private _ammoActionPath = [];
-    if (_configEnabled && {_magazineLocation != ""}) then {
-        private _positionCode = compile _magazineLocation;
-        private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
-        _ammoActionPath = [_typeOf, 0, [], _ammoAction] call EFUNC(interact_menu,addActionToClass);
-    } else {
-        private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode] call EFUNC(interact_menu,createAction);
-        _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
+    // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
+    if (GVAR(ammoHandling) || GVAR(defaultAssemblyMode)) then {
+        if (_configEnabled && {_magazineLocation != ""}) then {
+            private _positionCode = compile _magazineLocation;
+            private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
+            _ammoActionPath = [_typeOf, 0, [], _ammoAction] call EFUNC(interact_menu,addActionToClass);
+        } else {
+            private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode] call EFUNC(interact_menu,createAction);
+            _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
+        };
     };
     if (["ACE_reload"] call EFUNC(common,isModLoaded)) then {
         private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", {[_player, _target] call EFUNC(reload,checkAmmo)}, {[_player, _target] call EFUNC(reload,canCheckAmmo)}] call EFUNC(interact_menu,createAction);

@@ -17,3 +17,13 @@
     true, // isGlobal
     {[QGVAR(handleExtraMagazines), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(ammoHandling), "CHECKBOX",
+    ["ammoHandling"],
+    format ["ACE %1", localize LSTRING(DisplayName)],
+    true, // default value
+    true, // isGlobal
+    {[QGVAR(ammoHandling), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;
+
