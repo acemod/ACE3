@@ -37,10 +37,10 @@
         </Container>
         <Container name="TreatmentNotification">
             <Key ID="STR_ACE_Medical_feedback_TreatingYou">
-                <English>% is treating you</English>
+                <English>%1 is treating you</English>
             </Key>
             <Key ID="STR_ACE_Medical_feedback_TreatingYou2">
-                <English>% is still treating you</English>
+                <English>%1 is still treating you</English>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_UnknownPerson">
                 <English>Somebody</English>
