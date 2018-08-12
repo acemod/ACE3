@@ -21,14 +21,15 @@ private _configEnabled = (getNumber (configFile >> "CfgVehicles" >> _typeOf >> "
 private _assemblyConfig = _configEnabled && {(getText (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "disassembleWeapon")) != ""};
 TRACE_4("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig);
 
-
 if (_configEnabled && {local _staticWeapon}) then { // need to wait a frame to allow setting object vars during assembly
     [FUNC(staticWeaponInit_unloadExtraMags), [_staticWeapon]] call CBA_fnc_execNextFrame;
 };
 
 if (_assemblyConfig) then { // Disable vanilla assembly if assemblyMode eanbled
     private _assemblyMode = [false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]);
+    _staticWeapon setVariable [QGVAR(assemblyMode), 0];
     if (_assemblyMode) then {
+        _staticWeapon setVariable [QGVAR(assemblyMode), 1];
         [QGVAR(disableVanillaAssembly), [_staticWeapon]] call CBA_fnc_localEvent;
     };
 };
