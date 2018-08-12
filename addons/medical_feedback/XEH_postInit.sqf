@@ -77,7 +77,7 @@ Initalises logic for treatment notifications shown to the player
 [QGVAR(treatment_initiated), {
     params ["_medic", "_patient"];
 
-    // Notifications don't make sense for self-healing or when dead
+    // Notifications are unwanted for self-healing or when dead
     if (_medic == _patient || {!alive _patient}) exitWith {};
 
     // Can't tell who is providing aid when you're unconscious
@@ -94,7 +94,7 @@ Initalises logic for treatment notifications shown to the player
 [QGVAR(treatment_ended), {
     params ["_medic", "_patient", "_responders"];
 
-    // Notifications don't make sense for self-healing or when dead
+    // Notifications are unwanted for self-healing or when dead
     if (_medic == _patient || {!alive _patient}) exitWith {};
 
     // If someone else is still treating it's useful to know
@@ -108,7 +108,7 @@ Initalises logic for treatment notifications shown to the player
         };
 
         QGVAR(notification) cutText [
-            format [LLSTRING(TreatingYou2), _name],
+            format [LLSTRING(StillTreatingYou), _name],
             "PLAIN DOWN"
         ];
     };

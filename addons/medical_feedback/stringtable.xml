@@ -39,7 +39,7 @@
             <Key ID="STR_ACE_Medical_feedback_TreatingYou">
                 <English>%1 is treating you</English>
             </Key>
-            <Key ID="STR_ACE_Medical_feedback_TreatingYou2">
+            <Key ID="STR_ACE_Medical_feedback_StillTreatingYou">
                 <English>%1 is still treating you</English>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_UnknownPerson">

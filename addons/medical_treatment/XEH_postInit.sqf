@@ -73,21 +73,26 @@ private _treatmentEnded = {
 
 // Update the responders array upon switching unit
 ["unit", {
-    params ["_unit"];
+    params ["_newUnit", "_oldUnit"];
+
+    // In case of respawn nobody is treating you
+    if !(alive _oldUnit) exitWith {
+        _newUnit setVariable [QGVAR(responders), nil];
+    };
 
     // See comments in _treatmentEnded for details
-    private _responders = _unit getVariable [QGVAR(responders), []];
+    private _responders = _newUnit getVariable [QGVAR(responders), []];
     _responders = _responders select {
         !isNull _x &&
         {[_x] call EFUNC(common,isPlayer)}
     };
-    _unit setVariable [QGVAR(responders), _responders];
+    _newUnit setVariable [QGVAR(responders), _responders];
 
     // Raise a notification event if the unit switched to is already being treated
     if !(_responders isEqualTo []) then {
         [
             QEGVAR(medical_feedback,treatment_initiated),
-            [_responders select 0, _unit]
+            [_responders select 0, _newUnit]
         ] call CBA_fnc_localEvent;
     };
 }] call CBA_fnc_addPlayerEventHandler;
