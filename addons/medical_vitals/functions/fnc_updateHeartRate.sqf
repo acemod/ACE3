@@ -46,6 +46,7 @@ private _heartRate = GET_HEART_RATE(_unit);
 
 if !IN_CRDC_ARRST(_unit) then {
     private _hrChange = 0;
+    private _targetHR = 0;
     private _bloodVolume = GET_BLOOD_VOLUME(_unit);
     if (_bloodVolume > BLOOD_VOLUME_CLASS_4_HEMORRHAGE) then {
         GET_BLOOD_PRESSURE(_unit) params ["_bloodPressureL", "_bloodPressureH"];
@@ -57,7 +58,7 @@ if !IN_CRDC_ARRST(_unit) then {
             _targetBP = _targetBP * (_bloodVolume / DEFAULT_BLOOD_VOLUME);
         };
 
-        private _targetHR = DEFAULT_HEART_RATE;
+        _targetHR = DEFAULT_HEART_RATE;
         if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) then {
             _targetHR = _heartRate * (_targetBP / (45 max _meanBP));
         };
@@ -68,7 +69,6 @@ if !IN_CRDC_ARRST(_unit) then {
 
         _hrChange = round(_targetHR - _heartRate) / 2; 
     } else {
-        _targetHR = 0;
         _hrChange = -round(_heartRate / 10);
     };
     if (_hrChange < 0) then {
@@ -81,4 +81,3 @@ if !IN_CRDC_ARRST(_unit) then {
 _unit setVariable [VAR_HEART_RATE, _heartRate, _syncValue];
 
 _heartRate
-
