@@ -24,3 +24,5 @@ if (_target call EFUNC(common,isAwake)) exitWith {false};
 if !IN_CRDC_ARRST(_target) exitWith {false};
 
 [_target] call FUNC(calculateBlood); // Calculate blood volume. If their is no pulse, nothing happens!
+
+true
