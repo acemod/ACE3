@@ -67,7 +67,7 @@ if !IN_CRDC_ARRST(_unit) then {
         };
         _targetHR = (_targetHR + _hrTargetAdjustment) max 0;
 
-        _hrChange = round(_targetHR - _heartRate) / 2; 
+        _hrChange = round(_targetHR - _heartRate) / 2;
     } else {
         _hrChange = -round(_heartRate / 10);
     };
