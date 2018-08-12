@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Tripod <OBJECT>
- * 0: Unit <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can pickup <BOOL>
@@ -18,5 +18,5 @@
 
 params ["_tripod", "_player"];
 
-((secondaryWeapon _player) == "") && {alive _tripod}
+((secondaryWeapon _player) isEqualTo "") && {alive _tripod}
 

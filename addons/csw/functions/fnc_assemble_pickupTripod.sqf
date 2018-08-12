@@ -33,7 +33,15 @@
         [_player, "PutDown"] call EFUNC(common,doGesture);
     };
     
+    private _condition = {
+        params["_args"];
+        _args params ["_tripod", "_player"];
+        
+        !(isNull _tripod) && { (secondaryWeapon _player) isEqualTo "" }
+        
+    };
+    
     TRACE_3("",_pickupTime,typeOf _tripod,_tripodClassname);
-    [TIME_PROGRESSBAR(_pickupTime), [_tripod, _player, _tripodClassname], _onFinish, FUNC(assemble_canPickupTripod), localize LSTRING(PickupTripod_progressBar)] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_pickupTime), [_tripod, _player, _tripodClassname], _onFinish, {}, localize LSTRING(PickupTripod_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
 
