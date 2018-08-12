@@ -26,6 +26,9 @@ if (isServer) then {
 [QGVAR(initiated), {
     params ["_caller", "_target"];
 
+    // Don't track self-treatment
+    if (_caller isEqualTo _target) exitWith {};
+
     // Add the new responder
     private _responders = _target getVariable [QGVAR(responders), []];
     _responders pushBackUnique _caller;
@@ -40,6 +43,9 @@ if (isServer) then {
 // Remove tracked players when they stop treating
 private _treatmentEnded = {
     params ["_caller", "_target"];
+
+    // Don't track self-treatment
+    if (_caller isEqualTo _target) exitWith {};
 
     // Remove the old responder
     private _responders = _target getVariable [QGVAR(responders), []];
@@ -64,12 +70,6 @@ private _treatmentEnded = {
 };
 [QGVAR(success), _treatmentEnded] call CBA_fnc_addEventHandler;
 [QGVAR(failure), _treatmentEnded] call CBA_fnc_addEventHandler;
-
-// We stop tracking who is treating a dead patient
-[QEGVAR(medical,death), {
-    params ["_unit"];
-    _unit setVariable [QGVAR(responders), nil];
-}] call CBA_fnc_addEventHandler;
 
 // Update the responders array upon switching unit
 ["unit", {
