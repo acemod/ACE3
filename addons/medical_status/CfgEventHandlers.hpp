@@ -19,6 +19,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class CAManBase {
         class ADDON {
+            onRespawn = true;
             init = QUOTE(call FUNC(initUnit));
         };
     };

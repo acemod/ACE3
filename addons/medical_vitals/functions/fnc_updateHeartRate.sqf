@@ -64,13 +64,18 @@ if !IN_CRDC_ARRST(_unit) then {
         if (_painLevel > 0.2) then {
             _targetHR = _targetHR max (80 + 50 * _painLevel);
         };
-        _targetHR = _targetHR + _hrTargetAdjustment;
+        _targetHR = (_targetHR + _hrTargetAdjustment) max 0;
 
-        _hrChange = round(_targetHR - _heartRate) / 2;
+        _hrChange = round(_targetHR - _heartRate) / 2; 
     } else {
+        _targetHR = 0;
         _hrChange = -round(_heartRate / 10);
     };
-    _heartRate = (_heartRate + _deltaT * _hrChange) max 0;
+    if (_hrChange < 0) then {
+        _heartRate = (_heartRate + _deltaT * _hrChange) max _targetHR;
+    } else {
+        _heartRate = (_heartRate + _deltaT * _hrChange) min _targetHR;
+    };
 };
 
 _unit setVariable [VAR_HEART_RATE, _heartRate, _syncValue];

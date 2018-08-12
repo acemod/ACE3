@@ -19,4 +19,7 @@ params ["_unit"];
 // Send a local event before death
 [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 
+_unit setVariable [VAR_HEART_RATE, 0, true];
+_unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
+
 _unit setDamage 1;
