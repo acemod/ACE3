@@ -18,6 +18,12 @@ GVAR(heartBeatEffectRunning) = false;
 [false] call FUNC(initEffects);
 [LINKFUNC(handleEffects), 1, []] call CBA_fnc_addPerFrameHandler;
 
+/*
+Author: SilentSpike
+
+Initalises logic for volume handling between consciousness transitions and death
+*/
+
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
 
@@ -59,4 +65,64 @@ GVAR(heartBeatEffectRunning) = false;
     [QUOTE(ADDON), VOL_UNCONSCIOUS, _status] call EFUNC(common,setHearingCapability);
     [_status, 0] call FUNC(effectUnconscious);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
+}] call CBA_fnc_addPlayerEventHandler;
+
+/*
+Author: SilentSpike
+
+Initalises logic for treatment notifications shown to the player
+*/
+
+// Notification lets the player known if they're being treated
+[QGVAR(treatment_initiated), {
+    params ["_medic", "_patient"];
+
+    // Notifications don't make sense for self-healing or when dead
+    if (_medic == _patient || {!alive _patient}) exitWith {};
+
+    // Can't tell who is providing aid when you're unconscious
+    private _name = if IS_UNCONSCIOUS(_patient) then {
+        LLSTRING(UnknownPerson)
+    } else {
+        name _medic
+    };
+
+    QGVAR(notification) cutText [format [LLSTRING(TreatingYou), _name], "PLAIN DOWN"];
+}] call CBA_fnc_addEventHandler;
+
+// Notification may no longer apply when treatment ends
+[QGVAR(treatment_ended), {
+    params ["_medic", "_patient", "_responders"];
+
+    // Notifications don't make sense for self-healing or when dead
+    if (_medic == _patient || {!alive _patient}) exitWith {};
+
+    // If someone else is still treating it's useful to know
+    if (_responders isEqualTo []) then {
+        QGVAR(notification) cutFadeOut 1;
+    } else {
+        private _name = if IS_UNCONSCIOUS(_patient) then {
+            LLSTRING(UnknownPerson);
+        } else {
+            name (_responders select 0)
+        };
+
+        QGVAR(notification) cutText [
+            format [LLSTRING(TreatingYou2), _name],
+            "PLAIN DOWN"
+        ];
+    };
+}] call CBA_fnc_addEventHandler;
+
+// A dead patient no longer needs a notification
+[QEGVAR(medical,death), {
+    params ["_unit"];
+    if (_unit == ACE_player) then {
+        QGVAR(notification) cutFadeOut 1;
+    };
+}] call CBA_fnc_addEventHandler;
+
+// Immediately hide any old notification upon switching unit
+["unit", {
+    QGVAR(notification) cutText ["", "PLAIN DOWN"];
 }] call CBA_fnc_addPlayerEventHandler;

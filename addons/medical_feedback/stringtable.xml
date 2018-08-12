@@ -35,6 +35,17 @@
                 <Chinese>啟用傷者的尖叫聲</Chinese>
             </Key>
         </Container>
+        <Container name="TreatmentNotification">
+            <Key ID="STR_ACE_Medical_feedback_TreatingYou">
+                <English>% is treating you</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_feedback_TreatingYou2">
+                <English>% is still treating you</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_treatment_UnknownPerson">
+                <English>Somebody</English>
+            </Key>
+        </Container>
         <Key ID="STR_ACE_Medical_feedback_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>

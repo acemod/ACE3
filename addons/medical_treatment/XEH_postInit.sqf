@@ -22,91 +22,72 @@ if (isServer) then {
 [QGVAR(actionCheckBloodPressureLocal), FUNC(actionCheckBloodPressureLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
-// Notification lets the player known if they're being treated
+// Track the players treating the patient
 [QGVAR(initiated), {
     params ["_caller", "_target"];
 
-    // Notifications don't make sense for self-healing or when dead
-    if (_target == _caller || {!alive _target}) exitWith {};
-
-    // Tracking who is responding lets us show notifications in future too
+    // Add the new responder
     private _responders = _target getVariable [QGVAR(responders), []];
     _responders pushBackUnique _caller;
     _target setVariable [QGVAR(responders), _responders];
 
-    // Player only cares if they are the patient
+    // If patient is the player a notification event occurs
     if (_target == ACE_player) then {
-        // Can't tell who is providing aid when you're unconscious
-        private _name = if IS_UNCONSCIOUS(_target) then {
-            LLSTRING(UnknownPerson);
-        } else {
-            name _caller
-        };
-
-        QGVAR(notification) cutText [format [LLSTRING(Notification), _name], "PLAIN DOWN"];
+        [QEGVAR(medical_feedback,treatment_initiated), [_caller, _target]] call CBA_fnc_localEvent;
     };
 }] call CBA_fnc_addEventHandler;
 
-// Notification may no longer apply when treatment ends
+// Remove tracked players when they stop treating
 private _treatmentEnded = {
     params ["_caller", "_target"];
 
-    // Notifications don't make sense for self-healing or when dead
-    if (_target == _caller || {!alive _target}) exitWith {};
-
-    // Update the responder tracking
+    // Remove the old responder
     private _responders = _target getVariable [QGVAR(responders), []];
     _responders deleteAt (_responders find _caller);
-    _responders = _responders - [objNull];
+
+    // If a player disconnects and their unit is deleted the treatment has stopped
+    // If a player disconnects and their unit becomes AI the treatment has stopped
+    // (medical_ai has it's own treatment logic)
+    _responders = _responders select {
+        !isNull _x &&
+        {[_x] call EFUNC(common,isPlayer)}
+    };
     _target setVariable [QGVAR(responders), _responders];
 
-    // If someone else is still treating it's useful to know
+    // If patient is the player a notification event occurs
     if (_target == ACE_player) then {
-        if (_responders isEqualTo []) then {
-            QGVAR(notification) cutFadeOut 1;
-        } else {
-            private _name = if IS_UNCONSCIOUS(_target) then {
-                LLSTRING(UnknownPerson);
-            } else {
-                name (_responders select 0)
-            };
-            QGVAR(notification) cutText [
-                format [LLSTRING(Notification2), _name],
-                "PLAIN DOWN"
-            ];
-        };
+        [
+            QEGVAR(medical_feedback,treatment_ended),
+            [_caller, _target, _responders]
+        ] call CBA_fnc_localEvent;
     };
 };
 [QGVAR(success), _treatmentEnded] call CBA_fnc_addEventHandler;
 [QGVAR(failure), _treatmentEnded] call CBA_fnc_addEventHandler;
 
-// A dead patient no longer needs a notification
+// We stop tracking who is treating a dead patient
 [QEGVAR(medical,death), {
     params ["_unit"];
     _unit setVariable [QGVAR(responders), nil];
-    if (_unit == ACE_player) then {
-        QGVAR(notification) cutFadeOut 1;
-    };
 }] call CBA_fnc_addEventHandler;
 
-// Need to update treatment notification when player switches unit
+// Update the responders array upon switching unit
 ["unit", {
     params ["_unit"];
 
-    // Immediately hide any old notification
-    QGVAR(notification) cutText ["", "PLAIN DOWN"];
-
+    // See comments in _treatmentEnded for details
     private _responders = _unit getVariable [QGVAR(responders), []];
-    _responders = _responders - [objNull];
+    _responders = _responders select {
+        !isNull _x &&
+        {[_x] call EFUNC(common,isPlayer)}
+    };
+    _unit setVariable [QGVAR(responders), _responders];
 
-    // Let the player know if the unit switched to is already being treated
-    if (_responders isEqualTo []) then {
-        private _name = if IS_UNCONSCIOUS(_unit) then {
-            LLSTRING(UnknownPerson);
-        } else {
-            name (_responders select 0)
-        };
-
-        QGVAR(notification) cutText [format [LLSTRING(Notification), _name], "PLAIN DOWN"];
+    // Raise a notification event if the unit switched to is already being treated
+    if !(_responders isEqualTo []) then {
+        [
+            QEGVAR(medical_feedback,treatment_initiated),
+            [_responders select 0, _unit]
+        ] call CBA_fnc_localEvent;
     };
 }] call CBA_fnc_addPlayerEventHandler;

@@ -371,17 +371,6 @@
                 <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
             </Key>
         </Container>
-        <Container name="AidNotification">
-            <Key ID="STR_ACE_Medical_treatment_Notification">
-                <English>% is treating you</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_Notification2">
-                <English>% is still treating you</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_UnknownPerson">
-                <English>Somebody</English>
-            </Key>
-        </Container>
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
