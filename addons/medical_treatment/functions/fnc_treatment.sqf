@@ -202,6 +202,9 @@ if !(_startCallback isEqualType {}) then {
     ["isnotinside"]
 ] call EFUNC(common,progressBar);
 
+// Treatment event is used for aid notifications
+[QGVAR(initiated), [_caller, _target], _target] call CBA_fnc_targetEvent;
+
 // display icon
 private _iconDisplayed = getText (_config >> "actionIconPath");
 

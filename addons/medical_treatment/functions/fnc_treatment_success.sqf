@@ -69,3 +69,6 @@ _args pushBack _bloodLossOnBodyPart;
 _args call FUNC(litterCreate);
 
 ["ace_treatmentSucceded", [_caller, _target, _bodyPart, _className]] call CBA_fnc_localEvent;
+
+// Treatment event is used for aid notifications
+[QGVAR(success), [_caller, _target], _target] call CBA_fnc_targetEvent;

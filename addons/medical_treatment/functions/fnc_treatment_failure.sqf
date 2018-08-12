@@ -54,3 +54,6 @@ if !(_callback isEqualType {}) then {
 };
 
 _args call _callback;
+
+// Treatment event is used for aid notifications
+[QGVAR(failure), [_caller, _target], _target] call CBA_fnc_targetEvent;
