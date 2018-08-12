@@ -8,7 +8,9 @@
     reverse _allHitPoints;
 
     if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
-        if ((getText (([_unit] call CBA_fnc_getObjectConfig) >> "simulation")) == "UAVPilot") exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+        private _config = [_unit] call CBA_fnc_getObjectConfig;
+        if (getText (_config >> "simulation") == "UAVPilot") exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+        if (getNumber (_config >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
         ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
     } else {
         // Calling this function inside curly brackets allows the usage of
