@@ -90,40 +90,42 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     };
     TRACE_2("received",_receivedDamage,_woundedHitPoint);
 
-    // Check for environmental damage sources (EH doesn't explicitly know)
+    // Environmental damage sources all have empty ammo string
+    // No explicit source given, we infer from differences between them
     if (_ammo isEqualTo "") then {
-        // Downward velocity indicates falling damage
-        if ((vehicle _unit == _unit) && {velocity _unit select 2 < -2}) then {
-            if (_receivedDamage < 0.35) then {
-                // Less than ~ 5 m
-                _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg"];
+        // Fall damage and being hit by vehicle always have a shooter
+        // Check this first because fire damage could happen while falling
+        if !(isNull _shooter) then {
+            // Shooter can be _unit if hit by empty vehicle so check velocity too
+            // A piloted vehicle could hit falling unit so still check shooter
+            if (_shooter == _unit && {(velocity _unit select 2) < -2}) then {
+                // Low damage indicates < ~5m fall
+                _woundedHitPoint =  if (_receivedDamage < 0.35) then {
+                    selectRandom ["LeftLeg", "RightLeg"];
+                } else {
+                    selectRandom ["LeftLeg", "RightLeg", "Body", "Head"];
+                };
+                _ammo = "#falling";
+                TRACE_5("Fall Damage",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
-                // More than ~ 5 m
-                _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body", "Head"];
-            };
-            _ammo = "#falling";
-            TRACE_5("Fall Damage",_unit,_shooter,_instigator,_damage,_receivedDamage);
-        } else {
-            // Getting hit by a vehicle lists the driver as the shooter
-            if !(isNull _shooter) then {
                 _woundedHitPoint = "Body";
                 _ammo = "#vehiclecrash";
                 TRACE_5("Collision Damage",_unit,_shooter,_instigator,_damage,_receivedDamage);
+            };
+        } else {
+            // Anything else is probably fire damage
+            _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
+            _ammo = "#unknown";
+            private _combinedDamage = _receivedDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
+            if (_combinedDamage > 0.1) then {
+                // if the new sum is large enough, reset variable and continue with it added in
+                _unit setVariable [QGVAR(trivialDamage), 0];
+                _receivedDamage = _combinedDamage;
+                TRACE_5("Burning",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
-                // Anything else is probably fire damage
-                _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
-                _ammo = "#unknown";
-                private _combinedDamage = _receivedDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
-                if (_combinedDamage > 0.1) then {
-                    // if the new sum is large enough, reset variable and continue with it added in
-                    _unit setVariable [QGVAR(trivialDamage), 0];
-                    _receivedDamage = _combinedDamage;
-                    TRACE_5("Burning",_unit,_shooter,_instigator,_damage,_receivedDamage);
-                } else {
-                    // otherwise just save the new sum into the variable and exit
-                    _unit setVariable [QGVAR(trivialDamage), _combinedDamage];
-                    _receivedDamage = 0;
-                };
+                // otherwise just save the new sum into the variable and exit
+                _unit setVariable [QGVAR(trivialDamage), _combinedDamage];
+                _receivedDamage = 0;
             };
         };
     };
