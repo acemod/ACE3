@@ -56,6 +56,23 @@ Static weapons are assembled when a tripod is placed down, and the weapon mounte
 - Wait for the timer to complete
 - The tripod, ammo, and weapon will spawn where the static weapon was
 
-## 3. Dependencies
+## 3. Addon Options
+
+### 3.1 defaultAssemblyMode
+
+- Enables/Disables the ability to assemble the CSW through the addon (Non-Vanilla assembly)
+- Default: Off
+
+### 3.2 handleExtraMagazines
+
+- Enables/Disables the magazines in the CSW will appear next to the gun on weapon initialization when using defaultAssemblyMode and you have a pre-placed static weapon
+- Default: On
+
+### 3.3 ammoHandling
+
+- Whether or not you want to handle ammo using the CSW way. Does nothing if using defaultAssemblyMode
+- Default: On
+
+## 4. Dependencies
 
 {% include dependencies_list.md component="csw" %}

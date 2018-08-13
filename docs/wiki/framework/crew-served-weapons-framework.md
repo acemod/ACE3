@@ -31,20 +31,14 @@ class CfgVehicles {
         };
     };
     class banana_csw: StaticMGWeapon {
-        class ace_csw_options {
-            enabled = 1; // Enabled = 0 means that ACE CSW will not affect this weapon, and can be disassembled/assembled using vanilla ARMA.
-            disassembleTo = "banana_carry_weapon"; // What will be spawned when "Disassemble Weapon" is pressed
-        };
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                weapons[] = {"banana_weapon"}; // Whatever custom weapon is being used
-                magazines[] = {"banana_dummy_ammo"}; // The dummy ammo is the max-ammo used by the weapon.
-            };
-        };
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions: ACE_MainActions {
-                displayName = "Banana Weapon";
-            };
+        class ace_csw {
+            enabled = 1; // whether or not the weapon is affected by CSW                
+            proxyWeapon = QGVAR(HMG_Static); // The weapon that will be added to the CSW on initialization. Used to ensure lower ammo-reload time when using Ammo Handling
+            magazineLocation = "_target selectionPosition 'magazine'"; // The location of the magazine. Where the action for ammo-handling will appear on the weapon
+            disassembleWeapon = QGVAR(staticHMGCarry); // What the weapon will disassemble to
+            disassembleTurret = QGVAR(m3TripodLow); // Which tripod will appear when weapon has been disassembled
+            ammoLoadTime = 7; // How long it takes in seconds to load ammo into the weapon           
+            ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
         };
     };
 };
@@ -59,11 +53,7 @@ class CfgMagazines {
         scope=2; // Needs to be 2 to make sure it shows up in Arsenal
         type=256; // Must be 256 to show up in Arsenal
         count = 100; // How much ammo gets added per "Load Ammo" selection
-    };
-    class banana_dummy_ammo: 100Rnd_127x99_mag {
-        scope=1; // Just to make sure it doesn't show up in Arsenal
-        type=0; // This has to be zero so it doesnt show in Arsenal
-        count = 1234; // Max ammo used by the static weapon
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // default ammo box model
     };
 };
 ```
@@ -86,10 +76,8 @@ class CfgWeapons {
         class ace_csw_options {
             deployTime = 10; // Time in seconds it takes to mount the weapon on the tripod
             pickupTime = 12; // Time in seconds it takes to dismount the weapon from the tripod
-            ammoLoadTime = 7; // Time in seconds it takes to load the relavent ammo into the weapon
-            ammoUnloadTime = 16; // Time in seconds it takes to unload the relavent ammo from the weapon
         };
-        magazines[] = { banana_ammo, banana_dummy_ammo }; // You must have both the dummy and real ammunition
+        magazines[] = { banana_ammo }; // You must have both the dummy and real ammunition
     };
 };
 ```
@@ -98,13 +86,12 @@ class CfgWeapons {
 
 ```cpp
     class ace_csw_groups { // Ammo that can be loaded into this CSW
-        class ace_csw_default;
-        class banana_ammo : ace_csw_default { // The magazine which will be loaded into the weapon
+        class banana_ammo { // The magazine which will be loaded into the weapon
             banana_dummy_ammo = 1; // Ammo that is loaded into the weapon as per CfgWeapons >> weapon >> magazines
         };
         
         // Optional
-        class ace_csw_100Rnd_127x99_mag : ace_csw_default { // default magazine that CSW already implements
+        class ace_csw_100Rnd_127x99_mag { // default magazine that CSW already implements
             banana_dummy_ammo = 1;
         };
         
@@ -118,6 +105,8 @@ class CfgWeapons {
             - ACE_1Rnd_82mm_Mo_Illum
             - ACE_1Rnd_82mm_Mo_HE_Guided
             - ACE_1Rnd_82mm_Mo_HE_LaserGuided
+            - Titan_AT
+            - Titan_AA
         */
     };
 ```
@@ -130,7 +119,7 @@ class CfgWeapons {
 class CfgVehicles {
     class ace_csw_baseTripod;
     class banana_tripod: ace_csw_baseTripod {
-        class GVAR(options) { disassembleTo = "banana_carry_tripod"; }; // What will be spawned when "Pickup Tripod" is selected
+        class ace_csw { disassembleTo = "banana_carry_tripod"; }; // What will be spawned when "Pickup Tripod" is selected
     };
 };
 ```
