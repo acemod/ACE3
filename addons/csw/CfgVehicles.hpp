@@ -112,24 +112,26 @@ class CfgVehicles {
     class HMG_01_base_F: StaticMGWeapon {
         class ADDON {
             enabled = 1;
+            proxyWeapon = QGVAR(HMG_Static);
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticHMGCarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3TripodLow); // turret [CfgVehicles]
             desiredAmmo = 100;
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
         };
     };
 
     class HMG_01_high_base_F: HMG_01_base_F {
         class ADDON {
             enabled = 1;
+            proxyWeapon = QGVAR(HMG_Static);
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticHMGCarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
             desiredAmmo = 100;
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
         };
     };
 
@@ -144,24 +146,26 @@ class CfgVehicles {
     class GMG_01_base_F: GMG_TriPod {
         class ADDON {
             enabled = 1;
+            proxyWeapon = QGVAR(GMG_20mm); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticGMGCarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3TripodLow); // turret [CfgVehicles]
             desiredAmmo = 40;
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
         };
     };
 
     class GMG_01_high_base_F: GMG_01_base_F {
         class ADDON {
             enabled = 1;
+            proxyWeapon = QGVAR(GMG_20mm); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticGMGCarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
             desiredAmmo = 40;
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
         };
     };
 
@@ -175,24 +179,26 @@ class CfgVehicles {
     class AT_01_base_F: StaticMGWeapon {
         class ADDON {
             enabled = 1;
+            proxyWeapon = QGVAR(Titan_AT_Static);
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticATCarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
             desiredAmmo = 40;
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 15; // 4 rounds per minute
+            ammoUnloadTime = 10;
         };
     };
 
     class AA_01_base_F: StaticMGWeapon {
         class ADDON {
             enabled = 1;
+            proxyWeapon = QGVAR(Titan_AA_Static); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(staticAACarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
             desiredAmmo = 40;
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 15; // 4 rounsd per minute
+            ammoUnloadTime = 10;
         };
     };
 

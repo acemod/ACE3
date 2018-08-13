@@ -19,10 +19,18 @@ params ["_staticWeapon"];
 private _typeOf = typeOf _staticWeapon;
 private _configEnabled = (getNumber (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "enabled")) == 1;
 private _assemblyConfig = _configEnabled && {(getText (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "disassembleWeapon")) != ""};
-TRACE_4("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig);
+private _proxyWeapon = getText(configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "proxyWeapon");
+private _enableAmmoHandling = GVAR(ammoHandling) || GVAR(defaultAssemblyMode);
+TRACE_6("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig,_proxyWeapon,_enableAmmoHandling);
 
 if (_configEnabled && {local _staticWeapon}) then { // need to wait a frame to allow setting object vars during assembly
     [FUNC(staticWeaponInit_unloadExtraMags), [_staticWeapon]] call CBA_fnc_execNextFrame;
+    
+    if (_enableAmmoHandling && { !(_proxyWeapon isEqualTo "") }) then {
+        private _currentWeapon = _staticWeapon weaponsTurret[0] select 0;
+        _staticWeapon removeWeaponTurret[_currentWeapon, [0]];
+        _staticWeapon addWeaponTurret[_proxyWeapon, [0]];
+    };
 };
 
 if (_assemblyConfig) then { // Disable vanilla assembly if assemblyMode eanbled
@@ -54,7 +62,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
 
     private _ammoActionPath = [];
     // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
-    if (GVAR(ammoHandling) || GVAR(defaultAssemblyMode)) then {
+    if (_enableAmmoHandling) then {
         if (_configEnabled && {_magazineLocation != ""}) then {
             private _positionCode = compile _magazineLocation;
             private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
