@@ -261,6 +261,15 @@ class CfgVehicles {
         };
     };
 
+    class rhs_zil131_base: Truck_F {
+        class EGVAR(interaction,anims) {
+            class spare_hide {
+                selection = "spare";
+                item = "ACE_Wheel";
+            };
+        };
+    };
+
     class APC_Tracked_02_base_F: Tank_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
