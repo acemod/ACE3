@@ -97,7 +97,7 @@ private _entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTr
     private _ctrl = (_display displayCtrl (START_IDC + _forEachIndex));
     if (!(_forEachIndex > AMOUNT_OF_ENTRIES)) then {
         _ctrl ctrlSetText (_x select 0);
-        private _code = format ["ace_medical_menu_pendingReopen = true; call %1;", (_x select 3)];
+        private _code = format ["ace_medical_gui_pendingReopen = true; call %1;", (_x select 3)];
         _ctrl ctrlSetEventHandler ["ButtonClick", _code];
         _ctrl ctrlSetTooltip (_x select 0); // TODO implement
         _ctrl ctrlShow true;

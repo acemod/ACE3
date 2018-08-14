@@ -17,6 +17,8 @@
 
 params ["_unit"];
 
+if (!local _unit) exitWith {};
+
 if (damage _unit > 0) then {
     _unit setDamage 0;
 };

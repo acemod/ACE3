@@ -14,4 +14,4 @@
 
 params ["_unit"];
 
-(GVAR(fatalInjuryCondition) < 2) && {!(_unit getVariable [QGVAR(deathBlocked), false])}
+(GVAR(fatalInjuryCondition) < 2) && {!(_unit getVariable [QEGVAR(medical,deathBlocked), false])}
