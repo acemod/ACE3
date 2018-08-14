@@ -88,42 +88,48 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         _receivedDamage = _damageStructural;
         _woundedHitPoint = "Body";
     };
-    TRACE_2("received",_receivedDamage,_woundedHitPoint);
 
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
     if (_ammo isEqualTo "") then {
-        // Fall damage and being hit by vehicle always have a shooter
-        // Check this first because fire damage could happen while falling
+        // Any collision with terrain/vehicle/object has a shooter
+        // Check this first because burning can happen at any velocity
         if !(isNull _shooter) then {
-            // Shooter can be _unit if hit by empty vehicle so check velocity too
-            // A piloted vehicle could hit falling unit so still check shooter
+            _ammo = "#collision";
+
+            /*
+              If shooter != unit then they hit unit, otherwise it could be:
+               - Unit hitting anything at speed
+               - An empty vehicle hitting unit
+               - A physX object hitting unit
+               Assume fall damage for downward velocity because it's most common
+            */
             if (_shooter == _unit && {(velocity _unit select 2) < -2}) then {
-                // Low damage indicates < ~5m fall
-                _woundedHitPoint =  if (_receivedDamage < 0.35) then {
-                    selectRandom ["LeftLeg", "RightLeg"];
-                } else {
-                    selectRandom ["LeftLeg", "RightLeg", "Body", "Head"];
-                };
-                _ammo = "#falling";
-                TRACE_5("Fall Damage",_unit,_shooter,_instigator,_damage,_receivedDamage);
+                _woundedHitPoint = selectRandom ["RightLeg", "LeftLeg"];
+                TRACE_5("Fall",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
-                _woundedHitPoint = "Body";
-                _ammo = "#vehiclecrash";
-                TRACE_5("Collision Damage",_unit,_shooter,_instigator,_damage,_receivedDamage);
+                _woundedHitPoint = selectRandom ["RightArm", "LeftArm", "RightLeg", "LeftLeg"];
+                TRACE_5("Collision",_unit,_shooter,_instigator,_damage,_receivedDamage);
+            };
+
+            // Significant damage suggests high relative velocity
+            // Momentum transfers to body/head for worse wounding
+            if (_receivedDamage > 0.35) then {
+                 _woundedHitPoint = selectRandom ["Body", "Head"];
             };
         } else {
-            // Anything else is probably fire damage
+            // Anything else is almost guaranteed to be fire damage
             _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
             _ammo = "#unknown";
+
+            // Fire damage can occur as lots of minor damage events
+            // Combine these until significant enough to wound
             private _combinedDamage = _receivedDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
             if (_combinedDamage > 0.1) then {
-                // if the new sum is large enough, reset variable and continue with it added in
                 _unit setVariable [QGVAR(trivialDamage), 0];
                 _receivedDamage = _combinedDamage;
                 TRACE_5("Burning",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
-                // otherwise just save the new sum into the variable and exit
                 _unit setVariable [QGVAR(trivialDamage), _combinedDamage];
                 _receivedDamage = 0;
             };
@@ -133,6 +139,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     // No wounds for minor damage
     if (_receivedDamage > 1E-3) then {
         [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
+        TRACE_2("received",_receivedDamage,_woundedHitPoint);
     };
 
     // Clear stored damages otherwise they will influence future damage events
@@ -166,13 +173,13 @@ if (
 private _vehicle = vehicle _unit;
 if (
     _hitPoint isEqualTo "#structural" &&
-    _ammo isEqualTo "" &&
+    {_ammo isEqualTo ""} &&
     {_vehicle != _unit} &&
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
     [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash"]] call CBA_fnc_localEvent;
-    TRACE_5("Vehicle Crash",_unit,_shooter,_instigator,_damage,_newDamage);
+    TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
 };
