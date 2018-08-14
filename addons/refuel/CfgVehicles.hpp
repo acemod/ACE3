@@ -8,7 +8,6 @@
             statement = ""; \
             exceptions[] = {INTERACT_EXCEPTIONS}; \
             showDisabled = 0; \
-            priority = 2; \
             icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             class GVAR(PickUpNozzle) { \
                 displayName = CSTRING(TakeNozzle); \

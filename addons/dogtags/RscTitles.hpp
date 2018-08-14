@@ -6,34 +6,30 @@ class RscTitles {
         idd = -1;
         onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),_this select 0)]);
         onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),nil)]);
-        movingEnable = false;
-        duration = 5;
         fadeIn = 0.2;
         fadeOut = 0.2;
-
+        duration = 5;
+        movingEnable = 0;
         class controls {
             class background: RscPicture {
                 idc = 1000;
-                text = QUOTE(PATHTOF(data\dogtagSingle.paa));
-                sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+                x = profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),X)', (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W];
+                y = profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),Y)', safeZoneY + 0.175 * safeZoneH];
+                w = 8 * GUI_GRID_W;
+                h = 8 * GUI_GRID_H;
+                text = QPATHTOF(data\dogtagSingle.paa);
                 colorText[] = {1, 1, 1, 1};
-                colorBackground[] = {0, 0, 0, 0};
-                x = ((safezoneX + safezoneW) - (10 * (((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 * (((safezoneW / safezoneH) min 1.2) / 40));
-                y = safeZoneY + 0.175 * safezoneH;
-                w = (8 * (((safezoneW / safezoneH) min 1.2) / 40));
-                h = (8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
-                font = "EtelkaMonospacePro";
             };
             class nickname: RscStructuredText {
                 idc = 1001;
                 text = "";
-                sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+                sizeEx = GUI_GRID_H;
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0};
-                x = ((safezoneX + safezoneW) - (8.4 * (((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 * (((safezoneW / safezoneH) min 1.2) / 40));
-                y = safeZoneY + 0.24 * safezoneH;
-                w = (5.9 * (((safezoneW / safezoneH) min 1.2) / 40));
-                h = (3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
+                x = 1.6 * GUI_GRID_W + (profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),X)', (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W]);
+                y = 0.065 * safeZoneH + (profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),Y)', safeZoneY + 0.175 * safeZoneH]);
+                w = 5.9 * GUI_GRID_W;
+                h = 3 * GUI_GRID_H;
                 font = "RobotoCondensed";
                 class Attributes {
                     font = "RobotoCondensed";
@@ -48,13 +44,9 @@ class RscTitles {
         };
     };
     class GVAR(doubleTag): GVAR(singleTag) {
-        idd = -1;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),_this select 0)]);
-        onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),nil)]);
-
         class controls: controls {
             class background: background {
-                text = QUOTE(PATHTOF(data\dogtagDouble.paa));
+                text = QPATHTOF(data\dogtagDouble.paa);
             };
             class nickname: nickname {
                 class Attributes: Attributes {

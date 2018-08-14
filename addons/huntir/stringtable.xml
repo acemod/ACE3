@@ -14,7 +14,7 @@
             <Portuguese>Caixa de transporte do HuntIR</Portuguese>
             <Japanese>HuntIR 輸送箱</Japanese>
             <Korean>HuntIR 수송함</Korean>
-            <Chinesesimp>高空战术成像器运输箱</Chinesesimp>
+            <Chinesesimp>高空战术摄像头运输箱</Chinesesimp>
             <Chinese>高空戰術成像器運輸箱</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_magazine_displayName">
@@ -30,7 +30,7 @@
             <Portuguese>Cartucho HuntIR</Portuguese>
             <Japanese>HuntIR 弾頭</Japanese>
             <Korean>HuntIR 유탄</Korean>
-            <Chinesesimp>高空战术成像器弹药</Chinesesimp>
+            <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
             <Chinese>高空戰術成像器彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_monitor_displayName">
@@ -46,7 +46,7 @@
             <Portuguese>Monitor HuntIR</Portuguese>
             <Japanese>HuntIR モニタ</Japanese>
             <Korean>HuntIR 모니터</Korean>
-            <Chinesesimp>高空战术成像器显示面板</Chinesesimp>
+            <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
             <Chinese>高空戰術成像器顯示面板</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_activateMonitor">
@@ -62,7 +62,7 @@
             <Portuguese>Ativar monitor do HuntIR</Portuguese>
             <Japanese>HuntIR を起動する</Japanese>
             <Korean>HuntIR 모니터 켜기</Korean>
-            <Chinesesimp>开启高空战术成像器显示面板</Chinesesimp>
+            <Chinesesimp>开启高空战术摄像头显示面板</Chinesesimp>
             <Chinese>開啟高空戰術成像器顯示面板</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_CAM">
@@ -78,7 +78,7 @@
             <Portuguese>Câmera:</Portuguese>
             <Japanese>カメラ:</Japanese>
             <Korean>카메라:</Korean>
-            <Chinesesimp>摄影机:</Chinesesimp>
+            <Chinesesimp>摄像头:</Chinesesimp>
             <Chinese>攝影機:</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_ALT">
@@ -126,7 +126,7 @@
             <Portuguese>Pressione ESC para sair da câmera</Portuguese>
             <Japanese>ESC を押しカメラを抜ける</Japanese>
             <Korean>ESC를 눌러 카메라 나가기</Korean>
-            <Chinesesimp>按下ESC退出摄影机</Chinesesimp>
+            <Chinesesimp>按下ESC退出摄像头</Chinesesimp>
             <Chinese>按下ESC退出攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP">
@@ -174,7 +174,7 @@
             <Portuguese>W/S - Seleciona câmera</Portuguese>
             <Japanese>W/S - カメラを選択</Japanese>
             <Korean>W/S - 카메라 선택</Korean>
-            <Chinesesimp>W/S - 切换摄影机</Chinesesimp>
+            <Chinesesimp>W/S - 切换摄像头</Chinesesimp>
             <Chinese>W/S - 切換攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_ROT">
@@ -190,7 +190,7 @@
             <Portuguese>Esquerda/Direita - Rotaciona câmera</Portuguese>
             <Japanese>Left/Right - カメラ回転</Japanese>
             <Korean>좌/우 - 카메라 돌리기</Korean>
-            <Chinesesimp>左/右 - 旋转摄影机</Chinesesimp>
+            <Chinesesimp>左/右 - 旋转摄像头</Chinesesimp>
             <Chinese>左/右 - 旋轉攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_ELV">
@@ -206,7 +206,7 @@
             <Portuguese>Acima/Abaixo - Eleva/Abaixa a câmera</Portuguese>
             <Japanese>Up/Down - カメラ角度を変更</Japanese>
             <Korean>상/하 카메라 올리기/내리기</Korean>
-            <Chinesesimp>上/下 - 上升/下降摄影机</Chinesesimp>
+            <Chinesesimp>上/下 - 上升/下降摄像头</Chinesesimp>
             <Chinese>上/下 - 上升/下降攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_MOD">
@@ -238,7 +238,7 @@
             <Portuguese>R - Redefine a câmera</Portuguese>
             <Japanese>R - カメラを初期化</Japanese>
             <Korean>R - 카메라 초기화</Korean>
-            <Chinesesimp>R - 重置摄影机</Chinesesimp>
+            <Chinesesimp>R - 重置摄像头</Chinesesimp>
             <Chinese>R - 重置攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_EXIT">

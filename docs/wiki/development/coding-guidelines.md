@@ -780,17 +780,14 @@ while {true} do {
 ```
 
 ### 8.9 `waitUntil`
-The `waitUntil` command shall not be used. Instead, make use of a per-frame handler:
-
+The `waitUntil` command shall not be used. Instead, make use of CBA's `CBA_fnc_waitUntilAndExecute`
 ```js
 [{
-    params ["_args", "_id"];
-    _args params ["_unit"];
-
-    if (_unit getvariable [QGVAR(myVariable), false]) exitwith {
-        [_id] call CBA_fnc_removePerFrameHandler;
-
-        // Execute any code
-    };
-}, [_unit], 0] call CBA_fnc_addPerFrameHandler;
+    params ["_unit"];
+    _unit getVariable [QGVAR(myVariable), false]
+},
+{
+    params ["_unit"];
+    // Execute any code
+}, [_unit]] call CBA_fnc_waitUntilAndExecute;
 ```

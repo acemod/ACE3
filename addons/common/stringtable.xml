@@ -456,7 +456,7 @@
             <Portuguese>Aceitar pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
             <Japanese>他プレイヤからの要求を許可します。他プレイヤは装備を共有し、使うなど特定の動作を行えます。</Japanese>
             <Korean>다른 플레이어가 보내온 요청을 수락합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
-            <Chinese>接受由其他玩家送出的請求。包含使用/共享裝備與執行特定動作。</Chinese>
+            <Chinese>接受由其他玩家送出的請求。包含使用/共享裝備與執行特定動作</Chinese>
             <Chinesesimp>接受由其他玩家送出的请求。包含使用/共享装备与执行特定动作。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
@@ -472,7 +472,7 @@
             <Portuguese>Rejeita pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
             <Japanese>他プレイヤからの要求を拒否します。他プレイヤは装備を共有し、使うなど特定の動作をできません。</Japanese>
             <Korean>다른 플레이어가 보내온 요청을 거부합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
-            <Chinese>拒絕由其他玩家送出的請求。包含使用/共享裝備與執行特定動作。</Chinese>
+            <Chinese>拒絕由其他玩家送出的請求。包含使用/共享裝備與執行特定動作</Chinese>
             <Chinesesimp>拒绝由其他玩家送出的请求。包含使用/共享装备与执行特定动作。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
@@ -528,7 +528,7 @@
             <Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
             <Japanese>画面上に表示するフィードバック アイコンの位置や無効化を選択できます。このアイコンは自キャラクター状態や動作の状況をフィードバックするために表示されています。</Japanese>
             <Korean>피드백 아이콘의 위치를 설정하거나 비활성화합니다. 피드백 아이콘은 캐릭터의 상세정보와 행동을 보여줍니다.</Korean>
-            <Chinese>選擇位置或取消回饋圖標顯示在螢幕上。這些圖標將顯示出你角色額外的狀態與行動等資訊。</Chinese>
+            <Chinese>選擇位置或取消回饋圖標顯示在螢幕上。這些圖標將顯示出你角色額外的狀態與行動等資訊</Chinese>
             <Chinesesimp>选择位置或取消回馈图标显示在荧幕上。这些图标将显示出你角色额外的状态与行动等资讯。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
@@ -624,7 +624,7 @@
             <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
             <Japanese>ACE によるヒントの文章へ、色を設定できます。この色は ACE ヒント システムを介して表示される全文章の色と標準でなっており、特定の色を設定していても、標準色になります。</Japanese>
             <Korean>ACE 힌트에 쓰이는 글씨 색입니다. 힌트 글씨의 색이 정해지지 않을경우 모든 힌트의 색은 기본으로 설정됩니다.</Korean>
-            <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色。</Chinese>
+            <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色</Chinese>
             <Chinesesimp>设定ACE提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用ACE系统的预设颜色。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
@@ -644,7 +644,7 @@
             <Italian>Abilita la torcia/laser dopo il cambio dell'arma o l'entrata/uscita del veicolo se precedentemente attiva.</Italian>
             <Korean>무기를 바꾸거나 차량에 승하차 할 때 이전에 스위치 켜고 끔을 유지합니다.</Korean>
             <German>Aktiviert Laserpointer/Taktisches Licht nach einem Waffenwechsel oder dem Auf-/Absitzen, falls es zuvor aktiv war.</German>
-            <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的的狀態。</Chinese>
+            <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的的狀態</Chinese>
             <Chinesesimp>保存武器雷射/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的的状态。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
@@ -676,7 +676,7 @@
             <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
             <Japanese>甘蕉は食べられる果物でバショウ科バショウ属のうち、果実を食用とする品種群の総称。また、その果実のこと。いくつかの原種から育種された多年草。種によっては熟すまでは毒を持つものもある。</Japanese>
             <Korean>바나나는 식용 과일로써 식물학적으로 열매류이며 여러 종류의 개화가능한 초본의 파초과로 부터 생산됩니다.</Korean>
-            <Chinese>香蕉(學名: Musa × paradisiaca)，為芭蕉科芭蕉屬小果野蕉及野蕉的人工栽培雜交種，為多年生草本植物。果實長有棱; 果皮黃色，果肉白色，味道香甜。主要生長在熱帶、亞熱帶地區。原產於亞洲東南部熱帶、亞熱帶地區。</Chinese>
+            <Chinese>香蕉(學名: Musa × paradisiaca)，為芭蕉科芭蕉屬小果野蕉及野蕉的人工栽培雜交種，為多年生草本植物。果實長有棱; 果皮黃色，果肉白色，味道香甜。主要生長在熱帶、亞熱帶地區。原產於亞洲東南部熱帶、亞熱帶地區</Chinese>
             <Chinesesimp>香蕉(学名: Musa × paradisiaca)，为芭蕉科芭蕉属小果野蕉及野蕉的人工栽培杂交种，为多年生草本植物。果实长有棱; 果皮黄色，果肉白色，味道香甜。主要生长在热带、亚热带地区。原产于亚洲东南部热带、亚热带地区。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
@@ -707,7 +707,7 @@
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
             <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
             <Korean>서버 에드온의 무결성을 검사하고 사라진 에드온이 있을경우 행동을 선택합니다.</Korean>
-            <Chinese>檢查客戶端與伺服器端的模組清單是否一致且完整，並提供訊息表示遺失的模組。</Chinese>
+            <Chinese>檢查客戶端與伺服器端的模組清單是否一致且完整，並提供訊息表示遺失的模組</Chinese>
             <Chinesesimp>检查客户端与伺服器端的模组清单是否一致且完整，并提供讯息表示遗失的模组。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
@@ -1169,13 +1169,31 @@
             <Korean>음악 끄기 허용</Korean>
             <Chinese>允許調低音樂音量</Chinese>
             <Chinesesimp>允许调低音乐音量</Chinesesimp>
+            <Japanese>音楽の音量低下を許可</Japanese>
+            <Italian>Permesso di abbassare la musica</Italian>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
             <German>Erlaube ACE-Skripten, die Musik leiser zu stellen.</German>
             <Korean>ACE 스크립트가 음악을 끌 수 있습니다.</Korean>
-            <Chinese>允許ACE腳本去控制音樂的音量。</Chinese>
+            <Chinese>允許ACE腳本去控制音樂的音量</Chinese>
             <Chinesesimp>允许ACE脚本去控制音乐的音量。</Chinesesimp>
+            <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
+            <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_FlagBlack">
+            <English>Flag (ACE - Black)</English>
+            <Chinesesimp>旗帜(ACE-黑色):</Chinesesimp>
+            <Chinese>旗幟(ACE-黑色)</Chinese>
+            <Italian>Bandiera (ACE - Nera)</Italian>
+            <Japanese>旗 (ACE - 黒)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Common_FlagWhite">
+            <English>Flag (ACE - White)</English>
+            <Chinesesimp>旗帜(ACE-白色):</Chinesesimp>
+            <Chinese>旗幟(ACE-白色)</Chinese>
+            <Italian>Bandiera (ACE - Bianca)</Italian>
+            <Japanese>旗 (ACE - 白)</Japanese>
         </Key>
     </Package>
 </Project>

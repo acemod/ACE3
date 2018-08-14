@@ -20,6 +20,7 @@
 params ["_static","_unit",["_magazineClassOptional","",[""]]];
 
 if !(alive _static && GVAR(useAmmoHandling)) exitWith {false};
+if (_static getVariable [QGVAR(inUse), false]) exitWith {false};
 
 private _canLoadMagazine = false;
 private _hasCompatibleMagazine = false;
@@ -45,7 +46,7 @@ if (count (_static magazinesTurret [0]) > 0) then {
     _count = _currentMagazine select 2;
 };
 //If the static weapon doesn't have a magzine or a magazine with no bullets, the player has a compatible magazine and the static weapon has a barrel then you can load a magazine
-if ((count (_static magazinesTurret [0]) == 0 || _count == 0 ) && _hasCompatibleMagazine) then {
+if ((count (_static magazinesTurret [0]) == 0 || _count == 0) && _hasCompatibleMagazine) then {
     _canLoadMagazine = true;
 };
 _canLoadMagazine

@@ -273,29 +273,22 @@
             <Chinesesimp>更新可编辑的物件</Chinesesimp>
             <Chinese>更新可編輯的物件</Chinese>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
-            <English>All Curators</English>
-            <German>Alle Zeus'</German>
-            <Japanese>全キュレーター</Japanese>
-            <Korean>모든 큐레이터</Korean>
-            <Polish>Wszyscy kuratorzy</Polish>
-            <French>Tous curateurs</French>
-            <Italian>Tutti i Moderatori</Italian>
-            <Chinesesimp>所有编辑者</Chinesesimp>
-            <Chinese>所有編輯者</Chinese>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
+            <English>Editing Mode</English>
+            <Chinese>編輯模式</Chinese>
+            <Italian>Modalità per editare</Italian>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators_desc">
-            <English>Apply changes to all curators</English>
-            <German>Änderungen bei allen Zeus' aktualisieren</German>
-            <Japanese>全キュレーターへ変更を適用</Japanese>
-            <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
-            <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
-            <French>Applique les changements à tous les curateurs</French>
-            <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
-            <Chinesesimp>确认变更给所有编辑者</Chinesesimp>
-            <Chinese>確認變更給所有編輯者</Chinese>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
+            <English>Add or remove editable objects from Zeus</English>
+            <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal">
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
+            <English>Add Objects</English>
+            <Chinese>新增物件</Chinese>
+            <Italian>Aggiungi Oggetti</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
             <German>Entferne Objekte</German>
             <Japanese>オブジェクトの削除</Japanese>
@@ -306,16 +299,27 @@
             <Chinesesimp>移除物件</Chinesesimp>
             <Chinese>移除物件</Chinese>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
-            <English>Remove existing instead of adding new</English>
-            <German>Entfernt Bestehendes, statt Neues hinzuzufügen</German>
-            <Japanese>新しく追加するために削除します</Japanese>
-            <Korean>물체를 삭제합니다</Korean>
-            <Polish>Usuń istniejące zamiast dodawać nowe</Polish>
-            <French>Enlève les objets existants au lieu d'en ajouter de nouveaux</French>
-            <Italian>Rimuove gli esistenti e li sostituisce con i nuovi</Italian>
-            <Chinesesimp>移除已存在的物件来新增新的物件</Chinesesimp>
-            <Chinese>移除已存在的物件來新增新的物件</Chinese>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators">
+            <English>All Curators</English>
+            <German>Alle Zeus'</German>
+            <Japanese>全キュレーター</Japanese>
+            <Korean>모든 큐레이터</Korean>
+            <Polish>Wszyscy kuratorzy</Polish>
+            <French>Tous curateurs</French>
+            <Italian>Tutti i Moderatori</Italian>
+            <Chinesesimp>所有编辑者</Chinesesimp>
+            <Chinese>所有編輯者</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
+            <English>Apply changes to all curators</English>
+            <German>Änderungen bei allen Zeus' aktualisieren</German>
+            <Japanese>全キュレーターへ変更を適用</Japanese>
+            <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
+            <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
+            <French>Applique les changements à tous les curateurs</French>
+            <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
+            <Chinesesimp>确认变更给所有编辑者</Chinesesimp>
+            <Chinese>確認變更給所有編輯者</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -955,7 +959,7 @@
             <French>Cargo :</French>
             <Russian>Груз:</Russian>
             <Czech>Náklad:</Czech>
-            <Japanese>カーゴ: </Japanese>
+            <Japanese>カーゴ:</Japanese>
             <Polish>Ładunek:</Polish>
             <German>Ladung:</German>
             <Korean>화물:</Korean>
@@ -963,30 +967,11 @@
             <Chinesesimp>货物:</Chinesesimp>
             <Chinese>貨物:</Chinese>
         </Key>
-        <Key ID="STR_ACE_Zeus_AttributePosition">
-            <English>Task Position</English>
-            <French>Position de la tâche</French>
-            <Russian>Местоположение задания</Russian>
-            <Czech>Pozice úkolu</Czech>
-            <Japanese>タスク位置</Japanese>
-            <Polish>Pozycja zadania</Polish>
-            <German>Position der Aufgabe</German>
-            <Korean>작업 위치</Korean>
-            <Italian>Posizione Incarico</Italian>
-            <Chinesesimp>目标位置</Chinesesimp>
-            <Chinese>目標位置</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Zeus_AttributePosition_desc">
-            <English>Select a position to perform the task at</English>
-            <French>Sélectionne une position où accomplir la tâche</French>
-            <Russian>Выбрать местоположение для выполнения задания</Russian>
-            <Japanese>次の選択位置をタスクとして実行</Japanese>
-            <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
-            <German>Wähle eine Position, an der die Aufgabe ausgeführt werden soll</German>
-            <Korean>작업을 할 위치를 선택하십시요</Korean>
-            <Italian>Seleziona una posizione per eseguire l'incarico</Italian>
-            <Chinesesimp>选择要执行目标的位置</Chinesesimp>
-            <Chinese>選擇要執行目標的位置</Chinese>
+        <Key ID="STR_ACE_Zeus_SelectCargo">
+            <English>Select cargo to unload</English>
+            <Chinese>選擇要卸載的貨物</Chinese>
+            <Italian>Scegli il carico da scaricare</Italian>
+            <Japanese>選択したカーゴを降ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1000,7 +985,7 @@
             <Chinesesimp>目标半径</Chinesesimp>
             <Chinese>目標半徑</Chinese>
         </Key>
-        <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
+        <Key ID="STR_ACE_Zeus_AttributeRadius_Tooltip">
             <English>Radius to perform the task within</English>
             <French>Rayon dans lequel la tâche prend place</French>
             <Russian>Радиус выполнения задания</Russian>
@@ -1099,9 +1084,17 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
+            <Japanese>目標を切り替え</Japanese>
+            <Chinesesimp>切换目标</Chinesesimp>
+            <Chinese>切換目標</Chinese>
+            <Italian>Scambia obiettivo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
+            <Japanese>ユニットは切り替えに影響を受けます</Japanese>
+            <Chinesesimp>被选单位受切换影响</Chinesesimp>
+            <Chinese>受切換所影響的單位</Chinese>
+            <Italian>Unità influenzate dallo scambio</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1313,7 +1306,7 @@
             <German>Vollständige Heilung</German>
             <Hungarian>Teljes gyógyítás</Hungarian>
             <Italian>Guarigione completa</Italian>
-            <Japanese>フルヒール</Japanese>
+            <Japanese>完全に回復</Japanese>
             <Korean>완전 치유</Korean>
             <Polish>Pełne uleczenie</Polish>
             <Portuguese>Cura completa</Portuguese>
@@ -1345,7 +1338,7 @@
             <German>Aktivierungsseite</German>
             <Hungarian>Aktiválási oldal</Hungarian>
             <Italian>Lato di attivazione</Italian>
-            <Japanese>アクティベーションサイド</Japanese>
+            <Japanese>対象陣営</Japanese>
             <Korean>활성화면</Korean>
             <Polish>Strona aktywacji</Polish>
             <Portuguese>Lado de ativação</Portuguese>
@@ -1393,7 +1386,7 @@
             <German>Automatische Suche</German>
             <Hungarian>Automatikus keresés</Hungarian>
             <Italian>Ricerca automatica</Italian>
-            <Japanese>オートシーク</Japanese>
+            <Japanese>自動誘導</Japanese>
             <Korean>자동 탐색</Korean>
             <Polish>Auto Seek</Polish>
             <Portuguese>Busca automática</Portuguese>
@@ -1402,14 +1395,14 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AutoSeek_tooltip">
             <English>Unit will actively try to find and move towards nearby units of the activation side. The range of Auto Seek is based on the unit's spot distance skill with a minimum of 100 meters.</English>
-            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米。</Chinese>
+            <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
             <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
             <Czech>Jednotka se bude aktivně snažit najít a přejít na blízké jednotky na straně aktivace. Rozsah Auto Seek je založen na dovednosti spotové vzdálenosti jednotky s minimem 100 metrů.</Czech>
             <French>L'unité essayera activement de trouver et de se déplacer vers les unités à proximité du côté d'activation. La portée d'Auto Seek est basée sur la compétence de distance de l'unité avec un minimum de 100 mètres.</French>
             <German>Die Einheit versucht aktiv, in der Nähe befindliche Einheiten der Aktivierungsseite zu finden und sich dorthin zu bewegen. Der Bereich der automatischen Suche basiert auf der Fähigkeit der Zielentfernung der Einheit mit einer Mindestentfernung von 100 Metern.</German>
             <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
             <Italian>L'unità cercherà attivamente di trovare e spostarsi verso le unità vicine del lato di attivazione. La gamma di Auto Seek si basa sull'abilità a distanza spot dell'unità con un minimo di 100 metri.</Italian>
-            <Japanese>ユニットはアクティベーション側の近くのユニットを見つけて移動しようと積極的に試みます。オートシークの範囲は、ユニットのスポット距離のスキルに基づいており、最低100メートルです。</Japanese>
+            <Japanese>対象陣営ユニットを見つけて移動しようと積極的に試みます。自動誘導の範囲は、ユニットの索敵能力に基づいており、最低100メートルです。</Japanese>
             <Korean>유닛은 액티브 측의 근접 유닛을 향해 적극적으로 찾아서 이동하려고 시도합니다. 자동 시크의 범위는 유닛의 스팟 거리 스킬을 기준으로 최소 100 미터입니다.</Korean>
             <Polish>Jednostka będzie aktywnie próbowała znaleźć i ruszyć w kierunku pobliskich jednostek strony aktywacji. Zasięg Auto Seek opiera się na umiejętności punktowej odległości jednostki z minimum 100 metrów.</Polish>
             <Portuguese>A unidade tentará ativamente encontrar e se mover para as unidades próximas do lado da ativação. O alcance da Auto Seek é baseado na habilidade de distância do ponto da unidade com um mínimo de 100 metros.</Portuguese>
@@ -1425,7 +1418,7 @@
             <German>Klein</German>
             <Hungarian>Kicsi</Hungarian>
             <Italian>Piccolo</Italian>
-            <Japanese>小さい</Japanese>
+            <Japanese>小</Japanese>
             <Korean>작은</Korean>
             <Polish>Mały</Polish>
             <Portuguese>Pequeno</Portuguese>
@@ -1473,7 +1466,7 @@
             <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
             <Italian>L'unità è già un kamikaze</Italian>
-            <Japanese>ユニットはすでに自爆テロである</Japanese>
+            <Japanese>すでに自爆ユニットです</Japanese>
             <Korean>유닛은 이미 자살 폭탄 테러범이다.</Korean>
             <Polish>Jednostka jest już zamachowcem-samobójcą</Polish>
             <Portuguese>A unidade já é um suicida</Portuguese>
@@ -1482,9 +1475,17 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
             <English>Add full ACE Arsenal</English>
+            <Japanese>ACE 武器庫を追加</Japanese>
+            <Chinesesimp>添加ACE模式军火库</Chinesesimp>
+            <Chinese>增加完整的ACE軍火庫</Chinese>
+            <Italian>Aggiungi l'arsenale ACE completo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
+            <Japanese>ACE 武器庫を削除</Japanese>
+            <Chinesesimp>删除ACE模式军火库</Chinesesimp>
+            <Chinese>移除ACE軍火庫</Chinese>
+            <Italian>Rimuovi l'arsenale ACE</Italian>
         </Key>
     </Package>
 </Project>

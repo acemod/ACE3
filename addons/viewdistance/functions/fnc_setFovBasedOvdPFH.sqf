@@ -25,7 +25,7 @@ if (GVAR(objectViewDistanceCoeff) < 6) exitWith {
     GVAR(fovBasedPFHminimalViewDistance) = nil;
 };
 
-private _zoom = (call CBA_fnc_getFov) select 1;
+private _zoom = ([] call CBA_fnc_getFov) select 1;
 
 if (_zoom > VD_ZOOM_NORMAL) then {
     // Dynamically set Object View Distance based on player's Zoom Level and View Distance

@@ -31,7 +31,7 @@
             <Japanese>着けることにより、近くの大きな銃声から聴覚を保護します。</Japanese>
             <Korean>보호용 귀마개는 화기로부터의 큰소리로부터 사용자의 청력을 보호합니다.</Korean>
             <Chinesesimp>配戴防护耳塞，遇到大声的武器发射时也不会损害听力。</Chinesesimp>
-            <Chinese>配戴防護耳塞，遇到大聲的武器發射時也不會損害聽力。</Chinese>
+            <Chinese>配戴防護耳塞，遇到大聲的武器發射時也不會損害聽力</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_On">
             <English>Earplugs in</English>
@@ -76,7 +76,7 @@
             <Hungarian>Füldugó berakva</Hungarian>
             <Portuguese>Protetores colocados</Portuguese>
             <Italian>Indossa i tappi auricolari</Italian>
-            <Japanese>耳栓を着けた</Japanese>
+            <Japanese>耳栓を着けました</Japanese>
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>耳塞已塞入</Chinesesimp>
             <Chinese>耳塞已塞入</Chinese>
@@ -92,7 +92,7 @@
             <Hungarian>Füldugó kivéve</Hungarian>
             <Portuguese>Protetores retirados</Portuguese>
             <Italian>Levati i tappi auricolari</Italian>
-            <Japanese>耳栓を外した</Japanese>
+            <Japanese>耳栓を外しました</Japanese>
             <Korean>귀마개 뺌</Korean>
             <Chinesesimp>耳塞已取出</Chinesesimp>
             <Chinese>耳塞已取出</Chinese>
@@ -124,7 +124,7 @@
             <Portuguese>Não há espaço no inventário</Portuguese>
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>Нет места в инвентаре</Russian>
-            <Japanese>インベントリに空きがありません。</Japanese>
+            <Japanese>インベントリに空きがありません</Japanese>
             <Korean>넣을 공간이 없습니다</Korean>
             <Chinesesimp>无可用空间</Chinesesimp>
             <Chinese>無可用空間</Chinese>
@@ -154,7 +154,7 @@
             <Italian>Quando il giocatore riceve danni all'udito, non fa sentire i fischi nelle orecchie</Italian>
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
-            <Japanese>プレイヤーの聴覚が損傷をしたら耳鳴りの効果を削除します</Japanese>
+            <Japanese>プレイヤーの聴覚が損傷したら耳鳴りの効果を削除します</Japanese>
             <Korean>플레이어가 청력손실을 입을때 생기는 이명현상을 제거합니다.</Korean>
             <Chinesesimp>关闭耳鸣效果时，就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果</Chinesesimp>
             <Chinese>關閉耳鳴效果時，就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果</Chinese>
@@ -217,7 +217,7 @@
             <French>Ce module active / désactivé la surdité au combat. Si active, des joueurs peuvent devenir sourds sans protection d'oreille, si une arme est utilisée ou une explosion a lieu à proximité</French>
             <Spanish>Controles de sordera de combate y zumbido en los oídos. Al activarlo, los jugadores pueden ser ensordecidos cuando un arma se dispara cerca o una explosión tiene lugar sin protección auditiva</Spanish>
             <Italian>Controlla la sordità da combattimento e fischio alle orecchie. Quando attivato, i giocatori possono essere assordati quando un'arma spara vicino o avviene un'esplosione senza protezione uditiva</Italian>
-            <Japanese>戦闘による難聴や、耳鳴りを設定します。有効になった場合、聴覚を保護していないと近傍の銃声や爆発音により、難聴になります。</Japanese>
+            <Japanese>戦闘による難聴や、耳鳴りを設定します。有効では聴覚を保護していないと近傍の銃声や爆発音により、難聴になります。</Japanese>
             <Korean>전투 난청과 이명현상을 조작합니다. 작동시 플레이어가 화기나 폭발의 주변에 있을경우 청력보호장치가 없을때 청력손실을 입습니다.</Korean>
             <Chinesesimp>设定战斗性耳聋和耳鸣。当启用后，玩家会在有武器在旁边射击或爆炸产生时造成耳鸣效果</Chinesesimp>
             <Chinese>設定戰鬥性耳聾和耳鳴。當啟用後，玩家會在有武器在旁邊射擊或爆炸產生時造成耳鳴效果</Chinese>
@@ -277,7 +277,7 @@
             <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi rumorose. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
             <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
             <French>Ajoute l'objet "Ace_EarPlugs" à toutes les unités ayant des armes bruyantes. Peut être désactivé par des loadouts personalisés.</French>
-            <Japanese>全ユニットへ`ACE_EarPlugs`アイテムをもたせます。これは変更された武装で無効化できます。</Japanese>
+            <Japanese>全ユニットへ`ACE_EarPlugs`アイテムを持たせます。これは変更された武装で無効化できます。</Japanese>
             <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화 할 수 있습니다.</Korean>
             <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位。当你想自定装备时，此功能可被关闭。</Chinesesimp>
             <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位。當你想自定裝備時，此功能可被關閉。</Chinese>
@@ -285,22 +285,46 @@
         <Key ID="STR_ACE_Hearing_statHearingProtection">
             <English>Hearing protection</English>
             <French>Protection auditive</French>
+            <Japanese>聴覚保護</Japanese>
+            <Chinesesimp>听力保护</Chinesesimp>
+            <Chinese>聽力保護</Chinese>
+            <Italian>Protezione auditiva</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
             <French>Étouffement des sons</French>
+            <Japanese>音量低下</Japanese>
+            <Chinesesimp>降低音量</Chinesesimp>
+            <Chinese>進低音量</Chinese>
+            <Italian>Volume attenuazione</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
+            <Japanese>耳栓時の音量</Japanese>
+            <Chinesesimp>耳塞时音量</Chinesesimp>
+            <Chinese>耳塞時音量</Chinese>
+            <Italian>Volume tappi per le orecchie</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
+            <Japanese>耳栓使用時の音量を決定します。</Japanese>
+            <Chinesesimp>决定带上耳塞时的音量</Chinesesimp>
+            <Chinese>使用耳塞時音量</Chinese>
+            <Italian>Volume audio quandi si indossano i tappi per le orecchie.</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
+            <Japanese>気絶時の音量</Japanese>
+            <Chinesesimp>无意识时音量</Chinesesimp>
+            <Chinese>昏迷時音量</Chinese>
+            <Italian>Volume quando incoscente</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
+            <Japanese>気絶時の音量を決定します。</Japanese>
+            <Chinesesimp>决定处于无意识时的音量</Chinesesimp>
+            <Chinese>昏迷時使用耳塞的音量</Chinese>
+            <Italian>Volume quando incoscente.</Italian>
         </Key>
     </Package>
 </Project>

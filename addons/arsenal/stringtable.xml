@@ -116,7 +116,7 @@
             <French>Renomme l'équipement sélectionné</French>
             <German>Ausgewählte Ausrüstung umbenennen</German>
             <Polish>Zmień nazwę wybranego zestawu</Polish>
-            <Japanese>現在選択中の装備を改名します</Japanese>
+            <Japanese>選択中の装備を改名します</Japanese>
             <Italian>Rinomina l'equipaggiamento selezionato</Italian>
             <Korean>선택한 로드아웃의 이름 바꾸기</Korean>
             <Chinese>重新命名當前選擇的裝備</Chinese>
@@ -138,7 +138,7 @@
             <French>Charger l'équipement sélectionné</French>
             <German>Ausgewählte Ausrüstung laden</German>
             <Polish>Wczytaj wybrany zestaw</Polish>
-            <Japanese>現在選択中の装備を読み込みます</Japanese>
+            <Japanese>選択中の装備を読み込みます</Japanese>
             <Italian>Carica l'equipaggiamento selezionato</Italian>
             <Korean>선택한 로드아웃 불러오기</Korean>
             <Chinese>載入當前選擇的裝備</Chinese>
@@ -160,7 +160,7 @@
             <French>Supprimer l'équipement sélectionné</French>
             <German>Ausgewählte Ausrüstung entfernen</German>
             <Polish>Skasuj wybrany zestaw</Polish>
-            <Japanese>現在選択中の装備を削除します</Japanese>
+            <Japanese>選択中の装備を削除します</Japanese>
             <Italian>Elimina l'equipaggiamento selezionato</Italian>
             <Korean>선택한 로드아웃 삭제하기</Korean>
             <Chinese>刪除當前選擇的裝備</Chinese>
@@ -182,7 +182,7 @@
             <French>Équipements enregistrés dans votre profil</French>
             <German>Ausrüstungen, die in deinem Profil gespeichert sind</German>
             <Polish>Zestawy zapisane w Twoim profilu</Polish>
-            <Japanese>自プロフィールに保存された装備です</Japanese>
+            <Japanese>プロフィールに保存された装備です</Japanese>
             <Italian>Gli equipaggiamenti salvati nel tuo profilo</Italian>
             <Korean>프로필에 저장된 로드아웃</Korean>
             <Chinese>裝備已保存到你的設定檔中</Chinese>
@@ -370,7 +370,7 @@
             <German>Folgende Ausrüstung ist nicht mehr öffentlich:</German>
             <Polish>Następujący zestaw nie jest już publiczny:</Polish>
             <Japanese>次の装備は非公開になりました:</Japanese>
-            <Italian>Il seguente eequipaggiamento non è più pubblico:</Italian>
+            <Italian>Il seguente equipaggiamento non è più pubblico:</Italian>
             <Korean>다음 로드아웃이 더이상 공용이 아님:</Korean>
             <Chinese>以下的裝備已不再被分享:</Chinese>
             <Chinesesimp>以下的装备已不再被分享:</Chinesesimp>
@@ -546,7 +546,7 @@
             <German>ACE-Arsenal</German>
             <Polish>ACE Arsenał</Polish>
             <Japanese>ACE 武器庫</Japanese>
-            <Italian>Arsenale ACE</Italian>
+            <Italian>ACE Arsenale</Italian>
             <Korean>ACE 아스날</Korean>
             <Chinese>ACE虛擬軍火庫</Chinese>
             <Chinesesimp>ACE虚拟军火库</Chinesesimp>
@@ -613,15 +613,17 @@
             <Korean>바닐라 로드아웃을 ace 아스날로 가져오기</Korean>
             <Chinese>匯入BI原廠虛擬軍火庫的裝備到ACE虛擬軍火庫中</Chinese>
             <Chinesesimp>汇入BI原厂虚拟军火库的装备到ACE虚拟军火库中</Chinesesimp>
+            <Italian>Importa l'arsenale virtuale BI nell'arsenale ACE</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
             <French>Aucune unité joueur disponible ! Placez une unité et marquez la en tant que "joueur".</French>
             <German>Keine Spielereinheit verfügbar. Setze eine Einheit und markiere sie als "Spieler".</German>
-            <Japanese>プレイヤー ユニットがありません!ユニットを設置しそれを"Player"と名付けてください。</Japanese>
+            <Japanese>プレイヤー ユニットがありません!ユニットを設置し"Player"と名付けてください。</Japanese>
             <Korean>플레이어 유닛을 사용할 수 없습니다! 유닛을 놓고 "플레이어"라고 표시하십시오.</Korean>
-            <Chinese>沒有可用的玩家單位!請擺放一個單位並設定成"玩家"。</Chinese>
+            <Chinese>沒有可用的玩家單位!請擺放一個單位並設定成"玩家"</Chinese>
             <Chinesesimp>没有可用的玩家单位!请摆放一个单位并设定成"玩家"。</Chinesesimp>
+            <Italian>Non ci sono giocatori! Poisziona una unità e impostala come "Giocatore".</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
@@ -629,8 +631,9 @@
             <German>Keine Ausrüstungen zum Importieren</German>
             <Japanese>取り込みする装備がありません。</Japanese>
             <Korean>가져올 로드 아웃이 없습니다.</Korean>
-            <Chinese>沒有裝備被匯入。</Chinese>
+            <Chinese>沒有裝備被匯入</Chinese>
             <Chinesesimp>没有装备被汇入。</Chinesesimp>
+            <Italian>Non ci sono equipaggiamenti da importare.</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
             <English>ACE Arsenal</English>
@@ -639,84 +642,170 @@
             <Korean>ACE 아스날</Korean>
             <Chinese>ACE虛擬軍火庫</Chinese>
             <Chinesesimp>ACE虚拟军火库</Chinesesimp>
+            <Italian>Arsenale ACE</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_ReturnToArsenal">
             <English>Return to ACE Arsenal.</English>
             <German>Zurück zum ACE-Arsenal.</German>
             <Japanese>ACE 武器庫へ戻ります。</Japanese>
             <Korean>ACE 아스날로 돌아가기</Korean>
-            <Chinese>返回到ACE虛擬軍火庫。</Chinese>
+            <Chinese>返回到ACE虛擬軍火庫</Chinese>
             <Chinesesimp>返回到ACE虚拟军火库。</Chinesesimp>
+            <Italian>Torna all'arsenale ACE</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_tooltip">
             <English>Use ACE Arsenal to try out different weapons and equipment.</English>
             <German>Verwende ACE-Arsenal und sieh dir verschiedene Waffen und Ausrüstung an und probiere sie aus.</German>
             <Japanese>さまざまな武器と装備を試せるよう ACE 武器庫を使用します。</Japanese>
             <Korean>ACE Arsenal을 사용하여 다른 무기와 장비를 시험해보십시오.</Korean>
-            <Chinese>使用ACE虛擬軍火庫來嘗試不同的武器與裝備。</Chinese>
+            <Chinese>使用ACE虛擬軍火庫來嘗試不同的武器與裝備</Chinese>
             <Chinesesimp>使用ACE虚拟军火库来尝试不同的武器与装备。</Chinesesimp>
+            <Italian>Usa l'arsenale ACE per provare armi ed equipaggiamenti vari.</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_overview">
             <English>Try weapons and equipment and create your own loadouts.</English>
             <German>Probiere verschiedene Waffen und Ausrüstung aus und stelle dir eigene Ausrüstungsprofile zusammen.</German>
             <Japanese>さまざまな武器と装備を試して、あなただけの装備を作成してください。</Japanese>
             <Korean>무기와 장비를 사용해보고 자신의 로드아웃을 만듭니다.</Korean>
-            <Chinese>嘗試不同的武器與裝備來組合你個人的裝備配置。</Chinese>
+            <Chinese>嘗試不同的武器與裝備來組合你個人的裝備配置</Chinese>
             <Chinesesimp>尝试不同的武器与装备来组合你个人的装备配置。</Chinesesimp>
+            <Italian>Prova armi ed equipaggiamenti e creai i tuoi equipaggiamenti personalizzati.</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
             <English>Open the loadouts screen</English>
             <French>Affiche la page des équipements</French>
             <Chinese>開啟裝備選單</Chinese>
             <Chinesesimp>开启装备选单</Chinesesimp>
+            <Japanese>装備画面を開く</Japanese>
+            <Italian>Apri la pagina degli equipaggiamenti</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
             <French>Exporte l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯出當前/預設的裝備</Chinese>
             <Chinesesimp>汇出当前/预设的装备</Chinesesimp>
+            <Japanese>現在 / 標準装備を出力</Japanese>
+            <Italian>Esporta l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
             <English>Import current / default loadouts</English>
             <French>Importer l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯入當前/預設的裝備</Chinese>
             <Chinesesimp>汇入当前/预设的装备</Chinesesimp>
+            <Japanese>現在 / 標準装備を取込</Japanese>
+            <Italian>Importa l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statPotassium">
             <English>Potassium levels</English>
             <French>Taux de potassium</French>
+            <Japanese>カリウム レベル</Japanese>
+            <Chinesesimp>钾水平</Chinesesimp>
+            <Chinese>鉀水平</Chinese>
+            <Italian>Ilvello di potassio</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
-          <English>Magnification</English>
-          <Chinese>放大倍率</Chinese>
-          <French>Grossissement</French>
-          <Spanish>Aumento</Spanish>
-          <Italian>Ingrandimento</Italian>
-          <Polish>Powiększenie</Polish>
-          <Russian>Увеличение</Russian>
-          <German>Vergrößerung</German>
-          <Czech>Zvětšení</Czech>
-          <Portuguese>Aumentox</Portuguese>
-          <Korean>배율</Korean>
-          <Chinesesimp>放大倍数</Chinesesimp>
-          <Japanese>拡大</Japanese>
-          <Turkish>Büyütme</Turkish>
+            <English>Magnification</English>
+            <Chinese>放大倍率</Chinese>
+            <French>Grossissement</French>
+            <Spanish>Aumento</Spanish>
+            <Italian>Ingrandimento</Italian>
+            <Polish>Powiększenie</Polish>
+            <Russian>Увеличение</Russian>
+            <German>Vergrößerung</German>
+            <Czech>Zvětšení</Czech>
+            <Portuguese>Aumentox</Portuguese>
+            <Korean>배율</Korean>
+            <Chinesesimp>放大倍数</Chinesesimp>
+            <Japanese>拡大倍率</Japanese>
+            <Turkish>Büyütme</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <French>Page</French>
+            <Japanese>ページ</Japanese>
+            <Chinesesimp>页面</Chinesesimp>
+            <Chinese>頁面</Chinese>
+            <Italian>Pagina</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
             <French>Activer les onglets faces / voix / insignes</French>
+            <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
+            <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
+            <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
+            <Italian>Abilita volti, voci e insegne</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
             <French>Vider le conteneur selectionné</French>
+            <Japanese>選択されたコンテナは空です</Japanese>
+            <Chinesesimp>选择的箱子是空的</Chinesesimp>
+            <Chinese>清空選擇的箱子</Chinese>
+            <Italian>Svuota il contenitore selezionato</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
             <French>Nom de classe exporté dans le presse papier</French>
+            <Japanese>クリップボードへクラスネームを出力</Japanese>
+            <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
+            <Chinese>輸出 class name 到剪貼簿上</Chinese>
+            <Italian>Copiato il nome della classe negli appunti</Italian>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Mode">
+            <English>Mode</English>
+            <Chinese>模式</Chinese>
+            <French>Mode</French>
+            <Spanish>Modo</Spanish>
+            <Italian>Modalità</Italian>
+            <Polish>Tryb</Polish>
+            <Russian>Режим</Russian>
+            <German>Modus</German>
+            <Czech>Režim</Czech>
+            <Portuguese>Modo</Portuguese>
+            <Korean>모드</Korean>
+            <Chinesesimp>模式</Chinesesimp>
+            <Japanese>モード</Japanese>
+            <Turkish>Mod</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Whitelist">
+            <English>Whitelist</English>
+            <Polish>Biała lista</Polish>
+            <Spanish>Lista blanca</Spanish>
+            <German>Whitelist</German>
+            <Czech>Seznam povolených</Czech>
+            <Portuguese>Lista branca</Portuguese>
+            <French>Liste blanche</French>
+            <Hungarian>Fehérlista</Hungarian>
+            <Russian>Вайтлист</Russian>
+            <Italian>Lista Bianca</Italian>
+            <Japanese>許可リスト</Japanese>
+            <Korean>화이트리스트</Korean>
+            <Chinese>白名單</Chinese>
+            <Chinesesimp>白名单</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Blacklist">
+            <English>Blacklist</English>
+            <Japanese>禁止リスト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Items">
+            <English>Items</English>
+            <Chinese>物品</Chinese>
+            <French>Objets</French>
+            <Spanish>Objetos</Spanish>
+            <Italian>Oggetti</Italian>
+            <Polish>Przedmioty</Polish>
+            <Russian>Предметы</Russian>
+            <German>Gegenstände</German>
+            <Czech>Předměty</Czech>
+            <Portuguese>Itens</Portuguese>
+            <Korean>물품</Korean>
+            <Chinesesimp>物品</Chinesesimp>
+            <Japanese>アイテム</Japanese>
+            <Turkish>Eşyalar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
+            <English>Export current items list as an array for use in scripts</English>
+            <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
         </Key>
     </Package>
 </Project>

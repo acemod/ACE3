@@ -46,7 +46,7 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
             <Japanese>医療廃棄物シミュレーション詳細度</Japanese>
             <Korean>의료폐기물 재현 상세도</Korean>
-            <Chinesesimp>医疗废弃物模拟细节</Chinesesimp>
+            <Chinesesimp>模拟医疗废弃物细节</Chinesesimp>
             <Chinese>醫療廢棄物模擬細節</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
@@ -62,8 +62,8 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
             <Japanese>医療廃棄物シミュレーションは各クライアントでローカルに作成される、医療廃棄物の詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
             <Korean>의료폐기물 재현 상세도의 경우 얼마나 많은 수의 폐기물이 클라이언트 주변에 생성되는지를 정합니다. 매우 많은 수의 지역은 프레임드랍을 유발할 수 있습니다, 고로 이는 클라이언트 전용 설정입니다.</Korean>
-            <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会导致画面更新率延迟，因此这由用户端来设定。</Chinesesimp>
-            <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定。</Chinese>
+            <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会降低FPS，因此这由用户端性能来设定。</Chinesesimp>
+            <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
@@ -408,7 +408,7 @@
             <French>Transfusion (plasma)...</French>
             <Russian>Переливание плазмы...</Russian>
             <Hungarian>Infúzió vérplazmával...</Hungarian>
-            <Italian>Effettu la trasfusione di plasma...</Italian>
+            <Italian>Effettuo la trasfusione di plasma...</Italian>
             <Portuguese>Transfundindo plasma...</Portuguese>
             <Japanese>血しょうを投与しています・・・</Japanese>
             <Korean>혈장 수혈중...</Korean>
@@ -586,7 +586,7 @@
             <Hungarian>Ez az orvosi lap nem tartalmaz bejegyzést.</Hungarian>
             <Czech>Žádné záznamy na tomto štítku</Czech>
             <Portuguese>Nenhuma entrada neste cartão de triagem.</Portuguese>
-            <Japanese>トリアージ カードには何も無い。</Japanese>
+            <Japanese>トリアージ カードには何もありません。</Japanese>
             <Korean>부상자 분류 카드에 쓰여있는것이 없습니다.</Korean>
             <Chinesesimp>此检伤分类卡上没有任何资料</Chinesesimp>
             <Chinese>此檢傷分類卡上沒有任何資料</Chinese>
@@ -938,7 +938,7 @@
             <Hungarian>Nincs légzés</Hungarian>
             <Italian>Mancanza di respiro</Italian>
             <Portuguese>Não respira</Portuguese>
-            <Japanese>息をしていない</Japanese>
+            <Japanese>息をしていません</Japanese>
             <Korean>호흡 불가</Korean>
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Chinese>沒有呼吸</Chinese>
@@ -954,7 +954,7 @@
             <Hungarian>Nehéz légzés</Hungarian>
             <Italian>Difficoltà a respirare</Italian>
             <Portuguese>Dificuldade para respirar</Portuguese>
-            <Japanese>呼吸が苦しそうだ</Japanese>
+            <Japanese>呼吸が苦しそうです</Japanese>
             <Korean>호흡 곤란</Korean>
             <Chinesesimp>呼吸困难</Chinesesimp>
             <Chinese>呼吸困難</Chinese>
@@ -970,7 +970,7 @@
             <Hungarian>Alig van légzés</Hungarian>
             <Italian>Respira a fatica</Italian>
             <Portuguese>Quase não respira</Portuguese>
-            <Japanese>ほとんど呼吸をしていない</Japanese>
+            <Japanese>ほとんど呼吸をしていません</Japanese>
             <Korean>호흡이 없음</Korean>
             <Chinesesimp>快要没呼吸</Chinesesimp>
             <Chinese>快要沒呼吸</Chinese>
@@ -986,7 +986,7 @@
             <Hungarian>Vérzik</Hungarian>
             <Italian>Sanguinando</Italian>
             <Portuguese>Sangrando</Portuguese>
-            <Japanese>出血している</Japanese>
+            <Japanese>出血しています</Japanese>
             <Korean>출혈</Korean>
             <Chinesesimp>流血中</Chinesesimp>
             <Chinese>流血中</Chinese>
@@ -1002,7 +1002,7 @@
             <Hungarian>Fájdalom alatt</Hungarian>
             <Italian>Con dolore</Italian>
             <Portuguese>Com dor</Portuguese>
-            <Japanese>痛みがある</Japanese>
+            <Japanese>痛みがあります</Japanese>
             <Korean>고통</Korean>
             <Chinesesimp>疼痛中</Chinesesimp>
             <Chinese>疼痛中</Chinese>
@@ -1018,7 +1018,7 @@
             <Hungarian>Sok vért vesztett</Hungarian>
             <Italian>Ha perso parecchio sangue</Italian>
             <Portuguese>Perdeu muito sangue</Portuguese>
-            <Japanese>大量失血している</Japanese>
+            <Japanese>大量失血しています</Japanese>
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
             <Korean>혈액 부족</Korean>
@@ -1050,7 +1050,7 @@
             <Hungarian>Infúzióra kötve [%1ml]</Hungarian>
             <Italian>Ricevendo EV [%1ml]</Italian>
             <Portuguese>Recebendo IV [%1ml]</Portuguese>
-            <Japanese>IV で [%1ml] 投与されている</Japanese>
+            <Japanese>IV で [%1ml] 投与されています</Japanese>
             <Chinesesimp>接收静脉注射液中 [%1ml]</Chinesesimp>
             <Chinese>接收靜脈注射液中 [%1ml]</Chinese>
             <Korean>IV처리 [%1ml] 수혈중</Korean>
@@ -1101,7 +1101,7 @@
             <Japanese>緊急圧迫包帯は傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <Chinesesimp>用于覆盖伤口以防止出血，透过敷料的止血剂来让出血慢慢停止。</Chinesesimp>
-            <Chinese>用於覆蓋傷口以防止出血，透過敷料的止血劑來讓出血慢慢停止。</Chinese>
+            <Chinese>用於覆蓋傷口以防止出血，透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Display">
             <English>Packing Bandage</English>
@@ -1245,7 +1245,7 @@
             <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れをおそくし、失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
             <Chinesesimp>用于压迫静脉与动脉的血液流动，达到减缓失血速度的目的。</Chinesesimp>
-            <Chinese>用於壓迫靜脈與動脈的血液流動，達到減緩失血速度的目的。</Chinese>
+            <Chinese>用於壓迫靜脈與動脈的血液流動，達到減緩失血速度的目的</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1293,7 +1293,7 @@
             <Japanese>戦闘が収まったとき、モルヒネを痛みにたいしてつかいます。</Japanese>
             <Korean>심한 통증을 완화하기 위해 쓰이는 진통제입니다.</Korean>
             <Chinesesimp>止痛药的一种，用于减低中度至重度的疼痛感。</Chinesesimp>
-            <Chinese>止痛藥的一種，用於減低中度至重度的疼痛感。</Chinese>
+            <Chinese>止痛藥的一種，用於減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
@@ -1386,7 +1386,7 @@
             <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰이는 군용 약품</Korean>
             <Chinesesimp>军用神经解毒针，用来应付核生化污染的情况。</Chinesesimp>
-            <Chinese>軍用神經解毒針，用來應付核生化汙染的情況。</Chinese>
+            <Chinese>軍用神經解毒針，用來應付核生化汙染的情況</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Display">
             <English>Epinephrine autoinjector</English>
@@ -2039,7 +2039,7 @@
             <Italian>La pressione sanguigna è assente</Italian>
             <Portuguese>Sem pressão arterial</Portuguese>
             <Czech>Nenaměřil si žádný krevní tlak</Czech>
-            <Japanese>血圧は測れなかった</Japanese>
+            <Japanese>血圧を測れませんでした</Japanese>
             <Korean>혈압이 잡히지 않는다</Korean>
             <Chinesesimp>量不到血压</Chinesesimp>
             <Chinese>量不到血壓</Chinese>
@@ -2055,7 +2055,7 @@
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a pressão arterial</Portuguese>
             <Czech>Nedokázal si změřit krevní tlak</Czech>
-            <Japanese>血圧を測るのに失敗</Japanese>
+            <Japanese>血圧を測るのに失敗しました</Japanese>
             <Korean>혈압을 잡을 수 없었다</Korean>
             <Chinesesimp>检查血压的动作失败</Chinesesimp>
             <Chinese>檢查血壓的動作失敗</Chinese>
@@ -2327,7 +2327,7 @@
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
             <Portuguese>Sem freqüência cardíaca</Portuguese>
             <Czech>Žádný puls</Czech>
-            <Japanese>心拍数を測れなかった</Japanese>
+            <Japanese>心拍数を測れませんでした</Japanese>
             <Chinesesimp>量不到心跳</Chinesesimp>
             <Chinese>量不到心跳</Chinese>
             <Korean>맥박 없음</Korean>
@@ -2359,7 +2359,7 @@
             <Italian>Controlli la risposta del paziente</Italian>
             <Portuguese>Aferindo se o paciente tem reação</Portuguese>
             <Czech>Zkontroloval jsi reakci pacienta</Czech>
-            <Japanese>患者からの反応をみる</Japanese>
+            <Japanese>患者からの反応を見る</Japanese>
             <Korean>대상의 반응 확인중</Korean>
             <Chinesesimp>检查伤者的反应</Chinesesimp>
             <Chinese>檢查傷者的反應</Chinese>
@@ -2407,7 +2407,7 @@
             <Italian>Hai controllato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
             <Czech>Zkontroloval jsi %1</Czech>
-            <Japanese>%1 を見た</Japanese>
+            <Japanese>%1 を見ました</Japanese>
             <Korean>%1 을 확인함</Korean>
             <Chinesesimp>你已经检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
@@ -2471,7 +2471,7 @@
             <Hungarian>Valamennyi vért vesztett</Hungarian>
             <Czech>Ztratil trochu krve</Czech>
             <Portuguese>Ele perdeu um pouco de sangue</Portuguese>
-            <Japanese>彼は出血している</Japanese>
+            <Japanese>出血しています</Japanese>
             <Korean>적은 양의 피를 잃었다</Korean>
             <Chinesesimp>他流失一些血液</Chinesesimp>
             <Chinese>他流失一些血液</Chinese>
@@ -2487,7 +2487,7 @@
             <Czech>Ztratil hodně krve</Czech>
             <Portuguese>Ele perdeu muito sangue</Portuguese>
             <Italian>Ha perso molto sangue</Italian>
-            <Japanese>彼は大量失血している</Japanese>
+            <Japanese>大量失血しています</Japanese>
             <Korean>많은 양의 피를 잃었다</Korean>
             <Chinesesimp>他流失大量血液</Chinesesimp>
             <Chinese>他流失大量血液</Chinese>
@@ -2503,7 +2503,7 @@
             <Hungarian>Nem vesztett vért</Hungarian>
             <Czech>Neztratil žádnou krev</Czech>
             <Portuguese>Ele não perdeu sangue</Portuguese>
-            <Japanese>彼は失血していない</Japanese>
+            <Japanese>失血していません</Japanese>
             <Korean>피를 잃지 않았다</Korean>
             <Chinesesimp>他并没有失血</Chinesesimp>
             <Chinese>他並沒有失血</Chinese>
@@ -2519,7 +2519,7 @@
             <Hungarian>Fájdalmai vannak</Hungarian>
             <Czech>Je v bolestech</Czech>
             <Portuguese>Ele está com dor</Portuguese>
-            <Japanese>彼には痛みがあるようだ</Japanese>
+            <Japanese>痛いようです</Japanese>
             <Korean>통증이 있다</Korean>
             <Chinesesimp>他感到疼痛</Chinesesimp>
             <Chinese>他感到疼痛</Chinese>
@@ -2535,7 +2535,7 @@
             <Hungarian>Nincsenek fájdalmai</Hungarian>
             <Czech>Nemá žádné bolesti</Czech>
             <Portuguese>Ele não está com dor</Portuguese>
-            <Japanese>彼には痛みがないようだ</Japanese>
+            <Japanese>痛くないようです</Japanese>
             <Korean>통증이 없다</Korean>
             <Chinesesimp>他不会疼痛</Chinesesimp>
             <Chinese>他不會疼痛</Chinese>
@@ -2567,7 +2567,7 @@
             <German>Du verbindest %1 (%2)</German>
             <Portuguese>Você aplica atadura no paciente %1 (%2)</Portuguese>
             <Czech>Obvazuješ %1 (%2)</Czech>
-            <Japanese>%1 (%2) 包帯をつかった</Japanese>
+            <Japanese>%1 (%2) 包帯をつかいました</Japanese>
             <Korean>%1 (%2) 붕대를 감았다</Korean>
             <Chinesesimp>你正在对 %1 (%2) 包扎绷带中</Chinesesimp>
             <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
@@ -2583,7 +2583,7 @@
             <German>%1 verbindet dich</German>
             <Portuguese>%1 está aplicando  uma bandagem em você</Portuguese>
             <Czech>%1 tě obvazuje</Czech>
-            <Japanese>%1 はあなたに包帯を巻いている</Japanese>
+            <Japanese>%1 はあなたに包帯を巻いています</Japanese>
             <Korean>%1 (이)가 나에게 붕대를 감고있다</Korean>
             <Chinesesimp>%1 正在对你包扎绷带中</Chinesesimp>
             <Chinese>%1 正在對你包紮繃帶中</Chinese>
@@ -2599,7 +2599,7 @@
             <Italian>Stai suturando le ferite di %1 (%2)</Italian>
             <Portuguese>Você começa a suturar os ferimentos do %1 (%2)</Portuguese>
             <Czech>Zašíváš rány %1 (%2)</Czech>
-            <Japanese>あなたは %1 (%2) の外傷へ縫合をはじめた</Japanese>
+            <Japanese>%1 (%2) の外傷へ縫合を始めました</Japanese>
             <Korean>나는 %1(%2) 상처로부터 봉합을 시작했다</Korean>
             <Chinesesimp>你正开始对 %1 (%2) 缝合伤口中</Chinesesimp>
             <Chinese>你正開始對 %1 (%2) 縫合傷口中</Chinese>
@@ -2663,7 +2663,7 @@
             <Italian>%1 ti sta trattando le vie respiratorie</Italian>
             <Portuguese>%1 está te entubando</Portuguese>
             <Czech>%1 ošetřuje tvoje dýchací cesty</Czech>
-            <Japanese>%1 はあなたの気道を見ている</Japanese>
+            <Japanese>%1 はあなたの気道を見ています</Japanese>
             <Korean>%1 (이)가 나의 기도를 확보중이다</Korean>
             <Chinesesimp>%1 正在治疗你的呼吸道</Chinesesimp>
             <Chinese>%1 正在治療你的呼吸道</Chinese>
@@ -2823,7 +2823,7 @@
             <Italian>%1 ha bendato il paziente</Italian>
             <Portuguese>%1 aplicou atadura no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
-            <Japanese>%1 は包帯を巻いた</Japanese>
+            <Japanese>%1 は包帯を巻きました</Japanese>
             <Chinesesimp>%1 已包扎伤者</Chinesesimp>
             <Chinese>%1 已包紮傷者</Chinese>
             <Korean>%1 (이)가 붕대를 감음</Korean>
@@ -2838,7 +2838,7 @@
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
             <Spanish>%1 realicó RCP</Spanish>
             <French>%1 à fait une RCP</French>
-            <Japanese>%1 は心肺蘇生をした</Japanese>
+            <Japanese>%1 は心肺蘇生をしました</Japanese>
             <Chinesesimp>%1 已执行心肺复苏术</Chinesesimp>
             <Chinese>%1 已執行心肺復甦術</Chinese>
             <Korean>%1 (이)가 심폐소생술을 실시함</Korean>
@@ -2854,7 +2854,7 @@
             <Italian>%1 ha usato %2</Italian>
             <Portuguese>%1 usou %2</Portuguese>
             <Czech>%1 použil %2</Czech>
-            <Japanese>%1 は %2 をつかった</Japanese>
+            <Japanese>%1 は %2 をつかいました</Japanese>
             <Chinesesimp>%1 已使用 %2</Chinesesimp>
             <Chinese>%1 已使用 %2</Chinese>
             <Korean>%1 (이)가 %2 을 사용함</Korean>
@@ -2870,7 +2870,7 @@
             <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
-            <Japanese>%1 は IV をした</Japanese>
+            <Japanese>%1 は IV をしました</Japanese>
             <Chinesesimp>%1 已经给予静脉注射液</Chinesesimp>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
             <Korean>%1 (이)가 IV를 실시함</Korean>
@@ -2886,7 +2886,7 @@
             <Italian>%1 ha applicato un laccio emostatico</Italian>
             <Portuguese>%1 aplicou um torniquete</Portuguese>
             <Czech>%1 použil škrtidlo</Czech>
-            <Japanese>%1 は止血帯を巻いた</Japanese>
+            <Japanese>%1 は止血帯を巻きました</Japanese>
             <Chinesesimp>%1 已经绑上止血带</Chinesesimp>
             <Chinese>%1 已經綁上止血帶</Chinese>
             <Korean>%1 (이)가 지혈대를 적용함</Korean>
@@ -2901,7 +2901,7 @@
             <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
             <French>%1 a utilisé une trousse</French>
-            <Japanese>%1 は応急処置キットをつかった</Japanese>
+            <Japanese>%1 は応急処置キットをつかいました</Japanese>
             <Chinesesimp>%1 已使用了个人急救包</Chinesesimp>
             <Chinese>%1 已使用了個人急救包</Chinese>
             <Korean>%1 (이)가 개인응급키트를 사용함</Korean>
@@ -3156,7 +3156,7 @@
             <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
             <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
             <Italian>Seleziona il tipo di menù che preferisci: selezione (3D), radiale o disabilitata.</Italian>
-            <Japanese>好みに応じてメニューの表示形式を選んでください。標準では 3D 選択か円状です。</Japanese>
+            <Japanese>メニューの表示形式を選んでください。標準では 3D 選択か円状です。</Japanese>
             <Korean>선호하는 종류의 메뉴를 고르세요; 기본 3d 선택형 혹은 다이얼형</Korean>
             <Chinesesimp>选择你喜欢的选单样式; 预设为3D选项或放射状</Chinesesimp>
             <Chinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</Chinese>
@@ -3812,7 +3812,7 @@
             <French>Quel niveau de simulation médicale choisissez-vous?</French>
             <Hungarian>Milyen komplex legyen az orvosi szimuláció?</Hungarian>
             <Italian>Qual'è il livello di simulazione medica?</Italian>
-            <Japanese>治療の再現度は?</Japanese>
+            <Japanese>治療の再現度</Japanese>
             <Korean>의료 시뮬레이션의 수준</Korean>
             <Chinesesimp>选择需要的医疗模拟等级</Chinesesimp>
             <Chinese>選擇需要的醫療模擬等級</Chinese>
@@ -5512,7 +5512,7 @@
             <Czech>%1 je příliš daleko, léčba není možná</Czech>
             <Italian>Distanza da %1 è diventata troppo alta per permettere trattamento</Italian>
             <French>%1 est trop loin pour être soigné</French>
-            <Japanese>%1 は治療をできない所まで離れた</Japanese>
+            <Japanese>%1 は治療をできない所まで離れました</Japanese>
             <Korean>%1 부터의 거리가 너무 멀어 치료할 수 없습니다</Korean>
             <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>
             <Chinese>設定當距離超過%1將不能使用治療動作</Chinese>
@@ -5527,7 +5527,7 @@
             <Czech>Tato osoba (%1) je vzhůru a nemůže být naložena</Czech>
             <Italian>Questa persona (%1) è sveglia e non può essere caricata.</Italian>
             <French>%1 est conscient et ne peut être embarqué.</French>
-            <Japanese>患者 (%1) は意識があり、積み込めない</Japanese>
+            <Japanese>患者 (%1) は意識があり、積み込めません</Japanese>
             <Korean>이 사람 (%1) 은(는) 의식이 있어 태우지 못합니다</Korean>
             <Chinesesimp>此人(%1)是清醒且不能被装载</Chinesesimp>
             <Chinese>此人(%1)是清醒且不能被裝載</Chinese>
@@ -5587,7 +5587,7 @@
             <Japanese>AI はプレイヤーが医療的な理由で気絶している場合にかぎり、撃つのをためらいます。</Japanese>
             <Polish>Opóźnij stan wstrzymania ognia u AI kiedy gracz jest nieprzytomny z powodów medycznych.</Polish>
             <Korean>의료상의 이유로 플레이어가 기절할 경우 인공지능이 발사를 지연합니다.</Korean>
-            <Chinesesimp>当玩家为无意识的状态时, 延长AI的停火时间</Chinesesimp>
+            <Chinesesimp>当玩家为无意识的状态时, 延长AI的开火时间</Chinesesimp>
             <Chinese>當玩家為無意識的狀態時, 延長AI的停火時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
@@ -5600,9 +5600,9 @@
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência</Portuguese>
             <French>Délai de cessez le feu de l'IA pour la perte de conscience</French>
             <Russian>Задержка прекращения огня ботами при потере сознания</Russian>
-            <Japanese>AI は気絶している人へ、ためらってから射撃します</Japanese>
+            <Japanese>AI が気絶者へためらってから射撃</Japanese>
             <Korean>기절할 경우 인공지능이 발사를 지연합니다</Korean>
-            <Chinesesimp>延长AI对已无意识玩家的停火时间</Chinesesimp>
+            <Chinesesimp>延长AI对已无意识玩家的开火时间</Chinesesimp>
             <Chinese>延長AI對已無意識玩家的停火時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
@@ -5625,21 +5625,45 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
             <English>Unconscious animation during treatment</English>
+            <Japanese>処置中に気絶アニメーション</Japanese>
+            <Chinesesimp>治疗时死亡动画</Chinesesimp>
+            <Chinese>醫療時加入的昏迷動作</Chinese>
+            <Italian>Animazione da svenuto durante la cura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow animation of unconscious patients during treatment.</English>
+            <Japanese>患者の処置中に気絶アニメーションを許可します。</Japanese>
+            <Chinesesimp>在无意识患者治疗时死亡,会播放死亡动画?</Chinesesimp>
+            <Chinese>允許醫療時加入昏迷的動作</Chinese>
+            <Italian>Permette l'animazione da svenuto dei pazioenti durante loro la cura.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
             <English>Move unconscious units from group</English>
+            <Japanese>グループから気絶ユニットを移動</Japanese>
+            <Chinesesimp>从小队中移除无意识伤者</Chinesesimp>
+            <Chinese>從小隊中移動昏迷的單位</Chinese>
+            <Italian>Toglie le unità svenute dal grouppo</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
             <English>When a group member goes unconscious, removes them from their group.</English>
+            <Japanese>グループのメンバーが気絶すると、グループから退出させます。</Japanese>
+            <Chinesesimp>当一个队员失去意识时,他将被移除出小队</Chinesesimp>
+            <Chinese>當隊員昏迷時，將被他的小組中刪除</Chinese>
+            <Italian>Quando un membro del gruppo sviene, viene tolto dal gruppo.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
+            <Japanese>過剰投与</Japanese>
+            <Chinesesimp>过量</Chinesesimp>
+            <Chinese>過量</Chinese>
+            <Italian>Overdose</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
             <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
+            <Japanese>モルヒネ/アドレナリン/アトロピンの過剰投与により患者を脆弱にします。</Japanese>
+            <Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
+            <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
+            <Italian>Rende il paziente suscettibile di overdose da morfina, epinefrina o atropina.</Italian>
         </Key>
     </Package>
 </Project>

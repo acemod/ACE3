@@ -307,7 +307,7 @@
 {% endif %}
 
 {% if include.component == "pylons" %}
-`ace_interact_menu`
+`ace_interact_menu`, `ace_zeus`
 {% endif %}
 
 {% if include.component == "quickmount" %}

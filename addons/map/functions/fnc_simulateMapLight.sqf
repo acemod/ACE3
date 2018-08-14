@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [CONTROL, 5, [5, 4, 6], []] call ACE_map_fnc_simulateMapLights
+ * [CONTROL, 5, [5, 4, 6], []] call ace_map_fnc_simulateMapLight
  *
  * Public: No
  */
@@ -47,7 +47,7 @@ _colourList sort false;
 private _maxColour = _colourList select 0;
 
 //ambient colour fill
-_mapCtrl drawIcon [format["#(rgb,8,8,3)color(%1,%2,%3,1)", _r / _maxColour, _g / _maxColour, _b / _maxColour], [1,1,1,_colourAlpha], _mapCentre, _screenSize, _screenSize, 0, "", 0];
+_mapCtrl drawIcon ["#(rgb,8,8,3)color(1,1,1,1)", [_r / _maxColour, _g / _maxColour, _b / _maxColour, _colourAlpha], _mapCentre, _screenSize, _screenSize, 0, "", 0];
 
 if (_flashlight == "") then {
     //ambient shade fill

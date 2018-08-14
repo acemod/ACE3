@@ -74,4 +74,6 @@ switch (ctrlIDC _control) do {
 
 GVAR(currentLoadoutsTab) = ctrlIDC _control;
 
+[QGVAR(loadoutsTabChanged), [_display, _control]] call CBA_fnc_localEvent;
+
 [_display, _control] call FUNC(fillLoadoutsList);

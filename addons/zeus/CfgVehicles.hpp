@@ -159,6 +159,7 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleEditableObjects_DisplayName);
         curatorInfoType = QGVAR(RscEditableObjects);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Editable_Objects_ca.paa);
     };
     class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
         category = QGVAR(AI);

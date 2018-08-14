@@ -10,13 +10,11 @@ class CBA_Extended_EventHandlers;
                 displayName = CSTRING(ContinueDiggingTrench); \
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)); \
                 statement = QUOTE([ARR_2(_target,_player)] call FUNC(continueDiggingTrench);); \
-                priority = -1; \
             }; \
             class ACE_RemoveTrench { \
                 displayName = CSTRING(RemoveEnvelope); \
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench)); \
                 statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench);); \
-                priority = -1; \
             }; \
         }; \
     }
@@ -33,7 +31,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_small')])] call CBA_fnc_execNextFrame);
                     exceptions[] = {};
                     showDisabled = 0;
-                    priority = 4;
                     //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
                 class GVAR(digEnvelopeBig) {
@@ -43,7 +40,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call CBA_fnc_execNextFrame);
                     exceptions[] = {};
                     showDisabled = 0;
-                    priority = 4;
                     //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
