@@ -23,7 +23,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
-            <German>Beinflusst die Leistungsfähigkeit aller Spieler ohne eigenen Leistungsfaktor. Ein höherer Wert bedeutet bessere Leistung.</German>
+            <German>Beinflusst die Leistungsfähigkeit aller Spieler ohne seperaten Leistungsfaktor. Ein höherer Wert bedeutet bessere Leistung.</German>
             <Japanese>個別の因数を設定されていない、全てのプレイヤーのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność organizmu u wszystkich graczy bez ustawionego niestandardowego współczynnika. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 임의로 설정된 값 없이 영향받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
@@ -78,7 +78,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
             <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
-            <German>Erhöht oder verringert, wie viel Einfluss das Ausrüstungsgewicht auf die Leistung hat. Null heißt, dass es keinen Einfluss hat.</German>
+            <German>Erhöht oder verringert den Einfluss Ausrüstungsgegenständer auf die Leistung. Null heißt, dass es keinen Einfluss hat.</German>
             <Japanese>装備重量がプレイヤーのパフォーマンスにもたらす影響を増減させます。 値をゼロに設定した場合、装備重量はパフォーマンスに影響を与えません。</Japanese>
             <Polish>Zmniejsza lub zwiększa wpływ ciężaru ekwipunku na wydolność gracza. Zero oznacza kompletny brak wpływu na wydolność.</Polish>
             <Korean>플레이어가 무게에 따라 얼마나 영향받는지를 증가시키거나 감소시킵니다. 0의 경우 플레이어가 장비 무게에 영향받지 않습니다.</Korean>
@@ -111,7 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor">
             <English>Sway factor</English>
-            <German>Waffenunruuhe</German>
+            <German>Waffenunruhe</German>
             <Japanese>手ぶれ因数</Japanese>
             <Chinesesimp>抖动因数</Chinesesimp>
             <Chinese>抖動因素</Chinese>
