@@ -433,7 +433,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
-            <German>Beschleunigt die Menüanmimationen und folglich das Öffnen eines Submenüs. </German>
+            <German>Beschleunigt die Menüanmimationen und folglich das Öffnen eines Untermenüs. </German>
             <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
             <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
             <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, dimiuindo a necessidade de esperar para mostrar as ações</Portuguese>
@@ -448,6 +448,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelectorColor">
             <English>Selector Color</English>
+            <German>Farbauswahl </German>
             <Japanese>セレクターの色</Japanese>
             <Chinesesimp>选择器颜色</Chinesesimp>
             <Chinese>選單的顏色</Chinese>
