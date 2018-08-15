@@ -3,6 +3,7 @@
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_DisplayName">
             <English>Magazine Repack</English>
+            <German>Magazine umpacken </German>
             <Italian>Riempimento Caricatori</Italian>
             <Chinese>重新整理彈匣</Chinese>
             <Chinesesimp>重新整理弹匣</Chinesesimp>
@@ -11,7 +12,7 @@
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
-            <German>Zeit pro Patrone</German>
+            <German>Zeit je Patrone</German>
             <Italian>Durata per proiettile</Italian>
             <Chinese>每發所需時間</Chinese>
             <Chinesesimp>每发所需时间</Chinesesimp>
@@ -20,7 +21,7 @@
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
-            <German>Zeit pro Magazin</German>
+            <German>Zeit je Magazin</German>
             <Italian>Durata per caricatore</Italian>
             <Chinese>每匣所需時間</Chinese>
             <Chinesesimp>每匣所需时间</Chinesesimp>
@@ -29,7 +30,7 @@
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
-            <German>Zeit pro Gurtglied</German>
+            <German>Zeit je Gurtglied</German>
             <Italian>Durata per caricatore a nastro</Italian>
             <Chinese>每彈鍊所需時間</Chinese>
             <Chinesesimp>每弹炼所需时间</Chinesesimp>
@@ -87,7 +88,7 @@
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
             <French>Réorganisation terminée</French>
-            <German>Wiederverpacken fertig</German>
+            <German>Umpacken abgeschlossen</German>
             <Spanish>Reorganización finalizada</Spanish>
             <Russian>Перепаковка завершена</Russian>
             <Czech>Páskování dokončeno</Czech>
