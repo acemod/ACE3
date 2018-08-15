@@ -673,6 +673,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
             <English>Open the loadouts screen</English>
+            <German>Öffne Ausrüstungsbildschirm.</German>
             <French>Affiche la page des équipements</French>
             <Chinese>開啟裝備選單</Chinese>
             <Chinesesimp>开启装备选单</Chinesesimp>
@@ -681,6 +682,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
+            <German>Jetzige / Standard Ausrüstungen exportieren.</German>
             <French>Exporte l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯出當前/預設的裝備</Chinese>
             <Chinesesimp>汇出当前/预设的装备</Chinesesimp>
@@ -689,6 +691,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
             <English>Import current / default loadouts</English>
+            <German>Jetzige / StandarD Ausrüstungen importieren.</German>
             <French>Importer l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯入當前/預設的裝備</Chinese>
             <Chinesesimp>汇入当前/预设的装备</Chinesesimp>
@@ -697,6 +700,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_statPotassium">
             <English>Potassium levels</English>
+            <German>Kaliumgehalt</German>
             <French>Taux de potassium</French>
             <Japanese>カリウム レベル</Japanese>
             <Chinesesimp>钾水平</Chinesesimp>
@@ -721,6 +725,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
+            <German>Seite</German>
             <French>Page</French>
             <Japanese>ページ</Japanese>
             <Chinesesimp>页面</Chinesesimp>
@@ -729,6 +734,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
+            <German>Aktiviere den Gesichts / Stimmen / Abzeichen Reiter</German>
             <French>Activer les onglets faces / voix / insignes</French>
             <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
@@ -737,6 +743,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
+            <German></German>
             <French>Vider le conteneur selectionné</French>
             <Japanese>選択されたコンテナは空です</Japanese>
             <Chinesesimp>选择的箱子是空的</Chinesesimp>
@@ -745,6 +752,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
+            <German>Exportiere Class-Name in Zwischenablage kopieren</German>
             <French>Nom de classe exporté dans le presse papier</French>
             <Japanese>クリップボードへクラスネームを出力</Japanese>
             <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
@@ -753,6 +761,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Mode">
             <English>Mode</English>
+            <German>Modus</German>
             <Chinese>模式</Chinese>
             <French>Mode</French>
             <Spanish>Modo</Spanish>
@@ -769,6 +778,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Whitelist">
             <English>Whitelist</English>
+            <German>Whitelist</German>
             <Polish>Biała lista</Polish>
             <Spanish>Lista blanca</Spanish>
             <German>Whitelist</German>
@@ -785,10 +795,12 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Blacklist">
             <English>Blacklist</English>
+            <German>Blacklist</German>
             <Japanese>禁止リスト</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
+            <German>Objekte</German>
             <Chinese>物品</Chinese>
             <French>Objets</French>
             <Spanish>Objetos</Spanish>
@@ -805,6 +817,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
+            <German>Ausgewählte Objekte als Array exportieren um diese in Skripten zu verwenden</German>
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
         </Key>
     </Package>
