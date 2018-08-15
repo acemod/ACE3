@@ -18,7 +18,7 @@
             <Russian>Позволяет настраивать поведение улучшенного броска гранат.</Russian>
             <Japanese>アドバンスド スローイングの動作挙動を変更します。</Japanese>
             <Polish>Zezwala na zmianę zachowania zaawansowanego trybu rzucania.</Polish>
-            <German>Erlaubt es, das Verhalten des erweiterten Wurfsystems zu ändern.</German>
+            <German>Lässt Änderungen am erweiteren Wurfsystem zu.</German>
             <Korean>고급 투척 행위를 허가합니다</Korean>
             <French>Permet de changer la configuration du lancé amélioré.</French>
             <Italian>Permette il cambiamento della modalità di tiro.</Italian>
@@ -30,7 +30,7 @@
             <Russian>Включить улучшенный бросок</Russian>
             <Japanese>アドバンスド スローイングを有効化する</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
-            <German>Aktiviere erweitertes Wurfsystem</German>
+            <German>Aktiviere  erweitertes Wurfsystem</German>
             <Korean>고급 투척 활성화 </Korean>
             <French>Active le lancé amélioré</French>
             <Italian>Abilita Lancio Avanzato</Italian>
@@ -54,7 +54,7 @@
             <Russian>Показать траекторию броска</Russian>
             <Japanese>投てき軌道を表示する</Japanese>
             <Polish>Pokaż trasę lotu</Polish>
-            <German>Zeige Wurfbogen</German>
+            <German>Zeige Flugkurve an</German>
             <Korean>투척 궤적 표시</Korean>
             <French>Afficher l'arc de lancé</French>
             <Italian>Mostra Arco di Tiro</Italian>
@@ -66,7 +66,7 @@
             <Russian>Включает визуализацию траектории броска (как полетит граната).</Russian>
             <Japanese>投てき軌道 (投てき物がどこに飛ぶか) の表示を有効化します。</Japanese>
             <Polish>Wyświetla wizualizację trasy przelotu granatu.</Polish>
-            <German>Aktiviert die Visualisierung des Wurfbogens (wohin das Objekt geworfen werden wird).</German>
+            <German>Aktiviert die Abzeuge des Wurfbogens (wohin das Objekt geworfen wird).</German>
             <Korean>투척 궤도를 시각화 합니다(투척물이 어디로 갈지)</Korean>
             <French>Active la visualisation de l'arc de lancé (où l'objet lancé va atterrir).</French>
             <Italian>Abilita la visualizzazione dell'arco del tiro (dove l'oggetto lanciabile volerà).</Italian>
@@ -90,7 +90,7 @@
             <Russian>Включает отображение подсказок по управлению мышью, когда граната подготовлена.</Russian>
             <Japanese>投てき物を構える時、マウス操作の説明表示を有効化します。</Japanese>
             <Polish>Wyświetla podpowiedzi sterowania myszą kiedy obiekt miotany jest w ręku.</Polish>
-            <German>Aktiviert visuelle Hinweise zur Maussteuerung, wenn ein Objekt zum Werfen vorbereitet wird.</German>
+            <German>Aktiviert Hinweise zur Maussteuerung, wenn ein Objekt zum Werfen vorbereitet wird.</German>
             <Korean>투척물을 준비시 마우스 조작을 시각화해서 보여줍니다</Korean>
             <French>Active les aides visuels pour les controles à la souris lorsqu'un lancé est préparé.</French>
             <Italian>Abilita la visualizzazione dei controlli del mouse quando l'oggetto lanciabile è pronto.</Italian>
