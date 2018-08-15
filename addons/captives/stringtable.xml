@@ -438,7 +438,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
-            <German>Nimmt die Einheit unter dem Cursor fest.</German>
+            <German>Nimmt die Einheit unter dem Mauszeiger fest.</German>
             <Japanese>カーソル先のユニットを拘束</Japanese>
             <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
             <Chinese>設置在游標下的單位成俘虜狀態</Chinese>
@@ -447,7 +447,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
-            <German>Benötigt für KI Kapitulation</German>
+            <German>KI muss kapitulieren</German>
             <Italian>Necessita arresa AI</Italian>
             <Japanese>AI の投降を必要とする</Japanese>
             <Chinese>需要AI先行投降</Chinese>
