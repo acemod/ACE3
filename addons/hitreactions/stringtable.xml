@@ -3,6 +3,7 @@
     <Package name="hitreactions">
         <Key ID="STR_ACE_hitreactions_minDamageToTrigger_displayName">
             <English>Min Damage to trigger falling</English>
+            <German>Minimaler Schaden um Zusammenbruch auszulösen</German>
             <Italian>Danno Minimo da caduta se colpiti</Italian>
             <Chinese>觸發倒下前最低需受到多少傷害</Chinese>
             <Chinesesimp>触发倒下前最低需受到多少伤害</Chinesesimp>
