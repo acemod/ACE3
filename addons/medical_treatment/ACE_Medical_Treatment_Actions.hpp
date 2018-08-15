@@ -12,7 +12,7 @@ class GVAR(Actions) {
         treatmentTime = QFUNC(getBandageTime);
         treatmentTimeSelfCoef = 1;
         items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
-        condition = QUOTE(!GVAR(advancedBandages));
+        condition = QFUNC(canBandage);
         itemConsumed = 1;
         callbackSuccess = QFUNC(treatmentBandage);
         callbackFailure = "";
@@ -30,7 +30,6 @@ class GVAR(Actions) {
     class FieldDressing: BasicBandage {
         displayName = CSTRING(Actions_FieldDressing);
         items[] = {"ACE_fieldDressing"};
-        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
@@ -39,7 +38,6 @@ class GVAR(Actions) {
     class PackingBandage: BasicBandage {
         displayName = CSTRING(Actions_PackingBandage);
         items[] = {"ACE_packingBandage"};
-        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "", {"ACE_MedicalLitter_packingBandage"}},
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -49,7 +47,6 @@ class GVAR(Actions) {
     class ElasticBandage: BasicBandage {
         displayName = CSTRING(Actions_ElasticBandage);
         items[] = {"ACE_elasticBandage"};
-        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
@@ -58,7 +55,6 @@ class GVAR(Actions) {
     class QuikClot: BasicBandage {
         displayName = CSTRING(Actions_QuikClot);
         items[] = {"ACE_quikclot"};
-        condition = QGVAR(advancedBandages);
         litter[] = {
             {"All", "", {"ACE_MedicalLitter_QuickClot"}},
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
