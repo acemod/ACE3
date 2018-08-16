@@ -442,11 +442,13 @@
         </Key>
         <Key ID="STR_ACE_Scopes_statHorizontalLimits">
             <English>Horizontal limits</English>
+            <German>Horizontale Grenzen </German>
             <Chinese>水平限制</Chinese>
             <Japanese>水平制限</Japanese>
         </Key>
         <Key ID="STR_ACE_Scopes_statVerticalLimits">
             <English>Vertical limits</English>
+            <German>Vertikale Grenzen </German>
             <Chinese>垂直限制</Chinese>
             <Japanese>垂直制限</Japanese>
         </Key>
