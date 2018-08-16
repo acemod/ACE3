@@ -3,6 +3,7 @@
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_DisplayName">
             <English>Respawn</English>
+            <German>Wiedereinstieg </German>
             <Italian>Riapparizione</Italian>
             <Chinese>重生</Chinese>
             <Chinesesimp>重生</Chinesesimp>
