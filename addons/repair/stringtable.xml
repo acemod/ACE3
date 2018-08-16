@@ -1858,6 +1858,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
+            <German>Motor bei Reperatur automat. abstellen </German>
             <Japanese>修理時にエンジン自動停止</Japanese>
             <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
@@ -1865,6 +1866,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
+            <German>Der Motor wird bei Repartur automatisch ausgeschaltet. </German>
             <Japanese>修理時にエンジンを自動で停止します。</Japanese>
             <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
