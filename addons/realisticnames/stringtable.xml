@@ -3344,12 +3344,14 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
+            <German>Nightforce NXS </German>
             <Chinese>Nightforce NXS</Chinese>
             <Chinesesimp>Nightforce NXS</Chinesesimp>
             <Japanese>Nightforce NXS</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
+            <German>Nightforce NXS (Grün Hex.) </German>
             <Chinese>Nightforce NXS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Nightforce NXS (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Nightforce NXS (緑蜂巣)</Japanese>
@@ -3363,12 +3365,14 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
+            <German>Burris XTR II </German>
             <Chinese>Burris XTR II</Chinese>
             <Chinesesimp>Burris XTR II</Chinesesimp>
             <Japanese>Burris XTR II</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
+            <German>Burris XTR II (Grün Hex.) </German>
             <Chinese>Burris XTR II (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Burris XTR II (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Burris XTR II (緑蜂巣)</Japanese>
@@ -3417,12 +3421,14 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
+            <German>IOR-Valdada Pitbull 2 </German>
             <Chinese>IOR-Valdada Pitbull 2</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2</Chinesesimp>
             <Japanese>IOR-Valdada ピットブル 2</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
+            <German>Burris FastFire 2 </German>
             <Chinese>Burris FastFire 2</Chinese>
             <Chinesesimp>Burris FastFire 2</Chinesesimp>
             <Japanese>Burris ファストファイア 2</Japanese>
