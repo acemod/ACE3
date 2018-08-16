@@ -78,7 +78,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
             <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
-            <German>Erhöht oder verringert den Einfluss Ausrüstungsgegenständer auf die Leistung. Null heißt, dass es keinen Einfluss hat.</German>
+            <German>Erhöht oder verringert den Einfluss der Ausrüstungsgegenstände auf die Leistung. Null heißt, dass es keinen Einfluss hat.</German>
             <Japanese>装備重量がプレイヤーのパフォーマンスにもたらす影響を増減させます。 値をゼロに設定した場合、装備重量はパフォーマンスに影響を与えません。</Japanese>
             <Polish>Zmniejsza lub zwiększa wpływ ciężaru ekwipunku na wydolność gracza. Zero oznacza kompletny brak wpływu na wydolność.</Polish>
             <Korean>플레이어가 무게에 따라 얼마나 영향받는지를 증가시키거나 감소시킵니다. 0의 경우 플레이어가 장비 무게에 영향받지 않습니다.</Korean>
@@ -136,7 +136,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
             <English>Enables/disables Advanced Fatigue.</English>
-            <German>Aktiviert/deaktiviert die Erweiterte Ausdauer.</German>
+            <German>Aktiviert/deaktiviert die erweiterte Ausdauer.</German>
             <Japanese>アドバンスド ファティーグを有効化します。</Japanese>
             <Polish>Włącza/wyłącza zaawansowaną wytrzymałość</Polish>
             <Korean>고급 피로도 활성화/비활성화</Korean>
