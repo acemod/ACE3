@@ -371,6 +371,7 @@
         </Key>
         <Key ID="STR_ACE_WeaponSelect_CollisionLights">
             <English>Toggle Collision Lights</English>
+            <German>Positionslichter umschalten </German>
             <Italian>Attiva Luci di Collisione</Italian>
             <Korean>충돌 표시등 토글</Korean>
             <Chinese>切換碰撞燈</Chinese>
