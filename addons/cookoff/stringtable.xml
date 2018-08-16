@@ -109,7 +109,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
-            <German>Faktor für die Munitionsbrand [0 zum Deaktivieren]</German>
+            <German>Faktor für den Munitionsbrand [0 zum Deaktivieren]</German>
             <French>Multiplicateur de la durée du cook-off des munitions [Une valeur de 0 désactive l'effet]</French>
             <Polish>Mnożnik decydujący jak długo ma trwać samozapłon amunicji [Ustawienie na 0 spowoduje wyłącznie samozapłonu]</Polish>
             <Japanese>誘爆の持続時間を乗数で設定します。[0 に設定で誘爆を無効化]</Japanese>
