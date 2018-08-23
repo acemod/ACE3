@@ -1559,7 +1559,7 @@ class CfgWeapons
         ACE_barrelTwist=0.0;
         ACE_twistDirection=0;
         ACE_barrelLength=429.26;
-    }	
+    };
     class CUP_arifle_Mk16_CQC : Rifle_Base_F
     {
         ACE_barrelTwist=177.8;
