@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
- * Handles a unit entering cardiac arrest.
+ * Handles a unit entering cardiac arrest (calls for a status update).
+ * Sets required variables for countdown timer until death.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
@@ -21,4 +22,5 @@ _time = _time + random [_time*-0.1, 0, _time*0.1];
 _unit setVariable [QGVAR(cardiacArrestTime), _time];
 _unit setVariable [QGVAR(cardiacArrestStart), CBA_missionTime];
 
-[_unit] call EFUNC(medical_status,setCardiacArrest);
+// Update the unit status to reflect cardiac arrest
+[_unit, true] call EFUNC(medical_status,setCardiacArrest);

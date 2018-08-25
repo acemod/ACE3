@@ -10,17 +10,17 @@
  * Return Value:
  * None
  *
- * Example:
- * [bob, "bloodloss"] call ace_medical_status_fnc_setDead;
- *
  * Public: No
  */
 
 params ["_unit", ["_reason", "unknown"]];
 
-// wait a frame to escape handleDamage
-// @TODO Test if this is still necessary
-[EFUNC(medical_engine,setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
+// No heart rate or blood pressure to measure when dead
+_unit setVariable [VAR_HEART_RATE, 0, true];
+_unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
+
+// Kill the unit without changing visual apperance
+[_unit, 1] call EFUNC(medical_engine,setStructuralDamage);
 
 private _lastShooter = _unit getVariable [QEGVAR(medical_engine,lastShooter), objNull];
 private _lastInstigator = _unit getVariable [QEGVAR(medical_engine,lastInstigator), objNull];

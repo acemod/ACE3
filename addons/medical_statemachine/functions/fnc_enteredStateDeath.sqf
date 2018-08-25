@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SilentSpike
- * Handles a unit reaching the point of death.
+ * Handles a unit reaching the point of death (calls for a status update).
  *
  * Arguments:
  * 0: The Unit <OBJECT>
@@ -19,7 +19,4 @@ params ["_unit"];
 // Send a local event before death
 [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 
-_unit setVariable [VAR_HEART_RATE, 0, true];
-_unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
-
-_unit setDamage 1;
+[_unit] call EFUNC(medical_status,setDead);
