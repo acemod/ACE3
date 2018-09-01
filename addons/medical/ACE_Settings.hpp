@@ -128,6 +128,22 @@ class ACE_Settings {
         value = 120;
         sliderSettings[] = {0, 3600, 120, 0};
     };
+    class GVAR(CPRLowerLimit) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(ReviveSettings_CPRLowerLimit_DisplayName);
+        description = CSTRING(ReviveSettings_CPRLowerLimit_Description);
+        typeName = "SCALAR";
+        value = 0;
+        sliderSettings[] = {0, 120, 0, 0};
+    };
+    class GVAR(CPRUpperLimit) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(ReviveSettings_CPRUpperLimit_DisplayName);
+        description = CSTRING(ReviveSettings_CPRUpperLimit_Description);
+        typeName = "SCALAR";
+        value = 20;
+        sliderSettings[] = {0, 120, 20, 0};
+    };
     class GVAR(amountOfReviveLives) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(ReviveSettings_amountOfReviveLives_DisplayName);

@@ -5054,6 +5054,18 @@
             <Chinesesimp>人员在等待复苏状态下能够等待的最大时间(秒)</Chinesesimp>
             <Chinese>人員在等待復甦狀態下能夠等待的最大時間(秒)</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_CPRLowerLimit_DisplayName">
+            <English>CPR Lower Time Limit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_CPRLowerLimit_Description">
+            <English>Minimum amount of time CPR will add to a unit's revive timer.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_CPRUpperLimit_DisplayName">
+            <English>CPR Upper Time Limit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_CPRUpperLimit_Description">
+            <English>Maximum amount of time CPR will add to a unit's revive timer.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_amountOfReviveLives_DisplayName">
             <English>Max Revive lives</English>
             <Russian>Макс. кол-во жизней</Russian>
