@@ -18,4 +18,8 @@
 
 params [["_name", "", [""]], ["_loadout", [], [[]], 10]];
 
+if (isNil QGVAR(defaultLoadoutsList)) then {
+	GVAR(defaultLoadoutsList) = [];
+};
+
 GVAR(defaultLoadoutsList) append [_name, _loadout];
