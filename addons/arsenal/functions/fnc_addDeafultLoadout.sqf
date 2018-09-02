@@ -22,4 +22,9 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     GVAR(defaultLoadoutsList) = [];
 };
 
-GVAR(defaultLoadoutsList) append [_name, _loadout];
+private _loadoutIndex = (+(GVAR(defaultLoadoutsList))) findIf {(_x select 0) == _name};
+if (_loadoutIndex == -1) then {
+    GVAR(defaultLoadoutsList) pushBack [_name, _loadout];
+} else {
+    GVAR(defaultLoadoutsList) set [_loadoutIndex, [_name, _loadout]];
+};
