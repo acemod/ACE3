@@ -16,6 +16,6 @@
  * Public: Yes
 */
 
-params [["_name", "", [""]], ["_loadout", [], [[]], 10];
+params [["_name", "", [""]], ["_loadout", [], [[]], 10]];
 
 GVAR(defaultLoadoutsList) append [_name, _loadout];
