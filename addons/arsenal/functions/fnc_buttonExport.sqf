@@ -16,7 +16,7 @@ params ["_display"];
 
 if (GVAR(shiftState)) then {
 
-    if (GVAR(defaultLoadoutsList) isEqualTo []) exitWith {
+    if (isNil QGVAR(defaultLoadoutsList) || {GVAR(defaultLoadoutsList) isEqualTo []}) exitWith {
         [_display, localize LSTRING(exportDefaultError)] call FUNC(message);
     };
 

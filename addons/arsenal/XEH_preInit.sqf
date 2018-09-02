@@ -8,7 +8,6 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 // Arsenal
-GVAR(defaultLoadoutsList) = [];
 GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
 
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
