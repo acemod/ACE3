@@ -34,12 +34,12 @@ if (GVAR(shiftState) && {is3DEN}) then {
 
             _x params ["_loadoutName", "_loadout"];
 
-            private _sameNameLoadoutsList = GVAR(defaultLoadoutsList) select {_x select 0 == _loadoutName};
+            private _loadoutIndex = (+(GVAR(defaultLoadoutsList))) findIf {(_x select 0) == _loadoutName};
 
-           if (count _sameNameLoadoutsList == 0) then {
+            if (_loadoutIndex == -1) then {
                 GVAR(defaultLoadoutsList) pushBack [_loadoutName, _loadout];
             } else {
-                GVAR(defaultLoadoutsList) set [GVAR(defaultLoadoutsList) find (_sameNameLoadoutsList select 0), _loadoutName, _loadout];
+                GVAR(defaultLoadoutsList) set [_loadoutIndex, [_loadoutName, _loadout]];
             };
         };
     } foreach _data;
