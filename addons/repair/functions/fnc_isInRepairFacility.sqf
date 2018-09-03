@@ -36,7 +36,7 @@ _checkObject forEach _objects;
 
 if (_isInBuilding) exitWith {true};
 
-_objects = position _object nearObjects 7.5;
+_objects = _object nearObjects 7.5;
 _checkObject forEach _objects;
 
 _isInBuilding
