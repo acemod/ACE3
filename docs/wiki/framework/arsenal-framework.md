@@ -138,6 +138,8 @@ Since 3.13.0, you can also add default loadouts with the `ace_arsenal_fnc_addDef
 Example:
 `["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout`
 
+If a loadout with the same name exists, it will be overwritten.
+
 ## 5. Stats
 
 ACE Arsenal stats are customizable, this will show you how.

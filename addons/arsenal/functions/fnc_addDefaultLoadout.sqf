@@ -2,7 +2,7 @@
 /*
  * Author: 654wak654
  * Adds a loadout to the "Default Loadouts" list.
- * If a loadout with the same name exists, it is overriden.
+ * If a loadout with the same name exists, it is overwritten.
  *
  * Arguments:
  * 0: Name of loadout <STRING>
