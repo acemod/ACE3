@@ -21,8 +21,7 @@
     localize "str_channel_side", \
     localize "str_channel_command", \
     localize "str_channel_group", \
-    localize "str_channel_vehicle", \
-    localize "str_channel_direct" \
+    localize "str_channel_vehicle" \
 ]
 
 #define MOVE_RESTRICTION_NOBODY -1
