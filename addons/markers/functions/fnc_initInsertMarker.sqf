@@ -46,23 +46,12 @@
     private _aceAngleSlider = _display displayctrl 1220;
     private _aceAngleSliderText = _display displayctrl 1221;
 
-    ////////////////////
-    // Install MapDrawEH on current map
-    private _mapIDD = -1;
-
-    {
-        if (!isNull (findDisplay _x)) exitWith {
-            _mapIDD = _x;
-        };
-        false
-    } count [12, 37, 52, 53, 160];
-
-    if (_mapIDD == -1) exitWith {
-        ERROR("No Map?");
-    };
+    private _mapDisplay = displayParent _display;
+    if (isNull _mapDisplay) exitWith {ERROR("No Map");};
+    private _mapCtrl = _mapDisplay displayctrl 51;
 
     GVAR(editingMarker) = "";
-    (ctrlMapMouseOver ((finddisplay _mapIDD) displayctrl 51)) params ["_mouseOverType", "_marker"];
+    (ctrlMapMouseOver _mapCtrl) params ["_mouseOverType", "_marker"];
 
     //check if entity under mouse is a user marker
     if (_mouseOverType isEqualTo "marker") then {
@@ -73,9 +62,11 @@
         };
     };
 
-    if !(_mapIDD in GVAR(mapDisplaysWithDrawEHs)) then {
-        GVAR(mapDisplaysWithDrawEHs) pushBack _mapIDD;
-        ((finddisplay _mapIDD) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
+    ////////////////////
+    // Install MapDrawEH on current map
+    if !((ctrlIDD _mapDisplay) in GVAR(mapDisplaysWithDrawEHs)) then {
+        GVAR(mapDisplaysWithDrawEHs) pushBack (ctrlIDD _mapDisplay);
+        _mapCtrl ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
     };
 
     ////////////////////
@@ -86,7 +77,7 @@
     } else {
         private _pos = ctrlPosition _picture;
         _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
-        GVAR(currentMarkerPosition) = ((finddisplay _mapIDD) displayctrl 51) ctrlMapScreenToWorld _pos;
+        GVAR(currentMarkerPosition) = _mapCtrl ctrlMapScreenToWorld _pos;
     };
 
     //Hide the bis picture:
