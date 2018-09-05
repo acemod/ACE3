@@ -1,5 +1,5 @@
 /*
- * Author: commy2
+ * Author: commy2, Timi007
  * MarkerPlacement closed
  *
  * Arguments:

@@ -1,5 +1,5 @@
 /*
- * Author: BIS, commy2
+ * Author: BIS, commy2, Timi007
  * Sets up the marker placement
  * Run instead of \a3\ui_f\scripts\GUI\RscDisplayInsertMarker.sqf
  *
