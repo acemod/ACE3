@@ -20,8 +20,8 @@ disableserialization;
 params ["_display", "_closeNum"];
 TRACE_2("params",_display,_closeNum);
 
-if (_closeNum == 1) then {
-    if (GVAR(editingMarker) != "") then {
+if (_closeNum isEqualTo 1) then {
+    if !(GVAR(editingMarker) isEqualTo "") then {
         //delete "old" marker
         deleteMarker GVAR(editingMarker);
     };
@@ -38,7 +38,7 @@ if (_closeNum == 1) then {
 
     }, []] call CBA_fnc_execNextFrame;
 } else {
-    if (GVAR(editingMarker) != "") then {
+    if !(GVAR(editingMarker) isEqualTo "") then {
         //editing was canceled show the original marker again
         GVAR(editingMarker) setMarkerAlphaLocal 1;
     };
