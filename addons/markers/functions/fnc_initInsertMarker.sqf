@@ -48,7 +48,7 @@
 
     private _mapDisplay = displayParent _display;
     if (isNull _mapDisplay) exitWith {ERROR("No Map");};
-    private _mapCtrl = _mapDisplay displayctrl 51;
+    private _mapCtrl = _mapDisplay displayCtrl 51;
 
     GVAR(editingMarker) = "";
     (ctrlMapMouseOver _mapCtrl) params ["_mouseOverType", "_marker"];
@@ -57,7 +57,7 @@
     if (_mouseOverType isEqualTo "marker") then {
         if !((_marker find "_USER_DEFINED") isEqualTo -1) then {
             GVAR(editingMarker) = _marker;
-            //hide marker which is being edited because if the user cancels editing, it will still exits unchanged
+            //hide marker which is being edited because if the user cancels editing, it will still exist unchanged
             GVAR(editingMarker) setMarkerAlphaLocal 0;
         };
     };
@@ -223,7 +223,7 @@
         _aceShapeLB lbSetPicture [_forEachIndex, _pic];
 
         if ((markerType GVAR(editingMarker)) isEqualTo _classname) then {
-            //if the marker is beeing edited then get the original shape
+            //if the marker is being edited then get the original shape
             GVAR(curSelMarkerShape) = _forEachIndex;
         };
     } forEach GVAR(MarkersCache);
@@ -245,7 +245,7 @@
         _aceColorLB lbSetPicture [_forEachIndex, _pic];
 
         if ((markerColor GVAR(editingMarker)) isEqualTo _classname) then {
-            //if the marker is beeing edited then get the original color
+            //if the marker is being edited then get the original color
             GVAR(curSelMarkerColor) = _forEachIndex;
         };
     } forEach GVAR(MarkerColorsCache);
