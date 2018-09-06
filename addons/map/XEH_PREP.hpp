@@ -11,3 +11,4 @@ PREP(onDrawMap);
 PREP(simulateMapLight);
 PREP(switchFlashlight);
 PREP(updateMapEffects);
+PREP(initMainMap);
