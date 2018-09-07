@@ -1,7 +1,8 @@
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineResincl.inc"
 
 params ["_display"];
-private _control = _display displayCtrl 51;
+private _control = _display displayCtrl IDC_MAP;
 
 GVAR(lastStillPosition) = _control ctrlMapScreenToWorld [0.5, 0.5];
 GVAR(lastStillTime) = CBA_missionTime;
