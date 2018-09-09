@@ -26,13 +26,7 @@ private _oldGroup = group _unit;
 private _newGroup = createGroup _newSide;
 
 // Preserve groupid from the previous group if doesn't already exist
-call {
-    scopeName "groupidsearch";
-    {
-        if (side _x isEqualTo _newSide && {(groupId _oldGroup) isEqualTo (groupId _newGroup)}) then {
-            breakOut "groupidsearch";
-        }
-    } forEach allGroups;
+if ((allGroups findIf {side _x isEqualTo _newSide && {(groupId _oldGroup) isEqualTo (groupId _newGroup)}}) == -1) then {
     _newGroup setGroupIdGlobal [groupId _oldGroup];
 };
 
