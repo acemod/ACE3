@@ -14,9 +14,11 @@
     LSTRING(DisplayName),
     true,
     true, {
-        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlSetFade ([1,0] select _this);
-        _staminaBarContainer ctrlCommit 0;
+        if (!_this) then {
+            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+            _staminaBarContainer ctrlSetFade 1;
+            _staminaBarContainer ctrlCommit 0;
+        };
     }
 ] call CBA_Settings_fnc_init;
 
