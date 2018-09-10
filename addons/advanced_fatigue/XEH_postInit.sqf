@@ -47,13 +47,3 @@ if (!hasInterface) exitWith {};
     // - Add main loop at 1 second interval -------------------------------------------------------------
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
-
-["ace_settingChanged", {
-    params ["_name", "_value"];
-
-    if (_name == QGVAR(enableStaminaBar) && {!_value}) then {
-        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlSetFade 1;
-        _staminaBarContainer ctrlCommit 0;
-    };
-}] call CBA_fnc_addEventHandler;
