@@ -61,6 +61,13 @@ _display displayAddEventHandler ["MouseZChanged", {
 [{
     params ["_display", "_pfhID"];
 
+    // Make sure explosive still exists and is near player
+    if ((!isNull _display) && {!alive ACE_player} || {!alive GVAR(explosive)} || {(ACE_player distance GVAR(explosive)) > 5}) exitWith {
+        INFO_2("explosive became invalid",ACE_player,GVAR(explosive));
+        closeDialog 0;
+        _pfhID call CBA_fnc_removePerFrameHandler;
+    };
+
     if (isNull _display) exitWith {
         _pfhID call CBA_fnc_removePerFrameHandler;
     };
