@@ -971,6 +971,7 @@
             <English>Select cargo to unload</English>
             <Chinese>選擇要卸載的貨物</Chinese>
             <Italian>Scegli il carico da scaricare</Italian>
+            <Japanese>選択したカーゴを降ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>

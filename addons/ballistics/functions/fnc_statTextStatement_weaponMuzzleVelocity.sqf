@@ -25,10 +25,8 @@ if (EGVAR(arsenal,currentLeftPanel) == 2002) then {
     [handgunWeapon EGVAR(arsenal,center), _primaryMag param [0, ""]]
 } params ["_weapon", "_magazine"];
 
-private _initSpeed = getNumber (_config >> "initSpeed");
-
 if (_magazine isEqualTo "") then {
-    _initSpeed
+    localize "str_empty";
 } else {
     private _ammoCfg = (configFile >> "CfgAmmo" >> (getText (configFile >> "CfgMagazines" >> _magazine >> "ammo")));
     private _barrelLength = getNumber (_config >> "ACE_barrelLength");
@@ -40,6 +38,6 @@ if (_magazine isEqualTo "") then {
 
         format ["%1 m/s (%2 ft/s)", _muzzleVelocity toFixed 0, (_muzzleVelocity * 3.28084) toFixed 0]
     } else {
-        _initSpeed
+        localize "str_empty";
     };
 };

@@ -412,7 +412,14 @@ switch (GVAR(currentLeftPanel)) do {
 
         call FUNC(showItem);
         TOGGLE_RIGHT_PANEL_HIDE
-        [_display, _control, _curSel, (configFile >> "CfgUnitInsignia" >> _item)] call FUNC(itemInfo);
+
+        private _unitInsigniaConfig = (configFile >> "CfgUnitInsignia" >> _item);
+
+        if (configName _unitInsigniaConfig isEqualTo "") then {
+            [_display, _control, _curSel, (missionConfigFile >> "CfgUnitInsignia" >> _item)] call FUNC(itemInfo);
+        } else {
+            [_display, _control, _curSel, _unitInsigniaConfig] call FUNC(itemInfo);
+        };
     };
 };
 

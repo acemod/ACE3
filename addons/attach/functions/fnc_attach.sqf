@@ -106,7 +106,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 if (_screenPos isEqualTo []) exitWith {
                     ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
                 };
-                private _realDistance = (_virtualPos distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
+                private _realDistance = (_virtualPos distance (positionCameraToWorld [0,0,0])) / (([] call CBA_fnc_getFov) select 1);
                 _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
                 private _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
