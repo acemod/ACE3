@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Opens the Explosive Timer UI for given explosive.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_explosive"];
 TRACE_1("Opening timer UI",_explosive);
