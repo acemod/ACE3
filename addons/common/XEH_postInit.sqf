@@ -261,21 +261,7 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
     ACE_player = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
-GVAR(OldIsCamera) = false;
 
-[{
-    BEGIN_COUNTER(stateChecker);
-
-    // "activeCameraChanged" event
-    private _data = call FUNC(isfeatureCameraActive);
-    if !(_data isEqualTo GVAR(OldIsCamera)) then {
-        // Raise ACE event locally
-        GVAR(OldIsCamera) = _data;
-        ["ace_activeCameraChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    END_COUNTER(stateChecker);
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 // Add event handler for UAV control change
 ACE_controlledUAV = [objNull, objNull, [], ""];

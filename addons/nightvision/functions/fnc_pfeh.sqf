@@ -22,9 +22,9 @@ if ((currentVisionMode ACE_player) != 1) exitWith {
     [GVAR(PFID)] call CBA_fnc_removePerFrameHandler;
     GVAR(PFID) = -1;
 };
-if (EGVAR(common,OldIsCamera)) exitWith {
+if (call CBA_fnc_getActiveFeatureCamera != "") exitWith {
     if (GVAR(running)) then {
-        TRACE_2("pausing NVG for scripted camera",alive ACE_player,EGVAR(common,OldIsCamera));
+        TRACE_2("pausing NVG for scripted camera",alive ACE_player,call CBA_fnc_getActiveFeatureCamera);
         GVAR(running) = false;
         [false] call FUNC(setupDisplayEffects);
     };
