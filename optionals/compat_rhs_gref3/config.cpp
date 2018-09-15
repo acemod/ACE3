@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_refuel", "rhsgref_main", "rhsgref_c_weapons"};
+        requiredAddons[] = {"rhsgref_main", "rhsgref_c_weapons"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror", "Ruthberg", "Anton"};
         url = ECSTRING(main,URL);
