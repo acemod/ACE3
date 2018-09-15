@@ -16,13 +16,9 @@
  */
 #include "script_component.hpp"
 
-#define ITEMS_CACHE_TIME 3600
-
 params ["_unit"];
 
 private _fnc_getItems = {
-    params ["_unit"];
-
     private _items = (getItemCargo uniformContainer _unit) select 0;
     _items append ((getItemCargo vestContainer _unit) select 0);
     _items append ((getItemCargo backpackContainer _unit) select 0);
@@ -30,9 +26,14 @@ private _fnc_getItems = {
     _items arrayIntersect _items
 };
 
-// Use cached items list if unit is player
+// Use cached items list if unit is ACE_player
 if (_unit isEqualTo ACE_player) then {
-    [_unit, _fnc_getItems, _unit, QGVAR(uniqueItemsCache), ITEMS_CACHE_TIME, "cba_events_loadoutEvent"] call FUNC(cachedCall);
+    private _items = GVAR(uniqueItemsCache);
+    if (isNil "_items") then {
+        _items = call _fnc_getItems;
+        GVAR(uniqueItemsCache) = _items;
+    };
+    +_items
 } else {
-    _unit call _fnc_getItems;
+    call _fnc_getItems;
 };
