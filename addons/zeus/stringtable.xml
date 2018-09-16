@@ -276,14 +276,17 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
             <Chinese>編輯模式</Chinese>
+            <Italian>Modalità per editare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
             <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
             <Chinese>新增物件</Chinese>
+            <Italian>Aggiungi Oggetti</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -317,6 +320,12 @@
             <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
             <Chinesesimp>确认变更给所有编辑者</Chinesesimp>
             <Chinese>確認變更給所有編輯者</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
+            <English>Additional Objects</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
+            <English>Additional objects to include in the action regardless of Task Radius</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -921,6 +930,15 @@
             <Chinese>需要一個不存在的插件</Chinese>
             <Korean>현재 없는 애드온을 필요로 합니다</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_None">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_Players">
+            <English>Players</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_PlayersAndAI">
+            <English>Players and AI</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
             <Polish>Dodaj obiekt do kuratora</Polish>
@@ -967,6 +985,8 @@
         <Key ID="STR_ACE_Zeus_SelectCargo">
             <English>Select cargo to unload</English>
             <Chinese>選擇要卸載的貨物</Chinese>
+            <Italian>Scegli il carico da scaricare</Italian>
+            <Japanese>選択したカーゴを降ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1082,12 +1102,14 @@
             <Japanese>目標を切り替え</Japanese>
             <Chinesesimp>切换目标</Chinesesimp>
             <Chinese>切換目標</Chinese>
+            <Italian>Scambia obiettivo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
             <Japanese>ユニットは切り替えに影響を受けます</Japanese>
             <Chinesesimp>被选单位受切换影响</Chinesesimp>
             <Chinese>受切換所影響的單位</Chinese>
+            <Italian>Unità influenzate dallo scambio</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1130,7 +1152,7 @@
             <Korean>장비 추가</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
-            <English>Garrison group</English>
+            <English>Garrison Group</English>
             <French>Garnir zone</French>
             <Japanese>歩哨グループ</Japanese>
             <Italian>Proteggi gruppo</Italian>
@@ -1202,7 +1224,7 @@
             <Korean>순간이동</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
-            <English>Un-garrison group</English>
+            <English>Un-garrison Group</English>
             <French>Dégarnir zone</French>
             <Japanese>非歩哨グループ</Japanese>
             <Italian>Non proteggere gruppo</Italian>
@@ -1402,54 +1424,6 @@
             <Russian>Устройство будет активно пытаться найти и перейти к соседним единицам активации. Диапазон автоматического поиска основан на умении снимать расстояние на расстоянии не менее 100 метров.</Russian>
             <Spanish>La unidad intentará buscar activamente y moverse hacia las unidades cercanas del lado de activación. El rango de Auto Seek se basa en la habilidad de distancia al punto de la unidad con un mínimo de 100 metros.</Spanish>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Small">
-            <English>Small</English>
-            <Chinese>小</Chinese>
-            <Chinesesimp>小</Chinesesimp>
-            <Czech>Malý</Czech>
-            <French>Petit</French>
-            <German>Klein</German>
-            <Hungarian>Kicsi</Hungarian>
-            <Italian>Piccolo</Italian>
-            <Japanese>小</Japanese>
-            <Korean>작은</Korean>
-            <Polish>Mały</Polish>
-            <Portuguese>Pequeno</Portuguese>
-            <Russian>Маленький</Russian>
-            <Spanish>Pequeña</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Medium">
-            <English>Medium</English>
-            <Chinese>中</Chinese>
-            <Chinesesimp>中</Chinesesimp>
-            <Czech>Střední</Czech>
-            <French>Moyen</French>
-            <German>Mittel</German>
-            <Hungarian>Közepes</Hungarian>
-            <Italian>medio</Italian>
-            <Japanese>中</Japanese>
-            <Korean>매질</Korean>
-            <Polish>Średni</Polish>
-            <Portuguese>Médio</Portuguese>
-            <Russian>средний</Russian>
-            <Spanish>Medio</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_Large">
-            <English>Large</English>
-            <Chinese>大</Chinese>
-            <Chinesesimp>大</Chinesesimp>
-            <Czech>Velký</Czech>
-            <French>Grand</French>
-            <German>Groß</German>
-            <Hungarian>Nagy</Hungarian>
-            <Italian>Grande</Italian>
-            <Japanese>大</Japanese>
-            <Korean>큰</Korean>
-            <Polish>Duży</Polish>
-            <Portuguese>ampla</Portuguese>
-            <Russian>большой</Russian>
-            <Spanish>Grande</Spanish>
-        </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_AlreadyBomber">
             <English>Unit is already a suicide bomber</English>
             <Chinese>這個單位已經是自殺炸彈手了</Chinese>
@@ -1471,12 +1445,14 @@
             <Japanese>ACE 武器庫を追加</Japanese>
             <Chinesesimp>添加ACE模式军火库</Chinesesimp>
             <Chinese>增加完整的ACE軍火庫</Chinese>
+            <Italian>Aggiungi l'arsenale ACE completo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
             <Japanese>ACE 武器庫を削除</Japanese>
             <Chinesesimp>删除ACE模式军火库</Chinesesimp>
             <Chinese>移除ACE軍火庫</Chinese>
+            <Italian>Rimuovi l'arsenale ACE</Italian>
         </Key>
     </Package>
 </Project>

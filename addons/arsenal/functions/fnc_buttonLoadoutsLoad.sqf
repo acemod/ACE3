@@ -76,10 +76,17 @@ for "_index" from 0 to 15 do {
 };
 {
     private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
-    private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
 
-    GVAR(currentItems) set [_index, _x];
-} foreach (assignedItems GVAR(center));
+    if (_simulationType != "NVGoggles") then {
+        if (_simulationType == "ItemGps" || _simulationType == "Weapon") then {
+            GVAR(currentItems) set [14, _x];
+        } else {
+
+            private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch"] find (tolower _simulationType));
+            GVAR(currentItems) set [_index, _x];
+        };
+    };
+} forEach (assignedItems GVAR(center));
 
 call FUNC(updateUniqueItemsList);
 

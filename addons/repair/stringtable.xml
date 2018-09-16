@@ -1861,12 +1861,14 @@
             <Japanese>修理時にエンジン自動停止</Japanese>
             <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Motore spento automaticamente durante la riparazione</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
             <Japanese>修理時にエンジンを自動で停止します。</Japanese>
             <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
         </Key>
     </Package>
 </Project>

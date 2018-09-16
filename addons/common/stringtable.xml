@@ -1170,6 +1170,7 @@
             <Chinese>允許調低音樂音量</Chinese>
             <Chinesesimp>允许调低音乐音量</Chinesesimp>
             <Japanese>音楽の音量低下を許可</Japanese>
+            <Italian>Permesso di abbassare la musica</Italian>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1178,16 +1179,21 @@
             <Chinese>允許ACE腳本去控制音樂的音量</Chinese>
             <Chinesesimp>允许ACE脚本去控制音乐的音量。</Chinesesimp>
             <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
+            <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
             <Chinesesimp>旗帜(ACE-黑色):</Chinesesimp>
             <Chinese>旗幟(ACE-黑色)</Chinese>
+            <Italian>Bandiera (ACE - Nera)</Italian>
+            <Japanese>旗 (ACE - 黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
             <Chinesesimp>旗帜(ACE-白色):</Chinesesimp>
             <Chinese>旗幟(ACE-白色)</Chinese>
+            <Italian>Bandiera (ACE - Bianca)</Italian>
+            <Japanese>旗 (ACE - 白)</Japanese>
         </Key>
     </Package>
 </Project>

@@ -162,6 +162,16 @@ switch true do {
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                 } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
+                
+                {
+                    private _displayName = getText (_x >> "displayName");
+                    private _className = configName _x;
+                    private _lbAdd =  _ctrlPanel lbAdd _displayName;
+
+                    _ctrlPanel lbSetData [_lbAdd, _className];
+                    _ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
+                    _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
+                } foreach ("true" configClasses (missionConfigFile >> "CfgUnitInsignia"));
             };
         };
     };
