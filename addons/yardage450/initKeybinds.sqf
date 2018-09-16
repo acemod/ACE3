@@ -1,5 +1,5 @@
 
-["ACE3 Equipment", QGVAR(DistanceKey), localize "STR_ACE_Yardage450_PowerButtonKey",
+["ACE3 Equipment", QGVAR(DistanceKey), localize LSTRING(PowerButtonKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};

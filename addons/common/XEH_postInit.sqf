@@ -444,7 +444,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 ["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call CBA_fnc_registerKeybindModPrettyName;
 ["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call CBA_fnc_registerKeybindModPrettyName;
 
-["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"), {
+["ACE3 Equipment", QGVAR(openDevice), localize LSTRING(toggleHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 3);
@@ -453,7 +453,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, false, false]], false] call CBA_fnc_addKeybind;  //Home Key
 
-["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"), {
+["ACE3 Equipment", QGVAR(closeDevice), localize LSTRING(closeHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 4);
@@ -462,7 +462,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, true, false]], false] call CBA_fnc_addKeybind;  //CTRL + Home Key
 
-["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"), {
+["ACE3 Equipment", QGVAR(cycleDevice), localize LSTRING(cycleHandheldDevices), {
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     private _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
