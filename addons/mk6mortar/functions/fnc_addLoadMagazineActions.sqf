@@ -18,6 +18,9 @@
 
 params ["_unit","_target"];
 
+if !(alive _target && GVAR(useAmmoHandling)) exitWith {false};
+if (_target getVariable [QGVAR(inUse), false]) exitWith {false};
+
 private _weapon = (_target weaponsTurret [0]) select 0;
 
 private _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
@@ -54,7 +57,7 @@ private _children = [];
                 format ["Round_%1", _forEachIndex],
                 _name,
                 getText(_x >> "picture"),
-                {[(_this select 2) select 0, _this select 0, 5, (_this select 2) select 1] call FUNC(loadMagazineTimer)},
+                {[(_this select 2) select 0, _this select 0, (_this select 2) select 1] call FUNC(loadMagazineTimer)},
                 {true},
                 {},
                 ([_target,_className])

@@ -13,7 +13,7 @@ class CfgVehicles {
             };
             class ACE_Ammunition {
                 displayName = CSTRING(ammunition_action);
-                condition = QUOTE(GVAR(useCharges));
+                condition = QUOTE(GVAR(useChargeSystem));
                 exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                 statement = "";
                 insertChildren = QUOTE([_player] call FUNC(addPrepRoundActions););

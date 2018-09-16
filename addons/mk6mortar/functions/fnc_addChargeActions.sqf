@@ -59,7 +59,7 @@ private _children = [];
                 _name,
                 getText(_x >> "picture"),
                 {
-                    [_this select 0, 2,(_this select 2) select 0, (_this select 2) select 1, (_this select 2) select 2, (_this select 2) select 3] call FUNC(prepRoundTimer)
+                    [_this select 0, (_this select 2) select 0, (_this select 2) select 1, (_this select 2) select 2, (_this select 2) select 3] call FUNC(prepRoundTimer)
                 },
                 {true},
                 {},

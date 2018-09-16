@@ -15,6 +15,8 @@ class CfgMagazines {
         initSpeed = 200;
         GVAR(hasCharges) = 1;
         GVAR(baseCharge) = 1;
+        GVAR(timeToPrep) = 2.5;
+        GVAR(timeToLoad) = 2.5;
         GVAR(chargeClass) = "ACE_Propelling_Charge";
         GVAR(charges)[] = {
             {"ACE_1Rnd_82mm_Mo_HE_Charge_3",1},
@@ -77,6 +79,8 @@ class CfgMagazines {
         initSpeed = 200;
         GVAR(hasCharges) = 1;
         GVAR(baseCharge) = 1;
+        GVAR(timeToPrep) = 2.5;
+        GVAR(timeToLoad) = 2.5;
         GVAR(chargeClass) = "ACE_Propelling_Charge";
         GVAR(charges)[] = {
             {"ACE_1Rnd_82mm_Mo_Smoke_Charge_3",1},
@@ -139,6 +143,8 @@ class CfgMagazines {
         initSpeed = 200;
         GVAR(hasCharges) = 1;
         GVAR(baseCharge) = 1;
+        GVAR(timeToPrep) = 5;
+        GVAR(timeToLoad) = 5;
         GVAR(chargeClass) = "ACE_Propelling_Charge";
         GVAR(charges)[] = {
             {"ACE_1Rnd_82mm_Mo_Illum_Charge_3",1},
@@ -201,6 +207,8 @@ class CfgMagazines {
         initSpeed = 200;
         GVAR(hasCharges) = 1;
         GVAR(baseCharge) = 1;
+        GVAR(timeToPrep) = 8;
+        GVAR(timeToLoad) = 8;
         GVAR(chargeClass) = "ACE_Propelling_Charge";
         GVAR(charges)[] = {
             {"ACE_1Rnd_82mm_Mo_HE_Guided_Charge_3",1},
@@ -263,6 +271,8 @@ class CfgMagazines {
         initSpeed = 200;
         GVAR(hasCharges) = 1;
         GVAR(baseCharge) = 1;
+        GVAR(timeToPrep) = 8;
+        GVAR(timeToLoad) = 8;
         GVAR(chargeClass) = "ACE_Propelling_Charge";
         GVAR(charges)[] = {
             {"ACE_1Rnd_82mm_Mo_HE_LaserGuided_Charge_3",1},
