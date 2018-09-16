@@ -15,13 +15,21 @@ version:
 ## 1. Overview
 
 ### 1.1 Mk6 Mortar overhaul
-ACE3 adds wind deflection for shells as well as a rangetable to accurately take out your target without the artillery computer. If ammunition handling is enabled, rounds must be loaded manually.
+ACE3 adds wind deflection for shells as well as a rangetable to accurately take out your target without the artillery computer. If ammunition handling is enabled, rounds must be loaded manually. If charge system is enabled; the charge of the round must be set on the magazine.
 
 
 ## 2. Usage
 
 ### 2.1 Switching charge
 - Press <kbd>F</kbd> (Arma 3 default key bind `Fire Mode Switch`) to switch between charges
+
+### Charge system is enabled:
+- Self interact <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
+- Select `Prepare Ammunition`
+- Select desired round type
+- Select desired charge
+    - If the desired charge has less charges than the desired round, you will be given the difference in `Propelling Charges`
+    - If the desired charge has more charges than the desired round, the difference in `Propelling Charges` will be taken from your inventory 
 
 ### 2.2 Opening the table
 - Self interact <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
@@ -33,7 +41,7 @@ For this you need a `82mm Rangetable`, `Map Tools` and a `Vector 21` are also re
 
 
 - Get the distance and elevation difference between you and the target (you can use map tools).
-- Select the charge you want to use (0 = close / 1 = medium  / 2 = far).
+- Select the charge you want to use (0 = close / 1 = medium  / 2 = far). (Not needed with charge system enabled)
 - Open the `82mm Rangetable`
 - Calculate the correct ELEV (elevation):
   - Open the `82mm Rangetable` and click on the charge you are using.
