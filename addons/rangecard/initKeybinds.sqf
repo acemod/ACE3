@@ -1,4 +1,4 @@
-["ACE3 Equipment", QGVAR(RangeCardDialogKey), localize LSTRING(RangeCardDialogKey),
+["ACE3 Equipment", QGVAR(RangeCardDialogKey), LLSTRING(RangeCardDialogKey),
 {
     // Conditions: canInteract, canShow
     if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -14,7 +14,7 @@
 {false},
 [0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)
 
-["ACE3 Equipment", QGVAR(RangeCardCopyDialogKey), localize LSTRING(RangeCardCopyDialogKey),
+["ACE3 Equipment", QGVAR(RangeCardCopyDialogKey), LLSTRING(RangeCardCopyDialogKey),
 {
     // Conditions: canInteract, canShowCopy
     if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
