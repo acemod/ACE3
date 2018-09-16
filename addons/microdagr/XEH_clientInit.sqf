@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 
 //Add deviceKey entry:
 private _conditonCode = {
-    ("ACE_microDAGR" in (items ACE_player))
+    "ACE_microDAGR" in (ACE_player call EFUNC(common,uniqueItems))
 };
 private _toggleCode = {
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
