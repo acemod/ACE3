@@ -141,7 +141,9 @@ Script strings:
 
 | Macro | Expands to |
 | -------|---------|
+|`LSTRING(banana)` | `"STR_ACE_balls_banana"` |
 |`LLSTRING(banana)` | `localize "STR_ACE_balls_banana"` |
+|`ELSTRING(leg,banana)` | `"STR_ACE_leg_banana"` |
 |`LELSTRING(leg,banana)` | `localize "STR_ACE_leg_banana"` |
 
 
