@@ -11,6 +11,15 @@ class CfgVehicles {
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
+            class ACE_Ammunition {
+                displayName = CSTRING(ammunition_action);
+                condition = QUOTE(GVAR(useCharges));
+                exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
+                statement = "";
+                insertChildren = QUOTE([_player] call FUNC(addPrepRoundActions););
+                showDisabled = 1;
+                icon = "";
+            };
         };
     };
 
@@ -35,6 +44,25 @@ class CfgVehicles {
                 turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
+            };
+        };
+        class ACE_Actions: ACE_Actions {
+            class GVAR(unloadMagazine) {
+                displayName = CSTRING(unloadMortar);
+                distance = 2;
+                condition = QUOTE(_this call FUNC(canUnloadMagazine));
+                statement = QUOTE([ARR_3(_target,_player,5)] call FUNC(unloadMagazineTimer));
+                icon = "";
+                selection = "usti hlavne";
+            };
+            class GVAR(LoadActions) {
+                displayName = CSTRING(loadMortar);
+                distance = 2;
+                condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
+                statement = "";
+                icon = "";
+                selection = "usti hlavne";
+                insertChildren = QUOTE([ARR_2(_player, _target)] call FUNC(addLoadMagazineActions););
             };
         };
         class ACE_SelfActions {
@@ -80,6 +108,12 @@ class CfgVehicles {
             class useAmmoHandling {
                 displayName = CSTRING(useAmmoHandling_DisplayName);
                 description = CSTRING(useAmmoHandling_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class useChargeSystem {
+                displayName = CSTRING(useChargeSystem_DisplayName);
+                description = CSTRING(useChargeSystem_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };

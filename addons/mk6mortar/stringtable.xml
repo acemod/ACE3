@@ -309,86 +309,6 @@
             <Chinese>準備彈頭中</Chinese>
             <Turkish>Mermi Hazırlanıyor</Turkish>
         </Key>
-        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
-            <English>Load HE</English>
-            <German>Lade Sprengpatrone</German>
-            <Spanish>Cargar HE</Spanish>
-            <Polish>Załaduj pocisk wybuchowy</Polish>
-            <French>Charger HE</French>
-            <Italian>Carica proiettile esplosivo ad alto potenziale (HE)</Italian>
-            <Czech>Nabít HE</Czech>
-            <Portuguese>Carregar HE</Portuguese>
-            <Russian>Зарядить фугасный</Russian>
-            <Japanese>りゅう弾を装填</Japanese>
-            <Korean>고폭탄 장전</Korean>
-            <Chinesesimp>装载高爆弹</Chinesesimp>
-            <Chinese>裝載高爆彈</Chinese>
-            <Turkish>HE Yükle</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
-            <English>Load Smoke</English>
-            <German>Lade Nebelpatrone</German>
-            <Spanish>Cargar Humo</Spanish>
-            <Polish>Załaduj pocisk dymny</Polish>
-            <French>Charger Fumigène</French>
-            <Italian>Carica fumogeno</Italian>
-            <Czech>Nabít Dýmovnici</Czech>
-            <Portuguese>Carregar Fumaça</Portuguese>
-            <Russian>Зарядить дымовой</Russian>
-            <Japanese>発煙弾を装填</Japanese>
-            <Korean>연막탄 장전</Korean>
-            <Chinesesimp>装载烟雾弹</Chinesesimp>
-            <Chinese>裝載煙霧彈</Chinese>
-            <Turkish>Sis Yükle</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
-            <English>Load Illumination</English>
-            <German>Lade Leuchtpatrone</German>
-            <Spanish>Cargar Iluminación</Spanish>
-            <Polish>Załaduj pocisk oświetlający</Polish>
-            <French>Charger Éclairant</French>
-            <Italian>Carica illuminante</Italian>
-            <Czech>Nabít Světlici</Czech>
-            <Portuguese>Carregar Iluminação</Portuguese>
-            <Russian>Зарядить осветительный</Russian>
-            <Japanese>照明弾を装填</Japanese>
-            <Korean>조명탄 장전</Korean>
-            <Chinesesimp>装载照明弹</Chinesesimp>
-            <Chinese>裝載照明彈</Chinese>
-            <Turkish>Aydınlatma Yükle</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
-            <English>Load Guided HE</English>
-            <German>Lade gelenkte Sprengpatrone</German>
-            <Spanish>Cagar HE Guiada</Spanish>
-            <Polish>Załaduj kierowany pocisk wybuchowy</Polish>
-            <French>Charger HE guidé</French>
-            <Italian>Carica HE guidata</Italian>
-            <Czech>Nabít HE (Naváděné)</Czech>
-            <Portuguese>Carregar HE Guiada</Portuguese>
-            <Russian>Зарядить фугасный управляемый</Russian>
-            <Japanese>誘導りゅう弾を装填</Japanese>
-            <Korean>유도 고폭탄 장전</Korean>
-            <Chinesesimp>装载导引高爆弹</Chinesesimp>
-            <Chinese>裝載導引高爆彈</Chinese>
-            <Turkish>Güdümlü HE Yükle</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
-            <English>Load Laser Guided HE</English>
-            <German>Lade lasergelenkte Sprengpatrone</German>
-            <Spanish>Cargar HE Guiada por Laser</Spanish>
-            <Polish>Załaduj laserowo napr. pocisk wybuchowy</Polish>
-            <French>Charger HE guidé au laser</French>
-            <Italian>Carica HE a guida laser</Italian>
-            <Czech>Nabít HE (Naváděné laserem)</Czech>
-            <Portuguese>Carregar HE Guiada por Laser</Portuguese>
-            <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
-            <Japanese>レーザ誘導りゅう弾を装填</Japanese>
-            <Korean>레이저 유도 고폭탄 장전</Korean>
-            <Chinesesimp>装载雷射导引高爆弹</Chinesesimp>
-            <Chinese>裝載雷射導引高爆彈</Chinese>
-            <Turkish>Lazer Güdümlü HE Yükle</Turkish>
-        </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>82mm HE Round</English>
             <German>82mm Sprengpatrone</German>
@@ -404,6 +324,27 @@
             <Chinesesimp>82mm高爆弹</Chinesesimp>
             <Chinese>82毫米高爆彈</Chinese>
             <Turkish>82mm HE Mermisi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayNameShort">
+            <English>82mm HE</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_charge_3_displayName">
+            <English>82mm HE Round (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_charge_3_displayNameShort">
+            <English>82mm HE (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_charge_2_displayName">
+            <English>82mm HE Round (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_charge_2_displayNameShort">
+            <English>82mm HE (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_charge_1_displayName">
+            <English>82mm HE Round (CH-1)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_charge_1_displayNameShort">
+            <English>82mm HE (CH-1)</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -421,6 +362,27 @@
             <Chinese>82毫米煙霧彈</Chinese>
             <Turkish>82mm Sis Mermisi</Turkish>
         </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayNameShort">
+            <English>82mm Smoke</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_charge_3_displayName">
+            <English>82mm Smoke Round (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_charge_3_displayNameShort">
+            <English>82mm Smoke (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_charge_2_displayName">
+            <English>82mm Smoke Round (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_charge_2_displayNameShort">
+            <English>82mm Smoke (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_charge_1_displayName">
+            <English>82mm Smoke Round (CH-1)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_charge_1_displayNameShort">
+            <English>82mm Smoke (CH-1)</English>
+        </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
             <German>82mm Leuchtpatrone</German>
@@ -436,6 +398,27 @@
             <Chinesesimp>82mm照明弹</Chinesesimp>
             <Chinese>82毫米照明彈</Chinese>
             <Turkish>82mm Işık Mermisi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayNameShort">
+            <English>82mm Illum</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_charge_3_displayName">
+            <English>82mm Illumination Round (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_charge_3_displayNameShort">
+            <English>82mm Illum (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_charge_2_displayName">
+            <English>82mm Illumination Round (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_charge_2_displayNameShort">
+            <English>82mm Illum (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_charge_1_displayName">
+            <English>82mm Illumination Round (CH-1)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_charge_1_displayNameShort">
+            <English>82mm Illum (CH-1)</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -453,6 +436,27 @@
             <Chinese>82毫米導引高爆彈</Chinese>
             <Turkish>82mm Güdümlü HE Mermisi</Turkish>
         </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayNameShort">
+            <English>82mm Guided HE</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_charge_3_displayName">
+            <English>82mm Guided HE Round (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_charge_3_displayNameShort">
+            <English>82mm Guided HE (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_charge_2_displayName">
+            <English>82mm Guided HE Round (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_charge_2_displayNameShort">
+            <English>82mm Guided HE (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_charge_1_displayName">
+            <English>82mm Guided HE Round (CH-1)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_charge_1_displayNameShort">
+            <English>82mm Guided HE (CH-1)</English>
+        </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
             <German>82mm lasergelenkte Sprengpatrone</German>
@@ -468,6 +472,27 @@
             <Chinesesimp>82mm雷射导引高爆弹</Chinesesimp>
             <Chinese>82毫米雷射導引高爆彈</Chinese>
             <Turkish>82mm Lazer Güdümlü HE Mermisi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayNameShort">
+            <English>82mm Laser Guided HE</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_charge_3_displayName">
+            <English>82mm Laser Guided HE Round (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_charge_3_displayNameShort">
+            <English>82mm Laser Guided HE (CH-3)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_charge_2_displayName">
+            <English>82mm Laser Guided HE Round (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_charge_2_displayNameShort">
+            <English>82mm Laser Guided HE (CH-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_charge_1_displayName">
+            <English>82mm Laser Guided HE Round (CH-1)</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_charge_1_displayNameShort">
+            <English>82mm Laser Guided HE (CH-1)</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -547,6 +572,21 @@
             <Chinesesimp>[ACE] 82mm预设弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
             <Turkish>[ACE] 82mm Varsayılan Teçhizat Kutusu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_propelling_charge_name">
+            <English>Propelling Charge</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_propelling_charge_description">
+            <English>For use with 82mm mortar ammunition</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_useChargeSystem_DisplayName">
+            <English>Use Charge System</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_useChargeSystem_Description">
+            <English>Requires 82mm mortar shells to have their charges altered to achieve the desired range. Will affect AI</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_ammunition_action">
+            <English>Prepare Ammunition</English>
         </Key>
     </Package>
 </Project>

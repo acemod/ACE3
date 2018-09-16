@@ -25,3 +25,4 @@ if (!_activated) exitWith {WARNING("Module - placed but not active");};
 [_logic, QGVAR(allowComputerRangefinder), "allowComputerRangefinder"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowCompass), "allowCompass"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(useAmmoHandling), "useAmmoHandling"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(useChargeSystem), "useChargeSystem"] call EFUNC(common,readSettingFromModule);

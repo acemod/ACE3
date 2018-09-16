@@ -5,7 +5,7 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {"ACE_Box_82mm_Mo_HE","ACE_Box_82mm_Mo_Smoke",
             "ACE_Box_82mm_Mo_Illum","ACE_Box_82mm_Mo_Combo"};
-        weapons[] = {"ACE_RangeTable_82mm","ace_mortar_82mm"};
+        weapons[] = {"ACE_RangeTable_82mm","ace_mortar_82mm","ace_mortar_82mm_no_charges"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_csw", "ace_artillerytables"};
         author = ECSTRING(common,ACETeam);
