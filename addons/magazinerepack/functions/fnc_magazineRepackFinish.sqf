@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Simulates repacking a set of magazines.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
 _args params ["_magazineClassname", "_lastAmmoCount"];

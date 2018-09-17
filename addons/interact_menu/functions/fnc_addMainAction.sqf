@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas, PabstMirror
  * Makes sure there is a ACE_MainActions on the object type
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_objectType", "_typeNum"];
 

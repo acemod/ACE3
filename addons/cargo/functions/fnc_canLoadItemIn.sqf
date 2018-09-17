@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if item can be loaded into other Object.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_item", "", [objNull,""]], "_vehicle", ["_ignoreInteraction", false]];
 

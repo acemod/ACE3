@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Karel Moricky, modified by Alganthe
  * Update the camera position and pitch/bank.
@@ -15,8 +17,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["", "_args"];
 

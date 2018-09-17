@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Waypoint function for the fast rope waypoint.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params [["_group", grpNull, [grpNull]], ["_position", [0, 0, 0], [[]], 3]];
 
 private _vehicle = vehicle leader _group;

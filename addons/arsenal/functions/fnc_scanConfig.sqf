@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dedmen
  * Cache an array of all the compatible items for arsenal.
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 private _cargo = [
     [[], [], []], // Weapons 0, primary, secondary, handgun

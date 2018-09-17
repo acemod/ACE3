@@ -261,6 +261,11 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
     ACE_player = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
+// Clear uniqueItems cache on loadout change
+["loadout", {
+    GVAR(uniqueItemsCache) = nil;
+}] call CBA_fnc_addPlayerEventHandler;
+
 // Backwards compatiblity for old ace event
 GVAR(OldIsCamera) = false;
 ["featureCamera", {

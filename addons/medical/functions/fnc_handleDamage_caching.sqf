@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Cache a handleDamage call to execute it 3 frames later
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_hitPointIndex"];
 
