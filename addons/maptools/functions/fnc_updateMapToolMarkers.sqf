@@ -17,7 +17,7 @@
 
 params ["_theMap"];
 
-if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in items ACE_player)}) exitWith {};
+if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems)))}) exitWith {};
 
 private _rotatingTexture = "";
 private _textureWidth = 0;

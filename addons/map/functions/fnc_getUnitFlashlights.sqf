@@ -24,6 +24,6 @@ private _flashlights = [];
     if (isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour")) then {
         _flashlights pushBackUnique _x;
     };
-} forEach (items _unit);
+} forEach (_unit call EFUNC(common,uniqueItems));
 
 _flashlights
