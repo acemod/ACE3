@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the nearest object the player is looking at. Used for laser designator instead of cursorTarget.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_maxDistance"];
 

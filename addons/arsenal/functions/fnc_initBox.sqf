@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Initialize a box / object for arsenal.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global", true, [true]]];
 

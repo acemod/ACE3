@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe, Dedmen
  * Add virtual items to the provided target.
@@ -16,8 +18,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params [["_object", objNull, [objNull]], ["_items", [], [true, []]], ["_global", false, [false]]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Timi007
  * MarkerPlacement closed
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableserialization;
 params ["_display", "_closeNum"];

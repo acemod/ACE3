@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: AACO, SilentSpike
  * Function used to set the camera focus
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params [["_newFocus", objNull, [objNull,true]]];
 

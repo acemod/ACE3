@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Check a unit for any flashlights that can be used on map.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

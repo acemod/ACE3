@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Returns if user has a valid key for the vehicle
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_veh"];
 TRACE_2("params",_unit,_veh);

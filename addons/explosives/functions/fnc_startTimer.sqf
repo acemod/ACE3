@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Starts a timer for an explosive.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_explosive", "_delay", ["_trigger", "#timer", [""]]];
 TRACE_3("Starting timer",_explosive,_delay,_trigger);

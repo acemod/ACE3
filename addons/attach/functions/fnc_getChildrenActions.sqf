@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth de Wet (LH), PabstMirror, mharis001
  * Returns children actions for attachable items.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_player"];
 TRACE_2("params",_target,_player);

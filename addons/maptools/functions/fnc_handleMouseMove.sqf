@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Handle mouse movement over the map tool.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_control", "_mousePosX", "_mousePosY"];
 TRACE_3("params",_control,_mousePosX,_mousePosY);

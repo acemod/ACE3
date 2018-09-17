@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles lockpick functionality.  Three different functions:
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_veh", "_funcType"];
 TRACE_3("params",_unit,_veh,_funcType);

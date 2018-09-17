@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Timi007
  * Return enabled channels.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_localize", false, [false]]];
 

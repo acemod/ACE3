@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * For every lockable vehicle, sets the starting lock state to a sane value.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!isServer) exitWith {};
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Function for handeling a cba setting being changed.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_settingName", "_newValue", ["_canBeChanged", false]];
 TRACE_2("",_settingName,_newValue);

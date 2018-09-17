@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Adds a new (default) gun profile to the profileNamespace
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 call FUNC(trim_gun_name);
 

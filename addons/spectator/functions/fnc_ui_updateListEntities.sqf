@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Updates spectator UI list of units/groups
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _newUnits = [];
 private _newGroups = [];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Collect treatment actions from medical config
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _configBasic = (configFile >> "ACE_Medical_Actions" >> "Basic");
 private _configAdvanced = (configFile >> "ACE_Medical_Actions" >> "Advanced");

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Compares version numbers of PBOs and DLLs.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ///////////////
 // check addons

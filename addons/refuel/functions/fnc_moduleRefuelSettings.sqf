@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Module for adjusting the refuel settings.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_logic", "", ["_activated", false, [false]]];
 

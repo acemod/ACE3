@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * canUseMapTools
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 visibleMap &&
 {alive ACE_player} &&

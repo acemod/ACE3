@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SzwedzikPL, mharis001
  * Returns children actions for checking dogtags in player's inventory.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
 

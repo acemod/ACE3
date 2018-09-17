@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, mharis001
  * Returns all detonators the given unit has.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_1("Getting detonators",_unit);

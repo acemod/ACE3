@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Disable this faction from using dogtags.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_faction", "", [""]]];
 

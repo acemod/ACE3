@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Changes the display mode of the MicroDAGR.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_newDisplayShowMode", -1, [-1]]];
 private _oldShowMode = GVAR(currentShowMode);

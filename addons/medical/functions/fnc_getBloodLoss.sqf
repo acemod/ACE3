@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Calculate the total blood loss of a unit.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define BLOODLOSSRATE_BASIC 0.2
 

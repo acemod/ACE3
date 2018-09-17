@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Check if a unit can turn on a fuel nozzle
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 

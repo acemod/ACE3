@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  *
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ["ace_endRadioTransmissions"] call CBA_fnc_localEvent;
 

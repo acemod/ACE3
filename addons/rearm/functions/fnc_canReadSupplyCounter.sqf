@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Checks if unit can read supply counter. [Only for GVAR(supply) > 0]
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_unit"];
 

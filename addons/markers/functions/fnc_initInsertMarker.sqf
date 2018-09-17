@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BIS, commy2, Timi007
  * Sets up the marker placement
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define BORDER 0.005
 

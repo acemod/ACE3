@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the config path of a vehicles turret.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_config", "_turretIndex"];
 

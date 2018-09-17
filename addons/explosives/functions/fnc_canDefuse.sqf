@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Whether a unit can perform the defuse action
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);

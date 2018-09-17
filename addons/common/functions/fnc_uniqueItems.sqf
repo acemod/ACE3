@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Returns list of unique items in a unit's inventory.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
