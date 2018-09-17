@@ -31,16 +31,7 @@ if (GVAR(shiftState) && {is3DEN}) then {
                 {_x select 1 isEqualType []} && 
                 {count (_x select 1) == 10}
         ) then {
-
-            _x params ["_loadoutName", "_loadout"];
-
-            private _sameNameLoadoutsList = GVAR(defaultLoadoutsList) select {_x select 0 == _loadoutName};
-
-           if (count _sameNameLoadoutsList == 0) then {
-                GVAR(defaultLoadoutsList) pushBack [_loadoutName, _loadout];
-            } else {
-                GVAR(defaultLoadoutsList) set [GVAR(defaultLoadoutsList) find (_sameNameLoadoutsList select 0), _loadoutName, _loadout];
-            };
+            _x call FUNC(addDefaultLoadout);
         };
     } foreach _data;
 

@@ -23,7 +23,9 @@ private _fireModes = getArray (_config >> "modes");
 private _dispersion = [];
 
 {
-    _dispersion pushBackUnique (getNumber (_config >> _x >> "dispersion"));
+    if (getNumber (_config >> _x >> "showToPlayer") != 0) then {
+        _dispersion pushBackUnique (getNumber (_config >> _x >> "dispersion"));
+    };
 } foreach _fireModes;
 
 _dispersion sort true;

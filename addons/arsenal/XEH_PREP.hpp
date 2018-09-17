@@ -1,3 +1,4 @@
+PREP(addDefaultLoadout);
 PREP(addListBoxItem);
 PREP(addStat);
 PREP(addVirtualItems);

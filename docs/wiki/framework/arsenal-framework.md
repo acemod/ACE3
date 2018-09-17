@@ -116,6 +116,8 @@ Both of them are optional.
 
 ## 4. Default loadouts
 
+### 4.1 Adding default loadouts via 3DEN
+
 While in 3DEN you have the ability to save default loadouts in ACE Arsenal, doing so will make the saved loadouts available to all players (those loadouts are still subject to loadout verification).
 To do so:
 - Open ACE Arsenal in 3DEN by editing a unit's loadout.
@@ -124,6 +126,19 @@ To do so:
 - Enter a loadout name and save.
 
 This loadout list can be exported to the clipboard by using <kbd>Shift</kbd>. + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
+
+### 4.2 Adding default loadouts via script
+
+Since 3.13.0, you can also add default loadouts with the `ace_arsenal_fnc_addDefaultLoadout` function.
+```cpp
+ * 0: Name of loadout <STRING>
+ * 1: getUnitLoadout array <ARRAY>
+```
+
+Example:
+`["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout`
+
+If a loadout with the same name exists, it will be overwritten.
 
 ## 5. Stats
 

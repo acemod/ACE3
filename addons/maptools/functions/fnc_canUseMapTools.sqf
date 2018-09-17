@@ -24,6 +24,6 @@ visibleMap &&
     } forEach (assignedItems ACE_player);
     false
 } &&
-{"ACE_MapTools" in (items ACE_player)} &&
+{"ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))} &&
 {!GVAR(mapTool_isDragging)} &&
 {!GVAR(mapTool_isRotating)}
