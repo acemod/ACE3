@@ -1,5 +1,5 @@
 /*
- * Author: commy2
+ * Author: commy2, Timi007
  * Return enabled channels.
  *
  * Arguments:
@@ -40,12 +40,8 @@ if (_localize) then {
     if (setCurrentChannel 4) then {
         _enabledChannels pushBack localize "str_channel_vehicle";
     };
-
-    if (setCurrentChannel 5) then {
-        _enabledChannels pushBack localize "str_channel_direct";
-    };
 } else {
-    for "_i" from 0 to 5 do {
+    for "_i" from 0 to 4 do {
         if (setCurrentChannel _i) then {
             _enabledChannels pushBack _i;
         };
