@@ -38,7 +38,7 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     if (is3DEN) then {
         GVAR(defaultLoadoutsList) = (QGVAR(DummyCategory) get3DENMissionAttribute QGVAR(DefaultLoadoutsListAttribute));
     } else {
-            GVAR(defaultLoadoutsList) = [];
+        GVAR(defaultLoadoutsList) = [];
     };
 };
 
