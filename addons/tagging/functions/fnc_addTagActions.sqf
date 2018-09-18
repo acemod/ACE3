@@ -33,7 +33,7 @@ private _actions = [];
             },
             {
                 (_this select 2) params ["_unit", "", "", "_requiredItem"];
-                _requiredItem in ((items _unit) apply {toLower _x})
+                _requiredItem in ((_unit call EFUNC(common,uniqueItems)) apply {toLower _x})
             },
             {},
             [_unit, _class, _textures, _requiredItem]
