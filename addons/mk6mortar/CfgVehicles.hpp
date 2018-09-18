@@ -16,7 +16,7 @@ class CfgVehicles {
                 condition = QUOTE(GVAR(useChargeSystem));
                 exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
                 statement = "";
-                insertChildren = QUOTE([_player] call FUNC(addPrepRoundActions););
+                insertChildren = QUOTE([_player] call FUNC(addPrepRoundActions));
                 showDisabled = 1;
                 icon = "";
             };
@@ -62,7 +62,7 @@ class CfgVehicles {
                 statement = "";
                 icon = "";
                 selection = "usti hlavne";
-                insertChildren = QUOTE([ARR_2(_player, _target)] call FUNC(addLoadMagazineActions););
+                insertChildren = QUOTE([ARR_2(_player, _target)] call FUNC(addLoadMagazineActions));
             };
         };
         class ACE_SelfActions {
