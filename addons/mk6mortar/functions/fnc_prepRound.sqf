@@ -26,6 +26,7 @@ if !(isNil (_newMagazine)) exitWith {ERROR("New magazine classname required");};
 
 if !([_unit,_oldMagazine] call EFUNC(common,hasMagazine)) exitWith {ERROR("Player does not have magazine to remove");};
 
+private _canAddMagazine = true;
 // Remove or add charges
 if (_chargesRequired > 0) then {
     if (_unit canAdd [_chargeClass, _chargesRequired]) then {
@@ -44,12 +45,14 @@ if (_chargesRequired > 0) then {
     //Flip the charges required from negative to positive number so we can easily check against it
     _chargesRequired = - _chargesRequired;
 
-    if (_chargeCount < _chargesRequired) exitWith {ERROR("Player does not the required amount of charges")};
+    if (_chargeCount < _chargesRequired) exitWith {_canAddMagazine=false};
 
     for "_i" from 1 to _chargesRequired do {
         _unit removeItem _chargeClass;
     };
 };
+
+if !(_canAddMagazine) exitWith{ERROR("Player does not the required amount of charges")};
 
 // Add the new magazine
 if (_unit canAdd _newMagazine) then {
