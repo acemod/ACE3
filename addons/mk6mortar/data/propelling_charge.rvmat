@@ -1,7 +1,3 @@
-class StageTI
-{
-	texture="a3\data_f\default_ti_ca.paa";
-};
 ambient[]={0.77254903,0.77254903,0.77254903,1};
 diffuse[]={0.77254903,0.77254903,0.77254903,1};
 forcedDiffuse[]={0,0,0,0};
@@ -76,4 +72,8 @@ class Stage7
 {
 	texture="a3\data_f\env_land_co.paa";
 	uvSource="none";
+};
+class StageTI
+{
+	texture="a3\data_f\default_ti_ca.paa";
 };
