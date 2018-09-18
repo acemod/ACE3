@@ -295,6 +295,7 @@
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Loading Round</English>
+            <German>Lade Patrone</German>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_prepRound">
             <English>Preparing Round</English>

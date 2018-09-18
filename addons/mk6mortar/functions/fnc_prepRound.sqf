@@ -5,11 +5,11 @@
  * Prepares a mortar round with a particular charge
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: oldMagazine <STRING>
- * 2: newMagazine <STRING>
- * 3: chargeClass <STRING>
- * 4: chargesRequired <NUMBER>
+ * 0: Unit <OBJECT>
+ * 1: OldMagazine <STRING>
+ * 2: NewMagazine <STRING>
+ * 3: ChargeClass <STRING>
+ * 4: ChargesRequired <NUMBER>
  *
  * Return Value:
  * None
@@ -20,7 +20,7 @@
  * Public: Yes
  */
 
-params ["_unit","_oldMagazine","_newMagazine","_chargeClass","_chargesRequired"];
+params ["_unit", "_oldMagazine", "_newMagazine", "_chargeClass", "_chargesRequired"];
 
 if !(isNil (_newMagazine)) exitWith {ERROR("New magazine classname required");};
 
@@ -33,8 +33,8 @@ if (_chargesRequired > 0) then {
             _unit addItem _chargeClass;
         };
     } else {
-        _pos = _unit modelToWorldVisual [0.5,0.5,0]; // Front right of player
-        _holder = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
+        private _pos = _unit modelToWorldVisual [0.5,0.5,0]; // Front right of player
+        private _holder = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
         _holder addItemCargo [_chargeClass, _chargesRequired];
         _holder setPosATL _pos;
     };
@@ -42,7 +42,7 @@ if (_chargesRequired > 0) then {
     private _chargeCount = {_x == _chargeClass} count items _unit;
     
     //Flip the charges required from negative to positive number so we can easily check against it
-    _chargesRequired = _chargesRequired * -1;
+    _chargesRequired = - _chargesRequired;
 
     if (_chargeCount < _chargesRequired) exitWith {ERROR("Player does not the required amount of charges")};
 
@@ -55,8 +55,8 @@ if (_chargesRequired > 0) then {
 if (_unit canAdd _newMagazine) then {
     _unit addMagazineGlobal _newMagazine;
 } else {
-    _pos = _unit modelToWorldVisual [0.5,0.5,0]; // Front right of player
-    _holder = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
+    private _pos = _unit modelToWorldVisual [0.5,0.5,0]; // Front right of player
+    private _holder = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
     _holder addMagazineAmmoCargo [_newMagazine, 1, 1];
     _holder setPosATL _pos;
 };

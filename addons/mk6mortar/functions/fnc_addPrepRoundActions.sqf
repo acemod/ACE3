@@ -4,7 +4,7 @@
  * Adds the actions to prep each compatible magazine in the players inventory
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Actions <ARRAY>

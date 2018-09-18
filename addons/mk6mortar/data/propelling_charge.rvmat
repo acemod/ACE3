@@ -6,8 +6,7 @@ specular[]={0.39215687,0.39215687,0.39215687,1};
 specularPower=2.2;
 PixelShaderID="Super";
 VertexShaderID="Super";
-class Stage1
-{
+class Stage1 {
 	texture="z\ace\addons\mk6mortar\data\propelling_charge_nohq.paa";
 	uvSource="tex";
 	class uvTransform
@@ -39,8 +38,7 @@ class Stage3 {
         pos[] = {0,0,0};
     };
 };
-class Stage4
-{
+class Stage4 {
 	texture="z\ace\addons\mk6mortar\data\propelling_charge_as.paa";
 	uvSource="tex";
 	class uvTransform
@@ -51,8 +49,7 @@ class Stage4
 		pos[]={0,0,0};
 	};
 };
-class Stage5
-{
+class Stage5 {
 	texture="z\ace\addons\mk6mortar\data\propelling_charge_smdi.paa";
 	uvSource="tex";
 	class uvTransform
@@ -63,17 +60,14 @@ class Stage5
 		pos[]={0,0,0};
 	};
 };
-class Stage6
-{
+class Stage6 {
 	texture="#(ai,64,128,1)fresnel(1.5,1.22)";
 	uvSource="none";
 };
-class Stage7
-{
+class Stage7 {
 	texture="a3\data_f\env_land_co.paa";
 	uvSource="none";
 };
-class StageTI
-{
+class StageTI {
 	texture="a3\data_f\default_ti_ca.paa";
 };

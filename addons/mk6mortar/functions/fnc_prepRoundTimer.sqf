@@ -5,12 +5,11 @@
  * Prepares a mortar round with a particular charge using a timer
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: args <ARRAY>
- * 2: oldMagazine <STRING>
- * 3: newMagazine <STRING>
- * 4: chargeClass <STRING>
- * 5: chargesRequired <NUMBER>
+ * 0: Unit <OBJECT>
+ * 1: OldMagazine <STRING>
+ * 2: NewMagazine <STRING>
+ * 3: ChargeClass <STRING>
+ * 4: ChargesRequired <NUMBER>
  *
  * Return Value:
  * None
@@ -21,7 +20,7 @@
  * Public: Yes
  */
 
-params ["_unit","_oldMagazine","_newMagazine","_chargeClass","_chargesRequired"];
+params ["_unit", "_oldMagazine", "_newMagazine", "_chargeClass", "_chargesRequired"];
 
 // Move player into animation if player is standing
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {

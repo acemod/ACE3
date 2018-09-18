@@ -28,22 +28,23 @@ if (GVAR(useChargeSystem)) then {
     if ((count _magazines) < 1) exitWith {ERROR("No Magazines for weapon");};
 
     private _muzzleVelocities = [];
-
+    private _cfgMagazines = configFile >> "CfgMagazines";
     // Find all the base magazines with charges, store the velocity of the base magazine and each of their child charges
     {
-        private _baseCharge  = getNumber(configFile >> "CfgMagazines" >> _x >> QGVAR(baseCharge));
+        private _currentMagazine = _cfgMagazines >> _x;
+        private _baseCharge  = getNumber(_currentMagazine QGVAR(baseCharge));
         if (_baseCharge == 1) then {
-            private _childCharges = getArray(configFile >> "CfgMagazines" >> _x >> QGVAR(charges));
-            private _magName = getText (configFile >> "CfgMagazines" >> _x >> "displayNameShort");
-            private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _x >> "initSpeed");
+            private _childCharges = getArray(_currentMagazine QGVAR(charges));
+            private _magName = getText (_currentMagazine "displayNameShort");
+            private _initSpeed = getNumber (_currentMagazine "initSpeed");
 
             LIST_CHARGE lbAdd _magName;
             LIST_CHARGE lbSetData [(count _muzzleVelocities), str (_initSpeed)];
             _muzzleVelocities pushBack _initSpeed;
 
             {
-                private _childMagName = getText (configFile >> "CfgMagazines" >> _x select 0 >> "displayNameShort");
-                private _childInitSpeed = getNumber (configFile >> "CfgMagazines" >> _x select 0 >> "initSpeed");
+                private _childMagName = getText (_cfgMagazines >> _x select 0 >> "displayNameShort");
+                private _childInitSpeed = getNumber (_cfgMagazines >> _x select 0 >> "initSpeed");
 
                 LIST_CHARGE lbAdd _childMagName;
                 LIST_CHARGE lbSetData [(count _muzzleVelocities), str (_childInitSpeed)];
