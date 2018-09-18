@@ -9,7 +9,7 @@
  * Has explosives <BOOL>
  *
  * Example:
- * [player] call ace_explosives_fnc_hasExplosives
+ * player call ace_explosives_fnc_hasExplosives
  *
  * Public: Yes
  */
