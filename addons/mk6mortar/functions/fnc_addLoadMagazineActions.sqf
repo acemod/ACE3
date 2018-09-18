@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey-Soldierman
  * Adds actions to load each magazine the player has which is compatible with the targets turret weapon
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_target"];
 

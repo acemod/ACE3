@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey-Soldierman
  * Adds sub actions for each charge for a particular magazine (from insertChildren)
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_magazine"];
 

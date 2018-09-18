@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey-Soldierman
  * Adds the actions to prep each compatible magazine in the players inventory
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey-Soldierman
  *
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit","_oldMagazine","_newMagazine","_chargeClass","_chargesRequired"];
 
