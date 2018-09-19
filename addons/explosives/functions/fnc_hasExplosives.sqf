@@ -21,4 +21,4 @@ TRACE_1("params",_unit);
 private _cfgMagazines = configFile >> "CfgMagazines";
 private _magazines = magazines _unit;
 
-(_magazines arrayIntersect _magazines) findIf {getNumber (_cfgMagazines >> _x >> QGVAR(Placeable)) == 1} > -1
+((_magazines arrayIntersect _magazines) findIf {getNumber (_cfgMagazines >> _x >> QGVAR(Placeable)) == 1}) > -1
