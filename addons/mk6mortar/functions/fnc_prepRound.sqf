@@ -45,7 +45,7 @@ if (_chargesRequired > 0) then {
     //Flip the charges required from negative to positive number so we can easily check against it
     _chargesRequired = - _chargesRequired;
 
-    if (_chargeCount < _chargesRequired) exitWith {_canAddMagazine=false};
+    if (_chargeCount < _chargesRequired) exitWith{_canAddMagazine=false};
 
     for "_i" from 1 to _chargesRequired do {
         _unit removeItem _chargeClass;

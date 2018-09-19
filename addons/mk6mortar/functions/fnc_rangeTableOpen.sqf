@@ -32,11 +32,11 @@ if (GVAR(useChargeSystem)) then {
     // Find all the base magazines with charges, store the velocity of the base magazine and each of their child charges
     {
         private _currentMagazine = _cfgMagazines >> _x;
-        private _baseCharge  = getNumber(_currentMagazine QGVAR(baseCharge));
+        private _baseCharge  = getNumber(_currentMagazine >> QGVAR(baseCharge));
         if (_baseCharge == 1) then {
-            private _childCharges = getArray(_currentMagazine QGVAR(charges));
-            private _magName = getText (_currentMagazine "displayNameShort");
-            private _initSpeed = getNumber (_currentMagazine "initSpeed");
+            private _childCharges = getArray(_currentMagazine >> QGVAR(charges));
+            private _magName = getText (_currentMagazine >> "displayNameShort");
+            private _initSpeed = getNumber (_currentMagazine >> "initSpeed");
 
             LIST_CHARGE lbAdd _magName;
             LIST_CHARGE lbSetData [(count _muzzleVelocities), str (_initSpeed)];
