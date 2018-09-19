@@ -157,7 +157,7 @@ if (_activated) then {
                         _projectile setposasl _posNew;
                         _pos = getposatl _logic;
                         _dir = direction _logic;
-                        missionnamespace setvariable [_dirVar,_dir];
+                        //missionnamespace setvariable [_dirVar,_dir]; See L37
                     };
                     sleep 0.1;
                     isnull _projectile || isnull _logic
