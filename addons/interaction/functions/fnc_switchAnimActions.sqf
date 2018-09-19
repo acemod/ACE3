@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Controls animation based interactions state.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_enabled"];
 
@@ -49,7 +49,7 @@ private _statement = {
                             };
                             _weaponHolder addBackpackCargoGlobal [_x, 1];
                         };
-                        case (getNumber (configfile >> "CfgWeapons" >> _x >> "type") in [4096,131072]): {
+                        case (getNumber (configfile >> "CfgWeapons" >> _x >> "type") in [TYPE_BINOCULAR_AND_NVG,TYPE_ITEM]): {
                             if (isNil "_weaponHolder") then {
                                 _weaponHolder = createVehicle ["GroundWeaponHolder", _emptyPosAGL, [], 0, "CAN_COLLIDE"];
                             };
