@@ -33,7 +33,7 @@ private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
 private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
 private _loadout = getUnitLoadout GVAR(center);
 
-private _loadoutIndex = (+(_data)) findIf {(_x select 0) == _editBoxContent};
+private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
 private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
 
 // Make sure the loadout isn't yours (public tab) or being shared (my loadouts tab)
@@ -155,7 +155,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
         if (is3DEN) then {
 
-            private _loadoutIndex = (+(_data)) findId {(_x select 0) == _editBoxContent};
+            private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
 
             for "_dataIndex" from 0 to 10 do {
                 switch (_dataIndex) do {
