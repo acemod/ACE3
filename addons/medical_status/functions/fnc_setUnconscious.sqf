@@ -27,7 +27,7 @@ _unit setVariable [VAR_UNCON, _active, true];
 if (_active) then {
     // Don't bother setting this if not used
     if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
-        _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missiontime];
+        _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
     };
 
     if (_unit == ACE_player) then {
@@ -39,7 +39,7 @@ if (_active) then {
     };
 } else {
     // Unit has woken up, no longer need to track this
-    _unit setVariable [QGVAR(lastWakeUpCheck), nil];
+    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
 };
 
 // This event doesn't correspond to unconscious in statemachine
