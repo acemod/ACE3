@@ -27,7 +27,7 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call EFUNC(common,doAnimation);
 };
 
-if !(isNil (_newMagazine)) exitWith {ERROR("New magazine classname required");};
+if !(isNil (_newMagazine)) exitWith{ERROR("New magazine classname required");};
 
 _timeToPrep = configFile >> "CfgMagazines" >> _newMagazine >> QGVAR(timeToPrep);
 

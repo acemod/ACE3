@@ -22,9 +22,9 @@
 
 params ["_unit", "_oldMagazine", "_newMagazine", "_chargeClass", "_chargesRequired"];
 
-if !(isNil (_newMagazine)) exitWith {ERROR("New magazine classname required");};
+if !(isNil _newMagazine) exitWith{ERROR("New magazine classname required");};
 
-if !([_unit,_oldMagazine] call EFUNC(common,hasMagazine)) exitWith {ERROR("Player does not have magazine to remove");};
+if !([_unit,_oldMagazine] call EFUNC(common,hasMagazine)) exitWith{ERROR("Player does not have magazine to remove");};
 
 private _canAddMagazine = true;
 // Remove or add charges

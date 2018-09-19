@@ -18,14 +18,14 @@
 TRACE_1("rangeTableOpen - defer to artillerytables",_this);
 
 createDialog "ACE_82mm_RangeTable_Dialog";
-if (isNull (uiNamespace getVariable ["ACE_82mm_RangeTable_Dialog", displayNull])) exitWith {ERROR("Dialog failed to open");};
+if (isNull (uiNamespace getVariable ["ACE_82mm_RangeTable_Dialog", displayNull])) exitWith{ERROR("Dialog failed to open");};
 if (GVAR(useChargeSystem)) then {
     private _weaponName = "ACE_mortar_82mm_no_charges"; //todo: work on other weapons
 
     //Get Magazine Types
     private _magazines = getArray (configFile >> "CfgWeapons" >> _weaponName >> "magazines");
 
-    if ((count _magazines) < 1) exitWith {ERROR("No Magazines for weapon");};
+    if ((count _magazines) < 1) exitWith{ERROR("No Magazines for weapon");};
 
     private _muzzleVelocities = [];
     private _cfgMagazines = configFile >> "CfgMagazines";
