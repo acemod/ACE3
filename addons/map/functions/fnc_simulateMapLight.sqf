@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Draw nearby lighting and sexy flashlight beams on main map.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_mapCtrl", "_mapScale", "_mapCentre", "_lightLevel"];
 

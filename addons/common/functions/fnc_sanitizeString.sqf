@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain, based on Killzone-Kid code
  * Removes quotation marks to avoid exploits and optionally html tags from text to avoid conflicts with structured text.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_string", ["_removeTags", false]];
 

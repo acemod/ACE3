@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the track key being held down.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 TRACE_1("lock key down",GVAR(isLockKeyDown));
 

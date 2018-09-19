@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Enable the object to be dragged.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_player", "_target"];
 params ["_object", "_enableDrag", "_position", "_direction"];

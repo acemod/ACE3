@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Loads the object module is placed on into selected vehicle.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {[FUNC(moduleLoadIntoCargo), _this] call CBA_fnc_directCall;};
 

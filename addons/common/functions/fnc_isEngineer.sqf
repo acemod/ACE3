@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: marc_book, edited by commy2
  * Checks if a unit is an engineer.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

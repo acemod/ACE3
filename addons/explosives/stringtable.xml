@@ -1027,5 +1027,8 @@
             <Chinese>爆炸範圍</Chinese>
             <Italian>Raggio di detonazione</Italian>
         </Key>
+        <Key ID="STR_ACE_Explosives_ExplosiveTimer">
+            <English>Explosive Timer</English>
+        </Key>
     </Package>
 </Project>

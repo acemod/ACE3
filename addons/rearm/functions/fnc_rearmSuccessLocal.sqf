@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Rearms a vehicle on the turret owner.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds", "_pylon"];
 TRACE_7("rearmSuccessLocal",_vehicle,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds,_pylon);

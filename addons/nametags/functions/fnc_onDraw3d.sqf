@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: <N/A>
  * Draws names and icons.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 BEGIN_COUNTER(GVAR(onDraw3d));
 

@@ -44,4 +44,3 @@ PREP(push);
 
 PREP(canFlip);
 PREP(switchAnimActions);
-PREP(switchLamp);

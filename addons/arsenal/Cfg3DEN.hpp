@@ -8,7 +8,7 @@ class Cfg3DEN {
                         class GVAR(DefaultLoadoutsListAttribute) {
                             property = QGVAR(DefaultLoadoutsListAttribute);
                             value = 0;
-                            expression = "if !(is3DEN) then {ace_arsenal_defaultLoadoutsList = _value};";
+                            expression = QUOTE(if (!is3DEN) then {GVAR(defaultLoadoutsList) = _value};);
                             defaultValue = "[]";
                             validate = "none";
                             wikiType = "[[Array]]";

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Checks if object is a fence. Should work on any fence type, even when (typeOf == "").
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object"];
 TRACE_1("Checking if fence",_object);

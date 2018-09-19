@@ -8,7 +8,7 @@ import sys
 import argparse
 
 def validKeyWordAfterCode(content, index):
-    keyWords = ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply"];
+    keyWords = ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply", "findIf"];
     for word in keyWords:
         try:
             subWord = content.index(word, index, index+len(word))
@@ -139,6 +139,13 @@ def check_sqf_syntax(filepath):
         if brackets_list.count('{') != brackets_list.count('}'):
             print("ERROR: A possible missing curly brace {{ or }} in file {0} {{ = {1} }} = {2}".format(filepath,brackets_list.count('{'),brackets_list.count('}')))
             bad_count_file += 1
+        pattern = re.compile('\s*(/\*[\s\S]+?\*/)\s*#include')
+        if pattern.match(content):
+            print("ERROR: A found #include after block comment in file {0}".format(filepath))
+            bad_count_file += 1
+
+
+
     return bad_count_file
 
 def main():

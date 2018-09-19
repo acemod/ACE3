@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Inits the wind variables on the server (on mission start)
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _month = date select 1;
 private _windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);

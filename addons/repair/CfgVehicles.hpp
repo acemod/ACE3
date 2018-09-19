@@ -478,10 +478,6 @@ class CfgVehicles {
         };
     };
 
-    class MRAP_01_base_F: Car_F {
-        GVAR(hitpointGroups)[] = { {"HitGlass1", {"HitGlass2", "HitGlass3", "HitGlass4", "HitGlass5", "HitGlass6"}} };
-    };
-
     class B_Truck_01_mover_F;
     class B_Truck_01_Repair_F: B_Truck_01_mover_F {
         GVAR(canRepair) = 1;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Returns an 2d array of all variables that have been set on the object
@@ -19,7 +20,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_object", ["_category", ""]];
 
