@@ -1258,7 +1258,7 @@
             <German>M67 Splittergranate</German>
             <Spanish>Granada de fragmentación M67</Spanish>
             <Polish>Granat obronny M67</Polish>
-            <Czech>Granát M67 </Czech>
+            <Czech>Granát M67</Czech>
             <French>M67 Grenade à fragmentation</French>
             <Russian>M67 ручная осколочная граната</Russian>
             <Portuguese>M67 Granada de fragmentação</Portuguese>
@@ -1268,6 +1268,22 @@
             <Korean>M67 세열 수류탄</Korean>
             <Chinese>M67破片手榴彈</Chinese>
             <Chinesesimp>M67破片手榴弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MiniGrenade_Name">
+            <English>V40 Mini-Grenade</English>
+            <German>V40 Minigranate</German>
+            <Spanish>V40 Mini-Grenade</Spanish>
+            <Polish>V40 Mini-Grenade</Polish>
+            <Czech>V40 Mini-Grenade</Czech>
+            <French>V40 Mini-Grenade</French>
+            <Russian>V40 Mini-Grenade</Russian>
+            <Portuguese>V40 Mini-Grenade</Portuguese>
+            <Hungarian>V40 Mini-Grenade</Hungarian>
+            <Italian>V40 Mini-Grenade</Italian>
+            <Japanese>V40 Mini-Grenade</Japanese>
+            <Korean>V40 Mini-Grenade</Korean>
+            <Chinese>V40 Mini-Grenade</Chinese>
+            <Chinesesimp>V40 Mini-Grenade</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
