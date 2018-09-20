@@ -47,7 +47,7 @@ def check_sqf_syntax(filepath):
         inStringType = '';
 
         lastIsCurlyBrace = False
-        checkForSemiColumn = False
+        checkForSemicolon = False
 
         # Extra information so we know what line we find errors at
         lineNumber = 1
@@ -58,7 +58,7 @@ def check_sqf_syntax(filepath):
             if (lastIsCurlyBrace):
                 lastIsCurlyBrace = False
                 # Test generates false positives with binary commands that take CODE as 2nd arg (e.g. findIf)
-                checkForSemiColumn = not re.search('findIf', content, re.IGNORECASE)
+                checkForSemicolon = not re.search('findIf', content, re.IGNORECASE)
 
             if c == '\n': # Keeping track of our line numbers
                 lineNumber += 1 # so we can print accurate line number information when we detect a possible error
@@ -114,11 +114,11 @@ def check_sqf_syntax(filepath):
                             print("ERROR: Tab detected at {0} Line number: {1}".format(filepath,lineNumber))
                             bad_count_file += 1
 
-                        if (checkForSemiColumn):
+                        if (checkForSemicolon):
                             if (c not in [' ', '\t', '\n', '/']): # keep reading until no white space or comments
-                                checkForSemiColumn = False
+                                checkForSemicolon = False
                                 if (c not in [']', ')', '}', ';', ',', '&', '!', '|', '='] and not validKeyWordAfterCode(content, indexOfCharacter)): # , 'f', 'd', 'c', 'e', 'a', 'n', 'i']):
-                                    print("ERROR: Possible missing semi-colon ';' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                    print("ERROR: Possible missing semicolon ';' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                     bad_count_file += 1
 
             else: # Look for the end of our comment block
