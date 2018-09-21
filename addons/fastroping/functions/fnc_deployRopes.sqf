@@ -15,7 +15,7 @@
  */
 
 #include "script_component.hpp"
-params ["_vehicle","_ropelength"];
+params ["_vehicle", "_ropelength"];
 
 private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
@@ -30,17 +30,15 @@ private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
             _ropelength = 12.2;
             if ("ACE_rope12" in (backpackItems ACE_player)) then {
                 ACE_player removeItemFromBackpack "ACE_rope12";
-            };
-            if ("ACE_rope12" in (ItemCargo _vehicle)) then {
+            } else {
                 _vehicle removeItem "ACE_rope12";
             };
         };
         case 15:{
             _ropelength = 15.2;
-            if ("ACE_rope15" in (backpackItems ACE_player)) then {
+            if ("ACE_rope15" in (backpackitems ACE_player)) then {
                 ACE_player removeItemFromBackpack "ACE_rope15";
-            };
-            if ("ACE_rope15" in (ItemCargo _vehicle)) then {
+            } else {
                 _vehicle removeItem "ACE_rope15";
             };
         };
@@ -48,8 +46,7 @@ private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
             _ropelength = 18.3;
             if ("ACE_rope18" in (backpackItems ACE_player)) then {
                 ACE_player removeItemFromBackpack "ACE_rope18";
-            };
-            if ("ACE_rope18" in (ItemCargo _vehicle)) then {
+            } else {
                 _vehicle removeItem "ACE_rope18";
             };
         };
@@ -57,17 +54,15 @@ private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
             _ropelength = 27.4;
             if ("ACE_rope27" in (backpackItems ACE_player)) then {
                 ACE_player removeItemFromBackpack "ACE_rope27";
-            };
-            if ("ACE_rope27" in (ItemCargo _vehicle)) then {
+            } else {
                 _vehicle removeItem "ACE_rope27";
             };
         };
         case 36: {
             _ropelength = 36.6;
-            if ("ACE_rope36" in (backpackItems ACE_player)) then {
+            if ("ACE_rope36" in (backpackitems ACE_player)) then {
                 ACE_player removeItemFromBackpack "ACE_rope36";
-            };
-            if ("ACE_rope36" in (ItemCargo _vehicle)) then {
+            } else {
                 _vehicle removeItem "ACE_rope36";
             };
         };
