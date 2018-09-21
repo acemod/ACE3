@@ -48,6 +48,6 @@ if (GVAR(quickTag) == 3) then {
 
 // Tag
 if !(_possibleTags isEqualTo []) then {
-    private _availableTags = _possibleTags select {(_x select 2) in ((items _unit) apply {toLower _x})};
+    private _availableTags = _possibleTags select {(_x select 2) in (_unit call EFUNC(common,uniqueItems))};
     [_unit, selectRandom ((selectRandom _availableTags) select 3)] call FUNC(tag);
 };
