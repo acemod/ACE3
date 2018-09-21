@@ -20,7 +20,7 @@
 
     // Exit if no required item in inventory
     if ([_unit, {
-        GVAR(cachedRequiredItems) arrayIntersect (_unit call EFUNC(common,uniqueItems) apply {toLower _x}) isEqualTo []
+        GVAR(cachedRequiredItems) arrayIntersect (_unit call EFUNC(common,uniqueItems)) isEqualTo []
     }, _unit, QGVAR(checkRequiredItemsCache), 9999, "cba_events_loadoutEvent"] call EFUNC(common,cachedCall)) exitWith {false};
 
     private _startPosASL = eyePos _unit;

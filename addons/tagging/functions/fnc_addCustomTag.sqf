@@ -48,7 +48,6 @@ if (_textures isEqualTo []) exitWith {
 };
 
 _identifier = [_identifier] call CBA_fnc_removeWhitespace;
-_requiredItem = toLower _requiredItem;
 
 // Add
 [QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon]] call CBA_fnc_globalEventJIP;
