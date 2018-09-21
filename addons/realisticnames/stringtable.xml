@@ -1272,18 +1272,6 @@
         <Key ID="STR_ACE_RealisticNames_MiniGrenade_Name">
             <English>V40 Mini-Grenade</English>
             <German>V40 Minigranate</German>
-            <Spanish>V40 Mini-Grenade</Spanish>
-            <Polish>V40 Mini-Grenade</Polish>
-            <Czech>V40 Mini-Grenade</Czech>
-            <French>V40 Mini-Grenade</French>
-            <Russian>V40 Mini-Grenade</Russian>
-            <Portuguese>V40 Mini-Grenade</Portuguese>
-            <Hungarian>V40 Mini-Grenade</Hungarian>
-            <Italian>V40 Mini-Grenade</Italian>
-            <Japanese>V40 Mini-Grenade</Japanese>
-            <Korean>V40 Mini-Grenade</Korean>
-            <Chinese>V40 Mini-Grenade</Chinese>
-            <Chinesesimp>V40 Mini-Grenade</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
