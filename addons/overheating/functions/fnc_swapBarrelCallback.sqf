@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2, esteldunedain
  * Swap barrel callback
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_assistant", "_gunner", "_weapon"];
 TRACE_3("params",_assistant,_gunner,_weapon);

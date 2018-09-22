@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Starts the setup process for the passed explosive. Player only.
@@ -15,8 +16,6 @@
  *
  * Public: Yes
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 #define PLACE_RANGE_MAX 1
 #define PLACE_RANGE_MIN 0.025
@@ -196,7 +195,7 @@ GVAR(TweakedAngle) = 0;
             //Show the model on the hud in aprox the same size/location as it will be placed:
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
 
-            private _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
+            private _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / (([] call CBA_fnc_getFov) select 1);
             _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
 

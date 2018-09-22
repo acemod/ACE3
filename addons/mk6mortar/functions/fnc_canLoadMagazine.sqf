@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey
  * Checks whether magazine can be loaded into static weapon
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_static","_unit",["_magazineClassOptional","",[""]]];
 

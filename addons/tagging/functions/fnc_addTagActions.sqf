@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Compiles tags from ACE_Tags and returns children actions.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -33,7 +33,7 @@ private _actions = [];
             },
             {
                 (_this select 2) params ["_unit", "", "", "_requiredItem"];
-                _requiredItem in ((items _unit) apply {toLower _x})
+                _requiredItem in (_unit call EFUNC(common,uniqueItems))
             },
             {},
             [_unit, _class, _textures, _requiredItem]

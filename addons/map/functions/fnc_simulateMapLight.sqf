@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Draw nearby lighting and sexy flashlight beams on main map.
@@ -12,12 +13,10 @@
  * None
  *
  * Example:
- * [CONTROL, 5, [5, 4, 6], []] call ACE_map_fnc_simulateMapLights
+ * [CONTROL, 5, [5, 4, 6], []] call ace_map_fnc_simulateMapLight
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_mapCtrl", "_mapScale", "_mapCentre", "_lightLevel"];
 

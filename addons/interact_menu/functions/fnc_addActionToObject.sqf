@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Insert an ACE action to an object, under a certain config path
@@ -15,9 +16,8 @@
  * Example:
  * [cursorTarget, 0, ["ACE_TapShoulderRight"],VulcanPinchAction] call ace_interact_menu_fnc_addActionToObject;
  *
- * Public: No
+ * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!params [["_object", objNull, [objNull]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
     ERROR("Bad Params");

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Callback when the bloodbag treatment is complete
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_treatmentClassname"];
 

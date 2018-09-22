@@ -751,5 +751,61 @@
             <Chinese>輸出 class name 到剪貼簿上</Chinese>
             <Italian>Copiato il nome della classe negli appunti</Italian>
         </Key>
+        <Key ID="STR_ACE_Arsenal_Mode">
+            <English>Mode</English>
+            <Chinese>模式</Chinese>
+            <French>Mode</French>
+            <Spanish>Modo</Spanish>
+            <Italian>Modalità</Italian>
+            <Polish>Tryb</Polish>
+            <Russian>Режим</Russian>
+            <German>Modus</German>
+            <Czech>Režim</Czech>
+            <Portuguese>Modo</Portuguese>
+            <Korean>모드</Korean>
+            <Chinesesimp>模式</Chinesesimp>
+            <Japanese>モード</Japanese>
+            <Turkish>Mod</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Whitelist">
+            <English>Whitelist</English>
+            <Polish>Biała lista</Polish>
+            <Spanish>Lista blanca</Spanish>
+            <German>Whitelist</German>
+            <Czech>Seznam povolených</Czech>
+            <Portuguese>Lista branca</Portuguese>
+            <French>Liste blanche</French>
+            <Hungarian>Fehérlista</Hungarian>
+            <Russian>Вайтлист</Russian>
+            <Italian>Lista Bianca</Italian>
+            <Japanese>許可リスト</Japanese>
+            <Korean>화이트리스트</Korean>
+            <Chinese>白名單</Chinese>
+            <Chinesesimp>白名单</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Blacklist">
+            <English>Blacklist</English>
+            <Japanese>禁止リスト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_Items">
+            <English>Items</English>
+            <Chinese>物品</Chinese>
+            <French>Objets</French>
+            <Spanish>Objetos</Spanish>
+            <Italian>Oggetti</Italian>
+            <Polish>Przedmioty</Polish>
+            <Russian>Предметы</Russian>
+            <German>Gegenstände</German>
+            <Czech>Předměty</Czech>
+            <Portuguese>Itens</Portuguese>
+            <Korean>물품</Korean>
+            <Chinesesimp>物品</Chinesesimp>
+            <Japanese>アイテム</Japanese>
+            <Turkish>Eşyalar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
+            <English>Export current items list as an array for use in scripts</English>
+            <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
+        </Key>
     </Package>
 </Project>

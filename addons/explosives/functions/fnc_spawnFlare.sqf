@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Spawns a flare on the ground for tripflare trigger
@@ -13,7 +14,6 @@
  *
  * Public: no
  */
-#include "script_component.hpp"
 
 params ["_posX","_posY","_posZ"];
 TRACE_3("Params",_posX,_posY,_posZ);

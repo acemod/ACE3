@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles any audible, visual and physical effects of fatigue.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 
 #ifdef DEBUG_MODE_FULL

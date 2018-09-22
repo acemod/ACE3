@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Get the remaining ammunition amount.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_unit"];
 TRACE_2("readSupplyCounter",_truck,_unit);

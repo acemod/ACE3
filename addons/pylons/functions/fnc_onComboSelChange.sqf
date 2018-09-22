@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Handles various UI changes when a combobox' selection changes.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrl", "_index"];
 
