@@ -81,8 +81,9 @@ private _condition = {
 
     GVAR(animActionsEnabled)
     && {isClass _animConfig}
-    && {0 != [_animConfig >> "scope", "number", 1] call CBA_fnc_getConfigEntry}
-    && {0 != [_vehicleConfig >> QGVAR(anims) >> _anim >> "enabled", "number", 1] call CBA_fnc_getConfigEntry}
+    && {0 != [_animConfig >> "scope", "number", 1] call CBA_fnc_getConfigEntry} // anim hidden
+    && {isNumber (_animConfig >> "initPhase")} // anim correct - CUP inherits and clears some
+    && {0 != [_vehicleConfig >> QGVAR(anims) >> _anim >> "enabled", "number", 1] call CBA_fnc_getConfigEntry} // anim disabled
     && {_target animationPhase _anim != _phase}
     && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
 };
@@ -130,7 +131,7 @@ private _condition = {
                     _x
                 ] call EFUNC(interact_menu,createAction);
                 [_vehicle, 0, [], _action, _inherit] call EFUNC(interact_menu,addActionToClass);
-                TRACE_3("",_vehicle,_anim,_x);
+                TRACE_3("add anim",_vehicle,_anim,_x);
             } forEach _positions;
         };
     } forEach ('true' configClasses (_x >> QGVAR(anims)));
