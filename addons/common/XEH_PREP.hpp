@@ -179,6 +179,7 @@ PREP(toNumber);
 PREP(unhideUnit);
 PREP(uniqueElements);
 PREP(uniqueItems);
+PREP(uniqueItemsPlayer);
 PREP(unloadPerson);
 PREP(unloadPersonLocal);
 PREP(unmuteUnit);
