@@ -88,54 +88,52 @@ private _condition = {
 };
 
 {
-    if (isClass (_x >> QGVAR(anims))) then {
-        private _vehicleConfig = _x;
-        private _vehicle = configName _vehicleConfig;
-        {
-            scopeName "animLoop";
-            private _anim = configName _x;
-            private _animConfigParent = inheritsFrom _vehicleConfig >> QGVAR(anims) >> _anim;
-            if (
-                !isClass _animConfigParent
-                || {_x != _animConfigParent && {0 == [_animConfigParent >> "inherit", "number", 1] call CBA_fnc_getConfigEntry}}
-            ) then {
-                private _positions = [_x >> "position"] call BIS_fnc_getCfgData;
-                if (!isNil "_positions") then {
-                    if (_positions isEqualType "") then {
-                        _positions = [compile format [
-                            QUOTE(call compile getText (configFile >> 'CfgVehicles' >> typeOf _target >> QQGVAR(anims) >> '%1' >> 'position')),
-                            _anim
-                        ]];
-                    };
-                } else {
-                    if ("" == getText (_x >> "selection")) then {
-                        ERROR_2("No action position for vehicle %1 anim %2",_vehicle,_anim);
-                        breakTo "animLoop";
-                    };
+    private _vehicleConfig = _x;
+    private _vehicle = configName _vehicleConfig;
+    {
+        scopeName "animLoop";
+        private _anim = configName _x;
+        private _animConfigParent = inheritsFrom _vehicleConfig >> QGVAR(anims) >> _anim;
+        if (
+            !isClass _animConfigParent
+            || {_x != _animConfigParent && {0 == [_animConfigParent >> "inherit", "number", 1] call CBA_fnc_getConfigEntry}}
+        ) then {
+            private _positions = [_x >> "position"] call BIS_fnc_getCfgData;
+            if (!isNil "_positions") then {
+                if (_positions isEqualType "") then {
                     _positions = [compile format [
-                        QUOTE(_target selectionPosition getText (configFile >> 'CfgVehicles' >> typeOf _target >> QQGVAR(anims) >> '%1' >> 'selection')),
+                        QUOTE(call compile getText (configFile >> 'CfgVehicles' >> typeOf _target >> QQGVAR(anims) >> '%1' >> 'position')),
                         _anim
                     ]];
                 };
-
-                private _phase = [_x >> "phase", "number", 1] call CBA_fnc_getConfigEntry;
-                private _name = [_x >> "name", "text", localize "str_a3_cfgactions_unmountitem0"] call CBA_fnc_getConfigEntry;
-                private _icon = [_x >> "icon", "text", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"] call CBA_fnc_getConfigEntry;
-                private _duration = [_x >> "duration", "number", 10] call CBA_fnc_getConfigEntry;
-                private _inherit = 0 != [_x >> "inherit", "number", 1] call CBA_fnc_getConfigEntry;
-                {
-                    private _action = [
-                        format ["%1%2", _anim, _forEachIndex],
-                        _name, _icon, _statement, _condition, {},
-                        [_anim, _phase, _duration],
-                        _x
-                    ] call EFUNC(interact_menu,createAction);
-                    [_vehicle, 0, [], _action, _inherit] call EFUNC(interact_menu,addActionToClass);
-                    TRACE_3("",_vehicle,_anim,_x);
-                } forEach _positions;
+            } else {
+                if ("" == getText (_x >> "selection")) then {
+                    ERROR_2("No action position for vehicle %1 anim %2",_vehicle,_anim);
+                    breakTo "animLoop";
+                };
+                _positions = [compile format [
+                    QUOTE(_target selectionPosition getText (configFile >> 'CfgVehicles' >> typeOf _target >> QQGVAR(anims) >> '%1' >> 'selection')),
+                    _anim
+                ]];
             };
-        } forEach ('true' configClasses (_x >> QGVAR(anims)));
-    };
-} forEach ('true' configClasses (configFile >> "CfgVehicles"));
+
+            private _phase = [_x >> "phase", "number", 1] call CBA_fnc_getConfigEntry;
+            private _name = [_x >> "name", "text", localize "str_a3_cfgactions_unmountitem0"] call CBA_fnc_getConfigEntry;
+            private _icon = [_x >> "icon", "text", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"] call CBA_fnc_getConfigEntry;
+            private _duration = [_x >> "duration", "number", 10] call CBA_fnc_getConfigEntry;
+            private _inherit = 0 != [_x >> "inherit", "number", 1] call CBA_fnc_getConfigEntry;
+            {
+                private _action = [
+                    format ["%1%2", _anim, _forEachIndex],
+                    _name, _icon, _statement, _condition, {},
+                    [_anim, _phase, _duration],
+                    _x
+                ] call EFUNC(interact_menu,createAction);
+                [_vehicle, 0, [], _action, _inherit] call EFUNC(interact_menu,addActionToClass);
+                TRACE_3("",_vehicle,_anim,_x);
+            } forEach _positions;
+        };
+    } forEach ('true' configClasses (_x >> QGVAR(anims)));
+} forEach (QUOTE(isClass (_x >> QQGVAR(anims))) configClasses (configFile >> "CfgVehicles"));
 
 GVAR(animActionsInitialized) = true;
