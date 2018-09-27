@@ -395,7 +395,7 @@
             <Russian>HEMTT Контейнер</Russian>
             <Portuguese>HEMTT Contêiner</Portuguese>
             <Hungarian>HEMTT (konténer)</Hungarian>
-            <Italian>HEMTT portacontainer </Italian>
+            <Italian>HEMTT portacontainer</Italian>
             <Japanese>HEMTT コンテナ型</Japanese>
             <Korean>HEMTT 컨테이너</Korean>
             <Chinese>重型增程機動戰術卡車 (貨櫃)</Chinese>
@@ -1242,7 +1242,7 @@
             <German>M112 Sprengladung</German>
             <Spanish>Bloque de demolición M112</Spanish>
             <Polish>Ładunek burzący M112</Polish>
-            <Czech>Výbušná nálož M112 </Czech>
+            <Czech>Výbušná nálož M112</Czech>
             <French>M112 Block de Démolition</French>
             <Russian>M112 подрывной заряд</Russian>
             <Portuguese>M112 Carga de Demolição</Portuguese>
@@ -1258,7 +1258,7 @@
             <German>M67 Splittergranate</German>
             <Spanish>Granada de fragmentación M67</Spanish>
             <Polish>Granat obronny M67</Polish>
-            <Czech>Granát M67 </Czech>
+            <Czech>Granát M67</Czech>
             <French>M67 Grenade à fragmentation</French>
             <Russian>M67 ручная осколочная граната</Russian>
             <Portuguese>M67 Granada de fragmentação</Portuguese>
@@ -1268,6 +1268,10 @@
             <Korean>M67 세열 수류탄</Korean>
             <Chinese>M67破片手榴彈</Chinese>
             <Chinesesimp>M67破片手榴弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MiniGrenade_Name">
+            <English>V40 Mini-Grenade</English>
+            <German>V40 Minigranate</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1386,7 +1390,7 @@
             <German>M15 Panzerabwehrmine</German>
             <Spanish>Mina antitanque M15</Spanish>
             <Polish>Mina przeciwpancerna M15</Polish>
-            <Czech>M15 Protitanková mina </Czech>
+            <Czech>M15 Protitanková mina</Czech>
             <French>M15 Mine antichar</French>
             <Russian>M15 противотанковая мина</Russian>
             <Portuguese>M15 Mina anticarro</Portuguese>
