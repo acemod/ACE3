@@ -1,6 +1,5 @@
 class CfgMagazineWells {
 
-
     class CBA_65x39_MX {
         ADDON[] = {
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
@@ -14,7 +13,6 @@ class CfgMagazineWells {
         };
     };
 
-
     class CBA_556x45_STANAG {
         ADDON[] = {
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
@@ -23,7 +21,6 @@ class CfgMagazineWells {
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
     };
-
 
     class CBA_762x51_M14 {
         ADDON[] = {
@@ -86,11 +83,6 @@ class CfgMagazineWells {
         };
     };
 
-
-
-
-
-
 //Missing in CBA
 //ACE_20Rnd_762x67_Mk248_Mod_0_Mag
 //ACE_20Rnd_762x67_Mk248_Mod_1_Mag
@@ -106,7 +98,6 @@ class CfgMagazineWells {
             "ACE_10Rnd_338_API526_Mag"
         };
     }; 
-
 
 //ACE_7Rnd_408_305gr_Mag
 
