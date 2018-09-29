@@ -21,6 +21,14 @@ class CfgMagazineWells {
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
     };
+    class STANAG_556x45 { //Vanilla magwell
+        ADDON[] = {
+                "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+                "ACE_30Rnd_556x45_Stanag_Mk262_mag",
+                "ACE_30Rnd_556x45_Stanag_Mk318_mag",
+                "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+            };
+    };
 
     class CBA_762x51_M14 {
         ADDON[] = {
@@ -130,6 +138,11 @@ class CfgMagazineWells {
         };
     };
 
+    class SVD_762x54R { //Vanilla
+        ADDON[] = {
+            "ACE_10Rnd_762x54_Tracer_mag"
+        };
+    };
     class CBA_762x54R_SVD {
         ADDON[] = {
             "ACE_10Rnd_762x54_Tracer_mag"
