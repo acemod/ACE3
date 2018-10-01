@@ -27,7 +27,7 @@ class CfgMagazineWells {
                 "ACE_30Rnd_556x45_Stanag_Mk262_mag",
                 "ACE_30Rnd_556x45_Stanag_Mk318_mag",
                 "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
-            };
+        };
     };
 
     class CBA_762x51_M14 {
