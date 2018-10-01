@@ -21,16 +21,11 @@
 params ["_faction", "_pos"];
 _faction params ["", "_sides"];
 
-private _sideNearest = [];
+private _nearestObjects = nearestObjects [_pos, ["Man"], 15];
 
-{
-    if ([_x] call FUNC(isValidAi) && (side group _x in _sides)) then {
-        _sideNearest pushBack _x;
-    };
-    nil
-} count (nearestObjects [_pos, ["Man"], 15]);
+private _nearestValidUnit = _nearestObjects findIf {(side group _x in _sides) && {[_x] call FUNC(isValidAi)}};
 
-if (count _sideNearest > 0) then {
-    [_sideNearest select 0] call FUNC(switchUnit);
+if (_nearestValidUnit != -1) then {
+    [_nearestObjects select _nearestValidUnit] call FUNC(switchUnit);
     openMap false;
 };
