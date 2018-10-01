@@ -96,15 +96,16 @@ call FUNC(determineZoom);
                 params ["_player", "_mapOn"];
                 private _unitLight = _player getVariable [QGVAR(flashlight), ["", objNull]];
                 _unitLight params ["_flashlight", "_glow"];
-                private _flashlightOn = !(_flashlight isEqualTo "");
                 if (_mapOn) then {
+                    private _flashlightOn = !(_flashlight isEqualTo "");
                     if (_flashlightOn && {isNull _glow}) then {
                         [_player, _flashlight] call FUNC(flashlightGlow);
-                        playSound QGVAR(flashlightClick);
+                        if ([_player, _flashlight] call FUNC(needPlaySound)) then {playSound QGVAR(flashlightClick)};
                     };
                 } else {
                     if (!isNull _glow) then {
                         [_player, ""] call FUNC(flashlightGlow);
+                        if ([_player, _flashlight] call FUNC(needPlaySound)) then {playSound QGVAR(flashlightClick)};
                     };
                 };
             }] call CBA_fnc_addPlayerEventHandler;
