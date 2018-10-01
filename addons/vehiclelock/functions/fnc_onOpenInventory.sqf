@@ -24,7 +24,7 @@ if (_unit != ACE_player) exitWith {};
 
 if (GVAR(LockVehicleInventory) && //if setting not enabled
         {(vehicle ACE_player) == ACE_player} && //Player dismounted
-        {(_container isKindOf "Car") || [(_container isKindOf "Tank") || {_container isKindOf "Helicopter"}}} && //container is a lockable veh
+        {(_container isKindOf "Car") || {(_container isKindOf "Tank") || {_container isKindOf "Helicopter"}}} && //container is a lockable veh
         {(locked _container) in [2,3]} && //Vehicle is locked
         {!([ACE_player, _container] call FUNC(hasKeyForVehicle))} //player doesn't have key
         ) then {
