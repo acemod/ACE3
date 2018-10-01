@@ -95,19 +95,28 @@ class CfgMagazineWells {
 //ACE_20Rnd_762x67_Mk248_Mod_0_Mag
 //ACE_20Rnd_762x67_Mk248_Mod_1_Mag
 //ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag
-//ACE_30Rnd_65x47_Scenar_mag
-//ACE_20Rnd_65x47_Scenar_mag
-//ACE_30Rnd_65_Creedmor_mag
-//ACE_20Rnd_65_Creedmor_mag
 
-    class CBA_338LM_AI {
+    class CBA_65C_AR10 {
+        ADDON[] = {
+            "ACE_30Rnd_65_Creedmor_mag",
+            "ACE_20Rnd_65_Creedmor_mag",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_20Rnd_65x47_Scenar_mag"
+        };
+    };  
+
+    class CBA_338LM_AI { //338 Lapua Magnum Accuracy International
         ADDON[] = {
             "ACE_10Rnd_338_300gr_HPBT_Mag",
             "ACE_10Rnd_338_API526_Mag"
         };
     }; 
 
-//ACE_7Rnd_408_305gr_Mag
+    class CBA_408CT_Inter {
+        ADDON[] = {
+            "ACE_7Rnd_408_305gr_Mag"
+        };
+    };
 
     class CBA_50BMG_M107 { 
         ADDON[] = {
