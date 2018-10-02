@@ -23,9 +23,9 @@ _faction params ["", "_sides"];
 
 private _nearestObjects = nearestObjects [_pos, ["Man"], 15];
 
-private _nearestValidUnit = _nearestObjects findIf {(side group _x in _sides) && {[_x] call FUNC(isValidAi)}};
+private _nearestValidUnitIndex = _nearestObjects findIf {(side group _x in _sides) && {[_x] call FUNC(isValidAi)}};
 
-if (_nearestValidUnit != -1) then {
-    [_nearestObjects select _nearestValidUnit] call FUNC(switchUnit);
+if (_nearestValidUnitIndex != -1) then {
+    [_nearestObjects select _nearestValidUnitIndex] call FUNC(switchUnit);
     openMap false;
 };
