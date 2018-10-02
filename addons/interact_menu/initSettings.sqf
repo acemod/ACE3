@@ -39,7 +39,7 @@
     QGVAR(alwaysUseCursorSelfInteraction),
     "CHECKBOX",
     localize LSTRING(AlwaysUseCursorInteraction),
-    [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_SelfInteractionMenu)],
+    [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize ELSTRING(Interaction,InteractionMenuSelf)],
     true,
     false
 ] call CBA_settings_fnc_init;
@@ -48,7 +48,7 @@
     QGVAR(cursorKeepCenteredSelfInteraction),
     "CHECKBOX",
     [LSTRING(cursorKeepCentered), LSTRING(cursorKeepCenteredDescription)],
-    [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_SelfInteractionMenu)],
+    [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize ELSTRING(Interaction,InteractionMenuSelf)],
     true,
     false
 ] call CBA_settings_fnc_init;
@@ -57,7 +57,7 @@
     QGVAR(menuBackgroundSelf),
     "LIST",
     localize LSTRING(background),
-    [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_SelfInteractionMenu)],
+    [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize ELSTRING(Interaction,InteractionMenuSelf)],
     [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", localize LSTRING(backgroundBlur), localize LSTRING(backgroundBlack)], 0],
     false
 ] call CBA_settings_fnc_init;
