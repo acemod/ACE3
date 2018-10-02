@@ -179,7 +179,7 @@
             <Chinese>檢查剩餘的彈藥</Chinese>
             <Polish>Sprawdź ilość amunicji</Polish>
             <Korean>남은 탄약 확인</Korean>
-            <French>Vérifier les cartouches</French>
+            <French>Vérifier les munitions restantes</French>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
             <English>Checking remaining ammunition...</English>
@@ -190,7 +190,7 @@
             <Chinese>正在檢查剩餘的彈藥中...</Chinese>
             <Polish>Sprawdzanie ilości amunicji...</Polish>
             <Korean>남은 탄약 확인중...</Korean>
-            <French>Vérifier les munitions restantes</French>
+            <French>Vérification des munitions restantes...</French>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
             <English>There is ammunition worth %1 points left.</English>
@@ -201,7 +201,7 @@
             <Chinese>還剩下%1多的彈藥.</Chinese>
             <Polish>Pozostało %1 punktów amunicji.</Polish>
             <Korean>여기에는 최소 %1 포인트의 탄약이 남았습니다.</Korean>
-            <French>Il reste des munitions d'une valeur de 1 % de points.</French>
+            <French>Il reste des munitions d'une valeur de %1 points.</French>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
             <English>The following ammunition is left:%1</English>
@@ -294,7 +294,7 @@
             <Czech>Vít munici</Czech>
             <Italian>Prendi munizioni</Italian>
             <Spanish>Tomar munición</Spanish>
-            <French>Prendre la munition</French>
+            <French>Prendre des munitions</French>
             <Japanese>弾薬を取る</Japanese>
             <Korean>탄약 가지기</Korean>
             <Chinesesimp>取得弹药</Chinesesimp>
@@ -309,7 +309,7 @@
             <Czech>Sebrat munici</Czech>
             <Italian>Raccogli munizioni</Italian>
             <Spanish>Levantar munición</Spanish>
-            <French>Ramasser la munition</French>
+            <French>Ramasser les munitions</French>
             <Japanese>弾薬を拾得する</Japanese>
             <Korean>탄약 줍기</Korean>
             <Chinesesimp>捡起弹药</Chinesesimp>
@@ -324,7 +324,7 @@
             <Czech>Uskladnit munici</Czech>
             <Italian>Riponi munizioni</Italian>
             <Spanish>Guardar munición</Spanish>
-            <French>Stocker la munition</French>
+            <French>Stocker les munitions</French>
             <Japanese>弾薬を格納する</Japanese>
             <Korean>탄약 보관하기</Korean>
             <Chinesesimp>储存弹药</Chinesesimp>
