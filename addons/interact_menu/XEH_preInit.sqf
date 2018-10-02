@@ -13,7 +13,10 @@ GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
-    if (GVAR(cursorKeepCentered)) then {
+    if (
+        (GVAR(keyDownSelfAction) && {GVAR(cursorKeepCenteredSelfInteraction)}) ||
+        {!(GVAR(keyDownSelfAction)) && {GVAR(cursorKeepCentered)}}
+    ) then {
         GVAR(cursorPos) = GVAR(cursorPos) vectorAdd [_this select 1, _this select 2, 0] vectorDiff [0.5, 0.5, 0];
         setMousePosition [0.5, 0.5];
     } else {

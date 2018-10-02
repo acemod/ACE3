@@ -416,6 +416,9 @@
             <Chinesesimp>互动选单</Chinesesimp>
             <Chinese>互動選單</Chinese>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_Category_SelfInteractionMenu">
+            <English>Self Interaction Menu</English>
+        </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
             <German>Interaktionsmenü Animationsgeschwindigkeit</German>

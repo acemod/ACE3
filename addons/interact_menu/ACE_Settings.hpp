@@ -1,26 +1,4 @@
 class ACE_Settings {
-    class GVAR(alwaysUseCursorSelfInteraction) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(AlwaysUseCursorSelfInteraction);
-    };
-    class GVAR(cursorKeepCentered) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(cursorKeepCentered);
-        description = CSTRING(cursorKeepCenteredDescription);
-    };
-    class GVAR(alwaysUseCursorInteraction) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(AlwaysUseCursorInteraction);
-    };
     class GVAR(useListMenu) {
         value = 0;
         typeName = "BOOL";
@@ -79,14 +57,6 @@ class ACE_Settings {
         isClientSettable = 1;
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(ActionOnKeyRelease);
-    };
-    class GVAR(menuBackground) {
-        value = 0;
-        typeName = "SCALAR";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(background);
-        values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(backgroundBlur), CSTRING(backgroundBlack)};
     };
     class GVAR(addBuildingActions) {
         value = 0;
