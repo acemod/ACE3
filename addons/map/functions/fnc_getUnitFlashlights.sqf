@@ -18,16 +18,17 @@
 params ["_unit"];
 
 private _flashlights = [];
+private _cfgWeapons = configFile >> "CfgWeapons";
 
 {
     private _item = _x;
-    private _weaponConfig = configFile >> "CfgWeapons" >> _item;
+    private _weaponConfig = _cfgWeapons >> _item;
     {
         if (
             isText (_x >> "ACE_Flashlight_Colour")
             || {!(getArray (_x >> "ambient") in [[], [0,0,0]])}
-        ) then {
-            _flashlights pushBackUnique _item;
+        ) exitWith {
+            _flashlights pushBack _item;
         };
     } forEach [
         _weaponConfig >> "ItemInfo" >> "FlashLight",
