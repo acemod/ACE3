@@ -21,19 +21,18 @@ private _flashlights = [];
 private _cfgWeapons = configFile >> "CfgWeapons";
 
 {
-    private _item = _x;
-    private _weaponConfig = _cfgWeapons >> _item;
-    {
-        if (
+    private _weaponConfig = _cfgWeapons >> _x;
+    if (
+        -1 < [
+            _weaponConfig >> "ItemInfo" >> "FlashLight",
+            _weaponConfig >> "FlashLight"
+        ] findIf {
             isText (_x >> "ACE_Flashlight_Colour")
             || {!(getArray (_x >> "ambient") in [[], [0,0,0]])}
-        ) exitWith {
-            _flashlights pushBack _item;
-        };
-    } forEach [
-        _weaponConfig >> "ItemInfo" >> "FlashLight",
-        _weaponConfig >> "FlashLight"
-    ];
+        }
+    ) then {
+        _flashlights pushBack _x;
+    };
 } forEach ([_unit, true] call CBA_fnc_uniqueUnitItems);
 
 _flashlights
