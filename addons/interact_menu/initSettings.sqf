@@ -14,8 +14,7 @@
     localize LSTRING(AlwaysUseCursorInteraction),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_InteractionMenu)],
     false,
-    false,
-    {GVAR(alwaysUseCursorInteraction) = _this}
+    false
 ] call CBA_settings_fnc_init;
 
 [
@@ -24,8 +23,7 @@
     [LSTRING(cursorKeepCentered), LSTRING(cursorKeepCenteredDescription)],
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_InteractionMenu)],
     false,
-    false,
-    {GVAR(cursorKeepCentered) = _this}
+    false
 ] call CBA_settings_fnc_init;
 
 [
@@ -34,8 +32,7 @@
     localize LSTRING(background),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_InteractionMenu)],
     [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", localize LSTRING(backgroundBlur), localize LSTRING(backgroundBlack)], 0],
-    false,
-    {GVAR(menuBackground) = _this}
+    false
 ] call CBA_settings_fnc_init;
 
 [
@@ -44,8 +41,7 @@
     localize LSTRING(AlwaysUseCursorInteraction),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_SelfInteractionMenu)],
     true,
-    false,
-    {GVAR(alwaysUseCursorInteractionSelfInteraction) = _this}
+    false
 ] call CBA_settings_fnc_init;
 
 [
@@ -54,8 +50,7 @@
     [LSTRING(cursorKeepCentered), LSTRING(cursorKeepCenteredDescription)],
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_SelfInteractionMenu)],
     true,
-    false,
-    {GVAR(cursorKeepCenteredSelfInteraction) = _this}
+    false
 ] call CBA_settings_fnc_init;
 
 [
@@ -64,6 +59,5 @@
     localize LSTRING(background),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_SelfInteractionMenu)],
     [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", localize LSTRING(backgroundBlur), localize LSTRING(backgroundBlack)], 0],
-    false,
-    {GVAR(menuBackgroundSelf) = _this}
+    false
 ] call CBA_settings_fnc_init;

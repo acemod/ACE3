@@ -84,7 +84,7 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
     };
     if (_menuType == 1) exitWith {
         if (GVAR(menuBackgroundSelf)==1) then {[QGVAR(menuBackgroundSelf), true] call EFUNC(common,blurScreen);};
-        if (GVAR(menuBackgroundSelf)==2) then {0 cutRsc[QGVAR(menuBackgroundSelf), "PLAIN", 1, false];};
+        if (GVAR(menuBackgroundSelf)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
     };
 }] call CBA_fnc_addEventHandler;
 ["ace_interactMenuClosed", {
@@ -95,6 +95,6 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
     };
     if (_menuType == 1) exitWith {
         if (GVAR(menuBackgroundSelf)==1) then {[QGVAR(menuBackgroundSelf), false] call EFUNC(common,blurScreen);};
-        if (GVAR(menuBackgroundSelf)==2) then {(uiNamespace getVariable [QGVAR(menuBackgroundSelf), displayNull]) closeDisplay 0;};
+        if (GVAR(menuBackgroundSelf)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
     };
 }] call CBA_fnc_addEventHandler;
