@@ -1,7 +1,7 @@
 [
     QGVAR(selectorColor),
     "COLOR",
-    localize LSTRING(SelectorColor),
+    LSTRING(SelectorColor),
     format ["ACE %1", localize LSTRING(Category_InteractionMenu)],
     [1, 0, 0],
     false,
@@ -11,7 +11,7 @@
 [
     QGVAR(alwaysUseCursorInteraction),
     "CHECKBOX",
-    localize LSTRING(AlwaysUseCursorInteraction),
+    LSTRING(AlwaysUseCursorInteraction),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_InteractionMenu)],
     false,
     false
@@ -29,7 +29,7 @@
 [
     QGVAR(menuBackground),
     "LIST",
-    localize LSTRING(background),
+    LSTRING(background),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize LSTRING(Category_InteractionMenu)],
     [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", localize LSTRING(backgroundBlur), localize LSTRING(backgroundBlack)], 0],
     false
@@ -38,7 +38,7 @@
 [
     QGVAR(alwaysUseCursorSelfInteraction),
     "CHECKBOX",
-    localize LSTRING(AlwaysUseCursorInteraction),
+    LSTRING(AlwaysUseCursorInteraction),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize ELSTRING(Interaction,InteractionMenuSelf)],
     true,
     false
@@ -56,7 +56,7 @@
 [
     QGVAR(menuBackgroundSelf),
     "LIST",
-    localize LSTRING(background),
+    LSTRING(background),
     [format ["ACE %1", localize LSTRING(Category_InteractionMenu)], localize ELSTRING(Interaction,InteractionMenuSelf)],
     [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", localize LSTRING(backgroundBlur), localize LSTRING(backgroundBlack)], 0],
     false
