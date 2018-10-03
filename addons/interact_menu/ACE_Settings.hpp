@@ -1,11 +1,4 @@
 class ACE_Settings {
-    class GVAR(useListMenu) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(UseListMenu);
-    };
     class GVAR(colorTextMax) {
         value[] = {1, 1, 1, 1};
         typeName = "COLOR";
