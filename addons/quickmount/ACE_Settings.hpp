@@ -1,13 +1,4 @@
 class ACE_Settings {
-    class GVAR(enabled) {
-        value = 0;
-        typeName = "BOOL";
-        category = CSTRING(Category);
-        displayName = ECSTRING(common,Enabled);
-        description = CSTRING(KeybindDescription);
-        isClientSettable = 1;
-        force = 0;
-    };
     class GVAR(distance) {
         value = DEFAULT_DISTANCE;
         typeName = "SCALAR";

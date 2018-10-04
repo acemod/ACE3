@@ -15,8 +15,7 @@
  * Public: No
  */
 
-if (!GVAR(enabled) ||
-    {isNull ACE_player} ||
+if (isNull ACE_player ||
     {vehicle ACE_player != ACE_player} ||
     {!alive ACE_player} ||
     {ACE_player getVariable ["ace_unconscious", false]}
@@ -93,7 +92,7 @@ if (!isNull _target &&
                         {
                             if ((_x select 2) == _cargoIndex) exitWith {_cargoActionIndex = _forEachIndex};
                         } forEach (fullCrew [_target, "cargo", true]);
-                        
+
                         ACE_player action ["GetInCargo", _target, _cargoActionIndex];
                         TRACE_4("Geting In Cargo",_x,_role,_cargoActionIndex,_cargoIndex);
                     } else {
