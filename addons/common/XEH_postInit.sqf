@@ -48,7 +48,8 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
-    private _vis = _object getUnitTrait "camouflageCoef";
+    // May report nil. Default to factor 1.
+    private _vis = [_object getUnitTrait "camouflageCoef"] param [0, 1];
     if (_set > 0) then {
         if (_vis != 0) then {
             _object setVariable [QGVAR(oldVisibility), _vis];
@@ -259,6 +260,11 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
 ["unit", {
     ACE_player = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
+
+// Clear uniqueItems cache on loadout change
+["loadout", {
+    GVAR(uniqueItemsCache) = nil;
+}] call CBA_fnc_addPlayerEventHandler;
 
 GVAR(OldIsCamera) = false;
 

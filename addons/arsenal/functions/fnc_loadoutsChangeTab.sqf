@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles tab changing for the loadouts display.
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display", "_control"];
 
@@ -73,5 +73,7 @@ switch (ctrlIDC _control) do {
 } foreach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl, _renameButtonCtrl];
 
 GVAR(currentLoadoutsTab) = ctrlIDC _control;
+
+[QGVAR(loadoutsTabChanged), [_display, _control]] call CBA_fnc_localEvent;
 
 [_display, _control] call FUNC(fillLoadoutsList);

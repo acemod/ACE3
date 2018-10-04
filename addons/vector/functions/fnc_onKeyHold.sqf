@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * PFH executed while holding a vector key down.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 if (!((currentWeapon ACE_player) isKindOf ["ACE_Vector", configFile >> "CfgWeapons"])) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;

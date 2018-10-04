@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: MikeMatrix
  * Validate if an array is in the propper color format.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 scopeName "main";
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Githawk, PabstMirror
  * Adds rearm supply actions to a vehicle or ammo container.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-clients
 

@@ -9,6 +9,8 @@ if (!hasInterface) exitWith {};
     if !([ACE_player, vehicle ACE_player, ["isNotInside", "isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player call CBA_fnc_canUseWeapon || {(vehicle ACE_player) isKindOf "StaticWeapon"}) exitWith {false};
+    // Ignore if controlling UAV (blocks radar keybind)
+    if (!isNull (ACE_controlledUAV param [0, objNull])) exitWith {false};
 
     // Statement
     [ACE_player] call FUNC(checkAmmo);

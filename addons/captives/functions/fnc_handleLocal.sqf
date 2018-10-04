@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Called when a unit switched locality
@@ -15,9 +16,6 @@
  * Public: No
  */
 
-
-#include "script_component.hpp"
-
 params ["_unit", "_local"];
 
 // Make sure that if the unit is captive or surrendered it has a AnimChanged EH running ONLY on the machine that owns it
@@ -29,7 +27,7 @@ if (_local) then {
         if (_unit getVariable [QGVAR(handcuffAnimEHID), -1] != -1) exitWith {};
 
         // Otherwise, restart the AnimChanged EH in the new machine
-        private _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedHandcuffed)];
+        private _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedHandcuffed)}];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
     };
@@ -40,7 +38,7 @@ if (_local) then {
         if (_unit getVariable [QGVAR(surrenderAnimEHID), -1] != -1) exitWith {};
 
         // Otherwise, restart the AnimChanged EH in the new machine
-        private _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedSurrendered)];
+        private _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedSurrendered)}];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
     };

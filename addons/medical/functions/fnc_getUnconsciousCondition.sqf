@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get whatever or not a unit should be or stay unconscious.
@@ -13,8 +14,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

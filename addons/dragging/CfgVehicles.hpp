@@ -30,7 +30,7 @@ class CfgVehicles {
         GVAR(dragDirection) = 0;
     };
 
-    // Big 1.70 Autonomous AA Turrets
+    // Big 1.70 and 1.84 Autonomous AA Turrets
     class StaticMGWeapon;
     class AAA_System_01_base_F: StaticMGWeapon { // Praetorian 1C (aka Phalanx CIWS)
         GVAR(canCarry) = 0;
@@ -41,6 +41,30 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
     class SAM_System_02_base_F: StaticMGWeapon { // Mk21 Centurion
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class SAM_System_03_base_F: StaticMGWeapon { // MIM-145 Defender
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class SAM_System_04_base_F: StaticMGWeapon { // S-750 Rhea
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class B_Ship_Gun_01_base_F: StaticMGWeapon { // Mk45 Hammer
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class B_Ship_MRLS_01_base_F: StaticMGWeapon { // Mk41 VLS
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class Radar_System_01_base_F: StaticMGWeapon { // AN/MPQ-105 Radar
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    class Radar_System_02_base_F: StaticMGWeapon { // R-750 Cronus Radar
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
@@ -248,5 +272,25 @@ class CfgVehicles {
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1.2,0};
         GVAR(dragDirection) = 180;
+    };
+    class FloatingStructure_F;
+    class Land_Camping_Light_F: FloatingStructure_F {
+        GVAR(canCarry) = 1;
+        // if y < 0.9 player gets damage
+        GVAR(carryPosition)[] = {0,0.9,1};
+        GVAR(carryDirection) = 0;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition)[] = {0,0.7,0};
+        GVAR(dragDirection) = 0;
+    };
+    class Land_Camping_Light_off_F: ThingX {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition)[] = {0,0.9,1};
+        GVAR(carryDirection) = 0;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition)[] = {0,0.7,0};
+        GVAR(dragDirection) = 0;
     };
 };

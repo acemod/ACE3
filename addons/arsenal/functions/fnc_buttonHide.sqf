@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Hide / show arsenal interface.
@@ -10,8 +12,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display"];
 
@@ -48,5 +48,12 @@ private _showToggle = !ctrlShown (_display displayCtrl IDC_menuBar);
     IDC_buttonCurrentMag,
     IDC_buttonCurrentMag2,
     IDC_iconBackgroundCurrentMag,
-    IDC_iconBackgroundCurrentMag2
+    IDC_iconBackgroundCurrentMag2,
+    IDC_statsButton,
+    IDC_statsPreviousPage,
+    IDC_statsNextPage,
+    IDC_statsCurrentPage,
+    IDC_statsButtonClose
 ];
+
+[QGVAR(statsToggle), [_display, _showToggle]] call CBA_fnc_localEvent;

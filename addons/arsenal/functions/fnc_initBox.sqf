@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Initialize a box / object for arsenal.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global", true, [true]]];
 
@@ -49,7 +49,7 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
             {
                 params ["_target", "_player"];
             
-                [_player, _target, ["isNotSwimming", "isNotCarrying", "isNotDragging", "notOnMap", "isNotEscorting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)
+                [_player, _target] call EFUNC(common,canInteractWith)
             }, 
             {},
             []

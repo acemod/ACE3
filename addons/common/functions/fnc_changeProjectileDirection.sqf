@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Adjust a projectiles velocity and dir + up vector.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_projectile", "_adjustDir", "_adjustUp", ["_adjustSpeed",0]];
 

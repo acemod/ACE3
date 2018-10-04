@@ -31,7 +31,7 @@
             <Japanese>デバッグ情報を RPT とクリップボードに送った。</Japanese>
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
             <Chinesesimp>复制除错讯息至剪贴簿与RPT报告档中。</Chinesesimp>
-            <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中。</Chinese>
+            <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -63,7 +63,7 @@
             <Japanese>現在のアニメーションの状況を初期化します。</Japanese>
             <Korean>자신의 동작 상태 초기화</Korean>
             <Chinesesimp>当ACE发生动作BUG时，点此修复。</Chinesesimp>
-            <Chinese>當ACE發生動作BUG時，點此修復。</Chinese>
+            <Chinese>當ACE發生動作BUG時，點此修復</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -98,19 +98,19 @@
             <Chinese>顯示新聞消息於主選單</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
-            <English>Logistics</English>
-            <German>Logistik</German>
-            <Polish>Logistyka</Polish>
-            <Portuguese>Logística</Portuguese>
-            <Russian>Логистика</Russian>
-            <Czech>Logistika</Czech>
-            <Spanish>Logística</Spanish>
-            <Italian>Logistica</Italian>
-            <French>Logistique</French>
-            <Japanese>ロジスティクス</Japanese>
-            <Korean>보급</Korean>
-            <Chinesesimp>后勤设定</Chinesesimp>
-            <Chinese>後勤設定</Chinese>
+            <English>ACE Logistics</English>
+            <German>ACE Logistik</German>
+            <Polish>ACE Logistyka</Polish>
+            <Portuguese>ACE Logística</Portuguese>
+            <Russian>ACE Логистика</Russian>
+            <Czech>ACE Logistika</Czech>
+            <Spanish>ACE Logística</Spanish>
+            <Italian>ACE Logistica</Italian>
+            <French>ACE Logistique</French>
+            <Japanese>ACE ロジスティクス</Japanese>
+            <Korean>ACE 보급</Korean>
+            <Chinesesimp>ACE 后勤设定</Chinesesimp>
+            <Chinese>ACE 後勤設定</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>

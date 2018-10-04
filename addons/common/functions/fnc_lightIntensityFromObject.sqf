@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Calculate light intensity object 1 recieves from object 2
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_lightSource"];
 
@@ -78,6 +78,21 @@ if (_lightSource isKindOf "CAManBase") then {
         //systemChat  format ["%1 %2", (linearConversion [0, 30, _distance, 1, 0, true]), (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true])];
 
     } forEach _lights;
+
+    if (isCollisionLightOn _lightSource) then {
+        private _markerLights = [
+            _lightSource,
+            {configProperties [configFile >> "CfgVehicles" >> typeOf _this >> "MarkerLights", "isClass _x", true]},
+            uiNamespace,
+            format [QEGVAR(cache,MarkerLights_%1), typeOf _lightSource],
+            1E11
+        ] call FUNC(cachedCall);
+        {
+            private _position = _lightSource modelToWorld (_lightSource selectionPosition getText (_x >> "name"));
+            private _distance = _unitPos distance _position;
+            _lightLevel = _lightLevel max (linearConversion [0, 10, _distance, 1, 0, true] * linearConversion [0, 1300, getNumber (_x >> "intensity"), 0, 1, true]);
+        } forEach _markerLights;
+    };
 
     // handle campfires
     if (inflamed _lightSource) then {

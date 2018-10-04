@@ -25,7 +25,7 @@
             <English>Quickly enter the vehicle you are directly looking at.</English>
             <German>Schnellzugang in das Fahrzeug, welches man direkt anschaut.</German>
             <Italian>Entra velocemente nel veicolo che stai guardando.</Italian>
-            <Japanese>直接見ている車両へ迅速に搭乗します。</Japanese>
+            <Japanese>見ている車両へ迅速に搭乗します。</Japanese>
             <Chinesesimp>快速进入你正在看的载具之中</Chinesesimp>
             <Chinese>快速進入你正在看的載具之中</Chinese>
             <Polish>Szybko wsiądź do pojazdu, na który patrzysz.</Polish>
@@ -35,7 +35,7 @@
             <English>Vehicle Full</English>
             <German>Fahrzeug voll</German>
             <Italian>Veicolo Pieno</Italian>
-            <Japanese>車両は満員</Japanese>
+            <Japanese>車両は満員です</Japanese>
             <Chinesesimp>载具已满</Chinesesimp>
             <Chinese>載具已滿</Chinese>
             <Polish>Pojazd pełny</Polish>
@@ -57,7 +57,7 @@
             <Italian>Distanza massima per controllare i veicoli.</Italian>
             <Japanese>車両を確認できる最大距離</Japanese>
             <Chinesesimp>最大可检查载具的距离.</Chinesesimp>
-            <Chinese>最大可檢查載具的距離.</Chinese>
+            <Chinese>最大可檢查載具的距離</Chinese>
             <Polish>Maksymalna odległość do pojazdu.</Polish>
             <Korean>탑승 가능한 차량과의 거리</Korean>
         </Key>
@@ -65,7 +65,7 @@
             <English>Vehicle Locked</English>
             <German>Fahrzeug abgeschlossen</German>
             <Italian>Veicolo Bloccato.</Italian>
-            <Japanese>車両は施錠されている</Japanese>
+            <Japanese>車両は施錠されています</Japanese>
             <Chinesesimp>载具已上锁</Chinesesimp>
             <Chinese>載具已上鎖</Chinese>
             <Polish>Pojazd zablokowany</Polish>
@@ -86,8 +86,8 @@
             <German>Maximale Geschwindigkeit (km/h) für Schnellzugang</German>
             <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
             <Japanese>プレイヤーが搭乗できる限界速度 (km/h)</Japanese>
-            <Chinesesimp>设置玩家能在最高多少的速度之下进入载具。</Chinesesimp>
-            <Chinese>設置玩家能在最高多少的速度之下進入載具。</Chinese>
+            <Chinesesimp>设置玩家能在最高速度是多少的情况之下进入载具。</Chinesesimp>
+            <Chinese>設置玩家能在最高多少的速度之下進入載具</Chinese>
             <Polish>Maksymalna prędkość pojazdu (km/h) pozwalająca graczowi wsiąść.</Polish>
             <Korean>플레이어가 탑승 가능한 목표 차량의 최대 속도</Korean>
         </Key>
@@ -96,7 +96,7 @@
             <German>Priorisierter Sitzplatz</German>
             <Italian>Priorità Sedile</Italian>
             <Japanese>優先席</Japanese>
-            <Chinesesimp>优先座位</Chinesesimp>
+            <Chinesesimp>优先位置</Chinesesimp>
             <Chinese>優先座位</Chinese>
             <Polish>Priorytet zajmowanych pozycji</Polish>
             <Korean>좌석 우선순위 지정</Korean>
@@ -105,9 +105,9 @@
             <English>Seat priority on entry</English>
             <German>Priorisierter Sitzplatz zum Schnellzugang</German>
             <Italian>Priorità del sedile in entrata</Italian>
-            <Japanese>搭乗の際の優先順位</Japanese>
-            <Chinesesimp>优先想进入哪个座位。</Chinesesimp>
-            <Chinese>優先想進入哪個座位。</Chinese>
+            <Japanese>搭乗時の優先順位</Japanese>
+            <Chinesesimp>优先想进入哪个位置。</Chinesesimp>
+            <Chinese>優先想進入哪個座位</Chinese>
             <Polish>Priorytet pozycji w pojeździe</Polish>
             <Korean>탑승할 좌석의 우선순위를 지정합니다.</Korean>
         </Key>

@@ -2,18 +2,18 @@
 <Project name="ACE">
     <Package name="Advanced_Fatigue">
         <Key ID="STR_ACE_Advanced_Fatigue_DisplayName">
-            <English>Advanced Fatigue</English>
-            <German>Erweiterte Ausdauer</German>
-            <Chinese>進階疲勞</Chinese>
-            <Chinesesimp>进阶疲劳</Chinesesimp>
-            <Japanese>アドバンスド疲労</Japanese>
-            <Italian>Fatica Avanzata</Italian>
-            <Korean>고급 피로도</Korean>
+            <English>ACE Advanced Fatigue</English>
+            <German>ACE Erweiterte Ausdauer</German>
+            <Chinese>ACE 進階疲勞</Chinese>
+            <Chinesesimp>ACE 进阶疲劳</Chinesesimp>
+            <Japanese>ACE アドバンスド ファティーグ</Japanese>
+            <Italian>ACE Fatica Avanzata</Italian>
+            <Korean>ACE 고급 피로도</Korean>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
             <English>Performance Factor</English>
             <German>Leistungsfaktor</German>
-            <Japanese>パフォーマンス要因</Japanese>
+            <Japanese>パフォーマンス因数</Japanese>
             <Polish>Współczynnik wydolności</Polish>
             <Korean>성능 요인</Korean>
             <French>Facteur de performance</French>
@@ -24,7 +24,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
             <German>Beinflusst die Leistungsfähigkeit aller Spieler ohne eigenen Leistungsfaktor. Ein höherer Wert bedeutet bessere Leistung.</German>
-            <Japanese>非カスタム要因をもつ全プレイヤーへ全体的に動作を影響させます。高いほど良い効果があります。</Japanese>
+            <Japanese>個別の因数を設定されていない、全てのプレイヤーのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność organizmu u wszystkich graczy bez ustawionego niestandardowego współczynnika. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 임의로 설정된 값 없이 영향받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Influence les performances générales de tous les joueurs sans facteurs personalisés. Une valeur plus élevée implique de meilleures performances.</French>
@@ -35,7 +35,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_EdenDescription">
             <English>Influences the overall performance of this unit. Higher means better.</English>
             <German>Beinflusst die Leistungsfähigkeit dieser Einheit. Ein höherer Wert bedeutet bessere Leistung.</German>
-            <Japanese>このユニットの全体的な動作に影響させます。高いほど良い効果があります。</Japanese>
+            <Japanese>このユニットのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność tej jednostki. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 이 단위로 영향을 받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Influence les performances générales de cette unité. Une valeur plus élevée implique de meilleures performances.</French>
@@ -46,7 +46,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor">
             <English>Recovery Factor</English>
             <German>Erholungsfaktor</German>
-            <Japanese>回復要因</Japanese>
+            <Japanese>回復因数</Japanese>
             <Polish>Współczynnik regeneracji</Polish>
             <Korean>회복 요인</Korean>
             <French>Facteur de récupération</French>
@@ -57,7 +57,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
             <English>Changes how fast the player recovers when resting. Higher is faster.</English>
             <German>Ändert, wie schnell ein Spieler Ausdauer regeneriert. Ein höherer Wert bedeutet eine schnellere Regeneration.</German>
-            <Japanese>休憩時はプレイヤーが早く回復します。高いほど早くなります。</Japanese>
+            <Japanese>プレイヤーが休憩をとる際に、どのくらいの速度でスタミナ回復するかを設定します。 値が高ければ高いほど、早くなります。</Japanese>
             <Polish>Wpływa na czas regeneracji podczas postoju. Więcej znaczy szybciej.</Polish>
             <Korean>얼마나 빨리 회복하는지를 바꿉니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Change la vitesse à laquelle les joueurs récupèrent leur endurance lorsqu'ils se reposent. Une valeur plus élevée implique une récupération plus rapide.</French>
@@ -68,7 +68,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor">
             <English>Load Factor</English>
             <German>Gewichtsfaktor</German>
-            <Japanese>負荷要因</Japanese>
+            <Japanese>重量因数</Japanese>
             <Polish>Współczynnik masy ekwipunku</Polish>
             <Korean>부담 요인</Korean>
             <French>Facteur d'encombrement</French>
@@ -79,7 +79,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
             <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
             <German>Erhöht oder verringert, wie viel Einfluss das Ausrüstungsgewicht auf die Leistung hat. Null heißt, dass es keinen Einfluss hat.</German>
-            <Japanese>重量の増減によりプレイヤーの動作へ影響を与えます。装備を持っていない場合、影響はしません。</Japanese>
+            <Japanese>装備重量がプレイヤーのパフォーマンスにもたらす影響を増減させます。 値をゼロに設定した場合、装備重量はパフォーマンスに影響を与えません。</Japanese>
             <Polish>Zmniejsza lub zwiększa wpływ ciężaru ekwipunku na wydolność gracza. Zero oznacza kompletny brak wpływu na wydolność.</Polish>
             <Korean>플레이어가 무게에 따라 얼마나 영향받는지를 증가시키거나 감소시킵니다. 0의 경우 플레이어가 장비 무게에 영향받지 않습니다.</Korean>
             <French>Augmente ou réduit l'influence que le poids à sur les performances des joueurs. Zéro implique que le poids de l'équipement n'a pas d'influence sur les performances.</French>
@@ -90,7 +90,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor">
             <English>Terrain Gradient Factor</English>
             <German>Terrainsteigungsfaktor</German>
-            <Japanese>地形の勾配による要因</Japanese>
+            <Japanese>地形勾配因数</Japanese>
             <Polish>Współczynnik terenu</Polish>
             <Korean>지형 경사도 요인</Korean>
             <French>Facteur d'inclinaison du terrain</French>
@@ -101,7 +101,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
             <English>Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.</English>
             <German>Beeinflusst, wie stark Steigungen den Ausdauerverbrauch erhöhen. Ein höherer Wert erhöht den Ausdauerverbrauch.</German>
-            <Japanese>地形によって影響する体力の消費量を決定します。高数値ではより体力を消費します。</Japanese>
+            <Japanese>急勾配の地形がどれだけスタミナ消費を増大させるかを設定します。 値が高ければ高いほど、スタミナ消費が大きくなります。</Japanese>
             <Polish>Wpływa na to w jakim stopniu stromy teren wpływa na utratę wytrzymałości. Więcej oznacza szybszą utratę wytrzymałości.</Polish>
             <Korean>경사도에 따라 얼마나 피로해지는지를 정합니다.  값이 클수록 더 많은 피로를 유발합니다.</Korean>
             <French>Configure l'influence de l'inclinaison du terrain sur la perte d'endurance. Une valeur plus élevée implique une perte d'endurance plus importante.</French>
@@ -109,10 +109,22 @@
             <Chinese>設定陡峭的地形將會影響多少體力的流失，值越高代表體力流失越快</Chinese>
             <Chinesesimp>设定陡峭的地形将会影响多少体力的流，失值越高代表体力流失越快</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor">
+            <English>Sway factor</English>
+            <Japanese>手ぶれ因数</Japanese>
+            <Chinesesimp>抖动因数</Chinesesimp>
+            <Chinese>抖動因素</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
+            <English>Influences the amount of weapon sway. Higher means more sway.</English>
+            <Japanese>武器を持つ手のぶれ度合いを設定します。 値が高ければ高いほど、手ぶれが強くなります。</Japanese>
+            <Chinesesimp>影响手持武器的晃动程度,数值越高,抖动的越厉害.</Chinesesimp>
+            <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
+        </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
             <German>Aktiv</German>
-            <Japanese>有効化</Japanese>
+            <Japanese>アドバンスド ファティーグを有効化する</Japanese>
             <Polish>Włączone</Polish>
             <Korean>활성화</Korean>
             <French>Activé</French>
@@ -123,7 +135,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
             <English>Enables/disables Advanced Fatigue.</English>
             <German>Aktiviert/deaktiviert Advanced Fatigue.</German>
-            <Japanese>アドバンスド疲労の有効化と無効化</Japanese>
+            <Japanese>アドバンスド ファティーグを有効化します。</Japanese>
             <Polish>Włącza/wyłącza zaawansowaną wytrzymałość</Polish>
             <Korean>고급 피로도 활성화/비활성화</Korean>
             <French>Active/désactive la fatigue avancée.</French>
@@ -134,7 +146,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar">
             <English>Show stamina bar</English>
             <German>Zeige Ausdauerleiste</German>
-            <Japanese>体力バーを表示</Japanese>
+            <Japanese>スタミナバーを表示する</Japanese>
             <Polish>Pokaż pasek wytrzymałości</Polish>
             <Korean>피로도 막대</Korean>
             <French>Afficher la barre d'endurance</French>
@@ -145,7 +157,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar_Description">
             <English>Shows the stamina bar.</English>
             <German>Zeigt die Ausdauerleiste an.</German>
-            <Japanese>体力バーを表示します。</Japanese>
+            <Japanese>スタミナバーを表示します。</Japanese>
             <Polish>Pokazuje pasek wytrzymałości.</Polish>
             <Korean>피로도 막대를 보여줍니다.</Korean>
             <French>Affiche la barre d'endurance.</French>

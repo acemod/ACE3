@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Trues the c1 ballistic coefficient
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _referenceDrop = GVAR(truingDropDropData) select 0;
 private _actualDrop = GVAR(truingDropDropData) select 2;

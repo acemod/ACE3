@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Starts tracking a round that will frag.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_gun", "_type", "_round"];
 TRACE_3("addPfhRound",_gun,_type,_round);

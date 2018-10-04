@@ -497,6 +497,27 @@
             <Chinesesimp>无 (无法检视地图)</Chinesesimp>
             <Chinese>無 (無法檢視地圖)</Chinese>
         </Key>
+        <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_DisplayName">
+            <English>MicroDAGR - Waypoint Precision</English>
+            <German>MicroDAGR - Wegpunkt Genauigkeit</German>
+        </Key>
+        <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
+            <English>Controls how precise the waypointdistance can be displayed</English>
+            <German>Legt die Genauigkeit der Entfernung von Wegpunkten fest</German>
+        </Key>
+        <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
+            <English>100m</English>
+            <German>100m</German>
+        </Key>
+        <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
+            <English>10m</English>
+            <German>10m</German>
+        </Key>
+        <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
+            <English>1m</English>
+            <German>1m</German>
+        </Key>
+
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
             <Polish>Moduł ten pozwala kontrolować jak duża ilość informacji jest załadowana do przedmiotów MicroDAGR. Mniejsza ilość danych ogranicza widok mapy pokazując mniej rzeczy na minimapie.</Polish>

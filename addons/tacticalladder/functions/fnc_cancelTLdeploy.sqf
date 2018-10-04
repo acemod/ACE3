@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko, Ruthberg, commy2
  * Cancel tactical ladder deployment
@@ -10,11 +11,10 @@
  * None
  *
  * Example:
- * [_ladder] call ace_tacticalladder_fnc_cancelTLdeploy
+ * [player, 1] call ace_tacticalladder_fnc_cancelTLdeploy
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __ANIMS ["extract_1","extract_2","extract_3","extract_4","extract_5","extract_6","extract_7","extract_8","extract_9","extract_10","extract_11"]
 

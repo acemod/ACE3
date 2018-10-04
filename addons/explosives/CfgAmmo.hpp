@@ -15,10 +15,6 @@ class CfgAmmo {
     class APERSMine_Range_Ammo: MineBase;
     class ATMine_Range_Ammo: MineBase;
 
-    class UnderwaterMine_Range_Ammo: MineBase;
-    class UnderwaterMineAB_Range_Ammo: UnderwaterMine_Range_Ammo;
-    class UnderwaterMinePDM_Range_Ammo: UnderwaterMine_Range_Ammo;
-
     class DirectionalBombCore: TimeBombCore;
     class DirectionalBombBase: DirectionalBombCore;
 
@@ -182,5 +178,9 @@ class CfgAmmo {
         GVAR(magazine) = "TrainingMine_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.15};
+    };
+    class MineBase;
+    class UnderwaterMine_Range_Ammo: MineBase {
+        GVAR(size) = 1;
     };
 };

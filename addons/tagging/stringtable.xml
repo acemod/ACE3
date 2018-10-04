@@ -6,7 +6,7 @@
             <Russian>Маркировка</Russian>
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
-            <German>Markierungssystem</German>
+            <German>Markierungssystem (Spraydose)</German>
             <Korean>뿌리기</Korean>
             <French>Marquage</French>
             <Italian>Marcamento</Italian>
@@ -30,7 +30,7 @@
             <Russian>Быстрый маркер</Russian>
             <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
-            <German>Schnelle Markierung</German>
+            <German>Schnelle Markierung (Spraydose)</German>
             <Korean>빠른 뿌리기</Korean>
             <French>Marquage rapide</French>
             <Italian>Marcamento Rapido</Italian>
@@ -87,7 +87,7 @@
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
-            <German>Markieren</German>
+            <German>Markieren (Spraydose)</German>
             <Spanish>Marcar</Spanish>
             <Polish>Oznakuj</Polish>
             <Italian>Marca</Italian>
