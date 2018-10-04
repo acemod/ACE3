@@ -18,7 +18,7 @@ params ["_deviceID", "_deviceData"];
 
 private _data = [_deviceID] call FUNC(getDeviceData);
 
-if (count _data == 0) exitwith {};
+if (_data isEqualTo []) exitwith {};
 if (_deviceData isEqualTo (_data select 3)) exitwith {};
 
 ["bft_updateDeviceData", [_deviceID, _deviceData]] call CBA_fnc_globalEvent;

@@ -23,7 +23,7 @@
 disableSerialization;
 
 // make sure there is no PFH already, the interface is open and notifications are available
-if (isNil QGVAR(processNotificationsPFH) && !(I_CLOSED) && count GVAR(notificationCache) != 0) then {
+if (isNil QGVAR(processNotificationsPFH) && {!I_CLOSED} && {!(GVAR(notificationCache) isEqualTo [])}) then {
     private _displayName = I_GET_NAME;
     private _display = uiNamespace getVariable _displayName;
     private _ctrl = _display displayCtrl IDC_NOTIFICATION;

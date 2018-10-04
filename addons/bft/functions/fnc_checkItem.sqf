@@ -18,9 +18,10 @@ params ["_unit", "_item"];
 
 if !(local _unit) exitwith {};
 
-if (isText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) && {getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) != ""}) then {
+private _configEntry = configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType);
+if (isText _configEntry && {(getText _configEntry) != ""}) then {
 
-    if !(isClass (configFile >> "ACE_BFT" >> "Devices" >> (getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType))))) exitwith {};
+    if !(isClass (configFile >> "ACE_BFT" >> "Devices" >> (getText _configEntry))) exitwith {};
 
     systemChat format["%1 BFT enabled item %2", _unit, _item];
     diag_log format["%1 BFT enabled item %2", _unit, _item];
@@ -34,7 +35,7 @@ if (isText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) && {getTex
         private _previousMags = magazinesDetail _unit;
         _unit addMagazine _magazine;
         private _newMags = (magazinesDetail _unit) - _previousMags;
-        if ((count _newMags) == 0) exitWith {ERROR("failed to add magazine (inventory full?)");};
+        if (_newMags isEqualTo []) exitWith {ERROR("failed to add magazine (inventory full?)");};
         private _newMagName = _newMags select 0;
 
         private _magID = [_newMagName] call FUNC(getMagazineID);

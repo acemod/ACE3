@@ -18,7 +18,7 @@ params ["_varName"];
 private _variable = missionNamespace getvariable [_varName, []];
 private _nextID = 0;
 
-if (count _variable > 0) then {
+if !(_variable isEqualTo []) then {
     _nextID = ((_variable select (count _variable - 1)) select 0) + 1;
 };
 

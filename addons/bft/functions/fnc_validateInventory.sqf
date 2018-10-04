@@ -26,7 +26,7 @@ private _matchedIDs = [];
 {
     private _magID = [_x] call FUNC(getMagazineID);
     private _data = [_magID] call FUNC(getDeviceData);
-    if (count _data > 0) then {
+    if !(_data isEqualTo []) then {
         if !(_magID in _ownedDevices) then {
             systemChat format["validate - new picked up ID: %1 %2", _unit, _magID];
             diag_log format["validate - new picked up  ID: %1 %2", _unit, _magID];
@@ -36,8 +36,9 @@ private _matchedIDs = [];
     } else {
         if (!(_magId in GVAR(pendingIdAssignmentList))) then {
             private _magazine = (magazines _unit) select _forEachIndex;
-            if (getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)) != "") then {
-                ["bft_itemCreated", [_unit, getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)), _magazine, _magID]] call CBA_fnc_serverEvent;
+            private _configText = getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type));
+            if (_configText != "") then {
+                ["bft_itemCreated", [_unit, _configText, _magazine, _magID]] call CBA_fnc_serverEvent;
             };
         };
     };

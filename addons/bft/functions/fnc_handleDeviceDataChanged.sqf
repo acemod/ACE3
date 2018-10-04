@@ -41,7 +41,7 @@ if (_this select 1) then { // add new
     if (!(D_GET_OWNER(_data) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_data) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_data)) && alive D_GET_OWNER(_data)}) exitwith {};
     if (D_GET_DEVICE_STATE_VALUE(_data) in [STATE_OFFLINE, STATE_DESTROYED]) exitwith {};
     private _displayData = _data call FUNC(deviceDataToMapData);
-    if (count _displayData > 0) then {
+    if !(_displayData isEqualTo []) then {
         GVAR(availableDevices) pushback _displayData;
     };
 } else { // update existing

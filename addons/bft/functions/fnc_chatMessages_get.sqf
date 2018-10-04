@@ -24,7 +24,7 @@ params ["_deviceId", "_otherDeviceId"];
 private _deviceDataOne = [_deviceId] call FUNC(getDeviceData);
 private _deviceDataTwo = [_otherDeviceId] call FUNC(getDeviceData);
 
-if (_deviceDataOne isEqualTo [] || _deviceDataTwo isEqualTo []) exitwith {[]}; // neither are valid devices
+if (_deviceDataOne isEqualTo [] || {_deviceDataTwo isEqualTo []}) exitwith {[]}; // neither are valid devices
 
 private _messagesId = [_deviceId, _otherDeviceId] call FUNC(chatMessage_getId);
 

@@ -29,8 +29,9 @@ private _interfaces = [];
 if (_deviceOwner isKindOf "ParachuteBase" || {_deviceOwner isKindOf "CAManBase"}) then {
     // personal device
     private _deviceType = D_GET_DEVICETYPE(_deviceData);
-    if (isText (configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "interface")) then {
-        private _interface = getText (configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "interface");
+    private _config = configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "interface";
+    if (isText _config) then {
+        private _interface = getText _config;
         if (_interface != "") then {
             _interfaces pushBack _interface;
         };

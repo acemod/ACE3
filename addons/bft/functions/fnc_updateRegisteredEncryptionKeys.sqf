@@ -30,14 +30,14 @@ if (isNil "_add") then {
     if (_add) then {
         // figure out the real difference
         _keys = _keys - GVAR(registeredEncyptionKeys);
-        if (count _keys > 0) then {
+        if !(_keys isEqualTo []) then {
             GVAR(registeredEncyptionKeys) = GVAR(registeredEncyptionKeys) + _keys;
             _changed = true;
         };
     } else {
         // figure out the real difference
         _keys = GVAR(registeredEncyptionKeys) - (GVAR(registeredEncyptionKeys) - _keys);
-        if (count _keys > 0) then {
+        if !(_keys isEqualTo []) then {
             GVAR(registeredEncyptionKeys) = GVAR(registeredEncyptionKeys) - _keys;
             _changed = true;
         };

@@ -20,4 +20,4 @@ if (typeName _side == "OBJECT") then {
     _side = str side _side;
 };
 
-(missionNamespace getvariable [format[QGVAR(%1_encryptionKey), _side], [""]])
+missionNamespace getvariable [format[QGVAR(%1_encryptionKey), _side], [""]]

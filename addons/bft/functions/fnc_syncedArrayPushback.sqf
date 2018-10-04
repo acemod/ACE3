@@ -16,6 +16,6 @@
 
 params ["_varName", "_data"];
 
-if (typeName _data == "ARRAY" && {(count _data == 0)}) exitwith {};
+if (typeName _data == "ARRAY" && {_data isEqualTo []}) exitwith {};
 
 ["bft_syncedArrayPushback", [_varName, _data]] call CBA_fnc_globalEvent;

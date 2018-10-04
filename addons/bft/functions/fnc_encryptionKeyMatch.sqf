@@ -16,4 +16,4 @@
 
 params ["_keySetOne", "_keySetTwo"];
 
-count (_keySetOne arrayIntersect _keySetTwo) > 0
+!((_keySetOne arrayIntersect _keySetTwo) isEqualTo [])

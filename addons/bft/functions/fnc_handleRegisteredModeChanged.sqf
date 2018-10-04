@@ -27,7 +27,7 @@ if (count _viewModes == 0) exitWith {};
 if (_add) then {
     {
         if !(isNull D_GET_OWNER(_x)) then {
-            if (!(D_GET_OWNER(_x) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_x) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_x)) && alive D_GET_OWNER(_data)}) exitwith {};
+            if (!(D_GET_OWNER(_x) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_x) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_x)) && alive D_GET_OWNER(_x)}) exitwith {};
             if (D_GET_DEVICE_STATE_VALUE(_x) in [STATE_OFFLINE, STATE_DESTROYED]) exitwith {};
             private _deviceModes = D_GET_DEVICEMODES(_x);
             if !([_deviceModes, _viewModes] call FUNC(encryptionKeyMatch)) exitWith {};
@@ -42,7 +42,7 @@ if (_add) then {
         };
     } foreach GVAR(deviceData);
 } else { // if we remove one, we only have to check the already available devices
-    private ["_device","_i"];
+    private ["_device"];
 
     for "_i" from (count GVAR(availableDevices) - 1) to 0 step -1 do {
         _device = GVAR(availableDevices) select _i;
@@ -52,6 +52,6 @@ if (_add) then {
         };
     };
 };
-if (count GVAR(currentOpenedDevice) > 0) then {
+if !(GVAR(currentOpenedDevice) isEqualTo []) then {
     [GVAR(currentOpenedDevice)] call FUNC(removeDeviceByOwner);
 };

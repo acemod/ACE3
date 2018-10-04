@@ -16,8 +16,9 @@
 
 params ["_side", "_type"];
 
-if (isClass (configFile >> "ACE_BFT" >> "Types" >> _type)) exitwith {
-    getText (configFile >> "ACE_BFT" >> "Types" >> _type >> "iconPath");
+private _config = configFile >> "ACE_BFT" >> "Types" >> _type;
+if (isClass _config) exitwith {
+    getText (_config >> "iconPath");
 };
 
 "\A3\ui_f\data\map\markers\nato\b_inf.paa"

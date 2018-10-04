@@ -20,7 +20,8 @@
 params ["_deviceId", "_otherDeviceId"];
 
 private _id = QGVAR(chatMessages);
-private _deviceIds = [_deviceId, _otherDeviceId] sort true;
+private _deviceIds = [_deviceId, _otherDeviceId];
+_deviceIds sort true;
 
 {
     _id = _id + _x;

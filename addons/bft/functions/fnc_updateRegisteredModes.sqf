@@ -30,14 +30,14 @@ if (isNil "_add") then {
     if (_add) then {
         // figure out the real difference
         _modes = _modes - GVAR(registeredViewModes);
-        if (count _modes > 0) then {
+        if !(_modes isEqualTo []) then {
             GVAR(registeredViewModes) = GVAR(registeredViewModes) + _modes;
             _changed = true;
         };
     } else {
         // figure out the real difference
         _modes = GVAR(registeredViewModes) - (GVAR(registeredViewModes) - _modes);
-        if (count _modes > 0) then {
+        if !(_modes isEqualTo []) then {
             GVAR(registeredViewModes) = GVAR(registeredViewModes) - _modes;
             _changed = true;
         };

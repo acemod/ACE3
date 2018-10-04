@@ -74,10 +74,10 @@ private _combinedPropertiesUpdate = [] call CBA_fnc_hashCreate;
 if (!I_CLOSED) then {
     call {
         if (!_updateInterface) exitWith {};
-        if (count _combinedPropertiesUpdate > 0) exitWith {
+        if !(_combinedPropertiesUpdate isEqualTo []) exitWith {
             [_combinedPropertiesUpdate] call FUNC(ifUpdate);
         };
-        if (count _commonPropertiesUpdate > 0) then {
+        if !(_commonPropertiesUpdate isEqualTo []) then {
             [_commonPropertiesUpdate] call FUNC(ifUpdate);
         };
     };
