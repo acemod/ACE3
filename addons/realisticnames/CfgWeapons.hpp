@@ -686,7 +686,8 @@ class CfgWeapons {
     class optic_AMS_snd: optic_AMS {
         displayName = CSTRING(optic_ams_snd);
     };
-     class optic_KHS_base;
+    
+    class optic_KHS_base;
     class optic_KHS_blk: optic_KHS_base {
         displayName = CSTRING(optic_khs_blk);
     };
@@ -699,7 +700,7 @@ class CfgWeapons {
     class optic_KHS_tan: optic_KHS_blk {
         displayName = CSTRING(optic_khs_tan);
     };
-
+    
     class optic_DMS : ItemCore {
         displayName = CSTRING(optic_dms);
     };
