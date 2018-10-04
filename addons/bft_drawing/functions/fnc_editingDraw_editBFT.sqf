@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: [W] Fett_Li
  * Will be Draw Eventhandler for the map when clicked on a blueforcetracking symbol
@@ -11,7 +12,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 disableSerialization;
 

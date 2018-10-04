@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 // bail if there is no interface open
 if (I_CLOSED) exitWith {false};

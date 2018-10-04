@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 if !(I_CLOSED) then {
     // [_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]

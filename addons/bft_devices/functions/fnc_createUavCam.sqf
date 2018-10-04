@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -22,7 +23,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 params ["_deviceID", "_uavCams"];
 

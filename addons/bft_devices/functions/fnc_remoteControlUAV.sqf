@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 // see if there is a selected UAV and if it is alive before continuing
 if (isNil QGVAR(actUav) || {!alive GVAR(actUav)}) exitWith {false};

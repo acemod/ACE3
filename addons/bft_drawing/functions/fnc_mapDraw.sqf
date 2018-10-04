@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: [W] Fett_Li
  * Will be draw eventhandler for the map, display salute reports, blueforcetrackers, etc.
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrl"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 if (!isNil QGVAR(hCams)) then {
     private _cam = GVAR(hCams) select 0;

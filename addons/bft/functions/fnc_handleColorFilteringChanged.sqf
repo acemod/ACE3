@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  *
@@ -10,7 +11,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 {
     private _groupID = (_x select 6) select 0;

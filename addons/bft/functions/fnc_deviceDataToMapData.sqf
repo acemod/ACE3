@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  *
@@ -11,7 +12,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 private _deviceID = D_GET_ID(_this);
 private _owner = D_GET_OWNER(_this);

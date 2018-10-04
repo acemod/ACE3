@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  *
@@ -10,7 +11,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 // by default, consider the device not having a receiver
 private _refreshRateRX = -1;

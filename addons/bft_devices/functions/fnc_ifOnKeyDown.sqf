@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -20,7 +21,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 // bail if there is no interface open, or it is still being started
 if (GVAR(ifOpenStart) || (I_CLOSED)) exitWith {false};

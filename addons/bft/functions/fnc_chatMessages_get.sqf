@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get All Chat messages sent between two devices
@@ -16,7 +17,6 @@
  * Public: Yes
  */
 
-#include "script_component.hpp"
 
 params ["_deviceId", "_otherDeviceId"];
 

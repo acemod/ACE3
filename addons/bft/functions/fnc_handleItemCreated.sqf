@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  *
@@ -14,7 +15,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 params ["_owner", "_item", "_magazine", "_magID", ["_initialState", STATE_NORMAL]];
 

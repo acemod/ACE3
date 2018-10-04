@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 GVAR(iconSize) = GVAR(textAndIconScaleFactor) * 2;
 GVAR(ownIconBaseSize) = 18 * GVAR(textAndIconScaleFactor) / 12;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Create and add a new device action to the BFT action collection
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 params ["_player", "_target", "_targetDeviceType", "_displayName", ["_icon", ""]];
 

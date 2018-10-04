@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Open a device if owned
@@ -15,7 +16,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 params ["_player", "_target", "_targetDeviceType"];
 

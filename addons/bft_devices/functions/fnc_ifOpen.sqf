@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -39,7 +40,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -16,7 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 [_this select 0, [["mapWorldPos", getPosASL vehicle ACE_player]], true, true] call FUNC(setSettings);
 

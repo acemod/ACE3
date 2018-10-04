@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -26,7 +27,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 private ["_property"];
 

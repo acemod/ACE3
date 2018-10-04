@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Gundy
  *
@@ -27,7 +28,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 
 params ["_interfaceID", "_properties", ["_updateInterface", true], ["_forceInterfaceUpdate", false] ];
 
