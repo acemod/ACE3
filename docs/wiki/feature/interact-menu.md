@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Interact Menu
+title: Interaction Menu
 description: Base framework for interaction menu.
 group: feature
 category: interaction

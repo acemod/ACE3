@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Documentation guidelines and tips
+title: Documentation Guidelines And Tips
 group: development
 parent: wiki
 order: 19
