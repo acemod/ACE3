@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_DisplayName">
@@ -1090,6 +1090,7 @@
             <Korean>시체 끌기</Korean>
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
+            <German>Körper herausziehen</German>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -5629,6 +5629,7 @@
             <Chinesesimp>治疗时死亡动画</Chinesesimp>
             <Chinese>醫療時加入的昏迷動作</Chinese>
             <Italian>Animazione da svenuto durante la cura</Italian>
+            <German>Ohnmächtigkeits Animation bei Behandlung</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow animation of unconscious patients during treatment.</English>
@@ -5636,6 +5637,7 @@
             <Chinesesimp>在无意识患者治疗时死亡,会播放死亡动画?</Chinesesimp>
             <Chinese>允許醫療時加入昏迷的動作</Chinese>
             <Italian>Permette l'animazione da svenuto dei pazioenti durante loro la cura.</Italian>
+            <German>Erlaube Animationen durch ohnmächtige Patienten während der Behandlung</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
             <English>Move unconscious units from group</English>
@@ -5643,6 +5645,7 @@
             <Chinesesimp>从小队中移除无意识伤者</Chinesesimp>
             <Chinese>從小隊中移動昏迷的單位</Chinese>
             <Italian>Toglie le unità svenute dal grouppo</Italian>
+            <German>Entferne ohnmächtige Patienten aus Gruppe</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
             <English>When a group member goes unconscious, removes them from their group.</English>
@@ -5650,6 +5653,7 @@
             <Chinesesimp>当一个队员失去意识时,他将被移除出小队</Chinesesimp>
             <Chinese>當隊員昏迷時，將被他的小組中刪除</Chinese>
             <Italian>Quando un membro del gruppo sviene, viene tolto dal gruppo.</Italian>
+            <German>Wenn ein Gruppenmitglied ohnmächtig wird, wird es aus seiner Gruppe entfernt.</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
@@ -5657,6 +5661,7 @@
             <Chinesesimp>过量</Chinesesimp>
             <Chinese>過量</Chinese>
             <Italian>Overdose</Italian>
+            <German>Überdosierung</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
             <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
@@ -5664,6 +5669,7 @@
             <Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
             <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
             <Italian>Rende il paziente suscettibile di overdose da morfina, epinefrina o atropina.</Italian>
+            <German>Macht Patienten durch überdosierung von Morphine/Epinephrine/Atropine verwundbar.</German>
         </Key>
     </Package>
 </Project>

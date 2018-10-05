@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_DisplayName">
@@ -1187,6 +1187,7 @@
             <Chinese>旗幟(ACE-黑色)</Chinese>
             <Italian>Bandiera (ACE - Nera)</Italian>
             <Japanese>旗 (ACE - 黒)</Japanese>
+            <German>Flagge (ACE-Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1194,6 +1195,7 @@
             <Chinese>旗幟(ACE-白色)</Chinese>
             <Italian>Bandiera (ACE - Bianca)</Italian>
             <Japanese>旗 (ACE - 白)</Japanese>
+            <German>Flagge (ACE-Weiß)</German>
         </Key>
     </Package>
 </Project>

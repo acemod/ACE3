@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_ai">
         <Key ID="STR_ACE_medical_ai_enabledFor_DisplayName">
@@ -7,6 +7,7 @@
             <Chinesesimp>AI医疗启用</Chinesesimp>
             <Chinese>AI醫療啟用</Chinese>
             <Italian>AI medica per:</Italian>
+            <German>Medizinische AI aktiviert für</German>
         </Key>
         <Key ID="STR_ACE_medical_ai_enabledFor_Description">
             <English>Enable AI units to heal themselves and each other.</English>
@@ -14,6 +15,7 @@
             <Chinesesimp>使AI单位能够彼此治疗自己</Chinesesimp>
             <Chinese>啟用AI能夠彼此醫療自己</Chinese>
             <Italian>Permette alle unità AI di curare se stesse e fra di loro.</Italian>
+            <German>Erlaubt AI Einheiten sich selbst und einander zu heilen.</German>
         </Key>
         <Key ID="STR_ACE_medical_ai_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>

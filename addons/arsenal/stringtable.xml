@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Arsenal">
         <Key ID="STR_ACE_Arsenal_buttonHideText">
@@ -678,6 +678,7 @@
             <Chinesesimp>开启装备选单</Chinesesimp>
             <Japanese>装備画面を開く</Japanese>
             <Italian>Apri la pagina degli equipaggiamenti</Italian>
+            <German>Öffne Ausrüstungs Bildschirm</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
@@ -686,6 +687,7 @@
             <Chinesesimp>汇出当前/预设的装备</Chinesesimp>
             <Japanese>現在 / 標準装備を出力</Japanese>
             <Italian>Esporta l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
+            <German>Exportiere aktuelle/standard Ausrüstungen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
             <English>Import current / default loadouts</English>
@@ -694,6 +696,7 @@
             <Chinesesimp>汇入当前/预设的装备</Chinesesimp>
             <Japanese>現在 / 標準装備を取込</Japanese>
             <Italian>Importa l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
+            <German>Importiere aktuelle/standard Ausrüstungen</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_statPotassium">
             <English>Potassium levels</English>
@@ -726,6 +729,7 @@
             <Chinesesimp>页面</Chinesesimp>
             <Chinese>頁面</Chinese>
             <Italian>Pagina</Italian>
+            <German>Seite</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
@@ -734,6 +738,7 @@
             <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>
             <Italian>Abilita volti, voci e insegne</Italian>
+            <German>Gesichter/Stimmen/Insignias Tab aktivieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
@@ -742,6 +747,7 @@
             <Chinesesimp>选择的箱子是空的</Chinesesimp>
             <Chinese>清空選擇的箱子</Chinese>
             <Italian>Svuota il contenitore selezionato</Italian>
+            <German>Ausgewählten Container leeren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
@@ -750,6 +756,7 @@
             <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
             <Chinese>輸出 class name 到剪貼簿上</Chinese>
             <Italian>Copiato il nome della classe negli appunti</Italian>
+            <German>Exportiere classname in Zwischenablage</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mode">
             <English>Mode</English>
@@ -806,6 +813,7 @@
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
+            <German>Exportiere aktuelle Item-Liste als Array für die Benutzung in Scripen</German>
         </Key>
     </Package>
 </Project>

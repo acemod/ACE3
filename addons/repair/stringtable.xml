@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -1862,6 +1862,7 @@
             <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Italian>Motore spento automaticamente durante la riparazione</Italian>
+            <German>Motor bei Reperatur automatisch abschalten</German>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -1869,6 +1870,7 @@
             <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
+            <German>Schaltet den Motor bei Reperaturen automatisch aus.</German>
         </Key>
     </Package>
 </Project>
