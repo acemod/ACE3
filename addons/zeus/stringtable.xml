@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_DisplayName">
@@ -277,16 +277,19 @@
             <English>Editing Mode</English>
             <Chinese>編輯模式</Chinese>
             <Italian>Modalità per editare</Italian>
+            <German>Bearbeitungs Modus</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
             <Chinese>新增或移除可編輯物件給宙斯</Chinese>
             <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
+            <German>Editierbare Objekte zu Zeus hinzufügen oder entfernen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
             <Chinese>新增物件</Chinese>
             <Italian>Aggiungi Oggetti</Italian>
+            <German>Objekte Hinzufügen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -323,9 +326,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
+            <German>Zusätzliche Objekte</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
+            <German>Zusätzliche Objekte in Aktion unabhängig der Task Reichweite</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -932,12 +937,15 @@
         </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
+            <German>Keine</German>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
+            <German>Spieler</German>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
+            <German>Spieler und AI</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -987,6 +995,7 @@
             <Chinese>選擇要卸載的貨物</Chinese>
             <Italian>Scegli il carico da scaricare</Italian>
             <Japanese>選択したカーゴを降ろす</Japanese>
+            <German>Ladung zum entladen auswählen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1103,6 +1112,7 @@
             <Chinesesimp>切换目标</Chinesesimp>
             <Chinese>切換目標</Chinese>
             <Italian>Scambia obiettivo</Italian>
+            <German>Ziel umstellen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
@@ -1110,6 +1120,7 @@
             <Chinesesimp>被选单位受切换影响</Chinesesimp>
             <Chinese>受切換所影響的單位</Chinese>
             <Italian>Unità influenzate dallo scambio</Italian>
+            <German>Durch Umstellung betroffene Einheiten</German>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1168,6 +1179,7 @@
             <Chinese>由上而下進行填滿</Chinese>
             <Chinesesimp>由上而下进行填满</Chinesesimp>
             <Korean>위에서부터 채우기</Korean>
+            <German>Fülle von oben nach unten</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
@@ -1177,6 +1189,7 @@
             <Chinese>從建築物的最高點開始布置衛哨</Chinese>
             <Chinesesimp>从建筑物的最高点开始布置卫哨</Chinesesimp>
             <Korean>건물의 높은 위치부터 먼저 채움</Korean>
+            <German>Fülle Gebäude von der obersten Position zuerst</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
@@ -1186,6 +1199,7 @@
             <Chinese>駐軍填充建築物模式</Chinese>
             <Chinesesimp>驻军填充建筑物模式</Chinesesimp>
             <Korean>건물 채우기 모드</Korean>
+            <German>Gebäude befüllungs Modus</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
@@ -1195,6 +1209,7 @@
             <Chinese>平均分配</Chinese>
             <Chinesesimp>平均分配</Chinesesimp>
             <Korean>평균 채우기</Korean>
+            <German>Gleichmäßiges befüllen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
@@ -1204,6 +1219,7 @@
             <Chinese>一棟填滿後再換下一棟</Chinese>
             <Chinesesimp>一栋填满后再换下一栋</Chinesesimp>
             <Korean>건물에서 건물로</Korean>
+            <German>Gebäude an Gebäude</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
@@ -1213,6 +1229,7 @@
             <Chinese>隨機分配</Chinese>
             <Chinesesimp>随机分配</Chinesesimp>
             <Korean>무작위 채우기</Korean>
+            <German>Zufällige befüllung</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
@@ -1222,6 +1239,7 @@
             <Chinese>傳送</Chinese>
             <Chinesesimp>传送</Chinesesimp>
             <Korean>순간이동</Korean>
+            <German>Teleport</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison Group</English>
@@ -1446,6 +1464,7 @@
             <Chinesesimp>添加ACE模式军火库</Chinesesimp>
             <Chinese>增加完整的ACE軍火庫</Chinese>
             <Italian>Aggiungi l'arsenale ACE completo</Italian>
+            <German>Komplettes ACE Arsenal hinzufügen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
@@ -1453,6 +1472,7 @@
             <Chinesesimp>删除ACE模式军火库</Chinesesimp>
             <Chinese>移除ACE軍火庫</Chinese>
             <Italian>Rimuovi l'arsenale ACE</Italian>
+            <German>ACE Arsenal entfernen</German>
         </Key>
     </Package>
 </Project>

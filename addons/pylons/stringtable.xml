@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Pylons">
         <Key ID="STR_ACE_Pylons_AircraftLoadoutTitle">
@@ -97,6 +97,7 @@
             <Chinese>啟用派龍架選單給宙斯</Chinese>
             <Italian>Abilita Menù Piloni da Zeus</Italian>
             <Japanese>Zeus でパイロン メニューを有効化</Japanese>
+            <German>Außenlaststation Menü für Zeus aktivieren</German>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
@@ -104,6 +105,7 @@
             <Chinese>允啟使用宙斯模塊</Chinese>
             <Italian>Abilita l'uso dal modulo di Zeus</Italian>
             <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
+            <German>Erlaubt die Nutzung des Zeus Moduls</German>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
@@ -111,6 +113,7 @@
             <Chinese>啟用從彈藥卡車使用派龍架選單</Chinese>
             <Italian>Abilita Menù Piloni da mezzi rifornimento munizioni</Italian>
             <Japanese>弾薬トラックからパイロン メニューを有効化</Japanese>
+            <German>Außenlaststation Menü für Munnitions-Trucks aktivieren</German>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
@@ -118,6 +121,7 @@
             <Chinese>允許從彈藥卡車使用派龍架選單</Chinese>
             <Italian>Abilita l'uso del Menù Piloni da mezzi rifornimento munizioni</Italian>
             <Japanese>弾薬給弾トラックからパイロン メニューを利用できます。</Japanese>
+            <German>Erlaubt die Nutzung des Außenlaststations-Menüs an Munnition-Trucks</German>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
@@ -125,6 +129,7 @@
             <Chinese>這架飛機沒有派龍架</Chinese>
             <Italian>Questo aereo non ha piloni</Italian>
             <Japanese>航空機にパイロンがありません</Japanese>
+            <German>Dieses Fluggerät hat keine Außenlaststationen</German>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
@@ -132,6 +137,7 @@
             <Chinese>宙斯模塊的派龍架設定已被禁用</Chinese>
             <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
             <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
+            <German>Das Pylons Modul ist für Zeus deaktiviert</German>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
