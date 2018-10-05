@@ -15,7 +15,8 @@
  * Public: No
  */
 
-if (isNull ACE_player ||
+if (!GVAR(enabled) ||
+    {isNull ACE_player} ||
     {vehicle ACE_player != ACE_player} ||
     {!alive ACE_player} ||
     {ACE_player getVariable ["ace_unconscious", false]}
