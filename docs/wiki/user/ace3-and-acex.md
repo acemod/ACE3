@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: ACE3 And ACEX
+title: ACE3 and ACEX
 description: Overview of what ACE3 and ACEX mods are.
 group: user
 order: 0
