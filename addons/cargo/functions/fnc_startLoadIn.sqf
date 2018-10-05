@@ -39,7 +39,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     private _size = [_object] call FUNC(getSizeItem);
 
     [
-        5 * _size,
+        GVAR(loadTimeCoefficient) * _size,
         [_object, _vehicle],
         {
             [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
@@ -54,7 +54,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
 } else {
     private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
 
-    [[LSTRING(LoadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
+    [[LSTRING(LoadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };
 
 _return
