@@ -12,7 +12,8 @@
     [LSTRING(loadTimeCoefficient), LSTRING(loadTimeCoefficient_description)],
     [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
     [0, 10, 5, 1],
-    true
+    true,
+    {[QGVAR(loadTimeCoefficient), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;
 
 [
@@ -20,5 +21,6 @@
     [LSTRING(paradropTimeCoefficent), LSTRING(paradropTimeCoefficent_description)],
     [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
     [0, 10, 2.5, 1],
-    true
+    true,
+    {[QGVAR(paradropTimeCoefficent), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;
