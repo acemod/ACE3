@@ -1,5 +1,6 @@
 // by esteldunedain
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 if (!hasInterface) exitWith {};
 
@@ -12,7 +13,7 @@ if (!hasInterface) exitWith {};
     // Statement
     [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(lockSafety);
     true
-}, {false}, [41, [false, true, false]], false] call CBA_fnc_addKeybind;
+}, {false}, [DIK_GRAVE, [false, true, false]], false] call CBA_fnc_addKeybind;
 
 ["unit", {
     private _weaponSafe = currentWeapon ACE_player in (ACE_player getVariable [QGVAR(safedWeapons), []]);
