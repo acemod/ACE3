@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
         <Key ID="STR_DN_ACE_HUNTIRBOX">
@@ -7,7 +7,7 @@
             <Spanish>Caja de transporte de HuntIR</Spanish>
             <Czech>Transportní bedna HuntIR</Czech>
             <Russian>Ящик с HuntIR</Russian>
-            <Italian>HuntIR Transport Box</Italian>
+            <Italian>Cassa di Trasporto HuntIR</Italian>
             <Polish>Skrzynia HuntIR</Polish>
             <French>Boite de transport HuntIR</French>
             <Hungarian>HuntIR Transport Box</Hungarian>
@@ -23,7 +23,7 @@
             <Spanish>Proyectil HuntIR</Spanish>
             <Czech>HuntIR náboj</Czech>
             <Russian>HuntIR снаряд</Russian>
-            <Italian>HuntIR Round</Italian>
+            <Italian>Colpo HuntIR</Italian>
             <Polish>Nabój HuntIR</Polish>
             <French>Munition HuntIR</French>
             <Hungarian>HuntIR lövedék</Hungarian>
@@ -39,7 +39,7 @@
             <Spanish>Monitor HuntIR</Spanish>
             <Czech>HuntIR monitor</Czech>
             <Russian>HuntIR монитор</Russian>
-            <Italian>HuntIR monitor</Italian>
+            <Italian>Monitor HuntIR</Italian>
             <Polish>Odbiornik HuntIR</Polish>
             <French>Ecran HuntIR</French>
             <Hungarian>HuntIR monitor</Hungarian>
@@ -55,7 +55,7 @@
             <Spanish>Activar monitor HuntIR</Spanish>
             <Czech>Zapnout HuntIR monitor</Czech>
             <Russian>Включить HuntIR монитор</Russian>
-            <Italian>Activate HuntIR monitor</Italian>
+            <Italian>Attiva il monitor HuntIR</Italian>
             <Polish>Włącz odbiornik HuntIR</Polish>
             <French>Allumer l'écran du HuntIR</French>
             <Hungarian>HuntIR monitor aktiválása</Hungarian>
@@ -71,7 +71,7 @@
             <Spanish>Camara:</Spanish>
             <Czech>Kamera:</Czech>
             <Russian>Камера:</Russian>
-            <Italian>Camera:</Italian>
+            <Italian>Telecamera:</Italian>
             <Polish>Kamera:</Polish>
             <French>Caméra :</French>
             <Hungarian>Kamera:</Hungarian>
@@ -87,7 +87,7 @@
             <Spanish>Altitud:</Spanish>
             <Czech>Výška:</Czech>
             <Russian>Высота:</Russian>
-            <Italian>Altitude:</Italian>
+            <Italian>Altitudine:</Italian>
             <Polish>Wysokość:</Polish>
             <French>Altitude :</French>
             <Hungarian>Magasság:</Hungarian>
@@ -103,7 +103,7 @@
             <Spanish>Tiempo de grabación:</Spanish>
             <Czech>Čas nahrávání:</Czech>
             <Russian>Время записи:</Russian>
-            <Italian>Recording Time:</Italian>
+            <Italian>Tempo di Registrazione:</Italian>
             <Polish>Czas nagrywania:</Polish>
             <French>Temps d'enregistrement :</French>
             <Hungarian>Felvételi idő:</Hungarian>
@@ -119,7 +119,7 @@
             <Spanish>Pulsar ESC para salir de la camara</Spanish>
             <Czech>Stiskni ESC pro opustění kamery</Czech>
             <Russian>Нажмите ESC чтобы выйти из режима камеры</Russian>
-            <Italian>Press ESC to quit camera</Italian>
+            <Italian>Premi ESC per uscire dalla telecamera</Italian>
             <Polish>Wciśnij ESC by wyjść z widoku kamery</Polish>
             <French>Appuyer sur ESC pour quitter la camera</French>
             <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
@@ -135,7 +135,7 @@
             <Spanish>Ayuda</Spanish>
             <Czech>Nápověda</Czech>
             <Russian>Помощь</Russian>
-            <Italian>Help</Italian>
+            <Italian>Aiuto</Italian>
             <Polish>Pomoc</Polish>
             <French>Aide</French>
             <Hungarian>Súgó</Hungarian>
@@ -151,7 +151,7 @@
             <Spanish>A/D - Cambiar zoom</Spanish>
             <Czech>A/D - Změna přiblížení</Czech>
             <Russian>A/D - Приближение</Russian>
-            <Italian>A/D - Cycle zoom</Italian>
+            <Italian>A/D - Cambia zoom</Italian>
             <Polish>A/D - powiększenie</Polish>
             <French>Q/D - Changement de zoom</French>
             <Hungarian>A/D - Nagyítás</Hungarian>
@@ -167,7 +167,7 @@
             <Spanish>W/S - Seleccionar camara</Spanish>
             <Czech>W/S - Výběr kamery</Czech>
             <Russian>W/S - Выбрать камеру</Russian>
-            <Italian>W/S - Select camera</Italian>
+            <Italian>W/S - Seleziona telecamera</Italian>
             <Polish>W/S - wybór kamery</Polish>
             <French>Z/S - Sélectionner la caméra</French>
             <Hungarian>W/S - Kamera váltás</Hungarian>
@@ -183,7 +183,7 @@
             <Spanish>Left/Right - Rotar camara</Spanish>
             <Czech>Levá/Pravá - Rotace kamery</Czech>
             <Russian>Влево/Вправо - Вращать камеру</Russian>
-            <Italian>Left/Right - Rotate camera</Italian>
+            <Italian>Left/Right - Ruota telecamera</Italian>
             <Polish>Lewo/Prawo - obrót kamery w poziomie</Polish>
             <French>Gauche/Droite - Rotation de la caméra</French>
             <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
@@ -199,7 +199,7 @@
             <Spanish>Up/Down - Subir/bajar camara</Spanish>
             <Czech>Nahoru/Dolu - Zvýšít/snížit úhel pohledu kamery</Czech>
             <Russian>Вверх/Вниз - Поднять/Опустить камеру</Russian>
-            <Italian>Up/Down - Elevate/lower camera</Italian>
+            <Italian>Up/Down - Alza/abbassa telecamera</Italian>
             <Polish>Góra/Dół - obrót kamery w pionie</Polish>
             <French>Haut/Bas - Monter/descendre la caméra</French>
             <Hungarian>Fel/Le - Kamera döntése/süllyesztése</Hungarian>
@@ -215,7 +215,7 @@
             <Spanish>N - Cambiar modos de IT</Spanish>
             <Czech>N - Změna režimů kamery</Czech>
             <Russian>N - Режимы камеры</Russian>
-            <Italian>N - Cycle IT modes</Italian>
+            <Italian>N - Cambia modalità IT</Italian>
             <Polish>N - wybór trybu IT</Polish>
             <French>N - Changement de modes IT</French>
             <Hungarian>N - Hőkép módok</Hungarian>
@@ -231,7 +231,7 @@
             <Spanish>R - Reiniciar camara</Spanish>
             <Czech>R - Reset kamery</Czech>
             <Russian>R - Сбросить настройки камеры</Russian>
-            <Italian>R - Reset camera</Italian>
+            <Italian>R - Azzera telecamera</Italian>
             <Polish>R - resetuj kamerę</Polish>
             <French>R - Reset de la caméra</French>
             <Hungarian>R - Kamera visszaállítása</Hungarian>
@@ -247,7 +247,7 @@
             <Spanish>Esc - Salit de ayuda</Spanish>
             <Czech>Esc - Ukončit pomoc </Czech>
             <Russian>Esc - Выйти из помощи</Russian>
-            <Italian>Esc - Exit help</Italian>
+            <Italian>Esc - Chiudi aiuto</Italian>
             <Polish>Esc - wyjście z ekranu Pomocy</Polish>
             <French>Esc - Sortir de l'aide</French>
             <Hungarian>Exit - Kilépés a súgóból</Hungarian>
