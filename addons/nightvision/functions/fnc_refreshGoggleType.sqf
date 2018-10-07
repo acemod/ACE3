@@ -17,7 +17,7 @@
 
 TRACE_1("refreshGoggleType",_this);
 
-if (!GVAR(running)) exitWith {};
+if (!GVAR(running) || {GVAR(effectScaling) == 0}) exitWith {};
 
 // Defaults (good for most vehicles/binoculars)
 private _borderImage = "";
