@@ -4247,6 +4247,12 @@
             <Chinesesimp>修改疼痛强度的系数</Chinesesimp>
             <Chinese>修改疼痛強度的係數</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_usePatientItemsFirst_DisplayName">
+            <English>Use patient's items first</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_usePatientItemsFirst_Description">
+            <English>Use the patient's medical items before using the medic's items.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_DisplayName">
             <English>Sync status</English>
             <Russian>Синхронизация статуса</Russian>

@@ -250,6 +250,13 @@ class ACE_Settings {
         value = 0;
         values[] = {"Anytime", "Stable"};
     };
+    class GVAR(usePatientItemsFirst) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_usePatientItemsFirst_DisplayName);
+        description = CSTRING(MedicalSettings_usePatientItemsFirst_Description);
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(keepLocalSettingsSynced) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_keepLocalSettingsSynced_DisplayName);
