@@ -36,13 +36,14 @@ class ACE_ZeusActions {
             icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
             condition = QUOTE(-1 < (curatorSelected select 0) findIf {_x isKindOf 'CAManBase'});
             statement = QUOTE( \
-                private _unit = objNull; \
-                { \
-                    if ( \
+                private _units = curatorSelected select 0; \
+                private _unit = _units param [ARR_2( \
+                    _units findIf { \
                         side _x in [ARR_4(east,west,resistance,civilian)] \
                         && !(isPlayer _x) \
-                    ) exitWith { _unit = _x; }; \
-                } forEach (curatorSelected select 0); \
+                    }, \
+                    objNull \
+                )]; \
                 bis_fnc_curatorObjectPlaced_mouseOver = [ARR_2('OBJECT',_unit)]; \
                 group _target createUnit [ARR_5('ModuleRemoteControl_F',[ARR_3(0,0,0)],[],0,'NONE')]; \
             );
