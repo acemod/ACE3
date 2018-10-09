@@ -3,7 +3,7 @@ class CfgWeapons {
     class Rifle_Base_F;
     class SMG_03_TR_BASE: Rifle_Base_F {
         ACE_barrelTwist = 228.6; // 1:9 inch twist
-        ACE_barrelLenght = 407;
+        ACE_barrelLength = 407;
         ACE_twistDirection = 1;
         modes[]= {
             "Single"
@@ -34,7 +34,7 @@ class CfgWeapons {
         displayName = CSTRING(PS90_Hex_Name);
     };
     class SMG_03C_BASE: SMG_03_TR_BASE {
-        ACE_barrelLenght = 264;
+        ACE_barrelLength = 264;
         modes[]= {
             "Single",
             "FullAuto"

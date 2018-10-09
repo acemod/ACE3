@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, commy2
  * Checks for nearby running helicopters (within 15m)
@@ -7,7 +8,7 @@
  * 1: Radius to check for helicopter (default: 15) <NUMBER>
  *
  * Return Value:
- * <ARRAY>:
+ * Array <ARRAY>:
  *     0: In rotorwash <BOOL>
  *     1: Amount of rotor wash. <NUMBER>
  *
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", ["_radius", 15]];
 

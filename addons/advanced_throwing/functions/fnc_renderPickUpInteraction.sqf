@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, Jonpas
  * When interact_menu starts rendering (from "interact_keyDown" event).
@@ -7,14 +8,13 @@
  * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_advanced_throwing_fnc_renderPickUpInteraction
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [{
     params ["_args", "_idPFH"];
@@ -22,15 +22,19 @@
 
     // isNull is necessarry to prevent rare error when ending mission with interact key down
     if (EGVAR(interact_menu,keyDown) && {!isNull ACE_player}) then {
-        // Rescan when player moved >5 meters from last pos, nearObjects is costly
+        // Rescan when player moved >5 meters from last pos, nearObjects can be costly with a lot of objects around
         if ((getPosASL ACE_player) distance _setPosition > 5) then {
-             // IR throwbles inherit from GrenadeCore, others from GrenadeHand, IR Chemlights are special snowflakes
+             // Grenades inherit from GrenadeHand, IR throwbles from IRStrobeBase, IR Chemlights are special snowflakes
+             // nearEntities does not see throwables
             _nearThrowables = ACE_player nearObjects ["GrenadeHand", PICK_UP_DISTANCE];
-            _nearThrowables append (ACE_player nearObjects ["GrenadeCore", PICK_UP_DISTANCE]);
+            _nearThrowables append (ACE_player nearObjects ["IRStrobeBase", PICK_UP_DISTANCE]);
             _nearThrowables append (ACE_player nearObjects ["ACE_Chemlight_IR_Dummy", PICK_UP_DISTANCE]);
 
             {
-                if (!(_x in _throwablesHelped) && {GVAR(enablePickUpAttached) || {!GVAR(enablePickUpAttached) && {isNull (attachedTo _x)}}}) then {
+                if (!(_x in _throwablesHelped) &&
+                    {!(_x isKindOf "SmokeShellArty")} && {!(_x isKindOf "G_40mm_Smoke")} && // All smokes inherit from "GrenadeHand" >> "SmokeShell"
+                    {GVAR(enablePickUpAttached) || {!GVAR(enablePickUpAttached) && {isNull (attachedTo _x)}}}
+                ) then {
                     TRACE_2("Making PickUp Helper",_x,typeOf _x);
                     private _pickUpHelper = QGVAR(pickUpHelper) createVehicleLocal [0, 0, 0];
 

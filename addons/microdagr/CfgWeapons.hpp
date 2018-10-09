@@ -1,6 +1,6 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_microDAGR: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
@@ -9,7 +9,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(itemDescription);
         model = QPATHTOF(data\MicroDAGR.p3d);
         picture = QPATHTOF(images\microDAGR_item.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };
     };

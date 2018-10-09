@@ -1,5 +1,6 @@
+#include "script_component.hpp"
 /*
- * Author: ?
+ * Author: ACE-Team
  *
  * ?
  *
@@ -7,11 +8,13 @@
  * ?
  *
  * Return Value:
- * ?
+ * None
  *
- * Public: ?
+ * Example:
+ * [?] call ace_common_fnc_syncedEventPFH
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 
 if (!isServer) exitWith {false};
 

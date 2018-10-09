@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get display classnames from config with given idd.
@@ -8,11 +9,13 @@
  * Return Value:
  * Display Classnames <ARRAY>
  *
+ * Example:
+ * [5] call ace_common_fnc_getDisplayConfigName
+ *
  * Public: Yes
  *
  * Note: Really slow due to iteration through whole config. Meant for debugging.
  */
-#include "script_component.hpp"
 
 params ["_idd"];
 

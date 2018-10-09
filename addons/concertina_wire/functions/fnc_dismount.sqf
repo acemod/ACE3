@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  *
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [wire, bob] call ace_concertina_wire_fnc_dismount
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 // If the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitWith {
@@ -23,7 +26,7 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exit
 params ["_wire", "_unit"];
 
 private _config = (configFile >> "CfgVehicles" >> typeOf _unit);
-private _delay = [120, 60] select (getNumber (_config >> "engineer") == 1 || {getNumber (_config >> "canDeactivateMines") == 1});
+private _delay = [45, 30] select ([_unit] call EFUNC(common,isEngineer) || {[_unit] call EFUNC(common,isEOD)});
 
 // TODO: Animation?
 [

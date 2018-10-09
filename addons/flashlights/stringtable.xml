@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Flashlights">
         <Key ID="STR_ACE_Flashlights_MX991_DisplayName">
@@ -11,6 +11,10 @@
             <Spanish>Fulton MX-991</Spanish>
             <Italian>Fulton MX-991</Italian>
             <French>Fulton MX-991</French>
+            <Japanese>フルトン MX-991</Japanese>
+            <Korean>Fulton MX-991</Korean>
+            <Chinesesimp>Fulton MX-991手电筒</Chinesesimp>
+            <Chinese>Fulton MX-991</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -22,6 +26,10 @@
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
+            <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
+            <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
+            <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
+            <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -33,6 +41,10 @@
             <Spanish>Maglite XL50</Spanish>
             <Italian>Maglite XL50</Italian>
             <French>Maglite XL50</French>
+            <Japanese>マグライト XL50</Japanese>
+            <Korean>Maglite XL50</Korean>
+            <Chinesesimp>Maglite XL50手电筒</Chinesesimp>
+            <Chinese>Maglite XL50</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
@@ -44,6 +56,10 @@
             <Spanish>Mini linterna blanca. Para su uso en el mapa.</Spanish>
             <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
             <French>Mini lampe torche blanche. Pour utilisation sur carte.</French>
+            <Japanese>白色光の小さなフラッシュライト。地図上でつかいます。</Japanese>
+            <Korean>하얀색 조그마한 손전등. 지도를 비출때 씁니다.</Korean>
+            <Chinesesimp>白色的迷你手电筒。用来照亮地图。</Chinesesimp>
+            <Chinese>白色的迷你手電筒。用來照亮地圖。</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -55,10 +71,14 @@
             <Spanish>KSF-1</Spanish>
             <Italian>KSF-1</Italian>
             <French>KSF-1</French>
+            <Japanese>KSF-1</Japanese>
+            <Korean>KSF-1</Korean>
+            <Chinesesimp>KSF-1手电筒</Chinesesimp>
+            <Chinese>KSF-1</Chinese>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
-            <German>Tachenlampe mit rotem Filter zum Kartenlesen.</German>
+            <German>Taschenlampe mit rotem Filter zum Kartenlesen.</German>
             <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy.</Polish>
             <Portuguese>Lanterna com filtro vermelho. Para uso no mapa.</Portuguese>
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
@@ -66,6 +86,18 @@
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
+            <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
+            <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
+            <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
+            <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Flashlights_statMapLightColor">
+            <English>Map light color</English>
+            <French>Couleur de la lampe sur carte</French>
+            <Japanese>光の色</Japanese>
+            <Chinesesimp>地图上手电的颜色</Chinesesimp>
+            <Chinese>地圖上使用手電筒的顏色</Chinese>
+            <Italian>Colore della luce sulla mappa</Italian>
         </Key>
     </Package>
 </Project>

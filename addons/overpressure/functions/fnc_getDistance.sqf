@@ -1,11 +1,12 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Calculate the distance to the first intersection of a line
  *
  * Arguments:
- * 0: Pos ASL of origin (ARRAY>
+ * 0: Pos ASL of origin <ARRAY>
  * 1: Direction <ARRAY>
- * 2: Max distance to search <Number>
+ * 2: Max distance to search <NUMBER>
  * 3: Shooter <OBJECT>
  *
  * Return Value:
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_posASL", "_direction", "_maxDistance", "_shooter"];
 TRACE_4("params",_posASL,_direction,_maxDistance, _shooter);
@@ -38,7 +38,7 @@ private _distance = 999;
 
         if (isNull _intersectObject) then {  //Terrain:
             // Calculate the angle between the terrain and the back blast direction
-            _angle = 90 - acos (- (_surfaceNormal vectorDotProduct _direction));
+            private _angle = 90 - acos (- (_surfaceNormal vectorDotProduct _direction));
             TRACE_3("Terrain Intersect",_surfaceNormal,_direction,_angle);
             // Angles is below 25deg, no backblast at all
             if (_angle < 25) exitWith {_distance = 999};

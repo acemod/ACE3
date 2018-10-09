@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, NouberNou and esteldunedain
  * Removes an action from an object
@@ -15,16 +16,14 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_typeNum", "_fullPath"];
 
-private ["_res","_varName","_actionList"];
-_res = _fullPath call FUNC(splitPath);
+private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
 
-_varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
-_actionList = _object getVariable [_varName, []];
+private _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
+private _actionList = _object getVariable [_varName, []];
 {
     if (((_x select 0) select 0) isEqualTo _actionName &&
         {(_x select 1) isEqualTo _parentPath}) exitWith {

@@ -3,9 +3,9 @@ class CfgVehicles {
     class GVAR(moduleSettings): ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "Advanced Fatigue";
+        displayName = CSTRING(DisplayName);
         function = QFUNC(moduleSettings);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
         icon = QPATHTOF(UI\Icon_Module.paa);

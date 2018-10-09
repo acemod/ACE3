@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = { "ace_common" };
         author = ECSTRING(common,ACETeam);
-        authors[] = {"KoffeinFlummi", "esteldunedain"};
+        authors[] = {"KoffeinFlummi", "esteldunedain", "Ruthberg"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -19,3 +19,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscTitles.hpp"
+#include "ACE_Settings.hpp"
+#include "ACE_Arsenal_Stats.hpp"

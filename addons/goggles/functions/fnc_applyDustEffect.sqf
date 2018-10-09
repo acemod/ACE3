@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Applies dust to screen.
@@ -13,13 +14,10 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (call FUNC(ExternalCamera)) exitWith {};
 
-private ["_unit", "_amount"];
-
-_unit = ACE_player;
+private _unit = ACE_player;
 
 if ([_unit] call FUNC(isGogglesVisible)) exitWith {
     GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 2, false];
@@ -42,7 +40,7 @@ if (GETVAR(_unit,ACE_EyesDamaged,false)) exitWith {
 
 SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT) + 1,0,2));
 
-_amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
+private _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
 
 GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [_amount, _amount, _amount, _amount], [1, 1, 1, 0]];
 GVAR(PostProcessEyes) ppEffectCommit 1;

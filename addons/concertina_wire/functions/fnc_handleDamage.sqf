@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  *
@@ -13,9 +14,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [wire, "selection", 5, source, "scrap"] call ace_concertina_wire_fnc_handleDamage
+ *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_wire", "", "_damage", "_source", ""];
 if (_damage < 0.5) exitWith { 0 };
 

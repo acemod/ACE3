@@ -1,18 +1,16 @@
 #include "script_component.hpp"
 
-// Rain
-GVAR(rain_next_period) = -1;
-GVAR(rain_period_count) = 0;
-GVAR(current_rain) = 0;
-GVAR(rain_current_range) = -1+(random 2);
-
-// Wind
-call FUNC(initWind);
-
 ["ace_settingsInitialized", {
-    TRACE_2("ace_settingsInitialized eh",GVAR(enableServerController),GVAR(serverUpdateInterval));
+    if (!GVAR(enabled)) exitWith {};
 
-    if (GVAR(enableServerController)) then {
-        [FUNC(serverController), GVAR(serverUpdateInterval)] call CBA_fnc_addPerFrameHandler;
+    GVAR(temperatureShift) = random [-SD_TO_MIN_MAX(4), 0, SD_TO_MIN_MAX(4)]; // Gauss(0, 4)
+    GVAR(badWeatherShift)  = random [-SD_TO_MIN_MAX(2) + 4, 4, 4 + SD_TO_MIN_MAX(2)]; // Gauss(4, 2)
+    GVAR(humidityShift)    = random [-SD_TO_MIN_MAX(0.065), 0, SD_TO_MIN_MAX(0.065)]; // Gauss(0, 0.065)
+
+    if (GVAR(windSimulation)) then {
+        call FUNC(initWind);
+        [FUNC(updateWind), 1] call CBA_fnc_addPerFrameHandler;
     };
+    [FUNC(updateWeather), GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
+
 }] call CBA_fnc_addEventHandler;

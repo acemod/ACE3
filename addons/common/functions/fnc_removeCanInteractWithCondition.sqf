@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Remove a condition that gets checked by ace_common_fnc_canInteractWith.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["ID"] call ace_common_fnc_removeCanInteractWithCondition
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_conditionName"];
 

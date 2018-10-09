@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Remove a synced event handler
@@ -6,16 +7,18 @@
  * 0: Name <STRING>
  *
  * Return Value:
- * Boolean of success
+ * Boolean of success <BOOL>
+ *
+ * Example:
+ * ["bob"] call ace_common_fnc_removeSyncedEventHandler
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name"];
 
 if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
-    ACE_LOGERROR_1("Synced event key [%1] not found (removeSyncedEventHandler).", _name);
+    ERROR_1("Synced event key [%1] not found (removeSyncedEventHandler).", _name);
     false
 };
 

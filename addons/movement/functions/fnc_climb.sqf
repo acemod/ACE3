@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Make the player climb over short walls.
@@ -6,14 +7,13 @@
  * 0: The Unit (usually the player) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ace_movement_fnc_climb
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Remove backpacks and grenades from Magazines filter.
@@ -8,8 +9,10 @@
  * Return Value:
  * Item should appear in this list? <BOOL>
  *
+ * Example:
+ * [CONFIG] call ACE_inventory_fnc_filterMagazines
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 !(_this call FUNC(filterBackpacks)) && {!(_this call FUNC(filterGrenades))}

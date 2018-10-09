@@ -23,6 +23,8 @@ PREP(isEngineer);
 PREP(isInRepairFacility);
 PREP(isNearRepairVehicle);
 PREP(isRepairVehicle);
+PREP(modifyInteraction);
+PREP(modifySelectionInteraction);
 PREP(moduleAddSpareParts);
 PREP(moduleAssignEngineer);
 PREP(moduleAssignRepairVehicle);

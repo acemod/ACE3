@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Plays synchronized ambiance sounds while the module is alive.
@@ -8,112 +9,101 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * N/A
+ * [LOGIC, [bob, kevin], true] call ace_missionmodules_fnc_moduleAmbianceSound
  *
  * Public: No
  */
 
-#include "script_component.hpp"
-
-private ["_ambianceSounds", "_minimalDistance","_maximalDistance", "_minimalDistance", "_maxDelayBetweenSounds", "_missionRoot", "_unparsedSounds", "_splittedList", "_soundPath"];
 params ["_logic", "_units", "_activated"];
 
 // We only play this on the locality of the logic, since the sounds are broadcasted across the network
-if (_activated && local _logic) then {
-    _ambianceSounds = [];
-    _unparsedSounds = _logic getVariable ["soundFiles", ""];
-    _minimalDistance = (_logic getVariable ["minimalDistance", 400]) max 1;
-    _maximalDistance = (_logic getVariable ["maximalDistance", 10]) max _minimalDistance;
-    _minDelayBetweensounds = (_logic getVariable ["minimalDelay", 10]) max 1;
-    _maxDelayBetweenSounds = (_logic getVariable ["maximalDelay", 170]) max _minDelayBetweensounds;
-    _volume = (_logic getVariable ["soundVolume", 30]) max 1;
-    _followPlayers = _logic getVariable ["followPlayers", false];
+if (!_activated || !local _logic) exitWith {0};
 
-    _splittedList = _unparsedSounds splitString ",";
-    _missionRoot = str missionConfigFile select [0, count str missionConfigFile - 15];
+private _ambianceSounds = [];
+private _unparsedSounds = _logic getVariable ["soundFiles", ""];
+private _minimalDistance = (_logic getVariable ["minimalDistance", 400]) max 1;
+private _maximalDistance = (_logic getVariable ["maximalDistance", 10]) max _minimalDistance;
+private _minDelayBetweensounds = (_logic getVariable ["minimalDelay", 10]) max 1;
+private _maxDelayBetweenSounds = (_logic getVariable ["maximalDelay", 170]) max _minDelayBetweensounds;
+private _volume = (_logic getVariable ["soundVolume", 30]) max 1;
+private _followPlayers = _logic getVariable ["followPlayers", false];
 
-    {
-        _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
+private _splittedList = _unparsedSounds splitString ",";
+private _missionRoot = str missionConfigFile select [0, count str missionConfigFile - 15];
 
-        if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
-            // CfgSounds accepts a leading backslash, but a double backslash
-            // is not accepted in the path, so we have to filter that.
-            _soundPath = getArray (missionConfigFile >> "CfgSounds" >> _x >> "sound") select 0;
-            if (_soundPath select [0,1] == "\") then {
-                _ambianceSounds pushBack (_missionRoot + (_soundPath select [1]));
-            } else {
-                _ambianceSounds pushBack (_missionRoot + _soundPath);
-            };
+{
+    _x = [_x] call CBA_fnc_removeWhitespace;
+
+    if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
+        // CfgSounds accepts a leading backslash, but a double backslash
+        // is not accepted in the path, so we have to filter that.
+        private _soundPath = getArray (missionConfigFile >> "CfgSounds" >> _x >> "sound") select 0;
+        if (_soundPath select [0,1] == "\") then {
+            _ambianceSounds pushBack (_missionRoot + (_soundPath select [1]));
         } else {
-            if (isClass (configFile >> "CfgSounds" >> _x)) then {
-                _ambianceSounds pushBack ((getArray(configFile >> "CfgSounds" >> _x >> "sound") select 0));
-            } else {
-                ACE_LOGERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
-            };
+            _ambianceSounds pushBack (_missionRoot + _soundPath);
         };
-
-        false
-    } count _splittedList;
-
-    if (count _ambianceSounds == 0) exitWith {};
-    {
-        if ((_x find ".") == -1) then {
-            _ambianceSounds set [_forEachIndex, _x + ".wss"];
+    } else {
+        if (isClass (configFile >> "CfgSounds" >> _x)) then {
+            _soundPath = (getArray(configFile >> "CfgSounds" >> _x >> "sound")) param [0, ""];
+            if ((_soundPath select [0, 1]) == "\") then {_soundPath = _soundPath select [1];};
+            _ambianceSounds pushBack _soundPath;
+        } else {
+            ERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
         };
-    } forEach _ambianceSounds;
+    };
 
-    [{
-        private ["_newPos", "_allUnits", "_targetUnit"];
-        params ["_args", "_pfhHandle"];
-        _args params ["_logic", "_ambianceSounds", "_minimalDistance", "_maximalDistance", "_minDelayBetweensounds", "_maxDelayBetweenSounds", "_volume", "_followPlayers", "_lastTimePlayed"];
+    false
+} count _splittedList;
 
-        if (!alive _logic) exitWith {
-            [_pfhHandle] call CBA_fnc_removePerFrameHandler;
-        };
+if (count _ambianceSounds == 0) exitWith {};
+{
+    if ((_x find ".") == -1) then {
+        _ambianceSounds set [_forEachIndex, _x + ".wss"];
+    };
+} forEach _ambianceSounds;
 
-        if (CBA_missionTime - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
+TRACE_1("",_ambianceSounds);
 
-            // Find all players in session.
-            _allUnits = if (isMultiplayer) then {playableUnits} else {[ACE_player]};
+[{
+    params ["_args", "_pfhHandle"];
+    _args params ["_logic", "_ambianceSounds", "_minimalDistance", "_maximalDistance", "_minDelayBetweensounds", "_maxDelayBetweenSounds", "_volume", "_followPlayers", "_lastTimePlayed"];
 
-            // Check if there are enough players to even start playing this sound.
-            if (count _allUnits > 0) then {
+    if (!alive _logic) exitWith {
+        [_pfhHandle] call CBA_fnc_removePerFrameHandler;
+    };
 
+    if (CBA_missionTime - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
+
+        // Find all players in session.
+        private _allUnits = if (isMultiplayer) then {playableUnits} else {[ACE_player]};
+
+        // Check if there are enough players to even start playing this sound.
+        if (count _allUnits > 0) then {
+            // find the position from which we are going to play this sound from.
+            private _newPosASL = if (_followPlayers) then {
                 // Select a target unit at random.
-                _targetUnit = _allUnits call BIS_fnc_selectRandom;
+                private _targetUnit = selectRandom _allUnits;
+                AGLtoASL (_targetUnit getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
+            } else {
+                AGLtoASL (_logic getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
+            };
 
-                // find the position from which we are going to play this sound from.
-                _newPos = (getPos _targetUnit);
-                if (!_followPlayers) then {
-                    _newPos = getPos _logic;
-                };
-
-                // Randomize this position.
-                if (random(1) >= 0.5) then {
-                    if (random(1) >= 0.5) then {
-                        _newPos set [0, (_newPos select 0) + (_minimalDistance + random(_maximalDistance))];
-                    } else {
-                        _newPos set [0, (_newPos select 0) - (_minimalDistance + random(_maximalDistance))];
-                    };
-                } else {
-                    if (random(1) >= 0.5) then {
-                        _newPos set [1, (_newPos select 1) + (_minimalDistance + random(_maximalDistance))];
-                    } else {
-                        _newPos set [1, (_newPos select 1) - (_minimalDistance + random(_maximalDistance))];
-                    };
-                };
-
-                // If no unit is to close to this position, we will play the sound.
-                if ({(_newPos distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
-                    playSound3D [selectRandom _ambianceSounds, objNull,  false, _newPos, _volume, 1, 1000];
-                    _args set [8, CBA_missionTime];
-                };
+            TRACE_1("",_newPosASL);
+            // If no unit is to close to this position, we will play the sound.
+            if ({(_newPosASL distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
+                private _soundFile = selectRandom _ambianceSounds;
+                TRACE_2("playing file",_soundFile,_newPosASL);
+                playSound3D [_soundFile, objNull,  false, _newPosASL, _volume, 1, 1000];
+                _args set [8, CBA_missionTime];
+            } else {
+                TRACE_1("pos is too close to a player",_newPosASL);
             };
         };
-    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, CBA_missionTime] ] call CBA_fnc_addPerFrameHandler;
-};
+    };
+}, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, CBA_missionTime] ] call CBA_fnc_addPerFrameHandler;
 
 true;

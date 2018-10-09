@@ -1,5 +1,19 @@
-// by commy2
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: Number <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [5] call ace_vector_fnc_adjustBrigthness
+ *
+ * Public: No
+ */
 
 disableSerialization;
 private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Calculate and apply backblast damage to potentially affected local units
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
@@ -51,6 +51,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             private _beta = sqrt (1 - _angle / _overpressureAngle);
 
             private _damage = _alpha * _beta * _overpressureDamage;
+            TRACE_1("",_damage);
 
             // If the target is the ACE_player
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
@@ -58,6 +59,8 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_x] call EFUNC(medical,hasMedicalEnabled))}) then {
                 [_x, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
             } else {
+                TRACE_1("",isDamageAllowed _x);
+                if (!isDamageAllowed _x) exitWith {}; // Skip damage if not allowed
                 _x setDamage (damage _x + _damage);
             };
 

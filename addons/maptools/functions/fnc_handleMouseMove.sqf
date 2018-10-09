@@ -1,22 +1,26 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Handle mouse movement over the map tool.
  *
  * Arguments:
- * 0: Map Control
- * 1: Mouse position on screen coordinates
+ * 0: Map Control <CONTROL>
+ * 1: Mouse position on screen coordinates <ARRAY>
  *
  * Return Value:
- * Boolean, true if event was handled
+ * true if event was handled <BOOL>
+ *
+ * Example:
+ * [CONTROL, [0, 5, 1]] call ACE_maptools_fnc_handleMouseMove
+ *
+ * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_control", "_mousePosX", "_mousePosY"];
 TRACE_3("params",_control,_mousePosX,_mousePosY);
 
 // If have no map tools, then exit
-if (((isNull ACE_player) || {!("ACE_MapTools" in items ACE_player)})) exitWith {
+if (((isNull ACE_player) || {!("ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems)))})) exitWith {
     false
 };
 

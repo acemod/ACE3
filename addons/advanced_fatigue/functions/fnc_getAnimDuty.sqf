@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Calculates the duty of the current animation.
@@ -14,21 +15,22 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit", "_animName"];
 
 private _duty = 1;
 private _animType = _animName select [1, 3];
 
 GVAR(isSwimming) = false;
+GVAR(isProne) = (stance _unit) == "PRONE";
 
-if (_animType in ["idl", "mov"]) then {
+if (_animType in ["idl", "mov", "adj"]) then {
     switch (_animName select [5, 3]) do {
         case ("knl"): {
             _duty = 1.5;
         };
         case ("pne"): {
-            _duty = 12;
+            _duty = 10;
+            GVAR(isProne) = true; // #4880 - Unarmed sprint->prone has wrong `stance`
         };
         default {
             _duty = 1;
@@ -47,9 +49,15 @@ if (_animType in ["idl", "mov"]) then {
     };
 } else {
     // swimming and diving
-    if (_animType in ["swm", "ssw", "bsw", "dve", "sdv", "bdv"]) then {
-        _duty = 5;
-        GVAR(isSwimming) = true;
+    switch (true) do {
+        case (_animType in ["swm", "ssw", "bsw"]): {
+            _duty = 6.5;
+            GVAR(isSwimming) = true;
+        };
+        case (_animType in ["dve", "sdv", "bdv"]): {
+            _duty = 2.5;
+            GVAR(isSwimming) = true;
+        };
     };
 };
 

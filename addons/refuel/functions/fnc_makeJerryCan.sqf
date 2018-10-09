@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Makes an object into a jerry can.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_target", objNull, [objNull]], ["_fuelAmount", 20, [0]]];
 
@@ -22,9 +22,11 @@ if (isNull _target ||
     {_target isKindOf "AllVehicles"} ||
     {_target getVariable [QGVAR(jerryCan), false]}) exitWith {};
 
-[_target, _fuelAmount] call FUNC(setFuel);
-_target setVariable [QGVAR(jerryCan), true, true];
-_target setVariable [QGVAR(source), _target, true];
+if (isServer) then {
+    [_target, _fuelAmount] call FUNC(setFuel);  // has global effects
+};
+_target setVariable [QGVAR(jerryCan), true];
+_target setVariable [QGVAR(source), _target];
 
 // Main Action
 private _action = [QGVAR(Refuel),
@@ -36,19 +38,19 @@ private _action = [QGVAR(Refuel),
     [],
     [0, 0, 0],
     REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
-[_target, 0, [], _action] call EFUNC(interact_menu,addActionToObject);
+[_target, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add pickup
 _action = [QGVAR(PickUpNozzle),
     localize LSTRING(TakeNozzle),
     QPATHTOF(ui\icon_refuel_interact.paa),
-    {[_player, objNull, _target] call FUNC(TakeNozzle)},
+    {[_player, _target] call FUNC(takeNozzle)},
     {[_player, _target] call FUNC(canTakeNozzle)},
     {},
     [],
     [0, 0, 0],
     REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
-[_target, 0, [QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
+[_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add turnOn
 _action = [QGVAR(TurnOn),
@@ -60,7 +62,7 @@ _action = [QGVAR(TurnOn),
     [],
     [0, 0, 0],
     REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
-[_target, 0, [QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
+[_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add turnOff
 _action = [QGVAR(TurnOff),
@@ -72,7 +74,7 @@ _action = [QGVAR(TurnOff),
     [],
     [0, 0, 0],
     REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
-[_target, 0, [QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
+[_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
 
 // Add disconnect
 _action = [QGVAR(Disconnect),
@@ -84,4 +86,4 @@ _action = [QGVAR(Disconnect),
     [],
     [0, 0, 0],
     REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
-[_target, 0, [QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
+[_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);

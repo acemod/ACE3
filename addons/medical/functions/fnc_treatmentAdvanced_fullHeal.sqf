@@ -1,14 +1,23 @@
-/**
- * fn_heal.sqf
- * @Descr: N/A
- * @Author: Glowbal
- *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
- */
-
 #include "script_component.hpp"
+/*
+ * Author: Glowbal
+ *
+ *
+ * Arguments:
+ * 0: Caller <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: SelectionName <STRING>
+ * 3: ClassName <STRING>
+ * 4: Item <UNKNOWN>
+ *
+ * Return Value:
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [bob, kevin, "selection", "classname", ] call ACE_medical_fnc_treatmentAdvanced_fullHeal
+ *
+ * Public: No
+ */
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 

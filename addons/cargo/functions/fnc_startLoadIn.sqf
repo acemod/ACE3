@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Start load item.
@@ -5,6 +6,7 @@
  * Arguments:
  * 0: Player <OBJECT>
  * 1: Object <OBJECT>
+ * 2: Vehicle <OBJECT> (Optional)
  *
  * Return Value:
  * Load ProgressBar Started <BOOL>
@@ -14,17 +16,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_player", "_object"];
-TRACE_2("params",_player,_object);
+params ["_player", "_object", ["_cargoVehicle", objNull]];
+TRACE_3("params",_player,_object,_cargoVehicle);
 
-private _vehicle = [_player] call FUNC(findNearestVehicle);
-
-if ((isNull _vehicle) || {_vehicle isKindOf "Cargo_Base_F"}) then {
+private _vehicle = _cargoVehicle;
+if (isNull _vehicle) then {
     {
         if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_vehicle = _x};
-    } forEach (nearestObjects [_player, ["Cargo_base_F", "Land_PaperBox_closed_F"], MAX_LOAD_DISTANCE]);
+    } forEach (nearestObjects [_player, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]);
 };
 
 if (isNull _vehicle) exitWith {
@@ -35,14 +35,20 @@ if (isNull _vehicle) exitWith {
 private _return = false;
 // Start progress bar
 if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
+    [_player, _object, true] call EFUNC(common,claim);
     private _size = [_object] call FUNC(getSizeItem);
 
     [
         5 * _size,
-        [_object,_vehicle],
-        {["ace_loadCargo", _this select 0] call CBA_fnc_localEvent},
-        {},
-        localize LSTRING(LoadingItem)
+        [_object, _vehicle],
+        {
+            [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
+            ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
+        },
+        {[objNull, _this select 0 select 0, true] call EFUNC(common,claim)},
+        localize LSTRING(LoadingItem),
+        {true},
+        ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
     _return = true;
 } else {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Cache a handleDamage call to execute it 3 frames later
@@ -11,11 +12,13 @@
  * 5: HitPointIndex (-1 for structural) <NUMBER>
  *
  * Return Value:
- * <nil>
+ * None
+ *
+ * Example:
+ * [bob, "leg", 2, kevin, "bullet", -1] call ACE_medical_fnc_handleDamage_caching
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_hitPointIndex"];
 

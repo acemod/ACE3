@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Play the detector sound
@@ -15,15 +16,13 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_unit", "_soundClass"];
 
 if (isNull _unit) exitWith {
-    ACE_LOGERROR_1("unit does not exist [%1]",_unit);
+    ERROR_1("unit does not exist [%1]",_unit);
 };
 if (!alive _unit) exitWith {
-    ACE_LOGERROR_1("unit is not alive [%1]",_unit);
+    ERROR_1("unit is not alive [%1]",_unit);
 };
 
 if (_unit getVariable [QGVAR(isUsingHeadphones), false] && {_unit == ACE_player}) then {

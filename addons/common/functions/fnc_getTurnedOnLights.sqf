@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns all turned on lights of any vehicle or streetlamp.
@@ -8,9 +9,11 @@
  * Return Value:
  * All burning lights <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getTurnedOnLights
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 

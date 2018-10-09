@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Apply a tourniquet to the patient, local callback.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "classname"] call ACE_medical_fnc_treatmentTourniquetLocal
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_tourniquetItem", "_selectionName"];
 

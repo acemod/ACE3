@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles visual changes of the stamina bar.
@@ -7,8 +8,12 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [0.5] call ace_advanced_fatigue_fnc_handleStaminaBar
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 params ["_stamina"];
 
 private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];

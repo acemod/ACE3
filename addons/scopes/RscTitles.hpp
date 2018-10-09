@@ -51,7 +51,7 @@ class RscTitles {
             class ACE_Scopes_Zeroing_Horizontal : RscText {
                 idc = 13;
                 type = 0;
-                style = 0;
+                style = 2;
                 sizeEx = 0.04;
                 lineSpacing = 1;
                 font = "RobotoCondensed";
@@ -62,7 +62,7 @@ class RscTitles {
 
                 x = (0.5 - 0.4 / 2 + 0.6*0.4) * safezoneW + safezoneX;
                 y = (0 + 0.47*0.3) * safezoneH + safezoneY;
-                w = 0.04 * safezoneW;
+                w = 0.019 * safezoneW;
                 h = 0.025 * safezoneH;
             };
         };

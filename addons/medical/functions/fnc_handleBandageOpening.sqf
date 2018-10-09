@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the bandage of a patient.
@@ -13,12 +14,12 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 5, 5, 1, [injury], "bandage"] call ACE_medical_fnc_handleBandageOpening
+ *
  * Public: No
  */
 
-#include "script_component.hpp"
-
-private ["_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury", "_bandagedInjury"];
 params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 
 private _classID = _injury select 1;
@@ -37,7 +38,7 @@ if (isClass (_config >> _bandage)) then {
     _reopeningMinDelay = getNumber (_config >> "reopeningMinDelay");
     _reopeningMaxDelay = getNumber (_config >> "reopeningMaxDelay") max _reopeningMinDelay;
 } else {
-    ACE_LOGWARNING_2("No config for bandage [%1] config base [%2]", _bandage, _config);
+    WARNING_2("No config for bandage [%1] config base [%2]", _bandage, _config);
 };
 
 if (isClass (_config >> _className)) then {
@@ -52,7 +53,7 @@ if (isClass (_config >> _className)) then {
         _reopeningMaxDelay = getNumber (_woundTreatmentConfig >> "reopeningMaxDelay") max _reopeningMinDelay;
     };
 } else {
-    ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
+    WARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
 };
 TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 
@@ -63,7 +64,7 @@ private _bandagedInjury = [];
 {
     if ((_x select 1) == _injuryType && (_x select 2) == (_injury select 2)) exitwith {
         _exist = true;
-        _existingInjury = _x;
+        private _existingInjury = _x;
         _existingInjury set [3, (_existingInjury select 3) + _impact];
         _bandagedWounds set [_foreachIndex, _existingInjury];
 
@@ -82,7 +83,7 @@ _target setVariable [QGVAR(bandagedWounds), _bandagedWounds, true];
 TRACE_1("",_reopeningChance);
 // Check if we are ever going to reopen this
 if (random(1) <= _reopeningChance) then {
-    _delay = _reopeningMinDelay + random(_reopeningMaxDelay - _reopeningMinDelay);
+    private _delay = _reopeningMinDelay + random(_reopeningMaxDelay - _reopeningMinDelay);
     TRACE_1("Will open",_delay);
     [{
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
@@ -100,7 +101,7 @@ if (random(1) <= _reopeningChance) then {
                 {
                     if ((_x select 1) == _injuryId && (_x select 2) == (_injury select 2)) exitwith {
                         _exist = true;
-                        _existingInjury = _x;
+                        private _existingInjury = _x;
                         _existingInjury set [3, ((_existingInjury select 3) - _impact) max 0];
                         _bandagedWounds set [_foreachIndex, _existingInjury];
                     };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Check if a unit is any medical class
@@ -6,7 +7,7 @@
  * 0: The Unit <OBJECT>
  * 1: Class <NUMBER> (default: 1)
  *
- * ReturnValue:
+ * Return Value:
  * Is in of medic class <BOOL>
  *
  * Example:
@@ -15,11 +16,9 @@
  * Public: Yes
  */
 
-#include "script_component.hpp"
-
 params ["_unit", ["_medicN", 1]];
 
-private _class = _unit getVariable [QGVAR(medicClass), getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "attendant")];
+private _class = _unit getVariable [QGVAR(medicClass), [0, 1] select (_unit getUnitTrait "medic")];
 
 if (_class >= _medicN min GVAR(medicSetting)) exitWith {true};
 if (!GVAR(increaseTrainingInLocations)) exitWith {false};

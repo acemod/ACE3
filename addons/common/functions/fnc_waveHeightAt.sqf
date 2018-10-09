@@ -1,17 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Gets the wave height at a specific location. Uses a logic, so may be performance iffy
  *
  * Arguments:
- * 0: Position ASL to get height at
+ * 0: Position ASL to get height at <ARRAY>
  *
  * Return Value:
- * Wave height in meters
+ * Wave height in meters <NUMBER>
  *
+ * Example:
+ * [[5, 2, 5]]] call ace_common_fnc_waveHeightAt
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_position"];
 

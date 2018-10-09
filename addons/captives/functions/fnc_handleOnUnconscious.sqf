@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, PabstMirror
  * Handles the "ace_unconscious" event
@@ -7,14 +8,13 @@
  * 0: Is Unconsisisiouses <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, true] call ACE_captives_fnc_handleOnUnconscious
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_isUnconc"];
 

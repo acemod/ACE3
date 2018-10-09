@@ -1,17 +1,19 @@
-/*
-* Author: KoffeinFlummi
-* Initializes the blue force tracking module.
-*
-* Arguments:
-* Whatever the module provides. (I dunno.)
-*
-* Return Value:
-* None
-*/
-
 #include "script_component.hpp"
-
-if (!isServer) exitWith {};
+/*
+ * Author: KoffeinFlummi
+ * Initializes the blue force tracking module.
+ *
+ * Arguments:
+ * Whatever the module provides. (I dunno.) <UNKNOWN>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_map_fnc_blueForceTrackingModule
+ *
+ * Public: No
+ */
 
 params ["_logic"];
 
@@ -20,4 +22,4 @@ params ["_logic"];
 [_logic, QGVAR(BFT_HideAiGroups), "HideAiGroups"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_ShowPlayerNames), "ShowPlayerNames"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO_3("Blue Force Tracking Module Initialized:", GVAR(BFT_Enabled), GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));
+INFO_3("Blue Force Tracking Module Initialized:", GVAR(BFT_Enabled), GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));

@@ -7,7 +7,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Category);
         function = QFUNC(moduleInit);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_AdvancedThrowing_ca.paa);
         class Arguments {
@@ -58,8 +58,9 @@ class CfgVehicles {
         class ACE_Actions {
             class GVAR(pickUp) {
                 displayName = CSTRING(PickUp);
-                condition = QUOTE(_player call FUNC(canPrepare));
+                condition = QUOTE([ARR_2(_player,true)] call FUNC(canPrepare));
                 statement = QUOTE(_this call FUNC(pickUp));
+                exceptions[] = {"isNotSwimming"};
                 distance = 1.8; // Requires >1.7 to work when standing with weapon on back
                 icon = "\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_takemine_ca.paa";
             };

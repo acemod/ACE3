@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Returns array of required nearby repair objects (wheels/tracks)
+ * Returns array of required nearby repair objects (wheels/tracks).
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_maxRange", "_objectsToClaim"];
 TRACE_3("params",_unit,_maxRange,_objectsToClaim);

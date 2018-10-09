@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Set the triage status of object
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 2] call ACE_medical_menu_fnc_setTriageStatus
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_status"];
 

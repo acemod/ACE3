@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Increase the Heart Rate of a local unit by given number within given amount of seconds.
@@ -11,10 +12,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 1, 5, {callback}] call ace_medical_fnc_addHeartRateAdjustment
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_value", 0, [0]], ["_time", 1, [0]], ["_callBack", {}, [{}]]];
 

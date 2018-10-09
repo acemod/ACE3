@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Return true if the unit can unjam it's current weapon
@@ -6,11 +7,13 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * Bool
+ * Bool <BOOL>
+ *
+ * Example:
+ * [bob] call ace_overheating_fnc_canUnjam
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_1("_unit",_unit);

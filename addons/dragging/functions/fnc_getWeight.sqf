@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: L-H, edited by commy2, rewritten by joko // Jonas
  * Returns the weight of a crate.
@@ -13,7 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_object"];
 
@@ -31,6 +31,7 @@ private _totalWeight = 0;
     } forEach _item;
     true
 } count [
+    //IGNORE_PRIVATE_WARNING ["_x"];
     [getMagazineCargo _object, {configFile >> "CfgMagazines" >> _x}],
     [getBackpackCargo _object, {configFile >> "CfgVehicles" >> _x}],
     [getItemCargo _object, {configFile >> "CfgWeapons" >> _x >> "ItemInfo"}],

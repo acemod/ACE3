@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Handle interactions key up
@@ -8,9 +9,11 @@
  * Return Value:
  * true <BOOL>
  *
+ * Example:
+ * [1] call ACE_interact_menu_fnc_keyUp
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_menuType", "_calledByClicking"];
 

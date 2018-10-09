@@ -9,19 +9,6 @@ GVAR(ProtractorStart) = CBA_missionTime;
 GVAR(allBullets) = [];
 GVAR(currentGrid) = 0;
 
-GVAR(extensionAvailable) = true;
-/* @TODO: Remove this until versioning is in sync with cmake/build versioning
-GVAR(extensionVersion) = ("ace_advanced_ballistics" callExtension "version");
-GVAR(extensionAvailable) = (GVAR(extensionVersion) == EXTENSION_REQUIRED_VERSION);
-if (!GVAR(extensionAvailable)) exitWith {
-    if (GVAR(extensionVersion) == "") then {
-        diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is missing";
-    } else {
-        diag_log text "[ACE] ERROR: ace_advanced_ballistics.dll is incompatible";
-    };
-};
-*/
-
 if (!hasInterface) exitWith {};
 
 ["ace_settingsInitialized", {
@@ -39,7 +26,7 @@ if (!hasInterface) exitWith {};
     {
         _x params ["_modPBO", "_compatPBO"];
         if ((isClass (configFile >> "CfgPatches" >> _modPBO)) && {!isClass (configFile >> "CfgPatches" >> _compatPBO)}) then {
-            ACE_LOGWARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
+            WARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
         };
     } forEach [
         ["RH_acc","ace_compat_rh_acc"],

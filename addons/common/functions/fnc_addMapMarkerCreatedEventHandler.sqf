@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Add a map marker creation event handler.
@@ -8,9 +9,11 @@
  * Return Value:
  * ID of the event script (used to remove it later). <NUMBER>
  *
+ * Example:
+ * ["bob"] call ace_common_fnc_addMapMarkerCreatedEventHandler
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_statement"];
 

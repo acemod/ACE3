@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Blurs screen.
  *
  * Arguments:
  * 0: ID <NUMBER>
- * 1: Show? <BOOL/NUMBER>
+ * 1: Show? <BOOL, NUMBER>
  *
  * Return Value:
  * None
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 

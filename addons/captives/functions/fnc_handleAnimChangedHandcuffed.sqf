@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nic547, commy2
  * Restart the handcuffing animation if it got interrupted. Called from a AnimChanged EH.
@@ -6,14 +7,14 @@
  * 0: The Unit <OBJECT>
  * 1: New animation <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, "movearm"] call ACE_captives_fnc_handleAnimChangedHandcuffed
  *
  * Public: No
  */
-
-
-#include "script_component.hpp"
 
 params ["_unit", "_newAnimation"];
 TRACE_2("AnimChanged",_unit,_newAnimation);
@@ -23,7 +24,7 @@ if (_unit == (vehicle _unit)) then {
         [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
     };
 } else {
-    _turretPath = [];
+    private _turretPath = [];
     {
         _x params ["_xUnit", "", "", "_xTurretPath"];
         if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
@@ -18,19 +19,16 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit"];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
-    ACE_LOGERROR_1("%1 is not a valid tag texture.",_texture);
+    ERROR_1("%1 is not a valid tag texture.",_texture);
     false
 };
 
-private _tag = "UserTexture1m_F" createVehicle [0,0,0];
+private _tag = createSimpleObject ["UserTexture1m_F", _tagPosASL];
 _tag setObjectTextureGlobal [0, _texture];
-_tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
 // Throw a global event for mision makers

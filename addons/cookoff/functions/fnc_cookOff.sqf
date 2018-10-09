@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Start a cook-off in the given vehicle.
@@ -9,18 +10,19 @@
  * None
  *
  * Example:
- * (vehicle player) call ace_cookoff_fnc_cookOff
+ * [(vehicle player)] call ace_cookoff_fnc_cookOff
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true];
 
-[QGVAR(cookOff), _vehicle] call CBA_fnc_remoteEvent;
+if (local _vehicle) then {
+    [QGVAR(cookOff), _vehicle] call CBA_fnc_remoteEvent;
+};
 
 [{
     params ["_vehicle"];
@@ -29,7 +31,7 @@ _vehicle setVariable [QGVAR(isCookingOff), true];
     private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {!((_vehicle selectionPosition _x) isEqualTo [0,0,0])};
 
     if (_positions isEqualTo []) then {
-        ACE_LOGWARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
+        WARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
         _positions pushBack "#noselection";
     };
 
@@ -89,7 +91,9 @@ _vehicle setVariable [QGVAR(isCookingOff), true];
         } forEach _positions;
 
         if (isServer) then {
-            private _sound = createSoundSource [QGVAR(Sound), position _vehicle, [], 0];
+            private _soundName = selectRandomWeighted [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65];
+            // TODO - Players in the vehicle hear no sound (even after exiting the vehicle)
+            private _sound = createSoundSource [_soundName, position _vehicle, [], 0];
 
             _effects pushBack _sound;
         };
@@ -105,15 +109,19 @@ _vehicle setVariable [QGVAR(isCookingOff), true];
             DEC(_counter);
 
             if (_counter > 0) then {
-                [_fnc_FlameEffect, [_vehicle, _fnc_FlameEffect, _counter], 0.4] call CBA_fnc_waitAndExecute
+                [_fnc_FlameEffect, [_vehicle, _fnc_FlameEffect, _counter], FLAME_EFFECT_DELAY] call CBA_fnc_waitAndExecute
             };
         };
 
-        [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
+        // Recursive function, occurs for duration of cookoff
+        [_vehicle, _fnc_FlameEffect, ceil(COOKOFF_TIME/FLAME_EFFECT_DELAY)] call _fnc_FlameEffect;
+
+        private _randomPosition = _vehicle getPos [100, random 360];
 
         {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
-                _x action ["Eject", _vehicle];
+                _x leaveVehicle _vehicle;
+                _x doMove _randomPosition;
             };
         } forEach crew _vehicle;
 
@@ -127,6 +135,6 @@ _vehicle setVariable [QGVAR(isCookingOff), true];
             if (local _vehicle) then {
                 _vehicle setDamage 1;
             };
-        }, [_vehicle, _effects], 4 + random 1] call CBA_fnc_waitAndExecute;
-    }, [_vehicle, _effects, _positions], 3 + random 2] call CBA_fnc_waitAndExecute;
-}, _vehicle, 0.5 + random 0.3] call CBA_fnc_waitAndExecute;
+        }, [_vehicle, _effects], COOKOFF_TIME] call CBA_fnc_waitAndExecute; // TODO: Randomise cook off time with locality in mind
+    }, [_vehicle, _effects, _positions], SMOKE_TIME] call CBA_fnc_waitAndExecute;
+}, _vehicle, IGNITE_TIME] call CBA_fnc_waitAndExecute;

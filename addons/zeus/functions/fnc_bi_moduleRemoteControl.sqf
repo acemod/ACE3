@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for remote controlling units as zeus
@@ -9,12 +10,13 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleRemoteControl
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 _logic = _this select 0;
 _units = _this select 1;
@@ -31,13 +33,16 @@ if (_activated && local _logic && !isnull curatorcamera) then {
     if ((_mouseOver select 0) == typename objnull) then {_unit = _mouseOver select 1;};
     _unit = effectivecommander _unit;
 
+    //--- Temp owner
+    private _tempOwner = _unit getvariable ["bis_fnc_moduleRemoteControl_owner", objnull];
+
     //--- Check if the unit is suitable
     _error = "";
     if !(side group _unit in [east,west,resistance,civilian]) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorEmpty";};
     if (isplayer _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer";};
     if !(alive _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorDestroyed";};
     if (isnull _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorNull";};
-    if !(isnull (_unit getvariable ["bis_fnc_moduleRemoteControl_owner",objnull])) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
+    if (!isnull _tempOwner && {_tempOwner in allPlayers}) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
     if (isuavconnected vehicle _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
 
     if (_error == "") then {

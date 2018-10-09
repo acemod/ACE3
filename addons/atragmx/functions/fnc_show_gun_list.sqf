@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows/Hides the gun list controls
@@ -6,14 +7,13 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_fnc_show_gun_list
+ * false call ace_atragmx_fnc_show_gun_list
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(showGunList) = _this;
 

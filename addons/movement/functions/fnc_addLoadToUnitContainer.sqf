@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Add (negative numbers to subtract) a virtual mass to a units container.
@@ -10,9 +11,11 @@
  * Return Value:
  * Success? <BOOLEAN>
  *
+ * Example:
+ * [bob, box, 5] call ace_movement_fnc_addLoadToUnitContainer
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_container", objNull, [objNull]], ["_virtualLoadToAdd", 0, [0]]];
 

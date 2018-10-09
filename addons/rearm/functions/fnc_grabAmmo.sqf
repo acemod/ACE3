@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Grabs an dummy ammo.
@@ -14,15 +15,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params [["_dummy", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params ["_dummy", "_unit"];
 
-REARM_HOLSTER_WEAPON
-[_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
+REARM_HOLSTER_WEAPON;
+[_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
 
 [
-    5,
+    TIME_PROGRESSBAR(5),
     [_dummy, _unit],
     {
         params ["_args"];

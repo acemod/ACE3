@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if unit can drop the object.
@@ -14,10 +15,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 
-if !([_unit, _target, ["isNotDragging"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_unit, _target, ["isNotDragging", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 _unit getVariable [QGVAR(draggedObject), objNull] == _target

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas, SilentSpike
  * Handles drawing the currently selected or cooked throwable.
@@ -13,9 +14,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player] call FUNC(canPrepare))}) exitWith {
+if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player, true] call FUNC(canPrepare))}) exitWith {
     [ACE_player, "In dialog or no throwable in hand or cannot prepare throwable"] call FUNC(exitThrowMode);
 };
 
@@ -35,6 +35,11 @@ if (_throwable isEqualTo [] && {!_primed}) exitWith {
 };
 
 private _throwableMag = _throwable param [0, "#none"];
+
+// If not primed, double check we actually have the magazine in inventory
+if ((!_primed) && {!((_throwableMag in (uniformItems ACE_player)) || {_throwableMag in (vestItems ACE_player)} || {_throwableMag in (backpackItems ACE_player)})}) exitWith {
+    [ACE_player, "No valid throwable (glitched currentThrowable)"] call FUNC(exitThrowMode);
+};
 
 // Get correct throw power for primed grenade
 if (_primed) then {
@@ -63,7 +68,7 @@ private _power = linearConversion [0, 180, _phi - 30, 1, 0.3, true];
 ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed * _power];
 
 #ifdef DEBUG_MODE_FULL
-hintSilent format ["Heading: %1\nPower: %2\nSpeed: %3\nThrowMag: %4", _phi, _power, _throwSpeed * _power, _throwableMag];
+hintSilent format ["Heading: %1\nPower: %2\nSpeed: %3\nThrowMag: %4\nMuzzle: %5", _phi, _power, _throwSpeed * _power, _throwableMag, ACE_player getVariable [QGVAR(activeMuzzle), ""]];
 #endif
 
 private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
@@ -71,16 +76,25 @@ private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag 
 if (!([ACE_player] call FUNC(canThrow)) && {!_primed}) exitWith {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
+        // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
+        ACE_player setAmmo [ACE_player getVariable [QGVAR(activeMuzzle), ""], 1];
     };
 };
 
 if (isNull _activeThrowable || {(_throwableType != typeOf _activeThrowable) && {!_primed}}) then {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
+        // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
+        ACE_player setAmmo [ACE_player getVariable [QGVAR(activeMuzzle), ""], 1];
     };
     _activeThrowable = _throwableType createVehicleLocal [0, 0, 0];
     _activeThrowable enableSimulation false;
     ACE_player setVariable [QGVAR(activeThrowable), _activeThrowable];
+
+    // Set muzzle ammo to 0 to block vanilla throwing (can only be 0 or 1)
+    private _muzzle = _throwableMag call FUNC(getMuzzle);
+    ACE_player setAmmo [_muzzle, 0];
+    ACE_player setVariable [QGVAR(activeMuzzle), _muzzle];
 };
 
 // Exit in case of explosion in hand
@@ -114,6 +128,10 @@ _activeThrowable setDir (_unitDirVisual + 90);
 private _pitch = [-30, -90] select (_throwType == "high");
 [_activeThrowable, _pitch, 0] call BIS_fnc_setPitchBank;
 
+// Force drop mode if underwater
+if (underwater player) then {
+    ACE_player setVariable [QGVAR(dropMode), true];
+};
 
 if (ACE_player getVariable [QGVAR(dropMode), false]) then {
     _posFin = _posFin vectorAdd (AGLToASL (positionCameraToWorld [_leanCoef, 0, ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]]));

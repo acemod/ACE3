@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Handles medical on unconscious event.
@@ -14,9 +15,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_isUnconscious", false, [false]]];
+params ["_unit", "_isUnconscious"];
 
 if (!local _unit || {!_isUnconscious}) exitWith {};
 

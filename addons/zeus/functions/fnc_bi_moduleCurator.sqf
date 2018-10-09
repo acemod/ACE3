@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for initalizing zeus
@@ -10,12 +11,13 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleCurator
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 
@@ -98,7 +100,7 @@ if (_activated) then {
         //--- Handle ownership
         [_logic,_ownerVar,_ownerUID,_adminVar] spawn {
             scriptname "BIS_fnc_moduleCurator: Owner";
-            
+
             params ["_logic", "_ownerVar", "_ownerUID", "_adminVar"];
 
             if (_adminVar != "") then {_ownerVar = _adminVar;};

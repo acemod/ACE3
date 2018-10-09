@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use Equipment items if any is available. Priority: 1) Medic, 2) Patient. If in vehicle: 3) Crew
@@ -7,13 +8,14 @@
  * 1: Patient <OBJECT>
  * 2: Items <ARRAY<STRING>>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [unit, patient, ["bandage"]] call ace_medical_fnc_useItems
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_medic", "_patient", "_items"];
 

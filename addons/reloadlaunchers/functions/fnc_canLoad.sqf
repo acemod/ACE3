@@ -1,26 +1,29 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check of the unit can reload the launcher of target unit.
  *
  * Arguments:
- * 0: Unit to do the reloading (Object)
- * 1: Unit eqipped with launcher (Object)
- * 2: weapon name (String)
- * 3: missile name (String)
+ * 0: Unit to do the reloading <OBJECT>
+ * 1: Unit eqipped with launcher <OBJECT>
+ * 2: weapon name <STRING>
+ * 3: missile name <STRING>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_canLoad
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target", "_weapon", "_magazine"];
 TRACE_4("params",_unit,_target,_weapon,_magazine);
 
 if (!alive _target) exitWith {false};
 if (vehicle _target != _target) exitWith {false};
-if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_unit, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 // target is awake
 if (_target getVariable ["ACE_isUnconscious", false]) exitWith {false};

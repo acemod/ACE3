@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Grabs a variable. If variable has not been set, attempts to use default defined value
@@ -9,9 +10,11 @@
  * Return Value:
  * Value of variable or default value, if the variable is undefined <ANY>
  *
+ * Example:
+ * [bob, "var"] call ace_common_fnc_getDefinedVariable
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_variable", "_defaultValue"];
 

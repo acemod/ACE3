@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle opening of interaction menu.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_sandbag_fnc_handleInteractMenuOpened
+ *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_unit"];
 

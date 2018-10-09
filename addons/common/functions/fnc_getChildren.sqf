@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Obtain children of a config entry
@@ -7,10 +8,12 @@
  *
  * Return Value:
  * Parent Entry Class Children <ARRAY>
+
+ * Example:
+ * [bob] call ace_common_fnc_getChildren
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_name", "_cfgClass"];
 

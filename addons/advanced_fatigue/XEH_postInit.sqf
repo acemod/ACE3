@@ -12,39 +12,38 @@ if (!hasInterface) exitWith {};
     GVAR(ppeBlackout) ppEffectCommit 0.4;
 
     // - GVAR updating and initialization -----------------------------------------
-    if !(isNull ACE_player) then {
-        [ACE_player, objNull] call FUNC(handlePlayerChanged);
-    };
-    ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+    ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+
+    ["visibleMap", {
+        params ["", "_visibleMap"]; // command visibleMap is updated one frame later
+        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+        _staminaBarContainer ctrlShow ((!_visibleMap) && {(vehicle ACE_player) == ACE_player});
+    }, true] call CBA_fnc_addPlayerEventHandler;
+    ["vehicle", {
+        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+        _staminaBarContainer ctrlShow ((!visibleMap) && {(vehicle ACE_player) == ACE_player});
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
-    [QEGVAR(medical,pain), {
-        1 + (((_this getVariable [QEGVAR(medical,pain), 0]) min 1) / 10)
-    }] call FUNC(addDutyFactor);
-    [QEGVAR(medical,bloodVolume), {
-        2 - (((_this getVariable [QEGVAR(medical,bloodVolume), 100]) min 100) / 100)
-    }] call FUNC(addDutyFactor);
-    [QEGVAR(dragging,isCarrying), {
-        if (_this getVariable [QEGVAR(dragging,isCarrying), false]) then {
-            3
-        } else {
-            1
-        };
-    }] call FUNC(addDutyFactor);
-    [QEGVAR(weather,temperature), {
-        (((missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]) - 35) / 10) max 2 min 1
-    }] call FUNC(addDutyFactor);
-
-    // - Add main PFH -------------------------------------------------------------
-    [FUNC(pfhMain), 1, []] call CBA_fnc_addPerFrameHandler;
-}] call CBA_fnc_addEventHandler;
-
-["ace_settingChanged", {
-    params ["_name", "_value"];
-
-    if (_name == QGVAR(enableStaminaBar) && {!_value}) then {
-        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlSetFade 1;
-        _staminaBarContainer ctrlCommit 0;
+    if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+        [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
+            linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
+        }] call FUNC(addDutyFactor);
+        [QEGVAR(medical,bloodVolume), { // 100->1.0, 90->1.1, 80->1.2
+            linearConversion [100, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 100]), 1, 2, true];
+        }] call FUNC(addDutyFactor);
     };
+    if (["ACE_Dragging"] call EFUNC(common,isModLoaded)) then {
+        [QEGVAR(dragging,isCarrying), {
+            [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
+        }] call FUNC(addDutyFactor);
+    };
+    if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
+        [QEGVAR(weather,temperature), { // 35->1, 45->2
+            linearConversion [35, 45, (missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]), 1, 2, true];
+        }] call FUNC(addDutyFactor);
+    };
+
+    // - Add main loop at 1 second interval -------------------------------------------------------------
+    [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;

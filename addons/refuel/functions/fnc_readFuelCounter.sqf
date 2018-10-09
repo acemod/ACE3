@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Reads the fuel counter.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Fuel Truck <OBJECT>
+ * 1: Fuel Source <OBJECT>
  *
  * Return Value:
  * None
@@ -14,28 +15,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
 
-[
-    2,
-    [_unit, _target],
-    {
-        params ["_args"];
-        _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+private _currentFuel = [_source] call FUNC(getFuel);
+private _fuelCounter = if (_currentFuel == REFUEL_INFINITE_FUEL) then {
+    _source getVariable [QGVAR(fuelCounter), 0]
+} else {
+    (_source getVariable [QGVAR(fuelCounter), _currentFuel]) - _currentFuel
+};
 
-        private _currentFuel = [_target] call FUNC(getFuel);
-        if (_currentFuel == REFUEL_INFINITE_FUEL) then {
-            private _fuelCounter = 0.01 * round (100 * (_target getVariable [QGVAR(fuelCounter), 0]));
-            [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
-        } else {
-            private _fuelCounter = 0.01 * round (100 * ((_target getVariable [QGVAR(fuelCounter), _currentFuel]) - _currentFuel));
-            [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
-        };
-    },
-    "",
-    localize LSTRING(CheckFuelCounterAction),
-    {true},
-    ["isnotinside"]
-] call EFUNC(common,progressBar);
+private _fuelCounter = 0.01 * round (100 * _fuelCounter);
+[[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);

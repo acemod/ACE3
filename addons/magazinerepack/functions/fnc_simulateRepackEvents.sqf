@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Simulates repacking a set of magazines.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_fullMagazineCount", "_arrayOfAmmoCounts", "_isBelt"];
 
@@ -26,6 +26,7 @@ _arrayOfAmmoCounts = +_arrayOfAmmoCounts;
 _arrayOfAmmoCounts sort true;
 
 private _fnc_newMag = {
+    //IGNORE_PRIVATE_WARNING ["_time", "_events"];
     _time = _time + GVAR(TimePerMagazine);
     _events pushBack [_time, false, +_arrayOfAmmoCounts];
 };

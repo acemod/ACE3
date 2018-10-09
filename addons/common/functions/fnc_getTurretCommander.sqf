@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the turret index of a vehicles commander.
@@ -8,9 +9,11 @@
  * Return Value:
  * Vehicle commander turrent indecies <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getTurretCommander
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_vehicle", objNull, [objNull]]];
 

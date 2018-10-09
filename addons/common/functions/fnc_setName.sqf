@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets the name variable of the object. Used to prevent issues with the name command.
@@ -8,11 +9,14 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_setName
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
+TRACE_3("setName",_unit,alive _unit,name _unit);
 
 if (isNull _unit || {!alive _unit}) exitWith {};
 

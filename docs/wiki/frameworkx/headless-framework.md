@@ -20,6 +20,12 @@ In an event when a Headless Clients disconnects during the mission (is kicked, l
 
 A server admin or mission maker can also define the minimal delay between transfers, in order to minimize the desync due to changes in locality of many units. Log can also be enabled to keep track of the transfers (_note: it is counting groups and not units_). That can be set through [ACE3 Settings](../framework/settings-framework.html) or a mission module.
 
+### 1.1 End Mission
+
+Since ACEX v3.1.0 Headless component supports automatic ending of mission when Headless Clients are connencted but no players are present. It is basically `server.cfg` setting `persistent = 1;` with Headless Client support.
+
+As of ACEX v3.2.0 this feature can also be enabled without enabling AI distribution (overall setting).
+
 
 ## 2. Scripting
 
@@ -34,7 +40,10 @@ this setVariable ["acex_headless_blacklist", true];
 
 ## 3. Limitations
 
-Some Arma 3 features are incompatible, this is up to BI to add support. Disable transferring for units using the following features to ensure expected functionality.
+Some Arma 3 features are incompatible, this is up to BI to add support. Disable transferring for units using the following features to ensure expected functionality:
 
-- Vanilla Support Modules will stop functioning
-- Triggers synchronized with waypoints will no longer be respected (waypoint will not change status based on the trigger condition)
+- Vanilla Support Modules (will stop functioning)
+
+Additionally, groups will not be transferred due to lack of support if they:
+
+- Have waypoints with synchronized triggers (waypoint would not change status based on trigger condition) (added in ACEX v3.2.0)

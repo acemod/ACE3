@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Attempt to fix floating physx with disabled damage after setPosXXX commands.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [object] call ace_common_fnc_fixFloating
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object"];
 

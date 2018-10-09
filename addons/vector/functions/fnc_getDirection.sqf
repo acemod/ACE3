@@ -1,11 +1,23 @@
-// by commy2
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Array <ARRAY>
+ *
+ * Example:
+ * call ace_vector_fnc_getDirection
+ *
+ * Public: No
+ */
 
 /*
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector, displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector, displayNull);
 
 [
     round parseNumber ctrlText (_dlgVector displayCtrl 156),

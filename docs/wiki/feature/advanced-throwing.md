@@ -27,11 +27,24 @@ After cooking a grenade any mode can be used to throw it further or it can simpl
 
 Grenade will be thrown where you are currently looking at, free-look (including TrackIR) is fully supported. However, the further to the side and back you are looking, the lower the throw power will be.
 
-### 1.2 Rethrowing
+### 1.2 Indicators
+
+When enabled, an arc of colored filled circles will indicate the path grenade will fly through.
+
+Color | Meaning
+----- | --------
+White | Flight path
+Green | Collision with ground surface
+Red | Collision with object
+Yellow | Possible collision (_added in ACE3 v3.8.0_)
+
+Possible collisions are collisions that might happen, but there is also a chance that the grenade will not collide with that object. It is impossible to predict in many cases due to different object configurations.
+
+### 1.3 Rethrowing
 
 Advanced Throwing allows you to pick up grenades that have already been thrown. You have to be very close to it to effectively pick it up. Useful for rethrowing smoke grenades or repositioning chemlights. Frag grenades can also be thrown back, for example out of the house, however doing so is extremely risky.
 
-### 1.3 Settings
+### 1.4 Settings
 
 Various settings can be set according to your likeness. Next to global toggle to disable Advanced Throwing there are settings to hide the throw arc indicating approximate throw distance and the arc it will fly through and hide mouse controls. Additionally for server administrators and mission makers, picking up grenades can be entirely disabled, as well as a setting to enable picking up attached items such as chemlights attached to vehicles or other player's shoulder.
 

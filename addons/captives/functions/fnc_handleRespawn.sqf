@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 PabstMirror
  * Fix, because captiveNum doesn't reset properly on respawn
@@ -7,16 +8,16 @@
  * 1: Corpse <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [alive, body] call ACE_captives_fnc_handleRespawn;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_dead"];
+TRACE_2("handleRespawn",_unit,_dead);
 
 if (!local _unit) exitWith {};
 
@@ -46,7 +47,7 @@ if (_respawn > 3) then {
     };
     [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
 
-    if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
-        _oldUnit setVariable [QGVAR(isEscorting), false, true];
+    if (_unit getVariable [QGVAR(isEscorting), false]) then {
+        _unit setVariable [QGVAR(isEscorting), false, true];
     };
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Create one unload action per unconscious passenger
@@ -10,9 +11,11 @@
  * Return Value:
  * Children actions <ARRAY>
  *
+ * Example:
+ * [car, kevin, [params]] call ACE_medical_fnc_addUnloadPatientActions
+ *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_vehicle", "_player", "_parameters"];
 
 private _actions = [];

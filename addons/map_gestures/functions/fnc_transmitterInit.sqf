@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix
  * Initializes the transmitting event handlers.
@@ -13,13 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-private ["_mapCtrl", "_unitUID", "_drawPosVariableName"];
 
 disableSerialization;
 
-_mapCtrl = findDisplay 12 displayCtrl 51;
+private _mapCtrl = findDisplay 12 displayCtrl 51;
 
 // MouseMoving EH.
 if (!isNil QGVAR(MouseMoveHandlerID)) then {
@@ -28,7 +26,7 @@ if (!isNil QGVAR(MouseMoveHandlerID)) then {
 };
 GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
     // Don't transmit any data if we're using the map tools
-    if (!GVAR(EnableTransmit) || EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)) exitWith {};
+    if (!GVAR(EnableTransmit) || {(["ace_maptools"] call EFUNC(common,isModLoaded)) && {EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)}}) exitWith {};
 
     params ["_control", "_posX", "_posY"];
 
@@ -36,11 +34,7 @@ GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
         ACE_player setVariable [QGVAR(Transmit), true, true];
     };
 
-    _unitUID = getPlayerUID ACE_player;
-    _drawPosVariableName = if (!isNil "_unitUID" && _unitUID != "") then {format [QGVAR(%1_DrawPos), _unitUID]} else {nil};
-    if (!isNil "_drawPosVariableName") then {
-        missionNamespace setVariable [_drawPosVariableName, _control ctrlMapScreenToWorld [_posX, _posY]];
-    };
+    GVAR(pointPosition) = _control ctrlMapScreenToWorld [_posX, _posY];
 }];
 
 // MouseDown EH
@@ -51,9 +45,11 @@ if (!isNil QGVAR(MouseDownHandlerID)) then {
 GVAR(MouseDownHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
     if (!GVAR(enabled)) exitWith {};
 
-    params ["", "_button"];
+    params ["", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
 
-    if (_button == 0) then {call FUNC(initTransmit);};
+    if (_button == 0 && {[_shift, _ctrl, _alt] isEqualTo [false, false, false]}) then {
+        call FUNC(initTransmit);
+    };
 }];
 
 // MouseUp EH
@@ -66,5 +62,7 @@ GVAR(MouseUpHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
 
     params ["", "_button"];
 
-    if (_button == 0) then {call FUNC(endTransmit);};
+    if (_button == 0) then {
+        call FUNC(endTransmit);
+    };
 }];

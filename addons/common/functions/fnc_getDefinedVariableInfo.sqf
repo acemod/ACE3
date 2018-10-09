@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the variable Informations
@@ -8,9 +9,11 @@
  * Return Value:
  * Variable Metadata <ARRAY>
  *
+ * Example:
+ * ["var"] call ace_common_fnc_getDefinedVariableInfo
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_varName"];
 

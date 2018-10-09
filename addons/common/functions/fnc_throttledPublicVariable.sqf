@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Schedules the publishment of an object variable to reduce network overhead
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_varName", "_maxDelay"];
 
@@ -27,7 +27,7 @@ if (isNil QGVAR(publishSchedId)) then {
     GVAR(publishSchedId) = [{
         if (diag_tickTime > GVAR(publishNextTime)) then {
             {
-                _x params [_unit, _varName];
+                _x params ["_unit", "_varName"];
                 _unit setVariable [_varName, _unit getVariable _varName, true];
                 false
             } count GVAR(publishVarNames);

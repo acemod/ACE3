@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Assign vehicle as a medical vehicle.
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ACE_medical_fnc_moduleAssignMedicalVehicle
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Server: Recives a dummy logic, sends marker data back to the owner.
@@ -13,13 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_logic"];
-TRACE_1("params",_logic);
+params ["_owner"];
+TRACE_1("params",_owner);
 
 [
     QGVAR(setMarkerJIP),
     [GETGVAR(allMapMarkers,[]), GETGVAR(allMapMarkersProperties,[])],
-    [_logic]
-] call CBA_fnc_targetEvent;
+    _owner
+] call CBA_fnc_ownerEvent;

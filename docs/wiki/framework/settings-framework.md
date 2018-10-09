@@ -12,6 +12,11 @@ version:
   patch: 0
 ---
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Deprecated and replaced with <a href="https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System">CBA Settings System</a> in 3.12.0!</p>
+</div>
+
 ACE3 contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting PBOs. These settings are all handled server side and broadcasted to the clients connecting to that server. This ensures that everyone playing on the server will have a uniform experience.
 
 Part of this settings framework are global settings and client settings. Both use the same underlaying framework, with the difference that client settings can be adjusted by clients, where global settings can not.
@@ -71,14 +76,15 @@ The server config setting entries are done through our optional `ace_server.pbo`
 
 ACE3 contains a lot of settings, for that reason tweaking everything to your liking manually can be quite a task. We have provided the option to export all settings in the editor (single-player). For this, follow these simple steps:
 
-- Open the editor (single-player).
-- Under modules (<kbd>F7</kbd>), find ACE, `Allow Config Export [ACE]`.
-- Place down the module, ensure that the `Allow` parameter is set to `Yes`.
-- Press preview, once in the game, press <kbd>Esc</kbd> and open the ACE3 Options dialog (top left)
-- This is the dialog where you can modify client side settings. On the bottom left of it, you will now see a button called `Config Export`. Press it and a new dialog opens.
-- You are now in the dialog that allows you to adjust all settings from ACE3. Tweak this to your liking.
-- Once you are done tweaking, press the `Export` button and all settings will be copied to your clipboard.
-- Paste the settings in your `serverconfig.hpp` file and you're done.
+1. Open the `Eden Editor`.
+1. Place a playable character.
+1. Click `Systems` (<kbd>F5</kbd>) > `Modules` > `ACE`.
+1. Place the `Allow Config Export [ACE]` module. Ensure that its `Allow` parameter is set to `Yes`.
+1. Click `Play` > `Play in Singleplayer (SP)` (<kbd>Enter</kbd>).
+1. Once in the game, press <kbd>Esc</kbd>, and click `ACE OPTIONS` (in the top-left corner) to open the `ACE Options` dialog. Here you can modify client-side settings.
+1. Click `Open Export Menu` at the bottom of the dialog to open another dialog. Here you can adjust all `ACE3 settings`, both client-side and server-side. Tweak them to your liking.
+1. Once you are done tweaking, click `Export` to copy all server-side settings to the clipboard.
+1. Paste the settings in your copy of `serverconfig.hpp` and save the file.
 
 Please note that in the `serverconfig.hpp` file there is no need for adding the `ACE_Settings` class.
 

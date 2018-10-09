@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WindDeflection">
         <Key ID="STR_ACE_WindDeflection_METER_WIND_CATEGORY">
@@ -12,6 +12,10 @@
             <Hungarian>Szélinformáció</Hungarian>
             <Italian>Informazioni sul vento</Italian>
             <Portuguese>Informação do vento</Portuguese>
+            <Japanese>風の情報</Japanese>
+            <Korean>바람 정보</Korean>
+            <Chinesesimp>风力资讯</Chinesesimp>
+            <Chinese>風力資訊</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_DIRECTION">
             <English>Direction: %1</English>
@@ -24,6 +28,10 @@
             <Hungarian>Irány: %1</Hungarian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção: %1</Portuguese>
+            <Japanese>風向: %1</Japanese>
+            <Korean>방향: %1</Korean>
+            <Chinesesimp>风向: %1</Chinesesimp>
+            <Chinese>風向: %1</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_SPEED">
             <English>Speed: %1 m/s</English>
@@ -36,6 +44,10 @@
             <Hungarian>Sebesség: %1 m/s</Hungarian>
             <Italian>Velocità: %1 m/s</Italian>
             <Portuguese>Velocidade: %1 m/s</Portuguese>
+            <Japanese>風速: %1 m/s</Japanese>
+            <Korean>풍속: %1 m/s</Korean>
+            <Chinesesimp>风速: %1 m/s</Chinesesimp>
+            <Chinese>風速: %1 m/s</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_CATEGORY">
             <English>Weather Information</English>
@@ -48,6 +60,10 @@
             <Hungarian>Időjárás-Információ</Hungarian>
             <Italian>Meteo</Italian>
             <Portuguese>Informação Meteorológica</Portuguese>
+            <Japanese>天候の情報</Japanese>
+            <Korean>기상 정보</Korean>
+            <Chinesesimp>天气资讯</Chinesesimp>
+            <Chinese>天氣資訊</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_HUMIDITY">
             <English>Humidity: %1%</English>
@@ -60,6 +76,10 @@
             <Hungarian>Páratartalom: %1%</Hungarian>
             <Italian>Umidità: %1%</Italian>
             <Portuguese>Humidade: %1%</Portuguese>
+            <Japanese>湿度: %1%</Japanese>
+            <Korean>습도: %1%</Korean>
+            <Chinesesimp>湿度: %1%</Chinesesimp>
+            <Chinese>濕度: %1%</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_DisplayName">
             <English>Wind Deflection</English>
@@ -72,6 +92,10 @@
             <Hungarian>Szél-hárítás</Hungarian>
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
+            <Japanese>風向の変化</Japanese>
+            <Korean>풍향 변화</Korean>
+            <Chinesesimp>风偏</Chinesesimp>
+            <Chinese>風偏</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
             <English>Wind Deflection</English>
@@ -84,6 +108,10 @@
             <Hungarian>Szél-hárítás</Hungarian>
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
+            <Japanese>風向の変化</Japanese>
+            <Korean>풍향 변화</Korean>
+            <Chinesesimp>风偏</Chinesesimp>
+            <Chinese>風偏</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_Description">
             <English>Enables wind deflection</English>
@@ -96,6 +124,10 @@
             <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
             <Russian>Включает отклонение ветром</Russian>
             <Italian>Abilita deviazione del vento</Italian>
+            <Japanese>風向の変化を有効化</Japanese>
+            <Korean>풍향 변화를 적용합니다</Korean>
+            <Chinesesimp>开启风偏效果</Chinesesimp>
+            <Chinese>開啟風偏效果</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
             <English>Vehicle Enabled</English>
@@ -108,6 +140,10 @@
             <Hungarian>Jármű engedélyezve</Hungarian>
             <Russian>Для техники</Russian>
             <Italian>Abilita per Veicoli</Italian>
+            <Japanese>車両へ有効化</Japanese>
+            <Korean>차량 적용</Korean>
+            <Chinesesimp>启用风偏给载具</Chinesesimp>
+            <Chinese>啟用風偏給載具</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
             <English>Enables wind deflection for static/vehicle gunners</English>
@@ -120,6 +156,10 @@
             <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
             <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
             <Italian>Abilita deviazione del vento per artiglieri di statiche/veicoli</Italian>
+            <Japanese>重火器や車両へ、風向の変化を有効化</Japanese>
+            <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
+            <Chinesesimp>使风偏作用在固定式武器与载具炮手身上</Chinesesimp>
+            <Chinese>使風偏作用在固定式武器與載具砲手身上</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -132,6 +172,10 @@
             <Hungarian>Szimulációs intervallum</Hungarian>
             <Russian>Интервал симуляции</Russian>
             <Italian>Intervallo Simulazione</Italian>
+            <Japanese>シミュレーションの間隔</Japanese>
+            <Chinesesimp>模拟间隔</Chinesesimp>
+            <Chinese>模擬間隔</Chinese>
+            <Korean>시뮬레이션 간격</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -144,30 +188,10 @@
             <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
             <Russian>Определяет временной интервал между расчетами</Russian>
             <Italian>Definisce l'intervallo tra ogni passaggio di calcolo</Italian>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_simulationRadius_DisplayName">
-            <English>Simulation Radius</English>
-            <Polish>Zasięg symulacji</Polish>
-            <Spanish>Radio de simulación</Spanish>
-            <German>Simulationsradius</German>
-            <Czech>Oblast simulace</Czech>
-            <Portuguese>Radio da Simulação</Portuguese>
-            <French>Rayon de simulation</French>
-            <Hungarian>Szimulációs hatókör</Hungarian>
-            <Russian>Радиус симуляции</Russian>
-            <Italian>Raggio Simulazione</Italian>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_simulationRadius_Description">
-            <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
-            <Polish>Określa obszar naokoło gracza (w metrach), na którym pociski są znoszone przez wiatr</Polish>
-            <Spanish>Define el radio alrededor del jugador (en metros) en el cual los proyectiles son desviados por el viento</Spanish>
-            <German>Gibt den Radius (in Metern) um den Spieler an, in dem Projektile vom Wind beeinflusst werden</German>
-            <Czech>Definuje oblast kolem hráče (v metrech) v které je projektil ovlivněn větrem</Czech>
-            <Portuguese>Define o raio ao redor do jogador (em metros) em qual os projéteis são desviados pelo vento</Portuguese>
-            <French>Défini un rayon autour du joueur (en mètres) autour duquel les projectiles sont influencés par le vent</French>
-            <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékeket háríthatja a szél</Hungarian>
-            <Russian>Определяет радиус вокруг игрока (а метрах), в котором снаряды отклоняются ветром</Russian>
-            <Italian>Definisce il raggio attorno al giocatore (in metri) dove viene applicata la deviazione del vento ai proiettili</Italian>
+            <Japanese>各計算に適用させる間隔を定義します</Japanese>
+            <Korean>매 계산마다의 간격을 정의합니다</Korean>
+            <Chinesesimp>定义每个计算之间的时间间隔</Chinesesimp>
+            <Chinese>定義每個計算之間的時間間隔</Chinese>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
             <English>Wind influence on projectiles trajectory</English>
@@ -180,6 +204,10 @@
             <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
             <Russian>Влияние втера на траекторию снарядов</Russian>
             <Italian>Influenza del vento sulla traiettoria dei proiettili</Italian>
+            <Japanese>風を弾道へ影響させます</Japanese>
+            <Korean>발사체의 궤도에 풍향 변화를 줍니다.</Korean>
+            <Chinesesimp>风力的大小会引响到弹道的轨迹</Chinesesimp>
+            <Chinese>風力的大小會引響到彈道的軌跡</Chinese>
         </Key>
     </Package>
 </Project>

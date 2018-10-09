@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * ?
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_common_fnc_debugModule
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_entity"];
 

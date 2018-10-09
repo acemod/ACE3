@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Unit unloads a captive from a vehicle.
@@ -7,14 +8,13 @@
  * 1: A captive loaded in a vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, prisoner] call ACE_captives_fnc_doUnloadCaptive
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 

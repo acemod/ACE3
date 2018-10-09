@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Returns the the first intersection with an object between two positions. @todo rewrite using lineIntersectsSurfaces?
@@ -11,9 +12,11 @@
  * 0: Intersects <BOOL>
  * 1: Intersection Position ASL <ARRAY>
  *
+ * Example:
+ * [[1,2,3], [0,0,5], 5] call ace_common_fnc_getFirstTerrainIntersection
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_source", "_destination", "_accuracy"];
 

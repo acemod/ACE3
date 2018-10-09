@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows/Hides the gun ammo data controls
@@ -6,14 +7,13 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * false call ace_atragmx_fnc_show_gun_ammo_data
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(showGunAmmoData) = _this;
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Replaces vanilla items with ACE ones.
@@ -5,13 +6,14 @@
  * Arguments:
  * 0: The unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_itemCheck
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

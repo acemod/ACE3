@@ -19,37 +19,64 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
-["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
+["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
     TRACE_2("forceWalk EH",_object,_set);
     _object forceWalk (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockSprint), { //Name reversed from `allowSprint` because we want NOR logic
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
     _object setCaptive (_set > 0);
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setHidden), {
+    params ["_object", "_set"];
+    TRACE_2("setHidden EH",_object,_set);
+    // May report nil. Default to factor 1.
+    private _vis = [_object getUnitTrait "camouflageCoef"] param [0, 1];
+    if (_set > 0) then {
+        if (_vis != 0) then {
+            _object setVariable [QGVAR(oldVisibility), _vis];
+            _object setUnitTrait ["camouflageCoef", 0];
+            {
+                if (side _x != side group _object) then {
+                    _x forgetTarget _object;
+                };
+            } forEach allGroups;
+        };
+    } else {
+        _vis = _object getVariable [QGVAR(oldVisibility), _vis];
+        _object setUnitTrait ["camouflageCoef", _vis];
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
     params ["_object", "_set"];
     if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
         TRACE_2("blockDamage EH (using medical)",_object,_set);
-       _object setvariable [QEGVAR(medical,allowDamage), (_set == 0), true];
+       _object setVariable [QEGVAR(medical,allowDamage), (_set == 0), true];
     } else {
         TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
        _object allowDamage (_set == 0);
     };
 }] call CBA_fnc_addEventHandler;
+
 [QGVAR(blockEngine), {
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
@@ -65,7 +92,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    ACE_LOGINFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -74,24 +101,10 @@ if (isServer) then {
     }];
 };
 
-// Listens for global "SettingChanged" events, to update the force status locally
-["ace_settingChanged", {
-    params ["_name", "_value", "_force"];
-
-    if (_force) then {
-        private _settingData = [_name] call FUNC(getSettingData);
-
-        if (_settingData isEqualTo []) exitWith {};
-
-        _settingData set [6, _force];
-    };
-}] call CBA_fnc_addEventHandler;
-
-
 // Event to log Fix Headbug output
 [QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
-    ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
+    INFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
@@ -123,6 +136,7 @@ if (isServer) then {
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
@@ -133,6 +147,7 @@ if (isServer) then {
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(enableSimulationGlobal), {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(setShotParents), {(_this select 0) setShotParents [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
 };
@@ -146,7 +161,7 @@ if (isServer) then {
 // Handle JIP scenario
 if (!isServer) then {
     ["ace_playerJIP", {
-        ACE_LOGINFO("JIP event synchronization initialized");
+        INFO("JIP event synchronization initialized");
         ["ACEa", [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
@@ -170,8 +185,8 @@ private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberStrin
 
 // check previous version number from profile
 if (_currentVersion != _previousVersion) then {
-    // do something
-
+    INFO_2("Updating ACE from [%1] to [%2]",_previousVersion,_currentVersion);
+    [_previousVersion] call FUNC(cbaSettings_transferUserSettings);
     profileNamespace setVariable ["ACE_VersionNumberString", _currentVersion];
 };
 
@@ -190,60 +205,6 @@ call FUNC(checkFiles);
     ] call FUNC(checkPBOs)
 }] call CBA_fnc_addEventHandler;
 
-// Create a pfh to wait until all postinits are ready and settings are initialized
-[{
-    params ["_args"];
-
-    _args params ["_waitingMsgSent"];
-
-    // If post inits are not ready then wait
-    if !(SLX_XEH_MACHINE select 8) exitWith {};
-
-    // If settings are not initialized then wait
-    if (isNil QGVAR(settings) || {!isServer && isNil QEGVAR(modules,serverModulesRead)}) exitWith {
-        if !(_waitingMsgSent) then {
-            _args set [0, true];
-            ACE_LOGINFO("Waiting on settings from server...");
-        };
-    };
-
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-
-    ACE_LOGINFO("Settings received from server.");
-
-    if (isServer) then { //read settings from paramsArray
-        [] call FUNC(readSettingsFromParamsArray);
-    };
-    // Event so that ACE_Modules have their settings loaded:
-    [QGVAR(initSettingsFromModules), []] call CBA_fnc_localEvent;
-
-    if (isServer) then {
-        // Publish all settings data after all configs and modules are read
-        publicVariable QGVAR(settings);
-    };
-
-    // Load user settings from profile
-    if (hasInterface) then {
-        call FUNC(loadSettingsFromProfile);
-        call FUNC(loadSettingsLocalizedText);
-    };
-
-    ACE_LOGINFO("Settings initialized.");
-
-    //Event that settings are safe to use:
-    ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
-
-    //Set init finished and run all delayed functions:
-    GVAR(settingsInitFinished) = true;
-    ACE_LOGINFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
-
-    {
-        (_x select 1) call (_x select 0);
-        false
-    } count GVAR(runAtSettingsInitialized);
-
-    GVAR(runAtSettingsInitialized) = nil; //cleanup
-}, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
 /***************************************************************************/
@@ -282,11 +243,11 @@ enableCamShake true;
     params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
-        [_newPlayer] call FUNC(setName);
+        [FUNC(setName), [_newPlayer]] call CBA_fnc_execNextFrame;
     };
 
     if (alive _oldPlayer) then {
-        [_oldPlayer] call FUNC(setName);
+        [FUNC(setName), [_oldPlayer]] call CBA_fnc_execNextFrame;
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
@@ -295,82 +256,14 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
-// It is possible that CBA_fnc_addPlayerEventHandler has allready been called and run
-// We will NOT get any events for the initial state, so manually set ACE_player
-if (!isNull (missionNamespace getVariable ["cba_events_oldUnit", objNull])) then {
-    // INFO("CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player"); //ToDo CBA 3.1
-    diag_log text "[ACE-Common - CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player";
-    ACE_player = cba_events_oldUnit;
-};
-
-// "playerChanged" event
+TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
 ["unit", {
     ACE_player = (_this select 0);
-    ["ace_playerChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
-// "playerVehicleChanged" event
-["vehicle", {
-    ["ace_playerVehicleChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerTurretChanged" event
-["turret", {
-    ["ace_playerTurretChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerWeaponChanged" event
-["weapon", {
-    ["ace_playerWeaponChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerInventoryChanged" event
+// Clear uniqueItems cache on loadout change
 ["loadout", {
-    private _fnc_getAllGear = {
-        if (isNull _this) exitWith {[
-            "",
-            "",
-            "", [],
-            "", [],
-            "", [],
-            "", ["","","",""], [],
-            "", ["","","",""], [],
-            "", ["","","",""], [],
-            [],
-            "",
-            ""
-        ]};
-
-        [
-            headgear _this,
-            goggles _this,
-            uniform _this, uniformItems _this,
-            vest _this, vestItems _this,
-            backpack _this, backpackItems _this,
-            primaryWeapon _this, primaryWeaponItems _this, primaryWeaponMagazine _this,
-            secondaryWeapon _this, secondaryWeaponItems _this, secondaryWeaponMagazine _this,
-            handgunWeapon _this, handgunItems _this, handgunMagazine _this,
-            assignedItems _this,
-            binocular _this,
-            _this call CBA_fnc_binocularMagazine
-        ]
-    };
-
-    ["ace_playerInventoryChanged", [ACE_player, ACE_player call _fnc_getAllGear]] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerVisionModeChanged" event
-["visionMode", {
-    ["ace_playerVisionModeChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "cameraViewChanged" event
-["cameraView", {
-    ["ace_cameraViewChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-["visibleMap", {
-    ["ace_visibleMapChanged", _this] call CBA_fnc_localEvent;
+    GVAR(uniqueItemsCache) = nil;
 }] call CBA_fnc_addPlayerEventHandler;
 
 GVAR(OldIsCamera) = false;
@@ -388,6 +281,49 @@ GVAR(OldIsCamera) = false;
 
     END_COUNTER(stateChecker);
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
+
+// Add event handler for UAV control change
+ACE_controlledUAV = [objNull, objNull, [], ""];
+addMissionEventHandler ["PlayerViewChanged", {
+    // On non-server client this command is semi-broken
+    // arg index 5 should be the controlled UAV, but it will often be objNull (delay from locality switching?)
+    // On PlayerViewChanged event, start polling for new uav state for a few seconds (should be done within a few frames)
+
+    params ["", "", "", "", "_newCameraOn", "_UAV"];
+    TRACE_2("PlayerViewChanged",_newCameraOn,_UAV);
+
+    [{
+        if (isNull player) exitWith {true};
+        private _UAV = getConnectedUAV player;
+        if (!alive player) then {_UAV = objNull;};
+        private _position = (UAVControl _UAV) param [1, ""];
+        private _seatAI = objNull;
+        private _turret = [];
+        switch (toLower _position) do {
+            case (""): {
+                _UAV = objNull; // set to objNull if not actively controlling
+            };
+            case ("driver"): {
+                _turret = [-1];
+                _seatAI = driver _UAV;
+            };
+            case ("gunner"): {
+                _turret = [0];
+                _seatAI = gunner _UAV;
+            };
+        };
+
+        private _newArray = [_UAV, _seatAI, _turret, _position];
+        if (_newArray isEqualTo ACE_controlledUAV) exitWith {false}; // no change yet
+
+        TRACE_2("Seat Change",_newArray,ACE_controlledUAV);
+        ACE_controlledUAV = _newArray;
+        ["ACE_controlledUAV", _newArray] call CBA_fnc_localEvent;
+
+        // stay in the loop as we might switch from gunner -> driver, and there may be a empty position event in-between
+        false
+    }, {}, [], 3, {TRACE_1("timeout",_this);}] call CBA_fnc_waitUntilAndExecute;
+}];
 
 
 //////////////////////////////////////////////////
@@ -427,7 +363,9 @@ GVAR(OldIsCamera) = false;
     // Players can always interact with his vehicle
     {vehicle _unit == _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}}
+    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    // Players can always interact with connected UAV
+    {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
@@ -445,7 +383,9 @@ GVAR(isReloading) = false;
         private _weapon = currentWeapon ACE_player;
 
         if (_weapon != "") then {
-            private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            private _muzzle = currentMuzzle ACE_player;
+            private _wpnConfig = configFile >> "CfgWeapons" >> _weapon;
+            private _gesture = getText ([_wpnConfig >> _muzzle, _wpnConfig] select (_weapon isEqualTo _muzzle) >> "reloadAction");
             if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
             private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
             private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
@@ -530,8 +470,8 @@ GVAR(deviceKeyCurrentIndex) = -1;
 ["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"), {
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
-    _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
-    _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
+    private _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
+    private _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
     [_displayName, _iconImage] call FUNC(displayTextPicture);
     true
 },

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets a public object namespace variable that gets reset with the same value after respawn, so JIP clients keep the value.
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "varname", 5] call ace_common_fnc_setVariableJIP
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_varName", "_value"];
 

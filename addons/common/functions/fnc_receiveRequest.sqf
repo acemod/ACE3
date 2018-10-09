@@ -1,16 +1,23 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * N/A
  *
  * Arguments:
- * ?
+ * 0: caller <OBJECT>
+ * 1: target <OBJECT>
+ * 2: requestID <STRING>
+ * 3: Message <STRING>
+ * 4: callback (NOT USED) <CODE>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_recieveRequest
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 

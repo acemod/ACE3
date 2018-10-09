@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko, Ruthberg, commy2
  * Confirm tactical ladder deployment
@@ -14,17 +15,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_ladder"];
 
 // enable running again
 [_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
 
-private ["_pos1", "_pos2"];
-
-_pos1 = getPosASL _ladder;
-_pos2 = AGLToASL (_ladder modelToWorld (_ladder selectionPosition "check2"));
+private _pos1 = getPosASL _ladder;
+private _pos2 = AGLToASL (_ladder modelToWorld (_ladder selectionPosition "check2"));
 
 if (lineIntersects [_pos1, _pos2, _ladder]) exitWith {false};
 

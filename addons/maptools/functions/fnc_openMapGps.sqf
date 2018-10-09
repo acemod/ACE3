@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Opens or closes the gps on the map screen, showing coordinates
@@ -6,11 +7,13 @@
  * 0: Open GPS? <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [true] call ACE_maptools_fnc_openMapGps
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_shouldOpenGps"];
 

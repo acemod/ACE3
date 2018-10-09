@@ -35,6 +35,12 @@ jQuery(document).ready(function(){
         }
     }
 
+
+    var $tables = $("#content table");
+    $tables.each(function(index, item) {
+        var $table = $(item);
+        $table.wrap("<div class=\"table-wrapper\">")
+    });
 });
 
 window.app = window.app || {};

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Publish a variable if it's different enough from the previously published value.
@@ -9,15 +10,13 @@
  * 3: Absolute tolerance <NUMBER>
  *
  * Return Value:
- * Nothing.
+ * None
  *
  * Example:
  * [player, "balls", 2, 0.1] call ace_common_fnc_setApproximateVariablePublic;
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_object", "_varName", "_value", "_tolerance"];
 TRACE_4("params",_object,_varName,_value,_tolerance);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Calculate the total blood loss of a unit.
@@ -5,13 +6,14 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Total blood loss of unit <NUMBER>
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_getBloodLoss
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define BLOODLOSSRATE_BASIC 0.2
 

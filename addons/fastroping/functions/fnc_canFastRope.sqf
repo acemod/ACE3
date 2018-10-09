@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the unit can fast rope from the helicopter.
@@ -10,17 +11,15 @@
  * Able to fast ropes <BOOL>
  *
  * Example:
- * [_player, _vehicle] call ace_fastroping_fnc_canDeployRopes
+ * [_player, _vehicle] call ace_fastroping_fnc_canFastRope
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_unit", "_vehicle"];
 
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 
 ((driver _vehicle != _unit) &&
 {!(_deployedRopes isEqualTo [])} &&
-{{!(_x select 5)} count (_deployedRopes) > 0} &&
+{{!(_x select 5) && !(_x select 6)} count (_deployedRopes) > 0} &&
 {getPos _vehicle select 2 > 2})

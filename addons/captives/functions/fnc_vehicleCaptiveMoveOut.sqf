@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Unloads a captive from a vehicle.
@@ -6,14 +7,13 @@
  * 0: Captive Unit being unloaded <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob] call ACE_captives_fnc_vehicleCaptiveMoveOut;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_1("params",_unit);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows/Hides the solution setup controls
@@ -6,14 +7,13 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * false call ace_atragmx_fnc_show_solution_setup
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(showSolutionSetup) = _this;
 

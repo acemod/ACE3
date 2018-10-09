@@ -1,50 +1,47 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the scope base angle based on the zero range input
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_zero_range
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-private ["_scopeBaseAngle"];
-_scopeBaseAngle = (GVAR(workingMemory) select 3);
+[] call FUNC(parse_input);
 
-private ["_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_bc", "_dragModel", "_atmosphereModel"];
-_bulletMass = GVAR(workingMemory) select 12;
-_boreHeight = GVAR(workingMemory) select 5;
-_airFriction = GVAR(workingMemory) select 4;
-_muzzleVelocity = GVAR(workingMemory) select 1;
-_bc = GVAR(workingMemory) select 15;
-_dragModel = GVAR(workingMemory) select 16;
-_atmosphereModel = GVAR(workingMemory) select 17;
+private _bulletMass = GVAR(workingMemory) select 12;
+private _boreHeight = GVAR(workingMemory) select 5;
+private _airFriction = GVAR(workingMemory) select 4;
+private _muzzleVelocity = GVAR(workingMemory) select 1;
+private _bc = GVAR(workingMemory) select 15;
+private _dragModel = GVAR(workingMemory) select 16;
+private _atmosphereModel = GVAR(workingMemory) select 17;
+private _zeroRange = GVAR(workingMemory) select 2;
+private _altitude = GVAR(altitude);
+private _temperature = GVAR(temperature);
+private _barometricPressure = GVAR(barometricPressure);
+private _relativeHumidity = GVAR(relativeHumidity);
 
-private ["_zeroRange"];
-_zeroRange = Round(parseNumber(ctrlText 120060));
-if (GVAR(currentUnit) == 1) then {
-    _zeroRange = _zeroRange / 1.0936133;
-};
-if (_zeroRange < 10) exitWith {
-    GVAR(workingMemory) set [2, _zeroRange];
-    GVAR(workingMemory) set [3, 0];
+if (!GVAR(atmosphereModeTBH)) then {
+    _barometricPressure = 1013.25 * (1 - (0.0065 * _altitude) / (273.15 + _temperature + 0.0065 * _altitude)) ^ 5.255754495;
+    _relativeHumidity = 0.5;
 };
 
-private ["_altitude", "_temperature", "_barometricPressure", "_relativeHumidity"];
-_altitude = GVAR(altitude);
-_temperature = GVAR(temperature);
-_barometricPressure = GVAR(barometricPressure);
-_relativeHumidity = GVAR(relativeHumidity);
-
-private ["_result"];
-_result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0, 0] call FUNC(calculate_solution);
+private _scopeBaseAngle = if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
+    private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
+    (parseNumber _zeroAngle)
+} else {
+    private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZeroAB:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, _temperature, _barometricPressure, _relativeHumidity, _bc, _dragModel, _atmosphereModel];
+    (parseNumber _zeroAngle)
+};
 
 GVAR(workingMemory) set [2, _zeroRange];
-GVAR(workingMemory) set [3, _scopeBaseAngle + (_result select 0) / 60];
+GVAR(workingMemory) set [3, _scopeBaseAngle];

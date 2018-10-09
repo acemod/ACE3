@@ -9,16 +9,18 @@ class CfgWeapons {
     class InventoryFlashLightItem_Base_F;
 
     class acc_pointer_IR: ItemCore {
-        ACE_nextModeClass = "ACE_acc_pointer_red";
-        ACE_modeDescription = CSTRING(IRLaser);
+        MRT_SwitchItemNextClass = "ACE_acc_pointer_red";
+        MRT_SwitchItemPrevClass = "ACE_acc_pointer_red";
+        MRT_switchItemHintText = CSTRING(IRLaser);
 
         displayName = CSTRING(red);
         descriptionUse = CSTRING(useLaser);
     };
 
     class ACE_acc_pointer_red: ItemCore {
-        ACE_nextModeClass = "acc_pointer_IR";
-        ACE_modeDescription = CSTRING(Laser);
+        MRT_SwitchItemNextClass = "acc_pointer_IR";
+        MRT_SwitchItemPrevClass = "acc_pointer_IR";
+        MRT_switchItemHintText = CSTRING(Laser);
 
         ACE_laserpointer = 1;
 
@@ -34,7 +36,11 @@ class CfgWeapons {
         class ItemInfo: InventoryFlashLightItem_Base_F {
             mass = 6;
 
-            class Pointer {};
+            class Pointer {
+                irLaserPos = "laser pos";
+                irLaserEnd = "laser dir";
+                irDistance = 5;
+            };
 
             class FlashLight {
                 color[] = {0,0,0};
@@ -68,8 +74,9 @@ class CfgWeapons {
     };
 
     class ACE_acc_pointer_green_IR: acc_pointer_IR {
-        ACE_nextModeClass = "ACE_acc_pointer_green";
-        ACE_modeDescription = CSTRING(IRLaser);
+        MRT_SwitchItemNextClass = "ACE_acc_pointer_green";
+        MRT_SwitchItemPrevClass = "ACE_acc_pointer_green";
+        MRT_switchItemHintText = CSTRING(IRLaser);
 
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_green";
@@ -78,8 +85,9 @@ class CfgWeapons {
     };
 
     class ACE_acc_pointer_green: ACE_acc_pointer_red {
-        ACE_nextModeClass = "ACE_acc_pointer_green_IR";
-        ACE_modeDescription = CSTRING(Laser);
+        MRT_SwitchItemNextClass = "ACE_acc_pointer_green_IR";
+        MRT_SwitchItemPrevClass = "ACE_acc_pointer_green_IR";
+        MRT_switchItemHintText = CSTRING(Laser);
 
         ACE_laserpointer = 2;
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Adjust the grenades throwing direction and speed to the selected throwing mode. Called from the unified fired EH only for CAManBase
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
@@ -56,11 +56,12 @@ if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
     private _fuzeTime = getNumber (_config >> "explosionTime");
     private _timeToLive = getNumber (_config >> "timeToLive");
 
-    [FUNC(incendiary), [_projectile, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
+    [FUNC(incendiary), [_projectile, _timeToLive, side _unit], _fuzeTime] call CBA_fnc_waitAndExecute; // WE WANT THE OBJECTS SIDE HERE!
 };
 
 // handle throw modes
 if (_unit != ACE_player) exitWith {};
+if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
 private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 

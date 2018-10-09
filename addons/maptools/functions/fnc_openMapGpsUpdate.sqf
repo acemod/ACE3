@@ -1,7 +1,19 @@
-//esteldunedain
-//update gps display
-
 #include "script_component.hpp"
+/*
+ * Author: esteldunedain
+ * update gps display
+ *
+ * Arguments:
+ * Something
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_maptools_fnc_openMapGpsUpdate
+ *
+ * Public: No
+ */
 
 if ((!("ItemGPS" in assigneditems ACE_player)) || {isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull])}) exitWith {
     ("RscACE_MapGps" call BIS_fnc_rscLayer) cutText ["","PLAIN"];  // Close GPS RSC

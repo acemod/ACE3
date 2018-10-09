@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Initializes the Rallypoint module.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 
@@ -26,4 +26,4 @@ if !(_activated) exitWith {};
     false
 } count _units;
 
-ACE_LOGINFO("Rallypoint Module Initialized.");
+INFO("Rallypoint Module Initialized.");

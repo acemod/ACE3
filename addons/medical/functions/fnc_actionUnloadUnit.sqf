@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Action for unloading an unconscious or dead unit from a vechile
@@ -10,10 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, false] call ACE_medical_fnc_actionUnloadUnit
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", ["_drag", false]];
 

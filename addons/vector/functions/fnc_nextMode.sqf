@@ -1,5 +1,19 @@
-// by commy2
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: String<STRING>
+ *
+ * Return Value:
+ * Array <ARRAY>
+ *
+ * Example:
+ * ["5"] call ace_vector_fnc_nextMode
+ *
+ * Public: No
+ */
 
 switch (_this select 0) do {
     case ("settings"): {

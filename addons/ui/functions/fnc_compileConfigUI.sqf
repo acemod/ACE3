@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Compiles and caches UI from ACE_UI config.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 {
     private _failure = false;
@@ -23,13 +23,13 @@
 
     private _elements = getArray (_x >> "elements");
     if (_elements isEqualTo []) then {
-        ACE_LOGERROR_1("Failed compiling ACE_UI for Element: %1 - missing elements",_class);
+        ERROR_1("Failed compiling ACE_UI for Element: %1 - missing elements",_class);
         _failure = true;
     };
 
     private _location = getNumber (_x >> "location");
     if !(_location in [ANYWHERE, GROUND_ONLY, VEHICLE_ONLY]) then {
-        ACE_LOGERROR_2("Failed compiling ACE_UI for Element: %1 - missing or invalid location %2",_class,_location);
+        ERROR_2("Failed compiling ACE_UI for Element: %1 - missing or invalid location %2",_class,_location);
         _failure = true;
     };
 

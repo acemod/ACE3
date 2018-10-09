@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * IV Treatment callback
@@ -13,10 +14,11 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [medic, patient, "Selectionname", "bandage", "bandage", -1] call ace_medical_fnc_treatmentAdvanced_bandage
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Apply a tourniquet to the patient
@@ -12,10 +13,11 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentTourniquet
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 

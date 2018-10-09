@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Selects random tag and applies it.
@@ -14,27 +15,28 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 // Exit if Quick Tag disabled
 if (GVAR(quickTag) == 0) exitWith {};
 
 params ["_unit"];
 
 private _possibleTags = [];
+private _useRandom = false;
 
 // Last Used
 if (GVAR(quickTag) == 1) then {
     private _lastUsedTagClass = _unit getVariable [QGVAR(lastUsedTag), nil];
 
-    if (!isNil "_lastUsedTagClass") then {
+    if (isNil "_lastUsedTagClass") then {
+        _useRandom = true;
+    } else {
         private _lastUsedTag = GVAR(cachedTags) select {(_x select 0) == _lastUsedTagClass};
         _possibleTags = _lastUsedTag;
     };
 };
 
 // Random X
-if (GVAR(quickTag == 2)) then {
+if ((GVAR(quickTag) == 2) || _useRandom) then {
     private _xTags = GVAR(cachedTags) select {(_x select 0) in ["ACE_XBlack", "ACE_XRed", "ACE_XGreen", "ACE_XBlue"]};
     _possibleTags = _xTags;
 };
@@ -46,6 +48,6 @@ if (GVAR(quickTag) == 3) then {
 
 // Tag
 if !(_possibleTags isEqualTo []) then {
-    private _availableTags = _possibleTags select {(_x select 2) in ((items _unit) apply {toLower _x})};
+    private _availableTags = _possibleTags select {(_x select 2) in (_unit call EFUNC(common,uniqueItems))};
     [_unit, selectRandom ((selectRandom _availableTags) select 3)] call FUNC(tag);
 };

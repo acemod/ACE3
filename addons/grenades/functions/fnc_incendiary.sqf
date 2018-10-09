@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Makes incendiary burn.
@@ -14,7 +15,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
+
+#define ALERT_NEAR_ENEMY_RANGE 60
 
 #define PARTICLE_LIFE_TIME 2
 #define PARTICLE_DENSITY 20
@@ -32,9 +34,30 @@
 #define ORIENTATION 5.4
 #define EXPANSION 1
 
-params ["_projectile", "_timeToLive"];
+#define DESTRUCTION_RADIUS 1.8
+
+params ["_projectile", "_timeToLive", "_center"];
+
+if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
 
 private _position = position _projectile;
+
+// --- AI
+private _nearLocalEnemies = [];
+
+{
+    {
+        if (local _x && {[_center, side _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECTS SIDE HERE!
+            _nearLocalEnemies pushBackUnique _x;
+        };
+    } forEach crew _x;
+} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE);
+
+{
+    if (behaviour _x in ["SAFE", "AWARE"]) then {
+        _x setBehaviour "COMBAT";
+    };
+} forEach _nearLocalEnemies;
 
 // --- fire
 private _fire = "#particlesource" createVehicleLocal _position;
@@ -144,8 +167,18 @@ if (isServer) then {
         //systemChat format ["burn: %1", _x];
 
         // --- destroy nearby static weapons and ammo boxes
-        if (_x isKindOf "StaticWeapon" || {_x isKindOf "ReammoBox_F"}) then {
+        if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
             _x setDamage 1;
+        };
+        if (_x isKindOf "ReammoBox_F") then {
+            if (
+                "ace_cookoff" call EFUNC(common,isModLoaded) &&
+                {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
+            ) then {
+                _x call EFUNC(cookoff,cookOffBox);
+            } else {
+                _x setDamage 1;
+            };
         };
 
         // --- delete nearby ground weapon holders
@@ -156,13 +189,41 @@ if (isServer) then {
         // --- inflame fireplace, barrels etc.
         _x inflame true;
     };
-} forEach (_position nearObjects EFFECT_SIZE);
+} forEach (_position nearObjects DESTRUCTION_RADIUS);
+
+// --- damage local vehicle
+private _vehicle = _position nearestObject "Car";
+
+if (!local _vehicle) exitWith {};
+
+private _config = _vehicle call CBA_fnc_getObjectConfig;
+
+// --- burn tyres
+private _fnc_isWheelHitPoint = {
+    params ["_selectionName"];
+
+    // wheels must use a selection named "wheel_X_Y_steering" for PhysX to work
+    _selectionName select [0, 6] == "wheel_" && {
+        _selectionName select [count _selectionName - 9] == "_steering"
+    } // return
+};
+
+{
+    private _wheelSelection = getText (_config >> "HitPoints" >> _x >> "name");
+
+    if (_wheelSelection call _fnc_isWheelHitPoint) then {
+        private _wheelPosition = _vehicle modelToWorld (_vehicle selectionPosition _wheelSelection);
+
+        if (_position distance _wheelPosition < EFFECT_SIZE * 2) then {
+            _vehicle setHit [_wheelSelection, 1];
+        };
+    };
+} forEach (getAllHitPointsDamage _vehicle param [0, []]);
 
 // --- burn car engine
-private _vehicle = _position nearestObject "Car";
-if (!local _vehicle || {_vehicle isKindOf "Wheeled_APC_F"}) exitWith {};
+if (_vehicle isKindOf "Wheeled_APC_F") exitWith {};
 
-private _engineSelection = getText (_vehicle call CBA_fnc_getObjectConfig >> "HitPoints" >> "HitEngine" >> "name");
+private _engineSelection = getText (_config >> "HitPoints" >> "HitEngine" >> "name");
 private _enginePosition = _vehicle modelToWorld (_vehicle selectionPosition _engineSelection);
 
 if (_position distance _enginePosition < EFFECT_SIZE * 2) then {

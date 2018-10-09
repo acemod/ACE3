@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Winter
  * Sets the player's current view distance according to whether s/he is on foot, in a land vehicle or in an air vehicle.
@@ -14,13 +15,17 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_showPrompt"];
 
 if (!GVAR(enabled) || isNull ACE_player) exitWith {};
 
 private _vehicle = vehicle ACE_player;
+
+ACE_controlledUAV params ["_uav"];
+if (!isNull _uav) then {
+    TRACE_1("using UAV",ACE_controlledUAV);
+    _vehicle = _uav;
+};
 
 private _landVehicle = _vehicle isKindOf "LandVehicle" || {_vehicle isKindOf "Ship_F"};
 private _airVehicle = _vehicle isKindOf "Air";

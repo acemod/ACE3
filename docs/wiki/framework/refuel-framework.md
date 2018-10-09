@@ -14,13 +14,22 @@ version:
 
 ## 1. Config Values
 
+{% raw %}
 ```cpp
 class CfgVehicles {
-    class MyFuturisticMBT {
-        ace_refuel_fuelCapacity = 3000; // set to correct path static model
+    class MyFuelTruck {
+        ace_refuel_fuelCargo = 3000; // Fuel cargo
+        ace_refuel_hooks[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}}; // Nozzle hooks positions
+    };
+    class MyCar {
+        ace_refuel_fuelCapacity = 100; // Fuel tank volume
+    };
+    class MyElectricCar {
+        ace_refuel_canReceive = 0; // For vehicles which can't be refueled
     };
 };
 ```
+{% endraw %}
 
 <div class="panel callout">
     <h5>Note:</h5>
@@ -62,7 +71,7 @@ class CfgVehicles {
 
    | Arguments | Explanation
 ---| --------- | -----------
-0  |  `can` | My jerry can object
+0  | `can` | My jerry can object
 
 The jerry can will have the default 20 liters volume.
 
@@ -72,31 +81,12 @@ The jerry can will have the default 20 liters volume.
 
    | Arguments | Explanation
 ---| --------- | -----------
-0  |  `can` | My jerry can object
-1  |  `200` | Vehicle class name
+0  | `can` | My jerry can object
+1  | `200` | Vehicle class name
 
 The jerry can will now have a volume of 200 liters.
 
-### 2.3 Reset a broken fuel truck
-
-`ace_refuel_fnc_reset`
-
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Fuel Truck | Object | Required
-**R** | None | None | Return value
-
-#### 2.3.1 Example
-
-`[truck] call ace_refuel_fnc_reset;`
-
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `truck` | My object
-
-This function will try to reset the fuel truck to a pristine state.
-
-### 2.4 Setting the fuel supply
+### 2.3 Setting the fuel supply
 
 `ace_refuel_fnc_setFuel`
 
@@ -106,11 +96,32 @@ This function will try to reset the fuel truck to a pristine state.
 1  | Amount (in liters) | Number | Required
 **R** | None | None | Return value
 
-#### 2.4.1 Example
+#### 2.3.1 Example
 
 `[fuelTruck, 428] call ace_refuel_fnc_setFuel;`
 
    | Arguments | Explanation
 ---| --------- | -----------
-0  |  `fuelTruck` | My fuel truck object
-1  |  `428` | New fuel supply
+0  | `fuelTruck` | My fuel truck object
+1  | `428` | New fuel supply
+
+### 2.4 Make an object into a refuel source
+*Added in ACE3 3.11.0*
+
+`ace_refuel_fnc_makeSource`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Fuel Source | Object | Required
+1  | Amount (in liters) | Number | Optional (default: `0`)
+2  | Hooks positions | Array | Optional (default: `[[0,0,0]]`)
+**R** | None | None | Return value
+
+#### 2.4.1 Example
+
+`[cursorObject, 100] call ace_refuel_fnc_makeSource`
+
+   | Arguments | Explanation
+---| --------- | -----------
+0  | `cursorObject` | Fuel source object
+1  | `100` | Fuel supply

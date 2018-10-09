@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Convert an array of booleans into a number.
@@ -8,9 +9,11 @@
  * Return Value:
  * Bitmask <NUMBER>
  *
+ * Example:
+ * [[true, false]] call ace_common_fnc_toBitmask
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 private _result = 0;
 

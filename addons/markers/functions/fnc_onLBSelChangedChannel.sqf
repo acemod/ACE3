@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * When the channel list box is changed.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [CONTROL, 5] call ACE_markers_fnc_onLBSelChangedChannel
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrl", "_index"];
 TRACE_2("params",_ctrl,_index);

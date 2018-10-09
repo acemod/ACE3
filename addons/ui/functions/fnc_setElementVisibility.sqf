@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Setter for toggling advanced element visibility.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [
     ["_source", "", [""]],
@@ -26,7 +26,7 @@ params [
 ];
 
 if (_source == "" || {_element == ""}) exitWith {
-    ACE_LOGWARNING("Source or Element may not be empty strings!");
+    WARNING("Source or Element may not be empty strings!");
 };
 
 _element = toLower _element;
@@ -34,7 +34,7 @@ _element = toLower _element;
 // Verify element is bound
 private _cachedElement = GVAR(configCache) getVariable _element;
 if (isNil "_cachedElement") exitWith {
-    ACE_LOGWARNING_2("Element '%1' does not exist - modification by '%2' failed.",_element,_source);
+    WARNING_2("Element '%1' does not exist - modification by '%2' failed.",_element,_source);
 };
 
 private _setElement = GVAR(elementsSet) getVariable _element;
@@ -53,7 +53,7 @@ if (isNil "_setElement") then {
 
     if (_set) then {
         if (GVAR(interfaceInitialized)) then {
-            ACE_LOGWARNING_3("Element '%1' already set by '%2' - modification by '%3' failed.",_element,_sourceSet,_source);
+            WARNING_3("Element '%1' already set by '%2' - modification by '%3' failed.",_element,_sourceSet,_source);
         };
     } else {
         TRACE_3("Unsetting element",_sourceSet,_element,_show);

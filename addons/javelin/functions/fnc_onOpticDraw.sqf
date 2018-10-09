@@ -1,69 +1,66 @@
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-TRACE_1("enter", _this);
+/*
+ * Author: jaynus, PabstMirror
+ * Main loop, handles scaning for targets and drawing the javelin optic
+ *
+ * Arguments:
+ * 0: Last run frame <NUMBER>
+ * 0: Current target (what we locked last run) <OBJECT>
+ * 0: Lock start time (cba mission time) <NUMBER>
+ * 0: Next sound play time (ticktime) <NUMBER>
+ * 0: Next target scan (ticktime) <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_javelin_fnc_mapHelperDraw
+ *
+ * Public: No
+ */
 
-#define __TRACKINTERVAL 0    // how frequent the check should be.
-#define __LOCKONTIME 3    // Lock on won't occur sooner
+// TRACE_1("onOpticDraw",diag_frameno);
 
-private ["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom"];
-private ["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
-private ["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"];
-private ["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
-private ["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
-
-_currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
-
-#define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
-#define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
-
-// Reset arguments if we havnt rendered in over a second
-_args = uiNamespace getVariable[QGVAR(arguments), [] ];
-if( (count _args) > 0) then {
-    _lastTick = _args select 0;
-    if(diag_tickTime - _lastTick > 1) then {
-        [] call FUNC(onOpticLoad);
-    };
-};
-
-TRACE_1("Running", "Running");
+#define __TRACKINTERVAL 0       // how frequent the ui update should be.
+#define __SCANNTERVAL 0.05      // how frequent the target scan check should be.
+#define __LOCKONTIME 3          // Lock on won't occur sooner
 
 // Pull the arguments
-_currentTarget = _args select 1;
-_runTime = _args select 2;
-_lockTime = _args select 3;
-_soundTime = _args select 4;
-_randomLockInterval = _args select 5;
-_fireDisabledEH = _args select 6;
+params ["_lastRunFrame", "_currentTarget", "_lockStartTime", "_soundNextPlayTime", "_fireDisabledEH", "_nextTargetScan"];
 
-private ["_ammo", "_magazineConfig", "_weaponConfig"];
-_weaponConfig = configProperties [configFile >> "CfgWeapons" >> (currentWeapon _currentShooter), QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
-_magazineConfig = if ((currentMagazine _currentShooter) != "") then {
-    _ammo = getText (configFile >> "CfgMagazines" >> (currentMagazine _currentShooter) >> "ammo");
-    configProperties [(configFile >> "CfgAmmo" >> _ammo), "(configName _x) == 'ace_missileguidance'", false];
+// Get shooter info
+private _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
+private _currentWeapon = currentWeapon _currentShooter;
+private _currentMagazine = currentMagazine _currentShooter;
+
+// Get weapon / ammo configs
+private _ammoCount = _currentShooter ammo _currentWeapon;
+private _weaponConfig = configProperties [configFile >> "CfgWeapons" >> _currentWeapon, QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
+private _ammoConfig = if (_currentMagazine != "") then {
+    private _ammoType = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");
+    configProperties [(configFile >> "CfgAmmo" >> _ammoType), "(configName _x) == 'ace_missileguidance'", false];
 } else {
     []
 };
 
-//If weapon does not have "javelin enabled", then exit PFEH
-if (((count _weaponConfig) < 1) || {(getNumber (_weaponConfig select 0)) != 1}) exitWith {
+// Check if loaded and javelin enabled for wepaon and missile guidance enabled for loaded ammo
+if ((_ammoCount == 0) || // No ammo loaded
+        {(count _weaponConfig) < 1} || {(getNumber (_weaponConfig select 0)) != 1} || // Not enabled for weapon
+        {(count _ammoConfig) < 1} || {(getNumber ((_ammoConfig select 0) >> "enabled")) != 1} // Not enabled for ammo
+        ) exitWith {
+
     __JavelinIGUITargeting ctrlShow false;
-    __JavelinIGUITargetingGate ctrlShow false;
-    __JavelinIGUITargetingLines ctrlShow false;
-    __JavelinIGUITargetingConstraints ctrlShow false;
+    __JavelinIGUISeek ctrlSetTextColor __ColorGray;
 
-    if(!isNil "_fireDisabledEH") then {
-        _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
-    };
-
-    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
-    GVAR(pfehID) = -1;
+    _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
+    _this set [0, diag_frameno];
+    _this set [4, _fireDisabledEH];
 };
 
-// Find a target within the optic range
-_newTarget = objNull;
 
-// Bail on fast movement
-if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && {cameraOn == ACE_player}) exitWith {    // keep it steady.
+// Bail on fast movement (keep it steady)
+if ((velocity ACE_player) distance [0,0,0] > 0.75 && {cameraView == "GUNNER"} && {cameraOn == ACE_player}) exitWith {
+    TRACE_1("exiting gunner because movement",velocity ACE_player);
     ACE_player switchCamera "INTERNAL";
     if (player != ACE_player) then {
         TRACE_2("Zeus, manually reseting RC after switchCamera",player,ACE_player);
@@ -71,222 +68,122 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
     };
 };
 
-// Refresh the firemode
+// Refresh the firemode (top/dir)
 [] call FUNC(showFireMode);
 
-_ammo = _currentShooter ammo (currentWeapon _currentShooter);
-// not loaded or not "javelin enabled" for magazine, hide targeting and enable firing
-if ((_ammo == 0) || {(count _magazineConfig) < 1} || {(getNumber ((_magazineConfig select 0) >> "enabled")) != 1}) exitWith {
+// Get UI constants
+private _offsetX = 0.5 * safeZoneW - safeZoneX - 0.5;
+private _offsetY = 0.5 * safeZoneH - safeZoneY - 0.5;
+
+private _newTarget = objNull;
+if (GVAR(isLockKeyDown) && {cameraView == "GUNNER"} && {(currentVisionMode ACE_player) == 2}) then {
+    // Attempting to lock; getTarget can be  expensive so it's rate is limited
+    if (diag_tickTime > _nextTargetScan) then {
+        BEGIN_COUNTER(getTarget);
+        _newTarget = [_currentTarget, 2500, 0.6] call FUNC(getTarget);
+        END_COUNTER(getTarget);
+        _nextTargetScan = diag_tickTime + __SCANNTERVAL;
+    } else {
+        _newTarget = _currentTarget;
+    };
+
+    // Show gate box
+    private _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
+        [_currentTarget,[-0.5,-0.5,-0.25],[0,0,0]];
+    } else {
+        [_currentTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"]; 
+    };
+
+    private _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
+    
+    private _lockTime = if (isNull _currentTarget) then {0} else {CBA_missionTime - _lockStartTime};
+    private _minX = ((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 - 0.075*safeZoneW, (_bpos select 0), true]) + _offsetX) max __ConstraintLeft;
+    private _minY = ((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 - 0.075*safeZoneH, (_bpos select 1), true]) + _offsetY) max __ConstraintTop;
+    private _maxX = (((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 + 0.075*safeZoneW, (_bpos select 2), true]) + _offsetX) min __ConstraintRight) - (0.025 * (3 / 4) * safeZoneH);
+    private _maxY = (((linearConversion [1, (__LOCKONTIME - 0.5), _lockTime, 0.5 + 0.075*safeZoneH, (_bpos select 3), true]) + _offsetY) min __ConstraintBottom) - (0.025 * safeZoneH);
+
+    // TRACE_3("",_boundsInput,_bpos,_lockTime);
+    // TRACE_4("",_minX,_maxX,_minY,_maxY);
+
+    __JavelinIGUITargetingGateTL ctrlSetPosition [_minX, _minY];
+    __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX, _minY];
+    __JavelinIGUITargetingGateBL ctrlSetPosition [_minX, _maxY];
+    __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX, _maxY];
+    {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL, __JavelinIGUITargetingGateTR, __JavelinIGUITargetingGateBL, __JavelinIGUITargetingGateBR];
+
+    __JavelinIGUITargeting ctrlShow true;
+    __JavelinIGUITargetingGate ctrlShow true;
+} else {
+    // Not trying to lock
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
-    __JavelinIGUITargetingConstraints ctrlShow false;
-
-    if(!isNil "_fireDisabledEH") then {
-        _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
-    };
-};
-
-_range = parseNumber (ctrlText __JavelinIGUIRangefinder);
-TRACE_1("Viewing range", _range);
-if (_range > 50 && {_range < 2500}) then {
-    _pos = positionCameraToWorld [0,0,_range];
-    _targetArray = _pos nearEntities ["AllVehicles", _range/100];
-    TRACE_1("Searching at range", _targetArray);
-    if (count (_targetArray) > 0) then {
-        _newTarget = _targetArray select 0;
-    };
-};
-
-if ((isNull _newTarget) && {cursorObject isKindOf "AllVehicles"}) then {
-        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorObject, ace_player, cursorObject, true, 1];
-        if (_intersectionsToCursorTarget isEqualTo []) then {
-            _newTarget = cursorObject;
-        };
-};
-if ((isNull _newTarget) && {cursorTarget isKindOf "AllVehicles"}) then {
-        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorTarget, ace_player, cursorTarget, true, 1];
-        if (_intersectionsToCursorTarget isEqualTo []) then {
-            _newTarget = cursorTarget;
-        };
-};
-
-// Create constants
-_constraintTop = __ConstraintTop;
-_constraintLeft = __ConstraintLeft;
-_constraintBottom = __ConstraintBottom;
-_constraintRight = __ConstraintRight;
-
-_offsetX = __OffsetX;
-_offsetY = __OffsetY;
-
-__JavelinIGUITargeting ctrlShow true;
-__JavelinIGUITargetingConstrains ctrlShow true;
-
-_zamerny = _currentTarget selectionPosition (["zamerny", "body"] select (_currentTarget isKindOf "CAManBase"));
-_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
-
-_apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
-
-_aposX = 0;
-_aposY = 0;
-if (count _apos < 2) then {
-    _aposX = 1;
-    _aposY = 0;
-} else {
-    _aposX = (_apos select 0) + _offsetX;
-    _aposY = (_apos select 1) + _offsetY;
-};
-
-if((call CBA_fnc_getFoV) select 1 > 9) then {
-    __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
-    __JavelinIGUIWFOV ctrlSetTextColor __ColorGray;
-} else {
-    __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
-    __JavelinIGUIWFOV ctrlSetTextColor __ColorGreen;
 };
 
 if (isNull _newTarget) then {
-    // No targets found
+    // No target found
     _currentTarget = objNull;
-    _lockTime = 0;
-
+    _lockStartTime = 0;
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
-    __JavelinIGUITargeting ctrlShow false;
-    __JavelinIGUITargetingGate ctrlShow false;
+    _currentShooter setVariable ["ace_missileguidance_target", nil, false];
+
     __JavelinIGUITargetingLines ctrlShow false;
-    __JavelinIGUITargetingConstraints ctrlShow false;
-
-    _currentShooter setVariable ["ace_missileguidance_target",nil, false];
-
+        
     // Disallow fire
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {
-    _fov = [] call CBA_fnc_getFoV;
-    TRACE_1("FOV", _fov);
-    if (_newTarget distance ACE_player < 2500
-            && {(call CBA_fnc_getFoV) select 1 > 9}
-            && { (currentVisionMode ACE_player == 2)}
-            && GVAR(isLockKeyDown)
-            ) then {
-        // Lock on after 3 seconds
-        if(_currentTarget != _newTarget) then {
-            TRACE_1("New Target, reseting locking", _newTarget);
-            _lockTime = diag_tickTime;
-            _currentTarget = _newTarget;
+    if ((!isNull _newTarget) && {_currentTarget != _newTarget}) then {
+        TRACE_1("New Target, reseting locking", _newTarget);
+        _lockStartTime = CBA_missionTime;
+        _currentTarget = _newTarget;
+    };
 
-            playSound "ACE_Javelin_Locking";
-        } else {
-            if(diag_tickTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
-                TRACE_2("LOCKED!", _currentTarget, _lockTime);
+    if ((CBA_missionTime - _lockStartTime) > __LOCKONTIME) then { // Lock on after 3 seconds
+        TRACE_2("LOCKED!", _currentTarget, _lockStartTime);
+        __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
+        __JavelinIGUITargetingLines ctrlShow true;
 
-                __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
+        // Move target marker (the crosshair) to aimpoint on the target
+        private _aimPointOnTarget = _currentTarget selectionPosition (["zamerny", "body"] select (_currentTarget isKindOf "CAManBase"));
+        (worldToScreen (_currentTarget modelToWorld _aimPointOnTarget)) params [["_aposX", 0.5], ["_aposY", 0.5]];
+        private _ctrlPos = ctrlPosition __JavelinIGUITargetingLineV;
+        _ctrlPos set [0, _aposX + _offsetX];
+        __JavelinIGUITargetingLineV ctrlSetPosition _ctrlPos;
+        __JavelinIGUITargetingLineV ctrlCommit __TRACKINTERVAL;
+        _ctrlPos = ctrlPosition __JavelinIGUITargetingLineH;
+        _ctrlPos set [1, _aposY + _offsetY];
+        __JavelinIGUITargetingLineH ctrlSetPosition _ctrlPos;
+        __JavelinIGUITargetingLineH ctrlCommit __TRACKINTERVAL;
 
-                __JavelinIGUITargeting ctrlShow true;
-                __JavelinIGUITargetingConstrains ctrlShow false;
-                __JavelinIGUITargetingGate ctrlShow true;
-                __JavelinIGUITargetingLines ctrlShow true;
+        _currentShooter setVariable ["ace_missileguidance_target", _currentTarget, false];
 
-                // Move target marker to coords.
-                //__JavelinIGUITargetingLineV ctrlSetPosition [_aposX,ctrlPosition __JavelinIGUITargetingLineV select 1];
-                //__JavelinIGUITargetingLineH ctrlSetPosition [ctrlPosition __JavelinIGUITargetingLineH select 0,_aposY];
-                //{_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingLineH,__JavelinIGUITargetingLineV];
+        // Allow fire
+        _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
 
-                _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
-                    [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
-                } else {
-                    [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "zamerny"];
-                };
-
-                _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
-
-                _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
-                _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
-                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025 * (3 / 4) * SafezoneH);
-                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025 * SafezoneH);
-
-                TRACE_4("", _boundsInput, _bpos, _minX, _minY);
-
-                __JavelinIGUITargetingGateTL ctrlSetPosition [_minX, _minY];
-                __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX, _minY];
-                __JavelinIGUITargetingGateBL ctrlSetPosition [_minX, _maxY];
-                __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX, _maxY];
-
-                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL, __JavelinIGUITargetingGateTR, __JavelinIGUITargetingGateBL, __JavelinIGUITargetingGateBR];
-
-                _currentShooter setVariable["ace_missileguidance_target", _currentTarget, false];
-
-                // Allow fire
-                _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
-
-                if(diag_tickTime > _soundTime) then {
-                    playSound "ACE_Javelin_Locked";
-                    _soundTime = diag_tickTime + 0.25;
-                };
-            } else {
-                __JavelinIGUITargeting ctrlShow true;
-                __JavelinIGUITargetingGate ctrlShow true;
-                __JavelinIGUITargetingConstrains ctrlShow true;
-                __JavelinIGUITargetingLines ctrlShow false;
-
-                _currentShooter setVariable["ace_missileguidance_target", nil, false];
-
-                _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
-                    [_newTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
-                } else {
-                    [_newTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"];
-                };
-
-                _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
-
-                _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
-                _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
-                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025 * (3 / 4) * SafezoneH);
-                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025 * SafezoneH);
-
-                TRACE_4("", _boundsInput, _bpos, _minX, _minY);
-
-                __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
-                __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
-                __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
-                __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
-
-                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
-
-                if(diag_tickTime > _soundTime) then {
-                    playSound "ACE_Javelin_Locking";
-                    _soundTime = diag_tickTime + 0.25;
-                };
-                // Disallow fire
-                _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
-            };
+        if (diag_tickTime > _soundNextPlayTime) then {
+            playSound "ACE_Javelin_Locked";
+            _soundNextPlayTime = diag_tickTime + 0.25;
         };
     } else {
-        // No targets found
-        _currentTarget = objNull;
-        _lockTime = 0;
-
+        // Lock in progress
         __JavelinIGUISeek ctrlSetTextColor __ColorGray;
-        __JavelinIGUITargeting ctrlShow false;
-        __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
-        __JavelinIGUITargetingConstraints ctrlShow false;
 
         _currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
+        if (diag_tickTime > _soundNextPlayTime) then {
+            playSound "ACE_Javelin_Locking";
+            _soundNextPlayTime = diag_tickTime + 0.25;
+        };
         // Disallow fire
         _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
     };
 };
 
-//TRACE_2("", _newTarget, _currentTarget);
-
 // Save arguments for next run
-_args set[0, diag_tickTime];
-_args set[1, _currentTarget];
-_args set[2, _runTime];
-_args set[3, _lockTime];
-_args set[4, _soundTime];
-_args set[6, _fireDisabledEH];
-
-uiNamespace setVariable[QGVAR(arguments), _args ];
+_this set [0, diag_frameno];
+_this set [1, _currentTarget];
+_this set [2, _lockStartTime];
+_this set [3, _soundNextPlayTime];
+_this set [4, _fireDisabledEH];
+_this set [5, _nextTargetScan];

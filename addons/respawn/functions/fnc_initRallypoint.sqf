@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Init code for rallypoints.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_rallypoint", "_respawnMarker", "_side"];
 
@@ -35,7 +35,7 @@ if (isNil _name) then {
     };
 } else {
     deleteVehicle _rallypoint;
-    ACE_LOGERROR("Multiple Rallypoints of same type.");
+    ERROR("Multiple Rallypoints of same type.");
 };
 
 // init visible marker

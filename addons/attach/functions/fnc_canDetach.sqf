@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if a unit has an item attached and if it can remove that item.
@@ -14,19 +15,16 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_attachToVehicle", "_unit"];
 TRACE_2("params",_attachToVehicle,_unit);
 
 if ((vehicle _unit) != _unit) exitWith {false};
 
-_attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
+private _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 if ((count _attachedList) == 0) exitWith {false};
 
-private ["_inRange"];
-
-_inRange = false;
+private _inRange = false;
 {
     _x params ["_xObject"];
     if (isNull _xObject) exitWith {

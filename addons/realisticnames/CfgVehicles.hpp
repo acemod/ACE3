@@ -66,14 +66,23 @@ class CfgVehicles {
     class O_MRAP_02_F: MRAP_02_base_F {
         displayName = CSTRING(MRAP_02_Name);
     };
+    class O_T_MRAP_02_ghex_F: MRAP_02_base_F {
+        displayName = CSTRING(MRAP_02_Name);
+    };
 
     class MRAP_02_hmg_base_F: MRAP_02_base_F {};
     class O_MRAP_02_hmg_F: MRAP_02_hmg_base_F {
         displayName = CSTRING(MRAP_02_hmg_Name);
     };
+    class O_T_MRAP_02_hmg_ghex_F: MRAP_02_hmg_base_F {
+        displayName = CSTRING(MRAP_02_hmg_Name);
+    };
 
     class MRAP_02_gmg_base_F: MRAP_02_hmg_base_F {};
     class O_MRAP_02_gmg_F: MRAP_02_gmg_base_F {
+        displayName = CSTRING(MRAP_02_gmg_Name);
+    };
+    class O_T_MRAP_02_gmg_ghex_F: MRAP_02_gmg_base_F {
         displayName = CSTRING(MRAP_02_gmg_Name);
     };
 
@@ -173,8 +182,15 @@ class CfgVehicles {
         displayName = CSTRING(APC_Wheeled_01_cannon_Name);
     };
 
-    class O_APC_Wheeled_02_base_F;
-    class O_APC_Wheeled_02_rcws_F: O_APC_Wheeled_02_base_F {
+    class APC_Wheeled_02_base_F;
+    class O_APC_Wheeled_02_base_F : APC_Wheeled_02_base_F {
+        displayName = CSTRING(APC_Wheeled_02_rcws_Name);
+    };
+    class APC_Wheeled_02_base_v2_F;
+    class O_APC_Wheeled_02_rcws_v2_F : APC_Wheeled_02_base_v2_F {
+        displayName = CSTRING(APC_Wheeled_02_rcws_Name);
+    };
+    class O_T_APC_Wheeled_02_rcws_v2_ghex_F : APC_Wheeled_02_base_v2_F {
         displayName = CSTRING(APC_Wheeled_02_rcws_Name);
     };
 
@@ -248,8 +264,24 @@ class CfgVehicles {
     class I_Truck_02_box_F: Truck_02_box_base_F {
         displayName = CSTRING(Truck_02_box_Name);
     };
+    class Truck_02_MRL_base_F;
+    class I_Truck_02_MRL_F: Truck_02_MRL_base_F {
+        displayName = CSTRING(Truck_02_MRL_Name);
+    };
     class I_Truck_02_medical_F: Truck_02_medical_base_F {
         displayName = CSTRING(Truck_02_medical_Name);
+    };
+    class C_Truck_02_transport_F: Truck_02_transport_base_F {
+        displayName = CSTRING(Truck_02_transport_Name);
+    };
+    class C_Truck_02_covered_F: Truck_02_base_F {
+        displayName = CSTRING(Truck_02_covered_Name);
+    };
+    class C_Truck_02_fuel_F: Truck_02_fuel_base_F {
+        displayName = CSTRING(Truck_02_fuel_Name);
+    };
+    class C_Truck_02_box_F: Truck_02_box_base_F {
+        displayName = CSTRING(Truck_02_box_Name);
     };
 
     class Truck_03_base_F;
@@ -281,9 +313,20 @@ class CfgVehicles {
         displayName = CSTRING(Heli_Attack_01_Name);
     };
 
+    class Heli_Attack_01_dynamicLoadout_base_F;
+    class B_Heli_Attack_01_dynamicLoadout_F: Heli_Attack_01_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_Attack_01_Name);
+    };
+
     class Heli_Light_01_unarmed_base_F;
     class B_Heli_Light_01_F: Heli_Light_01_unarmed_base_F {
         displayName = CSTRING(Heli_Light_01_Name);
+    };
+    class Heli_Light_01_civil_base_F: Heli_Light_01_unarmed_base_F {
+        displayName = CSTRING(Heli_Light_01_civil_Name);
+    };
+    class I_C_Heli_Light_01_civil_F: Heli_Light_01_civil_base_F {
+        displayName = CSTRING(Heli_Light_01_civil_Name);
     };
 
     class Heli_Light_01_armed_base_F;
@@ -291,8 +334,9 @@ class CfgVehicles {
         displayName = CSTRING(Heli_Light_01_armed_Name);
     };
 
-    class Heli_Light_01_civil_base_F: Heli_Light_01_unarmed_base_F {
-        displayName = CSTRING(Heli_Light_01_civil_Name);
+    class Heli_Light_01_dynamicLoadout_base_F;
+    class B_Heli_Light_01_dynamicLoadout_F: Heli_Light_01_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_Light_01_armed_Name);
     };
 
     class Heli_Transport_03_base_F;
@@ -316,6 +360,11 @@ class CfgVehicles {
         displayName = CSTRING(Heli_Light_02_unarmed_Name);
     };
 
+    class Heli_Light_02_dynamicLoadout_base_F;
+    class O_Heli_Light_02_dynamicLoadout_F: Heli_Light_02_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_Light_02_Name);
+    };
+
     class Heli_light_03_base_F;
     class I_Heli_light_03_F: Heli_light_03_base_F {
         displayName = CSTRING(Heli_light_03_Name);
@@ -324,6 +373,11 @@ class CfgVehicles {
     class Heli_light_03_unarmed_base_F;
     class I_Heli_light_03_unarmed_F: Heli_light_03_unarmed_base_F {
         displayName = CSTRING(Heli_light_03_unarmed_Name);
+    };
+
+    class Heli_light_03_dynamicLoadout_base_F;
+    class I_Heli_light_03_dynamicLoadout_F: Heli_light_03_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_light_03_Name);
     };
 
     class Heli_Transport_02_base_F;
@@ -337,8 +391,18 @@ class CfgVehicles {
         displayName = CSTRING(Plane_CAS_01_Name);
     };
 
+    class Plane_CAS_01_dynamicLoadout_base_F;
+    class B_Plane_CAS_01_dynamicLoadout_F: Plane_CAS_01_dynamicLoadout_base_F {
+        displayName = CSTRING(Plane_CAS_01_Name);
+    };
+
     class Plane_CAS_02_base_F;
     class O_Plane_CAS_02_F: Plane_CAS_02_base_F {
+        displayName = CSTRING(Plane_CAS_02_Name);
+    };
+
+    class Plane_CAS_02_dynamicLoadout_base_F;
+    class O_Plane_CAS_02_dynamicLoadout_F: Plane_CAS_02_dynamicLoadout_base_F {
         displayName = CSTRING(Plane_CAS_02_Name);
     };
 
@@ -349,6 +413,16 @@ class CfgVehicles {
 
     class I_Plane_Fighter_03_AA_F: I_Plane_Fighter_03_CAS_F {
         displayName = CSTRING(Plane_Fighter_03_AA_Name);
+    };
+
+    class Plane_Fighter_03_dynamicLoadout_base_F;
+    class I_Plane_Fighter_03_dynamicLoadout_F: Plane_Fighter_03_dynamicLoadout_base_F {
+        displayName = CSTRING(Plane_Fighter_03_Name);
+    };
+
+    class Plane_Fighter_04_Base_F;
+    class I_Plane_Fighter_04_F : Plane_Fighter_04_Base_F {
+        displayName = CSTRING(Plane_Fighter_04_Name);
     };
 
     // uavs
@@ -363,7 +437,7 @@ class CfgVehicles {
         displayName = CSTRING(UAV_02_Name);
     };
 
-    class UAV_02_CAS_base_F: UAV_02_base_F {};
+    class UAV_02_CAS_base_F;
     class B_UAV_02_CAS_F: UAV_02_CAS_base_F {
         displayName = CSTRING(UAV_02_CAS_Name);
     };
@@ -372,6 +446,17 @@ class CfgVehicles {
     };
     class I_UAV_02_CAS_F: UAV_02_CAS_base_F {
         displayName = CSTRING(UAV_02_CAS_Name);
+    };
+
+    class UAV_02_dynamicLoadout_base_F;
+    class B_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
+        displayName = CSTRING(UAV_02_Name);
+    };
+    class O_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
+        displayName = CSTRING(UAV_02_Name);
+    };
+    class I_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
+        displayName = CSTRING(UAV_02_Name);
     };
 
     // pistols
@@ -513,11 +598,11 @@ class CfgVehicles {
     class Weapon_SMG_02_F: Weapon_Base_F {
         displayName = CSTRING(SMG_02_Name);
     };
-    
+
     class Weapon_SMG_05_F: Weapon_Base_F {
         displayName = CSTRING(SMG_05);
     };
-    
+
     class Weapon_hgun_PDW2000_F: Weapon_Base_F {
         displayName = CSTRING(hgun_PDW2000_Name);
     };
@@ -652,21 +737,25 @@ class CfgVehicles {
     // APEX/Tanoa
 
     // Jeep Wrangler
-    class Offroad_02_unarmed_base_F;
+    class Offroad_02_base_F;
+    class Offroad_02_unarmed_base_F : Offroad_02_base_F {};
     class C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
         displayName = CSTRING(C_Offroad_02_unarmed);
     };
-    class C_Offroad_02_unarmed_F_black: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_black);
+    class I_C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
+        displayName = CSTRING(C_Offroad_02_unarmed);
     };
-    class C_Offroad_02_unarmed_F_blue: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_blue);
+    class Offroad_02_at_base_F: Offroad_02_base_F {
+        displayName = CSTRING(C_Offroad_02_at);
     };
-    class C_Offroad_02_unarmed_F_green: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_green);
+    class I_C_Offroad_02_at_F: Offroad_02_at_base_F {
+        displayName = CSTRING(C_Offroad_02_at);
     };
-    class C_Offroad_02_unarmed_F_orange: C_Offroad_02_unarmed_F {
-        displayName = CSTRING(C_Offroad_02_unarmed_orange);
+    class Offroad_02_lmg_base_F: Offroad_02_base_F {
+        displayName = CSTRING(C_Offroad_02_lmg);
+    };
+    class I_C_Offroad_02_lmg_F: Offroad_02_lmg_base_F {
+        displayName = CSTRING(C_Offroad_02_lmg);
     };
 
     // Cessna
@@ -677,10 +766,91 @@ class CfgVehicles {
     class C_Plane_Civil_01_racing_F: Plane_Civil_01_base_F {
         displayName = CSTRING(C_Plane_Civil_01_racing);
     };
+    class I_C_Plane_Civil_01_F: Plane_Civil_01_base_F {
+        displayName = CSTRING(C_Plane_Civil_01);
+    };
 
     // Burraq
     class UAV_04_base_F;
     class O_T_UAV_04_CAS_F: UAV_04_base_F {
         displayName = CSTRING(O_T_UAV_04_CAS);
     };
+
+    // Polaris DAGOR (Prowler)
+    class LSV_01_base_F;
+    class LSV_01_armed_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_armed);
+    };
+    class LSV_01_unarmed_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_unarmed);
+    };
+    class LSV_01_light_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_light);
+    };
+    class LSV_01_AT_base_F : LSV_01_base_F {
+        displayName = CSTRING(lsv_01_at);
+    };
+
+    // Light Strike Vehicle Mk. II (Qilin)
+    class LSV_02_base_F;
+    class LSV_02_armed_base_F : LSV_02_base_F {
+        displayName = CSTRING(lsv_02_armed);
+    };
+    class LSV_02_unarmed_base_F : LSV_02_base_F {
+        displayName = CSTRING(lsv_02_unarmed);
+    };
+    class LSV_02_AT_base_F : LSV_02_base_F {
+        displayName = CSTRING(lsv_02_at);
+    };
+
+    // Rooikat 120 (Rhino MGS)
+    class AFV_Wheeled_01_base_F;
+    class B_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
+        displayName = CSTRING(afv_wheeled_01);
+    };
+    class B_T_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
+        displayName = CSTRING(afv_wheeled_01);
+    };
+    class AFV_Wheeled_01_up_base_F;
+    class B_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
+        displayName = CSTRING(afv_wheeled_01_up);
+    };
+    class B_T_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
+        displayName = CSTRING(afv_wheeled_01_up);
+    };
+
+    // T-14 Armata (T-140 Angara)
+    class MBT_04_cannon_base_F;
+    class O_MBT_04_cannon_F : MBT_04_cannon_base_F {
+        displayName = CSTRING(MBT_04_cannon);
+    };
+    class O_T_MBT_04_cannon_F : MBT_04_cannon_base_F {
+        displayName = CSTRING(MBT_04_cannon);
+    };
+    class MBT_04_command_base_F; // Keep "K" designation for command variant.
+    class O_MBT_04_command_F : MBT_04_command_base_F {
+        displayName = CSTRING(MBT_04_command);
+    };
+    class O_T_MBT_04_command_F : MBT_04_command_base_F {
+        displayName = CSTRING(MBT_04_command);
+    };
+
+    // Wiesel 2 (AWC 302 Nyx)
+    class LT_01_AA_base_F;
+    class I_LT_01_AA_F : LT_01_AA_base_F {
+        displayName = CSTRING(LT_01_AA);
+    };
+    class LT_01_AT_base_F;
+    class I_LT_01_AT_F : LT_01_AT_base_F {
+        displayName = CSTRING(LT_01_AT);
+    };
+    class LT_01_cannon_base_F;
+    class I_LT_01_cannon_F : LT_01_cannon_base_F {
+        displayName = CSTRING(LT_01_cannon);
+    };
+    class LT_01_scout_base_F;
+    class I_LT_01_scout_F : LT_01_scout_base_F {
+        displayName = CSTRING(LT_01_scout);
+    };
+
 };

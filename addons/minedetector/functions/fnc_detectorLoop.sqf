@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handle mine detection in a PFH loop
@@ -9,10 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [[args], 2] call ACE_minedetector_fnc_detectorLoop
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_args", "_idPFH"];
 _args params ["_unit", "_type", "_detectorConfig", "_lastPlayed"];

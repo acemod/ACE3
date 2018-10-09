@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  *
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [] call ace_advanced_ballistics_fnc_displayProtractor
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "RscProtractor")
 #define __ctrl1 (__dsp displayCtrl 132950)

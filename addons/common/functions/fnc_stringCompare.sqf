@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bovine3dom
  * Determines whether one string matches another and how many characters match. Case insensitive.
@@ -7,11 +8,13 @@
  * 1: stringB <STRING>
  *
  * Return Value:
- * Number of matching characters >NUMBER>
+ * Number of matching characters <NUMBER>
+ *
+ * Example:
+ * ["a", "b"] call ace_common_fnc_stringCompare
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_string", "_searchTerm"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * local Callback for the CPR treatment action on success.
@@ -9,10 +10,11 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [medic, patient] call ace_medical_fnc_treatmentAdvanced_CPRLocal
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller","_target"];
 

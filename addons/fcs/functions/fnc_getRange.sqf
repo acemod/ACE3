@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Read laser distance measurement from engine.
@@ -11,9 +12,11 @@
  * Return Value:
  * Measured distance <NUMBER>
  *
+ * Example:
+ * [5, 6, 7, true] call ace_fcs_fnc_getRange
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_accuracy",1], ["_maxDistance",5000], ["_minDistance",0], ["_blank",false]];
 

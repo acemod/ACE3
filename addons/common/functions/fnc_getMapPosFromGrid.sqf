@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets position from grid cords
@@ -6,7 +7,7 @@
  * 0: Grid Cords <STRING>
  * 1: Grid center (true), Grid Bottom Right (false) (default: true) <BOOL>
  *
- * Return values:
+ * Return Value:
  * Position <ARRAY>
  *
  * Example:
@@ -14,12 +15,11 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_inputString", ["_getCenterOfGrid", true]];
 
 if (count GVAR(mapGridData) == 0) exitWith {
-    ACE_LOGERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
+    ERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
     (_this call BIS_fnc_gridToPos) select 0
 };
 

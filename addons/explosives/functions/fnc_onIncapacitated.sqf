@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Detonates all attached deadman's switched triggered explosives.
@@ -13,17 +14,24 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //NOTE: Extended_Killed_EventHandlers runs only where _unit is local
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private ["_deadman"];
+if (_unit == ace_player) then {
+    // close cellphone if open
+    findDisplay 8855 closeDisplay 0;
+};
 
-_deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
+// Exit if no item
+if !("ACE_DeadManSwitch" in (_unit call EFUNC(common,uniqueItems))) exitWith {};
+
+private _range = getNumber (configFile >> "CfgWeapons" >> "ACE_DeadManSwitch" >> QGVAR(range));
+private _deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
+TRACE_2("placed",_deadman,_range);
 {
-    [_unit, -1, _x, true] call FUNC(detonateExplosive);
+    [_unit, _range, _x, "ACE_DeadManSwitch"] call FUNC(detonateExplosive);
 } forEach _deadman;
 
 //Handle deadman connected to explosive in inventory
@@ -44,5 +52,5 @@ if (_connectedInventoryExplosive != "") then {
 
     private _explosive = createVehicle [_ammo, (getPos _unit), [], 0, "NONE"];
     _explosive setPosASL (getPosASL _unit);
-    [_unit, -1, [_explosive, -1]] call FUNC(detonateExplosive); //Explode, ignoring range, with a random 0-1 second delay
+    [_unit, -1, [_explosive, 0.5], "ACE_DeadManSwitch"] call FUNC(detonateExplosive); //Explode, ignoring range, with a 0.5 second delay
 };

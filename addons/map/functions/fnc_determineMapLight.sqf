@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko and esteldunedain
  * Calculates the current map illumination for a given unit
@@ -9,10 +10,11 @@
  * 0: Does the map needs shading? <BOOL>
  * 1: Color of the overlay <ARRAY>
  *
+ * Example:
+ * [player] call ACE_map_fnc_determineMapLight
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -44,9 +46,9 @@ if (_lightLevel > 0.95) exitWith {
 private _vehicle = vehicle _unit;
 
 // Do not obscure the map if the player is on a enclosed vehicle (assume internal illumination)
-if ((_vehicle != _unit) && {!isTurnedOut _unit && {_vehicle isKindOf "Tank" || {(_vehicle isKindOf "Helicopter" || _vehicle isKindOf "Plane") && {driver _vehicle == _unit || {gunner _vehicle == _unit}}} || {_vehicle isKindOf "Wheeled_APC"}}}) exitWith {
-    TRACE_1("Player in a enclosed vehicle","");
-    [false, [1,1,1,0]]
+if ((_vehicle != _unit) && {(!isTurnedOut _unit)} && GVAR(vehicleLightCondition) && {!((_unit call CBA_fnc_turretPath) in GVAR(vehicleExteriorTurrets))}) exitWith {
+    TRACE_1("Player in a enclosed vehicle",GVAR(vehicleLightColor));
+    [!(GVAR(vehicleLightColor) isEqualTo [1,1,1,0]), GVAR(vehicleLightColor)]
 };
 
 // Player is not in a vehicle

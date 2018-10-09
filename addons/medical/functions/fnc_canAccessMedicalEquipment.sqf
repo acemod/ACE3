@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if caller can access targets medical equipment, based upon accessLevel.
@@ -6,13 +7,14 @@
  * 0: The caller <OBJECT>
  * 1: The target <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Can Treat <BOOL>
+ *
+ * Example:
+ * [bob, target] call ace_medical_fnc_canAccessMedicalEquipment
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 

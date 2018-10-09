@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ?
  * Dumps performance counter statistics into Logs.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_common_fnc_dumpPerformanceCounters
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 diag_log text format ["REGISTERED ACE PFH HANDLERS"];
 diag_log text format ["-------------------------------------------"];

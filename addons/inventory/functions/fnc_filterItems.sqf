@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Remove uniforms, vests and backpacks from Items filter.
@@ -8,9 +9,11 @@
  * Return Value:
  * Item should appear in this list? <BOOL>
  *
+ * Example:
+ * [CONFIG] call ACE_inventory_fnc_filterItems
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_config"];
 

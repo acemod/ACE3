@@ -1,4 +1,3 @@
-//XEH_clientInit.sqf
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
@@ -10,18 +9,18 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-["ace_settingChanged", {
-    params ["_name"];
-    if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
-        [] call FUNC(setupTextColors);
-    };
-}] call CBA_fnc_addEventHandler;
-
 ["ace_settingsInitialized", {
-    //Setup text/shadow/size/color settings matrix
+    // Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
+    // Setting changed added here so color setup happens once at init
+    ["ace_settingChanged", {
+        params ["_name"];
+        if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
+            [] call FUNC(setupTextColors);
+        };
+    }] call CBA_fnc_addEventHandler;
     // Install the render EH on the main display
-    addMissionEventHandler ["Draw3D", DFUNC(render)];
+    addMissionEventHandler ["Draw3D", {call FUNC(render)}];
 }] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:
@@ -40,6 +39,27 @@ GVAR(ParsedTextCached) = [];
     [1] call FUNC(keyDown)
 },{[1,false] call FUNC(keyUp)},
 [219, [false, true, false]], false] call CBA_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
+
+
+["ACE3 Common", QGVAR(InteractKey_Toggle),
+format ["%1 (%2)", (localize LSTRING(InteractKey)), localize ELSTRING(common,KeybindToggle)],
+{
+    if (GVAR(openedMenuType) != 0) then {
+        [0] call FUNC(keyDown)
+    } else {
+        [0,false] call FUNC(keyUp)
+    };
+}, {}, [-1, [false, false, false]], false] call CBA_fnc_addKeybind; // UNBOUND
+
+["ACE3 Common", QGVAR(SelfInteractKey_Toggle),
+format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common,KeybindToggle)],
+{
+    if (GVAR(openedMenuType) != 1) then {
+        [1] call FUNC(keyDown)
+    } else {
+        [1, false] call FUNC(keyUp)
+    };
+}, {}, [-1, [false, false, false]], false] call CBA_fnc_addKeybind; // UNBOUND
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed

@@ -63,9 +63,9 @@ call FUNC(determineZoom);
 
             setCurrentChannel GVAR(DefaultChannel);
             if (currentChannel == GVAR(DefaultChannel)) then {
-                // ACE_LOGINFO_1("Channel Set - %1", currentChannel);
+                // INFO_1("Channel Set - %1", currentChannel);
             } else {
-                ACE_LOGERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+                ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
@@ -116,12 +116,53 @@ call FUNC(determineZoom);
 GVAR(hasWatch) = true;
 
 ["loadout", {
-    if (isNull (_this select 0)) exitWith {
+    params ["_unit"];
+    if (isNull _unit) exitWith {
         GVAR(hasWatch) = true;
     };
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
-    } count (assignedItems ACE_player);
-}] call CBA_fnc_addPlayerEventHandler;
+    } count (assignedItems _unit);
+}, true] call CBA_fnc_addPlayerEventHandler;
+
+
+// Vehicle map lighting:
+GVAR(vehicleLightCondition) = {true};
+GVAR(vehicleExteriorTurrets) = [];
+GVAR(vehicleLightColor) = [1,1,1,0];
+
+["vehicle", {
+    params ["_unit", "_vehicle"];
+    if ((isNull _vehicle) || {_unit == _vehicle}) exitWith {};
+    private _cfg = configfile >> "CfgVehicles" >> (typeOf _vehicle);
+    GVAR(vehicleExteriorTurrets) = getArray (_cfg >> QGVAR(vehicleExteriorTurrets));
+    GVAR(vehicleLightColor) = [_cfg >> QGVAR(vehicleLightColor), "array", [1,1,1,0]] call CBA_fnc_getConfigEntry;
+
+    // Handle vehicles with toggleable interior lights:
+    private _vehicleLightCondition = getText (_cfg >> QGVAR(vehicleLightCondition));
+    if (_vehicleLightCondition == "") then {
+        private _userAction = toLower getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
+        switch (true) do {
+            case ((_userAction find "cabinlights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cabinlights_hide') == 1";};
+            case ((_userAction find "cargolights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cargolights_hide') == 1";};
+        };
+    };
+
+    GVAR(vehicleLightCondition) = if (_vehicleLightCondition != "") then {
+        if (_vehicle isKindOf "Helicopter" || {_vehicle isKindOf "Plane"}) then {
+            compile format ["(driver _vehicle == _unit) || {gunner _vehicle == _unit} || {%1}", _vehicleLightCondition];
+        } else {
+            compile _vehicleLightCondition
+        };
+    } else {
+        switch (true) do {
+            case (_vehicle isKindOf "Tank");
+            case (_vehicle isKindOf "Wheeled_APC"): { {true} };
+            case (_vehicle isKindOf "Helicopter");
+            case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
+            default { {false} };
+        };
+    };
+}, true] call CBA_fnc_addPlayerEventHandler;

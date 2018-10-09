@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Scans for nearby "Static" objects (buildings) and adds the UserActions to them.
@@ -7,14 +8,13 @@
  * 0: Interact Menu Type (0 - world, 1 - self) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [0] call ace_interact_menu_fnc_userActions_addHouseActions
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_interactionType"];
 

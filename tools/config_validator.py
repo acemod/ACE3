@@ -28,15 +28,29 @@ def Fract_Sec(s):
     sec = temp
     return d,h,m,sec
 
-def CheckPBO(p,makePboArgs,errors):
+def CheckPBO(p,useMakePbo,checkExternalFiles,errors):
     try:
-        subprocess.run([
-            "makepbo",
-            makePboArgs,
-            "-@={}\\{}\\addons\\{}".format(MAINPREFIX,PREFIX.rstrip("_"),p),
-            p,
-            "{}_{}.pbo".format(PREFIX,p)
-        ], stdin=None, input=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        if useMakePbo:
+            makePboArgs = "-PGU"
+            if not checkExternalFiles:
+                makePboArgs = "-PU"
+            subprocess.run([
+                "makepbo",
+                makePboArgs,
+                "-@={}\\{}\\addons\\{}".format(MAINPREFIX,PREFIX.rstrip("_"),p),
+                p,
+                "{}_{}.pbo".format(PREFIX,p)
+            ], stdin=None, input=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        else:              
+            makePboArgs = "-LEP"
+            if not checkExternalFiles:
+                makePboArgs = "-LP"
+            subprocess.run([
+                "rapify",
+                makePboArgs,
+                p
+            ], stdin=None, input=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            
     except subprocess.CalledProcessError as e:
         print("!! Problem With {} ret {} !!".format(p, e.returncode))
         print("     stderr: {}".format(e.stderr))
@@ -49,7 +63,7 @@ def fullDump(p):
     try:
         subprocess.run([
             "makepbo",
-            "-PQGs",  #Q Lint only - Gs Check external references and show deRap - P dont pause
+            "-PGUS",  #G Check external references -S show deRap - P dont pause
             "-@={}\\{}\\addons\\{}".format(MAINPREFIX,PREFIX.rstrip("_"),p),
             p,
             "{}_{}.pbo".format(PREFIX,p)
@@ -75,11 +89,17 @@ def main(argv):
     except:
         raise Exception("Failed to switch to addon dir on P:")
 
-    #Q Lint only - G Check external references - P dont pause    (Gs) does full derap
-    makePboArgs = "-PQG"
+    useMakePbo = False
+    checkExternalFiles = True
+    
     if "skipExt" in argv:
         print("Skipping External Files Check");
-        makePboArgs = "-PQ"
+        checkExternalFiles = False
+    if "make" in argv:
+        # will check more files like RTM and RVMats but twice as slow
+        # This also actually builds a pbo (in same spot as build.py)
+        print("Using makePbo to verify all files");
+        useMakePbo = True
 
     errors = []
 
@@ -89,7 +109,7 @@ def main(argv):
             continue
         if p[0] == ".":
             continue
-        CheckPBO(p,makePboArgs,errors)
+        CheckPBO(p,useMakePbo,checkExternalFiles,errors)
 
 
     d,h,m,s = Fract_Sec(timeit.default_timer() - start_time)

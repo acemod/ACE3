@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Zeus module function to change side of a group on dialog confirmation
@@ -7,7 +8,7 @@
  * 1: Chosen side <SIDE>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [this, west] call ace_zeus_fnc_moduleGroupSide
@@ -15,9 +16,7 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
-params ["_unit","_newSide"];
+params ["_unit", "_newSide"];
 private _side = side _unit;
 
 // Nothing to do here

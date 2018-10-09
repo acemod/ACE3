@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi, commy2
  * Check if a unit is any engineer class.
@@ -14,16 +15,14 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", ["_engineerN", 1]];
-TRACE_2("params",_unit,_engineerN);
 
-private ["_class"];
-_class = _unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer")];
+private _class = _unit getVariable ["ACE_IsEngineer", _unit getUnitTrait "engineer"];
 
 // This if statement is here for copmatability with the common variant of isEngineer, which requires a bool.
 // We cannot move this function to common because we require the GVAR(engineerSetting_Repair), which only makes sense to include in the repair module.
 if (_class isEqualType false) then {_class = [0, 1] select _class};
 
+TRACE_3("isEngineer",_unit,_engineerN,_class);
 _class >= _engineerN;

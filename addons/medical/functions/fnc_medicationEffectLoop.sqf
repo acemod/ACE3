@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain
  * Medication effect loop for an injection.
@@ -10,13 +11,14 @@
  * 4: Viscosity adjustment rate <NUMBER>
  * 5: Pain reduction rate <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, "leg", 1, 2, 3, 4] call ACE_medical_fnc_medicationEffectLoop
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_variableName", "_amountDecreased","_decreaseRate", "_viscosityAdjustmentRate", "_painReduceRate"];
 

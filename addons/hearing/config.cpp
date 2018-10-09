@@ -20,3 +20,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
 #include "ACE_Settings.hpp"
+#include "ACE_Arsenal_Stats.hpp"

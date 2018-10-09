@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the engineer has all items.
@@ -14,14 +15,11 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_items"];
 TRACE_2("params",_unit,_items);
 
-private ["_return"];
-
-_return = true;
+private _return = true;
 {
     if ((_x isEqualType []) && {({[_unit, _x] call EFUNC(common,hasItem)} count _x == 0)}) exitWith {
         _return = false;

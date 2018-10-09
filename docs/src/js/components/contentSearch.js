@@ -23,7 +23,6 @@ window.app.contentSearch = (function ($) {
     var $liveSearchButton = $liveSearch.find(".liveSearch-button");
 
 
-    //var $contentSearchButton = $liveSearch.find(".contentSearch-button");
     var $contentSearchField = $liveSearch.find(".contentSearch-field");
     var $contentSearchResultList = $(".searchPage-result-list");
 
@@ -38,7 +37,6 @@ window.app.contentSearch = (function ($) {
         $liveSearchButton.on("click", openSearchPage);
 
         $contentSearchField.on("keyup", handleContentKeyDown);
-        //$contentSearchButton.on("click", openSearchPage);
 
     }
 
@@ -149,7 +147,6 @@ window.app.contentSearch = (function ($) {
         // arrow down, arrow up
         if (e.keyCode === 38 || e.keyCode === 40) {
             e.preventDefault();
-            //navigateSearchResultsList(e.keyCode);
             return false;
         }
 
@@ -246,7 +243,6 @@ window.app.contentSearch = (function ($) {
         // arrow down, arrow up
         if (e.keyCode === 38 || e.keyCode === 40) {
             e.preventDefault();
-            //navigateSearchResultsList(e.keyCode);
             return false;
         }
 

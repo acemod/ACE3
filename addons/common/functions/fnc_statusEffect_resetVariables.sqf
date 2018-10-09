@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Resets all effect numbers to 0 when an object respawns (but does not apply the effect event).
@@ -6,15 +7,13 @@
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, true] call ace_common_fnc_statusEffect_resetVariables
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_setObjectRef", false, [false]]];
 TRACE_2("params",_object,_setObjectRef);

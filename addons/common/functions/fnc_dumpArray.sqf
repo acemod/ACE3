@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
  * Author: ?
  * Dumps an array to the RPT, showing the depth of each element.
  *
  * Arguments:
  * 0: Array to be dumped <ARRAY>
- * 1: Depth <NUMBER><OPTIONAL>
+ * 1: Depth <NUMBER> (default: 0)
  *
  * Return Value:
  * None
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_var", ["_depth", 0, [0]]];
 

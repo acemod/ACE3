@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Is expected to be called every second.
@@ -5,13 +6,14 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
- * <NIL>
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_handleUnitVitals
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_interval"];
 TRACE_3("ACE_DEBUG",_unit,_interval,_unit);

@@ -2,8 +2,9 @@
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
-    
+
     class RKSL_optic_PMII_312 : ItemCore {
+        ACE_ScopeHeightAboveRail = 4.2235;
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
@@ -19,6 +20,7 @@ class CfgWeapons {
     };
 
     class RKSL_optic_PMII_312_sunshade : ItemCore {
+        ACE_ScopeHeightAboveRail = 4.2235;
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;

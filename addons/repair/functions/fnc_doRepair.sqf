@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_vehicle", "_hitPointIndex"];
 TRACE_3("params",_unit,_vehicle,_hitPointIndex);
@@ -47,9 +47,10 @@ if (isArray _hitpointGroupConfig) then {
         // Exit using found hitpoint group if this hitpoint is leader of any
         if (_masterHitpoint == _hitPointClassname) exitWith {
             {
-                private _subHitIndex = _allHitPoints find _x; //convert hitpoint classname to index
+                private _subHitpoint = _x;
+                private _subHitIndex = _allHitPoints findIf {_x == _subHitpoint}; //convert hitpoint classname to index
                 if (_subHitIndex == -1) then {
-                    ACE_LOGERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_x,_vehicle);
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_vehicle);
                 } else {
                     private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
                     private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;

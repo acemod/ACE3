@@ -1,7 +1,7 @@
 class ACE_UI {
     class ammoCount {
         class conditions {
-            ADDON = "(false)";
+            ADDON = "cameraOn == (getConnectedUAV ACE_player)";
         };
     };
 };

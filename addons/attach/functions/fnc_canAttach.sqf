@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if a unit can attach a specific item.
@@ -15,19 +16,16 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_attachToVehicle","_player","_args"];
 _args params [["_itemClassname","", [""]]];
 TRACE_3("params",_attachToVehicle,_player,_itemClassname);
 
-private ["_attachLimit", "_attachedObjects"];
-
-_attachLimit = [6, 1] select (_player == _attachToVehicle);
-_attachedObjects = _attachToVehicle getVariable [QGVAR(attached), []];
+private _attachLimit = [6, 1] select (_player == _attachToVehicle);
+private _attachedObjects = _attachToVehicle getVariable [QGVAR(attached), []];
 
 ((_player == _attachToVehicle) || {canStand _player}) &&
-{(_attachToVehicle distance _player) < 7} && 
-{alive _attachToVehicle} && 
-{(count _attachedObjects) < _attachLimit} && 
+{(_attachToVehicle distance _player) < 10} &&
+{alive _attachToVehicle} &&
+{(count _attachedObjects) < _attachLimit} &&
 {_itemClassname in ((itemsWithMagazines _player) + [""])};

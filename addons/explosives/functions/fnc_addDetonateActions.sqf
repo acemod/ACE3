@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Opens the UI for explosive detonation selection
@@ -14,23 +15,20 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private ["_result", "_item", "_children", "_range", "_required","_explosivesList"];
+private _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
 
-_range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
-
-_result = [_unit] call FUNC(getPlacedExplosives);
-_children = [];
-_explosivesList = [];
+private _result = [_unit] call FUNC(getPlacedExplosives);
+private _children = [];
+private _explosivesList = [];
 {
     if (!isNull(_x select 0)) then {
-        _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
+        private _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
-            _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+            private _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
 
             _explosivesList pushBack _x;
 
@@ -43,7 +41,7 @@ _explosivesList = [];
                         {(_this select 2) call FUNC(detonateExplosive);},
                         {true},
                         {},
-                        [_unit,_range,_x]
+                        [_unit,_range,_x,_detonator]
                     ] call EFUNC(interact_menu,createAction),
                     [],
                     _unit
@@ -62,7 +60,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
             {(_this select 2) call FUNC(detonateExplosiveAll);},
             {true},
             {},
-            [_unit,_range,_explosivesList]
+            [_unit,_range,_explosivesList, _detonator]
             ] call EFUNC(interact_menu,createAction),
             [],
             _unit

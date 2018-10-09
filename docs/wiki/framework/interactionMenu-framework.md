@@ -121,7 +121,19 @@ By default this function will not use inheritance, so actions will only be added
  */
 ```
 
-### 2.4 Examples
+### 2.4 fnc_addActionToZeus
+
+`ace_interact_menu_fnc_addActionToZeus`
+
+```cpp
+/*
+ * Argument:
+ * 0: Parent path of the new action <ARRAY> (Example: `["ACE_ZeusActions"]`)
+ * 1: Action <ARRAY>
+ */
+```
+
+### 2.5 Examples
 
 External:
 
@@ -155,7 +167,17 @@ _action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1",
 ["Tank_F", 0, ["ACE_MainActions", "CheckFuel"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ```
 
-### 2.5 Advanced Example
+Zeus:
+
+```cpp
+_statement = {
+    playSound3D ["alarm.ogg", theBase]
+};
+_action = ["myMissionEvent1","Mission Event: Play Base Alarm","",_statement,{true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
+```
+
+### 2.6 Advanced Example
 
 This adds an interaction to a unit that allows passing items that the player is carrying.
 

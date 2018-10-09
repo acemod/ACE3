@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles any audible, visual and physical effects of fatigue.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 
 #ifdef DEBUG_MODE_FULL
@@ -58,7 +58,18 @@ if (GVAR(ppeBlackoutLast) == 1) then {
 
 // - Physical effects ---------------------------------------------------------
 if (GVAR(isSwimming)) exitWith {
-    _unit setAnimSpeedCoef (1 - _fatigue / 3);
+    _unit setAnimSpeedCoef linearConversion [0.7, 0.9, _fatigue, 1, 0.5, true];
+
+    if ((isSprintAllowed _unit) && {_fatigue > 0.7}) then {
+        [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+    } else {
+        if ((!isSprintAllowed _unit) && {_fatigue < 0.7}) then {
+            [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+        };
+    };
+};
+if ((getAnimSpeedCoef _unit) != 1) then {
+    _unit setAnimSpeedCoef 1;
 };
 
 if (_overexhausted) then {
@@ -79,12 +90,12 @@ if (_overexhausted) then {
 
 switch (stance _unit) do {
     case ("CROUCH"): {
-        _unit setCustomAimCoef (1.0 + _fatigue ^ 2 * 0.1);
+        [_unit, QUOTE(ADDON), (1.0 + _fatigue ^ 2 * 0.1) * GVAR(swayFactor)] call EFUNC(common,setAimCoef);
     };
     case ("PRONE"): {
-        _unit setCustomAimCoef (1.0 + _fatigue ^ 2 * 2.0);
+        [_unit, QUOTE(ADDON), (1.0 + _fatigue ^ 2 * 2.0) * GVAR(swayFactor)] call EFUNC(common,setAimCoef);
     };
     default {
-        _unit setCustomAimCoef (1.5 + _fatigue ^ 2 * 3.0);
+        [_unit, QUOTE(ADDON), (1.5 + _fatigue ^ 2 * 3.0) * GVAR(swayFactor)] call EFUNC(common,setAimCoef);
     };
 };

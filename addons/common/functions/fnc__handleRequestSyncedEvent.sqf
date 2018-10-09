@@ -1,21 +1,25 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
  *
- * Arguments [Client] :
+ * Arguments [Client]:
  * 0: eventName <STRING>
  * 1: eventLog <ARRAY>
  *
- * Arguments [Server] :
+ * Arguments [Server]:
  * 0: eventName <STRING>
  * 1: client <OBJECT>
  *
  * Return Value:
  * Event is successed <BOOL>
  *
+ * Example:
+ * ["name", [LOG]] call ace_common_fnc__handleRequestSyncedEvent //Client
+ * ["name", bob] call ace_common_fnc__handleRequestSyncedEvent//Server
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 //SEH_s
 if (isServer) then {
@@ -23,7 +27,7 @@ if (isServer) then {
     params ["_eventName", "_client"];
 
     if !([GVAR(syncedEvents), _eventName] call CBA_fnc_hashHasKey) exitWith {
-        ACE_LOGERROR_1("Request for synced event - key [%1] not found.", _eventName);
+        ERROR_1("Request for synced event - key [%1] not found.", _eventName);
         false
     };
 
@@ -42,7 +46,7 @@ if (isServer) then {
         false
     } count _eventLog;
 
-    ACE_LOGINFO_1("[%1] synchronized",_eventName);
+    INFO_1("[%1] synchronized",_eventName);
 };
 
 true

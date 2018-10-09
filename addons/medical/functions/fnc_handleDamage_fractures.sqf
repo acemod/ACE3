@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handling of the fracture injuries upon the handleDamage eventhandler.
@@ -12,16 +13,16 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_fractures
+ *
  * Public: No
  */
 
-#include "script_component.hpp"
-
-private ["_bodyPartn", "_fractures", "_fractureType"];
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
-_bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
+private _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
-_fractureType = 1;
+private _fractureType = 1;
 if (_amountOfDamage > 0.05) then {
 
     // TODO specify fractures based off typeOfInjury details better.
@@ -58,10 +59,9 @@ if (_amountOfDamage > 0.05) then {
         };
     };
 
-    private ["_fractures", "_fractureID", "_amountOf"];
-    _fractures = _unit getVariable[QGVAR(fractures), []];
-    _fractureID = 1;
-    _amountOf = count _fractures;
+    private _fractures = _unit getVariable[QGVAR(fractures), []];
+    private _fractureID = 1;
+    private _amountOf = count _fractures;
     if (_amountOf > 0) then {
         _fractureID = (_fractures select (_amountOf - 1) select 0) + 1;
     };

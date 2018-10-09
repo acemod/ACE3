@@ -1,16 +1,19 @@
-/*
-* Author: Rocko
-* Calculate the maximum zoom level allowed for the current map
-*
-* Arguments:
-* None
-*
-* Return Value:
-* None
-*
-* Public: No
-*/
 #include "script_component.hpp"
+/*
+ * Author: Rocko
+ * Calculate the maximum zoom level allowed for the current map
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_map_fnc_determineZoom
+ *
+ * Public: No
+ */
 
 private _grids = (configFile >> "CfgWorlds" >> worldName >> "Grid");
 private _fourSize = -1;

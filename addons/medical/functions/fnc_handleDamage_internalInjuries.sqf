@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handling of the internal injuries upon the handleDamage eventhandler.
@@ -12,10 +13,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_internalInjuries
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
 private _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);

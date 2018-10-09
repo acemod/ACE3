@@ -33,7 +33,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(CheckPBO_DisplayName);
         function = QFUNC(moduleCheckPBOs);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_CheckPBO_ca.paa);
@@ -146,5 +146,33 @@ class CfgVehicles {
     class ACE_FakeBackpack: Bag_Base {
         scope = 1;
         maximumLoad = 1E6;
+    };
+
+    class FlagCarrier_Asym;
+    class ACE_Flag_Black: FlagCarrier_Asym {
+        author = CSTRING(ACETeam);
+        displayName = CSTRING(FlagBlack);
+        scope = 2;
+        scopeCurator = 2;
+        editorPreview = QPATHTOF(data\ace_flag_black_preview.jpg);
+        class EventHandlers {
+            init = QUOTE((_this select 0) setFlagTexture QUOTE(QPATHTOF(data\ace_flag_black_ca.paa)));
+        };
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                condition = "true";
+                position = "[-0.1, -0.35, -2.6]";
+                distance = 2;
+            };
+        };
+    };
+    class ACE_Flag_White: ACE_Flag_Black {
+        author = CSTRING(ACETeam);
+        displayName = CSTRING(FlagWhite);
+        editorPreview = QPATHTOF(data\ace_flag_white_preview.jpg);
+        class EventHandlers {
+            init = QUOTE((_this select 0) setFlagTexture QUOTE(QPATHTOF(data\ace_flag_white_ca.paa)));
+        };
     };
 };

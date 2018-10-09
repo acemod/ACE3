@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Adds a duty factor.
@@ -8,8 +9,12 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * ["ID", 5] call ace_advanced_fatigue_fnc_addDutyFactor
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 params [["_id", "", [""]], ["_factor", 1, [0, {}]]];
 if (_id == "" || {_factor isEqualTo 1}) exitWith {};
 

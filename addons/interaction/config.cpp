@@ -19,12 +19,3 @@ class CfgPatches {
 #include "RscTitles.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_ZeusActions.hpp"
-
-class ACE_newEvents {
-    getDown = QGVAR(getDown);
-    pardon = QGVAR(pardon);
-    tapShoulder = QGVAR(tapShoulder);
-    sendAway = QGVAR(sendAway);
-    lampTurnOff = QGVAR(setLampOff);
-    lampTurnOn = QGVAR(setLampOn);
-};

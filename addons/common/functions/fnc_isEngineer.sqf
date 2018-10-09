@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: marc_book, edited by commy2
  * Checks if a unit is an engineer.
@@ -13,11 +14,10 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
-private _isEngineer = _unit getVariable ["ACE_isEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1];
+private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
 //Handle ace_repair modules setting this to a number
 if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 0};
 

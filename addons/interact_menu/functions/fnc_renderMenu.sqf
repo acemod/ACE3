@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Render an interaction menu and it's children recursively
@@ -11,9 +12,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [[], [], [5, 2], []] call ACE_interact_menu_fnc_renderMenu
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_parentPath", "_action", "_sPos", "_angles"];
 _action params ["_actionData", "_activeChildren", "_actionObject"];

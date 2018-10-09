@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Action for checking the response status of the patient
@@ -9,10 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_actionCheckResponse
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 

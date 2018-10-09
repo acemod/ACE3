@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Triggers a unit into the Cardiac Arrest state from CMS. Will put the unit in an unconscious state and run a countdown timer until unit dies.
@@ -6,13 +7,14 @@
  * Arguments:
  * 0: The unit that will be put in cardiac arrest state <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_setCardiacArrest
  *
  * Public: yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

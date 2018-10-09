@@ -1,21 +1,24 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Hides the height and velocity display while freefalling or parachuting on higher difficulties.
  *
  * Arguments:
- * Stuff from infoDisplayChanged eventhandler.
+ * Stuff from infoDisplayChanged eventhandler. <UNKNOWN>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * [?] call ACE_parachute_fnc_handleInfoDisplayChanged
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_dialog", "_type"];
 
 // don't do anything in noob mode
-if (cadetMode) exitWith {};
+if (!GVAR(hideAltimeter)) exitWith {};
 
 switch (_type) do {
     case ("Parachute"): {

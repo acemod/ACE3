@@ -18,7 +18,8 @@
 #include <cstdint>
 #include <streambuf>
 #include "ace_version.hpp"
-#include "logging.hpp"
+#include <algorithm>
+#include <cctype> //std::isspace
 
 #ifdef _DEBUG
 #define ZERO_OUTPUT()    { memset(output, 0x00, outputSize); }
@@ -55,13 +56,13 @@ namespace ace {
 
     // trim from start
     static inline std::string &ltrim(std::string &s) {
-        s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(std::isspace))));
+        s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](const char _char) noexcept {return !std::isspace(_char); }));
         return s;
     }
 
     // trim from end
     static inline std::string &rtrim(std::string &s) {
-        s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
+        s.erase(std::find_if(s.rbegin(), s.rend(), [](const char _char) noexcept {return !std::isspace(_char); }).base(), s.end());
         return s;
     }
 
@@ -69,8 +70,6 @@ namespace ace {
     static inline std::string &trim(std::string &s) {
         return ltrim(rtrim(s));
     }
-
-    inline void runtime_assert(bool result);
 
     struct exception {
         exception(const uint32_t code_, const std::string & text_) : code(code_), text(text_) {}
@@ -82,12 +81,6 @@ namespace ace {
         std::string     text;
     };
 }
-
-#ifdef _DEBUG
-#define ACE_ASSERT assert()
-#else
-#define ACE_ASSERT ace::runtime_assert()
-#endif
 
 #ifndef _WIN32
 #define __stdcall 

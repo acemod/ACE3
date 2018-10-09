@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg, esteldunedain
  * Get the weather data for the current map
@@ -13,9 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-// Assume default wind values
+private _worldName = toLower worldName;
+TRACE_1("getting map data",_worldName);
+
+// Set default values
+
 // Source: https://weatherspark.com/averages/32194/Lemnos-Limnos-North-Aegean-Islands-Greece
 GVAR(WindSpeedMax) = [[8.8, 5.5], [8.8, 5], [8.6, 4.8], [7.6, 3.4], [7.0, 3.0], [7.1, 3.0], [7.5, 3.1], [8.0, 3.2], [7.6, 3.5], [7.8, 4.6], [7.9, 5.0], [8.2, 5.5]];
 GVAR(WindSpeedMean) = [4.8, 4.9, 4.6, 4.1, 3.5, 3.5, 4.3, 4.4, 4.1, 4.5, 4.5, 5.0];
@@ -35,23 +39,43 @@ GVAR(WindDirectionProbabilities) = [
     [0.06, 0.37, 0.05, 0.03, 0.18, 0.04, 0.02, 0.02]  // December
 ];
 
-// Check if the wind data is defined in the map config
-if (isArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMean")) then {
-    GVAR(WindSpeedMin)               = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMin");
-    GVAR(WindSpeedMean)              = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMean");
-    GVAR(WindSpeedMax)               = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMax");
-    GVAR(WindDirectionProbabilities) = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindDirectionProbabilities");
-};
+GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
+GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
+GVAR(Humidity) = [82, 80, 78, 70, 71, 72, 70, 73, 78, 80, 83, 82];
 
-// Check if the weather data is defined in the map config
-if (isArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay")) exitWith {
-    GVAR(TempDay)   = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay");
-    GVAR(TempNight) = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempNight");
-    GVAR(Humidity)  = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_Humidity");
+GVAR(currentTemperature) = 15;
+GVAR(currentHumidity) = 0;
+GVAR(currentOvercast) = 0;
+
+// Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
+private _nonInheritedArrays = configProperties [configFile >> "CfgWorlds" >> _worldName, "isArray _x", false];
+// And check if any custom non-inherited weather is defined through config and use that if so
+if ((configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
+    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay")) then {
+        GVAR(TempDay) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay");
+    };
+    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempNight")) then {
+        GVAR(TempNight) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempNight");
+    };
+    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_Humidity")) then {
+        GVAR(Humidity) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_Humidity");
+    };
+    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMin")) then {
+        GVAR(WindSpeedMin) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMin");
+    };
+    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMean")) then {
+        GVAR(WindSpeedMean) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMean");
+    };
+    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMax")) then {
+        GVAR(WindSpeedMax) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMax");
+    };
+    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindDirectionProbabilities")) then {
+        GVAR(WindDirectionProbabilities) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindDirectionProbabilities");
+    };
 };
 
 // Check if the map is among the most popular
-if (toLower worldName in ["chernarus", "bootcamp_acr", "woodland_acr", "utes"]) then {
+if (_worldName in ["chernarus", "bootcamp_acr", "woodland_acr", "utes"]) then {
     // Source: http://www.iten-online.ch/klima/europa/tschechien/prag.htm
     GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
     GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
@@ -78,7 +102,7 @@ if (toLower worldName in ["chernarus", "bootcamp_acr", "woodland_acr", "utes"]) 
     ];
 };
 
-if (toLower worldName in ["takistan", "zargabad", "mountains_acr", "shapur_baf", "provinggrounds_pmc"]) exitWith {
+if (_worldName in ["takistan", "zargabad", "mountains_acr", "shapur_baf", "provinggrounds_pmc"]) exitWith {
     // Source: http://www.iten-online.ch/klima/asien/afghanistan/kabul.htm
     GVAR(TempDay) = [4.5, 5.5, 12.5, 19.2, 24.4, 30.2, 32.1, 32, 28.5, 22.4, 15, 8.3];
     GVAR(TempNight) = [-7.1, -5.7, 0.7, 6, 8.8, 12.4, 15.3, 14.3, 9.4, 3.9, -1.2, -4.7];
@@ -105,7 +129,7 @@ if (toLower worldName in ["takistan", "zargabad", "mountains_acr", "shapur_baf",
     ];
 };
 
-if (toLower worldName in ["fallujah"]) exitWith {
+if (_worldName in ["fallujah"]) exitWith {
     // Source: http://www.iten-online.ch/klima/asien/irak/bagdad.htm
     GVAR(TempDay) = [16, 19, 23, 29, 36, 41, 43, 43, 40, 33, 24, 17];
     GVAR(TempNight) = [4, 6, 10, 15, 20, 23, 25, 25, 21, 16, 10, 5];
@@ -113,8 +137,8 @@ if (toLower worldName in ["fallujah"]) exitWith {
     GVAR(Humidity) = [69, 60, 55, 50, 36, 23, 21, 22, 29, 38, 58, 68];
 };
 
-if (toLower worldName in ["fata", "Abbottabad"]) exitWith {
-     // Source: http://www.iten-online.ch/klima/asien/pakistan/zhob.htm
+if (_worldName in ["fata", "abbottabad"]) exitWith {
+    // Source: http://www.iten-online.ch/klima/asien/pakistan/zhob.htm
     GVAR(TempDay) = [12.4, 15.8, 20.8, 26.9, 32.8, 37, 36.8, 35.9, 33.8, 28.2, 22.2, 16.2];
     GVAR(TempNight) = [-0.6, 2.4, 7.4, 13.1, 18.2, 22.8, 23.8, 22.9, 19.2, 12, 5.6, 1.2];
     // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,Zhob,Pakistan
@@ -140,24 +164,24 @@ if (toLower worldName in ["fata", "Abbottabad"]) exitWith {
     ];
 };
 
-if (worldName in ["sfp_wamako"]) exitWith {
-     // Source: http://www.iten-online.ch/klima/afrika/niger/tahoua.htm
+if (_worldName in ["sfp_wamako"]) exitWith {
+    // Source: http://www.iten-online.ch/klima/afrika/niger/tahoua.htm
     GVAR(TempDay) = [33.4, 35, 38.4, 41.5, 41.4, 40, 35.6, 32.9, 35.8, 38.2, 36.4, 33.1];
     GVAR(TempNight) = [14.9, 16.3, 20.4, 23.7, 25.8, 24.8, 23.1, 22, 22.6, 21.6, 18.6, 15.3];
     // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,Tahoua,Niger
     GVAR(Humidity) = [68, 60, 57, 50, 32, 22, 20, 21, 25, 38, 58, 69];
 };
 
-if (worldName in ["sfp_sturko"]) exitWith {
-     // Source: http://www.iten-online.ch/klima/afrika/niger/tahoua.htm
+if (_worldName in ["sfp_sturko"]) exitWith {
+    // Source: http://www.iten-online.ch/klima/afrika/niger/tahoua.htm
     GVAR(TempDay) = [2.2, 2.4, 5.1, 10.2, 16.1, 20.1, 21.1, 20.9, 17.2, 12.7, 7.4, 3.9];
     GVAR(TempNight) = [-2, -2.3, -0.7, 2.6, 7.1, 11.4, 13.1, 12.7, 10, 6.9, 3.1, -0.1];
     // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,karlskrona,Sweden
     GVAR(Humidity) = [86, 85, 80, 72, 68, 69, 74, 77, 79, 81, 86, 88];
 };
 
-if (worldName in ["Bornholm"]) exitWith {
-     // Source: http://www.iten-online.ch/klima/afrika/niger/tahoua.htm
+if (_worldName in ["bornholm"]) exitWith {
+    // Source: http://www.iten-online.ch/klima/afrika/niger/tahoua.htm
     GVAR(TempDay) = [1.9, 1.7, 3.8, 8.1, 14, 18.1, 19.6, 19.8, 16.2, 11.9, 7.3, 3.9];
     GVAR(TempNight) = [-1.6, -2.1, -0.7, 1.7, 6.2, 10.7, 13, 13.1, 10.6, 7.2, 3.5, 0.1];
     // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,allinge,Denmark
@@ -182,15 +206,15 @@ if (worldName in ["Bornholm"]) exitWith {
         [0.08, 0.05, 0.06, 0.04, 0.10, 0.14, 0.19, 0.07]  // December
     ];
 };
-if (worldName in ["Imrali"]) exitWith {
-     // Source: http://www.iten-online.ch/klima/europa/tuerkei/bursa.htm
+if (_worldName in ["imrali"]) exitWith {
+    // Source: http://www.iten-online.ch/klima/europa/tuerkei/bursa.htm
     GVAR(TempDay) = [9.3, 10.7, 13.6, 18.8, 23.5, 28.2, 30.3, 30.2, 27, 21.4, 16.5, 11.8];
     GVAR(TempNight) = [1.4, 2.4, 3.7, 7.1, 10.9, 14.3, 16.5, 16.3, 13, 9.5, 6, 3.8];
     // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,Bursa,Turkey
     GVAR(Humidity) = [78, 75, 70, 70, 71, 61, 58, 59, 63, 69, 77, 76];
 };
-if (worldName in ["Kunduz"]) exitWith {
-     // Source: http://www.iten-online.ch/klima/asien/afghanistan/kunduz.htm
+if (_worldName in ["kunduz"]) exitWith {
+    // Source: http://www.iten-online.ch/klima/asien/afghanistan/kunduz.htm
     GVAR(TempDay) = [6.3, 9.5, 15.8, 23, 29.8, 37.3, 39, 36.9, 31.8, 24.5, 16, 9.7];
     GVAR(TempNight) = [-2.4, 0, 5.7, 11.6, 15.7, 20.9, 21.5, 21.5, 16.3, 10.6, 4.1, 0];
     // Source: http://www.weather-and-climate.com/average-monthly-Humidity-perc,Kabul,Afghanistan
@@ -215,11 +239,3 @@ if (worldName in ["Kunduz"]) exitWith {
         [0.04, 0.02, 0.05, 0.14, 0.19, 0.07, 0.10, 0.07]  // December
     ];
 };
-
-// Assume default values
-GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
-GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
-GVAR(Humidity) = [82, 80, 78, 70, 71, 72, 70, 73, 78, 80, 83, 82];
-
-GVAR(currentTemperature) = 20;
-GVAR(currentHumidity) = 0.5;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Returns the Hadamard Product of two vectors.
@@ -10,9 +11,11 @@
  * Return Value:
  * Hadamard Product <ARRAY>
  *
+ * Example:
+ * [[0,0,0], [1,1,1]] call ace_common_fnc_hadamardProduct
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vector1", "_vector2"];
 

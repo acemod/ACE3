@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Check a unit for any flashlights that can be used on map.
@@ -14,8 +15,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_unit"];
 
 private _flashlights = [];
@@ -24,6 +23,6 @@ private _flashlights = [];
     if (isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour")) then {
         _flashlights pushBackUnique _x;
     };
-} forEach (items _unit);
+} forEach (_unit call EFUNC(common,uniqueItems));
 
 _flashlights

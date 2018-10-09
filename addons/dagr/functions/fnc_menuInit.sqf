@@ -1,18 +1,18 @@
+#include "script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Creates the DAGR menu dialog
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "DAGR_MENU")
 #define __F1 266874

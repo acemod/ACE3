@@ -1,9 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Switches to a unit close to a clicked map position
  *
  * Arguments:
- * 0: Faction
+ * 0: Faction <ARRAY>
  *   0: unit <OBJECT>
  *   1: sides <ARRAY>
  * 1: Map Position <ARRAY>
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_faction", "_pos"];
 _faction params ["", "_sides"];

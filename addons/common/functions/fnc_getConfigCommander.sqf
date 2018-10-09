@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the commander config of a vehicles turret.
@@ -7,10 +8,12 @@
  *
  * Return Value:
  * Commander config <CONFIG>
+
+ * Example:
+ * [car] call ace_common_fnc_getConfigCommander
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 

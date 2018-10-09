@@ -3,7 +3,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Wersja-3.6.2-blue.svg?style=flat-square" alt="ACE3 Wersja">
+        <img src="https://img.shields.io/badge/Wersja-3.12.3-blue.svg?style=flat-square" alt="ACE3 Wersja">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Zagadnienia&style=flat-square" alt="ACE3 Zagadnienia">
@@ -14,11 +14,11 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/Licencja-GPLv2-red.svg?style=flat-square" alt="ACE3 Licencja">
     </a>
-    <a href="http://slackin.ace3mod.com/">
-        <img src="http://slackin.ace3mod.com/badge.svg?label=Slack&style=flat-square" alt="ACE3 Slack">
+    <a href="https://slackin.ace3mod.com/">
+        <img src="https://slackin.ace3mod.com/badge.svg?label=Slack&style=flat-square" alt="ACE3 Slack">
     </a>
-    <a href="https://travis-ci.org/acemod/ACE3">
-        <img src="https://img.shields.io/travis/acemod/ACE3.svg?style=flat-square" alt="ACE3 Build Status">
+    <a href="https://circleci.com/gh/acemod/ACE3">
+        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
     </a>
 </p>
 <p align="center"><sup><strong>Wymaga najnowszej wersji <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
@@ -65,15 +65,15 @@ Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczo
 
 ### Poradniki i instrukcje
 Jeżeli zainstalowałeś ACE3 lecz masz problem ze zrozumieniem jak to wszystko działa, lub gdzie zacząć, zacznij od przeczytania tego:
-- [Wprowadzenie](http://ace3mod.com/wiki/user/getting-started.html)
+- [Wprowadzenie](https://ace3mod.com/wiki/user/getting-started.html)
 
 #### Współpraca
 Możesz pomóc w rozwoju addonu szukając potencjalnych bugów w naszym kodzie, lub zgłaszając nowe funkcje. Aby wnieść swój wkład do ACE3, po prostu zforkuj to repozytorium na swoje konto GitHub i zgłoś swoje pull requesty do przeglądu przez innych współpracowników. Pamiętaj, aby dodać siebie do listy autorów każdego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodając także swój adres e-mail.
 
 Używaj naszego [Issue Tracker-a](https://github.com/acemod/ACE3/issues) aby zgłaszać bugi, proponować nowe funkcje lub sugerować zmiany do aktualnie istniejących. Zobacz także:
-- [Jak zgłosić bug-a](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [Jak zgłosić feature request-a](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [Jak zgłosić bug-a](https://ace3mod.com/wiki/user/how-to-report-an-issue.html)
+- [Jak zgłosić feature request-a](https://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testowanie i budowanie
 Aby pomóc nam w testowaniu najnowszych zmian rozwojowych, pobierz nasz master branch ([bezpośrednio](https://github.com/acemod/ACE3/archive/master.zip), lub [korzystając z git](https://help.github.com/articles/fetching-a-remote/)), a następnie złóż testowego build-a:
-- [Konfiguracja środowiska do testów](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – intrukcja krok-po-kroku jak poprawnie ustawić i zbudować wersję ACE3 do celów testowych.
+- [Konfiguracja środowiska do testów](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – intrukcja krok-po-kroku jak poprawnie ustawić i zbudować wersję ACE3 do celów testowych.

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -10,10 +11,11 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [medic, "bandage", 2] call ace_medical_fnc_treatmentAdvanced_medicationLocal
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_className", "_partNumber"];
 TRACE_3("params",_target,_className,_partNumber);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the range card setup screen on/off
@@ -6,14 +7,13 @@
  * Apply new range card settings <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_range_card_setup
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (ctrlVisible 10000) then {
     false call FUNC(show_range_card_setup);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the nearest object the player is looking at. Used for laser designator instead of cursorTarget.
@@ -8,9 +9,11 @@
  * Return Value:
  * Nearest object in line of sight, objNull if none are found <OBJECT>
  *
+ * Example:
+ * [56] call ace_common_fnc_getTargetObject
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_maxDistance"];
 

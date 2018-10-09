@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows the Kestrel 4500 as rsc title
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "RscKestrel4500")
 #define __ctrlKestrel4500 (__dsp displayCtrl 75000)

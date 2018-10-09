@@ -30,10 +30,12 @@ def main():
     script_path = os.path.realpath(__file__)
     project_path = os.path.dirname(os.path.dirname(script_path))
     addons_path = os.path.join(project_path, "addons")
+    optionals_path = os.path.join(project_path, "optionals")
 
     if "--acex" in sys.argv:
         projectx_path = sys.argv[sys.argv.index("--acex") + 1]
         addonsx_path = os.path.join(projectx_path, "addons")
+        optionalsx_path = os.path.join(projectx_path, "optionals")
 
     # Documentation paths
     include_path = os.path.join(project_path, "docs", "_includes")
@@ -47,14 +49,20 @@ def main():
         sys.exit(0)
 
     open(dependencies_path, "w", newline="\n").close()
-    addons = next(os.walk(addons_path))[1]
+    if os.path.exists(addons_path):
+        addons = sorted(next(os.walk(addons_path))[1])
+        if os.path.exists(optionals_path):
+            addons += ["."] + sorted(next(os.walk(optionals_path))[1])
+
     dependencies_path_current = dependencies_path
     addons_path_current = addons_path
 
     if "--acex" in sys.argv:
         open(dependenciesx_path, "w", newline="\n").close()
-        addons.append(".")
-        addons += next(os.walk(addonsx_path))[1]
+        if os.path.exists(addonsx_path):
+            addons += [".."] + sorted(next(os.walk(addonsx_path))[1])
+            if os.path.exists(optionalsx_path):
+                addons += ["."] + sorted(next(os.walk(optionalsx_path))[1])
 
     # Iterate through folders in the addons directories
     for folder in addons:
@@ -62,8 +70,16 @@ def main():
         if folder == "main":
             continue
 
-        # Change to ACEX list on "." separator
+        # Change to optionals list on "." separator
         if folder == ".":
+            if addons_path_current == addons_path:
+                addons_path_current = optionals_path
+            else:
+                addons_path_current = optionalsx_path
+            continue
+
+        # Change to ACEX list on ".." separator
+        if folder == "..":
             dependencies_path_current = dependenciesx_path
             addons_path_current = addonsx_path
             continue
@@ -79,7 +95,6 @@ def main():
                     # One-line
                     if not match and re.match(r"\s+requiredAddons\[\]\ = {.+?};", line):
                         data += get_dependencies(line)
-                        print(get_dependencies(line))
                         break
                     # Multi-line
                     else:
@@ -98,22 +113,22 @@ def main():
                             data += get_dependencies(line)
                             continue
 
-        data = "`, `".join(data)
-        data = "`{}`".format(data)
+            data = "`, `".join(data)
+            data = "`{}`".format(data)
 
-        jekyll_statement = "".join([
-            "{% if include.component == \"" + folder + "\" %}\n",
-            "{}\n".format(data),
-            "{% endif %}\n"
-        ])
+            jekyll_statement = "".join([
+                "{% if include.component == \"" + folder + "\" %}\n",
+                "{}\n".format(data),
+                "{% endif %}\n"
+            ])
 
-        with open(dependencies_path_current, "a", newline="\n") as file:
-            file.writelines([jekyll_statement, "\n"])
+            with open(dependencies_path_current, "a", newline="\n") as file:
+                file.writelines([jekyll_statement, "\n"])
 
-        if "--markdown" not in sys.argv:
-            print("{}: {}".format(folder,data))
-        else:
-            print(jekyll_statement)
+            if "--markdown" not in sys.argv:
+                print("{}: {}".format(folder,data))
+            else:
+                print(jekyll_statement)
 
 
 if __name__ == "__main__":

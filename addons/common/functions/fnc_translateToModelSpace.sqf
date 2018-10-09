@@ -1,16 +1,19 @@
+#include "script_component.hpp"
 /*
- * Author: ?
+ * Author: ACE-Team
  * ?
  *
  * Arguments:
- * ?
+ * <UNKNOWN>
  *
  * Return Value:
- * ?
+ * Something <UNKNOWN>
  *
- * Public: ?
+ * Example:
+ * [UNKNOWN] call ace_common_fnc_translateToModelSpace
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_matrix", "_offset"];
 

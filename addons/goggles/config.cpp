@@ -270,8 +270,3 @@ class CfgCloudlets {
         destroyOnWaterSurface = 1;
     };
 };
-
-class ACE_newEvents {
-    GlassesChanged = "ace_glassesChanged";
-    GlassesCracked = "ace_glassesCracked";
-};

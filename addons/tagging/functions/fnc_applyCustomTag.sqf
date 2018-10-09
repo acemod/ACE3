@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Applies custom tag to the cache.
@@ -17,14 +18,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_identifier", "_displayName", "_requiredItem"];
 
 // Add only if tag not already added (compare identifiers)
 if !(GVAR(cachedTags) select {_x select 0 == _identifier} isEqualTo []) exitWith {
-    ACE_LOGINFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
+    INFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
 };
+_requiredItem = configName (configFile >> "CfgWeapons" >> _requiredItem); // Convert To config case
+_this set [2, _requiredItem];
 
 GVAR(cachedTags) pushBack _this;
 GVAR(cachedRequiredItems) pushBackUnique _requiredItem;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zapat, Dslyecxi, Jonpas
  * Draws throw arc.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Disable drawing when intersecting with the vehicle
 if !([ACE_player] call FUNC(canThrow)) exitWith {
@@ -47,11 +47,15 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
 
     if (_newTrajASL distance (getPosASLVisual ACE_player) <= 20) then {
         if ((ASLToATL _newTrajASL) select 2 <= 0) then {
-            _cross = 1
+            _cross = 1; // 1: Distance Limit (Green)
         } else {
             // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is glass in a window
-            if (lineIntersects [_prevTrajASL, _newTrajASL]) then {
-                _cross = 2;
+            if (lineIntersects [_prevTrajASL, _newTrajASL]) then { // Checks the "VIEW" LOD
+                _cross = 2; // 2: View LOD Block (Red)
+            } else {
+                if (!((lineIntersectsSurfaces [_prevTrajASL, _newTrajASL, _activeThrowable, ACE_player, true, 1, "GEOM", "FIRE"]) isEqualTo [])) then {
+                    _cross = 3; // 3: GEOM/FIRE LOD Block (Yellow) - pass a3 bulding glass, but blocked on some CUP glass
+                };
             };
         };
 
@@ -60,10 +64,10 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
         private _movePerc = linearConversion [3, 0, vectorMagnitude (velocity ACE_player), 0, 1, true];
         _alpha = _alpha * _movePerc;
 
-        private _col = [ [1, 1, 1, _alpha], [0, 1, 0, _alpha], [1, 0, 0, _alpha] ] select _cross;
+        private _col = [ [1, 1, 1, _alpha], [0, 1, 0, _alpha], [1, 0, 0, _alpha], [1, 1, 0, _alpha] ] select _cross;
 
         if (_cross != 2 && {lineIntersects [eyePos ACE_player, _newTrajASL]}) then {
-            _col set [3, 0.1]
+            _col set [3, 0.1];
         };
 
         _pathData pushBack [_col, ASLToAGL _newTrajASL, _iDim];

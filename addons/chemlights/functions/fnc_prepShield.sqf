@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Combine a chemlight shield item and a chemlight item into a light.
@@ -7,7 +8,7 @@
  * 1: Activator Unit (player) <OBJECT>
  * 2: Chemlight class, chemlight shield class <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_unit", "_args"];
 _args params ["_chemlight", "_shieldClass"];

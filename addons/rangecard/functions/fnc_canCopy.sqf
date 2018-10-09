@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Authors: Ruthberg
  * Checks if the target has a copyable range card
@@ -6,13 +7,12 @@
  * unit <OBJECT>
  *
  * Return Value:
- * canShow (bool)
+ * canShow <BOOL>
  *
  * Example:
- * [] call ace_rangecard_fnc_canCopy
+ * [bob] call ace_rangecard_fnc_canCopy
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ((primaryWeapon _this) != "" && [_this] call EFUNC(common,isPlayer) && [_this, "ACE_RangeCard"] call EFUNC(common,hasItem))

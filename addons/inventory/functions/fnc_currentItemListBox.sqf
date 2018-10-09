@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns the current item list box of given inventory display.
@@ -10,9 +11,11 @@
  * Return Value:
  * Currently selected item list box <CONTROL>
  *
+ * Example:
+ * [DISPLAY] call ACE_inventory_fnc_currentItemListBox
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 

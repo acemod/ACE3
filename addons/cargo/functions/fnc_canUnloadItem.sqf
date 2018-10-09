@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, ViperMaul
  * Check if item can be unloaded.
@@ -5,7 +6,7 @@
  * Arguments:
  * 0: loaded Object <OBJECT>
  * 1: Object <OBJECT>
- * 2: Unloader (player) <OPTIONAL><OBJECT>
+ * 2: Unloader (player) <OBJECT> (default: objNull)
  *
  * Return Value:
  * Can be unloaded <BOOL>
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_item", "_vehicle", ["_unloader", objNull]];
 TRACE_2("params",_item,_vehicle);

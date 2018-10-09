@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Updates marker position and texts.
@@ -15,16 +16,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_rallypoint", "_side", "_position"];
 
 if (!hasInterface) exitWith {};
 
-private ["_marker", "_markerDate"];
-
-_marker = _rallypoint getVariable [QGVAR(marker), ""];
-_markerDate = _rallypoint getVariable [QGVAR(markerDate), ""];
+private _marker = _rallypoint getVariable [QGVAR(marker), ""];
+private _markerDate = _rallypoint getVariable [QGVAR(markerDate), ""];
 
 _marker setMarkerPosLocal _position;
 _marker setMarkerTextLocal _markerDate;

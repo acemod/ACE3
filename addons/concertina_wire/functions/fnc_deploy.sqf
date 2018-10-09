@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko, Ruthberg
  *
@@ -10,11 +11,13 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [coil, bob] call ace_concertina_wire_fnc_deploy
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
-PARAMS_2(_wirecoil,_unit);
+params ["_wirecoil", "_unit"];
 
 private _wireNoGeo = "ACE_ConcertinaWireNoGeo" createVehicle [0,0,0];
 {
@@ -62,6 +65,7 @@ GVAR(deployPFH) = [{
         }, 0, [_wireNoGeo, _wire, _anim, _dir, _wireNoGeoPos]] call CBA_fnc_addPerFrameHandler;
 
         [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(Common,removeActionEventHandler);
+        [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
         call EFUNC(interaction,hideMouseHint);
 
         [_idPFH] call CBA_fnc_removePerFrameHandler;
@@ -74,6 +78,8 @@ GVAR(deployPFH) = [{
 }, 0, [_wireNoGeo, _wireNoGeoPos, _unit]] call CBA_fnc_addPerFrameHandler;
 
 [localize "STR_ACE_ROLLWIRE", "", ""] call EFUNC(interaction,showMouseHint);
+
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 GVAR(placer) setVariable [QGVAR(Deploy),
     [GVAR(placer), "DefaultAction",

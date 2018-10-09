@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Weapons", QGVAR(safeMode), localize LSTRING(SafeMode),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call CBA_fnc_canUseWeapon && {currentWeapon ACE_player != binocular ACE_player} && {currentWeapon ACE_player != ""}) exitWith {false};
 

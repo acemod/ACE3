@@ -49,7 +49,7 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 #### 2.4 Horizontal distance and height difference
 <img src="{{ site.baseurl }}/img/wiki/user/vector4.jpg" width="500" height="160" alt="Measuring Horizontal distance and height difference"/>
 
-- Tap <kb>R</kbd> once then press and hold it until the red pointing circle appears.
+- Tap <kbd>R</kbd> once then press and hold it until the red pointing circle appears.
 - Sight the circle on the object and release the key.
 
 #### 2.5 Azimuth and Inclination
@@ -78,13 +78,26 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 - Sight the circle on the first object and tap <kbd>R</kbd> while further holding <kbd>Tab&nbsp;↹</kbd>. The first measurement is confirmed ("1-P" = first point).
 - Sight the second object and release <kbd>Tab&nbsp;↹</kbd>.
 
-### 2.9 Fall of shot
+#### 2.9 Fall of shot
 <img src="{{ site.baseurl }}/img/wiki/user/vector9.jpg" width="500" height="160" alt="Measuring Fall of shot"/>
 
 - Tap <kbd>Tab&nbsp;↹</kbd> once then press and hold it until the azimuth appears.
 - Sight the circle on the object and tap <kbd>R</kbd> while further holding <kbd>Tab&nbsp;↹</kbd>. The first measurement is confirmed ("1-P" = first point).
 - Sight the Fall of shot and release <kbd>Tab&nbsp;↹</kbd>. The left digits display the left (`L`)/right (`r`) correction value in meter and the right digits display the longer (`A` = add)/shorter (`d` = drop) correction value in meter. If <kbd>R</kbd> is tapped the height correction values will be displayed (`UP` and `dn`).
 
-## 3. Dependencies
+#### 2.10 Setting the measurement units (degrees/mils &amp; meters/feet)
+
+- Tap <kbd>Tab&nbsp;↹</kbd> five times fast. "Unit SEtt" appears briefly.
+- Press <kbd>R</kbd> until the desired units are displayed.
+- Tap <kbd>Tab&nbsp;↹</kbd> five times fast to save the selection.
+
+## 3. Resources
+
+Polish version of this manual with some comments and small additional section
+/polska wersja tego dokumentu opatrzona komentarzami oraz niewielkim dodatkiem:
+
+http://pgm.armaonline.pl/forum/viewtopic.php?f=15&t=548
+
+## 4. Dependencies
 
 {% include dependencies_list.md component="vector" %}

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Disables/Enables AI
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_disable", true, [false]]];
 
@@ -30,7 +30,7 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
     } else {
         //Sanity check to make sure we don't enable unconsious AI
         if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith {
-            ACE_LOGERROR("Enabling AI for unconsious unit");
+            ERROR("Enabling AI for unconsious unit");
         };
 
         _unit enableAI "MOVE";

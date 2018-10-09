@@ -1,5 +1,20 @@
-// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
+/*
+ * Author: ACE-Team
+ * Update the blue force tracking.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_map_fnc_blueForceTrackingUpdate
+ *
+ * Public: No
+ */
+
 // BEGIN_COUNTER(blueForceTrackingUpdate);
 
 // Delete last set of markers (always)

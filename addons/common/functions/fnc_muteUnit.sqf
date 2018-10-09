@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Mutes the unit. It won't trigger auto generated chat messages either.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "because"] call ace_common_fnc_muteUnit
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_reason"];
 

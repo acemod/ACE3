@@ -1,16 +1,21 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * N/A
  *
  * Arguments:
- * ?
+ * 0: Unit <OBJECT>
+ * 1: ID? <STRING>
+ * 2: Accepted <BOOL>
  *
  * Return Value:
- * ?
+ * None
+ *
+ * Example:
+ * [bob, "ID", true] call ace_common_fnc_onAnswerRequest
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_id", "_accepted"];
 

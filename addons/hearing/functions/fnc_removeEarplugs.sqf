@@ -1,9 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: Hope Johnson and commy2
  * Takes out earplugs.
  *
  * Arguments:
- * 0:Unit (player) <OBJECT>
+ * 0: Unit (player) <OBJECT>
  *
  * Return Value:
  * None
@@ -13,9 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
+
+if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 if !(_player canAdd "ACE_EarPlugs") exitWith { // inventory full
     [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
