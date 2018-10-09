@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laser">
         <Key ID="STR_ACE_Laser_dispersionCount_displayName">
@@ -8,7 +8,7 @@
             <Korean>레이저 분산 시뮬레이션 수</Korean>
             <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
             <French>Compte de la simulation de la dispersion du laser</French>
-            <Italian>Contatore Simulazione Dispersione Laser</Italian>
+            <Italian>Contatore di Simulazione della Dispersione del Laser</Italian>
             <Chinesesimp>雷射散射模拟计算</Chinesesimp>
             <Chinese>雷射散射模擬計算</Chinese>
         </Key>
@@ -38,7 +38,7 @@
             <Hungarian>Lézer - kódciklus növelése</Hungarian>
             <Spanish>Láser - Aumentar código</Spanish>
             <Czech>Laser - Kód +</Czech>
-            <Italian>Codice laser +</Italian>
+            <Italian>Laser - Cambia codice +</Italian>
             <Japanese>レーザ - コードの数値を増やす</Japanese>
             <Korean>레이저 - 코드 순환 위</Korean>
             <Chinesesimp>雷射 - 循环切换雷射码 上</Chinesesimp>
@@ -54,7 +54,7 @@
             <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
             <Spanish>Láser - Reducir código</Spanish>
             <Czech>Laser - Kód -</Czech>
-            <Italian>Codice laser -</Italian>
+            <Italian>Laser - Cambia codice -</Italian>
             <Japanese>レーザ - コードの数値を減らす</Japanese>
             <Korean>레이저 - 코드 순환 아래</Korean>
             <Chinesesimp>雷射 - 循环切换雷射码 下</Chinesesimp>

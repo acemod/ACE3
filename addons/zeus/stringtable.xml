@@ -323,9 +323,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
+            <Italian>Oggetti aggiuntivi</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
+            <Italian>Oggetti aggiuntivi da includere nell'azione indipendentemente dal Raggio di Attività</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -932,12 +934,15 @@
         </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
+            <Italian>Niente</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
+            <Italian>Giocatori</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
+            <Italian>Giocati e AI</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>

@@ -786,6 +786,7 @@
         <Key ID="STR_ACE_Arsenal_Blacklist">
             <English>Blacklist</English>
             <Japanese>禁止リスト</Japanese>
+            <Italian>Lista Nera</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
@@ -806,6 +807,7 @@
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
+            <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
         </Key>
     </Package>
 </Project>

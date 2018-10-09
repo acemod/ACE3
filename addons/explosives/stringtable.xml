@@ -1029,6 +1029,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
+            <Italian>Timer di detonazione</Italian>
         </Key>
     </Package>
 </Project>
