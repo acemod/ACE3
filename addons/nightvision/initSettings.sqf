@@ -52,3 +52,48 @@
     false, // isGlobal
     {[QGVAR(shutterEffects), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(airFogMultiplier), "SLIDER",
+    [LSTRING(airFogMultiplier_DisplayName),LSTRING(airFogMultiplier_Description)],
+    localize LSTRING(Category),
+    [0,1,0.5,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true, // isGlobal
+    {[QGVAR(airFogMultiplier), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(binoFogMultiplier), "SLIDER",
+    [LSTRING(binoFogMultiplier_DisplayName),LSTRING(binoFogMultiplier_Description)],
+    localize LSTRING(Category),
+    [0,1,0.5,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true, // isGlobal
+    {[QGVAR(binoFogMultiplier), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(carFogMultiplier), "SLIDER",
+    [LSTRING(carFogMultiplier_DisplayName),LSTRING(carFogMultiplier_Description)],
+    localize LSTRING(Category),
+    [0,1,0.5,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true, // isGlobal
+    {[QGVAR(carFogMultiplier), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(staticFogMultiplier), "SLIDER",
+    [LSTRING(staticFogMultiplier_DisplayName),LSTRING(staticFogMultiplier_Description)],
+    localize LSTRING(Category),
+    [0,1,0.5,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true, // isGlobal
+    {[QGVAR(staticFogMultiplier), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(tankFogMultiplier), "SLIDER",
+    [LSTRING(tankFogMultiplier_DisplayName),LSTRING(tankFogMultiplier_Description)],
+    localize LSTRING(Category),
+    [0,1,0.5,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true, // isGlobal
+    {[QGVAR(tankFogMultiplier), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;

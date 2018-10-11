@@ -27,42 +27,14 @@ private _nvgGen = 3;
 private _blurRadius = -1;
 
 if (alive ACE_player) then {
-    if (((vehicle ACE_player) == ACE_player) || {
-        // Test if we are using player's nvg or if sourced from vehicle:
-
-        private _currentVehicle = vehicle ACE_player;
-        private _vehConfig = configFile >> "CfgVehicles" >> (typeOf _currentVehicle);
-
-        if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
-
-        if (ACE_player == (driver _currentVehicle)) exitWith {
-            !("NVG" in getArray (_vehConfig >> "ViewOptics" >> "visionMode"));
-        };
-        private _result = true;
-        private _turret = ACE_player call CBA_fnc_turretPath;
-        private _turretConfig = [_currentVehicle, _turret] call CBA_fnc_getTurret;
-
-        // Seems to cover things like the offroad technical
-        if ((isNumber (_turretConfig >> "optics")) && {(getNumber (_turretConfig >> "optics")) == 0}) exitWith {true};
-
-        private _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
-        if (isClass _turretConfigOpticsIn) then {
-            for "_index" from 0 to (count _turretConfigOpticsIn - 1) do {
-                if ("NVG" in getArray (_turretConfigOpticsIn select _index >> "visionMode")) exitWith {_result = false};
-            };
-        } else {
-            // No OpticsIn usualy means RCWS, still need to test on more vehicles
-            _result = false;
-        };
-        _result
-    }) then {
-        if ((cameraView == "GUNNER") && {currentWeapon ACE_player != ""} && {binocular ACE_player == currentWeapon ACE_player}) exitWith {
+    private _vehicle = vehicle ACE_player;
+    if (_vehicle == ACE_player) exitWith {
+        if ((cameraView == "GUNNER") && {currentWeapon _unit != ""} && {binocular ACE_player == currentWeapon ACE_player}) exitWith {
             TRACE_1("souce: binocular",binocular ACE_player); // Source is from player's binocular (Rangefinder/Vector21bNite)
-            private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
-            if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+            GVAR(source) = "bino";
         };
-
         TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
+        GVAR(source) = "hmd";
         private _config = configFile >> "CfgWeapons" >> GVAR(playerHMD);
         if (!isClass _config) exitWith {};
 
@@ -74,14 +46,126 @@ if (alive ACE_player) then {
             if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
         };
         if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+    };
+    
+    if (_vehicle isKindOf "Air") exitWith {
+        TRACE_1("source: vehicle - defaults",typeOf _vehicle);
+        GVAR(source) = "air";
+    };
 
+    if (_vehicle isKindOf "Tank") exitWith {
+        if (cameraView == "GUNNER") then {
+            if ([ACE_player] call CBA_fnc_isTurnedOut) then {
+                if ((currentWeapon ACE_player != "") && {binocular ACE_player == currentWeapon ACE_player}) then {
+                    TRACE_1("souce: binocular",binocular ACE_player);
+                    GVAR(source) = "bino";
+                } else {
+                    TRACE_1("source: hmd",GVAR(playerHMD));
+                    GVAR(source) = "hmd";                 
+                };
+            } else {
+                GVAR(source) = "tank";
+                TRACE_1("source: vehicle - defaults",typeOf _vehicle);
+            };                    
+        } else {
+            TRACE_1("source: hmd",GVAR(playerHMD));
+            GVAR(source) = "hmd";       
+        };
+    };
+    
+    //If nothing else has exited by now, player must be in some other vehicle like a static weapon/car.
+    //Check camera view. If not in gunner, use hmds.
+    if (cameraView == "GUNNER") then {
+        //Check for turned out, using binos/personal nvgs.
+        if ([ACE_player] call CBA_fnc_isTurnedOut) then {
+            if ((currentWeapon ACE_player != "") && {binocular ACE_player == currentWeapon ACE_player}) then {
+                TRACE_1("souce: binocular",binocular ACE_player);
+                GVAR(source) = "bino";
+            } else {
+                TRACE_1("source: hmd",GVAR(playerHMD));
+                GVAR(source) = "hmd";            
+            };
+        } else {
+            
+            private _turret = ACE_player call CBA_fnc_turretPath;
+            private _turretConfig = [_vehicle, _turret] call CBA_fnc_getTurret;
+
+            //Check if turret has its own source of NV. If not, use hmds. Used for techies.
+            if ((isNumber (_turretConfig >> "optics")) && {(getNumber (_turretConfig >> "optics")) == 0}) exitWith {
+                GVAR(source) = "gun-hmd";
+                TRACE_1("source: hmd on turret",GVAR(playerHMD));                
+            };
+            //If static weapon, check if turret has built in nightvision. To work out when player is using  HMD NV, e.g. m2 browning machinegun static weapon.
+            if (_vehicle iskindof "StaticWeapon") exitWith {
+                if ((isArray (_turretConfig >> "OpticsIn" >> "ViewOptics" >> "VisionMode")) && {("NVG" in (getarray (_turretConfig >> "OpticsIn" >> "ViewOptics" >> "VisionMode")))} ) then { 
+                    GVAR(source) = "static";
+                    TRACE_1("source: static - defaults",typeOf _vehicle);
+                } else {
+                    GVAR(source) = "gun-hmd";
+                    TRACE_1("source: hmd on turret",GVAR(playerHMD));
+                };
+                
+            };
+            if (_vehicle iskindof "Car") exitWith {
+                GVAR(source) = "car";
+                TRACE_1("source: car",typeOf _vehicle);
+            };
+            TRACE_1("source: undefined vehicle - defaults",typeOf _vehicle);
+        };                    
     } else {
-        TRACE_1("source: vehicle - defaults",typeOf vehicle ACE_player);
+        TRACE_1("source: hmd",GVAR(playerHMD));
+        GVAR(source) = "hmd";
     };
 };
 
+//Note: Don't care about car/static/UAV sources at this time, only used for identifying them in the fnc_pfeh.sqf for fog multiplier. They have their own overlays.
+switch GVAR(source) do {
+    case "hmd" : {
+        private _config = configFile >> "CfgWeapons" >> GVAR(playerHMD);
+        if (!isClass _config) exitWith {};
+        // Only use border if there is no modelOptics
+        if ((getText (_config >> "modelOptics")) == "") then {
+            _borderImage = getText (_config >> QGVAR(border));
+            _eyeCups = ((getNumber (_config >> QGVAR(eyeCups))) == 1);
+            _hideHex = (getNumber (_config >> QGVAR(hideHex))) == 1;
+            if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
+        };
+        if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+    };
+    //Differentiated here so can scale nvg overlay and detect turret ironsight blurring in fnc_pfeh.sqf.
+    case "gun-hmd" : {
+        private _config = configFile >> "CfgWeapons" >> GVAR(playerHMD);
+        if (!isClass _config) exitWith {};
+        if ((getText (_config >> "modelOptics")) == "") then {
+            _borderImage = getText (_config >> QGVAR(border));
+            _eyeCups = ((getNumber (_config >> QGVAR(eyeCups))) == 1);
+            _hideHex = (getNumber (_config >> QGVAR(hideHex))) == 1;
+            if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
+        };
+        if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+    };
+    case "bino" : {
+        private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
+        if (!isClass _config) exitWith {};
+        if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+        _borderImage = getText (_config >> QGVAR(border));
+    };
+    case "air" : {
+        private _config = configFile >> "CfgWeapons" >> GVAR(playerHMD);
+        _borderImage = getText (_config >> QGVAR(border));
+        _eyeCups = ((getNumber (_config >> QGVAR(eyeCups))) == 1);
+        _hideHex = (getNumber (_config >> QGVAR(hideHex))) == 1;
+        if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
+        if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
+    };
+};
+
+
+
+
 #ifdef DEBUG_MODE_FULL
 systemChat format ["NVG Refresh - Border: %1", _borderImage];
+systemChat format ["NVG Source: %1",GVAR(source)];
 systemChat format ["EyeCups: %1, HideHex %2, NVGen: %3, BluRadius: %4", _eyeCups, _hideHex, _nvgGen, _blurRadius];
 #endif
 
@@ -90,6 +174,10 @@ GVAR(nvgGeneration) = _nvgGen;
 
 // Setup border and hex image based on NVG config:
 private _scale = (call EFUNC(common,getZoom)) * 1.12513;
+//Forced a bit of nvg overlay scaling when player in turret ironsight but using their hmd.
+if (GVAR(source) == "gun-hmd") then {
+    _scale = _scale * 1.2;
+};
 
 private _borderImageCtrl = (uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1001;
 private _trippleHeadLeft = (uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1002;

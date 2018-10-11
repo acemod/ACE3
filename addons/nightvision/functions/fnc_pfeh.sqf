@@ -39,6 +39,9 @@ if (!GVAR(running)) then {
 // Scale Border / Hex
 BEGIN_COUNTER(borderScaling);
 private _scale = (call EFUNC(common,getZoom)) * 1.12513;
+if (GVAR(source) == "gun-hmd") then {
+    _scale = _scale * 1.2;
+};
 if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
     // Prevents issues when "zooming out" on ultra wide monitors - The square mask would be narrower than the screen
     if (((GVAR(defaultPositionBorder) select 2) * _scale) < safeZoneW) then {
@@ -88,7 +91,11 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
         if (currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]}; // Rifles are bad
         if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL]}; // Pistols aren't so bad
     };
-
+    
+    //Modify blur if using HMDs while on open sight mounted weapon, i.e. techy, M2 turret from RHS.
+    if (GVAR(source) == "gun-hmd") then {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]};
+    
+    
     // Scale general effects based on ace_nightvision_effectScaling setting
     private _radialBlurPower = 0.0025 * GVAR(effectScaling);
     _brightFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _brightFinal];
@@ -144,8 +151,13 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
 
     // Modify local fog:
     if (GVAR(fogScaling) > 0) then {
-        if (((vehicle ACE_player) != ACE_player) && {(vehicle ACE_player) isKindOf "Air"}) then {  // For flying in particular, can refine nicer later.
-            _fogApply = _fogApply * ST_NVG_AIR_FOG_MULTIPLIER;
+        switch GVAR(source) do {
+            case "air" : {_fogApply = _fogApply * GVAR(airFogMultiplier);};
+            case "bino" : {_fogApply = _fogApply * GVAR(binoFogMultiplier);};
+            case "car" : {_fogApply = _fogApply * GVAR(carFogMultiplier);};
+            case "static" : {_fogApply = _fogApply * GVAR(staticFogMultiplier);};
+            case "tank" : {_fogApply = _fogApply * GVAR(tankFogMultiplier);};
+            default {};
         };
         _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogScaling) * _fogApply), 1]; // mix in old fog if present
         GVAR(nvgFog) = [_fogApply, 0, 0];
