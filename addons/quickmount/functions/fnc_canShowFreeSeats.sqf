@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Checks if Free Seats menu can be shown.
@@ -7,14 +8,13 @@
  * 1: Unit <OBJECT>
  *
  * Return Value:
- * Able to show menu <BOOL>
+ * Can show menu <BOOL>
  *
  * Example:
  * [cursorObject, player] call ace_quickmount_fnc_canShowFreeSeats
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_unit"];
 

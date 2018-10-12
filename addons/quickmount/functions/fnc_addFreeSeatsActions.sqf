@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Creates actions for vehicle free seats.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define TO_STRING(var) if !(var isEqualType "") then {var = "Compartment" + str var}
 
