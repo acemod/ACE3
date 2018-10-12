@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, SilentSpike
  * Checks if the vehicles class already has the actions initialized, otherwise add all available repair options. Calleed from init EH.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
@@ -35,8 +35,7 @@ private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
 private _hitPointsAddedAmount = [];
 private _processedHitpoints = [];
-private _icon = QPATHTOF(ui\repair_0_ca.paa);
-
+private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions));
@@ -127,11 +126,7 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
         if (_hitpoint in TRACK_HITPOINTS) then {
             // Tracks should always be unique
             if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
-            if (_hitpoint == "HitLTrack") then {
-                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
-            } else {
-                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
-            };
+            _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             TRACE_4("Adding RepairTrack",_hitpoint,_forEachIndex,_selection,_text);
             private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(canRepair)};
             private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(repair)};

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Initializes the player
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_playerUnit", "_sides"];
 
@@ -32,12 +32,9 @@ if (vehicle _playerUnit == _playerUnit) then {
     removeAllWeapons _playerUnit;
     removeGoggles _playerUnit;
     removeHeadgear _playerUnit;
-    removeVest _playerUnit;
     removeAllAssignedItems _playerUnit;
-    clearAllItemsFromBackpack _playerUnit;
-    removeBackpack _playerUnit;
+    removeAllContainers _playerUnit;
     _playerUnit linkItem  "ItemMap";
-    removeUniform _playerUnit;
 
     [_playerUnit, "forceWalk", "ACE_SwitchUnits", true] call EFUNC(common,statusEffect_set);
 

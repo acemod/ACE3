@@ -7,7 +7,6 @@
                 statement = ""; \
                 runOnHover = 1; \
                 showDisabled = 0; \
-                priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
                 exceptions[] = {"isNotSwimming", "isNotOnLadder"}; \
@@ -408,12 +407,12 @@ class CfgVehicles {
     class ReammoBox_F;
     class Land_RepairDepot_01_base_F: ReammoBox_F { // TanksDLC - Repair Depo Thing
         GVAR(canRepair) = 1;
-        transportRepair = 0; 
+        transportRepair = 0;
     };
     class Van_02_base_F;
     class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
         GVAR(canRepair) = 1;
-        transportRepair = 0;  
+        transportRepair = 0;
     };
 
     class Slingload_01_Base_F;

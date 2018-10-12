@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Collect the temperature of all the spare barrels a unit has and load the
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_assistant", "_gunner", "_weapon", "_weaponTemp", "_barrelMass"];
 TRACE_5("loadCoolestSpareBarrel1",_assistant,_gunner,_weapon,_weaponTemp,_barrelMass);

@@ -149,6 +149,24 @@
 #define IDC_buttonSharedLoadoutsBackground 405
 #define IDC_buttonSharedLoadouts 406
 
+// 3DEN Attribute
+#define ATTRIBUTE_W (pixelW * pixelGrid * 0.5)
+#define ATTRIBUTE_H (pixelH * pixelGrid * 0.5)
+
+#define IDC_ATTRIBUTE_MODE 8100
+#define IDC_ATTRIBUTE_CATEGORY 8101
+#define IDC_ATTRIBUTE_LIST 8102
+#define IDC_ATTRIBUTE_LIST_LEFT 8103
+#define IDC_ATTRIBUTE_LIST_RIGHT 8104
+#define IDC_ATTRIBUTE_SEARCH_BUTTON 8105
+#define IDC_ATTRIBUTE_SEARCHBAR 8106
+#define IDC_ATTRIBUTE_CLEAR_BUTTON 8107
+#define IDC_ATTRIBUTE_EXPORT_BUTTON 8108
+
+#define SYMBOL_ITEM_NONE "−"
+#define SYMBOL_ITEM_REMOVE "×"
+#define SYMBOL_ITEM_VIRTUAL "∞"
+
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
 
@@ -237,8 +255,6 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     ];\
     _x ctrlCommit 0;\
 } foreach [\
-    IDC_rightTabContent,\
-    IDC_rightTabContentListnBox,\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];
@@ -284,8 +300,6 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     ];\
     _x ctrlCommit 0;\
 } foreach [\
-    IDC_rightTabContent,\
-    IDC_rightTabContentListnBox,\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];

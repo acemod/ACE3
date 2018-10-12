@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Tuupertunut
  * Rearm an entire turret locally.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_vehicle", "_turretPath"];
 TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);

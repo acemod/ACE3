@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Create one unload action per unconscious passenger
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_vehicle", "_player", "_parameters"];
 
 private _actions = [];

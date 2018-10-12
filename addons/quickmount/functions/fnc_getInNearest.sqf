@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Kingsley
  * Mount the player in the vehicle they are directly looking at based on their distance.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!GVAR(enabled) ||
     {isNull ACE_player} ||
@@ -37,7 +37,7 @@ TRACE_1("",_target);
 if (!isNull _target &&
         {alive _target} &&
         {{_target isKindOf _x} count ["Air","LandVehicle","Ship","StaticMortar"] > 0} &&
-        {([ACE_player, _target] call EFUNC(common,canInteractWith))} &&
+        {([ACE_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} &&
         {speed _target <= GVAR(speed)}
         ) then {
 

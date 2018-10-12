@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: joko, Jonas, SilentSpike
  * Perform the cut parachute action (move unit out and delete)
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit", "_parachute"];
 _unit action ["GetOut", _parachute];
 deleteVehicle _parachute;

@@ -17,8 +17,12 @@ GVAR(pendingReopen) = false;
 
 ["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
 {
+    TRACE_3("keyDown",cursorTarget,cursorObject,ACE_player);
     private _target = cursorTarget;
-    if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {_target = ACE_player};
+    if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {
+        _target = cursorObject;
+        if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then { _target = ACE_player; };
+    };
 
     // Conditions: canInteract
     if !([ACE_player, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};

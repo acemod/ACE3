@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the door can be closed.
@@ -15,7 +16,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
 params ["_vehicle", "_door"];
 
 (alive _vehicle) &&

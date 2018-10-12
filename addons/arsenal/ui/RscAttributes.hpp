@@ -490,7 +490,7 @@ class GVAR(display) {
             onSetFocus = QUOTE(GVAR(rightTabFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabFocus) = false);
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
-            h = QUOTE(safezoneH - 34.5 * GRID_H);
+            h = QUOTE(safezoneH - 28 * GRID_H);
         };
         class rightTabContentListnBox : RscListNBox {
             idc = IDC_rightTabContentListnBox;
@@ -512,7 +512,7 @@ class GVAR(display) {
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(80 * GRID_W);
-            h = QUOTE(safezoneH - 34.5 * GRID_H);
+            h = QUOTE(safezoneH - 34 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
         class sortLeftTab: RscCombo {

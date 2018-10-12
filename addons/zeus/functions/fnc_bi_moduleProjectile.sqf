@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for spawning projectiles
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 _logic = _this select 0;
 _units = _this select 1;
@@ -157,7 +157,7 @@ if (_activated) then {
                         _projectile setposasl _posNew;
                         _pos = getposatl _logic;
                         _dir = direction _logic;
-                        missionnamespace setvariable [_dirVar,_dir];
+                        //missionnamespace setvariable [_dirVar,_dir]; See L37
                     };
                     sleep 0.1;
                     isnull _projectile || isnull _logic

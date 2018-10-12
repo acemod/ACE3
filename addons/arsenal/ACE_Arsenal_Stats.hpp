@@ -33,7 +33,7 @@ class GVAR(stats) {
         displayName= "$STR_a3_rscdisplayarsenal_stat_rof";
         showBar = 1;
         showText = 1;
-        barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(-1.4, 0.31)], [ARR_2(1, 0.01)], true)])] call FUNC(statBarStatement_default));
+        barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_2([ARR_2(-1.4, 0.31)], [ARR_2(1, 0.01)])])] call FUNC(statBarStatement_rateOfFIre));
         textStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_2([ARR_2(-1.4, 0.31)], false)])] call FUNC(statTextStatement_rateOfFire));
         tabs[] = {{0,1}, {}};
     };
@@ -44,7 +44,7 @@ class GVAR(stats) {
         displayName = "$STR_a3_rscdisplayarsenal_stat_dispersion";
         showBar = 1;
         showText = 1;
-        barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(-4, -1.7)], [ARR_2(1, 0.01)], true)])] call FUNC(statBarStatement_default));
+        barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(-4, -1.7)], [ARR_2(1, 0.01)], true)])] call FUNC(statBarStatement_accuracy));
         textStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_2([ARR_2(-4, -1.7)], false)])] call FUNC(statTextStatement_accuracy));
         tabs[] = {{0,1}, {}};
     };

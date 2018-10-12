@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: CBA Team
  * Throws Fired XEH.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("Fired",_this);
 

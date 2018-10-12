@@ -29,7 +29,9 @@ cba_diagnostic_projectileMaxLines = 10;
         _x hideObject true;
     } forEach (allMissionObjects "" - [_player]);
 
-    _player call CBA_fnc_removeUnitTrackProjectiles;
+    if ((_player getVariable ["cba_projectile_firedEhId", -1]) != -1) then {
+        _player call CBA_fnc_removeUnitTrackProjectiles;
+    };
     _player setFatigue 0;
 
     // Esc to close mission

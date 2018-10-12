@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Internal function used by ace_ai_fnc_garrison to make the units move to the positions it picked.
@@ -15,7 +16,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params [ ["_unitMoveList", nil, [[]]] ];
 

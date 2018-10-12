@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth de Wet (LH)
  * Hides the interaction helper text with the mouse buttons at the bottom middle of the screen
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith {};
 

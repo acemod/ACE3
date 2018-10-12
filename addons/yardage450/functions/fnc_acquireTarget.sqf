@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Fires the laser to acquire the target
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Reference: http://www.optcorp.com/pdf/Bushnell/YardageProSport.pdf
 #define MIN_DISTANCE ([9, 10] select GVAR(useYards))

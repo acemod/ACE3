@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Either kills a unit or puts the unit in a revivable state, depending on the settings.
@@ -15,8 +16,6 @@
  *
  * Public: yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
