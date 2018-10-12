@@ -283,6 +283,7 @@
             <German>Visierunschärfe</German>
             <Chinese>瞄準具模糊程度</Chinese>
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
+            <Italian>Blur durante la mira</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
             <English>NVG Noise Scale</English>
@@ -290,6 +291,7 @@
             <Chinese>夜視鏡雜訊程度</Chinese>
             <Chinesesimp>夜视镜杂讯程度</Chinesesimp>
             <Japanese>暗視装置のノイズ度</Japanese>
+            <Italian>Fattore di Disturbo del NVG</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
@@ -297,18 +299,21 @@
             <Chinese>調整配戴夜視鏡時畫面雜訊的多寡。</Chinese>
             <Chinesesimp>调整配戴夜视镜时画面杂讯的多寡。</Chinesesimp>
             <Japanese>暗視装置を使用時に起きる画像ノイズの強度です</Japanese>
+            <Italian>Intensità del disturbo dell'immagine quando i NVG sono equipaggiati</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
             <Japanese>シャッター効果</Japanese>
             <Chinesesimp>快门效果</Chinesesimp>
             <Chinese>快門效果</Chinese>
+            <Italian>Effetti lampeggianti</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
             <Japanese>発射炎が作るローリング シャッター効果です</Japanese>
             <Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
             <Chinese>槍開火時瞬間產生快門效果</Chinese>
+            <Italian>Effetto lampeggiante dato dal lampo dello sparo</Italian>
         </Key>
 		<Key ID="STR_ACE_NightVision_airFogMultiplier_DisplayName">
             <English>Air Fog Multiplier</English>
