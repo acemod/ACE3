@@ -8,7 +8,11 @@ class CfgMagazineWells {
     };
     class CBA_65x39_MX_XL {
         ADDON[] = {
-            "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim",
+            "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim"
+        };
+    };
+    class CBA_65x39_Mk200 {
+        ADDON[] = {
             "ACE_200Rnd_65x39_cased_Box_Tracer_Dim"
         };
     };
