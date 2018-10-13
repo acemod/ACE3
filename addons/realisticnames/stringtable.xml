@@ -3396,6 +3396,48 @@
             <Japanese>Nightforce NXS (熱帯)</Japanese>
             <Italian>Nightforce NXS (Giungla)</Italian>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams">
+            <English>US Optics MR-10 (Black)</English>
+            <Chinese>US Optics MR-10 (Black)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Black)</Chinesesimp>
+            <Japanese>US Optics MR-10 (Black)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
+            <English>US Optics MR-10 (Khaki)</English>
+            <Chinese>US Optics MR-10 (Khaki)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Khaki)</Chinesesimp>
+            <Japanese>US Optics MR-10 (Khaki)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
+            <English>US Optics MR-10 (Sand)</English>
+            <Chinese>US Optics MR-10 (Sand)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Sand)</Chinesesimp>
+            <Japanese>US Optics MR-10 (Sand)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
+            <English>KAHLES Helia (Black)</English>
+            <Chinese>KAHLES Helia (Black)</Chinese>
+            <Chinesesimp>KAHLES Helia (Black)</Chinesesimp>
+            <Japanese>KAHLES Helia (Black)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
+            <English>KAHLES Helia (Hex)</English>
+            <Chinese>KAHLES Helia (Hex)</Chinese>
+            <Chinesesimp>KAHLES Helia (Hex)</Chinesesimp>
+            <Japanese>KAHLES Helia (Hex)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_old">
+            <English>KAHLES Helia (Old)</English>
+            <Chinese>KAHLES Helia (Old)</Chinese>
+            <Chinesesimp>KAHLES Helia (Old)</Chinesesimp>
+            <Japanese>KAHLES Helia (Old)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
+            <English>KAHLES Helia (Tan)</English>
+            <Chinese>KAHLES Helia (Tan)</Chinese>
+            <Chinesesimp>KAHLES Helia (Tan)</Chinesesimp>
+            <Japanese>KAHLES Helia (Tan)</Japanese>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
             <Chinese>Burris XTR II</Chinese>

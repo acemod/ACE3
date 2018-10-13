@@ -93,7 +93,7 @@ if (!isNull _target &&
                         {
                             if ((_x select 2) == _cargoIndex) exitWith {_cargoActionIndex = _forEachIndex};
                         } forEach (fullCrew [_target, "cargo", true]);
-                        
+
                         ACE_player action ["GetInCargo", _target, _cargoActionIndex];
                         TRACE_4("Geting In Cargo",_x,_role,_cargoActionIndex,_cargoIndex);
                     } else {

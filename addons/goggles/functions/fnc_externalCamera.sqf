@@ -18,8 +18,9 @@
 // Handle the ThreeDen Editor Camera
 if (is3DEN) exitWith {true};
 
+private _isFeatureCamera = call CBA_fnc_getFeatureCameraActive != "";
 if (GVAR(showInThirdPerson)) then {
-    cameraView in ["GROUP"] || EFUNC(common,isFeatureCameraActive) 
+    cameraView in ["GROUP"] || _isFeatureCamera
 } else {
-    cameraView in ["EXTERNAL", "GROUP"] || EFUNC(common,isFeatureCameraActive) 
+    cameraView in ["EXTERNAL", "GROUP"] || _isFeatureCamera
 };
