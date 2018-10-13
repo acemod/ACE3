@@ -39,7 +39,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     private _size = [_object] call FUNC(getSizeItem);
 
     [
-        GVAR(loadTimeCoefficient) * 5 * _size,
+        GVAR(loadTimeCoefficient) * _size,
         [_object, _vehicle],
         {
             [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
