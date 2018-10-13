@@ -67,6 +67,14 @@
         [ARR_2(_player,_this select 2)] \
     )] call CBA_fnc_waitUntilAndExecute;
 
+#define ICON_DRIVER    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa"
+#define ICON_PILOT     "A3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa"
+#define ICON_CARGO     "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_cargo_ca.paa"
+#define ICON_GUNNER    "A3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa"
+#define ICON_COMMANDER "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa"
+#define ICON_TURRET    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa"
+#define ICON_FFV       "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"
+
 scopeName "main";
 
 params ["_vehicle", "_player"];
@@ -154,10 +162,10 @@ private _cargoNumber = -1;
                 };
                 if (_vehicle isKindOf "Air") then {
                     _name = localize "str_getin_pos_pilot";
-                    _icon = "A3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa";
+                    _icon = ICON_PILOT;
                 } else {
                     _name = localize "str_driver";
-                    _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa";
+                    _icon = ICON_DRIVER;
                 };
             };
             case "cargo": {
@@ -172,7 +180,7 @@ private _cargoNumber = -1;
                     _statement = {_player action (_this select 2)};
                 };
                 _name = format ["%1 %2", localize "str_getin_pos_passenger", _cargoNumber + 1];
-                _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_cargo_ca.paa";
+                _icon = ICON_CARGO;
             };
             default { // all turrets including FFV
                 if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
@@ -191,17 +199,20 @@ private _cargoNumber = -1;
                 switch (toLower _role) do {
                     case "gunner": {
                         if (IS_CREW_UAV(_vehicleConfig)) then {breakTo "crewLoop"};
-                        _icon = "A3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa";
+                        _icon = ICON_GUNNER;
                     };
                     case "commander": {
-                        _icon = "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa";
+                        _icon = ICON_COMMANDER;
                     };
                     default {
-                        _icon = [
-                            "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa",
-                            "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"
-                        ] select _isPersonTurret;
+                        if ("" isEqualTo getText (_turretConfig >> "gun")) exitWith {
+                            _icon = ICON_CARGO;
+                        };
+                        _icon = [ICON_TURRET,ICON_FFV] select _isPersonTurret;
                     };
+                };
+                if (0 < getNumber (_turretConfig >> "isCopilot")) then {
+                    _icon = ICON_PILOT;
                 };
             };
         };
