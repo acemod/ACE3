@@ -675,7 +675,32 @@ class CfgWeapons {
     class optic_LRPS_tna_F : optic_LRPS {
         displayName = CSTRING(optic_lrps_tna);
     };
-
+    
+    class optic_AMS_base;
+    class optic_AMS: optic_AMS_base {
+        displayName = CSTRING(optic_ams);
+    };
+    class optic_AMS_khk: optic_AMS {
+        displayName = CSTRING(optic_ams_khk);
+    };
+    class optic_AMS_snd: optic_AMS {
+        displayName = CSTRING(optic_ams_snd);
+    };
+    
+    class optic_KHS_base;
+    class optic_KHS_blk: optic_KHS_base {
+        displayName = CSTRING(optic_khs_blk);
+    };
+    class optic_KHS_hex: optic_KHS_blk {
+        displayName = CSTRING(optic_khs_hex);
+    };
+    class optic_KHS_old: ItemCore {
+        displayName = CSTRING(optic_khs_old);
+    };
+    class optic_KHS_tan: optic_KHS_blk {
+        displayName = CSTRING(optic_khs_tan);
+    };
+    
     class optic_DMS : ItemCore {
         displayName = CSTRING(optic_dms);
     };
