@@ -11,7 +11,7 @@
     QGVAR(loadTimeCoefficient), "SLIDER",
     [LSTRING(loadTimeCoefficient), LSTRING(loadTimeCoefficient_description)],
     [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
-    [0, 3, 1, 1],
+    [0, 10, 5, 1],
     true,
     {[QGVAR(loadTimeCoefficient), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;

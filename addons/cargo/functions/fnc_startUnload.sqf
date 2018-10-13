@@ -70,7 +70,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     private _size = [_item] call FUNC(getSizeItem);
 
     [
-        GVAR(loadTimeCoefficient) * 5 * _size,
+        GVAR(loadTimeCoefficient) * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
         {["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
         {},
