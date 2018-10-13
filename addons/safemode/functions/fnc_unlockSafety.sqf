@@ -30,7 +30,13 @@ if (_safedWeapons isEqualTo []) then {
     _unit setVariable [QGVAR(actionID), -1];
 };
 
+private _laserEnabled = _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weapon};
+
 _unit selectWeapon _muzzle;
+
+if (_laserEnabled) then {
+    {_unit action [_x, _unit]} forEach ["GunLightOn", "IRLaserOn"];
+};
 
 if (inputAction "nextWeapon" > 0) then {
     // switch to the last mode to roll over to first after the default nextWeapon action
