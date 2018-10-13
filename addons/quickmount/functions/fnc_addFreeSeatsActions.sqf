@@ -16,10 +16,10 @@
  * Public: No
  */
 
-#define TO_STRING(var) if !(var isEqualType "") then {var = "Compartment" + str var}
+#define TO_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
 
 // this will check UAV vehicle like Stomper (with cargo seat)
-#define IS_CREW_UAV(vehicleConfig) ("UAVPilot" == getText (configFile >> "CfgVehicles" >> (getText (vehicleConfig >> "crew")) >> "simulation"))
+#define IS_CREW_UAV(vehicleConfig) ("UAVPilot" == getText (configFile >> "CfgVehicles" >> getText (vehicleConfig >> "crew") >> "simulation"))
 
 // workaround getting damage when moveout while vehicle is moving
 #define MOVEOUT_AND_BLOCK_DAMAGE \
@@ -73,44 +73,34 @@ params ["_vehicle", "_player"];
 
 private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
 private _isInVehicle = _player in _vehicle;
+private _fullCrew = fullCrew [_vehicle, "", true];
 
-private ["_driverCompartments", "_isPilotAndIsolated", "_cargoCompartments", "_cargoCompartmentsLast", "_compartment"];
+private ["_driverCompartments", "_isDriverIsolated", "_cargoCompartments", "_cargoCompartmentsLast", "_compartment"];
 
 if (_isInVehicle) then {
     _driverCompartments = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
     // Air class by default has driverCompartments=0 and cargoCompartments[]={0}, so we have to disable them
-    _isPilotAndIsolated = _driverCompartments isEqualTo 0 && {_vehicle isKindOf "Air"};
+    _isDriverIsolated = _driverCompartments isEqualTo 0 && {_vehicle isKindOf "Air"};
     TO_STRING(_driverCompartments);
 
     _cargoCompartments = getArray (_vehicleConfig >> "cargoCompartments");
-    _cargoCompartments = _cargoCompartments apply {
-        if (_x isEqualType "") then {
-            _x
-        } else {
-            "Compartment" + str _x
+    {
+        if !(_x isEqualType "") then {
+            _cargoCompartments set [_forEachIndex, format ["Compartment%1", _x]];
         };
-    };
+    } forEach _cargoCompartments;
     _cargoCompartmentsLast = count _cargoCompartments - 1;
 
     TRACE_2("",_driverCompartments,_cargoCompartments);
 
     // find current compartment
-    private ["_role", "_cargoIndex", "_turretPath"];
-    private _cargoNumber = 0;
-    {
-        _role = _x select 1;
-        if (_player == _x select 0) exitWith {
-            _cargoIndex = _x select 2;
-            _turretPath = _x select 3;
-        };
-        if (_role == "cargo") then {
-            INC(_cargoNumber);
-        };
-    } forEach fullCrew [_vehicle, "", true];
+    (
+        _fullCrew select (_fullCrew findIf {_player == _x select 0})
+    ) params ["", "_role", "_cargoIndex", "_turretPath"];
 
     switch (_role) do {
         case "driver": {
-            if (_isPilotAndIsolated) then {
+            if (_isDriverIsolated) then {
                 [] breakOut "main";
             };
             _compartment = _driverCompartments;
@@ -118,19 +108,20 @@ if (_isInVehicle) then {
             _player setVariable [QGVAR(moveBackParams), [_player, _vehicle]];
         };
         case "cargo": {
+            private _cargoNumber = fullCrew [_vehicle, "cargo", true] findIf {_player == _x select 0};
             _compartment = _cargoCompartments select (_cargoNumber min _cargoCompartmentsLast);
-            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInCargo [_this select 1, _this select 2]}];
-            _player setVariable [QGVAR(moveBackParams), [_player, _vehicle, _cargoIndex]];
+            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInCargo (_this select 1)}];
+            _player setVariable [QGVAR(moveBackParams), [_player, [_vehicle, _cargoIndex]]];
         };
         default {
             private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
             _compartment = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
             TO_STRING(_compartment);
-            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInTurret [_this select 1, _this select 2]}];
-            _player setVariable [QGVAR(moveBackParams), [_player, _vehicle, _turretPath]];
+            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInTurret (_this select 1)}];
+            _player setVariable [QGVAR(moveBackParams), [_player, [_vehicle, _turretPath]]];
         };
     };
-    TRACE_5("",_role,_cargoIndex,_turretPath,_cargoNumber,_compartment);
+    TRACE_4("",_role,_cargoIndex,_turretPath,_compartment);
 };
 
 private _actions = [];
@@ -154,7 +145,7 @@ private _cargoNumber = -1;
                     breakTo "crewLoop";
                 };
                 if (_isInVehicle) then {
-                    if (_compartment != _driverCompartments || {_isPilotAndIsolated}) then {breakTo "crewLoop"};
+                    if (_compartment != _driverCompartments || {_isDriverIsolated}) then {breakTo "crewLoop"};
                     _params = _vehicle;
                     _statement = {MOVEOUT_AND_BLOCK_DAMAGE; MOVE_IN(moveInDriver)};
                 } else {
@@ -220,6 +211,6 @@ private _cargoNumber = -1;
         ] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _vehicle];
     };
-} forEach fullCrew [_vehicle, "", true];
+} forEach _fullCrew;
 
 _actions
