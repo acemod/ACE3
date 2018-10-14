@@ -16,7 +16,7 @@
  * Public: No
  */
 
-#define TO_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
+#define TO_COMPARTMENT_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
 
 // this will check UAV vehicle like Stomper (with cargo seat)
 #define IS_CREW_UAV(vehicleConfig) ("UAVPilot" == getText (configFile >> "CfgVehicles" >> getText (vehicleConfig >> "crew") >> "simulation"))
@@ -89,7 +89,7 @@ if (_isInVehicle) then {
     _driverCompartments = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
     // Air class by default has driverCompartments=0 and cargoCompartments[]={0}, so we have to disable them
     _isDriverIsolated = _driverCompartments isEqualTo 0 && {_vehicle isKindOf "Air"};
-    TO_STRING(_driverCompartments);
+    TO_COMPARTMENT_STRING(_driverCompartments);
 
     _cargoCompartments = getArray (_vehicleConfig >> "cargoCompartments");
     {
@@ -124,7 +124,7 @@ if (_isInVehicle) then {
         default {
             private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
             _compartment = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
-            TO_STRING(_compartment);
+            TO_COMPARTMENT_STRING(_compartment);
             _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInTurret (_this select 1)}];
             _player setVariable [QGVAR(moveBackParams), [_player, [_vehicle, _turretPath]]];
         };
@@ -187,7 +187,7 @@ private _cargoNumber = -1;
                 private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
                 if (_isInVehicle) then {
                     private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
-                    TO_STRING(_gunnerCompartments);
+                    TO_COMPARTMENT_STRING(_gunnerCompartments);
                     if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
                     _params = [_vehicle, _turretPath];
                     _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInTurret)};
