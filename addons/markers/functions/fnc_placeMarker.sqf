@@ -1,5 +1,6 @@
+#include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Timi007
  * MarkerPlacement closed
  *
  * Arguments:
@@ -14,13 +15,16 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableserialization;
 params ["_display", "_closeNum"];
 TRACE_2("params",_display,_closeNum);
 
-if (_closeNum == 1) then {
+if (_closeNum isEqualTo 1) then {
+    if !(GVAR(editingMarker) isEqualTo "") then {
+        //delete "old" marker
+        deleteMarker GVAR(editingMarker);
+    };
     // set and send marker data the next frame. the actual marker isn't created yet
     [{
         [QGVAR(setMarkerNetwork), [
@@ -33,4 +37,11 @@ if (_closeNum == 1) then {
         ]] call CBA_fnc_globalEvent;
 
     }, []] call CBA_fnc_execNextFrame;
+} else {
+    if !(GVAR(editingMarker) isEqualTo "") then {
+        //editing was canceled show the original marker again
+        GVAR(editingMarker) setMarkerAlphaLocal 1;
+    };
 };
+
+GVAR(editingMarker) = "";

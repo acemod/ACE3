@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * onLoad EH for arsenal.
@@ -12,8 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["", "_args"];
 _args params ["_display"];
@@ -38,7 +38,7 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     if (is3DEN) then {
         GVAR(defaultLoadoutsList) = (QGVAR(DummyCategory) get3DENMissionAttribute QGVAR(DefaultLoadoutsListAttribute));
     } else {
-            GVAR(defaultLoadoutsList) = [];
+        GVAR(defaultLoadoutsList) = [];
     };
 };
 

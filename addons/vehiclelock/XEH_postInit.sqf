@@ -10,6 +10,6 @@ if (!hasInterface) exitwith {};
     TRACE_1("SettingsInitialized eh",GVAR(LockVehicleInventory));
 
     if (GVAR(LockVehicleInventory)) then {
-        ["CAManBase", "InventoryOpened", {_this call FUNC(onOpenInventory);}] call CBA_fnc_addClassEventHandler;
+        ["CAManBase", "InventoryOpened", {_this call FUNC(onOpenInventory)}] call CBA_fnc_addClassEventHandler;
     };
 }] call CBA_fnc_addEventHandler;

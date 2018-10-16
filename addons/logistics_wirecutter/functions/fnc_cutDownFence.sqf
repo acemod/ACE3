@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: gpgpgpgp, commy2, PabstMirror, mharis001
  * Starts cutting down a fence. Triggers global "ace_wireCuttingStarted" event.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_fence"];
 TRACE_2("Fence cutting started",_unit,_fence);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Handles all incoming damage for tanks (including wheeled APCs).
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_simulationType", "_thisHandleDamage"];
 _thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter"];

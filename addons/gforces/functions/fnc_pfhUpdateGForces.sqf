@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi and esteldunedain
  * Calculates average g-forces and triggers g-effects
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
- #include "script_component.hpp"
 
 // Update the g-forces at constant mission time intervals (taking accTime into account)
 if ((CBA_missionTime - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};

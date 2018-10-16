@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the atmospheric data input method
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ((uiNamespace getVariable "ATragMX_Display") displayCtrl 13001) ctrlEnable true;
 ((uiNamespace getVariable "ATragMX_Display") displayCtrl 13002) ctrlEnable true;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Module calling the garrison function.
@@ -17,7 +18,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_logic", "_pos", "_radius" ,"_mode" , "_topDownMode", "_teleport"];
 

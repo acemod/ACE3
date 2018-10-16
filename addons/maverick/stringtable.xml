@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ace_Maverick">
     <Package name="main">
         <Container name="magazines">
             <Key ID="str_ace_maverick_l_mag_descr">
                 <English>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</English>
                 <German>AGM-65 Maverick L, lasergelenkte Luft-Boden-Rakete</German>
-                <Italian>AGM-65 Maverick L, Guida Laser Missile-Anti-Terra</Italian>
+                <Italian>AGM-65 Maverick L, Guida Laser Missile Anti-Terra</Italian>
                 <Japanese>AGM-65 マーベリック L、レーザー誘導対地ミサイル</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型，雷射導引對地導彈</Chinese>
                 <Chinesesimp>AGM-65"小牛"空地L型，雷射导引对地导弹</Chinesesimp>
@@ -54,6 +54,7 @@
                 <Chinese>Kh-25ML，雷射導引對地導彈</Chinese>
                 <Chinesesimp>Kh-25ML，镭射导引空地导弹</Chinesesimp>
                 <Japanese>Kh-25ML、レーザー誘導対地ミサイル</Japanese>
+                <Italian>Kh-25ML, a Guida Laser Missile Aria-Terra</Italian>
             </Key>
             <Key ID="str_ace_maverick_kh25ml_mag_x1">
                 <English>1x Kh-25ML [ACE]</English>
@@ -63,6 +64,7 @@
                 <Chinese>1x Kh-25ML [ACE]</Chinese>
                 <Chinesesimp>1x Kh-25ML镭射空地导弹 [ACE]</Chinesesimp>
                 <Japanese>1x Kh-25ML [ACE]</Japanese>
+                <Italian>1x Kh-25ML [ACE]</Italian>
             </Key>
         </Container>
         <Container name="weapons">
@@ -83,6 +85,7 @@
                 <Chinese>Kh-25ML</Chinese>
                 <Chinesesimp>Kh-25ML镭射空地导弹</Chinesesimp>
                 <Japanese>Kh-25ML</Japanese>
+                <Italian>Kh-25ML</Italian>
             </Key>
         </Container>
     </Package>

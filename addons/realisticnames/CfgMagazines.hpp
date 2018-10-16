@@ -396,6 +396,10 @@ class CfgMagazines {
         displayName = CSTRING(HandGrenade_Name);
         displayNameShort = "M67";
     };
+    class MiniGrenade: CA_Magazine {
+        displayName = CSTRING(MiniGrenade_Name);
+        displayNameShort = "V40";
+    };
     class SmokeShell: HandGrenade {
         displayName = CSTRING(SmokeShell_Name);
     };

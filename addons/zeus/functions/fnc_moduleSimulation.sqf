@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Fisher, SilentSpike
  * Toggle Simulation on object.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 

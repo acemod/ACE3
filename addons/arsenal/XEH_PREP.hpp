@@ -1,3 +1,4 @@
+PREP(addDefaultLoadout);
 PREP(addListBoxItem);
 PREP(addStat);
 PREP(addVirtualItems);
@@ -5,6 +6,7 @@ PREP(attributeAddItems);
 PREP(attributeClear);
 PREP(attributeDblClick);
 PREP(attributeInit);
+PREP(attributeKeyDown);
 PREP(attributeLoad);
 PREP(attributeMode);
 PREP(attributeSelect);

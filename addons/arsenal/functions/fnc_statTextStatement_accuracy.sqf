@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Accuracy text statement.
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_stat", "_config", "_args"];
 _args params ["_statMinMax", "_configExtremeBool"];
@@ -23,7 +23,9 @@ private _fireModes = getArray (_config >> "modes");
 private _dispersion = [];
 
 {
-    _dispersion pushBackUnique (getNumber (_config >> _x >> "dispersion"));
+    if (getNumber (_config >> _x >> "showToPlayer") != 0) then {
+        _dispersion pushBackUnique (getNumber (_config >> _x >> "dispersion"));
+    };
 } foreach _fireModes;
 
 _dispersion sort true;

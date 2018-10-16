@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Can player open 82mm rangetable.
@@ -14,8 +15,7 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_player"];
 
-"ACE_RangeTable_82mm" in (items _player);
+"ACE_RangeTable_82mm" in (_player call EFUNC(common,uniqueItems));

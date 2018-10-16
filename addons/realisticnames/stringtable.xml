@@ -395,7 +395,7 @@
             <Russian>HEMTT Контейнер</Russian>
             <Portuguese>HEMTT Contêiner</Portuguese>
             <Hungarian>HEMTT (konténer)</Hungarian>
-            <Italian>HEMTT portacontainer </Italian>
+            <Italian>HEMTT portacontainer</Italian>
             <Japanese>HEMTT コンテナ型</Japanese>
             <Korean>HEMTT 컨테이너</Korean>
             <Chinese>重型增程機動戰術卡車 (貨櫃)</Chinese>
@@ -662,6 +662,7 @@
             <German>KamAS MRL</German>
             <Chinese>"卡瑪斯"卡車 (多管火箭)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (多管火箭)</Chinesesimp>
+            <Italian>KamAZ MRL</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -1242,12 +1243,12 @@
             <German>M112 Sprengladung</German>
             <Spanish>Bloque de demolición M112</Spanish>
             <Polish>Ładunek burzący M112</Polish>
-            <Czech>Výbušná nálož M112 </Czech>
+            <Czech>Výbušná nálož M112</Czech>
             <French>M112 Block de Démolition</French>
             <Russian>M112 подрывной заряд</Russian>
             <Portuguese>M112 Carga de Demolição</Portuguese>
             <Hungarian>M112 romboló tömb</Hungarian>
-            <Italian>M112 Demolition Block</Italian>
+            <Italian>M112 da Demolizione</Italian>
             <Japanese>M112 爆薬ブロック</Japanese>
             <Korean>M112 폭파 블럭</Korean>
             <Chinese>M112塑性炸藥</Chinese>
@@ -1258,7 +1259,7 @@
             <German>M67 Splittergranate</German>
             <Spanish>Granada de fragmentación M67</Spanish>
             <Polish>Granat obronny M67</Polish>
-            <Czech>Granát M67 </Czech>
+            <Czech>Granát M67</Czech>
             <French>M67 Grenade à fragmentation</French>
             <Russian>M67 ручная осколочная граната</Russian>
             <Portuguese>M67 Granada de fragmentação</Portuguese>
@@ -1268,6 +1269,11 @@
             <Korean>M67 세열 수류탄</Korean>
             <Chinese>M67破片手榴彈</Chinese>
             <Chinesesimp>M67破片手榴弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MiniGrenade_Name">
+            <English>V40 Mini-Grenade</English>
+            <German>V40 Minigranate</German>
+            <Italian>Mini Granata V40</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1386,7 +1392,7 @@
             <German>M15 Panzerabwehrmine</German>
             <Spanish>Mina antitanque M15</Spanish>
             <Polish>Mina przeciwpancerna M15</Polish>
-            <Czech>M15 Protitanková mina </Czech>
+            <Czech>M15 Protitanková mina</Czech>
             <French>M15 Mine antichar</French>
             <Russian>M15 противотанковая мина</Russian>
             <Portuguese>M15 Mina anticarro</Portuguese>
@@ -1612,6 +1618,7 @@
             <Russian>Метис-М</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹</Chinesesimp>
+            <Italian>Metis-M</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
@@ -1620,6 +1627,7 @@
             <Russian>Метис-М (Кори́чневый)</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈(棕色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(棕色)</Chinesesimp>
+            <Italian>Metis-M (Marrone)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
@@ -1628,6 +1636,7 @@
             <Russian>Метис-М (Зелёный)</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(绿色)</Chinesesimp>
+            <Italian>Metis-M (Verde)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -2627,6 +2636,7 @@
             <Chinesesimp>"牧马人"吉普车(SPG-9火箭筒)</Chinesesimp>
             <Chinese>"牧馬人"吉普車 (SPG-9火箭筒)</Chinese>
             <Japanese>ジープ ラングラー (SPG-9)</Japanese>
+            <Italian>Jeep Wrangler (SPG-9)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
@@ -2634,6 +2644,7 @@
             <Chinesesimp>"牧马人"吉普车(轻机枪)</Chinesesimp>
             <Chinese>"牧馬人"吉普車 (輕機槍)</Chinese>
             <Japanese>ジープ ラングラー (LMG)</Japanese>
+            <Italian>Jeep Wrangler (LMG)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -3185,12 +3196,14 @@
             <Japanese>ポラリス DAGOR (XM312)</Japanese>
             <Chinese>"北極星"先進佈署越野車 (XM312重機槍)</Chinese>
             <Chinesesimp>"北极星"先进布署越野车 (XM312重机枪)</Chinesesimp>
+            <Italian>Polaris DAGOR (XM312)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
             <German>Polaris DAGOR (Mini-Spike PzAbw)</German>
             <Chinesesimp>"北极星"先进布署越野车("迷你长钉"反坦克导弹发射器) </Chinesesimp>
             <Chinese>"北極星"先進佈署越野車("迷你長釘"反坦克導彈發射器) </Chinese>
+            <Italian>Polaris DAGOR (Mini-Spike AT)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3198,6 +3211,7 @@
             <Japanese>ポラリス DAGOR</Japanese>
             <Chinese>"北極星"先進佈署越野車</Chinese>
             <Chinesesimp>"北极星"先进布署越野车</Chinesesimp>
+            <Italian>Polaris DAGOR</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
@@ -3205,14 +3219,15 @@
             <Japanese>ポラリス DAGOR (軽)</Japanese>
             <Chinese>"北極星"先進佈署越野車 (輕型)</Chinese>
             <Chinesesimp>"北极星"先进布署越野车 (轻型)</Chinesesimp>
+            <Italian>Polaris DAGOR (leggero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
             <German>LSV Mk. II (M134)</German>
-            <Japanese>LSV Mk. II (M134)</Japanese>
             <Chinese>輕型突擊車2式 (M134迷你機炮)</Chinese>
             <Chinesesimp>轻型突击车2式 (M134迷你机炮)</Chinesesimp>
             <Japanese>LSV Mk. II (M134)</Japanese>
+            <Italian>LSV Mk. II (M134)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3220,14 +3235,15 @@
             <Chinesesimp>轻型突击车2式 ("麦士蒂索人"-M型反坦克导弹)</Chinesesimp>
             <Chinese>輕型突擊車2式 ("麥士蒂索人"-M型反坦克導彈)</Chinese>
             <Japanese>LSV Mk. II (メチス-M)</Japanese>
+            <Italian>LSV Mk. II (Metis-M)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
             <German>LSV Mk. II</German>
-            <Japanese>LSV Mk. II</Japanese>
             <Chinese>輕型突擊車2式</Chinese>
             <Chinesesimp>轻型突击车2式</Chinesesimp>
             <Japanese>LSV Mk. II</Japanese>
+            <Italian>LSV Mk. II</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -3235,6 +3251,7 @@
             <Chinesesimp>"狞猫"120主炮轮式装甲车</Chinesesimp>
             <Chinese>"獰貓"120主炮輪式裝甲車</Chinese>
             <Japanese>ルーイカット 120</Japanese>
+            <Italian>Rooikat 120</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
@@ -3242,6 +3259,7 @@
             <Chinesesimp>"狞猫"120主炮轮式装甲车 (城市版)</Chinesesimp>
             <Chinese>"獰貓"120主炮輪式裝甲車 (城市版)</Chinese>
             <Japanese>ルーイカット 120 UP</Japanese>
+            <Italian>Rooikat 120 UP</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -3250,6 +3268,7 @@
             <Chinesesimp>T-14"阿玛塔"主战坦克</Chinesesimp>
             <Chinese>T-14"阿瑪塔"主戰坦克</Chinese>
             <Japanese>T-14 アルマータ</Japanese>
+            <Italian>T-14 Armata</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
@@ -3258,6 +3277,7 @@
             <Chinesesimp>T-14K"阿玛塔"主战坦克</Chinesesimp>
             <Chinese>T-14K"阿瑪塔"主戰坦克</Chinese>
             <Japanese>T-14K アルマータ</Japanese>
+            <Italian>T-14K Armata</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
@@ -3265,6 +3285,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (防空)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (防空)</Chinese>
             <Japanese>ウィーゼル 2 オゼロット (対空)</Japanese>
+            <Italian>Wiesel 2 Ozelot (AA)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -3272,6 +3293,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (反坦导弹)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (反坦導彈)</Chinese>
             <Japanese>ウィーゼル 2 (ATGM)</Japanese>
+            <Italian>Wiesel 2 (ATGM)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -3279,6 +3301,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (MK20机炮)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (MK20機炮)</Chinese>
             <Japanese>ウィーゼル 2 (MK20)</Japanese>
+            <Italian>Wiesel 2 (MK20)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
@@ -3286,6 +3309,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (雷达)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (雷達)</Chinese>
             <Japanese>ウィーゼル 2 (レーダー)</Japanese>
+            <Italian>Wiesel 2 RFCV (Radar)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -3293,6 +3317,7 @@
             <Chinese>Leupold Mark 4 HAMR</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR</Chinesesimp>
             <Japanese>Leupold Mark 4 HAMR</Japanese>
+            <Italian>Leupold Mark 4 HAMR</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -3300,6 +3325,7 @@
             <Chinese>Leupold Mark 4 HAMR (卡其色)</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR (卡其色)</Chinesesimp>
             <Japanese>Leupold Mark 4 HAMR (土埃)</Japanese>
+            <Italian>Leupold Mark 4 HAMR (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -3307,6 +3333,7 @@
             <Chinese>ELCAN SpecterOS (黃褐色)</Chinese>
             <Chinesesimp>ELCAN SpecterOS (黄褐色)</Chinesesimp>
             <Japanese>ELCAN SpecterOS (黄褐)</Japanese>
+            <Italian>ELCAN SpecterOS (Tan)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
             <English>ELCAN SpecterOS (Black)</English>
@@ -3314,12 +3341,14 @@
             <Chinese>ELCAN SpecterOS (黑色)</Chinese>
             <Chinesesimp>ELCAN SpecterOS (黑色)</Chinesesimp>
             <Japanese>ELCAN SpecterOS (黒)</Japanese>
+            <Italian>ELCAN SpecterOS (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
             <Chinese>ELCAN SpecterOS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>ELCAN SpecterOS (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>ELCAN SpecterOS (緑蜂巣)</Japanese>
+            <Italian>ELCAN SpecterOS (Verde Hex)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3327,13 +3356,15 @@
             <Chinese>SIG BRAVO4 / ROMEO3 (黑色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3 (黑色)</Chinesesimp>
             <Japanese>SIG BRAVO4 / ROMEO3 (黒)</Japanese>
+            <Italian>SIG BRAVO4 / ROMEO3 (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
             <German>SIG BRAVO4 / ROMEO3 (Khaki)</German>
             <Chinese>SIG BRAVO4 / ROMEO3 (卡其色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3 (卡其色)</Chinesesimp>
-           <Japanese>SIG BRAVO4 / ROMEO3 (土埃)</Japanese>
+            <Japanese>SIG BRAVO4 / ROMEO3 (土埃)</Japanese>
+            <Italian>SIG BRAVO4 / ROMEO3 (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -3341,18 +3372,21 @@
             <Chinese>SIG BRAVO4 / ROMEO3 (沙色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3 (沙色)</Chinesesimp>
             <Japanese>SIG BRAVO4 / ROMEO3 (砂地)</Japanese>
+            <Italian>SIG BRAVO4 / ROMEO3 (Sabbia)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
             <Chinese>Nightforce NXS</Chinese>
             <Chinesesimp>Nightforce NXS</Chinesesimp>
             <Japanese>Nightforce NXS</Japanese>
+            <Italian>Nightforce NXS</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
             <Chinese>Nightforce NXS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Nightforce NXS (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Nightforce NXS (緑蜂巣)</Japanese>
+            <Italian>Nightforce NXS (Verde Hex)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -3360,18 +3394,63 @@
             <Chinese>Nightforce NXS (叢林色)</Chinese>
             <Chinesesimp>Nightforce NXS (丛林色)</Chinesesimp>
             <Japanese>Nightforce NXS (熱帯)</Japanese>
+            <Italian>Nightforce NXS (Giungla)</Italian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams">
+            <English>US Optics MR-10 (Black)</English>
+            <Chinese>US Optics MR-10 (Black)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Black)</Chinesesimp>
+            <Japanese>US Optics MR-10 (Black)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
+            <English>US Optics MR-10 (Khaki)</English>
+            <Chinese>US Optics MR-10 (Khaki)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Khaki)</Chinesesimp>
+            <Japanese>US Optics MR-10 (Khaki)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
+            <English>US Optics MR-10 (Sand)</English>
+            <Chinese>US Optics MR-10 (Sand)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Sand)</Chinesesimp>
+            <Japanese>US Optics MR-10 (Sand)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
+            <English>KAHLES Helia (Black)</English>
+            <Chinese>KAHLES Helia (Black)</Chinese>
+            <Chinesesimp>KAHLES Helia (Black)</Chinesesimp>
+            <Japanese>KAHLES Helia (Black)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
+            <English>KAHLES Helia (Hex)</English>
+            <Chinese>KAHLES Helia (Hex)</Chinese>
+            <Chinesesimp>KAHLES Helia (Hex)</Chinesesimp>
+            <Japanese>KAHLES Helia (Hex)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_old">
+            <English>KAHLES Helia (Old)</English>
+            <Chinese>KAHLES Helia (Old)</Chinese>
+            <Chinesesimp>KAHLES Helia (Old)</Chinesesimp>
+            <Japanese>KAHLES Helia (Old)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
+            <English>KAHLES Helia (Tan)</English>
+            <Chinese>KAHLES Helia (Tan)</Chinese>
+            <Chinesesimp>KAHLES Helia (Tan)</Chinesesimp>
+            <Japanese>KAHLES Helia (Tan)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
             <Chinese>Burris XTR II</Chinese>
             <Chinesesimp>Burris XTR II</Chinesesimp>
             <Japanese>Burris XTR II</Japanese>
+            <Italian>Burris XTR II</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
             <Chinese>Burris XTR II (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Burris XTR II (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Burris XTR II (緑蜂巣)</Japanese>
+            <Italian>Burris XTR II (Green Hex)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -3379,6 +3458,7 @@
             <Chinese>EOTech XPS3 (黃褐色)</Chinese>
             <Chinesesimp>EOTech XPS3 (黄褐色)</Chinesesimp>
             <Japanese>EOTech XPS3 (黄褐)</Japanese>
+            <Italian>EOTech XPS3 (Tan)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
             <English>EOTech XPS3 (Black)</English>
@@ -3386,6 +3466,7 @@
             <Chinese>EOTech XPS3 (黑色)</Chinese>
             <Chinesesimp>EOTech XPS3 (黑色)</Chinesesimp>
             <Japanese>EOTech XPS3 (黒)</Japanese>
+            <Italian>EOTech XPS3 (Black)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
             <English>EOTech XPS3 (Khaki)</English>
@@ -3393,6 +3474,7 @@
             <Chinese>EOTech XPS3 (卡其色)</Chinese>
             <Chinesesimp>EOTech XPS3 (卡其色)</Chinesesimp>
             <Japanese>EOTech XPS3 (土埃)</Japanese>
+            <Italian>EOTech XPS3 (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -3400,6 +3482,7 @@
             <Chinese>EOTech XPS3 SMG (黃褐色)</Chinese>
             <Chinesesimp>EOTech XPS3 SMG (黄褐色)</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (黄褐)</Japanese>
+            <Italian>EOTech XPS3 SMG (Tan)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
             <English>EOTech XPS3 SMG (Black)</English>
@@ -3407,6 +3490,7 @@
             <Chinese>EOTech XPS3 SMG (黑色)</Chinese>
             <Chinesesimp>EOTech XPS3 SMG (黑色)</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (黒)</Japanese>
+            <Italian>EOTech XPS3 SMG (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
             <English>EOTech XPS3 SMG (Khaki)</English>
@@ -3414,18 +3498,21 @@
             <Chinese>EOTech XPS3 SMG (卡其色)</Chinese>
             <Chinesesimp>EOTech XPS3 SMG (卡其色)</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (土埃)</Japanese>
+            <Italian>EOTech XPS3 SMG (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
             <Chinese>IOR-Valdada Pitbull 2</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2</Chinesesimp>
             <Japanese>IOR-Valdada ピットブル 2</Japanese>
+            <Italian>IOR-Valdada Pitbull 2</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
             <Chinese>Burris FastFire 2</Chinese>
             <Chinesesimp>Burris FastFire 2</Chinesesimp>
             <Japanese>Burris ファストファイア 2</Japanese>
+            <Italian>Burris FastFire 2</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
@@ -3433,6 +3520,7 @@
             <Chinese>C-More Railway (紅色)</Chinese>
             <Chinesesimp>C-More Railway (红色)</Chinesesimp>
             <Japanese>C-More レイルウェイ (赤)</Japanese>
+            <Italian>C-More Railway (Rosso)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
             <English>C-More Railway (Green)</English>
@@ -3440,6 +3528,7 @@
             <Chinese>C-More Railway (綠色)</Chinese>
             <Chinesesimp>C-More Railway (绿色)</Chinesesimp>
             <Japanese>C-More レイルウェイ (緑)</Japanese>
+            <Italian>C-More Railway (Verde)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
             <English>C-More Railway SMG (Red)</English>
@@ -3447,6 +3536,7 @@
             <Chinese>C-More Railway SMG (紅色)</Chinese>
             <Chinesesimp>C-More Railway SMG (红色)</Chinesesimp>
             <Japanese>C-More レイルウェイ SMG (赤)</Japanese>
+            <Italian>C-More Railway SMG (Rosso)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
             <English>C-More Railway SMG (Green)</English>
@@ -3454,6 +3544,7 @@
             <Chinese>C-More Railway SMG (綠色)</Chinese>
             <Chinesesimp>C-More Railway SMG (绿色)</Chinesesimp>
             <Japanese>C-More レイルウェイ SMG (緑)</Japanese>
+            <Italian>C-More Railway SMG (Verde)</Italian>
         </Key>
     </Package>
 </Project>
