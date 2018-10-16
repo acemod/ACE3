@@ -146,19 +146,19 @@
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_MainNametagColor">
-            <English>Default Team Nametag Color</English>
+            <English>Default Team Name Tag Color</English>
         </Key>
         <Key ID="STR_ACE_NameTags_RedNametagColor">
-            <English>Red Team Nametag Color</English>
+            <English>Red Team Name Tag Color</English>
         </Key>
         <Key ID="STR_ACE_NameTags_GreenNametagColor">
-            <English>Green Team Nametag Color</English>
+            <English>Green Team Name Tag Color</English>
         </Key>
         <Key ID="STR_ACE_NameTags_BlueNametagColor">
-            <English>Blue Team Nametag Color</English>
+            <English>Blue Team Name Tag Color</English>
         </Key>
         <Key ID="STR_ACE_NameTags_YellowNametagColor">
-            <English>Yellow Team Nametag Color</English>
+            <English>Yellow Team Name Tag Color</English>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_DisplayName">
             <English>Name Tags</English>
