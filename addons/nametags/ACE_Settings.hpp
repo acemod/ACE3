@@ -6,6 +6,41 @@ class ACE_Settings {
         displayName = CSTRING(DefaultNametagColor);
         category = CSTRING(Module_DisplayName);
     };
+    class GVAR(nametagColorMain) {
+        value[] = {1.00, 1.00, 1.00, 1};
+        typeName = "COLOR";
+        isClientSettable = 1;
+        displayName = CSTRING(MainNametagColor);
+        category = CSTRING(Module_DisplayName);
+    };
+    class GVAR(nametagColorRed) {
+        value[] = {1.00, 0.67, 0.67, 1};
+        typeName = "COLOR";
+        isClientSettable = 1;
+        displayName = CSTRING(RedNametagColor);
+        category = CSTRING(Module_DisplayName);
+    };
+    class GVAR(nametagColorGreen) {
+        value[] = {0.67, 1.00, 0.67, 1};
+        typeName = "COLOR";
+        isClientSettable = 1;
+        displayName = CSTRING(GreenNametagColor);
+        category = CSTRING(Module_DisplayName);
+    };
+    class GVAR(nametagColorBlue) {
+        value[] = {0.67, 0.67, 1.00, 1};
+        typeName = "COLOR";
+        isClientSettable = 1;
+        displayName = CSTRING(BlueNametagColor);
+        category = CSTRING(Module_DisplayName);
+    };
+    class GVAR(nametagColorYellow) {
+        value[] = {1.00, 1.00, 0.67, 1};
+        typeName = "COLOR";
+        isClientSettable = 1;
+        displayName = CSTRING(YellowNametagColor);
+        category = CSTRING(Module_DisplayName);
+    };
     class GVAR(showPlayerNames) {
         value = 1;
         typeName = "SCALAR";
