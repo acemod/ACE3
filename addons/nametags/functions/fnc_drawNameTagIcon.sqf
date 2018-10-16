@@ -58,7 +58,7 @@ _fnc_parameters = {
     if ((group _target) != (group _player)) then {
         _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
     } else {
-        _color = [+GVAR(nametagColorMain), +GVAR(nametagColorRed), +GVAR(nametagColorGreen), +GVAR(nametagColorBlue), +GVAR(nametagColorYellow)] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find ([assignedTeam _target] param [0, "MAIN"])) max 0);
+        _color = +([GVAR(nametagColorMain), GVAR(nametagColorRed), GVAR(nametagColorGreen), GVAR(nametagColorBlue), GVAR(nametagColorYellow)] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find ([assignedTeam _target] param [0, "MAIN"])) max 0));
     };
     _color set [3, (_color select 3) * _alpha];
 
