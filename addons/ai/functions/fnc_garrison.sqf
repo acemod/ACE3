@@ -79,11 +79,9 @@ if (_topDownFilling) then {
 
 //Remove positions units are already pathing to
 _buildingsIndex = _buildingsIndex apply {
-    private _testedBuilding = _x;
-
-    _testedBuilding select {
+    _x select {
         private _testedPos = _x;
-        (({(_x select 1) isEqualTo _testedPos} count (missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []])) == 0)
+        ({(_x select 1) isEqualTo _testedPos} count (missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []])) == 0
     }
 };
 

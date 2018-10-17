@@ -22,8 +22,8 @@
     params ["_unitsArray"];
     {
         _x params ["_unit", "_pos"];
-        _unit setDestination [_pos, "LEADER PLANNED", true];
         _unit doMove _pos;
+        _unit setDestination [_pos, "LEADER PLANNED", true];
         LOG_3("%1 doMove %2 | ID: %3",_unit,_pos,clientOwner);
     } forEach _unitsArray;
 }] call CBA_fnc_addEventHandler;
@@ -68,42 +68,3 @@
     params ["_unit", "_mode"];
     _unit enableGunLights _mode;
 }] call CBA_fnc_addEventHandler;
-
-#ifdef DEBUG_MODE_FULL
-    addMissionEventHandler ["Draw3D", {
-        private _unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
-        {
-            _x params  ["_unit", "_pos"];
-
-            switch (true) do {
-                case (surfaceIsWater (getPos _unit) && {surfaceIsWater _pos}) : {
-                    for "_i" from 0 to 3 do {
-                        drawLine3D [_unit modelToWorldVisualWorld [0,0,1], (AGLtoASL _pos), [1,0,0,1]];
-                    };
-                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], (AGLtoASL _pos), 0.75, 0.75, 0.75];
-                };
-
-                case (!surfaceIsWater (getPos _unit) && {!surfaceIsWater _pos}) : {
-                    for "_i" from 0 to 3 do {
-                        drawLine3D [_unit modelToWorldVisual [0,0,1], _pos, [1,0,0,1]];
-                    };
-                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], _pos, 0.75, 0.75, 0.75];
-                };
-
-                case (!surfaceIsWater (getPos _unit) && {surfaceIsWater _pos}) : {
-                    for "_i" from 0 to 3 do {
-                        drawLine3D [_unit modelToWorldVisual [0,0,1], (AGLToASL _pos), [1,0,0,1]];
-                    };
-                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], (AGLtoASL _pos), 0.75, 0.75, 0.75];
-                };
-
-                case (surfaceIsWater (getPos _unit) && {!surfaceIsWater _pos}) : {
-                    for "_i" from 0 to 3 do {
-                        drawLine3D [_unit modelToWorldVisualWorld  [0,0,1], _pos, [1,0,0,1]];
-                    };
-                    drawIcon3D ["\a3\ui_f\data\map\groupicons\waypoint.paa", [1,0,0,1], _pos, 0.75, 0.75, 0.75];
-                };
-            };
-        } forEach _unitMoveList;
-    }];
-#endif
