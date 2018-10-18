@@ -290,4 +290,46 @@ class CfgVehicles {
             };
         };
     };
+
+    class Module_F;
+    class ModuleChemlight_F: Module_F {
+        class Arguments {
+            class Type {
+                class values {
+                    class Orange {
+                        name= CSTRING(Orange_DisplayName);
+                        value="ACE_G_Chemlight_Orange";
+                    };
+                    class White {
+                        name= CSTRING(White_DisplayName);
+                        value="ACE_G_Chemlight_White";
+                    };
+                    class HiRed {
+                        name= CSTRING(HiRed_DisplayName);
+                        value="ACE_G_Chemlight_HiRed";
+                    };
+                    class HiYellow {
+                        name= CSTRING(HiYellow_DisplayName);
+                        value="ACE_G_Chemlight_HiYellow";
+                    };
+                    class HiWhite {
+                        name= CSTRING(HiWhite_DisplayName);
+                        value="ACE_G_Chemlight_HiWhite";
+                    };
+                    class HiBlue {
+                        name= CSTRING(HiBlue_DisplayName);
+                        value="ACE_G_Chemlight_HiBlue";
+                    };
+                    class HiGreen {
+                        name= CSTRING(HiGreen_DisplayName);
+                        value="ACE_G_Chemlight_HiGreen";
+                    };
+                    class UltraHiOrange {
+                        name= CSTRING(UltraHiOrange_DisplayName);
+                        value="ACE_G_Chemlight_UltraHiOrange";
+                    };
+                };
+            };
+        };
+    };
 };
