@@ -332,4 +332,60 @@ class CfgVehicles {
             };
         };
     };
+
+    class ModuleChemlightBlue_F;
+    class ModuleChemlightOrange: ModuleChemlightBlue_F {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightOrange";
+        displayName = CSTRING(Orange_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_orange_x_ca.paa);
+        ammo = "ACE_G_Chemlight_Orange";
+    };
+    class ModuleChemlightWhite: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightWhite";
+        displayName = CSTRING(White_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_white_x_ca.paa);
+        ammo = "ACE_G_Chemlight_White";
+    };
+    class ModuleChemlightHiRed: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiRed";
+        displayName = CSTRING(HiRed_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hired_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiRed";
+    };
+    class ModuleChemlightHiYellow: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiYellow";
+        displayName = CSTRING(HiYellow_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hiyellow_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiYellow";
+    };
+    class ModuleChemlightHiWhite: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiWhite";
+        displayName = CSTRING(HiWhite_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiWhite";
+    };
+    class ModuleChemlightHiBlue: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiBlue";
+        displayName = CSTRING(HiBlue_DisplayName);
+        ammo = "ACE_G_Chemlight_HiBlue";
+    };
+    class ModuleChemlightHiGreen: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiGreen";
+        displayName = CSTRING(HiGreen_DisplayName);
+        ammo = "ACE_G_Chemlight_HiGreen";
+    };
+    class ModuleChemlightUltraHiOrange: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightUltraHiOrange";
+        displayName = CSTRING(UltraHiOrange_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_ultrahiorange_x_ca.paa);
+        ammo = "ACE_G_Chemlight_UltraHiOrange";
+    };
 };

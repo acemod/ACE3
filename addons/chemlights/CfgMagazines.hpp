@@ -105,7 +105,7 @@ class CfgMagazines {
         displayName = CSTRING(UltraHiOrange_DisplayName);
         displayNameShort = CSTRING(UltraHiOrange_DisplayNameShort);
         descriptionShort = CSTRING(UltraHiOrange_DescriptionShort);
-        picture = QPATHTOF(UI\ace_chemlight_hiorange_x_ca.paa);
+        picture = QPATHTOF(UI\ace_chemlight_ultrahiorange_x_ca.paa);
     };
 
 
