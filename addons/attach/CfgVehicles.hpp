@@ -77,9 +77,9 @@ class CfgVehicles {
         simulation = "nvmarker";
 
         class NVGMarker {
-            diffuse[]={0.025,0.025,0.025};
+            diffuse[]={0.015,0.015,0.015};
             ambient[]={0.001,0.001,0.001};
-            brightness=0.35;
+            brightness=0.45;
             name = "pozicni blik";
             activeLight = 0;
             blinking=1;
