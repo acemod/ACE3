@@ -33,9 +33,9 @@ class CfgVehicles {
         nvTarget = 1;
         brightness = 0.2;
         class NVGMarker {
-            diffuse[] = {0.02,0.02,0.02};
-            ambient[] = {0.05,0.05,0.05};
-            brightness = 0.5;
+            diffuse[] = {0.04,0.04,0.04};
+            ambient[] = {0.0001,0.0001,0.0001};
+            brightness = 0.12;
             name = "pozicni blik";
             drawLight = 0;
             drawLightSize = 0;
