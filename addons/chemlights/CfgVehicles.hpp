@@ -228,8 +228,10 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_Chemlight_White,20);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiRed,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiYellow,10);
-            MACRO_ADDMAGAZINE(ACE_Chemlight_HiOrange,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiBlue,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiGreen,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiWhite,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_UltraHiOrange,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_IR,20);
         };
     };
@@ -258,8 +260,10 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_Chemlight_White,20);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiRed,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiYellow,10);
-            MACRO_ADDMAGAZINE(ACE_Chemlight_HiOrange,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiBlue,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiGreen,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiWhite,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_UltraHiOrange,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_IR,20);
         };
 

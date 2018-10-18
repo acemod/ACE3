@@ -56,22 +56,40 @@ class CfgAmmo {
     class ACE_G_Chemlight_HiYellow_Infinite: ACE_G_Chemlight_HiYellow {
         timeToLive = 1e10;
     };
-    
-    class ACE_G_Chemlight_HiOrange: ACE_G_Chemlight_Orange {
-        effectsSmoke = "ACE_ChemlightEffect_HiOrange";
-        timeToLive = 1800;
-    };
-    
-    class ACE_G_Chemlight_HiOrange_Infinite: ACE_G_Chemlight_HiOrange {
-        timeToLive = 1e10;
-    };   
-    
+
     class ACE_G_Chemlight_HiWhite: ACE_G_Chemlight_White {
         effectsSmoke = "ACE_ChemlightEffect_HiWhite";
         timeToLive = 1800;
     };
-    
+
     class ACE_G_Chemlight_HiWhite_Infinite: ACE_G_Chemlight_HiWhite {
+        timeToLive = 1e10;
+    };
+
+    class ACE_G_Chemlight_HiBlue: Chemlight_Blue {
+        effectsSmoke = "ACE_ChemlightEffect_HiBlue";
+        timeToLive = 1800;
+    };
+
+    class ACE_G_Chemlight_HiBlue_Infinite: ACE_G_Chemlight_HiBlue {
+        timeToLive = 1e10;
+    };
+
+    class ACE_G_Chemlight_HiGreen: Chemlight_Green {
+        effectsSmoke = "ACE_ChemlightEffect_HiGreen";
+        timeToLive = 1800;
+    };
+
+    class ACE_G_Chemlight_HiGreen_Infinite: ACE_G_Chemlight_HiGreen {
+        timeToLive = 1e10;
+    };
+
+    class ACE_G_Chemlight_UltraHiOrange: ACE_G_Chemlight_Orange {
+        effectsSmoke = "ACE_ChemlightEffect_UltraHiOrange";
+        timeToLive = 300;
+    };
+    
+    class ACE_G_Chemlight_UltraHiOrange_Infinite: ACE_G_Chemlight_UltraHiOrange {
         timeToLive = 1e10;
     };
 
