@@ -79,6 +79,6 @@ class CfgAmmo {
         ACE_Chemlight_IR = "ACE_Chemlight_IR_Dummy";
         effectsSmoke = "ACE_ChemlightEffect_IR";
         timeToLive = 1500;
-        model = "\A3\Weapons_f\chemlight\chemlight_blue_lit";        
+        model = "\A3\Weapons_f\chemlight\chemlight_blue_lit";
     };
 };
