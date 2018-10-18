@@ -28,7 +28,7 @@ if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not ac
     params ["_syncedObjects"];
 
     private _listOfVehicles = _syncedObjects select {
-        (_x isKindOf "Car") || {(_x isKindOf "Tank") || {_x isKindOf "Helicopter"}}
+        _x isKindOf "Car" || {_x isKindOf "Tank" || {_x isKindOf "Helicopter" || {_x isKindOf "Plane"}}}
     };
 
     if (_listOfVehicles isEqualTo []) exitWith {  //Verbose error for mission makers (only shows on server)
