@@ -33,4 +33,9 @@ class Extended_InitPost_EventHandlers {
             serverInit = QUOTE(_this call FUNC(handleVehicleInitPost));
         };
     };
+    class Plane {
+        class ADDON {
+            serverInit = QUOTE(_this call FUNC(handleVehicleInitPost));
+        };
+    };
 };
