@@ -27,17 +27,16 @@ TRACE_1("params",_vehicle);
 
     params ["_vehicle"];
 
-    if (_vehicle isKindOf "Car" || {_vehicle isKindOf "Tank" || {_vehicle isKindOf "Helicopter" || {_vehicle isKindOf "Plane"}}}) then {
-        //set lock state (eliminates the ambigious 1-"Default" and 3-"Locked for Player" states)
-        private _lock = switch (GVAR(VehicleStartingLockState)) do {
-            case (0): { (locked _vehicle) in [2, 3] };
-            case (1): { true };
-            case (2): { false };
-        };
-        if ((_lock && {(locked _vehicle) != 2}) || {!_lock && {(locked _vehicle) != 0}}) then {
-            TRACE_3("Setting Lock State",_lock,(typeOf _vehicle),_vehicle);
-            [QGVAR(SetVehicleLock), [_vehicle, _lock], [_vehicle]] call CBA_fnc_targetEvent;
-        };
+    //set lock state (eliminates the ambigious 1-"Default" and 3-"Locked for Player" states)
+    private _lock = switch (GVAR(VehicleStartingLockState)) do {
+        case 0: {locked _vehicle in [2, 3]};
+        case 1: {true};
+        case 2: {false};
     };
+    if ((_lock && {locked _vehicle != 2}) || {!_lock && {locked _vehicle != 0}}) then {
+        TRACE_3("Setting Lock State",_lock,typeOf _vehicle,_vehicle);
+        [QGVAR(SetVehicleLock), [_vehicle, _lock], [_vehicle]] call CBA_fnc_targetEvent;
+    };
+
     //Delay call until mission start (so everyone has the eventHandler's installed)
 }, [_vehicle], 0.25] call CBA_fnc_waitAndExecute;
