@@ -36,7 +36,7 @@ class CfgVehicles {
                     condition = "true";
                     statement = "";
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-                    insertChildren = QUOTE(_this call DFUNC(addDogtagActions));
+                    insertChildren = QUOTE(_player call DFUNC(addDogtagActions));
                 };
             };
         };

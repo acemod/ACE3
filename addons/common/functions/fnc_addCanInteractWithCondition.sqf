@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Add a condition that gets checked by ace_common_fnc_canInteractWith.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_conditionName", "_conditionFunc"];
 

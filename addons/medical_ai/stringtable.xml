@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_ai">
         <Key ID="STR_ACE_medical_ai_enabledFor_DisplayName">
@@ -6,7 +6,7 @@
             <Japanese>次に AI 治療を有効</Japanese>
             <Chinesesimp>AI医疗启用</Chinesesimp>
             <Chinese>AI醫療啟用</Chinese>
-            <Italian>AI medica per:</Italian>
+            <Italian>AI medica abilitata per:</Italian>
         </Key>
         <Key ID="STR_ACE_medical_ai_enabledFor_Description">
             <English>Enable AI units to heal themselves and each other.</English>

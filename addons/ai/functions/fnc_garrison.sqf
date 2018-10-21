@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Garrison function used to garrison AI inside buildings.
@@ -19,7 +20,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_startingPos",[0,0,0], [[]], 3], ["_buildingTypes", ["Building"], [[]]], ["_unitsArray", [], [[]]], ["_fillingRadius", 50, [0]], ["_fillingType", 0, [0]], ["_topDownFilling", false, [true]], ["_teleport", false, [true]]];
 
@@ -79,11 +79,9 @@ if (_topDownFilling) then {
 
 //Remove positions units are already pathing to
 _buildingsIndex = _buildingsIndex apply {
-    private _testedBuilding = _x;
-
-    _testedBuilding select {
+    _x select {
         private _testedPos = _x;
-        (({(_x select 1) isEqualTo _testedPos} count (missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []])) == 0)
+        ({(_x select 1) isEqualTo _testedPos} count (missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []])) == 0
     }
 };
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou
  * Turn a laser designator on.
@@ -20,8 +21,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // params [["_emitter", objNull, [objNull]],["_owner", objNull, [objNull]],["_method", "", ["", {}, []]],["_wavelength", 0, [0]],["_code", 0, [0]],["_beamSpread", 0, [0]],"_methodArgs"];
 

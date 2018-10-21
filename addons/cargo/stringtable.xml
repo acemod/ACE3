@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -291,7 +291,7 @@
             <Chinesesimp>此架飞机并无保持水平飞行</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
-            <English>Paradrop Time Coffecient</English>
+            <English>Paradrop Time Coefficient</English>
             <German>Türlast Zeitfaktor</German>
             <Japanese>空中投下までの時間係数</Japanese>
             <Italian>Coefficente Tempo Lancio Paracadute</Italian>
@@ -311,6 +311,12 @@
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
             <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>
+        </Key>
+        <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
+            <English>Load Time Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
+            <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
         </Key>
     </Package>
 </Project>

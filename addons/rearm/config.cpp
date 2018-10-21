@@ -15,6 +15,7 @@ class CfgPatches {
 };
 
 #include "ACE_Settings.hpp"
+#include "ACE_ZeusActions.hpp"
 #include "CfgEventHandlers.hpp"
 
 #include "CfgAmmo.hpp"

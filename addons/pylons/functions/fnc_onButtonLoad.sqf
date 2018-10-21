@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Loads selected pylon configuration from either config or profileNamespace.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [false] call FUNC(onPylonMirror);
 (CONTROL(ID_DIALOG) ID_CHECKBOX_MIRROR) cbSetChecked false;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * Recieve an finger event, adds to the array (or updates if already present) and starts PFEH if not already running
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_sourceUnit", "_fingerPosPrecise", "_distance"];
 

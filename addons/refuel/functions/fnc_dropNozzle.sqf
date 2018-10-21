@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Detaches the fuel nozzle, drops it and removes player variables.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_disconnectOnly", false, [false]]];
 TRACE_3("dropNozzle",_unit,_nozzle,_disconnectOnly);

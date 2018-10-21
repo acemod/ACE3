@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Used to un-garrison units.
@@ -14,7 +15,6 @@
  * Public: Yes
  *
 */
-#include "script_component.hpp"
 
 params [["_units", [], [[]]]];
 
@@ -39,17 +39,7 @@ _units = _units select {local _x};
             _x doMove ((nearestBuilding (getPos _x)) buildingExit 0);
         };
 
-        private _fnc_countGarrisonnedUnits = {
-            params ["_unit", "_bool"];
-            if (_bool) then {
-                ({(_x getVariable [QGVAR(garrisonned), false]) && {!isPlayer _x}} count units _unit)
-            } else {
-                ({!(_x getVariable [QGVAR(garrisonned), false]) && {!isPlayer _x}} count units _unit)
-            };
-            
-        };
-
-        if ([_x, true] call _fnc_countGarrisonnedUnits == ({!isPlayer _x} count (units _x)) - 1 || {[_x, false] call _fnc_countGarrisonnedUnits == {!isPlayer _x} count (units _x)}) then {
+        if ({(_x getVariable [QGVAR(garrisonned), false]) && !isPlayer _x} count (units _x) == 0) then {
             LOG("fnc_ungarrison: enableAttack true");
             (group _x) enableAttack true;
         };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe, mharis001
  * Initializes the "Toggle NVGs" Zeus module display.
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-#define COMBO_ITEMS [[LSTRING(SelectedGroup), "\a3\ui_f_curator\data\displays\rscdisplaycurator\modegroups_ca.paa"], ["STR_WEST", "\a3\ui_f\data\map\diary\icons\playerwest_ca.paa"], ["STR_EAST", "\a3\ui_f\data\map\diary\icons\playereast_ca.paa"], ["STR_guerrila", "\a3\ui_f\data\map\diary\icons\playerguer_ca.paa"], ["STR_Civilian", "\a3\ui_f\data\map\diary\icons\playerciv_ca.paa"]]
 
 params ["_control"];
 
@@ -28,7 +26,7 @@ TRACE_1("Logic Object",_logic);
 _control ctrlRemoveAllEventHandlers "SetFocus";
 
 // Validate module target
-private _unit = effectiveCommander (attachedTo _logic);
+private _unit = effectiveCommander attachedTo _logic;
 
 scopeName "Main";
 private _fnc_errorAndClose = {
@@ -51,18 +49,10 @@ if !(isNull _unit) then {
 };
 
 // Specific onLoad stuff
-private _combo = _display displayCtrl 92856;
-
-// Add target combo options (only add selected group option if placed on unit)
-{
-    _x params ["_text", "_icon"];
-    _combo lbSetPicture [_combo lbAdd (localize _text), _icon];
-} forEach (COMBO_ITEMS select [[0, 1] select (isNull _unit), 5]);
-
-_combo lbSetCurSel 0;
-
-// Set default NVG status
-if !(isNull _unit) then {
+// Remove selected group option in not placed on unit and set default NVG status
+if (isNull _unit) then {
+    (_display displayCtrl 92856) lbDelete 0;
+} else {
     (_display displayCtrl 92855) lbSetCurSel ([0, 1] select !(hmd _unit isEqualTo ""));
 };
 

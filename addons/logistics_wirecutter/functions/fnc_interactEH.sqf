@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Dynamically adds "Cut Fence" actions to nearby fences when interact_menu is opened.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_interactionType"];
 

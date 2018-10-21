@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Sets screen tint for glasses.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player", "_glasses"];
 TRACE_2("applyGlassesEffect",_player,_glasses);

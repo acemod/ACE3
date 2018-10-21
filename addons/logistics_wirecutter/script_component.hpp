@@ -58,7 +58,7 @@
 #define CUT_TIME_ENGINEER 7.5
 
 #define HAS_WIRECUTTER(unit) (\
-    "ACE_wirecutter" in ([ARR_6(unit, false, true, true, true, false)] call CBA_fnc_uniqueUnitItems) \
+    "ACE_wirecutter" in (unit call EFUNC(common,uniqueItems)) \
     || {1 == getNumber (configFile >> "CfgVehicles" >> (backpack unit) >> QGVAR(hasWirecutter))} \
     || {1 == getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter))} \
 )
