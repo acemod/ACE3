@@ -1,18 +1,21 @@
+#include "script_component.hpp"
 /*
  * Author: ViperMaul
  * Unload a person from a vehicle, local
  *
  * Arguments:
- * 0: unit to unload <OBJECT>
+ * 0: Unit to unload <OBJECT>
  * 1: Vehicle <OBJECT>
- * 2: Unloader (player) <OBJECT><OPTIONAL>
+ * 2: Unloader (player) <OBJECT> (default: objNull)
  *
  * Return Value:
- * Returns true if succesfully unloaded person <BOOL>
+ * Succesfully unloaded person <BOOL>
+ *
+ * Example:
+ * [bob, car, bob] call ace_common_fnc_unloadpersonLocal
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 
@@ -24,7 +27,7 @@ private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,find
 TRACE_1("findUnloadPosition",_emptyPos);
 
 if (count _emptyPos != 3) exitwith {
-    ACE_LOGWARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
+    WARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
     if ((!isNull _unloader) && {[_unloader] call FUNC(isPlayer)}) then {
         //display text saying there are no safe places to exit the vehicle
         [QGVAR(displayTextStructured), [localize LSTRING(NoRoomToUnload)], [_unloader]] call CBA_fnc_targetEvent;
@@ -53,8 +56,7 @@ _unit action ["Eject", vehicle _unit];
             [_unit, _anim, 1, true] call FUNC(doAnimation);
 
             [{
-                _unit = _this select 0;
-                _anim = _this select 1;
+                params ["_unit", "_anim"];
                 if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
                     [_unit, _anim, 2, true] call FUNC(doAnimation);
                 };

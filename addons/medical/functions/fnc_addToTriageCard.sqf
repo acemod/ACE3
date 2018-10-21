@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Add an entry to the triage card
@@ -9,10 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "bandage"] call ace_medical_fnc_addToTriageCard
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_newItem"];
 

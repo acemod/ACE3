@@ -18,14 +18,63 @@ ACE_Modifier = 0;
     _unit doMove _position;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setLampOn), {
-    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
-    {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
+[QGVAR(flip), {
+    params ["_vehicle"];
+    private _position = getPosATL _vehicle;
+    _vehicle setVectorUp surfaceNormal _position;
+    _vehicle setPosATL _position;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setLampOff), {
-    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
-    {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
+[QGVAR(setLight), {
+    params ["_lamp", "_state"];
+    private _hitpoints = _lamp call EFUNC(common,getReflectorsWithSelections) select 1;
+    {
+        private _damage = _lamp getHit _x;
+        if (_state) then {
+            if (_damage == DISABLED_LAMP_DAMAGE) then {
+                _lamp setHit [_x, 0];
+            };
+        } else {
+            if (_damage < DISABLED_LAMP_DAMAGE) then {
+                _lamp setHit [_x, DISABLED_LAMP_DAMAGE];
+            };
+        };
+    } forEach _hitpoints;
+    _lamp setVariable [QGVAR(isLightOn), _state, true];
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setCollisionLight), {
+    (_this select 0) setCollisionLight (_this select 1);
+}] call CBA_fnc_addEventHandler;
+
+// Zeus action events
+[QGVAR(zeusStance),{
+    { _x setUnitPos (_this select 0); } forEach (_this select 1);
+}] call CBA_fnc_addEventHandler;
+
+// The following 3 events handle both waypoints and groups
+[QGVAR(zeusBehaviour),{
+    if (param [2,false]) then {
+        { _x setWaypointBehaviour (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setBehaviour (_this select 0); } forEach (_this select 1);
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(zeusSpeed),{
+    if (param [2,false]) then {
+        { _x setWaypointSpeed (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setSpeedMode (_this select 0); } forEach (_this select 1);
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(zeusFormation),{
+    if (param [2,false]) then {
+        { _x setWaypointFormation (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setFormation (_this select 0); } forEach (_this select 1);
+    };
 }] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
@@ -53,13 +102,12 @@ GVAR(isOpeningDoor) = false;
     call EFUNC(interaction,openDoor);
     true
 }, {
-    //Probably don't want any condidtions here, so variable never gets locked down
+    //Probably don't want any conditions here, so variable never gets locked down
     // Statement
     GVAR(isOpeningDoor) = false;
     true
 },
 [57, [false, true, false]], false] call CBA_fnc_addKeybind; //Key CTRL+Space
-
 
 ["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder), {
     // Conditions: canInteract
@@ -77,5 +125,31 @@ GVAR(isOpeningDoor) = false;
 {false},
 [20, [true, false, false]], false] call CBA_fnc_addKeybind;
 
-["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSwimming", {!(_this call EFUNC(common,isSwimming))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
+
+["ace_settingsInitialized", {
+    if (GVAR(disableNegativeRating)) then {
+        player addEventHandler ["HandleRating", {
+            (_this select 1) max 0
+        }];
+    };
+}] call CBA_fnc_addEventHandler;
+
+
+// to make "Camping Lantern (Off)" be turned on we replace it with "Camping Lantern"
+private _action = [
+    QGVAR(TurnOn),
+    localize LSTRING(TurnOn),
+    "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa",
+    {
+        private _position = getPosATL _target;
+        private _vectorDirAndUp = [vectorDir _target, vectorUp _target];
+        deleteVehicle _target;
+        private _newLamp = "Land_Camping_Light_F" createVehicle [0,0,0];
+        _newLamp setPosATL _position;
+        _newLamp setVectorDirAndUp _vectorDirAndUp;
+    },
+    {alive _target}
+] call EFUNC(interact_menu,createAction);
+["Land_Camping_Light_off_F", 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);

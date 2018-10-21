@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Adds an object to curator upon spawn
@@ -8,10 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [object] call ace_zeus_fnc_addObjectToCurator
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_object"];
 

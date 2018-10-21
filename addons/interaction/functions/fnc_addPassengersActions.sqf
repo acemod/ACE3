@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Create one action per passenger.
@@ -15,12 +16,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_player"];
 
-private "_actions";
-_actions = [];
+private _actions = [];
 
 {
     private _unit = _x;

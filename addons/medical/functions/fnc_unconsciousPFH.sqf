@@ -1,9 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * PFH logic for unconscious state
  *
  * Arguments:
- * 0: PFEH - Args
+ * 0: PFEH - <ARRAY>
  *      0: The unit that will be put in an unconscious state <OBJECT>
  *      1: unitPos (stance) <STRING>
  *      2: Starting Time <NUMBER>
@@ -12,14 +13,15 @@
  *      5: Parachute Check <BOOL>
  * 1: PFEH ID <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [[unit,"pos", 5, 5, true, false], 5], "classname"] call ace_medical_fnc_unconsciousPFH
  *
  * Public: yes
  */
-#include "script_component.hpp"
 
-private ["_unit", "_minWaitingTime", "_slotInfo", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime", "_awakeInVehicleAnimation", "_oldVehicleAnimation", "_vehicle"];
 params ["_args", "_idPFH"];
 _args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];
 
@@ -33,7 +35,7 @@ if (!alive _unit) exitWith {
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
         [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
     };
-    [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+    [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
 
@@ -48,6 +50,12 @@ if (!alive _unit) exitWith {
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
 if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
     TRACE_7("ACE_DEBUG_Unconscious_PFH",_unit, _args, [_unit] call FUNC(isBeingCarried), [_unit] call FUNC(isBeingDragged), _idPFH, _unit getVariable QGVAR(unconsciousArguments),animationState _unit);
+
+    //Unmute the unit before the carry check
+    _unit setVariable ["tf_voiceVolume", 1, true];
+    _unit setVariable ["tf_unable_to_use_radio", false, true];
+    _unit setVariable ["acre_sys_core_isDisabled", false, true];
+
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
     if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
@@ -64,9 +72,9 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
                 [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
             };
         } else {
-            _vehicle = vehicle _unit;
-            _oldVehicleAnimation = _unit getVariable [QGVAR(vehicleAwakeAnim), []];
-            _awakeInVehicleAnimation = "";
+            private _vehicle = vehicle _unit;
+            private _oldVehicleAnimation = _unit getVariable [QGVAR(vehicleAwakeAnim), []];
+            private _awakeInVehicleAnimation = "";
             if (((count _oldVehicleAnimation) > 0) && {(_oldVehicleAnimation select 0) == _vehicle}) then {
                 _awakeInVehicleAnimation = _oldVehicleAnimation select 1;
             };
@@ -76,7 +84,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
             } else {
                 //Don't have a valid animation saved, reset the unit animation with a moveInXXX
                 TRACE_1("No Valid Animation, doing seat reset", _awakeInVehicleAnimation);
-                _slotInfo = [];
+                private _slotInfo = [];
                 {if ((_x select 0) == _unit) exitWith {_slotInfo = _x;};} forEach (fullCrew _vehicle);
                 if (_slotInfo isEqualTo []) exitWith {ERROR("No _slotInfo?");};
                 //Move the unit out:
@@ -101,7 +109,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
-        [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+        [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
 
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:

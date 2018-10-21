@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: joko // Jonas
  * Handle fire of local launchers. Called from the unified fired EH only for the local player.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
@@ -25,7 +25,7 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params["_backblastAngle","_backblastRange","_backblastDamage"];
+_var params ["_backblastAngle","_backblastRange","_backblastDamage"];
 TRACE_3("cache",_backblastAngle,_backblastRange,_backblastDamage);
 
 if (_backblastDamage <= 0) exitWith {};
@@ -54,6 +54,8 @@ if (_distance < _backblastRange) then {
     if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_unit] call EFUNC(medical,hasMedicalEnabled))}) then {
         [_unit, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
     } else {
+        TRACE_1("",isDamageAllowed _unit);
+        if (!isDamageAllowed _unit) exitWith {}; // Skip damage if not allowed
         _unit setDamage (damage _unit + _damage);
     };
 };

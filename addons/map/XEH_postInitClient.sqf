@@ -1,23 +1,5 @@
 #include "script_component.hpp"
 
-//Delete map glow lights from disconnecting players #2810
-if (isServer) then {
-    addMissionEventHandler ["HandleDisconnect",{
-        params ["_disconnectedPlayer"];
-
-        if ((!GVAR(mapGlow)) || {isNull _disconnectedPlayer}) exitWith {};
-        {
-            if (_x isKindOf "ACE_FlashlightProxy_White") then {
-                // ACE_LOGINFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
-                detach _x;
-                deleteVehicle _x;
-            };
-        } forEach attachedObjects _disconnectedPlayer;
-
-        nil
-    }];
-};
-
 // Exit on Headless as well
 if (!hasInterface) exitWith {};
 
@@ -25,53 +7,6 @@ LOG(MSG_INIT);
 
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
-
-[{
-    if (isNull findDisplay 12) exitWith {};
-
-    GVAR(lastStillPosition) = ((findDisplay 12) displayCtrl 51) ctrlMapScreenToWorld [0.5, 0.5];
-    GVAR(lastStillTime) = CBA_missionTime;
-    GVAR(isShaking) = false;
-
-    //map sizes are multiples of 1280
-    GVAR(worldSize) = worldSize / 1280;
-    GVAR(mousePos) = [0.5,0.5];
-
-    //Allow panning the lastStillPosition while mapShake is active
-    GVAR(rightMouseButtonLastPos) = [];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapEffects);}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseMoving", {
-        if (GVAR(isShaking) && {(count GVAR(rightMouseButtonLastPos)) == 2}) then {
-            private["_lastPos", "_newPos"];
-            _lastPos = (_this select 0) ctrlMapScreenToWorld GVAR(rightMouseButtonLastPos);
-            _newPos = (_this select 0) ctrlMapScreenToWorld (_this select [1,2]);
-            GVAR(lastStillPosition) set [0, (GVAR(lastStillPosition) select 0) + (_lastPos select 0) - (_newPos select 0)];
-            GVAR(lastStillPosition) set [1, (GVAR(lastStillPosition) select 1) + (_lastPos select 1) - (_newPos select 1)];
-            GVAR(rightMouseButtonLastPos) = _this select [1,2];
-            TRACE_3("Mouse Move",_lastPos,_newPos,GVAR(rightMouseButtonLastPos));
-        };
-    }];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", {
-        if ((_this select 1) == 1) then {
-            GVAR(rightMouseButtonLastPos) = _this select [2,2];
-        };
-    }];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", {
-        if ((_this select 1) == 1) then {
-            GVAR(rightMouseButtonLastPos) = [];
-        };
-    }];
-
-    //get mouse position on map
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseMoving", {
-        GVAR(mousePos) = (_this select 0) ctrlMapScreenToWorld [_this select 1, _this select 2];
-    }];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseHolding", {
-        GVAR(mousePos) = (_this select 0) ctrlMapScreenToWorld [_this select 1, _this select 2];
-    }];
-
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-}, 0] call CBA_fnc_addPerFrameHandler;
 
 ["ace_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
@@ -82,9 +17,9 @@ call FUNC(determineZoom);
 
             setCurrentChannel GVAR(DefaultChannel);
             if (currentChannel == GVAR(DefaultChannel)) then {
-                // ACE_LOGINFO_1("Channel Set - %1", currentChannel);
+                // INFO_1("Channel Set - %1", currentChannel);
             } else {
-                ACE_LOGERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+                ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
@@ -97,35 +32,33 @@ call FUNC(determineZoom);
 
     //illumination settings
     if (GVAR(mapIllumination)) then {
-        GVAR(flashlightInUse) = "";
-        GVAR(glow) = objNull;
-
         ["loadout", {
-            private _flashlights = [ACE_player] call FUNC(getUnitFlashlights);
-            if ((GVAR(flashlightInUse) != "") && !(GVAR(flashlightInUse) in _flashlights)) then {
-                GVAR(flashlightInUse) = "";
+            params ["_player", ""];
+            private _unitLight = _player getVariable [QGVAR(flashlight), ["", objNull]];
+            _unitLight params ["_flashlight", "_glow"];
+            if ((_flashlight != "") && {!(_flashlight in ([_player] call FUNC(getUnitFlashlights)))}) then {
+                // remove the current glow if the unit suddenly lost it's flashlight
+                if (!isNull _glow) then {
+                    _glow = [_player, "", false] call FUNC(flashlightGlow);
+                };
+                _player setVariable [QGVAR(flashlight), ["", _glow], true];
             };
         }] call CBA_fnc_addPlayerEventHandler;
 
         if (GVAR(mapGlow)) then {
             ["visibleMap", {
                 params ["_player", "_mapOn"];
+                private _unitLight = _player getVariable [QGVAR(flashlight), ["", objNull]];
+                _unitLight params ["_flashlight", "_glow"];
+                private _flashlightOn = !(_flashlight isEqualTo "");
                 if (_mapOn) then {
-                    if (!alive _player && !isNull GVAR(glow)) then {
-                        GVAR(flashlightInUse) = "";
-                    };
-                    if (GVAR(flashlightInUse) != "") then {
-                        if (isNull GVAR(glow)) then {
-                            [GVAR(flashlightInUse)] call FUNC(flashlightGlow);
-                        };
-                    } else {
-                        if (!isNull GVAR(glow)) then {
-                            [""] call FUNC(flashlightGlow);
-                        };
+                    if (_flashlightOn && {isNull _glow}) then {
+                        [_player, _flashlight] call FUNC(flashlightGlow);
+                        playSound QGVAR(flashlightClick);
                     };
                 } else {
-                    if (!isNull GVAR(glow)) then {
-                        [""] call FUNC(flashlightGlow);
+                    if (!isNull _glow) then {
+                        [_player, ""] call FUNC(flashlightGlow);
                     };
                 };
             }] call CBA_fnc_addPlayerEventHandler;
@@ -137,12 +70,53 @@ call FUNC(determineZoom);
 GVAR(hasWatch) = true;
 
 ["loadout", {
-    if (isNull (_this select 0)) exitWith {
+    params ["_unit"];
+    if (isNull _unit) exitWith {
         GVAR(hasWatch) = true;
     };
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
-    } count (assignedItems ACE_player);
-}] call CBA_fnc_addPlayerEventHandler;
+    } count (assignedItems _unit);
+}, true] call CBA_fnc_addPlayerEventHandler;
+
+
+// Vehicle map lighting:
+GVAR(vehicleLightCondition) = {true};
+GVAR(vehicleExteriorTurrets) = [];
+GVAR(vehicleLightColor) = [1,1,1,0];
+
+["vehicle", {
+    params ["_unit", "_vehicle"];
+    if ((isNull _vehicle) || {_unit == _vehicle}) exitWith {};
+    private _cfg = configfile >> "CfgVehicles" >> (typeOf _vehicle);
+    GVAR(vehicleExteriorTurrets) = getArray (_cfg >> QGVAR(vehicleExteriorTurrets));
+    GVAR(vehicleLightColor) = [_cfg >> QGVAR(vehicleLightColor), "array", [1,1,1,0]] call CBA_fnc_getConfigEntry;
+
+    // Handle vehicles with toggleable interior lights:
+    private _vehicleLightCondition = getText (_cfg >> QGVAR(vehicleLightCondition));
+    if (_vehicleLightCondition == "") then {
+        private _userAction = toLower getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
+        switch (true) do {
+            case ((_userAction find "cabinlights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cabinlights_hide') == 1";};
+            case ((_userAction find "cargolights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cargolights_hide') == 1";};
+        };
+    };
+
+    GVAR(vehicleLightCondition) = if (_vehicleLightCondition != "") then {
+        if (_vehicle isKindOf "Helicopter" || {_vehicle isKindOf "Plane"}) then {
+            compile format ["(driver _vehicle == _unit) || {gunner _vehicle == _unit} || {%1}", _vehicleLightCondition];
+        } else {
+            compile _vehicleLightCondition
+        };
+    } else {
+        switch (true) do {
+            case (_vehicle isKindOf "Tank");
+            case (_vehicle isKindOf "Wheeled_APC"): { {true} };
+            case (_vehicle isKindOf "Helicopter");
+            case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
+            default { {false} };
+        };
+    };
+}, true] call CBA_fnc_addPlayerEventHandler;

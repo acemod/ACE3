@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if the unit is in a building. Will return true if the unit is sitting in a bush.
@@ -8,9 +9,11 @@
  * Return Value:
  * Is the unit in a building? <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc_isInBuilding
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 #define CHECK_DISTANCE 10
 

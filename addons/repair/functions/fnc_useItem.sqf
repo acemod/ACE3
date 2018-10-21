@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use Equipment if any is available.
@@ -6,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Item classname <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * [Had Item to Use <BOOL>, Unit <OBJECT>] <ARRAY>
  *
  * Example:
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_item"];
 TRACE_2("params",_unit,_item);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Cache a handleDamage call to execute it 3 frames later
@@ -11,11 +12,13 @@
  * 5: HitPointIndex (-1 for structural) <NUMBER>
  *
  * Return Value:
- * <nil>
+ * None
+ *
+ * Example:
+ * [bob, "leg", 2, kevin, "bullet", -1] call ACE_medical_fnc_handleDamage_caching
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_hitPointIndex"];
 
@@ -77,7 +80,6 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
 
     // handle the cached damages 3 frames later
     [{
-        private ["_args", "_params"];
         params ["_args", "_idPFH"];
         _args params ["_unit", "_frameno"];
         if (diag_frameno >= _frameno + 2) then {

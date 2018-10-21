@@ -37,6 +37,14 @@ class CfgMagazines {
             class Tripwire;
         };
     };
+    class ACE_FlareTripMine_Mag: APERSTripMine_Wire_Mag {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_FlareTripMine_Wire_Ammo";
+        GVAR(SetupObject) = "ACE_Explosives_Place_APERSTripwireMine";
+        displayName = CSTRING(TripFlare_Name);
+        descriptionShort = CSTRING(TripFlare_Description);
+        class Library {libTextDesc = CSTRING(TripFlare_Description);};
+    };
 
     class ClaymoreDirectionalMine_Remote_Mag: CA_Magazine {
         GVAR(Placeable) = 1;
@@ -159,6 +167,31 @@ class CfgMagazines {
             class Cellphone: Command {};
             class PressurePlate: PressurePlate {
                 ammo = "ACE_IEDLandSmall_Range_Ammo";
+            };
+        };
+    };
+
+
+    // Orange DLC:
+    class APERSMineDispenser_Mag: SatchelCharge_Remote_Mag {
+        GVAR(SetupObject) = "ACE_Explosives_Place_APERSMineDispenser";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+        };
+    };
+    class TrainingMine_Mag: APERSMine_Range_Mag {
+        GVAR(SetupObject) = "ACE_Explosives_Place_TrainingMine";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.02;
             };
         };
     };

@@ -7,8 +7,6 @@
 // we have to auto set these settings manually - on mission creation
 add3DENEventHandler ["onMissionNew", {
     set3DENMissionAttributes [
-        ["Intel", "IntelRainIsForced", true],
-        ["Intel", "IntelLightningIsForced", true],
         ["Intel", "IntelWavesIsForced", true],
         ["Intel", "IntelWindIsForced", true]
     ];

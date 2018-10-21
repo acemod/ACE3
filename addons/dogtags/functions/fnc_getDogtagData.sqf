@@ -1,16 +1,22 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
- * Get unit dogtag data
+ * Get unit dogtag data.
  *
  * Arguments:
  * 0: Target <OBJECT>
  *
  * Return Value:
- * None
+ * Dogtag Data <ARRAY>
+ * 0: Name <STRING>
+ * 1: SSN <STRING>
+ * 2: Blood Type <STRING>
+ *
+ * Example:
+ * _dogtagData = [unit, player] call ace_dogtags_fnc_getDogtagData
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target"];
 

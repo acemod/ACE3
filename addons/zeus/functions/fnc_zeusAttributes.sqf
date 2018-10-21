@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Dummy function to include BIS script file.
@@ -9,15 +10,13 @@
  * 2: Display class name <STRING>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * onLoad = "['onLoad',_this,'RscDisplayExample'] call ace_zeus_fnc_zeusAttributes"
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 TRACE_1("params",_this);
 

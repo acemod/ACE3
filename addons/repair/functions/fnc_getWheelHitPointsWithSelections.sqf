@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns the wheel hitpoints and their selections.
@@ -14,16 +15,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 TRACE_1("params",_vehicle);
 
-private["_bestDist", "_bestIndex", "_wheelBone", "_wheelBoneNameResized", "_wheelCenter", "_wheelCenterPos", "_wheelHitPoint", "_wheelHitPointSelection", "_wheelHitPointSelections", "_wheelHitPoints", "_wheelName", "_xDist", "_xPos"];
-
 // get the vehicles wheel config
-private "_wheels";
-_wheels = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Wheels";
+private _wheels = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Wheels";
 
 // exit with nothing if the vehicle has no wheels class
 if !(isClass _wheels) exitWith {TRACE_1("No Wheels",_wheels); [[],[]]};
@@ -34,19 +31,19 @@ if !(isClass _wheels) exitWith {TRACE_1("No Wheels",_wheels); [[],[]]};
 // get all wheels and read selections from config
 _wheels = "true" configClasses _wheels;
 
-_wheelHitPoints = [];
-_wheelHitPointSelections = [];
+private _wheelHitPoints = [];
+private _wheelHitPointSelections = [];
 
 {
-    _wheelName = configName _x;
-    _wheelCenter = getText (_x >> "center");
-    _wheelBone = getText (_x >> "boneName");
-    _wheelBoneNameResized = _wheelBone select [0, 9]; //ount "wheel_X_Y"; // this is a requirement for physx. Should work for all addon vehicles.
+    private _wheelName = configName _x;
+    private _wheelCenter = getText (_x >> "center");
+    private _wheelBone = getText (_x >> "boneName");
+    private _wheelBoneNameResized = _wheelBone select [0, 9]; //ount "wheel_X_Y"; // this is a requirement for physx. Should work for all addon vehicles.
 
     TRACE_4("",_wheelName,_wheelCenter,_wheelBone,_wheelBoneNameResized);
 
-    _wheelHitPoint = "";
-    _wheelHitPointSelection = "";
+    private _wheelHitPoint = "";
+    private _wheelHitPointSelection = "";
 
     //Commy's orginal method
     {
@@ -62,19 +59,19 @@ _wheelHitPointSelections = [];
         //Backup method, search for the closest hitpoint to the wheel's center selection pos.
         //Ref #2742 - RHS's HMMWV
         if (_wheelHitPoint == "") then {
-            _wheelCenterPos = _vehicle selectionPosition _wheelCenter;
+            private _wheelCenterPos = _vehicle selectionPosition _wheelCenter;
             if (_wheelCenterPos isEqualTo [0,0,0]) exitWith {TRACE_1("no center?",_wheelCenter);};
 
 
-            _bestDist = 99;
-            _bestIndex = -1;
+            private _bestDist = 99;
+            private _bestIndex = -1;
             {
                 if (_x != "") then {
                      //Filter out things that definitly aren't wheeels (#3759)
                     if ((toLower (_hitPoints select _forEachIndex)) in ["hitengine", "hitfuel", "hitbody"]) exitWith {TRACE_1("filter",_x)};
-                    _xPos = _vehicle selectionPosition _x;
+                    private _xPos = _vehicle selectionPosition _x;
                     if (_xPos isEqualTo [0,0,0]) exitWith {};
-                    _xDist = _wheelCenterPos distance _xPos;
+                    private _xDist = _wheelCenterPos distance _xPos;
                     if (_xDist < _bestDist) then {
                         _bestIndex = _forEachIndex;
                         _bestDist = _xDist;

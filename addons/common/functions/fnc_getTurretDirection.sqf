@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Get the absolute turret direction for FOV/PIP turret.
@@ -10,9 +11,11 @@
  * 0: Position ASL <ARRAY>
  * 1: Direction <ARRAY>
  *
+ * Example:
+ * [car, [5,6,5]] call ace_common_fnc_getTurretDirection
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_position"];
 
@@ -38,5 +41,5 @@ if (_pov == "pip0_pos") then {
 
     _povDir = _gunBeginPos vectorDiff _gunEndPos;
 };
-
+_povDir = vectorNormalized _povDir;
 [_povPos, _povDir]

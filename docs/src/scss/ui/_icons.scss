@@ -1,0 +1,22 @@
+.icon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    &-color {
+        border: 1px solid #aaa;
+
+        &-white {
+            background-color: #fff;
+        }
+        &-black {
+            background-color: #000;
+        }
+        &-red {
+            background-color: $ace-primary-color;
+        }
+    }
+
+}

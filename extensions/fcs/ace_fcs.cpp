@@ -61,7 +61,7 @@ double traceBullet(double initSpeed, double airFriction, double angle, double an
         posX += velX * simulationStep * 0.5;
         posY += velY * simulationStep * 0.5;
         velX += simulationStep * (velX * velMag * airFriction);
-        velY += simulationStep * (velY * velMag * airFriction - 9.80665);
+        velY += simulationStep * (velY * velMag * airFriction - 9.8066);
         posX += velX * simulationStep * 0.5;
         posY += velY * simulationStep * 0.5;
         if (posX >= posTargetX) { break; }
@@ -73,10 +73,6 @@ double traceBullet(double initSpeed, double airFriction, double angle, double an
 }
 
 double getSolution(double initSpeed, double airFriction, double angleTarget, double distance) {
-    double posTargetX, posTargetY;
-    posTargetX = cos(RADIANS(angleTarget)) * distance;
-    posTargetY = sin(RADIANS(angleTarget)) * distance;
-
     if (traceBullet(initSpeed, airFriction, MAXELEVATION, angleTarget, distance) < 0) {
         return MAXELEVATION - angleTarget;
     }

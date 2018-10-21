@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the change in the heart rate. Used for the vitals calculations. Calculated in one seconds.
@@ -5,13 +6,14 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Change in heart Rate <NUMBER>
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_getHeartRateChange
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define HEART_RATE_MODIFIER 0.02
 

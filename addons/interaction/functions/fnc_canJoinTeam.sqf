@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Checks if the player can join a team
@@ -14,9 +15,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 alive _target
 && {!(_target getVariable ["ACE_isUnconscious", false])}

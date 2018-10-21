@@ -4,13 +4,13 @@
         scope = 1; \
         scopeArsenal = 0; \
         scopeCurator = 0; \
-        descriptionShort = QUOTE(DOGTAGID); \
+        descriptionShort = CSTRING(itemName); \
         GVAR(tagID) = DOGTAGID; \
     }
 
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_dogtag: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
@@ -18,7 +18,7 @@ class CfgWeapons {
         displayName = CSTRING(itemName);
         model = QUOTE(PATHTOF(data\ace_dogtag.p3d));
         picture = QUOTE(PATHTOF(data\dogtagSingle.paa));
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0; //too small to for 1 ?
         };
     };

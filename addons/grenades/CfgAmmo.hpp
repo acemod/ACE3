@@ -68,7 +68,7 @@ class CfgAmmo {
         timeToLive = 60;
         grenadeFireSound[] = {};
         grenadeBurningSound[] = {};
-        aiAmmoUsageFlags = "4 + 2";
+        aiAmmoUsageFlags = "1 + 2"; // illumination + marking
         smokeColor[] = {0,0,0,0};
         effectsSmoke = "ACE_HandFlareEffect";
         whistleDist = 0;
@@ -99,12 +99,12 @@ class CfgAmmo {
         timeToLive = 6;
         grenadeFireSound[] = {};
         grenadeBurningSound[] = {};
-        aiAmmoUsageFlags = "0";
+        aiAmmoUsageFlags = "64"; // infantry
         smokeColor[] = {0,0,0,0};
         effectsSmoke = "ACE_M84FlashbangEffect";
         whistleDist = 0;
     };
-    
+
     class Chemlight_base: SmokeShell {
         GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\Other\dry4.wss", 3, 2, 10};
         soundImpactHard1[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.8,65};
@@ -123,5 +123,27 @@ class CfgAmmo {
         soundImpactWoodExt2[] = {"A3\sounds_f\characters\footsteps\wood_run_ext_1",1,1.15,75};
         soundImpactWoodExt3[] = {"A3\sounds_f\characters\footsteps\wood_run_ext_2",1,1.1,75};
         soundImpactWoodExt4[] = {"A3\sounds_f\characters\footsteps\wood_run_ext_2",1,1.15,75};
+    };
+
+    class ACE_G_M14: SmokeShell {
+        GVAR(incendiary) = 1;
+        model = QPATHTOF(models\ace_anm14th3_armed.p3d);
+        hit = 5;
+        indirectHit = 4;
+        indirectHitRange = 1.1;
+        dangerRadiusHit = 50;
+        suppressionRadiusHit = 18;
+        deflecting = 20;
+        explosionTime = 3;
+        timeToLive = 40;
+        fuseDistance = 0;
+        SmokeShellSoundHit1[] = {QPATHTOF(sounds\incen_exp1.ogg),3.1622777,1,500};
+        SmokeShellSoundHit2[] = {QPATHTOF(sounds\incen_exp2.ogg),3.1622777,1,500};
+        grenadeFireSound[] = {"SmokeShellSoundHit1",0.5,"SmokeShellSoundHit2",0.5};
+        grenadeBurningSound[] = {};
+        aiAmmoUsageFlags = "64 + 1"; // infantry + illumination
+        effectsSmoke = "ACE_Incendiary";
+        whistleDist = 0;    // no BIS explosion effects
+        whistleOnFire = 0;  // no BIS firing effects
     };
 };

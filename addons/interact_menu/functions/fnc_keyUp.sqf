@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Handle interactions key up
@@ -8,9 +9,11 @@
  * Return Value:
  * true <BOOL>
  *
+ * Example:
+ * [1] call ACE_interact_menu_fnc_keyUp
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_menuType", "_calledByClicking"];
 
@@ -45,6 +48,14 @@ if(GVAR(actionSelected)) then {
 };
 
 ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
+
+//Remove the "DefaultAction" action event handler
+GVAR(blockDefaultActions) params [["_player", objNull], ["_ehid", -1]];
+TRACE_2("blockDefaultActions",_player,_ehid);
+if (!isNull _player) then {
+    [_player, "DefaultAction", _ehid] call EFUNC(common,removeActionEventHandler);
+    GVAR(blockDefaultActions) = [];
+};
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;

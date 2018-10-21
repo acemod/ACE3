@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Drops a backback. Also returns the ground wepaon holder object of the dropped backpack.
@@ -8,9 +9,11 @@
  * Return Value:
  * Ground wepaon holder with backpack <OBJECT>
  *
+ * Example:
+ * [unit] call ace_common_fnc_dropBackpack
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]]];
 

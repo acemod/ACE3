@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets the controls structured text if it isn't already set.
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [CONTROL, 5, "text"] call ACE_interact_menu_fnc_ctrlSetParsedTextCached
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrl", "_index", "_text"];
 

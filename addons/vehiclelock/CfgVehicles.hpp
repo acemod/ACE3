@@ -4,21 +4,18 @@
             displayName = CSTRING(Action_UnLock); \
             condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
             statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,false)], [_target])] call CBA_fnc_targetEvent); \
-            priority = 0.3; \
             icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
         }; \
         class ACE_lockVehicle { \
             displayName = CSTRING(Action_Lock); \
             condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
             statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,true)], [_target])] call CBA_fnc_targetEvent); \
-            priority = 0.2; \
             icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
         }; \
         class ACE_lockpickVehicle { \
             displayName = CSTRING(Action_Lockpick); \
             condition = QUOTE([ARR_3(_player, _target, 'canLockpick')] call FUNC(lockpick)); \
             statement = QUOTE([ARR_3(_player, _target, 'startLockpick')] call FUNC(lockpick)); \
-            priority = 0.1; \
         }; \
     }; \
     class ACE_Actions { \
@@ -28,7 +25,7 @@
                 distance = 4; \
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
                 statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,false)], [_target])] call CBA_fnc_targetEvent); \
-                priority = 0.3; \
+                exceptions[] = {"isNotSwimming"}; \
                 icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
             }; \
             class ACE_lockVehicle { \
@@ -36,7 +33,7 @@
                 distance = 4; \
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
                 statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,true)], [_target])] call CBA_fnc_targetEvent); \
-                priority = 0.2; \
+                exceptions[] = {"isNotSwimming"}; \
                 icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
             }; \
             class ACE_lockpickVehicle { \
@@ -44,7 +41,7 @@
                 distance = 4; \
                 condition = QUOTE([ARR_3(_player, _target, 'canLockpick')] call FUNC(lockpick)); \
                 statement = QUOTE([ARR_3(_player, _target, 'startLockpick')] call FUNC(lockpick)); \
-                priority = 0.1; \
+                exceptions[] = {"isNotSwimming"}; \
             }; \
         }; \
     };
@@ -61,6 +58,16 @@ class CfgVehicles {
     class Helicopter: Air {
         MACRO_LOCK_ACTIONS
     };
+    class Plane: Air {
+        MACRO_LOCK_ACTIONS
+    };
+    class Motorcycle: LandVehicle {
+        MACRO_LOCK_ACTIONS
+    };
+    class Ship;
+    class Ship_F: Ship {
+        MACRO_LOCK_ACTIONS
+    };
 
     class Logic;
     class Module_F: Logic {
@@ -72,8 +79,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_VehicleLock_ca.paa);
         functionPriority = 0;

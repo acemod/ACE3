@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Removes corpse. Idealy it is just deleted the next frame,
@@ -7,15 +8,13 @@
  * 0: Mr Body <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [cursorTarget] call ace_medical_fnc_serverRemoveBody
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target"];
 TRACE_2("",_target,isPlayer _target);

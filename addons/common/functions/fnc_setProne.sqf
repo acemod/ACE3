@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Force a unit to go prone
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_setProne
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

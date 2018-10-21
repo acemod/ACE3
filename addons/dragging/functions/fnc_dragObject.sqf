@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Drag an object. Called from ace_dragging_fnc_startDrag
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
@@ -48,6 +48,9 @@ _unit setVariable [QGVAR(ReleaseActionID), [
     {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
     {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
 ] call EFUNC(common,addActionEventHandler)];
+
+// add anim changed EH
+[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
 // show mouse hint
 [localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);

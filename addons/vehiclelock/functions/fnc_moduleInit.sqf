@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Function for setup module.  Sets default lockpick strength and default lock state.
@@ -15,12 +16,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-if (!isServer) exitWith {};
 
 params ["_logic", "_syncedUnits", "_activated"];
-TRACE_3("params",_logic,_syncedObjects,_activated);
+TRACE_3("params",_logic,_syncedUnits,_activated);
 
 if (!_activated) exitWith {WARNING("Vehicle Lock Init Module - placed but not active");};
 

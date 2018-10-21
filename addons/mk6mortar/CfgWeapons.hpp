@@ -1,6 +1,6 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_RangeTable_82mm: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
@@ -8,7 +8,7 @@ class CfgWeapons {
         displayName = CSTRING(rangetable_name);
         descriptionShort = CSTRING(rangetable_description);
         picture = QPATHTOF(UI\icon_rangeTable.paa);
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0.5;
         };
     };

@@ -1,0 +1,95 @@
+---
+title: Home
+browserTitle: The realism mod for Arma 3
+layout: default
+group: mainNav
+order: 0
+sitemap:
+    exclude: "yes"
+---
+
+<a class="hide-for-small-only" href="https://github.com/acemod/ACE3" target="_blank" rel="noopener"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="slider">
+
+            <picture>
+                <source srcset="{{ site.baseurl }}/img/slider01.jpg" media="(min-width: 641px)">
+                <img src="{{ site.baseurl }}/img/slider01_mobile.jpg"
+                     srcset="{{ site.baseurl }}/img/slider01_mobile.jpg"
+                     alt="ACE3 Medical uses advanced and very realistic medical simulations">
+            </picture>
+
+            <picture>
+                <source srcset="{{ site.baseurl }}/img/slider02.jpg" media="(min-width: 641px)">
+                <img src="{{ site.baseurl }}/img/slider02_mobile.jpg"
+                     srcset="{{ site.baseurl }}/img/slider02_mobile.jpg"
+                     alt="ACE3 Laser aims to realistically model behaviour of lasers">
+            </picture>
+
+            <picture>
+                <source srcset="{{ site.baseurl }}/img/slider03.jpg" media="(min-width: 641px)">
+                <img src="{{ site.baseurl }}/img/slider03_mobile.jpg"
+                     srcset="{{ site.baseurl }}/img/slider03_mobile.jpg"
+                     alt="ACE3 Explosions contain shrapnel and shockwaves">
+            </picture>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel callout radius">
+            <div class="row">
+                <div class="large-7 columns">
+                    <h1>Advanced Combat Environment 3 <small>(ACE3)</small></h1>
+                    <h2 class="subheader">{{ page.browserTitle }}</h2>
+                </div>
+                <div class="large-5 columns">
+                    <a class="button" target="_blank" href="{{site.ace.githubUrl}}/releases/latest" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener"><i class="fa fa-download"></i> Get ACE3 v{{site.ace.version.major}}.{{site.ace.version.minor}}.{{site.ace.version.patch}}</a><br>
+                    <a href="{{site.baseurl}}/wiki/user/installation-guide.html">Installation Guide</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel callout radius">
+            <div class="row">
+                <div class="large-7 columns">
+                    <h2>ACEX</h2>
+                    <h3 class="subheader">Useful frameworks and features</h3>
+                </div>
+                <div class="large-5 columns">
+                    <a class="button" target="_blank" href="{{site.acex.githubUrl}}/releases/latest" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener"><i class="fa fa-download"></i> Get ACEX v{{site.acex.version.major}}.{{site.acex.version.minor}}.{{site.acex.version.patch}}</a><br>
+                    <a href="{{site.baseurl}}/wiki/user/installation-guide-acex.html">Installation Guide</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+
+        <div class="row">
+            <div class="large-4 medium-4 columns">
+                <p><a href="{{ site.baseurl }}/wiki/index.html">ACE3 Documentation</a>
+                    <br/>Everything you need to know about using the mod or developing for it.</p>
+            </div>
+            <div class="large-4 medium-4 columns">
+                <p><a target="_blank" href="{{ site.ace.githubUrl }}" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener">ACE3 on Github</a><br/>Latest code, issue reports, feature requests
+                    and more.</p>
+            </div>
+            <div class="large-4 medium-4 columns">
+                <p><a target="_blank" href="https://slackin.ace3mod.com/" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener">ACE3 Public Chat</a><br/>
+                    Join our public chat! We're glad to answer questions concerning ACE3, development or Arma things.<br/>
+                    If you made something with this mod (screen shots, artwork, videos) we'd love to see it.</p>
+            </div>
+        </div>
+
+    </div>
+</div>

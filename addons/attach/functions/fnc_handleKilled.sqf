@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles when vehicle or man is killed. 
@@ -14,16 +15,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_deadUnit"];
 TRACE_1("params",_deadUnit);
 
-private ["_attachedList"];
+private _attachedList = _deadUnit getVariable [QGVAR(attached), []];
 
-_attachedList = _deadUnit getVariable [QGVAR(attached), []];
-
-if ((count _attachedList) == 0) exitWith {};
+if (_attachedList isEqualTo []) exitWith {};
 
 {
     _x params ["_xObject"];

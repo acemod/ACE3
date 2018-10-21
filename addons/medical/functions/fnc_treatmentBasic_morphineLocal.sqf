@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Local callback when the morphine treatment is complete
@@ -9,10 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_treatmentBasic_morphineLocal
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MORPHINEHEAL 0.4
 
 params ["_target"];

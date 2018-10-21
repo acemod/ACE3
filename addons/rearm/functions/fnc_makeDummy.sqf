@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Make a dummy object by disabling collision and turning it.
@@ -14,9 +15,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params [["_obj", objNull, [objNull]], ["_dirAndUp", [[1,0,0],[0,0,1]], [[]]]];
+params ["_obj", "_dirAndUp"];
 
 _obj setVectorDirAndUp _dirAndUp;
 _obj allowDamage false;

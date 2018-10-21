@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Attempt to fix PhysX collisions causing unreasonable impact forces and damage.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_fixCollision
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 // allowDamage requires local object
 if (!local _this) exitWith {};

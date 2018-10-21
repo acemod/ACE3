@@ -1,25 +1,27 @@
-/*
-* Author: Rocko and esteldunedain
-* On map draw, updates the effects
-*
-* Arguments:
-* None
-*
-* Return Value:
-* None
-*
-* Public: No
-*/
-
 #include "script_component.hpp"
-private ["_mapCtrl", "_mapScale", "_mapCentre", "_light"];
-_mapCtrl = findDisplay 12 displayCtrl 51;
-_mapScale = ctrlMapScale _mapCtrl;
-_mapCentre = _mapCtrl ctrlMapScreenToWorld [0.5, 0.5];
+/*
+ * Author: Rocko and esteldunedain
+ * On map draw, updates the effects
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_map_fnc_updateMapEffects
+ *
+ * Public: No
+ */
+
+params ["_mapCtrl"];
+private _mapScale = ctrlMapScale _mapCtrl;
+private _mapCentre = _mapCtrl ctrlMapScreenToWorld [0.5, 0.5];
 
 if (GVAR(mapIllumination)) then {
     //get nearby lighting
-    _light = [[ACE_player], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
+    private _light = [[ACE_player], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
 
     _light params ["_applyLighting", "_lightLevel"];
 
@@ -29,11 +31,10 @@ if (GVAR(mapIllumination)) then {
 };
 
 if (GVAR(mapShake)) then {
-    private ["_speed","_amplitude", "_time", "_shakePos"];
 
     // Only shake map while moving on foot
-    _speed = 0;
-    if (vehicle ACE_player == ACE_player) then {
+    private _speed = 0;
+    if ((alive ACE_player) && {vehicle ACE_player == ACE_player}) then {
         _speed = vectorMagnitude (velocity ACE_player);
     };
 
@@ -41,10 +42,10 @@ if (GVAR(mapShake)) then {
     if (_speed > 0.1) then {
         if (ctrlMapAnimDone _mapCtrl) then {
 
-            _amplitude = (_speed - 0.1) / 5 * (1000 * _mapScale);
-            _time = 0.1;
+            private _amplitude = (_speed - 0.1) / 5 * (1000 * _mapScale);
+            private _time = 0.1;
 
-            _shakePos = [(GVAR(lastStillPosition) select 0) + sin((CBA_missionTime + _time - GVAR(lastStillTime))*100) * _amplitude * 0.25,
+            private _shakePos = [(GVAR(lastStillPosition) select 0) + sin((CBA_missionTime + _time - GVAR(lastStillTime))*100) * _amplitude * 0.25,
                          (GVAR(lastStillPosition) select 1) + sin((CBA_missionTime + _time - GVAR(lastStillTime))*260) * _amplitude];
 
             _mapCtrl ctrlMapAnimAdd [_time, _mapScale, _shakePos];

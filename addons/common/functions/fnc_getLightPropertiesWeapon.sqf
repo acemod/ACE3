@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Read properties of given flashlight.
@@ -12,9 +13,11 @@
  * 3: Light inner angle <NUMBER>
  * 4: Light outer angle <NUMBER>
  *
+ * Example:
+ * ["flashlight"] call ace_common_fnc_getLightPropertiesWeapon
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_weapon"];
 

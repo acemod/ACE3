@@ -8,7 +8,6 @@ class ACE_Interaction_Button_Base {
     action = "";
 
     idc = -1;
-    access = 0;
     type = 1;
     text = "";
     font = "RobotoCondensed";
@@ -155,6 +154,9 @@ class RscInteractionText: RscText{
     y = 16 * GUI_GRID_H;
     w = 24 * GUI_GRID_W;
     h = 1.5 * GUI_GRID_H;
+};
+class RscInteractionText_right: RscText{
+    style = 1; // right aligned text
 };
 
 class RscTitles {

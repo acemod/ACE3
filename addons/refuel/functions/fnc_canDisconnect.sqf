@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Check if a unit can disconnect a fuel nozzle
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
@@ -22,6 +22,7 @@ if (isNull _unit ||
     {isNull _nozzle} ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
+    {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} ||
     {(_nozzle distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 private _sink = _nozzle getVariable [QGVAR(sink), objNull];

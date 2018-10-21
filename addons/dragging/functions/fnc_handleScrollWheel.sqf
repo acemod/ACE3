@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: L-H, commy2
  * Handles raising and lowering the dragged weapon to be able to place it on top of objects.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_scrollAmount"];
 
@@ -30,15 +30,19 @@ private _carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
 //disabled for persons
 if (_carriedItem isKindOf "CAManBase") exitWith {false};
 
-private _position = getPosATL _carriedItem;
-private _maxHeight = (_unit modelToWorldVisual [0,0,0]) select 2;
+private _position = getPosASL _carriedItem;
+private _maxHeight = (_unit modelToWorldVisualWorld [0, 0, 0]) select 2;
 
 _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) max _maxHeight];
 
 // move up/down object and reattach at current position
 detach _carriedItem;
-_carriedItem setPosATL _position;
-_carriedItem attachTo [_unit];
+
+// Uses this method of selecting position because setPosATL did not have immediate effect
+private _positionChange = _position vectorDiff (getPosASL _carriedItem);
+private _selectionPosition = _unit worldToModel (ASLtoAGL getPosWorld _carriedItem);
+_selectionPosition = _selectionPosition vectorAdd _positionChange;
+_carriedItem attachTo [_unit, _selectionPosition];
 
 //reset the carry direction
 private _direction = _carriedItem getVariable [QGVAR(carryDirection), 0];

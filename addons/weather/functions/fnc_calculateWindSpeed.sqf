@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the true wind speed at a given world position
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_position", "_windGradientEnabled", "_terrainEffectEnabled", "_obstacleEffectEnabled"];
 
@@ -26,18 +26,17 @@ private _fnc_polar2vect = {
     [_mag2D * sin(_dir), _mag2D * cos(_dir), _mag * sin(_elev)];
 };
 
-private _windSpeed = vectorMagnitude ACE_wind;
-private _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+private _windSpeed = vectorMagnitude wind;
+private _windDir = (wind select 0) atan2 (wind select 1);
 private _windDirAdjusted = _windDir + 180;
 
 // Wind gradient
 if (_windGradientEnabled) then {
     if (_windSpeed > 0.05) then {
         private _height = (ASLToATL _position) select 2;
-        _height = 0 max _height min 20;
-        if (_height < 20) then {
+        if (_height > 0 && _height < 20) then {
             private _roughnessLength = _position call FUNC(calculateRoughnessLength);
-            _windSpeed = _windSpeed * abs(ln(_height / _roughnessLength) / ln(20 / _roughnessLength));
+            _windSpeed = _windSpeed * (0 max (ln(_height / _roughnessLength) / ln(20 / _roughnessLength)));
         };
     };
 };

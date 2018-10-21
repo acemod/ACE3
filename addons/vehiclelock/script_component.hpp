@@ -4,7 +4,6 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-// #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_VEHICLELOCK
@@ -16,3 +15,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define IS_KIND_OF_ANY(object,classnames) ((classnames) findIf {(object) isKindOf _x} > -1)

@@ -34,3 +34,10 @@ class ACE_FlashlightEffect_Yellow {
         type = "ACE_FlashlightLight_Yellow";
     };
 };
+
+class ACE_FlashlightEffect_Orange {
+    class Light1 {
+        simulation = "light";
+        type = "ACE_FlashlightLight_Orange";
+    };
+};

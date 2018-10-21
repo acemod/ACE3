@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Removes the specified speed dial from unit's speed dial.
@@ -13,11 +14,8 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
-private "_speedDial";
-
-_speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
+private _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
 if (count _speedDial == 0) exitWith {};
 {
     if ((_x select 0) == (_this select 0)) exitWith {

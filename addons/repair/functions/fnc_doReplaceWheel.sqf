@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Repairs a vehicle's wheel with a ACE_wheel spare part object.
@@ -19,14 +20,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_vehicle", "_hitPoint", "", "", "", "_claimedObjects"];
 TRACE_4("params",_unit,_vehicle,_hitPoint,_claimedObjects);
 
 _claimedObjects params [["_wheel", objNull]];
 if ((isNull _wheel) || {!([_unit, _wheel, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith))}) exitWith {
-    ACE_LOGWARNING_1("Bad Claimed Wheel", _claimedObjects);
+    WARNING_1("Bad Claimed Wheel", _claimedObjects);
 };
 
 // get current hitpoint damage

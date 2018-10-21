@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Starts the SwitchUnits functionality
@@ -14,17 +15,15 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_player"];
 
 if (GVAR(EnableSwitchUnits)) then {
     private _sides = [];
 
-    if(GVAR(SwitchToWest)) then {_sides pushBack west;};
-    if(GVAR(SwitchToEast)) then {_sides pushBack east;};
-    if(GVAR(SwitchToIndependent)) then {_sides pushBack independent;};
-    if(GVAR(SwitchToCivilian)) then {_sides pushBack civilian;};
+    if (GVAR(SwitchToWest)) then {_sides pushBack west;};
+    if (GVAR(SwitchToEast)) then {_sides pushBack east;};
+    if (GVAR(SwitchToIndependent)) then {_sides pushBack independent;};
+    if (GVAR(SwitchToCivilian)) then {_sides pushBack civilian;};
 
     if (_player getVariable ["ACE_CanSwitchUnits", false]) then {
         [_player, _sides] call FUNC(initPlayer);

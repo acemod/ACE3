@@ -1,0 +1,15 @@
+---
+layout: null
+---
+[
+{% assign sortedPages = site.pages | sort: "title" %}
+{% for curPage in sortedPages %}{% if curPage.parent == "wiki" %}
+    {
+        "title"         : "{{curPage.title | escape}}",
+        "group"         : "{{curPage.group | escape}}",
+        "description"   : "{{curPage.description | escape}}",
+        "url"           : "{{site.baseurl}}{{curPage.url}}",
+        "content"       : "{{ curPage.content | strip_html | strip_newlines | replace:'\',' ' | escape | downcase }}"
+    }{% unless forloop.last %},{% endunless %}
+{% endif %}{% endfor %}
+]

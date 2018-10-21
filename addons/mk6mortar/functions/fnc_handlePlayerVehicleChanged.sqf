@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles player getting into new vehicle.  Loads PFEG for mortar display if it is a mortar.
@@ -7,14 +8,13 @@
  * 1: New Vehicle <OBJECT>
  *
  * Return Value:
- * No
+ * None
  *
  * Example:
  * [bob, mortar] call ace_mk6mortar_fnc_handlePlayerVehicleChanged;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player", "_newVehicle"];
 
@@ -45,19 +45,18 @@ if (_lastFireMode != -1) then {
 };
 
 [{
-    private["_chargeText", "_currentChargeMode", "_currentFireMode", "_display", "_elevDeg", "_elevationDiff", "_lookVector", "_notGunnerView", "_realAzimuth", "_realElevation", "_upVectorDir", "_useMils", "_weaponDir"];
-    PARAMS_2(_args,_pfID);
-    EXPLODE_2_PVT(_args,_mortarVeh,_fireModes);
+    params ["_args", "_pfID"];
+    _args params ["_mortarVeh", "_fireModes"];
 
     if ((vehicle ACE_player) != _mortarVeh) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
     } else {
 
-        _useMils = _mortarVeh getVariable [QGVAR(useMils), true];
+        private _useMils = _mortarVeh getVariable [QGVAR(useMils), true];
 
         //Compute: 'charge' from weaponstate
-        _currentFireMode = (weaponState [_mortarVeh, [0]]) select 2;
-        _currentChargeMode = _fireModes find _currentFireMode;
+        private _currentFireMode = (weaponState [_mortarVeh, [0]]) select 2;
+        private _currentChargeMode = _fireModes find _currentFireMode;
 
         //Save firemode on vehicle:
         _mortarVeh setVariable [QGVAR(lastFireMode), _currentChargeMode];
@@ -68,29 +67,41 @@ if (_lastFireMode != -1) then {
             [parseText "Computer Disabled"] call EFUNC(common,displayTextStructured);
         };
 
-        _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
+        private _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
         if (isNull _display) exitWith {}; //It may be null for the first frame
 
-        _chargeText = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QPATHTOF(UI\ui_charges.paa)];
+        private _chargeText = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QPATHTOF(UI\ui_charges.paa)];
 
         //Hud should hidden in 3rd person
-        _notGunnerView = cameraView != "GUNNER";
+        private _notGunnerView = cameraView != "GUNNER";
 
         //Calc real azimuth/elevation
         //(looking at the sky VS looking at ground will radicaly change fire direction because BIS)
-        _realAzimuth = -1;
-        _realElevation = -1;
-        if ((ctrlText (_display displayCtrl 173)) == "--") then {
+        private _realAzimuth = -1;
+        private _realElevation = -1;
+
+        private _useRealWeaponDir = (ctrlText (_display displayCtrl 173)) == "--";
+        if (_useRealWeaponDir && {(_mortarVeh ammo (currentWeapon _mortarVeh)) == 0}) then {
+            // With no ammo, distance display will be empty, but gun will still fire at wonky angle if aimed at ground
+            private _testSeekerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
+            private _testSeekerDir = _testSeekerPosASL vectorFromTo (AGLtoASL (positionCameraToWorld [0,0,1]));
+            private _testPoint = _testSeekerPosASL vectorAdd (_testSeekerDir vectorMultiply viewDistance);
+            if ((terrainIntersectASL [_testSeekerPosASL, _testPoint]) || {lineIntersects [_testSeekerPosASL, _testPoint]}) then {
+                _useRealWeaponDir = false; // If we are not looking at infinity (based on viewDistance)
+            };
+        };
+
+        if (_useRealWeaponDir) then {
             //No range (looking at sky), it will follow weaponDir:
-            _weaponDir = _mortarVeh weaponDirection (currentWeapon _mortarVeh);
+            private _weaponDir = _mortarVeh weaponDirection (currentWeapon _mortarVeh);
             _realAzimuth = (_weaponDir select 0) atan2 (_weaponDir select 1);
             _realElevation = asin (_weaponDir select 2);
         } else {
             //Valid range, will fire at camera dir
-            _lookVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
+            private _lookVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
             _realAzimuth = ((_lookVector select 0) atan2 (_lookVector select 1));
-            _upVectorDir = (((vectorUp _mortarVeh) select 0) atan2 ((vectorUp _mortarVeh) select 1));
-            _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp _mortarVeh) select 2);
+            private _upVectorDir = (((vectorUp _mortarVeh) select 0) atan2 ((vectorUp _mortarVeh) select 1));
+            private _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp _mortarVeh) select 2);
             _realElevation = ((180 / PI) * (_mortarVeh animationPhase "mainGun")) + 75 - _elevationDiff;
         };
 
@@ -123,7 +134,7 @@ if (_lastFireMode != -1) then {
         if (_notGunnerView || (!GVAR(allowComputerRangefinder))) then {
             (_display displayCtrl 80176) ctrlSetText "";
         } else {
-            _elevDeg = parseNumber ctrlText (_display displayCtrl 176);
+            private _elevDeg = parseNumber ctrlText (_display displayCtrl 176);
             if (_elevDeg <= 0) then { //Bad data means "----" out of range
                 (_display displayCtrl 80176) ctrlSetText (ctrlText (_display displayCtrl 176));
             } else {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko, Ruthberg
  *
@@ -10,23 +11,23 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [coil, bob] call ace_concertina_wire_fnc_deploy
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
-PARAMS_2(_wirecoil,_unit);
+params ["_wirecoil", "_unit"];
 
-private ["_wireNoGeo", "_dir", "_pos", "_wireNoGeoPos"];
-
-_wireNoGeo = "ACE_ConcertinaWireNoGeo" createVehicle [0,0,0];
+private _wireNoGeo = "ACE_ConcertinaWireNoGeo" createVehicle [0,0,0];
 {
     _wireNoGeo animate [_x, 1];
 } count WIRE_FAST;
 
 GVAR(placer) = _unit;
-_dir = getDir _unit;
-_pos = getPosASL _unit;
-_wireNoGeoPos = _pos vectorAdd [1.1 * sin(_dir), 1.1 * cos(_dir), 0];
+private _dir = getDir _unit;
+private _pos = getPosASL _unit;
+private _wireNoGeoPos = _pos vectorAdd [1.1 * sin(_dir), 1.1 * cos(_dir), 0];
 
 _wireNoGeo setDir _dir;
 _wireNoGeo setPosASL _wireNoGeoPos;
@@ -39,16 +40,15 @@ GVAR(deployPFH) = [{
     params ["_args", "_idPFH"];
     _args params ["_wireNoGeo", "_wireNoGeoPos", "_unit"];
 
-    private ["_range", "_posStart", "_posEnd", "_dirVect", "_dir", "_anim", "_wire"];
-    _posStart = (_wireNoGeo modelToWorldVisual (_wireNoGeo selectionPosition "start")) call EFUNC(common,positionToASL);
-    _posEnd = (getPosASL _unit) vectorAdd (vectorDir _unit);
-    _dirVect = _posStart vectorDiff _posEnd;
-    _dir = _dirVect call CBA_fnc_vectDir;
-    _range = vectorMagnitude _dirVect;
-    _anim = 0 max (1 - (_range / 12));
+    private _posStart = (_wireNoGeo modelToWorldVisual (_wireNoGeo selectionPosition "start")) call EFUNC(common,positionToASL);
+    private _posEnd = (getPosASL _unit) vectorAdd (vectorDir _unit);
+    private _dirVect = _posStart vectorDiff _posEnd;
+    private _dir = _dirVect call CBA_fnc_vectDir;
+    private _range = vectorMagnitude _dirVect;
+    private _anim = 0 max (1 - (_range / 12));
 
     if (!(alive _unit) || _range >= 12 || (_unit getVariable [QGVAR(wireDeployed), false])) exitWith {
-        _wire = "ACE_ConcertinaWire" createvehicle [0, 0, 0];
+        private _wire = "ACE_ConcertinaWire" createvehicle [0, 0, 0];
         {
             _wire animate [_x, _anim];
         } count WIRE_FAST;
@@ -65,6 +65,7 @@ GVAR(deployPFH) = [{
         }, 0, [_wireNoGeo, _wire, _anim, _dir, _wireNoGeoPos]] call CBA_fnc_addPerFrameHandler;
 
         [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(Common,removeActionEventHandler);
+        [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
         call EFUNC(interaction,hideMouseHint);
 
         [_idPFH] call CBA_fnc_removePerFrameHandler;
@@ -77,6 +78,8 @@ GVAR(deployPFH) = [{
 }, 0, [_wireNoGeo, _wireNoGeoPos, _unit]] call CBA_fnc_addPerFrameHandler;
 
 [localize "STR_ACE_ROLLWIRE", "", ""] call EFUNC(interaction,showMouseHint);
+
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 GVAR(placer) setVariable [QGVAR(Deploy),
     [GVAR(placer), "DefaultAction",

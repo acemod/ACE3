@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all gun column input fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_gun
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ctrlSetText [1000, GVAR(workingMemory) select 0];
 if (GVAR(currentUnit) != 2) then {
@@ -24,7 +24,7 @@ if (GVAR(currentUnit) != 2) then {
 if (GVAR(currentUnit) != 2) then {
     ctrlSetText [110, Str(Round((GVAR(workingMemory) select 12) * 15.4323584))];
 } else {
-    ctrlSetText [110, Str(Round(GVAR(workingMemory) select 12))];
+    ctrlSetText [110, Str(Round((GVAR(workingMemory) select 12) * 10) / 10)];
 };
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     ctrlSetText [120, Str(Round((GVAR(workingMemory) select 15) * 1000) / 1000)];

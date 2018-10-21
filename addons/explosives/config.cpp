@@ -8,27 +8,38 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Garth 'L-H' de Wet"};
+        authors[] = {"Garth 'L-H' de Wet", "mharis001"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "ACE_Settings.hpp"
-
 #include "CfgEventHandlers.hpp"
-
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgCloudlets.hpp"
 
 #include "ACE_Triggers.hpp"
+#include "ACE_Arsenal_Stats.hpp"
+
+// UI stuff
+class RscText;
+class RscEdit;
+class RscPicture;
+class RscButton;
+class ctrlXSliderH;
 #include "ExplosivesUI.hpp"
+#include "TimerDialog.hpp"
 #include "GUI_VirtualAmmo.hpp"
 
 class CfgActions {
     class None;
+    class ActivateMine: None {
+        show = 0;
+    };
     class Deactivate:None {
         show = 0;
     };
@@ -43,9 +54,4 @@ class CfgMineTriggers {
         mineMagnetic = 1;
         mineTriggerRange = 1;
     };
-};
-
-class ACE_newEvents {
-    clientRequestsOrientations = QGVAR(sendOrientations);
-    serverSendsOrientations = QGVAR(orientationsSent);
 };

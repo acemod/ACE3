@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Authors: Ruthberg
  * Updates the ammo and weapon class names
@@ -13,21 +14,19 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-private ["_unit", "_ammoClass", "_magazineClass", "_weaponClass", "_ammo", "_ammoConfig", "_parentClasses"];
-_unit = _this;
+private _unit = _this;
 
-_ammoClass = "";
-_magazineClass = "";
-_weaponClass = primaryWeapon _unit;
+private _ammoClass = "";
+private _magazineClass = "";
+private _weaponClass = primaryWeapon _unit;
 
-if (_weaponClass == "") exitWith { (GVAR(ammoClass) != "" && GVAR(magazineClass) != "" && GVAR(weaponClass) != "") }; 
+if (_weaponClass == "") exitWith { (GVAR(ammoClass) != "" && GVAR(magazineClass) != "" && GVAR(weaponClass) != "") };
 
 {
-    _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
-    _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
-    _parentClasses = [_ammoConfig, true] call BIS_fnc_returnParents;
+    private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
+    private _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
+    private _parentClasses = [_ammoConfig, true] call BIS_fnc_returnParents;
     if ("BulletBase" in _parentClasses) exitWith {
         _ammoClass = _ammo;
         _magazineClass = _x;
@@ -37,10 +36,14 @@ if (_weaponClass == "") exitWith { (GVAR(ammoClass) != "" && GVAR(magazineClass)
 if (_ammoClass == "") exitWith { (GVAR(ammoClass) != "" && GVAR(magazineClass) != "" && GVAR(weaponClass) != "") };
 
 if (_unit == ACE_player) then {
+    GVAR(zeroRange)     = [_unit] call EFUNC(scopes,getCurrentZeroRange);
+    GVAR(boreHeight)    = [_unit, 0] call EFUNC(scopes,getBoreHeight);
     GVAR(ammoClass)     = _ammoClass;
     GVAR(magazineClass) = _magazineClass;
     GVAR(weaponClass)   = _weaponClass;
 } else {
+    GVAR(zeroRangeCopy)     = [_unit] call EFUNC(scopes,getCurrentZeroRange);
+    GVAR(boreHeightCopy)    = [_unit, 0] call EFUNC(scopes,getBoreHeight);
     GVAR(ammoClassCopy)     = _ammoClass;
     GVAR(magazineClassCopy) = _magazineClass;
     GVAR(weaponClassCopy)   = _weaponClass;

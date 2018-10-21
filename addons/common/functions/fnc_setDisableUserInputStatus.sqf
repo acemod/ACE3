@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Disables the user input. Works stacked.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["id", true] call ace_common_fnc_setDisableUserInputStatus
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_id", "_disable"];
 

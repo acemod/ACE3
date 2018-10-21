@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * handle Litter Create
@@ -10,14 +11,15 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["litter", [2, 5, 6], bob] call ACE_medical_fnc_handleCreateLitter
+ *
  * Public: No
  */
-#include "script_component.hpp"
-
-if(!hasInterface) exitWith { false };
 
 params ["_litterClass", "_position", "_direction"];
-private["_litterObject", "_maxLitterCount"];
+TRACE_3("params",_litterClass,_position,_direction);
+
 //IGNORE_PRIVATE_WARNING(_values);
 
 if (isNil QGVAR(allCreatedLitter)) then {
@@ -25,17 +27,22 @@ if (isNil QGVAR(allCreatedLitter)) then {
     GVAR(litterPFHRunning) = false;
 };
 
-_litterObject = _litterClass createVehicleLocal _position;
+private _p3dFile = getText (configFile >> "CfgVehicles" >> _litterClass >> "model");
+if (_p3dFile == "") exitWith {TRACE_2("no model",_litterClass,_p3dFile)};
+// createSimpleObject expects a path without the leading slash
+if ((_p3dFile select [0,1]) == "\") then {_p3dFile = _p3dFile select [1];};
+
+private _litterObject = createSimpleObject [_p3dFile, [0,0,0]];
+TRACE_2("created",_litterClass,_litterObject);
 _litterObject setDir _direction;
 _litterObject setPosATL _position;
 // Move the litter next frame to get rid of HORRIBLE spacing, fixes #1112
 [{ params ["_object", "_pos"]; _object setPosATL _pos; }, [_litterObject, _position]] call CBA_fnc_execNextFrame;
 
-_maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail);
-if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
+private _maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail);
+if ((count GVAR(allCreatedLitter)) > _maxLitterCount) then {
     // gank the first litter object, and spawn ours.
-    private["_oldLitter"];
-    _oldLitter = GVAR(allCreatedLitter) deleteAt 0;
+    private _oldLitter = GVAR(allCreatedLitter) deleteAt 0;
     {
         deleteVehicle _x;
     } forEach (_oldLitter select 1);

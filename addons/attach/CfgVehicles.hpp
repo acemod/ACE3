@@ -5,22 +5,18 @@
             class GVAR(AttachVehicle) { \
                 displayName = CSTRING(AttachDetach); \
                 condition = QUOTE(_this call FUNC(canAttach)); \
-                insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions)); \
-                exceptions[] = {}; \
+                insertChildren = QUOTE(_this call FUNC(getChildrenActions)); \
+                exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
-                priority = 0; \
                 icon = QPATHTOF(UI\attach_ca.paa); \
-                distance = 4.5; \
             }; \
             class GVAR(DetachVehicle) { \
                 displayName = CSTRING(Detach); \
                 condition = QUOTE(_this call FUNC(canDetach)); \
                 statement = QUOTE(_this call FUNC(detach) ); \
-                exceptions[] = {}; \
+                exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
-                priority = 0.1; \
                 icon = QPATHTOF(UI\detach_ca.paa); \
-                distance = 4.5; \
             }; \
         }; \
     };
@@ -56,19 +52,17 @@ class CfgVehicles {
                 class GVAR(Attach) {
                     displayName = CSTRING(AttachDetach);
                     condition = QUOTE(_this call FUNC(canAttach));
-                    insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions));
-                    exceptions[] = {"isNotDragging"};
+                    insertChildren = QUOTE(_this call FUNC(getChildrenActions));
+                    exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
-                    priority = 5;
                     icon = QPATHTOF(UI\attach_ca.paa);
                 };
                 class GVAR(Detach) {
                     displayName = CSTRING(Detach);
                     condition = QUOTE(_this call FUNC(canDetach));
                     statement = QUOTE(_this call FUNC(detach));
-                    exceptions[] = {"isNotDragging"};
+                    exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
-                    priority = 5;
                     icon = QPATHTOF(UI\detach_ca.paa);
                 };
             };

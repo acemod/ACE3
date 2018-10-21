@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Checks if the unit can pardon the target.
@@ -9,9 +10,11 @@
  * Return Value:
  * Unit can pardon target <BOOL>
  *
+ * Example:
+ * [bob, kevin] call ACE_interaction_fnc_canPardon
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 

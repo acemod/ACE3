@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  *
@@ -10,28 +11,24 @@
  * Return Value:
  * muzzle velocity shift - m/s <NUMBER>
  *
+ * Example:
+ * [[], 5] call ace_advanced_ballistics_fnc_calcilateAmmoTemperatureVelocityShift
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
-private ["_muzzleVelocityShiftTableUpperLimit", "_temperatureIndexFunction",
-    "_temperatureIndexA", "_temperatureIndexB", "_interpolationRatio"];
-params["_muzzleVelocityShiftTable", "_temperature"];
+params ["_muzzleVelocityShiftTable", "_temperature"];
 
-// Check if muzzleVelocityShiftTable is Less Than 11 Entrys
+// Check if muzzleVelocityShiftTable is less than 11 Entrys
 if ((count _muzzleVelocityShiftTable) < 11) exitWith {0};
-_muzzleVelocityShiftTableUpperLimit = _muzzleVelocityShiftTable select 10;
-if (isNil "_muzzleVelocityShiftTableUpperLimit") exitWith { 0 };
+private _muzzleVelocityShiftTableUpperLimit = _muzzleVelocityShiftTable select 10;
+if (isNil "_muzzleVelocityShiftTableUpperLimit") exitWith {0};
 
 // Find exact data index required for given temperature
-_temperatureIndexFunction = (_temperature + 15) / 5;
+private _temperatureIndexFunction = 0 max ((_temperature + 15) / 5) min 10;
 
-// lower and upper data index used for interpolation
-_temperatureIndexA = (0 max (floor(_temperatureIndexFunction))) min 10;
-_temperatureIndexB = (0 max (ceil(_temperatureIndexFunction))) min 10;
+// Lower and upper data index used for interpolation
+private _temperatureIndexA = floor(_temperatureIndexFunction);
+private _temperatureIndexB = ceil(_temperatureIndexFunction);
 
-// Interpolation ratio
-_interpolationRatio = _temperatureIndexFunction - floor(_temperatureIndexFunction);
-
-// Interpolation
-(_muzzleVelocityShiftTable select _temperatureIndexA) * (1 - _interpolationRatio) + (_muzzleVelocityShiftTable select _temperatureIndexB) * _interpolationRatio // Return
+linearConversion [_temperatureIndexA, _temperatureIndexB, _temperatureIndexFunction, _muzzleVelocityShiftTable select _temperatureIndexA, _muzzleVelocityShiftTable select _temperatureIndexB, true] // Return

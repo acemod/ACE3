@@ -55,6 +55,7 @@ class CfgAmmo {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.8496;
+        ACE_muzzleVelocityVariationSD=0.4;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.4};
         ACE_velocityBoundaries[]={};
@@ -163,6 +164,8 @@ class CfgAmmo {
         ace_frag_force = 1;
     };
     class rhs_ammo_rgn: rhs_ammo_rgn_base {
+        // RGN is scripted grenade that deletes itself, which will break advanced throwing, replace with it's base
+        ace_advanced_throwing_replaceWith = "rhs_ammo_rgn_base";
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
@@ -211,7 +214,7 @@ class CfgAmmo {
     class rhs_g_vg40sz: rhs_g_vog25 { //Flashbang
         ace_frag_force = 0;
     };
-    class rhs_GDM40: rhs_g_vog25 { //Smoke
+    class rhs_g_gdm40: rhs_g_vog25 { //Smoke
         ace_frag_force = 0;
     };
     class rhs_g_vg40md_white: rhs_g_vog25 { //Smoke

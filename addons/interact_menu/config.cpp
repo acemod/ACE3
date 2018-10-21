@@ -25,9 +25,3 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_break_line", "ace_parse_imagepath"};
 };
-
-class ACE_newEvents {
-    interactMenuOpened = "ace_interactMenuOpened";
-    clearConditionCaches = QGVAR(clearConditionCaches);
-    interactMenuClosed = "ace_interactMenuClosed";
-};

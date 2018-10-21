@@ -1,46 +1,56 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the result input and output fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_result
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_wind2", "_windageRel", "_windageCur", "_lead", "_clickSize", "_clickNumber", "_clickInterval"];
-_elevationAbs = GVAR(elevationOutput) select GVAR(currentTarget);
-_windageAbs = GVAR(windage1Output) select GVAR(currentTarget);
+private _elevationAbs = GVAR(elevationOutput) select GVAR(currentTarget);
+private _elevationRel = 0;
+private _elevationCur = 0;
+private _windageAbs = GVAR(windage1Output) select GVAR(currentTarget);
+private _windageRel = 0;
+private _windageCur = 0;
 
-_wind2 = GVAR(windage2Output) select GVAR(currentTarget);
+private _wind2 = GVAR(windage2Output) select GVAR(currentTarget);
 
-_elevationCur = GVAR(workingMemory) select 10;
-_windageCur = GVAR(workingMemory) select 11;
+if (GVAR(showCoriolis)) then {
+    _elevationRel = GVAR(verticalCoriolisOutput) select GVAR(currentTarget);
+    _windageRel = GVAR(horizontalCoriolisOutput) select GVAR(currentTarget);
 
-_elevationRel = _elevationAbs - _elevationCur;
-_windageRel = _windageAbs - _windageCur;
+    _windageCur = GVAR(spinDriftOutput) select GVAR(currentTarget);
+} else {
+    _elevationCur = GVAR(workingMemory) select 10;
+    _windageCur = GVAR(workingMemory) select 11;
 
-_lead = GVAR(leadOutput) select GVAR(currentTarget);
+    _elevationRel = _elevationAbs - _elevationCur;
+    _windageRel = _windageAbs - _windageCur;
+};
+
+private _lead = GVAR(leadOutput) select GVAR(currentTarget);
 
 switch (GVAR(currentScopeUnit)) do {
     case 0: {
-        _elevationAbs = _elevationAbs / 3.38;
-        _windageAbs = _windageAbs / 3.38;
+        _elevationAbs = MOA_TO_MRAD(_elevationAbs);
+        _windageAbs = MOA_TO_MRAD(_windageAbs);
 
-        _wind2 = _wind2 / 3.38;
+        _wind2 = MOA_TO_MRAD(_wind2);
 
-        _elevationRel = _elevationRel / 3.38;
-        _windageRel = _windageRel / 3.38;
+        _elevationRel = MOA_TO_MRAD(_elevationRel);
+        _windageRel = MOA_TO_MRAD(_windageRel);
 
-        _elevationCur = _elevationCur / 3.38;
-        _windageCur = _windageCur / 3.38;
+        _elevationCur = MOA_TO_MRAD(_elevationCur);
+        _windageCur = MOA_TO_MRAD(_windageCur);
     };
     case 2: {
         _elevationAbs = _elevationAbs * 1.047;
@@ -55,13 +65,9 @@ switch (GVAR(currentScopeUnit)) do {
         _windageCur = _windageCur * 1.047;
     };
     case 3: {
-        switch (GVAR(workingMemory) select 7) do {
-            case 0: { _clickSize = 1; };
-            case 1: { _clickSize = 1 / 1.047; };
-            case 2: { _clickSize = 3.38; };
-        };
-        _clickNumber = GVAR(workingMemory) select 8;
-        _clickInterval = _clickSize / _clickNumber;
+        private _clickSize = [1, 1 / 1.047, MRAD_TO_MOA(1)] select (GVAR(workingMemory) select 7);
+        private _clickNumber = GVAR(workingMemory) select 8;
+        private _clickInterval = _clickSize / _clickNumber;
 
         _elevationAbs = Round(_elevationAbs / _clickInterval);
         _windageAbs = Round(_windageAbs / _clickInterval);

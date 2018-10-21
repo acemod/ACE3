@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Checks the conditions for being able switch surrender states
@@ -14,13 +15,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-private "_returnValue";
 
 params ["_unit", "_newSurrenderState"];
 
-_returnValue = if (_newSurrenderState) then {
+private _returnValue = if (_newSurrenderState) then {
     //no weapon equiped AND not currently surrendering and
     GVAR(allowSurrender) && {(currentWeapon _unit) == ""} && {!(_unit getVariable [QGVAR(isSurrendering), false])}
 } else {

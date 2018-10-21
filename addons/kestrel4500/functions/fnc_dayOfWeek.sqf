@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculate Current Day in the Week
@@ -15,11 +16,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-private "_table";
 params ["_year", "_month", "_day"];
 
-_table = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
+private _table = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
 if (_month < 3) then {
     _year = _year - 1;
 };

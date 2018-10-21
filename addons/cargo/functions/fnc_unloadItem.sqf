@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, ViperMaul
  * Unload object from vehicle.
@@ -5,24 +6,22 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
+ * 2: Unloader <OBJECT> (default: objNull)
  *
  * Return Value:
- * Object unloaded <BOOL>
+ * Object was unloaded <BOOL>
  *
  * Example:
  * [object, vehicle] call ace_cargo_fnc_unloadItem
  *
- * Public: No
+ * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_item", "_vehicle", ["_unloader", objNull]];
 TRACE_3("params",_item,_vehicle,_unloader);
 
-private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
-
 //This covers testing vehicle stability and finding a safe position
-private _emptyPosAGL = [_vehicle, _itemClass, _unloader] call EFUNC(common,findUnloadPosition);
+private _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
 TRACE_1("findUnloadPosition",_emptyPosAGL);
 
 if ((count _emptyPosAGL) != 3) exitWith {
@@ -37,7 +36,7 @@ if ((count _emptyPosAGL) != 3) exitWith {
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
 if !(_item in _loaded) exitWith {
-    ACE_LOGERROR_3("Tried to unload item [%1] not in vehicle[%2] cargo[%3]", _item, _vehicle, _loaded);
+    ERROR_3("Tried to unload item [%1] not in vehicle[%2] cargo[%3]", _item, _vehicle, _loaded);
     false
 };
 
@@ -54,7 +53,7 @@ if (_item isEqualType objNull) then {
     // do both on server to ensure they are executed in the correct order
     [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
 } else {
-    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
+    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);
 };
 

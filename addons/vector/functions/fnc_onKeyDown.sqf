@@ -1,11 +1,19 @@
-/*
-
-by commy2
-
-Handles pressing the special vector keys.
-
-*/
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ * Handles pressing the special vector keys.
+ *
+ * Arguments:
+ * 0: String <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["azimuth"] call ace_vector_fnc_onKeyDown
+ *
+ * Public: No
+ */
 
 // set vector config settings
 switch (GVAR(modeReticle)) do {
@@ -23,8 +31,7 @@ switch (GVAR(modeReticle)) do {
     };
 };
 
-private "_fnc_setPFH";
-_fnc_setPFH = {
+private _fnc_setPFH = {
     if (GVAR(holdKeyHandler) > -1) then {
         [GVAR(holdKeyHandler)] call CBA_fnc_removePerFrameHandler;
         GVAR(holdKeyHandler) = -1;

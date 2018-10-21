@@ -1,9 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: Norrin, Rocko
  * Handles the HuntIR monitor key interaction
  *
  * Arguments:
- * 0: ?
+ * 0: ? <UNKNOWN>
  * 1: keycode <NUMBER>
  *
  * Return Value:
@@ -14,10 +15,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-private ["_ret"];
-_ret = false;
+private _ret = false;
 
 switch (_this select 1) do {
     // A = Lower zoom level

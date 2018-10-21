@@ -4,7 +4,7 @@
 class CfgLocationTypes {
     class ACE_HashLocation {
         color[] = {0,0,0,0};
-        drawStyle = "bananas";
+        drawStyle = "WARNING-ACE_HashLocation_is_deprecated"; // Replaced by CBA_fnc_createNamespace
         font = "RobotoCondensed";
         importance = 5;
         name = "HashLocation";

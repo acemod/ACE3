@@ -1,7 +1,5 @@
-class CfgFontFamilies
-{
-    class PixelSplitterBold
-    {
+class CfgFontFamilies {
+    class PixelSplitterBold {
         fonts[] = { QPATHTOF(PixelSplitterBold\PixelSplitterBold6),
                     QPATHTOF(PixelSplitterBold\PixelSplitterBold7),
                     QPATHTOF(PixelSplitterBold\PixelSplitterBold8),

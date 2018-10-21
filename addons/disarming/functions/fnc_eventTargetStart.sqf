@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -10,20 +11,17 @@
  * 2: type of disarm <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * eventTargetStart
+ * [bob, kevin, "disarm"] call ace_disarming_fnc_eventTargetStart
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_listOfObjectsToRemove"];
 
-private "_itemsToAdd";
-
-_itemsToAdd = [];
+private _itemsToAdd = [];
 {
     if (_x == (uniform _target)) then {
         _itemsToAdd = _itemsToAdd + (uniformItems _target);

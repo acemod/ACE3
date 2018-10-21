@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Displays the patient information for given unit.
@@ -7,13 +8,14 @@
  * 1: Show <BOOL> (default: true)
  * 2: Selection <NUMBER> (default: 0)
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true, 2] call ACE_medical_fnc_displayPatientInformation
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MAX_DISTANCE 10
 
 // Exit for basic medical
@@ -28,7 +30,6 @@ if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 
     [{
-        private ["_target", "_display", "_alphaLevel", "_damaged", "_availableSelections", "_openWounds", "_selectionBloodLoss", "_red", "_green", "_blue", "_alphaLevel", "_allInjuryTexts", "_lbCtrl", "_genericMessages"];
         params ["_args", "_idPFH"];
         _args params ["_target", "_selectionN"];
 
@@ -68,12 +69,11 @@ if (_show) then {
         };
 
         private _totalIvVolume = 0;
+        private _bloodBags = _target getVariable [QGVAR(ivBags), []];
         {
-            private _value = _target getVariable _x;
-            if !(isnil "_value") then {
-                _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
-            };
-        } foreach GVAR(IVBags);
+            _x params ["_bagVolumeRemaining"];
+            _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;
+        } foreach _bloodBags;
 
         if (_totalIvVolume >= 1) then {
             _genericMessages pushback [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];

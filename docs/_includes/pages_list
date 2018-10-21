@@ -1,0 +1,12 @@
+{% for node in pages_list %}
+    {% if node.mod == mod and node.group == group %}
+        {% if page.url == node.url or (page.parent != null and node.short == page.parent) %}
+            <li class="active"><a href="{{ site.baseurl }}{{node.url}}" class="active">{{node.title}}</a></li>
+        {% else %}
+            <li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+{% assign pages_list = nil %}
+{% assign mod = nil %}
+{% assign group = nil %}

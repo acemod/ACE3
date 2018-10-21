@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {"ACE_EarPlugs"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interaction", "A3_Characters_F", "A3_Characters_F_Kart"};
+        requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"KoffeinFlummi", "esteldunedain", "HopeJ", "commy2", "Rocko", "Rommel", "Ruthberg"};
         url = ECSTRING(main,URL);
@@ -20,3 +20,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
 #include "ACE_Settings.hpp"
+#include "ACE_Arsenal_Stats.hpp"

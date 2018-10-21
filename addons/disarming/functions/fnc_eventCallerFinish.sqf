@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -16,11 +17,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_errorMsg"];
 
 if (_caller != ACE_player) exitWith {};
 
 systemChat format ["Debug-Caller: Disarm finished from [%1] with code [%2]", _target, _errorMsg];
-ACE_LOGINFO_2("%1 - eventCallerFinish: %2",CBA_missionTime,_this);
+INFO_2("%1 - eventCallerFinish: %2",CBA_missionTime,_this);

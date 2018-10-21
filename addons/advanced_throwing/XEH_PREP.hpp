@@ -1,0 +1,17 @@
+PREP(canPrepare);
+PREP(canThrow);
+PREP(drawArc);
+PREP(drawThrowable);
+PREP(exitThrowMode);
+PREP(getMuzzle);
+PREP(moduleInit);
+PREP(onKeyDown);
+PREP(onMouseButtonDown);
+PREP(onMouseScroll);
+PREP(pickUp);
+PREP(prepare);
+PREP(prime);
+PREP(renderPickUpInteraction);
+PREP(throw);
+PREP(throwFiredXEH);
+PREP(updateControlsHint);

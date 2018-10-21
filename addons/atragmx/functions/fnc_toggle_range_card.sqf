@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the range card screen on/off
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_toggle_range_card
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (ctrlVisible 5006) then {
     false call FUNC(show_range_card);

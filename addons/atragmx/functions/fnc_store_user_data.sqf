@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Saves user data into profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_store_user_data
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 profileNamespace setVariable ["ACE_ATragMX_profileNamespaceVersion", ATRAGMX_PROFILE_NAMESPACE_VERSION];
 
@@ -28,6 +28,7 @@ profileNamespace setVariable ["ACE_ATragMX_barometricPressure", GVAR(barometricP
 profileNamespace setVariable ["ACE_ATragMX_relativeHumidity", GVAR(relativeHumidity)];
 
 profileNamespace setVariable ["ACE_ATragMX_showWind2", GVAR(showWind2)];
+profileNamespace setVariable ["ACE_ATragMX_showCoriolis", GVAR(showCoriolis)];
 profileNamespace setVariable ["ACE_ATragMX_latitude", GVAR(latitude)];
 profileNamespace setVariable ["ACE_ATragMX_directionOfFire", GVAR(directionOfFire)];
 profileNamespace setVariable ["ACE_ATragMX_windSpeed1", GVAR(windSpeed1)];

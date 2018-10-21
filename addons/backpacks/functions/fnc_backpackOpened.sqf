@@ -1,18 +1,21 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Someone opened your backpack. Play sound and camshake. Execute locally.
  *
  * Arguments:
- * 0: Who accessed your inventory? (Object)
- * 1: Unit that wields the backpack (Object)
- * 2: The backpack object (Object)
+ * 0: Who accessed your inventory? <Object>
+ * 1: Unit that wields the backpack <Object>
+ * 2: The backpack object <Object>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, backpack] call ace_backpacks_fnc_backpackOpened
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_backpack"];
 

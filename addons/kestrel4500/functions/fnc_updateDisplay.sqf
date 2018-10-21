@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the Kestrel 4500 dialog text boxes.
@@ -12,15 +13,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "Kestrel4500_Display")
 #define __ctrlCenterLine3 (__dsp displayCtrl 74602)
 #define __ctrlCenterLine4 (__dsp displayCtrl 74603)
 
-private ["_outputData"];
-
-_outputData = [] call FUNC(generateOutputData);
+private _outputData = [] call FUNC(generateOutputData);
 
 {
     ctrlSetText [_x , _outputData select _forEachIndex];

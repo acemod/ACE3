@@ -1,0 +1,29 @@
+.article-list {
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    header {
+
+        h1 {
+            font-size: rem-calc(24);
+        }
+    }
+}
+
+article {
+
+    header {
+        margin-bottom: 0.5rem;
+
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+
+    .meta {
+        font-size: 0.9em;
+    }
+
+}

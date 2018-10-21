@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the double tapping either of the 2 mini-maps
@@ -16,16 +17,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_theMap", "_mouseButton", "_xPos", "_yPos"];
-
-private ["_worldPos"];
 
 //Only handle LMB
 if (_mouseButton != 0) exitWith {};
 
-_worldPos = _theMap ctrlMapScreenToWorld [_xPos, _yPos];
+private _worldPos = _theMap ctrlMapScreenToWorld [_xPos, _yPos];
 _worldPos pushBack (getTerrainHeightASL _worldPos);
 
 GVAR(newWaypointPosition) = _worldPos;

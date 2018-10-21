@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows/Hides the range card setup controls
@@ -6,14 +7,13 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_show_range_card_setup
+ * false call ace_atragmx_fnc_show_range_card_setup
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(showRangeCardSetup) = _this;
 

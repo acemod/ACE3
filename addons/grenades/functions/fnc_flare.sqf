@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Makes flare shine.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_projectile", "_color", "_intensity", "_timeToLive"];
 
@@ -36,4 +36,4 @@ _light setLightDayLight true;
 _light lightAttachObject [_projectile, [0,0,0]];
 //_light attachTo [_projectile, [0,0,0]];
 
-[{deleteVehicle _this}, _light, _timeToLive, 1] call CBA_fnc_waitAndExecute;
+[{deleteVehicle _this}, _light, _timeToLive] call CBA_fnc_waitAndExecute;

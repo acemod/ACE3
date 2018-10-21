@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get players viewing direction and slope.
@@ -9,9 +10,11 @@
  * 0: Azimuth <NUMBER>
  * 1: Inclination <NUMBER>
  *
+ * Example:
+ * [] call ace_common_fnc_getTargetAzimuthAndInclination
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 private _position = ATLToASL positionCameraToWorld [0, 0, 0];
 private _direction = ATLToASL positionCameraToWorld [0, 0, 1];

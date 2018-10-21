@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Call and propegate a synced event
@@ -10,14 +11,16 @@
  * Return Value:
  * Boolean of success <BOOL>
  *
+ * Example:
+ * ["bob", [args], 5] call ace_common_fnc_syncedEvent
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name", "_args", ["_ttl", 0]];
 
-if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    ACE_LOGERROR_1("Synced event key [%1] not found (syncedEvent).", _name);
+if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+    ERROR_1("Synced event key [%1] not found (syncedEvent).", _name);
     false
 };
 

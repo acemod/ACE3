@@ -1,18 +1,18 @@
+#include "script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Creates the DAGR menu dialog
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "DAGR_MENU")
 #define __F1 266874
@@ -447,11 +447,10 @@ GVAR(menuRun) = true;
                     };
                 };
                 if (GVAR(F2)) then {
-                    private ["_grid", "_gridVector"];
-                    _grid = toArray GVAR(vectorGrid);
+                    private _grid = toArray GVAR(vectorGrid);
                     _grid deleteAt 4;
                     _grid = toString _grid;
-                    _gridVector = parseNumber _grid;
+                    private _gridVector = parseNumber _grid;
                     GVAR(digit1) = floor(_gridVector / 10000000);
                     GVAR(digit2) = floor(_gridVector / 1000000 - GVAR(digit1) *10);
                     GVAR(digit3) = floor(_gridVector / 100000 - GVAR(digit2) * 10 - GVAR(digit1) * 100);

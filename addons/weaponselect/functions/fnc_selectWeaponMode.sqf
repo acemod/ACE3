@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * The player will select the specified weapon or will change to the next firing mode if the weapon was already selected.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 
@@ -42,7 +42,7 @@ private _mode = _modes select _index;
 _index = 0;
 
 while {
-    _index < 100 && {currentMuzzle _unit != _muzzle || {currentWeaponMode _unit != _mode}}
+    _index < 299 && {currentMuzzle _unit != _muzzle || {currentWeaponMode _unit != _mode}}
 } do {
     _unit action ["SwitchWeapon", _unit, _unit, _index];
     _index = _index + 1;

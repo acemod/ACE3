@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows the Kestrel 4500 as rsc title
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "RscKestrel4500")
 #define __ctrlKestrel4500 (__dsp displayCtrl 75000)
@@ -62,8 +62,7 @@ GVAR(Overlay) = true;
     if (diag_tickTime > GVAR(updateTimer)) then {
         GVAR(updateTimer) = diag_tickTime + 1;
 
-        private ["_outputData"];
-        _outputData = [] call FUNC(generateOutputData);
+        private _outputData = [] call FUNC(generateOutputData);
 
         3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
         _outputData params [

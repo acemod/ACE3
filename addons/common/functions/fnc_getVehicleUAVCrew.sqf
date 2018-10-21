@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns array of uav dummy ais.
@@ -8,9 +9,11 @@
  * Return Value:
  * UAV Dummy Crew <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getVehicleUAVCrew
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_vehicle", objNull, [objNull]]];
 

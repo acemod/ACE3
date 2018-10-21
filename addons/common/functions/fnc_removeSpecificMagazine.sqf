@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Removes a magazine from the unit that has an specific ammo count
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "magazine", 5] call ace_common_fnc_removeSpecificMagazine
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_magazineType", "", [""]], ["_ammoCount", 0, [0]]];
 

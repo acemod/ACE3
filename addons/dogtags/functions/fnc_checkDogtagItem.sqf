@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Check dogtag self menu action
+ * Check dogtag self menu action.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -8,11 +9,13 @@
  * 2: Item class <STRING>
  *
  * Return Value:
- * Mone
+ * None
+ *
+ * Example:
+ * [player, unit, "itemClass"] call ace_dogtags_fnc_checkDogtagItem
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player", "_target", "_item"];
 

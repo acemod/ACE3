@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Updates the hearing protection and volume attenuation for player on earbuds/helmet change
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("params",_this);
 
@@ -29,8 +29,16 @@ GVAR(volumeAttenuation) = [1, GVAR(EarplugsVolume)] select _hasEarPlugsIn;
 
 // Handle Headgear
 if (headgear ACE_player != "") then {
-    private _protection = (getNumber (configFile >> "CfgWeapons" >> (headgear ACE_player) >> QGVAR(protection))) min 1;
+    private _protection = getNumber (configFile >> "CfgWeapons" >> headgear ACE_player >> QGVAR(protection)) min 1;
     GVAR(damageCoefficent) = GVAR(damageCoefficent) * (1 - _protection);
-    private _attenuation = (getNumber (configFile >> "CfgWeapons" >> (headgear ACE_player) >> QGVAR(lowerVolume))) min 1;
+    private _attenuation = getNumber (configFile >> "CfgWeapons" >> headgear ACE_player >> QGVAR(lowerVolume)) min 1;
+    GVAR(volumeAttenuation) = GVAR(volumeAttenuation) * (1 - _attenuation);
+};
+
+// Handle Goggles
+if (goggles ACE_player != "") then {
+    private _protection = getNumber (configFile >> "CfgGlasses" >> goggles ACE_player >> QGVAR(protection)) min 1;
+    GVAR(damageCoefficent) = GVAR(damageCoefficent) * (1 - _protection);
+    private _attenuation = getNumber (configFile >> "CfgGlasses" >> goggles ACE_player >> QGVAR(lowerVolume)) min 1;
     GVAR(volumeAttenuation) = GVAR(volumeAttenuation) * (1 - _attenuation);
 };

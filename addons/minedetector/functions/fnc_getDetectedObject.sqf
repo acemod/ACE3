@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the distance to the nearest detectable object
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_detectorConfig"];
 _detectorConfig params ["", "_radius"];
@@ -42,7 +41,7 @@ private _distance = -1;
     private _objectType = typeOf _x;
 
     _isDetectable = GVAR(detectableClasses) getVariable _objectType;
-    if (isNil "_isDetectable") then {
+    if (isNil "_isDetectable" || {(getModelInfo _x) select 0 == "empty.p3d"}) then {
         _isDetectable = false;
     };
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Remove a map marker creation event handler.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [5] call ace_common_fnc_removeMapMarkerCreatedEventHandler
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_id"];
 

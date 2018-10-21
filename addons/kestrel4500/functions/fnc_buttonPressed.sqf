@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Handles the Kestrel 4500 dialog button actions
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 switch (_this) do {
     case 0: { // Enter
@@ -103,8 +103,7 @@ switch (_this) do {
     case 6: { // Backlight
     };
     case 7: { // Exit
-        private ["_exit"];
-        _exit = true;
+        private _exit = true;
         if (GVAR(referenceHeadingMenu) == 1) then {
             GVAR(referenceHeadingMenu) = 0;
             _exit = false;

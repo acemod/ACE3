@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Update compatible info elements.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_fcs_fnc_updateRangeHUD
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 private _dlgRangefinder = uiNamespace getVariable ["ACE_dlgRangefinder", displayNull];

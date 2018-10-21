@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check in cfgPatches if modification is loaded
@@ -8,9 +9,11 @@
  * Return Value:
  * if modification is loaded <BOOL>
  *
+ * Example:
+ * ["class"] call ace_common_fnc_isModLoaded
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_modName", "", [""]]];
 

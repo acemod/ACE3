@@ -27,8 +27,25 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 [QGVAR(treatmentTourniquetLocal), DFUNC(treatmentTourniquetLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
-//Handle Deleting Bodies on Server:
-if (isServer) then {["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
+//Handle Deleting Bodies and creating litter on Server:
+if (isServer) then {
+    ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
+    [QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
+    addMissionEventHandler ["BuildingChanged", {
+        if (isNil QGVAR(allCreatedLitter)) exitWith {};
+        params ["_buildingOld", "_buildingNew", "_isRuin"];
+        TRACE_3("BuildingChanged",_buildingOld,_buildingNew,_isRuin);
+        private _radius = sizeOf typeOf _buildingOld / 2;
+        TRACE_1("",_radius);
+        {
+            _x params ["", "_objects"];
+            if (({(_x distance2d _buildingOld) < _radius && {getPos _x select 2 > 0.1}} count _objects) > 0) then {
+                GVAR(allCreatedLitter) deleteAt (GVAR(allCreatedLitter) find _x);
+                { TRACE_1("deleting",_x); deleteVehicle _x } forEach _objects;
+            };
+        } forEach (+GVAR(allCreatedLitter));
+    }];
+};
 
 ["ace_unconscious", {
     params ["_unit", "_status"];
@@ -52,10 +69,9 @@ if (isServer) then {["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc
 if (hasInterface) then {
 
 _fnc_createEffect = {
-    private "_effect";
     params ["_type", "_layer", "_default"];
 
-    _effect = ppEffectCreate [_type, _layer];
+    private _effect = ppEffectCreate [_type, _layer];
     _effect ppEffectForceInNVG true;
     _effect ppEffectAdjust _default;
     _effect ppEffectCommit 0;
@@ -105,7 +121,6 @@ GVAR(effectTimeBlood) = CBA_missionTime;
 
 // MAIN EFFECTS LOOP
 [{
-    private["_bleeding", "_blood"];
     // Zeus interface is open or player is dead; disable everything
     if (!(isNull curatorCamera) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
@@ -146,7 +161,7 @@ GVAR(effectTimeBlood) = CBA_missionTime;
         };
     };
 
-    _bleeding = [ACE_player] call FUNC(getBloodLoss);
+    private _bleeding = [ACE_player] call FUNC(getBloodLoss);
     // Bleeding Indicator
     if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < CBA_missionTime) then {
         GVAR(effectTimeBlood) = CBA_missionTime;
@@ -154,7 +169,7 @@ GVAR(effectTimeBlood) = CBA_missionTime;
     };
 
     // Blood Volume Effect
-    _blood = if (GVAR(level) < 2) then {
+    private _blood = if (GVAR(level) < 2) then {
         (ACE_player getVariable [QGVAR(bloodVolume), 100]) / 100;
     } else {
         (((ACE_player getVariable [QGVAR(bloodVolume), 100]) - 60) max 0) / 40;
@@ -175,14 +190,13 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 // HEARTRATE BASED EFFECTS
 [{
-    private["_heartRate", "_interval", "_minTime", "_sound", "_strength", "_pain"];
-    _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
-    _pain = ACE_player getVariable [QGVAR(pain), 0];
+    private _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
+    private _pain = ACE_player getVariable [QGVAR(pain), 0];
     if (GVAR(level) == 1) then {
         _heartRate = 60 + 40 * _pain;
     };
     if (_heartRate <= 0) exitWith {};
-    _interval = 60 / (_heartRate min 40);
+    private _interval = 60 / (_heartRate min 40);
 
     if ((ACE_player getVariable ["ACE_isUnconscious", false])) then {
         if (GVAR(painEffectType) == 1) then {
@@ -196,7 +210,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
             // Pain effect, no pain effect in zeus camera
             if (isNull curatorCamera) then {
-                _strength = ((_pain - (ACE_player getVariable [QGVAR(painSuppress), 0])) max 0) min 1;
+                private _strength = ((_pain - (ACE_player getVariable [QGVAR(painSuppress), 0])) max 0) min 1;
                 _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
                 if (GVAR(painEffectType) == 1) then {
                     GVAR(effectPainCC) ppEffectEnable false;
@@ -248,12 +262,12 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
     };
 
     if (GVAR(level) >= 2 && {_heartRate > 0}) then {
-        _minTime = 60 / _heartRate;
+        private _minTime = 60 / _heartRate;
         if (CBA_missionTime - GVAR(lastHeartBeatSound) > _minTime) then {
             GVAR(lastHeartBeatSound) = CBA_missionTime;
             // Heart rate sound effect
             if (_heartRate < 60) then {
-                _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));
+                private _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));
                 playSound _sound;
             } else {
                 if (_heartRate > 150) then {
@@ -267,9 +281,6 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 };
 
 ["ace_settingsInitialized", {
-    // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
-    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
-
     [
         {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
         {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
@@ -290,7 +301,13 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 if (hasInterface) then {
     ["ace_playerJIP", {
-        ACE_LOGINFO("JIP Medical init for player.");
+        INFO("JIP Medical init for player.");
         [player] call FUNC(init);
+    }] call CBA_fnc_addEventHandler;
+};
+
+if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+    [QEGVAR(arsenal,displayOpened), {
+        EGVAR(arsenal,virtualItems) set [17, (EGVAR(arsenal,virtualItems) select 17) -  ["FirstAidKit", "Medikit"]];
     }] call CBA_fnc_addEventHandler;
 };

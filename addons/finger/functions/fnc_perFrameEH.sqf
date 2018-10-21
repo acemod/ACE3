@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * The perFrameEventHandler to draw the icons
@@ -13,22 +14,21 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-if (!alive ACE_player) then {GVAR(fingersHash) = HASH_CREATE;};
+if (!alive ACE_player) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 // Conditions: canInteract
-if !([ACE_player, ACE_player, ["isNotInside"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = HASH_CREATE;};
+if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 // Make sure player is dismounted or in a static weapon:
-if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = HASH_CREATE;};
+if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 
 private _iconSize = BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
-{
-    private _data = HASH_GET(GVAR(fingersHash), _x);
-    _data params ["_lastTime", "_pos", "_name"];
+[+GVAR(fingersHash), {
+    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
+    _value params ["_lastTime", "_pos", "_name"];
     private _timeLeftToShow = _lastTime + FP_TIMEOUT - diag_tickTime;
     if (_timeLeftToShow <= 0) then {
-        HASH_REM(GVAR(fingersHash), _x);
+        [GVAR(fingersHash), _key] call CBA_fnc_hashRem;
     } else {
         private _drawColor = + GVAR(indicatorColor);
         // Fade out:
@@ -36,9 +36,10 @@ private _iconSize = BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
         drawIcon3D [QPATHTOF(UI\fp_icon2.paa), _drawColor, ASLtoAGL _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "RobotoCondensed"];
     };
-} count (GVAR(fingersHash) select 0);
+}] call CBA_fnc_hashEachPair;
 
-if ((count (GVAR(fingersHash) select 0)) == 0) then {
+if ((GVAR(fingersHash) select 1) isEqualTo []) then {
+    TRACE_1("Ending PFEH", GVAR(pfeh_id));
     [GVAR(pfeh_id)] call CBA_fnc_removePerFrameHandler;
     GVAR(pfeh_id) = -1;
 };

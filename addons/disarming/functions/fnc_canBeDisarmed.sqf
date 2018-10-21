@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -14,18 +15,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-private ["_animationStateCfgMoves", "_putDownAnim"];
 
 params ["_target"];
 
 //Check animationState for putDown anim
 //This ensures the unit doesn't have to actualy do any animation to drop something
 //This should always be true for the 3 possible status effects that allow disarming
-_animationStateCfgMoves = getText (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState _target) >> "actions");
+private _animationStateCfgMoves = getText (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState _target) >> "actions");
 if (_animationStateCfgMoves == "") exitWith { false };
-_putDownAnim = getText (configFile >> "CfgMovesBasic" >> "Actions" >> _animationStateCfgMoves >> "PutDown");
+private _putDownAnim = getText (configFile >> "CfgMovesBasic" >> "Actions" >> _animationStateCfgMoves >> "PutDown");
 if (_putDownAnim != "") exitWith { false };
 
 

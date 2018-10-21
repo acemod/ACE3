@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas, GitHawk
  * Checks if unit can check fuel.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Fuel Truck/Station <OBJECT>
+ * 1: Fuel Source <OBJECT>
  *
  * Return Value:
  * Can Check Fuel <BOOL>
@@ -14,13 +15,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
 
 !(isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
-    {!alive _target} ||
-    {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
-    {(_target call FUNC(getFuel) == REFUEL_INFINITE_FUEL)})
+    {!alive _source} ||
+    {([_unit, _source] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
+    {(_source call FUNC(getFuel) == REFUEL_INFINITE_FUEL)})

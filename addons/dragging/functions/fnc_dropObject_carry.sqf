@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Drop a carried object.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
@@ -51,6 +51,7 @@ _unit removeWeapon "ACE_FakePrimaryWeapon";
 _unit selectWeapon primaryWeapon _unit;
 
 [_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
 
 // prevent object from flipping inside buildings
 if (_inBuilding) then {

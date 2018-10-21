@@ -1,3 +1,4 @@
+#define DEBUG_SYNCHRONOUS
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
@@ -19,11 +20,11 @@
 #define SETPVAR_SYS(var1,var2) setVariable [ARR_3(QUOTE(var1),var2,true)]
 
 #undef GETVAR
-#define GETVAR(var1,var2,var3) var1 GETVAR_SYS(var2,var3)
-#define GETMVAR(var1,var2) missionNamespace GETVAR_SYS(var1,var2)
-#define GETUVAR(var1,var2) uiNamespace GETVAR_SYS(var1,var2)
-#define GETPRVAR(var1,var2) profileNamespace GETVAR_SYS(var1,var2)
-#define GETPAVAR(var1,var2) parsingNamespace GETVAR_SYS(var1,var2)
+#define GETVAR(var1,var2,var3) (var1 GETVAR_SYS(var2,var3))
+#define GETMVAR(var1,var2) (missionNamespace GETVAR_SYS(var1,var2))
+#define GETUVAR(var1,var2) (uiNamespace GETVAR_SYS(var1,var2))
+#define GETPRVAR(var1,var2) (profileNamespace GETVAR_SYS(var1,var2))
+#define GETPAVAR(var1,var2) (parsingNamespace GETVAR_SYS(var1,var2))
 
 #undef SETVAR
 #define SETVAR(var1,var2,var3) var1 SETVAR_SYS(var2,var3)
@@ -36,7 +37,7 @@
 #define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
 #define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
 
-#define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
+#define ARR_SELECT(ARRAY,INDEX,DEFAULT) (if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT})
 
 
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
@@ -59,6 +60,18 @@
     count = COUNT; \
 }
 
+// weapon types
+#define TYPE_WEAPON_PRIMARY 1
+#define TYPE_WEAPON_HANDGUN 2
+#define TYPE_WEAPON_SECONDARY 4
+// magazine types
+#define TYPE_MAGAZINE_HANDGUN_AND_GL 16 // mainly
+#define TYPE_MAGAZINE_PRIMARY_AND_THROW 256
+#define TYPE_MAGAZINE_SECONDARY_AND_PUT 512 // mainly
+// more types
+#define TYPE_BINOCULAR_AND_NVG 4096
+#define TYPE_WEAPON_VEHICLE 65536
+#define TYPE_ITEM 131072
 // item types
 #define TYPE_DEFAULT 0
 #define TYPE_MUZZLE 101
@@ -93,111 +106,11 @@
 
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QPATHTOF(folder\__PREP__.sqf)
 
-#define HASH_CREATE                    ([] call EFUNC(common,hashCreate))
-#define HASH_SET(hash, key, val)    ([hash, key, val, __FILE__, __LINE__] call EFUNC(common,hashSet))
-#define HASH_GET(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashGet))
-#define HASH_REM(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashRem))
-#define HASH_HASKEY(hash, key)        ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashHasKey))
-
-#define HASHLIST_CREATELIST(keys)                ([keys] call EFUNC(common,hashListCreateList))
-#define HASHLIST_CREATEHASH(hashList)            ([hashList] call EFUNC(common,hashListCreateHash))
-#define HASHLIST_SELECT(hashList, index)        ([hashList, index, __FILE__, __LINE__] call EFUNC(common,hashListSelect))
-#define HASHLIST_SET(hashList, index, value)    ([hashList, index, value, __FILE__, __LINE__] call EFUNC(common,hashListSet))
-#define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
-
 #define ACE_isHC (!hasInterface && !isDedicated)
 
 #define IDC_STAMINA_BAR 193
 
-//By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
-#ifdef CBA_DEBUG_SYNCHRONOUS
-    #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
-#endif
-
-#define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
-#define ACE_LOGFORMAT(module,level,message) FORMAT_2(QUOTE([ACE] (module) %1: %2),level,message)
-
-#define ACE_LOGERROR(message) ACE_LOG(COMPONENT,"ERROR",message)
-#define ACE_LOGERROR_1(message,arg1) ACE_LOGERROR(FORMAT_1(message,arg1))
-#define ACE_LOGERROR_2(message,arg1,arg2) ACE_LOGERROR(FORMAT_2(message,arg1,arg2))
-#define ACE_LOGERROR_3(message,arg1,arg2,arg3) ACE_LOGERROR(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_LOGERROR_4(message,arg1,arg2,arg3,arg4) ACE_LOGERROR(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_LOGERROR_5(message,arg1,arg2,arg3,arg4,arg5) ACE_LOGERROR(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_LOGERROR_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_LOGERROR(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_LOGERROR_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGERROR(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_LOGERROR_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGERROR(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_ERRORFORMAT(message) ACE_LOGFORMAT(COMPONENT,"ERROR",message)
-#define ACE_ERRORFORMAT_1(message,arg1) ACE_ERRORFORMAT(FORMAT_1(message,arg1))
-#define ACE_ERRORFORMAT_2(message,arg1,arg2) ACE_ERRORFORMAT(FORMAT_2(message,arg1,arg2))
-#define ACE_ERRORFORMAT_3(message,arg1,arg2,arg3) ACE_ERRORFORMAT(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_ERRORFORMAT_4(message,arg1,arg2,arg3,arg4) ACE_ERRORFORMAT(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_ERRORFORMAT_5(message,arg1,arg2,arg3,arg4,arg5) ACE_ERRORFORMAT(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_ERRORFORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_ERRORFORMAT(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_ERRORFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_ERRORFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_ERRORFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_ERRORFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_LOGWARNING(message) ACE_LOG(COMPONENT,"WARNING",message)
-#define ACE_LOGWARNING_1(message,arg1) ACE_LOGWARNING(FORMAT_1(message,arg1))
-#define ACE_LOGWARNING_2(message,arg1,arg2) ACE_LOGWARNING(FORMAT_2(message,arg1,arg2))
-#define ACE_LOGWARNING_3(message,arg1,arg2,arg3) ACE_LOGWARNING(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_LOGWARNING_4(message,arg1,arg2,arg3,arg4) ACE_LOGWARNING(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_LOGWARNING_5(message,arg1,arg2,arg3,arg4,arg5) ACE_LOGWARNING(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_LOGWARNING_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_LOGWARNING(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_LOGWARNING_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGWARNING(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_LOGWARNING_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGWARNING(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"WARNING",message)
-#define ACE_WARNINGFORMAT_1(message,arg1) ACE_WARNINGFORMAT(FORMAT_1(message,arg1))
-#define ACE_WARNINGFORMAT_2(message,arg1,arg2) ACE_WARNINGFORMAT(FORMAT_2(message,arg1,arg2))
-#define ACE_WARNINGFORMAT_3(message,arg1,arg2,arg3) ACE_WARNINGFORMAT(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_WARNINGFORMAT_4(message,arg1,arg2,arg3,arg4) ACE_WARNINGFORMAT(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_WARNINGFORMAT_5(message,arg1,arg2,arg3,arg4,arg5) ACE_WARNINGFORMAT(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_WARNINGFORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_WARNINGFORMAT(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_WARNINGFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_WARNINGFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_WARNINGFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_WARNINGFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_LOGINFO(message) ACE_LOG(COMPONENT,"INFO",message)
-#define ACE_LOGINFO_1(message,arg1) ACE_LOGINFO(FORMAT_1(message,arg1))
-#define ACE_LOGINFO_2(message,arg1,arg2) ACE_LOGINFO(FORMAT_2(message,arg1,arg2))
-#define ACE_LOGINFO_3(message,arg1,arg2,arg3) ACE_LOGINFO(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_LOGINFO_4(message,arg1,arg2,arg3,arg4) ACE_LOGINFO(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_LOGINFO_5(message,arg1,arg2,arg3,arg4,arg5) ACE_LOGINFO(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_LOGINFO_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_LOGINFO(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_LOGINFO_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGINFO(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_LOGINFO_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGINFO(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_INFOFORMAT(message) ACE_LOGFORMAT(COMPONENT,"INFO",message)
-#define ACE_INFOFORMAT_1(message,arg1) ACE_INFOFORMAT(FORMAT_1(message,arg1))
-#define ACE_INFOFORMAT_2(message,arg1,arg2) ACE_INFOFORMAT(FORMAT_2(message,arg1,arg2))
-#define ACE_INFOFORMAT_3(message,arg1,arg2,arg3) ACE_INFOFORMAT(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_INFOFORMAT_4(message,arg1,arg2,arg3,arg4) ACE_INFOFORMAT(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_INFOFORMAT_5(message,arg1,arg2,arg3,arg4,arg5) ACE_INFOFORMAT(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_INFOFORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_INFOFORMAT(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_INFOFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_INFOFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_INFOFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_INFOFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_LOGDEBUG(message) ACE_LOG(COMPONENT,"DEBUG",message)
-#define ACE_LOGDEBUG_1(message,arg1) ACE_LOGDEBUG(FORMAT_1(message,arg1))
-#define ACE_LOGDEBUG_2(message,arg1,arg2) ACE_LOGDEBUG(FORMAT_2(message,arg1,arg2))
-#define ACE_LOGDEBUG_3(message,arg1,arg2,arg3) ACE_LOGDEBUG(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_LOGDEBUG_4(message,arg1,arg2,arg3,arg4) ACE_LOGDEBUG(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_LOGDEBUG_5(message,arg1,arg2,arg3,arg4,arg5) ACE_LOGDEBUG(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_LOGDEBUG_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_LOGDEBUG(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_LOGDEBUG_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGDEBUG(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_LOGDEBUG_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGDEBUG(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_DEBUGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"DEBUG",message)
-#define ACE_DEBUGFORMAT_1(message,arg1) ACE_DEBUGFORMAT(FORMAT_1(message,arg1))
-#define ACE_DEBUGFORMAT_2(message,arg1,arg2) ACE_DEBUGFORMAT(FORMAT_2(message,arg1,arg2))
-#define ACE_DEBUGFORMAT_3(message,arg1,arg2,arg3) ACE_DEBUGFORMAT(FORMAT_3(message,arg1,arg2,arg3))
-#define ACE_DEBUGFORMAT_4(message,arg1,arg2,arg3,arg4) ACE_DEBUGFORMAT(FORMAT_4(message,arg1,arg2,arg3,arg4))
-#define ACE_DEBUGFORMAT_5(message,arg1,arg2,arg3,arg4,arg5) ACE_DEBUGFORMAT(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
-#define ACE_DEBUGFORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_DEBUGFORMAT(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
-#define ACE_DEBUGFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_DEBUGFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
-#define ACE_DEBUGFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_DEBUGFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
-
-#define ACE_DEPRECATED(arg1,arg2,arg3) ACE_LOGWARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
+#define ACE_DEPRECATED(arg1,arg2,arg3) WARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
 
 #define PFORMAT_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) \
     format ['%1: A=%2, B=%3, C=%4, D=%5, E=%6, F=%7, G=%8, H=%9, I=%10 J=%11', MESSAGE, RETNIL(A), RETNIL(B), RETNIL(C), RETNIL(D), RETNIL(E), RETNIL(F), RETNIL(G), RETNIL(H), RETNIL(I), RETNIL(J)]
@@ -207,5 +120,18 @@
 #else
    #define TRACE_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) /* disabled */
 #endif
+
+#define GRAVITY 9.8066
+
+#define SD_TO_MIN_MAX(d) ((d) * 3.371) // Standard deviation -> min / max of random [min, mid, max]
+
+// Angular unit conversion
+#define MRAD_TO_MOA(d) ((d) * 3.43774677) // Conversion factor: 54 / (5 * PI)
+#define MOA_TO_MRAD(d) ((d) * 0.29088821) // Conversion factor: (5 * PI) / 54
+#define DEG_TO_MOA(d) ((d) * 60) // Conversion factor: 60
+#define MOA_TO_DEG(d) ((d) / 60) // Conversion factor: 1 / 60
+#define DEG_TO_MRAD(d) ((d) * 17.45329252) // Conversion factor: (50 * PI) / 9
+#define MRAD_TO_DEG(d) ((d) / 17.45329252) // Conversion factor: 9 / (50 * PI)
+#define MOA_TO_RAD(d) ((d) * 0.00029088) // Conversion factor: PI / 10800
 
 #include "script_debug.hpp"

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -14,14 +15,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target"];
 
-private ["_items", "_counts"];
-
-_items = [];
-_counts = [];
+private _items = [];
+private _counts = [];
 {
     _x params ["_item", "_count"];
     _items append _item;

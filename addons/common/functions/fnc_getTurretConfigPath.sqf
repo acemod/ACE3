@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the config path of a vehicles turret.
@@ -9,9 +10,11 @@
  * Return Value:
  * Turret config <CONFIG>
  *
+ * Example:
+ * [CfgVehicle, [Array]] call ace_common_fnc_getTurretConfigPath
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_config", "_turretIndex"];
 

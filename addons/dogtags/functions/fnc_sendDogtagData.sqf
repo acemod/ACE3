@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Server: returns to client data on given dogtag
+ * Server: returns to client data on given dogtag.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -9,11 +10,13 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, unit] call ace_dogtags_fnc_sendDogtagData
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 params ["_target", "_item"];
 TRACE_2("sendDogtagData",_target,_item);

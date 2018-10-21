@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get a binary equivalent of a decimal number.
@@ -9,9 +10,11 @@
  * Return Value:
  * Booleans <ARRAY>
  *
+ * Example:
+ * [5, 5] call ace_common_fnc_binarizeNumber
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_number", ["_minLength", 8]];
 

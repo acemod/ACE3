@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Update the treatment information list
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [DISPLAY, [messagecollection], [injurycollection]] call ACE_medical_menu_fnc_updateInformationLists
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display", "_genericMessages", "_allInjuryTexts"];
 

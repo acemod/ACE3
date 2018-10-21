@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * When a take/put event handler fires and a detonator is changed hands.
@@ -16,22 +17,18 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_receiver", "_giver", "_item"];
 TRACE_3("params",_receiver,_giver,_item);
 
-private ["_config", "_detonators"];
+if ((_receiver != ace_player) && {_giver != ace_player}) exitWith {};
 
-if (_receiver != ace_player) exitWith {};
-
-_config = ConfigFile >> "CfgWeapons" >> _item;
+private _config = ConfigFile >> "CfgWeapons" >> _item;
 if (isClass _config && {getNumber(_config >> QGVAR(Detonator)) == 1}) then {
-    private ["_clackerItems"];
-    _clackerItems = _giver getVariable [QGVAR(Clackers), []];
+    private _clackerItems = _giver getVariable [QGVAR(Clackers), []];
     _receiver setVariable [QGVAR(Clackers), (_receiver getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
 
-    _detonators = [_giver] call FUNC(getDetonators);
+    private _detonators = [_giver] call FUNC(getDetonators);
     if (count _detonators == 0) then {
         _giver setVariable [QGVAR(Clackers), nil, true];
     };

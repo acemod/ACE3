@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Adds controller slide actions.
@@ -17,12 +18,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-private "_actions";
 params ["_objects", "_images", "_names", "_controller", "_currentSlideshow"];
 
-_actions = [];
+private _actions = [];
 {
     _actions pushBack
     [

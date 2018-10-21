@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the index of the weapon.
@@ -13,9 +14,11 @@
  *   2 = handgun
  *  -1 = other
  *
+ * Example:
+ * [bob, "gun"] call ace_common_fnc_getWeaponIndex
+ *
  * Public: Yes
  */
- #include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 

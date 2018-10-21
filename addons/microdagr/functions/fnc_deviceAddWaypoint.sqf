@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Adds a waypoint to the "device"
@@ -15,13 +16,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-private "_waypoints";
 params ["_waypointName","_waypointPosASL"];
 
-
-
-_waypoints = ACE_player getVariable [QGVAR(waypoints), []];
+private _waypoints = ACE_player getVariable [QGVAR(waypoints), []];
 _waypoints pushBack [_waypointName, _waypointPosASL];
 ACE_player setVariable [QGVAR(waypoints), _waypoints];

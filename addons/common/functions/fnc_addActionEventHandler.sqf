@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Add an addAction event to a unit. Used to handle multiple addAction events. Global arguments, local effects. Does only work for player controlled units.
@@ -11,9 +12,11 @@
  * Return Value:
  * ID of the action (used to remove it later) <NUMBER>
  *
+ * Example:
+ * [bob, "DefaultAction", "condition", "execute"] call ace_common_fnc_addActionEventHandler
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_action", "_condition", "_statement"];
 

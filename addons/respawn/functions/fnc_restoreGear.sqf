@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578, commy2
  * Restores previously saved gear.
@@ -14,12 +15,18 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_allGear", "_activeWeaponAndMuzzle"];
+TRACE_3("restoreGear",_unit, count _allGear, _activeWeaponAndMuzzle);
 
 // restore all gear
 if (!isNil "_allGear") then {
+    _allGear params ["_primaryWeaponArray"];
+    if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
+        TRACE_1("Ignoring fake gun",_primaryWeaponArray);
+        _allGear set [0, []];
+        _activeWeaponAndMuzzle = nil;
+    };
     _unit setUnitLoadout _allGear;
 };
 
@@ -44,7 +51,7 @@ if (!isNil "_activeWeaponAndMuzzle") then {
         private _index = 0;
 
         while {
-            _index < 100 && {currentWeaponMode _unit != _activeWeaponMode}
+            _index < 299 && {currentWeaponMode _unit != _activeWeaponMode}
         } do {
             _unit action ["SwitchWeapon", _unit, _unit, _index];
             _index = _index + 1;

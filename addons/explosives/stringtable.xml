@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -12,6 +12,10 @@
             <Hungarian>Robbanóanyagok</Hungarian>
             <Portuguese>Explosivos</Portuguese>
             <Russian>Взрывчатка</Russian>
+            <Japanese>爆発物</Japanese>
+            <Korean>폭발물</Korean>
+            <Chinesesimp>炸药</Chinesesimp>
+            <Chinese>炸藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Place">
             <English>Place</English>
@@ -24,6 +28,10 @@
             <Hungarian>Elhelyezés</Hungarian>
             <Portuguese>Colocar</Portuguese>
             <Russian>Установить</Russian>
+            <Japanese>設置</Japanese>
+            <Korean>설치</Korean>
+            <Chinesesimp>放置</Chinesesimp>
+            <Chinese>放置</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Detonate">
             <English>Detonate</English>
@@ -36,6 +44,10 @@
             <Hungarian>Robbantás</Hungarian>
             <Portuguese>Detonar</Portuguese>
             <Russian>Подрыв</Russian>
+            <Japanese>点火</Japanese>
+            <Korean>폭파</Korean>
+            <Chinesesimp>引爆</Chinesesimp>
+            <Chinese>引爆</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateAll">
             <English>Detonate All</English>
@@ -47,6 +59,10 @@
             <Italian>Detona Tutti</Italian>
             <French>Tout détoner</French>
             <Portuguese>Detonar Tudo</Portuguese>
+            <Japanese>すべて点火</Japanese>
+            <Korean>모두 폭파</Korean>
+            <Chinesesimp>引爆全部</Chinesesimp>
+            <Chinese>引爆全部</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -59,6 +75,10 @@
             <Portuguese>Código do explosivo: %1</Portuguese>
             <Russian>Код подрыва: %1</Russian>
             <Italian>Codice esplosivo: %1</Italian>
+            <Japanese>爆破コード: %1</Japanese>
+            <Korean>폭파 코드: %1</Korean>
+            <Chinesesimp>炸药代码: %1</Chinesesimp>
+            <Chinese>炸藥代碼: %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceAction">
             <English>Place</English>
@@ -71,6 +91,10 @@
             <Hungarian>Elhelyezés</Hungarian>
             <Portuguese>Colocar</Portuguese>
             <Russian>Установить</Russian>
+            <Japanese>設置</Japanese>
+            <Korean>설치</Korean>
+            <Chinesesimp>放置</Chinesesimp>
+            <Chinese>放置</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_AttachAction">
             <English>Attach</English>
@@ -83,6 +107,10 @@
             <Italian>Attacca</Italian>
             <Hungarian>Hozzácsatolás</Hungarian>
             <Russian>Прикрепить</Russian>
+            <Japanese>取り付け</Japanese>
+            <Korean>부착</Korean>
+            <Chinesesimp>连接</Chinesesimp>
+            <Chinese>連接</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_BlockedAction">
             <English>Blocked</English>
@@ -94,6 +122,10 @@
             <Italian>Bloccato</Italian>
             <German>Blockiert</German>
             <French>Bloqué</French>
+            <Japanese>取り付け不可</Japanese>
+            <Korean>막힘</Korean>
+            <Chinesesimp>断开</Chinesesimp>
+            <Chinese>斷開</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>
@@ -106,6 +138,10 @@
             <Hungarian>Mégsem</Hungarian>
             <Portuguese>Cancelar</Portuguese>
             <Russian>Отмена</Russian>
+            <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_ScrollAction">
             <English>Rotate</English>
@@ -118,6 +154,10 @@
             <Polish>Obrót</Polish>
             <Portuguese>Rotaciona</Portuguese>
             <Russian>Bращать</Russian>
+            <Japanese>回転</Japanese>
+            <Korean>회전</Korean>
+            <Chinesesimp>旋转</Chinesesimp>
+            <Chinese>旋轉</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Jammer_TurnOn">
             <English>Turn On Thor III</English>
@@ -130,6 +170,10 @@
             <Hungarian>Thor III bekapcsolása</Hungarian>
             <Portuguese>Ativar Thor III</Portuguese>
             <Russian>Активировать Thor III</Russian>
+            <Japanese>Thor III を使う</Japanese>
+            <Korean>Thor III 켜기</Korean>
+            <Chinesesimp>开启索尔三型</Chinesesimp>
+            <Chinese>開啟索爾三型</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Jammer_TurnOff">
             <English>Turn Off Thor III</English>
@@ -142,6 +186,10 @@
             <Hungarian>Thor III kikapcsolása</Hungarian>
             <Portuguese>Desativar Thor III</Portuguese>
             <Russian>Деактивировать Thor III</Russian>
+            <Japanese>Thor III を止める</Japanese>
+            <Korean>Thor III 끄기</Korean>
+            <Chinesesimp>关闭索尔三型</Chinesesimp>
+            <Chinese>關閉索爾三型</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_displayName">
             <English>Cellphone</English>
@@ -154,6 +202,10 @@
             <Hungarian>Mobiltelefon</Hungarian>
             <Portuguese>Celular</Portuguese>
             <Russian>Сотовый телефон</Russian>
+            <Japanese>携帯電話</Japanese>
+            <Korean>휴대전화</Korean>
+            <Chinesesimp>手机</Chinesesimp>
+            <Chinese>手機</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>
@@ -166,6 +218,10 @@
             <Hungarian>Robbanóanyagok távoli robbantásához való</Hungarian>
             <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
             <Russian>Используется для удаленной детонации СВУ</Russian>
+            <Japanese>爆発物を遠隔で起爆させるのに使います</Japanese>
+            <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
+            <Chinesesimp>用于远端引爆炸药</Chinesesimp>
+            <Chinese>用於遠端引爆炸藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_displayName">
             <English>M57 Firing Device</English>
@@ -178,6 +234,10 @@
             <Hungarian>M57 Gyújtóeszköz</Hungarian>
             <Portuguese>M57 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M57</Russian>
+            <Japanese>M57 起爆装置</Japanese>
+            <Korean>M57 격발기</Korean>
+            <Chinesesimp>M57 引爆装置</Chinesesimp>
+            <Chinese>M57 引爆裝置</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_description">
             <English>Used to remotely trigger explosives</English>
@@ -190,6 +250,10 @@
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
             <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
             <Russian>Используется для удаленной детонации зарядов</Russian>
+            <Japanese>爆発物を遠隔で起爆させるのに使います</Japanese>
+            <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
+            <Chinesesimp>用于远端引爆炸药</Chinesesimp>
+            <Chinese>用於遠端引爆炸藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_M152_Clacker_displayName">
             <English>M152 Firing Device</English>
@@ -202,6 +266,10 @@
             <Hungarian>M152 Gyújtóeszköz</Hungarian>
             <Portuguese>M152 Dispositivo de Detonação</Portuguese>
             <Russian>Взрыватель M152</Russian>
+            <Japanese>M152 起爆装置</Japanese>
+            <Korean>M152 격발기</Korean>
+            <Chinesesimp>M152 引爆装置</Chinesesimp>
+            <Chinese>M152 引爆裝置</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_M152_displayName">
             <English>M152 RAMS</English>
@@ -214,6 +282,10 @@
             <Russian>M152 RAMS</Russian>
             <Spanish>M152 RAMS</Spanish>
             <Italian>M152 RAMS</Italian>
+            <Japanese>M152 RAMS</Japanese>
+            <Korean>M152 RAMS</Korean>
+            <Chinesesimp>M152 远端炸药引爆系统</Chinesesimp>
+            <Chinese>M152 遠端炸藥引爆系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusalKit_displayName">
             <English>Defusal Kit</English>
@@ -226,6 +298,10 @@
             <Hungarian>Hatástalanító felszerelés</Hungarian>
             <Portuguese>Kit de desarme</Portuguese>
             <Russian>Комплект разминирования</Russian>
+            <Japanese>解除キット</Japanese>
+            <Korean>해체 장비</Korean>
+            <Chinesesimp>拆弹工具</Chinesesimp>
+            <Chinese>拆彈工具</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusalKit_description">
             <English>Allows defusing of explosives</English>
@@ -238,6 +314,10 @@
             <Hungarian>Robbanóanyagok hatástalanítását teszi lehetővé</Hungarian>
             <Portuguese>Permite o desarme de explosivos</Portuguese>
             <Russian>Позволяет обезвреживать взрывчатку</Russian>
+            <Japanese>爆発物を無力化できます</Japanese>
+            <Korean>폭발물을 해체할 수 있게 해줍니다</Korean>
+            <Chinesesimp>可以用来拆除炸弹</Chinesesimp>
+            <Chinese>可以用來拆除炸彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_AddToSpeedDial">
             <English>Add to Speed Dial</English>
@@ -250,6 +330,10 @@
             <Hungarian>Hozzáadás a gyorstárcsázóhoz</Hungarian>
             <Portuguese>Adicionar à ligação rápida</Portuguese>
             <Russian>Добавить в быстрый вызов</Russian>
+            <Japanese>短縮ダイアルに追加</Japanese>
+            <Korean>단축키에 지정</Korean>
+            <Chinesesimp>增加到快速拨号</Chinesesimp>
+            <Chinese>增加到快速撥號</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Clear">
             <English>Clear</English>
@@ -262,6 +346,10 @@
             <Hungarian>Törlés</Hungarian>
             <Portuguese>Limpar</Portuguese>
             <Russian>Очистить</Russian>
+            <Japanese>消去</Japanese>
+            <Korean>삭제</Korean>
+            <Chinesesimp>清除</Chinesesimp>
+            <Chinese>清除</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Dial">
             <English>Dial</English>
@@ -274,6 +362,10 @@
             <Hungarian>Tárcsázás</Hungarian>
             <Portuguese>Discar</Portuguese>
             <Russian>Hабрать</Russian>
+            <Japanese>ダイアル</Japanese>
+            <Korean>다이얼</Korean>
+            <Chinesesimp>拨号</Chinesesimp>
+            <Chinese>撥號</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Up">
             <English>Up</English>
@@ -286,6 +378,10 @@
             <Hungarian>Fel</Hungarian>
             <Portuguese>Cima</Portuguese>
             <Russian>Вызов</Russian>
+            <Japanese>上へ</Japanese>
+            <Korean>위</Korean>
+            <Chinesesimp>上</Chinesesimp>
+            <Chinese>上</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Down">
             <English>Down</English>
@@ -298,6 +394,10 @@
             <Hungarian>Le</Hungarian>
             <Portuguese>Baixo</Portuguese>
             <Russian>Сброс</Russian>
+            <Japanese>下へ</Japanese>
+            <Korean>아래</Korean>
+            <Chinesesimp>下</Chinesesimp>
+            <Chinese>下</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Cancel">
             <English>Cancel</English>
@@ -310,6 +410,10 @@
             <Hungarian>Mégsem</Hungarian>
             <Portuguese>Cancelar</Portuguese>
             <Russian>Отмена</Russian>
+            <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateMenu">
             <English>Detonate Menu</English>
@@ -322,6 +426,10 @@
             <Hungarian>Robbantási menü</Hungarian>
             <Portuguese>Menu de detonação</Portuguese>
             <Russian>Меню подрыва</Russian>
+            <Japanese>点火メニュー</Japanese>
+            <Korean>폭파 메뉴</Korean>
+            <Chinesesimp>引爆选单</Chinesesimp>
+            <Chinese>引爆選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceMenu">
             <English>Place Menu</English>
@@ -334,6 +442,10 @@
             <Hungarian>Elhelyezési menü</Hungarian>
             <Portuguese>Menu de posicionamento</Portuguese>
             <Russian>Меню установки</Russian>
+            <Japanese>設置メニュー</Japanese>
+            <Korean>설치 메뉴</Korean>
+            <Chinesesimp>放置选单</Chinesesimp>
+            <Chinese>放置選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Defuse">
             <English>Defuse</English>
@@ -346,6 +458,10 @@
             <Hungarian>Hatástalanítás</Hungarian>
             <Portuguese>Desarmar</Portuguese>
             <Russian>Обезвредить</Russian>
+            <Japanese>無力化</Japanese>
+            <Korean>해체</Korean>
+            <Chinesesimp>拆除</Chinesesimp>
+            <Chinese>拆除</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusingExplosive">
             <English>Defusing Explosive...</English>
@@ -358,6 +474,10 @@
             <Hungarian>Robbanóanyag hatástalanítása...</Hungarian>
             <Portuguese>Desarmando Explosivo...</Portuguese>
             <Russian>Обезвреживание...</Russian>
+            <Japanese>爆発物を無力化しています・・・</Japanese>
+            <Korean>폭발물 해체중...</Korean>
+            <Chinesesimp>炸弹拆除中...</Chinesesimp>
+            <Chinese>炸彈拆除中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_timerName">
             <English>Timer</English>
@@ -370,6 +490,10 @@
             <Hungarian>Időzítő</Hungarian>
             <Portuguese>Timer</Portuguese>
             <Russian>Таймер</Russian>
+            <Japanese>タイマー</Japanese>
+            <Korean>타이머</Korean>
+            <Chinesesimp>计时器</Chinesesimp>
+            <Chinese>計時器</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMenu">
             <English>Time: %1m %2s</English>
@@ -382,6 +506,10 @@
             <Hungarian>Idő: %1m %2s</Hungarian>
             <Portuguese>Tempo: %1m %2s</Portuguese>
             <Russian>Время: %1m %2c</Russian>
+            <Japanese>設定時間: %1分 %2秒</Japanese>
+            <Korean>시간: %1분 %2초</Korean>
+            <Chinesesimp>时间: %1分%2秒</Chinesesimp>
+            <Chinese>時間: %1分%2秒</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_SetTime">
             <English>Set Time</English>
@@ -394,6 +522,10 @@
             <Hungarian>Idő beállítása</Hungarian>
             <Portuguese>Configurar Tempo</Portuguese>
             <Russian>Установить время</Russian>
+            <Japanese>時間を設定</Japanese>
+            <Korean>시간 설정</Korean>
+            <Chinesesimp>设定时间</Chinesesimp>
+            <Chinese>設定時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_TriggerMenu">
             <English>Select a Trigger</English>
@@ -406,6 +538,10 @@
             <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
             <Portuguese>Selecionar um Gatilho</Portuguese>
             <Russian>Выберите детонатор</Russian>
+            <Japanese>点火装置を選択</Japanese>
+            <Korean>작동방식 선택</Korean>
+            <Chinesesimp>选择一个触发器</Chinesesimp>
+            <Chinese>選擇一個觸發器</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_SelectTrigger">
             <English>Select</English>
@@ -418,6 +554,10 @@
             <Hungarian>Kiválasztás</Hungarian>
             <Portuguese>Selecionar</Portuguese>
             <Russian>Выбрать</Russian>
+            <Japanese>選択</Japanese>
+            <Korean>선택</Korean>
+            <Chinesesimp>选择</Chinesesimp>
+            <Chinese>選擇</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PressurePlate">
             <English>Pressure Plate</English>
@@ -430,6 +570,10 @@
             <Hungarian>Nyomólap</Hungarian>
             <Portuguese>Placa de pressão</Portuguese>
             <Russian>Нажимная плита</Russian>
+            <Japanese>圧力感知式</Japanese>
+            <Korean>압력식</Korean>
+            <Chinesesimp>压力盘</Chinesesimp>
+            <Chinese>壓力盤</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
@@ -442,6 +586,10 @@
             <Hungarian>Botlódrót</Hungarian>
             <Portuguese>Linha de tração</Portuguese>
             <Russian>Растяжка</Russian>
+            <Japanese>仕掛け線</Japanese>
+            <Korean>인계철선</Korean>
+            <Chinesesimp>绊线</Chinesesimp>
+            <Chinese>絆線</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_IRSensor">
             <English>IR Sensor</English>
@@ -454,6 +602,10 @@
             <Hungarian>Infravörös szenzor</Hungarian>
             <Portuguese>Sensor IV</Portuguese>
             <Russian>ИК сенсор</Russian>
+            <Japanese>赤外線感知式</Japanese>
+            <Korean>적외선 센서</Korean>
+            <Chinesesimp>红外线感应器</Chinesesimp>
+            <Chinese>紅外線感應器</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_NoTriggersAvailable">
             <English>No triggers available for %1</English>
@@ -466,6 +618,10 @@
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
             <Portuguese>Nenhum gatilho disponível para %1</Portuguese>
             <Russian>Нет доступных взрывателей для %1</Russian>
+            <Japanese>%1 につかえる点火装置がありません</Japanese>
+            <Korean>%1(을)를 작동할 장치가 없습니다.</Korean>
+            <Chinesesimp>没有适合%1的触发器</Chinesesimp>
+            <Chinese>沒有適合%1的觸發器</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_SLAME_IRSensor">
             <English>IR Sensor (Side Attack)</English>
@@ -478,6 +634,10 @@
             <Hungarian>Infravörös szenzor (Side Attack)</Hungarian>
             <Portuguese>Sensor infravermelho (ataque lateral)</Portuguese>
             <Russian>ИК сенсор (детонация вбок)</Russian>
+            <Japanese>赤外線感知式 (側面攻撃)</Japanese>
+            <Korean>적외선 센서 (측면 공격)</Korean>
+            <Chinesesimp>红外线感应器 (侧边攻击)</Chinesesimp>
+            <Chinese>紅外線感應器 (側邊攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_SLAME_Magnetic">
             <English>Magnetic Influence Sensor (Bottom Attack)</English>
@@ -490,6 +650,10 @@
             <Hungarian>Mágneses mező érzékelő (Bottom Attack)</Hungarian>
             <Portuguese>Influência magnética (ataque inferior)</Portuguese>
             <Russian>Магнитный сенсор (детонация вверх)</Russian>
+            <Japanese>磁気感知式 (底面攻撃)</Japanese>
+            <Korean>자기장 감지센서 (바닥 공격)</Korean>
+            <Chinesesimp>磁性感应器 (底部攻击)</Chinesesimp>
+            <Chinese>磁性感應器 (底部攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_NoExplosivesAvailable">
             <English>No explosives on trigger.</English>
@@ -502,6 +666,10 @@
             <Polish>Brak ładunków na zapalnik.</Polish>
             <Portuguese>Nenhum explosivo no gatilho.</Portuguese>
             <Russian>Взрыватель не подсоединён к взрывчатке</Russian>
+            <Japanese>点火装置に爆発物がありません。</Japanese>
+            <Korean>격발기에 등록된 폭발물이 없습니다.</Korean>
+            <Chinesesimp>触发器上并没有炸药</Chinesesimp>
+            <Chinese>觸發器上並沒有炸藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_displayName">
             <English>Dead Man's Switch</English>
@@ -514,6 +682,10 @@
             <Portuguese>Detonador do homem morto</Portuguese>
             <Russian>Кнопка мертвеца</Russian>
             <Italian>Detonatore a rilascio</Italian>
+            <Japanese>自爆装置</Japanese>
+            <Korean>자폭 장치</Korean>
+            <Chinesesimp>自杀炸弹客引爆器</Chinesesimp>
+            <Chinese>自殺炸彈客引爆器</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
@@ -526,6 +698,10 @@
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
             <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
+            <Japanese>点火装置を遠隔から離すと起爆したいときに使います。</Japanese>
+            <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
+            <Chinesesimp>当放开按钮时, 将会引爆炸弹.</Chinesesimp>
+            <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -538,6 +714,10 @@
             <Russian>Поднять</Russian>
             <Italian>Raccogli</Italian>
             <Portuguese>Pegar</Portuguese>
+            <Japanese>拾う</Japanese>
+            <Korean>줍기</Korean>
+            <Chinesesimp>捡起</Chinesesimp>
+            <Chinese>撿起</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_DisplayName">
             <English>Explosive System</English>
@@ -550,6 +730,10 @@
             <Hungarian>Robbanóanyag-rendszer</Hungarian>
             <Russian>Взрывные устройства</Russian>
             <Italian>Sistema Esplosivi</Italian>
+            <Japanese>爆発システム</Japanese>
+            <Korean>폭발물 시스템</Korean>
+            <Chinesesimp>炸药系统</Chinesesimp>
+            <Chinese>炸藥系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_DisplayName">
             <English>Require specialists?</English>
@@ -562,6 +746,10 @@
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
+            <Japanese>特技兵を必要としますか?</Japanese>
+            <Korean>전문가가 필요합니까?</Korean>
+            <Chinesesimp>需要专家?</Chinesesimp>
+            <Chinese>需要專家?</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
@@ -574,6 +762,10 @@
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
+            <Japanese>爆発物を無効化するには、爆発物の特技兵を必要としますか? 標準: 無効化</Japanese>
+            <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
+            <Chinesesimp>需要炸弹专家才能拆除炸弹? 预设: 否</Chinesesimp>
+            <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -586,6 +778,10 @@
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
+            <Japanese>非特技兵へ足かせを与えますか?</Japanese>
+            <Korean>비-전문가에 불이익을 줍니까?</Korean>
+            <Chinesesimp>折磨非专业人员?</Chinesesimp>
+            <Chinese>折磨非專業人員?</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
@@ -598,6 +794,10 @@
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
+            <Japanese>非特技兵へ動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
+            <Korean>비-전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
+            <Chinesesimp>增加非专业人员相关操作的时间? 预设: 是</Chinesesimp>
+            <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
@@ -610,6 +810,10 @@
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
+            <Japanese>解除中に爆発させますか?</Japanese>
+            <Korean>해제시 폭발합니까?</Korean>
+            <Chinesesimp>拆除时引爆?</Chinesesimp>
+            <Chinese>拆除時引爆?</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
@@ -622,6 +826,10 @@
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
+            <Japanese>特定の爆発物を解除中に爆発させますか? 標準: 有効化</Japanese>
+            <Korean>특정 폭발물이 해제시 폭발하게 합니까? 기본설정: 예</Korean>
+            <Chinesesimp>启用后, 某些炸弹会在拆除时引爆? 预设: 是</Chinesesimp>
+            <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
             <English>This module adjusts the settings related to explosives.</English>
@@ -634,6 +842,10 @@
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
             <Italian>Questo modulo cambia le impostazioni relative agli esplosivi</Italian>
+            <Japanese>モジュールを調節し爆発物に設定を反映させます。</Japanese>
+            <Korean>이 모듈은 폭발물에 관한 설정을 수정할 수 있게합니다.</Korean>
+            <Chinesesimp>此模块用来调整炸药的相关设定</Chinesesimp>
+            <Chinese>此模塊用來調整炸藥的相關設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
             <English>M6 SLAM Mine (Bottom Attack)</English>
@@ -651,6 +863,11 @@
             <Italian>Mina M6 SLAM (base)</Italian>
             <Czech>M6 SLAM (Útok zespoda)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Inferior)</Portuguese>
+            <Russian>Мина M6 SLAM (направлена вверх)</Russian>
+            <Japanese>M6 SLAM 地雷 (底面攻撃)</Japanese>
+            <Korean>M6 SLAM 지뢰 (바닥 공격)</Korean>
+            <Chinesesimp>M6指向性反装甲地雷 (底部攻击)</Chinesesimp>
+            <Chinese>M6指向性反裝甲地雷 (底部攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
@@ -668,6 +885,11 @@
             <Italian>	STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName	M6 SLAM Mine (Bottom Attack)		Mine M6 SLAM (par le bas)	M6-SLAM-Mine (Bodenangriff)		Mina M6 SLAM (base)	Mina M6 SLAM (atak od dołu)			Mina M6 SLAM (Laterale)</Italian>
             <Czech>M6 SLAM (Útok do strany)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Lateral)</Portuguese>
+            <Russian>Мина M6 SLAM (направлена вбок)</Russian>
+            <Japanese>M6 SLAM 地雷 (側面攻撃)</Japanese>
+            <Korean>M6 SLAM 지뢰 (측면 공격)</Korean>
+            <Chinesesimp>M6指向性反装甲地雷 (侧边攻击)</Chinesesimp>
+            <Chinese>M6指向性反裝甲地雷 (側邊攻擊)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
@@ -685,6 +907,11 @@
             <Italian>IED grande (urbano, a pressione)</Italian>
             <Czech>IED, Velké (Městské, Nášlapné)</Czech>
             <Portuguese>IED Grande (Urbano, Placa de pressão)</Portuguese>
+            <Russian>Большое СВУ (городское, нажимного действия)</Russian>
+            <Japanese>大きな IED (市街地用、圧力感知)</Japanese>
+            <Korean>대형 급조폭발물 (시가지, 압력식)</Korean>
+            <Chinesesimp>大型简易爆炸装置 (地表上, 压力盘)</Chinesesimp>
+            <Chinese>大型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
@@ -702,6 +929,11 @@
             <Italian>IED grande (interrato, a pressione)</Italian>
             <Czech>IED, Velké (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Grande (Enterrado, Placa de pressão)</Portuguese>
+            <Russian>Большое СВУ (закопанное, нажимного действия)</Russian>
+            <Japanese>大きな IED (埋め込み型、圧力感知)</Japanese>
+            <Korean>대형 급조폭발물 (묻힘, 압력식)</Korean>
+            <Chinesesimp>大型简易爆炸装置 (地表下, 压力盘)</Chinesesimp>
+            <Chinese>大型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
@@ -719,6 +951,11 @@
             <Italian>IED piccolo (urbano, a pressione)</Italian>
             <Czech>IED, Malé (Městské, Nášlapné)</Czech>
             <Portuguese>IED Pequeno(Urbano, Placa de pressão)</Portuguese>
+            <Russian>Малое СВУ (городское, нажимного действия)</Russian>
+            <Japanese>小さな IED (市街地用、圧力感知)</Japanese>
+            <Korean>소형 급조폭발물 (시가지, 압력식)</Korean>
+            <Chinesesimp>小型简易爆炸装置 (地表上, 压力盘)</Chinesesimp>
+            <Chinese>小型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
@@ -736,6 +973,11 @@
             <Italian>IED piccolo (interrato, a pressione)</Italian>
             <Czech>IED, Malé (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Pequeno (Enterrado, Placa de pressão)</Portuguese>
+            <Russian>Малое СВУ (закопанное, нажимного действия)</Russian>
+            <Japanese>小さな IED (埋め込み型、圧力感知)</Japanese>
+            <Korean>소형 급조폭발물 (묻힘, 압력식)</Korean>
+            <Chinesesimp>小型简易爆炸装置 (地表下, 压力盘)</Chinesesimp>
+            <Chinese>小型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_connectInventoryExplosiveToDeadman">
             <English>Connect to %1</English>
@@ -748,6 +990,46 @@
             <Hungarian>Csatlakozás %1</Hungarian>
             <Italian>Collega a  %1</Italian>
             <Portuguese>Conectar à %1</Portuguese>
+            <Japanese>%1 へ接続</Japanese>
+            <Korean>%1에 연결중</Korean>
+            <Chinesesimp>连接到%1</Chinesesimp>
+            <Chinese>連接到%1</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name">
+            <English>Tripwire Flare</English>
+            <Russian>Сигнальная растяжка</Russian>
+            <Japanese>仕掛け型照明地雷</Japanese>
+            <Polish>Flara na linkę</Polish>
+            <German>Stolperdraht-Leuchtrakete</German>
+            <Korean>조명지뢰</Korean>
+            <French>Fusée éclairante avec fil de détente</French>
+            <Italian>Cavo d'innesco</Italian>
+            <Chinesesimp>绊线闪光地雷</Chinesesimp>
+            <Chinese>絆線閃光地雷</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Description">
+            <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
+            <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сгнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
+            <Japanese>種類: 仕掛け型照明地雷 - 発動したとき、非致死性の照明を発炎します。&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 地表</Japanese>
+            <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
+            <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
+            <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
+            <French>Type : Fusée éclairante avec fil de détente - Allume une fusée éclairante lorsque déclenché. &lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
+            <Italian>Tipo: Cavo d'innesco - Sfocio un abbaglio non letale quanto attivato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
+            <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
+            <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_statExploRange">
+            <English>Explosive range</English>
+            <French>Portée du détonateur</French>
+            <Japanese>爆発範囲</Japanese>
+            <Chinesesimp>爆炸范围</Chinesesimp>
+            <Chinese>爆炸範圍</Chinese>
+            <Italian>Raggio di detonazione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ExplosiveTimer">
+            <English>Explosive Timer</English>
+            <Italian>Timer di detonazione</Italian>
         </Key>
     </Package>
 </Project>

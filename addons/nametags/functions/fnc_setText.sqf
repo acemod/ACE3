@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: aeroson
  * Sets the text on the dialog.
@@ -13,16 +14,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define TextIDC 11123
 
 params ["_text"];
 
-private["_ctrl"];
-
 disableSerialization;
 
-_ctrl = (uiNamespace getVariable QGVAR(dialog)) displayCtrl TextIDC;
+private _ctrl = (uiNamespace getVariable QGVAR(dialog)) displayCtrl TextIDC;
 _ctrl ctrlSetStructuredText parseText _text;
 _ctrl ctrlCommit 0;

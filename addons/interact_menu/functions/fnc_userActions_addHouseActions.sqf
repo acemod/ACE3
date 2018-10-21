@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Scans for nearby "Static" objects (buildings) and adds the UserActions to them.
@@ -7,14 +8,13 @@
  * 0: Interact Menu Type (0 - world, 1 - self) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [0] call ace_interact_menu_fnc_userActions_addHouseActions
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_interactionType"];
 
@@ -80,7 +80,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
             // systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
             {
                 private _helperPos = AGLtoASL (_houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x));
-                private _helperObject = "ACE_LogicDummy" createVehicleLocal _helperPos;
+                private _helperObject = "ACE_LogicDummy" createVehicleLocal [0,0,0];
                 _addedHelpers pushBack _helperObject;
                 _helperObject setVariable [QGVAR(building), _houseBeingScaned];
                 _helperObject setPosASL _helperPos;

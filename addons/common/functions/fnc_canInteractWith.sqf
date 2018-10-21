@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if the unit can interact.
@@ -8,11 +9,13 @@
  * 2: Exceptions. What general conditions are to skip? (default: []) <ARRAY>
  *
  * Return Value:
- * Unit can interact?
+ * Unit can interact? <BOOL>
+ *
+ * Example:
+ * [bob, target, []] call ace_common_fnc_canInteractWith
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target", ["_exceptions", []]];
 

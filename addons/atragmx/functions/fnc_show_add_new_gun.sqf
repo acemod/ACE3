@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows/Hides add new gun controls
@@ -6,14 +7,13 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_show_add_new_gun
+ * false call ace_atragmx_fnc_show_add_new_gun
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(showAddNewGun) = _this;
 

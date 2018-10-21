@@ -1,26 +1,26 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Glowbal, PabstMirror
  * Draw progress bar and execute given function if succesful.
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Arguments:
- * 0: NUMBER - Total Time (in game "time" seconds)
- * 1: ARRAY - Arguments, passed to condition, fail and finish
- * 2: CODE or STRING - On Finish: Code called or STRING raised as event.
- * 3: CODE or STRING - On Failure: Code called or STRING raised as event.
- * 4: STRING - (Optional) Localized Title
- * 5: CODE - (Optional) Code to check each frame
- * 6: ARRAY - (Optional) Exceptions for checking EFUNC(common,canInteractWith)
+ * 0: Total Time (in game "time" seconds) <NUMBER>
+ * 1: Arguments, passed to condition, fail and finish <ARRAY>
+ * 2: On Finish: Code called or STRING raised as event. <CODE, STRING>
+ * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
+ * 4: (Optional) Localized Title <STRING>
+ * 5: Code to check each frame (Optional) <CODE>
+ * 6: Exceptions for checking EFUNC(common,canInteractWith) (Optional)<ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [5, [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call ace_common_fnc_progressBar
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
 

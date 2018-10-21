@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Display a message.
@@ -11,9 +12,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["Message", true, 5, 2] call ace_common_fnc_displayText
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_text", ["_sound", false], ["_delay", 2], ["_priority", 0]];
 

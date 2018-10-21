@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Local callback when the bloodbag treatment is complete
@@ -7,12 +8,13 @@
  * 1: Treatment Classname <STRING>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [bob, "classname"] call ACE_medical_fnc_treatmentBasic_bloodbagLocal
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define BLOODBAGHEAL 70
 
 params ["_target", "_treatmentClassname"];

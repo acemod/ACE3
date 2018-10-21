@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Modify the visuals of a medical action point.
@@ -9,13 +10,14 @@
  * 2: Selection Number <NUMBER>
  * 3: The action to modify <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, kevin, 2, "action"] call ACE_medical_fnc_modifyMedicalAction
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_player", "_partNumber", "_actionData"];
 
@@ -28,7 +30,7 @@ private _bloodLossOnSelection = 0;
     };
 } forEach (_target getvariable [QGVAR(openWounds), []]);
 
-if (_bloodLossOnSelection >=1 ) then {
+if (_bloodLossOnSelection >= 0.15) then {
     _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
 } else {
     if (_bloodLossOnSelection > 0 ) then {

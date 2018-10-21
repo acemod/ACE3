@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Adjusts the currently zeroed distance.
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, [], 5] call ace_fcs_fnc_adjustRange
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_delta"];
 

@@ -1,14 +1,20 @@
-/**
- * fn_healLocal.sqf
- * @Descr: N/A
- * @Author: Glowbal
- *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
- */
-
 #include "script_component.hpp"
+/*
+ * Author: Glowbal
+ *
+ *
+ * Arguments:
+ * 0: Caller <OBJECT>
+ * 1: Target <OBJECT>
+ *
+ * Return Value:
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_treatmentAdvanced_fullHealLocal
+ *
+ * Public: No
+ */
 
 params ["_caller", "_target"];
 
@@ -36,9 +42,7 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(fractures), []];
 
     // IVs
-    _target setVariable [QGVAR(salineIVVolume), 0];
-    _target setVariable [QGVAR(plasmaIVVolume), 0];
-    _target setVariable [QGVAR(bloodIVVolume), 0];
+    _target setVariable [QGVAR(ivBags), nil, true];
 
     // damage storage
     _target setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
@@ -49,7 +53,6 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(airwayCollapsed), false, true];
 
     // generic medical admin
-    _target setVariable [QGVAR(addedToUnitLoop), false, true];
     _target setVariable [QGVAR(inCardiacArrest), false, true];
     _target setVariable [QGVAR(inReviveState), false, true];
     _target setVariable ["ACE_isUnconscious", false, true];

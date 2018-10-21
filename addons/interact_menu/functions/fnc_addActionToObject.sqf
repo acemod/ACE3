@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Insert an ACE action to an object, under a certain config path
@@ -15,12 +16,12 @@
  * Example:
  * [cursorTarget, 0, ["ACE_TapShoulderRight"],VulcanPinchAction] call ace_interact_menu_fnc_addActionToObject;
  *
- * Public: No
+ * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!params [["_object", objNull, [objNull]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
     ERROR("Bad Params");
+    []
 };
 
 private _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
@@ -28,6 +29,13 @@ private _actionList = _object getVariable [_varName, []];
 
 if (_actionList isEqualTo []) then {
     _object setVariable [_varName, _actionList];
+};
+
+// Ensure the config menu was compiled first
+if (_typeNum == 0) then {
+    [_object] call FUNC(compileMenu);
+} else {
+    [_object] call FUNC(compileMenuSelfAction);
 };
 
 if (_parentPath isEqualTo ["ACE_MainActions"]) then {
@@ -38,4 +46,4 @@ if (_parentPath isEqualTo ["ACE_MainActions"]) then {
 _actionList pushBack [_action, +_parentPath];
 
 // Return the full path
-(+ _parentPath) pushBack (_action select 0)
+(_parentPath + [_action select 0])

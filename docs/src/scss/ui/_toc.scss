@@ -1,0 +1,39 @@
+.toc-header {
+    margin-bottom: 0;
+}
+
+#toc {
+
+    // initial state
+    display: block;
+
+    margin: 1rem 0 0 0;
+
+    & > ol {
+        margin-left: 0;
+        & > li {
+            margin-bottom: 0.5rem;
+        }
+    }
+    ol {
+        list-style-type: none;
+    }
+}
+
+.clickable-header {
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.top-level-header {
+    display: inline-block;
+}
+
+.back-to-top {
+    position: relative;
+    margin-left: 8px;
+    cursor: pointer;
+    top: -3px;
+}

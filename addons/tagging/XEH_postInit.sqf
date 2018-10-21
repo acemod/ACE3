@@ -3,8 +3,7 @@
 
 
 // Cache for static objects
-GVAR(cacheStaticModels) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
-GVAR(cacheStaticModels) setText QGVAR(cacheStaticModels);
+GVAR(cacheStaticModels) = [false] call CBA_fnc_createNamespace;
 
 // Consider static everything vehicle that inherit from Static
 // This include houses (which we don't need), but also walls, that we do
@@ -17,7 +16,7 @@ for "_index" from 0 to (_countOptions - 1) do {
             private _model = getText (_cfgClass >> "model");
             if (_model != "") then {
                 private _array = _model splitString "\";
-                GVAR(cacheStaticModels) setVariable [toLower (_array select ((count _array) - 2)), _cfgClass];
+                GVAR(cacheStaticModels) setVariable [(_array select ((count _array) - 1)), true];
             };
         };
     };
@@ -33,10 +32,28 @@ for "_index" from 0 to (_countOptions - 1) do {
             private _model = getText (_cfgClass >> "model");
             if (_model != "") then {
                 private _array = _model splitString "\";
-                GVAR(cacheStaticModels) setVariable [toLower (_array select ((count _array) - 2)), _cfgClass];
+                GVAR(cacheStaticModels) setVariable [(_array select ((count _array) - 1)), true];
             };
         };
     };
+};
+
+if (hasInterface) then {
+    // Compile and cache config tags
+    call FUNC(compileConfigTags);
+
+    // Scripted tag adding EH
+    [QGVAR(applyCustomTag), FUNC(applyCustomTag)] call CBA_fnc_addEventHandler;
+
+    // Keybind
+    ["ACE3 Equipment", QGVAR(quickTag), localize LSTRING(QuickTag), {
+        // Conditions
+        if !(ACE_player call FUNC(checkTaggable)) exitWith {false};
+
+        // Statement
+        ACE_player call FUNC(quickTag);
+        true
+    }, {false}, [0, [false, false, false]], false] call CBA_fnc_addKeybind; // Unbound
 };
 
 if (!isServer) exitWith {};

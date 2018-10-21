@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get whatever or not a unit should be or stay unconscious.
@@ -5,13 +6,14 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Should the unit stay unconscious? <BOOL>
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_getUnconsciousCondition
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

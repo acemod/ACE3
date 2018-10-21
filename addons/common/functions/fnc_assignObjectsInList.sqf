@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Loops through a string and filters out object names/variables to assign a value for given variable.
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_list", "_variable", "_setting", "_global", ["_vehicle", false]];
 

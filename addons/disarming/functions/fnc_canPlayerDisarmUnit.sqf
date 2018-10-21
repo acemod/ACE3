@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -15,9 +16,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player", "_target"];
 
 ([_target] call FUNC(canBeDisarmed)) &&
-{([_player, _target, []] call EFUNC(common,canInteractWith))}
+{([_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith))}

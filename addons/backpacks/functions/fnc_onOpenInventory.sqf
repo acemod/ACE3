@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle the open inventory event. Camshake and sound on target client.
@@ -7,11 +8,13 @@
  * 1: Backpack <OBJECT>
  *
  * Return Value:
- * false. Always open the inventory dialog. (Bool)
+ * false. Always open the inventory dialog. <BOOL>
+ *
+ * Example:
+ * [bob, backpack] call ace_backpacks_fnc_onOpenInventory
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_backpack"];
 

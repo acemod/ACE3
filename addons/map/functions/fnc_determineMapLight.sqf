@@ -1,85 +1,54 @@
-/*
-* Author: Rocko and esteldunedain
-* Calculates the current map illumination for a given unit
-*
-* Arguments:
-* 0: Unit <OBJECT>
-*
-* Return Value:
-* 0: Does the map needs shading? <BOOL>
-* 1: Color of the overlay <ARRAY>
-*
-* Public: No
-*/
 #include "script_component.hpp"
+/*
+ * Author: Rocko and esteldunedain
+ * Calculates the current map illumination for a given unit
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * 0: Does the map needs shading? <BOOL>
+ * 1: Color of the overlay <ARRAY>
+ *
+ * Example:
+ * [player] call ACE_map_fnc_determineMapLight
+ *
+ * Public: No
+ */
+
 params ["_unit"];
 
-private ["_fnc_blendColor", "_lightTint", "_fnc_calcColor", "_l", "_lightLevel", "_vehicle", "_isEnclosed", "_nearObjects", "_light", "_ll", "_flashlight", "_flareTint"];
-
 // Blend two colors
-_fnc_blendColor = {
+private _fnc_blendColor = {
     params ["_c1", "_c2", "_alpha"];
     [(_c1 select 0) * (1 - _alpha) + (_c2 select 0) * _alpha,
-     (_c1 select 1) * (1 - _alpha) + (_c2 select 1) * _alpha,
-     (_c1 select 2) * (1 - _alpha) + (_c2 select 2) * _alpha,
-     (_c1 select 3) * (1 - _alpha) + (_c2 select 3) * _alpha]
+    (_c1 select 1) * (1 - _alpha) + (_c2 select 1) * _alpha,
+    (_c1 select 2) * (1 - _alpha) + (_c2 select 2) * _alpha,
+    (_c1 select 3) * (1 - _alpha) + (_c2 select 3) * _alpha]
 };
 
 // Ambient light tint depending on time of day
-_lightTint = call {
-    if (sunOrMoon == 1.0) exitWith { [0.5,0.5,0.5,1] };
-    if (sunOrMoon > 0.80) exitWith { [[1.0 - overcast,0.2,0,1], [1,1,1,1],   (sunOrMoon - 0.8)/0.2] call _fnc_blendColor };
-    if (sunOrMoon > 0.50) exitWith { [[0,0,0.1,1], [1.0 - overcast,0.2,0,1], (sunOrMoon - 0.5)/0.3] call _fnc_blendColor };
-    if (sunOrMoon <= 0.5) exitWith { [0,0,0.1,1] };
+private _lightTint = call {
+    if (sunOrMoon == 1.0) exitWith {[0.5,0.5,0.5,1]};
+    if (sunOrMoon > 0.80) exitWith {[[1.0 - overcast,0.2,0,1], [1,1,1,1],   (sunOrMoon - 0.8) / 0.2] call _fnc_blendColor};
+    if (sunOrMoon > 0.50) exitWith {[[0,0,0.1,1], [1.0 - overcast,0.2,0,1], (sunOrMoon - 0.5) / 0.3] call _fnc_blendColor};
+    if (sunOrMoon <= 0.5) exitWith {[0,0,0.1,1]};
     [0,0,0,0]
 };
 
-// Calculates overlay color from tint and light level
-_fnc_calcColor = {
-    params ["_c1", "_lightLevel"];
-
-    if (_lightLevel < 0.5) then {
-        _l = _lightLevel / 0.5;
-        [(_c1 select 0) * _l,
-         (_c1 select 1) * _l,
-         (_c1 select 2) * _l,
-         (_c1 select 3) * (1 - _lightLevel)]
-    } else {
-        _l = (_lightLevel - 0.5) / 0.5;
-        [(_c1 select 0) * (1 - _l) + _l,
-         (_c1 select 1) * (1 - _l) + _l,
-         (_c1 select 2) * (1 - _l) + _l,
-         (_c1 select 3) * (1 - _lightLevel)]
-    };
-};
-
-_lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
-
-/*
-// check if player has NVG enabled
-if (currentVisionMode _unit == 1) exitWith {
-    // stick to nvg color
-    [true, [154/255,253/255,177/255,0.5]]
-};
-*/
+private _lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
 
 // Do not obscure the map if the ambient light level is above 0.95
 if (_lightLevel > 0.95) exitWith {
-    [false, [0.5,0.5,0.5,0]]
+    [false, [1,1,1,0]]
 };
 
-_vehicle = vehicle _unit;
+private _vehicle = vehicle _unit;
 
 // Do not obscure the map if the player is on a enclosed vehicle (assume internal illumination)
-if (_vehicle != _unit) then {
-    // Player is in a vehicle
-    if (!isTurnedOut _unit && { _vehicle isKindOf "Tank" || { ( _vehicle isKindOf "Helicopter" || _vehicle isKindOf "Plane" ) && { (driver _vehicle) == _unit || { (gunner _vehicle) == _unit } } } || {_vehicle isKindOf "Wheeled_APC"}}) then {
-        _isEnclosed = true;
-    };
-};
-if (_isEnclosed) exitWith {
-    TRACE_1("Player in a enclosed vehicle","");
-    [false, [1,1,1,0]]
+if ((_vehicle != _unit) && {(!isTurnedOut _unit)} && GVAR(vehicleLightCondition) && {!((_unit call CBA_fnc_turretPath) in GVAR(vehicleExteriorTurrets))}) exitWith {
+    TRACE_1("Player in a enclosed vehicle",GVAR(vehicleLightColor));
+    [!(GVAR(vehicleLightColor) isEqualTo [1,1,1,0]), GVAR(vehicleLightColor)]
 };
 
 // Player is not in a vehicle
@@ -93,29 +62,38 @@ TRACE_1("Player is on foot or in an open vehicle","");
 // @todo: Illumination flares (timed)
 
 // Using chemlights
-_nearObjects = (_unit nearObjects ["SmokeShell", 4]) select {alive _x && {toLower typeOf _x in ["chemlight_red", "chemlight_green", "chemlight_blue", "chemlight_yellow"]}};
+private _nearObjects = (_unit nearObjects ["Chemlight_base", 4]) select {alive _x};
 
-if (count (_nearObjects) > 0) then {
-    _light = _nearObjects select 0;
-
-    _ll = (1 - ((((_unit distance _light) - 2)/2) max 0)) * 0.4;
-    if (_ll > _lightLevel) then {
-        _flareTint = switch (toLower typeOf _light) do {
-            case "chemlight_red" : {[1,0,0,1]};
-            case "chemlight_green" : {[0,1,0,1]};
-            case "chemlight_blue" : {[0,0,1,1]};
-            case "chemlight_yellow" : {[1,1,0,1]};
-        };
-        _lightTint = [_lightTint, _flareTint, (_ll - _lightLevel)/(1 - _lightLevel)] call _fnc_blendColor;
-        _lightLevel = _ll;
+if !(_nearObjects isEqualTo []) then {
+    private _nearestlight = _nearObjects select 0;
+    private _lightLevelTemp = (1 - ((((_unit distance _nearestlight) - 2) / 2) max 0)) * 0.4;
+    if (_lightLevelTemp > _lightLevel) then {
+        private _flareTint = getArray (configFile >> "CfgLights" >> (getText (configFile >> (getText (configFile >> "CfgAmmo" >> typeOf _nearestlight >> "EffectsSmoke")) >> "Light1" >> "type")) >> "color");
+        _lightTint = [_lightTint, _flareTint, (_lightLevelTemp - _lightLevel) / (1 - _lightLevel)] call _fnc_blendColor;
+        _lightLevel = _lightLevelTemp;
         TRACE_1("player near chemlight","");
     };
 };
 
 // Do not obscure the map if the ambient light level is above 0.95
 if (_lightLevel > 0.95) exitWith {
-    [false, [0.5,0.5,0.5,0]]
+    [false, [1,1,1,0]]
 };
 
-// Calculate resulting map color
-[true, [_lightTint, _lightLevel] call _fnc_calcColor]
+// Calculate resulting map color from tint and light level
+private _halfLight = _lightLevel / 0.5;
+
+private _finalLevel = if (_lightLevel < 0.5) then {
+    [(_lightTint select 0) * _halfLight,
+    (_lightTint select 1) * _halfLight,
+    (_lightTint select 2) * _halfLight,
+    (_lightTint select 3) * (1 - _lightLevel)]
+} else {
+    _halfLight = (_lightLevel - 0.5) / 0.5;
+    [(_lightTint select 0) * (1 - _halfLight) + _halfLight,
+    (_lightTint select 1) * (1 - _halfLight) + _halfLight,
+    (_lightTint select 2) * (1 - _halfLight) + _halfLight,
+    (_lightTint select 3) * (1 - _lightLevel)]
+};
+
+[true, _finalLevel]

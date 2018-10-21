@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * On keypress, point and send position to nearby players
@@ -13,12 +14,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 
 if (!alive ACE_player) exitWith {false};
 // Conditions: canInteract
-if !([ACE_player, ACE_player, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 //make sure player is dismounted or in a static weapon:
 if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) exitWith {false};
 //Check camera view (not in GUNNER)
@@ -48,7 +48,7 @@ private _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]
             {alive _x} &&
             {(_x == (vehicle _x)) || {(vehicle _x) isKindOf "StaticWeapon"}} &&
             {GVAR(indicatorForSelf) || {_x != ACE_player}} &&
-            {!(lineIntersects [(eyePos _x), _playerEyePosASL, ACE_player, _x])} &&
+            {!(lineIntersects [(eyePos _x), _playerEyePosASL, vehicle ACE_player, vehicle _x])} &&
             {[_x] call EFUNC(common,isPlayer)}) then {
 
         _sendFingerToPlayers pushBack _x;
@@ -60,6 +60,11 @@ TRACE_1("sending finger to",_sendFingerToPlayers);
 
 [QGVAR(fingered), [ACE_player, _fingerPosASL, _originASL vectorDistance _fingerPosASL], _sendFingerToPlayers] call CBA_fnc_targetEvent;
 
-[ACE_player, "GestureGo"] call EFUNC(common,doGesture);
+// BI gestures do not work underwater, play custom "point" gesture if loaded
+if (["ace_gestures"] call EFUNC(common,isModLoaded)) then {
+    QEGVAR(gestures,point) call EFUNC(gestures,playSignal); // Works underwater
+} else {
+    [ACE_player, "GestureGo"] call EFUNC(common,doGesture); // Does not work underwater
+};
 
 true

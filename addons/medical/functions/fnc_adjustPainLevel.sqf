@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Interface to allow external modules to safely adjust pain levels.
@@ -14,9 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
-
-private ["_pain"];
 
 params ["_unit", "_addedPain"];
 //Only run on local units:

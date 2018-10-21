@@ -32,6 +32,8 @@ class ACE_Settings {
     };
     class GVAR(enableOverdosing) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_enableOverdosing_DisplayName);
+        description = CSTRING(MedicalSettings_enableOverdosing_Description);
         typeName = "BOOL";
         value = 1;
     };
@@ -41,6 +43,7 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_bleedingCoefficient_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 25, 1, 1};
     };
     class GVAR(painCoefficient) {
         category = CSTRING(Category_Medical);
@@ -48,23 +51,14 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_painCoefficient_Description);
         typeName = "SCALAR";
         value = 1;
-    };
-    class GVAR(enableAirway) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = false;
-    };
-    class GVAR(enableFractures) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = false;
+        sliderSettings[] = {0, 25, 1, 1};
     };
     class GVAR(enableAdvancedWounds) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_Description);
         typeName = "BOOL";
-        value = false;
+        value = 0;
     };
     class GVAR(enableVehicleCrashes) {
         category = CSTRING(Category_Medical);
@@ -86,6 +80,7 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_playerDamageThreshold_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 25, 1, 1};
     };
     class GVAR(AIDamageThreshold) {
         category = CSTRING(Category_Medical);
@@ -93,6 +88,7 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_AIDamageThreshold_Description);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {0, 25, 1, 1};
     };
     class GVAR(enableUnconsciousnessAI) {
         category = CSTRING(Category_Medical);
@@ -130,6 +126,7 @@ class ACE_Settings {
         description = CSTRING(ReviveSettings_maxReviveTime_Description);
         typeName = "SCALAR";
         value = 120;
+        sliderSettings[] = {0, 3600, 120, 0};
     };
     class GVAR(amountOfReviveLives) {
         category = CSTRING(Category_Medical);
@@ -137,12 +134,17 @@ class ACE_Settings {
         description = CSTRING(ReviveSettings_amountOfReviveLives_Description);
         typeName = "SCALAR";
         value = -1;
+        sliderSettings[] = {-1, 25, -1, -1};
     };
+
+    /*
     class GVAR(allowDeadBodyMovement) {
         category = CSTRING(Category_Medical);
         typeName = "BOOL";
         value = 0;
     };
+    */
+
     class GVAR(allowLitterCreation) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_allowLitterCreation_DisplayName);
@@ -159,8 +161,6 @@ class ACE_Settings {
         value = 3;
         values[] = {"Off", "Low", "Medium", "High", "Ultra"};
         _values[] = { 0, 50, 100, 1000, 5000 };
-
-        isClientSettable = 1;
     };
     class GVAR(litterCleanUpDelay) {
         category = CSTRING(Category_Medical);
@@ -168,6 +168,7 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_litterCleanUpDelay_Description);
         typeName = "SCALAR";
         value = 0;
+        sliderSettings[] = {-1, 3600, 0, 0};
     };
     class GVAR(medicSetting_basicEpi) {
         category = CSTRING(Category_Medical);
@@ -280,11 +281,15 @@ class ACE_Settings {
     };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);
+        description = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_Description);
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(moveUnitsFromGroupOnUnconscious) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName);
+        description = CSTRING(MedicalSettings_moveUnitsFromGroupOnUnconscious_Description);
         typeName = "BOOL";
         value = 0;
     };
@@ -303,5 +308,6 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_delayUnconCaptive_Description);
         typeName = "SCALAR";
         value = 3;
+        sliderSettings[] = {0, 30, 3, 0};
     };
 };

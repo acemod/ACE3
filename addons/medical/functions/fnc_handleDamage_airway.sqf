@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handling of the airway injuries upon the handleDamage eventhandler.
@@ -12,14 +13,14 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_airway
+ *
  * Public: No
  */
 
-#include "script_component.hpp"
-
-private "_bodyPartn";
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
-_bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
+private _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
 if (_bodyPartn > 1) exitWith {};
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Checks if a unit is in a repair facility.
@@ -13,30 +14,29 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_object"];
 TRACE_1("params",_object);
 
-private ["_position","_objects","_isInBuilding","_repairFacility"];
+private _position = getPosASL _object;
+private _isInBuilding = false;
 
-_position = getPosASL _object;
-_isInBuilding = false;
-_repairFacility = [];
-
-_objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
-{
-    if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitWith {
+private _checkObject = {
+    if (
+        _x getVariable ["ACE_isRepairFacility", getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(canRepair))] > 0
+        && {!(_x isKindOf "AllVehicles")} // check if it's not repair vehicle
+        && {alive _x}
+    ) exitWith {
         _isInBuilding = true;
     };
-} forEach _objects;
-
-if (!_isInBuilding) then {
-    _objects = position _object nearObjects 7.5;
-    {
-        if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitWith {
-            _isInBuilding = true;
-        };
-    } forEach _objects;
 };
-_isInBuilding;
+
+private _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
+_checkObject forEach _objects;
+
+if (_isInBuilding) exitWith {true};
+
+_objects = _object nearObjects 7.5;
+_checkObject forEach _objects;
+
+_isInBuilding

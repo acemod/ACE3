@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle player changed event. Updates visibility of Rallypoint markers.
@@ -13,12 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_newUnit"];
 
-private "_side";
-_side = side group _newUnit;
+private _side = side group _newUnit;
 
 ((GETMVAR(ACE_Rallypoint_West,             objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));
 ((GETMVAR(ACE_Rallypoint_West_Base,        objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));

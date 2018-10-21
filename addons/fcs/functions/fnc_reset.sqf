@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Resets the FCS to default.
@@ -7,11 +8,13 @@
  * 1: Turret <ARRAY>
  *
  * Return Value:
- * none
+ * None
+ *
+ * Example:
+ * [car, [turret]] call ace_fcs_fnc_reset
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret"];
 

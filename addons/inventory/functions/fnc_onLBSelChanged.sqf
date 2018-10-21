@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Executed when the filter list box is changed.
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [CONTROL, 5] call ACE_inventory_fnc_onLBSelChanged
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 params ["_filter", "_index"];

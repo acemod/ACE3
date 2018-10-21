@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all target column input fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_target
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (GVAR(showWind2)) then {
     if (GVAR(currentUnit) != 2) then {

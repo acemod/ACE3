@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Initializes the friendly fire module.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 
@@ -30,4 +30,4 @@ if (isServer) then {
     [], 0.1] call CBA_fnc_waitAndExecute;
 };
 
-ACE_LOGINFO("Friendly Fire Messages Module Initialized.");
+INFO("Friendly Fire Messages Module Initialized.");

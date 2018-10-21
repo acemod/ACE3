@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Enabled the vitals loop for a unit.
@@ -5,13 +6,14 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_addVitalLoop
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_unit", ["_force", false]];
 

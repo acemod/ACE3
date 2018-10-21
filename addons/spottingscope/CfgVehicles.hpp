@@ -11,11 +11,18 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call EFUNC(common,hasItem));
                     statement = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call FUNC(place));
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
         };
+    };
+
+    class ThingX;
+    class ACE_SpottingScope_Tube: ThingX {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        displayName = CSTRING(DisplayName);
+        model = QPATHTOF(data\ace_spottingscope_tube.p3d);
     };
 
     class LandVehicle;
@@ -43,7 +50,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
-                selection = "main_gun";
+                selection = "main_turret_axis";
                 class ACE_Pickup {
                     selection = "";
                     displayName = CSTRING(PickUp);
@@ -52,7 +59,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
@@ -73,6 +79,21 @@ class CfgVehicles {
         getInAction = "PlayerProne";
         getOutAction = "PlayerProne";
         editorSubcategory = "EdSubcat_Turrets";
+
+        threat[] = {0.7, 0.3, 0};
+        accuracy = 0.12;
+        cost = 10000;
+        icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";
+
+        class SpeechVariants {
+            class Default {
+                speechSingular[] = {"veh_infantry_SF_s"};
+                speechPlural[] = {"veh_infantry_SF_p"};
+            };
+        };
+        textSingular = "$STR_A3_nameSound_veh_infantry_SF_s";
+        textPlural = "$STR_A3_nameSound_veh_infantry_SF_p";
+        nameSound = "veh_infantry_SF_s";
 
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -123,6 +144,26 @@ class CfgVehicles {
                 opticsDisablePeripherialVision = 1;
             };
         };
+
+        // damage handling
+        armor = 80;
+
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                QPATHTO_R(data\ace_spottingscope_metal.rvmat),
+                QPATHTO_R(data\ace_spottingscope_metal_damage.rvmat),
+                QPATHTO_R(data\ace_spottingscope_metal_destruct.rvmat),
+                QPATHTO_R(data\ace_spottingscope_glass.rvmat),
+                QPATHTO_R(data\ace_spottingscope_glass_damage.rvmat),
+                QPATHTO_R(data\ace_spottingscope_glass_destruct.rvmat),
+                QPATHTO_R(data\ace_spottingscope_rubber.rvmat),
+                QPATHTO_R(data\ace_spottingscope_rubber_damage.rvmat),
+                QPATHTO_R(data\ace_spottingscope_rubber_damage.rvmat)
+            };
+        };
+
+        editorPreview = QPATHTOF(data\preview_spottingscope.jpg);
     };
 
     class ACE_B_SpottingScope: ACE_SpottingScopeObject {
@@ -152,6 +193,24 @@ class CfgVehicles {
         crew = "I_spotter_F";
     };
 
+    class ACE_B_T_SpottingScope: ACE_SpottingScopeObject {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_B_T_SpottingScope";
+        scope = 2;
+        side = 1;
+        faction = "BLU_T_F";
+        crew = "B_T_Spotter_F";
+    };
+
+    class ACE_O_T_SpottingScope: ACE_SpottingScopeObject {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_O_T_SpottingScope";
+        scope = 2;
+        side = 0;
+        faction = "OPF_T_F";
+        crew = "O_T_Spotter_F";
+    };
+
     class Item_Base_F;
     class ACE_Item_SpottingScope: Item_Base_F {
         author[] = {"Rocko", "Scubaman3D"};
@@ -159,6 +218,9 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(DisplayName);
         vehicleClass = "Items";
+        editorCategory = "EdCat_Equipment";
+        editorSubcategory = "EdSubcat_InventoryItems";
+        editorPreview = QPATHTOF(data\preview_spottingscope.jpg);
         class TransportItems {
             MACRO_ADDITEM(ACE_SpottingScope,1);
         };

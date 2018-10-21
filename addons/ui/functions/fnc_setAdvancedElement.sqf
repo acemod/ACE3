@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Sets advanced visible element of the UI using displays and controls.
@@ -12,51 +13,47 @@
  * Successfully Set <BOOL>
  *
  * Example:
- * ["ace_ui_ammoCount", true, false] call ace_ui_fnc_setAdvancedElement
+ * _successfullySet = ["ammoCount", true, false] call ace_ui_fnc_setAdvancedElement
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]] ];
+
+private _cachedElement = GVAR(configCache) getVariable _element;
+if (isNil "_cachedElement") exitWith {};
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
     [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured);
     false
 };
 
-private _config = configFile >> "ACE_UI" >> _element;
+_cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 
 // Exit if main vehicle type condition not fitting
-private _location = getNumber (_config >> "location"); // (0-both, 1-ground, 2-vehicle)
 private _canUseWeapon = ACE_player call CBA_fnc_canUseWeapon;
-if ((_canUseWeapon && _location == 2) || (!_canUseWeapon && _location == 1)) exitWith {false};
-
-private _idd = getNumber (_config >> "idd");
-private _elements = getArray (_config >> "elements");
+if ((_canUseWeapon && {_location == 2}) || {!_canUseWeapon && {_location == 1}}) exitWith {false};
 
 // Get setting from config API
 {
-    private _condition = call compile (getText _x);
-    if !(_condition) exitWith {
+    if (!call (_x select 0)) exitWith {
         // Display and print info which component forced the element except for default vehicle check
         if (_showHint) then {
             [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
-            ACE_LOGINFO_2("Attempted modification of a forced User Interface element '%1' by '%2'",_element,configName _x);
+            INFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_x select 1);
         };
         _show = false;
     };
-} forEach (configProperties [_config >> "conditions"]);
+} count _conditions;
 
 // Get setting from scripted API
 if (!_force) then {
-    private _setElement = [_element] call FUNC(findSetElement);
-    _setElement params ["_indexSet", "_sourceSet", "_showSet"];
-
-    if (_indexSet != -1) then {
+    private _setElement = GVAR(elementsSet) getVariable _element;
+    if (!isNil "_setElement") then {
+        _setElement params ["_sourceSet", "_showSet"];
         if (_showHint) then {
             [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
-            ACE_LOGINFO_2("Attempted modification of a forced User Interface element '%1' by '%2'",_element,_sourceSet);
+            INFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_sourceSet);
         };
         _show = _showSet;
     };
@@ -79,7 +76,8 @@ private _success = false;
 
             _success = true;
         };
-    } forEach (uiNamespace getVariable "IGUI_displays");
-} forEach _elements;
+    } count (uiNamespace getVariable "IGUI_displays");
+    nil
+} count _elements;
 
 _success

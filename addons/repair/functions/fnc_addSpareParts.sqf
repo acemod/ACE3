@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Adds spare parts to the vehicle. Before SettingsInitialized only collect for later execution.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", ["_amount", 1], ["_part", ""], ["_force", false]];
 TRACE_2("params",_vehicle,_amount);
@@ -33,4 +33,6 @@ if (!EGVAR(common,settingsInitFinished)) exitWith {
 if (!_force && !GVAR(addSpareParts)) exitWith {};
 
 // Load
-["ace_addCargo", [_part, _vehicle, _amount]] call CBA_fnc_localEvent;
+[{
+    ["ace_addCargo", _this] call CBA_fnc_localEvent;
+}, [_part, _vehicle, _amount]] call CBA_fnc_execNextFrame;

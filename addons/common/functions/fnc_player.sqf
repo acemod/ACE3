@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578, commy2
  * Returns the player or curator controlled unit.
@@ -9,8 +10,10 @@
  * Return Value:
  * Player controlled unit <OBJECT>
  *
+ * Example:
+ * [] call ace_common_fnc_player
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", player]

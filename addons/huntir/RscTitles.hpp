@@ -1,14 +1,14 @@
 #define __FONTHEIGHT 0.02
 
 class RscTitles {
-    class ace_huntir_cam_rose {
+    class GVAR(cam_rose) {
         idd=-1;
         movingEnable = true;
         fadein = 0;
         fadeout = 1;
         duration = 1e+011;
-        name="ace_huntir_cam_rose";
-        onLoad = "uiNamespace setVariable ['ace_huntir_cam_rose', _this select 0]";
+        name=QGVAR(cam_rose);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(cam_rose), _this select 0)]);
         class controls {
             class CHAR_N {
                 type = 0;

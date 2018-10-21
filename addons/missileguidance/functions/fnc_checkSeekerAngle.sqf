@@ -1,31 +1,34 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
- * Returns whether the target position is within the maximum angle FOV of the provided seeker 
+ * Returns whether the target position is within the maximum angle FOV of the provided seeker
  * objects current direction.
  *
  * Arguments:
- * 0: Seeker [Object]
- * 1: Target [Position]
- * 2: Max Angle [Degrees]
- * 
+ * 0: Seeker <OBJECT>
+ * 1: Target PosASL <ARRAY>
+ * 2: Max Angle (degrees) <NUMBER>
+ *
  * Return Value:
- *    Boolean
+ * Can See <BOOL>
+ *
+ * Example:
+ * [player, cursorTarget, 45] call ace_missileguidance_fnc_checkSeekerAngle;
+ *
+ * Public: No
  */
 
-#include "script_component.hpp"
-private["_seeker", "_targetPos", "_seekerMaxAngle", "_sensorPos", "_testPointVector", "_testDotProduct"];
+params ["_seeker", "_targetPos", "_seekerMaxAngle"];
 
-_seeker = _this select 0;
-_targetPos = _this select 1;
-_seekerMaxAngle = _this select 2;
+private _sensorPos = getPosASL _seeker;
 
-_sensorPos = getPosASL _seeker;
+private _testPointVector = vectorNormalized (_targetPos vectorDiff _sensorPos);
+private _testDotProduct = (vectorNormalized (velocity _seeker)) vectorDotProduct _testPointVector;
 
-_testPointVector = vectorNormalized (_targetPos vectorDiff _sensorPos);
-_testDotProduct = (vectorNormalized (velocity _seeker)) vectorDotProduct _testPointVector;
+TRACE_2("fov",acos _testDotProduct,_seekerMaxAngle);
 
-if(_testDotProduct < (cos _seekerMaxAngle)) exitWith {
-    false 
+if (_testDotProduct < (cos _seekerMaxAngle)) exitWith {
+    false
 };
 
 true

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets position from grid cords
@@ -6,7 +7,7 @@
  * 0: Grid Cords <STRING>
  * 1: Grid center (true), Grid Bottom Right (false) (default: true) <BOOL>
  *
- * Return values:
+ * Return Value:
  * Position <ARRAY>
  *
  * Example:
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_inputString", ["_getCenterOfGrid", true]];
 

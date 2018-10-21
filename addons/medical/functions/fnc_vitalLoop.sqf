@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain
  * Vital loop for a unit.
@@ -6,13 +7,14 @@
  * 0: The Unit <OBJECT>
  * 1: Time of last computation <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, 5] call ACE_medical_fnc_vitalLoop
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_lastTime"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Helper function for updating the 2d and 3d scope controls
@@ -7,18 +8,17 @@
  * 0: Display (RscInGameUI for a weapon) <DISPLAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [ACE_RscWeapon_Arco's Display] call ace_optics_fnc_onDrawScope2D
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 
-private _display = _this select 0;
+params ["_display"];
 
 // @todo, all weapon types
 private _optic = (primaryWeaponItems ACE_player) select 2;
@@ -32,17 +32,17 @@ if (_isPIP) then {
         };
 
         // PiP technique by BadBenson
-        GVAR(camera) = "camera" camCreate positionCameraToWorld [0,0,0];
+        GVAR(camera) = "camera" camCreate positionCameraToWorld [0, 0, 0];
         GVAR(camera) camSetFov 0.7;
         GVAR(camera) camSetTarget ACE_player;
         GVAR(camera) camCommit 1;
 
-        "ace_optics_rendertarget0" setPiPEffect [0];
-        GVAR(camera) cameraEffect ["INTERNAL", "BACK", "ace_optics_rendertarget0"];
+        QGVAR(rendertarget0) setPiPEffect [0];
+        GVAR(camera) cameraEffect ["INTERNAL", "BACK", QGVAR(rendertarget0)];
 
         TRACE_2("created new pip camera",GVAR(camera),isNull GVAR(camera));
 
-        //Start a waitUntil to handle destruction after GVAR(pipLastFrame) is no longer updated
+        // Start a waitUntil to handle destruction after GVAR(pipLastFrame) is no longer updated
         [{
             (abs (diag_frameno - GVAR(pipLastFrame))) > 1
         }, {
@@ -64,8 +64,8 @@ if (!ctrlShown (_display displayCtrl 154)) exitWith {
 };
 
 if (_isPIP) then {
-    GVAR(camera) setPosATL positionCameraToWorld [0,0,0.4];
-    GVAR(camera) camPrepareTarget positionCameraToWorld [0,0,50];
+    GVAR(camera) setPosATL positionCameraToWorld [0, 0, 0.4];
+    GVAR(camera) camPrepareTarget positionCameraToWorld [0, 0, 50];
     GVAR(camera) camCommitPrepared 0;
 
     // @todo, check if that needs to be done at all
@@ -78,15 +78,15 @@ if (_isPIP) then {
     };
 };
 
-// calculate lighting
+// Calculate lighting
 private _dayOpacity = call EFUNC(common,ambientBrightness);
-private _nightOpacity = [1,0] select (_dayOpacity == 1);
+private _nightOpacity = [1, 0] select (_dayOpacity == 1);
 
 // Apply lighting and make layers visible
-(_display displayCtrl 1713001) ctrlSetTextColor [1,1,1,1];
-(_display displayCtrl 1713002) ctrlSetTextColor [1,1,1,[0,1] select (_dayOpacity < 0.5)];
-(_display displayCtrl 1713005) ctrlSetTextColor [1,1,1,_dayOpacity];
-(_display displayCtrl 1713006) ctrlSetTextColor [1,1,1,_nightOpacity];
+(_display displayCtrl 1713001) ctrlSetTextColor [1, 1, 1, 1];
+(_display displayCtrl 1713002) ctrlSetTextColor [1, 1, 1, [0, 1] select (_dayOpacity < 0.5)];
+(_display displayCtrl 1713005) ctrlSetTextColor [1, 1, 1, _dayOpacity];
+(_display displayCtrl 1713006) ctrlSetTextColor [1, 1, 1, _nightOpacity];
 
 /*
 (_display displayCtrl 1713001) ctrlCommit 0;

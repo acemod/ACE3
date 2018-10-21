@@ -5,7 +5,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleNameTags);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_NameTags_ca.paa);
@@ -27,6 +27,10 @@ class CfgVehicles {
                     class ForceShow {
                         name = CSTRING(ForceShow);
                         value = 1;
+                    };
+                    class ForceShowFadeOnBorder {
+                        name = CSTRING(FadeOnBorder);
+                        value = 5;
                     };
                     class ForceShowOnlyCursor {
                         name = CSTRING(ForceShowOnlyCursor);

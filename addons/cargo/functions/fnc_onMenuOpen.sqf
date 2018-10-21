@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handle the UI data display.
@@ -13,13 +14,16 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 
 params ["_display"];
 
 uiNamespace setVariable [QGVAR(menuDisplay), _display];
+
+if (GVAR(interactionParadrop)) then {
+    (_display displayCtrl 12) ctrlSetText (localize LSTRING(paradropButton));
+};
 
 [{
     disableSerialization;
@@ -28,7 +32,7 @@ uiNamespace setVariable [QGVAR(menuDisplay), _display];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (isNull GVAR(interactionVehicle) || {ACE_player distance GVAR(interactionVehicle) >= 10}) exitWith {
+    if (isNull GVAR(interactionVehicle) || {(([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE) && {(vehicle ACE_player) != GVAR(interactionVehicle)}}) exitWith {
         closeDialog 0;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
@@ -40,7 +44,13 @@ uiNamespace setVariable [QGVAR(menuDisplay), _display];
     lbClear _ctrl;
     {
         private _class = if (_x isEqualType "") then {_x} else {typeOf _x};
-        _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> _class >> "displayName"));
+        private _displayName = getText (configfile >> "CfgVehicles" >> _class >> "displayName");
+        if (GVAR(interactionParadrop)) then {
+            _ctrl lbAdd format ["%1 (%2s)", _displayName, GVAR(paradropTimeCoefficent) * ([_class] call FUNC(getSizeItem))];
+        } else {
+            _ctrl lbAdd _displayName;
+        };
+
         true
     } count _loaded;
 

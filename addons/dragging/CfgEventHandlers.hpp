@@ -38,20 +38,17 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
+    class Land_Camping_Light_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
 };
 
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
             killed = QUOTE(_this call DFUNC(handleKilled));
-        };
-    };
-};
-
-class Extended_AnimChanged_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            animChanged = QUOTE(_this call DFUNC(handleAnimChanged));
         };
     };
 };

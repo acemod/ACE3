@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Enable the object to be dragged.
@@ -5,8 +6,8 @@
  * Arguments:
  * 0: Any object <OBJECT>
  * 1: true to enable dragging, false to disable <BOOL>
- * 2: Position offset for attachTo command (Array, optinal; default: [0,0,0])
- * 3: Direction in degree to rotate the object after attachTo (Number, optional; default: 0)
+ * 2: Position offset for attachTo command (optinal; default: [0,0,0])<ARRAY>
+ * 3: Direction in degree to rotate the object after attachTo (optional; default: 0) <NUMBER>
  *
  * Return Value:
  * None
@@ -16,9 +17,8 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_player", "_target");
+//IGNORE_PRIVATE_WARNING ["_player", "_target"];
 params ["_object", "_enableDrag", "_position", "_direction"];
 
 if (isNil "_position") then {

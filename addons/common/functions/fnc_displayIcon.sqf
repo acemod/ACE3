@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Draw progress bar and execute given function if succesful.
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 // positions for the icon UI
 #define RIGHT_SIDE    (safezoneW + safezoneX)
@@ -69,9 +69,9 @@ private _refresh = {
 
             private _position = switch (_setting) do {
                 case TOP_RIGHT_DOWN: {[X_POS_ICONS, Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-                case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_forEachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_forEachIndex + 3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
                 case TOP_LEFT_DOWN: {[LEFT_SIDE + (0.5 * ICON_WIDTH), Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-                case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_forEachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
+                case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_forEachIndex + 3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
                 default {[X_POS_ICONS, Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
             };
 

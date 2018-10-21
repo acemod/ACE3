@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if the given backpack is an actual backpack that can store items. Parachute, static weapon packs, etc. will return false.
@@ -8,9 +9,11 @@
  * Return Value:
  * Boolean <BOOL>
  *
+ * Example:
+ * [bob] call ace_backpacks_fnc_isBackpack
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_backpack", objNull, [objNull, ""]]];
 

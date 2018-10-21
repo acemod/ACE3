@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Start the carrying process.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
@@ -51,12 +51,14 @@ if (_target isKindOf "CAManBase") then {
 } else {
 
     // select no weapon and stop sprinting
-    _unit action ["SwitchWeapon", _unit, _unit, 99];
+    _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
     [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 
 };
+
+[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);

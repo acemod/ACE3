@@ -3,21 +3,13 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
-// backwards comp
-DFUNC(canUseWeapon) = {
-    ACE_DEPRECATED("ace_common_fnc_canUseWeapon","3.7.0","CBA_fnc_canUseWeapon");
-    _this call CBA_fnc_canUseWeapon;
-};
-
-DFUNC(selectWeaponMode) = {
-    ACE_DEPRECATED("ace_common_fnc_selectWeaponMode","3.7.0","CBA_fnc_selectWeapon");
-    _this call CBA_fnc_selectWeapon;
-};
-
-GVAR(syncedEvents) = HASH_CREATE;
-GVAR(showHudHash) = [] call FUNC(hashCreate);
+GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
+GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
+GVAR(vehicleIconCache) = call CBA_fnc_createNamespace; // for getVehicleIcon
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
@@ -27,10 +19,8 @@ GVAR(runAtSettingsInitialized) = [];
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings on the server and broadcast them
-if (isServer) then {
-    call FUNC(loadSettingsOnServer);
-};
+// Load ace_settings into CBA Settings
+[] call FUNC(cbaSettings);
 
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
@@ -50,5 +40,7 @@ uiNamespace setVariable ["ACE_player", objNull];
 isHC = !hasInterface && !isDedicated; // deprecated because no tag
 missionNamespace setVariable ["ACE_isHC", ACE_isHC];
 uiNamespace setVariable ["ACE_isHC", ACE_isHC];
+
+#include "initSettings.sqf"
 
 ADDON = true;

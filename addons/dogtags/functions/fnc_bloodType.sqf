@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Reports a blood type depending on the units name.
@@ -8,9 +9,11 @@
  * Return Value:
  * A random blood type <STRING>
  *
+ * Example:
+ * _bloodType = ["name"] call ace_dogtags_fnc_bloodType
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define BLOOD_TYPES ["O POS", "O NEG", "A POS", "A NEG", "B POS", "B NEG", "AB POS", "AB NEG"]
 

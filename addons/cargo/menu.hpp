@@ -17,7 +17,7 @@ class GVAR(menu) {
         };
         class CenterBackground: HeaderBackground {
             y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            h = "14 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            h = "13.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0.8)";
             colorText[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             colorBackground[] = {0,0,0,"(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
@@ -68,7 +68,7 @@ class GVAR(menu) {
             colorSelectBackground2[] = {0.3, 0.3, 0.3, 1.0};
         };
         class btnCancel: ACE_gui_buttonBase {
-            text = "Cancel";
+            text = "$STR_DISP_CANCEL";
             idc = 11;
             x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "14.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";

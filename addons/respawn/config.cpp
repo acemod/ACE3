@@ -19,8 +19,3 @@ class CfgPatches {
 #include "CfgVehicleClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
-
-class ACE_newEvents {
-    rallypointMoved = "ace_rallypointMoved";
-    killedByFriendly = "ace_killedByFriendly";
-};

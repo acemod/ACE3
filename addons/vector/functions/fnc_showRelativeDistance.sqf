@@ -1,17 +1,27 @@
-// by commy2
 #include "script_component.hpp"
-
-private "_dlgVector";
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_vector_fnc_showRelativeDistance
+ *
+ * Public: No
+ */
 
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
-private ["_distance", "_digits"];
-
-_distance = call FUNC(getRelativeDistance);
+private _distance = call FUNC(getRelativeDistance);
 
 // relative slope distance
-_digits = [_distance] call FUNC(convertToTexturesDistance);
+private _digits = [_distance] call FUNC(convertToTexturesDistance);
 
 (_dlgVector displayCtrl 1311) ctrlSetText (_digits select 0);
 (_dlgVector displayCtrl 1312) ctrlSetText (_digits select 1);

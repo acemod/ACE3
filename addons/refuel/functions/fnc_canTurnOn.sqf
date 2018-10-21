@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Check if a unit can turn on a fuel nozzle
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
@@ -27,5 +27,4 @@ if (isNull _unit  ||
 !(_nozzle getVariable [QGVAR(isRefueling), false]) &&
     {[_nozzle getVariable QGVAR(source)] call FUNC(getFuel) != 0} &&
     {!isNull (_nozzle getVariable [QGVAR(sink), objNull])} &&
-    {(fuel (_nozzle getVariable QGVAR(sink))) < 1} &&
-    {!(isEngineOn (_nozzle getVariable QGVAR(sink)))}
+    {(fuel (_nozzle getVariable QGVAR(sink))) < 1}

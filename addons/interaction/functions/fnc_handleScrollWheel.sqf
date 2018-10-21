@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handles incremental door opening
@@ -8,9 +9,11 @@
  * Return Value:
  * handled <BOOL>
  *
+ * Example:
+ * [5] call ACE_interaction_fnc_handleScrollWheel
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_scroll"];
 

@@ -1,55 +1,56 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Calculates the blood volume change and decreases the IVs given to the unit.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
+ * 1: Global Sync Values (bloodbags) <BOOL>
  *
- * ReturnValue:
- * Current cardiac output <NUMBER>
+ * Return Value:
+ * Blood volume change (in % total) <NUMBER>
+ *
+ * Example:
+ * [bob, true] call ACE_medical_fnc_getBloodVolumeChange
  *
  * Public: No
  */
 
-#include "script_component.hpp"
-
 /*
     IV Change per second calculation:
     250ml should take 60 seconds to fill. 250/60 = 4.166.
-*/
-#define IV_CHANGE_PER_SECOND         -4.166
+    Basic medical is 10x (will take 6 seconds for 250ml)
+ */
+#define IV_CHANGE_PER_SECOND         ([41.66, 4.166] select (GVAR(level) >= 2))
 
-/*
-    Blood Change per second calculation for IVs:
-    250ml should take 60 seconds to fill in. Total blood volume is 7000ml = 100%.
-    7000/100 = 70 = 1%
-    250 / 70 = 3.571428571%
-    3.571428571 / 60 = 0.0595% per second.
-*/
-#define BLOOD_CHANGE_PER_SECOND        0.0595
-
-#define EMPTY_IV_BAG_VALUE 0
-#define IV_VOLUME (_unit getVariable [_x, EMPTY_IV_BAG_VALUE]) + IV_CHANGE_PER_SECOND
-
-private ["_bloodVolume", "_bloodVolumeChange", "_ivVolume"];
-params ["_unit"];
+params ["_unit", "_syncValues"];
 
 private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
 private _bloodVolumeChange = -([_unit] call FUNC(getBloodLoss));
 
-if (_bloodVolume < 100) then {
-    {
-        if ((_unit getVariable [_x, EMPTY_IV_BAG_VALUE]) > EMPTY_IV_BAG_VALUE) then {
-            _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
-            _unit setVariable [_x, IV_VOLUME];
+if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
+    if (_bloodVolume < 100) then {
+        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
+        _bloodBags = _bloodBags apply {
+            _x params ["_bagVolumeRemaining"];
+            private _bagChange = IV_CHANGE_PER_SECOND min _bagVolumeRemaining; // absolute value of the change in miliLiters
+            _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
+            _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 70); // ((bag change in ml) / (body total:7000ml)) out of 100 percent
+            if (_bagVolumeRemaining < 0.01) then {
+                []
+            } else {
+                [_bagVolumeRemaining];
+            };
         };
-    } forEach GVAR(IVBags);
-} else {
-    {
-        if ((_unit getVariable [_x, EMPTY_IV_BAG_VALUE]) > EMPTY_IV_BAG_VALUE) then {
-            _unit setVariable [_x, EMPTY_IV_BAG_VALUE]; // lets get rid of exessive IV volume
+        _bloodBags = _bloodBags - [[]]; // remove empty bags
+        if (_bloodBags isEqualTo []) then {
+            _unit setVariable [QGVAR(ivBags), nil, true]; // no bags left - clear variable (always globaly sync this)
+        } else {
+            _unit setVariable [QGVAR(ivBags), _bloodBags, _syncValues];
         };
-    } forEach GVAR(IVBags);
+    } else {
+        _unit setVariable [QGVAR(ivBags), nil, true]; // blood volume = 100% - clear variable (always globaly sync this)
+    };
 };
 
 _bloodVolumeChange;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Open the select menu with the "personal" items of a frisked unit.  It only shows "handgunWeapon", "uniformItems", "vestItems", "backpackItems" and "assignedItems" because every other item is visible on the character
@@ -7,29 +8,26 @@
  * 1: unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, bob] call ACE_captives_fnc_doFristPerson;
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-private ["_weapon", "_listedItemClasses", "_actions", "_allGear"];
 
 params ["_player", "_unit"];
 
-_weapon = currentWeapon _player;
+private _weapon = currentWeapon _player;
 if (_weapon == primaryWeapon _player && {_weapon != ""}) then {
     [_player, "AmovPercMstpSlowWrflDnon", 0] call EFUNC(common,doAnimation);
 };
 
-_listedItemClasses = [];
+private _listedItemClasses = [];
 
-_actions = [localize LSTRING(FriskMenuHeader), ""] call ACE_Interaction_fnc_prepareSelectMenu;
+private _actions = [localize LSTRING(FriskMenuHeader), ""] call ACE_Interaction_fnc_prepareSelectMenu;
 
-_allGear = [];
+private _allGear = [];
 
 if ((handgunWeapon _unit) != "") then {
     _allGear pushBack (handgunWeapon _unit);
@@ -54,8 +52,7 @@ if (count (assignedItems _unit) > 0) then {
 // Assigned Items
 {
     if (!(_x in _listedItemClasses)) then {
-        private "_item";
-        _item = configFile >> "CfgMagazines" >> _x;
+        private _item = configFile >> "CfgMagazines" >> _x;
         if (isNil "_item" || str _item == "") then {  //str _item ?
             _item = configFile >> "CfgWeapons" >> _x;
         };

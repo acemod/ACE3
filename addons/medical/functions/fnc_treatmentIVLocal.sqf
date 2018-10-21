@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * IV Treatment local callback
@@ -10,10 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [medic, "Classname"] call ace_medical_fnc_treatmentIVLocal
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_treatmentClassname"];
 
@@ -33,10 +35,6 @@ if (isClass (_config >> _treatmentClassname)) then {
     ERROR("IV Treatment Classname not found");
 };
 
-private _varName = format["ACE_Medical_IVVolume_%1",_typeOf];
-_target setVariable [_varName, (_target getVariable [_varName, 0]) + _volumeAdded, true];
-
-if !(_varName in GVAR(IVBags)) then {
-    GVAR(IVBags) pushBack _varName;
-    publicVariable QGVAR(IVBags);
-};
+private _bloodBags = _target getVariable [QGVAR(ivBags), []];
+_bloodBags pushBack [_volumeAdded]; // Future BagType: [_volumeAdded, _typeOf]
+_target setVariable [QGVAR(ivBags), _bloodBags, true];

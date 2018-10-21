@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Gets all placed explosives by unit, optionally filtered by specific trigger type.
@@ -15,22 +16,19 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_allExplosives,_deadmanExplosives);
 
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private ["_clackerList", "_adjustedList", "_list", "_filter"];
-
-_filter = nil;
+private _filter = nil;
 if (count _this > 1) then {
     _filter = ConfigFile >> "ACE_Triggers" >> (_this select 1);
 };
-_clackerList = [];
-_adjustedList = false;
+private _clackerList = [];
+private _adjustedList = false;
 _clackerList = _unit getVariable [QGVAR(Clackers), []];
-_list = [];
+private _list = [];
 {
     if (isNull (_x select 0)) then {
         _clackerList set [_forEachIndex, "X"];

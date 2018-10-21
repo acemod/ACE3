@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * IV Treatment callback
@@ -12,10 +13,11 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [medic, patient, "selectionName", "bandage", 2] call ace_medical_fnc_treatmentAdvanced_medication
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 TRACE_5("params",_caller,_target,_selectionName,_className,_items);

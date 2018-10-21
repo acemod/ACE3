@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
-        author[] = {"SzwedzikPL"};
-        authorUrl = "https://github.com/SzwedzikPL/";
+        requiredAddons[] = {"ace_interaction"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"SzwedzikPL"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -15,4 +17,5 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
-#include "Dogtag.hpp"
+#include "RscTitles.hpp"
+#include "CfgUIGrids.hpp"

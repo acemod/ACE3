@@ -1,9 +1,3 @@
-class RscControlsGroup;
-class VScrollbar;
-class HScrollbar;
-class RscText;
-class RscMapControl;
-
 class RscInGameUI {
     class RscOptics_LaserDesignator {
         idd = 300;

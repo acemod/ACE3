@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [cam] call ACE_huntir_fnc_cam
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 params ["_huntIR"];
@@ -29,9 +32,9 @@ GVAR(ELEVAT) = 0.01;
 HUNTIR_BACKGROUND_LAYER_ID cutText["","PLAIN"];
 
 closedialog 0;
-createDialog "ace_huntir_cam_dialog";
-uiNameSpace setVariable ["ace_huntir_monitor", findDisplay 18880];
-(uiNameSpace getVariable "ace_huntir_monitor") displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
+createDialog QGVAR(cam_dialog);
+uiNameSpace setVariable [QGVAR(monitor), findDisplay 18880];
+(uiNameSpace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
 
 ctrlSetText [4, "0X"];
 
@@ -52,7 +55,7 @@ GVAR(pphandle) ppEffectAdjust [1, 1, 0, [0.01, 0.02, 0.04, 0.01], [0.87, 1.08, 1
 GVAR(pphandle) ppEffectCommit 0;
 GVAR(pphandle) ppEffectEnable true;
 
-GVAR(stop) = false;
+GVAR(stop) = false; // Var also used in ace_common_fnc_isFeatureCameraActive
 call FUNC(huntirCompass);
 
 GVAR(no_cams) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
@@ -65,7 +68,7 @@ GVAR(no_cams) sort true;
 } forEach GVAR(no_cams);
 [{
     //Close monitor if we no longer have the item:
-    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
         closeDialog 0;
     };
 
@@ -132,22 +135,20 @@ GVAR(no_cams) sort true;
         };
     };
 
-    private ["_cam_coord_y", "_cam_coord_x", "_cam_time", "_cam_pos"];
-
     GVAR(logic) setPosATL (GVAR(pos) vectorAdd [0, 0, -5]);
     GVAR(logic) setDir GVAR(ROTATE);
     GVAR(logic) setVectorUp [0.0001, 0.0001, 1];
     GVAR(cam) CameraEffect ["internal", "BACK"];
-    _cam_coord_y = GVAR(ELEVAT) * cos(GVAR(ROTATE));
-    _cam_coord_x = GVAR(ELEVAT) * sin(GVAR(ROTATE));
+    private _cam_coord_y = GVAR(ELEVAT) * cos(GVAR(ROTATE));
+    private _cam_coord_x = GVAR(ELEVAT) * sin(GVAR(ROTATE));
     GVAR(cam) camSetRelPos [_cam_coord_x, _cam_coord_y, 2];
     GVAR(cam) camCommit 0;
 
     ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
     ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
-    _cam_time = CBA_missionTime - (GVAR(huntIR) getVariable [QGVAR(startTime), CBA_missionTime]);
+    private _cam_time = CBA_missionTime - (GVAR(huntIR) getVariable [QGVAR(startTime), CBA_missionTime]);
     ctrlSetText [3, format["%1 s", round(_cam_time)]];
-    _cam_pos = getPosVisual GVAR(huntIR);
+    private _cam_pos = getPosVisual GVAR(huntIR);
     _cam_pos = format ["X = %1, Y = %2", round (_cam_pos select 0), round (_cam_pos select 1)];
     ctrlSetText [5, _cam_pos];
     ctrlSetText [6, ""];

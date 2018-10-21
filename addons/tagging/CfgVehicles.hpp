@@ -1,37 +1,58 @@
 class CfgVehicles {
-    class Man;
-    class CAManBase: Man {
-        class ACE_SelfActions {
-            class ACE_Equipment {
-                class ACE_TagBlack {
-                    displayName = CSTRING(TagBlack);
-                    condition = QUOTE(('ACE_SpraypaintBlack' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'black' call FUNC(getTexture))] call FUNC(tag));
-                    showDisabled = 0;
-                    priority = 3;
-                    icon = QPATHTOF(UI\icons\iconTaggingBlack.paa);
-                };
-                class ACE_TagRed: ACE_TagBlack {
-                    displayName = CSTRING(TagRed);
-                    condition = QUOTE(('ACE_SpraypaintRed' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'red' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QPATHTOF(UI\icons\iconTaggingRed.paa);
-                };
-                class ACE_TagGreen: ACE_TagBlack {
-                    displayName = CSTRING(TagGreen);
-                    condition = QUOTE(('ACE_SpraypaintGreen' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'green' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QPATHTOF(UI\icons\iconTaggingGreen.paa);
-                };
-                class ACE_TagBlue: ACE_TagBlack {
-                    displayName = CSTRING(TagBlue);
-                    condition = QUOTE(('ACE_SpraypaintBlue' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'blue' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QPATHTOF(UI\icons\iconTaggingBlue.paa);
+    class ACE_Module;
+    class ACE_ModuleTagging: ACE_Module {
+        author = ECSTRING(common,ACETeam);
+        category = "ACE";
+        displayName = CSTRING(Tagging);
+        function = QFUNC(moduleInit);
+        scope = 1;
+        isGlobal = 1;
+        icon = QPATHTOF(UI\Icon_Module_Tagging_ca.paa);
+        class Arguments {
+            class quickTag {
+                displayName = CSTRING(QuickTag);
+                description = CSTRING(QuickTagDesc);
+                typeName = "NUMBER";
+                class values {
+                    class disabled {
+                        name = ECSTRING(Common,Disabled);
+                        value = 0;
+                    };
+                    class lastUsed {
+                        name = CSTRING(LastUsed);
+                        value = 1;
+                        default = 1;
+                    };
+                    class randomX {
+                        name = CSTRING(RandomX);
+                        value = 2;
+                    };
+                    class random {
+                        name = CSTRING(Random);
+                        value = 3;
+                    };
                 };
             };
         };
+        class ModuleDescription {
+            description = CSTRING(ModuleDesc);
+        };
     };
+
+
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_Tags {
+                displayName = CSTRING(Tag);
+                condition = QUOTE(_player call FUNC(checkTaggable));
+                statement = QUOTE(_player call FUNC(quickTag));
+                icon = QPATHTOF(UI\icons\iconTaggingBlack.paa);
+                insertChildren = QUOTE(_player call FUNC(addTagActions));
+            };
+        };
+    };
+
 
     class Item_Base_F;
     class ACE_Item_SpraypaintBlack: Item_Base_F {

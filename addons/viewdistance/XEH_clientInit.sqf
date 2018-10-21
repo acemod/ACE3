@@ -26,4 +26,8 @@ if (!hasInterface) exitWith {};
     ["vehicle",{
         [false] call FUNC(adaptViewDistance);
     }] call CBA_fnc_addPlayerEventHandler;
+    ["ACE_controlledUAV", {
+        [false] call FUNC(adaptViewDistance);
+    }] call CBA_fnc_addEventHandler;
+    
 }] call CBA_fnc_addEventHandler;

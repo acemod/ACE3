@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use magazine
@@ -9,9 +10,11 @@
  * Return Value:
  * if magazine has been used. <BOOL>
  *
+ * Example:
+ * [bob, "magazine"] call ace_common_fnc_useMagazine
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_magazine", ["_vehicleUsage", false]];
 

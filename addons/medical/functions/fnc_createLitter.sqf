@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Spawns litter for the treatment action on the ground around the target
@@ -7,36 +8,38 @@
  * 1: The target <OBJECT>
  * 2: The treatment Selection Name <STRING>
  * 3: The treatment classname <STRING>
- * 4: ?
- * 5: Users of Items <?>
+ * 4: ? <UNKNOWN>
+ * 5: Users of Items <UNKNOWN>
  * 6: Blood Loss on selection (previously called _previousDamage) <NUMBER>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selection", "classname", , , 5] call ACE_medical_fnc_createLitter
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define MIN_ENTRIES_LITTER_CONFIG 3
 
 params ["_caller", "_target", "_selectionName", "_className", "", "_usersOfItems", "_bloodLossOnSelection"];
+TRACE_6("params",_caller,_target,_selectionName,_className,_usersOfItems,_bloodLossOnSelection);
 
 //Ensures comptibilty with other possible medical treatment configs
 private _previousDamage = _bloodLossOnSelection;
 
 if !(GVAR(allowLitterCreation)) exitwith {};
-if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
+if (vehicle _caller != _caller || {vehicle _target != _target}) exitwith {};
 
 private _config = if (GVAR(level) >= 2) then {
     (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 } else {
     (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className)
 };
-if !(isClass _config) exitwith {false};
+if !(isClass _config) exitwith {TRACE_1("No action config", _className);};
 
-if !(isArray (_config >> "litter")) exitwith {};
+if !(isArray (_config >> "litter")) exitwith {TRACE_1("No litter config", _className);};
 private _litter = getArray (_config >> "litter");
 
 private _createLitter = {
@@ -53,7 +56,8 @@ private _createLitter = {
 
     // Create the litter, and timeout the event based on the cleanup delay
     // The cleanup delay for events in MP is handled by the server side
-    [QGVAR(createLitter), [_litterClass, _position, _direction], 0] call EFUNC(common,syncedEvent);
+    TRACE_3("Creating Litter on server",_litterClass,_position,_direction);
+    [QGVAR(createLitterServer), [_litterClass, _position, _direction]] call CBA_fnc_serverEvent;
 
     true
 };

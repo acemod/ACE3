@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Reports same as actionKeysNames(Array) but in a format processable by "keyDown".
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define LAST_DIK 250
 #define PLACEHOLDER_PLUS "<PLUS>"
@@ -91,7 +91,7 @@ private _keybinds = actionKeysNamesArray _action apply {
                     _alt = true;
                 };
                 default {
-                    // @todo handle double keys? ("C+R")
+                    // @todo handle double keys? ("C + R")
                     // currently only reports last key
                     // not usable by keyDown by default
                     _key = _keyTable find _x;

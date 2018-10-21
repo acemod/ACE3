@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Recalculate the units loadCoef to emulate a mass added to uniform, vest or backpack.
@@ -6,11 +7,13 @@
  * 0: The Unit (usually the player) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [bob] call ace_movement_fnc_handleVirtualMass
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -27,6 +30,8 @@ private _virtualLoad = 0;
     vestContainer _unit,
     backpackContainer _unit
 ];
+
+_unit setVariable [QGVAR(totalLoad), (loadAbs _unit + _virtualLoad)];
 
 // get absolute vanilla load
 private _absLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");

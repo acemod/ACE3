@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, joko // Jonas
  * Nothing to see here, move along.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, target, []] call ace_common_fnc_moduleLSDVehicles
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_units", "_activated"];
 
@@ -56,4 +59,4 @@ if (isNil QGVAR(LSD_PFH)) then {
 
     }, 0.02, [0]] call CBA_fnc_addPerFrameHandler;
 };
-ACE_LOGINFO("WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEED.");
+INFO("WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEED.");

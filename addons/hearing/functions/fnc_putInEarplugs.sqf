@@ -1,9 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: Hope Johnson and commy2
  * Puts in earplugs.
  *
  * Arguments:
- * 0:Unit (player) <OBJECT>
+ * 0: Unit (player) <OBJECT>
  *
  * Return Value:
  * None
@@ -13,9 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
+
+if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 // Plugs in inventory, putting them in
 _player removeItem "ACE_EarPlugs";

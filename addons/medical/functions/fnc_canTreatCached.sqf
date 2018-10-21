@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Cached Check if the treatment action can be performed.
@@ -8,13 +9,14 @@
  * 2: Selection name <STRING>
  * 3: ACE_Medical_Treatments Classname <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Can Treat <BOOL>
+ *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_canTreatCached
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define MAX_DURATION_CACHE 2
 params ["", "_target", "_selection", "_classname"];

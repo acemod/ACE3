@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support and esteldunedain
  * Removes trench
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_trench", "_unit"];
 TRACE_2("removeTrench",_trench,_unit);
@@ -64,7 +64,7 @@ private _fnc_onFailure = {
 [(_removeTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench)] call EFUNC(common,progressBar);
 
 private _progressLeft = ((1 - _actualProgress) * 10) + 1;
-private ["_i"];
+
 for "_i" from _progressLeft to 10 do {
     private _vectorDiffZ = _i / 10;
     private _delay = _removeTime * ((_i / 10) - (1 - _actualProgress));

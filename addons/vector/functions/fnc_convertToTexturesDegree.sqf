@@ -1,19 +1,26 @@
-/* by commy2
-
-converts azimuth into array of textures for the vectors scripted info control
-
-*/
-
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ * converts azimuth into array of textures for the vectors scripted info control
+ *
+ * Arguments:
+ * 0: Number <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [5] call ace_vector_fnc_convertToTexturesDegree
+ *
+ * Public: No
+ */
 
-private "_number";
-
-_number = _this select 0;
+params ["_number"];
 
 if (GVAR(useMil)) then {
 
     _number = round (6400 / 360 * _number);
-    if (_number == 6400) then {_number = 0};
+    if (_number isEqualTo 6400) then {_number = 0};
 
     [_number] call FUNC(convertToTexturesDistance)    // return
 
@@ -21,23 +28,20 @@ if (GVAR(useMil)) then {
 
     _number = round _number;
 
-    private "_isNegative";
-    _isNegative = _number < 0;
+    private _isNegative = _number < 0;
 
     _number = abs _number;
-    if (_number == 360) then {_number = 0};
+    if (_number isEqualTo 360) then {_number = 0};
 
-    private ["_digit1", "_digit2", "_digit3", "_digit4"];
-
-    _digit1 = floor (_number / 100);
-    _digit2 = floor (_number / 10) - _digit1 * 10;
-    _digit3 = _number mod 10;
-    _digit4 = QPATHTOF(rsc\vector_degree.paa);
+    private _digit1 = floor (_number / 100);
+    private _digit2 = floor (_number / 10) - _digit1 * 10;
+    private _digit3 = _number mod 10;
+    private _digit4 = QPATHTOF(rsc\vector_degree.paa);
 
     if (_isNegative) then {
 
-        if (_digit1 == 0) then {
-            if (_digit2 == 0) then {
+        if (_digit1 isEqualTo 0) then {
+            if (_digit2 isEqualTo 0) then {
                 _digit1 = "";
                 _digit2 = QPATHTOF(rsc\vector_minus.paa);
                 _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];
@@ -55,8 +59,8 @@ if (GVAR(useMil)) then {
 
     } else {
 
-        if (_digit1 == 0) then {
-            if (_digit2 == 0) then {
+        if (_digit1 isEqualTo 0) then {
+            if (_digit2 isEqualTo 0) then {
                 _digit1 = "";
                 _digit2 = "";
                 _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];

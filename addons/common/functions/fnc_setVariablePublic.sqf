@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and CAA-Picard and joko and PabstMirror
  * Publish a variable, but wait a certain amount of time before allowing it to be published it again.
@@ -9,15 +10,13 @@
  * 3: Embargo delay <NUMBER> (Optional. Default: 1)
  *
  * Return Value:
- * Nothing.
+ * None
  *
  * Example:
  * [player, "balls", 2, 1] call ace_common_fnc_setVariablePublic;
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_object", "_varName", "_value", ["_delay", 1]];
 TRACE_4("params",_object,_varName,_value,_delay);
@@ -48,6 +47,7 @@ TRACE_2("Starting Embargo", _varName, _delay);
 
     //If value at start of embargo doesn't equal current, then broadcast and start new embargo
     if (!(_value isEqualTo _curValue)) then {
+        _this set [2, _curValue];
         _this call FUNC(setVariablePublic);
     };
 }, _this, _delay] call CBA_fnc_waitAndExecute;

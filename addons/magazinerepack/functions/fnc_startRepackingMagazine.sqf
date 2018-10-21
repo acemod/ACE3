@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Starts repacking a specific magazine classname.
@@ -10,14 +11,13 @@
  * 2: Magazine Classname <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, player, "30Rnd_65x39_caseless_mag"] call ace_magazinerepack_fnc_startRepackingMagazine
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_player", "_magazineClassname"];
 
@@ -29,7 +29,7 @@ private _fullMagazineCount = getNumber (_magazineCfg >> "count");
 private _isBelt = isNumber (_magazineCfg >> "ACE_isBelt") && {(getNumber (_magazineCfg >> "ACE_isBelt")) == 1};
 
 //Check canInteractWith:
-if !([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
+if !([_player, objNull, ["isNotInside", "isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
 
 [_player] call EFUNC(common,goKneeling);
 
@@ -67,5 +67,5 @@ private _totalTime = _simEvents select (count _simEvents - 1) select 0;
     {_this call FUNC(magazineRepackFinish)},
     (localize LSTRING(RepackingMagazine)),
     {_this call FUNC(magazineRepackProgress)},
-    ["isNotInside", "isNotSitting"]
+    ["isNotInside", "isNotSwimming", "isNotSitting"]
 ] call EFUNC(common,progressBar);
