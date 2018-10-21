@@ -20,6 +20,6 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDiary {
-        GVAR(initMainMap) = QUOTE(ctrlParent (_this select 0) call (uiNamespace getVariable 'FUNC(initMainMap)'));
+        GVAR(initMainMap) = QUOTE((_this select 0) call (uiNamespace getVariable 'FUNC(initMainMap)'));
     };
 };
