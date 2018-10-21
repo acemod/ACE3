@@ -16,7 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-
 #define MARKERNAME_MAPTOOL_FIXED "ACE_MapToolFixed"
 #define MARKERNAME_MAPTOOL_ROTATINGNORMAL "ACE_MapToolRotatingNormal"
 #define MARKERNAME_MAPTOOL_ROTATINGSMALL "ACE_MapToolRotatingSmall"

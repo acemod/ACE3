@@ -13,32 +13,41 @@ GVAR(mousePos) = [0.5,0.5];
 
 //Allow panning the lastStillPosition while mapShake is active
 GVAR(rightMouseButtonLastPos) = [];
+
 _control ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapEffects)}];
 _control ctrlAddEventHandler ["MouseMoving", {
+    params ["_control", "_x", "_y"];
     if (GVAR(isShaking) && {(count GVAR(rightMouseButtonLastPos)) == 2}) then {
-        private _lastPos = (_this select 0) ctrlMapScreenToWorld GVAR(rightMouseButtonLastPos);
-        private _newPos = (_this select 0) ctrlMapScreenToWorld (_this select [1,2]);
+        private _lastPos = _control ctrlMapScreenToWorld GVAR(rightMouseButtonLastPos);
+        private _newPos = _control ctrlMapScreenToWorld [_x, _y];
         GVAR(lastStillPosition) set [0, (GVAR(lastStillPosition) select 0) + (_lastPos select 0) - (_newPos select 0)];
         GVAR(lastStillPosition) set [1, (GVAR(lastStillPosition) select 1) + (_lastPos select 1) - (_newPos select 1)];
-        GVAR(rightMouseButtonLastPos) = _this select [1,2];
+        GVAR(rightMouseButtonLastPos) = [_x, _y];
         TRACE_3("Mouse Move",_lastPos,_newPos,GVAR(rightMouseButtonLastPos));
     };
 }];
+
 _control ctrlAddEventHandler ["MouseButtonDown", {
-    if ((_this select 1) == 1) then {
-        GVAR(rightMouseButtonLastPos) = _this select [2,2];
+    params ["", "_button", "_x", "_y"];
+    if (_button == 1) then {
+        GVAR(rightMouseButtonLastPos) = [_x, _y];
     };
 }];
+
 _control ctrlAddEventHandler ["MouseButtonUp", {
-    if ((_this select 1) == 1) then {
+    params ["", "_button"];
+    if (_button == 1) then {
         GVAR(rightMouseButtonLastPos) = [];
     };
 }];
 
 //get mouse position on map
 _control ctrlAddEventHandler ["MouseMoving", {
-    GVAR(mousePos) = (_this select 0) ctrlMapScreenToWorld [_this select 1, _this select 2];
+    params ["_control", "_x", "_y"];
+    GVAR(mousePos) = _control ctrlMapScreenToWorld [_x, _y];
 }];
+
 _control ctrlAddEventHandler ["MouseHolding", {
-    GVAR(mousePos) = (_this select 0) ctrlMapScreenToWorld [_this select 1, _this select 2];
+    params ["_control", "_x", "_y"];
+    GVAR(mousePos) = _control ctrlMapScreenToWorld [_x, _y];
 }];
