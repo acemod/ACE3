@@ -10,7 +10,7 @@ GVAR(isShaking) = false;
 
 //map sizes are multiples of 1280
 GVAR(worldSize) = worldSize / 1280;
-GVAR(mousePos) = [0.5,0.5];
+GVAR(mousePos) = [0.5, 0.5];
 
 //Allow panning the lastStillPosition while mapShake is active
 GVAR(rightMouseButtonLastPos) = [];
@@ -18,7 +18,7 @@ GVAR(rightMouseButtonLastPos) = [];
 _control ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapEffects)}];
 _control ctrlAddEventHandler ["MouseMoving", {
     params ["_control", "_x", "_y"];
-    if (GVAR(isShaking) && {(count GVAR(rightMouseButtonLastPos)) == 2}) then {
+    if (GVAR(isShaking) && {count GVAR(rightMouseButtonLastPos) == 2}) then {
         private _lastPos = _control ctrlMapScreenToWorld GVAR(rightMouseButtonLastPos);
         private _newPos = _control ctrlMapScreenToWorld [_x, _y];
         GVAR(lastStillPosition) set [0, (GVAR(lastStillPosition) select 0) + (_lastPos select 0) - (_newPos select 0)];
