@@ -89,11 +89,6 @@ class RscDisplayMainMap {
             onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
             #include "MapTweaks.hpp"
         };
-        class InitScript: RscText {
-            onLoad = QUOTE(ctrlParent (_this select 0) call (uiNamespace getVariable 'FUNC(initMainMap)'));
-            w = 0;
-            h = 0;
-        };
     };
     // get rid of the "center to player position" - button (as it works even on elite)
     class controls {
