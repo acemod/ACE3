@@ -28,8 +28,9 @@ if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not ac
     params ["_syncedObjects"];
 
     private _listOfVehicles = _syncedObjects select {
+        private _object = _x;
         #define CLASSNAMES ["Car", "Tank", "Air"]
-        IS_KIND_OF_ANY(_x,CLASSNAMES)
+        IS_KIND_OF_ANY(_object,CLASSNAMES)
     };
 
     if (_listOfVehicles isEqualTo []) exitWith {  //Verbose error for mission makers (only shows on server)
