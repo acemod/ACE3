@@ -373,12 +373,14 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ModuleChemlightHiBlue";
         displayName = CSTRING(HiBlue_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hiblue_x_ca.paa);
         ammo = "ACE_G_Chemlight_HiBlue";
     };
     class ModuleChemlightHiGreen: ModuleChemlightOrange {
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ModuleChemlightHiGreen";
         displayName = CSTRING(HiGreen_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_higreen_x_ca.paa);
         ammo = "ACE_G_Chemlight_HiGreen";
     };
     class ModuleChemlightUltraHiOrange: ModuleChemlightOrange {

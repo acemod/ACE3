@@ -83,7 +83,7 @@ class CfgMagazines {
         displayName = CSTRING(HiBlue_DisplayName);
         displayNameShort = CSTRING(HiBlue_DisplayNameShort);
         descriptionShort = CSTRING(HiBlue_DescriptionShort);
-        picture = QPATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa); // TODO - replace picture
+        picture = QPATHTOF(UI\ace_chemlight_hiblue_x_ca.paa);
     };
 
     class ACE_Chemlight_HiGreen: Chemlight_Green {
@@ -94,7 +94,7 @@ class CfgMagazines {
         displayName = CSTRING(HiGreen_DisplayName);
         displayNameShort = CSTRING(HiGreen_DisplayNameShort);
         descriptionShort = CSTRING(HiGreen_DescriptionShort);
-        picture = QPATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa);  // TODO - replace picture
+        picture = QPATHTOF(UI\ace_chemlight_higreen_x_ca.paa);
     };
 
     class ACE_Chemlight_UltraHiOrange: ACE_Chemlight_Orange {
