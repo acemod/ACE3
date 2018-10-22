@@ -34,7 +34,13 @@ private _laserEnabled = _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weap
 
 _unit selectWeapon _muzzle;
 
-if (_laserEnabled) then {
+if (
+    _laserEnabled
+    && {
+        0 == [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex)
+        || {"" == primaryWeapon _unit} // Arma switches to primary weapon if exists
+    }
+) then {
     {_unit action [_x, _unit]} forEach ["GunLightOn", "IRLaserOn"];
 };
 
