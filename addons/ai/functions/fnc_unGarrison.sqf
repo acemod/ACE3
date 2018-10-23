@@ -43,7 +43,7 @@ _units = _units select {local _x};
             _unit doMove ((nearestBuilding (getPos _unit)) buildingExit 0);
         };
 
-        if ({(_unit getVariable [QGVAR(garrisonned), false]) && !isPlayer _unit} count (units _unit) == 0) then {
+        if ((units _unit) findif {(_x getVariable [QGVAR(garrisonned), false]) && !isPlayer _x} == -1) then {
             LOG("fnc_ungarrison: enableAttack true");
             (group _unit) enableAttack true;
         };
