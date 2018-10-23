@@ -85,9 +85,9 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                 };
 
                 // Check if unit is alive or even existing
-                if (!alive _unit) then {
+                if (!alive _unit || {_unit getVariable [QGVAR(garrisoned), false]}) then {
                     _unitMoveList deleteAt (_unitMoveList find _x);
-                    LOG(format [ARR_2("garrisonMove PFH: unit dead or deleted | %1 units left", count _unitMoveList)]);
+                    LOG(format [ARR_2("garrisonMove PFH: unit dead, deleted or garrisoned via TP | %1 units left", count _unitMoveList)]);
 
                 } else {
                     private _unitPos = getPos _unit;

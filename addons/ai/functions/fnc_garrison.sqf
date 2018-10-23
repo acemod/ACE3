@@ -26,6 +26,7 @@ params [["_startingPos",[0,0,0], [[]], 3], ["_buildingTypes", ["Building"], [[]]
 TRACE_6("fnc_garrison: Start",_startingPos,_buldingTypes,count _unitsArray,_fillingRadius,_fillingTYpe,_topDownFilling);
 
 _unitsArray = _unitsArray select {alive _x && {!isPlayer _x}};
+private _currentUnitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
 
 if (_startingPos isEqualTo [0,0,0]) exitWith {
     TRACE_1("fnc_garrison: StartingPos error",_startingPos);
@@ -139,11 +140,14 @@ switch (_fillingType) do {
 
                     if (_teleport) then {
                         doStop _unit;
+
                         if (_posSurface) then {
                             _unit setPosASL (AGLtoASL _pos);
                         } else {
                             _unit setPosATL _pos;
                         };
+
+                        _currentUnitMoveList deleteAt (_currentUnitMoveList findIf {_x select 0 == _unit});
 
                     } else {
                         _unitMoveList pushBack [_unit,[_pos, AGLToASL _pos] select (_posSurface)];
@@ -192,6 +196,8 @@ switch (_fillingType) do {
                             _unit setPosATL _pos;
                         };
 
+                        _currentUnitMoveList deleteAt (_currentUnitMoveList findIf {_x select 0 == _unit});
+
                     } else {
                         _unitMoveList pushBack [_unit,[_pos, AGLToASL _pos] select (_posSurface)];
                     };
@@ -236,6 +242,8 @@ switch (_fillingType) do {
                         } else {
                             _unit setPosATL _pos;
                         };
+
+                        _currentUnitMoveList deleteAt (_currentUnitMoveList findIf {_x select 0 == _unit});
 
                     } else {
                         _unitMoveList pushBack [_unit,[_pos, AGLToASL _pos] select (_posSurface)];
