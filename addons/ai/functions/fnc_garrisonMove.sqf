@@ -99,7 +99,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
 
                     if (unitReady _unit) then {
                         // Check for distance, doMove and AI are moody and may stop for no reason, within 6 meters and ready should be fine
-                        if (_unitPos distance _pos < 3) then { 
+                        if (_unitPos distance _pos < 1.5) then {
                             call _fnc_attemptSuccessful;
 
                         } else {
@@ -115,7 +115,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
 
                         // AI may sometimes not be able to report unitReady, this is to avoid the PFH running forever
                         switch true do { 
-                            case ((_unitPos distance _pos) < 3) : {
+                            case ((_unitPos distance _pos) < 1.5) : {
                                 call _fnc_attemptSuccessful;
                             };
 
