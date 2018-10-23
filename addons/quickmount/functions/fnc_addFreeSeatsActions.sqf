@@ -184,6 +184,7 @@ private _cargoNumber = -1;
             };
             default { // all turrets including FFV
                 if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
+                if (_role == "gunner" && {IS_CREW_UAV(_vehicleConfig)}) then {breakTo "crewLoop"};
                 private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
                 if (_isInVehicle) then {
                     private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
@@ -196,26 +197,13 @@ private _cargoNumber = -1;
                     _statement = {_player action (_this select 2)};
                 };
                 _name = getText (_turretConfig >> "gunnerName");
-                switch (toLower _role) do {
-                    case "gunner": {
-                        if (IS_CREW_UAV(_vehicleConfig)) then {breakTo "crewLoop"};
-                        _icon = ICON_GUNNER;
-                    };
-                    case "commander": {
-                        _icon = ICON_COMMANDER;
-                    };
-                    default {
-                        if (_isPersonTurret) exitWith {
-                            _icon = ICON_FFV;
-                        };
-                        if ("" isEqualTo getText (_turretConfig >> "gun")) exitWith {
-                            _icon = ICON_CARGO;
-                        };
-                        _icon = ICON_TURRET;
-                    };
-                };
-                if (0 < getNumber (_turretConfig >> "isCopilot")) then {
-                    _icon = ICON_PILOT;
+                _icon = switch true do {
+                    case (0 < getNumber (_turretConfig >> "isCopilot")): {ICON_PILOT};
+                    case (_role == "gunner"): {ICON_GUNNER};
+                    case (_role == "commander"): {ICON_COMMANDER};
+                    case (_isPersonTurret): {ICON_FFV};
+                    case ("" isEqualTo getText (_turretConfig >> "gun")): {ICON_CARGO};
+                    default {ICON_TURRET};
                 };
             };
         };
