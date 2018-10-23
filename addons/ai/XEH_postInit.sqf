@@ -22,8 +22,8 @@
     params ["_unitsArray"];
     {
         _x params ["_unit", "_pos"];
-        _unit doMove _pos;
         _unit setDestination [_pos, "LEADER PLANNED", true];
+        _unit doMove _pos;
         LOG_3("%1 doMove %2 | ID: %3",_unit,_pos,clientOwner);
     } forEach _unitsArray;
 }] call CBA_fnc_addEventHandler;
