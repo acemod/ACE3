@@ -205,10 +205,13 @@ private _cargoNumber = -1;
                         _icon = ICON_COMMANDER;
                     };
                     default {
+                        if (_isPersonTurret) exitWith {
+                            _icon = ICON_FFV;
+                        };
                         if ("" isEqualTo getText (_turretConfig >> "gun")) exitWith {
                             _icon = ICON_CARGO;
                         };
-                        _icon = [ICON_TURRET,ICON_FFV] select _isPersonTurret;
+                        _icon = ICON_TURRET;
                     };
                 };
                 if (0 < getNumber (_turretConfig >> "isCopilot")) then {
