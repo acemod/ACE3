@@ -140,7 +140,6 @@ switch (_fillingType) do {
 
                     if (_teleport) then {
                         doStop _unit;
-
                         if (_posSurface) then {
                             _unit setPosASL (AGLtoASL _pos);
                         } else {
