@@ -7,6 +7,7 @@ PREP(determineZoom);
 PREP(flashlightGlow);
 PREP(getUnitFlashlights);
 PREP(moduleMap);
+PREP(needPlaySound);
 PREP(onDrawMap);
 PREP(simulateMapLight);
 PREP(switchFlashlight);
