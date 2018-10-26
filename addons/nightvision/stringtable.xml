@@ -271,7 +271,7 @@
             <German>Nachtsichteffekte</German>
             <Chinese>夜視鏡效果程度</Chinese>
             <Chinesesimp>夜视镜效果程度</Chinesesimp>
-            <French>Ampleur des effets</French>
+            <French>Intensité des effets</French>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
