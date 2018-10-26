@@ -296,7 +296,7 @@
             <Chinese>夜視鏡雜訊程度</Chinese>
             <Chinesesimp>夜视镜杂讯程度</Chinesesimp>
             <Japanese>暗視装置のノイズ度</Japanese>
-            <French>Ampleur du bruit (JVN)</French>
+            <French>Intensité du bruit (JVN)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
