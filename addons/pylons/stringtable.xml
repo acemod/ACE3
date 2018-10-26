@@ -177,7 +177,7 @@
             <Chinesesimp>导弹挂架整装所需时间(个别)</Chinesesimp>
             <Korean>파일런당 시간</Korean>
             <German>Zeit pro Außenlaststation</German>
-            <French>Temps par pylône</French>
+            <French>Durée par pylône</French>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
