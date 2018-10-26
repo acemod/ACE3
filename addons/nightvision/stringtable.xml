@@ -253,7 +253,7 @@
             <German>Nebel in Nachtsicht</German>
             <Chinese>夜視鏡霧氣程度</Chinese>
             <Chinesesimp>夜视镜雾气程度</Chinesesimp>
-            <French>Ampleur du brouillard (JVN)</French>
+            <French>Épaisseur du brouillard (JVN)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_Description">
             <English>Fog is used to limit visibility.</English>
