@@ -72,6 +72,7 @@
             <Chinese>MK6迫擊炮</Chinese>
             <Chinesesimp>MK6迫击炮</Chinesesimp>
             <Japanese>Mk6 迫撃砲</Japanese>
+            <French>Mortier Mk6</French>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
