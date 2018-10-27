@@ -24,6 +24,8 @@
  * Public: Yes
  */
 
+ACE_DEPRECATED(QFUNC(isFeatureCameraActive),"3.14.0","CBA_fnc_getActiveFeatureCamera");
+
 !(
     isNull curatorCamera && // Curator
     {!GETMVAR(EGVAR(spectator,isSet),false)} && // ACE Spectator

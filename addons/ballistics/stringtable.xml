@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Ballistics">
         <!-- QBU -->
@@ -2286,6 +2286,7 @@
             <Japanese>銃身の転度</Japanese>
             <Chinesesimp>膛线缠距</Chinesesimp>
             <Chinese>膛線扭度</Chinese>
+            <Italian>Rigatura della canna</Italian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2293,6 +2294,7 @@
             <Japanese>銃身長</Japanese>
             <Chinesesimp>身管长度</Chinesesimp>
             <Chinese>槍管長度</Chinese>
+            <Italian>Lunghezza della canna</Italian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2300,6 +2302,7 @@
             <Japanese>弾道係数</Japanese>
             <Chinesesimp>弹道系数</Chinesesimp>
             <Chinese>彈道係數</Chinese>
+            <Italian>Coefficente balistico</Italian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2307,6 +2310,7 @@
             <Japanese>弾丸重量</Japanese>
             <Chinesesimp>弹头重量</Chinesesimp>
             <Chinese>彈頭重量</Chinese>
+            <Italian>Massa del proiettile</Italian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2314,6 +2318,7 @@
             <Japanese>銃口初速</Japanese>
             <Chinesesimp>枪口初速</Chinesesimp>
             <Chinese>槍口初速</Chinese>
+            <Italian>Velocità iniziale</Italian>
         </Key>
     </Package>
 </Project>

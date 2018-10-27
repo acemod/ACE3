@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_Category">
@@ -289,6 +289,7 @@
             <Chinese>瞄準具模糊程度</Chinese>
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
             <French>Flou de visée</French>
+            <Italian>Blur durante la mira</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
             <English>NVG Noise Scale</English>
@@ -297,6 +298,7 @@
             <Chinesesimp>夜视镜杂讯程度</Chinesesimp>
             <Japanese>暗視装置のノイズ度</Japanese>
             <French>Intensité du bruit (JVN)</French>
+            <Italian>Fattore di Disturbo del NVG</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
@@ -305,6 +307,7 @@
             <Chinesesimp>调整配戴夜视镜时画面杂讯的多寡。</Chinesesimp>
             <Japanese>暗視装置を使用時に起きる画像ノイズの強度です</Japanese>
             <French>Intensité du bruit de l'image lorsque vous portez des JVN</French>
+            <Italian>Intensità del disturbo dell'immagine quando i NVG sono equipaggiati</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
@@ -312,6 +315,7 @@
             <Chinesesimp>快门效果</Chinesesimp>
             <Chinese>快門效果</Chinese>
             <French>Effets d'obturateur</French>
+            <Italian>Effetti lampeggianti</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
@@ -319,6 +323,7 @@
             <Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
             <Chinese>槍開火時瞬間產生快門效果</Chinese>
             <French>Effets d'obturateur à rideau dû aux flashs du canon</French>
+            <Italian>Effetto lampeggiante dato dal lampo dello sparo</Italian>
         </Key>
     </Package>
 </Project>

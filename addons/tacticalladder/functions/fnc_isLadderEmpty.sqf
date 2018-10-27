@@ -20,12 +20,6 @@ params ["_ladder"];
 private _unitsNearLadder = nearestObjects [_ladder, ["CAManBase"], 4];
 TRACE_1("Near Ladder",_unitsNearLadder);
 
-private _ladderEmpty = true;
-{
-    if (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _x >> "ACE_isLadder") == 1) exitWith {
-        _ladderEmpty = false;
-        TRACE_1("On Ladder",_x);
-    };
-} forEach _unitsNearLadder;
+private _CfgAnimationStates = configFile >> "CfgMovesMaleSdr" >> "States";
 
-_ladderEmpty
+(_unitsNearLadder findIf {getNumber (_CfgAnimationStates >> animationState _x >> "ACE_isLadder") == 1}) == -1

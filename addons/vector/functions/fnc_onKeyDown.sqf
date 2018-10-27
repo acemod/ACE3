@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * ["5"] call ace_vector_fnc_onKeyDown
+ * ["azimuth"] call ace_vector_fnc_onKeyDown
  *
  * Public: No
  */

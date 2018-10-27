@@ -6,6 +6,7 @@ PREP(attributeAddItems);
 PREP(attributeClear);
 PREP(attributeDblClick);
 PREP(attributeInit);
+PREP(attributeKeyDown);
 PREP(attributeLoad);
 PREP(attributeMode);
 PREP(attributeSelect);

@@ -17,8 +17,8 @@
     <a href="https://slackin.ace3mod.com/">
         <img src="https://slackin.ace3mod.com/badge.svg?label=Slack&style=flat-square" alt="ACE3 Slack">
     </a>
-    <a href="https://travis-ci.org/acemod/ACE3">
-        <img src="https://img.shields.io/travis/acemod/ACE3.svg?style=flat-square" alt="ACE3 Build Status">
+    <a href="https://circleci.com/gh/acemod/ACE3">
+        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
     </a>
 </p>
 <p align="center"><sup><strong>Wymaga najnowszej wersji <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>

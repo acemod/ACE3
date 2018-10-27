@@ -4,13 +4,13 @@
  *
  *
  * Arguments:
- * 0: String <STRING>
+ * 0: Enable illumination <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["5"] call ace_vector_fnc_illuminate
+ * [true] call ace_vector_fnc_illuminate
  *
  * Public: No
  */

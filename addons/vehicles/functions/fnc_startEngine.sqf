@@ -18,7 +18,7 @@
 
 params ["_vehicle", "_isEngineOn"];
 
-if (!_isEngineOn || {floor abs speed _vehicle > 0}) exitWith {};
+if (!_isEngineOn || {floor abs speed _vehicle > 0 || {!isNull isVehicleCargo _vehicle}}) exitWith {};
 
 [{
     params ["_args", "_idPFH"];

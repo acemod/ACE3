@@ -18,12 +18,4 @@
 
 params ["_position", "_radius"];
 
-private _nearestPlayers = [];
-
-{
-    if ([_x] call EFUNC(common,isPlayer) && {alive _x}) then {
-        _nearestPlayers pushBack _x;
-    };
-} forEach (nearestObjects [_position, ["Man"], _radius]);
-
-_nearestPlayers
+ (nearestObjects [_position, ["Man"], _radius]) select {alive _x && {[_x] call EFUNC(common,isPlayer)}};

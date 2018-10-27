@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -1029,6 +1029,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
+            <Italian>Timer di detonazione</Italian>
         </Key>
     </Package>
 </Project>
