@@ -21,12 +21,12 @@ class ACE_Settings {
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(AlwaysUseCursorInteraction);
     };
-    class GVAR(UseWheelMenu) {
+    class GVAR(UseWRadialMenu) {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
         category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(UseWheelMenu);
+        displayName = CSTRING(UseRadialMenu);
     };
     class GVAR(colorTextMax) {
         value[] = {1, 1, 1, 1};
