@@ -21,7 +21,7 @@ class ACE_Settings {
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(AlwaysUseCursorInteraction);
     };
-    class GVAR(UseWRadialMenu) {
+    class GVAR(UseRadialMenu) {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;

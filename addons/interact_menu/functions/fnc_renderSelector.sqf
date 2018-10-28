@@ -29,7 +29,7 @@ if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
 
 private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 
-private _pos = if !(GVAR(UseWRadialMenu)) then {
+private _pos = if !(GVAR(UseRadialMenu)) then {
     [_ctrl, GVAR(iconCount), format ["<img image='%1' color='%2' size='1.6'/>", _icon, GVAR(selectorColorHex)]] call FUNC(ctrlSetParsedTextCached);
     [(_sPos select 0)-(0.014*SafeZoneW), (_sPos select 1)-(0.014*SafeZoneW), 0.05*SafeZoneW, 0.035*SafeZoneW]
 } else {
