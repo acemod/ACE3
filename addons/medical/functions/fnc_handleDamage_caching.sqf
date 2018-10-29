@@ -94,10 +94,6 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
         }, _this] CBA_fnc_execNextFrame;
     }, _unit] CBA_fnc_execNextFrame;
 
-
-    [{
-    }] CBA_fnc_execNextFrame;
-
     _unit setVariable [QGVAR(cachedProjectiles), []];
     _unit setVariable [QGVAR(cachedHitPoints), []];
     _unit setVariable [QGVAR(cachedDamages), []];
