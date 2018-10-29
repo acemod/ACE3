@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ledere
  * Handle preparation animation for supported launchers.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 
