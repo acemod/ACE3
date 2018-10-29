@@ -78,19 +78,17 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
 if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) then {
     _unit setVariable [QGVAR(frameNo_damageCaching), diag_frameno];
 
-    // handle the cached damages 3 frames later
+    // handle the cached damages 2 frames later
     [{
         [{
-            [{
-                params ["_unit"];
-                _unit setDamage 0;
-                private _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
-                private _cache_damages = _unit getVariable QGVAR(cachedDamages);
-                {
-                    (_x + [_cache_damages select _forEachIndex]) call FUNC(handleDamage_advanced);
-                } forEach _cache_params;
-                [_unit] call FUNC(handleDamage_advancedSetDamage);
-            }, _this] CBA_fnc_execNextFrame;
+            params ["_unit"];
+            _unit setDamage 0;
+            private _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
+            private _cache_damages = _unit getVariable QGVAR(cachedDamages);
+            {
+                (_x + [_cache_damages select _forEachIndex]) call FUNC(handleDamage_advanced);
+            } forEach _cache_params;
+            [_unit] call FUNC(handleDamage_advancedSetDamage);
         }, _this] CBA_fnc_execNextFrame;
     }, _unit] CBA_fnc_execNextFrame;
 
