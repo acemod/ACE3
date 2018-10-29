@@ -4,7 +4,7 @@ class ACE_Settings {
         category = CSTRING(displayName);
         displayName = CSTRING(enable_name);
         description = CSTRING(enable_tooltip);
-        value = 1;
+        value = 0;
         typeName = "BOOL";
     };
     class GVAR(enableAmmobox) {

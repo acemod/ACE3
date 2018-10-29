@@ -266,13 +266,3 @@ class ctrlMapEmpty;
 class ctrlMapMain;
 class ctrlListNBox;
 class ctrlCheckboxToolbar;
-
-class Display3DEN {
-    class ContextMenu :ctrlMenu {
-        class Items {
-            class Arsenal {
-                action= QUOTE(call FUNC(open3DEN));
-            };
-        };
-    };
-};

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * My very own setHitPointDamage since BIS' one is buggy when affecting a remote unit.
@@ -17,8 +18,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 #define LEGDAMAGETRESHOLD1 1
 #define LEGDAMAGETRESHOLD2 1.7
 #define ARMDAMAGETRESHOLD1 1

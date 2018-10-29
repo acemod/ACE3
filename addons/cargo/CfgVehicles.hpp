@@ -330,6 +330,9 @@ class CfgVehicles {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
     };
+    class Land_RepairDepot_01_base_F: ReammoBox_F { // TanksDLC - Repair Depo Thing (probably too big to safely unload)
+        GVAR(canLoad) = 0;
+    };
     //"Supply Box" - Small Pallets
     class B_supplyCrate_F: ReammoBox_F {
         GVAR(size) = 6;
@@ -421,7 +424,6 @@ class CfgVehicles {
     };
 
     // objects
-    class Lamps_base_F;
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
@@ -429,10 +431,22 @@ class CfgVehicles {
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
     };
+
+    class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
-        GVAR(size) = 1;
+        GVAR(size) = 2;
         GVAR(canLoad) = 1;
     };
+    class FloatingStructure_F;
+    class Land_Camping_Light_F: FloatingStructure_F {
+        GVAR(size) = 0.2;
+        GVAR(canLoad) = 1;
+    };
+    class Land_Camping_Light_off_F: ThingX {
+        GVAR(size) = 0.2;
+        GVAR(canLoad) = 1;
+    };
+
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
@@ -569,16 +583,6 @@ class CfgVehicles {
         GVAR(size) = 50;
     };
 
-    class Ruins_F;
-    class Land_Cargo20_military_ruins_F: Ruins_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
-        GVAR(space) = 49;
-        GVAR(size) = 50;
-    };
-
     class Land_Cargo20_orange_F: Cargo_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
@@ -677,15 +681,6 @@ class CfgVehicles {
         GVAR(size) = 100;
     };
     class Land_Cargo40_military_green_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
-        GVAR(space) = 99;
-        GVAR(size) = 100;
-    };
-
-    class Land_Cargo40_military_ruins_F: Ruins_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };

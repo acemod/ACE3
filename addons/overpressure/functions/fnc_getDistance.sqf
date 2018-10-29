@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Calculate the distance to the first intersection of a line
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_posASL", "_direction", "_maxDistance", "_shooter"];
 TRACE_4("params",_posASL,_direction,_maxDistance, _shooter);

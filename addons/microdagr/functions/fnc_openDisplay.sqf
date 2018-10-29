@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Changes the display mode of the MicroDAGR.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_newDisplayShowMode", -1, [-1]]];
 private _oldShowMode = GVAR(currentShowMode);
@@ -73,7 +73,7 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
     [{
         params ["_args", "_idPFH"];
         _args params ["_player"];
-        if ((isNull ACE_player) || {!alive ACE_player} || {ACE_player != _player} || {!("ACE_microDAGR" in (items ACE_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
+        if ((isNull ACE_player) || {!alive ACE_player} || {ACE_player != _player} || {!("ACE_microDAGR" in (ACE_player call EFUNC(common,uniqueItems)))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
             //Close Display if still open:
             if (GVAR(currentShowMode) != DISPLAY_MODE_CLOSED) then {
                 [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);

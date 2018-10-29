@@ -28,7 +28,7 @@ class CfgMagazines {
         initSpeed = 850; // R3F config
     };
     class R3F_30Rnd_556x45_TRACER_SIG551: R3F_30Rnd_556x45_SIG551 {}; // AtragMx GunList: 5.56x45mm M855
-    class R3F_10Rnd_762x51_FRF2: CA_magazine { // AtragMx GunList: 5.56x45mm M855
+    class R3F_10Rnd_762x51_FRF2: CA_magazine { // AtragMx GunList: R3F FRF2 M993
         initSpeed = 850; // R3F config
     };
     class R3F_200Rnd_556x45_MINIMI: CA_magazine { // AtragMx GunList: 5.56x45mm M855
@@ -37,23 +37,23 @@ class CfgMagazines {
     class R3F_100Rnd_762x51_MINIMI: CA_magazine { // AtragMx GunList: 7.62x51mm M80
         initSpeed = 820; // R3F config
     };
-    class R3F_20Rnd_762x51_HK417: CA_magazine { // AtragMx GunList: 7.62x51mm M80
+    class R3F_20Rnd_762x51_HK417: CA_magazine { // AtragMx GunList: 7.62x51mm M80 / HK417L 20": R3F HK417L M80
         initSpeed = 820; // R3F config
     };
-    class R3F_20Rnd_762x51_TRACER_HK417: R3F_20Rnd_762x51_HK417 {}; // AtragMx GunList: 7.62x51mm M80
-    class R3F_7Rnd_127x99_PGM: CA_magazine { // AtragMx GunList: 12.7x99mm
+    class R3F_20Rnd_762x51_TRACER_HK417: R3F_20Rnd_762x51_HK417 {}; // AtragMx GunList: 7.62x51mm M80 / HK417L 20": R3F HK417L M80
+    class R3F_7Rnd_127x99_PGM: CA_magazine { // AtragMx GunList: R3F PGM M33
         initSpeed = 780; // R3F config
     };
-    class R3F_7Rnd_127x99_PEI_PGM: R3F_7Rnd_127x99_PGM { // AtragMx GunList: 12.7x99mm
+    class R3F_7Rnd_127x99_PEI_PGM: R3F_7Rnd_127x99_PGM { // AtragMx GunList: R3F PGM M33
         initSpeed = 780; // R3F config
     };
-    class R3F_10Rnd_127x99_M107: CA_magazine { // AtragMx GunList: 12.7x99mm
+    class R3F_10Rnd_127x99_M107: CA_magazine { // AtragMx GunList: R3F M107 M33
         initSpeed = 850; // R3F config
     };
-    class R3F_10Rnd_127x99_PEI_M107: R3F_10Rnd_127x99_M107 { // AtragMx GunList: 12.7x99mm
+    class R3F_10Rnd_127x99_PEI_M107: R3F_10Rnd_127x99_M107 { // AtragMx GunList: R3F M107 M33
         initSpeed = 850; // R3F config
     };
-    class R3F_5Rnd_127x99_TAC50: CA_magazine { // AtragMx GunList: 12.7x99mm
+    class R3F_5Rnd_127x99_TAC50: CA_magazine { // AtragMx GunList: R3F TAC50 M33
         initSpeed = 820; // R3F config
     };
 };

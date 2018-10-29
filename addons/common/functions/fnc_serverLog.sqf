@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Log a RPT messaged on just the server
@@ -13,7 +14,6 @@
  *
  * Public: no
  */
-#include "script_component.hpp"
 
 params [["_msg", "", [""]]];
 

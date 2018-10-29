@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * onLoad EH for arsenal loadouts display.
@@ -12,8 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["", "_args"];
 _args params ["_display"];
@@ -27,6 +27,8 @@ _mouseBlockCtrl ctrlCommit 0;
 [_arsenalDisplay] call FUNC(buttonHide);
 
 GVAR(currentLoadoutsTab) = -1;
+GVAR(loadoutsSearchbarFocus) = false;
+GVAR(loadoutsPanelFocus) =  false;
 
 GVAR(previousCameraPos) = GVAR(cameraPosition);
 GVAR(cameraPosition) = [5,0,20,[-0.85,0,0.85]];
@@ -54,5 +56,7 @@ if !(GVAR(allowSharedLoadouts) && {isMultiplayer}) then {
     _buttonShareLoadoutsBackgroundCtrl ctrlShow false;
     _buttonShareLoadoutsBackgroundCtrl ctrlCommit 0;
 };
+
+[QGVAR(loadoutsDisplayOpened), [_display]] call CBA_fnc_localEvent;
 
 [_display, _display displayCtrl IDC_buttonMyLoadouts] call FUNC(loadoutsChangeTab);

@@ -20,11 +20,11 @@
 #define SETPVAR_SYS(var1,var2) setVariable [ARR_3(QUOTE(var1),var2,true)]
 
 #undef GETVAR
-#define GETVAR(var1,var2,var3) var1 GETVAR_SYS(var2,var3)
-#define GETMVAR(var1,var2) missionNamespace GETVAR_SYS(var1,var2)
-#define GETUVAR(var1,var2) uiNamespace GETVAR_SYS(var1,var2)
-#define GETPRVAR(var1,var2) profileNamespace GETVAR_SYS(var1,var2)
-#define GETPAVAR(var1,var2) parsingNamespace GETVAR_SYS(var1,var2)
+#define GETVAR(var1,var2,var3) (var1 GETVAR_SYS(var2,var3))
+#define GETMVAR(var1,var2) (missionNamespace GETVAR_SYS(var1,var2))
+#define GETUVAR(var1,var2) (uiNamespace GETVAR_SYS(var1,var2))
+#define GETPRVAR(var1,var2) (profileNamespace GETVAR_SYS(var1,var2))
+#define GETPAVAR(var1,var2) (parsingNamespace GETVAR_SYS(var1,var2))
 
 #undef SETVAR
 #define SETVAR(var1,var2,var3) var1 SETVAR_SYS(var2,var3)
@@ -37,7 +37,7 @@
 #define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
 #define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
 
-#define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
+#define ARR_SELECT(ARRAY,INDEX,DEFAULT) (if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT})
 
 
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
@@ -60,6 +60,18 @@
     count = COUNT; \
 }
 
+// weapon types
+#define TYPE_WEAPON_PRIMARY 1
+#define TYPE_WEAPON_HANDGUN 2
+#define TYPE_WEAPON_SECONDARY 4
+// magazine types
+#define TYPE_MAGAZINE_HANDGUN_AND_GL 16 // mainly
+#define TYPE_MAGAZINE_PRIMARY_AND_THROW 256
+#define TYPE_MAGAZINE_SECONDARY_AND_PUT 512 // mainly
+// more types
+#define TYPE_BINOCULAR_AND_NVG 4096
+#define TYPE_WEAPON_VEHICLE 65536
+#define TYPE_ITEM 131072
 // item types
 #define TYPE_DEFAULT 0
 #define TYPE_MUZZLE 101

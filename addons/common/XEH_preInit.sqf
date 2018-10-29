@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 
 GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
 GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
+GVAR(vehicleIconCache) = call CBA_fnc_createNamespace; // for getVehicleIcon
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
@@ -40,14 +41,6 @@ isHC = !hasInterface && !isDedicated; // deprecated because no tag
 missionNamespace setVariable ["ACE_isHC", ACE_isHC];
 uiNamespace setVariable ["ACE_isHC", ACE_isHC];
 
-[
-    QGVAR(persistentLaserEnabled),
-    "CHECKBOX",
-    [localize LSTRING(SettingPersistentLaserName), localize LSTRING(SettingPersistentLaserDesc)],
-    localize LSTRING(ACEKeybindCategoryWeapons),
-    false,
-    false,
-    LINKFUNC(switchPersistentLaser)
-] call CBA_settings_fnc_init;
+#include "initSettings.sqf"
 
 ADDON = true;

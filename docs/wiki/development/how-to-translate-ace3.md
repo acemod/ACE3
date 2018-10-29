@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: How to translate ACE3
+title: How to Translate ACE3
 description: This page describes in short how you can help translating ACE3 into your language. 
 group: development
 parent: wiki

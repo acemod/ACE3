@@ -211,7 +211,7 @@
 {% endif %}
 
 {% if include.component == "maverick" %}
-`ace_hellfire`
+`ace_missileguidance`
 {% endif %}
 
 {% if include.component == "medical" %}
@@ -307,7 +307,7 @@
 {% endif %}
 
 {% if include.component == "pylons" %}
-`ace_interact_menu`
+`ace_interact_menu`, `ace_zeus`
 {% endif %}
 
 {% if include.component == "quickmount" %}

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Handles setting up the effects: fog, ppEffects and the RscTittle.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_activated"];
 TRACE_1("setupDisplayEffects",_activated);
@@ -70,8 +70,4 @@ if (GVAR(ppeffectRadialBlur) != -1) then {
 if (GVAR(ppeffectColorCorrect) != -1) then {
     ppEffectDestroy GVAR(ppeffectColorCorrect);
     GVAR(ppeffectColorCorrect) = -1;
-};
-if (GVAR(ppEffectCCMuzzleFlash) != -1) then {
-    ppEffectDestroy GVAR(ppEffectCCMuzzleFlash);
-    GVAR(ppEffectCCMuzzleFlash) = -1;
 };

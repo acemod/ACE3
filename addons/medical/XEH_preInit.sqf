@@ -10,10 +10,8 @@ GVAR(injuredUnitCollection) = [];
 
 private _versionEx = "ace_medical" callExtension "version";
 DFUNC(handleDamage_assignWounds) = if (_versionEx == "") then {
-    INFO_1("Extension %1.dll not installed.","ace_medical");
     DFUNC(handleDamage_woundsOld)
 } else {
-    INFO_2("Extension version: %1: %2","ace_medical",_versionEx);
     DFUNC(handleDamage_wounds)
 };
 

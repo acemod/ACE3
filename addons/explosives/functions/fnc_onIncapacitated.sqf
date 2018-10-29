@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Detonates all attached deadman's switched triggered explosives.
@@ -13,14 +14,18 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //NOTE: Extended_Killed_EventHandlers runs only where _unit is local
 params ["_unit"];
 TRACE_1("params",_unit);
 
-// Exit if no item:
-if (({_x == "ACE_DeadManSwitch"} count (items _unit)) == 0) exitWith {};
+if (_unit == ace_player) then {
+    // close cellphone if open
+    findDisplay 8855 closeDisplay 0;
+};
+
+// Exit if no item
+if !("ACE_DeadManSwitch" in (_unit call EFUNC(common,uniqueItems))) exitWith {};
 
 private _range = getNumber (configFile >> "CfgWeapons" >> "ACE_DeadManSwitch" >> QGVAR(range));
 private _deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
