@@ -35,9 +35,18 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(enableGetInMenu),
-    "CHECKBOX",
-    LSTRING(SettingEnableGetInMenuName),
+    QGVAR(enableMenu),
+    "LIST",
+    ELSTRING(interact_menu,Category_InteractionMenu),
     format ["ACE %1", LLSTRING(Category)],
-    true
+    [
+        [0,1,2,3],
+        [
+            "STR_A3_None",
+            "STR_rscMenu.hppRscGroupRootMenu_Items_GetIn1",
+            LSTRING(ChangeSeat),
+            "str_word_all"
+        ],
+        3
+    ]
 ] call CBA_settings_fnc_init;

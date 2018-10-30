@@ -18,10 +18,14 @@
 
 params ["_vehicle", "_unit"];
 
-(
-    GVAR(enabled) && {GVAR(enableGetInMenu)}
-    || {!isNull objectParent _unit}
-)
+private _isInVehicle = _unit in _vehicle;
+
+GVAR(enabled)
+&& {
+    GVAR(enableMenu) == 3
+    || {_isInVehicle && {GVAR(enableMenu) == 2}}
+    || {!_isInVehicle && {GVAR(enableMenu) == 1}}
+}
 && {alive _vehicle}
 && {2 > locked _vehicle}
 && {

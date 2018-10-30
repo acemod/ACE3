@@ -115,9 +115,5 @@
             <English>Change seat</English>
             <Russian>Пересесть</Russian>
         </Key>
-        <Key ID="STR_ACE_QuickMount_SettingEnableGetInMenuName">
-            <English>"Get In" interaction</English>
-            <Russian>Меню "Сесть"</Russian>
-        </Key>
     </Package>
 </Project>
