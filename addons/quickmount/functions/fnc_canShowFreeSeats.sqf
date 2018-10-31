@@ -36,3 +36,4 @@ GVAR(enabled)
     0.3 < vectorUp _vehicle select 2 // moveIn* and GetIn* don't work for flipped vehicles
     || {_vehicle isKindOf "Air"} // except Air
 }
+&& {!([] isEqualTo (_this call FUNC(addFreeSeatsActions)))} // this should be replaced with faster function
