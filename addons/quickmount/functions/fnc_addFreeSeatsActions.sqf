@@ -18,9 +18,6 @@
 
 #define TO_COMPARTMENT_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
 
-// this will check UAV vehicle like Stomper (with cargo seat)
-#define IS_CREW_UAV(vehicleConfig) ("UAVPilot" == getText (configFile >> "CfgVehicles" >> getText (vehicleConfig >> "crew") >> "simulation"))
-
 // workaround getting damage when moveout while vehicle is moving
 #define MOVEOUT_AND_BLOCK_DAMAGE \
     if (isDamageAllowed _player) then { \
@@ -147,7 +144,7 @@ private _cargoNumber = -1;
             case "driver": {
                 if (
                     lockedDriver _vehicle
-                    || {IS_CREW_UAV(_vehicleConfig)}
+                    || {unitIsUAV _vehicle}
                     || {0 == getNumber (_vehicleConfig >> "hasDriver")}
                 ) then {
                     breakTo "crewLoop";
@@ -184,7 +181,7 @@ private _cargoNumber = -1;
             };
             default { // all turrets including FFV
                 if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
-                if (_role == "gunner" && {IS_CREW_UAV(_vehicleConfig)}) then {breakTo "crewLoop"};
+                if (_role == "gunner" && {unitIsUAV _vehicle}) then {breakTo "crewLoop"};
                 private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
                 if (_isInVehicle) then {
                     private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
