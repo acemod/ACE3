@@ -89,8 +89,8 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
                 (_x + [_cache_damages select _forEachIndex]) call FUNC(handleDamage_advanced);
             } forEach _cache_params;
             [_unit] call FUNC(handleDamage_advancedSetDamage);
-        }, _this] CBA_fnc_execNextFrame;
-    }, _unit] CBA_fnc_execNextFrame;
+        }, _this] call CBA_fnc_execNextFrame;
+    }, _unit] call CBA_fnc_execNextFrame;
 
     _unit setVariable [QGVAR(cachedProjectiles), []];
     _unit setVariable [QGVAR(cachedHitPoints), []];
