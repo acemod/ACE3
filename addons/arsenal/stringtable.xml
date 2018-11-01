@@ -809,5 +809,9 @@
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statTTL">
+            <English>Time to live</English>
+            <French>Durée de vie</French>
+        </Key>
     </Package>
 </Project>

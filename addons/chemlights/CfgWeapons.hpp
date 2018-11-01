@@ -3,7 +3,7 @@ class CfgWeapons {
 
     class GrenadeLauncher;
     class Throw: GrenadeLauncher {
-        muzzles[] += {"ACE_Chemlight_OrangeMuzzle","ACE_Chemlight_WhiteMuzzle","ACE_Chemlight_HiRedMuzzle","ACE_Chemlight_HiYellowMuzzle","ACE_Chemlight_HiOrangeMuzzle","ACE_Chemlight_HiWhiteMuzzle","ACE_Chemlight_IRMuzzle"};
+        muzzles[] += {"ACE_Chemlight_OrangeMuzzle","ACE_Chemlight_WhiteMuzzle","ACE_Chemlight_HiRedMuzzle","ACE_Chemlight_HiYellowMuzzle","ACE_Chemlight_HiWhiteMuzzle", "ACE_Chemlight_HiBlueMuzzle", "ACE_Chemlight_HiGreenMuzzle","ACE_Chemlight_UltraHiOrangeMuzzle","ACE_Chemlight_IRMuzzle"};
 
         class ThrowMuzzle;
 
@@ -23,13 +23,22 @@ class CfgWeapons {
             magazines[] = {"ACE_Chemlight_HiYellow"};
         };
 
-        class ACE_Chemlight_HiOrangeMuzzle: ThrowMuzzle {
-            magazines[] = {"ACE_Chemlight_HiOrange"};
-        };
-
         class ACE_Chemlight_HiWhiteMuzzle: ThrowMuzzle {
             magazines[] = {"ACE_Chemlight_HiWhite"};
         };
+
+        class ACE_Chemlight_HiBlueMuzzle: ThrowMuzzle {
+            magazines[] = {"ACE_Chemlight_HiBlue"};
+        };
+
+        class ACE_Chemlight_HiGreenMuzzle: ThrowMuzzle {
+            magazines[] = {"ACE_Chemlight_HiGreen"};
+        };
+
+        class ACE_Chemlight_UltraHiOrangeMuzzle: ThrowMuzzle {
+            magazines[] = {"ACE_Chemlight_UltraHiOrange"};
+        };
+
         class ACE_Chemlight_IRMuzzle: ThrowMuzzle {
             magazines[] = {"ACE_Chemlight_IR"};
         };
