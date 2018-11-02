@@ -78,7 +78,8 @@
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
     true, // default value
     true, // isGlobal
-    {[QGVAR(addSpareParts), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(addSpareParts), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
 
 [

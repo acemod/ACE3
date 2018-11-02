@@ -15,7 +15,8 @@
     LSTRING(DisplayName),
     false, // default value
     true, // isGlobal
-    {[QGVAR(lockVehicleInventory), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(lockVehicleInventory), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
 
 [
@@ -24,5 +25,6 @@
     LSTRING(DisplayName),
     [[-1,0,1,2],["str_cfg_envsounds_default", LSTRING(VehicleStartingLockState_AsIs), LSTRING(VehicleStartingLockState_Locked), LSTRING(VehicleStartingLockState_Unlocked)], 0], // [values, titles, defaultIndex]
     true, // isGlobal
-    {[QGVAR(vehicleStartingLockState), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(vehicleStartingLockState), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
