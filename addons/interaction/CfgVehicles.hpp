@@ -342,6 +342,11 @@ class CfgVehicles {
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
+            class GVAR(smashWindshield) {
+                displayName = CSTRING(SmashWindshield);
+                condition = QUOTE(_player == driver _target && {private _damage = _target getHitPointDamage 'HitGlass1'; _damage > 0.5 && {_damage < 1}});
+                statement = QUOTE(playSound3D [ARR_2('A3\Sounds_F\weapons\hits\glass_2.wss',_target)]; _target setHitPointDamage [ARR_2('HitGlass1',1)];);
+            };
         };
     };
 
