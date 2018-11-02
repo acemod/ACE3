@@ -29,6 +29,7 @@ params [
         ["_rearmCargo", 0, [0]],
         ["_addToCurrent", false, [false]]
     ];
+TRACE_3("makeSource",_source,_rearmCargo,_addToCurrent);
     
 if (isNull _source) exitWith {};
 

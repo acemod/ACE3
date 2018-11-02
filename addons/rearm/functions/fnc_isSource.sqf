@@ -20,6 +20,8 @@ params [
         ["_testVanillaRearm", false, [false]]
     ];
 
+if ((_target getVariable [QGVAR(currentSupply), 0]) < 0) exitWith {false};
+    
 private _vehCfg = configFile >> "CfgVehicles" >> typeOf _target;
 private _vanillaCargoConfig = getNumber (_vehCfg >> "transportAmmo");
 private _rearmCargoConfig = getNumber (_vehCfg >> QGVAR(defaultSupply));
