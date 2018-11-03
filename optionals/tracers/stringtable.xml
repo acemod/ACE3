@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE_tracer">
+    <Package name="main">
+        <Container name="magazines">
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_green">
+                <English>6.5mm 30Rnd Reload Tracer (Green) Mag</English>
+                <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Grün) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_green_description">
+                <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+                <German>Kaliber: 6.5x39 mm Nachlade-Leuchtspur - Grün&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_yellow">
+                <English>6.5mm 30Rnd Reload Tracer (Yellow) Mag</English>
+                <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_yellow_description">
+                <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+                <German>Kaliber: 6.5x39 mm Nachlade-Leuchtspur - Gelb&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_tracer_green">
+                <English>6.5mm 30Rnd Tracer (Green) Mag</English>
+                <German>30 Schuss 6.5mm Leuchtspur (Grün) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_tracer_green_description">
+                <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+                <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_tracer_yellow">
+                <English>6.5mm 30Rnd Tracer (Yellow) Mag</English>
+                <German>30 Schuss 6.5mm Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_tracer_yellow_description">
+                <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+                <German>Kaliber: 6.5x39 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
+            </Key>
+
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_green">
+                <English>6.5mm 100Rnd Mag (Mixed Green)</English>
+                <German>100 Schuss 6.5mm Magazin (Gemischt Grün)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_green_description">
+                <English>Caliber: 6.5x39 mm&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
+                <German>Kaliber: 6.5x39 mm&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_yellow">
+                <English>6.5mm 100Rnd Mag (Mixed Yellow)</English>
+                <German>100 Schuss 6.5mm Magazin (Gemischt Gelb)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_yellow_description">
+                <English>Caliber: 6.5x39 mm&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
+                <German>Kaliber: 6.5x39 mm&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_green">
+                <English>6.5mm 100Rnd Mag (Tracer Green)</English>
+                <German>100 Schuss 6.5mm Magazin (Leuchtspur Grün)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_green_description">
+                <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
+                <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_yellow">
+                <English>6.5mm 100Rnd Mag (Tracer Yellow)</English>
+                <German>100 Schuss 6.5mm Magazin (Leuchtspur Gelb)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_yellow_description">
+                <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
+                <German>Kaliber: 6.5x39 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
+            </Key>
+
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green">
+                <English>6.5 mm 200Rnd Belt Case Mixed (Green)</English>
+                <German>6,5 mm 200-Schuss-Gurtkiste Gemischt (grün)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green_description">
+                <English>Caliber: 6.5x39 mm Mixed - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
+                <German>Kaliber: 6.5x39 mm Gemischt - Grün&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red">
+                <English>6.5 mm 200Rnd Belt Case Mixed (Red)</English>
+                <German>6,5 mm 200-Schuss-Gurtkiste Gemischt (grün)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red_description">
+                <English>Caliber: 6.5x39 mm Mixed - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
+                <German>Kaliber: 6.5x39 mm Mixed - Rot&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green">
+                <English>6.5 mm 200Rnd Belt Case Tracer (Green)</English>
+                <German>6,5 mm 200-Schuss-Gurtkiste Leuchtspur (grün)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green_description">
+                <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
+                <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red">
+                <English>6.5 mm 200Rnd Belt Case Tracer (Red)</English>
+                <German>6,5 mm 200-Schuss-Gurtkiste Leuchtspur (rot)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red_description">
+                <English>Caliber: 6.5x39 mm Tracer - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
+                <German>Kaliber: 6.5x39 mm Leuchtspur - Rot&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
+            </Key>
+
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red">
+                <English>7.62mm 150Rnd Box Mixed (Red)</English>
+                <German>7.62mm 150 Schuss Kiste Gemischt (rot)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red_description">
+                <English>Caliber: 7.62x54 mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
+                <German>Kaliber: 7.62x54 mm&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_yellow">
+                <English>7.62mm 150Rnd Box Mixed (Yellow)</English>
+                <German>7.62mm 150 Schuss Kiste Gemischt (gelb)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_yellow_description">
+                <English>Caliber: 7.62x54 mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
+                <German>Kaliber: 7.62x54 mm&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red">
+                <English>7.62mm 150Rnd Box Tracer (Red)</English>
+                <German>7.62mm 150 Schuss Kiste Leuchtspur (rot)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red_description">
+                <English>Caliber: 7.62x54 mm Tracer - Red&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
+                <German>Kaliber: 7.62x54 mm Leuchtspur - Rot&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow">
+                <English>7.62mm 150Rnd Box Tracer (Yellow)</English>
+                <German>7.62mm 150 Schuss Kiste Leuchtspur (Rot)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow_description">
+                <English>Caliber: 7.62x54 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
+                <German>Kaliber: 7.62x54 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
+            </Key>
+
+            <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow">
+                <English>9.3mm 150Rnd Belt Mixed (Yellow)</English>
+                <German>9.3mm 150 Schuss Gurt gemischt (Gelb)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow_description">
+                <English>Caliber: 9.3x64mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
+                <German>Kaliber: 9,3 x 64 mm&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet für: Navid</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_red">
+                <English>9.3mm 150Rnd Belt Mixed (Red)</English>
+                <German>9.3mm 150 Schuss Gurt gemischt (Rot)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_red_description">
+                <English>Caliber: 9.3x64mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
+                <German>Kaliber: 9,3 x 64 mm&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet für: Navid</German>
+            </Key>
+
+            <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow">
+                <English>.338 NM 130Rnd Belt Mixed (Yellow)</English>
+                <German>.338 NM 130 Schuss Gurt gemischt (gelb)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow_description">
+                <English>Caliber: .338 Norma Magnum&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
+                <German>Kaliber: .338 Norma Magnum&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_green">
+                <English>.338 NM 130Rnd Belt Mixed (Green)</English>
+                <German>.338 NM 130 Schuss Gurt gemischt (grün)</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_green_description">
+                <English>Caliber: .338 Norma Magnum&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
+                <German>Kaliber: .338 Norma Magnum&lt;br /&gt;Schuss: 130&lt;br /&gt;Verwendet für: SPMG</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>

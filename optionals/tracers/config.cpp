@@ -15,6 +15,7 @@ class CfgPatches {
 };
 
 #include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
 
 // CfgMagazines and CfgWeapons are included for testing only and may be removed for release version.
 // There is also an ammo class B_556x45_Ball_Tracer_White commented out in CfgAmmo

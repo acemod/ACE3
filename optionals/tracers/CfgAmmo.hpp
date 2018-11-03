@@ -86,10 +86,14 @@ class CfgAmmo {
     class B_338_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
 
     class B_338_NM_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
+    class ACE_B_338_NM_Ball_red : B_338_NM_Ball {model = PATHTOF(ace_TracerRed2.p3d);};
+    class ACE_B_338_NM_Ball_yellow : B_338_NM_Ball {model = PATHTOF(ace_TracerYellow2.p3d);};
 
     class B_127x54_Ball: BulletBase {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
 
     class B_93x64_Ball: BulletBase {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
+    class ace_B_93x64_Ball_tracer_red : B_93x64_Ball {model = PATHTOF(ace_TracerRed2.p3d);};
+    class ace_B_93x64_Ball_tracer_yellow : B_93x64_Ball {model = PATHTOF(ace_TracerYellow2.p3d);};
 
     //Autocannon
     class B_19mm_HE: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white
