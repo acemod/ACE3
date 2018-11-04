@@ -1,4 +1,12 @@
 class CfgMagazineWells {
+    class CBA_556x45_STANAG_2D_XL {
+        ADDON[] = {
+            "ACE_150Rnd_556x45_Drum_Mag_F_Green",
+            "ACE_150Rnd_556x45_Drum_Mag_F_Yellow",
+            "ACE_150Rnd_556x45_Drum_Mag_Tracer_F_Green",
+            "ACE_150Rnd_556x45_Drum_Mag_Tracer_F_Yellow"
+        };
+    };
     class CBA_556x45_MINIMI {
         ADDON[] = {
             "ACE_200Rnd_556x45_Box_F_Green",

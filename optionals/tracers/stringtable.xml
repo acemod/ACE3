@@ -2,6 +2,39 @@
 <Project name="ACE_tracer">
     <Package name="main">
         <Container name="magazines">
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_F_green">
+                <English>5.56 mm 150Rnd Reload Tracer (Green) Mag</English>
+                <German>150 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_F_green_description">
+                <English>Caliber: 5.56x45 mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
+                <German>Kaliber: 5,56x45 mm&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet in: SPAR-16S</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_F_yellow">
+                <English>5.56 mm 150Rnd Reload Tracer (Yellow) Mag</English>
+                <German>150 Schuss 5,56 mm Nachlade-Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_F_yellow_description">
+                <English>Caliber: 5.56x45 mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
+                <German>Kaliber: 5,56x45 mm&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet in: SPAR-16S</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_Tracer_F_green">
+                <English>5.56 mm 150Rnd Tracer (Green) Mag</English>
+                <German>150 Schuss 5,56 mm Leuchtspur (Grün) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_Tracer_F_green_description">
+                <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
+                <German>Kaliber: 5,56x45 mm Leuchtspur - grün&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet in: SPAR-16S</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_Tracer_F_yellow">
+                <English>5.56 mm 150Rnd Tracer (Yellow) Mag</English>
+                <German>150 Schuss 5,56 mm Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_Mag_Tracer_F_yellow_description">
+                <English>Caliber: 5.56x45 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
+                <German>Kaliber: 5,56x45 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet in: SPAR-16S</German>
+            </Key>
+
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_F_green">
                 <English>5.56 mm 200Rnd Reload Tracer (Green) Box</English>
                 <German>200 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Kasten</German>
