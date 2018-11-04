@@ -36,32 +36,32 @@
             </Key>
 
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_green">
-                <English>6.5mm 100Rnd Mag (Mixed Green)</English>
-                <German>100 Schuss 6.5mm Magazin (Gemischt Grün)</German>
+                <English>6.5mm 100Rnd Mixed Mag (Green)</English>
+                <German>100 Schuss 6.5mm Magazin gemischt (grün)</German>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_green_description">
                 <English>Caliber: 6.5x39 mm&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
                 <German>Kaliber: 6.5x39 mm&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_yellow">
-                <English>6.5mm 100Rnd Mag (Mixed Yellow)</English>
-                <German>100 Schuss 6.5mm Magazin (Gemischt Gelb)</German>
+                <English>6.5mm 100Rnd Mixed Mag (Yellow)</English>
+                <German>100 Schuss 6.5mm Magazin gemischt (gelb)</German>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_yellow_description">
                 <English>Caliber: 6.5x39 mm&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
                 <German>Kaliber: 6.5x39 mm&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_green">
-                <English>6.5mm 100Rnd Mag (Tracer Green)</English>
-                <German>100 Schuss 6.5mm Magazin (Leuchtspur Grün)</German>
+                <English>6.5mm 100Rnd Mag Tracer (Green)</English>
+                <German>100 Schuss 6.5mm Magazin Leuchtspur (Grün)</German>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_yellow">
-                <English>6.5mm 100Rnd Mag (Tracer Yellow)</English>
-                <German>100 Schuss 6.5mm Magazin (Leuchtspur Gelb)</German>
+                <English>6.5mm 100Rnd Mag Tracer (Yellow)</English>
+                <German>100 Schuss 6.5mm Magazin Leuchtspur (Gelb)</German>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_caseless_mag_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
