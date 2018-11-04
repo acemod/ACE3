@@ -39,7 +39,7 @@ class CfgMagazines {
     MAG(100Rnd_580x42_Mag_Tracer_F,red,ACE_580x42_Ball_Tracer_red);
     MAG(100Rnd_580x42_Mag_Tracer_F,yellow,ACE_580x42_Ball_Tracer_yellow);
 
-	// 6.5mm Caseless
+	// 6.5mm Caseless MX
 	class 30Rnd_65x39_caseless_mag;
     MAG(30Rnd_65x39_caseless_mag,green,B_65x39_Caseless_green);
     MAG(30Rnd_65x39_caseless_mag,yellow,B_65x39_Caseless_yellow);
@@ -56,6 +56,33 @@ class CfgMagazines {
     MAG(100Rnd_65x39_caseless_mag_tracer,green,B_65x39_Caseless_green);
     MAG(100Rnd_65x39_caseless_mag_tracer,yellow,B_65x39_Caseless_yellow);
 
+    // 6.5mm Caseless Katiba
+    class 30Rnd_65x39_caseless_green;
+    class ACE_30Rnd_65x39_katiba_red : 30Rnd_65x39_caseless_green {
+        author = ECSTRING(common,ACETeam);
+        ammo = QUOTE(B_65x39_Caseless);
+        displayName = CSTRING(30Rnd_65x39_katiba_red);
+    };
+    class ACE_30Rnd_65x39_katiba_yellow : 30Rnd_65x39_caseless_green {
+        author = ECSTRING(common,ACETeam);
+        ammo = QUOTE(B_65x39_Caseless_yellow);
+        displayName = CSTRING(30Rnd_65x39_katiba_yellow);
+    };
+
+    class 30Rnd_65x39_caseless_green_Tracer;
+    class ACE_30Rnd_65x39_katiba_tracer_red : 30Rnd_65x39_caseless_green_Tracer {
+        author = ECSTRING(common,ACETeam);
+        ammo = QUOTE(B_65x39_Caseless);
+        displayName = CSTRING(30Rnd_65x39_katiba_tracer_red);
+        descriptionShort = CSTRING(30Rnd_65x39_katiba_tracer_red_description);
+    };
+    class ACE_30Rnd_65x39_katiba_tracer_yellow : 30Rnd_65x39_caseless_green_Tracer {
+        author = ECSTRING(common,ACETeam);
+        ammo = QUOTE(B_65x39_Caseless_yellow);
+        displayName = CSTRING(30Rnd_65x39_katiba_tracer_yellow);
+        descriptionShort = CSTRING(30Rnd_65x39_katiba_yellow_tracer_description);
+    };
+
     // 6.5mm Cased
 	class 200Rnd_65x39_cased_Box;
     MAG(200Rnd_65x39_cased_Box,green,B_65x39_Case_Green);
@@ -65,7 +92,22 @@ class CfgMagazines {
     MAG(200Rnd_65x39_cased_Box_Tracer,green,B_65x39_Case_Green);
     MAG(200Rnd_65x39_cased_Box_Tracer,red,B_65x39_Case);
 
-    // 7.62x54
+    // 7.62x51 (NATO)
+    class ACE_20Rnd_762x51_Mag_Tracer;
+    class ACE_20Rnd_762x51_Mag_Tracer_green : ACE_20Rnd_762x51_Mag_Tracer {
+        author = ECSTRING(common,ACETeam);
+        ammo = QUOTE(B_762x51_Tracer_Green);
+        displayName = CSTRING(20Rnd_762x51_Mag_Tracer_green);
+        descriptionShort = CSTRING(20Rnd_762x51_Mag_Tracer_green_description);
+    };
+    class ACE_20Rnd_762x51_Mag_Tracer_yellow : ACE_20Rnd_762x51_Mag_Tracer {
+        author = ECSTRING(common,ACETeam);
+        ammo = QUOTE(B_762x51_Tracer_Yellow);
+        displayName = CSTRING(20Rnd_762x51_Mag_Tracer_yellow);
+        descriptionShort = CSTRING(20Rnd_762x51_Mag_Tracer_yellow_description);
+    };
+
+    // 7.62x54 (Russian)
 	class 150Rnd_762x54_Box;
     MAG(150Rnd_762x54_Box,yellow,B_762x54_Tracer_Yellow);
     MAG(150Rnd_762x54_Box,red,B_762x54_Tracer_Red);

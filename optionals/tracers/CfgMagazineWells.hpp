@@ -45,12 +45,38 @@ class CfgMagazineWells {
             "ACE_100Rnd_65x39_caseless_mag_tracer_yellow"
         };
     };
+    class CBA_65x39_Katiba {
+        ADDON[] = {
+            "ACE_30Rnd_65x39_katiba_red",
+            "ACE_30Rnd_65x39_katiba_yellow",
+            "ACE_30Rnd_65x39_katiba_tracer_red",
+            "ACE_30Rnd_65x39_katiba_tracer_yellow"
+        };
+    };
     class CBA_65x39_Mk200 {
         ADDON[] = {
             "ACE_200Rnd_65x39_cased_Box_green",
             "ACE_200Rnd_65x39_cased_Box_yellow",
             "ACE_200Rnd_65x39_cased_Box_Tracer_green",
             "ACE_200Rnd_65x39_cased_Box_Tracer_yellow"
+        };
+    };
+    class CBA_762x51_HK417 {
+        ADDON[] = {
+            "ACE_20Rnd_762x51_Mag_Tracer_green",
+            "ACE_20Rnd_762x51_Mag_Tracer_yellow"
+        };
+    };
+    class CBA_762x51_M14 {
+        ADDON[] = {
+            "ACE_20Rnd_762x51_Mag_Tracer_green",
+            "ACE_20Rnd_762x51_Mag_Tracer_yellow"
+        };
+    };
+    class CBA_762x51_G3 {
+        ADDON[] = {
+            "ACE_20Rnd_762x51_Mag_Tracer_green",
+            "ACE_20Rnd_762x51_Mag_Tracer_yellow"
         };
     };
     class CBA_762x54R_LINKS {
