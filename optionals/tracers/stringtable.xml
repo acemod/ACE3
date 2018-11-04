@@ -2,6 +2,72 @@
 <Project name="ACE_tracer">
     <Package name="main">
         <Container name="magazines">
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_F_red">
+                <English>5.8 mm 30Rnd Reload Tracer (Red) Mag</English>
+                <German>30 Schuss 5,8 mm Nachlade-Leuchtspur (Rot) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_F_red_description">
+                <English>Caliber: 5.8x42 mm&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
+                <German>Kaliber: 5,8x42 mm&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet in: CAR-95, CAR-95 GL</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_F_yellow">
+                <English>5.8 mm 30Rnd Reload Tracer (Yellow) Mag</English>
+                <German>30 Schuss 5,8 mm Nachlade-Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_F_yellow_description">
+                <English>Caliber: 5.8x42 mm&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
+                <German>Kaliber: 5,8x42 mm&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet in: CAR-95, CAR-95 GL</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_Tracer_F_red">
+                <English>5.8 mm 30Rnd Tracer (Red) Mag</English>
+                <German>30 Schuss 5,8 mm Leuchtspur (Rot) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_Tracer_F_red_description">
+                <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
+                <German>Kaliber: 5,8x42 mm Leuchtspur - rot&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet in: CAR-95, CAR-95 GL</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_Tracer_F_yellow">
+                <English>5.8 mm 30Rnd Tracer (Yellow) Mag</English>
+                <German>30 Schuss 5,8 mm Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_Tracer_F_yellow_description">
+                <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
+                <German>Kaliber: 5,8x42 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet in: CAR-95, CAR-95 GL</German>
+            </Key>
+
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_F_red">
+                <English>5.8 mm 100Rnd Reload Tracer (Red) Mag</English>
+                <German>100 Schuss 5,8 mm Nachlade-Leuchtspur (Rot) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_F_red_description">
+                <English>Caliber: 5.8x42 mm&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
+                <German>Kaliber: 5,8x42 mm&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet in: CAR-95-1</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_F_yellow">
+                <English>5.8 mm 100Rnd Reload Tracer (Yellow) Mag</English>
+                <German>100 Schuss 5,8 mm Nachlade-Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_F_yellow_description">
+                <English>Caliber: 5.8x42 mm&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
+                <German>Kaliber: 5,8x42 mm&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet in: CAR-95-1</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_Tracer_F_red">
+                <English>5.8 mm 100Rnd Tracer (Red) Mag</English>
+                <German>100 Schuss 5,8 mm Leuchtspur (Rot) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_Tracer_F_red_description">
+                <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
+                <German>Kaliber: 5,8x42 mm Leuchtspur - rot&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet in: CAR-95-1</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_Tracer_F_yellow">
+                <English>5.8 mm 100Rnd Tracer (Yellow) Mag</English>
+                <German>100 Schuss 5,8 mm Leuchtspur (Gelb) Magazin</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_100Rnd_580x42_Mag_Tracer_F_yellow_description">
+                <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
+                <German>Kaliber: 5,8x42 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet in: CAR-95-1</German>
+            </Key>
+
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_caseless_mag_green">
                 <English>6.5mm 30Rnd Reload Tracer (Green) Mag</English>
                 <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Grün) Magazin</German>

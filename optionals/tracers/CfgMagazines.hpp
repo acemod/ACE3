@@ -7,6 +7,23 @@
 
 class CfgMagazines {
 
+    // 5.8mm
+    class 30Rnd_580x42_Mag_F;
+    MAG(30Rnd_580x42_Mag_F,red,ACE_580x42_Ball_Tracer_red);
+    MAG(30Rnd_580x42_Mag_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+
+    class 30Rnd_580x42_Mag_Tracer_F;
+    MAG(30Rnd_580x42_Mag_Tracer_F,red,ACE_580x42_Ball_Tracer_red);
+    MAG(30Rnd_580x42_Mag_Tracer_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+
+    class 100Rnd_580x42_Mag_F;
+    MAG(100Rnd_580x42_Mag_F,red,ACE_580x42_Ball_Tracer_red);
+    MAG(100Rnd_580x42_Mag_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+
+    class 100Rnd_580x42_Mag_Tracer_F;
+    MAG(100Rnd_580x42_Mag_Tracer_F,red,ACE_580x42_Ball_Tracer_red);
+    MAG(100Rnd_580x42_Mag_Tracer_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+
 	// 6.5mm Caseless
 	class 30Rnd_65x39_caseless_mag;
     MAG(30Rnd_65x39_caseless_mag,green,B_65x39_Caseless_green);

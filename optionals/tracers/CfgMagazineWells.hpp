@@ -1,4 +1,20 @@
 class CfgMagazineWells {
+    class CBA_580x42_TYPE95 {
+        ADDON[] = {
+            "ACE_30Rnd_580x42_Mag_F_red",
+            "ACE_30Rnd_580x42_Mag_F_yellow",
+            "ACE_30Rnd_580x42_Mag_Tracer_F_red",
+            "ACE_30Rnd_580x42_Mag_Tracer_F_yellow"
+        };
+    };
+    class CBA_580x42_TYPE95_XL {
+        ADDON[] = {
+            "ACE_100Rnd_580x42_Mag_F_red",
+            "ACE_100Rnd_580x42_Mag_F_yellow",
+            "ACE_100Rnd_580x42_Mag_Tracer_F_red",
+            "ACE_100Rnd_580x42_Mag_Tracer_F_yellow"
+        };
+    };
     class CBA_65x39_MX {
         ADDON[] = {
             "ACE_30Rnd_65x39_caseless_mag_green",
