@@ -2,6 +2,23 @@
 <Project name="ACE_tracer">
     <Package name="main">
         <Container name="magazines">
+            <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_F_green">
+                <English>5.56 mm 200Rnd Reload Tracer (Green) Box</English>
+                <German>200 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Kasten</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_F_green_description">
+                <English>Caliber: 5.56x45 mm&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: LIM-85</English>
+                <German>Kaliber: 5,56x45 mm&lt;br /&gt;Schuss: 200&lt;br /&gt;Verwendet in: LIM-85</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_Tracer_F_green">
+                <English>5.56 mm 200Rnd Tracer (Green) Box</English>
+                <German>200 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Kasten</German>
+            </Key>
+            <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_Tracer_F_green_description">
+                <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: LIM-85</English>
+                <German>Kaliber: 5,56x45 mm Leuchtspur - grün&lt;br /&gt;Schuss: 200&lt;br /&gt;Verwendet in: LIM-85</German>
+            </Key>
+
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_F_red">
                 <English>5.8 mm 30Rnd Reload Tracer (Red) Mag</English>
                 <German>30 Schuss 5,8 mm Nachlade-Leuchtspur (Rot) Magazin</German>

@@ -7,6 +7,13 @@
 
 class CfgMagazines {
 
+    // 5.56mm
+    class 200Rnd_556x45_Box_F;
+    MAG(200Rnd_556x45_Box_F,green,B_556x45_Ball_Tracer_Green);
+
+    class 200Rnd_556x45_Box_Tracer_F;
+    MAG(200Rnd_556x45_Box_Tracer_F,green,B_556x45_Ball_Tracer_Green);
+
     // 5.8mm
     class 30Rnd_580x42_Mag_F;
     MAG(30Rnd_580x42_Mag_F,red,ACE_580x42_Ball_Tracer_red);

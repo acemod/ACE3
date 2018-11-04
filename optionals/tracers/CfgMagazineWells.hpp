@@ -1,4 +1,10 @@
 class CfgMagazineWells {
+    class CBA_556x45_MINIMI {
+        ADDON[] = {
+            "ACE_200Rnd_556x45_Box_F_Green",
+            "ACE_200Rnd_556x45_Box_Tracer_F_Green"
+        };
+    };
     class CBA_580x42_TYPE95 {
         ADDON[] = {
             "ACE_30Rnd_580x42_Mag_F_red",
