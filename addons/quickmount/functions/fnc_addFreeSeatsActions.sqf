@@ -16,50 +16,54 @@
  * Public: No
  */
 
+#define DISABLED_FFV_TIMEOUT 0.3
+#define TAKEN_SEAT_TIMEOUT 0.5
+
 #define TO_COMPARTMENT_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
 
 // workaround getting damage when moveout while vehicle is moving
-#define MOVEOUT_AND_BLOCK_DAMAGE \
+#define MOVE_OUT \
     if (isDamageAllowed _player) then { \
         _player allowDamage false; \
         SETVAR(_player,GVAR(damageBlocked),true); \
     }; \
-    moveOut _player;
-
-// this is used in statements when move from driver
-#define MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON \
     private _preserveEngineOn = _player == driver _target && {isEngineOn _target}; \
-    MOVEOUT_AND_BLOCK_DAMAGE; \
+    moveOut _player; \
     if (_preserveEngineOn) then {_target engineOn true};
 
+#define UNBLOCK_DAMAGE \
+    if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
+        _this allowDamage true; \
+        SETVAR(_this,GVAR(damageBlocked),nil); \
+    };
+
+// if unit isn't moved to new seat in TAKEN_SEAT_TIMEOUT, we move him back to his seat
+#define WAIT_IN_OR_MOVE_BACK \
+    [ARR_5( \
+        {!isNull objectParent _this}, \
+        {UNBLOCK_DAMAGE}, \
+        _player, \
+        TAKEN_SEAT_TIMEOUT, \
+        { \
+            (_this getVariable QGVAR(moveBackParams)) call (_this getVariable QGVAR(moveBackCode)); \
+            UNBLOCK_DAMAGE; \
+        } \
+    )] call CBA_fnc_waitUntilAndExecute;
+
 // moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
-// we have to wait some time (e.g. until player is out)
-// usually it takes 1 frame in SP and 3 frames in MP, so in MP looks a little lagging
-// also if unit isn't moved to new seat in 0.5 seconds, we move him back to his seat
+// so we have to wait some time (e.g. until player is out)
+// usually it's done in the same frame in SP and takes 3 frames in MP, so in MP looks a little lagging
 #define MOVE_IN(command) \
+    if (isNull objectParent _player) exitWith {\
+        _player command (_this select 2); \
+        WAIT_IN_OR_MOVE_BACK; \
+    }; \
     [ARR_3( \
         {isNull objectParent (_this select 0)}, \
         { \
             params [ARR_2("_player","_moveInParams")]; \
             _player command _moveInParams; \
-            [ARR_5( \
-                {!isNull objectParent _this}, \
-                { \
-                    if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
-                        _this allowDamage true; \
-                        SETVAR(_this,GVAR(damageBlocked),nil); \
-                    }; \
-                }, \
-                _player, \
-                0.5, \
-                { \
-                    (_this getVariable QGVAR(moveBackParams)) call (_this getVariable QGVAR(moveBackCode)); \
-                    if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
-                        _this allowDamage true; \
-                        SETVAR(_this,GVAR(damageBlocked),nil); \
-                    }; \
-                } \
-            )] call CBA_fnc_waitUntilAndExecute; \
+            WAIT_IN_OR_MOVE_BACK; \
         }, \
         [ARR_2(_player,_this select 2)] \
     )] call CBA_fnc_waitUntilAndExecute;
@@ -152,7 +156,7 @@ private _cargoNumber = -1;
                 if (_isInVehicle) then {
                     if (_compartment != _driverCompartments || {_isDriverIsolated}) then {breakTo "crewLoop"};
                     _params = _vehicle;
-                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE; MOVE_IN(moveInDriver)};
+                    _statement = {MOVE_OUT; MOVE_IN(moveInDriver)};
                 } else {
                     _params = ["GetInDriver", _vehicle];
                     _statement = {_player action (_this select 2)};
@@ -171,7 +175,7 @@ private _cargoNumber = -1;
                 if (_isInVehicle) then {
                     if (_compartment != (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
                     _params = [_vehicle, _cargoIndex];
-                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInCargo)};
+                    _statement = {MOVE_OUT; MOVE_IN(moveInCargo)};
                 } else {
                     _params = ["GetInCargo", _vehicle, _cargoNumber];
                     _statement = {_player action (_this select 2)};
@@ -183,15 +187,30 @@ private _cargoNumber = -1;
                 if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
                 if (_role == "gunner" && {unitIsUAV _vehicle}) then {breakTo "crewLoop"};
                 private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
-                if (_isInVehicle) then {
+                if (!_isInVehicle) then {
+                    _params = ["GetInTurret", _vehicle, _turretPath];
+                    _statement = {_player action (_this select 2)};
+                } else {
                     private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
                     TO_COMPARTMENT_STRING(_gunnerCompartments);
                     if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
                     _params = [_vehicle, _turretPath];
-                    _statement = {MOVEOUT_AND_BLOCK_DAMAGE_AND_CHECK_ENGINE_ON; MOVE_IN(moveInTurret)};
-                } else {
-                    _params = ["GetInTurret", _vehicle, _turretPath];
-                    _statement = {_player action (_this select 2)};
+                    _statement = {
+                        MOVE_OUT;
+                        // due to arma bug the unit is stuck in wrong anim when move too fast in turret with configured enabledByAnimationSource
+                        // we check if enabledByAnimationSource is closed and wait DISABLED_FFV_TIMEOUT before move in
+                        private _turretPath = _this select 2 select 1;
+                        private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _target, _turretPath] call CBA_fnc_getTurret;
+                        private _enabledByAnimationSource = getText (_turretConfig >> "enabledByAnimationSource");
+                        if (
+                            "" isEqualTo _enabledByAnimationSource
+                            || {1 == _target doorPhase _enabledByAnimationSource}
+                        ) exitWith {MOVE_IN(moveInTurret)};
+                        [{
+                            params ["_target", "_player"];
+                            MOVE_IN(moveInTurret);
+                        }, _this, DISABLED_FFV_TIMEOUT] call CBA_fnc_waitAndExecute;
+                    };
                 };
                 _name = getText (_turretConfig >> "gunnerName");
                 _icon = switch true do {
