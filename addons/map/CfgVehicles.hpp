@@ -5,12 +5,11 @@ class CfgVehicles {
             class ACE_MapFlashlight {
                 displayName = CSTRING(Action_Flashlights);
                 icon = QUOTE(\a3\ui_f\data\IGUI\Cfg\VehicleToggles\lightsiconon_ca.paa);
-                condition = QUOTE(GVAR(mapIllumination) && visibleMap && {count ([ACE_player] call FUNC(getUnitFlashlights)) > 0});
+                condition = QUOTE(GVAR(mapIllumination) && visibleMap && {!([] isEqualTo (_player call FUNC(getUnitFlashlights)))});
                 statement = "true";
                 exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 insertChildren = QUOTE(_this call DFUNC(compileFlashlightMenu));
                 showDisabled = 0;
-                priority = 99;
             };
         };
     };

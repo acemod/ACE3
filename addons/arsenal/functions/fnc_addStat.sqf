@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Add a stat to ACE Arsenal.
@@ -29,7 +30,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 params [
     ["_tabs", [[], []], [[]], 2],
     ["_class", "", [""]],

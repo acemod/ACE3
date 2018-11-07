@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the double tapping either of the 2 mini-maps
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_theMap", "_mouseButton", "_xPos", "_yPos"];
 

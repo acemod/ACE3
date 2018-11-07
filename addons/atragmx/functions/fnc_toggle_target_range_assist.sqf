@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the target range assist screen on/off
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (ctrlVisible 7000) then {
     false call FUNC(show_target_range_assist);

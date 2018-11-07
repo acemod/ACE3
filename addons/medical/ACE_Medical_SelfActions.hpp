@@ -22,7 +22,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'head', 'Bandage')] call DFUNC(treatment));
             showDisabled = 1;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
         // Advanced medical
@@ -33,7 +32,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'head', 'FieldDressing')] call DFUNC(treatment));
             showDisabled = 0;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
         class PackingBandage: fieldDressing {
@@ -80,7 +78,6 @@ class Medical {
         statement = QUOTE([ARR_3(_target, true, 1)] call DFUNC(displayPatientInformation));
         modifierFunction = QUOTE([ARR_4(_target,_player,1,_this select 3)] call FUNC(modifyMedicalAction));
         showDisabled = 1;
-        priority = 2;
         icon = QPATHTOF(UI\icons\medical_cross.paa);
 
         class Bandage {
@@ -90,7 +87,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'body', 'Bandage')] call DFUNC(treatment));
             showDisabled = 1;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
 
@@ -101,7 +97,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_2(_target, true)] call DFUNC(displayTriageCard));
             showDisabled = 1;
-            priority = 2;
             icon = QPATHTOF(UI\icons\triageCard.paa);
         };
 
@@ -113,7 +108,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'body', 'FieldDressing')] call DFUNC(treatment));
             showDisabled = 0;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
         class PackingBandage: fieldDressing {
@@ -154,7 +148,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Bandage')] call DFUNC(treatment));
             showDisabled = 1;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
 
@@ -166,7 +159,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'FieldDressing')] call DFUNC(treatment));
             showDisabled = 0;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
         class PackingBandage: fieldDressing {
@@ -205,7 +197,7 @@ class Medical {
             icon = QPATHTOF(UI\icons\autoInjector.paa);
         };
         class Adenosine: Morphine {
-            displayName = CSTRING(Inject_Atropine);
+            displayName = CSTRING(Inject_Adenosine);
             condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(canTreatCached));
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(treatment));
@@ -261,7 +253,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Bandage')] call DFUNC(treatment));
             showDisabled = 1;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
 
@@ -273,7 +264,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'FieldDressing')] call DFUNC(treatment));
             showDisabled = 0;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
         class PackingBandage: fieldDressing {
@@ -364,7 +354,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Bandage')] call DFUNC(treatment));
             showDisabled = 1;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
 
@@ -377,7 +366,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'FieldDressing')] call DFUNC(treatment));
             showDisabled = 0;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
         class PackingBandage: fieldDressing {
@@ -414,7 +402,7 @@ class Medical {
             icon = QPATHTOF(UI\icons\autoInjector.paa);
         };
         class Adenosine: Morphine {
-            displayName = CSTRING(Inject_Atropine);
+            displayName = CSTRING(Inject_Adenosine);
             condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(canTreatCached));
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(treatment));
@@ -456,7 +444,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Bandage')] call DFUNC(treatment));
             showDisabled = 1;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
 
@@ -469,7 +456,6 @@ class Medical {
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'FieldDressing')] call DFUNC(treatment));
             showDisabled = 0;
-            priority = 2;
             icon = QPATHTOF(UI\icons\bandage.paa);
         };
         class PackingBandage: fieldDressing {
@@ -506,7 +492,7 @@ class Medical {
             icon = QPATHTOF(UI\icons\autoInjector.paa);
         };
         class Adenosine: Morphine {
-            displayName = CSTRING(Inject_Atropine);
+            displayName = CSTRING(Inject_Adenosine);
             condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(canTreatCached));
             exceptions[] = {"isNotInside", "isNotSwimming"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(treatment));

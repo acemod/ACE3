@@ -68,4 +68,24 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR
     };
 
+    class H_HelmetB_TI_tna_F: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    };
+
+    class H_Tank_base_F;
+    class H_Tank_black_F: H_Tank_base_F {
+        HEARING_PROTECTION_VICCREW
+    };
+
+    class H_RacingHelmet_1_F: H_HelmetB_camo {
+        HEARING_PROTECTION_VICCREW
+    };
+
+    class H_HelmetO_ocamo: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    }; // Defender and Assasin Helmet inherit.
+
+    class H_HelmetO_ViperSP_hex_f: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    };
 };

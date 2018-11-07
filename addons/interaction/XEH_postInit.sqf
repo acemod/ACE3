@@ -18,22 +18,29 @@ ACE_Modifier = 0;
     _unit doMove _position;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setLampOn), {
-    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
-    {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(setLampOff), {
-    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
-    {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
-}] call CBA_fnc_addEventHandler;
-
-
 [QGVAR(flip), {
     params ["_vehicle"];
     private _position = getPosATL _vehicle;
     _vehicle setVectorUp surfaceNormal _position;
     _vehicle setPosATL _position;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setLight), {
+    params ["_lamp", "_state"];
+    private _hitpoints = _lamp call EFUNC(common,getReflectorsWithSelections) select 1;
+    {
+        private _damage = _lamp getHit _x;
+        if (_state) then {
+            if (_damage == DISABLED_LAMP_DAMAGE) then {
+                _lamp setHit [_x, 0];
+            };
+        } else {
+            if (_damage < DISABLED_LAMP_DAMAGE) then {
+                _lamp setHit [_x, DISABLED_LAMP_DAMAGE];
+            };
+        };
+    } forEach _hitpoints;
+    _lamp setVariable [QGVAR(isLightOn), _state, true];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setCollisionLight), {

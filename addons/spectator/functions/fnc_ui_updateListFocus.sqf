@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to update the list current selection
@@ -13,7 +14,5 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 CTRL_LIST tvSetCurSel ([[GVAR(camFocus)] call BIS_fnc_objectVar] call FUNC(ui_getTreeDataIndex));

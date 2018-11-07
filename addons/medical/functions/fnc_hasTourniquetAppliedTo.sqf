@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if unit has a tourniquet applied to the specified bodypart
@@ -14,8 +15,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_selectionName"];
 

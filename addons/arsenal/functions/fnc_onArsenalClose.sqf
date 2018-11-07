@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * onUnLoad EH for arsenal.
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 (_this select 1) params ["", "_exitCode"];
 
@@ -104,4 +104,4 @@ GVAR(statsInfo) =  nil;
 GVAR(center) = nil;
 GVAR(centerNotPlayer) = nil;
 
-showHUD true;
+[QUOTE(ADDON), []] call EFUNC(common,showHud);

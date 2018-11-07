@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for spawning mines
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 

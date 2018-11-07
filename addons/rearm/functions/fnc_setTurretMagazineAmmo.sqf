@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Tuupertunut
  * Sets the ammo counts of all magazines of given class in turret.
@@ -21,7 +22,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turretPath", "_magazineClass", "_ammoCounts"];
 

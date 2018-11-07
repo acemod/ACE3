@@ -11,7 +11,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call EFUNC(common,hasItem));
                     statement = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call FUNC(place));
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
@@ -60,7 +59,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
