@@ -74,7 +74,7 @@ if !(_target isKindOf "CAManBase") then {
 
 // workaround for weapon dropped from dead body. Sometimes it falls under ground and setPos is needed
 #define MAX_FALLING_TIME 1.2
-#define MAX_FALLING_HEIGHT (9.81 * MAX_FALLING_TIME * MAX_FALLING_TIME / 2)
+#define MAX_FALLING_HEIGHT (GRAVITY * (MAX_FALLING_TIME ^ 2) / 2)
 if (_target isKindOf "WeaponHolderSimulated") then {
     private _positionASL = getPosASL _target;
     // find first touched surface height
