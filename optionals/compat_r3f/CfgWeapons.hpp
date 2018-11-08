@@ -230,18 +230,27 @@ class CfgWeapons {
         ACE_barrelLength = 125.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class Single: Mode_SemiAuto {
+            dispersion=0.0025; // 8.59 MOA (a square of 6.25/6.25cm at 25 meters), R3F default value 0.025 (85.94 MOA)
+        };
     };
     class R3F_HKUSP: Pistol_Base_F {
         ACE_barrelTwist = 250.0;
         ACE_barrelLength = 121.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class Single: Mode_SemiAuto {
+            dispersion=0.002; // 6.88 MOA (a square of 5/5cm at 25 meters), R3F default value 0.02 (68.75 MOA)
+        };
     };
     class R3F_G17: Pistol_Base_F {
         ACE_barrelTwist = 250.0;
         ACE_barrelLength = 114.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class Single: Mode_SemiAuto {
+            dispersion=0.0029; // R3F default value, 9.97 MOA (a square of 7.25/7.25cm at 25 meters)
+        };
     };
     class ItemCore;
     class InventoryOpticsItem_Base_F;
