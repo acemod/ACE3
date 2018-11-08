@@ -1,7 +1,7 @@
 class CfgMagazines {
     class CA_magazine;
     class R3F_securite_mag: CA_magazine {
-        scope = 1; // default 2
+        scope = 1; // Game Update 1.84: "Tweaked: Magazines can now be hidden in Virtual Arsenal by setting their scope to 1", R3F default value 2
     };
     class R3F_15Rnd_9x19_PAMAS: CA_magazine {
         initSpeed = 350; // R3F config
