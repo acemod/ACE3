@@ -2,6 +2,7 @@ class CfgAmmo {
     class Default;
     class BulletBase;
     class R3F_9x19_Ball: BulletBase { // https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L370
+        hit = 6; // R3F default value 13, BI default value 5
         typicalSpeed = 350; // R3F config
         airFriction = -0.00201185; // ACE3 value, default -0.001413
         ACE_caliber = 9.017;
