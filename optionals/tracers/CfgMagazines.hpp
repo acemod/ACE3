@@ -89,10 +89,12 @@ class CfgMagazines {
     class 30Rnd_65x39_caseless_mag_tracer;
     class ACE_30Rnd_65x39_mx_tracer_green : 30Rnd_65x39_caseless_mag_tracer {
         ammo = "B_65x39_Caseless_green";
+        picture = "a3\weapons_f\Data\UI\m_30stanag_caseless_green_CA.paa";
         STRINGS(30Rnd_65x39_mx_tracer_green);
     };
     class ACE_30Rnd_65x39_mx_tracer_yellow : 30Rnd_65x39_caseless_mag_tracer {
         ammo = "B_65x39_Caseless_yellow";
+        picture = "a3\weapons_f\Data\UI\m_30stanag_caseless_yellow_CA.paa";
         STRINGS(30Rnd_65x39_mx_tracer_yellow);
     };
 
@@ -109,10 +111,12 @@ class CfgMagazines {
     class 100Rnd_65x39_caseless_mag_tracer;
     class ACE_100Rnd_65x39_mx_tracer_green : 100Rnd_65x39_caseless_mag_tracer {
         ammo = "B_65x39_Caseless_green";
+        picture = "a3\weapons_f\Data\UI\M_100Rnd_65x39_green_CA.paa";
         STRINGS(100Rnd_65x39_mx_tracer_green);
     };
     class ACE_100Rnd_65x39_mx_tracer_yellow : 100Rnd_65x39_caseless_mag_tracer {
         ammo = "B_65x39_Caseless_yellow";
+        picture = "a3\weapons_f\Data\UI\M_100Rnd_65x39_yellow_CA.paa";
         STRINGS(100Rnd_65x39_mx_tracer_yellow);
     };
 
@@ -130,10 +134,12 @@ class CfgMagazines {
     class 30Rnd_65x39_caseless_green_tracer;
     class ACE_30Rnd_65x39_katiba_tracer_red : 30Rnd_65x39_caseless_green_tracer {
         ammo = "B_65x39_Caseless";
+        picture = "a3\weapons_f\Data\UI\m_20stanag_red_CA.paa";
         STRINGS(30Rnd_65x39_katiba_tracer_red);
     };
     class ACE_30Rnd_65x39_katiba_tracer_yellow : 30Rnd_65x39_caseless_green_tracer {
         ammo = "B_65x39_Caseless_yellow";
+        picture = "a3\weapons_f\Data\UI\m_20stanag_yellow_CA.paa";
         STRINGS(30Rnd_65x39_katiba_tracer_yellow);
     };
 
@@ -151,10 +157,12 @@ class CfgMagazines {
     class 200Rnd_65x39_cased_Box_tracer;
     class ACE_200Rnd_65x39_cased_Box_tracer_green : 200Rnd_65x39_cased_Box_tracer {
         ammo = "B_65x39_Case_green";
+        picture = "a3\weapons_f\Data\UI\M_200Rnd_65x39_green_CA.paa";
         STRINGS(200Rnd_65x39_cased_Box_tracer_green);
     };
     class ACE_200Rnd_65x39_cased_Box_tracer_red : 200Rnd_65x39_cased_Box_tracer {
         ammo = "B_65x39_Case";
+        picture = "a3\weapons_f\Data\UI\M_200Rnd_65x39_red_CA.paa";
         STRINGS(200Rnd_65x39_cased_Box_tracer_red);
     };
 
