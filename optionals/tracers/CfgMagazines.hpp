@@ -1,129 +1,214 @@
-#define MAG(base,color,ammotype) class TRIPLES(ACE,base,color) : base { \
-    author = ECSTRING(common,ACETeam); \
-    ammo = QUOTE(ammotype); \
-    displayName = CSTRING(DOUBLES(base,color)); \
-    descriptionShort = CSTRING(TRIPLES(base,color,description)); \
-}
+#define STRINGS(magazine) author = ECSTRING(common,ACETeam); displayName = CSTRING(magazine); descriptionShort = CSTRING(DOUBLES(magazine,description))
 
 class CfgMagazines {
 
     // 5.56mm
     class 150Rnd_556x45_Drum_Mag_F;
-    MAG(150Rnd_556x45_Drum_Mag_F,green,B_556x45_Ball_Tracer_Green);
-    MAG(150Rnd_556x45_Drum_Mag_F,yellow,B_556x45_Ball_Tracer_Yellow);
+    class ACE_150Rnd_556x45_Drum_green : 150Rnd_556x45_Drum_Mag_F {
+        ammo = "B_556x45_Ball_tracer_green";
+        STRINGS(150Rnd_556x45_Drum_green);
+    };
+    class ACE_150Rnd_556x45_Drum_yellow : 150Rnd_556x45_Drum_Mag_F {
+        ammo = "B_556x45_Ball_tracer_yellow";
+        STRINGS(150Rnd_556x45_Drum_yellow);
+    };
 
-    class 150Rnd_556x45_Drum_Mag_Tracer_F;
-    MAG(150Rnd_556x45_Drum_Mag_Tracer_F,green,B_556x45_Ball_Tracer_Green);
-    MAG(150Rnd_556x45_Drum_Mag_Tracer_F,yellow,B_556x45_Ball_Tracer_Yellow);
+    class 150Rnd_556x45_Drum_Mag_tracer_F;
+    class ACE_150Rnd_556x45_Drum_tracer_green : 150Rnd_556x45_Drum_Mag_tracer_F {
+        ammo = "B_556x45_Ball_tracer_green";
+        STRINGS(150Rnd_556x45_Drum_tracer_green);
+    };
+    class ACE_150Rnd_556x45_Drum_tracer_yellow : 150Rnd_556x45_Drum_Mag_tracer_F {
+        ammo = "B_556x45_Ball_tracer_yellow";
+        STRINGS(150Rnd_556x45_Drum_tracer_yellow);
+    };
 
     class 200Rnd_556x45_Box_F;
-    MAG(200Rnd_556x45_Box_F,green,B_556x45_Ball_Tracer_Green);
-
-    class 200Rnd_556x45_Box_Tracer_F;
-    MAG(200Rnd_556x45_Box_Tracer_F,green,B_556x45_Ball_Tracer_Green);
+    class ACE_200Rnd_556x45_Box_green : 200Rnd_556x45_Box_F {
+        ammo = "B_556x45_Ball_tracer_green";
+        STRINGS(200Rnd_556x45_Box_green);
+    };
+    class 200Rnd_556x45_Box_tracer_F;
+    class ACE_200Rnd_556x45_Box_tracer_green : 200Rnd_556x45_Box_tracer_F {
+        ammo = "B_556x45_Ball_tracer_green";
+        STRINGS(200Rnd_556x45_Box_tracer_green);
+    };
 
     // 5.8mm
     class 30Rnd_580x42_Mag_F;
-    MAG(30Rnd_580x42_Mag_F,red,ACE_580x42_Ball_Tracer_red);
-    MAG(30Rnd_580x42_Mag_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+    class ACE_30Rnd_580x42_Mag_red : 30Rnd_580x42_Mag_F {
+        ammo = "ACE_580x42_Ball_tracer_red";
+        STRINGS(30Rnd_580x42_Mag_red);
+    };
+    class ACE_30Rnd_580x42_Mag_yellow : 30Rnd_580x42_Mag_F {
+        ammo = "ACE_580x42_Ball_tracer_yellow";
+        STRINGS(30Rnd_580x42_Mag_yellow);
+    };
 
-    class 30Rnd_580x42_Mag_Tracer_F;
-    MAG(30Rnd_580x42_Mag_Tracer_F,red,ACE_580x42_Ball_Tracer_red);
-    MAG(30Rnd_580x42_Mag_Tracer_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+    class 30Rnd_580x42_Mag_tracer_F;
+    class ACE_30Rnd_580x42_Mag_tracer_red : 30Rnd_580x42_Mag_tracer_F {
+        ammo = "ACE_580x42_Ball_tracer_red";
+        STRINGS(30Rnd_580x42_Mag_tracer_red);
+    };
+    class ACE_30Rnd_580x42_Mag_tracer_yellow : 30Rnd_580x42_Mag_tracer_F {
+        ammo = "ACE_580x42_Ball_tracer_yellow";
+        STRINGS(30Rnd_580x42_Mag_tracer_yellow);
+    };
 
     class 100Rnd_580x42_Mag_F;
-    MAG(100Rnd_580x42_Mag_F,red,ACE_580x42_Ball_Tracer_red);
-    MAG(100Rnd_580x42_Mag_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+    class ACE_100Rnd_580x42_Drum_red : 100Rnd_580x42_Mag_F {
+        ammo = "ACE_580x42_Ball_tracer_red";
+        STRINGS(100Rnd_580x42_Drum_red);
+    };
+    class ACE_100Rnd_580x42_Drum_yellow : 100Rnd_580x42_Mag_F {
+        ammo = "ACE_580x42_Ball_tracer_yellow";
+        STRINGS(100Rnd_580x42_Drum_yellow);
+    };
 
-    class 100Rnd_580x42_Mag_Tracer_F;
-    MAG(100Rnd_580x42_Mag_Tracer_F,red,ACE_580x42_Ball_Tracer_red);
-    MAG(100Rnd_580x42_Mag_Tracer_F,yellow,ACE_580x42_Ball_Tracer_yellow);
+    class 100Rnd_580x42_Mag_tracer_F;
+    class ACE_100Rnd_580x42_Drum_tracer_red : 100Rnd_580x42_Mag_tracer_F {
+        ammo = "ACE_580x42_Ball_tracer_red";
+        STRINGS(100Rnd_580x42_Drum_tracer_red);
+    };
+    class ACE_100Rnd_580x42_Drum_tracer_yellow : 100Rnd_580x42_Mag_tracer_F {
+        ammo = "ACE_580x42_Ball_tracer_yellow";
+        STRINGS(100Rnd_580x42_Drum_tracer_yellow);
+    };
 
 	// 6.5mm Caseless MX
-	class 30Rnd_65x39_caseless_mag;
-    MAG(30Rnd_65x39_caseless_mag,green,B_65x39_Caseless_green);
-    MAG(30Rnd_65x39_caseless_mag,yellow,B_65x39_Caseless_yellow);
+    class 30Rnd_65x39_caseless_mag;
+    class ACE_30Rnd_65x39_mx_green : 30Rnd_65x39_caseless_mag {
+        ammo = "B_65x39_Caseless_green";
+        STRINGS(30Rnd_65x39_mx_green);
+    };
+    class ACE_30Rnd_65x39_mx_yellow : 30Rnd_65x39_caseless_mag {
+        ammo = "B_65x39_Caseless_yellow";
+        STRINGS(30Rnd_65x39_mx_yellow);
+    };
 
-	class 30Rnd_65x39_caseless_mag_tracer;
-    MAG(30Rnd_65x39_caseless_mag_tracer,green,B_65x39_Caseless_green);
-    MAG(30Rnd_65x39_caseless_mag_tracer,yellow,B_65x39_Caseless_yellow);
+    class 30Rnd_65x39_caseless_mag_tracer;
+    class ACE_30Rnd_65x39_mx_tracer_green : 30Rnd_65x39_caseless_mag_tracer {
+        ammo = "B_65x39_Caseless_green";
+        STRINGS(30Rnd_65x39_mx_tracer_green);
+    };
+    class ACE_30Rnd_65x39_mx_tracer_yellow : 30Rnd_65x39_caseless_mag_tracer {
+        ammo = "B_65x39_Caseless_yellow";
+        STRINGS(30Rnd_65x39_mx_tracer_yellow);
+    };
 
-	class 100Rnd_65x39_caseless_mag;
-    MAG(100Rnd_65x39_caseless_mag,green,B_65x39_Caseless_green);
-    MAG(100Rnd_65x39_caseless_mag,yellow,B_65x39_Caseless_yellow);
+    class 100Rnd_65x39_caseless_mag;
+    class ACE_100Rnd_65x39_mx_green : 100Rnd_65x39_caseless_mag {
+        ammo = "B_65x39_Caseless_green";
+        STRINGS(100Rnd_65x39_mx_green);
+    };
+    class ACE_100Rnd_65x39_mx_yellow : 100Rnd_65x39_caseless_mag {
+        ammo = "B_65x39_Caseless_yellow";
+        STRINGS(100Rnd_65x39_mx_yellow);
+    };
 
-	class 100Rnd_65x39_caseless_mag_tracer;
-    MAG(100Rnd_65x39_caseless_mag_tracer,green,B_65x39_Caseless_green);
-    MAG(100Rnd_65x39_caseless_mag_tracer,yellow,B_65x39_Caseless_yellow);
+    class 100Rnd_65x39_caseless_mag_tracer;
+    class ACE_100Rnd_65x39_mx_tracer_green : 100Rnd_65x39_caseless_mag_tracer {
+        ammo = "B_65x39_Caseless_green";
+        STRINGS(100Rnd_65x39_mx_tracer_green);
+    };
+    class ACE_100Rnd_65x39_mx_tracer_yellow : 100Rnd_65x39_caseless_mag_tracer {
+        ammo = "B_65x39_Caseless_yellow";
+        STRINGS(100Rnd_65x39_mx_tracer_yellow);
+    };
 
     // 6.5mm Caseless Katiba
     class 30Rnd_65x39_caseless_green;
     class ACE_30Rnd_65x39_katiba_red : 30Rnd_65x39_caseless_green {
-        author = ECSTRING(common,ACETeam);
-        ammo = QUOTE(B_65x39_Caseless);
-        displayName = CSTRING(30Rnd_65x39_katiba_red);
+        ammo = "B_65x39_Caseless";
+        STRINGS(30Rnd_65x39_katiba_red);
     };
     class ACE_30Rnd_65x39_katiba_yellow : 30Rnd_65x39_caseless_green {
-        author = ECSTRING(common,ACETeam);
-        ammo = QUOTE(B_65x39_Caseless_yellow);
-        displayName = CSTRING(30Rnd_65x39_katiba_yellow);
+        ammo = "B_65x39_Caseless_yellow";
+        STRINGS(30Rnd_65x39_katiba_yellow);
     };
 
-    class 30Rnd_65x39_caseless_green_Tracer;
-    class ACE_30Rnd_65x39_katiba_tracer_red : 30Rnd_65x39_caseless_green_Tracer {
-        author = ECSTRING(common,ACETeam);
-        ammo = QUOTE(B_65x39_Caseless);
-        displayName = CSTRING(30Rnd_65x39_katiba_tracer_red);
-        descriptionShort = CSTRING(30Rnd_65x39_katiba_tracer_red_description);
+    class 30Rnd_65x39_caseless_green_tracer;
+    class ACE_30Rnd_65x39_katiba_tracer_red : 30Rnd_65x39_caseless_green_tracer {
+        ammo = "B_65x39_Caseless";
+        STRINGS(30Rnd_65x39_katiba_tracer_red);
     };
-    class ACE_30Rnd_65x39_katiba_tracer_yellow : 30Rnd_65x39_caseless_green_Tracer {
-        author = ECSTRING(common,ACETeam);
-        ammo = QUOTE(B_65x39_Caseless_yellow);
-        displayName = CSTRING(30Rnd_65x39_katiba_tracer_yellow);
-        descriptionShort = CSTRING(30Rnd_65x39_katiba_yellow_tracer_description);
+    class ACE_30Rnd_65x39_katiba_tracer_yellow : 30Rnd_65x39_caseless_green_tracer {
+        ammo = "B_65x39_Caseless_yellow";
+        STRINGS(30Rnd_65x39_katiba_tracer_yellow);
     };
 
     // 6.5mm Cased
-	class 200Rnd_65x39_cased_Box;
-    MAG(200Rnd_65x39_cased_Box,green,B_65x39_Case_Green);
-    MAG(200Rnd_65x39_cased_Box,red,B_65x39_Case);
+    class 200Rnd_65x39_cased_Box;
+    class ACE_200Rnd_65x39_cased_Box_green : 200Rnd_65x39_cased_Box {
+        ammo = "B_65x39_Case_green";
+        STRINGS(200Rnd_65x39_cased_Box_green);
+    };
+    class ACE_200Rnd_65x39_cased_Box_red : 200Rnd_65x39_cased_Box {
+        ammo = "B_65x39_Case";
+        STRINGS(200Rnd_65x39_cased_Box_red);
+    };
 
-	class 200Rnd_65x39_cased_Box_Tracer;
-    MAG(200Rnd_65x39_cased_Box_Tracer,green,B_65x39_Case_Green);
-    MAG(200Rnd_65x39_cased_Box_Tracer,red,B_65x39_Case);
+    class 200Rnd_65x39_cased_Box_tracer;
+    class ACE_200Rnd_65x39_cased_Box_tracer_green : 200Rnd_65x39_cased_Box_tracer {
+        ammo = "B_65x39_Case_green";
+        STRINGS(200Rnd_65x39_cased_Box_tracer_green);
+    };
+    class ACE_200Rnd_65x39_cased_Box_tracer_red : 200Rnd_65x39_cased_Box_tracer {
+        ammo = "B_65x39_Case";
+        STRINGS(200Rnd_65x39_cased_Box_tracer_red);
+    };
 
     // 7.62x51 (NATO)
-    class ACE_20Rnd_762x51_Mag_Tracer;
-    class ACE_20Rnd_762x51_Mag_Tracer_green : ACE_20Rnd_762x51_Mag_Tracer {
-        author = ECSTRING(common,ACETeam);
-        ammo = QUOTE(B_762x51_Tracer_Green);
-        displayName = CSTRING(20Rnd_762x51_Mag_Tracer_green);
-        descriptionShort = CSTRING(20Rnd_762x51_Mag_Tracer_green_description);
+    class ACE_20Rnd_762x51_Mag_tracer;
+    class ACE_20Rnd_762x51_Mag_tracer_green : ACE_20Rnd_762x51_Mag_tracer {
+        ammo = "B_762x51_tracer_green";
+        STRINGS(20Rnd_762x51_Mag_tracer_green);
     };
-    class ACE_20Rnd_762x51_Mag_Tracer_yellow : ACE_20Rnd_762x51_Mag_Tracer {
-        author = ECSTRING(common,ACETeam);
-        ammo = QUOTE(B_762x51_Tracer_Yellow);
-        displayName = CSTRING(20Rnd_762x51_Mag_Tracer_yellow);
-        descriptionShort = CSTRING(20Rnd_762x51_Mag_Tracer_yellow_description);
+    class ACE_20Rnd_762x51_Mag_tracer_yellow : ACE_20Rnd_762x51_Mag_tracer {
+        ammo = "B_762x51_tracer_yellow";
+        STRINGS(20Rnd_762x51_Mag_tracer_yellow);
     };
 
     // 7.62x54 (Russian)
-	class 150Rnd_762x54_Box;
-    MAG(150Rnd_762x54_Box,yellow,B_762x54_Tracer_Yellow);
-    MAG(150Rnd_762x54_Box,red,B_762x54_Tracer_Red);
+    class 150Rnd_762x54_Box;
+    class ACE_150Rnd_762x54_Box_red : 150Rnd_762x54_Box {
+        ammo = "B_762x54_tracer_red";
+        STRINGS(150Rnd_762x54_Box_red);
+    };
+    class ACE_150Rnd_762x54_Box_yellow : 150Rnd_762x54_Box {
+        ammo = "B_762x54_tracer_yellow";
+        STRINGS(150Rnd_762x54_Box_yellow);
+    };
 
-	class 150Rnd_762x54_Box_Tracer;
-    MAG(150Rnd_762x54_Box_Tracer,yellow,B_762x54_Tracer_Yellow);
-    MAG(150Rnd_762x54_Box_Tracer,red,B_762x54_Tracer_Red);
+    class 150Rnd_762x54_Box_tracer;
+    class ACE_150Rnd_762x54_Box_tracer_red : 150Rnd_762x54_Box_tracer {
+        ammo = "B_762x54_tracer_red";
+        STRINGS(150Rnd_762x54_Box_tracer_red);
+    };
+    class ACE_150Rnd_762x54_Box_tracer_yellow : 150Rnd_762x54_Box_tracer {
+        ammo = "B_762x54_tracer_yellow";
+        STRINGS(150Rnd_762x54_Box_tracer_yellow);
+    };
 
     // 9.3x64
-	class 150Rnd_93x64_Mag;
-    MAG(150Rnd_93x64_Mag,yellow,ACE_93x64_Tracer_Yellow);
-    MAG(150Rnd_93x64_Mag,red,ACE_93x64_Tracer_Red);
+    class 150Rnd_93x64_Mag;
+    class ACE_150Rnd_93x64_Mag_red : 150Rnd_93x64_Mag {
+        ammo = "ACE_93x64_tracer_red";
+        STRINGS(150Rnd_93x64_Mag_red);
+    };
+    class ACE_150Rnd_93x64_Mag_yellow : 150Rnd_93x64_Mag {
+        ammo = "ACE_93x64_tracer_yellow";
+        STRINGS(150Rnd_93x64_Mag_yellow);
+    };
 
     // .338 NM
-	class 130Rnd_338_Mag;
-    MAG(130Rnd_338_Mag,yellow,ACE_338_NM_Tracer_Yellow);
-    MAG(130Rnd_338_Mag,green,ACE_338_NM_Tracer_Green);
-
+    class 130Rnd_338_Mag;
+    class ACE_130Rnd_338_Mag_green : 130Rnd_338_Mag {
+        ammo = "ACE_338_NM_tracer_green";
+        STRINGS(130Rnd_338_Mag_green);
+    };
+    class ACE_130Rnd_338_Mag_yellow : 130Rnd_338_Mag {
+        ammo = "ACE_338_NM_tracer_yellow";
+        STRINGS(130Rnd_338_Mag_yellow);
+    };
 };
