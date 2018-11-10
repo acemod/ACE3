@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, Jonpas
  * Adds a cargo item to the vehicle.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_itemClass", "_vehicle", ["_amount", 1], ["_showHint", false, [false]]];
 TRACE_3("params",_itemClass,_vehicle,_amount);

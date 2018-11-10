@@ -1,3 +1,5 @@
+#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Dev function: Converts ace_settings to code, outputs to clipboard
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_addon"];
 
@@ -43,6 +43,7 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
     private _category = getText (_config >> "category");
 
     private _cbaIsGlobal = (!_isClientSettable) || _isForced;
+    private _warnIfChangedMidMission = _cbaIsGlobal && {(getNumber (_config >> "canBeChanged")) == 0};
     if (_isForced) then {GVAR(cbaSettings_forcedSettings) pushBack (toLower _varName);};
 
     // Basic handling of setting types CBA doesn't support:
@@ -117,10 +118,11 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
     _output pushBack format ["    %1, // %2", _cbaValueInfo, _cbaValueInfoHint];
     _output pushBack format ["    %1, // isGlobal", _cbaIsGlobal];
     if ((_varName select [0, 4]) == "ACE_") then {
-        _output pushBack format ["    {[QGVAR(%1), _this] call EFUNC(common,cbaSettings_settingChanged)}", _gvarName];
+        _output pushBack format ["    {[QGVAR(%1), _this] call EFUNC(common,cbaSettings_settingChanged)},", _gvarName];
     } else {
-        _output pushBack format ["    {[""%1"", _this] call ace_common_fnc_cbaSettings_settingChanged}", _varName];
+        _output pushBack format ["    {[""%1"", _this] call ace_common_fnc_cbaSettings_settingChanged},", _varName];
     };
+    _output pushBack format ["    %1 // Needs mission restart", _warnIfChangedMidMission];
     _output pushBack "] call CBA_settings_fnc_init;";
 } forEach _settings;
 

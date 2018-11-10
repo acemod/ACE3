@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Scopes">
         <Key ID="STR_ACE_Scopes_DisplayName">
@@ -442,13 +442,15 @@
         </Key>
         <Key ID="STR_ACE_Scopes_statHorizontalLimits">
             <English>Horizontal limits</English>
-            <Chinese>Limites horizontales</Chinese>
+            <Chinese>水平限制</Chinese>
             <Japanese>水平制限</Japanese>
+            <Italian>Limite orrizontale</Italian>
         </Key>
         <Key ID="STR_ACE_Scopes_statVerticalLimits">
             <English>Vertical limits</English>
-            <Chinese>Limites verticales</Chinese>
+            <Chinese>垂直限制</Chinese>
             <Japanese>垂直制限</Japanese>
+            <Italian>Limite verticale</Italian>
         </Key>
     </Package>
 </Project>

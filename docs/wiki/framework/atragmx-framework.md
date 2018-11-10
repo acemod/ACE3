@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 0
   patch: 0
+redirect_from: "/wiki/framework/atragmx.html"
 ---
 
 ## 1. Configs Values

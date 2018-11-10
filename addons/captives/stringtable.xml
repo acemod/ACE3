@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_DisplayName">
@@ -441,7 +441,7 @@
             <German>Nimmt die Einheit unter dem Cursor fest.</German>
             <Japanese>カーソル先のユニットを拘束</Japanese>
             <Italian>Imposta l'unità nello stato di prigioniero.</Italian>
-            <Chinese>設置在游標下的單位成俘虜狀態。</Chinese>
+            <Chinese>設置在游標下的單位成俘虜狀態</Chinese>
             <Chinesesimp>设置在游标下的单位成俘虏状态。</Chinesesimp>
             <Korean>커서의 병력을 포박합니다.</Korean>
         </Key>
@@ -459,7 +459,7 @@
             <German>KI muss sich erst ergeben, bevor sie gefangen genommen werden kann</German>
             <Italian>Necessita che le AI si arrendano prima di essere arrestate</Italian>
             <Japanese>AI の拘束は AI が投降している場合に限り可能にします。</Japanese>
-            <Chinese>在逮捕AI之前該AI必須先進入投降狀態。</Chinese>
+            <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在逮捕AI之前该AI必须先进入投降状态。</Chinesesimp>
             <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>
         </Key>

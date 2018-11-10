@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Action for loading an unconscious or dead unit in the nearest vehicle, or _vehicle if given.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", ["_vehicle", objNull]];
 

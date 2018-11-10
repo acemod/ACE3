@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns array of crew member objects.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle", ["_types", ["driver", "commander", "gunner", "turret", "cargo", "ffv"]]];
 

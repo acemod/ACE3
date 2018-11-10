@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle Air burst ammunition. Called from per frame handler.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 (_this select 0) params ["_vehicle", "_projectile", "_zeroing"];
 

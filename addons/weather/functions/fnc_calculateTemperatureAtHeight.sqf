@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the temperature based on altitude and weather
@@ -13,6 +14,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 (GVAR(currentTemperature) - 0.0065 * _this)

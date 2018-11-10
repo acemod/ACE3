@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handles pressing the special vector keys.
@@ -9,12 +10,10 @@
  * None
  *
  * Example:
- * ["5"] call ace_vector_fnc_onKeyDown
+ * ["azimuth"] call ace_vector_fnc_onKeyDown
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // set vector config settings
 switch (GVAR(modeReticle)) do {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  * Update the blue force tracking.
@@ -14,9 +15,6 @@
  * Public: No
  */
 
-
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 // BEGIN_COUNTER(blueForceTrackingUpdate);
 
 // Delete last set of markers (always)

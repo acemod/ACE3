@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: L-H, edited by commy2, rewritten by joko // Jonas
  * Returns the weight of a crate.
@@ -13,7 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_object"];
 

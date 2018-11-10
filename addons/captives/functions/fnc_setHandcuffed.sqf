@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nic547, commy2
  * Handcuffs a unit.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
@@ -50,7 +50,7 @@ if (_state) then {
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
-        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
+        ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
     };
 
     // fix anim on mission start (should work on dedicated servers)

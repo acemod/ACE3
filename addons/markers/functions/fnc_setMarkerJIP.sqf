@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Client: Recives a marker data from server.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_allMapMarkers", "_allMapMarkersProperties"];
 TRACE_3("params",_allMapMarkers,_allMapMarkersProperties);

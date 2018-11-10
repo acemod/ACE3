@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Inventory">
         <Key ID="STR_ACE_Inventory_SettingName">
@@ -26,7 +26,7 @@
             <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
             <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de lignes.</French>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
-            <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
+            <Italian>Normalmente il menù inventario è scalato in base alle dimensioni dell'interfaccia. Questa opzione permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
             <Japanese>通常、インベントリは UI の大きさにより調整して表示されます。これはインベントリ UI を大きくできますが、文字は大きくできません。</Japanese>
             <Korean>보통 소지품 화면은 사용자 인터페이스 크기에 비례합니다. 이 항목은 소지품의 사용자 인터페이스를 확대를 가능케하면서 글씨는 그대로 냅두게 해줍니다.</Korean>
@@ -98,7 +98,7 @@
             <German>Westen</German>
             <Czech>Vesty</Czech>
             <Polish>Kamizelki</Polish>
-            <Italian>Vests</Italian>
+            <Italian>Giubbotti</Italian>
             <Spanish>Chalecos</Spanish>
             <French>Vestes</French>
             <Portuguese>Coletes</Portuguese>

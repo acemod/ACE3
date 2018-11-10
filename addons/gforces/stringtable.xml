@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="gforces">
         <Key ID="STR_ACE_gforces_enabledFor_displayName">
@@ -35,6 +35,9 @@
             <English>G-force reduction</English>
             <French>Reduction des Gs</French>
             <Japanese>耐 G 性</Japanese>
+            <Chinesesimp>减少G力</Chinesesimp>
+            <Chinese>減少G力</Chinese>
+            <Italian>Riduzione forza G</Italian>
         </Key>
     </Package>
 </Project>
