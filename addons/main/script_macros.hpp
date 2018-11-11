@@ -134,4 +134,6 @@
 #define MRAD_TO_DEG(d) ((d) / 17.45329252) // Conversion factor: 9 / (50 * PI)
 #define MOA_TO_RAD(d) ((d) * 0.00029088) // Conversion factor: PI / 10800
 
+#define ZEUS_ACTION_CONDITION ([_target, {QUOTE(QUOTE(ADDON)) in curatorAddons _this}, missionNamespace, QUOTE(QGVAR(zeusCheck)), 1E11, 'ace_interactMenuClosed'] call EFUNC(common,cachedCall))
+
 #include "script_debug.hpp"

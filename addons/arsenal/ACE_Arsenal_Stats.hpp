@@ -101,4 +101,14 @@ class GVAR(stats) {
         barStatement = QUOTE([ARR_3((_this select 0) select 0, _this select 1, [ARR_3([ARR_2(0, 500)], [ARR_2(0.01, 1)], false)])] call FUNC(statBarStatement_default));
         tabs[] = {{3,4,5}, {}};
     };
+    class ACE_smokeChemTTL: statBase {
+        scope =  2;
+        priority = 3;
+        stats[] = {"ammo"};
+        displayName = CSTRING(statTTL);
+        showText = 1;
+        textStatement= QUOTE(call FUNC(statTextStatement_smokeChemTTL));
+        condition = QUOTE((configName (_this select 1)) isKindOf [ARR_2('smokeShell', configFile >> 'CfgMagazines')]);
+        tabs[] = {{}, {5}};
+    };
 };

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [CONTROL, 0] call ace_arsenal_fnc_attributeAddItems
+ * [CONTROL] call ace_arsenal_fnc_attributeAddItems
  *
  * Public: No
  */

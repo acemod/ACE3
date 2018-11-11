@@ -10,7 +10,7 @@
  * Flashlight classnames (empty for none) <ARRAY>
  *
  * Example:
- * [unit] call ace_map_fnc_getUnitFlashlights;
+ * player call ace_map_fnc_getUnitFlashlights
  *
  * Public: No
  */
@@ -18,11 +18,21 @@
 params ["_unit"];
 
 private _flashlights = [];
+private _cfgWeapons = configFile >> "CfgWeapons";
 
 {
-    if (isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour")) then {
-        _flashlights pushBackUnique _x;
+    private _weaponConfig = _cfgWeapons >> _x;
+    if (
+        -1 < [
+            _weaponConfig >> "ItemInfo" >> "FlashLight",
+            _weaponConfig >> "FlashLight"
+        ] findIf {
+            isText (_x >> "ACE_Flashlight_Colour")
+            || {!(getArray (_x >> "ambient") in [[], [0,0,0]])}
+        }
+    ) then {
+        _flashlights pushBack _x;
     };
-} forEach (_unit call EFUNC(common,uniqueItems));
+} forEach ([_unit, true] call CBA_fnc_uniqueUnitItems);
 
 _flashlights

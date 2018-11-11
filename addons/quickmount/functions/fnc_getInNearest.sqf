@@ -70,13 +70,17 @@ if (!isNull _target &&
                 if ((!(_turretPath isEqualTo [])) && {_target lockedTurret _turretPath}) exitWith {TRACE_1("lockedTurret",_x);};
 
                 if (_effectiveRole == "turret") then {
-                    if ((getNumber (([_target, _turretPath] call CBA_fnc_getTurret) >> "isCopilot")) == 1) exitWith {
+                    private _turretConfig = [_target, _turretPath] call CBA_fnc_getTurret;
+                    if (getNumber (_turretConfig >> "isCopilot") == 1) exitWith {
                         _effectiveRole = "driver";
                     };
-                    if (_cargoIndex < 0) exitWith {
-                        _effectiveRole = "gunner"; // door gunners / 2nd turret
+                    if (
+                        _cargoIndex >= 0 // FFV
+                        || {"" isEqualTo getText (_turretConfig >> "gun")} // turret without weapon
+                    ) exitWith {
+                        _effectiveRole = "cargo";
                     };
-                    _effectiveRole = "cargo"; // probably a FFV
+                    _effectiveRole = "gunner"; // door gunners / 2nd turret
                 };
                 TRACE_2("",_effectiveRole,_x);
                 if (_effectiveRole != _desiredRole) exitWith {};

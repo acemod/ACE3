@@ -23,10 +23,9 @@ TRACE_2("",_settingName,_newValue);
 
 ["ace_settingChanged", [_settingName, _newValue]] call CBA_fnc_localEvent;
 
-if (_canBeChanged) exitWith {};
+if (!((toLower _settingName) in CBA_settings_needRestart)) exitWith {};
+if (_canBeChanged) exitWith {WARNING_1("update cba setting [%1] to use correct Need Restart param",_settingName);};
 if (!GVAR(settingsInitFinished)) exitWith {}; // Ignore changed event before CBA_settingsInitialized
-if (CBA_settings_default getVariable [_settingName, []] param [7, 0] == 0) exitWith {}; // Ignore if not a global setting
-if ((getNumber (configFile >> "ACE_settings" >> _settingName >> "canBeChanged")) == 1) exitWith {}; // Ignore if flagged as ok to change
 
-WARNING_1("Global setting [%1] changed mid-mission",_settingName);
-[QGVAR(displayTextStructured), [format ["Global setting %1 changed mid-mission. Mission restart may be required to prevent issues", _settingName], 4]] call CBA_fnc_localEvent;
+WARNING_1("Setting [%1] changed mid-mission",_settingName);
+[QGVAR(displayTextStructured), [format ["Setting %1 changed mid-mission. Mission restart may be required to prevent issues", _settingName], 4]] call CBA_fnc_localEvent;
