@@ -96,7 +96,7 @@ class CfgWeapons {
     
     // P90 (1.86)
     class SMG_03_TR_BASE;
-    class SMG_03_TR_black: SMG_03_TR_BASE{
+    class SMG_03_TR_black: SMG_03_TR_BASE {
         displayName = CSTRING(PS90_TR_Black_Name);
     };
     class SMG_03_TR_khaki: SMG_03_TR_black {
