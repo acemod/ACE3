@@ -3546,7 +3546,7 @@
             <Japanese>C-More レイルウェイ SMG (緑)</Japanese>
             <Italian>C-More Railway SMG (Verde)</Italian>
         </Key>
-                <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
+        <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
             <English>P90 TR (Black)</English>
             <Czech>P90 TR (Černá)</Czech>
             <French>P90 TR (Noir)</French>
