@@ -80,4 +80,7 @@ class CfgWeapons {
     class rhs_weap_mg42_base: Rifle_Base_F {
         ACE_Overheating_allowSwapBarrel = 1;
     };
+    class rhs_weap_m84: Rifle_Long_Base_F { // PKM reskin
+        ACE_Overheating_allowSwapBarrel = 1;
+    };
 };
