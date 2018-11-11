@@ -79,7 +79,7 @@ class CfgWeapons {
     };
     class SMG_03C_BASE: SMG_03_TR_BASE {
         ACE_barrelLength = 264;
-        modes[]= {"Single", "FullAuto"};
+        modes[] = {"Single", "FullAuto"};
     };
     
     // Noreen "Bad News" ULR
