@@ -16,7 +16,7 @@
 params ["", "_config"];
 TRACE_1("statTextStatement_scopeVisionMode",_config);
 
-private _opticsModes = ("true" ConfigClasses (_config >> "ItemInfo" >> "OpticsModes")) apply {
+private _opticsModes = ("true" configClasses (_config >> "ItemInfo" >> "OpticsModes")) apply {
     private _visionMode = getArray (_x >> "visionMode");
     [
         getNumber (_x >> "useModelOptics") == 1, //is in optics
