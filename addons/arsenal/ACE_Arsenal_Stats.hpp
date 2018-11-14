@@ -76,7 +76,7 @@ class GVAR(stats) {
     };
     class ACE_scopeVisionMode: statBase {
         scope = 2;
-        priority = 3;
+        priority = 1;
         displayName = CSTRING(statVisionMode);
         showText = 1;
         textStatement = QUOTE(call FUNC(statTextStatement_scopeVisionMode));
