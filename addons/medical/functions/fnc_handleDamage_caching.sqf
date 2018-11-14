@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Cache a handleDamage call to execute it 3 frames later
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_hitPointIndex"];
 
@@ -78,11 +78,10 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
 if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) then {
     _unit setVariable [QGVAR(frameNo_damageCaching), diag_frameno];
 
-    // handle the cached damages 3 frames later
+    // handle the cached damages 2 frames later
     [{
-        params ["_args", "_idPFH"];
-        _args params ["_unit", "_frameno"];
-        if (diag_frameno >= _frameno + 2) then {
+        [{
+            params ["_unit"];
             _unit setDamage 0;
             private _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
             private _cache_damages = _unit getVariable QGVAR(cachedDamages);
@@ -90,9 +89,8 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
                 (_x + [_cache_damages select _forEachIndex]) call FUNC(handleDamage_advanced);
             } forEach _cache_params;
             [_unit] call FUNC(handleDamage_advancedSetDamage);
-            [_idPFH] call CBA_fnc_removePerFrameHandler;
-        };
-    }, 0, [_unit, diag_frameno] ] call CBA_fnc_addPerFrameHandler;
+        }, _this] call CBA_fnc_execNextFrame;
+    }, _unit] call CBA_fnc_execNextFrame;
 
     _unit setVariable [QGVAR(cachedProjectiles), []];
     _unit setVariable [QGVAR(cachedHitPoints), []];

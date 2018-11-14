@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko
  * Handles vehicle damage from hitting wire
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_wire", "_vehicle"];
 
 private _type = typeOf _wire;

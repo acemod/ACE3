@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas, DaC
  * Prepares necessary variables and default image.
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [
     ["_objects", [], [[]] ],

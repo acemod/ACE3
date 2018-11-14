@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Arsenal">
         <Key ID="STR_ACE_Arsenal_buttonHideText">
@@ -719,6 +719,26 @@
             <Japanese>拡大倍率</Japanese>
             <Turkish>Büyütme</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode">
+            <English>Nightvision Support</English>
+            <German>Nachtsicht Unterstützung</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
+            <English>Primary supported</English>
+            <German>Primär unterstützt</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
+            <English>Secondary supported</English>
+            <German>Sekundär unterstützt</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
+            <English>Primary integrated</English>
+            <German>Primär Integriert</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
+            <English>Not Supported</English>
+            <German>Nicht unterstützt</German>
+        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <French>Page</French>
@@ -778,13 +798,15 @@
             <Hungarian>Fehérlista</Hungarian>
             <Russian>Вайтлист</Russian>
             <Italian>Lista Bianca</Italian>
-            <Japanese>許可制</Japanese>
+            <Japanese>許可リスト</Japanese>
             <Korean>화이트리스트</Korean>
             <Chinese>白名單</Chinese>
             <Chinesesimp>白名单</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_Blacklist">
             <English>Blacklist</English>
+            <Japanese>禁止リスト</Japanese>
+            <Italian>Lista Nera</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
@@ -804,6 +826,12 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
+            <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
+            <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statTTL">
+            <English>Time to live</English>
+            <French>Durée de vie</French>
         </Key>
     </Package>
 </Project>

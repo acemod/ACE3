@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nic547
  * Attaches a Captive to the _unit
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target","_state"];
 

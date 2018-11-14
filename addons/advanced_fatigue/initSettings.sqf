@@ -4,7 +4,9 @@
     [LSTRING(Enabled), LSTRING(Enabled_Description)],
     LSTRING(DisplayName),
     true,
-    true
+    true,
+    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_Settings_fnc_init;
 
 [

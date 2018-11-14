@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Change the brightness of the unit's NVG.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player", "_changeInBrightness"];
 TRACE_2("changeNVGBrightness",_player,_changeInBrightness);

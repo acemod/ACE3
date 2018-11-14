@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_DisplayName">
@@ -1090,6 +1090,15 @@
             <Korean>시체 끌기</Korean>
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Interaction_SmashWindshield">
+            <English>Smash windshield</English>
+            <German>Frontscheibe einschlagen</German>
+            <French>Dégager le pare-brise</French>
+            <Czech>Vyrazit čelní sklo</Czech>
+            <Russian>Выбить лобовое стекло</Russian>
+            <Polish>Wyłam szybę</Polish>
+            <Hungarian>Szélvédő széttörése</Hungarian>
         </Key>
     </Package>
 </Project>

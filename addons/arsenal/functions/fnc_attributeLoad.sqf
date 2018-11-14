@@ -23,6 +23,11 @@ TRACE_1("Initializing 3DEN attribute",_value);
 // Store working attribute value
 uiNamespace setVariable [QGVAR(attributeValue), _value];
 
+// Add keyDown EH to display
+// Does not work properly when added to controls group
+private _display = ctrlParent _controlsGroup;
+_display displayAddEventHandler ["KeyDown", {call FUNC(attributeKeyDown)}];
+
 // Handle selected mode
 if (_value select 1 > 0) then {
     (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_MODE) lbSetCurSel 1;

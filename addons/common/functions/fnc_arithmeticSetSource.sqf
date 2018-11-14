@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Adds or removes a source to an arithmetic set.
@@ -17,8 +18,6 @@
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_namespace", "_setID", "_source", "_variable"];
 TRACE_4("params",_namespace,_setID,_source,_variable);

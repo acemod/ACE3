@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth de Wet (LH)
  * Takes a string/number and returns the number.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_value"];
 

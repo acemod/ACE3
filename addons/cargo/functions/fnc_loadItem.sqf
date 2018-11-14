@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Load object into vehicle.
@@ -6,7 +7,7 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
- * 2: Ignore interaction distance <BOOL>
+ * 2: Ignore interaction distance and stability checks <BOOL>
  *
  * Return Value:
  * Object loaded <BOOL>
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_item","",[objNull,""]], ["_vehicle",objNull,[objNull]], ["_ignoreInteraction", false]];
 TRACE_2("params",_item,_vehicle);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: <N/A>
  * Get's flags used for onDraw3D that can be cached
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Determine flags from current settings
 private _drawName = true;

@@ -67,7 +67,7 @@ class CfgWeapons {
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 645.16;
     };
-    class rhs_weap_rpk74m: rhs_weap_pkp {
+    class rhs_weap_rpk74: rhs_weap_pkp {
         ACE_barrelTwist = 195.072;
         ACE_barrelLength = 589.28;
     };

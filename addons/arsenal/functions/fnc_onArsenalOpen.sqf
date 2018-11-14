@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * onLoad EH for arsenal.
@@ -12,8 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["", "_args"];
 _args params ["_display"];
@@ -38,7 +38,7 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     if (is3DEN) then {
         GVAR(defaultLoadoutsList) = (QGVAR(DummyCategory) get3DENMissionAttribute QGVAR(DefaultLoadoutsListAttribute));
     } else {
-            GVAR(defaultLoadoutsList) = [];
+        GVAR(defaultLoadoutsList) = [];
     };
 };
 
@@ -165,9 +165,16 @@ for "_index" from 0 to 15 do {
 
 {
     private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
-    private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
 
-    GVAR(currentItems) set [_index, _x];
+    if (_simulationType != "NVGoggles") then {
+        if (_simulationType == "ItemGps" || _simulationType == "Weapon") then {
+            GVAR(currentItems) set [14, _x];
+        } else {
+
+            private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch"] find (tolower _simulationType));
+            GVAR(currentItems) set [_index, _x];
+        };
+    };
 } forEach (assignedItems GVAR(center));
 
 GVAR(currentWeaponType) = switch true do {
@@ -288,6 +295,10 @@ if (is3DEN) then {
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 } else {
     GVAR(centerNotPlayer) = (GVAR(center) != player);
+
+    if (currentVisionMode ACE_Player == 1) then {
+        GVAR(center) action ["NVGogglesOff", GVAR(center)];
+    };
 
     {
         private _ctrl = _display displayCtrl _x;

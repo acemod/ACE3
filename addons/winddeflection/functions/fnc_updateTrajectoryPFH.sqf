@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, Ruthberg
  * Handles wind deflection for projectiles.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 [{
     // BEGIN_COUNTER(pfeh);

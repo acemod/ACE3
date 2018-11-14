@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Called when a unit switched locality
@@ -14,9 +15,6 @@
  *
  * Public: No
  */
-
-
-#include "script_component.hpp"
 
 params ["_unit", "_local"];
 
