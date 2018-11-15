@@ -40,7 +40,8 @@
         } \
     )] call CBA_fnc_waitUntilAndExecute;
 
-#define IS_MOVED_OUT (\
+#define IS_MOVED_OUT \
+( \
     isNull objectParent _player \
     && { \
         [] isEqualTo _currentTurret \
