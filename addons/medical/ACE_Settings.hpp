@@ -310,10 +310,10 @@ class ACE_Settings {
         value = 3;
         sliderSettings[] = {0, 30, 3, 0};
     };
-    class GVAR(convertVanillaMedicalItems) {
+    class GVAR(convertItems) {
         category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_convertVanillaMedicalItems_DisplayName);
-        description = CSTRING(MedicalSettings_convertVanillaMedicalItems_Description);
+        displayName = CSTRING(MedicalSettings_convertItems_DisplayName);
+        description = CSTRING(MedicalSettings_convertItems_Description);
         typeName = "BOOL";
         value = 1;
     };
