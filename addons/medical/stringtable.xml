@@ -5665,5 +5665,11 @@
             <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
             <Italian>Rende il paziente suscettibile di overdose da morfina, epinefrina o atropina.</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_convertVanillaMedicalItems_DisplayName">
+            <English>Convert vanilla medical items to ACE medical items</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_convertVanillaMedicalItems_Description">
+            <English>Enables or disables if vanilla medical items are converted to ACE medical items or removed</English>
+        </Key>
     </Package>
 </Project>
