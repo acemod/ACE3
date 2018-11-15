@@ -5669,7 +5669,7 @@
             <English>Convert vanilla medical items to ACE medical items</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_convertVanillaMedicalItems_Description">
-            <English>Enables or disables if vanilla medical items are converted to ACE medical items or removed</English>
+            <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
         </Key>
     </Package>
 </Project>
