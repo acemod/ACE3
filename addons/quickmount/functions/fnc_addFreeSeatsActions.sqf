@@ -20,16 +20,6 @@
 
 #define TO_COMPARTMENT_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
 
-// workaround getting damage when moveout while vehicle is moving
-#define MOVE_OUT \
-    if (isDamageAllowed _player) then { \
-        _player allowDamage false; \
-        SETVAR(_player,GVAR(damageBlocked),true); \
-    }; \
-    private _preserveEngineOn = _player == driver _target && {isEngineOn _target}; \
-    moveOut _player; \
-    if (_preserveEngineOn) then {_target engineOn true};
-
 #define UNBLOCK_DAMAGE \
     if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
         _this allowDamage true; \
@@ -53,33 +43,46 @@
 #define IS_MOVED_OUT (\
     isNull objectParent _player \
     && { \
-        [] isEqualTo _turretPath \
-        || {local _target isEqualTo (_target turretLocal _turretPath)} \
+        [] isEqualTo _currentTurret \
+        || {local _target isEqualTo (_target turretLocal _currentTurret)} \
     } \
 )
 
-// moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
-// so we have to wait some time (e.g. until player is out and turret locality become vehicle locality)
-// usually it's done in the same frame in SP and takes 3 frames in MP, so in MP looks a little lagging
-#define MOVE_IN(command) \
-    (_this select 2) params [ARR_2("_moveInParams","_turretPath")]; \
-    if (IS_MOVED_OUT) then { \
-        _player command _moveInParams; \
-        WAIT_IN_OR_MOVE_BACK; \
-    } else { \
-        [ARR_3( \
-            { \
-                params [ARR_4("_target","_player","","_turretPath")]; \
-                IS_MOVED_OUT \
-            }, \
-            { \
-                params [ARR_4("_target","_player","_moveInParams","_turretPath")]; \
-                _player command _moveInParams; \
-                WAIT_IN_OR_MOVE_BACK; \
-            }, \
-            [ARR_4(_target,_player,_moveInParams,_turretPath)] \
-        )] call CBA_fnc_waitUntilAndExecute; \
+private _fnc_move = {
+    (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", ["_enabledByAnimationSource", ""]];
+
+    // check bugged FFV
+    if (
+        !("" isEqualTo _enabledByAnimationSource)
+        && {1 > _target doorPhase _enabledByAnimationSource}
+    ) exitWith {};
+
+    // workaround getting damage when moveOut while vehicle is moving
+    if (isDamageAllowed _player) then {
+        _player allowDamage false;
+        SETVAR(_player,GVAR(damageBlocked),true);
     };
+    private _preserveEngineOn = _player == driver _target && {isEngineOn _target};
+    moveOut _player;
+    if (_preserveEngineOn) then {_target engineOn true};
+
+    // moveIn right after moveOut doesn't work in MP for non-local vehicles, player just stays out
+    // so we have to wait some time (e.g. until player is out and turret locality become vehicle locality)
+    // usually it's done in the same frame for local vehicles/turrets and takes 3-7 frames for non-local, so in MP can look a little lagging
+    if (IS_MOVED_OUT) exitWith {
+        [_player, _moveInParams] call _moveInCode;
+        WAIT_IN_OR_MOVE_BACK;
+    };
+    [
+        {params ["", "_target", "_player", "", "_currentTurret"]; IS_MOVED_OUT},
+        {
+            params ["_moveInCode", "", "_player", "_moveInParams"];
+            [_player, _moveInParams] call _moveInCode;
+            WAIT_IN_OR_MOVE_BACK;
+        },
+        [_moveInCode, _target, _player, _moveInParams, _currentTurret]
+    ] call CBA_fnc_waitUntilAndExecute;
+};
 
 #define ICON_DRIVER    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa"
 #define ICON_PILOT     "A3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa"
@@ -97,7 +100,7 @@ private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
 private _isInVehicle = _player in _vehicle;
 private _fullCrew = fullCrew [_vehicle, "", true];
 
-private ["_driverCompartments", "_isDriverIsolated", "_cargoCompartments", "_cargoCompartmentsLast", "_compartment", "_playerTurretPath"];
+private ["_driverCompartments", "_isDriverIsolated", "_cargoCompartments", "_cargoCompartmentsLast", "_compartment", "_currentTurret"];
 
 if (_isInVehicle) then {
     _driverCompartments = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
@@ -120,7 +123,7 @@ if (_isInVehicle) then {
         _fullCrew select (_fullCrew findIf {_player == _x select 0})
     ) params ["", "_role", "_cargoIndex", "_turretPath"];
 
-    _playerTurretPath = _turretPath;
+    _currentTurret = _turretPath;
 
     switch (_role) do {
         case "driver": {
@@ -170,8 +173,8 @@ private _cargoNumber = -1;
                 };
                 if (_isInVehicle) then {
                     if (_compartment != _driverCompartments || {_isDriverIsolated}) then {breakTo "crewLoop"};
-                    _params = [_vehicle, _playerTurretPath];
-                    _statement = {MOVE_OUT; MOVE_IN(moveInDriver)};
+                    _params = [{(_this select 0) moveInDriver (_this select 1)}, _vehicle, _currentTurret];
+                    _statement = _fnc_move;
                 } else {
                     _params = ["GetInDriver", _vehicle];
                     _statement = {_player action (_this select 2)};
@@ -189,8 +192,8 @@ private _cargoNumber = -1;
                 if (_vehicle lockedCargo _cargoIndex) then {breakTo "crewLoop"};
                 if (_isInVehicle) then {
                     if (_compartment != (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
-                    _params = [[_vehicle, _cargoIndex], _playerTurretPath];
-                    _statement = {MOVE_OUT; MOVE_IN(moveInCargo)};
+                    _params = [{(_this select 0) moveInCargo (_this select 1)}, [_vehicle, _cargoIndex], _currentTurret];
+                    _statement = _fnc_move;
                 } else {
                     _params = ["GetInCargo", _vehicle, _cargoNumber];
                     _statement = {_player action (_this select 2)};
@@ -215,16 +218,8 @@ private _cargoNumber = -1;
                         !("" isEqualTo _enabledByAnimationSource)
                         && {1 > _vehicle doorPhase _enabledByAnimationSource}
                     ) then {breakTo "crewLoop"};
-                    _params = [[_vehicle, _turretPath], _playerTurretPath, _enabledByAnimationSource];
-                    _statement = {
-                        private _enabledByAnimationSource = _this select 2 select 2;
-                        if (
-                            !("" isEqualTo _enabledByAnimationSource)
-                            && {1 > _target doorPhase _enabledByAnimationSource}
-                        ) exitWith {};
-                        MOVE_OUT;
-                        MOVE_IN(moveInTurret);
-                    };
+                    _params = [{(_this select 0) moveInTurret (_this select 1)}, [_vehicle, _turretPath], _currentTurret, _enabledByAnimationSource];
+                    _statement = _fnc_move;
                 };
                 _name = getText (_turretConfig >> "gunnerName");
                 _icon = switch true do {
