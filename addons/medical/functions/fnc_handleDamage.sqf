@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal, commy2
  * Main HandleDamage EH function.
@@ -20,6 +19,7 @@
  *
  * Public: No
  */
+#include "script_component.hpp"
 
 _this = _this select [0, 7];
 params ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_hitPointIndex"];
@@ -111,8 +111,7 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_effectiveSelectionName] call 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
     private _delayedUnconsicous = false;
     if (_vehicle != _unit and {damage _vehicle >= 1}) then {
-        [_unit] call EFUNC(common,unloadPerson);
-        _delayedUnconsicous = true;
+        [_unit] call FUNC(setDead);
     };
 
     if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
