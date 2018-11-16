@@ -145,6 +145,13 @@ if (_show) then {
             (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
         } foreach _selectionBloodLoss;
 
+        private _tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+        private _availableSelections = [0, 0, 56, 57, 58, 59];
+        for "_i" from 2 to 5 do {
+            private _tourn = _tourniquets select _i;
+            (_display displayCtrl (_availableSelections select _i)) ctrlSetTextColor [0, 0, 0.8, _tourn];
+        };
+
         private _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
         {

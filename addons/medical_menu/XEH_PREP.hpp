@@ -16,3 +16,4 @@ PREP(updateInformationLists);
 PREP(setTriageStatus);
 PREP(collectActions);
 PREP(module);
+PREP(updateTourniquets);
