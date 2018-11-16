@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 /*
  * Author: diwako
- * Update tourniquet on the body image on the menu
+ * Update tourniquets on the body image on the menu.
  *
  * Arguments:
- * 0: display <DISPLAY>
- * 1: tourniquets <ARRAY>
+ * 0: Display <DISPLAY>
+ * 1: Tourniquets <ARRAY>
  *
  * Return Value:
  * None
