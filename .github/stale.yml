@@ -24,8 +24,15 @@ markComment: >
   for your contributions.
 # Comment to post when closing a stale issue. Set to `false` to disable
 closeComment: >
-  This issue has been automatically closed due to inactivity. Please re-open
-  if this still requires investigation.
+  This issue has been automatically closed due to inactivity.
+  
+  If this is still an issue, please feel free to re-open this. If necessary, provide any additional details to help us solve this issue.
+  
+  If you wish to assist us resolving this issue, 
+  please re-open or create a new issue stating you wish to help us out.
+  
+  Thank you for your contributions.
+  
 # Limit the number of actions per hour, from 1-30. Default is 30
 limitPerRun: 30
 
