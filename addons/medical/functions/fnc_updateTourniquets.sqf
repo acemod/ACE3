@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [some_display, [0,0,0,0,0,0]] call ace_medical_menu_fnc_updateTourniquets
+ * [some_display, [0,0,0,0,0,0]] call ace_medical_fnc_updateTourniquets
  *
  * Public: No
  */
