@@ -9,6 +9,7 @@ exemptLabels:
   - impact/large
   - kind/critical bug
   - kind/bug
+  - kind/Focus Feature
   - status/accepting-pr
   - status/cherrypick
   - status/merge on release
