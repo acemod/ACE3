@@ -18,24 +18,31 @@
 
 #define TAKEN_SEAT_TIMEOUT 0.5
 
-#define TO_COMPARTMENT_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
+#define ICON_DRIVER    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa"
+#define ICON_PILOT     "A3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa"
+#define ICON_CARGO     "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_cargo_ca.paa"
+#define ICON_GUNNER    "A3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa"
+#define ICON_COMMANDER "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa"
+#define ICON_TURRET    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa"
+#define ICON_FFV       "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"
 
-#define UNBLOCK_DAMAGE \
-    if (GETVAR(_this,GVAR(damageBlocked),false)) then { \
-        _this allowDamage true; \
-        SETVAR(_this,GVAR(damageBlocked),nil); \
-    };
+#define TO_COMPARTMENT_STRING(var) if !(var isEqualType "") then {var = format [ARR_2("Compartment%1",var)]}
 
 // if unit isn't moved to new seat in TAKEN_SEAT_TIMEOUT, we move him back to his seat
 #define WAIT_IN_OR_MOVE_BACK \
     [ARR_5( \
-        {!isNull objectParent _this}, \
-        {UNBLOCK_DAMAGE}, \
-        _player, \
+        {!isNull objectParent (_this select 0)}, \
+        { \
+            params [ARR_2("_player","_damageBlocked")]; \
+            if (_damageBlocked) then {_player allowDamage true}; \
+            LOG_1("moved in in %1 frames",diag_frameno-GVAR(frame)); \
+        }, \
+        [ARR_4(_player,_damageBlocked,_moveBackCode,_moveBackParams)], \
         TAKEN_SEAT_TIMEOUT, \
         { \
-            [ARR_2(_this,_this getVariable QGVAR(moveBackParams))] call (_this getVariable QGVAR(moveBackCode)); \
-            UNBLOCK_DAMAGE; \
+            params [ARR_4("_player","_damageBlocked","_moveBackCode","_moveBackParams")]; \
+            [ARR_2(_player,_moveBackParams)] call _moveBackCode; \
+            if (_damageBlocked) then {_player allowDamage true}; \
             localize "str_mis_state_failed" call EFUNC(common,displayTextStructured); \
         } \
     )] call CBA_fnc_waitUntilAndExecute;
@@ -49,8 +56,11 @@
     } \
 )
 
+#define MOVE_IN_CODE(command) (_this select 0) command (_this select 1)
+
 private _fnc_move = {
-    (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", ["_enabledByAnimationSource", ""]];
+    (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", "_moveBackCode", "_moveBackParams", ["_enabledByAnimationSource", ""]];
+    TRACE_7("fnc_move params",_moveInCode,_moveInParams,_currentTurret,_moveBackCode,_moveBackParams,_enabledByAnimationSource,call {GVAR(frame)=diag_frameno});
 
     // check bugged FFV
     if (
@@ -59,9 +69,10 @@ private _fnc_move = {
     ) exitWith {};
 
     // workaround getting damage when moveOut while vehicle is moving
+    private _damageBlocked = false;
     if (isDamageAllowed _player) then {
         _player allowDamage false;
-        SETVAR(_player,GVAR(damageBlocked),true);
+        _damageBlocked = true;
     };
     private _preserveEngineOn = _player == driver _target && {isEngineOn _target};
     moveOut _player;
@@ -71,27 +82,21 @@ private _fnc_move = {
     // so we have to wait some time (e.g. until player is out and turret locality become vehicle locality)
     // usually it's done in the same frame for local vehicles/turrets and takes 3-7 frames for non-local, so in MP can look a little lagging
     if (IS_MOVED_OUT) exitWith {
+        LOG("moved out in current frame");
         [_player, _moveInParams] call _moveInCode;
         WAIT_IN_OR_MOVE_BACK;
     };
     [
-        {params ["", "_target", "_player", "", "_currentTurret"]; IS_MOVED_OUT},
+        {params ["_target", "_player", "_currentTurret"]; IS_MOVED_OUT},
         {
-            params ["_moveInCode", "", "_player", "_moveInParams"];
+            params ["", "_player", "", "_moveInCode", "_moveInParams", "_moveBackCode", "_moveBackParams", "_damageBlocked"];
+            LOG_2("moved out in %1 frames",diag_frameno-GVAR(frame),call {GVAR(frame)=diag_frameno; 0});
             [_player, _moveInParams] call _moveInCode;
             WAIT_IN_OR_MOVE_BACK;
         },
-        [_moveInCode, _target, _player, _moveInParams, _currentTurret]
+        [_target, _player, _currentTurret, _moveInCode, _moveInParams, _moveBackCode, _moveBackParams, _damageBlocked]
     ] call CBA_fnc_waitUntilAndExecute;
 };
-
-#define ICON_DRIVER    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa"
-#define ICON_PILOT     "A3\ui_f\data\IGUI\Cfg\Actions\getinpilot_ca.paa"
-#define ICON_CARGO     "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_cargo_ca.paa"
-#define ICON_GUNNER    "A3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa"
-#define ICON_COMMANDER "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa"
-#define ICON_TURRET    "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa"
-#define ICON_FFV       "A3\ui_f\data\IGUI\Cfg\CrewAimIndicator\gunnerAuto_ca.paa"
 
 scopeName "main";
 
@@ -101,7 +106,7 @@ private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
 private _isInVehicle = _player in _vehicle;
 private _fullCrew = fullCrew [_vehicle, "", true];
 
-private ["_driverCompartments", "_isDriverIsolated", "_cargoCompartments", "_cargoCompartmentsLast", "_compartment", "_currentTurret"];
+private ["_driverCompartments", "_isDriverIsolated", "_cargoCompartments", "_cargoCompartmentsLast", "_compartment", "_currentTurret", "_moveBackCode", "_moveBackParams"];
 
 if (_isInVehicle) then {
     _driverCompartments = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
@@ -117,8 +122,6 @@ if (_isInVehicle) then {
     } forEach _cargoCompartments;
     _cargoCompartmentsLast = count _cargoCompartments - 1;
 
-    TRACE_2("",_driverCompartments,_cargoCompartments);
-
     // find current compartment
     (
         _fullCrew select (_fullCrew findIf {_player == _x select 0})
@@ -132,24 +135,24 @@ if (_isInVehicle) then {
                 [] breakOut "main";
             };
             _compartment = _driverCompartments;
-            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInDriver (_this select 1)}];
-            _player setVariable [QGVAR(moveBackParams), _vehicle];
+            _moveBackCode = {MOVE_IN_CODE(moveInDriver)};
+            _moveBackParams = _vehicle;
         };
         case "cargo": {
             private _cargoNumber = fullCrew [_vehicle, "cargo", true] findIf {_player == _x select 0};
             _compartment = _cargoCompartments select (_cargoNumber min _cargoCompartmentsLast);
-            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInCargo (_this select 1)}];
-            _player setVariable [QGVAR(moveBackParams), [_vehicle, _cargoIndex]];
+            _moveBackCode = {MOVE_IN_CODE(moveInCargo)};
+            _moveBackParams = [_vehicle, _cargoIndex];
         };
         default {
             private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
             _compartment = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
             TO_COMPARTMENT_STRING(_compartment);
-            _player setVariable [QGVAR(moveBackCode), {(_this select 0) moveInTurret (_this select 1)}];
-            _player setVariable [QGVAR(moveBackParams), [_vehicle, _turretPath]];
+            _moveBackCode = {MOVE_IN_CODE(moveInTurret)};
+            _moveBackParams = [_vehicle, _turretPath];
         };
     };
-    TRACE_4("",_role,_cargoIndex,_turretPath,_compartment);
+    TRACE_6("current",_role,_cargoIndex,_turretPath,_compartment,_driverCompartments,_cargoCompartments);
 };
 
 private _actions = [];
@@ -174,7 +177,7 @@ private _cargoNumber = -1;
                 };
                 if (_isInVehicle) then {
                     if (_compartment != _driverCompartments || {_isDriverIsolated}) then {breakTo "crewLoop"};
-                    _params = [{(_this select 0) moveInDriver (_this select 1)}, _vehicle, _currentTurret];
+                    _params = [{MOVE_IN_CODE(moveInDriver)}, _vehicle, _currentTurret, _moveBackCode, _moveBackParams];
                     _statement = _fnc_move;
                 } else {
                     _params = ["GetInDriver", _vehicle];
@@ -193,7 +196,7 @@ private _cargoNumber = -1;
                 if (_vehicle lockedCargo _cargoIndex) then {breakTo "crewLoop"};
                 if (_isInVehicle) then {
                     if (_compartment != (_cargoCompartments select (_cargoNumber min _cargoCompartmentsLast))) then {breakTo "crewLoop"};
-                    _params = [{(_this select 0) moveInCargo (_this select 1)}, [_vehicle, _cargoIndex], _currentTurret];
+                    _params = [{MOVE_IN_CODE(moveInCargo)}, [_vehicle, _cargoIndex], _currentTurret, _moveBackCode, _moveBackParams];
                     _statement = _fnc_move;
                 } else {
                     _params = ["GetInCargo", _vehicle, _cargoNumber];
@@ -219,7 +222,7 @@ private _cargoNumber = -1;
                         !("" isEqualTo _enabledByAnimationSource)
                         && {1 > _vehicle doorPhase _enabledByAnimationSource}
                     ) then {breakTo "crewLoop"};
-                    _params = [{(_this select 0) moveInTurret (_this select 1)}, [_vehicle, _turretPath], _currentTurret, _enabledByAnimationSource];
+                    _params = [{MOVE_IN_CODE(moveInTurret)}, [_vehicle, _turretPath], _currentTurret, _moveBackCode, _moveBackParams, _enabledByAnimationSource];
                     _statement = _fnc_move;
                 };
                 _name = getText (_turretConfig >> "gunnerName");
