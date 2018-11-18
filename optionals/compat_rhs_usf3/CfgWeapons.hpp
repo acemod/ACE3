@@ -70,18 +70,19 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 508.0;
     };
-    class rhs_weap_lmg_minimi_railed; // Rifle_Base_F - scope = private;
+    class rhs_weap_saw_base: Rifle_Base_F { // Base class for all Minimi
+        ACE_Overheating_allowSwapBarrel = 1;
+    };
+    class rhs_weap_lmg_minimi_railed;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
         ACE_RailHeightAboveBore = 4.11044;
         ACE_barrelLength = 348;
         ACE_barrelTwist = 177.8;
-        ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m249_pip_L: rhs_weap_lmg_minimi_railed {
         ACE_RailHeightAboveBore = 4.34899;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
-        ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m240_base; // Rifle_Long_Base_F
     class rhs_weap_m240B: rhs_weap_m240_base {
