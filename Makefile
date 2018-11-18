@@ -13,15 +13,7 @@ VERSION_S = $(MAJOR).$(MINOR).$(PATCH)
 GIT_HASH = $(shell git log -1 --pretty=format:"%H" | head -c 8)
 
 ifeq ($(OS), Windows_NT)
-	ifeq ($(PROCESSOR_ARCHITEW6432), AMD64)
-		ARMAKE = ./tools/armake_w64.exe
-	else
-		ifeq ($(PROCESSOR_ARCHITECTURE), AMD64)
-			ARMAKE = ./tools/armake_w64.exe
-		else
-			ARMAKE = ./tools/armake_w32.exe
-		endif
-	endif
+	ARMAKE = ./tools/armake.exe # Downloaded via make.ps (rename armake_wXY.exe otherwise)
 else
 	ARMAKE = armake
 endif
@@ -73,7 +65,7 @@ version:
 	@echo "  VER  $(VERSION)"
 	$(shell sed -i -r -s 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/$(VERSION)/g' $(VERSION_FILES))
 	$(shell sed -i -r -s 's/[0-9]+\.[0-9]+\.[0-9]+/$(VERSION_S)/g' $(VERSION_FILES))
-	@echo "#define MAJOR $(MAJOR)\n#define MINOR $(MINOR)\n#define PATCHLVL $(PATCH)\n#define BUILD $(BUILD)" > "addons/main/script_version.hpp"
+	@echo -e "#define MAJOR $(MAJOR)\n#define MINOR $(MINOR)\n#define PATCHLVL $(PATCH)\n#define BUILD $(BUILD)" > "addons/main/script_version.hpp"
 	$(shell sed -i -r -s 's/ACE_VERSION_MAJOR [0-9]+/ACE_VERSION_MAJOR $(MAJOR)/g' extensions/CMakeLists.txt)
 	$(shell sed -i -r -s 's/ACE_VERSION_MINOR [0-9]+/ACE_VERSION_MINOR $(MINOR)/g' extensions/CMakeLists.txt)
 	$(shell sed -i -r -s 's/ACE_VERSION_REVISION [0-9]+/ACE_VERSION_REVISION $(PATCH)/g' extensions/CMakeLists.txt)
