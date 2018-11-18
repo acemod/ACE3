@@ -456,10 +456,7 @@ class CfgVehicles {
         GVAR(hitpointPositions)[] = {{"HitTurret", {0,-2,0}}};
     };
 
-    class Car_F: Car {
-        class HitPoints;
-    };
-    class Offroad_01_base_F: Car_F {};
+    class Offroad_01_base_F;
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
@@ -485,6 +482,9 @@ class CfgVehicles {
         GVAR(canRepair) = 0;
     };
 
+    class Car_F: Car {
+        class HitPoints;
+    };
     class Truck_F: Car_F {
         class HitPoints: HitPoints {
             class HitLBWheel;
