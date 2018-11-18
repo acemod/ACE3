@@ -53,6 +53,7 @@
     "fence.p3d",\
     "fort_razorwire.p3d",\
     "barbedwire.pd3",\
+    "dd_pletivo.p3d",\
     "plot_green_draty.p3d"\
 ]
 
