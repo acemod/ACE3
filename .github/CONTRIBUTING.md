@@ -43,7 +43,7 @@ When contributing to this repository, please first discuss the change you wish t
 
 ### Notes
 
-Please note that all contributors to this project are volunteers and do this in their own time. This means that issues and/or PR's may be open for a long time before being picked up and reviewed. We try to keep this time as short as possible, but some times things may fall short. If you feel that an issue or PR has not received attention, please comment asking for a review using the mention `@acemod/maintainers`. 
+Please note that all contributors to this project are volunteers and do this in their own time. This means that issues and/or PRs may be open for a long time before being picked up and reviewed. We try to keep this time as short as possible, but some times things may fall short. If you feel that an issue or PR has not received attention, please comment asking for a review using the mention `@acemod/maintainers`. 
 
 ## Assistance with contributing
 
