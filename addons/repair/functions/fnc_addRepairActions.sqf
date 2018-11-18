@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, SilentSpike
  * Checks if the vehicles class already has the actions initialized, otherwise add all available repair options. Calleed from init EH.
@@ -13,22 +14,19 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
 params ["_vehicle"];
-TRACE_2("params", _vehicle,typeOf _vehicle);
-
 private _type = typeOf _vehicle;
-
-private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
+TRACE_2("addRepairActions", _vehicle,_type);
 
 // do nothing if the class is already initialized
+private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
 
 // get all hitpoints and selections
-(getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
+(getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
 
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
@@ -37,12 +35,16 @@ private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
 private _hitPointsAddedAmount = [];
 private _processedSelections = [];
-private _icon = QPATHTOF(ui\repair_0_ca.paa);
+private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
+
+// Custom position can be defined via config for associated hitpoint
+private _hitpointPositions = getArray (configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions));
+// Associated hitpoints can be grouped via config to produce a single repair action
+private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups));
 
 {
     private _selection = _x;
-    private _hitpoint = _hitPoints select _forEachIndex;
-
+    private _hitpoint = toLower (_hitPoints select _forEachIndex);
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
         if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
@@ -69,56 +71,52 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
 
         _processedSelections pushBack _selection;
     } else {
-        //Skip glass hitpoints
-        if (((toLower _hitPoint) find "glass") != -1) exitWith {
-            TRACE_3("Skipping Glass",_hitpoint,_forEachIndex,_selection);
-        };
         // Empty selections don't exist
+        if (_selection isEqualTo "") exitWith { TRACE_3("Skipping Empty Sel",_hitpoint,_forEachIndex,_selection); };
         // Empty hitpoints don't contain enough information
-        if (_selection isEqualTo "") exitWith { TRACE_3("Selection Empty",_hitpoint,_forEachIndex,_selection); };
-        if (_hitpoint isEqualTo "") exitWith { TRACE_3("Hitpoint Empty",_hitpoint,_forEachIndex,_selection); };
+        if (_hitpoint isEqualTo "") exitWith { TRACE_3("Skipping Empty Hit",_hitpoint,_forEachIndex,_selection); };
+        // Ignore glass hitpoints
+        if ((_hitpoint find "glass") != -1) exitWith { TRACE_3("Skipping Glass",_hitpoint,_forEachIndex,_selection); };
+        // Ignore hitpoints starting with # (seems to be lights)
+        if ((_hitpoint select [0,1]) == "#") exitWith { TRACE_3("Skipping # hit",_hitpoint,_forEachIndex,_selection); };
+        // Ignore ERA/Slat armor (vanilla uses hitera_/hitslat_, pre-1.82 RHS uses era_)
+        // ToDo: see how community utilizes new armor system, could also check getText (_hitpointConfig >> "simulation")
+        if (((_hitpoint select [0,7]) == "hitera_") || {(_hitpoint select [0,8]) == "hitslat_"} || {(_hitpoint select [0,4]) == "era_"}) exitWith { TRACE_3("Skipping ERA/SLAT",_hitpoint,_forEachIndex,_selection); };
+
+
         //Depends hitpoints shouldn't be modified directly (will be normalized)
         // Biki: Clearing 'depends' in case of inheritance cannot be an empty string (rpt warnings), but rather a "0" value.
         if (!((getText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) exitWith {
             TRACE_3("Skip Depends",_hitpoint,_forEachIndex,_selection);
         };
 
-        // Associated hitpoints can be grouped via config to produce a single repair action
-        private _groupsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
         private _childHitPoint = false;
-        if (isArray _groupsConfig) then {
+        {
             {
-                {
-                    if (_hitpoint == _x) exitWith {
-                        _childHitPoint = true;
-                    };
-                } forEach (_x select 1);
-            } forEach (getArray _groupsConfig);
-        };
+                if (_hitpoint == _x) exitWith {
+                    _childHitPoint = true;
+                };
+            } forEach (_x select 1);
+        } forEach _hitpointGroups;
         // If the current selection is associated with a child hitpoint, then skip
         if (_childHitPoint) exitWith { TRACE_3("childHitpoint",_hitpoint,_forEachIndex,_selection); };
 
         // Find the action position
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
-
-        // Custom position can be defined via config for associated hitpoint
-        private _positionsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions);
-        if (isArray _positionsConfig) then {
-            {
-                _x params ["_hit", "_pos"];
-                if (_hitpoint == _hit) exitWith {
-                    if (_pos isEqualType []) exitWith {
-                        _position = _pos; // Position in model space
-                    };
-                    if (_pos isEqualType "") exitWith {
-                        _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _pos];
-                    };
-                    ERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
+        {
+            _x params ["_hit", "_pos"];
+            if (_hitpoint == _hit) exitWith {
+                if (_pos isEqualType []) exitWith {
+                    _position = _pos; // Position in model space
                 };
-            } forEach (getArray _positionsConfig);
-        };
+                if (_pos isEqualType "") exitWith {
+                    _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _pos];
+                };
+                ERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
+            };
+        } forEach _hitpointPositions;
 
-        // Prepair the repair action
+        // Prepare the repair action
         private _name = format ["Repair_%1_%2", _forEachIndex, _selection];
 
         // Find localized string and track those added for numerization
@@ -130,11 +128,7 @@ private _icon = QPATHTOF(ui\repair_0_ca.paa);
         if (_hitpoint in TRACK_HITPOINTS) then {
             // Tracks should always be unique
             if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
-            if (_hitpoint == "HitLTrack") then {
-                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
-            } else {
-                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
-            };
+            _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             TRACE_4("Adding RepairTrack",_hitpoint,_forEachIndex,_selection,_text);
             private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(canRepair)};
             private _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(repair)};

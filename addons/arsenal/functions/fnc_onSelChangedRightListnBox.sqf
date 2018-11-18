@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles selection changes on the right panel (listnbox).
@@ -11,12 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
-
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeOnSelChangedRightLNB = createProfileScope QFUNC(onSelChangedRightListnBox);
-#endif
 
 params ["_control", "_curSel"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Display the ammo of the currently loaded magazine of the target or count rifle grenades.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define COUNT_BARS 12
 
@@ -95,7 +94,7 @@ private _ammoBarsStructuredText = if (_showNumber) then {
         _string = _string + "|";
     };
 
-    composeText [_text, [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredText)];
+    composeText [_text, [_string, "#808080"] call EFUNC(common,stringToColoredText)];
 };
 
 

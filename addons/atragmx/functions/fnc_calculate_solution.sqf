@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the fireing solution
@@ -41,7 +42,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params [
     "_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity",
     "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed",

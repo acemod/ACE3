@@ -11,6 +11,7 @@ class CfgVehicles {
         };
     };
     class UAV_01_base_F: Helicopter_Base_F {
+        fuelCapacity = 19; // Around 30 minutes hovering
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(RefuelUAV) {
@@ -23,6 +24,7 @@ class CfgVehicles {
         };
     };
     class UAV_06_base_F: Helicopter_Base_F {
+        fuelCapacity = 16; // Around 25 minutes hovering
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(RefuelUAV) {

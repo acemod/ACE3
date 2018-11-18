@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle the animaion for a Unit for Dragging Module
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisID"]; // From CBA_fnc_addBISEventHandler;
 

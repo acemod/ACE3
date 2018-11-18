@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bovine3dom
  * Determines whether one string matches another and how many characters match. Case insensitive.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_string", "_searchTerm"];
 

@@ -149,6 +149,24 @@
 #define IDC_buttonSharedLoadoutsBackground 405
 #define IDC_buttonSharedLoadouts 406
 
+// 3DEN Attribute
+#define ATTRIBUTE_W (pixelW * pixelGrid * 0.5)
+#define ATTRIBUTE_H (pixelH * pixelGrid * 0.5)
+
+#define IDC_ATTRIBUTE_MODE 8100
+#define IDC_ATTRIBUTE_CATEGORY 8101
+#define IDC_ATTRIBUTE_LIST 8102
+#define IDC_ATTRIBUTE_LIST_LEFT 8103
+#define IDC_ATTRIBUTE_LIST_RIGHT 8104
+#define IDC_ATTRIBUTE_SEARCH_BUTTON 8105
+#define IDC_ATTRIBUTE_SEARCHBAR 8106
+#define IDC_ATTRIBUTE_CLEAR_BUTTON 8107
+#define IDC_ATTRIBUTE_EXPORT_BUTTON 8108
+
+#define SYMBOL_ITEM_NONE "−"
+#define SYMBOL_ITEM_REMOVE "×"
+#define SYMBOL_ITEM_VIRTUAL "∞"
+
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
 
@@ -237,8 +255,6 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     ];\
     _x ctrlCommit 0;\
 } foreach [\
-    IDC_rightTabContent,\
-    IDC_rightTabContentListnBox,\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];
@@ -284,8 +300,6 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     ];\
     _x ctrlCommit 0;\
 } foreach [\
-    IDC_rightTabContent,\
-    IDC_rightTabContentListnBox,\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];
@@ -339,27 +353,27 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 ]
 
 #define CHECK_WEAPON_OR_ACC\
-    _item in (_weaponsArray select 0) ||\
-    {_item in (_weaponsArray select 1)} ||\
-    {_item in (_weaponsArray select 2)} ||\
-    {_item in (GVAR(virtualItems) select 9)} ||\
-    {_item in (_accsArray select 0)} ||\
-    {_item in (_accsArray select 1)} ||\
-    {_item in (_accsArray select 2)} ||\
-    {_item in (_accsArray select 3)}
+    (_weaponsArray select 0) findIf {_x == _item} > -1 ||\
+    {(_weaponsArray select 1) findIf {_x == _item} > -1} ||\
+    {(_weaponsArray select 2)  findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 9) findIf {_x == _item} > -1} ||\
+    {(_accsArray select 0) findIf {_x == _item} > -1} ||\
+    {(_accsArray select 1 findIf {_x == _item} > -1)} ||\
+    {(_accsArray select 2) findIf {_x == _item} > -1} ||\
+    {(_accsArray select 3) findIf {_x == _item} > -1}
 
 #define CHECK_ASSIGNED_ITEMS\
-    _item in (GVAR(virtualItems) select 10) ||\
-    {_item in (GVAR(virtualItems) select 11)} ||\
-    {_item in (GVAR(virtualItems) select 12)} ||\
-    {_item in (GVAR(virtualItems) select 13)} ||\
-    {_item in (GVAR(virtualItems) select 14)} ||\
-    {_item in (GVAR(virtualItems) select 8)}
+    (GVAR(virtualItems) select 10) findIf {_x == _item} > -1 ||\
+    {(GVAR(virtualItems) select 11) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 12) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 13) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 14) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 8) findIf {_x == _item} > -1}
 
 #define CHECK_CONTAINER\
-    _item in (GVAR(virtualItems) select 4) ||\
-    {_item in (GVAR(virtualItems) select 5)} ||\
-    {_item in (GVAR(virtualItems) select 6)}
+    (GVAR(virtualItems) select 4) findIf {_x == _item} > -1 ||\
+    {(GVAR(virtualItems) select 5) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 6) findIf {_x == _item} > -1}
 
 #define CLASS_CHECK_ITEM\
     isClass (_weaponCfg >> _item) ||\
@@ -368,24 +382,24 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     {isClass (_magCfg >> _item)}
 
 #define CHECK_CONTAINER_ITEMS\
-    _item in (GVAR(virtualItems) select 3) ||\
-    {_item in (_accsArray select 0)} ||\
-    {_item in (_accsArray select 1)} ||\
-    {_item in (_accsArray select 2)} ||\
-    {_item in (_accsArray select 3)} ||\
-    {_item in (GVAR(virtualItems) select 4)} ||\
-    {_item in (GVAR(virtualItems) select 5)} ||\
-    {_item in (GVAR(virtualItems) select 6)} ||\
-    {_item in (GVAR(virtualItems) select 7)} ||\
-    {_item in (GVAR(virtualItems) select 8)} ||\
-    {_item in (GVAR(virtualItems) select 10)} ||\
-    {_item in (GVAR(virtualItems) select 11)} ||\
-    {_item in (GVAR(virtualItems) select 12)} ||\
-    {_item in (GVAR(virtualItems) select 13)} ||\
-    {_item in (GVAR(virtualItems) select 14)} ||\
-    {_item in (GVAR(virtualItems) select 15)} ||\
-    {_item in (GVAR(virtualItems) select 16)} ||\
-    {_item in (GVAR(virtualItems) select 17)}
+    (GVAR(virtualItems) select 3) findIf {_x == _item} > -1 ||\
+    {(_accsArray select 0) findIf {_x == _item} > -1} ||\
+    {(_accsArray select 1) findIf {_x == _item} > -1} ||\
+    {(_accsArray select 2) findIf {_x == _item} > -1} ||\
+    {(_accsArray select 3) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 4) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 5) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 6) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 7) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 8) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 10) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 11) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 12) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 13) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 14) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 15) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 16) findIf {_x == _item} > -1} ||\
+    {(GVAR(virtualItems) select 17) findIf {_x == _item} > -1}
 
 #define ADD_LOADOUTS_LIST_PICTURES\
     _contentPanelCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];\
