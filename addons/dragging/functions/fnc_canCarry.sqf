@@ -11,7 +11,7 @@
  * Can the unit carry the object? <BOOL>
  *
  * Example:
- * [player, cursorTarget] call ace_dragging_fnc_canCarry;
+ * [player, cursorTarget] call ace_dragging_fnc_canCarry
  *
  * Public: No
  */
@@ -24,7 +24,23 @@ if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 //The fireman carry animation does not slow down for injured legs, so you could carry and run
 if ((_unit getHitPointDamage "HitLegs") >= 0.5) exitWith {false};
 
-// a static weapon has to be empty for dragging (ignore UAV AI)
-if (((typeOf _target) isKindOf "StaticWeapon") && {{(getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) != "UAVPilot"} count crew _target > 0}) exitWith {false};
+private _targetClass = typeOf _target;
 
-alive _target && {vehicle _target == _target} && {_target getVariable [QGVAR(canCarry), false]} && {animationState _target in ["", "unconscious"] || (_target getVariable ["ACE_isUnconscious", false]) || (_target isKindOf "CAManBase" && {(_target getHitPointDamage "HitLegs") > 0.4})}
+// a static weapon has to be empty for dragging (ignore UAV AI)
+if (
+    _targetClass isKindOf "StaticWeapon"
+    && {-1 < crew _target findIf {(getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) != "UAVPilot"}}
+) exitWith {false};
+
+alive _target
+&& {vehicle _target == _target}
+&& {_target getVariable [QGVAR(canCarry), false]}
+&& {
+    animationState _target in ["", "unconscious"]
+    || {_target getVariable ["ACE_isUnconscious", false]}
+    || {_target isKindOf "CAManBase" && {(_target getHitPointDamage "HitLegs") > 0.4}}
+}
+&& { // check max items without box
+    -1 == ["WeaponHolder", "WeaponHolderSimulated"] findIf {_targetClass isKindOf _x}
+    || {MAX_DRAGGED_ITEMS >= count (weaponCargo _target + magazineCargo _target + itemCargo _target)}
+}
