@@ -22,4 +22,6 @@ private _flare = "ACE_TripFlare_FlareEffect" createVehicle [_posX,_posY,_posZ];
 
 TRACE_1("",_flare);
 
+["ace_tripflareTriggered", [_flare, [_posX,_posY,_posZ]]] call CBA_fnc_globalEvent;
+
 nil

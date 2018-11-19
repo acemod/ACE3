@@ -109,7 +109,7 @@ Example:
 
 ACE Arsenal has 2 new config entries for items:
 
-- `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal.
+- `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for vehicle magazines.
 - `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout.
 
 Both of them are optional.

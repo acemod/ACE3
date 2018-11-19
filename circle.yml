@@ -2,15 +2,19 @@ version: 2
 jobs:
   build:
     docker:
-      - image: acemod/armake
+      - image: acemod/armake:master
     steps:
       - checkout
       - run:
-          name: Validate SQF And Config style
+          name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
       - run:
-          name: Build
+          name: Version
           command: armake --version
+      - run:
+          name: Build
+          command: |
+            make -j 4
       - deploy:
           name: Update documentation and translation statistics
           command: |

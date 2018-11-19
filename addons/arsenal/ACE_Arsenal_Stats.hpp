@@ -74,6 +74,14 @@ class GVAR(stats) {
         textStatement = QUOTE(call FUNC(statTextStatement_scopeMag));
         tabs[] = {{}, {0}};
     };
+    class ACE_scopeVisionMode: statBase {
+        scope = 2;
+        priority = 1;
+        displayName = CSTRING(statVisionMode);
+        showText = 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_scopeVisionMode));
+        tabs[] = {{}, {0}};
+    };
     class ACE_ballisticProtection: statBase {
         scope = 2;
         priority = 5;

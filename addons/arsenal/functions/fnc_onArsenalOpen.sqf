@@ -296,6 +296,10 @@ if (is3DEN) then {
 } else {
     GVAR(centerNotPlayer) = (GVAR(center) != player);
 
+    if (currentVisionMode ACE_Player == 1) then {
+        GVAR(center) action ["NVGogglesOff", GVAR(center)];
+    };
+
     {
         private _ctrl = _display displayCtrl _x;
         _ctrl ctrlEnable GVAR(enableIdentityTabs);

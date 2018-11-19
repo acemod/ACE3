@@ -1459,5 +1459,17 @@
             <Chinese>移除ACE軍火庫</Chinese>
             <Italian>Rimuovi l'arsenale ACE</Italian>
         </Key>
+        <Key ID="STR_ACE_Zeus_CreateZeus">
+            <English>Create Zeus</English>
+            <Russian>Создать Зевса</Russian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_DeleteZeus">
+            <English>Delete Zeus</English>
+            <Russian>Удалить Зевса</Russian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_MenuSetting">
+            <English>"%1" menu</English>
+            <Russian>Меню "%1"</Russian>
+        </Key>
     </Package>
 </Project>

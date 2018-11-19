@@ -719,6 +719,26 @@
             <Japanese>拡大倍率</Japanese>
             <Turkish>Büyütme</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode">
+            <English>Nightvision Support</English>
+            <German>Nachtsicht Unterstützung</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
+            <English>Primary supported</English>
+            <German>Primär unterstützt</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
+            <English>Secondary supported</English>
+            <German>Sekundär unterstützt</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
+            <English>Primary integrated</English>
+            <German>Primär Integriert</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
+            <English>Not Supported</English>
+            <German>Nicht unterstützt</German>
+        </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
             <French>Page</French>
