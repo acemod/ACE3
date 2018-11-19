@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Loads the object module is placed on into selected vehicle.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {[FUNC(moduleLoadIntoCargo), _this] call CBA_fnc_directCall;};
 
@@ -43,7 +43,7 @@ if (!alive _cargo) exitWith {
         params ["_successful", "_cargo", "_mousePosASL"];
         if (!_successful) exitWith {};
 
-        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 5]) param [0, objNull];
+        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 5, true]) param [0, objNull]; // 2d distance search
         if (isNull _holder) exitWith {
             [LSTRING(NothingSelected)] call FUNC(showMessage);
         };

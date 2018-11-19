@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dedmen
  * Cache an array of all the compatible items for arsenal.
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 private _cargo = [
     [[], [], []], // Weapons 0, primary, secondary, handgun
@@ -46,23 +46,23 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         /* Weapon acc */
         case (
                 _hasItemInfo &&
-                {_itemInfoType in [101, 201, 301, 302]} &&
+                {_itemInfoType in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} &&
                 {!(configName _x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}
             ): {
 
             //Convert type to array index
-            (_cargo select 1) select ([201,301,101,302] find _itemInfoType) pushBackUnique _className;
+            (_cargo select 1) select ([TYPE_OPTICS,TYPE_FLASHLIGHT,TYPE_MUZZLE,TYPE_BIPOD] find _itemInfoType) pushBackUnique _className;
         };
         /* Headgear */
-        case (_itemInfoType == 605): {
+        case (_itemInfoType == TYPE_HEADGEAR): {
             (_cargo select 3) pushBackUnique _className;
         };
         /* Uniform */\
-        case (_itemInfoType == 801): {
+        case (_itemInfoType == TYPE_UNIFORM): {
             (_cargo select 4) pushBackUnique _className;
         };
         /* Vest */
-        case (_itemInfoType == 701): {
+        case (_itemInfoType == TYPE_VEST): {
             (_cargo select 5) pushBackUnique _className;
         };
         /* NVgs */
@@ -71,7 +71,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         };
         /* Binos */
         case (_simulationType == "Binocular" ||
-        ((_simulationType == 'Weapon') && {(getNumber (_x >> 'type') == 4096)})): {
+        ((_simulationType == 'Weapon') && {(getNumber (_x >> 'type') == TYPE_BINOCULAR_AND_NVG)})): {
             (_cargo select 9) pushBackUnique _className;
         };
         /* Map */
@@ -95,20 +95,20 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
             (_cargo select 14) pushBackUnique _className;
         };
         /* UAV terminals */
-        case (_itemInfoType == 621): {
+        case (_itemInfoType == TYPE_UAV_TERMINAL): {
             (_cargo select 14) pushBackUnique _className;
         };
         /* Weapon, at the bottom to avoid adding binos */
         case (isClass (_x >> "WeaponSlotsInfo") &&
-            {getNumber (_x >> 'type') != 4096}): {
+            {getNumber (_x >> 'type') != TYPE_BINOCULAR_AND_NVG}): {
             switch (getNumber (_x >> "type")) do {
-                case 1: {
+                case TYPE_WEAPON_PRIMARY: {
                     (_cargo select 0) select 0 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
-                case 2: {
+                case TYPE_WEAPON_HANDGUN: {
                     (_cargo select 0) select 2 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
-                case 4: {
+                case TYPE_WEAPON_SECONDARY: {
                     (_cargo select 0) select 1 pushBackUnique (_className call bis_fnc_baseWeapon);
                 };
             };
@@ -116,9 +116,9 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         /* Misc items */
         case (
                 _hasItemInfo &&
-                (_itemInfoType in [101, 201, 301, 302] &&
+                (_itemInfoType in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] &&
                 {(_className isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
-                {_itemInfoType in [401, 619, 620]} ||
+                {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
                 {(getText ( _x >> "simulation")) == "ItemMineDetector"}
             ): {
             (_cargo select 17) pushBackUnique _className;
@@ -142,7 +142,8 @@ private _putList = [];
     switch true do {
         // Rifle, handgun, secondary weapons mags
         case (
-                (getNumber (_x >> "type") in [256,512,1536,16]) &&
+                ((getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) ||
+                {(getNumber (_x >> QGVAR(hide))) == -1}) &&
                 {!(_className in _grenadeList)} &&
                 {!(_className in _putList)}
             ): {

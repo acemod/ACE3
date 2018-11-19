@@ -33,9 +33,9 @@ class CfgVehicles {
         nvTarget = 1;
         brightness = 0.2;
         class NVGMarker {
-            diffuse[] = {0.1,0.1,0.1};
-            ambient[] = {0.01,0.01,0.01};
-            brightness = 0.015;
+            diffuse[] = {0.04,0.04,0.04};
+            ambient[] = {0.0001,0.0001,0.0001};
+            brightness = 0.12;
             name = "pozicni blik";
             drawLight = 0;
             drawLightSize = 0;
@@ -228,8 +228,10 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_Chemlight_White,20);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiRed,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiYellow,10);
-            MACRO_ADDMAGAZINE(ACE_Chemlight_HiOrange,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiBlue,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiGreen,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiWhite,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_UltraHiOrange,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_IR,20);
         };
     };
@@ -258,8 +260,10 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_Chemlight_White,20);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiRed,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiYellow,10);
-            MACRO_ADDMAGAZINE(ACE_Chemlight_HiOrange,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiBlue,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiGreen,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_HiWhite,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_UltraHiOrange,10);
             MACRO_ADDMAGAZINE(ACE_Chemlight_IR,20);
         };
 
@@ -285,5 +289,105 @@ class CfgVehicles {
                 initPhase = 1;
             };
         };
+    };
+
+    class Module_F;
+    class ModuleChemlight_F: Module_F {
+        class Arguments {
+            class Type {
+                class values {
+                    class Orange {
+                        name= CSTRING(Orange_DisplayName);
+                        value="ACE_G_Chemlight_Orange";
+                    };
+                    class White {
+                        name= CSTRING(White_DisplayName);
+                        value="ACE_G_Chemlight_White";
+                    };
+                    class HiRed {
+                        name= CSTRING(HiRed_DisplayName);
+                        value="ACE_G_Chemlight_HiRed";
+                    };
+                    class HiYellow {
+                        name= CSTRING(HiYellow_DisplayName);
+                        value="ACE_G_Chemlight_HiYellow";
+                    };
+                    class HiWhite {
+                        name= CSTRING(HiWhite_DisplayName);
+                        value="ACE_G_Chemlight_HiWhite";
+                    };
+                    class HiBlue {
+                        name= CSTRING(HiBlue_DisplayName);
+                        value="ACE_G_Chemlight_HiBlue";
+                    };
+                    class HiGreen {
+                        name= CSTRING(HiGreen_DisplayName);
+                        value="ACE_G_Chemlight_HiGreen";
+                    };
+                    class UltraHiOrange {
+                        name= CSTRING(UltraHiOrange_DisplayName);
+                        value="ACE_G_Chemlight_UltraHiOrange";
+                    };
+                };
+            };
+        };
+    };
+
+    class ModuleChemlightBlue_F;
+    class ModuleChemlightOrange: ModuleChemlightBlue_F {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightOrange";
+        displayName = CSTRING(Orange_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_orange_x_ca.paa);
+        ammo = "ACE_G_Chemlight_Orange";
+    };
+    class ModuleChemlightWhite: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightWhite";
+        displayName = CSTRING(White_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_white_x_ca.paa);
+        ammo = "ACE_G_Chemlight_White";
+    };
+    class ModuleChemlightHiRed: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiRed";
+        displayName = CSTRING(HiRed_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hired_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiRed";
+    };
+    class ModuleChemlightHiYellow: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiYellow";
+        displayName = CSTRING(HiYellow_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hiyellow_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiYellow";
+    };
+    class ModuleChemlightHiWhite: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiWhite";
+        displayName = CSTRING(HiWhite_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiWhite";
+    };
+    class ModuleChemlightHiBlue: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiBlue";
+        displayName = CSTRING(HiBlue_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_hiblue_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiBlue";
+    };
+    class ModuleChemlightHiGreen: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightHiGreen";
+        displayName = CSTRING(HiGreen_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_higreen_x_ca.paa);
+        ammo = "ACE_G_Chemlight_HiGreen";
+    };
+    class ModuleChemlightUltraHiOrange: ModuleChemlightOrange {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ModuleChemlightUltraHiOrange";
+        displayName = CSTRING(UltraHiOrange_DisplayName);
+        portrait = QPATHTOF(UI\ace_chemlight_ultrahiorange_x_ca.paa);
+        ammo = "ACE_G_Chemlight_UltraHiOrange";
     };
 };

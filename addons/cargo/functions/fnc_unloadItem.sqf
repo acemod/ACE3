@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, ViperMaul
  * Unload object from vehicle.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_item", "_vehicle", ["_unloader", objNull]];
 TRACE_3("params",_item,_vehicle,_unloader);

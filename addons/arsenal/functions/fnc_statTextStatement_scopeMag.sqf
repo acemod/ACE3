@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Text statement for the scope magnification stat.
@@ -11,7 +12,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_config"];
 TRACE_1("statTextStatement_scopeMag",_config);

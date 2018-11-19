@@ -89,7 +89,7 @@ class CfgVehicles {
         class Eventhandlers;
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {};
-    
+
     class RHS_MELB_base: Helicopter_Base_H {};
     class RHS_MELB_MH6M: RHS_MELB_base {
         EGVAR(fastroping,enabled) = 1;
@@ -286,17 +286,32 @@ class CfgVehicles {
         EGVAR(cargo,space) = 4;
         EGVAR(cargo,hasCargo) = 1;
     };
-    
+
+    class StaticWeapon: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class StaticMortar: StaticWeapon {};
+    class RHS_M252_Base: StaticMortar {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "";
+                selection = "main_gun";
+            };
+        };
+    };
+
     class rhsusf_infantry_usmc_base;
     class rhsusf_usmc_marpat_wd_helipilot: rhsusf_infantry_usmc_base {
         ace_gforcecoef = 0.55;
     };
-    
+
     class rhsusf_infantry_army_base;
     class rhsusf_army_ocp_helipilot: rhsusf_infantry_army_base {
         ace_gforcecoef = 0.55;
     };
-    
+
     class rhsusf_usmc_marpat_wd_rifleman_m4;
     class rhsusf_airforce_jetpilot: rhsusf_usmc_marpat_wd_rifleman_m4 {
         ace_gforcecoef = 0.55;

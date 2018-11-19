@@ -8,7 +8,7 @@ class Cfg3DEN {
                         class GVAR(DefaultLoadoutsListAttribute) {
                             property = QGVAR(DefaultLoadoutsListAttribute);
                             value = 0;
-                            expression = "if !(is3DEN) then {ace_arsenal_defaultLoadoutsList = _value};";
+                            expression = QUOTE(if (!is3DEN) then {GVAR(defaultLoadoutsList) = _value});
                             defaultValue = "[]";
                             validate = "none";
                             wikiType = "[[Array]]";
@@ -102,6 +102,8 @@ class Cfg3DEN {
                     idcLeft = IDC_ATTRIBUTE_LIST_LEFT;
                     idcRight = IDC_ATTRIBUTE_LIST_RIGHT;
                     onLBDblClick = QUOTE(_this call FUNC(attributeDblClick));
+                    onSetFocus = QUOTE(SETUVAR(QGVAR(attributeFocus),ctrlParentControlsGroup (_this select 0)));
+                    onKillFocus = QUOTE(SETUVAR(QGVAR(attributeFocus),nil));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(35.83 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Prepares the helicopters FRIES.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
 //Stage indicator: 0 - travel mode; 1 - preparing/stowing FRIES; 2 - FRIES ready; 3 - ropes deployed

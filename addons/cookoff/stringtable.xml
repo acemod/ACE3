@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
         <Key ID="STR_ACE_CookOff_displayName">
@@ -9,6 +9,7 @@
             <Japanese>誘爆</Japanese>
             <Korean>쿡오프</Korean>
             <German>Durchzündung</German>
+            <French>Cook off</French>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
@@ -18,7 +19,7 @@
             <Japanese>誘爆を有効化</Japanese>
             <Korean>쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj efekty samozapłonu amunicji</Polish>
-            <French>Active le cook-off</French>
+            <French>Activer le cook off</French>
             <Italian>Abilita Esplosione</Italian>
             <Chinese>開啟殉爆效果</Chinese>
             <Chinesesimp>开启殉爆效果</Chinesesimp>
@@ -58,7 +59,7 @@
             <German>Durchzündung für Munitionskisten ermöglichen</German>
             <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
-            <French>Cook-off caisses de munitions</French>
+            <French>Cook off de caisses de munitions</French>
             <Italian>Abilita esplosione cassa munizioni</Italian>
             <Chinese>開啟彈藥箱殉爆效果</Chinese>
             <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
@@ -69,7 +70,7 @@
             <German>Ermöglicht Durchzündung von Munitionskisten.</German>
             <Korean>탄약 상자에 쿡오프 현상을 적용합니다.</Korean>
             <Polish>Aktywuje samozapłon skrzyń z amunicją</Polish>
-            <French>Active le cook-off sur toutes les caisses de munitions.</French>
+            <French>Active le cook off sur toutes les caisses de munitions.</French>
             <Italian>Abilita l'esplosione della cassa di munizioni. </Italian>
             <Chinese>開啟彈藥箱殉爆效果</Chinese>
             <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
@@ -80,7 +81,7 @@
             <German>Durchzündung für Munition ermöglichen</German>
             <Korean>탄약 쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj samozapłon amunicji</Polish>
-            <French>Active le cook-off des munitions</French>
+            <French>Activer le cook off des munitions</French>
             <Italian>Abilita Esplosione munizioni</Italian>
             <Chinese>開啟彈藥殉爆效果</Chinese>
             <Chinesesimp>开启弹药殉爆效果</Chinesesimp>
@@ -101,7 +102,7 @@
             <German>Munitionsdurchzündungsdauer</German>
             <Polish>Czas trwania samozapłonu amunicji</Polish>
             <Japanese>弾薬の誘爆持続時間</Japanese>
-            <French>Durée cook-off des munitions</French>
+            <French>Durée de cook off des munitions</French>
             <Italian>Durata esplosione munizioni</Italian>
             <Chinese>彈藥殉爆效果持續時間</Chinese>
             <Chinesesimp>弹药殉爆效果持续时间</Chinesesimp>
@@ -110,7 +111,7 @@
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
             <German>Faktor für die Munitionsdurchzündungsdauer [0 zum Deaktivieren]</German>
-            <French>Multiplicateur de la durée du cook-off des munitions [Une valeur de 0 désactive l'effet]</French>
+            <French>Multiplicateur de la durée du cook off des munitions [Une valeur de 0 désactive l'effet]</French>
             <Polish>Mnożnik decydujący jak długo ma trwać samozapłon amunicji [Ustawienie na 0 spowoduje wyłącznie samozapłonu]</Polish>
             <Japanese>誘爆の持続時間を乗数で設定します。[0 に設定で誘爆を無効化]</Japanese>
             <Italian>Moltiplicatore della durata dell'esplosione [Impostare 0 disabiliterà l'esplosione delle munizioni]</Italian>
@@ -125,6 +126,7 @@
             <German>Faktor für Wahrscheinlichkeit der Durchzündung</German>
             <Chinese>殉爆發生機率係數</Chinese>
             <Chinesesimp>殉爆发生机率系数</Chinesesimp>
+            <French>Coefficient de probabilité du cook off</French>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
@@ -133,6 +135,7 @@
             <German>Faktor für Wahrscheinlichkeit der Durchzündung. Ein höherer Wert führt zu höherer Durchzündungswahrscheinlichkeit.</German>
             <Chinese>調整殉爆發生機率係數。值越高代表越容易發生殉爆</Chinese>
             <Chinesesimp>调整殉爆发生机率系数。值越高代表越容易发生殉爆。</Chinesesimp>
+            <French>Multiplicateur pour la probabilité du cook off. Plus la valeur est élevée, plus la probabilité de cook off est haute.</French>
         </Key>
     </Package>
 </Project>

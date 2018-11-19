@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey
  * Loads Magazine into static weapon using a timer.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_static","_unit","_timeToLoad",["_magazineClassOptional","",[""]]];
 

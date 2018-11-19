@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get players viewing direction and slope.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 private _position = ATLToASL positionCameraToWorld [0, 0, 0];
 private _direction = ATLToASL positionCameraToWorld [0, 0, 1];

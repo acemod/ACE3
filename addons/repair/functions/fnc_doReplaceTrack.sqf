@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Replaces a track.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_vehicle", "_hitPoint", "", "", "", "_claimedObjects"];
 TRACE_4("params",_unit,_vehicle,_hitPoint,_claimedObjects);

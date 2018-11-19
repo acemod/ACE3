@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Initialises the player object for the explosive system.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //Event for setting explosive placement angle/pitch:
 [QGVAR(place), {_this call FUNC(setPosition)}] call CBA_fnc_addEventHandler;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Draw nearby lighting and sexy flashlight beams on main map.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_mapCtrl", "_mapScale", "_mapCentre", "_lightLevel"];
 
@@ -56,9 +55,9 @@ if (_flashlight == "") then {
     private _mousePos = GVAR(mousePos);
 
     //flashlight settings
-    private _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight");
-    private _size = getNumber (_cfg >> "ACE_Flashlight_Size");
-    private _flashTex = getText (_cfg >> "ACE_Flashlight_Beam");
+    private _cfg = configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight";
+    private _size = [_cfg >> "ACE_Flashlight_Size", "number", DEFAULT_FLASHLIGHT_SIZE] call CBA_fnc_getConfigEntry;
+    private _flashTex = [_cfg >> "ACE_Flashlight_Beam", "text", QPATHTOF(UI\Flashlight_beam_white_ca.paa)] call CBA_fnc_getConfigEntry;
     private _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;
 
     //after 5x zoom, it's simulated to be fixed (it actually gets bigger relative to zoom)

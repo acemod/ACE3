@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Githawk, PabstMirror
  * Adds rearm supply actions to a vehicle or ammo container.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-clients
 
@@ -68,6 +68,8 @@ if (_oldRearmConfig || {_configSupply > 0}) then {
         WARNING_1("Actions already present on [%1].  Old Compat PBO?",_typeOf);
     };
 } else {
+    if (_vehicle getVariable [QGVAR(objectActionsAdded), false]) exitWith {TRACE_1("Actions already added to object",_vehicle);};
+    _vehicle setVariable [QGVAR(objectActionsAdded), true];
     TRACE_1("Adding Object Actions",_typeOf);
     [_vehicle, 0, ["ACE_MainActions"], _actionReadSupplyCounter] call EFUNC(interact_menu,addActionToObject);
     [_vehicle, 0, ["ACE_MainActions"], _actionTakeAmmo] call EFUNC(interact_menu,addActionToObject);

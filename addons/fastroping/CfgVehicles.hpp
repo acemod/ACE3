@@ -7,7 +7,7 @@
         expression = QUOTE(if (_value) then {[_this] call FUNC(equipFRIES)}); \
         typeName = "BOOL"; \
         condition = "objectVehicle"; \
-        defaultValue = false; \
+        defaultValue = "(false)"; \
     }; \
 }
 

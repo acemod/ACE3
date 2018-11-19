@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou
  * Attack profile: Javelin Dir
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 #define STAGE_LAUNCH 1
 #define STAGE_CLIMB 2

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Replace a (dead) body by a body bag
@@ -14,8 +15,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 TRACE_2("params",_caller,_target);

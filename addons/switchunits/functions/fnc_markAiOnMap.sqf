@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Creates markers for AI units for given sides.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_sidesToShow"];
 
@@ -36,7 +36,7 @@ GVAR(AllMarkerNames) = [];
 
         // create markers
         {
-            if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
+            if ((_x getVariable [QGVAR(IsPlayerControlled), false]) || {(side group _x in _sides) && {[_x] call FUNC(isValidAi)}}) then {
 
                 private _markerName = str _x;
 
