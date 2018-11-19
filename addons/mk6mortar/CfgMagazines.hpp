@@ -32,6 +32,7 @@ class cfgMagazines {
         count = 1;
         scope = 2;
         scopeCurator = 2;
+        EGVAR(arsenal,hide) = -1;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_Illum_displayName);
         displayNameShort = "";
@@ -45,6 +46,7 @@ class cfgMagazines {
         count = 1;
         scope = 2;
         scopeCurator = 2;
+        EGVAR(arsenal,hide) = -1;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_Guided_displayName);
         displayNameShort = "";
@@ -58,6 +60,7 @@ class cfgMagazines {
         count = 1;
         scope = 2;
         scopeCurator = 2;
+        EGVAR(arsenal,hide) = -1;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_LaserGuided_displayName);
         displayNameShort = "";
