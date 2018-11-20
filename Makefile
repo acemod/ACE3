@@ -4,6 +4,7 @@ BIN = @ace
 ZIP = ace3
 FLAGS = -i include -w unquoted-string -w redefinition-wo-undef
 VERSION_FILES = README.md docs/README_DE.md docs/README_PL.md mod.cpp
+COPY_FILES = *.dll mod.cpp README.md docs/README_DE.md docs/README_PL.md AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp
 
 MAJOR = $(word 1, $(subst ., ,$(VERSION)))
 MINOR = $(word 2, $(subst ., ,$(VERSION)))
@@ -34,6 +35,7 @@ $(BIN)/optionals/$(PREFIX)_%.pbo: optionals/%
 
 all: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo, $(wildcard optionals/*))
+	@cp -ru $(COPY_FILES) $(BIN)
 
 filepatching:
 	"$(MAKE)" $(MAKEFLAGS) FLAGS="-w unquoted-string -p"
@@ -82,7 +84,7 @@ push: commit
 release: clean version commit
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  $(ZIP)_$(VERSION_S).zip"
-	@cp *.dll mod.cpp README.md docs/README_DE.md docs/README_PL.md AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp $(BIN)
+	@cp $(COPY_FILES) $(BIN)
 	@zip -qr $(ZIP)_$(VERSION_S).zip $(BIN)
 
 clean:
