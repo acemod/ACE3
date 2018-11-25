@@ -44,10 +44,12 @@
         _failure = true;
     };
 
+    private _materials = getArray (_x >> "materials");
+
     private _icon = getText (_x >> "icon");
 
     if (!_failure) then {
-        GVAR(cachedTags) pushBack [_class, _displayName, _requiredItem, _textures, _icon];
+        GVAR(cachedTags) pushBack [_class, _displayName, _requiredItem, _textures, _icon, _materials];
         GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
     };
 } forEach ("true" configClasses (configFile >> "ACE_Tags"));

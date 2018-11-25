@@ -19,7 +19,7 @@ params ["_unit"];
 
 private _actions = [];
 {
-    _x params ["_class", "_displayName", "_requiredItem", "_textures", "_icon"];
+    _x params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials"];
 
     _actions pushBack [
         [
@@ -27,8 +27,15 @@ private _actions = [];
             _displayName,
             _icon,
             {
-                (_this select 2) params ["_unit", "_class", "_textures"];
-                [_unit, selectRandom _textures] call FUNC(tag);
+                (_this select 2) params ["_unit", "_class", "_textures", "", "_materials"];
+                private _randomTexture = selectRandom _textures;
+                private _randomMaterial =  if (count _textures == count _materials) then {
+                    _materials select (_textures find _randomTexture)
+                } else {
+                    selectRandom _materials
+                };
+
+                [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
                 _unit setVariable [QGVAR(lastUsedTag), _class];
             },
             {
@@ -36,7 +43,7 @@ private _actions = [];
                 _requiredItem in (_unit call EFUNC(common,uniqueItems))
             },
             {},
-            [_unit, _class, _textures, _requiredItem]
+            [_unit, _class, _textures, _requiredItem, _materials]
         ] call EFUNC(interact_menu,createAction),
         [],
         _unit
