@@ -663,6 +663,7 @@
             <Chinese>"卡瑪斯"卡車 (多管火箭)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (多管火箭)</Chinesesimp>
             <Italian>KamAZ MRL</Italian>
+            <Japanese>KamAZ MRL</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -1274,6 +1275,7 @@
             <English>V40 Mini-Grenade</English>
             <German>V40 Minigranate</German>
             <Italian>Mini Granata V40</Italian>
+            <Japanese>V40 小型手榴弾</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1619,6 +1621,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹</Chinesesimp>
             <Italian>Metis-M</Italian>
+            <Japanese>メチス-M</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
@@ -1628,6 +1631,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(棕色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(棕色)</Chinesesimp>
             <Italian>Metis-M (Marrone)</Italian>
+            <Japanese>メチス-M (茶)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
@@ -1637,6 +1641,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(绿色)</Chinesesimp>
             <Italian>Metis-M (Verde)</Italian>
+            <Japanese>メチス-M (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -3204,6 +3209,7 @@
             <Chinesesimp>"北极星"先进布署越野车("迷你长钉"反坦克导弹发射器) </Chinesesimp>
             <Chinese>"北極星"先進佈署越野車("迷你長釘"反坦克導彈發射器) </Chinese>
             <Italian>Polaris DAGOR (Mini-Spike AT)</Italian>
+            <Japanese>ポラリス DAGOR (ミニスパイク対戦)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3400,43 +3406,43 @@
             <English>US Optics MR-10 (Black)</English>
             <Chinese>US Optics MR-10 (Black)</Chinese>
             <Chinesesimp>US Optics MR-10 (Black)</Chinesesimp>
-            <Japanese>US Optics MR-10 (Black)</Japanese>
+            <Japanese>US Optics MR-10 (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
             <Chinese>US Optics MR-10 (Khaki)</Chinese>
             <Chinesesimp>US Optics MR-10 (Khaki)</Chinesesimp>
-            <Japanese>US Optics MR-10 (Khaki)</Japanese>
+            <Japanese>US Optics MR-10 (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
             <Chinese>US Optics MR-10 (Sand)</Chinese>
             <Chinesesimp>US Optics MR-10 (Sand)</Chinesesimp>
-            <Japanese>US Optics MR-10 (Sand)</Japanese>
+            <Japanese>US Optics MR-10 (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
             <Chinese>KAHLES Helia (Black)</Chinese>
             <Chinesesimp>KAHLES Helia (Black)</Chinesesimp>
-            <Japanese>KAHLES Helia (Black)</Japanese>
+            <Japanese>KAHLES Helia (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
             <Chinese>KAHLES Helia (Hex)</Chinese>
             <Chinesesimp>KAHLES Helia (Hex)</Chinesesimp>
-            <Japanese>KAHLES Helia (Hex)</Japanese>
+            <Japanese>KAHLES Helia (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
             <Chinese>KAHLES Helia (Old)</Chinese>
             <Chinesesimp>KAHLES Helia (Old)</Chinesesimp>
-            <Japanese>KAHLES Helia (Old)</Japanese>
+            <Japanese>KAHLES ヘリア (使い古し)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
             <Chinese>KAHLES Helia (Tan)</Chinese>
             <Chinesesimp>KAHLES Helia (Tan)</Chinesesimp>
-            <Japanese>KAHLES Helia (Tan)</Japanese>
+            <Japanese>KAHLES Helia (黄褐)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
