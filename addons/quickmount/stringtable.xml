@@ -114,6 +114,7 @@
         <Key ID="STR_ACE_QuickMount_ChangeSeat">
             <English>Change seat</English>
             <Russian>Пересесть</Russian>
+            <Japanese>席の変更</Japanese>
         </Key>
     </Package>
 </Project>
