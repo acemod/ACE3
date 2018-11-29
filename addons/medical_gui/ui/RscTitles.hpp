@@ -16,34 +16,50 @@ class RscTitles {
                 colorBackground[] = {1,1,1,1};
                 colorPicture[] = {1,1,1,1};
                 colorText[] = {1,1,1,1};
-                text = QPATHTOF(ui\ui\body_background.paa);
+                text = QPATHTOF(data\body_image\background.paa);
             };
             class bodyImgHead: bodyImgBackground {
                 idc = 50;
                 colorBackground[] = {1,1,1,1};
                 colorPicture[] = {1,1,1,1};
                 colorText[] = {1,1,1,1};
-                text = QPATHTOF(ui\ui\body_head.paa);
+                text = QPATHTOF(data\body_image\head.paa);
             };
             class bodyImgTorso: bodyImgHead {
                 idc = 51;
-                text = QPATHTOF(ui\ui\body_torso.paa);
+                text = QPATHTOF(data\body_image\torso.paa);
             };
             class bodyImgArms_l: bodyImgHead {
                 idc = 52;
-                text = QPATHTOF(ui\ui\body_arm_left.paa);
+                text = QPATHTOF(data\body_image\arm_left.paa);
             };
             class bodyImgArms_r: bodyImgHead {
                 idc = 53;
-                text = QPATHTOF(ui\ui\body_arm_right.paa);
+                text = QPATHTOF(data\body_image\arm_right.paa);
             };
             class bodyImgLegs_l: bodyImgHead {
                 idc = 54;
-                text = QPATHTOF(ui\ui\body_leg_left.paa);
+                text = QPATHTOF(data\body_image\leg_left.paa);
             };
             class bodyImgLegs_r: bodyImgHead {
                 idc = 55;
-                text = QPATHTOF(ui\ui\body_leg_right.paa);
+                text = QPATHTOF(data\body_image\leg_right.paa);
+            };
+            class bodyImgArms_l_T: bodyImgArms_l {
+                idc = 62;
+                text = QPATHTOF(data\body_image\arm_left_T.paa);
+            };
+            class bodyImgArms_r_T: bodyImgArms_r {
+                idc = 63;
+                text = QPATHTOF(data\body_image\arm_right_T.paa);
+            };
+            class bodyImgLegs_l_T: bodyImgLegs_l {
+                idc = 64;
+                text = QPATHTOF(data\body_image\leg_left_T.paa);
+            };
+            class bodyImgLegs_r_T: bodyImgLegs_r {
+                idc = 65;
+                text = QPATHTOF(data\body_image\leg_right_T.paa);
             };
             class InjuryListLabel {
                 idc = 199;
@@ -104,22 +120,6 @@ class RscTitles {
                 colorText[] = {0.95, 0.95, 0.95, 0.75};
                 colorBackground[] = {0,0,0,0.9};
                 text = "";
-            };
-        };
-    };
-
-    // disables blood texture overlay
-    class RscHealthTextures {
-        class controls {
-            class Flame_1;
-            class Blood_1: Flame_1 {
-                text = ""; //"A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_lower_ca.paa";
-            };
-            class Blood_2: Flame_1 {
-                text = ""; //"A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_middle_ca.paa";
-            };
-            class Blood_3: Flame_1 {
-                text = ""; //"A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_upper_ca.paa";
             };
         };
     };

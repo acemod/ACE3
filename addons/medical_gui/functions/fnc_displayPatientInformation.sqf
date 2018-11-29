@@ -106,7 +106,7 @@ if (_show == 1) then {
 
         {
             _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage", "_category"];
-            _selectionBloodLoss set [_bodyPartN, (_selectionBloodLoss select _bodyPartN) + (20 * (_bleeding * _amountOf))];
+            _selectionBloodLoss set [_bodyPartN, (_selectionBloodLoss select _bodyPartN) + (_bleeding * _amountOf)];
             if (_selectionN == _bodyPartN) then {
                 // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                 if (_amountOf > 0) then {
@@ -170,30 +170,27 @@ if (_show == 1) then {
         // Handle the body image coloring
         private _availableSelections = [50, 51, 52, 53, 54, 55];
         {
-            private _red = 1;
-            private _green = 1;
-            private _blue = 1;
-
-            private _torniquet = _selectionTourniquet select _forEachIndex;
-            if (_torniquet > 0) then {
-                _red = 0;
-                _green = 0;
-                _blue = 0.8;
+            // Show/hide the tourniquet icon overlay
+            private _tourniquet = _selectionTourniquet select _forEachIndex;
+            if (_tourniquet > 0) then {
+                (_display displayCtrl (_x + 10)) ctrlSetTextColor [0, 0, 0.8, 1];
             } else {
-                private _bloodLoss = _selectionBloodLoss select _forEachIndex;
-                if (_bloodLoss > 0) then {
-                    _green = 0 max (0.8 - _bloodLoss);
-                    _blue = _green;
-                } else {
-                    private _damage = _selectionDamage select _forEachIndex;
-                    if (_damage > 0.1) then {
-                        _blue = 0 max (1 - _damage);
-                        _green = 0.5 max (1 - _damage / 2);
-                    };
-                };
+                (_display displayCtrl (_x + 10)) ctrlSetTextColor [0, 0, 0.8, 0];
             };
 
-            (_display displayCtrl _x) ctrlSetTextColor [_red, _green, _blue, 1.0];
+            // Determine the selection colour based on blood loss and damage
+            private _colorSelection = [1, 1, 1, 1]; // RGBA
+
+            private _bloodLoss = _selectionBloodLoss select _forEachIndex;
+            if (_bloodLoss > 0) then {
+                _colorSelection = [_bloodLoss] call FUNC(bloodLossToRGBA);
+            } else {
+                private _damage = _selectionDamage select _forEachIndex;
+
+                _colorSelection = [_damage] call FUNC(damageToRGBA);
+            };
+
+            (_display displayCtrl _x) ctrlSetTextColor _colorSelection;
         } forEach _availableSelections;
 
         private _lbCtrl = (_display displayCtrl 200);

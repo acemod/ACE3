@@ -48,6 +48,12 @@
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD 0.5 // 50% of cardiac output
 
+// Used to color interaction icons and body image selections
+#define BLOOD_LOSS_RED_THRESHOLD 0.5
+#define BLOOD_LOSS_TOTAL_COLORS 10
+#define DAMAGE_BLUE_THRESHOLD 0.8
+#define DAMAGE_TOTAL_COLORS 10
+
 // --- pain
 #define PAIN_UNCONSCIOUS 0.5
 
