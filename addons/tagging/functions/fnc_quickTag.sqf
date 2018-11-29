@@ -50,12 +50,15 @@ if (GVAR(quickTag) == 3) then {
 if !(_possibleTags isEqualTo []) then {
     private _availableTags = _possibleTags select {(_x select 2) in (_unit call EFUNC(common,uniqueItems))};
     (selectRandom _availableTags) params ["", "", "", "_textures", "", "_materials"];
-    private _randomTexture = selectRandom _textures;
-    private _randomMaterial =  if (count _textures == count _materials) then {
-        _materials select (_textures find _randomTexture)
-    } else {
-        selectRandom _materials
-    };
+
+    (
+        if (count _textures == count _materials) then {
+            private _textureIndex = floor random count _textures;
+            [_textures select _textureIndex, _materials select _textureIndex]
+        } else {
+            [selectRandom _textures, selectRandom _materials]
+        }
+    ) params ["_randomTexture", "_randomMaterial"];
 
     [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
 };

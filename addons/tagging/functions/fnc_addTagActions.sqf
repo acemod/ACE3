@@ -28,12 +28,15 @@ private _actions = [];
             _icon,
             {
                 (_this select 2) params ["_unit", "_class", "_textures", "", "_materials"];
-                private _randomTexture = selectRandom _textures;
-                private _randomMaterial =  if (count _textures == count _materials) then {
-                    _materials select (_textures find _randomTexture)
-                } else {
-                    selectRandom _materials
-                };
+
+                (
+                    if (count _textures == count _materials) then {
+                        private _textureIndex = floor random count _textures;
+                        [_textures select _textureIndex, _materials select _textureIndex]
+                    } else {
+                        [selectRandom _textures, selectRandom _materials]
+                    }
+                ) params ["_randomTexture", "_randomMaterial"];
 
                 [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
                 _unit setVariable [QGVAR(lastUsedTag), _class];
