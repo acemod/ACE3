@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 
-diag_log "Starting Automatic!";
-
-if (isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")) exitWith {};
+if ((isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")) || ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]]))) exitWith {};
 private _config = configfile >> "CfgWorlds" >> worldName >> "OutsideTerrain" >> "Layers" >> "Layer0" >> "texture";
 if !(isText (_config)) exitWith {
    diag_log format ["GRAD Trenches: Found no OutsideTerrain texture for Map %1, automatic file path not possible!", worldName];

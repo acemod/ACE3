@@ -1,6 +1,7 @@
 #define COMPONENT trenches
 #define COMPONENT_BEAUTIFIED Trenches
 #include "\z\ace\addons\main\script_mod.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 
 #define DEBUG_MODE_FULL
 #define DISABLE_COMPILE_CACHE
@@ -17,6 +18,4 @@
 #define DEFAULT_TEXTURE QPATHTOEF(apl,data\zr_plevel_co.paa)
 #define CAMOUFLAGE_DURATION 5
 #define CAMOUFLAGE_3DEN_ATTRIBUTE QGVAR(camouflageTrench)
-#define IS_TRENCH(OBJ) ((!isNull OBJ) && {isText (configFile >> "CfgVehicles" >> typeOf OBJ >> QGVAR(noGeoClass))})
-
-#include "\z\ace\addons\main\script_macros.hpp"
+#define IS_TRENCH(OBJ) ((!isNull OBJ) && {isArray (configFile >> "CfgVehicles" >> typeOf OBJ >> QGVAR(camouflagePositions))})
