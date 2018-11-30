@@ -4,10 +4,13 @@ removeAllWeapons player;
 
 player addMagazine "UGL_FlareWhite_F";
 player addMagazine "UGL_FlareWhite_F";
-player addMagazine "ACE_40mm_flare_white";
-player addMagazine "ACE_40mm_flare_white";
-player addMagazine "ACE_40mm_flare_green";
-player addMagazine "ACE_40mm_flare_red";
+player addMagazine "ACE_40mm_Flare_white";
+player addMagazine "ACE_40mm_Flare_white";
+player addMagazine "ACE_40mm_Flare_green";
+player addMagazine "ACE_40mm_Flare_red";
+player addMagazine "ACE_40mm_Flare_ir";
+player linkItem "NVGoggles";
+skipTime 12;
 
 player addWeapon "arifle_MX_GL_ACO_F";
 
