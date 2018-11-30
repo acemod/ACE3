@@ -48,7 +48,7 @@ class CfgAmmo {
         maxSpeed = 240;
 
         thrustTime = 17;
-        thrust = 75;
+        thrust = 125;
         timeToLive = 40;
         initTime = 0.3;
 
