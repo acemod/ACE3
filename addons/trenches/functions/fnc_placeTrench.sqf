@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support, esteldunedain
  * Starts the place process for trench.
@@ -15,48 +14,54 @@
  *
  * Public: No
  */
+#include "script_component.hpp"
 
 params ["_unit", "_trenchClass"];
 
-//Load trench data
-private _noGeoModel = getText (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(noGeoClass));
-if(_noGeoModel == "") then {_noGeoModel = _trenchClass;};
 
-GVAR(trenchClass) = _trenchClass;
-GVAR(trenchPlacementData) = getArray (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(placementData));
-TRACE_1("",GVAR(trenchPlacementData));
+//Load trench data
+ace_trenches_trenchPlacementData = getArray (configFile >> "CfgVehicles" >> _trenchClass >> "ace_trenches_placementData");
+TRACE_1("",ace_trenches_trenchPlacementData);
 
 // prevent the placing unit from running
-[_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Trenches", true] call ace_common_fnc_statusEffect_set;
 
 // create the trench
-private _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
-
-GVAR(trench) = _trench;
+private _trench = createSimpleObject [_trenchClass, [0, 0, 0]];
+ace_trenches_trench = _trench;
 
 // prevent collisions with trench
-[QEGVAR(common,enableSimulationGlobal), [_trench, false]] call CBA_fnc_serverEvent;
+["ace_common_enableSimulationGlobal", [_trench, false]] call CBA_fnc_serverEvent;
 
 GVAR(digDirection) = 0;
+GVAR(currentSurface) = "";
 
 // pfh that runs while the dig is in progress
-GVAR(digPFH) = [{
+ace_trenches_digPFH = [{
     (_this select 0) params ["_unit", "_trench"];
 
     // Cancel if the helper object is gone
     if (isNull _trench) exitWith {
-        [_unit] call FUNC(placeCancel);
+        [_unit] call ace_trenches_fnc_placeCancel;
     };
 
     // Cancel if the place is no longer suitable
-    if !([_unit] call FUNC(canDigTrench)) exitWith {
-        [_unit] call FUNC(placeCancel);
+    private _checkVar = [_unit] call ace_trenches_fnc_canDigTrench;
+    if ((typeName _checkVar) == "Number") then {
+      if (_checkVar > 0) then {
+         _checkVar = true;
+      }else{
+         _checkVar = false;
+      };
+    };
+
+    if !(_checkVar) exitWith {
+        [_unit] call ace_trenches_fnc_placeCancel;
     };
 
     // Update trench position
-    GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
-    private _basePos = eyePos _unit vectorAdd ([sin getDir _unit, +cos getDir _unit, 0] vectorMultiply 1.0);
+    ace_trenches_trenchPlacementData params ["_dx", "_dy", "_offset"];
+    private _basePos = _unit ModelToWorld [0,2,0];
 
     private _angle = (GVAR(digDirection) + getDir _unit);
 
@@ -68,14 +73,16 @@ GVAR(digPFH) = [{
     // Stick the trench to the ground
     _basePos set [2, getTerrainHeightASL _basePos];
     private _minzoffset = 0;
-    for [{private _ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
-        for [{private _iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
+    private _ix = 0;
+    private _iy = 0;
+    for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
+        for [{_iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
             private _pos = _basePos vectorAdd (_v2 vectorMultiply _ix)
                                     vectorAdd (_v1 vectorMultiply _iy);
             _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
             #ifdef DEBUG_MODE_FULL
                 _pos set [2, getTerrainHeightASL _pos];
-                _pos2 = +_pos;
+                private _pos2 = +_pos;
                 _pos2 set [2, getTerrainHeightASL _pos + 1];
                 drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
             #endif
@@ -85,17 +92,21 @@ GVAR(digPFH) = [{
     TRACE_2("",_minzoffset,_offset);
     _trench setPosASL _basePos;
     _trench setVectorDirAndUp [_v1, _v3];
-    GVAR(trenchPos) = _basePos;
+    ace_trenches_trenchPos = _basePos;
 
+    if (surfaceType (position _trench) != GVAR(currentSurface)) then {
+        GVAR(currentSurface) = surfaceType (position _trench);
+        _trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];
+    };
 }, 0, [_unit, _trench]] call CBA_fnc_addPerFrameHandler;
 
 // add mouse button action and hint
-[localize LSTRING(ConfirmDig), localize LSTRING(CancelDig), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
+[localize "STR_ace_trenches_ConfirmDig", localize "STR_ace_trenches_CancelDig"] call ace_interaction_fnc_showMouseHint;
 
-_unit setVariable [QGVAR(Dig), [
+_unit setVariable ["ace_trenches_Dig", [
     _unit, "DefaultAction",
-    {GVAR(digPFH) != -1},
+    {ace_trenches_digPFH != -1},
     {[_this select 0] call FUNC(placeConfirm)}
-] call EFUNC(common,addActionEventHandler)];
+] call ace_common_fnc_addActionEventHandler];
 
-_unit setVariable [QGVAR(isPlacing), true, true];
+_unit setVariable ["ace_trenches_isPlacing", true, true];

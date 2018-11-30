@@ -1,4 +1,3 @@
-#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support and esteldunedain
  * Removes trench
@@ -15,33 +14,40 @@
  *
  * Public: No
  */
+ #include "script_component.hpp"
 
-params ["_trench", "_unit"];
+params ["_trench", "_unit",["_switchingDigger", false]];
 TRACE_2("removeTrench",_trench,_unit);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
-if(_actualProgress == 0) exitWith {};
+if (_actualProgress <= 0) exitWith {};
 
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
+_trench setVariable [QGVAR(diggingType), "DOWN", true];
+private _diggerCount = _trench getVariable [QGVAR(diggerCount), 0];
 
-private _removeTime = getNumber (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(removalDuration));
-private _removeTimeLeft = _removeTime * _actualProgress;
+if (_diggerCount > 0) then {
+   if !(_switchingDigger) then {
+      [_trench, _unit] call FUNC(addDigger);
+   };
+}else{
+   _trench setVariable [QGVAR(diggerCount), 1,true];
+};
 
-private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
-_placeData params ["_basePos", "_vecDirAndUp"];
+private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >>"ace_trenches_removalDuration"), 20];
 
-private _trenchId = _unit getVariable [QGVAR(isDiggingId), -1];
-if(_trenchId < 0) then {
-    _trenchId = GVAR(trenchId);
-    _unit setVariable [QGVAR(isDiggingId), _trenchId, true];
-    GVAR(trenchId) = GVAR(trenchId) + 1;
+private _placeData = _trench getVariable ["ace_trenches_placeData", [[], []]];
+_placeData params ["", "_vecDirAndUp"];
+
+if (count _vecDirAndUp == 0) then {
+   _vecDirAndUp = [vectorDir _trench, vectorUp _trench];
 };
 
 // Create progress bar
 private _fnc_onFinish = {
-    (_this select 0) params ["_unit", "_trench"];
-    _unit setVariable [QGVAR(isDiggingId), -1, true];
+   (_this select 0) params ["_unit", "_trench"];
+   _trench setVariable [QGVAR(diggingType), nil, true];
 
     // Remove trench
     deleteVehicle _trench;
@@ -50,28 +56,73 @@ private _fnc_onFinish = {
     [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 private _fnc_onFailure = {
-    (_this select 0) params ["_unit", "_trench"];
-    _unit setVariable [QGVAR(isDiggingId), -1, true];
+   (_this select 0) params ["_unit", "_trench"];
+   _trench setVariable [QGVAR(digging), false, true];
+   _trench setVariable [QGVAR(diggingType), nil, true];
+
+   // Save progress global
+   private _progress = _trench getVariable [QGVAR(progress), 0];
+   _trench setVariable [QGVAR(progress), _progress, true];
+
+   // Reset animation
+   [_unit, "", 1] call EFUNC(common,doAnimation);
+};
+private _fnc_condition = {
+   (_this select 0) params ["", "_trench"];
+
+   if !(_trench getVariable [QGVAR(digging), false]) exitWith {false};
+   if (_trench getVariable [QGVAR(diggerCount), 0] <= 0) exitWith {false};
+   if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0))  exitWith {false};
+   true
+};
+[[_unit, _trench, false], _fnc_onFinish, _fnc_onFailure, localize "STR_ace_trenches_RemovingTrench", _fnc_condition] call FUNC(progressBar);
+
+[{
+  params ["_args", "_handle"];
+  _args params ["_trench", "_unit", "_removeTime", "_vecDirAndUp"];
+  private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+  private _diggerCount = _trench getVariable [QGVAR(diggerCount), 0];
+
+  if (_actualProgress <= 0) exitWith {
+     [_handle] call CBA_fnc_removePerFrameHandler;
+     _trench setVariable [QGVAR(digging), false, true];
+     _trench setVariable [QGVAR(diggerCount), 0, true];
+     deleteVehicle _trench;
+ };
+
+  if (
+        !(_trench getVariable [QGVAR(digging), false]) ||
+        (_diggerCount <= 0)
+     ) exitWith {
+    [_handle] call CBA_fnc_removePerFrameHandler;
     _trench setVariable [QGVAR(digging), false, true];
+    _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
+  };
 
-    // Save progress global
-    private _progress = _trench getVariable [QGVAR(progress), 0];
-    _trench setVariable [QGVAR(progress), _progress, true];
+  private _boundingBox = boundingBoxReal _trench;
+  _boundingBox params ["_lbfc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
+  _lbfc params ["", "", "_lbfcZ"];
 
-    // Reset animation
-    [_unit, "", 1] call EFUNC(common,doAnimation);
-};
-[(_removeTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench)] call EFUNC(common,progressBar);
+  private _pos = (getPosWorld _trench);
+  private _posDiff = (abs(((_trench getVariable [QGVAR(diggingSteps), 0]) * _diggerCount) + _lbfcZ))/(_removeTime*5);
+  _pos set [2,((_pos select 2) - _posDiff)];
 
-private _progressLeft = ((1 - _actualProgress) * 10) + 1;
+  _trench setPosWorld _pos;
+  _trench setVectorDirAndUp _vecDirAndUp;
 
-for "_i" from _progressLeft to 10 do {
-    private _vectorDiffZ = _i / 10;
-    private _delay = _removeTime * ((_i / 10) - (1 - _actualProgress));
-    private _progress = 1 - (_i / 10);
+  //Fatigue impact
+  EGVAR(advanced_fatigue,anReserve) = (EGVAR(advanced_fatigue,anReserve) - ((_removeTime /12) * GVAR(buildFatigueFactor))) max 0;
+  EGVAR(advanced_fatigue,anFatigue) = (EGVAR(advanced_fatigue,anFatigue) + (((_removeTime /12) * GVAR(buildFatigueFactor))/1200)) min 1;
 
-    [DFUNC(setTrenchPlacement), [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, _vectorDiffZ], _vecDirAndUp, _progress], _delay] call CBA_fnc_waitAndExecute;
-};
+  // Save progress
+  _trench setVariable [QGVAR(progress), (_actualProgress - ((1/(_removeTime *10)) * _diggerCount)), true];
+
+  if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0)) exitWith {
+     [_handle] call CBA_fnc_removePerFrameHandler;
+     _trench setVariable [QGVAR(digging), false, true];
+     _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
+  };
+},0.1,[_trench, _unit, _removeTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 
 // Play animation
 [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);

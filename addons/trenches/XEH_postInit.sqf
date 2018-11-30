@@ -7,7 +7,6 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-GVAR(trenchId) = 0;
 GVAR(trench) = objNull;
 GVAR(digPFH) = -1;
 GVAR(digDirection) = 0;
@@ -22,5 +21,7 @@ GVAR(digDirection) = 0;
 
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+
+if (GVAR(enableAutomaticFilePath)) exitWith {[] call FUNC(automaticFilePath);};
 
 //@todo Captivity?

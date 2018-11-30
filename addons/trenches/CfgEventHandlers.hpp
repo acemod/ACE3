@@ -1,4 +1,3 @@
-
 class Extended_PreStart_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preStart));
@@ -28,5 +27,38 @@ class Extended_Killed_EventHandlers {
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMission {
         ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
+    };
+};
+
+class Extended_Deleted_EventHandlers {
+    class ACE_envelope_small {
+        class ADDON {
+            deleted = QUOTE(if (isServer) then {_this call FUNC(deleteCamouflage)});
+        };
+    };
+    class ACE_envelope_big: ACE_envelope_small {};
+    class ACE_envelope_gigant: ACE_envelope_small {};
+    class ACE_envelope_vehicle: ACE_envelope_small {};
+    class ACE_envelope_short: ACE_envelope_small {};
+};
+
+class Extended_Init_EventHandlers {
+    class ACE_envelope_small {
+        class ADDON {
+            init = QUOTE(_this call FUNC(initTrench));
+        };
+    };
+
+    class ACE_envelope_big: ACE_envelope_small {};
+    class ACE_envelope_gigant: ACE_envelope_small {};
+    class ACE_envelope_vehicle: ACE_envelope_small {};
+    class ACE_envelope_short: ACE_envelope_small {};
+};
+
+class Extended_InitPost_EventHandlers {
+    class ModuleCurator_F {
+        class ADDON {
+            init = QUOTE(_this call FUNC(initCurator));
+        };
     };
 };
