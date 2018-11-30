@@ -100,7 +100,6 @@ class CfgAmmo {
         hit = 200;
         indirectHit = 200;
         indirectHitRange = 12;
-        submunitionAmmo = "";
         explosionEffects = "BombExplosion";
         
         displayName = "HOT 2MP";

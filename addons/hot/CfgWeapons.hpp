@@ -25,9 +25,9 @@ class CfgWeapons {
         displayName = "HOT 2";
         magazines[] = {"6Rnd_ACE_HOT2", "PylonMissile_1Rnd_ACE_HOT2", "PylonRack_1Rnd_ACE_HOT2", "PylonRack_3Rnd_ACE_HOT2", "PylonRack_4Rnd_ACE_HOT2"};
     };
-    class GVAR(hot2mb_launcher): GVAR(hot1_launcher) {
-        displayName = "HOT 2MB";
-        magazines[] = {"6Rnd_ACE_HOT2MB", "PylonMissile_1Rnd_ACE_HOT2MB", "PylonRack_1Rnd_ACE_HOT2MB", "PylonRack_3Rnd_ACE_HOT2MB", "PylonRack_4Rnd_ACE_HOT2MB"};
+    class GVAR(hot2mp_launcher): GVAR(hot1_launcher) {
+        displayName = "HOT 2MP";
+        magazines[] = {"6Rnd_ACE_HOT2MP", "PylonMissile_1Rnd_ACE_HOT2MP", "PylonRack_1Rnd_ACE_HOT2MP", "PylonRack_3Rnd_ACE_HOT2MP", "PylonRack_4Rnd_ACE_HOT2MP"};
     };
     class GVAR(hot3_launcher): GVAR(hot1_launcher) {
         displayName = "HOT 3";
