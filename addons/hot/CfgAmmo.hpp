@@ -4,13 +4,13 @@ class CfgAmmo {
     
     class GVAR(ammo_Penetrator_HOT1): ammo_Penetrator_Base {
         caliber = 60;
-        warheadName = "TandemHEAT";
+        warheadName = "HEAT";
         hit = 720;
     };
     
     class GVAR(ammo_Penetrator_HOT2): ammo_Penetrator_Base {
         caliber = 65;
-        warheadName = "TandemHEAT";
+        warheadName = "HEAT";
         hit = 900;
     };
     
@@ -22,14 +22,14 @@ class CfgAmmo {
     
     class GVAR(HOT1): M_Scalpel_AT {
         model = "\A3\Weapons_F_Tank\Launchers\Vorona\Vorona_missile_heat_fly";
-        proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
+        proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
         submunitionAmmo = QGVAR(ammo_Penetrator_HOT1);
         submunitionDirectionType = "SubmunitionModelDirection";
         submunitionInitSpeed = 1000;
         submunitionParentSpeedCoef = 0;
         submunitionInitialOffset[] = {0,0,-0.2};
         hit = 150;
-        warheadName = "TandemHEAT";
+        warheadName = "HEAT";
         indirectHit = 25;
         indirectHitRange = 3.5;
         explosive = 0.8;
@@ -48,8 +48,9 @@ class CfgAmmo {
         maxSpeed = 240;
 
         thrustTime = 17;
-        thrust = 240;
+        thrust = 75;
         timeToLive = 40;
+        initTime = 0.3;
 
         EGVAR(rearm,caliber) = 178;
 
@@ -57,7 +58,7 @@ class CfgAmmo {
             enabled = 1;
 
             minDeflection = 0;          // Minium flap deflection for guidance
-            maxDeflection = 0.001;      // Maximum flap deflection for guidance
+            maxDeflection = 0.0015;      // Maximum flap deflection for guidance
             incDeflection = 0.0005;     // The incrmeent in which deflection adjusts.
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
@@ -114,7 +115,7 @@ class CfgAmmo {
     
     class GVAR(HOT3): GVAR(HOT2) {
         submunitionAmmo = QGVAR(ammo_Penetrator_HOT3);
-        
+        warheadName = "TandemHEAT";
         displayName = "HOT 3";
         displayNameShort = "HOT3";
         description = "HOT 3";

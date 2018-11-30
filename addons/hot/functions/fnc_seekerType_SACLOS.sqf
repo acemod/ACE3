@@ -49,7 +49,7 @@ if (_distanceToProj > _seekerMaxRange) exitWith {
 private _testPointVector = vectorNormalized (_projPos vectorDiff _shooterPos);
 private _testDotProduct = (_lookDirection vectorDotProduct _testPointVector);
 
-if (_testDotProduct < (cos _seekerMaxAngle)) exitWith {
+if (_testDotProduct < (cos _seekerAngle)) exitWith {
     // out of LOS of seeker
     [0, 0, 0]
 };
