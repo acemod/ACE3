@@ -23,9 +23,9 @@ class CfgPatches {
 #include "CfgEden.hpp"
 #include "ACE_Medical_Treatments.hpp"
 #include "ACE_Settings.hpp"
-#include "UI\CfgInGameUI.hpp"
-#include "UI\RscTitles.hpp"
-#include "UI\triagecard.hpp"
+#include "ui\CfgInGameUI.hpp"
+#include "ui\RscTitles.hpp"
+#include "ui\triagecard.hpp"
 
 class ACE_newEvents {
     medical_onUnconscious = "ace_unconscious";

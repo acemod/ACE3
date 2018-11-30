@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Play the injured sound for a unit if the unit is damaged. The sound broadcasted across MP.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_pain"];
 if (!local _unit || !GVAR(enableScreams)) exitWith{};

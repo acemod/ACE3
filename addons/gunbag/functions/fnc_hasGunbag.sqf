@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ir0n1E
  * Switches gunbag full/empty for mass calculation.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

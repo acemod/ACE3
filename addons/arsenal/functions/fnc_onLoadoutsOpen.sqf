@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * onLoad EH for arsenal loadouts display.
@@ -12,8 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["", "_args"];
 _args params ["_display"];

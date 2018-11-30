@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Chemlights">
         <Key ID="STR_ACE_Chemlights_Action_Chemlights">
@@ -14,7 +14,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare">
             <English>Prepare %1</English>
-            <Japanese>%1 をつかう</Japanese>
+            <Japanese>%1 を使う</Japanese>
             <Polish>Przygotuj %1</Polish>
             <German>%1 vorbereiten</German>
             <Korean>%1 준비</Korean>
@@ -25,7 +25,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
-            <Japanese>%1&lt;br/&gt;をつかった</Japanese>
+            <Japanese>%1&lt;br/&gt;を使った</Japanese>
             <Polish>%1&lt;br/&gt;Przygotowany</Polish>
             <German>%1&lt;br/&gt;vorbereitet</German>
             <Korean>%1&lt;br/&gt;준비됨</Korean>
@@ -150,15 +150,15 @@
             <Chinesesimp>超亮红色光</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
-            <English>Type: Light - Red Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 赤 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe czerwone (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - rot, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류: 밝은 빨간색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - rouge Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Rossa Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮紅色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮红色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <English>Type: Light - Red Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 赤 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe czerwone (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - rot, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 밝은 빨간색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+            <French>Type: Lumière - rouge Hi (30 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <Italian>Tipo: Luce - Rossa Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Chinese>類型: 光 - 超亮紅色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮红色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
             <English>Chemlight (Hi Yellow)</English>
@@ -183,48 +183,15 @@
             <Chinesesimp>超亮黄色光</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
-            <English>Type: Light - Yellow Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 黄 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe żółte (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - gelb, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류:밝은 노란색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
-            <French>Type: Lumière - Jaune Hi (5 minutes)Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Gialla Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮黃色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮黄色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Chemlights_HiOrange_DisplayName">
-            <English>Chemlight (Hi Orange)</English>
-            <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
-            <Polish>Świetlik (jaskrawy pomarańczowy)</Polish>
-            <German>Knicklicht (orange, hell)</German>
-            <Korean>켐라이트 (밝은 주황색)</Korean>
-            <French>Cyalume (Hi orange)</French>
-            <Italian>Luce chimica (Hi Arancione)</Italian>
-            <Chinese>螢光棒 (超亮橘色)</Chinese>
-            <Chinesesimp>萤光棒 (超亮橘色)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Chemlights_HiOrange_DisplayNameShort">
-            <English>Orange Hi Light</English>
-            <Japanese>高輝度のオレンジ</Japanese>
-            <Polish>Jaskrawe pomarańczowe światło</Polish>
-            <German>Helles, oranges Knicklicht</German>
-            <Korean>밝은 주황색</Korean>
-            <French>Lum. orange haute intensité</French>
-            <Italian>Luce Hi Arancione</Italian>
-            <Chinese>超亮橘色光</Chinese>
-            <Chinesesimp>超亮橘色光</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Chemlights_HiOrange_DescriptionShort">
-            <English>Type: Light - Orange Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 オレンジ (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류: 밝은 주황색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - orange Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Arancione Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮橘色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <English>Type: Light - Yellow Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 黄 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe żółte (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - gelb, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류:밝은 노란색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
+            <French>Type: Lumière - Jaune Hi (30 minutes)Nbre: 1&lt;br /&gt; À main</French>
+            <Italian>Tipo: Luce - Gialla Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Chinese>類型: 光 - 超亮黃色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮黄色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
             <English>Chemlight (Hi White)</English>
@@ -249,15 +216,60 @@
             <Chinesesimp>超亮白色光</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
-            <English>Type: Light - White Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 白 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe białe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - weiß, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류: 밝은 하얀색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - blanche Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Bianca Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮白色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮白色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <English>Type: Light - White Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 白 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe białe (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - weiß, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 밝은 하얀색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+            <French>Type: Lumière - blanche Hi (30 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <Italian>Tipo: Luce - Bianca Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Chinese>類型: 光 - 超亮白色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮白色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiBlue_DisplayName">
+            <English>Chemlight (Hi Blue)</English>
+            <French>Cyalume (Hi Bleu)</French>
+            <Japanese>ケミライト (高輝度 青)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiBlue_DisplayNameShort">
+            <English>Blue Hi Light</English>
+            <French>Lum. bleue haute intensité</French>
+            <Japanese>高輝度の青色</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiBlue_DescriptionShort">
+            <English>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <French>Type: Lumière - bleue Hi (30 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <Japanese>種類: 照明 - 高輝度 青 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiGreen_DisplayName">
+            <English>Chemlight (Hi Green)</English>
+            <French>Cyalume (Hi Vert)</French>
+            <Japanese>ケミライト (高輝度 緑)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiGreen_DisplayNameShort">
+            <English>Green Hi Light</English>
+            <French>Lum. verte haute intensité</French>
+            <Japanese>高輝度の青色</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiGreen_DescriptionShort">
+            <English>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <French>Type: Lumière - verte Hi (30 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <Japanese>種類: 照明 - 高輝度 緑 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayName">
+            <English>Chemlight (Ultra-Hi Orange)</English>
+            <French>Cyalume (Ultra-Hi orange)</French>
+            <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayNameShort">
+            <English>Orange Ultra-Hi Light</English>
+            <French>Lum. orange ultra haute intensité</French>
+            <Japanese>ウルトラ高輝度のオレンジ色</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_UltraHiOrange_DescriptionShort">
+            <English>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <French>Type: Lumière - Orange Ultra-Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <Japanese>種類: 照明 - ウルトラ高輝度 オレンジ (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
@@ -437,7 +449,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DescriptionShort">
             <English>White reading light.</English>
-            <Japanese>白の照明。</Japanese>
+            <Japanese>白色の照明。</Japanese>
             <Polish>Biała lampka.</Polish>
             <German>Weißes Leselicht.</German>
             <Korean>주황색 조명</Korean>

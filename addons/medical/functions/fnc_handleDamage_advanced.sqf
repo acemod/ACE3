@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Advanced HandleDamage EH function.
@@ -20,8 +21,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_hitPointNumber", "", "_newDamage"];
 

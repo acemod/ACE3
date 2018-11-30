@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -618,7 +618,7 @@
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
             <Portuguese>Nenhum gatilho disponível para %1</Portuguese>
             <Russian>Нет доступных взрывателей для %1</Russian>
-            <Japanese>%1 につかえる点火装置がありません</Japanese>
+            <Japanese>%1 に使える点火装置がありません</Japanese>
             <Korean>%1(을)를 작동할 장치가 없습니다.</Korean>
             <Chinesesimp>没有适合%1的触发器</Chinesesimp>
             <Chinese>沒有適合%1的觸發器</Chinese>
@@ -698,7 +698,7 @@
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
             <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
-            <Japanese>点火装置を遠隔から離すと起爆したいときに使います。</Japanese>
+            <Japanese>点火装置から遠隔から起爆したい時に使います。</Japanese>
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
             <Chinesesimp>当放开按钮时, 将会引爆炸弹.</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
@@ -1026,6 +1026,11 @@
             <Chinesesimp>爆炸范围</Chinesesimp>
             <Chinese>爆炸範圍</Chinese>
             <Italian>Raggio di detonazione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ExplosiveTimer">
+            <English>Explosive Timer</English>
+            <Italian>Timer di detonazione</Italian>
+            <Japanese>爆発タイマー</Japanese>
         </Key>
     </Package>
 </Project>

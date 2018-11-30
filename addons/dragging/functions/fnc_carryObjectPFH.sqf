@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * PFH for Carry Object
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #ifdef DEBUG_ENABLED_DRAGGING
     systemChat format ["%1 carryObjectPFH running", CBA_missionTime];

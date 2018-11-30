@@ -1,29 +1,24 @@
+#include "script_component.hpp"
 /*
- * Author: Garth 'L-H' de Wet
- * Whether the passed unit has any explosives on them.
+ * Author: Garth 'L-H' de Wet, mharis001
+ * Checks if given unit has any placeable explosives on them.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * The unit has explosives <BOOL>
+ * Has explosives <BOOL>
  *
  * Example:
- * hasExplosives = [player] call ACE_Explosives_fnc_hasExplosives;
+ * [player] call ace_explosives_fnc_hasExplosives
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_1("params",_unit);
 
-private _result = false;
+private _cfgMagazines = configFile >> "CfgMagazines";
 private _magazines = magazines _unit;
-{
-    if (getNumber (ConfigFile >> "CfgMagazines" >> _x >> QGVAR(Placeable)) == 1) exitWith {
-        _result = true;
-    };
-} count _magazines;
 
-_result
+((_magazines arrayIntersect _magazines) findIf {getNumber (_cfgMagazines >> _x >> QGVAR(Placeable)) == 1}) > -1

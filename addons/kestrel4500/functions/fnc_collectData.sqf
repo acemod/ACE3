@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Gathers the weather data for the Kestrel 4500
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _playerDir = getDir ACE_player;
 private _playerAltitude = (getPosASL ACE_player) select 2;

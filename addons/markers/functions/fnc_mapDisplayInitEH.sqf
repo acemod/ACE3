@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles XEH DisplayLoad for the various map displays (RscDiary)
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 TRACE_1("params",_display);

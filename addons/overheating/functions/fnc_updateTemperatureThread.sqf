@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Update cooldown calculation of all player weapons at regular intervals.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _currentWeapon = currentWeapon ACE_player;
 if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_currentWeapon == handgunWeapon ACE_player}}) then {

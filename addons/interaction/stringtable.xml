@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_DisplayName">
@@ -325,7 +325,7 @@
             <Hungarian>Tánc abbahagyása</Hungarian>
             <Portuguese>Parar de dançar</Portuguese>
             <Italian>Smetti di ballare</Italian>
-            <Japanese>踊るのをやめる</Japanese>
+            <Japanese>踊るのを止める</Japanese>
             <Korean>춤 멈추기</Korean>
             <Chinesesimp>停止跳舞</Chinesesimp>
             <Chinese>停止跳舞</Chinese>
@@ -341,7 +341,7 @@
             <Hungarian>&lt;&lt; Vissza</Hungarian>
             <Portuguese>&lt;&lt; Voltar</Portuguese>
             <Italian>&lt;&lt; Indietro</Italian>
-            <Japanese>&lt;&lt;もどる</Japanese>
+            <Japanese>&lt;&lt; 戻る</Japanese>
             <Korean>&lt;&lt;뒤로</Korean>
             <Chinesesimp>&lt;&lt;返回</Chinesesimp>
             <Chinese>&lt;&lt;返回</Chinese>
@@ -1017,7 +1017,7 @@
             <Italian>Passa caricatore</Italian>
             <Spanish>Pasar cargador</Spanish>
             <French>Passer un chargeur</French>
-            <Japanese>弾倉をわたす</Japanese>
+            <Japanese>弾倉を渡す</Japanese>
             <Korean>탄창 건네기</Korean>
             <Chinesesimp>给予弹匣</Chinesesimp>
             <Chinese>給予彈匣</Chinese>
@@ -1062,7 +1062,7 @@
             <Italian>%1 ti ha passato un caricatore %2 .</Italian>
             <Spanish>%1 te pasó un cargador %2.</Spanish>
             <French>%1 vous a passé un chargeur de %2.</French>
-            <Japanese>%1 はあなたに %2 弾倉をわたした</Japanese>
+            <Japanese>%1 はあなたに %2 弾倉を渡した</Japanese>
             <Korean>%1에게서 %2탄창을 받았다</Korean>
             <Chinesesimp>%1给你%2弹匣</Chinesesimp>
             <Chinese>%1給你%2彈匣</Chinese>
@@ -1077,7 +1077,7 @@
             <Italian>Mostra interazione "passa caricatore"</Italian>
             <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
             <French>Montrer l'interaction "Passer un chargeur"</French>
-            <Japanese>"弾倉をわたす"をインタラクションに表示する</Japanese>
+            <Japanese>"弾倉を渡す"をインタラクションに表示する</Japanese>
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
@@ -1090,6 +1090,16 @@
             <Korean>시체 끌기</Korean>
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Interaction_SmashWindshield">
+            <English>Smash windshield</English>
+            <German>Frontscheibe einschlagen</German>
+            <French>Dégager le pare-brise</French>
+            <Czech>Vyrazit čelní sklo</Czech>
+            <Russian>Выбить лобовое стекло</Russian>
+            <Polish>Wyłam szybę</Polish>
+            <Hungarian>Szélvédő széttörése</Hungarian>
+            <Japanese>フロントガラスを破る</Japanese>
         </Key>
     </Package>
 </Project>

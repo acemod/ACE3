@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows the Yardage 450 screen elements
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "ACE_RscYardage450")
 #define __ctrlTarget (__dsp displayCtrl 720041)

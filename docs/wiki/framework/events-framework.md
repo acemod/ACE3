@@ -47,7 +47,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
 
-### 2.4 Logistics (`ace_cargo`)
+### 2.4 Cargo (`ace_cargo`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -75,6 +75,18 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
 |`ace_tagCreated` | [_tagObject, _texture, _tagAttachedTo (can be null), _unitThatCreated] | Global | Listen | Tag is created
+
+### 2.8 Explosives (`ace_explosives`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered
+
+### 2.9 Logistics Wirecutter (`ace_logistics`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started
 
 
 ## 3. Usage

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles tab changing for the loadouts display.
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display", "_control"];
 

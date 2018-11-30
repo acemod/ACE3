@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain, PabstMirror
  * Return a suitable position for the action point for the given target vehicle
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_cameraPosASL"];
 TRACE_2("params",_target,_cameraPosASL);

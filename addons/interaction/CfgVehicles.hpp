@@ -342,6 +342,11 @@ class CfgVehicles {
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
+            class GVAR(smashWindshield) {
+                displayName = CSTRING(SmashWindshield);
+                condition = QUOTE(_player == driver _target && {private _damage = _target getHitPointDamage 'HitGlass1'; _damage > 0.5 && {_damage < 1}});
+                statement = QUOTE(playSound3D [ARR_2('A3\Sounds_F\weapons\hits\glass_2.wss',_target)]; _target setHitPointDamage [ARR_2('HitGlass1',1)];);
+            };
         };
     };
 
@@ -665,14 +670,14 @@ class CfgVehicles {
                 class GVAR(TurnOn) {
                     displayName = CSTRING(TurnOn);
                     icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
-                    condition = QUOTE(alive _target && !(_target getVariable [ARR_2('ACE_lampOn',true)]));
-                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    condition = QUOTE(alive _target && !(_target getVariable [ARR_2(QQGVAR(isLightOn),true)]));
+                    statement = QUOTE([ARR_3(QQGVAR(setLight),[ARR_2(_target,true)],_target)] call CBA_fnc_targetEvent);
                 };
                 class GVAR(TurnOff) {
                     displayName = CSTRING(TurnOff);
                     icon = "\A3\ui_f\data\igui\cfg\actions\ico_cpt_land_OFF_ca.paa";
-                    condition = QUOTE(alive _target && _target getVariable [ARR_2('ACE_lampOn',true)]);
-                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    condition = QUOTE(alive _target && _target getVariable [ARR_2(QQGVAR(isLightOn),true)]);
+                    statement = QUOTE([ARR_3(QQGVAR(setLight),[ARR_2(_target,false)],_target)] call CBA_fnc_targetEvent);
                 };
             };
         };

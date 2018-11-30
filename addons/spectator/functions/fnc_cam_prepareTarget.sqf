@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, SilentSpike
  * Moves the spectator camera to a position relative to the camera focus.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _focus = vehicle (param [0, objNull, [objNull]]);
 TRACE_1("cam_prepareTarget",_focus);

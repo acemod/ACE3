@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Return current state of the weapon. Attachments and magazines with ammo.
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_weapon", nil, [""]]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the turret indices of other turrets (not gunner, commander, copilot or ffv).
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_vehicle", objNull, [objNull]]];
 

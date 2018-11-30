@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, Ruthberg, joko // Jonas
  * Handle the PFH for Bullets
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 {
     _x params ["_bullet","_caliber","_bulletTraceVisible","_index"];

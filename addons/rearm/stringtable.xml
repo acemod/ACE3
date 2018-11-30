@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Rearm">
         <Key ID="STR_ACE_Rearm_DisplayName">
@@ -8,6 +8,7 @@
             <Chinese>整裝</Chinese>
             <Chinesesimp>整装</Chinesesimp>
             <Japanese>再武装</Japanese>
+            <French>Réarmement</French>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
@@ -49,7 +50,7 @@
             <Italian>Ammontare Riarmo</Italian>
             <Spanish>Velocidad de rearme</Spanish>
             <French>Quantité à réarmer</French>
-            <Japanese>再武装できる量</Japanese>
+            <Japanese>再武装が可能な量</Japanese>
             <Korean>재보급 양</Korean>
             <Chinesesimp>整装所需时间</Chinesesimp>
             <Chinese>整裝所需時間</Chinese>
@@ -123,6 +124,7 @@
             <Chinese>彈藥補給</Chinese>
             <Polish>Zapas amunicji</Polish>
             <Korean>탄약 보급</Korean>
+            <French>Approvisionnement en munitions</French>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_Description">
             <English>How much ammunition does an ammo truck carry?</English>
@@ -133,6 +135,7 @@
             <Chinese>彈藥卡車會攜帶多少的彈藥?</Chinese>
             <Polish>Ile amunicji przewozi ciężarówka?</Polish>
             <Korean>탄약 차량은 얼마나 많은 양의 탄약을 가질 수 있음?</Korean>
+            <French>Quelle quantité de munitions un camion doit-il transporter ?</French>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
             <English>Unlimited ammo supply</English>
@@ -143,6 +146,7 @@
             <Chinese>無限彈藥</Chinese>
             <Polish>Nielimitowany zapas amunicji</Polish>
             <Korean>무한의 탄약</Korean>
+            <French>Approvisionnement en munitions illimité</French>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_limited">
             <English>Limited ammo supply based on caliber</English>
@@ -153,6 +157,7 @@
             <Chinese>基於口徑限制彈藥數量</Chinese>
             <Polish>Zapas amunicji zależny od kalibru</Polish>
             <Korean>구경에 따라 제한된 탄약</Korean>
+            <French>Approvisionnement en munitions limité basé sur le calibre.</French>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
             <English>Only specific Magazines</English>
@@ -163,6 +168,7 @@
             <Chinese>只有指定的彈藥</Chinese>
             <Polish>Tylko konkretne magazynki</Polish>
             <Korean>특정 탄약만</Korean>
+            <French>Seulement des chargeurs spécifiques</French>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounter">
             <English>Check remaining ammunition</English>
@@ -173,6 +179,7 @@
             <Chinese>檢查剩餘的彈藥</Chinese>
             <Polish>Sprawdź ilość amunicji</Polish>
             <Korean>남은 탄약 확인</Korean>
+            <French>Vérifier les munitions restantes</French>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
             <English>Checking remaining ammunition...</English>
@@ -183,16 +190,18 @@
             <Chinese>正在檢查剩餘的彈藥中...</Chinese>
             <Polish>Sprawdzanie ilości amunicji...</Polish>
             <Korean>남은 탄약 확인중...</Korean>
+            <French>Vérification des munitions restantes...</French>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
             <English>There is ammunition worth %1 points left.</English>
             <German>Es ist noch Munition für %1 Punkte übrig.</German>
             <Italian>E' presente una penalità delle munizioni %1 punti rimanenti.</Italian>
-            <Japanese>弾薬は%1残っている</Japanese>
+            <Japanese>弾薬は%1残っています。</Japanese>
             <Chinesesimp>还剩下%1多的弹药.</Chinesesimp>
             <Chinese>還剩下%1多的彈藥.</Chinese>
             <Polish>Pozostało %1 punktów amunicji.</Polish>
             <Korean>여기에는 최소 %1 포인트의 탄약이 남았습니다.</Korean>
+            <French>Il reste des munitions d'une valeur de %1 points.</French>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
             <English>The following ammunition is left:%1</English>
@@ -203,6 +212,7 @@
             <Chinese>以下剩餘的彈藥:%1</Chinese>
             <Polish>Pozostała amunicja: %1</Polish>
             <Korean>다음의 탄약이 남음 : %1</Korean>
+            <French>Il reste les munitions suivantes %1</French>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_Empty">
             <English>There is no ammunition left.</English>
@@ -213,6 +223,7 @@
             <Chinese>已經沒有剩餘的彈藥了.</Chinese>
             <Polish>Brak amunicji w zapasie.</Polish>
             <Korean>여기에는 탄약이 남지 않았습니다.</Korean>
+            <French>Il n'y a plus de munitions</French>
         </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
@@ -269,7 +280,7 @@
             <Italian>Sto prendendo %1 per %2...</Italian>
             <Spanish>Tomando %1 para %2...</Spanish>
             <French>Prend %1 pour %2...</French>
-            <Japanese>%1から%2を取得中…</Japanese>
+            <Japanese>%1を%2用として取得中…</Japanese>
             <Korean>%2를 위해 %1 가져오는중...</Korean>
             <Chinesesimp>拿取%1给%2中...</Chinesesimp>
             <Chinese>拿取%1給%2中...</Chinese>
@@ -283,7 +294,7 @@
             <Czech>Vít munici</Czech>
             <Italian>Prendi munizioni</Italian>
             <Spanish>Tomar munición</Spanish>
-            <French>Prendre la munition</French>
+            <French>Prendre des munitions</French>
             <Japanese>弾薬を取る</Japanese>
             <Korean>탄약 가지기</Korean>
             <Chinesesimp>取得弹药</Chinesesimp>
@@ -298,7 +309,7 @@
             <Czech>Sebrat munici</Czech>
             <Italian>Raccogli munizioni</Italian>
             <Spanish>Levantar munición</Spanish>
-            <French>Ramasser la munition</French>
+            <French>Ramasser les munitions</French>
             <Japanese>弾薬を拾得する</Japanese>
             <Korean>탄약 줍기</Korean>
             <Chinesesimp>捡起弹药</Chinesesimp>
@@ -313,7 +324,7 @@
             <Czech>Uskladnit munici</Czech>
             <Italian>Riponi munizioni</Italian>
             <Spanish>Guardar munición</Spanish>
-            <French>Stocker la munition</French>
+            <French>Stocker les munitions</French>
             <Japanese>弾薬を格納する</Japanese>
             <Korean>탄약 보관하기</Korean>
             <Chinesesimp>储存弹药</Chinesesimp>
@@ -358,7 +369,7 @@
             <Italian>Riarmati %1 colpi di %2 su %3</Italian>
             <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
             <French>%1 balles réarmées de %2 dans %3</French>
-            <Japanese>%1発の%2を%3から装填しました</Japanese>
+            <Japanese>%1発の%2を%3に装填しました</Japanese>
             <Korean>%3에 2%의 %1 탄약 재보급</Korean>
             <Chinesesimp>整装了%1发%2到%3上</Chinesesimp>
             <Chinese>整裝了%1發%2到%3上</Chinese>
@@ -572,6 +583,16 @@
             <Korean>FAB-250M-54</Korean>
             <Chinesesimp>FAB-250M-54</Chinesesimp>
             <Chinese>FAB-250M-54</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_rearmCargo_edenName">
+            <English>Rearm Cargo</English>
+            <German>Munitionsvorrat</German>
+            <Japanese>再武装用カーゴ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_rearmCargo_edenDesc">
+            <English>The cargo for rearming (-1 disable)</English>
+            <German>Der Munitionsvorrat, zum Aufmunitionieren von Fahrzeugen (-1 deaktiviert)</German>
+            <Japanese>カーゴからの再武装 (-1 で無効化)</Japanese>
         </Key>
     </Package>
 </Project>
