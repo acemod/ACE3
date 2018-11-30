@@ -16,3 +16,4 @@ class EGVAR(missileguidance,SeekerTypes) {
         functionName = QFUNC(seekerType_SACLOS);
     };
 };
+

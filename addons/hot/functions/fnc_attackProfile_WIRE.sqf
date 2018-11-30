@@ -23,6 +23,8 @@ params ["_seekerTargetPos", "_args"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 
+if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith { [0, 0, 0] };
+
 private _projectilePos = getPosASL _projectile;
 private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
 
@@ -35,3 +37,4 @@ private _correction = _fovImpulse;
 _relativeCorrection = (vectorNormalized _relativeCorrection) vectorMultiply _correction;
 
 _projectilePos vectorDiff (_projectile vectorModelToWorld _relativeCorrection);
+

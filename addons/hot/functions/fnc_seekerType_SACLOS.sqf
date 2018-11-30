@@ -16,9 +16,10 @@
  * Public: No
  */
 params ["", "_args"];
-_args params ["_firedEH", "", "", "_seekerParams"];
+_args params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
+_stateParams params ["", "_seekerStateParams"];
 
 private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
 
@@ -33,10 +34,23 @@ private _lookDirection = if !(_shooter isKindOf "CAManBase") then {
 
 private _distanceToProj = _shooterPos vectorDistance _projPos;
 if (_distanceToProj > _seekerMaxRange) exitWith {
-    _shooterPos vectorAdd [random [0, 2000, 4000], random [0, 2000, 4000], random [0, 2000, 4000]]
+    // wire snap, random direction
+    private _vector = [];
+    if (_seekerStateParams isEqualTo [] || { !(_seekerStateParams select 0) }) then {
+        _vector = [random [-400, -200, 400], random [-400, -200, 400], random [-400, -200, 400]];
+        _seekerStateParams set[0, true];
+        _seekerStateParams set[1, _vector];
+    } else {
+        _vector = _seekerStateParams select 1;
+    };
+    _projPos vectorAdd _vector
 };
 
-if ([_shooter, _projPos, _seekerAngle] call ace_missileguidance_fnc_checkSeekerAngle) exitWith {
+private _testPointVector = vectorNormalized (_projPos vectorDiff _shooterPos);
+private _testDotProduct = (_lookDirection vectorDotProduct _testPointVector);
+
+if (_testDotProduct < (cos _seekerMaxAngle)) exitWith {
+    // out of LOS of seeker
     [0, 0, 0]
 };
 

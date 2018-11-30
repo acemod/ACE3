@@ -34,3 +34,4 @@ class CfgWeapons {
         magazines[] = {"6Rnd_ACE_HOT3", "PylonMissile_1Rnd_ACE_HOT3", "PylonRack_1Rnd_ACE_HOT3", "PylonRack_3Rnd_ACE_HOT3", "PylonRack_4Rnd_ACE_HOT3"};
     };
 };
+

@@ -89,7 +89,7 @@ class CfgAmmo {
         description = "HOT 2";
         descriptionShort = "HOT2";
         
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance {
             enabled = 1;
         };
     };
@@ -107,7 +107,7 @@ class CfgAmmo {
         description = "HOT 2MP";
         descriptionShort = "HOT2MP";
         
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance {
             enabled = 1;
         };
     };
@@ -120,9 +120,10 @@ class CfgAmmo {
         description = "HOT 3";
         descriptionShort = "HOT3";
         
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance {
             enabled = 1;
             seekerMaxRange = 4300;
         };
     };
 };
+
