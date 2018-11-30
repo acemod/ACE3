@@ -1,9 +1,7 @@
 class CfgWeapons {
     class RocketPods;
-    class GVAR(launcher): RocketPods {
+    class GVAR(hot1_launcher): RocketPods {
         displayName = "HOT 1";
-        EGVAR(laser,canSelect) = 0; // can ace_laser lock (allows switching laser code)
-        EGVAR(laser,showHud) = 0; // show attack profile / lock on hud
         magazines[] = {"6Rnd_ACE_HOT1", "PylonMissile_1Rnd_ACE_HOT1", "PylonRack_1Rnd_ACE_HOT1", "PylonRack_3Rnd_ACE_HOT1", "PylonRack_4Rnd_ACE_HOT1"};
         
         autoFire = 0;
@@ -22,5 +20,17 @@ class CfgWeapons {
         cursor = "EmptyCursor";
         cursorAim = "missile";
         showAimCursorInternal = 0;
+    };
+    class GVAR(hot2_launcher): GVAR(hot1_launcher) {
+        displayName = "HOT 2";
+        magazines[] = {"6Rnd_ACE_HOT2", "PylonMissile_1Rnd_ACE_HOT2", "PylonRack_1Rnd_ACE_HOT2", "PylonRack_3Rnd_ACE_HOT2", "PylonRack_4Rnd_ACE_HOT2"};
+    };
+    class GVAR(hot2mb_launcher): GVAR(hot1_launcher) {
+        displayName = "HOT 2MB";
+        magazines[] = {"6Rnd_ACE_HOT2MB", "PylonMissile_1Rnd_ACE_HOT2MB", "PylonRack_1Rnd_ACE_HOT2MB", "PylonRack_3Rnd_ACE_HOT2MB", "PylonRack_4Rnd_ACE_HOT2MB"};
+    };
+    class GVAR(hot3_launcher): GVAR(hot1_launcher) {
+        displayName = "HOT 3";
+        magazines[] = {"6Rnd_ACE_HOT3", "PylonMissile_1Rnd_ACE_HOT3", "PylonRack_1Rnd_ACE_HOT3", "PylonRack_3Rnd_ACE_HOT3", "PylonRack_4Rnd_ACE_HOT3"};
     };
 };
