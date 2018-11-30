@@ -5,7 +5,7 @@ class CfgAmmo {
         GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\grenades\Grenade_PullPin.wss", 1.5, 1, 10};
         impactGroundSoft[] = {};
     };
-    
+
     class FlareCore;
     class FlareBase: FlareCore {
         intensity = 20000;
@@ -28,6 +28,9 @@ class CfgAmmo {
     };
     class ACE_40mm_Flare_green: ACE_40mm_Flare_white {
         lightColor[] = {0.25,0.5,0.25,0};
+    };
+    class ACE_40mm_Flare_ir: ACE_40mm_Flare_white {
+        nvgOnly = 1;
     };
 
     class F_20mm_White: FlareBase {

@@ -385,5 +385,11 @@
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
         </Key>
+        <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
+            <English>Type: Parachute IR Flare</English>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_ir">
+            <English>M992 Illumination IR Flare</English>
+        </Key>
     </Package>
 </Project>
