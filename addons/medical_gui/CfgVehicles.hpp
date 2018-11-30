@@ -1,46 +1,4 @@
-
 class CfgVehicles {
-
-    class ACE_Module;
-    class ACE_moduleMedicalMenuSettings: ACE_Module {
-        scope = 1;
-        displayName = CSTRING(module_DisplayName);
-        icon = "";
-        category = "ACE_medical";
-        function = QUOTE(DFUNC(module));
-        functionPriority = 1;
-        isGlobal = 1;
-        isSingular = 1;
-        isTriggerActivated = 0;
-        author = ECSTRING(common,ACETeam);
-        class Arguments {
-            class allow {
-                displayName = CSTRING(allow);
-                description = CSTRING(allow_Descr);
-                typeName = "NUMBER";
-                class values {
-                    class disable {
-                        name = ECSTRING(common,Disabled);
-                        value = 0;
-                    };
-                    class enable  {
-                        name = ECSTRING(common,Enabled);
-                        value = 1;
-                        default = 1;
-                    };
-                    class VehiclesOnly  {
-                        name = ECSTRING(common,VehiclesOnly);
-                        value = 2;
-                    };
-                };
-            };
-        };
-        class ModuleDescription {
-            description = CSTRING(module_Desc);
-            sync[] = {};
-        };
-    };
-
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {

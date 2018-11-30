@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
- * Collect treatment actions from medical config
+ * Author: Glowbal, mharis001
+ * Collect treatment actions for medical menu from config.
+ * Adds dragging actions if it exists.
  *
  * Arguments:
  * None
@@ -10,7 +11,7 @@
  * None
  *
  * Example:
- * [] call ace_medical_menu_fnc_collectActions
+ * [] call ace_medical_gui_fnc_collectAction
  *
  * Public: No
  */
@@ -18,33 +19,32 @@
 GVAR(actions) = [];
 
 {
-    if (isClass _x) then {
-        private _displayName = getText (_x >> "displayName");
-        private _category = getText (_x >> "category");
-        private _condition = format [QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), %2 select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,canTreatCached)), configName _x, ALL_BODY_PARTS];
-        private _statement = format [QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), %2 select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,treatment)), configName _x, ALL_BODY_PARTS];
-        GVAR(actions) pushBack [_displayName, _category, compile _condition, compile _statement];
-    };
-    nil
-} count ("true" configClasses (configFile >> QEGVAR(medical_treatment,actions)));
+    private _configName = configName _x;
+    private _displayName = getText (_x >> "displayName");
+    private _category = getText (_x >> "category");
+    private _condition = format [QUOTE([ARR_4(ACE_player, GVAR(interactionTarget), %1 select GVAR(selectedBodyPart), '%2')] call DEFUNC(medical_treatment,canTreatCached)), ALL_BODY_PARTS, _configName];
+    private _statement = format [QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), %1 select GVAR(selectedBodyPart), '%2')] call DEFUNC(medical_treatment,treatment)), ALL_BODY_PARTS, _configName];
 
-//Manually add the drag actions, if dragging exists.
+    GVAR(actions) pushBack [_displayName, _category, _condition, _statement]
+} forEach configProperties [configFile >> QEGVAR(medical_treatment,actions), "isClass _x"];
+
+
 if ("ace_dragging" call EFUNC(common,isModLoaded)) then {
-    private _condition = {
-        (ACE_player != GVAR(INTERACTION_TARGET)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call EFUNC(dragging,canDrag)}
-    };
-    private _statement = {
-        GVAR(pendingReopen) = false; //No medical_treatmentSuccess event after drag, so don't want this true
-        [ACE_player, GVAR(INTERACTION_TARGET)] call EFUNC(dragging,startDrag);
-    };
-    GVAR(actions) pushBack [localize ELSTRING(dragging,Drag), "drag", _condition, _statement];
+    GVAR(actions) pushBack [
+        localize ELSTRING(dragging,Drag), "drag",
+        {ACE_player != GVAR(interactionTarget) && {[ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,canDrag)}},
+        {
+            GVAR(pendingReopen) = false;
+            [ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,startDrag);
+        }
+    ];
 
-    _condition = {
-        (ACE_player != GVAR(INTERACTION_TARGET)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call EFUNC(dragging,canCarry)}
-    };
-    _statement = {
-        GVAR(pendingReopen) = false; //No medical_treatmentSuccess event after drag, so don't want this true
-        [ACE_player, GVAR(INTERACTION_TARGET)] call EFUNC(dragging,startCarry);
-    };
-    GVAR(actions) pushBack [localize ELSTRING(dragging,Carry), "drag", _condition, _statement];
+    GVAR(actions) pushBack [
+        localize ELSTRING(dragging,Carry), "drag",
+        {ACE_player != GVAR(interactionTarget) && {[ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,canCarry)}},
+        {
+            GVAR(pendingReopen) = false;
+            [ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,startCarry);
+        }
+    ];
 };

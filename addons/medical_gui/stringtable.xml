@@ -2,6 +2,27 @@
 <Project name="ACE">
     <Package name="Medical GUI">
         <Container name="Settings">
+            <Key ID="STR_ACE_Medical_GUI_Category">
+                <English>ACE Medical GUI</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_DisplayName">
+                <English>Enable Medical Menu</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
+                <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
+                <English>Reopen Medical Menu</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
+                <English>Reopen the Medical Menu after successful treatment.</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_GUI_MaxDistance_DisplayName">
+                <English>Maximum Distance</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
+                <English>Maximum distance from which the Medical Menu can be opened.</English>
+            </Key>
             <Key ID="STR_ACE_Medical_gui_showPainInMenu_DisplayName">
                 <English>Show pain</English>
             </Key>

@@ -2,11 +2,15 @@
 
 if (!hasInterface) exitWith {};
 
-GVAR(MenuPFHID) = -1;
+GVAR(menuPFH) = -1;
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
 
-[] call FUNC(collectActions3D);
+GVAR(interactionTarget) = objNull;
+GVAR(selectedBodyPart) = 0;
+
+[] call FUNC(addTreatmentActions);
+[] call FUNC(collectActions);
 
 ["ace_treatmentSucceded", {
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {

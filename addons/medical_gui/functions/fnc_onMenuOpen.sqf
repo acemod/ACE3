@@ -14,11 +14,8 @@
  *
  * Public: No
  */
-#define MAX_DISTANCE 10
 
 params ["_display"];
-
-if (isNil "_display") exitWith {};
 
 if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call EFUNC(common,blurScreen);};
 if (EGVAR(interact_menu,menuBackground)==2) then {0 cutRsc[QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false];};
