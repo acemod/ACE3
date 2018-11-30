@@ -64,8 +64,8 @@
 
         _weaponRelPos = _cswTripod getRelPos RELATIVE_DIRECTION(90);
         private _weaponHolder = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
-        _weaponHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
         _weaponHolder setDir random [0, 180, 360];
+        _weaponHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
         _weaponHolder addWeaponCargoGlobal [_carryWeaponClassname, 1];
 
         LOG("end");
