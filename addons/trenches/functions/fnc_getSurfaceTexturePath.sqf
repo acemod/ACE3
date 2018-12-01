@@ -17,8 +17,9 @@
 params [
     ["_object", objnull, [objNull]]
 ];
+
 if (isNull _object) exitWith {};
-if !(isNil QGVAR(automaticFileSetup) && isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")) exitWith {DEFAULT_TEXTURE};
+if !((isNil QGVAR(automaticFileSetup)) && (isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath"))) exitWith {DEFAULT_TEXTURE};
 
 private _surfaceType = surfaceType (position _object);
 

@@ -13,7 +13,6 @@ PREP(handleInteractMenuOpened);
 PREP(handleKilled);
 PREP(handlePlayerChanged);
 PREP(handlePlayerInventoryChanged);
-PREP(handleScrollWheel);
 PREP(handleUnconscious);
 PREP(initCurator);
 PREP(initTrench);

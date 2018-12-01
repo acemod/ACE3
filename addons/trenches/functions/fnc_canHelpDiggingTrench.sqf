@@ -1,13 +1,19 @@
 /*
-    @Authors
-        Salbei
-    @Arguments
-        ?
-    @Return Value
-        ?
-    @Example
-        ?
-*/
+ * Author: Salbei
+ * Check if unit can help digging trench.
+ *
+ * Arguments:
+ * 0: trench <OBJECT>
+ * 1: unit <OBJECT>
+ *
+ * Return Value:
+ * Boolean
+ *
+ * Example:
+ * [TrenchObj, ACE_player] call ace_trenches_fnc_canHelpDiggingTrench
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

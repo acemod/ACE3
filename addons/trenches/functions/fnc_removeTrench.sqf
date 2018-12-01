@@ -35,9 +35,9 @@ if (_diggerCount > 0) then {
    _trench setVariable [QGVAR(diggerCount), 1,true];
 };
 
-private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >>"ace_trenches_removalDuration"), 20];
+private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(removalDuration)), 20];
 
-private _placeData = _trench getVariable ["ace_trenches_placeData", [[], []]];
+private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
 _placeData params ["", "_vecDirAndUp"];
 
 if (count _vecDirAndUp == 0) then {
@@ -75,7 +75,7 @@ private _fnc_condition = {
    if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0))  exitWith {false};
    true
 };
-[[_unit, _trench, false], _fnc_onFinish, _fnc_onFailure, localize "STR_ace_trenches_RemovingTrench", _fnc_condition] call FUNC(progressBar);
+[[_unit, _trench, false], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition] call FUNC(progressBar);
 
 [{
   params ["_args", "_handle"];

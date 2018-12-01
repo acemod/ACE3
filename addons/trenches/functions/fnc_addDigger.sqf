@@ -1,12 +1,19 @@
 /*
-    @Authors
-        Salbei
-    @Arguments
-        - _unit, is the unit that helps digging
-		- _trench, the trench that is beeing dug
-    @Return Value
-        None
-*/
+ * Author: Salbei
+ * Help digging trench.
+ *
+ * Arguments:
+ * 0: trench <OBJECT>
+ * 1: unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [TrenchObj, ACE_player] call ace_trenches_fnc_addDigger
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 
@@ -68,6 +75,6 @@ private _fnc_condition = {
    true
 };
 
-[[_unit, _trench, _type, _handle], _fnc_onFinish, _fnc_onFailure, localize "STR_ace_trenches_DiggingTrench", _fnc_condition] call FUNC(progressBar);
+[[_unit, _trench, _type, _handle], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition] call FUNC(progressBar);
 
 [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);;

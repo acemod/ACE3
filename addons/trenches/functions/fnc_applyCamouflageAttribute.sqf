@@ -8,6 +8,23 @@
     @Example
         ?
 */
+/*
+ * Author:  Christian 'chris5790' Klemm
+ * Apply camouflage attribute to trench.
+ *
+ * Arguments:
+ * 0: object <OBJECT>
+ * 1: value <INT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [TrenchObj, ACE_player] call ace_trenches_fnc_applyCamouflageAttribute
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 params ["_object", "_value"];
 

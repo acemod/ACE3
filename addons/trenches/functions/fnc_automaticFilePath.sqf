@@ -1,3 +1,19 @@
+/*
+ * Author: Salbei
+ * Automatic creation of a path to surface texture.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [TrenchObj, ACE_player] call ace_trenches_fnc_automaticFilePath
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 if ((isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")) || ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]]))) exitWith {};

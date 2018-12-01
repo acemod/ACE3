@@ -20,24 +20,24 @@ params ["_unit", "_trenchClass"];
 
 
 //Load trench data
-ace_trenches_trenchPlacementData = getArray (configFile >> "CfgVehicles" >> _trenchClass >> "ace_trenches_placementData");
-TRACE_1("",ace_trenches_trenchPlacementData);
+GVAR(trenchPlacementData) = getArray (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(PlacementData));
+TRACE_1("",GVAR(trenchPlacementData));
 
 // prevent the placing unit from running
 [_unit, "forceWalk", "ACE_Trenches", true] call ace_common_fnc_statusEffect_set;
 
 // create the trench
 private _trench = createSimpleObject [_trenchClass, [0, 0, 0]];
-ace_trenches_trench = _trench;
+GVAR(trench) = _trench;
 
 // prevent collisions with trench
-["ace_common_enableSimulationGlobal", [_trench, false]] call CBA_fnc_serverEvent;
+[QEGVAR(common,enableSimulationGlobal), [_trench, false]] call CBA_fnc_serverEvent;
 
 GVAR(digDirection) = 0;
 GVAR(currentSurface) = "";
 
 // pfh that runs while the dig is in progress
-ace_trenches_digPFH = [{
+GVAR(digPFH) = [{
     (_this select 0) params ["_unit", "_trench"];
 
     // Cancel if the helper object is gone
@@ -60,7 +60,7 @@ ace_trenches_digPFH = [{
     };
 
     // Update trench position
-    ace_trenches_trenchPlacementData params ["_dx", "_dy", "_offset"];
+    GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
     private _basePos = _unit ModelToWorld [0,2,0];
 
     private _angle = (GVAR(digDirection) + getDir _unit);
@@ -92,7 +92,7 @@ ace_trenches_digPFH = [{
     TRACE_2("",_minzoffset,_offset);
     _trench setPosASL _basePos;
     _trench setVectorDirAndUp [_v1, _v3];
-    ace_trenches_trenchPos = _basePos;
+    GVAR(trenchPos) = _basePos;
 
     if (surfaceType (position _trench) != GVAR(currentSurface)) then {
         GVAR(currentSurface) = surfaceType (position _trench);
@@ -101,12 +101,12 @@ ace_trenches_digPFH = [{
 }, 0, [_unit, _trench]] call CBA_fnc_addPerFrameHandler;
 
 // add mouse button action and hint
-[localize "STR_ace_trenches_ConfirmDig", localize "STR_ace_trenches_CancelDig"] call ace_interaction_fnc_showMouseHint;
+[localize LSTRING(ConfirmDig), localize LSTRING(CancelDig)] call ace_interaction_fnc_showMouseHint;
 
-_unit setVariable ["ace_trenches_Dig", [
+_unit setVariable [QGVAR(Dig), [
     _unit, "DefaultAction",
-    {ace_trenches_digPFH != -1},
+    {GVAR(digPFH) != -1},
     {[_this select 0] call FUNC(placeConfirm)}
 ] call ace_common_fnc_addActionEventHandler];
 
-_unit setVariable ["ace_trenches_isPlacing", true, true];
+_unit setVariable [QGVAR(isPlacing), true, true];

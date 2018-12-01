@@ -1,11 +1,8 @@
 class CfgWorlds {
-    class Default {
-        surfaceTextureBasePath = "a3\map_data\";
-        filePrefix = "co.paa";
-    };
-
     //Altis
-    class Altis: Default {
+    class Altis {
+    surfaceTextureBasePath = "a3\map_data\";
+    filePrefix = "co.paa";
     camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d" /*, "A3\plants_f\Clutter\c_Thistle_Thorn_Green.p3d"*/};
     };
 
@@ -28,7 +25,7 @@ class CfgWorlds {
     };
 
     //Bray-Dunes
-    class SWU_Dunkirk_Bray_Dunes_1940: Baranow {
+    class SWU_Dunkirk_Bray_Dunes_1940 {
         surfaceTextureBasePath = "WW2\TerrainsWW2_swurvin\Surfaces_t\";
         filePrefix = "_co.paa";
         camouflageObjects[] = {};
@@ -61,12 +58,16 @@ class CfgWorlds {
     };
 
     //Celle
-    class mbg_celle2: Chernarus {
+    class mbg_celle2 {
+      surfaceTextureBasePath = "ca\CHERNARUS\data\";
+      filePrefix = "detail_co.paa";
         camouflageObjects[] = {};
     };
 
     //Chernarus Summer
-    class Chernarus_Summer: Chernarus {
+    class Chernarus_Summer {
+      surfaceTextureBasePath = "ca\CHERNARUS\data\";
+      filePrefix = "detail_co.paa";
         camouflageObjects[] = {"ca\plants2\clutter\c_weed3.p3d"};
     };
 
@@ -78,7 +79,7 @@ class CfgWorlds {
     };
 
     //Colleville
-    class Colleville: Baranow {
+    class Colleville {
         surfaceTextureBasePath = "WW2\TerrainsIF_t\Worlds\IF_Surfaces_t\France\";
         filePrefix = "co.paa";
         camouflageObjects[] = {};
@@ -147,14 +148,16 @@ class CfgWorlds {
     };
 
     //Lythium
-    class lythium: Default {
+    class lythium {
         surfaceTextureBasePath = "GBR\lythium\data\";
         filePrefix = "co.paa";
         camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     //Malden
-    class Malden: Altis {
+    class Malden {
+        surfaceTextureBasePath = "a3\map_data\";
+        filePrefix = "co.paa";
         camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
         class Surfaces {
             class GdtForestMalden {
@@ -171,7 +174,7 @@ class CfgWorlds {
     };
 
     //Montherme
-    class SWU_Ardennes_1940: Baranow {
+    class SWU_Ardennes_1940 {
         surfaceTextureBasePath = "WW2\TerrainsWW2_swurvin\Surfaces_t\";
         filePrefix = "_co.paa";
         camouflageObjects[] = {};
@@ -250,7 +253,7 @@ class CfgWorlds {
     };
 
     //Sark
-    class Hyde_Sark: Baranow {
+    class Hyde_Sark {
         surfaceTextureBasePath = "WW2\TerrainsWW2_Hyde\Surfaces_t\";
         filePrefix = "co.paa";
         camouflageObjects[] = {};
@@ -276,14 +279,16 @@ class CfgWorlds {
     };
 
     //Staszow
-    class Staszow: Baranow {
+    class Staszow  {
         surfaceTextureBasePath = "WW2\TerrainsIF_t\Worlds\IF_Surfaces_t\staszow\";
         filePrefix = "co.paa";
         camouflageObjects[] = {};
     };
 
     //Stratis
-    class Stratis: Altis {
+    class Stratis {
+      surfaceTextureBasePath = "a3\map_data\";
+      filePrefix = "co.paa";
         camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
@@ -302,14 +307,22 @@ class CfgWorlds {
     };
 
     //Tanoa
-    class Tanoa : Altis{
+    class Tanoa {
         surfaceTextureBasePath = "A3\Map_Data_Exp\";
+        filePrefix = "co.paa";
         camouflageObjects[] = {"A3\Vegetation_F_Exp\Clutter\Grass\c_GrassBunch_HI.p3d"};
     };
 
     //United Sahrani
-    class Sara_dbe1 : Sara {
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+    class Sara_dbe1  {
+      surfaceTextureBasePath = "ca\sara\Data\";
+      filePrefix = "detail_co.paa";
+      camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+      class Surfaces {
+          class mesto {
+              texturePath = "ca\sara\Data\mesto_co.paa";
+          };
+      };
     };
 
     //Utes

@@ -19,7 +19,7 @@
 params ["_trench", "_unit",["_switchingDigger", false]];
 TRACE_2("continueDiggingTrench",_trench,_unit);
 
-private _actualProgress = _trench getVariable [QGVAR(progress, 0];
+private _actualProgress = _trench getVariable [QGVAR(progress), 0];
 if (_actualProgress == 1) exitWith {};
 
 // Mark trench as being worked on
@@ -50,7 +50,7 @@ private _fnc_onFinish = {
     _trench setVariable [QGVAR(diggingType), nil, true];
 
     // Save progress global
-    _trench setVariable [QGVAR(progress, 1, true];
+    _trench setVariable [QGVAR(progress), 1, true];
 
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
@@ -61,7 +61,7 @@ private _fnc_onFailure = {
     _trench setVariable [QGVAR(diggingType), nil, true];
 
     // Save progress global
-    private _progress = _trench getVariable [QGVAR(progress, 0];
+    private _progress = _trench getVariable [QGVAR(progress), 0];
     _trench setVariable [QGVAR(progress), _progress, true];
 
     // Reset animation
@@ -76,7 +76,7 @@ private _fnc_condition = {
    true
 };
 
-[[_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize "STR_ace_trenches_DiggingTrench", _fnc_condition] call FUNC(progressBar);
+[[_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition] call FUNC(progressBar);
 
 if (_actualProgress == 0) then {
       //Remove grass
