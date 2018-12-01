@@ -12,8 +12,7 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"SmokeLauncher","HMG_127",QGVAR(generic_launcher)};
-                magazines[] = {"SmokeLauncherMag","2Rnd_ACE_HOT2","2Rnd_ACE_HOT2","2Rnd_ACE_HOT2","2Rnd_ACE_HOT2MP","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red"};
-
+                magazines[] = {"SmokeLauncherMag",QGVAR(2_2Rnd),QGVAR(2_2Rnd),QGVAR(2_2Rnd),QGVAR(2MP_2Rnd),"100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red"};
             };
         };
     };

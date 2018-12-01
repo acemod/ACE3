@@ -37,9 +37,9 @@ if (_distanceToProj > _seekerMaxRange) exitWith {
     // wire snap, random direction
     private _vector = [];
     if (_seekerStateParams isEqualTo [] || { !(_seekerStateParams select 0) }) then {
-        _vector = [random [-400, -200, 400], random [-400, -200, 400], random [-400, -200, 400]];
-        _seekerStateParams set[0, true];
-        _seekerStateParams set[1, _vector];
+        _vector = RANDOM_VECTOR_3D vectorMultiply 300;
+        _seekerStateParams set [0, true];
+        _seekerStateParams set [1, _vector];
     } else {
         _vector = _seekerStateParams select 1;
     };

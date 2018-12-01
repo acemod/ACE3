@@ -3,7 +3,7 @@ class CfgWeapons {
     class MissileLauncher;
     class GVAR(1_launcher): RocketPods {
         displayName = "HOT 1";
-        magazines[] = {"6Rnd_ACE_HOT1", "2Rnd_ACE_HOT1", "PylonMissile_1Rnd_ACE_HOT1", "PylonRack_1Rnd_ACE_HOT1", "PylonRack_3Rnd_ACE_HOT1", "PylonRack_4Rnd_ACE_HOT1"};
+        magazines[] = {QGVAR(1_6Rnd), QGVAR(1_2Rnd), QGVAR(1_PylonMissile_1Rnd), QGVAR(1_PylonRack_1Rnd), QGVAR(1_PylonRack_3Rnd), QGVAR(1_PylonRack_4Rnd)};
         initSpeed = 100;
         autoFire = 0;
         canLock = 0;
@@ -24,19 +24,19 @@ class CfgWeapons {
     };
     class GVAR(2_launcher): GVAR(1_launcher) {
         displayName = "HOT 2";
-        magazines[] = {"6Rnd_ACE_HOT2", "2Rnd_ACE_HOT2", "PylonMissile_1Rnd_ACE_HOT2", "PylonRack_1Rnd_ACE_HOT2", "PylonRack_3Rnd_ACE_HOT2", "PylonRack_4Rnd_ACE_HOT2"};
+        magazines[] = {QGVAR(2_6Rnd), QGVAR(2_2Rnd), QGVAR(2_PylonMissile_1Rnd), QGVAR(2_PylonRack_1Rnd), QGVAR(2_PylonRack_3Rnd), QGVAR(2_PylonRack_4Rnd)};
     };
     class GVAR(2mp_launcher): GVAR(1_launcher) {
         displayName = "HOT 2MP";
-        magazines[] = {"6Rnd_ACE_HOT2MP", "2Rnd_ACE_HOT2MP", "PylonMissile_1Rnd_ACE_HOT2MP", "PylonRack_1Rnd_ACE_HOT2MP", "PylonRack_3Rnd_ACE_HOT2MP", "PylonRack_4Rnd_ACE_HOT2MP"};
+        magazines[] = {QGVAR(2MP_6Rnd), QGVAR(2MP_2Rnd), QGVAR(2MP_PylonMissile_1Rnd), QGVAR(2MP_PylonRack_1Rnd), QGVAR(2MP_PylonRack_3Rnd), QGVAR(2MP_PylonRack_4Rnd)};
     };
     class GVAR(3_launcher): GVAR(1_launcher) {
         displayName = "HOT 3";
-        magazines[] = {"6Rnd_ACE_HOT3", "2Rnd_ACE_HOT3", "PylonMissile_1Rnd_ACE_HOT3", "PylonRack_1Rnd_ACE_HOT3", "PylonRack_3Rnd_ACE_HOT3", "PylonRack_4Rnd_ACE_HOT3"};
+        magazines[] = {QGVAR(3_6Rnd), QGVAR(3_2Rnd), QGVAR(3_PylonMissile_1Rnd), QGVAR(3_PylonRack_1Rnd), QGVAR(3_PylonRack_3Rnd), QGVAR(3_PylonRack_4Rnd)};
     };
     class GVAR(generic_launcher): MissileLauncher {
         displayName = "HOT Missile";
-        magazines[] = {"6Rnd_ACE_HOT1", "6Rnd_ACE_HOT2", "6Rnd_ACE_HOT2MP", "6Rnd_ACE_HOT3","2Rnd_ACE_HOT1", "2Rnd_ACE_HOT2", "2Rnd_ACE_HOT2MP", "2Rnd_ACE_HOT3"};
+        magazines[] = {QGVAR(1_6Rnd), QGVAR(1_2Rnd), QGVAR(2_6Rnd), QGVAR(2_2Rnd), QGVAR(2MP_6Rnd), QGVAR(2MP_2Rnd), QGVAR(3_6Rnd), QGVAR(3_2Rnd)};
         initSpeed = 100;
         autoFire = 0;
         canLock = 0;

@@ -16,14 +16,14 @@
  *
  * Public: No
  */
- 
- private _maxCorrectableDistance = 10;
-
 params ["_seekerTargetPos", "_args"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 
 if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith { [0, 0, 0] };
+
+private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance" >> QGVAR(correctionDistance);
+private _maxCorrectableDistance = if (isNumber(_config)) then { getNumber(_config) } else { DEFAULT_CORRECTION_DISTANCE };
 
 private _projectilePos = getPosASL _projectile;
 private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);

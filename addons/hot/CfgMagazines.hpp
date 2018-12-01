@@ -2,21 +2,21 @@ class CfgMagazines {
     class 12Rnd_PG_missiles;
     
     // HOT1 - tandem shaped charge HEAT (anti-tank)
-    class 6Rnd_ACE_HOT1: 12Rnd_PG_missiles { // Old style vehicle magazine
+    class GVAR(1_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
-        ammo = "ACE_HOT_HOT1";
+        ammo = QGVAR(HOT1);
         displayName = "HOT 1 [ACE]";
         displayNameShort = "HOT1";
         descriptionShort = "HOT1";
     };
     
-    class 2Rnd_ACE_HOT1: 6Rnd_ACE_HOT1 {
+    class GVAR(1_2Rnd): GVAR(1_6Rnd) {
         count = 2;
     };
 
     // 1.70 pylon magazines:
-    class PylonMissile_1Rnd_ACE_HOT1: 6Rnd_ACE_HOT1 { // Bare missle
+    class GVAR(1_PylonMissile_1Rnd): GVAR(1_6Rnd) { // Bare missle
         displayName = "1x HOT 1 [ACE]";
         count = 1;
         mass = 70;
@@ -24,7 +24,7 @@ class CfgMagazines {
         hardpoints[] = {"SCALPEL_1RND"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
-    class PylonRack_1Rnd_ACE_HOT1: 6Rnd_ACE_HOT1 { // 1x Launcher Support Rack
+    class GVAR(1_PylonRack_1Rnd): GVAR(1_6Rnd) { // 1x Launcher Support Rack
         displayName = "1x HOT 1 [ACE]";
         count = 1;
         mass = 85;
@@ -32,7 +32,7 @@ class CfgMagazines {
         hardpoints[] = {"B_MISSILE_PYLON", "SCALPEL_1RND_EJECTOR", "B_ASRRAM_EJECTOR", "UNI_SCALPEL", "CUP_NATO_HELO_SMALL", "CUP_NATO_HELO_LARGE", "RHS_HP_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
-    class PylonRack_3Rnd_ACE_HOT1: 6Rnd_ACE_HOT1 { // 3x Launcher Support Rack
+    class GVAR(1_PylonRack_3Rnd): GVAR(1_6Rnd) { // 3x Launcher Support Rack
         displayName = "3x HOT 1 [ACE]";
         count = 3;
         mass = 250;
@@ -41,7 +41,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
-    class PylonRack_4Rnd_ACE_HOT1: 6Rnd_ACE_HOT1 { // 4x Launcher Support Rack
+    class GVAR(1_PylonRack_4Rnd): GVAR(1_6Rnd) { // 4x Launcher Support Rack
         displayName = "4x HOT 1 [ACE]";
         count = 4;
         mass = 340;
@@ -52,21 +52,21 @@ class CfgMagazines {
     };
     
     // HOT2 - tandem shaped charge HEAT (anti-tank)
-    class 6Rnd_ACE_HOT2: 12Rnd_PG_missiles { // Old style vehicle magazine
+    class GVAR(2_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
-        ammo = "ACE_HOT_HOT2";
+        ammo = QGVAR(HOT2);
         displayName = "HOT 1 [ACE]";
         displayNameShort = "HOT2";
         descriptionShort = "HOT2";
     };
     
-    class 2Rnd_ACE_HOT2: 6Rnd_ACE_HOT2 {
+    class GVAR(2_2Rnd): GVAR(2_6Rnd) {
         count = 2;
     };
 
     // 1.70 pylon magazines:
-    class PylonMissile_1Rnd_ACE_HOT2: 6Rnd_ACE_HOT2 { // Bare missle
+    class GVAR(2_PylonMissile_1Rnd): GVAR(2_6Rnd) { // Bare missle
         displayName = "1x HOT 2 [ACE]";
         pylonWeapon = QGVAR(2_launcher);
         count = 1;
@@ -74,7 +74,7 @@ class CfgMagazines {
         hardpoints[] = {"SCALPEL_1RND"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
-    class PylonRack_1Rnd_ACE_HOT2: 6Rnd_ACE_HOT2 { // 1x Launcher Support Rack
+    class GVAR(2_PylonRack_1Rnd): GVAR(2_6Rnd) { // 1x Launcher Support Rack
         displayName = "1x HOT 2 [ACE]";
         pylonWeapon = QGVAR(2_launcher);
         count = 1;
@@ -82,7 +82,7 @@ class CfgMagazines {
         hardpoints[] = {"B_MISSILE_PYLON", "SCALPEL_1RND_EJECTOR", "B_ASRRAM_EJECTOR", "UNI_SCALPEL", "CUP_NATO_HELO_SMALL", "CUP_NATO_HELO_LARGE", "RHS_HP_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
-    class PylonRack_3Rnd_ACE_HOT2: 6Rnd_ACE_HOT2 { // 3x Launcher Support Rack
+    class GVAR(2_PylonRack_3Rnd): GVAR(2_6Rnd) { // 3x Launcher Support Rack
         displayName = "3x HOT 2 [ACE]";
         pylonWeapon = QGVAR(2_launcher);
         count = 3;
@@ -91,7 +91,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
-    class PylonRack_4Rnd_ACE_HOT2: 6Rnd_ACE_HOT2 { // 4x Launcher Support Rack
+    class GVAR(2_PylonRack_4Rnd): GVAR(2_6Rnd) { // 4x Launcher Support Rack
         displayName = "4x HOT 2 [ACE]";
         pylonWeapon = QGVAR(2_launcher);
         count = 4;
@@ -101,22 +101,22 @@ class CfgMagazines {
         mirrorMissilesIndexes[] = {2, 1, 4, 3};
     };
     
-    // HOT2MPMP - HE Anti-Infantry
-    class 6Rnd_ACE_HOT2MP: 12Rnd_PG_missiles { // Old style vehicle magazine
+    // HOT2MP - HE Anti-Infantry
+    class GVAR(2MP_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
-        ammo = "ACE_HOT_HOT2MP";
+        ammo = QGVAR(HOT2MP);
         displayName = "HOT 2MP [ACE]";
         displayNameShort = "HOT2MP";
         descriptionShort = "HOT2MP";
     };
     
-    class 2Rnd_ACE_HOT2MP: 6Rnd_ACE_HOT2MP {
+    class GVAR(2MP_2Rnd): GVAR(2MP_6Rnd) {
         count = 2;
     };
 
     // 1.70 pylon magazines:
-    class PylonMissile_1Rnd_ACE_HOT2MP: 6Rnd_ACE_HOT2MP { // Bare missle
+    class GVAR(2MP_PylonMissile_1Rnd): GVAR(2MP_6Rnd) { // Bare missle
         displayName = "1x HOT 2MP [ACE]";
         pylonWeapon = QGVAR(2mp_launcher);
         count = 1;
@@ -124,7 +124,7 @@ class CfgMagazines {
         hardpoints[] = {"SCALPEL_1RND"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
-    class PylonRack_1Rnd_ACE_HOT2MP: 6Rnd_ACE_HOT2MP { // 1x Launcher Support Rack
+    class GVAR(2MP_PylonRack_1Rnd): GVAR(2MP_6Rnd) { // 1x Launcher Support Rack
         displayName = "1x HOT 2MP [ACE]";
         pylonWeapon = QGVAR(2mp_launcher);
         count = 1;
@@ -132,7 +132,7 @@ class CfgMagazines {
         hardpoints[] = {"B_MISSILE_PYLON", "SCALPEL_1RND_EJECTOR", "B_ASRRAM_EJECTOR", "UNI_SCALPEL", "CUP_NATO_HELO_SMALL", "CUP_NATO_HELO_LARGE", "RHS_HP_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
-    class PylonRack_3Rnd_ACE_HOT2MP: 6Rnd_ACE_HOT2MP { // 3x Launcher Support Rack
+    class GVAR(2MP_PylonRack_3Rnd): GVAR(2MP_6Rnd) { // 3x Launcher Support Rack
         displayName = "3x HOT 2MP [ACE]";
         pylonWeapon = QGVAR(2mp_launcher);
         count = 3;
@@ -141,7 +141,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
-    class PylonRack_4Rnd_ACE_HOT2MP: 6Rnd_ACE_HOT2MP { // 4x Launcher Support Rack
+    class GVAR(2MP_PylonRack_4Rnd): GVAR(2MP_6Rnd) { // 4x Launcher Support Rack
         displayName = "4x HOT 2MP [ACE]";
         pylonWeapon = QGVAR(2mp_launcher);
         count = 4;
@@ -152,21 +152,21 @@ class CfgMagazines {
     };
     
         // HOT3 - tandem shaped charge HEAT (anti-tank)
-    class 6Rnd_ACE_HOT3: 12Rnd_PG_missiles { // Old style vehicle magazine
+    class GVAR(3_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
-        ammo = "ACE_HOT_HOT3";
+        ammo = QGVAR(HOT3);
         displayName = "HOT 1 [ACE]";
         displayNameShort = "HOT3";
         descriptionShort = "HOT3";
     };
     
-    class 2Rnd_ACE_HOT3: 6Rnd_ACE_HOT3 { // Old style vehicle magazine
+    class GVAR(3_2Rnd): GVAR(3_6Rnd) { // Old style vehicle magazine
         count = 2;
     };
 
     // 1.70 pylon magazines:
-    class PylonMissile_1Rnd_ACE_HOT3: 6Rnd_ACE_HOT3 { // Bare missle
+    class GVAR(3_PylonMissile_1Rnd): GVAR(3_6Rnd) { // Bare missle
         displayName = "1x HOT 3 [ACE]";
         pylonWeapon = QGVAR(3_launcher);
         count = 1;
@@ -175,7 +175,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
     
-    class PylonRack_1Rnd_ACE_HOT3: 6Rnd_ACE_HOT3 { // 1x Launcher Support Rack
+    class GVAR(3_PylonRack_1Rnd): GVAR(3_6Rnd) { // 1x Launcher Support Rack
         displayName = "1x HOT 3 [ACE]";
         pylonWeapon = QGVAR(3_launcher);
         count = 1;
@@ -183,7 +183,7 @@ class CfgMagazines {
         hardpoints[] = {"B_MISSILE_PYLON", "SCALPEL_1RND_EJECTOR", "B_ASRRAM_EJECTOR", "UNI_SCALPEL", "CUP_NATO_HELO_SMALL", "CUP_NATO_HELO_LARGE", "RHS_HP_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
-    class PylonRack_3Rnd_ACE_HOT3: 6Rnd_ACE_HOT3 { // 3x Launcher Support Rack
+    class GVAR(3_PylonRack_3Rnd): GVAR(3_6Rnd) { // 3x Launcher Support Rack
         displayName = "3x HOT 3 [ACE]";
         pylonWeapon = QGVAR(3_launcher);
         count = 3;
@@ -192,7 +192,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
-    class PylonRack_4Rnd_ACE_HOT3: 6Rnd_ACE_HOT3 { // 4x Launcher Support Rack
+    class GVAR(3_PylonRack_4Rnd): GVAR(3_6Rnd) { // 4x Launcher Support Rack
         displayName = "4x HOT 3 [ACE]";
         pylonWeapon = QGVAR(3_launcher);
         count = 4;

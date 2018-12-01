@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="HOT">
+        <Key ID="STR_ACE_HOT_missileType">
+            <English>Wire-Guided</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_SACLOS_Description">
+            <English>Semi-automatic command to line of sight</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_missileType_Description">
+            <English>Wire-Guided missile</English>
+        </Key>
+    </Package>
+</Project>
