@@ -17,13 +17,25 @@
  * Public: No
  */
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-_args params ["_firedEH"];
+_args params ["_firedEH", "", "", "_seekerParams"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance"];
+_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector"];
+_seekerParams params["", "", "_seekerMaxRange"];
 
 if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith { [0, 0, 0] };
 
 private _projectilePos = getPosASL _projectile;
+
+if (((getPosASL _shooter) vectorDistanceSqr _projectilePos) > (_seekerMaxRange * _seekerMaxRange)) exitWith {
+    // wire snap, random direction
+    if (!_wireCut) then {
+        _randomVector = RANDOM_VECTOR_3D vectorMultiply 300;
+        _attackProfileStateParams set [1, true];
+        _attackProfileStateParams set [2, _randomVector];
+    };
+    _projPos vectorAdd _randomVector
+};
+
 private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
 
 private _magnitude = vectorMagnitude [_relativeCorrection select 0, 0, _relativeCorrection select 2];
