@@ -42,7 +42,7 @@ private _getTexturePath = {
         _fileNameArr deleteAt (_fileNameArr find "*");
     };
 
-    format["%1%2%3", _basePath, (_fileNameArr joinString ""), _filePrefix];
+    format["%1\%2%3", _basePath, (_fileNameArr joinString ""), _filePrefix];
 };
 
 private _result = [];
