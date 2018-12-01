@@ -282,7 +282,7 @@ class CfgWorlds {
 
     //Staszow
     class Staszow  {
-        surfaceTextureBasePath = "WW2\TerrainsIF_t\Worlds\IF_Surfaces_t\staszow\";
+        surfaceTextureBasePath = "WW2\TerrainsIF_t\Worlds\IF_Surfaces_t\staszow";
         filePrefix = "co.paa";
         camouflageObjects[] = {};
     };
