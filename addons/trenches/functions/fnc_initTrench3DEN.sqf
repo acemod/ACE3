@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * Inits a trench placed in 3DEN
@@ -13,7 +14,7 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
+
 params [
     ["_object", objnull, [objNull]]
 ];

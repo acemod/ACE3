@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579, Salbei
  * Places camouflage on a trench
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [
     ["_trench", objnull, [objnull]],

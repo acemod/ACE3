@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
 * Author: chris579
 * Checks if camouflage can be applied to a trench
@@ -14,7 +15,6 @@
 *
 * Public: No
 */
-#include "script_component.hpp"
 
 params ["_trench", "_unit"];
 

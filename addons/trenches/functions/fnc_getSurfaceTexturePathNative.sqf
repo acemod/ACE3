@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * Gets the path to the ground texture under the object
@@ -15,7 +16,7 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
+
 params [
     ["_object", objnull, [objNull]]
 ];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
 * Author: chris579
 * Checks if camouflage can be removed from trench
@@ -13,7 +14,6 @@
 *
 * Public: No
 */
-#include "script_component.hpp"
 
 params ["_trench"];
 if !(GVAR(allowCamouflage)) exitWith {false};

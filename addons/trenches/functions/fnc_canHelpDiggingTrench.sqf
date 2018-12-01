@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Salbei
  * Check if unit can help digging trench.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_trench", "_unit"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Glowbal, PabstMirror
  * Modified by Salbei
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
 

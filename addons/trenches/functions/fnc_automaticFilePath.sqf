@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Salbei
  * Automatic creation of a path to surface texture.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 if ((isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")) || ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]]))) exitWith {};
 private _config = configfile >> "CfgWorlds" >> worldName >> "OutsideTerrain" >> "Layers" >> "Layer0" >> "texture";

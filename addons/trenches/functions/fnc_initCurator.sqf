@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * Inits curator logics with evhs
@@ -13,7 +14,7 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
+
 params [
     ["_logic", objnull, [objNull]]
 ];
