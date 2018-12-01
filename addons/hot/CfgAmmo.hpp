@@ -27,7 +27,7 @@ class CfgAmmo {
         submunitionDirectionType = "SubmunitionModelDirection";
         submunitionInitSpeed = 1000;
         submunitionParentSpeedCoef = 0;
-        submunitionInitialOffset[] = {0,0,-0.2};
+        submunitionInitialOffset[] = { 0, 0, -0.2 };
         hit = 150;
         warheadName = "HEAT";
         indirectHit = 25;
@@ -58,7 +58,7 @@ class CfgAmmo {
             enabled = 1;
 
             minDeflection = 0;          // Minium flap deflection for guidance
-            maxDeflection = 0.0013;      // Maximum flap deflection for guidance
+            maxDeflection = 0.0015;      // Maximum flap deflection for guidance
             incDeflection = 0.0005;     // The incrmeent in which deflection adjusts.
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
@@ -73,14 +73,15 @@ class CfgAmmo {
             onFired = QFUNC(onFired);
             
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            seekerAngle = 60;           // Angle in front of the missile which can be searched
+            seekerAngle = 30;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
 
             seekerMinRange = 75;
             seekerMaxRange = 4000;      // Range from the missile which the seeker can visually search
             
-            GVAR(correctionDistance) = 10;
-
+            correctionDistance = 15; // distance from center of crosshair where missile slows down
+            offsetFromCrosshair[] = { 0, 0, 0.5 }; // where the missile wants to stay in relation to the center of the crosshair.
+            
             // Attack profile type selection
             defaultAttackProfile = "WIRE";
             attackProfiles[] = {"WIRE"};

@@ -18,11 +18,14 @@
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams", "_attackProfileStateParams"];
 
-private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance" >> QGVAR(correctionDistance);
-private _maxCorrectableDistance = if (isNumber(_config)) then { getNumber(_config) } else { DEFAULT_CORRECTION_DISTANCE };
+private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance";
+private _maxCorrectableDistance = if (isNumber(_config >> "correctionDistance")) then { getNumber(_config >> "correctionDistance") } else { DEFAULT_CORRECTION_DISTANCE };
+private _crosshairOffset = if (isArray(_config >> "offsetFromCrosshair")) then { getArray(_config >> "offsetFromCrosshair") } else { [0, 0, 0] };
+
 _attackProfileStateParams set [0, _maxCorrectableDistance];
 _attackProfileStateParams set [1, false]; // _wireCut
 _attackProfileStateParams set [2, [0, 0, 0]]; // _randomVector
+_attackProfileStateParams set [3, _crosshairOffset]; // crosshair offset        
  private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
 _memoryPointGunnerOptics = getText(([_shooter, _turretPath] call CBA_fnc_getTurret) >> "memoryPointGunnerOptics");
 _seekerStateParams set [0, _turretPath];

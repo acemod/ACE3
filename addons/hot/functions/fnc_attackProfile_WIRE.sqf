@@ -19,7 +19,7 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "", "", "_seekerParams"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector"];
+_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset"];
 _seekerParams params["", "", "_seekerMaxRange"];
 
 if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith { [0, 0, 0] };
@@ -37,6 +37,7 @@ if (((getPosASL _shooter) vectorDistanceSqr _projectilePos) > (_seekerMaxRange *
 };
 
 private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
+_relativeCorrection = _relativeCorrection vectorDiff _crosshairOffset;
 
 private _magnitude = vectorMagnitude [_relativeCorrection select 0, 0, _relativeCorrection select 2];
 
