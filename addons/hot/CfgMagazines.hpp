@@ -6,9 +6,9 @@ class CfgMagazines {
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT1);
-        displayName = "HOT 1 [ACE]";
-        displayNameShort = "HOT1";
-        descriptionShort = "HOT1";
+        displayName = CSTRING(hot1_long);
+        displayNameShort = CSTRING(hot1_short);
+        descriptionShort = CSTRING(missileType);
     };
     
     class GVAR(1_2Rnd): GVAR(1_6Rnd) {
@@ -17,7 +17,7 @@ class CfgMagazines {
 
     // 1.70 pylon magazines:
     class GVAR(1_PylonMissile_1Rnd): GVAR(1_6Rnd) { // Bare missle
-        displayName = "1x HOT 1 [ACE]";
+        displayName = CSTRING(hot1_1);
         count = 1;
         mass = 70;
         pylonWeapon = QGVAR(1_launcher);
@@ -25,7 +25,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
     class GVAR(1_PylonRack_1Rnd): GVAR(1_6Rnd) { // 1x Launcher Support Rack
-        displayName = "1x HOT 1 [ACE]";
+        displayName = CSTRING(hot1_1);
         count = 1;
         mass = 85;
         pylonWeapon = QGVAR(1_launcher);
@@ -33,7 +33,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
     class GVAR(1_PylonRack_3Rnd): GVAR(1_6Rnd) { // 3x Launcher Support Rack
-        displayName = "3x HOT 1 [ACE]";
+        displayName = CSTRING(hot1_3);
         count = 3;
         mass = 250;
         pylonWeapon = QGVAR(1_launcher);
@@ -42,7 +42,7 @@ class CfgMagazines {
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
     class GVAR(1_PylonRack_4Rnd): GVAR(1_6Rnd) { // 4x Launcher Support Rack
-        displayName = "4x HOT 1 [ACE]";
+        displayName = CSTRING(hot1_4);
         count = 4;
         mass = 340;
         pylonWeapon = QGVAR(1_launcher);
@@ -56,9 +56,9 @@ class CfgMagazines {
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT2);
-        displayName = "HOT 1 [ACE]";
-        displayNameShort = "HOT2";
-        descriptionShort = "HOT2";
+        displayName = CSTRING(hot2_long);
+        displayNameShort = CSTRING(hot2_short);
+        descriptionShort = CSTRING(missileType);
     };
     
     class GVAR(2_2Rnd): GVAR(2_6Rnd) {
@@ -67,7 +67,7 @@ class CfgMagazines {
 
     // 1.70 pylon magazines:
     class GVAR(2_PylonMissile_1Rnd): GVAR(2_6Rnd) { // Bare missle
-        displayName = "1x HOT 2 [ACE]";
+        displayName = CSTRING(hot2_1);
         pylonWeapon = QGVAR(2_launcher);
         count = 1;
         mass = 70;
@@ -75,7 +75,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
     class GVAR(2_PylonRack_1Rnd): GVAR(2_6Rnd) { // 1x Launcher Support Rack
-        displayName = "1x HOT 2 [ACE]";
+        displayName = CSTRING(hot2_1);
         pylonWeapon = QGVAR(2_launcher);
         count = 1;
         mass = 85;
@@ -83,7 +83,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
     class GVAR(2_PylonRack_3Rnd): GVAR(2_6Rnd) { // 3x Launcher Support Rack
-        displayName = "3x HOT 2 [ACE]";
+        displayName = CSTRING(hot2_3);
         pylonWeapon = QGVAR(2_launcher);
         count = 3;
         mass = 250;
@@ -92,7 +92,7 @@ class CfgMagazines {
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
     class GVAR(2_PylonRack_4Rnd): GVAR(2_6Rnd) { // 4x Launcher Support Rack
-        displayName = "4x HOT 2 [ACE]";
+        displayName = CSTRING(hot2_4);
         pylonWeapon = QGVAR(2_launcher);
         count = 4;
         mass = 340;
@@ -106,9 +106,9 @@ class CfgMagazines {
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT2MP);
-        displayName = "HOT 2MP [ACE]";
-        displayNameShort = "HOT2MP";
-        descriptionShort = "HOT2MP";
+        displayName = CSTRING(hot2mp_long);
+        displayNameShort = CSTRING(hot2mp_short);
+        descriptionShort = CSTRING(missileType);
     };
     
     class GVAR(2MP_2Rnd): GVAR(2MP_6Rnd) {
@@ -117,7 +117,7 @@ class CfgMagazines {
 
     // 1.70 pylon magazines:
     class GVAR(2MP_PylonMissile_1Rnd): GVAR(2MP_6Rnd) { // Bare missle
-        displayName = "1x HOT 2MP [ACE]";
+        displayName = CSTRING(hot2mp_1);
         pylonWeapon = QGVAR(2mp_launcher);
         count = 1;
         mass = 70;
@@ -125,7 +125,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
     class GVAR(2MP_PylonRack_1Rnd): GVAR(2MP_6Rnd) { // 1x Launcher Support Rack
-        displayName = "1x HOT 2MP [ACE]";
+        displayName = CSTRING(hot2mp_1);
         pylonWeapon = QGVAR(2mp_launcher);
         count = 1;
         mass = 85;
@@ -133,7 +133,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
     class GVAR(2MP_PylonRack_3Rnd): GVAR(2MP_6Rnd) { // 3x Launcher Support Rack
-        displayName = "3x HOT 2MP [ACE]";
+        displayName = CSTRING(hot2mp_3);
         pylonWeapon = QGVAR(2mp_launcher);
         count = 3;
         mass = 250;
@@ -142,7 +142,7 @@ class CfgMagazines {
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
     class GVAR(2MP_PylonRack_4Rnd): GVAR(2MP_6Rnd) { // 4x Launcher Support Rack
-        displayName = "4x HOT 2MP [ACE]";
+        displayName = CSTRING(hot2mp_4);
         pylonWeapon = QGVAR(2mp_launcher);
         count = 4;
         mass = 340;
@@ -156,9 +156,9 @@ class CfgMagazines {
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT3);
-        displayName = "HOT 1 [ACE]";
-        displayNameShort = "HOT3";
-        descriptionShort = "HOT3";
+        displayName = CSTRING(hot3_long);
+        displayNameShort = CSTRING(hot3_short);
+        descriptionShort = CSTRING(missileType);
     };
     
     class GVAR(3_2Rnd): GVAR(3_6Rnd) { // Old style vehicle magazine
@@ -167,7 +167,7 @@ class CfgMagazines {
 
     // 1.70 pylon magazines:
     class GVAR(3_PylonMissile_1Rnd): GVAR(3_6Rnd) { // Bare missle
-        displayName = "1x HOT 3 [ACE]";
+        displayName = CSTRING(hot3_1);
         pylonWeapon = QGVAR(3_launcher);
         count = 1;
         mass = 70;
@@ -176,7 +176,7 @@ class CfgMagazines {
     };
     
     class GVAR(3_PylonRack_1Rnd): GVAR(3_6Rnd) { // 1x Launcher Support Rack
-        displayName = "1x HOT 3 [ACE]";
+        displayName = CSTRING(hot3_1);
         pylonWeapon = QGVAR(3_launcher);
         count = 1;
         mass = 85;
@@ -184,7 +184,7 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
     };
     class GVAR(3_PylonRack_3Rnd): GVAR(3_6Rnd) { // 3x Launcher Support Rack
-        displayName = "3x HOT 3 [ACE]";
+        displayName = CSTRING(hot3_3);
         pylonWeapon = QGVAR(3_launcher);
         count = 3;
         mass = 250;
@@ -193,7 +193,7 @@ class CfgMagazines {
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
     class GVAR(3_PylonRack_4Rnd): GVAR(3_6Rnd) { // 4x Launcher Support Rack
-        displayName = "4x HOT 3 [ACE]";
+        displayName = CSTRING(hot3_4);
         pylonWeapon = QGVAR(3_launcher);
         count = 4;
         mass = 340;

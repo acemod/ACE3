@@ -16,22 +16,21 @@
  *
  * Public: No
  */
-params ["_seekerTargetPos", "_args"];
+params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
+_attackProfileStateParams params["_maxCorrectableDistance"];
 
 if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith { [0, 0, 0] };
-
-private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance" >> QGVAR(correctionDistance);
-private _maxCorrectableDistance = if (isNumber(_config)) then { getNumber(_config) } else { DEFAULT_CORRECTION_DISTANCE };
 
 private _projectilePos = getPosASL _projectile;
 private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
 
-private _magnitude = vectorMagnitude _relativeCorrection;
+private _magnitude = vectorMagnitude [_relativeCorrection select 0, 0, _relativeCorrection select 2];
 
 private _fovImpulse = 1 min (_magnitude / _maxCorrectableDistance); // the simulated impulse for the missile being close to the center of the crosshair
 
+// Adjust the impulse due to near-zero values creating wobbly missiles?
 private _correction = _fovImpulse;
 
 _relativeCorrection = (vectorNormalized _relativeCorrection) vectorMultiply _correction;

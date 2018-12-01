@@ -34,10 +34,10 @@ class CfgAmmo {
         indirectHitRange = 3.5;
         explosive = 0.8;
         
-        displayName = "HOT 1";
-        displayNameShort = "HOT1";
-        description = "HOT 1";
-        descriptionShort = "HOT1";
+        displayName = CSTRING(hot1_long);
+        displayNameShort = CSTRING(hot1_short);
+        description = CSTRING(missileType_Description);
+        descriptionShort = CSTRING(missileType);
 
 
         effectsMissile = "missile2";
@@ -70,6 +70,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
             
+            onFired = QFUNC(onFired);
+            
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 60;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
@@ -87,10 +89,8 @@ class CfgAmmo {
     
     class GVAR(HOT2): GVAR(HOT1) {
         submunitionAmmo = QGVAR(ammo_Penetrator_HOT2);
-        displayName = "HOT 2";
-        displayNameShort = "HOT2";
-        description = "HOT 2";
-        descriptionShort = "HOT2";
+        displayName = CSTRING(hot2_long);
+        displayNameShort = CSTRING(hot2_short);
         
         class ace_missileguidance: ace_missileguidance {
             enabled = 1;
@@ -105,10 +105,9 @@ class CfgAmmo {
         indirectHitRange = 12;
         explosionEffects = "BombExplosion";
         
-        displayName = "HOT 2MP";
-        displayNameShort = "HOT2MP";
-        description = "HOT 2MP";
-        descriptionShort = "HOT2MP";
+        displayName = CSTRING(hot2mp_long);
+        displayNameShort = CSTRING(hot2mp_short);
+        description = CSTRING(missileType_Description_AP);
         
         class ace_missileguidance: ace_missileguidance {
             enabled = 1;
@@ -118,10 +117,8 @@ class CfgAmmo {
     class GVAR(HOT3): GVAR(HOT2) {
         submunitionAmmo = QGVAR(ammo_Penetrator_HOT3);
         warheadName = "TandemHEAT";
-        displayName = "HOT 3";
-        displayNameShort = "HOT3";
-        description = "HOT 3";
-        descriptionShort = "HOT3";
+        displayName = CSTRING(hot3_long);
+        displayNameShort = CSTRING(hot3_short);
         
         class ace_missileguidance: ace_missileguidance {
             enabled = 1;

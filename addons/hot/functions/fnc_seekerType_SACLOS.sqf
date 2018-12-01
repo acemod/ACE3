@@ -20,10 +20,9 @@ _args params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
 _stateParams params ["", "_seekerStateParams"];
+_seekerStateParams params ["_wireCut", "_randomVector", "_turretPath", "_memoryPointGunnerOptics"];
 
-private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
-
-private _shooterPos = AGLToASL (_shooter modelToWorld(_shooter selectionPosition getText(([_shooter, _turretPath] call CBA_fnc_getTurret) >> "memoryPointGunnerOptics")));
+private _shooterPos = AGLToASL (_shooter modelToWorld(_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;
 
 private _lookDirection = if !(_shooter isKindOf "CAManBase") then {
@@ -36,14 +35,12 @@ private _distanceToProj = _shooterPos vectorDistance _projPos;
 if (_distanceToProj > _seekerMaxRange) exitWith {
     // wire snap, random direction
     private _vector = [];
-    if (_seekerStateParams isEqualTo [] || { !(_seekerStateParams select 0) }) then {
-        _vector = RANDOM_VECTOR_3D vectorMultiply 300;
+    if (!_wireCut) then {
+        _randomVector = RANDOM_VECTOR_3D vectorMultiply 300;
         _seekerStateParams set [0, true];
-        _seekerStateParams set [1, _vector];
-    } else {
-        _vector = _seekerStateParams select 1;
+        _seekerStateParams set [1, _randomVector];
     };
-    _projPos vectorAdd _vector
+    _projPos vectorAdd _randomVector
 };
 
 private _testPointVector = vectorNormalized (_projPos vectorDiff _shooterPos);

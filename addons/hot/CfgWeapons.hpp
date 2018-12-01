@@ -2,7 +2,7 @@ class CfgWeapons {
     class RocketPods;
     class MissileLauncher;
     class GVAR(1_launcher): RocketPods {
-        displayName = "HOT 1";
+        displayName = CSTRING(hot1_short);
         magazines[] = {QGVAR(1_6Rnd), QGVAR(1_2Rnd), QGVAR(1_PylonMissile_1Rnd), QGVAR(1_PylonRack_1Rnd), QGVAR(1_PylonRack_3Rnd), QGVAR(1_PylonRack_4Rnd)};
         initSpeed = 100;
         autoFire = 0;
@@ -23,19 +23,19 @@ class CfgWeapons {
         showAimCursorInternal = 0;
     };
     class GVAR(2_launcher): GVAR(1_launcher) {
-        displayName = "HOT 2";
+        displayName = CSTRING(hot2_short);
         magazines[] = {QGVAR(2_6Rnd), QGVAR(2_2Rnd), QGVAR(2_PylonMissile_1Rnd), QGVAR(2_PylonRack_1Rnd), QGVAR(2_PylonRack_3Rnd), QGVAR(2_PylonRack_4Rnd)};
     };
     class GVAR(2mp_launcher): GVAR(1_launcher) {
-        displayName = "HOT 2MP";
+        displayName = CSTRING(hot2mp_short);
         magazines[] = {QGVAR(2MP_6Rnd), QGVAR(2MP_2Rnd), QGVAR(2MP_PylonMissile_1Rnd), QGVAR(2MP_PylonRack_1Rnd), QGVAR(2MP_PylonRack_3Rnd), QGVAR(2MP_PylonRack_4Rnd)};
     };
     class GVAR(3_launcher): GVAR(1_launcher) {
-        displayName = "HOT 3";
+        displayName = CSTRING(hot3_short);
         magazines[] = {QGVAR(3_6Rnd), QGVAR(3_2Rnd), QGVAR(3_PylonMissile_1Rnd), QGVAR(3_PylonRack_1Rnd), QGVAR(3_PylonRack_3Rnd), QGVAR(3_PylonRack_4Rnd)};
     };
     class GVAR(generic_launcher): MissileLauncher {
-        displayName = "HOT Missile";
+        displayName = CSTRING(hotMissile);
         magazines[] = {QGVAR(1_6Rnd), QGVAR(1_2Rnd), QGVAR(2_6Rnd), QGVAR(2_2Rnd), QGVAR(2MP_6Rnd), QGVAR(2MP_2Rnd), QGVAR(3_6Rnd), QGVAR(3_2Rnd)};
         initSpeed = 100;
         autoFire = 0;
@@ -54,6 +54,9 @@ class CfgWeapons {
         cursor = "EmptyCursor";
         cursorAim = "missile";
         showAimCursorInternal = 0;
+        
+        autoReload = 1;
+        magazineReloadTime = 20;
     };
 };
 

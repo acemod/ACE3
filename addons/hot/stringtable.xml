@@ -3,12 +3,81 @@
     <Package name="HOT">
         <Key ID="STR_ACE_HOT_missileType">
             <English>Wire-Guided</English>
+            <German>Drahtgelenkt</German>
         </Key>
         <Key ID="STR_ACE_HOT_SACLOS_Description">
             <English>Semi-automatic command to line of sight</English>
+            <German>halbautomatische Steuerung über Sichtverbindung (SACLOS)</German>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description">
-            <English>Wire-Guided missile</English>
+            <English>Wire-Guided Missile</English>
+            <German>Drahtgelenkte Rakete</German>
+        </Key>
+        <Key ID="STR_ACE_HOT_hotMissile">
+            <English>HOT Missile [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot1_short">
+            <English>HOT1</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot1_long">
+            <English>HOT 1 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2_short">
+            <English>HOT2</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2_long">
+            <English>HOT 2 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2mp_short">
+            <English>HOT2MP</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2mp_long">
+            <English>HOT 2MP [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot3_short">
+            <English>HOT3</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot3_long">
+            <English>HOT 3 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_missileType_Description_AP">
+            <English>Wire-Guided Missile (Anti-Personnel)</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot1_1">
+            <English>1x HOT 1 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot1_3">
+            <English>3x HOT 1 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot1_4">
+            <English>4x HOT 1 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2_1">
+            <English>1x HOT 2 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2_3">
+            <English>3x HOT 2 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2_4">
+            <English>4x HOT 2 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2mp_1">
+            <English>1x HOT 2MP [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2mp_3">
+            <English>3x HOT 2MP [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot2mp_4">
+            <English>4x HOT 2MP [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot3_1">
+            <English>1x HOT 3 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot3_4">
+            <English>4x HOT 3 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_HOT_hot3_3">
+            <English>3x HOT 3 [ACE]</English>
         </Key>
     </Package>
 </Project>
