@@ -73,7 +73,7 @@ class CfgAmmo {
             onFired = QFUNC(onFired);
             
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            seekerAngle = 30;           // Angle in front of the missile which can be searched
+            seekerAngle = 30;           // Angle from the shooter's view that can track the missile
             seekerAccuracy = 1;         // seeker accuracy multiplier
 
             seekerMinRange = 75;

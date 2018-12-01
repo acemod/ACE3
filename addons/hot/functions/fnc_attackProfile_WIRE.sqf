@@ -17,24 +17,29 @@
  * Public: No
  */
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-_args params ["_firedEH", "", "", "_seekerParams"];
+_args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset"];
-_seekerParams params["", "", "_seekerMaxRange"];
-
-if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith { [0, 0, 0] };
+_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr"];
 
 private _projectilePos = getPosASL _projectile;
 
-if (((getPosASL _shooter) vectorDistanceSqr _projectilePos) > (_seekerMaxRange * _seekerMaxRange)) exitWith {
+if ((((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     // wire snap, random direction
-    if (!_wireCut) then {
+    if (_randomVector isEqualTo [0, 0, 0]) then {
         _randomVector = RANDOM_VECTOR_3D vectorMultiply 300;
         _attackProfileStateParams set [1, true];
         _attackProfileStateParams set [2, _randomVector];
     };
-    _projPos vectorAdd _randomVector
+    _projectilePos vectorAdd _randomVector
 };
+
+if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith {
+    // cut wire if its caught on terrain
+    /*if !(lineIntersectsSurfaces [getPosASL _shooter, _projectilePos, _shooter] isEqualTo []) then {
+        _attackProfileStateParams set [1, true];
+    };*/
+    [0, 0, 0]
+ };
 
 private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
 _relativeCorrection = _relativeCorrection vectorDiff _crosshairOffset;
