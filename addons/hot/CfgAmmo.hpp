@@ -58,7 +58,7 @@ class CfgAmmo {
             enabled = 1;
 
             minDeflection = 0;          // Minium flap deflection for guidance
-            maxDeflection = 0.0017;      // Maximum flap deflection for guidance
+            maxDeflection = 0.0013;      // Maximum flap deflection for guidance
             incDeflection = 0.0005;     // The incrmeent in which deflection adjusts.
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
@@ -79,7 +79,7 @@ class CfgAmmo {
             seekerMinRange = 75;
             seekerMaxRange = 4000;      // Range from the missile which the seeker can visually search
             
-            GVAR(correctionDistance) = 20;
+            GVAR(correctionDistance) = 10;
 
             // Attack profile type selection
             defaultAttackProfile = "WIRE";
