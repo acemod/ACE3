@@ -66,7 +66,7 @@
             <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
-            <English>Inject Adenosine</English>
+            <English>Inject Lotramine</English>
             <German>Adenosin injizieren</German>
             <Spanish>Inyectar Adenosina</Spanish>
             <Polish>Wstrzyknij adenozynę</Polish>
@@ -81,7 +81,7 @@
             <Chinese>注射腺苷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
-            <English>Inject Atropine</English>
+            <English>Inject Cardinex</English>
             <German>Atropin injizieren</German>
             <Spanish>Inyectar Atropina</Spanish>
             <Czech>Aplikovat atropin</Czech>
@@ -97,7 +97,7 @@
             <Chinese>注射阿托品</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Epinephrine">
-            <English>Inject Epinephrine</English>
+            <English>Inject Cordrazine</English>
             <German>Epinephrine injizieren</German>
             <Spanish>Inyectar Epinefrina</Spanish>
             <Polish>Wstrzyknij adrenalinę</Polish>
@@ -113,7 +113,7 @@
             <Chinese>注射腎上腺素</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Morphine">
-            <English>Inject Morphine</English>
+            <English>Inject Comaren</English>
             <German>Morphin injizieren</German>
             <Spanish>Inyectar Morfina</Spanish>
             <Polish>Wstrzyknij morfinę</Polish>
@@ -177,7 +177,7 @@
             <Chinese>注射生理食鹽水</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Tourniquet">
-            <English>Apply Tourniquet</English>
+            <English>Apply Gravpress cuff</English>
             <German>Tourniquet anwenden</German>
             <Spanish>Aplicar torniquete</Spanish>
             <Czech>Aplikovat škrtidlo</Czech>
@@ -305,7 +305,7 @@
             <Chinese>繃帶包紮 右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Morphine">
-            <English>Injecting Morphine...</English>
+            <English>Injecting Comaren...</English>
             <German>Morphin injizieren...</German>
             <Spanish>Inyectando Morfina...</Spanish>
             <Polish>Wstrzykiwanie morfiny...</Polish>
@@ -321,7 +321,7 @@
             <Chinese>嗎啡注射中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
-            <English>Injecting Epinephrine...</English>
+            <English>Injecting Cordrazine...</English>
             <German>Epinephrin injizieren...</German>
             <Spanish>Inyectando Epinefrina...</Spanish>
             <Polish>Wstrzykiwanie adrenaliny...</Polish>
@@ -337,7 +337,7 @@
             <Chinese>腎上腺素注射中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Adenosine">
-            <English>Injecting Adenosine...</English>
+            <English>Injecting Lotramine...</English>
             <German>Adenosin injizieren...</German>
             <Spanish>Inyectando Adenosina...</Spanish>
             <Polish>Wstrzykiwanie adenozyny...</Polish>
@@ -352,7 +352,7 @@
             <Chinese>腺苷注射中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
-            <English>Injecting Atropine...</English>
+            <English>Injecting Cardinex ...</English>
             <German>Atropin injizieren...</German>
             <Spanish>Inyectando Atropina...</Spanish>
             <Czech>Aplikuji atropin...</Czech>
@@ -432,7 +432,7 @@
             <Chinese>繃帶包紮中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Applying_Tourniquet">
-            <English>Applying Tourniquet...</English>
+            <English>Applying Gravpress cuff...</English>
             <German>Setze Tourniquet an...</German>
             <Spanish>Aplicando torniquete...</Spanish>
             <Czech>Aplikuji škrtidlo...</Czech>
@@ -480,7 +480,7 @@
             <Chinese>基礎繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PackingBandage">
-            <English>Packing Bandage</English>
+            <English>Actibandage</English>
             <German>Mullbinde</German>
             <Spanish>Vendaje compresivo</Spanish>
             <Russian>Компресионный пакет</Russian>
@@ -496,7 +496,7 @@
             <Chinese>包紮繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_ElasticBandage">
-            <English>Elastic Bandage</English>
+            <English>Spray bandage</English>
             <German>Elastischer Verband</German>
             <Spanish>Vendaje elástico</Spanish>
             <Russian>Давящая повязка</Russian>
@@ -512,7 +512,7 @@
             <Chinese>彈性繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_QuikClot">
-            <English>QuikClot</English>
+            <English>Dermaseal patch</English>
             <German>QuikClot</German>
             <Spanish>QuikClot</Spanish>
             <Russian>QuikClot</Russian>
@@ -592,7 +592,7 @@
             <Chinese>此檢傷分類卡上沒有任何資料</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Tourniquet">
-            <English>Tourniquet</English>
+            <English>Gravpress cuff</English>
             <German>Tourniquet</German>
             <Spanish>Torniquete</Spanish>
             <Russian>Жгут</Russian>
@@ -608,7 +608,7 @@
             <Chinese>軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_RemoveTourniquet">
-            <English>Remove Tourniquet</English>
+            <English>Remove Gravpress cuff</English>
             <German>Tourniquet entfernen</German>
             <Spanish>Quitar torniquete</Spanish>
             <Russian>Снять жгут</Russian>
@@ -1024,7 +1024,7 @@
             <Korean>혈액 부족</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Tourniquet_Applied">
-            <English>Tourniquet [CAT]</English>
+            <English>Gravpress cuff</English>
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
@@ -1104,7 +1104,7 @@
             <Chinese>用於覆蓋傷口以防止出血，透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Display">
-            <English>Packing Bandage</English>
+            <English>Actibandage</English>
             <German>Mullbinde</German>
             <Russian>Тампонирующая повязка</Russian>
             <Spanish>Vendaje compresivo</Spanish>
@@ -1136,7 +1136,7 @@
             <Chinese>用於包紮中到大型傷口，並防止出血</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Use">
-            <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is an option in large polytrauma injuries.</English>
+            <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Useing a Actibandage to pack a wound is an option in large polytrauma injuries.</English>
             <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжёлых сочетанных ранениях возможно тампонирование раны.</Russian>
             <Spanish>Se utiliza para detener la hemorragia de una herida y favorecer su cicatrización. Se usa en grandes lesiones o politraumatismos.</Spanish>
             <French>Bandage servant à recouvrir les blessures pour arrêter les hémoragies et faciliter la guérison. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques.</French>
@@ -1152,7 +1152,7 @@
             <Chinese>用於包紮中到大型傷口，並防止出血，為在大型多處性傷口的選項之一!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Display">
-            <English>Bandage (Elastic)</English>
+            <English>Bandage (Spray)</English>
             <German>Bandage (Elastisch)</German>
             <Russian>Повязка (давящая)</Russian>
             <Spanish>Vendaje (Elástico)</Spanish>
@@ -1168,7 +1168,7 @@
             <Chinese>彈性繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Short">
-            <English>Bandage kit, Elastic</English>
+            <English>Bandage kit, Spray</English>
             <German>Elastische Binde (Kompressionsbinde)</German>
             <Russian>Давящая повязка</Russian>
             <Spanish>Kit de vendaje (Elástico)</Spanish>
@@ -1200,7 +1200,7 @@
             <Chinese>可對傷口持續壓迫並固定以防止傷口情況變嚴重</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Tourniquet_Display">
-            <English>Tourniquet (CAT)</English>
+            <English>Gravpress cuff</English>
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete (CAT)</Spanish>
@@ -1248,7 +1248,7 @@
             <Chinese>用於壓迫靜脈與動脈的血液流動，達到減緩失血速度的目的</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Display">
-            <English>Morphine autoinjector</English>
+            <English>Comaren Hypoinjector</English>
             <German>Morphium-Autoinjektor</German>
             <Russian>Морфин в пневмошприце</Russian>
             <Spanish>Morfina auto-inyectable</Spanish>
@@ -1296,7 +1296,7 @@
             <Chinese>止痛藥的一種，用於減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
-            <English>Adenosine autoinjector</English>
+            <English>Lotramine Hypoinjector</English>
             <German>Adenosin-Autoinjektor</German>
             <Spanish>Asenosina auto-inyectable</Spanish>
             <Polish>Autostrzykawka z adenozyną</Polish>
@@ -1311,7 +1311,7 @@
             <Chinese>腺苷自動注射器</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
-            <English>Used to counter effects of Epinephrine</English>
+            <English>Used to counter effects of Cordrazine</English>
             <German>Wird verwendet um die Symptome von Epiniphrin zu lindern</German>
             <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
             <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
@@ -1326,7 +1326,7 @@
             <Chinese>用來對付腎上腺素的影響</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
-            <English>A drug used to counter the effects of Epinephrine</English>
+            <English>A drug used to counter the effects of Cordrazine</English>
             <German>Ein Medikament, das die Symptome von Epiniphrin bekämpft.</German>
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
             <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
@@ -1341,7 +1341,7 @@
             <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
-            <English>Atropine autoinjector</English>
+            <English>Cardinex Hypoinjector </English>
             <Russian>Атропин в пневмошприце</Russian>
             <Spanish>Atropina auto-inyectable</Spanish>
             <French>Auto-injecteur d'atropine</French>
@@ -1389,7 +1389,7 @@
             <Chinese>軍用神經解毒針，用來應付核生化汙染的情況</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Display">
-            <English>Epinephrine autoinjector</English>
+            <English>Cordrazine Hypoinjector </English>
             <Russian>Адреналин в пневмошприце</Russian>
             <Spanish>Epinefrina auto-inyectable</Spanish>
             <French>Auto-injecteur d'épinéphrine</French>
@@ -1677,7 +1677,7 @@
             <Chinese>生理食鹽水 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Display">
-            <English>Basic Field Dressing (QuikClot)</English>
+            <English>Basic Field Dressing (Dermaseal)</English>
             <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Bandage basique (Hémostatique)</French>
@@ -1693,7 +1693,7 @@
             <Chinese>基本戰地包紮 (止血粉)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Desc_Short">
-            <English>QuikClot bandage</English>
+            <English>Dermaseal patch</English>
             <Russian>Гемостатический пакет QuikClot</Russian>
             <Spanish>Vendaje QuikClot</Spanish>
             <French>Bandage hémostatique</French>
@@ -2876,7 +2876,7 @@
             <Korean>%1 (이)가 IV를 실시함</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_appliedTourniquet">
-            <English>%1 applied a tourniquet</English>
+            <English>%1 applied a Gravpress cuff</English>
             <Spanish>%1 aplicado torniquete</Spanish>
             <Russian>%1 наложил жгут</Russian>
             <German>%1 hat ein Tourniquet angelegt</German>
@@ -3738,7 +3738,7 @@
             <Chinese>治療中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
-            <English>Removing Tourniquet...</English>
+            <English>Removing Gravpress cuff...</English>
             <German>Tourniquet entfernen...</German>
             <Polish>Zdejmowanie stazy...</Polish>
             <Spanish>Quitando torniquete...</Spanish>
@@ -4455,7 +4455,7 @@
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
-            <English>Allow Epinephrine</English>
+            <English>Allow Cordrazine</English>
             <German>Erlaube Epiniphrin</German>
             <Spanish>Permitir Epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
@@ -4470,7 +4470,7 @@
             <Chinese>允許使用腎上腺素</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
-            <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
+            <English>Who can use Cordrazine for full heal? (Basic medical only)</English>
             <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
             <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
@@ -4597,7 +4597,7 @@
             <Chinese>要在使用後刪除個人急救包嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
-            <English>Locations Epinephrine</English>
+            <English>Locations Cordrazine</English>
             <German>Orte für Epiniphrin</German>
             <Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
@@ -4612,7 +4612,7 @@
             <Chinese>腎上腺素使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
-            <English>Where can the Epinephrine be used? (Basic Medical)</English>
+            <English>Where can the Cordrazine be used? (Basic Medical)</English>
             <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
             <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
@@ -5533,7 +5533,7 @@
             <Chinese>此人(%1)是清醒且不能被裝載</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
-            <English>There is no tourniquet on this body part!</English>
+            <English>There is no Gravpress cuff on this body part!</English>
             <German>An diesem Körperteil befindet sich kein Tourniquet!</German>
             <Polish>Na tej części ciała nie ma stazy!</Polish>
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
@@ -5659,7 +5659,7 @@
             <Italian>Overdose</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
-            <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
+            <English>Makes patient vulnerable to Comaren/Cordrazine/Cardinex overdosing.</English>
             <Japanese>モルヒネ/アドレナリン/アトロピンの過剰投与により患者を脆弱にします。</Japanese>
             <Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
             <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
