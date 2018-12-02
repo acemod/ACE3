@@ -291,7 +291,7 @@ class CfgWorlds {
     class Stratis {
       surfaceTextureBasePath = "a3\map_data";
       filePrefix = "co.paa";
-        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+      camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     //Takistan
