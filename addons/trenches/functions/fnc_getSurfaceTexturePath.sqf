@@ -45,17 +45,17 @@ private _getTexturePath = {
     format["%1\%2%3", _basePath, (_fileNameArr joinString ""), _filePrefix];
 };
 
-private _result = [];
-
-if !(isNil QGVAR(automaticFileSetup)) then {
+private _result = if !(isNil QGVAR(automaticFileSetup)) then {
    GVAR(automaticFileSetup) params ["_basePath", "_filePrefix"];
-   _result = [_surfaceType, _basePath, _filePrefix] call _getTexturePath;
+
+   [_surfaceType, _basePath, _filePrefix] call _getTexturePath;
 } else {
    private _basePath = getText (configFile >> "CfgWorlds" >> "Altis" >> "surfaceTextureBasePath");
    if ((_surfaceType find "#Gdt" == -1) || {worldName == "Tanoa"}) then {
        _basePath = getText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")
    };
-    _result = [_surfaceType, _basePath, getText(configFile >> "CfgWorlds" >> worldName >> "filePrefix")] call _getTexturePath;
+   
+   [_surfaceType, _basePath, getText(configFile >> "CfgWorlds" >> worldName >> "filePrefix")] call _getTexturePath;
 };
 
 if (isNil _result || _result isEqualTo []) then {

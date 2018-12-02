@@ -50,7 +50,7 @@ _rtbc params ["", "", "_rtbcZ"];
 
 private _boundingBoxOffset =  missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(boundingBoxOffset)),0];
 private _posDiff = (abs(_lbfcZ) + abs(_rtbcZ)) - _boundingBoxOffset;
-private _newPos = _trench modelToWorldWorld [0,0, -(_posDiff)];
+private _newPos = _trench modelToWorldWorld [0,0, -_posDiff];
 _trench setPosWorld _newPos;
 
 _trench setVariable [QGVAR(diggingSteps), _posDiff/1000,true];
