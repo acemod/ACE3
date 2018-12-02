@@ -24,6 +24,11 @@ private _maxCorrectableDistance = if (isNumber(_config >> "correctionDistance"))
 private _crosshairOffset = if (isArray(_config >> "offsetFromCrosshair")) then { getArray(_config >> "offsetFromCrosshair") } else { [0, 0, 0] };
 private _maxDistance = _seekerMaxRange * _seekerMaxRange;
 
+// AI don't know how to use the crosshair offset becauze they dum dum
+if !(_shooter == ACE_PLAYER) then {
+    _crosshairOffset = [0, 0, 0];
+};
+
 _attackProfileStateParams set [0, _maxCorrectableDistance];
 _attackProfileStateParams set [1, false]; // _wireCut
 _attackProfileStateParams set [2, [0, 0, 0]]; // _randomVector

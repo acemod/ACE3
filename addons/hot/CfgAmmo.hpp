@@ -21,6 +21,7 @@ class CfgAmmo {
     };
     
     class GVAR(HOT1): M_Scalpel_AT {
+        aiAmmoUsageFlags = "128+512";
         model = "\A3\Weapons_F_Tank\Launchers\Vorona\Vorona_missile_heat_fly";
         proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
         submunitionAmmo = QGVAR(ammo_Penetrator_HOT1);
@@ -98,8 +99,10 @@ class CfgAmmo {
     };
     
     class GVAR(HOT2MP): GVAR(HOT2) {
+        aiAmmoUsageFlags = "64+128";
         submunitionAmmo = "";
         warheadName = "HE";
+        allowAgainstInfantry = 1;
         hit = 200;
         indirectHit = 200;
         indirectHitRange = 5;
