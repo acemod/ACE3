@@ -29,13 +29,18 @@ if (_gunner != ACE_PLAYER) then {
     _crosshairOffset = [0, 0, 0];
 };
 
+ private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
+private _turretConfig = [_shooter, _turretPath] call CBA_fnc_getTurret;
+
+private _wireCutSource = _shooter selectionPosition getText(_turretConfig >> "missileEnd");
+
 _attackProfileStateParams set [0, _maxCorrectableDistance];
 _attackProfileStateParams set [1, false]; // _wireCut
 _attackProfileStateParams set [2, [0, 0, 0]]; // _randomVector
 _attackProfileStateParams set [3, _crosshairOffset]; // crosshair offset
 _attackProfileStateParams set [4, _maxDistance]; // max distance squared used for wire cut
- private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
-_memoryPointGunnerOptics = getText(([_shooter, _turretPath] call CBA_fnc_getTurret) >> "memoryPointGunnerOptics");
+_attackProfileStateParams set [5, _wireCutSource];
+_memoryPointGunnerOptics = getText(_turretConfig >> "memoryPointGunnerOptics");
 _seekerStateParams set [0, _turretPath];
 _seekerStateParams set [1, _memoryPointGunnerOptics];
 
