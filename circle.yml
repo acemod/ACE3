@@ -33,7 +33,7 @@ jobs:
 
   update-docs:
     docker:
-      - image: acemod/sqflint:latest
+      - image: acemod/armake:latest
     steps:
       - checkout
       - run:
