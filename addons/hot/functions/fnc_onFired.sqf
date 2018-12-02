@@ -15,7 +15,7 @@
  * Public: No
  */
  params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
-_firedEH params ["_shooter","_weapon","","","","","_projectile"];
+_firedEH params ["_shooter","_weapon","","","","","_projectile", "_gunner"];
 _stateParams params ["", "_seekerStateParams", "_attackProfileStateParams"];
 _seekerParams params ["", "", "_seekerMaxRange"];
 
@@ -25,7 +25,7 @@ private _crosshairOffset = if (isArray(_config >> "offsetFromCrosshair")) then {
 private _maxDistance = _seekerMaxRange * _seekerMaxRange;
 
 // AI don't know how to use the crosshair offset becauze they dum dum
-if !(_shooter == ACE_PLAYER) then {
+if (_gunner != ACE_PLAYER) then {
     _crosshairOffset = [0, 0, 0];
 };
 
