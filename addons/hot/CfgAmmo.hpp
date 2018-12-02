@@ -39,7 +39,6 @@ class CfgAmmo {
         description = CSTRING(missileType_Description);
         descriptionShort = CSTRING(missileType);
 
-
         effectsMissile = "missile2";
 
         irLock = 0;
@@ -103,8 +102,16 @@ class CfgAmmo {
         warheadName = "HE";
         hit = 200;
         indirectHit = 200;
-        indirectHitRange = 12;
+        indirectHitRange = 5;
         explosionEffects = "BombExplosion";
+        explosive = 0.7;
+        
+        ace_frag_enabled = 1; 
+        ace_frag_metal = 7100; // 1000 steel balls
+        ace_frag_charge = 4100;
+        ace_frag_gurney_c = 2700;
+        ace_frag_gurney_k = 3/5;
+        ace_frag_classes[] = {"ACE_frag_small"};
         
         displayName = CSTRING(hot2mp_long);
         displayNameShort = CSTRING(hot2mp_short);
