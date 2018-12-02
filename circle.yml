@@ -31,7 +31,7 @@ jobs:
       - checkout
       - run:
           name: Lint sqf code
-          command: sqflint --exit=e -d /addons
+          command: sqflint --exit=e -d addons
 
 workflows:
   version: 2
