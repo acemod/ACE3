@@ -54,7 +54,6 @@ workflows:
       - validate-scripts
       - armake:
           requires:
-            - linting
             - validate-scripts
       - update-docs:
           requires:
