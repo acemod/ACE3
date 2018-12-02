@@ -24,3 +24,18 @@ jobs:
             else
               echo "Skipping, not on acemod/ACE3 master branch..."
             fi
+  linting:
+    docker:
+      - image: acemod/sqflint:latest
+    steps:
+      - checkout
+      - run:
+          name: Lint sqf code
+          command: sqflint --exit=e -d /addons
+
+workflows:
+  version: 2
+  build-job:
+    jobs:
+      - linting
+      - build
