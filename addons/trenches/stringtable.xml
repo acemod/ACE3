@@ -49,7 +49,7 @@
             <Chinesesimp>掩体 - 小</Chinesesimp>
             <Chinese>掩體 - 小</Chinese>
         </Key>
-        <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
+        <Key ID="STR_ACE_Trenches_EnvelopeSmallDescription">
             <English>Small Personal Trench</English>
             <German>Kleiner Schützengraben</German>
             <Polish>Mała jednoosobowa wnęka</Polish>
@@ -93,7 +93,7 @@
             <Chinesesimp>掩体 - 大</Chinesesimp>
             <Chinese>掩體 - 大</Chinese>
         </Key>
-        <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
+        <Key ID="STR_ACE_Trenches_EnvelopeBigDescription">
             <English>Large Personal Trench</English>
             <German>Großer Schützengraben</German>
             <Polish>Duża jednoosobowa wnęka</Polish>
@@ -276,7 +276,7 @@
             <German>Rund - Fahrzeug</German>
             <Russian>Окоп для техники</Russian>
         </Key>
-        <Key ID="STR_ACE_Trenches_EnevlopeVehicleDescription">
+        <Key ID="STR_ACE_Trenches_EnvelopeVehicleDescription">
             <English>Vehicle Trench</English>
             <German>Fahrzeug Schützengraben</German>
             <Russian>Окоп для техники</Russian>
@@ -291,7 +291,7 @@
             <German>Rund - Kurz</German>
             <Russian>Короткий окоп</Russian>
         </Key>
-        <Key ID="STR_ACE_Trenches_EnevlopeShortDescription">
+        <Key ID="STR_ACE_Trenches_EnvelopeShortDescription">
             <English>Short Trench</English>
             <German>Kurzer Schützengraben</German>
             <Russian>Короткий окоп</Russian>

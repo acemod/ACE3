@@ -54,7 +54,7 @@ class CfgVehicles {
     class ACE_envelope_small: BagFence_base_F {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeSmallName);
-        descriptionShort = CSTRING(EnevlopeSmallDescription);
+        descriptionShort = CSTRING(EnvelopeSmallDescription);
         model = QPATHTOF(data\trench_small.p3d);
         scope = 2;
         scopeCurator = 2;
@@ -130,7 +130,7 @@ class CfgVehicles {
     };
     class ACE_envelope_big: ACE_envelope_small {
         displayName = CSTRING(EnvelopeBigName);
-        descriptionShort = CSTRING(EnevlopeBigDescription);
+        descriptionShort = CSTRING(EnvelopeBigDescription);
         model = QPATHTOF(data\trench_big.p3d);
         GVAR(diggingDuration) = QGVAR(bigEnvelopeDigTime);
         GVAR(removalDuration) = QGVAR(bigEnvelopeRemovalTime);
@@ -146,7 +146,7 @@ class CfgVehicles {
     };
     class ACE_envelope_giant: ACE_envelope_small {
         displayName = CSTRING(EnvelopeGiantName);
-        descriptionShort = CSTRING(EnevlopeGiantDescription);
+        descriptionShort = CSTRING(EnvelopeGiantDescription);
         GVAR(diggingDuration) = QGVAR(giantEnvelopeDigTime);
         GVAR(removalDuration) = QGVAR(giantEnvelopeRemovalTime);
         GVAR(placementData)[] = {15,1.1,0.40};
@@ -163,7 +163,7 @@ class CfgVehicles {
     };
     class ACE_envelope_vehicle: ACE_envelope_small {
         displayName = CSTRING(EnvelopeVehicleName);
-        descriptionShort = CSTRING(EnevlopeVehicleDescription);
+        descriptionShort = CSTRING(EnvelopeVehicleDescription);
         GVAR(diggingDuration) = QGVAR(vehicleEnvelopeDigTime);
         GVAR(removalDuration) = QGVAR(vehicleEnvelopeRemovalTime);
         GVAR(placementData)[] = {6,1.1,0.20};
@@ -177,7 +177,7 @@ class CfgVehicles {
 
     class ACE_envelope_short: ACE_envelope_small {
         displayName = CSTRING(EnvelopeShortName);
-        descriptionShort = CSTRING(EnevlopeShortDescription);
+        descriptionShort = CSTRING(EnvelopeShortDescription);
         GVAR(diggingDuration) = QGVAR(shortEnvelopeDigTime);
         GVAR(removalDuration) = QGVAR(shortEnvelopeRemovalTime);
         GVAR(placementData)[] = {10,1.1,0.20};
