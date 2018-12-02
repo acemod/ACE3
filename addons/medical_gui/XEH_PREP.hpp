@@ -16,6 +16,7 @@ PREP(openMenu);
 PREP(setTriageStatus);
 PREP(updateActivityLog);
 PREP(updateBodyImage);
+PREP(updateCategories);
 PREP(updateIcons);
 PREP(updateInformationLists);
 PREP(updateInjuryList);

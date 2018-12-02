@@ -56,7 +56,7 @@ switch (GET_HEMORRHAGE(_target)) do {
 
 // Indicate if a tourniquet is applied
 if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
-    _genericMessages pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
+    _entries pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
 
 // Indicate the amount of pain the unit is in

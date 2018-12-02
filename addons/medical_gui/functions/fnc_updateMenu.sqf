@@ -20,6 +20,9 @@
 private _display = uiNamespace getVariable [QGVAR(menuDisplay), displayNull];
 if (isNull _display) exitWith {};
 
+// Update treatment category buttons
+[_display] call FUNC(updateCategories);
+
 // Update injury list
 private _ctrlInjuries = _display displayCtrl IDC_INJURIES;
 [_ctrlInjuries, GVAR(target), GVAR(selectedBodyPart)] call FUNC(updateInjuryList);

@@ -131,7 +131,6 @@ class ACE_Medical_Menu {
             w = POS_W(1.5);
             h = POS_H(1.5);
             color[] = {1, 1, 1, 1};
-            colorDisabled[] = {0.4, 0.4, 0.4, 1};
             soundClick[] = {"\a3\ui_f\data\sound\rscbutton\soundClick", 0.09, 1};
             soundEnter[] = {"\a3\ui_f\data\sound\rscbutton\soundEnter", 0.09, 1};
             soundEscape[] = {"\a3\ui_f\data\sound\rscbutton\soundEscape", 0.09, 1};
