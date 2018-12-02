@@ -2,12 +2,15 @@
 
 if (!hasInterface) exitWith {};
 
-GVAR(menuPFH) = -1;
+GVAR(target) = objNull;
+GVAR(previousTarget) = objNull;
+GVAR(selectedBodyPart) = 0;
+GVAR(latestCategory) = "triage";
+
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
 
-GVAR(interactionTarget) = objNull;
-GVAR(selectedBodyPart) = 0;
+GVAR(menuPFH) = -1;
 
 [] call FUNC(addTreatmentActions);
 [] call FUNC(collectActions);
@@ -21,23 +24,34 @@ GVAR(selectedBodyPart) = 0;
     };
 }] call CBA_fnc_addEventHandler;
 
-["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey), {
+["ACE3 Common", QGVAR(openMedicalMenuKey), localize LSTRING(DisplayMenuKey),
+{
+    // Get target (cursorTarget and cursorObject), if not valid then target is ACE_player
+    TRACE_3("Open menu key",cursorTarget,cursorObject,ACE_player);
     private _target = cursorTarget;
-    if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {_target = ACE_player};
+    if !(_target isKindOf "CAManBase" && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
+        _target = cursorObject;
+        if !(_target isKindOf "CAManBase" && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
+            _target = ACE_player;
+        };
+    };
 
-    // Conditions: canInteract
+    // Check conditions: canInteract and canOpenMenu
     if !([ACE_player, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if !([ACE_player, _target] call FUNC(canOpenMenu)) exitWith {false};
 
     // Statement
     [_target] call FUNC(openMenu);
     false
-}, {
+},
+{
+    // Close menu if enough time passed from opening
     if (CBA_missionTime - GVAR(lastOpenedOn) > 0.5) exitWith {
         [objNull] call FUNC(openMenu);
     };
     false
-}, [35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
+},
+[35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
 
 // Close patient information when interact menu is closed

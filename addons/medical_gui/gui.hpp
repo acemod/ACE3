@@ -48,16 +48,17 @@ class ACE_Medical_Body: RscControlsGroupNoScrollbars {
         class ArmLeftT: Background {
             idc = IDC_BODY_ARMLEFT_T;
             text = QPATHTOF(data\body_image\arm_left_T.paa);
+            colorText[] = {0, 0, 0.8, 1};
         };
-        class ArmRightT: Background {
+        class ArmRightT: ArmLeftT {
             idc = IDC_BODY_ARMRIGHT_T;
             text = QPATHTOF(data\body_image\arm_right_T.paa);
         };
-        class LegLeftT: Background {
+        class LegLeftT: ArmLeftT {
             idc = IDC_BODY_LEGLEFT_T;
             text = QPATHTOF(data\body_image\leg_left_T.paa);
         };
-        class LegRightT: Background {
+        class LegRightT: ArmLeftT {
             idc = IDC_BODY_LEGRIGHT_T;
             text = QPATHTOF(data\body_image\leg_right_T.paa);
         };
@@ -68,8 +69,8 @@ class ACE_Medical_Menu {
     idd = IDD_MEDICAL_MENU;
     movingEnable = 1;
     enableSimulation = 1;
-    // onLoad = QUOTE(_this call FUNC(onMenuOpen));
-    // onUnload = QUOTE(_this call FUNC(onMenuClose));
+    onLoad = QUOTE(_this call FUNC(onMenuOpen));
+    onUnload = QUOTE(_this call FUNC(onMenuClose));
     class controlsBackground {
         class Title: RscText {
             idc = IDC_TITLE;
@@ -242,6 +243,7 @@ class ACE_Medical_Menu {
         class BodyImage: ACE_Medical_Body {};
         class SelectHead: RscButton {
             idc = -1;
+            onButtonClick = QUOTE(GVAR(selectedBodyPart) = 0);
             tooltip = CSTRING(SelectHead);
             x = POS_X(18.8);
             y = POS_Y(3.2);
@@ -252,6 +254,7 @@ class ACE_Medical_Menu {
             colorBackgroundActive[] = {0, 0, 0, 0};
         };
         class SelectTorso: SelectHead {
+            onButtonClick = QUOTE(GVAR(selectedBodyPart) = 1);
             tooltip = CSTRING(SelectTorso);
             x = POS_X(18.4);
             y = POS_Y(5);
@@ -259,6 +262,7 @@ class ACE_Medical_Menu {
             h = POS_H(3.8);
         };
         class SelectArmLeft: SelectHead {
+            onButtonClick = QUOTE(GVAR(selectedBodyPart) = 2);
             tooltip = CSTRING(SelectArmLeft);
             x = POS_X(20.6);
             y = POS_Y(5.1);
@@ -266,10 +270,12 @@ class ACE_Medical_Menu {
             h = POS_H(4.6);
         };
         class SelectArmRight: SelectArmLeft {
+            onButtonClick = QUOTE(GVAR(selectedBodyPart) = 3);
             tooltip = CSTRING(SelectArmRight);
             x = POS_X(17.4);
         };
         class SelectLegLeft: SelectHead {
+            onButtonClick = QUOTE(GVAR(selectedBodyPart) = 4);
             tooltip = CSTRING(SelectLegLeft);
             x = POS_X(19.5);
             y = POS_Y(8.8);
@@ -277,6 +283,7 @@ class ACE_Medical_Menu {
             h = POS_H(5.8);
         };
         class SelectLegRight: SelectLegLeft {
+            onButtonClick = QUOTE(GVAR(selectedBodyPart) = 5);
             tooltip = CSTRING(SelectLegRight);
             x = POS_X(18.4);
         };

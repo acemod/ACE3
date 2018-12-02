@@ -22,7 +22,7 @@ GVAR(actions) = [];
     private _configName = configName _x;
     private _displayName = getText (_x >> "displayName");
     private _category = getText (_x >> "category");
-    private _condition = format [QUOTE([ARR_4(ACE_player, GVAR(interactionTarget), %1 select GVAR(selectedBodyPart), '%2')] call DEFUNC(medical_treatment,canTreatCached)), ALL_BODY_PARTS, _configName];
+    private _condition = format [QUOTE([ARR_4(ACE_player, GVAR(target), %1 select GVAR(selectedBodyPart), '%2')] call DEFUNC(medical_treatment,canTreatCached)), ALL_BODY_PARTS, _configName];
     private _statement = format [QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), %1 select GVAR(selectedBodyPart), '%2')] call DEFUNC(medical_treatment,treatment)), ALL_BODY_PARTS, _configName];
 
     GVAR(actions) pushBack [_displayName, _category, _condition, _statement]
@@ -32,19 +32,19 @@ GVAR(actions) = [];
 if ("ace_dragging" call EFUNC(common,isModLoaded)) then {
     GVAR(actions) pushBack [
         localize ELSTRING(dragging,Drag), "drag",
-        {ACE_player != GVAR(interactionTarget) && {[ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,canDrag)}},
+        {ACE_player != GVAR(target) && {[ACE_player, GVAR(target)] call EFUNC(dragging,canDrag)}},
         {
             GVAR(pendingReopen) = false;
-            [ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,startDrag);
+            [ACE_player, GVAR(target)] call EFUNC(dragging,startDrag);
         }
     ];
 
     GVAR(actions) pushBack [
         localize ELSTRING(dragging,Carry), "drag",
-        {ACE_player != GVAR(interactionTarget) && {[ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,canCarry)}},
+        {ACE_player != GVAR(target) && {[ACE_player, GVAR(target)] call EFUNC(dragging,canCarry)}},
         {
             GVAR(pendingReopen) = false;
-            [ACE_player, GVAR(interactionTarget)] call EFUNC(dragging,startCarry);
+            [ACE_player, GVAR(target)] call EFUNC(dragging,startCarry);
         }
     ];
 };

@@ -18,5 +18,7 @@ PREP(updateActivityLog);
 PREP(updateBodyImage);
 PREP(updateIcons);
 PREP(updateInformationLists);
+PREP(updateInjuryList);
+PREP(updateMenu);
 PREP(updateQuickViewLog);
 PREP(updateUIInfo);
