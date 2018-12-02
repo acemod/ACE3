@@ -29,7 +29,7 @@ if ((((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSq
         _randomVector = RANDOM_VECTOR_3D vectorMultiply 300;
         _attackProfileStateParams set [1, true];
         _attackProfileStateParams set [2, _randomVector];
-                
+
         playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, _shooter modelToWorld _wireCutSource, 150, 1, 25];
     };
     _projectilePos vectorAdd _randomVector
@@ -41,7 +41,7 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith {
         _attackProfileStateParams set [1, true];
     };*/
     // return position 50m infront of projectile
-    _projectile vectorModelToWorld [0, 50, 0]
+    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 0])
 };
 
 private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
