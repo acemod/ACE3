@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_trench", "_unit",["_switchingDigger", false]];
+params ["_trench", "_unit", ["_switchingDigger", false]];
 TRACE_2("continueDiggingTrench",_trench,_unit);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
@@ -31,7 +31,7 @@ if (_diggerCount > 0) then {
    if !(_switchingDigger) then {
       [_trench, _unit] call FUNC(addDigger);
    };
-}else{
+} else {
    _trench setVariable [QGVAR(diggerCount), 1,true];
 };
 
@@ -86,7 +86,7 @@ if (_actualProgress == 0) then {
         _cutterPos set [2, getTerrainHeightASL _cutterPos];
         _trenchGrassCutter setPosASL _cutterPos;
         deleteVehicle _trenchGrassCutter;
-    } foreach getArray (configFile >> "CfgVehicles" >> (typeOf _trench) >> "ace_trenches_grassCuttingPoints");
+    } foreach getArray (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(grassCuttingPoints));
 };
 
 [{
@@ -109,24 +109,24 @@ if (_actualProgress == 0) then {
   _boundingBox params ["_lbfc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
   _lbfc params ["", "", "_lbfcZ"];
 
-  private _pos = (getPosWorld _trench);
+  private _pos = getPosWorld _trench;
   private _posDiff = ((abs((_trench getVariable [QGVAR(diggingSteps), 0]) + _lbfcZ)) * _diggerCount)/(_digTime*5);
-  _pos set [2,((_pos select 2) + _posDiff)];
+  _pos set [2,(_pos select 2) + _posDiff];
 
   _trench setPosWorld _pos;
   _trench setVectorDirAndUp _vecDirAndUp;
 
   //Fatigue impact
-  EGVAR(advanced_fatigue,anReserve) = (EGVAR(advanced_fatigue,anReserve) - ((_digTime /12) * GVAR(buildFatigueFactor))) max 0;
-  EGVAR(advanced_fatigue,anFatigue) = (EGVAR(advanced_fatigue,anFatigue) + (((_digTime/12) * GVAR(buildFatigueFactor))/1200)) min 1;
+  EGVAR(advanced_fatigue,anReserve) = EGVAR(advanced_fatigue,anReserve) - ((_digTime /12) * GVAR(buildFatigueFactor)) max 0;
+  EGVAR(advanced_fatigue,anFatigue) = EGVAR(advanced_fatigue,anFatigue) + (((_digTime/12) * GVAR(buildFatigueFactor))/1200) min 1;
 
   // Save progress
-  _trench setVariable [QGVAR(progress), (_actualProgress + ((1/(_digTime *10)) * _diggerCount)), true];
+  _trench setVariable [QGVAR(progress), _actualProgress + ((1/(_digTime *10)) * _diggerCount), true];
 
-  if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0)) exitWith {
+  if (GVAR(stopBuildingAtFatigueMax) && EGVAR(advanced_fatigue,anReserve) <= 0) exitWith {
      [_handle] call CBA_fnc_removePerFrameHandler;
      _trench setVariable [QGVAR(digging), false, true];
-     _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
+     _trench setVariable [QGVAR(diggerCount), (_diggerCount -1) max 0, true];
   };
 },0.1,[_trench, _unit, _digTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 

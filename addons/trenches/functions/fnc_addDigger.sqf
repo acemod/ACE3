@@ -76,4 +76,4 @@ private _fnc_condition = {
 
 [[_unit, _trench, _type, _handle], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition] call FUNC(progressBar);
 
-[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);;
+[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);

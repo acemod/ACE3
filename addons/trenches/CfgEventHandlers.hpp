@@ -37,7 +37,7 @@ class Extended_Deleted_EventHandlers {
         };
     };
     class ACE_envelope_big: ACE_envelope_small {};
-    class ACE_envelope_gigant: ACE_envelope_small {};
+    class ACE_envelope_giant: ACE_envelope_small {};
     class ACE_envelope_vehicle: ACE_envelope_small {};
     class ACE_envelope_short: ACE_envelope_small {};
 };
@@ -50,7 +50,7 @@ class Extended_Init_EventHandlers {
     };
 
     class ACE_envelope_big: ACE_envelope_small {};
-    class ACE_envelope_gigant: ACE_envelope_small {};
+    class ACE_envelope_giant: ACE_envelope_small {};
     class ACE_envelope_vehicle: ACE_envelope_small {};
     class ACE_envelope_short: ACE_envelope_small {};
 };

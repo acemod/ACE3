@@ -23,7 +23,8 @@ GVAR(trenchPlacementData) = getArray (configFile >> "CfgVehicles" >> _trenchClas
 TRACE_1("",GVAR(trenchPlacementData));
 
 // prevent the placing unit from running
-[_unit, "forceWalk", "ACE_Trenches", true] call ace_common_fnc_statusEffect_set;
+[_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
 
 // create the trench
 private _trench = createSimpleObject [_trenchClass, [0, 0, 0]];
@@ -41,15 +42,15 @@ GVAR(digPFH) = [{
 
     // Cancel if the helper object is gone
     if (isNull _trench) exitWith {
-        [_unit] call ace_trenches_fnc_placeCancel;
+        [_unit] call FUNC(placeCancel);
     };
 
     // Cancel if the place is no longer suitable
-    private _checkVar = [_unit] call ace_trenches_fnc_canDigTrench;
-    if ((typeName _checkVar) == "Number") then {
+    private _checkVar = [_unit] call FUNC(canDigTrench);
+    if (_checkVar isEqualType 0) then {
       if (_checkVar > 0) then {
          _checkVar = true;
-      }else{
+      } else {
          _checkVar = false;
       };
     };
@@ -60,7 +61,7 @@ GVAR(digPFH) = [{
 
     // Update trench position
     GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
-    private _basePos = _unit ModelToWorld [0,2,0];
+    private _basePos = _unit modelToWorld [0,2,0];
 
     private _angle = (GVAR(digDirection) + getDir _unit);
 
@@ -93,19 +94,19 @@ GVAR(digPFH) = [{
     _trench setVectorDirAndUp [_v1, _v3];
     GVAR(trenchPos) = _basePos;
 
-    if (surfaceType (position _trench) != GVAR(currentSurface)) then {
+    if (surfaceType position _trench != GVAR(currentSurface)) then {
         GVAR(currentSurface) = surfaceType (position _trench);
         _trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];
     };
 }, 0, [_unit, _trench]] call CBA_fnc_addPerFrameHandler;
 
 // add mouse button action and hint
-[localize LSTRING(ConfirmDig), localize LSTRING(CancelDig)] call ace_interaction_fnc_showMouseHint;
+[localize LSTRING(ConfirmDig), localize LSTRING(CancelDig)] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(Dig), [
     _unit, "DefaultAction",
     {GVAR(digPFH) != -1},
     {[_this select 0] call FUNC(placeConfirm)}
-] call ace_common_fnc_addActionEventHandler];
+] call EFUNC(common,addActionEventHandler)];
 
 _unit setVariable [QGVAR(isPlacing), true, true];

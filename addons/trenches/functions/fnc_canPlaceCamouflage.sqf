@@ -23,7 +23,7 @@ private _statusString = "";
 
 if (_statusNumber <10) then {
   _statusString = ("CamouflagePositions0" + str(_statusNumber +1));
-}else{
+} else {
   _statusString = ("CamouflagePositions" + str(_statusNumber +1));
 };
 

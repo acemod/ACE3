@@ -50,7 +50,7 @@ private _result = [];
 if !(isNil QGVAR(automaticFileSetup)) then {
    GVAR(automaticFileSetup) params ["_basePath", "_filePrefix"];
    _result = [_surfaceType, _basePath, _filePrefix] call _getTexturePath;
-}else{
+} else {
    private _basePath = getText (configFile >> "CfgWorlds" >> "Altis" >> "surfaceTextureBasePath");
    if ((_surfaceType find "#Gdt" == -1) || {worldName == "Tanoa"}) then {
        _basePath = getText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")
@@ -58,7 +58,7 @@ if !(isNil QGVAR(automaticFileSetup)) then {
     _result = [_surfaceType, _basePath, getText(configFile >> "CfgWorlds" >> worldName >> "filePrefix")] call _getTexturePath;
 };
 
-if (isNil {_result} || _result isEqualTo []) then {
+if (isNil _result || _result isEqualTo []) then {
     _result = DEFAULT_TEXTURE;
     diag_log format ["GRAD_Trenches: Type: %1, Position: %2, WorldName: %3, SurfaceType: %4, Texture: %5", (typeof _object), (position _object), worldName, _surfaceType, _result];
 };

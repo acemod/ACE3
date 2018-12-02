@@ -33,7 +33,7 @@ private _fnc_onFinish = {
 
     if (_statusNumber <10) then {
       _statusString = ("0" + str(_statusNumber));
-   }else{
+   } else {
       _statusString = str(_statusNumber);
    };
 

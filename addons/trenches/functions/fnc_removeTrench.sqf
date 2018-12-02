@@ -1,4 +1,4 @@
- #include "script_component.hpp"
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support and esteldunedain
  * Removes trench
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_trench", "_unit",["_switchingDigger", false]];
+params ["_trench", "_unit", ["_switchingDigger", false]];
 TRACE_2("removeTrench",_trench,_unit);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
@@ -31,7 +31,7 @@ if (_diggerCount > 0) then {
    if !(_switchingDigger) then {
       [_trench, _unit] call FUNC(addDigger);
    };
-}else{
+} else {
    _trench setVariable [QGVAR(diggerCount), 1,true];
 };
 
@@ -40,7 +40,7 @@ private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgV
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
 _placeData params ["", "_vecDirAndUp"];
 
-if (count _vecDirAndUp == 0) then {
+if (isNil "_vecDirAndUp") then {
    _vecDirAndUp = [vectorDir _trench, vectorUp _trench];
 };
 
@@ -103,7 +103,7 @@ private _fnc_condition = {
   _boundingBox params ["_lbfc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
   _lbfc params ["", "", "_lbfcZ"];
 
-  private _pos = (getPosWorld _trench);
+  private _pos = getPosWorld _trench;
   private _posDiff = (abs(((_trench getVariable [QGVAR(diggingSteps), 0]) * _diggerCount) + _lbfcZ))/(_removeTime*5);
   _pos set [2,((_pos select 2) - _posDiff)];
 

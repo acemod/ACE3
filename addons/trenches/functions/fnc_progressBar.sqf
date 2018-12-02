@@ -62,7 +62,7 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
                 } else {
                     if (_finishCondition && _progress >= 1) then {
                         _errorCode = 0;
-                    }else{
+                    } else {
                        if (!(_finishCondition) && _progress <= 0) then {
                           _errorCode = 0;
                        };
