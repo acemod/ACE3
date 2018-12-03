@@ -48,11 +48,7 @@ GVAR(digPFH) = [{
     // Cancel if the place is no longer suitable
     private _checkVar = [_unit] call FUNC(canDigTrench);
     if (_checkVar isEqualType 0) then {
-      if (_checkVar > 0) then {
-         _checkVar = true;
-      } else {
-         _checkVar = false;
-      };
+      _checkVar = _checkVar > 0;
     };
 
     if !(_checkVar) exitWith {
@@ -63,7 +59,7 @@ GVAR(digPFH) = [{
     GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
     private _basePos = _unit modelToWorld [0,2,0];
 
-    private _angle = (GVAR(digDirection) + getDir _unit);
+    private _angle = GVAR(digDirection) + getDir _unit;
 
     // _v1 forward from the player, _v2 to the right, _v3 points away from the ground
     private _v3 = surfaceNormal _basePos;
