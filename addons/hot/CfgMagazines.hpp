@@ -1,7 +1,7 @@
 class CfgMagazines {
     class 12Rnd_PG_missiles;
     
-    // HOT1 - tandem shaped charge HEAT (anti-tank)
+    // HOT1 - HEAT (anti-tank)
     class GVAR(1_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
@@ -51,7 +51,7 @@ class CfgMagazines {
         mirrorMissilesIndexes[] = {2, 1, 4, 3};
     };
     
-    // HOT2 - tandem shaped charge HEAT (anti-tank)
+    // HOT2 - HEAT (anti-tank)
     class GVAR(2_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
