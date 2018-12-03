@@ -53,7 +53,7 @@ There are 4 HOT missiles included
 
 - Adding HOT to the Cessna Civilian Plane:
 
-```
+```cpp
 if (local this) then {
     this addWeaponTurret ["ace_hot_generic_launcher", [-1]];
     this addMagazineTurret ["ace_hot_2mp_6Rnd", [-1]];
