@@ -20,15 +20,18 @@ _args params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _seekerParams params ["_seekerAngle"];
 _stateParams params ["", "_seekerStateParams"];
-_seekerStateParams params ["_turretPath", "_memoryPointGunnerOptics"];
+_seekerStateParams params ["_turretPath", "_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun"];
 
 private _shooterPos = AGLToASL (_shooter modelToWorld(_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;
 
 private _lookDirection = if !(_shooter isKindOf "CAManBase") then {
-    _shooter weaponDirection ((_shooter weaponsTurret _turretPath) select 0);
+    private _gBody = -deg(_shooter animationPhase _animationSourceBody);
+    private _gGun = deg(_shooter animationPhase _animationSourceGun);
+    
+    _shooter vectorModelToWorld ([1, _gBody, _gGun] call CBA_fnc_polar2vect);
 } else {
-    _shooter weaponDirection _weapon;
+    _shooter weaponDirection _weapon
 };
 
 private _distanceToProj = _shooterPos vectorDistance _projPos;

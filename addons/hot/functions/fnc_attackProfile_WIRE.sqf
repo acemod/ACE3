@@ -29,8 +29,8 @@ if ((((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSq
         _randomVector = RANDOM_VECTOR_3D vectorMultiply 300;
         _attackProfileStateParams set [1, true];
         _attackProfileStateParams set [2, _randomVector];
-
-        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, _shooter modelToWorld _wireCutSource, 150, 1, 25];
+        
+        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 150, 1, 25];
     };
     _projectilePos vectorAdd _randomVector
 };
