@@ -109,12 +109,12 @@ class CfgAmmo {
         explosionEffects = "BombExplosion";
         explosive = 0.7;
         
-        ace_frag_enabled = 1; 
-        ace_frag_metal = 7100; // 1000 steel balls
-        ace_frag_charge = 4100;
-        ace_frag_gurney_c = 2700;
-        ace_frag_gurney_k = 3/5;
-        ace_frag_classes[] = {"ACE_frag_small"};
+        EGVAR(frag,enabled) = 1; 
+        EGVAR(frag,metal) = 7100; // 1000 steel balls
+        EGVAR(frag,charge) = 4100;
+        EGVAR(frag,gurney_c) = 2700;
+        EGVAR(frag,gurney_k) = 3/5;
+        EGVAR(frag,classes)[] = {"ACE_frag_small"};
         
         displayName = CSTRING(hot2mp_long);
         displayNameShort = CSTRING(hot2mp_short);

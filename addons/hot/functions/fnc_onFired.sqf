@@ -20,8 +20,8 @@ _stateParams params ["", "_seekerStateParams", "_attackProfileStateParams"];
 _seekerParams params ["", "", "_seekerMaxRange"];
 
 private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance";
-private _maxCorrectableDistance = if (isNumber(_config >> "correctionDistance")) then { getNumber(_config >> "correctionDistance") } else { DEFAULT_CORRECTION_DISTANCE };
-private _crosshairOffset = if (isArray(_config >> "offsetFromCrosshair")) then { getArray(_config >> "offsetFromCrosshair") } else { [0, 0, 0] };
+private _maxCorrectableDistance = [_config >> "correctionDistance", "number", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
+private _crosshairOffset = [_config >> "offsetFromCrosshair", "array", [0, 0, 0]] call CBA_fnc_getConfigEntry;
 private _maxDistance = _seekerMaxRange * _seekerMaxRange;
 
 // AI don't know how to use the crosshair offset becauze they dum dum
