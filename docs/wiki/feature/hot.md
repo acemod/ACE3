@@ -51,7 +51,7 @@ There are 4 HOT missiles included
 
 ### 3.2 Script Example
 
-- Adding HOT to the Cessna Civilian Plane:
+- Adding HOT to e.g. a Cessna Civilian Plane:
 
 ```cpp
 if (local this) then {
