@@ -20,7 +20,7 @@ _args params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _seekerParams params ["_seekerAngle"];
 _stateParams params ["", "_seekerStateParams"];
-_seekerStateParams params ["_turretPath", "_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun"];
+_seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun"];
 
 private _shooterPos = AGLToASL (_shooter modelToWorld(_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;

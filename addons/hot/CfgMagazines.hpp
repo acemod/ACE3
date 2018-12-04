@@ -1,16 +1,16 @@
 class CfgMagazines {
     class 12Rnd_PG_missiles;
-    
+
     // HOT1 - HEAT (anti-tank)
     class GVAR(1_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT1);
-        displayName = CSTRING(hot1_long);
-        displayNameShort = CSTRING(hot1_short);
+        displayName = CSTRING(hot1);
+        displayNameShort = CSTRING(hot1);
         descriptionShort = CSTRING(missileType);
     };
-    
+
     class GVAR(1_2Rnd): GVAR(1_6Rnd) {
         count = 2;
     };
@@ -50,17 +50,17 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_4x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 4, 3};
     };
-    
+
     // HOT2 - HEAT (anti-tank)
     class GVAR(2_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT2);
-        displayName = CSTRING(hot2_long);
-        displayNameShort = CSTRING(hot2_short);
+        displayName = CSTRING(hot2);
+        displayNameShort = CSTRING(hot2);
         descriptionShort = CSTRING(missileType);
     };
-    
+
     class GVAR(2_2Rnd): GVAR(2_6Rnd) {
         count = 2;
     };
@@ -100,17 +100,17 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_4x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 4, 3};
     };
-    
+
     // HOT2MP - HE Anti-Infantry
     class GVAR(2MP_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT2MP);
-        displayName = CSTRING(hot2mp_long);
-        displayNameShort = CSTRING(hot2mp_short);
+        displayName = CSTRING(hot2mp);
+        displayNameShort = CSTRING(hot2mp);
         descriptionShort = CSTRING(missileType);
     };
-    
+
     class GVAR(2MP_2Rnd): GVAR(2MP_6Rnd) {
         count = 2;
     };
@@ -150,17 +150,17 @@ class CfgMagazines {
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_4x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 4, 3};
     };
-    
-        // HOT3 - tandem shaped charge HEAT (anti-tank)
+
+    // HOT3 - tandem shaped charge HEAT (anti-tank)
     class GVAR(3_6Rnd): 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
         initSpeed = 100;
         ammo = QGVAR(HOT3);
-        displayName = CSTRING(hot3_long);
-        displayNameShort = CSTRING(hot3_short);
+        displayName = CSTRING(hot3);
+        displayNameShort = CSTRING(hot3);
         descriptionShort = CSTRING(missileType);
     };
-    
+
     class GVAR(3_2Rnd): GVAR(3_6Rnd) { // Old style vehicle magazine
         count = 2;
     };
@@ -174,7 +174,7 @@ class CfgMagazines {
         hardpoints[] = {"SCALPEL_1RND"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
-    
+
     class GVAR(3_PylonRack_1Rnd): GVAR(3_6Rnd) { // 1x Launcher Support Rack
         displayName = CSTRING(hot3_1);
         pylonWeapon = QGVAR(3_launcher);

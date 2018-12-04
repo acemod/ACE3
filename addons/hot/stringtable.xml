@@ -14,31 +14,19 @@
             <German>Drahtgelenkte Rakete</German>
         </Key>
         <Key ID="STR_ACE_HOT_hotMissile">
-            <English>HOT Missile [ACE]</English>
+            <English>HOT Missile</English>
         </Key>
-        <Key ID="STR_ACE_HOT_hot1_short">
-            <English>HOT1</English>
+        <Key ID="STR_ACE_HOT_hot1">
+            <English>HOT 1</English>
         </Key>
-        <Key ID="STR_ACE_HOT_hot1_long">
-            <English>HOT 1 [ACE]</English>
+        <Key ID="STR_ACE_HOT_hot2">
+            <English>HOT 2</English>
         </Key>
-        <Key ID="STR_ACE_HOT_hot2_short">
-            <English>HOT2</English>
+        <Key ID="STR_ACE_HOT_hot2mp">
+            <English>HOT 2MP</English>
         </Key>
-        <Key ID="STR_ACE_HOT_hot2_long">
-            <English>HOT 2 [ACE]</English>
-        </Key>
-        <Key ID="STR_ACE_HOT_hot2mp_short">
-            <English>HOT2MP</English>
-        </Key>
-        <Key ID="STR_ACE_HOT_hot2mp_long">
-            <English>HOT 2MP [ACE]</English>
-        </Key>
-        <Key ID="STR_ACE_HOT_hot3_short">
-            <English>HOT3</English>
-        </Key>
-        <Key ID="STR_ACE_HOT_hot3_long">
-            <English>HOT 3 [ACE]</English>
+        <Key ID="STR_ACE_HOT_hot3">
+            <English>HOT 3</English>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description_AP">
             <English>Wire-Guided Missile (Anti-Personnel)</English>

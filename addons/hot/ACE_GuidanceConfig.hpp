@@ -12,7 +12,7 @@ class EGVAR(missileguidance,SeekerTypes) {
         name = "SACLOS";
         visualName = "SACLOS";
         description = CSTRING(SACLOS_Description);
-        
+
         functionName = QFUNC(seekerType_SACLOS);
     };
 };
