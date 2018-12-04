@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: joko // Jonas
- * Handle medical menu closed
+ * Handles closing the Medical Menu.
+ * Called from onUnload event.
  *
  * Arguments:
  * None
@@ -10,13 +11,13 @@
  * None
  *
  * Example:
- * call ace_medical_menu_fnc_onMenuClosed
+ * [] call ace_medical_gui_fnc_onMenuClose
  *
  * Public: No
  */
 
-if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), false] call EFUNC(common,blurScreen);};
-if (EGVAR(interact_menu,menuBackground)==2) then {(uiNamespace getVariable [QEGVAR(interact_menu,menuBackground), displayNull]) closeDisplay 0;};
+if (EGVAR(interact_menu,menuBackground) == 1) then {[QGVAR(id), false] call EFUNC(common,blurScreen)};
+if (EGVAR(interact_menu,menuBackground) == 2) then {(uiNamespace getVariable [QEGVAR(interact_menu,menuBackground), displayNull]) closeDisplay 0};
 
-[GVAR(MenuPFHID)] call CBA_fnc_removePerFrameHandler;
-GVAR(MenuPFHID) = -1;
+GVAR(menuPFH) call CBA_fnc_removePerFrameHandler;
+GVAR(menuPFH) = -1;
