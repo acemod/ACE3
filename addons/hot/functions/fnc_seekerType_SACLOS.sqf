@@ -31,6 +31,7 @@ private _lookDirection = if !(_shooter isKindOf "CAManBase") then {
     
     _shooter vectorModelToWorld ([1, _gBody, _gGun] call CBA_fnc_polar2vect);
 } else {
+    _shooterPos = eyePos _shooter;
     _shooter weaponDirection _weapon
 };
 
