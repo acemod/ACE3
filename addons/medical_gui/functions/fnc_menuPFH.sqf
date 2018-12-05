@@ -1,20 +1,28 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Updates the Medical Menu UI for given target.
+ * Handles updating the Medical Menu UI for the current target.
  *
  * Arguments:
- * 0: Medical Menu display <DISPLAY>
- * 1: Target <OBJECT>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [_display, _target] call ace_medical_gui_fnc_updateMenu
+ * [] call ace_medical_gui_fnc_menuPFH
  *
  * Public: No
  */
+
+// Check if menu should stay open for target
+if !([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) && {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}) then {
+    closeDialog 0;
+    // Show hint if distance condition failed
+    if (ACE_player distance GVAR(target) > GVAR(maxDistance)) then {
+        [[ELSTRING(medical,DistanceToFar), GVAR(target) call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
+    };
+};
 
 // Get the Medical Menu display
 private _display = uiNamespace getVariable [QGVAR(menuDisplay), displayNull];

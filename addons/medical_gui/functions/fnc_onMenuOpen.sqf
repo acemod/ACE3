@@ -39,13 +39,4 @@ if (GVAR(menuPFH) != -1) exitWith {
     TRACE_1("Menu PFH already running",GVAR(menuPFH));
 };
 
-GVAR(menuPFH) = [{
-    if !([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) && {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}) then {
-        closeDialog 0;
-        if (ACE_player distance GVAR(target) > GVAR(maxDistance)) then {
-            [[ELSTRING(medical,DistanceToFar), GVAR(target) call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
-        };
-    };
-
-    [] call FUNC(updateMenu);
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+GVAR(menuPFH) = [FUNC(menuPFH), 0, []] call CBA_fnc_addPerFrameHandler;
