@@ -13,7 +13,6 @@ PREP(modifyAction);
 PREP(onMenuClose);
 PREP(onMenuOpen);
 PREP(openMenu);
-PREP(setTriageStatus);
 PREP(updateActions);
 PREP(updateActivityLog);
 PREP(updateBodyImage);
