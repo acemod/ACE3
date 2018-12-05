@@ -124,6 +124,7 @@ class ACE_Medical_Menu {
         };
         class Triage: RscActivePicture {
             idc = IDC_TRIAGE;
+            onButtonClick = QUOTE(GVAR(selectedCategory) = 'triage');
             text = QPATHTOF(data\categories\triage_card.paa);
             tooltip = CSTRING(ViewTriageCard);
             x = POS_X(1.5);
@@ -138,42 +139,49 @@ class ACE_Medical_Menu {
         };
         class Examine: Triage {
             idc = IDC_EXAMINE;
+            onButtonClick = QUOTE(GVAR(selectedCategory) = 'examine');
             text = QPATHTOF(data\categories\examine_patient.paa);
             tooltip = CSTRING(ExaminePatient);
             x = POS_X(3);
         };
         class Bandage: Triage {
             idc = IDC_BANDAGE;
+            onButtonClick = QUOTE(GVAR(selectedCategory) = 'bandage');
             text = QPATHTOF(data\categories\bandage_fracture.paa);
             tooltip = CSTRING(BandageFractures);
             x = POS_X(4.5);
         };
         class Medication: Triage {
             idc = IDC_MEDICATION;
+            onButtonClick = QUOTE(GVAR(selectedCategory) = 'medication');
             text = QPATHTOF(data\categories\medication.paa);
             tooltip = CSTRING(Medication);
             x = POS_X(6);
         };
         class Airway: Triage {
             idc = IDC_AIRWAY;
+            onButtonClick = QUOTE(GVAR(selectedCategory) = 'airway');
             text = QPATHTOF(data\categories\airway_management.paa);
             tooltip = CSTRING(AirwayManagement);
             x = POS_X(7.5);
         };
         class Advanced: Triage {
             idc = IDC_ADVANCED;
+            onButtonClick = QUOTE(GVAR(selectedCategory) = 'advanced');
             text = QPATHTOF(data\categories\advanced_treatment.paa);
             tooltip = CSTRING(AdvancedTreatment);
             x = POS_X(9);
         };
         class Drag: Triage {
             idc = IDC_DRAG;
+            onButtonClick = QUOTE(GVAR(selectedCategory) = 'drag');
             text = QPATHTOF(data\categories\carry.paa);
             tooltip = CSTRING(DrayCarry);
             x = POS_X(10.5);
         };
         class Toggle: Triage {
             idc = IDC_TOGGLE;
+            onButtonClick = "";
             text = QPATHTOF(data\categories\toggle_self.paa);
             tooltip = CSTRING(ToggleSelf);
             x = POS_X(12);
@@ -203,7 +211,7 @@ class ACE_Medical_Menu {
             class Attributes {
                 align = "center";
                 color = "#E5E5E5";
-                font = "PuristaLight";
+                font = "RobotoCondensed";
                 shadow = "false";
             };
         };

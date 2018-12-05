@@ -23,6 +23,9 @@ if (isNull _display) exitWith {};
 // Update treatment category buttons
 [_display] call FUNC(updateCategories);
 
+// Update treatment actions for current category
+[_display] call FUNC(updateActions);
+
 // Update injury list
 private _ctrlInjuries = _display displayCtrl IDC_INJURIES;
 [_ctrlInjuries, GVAR(target), GVAR(selectedBodyPart)] call FUNC(updateInjuryList);

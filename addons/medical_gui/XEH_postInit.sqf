@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 GVAR(target) = objNull;
 GVAR(previousTarget) = objNull;
 GVAR(selectedBodyPart) = 0;
-GVAR(latestCategory) = "triage";
+GVAR(selectedCategory) = "triage";
 
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
@@ -18,9 +18,7 @@ GVAR(menuPFH) = -1;
 ["ace_treatmentSucceded", {
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {
         GVAR(pendingReopen) = false;
-        [{
-            [GVAR(INTERACTION_TARGET)] call FUNC(openMenu);
-        }, []] call CBA_fnc_execNextFrame;
+        [FUNC(openMenu), GVAR(target)] call CBA_fnc_execNextFrame;
     };
 }] call CBA_fnc_addEventHandler;
 

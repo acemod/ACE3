@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [_ctrlInjuries, _target, 0] call ace_medical_gui_fnc_updateMenu
+ * [_ctrlInjuries, _target, 0] call ace_medical_gui_fnc_updateInjuryList
  *
  * Public: No
  */
