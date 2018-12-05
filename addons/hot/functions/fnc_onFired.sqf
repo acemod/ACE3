@@ -23,6 +23,7 @@ private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missilegu
 private _maxCorrectableDistance = [_config >> "correctionDistance", "NUMBER", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
 private _crosshairOffset = [_config >> "offsetFromCrosshair", "ARRAY", [0, 0, 0]] call CBA_fnc_getConfigEntry;
 private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
+private _distanceAheadOfMissile = [_config >> "missileLeadDistance", "NUMBER", DEFAULT_LEAD_DISTANCE] call CBA_fnc_getConfigEntry;
 
 // AI don't know how to use the crosshair offset becauze they dum dum
 if ((_gunner != ACE_PLAYER) && {_gunner != (ACE_controlledUAV select 1)}) then {
@@ -48,3 +49,5 @@ private _animationSourceGun = getText(_turretConfig >> "animationSourceGun");
 _seekerStateParams set [0, _memoryPointGunnerOptics];
 _seekerStateParams set [1, _animationSourceBody];
 _seekerStateParams set [2, _animationSourceGun];
+_seekerStateParams set [3, _distanceAheadOfMissile];
+
