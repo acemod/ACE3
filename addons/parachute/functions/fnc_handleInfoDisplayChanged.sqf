@@ -18,7 +18,7 @@
 params ["_dialog", "_type"];
 
 // don't do anything in noob mode
-if (!GVAR(hideAltimeter)) exitWith {};
+if !(GVAR(hideAltimeter)) exitWith {};
 
 switch (_type) do {
     case ("Parachute"): {
@@ -37,4 +37,3 @@ switch (_type) do {
         } forEach [380, 382];
     };
 };
-nil // switch might return true if no case was found. Just to make sure the return value matches
