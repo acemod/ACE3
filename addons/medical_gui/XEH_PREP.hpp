@@ -6,6 +6,7 @@ PREP(damageToRGBA);
 PREP(displayPatientInformation);
 PREP(displayTriageCard);
 PREP(getTreatmentOptions);
+PREP(handleToggle);
 PREP(handleTriageSelect);
 PREP(handleUI_DisplayOptions);
 PREP(handleUI_dropDownTriageCard);
