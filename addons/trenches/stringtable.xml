@@ -247,8 +247,8 @@
             <Russian>Убираю камуфляж окопа...</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeGiantName">
-            <English>Envelope - Giant</English>
-            <German>Rund - Sehr groß</German>
+            <English>Trench (Envelope - Giant)</English>
+            <German>Schützengraben (Rund - Sehr groß)</German>
             <Russian>Огромный окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeGigantDescription">
@@ -272,8 +272,8 @@
             <Russian>Применить камуфляж к этому окопу</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeVehicleName">
-            <English>Envelope - Vehicle</English>
-            <German>Rund - Fahrzeug</German>
+            <English>Trench (Envelope - Vehicle)</English>
+            <German>Schützengraben (Rund - Fahrzeug)</German>
             <Russian>Окоп для техники</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeVehicleDescription">
@@ -287,8 +287,8 @@
             <Russian>Выкопать окоп для техники</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeShortName">
-            <English>Envelope - Short</English>
-            <German>Rund - Kurz</German>
+            <English>Trench (Envelope - Short)</English>
+            <German>Schützengraben (Rund - Kurz)</German>
             <Russian>Короткий окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeShortDescription">

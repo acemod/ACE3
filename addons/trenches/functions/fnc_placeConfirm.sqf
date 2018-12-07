@@ -49,7 +49,7 @@ _lbfc params ["", "", "_lbfcZ"];
 _rtbc params ["", "", "_rtbcZ"];
 
 private _boundingBoxOffset =  missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(boundingBoxOffset)),0];
-private _posDiff = (abs(_lbfcZ) + abs(_rtbcZ)) - _boundingBoxOffset;
+private _posDiff = abs _lbfcZ + abs _rtbcZ - _boundingBoxOffset;
 private _newPos = _trench modelToWorldWorld [0,0, -_posDiff];
 _trench setPosWorld _newPos;
 

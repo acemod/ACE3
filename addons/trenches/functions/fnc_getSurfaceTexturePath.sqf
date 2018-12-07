@@ -58,9 +58,4 @@ private _result = if !(isNil QGVAR(automaticFileSetup)) then {
    [_surfaceType, _basePath, getText(configFile >> "CfgWorlds" >> worldName >> "filePrefix")] call _getTexturePath;
 };
 
-if !(_result isEqualType "") then {
-    diag_log format ["GRAD_Trenches: Type: %1, Position: %2, WorldName: %3, SurfaceType: %4, Texture: %5", (typeof _object), (position _object), worldName, _surfaceType, _result];
-    _result = DEFAULT_TEXTURE;
-};
-
 _result;
