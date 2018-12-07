@@ -93,6 +93,60 @@ class CfgWeapons {
     class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
         displayName = CSTRING(arifle_Mk20_GL_plain_Name);
     };
+    
+    // P90 (1.86)
+    class SMG_03_TR_BASE;
+    class SMG_03_TR_black: SMG_03_TR_BASE {
+        displayName = CSTRING(PS90_TR_Black_Name);
+    };
+    class SMG_03_TR_khaki: SMG_03_TR_black {
+        displayName = CSTRING(PS90_TR_Khaki_Name);
+    };
+    class SMG_03_TR_camo: SMG_03_TR_black {
+        displayName = CSTRING(PS90_TR_Camo_Name);
+    };
+    class SMG_03_TR_hex: SMG_03_TR_BASE {
+        displayName = CSTRING(PS90_TR_Hex_Name);
+    };
+    class SMG_03_black: SMG_03_TR_BASE {
+        displayName = CSTRING(PS90_Black_Name);
+    };
+    class SMG_03_khaki: SMG_03_black {
+        displayName = CSTRING(PS90_Khaki_Name);
+    };
+    class SMG_03_camo: SMG_03_black {
+        displayName = CSTRING(PS90_Camo_Name);
+    };
+    class SMG_03_hex: SMG_03_black {
+        displayName = CSTRING(PS90_Hex_Name);
+    };
+    class SMG_03C_BASE: SMG_03_TR_BASE {};
+    class SMG_03C_TR_black: SMG_03C_BASE {
+        displayName = CSTRING(P90_TR_Black_Name);
+    };
+    class SMG_03C_TR_khaki: SMG_03C_TR_black {
+        displayName = CSTRING(P90_TR_Khaki_Name);
+    };
+    class SMG_03C_TR_camo: SMG_03C_TR_black {
+        displayName = CSTRING(P90_TR_Camo_Name);
+    };
+    class SMG_03C_TR_hex: SMG_03C_TR_black {
+        displayName = CSTRING(P90_TR_Hex_Name);
+    };
+    class SMG_03C_black: SMG_03C_Base {
+        displayName = CSTRING(P90_Black_Name);
+    };
+    class SMG_03C_khaki: SMG_03C_black {
+        displayName = CSTRING(P90_Khaki_Name);
+    };
+    class SMG_03C_camo: SMG_03C_black {
+        displayName = CSTRING(P90_Camo_Name);
+    };
+    class SMG_03C_hex: SMG_03C_black {
+        displayName = CSTRING(P90_Hex_Name);
+    };
+    
+    
 
     // Vector
     class SMG_01_Base;
