@@ -150,6 +150,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "hot" %}
+`ace_common`, `ace_missileguidance`
+{% endif %}
+
 {% if include.component == "huntir" %}
 `ace_common`
 {% endif %}
