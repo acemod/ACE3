@@ -6,7 +6,7 @@ class RscActivePicture;
 class RscButtonMenu;
 class RscControlsGroupNoScrollbars;
 
-class ACE_Medical_Body: RscControlsGroupNoScrollbars {
+class GVAR(BodyImage): RscControlsGroupNoScrollbars {
     idc = IDC_BODY_GROUP;
     x = POS_X(13.33);
     y = POS_Y(2.73);
@@ -61,6 +61,79 @@ class ACE_Medical_Body: RscControlsGroupNoScrollbars {
         class LegRightT: ArmLeftT {
             idc = IDC_BODY_LEGRIGHT_T;
             text = QPATHTOF(data\body_image\leg_right_T.paa);
+        };
+    };
+};
+
+class GVAR(TriageToggle): RscButton {
+    idc = -1;
+    onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(toggleTriageSelect));
+    x = POS_X(13.33);
+    y = POS_Y(15.5);
+    w = POS_W(12.33);
+    h = POS_H(1.1);
+    colorFocused[] = {0, 0, 0, 0};
+    colorBackground[] = {0, 0, 0, 0};
+    colorBackgroundActive[] = {0, 0, 0, 0};
+};
+
+class GVAR(TriageSelect): RscControlsGroupNoScrollbars {
+    idc = IDC_TRIAGE_SELECT;
+    x = POS_X(13.33);
+    y = POS_Y(16.6);
+    w = POS_W(12.33);
+    h = POS_H(5.5);
+    class controls {
+        class None: RscButton {
+            idc = -1;
+            onButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0),GVAR(target),0)] call FUNC(handleTriageSelect));
+            style = ST_CENTER;
+            text = ECSTRING(medical_treatment,Triage_Status_None);
+            x = 0;
+            y = 0;
+            w = POS_W(12.33);
+            h = POS_H(1.1);
+            shadow = 0;
+            colorText[] = {TRIAGE_TEXT_COLOR_NONE};
+            colorFocused[] = {TRIAGE_COLOR_NONE};
+            colorBackground[] = {TRIAGE_COLOR_NONE};
+            colorBackgroundActive[] = {TRIAGE_COLOR_NONE};
+        };
+        class Minor: None {
+            onButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0),GVAR(target),1)] call FUNC(handleTriageSelect));
+            text = ECSTRING(medical_treatment,Triage_Status_Minor);
+            y = POS_H(1.1);
+            colorText[] = {TRIAGE_TEXT_COLOR_MINOR};
+            colorFocused[] = {TRIAGE_COLOR_MINOR};
+            colorBackground[] = {TRIAGE_COLOR_MINOR};
+            colorBackgroundActive[] = {TRIAGE_COLOR_MINOR};
+        };
+        class Delayed: None {
+            onButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0),GVAR(target),2)] call FUNC(handleTriageSelect));
+            text = ECSTRING(medical_treatment,Triage_Status_Delayed);
+            y = POS_H(2.2);
+            colorText[] = {TRIAGE_TEXT_COLOR_DELAYED};
+            colorFocused[] = {TRIAGE_COLOR_DELAYED};
+            colorBackground[] = {TRIAGE_COLOR_DELAYED};
+            colorBackgroundActive[] = {TRIAGE_COLOR_DELAYED};
+        };
+        class Immediate: None {
+            onButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0),GVAR(target),3)] call FUNC(handleTriageSelect));
+            text = ECSTRING(medical_treatment,Triage_Status_Immediate);
+            y = POS_H(3.3);
+            colorText[] = {TRIAGE_TEXT_COLOR_IMMEDIATE};
+            colorFocused[] = {TRIAGE_COLOR_IMMEDIATE};
+            colorBackground[] = {TRIAGE_COLOR_IMMEDIATE};
+            colorBackgroundActive[] = {TRIAGE_COLOR_IMMEDIATE};
+        };
+        class Deceased: None {
+            onButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0),GVAR(target),4)] call FUNC(handleTriageSelect));
+            text = ECSTRING(medical_treatment,Triage_Status_Deceased);
+            y = POS_H(4.4);
+            colorText[] = {TRIAGE_TEXT_COLOR_DECEASED};
+            colorFocused[] = {TRIAGE_COLOR_DECEASED};
+            colorBackground[] = {TRIAGE_COLOR_DECEASED};
+            colorBackgroundActive[] = {TRIAGE_COLOR_DECEASED};
         };
     };
 };
@@ -247,7 +320,7 @@ class ACE_Medical_Menu {
             idc = IDC_ACTION_9;
             y = POS_Y(13.2);
         };
-        class BodyImage: ACE_Medical_Body {};
+        class BodyImage: GVAR(BodyImage) {};
         class SelectHead: RscButton {
             idc = -1;
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 0);
@@ -334,57 +407,7 @@ class ACE_Medical_Menu {
             h = POS_H(1.1);
             shadow = 0;
         };
-        class SelectTriage: RscControlsGroupNoScrollbars {
-            idc = IDC_TRIAGE_GROUP;
-            x = POS_X(13.33);
-            y = POS_Y(16.6);
-            w = POS_W(12.33);
-            h = POS_H(5);
-            class controls {
-                class None: RscButton {
-                    idc = IDC_TRIAGE_NONE;
-                    style = ST_CENTER;
-                    text = ECSTRING(medical_treatment,Triage_Status_None);
-                    x = 0;
-                    y = 0;
-                    w = POS_W(12.33);
-                    h = POS_H(1);
-                    shadow = 0;
-                    colorFocused[] = {0, 0, 0, 0.9};
-                    colorBackground[] = {0, 0, 0, 0.9};
-                    colorBackgroundActive[] = {0, 0, 0, 0.9};
-                };
-                class Minor: None {
-                    idc = IDC_TRIAGE_MINOR;
-                    text = ECSTRING(medical_treatment,Triage_Status_Minor);
-                    y = POS_H(1);
-                    colorFocused[] = {0, 0.5, 0, 0.9};
-                    colorBackground[] = {0, 0.5, 0, 0.9};
-                    colorBackgroundActive[] = {0, 0.5, 0, 0.9};
-                };
-                class Delayed: None {
-                    idc = IDC_TRIAGE_DELAYED;
-                    text = ECSTRING(medical_treatment,Triage_Status_Delayed);
-                    y = POS_H(2);
-                    colorText[] = {0, 0, 0, 1};
-                    colorFocused[] = {1, 0.84, 0, 0.9};
-                    colorBackground[] = {1, 0.84, 0, 0.9};
-                    colorBackgroundActive[] = {1, 0.84, 0, 0.9};
-                };
-                class Immediate: None {
-                    idc = IDC_TRIAGE_IMMEDIATE;
-                    text = ECSTRING(medical_treatment,Triage_Status_Immediate);
-                    y = POS_H(3);
-                    colorFocused[] = {1, 0, 0, 0.9};
-                    colorBackground[] = {1, 0, 0, 0.9};
-                    colorBackgroundActive[] = {1, 0, 0, 0.9};
-                };
-                class Deceased: None {
-                    idc = IDC_TRIAGE_DECEASED;
-                    text = ECSTRING(medical_treatment,Triage_Status_Deceased);
-                    y = POS_H(4);
-                };
-            };
-        };
+        class TriageToggle: GVAR(TriageToggle) {};
+        class TriageSelect: GVAR(TriageSelect) {};
     };
 };

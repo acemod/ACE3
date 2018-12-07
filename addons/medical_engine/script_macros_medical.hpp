@@ -90,6 +90,19 @@
 
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 
+// Triage colors, for consistency across UIs and functions
+#define TRIAGE_COLOR_NONE      0, 0, 0, 0.9
+#define TRIAGE_COLOR_MINOR     0, 0.5, 0, 0.9
+#define TRIAGE_COLOR_DELAYED   1, 0.84, 0, 0.9
+#define TRIAGE_COLOR_IMMEDIATE 1, 0, 0, 0.9
+#define TRIAGE_COLOR_DECEASED  0, 0, 0, 0.9
+
+#define TRIAGE_TEXT_COLOR_NONE      1, 1, 1, 1
+#define TRIAGE_TEXT_COLOR_MINOR     1, 1, 1, 1
+#define TRIAGE_TEXT_COLOR_DELAYED   0, 0, 0, 1
+#define TRIAGE_TEXT_COLOR_IMMEDIATE 1, 1, 1, 1
+#define TRIAGE_TEXT_COLOR_DECEASED  1, 1, 1, 1
+
 // - Unit Variables ----------------------------------------------------
 // These variables get stored in object space and used across components
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)

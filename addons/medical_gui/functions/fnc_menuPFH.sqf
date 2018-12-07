@@ -41,3 +41,12 @@ private _ctrlInjuries = _display displayCtrl IDC_INJURIES;
 // Update body image
 private _ctrlBodyImage = _display displayCtrl IDC_BODY_GROUP;
 [_ctrlBodyImage, GVAR(target)] call FUNC(updateBodyImage);
+
+// Update triage status
+private _triageStatus = [GVAR(target)] call EFUNC(medical_treatment,getTriageStatus);
+_triageStatus params ["", "_triageText", "_triageColor", "_triageTextColor"];
+
+private _ctrlTriage = _display displayCtrl IDC_TRIAGE_STATUS;
+_ctrlTriage ctrlSetText _triageText;
+_ctrlTriage ctrlSetBackgroundColor _triageColor;
+_ctrlTriage ctrlSetTextColor _triageTextColor;

@@ -31,6 +31,9 @@ if (GVAR(latestCategory) == "toggle") then {
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
 _ctrlTitle ctrlSetText ([GVAR(target)] call EFUNC(common,getName));
 
+// Initially hide the triage select buttons
+[_display] call FUNC(toggleTriageSelect);
+
 // Store display and add PFH to update it
 uiNamespace setVariable [QGVAR(menuDisplay), _display];
 ["ace_medicalMenuOpened", [ACE_player, GVAR(target), _display]] call CBA_fnc_localEvent;
