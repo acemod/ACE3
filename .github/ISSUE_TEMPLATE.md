@@ -17,8 +17,8 @@
 **Where did the issue occur?**
 - Dedicated / Self-Hosted Multiplayer / Singleplayer / Editor (Singleplayer) / Editor (Multiplayer) / Virtual Arsenal
 
-**Placed Modules:**
-- Add the list of modules you have placed on the map. Use 'None' if the error occurs without any modules.
+**Additional information:**
+- Provide any additional information that will help us solve this issue.
 
 **RPT log file:**
 - Add a link ([gist](https://gist.github.com) or [pastebin](http://pastebin.com)) to the client and/or server RPT file. An instruction to find your RPT files can be found [here](https://community.bistudio.com/wiki/Crash_Files#Arma_3).

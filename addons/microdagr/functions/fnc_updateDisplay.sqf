@@ -167,7 +167,9 @@ case (APP_MODE_WAYPOINTS): {
         } forEach _waypoints;
 
         _currentIndex = (_currentIndex max 0) min (count _waypoints);
-        _wpListBox lbSetCurSel _currentIndex;
+        if ((lbCurSel _wpListBox) != _currentIndex) then {
+            _wpListBox lbSetCurSel _currentIndex;
+        };
 
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
         ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);

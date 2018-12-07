@@ -50,7 +50,7 @@
             <Italian>Ammontare Riarmo</Italian>
             <Spanish>Velocidad de rearme</Spanish>
             <French>Quantité à réarmer</French>
-            <Japanese>再武装できる量</Japanese>
+            <Japanese>再武装が可能な量</Japanese>
             <Korean>재보급 양</Korean>
             <Chinesesimp>整装所需时间</Chinesesimp>
             <Chinese>整裝所需時間</Chinese>
@@ -196,7 +196,7 @@
             <English>There is ammunition worth %1 points left.</English>
             <German>Es ist noch Munition für %1 Punkte übrig.</German>
             <Italian>E' presente una penalità delle munizioni %1 punti rimanenti.</Italian>
-            <Japanese>弾薬は%1残っている</Japanese>
+            <Japanese>弾薬は%1残っています。</Japanese>
             <Chinesesimp>还剩下%1多的弹药.</Chinesesimp>
             <Chinese>還剩下%1多的彈藥.</Chinese>
             <Polish>Pozostało %1 punktów amunicji.</Polish>
@@ -280,7 +280,7 @@
             <Italian>Sto prendendo %1 per %2...</Italian>
             <Spanish>Tomando %1 para %2...</Spanish>
             <French>Prend %1 pour %2...</French>
-            <Japanese>%1から%2を取得中…</Japanese>
+            <Japanese>%1を%2用として取得中…</Japanese>
             <Korean>%2를 위해 %1 가져오는중...</Korean>
             <Chinesesimp>拿取%1给%2中...</Chinesesimp>
             <Chinese>拿取%1給%2中...</Chinese>
@@ -369,7 +369,7 @@
             <Italian>Riarmati %1 colpi di %2 su %3</Italian>
             <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
             <French>%1 balles réarmées de %2 dans %3</French>
-            <Japanese>%1発の%2を%3から装填しました</Japanese>
+            <Japanese>%1発の%2を%3に装填しました</Japanese>
             <Korean>%3에 2%의 %1 탄약 재보급</Korean>
             <Chinesesimp>整装了%1发%2到%3上</Chinesesimp>
             <Chinese>整裝了%1發%2到%3上</Chinese>
@@ -587,10 +587,12 @@
         <Key ID="STR_ACE_Rearm_rearmCargo_edenName">
             <English>Rearm Cargo</English>
             <German>Munitionsvorrat</German>
+            <Japanese>再武装用カーゴ</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenDesc">
             <English>The cargo for rearming (-1 disable)</English>
             <German>Der Munitionsvorrat, zum Aufmunitionieren von Fahrzeugen (-1 deaktiviert)</German>
+            <Japanese>カーゴからの再武装 (-1 で無効化)</Japanese>
         </Key>
     </Package>
 </Project>
