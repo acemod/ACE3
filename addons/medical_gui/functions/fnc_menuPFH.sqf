@@ -42,6 +42,15 @@ private _ctrlInjuries = _display displayCtrl IDC_INJURIES;
 private _ctrlBodyImage = _display displayCtrl IDC_BODY_GROUP;
 [_ctrlBodyImage, GVAR(target)] call FUNC(updateBodyImage);
 
+// Update activity and quick view logs
+private _ctrlActivityLog = _display displayCtrl IDC_ACTIVITY;
+private _activityLog = GVAR(target) getVariable [QEGVAR(medical,logFile_activity_view), []];
+[_ctrlActivityLog, _activityLog] call FUNC(updateLogList);
+
+private _ctrlQuickView = _display displayCtrl IDC_QUICKVIEW;
+private _quickView = GVAR(target) getVariable [QEGVAR(medical,logFile_quick_view), []];
+[_ctrlQuickView, _quickView] call FUNC(updateLogList);
+
 // Update triage status
 private _triageStatus = [GVAR(target)] call EFUNC(medical_treatment,getTriageStatus);
 _triageStatus params ["", "_triageText", "_triageColor", "_triageTextColor"];
