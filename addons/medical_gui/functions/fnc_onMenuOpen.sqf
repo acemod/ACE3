@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, mharis001
  * Handles opening the Medical Menu.
  * Called from onLoad event.
  *
@@ -22,10 +22,10 @@ params ["_display"];
 if (EGVAR(interact_menu,menuBackground) == 1) then {[QGVAR(id), true] call EFUNC(common,blurScreen)};
 if (EGVAR(interact_menu,menuBackground) == 2) then {0 cutRsc [QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false]};
 
-// Handle last selected category
-if (GVAR(latestCategory) == "toggle") then {
-    GVAR(latestCategory) = "triage";
-};
+// Fix mouse moving randomly
+[{
+    [{setMousePosition _this}, _this] call CBA_fnc_execNextFrame;
+}, getMousePosition] call CBA_fnc_execNextFrame;
 
 // Set target name as title
 private _ctrlTitle = _display displayCtrl IDC_TITLE;
