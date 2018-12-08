@@ -49,6 +49,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
             idc = IDC_BODY_ARMLEFT_T;
             text = QPATHTOF(data\body_image\arm_left_T.paa);
             colorText[] = {0, 0, 0.8, 1};
+            show = 0;
         };
         class ArmRightT: ArmLeftT {
             idc = IDC_BODY_ARMRIGHT_T;
