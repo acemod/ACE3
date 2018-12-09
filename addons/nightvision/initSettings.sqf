@@ -6,7 +6,8 @@
     localize LSTRING(Category),
     [0,2,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true, // isGlobal
-    {[QGVAR(effectScaling), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(effectScaling), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
 [
     QGVAR(fogScaling), "SLIDER",
@@ -14,7 +15,8 @@
     localize LSTRING(Category),
     [0,2,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true, // isGlobal
-    {[QGVAR(fogScaling), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(fogScaling), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
 
 [

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Add a stat to ACE Arsenal.
@@ -29,7 +30,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 params [
     ["_tabs", [[], []], [[]], 2],
     ["_class", "", [""]],
@@ -53,8 +53,8 @@ _statements params [
     ["_condition", {true}, [{}]]
 ];
 
-private _statsListLeftPanel = uiNamespace getVariable QGVAR(statsListLeftPanel);
-private _statsListRightPanel = uiNamespace getVariable QGVAR(statsListRightPanel);
+call FUNC(compileStats);
+
 private _returnArray = [];
 
 private _fnc_addToTabs = {
@@ -89,11 +89,11 @@ private _fnc_addToTabs = {
 private _finalArray = ["", _stats, _title, [_showBar, _showText], [_barStatement, _textStatement, _condition], _priority];
 
 if (count _leftTabs > 0) then {
-    [_statsListLeftPanel, _leftTabs, "L", 0] call _fnc_addToTabs;
+    [GVAR(statsListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;
 };
 
 if (count _rightTabs > 0) then {
-    [_statsListRightPanel, _rightTabs, "R", 1] call _fnc_addToTabs;
+    [GVAR(statsListRightPanel), _rightTabs, "R", 1] call _fnc_addToTabs;
 };
 
 _returnArray

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Wrapper for BIS_fnc_addVirtual*Cargo.
@@ -16,7 +17,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 WAIT_AND_CHECK_SETTING(addVirtualWeaponCargo);
 

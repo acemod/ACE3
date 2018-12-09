@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Update all UI information in the medical menu
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_display"];
 
@@ -143,6 +143,7 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
 
 [_selectionBloodLoss, _damaged, _display] call FUNC(updateBodyImage);
 [_display, _genericMessages, _allInjuryTexts] call FUNC(updateInformationLists);
+[_display, _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]] call EFUNC(medical,updateTourniquets);
 
 [_display, _target getVariable [QEGVAR(medical,logFile_activity_view), []]] call FUNC(updateActivityLog);
 [_display, _target getVariable [QEGVAR(medical,logFile_quick_view), []]] call FUNC(updateQuickViewLog);

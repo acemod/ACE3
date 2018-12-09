@@ -5,7 +5,6 @@
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
-// #define ENABLE_PERF_PROFILING // This requires https://forums.bohemia.net/forums/topic/211626-arma-script-profiler/ do not uncomment otherwise.
 
 #ifdef DEBUG_ENABLED_ARSENAL
     #define DEBUG_MODE_FULL

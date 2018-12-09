@@ -48,7 +48,8 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
-    private _vis = _object getUnitTrait "camouflageCoef";
+    // May report nil. Default to factor 1.
+    private _vis = [_object getUnitTrait "camouflageCoef"] param [0, 1];
     if (_set > 0) then {
         if (_vis != 0) then {
             _object setVariable [QGVAR(oldVisibility), _vis];
@@ -260,21 +261,18 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
     ACE_player = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
+// Clear uniqueItems cache on loadout change
+["loadout", {
+    GVAR(uniqueItemsCache) = nil;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// Backwards compatiblity for old ace event
 GVAR(OldIsCamera) = false;
-
-[{
-    BEGIN_COUNTER(stateChecker);
-
-    // "activeCameraChanged" event
-    private _data = call FUNC(isfeatureCameraActive);
-    if !(_data isEqualTo GVAR(OldIsCamera)) then {
-        // Raise ACE event locally
-        GVAR(OldIsCamera) = _data;
-        ["ace_activeCameraChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    END_COUNTER(stateChecker);
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+["featureCamera", {
+    params ["_player", "_cameraName"];
+    GVAR(OldIsCamera) = _cameraName != "";
+    ["ace_activeCameraChanged", [_player, GVAR(OldIsCamera)]] call CBA_fnc_localEvent;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 // Add event handler for UAV control change
 ACE_controlledUAV = [objNull, objNull, [], ""];

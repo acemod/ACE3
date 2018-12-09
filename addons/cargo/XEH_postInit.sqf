@@ -61,23 +61,91 @@
 [QGVAR(initObject), DFUNC(initObject)] call CBA_fnc_addEventHandler;
 [QGVAR(initVehicle), DFUNC(initVehicle)] call CBA_fnc_addEventHandler;
 
-// Add all the vehicle init EHs (require initPost for set/get variables)
-["LandVehicle", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
-["Air", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
-["Ship_F", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
 
-// Add all the object init EHs
-["StaticWeapon", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
-["Land_PortableLight_single_F", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
-["ACE_ConcertinaWireCoil", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+GVAR(vehicleAction) = [
+    QGVAR(openMenu), localize LSTRING(openMenu), "",
+    {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+        GVAR(interactionVehicle) = _target;
+        GVAR(interactionParadrop) = false;
+        createDialog QGVAR(menu);
+    },
+    {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+        GVAR(enable) &&
+        {(_target getVariable [QGVAR(hasCargo), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(hasCargo)) == 1])} &&
+        {locked _target < 2} &&
+        {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE} &&
+        {alive _target} &&
+        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+    }
+] call EFUNC(interact_menu,createAction);
 
-// Add all the vehicle/object init EHs
-["ThingX", "initPost", {
-    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
-["Land_PaperBox_closed_F", "initPost", {
-    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
-["PlasticCase_01_base_F", "initPost", {
-    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+GVAR(objectAction) = [
+    QGVAR(load), localize LSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
+    {
+        params ["_target", "_player"];
+        [_player, _target] call FUNC(startLoadIn);
+    },
+    {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+        GVAR(enable) &&
+        {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
+        {locked _target < 2} &&
+        {alive _target} &&
+        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+        {0 < {
+                private _type = typeOf _x;
+                private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
+                private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
+                (_hasCargoPublic || _hasCargoConfig) && {_x != _target} &&
+                {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+            } count (nearestObjects [_player, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)])}
+    },
+    LINKFUNC(addCargoVehiclesActions)
+] call EFUNC(interact_menu,createAction);
+
+
+private _initVehicleClasses = ["ThingX", "LandVehicle", "Air", "Ship_F"];
+private _initObjectClasses = ["ThingX", "StaticWeapon"];
+{
+    [_x, "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+} forEach _initVehicleClasses;
+{
+    [_x, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+} forEach _initObjectClasses;
+
+// find all remaining configured classes and init them
+{
+    private _class = configName _x;
+    // init vehicle
+    if (
+        1 == getNumber (_x >> QGVAR(hasCargo))
+        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _initVehicleClasses}
+    ) then {
+        if (_class isKindOf "Static") then {
+            if (2 == getNumber (_x >> "scope")) then {
+                [_class, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
+                GVAR(initializedVehicleClasses) pushBack _class;
+            };
+        } else {
+            [_class, "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+            _initVehicleClasses pushBack _class;
+        };
+    };
+    // init object
+    if (
+        1 == getNumber (_x >> QGVAR(canLoad))
+        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _initObjectClasses}
+    ) then {
+        if (_class isKindOf "Static") then {
+            if (2 == getNumber (_x >> "scope")) then {
+                [_class, 0, ["ACE_MainActions"], GVAR(objectAction)] call EFUNC(interact_menu,addActionToClass);
+                GVAR(initializedItemClasses) pushBack _class;
+            };
+        } else {
+            [_class, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+            _initObjectClasses pushBack _class;
+        };
+    };
+} forEach ("true" configClasses (configFile >> "CfgVehicles"));

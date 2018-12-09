@@ -15,3 +15,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define IS_KIND_OF_ANY(object,classnames) ((classnames) findIf {(object) isKindOf _x} > -1)

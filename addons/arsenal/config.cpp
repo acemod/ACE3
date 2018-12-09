@@ -8,35 +8,15 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"alganthe"};
+        authors[] = {"alganthe", "mharis001"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-class Cfg3DEN {
-    class Mission {
-        class GVAR(DummyCategory) {
-            displayName="Dummy attribute, should never show up";
-            class AttributeCategories {
-                class ACE3_Arsenal {
-                    class Attributes {
-                        class GVAR(DefaultLoadoutsListAttribute) {
-                            property = QGVAR(DefaultLoadoutsListAttribute);
-                            value=0;
-                            expression="if !(is3DEN) then {ace_arsenal_defaultLoadoutsList = _value};";
-                            defaultValue="[]";
-                            validate="none";
-                            wikiType="[[Array]]";
-                        };
-                    };
-                };
-            };
-        };
-    };
-};
-
 #include "ui\RscAttributes.hpp"
+#include "Display3DEN.hpp"
+#include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "RscDisplayMain.hpp"

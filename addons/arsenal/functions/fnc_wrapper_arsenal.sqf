@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Wrapper for BIS_fnc_arsenal.
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 WAIT_AND_CHECK_SETTING(arsenal);
 

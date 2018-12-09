@@ -107,6 +107,27 @@ class CfgVehicles {
         function = QFUNC(moduleAddSpareWheel);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
+    class GVAR(moduleSetEngineer): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Repair);
+        displayName = CSTRING(ModuleSetEngineer_DisplayName);
+        curatorInfoType = QGVAR(RscSetEngineer);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
+    };
+    class GVAR(moduleSetRepairFacility): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Repair);
+        displayName = CSTRING(ModuleSetRepairFacility_DisplayName);
+        function = QFUNC(moduleSetRepairFacility);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
+    };
+    class GVAR(moduleSetRepairVehicle): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Repair);
+        displayName = CSTRING(ModuleSetRepairVehicle_DisplayName);
+        function = QFUNC(moduleSetRepairVehicle);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
+    };
     class GVAR(moduleAddOrRemoveFRIES): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
@@ -138,6 +159,7 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleEditableObjects_DisplayName);
         curatorInfoType = QGVAR(RscEditableObjects);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Editable_Objects_ca.paa);
     };
     class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
         category = QGVAR(AI);
@@ -149,6 +171,13 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
+    };
+    class GVAR(moduleHeal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Medical);
+        displayName = CSTRING(ModuleHeal_DisplayName);
+        function = QFUNC(moduleHeal);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Heal_ca.paa);
     };
     class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -208,6 +237,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSimulation_DisplayName);
         function = QFUNC(moduleSimulation);
     };
+    class GVAR(moduleSuicideBomber): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleSuicideBomber_DisplayName);
+        curatorInfoType = QGVAR(RscSuicideBomber);
+    };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Captive);
@@ -245,14 +280,15 @@ class CfgVehicles {
     class GVAR(moduleToggleNvg): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(moduleToggleNVG_DisplayName);
+        displayName = CSTRING(ModuleToggleNVG_DisplayName);
         curatorInfoType = QGVAR(RscToggleNvg);
     };
     class GVAR(moduleToggleFlashlight): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(moduleToggleFlashlight_DisplayName);
+        displayName = CSTRING(ModuleToggleFlashlight_DisplayName);
         curatorInfoType = QGVAR(RscToggleFlashlight);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Flashlight_ca.paa);
     };
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;

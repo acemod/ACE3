@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dedmen
  * Add a listbox row.
@@ -13,8 +14,6 @@
  *
  * Public: Yes
 */
-
-#include "script_component.hpp"
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 
 private _cacheNamespace = _ctrlPanel; //For better readability.

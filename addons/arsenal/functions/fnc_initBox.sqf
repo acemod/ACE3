@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Initialize a box / object for arsenal.
@@ -17,7 +18,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global", true, [true]], ["_condition", {true}, [{}]]];
 
@@ -31,7 +31,7 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
 
     private _ID = [QGVAR(initBox), [_object, _items, false]] call CBA_fnc_globalEventJIP;
     [_ID, _object] call CBA_fnc_removeGlobalEventJIP;
-    
+
     GVAR(EHIDArray) pushBack [_ID, _object];
     publicVariable QGVAR(EHIDArray);
 } else {
@@ -39,20 +39,20 @@ if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) 
     if ({(_x select 0) select 0 isEqualTo QGVAR(interaction)} count (_object getVariable [QEGVAR(interact_menu,actions), []]) == 0) then {
 
         private _action = [
-            QGVAR(interaction), 
+            QGVAR(interaction),
             localize "STR_A3_Arsenal",
-            "", 
+            "",
             {
                 params ["_target", "_player"];
 
                 [_target, _player] call FUNC(openBox);
-            }, 
+            },
             {
                 params ["_target", "_player", "_condition"];
 
                 ["_target", "_player"] call _condition &&
                 [_player, _target] call EFUNC(common,canInteractWith)
-            }, 
+            },
             {},
             _condition
         ] call EFUNC(interact_menu,createAction);

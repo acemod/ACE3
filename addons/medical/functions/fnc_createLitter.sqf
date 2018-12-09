@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Spawns litter for the treatment action on the ground around the target
@@ -19,8 +20,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define MIN_ENTRIES_LITTER_CONFIG 3
 

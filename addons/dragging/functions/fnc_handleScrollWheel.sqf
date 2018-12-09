@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: L-H, commy2
  * Handles raising and lowering the dragged weapon to be able to place it on top of objects.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_scrollAmount"];
 

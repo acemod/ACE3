@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles the stats control group
@@ -13,12 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
-
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeHandleStats = createProfileScope QFUNC(handleStats);
-#endif
 
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
@@ -57,9 +53,9 @@ if !(isNil "_itemCfg") then {
 
         // Get the proper list and page
         if (_leftPanel) then {
-            [true, (uiNamespace getVariable QGVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
+            [true, (GVAR(statsListLeftPanel)) select _statsIndex, GVAR(statsPagesLeft) select _statsIndex]
         } else {
-            [false, (uiNamespace getVariable QGVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
+            [false, (GVAR(statsListRightPanel)) select _statsIndex, GVAR(statsPagesRight) select _statsIndex]
         } params ["_isLeftPanel", "_statsArray", "_currentPage"];
 
         private _statsList = _statsArray select _currentPage;
@@ -128,67 +124,14 @@ if !(isNil "_itemCfg") then {
         };
 
         // Resize the window
-        switch (_statsCount) do {
-            case 0: {
-                [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    11 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 1: {
-                [[2, 3, 4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    15 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 2: {
-                [[3, 4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    25 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 3: {
-                [[4, 5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    35 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 4: {
-                [[5]] call _hideUnusedFnc;
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    45 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-            case 5: {
-                _statsBoxCtrl ctrlSetPosition [
-                    (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-                    safezoneY + 1.8 * GRID_H,
-                    47 * GRID_W,
-                    55 * GRID_H
-                ];
-                _statsBoxCtrl ctrlCommit 0;
-            };
-        };
+        [[1, 2, 3, 4, 5] select [_statsCount, 5]] call _hideUnusedFnc;
+        _statsBoxCtrl ctrlSetPosition [
+            (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+            safezoneY + 1.8 * GRID_H,
+            47 * GRID_W,
+            ([11, (10 * _statsCount) + 5] select (_statsCount > 0)) * GRID_H
+        ];
+        _statsBoxCtrl ctrlCommit 0;
 
         GVAR(statsInfo) = [_isLeftPanel, _statsIndex, _control, _curSel, _itemCfg];
 
@@ -209,61 +152,43 @@ if !(isNil "_itemCfg") then {
 
     if (ctrlIDC _control == IDC_leftTabContent) then {
 
-        switch (GVAR(currentLeftPanel)) do {
-            case IDC_buttonPrimaryWeapon: {
-                [0, true] call _handleStatsFnc;
-            };
-            case IDC_buttonHandgun: {
-                [1, true] call _handleStatsFnc;
-            };
-            case IDC_buttonSecondaryWeapon: {
-                [2, true] call _handleStatsFnc;
-            };
-            case IDC_buttonUniform: {
-                [3, true] call _handleStatsFnc;
-            };
-            case IDC_buttonVest: {
-                [4, true] call _handleStatsFnc;
-            };
-            case IDC_buttonBackpack: {
-                [5, true] call _handleStatsFnc;
-            };
-            case IDC_buttonHeadgear: {
-                [6, true] call _handleStatsFnc;
-            };
-            case IDC_buttonGoggles: {
-                [7, true] call _handleStatsFnc;
-            };
-            case IDC_buttonNVG: {
-                [8, true] call _handleStatsFnc;
-            };
-            case IDC_buttonBinoculars: {
-                [9, true] call _handleStatsFnc;
-            };
-            case IDC_buttonMap: {
-                [10, true] call _handleStatsFnc;
-            };
-            case IDC_buttonGPS: {
-                [11, true] call _handleStatsFnc;
-            };
-            case IDC_buttonRadio: {
-                [12, true] call _handleStatsFnc;
-            };
-            case IDC_buttonCompass: {
-                [13, true] call _handleStatsFnc;
-            };
-            case IDC_buttonWatch: {
-                [14, true] call _handleStatsFnc;
-            };
-            case IDC_buttonFace: {
-                [15, true] call _handleStatsFnc;
-            };
-            case IDC_buttonVoice: {
-                [16, true] call _handleStatsFnc;
-            };
-            case IDC_buttonInsigna: {
-                [17, true] call _handleStatsFnc;
-            };
+        if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsigna] find GVAR(currentLeftPanel) > -1) then {
+
+            [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
+            _statsBoxCtrl ctrlSetPosition [
+                (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
+                safezoneY + 1.8 * GRID_H,
+                47 * GRID_W,
+                11 * GRID_H
+            ];
+            _statsBoxCtrl ctrlCommit 0;
+
+            {
+                _x ctrlSetFade 1;
+                _x ctrlCommit 0;
+            } forEach [
+                _statsPreviousPageCtrl,
+                _statsNextPageCtrl,
+                _statsCurrentPageCtrl
+            ];
+        } else {
+            [[
+                IDC_buttonPrimaryWeapon,
+                IDC_buttonHandgun,
+                IDC_buttonSecondaryWeapon,
+                IDC_buttonUniform,
+                IDC_buttonVest,
+                IDC_buttonBackpack,
+                IDC_buttonHeadgear,
+                IDC_buttonGoggles,
+                IDC_buttonNVG,
+                IDC_buttonBinoculars,
+                IDC_buttonMap,
+                IDC_buttonGPS,
+                IDC_buttonRadio,
+                IDC_buttonCompass,
+                IDC_buttonWatch
+            ] find GVAR(currentLeftPanel), true] call _handleStatsFnc;
         };
     } else {
 

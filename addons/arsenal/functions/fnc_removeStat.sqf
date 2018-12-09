@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Remove a stat from ACE Arsenal.
@@ -13,12 +14,10 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params ["_IDList"];
 
-private _statsListLeftPanel = uiNamespace getVariable QGVAR(statsListLeftPanel);
-private _statsListRightPanel = uiNamespace getVariable QGVAR(statsListRightPanel);
+call FUNC(compileStats);
 
 {
     private _currentID = _x;
@@ -28,24 +27,19 @@ private _statsListRightPanel = uiNamespace getVariable QGVAR(statsListRightPanel
     _tab = parseNumber _tab;
 
     private _tabToChange = if (_side == "R") then {
-         _statsListRightPanel select _tab
+        GVAR(statsListRightPanel) select _tab
     } else {
-        _statsListLeftPanel select _tab
+        GVAR(statsListLeftPanel) select _tab
     };
 
     {
-        private _currentPage = _x;
-
-        {
-            if (_x select 0 == _currentID) then {
-                _currentPage deleteAt _forEachIndex;
-            };
-        } foreach _currentPage;
+        _x deleteAt (_x findIf {_x select 0 == _currentID});
     } foreach _tabToChange;
 } foreach _IDList;
 
 // Clear empty pages
 private _fnc_deleteEmptyPage = {
+    params ["_list"];
     {
         private _evaluatedTab = _forEachIndex;
         {
@@ -55,12 +49,12 @@ private _fnc_deleteEmptyPage = {
         } foreach _x;
 
         {
-            (_statsListLeftPanel select (_x select 0)) deleteAt (_x select 1);
+            (_list select (_x select 0)) deleteAt (_x select 1);
         } foreach _markedForDeletion;
     } foreach (_this select 0);
 };
 
 private _markedForDeletion = [];
 
-[_statsListLeftPanel] call _fnc_deleteEmptyPage;
-[_statsListRightPanel] call _fnc_deleteEmptyPage;
+[GVAR(statsListLeftPanel)] call _fnc_deleteEmptyPage;
+[GVAR(statsListRightPanel)] call _fnc_deleteEmptyPage;

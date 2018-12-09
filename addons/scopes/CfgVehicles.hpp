@@ -9,7 +9,6 @@ class CfgVehicles {
                     condition = QUOTE([ACE_player] call FUNC(canAdjustZero));
                     statement = QUOTE([ACE_player] call FUNC(adjustZero));
                     showDisabled = 0;
-                    priority = 0.2;
                     //icon = QPATHTOF(UI\...); // TODO
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSwimming", "isNotSitting"};
                 };
@@ -19,7 +18,6 @@ class CfgVehicles {
                     condition = QUOTE([ACE_player] call FUNC(canResetZero));
                     statement = QUOTE([ACE_player] call FUNC(resetZero));
                     showDisabled = 0;
-                    priority = 0.2;
                     //icon = QPATHTOF(UI\...); // TODO
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSwimming", "isNotSitting"};
                 };

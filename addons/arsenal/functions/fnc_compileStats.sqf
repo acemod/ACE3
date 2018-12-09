@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
- * Create the internal stats arrays on preStart
+ * Create the internal stats arrays when needed for the first time
  *
  * Arguments:
  * None
@@ -10,7 +11,8 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
+
+if (!isNil QGVAR(statsListLeftPanel)) exitWith {};
 
 private _fnc_addToTabs = {
     params ["_tabsList", "_tabsToAddTo", "_sideString"];
@@ -53,7 +55,7 @@ private _fnc_sortLists = {
     } foreach _tabsList;
 };
 
-private _statsListLeftPanel = uiNamespace getVariable [QGVAR(statsListLeftPanel), [
+private _statsListLeftPanel = [
     [[]], // Primary 0
     [[]], // Handgun 1
     [[]], // Launcher 2
@@ -69,9 +71,9 @@ private _statsListLeftPanel = uiNamespace getVariable [QGVAR(statsListLeftPanel)
     [[]], // Radio 12
     [[]], // Compass 13
     [[]] // Watch 14
-]];
+];
 
-private _statsListRightPanel = uiNamespace getVariable [QGVAR(statsListRightPanel), [
+private _statsListRightPanel = [
     [[]], // Optics 0
     [[]], // Side accs 1
     [[]], // Muzzle 2
@@ -79,8 +81,8 @@ private _statsListRightPanel = uiNamespace getVariable [QGVAR(statsListRightPane
     [[]], // Mag 4
     [[]], // Throw 5
     [[]], // Put 6
-    [[]] // Misc 7
-]];
+    [[]]  // Misc 7
+];
 
 //------------------------- Config handling
 private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (configFile >> QGVAR(stats));
@@ -129,5 +131,5 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
 
 //------------------------- Config Handling
 
-uiNamespace setVariable [QGVAR(statsListLeftPanel), _statsListLeftPanel];
-uiNamespace setVariable [QGVAR(statsListRightPanel), _statsListRightPanel];
+missionNamespace setVariable [QGVAR(statsListLeftPanel), _statsListLeftPanel];
+missionNamespace setVariable [QGVAR(statsListRightPanel), _statsListRightPanel];

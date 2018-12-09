@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the mine detector can be activated
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 ([ACE_player] call FUNC(hasDetector)) &&
 !([ACE_player, currentWeapon ACE_player] call FUNC(isDetectorEnabled));

@@ -34,6 +34,7 @@ class EGVAR(arsenal,stats) {
         displayName= CSTRING(statBallisticCoef);
         showText= 1;
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); private _ballisticCoef = getArray (_ammoCfg >> _stat select 1); _ballisticCoef sort false; format [ARR_4('%1 G%2 (%3)', _ballisticCoef select 0 ,getNumber (_ammoCfg >> _stat select 0), getText (_ammoCfg >> _stat select 2))]);
+        condition = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); !(getArray (_ammoCfg >> _stat select 1) isEqualTo []));
         tabs[] ={{}, {4}};
     };
     class ACE_bulletMass: statBase {
@@ -43,6 +44,7 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(statBulletMass);
         showText = 1;
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoWeight = getNumber (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 0); format [ARR_3('%1g (%2gr)', _ammoWeight toFixed 1, (_ammoWeight * 15.43) toFixed 1)]);
+        condition = QUOTE(params[ARR_2('_stat', '_config')]; getNumber (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo')) >> _stat select 0) > 0);
         tabs[] = {{}, {4}};
     };
     class ACE_magMuzzleVelocity: statBase {
@@ -52,6 +54,7 @@ class EGVAR(arsenal,stats) {
         displayName= CSTRING(statMuzzleVelocity);
         showText= 1;
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _initSpeed = getNumber (_config >> _stat select 0); format [ARR_3('%1 m/s (%2 ft/s)', _initSpeed, (_initSpeed * 3.28084) toFixed 0)]);
+        condition = QUOTE(getNumber (_this select 1 >> (_this select 0) select 0) > 0);
         tabs[] = {{}, {4}};
     };
     class ACE_weaponMuzzleVelocity: statBase {

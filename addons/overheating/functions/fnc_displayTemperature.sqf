@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Displays the weapon temperature
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 TRACE_2("params",_unit,_weapon);
@@ -45,7 +45,7 @@ for "_a" from (_count + 1) to 12 do {
 
 TRACE_3("",_temperature,_color,_string);
 
-_text = composeText [_text, [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredText)];
+_text = composeText [_text, [_string, "#808080"] call EFUNC(common,stringToColoredText)];
 
 private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Adds new condition for the unconscious state. Conditions are not actively checked for units unless unit is in unconscious state.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (isnil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];

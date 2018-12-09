@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * PFH logic for unconscious state
@@ -20,8 +21,6 @@
  *
  * Public: yes
  */
-
-#include "script_component.hpp"
 
 params ["_args", "_idPFH"];
 _args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];
@@ -51,6 +50,12 @@ if (!alive _unit) exitWith {
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
 if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
     TRACE_7("ACE_DEBUG_Unconscious_PFH",_unit, _args, [_unit] call FUNC(isBeingCarried), [_unit] call FUNC(isBeingDragged), _idPFH, _unit getVariable QGVAR(unconsciousArguments),animationState _unit);
+
+    //Unmute the unit before the carry check
+    _unit setVariable ["tf_voiceVolume", 1, true];
+    _unit setVariable ["tf_unable_to_use_radio", false, true];
+    _unit setVariable ["acre_sys_core_isDisabled", false, true];
+
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
     if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {

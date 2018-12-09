@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * DEV to find a firing solution for a given range
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define MAX_ATTEMPTS 22
 params ["_rangeToHit", "_heightToHit", "_muzzleVelocity", "_airFriction","_timeStep"];
