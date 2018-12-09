@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Inserts entry in the c1 ballistic coefficient vs. distance interpolation table
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_transonicRange", "_subsonicRange", "_c1"];
 

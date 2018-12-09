@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Removes all user data from the profileNamespace
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 profileNamespace setVariable ["ACE_ATragMX_gunList", nil];
 

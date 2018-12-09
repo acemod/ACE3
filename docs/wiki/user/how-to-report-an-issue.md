@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: How to report an issue
+title: How to Report an Issue
 description: If you have found an issue with ACE3 please read this entry before reporting it.
 group: user
 order: 10

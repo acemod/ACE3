@@ -23,10 +23,10 @@ class CfgWeapons {
     class R3F_Famas_F1_M203: R3F_Famas_F1 {
         muzzles[] = {"this","Lance_Grenades"};
     };
-    class R3F_Famas_surb: R3F_Famas_F1 {
+    class R3F_Famas_surb: R3F_Famas_F1 { // R3F FAMAS Surbaissé, should be FAMAS Valorisé : http://narval34.free.fr/fiche_tech_famas.pdf
         ACE_RailHeightAboveBore = 5.08219;
-        ACE_barrelTwist = 228.6; // 1:9"
-        ACE_barrelLength = 450.0; // Beretta barrel
+        ACE_barrelTwist = 228.6; // 1:9" FAMAS Surbaissé, should be 1:7" FAMAS Valorisé
+        ACE_barrelLength = 450.0; // 3D model with Beretta barrel : FAMAS Valorisé
     };
     class R3F_Famas_surb_M203: R3F_Famas_surb {
         muzzles[] = {"this","Lance_Grenades"};
@@ -230,12 +230,27 @@ class CfgWeapons {
         ACE_barrelLength = 125.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class Single: Mode_SemiAuto {
+            dispersion=0.0025; // 8.59 MOA (a square of 6.25/6.25cm at 25 meters), R3F default value 0.025 (85.94 MOA)
+        };
     };
     class R3F_HKUSP: Pistol_Base_F {
         ACE_barrelTwist = 250.0;
         ACE_barrelLength = 121.0;
         muzzles[] = {"this"};
         initSpeed = -1.0; // default 410
+        class Single: Mode_SemiAuto {
+            dispersion=0.002; // 6.88 MOA (a square of 5/5cm at 25 meters), R3F default value 0.02 (68.75 MOA)
+        };
+    };
+    class R3F_G17: Pistol_Base_F {
+        ACE_barrelTwist = 250.0;
+        ACE_barrelLength = 114.0;
+        muzzles[] = {"this"};
+        initSpeed = -1.0; // default 410
+        class Single: Mode_SemiAuto {
+            dispersion=0.0029; // R3F default value, 9.97 MOA (a square of 7.25/7.25cm at 25 meters)
+        };
     };
     class ItemCore;
     class InventoryOpticsItem_Base_F;
@@ -247,7 +262,7 @@ class CfgWeapons {
     };
     class R3F_J4: ItemCore { // http://www.scrome.com/assets/templates/flexibility/pdf/Scrome_Riflescope_LTE_J4_Datasheet_GB.pdf
         ACE_ScopeHeightAboveRail = 3.20641;
-        ACE_ScopeAdjust_Vertical[] = {0, 16};
+        ACE_ScopeAdjust_Vertical[] = {-8, 8};
         ACE_ScopeAdjust_Horizontal[] = {-8, 8};
         ACE_ScopeAdjust_VerticalIncrement = 0.2;
         ACE_ScopeAdjust_HorizontalIncrement = 0.2;
@@ -265,10 +280,35 @@ class CfgWeapons {
     };
     class R3F_FELIN_FRF2: ItemCore {
         ACE_ScopeHeightAboveRail = 4.28091;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class Felin {};
+                class Oeilleton: Felin {
+                    opticsID=2;
+                    opticsDisplayName="";
+                    useModelOptics=0;
+                    opticsPPEffects[]={};
+                    opticsFlare=0;
+                    opticsDisablePeripherialVision=0;
+                    opticsZoomMin=0.25;
+                    opticsZoomMax=1.25;
+                    opticsZoomInit=0.75;
+                    memoryPointCamera="eye_Oeilleton";
+                    visionMode[]={};
+                    discretefov[]={};
+                    discreteDistance[]={200};
+                    discreteDistanceInitIndex=0;
+                    distanceZoomMin=200;
+                    distanceZoomMax=200;
+                    discreteInitIndex=0;
+                    cameraDir="";
+                };
+            };
+        };
     };
     class R3F_J8: ItemCore { // http://www.scrome.com/assets/templates/flexibility/pdf/Scrome_Marksman_Scope_LTE_Datasheet_GB.pdf
-        ACE_ScopeHeightAboveRail = 4.474;
-        ACE_ScopeAdjust_Vertical[] = {0, 20};
+        ACE_ScopeHeightAboveRail = 4.474; // Inaccurate BDC reticle, designed to work with the vanilla ballistic and R3F values.
+        ACE_ScopeAdjust_Vertical[] = {-10, 10};
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
@@ -296,9 +336,9 @@ class CfgWeapons {
         };
     };
     class R3F_J10: ItemCore { // http://www.scrome.com/assets/templates/flexibility/pdf/Scrome_Marksman_Scope_LTE_Datasheet_GB.pdf
-        ACE_ScopeZeroRange = 1400; // Inaccurate reticle, designed to work with the vanilla ballistic.
+        ACE_ScopeZeroRange = 1400; // Inaccurate BDC reticle, designed to work with the vanilla ballistic and R3F values.
         ACE_ScopeHeightAboveRail = 4.474;
-        ACE_ScopeAdjust_Vertical[] = {0, 20};
+        ACE_ScopeAdjust_Vertical[] = {-10, 10};
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
@@ -476,22 +516,22 @@ class CfgWeapons {
 class ACE_ATragMX_Presets {
     class R3F_PGM_Hecate_II {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"[R3F]PGM", 780, 100, 0.0879633, -0.00058679, 8.89, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15,753},{0,760},{10,767},{15,772},{25,786},{30,795},{35,806}}, {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}}};
+        preset[] = {"R3F PGM M33", 780, 100, 0.0845596, -0.00062115, 6.35, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15, 761},{0, 768},{10, 775},{15, 780},{25, 794},{30, 803},{35, 814}}, {{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0}}};
     };
     class R3F_M107 {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"[R3F]M107", 850, 100, 0.0879633, -0.00058679, 8.89, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15,823},{0,830},{10,837},{15,842},{25,856},{30,865},{35,876}}, {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}}};
+        preset[] = {"R3F M107 M33", 850, 100, 0.0841653, -0.000601, 7.62, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15, 831},{0, 838},{10, 845},{15, 850},{25, 864},{30, 873},{35, 884}}, {{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0}}};
     };
     class R3F_TAC50 {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"[R3F]TAC50", 820, 100, 0.0879633, -0.00058679, 8.89, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15,793},{0,800},{10,807},{15,812},{25,826},{30,835},{35,846}}, {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}}};
+        preset[] = {"R3F TAC50 M33", 820, 100, 0.0872461, -0.00060964, 7.62, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15, 801},{0, 808},{10, 815},{15, 820},{25, 834},{30, 843},{35, 854}}, {{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0}}};
     };
     class R3F_FRF2 {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"[R3F]FRF2", 850, 100, 0.0909184, -0.00103711, 7.62, 0, 2, 10, 120, 0, 0, 9.461, 7.82, 29.46, 0.398, 1, "ICAO", {{-15,823},{0,830},{10,837},{15,842},{25,856},{30,865},{35,876}}, {{0, 0.399}, {810, 0.392}, {1030, 0.383}, {1120, 0.381}, {1270, 0.380}, {1410, 0.379}, {1530, 0.379}}};
+        preset[] = {"R3F FRF2 M993", 850, 100, 0.0783702, -0.00110718, 6.35, 0, 2, 10, 120, 0, 0, 8.230, 7.82, 29.46, 0.359, 1, "ICAO", {{-15, 831},{0, 838},{10, 845},{15, 850},{25, 864},{30, 873},{35, 884}}, {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}}};
     };
     class R3F_HK417L {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"[R3F]HK417L", 820, 100, 0.0909184, -0.00103711, 7.62, 0, 2, 10, 120, 0, 0, 9.461, 7.82, 29.46, 0.398, 1, "ICAO", {{-15,793},{0,800},{10,807},{15,812},{25,826},{30,835},{35,846}}, {{0, 0.399}, {810, 0.392}, {1030, 0.383}, {1120, 0.381}, {1270, 0.380}, {1410, 0.379}, {1530, 0.379}}};
+        preset[] = {"R3F HK417L M80", 820, 100, 0.0884448, -0.00103711, 7.62, 0, 2, 10, 120, 0, 0, 9.461, 7.82, 27.94, 0.398, 1, "ICAO", {{-15, 801},{0, 808},{10, 815},{15, 820},{25, 834},{30, 843},{35, 854}}, {{200, 0.398}, {400, 0.398}, {600, 0.398}, {800, 0.39}, {1000, 0.383}, {1200, 0.379}, {1400, 0.378}}};
     };
 };

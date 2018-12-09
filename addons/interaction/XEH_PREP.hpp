@@ -42,4 +42,4 @@ PREP(openDoor);
 PREP(canPush);
 PREP(push);
 
-PREP(switchLamp);
+PREP(canFlip);

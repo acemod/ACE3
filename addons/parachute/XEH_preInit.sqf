@@ -1,19 +1,6 @@
-/*
- * Author: Garth 'L-H' de Wet
- * Initialises the parachute system.
- *
- * Arguments:
- * None
- *
- * Return Value:
- * None
- *
- * Example:
- * None
- *
- * Public: No
- */
 #include "script_component.hpp"
+// Author: Garth 'L-H' de Wet
+// Initialises the parachute system.
 
 ADDON = false;
 

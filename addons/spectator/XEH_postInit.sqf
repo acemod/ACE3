@@ -34,3 +34,5 @@ if (hasInterface) then {
         }
     ] call CBA_fnc_waitUntilAndExecute;
 };
+
+["ace_spectator", {GETMVAR(GVAR(isSet),false)}] call CBA_fnc_registerFeatureCamera;

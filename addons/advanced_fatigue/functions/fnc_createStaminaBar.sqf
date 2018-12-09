@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Creates the stamina bar.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_display"];
 
 private _staminaBar = _display ctrlCreate [QGVAR(StaminaBarContainer), -1];

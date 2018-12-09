@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Displays the patient information for given unit.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MAX_DISTANCE 10
 
 // Exit for basic medical
@@ -145,6 +144,9 @@ if (_show) then {
             };
             (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
         } foreach _selectionBloodLoss;
+
+        // update tourniquet information
+        [_display, _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]]] call FUNC(updateTourniquets);
 
         private _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;

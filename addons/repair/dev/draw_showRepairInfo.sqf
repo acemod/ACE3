@@ -64,6 +64,6 @@ addMissionEventHandler ["Draw3D", {
             _output pushBack format ["%1: %2[%3] = %4", _forEachIndex, _hitPoint, _selection, cursorObject getHitIndex _forEachIndex];
             _output pushBack format ["- %1 -",_info];
         };
-    } forEach _hitPoints;
+    } forEach _hitSelections;
     hintSilent (_output joinString "\n");
 }];

@@ -1,61 +1,42 @@
+#include "script_component.hpp"
 /*
- * Author: Garth 'L-H' de Wet and CAA-Picard
- * Adds sub actions for all explosive magazines (from insertChildren)
+ * Author: Garth 'L-H' de Wet, CAA-Picard, mharis001
+ * Returns children actions for explosive magazines in the player's inventory.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Player <OBJECT>
  *
  * Return Value:
  * Actions <ARRAY>
  *
  * Example:
- * [bob] call ace_explosives_fnc_addExplosiveActions
+ * [_player] call ace_explosives_fnc_addExplosiveActions
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_unit"];
-TRACE_1("params",_unit);
+[_this, {
+    params ["_player"];
+    TRACE_1("Creating explosive actions",_player);
 
-private _mags = magazines _unit;
-private _list = [];
-private _itemCount = [];
-{
-    private _item = ConfigFile >> "CfgMagazines" >> _x;
-    if (getNumber(_item >> QGVAR(Placeable)) == 1) then {
-        private _index = _list find _item;
-        if (_index != -1) then {
-            _itemCount set [_index, (_itemCount select _index) + 1];
-        } else {
-            _list pushBack _item;
-            _itemCount pushBack 1;
+    private _cfgMagazines = configFile >> "CfgMagazines";
+    private _magazines = magazines _player;
+    private _totalCount = count _magazines;
+
+    private _actions = [];
+    {
+        private _config = _cfgMagazines >> _x;
+        if (getNumber (_config >> QGVAR(Placeable)) == 1) then {
+            private _name = getText (_config >> "displayNameShort");
+            private _picture = getText (_config >> "picture");
+            if (_name isEqualTo "") then {
+                _name = getText (_config >> "displayName");
+            };
+
+            private _action = [_x, format ["%1 (%2)", _name, _totalCount - count (_magazines - [_x])], _picture, {[{_this call FUNC(setupExplosive)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+            _actions pushBack [_action, [], _player];
         };
-    };
-} forEach _mags;
+    } forEach (_magazines arrayIntersect _magazines);
 
-private _children = [];
-
-{
-    private _name = getText (_x >> "displayNameShort");
-    if (_name isEqualTo "") then {
-        _name = getText (_x >> "displayName");
-    };
-
-    _children pushBack
-        [
-            [
-                format ["Explosive_%1", _forEachIndex],
-                format [_name + " (%1)", _itemCount select _forEachIndex],
-                getText(_x >> "picture"),
-                {[{_this call FUNC(setupExplosive)}, _this] call CBA_fnc_execNextFrame},
-                {true},
-                {},
-                (configName _x)
-            ] call EFUNC(interact_menu,createAction),
-            [],
-            _unit
-        ];
-} forEach _list;
-
-_children
+    _actions
+}, ACE_player, QGVAR(explosiveActions), 3600, "cba_events_loadoutEvent"] call EFUNC(common,cachedCall);

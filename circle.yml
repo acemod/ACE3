@@ -1,23 +1,63 @@
 version: 2
 jobs:
-  build:
+  validate-scripts:
     docker:
-      - image: python:3-alpine
+      - image: acemod/sqflint:latest
     steps:
       - checkout
       - run:
-          name: Validate SQF And Config style
+          name: Validate SQF and Config style
           command: python tools/sqf_validator.py && python tools/config_style_checker.py
-  deployment:
+
+  linting:
     docker:
-      - image: python:3-alpine
-    branch: master
-    requires:
-      - build
+      - image: acemod/sqflint:latest
     steps:
       - checkout
-      - deploy:
-          name: Deploy
+      - run:
+          name: Lint sqf code
+          command: sqflint -d addons || true
+
+  armake:
+    docker:
+      - image: acemod/armake:master
+    steps:
+      - checkout
+      - run:
+          name: Version
+          command: armake --version
+      - run:
+          name: Build
           command: |
-            pip install pygithub pygithub3
-            python3 tools/deploy.py
+            make -j 4
+
+  update-docs:
+    docker:
+      - image: acemod/armake:latest
+    steps:
+      - checkout
+      - run:
+          name: Update documentation and translation statistics
+          command:  |
+            if [ "${CIRCLE_BRANCH}" == "master" ] && [ "${CIRCLE_PROJECT_USERNAME}" == "acemod" ]; then
+              pip install pygithub pygithub3
+              python3 tools/deploy.py
+            else
+              echo "Skipping, not on acemod/ACE3 master branch..."
+            fi
+
+workflows:
+  version: 2
+  build-job:
+    jobs:
+      - linting
+      - validate-scripts
+      - armake:
+          requires:
+            - validate-scripts
+      - update-docs:
+          requires:
+            - armake
+          filters:
+            branches:
+              only: master

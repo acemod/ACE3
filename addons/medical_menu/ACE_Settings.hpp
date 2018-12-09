@@ -25,6 +25,8 @@ class ACE_Settings {
         category = ECSTRING(medical,Category_Medical);
     };
     class GVAR(maxRange) {
+        displayName = CSTRING(maxRange);
+        description = CSTRING(maxRange_Descr);
         //for ref: 3d interaction (MEDICAL_ACTION_DISTANCE) is 1.75
         value = 3;
         typeName = "SCALAR";

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Causes the unit to detonate the passed explosive.
@@ -19,7 +20,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_range", "_item", ["_triggerClassname", "#unknown", [""]]];
 TRACE_4("detonateExplosive",_unit,_range,_item,_triggerClassname);

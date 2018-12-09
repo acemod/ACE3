@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux, PabstMirror
  * Commands the selected unit or group to start suppressive fire on the unit, group or location the module is placed on
@@ -16,7 +17,6 @@
  * Public: No
  */
 // #define DRAW_ZEUS_INFO
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {[FUNC(moduleSuppressiveFire), _this] call CBA_fnc_directCall;};
 
@@ -116,4 +116,4 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     };
 #endif
 
-}, localize LSTRING(ModuleSuppressiveFire_DisplayName)] call FUNC(getModuleDestination);
+}, localize LSTRING(ModuleSuppressiveFire_DisplayName), "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1, 0, 0, 1], 45] call FUNC(getModuleDestination);

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Mk6Mortar">
         <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
@@ -72,6 +72,7 @@
             <Chinese>MK6迫擊炮</Chinese>
             <Chinesesimp>MK6迫击炮</Chinesesimp>
             <Japanese>Mk6 迫撃砲</Japanese>
+            <French>Mortier Mk6</French>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>

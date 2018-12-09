@@ -32,6 +32,8 @@ class ACE_Settings {
     };
     class GVAR(enableOverdosing) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_enableOverdosing_DisplayName);
+        description = CSTRING(MedicalSettings_enableOverdosing_Description);
         typeName = "BOOL";
         value = 1;
     };
@@ -134,11 +136,15 @@ class ACE_Settings {
         value = -1;
         sliderSettings[] = {-1, 25, -1, -1};
     };
+
+    /*
     class GVAR(allowDeadBodyMovement) {
         category = CSTRING(Category_Medical);
         typeName = "BOOL";
         value = 0;
     };
+    */
+
     class GVAR(allowLitterCreation) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_allowLitterCreation_DisplayName);
@@ -275,11 +281,15 @@ class ACE_Settings {
     };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);
+        description = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_Description);
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(moveUnitsFromGroupOnUnconscious) {
         category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName);
+        description = CSTRING(MedicalSettings_moveUnitsFromGroupOnUnconscious_Description);
         typeName = "BOOL";
         value = 0;
     };

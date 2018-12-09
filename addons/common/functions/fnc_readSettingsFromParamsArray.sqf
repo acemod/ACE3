@@ -1,3 +1,5 @@
+#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Read settins from paramsArray that have a ACE_setting = 1.
@@ -14,8 +16,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 //paramsArray is a normal variable not a command
 private _paramsArray = missionnamespace getVariable ["paramsArray", []];

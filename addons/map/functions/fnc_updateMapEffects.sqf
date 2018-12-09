@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko and esteldunedain
  * On map draw, updates the effects
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_mapCtrl"];
 private _mapScale = ctrlMapScale _mapCtrl;
