@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="QuickMount">
         <Key ID="STR_ACE_QuickMount_Category">
@@ -110,6 +110,11 @@
             <Chinese>優先想進入哪個座位</Chinese>
             <Polish>Priorytet pozycji w pojeździe</Polish>
             <Korean>탑승할 좌석의 우선순위를 지정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_ChangeSeat">
+            <English>Change seat</English>
+            <Russian>Пересесть</Russian>
+            <Japanese>席の変更</Japanese>
         </Key>
     </Package>
 </Project>

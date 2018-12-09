@@ -395,7 +395,7 @@
             <Russian>HEMTT Контейнер</Russian>
             <Portuguese>HEMTT Contêiner</Portuguese>
             <Hungarian>HEMTT (konténer)</Hungarian>
-            <Italian>HEMTT portacontainer </Italian>
+            <Italian>HEMTT portacontainer</Italian>
             <Japanese>HEMTT コンテナ型</Japanese>
             <Korean>HEMTT 컨테이너</Korean>
             <Chinese>重型增程機動戰術卡車 (貨櫃)</Chinese>
@@ -662,6 +662,8 @@
             <German>KamAS MRL</German>
             <Chinese>"卡瑪斯"卡車 (多管火箭)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (多管火箭)</Chinesesimp>
+            <Italian>KamAZ MRL</Italian>
+            <Japanese>KamAZ MRL</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -1242,12 +1244,12 @@
             <German>M112 Sprengladung</German>
             <Spanish>Bloque de demolición M112</Spanish>
             <Polish>Ładunek burzący M112</Polish>
-            <Czech>Výbušná nálož M112 </Czech>
+            <Czech>Výbušná nálož M112</Czech>
             <French>M112 Block de Démolition</French>
             <Russian>M112 подрывной заряд</Russian>
             <Portuguese>M112 Carga de Demolição</Portuguese>
             <Hungarian>M112 romboló tömb</Hungarian>
-            <Italian>M112 Demolition Block</Italian>
+            <Italian>M112 da Demolizione</Italian>
             <Japanese>M112 爆薬ブロック</Japanese>
             <Korean>M112 폭파 블럭</Korean>
             <Chinese>M112塑性炸藥</Chinese>
@@ -1258,7 +1260,7 @@
             <German>M67 Splittergranate</German>
             <Spanish>Granada de fragmentación M67</Spanish>
             <Polish>Granat obronny M67</Polish>
-            <Czech>Granát M67 </Czech>
+            <Czech>Granát M67</Czech>
             <French>M67 Grenade à fragmentation</French>
             <Russian>M67 ручная осколочная граната</Russian>
             <Portuguese>M67 Granada de fragmentação</Portuguese>
@@ -1268,6 +1270,12 @@
             <Korean>M67 세열 수류탄</Korean>
             <Chinese>M67破片手榴彈</Chinese>
             <Chinesesimp>M67破片手榴弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_MiniGrenade_Name">
+            <English>V40 Mini-Grenade</English>
+            <German>V40 Minigranate</German>
+            <Italian>Mini Granata V40</Italian>
+            <Japanese>V40 小型手榴弾</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1386,7 +1394,7 @@
             <German>M15 Panzerabwehrmine</German>
             <Spanish>Mina antitanque M15</Spanish>
             <Polish>Mina przeciwpancerna M15</Polish>
-            <Czech>M15 Protitanková mina </Czech>
+            <Czech>M15 Protitanková mina</Czech>
             <French>M15 Mine antichar</French>
             <Russian>M15 противотанковая мина</Russian>
             <Portuguese>M15 Mina anticarro</Portuguese>
@@ -1612,6 +1620,8 @@
             <Russian>Метис-М</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹</Chinesesimp>
+            <Italian>Metis-M</Italian>
+            <Japanese>メチス-M</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
@@ -1620,6 +1630,8 @@
             <Russian>Метис-М (Кори́чневый)</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈(棕色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(棕色)</Chinesesimp>
+            <Italian>Metis-M (Marrone)</Italian>
+            <Japanese>メチス-M (茶)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
@@ -1628,6 +1640,8 @@
             <Russian>Метис-М (Зелёный)</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(绿色)</Chinesesimp>
+            <Italian>Metis-M (Verde)</Italian>
+            <Japanese>メチス-M (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -2627,6 +2641,7 @@
             <Chinesesimp>"牧马人"吉普车(SPG-9火箭筒)</Chinesesimp>
             <Chinese>"牧馬人"吉普車 (SPG-9火箭筒)</Chinese>
             <Japanese>ジープ ラングラー (SPG-9)</Japanese>
+            <Italian>Jeep Wrangler (SPG-9)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
@@ -2634,6 +2649,7 @@
             <Chinesesimp>"牧马人"吉普车(轻机枪)</Chinesesimp>
             <Chinese>"牧馬人"吉普車 (輕機槍)</Chinese>
             <Japanese>ジープ ラングラー (LMG)</Japanese>
+            <Italian>Jeep Wrangler (LMG)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -3185,12 +3201,15 @@
             <Japanese>ポラリス DAGOR (XM312)</Japanese>
             <Chinese>"北極星"先進佈署越野車 (XM312重機槍)</Chinese>
             <Chinesesimp>"北极星"先进布署越野车 (XM312重机枪)</Chinesesimp>
+            <Italian>Polaris DAGOR (XM312)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
             <German>Polaris DAGOR (Mini-Spike PzAbw)</German>
             <Chinesesimp>"北极星"先进布署越野车("迷你长钉"反坦克导弹发射器) </Chinesesimp>
             <Chinese>"北極星"先進佈署越野車("迷你長釘"反坦克導彈發射器) </Chinese>
+            <Italian>Polaris DAGOR (Mini-Spike AT)</Italian>
+            <Japanese>ポラリス DAGOR (ミニスパイク対戦)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3198,6 +3217,7 @@
             <Japanese>ポラリス DAGOR</Japanese>
             <Chinese>"北極星"先進佈署越野車</Chinese>
             <Chinesesimp>"北极星"先进布署越野车</Chinesesimp>
+            <Italian>Polaris DAGOR</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
@@ -3205,14 +3225,15 @@
             <Japanese>ポラリス DAGOR (軽)</Japanese>
             <Chinese>"北極星"先進佈署越野車 (輕型)</Chinese>
             <Chinesesimp>"北极星"先进布署越野车 (轻型)</Chinesesimp>
+            <Italian>Polaris DAGOR (leggero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
             <German>LSV Mk. II (M134)</German>
-            <Japanese>LSV Mk. II (M134)</Japanese>
             <Chinese>輕型突擊車2式 (M134迷你機炮)</Chinese>
             <Chinesesimp>轻型突击车2式 (M134迷你机炮)</Chinesesimp>
             <Japanese>LSV Mk. II (M134)</Japanese>
+            <Italian>LSV Mk. II (M134)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3220,14 +3241,15 @@
             <Chinesesimp>轻型突击车2式 ("麦士蒂索人"-M型反坦克导弹)</Chinesesimp>
             <Chinese>輕型突擊車2式 ("麥士蒂索人"-M型反坦克導彈)</Chinese>
             <Japanese>LSV Mk. II (メチス-M)</Japanese>
+            <Italian>LSV Mk. II (Metis-M)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
             <German>LSV Mk. II</German>
-            <Japanese>LSV Mk. II</Japanese>
             <Chinese>輕型突擊車2式</Chinese>
             <Chinesesimp>轻型突击车2式</Chinesesimp>
             <Japanese>LSV Mk. II</Japanese>
+            <Italian>LSV Mk. II</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -3235,6 +3257,7 @@
             <Chinesesimp>"狞猫"120主炮轮式装甲车</Chinesesimp>
             <Chinese>"獰貓"120主炮輪式裝甲車</Chinese>
             <Japanese>ルーイカット 120</Japanese>
+            <Italian>Rooikat 120</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
@@ -3242,6 +3265,7 @@
             <Chinesesimp>"狞猫"120主炮轮式装甲车 (城市版)</Chinesesimp>
             <Chinese>"獰貓"120主炮輪式裝甲車 (城市版)</Chinese>
             <Japanese>ルーイカット 120 UP</Japanese>
+            <Italian>Rooikat 120 UP</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -3250,6 +3274,7 @@
             <Chinesesimp>T-14"阿玛塔"主战坦克</Chinesesimp>
             <Chinese>T-14"阿瑪塔"主戰坦克</Chinese>
             <Japanese>T-14 アルマータ</Japanese>
+            <Italian>T-14 Armata</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
@@ -3258,6 +3283,7 @@
             <Chinesesimp>T-14K"阿玛塔"主战坦克</Chinesesimp>
             <Chinese>T-14K"阿瑪塔"主戰坦克</Chinese>
             <Japanese>T-14K アルマータ</Japanese>
+            <Italian>T-14K Armata</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
@@ -3265,6 +3291,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (防空)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (防空)</Chinese>
             <Japanese>ウィーゼル 2 オゼロット (対空)</Japanese>
+            <Italian>Wiesel 2 Ozelot (AA)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -3272,6 +3299,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (反坦导弹)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (反坦導彈)</Chinese>
             <Japanese>ウィーゼル 2 (ATGM)</Japanese>
+            <Italian>Wiesel 2 (ATGM)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -3279,6 +3307,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (MK20机炮)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (MK20機炮)</Chinese>
             <Japanese>ウィーゼル 2 (MK20)</Japanese>
+            <Italian>Wiesel 2 (MK20)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
@@ -3286,6 +3315,7 @@
             <Chinesesimp>"鼬鼠"2装甲车 (雷达)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (雷達)</Chinese>
             <Japanese>ウィーゼル 2 (レーダー)</Japanese>
+            <Italian>Wiesel 2 RFCV (Radar)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -3293,6 +3323,7 @@
             <Chinese>Leupold Mark 4 HAMR</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR</Chinesesimp>
             <Japanese>Leupold Mark 4 HAMR</Japanese>
+            <Italian>Leupold Mark 4 HAMR</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -3300,6 +3331,7 @@
             <Chinese>Leupold Mark 4 HAMR (卡其色)</Chinese>
             <Chinesesimp>Leupold Mark 4 HAMR (卡其色)</Chinesesimp>
             <Japanese>Leupold Mark 4 HAMR (土埃)</Japanese>
+            <Italian>Leupold Mark 4 HAMR (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -3307,6 +3339,7 @@
             <Chinese>ELCAN SpecterOS (黃褐色)</Chinese>
             <Chinesesimp>ELCAN SpecterOS (黄褐色)</Chinesesimp>
             <Japanese>ELCAN SpecterOS (黄褐)</Japanese>
+            <Italian>ELCAN SpecterOS (Tan)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
             <English>ELCAN SpecterOS (Black)</English>
@@ -3314,12 +3347,14 @@
             <Chinese>ELCAN SpecterOS (黑色)</Chinese>
             <Chinesesimp>ELCAN SpecterOS (黑色)</Chinesesimp>
             <Japanese>ELCAN SpecterOS (黒)</Japanese>
+            <Italian>ELCAN SpecterOS (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
             <Chinese>ELCAN SpecterOS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>ELCAN SpecterOS (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>ELCAN SpecterOS (緑蜂巣)</Japanese>
+            <Italian>ELCAN SpecterOS (Verde Hex)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3327,13 +3362,15 @@
             <Chinese>SIG BRAVO4 / ROMEO3 (黑色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3 (黑色)</Chinesesimp>
             <Japanese>SIG BRAVO4 / ROMEO3 (黒)</Japanese>
+            <Italian>SIG BRAVO4 / ROMEO3 (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
             <German>SIG BRAVO4 / ROMEO3 (Khaki)</German>
             <Chinese>SIG BRAVO4 / ROMEO3 (卡其色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3 (卡其色)</Chinesesimp>
-           <Japanese>SIG BRAVO4 / ROMEO3 (土埃)</Japanese>
+            <Japanese>SIG BRAVO4 / ROMEO3 (土埃)</Japanese>
+            <Italian>SIG BRAVO4 / ROMEO3 (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -3341,18 +3378,21 @@
             <Chinese>SIG BRAVO4 / ROMEO3 (沙色)</Chinese>
             <Chinesesimp>SIG BRAVO4 / ROMEO3 (沙色)</Chinesesimp>
             <Japanese>SIG BRAVO4 / ROMEO3 (砂地)</Japanese>
+            <Italian>SIG BRAVO4 / ROMEO3 (Sabbia)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
             <Chinese>Nightforce NXS</Chinese>
             <Chinesesimp>Nightforce NXS</Chinesesimp>
             <Japanese>Nightforce NXS</Japanese>
+            <Italian>Nightforce NXS</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
             <Chinese>Nightforce NXS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Nightforce NXS (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Nightforce NXS (緑蜂巣)</Japanese>
+            <Italian>Nightforce NXS (Verde Hex)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -3360,18 +3400,63 @@
             <Chinese>Nightforce NXS (叢林色)</Chinese>
             <Chinesesimp>Nightforce NXS (丛林色)</Chinesesimp>
             <Japanese>Nightforce NXS (熱帯)</Japanese>
+            <Italian>Nightforce NXS (Giungla)</Italian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams">
+            <English>US Optics MR-10 (Black)</English>
+            <Chinese>US Optics MR-10 (Black)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Black)</Chinesesimp>
+            <Japanese>US Optics MR-10 (黒)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
+            <English>US Optics MR-10 (Khaki)</English>
+            <Chinese>US Optics MR-10 (Khaki)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Khaki)</Chinesesimp>
+            <Japanese>US Optics MR-10 (土埃)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
+            <English>US Optics MR-10 (Sand)</English>
+            <Chinese>US Optics MR-10 (Sand)</Chinese>
+            <Chinesesimp>US Optics MR-10 (Sand)</Chinesesimp>
+            <Japanese>US Optics MR-10 (砂地)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
+            <English>KAHLES Helia (Black)</English>
+            <Chinese>KAHLES Helia (Black)</Chinese>
+            <Chinesesimp>KAHLES Helia (Black)</Chinesesimp>
+            <Japanese>KAHLES ヘリア (黒)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
+            <English>KAHLES Helia (Hex)</English>
+            <Chinese>KAHLES Helia (Hex)</Chinese>
+            <Chinesesimp>KAHLES Helia (Hex)</Chinesesimp>
+            <Japanese>KAHLES ヘリア (蜂巣)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_old">
+            <English>KAHLES Helia (Old)</English>
+            <Chinese>KAHLES Helia (Old)</Chinese>
+            <Chinesesimp>KAHLES Helia (Old)</Chinesesimp>
+            <Japanese>KAHLES ヘリア (使い古し)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
+            <English>KAHLES Helia (Tan)</English>
+            <Chinese>KAHLES Helia (Tan)</Chinese>
+            <Chinesesimp>KAHLES Helia (Tan)</Chinesesimp>
+            <Japanese>KAHLES Helia (黄褐)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
             <Chinese>Burris XTR II</Chinese>
             <Chinesesimp>Burris XTR II</Chinesesimp>
             <Japanese>Burris XTR II</Japanese>
+            <Italian>Burris XTR II</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
             <Chinese>Burris XTR II (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Burris XTR II (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Burris XTR II (緑蜂巣)</Japanese>
+            <Italian>Burris XTR II (Green Hex)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -3379,6 +3464,7 @@
             <Chinese>EOTech XPS3 (黃褐色)</Chinese>
             <Chinesesimp>EOTech XPS3 (黄褐色)</Chinesesimp>
             <Japanese>EOTech XPS3 (黄褐)</Japanese>
+            <Italian>EOTech XPS3 (Tan)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
             <English>EOTech XPS3 (Black)</English>
@@ -3386,6 +3472,7 @@
             <Chinese>EOTech XPS3 (黑色)</Chinese>
             <Chinesesimp>EOTech XPS3 (黑色)</Chinesesimp>
             <Japanese>EOTech XPS3 (黒)</Japanese>
+            <Italian>EOTech XPS3 (Black)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
             <English>EOTech XPS3 (Khaki)</English>
@@ -3393,6 +3480,7 @@
             <Chinese>EOTech XPS3 (卡其色)</Chinese>
             <Chinesesimp>EOTech XPS3 (卡其色)</Chinesesimp>
             <Japanese>EOTech XPS3 (土埃)</Japanese>
+            <Italian>EOTech XPS3 (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -3400,6 +3488,7 @@
             <Chinese>EOTech XPS3 SMG (黃褐色)</Chinese>
             <Chinesesimp>EOTech XPS3 SMG (黄褐色)</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (黄褐)</Japanese>
+            <Italian>EOTech XPS3 SMG (Tan)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
             <English>EOTech XPS3 SMG (Black)</English>
@@ -3407,6 +3496,7 @@
             <Chinese>EOTech XPS3 SMG (黑色)</Chinese>
             <Chinesesimp>EOTech XPS3 SMG (黑色)</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (黒)</Japanese>
+            <Italian>EOTech XPS3 SMG (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
             <English>EOTech XPS3 SMG (Khaki)</English>
@@ -3414,18 +3504,21 @@
             <Chinese>EOTech XPS3 SMG (卡其色)</Chinese>
             <Chinesesimp>EOTech XPS3 SMG (卡其色)</Chinesesimp>
             <Japanese>EOTech XPS3 SMG (土埃)</Japanese>
+            <Italian>EOTech XPS3 SMG (Khaki)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
             <Chinese>IOR-Valdada Pitbull 2</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2</Chinesesimp>
             <Japanese>IOR-Valdada ピットブル 2</Japanese>
+            <Italian>IOR-Valdada Pitbull 2</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
             <Chinese>Burris FastFire 2</Chinese>
             <Chinesesimp>Burris FastFire 2</Chinesesimp>
             <Japanese>Burris ファストファイア 2</Japanese>
+            <Italian>Burris FastFire 2</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
@@ -3433,6 +3526,7 @@
             <Chinese>C-More Railway (紅色)</Chinese>
             <Chinesesimp>C-More Railway (红色)</Chinesesimp>
             <Japanese>C-More レイルウェイ (赤)</Japanese>
+            <Italian>C-More Railway (Rosso)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
             <English>C-More Railway (Green)</English>
@@ -3440,6 +3534,7 @@
             <Chinese>C-More Railway (綠色)</Chinese>
             <Chinesesimp>C-More Railway (绿色)</Chinesesimp>
             <Japanese>C-More レイルウェイ (緑)</Japanese>
+            <Italian>C-More Railway (Verde)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
             <English>C-More Railway SMG (Red)</English>
@@ -3447,6 +3542,7 @@
             <Chinese>C-More Railway SMG (紅色)</Chinese>
             <Chinesesimp>C-More Railway SMG (红色)</Chinesesimp>
             <Japanese>C-More レイルウェイ SMG (赤)</Japanese>
+            <Italian>C-More Railway SMG (Rosso)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
             <English>C-More Railway SMG (Green)</English>
@@ -3454,6 +3550,295 @@
             <Chinese>C-More Railway SMG (綠色)</Chinese>
             <Chinesesimp>C-More Railway SMG (绿色)</Chinesesimp>
             <Japanese>C-More レイルウェイ SMG (緑)</Japanese>
+            <Italian>C-More Railway SMG (Verde)</Italian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
+            <English>P90 TR (Black)</English>
+            <Czech>P90 TR (Černá)</Czech>
+            <French>P90 TR (Noir)</French>
+            <Spanish>P90 TR (Negro)</Spanish>
+            <Russian>P90 TR (Чёрный)</Russian>
+            <Polish>P90 TR (czarny)</Polish>
+            <German>P90 TR (Schwarz)</German>
+            <Italian>P90 TR (Nero)</Italian>
+            <Hungarian>P90 TR (Fekete)</Hungarian>
+            <Portuguese>P90 TR (Preto)</Portuguese>
+            <Japanese>P90 TR (ブラック)</Japanese>
+            <Chinese>P90 TR (黑色)</Chinese>
+            <Chinesesimp>P90 TR (黑色)</Chinesesimp>
+            <Korean>P90 TR (Black)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_TR_Khaki_Name">
+            <English>P90 TR (Khaki)</English>
+            <Czech>P90 TR (Khaki)</Czech>
+            <French>P90 TR (Kaki)</French>
+            <Spanish>P90 TR (Caqui)</Spanish>
+            <Russian>P90 TR (Хаки)</Russian>
+            <Polish>P90 TR (khaki)</Polish>
+            <German>P90 TR (Khaki)</German>
+            <Italian>P90 TR (Khaki)</Italian>
+            <Hungarian>P90 TR (Khaki)</Hungarian>
+            <Portuguese>P90 TR (Caqui)</Portuguese>
+            <Japanese>P90 TR (カーキ)</Japanese>
+            <Chinese>P90 TR (沙色)</Chinese>
+            <Chinesesimp>P90 TR (沙色)</Chinesesimp>
+            <Korean>P90 TR (Khaki)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_TR_Camo_Name">
+            <English>P90 TR (Camo)</English>
+            <Czech>P90 TR (Kamufláž)</Czech>
+            <French>P90 TR (Camo)</French>
+            <Spanish>P90 TR (Camuflaje)</Spanish>
+            <Russian>P90 TR (Камо)</Russian>
+            <Polish>P90 TR (kamuflaż)</Polish>
+            <German>P90 TR (Camo)</German>
+            <Italian>P90 TR (Camo)</Italian>
+            <Hungarian>P90 TR (Terepmintás)</Hungarian>
+            <Portuguese>P90 TR (Camuflagem)</Portuguese>
+            <Japanese>P90 TR (カモフラージュ)</Japanese>
+            <Chinese>P90 TR (迷彩)</Chinese>
+            <Chinesesimp>P90 TR (迷彩)</Chinesesimp>
+            <Korean>P90 TR (Camo)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_TR_Hex_Name">
+            <English>P90 TR (Hex)</English>
+            <Czech>P90 TR (Hex)</Czech>
+            <French>P90 TR (Hex)</French>
+            <Spanish>P90 TR (Hex)</Spanish>
+            <Russian>P90 TR (Гекс)</Russian>
+            <German>P90 TR (Hex)</German>
+            <Polish>P90 TR (hex)</Polish>
+            <Italian>P90 TR (Hex)</Italian>
+            <Hungarian>P90 TR (Hex)</Hungarian>
+            <Portuguese>P90 TR (Hex)</Portuguese>
+            <Japanese>P90 TR (ヘックス)</Japanese>
+            <Chinese>P90 TR (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>P90 TR (数位蜂巢迷彩)</Chinesesimp>
+            <Korean>P90 TR (Hex)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_Black_Name">
+            <English>P90 (Black)</English>
+            <Czech>P90 (Černá)</Czech>
+            <French>P90 (Noir)</French>
+            <Spanish>P90 (Negro)</Spanish>
+            <Russian>P90 (Чёрный)</Russian>
+            <Polish>P90 (czarny)</Polish>
+            <German>P90 (Schwarz)</German>
+            <Italian>P90 (Nero)</Italian>
+            <Hungarian>P90 (Fekete)</Hungarian>
+            <Portuguese>P90 (Preto)</Portuguese>
+            <Japanese>P90 (ブラック)</Japanese>
+            <Chinese>P90 (黑色)</Chinese>
+            <Chinesesimp>P90 (黑色)</Chinesesimp>
+            <Korean>P90 (Black)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_Khaki_Name">
+            <English>P90 (Khaki)</English>
+            <Czech>P90 (Khaki)</Czech>
+            <French>P90 (Kaki)</French>
+            <Spanish>P90 (Caqui)</Spanish>
+            <Russian>P90 (Хаки)</Russian>
+            <Polish>P90 (khaki)</Polish>
+            <German>P90 (Khaki)</German>
+            <Italian>P90 (Khaki)</Italian>
+            <Hungarian>P90 (Khaki)</Hungarian>
+            <Portuguese>P90 (Caqui)</Portuguese>
+            <Japanese>P90 (カーキ)</Japanese>
+            <Chinese>P90 (沙色)</Chinese>
+            <Chinesesimp>P90 (沙色)</Chinesesimp>
+            <Korean>P90 (Khaki)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_Camo_Name">
+            <English>P90 (Camo)</English>
+            <Czech>P90 (Kamufláž)</Czech>
+            <French>P90 (Camo)</French>
+            <Spanish>P90 (Camuflaje)</Spanish>
+            <Russian>P90 (Камо)</Russian>
+            <Polish>P90 (kamuflaż)</Polish>
+            <German>P90 (Camo)</German>
+            <Italian>P90 (Camo)</Italian>
+            <Hungarian>P90 (Terepmintás)</Hungarian>
+            <Portuguese>P90 (Camuflagem)</Portuguese>
+            <Japanese>P90 (カモフラージュ)</Japanese>
+            <Chinese>P90 (迷彩)</Chinese>
+            <Chinesesimp>P90 (迷彩)</Chinesesimp>
+            <Korean>P90 (Camo)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_Hex_Name">
+            <English>P90 (Hex)</English>
+            <Czech>P90 (Hex)</Czech>
+            <French>P90 (Hex)</French>
+            <Spanish>P90 (Hex)</Spanish>
+            <Russian>P90 (Гекс)</Russian>
+            <German>P90 (Hex)</German>
+            <Polish>P90 (hex)</Polish>
+            <Italian>P90 (Hex)</Italian>
+            <Hungarian>P90 (Hex)</Hungarian>
+            <Portuguese>P90 (Hex)</Portuguese>
+            <Japanese>P90 (ヘックス)</Japanese>
+            <Chinese>P90 (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>P90 (数位蜂巢迷彩)</Chinesesimp>
+            <Korean>P90 (Hex)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_TR_Black_Name">
+            <English>PS90 TR (Black)</English>
+            <Czech>PS90 TR (Černá)</Czech>
+            <French>PS90 TR (Noir)</French>
+            <Spanish>PS90 TR (Negro)</Spanish>
+            <Russian>PS90 TR (Чёрный)</Russian>
+            <Polish>PS90 TR (czarny)</Polish>
+            <German>PS90 TR (Schwarz)</German>
+            <Italian>PS90 TR (Nero)</Italian>
+            <Hungarian>PS90 TR (Fekete)</Hungarian>
+            <Portuguese>PS90 TR (Preto)</Portuguese>
+            <Japanese>PS90 TR (ブラック)</Japanese>
+            <Chinese>PS90 TR (黑色)</Chinese>
+            <Chinesesimp>PS90 TR (黑色)</Chinesesimp>
+            <Korean>PS90 TR (Black)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_TR_Khaki_Name">
+            <English>PS90 TR (Khaki)</English>
+            <Czech>PS90 TR (Khaki)</Czech>
+            <French>PS90 TR (Kaki)</French>
+            <Spanish>PS90 TR (Caqui)</Spanish>
+            <Russian>PS90 TR (Хаки)</Russian>
+            <Polish>PS90 TR (khaki)</Polish>
+            <German>PS90 TR (Khaki)</German>
+            <Italian>PS90 TR (Khaki)</Italian>
+            <Hungarian>PS90 TR (Khaki)</Hungarian>
+            <Portuguese>PS90 TR (Caqui)</Portuguese>
+            <Japanese>PS90 TR (カーキ)</Japanese>
+            <Chinese>PS90 TR (沙色)</Chinese>
+            <Chinesesimp>PS90 TR (沙色)</Chinesesimp>
+            <Korean>PS90 TR (Khaki)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_TR_Camo_Name">
+            <English>PS90 TR (Camo)</English>
+            <Czech>PS90 TR (Kamufláž)</Czech>
+            <French>PS90 TR (Camo)</French>
+            <Spanish>PS90 TR (Camuflaje)</Spanish>
+            <Russian>PS90 TR (Камо)</Russian>
+            <Polish>PS90 TR (kamuflaż)</Polish>
+            <German>PS90 TR (Camo)</German>
+            <Italian>PS90 TR (Camo)</Italian>
+            <Hungarian>PS90 TR (Terepmintás)</Hungarian>
+            <Portuguese>PS90 TR (Camuflagem)</Portuguese>
+            <Japanese>PS90 TR (カモフラージュ)</Japanese>
+            <Chinese>PS90 TR (迷彩)</Chinese>
+            <Chinesesimp>PS90 TR (迷彩)</Chinesesimp>
+            <Korean>PS90 TR (Camo)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_TR_Hex_Name">
+            <English>PS90 TR (Hex)</English>
+            <Czech>PS90 TR (Hex)</Czech>
+            <French>PS90 TR (Hex)</French>
+            <Spanish>PS90 TR (Hex)</Spanish>
+            <Russian>PS90 TR (Гекс)</Russian>
+            <German>PS90 TR (Hex)</German>
+            <Polish>PS90 TR (hex)</Polish>
+            <Italian>PS90 TR (Hex)</Italian>
+            <Hungarian>PS90 TR (Hex)</Hungarian>
+            <Portuguese>PS90 TR (Hex)</Portuguese>
+            <Japanese>PS90 TR (ヘックス)</Japanese>
+            <Chinese>PS90 TR (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>PS90 TR (数位蜂巢迷彩)</Chinesesimp>
+            <Korean>PS90 TR (Hex)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_Black_Name">
+            <English>PS90 (Black)</English>
+            <Czech>PS90 (Černá)</Czech>
+            <French>PS90 (Noir)</French>
+            <Spanish>PS90 (Negro)</Spanish>
+            <Russian>PS90 (Чёрный)</Russian>
+            <Polish>PS90 (czarny)</Polish>
+            <German>PS90 (Schwarz)</German>
+            <Italian>PS90 (Nero)</Italian>
+            <Hungarian>PS90 (Fekete)</Hungarian>
+            <Portuguese>PS90 (Preto)</Portuguese>
+            <Japanese>PS90 (ブラック)</Japanese>
+            <Chinese>PS90 (黑色)</Chinese>
+            <Chinesesimp>PS90 (黑色)</Chinesesimp>
+            <Korean>PS90 (Black)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_Khaki_Name">
+            <English>PS90 (Khaki)</English>
+            <Czech>PS90 (Khaki)</Czech>
+            <French>PS90 (Kaki)</French>
+            <Spanish>PS90 (Caqui)</Spanish>
+            <Russian>PS90 (Хаки)</Russian>
+            <Polish>PS90 (khaki)</Polish>
+            <German>PS90 (Khaki)</German>
+            <Italian>PS90 (Khaki)</Italian>
+            <Hungarian>PS90 (Khaki)</Hungarian>
+            <Portuguese>PS90 (Caqui)</Portuguese>
+            <Japanese>PS90 (カーキ)</Japanese>
+            <Chinese>PS90 (沙色)</Chinese>
+            <Chinesesimp>PS90 (沙色)</Chinesesimp>
+            <Korean>PS90 (Khaki)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_Camo_Name">
+            <English>PS90 (Camo)</English>
+            <Czech>PS90 (Kamufláž)</Czech>
+            <French>PS90 (Camo)</French>
+            <Spanish>PS90 (Camuflaje)</Spanish>
+            <Russian>PS90 (Камо)</Russian>
+            <Polish>PS90 (kamuflaż)</Polish>
+            <German>PS90 (Camo)</German>
+            <Italian>PS90 (Camo)</Italian>
+            <Hungarian>PS90 (Terepmintás)</Hungarian>
+            <Portuguese>PS90 (Camuflagem)</Portuguese>
+            <Japanese>PS90 (カモフラージュ)</Japanese>
+            <Chinese>PS90 (迷彩)</Chinese>
+            <Chinesesimp>PS90 (迷彩)</Chinesesimp>
+            <Korean>PS90 (Camo)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_PS90_Hex_Name">
+            <English>PS90 (Hex)</English>
+            <Czech>PS90 (Hex)</Czech>
+            <French>PS90 (Hex)</French>
+            <Spanish>PS90 (Hex)</Spanish>
+            <Russian>PS90 (Гекс)</Russian>
+            <German>PS90 (Hex)</German>
+            <Polish>PS90 (hex)</Polish>
+            <Italian>PS90 (Hex)</Italian>
+            <Hungarian>PS90 (Hex)</Hungarian>
+            <Portuguese>PS90 (Hex)</Portuguese>
+            <Japanese>PS90 (ヘックス)</Japanese>
+            <Chinese>PS90 (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>PS90 (数位蜂巢迷彩)</Chinesesimp>
+            <Korean>PS90 (Hex)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_Mag_Name">
+            <English>5.7mm 50Rnd Mag</English>
+            <Hungarian>5,7mm 50-as Tár</Hungarian>
+            <German>5,7mm 50-Patronen-Magazin</German>
+            <Spanish>Cargador de 50 balas SD de 5,7mm</Spanish>
+            <French>Ch. 5,7mm 50Cps</French>
+            <Polish>Magazynek 5,7mm 50rd</Polish>
+            <Czech>5.7mm 50náb. Zásobník</Czech>
+            <Portuguese>Carregador de 50 projéteis de 5.7mm</Portuguese>
+            <Italian>Caricatore 5.7mm 50Rnd</Italian>
+            <Russian>Магазин из 50-ти 5,7 мм</Russian>
+            <Japanese>5.7mm 50 発入り弾倉</Japanese>
+            <Chinese>5.7mm 50發 彈匣</Chinese>
+            <Chinesesimp>5.7mm 50发 弹匣</Chinesesimp>
+            <Korean>5.7mm 50Rnd Mag</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_P90_Mag_DescriptionShort">
+            <English>Caliber: 5.7mm&lt;br /&gt;Rounds: 50&lt;br /&gt;Used in: P90</English>
+            <German>Kaliber: 5,7mm&lt;br /&gt;Patronen: 50&lt;br /&gt;Eingesetzt von: P90</German>
+            <Polish>Kaliber: 5,7mm&lt;br /&gt;Pociski: 50&lt;br /&gt;Używany w: P90</Polish>
+            <French>Calibre : 5,7mm&lt;br /&gt;Cartouches : 50&lt;br /&gt;Utilisé avec : P90</French>
+            <Spanish>Calibre: 5.7mm&lt;br /&gt;Balas: 50&lt;br /&gt;Se usa en: P90</Spanish>
+            <Russian>Калибр: 5,7 мм&lt;br /&gt;Патронов: 50&lt;br /&gt;Используются с: P90</Russian>
+            <Italian>Calibro: 5.7mm&lt;br /&gt;Munizioni: 50&lt;br /&gt;In uso su: P90</Italian>
+            <Czech>Ráže: 5.7mm&lt;br /&gt;Nábojů: 50&lt;br /&gt;Použití u: P90</Czech>
+            <Portuguese>Calibre: 5.7mm&lt;br /&gt;Cartuchos: 50&lt;br /&gt;Usado em: P90</Portuguese>
+            <Hungarian>Kaliber: 5,7mm&lt;br /&gt;Lövedékek: 50&lt;br /&gt;Használható: P90</Hungarian>
+            <Japanese>口径: 5.7mm&lt;br /&gt;装弾数: 50&lt;br /&gt;次で使用: P90</Japanese>
+            <Chinese>口徑: 5.7mm&lt;br /&gt;發數: 50&lt;br /&gt;使用於: P90</Chinese>
+            <Chinesesimp>口径: 5.7mm&lt;br /&gt;发数: 50&lt;br /&gt;使用于: P90</Chinesesimp>
+            <Korean>구경: 5.7mm&lt;br /&gt;장탄수: 50&lt;br /&gt;사용됨: P90</Korean>
         </Key>
     </Package>
 </Project>

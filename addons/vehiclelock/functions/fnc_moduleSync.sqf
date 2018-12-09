@@ -27,14 +27,13 @@ if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not ac
 [{
     params ["_syncedObjects"];
 
-    private _listOfVehicles = [];
-    {
-        if ((_x isKindOf "Car") || (_x isKindOf "Tank") || (_x isKindOf "Helicopter")) then {
-            _listOfVehicles pushBack _x;
-        };
-    } forEach _syncedObjects;
+    private _listOfVehicles = _syncedObjects select {
+        private _object = _x;
+        #define CLASSNAMES ["Car", "Tank", "Air"]
+        IS_KIND_OF_ANY(_object,CLASSNAMES)
+    };
 
-    if ((count _listOfVehicles) == 0) exitWith {  //Verbose error for mission makers (only shows on server)
+    if (_listOfVehicles isEqualTo []) exitWith {  //Verbose error for mission makers (only shows on server)
         ["ACE_VehicleLock_fnc_moduleSync: no vehicles synced"] call BIS_fnc_error;
     };
 

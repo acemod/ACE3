@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Arsenal">
         <Key ID="STR_ACE_Arsenal_buttonHideText">
@@ -656,7 +656,7 @@
         <Key ID="STR_ACE_Arsenal_Mission_tooltip">
             <English>Use ACE Arsenal to try out different weapons and equipment.</English>
             <German>Verwende ACE-Arsenal und sieh dir verschiedene Waffen und Ausrüstung an und probiere sie aus.</German>
-            <Japanese>さまざまな武器と装備を試せるよう ACE 武器庫を使用します。</Japanese>
+            <Japanese>様々な武器と装備を試せるよう ACE 武器庫を使用します。</Japanese>
             <Korean>ACE Arsenal을 사용하여 다른 무기와 장비를 시험해보십시오.</Korean>
             <Chinese>使用ACE虛擬軍火庫來嘗試不同的武器與裝備</Chinese>
             <Chinesesimp>使用ACE虚拟军火库来尝试不同的武器与装备。</Chinesesimp>
@@ -665,7 +665,7 @@
         <Key ID="STR_ACE_Arsenal_Mission_overview">
             <English>Try weapons and equipment and create your own loadouts.</English>
             <German>Probiere verschiedene Waffen und Ausrüstung aus und stelle dir eigene Ausrüstungsprofile zusammen.</German>
-            <Japanese>さまざまな武器と装備を試して、あなただけの装備を作成してください。</Japanese>
+            <Japanese>様々な武器と装備を試して、あなただけの装備を作成してください。</Japanese>
             <Korean>무기와 장비를 사용해보고 자신의 로드아웃을 만듭니다.</Korean>
             <Chinese>嘗試不同的武器與裝備來組合你個人的裝備配置</Chinese>
             <Chinesesimp>尝试不同的武器与装备来组合你个人的装备配置。</Chinesesimp>
@@ -718,6 +718,31 @@
             <Chinesesimp>放大倍数</Chinesesimp>
             <Japanese>拡大倍率</Japanese>
             <Turkish>Büyütme</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode">
+            <English>Nightvision Support</English>
+            <German>Nachtsicht Unterstützung</German>
+            <Japanese>暗視装置に対応</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
+            <English>Primary supported</English>
+            <German>Primär unterstützt</German>
+            <Japanese>プライマリが対応</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
+            <English>Secondary supported</English>
+            <German>Sekundär unterstützt</German>
+            <Japanese>セカンダリが対応</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
+            <English>Primary integrated</English>
+            <German>Primär Integriert</German>
+            <Japanese>プライマリに内蔵</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
+            <English>Not Supported</English>
+            <German>Nicht unterstützt</German>
+            <Japanese>セカンダリに内蔵</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
@@ -786,6 +811,7 @@
         <Key ID="STR_ACE_Arsenal_Blacklist">
             <English>Blacklist</English>
             <Japanese>禁止リスト</Japanese>
+            <Italian>Lista Nera</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
@@ -806,6 +832,12 @@
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
+            <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statTTL">
+            <English>Time to live</English>
+            <French>Durée de vie</French>
+            <Japanese>生存時間</Japanese>
         </Key>
     </Package>
 </Project>

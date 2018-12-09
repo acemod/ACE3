@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Dogtags">
         <Key ID="STR_ACE_Dogtags_itemName">
@@ -83,6 +83,7 @@
             <English>Onscreen display for checking dogtags</English>
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
+            <Italian>Display su schermo per il controllo delle piastrine</Italian>
         </Key>
     </Package>
 </Project>

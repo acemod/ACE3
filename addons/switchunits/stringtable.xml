@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_DisplayName">
             <English>Switch Units</English>
-            <Italian>Cambio Unità</Italian>
+            <Italian>Cambia Unità</Italian>
             <Chinese>切換單位</Chinese>
             <Chinesesimp>切换单位</Chinesesimp>
             <Japanese>ユニット切り替え</Japanese>

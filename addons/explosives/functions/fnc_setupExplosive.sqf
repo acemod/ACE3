@@ -118,14 +118,15 @@ GVAR(TweakedAngle) = 0;
 
     private _virtualPosASL = _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
 
-    //Update mouse hint:
+    // Update mouse hint
+    private _ctrlTextLMB = (uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420;
     if (_badPosition) then {
-        ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(BlockedAction);
+        _ctrlTextLMB ctrlSetText localize LSTRING(BlockedAction);
     } else {
         if (isNull _attachVehicle) then {
-            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(PlaceAction);
+            _ctrlTextLMB ctrlSetText localize LSTRING(PlaceAction);
         } else {
-            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(AttachAction);
+            _ctrlTextLMB ctrlSetText localize LSTRING(AttachAction);
         };
     };
 

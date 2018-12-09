@@ -28,7 +28,7 @@ GVAR(currentMarkerConfigName) = "";
         private _index = (GETGVAR(allMapMarkers,[])) find _marker; // case-sensitive, but should be fine
 
         if (_index < 0) exitWith {
-            ERROR_1("Could not find data for %1", _marker);
+            WARNING_1("Could not find data for %1", _marker);
         };
 
         private _data = GVAR(allMapMarkersProperties) select _index;

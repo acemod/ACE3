@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -262,7 +262,7 @@
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
             <German>Frachtraumgröße, welche zum Einladen dieses Objektes benötigt wird (-1 nicht einladbar)</German>
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
-            <Japanese>このオブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
+            <Japanese>オブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
             <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
             <Chinesesimp>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</Chinesesimp>
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
@@ -291,7 +291,7 @@
             <Chinesesimp>此架飞机并无保持水平飞行</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
-            <English>Paradrop Time Coffecient</English>
+            <English>Paradrop Time Coefficient</English>
             <German>Türlast Zeitfaktor</German>
             <Japanese>空中投下までの時間係数</Japanese>
             <Italian>Coefficente Tempo Lancio Paracadute</Italian>
@@ -311,6 +311,14 @@
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
             <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>
+        </Key>
+        <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
+            <English>Load Time Coefficient</English>
+            <Japanese>積載時間の係数</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
+            <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
+            <Japanese>アイテムの積み下ろし作業にかかる時間を編集できます。\nアイテムの大きさにこの値が乗法され、時間 (秒) を変更できます。</Japanese>
         </Key>
     </Package>
 </Project>

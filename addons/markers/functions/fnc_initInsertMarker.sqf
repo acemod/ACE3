@@ -55,7 +55,7 @@
 
     //check if entity under mouse is a user marker
     if (_mouseOverType isEqualTo "marker") then {
-        if !((_marker find "_USER_DEFINED") isEqualTo -1) then {
+        if (!((_marker find "_USER_DEFINED") isEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
             GVAR(editingMarker) = _marker;
             //hide marker which is being edited because if the user cancels editing, it will still exist unchanged
             GVAR(editingMarker) setMarkerAlphaLocal 0;

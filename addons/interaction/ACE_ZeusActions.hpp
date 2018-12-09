@@ -3,10 +3,11 @@ class ACE_ZeusActions {
     class ZeusUnits {
         displayName = "$STR_A3_RscDisplayCurator_ModeUnits_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
-        condition = QUOTE((count (curatorSelected select 0)) > 0);
+        condition = QUOTE(!([] isEqualTo (curatorSelected select 0)));
 
         class stance {
             displayName = "$STR_A3_RscAttributeUnitPos_Title";
+            condition = QUOTE(ZEUS_ACTION_CONDITION && {-1 < (curatorSelected select 0) findIf {_x isKindOf 'CAManBase'}});
 
             class prone {
                 displayName = "$STR_Pos_Down";
@@ -33,17 +34,37 @@ class ACE_ZeusActions {
         class remoteControl {
             displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
             icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
-            statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,'NONE'];";
+            condition = QUOTE(ZEUS_ACTION_CONDITION && {-1 < (curatorSelected select 0) findIf {_x isKindOf 'CAManBase'}});
+            statement = QUOTE( \
+                private _units = curatorSelected select 0; \
+                private _unit = _units param [ARR_2( \
+                    _units findIf { \
+                        side _x in [ARR_4(east,west,resistance,civilian)] \
+                        && !(isPlayer _x) \
+                    }, \
+                    objNull \
+                )]; \
+                bis_fnc_curatorObjectPlaced_mouseOver = [ARR_2('OBJECT',_unit)]; \
+                group _target createUnit [ARR_5('ModuleRemoteControl_F',[ARR_3(0,0,0)],[],0,'NONE')]; \
+            );
+        };
+
+        class GVAR(repair) {
+            displayName = "$STR_repair";
+            icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
+            condition = QUOTE(ZEUS_ACTION_CONDITION && {-1 < (curatorSelected select 0) findIf {_x isKindOf 'AllVehicles' && {!(_x isKindOf 'Man')}}});
+            statement = QUOTE({if (_x isKindOf 'AllVehicles' && {!(_x isKindOf 'Man')}) then {_x setDamage 0}} forEach (curatorSelected select 0));
         };
     };
 
     class ZeusGroups {
         displayName = "$STR_A3_RscDisplayCurator_ModeGroups_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
-        condition = QUOTE((count (curatorSelected select 1)) > 0);
+        condition = QUOTE(!([] isEqualTo (curatorSelected select 1)));
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
+            condition = QUOTE(ZEUS_ACTION_CONDITION);
 
             class careless {
                 displayName = "$STR_Combat_Careless";
@@ -73,6 +94,7 @@ class ACE_ZeusActions {
 
         class speed {
             displayName = "$STR_HC_Menu_Speed";
+            condition = QUOTE(ZEUS_ACTION_CONDITION);
 
             class limited {
                 displayName = "$STR_Speed_Limited";
@@ -93,6 +115,7 @@ class ACE_ZeusActions {
 
         class formation {
             displayName = "$STR_Formation";
+            condition = QUOTE(ZEUS_ACTION_CONDITION);
 
             class wedge {
                 displayName = "$STR_Wedge";
@@ -145,10 +168,11 @@ class ACE_ZeusActions {
     class ZeusWaypoints {
         displayName = "Waypoints";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeRecent_ca.paa";
-        condition = QUOTE((count (curatorSelected select 2)) > 0);
+        condition = QUOTE(!([] isEqualTo (curatorSelected select 2)));
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
+            condition = QUOTE(ZEUS_ACTION_CONDITION);
 
             class careless {
                 displayName = "$STR_Combat_Careless";
@@ -178,6 +202,7 @@ class ACE_ZeusActions {
 
         class speed {
             displayName = "$STR_HC_Menu_Speed";
+            condition = QUOTE(ZEUS_ACTION_CONDITION);
 
             class limited {
                 displayName = "$STR_Speed_Limited";
@@ -198,6 +223,7 @@ class ACE_ZeusActions {
 
         class formation {
             displayName = "$STR_Formation";
+            condition = QUOTE(ZEUS_ACTION_CONDITION);
 
             class wedge {
                 displayName = "$STR_Wedge";
@@ -250,6 +276,6 @@ class ACE_ZeusActions {
     class ZeusMarkers {
         displayName = "$STR_A3_RscDisplayCurator_ModeMarkers_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeMarkers_ca.paa";
-        condition = QUOTE((count (curatorSelected select 3)) > 0);
+        condition = QUOTE(!([] isEqualTo (curatorSelected select 3)));
     };
 };

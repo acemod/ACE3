@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: voioper
+ * Author: voiper
  * Switch flashlight on/off.
  *
  * Arguments:
@@ -26,12 +26,7 @@ if (GVAR(mapGlow)) then {
     _glow = [_unit, _newFlashlight, false] call FUNC(flashlightGlow);
 };
 
-private _config = (configFile >> "CfgWeapons");
-
-if (
-    (getNumber (_config >> _newFlashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0) ||
-    {getNumber (_config >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0}
-) then {
+if (-1 < [_newFlashlight, _flashlight] findIf {[_unit, _x] call FUNC(needPlaySound)}) then {
     playSound QGVAR(flashlightClick);
 };
 

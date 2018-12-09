@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
@@ -28,7 +28,7 @@
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
             <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
             <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
-            <Japanese>デバッグ情報を RPT とクリップボードに送った。</Japanese>
+            <Japanese>デバッグ情報を RPT とクリップボードに送ります。</Japanese>
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
             <Chinesesimp>复制除错讯息至剪贴簿与RPT报告档中。</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中</Chinese>
@@ -60,7 +60,7 @@
             <Czech>Resetovat aktuální animaci.</Czech>
             <Spanish>Restablece tu estado de animación.</Spanish>
             <Italian>Resetta il tuo stato animazione</Italian>
-            <Japanese>現在のアニメーションの状況を初期化します。</Japanese>
+            <Japanese>現在のアニメーション状態を初期化します。</Japanese>
             <Korean>자신의 동작 상태 초기화</Korean>
             <Chinesesimp>当ACE发生动作BUG时，点此修复。</Chinesesimp>
             <Chinese>當ACE發生動作BUG時，點此修復</Chinese>

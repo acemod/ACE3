@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="concertina_wire">
         <Key ID="STR_ACE_CONCERTINA_WIRE">
@@ -9,7 +9,7 @@
             <Spanish>Alambre de espino</Spanish>
             <French>Fill barbelé</French>
             <Czech>Ostnatý drát</Czech>
-            <Italian>Filo spinato di concertina</Italian>
+            <Italian>Filo a concertina</Italian>
             <Hungarian>Concertina wire</Hungarian>
             <Portuguese>Arame farpado</Portuguese>
             <Japanese>鉄条網</Japanese>
@@ -25,7 +25,7 @@
             <Spanish>Bobina de alambre de espino</Spanish>
             <French>Bobine de fil barbelé</French>
             <Czech>Svitek ostnatého drátu</Czech>
-            <Italian>Bobina di concertina</Italian>
+            <Italian>Bobina di filo a concertina</Italian>
             <Hungarian>Concertina wire coil</Hungarian>
             <Portuguese>Bobina de arame farpado</Portuguese>
             <Japanese>鉄条網コイル</Japanese>
@@ -41,7 +41,7 @@
             <Spanish>Desmontar alambre de espino</Spanish>
             <French>Démonter le fil barbelé</French>
             <Czech>Svinout ostnatý drát</Czech>
-            <Italian>Smonta la concertina</Italian>
+            <Italian>Smonta il filo a concertina</Italian>
             <Hungarian>Dismount Concertina wire</Hungarian>
             <Portuguese>Desmontar arame farpado</Portuguese>
             <Japanese>鉄条網をほどく</Japanese>
@@ -57,7 +57,7 @@
             <Spanish>Desplegar alambre de espino</Spanish>
             <French>Mettre en place le fil barbelé</French>
             <Czech>Rozvinout ostnatý drát</Czech>
-            <Italian>Posa il filo di concertina</Italian>
+            <Italian>Piazza il filo a concertina</Italian>
             <Hungarian>Deploy Concertina wire</Hungarian>
             <Portuguese>Colocar arame farpado</Portuguese>
             <Japanese>鉄条網を置く</Japanese>
