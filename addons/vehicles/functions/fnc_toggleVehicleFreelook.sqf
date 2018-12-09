@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: Dystopian
  * Toggles Vehicle Freelook game option.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "\a3\ui_f\hpp\defineResincl.inc"
 
 disableSerialization;
 private _displayMission = DISPLAY(IDD_MISSION);
