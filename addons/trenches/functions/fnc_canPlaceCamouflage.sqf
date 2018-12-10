@@ -5,7 +5,7 @@
 *
 * Arguments:
 * 0: Trench <OBJECT>
-* 1: unit <OBJECT>
+* 1: Unit <OBJECT>
 *
 * Return Value:
 * Can place <BOOL>
