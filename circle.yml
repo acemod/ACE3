@@ -24,6 +24,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install armake2
+          command: cargo install armake2
+      - run:
           name: Version
           command: armake2 --version
       - run:
