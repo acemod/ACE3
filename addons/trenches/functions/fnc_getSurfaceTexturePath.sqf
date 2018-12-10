@@ -58,4 +58,4 @@ private _result = if !(isNil QGVAR(automaticFileSetup)) then {
    [_surfaceType, _basePath, getText(configFile >> "CfgWorlds" >> worldName >> "filePrefix")] call _getTexturePath;
 };
 
-_result;
+_result
