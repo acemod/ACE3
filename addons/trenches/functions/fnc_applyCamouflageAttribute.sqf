@@ -4,7 +4,7 @@
  * Apply camouflage attribute to trench.
  *
  * Arguments:
- * 0: object <OBJECT>
+ * 0: Object <OBJECT>
  * 1: value <INT>
  *
  * Return Value:
