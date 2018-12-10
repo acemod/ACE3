@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: value <INT>
+ * 1: Value <NUMBER>
  *
  * Return Value:
  * None
