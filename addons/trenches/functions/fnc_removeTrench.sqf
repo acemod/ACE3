@@ -49,11 +49,11 @@ private _fnc_onFinish = {
    (_this select 0) params ["_unit", "_trench"];
    _trench setVariable [QGVAR(diggingType), nil, true];
 
-    // Remove trench
-    deleteVehicle _trench;
+   // Remove trench
+   deleteVehicle _trench;
 
-    // Reset animation
-    [_unit, "", 1] call EFUNC(common,doAnimation);
+   // Reset animation
+   [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 private _fnc_onFailure = {
    (_this select 0) params ["_unit", "_trench"];
@@ -78,50 +78,50 @@ private _fnc_condition = {
 [[_unit, _trench, false], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition] call FUNC(progressBar);
 
 [{
-  params ["_args", "_handle"];
-  _args params ["_trench", "_unit", "_removeTime", "_vecDirAndUp"];
-  private _actualProgress = _trench getVariable [QGVAR(progress), 0];
-  private _diggerCount = _trench getVariable [QGVAR(diggerCount), 0];
+   params ["_args", "_handle"];
+   _args params ["_trench", "_unit", "_removeTime", "_vecDirAndUp"];
+   private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+   private _diggerCount = _trench getVariable [QGVAR(diggerCount), 0];
 
-  if (_actualProgress <= 0) exitWith {
-     [_handle] call CBA_fnc_removePerFrameHandler;
-     _trench setVariable [QGVAR(digging), false, true];
-     _trench setVariable [QGVAR(diggerCount), 0, true];
-     deleteVehicle _trench;
- };
+   if (_actualProgress <= 0) exitWith {
+      [_handle] call CBA_fnc_removePerFrameHandler;
+      _trench setVariable [QGVAR(digging), false, true];
+      _trench setVariable [QGVAR(diggerCount), 0, true];
+      deleteVehicle _trench;
+   };
 
-  if (
-        !(_trench getVariable [QGVAR(digging), false]) ||
-        (_diggerCount <= 0)
-     ) exitWith {
-    [_handle] call CBA_fnc_removePerFrameHandler;
-    _trench setVariable [QGVAR(digging), false, true];
-    _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
-  };
+   if (
+      !(_trench getVariable [QGVAR(digging), false]) ||
+      (_diggerCount <= 0)
+   ) exitWith {
+      [_handle] call CBA_fnc_removePerFrameHandler;
+      _trench setVariable [QGVAR(digging), false, true];
+      _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
+   };
 
-  private _boundingBox = boundingBoxReal _trench;
-  _boundingBox params ["_lbfc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
-  _lbfc params ["", "", "_lbfcZ"];
+   private _boundingBox = boundingBoxReal _trench;
+   _boundingBox params ["_lbfc"];  //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
+   _lbfc params ["", "", "_lbfcZ"];
 
-  private _pos = getPosWorld _trench;
-  private _posDiff = (abs(((_trench getVariable [QGVAR(diggingSteps), 0]) * _diggerCount) + _lbfcZ))/(_removeTime*5);
-  _pos set [2,((_pos select 2) - _posDiff)];
+   private _pos = getPosWorld _trench;
+   private _posDiff = (abs(((_trench getVariable [QGVAR(diggingSteps), 0]) * _diggerCount) + _lbfcZ))/(_removeTime*5);
+   _pos set [2,((_pos select 2) - _posDiff)];
 
-  _trench setPosWorld _pos;
-  _trench setVectorDirAndUp _vecDirAndUp;
+   _trench setPosWorld _pos;
+   _trench setVectorDirAndUp _vecDirAndUp;
 
-  //Fatigue impact
-  EGVAR(advanced_fatigue,anReserve) = (EGVAR(advanced_fatigue,anReserve) - ((_removeTime /12) * GVAR(buildFatigueFactor))) max 0;
-  EGVAR(advanced_fatigue,anFatigue) = (EGVAR(advanced_fatigue,anFatigue) + (((_removeTime /12) * GVAR(buildFatigueFactor))/1200)) min 1;
+   //Fatigue impact
+   EGVAR(advanced_fatigue,anReserve) = (EGVAR(advanced_fatigue,anReserve) - ((_removeTime /12) * GVAR(buildFatigueFactor))) max 0;
+   EGVAR(advanced_fatigue,anFatigue) = (EGVAR(advanced_fatigue,anFatigue) + (((_removeTime /12) * GVAR(buildFatigueFactor))/1200)) min 1;
 
-  // Save progress
-  _trench setVariable [QGVAR(progress), (_actualProgress - ((1/(_removeTime *10)) * _diggerCount)), true];
+   // Save progress
+   _trench setVariable [QGVAR(progress), (_actualProgress - ((1/(_removeTime *10)) * _diggerCount)), true];
 
-  if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0)) exitWith {
-     [_handle] call CBA_fnc_removePerFrameHandler;
-     _trench setVariable [QGVAR(digging), false, true];
-     _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
-  };
+   if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0)) exitWith {
+      [_handle] call CBA_fnc_removePerFrameHandler;
+      _trench setVariable [QGVAR(digging), false, true];
+      _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
+   };
 },0.1,[_trench, _unit, _removeTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 
 // Play animation

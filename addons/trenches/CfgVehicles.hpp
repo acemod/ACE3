@@ -15,7 +15,7 @@ class CfgVehicles {
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(digEnvelopeShort) {
                        displayName = CSTRING(DigEnvelopeShort);
-                       condition = QUOTE(GVAR(allowDigging) && ([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)) && GVAR(allowShortEnvelope));
+                       condition = QUOTE(GVAR(allowDigging) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowShortEnvelope));
                        //wait a frame to handle "Do When releasing action menu key" option
                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_short')])] call CBA_fnc_execNextFrame);
                        exceptions[] = {};
@@ -25,24 +25,24 @@ class CfgVehicles {
                     };
                     class GVAR(digEnvelopeSmall): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeSmall);
-                        condition = QUOTE(GVAR(allowDigging) && ([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)) && GVAR(allowSmallEnvelope));
+                        condition = QUOTE(GVAR(allowDigging) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowSmallEnvelope));
                         //wait a frame to handle "Do When releasing action menu key" option
                         statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_small')])] call CBA_fnc_execNextFrame);
                     };
                     class GVAR(digEnvelopeBig): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeBig);
-                        condition = QUOTE(GVAR(allowDigging) && ([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)) && GVAR(allowBigEnvelope));
+                        condition = QUOTE(GVAR(allowDigging) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowBigEnvelope));
                         //wait a frame to handle "Do When releasing action menu key" option
                         statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call CBA_fnc_execNextFrame);
                     };
                     class GVAR(DigEnvelopeGiant): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeGiant);
-                        condition = QUOTE(_player call FUNC(canDigTrench) && ([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)) && GVAR(allowGiantEnvelope));
+                        condition = QUOTE(_player call FUNC(canDigTrench) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowGiantEnvelope));
                         statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_giant')])] call CBA_fnc_execNextFrame);
                     };
                     class GVAR(DigEnvelopeVehicle): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeVehicle);
-                        condition = QUOTE(_player call FUNC(canDigTrench) && ([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)) && GVAR(allowVehicleEnvelope));
+                        condition = QUOTE(_player call FUNC(canDigTrench) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowVehicleEnvelope));
                         statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_vehicle')])] call CBA_fnc_execNextFrame);
                     };
                 };
@@ -82,33 +82,28 @@ class CfgVehicles {
                 condition = QUOTE(true);
                 class GVAR(continueDigging) {
                     displayName = CSTRING(continueDiggingTrench);
-                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(continueDiggingTrench););
-                    priority = -1;
+                    condition = QUOTE(_this call FUNC(canContinueDiggingTrench));
+                    statement = QUOTE(_this call FUNC(continueDiggingTrench););
                 };
                 class GVAR(helpDigging) {
                     displayName = CSTRING(HelpDigging); \
-                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canHelpDiggingTrench));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(addDigger));
-                    priority = -1;
+                    condition = QUOTE(_this call FUNC(canHelpDiggingTrench));
+                    statement = QUOTE(_this call FUNC(addDigger));
                 };
                 class GVAR(remove) {
                     displayName = CSTRING(removeEnvelope);
-                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench););
-                    priority = -1;
+                    condition = QUOTE(_this call FUNC(canRemoveTrench));
+                    statement = QUOTE(_this call FUNC(removeTrench););
                 };
                 class GVAR(placeCamouflage) {
                     displayName = CSTRING(placeCamouflage);
-                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canPlaceCamouflage));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(placeCamouflage));
-                    priority = -1;
+                    condition = QUOTE(_this call FUNC(canPlaceCamouflage));
+                    statement = QUOTE(_this call FUNC(placeCamouflage));
                 };
                 class GVAR(removeCamouflage) {
                     displayName = CSTRING(removeCamouflage);
                     condition = QUOTE([_target] call FUNC(canRemoveCamouflage));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeCamouflage));
-                    priority = -1;
+                    statement = QUOTE(_this call FUNC(removeCamouflage));
                 };
             };
         };

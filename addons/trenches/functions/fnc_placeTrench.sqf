@@ -52,7 +52,7 @@ GVAR(digPFH) = [{
     };
 
     if !(_checkVar) exitWith {
-        [_unit] call ace_trenches_fnc_placeCancel;
+        [_unit] call FUNC(placeCancel);
     };
 
     // Update trench position

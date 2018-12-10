@@ -38,16 +38,6 @@
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Trench (Envelope - Small)</English>
             <German>Schützengraben (Rund - Klein)</German>
-            <Polish>Wnęka - mała</Polish>
-            <Italian>Fascia - Piccola</Italian>
-            <Spanish>Trinchera pequeña</Spanish>
-            <French>Envelope - petite</French>
-            <Portuguese>Trincheira - Pequena</Portuguese>
-            <Russian>Окоп - Малый</Russian>
-            <Japanese>塹壕 - 小型</Japanese>
-            <Korean>참호 - 소형</Korean>
-            <Chinesesimp>掩体 - 小</Chinesesimp>
-            <Chinese>掩體 - 小</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -82,16 +72,6 @@
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Trench (Envelope - Big)</English>
             <German>Schützengraben (Rund - Groß)</German>
-            <Polish>Wnęka - duża</Polish>
-            <Italian>Fascia - Grande</Italian>
-            <Spanish>Trinchera grande</Spanish>
-            <French>Enveloppe - grande</French>
-            <Portuguese>Trincheira - Grande</Portuguese>
-            <Russian>Окоп - Большой</Russian>
-            <Japanese>塹壕 - 大型</Japanese>
-            <Korean>참호 -  대형</Korean>
-            <Chinesesimp>掩体 - 大</Chinesesimp>
-            <Chinese>掩體 - 大</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigDescription">
             <English>Large Personal Trench</English>

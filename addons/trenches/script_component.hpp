@@ -18,6 +18,6 @@
 #define DEFAULT_TEXTURE QPATHTOEF(apl,data\zr_plevel_co.paa)
 #define CAMOUFLAGE_DURATION 5
 #define CAMOUFLAGE_3DEN_ATTRIBUTE QGVAR(camouflageTrench)
-#define IS_TRENCH(OBJ) ((!isNull OBJ) && {isArray (configFile >> "CfgVehicles" >> typeOf OBJ >> QGVAR(camouflagePositions))})
+#define IS_TRENCH(OBJ) isArray (configFile >> "CfgVehicles" >> typeOf OBJ >> QGVAR(camouflagePositions))
 
 #include "\z\ace\addons\main\script_macros.hpp"

@@ -33,4 +33,4 @@ if ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[
     #endif
 } else {
     PREP(getSurfaceTexturePath);
-}
+};
