@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
 * Author: chris579
-* Checks if camouflage can be applied to a trench
+* Checks if camouflage can be applied to a trench.
 *
 * Arguments:
 * 0: trench <OBJECT>
