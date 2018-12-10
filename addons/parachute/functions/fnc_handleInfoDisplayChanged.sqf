@@ -37,4 +37,3 @@ switch (_type) do {
         } forEach [380, 382];
     };
 };
-nil // switch might return true if no case was found. Just to make sure the return value matches

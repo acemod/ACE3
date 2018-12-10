@@ -150,6 +150,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "hot" %}
+`ace_common`, `ace_missileguidance`
+{% endif %}
+
 {% if include.component == "huntir" %}
 `ace_common`
 {% endif %}
@@ -444,10 +448,6 @@
 
 {% if include.component == "zeus" %}
 `ace_common`, `ace_ai`
-{% endif %}
-
-{% if include.component == "compat_adr_97" %}
-`A3_Weapons_F_Mod`
 {% endif %}
 
 {% if include.component == "compat_r3f" %}

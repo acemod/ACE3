@@ -48,6 +48,22 @@ class Rsctitles {
             idc = 55;
             text = QPATHTOF(ui\body_leg_right.paa);
         };
+        class bodyImgTournAL: bodyImgHead {
+            idc = 56;
+            text = QPATHTOF(ui\tourniquet_arm_left.paa);
+        };
+        class bodyImgTournAR: bodyImgHead {
+            idc = 57;
+            text = QPATHTOF(ui\tourniquet_arm_right.paa);
+        };
+        class bodyImgTournLL: bodyImgHead {
+            idc = 58;
+            text = QPATHTOF(ui\tourniquet_leg_left.paa);
+        };
+        class bodyImgTournLR: bodyImgHead {
+            idc = 59;
+            text = QPATHTOF(ui\tourniquet_leg_right.paa);
+        };
         class InjuryListLabel {
             idc = 199;
             type = CT_STATIC;

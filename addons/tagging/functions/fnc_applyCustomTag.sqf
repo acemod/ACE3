@@ -9,6 +9,7 @@
  * 2: Required Item <STRING>
  * 3: Textures Paths <ARRAY>
  * 4: Icon Path <STRING> (default: "")
+ * 5: Material Paths <ARRAY>
  *
  * Return Value:
  * None

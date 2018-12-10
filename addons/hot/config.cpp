@@ -6,14 +6,18 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"A3_Weapons_F_Mod"};
+        requiredAddons[] = {"ace_common","ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Nic547"};
+        authors[] = {"Brandon (TCVM)"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgWeapons.hpp"
+#include "ACE_GuidanceConfig.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
+

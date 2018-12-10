@@ -22,8 +22,9 @@ if (isNull _ctrlMap || !GVAR(moving)) exitWith {
     (_this select 1) call CBA_fnc_removePerFrameHandler;
 
     private _finalPos = getMarkerPos _marker;
+    private _overrule = [QGVAR(markerMoveEnded), [ACE_player, _marker, _originalPos, _finalPos]] call CBA_fnc_localEvent;
 
-    if !([QGVAR(markerMoveEnded), [ACE_player, _marker, _originalPos, _finalPos]] call CBA_fnc_localEvent) then {
+    if (!isNil "_overrule" && {_overrule isEqualTo true}) then {
         _marker setMarkerPosLocal _originalPos;
     } else {
         [QGVAR(setMarkerPosLocal), [_marker, _finalPos]] call CBA_fnc_globalEvent;
