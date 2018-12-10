@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: chris579
- * Gets the path to the ground texture under the object
- * Native version using intercept cba 'surfaceTexture'
- * Is compiled conditionally when intercept cba is available
+ * Gets the path to the ground texture under the object.
+ * Native version using Intercept CBA 'surfaceTexture',
+ * Is compiled conditionally when Intercept CBA is available.
  *
  * Arguments:
- * 0: trench <OBJECT>
+ * 0: Trench <OBJECT>
  *
  * Return Value:
  * Surface path <STRING>

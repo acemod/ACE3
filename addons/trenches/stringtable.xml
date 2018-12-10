@@ -438,7 +438,7 @@
             <German>Aktiviert automatische textur ausfüllung</German>
         </Key>
         <Key ID="STR_ACE_Trenches_enableAutomaticFilePath_tooltip">
-            <English>If enabled the mod will try to fill in an automatic path and prefix for the texture files. (WARNING!!!) This can cause errors!</English>
+            <English>If enabled the mod will try to fill in an automatic path and prefix for the texture files (WARNING: Can cause misconfiguration!).</English>
             <German>Wenn es aktiviert ist, versucht die Mod automatisch einen Pfad und preFix für die Map zu finden. (WARNUNG!!!) Kann zu Fehlern führen!</German>
         </Key>
     </Package>

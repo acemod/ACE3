@@ -1,7 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, Glowbal, PabstMirror
- * Modified by Salbei
+ * Author: commy2, Glowbal, PabstMirror, Salbei
  * Draw progress bar and execute given function if succesful.
  * Finish/Failure/Conditional are all passed [_args, _errorCode]
  *
@@ -9,9 +8,9 @@
  * 0: Arguments, passed to condition, fail and finish <ARRAY>
  * 1: On Finish: Code called or STRING raised as event. <CODE, STRING>
  * 2: On Failure: Code called or STRING raised as event. <CODE, STRING>
- * 3: (Optional) Localized Title <STRING>
- * 4: Code to check each frame (Optional) <CODE>
- * 5: Exceptions for checking EFUNC(common,canInteractWith) (Optional)<ARRAY>
+ * 3: Localized Title <STRING> (default: "")
+ * 4: Code to check each frame <CODE> (default: true)
+ * 5: Exceptions for checking 'canInteractWith' <ARRAY> (default: [])
  *
  * Return Value:
  * None

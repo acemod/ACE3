@@ -25,7 +25,7 @@ params ["_unit"];
 GVAR(digPFH) = -1;
 
 // remove mouse button actions
-call ace_interaction_fnc_hideMouseHint;
+call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call EFUNC(common,removeActionEventHandler);
 

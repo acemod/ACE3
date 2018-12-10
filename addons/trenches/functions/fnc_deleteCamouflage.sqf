@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
 * Author: chris579
-* Removes camouflage from trench
+* Removes camouflage from trench.
 *
 * Arguments:
-* 0: trench <OBJECT>
+* 0: Trench <OBJECT>
 *
 * Return Value:
 * None

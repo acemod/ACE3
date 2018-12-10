@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
 * Author: chris579, Salbei
-* Gets the path to the ground texture under the object
+* Gets the path to the ground texture under the object.
 *
 * Arguments:
-* 0: trench <OBJECT>
+* 0: Trench <OBJECT>
 *
 * Return Value:
 * Surface path <STRING>

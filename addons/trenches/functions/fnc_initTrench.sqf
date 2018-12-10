@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: chris579, Salbei
- * Inits a trench
+ * Inititializes a trench.
  *
  * Arguments:
- * 0: trench <OBJECT>
+ * 0: Trench <OBJECT>
  *
  * Return Value:
  * None
@@ -27,9 +27,9 @@ if (is3DEN) exitWith {
 };
 
 if (local _object) then {
-    // Has to be spawned to ensure MP compatibility
+    // Has to be delayed to ensure MP compatibility (vehicle spawned in same frame as texture is applied)
     [{
-        private _texture = [_this select 0] call FUNC(getSurfaceTexturePath);
-        (_this select 0) setObjectTextureGlobal [0, _texture];
-    }, [_this]] call CBA_fnc_execNextFrame;
+        private _texture = _this call FUNC(getSurfaceTexturePath);
+        _this setObjectTextureGlobal [0, _texture];
+    }, _this] call CBA_fnc_execNextFrame;
 };

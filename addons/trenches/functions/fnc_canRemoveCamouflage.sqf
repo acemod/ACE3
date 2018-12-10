@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
 * Author: chris579
-* Checks if camouflage can be removed from trench
+* Checks if camouflage can be removed from trench.
 *
 * Arguments:
-* 0: trench <OBJECT>
+* 0: Trench <OBJECT>
 *
 * Return Value:
 * Can remove <BOOL>

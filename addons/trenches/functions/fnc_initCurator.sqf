@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: chris579
- * Inits curator logics with evhs
+ * Initializes curator logics with Event Handlers.
  *
  * Arguments:
- * 0: curator logic <OBJECT>
+ * 0: Curator logic <OBJECT>
  *
  * Return Value:
  * None
