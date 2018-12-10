@@ -8,7 +8,7 @@
  * 1: Unit <OBJECT>
  *
  * Return Value:
- * Boolean
+ * Can Help Digging Trench <BOOL>
  *
  * Example:
  * [TrenchObj, ACE_player] call ace_trenches_fnc_canHelpDiggingTrench
