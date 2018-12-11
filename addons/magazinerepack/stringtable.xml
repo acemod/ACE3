@@ -8,6 +8,7 @@
             <Chinesesimp>重新整理弹匣</Chinesesimp>
             <Japanese>弾倉詰め替え</Japanese>
             <Korean>탄약 채우기</Korean>
+            <Polish>Przepakowywanie magazynków</Polish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -17,6 +18,7 @@
             <Chinesesimp>每发所需时间</Chinesesimp>
             <Japanese>弾頭毎の所有時間</Japanese>
             <Korean>구경 당 시간</Korean>
+            <Polish>Czas na nabój</Polish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -26,6 +28,7 @@
             <Chinesesimp>每匣所需时间</Chinesesimp>
             <Japanese>弾倉毎の所有時間</Japanese>
             <Korean>탄창 당 시간</Korean>
+            <Polish>Czas na magazynek</Polish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -35,6 +38,7 @@
             <Chinesesimp>每弹炼所需时间</Chinesesimp>
             <Japanese>ベルトリンク毎の所有時間</Japanese>
             <Korean>탄약띠 당 시간</Korean>
+            <Polish>Czas na taśmę</Polish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>

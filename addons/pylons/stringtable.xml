@@ -10,6 +10,7 @@
             <Korean>항공기 무장</Korean>
             <German>AUSRÜSTUNG DES FLUGGERÄTS</German>
             <French>ÉQUIPEMENTS DE L'AÉRONEF</French>
+            <Polish>WYPOSAŻENIE POJAZDU POWIETRZNEGO</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_LoadoutsFor">
             <English>Loadouts for %1</English>
@@ -20,6 +21,7 @@
             <Korean>%1 무장</Korean>
             <German>Ausrüstung für %1</German>
             <French>Équipements pour %1</French>
+            <Polish>Wyposażenia dla %1</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylons">
             <English>Configure Pylons</English>
@@ -30,6 +32,7 @@
             <Korean>파일런 설정</Korean>
             <German>Konfiguriere Außenlaststationen</German>
             <French>Configurer les pylônes</French>
+            <Polish>Konfiguruj Pylony</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_Category_Pylons">
             <English>ACE Pylons</English>
@@ -40,6 +43,7 @@
             <Korean>ACE 파일런</Korean>
             <German>ACE Außenlaststationen</German>
             <French>ACE Pylônes</French>
+            <Polish>Pylony ACE</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_Empty">
             <English>&lt;empty&gt;</English>
@@ -50,6 +54,7 @@
             <Korean>&lt;비어있음&gt;</Korean>
             <German>&lt;leer&gt;</German>
             <French>&lt;vide&gt;</French>
+            <Polish>&lt;puste&gt;</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_BannerText">
             <English>Pylons that are colored red will have to be manually rearmed.</English>
@@ -60,6 +65,7 @@
             <Korean>붉은색의 파일런은 수동으로 재무장해야 합니다.</Korean>
             <German>Außenlaststationen, die rot markiert sind, müssen manuell aufmunitioniert werden.</German>
             <French>Les pylônes colorés en rouge devront être réarmés manuellement.</French>
+            <Polish>Pylony, które są w kolorze czerwonym muszą być manualnie dozbrojone.</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
@@ -70,6 +76,7 @@
             <Korean>이미 이 항공기에 장착되어 있음 (%1)</Korean>
             <German>%1 konfiguriert dieses Fluggerät bereits!</German>
             <French>%1 est déjà en train de configurer cet aéronef !</French>
+            <Polish>%1 już konfiguruje ten pojazd!</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_ReplacingPylon">
             <English>Replacing pylon %1 out of %2...</English>
@@ -80,6 +87,7 @@
             <Korean>교체중 (%2 -&gt; %1)</Korean>
             <German>Ersetze Außenlaststation %1 von insgesamt %2</German>
             <French>Remplacement du pylône %1 sur %2 ...</French>
+            <Polish>Wymiana pylonów %1 z %2...</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_Stopped">
             <English>Stopped at pylon %1!</English>
@@ -90,6 +98,7 @@
             <Korean>%1 파일런이 멈춤</Korean>
             <German>Gestoppt bei Außenlaststation %1</German>
             <French>Arrêté au pylône %1 !</French>
+            <Polish>Zatrzymano na pylonie %1!</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_TooFar">
             <English>Vehicle too far</English>
@@ -100,6 +109,7 @@
             <Japanese>車両が遠すぎます</Japanese>
             <German>Fahrzeug zu weit entfernt</German>
             <French>Véhicule trop éloigné</French>
+            <Polish>Pojazd za daleko</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus">
             <English>Enable Pylons Menu for Zeus</English>
@@ -108,6 +118,7 @@
             <Italian>Abilita Menù Piloni da Zeus</Italian>
             <Japanese>Zeus でパイロン メニューを有効化</Japanese>
             <French>Activer le menu des pylônes (Zeus)</French>
+            <Polish>Aktywuj Menu Pylonów dla Zeus'a</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
@@ -116,6 +127,7 @@
             <Italian>Abilita l'uso dal modulo di Zeus</Italian>
             <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
             <French>Autorise l'utilisation des modules Zeus</French>
+            <Polish>Aktywuj wykorzystanie modułu zeus'a.</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
@@ -124,6 +136,7 @@
             <Italian>Abilita Menù Piloni da mezzi rifornimento munizioni</Italian>
             <Japanese>弾薬トラックからパイロン メニューを有効化</Japanese>
             <French>Activer le menu des pylônes (camion de munitions)</French>
+            <Polish>Aktywuj Menu Pylonów dla Ciężarówek z amunicją</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
@@ -132,6 +145,7 @@
             <Italian>Abilita l'uso del Menù Piloni da mezzi rifornimento munizioni</Italian>
             <Japanese>弾薬給弾トラックからパイロン メニューを利用できます。</Japanese>
             <French>Autorise l'utilisation du menu des pylônes depuis les camions de munitions.</French>
+            <Polish>Aktywuj wykorzystanie menu pylonów z ciężarówek z amunicją.</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
@@ -140,6 +154,7 @@
             <Italian>Questo aereo non ha piloni</Italian>
             <Japanese>航空機にパイロンがありません</Japanese>
             <French>Cet aéronef n'a pas de pylônes</French>
+            <Polish>Ten pojazd nie posiada pylonów</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
@@ -148,6 +163,7 @@
             <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
             <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
             <French>La configuration de pylônes est désactivé pour Zeus</French>
+            <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -158,6 +174,7 @@
             <Korean>새파일런 재무장</Korean>
             <German>Neue Außenlaststationen. aufmunitionieren</German>
             <French>Réarmer les nouveaux pylônes</French>
+            <Polish>Dozbrój Nowe Pylony</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons_description">
             <English>Automatically rearm new pylons from the nearest rearm vehicle.</English>
@@ -168,6 +185,7 @@
             <Korean>근처의 재무장 차량에서 빈 파일런을 자동으로 재무장 합니다.</Korean>
             <German>Neue Außenlaststationen. automatisch vom nächsten Munitionsfahrzeug aufmunitionieren</German>
             <French>Réarmer automatiquement tout les nouveau pylônes depuis le véhicule de munitions le plus proche.</French>
+            <Polish>Automatycznie dozbrajaj nowe pylony z najbliższego pojazdu dozbrajania.</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon">
             <English>Time Per Pylon</English>
@@ -178,6 +196,7 @@
             <Korean>파일런당 시간</Korean>
             <German>Zeit pro Außenlaststation</German>
             <French>Durée par pylône</French>
+            <Polish>Czas na Pylon</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
@@ -188,6 +207,7 @@
             <Korean>파일런을 재설정 하는데 걸리는 시간 (초)</Korean>
             <German>Die benötigte Zeit, um einzelne Außenlaststationen zu ersetzen (in Sekunden).</German>
             <French>Le temps nécessaire pour remplacer chaque pylône (en secondes).</French>
+            <Polish>Czas, jaki trwa wymiana każdego z pylonów (w sekundach).</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance">
             <English>Search Distance</English>
@@ -198,6 +218,7 @@
             <Korean>검색 반경</Korean>
             <German>Suchdistanz</German>
             <French>Distance de recherche</French>
+            <Polish>Dystans Szukania</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance_description">
             <English>The distance an aircraft needs to be from a rearm vehicle.</English>
@@ -208,6 +229,7 @@
             <Korean>항공기에서 재보급 가능한 재무장 차량을 찾습니다.</Korean>
             <German>Die Distanz, die ein Fahrzeug von einem Munitionsfahrzeug entfernt sein darf.</German>
             <French>La distance à laquelle un aéronef doit être d'un véhicule de munitions.</French>
+            <Polish>Dystans, w jakim pojazd musi być od pojazdu dozbrajania.</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer">
             <English>Require Engineer</English>
@@ -218,6 +240,7 @@
             <Korean>정비병 요구</Korean>
             <German>Benötigt Pionier</German>
             <French>Requiert ingénieur</French>
+            <Polish>Wymaga Mechanika</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer_description">
             <English>Require an engineer.</English>
@@ -228,6 +251,7 @@
             <Korean>정비병이 필요합니다.</Korean>
             <German>Benötigt einen Pionier.</German>
             <French>Requiert un ingénieur.</French>
+            <Polish>Wymaga mechanika.</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit">
             <English>Require Toolkit</English>
@@ -238,6 +262,7 @@
             <Korean>툴킷 요구</Korean>
             <German>Benötigt Werkzeugkasten</German>
             <French>Requiert trousse à outils</French>
+            <Polish>Wymaga Narzędzi</Polish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit_description">
             <English>Require a toolkit in inventory.</English>
@@ -248,6 +273,7 @@
             <Korean>툴킷이 필요합니다.</Korean>
             <German>Benötigt einen Werkzeugkasten im Inventar.</German>
             <French>Requiert une trousse à outils dans l'inventaire.</French>
+            <Polish>Wymaga narzędzi w ekwipunku.</Polish>
         </Key>
     </Package>
 </Project>

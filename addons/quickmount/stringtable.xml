@@ -115,6 +115,7 @@
             <English>Change seat</English>
             <Russian>Пересесть</Russian>
             <Japanese>席の変更</Japanese>
+            <Polish>Zmień zajmowaną pozycję</Polish>
         </Key>
     </Package>
 </Project>

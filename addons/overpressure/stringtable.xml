@@ -29,6 +29,7 @@
             <Chinesesimp>向后喷射的范围</Chinesesimp>
             <Chinese>後方尾焰的範圍</Chinese>
             <Italian>Raggio della fiammata [lanciarazzi]</Italian>
+            <Polish>Zasięg backblast'u</Polish>
         </Key>
         <Key ID="STR_ACE_overpressure_statBackblastAngle">
             <English>Backblast angle</English>
@@ -36,6 +37,7 @@
             <Chinesesimp>向后喷射的角度</Chinesesimp>
             <Chinese>後方尾焰的角度</Chinese>
             <Italian>Angolo della fiammata [lanciarazzi]</Italian>
+            <Polish>Kąt backblast'u</Polish>
         </Key>
     </Package>
 </Project>
