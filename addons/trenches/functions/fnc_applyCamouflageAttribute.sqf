@@ -19,7 +19,7 @@
 params ["_object", "_value"];
 
 if (_value isEqualTo 1) then {
-    [_object] call FUNC(placeCamouflage);
+   [_object] call FUNC(placeCamouflage);
 } else {
-    [_object] call FUNC(deleteCamouflage);
+   [_object] call FUNC(deleteCamouflage);
 };

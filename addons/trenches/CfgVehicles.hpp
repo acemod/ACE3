@@ -5,12 +5,11 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class ACE_Trenches {
+                class ADDON {
                     displayName = CSTRING(ActionCategory);
                     condition = QUOTE(_player call FUNC(canDigTrench) && GVAR(allowDigging));
                     statement = "";
                     showDisabled = 0;
-                    priority = 3;
                     // icon = "z\ace\addons\trenches\UI\w_entrchtool_ca.paa";
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(digEnvelopeShort) {
@@ -20,7 +19,6 @@ class CfgVehicles {
                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_short')])] call CBA_fnc_execNextFrame);
                        exceptions[] = {};
                        showDisabled = 0;
-                       priority = 4;
                        //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                     };
                     class GVAR(digEnvelopeSmall): GVAR(digEnvelopeShort) {
@@ -35,10 +33,10 @@ class CfgVehicles {
                         //wait a frame to handle "Do When releasing action menu key" option
                         statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call CBA_fnc_execNextFrame);
                     };
-                    class GVAR(DigEnvelopeGiant): GVAR(digEnvelopeShort) {
-                        displayName = CSTRING(DigEnvelopeGiant);
-                        condition = QUOTE(_player call FUNC(canDigTrench) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowGiantEnvelope));
-                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_giant')])] call CBA_fnc_execNextFrame);
+                    class GVAR(DigEnvelopeLarge): GVAR(digEnvelopeShort) {
+                        displayName = CSTRING(DigEnvelopeLarge);
+                        condition = QUOTE(_player call FUNC(canDigTrench) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowLargeEnvelope));
+                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_large')])] call CBA_fnc_execNextFrame);
                     };
                     class GVAR(DigEnvelopeVehicle): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeVehicle);
@@ -139,14 +137,14 @@ class CfgVehicles {
             right[] = {1.75, 0.2, 0.2};
         };
     };
-    class ACE_envelope_giant: ACE_envelope_small {
-        displayName = CSTRING(EnvelopeGiantName);
-        descriptionShort = CSTRING(EnvelopeGiantDescription);
-        GVAR(diggingDuration) = QGVAR(giantEnvelopeDigTime);
-        GVAR(removalDuration) = QGVAR(giantEnvelopeRemovalTime);
+    class ACE_envelope_large: ACE_envelope_small {
+        displayName = CSTRING(EnvelopeLargeName);
+        descriptionShort = CSTRING(EnvelopeLargeDescription);
+        GVAR(diggingDuration) = QGVAR(largeEnvelopeDigTime);
+        GVAR(removalDuration) = QGVAR(largeEnvelopeRemovalTime);
         GVAR(placementData)[] = {15,1.1,0.40};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
-        model = QPATHTOF(data\trench_giant.p3d);
+        model = QPATHTOF(data\trench_large.p3d);
         GVAR(boundingBoxOffset) = 0.557;
 
         class GVAR(camouflagePositions) {

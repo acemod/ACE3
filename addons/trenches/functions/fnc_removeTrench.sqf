@@ -75,7 +75,7 @@ private _fnc_condition = {
    if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0))  exitWith {false};
    true
 };
-[[_unit, _trench, false], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition] call FUNC(progressBar);
+[[_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition, [], ((_trench getVariable [QGVAR(progress), 1]) <= 0)] call EFUNC(common,progressBar);
 
 [{
    params ["_args", "_handle"];

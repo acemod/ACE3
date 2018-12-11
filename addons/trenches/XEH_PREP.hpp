@@ -21,7 +21,6 @@ PREP(placeCamouflage);
 PREP(placeCancel);
 PREP(placeConfirm);
 PREP(placeTrench);
-PREP(progressBar);
 PREP(removeCamouflage);
 PREP(removeTrench);
 

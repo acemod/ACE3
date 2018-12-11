@@ -36,10 +36,6 @@ class Extended_Deleted_EventHandlers {
             deleted = QUOTE(if (isServer) then {_this call FUNC(deleteCamouflage)});
         };
     };
-    class ACE_envelope_big: ACE_envelope_small {};
-    class ACE_envelope_giant: ACE_envelope_small {};
-    class ACE_envelope_vehicle: ACE_envelope_small {};
-    class ACE_envelope_short: ACE_envelope_small {};
 };
 
 class Extended_Init_EventHandlers {
@@ -48,11 +44,6 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call FUNC(initTrench));
         };
     };
-
-    class ACE_envelope_big: ACE_envelope_small {};
-    class ACE_envelope_giant: ACE_envelope_small {};
-    class ACE_envelope_vehicle: ACE_envelope_small {};
-    class ACE_envelope_short: ACE_envelope_small {};
 };
 
 class Extended_InitPost_EventHandlers {

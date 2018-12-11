@@ -226,18 +226,18 @@
             <German>Entferne Tarnung...</German>
             <Russian>Убираю камуфляж окопа...</Russian>
         </Key>
-        <Key ID="STR_ACE_Trenches_EnvelopeGiantName">
-            <English>Trench (Envelope - Giant)</English>
+        <Key ID="STR_ACE_Trenches_EnvelopeLargeName">
+            <English>Trench (Envelope - Large)</English>
             <German>Schützengraben (Rund - Sehr groß)</German>
             <Russian>Огромный окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeGigantDescription">
-            <English>Giant Personal Trench</English>
+            <English>Large Personal Trench</English>
             <German>Sehr großer Schützengraben</German>
             <Russian>Огромный окоп для пехоты</Russian>
         </Key>
-        <Key ID="STR_ACE_Trenches_DigEnvelopeGiant">
-            <English>Dig Giant Trench</English>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeLarge">
+            <English>Dig Large Trench</English>
             <German>Grabe sehr großen Schützengraben</German>
             <Russian>Вырыть огромный окоп</Russian>
         </Key>
@@ -346,13 +346,13 @@
             <German>Erlaube das Graben von großen runden Gräben</German>
             <Russian>Разрешить копать большие окопы</Russian>
         </Key>
-        <Key ID="STR_ACE_Trenches_allowGiantEnvelope_displayName">
-            <English>Allow giant envelope trenches</English>
+        <Key ID="STR_ACE_Trenches_allowLargeEnvelope_displayName">
+            <English>Allow large envelope trenches</English>
             <German>Erlaube riesige runde Gräben</German>
             <Russian>Разрешить огромные окопы</Russian>
         </Key>
-        <Key ID="STR_ACE_Trenches_allowGiantEnvelope_tooltip">
-            <English>Allow digging of giant envelope trenches</English>
+        <Key ID="STR_ACE_Trenches_allowLargeEnvelope_tooltip">
+            <English>Allow digging of large envelope trenches</English>
             <German>Erlaube das Graben von riesigen runden Gräben</German>
             <Russian>Разрешить копать огромные окопы</Russian>
         </Key>
@@ -391,8 +391,8 @@
             <German>Zeit (in Sekunden) um große runde Gräben zu graben</German>
             <Russian>Время (в секундах) копания большого окопа</Russian>
         </Key>
-        <Key ID="STR_ACE_Trenches_GiantEnvelopeDigTime">
-            <English>Dig time (in seconds) for giant envelope trenches</English>
+        <Key ID="STR_ACE_Trenches_LargeEnvelopeDigTime">
+            <English>Dig time (in seconds) for large envelope trenches</English>
             <German>Zeit (in Sekunden) um riesige runde Gräben zu graben</German>
             <Russian>Время (в секундах) копания гигантского окопа</Russian>
         </Key>

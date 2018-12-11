@@ -76,7 +76,7 @@ private _fnc_condition = {
    true
 };
 
-[[_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition] call FUNC(progressBar);
+[_digTime, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition, [], ((_trench getVariable [QGVAR(progress), 0]) >= 1)] call EFUNC(common,progressBar);
 
 if (_actualProgress == 0) then {
    //Remove grass
