@@ -289,6 +289,7 @@
             <Chinesesimp>听力保护</Chinesesimp>
             <Chinese>聽力保護</Chinese>
             <Italian>Protezione auditiva</Italian>
+            <Polish>Ochrona słuchu</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
@@ -297,6 +298,7 @@
             <Chinesesimp>降低音量</Chinesesimp>
             <Chinese>進低音量</Chinese>
             <Italian>Volume attenuazione</Italian>
+            <Polish>Tłumienie głośności</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
@@ -304,6 +306,7 @@
             <Chinesesimp>耳塞时音量</Chinesesimp>
             <Chinese>耳塞時音量</Chinese>
             <Italian>Volume tappi per le orecchie</Italian>
+            <Polish>Głośność Stoperów</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
@@ -311,6 +314,7 @@
             <Chinesesimp>决定带上耳塞时的音量</Chinesesimp>
             <Chinese>使用耳塞時音量</Chinese>
             <Italian>Volume audio quandi si indossano i tappi per le orecchie.</Italian>
+            <Polish>Głośność podczas używania stoperów.</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
@@ -318,6 +322,7 @@
             <Chinesesimp>无意识时音量</Chinesesimp>
             <Chinese>昏迷時音量</Chinese>
             <Italian>Volume quando incoscente</Italian>
+            <Polish>Nieprzytomna Głośność</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
@@ -325,6 +330,7 @@
             <Chinesesimp>决定处于无意识时的音量</Chinesesimp>
             <Chinese>昏迷時使用耳塞的音量</Chinese>
             <Italian>Volume quando incoscente.</Italian>
+            <Polish>Głośność podczas bycia nieprzytomnym.</Polish>
         </Key>
     </Package>
 </Project>

@@ -375,21 +375,27 @@
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_description">
             <English>Type: Star Parachute Flare</English>
+            <Polish>Typ: Gwiezdna Flara Spadochronowa</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
+            <Polish>M583 Flara oświetlająca (Biała)</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
+            <Polish>M662 Flara oświetlająca (Czerwona)</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
+            <Polish>M661 Flara oświetlająca (Zielona)</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
+            <Polish>Typ: Spadochronowa Flara IR</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
+            <Polish>M992 Oświetlająca flara IR</Polish>
         </Key>
     </Package>
 </Project>
