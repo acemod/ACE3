@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_laser", "ace_missileguidance"};
+        requiredAddons[] = {"ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror"};
         url = ECSTRING(main,URL);
@@ -17,4 +17,4 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgWeapons.hpp"
+#include "CfgMagazineWells.hpp"
