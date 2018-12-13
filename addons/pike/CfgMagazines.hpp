@@ -8,6 +8,6 @@ class CfgMagazines {
         ammo = QGVAR(ammo_gl);
         model = QPATHTOF(models\ace_pike_ammo.p3d);
         initSpeed = 40;
-        mass = 10;
+        mass = 17; // 1.7 lbs
     };
 };

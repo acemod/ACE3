@@ -43,6 +43,7 @@ if (_ammo != QGVAR(ammo_gl)) exitWith {};
 
     // Start missile guidance
     [_unit, _weapon, _muzzle, _mode, QGVAR(ammo_rocket), _magazine, _rocket] call EFUNC(missileguidance,onFired);
+    TRACE_2("starting missile guidance",_rocket,typeOf _rocket);
 
     #ifdef DEBUG_MODE_FULL
     [{

@@ -7,25 +7,31 @@ class CfgAmmo {
         timeToLive = 1;
     };
 
-    class M_Titan_AT;
-    class GVAR(ammo_rocket): M_Titan_AT {
+    class MissileBase;
+    class GVAR(ammo_rocket): MissileBase {
         irLock = 0;
         laserLock = 0;
         airLock = 0;
         manualControl = 0;
-        
+
         timeToLive = 30;
 
         model = QPATHTOF(models\ace_pike_ammo.p3d);
         maxSpeed = 150;
-        thrust = 30;
-        thrustTime = 2;
-        
+        thrust = 15;
+        thrustTime = 8;
+        initTime = 0;
+        airFriction = 0.1;
+
         hit = 100;
         indirectHit = 8;
         indirectHitRange = 6;
 
-        initTime = 0;
+        CraterEffects = "AAMissileCrater";
+        explosionEffects = "AAMissileExplosion";
+        effectsMissileInit = "RocketBackEffectsRPG";
+        effectsMissile = "missile3";
+
 
         // Begin ACE guidance Configs
         class ace_missileguidance {
@@ -48,11 +54,11 @@ class CfgAmmo {
             seekerAccuracy = 1;         // seeker accuracy multiplier
 
             seekerMinRange = 1;
-            seekerMaxRange = 1000;      // Range from the missile which the seeker can visually search
+            seekerMaxRange = 2000;      // Range from the missile which the seeker can visually search
 
             // Attack profile type selection
             defaultAttackProfile = "LIN";
-            attackProfiles[] = { "LIN", "DIR", "MID", "HI" };
+            attackProfiles[] = { "LIN" };
         };
     };
 };
