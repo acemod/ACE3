@@ -7,7 +7,7 @@
  * 0: Trench <OBJECT>
  *
  * Return Value:
- * Surface path <STRING>
+ * None
  *
  * Example:
  * [TrenchObj] call ace_trenches_fnc_initTrench3DEN

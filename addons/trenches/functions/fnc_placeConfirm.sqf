@@ -4,7 +4,7 @@
  * Confirms trench dig
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None

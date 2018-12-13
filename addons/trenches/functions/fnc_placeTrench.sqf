@@ -4,7 +4,7 @@
  * Starts the place process for trench.
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Trench class <STRING>
  *
  * Return Value:

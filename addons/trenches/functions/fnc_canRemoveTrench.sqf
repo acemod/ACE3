@@ -4,8 +4,8 @@
  * Checks if a unit can remove a trench
  *
  * Arguments:
- * 0: trench <OBJECT>
- * 1: unit <OBJECT>
+ * 0: Trench <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can remove <BOOL>
