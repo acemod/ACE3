@@ -26,28 +26,24 @@ if (_ammo != QGVAR(ammo_gl)) exitWith {};
     //If null (deleted or hit water) exit:
     if (isNull _projectile) exitWith {};
 
+    // Save grenade state
     private _posASL = getPosASL _projectile;
     private _vel = velocity _projectile;
-    
-    systemChat format ["gl %1 %2",_vel, round vectorMagnitude _vel];
-    
+    TRACE_2("",_posASL,_vel);
+
+    // Swap fired GL to a missile type
     deleteVehicle _projectile;
-
     private _rocket = QGVAR(ammo_rocket) createVehicle (getPosATL _projectile);
-    
-    _rocket setPosASL _posASL;
+    [QEGVAR(common,setShotParents), [_rocket, _unit, _unit]] call CBA_fnc_serverEvent;
 
-    // Set correct velocity and direction (must set velocity before changeMissileDirection)
+    // Set correct position, velocity and direction (must set velocity before changeMissileDirection)
+    _rocket setPosASL _posASL;
     _rocket setVelocity _vel;
     [_rocket, vectorNormalized _vel] call EFUNC(missileguidance,changeMissileDirection);
-    
-    
-    private _vel = velocity _rocket;
-    systemChat format ["rocket %1 %2",_vel, round vectorMagnitude _vel];
 
     // Start missile guidance
     [_unit, _weapon, _muzzle, _mode, QGVAR(ammo_rocket), _magazine, _rocket] call EFUNC(missileguidance,onFired);
-    
+
     #ifdef DEBUG_MODE_FULL
     [{
         params ["_args", "_pfID"];
@@ -57,5 +53,5 @@ if (_ammo != QGVAR(ammo_gl)) exitWith {};
         hintSilent format ["vel %1\n%2 mps\n%3dist %3\ntof %4",velocity _rocket, round vectorMagnitude velocity _rocket, _rocket distance player, time - _startTime];
     }, 0.0, [_rocket, time]] call CBA_fnc_addPerFrameHandler;
     #endif
-    
+
 }, _this, 0.1] call CBA_fnc_waitAndExecute;
