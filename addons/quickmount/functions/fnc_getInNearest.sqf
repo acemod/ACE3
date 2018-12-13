@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Kingsley
  * Mount the player in the vehicle they are directly looking at based on their distance.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!GVAR(enabled) ||
     {isNull ACE_player} ||
@@ -37,7 +37,7 @@ TRACE_1("",_target);
 if (!isNull _target &&
         {alive _target} &&
         {{_target isKindOf _x} count ["Air","LandVehicle","Ship","StaticMortar"] > 0} &&
-        {([ACE_player, _target] call EFUNC(common,canInteractWith))} &&
+        {([ACE_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} &&
         {speed _target <= GVAR(speed)}
         ) then {
 
@@ -70,13 +70,17 @@ if (!isNull _target &&
                 if ((!(_turretPath isEqualTo [])) && {_target lockedTurret _turretPath}) exitWith {TRACE_1("lockedTurret",_x);};
 
                 if (_effectiveRole == "turret") then {
-                    if ((getNumber (([_target, _turretPath] call CBA_fnc_getTurret) >> "isCopilot")) == 1) exitWith {
+                    private _turretConfig = [_target, _turretPath] call CBA_fnc_getTurret;
+                    if (getNumber (_turretConfig >> "isCopilot") == 1) exitWith {
                         _effectiveRole = "driver";
                     };
-                    if (_cargoIndex < 0) exitWith {
-                        _effectiveRole = "gunner"; // door gunners / 2nd turret
+                    if (
+                        _cargoIndex >= 0 // FFV
+                        || {"" isEqualTo getText (_turretConfig >> "gun")} // turret without weapon
+                    ) exitWith {
+                        _effectiveRole = "cargo";
                     };
-                    _effectiveRole = "cargo"; // probably a FFV
+                    _effectiveRole = "gunner"; // door gunners / 2nd turret
                 };
                 TRACE_2("",_effectiveRole,_x);
                 if (_effectiveRole != _desiredRole) exitWith {};
@@ -87,8 +91,15 @@ if (!isNull _target &&
                     TRACE_3("Geting In Turret",_x,_role,_turretPath);
                 } else {
                     if (_cargoIndex > -1) then {
-                        ACE_player action ["GetInCargo", _target, _cargoIndex];
-                        TRACE_3("Geting In Cargo",_x,_role,_cargoIndex);
+                        // GetInCargo expects the index of the seat in the "cargo" array from fullCrew
+                        // See description: https://community.bistudio.com/wiki/fullCrew
+                        private _cargoActionIndex = -1;
+                        {
+                            if ((_x select 2) == _cargoIndex) exitWith {_cargoActionIndex = _forEachIndex};
+                        } forEach (fullCrew [_target, "cargo", true]);
+
+                        ACE_player action ["GetInCargo", _target, _cargoActionIndex];
+                        TRACE_4("Geting In Cargo",_x,_role,_cargoActionIndex,_cargoIndex);
                     } else {
                         ACE_player action ["GetIn" + _role, _target];
                         TRACE_2("Geting In",_x,_role);

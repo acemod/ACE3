@@ -37,6 +37,8 @@ class CfgWeapons {
     
     class YourWeapon {
         ace_railHeightAboveBore = 1.8;  // Distance between center of bore and rail in centimeters
+        ace_railBaseAngle = 0.025; // Angular difference between bore and rail axis in degrees
+        ace_ironSightBaseAngle = -0.138; // Angular difference between bore and iron sight axis in degrees
     };
 };
 ```

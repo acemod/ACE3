@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Draw the visible laser beams of all cached units.
@@ -13,10 +14,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-// no lasers in thermal mode
-if !(GVAR(isTI)) then {
+if (count GVAR(redLaserUnits) + count GVAR(greenLaserUnits) > 0 && {!GVAR(isTI)}) then {
     private _brightness = 2 - call EFUNC(common,ambientBrightness);
 
     {

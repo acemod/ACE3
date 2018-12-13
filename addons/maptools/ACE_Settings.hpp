@@ -1,5 +1,6 @@
 class ACE_Settings {
     class GVAR(rotateModifierKey) {
+        category = CSTRING(Name);
         value = 1;
         typeName = "SCALAR";
         isClientSettable = 1;
@@ -7,11 +8,12 @@ class ACE_Settings {
         description = CSTRING(rotateModifierKey_description);
         values[] = {"$STR_A3_OPTIONS_DISABLED", "ALT", "CTRL", "SHIFT"};
     };
-    class GVAR(drawStaightLines) {
+    class GVAR(drawStraightLines) {
+        category = CSTRING(Name);
         value = 1;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = CSTRING(drawStaightLines_displayName);
-        description = CSTRING(drawStaightLines_description);
+        displayName = CSTRING(drawStraightLines_displayName);
+        description = CSTRING(drawStraightLines_description);
     };
 };

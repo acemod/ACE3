@@ -46,5 +46,35 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     };
 };
 
+if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+    [QEGVAR(arsenal,rightPanelFilled), {
+
+        params ["_display", "_leftPanelIDC", "_rightPanelIDC"];
+
+        if (_leftPanelIDC in [2010, 2012, 2014] && {_rightPanelIDC == 38}) then {
+            LOG("passed");
+            private _rightPanel = _display displayCtrl 15;
+            (lnbSize _rightPanel) params ["_rows", "_columns"];
+
+            private _allDogtags = missionNameSpace getVariable [QGVAR(allDogtags), []];
+            private _allDogtagDatas = missionNameSpace getVariable [QGVAR(allDogtagDatas), []];
+
+            for "_r" from 0 to (_rows - 1) do {
+                private _data = _rightPanel lnbData [_r, 0];
+
+                if (_data isKindOf ["ACE_dogtag", (configFile >> "CfgWeapons")]) then {
+
+                    private _dogtagData = [];
+                    private _index = _allDogtags find _data;
+                    _dogtagData = _allDogtagDatas select _index;
+                    private _dogtagString =  [localize LSTRING(itemName), ": ", (_dogtagData select 0)] joinString "";
+
+                    _rightPanel lnbSetText [[_r, 1], _dogtagString];
+                };
+            };
+        };
+    }] call CBA_fnc_addEventHandler;
+};
+
 // disable dogtags for civilians
 "CIV_F" call FUNC(disableFactionDogtags);

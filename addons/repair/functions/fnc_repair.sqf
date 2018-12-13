@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Starts the repair process.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
@@ -176,6 +176,9 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
 };
+
+private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selectionPosition "RightHand"));
+["Acts_carFixingWheel", _soundPosition, nil, 50] call EFUNC(common,playConfigSound3D);
 
 // Get repair time
 private _repairTime = [

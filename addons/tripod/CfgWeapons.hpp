@@ -3,7 +3,7 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
 
     class ACE_Tripod: ACE_ItemCore {
-        author[] = {"Rocko", "Scubaman3D"};
+        author = "Rocko, Scubaman3D";
         scope = 2;
         displayName = CSTRING(DisplayName);
         descriptionShort = "";

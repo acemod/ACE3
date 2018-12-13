@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to select the camera mode
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_newMode"];
 
@@ -62,7 +61,7 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
 
     if (_newMode == MODE_FREE) then {
         _camera cameraEffect ["Internal", "BACK"];
-        player switchCamera "INTERNAL";
+        switchCamera GVAR(camAgentFree); // Fix draw3D while in free camera for case where player is perma-dead
         _camera setDir getDirVisual _camera;
 
         if (!isNull _focus) then {

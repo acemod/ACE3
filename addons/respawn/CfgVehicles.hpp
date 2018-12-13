@@ -7,8 +7,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(module);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_Respawn_ca.paa);
 
         class Arguments {
@@ -72,7 +72,6 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2(_player, side group _player)] call FUNC(moveRallypoint));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
-                priority = -0.5;
             };
         };
     };
@@ -113,7 +112,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
-                priority = 1;
             };
         };
     };
@@ -136,7 +134,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
-                priority = 1;
             };
         };
     };
@@ -159,7 +156,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
-                priority = 1;
             };
         };
     };
@@ -183,7 +179,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
-                priority = 1;
             };
         };
     };
@@ -206,7 +201,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
-                priority = 1;
             };
         };
     };
@@ -229,7 +223,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
                 position = "[-0.05,-0.35,-2.6]";
                 showDisabled = 1;
-                priority = 1;
             };
         };
     };

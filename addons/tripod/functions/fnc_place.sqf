@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko, Ruthberg
  * Place down tripod
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_tripodClass"];
 
@@ -33,13 +33,13 @@ if (stance _unit == "STAND") then {
     private _tripod = "ACE_TripodObject" createVehicle [0, 0, 0];
 
     {
-        _tripod animate [_x, 1];
+        _tripod animate [_x, 0.5];
     } count ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
 
     [{
         (_this select 0) params ["_tripod", "_direction", "_position"];
 
-        if (_tripod animationPhase "slide_down_tripod" == 1) then {
+        if (_tripod animationPhase "slide_down_tripod" == 0.5) then {
             _tripod setDir _direction;
             _tripod setPosASL _position;
 

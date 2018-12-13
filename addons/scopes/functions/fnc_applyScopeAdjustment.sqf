@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Ruthberg
  * Applies the adjustment for the current scope
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_elevation", "_windage", "_zero"];
 
@@ -33,14 +33,16 @@ playSound selectRandom ["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_
 
 // slightly rotate the player if looking through optic
 if (cameraView == "GUNNER") then {
-    // Convert adjustmentDifference from mils to degrees
-    _adjustmentDifference = _adjustmentDifference apply {MRAD_TO_DEG(_x)};
-    _adjustmentDifference params ["_elevationDifference", "_windageDifference"];
-    private _pitchBankYaw = [_unit] call EFUNC(common,getPitchBankYaw);
-    _pitchBankYaw params ["_pitch", "_bank", "_yaw"];
-    _pitch = _pitch + _elevationDifference;
-    _yaw = _yaw + _windageDifference;
-    [_unit, _pitch, _bank, _yaw] call EFUNC(common,setPitchBankYaw);
+    if (!GVAR(simplifiedZeroing)) then {
+        // Convert adjustmentDifference from mils to degrees
+        _adjustmentDifference = _adjustmentDifference apply {MRAD_TO_DEG(_x)};
+        _adjustmentDifference params ["_elevationDifference", "_windageDifference"];
+        private _pitchBankYaw = [_unit] call EFUNC(common,getPitchBankYaw);
+        _pitchBankYaw params ["_pitch", "_bank", "_yaw"];
+        _pitch = _pitch + _elevationDifference;
+        _yaw = _yaw + _windageDifference;
+        [_unit, _pitch, _bank, _yaw] call EFUNC(common,setPitchBankYaw);
+    };
 } else {
     [] call FUNC(showZeroing);
 };

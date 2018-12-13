@@ -16,7 +16,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define MAX_LOAD_DISTANCE 10
+#define MAX_LOAD_DISTANCE 5
 
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 

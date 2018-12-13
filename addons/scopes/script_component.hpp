@@ -14,6 +14,12 @@
 #define MINOR_INCREMENT false
 #define MAJOR_INCREMENT true
 
+#define MIN_INCREMENT 0.05 // mrad
+
+#define DEFAULT_RAIL_BASE_ANGLE 0.0086 // deg
+
+// #define DISABLE_DISPERSION
+
 #ifdef DEBUG_ENABLED_SCOPES
     #define DEBUG_MODE_FULL
 #endif
@@ -21,7 +27,5 @@
 #ifdef DEBUG_SETTINGS_SCOPES
     #define DEBUG_SETTINGS DEBUG_SETTINGS_SCOPES
 #endif
-
-#define MRAD_TO_DEG(d) (d / 17.45329252) // Conversion factor: 9 / (50 * PI)
 
 #include "\z\ace\addons\main\script_macros.hpp"

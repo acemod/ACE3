@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Flips the capture state of the unit the module is placed on.
@@ -16,11 +17,9 @@
  * Public: No
  */
 
-#include "script_component.hpp"
+params ["_logic"];
 
-params ["_logic", "_units", "_activated"];
-
-if !(_activated && local _logic) exitWith {};
+if !(local _logic) exitWith {};
 
 if (isNil QEFUNC(captives,setHandcuffed)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);

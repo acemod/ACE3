@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Makes incendiary burn.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define ALERT_NEAR_ENEMY_RANGE 60
 
@@ -33,6 +33,8 @@
 #define EFFECT_SIZE 1
 #define ORIENTATION 5.4
 #define EXPANSION 1
+
+#define DESTRUCTION_RADIUS 1.8
 
 params ["_projectile", "_timeToLive", "_center"];
 
@@ -169,7 +171,10 @@ if (isServer) then {
             _x setDamage 1;
         };
         if (_x isKindOf "ReammoBox_F") then {
-            if ("ace_cookoff" call EFUNC(common,isModLoaded) && {EGVAR(cookoff,enable)}) then {
+            if (
+                "ace_cookoff" call EFUNC(common,isModLoaded) &&
+                {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
+            ) then {
                 _x call EFUNC(cookoff,cookOffBox);
             } else {
                 _x setDamage 1;
@@ -184,7 +189,7 @@ if (isServer) then {
         // --- inflame fireplace, barrels etc.
         _x inflame true;
     };
-} forEach (_position nearObjects EFFECT_SIZE);
+} forEach (_position nearObjects DESTRUCTION_RADIUS);
 
 // --- damage local vehicle
 private _vehicle = _position nearestObject "Car";

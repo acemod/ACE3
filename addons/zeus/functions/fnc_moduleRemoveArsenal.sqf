@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Remove arsenal from an object
@@ -10,8 +11,6 @@
  *
  * Public: No
 */
-
-#include "script_component.hpp"
 
 params ["_logic"];
 if (!local _logic) exitWith {};
@@ -30,7 +29,8 @@ switch (true) do {
         [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     default {
-        TRACE_1("Calling removeVirtualXXXCargo functions",_object);
+
+        TRACE_1("Calling removeVirtualXXXCargo functions", _object);
         [_object, (_object call BIS_fnc_getVirtualItemCargo), true] call BIS_fnc_removeVirtualItemCargo;
         [_object, (_object call BIS_fnc_getVirtualWeaponCargo), true] call BIS_fnc_removeVirtualWeaponCargo;
         [_object, (_object call BIS_fnc_getVirtualMagazineCargo), true] call BIS_fnc_removeVirtualMagazineCargo;

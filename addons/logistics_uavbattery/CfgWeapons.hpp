@@ -4,6 +4,7 @@ class CfgWeapons {
 
     class ACE_UAVBattery: ACE_ItemCore {
         scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Battery_Name);
         descriptionShort = CSTRING(Battery_Description);
         model = QPATHTOF(data\ace_battery.p3d);

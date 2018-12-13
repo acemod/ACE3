@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Handles UI initialisation and destruction
@@ -14,9 +15,8 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_init"];
+TRACE_1("ui",_init);
 
 // No change
 if (_init isEqualTo !isNull SPEC_DISPLAY) exitWith {};
@@ -27,6 +27,15 @@ openMap [false,false];
 // Close any open dialogs
 while {dialog} do {
     closeDialog 0;
+};
+
+// Controls some PP effects, but a little unclear which
+BIS_fnc_feedback_allowPP = !_init;
+
+// Removes death blur if present
+if !(isNil "BIS_DeathBlur") then {
+    BIS_DeathBlur ppEffectAdjust [0];
+    BIS_DeathBlur ppEffectCommit 0;
 };
 
 // Note that init and destroy intentionally happen in reverse order
@@ -93,6 +102,39 @@ if (_init) then {
         [] call FUNC(ui_updateListEntities);
         [] call FUNC(ui_updateWidget);
     }, 5] call CBA_fnc_addPerFrameHandler;
+
+    // register grenade track EH
+    GVAR(grenadeTrackingEH) = [
+        QGVAR(addToGrenadeTracking), {
+            params [["_projectile", objNull, [objNull]]];
+            if (GVAR(drawProjectiles) && {!isNull _projectile}) then {
+                if (count GVAR(grenadesToDraw) > MAX_GRENADES) then { GVAR(grenadesToDraw) deleteAt 0; };
+                GVAR(grenadesToDraw) pushBack _projectile;
+            };
+        }
+    ] call CBA_fnc_addEventHandler;
+
+    // register projectile track EH
+    GVAR(projectileTrackingEH) = [
+        QGVAR(addToProjectileTracking), {
+            params [["_projectile", objNull, [objNull]]];
+            if (GVAR(drawProjectiles) && {!isNull _projectile}) then {
+                if (count GVAR(projectilesToDraw) > MAX_PROJECTILES) then { GVAR(projectilesToDraw) deleteAt 0; };
+                GVAR(projectilesToDraw) pushBack [_projectile, [[getPosVisual _projectile, [1,0,0,0]]]];
+            };
+        }
+    ] call CBA_fnc_addEventHandler;
+
+    // register advanced throwing EH
+    GVAR(advancedThrowingEH) = [
+        QEGVAR(advanced_throwing,throwFiredXEH), {
+            // Fire time used for unit icon highlighting
+            (_this select 0) setVariable [QGVAR(highlightTime), time + FIRE_HIGHLIGHT_TIME];
+
+            // add grenade to tracking
+            [QGVAR(addToGrenadeTracking), [_this select 6]] call CBA_fnc_localEvent;
+        }
+    ] call CBA_fnc_addEventHandler;
 } else {
     // Stop updating the list and focus widget
     [GVAR(uiPFH)] call CBA_fnc_removePerFrameHandler;
@@ -105,6 +147,18 @@ if (_init) then {
     // Stop updating things to draw
     [GVAR(collectPFH)] call CBA_fnc_removePerFrameHandler;
     GVAR(collectPFH) = nil;
+
+    // remove advanced throwing EH
+    [QEGVAR(advanced_throwing,throwFiredXEH), GVAR(advancedThrowingEH)] call CBA_fnc_removeEventHandler;
+    GVAR(advancedThrowingEH) = nil;
+
+    // remove projectile track EH
+    [QGVAR(addToProjectileTracking), GVAR(projectileTrackingEH)] call CBA_fnc_removeEventHandler;
+    GVAR(projectileTrackingEH) = nil;
+
+    // remove grenade track EH
+    [QGVAR(addToGrenadeTracking), GVAR(grenadeTrackingEH)] call CBA_fnc_removeEventHandler;
+    GVAR(grenadeTrackingEH) = nil;
 
     // Destroy the display
     SPEC_DISPLAY closeDisplay 1;

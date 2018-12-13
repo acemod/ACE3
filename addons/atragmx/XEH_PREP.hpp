@@ -27,6 +27,7 @@ PREP(init);
 PREP(initGunList);
 PREP(insert_c1_ballistic_coefficient_data);
 PREP(insert_muzzle_velocity_data);
+PREP(lookup_c1_ballistic_coefficient);
 PREP(parse_input);
 PREP(read_gun_list_entries_from_config);
 PREP(recalculate_c1_ballistic_coefficient);

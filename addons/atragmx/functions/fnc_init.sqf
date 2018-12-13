@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Inits all global variables with the default values
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 
 GVAR(workingMemory) = +(GVAR(gunList) select 0);
@@ -83,6 +83,8 @@ GVAR(truingDropC1) = 0;
 GVAR(truingDropMuzzleVelocity) = 0;
 
 GVAR(targetSolutionInput) = nil;
+
+GVAR(targetRangeDirtyFlag) = false;
 
 GVAR(showMainPage) = true;
 GVAR(showAddNewGun) = false;

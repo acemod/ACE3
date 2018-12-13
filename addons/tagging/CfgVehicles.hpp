@@ -5,7 +5,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Tagging);
         function = QFUNC(moduleInit);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_Tagging_ca.paa);
         class Arguments {

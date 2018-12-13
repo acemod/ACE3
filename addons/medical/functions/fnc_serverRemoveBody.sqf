@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Removes corpse. Idealy it is just deleted the next frame,
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target"];
 TRACE_2("",_target,isPlayer _target);

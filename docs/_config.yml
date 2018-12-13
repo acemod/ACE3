@@ -8,17 +8,17 @@ ace:
   githubUrl: https://github.com/acemod/ACE3
   version:
     major: 3
-    minor: 11
-    patch: 0
-    build: 26
+    minor: 12
+    patch: 5
+    build: 40
 
 acex:
   githubUrl: https://github.com/acemod/ACEX
   version:
     major: 3
-    minor: 2
-    patch: 0
-    build: 4
+    minor: 4
+    patch: 1
+    build: 11
 
 
 markdown: kramdown
@@ -36,7 +36,7 @@ lsi: false
 
 exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:

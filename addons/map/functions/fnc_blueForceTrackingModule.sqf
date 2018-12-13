@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Initializes the blue force tracking module.
@@ -13,10 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
-
-if (!isServer) exitWith {};
 
 params ["_logic"];
 

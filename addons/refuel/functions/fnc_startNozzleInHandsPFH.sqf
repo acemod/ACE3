@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * PFH while nozzle is in hands.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define DROP_NOZZLE [_unit, _nozzle] call FUNC(dropNozzle);
 #define UNHOLSTER_WEAPON \
@@ -24,6 +24,7 @@
     _unit setVariable [QGVAR(hint), nil]; \
     call EFUNC(interaction,hideMouseHint); \
     [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set); \
+    [_unit, "blockThrow", "ACE_refuel", false] call EFUNC(common,statusEffect_set); \
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 
 params ["_unit", "_nozzle"];

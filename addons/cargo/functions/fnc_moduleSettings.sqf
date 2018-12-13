@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Module for adjusting the cargo settings
@@ -15,9 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-if (!isServer) exitWith {};
 
 params ["_logic", "", "_activated"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Handles "compatibility" (i.e. override) for BI spectator respawn types 1, 4 & 5
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _respawn = getMissionConfigValue ["respawn",0];
 if (_respawn isEqualType "") then { _respawn = ["","bird","","","group","side"] find (toLower _respawn); };
@@ -42,7 +41,10 @@ if (_respawn in [4,5]) then {
 
 // Switch to a virtual unit so draw3D continues to work
 private _grp = createGroup [sideLogic, true];
-private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,""];
+private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,"NONE"];
+
+// Prevent unit falling into water (compatibility for some addons)
+_virtual enableSimulation false;
 
 // Transfer assigned zeus if applicable
 private _zeus = getAssignedCuratorLogic player;

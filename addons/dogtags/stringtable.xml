@@ -58,7 +58,7 @@
             <Polish>Zabrałeś nieśmiertelnik %1...</Polish>
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
-            <Japanese>%1からドッグ タグを取っている・・・</Japanese>
+            <Japanese>%1からドッグ タグを取っています・・・</Japanese>
             <German>Hundemarke von %1 genommen ...</German>
             <Korean>%1로부터 군번줄을 회수했습니다...</Korean>
             <French>Plaque d'identification pris sur %1...</French>
@@ -71,13 +71,20 @@
             <Polish>Ktoś już zabrał ten nieśmiertelnik...</Polish>
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
-            <Japanese>すでに誰かがドッグ タグを取っているようだ・・・</Japanese>
+            <Japanese>すでにドッグ タグは取られています・・・</Japanese>
             <German>Jemand anderes hat bereits die Hundemarke genommen ...</German>
             <Korean>누군가 이미 군번줄을 회수해갔습니다...</Korean>
             <French>Quelqu'un d'autre a déjâ pris les plaques d'identification...</French>
             <Italian>Qualcun altro ha già preso la piastrina...</Italian>
             <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Dogtags_IGUI_Description">
+            <English>Onscreen display for checking dogtags</English>
+            <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
+            <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
+            <Italian>Display su schermo per il controllo delle piastrine</Italian>
+            <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
         </Key>
     </Package>
 </Project>

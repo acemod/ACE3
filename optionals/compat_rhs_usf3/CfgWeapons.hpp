@@ -1,14 +1,21 @@
 
 class CfgWeapons {
+    class NVGoggles;
+    class rhsusf_ANPVS_14: NVGoggles { // Monocular
+        modelOptics = "";
+        EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
+        EGVAR(nightvision,bluRadius) = 0.13;
+    };
+    class rhsusf_ANPVS_15: rhsusf_ANPVS_14 { // Binocular (same as base)
+        modelOptics = "";        
+        EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_binos_4096.paa);
+        EGVAR(nightvision,bluRadius) = 0.15;
+    };
+
     class Pistol_Base_F;
     class Rifle_Base_F;
     class srifle_EBR_F;
     class launch_O_Titan_F;
-    class UGL_F;
-
-    class rhs_weap_M320_Base_F: Pistol_Base_F { // Standalone M320 (pistol slot)
-        magazines[] += {"ACE_HuntIR_M203"};
-    };
     class GM6_base_F;
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
@@ -36,10 +43,6 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 2.56518;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.3;
-        class M203_GL: UGL_F {
-            magazines[] += {"ACE_HuntIR_M203"};
-        };
-        // Added to the M320_GL in subConfig
     };
     class rhs_weap_m4a1;
     class rhs_weap_hk416d10: rhs_weap_m4a1 {
@@ -67,18 +70,19 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 508.0;
     };
-    class rhs_weap_lmg_minimi_railed; // Rifle_Base_F - scope = private;
+    class rhs_weap_saw_base: Rifle_Base_F { // Base class for all Minimi
+        ACE_Overheating_allowSwapBarrel = 1;
+    };
+    class rhs_weap_lmg_minimi_railed;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
         ACE_RailHeightAboveBore = 4.11044;
         ACE_barrelLength = 348;
         ACE_barrelTwist = 177.8;
-        ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m249_pip_L: rhs_weap_lmg_minimi_railed {
         ACE_RailHeightAboveBore = 4.34899;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
-        ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m240_base; // Rifle_Long_Base_F
     class rhs_weap_m240B: rhs_weap_m240_base {

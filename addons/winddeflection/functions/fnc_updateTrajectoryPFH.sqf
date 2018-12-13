@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, Ruthberg
  * Handles wind deflection for projectiles.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 [{
     // BEGIN_COUNTER(pfeh);
@@ -24,7 +23,7 @@
     _args params ["_lastTime"];
     private _deltaT = CBA_missionTime - _lastTime;
     _args set [0, CBA_missionTime];
-    private _isWind = (vectorMagnitude ACE_wind > 0);
+    private _isWind = (vectorMagnitude wind > 0);
 
     {
         _x params ["_bullet", "_airFriction"];
@@ -36,7 +35,7 @@
             GVAR(trackedBullets) deleteAt (GVAR(trackedBullets) find _x);
         } else {
             if (_isWind) then {
-                private _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
+                private _trueVelocity = _bulletVelocity vectorDiff wind;
                 private _trueSpeed = vectorMagnitude _trueVelocity;
 
                 private _dragRef = _deltaT * _airFriction * _bulletSpeedSqr;

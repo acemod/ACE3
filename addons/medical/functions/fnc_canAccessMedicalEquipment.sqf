@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if caller can access targets medical equipment, based upon accessLevel.
@@ -14,8 +15,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 

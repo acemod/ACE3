@@ -16,7 +16,8 @@ class CfgPatches {
 
 #include "ACE_Repair.hpp"
 #include "ACE_Settings.hpp"
-#include "CfgEventHandlers.hpp"
 #include "CfgActions.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgEden.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgMoves.hpp"
+#include "CfgVehicles.hpp"

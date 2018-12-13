@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-    addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleDisconnect)];
+    addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 };
 
 [QGVAR(initSource), LINKFUNC(initSource)] call CBA_fnc_addEventHandler;
@@ -67,11 +67,6 @@ private _sourceClasses = [];
     private _fuelCargo = getNumber (_x >> QGVAR(fuelCargo));
     if (_fuelCargo > 0 || {_fuelCargo == REFUEL_INFINITE_FUEL}) then {
         private _sourceClass = configName _x;
-        if (isClass (_x >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(Refuel))) exitWith {
-            if (!isClass (inheritsFrom _x >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(Refuel))) then {
-                ACE_DEPRECATED(FORMAT_1(QUOTE(GVAR(Refuel) interaction menu in %1),_sourceClass),"3.13.0",QUOTE(GVAR(fuelCargo) config value));
-            };
-        };
         // check if we can use actions with inheritance
         if (
             !isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init") // addActionToClass relies on XEH init

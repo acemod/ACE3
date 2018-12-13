@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag on a wall that is on the closest surface within 2m on front of the unit.
@@ -5,6 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
+ * 2: Material of the tag <STRING> (Optional)
  *
  * Return Value:
  * Sucess <BOOL>
@@ -15,11 +17,10 @@
  * Public: Yes
  */
 
-#include "script_component.hpp"
-
 params [
     ["_unit", objNull, [objNull]],
-    ["_texture", "", [""]]
+    ["_texture", "", [""]],
+    ["_material", "", [""]]
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
@@ -111,6 +112,6 @@ private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call CBA_fnc_waitAndExecute;
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material], 0.6] call CBA_fnc_waitAndExecute;
 
 true

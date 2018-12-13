@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Ruthberg
- * Changes the adjustment for the current scope
+ * Checks if the unit can change the zero adjustment of the current scope
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -13,12 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
 if (cameraView == "GUNNER") exitWith {false};
 if (vehicle _unit != _unit) exitWith {false};
+if (GVAR(simplifiedZeroing)) exitWith {false};
 if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {false};
 
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);

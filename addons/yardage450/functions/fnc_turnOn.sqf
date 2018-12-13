@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows the Yardage 450 screen elements
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * call ace_yardage450_fnc_acquireTarget
+ * call ace_yardage450_fnc_turnOn
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "ACE_RscYardage450")
 #define __ctrlTarget (__dsp displayCtrl 720041)

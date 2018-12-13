@@ -1,9 +1,8 @@
-
 PREP(attach);
 PREP(canAttach);
 PREP(canDetach);
 PREP(detach);
-PREP(getChildrenAttachActions);
+PREP(getChildrenActions);
 PREP(handleGetIn);
 PREP(handleGetOut);
 PREP(handleKilled);

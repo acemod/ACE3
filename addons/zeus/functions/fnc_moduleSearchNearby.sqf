@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Commands the group the module is placed on to search the nearest building
@@ -16,11 +17,9 @@
  * Public: No
  */
 
-#include "script_component.hpp"
+params ["_logic"];
 
-params ["_logic","_units","_activated"];
-
-if !(_activated && local _logic) exitWith {};
+if !(local _logic) exitWith {};
 
 //Validate the module target:
 private _unit = effectiveCommander (attachedTo _logic);

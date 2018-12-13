@@ -25,12 +25,12 @@ namespace ace {
     template<typename T>
     class vector3 {
     public:
-        vector3() :
+        constexpr vector3() :
             _x(0),
             _y(0),
             _z(0) {
         }
-        vector3(const T x_, const T y_, const T z_) :
+        constexpr vector3(const T x_, const T y_, const T z_) noexcept :
             _x(x_),
             _y(y_),
             _z(z_) {
@@ -47,7 +47,7 @@ namespace ace {
             _z = buffer[2];
         }
 
-        vector3<T> & operator= (const vector3<T>& other) { _x = other.x(); _y = other.y(); _z = other.z(); return *this; }
+        constexpr vector3& operator= (const vector3& other) noexcept { _x = other.x(); _y = other.y(); _z = other.z(); return *this; }
 /*#ifdef _WIN32 && _DIRECTX
             vector3<T> & operator= (const XMFLOAT3& Float3) { _x = Float3.x; _y = Float3.y; _z = Float3.z; return *this; }
 #endif
@@ -56,33 +56,38 @@ namespace ace {
         vector3<T> & operator= (const btVector3& bt_vec) { _x = bt_vec.x(); _y = bt_vec.y(); _z = bt_vec.z(); return *this; }
 #endif
 */
-        vector3 operator * (const T &val) const { return vector3(_x * val, _y * val, _z * val); }
-        vector3 operator / (const T &val) const { T invVal = T(1) / val; return vector3(_x * invVal, _y * invVal, _z * invVal); }
-        vector3 operator + (const vector3<T> &v) const { return vector3(_x + v.x(), _y + v.y(), _z + v.z()); }
-        vector3 operator / (const vector3 &v) const { return vector3(_x / v.x(), _y / v.y(), _z / v.z()); }
-        vector3 operator * (const vector3 &v) const { return vector3(_x * v.x(), _y * v.y(), _z * v.z()); }
-        vector3 operator - (const vector3 &v) const { return vector3(_x - v.x(), _y - v.y(), _z - v.z()); }
-        vector3 operator - () const { return vector3(-_x, -_y, -_z); }
+        constexpr vector3 operator * (const T& val) const { return vector3(_x * val, _y * val, _z * val); }
+        constexpr vector3 operator / (const T& val) const { T invVal = T(1) / val; return vector3(_x * invVal, _y * invVal, _z * invVal); }
+        constexpr vector3 operator + (const vector3& v) const { return vector3(_x + v.x(), _y + v.y(), _z + v.z()); }
+        constexpr vector3 operator / (const vector3& v) const { return vector3(_x / v.x(), _y / v.y(), _z / v.z()); }
+        constexpr vector3 operator * (const vector3& v) const { return vector3(_x * v.x(), _y * v.y(), _z * v.z()); }
+        constexpr vector3 operator - (const vector3& v) const { return vector3(_x - v.x(), _y - v.y(), _z - v.z()); }
+        constexpr vector3 operator - () const { return vector3(-_x, -_y, -_z); }
 
-        bool operator == (const vector3 &r) const { return (_x == r.x() && _y == r.y() && _z == r.z()); }
-        bool operator >  (const vector3 &r) const { throw 1; }
-        bool operator <  (const vector3 &r) const { throw 1; }
-        bool operator <= (const vector3 &r) const { throw 1; }
-        bool operator >= (const vector3 &r) const { throw 1; }
+        constexpr vector3& operator *=(const vector3& v) noexcept { _x *= v._x; _y *= v._y; _z *= v._z; return *this; }
+        constexpr vector3& operator *=(T mag) noexcept { _x *= mag; _y *= mag; _z *= mag; return *this; }
+        constexpr vector3& operator /=(const vector3& v) noexcept { _x /= v._x; _y /= v._y; _z /= v._z; return *this; }
+        constexpr vector3& operator /=(T mag) noexcept { _x /= mag; _y /= mag; _y /= mag; return *this; }
+        constexpr vector3& operator +=(const vector3& v) noexcept { _x += v._x; _y += v._y; _z += v._z; return *this; }
+        constexpr vector3& operator -=(const vector3& v) noexcept { _x -= v._x; _y -= v._y; _z -= v._z; return *this; }
 
-        T magnitude() const { return sqrt(_x * _x + _y * _y + _z * _z); }
-        T dot(const vector3 &v) const { return (_x * v.x() + _y * v.y() + _z * v.z()); }
-        T distance(const vector3 &v) const { vector3 dist = (*this - v); dist = dist * dist; return sqrt(dist.x() + dist.y() + dist.z()); }
-        vector3 cross(const vector3 &v) const { return vector3(_y * v.z() - _z * v.y(), _z * v.x() - _x * v.z(), _x * v.y() - _y * v.x()); }
-        vector3 normalize(void) const { return (*this / abs(magnitude())); };
-        bool zero_distance() { return ((_x == 0.0f && _y == 0.0f && _z == 0.0f) ? true : false ); }
+
+        bool operator == (const vector3 &r) const noexcept { return (_x == r.x() && _y == r.y() && _z == r.z()); }
+
+        constexpr T magnitude() const noexcept { return sqrt(_x * _x + _y * _y + _z * _z); }
+        constexpr T magnitude_squared() const noexcept { return _x * _x + _y * _y + _z * _z; }
+        constexpr T dot(const vector3& v) const noexcept { return (_x * v.x() + _y * v.y() + _z * v.z()); }
+        constexpr T distance(const vector3& v) const noexcept { vector3 dist = (*this - v); dist = dist * dist; return sqrt(dist.x() + dist.y() + dist.z()); }
+        constexpr vector3 cross(const vector3& v) const noexcept { return vector3(_y * v.z() - _z * v.y(), _z * v.x() - _x * v.z(), _x * v.y() - _y * v.x()); }
+        constexpr vector3 normalize() const noexcept { return (*this / abs(magnitude())); };
+        constexpr bool zero_distance() const noexcept { return ((_x == 0.0f && _y == 0.0f && _z == 0.0f) ? true : false ); }
 
         static float clamp(T x, T a, T b) { return x < a ? a : (x > b ? b : x); }
 
-        static vector3 lerp(const vector3& A, const vector3& B, const T t) { return A*t + B*(1.f - t); }
-        vector3 lerp(const vector3& B, const T t) { return vector3::lerp(*this, B, t);  } 
+        static vector3 lerp(const vector3& A, const vector3& B, const T t) noexcept { return A*t + B*(1.f - t); }
+        constexpr vector3 lerp(const vector3& B, const T t) const noexcept { return vector3::lerp(*this, B, t);  } 
 
-        static vector3 slerp(vector3 start, vector3 end, T percent) {
+        static vector3 slerp(vector3 start, vector3 end, T percent) noexcept {
             T dot = start.dot(end);
             dot = vector3::clamp(dot, -1.0f, 1.0f);
 
@@ -91,13 +96,13 @@ namespace ace {
             relative.normalize();
             return ((start * cos(theta)) + (relative*sin(theta)));
         }
-        vector3 slerp(const vector3& B, const T p) {
+        constexpr vector3 slerp(const vector3& B, const T p) const noexcept {
             return vector3::slerp(*this, B, p);
         }
 
-        const T & x() const { return _x; }
-        const T & y() const { return _y; }
-        const T & z() const { return _z; }
+        const T& x() const noexcept { return _x; }
+        const T& y() const noexcept { return _y; }
+        const T& z() const noexcept { return _z; }
 
         void x(const T val) { _x = val; }
         void y(const T val) { _y = val; }

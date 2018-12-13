@@ -6,36 +6,6 @@ class CfgMagazines {
     // 2. Remove tracers at bottom of magazine.
     // 3. Do string updates.
 
-    // 5.56mm ////////////////////////////////////
-
-    class 30Rnd_556x45_Stanag : CA_Magazine {
-        displayname = "5.56mm 30Rnd Mag";
-        displaynameshort = "5.56mm";
-
-        tracersEvery = 0;
-        lastRoundsTracer = 0;
-    };
-
-    class 30Rnd_556x45_Stanag_Tracer_Red: 30Rnd_556x45_Stanag {
-        displayname = "5.56mm 30Rnd Tracer Mag";
-        displaynameshort = "5.56mm";
-    };
-
-    class 30Rnd_556x45_Stanag_Tracer_Green: 30Rnd_556x45_Stanag {
-        displayname = "5.56mm 30Rnd Tracer Mag";
-        displaynameshort = "5.56mm";
-    };
-
-    class 30Rnd_556x45_Stanag_Tracer_Yellow: 30Rnd_556x45_Stanag {
-        displayname = "5.56mm 30Rnd Tracer Mag";
-        displaynameshort = "5.56mm";
-    };
-
-    class 20Rnd_556x45_UW_mag: 30Rnd_556x45_Stanag {
-        displayname = "5.56mm 20Rnd MEA Mag";
-        displaynameshort = "5.56mm MEA";
-    };
-
     // 6.5mm //////////////////////////////////////////
 
     class 30Rnd_65x39_caseless_mag : CA_Magazine { // MX!!
