@@ -20,7 +20,7 @@ params [
 ];
 
 if (isNull _object) exitWith {};
-if !((isNil QGVAR(automaticFileSetup)) && (isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath"))) exitWith {DEFAULT_TEXTURE};
+if !((isNil QGVAR(automaticFileSetup)) && (isText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath"))) exitWith {DEFAULT_TEXTURE};
 
 private _surfaceType = surfaceType (position _object);
 
@@ -30,7 +30,7 @@ private _getTexturePath = {
     // remove leading #
     private _parsedSurfaceType = _surfaceType select [1, count _surfaceType];
     // check for overridden surface paths
-    private _overrideCfg = configFile >> "CfgWorlds" >> worldName >> "Surfaces" >> _parsedSurfaceType >> "texturePath";
+    private _overrideCfg = configFile >> "CfgWorldTexture" >> worldName >> "Surfaces" >> _parsedSurfaceType >> "texturePath";
     if (isText (_overrideCfg)) exitWith {
         getText(_overrideCfg)
     };
@@ -50,12 +50,12 @@ private _result = if !(isNil QGVAR(automaticFileSetup)) then {
 
    [_surfaceType, _basePath, _filePrefix] call _getTexturePath;
 } else {
-   private _basePath = getText (configFile >> "CfgWorlds" >> "Altis" >> "surfaceTextureBasePath");
+   private _basePath = getText (configFile >> "CfgWorldTexture" >> "Altis" >> "surfaceTextureBasePath");
    if ((_surfaceType find "#Gdt" == -1) || {worldName == "Tanoa"}) then {
-       _basePath = getText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")
+       _basePath = getText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath")
    };
 
-   [_surfaceType, _basePath, getText(configFile >> "CfgWorlds" >> worldName >> "filePrefix")] call _getTexturePath;
+   [_surfaceType, _basePath, getText(configFile >> "CfgWorldTexture" >> worldName >> "filePrefix")] call _getTexturePath;
 };
 
 _result

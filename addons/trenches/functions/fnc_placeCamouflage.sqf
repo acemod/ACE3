@@ -21,12 +21,12 @@ params [
     ["_unit", objnull, [objnull]]
 ];
 
-if (isNull _trench || {count getArray (configFile >> "CfgWorlds" >> worldName >> "camouflageObjects") == 0}) exitWith {};
+if (isNull _trench || {count getArray (configFile >> "CfgWorldTexture" >> worldName >> "camouflageObjects") == 0}) exitWith {};
 
 private _fnc_onFinish = {
     (_this select 0) params ["_unit", "_trench"];
 
-    private _camouflageObjects = getArray (configFile >> "CfgWorlds" >> worldName >> "camouflageObjects");
+    private _camouflageObjects = getArray (configFile >> "CfgWorldTexture" >> worldName >> "camouflageObjects");
     private _statusNumber = _trench getVariable [QGVAR(trenchCamouflageStatus), 0];
     private _statusString = "";
     _statusNumber = _statusNumber +1;

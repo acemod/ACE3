@@ -1,4 +1,4 @@
-class CfgWorlds {
+class CfgWorldTexture {
     //Altis
     class Altis {
       surfaceTextureBasePath = "a3\map_data";
