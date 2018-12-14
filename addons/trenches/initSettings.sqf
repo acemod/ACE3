@@ -113,6 +113,7 @@ true
    localize LSTRING(settingCategory),
    [5, 450, 30, 0]
 ] call CBA_Settings_fnc_init;
+
 [
    QGVAR(bigEnvelopeDigTime),
    "SLIDER",

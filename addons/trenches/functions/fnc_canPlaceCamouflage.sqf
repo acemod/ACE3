@@ -31,5 +31,5 @@ if !(GVAR(allowCamouflage)) exitWith {false};
 if (GVAR(camouflageRequireEntrenchmentTool) && {!("ACE_EntrenchingTool" in items _unit)}) exitWith {false};
 
 (isClass (configFile >> "CfgVehicles" >> (typeof _trench) >> _statusString)) &&
-{count (getArray (configFile >> "CfgWorlds" >> worldName >> "camouflageObjects")) > 0} &&
+{count (getArray (configFile >> "CfgWorldTexture" >> worldName >> "camouflageObjects")) > 0} &&
 {count (configProperties [configFile >> "CfgVehicles" >> (typeof _trench) >> _statusString]) > 0}

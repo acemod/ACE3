@@ -16,8 +16,8 @@
  */
 
 // Check if there is a config entry for the map
-if ((isText (configFile >> "CfgWorlds" >> worldName >> "surfaceTextureBasePath")) || ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]]))) exitWith {};
-private _config = configfile >> "CfgWorlds" >> worldName >> "OutsideTerrain" >> "Layers" >> "Layer0" >> "texture";
+if ((isText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath")) || ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]]))) exitWith {};
+private _config = configfile >> "CfgWorldTexture" >> worldName >> "OutsideTerrain" >> "Layers" >> "Layer0" >> "texture";
 if !(isText (_config)) exitWith {
    LOG("GRAD Trenches: Found no OutsideTerrain texture for Map %1, automatic file path not possible!");
 };
@@ -28,7 +28,7 @@ if (_path find"A3\Map_Data\" >= -1) exitWith {
    LOG("GRAD Trenches: Found OutsideTerrain texture not matching path for Map %1, automatic file path not possible!");
 };
 
-// Splitt the path and remove the texture
+// Split the path and remove the texture
 private _split = _path splitString "\";
 private _count = ((count _split) -1);
 private _texture = _split select _count;
