@@ -39,7 +39,7 @@
    [localize LSTRING(stopBuildingAtFatigueMax_displayName),
    localize LSTRING(stopBuildingAtFatigueMax_tooltip)],
    localize LSTRING(settingCategory),
-   true
+   false
 ] call CBA_Settings_fnc_init;
 
 [
