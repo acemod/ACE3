@@ -15,9 +15,7 @@
  * Public: No
  */
 
-
 params [["_marker",""]];
-
 
 // user has never created a marker
 if (isNil QGVAR(directPlayID)) exitWith {false};
