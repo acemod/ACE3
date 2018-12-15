@@ -15,6 +15,8 @@
  * Public: No
  */
 
+params [["_marker",""]];
+
 switch (GVAR(moveRestriction)) do {
     case MOVE_RESTRICTION_NOBODY: {false};
     case MOVE_RESTRICTION_ALL: {true};
@@ -24,6 +26,9 @@ switch (GVAR(moveRestriction)) do {
     };
     case MOVE_RESTRICTION_GROUP_LEADERS_ADMINS: {
         (leader ACE_player == ACE_player) || IS_ADMIN
+    };
+    case MOVE_RESTRICTION_OWNER: {
+        [_marker] call FUNC(isMarkerOwner);
     };
     default {true};
 }; // return

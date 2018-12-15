@@ -21,10 +21,27 @@ params ["_display", "_closeNum"];
 TRACE_2("params",_display,_closeNum);
 
 if (_closeNum isEqualTo 1) then {
+
     if !(GVAR(editingMarker) isEqualTo "") then {
+
         //delete "old" marker
         deleteMarker GVAR(editingMarker);
+
+    } else {
+
+        [{
+            // provide hook for external scripts
+            private _newestMarker = allMapMarkers select (count allMapMarkers - 1);
+            [QGVAR(markerPlaced),[_newestMarker]] call CBA_fnc_localEvent;
+
+            // on first user created marker: save directPlayID for fnc_canMove
+            if (isNil QGVAR(directPlayID)) then {
+                private _markerData = (_newestMarker splitString " ") param [1,""];
+                GVAR(directPlayID) = (_markerData splitString "/") param [0,""];
+            };
+        }, []] call CBA_fnc_execNextFrame;
     };
+    
     // set and send marker data the next frame. the actual marker isn't created yet
     [{
         [QGVAR(setMarkerNetwork), [
