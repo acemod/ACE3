@@ -32,11 +32,12 @@ if (_closeNum isEqualTo 1) then {
             // on first user created marker: save directPlayID for fnc_canMove
             if (isNil QGVAR(directPlayID)) then {
                 private _markerData = (_newestMarker splitString " ") param [1,""];
-                GVAR(directPlayID) = (_markerData splitString "/") param [0,""];
+                private _directPlayID = (_markerData splitString "/") param [0,""];
+                if (_directPlayID != "") then {GVAR(directPlayID) = _directPlayID};
             };
         }, []] call CBA_fnc_execNextFrame;
     };
-    
+
     // set and send marker data the next frame. the actual marker isn't created yet
     [{
         [QGVAR(setMarkerNetwork), [
