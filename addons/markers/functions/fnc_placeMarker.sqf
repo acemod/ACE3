@@ -16,19 +16,14 @@
  * Public: No
  */
 
-disableserialization;
 params ["_display", "_closeNum"];
 TRACE_2("params",_display,_closeNum);
 
 if (_closeNum isEqualTo 1) then {
-
     if !(GVAR(editingMarker) isEqualTo "") then {
-
         //delete "old" marker
         deleteMarker GVAR(editingMarker);
-
     } else {
-
         [{
             // provide hook for external scripts
             private _newestMarker = allMapMarkers select (count allMapMarkers - 1);
@@ -52,7 +47,6 @@ if (_closeNum isEqualTo 1) then {
                 GETGVAR(currentMarkerAngle,0)
             ]
         ]] call CBA_fnc_globalEvent;
-
     }, []] call CBA_fnc_execNextFrame;
 } else {
     if !(GVAR(editingMarker) isEqualTo "") then {
