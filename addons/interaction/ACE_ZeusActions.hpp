@@ -34,7 +34,7 @@ class ACE_ZeusActions {
         class remoteControl {
             displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
             icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
-            condition = QUOTE(ZEUS_ACTION_CONDITION && {-1 < (curatorSelected select 0) findIf {_x isKindOf 'CAManBase'}});
+            condition = QUOTE(ZEUS_ACTION_CONDITION && {-1 < (curatorSelected select 0) findIf {!isNull effectiveCommander _x}});
             statement = QUOTE( \
                 private _units = curatorSelected select 0; \
                 private _unit = _units param [ARR_2( \
@@ -45,7 +45,8 @@ class ACE_ZeusActions {
                     objNull \
                 )]; \
                 bis_fnc_curatorObjectPlaced_mouseOver = [ARR_2('OBJECT',_unit)]; \
-                group _target createUnit [ARR_5('ModuleRemoteControl_F',[ARR_3(0,0,0)],[],0,'NONE')]; \
+                private _rc = group _target createUnit [ARR_5('ModuleRemoteControl_F',[ARR_3(0,0,0)],[],0,'NONE')]; \
+                _rc setVariable [ARR_2('BIS_fnc_initModules_disableAutoActivation',false)]; \
             );
         };
 
