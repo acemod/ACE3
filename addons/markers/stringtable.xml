@@ -98,8 +98,8 @@
             <Polish>Przywódcy grup i Administratorzy</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
-            <English>Marker creator</English>
-            <German>Ersteller der Markierung</German>
+            <English>Creator</English>
+            <German>Ersteller</German>
         </Key>
     </Package>
 </Project>
