@@ -1500,18 +1500,21 @@
             <Russian>Создать Зевса</Russian>
             <Japanese>Zeus を作る</Japanese>
             <Polish>Stwórz Zeus'a</Polish>
+            <Italian>Crea Zeus</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
             <Russian>Удалить Зевса</Russian>
             <Japanese>Zeus を消す</Japanese>
             <Polish>Usuń Zeus'a</Polish>
+            <Italian>Cancella Zeus</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
             <Russian>Меню "%1"</Russian>
             <Japanese>"%1" メニュー</Japanese>
             <Polish>"%1" menu</Polish>
+            <Italian>menu "%1"</Italian>
         </Key>
     </Package>
 </Project>
