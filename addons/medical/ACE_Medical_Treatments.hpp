@@ -64,7 +64,7 @@ class ACE_Medical_Actions {
             allowSelfTreatment = 0;
             category = "advanced";
             requiredMedic = 1;
-            treatmentTime = 20;
+            treatmentTime = 7;
             items[] = {"ACE_bloodIV"};
             // callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             callbackSuccess = QUOTE(DFUNC(treatmentIV));

@@ -56,6 +56,37 @@ Examples:
 - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_removeVirtualItems`
 - `[_box, true, false] call ace_arsenal_fnc_removeVirtualItems`
 
+### 1.3 Arsenal only with items from default loadouts (See section 4)
+
+```cpp
+ * 0: Box <OBJECT>
+ * 1: Items <ARRAY of strings> <BOOL>
+ * 2: Add globally <BOOL> (optional)
+ ```
+
+Built upon the function of section 1.1, this can be used to make an Arsenal only with the items from your precreated loadouts. This is the best choice if you do not want to make a full arsenal available to have your Loadouts spawnable.
+
+```cpp
+ I. Spawn the same amount of units as you have loadouts, give each unit one of them
+ II. Start the mission then press ESC once loaded
+ III. Clear the debug console then enter the following:
+
+
+private _items = allUnits apply {getUnitLoadout _x};
+_items = str _items splitString "[]," joinString ",";
+_items = parseSimpleArray ("[" + _items + "]");
+_items = _items arrayIntersect _items select {_x isEqualType "" && {_x != ""}};
+copyToClipboard str _items;
+
+IV. Paste the created array from your clipboard into the space where the items are listed CTRL+V. The array is created with brackets.
+ ```
+ 
+Examples:
+
+For a new Box: - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_initBox`
+
+For an existing Box: - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
+
 ## 2. Access to ACE Arsenal
 
 ### 2.1 Adding ACE Arsenal to a box
@@ -109,12 +140,14 @@ Example:
 
 ACE Arsenal has 2 new config entries for items:
 
-- `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal.
+- `ace_arsenal_hide`: `0`(shown) or `1` (hidden), used to hide items from ACE Arsenal or `-1` (forced show), for vehicle magazines.
 - `ace_arsenal_uniqueBase`: Class name of the item that ACE Arsenal will replace it with when saving a loadout.
 
 Both of them are optional.
 
 ## 4. Default loadouts
+
+### 4.1 Adding default loadouts via 3DEN
 
 While in 3DEN you have the ability to save default loadouts in ACE Arsenal, doing so will make the saved loadouts available to all players (those loadouts are still subject to loadout verification).
 To do so:
@@ -124,6 +157,19 @@ To do so:
 - Enter a loadout name and save.
 
 This loadout list can be exported to the clipboard by using <kbd>Shift</kbd>. + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
+
+### 4.2 Adding default loadouts via script
+
+Since 3.13.0, you can also add default loadouts with the `ace_arsenal_fnc_addDefaultLoadout` function.
+```cpp
+ * 0: Name of loadout <STRING>
+ * 1: getUnitLoadout array <ARRAY>
+```
+
+Example:
+`["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout`
+
+If a loadout with the same name exists, it will be overwritten.
 
 ## 5. Stats
 
@@ -224,13 +270,48 @@ For config added stats the classname is used, for function added ones the string
 */
 ```
 
+### 5.4 Stat tab numbers
+
+Left tabs:
+
+| Index  | Name |
+| ---- | ---- |
+| 0 | Primary |
+| 1 | Handgun |
+| 2 | Launcher |
+| 3 | Uniform |
+| 4 | Vests |
+| 5 | Backpacks |
+| 6 | Headgear |
+| 7 | Goggles |
+| 8 | NVGs |
+| 9 | Binoculars |
+| 10 | Map |
+| 11 | GPS |
+| 12 | Radio |
+| 13 | Compass |
+| 14 | Watch |
+
+Right tabs:
+
+| Index  | Name |
+| ---- | ---- |
+| 0 | Optics |
+| 1 | Side accs |
+| 2 | Muzzle |
+| 3 | Bipod |
+| 4 | Mag |
+| 5 | Throw |
+| 6 | Put |
+| 7 | Misc |
+
 #### 6.0 Eventhandlers
 
 All are local.
 
-| Name  | Arguments |
-| ------------- | ------------- |
-| ace_arsenal_displayOpened  | Arsenal display (DISPLAY) |
+| Name  | Arguments | Added in |
+| ------------- | ------------- | ------------- |
+| ace_arsenal_displayOpened | Arsenal display (DISPLAY) |
 | ace_arsenal_displayClosed | None |
 | ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
 | ace_arsenal_rightPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
@@ -241,3 +322,7 @@ All are local.
 | ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (BOOL), shiftState (BOOL) |
 | ace_arsenal_loadoutImported | Arsenal display (DISPLAY), (import list (BOOL) |
 | ace_arsenal_loadoutExported | Arsenal display (DISPLAY), export list (BOOL) |
+| ace_arsenal_loadoutsDisplayOpened | loadouts screen display (DISPLAY) | 3.12.3 |
+| ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
+| ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Check if a unit can pick up ammo.
@@ -14,14 +15,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_unit"];
 
 (alive _unit)
-&& {_unit isKindOf "CAManBase"}
-&& {local _unit}
 && {alive _truck}
 && {(_truck distance _unit) < REARM_ACTION_DISTANCE}
 && {isNull (_unit getVariable [QGVAR(dummy), objNull])}
 && {[_unit, _truck, ["IsNotInside"]] call EFUNC(common,canInteractWith)} // manually added actions need this
+&& {(_truck getVariable [QGVAR(currentSupply), 0]) >= 0}

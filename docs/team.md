@@ -1,149 +1,64 @@
 ---
-title: The Team
+title: ACE3 Maintainers
 layout: page
 group: mainNav
 order: 3
 ---
 
-## ACE3 Project Lead
+This page lists all current maintainers for the ACE3 projects with their areas of expertise and roles.
 
-Name | Responsibilities
---- | ---
-[bux](https://github.com/bux){:target="_blank"} | Scripting, Testing
-[Felix Wiegand](https://github.com/koffeinflummi){:target="_blank"} | Scripting, Model Import
-[Glowbal](https://github.com/glowbal){:target="_blank"} | Scripting, UI
-[NouberNou](https://github.com/Noubernou){:target="_blank"} | Coding, Modeling, Performance, SME
-[ViperMaul](https://github.com/vipermaul){:target="_blank"} | Project Manager
+## Project maintainers
 
-## ACE3 Core Team
+This lists all the maintainers responsible for project management and the overall direction of the ACE3 project.
 
-Name | Responsibilities
---- | ---
-[BaerMitUmlaut](https://github.com/BaerMitUmlaut){:target="_blank"} | Scripting, Config
-[commy2](https://github.com/commy2){:target="_blank"} | Scripting, Config
-[esteldunedain](https://github.com/esteldunedain){:target="_blank"} | Scripting, Config
-[Garth "L-H" de Wet](https://github.com/CorruptedHeart){:target="_blank"} | Scripting, Config
-[Giallustio](https://github.com/Giallustio){:target="_blank"} | Scripting, Config, Model Import, Testing
-gundy| Scripting
-Janus | Small Models & Graphics
-[jaynus](https://github.com/jaynus){:target="_blank"} | Coding, Performance, SME
-[jokoho48](https://github.com/jokoho48){:target="_blank"} | Scripting, Model Editing / Import
-[Jonpas](https://github.com/Jonpas){:target="_blank"} | Scripting, Tools, Documentation
-[Kieran](https://github.com/kieran-s){:target="_blank"} | Scripting, Medical Consult (paramedic student)
-[PabstMirror](https://github.com/PabstMirror){:target="_blank"} | Scripting, Config
-[Ruthberg](https://github.com/ulteq){:target="_blank"} | Scripting, Config
-[SilentSpike](https://github.com/SilentSpike){:target="_blank"} | Scripting, Config
-tpM | ACSE Dev Lead - Sounds, SME
-[VKing](https://github.com/VKing6){:target="_blank"} | Configs, Scripting, Testing, Model Editing, Regular Expressions
+- [bux](https://github.com/bux){:target="_blank"}
+  - Scripting, Testing
+- [Jonpas](https://github.com/Jonpas){:target="_blank"}
+  - Scripting, Tools, Documentation
+- [Felix Wiegand](https://github.com/koffeinflummi){:target="_blank"}
+  - Scripting, Model Import
+- [NouberNou](https://github.com/Noubernou){:target="_blank"}
+  - Coding, Modeling, Performance, SME
+- [PabstMirror](https://github.com/PabstMirror){:target="_blank"}
+  - Scripting, Config
+- [ViperMaul](https://github.com/vipermaul){:target="_blank"}
+  - Project management
+- [Glowbal](https://github.com/thojkooi){:target="_blank"}
+  - Build automation, project management, architecture
 
+## Core maintainers
+
+- [BaerMitUmlaut](https://github.com/BaerMitUmlaut){:target="_blank"}
+  - Scripting, Config
+- [commy2](https://github.com/commy2){:target="_blank"}
+  - Scripting, Config
+- [esteldunedain](https://github.com/esteldunedain){:target="_blank"}
+  - Scripting, Config
+- [jaynus](https://github.com/jaynus){:target="_blank"}
+  - Coding, Performance, SME
+- [jokoho48](https://github.com/jokoho48){:target="_blank"}
+  - Scripting, Model Editing / Import
+- [SilentSpike](https://github.com/SilentSpike){:target="_blank"}
+  - Scripting, Config
+- [Ruthberg](https://github.com/ulteq){:target="_blank"}
+  - Scripting, Config
+- [VKing](https://github.com/VKing6){:target="_blank"}
+  - Configs, Scripting, Testing, Model Editing
+
+## Maintainers
+
+- [Alganthe](https://github.com/alganthe){:target="_blank"}
+- [TheMagnetar](https://github.com/TheMagnetar){:target="_blank"}
+  - Scripting
+- [Garth "L-H" de Wet](https://github.com/CorruptedHeart){:target="_blank"}
+  - Scripting, Config
+- gundy
+- Janus
+- tpM
+- [Kieran](https://github.com/kieran-s){:target="_blank"}
+- [Giallustio](https://github.com/Giallustio){:target="_blank"}
+- [654wak654](https://github.com/654wak654){:target="_blank"}
 
 ## Contributors
 
-* [BIG]Bull
-* 11RDP-LoupVert
-* 654wak654
-* ACCtomeek
-* adam3adam
-* Adanteh
-* aeroson
-* Aggr094
-* alef
-* Aleksey EpMAK Yermakov
-* Alganthe
-* Andrea "AtixNeon" Verano
-* Anthariel
-* Anton
-* Arkhir
-* Asgar Serran
-* BaerMitUmlaut
-* Bamse
-* Bla1337
-* BlackPixxel
-* BlackQwar
-* Brakoviejo
-* Brisse
-* Brostrom.A (Evul)
-* BullHorn
-* chris579
-* classicarma
-* Clon1998
-* Codingboy
-* Coren
-* Crusty
-* Dharma Bellamkonda
-* Dimaslg
-* dixon13
-* Drill
-* Dudakov aka [OMCB]Kaban
-* Dslyecxi
-* ElTyranos
-* eRazeri
-* evromalarkey
-* F3 Project
-* Falke75
-* Ferenczi
-* Ferenzi
-* FFAAMOD
-* Filip Basara
-* fr89k
-* FreeZbe
-* geraldbolso1899
-* Ghost
-* Gianmarco Varriale (TeamNuke)
-* GieNkoV
-* GitHawk
-* gpgpgpgp
-* Grey-Soldierman
-* Grzegorz
-* Hamburger SV
-* Harakhti
-* havena
-* Hawkins
-* Head
-* Hybrid V
-* Karneck
-* Kavinsky
-* Keithen
-* Kllrt
-* legman
-* Legolasindar "Viper"
-* licht-im-Norden87
-* looter
-* Luigi "Luigium" Myrini
-* Macusercom
-* MarcBook
-* meat
-* Michail Nikolaev
-* MikeMatrix
-* nic547
-* nikolauska
-* nomisum
-* OnkelDisMaster
-* oscarmolinadev
-* PaxJaromeMalues
-* Phyma
-* pokertour
-* Professor
-* rakowozz
-* ramius86
-* Raspu86
-* Riccardo Petricca
-* Robert Boklahánics
-* ruPaladin
-* simon84
-* Skengman2
-* Sniperwolf572
-* System98
-* SzwedzikPL
-* Tachi
-* Tessa Elieff
-* Toaster
-* Tonic
-* Tourorist
-* Tuupertunut
-* Valentin Torikian
-* voiper
-* VyMajoris(W-Cephei)
-* Winter
-* xrufix
-* zGuba
+An up-to-date list of our contributors can be found on Github at [acemod/ACE3/contributors](https://github.com/acemod/ACE3/graphs/contributors).

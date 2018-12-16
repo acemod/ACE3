@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Starts the repair process.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);

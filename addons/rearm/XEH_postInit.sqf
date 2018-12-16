@@ -9,6 +9,11 @@ GVAR(configTypesAdded) = [];
 }] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
+[QGVAR(initSupplyVehicle), { 
+    TRACE_1("initSupplyVehicle EH",_this);   // Warning: this can run before settings are init
+    [FUNC(initSupplyVehicle), _this] call EFUNC(common,runAfterSettingsInit);
+}] call CBA_fnc_addEventHandler;
+
 ["vehicle", {
     params ["_unit"];
     [_unit] call FUNC(dropAmmo);

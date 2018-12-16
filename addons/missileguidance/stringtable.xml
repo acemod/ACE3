@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Title">
@@ -72,7 +72,7 @@
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
-            <Italian>Hydra-70 DAGR missile guida laser</Italian>
+            <Italian>Hydra-70 DAGR Missile a Guida Laser</Italian>
             <Portuguese>Míssil guiado a laser Hydra-70 DAGR </Portuguese>
             <Hungarian>Hydra-70 DAGR lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hydra-70 DAGR</Russian>
@@ -120,7 +120,7 @@
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>
             <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
-            <Italian>Missile guida laser Hellfire II AGM-114K</Italian>
+            <Italian>Missile a Guida Laser Hellfire II AGM-114K</Italian>
             <Portuguese>Míssil guiado a laser Hellfire II AGM-114K</Portuguese>
             <Hungarian>Hellfire II AGM-114K lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>

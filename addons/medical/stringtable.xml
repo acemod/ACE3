@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -5613,6 +5613,7 @@
             <Chinese>打開蓋子</Chinese>
             <Chinesesimp>打开盖子</Chinesesimp>
             <Korean>뚜껑 열기</Korean>
+            <Polish>Otwórz pokrywę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -5622,6 +5623,7 @@
             <Chinese>關閉蓋子</Chinese>
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Korean>뚜껑 닫기</Korean>
+            <Polish>Zamknij pokrywę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
             <English>Unconscious animation during treatment</English>
@@ -5629,6 +5631,7 @@
             <Chinesesimp>治疗时死亡动画</Chinesesimp>
             <Chinese>醫療時加入的昏迷動作</Chinese>
             <Italian>Animazione da svenuto durante la cura</Italian>
+            <Polish>Nieprzytomne animacje podczas leczenia</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow animation of unconscious patients during treatment.</English>
@@ -5636,6 +5639,7 @@
             <Chinesesimp>在无意识患者治疗时死亡,会播放死亡动画?</Chinesesimp>
             <Chinese>允許醫療時加入昏迷的動作</Chinese>
             <Italian>Permette l'animazione da svenuto dei pazioenti durante loro la cura.</Italian>
+            <Polish>Zezwalaj na animacje nieprzytomnych pacjentów podczas leczenia.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
             <English>Move unconscious units from group</English>
@@ -5643,6 +5647,7 @@
             <Chinesesimp>从小队中移除无意识伤者</Chinesesimp>
             <Chinese>從小隊中移動昏迷的單位</Chinese>
             <Italian>Toglie le unità svenute dal grouppo</Italian>
+            <Polish>Przenieś nieprzytomne jednostki z grupy</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_Description">
             <English>When a group member goes unconscious, removes them from their group.</English>
@@ -5650,6 +5655,7 @@
             <Chinesesimp>当一个队员失去意识时,他将被移除出小队</Chinesesimp>
             <Chinese>當隊員昏迷時，將被他的小組中刪除</Chinese>
             <Italian>Quando un membro del gruppo sviene, viene tolto dal gruppo.</Italian>
+            <Polish>Kiedy członek grupy straci przytomność, usuwa ich z ich grupy.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
@@ -5657,6 +5663,7 @@
             <Chinesesimp>过量</Chinesesimp>
             <Chinese>過量</Chinese>
             <Italian>Overdose</Italian>
+            <Polish>Przedawkowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_Description">
             <English>Makes patient vulnerable to Morphine/Epinephrine/Atropine overdosing.</English>
@@ -5664,6 +5671,7 @@
             <Chinesesimp>当队员处于吗啡/肾上腺素/阿托品过量时再次受伤,他的伤害会更重</Chinesesimp>
             <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
             <Italian>Rende il paziente suscettibile di overdose da morfina, epinefrina o atropina.</Italian>
+            <Polish>Sprawia, że pacjent jest podatny na przedawkowanie morfiny/epinefryny.</Polish>
         </Key>
     </Package>
 </Project>

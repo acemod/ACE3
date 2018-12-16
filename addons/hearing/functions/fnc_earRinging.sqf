@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2, Rocko, Rommel, Ruthberg
  * Handle new sound souce near ace_player and apply hearing damage
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_strength"];
 
 if (_strength < 0.05) exitWith {};

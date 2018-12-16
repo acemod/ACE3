@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Server func to create the fragmentation for a round.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 #define FRAG_VEC_VAR 0.004
 #define MAX_FRAG_COUNT 50

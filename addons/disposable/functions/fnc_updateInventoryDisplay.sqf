@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux, commy2
  * Hide or show the secondary weapon magazine inventory slot to prevent unloading of dummy magazines.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 params ["_player", ["_display",(findDisplay 602),[displayNull]]];

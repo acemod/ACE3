@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou
  * Turn a laser designator off.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_uuid"];
 

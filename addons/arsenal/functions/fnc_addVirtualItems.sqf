@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe, Dedmen
  * Add virtual items to the provided target.
@@ -16,8 +18,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params [["_object", objNull, [objNull]], ["_items", [], [true, []]], ["_global", false, [false]]];
 
@@ -81,37 +81,37 @@ if (_items isEqualType true) then {
                         /* Weapon acc */
                         case (
                                 isClass (_configItemInfo) &&
-                                {(getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302]} &&
+                                {(getNumber (_configItemInfo >> "type")) in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} &&
                                 {!(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}
                             ): {
                             switch (getNumber (_configItemInfo >> "type")) do {
-                                case 201: {
+                                case TYPE_OPTICS: {
                                     (_cargo select 1) select 0 pushBackUnique _x;
                                 };
-                                case 301: {
+                                case TYPE_FLASHLIGHT: {
                                     (_cargo select 1) select 1 pushBackUnique _x;
                                 };
-                                case 101: {
+                                case TYPE_MUZZLE: {
                                     (_cargo select 1) select 2 pushBackUnique _x;
                                 };
-                                case 302: {
+                                case TYPE_BIPOD: {
                                     (_cargo select 1) select 3 pushBackUnique _x;
                                 };
                             };
                         };
                         /* Headgear */
                         case (isClass (_configItemInfo) &&
-                            {getNumber (_configItemInfo >> "type") == 605}): {
+                            {getNumber (_configItemInfo >> "type") == TYPE_HEADGEAR}): {
                             (_cargo select 3) pushBackUnique _x;
                         };
                         /* Uniform */
                         case (isClass (_configItemInfo) &&
-                            {getNumber (_configItemInfo >> "type") == 801}): {
+                            {getNumber (_configItemInfo >> "type") == TYPE_UNIFORM}): {
                             (_cargo select 4) pushBackUnique _x;
                         };
                         /* Vest */
                         case (isClass (_configItemInfo) &&
-                            {getNumber (_configItemInfo >> "type") == 701}): {
+                            {getNumber (_configItemInfo >> "type") == TYPE_VEST}): {
                             (_cargo select 5) pushBackUnique _x;
                         };
                         /* NVgs */
@@ -120,7 +120,7 @@ if (_items isEqualType true) then {
                         };
                         /* Binos */
                         case (_simulationType == "Binocular" ||
-                            {(_simulationType == 'Weapon') && {(getNumber (_configCfgWeapons >> _x >> 'type') == 4096)}}): {
+                            {(_simulationType == 'Weapon') && {(getNumber (_configCfgWeapons >> _x >> 'type') == TYPE_BINOCULAR_AND_NVG)}}): {
                             (_cargo select 9) pushBackUnique _x;
                         };
                         /* Map */
@@ -145,20 +145,20 @@ if (_items isEqualType true) then {
                         };
                         /* UAV terminals */
                         case (isClass (_configItemInfo) &&
-                            {getNumber (_configItemInfo >> "type") == 621}): {
+                            {getNumber (_configItemInfo >> "type") == TYPE_UAV_TERMINAL}): {
                             (_cargo select 14) pushBackUnique _x;
                         };
                         /* Weapon, at the bottom to avoid adding binos */
                         case (isClass (_configCfgWeapons >> _x >> "WeaponSlotsInfo") &&
-                            {getNumber (_configCfgWeapons >> _x >> 'type') != 4096}): {
+                            {getNumber (_configCfgWeapons >> _x >> 'type') != TYPE_BINOCULAR_AND_NVG}): {
                             switch (getNumber (_configCfgWeapons >> _x >> "type")) do {
-                                case 1: {
+                                case TYPE_WEAPON_PRIMARY: {
                                     (_cargo select 0) select 0 pushBackUnique  ([_x] call bis_fnc_baseWeapon);
                                 };
-                                case 2: {
+                                case TYPE_WEAPON_HANDGUN: {
                                     (_cargo select 0) select 2 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
-                                case 4: {
+                                case TYPE_WEAPON_SECONDARY: {
                                     (_cargo select 0) select 1 pushBackUnique ([_x] call bis_fnc_baseWeapon);
                                 };
                             };
@@ -166,9 +166,9 @@ if (_items isEqualType true) then {
                         /* Misc items */
                         case (
                                 isClass (_configItemInfo) &&
-                                ((getNumber (_configItemInfo >> "type")) in [101, 201, 301, 302] &&
+                                ((getNumber (_configItemInfo >> "type")) in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] &&
                                 {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) ||
-                                {(getNumber (_configItemInfo >> "type")) in [401, 619, 620]} ||
+                                {(getNumber (_configItemInfo >> "type")) in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
                                 {(getText (_configCfgWeapons >> _x >> "simulation")) == "ItemMineDetector"}
                             ): {
                             (_cargo select 17) pushBackUnique _x;
@@ -193,7 +193,8 @@ if (_items isEqualType true) then {
                     switch true do {
                         // Rifle, handgun, secondary weapons mags
                         case (
-                                (getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [256,512,1536,16]) &&
+                                ((getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) ||
+                                {(getNumber (configFile >> "CfgMagazines" >> _x >> QGVAR(hide))) == -1}) &&
                                 {!(_x in _grenadeList)} &&
                                 {!(_x in _putList)}
                             ): {

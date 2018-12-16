@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou, esteldunedain, mharis001
  * Render a single interaction icon.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 #define DEFAULT_ICON QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa)
 
 params ["_text", "_icon", "_sPos", "_textSettings"];

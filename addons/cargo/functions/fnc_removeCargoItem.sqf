@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Removes a cargo item from the vehicle.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_item", "_vehicle", ["_amount", 1]];
 TRACE_3("params",_item,_vehicle,_amount);

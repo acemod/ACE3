@@ -1,3 +1,5 @@
+#include "\a3\ui_f\hpp\defineResinclDesign.inc"
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Loads the version info HTML box from main menu
@@ -13,8 +15,6 @@
  *
  * Public: No
  */
-#include "\a3\ui_f\hpp\defineResinclDesign.inc"
-#include "script_component.hpp"
 
 params ["_display"];
 private _controlsGroup = _display displayCtrl IDC_MAIN_INFO;

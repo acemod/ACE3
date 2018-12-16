@@ -5,7 +5,7 @@ class CfgAmmo {
         GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\grenades\Grenade_PullPin.wss", 1.5, 1, 10};
         impactGroundSoft[] = {};
     };
-    
+
     class FlareCore;
     class FlareBase: FlareCore {
         intensity = 20000;
@@ -16,6 +16,21 @@ class CfgAmmo {
     class F_40mm_White: FlareBase {
         intensity = 40000;
         flareSize = 12;
+    };
+    class ACE_40mm_Flare_white: F_40mm_White {
+        intensity = 1250000; // vanilla: 10000
+        timeToLive = 45; // vanilla: 25, ace changes to 60 in FlareBase
+        coefGravity = 0.25; // vanilla: undefined (would be 1)
+        // Makes the ammo fall the ground slower (~2 m/s)
+    };
+    class ACE_40mm_Flare_red: ACE_40mm_Flare_white {
+        lightColor[] = {0.5,0.25,0.25,0};
+    };
+    class ACE_40mm_Flare_green: ACE_40mm_Flare_white {
+        lightColor[] = {0.25,0.5,0.25,0};
+    };
+    class ACE_40mm_Flare_ir: ACE_40mm_Flare_white {
+        nvgOnly = 1;
     };
 
     class F_20mm_White: FlareBase {

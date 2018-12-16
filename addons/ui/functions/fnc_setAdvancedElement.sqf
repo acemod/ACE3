@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Sets advanced visible element of the UI using displays and controls.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]] ];
 
