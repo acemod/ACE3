@@ -42,6 +42,7 @@ deleteVehicle GVAR(trench);
 GVAR(trenchPos) set [2, -0.2];
 private _trench = createVehicle [_trenchClass, GVAR(trenchPos), [], 0, "CAN_COLLIDE"];
 _trench setObjectTextureGlobal [0,[_trench] call FUNC(getSurfaceTexturePath)];
+_trench setPosWorld GVAR(trenchPos);
 
 private _boundingBox = boundingBoxReal _trench;
 _boundingBox params ["_lbfc", "_rtbc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)

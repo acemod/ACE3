@@ -37,12 +37,12 @@ _path = _split joinString "\";
 
 
 // Check the path for the right ending
-private _filePrefix = ".paa";
+private _suffix = ".paa";
 if ((_texture find "co.paa" >= -1)|| _texture find "ca.paa" >= -1) then {
    _split = _texture splitString "_";
-   _filePrefix = _split select ((count _split) -1);
+   _suffix = _split select ((count _split) -1);
 };
 
 // Setup the GVAR
-GVAR(automaticFileSetup) = [_path, _filePrefix];
+GVAR(automaticFileSetup) = [_path, _suffix];
 publicVariable QGVAR(automaticFileSetup);
