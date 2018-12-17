@@ -590,12 +590,14 @@
             <German>Munitionsvorrat</German>
             <Japanese>再武装用カーゴ</Japanese>
             <Polish>Ładunek Dozbrajający</Polish>
+            <Italian>Rifornimento Munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenDesc">
             <English>The cargo for rearming (-1 disable)</English>
             <German>Der Munitionsvorrat, zum Aufmunitionieren von Fahrzeugen (-1 deaktiviert)</German>
             <Japanese>カーゴからの再武装 (-1 で無効化)</Japanese>
             <Polish>Ładunek do dozbrajania (-1 wyłączy)</Polish>
+            <Italian>Il rifornimento delle munizioni (-1 per disabilitarlo)</Italian>
         </Key>
     </Package>
 </Project>

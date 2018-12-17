@@ -736,30 +736,35 @@
             <German>Nachtsicht Unterstützung</German>
             <Japanese>暗視装置に対応</Japanese>
             <Polish>Wsparcie noktowizyjne</Polish>
+            <Italian>Supporto visore notturno</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
             <German>Primär unterstützt</German>
             <Japanese>プライマリが対応</Japanese>
             <Polish>Wspierane przez broń główną</Polish>
+            <Italian>Primario supportato</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
             <English>Secondary supported</English>
             <German>Sekundär unterstützt</German>
             <Japanese>セカンダリが対応</Japanese>
             <Polish>Wspierane przez broń drugorzędną</Polish>
+            <Italian>Secondario supportato</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
             <English>Primary integrated</English>
             <German>Primär Integriert</German>
             <Japanese>プライマリに内蔵</Japanese>
             <Polish>Zintegrowane z bronią główną</Polish>
+            <Italian>Primario integrato</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
             <German>Nicht unterstützt</German>
             <Japanese>セカンダリに内蔵</Japanese>
             <Polish>Nie wspierane</Polish>
+            <Italian>Non supportato</Italian>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
@@ -862,6 +867,7 @@
             <French>Durée de vie</French>
             <Japanese>生存時間</Japanese>
             <Polish>Czas by żyć</Polish>
+            <Italian>Scadenza (TTL)</Italian>
         </Key>
     </Package>
 </Project>

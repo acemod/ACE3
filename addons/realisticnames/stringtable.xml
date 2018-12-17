@@ -3441,6 +3441,7 @@
             <Chinesesimp>US Optics MR-10 (Black)</Chinesesimp>
             <Japanese>US Optics MR-10 (黒)</Japanese>
             <Polish>US Optics MR-10 (Czarny)</Polish>
+            <Italian>Ottica US MR-10 (nera)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -3448,6 +3449,7 @@
             <Chinesesimp>US Optics MR-10 (Khaki)</Chinesesimp>
             <Japanese>US Optics MR-10 (土埃)</Japanese>
             <Polish>US Optics MR-10 (Khaki)</Polish>
+            <Italian>Ottica US MR-10 (cachi)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -3455,6 +3457,7 @@
             <Chinesesimp>US Optics MR-10 (Sand)</Chinesesimp>
             <Japanese>US Optics MR-10 (砂地)</Japanese>
             <Polish>US Optics MR-10 (Piasek)</Polish>
+            <Italian>Ottica US MR-10 (sabbia)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -3462,6 +3465,7 @@
             <Chinesesimp>KAHLES Helia (Black)</Chinesesimp>
             <Japanese>KAHLES ヘリア (黒)</Japanese>
             <Polish>KAHLES Helia (Czarny)</Polish>
+            <Italian>KAHLES Helia (nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -3469,6 +3473,7 @@
             <Chinesesimp>KAHLES Helia (Hex)</Chinesesimp>
             <Japanese>KAHLES ヘリア (蜂巣)</Japanese>
             <Polish>KAHLES Helia (Hex)</Polish>
+            <Italian>KAHLES Helia (esagonale)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -3476,6 +3481,7 @@
             <Chinesesimp>KAHLES Helia (Old)</Chinesesimp>
             <Japanese>KAHLES ヘリア (使い古し)</Japanese>
             <Polish>KAHLES Helia (Stary)</Polish>
+            <Italian>KAHLES Helia (vecchio)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -3483,6 +3489,7 @@
             <Chinesesimp>KAHLES Helia (Tan)</Chinesesimp>
             <Japanese>KAHLES Helia (黄褐)</Japanese>
             <Polish>KAHLES Helia (Tan)</Polish>
+            <Italian>KAHLES Helia (marroncino)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
