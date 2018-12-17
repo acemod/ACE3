@@ -19,6 +19,8 @@ params [
     ["_object", objnull, [objNull]]
 ];
 
+diag_log format ["ACE_TRENCHES Object: %1", _object];
+
 if (isNull _object) exitWith {};
 if !((isNil QGVAR(automaticFileSetup)) && (isText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath"))) exitWith {DEFAULT_TEXTURE};
 
@@ -57,5 +59,7 @@ private _result = if !(isNil QGVAR(automaticFileSetup)) then {
 
    [_surfaceType, _basePath, getText(configFile >> "CfgWorldTexture" >> worldName >> "suffix")] call _getTexturePath;
 };
+
+diag_log format ["ACE_TRENCHES Result: %1", _result];
 
 _result

@@ -37,12 +37,14 @@ if (isNull GVAR(trench)) exitWith {};
 
 private _trenchClass = typeOf GVAR(trench);
 private _vecDirAndUp = [vectorDir GVAR(trench), vectorUp GVAR(trench)];
+private _pos = getPosWorld GVAR(trench);
+diag_log format ["ACE_TRENCHES Old Pos: %1", _pos];
 deleteVehicle GVAR(trench);
 
-GVAR(trenchPos) set [2, -0.2];
-private _trench = createVehicle [_trenchClass, GVAR(trenchPos), [], 0, "CAN_COLLIDE"];
+diag_log format ["ACE_TRENCHES New Pos: %1", _pos];
+private _trench = createVehicle [_trenchClass, _pos, [], 0, "CAN_COLLIDE"];
 _trench setObjectTextureGlobal [0,[_trench] call FUNC(getSurfaceTexturePath)];
-_trench setPosWorld GVAR(trenchPos);
+_trench setPosWorld _pos;
 
 private _boundingBox = boundingBoxReal _trench;
 _boundingBox params ["_lbfc", "_rtbc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
@@ -52,6 +54,7 @@ _rtbc params ["", "", "_rtbcZ"];
 private _boundingBoxOffset =  missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(boundingBoxOffset)),0];
 private _posDiff = abs _lbfcZ + abs _rtbcZ - _boundingBoxOffset;
 private _newPos = _trench modelToWorldWorld [0,0, -_posDiff];
+diag_log format ["ACE_TRENCHES Underearth Pos: %1", _pos];
 _trench setPosWorld _newPos;
 
 _trench setVariable [QGVAR(diggingSteps), _posDiff/1000,true];

@@ -1,3 +1,4 @@
+class CfgWorlds {};
 class CfgWorldTexture: CfgWorlds {
     //Altis
     class Altis {

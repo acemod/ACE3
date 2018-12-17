@@ -84,11 +84,11 @@ GVAR(digPFH) = [{
             #endif
         };
     };
-    _basePos set [2, (_basePos select 2) + _minzoffset + _offset];
+//    _basePos set [2, (_basePos select 2) + _minzoffset + _offset];
+    _basePos set [2, (_basePos select 2) + _minzoffset];
     TRACE_2("",_minzoffset,_offset);
     _trench setPosASL _basePos;
     _trench setVectorDirAndUp [_v1, _v3];
-    GVAR(trenchPos) = _basePos;
 
     if (surfaceType position _trench != GVAR(currentSurface)) then {
         GVAR(currentSurface) = surfaceType (position _trench);
