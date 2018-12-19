@@ -27,10 +27,12 @@ _staminaBarContainer ctrlSetPosition _posAndSize;
 // - Opacity ------------------------------------------------------------------
 if (GVAR(solidStaminaBar)) then {
     _staminaBarContainer ctrlSetFade 0;
-} else if (_stamina >= 0.8) then {
-    _staminaBarContainer ctrlSetFade (0.9 + 0.1 * (_stamina - 0.8) / 0.2);
-} else {
-    _staminaBarContainer ctrlSetFade (0.9 * _stamina / 0.8);
+} else { 
+    if (_stamina >= 0.8) then {
+        _staminaBarContainer ctrlSetFade (0.9 + 0.1 * (_stamina - 0.8) / 0.2);
+    } else {
+        _staminaBarContainer ctrlSetFade (0.9 * _stamina / 0.8);
+    };
 };
 
 // - Color --------------------------------------------------------------------
