@@ -23,6 +23,21 @@
 ] call CBA_Settings_fnc_init;
 
 [
+    QGVAR(solidStaminaBar),
+    "CHECKBOX",
+    [LSTRING(SolidStaminaBar), LSTRING(SolidStaminaBar_Description)],
+    LSTRING(DisplayName),
+    false,
+    false, {
+        if (!_this) then {
+            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+            _staminaBarContainer ctrlSetFade 1;
+            _staminaBarContainer ctrlCommit 0;
+        };
+    }
+] call CBA_Settings_fnc_init;
+
+[
     QGVAR(performanceFactor),
     "SLIDER",
     [LSTRING(PerformanceFactor), LSTRING(PerformanceFactor_Description)],
