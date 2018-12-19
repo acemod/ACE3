@@ -44,10 +44,13 @@ if (isNil "_vecDirAndUp") then {
    _vecDirAndUp = [vectorDir _trench, vectorUp _trench];
 };
 
+[_trench, _unit, true, true] call FUNC(handleDiggingServerSide);
+
 // Create progress bar
 private _fnc_onFinish = {
    (_this select 0) params ["_unit", "_trench"];
    _trench setVariable [QGVAR(diggingType), nil, true];
+   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
 
    // Remove trench
    deleteVehicle _trench;
@@ -59,6 +62,7 @@ private _fnc_onFailure = {
    (_this select 0) params ["_unit", "_trench"];
    _trench setVariable [QGVAR(digging), false, true];
    _trench setVariable [QGVAR(diggingType), nil, true];
+   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
 
    // Save progress global
    private _progress = _trench getVariable [QGVAR(progress), 0];

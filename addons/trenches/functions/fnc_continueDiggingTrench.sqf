@@ -43,11 +43,14 @@ if (isNil "_vecDirAndUp") then {
    _vecDirAndUp = [vectorDir _trench, vectorUp _trench];
 };
 
+[_trench, _unit, true, true] call FUNC(handleDiggingServerSide);
+
 // Create progress bar
 private _fnc_onFinish = {
    (_this select 0) params ["_unit", "_trench"];
    _trench setVariable [QGVAR(digging), false, true];
    _trench setVariable [QGVAR(diggingType), nil, true];
+   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
 
    // Save progress global
    _trench setVariable [QGVAR(progress), 1, true];
@@ -63,6 +66,7 @@ private _fnc_onFailure = {
    // Save progress global
    private _progress = _trench getVariable [QGVAR(progress), 0];
    _trench setVariable [QGVAR(progress), _progress, true];
+   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
 
    // Reset animation
    [_unit, "", 1] call EFUNC(common,doAnimation);
@@ -121,7 +125,7 @@ if (_actualProgress == 0) then {
    EGVAR(advanced_fatigue,anFatigue) = EGVAR(advanced_fatigue,anFatigue) + (((_digTime/12) * GVAR(buildFatigueFactor))/1200) min 1;
 
    // Save progress
-   _trench setVariable [QGVAR(progress), _actualProgress + ((1/(_digTime *10)) * _diggerCount), true];
+   _trench setVariable [QGVAR(progress), _actualProgress + ((1/(_digTime *10)) * _diggerCount)];
 
    if (GVAR(stopBuildingAtFatigueMax) && EGVAR(advanced_fatigue,anReserve) <= 0) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
