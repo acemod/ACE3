@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the paradrop cargo scripted waypoint (Scheduled Environment)
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_vehicleGroup", grpNull, [grpNull]], ["_wpPos", [0, 0, 0], [[]], 3]];
 TRACE_2("moduleCargoParadropWaypoint",_vehicleGroup,_wpPos);
@@ -26,7 +26,7 @@ if (!(_vehicle isKindOf "Air")) exitWith {WARNING_1("not in a air vehicle",typeO
 if (_cargo isEqualTo []) exitWith {WARNING_1("no cargo",_cargo); true};
 
 private _nextMoveUpdate = -1;
-private _closeEnoughTicks = 0;
+private _closeEnoughTicks = 0; // should prevent aircraft from endlessly going in circles trying to hit a point
 
 waitUntil {
     sleep 0.1;
