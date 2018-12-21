@@ -49,7 +49,7 @@ private _handle = [{
     if (
       (_trench getVariable [QGVAR(nextDigger), ACE_player]) == ACE_player &&
       count (_trench getVariable [QGVAR(diggingPlayers), []]) < 1 ||
-      !(_trench getVariable [QGVAR(digging), false]))
+      !(_trench getVariable [QGVAR(digging), false])
     ) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
    };
