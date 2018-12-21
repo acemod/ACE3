@@ -19,7 +19,6 @@ class CfgPatches {
             QGVAR(moduleToggleNvg),
             QGVAR(moduleToggleFlashlight),
             QGVAR(moduleSimulation),
-            QGVAR(moduleCargoParadrop),
             QGVAR(moduleSuppressiveFire),
             QGVAR(AddFullArsenal),
             QGVAR(RemoveFullArsenal),
@@ -55,7 +54,8 @@ class CfgPatches {
     };
     class GVAR(cargo): ADDON {
         units[] = {
-            QGVAR(moduleLoadIntoCargo)
+            QGVAR(moduleLoadIntoCargo),
+            QGVAR(moduleCargoParadrop)
         };
     };
     class GVAR(repair): ADDON {
