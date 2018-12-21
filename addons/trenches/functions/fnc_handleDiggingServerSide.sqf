@@ -30,14 +30,25 @@ if (_initiator) then {
             params ["_args", "_handle"];
             _args params ["_trench", "_digTime"];
 
+            private _diggingPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
+            {
+               if (isNull _x) then {
+                  _diggingPlayers deleteAt _forEachIndex;
+               };
+            }forEach _diggingPlayers;
+
+            if !(_diggingPlayers isEqualTo (_trench getVariable [QGVAR(diggingPlayers), []])) then {
+               _trench setVariable [QGVAR(diggingPlayers), _diggingPlayers, true];
+            };
+
             if (
                !(_trench getVariable [QGVAR(digging), false])
-               || ((_trench getVariable [QGVAR(diggerCount), 0]) < 1)
+               || ((count _diggingPlayers) < 1)
             ) exitWith {
                [_handle] call CBA_fnc_removePerFrameHandler;
             };
 
-            _trench setVariable [QGVAR(progress), (_trench getVariable [QGVAR(progress), 0]) + ((1/(_digTime *10)) * _diggerCount)];
+            _trench setVariable [QGVAR(progress), (_trench getVariable [QGVAR(progress), 0]) + ((1/(_digTime *10)) * count _diggingPlayers)];
          },
          0.1,
          [

@@ -18,18 +18,16 @@
 
 params ["_trench", "_unit"];
 
-if (
-      (_trench getVariable [QGVAR(diggerCount), 0]) < 1
-   ) exitWith {
-      [_trench, _unit] call FUNC(continueDiggingTrench);
-   };
+private _digginPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
 
-_trench setVariable [QGVAR(diggerCount), ((_trench getVariable QGVAR(diggerCount))+1), true];
 if (
-      _trench getVariable [QGVAR(diggerCount), 0] == 1
-   ) then {
-      _trench setVariable [QGVAR(nextDigger), ACE_player, true]
-   };
+      (count _digginPlayers) < 1
+) exitWith {
+      [_trench, _unit] call FUNC(continueDiggingTrench);
+};
+
+_trench setVariable [QGVAR(diggingPlayerst), _digginPlayers pushBackUnique ACE_player, true];
+
 private _finishCondition = {false};
 private _digTime = 0;
 switch (_trench getVariable [QGVAR(diggingType), nil]) do {
@@ -50,21 +48,17 @@ private _handle = [{
 
     if (
       (_trench getVariable [QGVAR(nextDigger), ACE_player]) == ACE_player &&
-      ((_trench getVariable [QGVAR(diggerCount), 1]) < 1 ||
+      count (_trench getVariable [QGVAR(diggingPlayers), []]) < 1 ||
       !(_trench getVariable [QGVAR(digging), false]))
     ) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
    };
 
-   if (isNil (_trench getVariable [QGVAR(nextDigger), nil])) then {
-      _trench setVariable [QGVAR(nextDigger), ACE_player, true];
-   };
 },0.1, [_trench, _unit]] call CBA_fnc_addPerFrameHandler;
 
 // Create progress bar
 private _fnc_onFinish = {
-    (_this select 0) params ["_unit", "_trench"];
-    _trench setVariable [QGVAR(diggerCount), 0,true];
+    (_this select 0) params ["_unit"];
 
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
@@ -73,10 +67,7 @@ private _fnc_onFinish = {
 private _fnc_onFailure = {
     (_this select 0) params ["_unit", "_trench"];
 
-    _trench setVariable [QGVAR(diggerCount), (((_trench getVariable [QGVAR(diggerCount), 0]) -1) max 0), true];
-    if ((_trench getVariable [QGVAR(nextDigger), ACE_player]) == ACE_player) then {
-      _trench setVariable [QGVAR(nextDigger), nil,true];
-   };
+    _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers),[]] - [_unit], true];
 
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
@@ -84,7 +75,7 @@ private _fnc_onFailure = {
 private _fnc_condition = {
    (_this select 0) params ["", "_trench", "_handle"];
 
-   if (_trench getVariable [QGVAR(diggerCount), 0] <= 0) exitWith {false};
+   if (count (_trench getVariable [QGVAR(diggingPlayers),[]]) <= 1) exitWith {false};
    if (isNil "_handle") exitWith {false};
    if (GVAR(stopBuildingAtFatigueMax) && (QEGVAR(advanced_fatigue,anReserve) <= 0)) exitWith {false};
    true

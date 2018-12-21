@@ -17,7 +17,7 @@
  */
 
 params ["_trench", "_unit", ["_switchingDigger", false]];
-TRACE_2("removeTrench",_trench,_unit);
+TRACE_2("removeTrench", _trench, _unit);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
 if (_actualProgress <= 0) exitWith {};
@@ -25,14 +25,14 @@ if (_actualProgress <= 0) exitWith {};
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
 _trench setVariable [QGVAR(diggingType), "DOWN", true];
-private _diggerCount = _trench getVariable [QGVAR(diggerCount), 0];
+private _diggerCount = count (_trench getVariable [QGVAR(diggingPlayers), []]);
 
 if (_diggerCount > 0) then {
    if !(_switchingDigger) then {
       [_trench, _unit] call FUNC(addDigger);
    };
 } else {
-   _trench setVariable [QGVAR(diggerCount), 1,true];
+   _trench setVariable [QGVAR(diggingPlayers), [ACE_player],true];
 };
 
 private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(removalDuration)), 20];
@@ -75,7 +75,7 @@ private _fnc_condition = {
    (_this select 0) params ["", "_trench"];
 
    if !(_trench getVariable [QGVAR(digging), false]) exitWith {false};
-   if (_trench getVariable [QGVAR(diggerCount), 0] <= 0) exitWith {false};
+   if (count (_trench getVariable [QGVAR(diggingPlayers), []]) <= 0) exitWith {false};
    if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0))  exitWith {false};
    true
 };
@@ -85,12 +85,12 @@ private _fnc_condition = {
    params ["_args", "_handle"];
    _args params ["_trench", "_unit", "_removeTime", "_vecDirAndUp"];
    private _actualProgress = _trench getVariable [QGVAR(progress), 0];
-   private _diggerCount = _trench getVariable [QGVAR(diggerCount), 0];
+   private _diggerCount = count (_trench getVariable [QGVAR(diggingPlayers), []]);
 
    if (_actualProgress <= 0) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
       _trench setVariable [QGVAR(digging), false, true];
-      _trench setVariable [QGVAR(diggerCount), 0, true];
+      _trench setVariable [QGVAR(diggingPlayers), [], true];
       deleteVehicle _trench;
    };
 
@@ -100,7 +100,7 @@ private _fnc_condition = {
    ) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
       _trench setVariable [QGVAR(digging), false, true];
-      _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
+      _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
    };
 
    private _boundingBox = boundingBoxReal _trench;
@@ -124,7 +124,7 @@ private _fnc_condition = {
    if (GVAR(stopBuildingAtFatigueMax) && (EGVAR(advanced_fatigue,anReserve) <= 0)) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
       _trench setVariable [QGVAR(digging), false, true];
-      _trench setVariable [QGVAR(diggerCount), ((_diggerCount -1) max 0), true];
+      _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
    };
 },0.1,[_trench, _unit, _removeTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 
