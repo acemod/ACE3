@@ -18,15 +18,15 @@
 
 params ["_trench", "_unit"];
 
-private _digginPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
+private _diggingPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
 
 if (
-      (count _digginPlayers) < 1
+      (count _diggingPlayers) < 1
 ) exitWith {
       [_trench, _unit] call FUNC(continueDiggingTrench);
 };
 
-_trench setVariable [QGVAR(diggingPlayerst), _digginPlayers pushBackUnique ACE_player, true];
+_trench setVariable [QGVAR(diggingPlayers), _diggingPlayers pushBackUnique ACE_player, true];
 
 private _finishCondition = {false};
 private _digTime = 0;

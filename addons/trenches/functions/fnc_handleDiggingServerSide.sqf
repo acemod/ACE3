@@ -31,11 +31,7 @@ if (_initiator) then {
             _args params ["_trench", "_digTime"];
 
             private _diggingPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
-            {
-               if (isNull _x) then {
-                  _diggingPlayers deleteAt _forEachIndex;
-               };
-            }forEach _diggingPlayers;
+            _diggingPlayers = _diggingPlayers - [objNull];
 
             if !(_diggingPlayers isEqualTo (_trench getVariable [QGVAR(diggingPlayers), []])) then {
                _trench setVariable [QGVAR(diggingPlayers), _diggingPlayers, true];
