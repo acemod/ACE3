@@ -22,7 +22,7 @@
  * Public: Yes
  */
 
-params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
+params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []], ["_finishCondition", {false}]];
 
 private _player = ACE_player;
 
@@ -44,7 +44,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlCommit 0;
 
 [{
-    (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions"];
+    (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions", "_finishCondition"];
 
     private _elapsedTime = CBA_missionTime - _startTime;
     private _errorCode = -1;
@@ -62,7 +62,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
                 if !([_player, objNull, _exceptions] call EFUNC(common,canInteractWith)) then {
                     _errorCode = 4;
                 } else {
-                    if (_elapsedTime >= _totalTime) then {
+                    if (_elapsedTime >= _totalTime || _finishCondition) then {
                         _errorCode = 0;
                     };
                 };
@@ -97,4 +97,4 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
         //Update Progress Bar (ratio of elepased:total)
         (uiNamespace getVariable QGVAR(ctrlProgressBar)) progressSetPosition (_elapsedTime / _totalTime);
     };
-}, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions, _finishCondition]] call CBA_fnc_addPerFrameHandler;

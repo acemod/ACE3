@@ -4,7 +4,7 @@
  * Confirms trench dig
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
@@ -18,8 +18,7 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Trenches", false] call ace_common_fnc_statusEffect_set;
 
 // remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
@@ -36,39 +35,32 @@ _unit setVariable [QGVAR(isPlacing), false, true];
 params ["_unit"];
 if (isNull GVAR(trench)) exitWith {};
 
+private _trenchClass = typeOf GVAR(trench);
+private _vecDirAndUp = [vectorDir GVAR(trench), vectorUp GVAR(trench)];
+private _pos = getPosWorld GVAR(trench);
+diag_log format ["ACE_TRENCHES Old Pos: %1", _pos];
 deleteVehicle GVAR(trench);
-private _trench = createVehicle [GVAR(trenchClass), [0, 0, 0], [], 0, "NONE"];
 
-GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
-private _basePos = GVAR(trenchPos);
-private _angle = (GVAR(digDirection) + getDir _unit);
+diag_log format ["ACE_TRENCHES New Pos: %1", _pos];
+private _trench = createVehicle [_trenchClass, _pos, [], 0, "CAN_COLLIDE"];
+_trench setObjectTextureGlobal [0,[_trench] call FUNC(getSurfaceTexturePath)];
+_trench setPosWorld _pos;
 
-// _v1 forward from the player, _v2 to the right, _v3 points away from the ground
-private _v3 = surfaceNormal _basePos;
-private _v2 = [sin _angle, +cos _angle, 0] vectorCrossProduct _v3;
-private _v1 = _v3 vectorCrossProduct _v2;
+private _boundingBox = boundingBoxReal _trench;
+_boundingBox params ["_lbfc", "_rtbc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
+_lbfc params ["", "", "_lbfcZ"];
+_rtbc params ["", "", "_rtbcZ"];
 
-// Stick the trench to the ground
-_basePos set [2, getTerrainHeightASL _basePos];
-private _minzoffset = 0;
+private _boundingBoxOffset =  missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(boundingBoxOffset)),0];
+private _posDiff = abs _lbfcZ + abs _rtbcZ - _boundingBoxOffset;
+private _newPos = _trench modelToWorldWorld [0,0, -_posDiff];
+diag_log format ["ACE_TRENCHES Underearth Pos: %1", _pos];
+_trench setPosWorld _newPos;
 
-for [{private _ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
-    for [{private _iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
-        private _pos = _basePos vectorAdd (_v2 vectorMultiply _ix)
-                                vectorAdd (_v1 vectorMultiply _iy);
-        _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
-        #ifdef DEBUG_MODE_FULL
-            _pos set [2, getTerrainHeightASL _pos];
-            _pos2 = +_pos;
-            _pos2 set [2, getTerrainHeightASL _pos + 1];
-            drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
-        #endif
-    };
-};
-_basePos set [2, (_basePos select 2) + _minzoffset + _offset];
-private _vecDirAndUp = [_v1, _v3];
-GVAR(trench) = objNull;
+_trench setVariable [QGVAR(diggingSteps), _posDiff/1000,true];
+_trench setVectorDirAndUp _vecDirAndUp;
 
-_trench setVariable [QGVAR(placeData), [_basePos, _vecDirAndUp], true];
+_trench setVariable [QGVAR(placeData), [_newPos, _vecDirAndUp], true];
+_trench setVariable [QGVAR(progress), 0, true];
 
-[_trench, _unit] call FUNC(continueDiggingTrench);
+[_trench, _unit, false] call FUNC(continueDiggingTrench);

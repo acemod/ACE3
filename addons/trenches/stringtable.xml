@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="trenches">
+        <Key ID="STR_ACE_Trenches_ActionCategory">
+            <English>Trenches</English>
+            <German>Gräben</German>
+        </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
             <English>Entrenching Tool</English>
             <German>Klappspaten</German>
@@ -32,20 +36,10 @@
             <Chinese>戰備鍬</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
-            <English>Envelope - Small</English>
-            <German>Rund - Klein</German>
-            <Polish>Wnęka - mała</Polish>
-            <Italian>Fascia - Piccola</Italian>
-            <Spanish>Trinchera pequeña</Spanish>
-            <French>Envelope - petite</French>
-            <Portuguese>Trincheira - Pequena</Portuguese>
-            <Russian>Окоп - Малый</Russian>
-            <Japanese>塹壕 - 小型</Japanese>
-            <Korean>참호 - 소형</Korean>
-            <Chinesesimp>掩体 - 小</Chinesesimp>
-            <Chinese>掩體 - 小</Chinese>
+            <English>Trench (Envelope - Small)</English>
+            <German>Schützengraben (Rund - Klein)</German>
         </Key>
-        <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
+        <Key ID="STR_ACE_Trenches_EnvelopeSmallDescription">
             <English>Small Personal Trench</English>
             <German>Kleiner Schützengraben</German>
             <Polish>Mała jednoosobowa wnęka</Polish>
@@ -76,20 +70,10 @@
             <Chinese>蓋小掩體</Chinese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
-            <English>Envelope - Big</English>
-            <German>Rund - Groß</German>
-            <Polish>Wnęka - duża</Polish>
-            <Italian>Fascia - Grande</Italian>
-            <Spanish>Trinchera grande</Spanish>
-            <French>Enveloppe - grande</French>
-            <Portuguese>Trincheira - Grande</Portuguese>
-            <Russian>Окоп - Большой</Russian>
-            <Japanese>塹壕 - 大型</Japanese>
-            <Korean>참호 -  대형</Korean>
-            <Chinesesimp>掩体 - 大</Chinesesimp>
-            <Chinese>掩體 - 大</Chinese>
+            <English>Trench (Envelope - Big)</English>
+            <German>Schützengraben (Rund - Groß)</German>
         </Key>
-        <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
+        <Key ID="STR_ACE_Trenches_EnvelopeBigDescription">
             <English>Large Personal Trench</English>
             <German>Großer Schützengraben</German>
             <Polish>Duża jednoosobowa wnęka</Polish>
@@ -221,6 +205,221 @@
             <Italian>Rimuovendo la Trincea</Italian>
             <Chinesesimp>移除掩体中</Chinesesimp>
             <Chinese>移除掩體中</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Trenches_PlaceCamouflage">
+            <English>Place camouflage</English>
+            <German>Tarnung platzieren</German>
+            <Russian>Камуфлировать окоп</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_PlaceCamouflageProgress">
+            <English>Placing camouflage...</English>
+            <German>Platziere Tarnung...</German>
+            <Russian>Камуфлирую окоп...</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_RemoveCamouflage">
+            <English>Remove camouflage</English>
+            <German>Tarnung entfernen</German>
+            <Russian>Убрать камуфляж</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_RemoveCamouflageProgress">
+            <English>Removing camouflage...</English>
+            <German>Entferne Tarnung...</German>
+            <Russian>Убираю камуфляж окопа...</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeLargeName">
+            <English>Trench (Envelope - Large)</English>
+            <German>Schützengraben (Rund - Sehr groß)</German>
+            <Russian>Огромный окоп</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeGigantDescription">
+            <English>Large Personal Trench</English>
+            <German>Sehr großer Schützengraben</German>
+            <Russian>Огромный окоп для пехоты</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeLarge">
+            <English>Dig Large Trench</English>
+            <German>Grabe sehr großen Schützengraben</German>
+            <Russian>Вырыть огромный окоп</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_CamouflageAttribute">
+            <English>Apply camouflage</English>
+            <German>Tarnung anbringen</German>
+            <Russian>Применить камуфляж</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_CamouflageAttributeTooltip">
+            <English>Apply camouflage to this trench</English>
+            <German>Tarnung an diesen Graben anbringen</German>
+            <Russian>Применить камуфляж к этому окопу</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeVehicleName">
+            <English>Trench (Envelope - Vehicle)</English>
+            <German>Schützengraben (Rund - Fahrzeug)</German>
+            <Russian>Окоп для техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeVehicleDescription">
+            <English>Vehicle Trench</English>
+            <German>Fahrzeug Schützengraben</German>
+            <Russian>Окоп для техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeVehicle">
+            <English>Dig Vehicle Trench</English>
+            <German>Grabe Fahrzeug Schützengraben</German>
+            <Russian>Выкопать окоп для техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeShortName">
+            <English>Trench (Envelope - Short)</English>
+            <German>Schützengraben (Rund - Kurz)</German>
+            <Russian>Короткий окоп</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeShortDescription">
+            <English>Short Trench</English>
+            <German>Kurzer Schützengraben</German>
+            <Russian>Короткий окоп</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeShort">
+            <English>Dig Short Trench</English>
+            <German>Grabe kurzen Schützengraben</German>
+            <Russian>Вырыть короткий окоп</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Trenches_settingCategory">
+            <English>ACE Trenches</English>
+            <German>ACE Trenches</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingAllowDigging_displayName">
+            <English>Allow digging</English>
+            <German>Erlaube den Bau von Gräben</German>
+            <Russian>Разрешить копать окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingAllowDigging_tooltip">
+            <English>Allow digging trenches with an entrenchment tool</English>
+            <German>Erlaube den Bau von Gräben mit dem Klappspaten</German>
+            <Russian>Разрешить копать окопы лопатой</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingAllowCamouflage_displayName">
+            <English>Allow camouflage</English>
+            <German>Erlaube Tarnung</German>
+            <Russian>Разрешить камуфляж</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingAllowCamouflage_tooltip">
+            <English>Allow camouflaging trenches</English>
+            <German>Erlaube das Tarnen von Gräben</German>
+            <Russian>Разрешить камуфлировать окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingCamouflageRequireEntrenchmentTool_displayName">
+            <English>Require entrenchment tool for camouflaging</English>
+            <German>Klappspaten für Tarnen benötigt</German>
+            <Russian>Нужна лопата чтобы камуфлировать окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingCamouflageRequireEntrenchmentTool_tooltip">
+            <English>Require entrenchment tool for camouflaging</English>
+            <German>Fordere Klappspaten für das Tarnen von Gräben</German>
+            <Russian>Нужна лопата чтобы камуфлировать окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowShortEnvelope_displayName">
+            <English>Allow short envelope trenches</English>
+            <German>Erlaube kurze runde Gräben</German>
+            <Russian>Разрешить короткие окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowShortEnvelope_tooltip">
+            <English>Allow digging of short envelope trenches</English>
+            <German>Erlaube das Graben von kurzen runden Gräben</German>
+            <Russian>Разрешить копать короткие окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowSmallEnvelope_displayName">
+            <English>Allow small envelope trenches</English>
+            <German>Erlaube kleine runde Gräben</German>
+            <Russian>Разрешить малые окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowSmallEnvelope_tooltip">
+            <English>Allow digging of small envelope trenches</English>
+            <German>Erlaube das Graben von kleinen runden Gräben</German>
+            <Russian>Разрешить копать малые окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowBigEnvelope_displayName">
+            <English>Allow big envelope trenches</English>
+            <German>Erlaube große runde Gräben</German>
+            <Russian>Разрешить большие окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowBigEnvelope_tooltip">
+            <English>Allow digging of big envelope trenches</English>
+            <German>Erlaube das Graben von großen runden Gräben</German>
+            <Russian>Разрешить копать большие окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowLargeEnvelope_displayName">
+            <English>Allow large envelope trenches</English>
+            <German>Erlaube riesige runde Gräben</German>
+            <Russian>Разрешить огромные окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowLargeEnvelope_tooltip">
+            <English>Allow digging of large envelope trenches</English>
+            <German>Erlaube das Graben von riesigen runden Gräben</German>
+            <Russian>Разрешить копать огромные окопы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowVehicleEnvelope_displayName">
+            <English>Allow vehicle envelope trenches</English>
+            <German>Erlaube runde Fahrzeuggräben</German>
+            <Russian>Разрешить окопы для техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_allowVehicleEnvelope_tooltip">
+            <English>Allow digging of envelope vehicle trenches</English>
+            <German>Erlaube das Graben von runden Fahrzeuggräben</German>
+            <Russian>Разрешить копать окопы для техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingBuildFatigueFactor_displayName">
+            <English>Fatigue factor</English>
+            <German>Ausdauerkoeffizient</German>
+            <Russian>Коэффициент усталости</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_settingBuildFatigueFactor_tooltip">
+            <English>The fatigue factor when building trenches (0 to deactive fatigue use)</English>
+            <German>Der Ausdauerkoeffizient beim Bauen von Gräben (0 zum Deaktivieren)</German>
+            <Russian>Как сильно снижается стамина от копания (0 чтобы не снижалась)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_ShortEnvelopeDigTime">
+            <English>Dig time (in seconds) for short envelope trenches</English>
+            <German>Zeit (in Sekunden) um kurze runde Gräben zu graben</German>
+            <Russian>Время (в секундах) копания короткого окопа</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeDigTime">
+            <English>Dig time (in seconds) for small envelope trenches</English>
+            <German>Zeit (in Sekunden) um kleine runde Gräben zu graben</German>
+            <Russian>Время (в секундах) копания малого окопа</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeDigTime">
+            <English>Dig time (in seconds) for big envelope trenches</English>
+            <German>Zeit (in Sekunden) um große runde Gräben zu graben</German>
+            <Russian>Время (в секундах) копания большого окопа</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_LargeEnvelopeDigTime">
+            <English>Dig time (in seconds) for large envelope trenches</English>
+            <German>Zeit (in Sekunden) um riesige runde Gräben zu graben</German>
+            <Russian>Время (в секундах) копания гигантского окопа</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_VehicleEnvelopeDigTime">
+            <English>Dig time (in seconds) for vehicle envelope trenches</English>
+            <German>Zeit (in Sekunden) um runde Fahrzeuggräben zu graben</German>
+            <Russian>Время (в секундах) копания окопа для техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_Trenches_HelpDigging">
+            <English>Help digging</English>
+            <German>Mit graben</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_stopBuildingAtFatigueMax_displayName">
+            <English>Enable Stop on Fatigue</English>
+            <German>Aktiviere Ausdauerbedingter grabe stop</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_stopBuildingAtFatigueMax_tooltip">
+            <English>If enabled the digger will stop digging if his fatigue reaches 0.</English>
+            <German>Wenn aktiviert hören die Spieler auf zu graben wenn ihre Ausdauer 0 erreicht.</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_enableAutomaticFilePath_displayName">
+            <English>Enable automatic file path for textures</English>
+            <German>Aktiviert automatische textur ausfüllung</German>
+        </Key>
+        <Key ID="STR_ACE_Trenches_enableAutomaticFilePath_tooltip">
+            <English>If enabled the mod will try to fill in an automatic path and prefix for the texture files (WARNING: Can cause misconfiguration!).</English>
+            <German>Wenn es aktiviert ist, versucht die Mod automatisch einen Pfad und preFix für die Map zu finden. (WARNUNG!!!) Kann zu Fehlern führen!</German>
         </Key>
     </Package>
 </Project>

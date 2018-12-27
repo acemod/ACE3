@@ -17,6 +17,7 @@
 
 params ["_unit"];
 
+if !(GVAR(allowDigging)) exitWith {false};
 if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
 _unit call EFUNC(common,canDig)
