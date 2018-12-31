@@ -1,7 +1,7 @@
 [
     QGVAR(moveRestriction), "LIST",
     [LSTRING(MoveRestriction), LSTRING(MoveRestriction_Description)],
-    format ["ACE %1", localize ELSTRING(map,Module_DisplayName)],
+    [format ["ACE %1", localize ELSTRING(map,Module_DisplayName)], localize LSTRING(Module_DisplayName)],
     [
         [
             MOVE_RESTRICTION_NOBODY,

@@ -19,39 +19,53 @@
 params ["_display", "_closeNum"];
 TRACE_2("params",_display,_closeNum);
 
+private _editingMarker = !(GVAR(editingMarker) isEqualTo "");
+
 if (_closeNum isEqualTo 1) then {
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (_editingMarker) then {
         //delete "old" marker
         deleteMarker GVAR(editingMarker);
-    } else {
-        [{
-            // provide hook for external scripts
-            private _newestMarker = allMapMarkers select (count allMapMarkers - 1);
-            [QGVAR(markerPlaced),[_newestMarker]] call CBA_fnc_localEvent;
-
-            // on first user created marker: save directPlayID for fnc_canMove
-            if (isNil QGVAR(directPlayID)) then {
-                private _markerData = (_newestMarker splitString " ") param [1,""];
-                private _directPlayID = (_markerData splitString "/") param [0,""];
-                if (_directPlayID != "") then {GVAR(directPlayID) = _directPlayID};
-            };
-        }, []] call CBA_fnc_execNextFrame;
     };
-
     // set and send marker data the next frame. the actual marker isn't created yet
     [{
+        params ["_startingMarkers", "_editingMarker"];
+        private _newMarkers = allMapMarkers - _startingMarkers;
+
+        private _newestMarker = "";
+        private _newestMarkerDist = 1e10;
+
+        {
+            private _distX = GVAR(currentMarkerPosition) distance2d (getMarkerPos _x);
+            if (_distX < _newestMarkerDist) then {
+                _newestMarker = _x;
+                _newestMarkerDist = _distX;
+            };
+        } forEach _newMarkers;
+
+        TRACE_3("",_newestMarker,_newestMarkerDist,_newMarkers);
+
+        if (_newestMarker == "") exitWith {ERROR_1("could not find user placed marker from %1",_newMarkers);};
+
+        // provide hook for external scripts
+        [QGVAR(markerPlaced),[_newestMarker, _editingMarker]] call CBA_fnc_localEvent;
+        
+        // Add to list of user placed markers, and then filter for deleted
+        GVAR(userPlacedMarkers) pushBack _newestMarker;
+        GVAR(userPlacedMarkers) = GVAR(userPlacedMarkers) select {!((getMarkerPos _x) isEqualTo [0,0,0])};
+
         [QGVAR(setMarkerNetwork), [
-            allMapMarkers select (count allMapMarkers - 1), [
+            _newestMarker, [
                 GETGVAR(currentMarkerConfigName,""),
                 GETGVAR(currentMarkerColorConfigName,""),
                 GETGVAR(currentMarkerPosition,[]),
                 GETGVAR(currentMarkerAngle,0)
             ]
         ]] call CBA_fnc_globalEvent;
-    }, []] call CBA_fnc_execNextFrame;
+
+    }, [allMapMarkers, _editingMarker]] call CBA_fnc_execNextFrame;
 } else {
-    if !(GVAR(editingMarker) isEqualTo "") then {
-        //editing was canceled show the original marker again
+    if (_editingMarker) then {
+        // editing was canceled show the original marker again
         GVAR(editingMarker) setMarkerAlphaLocal 1;
     };
 };

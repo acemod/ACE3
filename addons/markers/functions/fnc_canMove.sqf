@@ -4,13 +4,13 @@
  * Checks whether the player can move markers.
  *
  * Arguments:
- * None
+ * 0: Marker Name <STRING>
  *
  * Return Value:
  * Whether the player can move markers <BOOL>
  *
  * Example:
- * [] call ace_markers_fnc_canMove
+ * ["X"] call ace_markers_fnc_canMove
  *
  * Public: No
  */
@@ -28,7 +28,7 @@ switch (GVAR(moveRestriction)) do {
         (leader ACE_player == ACE_player) || IS_ADMIN
     };
     case MOVE_RESTRICTION_OWNER: {
-        [_marker] call FUNC(isMarkerOwner);
+        _marker in GVAR(userPlacedMarkers)
     };
     default {true};
 }; // return
