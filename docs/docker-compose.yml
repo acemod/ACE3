@@ -8,7 +8,6 @@ services:
       dockerfile: Dockerfile
     environment:
       JEKYLLARGS: --incremental
-    ports:
-      - "4000:4000"
+    ports: ['4000:4000']
     volumes:
-      - ./:/usr/src/app
+    - './:/usr/src/app'
