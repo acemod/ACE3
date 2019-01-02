@@ -36,7 +36,7 @@ if (_show) then {
         if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
-        if ((ACE_player distance _target > MAX_DISTANCE) && {vehicle _target != vehicle ACE_player}) exitwith {
+        if ((ACE_player distance _target > MAX_DISTANCE) && {vehicle _target != vehicle ACE_player}) exitWith {
             ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             [QEGVAR(common,displayTextStructured), [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player], [ACE_player]] call CBA_fnc_targetEvent;
