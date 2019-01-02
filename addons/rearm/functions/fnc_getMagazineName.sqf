@@ -23,7 +23,7 @@ if (isNil "_magName") then {
     private _displayName = getText(configFile >> "CfgMagazines" >> _className >> "displayName");
     if (_displayName == "") then {
         _displayName = _className;
-        WARNING_1("Magazine is missing display name [%1]",_magazineClass);
+        WARNING_1("Magazine is missing display name [%1]",_className);
     };
 
     GVAR(magazineNameCache) setVariable [_className, _displayName];
