@@ -21,5 +21,5 @@ if (isNil "_carryWeaponClassname") then { _carryWeaponClassname = secondaryWeapo
 
 // If the current launcher has a config-value that defines the tripod, it is a CSW
 (alive _target) &&
-{(getText(configFile >> "CfgWeapons" >> (secondaryWeapon _player) >> QUOTE(ADDON) >> "assembleTo" >> (typeOf _target))) != ""}
+{(getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> (typeOf _target))) != ""}
 
