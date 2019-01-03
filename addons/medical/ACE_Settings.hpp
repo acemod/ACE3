@@ -310,4 +310,12 @@ class ACE_Settings {
         value = 3;
         sliderSettings[] = {0, 30, 3, 0};
     };
+    class GVAR(convertItems) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_convertItems_DisplayName);
+        description = CSTRING(MedicalSettings_convertItems_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {ECSTRING(common,Enabled), CSTRING(MedicalSettings_convertItems_remove), ECSTRING(common,Disabled)};
+    };
 };
