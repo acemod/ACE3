@@ -4,7 +4,16 @@ class CfgWeapons {
     class ACE_M47_Dragon: launch_Titan_F {
         model = QPATHTOF(models\ace_m47_magazine.p3d);
         picture = QPATHTOF(data\m47_dragon_item_ca.paa);
+        magazines[] = {};
+        displayName = "M47 Dragon Carry";
         scope = 2;
+        
+        class ACE_CSW {
+            type = "mount";
+            deployTime = 2;
+            pickupTime = 2;
+            deploy = "ACE_M47_Dragon_NoSight";
+        };
     };
     
     class missiles_titan_static;
@@ -32,5 +41,14 @@ class CfgWeapons {
         opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
         opticsZoomMin = 0.015;
         opticsZoomMax = 0.015;
+        scope = 2;
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 2;
+            pickupTime = 1;
+            class assembleTo {
+                ACE_M47_Dragon_NoSight = "ACE_M47_Dragon_Sight";
+            };
+        };
     };
 };

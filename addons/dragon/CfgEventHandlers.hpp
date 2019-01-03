@@ -9,3 +9,9 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
+
+class Extended_FiredBIS_EventHandlers {
+	class ACE_M47_Dragon_Sight {
+		ADDON = QUOTE(_this call FUNC(onFired));
+	};
+};
