@@ -1,4 +1,4 @@
-class ACEGVAR(missileguidance,AttackProfiles) {
+class EGVAR(missileguidance,AttackProfiles) {
     class DRAGON {
         name = "FGM-77 Dragon";
         visualName = "FGM-77 Dragon";
