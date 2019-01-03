@@ -15,11 +15,13 @@
  * Public: Yes
  */
 
+if (GVAR(convertItems) == 2) exitWith {};
+
 params ["_unit"];
 
 while {({_x == "FirstAidKit"} count items _unit) > 0} do {
-    if (GVAR(convertItems)) then {
-        _unit removeItem "FirstAidKit";
+    _unit removeItem "FirstAidKit";
+    if (GVAR(convertItems) == 0) then {
         if (GVAR(level) >= 2) then {
             _unit addItem "ACE_fieldDressing";
             _unit addItem "ACE_packingBandage";
@@ -30,14 +32,12 @@ while {({_x == "FirstAidKit"} count items _unit) > 0} do {
             _unit addItem "ACE_fieldDressing";
             _unit addItem "ACE_morphine";
         };
-    } else {
-        _unit removeItem "FirstAidKit";
     };
 };
 
 while {({_x == "Medikit"} count items _unit) > 0} do {
-    if (GVAR(convertItems)) then {
-        _unit removeItem "Medikit";
+    _unit removeItem "Medikit";
+    if (GVAR(convertItems) == 0) then {
         if (GVAR(level) >= 2) then {
             _unit addItemToBackpack "ACE_fieldDressing";
             _unit addItemToBackpack "ACE_packingBandage";
@@ -54,7 +54,5 @@ while {({_x == "Medikit"} count items _unit) > 0} do {
             _unit addItemToBackpack "ACE_bloodIV";
             _unit addItemToBackpack "ACE_bloodIV";
         };
-    } else {
-        _unit removeItem "Medikit";
     };
 };

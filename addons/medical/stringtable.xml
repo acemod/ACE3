@@ -5671,5 +5671,8 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_Description">
             <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_remove">
+            <English>Just remove vanilla medical</English>
+        </Key>
     </Package>
 </Project>

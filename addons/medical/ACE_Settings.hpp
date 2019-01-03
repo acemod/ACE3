@@ -314,7 +314,8 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_convertItems_DisplayName);
         description = CSTRING(MedicalSettings_convertItems_Description);
-        typeName = "BOOL";
-        value = 1;
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {ECSTRING(common,Enabled), CSTRING(MedicalSettings_convertItems_remove), ECSTRING(common,Disabled)};
     };
 };
