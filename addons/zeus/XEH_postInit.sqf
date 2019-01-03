@@ -50,6 +50,7 @@ if (isServer) then {
         missionNamespace setVariable [format [QGVAR(zeus_%1), _owner], _zeus];
         _zeus setVariable ["owner", _owner, true];
         _zeus setVariable ["Addons", 3, true];
+        _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
         _zeus setCuratorCoef ["Place", 0];
         _zeus setCuratorCoef ["Delete", 0];
         _group deleteGroupWhenEmpty true;

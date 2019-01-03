@@ -36,7 +36,7 @@ if (_show) then {
         if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
-        if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+        if ((ACE_player distance _target > MAX_DISTANCE) && {vehicle _target != vehicle ACE_player}) exitWith {
             ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             [QEGVAR(common,displayTextStructured), [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player], [ACE_player]] call CBA_fnc_targetEvent;
@@ -144,6 +144,9 @@ if (_show) then {
             };
             (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
         } foreach _selectionBloodLoss;
+
+        // update tourniquet information
+        [_display, _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]]] call FUNC(updateTourniquets);
 
         private _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;

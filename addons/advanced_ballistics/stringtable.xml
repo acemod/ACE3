@@ -90,6 +90,7 @@
             <Chinese>啟用槍口初速變化</Chinese>
             <Chinesesimp>启用枪口初速变化</Chinesesimp>
             <French>Activer les variations de la vitesse initiale</French>
+            <Polish>Aktywuj wariację prędkości wylotowej</Polish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
@@ -100,6 +101,7 @@
             <Chinese>模擬每發子彈的槍口初速都略有不同</Chinese>
             <Chinesesimp>模拟每发子弹的枪口初速都略有不同</Chinesesimp>
             <French>Simule les légères variations</French>
+            <Polish>Symuluje lekkie zmiany w prędkości wylotowej między każdym strzałem</Polish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>

@@ -545,6 +545,7 @@
             <Chinesesimp>玩家名字标签透明度</Chinesesimp>
             <Chinese>玩家名稱透明度</Chinese>
             <Italian>Trasparenza Etichette Nome</Italian>
+            <Polish>Przezroczystość etykiet gracza</Polish>
         </Key>
     </Package>
 </Project>

@@ -53,7 +53,9 @@
     "fence.p3d",\
     "fort_razorwire.p3d",\
     "barbedwire.pd3",\
-    "plot_green_draty.p3d"\
+    "dd_pletivo.p3d",\
+    "plot_green_draty.p3d",\
+    "plot_rust_draty.p3d"\
 ]
 
 #define SOUND_CLIP_TIME_SPACING 1.5

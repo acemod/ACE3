@@ -7,6 +7,7 @@
             <Chinesesimp>AI医疗启用</Chinesesimp>
             <Chinese>AI醫療啟用</Chinese>
             <Italian>AI medica abilitata per:</Italian>
+            <Polish>Medyczna SI aktywowana dla</Polish>
         </Key>
         <Key ID="STR_ACE_medical_ai_enabledFor_Description">
             <English>Enable AI units to heal themselves and each other.</English>
@@ -14,6 +15,7 @@
             <Chinesesimp>使AI单位能够彼此治疗自己</Chinesesimp>
             <Chinese>啟用AI能夠彼此醫療自己</Chinese>
             <Italian>Permette alle unità AI di curare se stesse e fra di loro.</Italian>
+            <Polish>Zezwala jednostki SI do leczenia siebie samych i siebie nawzajem.</Polish>
         </Key>
         <Key ID="STR_ACE_medical_ai_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
