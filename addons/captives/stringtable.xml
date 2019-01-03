@@ -9,6 +9,7 @@
             <Chinesesimp>俘虏</Chinesesimp>
             <Japanese>捕虜</Japanese>
             <Korean>포로설정</Korean>
+            <Polish>Jeńcy</Polish>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -444,6 +445,7 @@
             <Chinese>設置在游標下的單位成俘虜狀態</Chinese>
             <Chinesesimp>设置在游标下的单位成俘虏状态。</Chinesesimp>
             <Korean>커서의 병력을 포박합니다.</Korean>
+            <Polish>Ustawia jednostkę pod kursorem jako jeniec.</Polish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
@@ -453,6 +455,7 @@
             <Chinese>需要AI先行投降</Chinese>
             <Chinesesimp>需要AI先行投降</Chinesesimp>
             <Korean>AI 항복 필요</Korean>
+            <Polish>Wymaga poddania się przez SI</Polish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
@@ -462,6 +465,7 @@
             <Chinese>在逮捕AI之前該AI必須先進入投降狀態</Chinese>
             <Chinesesimp>在逮捕AI之前该AI必须先进入投降状态。</Chinesesimp>
             <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>
+            <Polish>Wymaga poddania się przez SI zanim aresztowanie będzie możliwe</Polish>
         </Key>
     </Package>
 </Project>

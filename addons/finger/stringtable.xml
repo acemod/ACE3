@@ -10,6 +10,7 @@
             <Japanese>指差し</Japanese>
             <Korean>가리키기</Korean>
             <French>Pointage</French>
+            <Polish>Wskazywanie</Polish>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>

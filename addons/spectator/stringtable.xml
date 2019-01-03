@@ -10,6 +10,7 @@
             <Japanese>スペクテイター</Japanese>
             <Korean>관전자</Korean>
             <French>Spectateur</French>
+            <Polish>Obserwator</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -46,6 +47,7 @@
             <Chinesesimp>可观察AI</Chinesesimp>
             <Korean>AI 활성</Korean>
             <French>IA Activée</French>
+            <Polish>SI Aktywowane</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -56,6 +58,7 @@
             <Chinesesimp>开启此功能后可在观察者模式下观察AI单位。</Chinesesimp>
             <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
             <French>Rends les IA visibles en spectateur</French>
+            <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -263,6 +266,7 @@
             <Chinesesimp>单位图示</Chinesesimp>
             <Korean>아이콘</Korean>
             <French>Icônes</French>
+            <Polish>Ikony</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -273,6 +277,7 @@
             <Chinesesimp>显示弹道</Chinesesimp>
             <Korean>발사체</Korean>
             <French>Projectiles</French>
+            <Polish>Pociski</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -313,6 +318,7 @@
             <Chinesesimp>视觉模式</Chinesesimp>
             <Korean>보기 모드</Korean>
             <French>Mode de vision</French>
+            <Polish>Tryb Wizji</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -323,6 +329,7 @@
             <Chinesesimp>慢速度</Chinesesimp>
             <Korean>느린 속도</Korean>
             <French>Vitesse lente</French>
+            <Polish>Wolna Prędkość</Polish>
         </Key>
     </Package>
 </Project>
