@@ -153,7 +153,7 @@ class CfgVehicles {
                 class GVAR(mountWeapon) {
                     displayName = "Attach Sight";
                     condition = QUOTE(call FUNC(canDeployWeapon));
-                    statement = QUOTE([ARR_3(_this select 0, _this select 1, binocular (_this select 1))] call EFUNC(csw,assemble_deployWeapon));
+                    statement = QUOTE([ARR_4(_this select 0, _this select 1, [], binocular (_this select 1))] call EFUNC(csw,assemble_deployWeapon));
                 };
             };
         };

@@ -17,5 +17,5 @@
  *
  */
 params ["_target", "_unit"];
-!(_target getVariable [QGVAR(fired), false]) && { [_target, _unit, binocular _unit] call EFUNC(csw,assemble_canDeployWeapon) };
+!(_target getVariable [QGVAR(fired), false]) && { [_target, _unit, [], binocular _unit] call EFUNC(csw,assemble_canDeployWeapon) };
 
