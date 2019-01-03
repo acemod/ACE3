@@ -57,6 +57,38 @@ class CfgAmmo {
         simulationStep = 0.005;
         maxControlRange = 1500;
         scope = 2;
+        
+        class ace_missileguidance {
+            enabled = 1;
+
+            minDeflection = 0;
+            maxDeflection = 0;
+            incDeflection = 0;
+
+            canVanillaLock = 0;
+
+            // Guidance type for munitions
+            defaultSeekerType = "SACLOS";
+            seekerTypes[] = { "SACLOS" };
+
+            defaultSeekerLockMode = "LOAL";
+            seekerLockModes[] = { "LOAL", "LOBL" };
+
+            onFired = QEFUNC(hot,onFired);
+
+            seekLastTargetPos = 0;
+            seekerAngle = 30;
+            seekerAccuracy = 1;
+
+            seekerMinRange = 75;
+            seekerMaxRange = 4000;
+
+            correctionDistance = 15;
+            offsetFromCrosshair[] = { 0, 0, 0 };
+
+            defaultAttackProfile = "DRAGON";
+            attackProfiles[] = {"DRAGON"};
+        };
     };
     
     class ShellBase;
