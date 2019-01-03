@@ -52,11 +52,11 @@ if (isNull _container) then {
     _container = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
     // ToDo: Unload to ammo box??
     _unloadTo setVariable [QGVAR(container), container, true];
+    _container setDir random [0, 180, 360];
     _container setPosATL _weaponRelPos;
     if ((_weaponRelPos select 2) < 0.5) then {
         _container setVectorUp (surfaceNormal _weaponRelPos);
     };
-    _container setDir random [0, 180, 360];
     TRACE_2("Creating NEW Container",_container,_weaponRelPos);
 };
 

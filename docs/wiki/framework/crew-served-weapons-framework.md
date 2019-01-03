@@ -39,6 +39,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(m3TripodLow); // Which tripod will appear when weapon has been disassembled
             ammoLoadTime = 7; // How long it takes in seconds to load ammo into the weapon           
             ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
+            disassembleFunc = "myCoolFunction.sqf"; // A callback function for when the CSW gets disassembled. Arguments: [tripod, staticWeapon]
         };
     };
 };

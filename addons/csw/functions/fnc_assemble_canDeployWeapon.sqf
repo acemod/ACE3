@@ -16,7 +16,8 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_player"];
+params ["_target", "_player", "", "_carryWeaponClassname"];
+if (isNil "_carryWeaponClassname") then { _carryWeaponClassname = secondaryWeapon _player };
 
 // If the current launcher has a config-value that defines the tripod, it is a CSW
 (alive _target) &&

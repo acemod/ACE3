@@ -16,6 +16,7 @@
 #include "script_component.hpp"
 
 params ["_staticWeapon"];
+private _locked = locked _staticWeapon;
 
-alive _staticWeapon && (((crew _staticWeapon) isEqualTo [] || {!(alive (gunner _staticWeapon))}))
+alive _staticWeapon && { !(alive (gunner _staticWeapon)) && { _locked != 2 && _locked != 3; } }
 

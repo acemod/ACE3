@@ -16,10 +16,10 @@
 #include "script_component.hpp"
 
 [{
-    params ["_tripod", "_player"];
-    TRACE_2("assemble_deployWeapon",_tripod,_player);
+    params ["_tripod", "_player", "", "_carryWeaponClassname"];
+    if (isNil "_carryWeaponClassname") then { _carryWeaponClassname = secondaryWeapon _player };
+    TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
-    private _carryWeaponClassname = secondaryWeapon _player;
     private _tripodClassname = typeOf _tripod;
     _player removeWeaponGlobal _carryWeaponClassname;
 
@@ -42,8 +42,8 @@
         private _csw = createVehicle [_assembledClassname, [0, 0, 0], [], 0, "NONE"];
         _csw setVariable [QGVAR(assemblyMode), 1, true]; // Explicitly set advanced assembly mode and broadcast
         _csw setVariable [QGVAR(emptyWeapon), true, false]; // unload gun, shouldn't need broadcast for this as it will be local to us
-        _csw setPosATL _tripodPos;
         _csw setDir _tripodDir;
+        _csw setPosATL _tripodPos;
         _csw setVectorUp (surfaceNormal _tripodPos);
     };
 
