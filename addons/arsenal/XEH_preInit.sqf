@@ -58,4 +58,6 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
     _this call FUNC(handleStats);
 }] call CBA_fnc_addEventHandler;
 
+call FUNC(compileStats);
+
 ADDON = true;

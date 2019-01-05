@@ -1,9 +1,6 @@
 class CfgAmmo {
 
     class BombCore;
-    class BombBase : BombCore {
-        GVAR(caliber) = 250; // Default caliber for bombs
-    };
     class LaserBombCore : BombCore {
         GVAR(caliber) = 250; // Default caliber for bombs
     };
@@ -53,9 +50,6 @@ class CfgAmmo {
     class R_60mm_HE : R_80mm_HE {
         GVAR(caliber) = 60;
         GVAR(dummy) = QGVAR(R_60mm_HE);
-    };
-    class R_Hydra_HE : RocketBase {
-        GVAR(dummy) = QGVAR(R_Hydra_HE);
     };
 
     class BulletBase;
@@ -184,17 +178,18 @@ class CfgAmmo {
         GVAR(dummy) = QGVAR(Bo_Mk82);
     };
 
-    class Bo_GBU12_LGB : LaserBombCore {
+    class ammo_Bomb_LaserGuidedBase: LaserBombCore {};
+    class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
         GVAR(caliber) = 250; // Default caliber for bombs
         GVAR(dummy) = QGVAR(Bo_GBU12_LGB);
     };
 
-    class Bomb_04_F : LaserBombCore {
+    class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
         GVAR(caliber) = 250; // Default caliber for bombs
         GVAR(dummy) = QGVAR(Bomb_04_F);
     };
 
-    class Bomb_03_F : Bomb_04_F {
+    class Bomb_03_F: ammo_Bomb_LaserGuidedBase {
         GVAR(dummy) = QGVAR(Bomb_03_F);
     };
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Removes dirt from the glasses.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!isNull (GETUVAR(GVAR(DisplayEffects),displayNull))) then {
     (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10660) ctrlSetText "";

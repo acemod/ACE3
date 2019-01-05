@@ -98,7 +98,6 @@ def main(argv):
 
 
     #RHS Compat USA - http://steamcommunity.com/sharedfiles/filedetails/?id=773125288
-
     publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_usf3"), "773125288", changelog_path)
 
     #RHS Compat Russians - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
@@ -106,9 +105,6 @@ def main(argv):
 
     #RHS Compat GREF - http://steamcommunity.com/sharedfiles/filedetails/?id=884966711
     publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_gref3"), "884966711", changelog_path)
-
-    #ADR97 (p90)- http://steamcommunity.com/sharedfiles/filedetails/?id=773136286
-    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_adr_97"), "773136286", changelog_path)
 
 
 

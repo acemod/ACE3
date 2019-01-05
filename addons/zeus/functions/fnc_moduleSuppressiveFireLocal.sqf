@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux, PabstMirror
  * Commands the selected unit or group to start suppressive fire on the unit, group or location the module is placed on
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_targetASL", "_artilleryMag"];
 TRACE_4("moduleSuppressiveFireLocal",_unit,local _unit,_targetASL,_artilleryMag);

@@ -20,6 +20,8 @@ class CfgVehicles {
     class O_Soldier_diver_base_F;
     class I_G_Sharpshooter_F;
     class B_Soldier_F;
+    class I_G_Soldier_LAT2_F;
+    class I_crew_F;
 
     class Civilian_F: Civilian {
         modelSides[] = {6};
@@ -234,6 +236,9 @@ class CfgVehicles {
     class I_Protagonist_VR_F: I_Soldier_base_F {
         modelSides[] = {6};
     };
+    class C_Protagonist_VR_F: C_man_1 {
+        modelSides[] = {6};
+    };
     class B_G_Sharpshooter_F: I_G_Sharpshooter_F {
         modelSides[] = {6};
     };
@@ -256,6 +261,18 @@ class CfgVehicles {
         modelSides[] = {6};
     };
     class C_IDAP_Man_Base_F: Civilian_F {
+        modelSides[] = {6};
+    };
+    class O_A_soldier_base_F: O_officer_F {
+        modelSides[] = {6};
+    };
+    class B_G_Soldier_LAT2_F: I_G_Soldier_LAT2_F {
+        modelSides[] = {6};
+    };
+    class O_G_Soldier_LAT2_F: I_G_Soldier_LAT2_F {
+        modelSides[] = {6};
+    };
+    class I_Story_Crew_F: I_crew_F {
         modelSides[] = {6};
     };
 };

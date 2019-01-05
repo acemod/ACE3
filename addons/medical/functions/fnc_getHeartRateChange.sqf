@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the change in the heart rate. Used for the vitals calculations. Calculated in one seconds.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define HEART_RATE_MODIFIER 0.02
 

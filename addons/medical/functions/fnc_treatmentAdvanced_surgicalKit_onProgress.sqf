@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles treatment via surgical kit per frame
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_caller", "_target"];

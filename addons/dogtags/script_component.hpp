@@ -16,6 +16,8 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+
 #define DOGTAG_SHOW_DELAY 1
 
 #define RUSTLING_SOUNDS [\

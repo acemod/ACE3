@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Returns the nozzle back to source vehicle.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
 

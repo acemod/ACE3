@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, esteldunedain
  * Converts number to hexadecimal number
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_number"];
 

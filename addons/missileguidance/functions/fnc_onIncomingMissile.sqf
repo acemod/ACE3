@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou
  * Handles AI shooting a locking missile
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_target", "_ammo", "_shooter"];
 

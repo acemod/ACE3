@@ -17,7 +17,6 @@ class CfgVehicles {
                 condition = QUOTE(_target getVariable [ARR_2(QQGVAR(canCut),false)]);
                 statement = QUOTE([ARR_2(_player,_target)] call FUNC(cutParachute));
                 showDisabled = 0;
-                priority = 2.9;
                 icon = QPATHTOF(UI\cut_ca.paa);
             };
         };

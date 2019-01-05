@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg
  * Handles sandbag rotation
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (GVAR(deployPFH) == -1) exitWith {false};
 

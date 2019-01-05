@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
@@ -31,7 +31,7 @@
             <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
             <Korean>수류탄 투척시 화면에 문자나 힌트를 표시합니다.</Korean>
             <Chinesesimp>投掷手榴弹时显示提示讯息。</Chinesesimp>
-            <Chinese>投擲手榴彈時顯示提示訊息。</Chinese>
+            <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
@@ -376,6 +376,7 @@
             <Chinese>切換碰撞燈</Chinese>
             <Chinesesimp>切换碰撞灯</Chinesesimp>
             <Japanese>衝突防止灯を切り替え</Japanese>
+            <Polish>Przełącz światła kolizyjne</Polish>
         </Key>
     </Package>
 </Project>

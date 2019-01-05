@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
- * Initalizes the "Suicide Bomber" Zeus module display.
+ * Initializes the "Suicide Bomber" Zeus module display.
  *
  * Arguments:
  * 0: suicideBomber controls group <CONTROL>
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define SIDE_IDCs [83580, 83581, 83582, 83583]
 

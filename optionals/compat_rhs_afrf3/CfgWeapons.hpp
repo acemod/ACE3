@@ -64,10 +64,11 @@ class CfgWeapons {
         ACE_barrelLength = 657.86;
     };
     class rhs_weap_pkm: rhs_weap_pkp {
+        ACE_Overheating_allowSwapBarrel = 1;
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 645.16;
     };
-    class rhs_weap_rpk74m: rhs_weap_pkp {
+    class rhs_weap_rpk74: rhs_weap_pkp {
         ACE_barrelTwist = 195.072;
         ACE_barrelLength = 589.28;
     };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Exits throw mode.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_reason"];
 TRACE_2("params",_unit,_reason);

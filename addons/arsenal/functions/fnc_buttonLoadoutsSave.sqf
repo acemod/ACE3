@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Save selected loadout.
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display", "_control"];
 
@@ -33,7 +33,7 @@ private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
 private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
 private _loadout = getUnitLoadout GVAR(center);
 
-private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
+private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
 private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
 
 // Make sure the loadout isn't yours (public tab) or being shared (my loadouts tab)
@@ -124,10 +124,10 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
         };
 
-        if (count _sameNameLoadoutsList == 0) then {
+        if (_loadoutIndex == -1) then {
             _data pushBack [_editBoxContent, _loadout];
         } else {
-            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+            _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
         };
 
         // Delete "old" loadout row
@@ -155,7 +155,7 @@ switch (GVAR(currentLoadoutsTab)) do {
 
         if (is3DEN) then {
 
-            private _sameNameLoadoutsList = _data select {_x select 0 == _editBoxContent};
+            private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
 
             for "_dataIndex" from 0 to 10 do {
                 switch (_dataIndex) do {
@@ -232,10 +232,10 @@ switch (GVAR(currentLoadoutsTab)) do {
                 };
             };
 
-            if (count _sameNameLoadoutsList == 0) then {
+            if (_loadoutIndex == -1) then {
                 GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _loadout];
             } else {
-                GVAR(defaultLoadoutsList) set [GVAR(defaultLoadoutsList) find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+                GVAR(defaultLoadoutsList) set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
             };
 
             for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
@@ -258,10 +258,10 @@ switch (GVAR(currentLoadoutsTab)) do {
             set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
         } else {
 
-            if (count _sameNameLoadoutsList == 0) then {
+            if (_loadoutIndex == -1) then {
                 _data pushBack [_editBoxContent, _curSelLoadout];
             } else {
-                _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
+                _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
                 _contentPanelCtrl setVariable [_editBoxContent + str IDC_buttonMyLoadouts, [_curSelLoadout] call FUNC(verifyLoadout)];
             };
 
@@ -273,10 +273,10 @@ switch (GVAR(currentLoadoutsTab)) do {
 
         _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_cursSelRow, 0]) + (_contentPanelCtrl lnbText [_cursSelRow, 1]))) select 2;
 
-        if (count _sameNameLoadoutsList == 0) then {
+        if (_loadoutIndex == -1) then {
             _data pushBack [_editBoxContent, _loadout];
         } else {
-            _data set [_data find (_sameNameLoadoutsList select 0), [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+            _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
             _contentPanelCtrl setVariable [_editBoxContent + str IDC_buttonMyLoadouts, [_loadout] call FUNC(verifyLoadout)];
         };
 

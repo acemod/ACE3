@@ -18,8 +18,8 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 
-#define REARM_ACTION_DISTANCE 7
-#define REARM_ACTION_DISTANCE_SQR 49
+#define REARM_ACTION_DISTANCE 9
+#define REARM_ACTION_DISTANCE_SQR 81
 
 #define REARM_CALIBERS        [  6,   7,   8,  13, 19, 20, 25, 30, 35, 39, 40, 60, 70, 80, 82, 100, 105, 120, 122, 125, 155, 230, 250]
 #define REARM_DURATION_TAKE   [  5,   5,   5,   5,  5,  5,  5,  5,  5,  5,  5,  3,  3,  3,  3,   3,   4,   5,   5,   5,   5,  13,  10]
