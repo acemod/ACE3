@@ -104,6 +104,7 @@
             <Italian>Nascondi Altimetro in Caduta Libera</Italian>
             <Chinese>隱藏自由落體高度計</Chinese>
             <Chinesesimp>隐藏自由落体高度计</Chinesesimp>
+            <Polish>Schowaj wysokościomierz podczas swobodnego opadania</Polish>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
             <English>Hides the altitude and speed shown while free falling or parachuting.</English>
@@ -112,6 +113,7 @@
             <Italian>Nasconde l'altitudine e la velocità mostrate durante la caduta libera o paracadutandosi.</Italian>
             <Chinese>在自由落體時或開傘下隱藏自由落體高度計</Chinese>
             <Chinesesimp>在自由落体时或开伞下隐藏自由落体高度计。</Chinesesimp>
+            <Polish>Chowa wysokość i prędkość pokazywaną podczas swobodnego opadania lub spadania ze spadochronem.</Polish>
         </Key>
     </Package>
 </Project>

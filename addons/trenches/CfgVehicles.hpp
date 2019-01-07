@@ -1,4 +1,4 @@
-class CBA_Extended_EventHandlers;
+class CBA_Extended_EventHandlers_base;
 
 class CfgVehicles {
     class Man;
@@ -36,7 +36,7 @@ class CfgVehicles {
                     class GVAR(DigEnvelopeLarge): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeLarge);
                         condition = QUOTE(_player call FUNC(canDigTrench) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowLargeEnvelope));
-                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_large')])] call CBA_fnc_execNextFrame);
+                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_huge')])] call CBA_fnc_execNextFrame);
                     };
                     class GVAR(DigEnvelopeVehicle): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeVehicle);
@@ -55,12 +55,11 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnvelopeSmallDescription);
         model = QPATHTOF(data\trench_small.p3d);
         scope = 2;
-        scopeCurator = 2;
         GVAR(diggingDuration) = QGVAR(smallEnvelopeDigTime);
         GVAR(removalDuration) = QGVAR(smallEnvelopeRemovalTime);
         GVAR(placementData)[] = {2,3,0.35};
         GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
-        GVAR(boundingBoxOffset) = "0.16";
+        GVAR(boundingBoxOffset) = 0.16;
 
         editorCategory = "EdCat_Things";
         editorSubcategory = "EdSubcat_Military";
@@ -118,7 +117,15 @@ class CfgVehicles {
         };
 
         class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+        };
+
+        class AnimationSources {
+            class hide_trench {
+                source = "user";
+                animPeriod = 0.0001;
+                initPhase = 1;
+            };
         };
     };
     class ACE_envelope_big: ACE_envelope_small {
@@ -129,7 +136,7 @@ class CfgVehicles {
         GVAR(removalDuration) = QGVAR(bigEnvelopeRemovalTime);
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
-        GVAR(boundingBoxOffset) = "0.197";
+        GVAR(boundingBoxOffset) = 0.197;
 
         class GVAR(camouflagePositions) {
             center[] = {-0.4, 0.4, 0.2};
@@ -137,14 +144,14 @@ class CfgVehicles {
             right[] = {1.75, 0.2, 0.2};
         };
     };
-    class ACE_envelope_large: ACE_envelope_small {
+    class ACE_envelope_huge: ACE_envelope_small {
         displayName = CSTRING(EnvelopeLargeName);
         descriptionShort = CSTRING(EnvelopeLargeDescription);
         GVAR(diggingDuration) = QGVAR(largeEnvelopeDigTime);
         GVAR(removalDuration) = QGVAR(largeEnvelopeRemovalTime);
         GVAR(placementData)[] = {15,1.1,0.40};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
-        model = QPATHTOF(data\trench_large.p3d);
+        model = QPATHTOF(data\trench_huge.p3d);
         GVAR(boundingBoxOffset) = 0.557;
 
         class GVAR(camouflagePositions) {
@@ -162,7 +169,7 @@ class CfgVehicles {
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_vehicle.p3d);
-        GVAR(boundingBoxOffset) = "0.34";
+        GVAR(boundingBoxOffset) = 0.34;
 
         class GVAR(camouflagePositions) {};
         class Attributes {};
@@ -176,7 +183,7 @@ class CfgVehicles {
         GVAR(placementData)[] = {10,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_short.p3d);
-        GVAR(boundingBoxOffset) = "0.16";
+        GVAR(boundingBoxOffset) = 0.16;
 
         class GVAR(camouflagePositions) {
             right[] = {1.1,0.2,0.2};

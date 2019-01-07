@@ -7,6 +7,7 @@
             <Chinese>重生</Chinese>
             <Chinesesimp>重生</Chinesesimp>
             <Japanese>リスポン</Japanese>
+            <Polish>Odrodzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -286,6 +287,7 @@
             <Chinese>屍體移除計時器</Chinese>
             <Chinesesimp>尸体移除计时器</Chinesesimp>
             <Japanese>死体削除タイマー</Japanese>
+            <Polish>Czas usunięcia ciała</Polish>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>

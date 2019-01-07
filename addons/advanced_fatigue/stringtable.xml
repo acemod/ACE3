@@ -10,6 +10,7 @@
             <Italian>ACE Fatica Avanzata</Italian>
             <Korean>ACE 고급 피로도</Korean>
             <French>ACE Fatigue Avancée</French>
+            <Polish>ACE Zaawansowane Zmęczenie</Polish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
             <English>Performance Factor</English>
@@ -117,6 +118,7 @@
             <Chinese>抖動因素</Chinese>
             <French>Facteur de stabilisation</French>
             <Italian>Fattore di oscillazione</Italian>
+            <Polish>Czynnik kołysania</Polish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
             <English>Influences the amount of weapon sway. Higher means more sway.</English>
@@ -125,6 +127,7 @@
             <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
             <French>Influence les mouvements de l'arme, une valeur plus élevée signifie plus de mouvements</French>
             <Italian>Influenza l'ammontare di oscillazione dell'arma. Maggiore significa più oscillazione.</Italian>
+            <Polish>Wpływa na poziom kołysania broni. Większa ilość znaczy większe kołysanie.</Polish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>

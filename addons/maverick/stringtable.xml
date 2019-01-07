@@ -10,6 +10,7 @@
                 <Chinese>AGM-65"小牛"飛彈L型，雷射導引對地導彈</Chinese>
                 <Chinesesimp>AGM-65"小牛"空地L型，雷射导引对地导弹</Chinesesimp>
                 <Korean>AGM-65 Maverick L, 레이저 유도 대지 미사일</Korean>
+                <Polish>AGM-65 Maverick L, Kierowany laserowo pocisk powietrze-ziemia</Polish>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x1">
                 <English>AGM-65 Maverick L [ACE]</English>
@@ -19,6 +20,7 @@
                 <Chinese>AGM-65"小牛"飛彈L型 [ACE]</Chinese>
                 <Chinesesimp>AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Korean>AGM-65 Maverick L [ACE]</Korean>
+                <Polish>AGM-65 Maverick L [ACE]</Polish>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x2">
                 <English>2x AGM-65 Maverick L [ACE]</English>
@@ -28,6 +30,7 @@
                 <Chinese>2x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
                 <Chinesesimp>2x AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Korean>2x AGM-65 Maverick L [ACE]</Korean>
+                <Polish>2x AGM-65 Maverick L [ACE]</Polish>
             </Key>
             <Key ID="str_ace_maverick_l_mag_x3">
                 <English>3x AGM-65 Maverick L [ACE]</English>
@@ -37,6 +40,7 @@
                 <Chinese>3x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
                 <Chinesesimp>3x AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Korean>3x AGM-65 Maverick L [ACE]</Korean>
+                <Polish>3x AGM-65 Maverick L [ACE]</Polish>
             </Key>
             <Key ID="str_ace_maverick_l_mag_short">
                 <English>Laser Guided</English>
@@ -46,6 +50,7 @@
                 <Chinese>雷射導引</Chinese>
                 <Chinesesimp>雷射导引</Chinesesimp>
                 <Korean>레이저 유도</Korean>
+                <Polish>Kierowany laserowo</Polish>
             </Key>
             <Key ID="str_ace_maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
@@ -55,6 +60,7 @@
                 <Chinesesimp>Kh-25ML，镭射导引空地导弹</Chinesesimp>
                 <Japanese>Kh-25ML、レーザー誘導対地ミサイル</Japanese>
                 <Italian>Kh-25ML, a Guida Laser Missile Aria-Terra</Italian>
+                <Polish>Kh-25ML, Kierowany laserowo pocisk powietrze-ziemia</Polish>
             </Key>
             <Key ID="str_ace_maverick_kh25ml_mag_x1">
                 <English>1x Kh-25ML [ACE]</English>
@@ -65,6 +71,7 @@
                 <Chinesesimp>1x Kh-25ML镭射空地导弹 [ACE]</Chinesesimp>
                 <Japanese>1x Kh-25ML [ACE]</Japanese>
                 <Italian>1x Kh-25ML [ACE]</Italian>
+                <Polish>1x Kh-25ML [ACE]</Polish>
             </Key>
         </Container>
         <Container name="weapons">
@@ -76,6 +83,7 @@
                 <Chinese>AGM-65"小牛"空地L型</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型</Chinesesimp>
                 <Korean>AGM-65 Maverick L</Korean>
+                <Polish>AGM-65 Maverick L</Polish>
             </Key>
             <Key ID="str_ace_maverick_kh25ml">
                 <English>Kh-25ML</English>
@@ -86,6 +94,7 @@
                 <Chinesesimp>Kh-25ML镭射空地导弹</Chinesesimp>
                 <Japanese>Kh-25ML</Japanese>
                 <Italian>Kh-25ML</Italian>
+                <Polish>Kh-25ML</Polish>
             </Key>
         </Container>
     </Package>

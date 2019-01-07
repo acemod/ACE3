@@ -24,13 +24,16 @@ PREP(placeConfirm);
 PREP(placeTrench);
 PREP(removeCamouflage);
 PREP(removeTrench);
+PREP(getSurfaceTexturePath);
 
-if ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]])) then {
-    #ifdef DISABLE_COMPILE_CACHE
-        DFUNC(getSurfaceTexturePath) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,getSurfaceTexturePathNative).sqf);
-    #else
-        [QPATHTOF(functions\DOUBLES(fnc,getSurfaceTexturePathNative).sqf), QFUNC(getSurfaceTexturePath)] call CBA_fnc_compileFunction;
-    #endif
+/* @todo
+if ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities", []])) then {
+#ifdef DISABLE_COMPILE_CACHE
+    DFUNC(getSurfaceTexturePath) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,getSurfaceTexturePathNative).sqf);
+#else
+    [QPATHTOF(functions\DOUBLES(fnc,getSurfaceTexturePathNative).sqf), QFUNC(getSurfaceTexturePath)] call CBA_fnc_compileFunction;
+#endif
 } else {
     PREP(getSurfaceTexturePath);
 };
+*/

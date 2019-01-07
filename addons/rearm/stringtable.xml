@@ -9,11 +9,12 @@
             <Chinesesimp>整装</Chinesesimp>
             <Japanese>再武装</Japanese>
             <French>Réarmement</French>
+            <Polish>Dozbrajanie</Polish>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
             <German>Aufmunitioniereinstellungen</German>
-            <Polish>Ustawienia przezbrajania</Polish>
+            <Polish>Ustawienia dozbrajania</Polish>
             <Russian>Настройки перевооружения</Russian>
             <Portuguese>Ajustes de rearme</Portuguese>
             <Czech>Nastavení přezbrojení</Czech>
@@ -28,7 +29,7 @@
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
             <English>This module allows you to tweak rearm system settings.</English>
             <German>Mittels diesem Modul kann das Aufmunitioniersystem angepasst werden.</German>
-            <Polish>Ten moduł pozwala dostosować ustawienia przezbrajania.</Polish>
+            <Polish>Ten moduł pozwala dostosować ustawienia dozbrajania.</Polish>
             <Russian>Этот модуль позволяет изменить настройки системы перевооружения.</Russian>
             <Portuguese>Este módulo permite que você ajuste o sistema de rearme.</Portuguese>
             <Czech>Tento modul umožňuje upravovat systém přezbrojení.</Czech>
@@ -43,7 +44,7 @@
         <Key ID="STR_ACE_Rearm_RearmSettings_level_DisplayName">
             <English>Rearm Amount</English>
             <German>Aufmunitioniermenge</German>
-            <Polish>Szybkość przezbrajania</Polish>
+            <Polish>Szybkość dozbrajania</Polish>
             <Russian>Количество вооружения</Russian>
             <Portuguese>Quantidade de rearme</Portuguese>
             <Czech>Rychlost přezbrojení</Czech>
@@ -58,7 +59,7 @@
         <Key ID="STR_ACE_Rearm_RearmSettings_level_Description">
             <English>How fast should a vehicle be rearmed?</English>
             <German>Wie schnell soll ein Fahrzeug aufmunitioniert werden?</German>
-            <Polish>Jak szybko pojazd zostanie przezbrojony?</Polish>
+            <Polish>Jak szybko pojazd zostanie dozbrajania?</Polish>
             <Russian>Как быстро техника должна перевооружаться?</Russian>
             <Portuguese>Quão rápido o veículo deve ser rearmado?</Portuguese>
             <Czech>Jak rychle bude vozidlo přezbrojeno?</Czech>
@@ -228,7 +229,7 @@
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
             <German>Aufmunitionieren</German>
-            <Polish>Przezbrój</Polish>
+            <Polish>Dozbrój</Polish>
             <Russian>Перевооружить</Russian>
             <Portuguese>Rearmar</Portuguese>
             <Czech>Přezbrojit</Czech>
@@ -243,7 +244,7 @@
         <Key ID="STR_ACE_Rearm_RearmAction">
             <English>Rearming %1 with %2...</English>
             <German>Munitioniere %1 auf mit %2...</German>
-            <Polish>Przezbrajanie %1 przy pomocy %2...</Polish>
+            <Polish>Dozbrajania %1 przy pomocy %2...</Polish>
             <Russian>Перевооружается %1 снарядами %2...</Russian>
             <Portuguese>Rearmando %1 com %2...</Portuguese>
             <Czech>Přezbrojuji %1 za pomoci %2...</Czech>
@@ -258,7 +259,7 @@
         <Key ID="STR_ACE_Rearm_BasicRearmAction">
             <English>Rearming %1...</English>
             <German>Munitioniere %1 auf...</German>
-            <Polish>Przezbrajanie %1...</Polish>
+            <Polish>Dozbrajania %1...</Polish>
             <Russian>Перевооружается %1...</Russian>
             <Portuguese>Rearmando %1...</Portuguese>
             <Czech>Přezbrojuji %1...</Czech>
@@ -362,7 +363,7 @@
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
             <German>%3 wurde mit %1 Patronen %2 aufmunitioniert</German>
-            <Polish>Przezbrojono %1 pocisków %2 na %3</Polish>
+            <Polish>Dozbrajania %1 pocisków %2 na %3</Polish>
             <Russian>Перевооружено %1 снарядов %2 на %3</Russian>
             <Portuguese>Rearmando %1 cartuchos de %2 em %3</Portuguese>
             <Czech>Přezbrojeno % nábojů z %2 u %3</Czech>
@@ -588,11 +589,15 @@
             <English>Rearm Cargo</English>
             <German>Munitionsvorrat</German>
             <Japanese>再武装用カーゴ</Japanese>
+            <Polish>Ładunek Dozbrajający</Polish>
+            <Italian>Rifornimento Munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenDesc">
             <English>The cargo for rearming (-1 disable)</English>
             <German>Der Munitionsvorrat, zum Aufmunitionieren von Fahrzeugen (-1 deaktiviert)</German>
             <Japanese>カーゴからの再武装 (-1 で無効化)</Japanese>
+            <Polish>Ładunek do dozbrajania (-1 wyłączy)</Polish>
+            <Italian>Il rifornimento delle munizioni (-1 per disabilitarlo)</Italian>
         </Key>
     </Package>
 </Project>

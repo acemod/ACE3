@@ -9,6 +9,7 @@
             <Chinese>ACE夜視鏡</Chinese>
             <Chinesesimp>ACE夜视镜</Chinesesimp>
             <French>ACE Vision Nocturne</French>
+            <Polish>ACE Noktowizja</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
             <English>NV Goggles (Gen1)</English>
@@ -254,6 +255,7 @@
             <Chinese>夜視鏡霧氣程度</Chinese>
             <Chinesesimp>夜视镜雾气程度</Chinesesimp>
             <French>Épaisseur du brouillard (JVN)</French>
+            <Polish>Skala Mgły NVG</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_Description">
             <English>Fog is used to limit visibility.</English>
@@ -263,6 +265,7 @@
             <Chinese>透過霧氣來縮減夜視鏡的可視距離</Chinese>
             <Chinesesimp>透过雾气来缩减夜视镜的可视距离。</Chinesesimp>
             <French>Le brouillard est utilisé pour limiter la visibilité</French>
+            <Polish>Mgła jest wykorzystywana do ograniczenia widoczności.</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
             <English>NVG Effect Scale</English>
@@ -272,6 +275,7 @@
             <Chinese>夜視鏡效果程度</Chinese>
             <Chinesesimp>夜视镜效果程度</Chinesesimp>
             <French>Intensité des effets</French>
+            <Polish>Skala Efektów NVG</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
@@ -281,6 +285,7 @@
             <Chinese>調整模糊與亮度的效果。[設值為0會關閉所有夜視鏡的特殊效果]</Chinese>
             <Chinesesimp>调整模糊与亮度的效果。[设值为0会关闭所有夜视镜的特殊效果]</Chinesesimp>
             <French>Effets de flou et de luminosité [Règler cette option sur 0 désactivera TOUS les effets de vision nocturne]</French>
+            <Polish>Efekty rozmazania i jasności [Ustawienie na 0 wyłączy WSZYSTKIE efekty noktowizji]</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
@@ -290,6 +295,7 @@
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
             <French>Flou de visée</French>
             <Italian>Blur durante la mira</Italian>
+            <Polish>Rozmazanie podczas celowania z narządów celowniczych</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
             <English>NVG Noise Scale</English>
@@ -299,6 +305,7 @@
             <Japanese>暗視装置のノイズ度</Japanese>
             <French>Intensité du bruit (JVN)</French>
             <Italian>Fattore di Disturbo del NVG</Italian>
+            <Polish>Skala Szumu NVG</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
@@ -308,6 +315,7 @@
             <Japanese>暗視装置を使用時に起きる画像ノイズの強度です</Japanese>
             <French>Intensité du bruit de l'image lorsque vous portez des JVN</French>
             <Italian>Intensità del disturbo dell'immagine quando i NVG sono equipaggiati</Italian>
+            <Polish>Intensywność efektu szumu podczas noszenia gogli noktowizyjnych</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
@@ -316,6 +324,7 @@
             <Chinese>快門效果</Chinese>
             <French>Effets d'obturateur</French>
             <Italian>Effetti lampeggianti</Italian>
+            <Polish>Efekt Shutter</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
@@ -324,6 +333,7 @@
             <Chinese>槍開火時瞬間產生快門效果</Chinese>
             <French>Effets d'obturateur à rideau dû aux flashs du canon</French>
             <Italian>Effetto lampeggiante dato dal lampo dello sparo</Italian>
+            <Polish>Efekt rolling shutter z błysków wylotowych</Polish>
         </Key>
     </Package>
 </Project>
