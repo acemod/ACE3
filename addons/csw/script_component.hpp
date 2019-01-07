@@ -2,10 +2,10 @@
 #define COMPONENT_BEAUTIFIED Crew-Served Weapons
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define FAST_PROGRESSBARS
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
-// #define ENABLE_PERFORMANCE_COUNTERS
+#define FAST_PROGRESSBARS
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_CSW
     #define DEBUG_MODE_FULL

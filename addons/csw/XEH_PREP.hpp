@@ -1,5 +1,7 @@
 TRACE_1("",QUOTE(ADDON));
 
+PREP(ai_handleFired);
+
 PREP(assemble_canDeployTripod);
 PREP(assemble_canDeployWeapon);
 PREP(assemble_canPickupTripod);

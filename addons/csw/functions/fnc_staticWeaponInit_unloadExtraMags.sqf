@@ -71,12 +71,14 @@ private _containerMagazineCount = [];
 
 
 TRACE_1("Remove all loaded magazines",_magsToRemove);
-{ _staticWeapon removeMagazinesTurret _x; } forEach _magsToRemove;
+{
+    _staticWeapon removeMagazinesTurret _x;
+    if ((_loadedMagazineInfo select [0,2]) isEqualTo _x) then {
+        TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
+        _staticWeapon addMagazineTurret _loadedMagazineInfo;
+    };
+} forEach _magsToRemove;
 
-TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
-if (!(_loadedMagazineInfo isEqualTo [])) then {
-    _staticWeapon addMagazineTurret _loadedMagazineInfo;
-};
 
 if (_storeExtraMagazines) then {
     TRACE_1("saving extra mags to container",_containerMagazineCount);

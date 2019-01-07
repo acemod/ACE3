@@ -23,6 +23,10 @@ private _proxyWeapon = getText(configFile >> "CfgVehicles" >> _typeOf >> "ace_cs
 private _enableAmmoHandling = GVAR(ammoHandling) || GVAR(defaultAssemblyMode);
 TRACE_6("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig,_proxyWeapon,_enableAmmoHandling);
 
+if (_configEnabled) then {
+    _staticWeapon addEventHandler ["Fired", LINKFUNC(ai_handleFired)];
+};
+
 if (_configEnabled && {local _staticWeapon}) then { // need to wait a frame to allow setting object vars during assembly
     [FUNC(staticWeaponInit_unloadExtraMags), [_staticWeapon]] call CBA_fnc_execNextFrame;
     
