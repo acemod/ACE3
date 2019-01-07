@@ -47,6 +47,7 @@ This lists all the maintainers responsible for project management and the overal
 
 ## Maintainers
 
+- [Alganthe](https://github.com/alganthe){:target="_blank"}
 - [TheMagnetar](https://github.com/TheMagnetar){:target="_blank"}
   - Scripting
 - [Garth "L-H" de Wet](https://github.com/CorruptedHeart){:target="_blank"}

@@ -88,11 +88,11 @@ if (!isServer) then {
     if (count _missingAddons > 0) then {
         _missingAddon = true;
 
-        private _error = format ["[ACE] %1: ERROR missing addon(s): ", _client];
+        private _error = format ["[ACE] %1: ERROR client missing addon(s): ", _client];
         {
             _error = _error + format ["%1, ", _x];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _missingAddons;
 
         _error = _error call _fnc_cutComma;
@@ -105,11 +105,11 @@ if (!isServer) then {
     if (count _missingAddonsServer > 0) then {
         _missingAddonServer = true;
 
-        private _error = format ["[ACE] %1: ERROR missing server addon(s): ", _client];
+        private _error = format ["[ACE] %1: ERROR server missing addon(s): ", _client];
         {
             _error = _error + format ["%1, ", _x];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _missingAddonsServer;
 
         _error = _error call _fnc_cutComma;
@@ -122,11 +122,11 @@ if (!isServer) then {
     if (count _oldVersionsClient > 0) then {
         _oldVersionClient = true;
 
-        private _error = format ["[ACE] %1: ERROR outdated addon(s): ", _client];
+        private _error = format ["[ACE] %1: ERROR outdated client addon(s): ", _client];
         {
             _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _oldVersionsClient;
 
         _error = _error call _fnc_cutComma;
@@ -143,7 +143,7 @@ if (!isServer) then {
         {
             _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _oldVersionsServer;
 
         _error = _error call _fnc_cutComma;
