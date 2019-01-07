@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_trench", "_unit", ["_switchingDigger", false]];
+params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
 TRACE_2("removeTrench", _trench, _unit);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
@@ -44,13 +44,13 @@ if (isNil "_vecDirAndUp") then {
    _vecDirAndUp = [vectorDir _trench, vectorUp _trench];
 };
 
-[_trench, _unit, true, true] call FUNC(handleDiggingServerSide);
+[QGVAR(handleDiggingServer), [_trench, _unit, true, true]] call CBA_fnc_serverEvent;
 
 // Create progress bar
 private _fnc_onFinish = {
    (_this select 0) params ["_unit", "_trench"];
    _trench setVariable [QGVAR(diggingType), nil, true];
-   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
+   [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
    // Remove trench
    deleteVehicle _trench;
@@ -62,7 +62,7 @@ private _fnc_onFailure = {
    (_this select 0) params ["_unit", "_trench"];
    _trench setVariable [QGVAR(digging), false, true];
    _trench setVariable [QGVAR(diggingType), nil, true];
-   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
+   [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
    // Save progress global
    private _progress = _trench getVariable [QGVAR(progress), 0];

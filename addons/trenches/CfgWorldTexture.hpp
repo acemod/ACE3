@@ -67,14 +67,14 @@ class CfgWorldTexture: CfgWorlds {
 
     //Chernarus Summer
     class Chernarus_Summer {
-      surfaceTextureBasePath = "ca\CHERNARUS\data";
-      suffix = "detail_co.paa";
+        surfaceTextureBasePath = "ca\chernarus_summer\data";
+        suffix = "detail_co.paa";
         camouflageObjects[] = {"ca\plants2\clutter\c_weed3.p3d"};
     };
 
     //Chernarus Winter
     class Chernarus_Winter {
-        surfaceTextureBasePath = "\chernarus_winter\data";
+        surfaceTextureBasePath = "CUP\Terrains\cup_terrains_maps_chernarus_winter\data";
         suffix = "detail_co.paa";
         camouflageObjects[] = {};
     };
@@ -380,5 +380,12 @@ class CfgWorldTexture: CfgWorlds {
         surfaceTextureBasePath = "ZI\Tembelan\data";
         suffix = "_co.paa";
         camouflageObjects[] = {};
+    };
+
+    //Napf Winter
+    class NapfWinter {
+      surfaceTextureBasePath = "momo\NapfWinter\data";
+      suffix = "co.paa";
+      camouflageObjects[] = {};
     };
 };

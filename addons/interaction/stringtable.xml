@@ -9,6 +9,7 @@
             <Chinesesimp>互动</Chinesesimp>
             <Japanese>インタラクション</Japanese>
             <Korean>상호작용</Korean>
+            <Polish>Interakcja</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -846,6 +847,7 @@
             <Japanese>ひっくり返す</Japanese>
             <Chinese>拋</Chinese>
             <Italian>Gira</Italian>
+            <Polish>Przewróć</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -951,6 +953,7 @@
             <Chinese>關閉負面評價</Chinese>
             <Chinesesimp>关闭负面评价</Chinesesimp>
             <Korean>부정행위 가중치 사용안함</Korean>
+            <Polish>Wyłącz negatywną ocenę</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
@@ -960,6 +963,7 @@
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价? 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
             <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 높은 레이팅을 가질때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
+            <Polish>Czy powinni gracze otrzymywać negatywną ocenę? Kiedy aktywowani gracze otrzymuję wyłącznie pozytywną ocenę, która zapobiega ognia przyjaznego SI podczas niszczenia przyjaznego wyposażenia lub zabijaniu członków drużyny.</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -1090,6 +1094,7 @@
             <Korean>시체 끌기</Korean>
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
+            <Polish>Wyciągnij ciało</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_SmashWindshield">
             <English>Smash windshield</English>
@@ -1100,6 +1105,7 @@
             <Polish>Wyłam szybę</Polish>
             <Hungarian>Szélvédő széttörése</Hungarian>
             <Japanese>フロントガラスを破る</Japanese>
+            <Italian>Sfonda il parabrezza</Italian>
         </Key>
     </Package>
 </Project>

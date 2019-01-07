@@ -84,6 +84,7 @@
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
             <Italian>Display su schermo per il controllo delle piastrine</Italian>
+            <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
         </Key>
     </Package>
 </Project>

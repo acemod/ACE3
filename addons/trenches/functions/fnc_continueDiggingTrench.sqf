@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Trench <OBJECT>
  * 1: Unit <OBJECT>
+ * 2: SwitchingDigger <BOOLEAN>
  *
  * Return Value:
  * None
@@ -16,7 +17,7 @@
  * Public: No
  */
 
-params ["_trench", "_unit", ["_switchingDigger", false]];
+params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
 TRACE_2("continueDiggingTrench",_trench,_unit);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
@@ -43,14 +44,14 @@ if (isNil "_vecDirAndUp") then {
    _vecDirAndUp = [vectorDir _trench, vectorUp _trench];
 };
 
-[_trench, _unit, true, true] call FUNC(handleDiggingServerSide);
+[QGVAR(handleDiggingServer), [_trench, _unit, true, true]] call CBA_fnc_serverEvent;
 
 // Create progress bar
 private _fnc_onFinish = {
    (_this select 0) params ["_unit", "_trench"];
    _trench setVariable [QGVAR(digging), false, true];
    _trench setVariable [QGVAR(diggingType), nil, true];
-   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
+   [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
    // Save progress global
    _trench setVariable [QGVAR(progress), 1, true];
@@ -66,7 +67,7 @@ private _fnc_onFailure = {
    // Save progress global
    private _progress = _trench getVariable [QGVAR(progress), 0];
    _trench setVariable [QGVAR(progress), _progress, true];
-   [_trench, _unit, false, true] call FUNC(handleDiggingServerSide);
+   [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
    // Reset animation
    [_unit, "", 1] call EFUNC(common,doAnimation);
@@ -98,7 +99,7 @@ if (_actualProgress == 0) then {
    _args params ["_trench", "_unit", "_digTime", "_vecDirAndUp"];
    private _actualProgress = _trench getVariable [QGVAR(progress), 0];
    private _diggerCount =count (_trench getVariable [QGVAR(diggingPlayers), []]);
-
+   systemChat str(_actualProgress);
    if (
       !(_trench getVariable [QGVAR(digging), false]) ||
       (_diggerCount <= 0) ||

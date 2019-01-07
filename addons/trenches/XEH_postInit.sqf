@@ -3,6 +3,7 @@
 if (isServer) then {
     // Cancel dig on hard disconnection. Function is identical to killed
     addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+    [QGVAR(handleDiggingServer), {_this call FUNC(handleDiggingServer)}] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};

@@ -70,6 +70,18 @@ class CfgWeapons {
         };
     };
 
+    // P90 (1.86)
+    class SMG_03_TR_BASE: Rifle_Base_F {
+        ACE_barrelTwist = 228.6; // 1:9 inch twist
+        ACE_barrelLength = 407;
+        ACE_twistDirection = 1;
+        modes[] = {"Single"};
+    };
+    class SMG_03C_BASE: SMG_03_TR_BASE {
+        ACE_barrelLength = 264;
+        modes[] = {"Single", "FullAuto"};
+    };
+    
     // Noreen "Bad News" ULR
     class DMR_02_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {

@@ -106,6 +106,16 @@
 
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QPATHTOF(folder\__PREP__.sqf)
 
+#ifdef DISABLE_COMPILE_CACHE
+   #define PREP_W_INTERCEPT(fncName,fncNameIntercept,capabilityString) if (capabilityString in (uiNamespace getVariable ["Intercept_cba_capabilities", []])) then { \
+       DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncNameIntercept).sqf) \
+   } else { PREP(fncName); }
+#else
+   #define PREP_W_INTERCEPT(fncName,fncNameIntercept,capabilityString) if (capabilityString in (uiNamespace getVariable ["Intercept_cba_capabilities", []])) then { \
+       [QPATHTOF(functions\DOUBLES(fnc,fncNameIntercept).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction \
+   } else { PREP(fncName); }
+#endif
+
 #define ACE_isHC (!hasInterface && !isDedicated)
 
 #define IDC_STAMINA_BAR 193
