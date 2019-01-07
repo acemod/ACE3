@@ -85,7 +85,7 @@ class CfgVehicles {
                 class GVAR(helpDigging) {
                     displayName = CSTRING(HelpDigging);
                     condition = QUOTE(_this call FUNC(canHelpDiggingTrench));
-                    statement = QUOTE(_this call FUNC(handleDiggingServerSide));
+                    statement = QUOTE(_this call FUNC(handleDiggingServer));
                 };
                 class GVAR(remove) {
                     displayName = CSTRING(removeEnvelope);
