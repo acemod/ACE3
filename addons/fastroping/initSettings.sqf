@@ -2,7 +2,7 @@
 
 [
     QGVAR(requireRopeItems), "CHECKBOX",
-    [LSTRING(requireRopeItems)],
+    [LSTRING(setting_requireRopeItems_displayName)],
     ["ACE Uncategorized", QUOTE(COMPONENT_BEAUTIFIED)],
     false, // default value
     true, // isGlobal

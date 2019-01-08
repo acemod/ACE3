@@ -191,5 +191,8 @@
             <English>Rope 36.6 meters</English>
             <French>Corde 36.6 mètres</French>
         </Key>
+        <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
+            <English>Require rope item to deploy</English>
+        </Key>
     </Package>
 </Project>
