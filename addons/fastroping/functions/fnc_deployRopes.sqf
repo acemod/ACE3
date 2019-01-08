@@ -5,71 +5,39 @@
  *
  * Arguments:
  * 0: The helicopter itself <OBJECT>
+ * 1: The unit that called the action (may be remote) <OBJECT>
+ * 2: Rope classname <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_vehicle, _ropelength] call ace_fastroping_fnc_deployRopes
+ * [vehicle player, player, "ACE_rope36"] call ace_fastroping_fnc_deployRopes
  *
  * Public: No
  */
-params ["_vehicle", "_ropelength"];
+params ["_vehicle", "_player", "_ropeClass"];
+TRACE_3("deployRopes",_vehicle,_player,_ropeClass);
 
 private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
 private _ropeOrigins = getArray (_config >> QGVAR(ropeOrigins));
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
+
+private _ropeLength = getNumber (configfile >> "CfgWeapons" >> _ropeClass >> QGVAR(ropeLength));
+TRACE_3("",_ropeClass,_ropeLength,GVAR(requireRopeItems));
+if (GVAR(requireRopeItems)) then {
+    if (_ropeClass in (items _player)) then {
+        _player removeItem _ropeClass;
+    } else {
+        _vehicle removeItem _ropeClass;
+    };
+};
+
 {
     private _ropeOrigin = _x;
     private _hook = QGVAR(helper) createVehicle [0, 0, 0];
-    switch (_ropelength) do {
-        case 12: {
-            _ropelength = 12.2;
-            if ("ACE_rope12" in (backpackItems ACE_player)) then {
-                ACE_player removeItemFromBackpack "ACE_rope12";
-            } else {
-                _vehicle removeItem "ACE_rope12";
-            };
-        };
-        case 15:{
-            _ropelength = 15.2;
-            if ("ACE_rope15" in (backpackitems ACE_player)) then {
-                ACE_player removeItemFromBackpack "ACE_rope15";
-            } else {
-                _vehicle removeItem "ACE_rope15";
-            };
-        };
-        case 18: {
-            _ropelength = 18.3;
-            if ("ACE_rope18" in (backpackItems ACE_player)) then {
-                ACE_player removeItemFromBackpack "ACE_rope18";
-            } else {
-                _vehicle removeItem "ACE_rope18";
-            };
-        };
-        case 27: {
-            _ropelength = 27.4;
-            if ("ACE_rope27" in (backpackItems ACE_player)) then {
-                ACE_player removeItemFromBackpack "ACE_rope27";
-            } else {
-                _vehicle removeItem "ACE_rope27";
-            };
-        };
-        case 36: {
-            _ropelength = 36.6;
-            if ("ACE_rope36" in (backpackitems ACE_player)) then {
-                ACE_player removeItemFromBackpack "ACE_rope36";
-            } else {
-                _vehicle removeItem "ACE_rope36";
-            };
-        };
-
-        default {
-
-        };
-    };
     _hook allowDamage false;
     if (_ropeOrigin isEqualType []) then {
         _hook attachTo [_hookAttachment, _ropeOrigin];
@@ -98,3 +66,4 @@ private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
 
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 _vehicle setVariable [QGVAR(deploymentStage), 3, true];
+_vehicle setVariable [QGVAR(ropeLength), _ropeLength, true];

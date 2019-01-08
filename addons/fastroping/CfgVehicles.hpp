@@ -40,62 +40,48 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
-                condition = QUOTE([vehicle _player] call FUNC(canPrepareFRIES));
-                statement = QUOTE([vehicle _player] call FUNC(prepareFRIES));
-                showDisabled = 0;
+                condition = QUOTE([_target] call FUNC(canPrepareFRIES));
+                statement = QUOTE([_target] call FUNC(prepareFRIES));
             };
             class ACE_stowFRIES {
                 displayName = CSTRING(Interaction_stowFRIES);
-                condition = QUOTE([vehicle _player] call FUNC(canStowFRIES));
-                statement = QUOTE([vehicle _player] call FUNC(stowFRIES));
-                showDisabled = 0;
+                condition = QUOTE([_target] call FUNC(canStowFRIES));
+                statement = QUOTE([_target] call FUNC(stowFRIES));
             };
             class ACE_deployRopes12 {
                 displayName = CSTRING(Interaction_deployRopes12);
-                condition = QUOTE([_player, vehicle _player] call FUNC(canDeployRopes) && (('ACE_rope12' in (backpackItems _player)) || ('ACE_rope12' in (ItemCargo vehicle _player))));
-                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 12]] call CBA_fnc_serverEvent);
-                showDisabled = 0;
-                priority = 1;
+                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope12')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope12'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes15 {
                 displayName = CSTRING(Interaction_deployRopes15);
-                condition = QUOTE([_player, vehicle _player] call FUNC(canDeployRopes) && (('ACE_rope15' in (backpackItems _player)) || ('ACE_rope15' in (ItemCargo vehicle _player))));
-                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 15]] call CBA_fnc_serverEvent);
-                showDisabled = 0;
-                priority = 1;
+                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope15')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope15'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes18 {
                 displayName = CSTRING(Interaction_deployRopes18);
-                condition = QUOTE([_player, vehicle _player] call FUNC(canDeployRopes) && (('ACE_rope18' in (backpackItems _player)) || ('ACE_rope18' in (ItemCargo vehicle _player))));
-                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 18]] call CBA_fnc_serverEvent);
-                showDisabled = 0;
-                priority = 1;
+                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope18')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope18'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes27 {
                 displayName = CSTRING(Interaction_deployRopes27);
-                condition = QUOTE([_player, vehicle _player] call FUNC(canDeployRopes) && (('ACE_rope27' in (backpackItems _player)) || ('ACE_rope27' in (ItemCargo vehicle _player))));
-                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 27]] call CBA_fnc_serverEvent);
-                showDisabled = 0;
-                priority = 1;
+                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope27')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope27'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes36 {
                 displayName = CSTRING(Interaction_deployRopes36);
-                condition = QUOTE([_player, vehicle _player] call FUNC(canDeployRopes) && (('ACE_rope36' in (backpackItems _player)) || ('ACE_rope36' in (ItemCargo vehicle _player))));
-                statement = QUOTE([QGVAR(deployRopes), [vehicle _player, 36]] call CBA_fnc_serverEvent);
-                showDisabled = 0;
-                priority = 1;
+                condition = QUOTE([ARR_4(_target, _player, 'ACE_rope36', true)] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope36'))]] call CBA_fnc_serverEvent);
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = [vehicle _player] call FUNC(canCutRopes);
-                statement = [vehicle _player] call FUNC(cutRopes);
-                showDisabled = 0;
+                condition = [_target] call FUNC(canCutRopes);
+                statement = [_target] call FUNC(cutRopes);
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
-                condition = [_player, vehicle _player] call FUNC(canFastRope);
-                statement = [_player, vehicle _player] call FUNC(fastRope);
-                showDisabled = 0;
+                condition = [_player, _target] call FUNC(canFastRope);
+                statement = [_player, _target] call FUNC(fastRope);
             };
         };
     };
