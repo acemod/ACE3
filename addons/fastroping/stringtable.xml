@@ -170,6 +170,7 @@
         </Key>
         <Key ID="STR_ACE_Fastroping_descriptionShort">
             <English>Used to do deploy ropes from a compatibile helicopter</English>
+            <French>Utilisé pour déployer des cordes depuis un hélicoptère compatible</French>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
             <English>Rope 12.2 meters</English>
@@ -193,6 +194,7 @@
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
+            <French>Exiger une corde pour déployer</French>
         </Key>
     </Package>
 </Project>
