@@ -302,6 +302,14 @@ class ACE_Settings {
         values[] = {CSTRING(useSelection), CSTRING(useRadial), ECSTRING(common,Disabled)};
         isClientSettable = 1;
     };
+    class GVAR(menuTypeStyleSelf) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(menuTypeDisplaySelf);
+        description = CSTRING(menuTypeDescriptionSelf);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
     class GVAR(delayUnconCaptive) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_delayUnconCaptive_DisplayName);
