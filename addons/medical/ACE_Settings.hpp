@@ -299,7 +299,15 @@ class ACE_Settings {
         description = CSTRING(menuTypeDescription);
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
+        values[] = {CSTRING(useSelection), CSTRING(useRadial), ECSTRING(common,Disabled)};
+        isClientSettable = 1;
+    };
+    class GVAR(menuTypeStyleSelf) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(menuTypeDisplaySelf);
+        description = CSTRING(menuTypeDescriptionSelf);
+        typeName = "BOOL";
+        value = 1;
         isClientSettable = 1;
     };
     class GVAR(delayUnconCaptive) {
