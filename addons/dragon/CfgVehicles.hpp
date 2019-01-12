@@ -1,7 +1,5 @@
 class MainTurret;
 class CfgVehicles {
-    class EGVAR(csw,baseTripod);
-    
     class LandVehicle;
     
     class StaticWeapon : LandVehicle {
@@ -18,7 +16,16 @@ class CfgVehicles {
         };
     };
     
-    class ACE_M47_Dragon_Static_Base : StaticMGWeapon {
+    class AT_01_base_F: StaticMGWeapon {
+        class Turrets : Turrets  {
+            class MainTurret : MainTurret {
+                class ViewOptics: ViewOptics {
+                };
+            };
+        };
+    };
+    
+    class ACE_M47_Dragon_Static_Base : AT_01_base_F {
         features = "Balls";
         scope = 0;
         displayName = "ACE M47 Dragon";
@@ -41,53 +48,53 @@ class CfgVehicles {
             {
                 optics = 1;
                 turretInfoType = "RscWeaponEmpty";
-                gunnerOpticsModel = PATHTOF(models\optics_m47.p3d);
+                gunnerOpticsModel = QPATHTOF(models\optics_m47.p3d);
                 minElev = -60;
                 maxElev = 0;
                 weapons[] = {};
                 magazines[] = {};
                 
                 gunnerAction = "gunner_static_low01";
-                gunnergetInAction = "";
-                gunnergetOutAction = "";
+				gunnergetInAction = "";
+				gunnergetOutAction = "";
                 
                 discreteDistance[] = {};
-                discreteDistanceInitIndex = 0;
+				discreteDistanceInitIndex = 0;
                 
                 class OpticsIn 
                 {
                     class Wide: ViewOptics
                     {
-                        initFov = 0.015;
-                        minFov = 0.015;
-                        maxFov = 0.015;
-                        gunnerOpticsModel = PATHTOF(models\optics_m47.p3d);
+                        initFov = 0.055;
+                        minFov = 0.055;
+                        maxFov = 0.055;
+                        gunnerOpticsModel = QPATHTOF(models\optics_m47.p3d);
                         gunnerOutOpticsModel = "\A3\weapons_f\reticle\optics_empty";
                         gunnerOpticsEffect[] = {"TankGunnerOptics1","OpticsBlur2","OpticsCHAbera2"};
                     };
                 };
                 
-                displayName = "Balls in your face";
+				displayName = "Balls in your face";
                 
-                class ViewOptics: ViewOptics
-                {
-                    initAngleX = 0;
-                    minAngleX = -30;
-                    maxAngleX = 30;
-                    initAngleY = 5;
-                    minAngleY = -100;
-                    maxAngleY = 100;
-                    initFov = 0.015;
-                    minFov = 0.015;
-                    maxFov = 0.015;
-                    visionMode[] = {"Normal"};
-                    thermalMode[] = {0};
-                };
-                gunnerRightHandAnimName = "OtocHlaven_shake";
-                gunnerLeftHandAnimName = "OtocHlaven_shake";
-                gunBeg = "spice rakety";
-                gunEnd = "konec rakety";
-                memoryPointGunnerOptics = "look";
+				class ViewOptics: ViewOptics
+				{
+					initAngleX = 0;
+					minAngleX = -30;
+					maxAngleX = 30;
+					initAngleY = 5;
+					minAngleY = -100;
+					maxAngleY = 100;
+					initFov = 0.015;
+					minFov = 0.015;
+					maxFov = 0.015;
+					visionMode[] = {"Normal"};
+					thermalMode[] = {0};
+				};
+				gunnerRightHandAnimName = "OtocHlaven_shake";
+				gunnerLeftHandAnimName = "OtocHlaven_shake";
+				gunBeg = "spice rakety";
+				gunEnd = "konec rakety";
+				memoryPointGunnerOptics = "look";
             };
         };
         class AnimationSources {

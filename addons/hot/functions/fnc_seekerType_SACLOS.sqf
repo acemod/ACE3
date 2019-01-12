@@ -25,7 +25,7 @@ _seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "
 private _shooterPos = AGLToASL (_shooter modelToWorld(_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;
 
-private _lookDirection = if !(_shooter isKindOf "CAManBase") then {
+private _lookDirection = if !(_shooter isKindOf "CAManBase" || _shooter isKindOf "StaticWeapon") then {
     private _gBody = -deg(_shooter animationPhase _animationSourceBody);
     private _gGun = deg(_shooter animationPhase _animationSourceGun);
     

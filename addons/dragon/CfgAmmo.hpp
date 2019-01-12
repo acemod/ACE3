@@ -32,16 +32,16 @@ class CfgAmmo {
     class Rocket_03_AP_F;
     class ace_missile_dragon : Rocket_03_AP_F {
         model = QPATHTOF(models\dragon.p3d);
-        maxSpeed = 120;
-        thrust = 0;
-        initTime = 0;
+        maxSpeed = 200;
+        thrust = 300;
+        initTime = 0.151;
         thrustTime = 0;
-        sideAirFriction = 0.5;
-        effectsMissile = "";
+        sideAirFriction = 0.05;
+        effectsMissile = "missile2";
         effectFlare = "";
         airFriction = 0.5;
-        irLock = 0;
-        manualControl = 0;
+        irLock = 1;
+        manualControl = 1;
         deflecting = 0;
         fuseDistance = 5;
         whistleDist = 2;
@@ -80,10 +80,11 @@ class CfgAmmo {
             seekerAngle = 30;
             seekerAccuracy = 1;
 
-            seekerMinRange = 75;
-            seekerMaxRange = 4000;
+            seekerMinRange = 65;
+            seekerMaxRange = 1500;
 
             correctionDistance = 15;
+            missileLeadDistance = 0;
             offsetFromCrosshair[] = { 0, 0, 0 };
 
             defaultAttackProfile = "DRAGON";
