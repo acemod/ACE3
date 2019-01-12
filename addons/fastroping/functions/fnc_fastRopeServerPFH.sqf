@@ -28,8 +28,11 @@ if (isNull _hook) exitWith {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 
+private _ropeLength = _vehicle getVariable [QGVAR(ropeLength), 34.5];
+
 //Start fast roping
 if (getMass _dummy != 80) exitWith {
+    TRACE_1("unwinding ropes",_ropeLength);
     //Fix for twitchyness
     _dummy setMass 80;
     _dummy setCenterOfMass [0, 0, -2];
@@ -37,7 +40,7 @@ if (getMass _dummy != 80) exitWith {
     _dummy setPosASL (_origin vectorAdd [0, 0, -2]);
     _dummy setVectorUp [0, 0, 1];
 
-    ropeUnwind [_ropeTop, 6, 34.5];
+    ropeUnwind [_ropeTop, 6, _ropeLength];
     ropeUnwind [_ropeBottom, 6, 0.5];
 };
 
@@ -59,7 +62,7 @@ _dummy setVelocity [0,0,-6];
 //Check if fast rope is finished
 if (
     ((getPos _unit select 2) < 0.2)
-    || {ropeLength _ropeTop == 34.5}
+    || {ropeLength _ropeTop == _ropeLength}
     || {vectorMagnitude (velocity _vehicle) > 5}
     || {!([_unit] call EFUNC(common,isAwake))}
 ) exitWith {
@@ -77,7 +80,7 @@ if (
     _dummy setCenterOfMass [0.000143227,0.00105986,-0.246147];
 
     _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 0.5];
-    _ropeBottom = ropeCreate [_dummy, [0, 0, 0], 34.5];
+    _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _ropeLength];
 
     _ropeTop addEventHandler ["RopeBreak", {[_this, "top"] call FUNC(onRopeBreak)}];
     _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
