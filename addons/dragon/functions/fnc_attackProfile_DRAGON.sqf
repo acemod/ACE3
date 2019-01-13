@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Brandon (TCVM) (Code inspired by NouberNou)
+ * Author: Brandon (TCVM) (Code inspired by NouberNou's Dragon Guidance)
  * Attack profile: Dragon Guidance
  *
  * Arguments:

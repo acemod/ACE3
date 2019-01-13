@@ -74,8 +74,6 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            onFired = QEFUNC(hot,onFired);
-
             seekLastTargetPos = 0;
             seekerAngle = 30;
             seekerAccuracy = 1;
