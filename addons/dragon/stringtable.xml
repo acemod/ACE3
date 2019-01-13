@@ -16,6 +16,8 @@
         <Key ID="sightName">
             <english>SU-36/P Daysight</english>
         </Key>
+        <Key ID="sightDescription">
+            <english>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</english>
+        </Key>
     </Package>
 </Project>
-
