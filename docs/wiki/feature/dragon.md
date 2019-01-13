@@ -50,30 +50,30 @@ The Dragon gunners use the stadia lines in the daysight to determine if a target
 At maximum range (1,500 meters), a 7-meter (23-foot) long target completely fills the area between the stadia lines and exceeds the stadia lines at a closer range.
 
 **Figure 1. Frontal, oblique, and flank targets**
-<img src="../../img/wiki/feature/m47_fro_obl_fla.png" width="1400" height="452" alt="Frontal, Oblique, and Flank targets" />
+<img src="{{ site.baseurl }}/img/wiki/feature/m47_fro_obl_fla.png" width="1400" height="452" alt="Frontal, Oblique, and Flank targets" />
 
 ### 3.1 **Flanking Targets (Full Stadia)**
 
 Adjust the sight picture by moving the launcher so the target centers between the stadia lines (Figure 2).
 
 **Figure 2. Range determination for flank target.**
-<img src="../../img/wiki/feature/m47_flank.png" width="1400" height="331" alt="Frontal, Oblique, and Flank targets" />
+<img src="{{ site.baseurl }}/img/wiki/feature/m47_flank.png" width="1400" height="331" alt="Frontal, Oblique, and Flank targets" />
 
 ### 3.2 **Oblique Targets**
 
 If you can see more of the flank, use the full-stadia method (Figure 3.1). The vehicle should appear to fill the area between the stadia lines. If you see more of the front or rear, use the half-stadia method (Figure 3.2). The track of the vehicle should fit between one stadia line and the center.
 
 **Figure 3.1. Range determination for oblique target, more flank visible**
-<img src="../../img/wiki/feature/m47_oblique_45.png" width="1400" height="408" alt="Frontal, Oblique, and Flank targets" />
+<img src="{{ site.baseurl }}/img/wiki/feature/m47_oblique_45.png" width="1400" height="408" alt="Frontal, Oblique, and Flank targets" />
 **Figure 3.2. Range determination for oblique target, more front or rear visible**
-<img src="../../img/wiki/feature/m47_oblique_60.png" width="1400" height="331" alt="Frontal, Oblique, and Flank targets" />
+<img src="{{ site.baseurl }}/img/wiki/feature/m47_oblique_60.png" width="1400" height="331" alt="Frontal, Oblique, and Flank targets" />
 
 ### 3.3 **Frontal (Head-On) or Rear (Going Away, Half-Stadia) Targets**
 
 Adjust the sight picture by moving the launcher to align the vertical cross hair and one of the stadia lines on the target (Figure 4)
 
 **Figure 4. Range determination for frontal or rear target.**
-<img src="../../img/wiki/feature/m47_frontal.png" width="1400" height="357" alt="Frontal, Oblique, and Flank targets" />
+<img src="{{ site.baseurl }}/img/wiki/feature/m47_frontal.png" width="1400" height="357" alt="Frontal, Oblique, and Flank targets" />
 
 ## 4. Dependencies
 
