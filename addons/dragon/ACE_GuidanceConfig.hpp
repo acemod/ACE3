@@ -4,6 +4,7 @@ class EGVAR(missileguidance,AttackProfiles) {
         visualName = "FGM-77 Dragon";
         description = "FGM-77 Dragon";
 
+        onFired = QFUNC(onFired);
         functionName = QFUNC(attackProfile_DRAGON);
     };
 };

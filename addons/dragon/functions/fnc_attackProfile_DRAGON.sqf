@@ -17,17 +17,17 @@
  * Public: No
  *
  */
-#define SERVICE_INTERVAL 0.33
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "_wireCutSource", ["_lastTime", 0]];
-_stateParams params ["_lastRunTime"];
+_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_lastTime", "_serviceInterval", "_serviceChargeCount", "_serviceChargeAcceleration", "_dragonSpeed"];
+
+systemChat str(_attackProfileStateParams);
 
 private _projectilePos = getPosASL _projectile;
 private _distanceToProjectile = (getPosASL _shooter) vectorDistanceSqr _projectilePos;
 
-if (_distanceToProjectile <= 65) exitWith { _projectilePos vectorAdd (AGLtoASL (_projectile vectorModelToWorld [0, 50, 0])) };
+if (_distanceToProjectile <= _seekerMinRangeSqr) exitWith { _projectilePos vectorAdd (AGLtoASL (_projectile vectorModelToWorld [0, 50, 0])) };
 
 if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     // wire snap, random direction
@@ -40,20 +40,19 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     };
     _projectilePos vectorAdd _randomVector
 };
-_maxCorrectableDistance = 30;
 
 // if the time between updates is less than the pop time we want to fire the rockets OR if the missile wants to make a major correction pop it rapidly
-if (((_lastTime - CBA_missionTime) <= 0) || {(_lastTime - CBA_missionTime) < (SERVICE_INTERVAL / 2) && (_projectilePos vectorDistance _seekerTargetPos > 1)}) then {
-    _attackProfileStateParams set [6, CBA_missionTime + SERVICE_INTERVAL];
+if (((_lastTime - CBA_missionTime) <= 0) || {(_lastTime - CBA_missionTime) < (_serviceInterval / 2) && (_projectilePos vectorDistance _seekerTargetPos > 1)}) then {
+    _attackProfileStateParams set [6, CBA_missionTime + _serviceInterval];
     
     private _vectorToCrosshair = vectorNormalized (_projectile worldToModel (ASLToAGL _seekerTargetPos));
-    private _vectorToPos = vectorNormalized (((_projectile vectorWorldToModelVisual (_shooter weaponDirection _weapon)) vectorMultiply (100 * SERVICE_INTERVAL)) vectorAdd (_vectorToCrosshair vectorMultiply _maxCorrectableDistance));
+    private _vectorToPos = vectorNormalized (((_projectile vectorWorldToModelVisual (_shooter weaponDirection _weapon)) vectorMultiply (_dragonSpeed * _serviceInterval)) vectorAdd (_vectorToCrosshair vectorMultiply _maxCorrectableDistance));
     
     if ((_vectorToPos select 2) < 0) then {
         _vectorToPos set [2, 0];
     };
     
-    _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd (_vectorToPos vectorMultiply 6.5));
+    _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd (_vectorToPos vectorMultiply _serviceChargeAcceleration));
     
     private _charge = createVehicle ["ace_m47_dragon_serviceCharge", [0, 0, 0], [], 0, "NONE"];
     _charge setPosASL (_projectilePos vectorAdd ((_vectorToCrosshair vectorMultiply -1) vectorMultiply 0.025));

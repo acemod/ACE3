@@ -16,7 +16,38 @@
  * Public: No
  *
  */
-params["_unit"];
-_unit setVariable [QGVAR(fired), true, true];
-_unit animate ["missile_hide", 1];
+params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
+_firedEH params ["_shooter","_weapon","","","","","_projectile"];
+_stateParams params ["", "", "_attackProfileStateParams"];
+_seekerParams params ["", "", "_seekerMaxRange", "_seekerMinRange"];
+
+_shooter setVariable [QGVAR(fired), true, true];
+_shooter animate ["missile_hide", 1];
+
+private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance";
+
+private _serviceInterval = [_config >> "serviceInterval", "NUMBER", 0.33] call CBA_fnc_getConfigEntry;
+private _serviceChargeCount = [_config >> "serviceCharges", "NUMBER", 60] call CBA_fnc_getConfigEntry;
+private _serviceChargeAcceleration = [_config >> "serviceChargeAcceleration", "NUMBER", 6.5] call CBA_fnc_getConfigEntry;
+private _dragonSpeed = [_config >> "dragonSpeed", "NUMBER", 100] call CBA_fnc_getConfigEntry;
+private _maxCorrectableDistance = [_config >> "correctionDistance", "NUMBER", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
+private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
+private _minDistanceSqr = _seekerMinRange * _seekerMinRange;
+
+private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
+private _turretConfig = [_shooter, _turretPath] call CBA_fnc_getTurret;
+
+private _wireCutSource = _shooter selectionPosition getText(_turretConfig >> "missileEnd");
+
+_attackProfileStateParams pushBack _maxCorrectableDistance;
+_attackProfileStateParams pushBack false;
+_attackProfileStateParams pushBack [0, 0, 0];
+_attackProfileStateParams pushBack _maxDistanceSqr;
+_attackProfileStateParams pushBack _minDistanceSqr;
+_attackProfileStateParams pushBack _wireCutSource;
+_attackProfileStateParams pushBack CBA_missionTime;
+_attackProfileStateParams pushBack _serviceInterval;
+_attackProfileStateParams pushBack _serviceChargeCount;
+_attackProfileStateParams pushBack _serviceChargeAcceleration;
+_attackProfileStateParams pushBack _dragonSpeed;
 

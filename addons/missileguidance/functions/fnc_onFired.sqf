@@ -115,14 +115,13 @@ private _args = [_this,
             [ diag_tickTime, [], [], _lastKnownPosState]
         ];
 
-
-private _onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
+private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
 TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
-
-_onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
+        
+_onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
 TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);

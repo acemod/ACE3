@@ -81,9 +81,14 @@ class CfgAmmo {
             seekerMinRange = 65;
             seekerMaxRange = 1500;
 
-            correctionDistance = 15;
+            correctionDistance = 30;
             missileLeadDistance = 0;
             offsetFromCrosshair[] = { 0, 0, 0 };
+            
+            serviceInterval = 0.33; // how many seconds between pops
+            serviceCharges = 66; // how many charges are in this missile
+            serviceChargeAcceleration = 6.5;
+            dragonSpeed = 100; // meters per second
 
             defaultAttackProfile = "DRAGON";
             attackProfiles[] = {"DRAGON"};
