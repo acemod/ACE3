@@ -9,6 +9,8 @@ class CfgMagazines {
         initSpeed = 200;
         scope = 1;
         displayName = CSTRING(dragonName);
+        displayNameShort = CSTRING(dragonName);
+        descriptionShort = CSTRING(dragonDescription);
     };
 };
 

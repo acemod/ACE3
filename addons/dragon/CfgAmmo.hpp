@@ -24,7 +24,7 @@ class CfgAmmo {
         
         indirectHit = 9;
         indirectHitRange = 1;
-        explosive = 0.1;
+        explosive = 0.02;
         timeToLive = 60;
         cost = 4000;
         simulationStep = 0.005;
@@ -71,7 +71,7 @@ class CfgAmmo {
         hit = 460;
         indirectHit = 9;
         indirectHitRange = 1;
-        explosive = 0.1;
+        explosive = 0.02;
         cost = 4000;
         
         submunitionAmmo = QGVAR(penetrator_super);
