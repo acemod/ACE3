@@ -41,7 +41,6 @@ private _wireCutSource = _shooter selectionPosition getText(_turretConfig >> "mi
 
 _attackProfileStateParams pushBack _maxCorrectableDistance;
 _attackProfileStateParams pushBack false;
-_attackProfileStateParams pushBack [0, 0, 0];
 _attackProfileStateParams pushBack _maxDistanceSqr;
 _attackProfileStateParams pushBack _minDistanceSqr;
 _attackProfileStateParams pushBack _wireCutSource;

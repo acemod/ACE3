@@ -1,36 +1,15 @@
-//CfgAmmo.hpp
-
 class CfgAmmo {
-    class MissileBase;
-    class ace_m47_dragon_base: MissileBase {
-        model = QPATHTOF(models\dragon.p3d);
-        irLock = 1;
-        manualControl = 1;
-        deflecting = 0;
-        fuseDistance = 5;
-        effectsMissile = "missile2";
-        whistleDist = 2;
-        
-        hit = 360;
-        indirectHit = 9;
-        indirectHitRange = 1;
-        cost = 4000;
-        trackOversteer = 0.95;
-        trackLead = 0.9;
-        timeToLive = 20;
-        maneuvrability = 10;
-        simulationStep = 0.005;
-        sideAirFriction = 0.05;
-        maxControlRange = 1500;
-        maxSpeed = 200;
-        initTime = 0.151;
-        thrustTime = 1.45;
-        thrust = 300;
-        scope = 2;
+    class ammo_Penetrator_Base;
+    
+    class GVAR(penetrator_super): ammo_Penetrator_Base {
+        caliber = 60;
+        warheadName = "HEAT";
+        hit = 460;
     };
     
     class Rocket_03_AP_F;
-    class ace_missile_dragon : Rocket_03_AP_F {
+    class GVAR(dragonBase): Rocket_03_AP_F {
+        scope = 1;
         model = QPATHTOF(models\dragon.p3d);
         maxSpeed = 200;
         thrust = 300;
@@ -40,27 +19,18 @@ class CfgAmmo {
         effectsMissile = "missile2";
         effectFlare = "";
         airFriction = 0.5;
-        irLock = 1;
-        manualControl = 1;
-        deflecting = 0;
-        fuseDistance = 5;
+        fuseDistance = 75;
         whistleDist = 2;
         
-        hit = 360;
         indirectHit = 9;
         indirectHitRange = 1;
+        explosive = 0.1;
+        timeToLive = 60;
         cost = 4000;
-        trackOversteer = 0.95;
-        trackLead = 0.9;
-        timeToLive = 20;
-        maneuvrability = 10;
         simulationStep = 0.005;
         maxControlRange = 1500;
-        scope = 2;
         
         class ace_missileguidance {
-            enabled = 1;
-
             minDeflection = 0;
             maxDeflection = 0;
             incDeflection = 0;
@@ -79,16 +49,61 @@ class CfgAmmo {
             seekerAccuracy = 1;
 
             seekerMinRange = 65;
-            seekerMaxRange = 1500;
+            seekerMaxRange = 1000;
 
             correctionDistance = 30;
             missileLeadDistance = 0;
             offsetFromCrosshair[] = { 0, 0, 0 };
             
             serviceInterval = 0.33; // how many seconds between pops
-            serviceCharges = 66; // how many charges are in this missile
+            serviceCharges = 32; // how many charges are in this missile
             serviceChargeAcceleration = 6.5;
             dragonSpeed = 100; // meters per second
+
+            defaultAttackProfile = "DRAGON";
+            attackProfiles[] = {"DRAGON"};
+        };
+    };
+    
+    class GVAR(super) : GVAR(dragonBase) {
+        scope = 1;
+        aiAmmoUsageFlags = "128+512";
+        hit = 460;
+        indirectHit = 9;
+        indirectHitRange = 1;
+        explosive = 0.1;
+        cost = 4000;
+        
+        submunitionAmmo = QGVAR(penetrator_super);
+        submunitionDirectionType = "SubmunitionModelDirection";
+        submunitionInitSpeed = 200;
+        submunitionParentSpeedCoef = 0;
+        submunitionInitialOffset[] = { 0, 0, -0.2 };
+
+        class ace_missileguidance {
+            enabled = 1;
+
+            // Guidance type for munitions
+            defaultSeekerType = "SACLOS";
+            seekerTypes[] = { "SACLOS" };
+
+            defaultSeekerLockMode = "LOAL";
+            seekerLockModes[] = { "LOAL", "LOBL" };
+
+            seekLastTargetPos = 0;
+            seekerAngle = 30;
+            seekerAccuracy = 1;
+
+            seekerMinRange = 30;
+            seekerMaxRange = 1500;
+
+            correctionDistance = 30;
+            missileLeadDistance = 0;
+            
+            serviceInterval = 0.33; // how many seconds between pops
+            serviceCharges = 65// how many charges are in this missile
+            serviceChargeAcceleration = 10;
+            dragonSpeed = 200; // meters per second
 
             defaultAttackProfile = "DRAGON";
             attackProfiles[] = {"DRAGON"};
@@ -110,7 +125,7 @@ class CfgAmmo {
         soundFly[] = {"",1,1};
         soundEngine[] = {"",1,4};
         CraterEffects = "";
-        explosionEffects = "ace_m47_serviceExplosion";
+        explosionEffects = QGVAR(serviceExplosion);
         hitarmor[] = {"soundDefault1", 1};
         hitbuilding[] = {"soundDefault1", 1};
         hitconcrete[] = {"soundDefault1", 1};
@@ -130,6 +145,6 @@ class CfgAmmo {
         sounddefault1[] = {QPATHTOF(sounds\service_charge.wss), 56.2341, 1, 1800};
         soundHit[] = {QPATHTOF(sounds\service_charge.wss),56.23413,1,1800};
         multiSoundHit[] = {"soundDefault1", 1};
-        scope = 2;
     };
 };
+

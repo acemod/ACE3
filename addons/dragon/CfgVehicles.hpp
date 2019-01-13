@@ -25,13 +25,9 @@ class CfgVehicles {
         };
     };
     
-    class ACE_M47_Dragon_Static_Base : AT_01_base_F {
-        features = "Balls";
-        scope = 0;
-        displayName = "ACE M47 Dragon";
-        class Armory {
-            description = "Balls";
-        };
+    class GVAR(dragonStaticBase) : AT_01_base_F {
+        scope = 1;
+        displayName = CSTRING(dragonName);
         model = QPATHTOF(models\ace_m47_static.p3d);
         picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
         UiPicture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
@@ -42,10 +38,8 @@ class CfgVehicles {
             tex[] = {};
             mat[] = {"a3\static_f_gamma\data\staticturret_01.rvmat","a3\static_f_gamma\data\staticturret_01_damage.rvmat","a3\static_f_gamma\data\staticturret_01_destruct.rvmat","a3\static_f_gamma\data\staticturret_02.rvmat","a3\static_f_gamma\data\staticturret_02_damage.rvmat","a3\static_f_gamma\data\staticturret_02_destruct.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_launcher.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_launcher_damage.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_launcher_destruct.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_mtube.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_mtube_damage.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_mtube_destruct.rvmat"};
         };
-        class Turrets: Turrets
-        {
-            class MainTurret: MainTurret
-            {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 optics = 1;
                 turretInfoType = "RscWeaponEmpty";
                 gunnerOpticsModel = QPATHTOF(models\optics_m47.p3d);
@@ -55,18 +49,16 @@ class CfgVehicles {
                 magazines[] = {};
                 
                 gunnerAction = "gunner_static_low01";
-				gunnergetInAction = "";
-				gunnergetOutAction = "";
+                gunnergetInAction = "";
+                gunnergetOutAction = "";
                 
                 discreteDistance[] = {};
-				discreteDistanceInitIndex = 0;
+                discreteDistanceInitIndex = 0;
                 
-                class OpticsIn 
-                {
-                    class Wide: ViewOptics
-                    {
+                class OpticsIn {
+                    class Wide: ViewOptics {
                         initFov = 0.055;
-                        minFov = 0.055;
+                        minFov = 0.055; // 6 degree FOV
                         maxFov = 0.055;
                         gunnerOpticsModel = QPATHTOF(models\optics_m47.p3d);
                         gunnerOutOpticsModel = "\A3\weapons_f\reticle\optics_empty";
@@ -74,27 +66,26 @@ class CfgVehicles {
                     };
                 };
                 
-				displayName = "Balls in your face";
+                displayName = CSTRING(dragonName);
                 
-				class ViewOptics: ViewOptics
-				{
-					initAngleX = 0;
-					minAngleX = -30;
-					maxAngleX = 30;
-					initAngleY = 5;
-					minAngleY = -100;
-					maxAngleY = 100;
-					initFov = 0.015;
-					minFov = 0.015;
-					maxFov = 0.015;
-					visionMode[] = {"Normal"};
-					thermalMode[] = {0};
-				};
-				gunnerRightHandAnimName = "OtocHlaven_shake";
-				gunnerLeftHandAnimName = "OtocHlaven_shake";
-				gunBeg = "spice rakety";
-				gunEnd = "konec rakety";
-				memoryPointGunnerOptics = "look";
+                class ViewOptics: ViewOptics {
+                    initAngleX = 0;
+                    minAngleX = -30;
+                    maxAngleX = 30;
+                    initAngleY = 5;
+                    minAngleY = -100;
+                    maxAngleY = 100;
+                    initFov = 0.055;
+                    minFov = 0.055; // 6 degree FOV
+                    maxFov = 0.055;
+                    visionMode[] = {"Normal"};
+                    thermalMode[] = {0};
+                };
+                gunnerRightHandAnimName = "OtocHlaven_shake";
+                gunnerLeftHandAnimName = "OtocHlaven_shake";
+                gunBeg = "spice rakety";
+                gunEnd = "konec rakety";
+                memoryPointGunnerOptics = "look";
             };
         };
         class AnimationSources {
@@ -126,11 +117,11 @@ class CfgVehicles {
         hiddenSelections[] = {"camo_launcher","camo_tube"};
     };
 
-    class ACE_M47_Dragon_NoSight : ACE_M47_Dragon_Static_Base {
-        author = "ACE Team";
-        _generalMacro = "O_static_AT_F";
+    class GVAR(super_noSight) : GVAR(dragonStaticBase) {
         scope = 2;
-        displayname = "ACE_M47_Dragon_Static";
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "O_static_AT_F";
+        displayname = CSTRING(dragonNoSight);
         side = 1;
         faction = "BLU_F";
         crew = "B_soldier_f";
@@ -143,34 +134,34 @@ class CfgVehicles {
         };
         
         class ACE_CSW {
-            disassembleTo = "ACE_M47_Dragon";
+            disassembleTo = QGVAR(super);
         };
         
-        class ACE_Actions {
+         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "M47 Dragon";
+                displayName = CSTRING(dragonName);
                 selection = "";
                 distance = 2;
                 condition = "true";
                 class GVAR(pickUp) {
-                    displayName = "Pick Up";
+                    displayName = ECSTRING(csw,Pickup_displayName);
                     condition = QUOTE(call FUNC(canPickupTripod));
                     statement = QUOTE(call EFUNC(csw,assemble_pickupTripod));
                 };
                 class GVAR(mountWeapon) {
-                    displayName = "Attach Sight";
+                    displayName = CSTRING(attachSight);
                     condition = QUOTE(call FUNC(canDeployWeapon));
                     statement = QUOTE([ARR_4(_this select 0, _this select 1, [], binocular (_this select 1))] call EFUNC(csw,assemble_deployWeapon));
                 };
             };
         };
     };
-    
-    class ACE_M47_Dragon_Sight : ACE_M47_Dragon_Static_Base {
-        author = "ACE Team";
-        _generalMacro = "O_static_AT_F";
+
+    class GVAR(super_sight) : GVAR(dragonStaticBase) {
         scope = 2;
-        displayname = "ACE_M47_Dragon_Static";
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "O_static_AT_F";
+        displayname = CSTRING(dragonSight);
         side = 1;
         faction = "BLU_F";
         crew = "B_soldier_f";
@@ -178,15 +169,15 @@ class CfgVehicles {
         
         class AnimationSources: AnimationSources {
             class optic_hide: optic_hide {
-                initPhase=0;
+                initPhase = 0;
             };
         };
         
         class ACE_CSW {
             enabled = 1;
             disassembleFunc = QFUNC(onDisassemble);
-            disassembleWeapon = "ACE_M47_Daysight"; // carry weapon [CfgWeapons]
-            disassembleTurret = "ACE_M47_Dragon_NoSight"; // turret [CfgVehicles]
+            disassembleWeapon = QGVAR(sight);
+            disassembleTurret = QGVAR(super_noSight);
             desiredAmmo = 1;
             ammoLoadTime = -1;
             ammoUnloadTime = -1;
@@ -195,9 +186,10 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 optics = 1;
-                weapons[] = {"ACE_M47_Dragon_Static"};
-                magazines[] = {"ace_m47_dragon"};
+                weapons[] = { QGVAR(superStatic) };
+                magazines[] = { QGVAR(super) };
             };
         };
     };
 };
+

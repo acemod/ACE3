@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="dragon">
+        <Key ID="dragonName">
+            <english>M47 Super-Dragon</english>
+        </Key>
+        <Key ID="dragonNoSight">
+            <english>M47 Super-Dragon (NoSight)</english>
+        </Key>
+        <Key ID="dragonSight">
+            <english>M47 Super-Dragon (With Sight)</english>
+        </Key>
+        <Key ID="attachSight">
+            <english>Attach Sight</english>
+        </Key>
+        <Key ID="sightName">
+            <english>SU-36/P Daysight</english>
+        </Key>
+    </Package>
+</Project>
+

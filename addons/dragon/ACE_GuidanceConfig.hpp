@@ -1,8 +1,8 @@
 class EGVAR(missileguidance,AttackProfiles) {
     class DRAGON {
-        name = "FGM-77 Dragon";
-        visualName = "FGM-77 Dragon";
-        description = "FGM-77 Dragon";
+        name = CSTRING(dragonName);
+        visualName = CSTRING(dragonName);
+        description = CSTRING(dragonName);
 
         onFired = QFUNC(onFired);
         functionName = QFUNC(attackProfile_DRAGON);

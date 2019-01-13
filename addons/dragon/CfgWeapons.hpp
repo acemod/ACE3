@@ -1,30 +1,33 @@
-class Mode_SemiAuto;
 class CfgWeapons {
     class launch_Titan_F;
-    class ACE_M47_Dragon: launch_Titan_F {
+    class launch_NLAW_F;
+    class missiles_titan_static;
+    class GVAR(super): launch_Titan_F {
         model = QPATHTOF(models\ace_m47_magazine.p3d);
         picture = QPATHTOF(data\m47_dragon_item_ca.paa);
         magazines[] = {};
-        displayName = "M47 Dragon Carry";
+        displayName = CSTRING(dragonName);
         scope = 2;
         
         class ACE_CSW {
             type = "mount";
             deployTime = 2;
             pickupTime = 2;
-            deploy = "ACE_M47_Dragon_NoSight";
+            deploy = QGVAR(super_noSight);
+        };
+        
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 253;
         };
     };
     
-    class missiles_titan_static;
-    class ACE_M47_Dragon_static: missiles_titan_static {
-        displayName = "M47 Dragonzzz2222";
-        magazines[] = {"ace_m47_dragon"};
+    class GVAR(superStatic): missiles_titan_static {
+        displayName = CSTRING(dragonName);
+        magazines[] = { QGVAR(super) };
     };
     
-    class launch_NLAW_F;
-    class ACE_M47_Daysight: launch_NLAW_F {
-        displayName = "M47 TODO Balls";    // Stay next to tubes in gear dialogs
+    class GVAR(sight): launch_NLAW_F {
+        displayName = CSTRING(sightName);
         model = QPATHTOF(models\ace_m47_optic.p3d);
         picture = QPATHTOF(data\m47_daysight_item_ca.paa);
         optics = 1;
@@ -34,7 +37,7 @@ class CfgWeapons {
         showSwitchAction = 1;
         useAsBinocular = 1;
         uipicture = "";
-        descriptionshort = "SU-36/P Daysight";
+        descriptionshort = CSTRING(sightDescription);
         ace_disposable = 0;
         magazines[] = {};
         type = 4096;
@@ -47,8 +50,12 @@ class CfgWeapons {
             deployTime = 2;
             pickupTime = 1;
             class assembleTo {
-                ACE_M47_Dragon_NoSight = "ACE_M47_Dragon_Sight";
+                GVAR(super_noSight) = QGVAR(super_sight);
             };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 68;
         };
     };
 };
+
