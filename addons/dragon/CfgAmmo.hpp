@@ -101,7 +101,7 @@ class CfgAmmo {
             missileLeadDistance = 0;
             
             serviceInterval = 0.33; // how many seconds between pops
-            serviceCharges = 65// how many charges are in this missile
+            serviceCharges = 65; // how many charges are in this missile
             serviceChargeAcceleration = 10;
             dragonSpeed = 200; // meters per second
 
