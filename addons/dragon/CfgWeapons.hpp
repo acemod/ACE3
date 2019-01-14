@@ -30,6 +30,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 253;
         };
+        modes[] = {};
     };
     
     class GVAR(superStatic): missiles_titan_static {

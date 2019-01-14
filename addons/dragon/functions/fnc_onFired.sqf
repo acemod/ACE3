@@ -38,14 +38,16 @@ private _turretConfig = [_shooter, _turretPath] call CBA_fnc_getTurret;
 
 private _wireCutSource = _shooter selectionPosition getText(_turretConfig >> "missileEnd");
 
-_attackProfileStateParams pushBack _maxCorrectableDistance;
-_attackProfileStateParams pushBack false;
-_attackProfileStateParams pushBack _maxDistanceSqr;
-_attackProfileStateParams pushBack _minDistanceSqr;
-_attackProfileStateParams pushBack _wireCutSource;
-_attackProfileStateParams pushBack CBA_missionTime;
-_attackProfileStateParams pushBack _serviceInterval;
-_attackProfileStateParams pushBack _serviceChargeCount;
-_attackProfileStateParams pushBack _serviceChargeAcceleration;
-_attackProfileStateParams pushBack _dragonSpeed;
+_attackProfileStateParams append [
+    _maxCorrectableDistance,
+    false,
+    _maxDistanceSqr,
+    _minDistanceSqr,
+    _wireCutSource,
+    CBA_missionTime,
+    _serviceInterval,
+    _serviceChargeCount,
+    _serviceChargeAcceleration,
+    _dragonSpeed
+];
 

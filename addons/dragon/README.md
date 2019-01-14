@@ -8,5 +8,5 @@ Adds M47 Dragon Missile.
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Name](https://github.com/name)
+- [Brandon-TCVM](https://github.com/TheCandianVendingMachine)
 

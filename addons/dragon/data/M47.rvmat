@@ -1,8 +1,8 @@
 class StageTI {
-    texture="z\ace\addons\dragon\data\M47_TI_CA.tga";
+    texture="z\ace\addons\dragon\data\M47_TI_CA.paa";
 };
-ambient[]={0.958,0.98400003,1,1};
-diffuse[]={0.958,0.98400003,1,1};
+ambient[]={0.958,0.984,1,1};
+diffuse[]={0.958,0.984,1,1};
 forcedDiffuse[]={0,0,0,0};
 emmisive[]={0,0,0,1};
 specular[]={0.153,0.169,0.111,1};
@@ -10,7 +10,7 @@ specularPower=90;
 PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1 {
-    texture="z\ace\addons\dragon\data\M47_nohq.tga";
+    texture="z\ace\addons\dragon\data\M47_nohq.paa";
     uvSource="tex";
     class uvTransform {
         aside[]={1,0,0};
@@ -23,8 +23,8 @@ class Stage2 {
     texture="a3\weapons_f\data\detailmaps\Metal_rough_DT.tga";
     uvSource="tex";
     class uvTransform {
-        aside[]={4,0,0};
-        up[]={0,4,0};
+        aside[]={1,0,0};
+        up[]={0,1,0};
         dir[]={0,0,1};
         pos[]={0,0,0};
     };
@@ -40,7 +40,7 @@ class Stage3 {
     };
 };
 class Stage4 {
-    texture="z\ace\addons\dragon\data\m47_as.tga";
+    texture="z\ace\addons\dragon\data\m47_as.paa";
     uvSource="tex";
     class uvTransform {
         aside[]={1,0,0};
@@ -50,7 +50,7 @@ class Stage4 {
     };
 };
 class Stage5 {
-    texture="z\ace\addons\dragon\data\M47_smdi.tga";
+    texture="z\ace\addons\dragon\data\M47_smdi.paa";
     uvSource="tex";
     class uvTransform {
         aside[]={1,0,0};

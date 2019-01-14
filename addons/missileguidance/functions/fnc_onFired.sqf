@@ -142,24 +142,6 @@ if (_onFiredFunc != "") then {
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange"];
 
-
-// Hand off to the guiding unit. We just use local player so local PFH fires for now
-// Laser code needs to give us a shooter for LOBL, or the seeker unit needs to be able to shift locality
-// Based on its homing laser
-// Lasers need to be handled in a special LOAL/LOBL case
-
-//if (isPlayer _shooter) then {
-//    private _guidingUnit = ACE_player;
-//
-//    if (local _guidingUnit) then {
-//        [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
-//    } else {
-//        [QGVAR(handoff), [_guidingUnit, _args] ] call FUNC(doHandoff);
-//    };
-//} else {
-    // [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
-//};
-
 [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 
 

@@ -25,7 +25,7 @@ private _projectilePos = getPosASL _projectile;
 private _distanceToProjectile = (getPosASL _shooter) vectorDistanceSqr _projectilePos;
 private _retPos = _projectilePos vectorAdd (AGLtoASL (_projectile vectorModelToWorld [0, 50, 0]));
 
-if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
+if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut) exitWith {
     // wire snap, random direction
     if (!_wireCut) then {
         _attackProfileStateParams set [1, true];

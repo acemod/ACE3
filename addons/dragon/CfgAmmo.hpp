@@ -1,15 +1,18 @@
 class CfgAmmo {
     class ammo_Penetrator_Base;
+    class M_Scalpel_AT;
+    class Rocket_03_AP_F;
     
     class GVAR(penetrator_super): ammo_Penetrator_Base {
         caliber = 60;
         warheadName = "HEAT";
         hit = 460;
     };
-    
-    class Rocket_03_AP_F;
+
     class GVAR(dragonBase): Rocket_03_AP_F {
+        EGVAR(frag,skip) = 1;
         scope = 1;
+        aiAmmoUsageFlags = "128+512";
         model = QPATHTOF(models\dragon.p3d);
         maxSpeed = 200;
         thrust = 300;
@@ -22,11 +25,12 @@ class CfgAmmo {
         fuseDistance = 75;
         whistleDist = 2;
         
+        hit = 100;
         indirectHit = 9;
         indirectHitRange = 1;
-        explosive = 0.02;
+        explosive = 0.8;
         timeToLive = 60;
-        cost = 4000;
+        cost = 500;
         simulationStep = 0.005;
         maxControlRange = 1500;
         
@@ -66,15 +70,6 @@ class CfgAmmo {
     };
     
     class GVAR(super) : GVAR(dragonBase) {
-        EGVAR(frag,skip) = 1;
-        scope = 1;
-        aiAmmoUsageFlags = "128+512";
-        hit = 100;
-        indirectHit = 9;
-        indirectHitRange = 1;
-        explosive = 0.8;
-        cost = 500;
-        
         submunitionAmmo = QGVAR(penetrator_super);
         submunitionDirectionType = "SubmunitionModelDirection";
         submunitionInitSpeed = 1000;

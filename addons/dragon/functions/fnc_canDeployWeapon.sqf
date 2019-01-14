@@ -8,13 +8,13 @@
  * 1: Unit Performing Action <OBJECT>
  *
  * Return Value:
- * Can Pickup Tripod <BOOL>
+ * Can Attach Sighting Unit <BOOL>
  *
  * Example:
- * [vehicle player, player] call ace_dragon_fnc_canPickupTripod;
+ * [cursorObject, player] call ace_dragon_fnc_canDeployWeapon;
  *
  * Public: No
  */
 params ["_target", "_unit"];
-!(_target getVariable [QGVAR(fired), false]) && { [_target, _unit, [], binocular _unit] call EFUNC(csw,assemble_canDeployWeapon) };
+!(_target getVariable [QGVAR(fired), false]) && { [_target, _unit, [], binocular _unit] call EFUNC(csw,assemble_canDeployWeapon) }
 

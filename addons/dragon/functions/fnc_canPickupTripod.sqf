@@ -16,5 +16,5 @@
  * Public: No
  */
 params ["_target", "_unit"];
-!(_target getVariable [QGVAR(fired), false]) && { [_target, _unit] call EFUNC(csw,assemble_canPickupTripod) };
+!(_target getVariable [QGVAR(fired), false]) && { [_target, _unit] call EFUNC(csw,assemble_canPickupTripod) }
 

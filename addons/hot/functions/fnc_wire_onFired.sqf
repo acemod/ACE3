@@ -21,13 +21,14 @@ _seekerParams params ["", "", "_seekerMaxRange", "_seekerMinRange"];
 
 private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance";
 private _maxCorrectableDistance = [_config >> "correctionDistance", "NUMBER", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
-private _crosshairOffset = [_config >> "offsetFromCrosshair", "ARRAY", [0, 0, 0]] call CBA_fnc_getConfigEntry;
 private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
 private _minDistanceSqr = _seekerMinRange * _seekerMinRange;
 
 // AI don't know how to use the crosshair offset becauze they dum dum
-if ((_gunner != ACE_PLAYER) && {_gunner != (ACE_controlledUAV select 1)}) then {
-    _crosshairOffset = [0, 0, 0];
+_crosshairOffset = if ((_gunner != ACE_PLAYER) && {_gunner != (ACE_controlledUAV select 1)}) then {
+    [0, 0, 0];
+} else {
+    [_config >> "offsetFromCrosshair", "ARRAY", [0, 0, 0]] call CBA_fnc_getConfigEntry
 };
 
 private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
