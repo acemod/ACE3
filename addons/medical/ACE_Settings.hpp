@@ -304,8 +304,8 @@ class ACE_Settings {
     };
     class GVAR(menuTypeStyleSelf) {
         category = CSTRING(Category_Medical);
-        displayName = CSTRING(menuTypeDisplaySelf);
-        description = CSTRING(menuTypeDescriptionSelf);
+        displayName = CSTRING(menuTypeStyleSelf_displayName);
+        description = CSTRING(menuTypeStyleSelf_description);
         typeName = "BOOL";
         value = 1;
         isClientSettable = 1;
