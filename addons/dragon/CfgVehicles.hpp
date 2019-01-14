@@ -136,8 +136,8 @@ class CfgVehicles {
         class ACE_CSW {
             disassembleTo = QGVAR(super);
         };
-        
-         class ACE_Actions {
+
+        class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(dragonName);
                 selection = "";

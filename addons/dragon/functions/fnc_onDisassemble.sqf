@@ -14,7 +14,6 @@
  * [vehicle player, player] call ace_dragon_fnc_onDisassemble;
  *
  * Public: No
- *
  */
 params ["_newTripod", "_oldWeapon"];
 

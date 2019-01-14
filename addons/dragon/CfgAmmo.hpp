@@ -66,17 +66,18 @@ class CfgAmmo {
     };
     
     class GVAR(super) : GVAR(dragonBase) {
+        EGVAR(frag,skip) = 1;
         scope = 1;
         aiAmmoUsageFlags = "128+512";
-        hit = 460;
+        hit = 100;
         indirectHit = 9;
         indirectHitRange = 1;
-        explosive = 0.02;
-        cost = 4000;
+        explosive = 0.8;
+        cost = 500;
         
         submunitionAmmo = QGVAR(penetrator_super);
         submunitionDirectionType = "SubmunitionModelDirection";
-        submunitionInitSpeed = 200;
+        submunitionInitSpeed = 1000;
         submunitionParentSpeedCoef = 0;
         submunitionInitialOffset[] = { 0, 0, -0.2 };
 
@@ -111,7 +112,7 @@ class CfgAmmo {
     };
     
     class ShellBase;
-    class ace_m47_dragon_serviceCharge : ShellBase {
+    class GVAR(serviceCharge) : ShellBase {
         hit = 1;
         indirectHit = 2;
         indirectHitRange = 1;

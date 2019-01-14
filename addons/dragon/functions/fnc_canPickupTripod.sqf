@@ -14,7 +14,6 @@
  * [vehicle player, player] call ace_dragon_fnc_canPickupTripod;
  *
  * Public: No
- *
  */
 params ["_target", "_unit"];
 !(_target getVariable [QGVAR(fired), false]) && { [_target, _unit] call EFUNC(csw,assemble_canPickupTripod) };

@@ -14,7 +14,6 @@
  * [any, vehicle player] call ace_dragon_fnc_onFired;
  *
  * Public: No
- *
  */
 params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];

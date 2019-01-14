@@ -12,15 +12,14 @@
  * Missile Aim PosASL <ARRAY> - Unused
  *
  * Example:
- * [[1,2,3], [], []] call ace_hot_fnc_attackProfile_WIRE;
+ * [[1,2,3], [], []] call ace_dragon_fnc_attackProfile_DRAGON;
  *
  * Public: No
- *
  */
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_lastTime", "_serviceInterval", "_serviceChargeCount", "_serviceChargeAcceleration", "_dragonSpeed"];
+_attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_lastTime", "_serviceInterval", "_serviceChargeCount", "_serviceChargeAcceleration", "_dragonSpeed"];
 
 private _projectilePos = getPosASL _projectile;
 private _distanceToProjectile = (getPosASL _shooter) vectorDistanceSqr _projectilePos;
@@ -35,7 +34,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     
     if (_serviceChargeCount > 0) then {
         _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd ([(random 2) - 1, (random 2) - 1, random 1] vectorMultiply _serviceChargeAcceleration));
-        private _charge = createVehicle ["ace_m47_dragon_serviceCharge", [0, 0, 0], [], 0, "NONE"];
+        private _charge = createVehicle [QGVAR(serviceCharge), [0, 0, 0], [], 0, "NONE"];
         _charge setPosASL (_projectilePos vectorAdd ((_vectorToCrosshair vectorMultiply -1) vectorMultiply 0.025));
         _attackProfileStateParams set [7, _serviceChargeCount - 1];
     };
@@ -58,7 +57,7 @@ if (((_lastTime - CBA_missionTime) <= 0) || {(_lastTime - CBA_missionTime) < (_s
     
     _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd (_vectorToPos vectorMultiply _serviceChargeAcceleration));
     
-    private _charge = createVehicle ["ace_m47_dragon_serviceCharge", [0, 0, 0], [], 0, "NONE"];
+    private _charge = createVehicle [QGVAR(serviceCharge), [0, 0, 0], [], 0, "NONE"];
     _charge setPosASL (_projectilePos vectorAdd ((_vectorToCrosshair vectorMultiply -1) vectorMultiply 0.025));
     
     _attackProfileStateParams set [7, _serviceChargeCount - 1];

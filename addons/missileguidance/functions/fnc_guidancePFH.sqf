@@ -56,7 +56,7 @@ private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStat
 
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
-if ((_minDeflection != 0 || _maxDeflection != 0) && { !(_profileAdjustedTargetPos isEqualTo [0,0,0]) }) then {
+if ((_minDeflection != 0 || {_maxDeflection != 0}) && {!(_profileAdjustedTargetPos isEqualTo [0,0,0])}) then {
 
     private _targetVector = _projectilePos vectorFromTo _profileAdjustedTargetPos;
     private _adjustVector = _targetVector vectorDiff (vectorDir _projectile);
