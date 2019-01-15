@@ -7,6 +7,7 @@ class CfgAmmo {
         caliber = 60;
         warheadName = "HEAT";
         hit = 460;
+        fuseDistance = 75;
     };
 
     class GVAR(dragonBase): Rocket_03_AP_F {
@@ -97,9 +98,9 @@ class CfgAmmo {
             missileLeadDistance = 0;
             
             serviceInterval = 0.33; // how many seconds between pops
-            serviceCharges = 65; // how many charges are in this missile
-            serviceChargeAcceleration = 10;
-            dragonSpeed = 200; // meters per second
+            serviceCharges = 60; // how many charges are in this missile
+            serviceChargeAcceleration = 6.5;
+            dragonSpeed = 100; // meters per second
 
             defaultAttackProfile = "DRAGON";
             attackProfiles[] = {"DRAGON"};

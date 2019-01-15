@@ -6,7 +6,7 @@ class CfgMagazines {
         soundHit[] = {};
         model = QPATHTOF(models\dragon.p3d);
         ammo = QGVAR(super);
-        initSpeed = 200;
+        initSpeed = 120;
         scope = 1;
         displayName = CSTRING(dragonName);
         displayNameShort = CSTRING(dragonName);

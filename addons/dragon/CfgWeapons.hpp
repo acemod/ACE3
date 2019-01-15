@@ -38,6 +38,8 @@ class CfgWeapons {
         EGVAR(overpressure,range) = 30;
         EGVAR(overpressure,damage) = 0.85;
         
+        initSpeed = 120;
+        
         displayName = CSTRING(dragonName);
         descriptionShort = CSTRING(dragonDescription);
         magazines[] = { QGVAR(super) };

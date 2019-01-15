@@ -32,8 +32,9 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut) exitWith {
         playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 150, 1, 25];
     };
     
-    if (_serviceChargeCount > 0) then {
-        _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd ([(random 2) - 1, (random 2) - 1, random 1] vectorMultiply _serviceChargeAcceleration));
+    if (_serviceChargeCount > 0 && {(_lastTime - CBA_missionTime) <= 0}) then {
+        _attackProfileStateParams set [5, CBA_missionTime + 0.05];
+        _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd ([(random 2) - 1, random 1, (random 2) - 1] vectorMultiply _serviceChargeAcceleration));
         private _charge = createVehicle [QGVAR(serviceCharge), [0, 0, 0], [], 0, "NONE"];
         _charge setPosASL (_projectilePos vectorAdd ((_vectorToCrosshair vectorMultiply -1) vectorMultiply 0.025));
         _attackProfileStateParams set [7, _serviceChargeCount - 1];
@@ -47,14 +48,21 @@ if (_distanceToProjectile <= _seekerMinRangeSqr || { _serviceChargeCount <= 0 })
 // if the time between updates is less than the pop time we want to fire the rockets OR if the missile wants to make a major correction pop it rapidly
 if (((_lastTime - CBA_missionTime) <= 0) || {(_lastTime - CBA_missionTime) < (_serviceInterval / 2) && (_projectilePos vectorDistance _seekerTargetPos > 1)}) then {
     _attackProfileStateParams set [5, CBA_missionTime + _serviceInterval];
-    
+        
     private _vectorToCrosshair = vectorNormalized (_projectile worldToModel (ASLToAGL _seekerTargetPos));
     private _vectorToPos = vectorNormalized (((_projectile vectorWorldToModelVisual (_shooter weaponDirection _weapon)) vectorMultiply (_dragonSpeed * _serviceInterval)) vectorAdd (_vectorToCrosshair vectorMultiply _maxCorrectableDistance));
-    
+                
     if ((_vectorToPos select 2) < 0) then {
         _vectorToPos set [2, 0];
+    } else {
+        private _a = _vectorToPos select 1;
+        private _b = _vectorToPos select 2;
+        // The booster has some angle to it, so we introduce that axis if the angle is too low
+        if (abs(_a) > 0 && { abs(atan (_b / _a)) < DRAGON_BOOSTER_ANGLE }) then {
+            _vectorToPos set [2, abs(_a)];
+        };
     };
-    
+
     _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd (_vectorToPos vectorMultiply _serviceChargeAcceleration));
     
     private _charge = createVehicle [QGVAR(serviceCharge), [0, 0, 0], [], 0, "NONE"];
