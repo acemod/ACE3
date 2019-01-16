@@ -16,4 +16,3 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 #define DRAGON_BOOSTER_ANGLE 45
-

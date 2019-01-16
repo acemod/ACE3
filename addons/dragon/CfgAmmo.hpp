@@ -144,4 +144,3 @@ class CfgAmmo {
         multiSoundHit[] = {"soundDefault1", 1};
     };
 };
-

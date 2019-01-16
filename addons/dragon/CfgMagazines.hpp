@@ -13,4 +13,3 @@ class CfgMagazines {
         descriptionShort = CSTRING(dragonDescription);
     };
 };
-

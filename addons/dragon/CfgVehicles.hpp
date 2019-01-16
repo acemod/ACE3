@@ -36,7 +36,20 @@ class CfgVehicles {
         cost = 150000;
         class Damage {
             tex[] = {};
-            mat[] = {"a3\static_f_gamma\data\staticturret_01.rvmat","a3\static_f_gamma\data\staticturret_01_damage.rvmat","a3\static_f_gamma\data\staticturret_01_destruct.rvmat","a3\static_f_gamma\data\staticturret_02.rvmat","a3\static_f_gamma\data\staticturret_02_damage.rvmat","a3\static_f_gamma\data\staticturret_02_destruct.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_launcher.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_launcher_damage.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_launcher_destruct.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_mtube.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_mtube_damage.rvmat","a3\weapons_f_beta\launchers\titan\data\titan_mtube_destruct.rvmat"};
+            mat[] = {
+                "a3\static_f_gamma\data\staticturret_01.rvmat",
+                "a3\static_f_gamma\data\staticturret_01_damage.rvmat",
+                "a3\static_f_gamma\data\staticturret_01_destruct.rvmat",
+                "a3\static_f_gamma\data\staticturret_02.rvmat",
+                "a3\static_f_gamma\data\staticturret_02_damage.rvmat",
+                "a3\static_f_gamma\data\staticturret_02_destruct.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_launcher.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_launcher_damage.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_launcher_destruct.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_mtube.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_mtube_damage.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_mtube_destruct.rvmat"
+            };
         };
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -192,4 +205,3 @@ class CfgVehicles {
         };
     };
 };
-
