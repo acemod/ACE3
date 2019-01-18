@@ -86,10 +86,6 @@
 `ace_interaction`
 {% endif %}
 
-{% if include.component == "dragon" %}
-`ace_common`, `ace_missileguidance`, `ace_hot`, `ace_csw`
-{% endif %}
-
 {% if include.component == "explosives" %}
 `ace_interaction`
 {% endif %}
