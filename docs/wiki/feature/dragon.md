@@ -1,4 +1,4 @@
----
+﻿---
 layout: wiki
 title: M47 Dragon Missile
 description: M47 Dragon
@@ -77,4 +77,4 @@ Adjust the sight picture by moving the launcher to align the vertical cross hair
 
 ## 4. Dependencies
 
-{% include dependencies_list.md component="hot" %}
+{% include dependencies_list.md component="dragon" %}
