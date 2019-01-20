@@ -23,13 +23,13 @@ scopeName "main";
 
 // exempt from weight check if object has override variable set
 if !(GETVAR(_target,GVAR(ignoreWeightDrag),false)) then {
-	// check weight
-	private _weight = [_target] call FUNC(getWeight);
+    // check weight
+    private _weight = [_target] call FUNC(getWeight);
 
-	if (_weight > (GETMVAR(ACE_maxWeightDrag,1E11))) exitWith {
-	    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
-		breakOut "main";
-	};
+    if (_weight > (GETMVAR(ACE_maxWeightDrag,1E11))) exitWith {
+        [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
+        breakOut "main";
+    };
 };
 
 // add a primary weapon if the unit has none.
