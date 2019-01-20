@@ -22,7 +22,7 @@ TRACE_2("params",_unit,_target);
 // exempt from weight check if object has override variable set
 if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
     private _weight = [_target] call FUNC(getWeight);
-    _weight > (GETMVAR(ACE_maxWeightDrag,1E11))
+    _weight > GETMVAR(ACE_maxWeightDrag,1E11)
 }) exitWith {
     // exit if object weight is over global var value
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
