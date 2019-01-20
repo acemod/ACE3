@@ -21,8 +21,6 @@ TRACE_2("params",_unit,_target);
 
 // exempt from weight check if object has override variable set
 if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
-    private _weight = ([_target] call FUNC(getWeight));
-    _weight > (GETMVAR(ACE_maxWeightCarry,1E11))
     private _weight = [_target] call FUNC(getWeight);
     _weight > GETMVAR(ACE_maxWeightCarry,1E11)
 }) exitWith {
