@@ -25,6 +25,6 @@ if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 if ((_unit getHitPointDamage "HitLegs") >= 0.5) exitWith {false};
 
 // a static weapon has to be empty for dragging (ignore UAV AI)
-if (((typeOf _target) isKindOf "StaticWeapon") && {!({!((getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) isEqualto "UAVPilot")} count crew _target isEqualto -1)}) exitWith {false};
+if (((typeOf _target) isKindOf "StaticWeapon") && {!({!((getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) isEqualto "UAVPilot")} count crew _target isEqualto 0)}) exitWith {false};
 
 alive _target && {vehicle _target isEqualto _target} && {_target getVariable [QGVAR(canCarry), false]} && {animationState _target in ["", "unconscious"] || (_target getVariable ["ACE_isUnconscious", false]) || (_target isKindOf "CAManBase" && {(_target getHitPointDamage "HitLegs") > 0.4})}
