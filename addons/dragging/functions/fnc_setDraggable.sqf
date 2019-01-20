@@ -20,7 +20,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_player", "_target"];
-params ["_object", "_enableDrag", "_position", "_direction", ["_ignoreWeightDrag",false,[false]]];
+params ["_object", "_enableDrag", "_position", "_direction", ["_ignoreWeightDrag", false, [false]]];
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(dragPosition), [0,0,0]];

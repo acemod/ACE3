@@ -20,7 +20,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_player", "_target"];
-params ["_object", "_enableCarry", "_position", "_direction", ["_ignoreWeightCarry",false,[false]]];
+params ["_object", "_enableCarry", "_position", "_direction", ["_ignoreWeightCarry", false, [false]]];
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(carryPosition), [0,1,1]];

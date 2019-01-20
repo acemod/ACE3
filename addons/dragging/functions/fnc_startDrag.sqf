@@ -19,17 +19,13 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-scopeName "main";
-
 // exempt from weight check if object has override variable set
-if !(GETVAR(_target,GVAR(ignoreWeightDrag),false)) then {
-    // check weight
+if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
     private _weight = [_target] call FUNC(getWeight);
-
-    if (_weight > (GETMVAR(ACE_maxWeightDrag,1E11))) exitWith {
-        [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
-        breakOut "main";
-    };
+    _weight > (GETMVAR(ACE_maxWeightDrag,1E11))
+    }) exitWith {
+    // exit if object weight is over global var value
+    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 // add a primary weapon if the unit has none.
