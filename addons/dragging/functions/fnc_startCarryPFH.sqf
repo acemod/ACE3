@@ -58,7 +58,7 @@ if (_target isKindOf "CAManBase") then {
     };
 
     // wait for the unit to stand up
-    if (stance _unit == "STAND") exitWith {
+    if (stance _unit isEqualto "STAND") exitWith {
         TRACE_4("Start carry object",_unit,_target,_timeOut,CBA_missionTime);
         [_unit, _target] call FUNC(carryObject);
 
