@@ -23,7 +23,9 @@ TRACE_2("params",_unit,_target);
 if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
     private _weight = ([_target] call FUNC(getWeight));
     _weight > (GETMVAR(ACE_maxWeightCarry,1E11))
-    }) exitWith {
+    private _weight = [_target] call FUNC(getWeight);
+    _weight > GETMVAR(ACE_maxWeightCarry,1E11)
+}) exitWith {
     // exit if object weight is over global var value
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
