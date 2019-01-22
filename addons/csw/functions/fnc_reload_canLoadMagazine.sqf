@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror & TCVM
  * Tests if unit can load a magazine into a static weapon.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_carryMag", ["_unit", objNull]];
 // TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_unit);

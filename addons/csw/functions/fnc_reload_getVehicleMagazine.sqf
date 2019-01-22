@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Finds the best vehicle magazines to create from a carryable magazine for a given weapon.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_carryMag"];
 TRACE_3("reload_getVehicleMagazine",_vehicle,_turret,_carryMag);

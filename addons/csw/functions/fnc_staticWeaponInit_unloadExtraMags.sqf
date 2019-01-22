@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Brandon (TCVM), PabstMirror
  * Dumps ammo to container
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_staticWeapon"];
 TRACE_1("staticWeaponInit_unloadExtraMags",_staticWeapon);

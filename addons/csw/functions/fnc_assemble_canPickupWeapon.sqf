@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM
  * If the CSW is mounted or in use this will not allow you to dismount the weapon
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_staticWeapon"];
 

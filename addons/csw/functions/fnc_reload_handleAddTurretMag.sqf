@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM, PabstMirror
  * Handles adding ammo to a turret
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_unit", "_carryMag" ,"_ammoRecieved"];
 TRACE_5("reload_handleAddTurretMag",_vehicle,_turret,_unit,_carryMag,_ammoRecieved);

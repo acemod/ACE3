@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM
  * Deploys the current CSW
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [{
     params ["_tripod", "_player", "", "_carryWeaponClassname"];

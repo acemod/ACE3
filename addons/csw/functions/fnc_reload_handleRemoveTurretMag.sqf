@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM
  * Handles removing ammo from a turret
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unit"];
 TRACE_6("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unit);

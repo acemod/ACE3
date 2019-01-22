@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Loads a magazine into a static weapon from a magazine carried by the player.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_carryMag", "_unit"];
 TRACE_4("loadMagazine",_vehicle,_turret,_carryMag,_unit);
