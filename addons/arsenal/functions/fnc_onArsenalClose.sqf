@@ -66,7 +66,7 @@ if (is3DEN) then {
 deleteVehicle GVAR(cameraHelper);
 camDestroy GVAR(camera);
 
-if !(isnil QGVAR(moduleUsed)) then {
+if (!isNil QGVAR(moduleUsed)) then {
     GVAR(moduleUsed) = nil;
     objNull remoteControl GVAR(center);
 };
