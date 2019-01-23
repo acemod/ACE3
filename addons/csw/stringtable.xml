@@ -179,5 +179,14 @@
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
         </Key>
+        <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
+            <English>Advanced assembly default</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
+            <English>Save extra ammo</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_ammoHandling_displayName">
+            <English>Ammo handling</English>
+        </Key>
     </Package>
 </Project>

@@ -29,7 +29,6 @@ if ((!isNull _unit) && {((_vehicle distance _unit) > 5) || {((magazines _unit) f
 private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
 private _ammoNeeded = _desiredAmmo min getNumber (configFile >> "CfgMagazines" >> _carryMag >> "count"); // assume it needs full carry mag
-TRACE_2("zzzzzzz",_desiredAmmo,_ammoNeeded);
 private _loadedMag = "";
 private _isBeltLinking = false;
 

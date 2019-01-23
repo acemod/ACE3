@@ -3,7 +3,7 @@
 GVAR(vehicleMagCache) = call CBA_fnc_createNamespace;
 
 ["ace_settingsInitialized", {
-    TRACE_2("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines));
+    TRACE_3("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines),GVAR(ammoHandling));
     ["StaticWeapon", "init", LINKFUNC(staticWeaponInit), true, [], true] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;
 

@@ -17,12 +17,11 @@
 
 params ["_staticWeapon", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 TRACE_8("firedEH:",_staticWeapon, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _gunner);
-TRACE_1("",someAmmo _staticWeapon);
 
 if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
 if (someAmmo _staticWeapon) exitWith {};
 
-TRACE_1("need ammo",magazinesAllTurrets _staticWeapon);
+TRACE_2("need ammo",someAmmo _staticWeapon,magazinesAllTurrets _staticWeapon);
 
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
 private _reloadSource = objNull;
@@ -44,7 +43,6 @@ private _reloadNeededAmmo = -1;
 
     {
         private _xWeaponMag = _x;
-        private _xCarryGroup = configFile >> QGVAR(groups) >> _reloadMag;
         {
             if ((getNumber (configFile >> QGVAR(groups) >> _x >> _xWeaponMag)) == 1) then {
                 private _loadInfo = [_staticWeapon, _turretPath, _reloadMag, objNull] call FUNC(reload_canLoadMagazine);

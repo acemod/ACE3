@@ -17,15 +17,15 @@
  */
 
 [{
-    params["_tripod", "_player"];
+    params ["_tripod", "_player"];
     TRACE_2("assemble_pickupTripod",_tripod,_player);
 
     private _tripodClassname = getText(configFile >> "CfgVehicles" >> (typeof _tripod) >> QUOTE(ADDON) >> "disassembleTo");
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _tripodClassname >> QUOTE(ADDON) >> "pickupTime");
     
     private _onFinish = {
-        params["_args"];
-        _args params["_tripod", "_player", "_tripodClassname"];
+        params ["_args"];
+        _args params ["_tripod", "_player", "_tripodClassname"];
         TRACE_3("assemble_pickupTripod finish",_tripod,_player,_tripodClassname);
         
         deleteVehicle _tripod;
@@ -34,7 +34,7 @@
     };
     
     private _condition = {
-        params["_args"];
+        params ["_args"];
         _args params ["_tripod", "_player"];
         
         !(isNull _tripod) && { (secondaryWeapon _player) isEqualTo "" }

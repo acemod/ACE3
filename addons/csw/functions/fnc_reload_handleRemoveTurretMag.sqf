@@ -51,7 +51,16 @@ private _ammoLeft = _ammoInFirstMag - _ammoRemoved;
 if ((_magsInWeapon isEqualTo []) && {_ammoInFirstMag > _ammoRemoved}) then {
     // Only one mag in gun, and we're just taking out a partial ammount (unlinking)
     TRACE_2("Setting mag ammo",_ammoRemoved,_ammoLeft);
-    _vehicle setMagazineTurretAmmo [_vehMag, _ammoLeft, _turretPath];
+    // _vehicle setMagazineTurretAmmo [_vehMag, _ammoLeft, _turretPath];
+    
+    // setMagazineTurretAmmo is broken on split locality, use setAmmo for now
+    private _weapon = (_vehicle weaponsTurret _turretPath) param [0, ""];
+    TRACE_3("setAmmo",_vehicle,_weapon, _ammoLeft);
+    _vehicle setAmmo [_weapon, _ammoLeft];
+    private _currentAmmo = _vehicle magazineTurretAmmo [_vehMag, _turretPath];
+    if ((_weapon == "") || {_currentAmmo != _ammoLeft}) then { ERROR_1("failed to setAmmo - %1", _this); };
+    
+    
 } else {
     // Because of command limitations, we need to remove mags to change their ammo
     // This will cause the gun to need to be reloaded if more than one is loaded (only a problem for non-assembly mode guns)

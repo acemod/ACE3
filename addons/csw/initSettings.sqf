@@ -1,29 +1,34 @@
 // CBA Settings [ADDON: ace_csw]:
 
+private _categroyDisplayName = format ["ACE %1", localize LSTRING(DisplayName)];
+
 [
     QGVAR(defaultAssemblyMode), "CHECKBOX",
-    ["defaultAssemblyMode"],
-    format ["ACE %1", localize LSTRING(DisplayName)],
+    [LSTRING(defaultAssemblyMode_displayName)],
+    _categroyDisplayName,
     false, // default value
     true, // isGlobal
-    {[QGVAR(defaultAssemblyMode), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(defaultAssemblyMode), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
 
 [
     QGVAR(handleExtraMagazines), "CHECKBOX",
-    ["handleExtraMagazines"],
-    format ["ACE %1", localize LSTRING(DisplayName)],
+    [LSTRING(handleExtraMagazines_displayName)],
+    _categroyDisplayName,
     true, // default value
     true, // isGlobal
-    {[QGVAR(handleExtraMagazines), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(handleExtraMagazines), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
 
 [
     QGVAR(ammoHandling), "CHECKBOX",
-    ["ammoHandling"],
-    format ["ACE %1", localize LSTRING(DisplayName)],
+    [LSTRING(ammoHandling_displayName)],
+    _categroyDisplayName,
     true, // default value
     true, // isGlobal
-    {[QGVAR(ammoHandling), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[QGVAR(ammoHandling), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_settings_fnc_init;
 

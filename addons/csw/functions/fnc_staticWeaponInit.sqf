@@ -31,9 +31,13 @@ if (_configEnabled && {local _staticWeapon}) then { // need to wait a frame to a
     [FUNC(staticWeaponInit_unloadExtraMags), [_staticWeapon]] call CBA_fnc_execNextFrame;
     
     if (_enableAmmoHandling && { !(_proxyWeapon isEqualTo "") }) then {
-        private _currentWeapon = _staticWeapon weaponsTurret[0] select 0;
-        _staticWeapon removeWeaponTurret[_currentWeapon, [0]];
-        _staticWeapon addWeaponTurret[_proxyWeapon, [0]];
+        // toDo: mk6 ammo handling compatiblity here (changes weapon based on settings)
+        // if ((!isNil _proxyWeapon) && {_proxyWeapon isEqualType {}}) then { _proxyWeapon = [_staticWeapon, _typeOf] call _proxyWeapon; }; ?
+
+        private _currentWeapon = _staticWeapon weaponsTurret [0] select 0;
+        TRACE_2("swapping weapon",_currentWeapon,_proxyWeapon);
+        _staticWeapon removeWeaponTurret [_currentWeapon, [0]];
+        _staticWeapon addWeaponTurret [_proxyWeapon, [0]];
     };
 };
 
