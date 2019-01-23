@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM
  * Picks up the tripod and adds it to the player launcher slot
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [{
     params["_tripod", "_player"];

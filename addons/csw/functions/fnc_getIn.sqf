@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM
  * An action for the player to get in the CSW
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_staticWeapon", "_player"];
 TRACE_2("getIn",_staticWeapon,_player);

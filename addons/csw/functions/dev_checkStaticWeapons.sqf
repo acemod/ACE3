@@ -1,8 +1,7 @@
-// Dev only function to search for weapons used by static weapons
-// and check if their magazinese are compatible
-
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
+// Dev only function to search for weapons used by static weapons
+// and check if their magazinese are compatible
 TRACE_1("Checking static weapons");
 
 private _staticWeaponConfigs = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(configName _x) isKindOf 'StaticWeapon'}", true];

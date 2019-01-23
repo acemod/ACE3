@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM and PabstMirror
  * Handles returned ammo (either from unloading or leftovers from linking)
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unloadTo", "_carryMag", "_ammo"];
 TRACE_3("reload_handleReturnAmmo",_unloadTo,_carryMag,_ammo);

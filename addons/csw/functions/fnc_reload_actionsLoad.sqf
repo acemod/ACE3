@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets sub actions for what the player can load into the static weapon
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_player"];
 
@@ -42,9 +42,9 @@ private _condition = {
     private _displayName = getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName");
     private _picture = getText (configFile >> "CfgMagazines" >> _carryMag >> "picture");
     private _text = if (_isBeltLinking) then {
-        format ["Link: %1", _displayName];
+        format [localize LSTRING(actionLink), _displayName];
     } else {
-        format ["Load: %1", _displayName];
+        format [localize LSTRING(progressBarLoading), _displayName];
     };
 
     private _action = [format ["load_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, _x] call EFUNC(interact_menu,createAction);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM
  * Dismounts the weapon from the tripod and drops its backpack beside
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [{
     params ["_staticWeapon", "_player"];

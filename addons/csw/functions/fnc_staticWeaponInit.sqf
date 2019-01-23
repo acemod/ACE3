@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
  * Initializes weapon to disable weapon disassembling
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_staticWeapon"];
 private _typeOf = typeOf _staticWeapon;

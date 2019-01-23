@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TCVM
  * Checks if you can deploy a weapon on the tripod
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_player", "", "_carryWeaponClassname"];
 if (isNil "_carryWeaponClassname") then { _carryWeaponClassname = secondaryWeapon _player };
