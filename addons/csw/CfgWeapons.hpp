@@ -165,16 +165,9 @@ class CfgWeapons {
     };
     
     class missiles_titan_static;
-    class GVAR(Titan_AT_Static) : missiles_titan_static {
-        modes[] = {"Player"};
-        ace_javelin_enabled = 1;
-        weaponInfoType = "ACE_RscOptics_javelin";
-        modelOptics = QPATHTOEF(javelin,data\reticle_titan.p3d);
-
-        canLock = 0;
-        magazines[] = {"1Rnd_GAT_missiles"};
-        lockingTargetSound[] = {"",0,1};
-        lockedTargetSound[] = {"",0,1};
+    class EGVAR(javelin,Titan_Static): missiles_titan_static {}; // if ace_javelin does not exist, this will just inherit from the base weapon
+    class GVAR(Titan_AT_Static): EGVAR(javelin,Titan_Static) {
+        EGVAR(javelin,enabled) = 1; // needs to be explicitly enabled
         magazineReloadTime = 0.5;
     };
     class GVAR(Titan_AA_Static) : missiles_titan_static {
