@@ -22,9 +22,21 @@ if (_target isEqualType objNull) then {
     _objectType = typeOf _target;
 };
 private _namespace = GVAR(ActSelfNamespace);
-
+diag_log _objectType;
 // Exit if the action menu is already compiled for this class
 if !(isNil {_namespace getVariable _objectType}) exitWith {};
+
+if (("configName _x == 'ACE_SelfActions'" configClasses (configFile >> "CfgVehicles" >> _objectType)) isEqualTo []) exitWith {
+    //This class doesn't have self actions, it just inherits them. So we don't have to recompile and can just copy from parent
+
+    private _parentType = configName inheritsFrom (configFile >> "CfgVehicles" >> _objectType);
+
+    //Make sure the parent is compiled
+    [_parentType] call FUNC(compileMenuSelfAction);
+
+    //Copy classes from parent
+    _namespace setVariable [_objectType, _namespace getVariable _parentType];
+};
 
 
 private _recurseFnc = {
