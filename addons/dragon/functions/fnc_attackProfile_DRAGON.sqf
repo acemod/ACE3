@@ -25,7 +25,8 @@ private _projectilePos = getPosASL _projectile;
 private _distanceToProjectile = (getPosASL _shooter) vectorDistanceSqr _projectilePos;
 private _retPos = _projectilePos vectorAdd (AGLtoASL (_projectile vectorModelToWorld [0, 50, 0]));
 
-if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut) exitWith {
+// _shooter returns the vehicle that shot it. If the launcher dies, the wire would probably be cut so assume it
+if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut || { !alive _shooter }) exitWith {
     // wire snap, random direction
     if (!_wireCut) then {
         _attackProfileStateParams set [1, true];
@@ -34,9 +35,10 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut) exitWith {
     
     if (_serviceChargeCount > 0 && {(_lastTime - CBA_missionTime) <= 0}) then {
         _attackProfileStateParams set [5, CBA_missionTime + 0.05];
-        _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd ([(random 2) - 1, random 1, (random 2) - 1] vectorMultiply _serviceChargeAcceleration));
+        private _randomVector = [(random 2) - 1, random 1, (random 2) - 1];
+        _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd (_randomVector vectorMultiply _serviceChargeAcceleration));
         private _charge = createVehicle [QGVAR(serviceCharge), [0, 0, 0], [], 0, "NONE"];
-        _charge setPosASL (_projectilePos vectorAdd ((_vectorToCrosshair vectorMultiply -1) vectorMultiply 0.025));
+        _charge setPosASL (_projectilePos vectorAdd ((_randomVector vectorMultiply -1) vectorMultiply 0.025));
         _attackProfileStateParams set [7, _serviceChargeCount - 1];
     };
     

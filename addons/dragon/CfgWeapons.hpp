@@ -2,9 +2,7 @@ class CfgWeapons {
     class launch_Titan_base;
     class Launcher_Base_F;
     class missiles_titan;
-    class launch_NLAW_F: Launcher_Base_F {
-        class WeaponSlotsInfo;
-    };
+    class Binocular;
     class missiles_titan_static: missiles_titan {
         class WeaponSlotsInfo;
     };
@@ -45,7 +43,7 @@ class CfgWeapons {
         magazines[] = { QGVAR(super) };
     };
     
-    class GVAR(sight): launch_NLAW_F {
+    class GVAR(sight): Binocular {
         displayName = CSTRING(sightName);
         model = QPATHTOF(models\ace_m47_optic.p3d);
         picture = QPATHTOF(data\m47_daysight_item_ca.paa);
@@ -72,7 +70,7 @@ class CfgWeapons {
                 GVAR(super_noSight) = QGVAR(super_sight);
             };
         };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
+        class WeaponSlotsInfo {
             mass = 68;
         };
     };

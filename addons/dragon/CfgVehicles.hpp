@@ -15,24 +15,15 @@ class CfgVehicles {
             };
         };
     };
-    
-    class AT_01_base_F: StaticMGWeapon {
-        class Turrets : Turrets  {
-            class MainTurret : MainTurret {
-                class ViewOptics: ViewOptics {
-                };
-            };
-        };
-    };
-    
-    class GVAR(dragonStaticBase) : AT_01_base_F {
+
+    class GVAR(dragonStaticBase) : StaticMGWeapon {
         scope = 1;
         displayName = CSTRING(dragonName);
         model = QPATHTOF(models\ace_m47_static.p3d);
         picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
         UiPicture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
         icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";
-        threat[] = {0.3,1.0,0.3};
+        threat[] = {0.7,1.0,0.1};
         cost = 150000;
         class Damage {
             tex[] = {};
@@ -133,7 +124,6 @@ class CfgVehicles {
     class GVAR(super_noSight) : GVAR(dragonStaticBase) {
         scope = 2;
         author = ECSTRING(common,ACETeam);
-        _generalMacro = "O_static_AT_F";
         displayname = CSTRING(dragonNoSight);
         side = 1;
         faction = "BLU_F";
@@ -142,7 +132,7 @@ class CfgVehicles {
         
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                optics = 0;
+                
             };
         };
         
@@ -173,7 +163,6 @@ class CfgVehicles {
     class GVAR(super_sight) : GVAR(dragonStaticBase) {
         scope = 2;
         author = ECSTRING(common,ACETeam);
-        _generalMacro = "O_static_AT_F";
         displayname = CSTRING(dragonSight);
         side = 1;
         faction = "BLU_F";
