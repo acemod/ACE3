@@ -132,7 +132,11 @@ class CfgVehicles {
         
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                
+                class OpticsIn {
+                    class Wide: ViewOptics {
+                        gunnerOpticsModel = "";
+                    };
+                };
             };
         };
         
