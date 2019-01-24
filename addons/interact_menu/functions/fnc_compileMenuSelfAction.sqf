@@ -35,7 +35,7 @@ if (("configName _x == 'ACE_SelfActions'" configClasses (configFile >> "CfgVehic
     [_parentType] call FUNC(compileMenuSelfAction);
 
     //Copy classes from parent
-    _namespace setVariable [_objectType, _namespace getVariable _parentType];
+    _namespace setVariable [_objectType, +(_namespace getVariable _parentType)];
 };
 
 
