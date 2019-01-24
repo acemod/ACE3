@@ -22,7 +22,7 @@ if (_target isEqualType objNull) then {
     _objectType = typeOf _target;
 };
 private _namespace = GVAR(ActSelfNamespace);
-diag_log _objectType;
+
 // Exit if the action menu is already compiled for this class
 if !(isNil {_namespace getVariable _objectType}) exitWith {};
 
