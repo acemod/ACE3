@@ -8,14 +8,14 @@ DFUNC(newControlableObject) = {
     private _type = typeOf _object;
     TRACE_2("newControlableObject",_object,_type);
     if (_type == "") exitWith {};
-    
-     [_type] call FUNC(compileMenuSelfAction);
+
     if (!(GVAR(controlableSelfActionsAdded) getVariable [_type, false])) then {
+        [_type] call FUNC(compileMenuSelfAction);
         GVAR(controlableSelfActionsAdded) setVariable [_type, true];
         [{
             TRACE_1("sending newControlableObject event",_this);
             [QGVAR(newControlableObject), _this] call CBA_fnc_localEvent;
-        }, [_type]] call CBA_fnc_execNextFrame;
+        }, [_type]] call CBA_fnc_execNextFrame; // delay event a frame to ensure postInit has run for all addons
     };
 };
 ["unit", {[_this select 0] call FUNC(newControlableObject)}, true] call CBA_fnc_addPlayerEventHandler;
