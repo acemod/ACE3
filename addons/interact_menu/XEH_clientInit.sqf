@@ -2,6 +2,28 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(controlableSelfActionsAdded) = [] call CBA_fnc_createNamespace;
+DFUNC(newControlableObject) = {
+    params ["_object"];
+    private _type = typeOf _object;
+    TRACE_2("newControlableObject",_object,_type);
+    if (_type == "") exitWith {};
+    
+     [_type] call FUNC(compileMenuSelfAction);
+    if (!(GVAR(controlableSelfActionsAdded) getVariable [_type, false])) then {
+        GVAR(controlableSelfActionsAdded) setVariable [_type, true];
+        [{
+            TRACE_1("sending newControlableObject event",_this);
+            [QGVAR(newControlableObject), _this] call CBA_fnc_localEvent;
+        }, [_type]] call CBA_fnc_execNextFrame;
+    };
+};
+["unit", {[_this select 0] call FUNC(newControlableObject)}, true] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[_this select 1] call FUNC(newControlableObject)}, true] call CBA_fnc_addPlayerEventHandler;
+["ACE_controlledUAV", {[_this select 0] call FUNC(newControlableObject)}] call CBA_fnc_addEventHandler;
+
+
+
 GVAR(blockDefaultActions) = [];
 
 GVAR(cachedBuildingTypes) = [];

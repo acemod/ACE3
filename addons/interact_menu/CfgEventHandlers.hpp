@@ -20,7 +20,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class All {
         class GVAR(compileMenu) {
-            init = QUOTE(_this call FUNC(compileMenu);_this call FUNC(compileMenuSelfAction));
+            init = QUOTE(_this call FUNC(compileMenu););
         };
     };
 };
