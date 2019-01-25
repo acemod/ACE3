@@ -317,4 +317,35 @@ class CfgVehicles {
     class ModuleArsenal_F: Module_F {
         function=QFUNC(bi_moduleArsenal);
     };
+
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class GVAR(create) {
+                displayName = CSTRING(CreateZeus);
+                condition = QUOTE(\
+                isNil QQGVAR(zeus) && {\
+                    switch (GVAR(canCreateZeus)) do {\
+                        case CAN_CREATE_ADMIN:   {isServer || {IS_ADMIN_LOGGED}};\
+                        case CAN_CREATE_CONSOLE: {call BIS_fnc_isDebugConsoleAllowed};\
+                        case CAN_CREATE_ALL:     {true};\
+                        default {false};\
+                    }\
+                });
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                //Set GVAR(zeus) to null first to disable the action through the isNil check
+                statement = QUOTE(GVAR(zeus) = objNull; [ARR_2(QQGVAR(createZeus), ACE_player)] call CBA_fnc_serverEvent);
+                showDisabled = 1;
+                icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";
+            };
+            class GVAR(delete) {
+                displayName = CSTRING(DeleteZeus);
+                condition = QUOTE(!(isNil QQGVAR(zeus) || {isNull GVAR(zeus)}));
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                statement = QUOTE(deleteVehicle GVAR(zeus); GVAR(zeus) = nil);
+                showDisabled = 1;
+                icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";
+            };
+        };
+    };
 };
