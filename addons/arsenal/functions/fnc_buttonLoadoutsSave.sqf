@@ -124,41 +124,41 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
         };
 
-        if (GVAR(shiftState) && {is3DEN} && {!(_loadoutName isEqualTo "")} && {_cursSelRow != -1} && {!(_loadoutIndex isEqualto -1)}) then {
+        if (GVAR(shiftState) && {is3DEN} && {!(_loadoutName isEqualTo "")} && {_cursSelRow != -1} && {!(_loadoutIndex isEqualto -1)}) exitwith {
             private _defaultLoadoutsSearch = GVAR(defaultLoadoutsList) findIf {(_x select 0) == _loadoutName};
             if (_defaultLoadoutsSearch isEqualto -1) then {
-                GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _curSelLoadout];
+                GVAR(defaultLoadoutsList) pushBack [_loadoutName, _curSelLoadout];
             } else {
                 GVAR(defaultLoadoutsList) set [_loadoutIndex, [ _loadoutName, _curSelLoadout]];
             };
             set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
-        } else {
-            if (_loadoutIndex isEqualto -1) then {
-                _data pushBack [_editBoxContent, _loadout];
-            } else {
-                _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
-            };
-
-            // Delete "old" loadout row
-            for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
-                if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbDeleteRow _i};
-            };
-
-            private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
-
-            ADD_LOADOUTS_LIST_PICTURES
-
-            _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
-
-            _contentPanelCtrl lnbSort [1, false];
-
-            // Select newly saved loadout
-            for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
-                if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
-            };
-
-            profileNamespace setVariable [QGVAR(saved_loadouts), _data];
         };
+
+        if (_loadoutIndex isEqualto -1) then {
+            _data pushBack [_editBoxContent, _loadout];
+        } else {
+            _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+        };
+
+        // Delete "old" loadout row
+        for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+            if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbDeleteRow _i};
+        };
+
+        private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
+
+        ADD_LOADOUTS_LIST_PICTURES
+
+        _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_loadout] call FUNC(verifyLoadout)];
+
+        _contentPanelCtrl lnbSort [1, false];
+
+        // Select newly saved loadout
+        for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
+            if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
+        };
+
+        profileNamespace setVariable [QGVAR(saved_loadouts), _data];
     };
 
     case IDC_buttonDefaultLoadouts:{
