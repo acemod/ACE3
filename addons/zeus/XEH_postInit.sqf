@@ -82,7 +82,7 @@ if (hasInterface) then {
         [localize "str_a3_cfgvehicles_moduletasksetstate_f_arguments_state_values_created_0"] call EFUNC(common,displayTextStructured);
     }] call CBA_fnc_addEventHandler;
 
-    [QEGVAR(interact_menu,newControlableObject), {
+    [QEGVAR(interact_menu,newControllableObject), {
         params ["_type"];
         if (!(_type isKindOf "CaManBase")) exitWith {};
         TRACE_1("Adding zeus actions",_type);
