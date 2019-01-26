@@ -86,7 +86,7 @@ if (hasInterface) then {
         params ["_type"];
         if (!(_type isKindOf "CaManBase")) exitWith {};
         TRACE_1("Adding zeus actions",_type);
-        
+
         private _action = [
         QGVAR(create),
         LLSTRING(CreateZeus),
@@ -104,10 +104,10 @@ if (hasInterface) then {
             }
             && {isNil QGVAR(zeus)}
         }
-    ] call EFUNC(interact_menu,createAction);
-    [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass);
-    
-    _action = [
+        ] call EFUNC(interact_menu,createAction);
+        [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass);
+
+        _action = [
         QGVAR(delete),
         LLSTRING(DeleteZeus),
         "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa",
@@ -116,7 +116,7 @@ if (hasInterface) then {
             GVAR(zeus) = nil;
         },
         {!(isNil QGVAR(zeus) || {isNull GVAR(zeus)})}
-    ] call EFUNC(interact_menu,createAction);
-    [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass);
+        ] call EFUNC(interact_menu,createAction);
+        [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass);
     }] call CBA_fnc_addEventHandler;
 };
