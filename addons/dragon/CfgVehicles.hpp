@@ -122,7 +122,7 @@ class CfgVehicles {
     };
 
     class GVAR(super_noSight) : GVAR(dragonStaticBase) {
-        scope = 2;
+        scope = 1;
         author = ECSTRING(common,ACETeam);
         displayname = CSTRING(dragonNoSight);
         side = 1;
