@@ -59,8 +59,8 @@ class CfgWeapons {
         magazines[] = {};
         type = 4096;
         opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-        opticsZoomMin = 0.015;
-        opticsZoomMax = 0.015;
+        opticsZoomMin = 0.055;
+        opticsZoomMax = 0.055;
         scope = 2;
         class ACE_CSW {
             type = "weapon";
