@@ -84,7 +84,7 @@ if (hasInterface) then {
 
     [QEGVAR(interact_menu,newControllableObject), {
         params ["_type"];
-        if (!(_type isKindOf "CaManBase")) exitWith {};
+        if (!(_type isKindOf "CAManBase")) exitWith {};
         TRACE_1("Adding zeus actions",_type);
 
         private _action = [
