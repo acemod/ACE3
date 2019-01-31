@@ -10,6 +10,7 @@ PREP(disable);
 PREP(dropAmmo);
 PREP(getAllRearmTurrets);
 PREP(getCaliber);
+PREP(getMagazineName);
 PREP(getMaxMagazines);
 PREP(getNeedRearmMagazines);
 PREP(getSupplyCount);

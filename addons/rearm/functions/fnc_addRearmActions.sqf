@@ -60,7 +60,7 @@ private _vehicleActions = [];
             {
                 private _action = [
                     _x,
-                    getText(configFile >> "CfgMagazines" >> _x >> "displayName"),
+                    _x call FUNC(getMagazineName),
                     getText(configFile >> "CfgMagazines" >> _x >> "picture"),
                     {_this call FUNC(takeAmmo)},
                     {true},

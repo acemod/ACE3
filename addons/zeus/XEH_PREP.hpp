@@ -13,6 +13,7 @@ PREP(moduleAddSpareTrack);
 PREP(moduleAddSpareWheel);
 PREP(moduleAddOrRemoveFRIES);
 PREP(moduleCaptive);
+PREP(moduleCargoParadrop);
 PREP(moduleConfigurePylons);
 PREP(moduleGarrison);
 PREP(moduleGlobalSetSkill);

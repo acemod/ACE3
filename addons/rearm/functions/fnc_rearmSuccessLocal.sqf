@@ -89,5 +89,5 @@ if (_arrayModified) then { // only need to call this if we modified the array, o
 if (_ammoAdded == 0) exitWith {ERROR_1("could not load any ammo - %1",_this);};
 
 [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _ammoAdded,
-getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
+_magazineClass call FUNC(getMagazineName),
 getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
