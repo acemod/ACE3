@@ -40,7 +40,6 @@ waitUntil {
         TRACE_2("move",_vehicleGroup,_movePos);
         _vehicle flyInHeight 150;
         _vehicleGroup move _movePos;
-        systemChat str _wpPos;
         _nextMoveUpdate = CBA_missionTime + 3;
     };
     if ((_vehicle distance2D _wpPos) < 300) then {_closeEnoughTicks = _closeEnoughTicks + 1};
