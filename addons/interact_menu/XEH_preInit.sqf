@@ -8,6 +8,10 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
+if (!hasInterface) exitWith { ADDON = true; };
+
+["All", "init", {_this call FUNC(compileMenu)}] call CBA_fnc_addClassEventHandler;
+
 GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
 GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
 
