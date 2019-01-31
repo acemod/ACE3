@@ -97,5 +97,9 @@
             <Korean>분대장과 관리자</Korean>
             <Polish>Przywódcy grup i Administratorzy</Polish>
         </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
+            <English>Creator</English>
+            <German>Ersteller</German>
+        </Key>
     </Package>
 </Project>

@@ -3177,6 +3177,12 @@
             <Chinesesimp>选择你喜欢的选单样式; 预设为3D选项或放射状</Chinesesimp>
             <Chinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_menuTypeStyleSelf_displayName">
+            <English>Show medical interaction for self</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_menuTypeStyleSelf_description">
+            <English>Show the self interaction medical actions</English>
+        </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
             <Polish>Pozycje (3D)</Polish>
@@ -5688,6 +5694,15 @@
             <Chinese>當隊員對嗎啡/腎上腺素/阿托品過量時，會使他的傷害更重</Chinese>
             <Italian>Rende il paziente suscettibile di overdose da morfina, epinefrina o atropina.</Italian>
             <Polish>Sprawia, że pacjent jest podatny na przedawkowanie morfiny/epinefryny.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_DisplayName">
+            <English>Convert vanilla items</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_Description">
+            <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_remove">
+            <English>Just remove vanilla medical</English>
         </Key>
     </Package>
 </Project>
