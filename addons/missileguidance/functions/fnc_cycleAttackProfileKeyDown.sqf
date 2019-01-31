@@ -84,7 +84,7 @@ private _currentFireMode = if (_useModeForAttackProfile) then {
         if ((_xWeapon == _weapon) && {(getText (configFile >> "CfgWeapons" >> _weapon >> _xMode >> QGVAR(attackProfile))) == _nextFireMode}) exitWith {
             TRACE_2("Restoring",_weaponIndex,weaponState _currentShooter);
         };
-        if ((weaponState _weaponStateToken) isEqualTo ["","","","",0]) exitWith {ERROR("weaponState not found");};
+        if ((weaponState _weaponStateToken) isEqualTo ["","","","",0]) exitWith {ERROR_2("weaponState not found",_weapon,_nextFireMode);};
     };
 } else {
     TRACE_2("setVariable attackProfile",_currentShooter,_nextFireMode);
