@@ -1,24 +1,22 @@
-class MainTurret;
 class CfgVehicles {
     class LandVehicle;
-    
-    class StaticWeapon : LandVehicle {
-        class Turrets {
-            class MainTurret;
-        };
-    };
-    
-    class StaticMGWeapon: StaticWeapon{
-        class Turrets : Turrets  {
-            class MainTurret : MainTurret {
-                class ViewOptics;
-            };
+    class StaticWeapon: LandVehicle    {
+        class Turrets;
+        class MainTurret;
+        class ACE_Actions {
+            class ACE_MainActions {};
         };
     };
 
-    class GVAR(dragonStaticBase) : StaticMGWeapon {
+    class StaticATWeapon: StaticWeapon {};
+
+    class GVAR(staticBase): StaticATWeapon {
         scope = 1;
-        displayName = CSTRING(dragonName);
+        author = ECSTRING(common,ACETeam);
+        displayname = CSTRING(dragonName);
+        side = 1;
+        faction = "BLU_F";
+        crew = "B_soldier_f";
         model = QPATHTOF(models\ace_m47_static.p3d);
         picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
         UiPicture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
@@ -47,32 +45,21 @@ class CfgVehicles {
                 optics = 1;
                 turretInfoType = "RscWeaponEmpty";
                 gunnerOpticsModel = QPATHTOF(models\optics_m47.p3d);
-                minElev = -60;
-                maxElev = 0;
-                weapons[] = {};
-                magazines[] = {};
-                
+                minElev = -30;
+                maxElev = 20;
+                weapons[] = { QGVAR(dummyStatic) };
+                magazines[] = { QGVAR(super) };
+
                 gunnerAction = "gunner_static_low01";
                 gunnergetInAction = "";
                 gunnergetOutAction = "";
-                
+
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
-                
-                class OpticsIn {
-                    class Wide: ViewOptics {
-                        initFov = 0.055;
-                        minFov = 0.055; // 6 degree FOV
-                        maxFov = 0.055;
-                        gunnerOpticsModel = QPATHTOF(models\optics_m47.p3d);
-                        gunnerOutOpticsModel = "\A3\weapons_f\reticle\optics_empty";
-                        gunnerOpticsEffect[] = {"TankGunnerOptics1","OpticsBlur2","OpticsCHAbera2"};
-                    };
-                };
-                
+
                 displayName = CSTRING(dragonName);
-                
-                class ViewOptics: ViewOptics {
+
+                class ViewOptics {
                     initAngleX = 0;
                     minAngleX = -30;
                     maxAngleX = 30;
@@ -118,82 +105,44 @@ class CfgVehicles {
         soundGetOut[] = {"A3\sounds_f\dummysound",0.001,1,5};
         soundGetIn[] = {"A3\sounds_f\dummysound",0.00031622776,1,5};
         armorStructural = 10.0;
-        hiddenSelections[] = {"camo_launcher","camo_tube"};
-    };
 
-    class GVAR(super_noSight) : GVAR(dragonStaticBase) {
-        scope = 1;
-        author = ECSTRING(common,ACETeam);
-        displayname = CSTRING(dragonNoSight);
-        side = 1;
-        faction = "BLU_F";
-        crew = "B_soldier_f";
-        hiddenSelectionsTextures[] = {"\a3\weapons_f_beta\launchers\titan\data\launcher_co.paa","\a3\weapons_f_beta\launchers\titan\data\tubem_co.paa"};
-        
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                class OpticsIn {
-                    class Wide: ViewOptics {
-                        gunnerOpticsModel = "";
-                    };
-                };
-            };
-        };
-        
         class ACE_CSW {
             disassembleTo = QGVAR(super);
         };
 
-        class ACE_Actions {
-            class ACE_MainActions {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
                 displayName = CSTRING(dragonName);
-                selection = "";
-                distance = 2;
-                condition = "true";
                 class GVAR(pickUp) {
                     displayName = ECSTRING(csw,Pickup_displayName);
                     condition = QUOTE(call FUNC(canPickupTripod));
                     statement = QUOTE(call EFUNC(csw,assemble_pickupTripod));
                 };
-                class GVAR(mountWeapon) {
+                class GVAR(attachSight) {
                     displayName = CSTRING(attachSight);
-                    condition = QUOTE(call FUNC(canDeployWeapon));
-                    statement = QUOTE([ARR_4(_this select 0, _this select 1, [], binocular (_this select 1))] call EFUNC(csw,assemble_deployWeapon));
+                    condition = QUOTE(call FUNC(sightCanAttach));
+                    statement = QUOTE(call FUNC(sightAttach));
+                };
+                class GVAR(detachSight) {
+                    displayName = CSTRING(detachSight);
+                    condition = QUOTE(call FUNC(sightCanDetach));
+                    statement = QUOTE(call FUNC(sightDetach));
                 };
             };
         };
+
     };
 
-    class GVAR(super_sight) : GVAR(dragonStaticBase) {
+    class GVAR(staticAssembled): GVAR(staticBase) {
         scope = 2;
-        author = ECSTRING(common,ACETeam);
-        displayname = CSTRING(dragonSight);
-        side = 1;
-        faction = "BLU_F";
-        crew = "B_soldier_f";
-        hiddenSelectionsTextures[] = {"\a3\weapons_f_beta\launchers\titan\data\launcher_co.paa","\a3\weapons_f_beta\launchers\titan\data\tubem_co.paa"};
-        
         class AnimationSources: AnimationSources {
             class optic_hide: optic_hide {
                 initPhase = 0;
             };
         };
-        
-        class ACE_CSW {
-            enabled = 1;
-            disassembleFunc = QFUNC(onDisassemble);
-            disassembleWeapon = QGVAR(sight);
-            disassembleTurret = QGVAR(super_noSight);
-            desiredAmmo = 1;
-            ammoLoadTime = -1;
-            ammoUnloadTime = -1;
-        };
-        
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                optics = 1;
                 weapons[] = { QGVAR(superStatic) };
-                magazines[] = { QGVAR(super) };
             };
         };
     };

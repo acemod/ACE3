@@ -11,10 +11,13 @@
  * Can Attach Sighting Unit <BOOL>
  *
  * Example:
- * [cursorObject, player] call ace_dragon_fnc_canDeployWeapon;
+ * [cursorObject, player] call ace_dragon_fnc_sightCanDetach
  *
  * Public: No
  */
+ 
 params ["_target", "_unit"];
-!(_target getVariable [QGVAR(fired), false]) && { [_target, _unit, [], binocular _unit] call EFUNC(csw,assemble_canDeployWeapon) }
 
+(alive _target)
+// && {!(_target getVariable [QGVAR(fired), false])}
+&& {_target getVariable [QGVAR(sightAttached), ((typeOf _target) == QGVAR(staticAssembled))]}

@@ -13,6 +13,9 @@
         <Key ID="STR_ACE_dragon_attachSight">
             <English>Attach Sight</English>
         </Key>
+        <Key ID="STR_ACE_dragon_detachSight">
+            <English>Detach Sight</English>
+        </Key>
         <Key ID="STR_ACE_dragon_sightName">
             <English>SU-36/P Daysight</English>
         </Key>

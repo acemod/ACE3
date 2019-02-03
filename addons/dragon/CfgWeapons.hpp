@@ -3,6 +3,7 @@ class CfgWeapons {
     class Launcher_Base_F;
     class missiles_titan;
     class Binocular;
+    class Default;
     class missiles_titan_static: missiles_titan {
         class WeaponSlotsInfo;
     };
@@ -22,7 +23,7 @@ class CfgWeapons {
             type = "mount";
             deployTime = 2;
             pickupTime = 2;
-            deploy = QGVAR(super_noSight);
+            deploy = QGVAR(staticBase);
         };
         
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -30,7 +31,7 @@ class CfgWeapons {
         };
         modes[] = {};
     };
-    
+
     class GVAR(superStatic): missiles_titan_static {
         EGVAR(overpressure,angle) = 90;
         EGVAR(overpressure,range) = 30;
@@ -41,6 +42,18 @@ class CfgWeapons {
         displayName = CSTRING(dragonName);
         descriptionShort = CSTRING(dragonDescription);
         magazines[] = { QGVAR(super) };
+    };    
+    
+    // need a weapon in order to rotate turret
+    class GVAR(dummyStatic): Default {
+        cursor = "";
+        cursorAim = "";
+        scope = 1;
+        displayName = CSTRING(dragonName);
+        reloadTime = 0;
+        canLock = 0;
+        optics = 0;
+        enableAttack = 0;
     };
     
     class GVAR(sight): Binocular {

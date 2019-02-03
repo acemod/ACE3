@@ -1,25 +1,24 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Determines if you can pick-up the Dragon missile. If the missile was fired you will not be able to pick up the tripod.
+ * Determines if you can attach the sighting unit to the Dragon missile.
  *
  * Arguments:
  * 0: Target <OBJECT>
  * 1: Unit Performing Action <OBJECT>
  *
  * Return Value:
- * Can Pickup Tripod <BOOL>
+ * Can Attach Sighting Unit <BOOL>
  *
  * Example:
- * [vehicle player, player] call ace_dragon_fnc_canPickupTripod;
+ * [cursorObject, player] call ace_dragon_fnc_sightCanAttach
  *
  * Public: No
  */
+ 
 params ["_target", "_unit"];
 
 (alive _target)
-&& {!alive (gunner _target)}
-&& {!(_target getVariable [QGVAR(fired), false])}
+// && {!(_target getVariable [QGVAR(fired), false])}
 && {!(_target getVariable [QGVAR(sightAttached), ((typeOf _target) == QGVAR(staticAssembled))])}
-&& EFUNC(csw,assemble_canPickupTripod)
-
+&& {QGVAR(sight) in (weapons _unit)}
