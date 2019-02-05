@@ -43,7 +43,7 @@ if (!alive _cargo) exitWith {
         params ["_successful", "_cargo", "_mousePosASL"];
         if (!_successful) exitWith {};
 
-        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 5, true]) param [0, objNull]; // 2d distance search
+        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 15, true]) param [0, objNull]; // 2d distance search
         if (isNull _holder) exitWith {
             [LSTRING(NothingSelected)] call FUNC(showMessage);
         };

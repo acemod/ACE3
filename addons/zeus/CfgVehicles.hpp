@@ -186,6 +186,13 @@ class CfgVehicles {
         function = QFUNC(moduleLoadIntoCargo);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
     };
+    class GVAR(moduleCargoParadrop): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleCargoParadrop_DisplayName);
+        function = QFUNC(moduleCargoParadrop);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_ParadropCargo_ca.paa);
+    };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);

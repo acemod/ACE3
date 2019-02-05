@@ -57,7 +57,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                GVAR(center) addWeaponGlobal _item;
+                GVAR(center) addWeapon _item;
                 GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
 
                 {
@@ -95,7 +95,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                GVAR(center) addWeaponGlobal _item;
+                GVAR(center) addWeapon _item;
                 GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
 
                 {
@@ -132,7 +132,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
-                GVAR(center) addWeaponGlobal _item;
+                GVAR(center) addWeapon _item;
                 GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
 
                 {
@@ -295,7 +295,7 @@ switch (GVAR(currentLeftPanel)) do {
             GVAR(currentItems) set [9, _item];
         } else {
             if ((GVAR(currentItems) select 9) != _item) then {
-                GVAR(center) addWeaponGlobal _item;
+                GVAR(center) addWeapon _item;
                 GVAR(currentItems) set [9, _item];
                 call FUNC(showItem);
                 ADDBINOCULARSMAG
