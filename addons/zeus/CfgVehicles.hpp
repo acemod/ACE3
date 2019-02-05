@@ -330,15 +330,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(create) {
                 displayName = CSTRING(CreateZeus);
-                condition = QUOTE(\
-                isNil QQGVAR(zeus) && {\
-                    switch (GVAR(canCreateZeus)) do {\
-                        case CAN_CREATE_ADMIN:   {isServer || {IS_ADMIN_LOGGED}};\
-                        case CAN_CREATE_CONSOLE: {call BIS_fnc_isDebugConsoleAllowed};\
-                        case CAN_CREATE_ALL:     {true};\
-                        default {false};\
-                    }\
-                });
+                condition = QUOTE(call FUNC(canCreateModule));
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                 //Set GVAR(zeus) to null first to disable the action through the isNil check
                 statement = QUOTE(GVAR(zeus) = objNull; [ARR_2(QQGVAR(createZeus), ACE_player)] call CBA_fnc_serverEvent);
