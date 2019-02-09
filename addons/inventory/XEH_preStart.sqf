@@ -10,15 +10,15 @@ _allItems append ("getNumber (_x >> 'scope') == 2" configClasses (configFile >> 
 _allItems append ("getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'isBackpack') == 1}" configClasses (configFile >> "CfgVehicles"));
 
 uiNamespace setVariable [QGVAR(ItemKeyCache), _allItems apply {
-    private _displayName = getText (_this >> "displayName");
-    private _picture = getText (_this >> "picture");
+    private _displayName = getText (_x >> "displayName");
+    private _picture = getText (_x >> "picture");
 
     // list box seems to delete the leading backslash
     if (_picture select [0,1] == "\") then {
         _picture = _picture select [1];
     };
 
-    [format ["%1:%2", _displayName, _picture], _this];
+    [format ["%1:%2", _displayName, _picture], _x];
 }];
 
 
