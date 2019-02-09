@@ -26,12 +26,13 @@ private _itemClasses_addAction = [];
             };
         } else {
             _vehicleClasses_addClassEH pushBackUnique _class;
+            _initVehicleClasses pushBackUnique _class;
         };
     };
     // init object
     if (
         1 == getNumber (_x >> QGVAR(canLoad))
-        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _initObjectClasses}
+        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _objectClasses_addClassEH}
     ) then {
         if (_class isKindOf "Static") then {
             if (2 == getNumber (_x >> "scope")) then {
