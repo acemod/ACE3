@@ -4,7 +4,8 @@
 private _files = [];
 
 {
-    if (_x find "a3_" != 0 && {_x find "ace_" != 0} && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
+    private _start = toLower (_x select [0,3]);
+    if (!(_x in ["a3_", "ace"]) && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
         _files pushBack _x;
     };
 } forEach CBA_common_addons;
