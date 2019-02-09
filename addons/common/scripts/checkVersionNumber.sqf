@@ -7,7 +7,7 @@ private _files = [];
     if (_x find "a3_" != 0 && {_x find "ace_" != 0} && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
         _files pushBack _x;
     };
-} forEach activatedAddons;
+} forEach CBA_common_addons;
 
 private _versions = [];
 {
