@@ -16,7 +16,7 @@ private _allItems = uiNamespace getVariable [QGVAR(ItemKeyCache), []]; //See XEH
     if (_x isEqualType []) then {
         GVAR(ItemKeyNamespace) setVariable _x;
     };
-} forEach _allItems;
+} forEach ([[], _allItems] select (_allItems isEqualType []));
 
 GVAR(customFilters) = [];
 GVAR(selectedFilterIndex) = -1;
