@@ -2,14 +2,13 @@
 
 #include "XEH_PREP.hpp"
 
-
 //item cache, see XEH_postInit.sqf
 private _allItems = ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgWeapons"));
 _allItems append ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgGlasses"));
 _allItems append ("getNumber (_x >> 'scope') == 2" configClasses (configFile >> "CfgMagazines"));
 _allItems append ("getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'isBackpack') == 1}" configClasses (configFile >> "CfgVehicles"));
 
-uiNamespace setVariable [QGVAR(ItemKeyCache), compileFinal str (_allItems apply {
+uiNamespace setVariable [QGVAR(ItemKeyCache), _allItems apply {
     private _displayName = getText (_x >> "displayName");
     private _picture = getText (_x >> "picture");
 
@@ -19,8 +18,7 @@ uiNamespace setVariable [QGVAR(ItemKeyCache), compileFinal str (_allItems apply 
     };
 
     [format ["%1:%2", _displayName, _picture], _x];
-})];
-
+}];
 
 // generate list of grenades
 private _grenades_ItemList = [];
@@ -35,7 +33,7 @@ _grenades_ItemList = _grenades_ItemList apply {toLower _x};
 // filter duplicates
 _grenades_ItemList = _grenades_ItemList arrayIntersect _grenades_ItemList;
 
-uiNamespace setVariable [QGVAR(Grenades_ItemList), compileFinal str _grenades_ItemList];
+uiNamespace setVariable [QGVAR(Grenades_ItemList), _grenades_ItemList];
 
 // generate list of medical items
 private _medical_ItemList = [];
@@ -56,4 +54,4 @@ _medical_ItemList = _medical_ItemList apply {toLower _x};
 // filter duplicates
 _medical_ItemList = _medical_ItemList arrayIntersect _medical_ItemList;
 
-uiNamespace setVariable [QGVAR(Medical_ItemList), compileFinal str _medical_ItemList];
+uiNamespace setVariable [QGVAR(Medical_ItemList), _medical_ItemList];
