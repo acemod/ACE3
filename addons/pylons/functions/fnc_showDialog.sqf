@@ -18,6 +18,8 @@
 
 params ["_aircraft", ["_isCurator", false]];
 
+if (_isCurator && {!(["ace_zeus"] call EFUNC(common,isModLoaded))}) exitWith { WARNING("ace_zeus not loaded"); };
+
 if !(typeOf _aircraft in GVAR(aircraftWithPylons)) exitWith {
     if (_isCurator) then {
         [LSTRING(AircraftDoesntHavePylons)] call EFUNC(zeus,showMessage);
