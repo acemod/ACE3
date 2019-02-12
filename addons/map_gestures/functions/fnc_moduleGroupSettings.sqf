@@ -23,9 +23,9 @@ TRACE_3("params",_logic,_units,_activated);
 if (!_activated) exitWith {};
 
 // Transcode string setting into usable array. Example: "1,1,1,1" -> [1, 1, 1, 1]
-private _leadColor = call compile ("[" + (_logic getVariable ["leadColor", ""]) + "]");
+private _leadColor = parseSimpleArray ("[" + (_logic getVariable ["leadColor", ""]) + "]");
 if (!([_leadColor] call FUNC(isValidColorArray))) exitWith {ERROR("leadColor is not a valid color array.")};
-private _color = call compile ("[" + (_logic getVariable ["color", ""]) + "]");
+private _color = parseSimpleArray ("[" + (_logic getVariable ["color", ""]) + "]");
 if (!([_color] call FUNC(isValidColorArray))) exitWith {ERROR("color is not a valid color array.")};
 
 // Add all synchronized groups and reference custom configuration for them
