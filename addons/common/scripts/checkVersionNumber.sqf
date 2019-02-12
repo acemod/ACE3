@@ -1,14 +1,13 @@
 // by commy2
 #include "script_component.hpp"
 
-private _files = [];
-
-{
-    private _start = toLower (_x select [0,3]);
-    if (!(_x in ["a3_", "ace"]) && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
-        _files pushBack _x;
-    };
-} forEach CBA_common_addons;
+private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
+private _files = CBA_common_addons select {
+    private _x = toLower _x;
+    ((_x select [0,3]) != "a3_") &&
+    {(_x select [0,4]) != "ace_"} && 
+    {!(_x in _aceWhitelist)}
+};
 
 private _versions = [];
 {
