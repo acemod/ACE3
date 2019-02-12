@@ -45,13 +45,7 @@ private _fnc_hideControl = {
     if (_hideCtrl) then {
         _pos = [-9,-9,0,0];
     } else {
-        {
-            if (isNumber (_path >> _x)) then {
-                _pos pushBack (getNumber (_path >> _x));
-            } else {
-                _pos pushBack (call compile (getText (_path >> _x)));
-            };
-        } forEach ["x", "y", "w", "h"];
+        _pos = ["x", "y", "w", "h"] apply {getNumber (_path >> _x)};
     };
     (_display displayCtrl _idc) ctrlSetPosition _pos;
     (_display displayCtrl _idc) ctrlCommit 0;
