@@ -19,7 +19,7 @@ private _dynamicClasses = [];
                 _staticClasses pushBackUnique _sourceClass;
             };
         } else {
-            if (0 == {_sourceClass isKindOf _x} count _dynamicClasses) then {
+            if (-1 == _dynamicClasses findIf {_sourceClass isKindOf _x}) then {
                 _dynamicClasses pushBackUnique _sourceClass;
             };
         };
