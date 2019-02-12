@@ -38,7 +38,7 @@ private _drawColor = getArray (_colorConfig >> "color");
 //Convert possible code into numbers
 {
     if (_x isEqualType "") then {
-        _drawColor set [_forEachIndex, call compile _x];
+        _drawColor set [_forEachIndex, parseSimpleArray (format ["[%1]",_x])];
     };
 } forEach _drawColor;
 
