@@ -45,22 +45,24 @@ _actions pushBack [_condition, _statement];
 
 // first action to add, unit needs addAction command
 if (_actionID == -1) then {
-    private _addAction = call compile format [
-        "[
-            '',
-            {[{if (inputAction '%1' == 0) exitWith {}; {if (_this call (_x select 0)) then {_this call (_x select 1)}} forEach (((_this select 0) getVariable '%2') select 1 select 2)}, _this] call CBA_fnc_directCall},
-            nil,
-            -1,
-            false,
-            true,
-            '%1',
-            ""if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; _actions = (_this getVariable '%2') select 1 select 2; _count = count _actions; _index = 0; _return = false; while {_index < _count && {!_return}} do {_return = [_target, _this] call ((_actions select _index) select 0); _index = _index + 1}; _return""
-        ]",
+    _actionID = _unit addAction [
+        '',
+        {
+            [{
+                (_this select 3) params ["_action", "_name"];
+                if (inputAction _action == 0) exitWith {}; 
+                {
+                    if (_this call (_x select 0)) then {_this call (_x select 1)}
+                } forEach (((_this select 0) getVariable _name) select 1 select 2);
+            }, _this] call CBA_fnc_directCall;
+        },
+        [_action, _name],
+        -1,
+        false,
+        true,
         _action,
-        _name
+        format ["if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; _actions = (_this getVariable '%1') select 1 select 2; _count = count _actions; _index = 0; _return = false; while {_index < _count && {!_return}} do {_return = [_target, _this] call ((_actions select _index) select 0); _index = _index + 1}; _return", _name]
     ];
-
-    _actionID = _unit addAction _addAction;
 };
 
 _unit setVariable [_name, [_actionID, [_id, _actionIDs, _actions], _unit], false];
