@@ -26,5 +26,5 @@ if (isPlayer _target) then {
     [QGVAR(receiveRequest), [_caller, _target, _requestID, _requestMessage, _callBack], _target] call CBA_fnc_targetEvent;
 } else {
     // accept it, since it's an AI.
-    [_caller, _target, true] call compile _callBack;
+    [_caller, _target, true] call _callBack;
 };
