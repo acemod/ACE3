@@ -240,7 +240,7 @@ if (_activated) then {
         _addons = [];
         {
             if (typeof _x == "ModuleCuratorAddAddons_F") then {
-                _paramAddons = call compile ("[" + (_x getvariable ["addons",""]) + "]");
+                _paramAddons = parseSimpleArray ("[" + (_x getvariable ["addons",""]) + "]");
                 {
                     if !(_x in _addons) then {_addons set [count _addons,_x];};
                     {
