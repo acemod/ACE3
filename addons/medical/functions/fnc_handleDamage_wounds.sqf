@@ -30,10 +30,8 @@ private _woundID = _unit getVariable[QGVAR(lastUniqueWoundID), 1];
 
 private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
 
-private _painToAdd = 0;
-private _woundsCreated = [];
+(parseSimpleArray _extensionOutput) params ["_woundsCreated", "_painToAdd"];
 
-call compile _extensionOutput;
 {
     _x params ["", "_toAddClassID", "_bodyPartNToAdd"];
     _foundIndex = -1;
