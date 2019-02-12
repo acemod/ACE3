@@ -47,8 +47,8 @@ if (!isNil QGVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE)) then {
     GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = nil;
 };
 
-GVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT) = _target addAction ["Accept", compile format["[player,'%1', true] call FUNC(onAnswerRequest);", _requestID]];
-GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = _target addAction ["Decline", compile format["[player,'%1', false] call FUNC(onAnswerRequest);", _requestID]];
+GVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT) = _target addAction ["Accept", {[player, _this select 3, true] call FUNC(onAnswerRequest)}, _requestID];
+GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = _target addAction ["Decline", {[player, _this select 3, false] call FUNC(onAnswerRequest)}, _requestID];
 
 GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = _requestID;
 
