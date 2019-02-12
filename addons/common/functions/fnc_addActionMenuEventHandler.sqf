@@ -54,14 +54,7 @@ _actionIDs pushBack _id;
 
 private _addAction = call compile format [
     "[
-        '%2',
-        {[{if (inputAction '%1' == 0) then {if (_this call (%3 select 2)) then {_this call (%3 select 3)}} else {_this call (%3 select 1)}}, _this] call CBA_fnc_directCall},
-        nil,
-        %4,
-        false,
-        true,
-        '%1',
-        ""if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; [_target, _this] call (%3 select 0)""
+
     ]",
     _action,
     _displayName,
@@ -69,7 +62,26 @@ private _addAction = call compile format [
     _priority
 ];
 
-private _actionID = _unit addAction _addAction;
+private _actionID = _unit addAction [
+        _displayName,
+        {
+            [{
+                (_this select 3) params ["_action", "_statement", "_condition2", "_statement2"];
+                if (inputAction _action == 0) then {
+                    if (_this call _condition2) then {_this call _statement2}
+                } else {
+                    _this call _statement
+                }
+            }, _this] call CBA_fnc_directCall
+        },
+        [_action, _statement, _condition2, _statement2],
+        _priority,
+        false,
+        true,
+        _action,
+        format ["if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; [_target, _this] call (%1 select 0)", _nameVar]
+
+];
 
 _actions pushBack [_actionID, _nameVar];
 
