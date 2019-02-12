@@ -52,8 +52,8 @@ if (isNil "_recoil") then {
     TRACE_3("Caching Recoil config",_weapon,_muzzle,_recoil);
 
     // parse numbers
-    _recoil set [0, call compile format ["%1", _recoil select 0]];
-    _recoil set [1, call compile format ["%1", _recoil select 1]];
+    if ((_recoil select 0) isEqualType "") then {_recoil set [0, call compile (_recoil select 0)]};
+    if ((_recoil select 1) isEqualType "") then {_recoil set [1, call compile (_recoil select 1)]};
 
     missionNamespace setVariable [format [QGVAR(%1-%2), _weapon, _muzzle], _recoil];
 };
