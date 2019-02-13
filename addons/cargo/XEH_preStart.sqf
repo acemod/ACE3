@@ -18,7 +18,7 @@ private _itemClasses_addAction = [];
     // init vehicle
     if (
         1 == getNumber (_x >> QGVAR(hasCargo))
-        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _initVehicleClasses}
+        && {-1 == _initVehicleClasses findIf {_class isKindOf _x}}
     ) then {
         if (_class isKindOf "Static") then {
             if (2 == getNumber (_x >> "scope")) then {
@@ -32,7 +32,7 @@ private _itemClasses_addAction = [];
     // init object
     if (
         1 == getNumber (_x >> QGVAR(canLoad))
-        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _objectClasses_addClassEH}
+        && {-1 == _objectClasses_addClassEH findIf {_class isKindOf _x}}
     ) then {
         if (_class isKindOf "Static") then {
             if (2 == getNumber (_x >> "scope")) then {
