@@ -105,17 +105,6 @@ GVAR(objectAction) = [
     LINKFUNC(addCargoVehiclesActions)
 ] call EFUNC(interact_menu,createAction);
 
-
-private _initVehicleClasses = ["ThingX", "LandVehicle", "Air", "Ship_F"];
-private _initObjectClasses = ["ThingX", "StaticWeapon"];
-{
-    [_x, "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
-} forEach _initVehicleClasses;
-{
-    [_x, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
-} forEach _initObjectClasses;
-
-
 // find all remaining configured classes and init them, see XEH_preStart.sqf
 private _vehicleClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedVehicleClasses), {[]}]);
 {

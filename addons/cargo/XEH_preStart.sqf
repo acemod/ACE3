@@ -3,12 +3,9 @@
 #include "XEH_PREP.hpp"
 
 
-
 //See XEH_postInit.sqf
-private _initVehicleClasses = ["ThingX", "LandVehicle", "Air", "Ship_F"];
-
-private _vehicleClasses_addClassEH = [];
-private _objectClasses_addClassEH = [];
+private _vehicleClasses_addClassEH = ["ThingX", "LandVehicle", "Air", "Ship_F"];
+private _objectClasses_addClassEH = ["ThingX", "StaticWeapon"];
 private _vehicleClasses_addAction = [];
 private _itemClasses_addAction = [];
 
@@ -18,7 +15,7 @@ private _itemClasses_addAction = [];
     // init vehicle
     if (
         1 == getNumber (_x >> QGVAR(hasCargo))
-        && {-1 == _initVehicleClasses findIf {_class isKindOf _x}}
+        && {-1 == _vehicleClasses_addClassEH findIf {_class isKindOf _x}}
     ) then {
         if (_class isKindOf "Static") then {
             if (2 == getNumber (_x >> "scope")) then {
@@ -26,7 +23,6 @@ private _itemClasses_addAction = [];
             };
         } else {
             _vehicleClasses_addClassEH pushBackUnique _class;
-            _initVehicleClasses pushBackUnique _class;
         };
     };
     // init object
@@ -49,3 +45,5 @@ uiNamespace setVariable [QGVAR(vehicleClasses_classEH), compileFinal str _vehicl
 uiNamespace setVariable [QGVAR(objectClasses_classEH), compileFinal str _objectClasses_addClassEH];
 uiNamespace setVariable [QGVAR(initializedVehicleClasses), compileFinal str _vehicleClasses_addAction];
 uiNamespace setVariable [QGVAR(initializedItemClasses), compileFinal str _itemClasses_addAction];
+
+TRACE_4("compiled",count _vehicleClasses_addClassEH,count _objectClasses_addClassEH,count _vehicleClasses_addAction,count _itemClasses_addAction);
