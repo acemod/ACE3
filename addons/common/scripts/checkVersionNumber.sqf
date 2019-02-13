@@ -3,10 +3,9 @@
 
 private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
 private _files = CBA_common_addons select {
-    private _x = toLower _x;
     ((_x select [0,3]) != "a3_") &&
     {(_x select [0,4]) != "ace_"} && 
-    {!(_x in _aceWhitelist)}
+    {!((toLower _x) in _aceWhitelist)}
 };
 
 private _versions = [];
