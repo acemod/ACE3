@@ -25,7 +25,7 @@ GVAR(selectedFilterIndex) = -1;
 
 // get list of grenades
 GVAR(Grenades_ItemList) = uiNamespace getVariable [QGVAR(Grenades_ItemList), []];
-if (!GVAR(Grenades_ItemList) isEqualType []) then {GVAR(Grenades_ItemList) = []};
+if (!(GVAR(Grenades_ItemList) isEqualType [])) then {GVAR(Grenades_ItemList) = []};
 
 [localize LSTRING(Grenades), QFUNC(filterGrenades)] call FUNC(addCustomFilter);
 
@@ -36,6 +36,6 @@ if (!GVAR(Grenades_ItemList) isEqualType []) then {GVAR(Grenades_ItemList) = []}
 
 // get list of medical items
 GVAR(Medical_ItemList) = uiNamespace getVariable [QGVAR(Medical_ItemList), []];
-if (!GVAR(Medical_ItemList) isEqualType []) then {GVAR(Medical_ItemList) = []};
+if (!(GVAR(Medical_ItemList) isEqualType [])) then {GVAR(Medical_ItemList) = []};
 
 [localize LSTRING(Medical), QFUNC(filterMedical)] call FUNC(addCustomFilter);
