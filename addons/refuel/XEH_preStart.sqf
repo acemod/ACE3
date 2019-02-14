@@ -26,4 +26,5 @@ private _dynamicClasses = [];
     };
 } forEach ('true' configClasses (configFile >> "CfgVehicles"));
 
+TRACE_2("compiled",count _staticClasses,count _dynamicClasses);
 uiNamespace setVariable [QGVAR(cacheRefuelClasses), compileFinal str [_staticClasses, _dynamicClasses]];
