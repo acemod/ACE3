@@ -17,7 +17,7 @@ GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
 
 // Compile actions for CaManBase now and use for all mans types
 ["CaManBase"] call FUNC(compileMenu);
-GVAR(cacheManActions) = +(GVAR(ActNamespace) getVariable ["CaManBase", []]); // copy
+GVAR(cacheManActions) = +(GVAR(ActNamespace) getVariable ["CAManBase", []]); // copy
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
