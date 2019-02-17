@@ -26,7 +26,7 @@ private _namespace = GVAR(ActNamespace);
 // Exit if the action menu is already compiled for this class
 if !(isNil {_namespace getVariable _objectType}) exitWith {};
 
-if ((_objectType isKindOf "CaManBase") && {!isNil QGVAR(cacheManActions)}) exitWith {
+if ((_objectType isKindOf "CAManBase") && {!isNil QGVAR(cacheManActions)}) exitWith {
     _namespace setVariable [_objectType, +GVAR(cacheManActions)]; // copy
 };
 
