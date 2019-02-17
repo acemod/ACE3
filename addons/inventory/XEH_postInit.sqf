@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {};
 GVAR(ItemKeyNamespace) = [] call CBA_fnc_createNamespace;
 private _allItems = uiNamespace getVariable [QGVAR(ItemKeyCache), []]; //See XEH_preStart.sqf
 
-//isEqualType is hacking protection as we cannot trust that the cache hasn't been manipulated
+// isEqualType is hacking protection as we cannot trust that the cache hasn't been manipulated
 {
     if (_x isEqualType [] && {_x isEqualTypeArray ["", configNull]}) then {
         GVAR(ItemKeyNamespace) setVariable _x;
