@@ -12,7 +12,7 @@ private _vehicleClasses = "isClass _x && (configName _x) isKindOf 'Static'" conf
     private _model = getText (_x >> "model");
     if (_model != "") then {
         private _array = _model splitString "\";
-        _cacheStaticModels pushBackUnique (_array select ((count _array) - 1));
+        _cacheStaticModels pushBackUnique toLower (_array select ((count _array) - 1));
     };
 } forEach _vehicleClasses;
 
@@ -24,7 +24,7 @@ private _cfgBase = configFile >> "CfgNonAIVehicles";
     private _model = getText (_x >> "model");
     if (_model != "") then {
         private _array = _model splitString "\";
-        _cacheStaticModels pushBackUnique (_array select ((count _array) - 1));
+        _cacheStaticModels pushBackUnique toLower (_array select ((count _array) - 1));
     };
 } forEach (_nonaivehicleClasses select {(configName _x) isKindOf ["Bridge_base_F", _cfgBase]});
 
