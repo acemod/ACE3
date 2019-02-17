@@ -4,18 +4,10 @@
 
 // Cache for static objects
 GVAR(cacheStaticModels) = [false] call CBA_fnc_createNamespace;
-
-// Consider static everything vehicle that inherit from Static
-// This include houses (which we don't need), but also walls, that we do
-
-
-private _cacheStaticModels = uiNamespace getVariable [QGVAR(cacheStaticModels), []];
-
+private _cacheStaticModels = call (uiNamespace getVariable [QGVAR(cacheStaticModels), {[]}]);
 {
-    if (_x isEqualType "") then {
-            GVAR(cacheStaticModels) setVariable [_x, true];
-    };
-} forEach ([[], _cacheStaticModels] select (_cacheStaticModels isEqualType []));
+    GVAR(cacheStaticModels) setVariable [_x, true];
+} forEach _cacheStaticModels;
 
 if (hasInterface) then {
     // Compile and cache config tags
