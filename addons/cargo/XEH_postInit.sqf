@@ -105,47 +105,25 @@ GVAR(objectAction) = [
     LINKFUNC(addCargoVehiclesActions)
 ] call EFUNC(interact_menu,createAction);
 
+// find all remaining configured classes and init them, see XEH_preStart.sqf
+private _vehicleClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedVehicleClasses), {[]}]);
+{
+    [_x, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
+} forEach _vehicleClassesAddAction;
+GVAR(initializedVehicleClasses) append _vehicleClassesAddAction;
 
-private _initVehicleClasses = ["ThingX", "LandVehicle", "Air", "Ship_F"];
-private _initObjectClasses = ["ThingX", "StaticWeapon"];
+private _objectClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedItemClasses), {[]}]);
+{
+    [_x, 0, ["ACE_MainActions"], GVAR(objectAction)] call EFUNC(interact_menu,addActionToClass);
+} forEach _objectClassesAddAction;
+GVAR(initializedItemClasses) append _objectClassesAddAction;
+
+private _vehicleClassesAddClassEH = call (uiNamespace getVariable [QGVAR(vehicleClasses_classEH), {[]}]);
 {
     [_x, "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
-} forEach _initVehicleClasses;
+} forEach _vehicleClassesAddClassEH;
+
+private _objectClassesAddClassEH = call (uiNamespace getVariable [QGVAR(objectClasses_classEH), {[]}]);
 {
     [_x, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
-} forEach _initObjectClasses;
-
-// find all remaining configured classes and init them
-{
-    private _class = configName _x;
-    // init vehicle
-    if (
-        1 == getNumber (_x >> QGVAR(hasCargo))
-        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _initVehicleClasses}
-    ) then {
-        if (_class isKindOf "Static") then {
-            if (2 == getNumber (_x >> "scope")) then {
-                [_class, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
-                GVAR(initializedVehicleClasses) pushBack _class;
-            };
-        } else {
-            [_class, "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
-            _initVehicleClasses pushBack _class;
-        };
-    };
-    // init object
-    if (
-        1 == getNumber (_x >> QGVAR(canLoad))
-        && {{if (_class isKindOf _x) exitWith {false}; true} forEach _initObjectClasses}
-    ) then {
-        if (_class isKindOf "Static") then {
-            if (2 == getNumber (_x >> "scope")) then {
-                [_class, 0, ["ACE_MainActions"], GVAR(objectAction)] call EFUNC(interact_menu,addActionToClass);
-                GVAR(initializedItemClasses) pushBack _class;
-            };
-        } else {
-            [_class, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
-            _initObjectClasses pushBack _class;
-        };
-    };
-} forEach ("true" configClasses (configFile >> "CfgVehicles"));
+} forEach _objectClassesAddClassEH;
