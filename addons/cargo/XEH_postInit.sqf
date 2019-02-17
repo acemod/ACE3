@@ -94,13 +94,12 @@ GVAR(objectAction) = [
         {locked _target < 2} &&
         {alive _target} &&
         {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-        {0 < {
-                private _type = typeOf _x;
-                private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
-                private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
-                (_hasCargoPublic || _hasCargoConfig) && {_x != _target} &&
-                {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
-            } count (nearestObjects [_player, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)])}
+        {((nearestObjects [_target, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]) findIf {
+            private _hasCargoConfig = 1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo));
+            private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
+            (_hasCargoConfig || {_hasCargoPublic}) && {_x != _target} && {alive _x} && {locked _x < 2} &&
+            {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+        }) > -1}
     },
     LINKFUNC(addCargoVehiclesActions)
 ] call EFUNC(interact_menu,createAction);
