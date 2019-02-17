@@ -2,7 +2,6 @@
 
 #include "XEH_PREP.hpp"
 
-
 private _cacheStaticModels = [];
 
 private _vehicleClasses = "isClass _x && (configName _x) isKindOf 'Static'" configClasses (configFile >> "CfgVehicles");
@@ -16,7 +15,6 @@ private _vehicleClasses = "isClass _x && (configName _x) isKindOf 'Static'" conf
         _cacheStaticModels pushBackUnique (_array select ((count _array) - 1));
     };
 } forEach _vehicleClasses;
-
 
 private _nonAIVehicleClasses = "isClass _x" configClasses (configFile >> "CfgNonAIVehicles");
 
