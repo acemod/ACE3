@@ -49,7 +49,7 @@
             <Key ID="STR_ACE_Medical_gui_menuTypeDisplaySelf">
                 <English>Show medical interaction for self</English>
             </Key>
-            <Key ID="STR_ACE_Medical_gui_menuTypeDisplaySelf">
+            <Key ID="STR_ACE_Medical_gui_menuTypeDescriptionSelf">
                 <English>Show the self interaction medical actions</English>
             </Key>
             <Key ID="STR_ACE_Medical_gui_useSelection">
