@@ -3247,7 +3247,7 @@
             <Chinesesimp>将伤者背出</Chinesesimp>
             <Chinese>將傷者背出</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_loadedInto">
+        <Key ID="STR_ACE_Medical_treatment_loadedInto">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
             <Spanish>%1&lt;br/&gt;cargado en&lt;br/&gt;%2</Spanish>
             <French>%1&lt;br/&gt;chargé dans&lt;br/&gt;%2</French>
