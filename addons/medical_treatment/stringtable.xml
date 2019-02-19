@@ -3247,6 +3247,22 @@
             <Chinesesimp>将伤者背出</Chinesesimp>
             <Chinese>將傷者背出</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_loadedInto">
+            <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
+            <Spanish>%1&lt;br/&gt;cargado en&lt;br/&gt;%2</Spanish>
+            <French>%1&lt;br/&gt;chargé dans&lt;br/&gt;%2</French>
+            <German>%1&lt;br/&gt;in&lt;br/&gt;%2 verladen</German>
+            <Polish>%1&lt;br/&gt;załadowano do&lt;br/&gt;%2</Polish>
+            <Czech>%1&lt;br/&gt;naloženo do&lt;br/&gt;%2</Czech>
+            <Portuguese>%1&lt;br/&gt;carregado em&lt;br/&gt;%2</Portuguese>
+            <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
+            <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
+            <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
+            <Japanese>%1&lt;br/&gt;は&lt;br/&gt;%2へ積み込まれました</Japanese>
+            <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에 실림</Korean>
+            <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
+            <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Medical_treatment_PlaceInBodyBag">
             <English>Place body in bodybag</English>
             <Spanish>Colocar cuerpo en bolsa para cadáveres</Spanish>
