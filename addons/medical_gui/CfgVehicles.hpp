@@ -49,9 +49,9 @@ class CfgVehicles {
                 runOnHover = 1;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
-                condition = "true";
+                condition = QUOTE(GVAR(menuTypeStyleSelf));
                 icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
-                #define ACTION_CONDITION condition = "true";
+                #define ACTION_CONDITION condition = QUOTE(GVAR(menuTypeStyleSelf));
                 #include "InteractionBodyParts.hpp"
                 #undef ACTION_CONDITION
             };
@@ -66,7 +66,7 @@ class CfgVehicles {
         };
 
         class ACE_Actions {
-            #define ACTION_CONDITION condition = QUOTE((EGVAR(medical,menuTypeStyle) == 0));
+            #define ACTION_CONDITION condition = QUOTE((GVAR(menuTypeStyle) == 0));
             #include "InteractionBodyParts.hpp"
             #undef ACTION_CONDITION
             // Create a consolidates medical menu for treatment while boarded
@@ -84,7 +84,7 @@ class CfgVehicles {
                     runOnHover = 1;
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE([ARR_3(_target,1,0)] call FUNC(displayPatientInformation));
-                    condition = QUOTE(((vehicle _target != _target && vehicle _target == vehicle _player) || {EGVAR(medical,menuTypeStyle) == 1}));
+                    condition = QUOTE(((vehicle _target != _target && vehicle _target == vehicle _player) || {GVAR(menuTypeStyle) == 1}));
                     icon = QPATHTOF(ui\ui\icons\medical_cross.paa);
                     #define ACTION_CONDITION condition = "true";
                     #include "InteractionBodyParts.hpp"
