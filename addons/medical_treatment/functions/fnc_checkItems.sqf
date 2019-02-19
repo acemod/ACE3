@@ -20,6 +20,8 @@ _unit removeItems "FirstAidKit";
 private _countMedikit = [_unit, "Medikit"] call EFUNC(common,getCountOfItem);
 _unit removeItems "Medikit";
 
+if (GVAR(convertItems) == 0) exitWith {};
+
 for "_i" from 1 to _countFirstAidKit do {
     _unit addItem "ACE_fieldDressing";
     _unit addItem "ACE_packingBandage";
