@@ -46,10 +46,10 @@
                 <Chinesesimp>选择你喜欢的选单样式; 预设为3D选项或放射状</Chinesesimp>
                 <Chinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</Chinese>
             </Key>
-            <Key ID="STR_ACE_Medical_gui_menuTypeDisplaySelf">
+            <Key ID="STR_ACE_Medical_gui_menuTypeStyleSelf_displayName">
                 <English>Show medical interaction for self</English>
             </Key>
-            <Key ID="STR_ACE_Medical_gui_menuTypeDescriptionSelf">
+            <Key ID="STR_ACE_Medical_gui_mmenuTypeStyleSelf_description">
                 <English>Show the self interaction medical actions</English>
             </Key>
             <Key ID="STR_ACE_Medical_gui_useSelection">
