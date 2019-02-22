@@ -17,6 +17,13 @@ class ACE_Torso {
     statement = QUOTE([ARR_2(_target,1)] call FUNC(displayPatientInformation));
     modifierFunction = QUOTE([ARR_4(_target,_player,1,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
+    class TriageCard {
+        displayName = ECSTRING(medical_treatment,Actions_TriageCard);
+        exceptions[] = {"isNotInside", "isNotSitting"};
+        condition = "true";
+        statement = QUOTE(_target call FUNC(displayTriageCard));
+        icon = "";
+    };
 };
 class ACE_ArmLeft {
     displayName = ECSTRING(interaction,ArmLeft);

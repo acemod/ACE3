@@ -413,6 +413,99 @@ class ACE_Medical_Menu {
     };
 };
 
+class GVAR(RscTriageCard) {
+    idd = -1;
+    movingEnable = 1;
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscTriageCard), _this select 0)]);
+    class controls {
+        class Background: RscText {
+            idc = -1;
+            x = POS_X(12.5);
+            y = POS_Y(0);
+            w = POS_W(15);
+            h = POS_H(19);
+            colorBackground[] = {1, 1, 1, 1};
+            moving = 1;
+        };
+        class CornerLeft: RscPicture {
+            idc = -1;
+            text = QPATHTOF(data\triage_card\corner_left.paa);
+            x = POS_X(12.5);
+            y = POS_Y(0);
+            w = POS_W(5);
+            h = POS_H(5);
+            colorText[] = {1, 1, 0, 1};
+        };
+        class CornerRight: CornerLeft {
+            text = QPATHTOF(data\triage_card\corner_right.paa);
+            x = POS_X(22.5);
+        };
+        class Title: RscText {
+            idc = -1;
+            style = ST_CENTER;
+            text = ECSTRING(medical_treatment,Actions_TriageCard);
+            x = POS_X(12.5);
+            y = POS_Y(3);
+            w = POS_W(15);
+            h = POS_H(0.9);
+            sizeEx = POS_H(0.9);
+            shadow = 0;
+            colorText[] = {0, 0, 0, 1};
+        };
+        class TriageCard: RscListBox {
+            idc = IDC_TRIAGE_CARD;
+            x = POS_X(13.5);
+            y = POS_Y(5);
+            w = POS_W(13);
+            h = POS_H(13);
+            sizeEx = POS_H(0.7);
+            colorText[] = {0, 0, 0, 1};
+            colorSelect[] = {0, 0, 0, 1};
+            colorSelect2[] = {0, 0, 0, 1};
+            colorBackground[] = {0, 0, 0, 0};
+            colorSelectBackground[] = {0, 0, 0, 0};
+            colorSelectBackground2[] = {0, 0, 0, 0};
+            colorScrollbar[] = {0, 0, 0, 1};
+        };
+        class TriageStatus: RscText {
+            idc = IDC_TRIAGE_STATUS;
+            style = ST_CENTER;
+            x = POS_X(12.5);
+            y = POS_Y(19);
+            w = POS_W(15);
+            h = POS_H(1.1);
+            shadow = 0;
+        };
+        class TriageToggle: GVAR(TriageToggle) {
+            x = POS_X(12.5);
+            y = POS_Y(19);
+            w = POS_W(15);
+        };
+        class TriageSelect: GVAR(TriageSelect) {
+            x = POS_X(12.5);
+            y = POS_Y(20);
+            w = POS_W(15);
+            class controls: controls {
+                class None: None {
+                    w = POS_W(15);
+                };
+                class Minor: Minor {
+                    w = POS_W(15);
+                };
+                class Delayed: Delayed {
+                    w = POS_W(15);
+                };
+                class Immediate: Immediate {
+                    w = POS_W(15);
+                };
+                class Deceased: Deceased {
+                    w = POS_W(15);
+                };
+            };
+        };
+    };
+};
+
 class RscTitles {
     class GVAR(RscPatientInfo) {
         idd = -1;
@@ -505,7 +598,6 @@ class RscTitles {
                 w = POS_W(9);
                 h = POS_H(0.7);
                 sizeEx = POS_H(0.7);
-                colorBackground[] = {0, 0, 0, 1};
                 shadow = 0;
             };
             class Activity: Injuries {
