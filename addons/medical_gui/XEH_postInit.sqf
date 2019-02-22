@@ -52,5 +52,7 @@ GVAR(menuPFH) = -1;
 [35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
 
-// Close patient information when interact menu is closed
-["ace_interactMenuClosed", {[objNull, 0] call FUNC(displayPatientInformation);}] call CBA_fnc_addEventHandler;
+// Close patient information display when interaction menu is closed
+["ace_interactMenuClosed", {
+    QGVAR(RscPatientInfo) cutFadeOut 0.3;
+}] call CBA_fnc_addEventHandler;
