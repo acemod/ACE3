@@ -15,9 +15,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-/// #include "ui\menu.hpp"
-#include "ACE_Settings.hpp"
 #include "CfgVehicles.hpp"
-// #include "ui\RscTitles.hpp"
-// #include "ui\ui\triagecard.hpp"
 #include "gui.hpp"

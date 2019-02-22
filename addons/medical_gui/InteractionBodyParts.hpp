@@ -22,7 +22,7 @@ class ACE_Torso {
         exceptions[] = {"isNotInside", "isNotSitting"};
         condition = "true";
         statement = QUOTE(_target call FUNC(displayTriageCard));
-        icon = "";
+        icon = QPATHTOF(ui\triage_card.paa);
     };
 };
 class ACE_ArmLeft {

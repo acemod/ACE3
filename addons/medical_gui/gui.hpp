@@ -47,21 +47,21 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class ArmLeftT: Background {
             idc = IDC_BODY_ARMLEFT_T;
-            text = QPATHTOF(data\body_image\arm_left_T.paa);
+            text = QPATHTOF(data\body_image\arm_left_t.paa);
             colorText[] = {0, 0, 0.8, 1};
             show = 0;
         };
         class ArmRightT: ArmLeftT {
             idc = IDC_BODY_ARMRIGHT_T;
-            text = QPATHTOF(data\body_image\arm_right_T.paa);
+            text = QPATHTOF(data\body_image\arm_right_t.paa);
         };
         class LegLeftT: ArmLeftT {
             idc = IDC_BODY_LEGLEFT_T;
-            text = QPATHTOF(data\body_image\leg_left_T.paa);
+            text = QPATHTOF(data\body_image\leg_left_t.paa);
         };
         class LegRightT: ArmLeftT {
             idc = IDC_BODY_LEGRIGHT_T;
-            text = QPATHTOF(data\body_image\leg_right_T.paa);
+            text = QPATHTOF(data\body_image\leg_right_t.paa);
         };
     };
 };

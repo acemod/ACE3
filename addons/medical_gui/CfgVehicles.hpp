@@ -27,7 +27,6 @@ class CfgVehicles {
             #define ACTION_CONDITION condition = QUOTE(GVAR(enableActions) == 0);
             #include "InteractionBodyParts.hpp"
             #undef ACTION_CONDITION
-            // Create a consolidates medical menu for treatment while boarded
             class ACE_MainActions {
                 class ACE_Medical_Menu {
                     displayName = CSTRING(OpenMenu);
