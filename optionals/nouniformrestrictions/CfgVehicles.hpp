@@ -289,3 +289,4 @@ class CfgVehicles {
         modelSides[] = {6};
     };
 };
+
