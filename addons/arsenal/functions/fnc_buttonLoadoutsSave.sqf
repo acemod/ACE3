@@ -129,7 +129,7 @@ switch (GVAR(currentLoadoutsTab)) do {
             if (_defaultLoadoutsSearch isEqualto -1) then {
                 GVAR(defaultLoadoutsList) pushBack [_loadoutName, _curSelLoadout];
             } else {
-                GVAR(defaultLoadoutsList) set [_loadoutIndex, [ _loadoutName, _curSelLoadout]];
+                GVAR(defaultLoadoutsList) set [_defaultLoadoutsSearch , [ _loadoutName, _curSelLoadout]];
             };
             set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
         };
