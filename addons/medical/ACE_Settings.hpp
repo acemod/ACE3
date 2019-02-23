@@ -250,6 +250,22 @@ class ACE_Settings {
         value = 0;
         values[] = {"Anytime", "Stable"};
     };
+    class GVAR(useTimeMin_PAK) {
+        category = CSTRING(Category_Medical);
+        displayname = CSTRING(AdvancedMedicalSettings_UseTimeMin_PAK_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_UseTimeMin_PAK_Description);
+        typeName = "SCALAR";
+        value = 10;
+        sliderSettings[] = {0, 3600, 10, 0};
+    };
+    class GVAR(useTimeMax_PAK) {
+        category = CSTRING(Category_Medical);
+        displayname = CSTRING(AdvancedMedicalSettings_UseTimeMax_PAK_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_UseTimeMax_PAK_Description);
+        typeName = "SCALAR";
+        value = 120;
+        sliderSettings[] = {0, 3600, 120, 0};
+    };
     class GVAR(keepLocalSettingsSynced) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_keepLocalSettingsSynced_DisplayName);
