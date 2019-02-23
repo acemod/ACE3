@@ -50,6 +50,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 ## 3. Scripting
 
 ### 3.1 Getting water supply
+
 `acex_field_rations_fnc_getRemainingWater`
 
 ```cpp
@@ -66,6 +67,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 ```
 
 ### 3.2 Setting water supply
+
 `acex_field_rations_fnc_setRemainingWater`
 
 ```cpp
@@ -83,6 +85,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 ```
 
 ### 3.3 Adding a status modifier
+
 `acex_field_rations_fnc_addStatusModifier`
 
 ```cpp
