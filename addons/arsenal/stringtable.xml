@@ -100,6 +100,9 @@
             <Chinese>保存當前的裝備</Chinese>
             <Chinesesimp>保存当前的装备</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Arsenal_buttonSaveTooltip_shiftClick">
+            <English>[Shift+Click to save to mission defaults]</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
             <French>Renommer</French>
