@@ -15,7 +15,7 @@
  * Public: No
  */
 
-isNil QQGVAR(zeus) && {
+(isNil QGVAR(zeus)) && {
     switch (GVAR(canCreateZeus)) do {
         case CAN_CREATE_ADMIN:   {isServer || {IS_ADMIN_LOGGED}};
         case CAN_CREATE_CONSOLE: {call BIS_fnc_isDebugConsoleAllowed};
