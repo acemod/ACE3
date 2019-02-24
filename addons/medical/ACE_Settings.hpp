@@ -256,7 +256,7 @@ class ACE_Settings {
         description = CSTRING(AdvancedMedicalSettings_UseTimeMin_PAK_Description);
         typeName = "SCALAR";
         value = 10;
-        sliderSettings[] = {0, 3600, 10, 0};
+        sliderSettings[] = {0, GVAR(useTimeMax_PAK), 10, 0};
     };
     class GVAR(useTimeMax_PAK) {
         category = CSTRING(Category_Medical);
@@ -264,7 +264,7 @@ class ACE_Settings {
         description = CSTRING(AdvancedMedicalSettings_UseTimeMax_PAK_Description);
         typeName = "SCALAR";
         value = 120;
-        sliderSettings[] = {0, 3600, 120, 0};
+        sliderSettings[] = {GVAR(useTimeMin_PAK), 3600, 120, 0};
     };
     class GVAR(keepLocalSettingsSynced) {
         category = CSTRING(Category_Medical);
