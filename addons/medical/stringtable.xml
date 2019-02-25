@@ -4712,17 +4712,17 @@
             <Chinesesimp>何时可以使用个人急救包?</Chinesesimp>
             <Chinese>何時可以使用個人急救包?</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_UseTimeMin_PAK_DisplayName">
-            <English>Min. Time PAK</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_UseTimeMin_PAK_Description">
-            <English>Minimum time to use a PAK. Recommended less than Max. Time PAK.</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useTimeMax_PAK_DisplayName">
-            <English>Max. Time PAK</English>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useTimeMin_PAK_DisplayName">
+            <English>Pak Time Minimum</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useTimeMin_PAK_Description">
-            <English>Maximum time to use a PAK. Recommended greater than Min. Time PAK.</English>
+            <English>Minimum time to use a PAK.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useTimeCoeff_PAK_DisplayName">
+            <English>PAK Time Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useTimeCoeff_PAK_Description">
+            <English>Coefficient for maximum PAK time. Max=Coefficient*Min.</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>

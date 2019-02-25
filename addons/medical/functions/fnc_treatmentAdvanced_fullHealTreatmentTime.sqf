@@ -21,4 +21,4 @@ private _totalDamage = 0;
     _totalDamage = _totalDamage + _x;
 } forEach (_this getVariable [QGVAR(bodyPartStatus), []]);
 
-(GVAR(useTimeMin_PAK) max (_totalDamage * 10) min GVAR(useTimeMax_PAK))
+(GVAR(useTimeMin_PAK) max (_totalDamage * 10) min (GVAR(useTimeCoeff_PAK)*GVAR(useTimeMin_PAK)))
