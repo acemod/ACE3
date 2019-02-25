@@ -39,11 +39,5 @@ GVAR(target) = _target;
     [_ctrlTriageCard, _target] call FUNC(updateTriageCard);
 
     // Update triage status
-    private _triageStatus = [_target] call EFUNC(medical_treatment,getTriageStatus);
-    _triageStatus params ["", "_triageText", "_triageColor", "_triageTextColor"];
-
-    private _ctrlTriageStatus = _display displayCtrl IDC_TRIAGE_STATUS;
-    _ctrlTriageStatus ctrlSetText _triageText;
-    _ctrlTriageStatus ctrlSetBackgroundColor _triageColor;
-    _ctrlTriageStatus ctrlSetTextColor _triageTextColor;
+    [_display, _target] call FUNC(updateTriageStatus);
 }, 0, [_display, _target]] call CBA_fnc_addPerFrameHandler;

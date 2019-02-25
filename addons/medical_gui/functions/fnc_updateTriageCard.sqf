@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Updates triage card for the given target.
+ * Updates the triage card for the given target.
  *
  * Arguments:
  * 0: Triage list <CONTROL>

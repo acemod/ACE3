@@ -57,13 +57,7 @@ if (isNull _display) then {
         [_ctrlActivityLog, _activityLog] call FUNC(updateLogList);
 
         // Update triage status
-        private _triageStatus = [_target] call EFUNC(medical_treatment,getTriageStatus);
-        _triageStatus params ["", "_triageText", "_triageColor", "_triageTextColor"];
-
-        private _ctrlTriage = _display displayCtrl IDC_TRIAGE_STATUS;
-        _ctrlTriage ctrlSetText _triageText;
-        _ctrlTriage ctrlSetBackgroundColor _triageColor;
-        _ctrlTriage ctrlSetTextColor _triageTextColor;
+        [_display, _target] call FUNC(updateTriageStatus);
     }, 0, _display] call CBA_fnc_addPerFrameHandler;
 };
 

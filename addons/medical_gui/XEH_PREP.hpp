@@ -19,3 +19,4 @@ PREP(updateCategories);
 PREP(updateInjuryList);
 PREP(updateLogList);
 PREP(updateTriageCard);
+PREP(updateTriageStatus);

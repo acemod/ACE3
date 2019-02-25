@@ -52,10 +52,4 @@ private _quickView = GVAR(target) getVariable [QEGVAR(medical,logFile_quick_view
 [_ctrlQuickView, _quickView] call FUNC(updateLogList);
 
 // Update triage status
-private _triageStatus = [GVAR(target)] call EFUNC(medical_treatment,getTriageStatus);
-_triageStatus params ["", "_triageText", "_triageColor", "_triageTextColor"];
-
-private _ctrlTriage = _display displayCtrl IDC_TRIAGE_STATUS;
-_ctrlTriage ctrlSetText _triageText;
-_ctrlTriage ctrlSetBackgroundColor _triageColor;
-_ctrlTriage ctrlSetTextColor _triageTextColor;
+[_display, GVAR(target)] call FUNC(updateTriageStatus);
