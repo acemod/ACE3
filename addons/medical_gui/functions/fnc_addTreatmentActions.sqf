@@ -34,11 +34,7 @@ private _fnc_condition = {
     private _configName = configName _x;
     private _actionName = format [QGVAR(_%1), _configName];
     private _displayName = getText (_x >> "displayName");
-    private _icon = switch (getText (_x >> "category")) do {
-        case "bandage": {""};
-        case "medication": {""};
-        default {""};
-    };
+    private _icon = getText (_x >> "icon");
 
     private _allowedBodyParts = getArray (_x >> "allowedSelections") apply {toLower _x};
     if (_allowedBodyParts isEqualTo ["all"]) then {
