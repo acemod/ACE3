@@ -1,7 +1,8 @@
-+/*
- * Author: dedmen  
+#include "script_component.hpp"
+/*
+ * Author: dedmen
  * Gets localUnits array filtering out nullObjects.
- * If you can handle null objects you can use the array array `ace_common_localUnits` directly.
+ * If you can handle null objects you can use the array `ace_common_localUnits` directly.
  * Should be equivalent to `allUnits select {local _x}`
  *
  * Arguments:
@@ -16,7 +17,7 @@
  * Public: Yes
  */
 
-//Remove null objects
+// Remove null objects
 GVAR(localUnits) = GVAR(localUnits) - [objNull];
 
 GVAR(localUnits)

@@ -1,6 +1,9 @@
+#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 /*
- * Author: dedmen  
- * Adds the local unit event handlers. Access with array `ace_common_localUnits`.
+ * Author: dedmen
+ * Adds the local unit event handlers. 
+ * Access with function `ace_common_fnc_getLocalUnits` or array `ace_common_localUnits`
  *
  * Arguments:
  * Nothing
@@ -13,12 +16,10 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 GVAR(localUnits) = [];
 
-//Eventhandlers to maintain array of localUnits
+// Eventhandlers to maintain array of localUnits
 ["CAManBase", "init", {
     params ["_unit"];
     TRACE_2("unit init",_unit,local _unit);
@@ -59,7 +60,7 @@ GVAR(localUnits) = [];
         [{
             params ["_unit"];
             TRACE_3("unit deleted nextFrame",_unit,local _unit,isNull _unit);
-            if (isNull _unit) then { //If it is not null then the deleted EH was Fake.
+            if (isNull _unit) then { // If it is not null then the deleted EH was Fake.
                 GVAR(localUnits) = GVAR(localUnits) - [objNull];
             };
         }, [_unit]] call CBA_fnc_execNextFrame;
