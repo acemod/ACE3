@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Generates the Kestrel 4500 output text.
@@ -29,7 +30,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (diag_tickTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
 
@@ -59,7 +59,7 @@ private _textCenterLine5 = "";
 private _textCenterLine6 = "";
 
 private _windSpeed = call FUNC(measureWindSpeed);
-private _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+private _windDir = (wind select 0) atan2 (wind select 1);
 
 private _playerDir = getDir ACE_player;
 private _playerAltitude = (getPosASL ACE_player) select 2;

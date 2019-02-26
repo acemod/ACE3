@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, esteldunedain, Ruthberg
  *
@@ -5,7 +6,6 @@
  * Defines key bindings
  *
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
@@ -13,7 +13,6 @@ GVAR(Optics) = ["", "", ""];
 GVAR(Guns) = ["", "", ""];
 GVAR(canAdjustElevation) = [false, false, false];
 GVAR(canAdjustWindage) = [false, false, false];
-GVAR(boreHeight) = [0, 0, 0];
 GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
 ["ace_settingsInitialized", {

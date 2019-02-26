@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Initializes the settings for the disable NVGs in sight module.
@@ -14,8 +15,7 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_module"];
+TRACE_1("initModule",_module);
 
 [_module, QGVAR(disableNVGsWithSights), "disableNVGsWithSights"] call EFUNC(common,readSettingFromModule);

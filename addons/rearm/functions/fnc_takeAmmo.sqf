@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Starts progress bar for picking up a specific kind of magazine from an ammo truck.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_unit", "_args"];
 _args params ["_magazineClass", "_vehicle"];
@@ -32,7 +32,7 @@ REARM_HOLSTER_WEAPON;
     [_unit, _magazineClass, _truck],
     FUNC(takeSuccess),
     "",
-    format [localize LSTRING(TakeAction), getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
+    format [localize LSTRING(TakeAction), _magazineClass call FUNC(getMagazineName), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
 * Author: 654wak654
 * Shows the aircraft loadout dialog for given aircraft.
@@ -14,11 +15,20 @@
 *
 * Public: Yes
 */
-#include "script_component.hpp"
 
 params ["_aircraft", ["_isCurator", false]];
 
-if (!GVAR(enabled) || {!(typeOf _aircraft in GVAR(aircraftWithPylons))}) exitWith {};
+if (_isCurator && {!(["ace_zeus"] call EFUNC(common,isModLoaded))}) exitWith { WARNING("ace_zeus not loaded"); };
+
+if !(typeOf _aircraft in GVAR(aircraftWithPylons)) exitWith {
+    if (_isCurator) then {
+        [LSTRING(AircraftDoesntHavePylons)] call EFUNC(zeus,showMessage);
+    };
+};
+
+if (_isCurator && {!GVAR(enabledForZeus)}) exitWith {
+    [LSTRING(ConfigurePylonsDisabledForZeus)] call EFUNC(zeus,showMessage);
+};
 
 private _currentUser = _aircraft getVariable [QGVAR(currentUser), objNull];
 if (!isNull _currentUser) exitWith {
@@ -73,6 +83,12 @@ GVAR(comboBoxes) = [];
 
     private _mag = (getPylonMagazines _aircraft) select _forEachIndex;
     private _mags = _aircraft getCompatiblePylonMagazines (_forEachIndex + 1);
+    private _userWhitelist = _aircraft getVariable [QGVAR(magazineWhitelist), _mags];
+    private _userBlacklist = _aircraft getVariable [QGVAR(magazineBlacklist), []];
+
+    _mags = _mags arrayIntersect _userWhitelist;
+    _mags = _mags - _userBlacklist;
+
     private _index = 0;
     {
         _combo lbAdd getText (configFile >> "CfgMagazines" >> _x >> "displayName");
@@ -143,7 +159,10 @@ if (!GVAR(isCurator)) then {
         isNull (GVAR(currentAircraft) getVariable [QGVAR(currentUser), objNull]) ||
         {(ace_player distanceSqr GVAR(currentAircraft)) > GVAR(searchDistanceSqr)}
     }, {
-        [localize LSTRING(TooFar), false, 5] call EFUNC(common,displayText);
+        TRACE_3("disconnect/far",GVAR(currentAircraft),ace_player distance GVAR(currentAircraft),GVAR(currentAircraft) getVariable QGVAR(currentUser));
+        if ((ace_player distanceSqr GVAR(currentAircraft)) > GVAR(searchDistanceSqr)) then {
+            [localize LSTRING(TooFar), false, 5] call EFUNC(common,displayText);
+        };
         call FUNC(onButtonClose);
     }] call CBA_fnc_waitUntilAndExecute;
 };

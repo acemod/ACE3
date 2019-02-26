@@ -122,7 +122,7 @@
             <Italian>Bloccato</Italian>
             <German>Blockiert</German>
             <French>Bloqué</French>
-            <Japanese>取り付けできない</Japanese>
+            <Japanese>取り付け不可</Japanese>
             <Korean>막힘</Korean>
             <Chinesesimp>断开</Chinesesimp>
             <Chinese>斷開</Chinese>
@@ -154,7 +154,7 @@
             <Polish>Obrót</Polish>
             <Portuguese>Rotaciona</Portuguese>
             <Russian>Bращать</Russian>
-            <Japanese>向きを変える</Japanese>
+            <Japanese>回転</Japanese>
             <Korean>회전</Korean>
             <Chinesesimp>旋转</Chinesesimp>
             <Chinese>旋轉</Chinese>
@@ -474,7 +474,7 @@
             <Hungarian>Robbanóanyag hatástalanítása...</Hungarian>
             <Portuguese>Desarmando Explosivo...</Portuguese>
             <Russian>Обезвреживание...</Russian>
-            <Japanese>爆発物を無力化中・・・</Japanese>
+            <Japanese>爆発物を無力化しています・・・</Japanese>
             <Korean>폭발물 해체중...</Korean>
             <Chinesesimp>炸弹拆除中...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
@@ -618,7 +618,7 @@
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
             <Portuguese>Nenhum gatilho disponível para %1</Portuguese>
             <Russian>Нет доступных взрывателей для %1</Russian>
-            <Japanese>%1 につかえる点火装置がありません</Japanese>
+            <Japanese>%1 に使える点火装置がありません</Japanese>
             <Korean>%1(을)를 작동할 장치가 없습니다.</Korean>
             <Chinesesimp>没有适合%1的触发器</Chinesesimp>
             <Chinese>沒有適合%1的觸發器</Chinese>
@@ -634,7 +634,7 @@
             <Hungarian>Infravörös szenzor (Side Attack)</Hungarian>
             <Portuguese>Sensor infravermelho (ataque lateral)</Portuguese>
             <Russian>ИК сенсор (детонация вбок)</Russian>
-            <Japanese>赤外線感知式 (横からの攻撃)</Japanese>
+            <Japanese>赤外線感知式 (側面攻撃)</Japanese>
             <Korean>적외선 센서 (측면 공격)</Korean>
             <Chinesesimp>红外线感应器 (侧边攻击)</Chinesesimp>
             <Chinese>紅外線感應器 (側邊攻擊)</Chinese>
@@ -650,7 +650,7 @@
             <Hungarian>Mágneses mező érzékelő (Bottom Attack)</Hungarian>
             <Portuguese>Influência magnética (ataque inferior)</Portuguese>
             <Russian>Магнитный сенсор (детонация вверх)</Russian>
-            <Japanese>磁気感知式 (下からの攻撃)</Japanese>
+            <Japanese>磁気感知式 (底面攻撃)</Japanese>
             <Korean>자기장 감지센서 (바닥 공격)</Korean>
             <Chinesesimp>磁性感应器 (底部攻击)</Chinesesimp>
             <Chinese>磁性感應器 (底部攻擊)</Chinese>
@@ -698,7 +698,7 @@
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
             <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
-            <Japanese>点火装置を離すと遠隔で起爆したいときに使います。</Japanese>
+            <Japanese>点火装置から遠隔から起爆したい時に使います。</Japanese>
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
             <Chinesesimp>当放开按钮时, 将会引爆炸弹.</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
@@ -746,7 +746,7 @@
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
-            <Japanese>特技兵を必要としますか？</Japanese>
+            <Japanese>特技兵を必要としますか?</Japanese>
             <Korean>전문가가 필요합니까?</Korean>
             <Chinesesimp>需要专家?</Chinesesimp>
             <Chinese>需要專家?</Chinese>
@@ -762,7 +762,7 @@
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
-            <Japanese>爆発物を無効化するには、爆発物の特技兵を必要としますか？標準: いいえ</Japanese>
+            <Japanese>爆発物を無効化するには、爆発物の特技兵を必要としますか? 標準: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要炸弹专家才能拆除炸弹? 预设: 否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
@@ -778,7 +778,7 @@
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
-            <Japanese>非特技兵へ足かせを与えますか？</Japanese>
+            <Japanese>非特技兵へ足かせを与えますか?</Japanese>
             <Korean>비-전문가에 불이익을 줍니까?</Korean>
             <Chinesesimp>折磨非专业人员?</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
@@ -794,7 +794,7 @@
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
-            <Japanese>非特技兵へ動作完了までの時間を増加させますか？標準: はい</Japanese>
+            <Japanese>非特技兵へ動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
             <Korean>비-전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间? 预设: 是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
@@ -810,7 +810,7 @@
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
-            <Japanese>解除中に爆発させますか？</Japanese>
+            <Japanese>解除中に爆発させますか?</Japanese>
             <Korean>해제시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆?</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
@@ -826,7 +826,7 @@
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
-            <Japanese>特定の爆発物を解除中に爆発させますか？標準: はい</Japanese>
+            <Japanese>特定の爆発物を解除中に爆発させますか? 標準: 有効化</Japanese>
             <Korean>특정 폭발물이 해제시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后, 某些炸弹会在拆除时引爆? 预设: 是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
@@ -842,7 +842,7 @@
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
             <Italian>Questo modulo cambia le impostazioni relative agli esplosivi</Italian>
-            <Japanese>このモジュールを調節し爆発物に設定を反映させます。</Japanese>
+            <Japanese>モジュールを調節し爆発物に設定を反映させます。</Japanese>
             <Korean>이 모듈은 폭발물에 관한 설정을 수정할 수 있게합니다.</Korean>
             <Chinesesimp>此模块用来调整炸药的相关设定</Chinesesimp>
             <Chinese>此模塊用來調整炸藥的相關設定</Chinese>
@@ -864,7 +864,7 @@
             <Czech>M6 SLAM (Útok zespoda)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Inferior)</Portuguese>
             <Russian>Мина M6 SLAM (направлена вверх)</Russian>
-            <Japanese>M6 SLAM 地雷 (下からの攻撃)</Japanese>
+            <Japanese>M6 SLAM 地雷 (底面攻撃)</Japanese>
             <Korean>M6 SLAM 지뢰 (바닥 공격)</Korean>
             <Chinesesimp>M6指向性反装甲地雷 (底部攻击)</Chinesesimp>
             <Chinese>M6指向性反裝甲地雷 (底部攻擊)</Chinese>
@@ -886,7 +886,7 @@
             <Czech>M6 SLAM (Útok do strany)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Lateral)</Portuguese>
             <Russian>Мина M6 SLAM (направлена вбок)</Russian>
-            <Japanese>M6 SLAM 地雷 (横からの攻撃)</Japanese>
+            <Japanese>M6 SLAM 地雷 (側面攻撃)</Japanese>
             <Korean>M6 SLAM 지뢰 (측면 공격)</Korean>
             <Chinesesimp>M6指向性反装甲地雷 (侧边攻击)</Chinesesimp>
             <Chinese>M6指向性反裝甲地雷 (側邊攻擊)</Chinese>
@@ -1018,6 +1018,21 @@
             <Italian>Tipo: Cavo d'innesco - Sfocio un abbaglio non letale quanto attivato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
             <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_statExploRange">
+            <English>Explosive range</English>
+            <French>Portée du détonateur</French>
+            <Japanese>爆発範囲</Japanese>
+            <Chinesesimp>爆炸范围</Chinesesimp>
+            <Chinese>爆炸範圍</Chinese>
+            <Italian>Raggio di detonazione</Italian>
+            <Polish>Zasięg wybuchu</Polish>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ExplosiveTimer">
+            <English>Explosive Timer</English>
+            <Italian>Timer di detonazione</Italian>
+            <Japanese>爆発タイマー</Japanese>
+            <Polish>Czasomierz Wybuchu</Polish>
         </Key>
     </Package>
 </Project>

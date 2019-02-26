@@ -40,9 +40,11 @@ PREP(handleDamage_fractures);
 PREP(handleDamage_internalInjuries);
 PREP(handleDamage_wounds);
 PREP(handleDamage_woundsOld);
-PREP(handleUnitVitals);
+PREP(handleInit);
 PREP(handleKilled);
 PREP(handleLocal);
+PREP(handleRespawn);
+PREP(handleUnitVitals);
 PREP(handleBandageOpening);
 PREP(hasItem);
 PREP(hasItems);
@@ -109,6 +111,7 @@ PREP(moduleAssignMedicalVehicle);
 PREP(moduleAssignMedicalFacility);
 PREP(copyDeadBody);
 PREP(unconsciousPFH);
+PREP(updateTourniquets);
 
 // Networked litter
 PREP(createLitter);

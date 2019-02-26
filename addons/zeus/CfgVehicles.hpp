@@ -16,7 +16,7 @@ class CfgVehicles {
         function = QFUNC(bi_moduleRemoteControl);
     };
     class GVAR(moduleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Settings_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa);
         category = "ACE";
@@ -107,6 +107,27 @@ class CfgVehicles {
         function = QFUNC(moduleAddSpareWheel);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
     };
+    class GVAR(moduleSetEngineer): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Repair);
+        displayName = CSTRING(ModuleSetEngineer_DisplayName);
+        curatorInfoType = QGVAR(RscSetEngineer);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
+    };
+    class GVAR(moduleSetRepairFacility): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Repair);
+        displayName = CSTRING(ModuleSetRepairFacility_DisplayName);
+        function = QFUNC(moduleSetRepairFacility);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
+    };
+    class GVAR(moduleSetRepairVehicle): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Repair);
+        displayName = CSTRING(ModuleSetRepairVehicle_DisplayName);
+        function = QFUNC(moduleSetRepairVehicle);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
+    };
     class GVAR(moduleAddOrRemoveFRIES): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
@@ -138,6 +159,7 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleEditableObjects_DisplayName);
         curatorInfoType = QGVAR(RscEditableObjects);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Editable_Objects_ca.paa);
     };
     class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
         category = QGVAR(AI);
@@ -150,12 +172,26 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
     };
+    class GVAR(moduleHeal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Medical);
+        displayName = CSTRING(ModuleHeal_DisplayName);
+        function = QFUNC(moduleHeal);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Heal_ca.paa);
+    };
     class GVAR(moduleLoadIntoCargo): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleLoadIntoCargo_DisplayName);
         function = QFUNC(moduleLoadIntoCargo);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
+    };
+    class GVAR(moduleCargoParadrop): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleCargoParadrop_DisplayName);
+        function = QFUNC(moduleCargoParadrop);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_ParadropCargo_ca.paa);
     };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -208,6 +244,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSimulation_DisplayName);
         function = QFUNC(moduleSimulation);
     };
+    class GVAR(moduleSuicideBomber): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleSuicideBomber_DisplayName);
+        curatorInfoType = QGVAR(RscSuicideBomber);
+    };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Captive);
@@ -245,14 +287,15 @@ class CfgVehicles {
     class GVAR(moduleToggleNvg): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(moduleToggleNVG_DisplayName);
+        displayName = CSTRING(ModuleToggleNVG_DisplayName);
         curatorInfoType = QGVAR(RscToggleNvg);
     };
     class GVAR(moduleToggleFlashlight): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
-        displayName = CSTRING(moduleToggleFlashlight_DisplayName);
+        displayName = CSTRING(ModuleToggleFlashlight_DisplayName);
         curatorInfoType = QGVAR(RscToggleFlashlight);
+        icon = QPATHTOF(ui\Icon_Module_Zeus_Flashlight_ca.paa);
     };
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -265,5 +308,43 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleRemoveArsenal_DisplayName);
         function = QFUNC(moduleRemoveArsenal);
+    };
+    class GVAR(AddFullAceArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Arsenal);
+        displayName = CSTRING(ModuleAddFullACEArsenal_DisplayName);
+        function = QFUNC(moduleAddAceArsenal);
+    };
+    class GVAR(RemoveFullAceArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Arsenal);
+        displayName = CSTRING(ModuleRemoveACEArsenal_DisplayName);
+        function = QFUNC(moduleRemoveAceArsenal);
+    };
+    class ModuleArsenal_F: Module_F {
+        function=QFUNC(bi_moduleArsenal);
+    };
+
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class GVAR(create) {
+                displayName = CSTRING(CreateZeus);
+                condition = QUOTE(call FUNC(canCreateModule));
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                //Set GVAR(zeus) to null first to disable the action through the isNil check
+                statement = QUOTE(GVAR(zeus) = objNull; [ARR_2(QQGVAR(createZeus), ACE_player)] call CBA_fnc_serverEvent);
+                showDisabled = 1;
+                icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";
+            };
+            class GVAR(delete) {
+                displayName = CSTRING(DeleteZeus);
+                condition = QUOTE(!(isNil QQGVAR(zeus) || {isNull GVAR(zeus)}));
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                statement = QUOTE(deleteVehicle GVAR(zeus); GVAR(zeus) = nil);
+                showDisabled = 1;
+                icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";
+            };
+        };
     };
 };

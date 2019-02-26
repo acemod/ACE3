@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Sets the spectator camera attributes as desired. Local effect.
@@ -32,8 +33,6 @@
  * Public: Yes
  */
 
-#include "script_component.hpp"
-
 params [
     ["_mode",nil,[0]],
     ["_focus",nil,[objNull,true]],
@@ -41,10 +40,6 @@ params [
     ["_position",nil,[[]],3],
     ["_direction",nil,[0]]
 ];
-
-if (count _this > 5) then {
-    ACE_DEPRECATED("Use of ""tilt"", ""zoom"" and ""speed"" camera attributes","3.12.0","N/A")
-};
 
 // Apply if camera exists
 if !(isNil QGVAR(camera)) then {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Drops a magazine, optionally deletes it and optionally unholsters the wepaon.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [
     "_unit",
@@ -38,7 +38,8 @@ if (_actionID != -1) then {
     _unit removeAction _actionID;
     _unit setVariable [QGVAR(ReleaseActionID), nil];
 };
-[_unit, "forceWalk", QGVAR(vehRearm), false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_rearm", false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_rearm", false] call EFUNC(common,statusEffect_set);
 
 if (_unholster) then {
     REARM_UNHOLSTER_WEAPON

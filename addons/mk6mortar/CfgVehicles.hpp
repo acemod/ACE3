@@ -7,7 +7,6 @@ class CfgVehicles {
                     displayName = CSTRING(rangetable_action);
                     condition = QUOTE(_this call FUNC(rangeTableCanUse));
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
-                    priority = 0;
                     icon = QPATHTOF(UI\icon_rangeTable.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
@@ -99,8 +98,8 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
-        scope = 2;
-        isGlobal = 0;
+        scope = 1;
+        isGlobal = 1;
         isSingular = 1;
         icon =  QPATHTOF(UI\Icon_Module_mk6_ca.paa);
         functionPriority = 0;

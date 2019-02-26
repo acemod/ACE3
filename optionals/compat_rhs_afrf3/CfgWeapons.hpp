@@ -1,5 +1,13 @@
 
 class CfgWeapons {
+    
+    class NVGoggles;
+    class rhs_1PN138: NVGoggles { // Monocular
+        modelOptics = "";
+        EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
+        EGVAR(nightvision,bluRadius) = 0.13;
+    };
+    
     class hgun_Rook40_F;
     class rhs_weap_pya: hgun_Rook40_F {
         ACE_barrelTwist = 254.0;
@@ -56,10 +64,11 @@ class CfgWeapons {
         ACE_barrelLength = 657.86;
     };
     class rhs_weap_pkm: rhs_weap_pkp {
+        ACE_Overheating_allowSwapBarrel = 1;
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 645.16;
     };
-    class rhs_weap_rpk74m: rhs_weap_pkp {
+    class rhs_weap_rpk74: rhs_weap_pkp {
         ACE_barrelTwist = 195.072;
         ACE_barrelLength = 589.28;
     };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __TYPE_WRITER_DELAY 0.05
 
@@ -48,6 +48,14 @@ createDialog QGVAR(cam_dialog_off);
 
             private _elapsedTime = CBA_missionTime - GVAR(startTime);
             private _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
+
+            if ((GVAR(state) in ["connecting", "connected"]) && {_nearestHuntIRs isEqualTo []}) then {
+                TRACE_1("reseting back to search because no valid ammo exists anymore",GVAR(state));
+                GVAR(state) = "searching";
+                GVAR(done) = false;
+                GVAR(message) = [];
+                GVAR(connectionDelay) = 5;
+            };
 
             if ((!dialog) || GVAR(done)) exitWith {
                 [_this select 1] call CBA_fnc_removePerFrameHandler;

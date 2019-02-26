@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -16,8 +17,6 @@
  *
  * Public: yes
  */
-
-#include "script_component.hpp"
 
 #define DEFAULT_DELAY (round(random(10)+5))
 
@@ -76,7 +75,10 @@ if (vehicle _unit == _unit) then {
     if (primaryWeapon _unit == "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
     };
-    _unit selectWeapon (primaryWeapon _unit);
+
+    if (currentWeapon _unit != primaryWeapon _unit) then {
+        _unit selectWeapon primaryWeapon _unit;
+    };
 };
 
 // We are storing the current animation, so we can use it later on when waking the unit up inside a vehicle
@@ -97,7 +99,7 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 };
 // Delay Unconscious so the AI dont instant stop shooting on the unit #3121
 if (GVAR(delayUnconCaptive) == 0) then {
-    [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
+    [_unit, "setHidden", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
 } else {
     // when the Delay is so high that the unit can wake up and get uncon again we need to check if it is the correct wait that got executed
     private _counter = _unit getVariable [QGVAR(unconsciousCounter), 0];
@@ -106,7 +108,7 @@ if (GVAR(delayUnconCaptive) == 0) then {
     [{
         params ["_unit", "_counter"];
         if (_unit getVariable ["ACE_isUnconscious", false] && (_unit getVariable [QGVAR(unconsciousCounter), 0]) == _counter) then {
-            [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
+            [_unit, "setHidden", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
         };
     },[_unit, _counter], GVAR(delayUnconCaptive)] call CBA_fnc_waitAndExecute;
 };

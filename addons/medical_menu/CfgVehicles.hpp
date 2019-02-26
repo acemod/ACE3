@@ -3,13 +3,13 @@ class CfgVehicles {
 
     class ACE_Module;
     class ACE_moduleMedicalMenuSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(module_DisplayName);
         icon = QPATHTOEF(medical,UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
         function = QUOTE(DFUNC(module));
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);

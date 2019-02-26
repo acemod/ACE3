@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the target speed and updates the output fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _targetRange = parseNumber(ctrlText 8004);
 private _numTicks = parseNumber(ctrlText 8005);

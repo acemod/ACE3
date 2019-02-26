@@ -39,6 +39,7 @@
             };
 
             if (_isDisposable) then {
+                if (_isGlobal) then {WARNING_1("Deleting Global Module??? [%1]",_logicType);};
                 deleteVehicle _logic;
             };
         };

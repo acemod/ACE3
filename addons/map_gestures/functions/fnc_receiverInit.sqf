@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix
  * Initializes the receiver and hooks it to the Draw event of the map.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ACE_player setVariable [QGVAR(Transmit), false, true];
 GVAR(EnableTransmit) = false;

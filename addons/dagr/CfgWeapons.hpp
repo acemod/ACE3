@@ -4,7 +4,7 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
 
     class ACE_DAGR: ACE_ItemCore {
-        author[] = {$STR_ACE_Common_ACETeam, "Ruthberg"};
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = CSTRING(Name);
         model = QPATHTOF(data\DAGR.p3d);

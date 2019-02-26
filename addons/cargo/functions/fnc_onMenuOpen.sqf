@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handle the UI data display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 
@@ -32,7 +32,7 @@ if (GVAR(interactionParadrop)) then {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (isNull GVAR(interactionVehicle) || {(ACE_player distance GVAR(interactionVehicle) >= 10) && {(vehicle ACE_player) != GVAR(interactionVehicle)}}) exitWith {
+    if (isNull GVAR(interactionVehicle) || {(([ACE_player, GVAR(interactionVehicle)] call EFUNC(interaction,getInteractionDistance)) >= MAX_LOAD_DISTANCE) && {(vehicle ACE_player) != GVAR(interactionVehicle)}}) exitWith {
         closeDialog 0;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };

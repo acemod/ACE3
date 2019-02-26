@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * The ace_spectator respawn template, compatible with types 1,2,3,4 & 5
@@ -12,7 +13,7 @@
  * 3: Respawn Delay <NUMBER>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [bob, kevin, 3, 6] call ace_spectator_fnc_respawnTemplate
@@ -20,9 +21,8 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params [["_newCorpse",objNull,[objNull]], ["_oldKiller",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
+TRACE_4("respawnTemplate",_newCorpse,_oldKiller,_respawn,_respawnDelay);
 
 // Compatibility handled via spectator display XEH
 if (_respawn in [0,1,4,5]) exitWith {

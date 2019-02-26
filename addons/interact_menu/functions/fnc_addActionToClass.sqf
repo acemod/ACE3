@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Insert an ACE action to a class, under a certain path
@@ -18,8 +19,8 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
+if (!hasInterface) exitWith { [] };
 if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
     ERROR("Bad Params");
     []

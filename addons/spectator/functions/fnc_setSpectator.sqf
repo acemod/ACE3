@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Enter/exit spectator mode for the local player
@@ -18,8 +19,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params [["_set",true,[true]], ["_force",true,[true]], ["_hide",true,[true]]];
 TRACE_3("Params",_set,_force,_hide);
@@ -101,6 +100,7 @@ if (_set) then {
 // Hide/Unhide the player if enabled and alive
 if (alive player) then {
     private _hidden = (_hide && _set);
+    TRACE_1("",_hidden);
 
     // Ignore damage (vanilla and ace_medical)
     player allowDamage !_hidden;

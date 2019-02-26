@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if a unit needs treatment.
@@ -13,13 +14,7 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if !(alive _this) exitWith {false};
 
-private _bloodLoss   = [_this] call EFUNC(medical,getBloodLoss);
-private _pain        = _this getVariable [QEGVAR(medical,pain), 0];
-private _unconscious = _this getVariable ["ACE_isUnconscious", false];
-// private _heartRate = _this getVariable [QEGVAR(medical,heartRate), 70];
-
-(_bloodLoss > 0) || {_pain > 0.2} || _unconscious // || {_heartRate > 100} || {_heartRate < 40}
+((_this getVariable [QEGVAR(medical,pain), 0] > 0.2) || {[_this] call EFUNC(medical,getBloodLoss) > 0 || {_this getVariable ["ACE_isUnconscious", false]}})

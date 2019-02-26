@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Loads the object module is placed on into selected vehicle.
@@ -15,13 +16,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {[FUNC(moduleLoadIntoCargo), _this] call CBA_fnc_directCall;};
 
-params ["_logic", "_units", "_activated"];
+params ["_logic"];
 
-if !(_activated && {local _logic}) exitWith {};
+if !(local _logic) exitWith {};
 
 private _cargo = attachedTo _logic;
 
@@ -43,7 +43,7 @@ if (!alive _cargo) exitWith {
         params ["_successful", "_cargo", "_mousePosASL"];
         if (!_successful) exitWith {};
 
-        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 5]) param [0, objNull];
+        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 15, true]) param [0, objNull]; // 2d distance search
         if (isNull _holder) exitWith {
             [LSTRING(NothingSelected)] call FUNC(showMessage);
         };
@@ -52,7 +52,7 @@ if (!alive _cargo) exitWith {
         };
 
         private _displayName = [_cargo] call EFUNC(common,getName);
-        if ([_cargo, _holder] call EFUNC(cargo,loadItem)) then {
+        if ([_cargo, _holder, true] call EFUNC(cargo,loadItem)) then {
             private _loadedItem = [localize ELSTRING(cargo,LoadedItem), "<br/>", " "] call CBA_fnc_replace;
             private _holderDisplayName = [_holder] call EFUNC(common,getName);
             [_loadedItem, _displayName, _holderDisplayName] call FUNC(showMessage);

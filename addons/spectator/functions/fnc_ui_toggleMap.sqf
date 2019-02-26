@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO
  * Function used to toggle the map
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 if (GVAR(uiMapVisible)) then {
     CTRL_MAP ctrlShow false;
@@ -32,7 +31,8 @@ if (GVAR(uiMapVisible)) then {
     CTRL_MAP_TITLE ctrlSetText (getMissionConfigValue ["onLoadName", getMissionConfigValue ["briefingName", localize ELSTRING(common,unknown)]]);
     CTRL_MAP_SPEC_NUM ctrlSetText str ({GETVAR(_x,GVAR(isSet),false)} count allPlayers);
 
-    CTRL_MAP ctrlMapAnimAdd [0, 0.05, getPosASLVisual GVAR(camera)];
+    // Center on camera position (accounts for first person)
+    CTRL_MAP ctrlMapAnimAdd [0, 0.05, positionCameraToWorld [0,0,0]];
     ctrlMapAnimCommit CTRL_MAP;
 
     // Disable camera input while map is open

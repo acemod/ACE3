@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "\A3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to handle key down event
@@ -17,9 +19,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
-#include "\A3\ui_f\hpp\defineDIKCodes.inc"
 
 params ["","_key","_shift","_ctrl","_alt"];
 
@@ -194,15 +193,6 @@ if ((_key in (actionKeys "CuratorInterface")) && {!isNull (getAssignedCuratorLog
         // Curator tracks its own vision mode
         [getAssignedCuratorLogic player, 0] call bis_fnc_toggleCuratorVisionMode;
     }] call CBA_fnc_waitUntilAndExecute;
-    true
-};
-
-// Handle acre spectate headset down (if present)
-if (
-    ["acre_sys_radio"] call EFUNC(common,isModLoaded) &&
-    { [_key, [_shift, _ctrl, _alt]] isEqualTo ((["ACRE2", "HeadSet"] call CBA_fnc_getKeybind) select 5) }
-) exitWith {
-    [] call acre_sys_core_fnc_toggleHeadset;
     true
 };
 

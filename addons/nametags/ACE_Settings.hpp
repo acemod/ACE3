@@ -1,10 +1,6 @@
 class ACE_Settings {
     class GVAR(defaultNametagColor) {
-        value[] = {0.77, 0.51, 0.08, 1};
-        typeName = "COLOR";
-        isClientSettable = 1;
-        displayName = CSTRING(DefaultNametagColor);
-        category = CSTRING(Module_DisplayName);
+        movedToSQF = 1;
     };
     class GVAR(showPlayerNames) {
         value = 1;
@@ -37,6 +33,7 @@ class ACE_Settings {
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(showCursorTagForVehicles) {
+        displayName = CSTRING(showCursorTagForVehicles_DisplayName);
         value = 0;
         typeName = "BOOL";
         isClientSettable = 0;
@@ -52,16 +49,20 @@ class ACE_Settings {
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(playerNamesViewDistance) {
+        displayName = CSTRING(playerNamesViewDistance_DisplayName);
         value = 5;
         typeName = "SCALAR";
         isClientSettable = 0;
         category = CSTRING(Module_DisplayName);
+        sliderSettings[] = {0, 50, 5, 1};
     };
     class GVAR(playerNamesMaxAlpha) {
+        displayName = CSTRING(playerNamesMaxAlpha);
         value = 0.8;
         typeName = "SCALAR";
         isClientSettable = 0;
         category = CSTRING(Module_DisplayName);
+        sliderSettings[] = {0, 1, 0.8, 2};
     };
     class GVAR(tagSize) {
         value = 2;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Calculate the cooling down of a weapon over a time interval.
@@ -15,10 +16,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_temperature", "_barrelMass", "_totalTime"];
 
+if (_temperature < 1) exitWith {0};
 // If a long time passed since the last shot, there's no need to calculate anything; the weapon should be cool
 if (_totalTime > 1800) exitWith {0};
 
