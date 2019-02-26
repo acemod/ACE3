@@ -30,7 +30,7 @@ if (isServer) then {
     private _listcode = if (GVAR(enabledFor) == 1) then {
         {[ACE_player]} // ace_player is only possible local player
     } else {
-        {allUnits select {(local _x) && {[_x] call FUNC(isBleeding)}}}; // filter all local bleeding units
+        EFUNC(common,getLocalUnits) // filter all local units
     };
     
     private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;
