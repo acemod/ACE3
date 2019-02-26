@@ -17,6 +17,7 @@
 
 params ["_unit"];
 
+if (!([_unit] call FUNC(isBleeding))) exitWith {};
 if (((vehicle _unit) != _unit) && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
 
 private _lastTime = _unit getVariable [QGVAR(lastTime), -10];
