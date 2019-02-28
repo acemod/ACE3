@@ -10,6 +10,7 @@
             <Korean>쿡오프</Korean>
             <German>Durchzündung</German>
             <French>Cook off</French>
+            <Polish>Samozapłon</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
@@ -38,7 +39,7 @@
             <Chinesesimp>开启此功能后，将使有关载具在损毁时有殉爆的效果。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
-            <Original>Wreck (Turret)</Original>
+            <English>Wreck (Turret)</English>
             <French>Épave (tourelle)</French>
             <Spanish>Restos (torreta)</Spanish>
             <Italian>Rottami (torretta)</Italian>
@@ -46,7 +47,6 @@
             <Russian>Обломки (башня)</Russian>
             <German>Wrack (Geschützturm)</German>
             <Czech>Vrak (věž)</Czech>
-            <English>Wreck (Turret)</English>
             <Portuguese>Ruínas (torre)</Portuguese>
             <Korean>잔해(포탑)</Korean>
             <Japanese>残骸 (砲塔)</Japanese>
@@ -127,6 +127,7 @@
             <Chinese>殉爆發生機率係數</Chinese>
             <Chinesesimp>殉爆发生机率系数</Chinesesimp>
             <French>Coefficient de probabilité du cook off</French>
+            <Polish>Współczynnik prawdopodobieństwa samozapłonu</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
@@ -136,6 +137,7 @@
             <Chinese>調整殉爆發生機率係數。值越高代表越容易發生殉爆</Chinese>
             <Chinesesimp>调整殉爆发生机率系数。值越高代表越容易发生殉爆。</Chinesesimp>
             <French>Multiplicateur pour la probabilité du cook off. Plus la valeur est élevée, plus la probabilité de cook off est haute.</French>
+            <Polish>Mnożnik prawdopodobieństwa samozapłonu. Większa wartość oznacza większe prawdopodobieństwo samozapłonu</Polish>
         </Key>
     </Package>
 </Project>

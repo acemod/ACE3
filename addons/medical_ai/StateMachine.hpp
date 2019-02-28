@@ -1,5 +1,5 @@
 class GVAR(stateMachine) {
-    list = "allUnits select {local _x}";
+    list = QUOTE(call EFUNC(common,getLocalUnits));
     skipNull = 1;
 
     class Initial {

@@ -37,6 +37,7 @@
             <English>Speed Limit</English>
             <Italian>Limite di velocità</Italian>
             <Japanese>速度制限</Japanese>
+            <Polish>Ograniczenie prędkości</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -58,11 +59,13 @@
             <English>Increase Speed Limit</English>
             <Italian>Aumenta limite di velocità</Italian>
             <Japanese>速度制限を増やす</Japanese>
+            <Polish>Zwiększ ograniczenie prędkości</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
             <Italian>Diminuisce limite di velocità</Italian>
             <Japanese>速度制限を減らす</Japanese>
+            <Polish>Zmniejsz ograniczenie prędkości</Polish>
         </Key>
     </Package>
 </Project>

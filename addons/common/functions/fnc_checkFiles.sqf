@@ -40,9 +40,7 @@ if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) the
 };
 
 //private _addons = activatedAddons; // broken with High-Command module, see #2134
-private _addons = "true" configClasses (configFile >> "CfgPatches");//
-_addons = _addons apply {toLower configName _x};//
-_addons = _addons select {_x find "ace_" == 0};
+private _addons = (cba_common_addons select {(_x select [0,4]) == "ace_"}) apply {toLower _x};
 
 private _oldCompats = [];
 {

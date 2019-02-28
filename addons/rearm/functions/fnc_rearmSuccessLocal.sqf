@@ -51,62 +51,43 @@ if (_pylon > 0) exitWith {
 
 private _currentRounds = 0;
 private _maxMagazines = [_vehicle, _turretPath, _magazineClass] call FUNC(getMaxMagazines);
+private _ammoCounts = [_vehicle, _turretPath, _magazineClass] call FUNC(getTurretMagazineAmmo);
+TRACE_3("start",_magazineClass,_maxMagazines,_ammoCounts);
 
-if (_maxMagazines == 1) then {
-    private _currentMagazines = { _x == _magazineClass } count (_vehicle magazinesTurret _turretPath);
-    if (_currentMagazines == 0 && {!(_turretPath isEqualTo [-1])}) then {
-        // Driver gun will always retain it's magazines
-        _vehicle addMagazineTurret [_magazineClass, _turretPath];
-        _vehicle setMagazineTurretAmmo [_magazineClass, 0, _turretPath];
+private _ammoToAdd = if (GVAR(level) == 2) then {_numRounds} else {_rounds};
+private _ammoAdded = 0;
+private _arrayModified = false; // skip needing to remove and re-add mags, if we are only adding new ones
+
+{
+    if (_x < _rounds) then {
+        private _xAdd = _ammoToAdd min (_rounds - _x);
+        _ammoToAdd = _ammoToAdd - _xAdd;
+        _ammoAdded = _ammoAdded + _xAdd;
+        TRACE_3("adding to existing mag",_forEachIndex,_x,_xAdd);
+        _ammoCounts set [_forEachIndex, _x + _xAdd];
+        _arrayModified = true;
     };
-    if (GVAR(level) == 1) then {
-        // Fill magazine completely
-        _vehicle setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
-        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _rounds,
-            getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
+} forEach _ammoCounts;
+
+while {((count _ammoCounts) < _maxMagazines) && {_ammoToAdd > 0}} do {
+    private _xAdd = _ammoToAdd min _rounds;
+    _ammoToAdd = _ammoToAdd - _xAdd;
+    _ammoAdded = _ammoAdded + _xAdd;
+    _ammoCounts pushBack _xAdd;
+    if (!_arrayModified) then {
+        TRACE_1("adding new mag to array",_xAdd);
     } else {
-        // Fill only at most _numRounds
-        _vehicle setMagazineTurretAmmo [_magazineClass, ((_vehicle magazineTurretAmmo [_magazineClass, _turretPath]) + _numRounds) min _rounds, _turretPath];
-        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
-            getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
-    };
-} else {
-    for "_idx" from 1 to (_maxMagazines+1) do {
-        _currentRounds = _vehicle magazineTurretAmmo [_magazineClass, _turretPath];
-        if (_currentRounds > 0 || {_idx == (_maxMagazines+1)}) exitWith {
-            if (_idx == (_maxMagazines+1) && {!(_turretPath isEqualTo [-1])}) then {
-                _vehicle addMagazineTurret [_magazineClass, _turretPath];
-            };
-            if (GVAR(level) == 2) then {
-                //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMaxMagazines %4\nMagazine: %5\nNumRounds: %6\nMagazine: %7", _vehicle, _turretPath, _numMagazines, _maxMagazines, _currentRounds, _numRounds, _magazineClass];
-                // Fill only at most _numRounds
-                if ((_currentRounds + _numRounds) > _rounds) then {
-                    _vehicle setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
-                    if (_numMagazines  < _maxMagazines) then {
-                        _vehicle addMagazineTurret [_magazineClass, _turretPath];
-                        _vehicle setMagazineTurretAmmo [_magazineClass, _currentRounds + _numRounds - _rounds, _turretPath];
-                    };
-                } else {
-                    _vehicle setMagazineTurretAmmo [_magazineClass, _currentRounds + _numRounds, _turretPath];
-                };
-                [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
-                    getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-                    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
-            } else {
-                // Fill current magazine completely and fill next magazine partially
-                _vehicle setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
-                if (_numMagazines  < _maxMagazines) then {
-                    _vehicle addMagazineTurret [_magazineClass, _turretPath];
-                    _vehicle setMagazineTurretAmmo [_magazineClass, _currentRounds, _turretPath];
-                };
-                [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _rounds,
-                    getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-                    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
-            };
-        };
-        _vehicle removeMagazineTurret [_magazineClass, _turretPath];
-        _numMagazines = _numMagazines - 1;
+        TRACE_1("adding new mag directly",_xAdd);
+        _vehicle addMagazineTurret [_magazineClass, _turretPath, _xAdd];
     };
 };
+TRACE_3("finish",_ammoToAdd,_ammoAdded,_arrayModified);
+if (_arrayModified) then { // only need to call this if we modified the array, otherwise they are already added
+    [_vehicle, _turretPath, _magazineClass, _ammoCounts] call FUNC(setTurretMagazineAmmo);
+};
+
+if (_ammoAdded == 0) exitWith {ERROR_1("could not load any ammo - %1",_this);};
+
+[QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _ammoAdded,
+_magazineClass call FUNC(getMagazineName),
+getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;

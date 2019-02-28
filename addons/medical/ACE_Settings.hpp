@@ -299,7 +299,15 @@ class ACE_Settings {
         description = CSTRING(menuTypeDescription);
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
+        values[] = {CSTRING(useSelection), CSTRING(useRadial), ECSTRING(common,Disabled)};
+        isClientSettable = 1;
+    };
+    class GVAR(menuTypeStyleSelf) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(menuTypeStyleSelf_displayName);
+        description = CSTRING(menuTypeStyleSelf_description);
+        typeName = "BOOL";
+        value = 1;
         isClientSettable = 1;
     };
     class GVAR(delayUnconCaptive) {
@@ -309,5 +317,13 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 3;
         sliderSettings[] = {0, 30, 3, 0};
+    };
+    class GVAR(convertItems) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_convertItems_DisplayName);
+        description = CSTRING(MedicalSettings_convertItems_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {ECSTRING(common,Enabled), CSTRING(MedicalSettings_convertItems_remove), ECSTRING(common,Disabled)};
     };
 };

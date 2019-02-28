@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, PiZZADOX
  * Enable the object to be carried.
  *
  * Arguments:
@@ -8,17 +8,19 @@
  * 1: true to enable carrying, false to disable <BOOL>
  * 2: Position offset for attachTo command <ARRAY> (default: [0,1,1])
  * 3: Direction in degree to rotate the object after attachTo <NUMBER> (default: 0)
+ * 4: Override weight limit (optional; default: false) <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [object, true, [0,1,1], 0] call ace_dragging_fnc_setCarryable;
+ * [object, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
  *
  * Public: Yes
  */
 
-params ["_object", "_enableCarry", "_position", "_direction"];
+//IGNORE_PRIVATE_WARNING ["_player", "_target"];
+params ["_object", "_enableCarry", "_position", "_direction", ["_ignoreWeightCarry", false, [false]]];
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(carryPosition), [0,1,1]];
@@ -32,6 +34,7 @@ if (isNil "_direction") then {
 _object setVariable [QGVAR(canCarry), _enableCarry];
 _object setVariable [QGVAR(carryPosition), _position];
 _object setVariable [QGVAR(carryDirection), _direction];
+_object setVariable [QGVAR(ignoreWeightCarry), _ignoreWeightCarry];
 
 // add action to class if it is not already present
 private _type = typeOf _object;
