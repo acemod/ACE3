@@ -100,6 +100,7 @@
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
             <English>Creator</English>
             <German>Ersteller</German>
+            <Japanese>設置者</Japanese>
         </Key>
     </Package>
 </Project>

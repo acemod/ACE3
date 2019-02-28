@@ -149,7 +149,7 @@
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
             <Russian>Предупреждение об арте</Russian>
             <Italian>Allarme Esplosivi</Italian>
-            <Japanese>砲撃の警告</Japanese>
+            <Japanese>砲撃警告</Japanese>
             <Korean>폭격 경고</Korean>
             <Chinesesimp>武装警告</Chinesesimp>
             <Chinese>武裝警告</Chinese>
@@ -245,7 +245,7 @@
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
             <Italian>Attivatore Prigioniero</Italian>
-            <Japanese>捕虜として切り替え</Japanese>
+            <Japanese>捕虜に切り替え</Japanese>
             <Korean>포로 토글</Korean>
             <Chinesesimp>切换俘虏</Chinesesimp>
             <Chinese>切換俘虜</Chinese>
@@ -266,7 +266,7 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
             <English>Update Editable Objects</English>
             <German>Aktualisiere bearbeitbare Objekte</German>
-            <Japanese>編集可能なオブジェクトを更新</Japanese>
+            <Japanese>編集可能オブジェクトを更新</Japanese>
             <Polish>Aktualizuj edytowalne obiekty</Polish>
             <Korean>수정 가능한 물체 갱신</Korean>
             <French>Màj les objets éditables</French>
@@ -292,13 +292,13 @@
             <English>Add Objects</English>
             <Chinese>新增物件</Chinese>
             <Italian>Aggiungi Oggetti</Italian>
-            <Japanese>オブジェクトを追加</Japanese>
+            <Japanese>オブジェクト追加</Japanese>
             <Polish>Dodaj obiekty</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
             <German>Entferne Objekte</German>
-            <Japanese>オブジェクトの削除</Japanese>
+            <Japanese>オブジェクト削除</Japanese>
             <Korean>물체 삭제</Korean>
             <Polish>Usuń obiekty</Polish>
             <French>Enlève les objets</French>
@@ -320,7 +320,7 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Apply changes to all curators</English>
             <German>Änderungen bei allen Zeus' aktualisieren</German>
-            <Japanese>全キュレーターへ変更を適用</Japanese>
+            <Japanese>全キュレーターへ変更を適用します。</Japanese>
             <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
             <French>Applique les changements à tous les curateurs</French>
@@ -331,7 +331,7 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
             <Italian>Oggetti aggiuntivi</Italian>
-            <Japanese>オブジェクトの増加</Japanese>
+            <Japanese>オブジェクト増加</Japanese>
             <Polish>Dodatkowe obiekty</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
@@ -345,7 +345,7 @@
             <French>Compétence global de l'IA</French>
             <Russian>Мастерство ботов</Russian>
             <Czech>Globální zkušenosti AI</Czech>
-            <Japanese>総合的な AI スキル</Japanese>
+            <Japanese>総合的 AI スキル</Japanese>
             <Polish>Globalne umiejętności AI</Polish>
             <German>Globale KI-Fähigkeit</German>
             <Korean>서버 인공지능 실력</Korean>
@@ -772,7 +772,7 @@
             <German>Ersatzkette hinzufügen</German>
             <Spanish>Agregar oruga de repuesto</Spanish>
             <French>Ajouter une chenille de secours</French>
-            <Japanese>車両へ予備タイヤを追加します。</Japanese>
+            <Japanese>車両へ予備タイヤを追加</Japanese>
             <Korean>예비 궤도 추가</Korean>
             <Chinesesimp>增加备用履带</Chinesesimp>
             <Chinese>增加備用履帶</Chinese>
@@ -947,16 +947,19 @@
             <English>None</English>
             <Italian>Niente</Italian>
             <Polish>Żadne</Polish>
+            <Japanese>なし</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
             <Italian>Giocatori</Italian>
             <Polish>Gracze</Polish>
+            <Japanese>プレイヤー</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
             <Italian>Giocati e AI</Italian>
             <Polish>Gracze i SI</Polish>
+            <Japanese>プレイヤーと AI</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1518,9 +1521,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
+            <Japanese>カーゴを空中投下</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
+            <Japanese>カーゴは未積載</Japanese>
         </Key>
     </Package>
 </Project>
