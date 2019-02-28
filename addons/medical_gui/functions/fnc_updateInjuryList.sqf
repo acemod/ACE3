@@ -60,18 +60,20 @@ if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
 };
 
 // Indicate the amount of pain the unit is in
-private _pain = GET_PAIN_PERCEIVED(_target);
-if (_pain > 0) then {
-    private _painText = if (_pain > 0.5) then {
-        localize ELSTRING(medical_treatment,Status_SeverePain);
-    } else {
-        if (_pain > 0.1) then {
-            localize ELSTRING(medical_treatment,Status_Pain);
+if ([_target] call EFUNC(common,isAwake)) then {
+    private _pain = GET_PAIN_PERCEIVED(_target);
+    if (_pain > 0) then {
+        private _painText = if (_pain > 0.5) then {
+            localize ELSTRING(medical_treatment,Status_SeverePain);
         } else {
-            localize ELSTRING(medical_treatment,Status_MildPain);
+            if (_pain > 0.1) then {
+                localize ELSTRING(medical_treatment,Status_Pain);
+            } else {
+                localize ELSTRING(medical_treatment,Status_MildPain);
+            };
         };
+        _entries pushBack [_painText, [1, 1, 1, 1]];
     };
-    _entries pushBack [_painText, [1, 1, 1, 1]];
 };
 
 // Show receiving IV volume remaining
