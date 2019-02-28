@@ -102,6 +102,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip_shiftClick">
             <English>[Shift+Click to save to mission defaults]</English>
+            <Japanese>[Shift + クリック] でミッション標準として保存します</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
