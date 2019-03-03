@@ -44,7 +44,7 @@ if (!hasInterface) exitWith {};
     if ((_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")) exitWith {false};
 
     if ([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
-        [player, _target] call ACE_captives_fnc_doApplyHandcuffs;
+        [ACE_player, _target] call FUNC(doApplyHandcuffs);
         true
     };
     false
