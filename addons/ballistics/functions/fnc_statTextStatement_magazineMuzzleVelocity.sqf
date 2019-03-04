@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: Alganthe
- * Text statement for the weapon muzzle velocity stat
+ * Text statement for the weapon muzzle velocity stat.
  *
  * Arguments:
- * 0: Not used
- * 1: item config path (CONFIG)
+ * 0: Type what it is here <TYPE> (unused)
+ * 1: Item config path <CONFIG>
  *
  * Return Value:
- * String to display
+ * Display text <STRING>
  *
  * Public: No
 */
