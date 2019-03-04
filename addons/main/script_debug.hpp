@@ -48,8 +48,11 @@ PERFORMANCE COUNTERS SECTION
     #define CREATE_COUNTER(x) if(isNil "ACE_COUNTERS" ) then { ACE_COUNTERS=[]; }; GVAR(DOUBLES(x,counter))=[]; GVAR(DOUBLES(x,counter)) set[0, QUOTE(GVAR(DOUBLES(x,counter)))];  GVAR(DOUBLES(x,counter)) set[1, diag_tickTime]; ACE_COUNTERS pushBack GVAR(DOUBLES(x,counter));
     #define BEGIN_COUNTER(x) if(isNil QUOTE(GVAR(DOUBLES(x,counter)))) then { CREATE_COUNTER(x) }; GVAR(DOUBLES(x,counter)) set[2, diag_tickTime];
     #define END_COUNTER(x) GVAR(DOUBLES(x,counter)) pushBack [(GVAR(DOUBLES(x,counter)) select 2), diag_tickTime];
+
+    #define DUMP_COUNTERS (call ace_common_fnc_dumpPerformanceCounters)
 #else
     #define CREATE_COUNTER(x) /* disabled */
     #define BEGIN_COUNTER(x) /* disabled */
     #define END_COUNTER(x) /* disabled */
+    #define DUMP_COUNTERS  /* disabled */
 #endif
