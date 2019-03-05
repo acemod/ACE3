@@ -116,7 +116,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             // Momentum transfers to body/head for worse wounding
             // Higher momentum results in higher chance for head to be hit for more lethality
             if (_receivedDamage > 0.35) then {
-                private _headHitWeight = (_receivedDamage / 2) max 1;
+                private _headHitWeight = (_receivedDamage / 2) min 1;
                 _woundedHitPoint = selectRandomWeighted ["Body", (1 - _headHitWeight), "Head", _headHitWeight];
             };
         } else {
