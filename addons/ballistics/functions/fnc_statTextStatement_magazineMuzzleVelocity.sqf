@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Alganthe
- * Text statement for the weapon muzzle velocity stat.
+ * Text statement for the magazine ammo muzzle velocity stat.
  *
  * Arguments:
  * 0: Type what it is here <TYPE> (unused)
