@@ -35,7 +35,11 @@ if (_magazine isEqualTo "") then {
     private _barrelLengthTable = getArray (_ammoCfg >> "ACE_barrelLengths");
 
     if (_barrelLength != 0 && {count _muzzleVelocityTable > 0} && {count _barrelLengthTable > 0}) then {
-        private _muzzleVelocity = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
+        private _muzzleVelocity = if (["ace_advanced_ballistics"] call EFUNC(common,isModLoaded)) then {
+            [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
+        } else {
+            getNumber (_config >> "initSpeed")
+        };
 
         format ["%1 m/s (%2 ft/s)", _muzzleVelocity toFixed 0, (_muzzleVelocity * 3.28084) toFixed 0]
     } else {
