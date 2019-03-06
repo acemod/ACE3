@@ -37,9 +37,31 @@ if (local _unit) then {
     };
 
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
+        private _bangs = 1;
+        if (isNumber (_config >> QGVAR(flashbangBangs))) then {
+            _bangs = getNumber (_config >> QGVAR(flashbangBangs));
+        };
+
         private _fuzeTime = getNumber (_config >> "explosionTime");
 
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
+        private _interval = 0.5;
+        if (isNumber (_config >> QGVAR(flashbangInterval))) then {
+            _interval = getNumber (_config >> QGVAR(flashbangInterval));
+        };
+
+        private _standardDeviation = 0.1;
+        if (isNumber (_config >> QGVAR(flashbangIntervalStandardDeviation))) then {
+            _standardDeviation = getNumber (_config >> QGVAR(flashbangIntervalStandardDeviation));
+        };
+
+        // variance of symmetric Bates distribution: sigma^2 = (max - min)^2/(12 * 4);
+        private _max = _standardDeviation * sqrt (12*4) / 2;
+
+        for "_i" from 0 to (_bangs - 1) do {
+            private _fuzeTime = _fuzeTime + _i*_interval + random [- _max, 0, _max];
+
+            [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
+        };
     };
 };
 
