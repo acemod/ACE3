@@ -131,13 +131,13 @@ class CfgMagazines {
         STRINGS(30Rnd_65x39_katiba_yellow);
     };
 
-    class 30Rnd_65x39_caseless_green_tracer;
-    class ACE_30Rnd_65x39_katiba_tracer_red : 30Rnd_65x39_caseless_green_tracer {
+    class 30Rnd_65x39_caseless_green_mag_Tracer;
+    class ACE_30Rnd_65x39_katiba_tracer_red : 30Rnd_65x39_caseless_green_mag_Tracer {
         ammo = "B_65x39_Caseless";
         picture = "a3\weapons_f\Data\UI\m_20stanag_red_CA.paa";
         STRINGS(30Rnd_65x39_katiba_tracer_red);
     };
-    class ACE_30Rnd_65x39_katiba_tracer_yellow : 30Rnd_65x39_caseless_green_tracer {
+    class ACE_30Rnd_65x39_katiba_tracer_yellow : 30Rnd_65x39_caseless_green_mag_Tracer {
         ammo = "B_65x39_Caseless_yellow";
         picture = "a3\weapons_f\Data\UI\m_20stanag_yellow_CA.paa";
         STRINGS(30Rnd_65x39_katiba_tracer_yellow);
