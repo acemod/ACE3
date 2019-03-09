@@ -25,10 +25,10 @@ private _entries = [];
 private _bodyPartName = [
     LSTRING(Head),
     LSTRING(Torso),
-    LSTRING(Arm_L),
-    LSTRING(Arm_R),
-    LSTRING(Leg_L),
-    LSTRING(Leg_R)
+    LSTRING(LeftArm),
+    LSTRING(RightArm),
+    LSTRING(LeftLeg),
+    LSTRING(RightLeg)
 ] select _selectionN;
 
 _entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
