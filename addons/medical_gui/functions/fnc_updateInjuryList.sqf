@@ -63,16 +63,18 @@ if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
 if ([_target] call EFUNC(common,isAwake)) then {
     private _pain = GET_PAIN_PERCEIVED(_target);
     if (_pain > 0) then {
-        private _painText = if (_pain > 0.5) then {
-            localize ELSTRING(medical_treatment,Status_SeverePain);
-        } else {
-            if (_pain > 0.1) then {
-                localize ELSTRING(medical_treatment,Status_Pain);
-            } else {
-                localize ELSTRING(medical_treatment,Status_MildPain);
+        private _painText = switch (true) do {
+            case (_pain > 0.5): {
+                ELSTRING(medical_treatment,Status_SeverePain);
+            };
+            case (_pain > 0.1): {
+                ELSTRING(medical_treatment,Status_Pain);
+            };
+            default {
+                ELSTRING(medical_treatment,Status_MildPain);
             };
         };
-        _entries pushBack [_painText, [1, 1, 1, 1]];
+        _entries pushBack [localize _painText, [1, 1, 1, 1]];
     };
 };
 

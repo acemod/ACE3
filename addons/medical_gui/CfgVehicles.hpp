@@ -7,7 +7,7 @@ class CfgVehicles {
                 runOnHover = 1;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
-                condition = QUOTE(GVAR(enableSelfActions));
+                condition = QGVAR(enableSelfActions);
                 icon = QPATHTOF(ui\cross.paa);
                 #define ACTION_CONDITION condition = "true";
                 #include "InteractionBodyParts.hpp"
