@@ -37,7 +37,7 @@ _unit selectWeapon _muzzle;
 if (
     _laserEnabled
     && {
-        0 == [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex)
+        _muzzle == primaryWeapon _unit // prevent UGL switch
         || {"" == primaryWeapon _unit} // Arma switches to primary weapon if exists
     }
 ) then {
