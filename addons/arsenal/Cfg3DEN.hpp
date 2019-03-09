@@ -190,9 +190,9 @@ class Cfg3DEN {
                     text = CSTRING(AttributeAddCompatible_DisplayName);
                     tooltip = CSTRING(AttributeAddCompatible_Tooltip);
                     font = "RobotoCondensedLight";
-                    x = QUOTE(100 * ATTRIBUTE_W);
+                    x = QUOTE(98.75 * ATTRIBUTE_W);
                     y = QUOTE(10.5 * ATTRIBUTE_H);
-                    w = QUOTE(30 * ATTRIBUTE_W);
+                    w = QUOTE(31.25 * ATTRIBUTE_W);
                     h = QUOTE(4 * ATTRIBUTE_H);
                     sizeEx = QUOTE(4 * ATTRIBUTE_H);
                     colorBackground[] = {0, 0, 0, 0.5};
