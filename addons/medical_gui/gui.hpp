@@ -100,14 +100,14 @@ class GVAR(TriageSelect): RscControlsGroupNoScrollbars {
             colorBackground[] = {TRIAGE_COLOR_NONE};
             colorBackgroundActive[] = {TRIAGE_COLOR_NONE};
         };
-        class Minor: None {
+        class Minimal: None {
             onButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0),GVAR(target),1)] call FUNC(handleTriageSelect));
-            text = ECSTRING(medical_treatment,Triage_Status_Minor);
+            text = ECSTRING(medical_treatment,Triage_Status_Minimal);
             y = POS_H(1.1);
-            colorText[] = {TRIAGE_TEXT_COLOR_MINOR};
-            colorFocused[] = {TRIAGE_COLOR_MINOR};
-            colorBackground[] = {TRIAGE_COLOR_MINOR};
-            colorBackgroundActive[] = {TRIAGE_COLOR_MINOR};
+            colorText[] = {TRIAGE_TEXT_COLOR_MINIMAL};
+            colorFocused[] = {TRIAGE_COLOR_MINIMAL};
+            colorBackground[] = {TRIAGE_COLOR_MINIMAL};
+            colorBackgroundActive[] = {TRIAGE_COLOR_MINIMAL};
         };
         class Delayed: None {
             onButtonClick = QUOTE([ARR_3(ctrlParent (_this select 0),GVAR(target),2)] call FUNC(handleTriageSelect));
@@ -489,7 +489,7 @@ class GVAR(RscTriageCard) {
                 class None: None {
                     w = POS_W(15);
                 };
-                class Minor: Minor {
+                class Minimal: Minimal {
                     w = POS_W(15);
                 };
                 class Delayed: Delayed {

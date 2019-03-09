@@ -24,7 +24,7 @@ params ["_unit"];
 private _status = _unit getVariable [QEGVAR(medical,triageLevel), -1];
 
 switch (_status) do {
-    case 1: {[1, localize LSTRING(Triage_Status_Minor),     [TRIAGE_COLOR_MINOR],     [TRIAGE_TEXT_COLOR_MINOR]]};
+    case 1: {[1, localize LSTRING(Triage_Status_Minimal),   [TRIAGE_COLOR_MINIMAL],   [TRIAGE_TEXT_COLOR_MINIMAL]]};
     case 2: {[2, localize LSTRING(Triage_Status_Delayed),   [TRIAGE_COLOR_DELAYED],   [TRIAGE_TEXT_COLOR_DELAYED]]};
     case 3: {[3, localize LSTRING(Triage_Status_Immediate), [TRIAGE_COLOR_IMMEDIATE], [TRIAGE_TEXT_COLOR_IMMEDIATE]]};
     case 4: {[4, localize LSTRING(Triage_Status_Deceased),  [TRIAGE_COLOR_DECEASED],  [TRIAGE_TEXT_COLOR_DECEASED]]};
