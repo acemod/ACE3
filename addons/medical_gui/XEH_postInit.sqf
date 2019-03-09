@@ -22,7 +22,7 @@ GVAR(menuPFH) = -1;
     };
 }] call CBA_fnc_addEventHandler;
 
-["ACE3 Common", QGVAR(openMedicalMenuKey), localize LSTRING(DisplayMenuKey),
+["ACE3 Common", QGVAR(openMedicalMenuKey), localize LSTRING(OpenMedicalMenu),
 {
     // Get target (cursorTarget and cursorObject), if not valid then target is ACE_player
     TRACE_3("Open menu key",cursorTarget,cursorObject,ACE_player);

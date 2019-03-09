@@ -344,7 +344,7 @@ class ACE_Medical_Menu {
         };
         class SelectArmLeft: SelectHead {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 2);
-            tooltip = CSTRING(SelectArmLeft);
+            tooltip = CSTRING(SelectLeftArm);
             x = POS_X(20.6);
             y = POS_Y(5.1);
             w = POS_W(1.1);
@@ -352,12 +352,12 @@ class ACE_Medical_Menu {
         };
         class SelectArmRight: SelectArmLeft {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 3);
-            tooltip = CSTRING(SelectArmRight);
+            tooltip = CSTRING(SelectRightArm);
             x = POS_X(17.4);
         };
         class SelectLegLeft: SelectHead {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 4);
-            tooltip = CSTRING(SelectLegLeft);
+            tooltip = CSTRING(SelectLeftLeg);
             x = POS_X(19.5);
             y = POS_Y(8.8);
             w = POS_W(1.1);
@@ -365,7 +365,7 @@ class ACE_Medical_Menu {
         };
         class SelectLegRight: SelectLegLeft {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 5);
-            tooltip = CSTRING(SelectLegRight);
+            tooltip = CSTRING(SelectRightLeg);
             x = POS_X(18.4);
         };
         class Injuries: TriageCard {

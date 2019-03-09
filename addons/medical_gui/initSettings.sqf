@@ -3,7 +3,7 @@
     "LIST",
     [LSTRING(EnableActions_DisplayName), LSTRING(EnableActions_Description)],
     LSTRING(Category),
-    [[0, 1, 2], [LSTRING(UseSelection), LSTRING(UseRadial), ELSTRING(common,Disabled)], 0],
+    [[0, 1, 2], [LSTRING(Selections3D), LSTRING(Radial), ELSTRING(common,Disabled)], 0],
     false
 ] call CBA_settings_fnc_init;
 

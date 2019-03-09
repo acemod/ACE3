@@ -3,7 +3,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class Medical {
-                displayName = CSTRING(Actions_Medical);
+                displayName = CSTRING(Medical);
                 runOnHover = 1;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
@@ -14,7 +14,7 @@ class CfgVehicles {
                 #undef ACTION_CONDITION
             };
             class ACE_Medical_Menu {
-                displayName = CSTRING(OpenMenu);
+                displayName = CSTRING(MedicalMenu);
                 runOnHover = 0;
                 exceptions[] = {"isNotInside", "isNotSwimming"};
                 condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
@@ -29,7 +29,7 @@ class CfgVehicles {
             #undef ACTION_CONDITION
             class ACE_MainActions {
                 class ACE_Medical_Menu {
-                    displayName = CSTRING(OpenMenu);
+                    displayName = CSTRING(MedicalMenu);
                     runOnHover = 0;
                     exceptions[] = {"isNotInside", "isNotSwimming"};
                     condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
@@ -37,7 +37,7 @@ class CfgVehicles {
                     icon = QPATHTOF(ui\cross.paa);
                 };
                 class ACE_Medical_Radial {
-                    displayName = CSTRING(Actions_Medical);
+                    displayName = CSTRING(Medical);
                     runOnHover = 1;
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
