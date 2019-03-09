@@ -145,6 +145,12 @@
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
             <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果</Chinese>
         </Key>
+		<Key ID="STR_ACE_Grenades_CTS9_Name">
+            <English>CTS 7290-9 9-bang Flash Grenade</English>
+        </Key>
+        <Key ID="STR_ACE_Grenades_CTS9_NameShort">
+            <English>CTS 7290-9</English>
+        </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
             <German>M127A1 Leuchtmittel (Weiß)</German>
