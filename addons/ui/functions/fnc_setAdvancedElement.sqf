@@ -32,13 +32,12 @@ if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
 _cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 
 // Exit if main vehicle type condition not fitting
-private _cargoIndex = vehicle ACE_player getCargoIndex ACE_player; // nil if not in vehicle
-private _isOnFootOrInCargo = isNil "_cargoIndex" || {_cargoIndex > -1};
+private _canUseWeaponOrInCargo = ACE_player call CBA_fnc_canUseWeapon || {-1 < vehicle ACE_player getCargoIndex ACE_player};
 if (
-    (_isOnFootOrInCargo && {_location == VEHICLE_ONLY})
-    || {!_isOnFootOrInCargo && {_location == GROUND_ONLY}}
+    (_canUseWeaponOrInCargo && {_location == VEHICLE_ONLY})
+    || {!_canUseWeaponOrInCargo && {_location == GROUND_ONLY}}
 ) exitWith {
-    TRACE_3("skip location",_this,_isOnFootOrInCargo,_location);
+    TRACE_3("skip location",_this,_canUseWeaponOrInCargo,_location);
     false
 };
 
