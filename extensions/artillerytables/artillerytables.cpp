@@ -3,7 +3,7 @@
  * Author: PabstMirror
  */
 
-//#define TEST_EXE
+ //#define TEST_EXE
 
 #define _USE_MATH_DEFINES
 #include <cmath>
@@ -30,25 +30,25 @@ extern "C" {
 #endif
 
 // Constants
-const double timeStep = 1.0 / 100;
-const double rangeSearchErrorMax = 0.001; // ratio * distance
-const double rangeSearchAngleConvergance = 0.00001;
-const double gravityABS = 9.8066;
-const ace::vector3<double> gravityAccl(0, 0, -1 * gravityABS);
+static const double timeStep = 1.0 / 100;
+static const double rangeSearchErrorMax = 0.001; // ratio * distance
+static const double rangeSearchAngleConvergance = 0.00001;
+static const double gravityABS = 9.8066;
+static const ace::vector3<double> gravityAccl(0, 0, -1 * gravityABS);
 
 // Globals:
 std::vector<std::future<std::string>> fWorkers;
 unsigned int getLineIndex = 0;
 
 std::tuple<double, double, double> simulateShot(const double& _fireAngleRad, const double& _muzzleVelocity, const double& _heightOfTarget, const double& _crossWind, const double& _tailWind, const double& _temperature, const double& _airDensity, double _airFriction) {
-    double kCoefficient = -1.0 * _airDensity * _airFriction;
-    double powderEffects = (_airFriction) ? ((_temperature + 273.13) / 288.13 - 1) / 40 + 1 : 1.0;
+    const double kCoefficient = -1.0 * _airDensity * _airFriction;
+    const double powderEffects = (_airFriction) ? ((_temperature + 273.13) / 288.13 - 1) / 40 + 1 : 1.0;
 
     double currentTime = 0;
     ace::vector3<double> currentPosition(0, 0, 0);
     ace::vector3<double> lastPosition(currentPosition);
     ace::vector3<double> currentVelocity(0, powderEffects * _muzzleVelocity * cos(_fireAngleRad), powderEffects * _muzzleVelocity * sin(_fireAngleRad));
-    ace::vector3<double> wind(_crossWind, _tailWind, 0);
+    const ace::vector3<double> wind(_crossWind, _tailWind, 0);
 
     while ((currentVelocity.z() > 0) || (currentPosition.z() >= _heightOfTarget)) {
         lastPosition = currentPosition;
@@ -59,7 +59,7 @@ std::tuple<double, double, double> simulateShot(const double& _fireAngleRad, con
         currentTime += timeStep;
     }
 
-    double lastCurrentRatio((_heightOfTarget - currentPosition.z()) / (lastPosition.z() - currentPosition.z()));
+    const double lastCurrentRatio((_heightOfTarget - currentPosition.z()) / (lastPosition.z() - currentPosition.z()));
     ace::vector3<double> finalPos = lastPosition.lerp(currentPosition, lastCurrentRatio);
 
     return { finalPos.x(), finalPos.y(), currentTime };
@@ -101,7 +101,7 @@ std::tuple<double, double, double> simulateFindSolution(const double& _rangeToHi
         if ((angleRoot > _maxElev) || (angleRoot < _minElev)) {
             return { -1, -1, -1 };
         };
-        double tof = _rangeToHit / (_muzzleVelocity * cos(angleRoot));
+        const double tof = _rangeToHit / (_muzzleVelocity * cos(angleRoot));
         return { _rangeToHit, angleRoot, tof };
     }
 
@@ -119,8 +119,7 @@ std::tuple<double, double, double> simulateFindSolution(const double& _rangeToHi
         // printf("elev %f [%f, %f]range%f\n goes %f [%f]\n", currentElevation, searchMin, searchMax, (searchMax - searchMin), resultDistance, currentError);
         if ((currentError > 0) ^ (!_highArc)) {
             searchMax = currentElevation;
-        }
-        else {
+        } else {
             searchMin = currentElevation;
         }
     } while ((searchMax - searchMin) > rangeSearchAngleConvergance);
@@ -160,13 +159,12 @@ std::string simulateCalcRangeTableLine(const double& _rangeToHit, const double& 
     returnSS << "\",\"";
 
     if (lineHeightElevation > 0) {
-        double drElevAdjust = lineHeightElevation - lineElevation;
-        double drTofAdjust = lineHeightTimeOfFlight - lineTimeOfFlight;
+        const double drElevAdjust = lineHeightElevation - lineElevation;
+        const double drTofAdjust = lineHeightTimeOfFlight - lineTimeOfFlight;
         writeNumber(returnSS, drElevAdjust * 3200.0 / M_PI, 0, 0);
         returnSS << "\",\"";
         writeNumber(returnSS, drTofAdjust, 0, 1);
-    }
-    else {
+    } else {
         // low angle shots won't be able to adjust down further
         returnSS << "-\",\"-";
     }
@@ -179,25 +177,25 @@ std::string simulateCalcRangeTableLine(const double& _rangeToHit, const double& 
         double xOffset, yOffset;
         // Crosswind
         std::tie(xOffset, std::ignore, std::ignore) = simulateShot(lineElevation, _muzzleVelocity, 0, 10, 0, 15, 1, _airFriction);
-        double crosswindOffsetRad = atan2(xOffset, actualDistance) / 10;
+        const double crosswindOffsetRad = atan2(xOffset, actualDistance) / 10;
         // Headwind
         std::tie(std::ignore, yOffset, std::ignore) = simulateShot(lineElevation, _muzzleVelocity, 0, 0, -10, 15, 1, _airFriction);
-        double headwindOffset = (actualDistance - yOffset) / 10;
+        const double headwindOffset = (actualDistance - yOffset) / 10;
         // Tailwind
         std::tie(std::ignore, yOffset, std::ignore) = simulateShot(lineElevation, _muzzleVelocity, 0, 0, 10, 15, 1, _airFriction);
-        double tailwindOffset = (actualDistance - yOffset) / 10;
+        const double tailwindOffset = (actualDistance - yOffset) / 10;
         // Air Temp Dec
         std::tie(std::ignore, yOffset, std::ignore) = simulateShot(lineElevation, _muzzleVelocity, 0, 0, 0, 5, 1, _airFriction);
-        double tempDecOffset = (actualDistance - yOffset) / 10;
+        const double tempDecOffset = (actualDistance - yOffset) / 10;
         // Air Temp Inc
         std::tie(std::ignore, yOffset, std::ignore) = simulateShot(lineElevation, _muzzleVelocity, 0, 0, 0, 25, 1, _airFriction);
-        double tempIncOffset = (actualDistance - yOffset) / 10;
+        const double tempIncOffset = (actualDistance - yOffset) / 10;
         // Air Density Dec
         std::tie(std::ignore, yOffset, std::ignore) = simulateShot(lineElevation, _muzzleVelocity, 0, 0, 0, 15, 0.9, _airFriction);
-        double airDensityDecOffset = (actualDistance - yOffset) / 10;
+        const double airDensityDecOffset = (actualDistance - yOffset) / 10;
         // Air Density Inc
         std::tie(std::ignore, yOffset, std::ignore) = simulateShot(lineElevation, _muzzleVelocity, 0, 0, 0, 15, 1.1, _airFriction);
-        double airDensityIncOffset = (actualDistance - yOffset) / 10;
+        const double airDensityIncOffset = (actualDistance - yOffset) / 10;
 
         writeNumber(returnSS, crosswindOffsetRad * 3200.0 / M_PI, 1, 1);
         returnSS << "\",\"";
@@ -213,8 +211,7 @@ std::string simulateCalcRangeTableLine(const double& _rangeToHit, const double& 
         returnSS << "\",\"";
         writeNumber(returnSS, airDensityIncOffset, 1, (abs(airDensityIncOffset) > 9.949) ? 0 : 1);
         returnSS << "\"]";
-    }
-    else {
+    } else {
         returnSS << "-\",\"-\",\"-\",\"-\",\"-\",\"-\",\"-\"]"; // 7 dashes
     }
     return (returnSS.str());
@@ -241,11 +238,11 @@ int RVExtensionArgs(char* output, int outputSize, const char* function, const ch
 
     if (!strcmp(function, "start")) {
         if (argsCnt != 5) { return -2; } // Error: not enough args
-        double muzzleVelocity = strtod(args[0], NULL);
-        double airFriction = strtod(args[1], NULL);
+        const double muzzleVelocity = strtod(args[0], NULL);
+        const double airFriction = strtod(args[1], NULL);
         double minElev = (M_PI / 180.0) * strtod(args[2], NULL);
         double maxElev = (M_PI / 180.0) * strtod(args[3], NULL);
-        bool highArc = !strcmp(args[4], "true");
+        const bool highArc = !strcmp(args[4], "true");
 
         // Reset workers:
         fWorkers.clear();
@@ -257,13 +254,12 @@ int RVExtensionArgs(char* output, int outputSize, const char* function, const ch
         maxElev = std::min(maxElev, 88 * (M_PI / 180.0)); // cap max to 88 degrees (mk6)
         if (highArc) {
             minElev = std::max(minElev, bestAngle);
-        }
-        else {
+        } else {
             maxElev = std::min(maxElev, bestAngle);
         }
-        double loopStart = (bestDistance < 4000) ? 50 : 100;
-        double loopInc = (bestDistance < 5000) ? 50 : 100; // simplify when range gets high
-        double loopMaxRange = std::min(bestDistance, 25000.0); // with no air resistance, max range could go higher than 60km
+        const double loopStart = (bestDistance < 4000) ? 50 : 100;
+        const double loopInc = (bestDistance < 5000) ? 50 : 100; // simplify when range gets high
+        const double loopMaxRange = std::min(bestDistance, 25000.0); // with no air resistance, max range could go higher than 60km
 
         if (maxElev > minElev) { // don't bother if we can't hit anything (e.g. mortar in low mode)
             for (double range = loopStart; range < loopMaxRange; range += loopInc) {
