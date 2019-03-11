@@ -69,8 +69,8 @@ if (!(_oldCompats isEqualTo [])) then {
 ///////////////
 // check dlls
 ///////////////
-if (toLower (productVersion select 6) in ["linux", "osx"]) then {
-    INFO_2("Operating system does not support DLL file format");
+if (toLower (productVersion select 6) in ["osx"]) then {
+    INFO("Operating system does not support DLL file format");
 } else {
     {
         private _versionEx = _x callExtension "version";
