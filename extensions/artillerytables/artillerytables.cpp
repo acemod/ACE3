@@ -3,7 +3,7 @@
  * Author: PabstMirror
  */
 
- //#define TEST_EXE
+//#define TEST_EXE
 
 #define _USE_MATH_DEFINES
 #include <cmath>
@@ -40,7 +40,8 @@ static const ace::vector3<double> gravityAccl(0, 0, -1 * gravityABS);
 std::vector<std::future<std::string>> fWorkers;
 unsigned int getLineIndex = 0;
 
-std::tuple<double, double, double> simulateShot(const double& _fireAngleRad, const double& _muzzleVelocity, const double& _heightOfTarget, const double& _crossWind, const double& _tailWind, const double& _temperature, const double& _airDensity, double _airFriction) {
+std::tuple<double, double, double> simulateShot(const double _fireAngleRad, const double _muzzleVelocity, const double _heightOfTarget, const double _crossWind, const double _tailWind, const double _temperature, const double _airDensity, double _airFriction) {
+    // returns: dist traveled to the side (crosswind), dist traveled foward (headwind), time of flight
     const double kCoefficient = -1.0 * _airDensity * _airFriction;
     const double powderEffects = (_airFriction) ? ((_temperature + 273.13) / 288.13 - 1) / 40 + 1 : 1.0;
 
@@ -65,10 +66,12 @@ std::tuple<double, double, double> simulateShot(const double& _fireAngleRad, con
     return { finalPos.x(), finalPos.y(), currentTime };
 }
 
-std::tuple<double, double> findMaxAngle(const double& _muzzleVelocity, const double& _airFriction) {
+std::tuple<double, double> findMaxAngle(const double _muzzleVelocity, const double _airFriction) {
+    // retrns: angle that goes the furthest, max distance traveled
     if (_airFriction == 0) {
         return { M_PI_4, _muzzleVelocity * _muzzleVelocity / gravityABS };
     }
+    // With air resitsnce, max distance angle won't be 45 degrees
     double bestAngle = M_PI_4;
     double bestDistance = -1;
     double testResultDist;
@@ -82,7 +85,7 @@ std::tuple<double, double> findMaxAngle(const double& _muzzleVelocity, const dou
     return { bestAngle, bestDistance };
 }
 
-std::tuple<double, double, double> simulateFindSolution(const double& _rangeToHit, const double& _heightToHit, const double& _muzzleVelocity, const double& _airFriction, const double& _minElev, const double& _maxElev, const bool& _highArc) {
+std::tuple<double, double, double> simulateFindSolution(const double _rangeToHit, const double _heightToHit, const double _muzzleVelocity, const double _airFriction, const double _minElev, const double _maxElev, const bool _highArc) {
     // returns: actual distance traveled, elevation, time of flight
     double searchMin = _minElev;
     double searchMax = _maxElev;
@@ -132,7 +135,7 @@ std::tuple<double, double, double> simulateFindSolution(const double& _rangeToHi
     return { resultDistance, currentElevation, resultTime };
 }
 
-void writeNumber(std::stringstream & ss, double _num, const int& _widthInt, const int& _widthDec) {
+void writeNumber(std::stringstream & ss, double _num, const int _widthInt, const int _widthDec) {
     if ((_num < 0) && (_num > -0.05)) { // hard coded fix -0.0 rounding errors
         _num = 0;
     }
@@ -142,12 +145,14 @@ void writeNumber(std::stringstream & ss, double _num, const int& _widthInt, cons
     ss << std::fixed << std::setw(_widthInt) << std::setprecision(_widthDec) << _num;
 }
 
-std::string simulateCalcRangeTableLine(const double& _rangeToHit, const double& _muzzleVelocity, const double& _airFriction, const double& _minElev, const double& _maxElev, const bool& _highArc) {
-    auto [actualDistance, lineElevation, lineTimeOfFlight] = simulateFindSolution(_rangeToHit, 0, _muzzleVelocity, _airFriction, _minElev, _maxElev, _highArc);
+std::string simulateCalcRangeTableLine(const double _rangeToHit, const double _muzzleVelocity, const double _airFriction, const double _minElev, const double _maxElev, const bool _highArc) {
+    double actualDistance, lineElevation, lineTimeOfFlight;
+    std::tie(actualDistance, lineElevation, lineTimeOfFlight) = simulateFindSolution(_rangeToHit, 0, _muzzleVelocity, _airFriction, _minElev, _maxElev, _highArc);
     if (lineTimeOfFlight < 0) {
         return "";
     }
-    auto [actualDistanceHeight, lineHeightElevation, lineHeightTimeOfFlight] = simulateFindSolution(_rangeToHit, -100, _muzzleVelocity, _airFriction, _minElev, _maxElev, _highArc);
+    double actualDistanceHeight, lineHeightElevation, lineHeightTimeOfFlight;
+    std::tie(actualDistanceHeight, lineHeightElevation, lineHeightTimeOfFlight) = simulateFindSolution(_rangeToHit, -100, _muzzleVelocity, _airFriction, _minElev, _maxElev, _highArc);
 
 
     std::stringstream returnSS;
@@ -248,7 +253,8 @@ int RVExtensionArgs(char* output, int outputSize, const char* function, const ch
         fWorkers.clear();
         getLineIndex = 0;
 
-        auto [bestAngle, bestDistance] = findMaxAngle(muzzleVelocity, airFriction);
+        double bestAngle, bestDistance;
+        std::tie(bestAngle, bestDistance) = findMaxAngle(muzzleVelocity, airFriction);
 
         minElev = std::max(minElev, 2 * (M_PI / 180.0)); // cap min to 2 degrees (negative elev might get messy)
         maxElev = std::min(maxElev, 88 * (M_PI / 180.0)); // cap max to 88 degrees (mk6)
@@ -321,7 +327,7 @@ int main() {
         printf("[%f] = %f\n", ar, range);
     }
     */
-    /*
+
     // test callExtension
     char output[256];
     char function1[] = "start";
@@ -343,14 +349,14 @@ int main() {
         ret2 = RVExtensionArgs(output, 256, function2, NULL, 0);
         if (ret2 == 1) {
             lines++;
-            //std::printf("ret: %d - %s\n", ret2, output);
+            std::printf("ret: %d - %s\n", ret2, output);
         }
     }
     auto t4 = std::chrono::high_resolution_clock::now();
     std::printf("func %s: %1.1f ms with %d lines\n", function2, std::chrono::duration<double, std::milli>(t4 - t3).count(), lines);
 
     std::printf("callExtensions finished in %1.1f ms\n", std::chrono::duration<double, std::milli>(t4 - t1).count());
-    */
+
 
 }
 #endif
