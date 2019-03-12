@@ -29,7 +29,7 @@ _player setVariable ["ACE_hasEarPlugsIn", true, true];
 //Force an immediate fast volume update:
 [[true]] call FUNC(updateVolume);
 
-/*// No Earplugs in inventory, telling user
-[localize LSTRING(NoPlugs)] call EFUNC(common,displayTextStructured);*/
+// No Earplugs in inventory, telling user
+//[localize LSTRING(NoPlugs)] call EFUNC(common,displayTextStructured);
 
 [] call FUNC(updateHearingProtection);

@@ -483,7 +483,7 @@
 {% endif %}
 
 {% if include.component == "compat_rksl_pm_ii" %}
-`RKSL_PMII`
+`RKSL_PMII`, `RKSL_PMII_525`
 {% endif %}
 
 {% if include.component == "compat_sma3_iansky" %}
