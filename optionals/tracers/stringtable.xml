@@ -26,7 +26,6 @@
                 <English>Caliber: 5.56x45 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
                 <German>Kaliber: 5,56x45 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet in: SPAR-16S</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_green">
                 <English>5.56 mm 200Rnd Reload Tracer (Green) Box</English>
                 <German>200 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Kasten</German>
@@ -39,7 +38,6 @@
                 <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: LIM-85</English>
                 <German>Kaliber: 5,56x45 mm Leuchtspur - grün&lt;br /&gt;Schuss: 200&lt;br /&gt;Verwendet in: LIM-85</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_red">
                 <English>5.8 mm 30Rnd Reload Tracer (Red) Mag</English>
                 <German>30 Schuss 5,8 mm Nachlade-Leuchtspur (Rot) Magazin</German>
@@ -64,7 +62,6 @@
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
                 <German>Kaliber: 5,8x42 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet in: CAR-95, CAR-95 GL</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_red">
                 <English>5.8 mm 100Rnd Reload Tracer (Red) Mag</English>
                 <German>100 Schuss 5,8 mm Nachlade-Leuchtspur (Rot) Magazin</German>
@@ -89,7 +86,6 @@
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
                 <German>Kaliber: 5,8x42 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet in: CAR-95-1</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green">
                 <English>6.5mm 30Rnd Reload Tracer (Green) Mag</English>
                 <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Grün) Magazin</German>
@@ -122,7 +118,6 @@
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_green">
                 <English>6.5mm 100Rnd Mixed Mag (Green)</English>
                 <German>100 Schuss 6.5mm Magazin gemischt (grün)</German>
@@ -147,7 +142,6 @@
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_red">
                 <English>6.5mm 30Rnd Reload Tracer (Red) Mag</English>
                 <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Rot) Magazin</German>
@@ -172,7 +166,6 @@
                 <English>Caliber: 6.5x39 mm Tracer (Yellow) - Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba, Type 115</English>
                 <German>Kaliber: 6,5x39mm Leuchtspur (Rot) ‒ hülsenlos&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba, Typ 115</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green">
                 <English>6.5 mm 200Rnd Belt Case Mixed (Green)</English>
                 <German>6,5 mm 200-Schuss-Gurtkiste Gemischt (grün)</German>
@@ -205,7 +198,6 @@
                 <English>Caliber: 6.5x39 mm Tracer - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Rot&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green">
                 <English>7.62 mm 20Rnd Tracer (Green) Mag</English>
                 <German>7,62 mm 20-Schuss-Magazin Leuchtspur (Grün)</German>
@@ -222,7 +214,6 @@
                 <English>Caliber: 7.62x51 mm NATO Tracer - Yellow&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
                 <German>Kaliber: 7,62x51 mm NATO Leuchtspur - gelb&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red">
                 <English>7.62mm 150Rnd Box Mixed (Red)</English>
                 <German>7.62mm 150 Schuss Kiste Gemischt (rot)</German>
@@ -247,7 +238,6 @@
                 <English>Caliber: 7.62x54 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
                 <German>Kaliber: 7.62x54 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow">
                 <English>9.3mm 150Rnd Belt Mixed (Yellow)</English>
                 <German>9.3mm 150 Schuss Gurt gemischt (Gelb)</German>
@@ -256,7 +246,6 @@
                 <English>9.3mm 150Rnd Belt Mixed (Red)</English>
                 <German>9.3mm 150 Schuss Gurt gemischt (Rot)</German>
             </Key>
-
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow">
                 <English>.338 NM 130Rnd Belt Mixed (Yellow)</English>
                 <German>.338 NM 130 Schuss Gurt gemischt (gelb)</German>
