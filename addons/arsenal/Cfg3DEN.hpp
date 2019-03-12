@@ -55,7 +55,7 @@ class Cfg3DEN {
                 };
                 class Category: ctrlToolboxPictureKeepAspect {
                     idc = IDC_ATTRIBUTE_CATEGORY;
-                    onToolBoxSelChanged = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
+                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0), _this select 1)] call FUNC(attributeCategory));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(15 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
@@ -129,7 +129,14 @@ class Cfg3DEN {
                 };
                 class SearchButton: ctrlButtonPicture {
                     idc = IDC_ATTRIBUTE_SEARCH_BUTTON;
-                    onButtonClick = QUOTE(((ctrlParentControlsGroup (_this select 0)) controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR) ctrlSetText ''; [ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
+                    onButtonClick = QUOTE( \
+                        params ['_searchButton']; \
+                        private _controlsGroup = ctrlParentControlsGroup _searchButton; \
+                        private _searchBar = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR; \
+                        _searchBar ctrlSetText ''; \
+                        ctrlSetFocus _searchBar; \
+                        [_controlsGroup] call FUNC(attributeAddItems); \
+                    );
                     text = "\a3\Ui_f\data\GUI\RscCommon\RscButtonSearch\search_start_ca.paa";
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
@@ -140,9 +147,16 @@ class Cfg3DEN {
                 class SearchBar: ctrlEdit {
                     idc = IDC_ATTRIBUTE_SEARCHBAR;
                     onKeyUp = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
+                    onMouseButtonClick = QUOTE( \
+                        params [ARR_2('_searchBar','_button')]; \
+                        if (_button != 1) exitWith {}; \
+                        _searchBar ctrlSetText ''; \
+                        ctrlSetFocus _searchBar; \
+                        [ctrlParentControlsGroup _searchBar] call FUNC(attributeAddItems); \
+                    );
                     x = QUOTE(11 * ATTRIBUTE_W);
                     y = QUOTE(101.83 * ATTRIBUTE_H);
-                    w = QUOTE(55 * ATTRIBUTE_W);
+                    w = QUOTE(40 * ATTRIBUTE_W);
                     h = QUOTE(5 * ATTRIBUTE_H);
                 };
                 class ClearButton: ctrlButton {
@@ -161,6 +175,27 @@ class Cfg3DEN {
                     text = CSTRING(buttonExportText);
                     tooltip = CSTRING(AttributeExport_Tooltip);
                     x = QUOTE(79 * ATTRIBUTE_W);
+                };
+                class ImportButton: ClearButton {
+                    idc = IDC_ATTRIBUTE_IMPORT_BUTTON;
+                    onButtonClick = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeImport));
+                    text = CSTRING(buttonImportText);
+                    tooltip = CSTRING(AttributeImport_Tooltip);
+                    x = QUOTE(53 * ATTRIBUTE_W);
+                };
+                class AddCompatible: ctrlButton {
+                    idc = IDC_ATTRIBUTE_ADD_COMPATIBLE;
+                    style = ST_CENTER;
+                    onButtonClick = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddCompatible));
+                    text = CSTRING(AttributeAddCompatible_DisplayName);
+                    tooltip = CSTRING(AttributeAddCompatible_Tooltip);
+                    font = "RobotoCondensedLight";
+                    x = QUOTE(98.75 * ATTRIBUTE_W);
+                    y = QUOTE(10.5 * ATTRIBUTE_H);
+                    w = QUOTE(31.25 * ATTRIBUTE_W);
+                    h = QUOTE(4 * ATTRIBUTE_H);
+                    sizeEx = QUOTE(4 * ATTRIBUTE_H);
+                    colorBackground[] = {0, 0, 0, 0.5};
                 };
             };
         };

@@ -866,6 +866,15 @@
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
+            <English>Import items list array from clipboard (should be the same format as export)</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
+            <English>Add Compatible Items</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_Tooltip">
+            <English>Will automatically add compatible attachments or magazines (based on selected category) for all weapons in current items list</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">
             <English>Time to live</English>
             <French>Durée de vie</French>
