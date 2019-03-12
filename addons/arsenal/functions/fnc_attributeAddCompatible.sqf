@@ -36,7 +36,7 @@ private _cfgWeapons = configFile >> "CfgWeapons";
 private _itemsToAdd = [];
 
 if (_category == 8) then {
-    private _magazineGroups = +(uiNamespace getVariable QGVAR(magazineGroups));
+    private _magazineGroups = uiNamespace getVariable QGVAR(magazineGroups);
     private _cfgMagazines = configFile >> "CfgMagazines";
 
     {
