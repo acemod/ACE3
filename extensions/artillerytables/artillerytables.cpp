@@ -30,9 +30,9 @@ extern "C" {
 #endif
 
 // Constants
-static const double timeStep = 1.0 / 100;
+static const double timeStep = 1.0 / 60;
 static const double rangeSearchErrorMax = 0.001; // ratio * distance
-static const double rangeSearchAngleConvergance = 0.00001;
+static const double rangeSearchAngleConvergance = 0.000025;
 static const double gravityABS = 9.8066;
 static const ace::vector3<double> gravityAccl(0, 0, -1 * gravityABS);
 
@@ -42,6 +42,7 @@ unsigned int getLineIndex = 0;
 
 std::tuple<double, double, double> simulateShot(const double _fireAngleRad, const double _muzzleVelocity, const double _heightOfTarget, const double _crossWind, const double _tailWind, const double _temperature, const double _airDensity, double _airFriction) {
     // returns: dist traveled to the side (crosswind), dist traveled foward (headwind), time of flight
+    // note: if shot never reaches height of target, then results are undefined (use negative)
     const double kCoefficient = -1.0 * _airDensity * _airFriction;
     const double powderEffects = (_airFriction) ? ((_temperature + 273.13) / 288.13 - 1) / 40 + 1 : 1.0;
 
@@ -305,17 +306,17 @@ int RVExtensionArgs(char* output, int outputSize, const char* function, const ch
 
 #ifdef TEST_EXE
 int main() {
-
-    //double a, b;
-    //std::tie(a, b) = simulateFindSolution(200,50, 100, 0, 0, 45 * (M_PI / 180.0), false);
-    //printf("sim: %f, %f\n",a,b);
+    /*
+    double x1, x2, y1, y2, tof1, tof2;
+    std::tie(x1, y1, tof1) = simulateFindSolution(5000, 0, 810, 0, 0, 45 * (M_PI / 180.0), false);
+    std::tie(x2, y2, tof2) = simulateFindSolution(5000, 0, 810, -0.00000000000000000001, 0, 45 * (M_PI / 180.0), false);
+    printf("calc %f, %f, %f\n", x1, y1, tof1);
+    printf("sim  %f, %f, %f\n", x2, y2, tof2);
+    printf("sim diff %f, %f, %f\n", (x2 - x1), (y2 - y1), (tof2 - tof1));
 
     //std::string r = simulateCalcRangeTableLine(4000, 810, );
     //printf("result: [%s]\n", r.c_str());
-
-    //auto [lineElevation, lineTimeOfFlight] = simulateFindSolution(4000, 0, 810, -0.00005, 5 * (M_PI / 180.0), 80 * (M_PI / 180.0), false);
-    //printf("result: [%f, %f]\n", lineElevation, lineTimeOfFlight);
-
+    */
 
     // Determine realistic air firiction values
     /*
@@ -349,7 +350,7 @@ int main() {
         ret2 = RVExtensionArgs(output, 256, function2, NULL, 0);
         if (ret2 == 1) {
             lines++;
-            std::printf("ret: %d - %s\n", ret2, output);
+            // std::printf("ret: %d - %s\n", ret2, output);
         }
     }
     auto t4 = std::chrono::high_resolution_clock::now();
