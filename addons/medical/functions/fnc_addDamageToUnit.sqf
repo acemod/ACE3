@@ -30,7 +30,7 @@ if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this
 if (!(_selection in GVAR(SELECTIONS))) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); -1};
 
 //Get the hitpoint and the index
-private _hitpoint = [_unit, _selection, true] call ace_medical_fnc_translateSelections;
+private _hitpoint = [_unit, _selection, true] call FUNC(translateSelections);
 (getAllHitPointsDamage _unit) params [["_allHitPoints", []]];
 private _hitpointIndex = -1;
 {   //case insensitive find
