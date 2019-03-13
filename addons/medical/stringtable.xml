@@ -3180,10 +3180,12 @@
         <Key ID="STR_ACE_Medical_menuTypeStyleSelf_displayName">
             <English>Show medical interaction for self</English>
             <Japanese>自分に治療インタラクションを表示</Japanese>
+            <Polish>Pokaż menu interakcji medycznej dla postaci</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeStyleSelf_description">
             <English>Show the self interaction medical actions</English>
             <Japanese>セルフ インタラクションに治療動作を表示します。</Japanese>
+            <Polish>Pokaż elementy menu interakcji medycznej dla postaci</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
@@ -5700,14 +5702,17 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_DisplayName">
             <English>Convert vanilla items</English>
             <Japanese>標準アイテムを変換</Japanese>
+            <Polish>Skonwertuj przedmioty z Army3 (vanilia) na przedmioty medyczne ACE3</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_Description">
             <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
             <Japanese>有効化すると標準の治療アイテムを ACE 治療アイテムへ変換し、無効化すると削除します。</Japanese>
+            <Polish>Decyduje czy oryginalne przedmioty medyczne z Army 3 mają być skonwertowane na przedmioty medyczne ACE3 czy usunięte</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_remove">
             <English>Just remove vanilla medical</English>
             <Japanese>標準の治療アイテムを削除</Japanese>
+            <Polish>Usuń przedmioty z Army 3 (vanilia)</Polish>
         </Key>
     </Package>
 </Project>
