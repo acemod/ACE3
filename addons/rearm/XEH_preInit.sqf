@@ -11,7 +11,7 @@ PREP_RECOMPILE_END;
 DFUNC(rearm_statement) = {
     {
         if (_x isKindOf 'AllVehicles' && {!(_x isKindOf 'Man')}) then {
-            [objNull, _x] call ace_rearm_fnc_rearmEntireVehicleSuccess;
+            [objNull, _x] call FUNC(rearmEntireVehicleSuccess);
         };
     } forEach (curatorSelected select 0);
 };
