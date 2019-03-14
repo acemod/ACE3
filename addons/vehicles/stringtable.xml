@@ -67,5 +67,13 @@
             <Japanese>速度制限を減らす</Japanese>
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
         </Key>
+        <Key ID="STR_ACE_Vehicles_HideEjectAction">
+            <English>Hide Eject Action</English>
+            <German>Abspringen-Aktion verstecken</German>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
+            <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
+            <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
+        </Key>
     </Package>
 </Project>
