@@ -26,6 +26,15 @@ private _namespace = GVAR(ActNamespace);
 // Exit if the action menu is already compiled for this class
 if !(isNil {_namespace getVariable _objectType}) exitWith {};
 
+if ((_objectType isKindOf "CAManBase") && {!isNil QGVAR(cacheManActions)}) exitWith {
+    _namespace setVariable [_objectType, +GVAR(cacheManActions)]; // copy
+};
+
+if ((getNumber (configFile >> "CfgVehicles" >> _objectType >> "isPlayableLogic")) == 1) exitWith {
+    TRACE_1("skipping playable logic",_objectType);
+    _namespace setVariable [_objectType, []];
+};
+
 private _recurseFnc = {
     params ["_actionsCfg", "_parentDistance"];
     private _actions = [];
@@ -104,11 +113,6 @@ private _recurseFnc = {
         nil
     } count (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
-};
-
-if ((getNumber (configFile >> "CfgVehicles" >> _objectType >> "isPlayableLogic")) == 1) exitWith {
-    TRACE_1("skipping playable logic",_objectType);
-    _namespace setVariable [_objectType, []];
 };
 
 private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";

@@ -311,7 +311,7 @@
 {% endif %}
 
 {% if include.component == "pylons" %}
-`ace_interact_menu`, `ace_zeus`
+`ace_interact_menu`
 {% endif %}
 
 {% if include.component == "quickmount" %}
@@ -483,7 +483,7 @@
 {% endif %}
 
 {% if include.component == "compat_rksl_pm_ii" %}
-`RKSL_PMII`
+`RKSL_PMII`, `RKSL_PMII_525`
 {% endif %}
 
 {% if include.component == "compat_sma3_iansky" %}

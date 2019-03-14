@@ -28,6 +28,8 @@ class CfgWeapons {
 
     // MX
     class arifle_MX_Base_F: Rifle_Base_F {
+        magazineWell[] = {"CBA_65x39_MX", "CBA_65x39_MX_XL"};
+
         class Single: Mode_SemiAuto {
             dispersion = MOA_TO_RAD(0.90);
         };
@@ -58,7 +60,7 @@ class CfgWeapons {
             dispersion = MOA_TO_RAD(1.12);
         };
     };
-    
+
     // F2000
     class mk20_base_F: Rifle_Base_F {
         class Single: Mode_SemiAuto {
@@ -81,7 +83,7 @@ class CfgWeapons {
         ACE_barrelLength = 264;
         modes[] = {"Single", "FullAuto"};
     };
-    
+
     // Noreen "Bad News" ULR
     class DMR_02_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
@@ -128,7 +130,7 @@ class CfgWeapons {
             dispersion = MOA_TO_RAD(1.0);
         };
     };
-    
+
     // Cyrus
     class DMR_05_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
