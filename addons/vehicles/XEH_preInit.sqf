@@ -11,7 +11,7 @@ PREP_RECOMPILE_END;
     "CHECKBOX",
     [LSTRING(HideEjectAction), LSTRING(HideEjectActionTooltip)],
     ELSTRING(common,ACEKeybindCategoryVehicles),
-    false,
+    true,
     2, {
         profileNamespace setVariable [QGVAR(showEjectAction), parseNumber !_this];
         saveProfileNamespace;
