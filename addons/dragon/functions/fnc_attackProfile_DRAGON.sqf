@@ -34,7 +34,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut || { !alive _shoote
     };
     
     if (_serviceChargeCount > 0 && {(_lastTime - CBA_missionTime) <= 0}) then {
-        _attackProfileStateParams set [5, CBA_missionTime + 0.05];
+        _attackProfileStateParams set [5, CBA_missionTime + 0.05 + random 0.1];
         private _randomVector = [(random 2) - 1, random 1, (random 2) - 1];
         _projectile setVelocityModelSpace ((velocityModelSpace _projectile) vectorAdd (_randomVector vectorMultiply _serviceChargeAcceleration));
         private _charge = createVehicle [QGVAR(serviceCharge), [0, 0, 0], [], 0, "NONE"];
@@ -45,7 +45,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut || { !alive _shoote
     _retPos
 };
 
-if (_distanceToProjectile <= _seekerMinRangeSqr || { _serviceChargeCount <= 0 }) exitWith { _retPos };
+if (_distanceToProjectile <= _seekerMinRangeSqr || { _serviceChargeCount <= 0 } || { !(_shooter getVariable [QGVAR(sightAttached), true]) }) exitWith { _retPos };
 
 // if the time between updates is less than the pop time we want to fire the rockets OR if the missile wants to make a major correction pop it rapidly
 if (((_lastTime - CBA_missionTime) <= 0) || {(_lastTime - CBA_missionTime) < (_serviceInterval / 2) && (_projectilePos vectorDistance _seekerTargetPos > 1)}) then {
