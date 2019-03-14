@@ -54,7 +54,7 @@ class ACE_ZeusActions {
             displayName = "$STR_repair";
             icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
             condition = QUOTE(ZEUS_ACTION_CONDITION && {-1 < (curatorSelected select 0) findIf {_x isKindOf 'AllVehicles' && {!(_x isKindOf 'Man')}}});
-            statement = QUOTE({if (_x isKindOf 'AllVehicles' && {!(_x isKindOf 'Man')}) then {_x setDamage 0}} forEach (curatorSelected select 0));
+            statement = QUOTE(call FUNC(repair_Statement));
         };
     };
 
