@@ -16,11 +16,15 @@
         [{ // add a frame later to allow other modules to set variables
             ["LandVehicle", "init", {
                 params ["_vehicle"];
-                private _enabled = _vehicle getVariable [QGVAR(enabled), getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "artilleryScanner")];
-                if (_enabled in [0, false]) exitWith {};
-                if (1 == getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(skipCorrections))) exitWith {};
-                
-                TRACE_3("enabled",_vehicle,typeOf _vehicle,_enabled);
+                private _vehicleCfg = configFile >> "CfgVehicles" >> typeOf _vehicle;
+                // config "ace_artillerytables_applyCorrections" [0 disabled, 1 enabled] falls back to artilleryScanner
+                private _applyCorrections = if (isNumber (_vehicleCfg >> QGVAR(applyCorrections))) then {
+                    getNumber (_vehicleCfg >> QGVAR(applyCorrections))
+                } else {
+                    getNumber (_vehicleCfg >> "artilleryScanner")
+                };
+                if (_applyCorrections != 1) exitWith {};
+                TRACE_2("adding firedEH",_vehicle,configName _vehicleCfg);
                 _vehicle addEventHandler ["Fired", {call FUNC(firedEH)}];
             }, true, [], true] call CBA_fnc_addClassEventHandler;
         }, []] call CBA_fnc_execNextFrame;

@@ -3,7 +3,7 @@
 [
     QGVAR(advancedCorrections), "CHECKBOX",
     [LSTRING(advancedCorrections_displayName), LSTRING(advancedCorrections_description)],
-    "ACE Artillery",
+    ["ACE Artillery", QUOTE(COMPONENT_BEAUTIFIED)],
     false, // default value
     true, // isGlobal
     {[QGVAR(advancedCorrections), _this] call EFUNC(common,cbaSettings_settingChanged)},
@@ -13,7 +13,7 @@
 [
     QGVAR(disableArtilleryComputer), "CHECKBOX",
     [LSTRING(disableArtilleryComputer_displayName), LSTRING(disableArtilleryComputer_description)],
-    "ACE Artillery",
+    ["ACE Artillery", QUOTE(COMPONENT_BEAUTIFIED)],
     false, // default value
     true, // isGlobal
     {[QGVAR(disableArtilleryComputer), _this] call EFUNC(common,cbaSettings_settingChanged)},
