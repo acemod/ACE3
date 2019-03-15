@@ -70,10 +70,12 @@
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
             <German>Abspringen-Aktion verstecken</German>
+            <Polish>Ukryj akcję Wyskocz</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
             <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
+            <Polish>Usuwa akcję Wyskocz z menu akcji. Wymaga restartu gry.</Polish>
         </Key>
     </Package>
 </Project>
