@@ -60,7 +60,19 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
 };
 
 if (_muzzle isEqualType "") then {
+    private _laserEnabled = _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weapon};
+
     _unit selectWeapon _muzzle;
+
+    if (
+        _laserEnabled
+        && {
+            _muzzle == primaryWeapon _unit // prevent UGL switch
+            || {"" == primaryWeapon _unit} // Arma switches to primary weapon if exists
+        }
+    ) then {
+        {_unit action [_x, _unit]} forEach ["GunLightOn", "IRLaserOn"];
+    };
 };
 
 // play fire mode selector sound

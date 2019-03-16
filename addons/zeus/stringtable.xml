@@ -1522,10 +1522,12 @@
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
             <Japanese>カーゴを空中投下</Japanese>
+            <Polish>Zrzut ładunku (cargo)</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
             <Japanese>カーゴは未積載</Japanese>
+            <Polish>Niczego nie załadowano do cargo</Polish>
         </Key>
     </Package>
 </Project>
