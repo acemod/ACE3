@@ -70,7 +70,7 @@ if (_useRealWeaponDir) then {
         if (isNil "_currentTraverseRad") then { _currentTraverseRad = _vehicle animationPhase _turretAnimBody; };
         // Get turret roatation around it's z axis, then calc weapon elev in it's projection
         private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, deg _currentTraverseRad] call FUNC(rotateVector3d);
-        _realElevation = acos (_turretRot vectorDotProduct _weaponDir) + ((_turretRot call CBA_fnc_vect2polar) select 2);
+        _realElevation = (acos ((_turretRot vectorCos _weaponDir) min 1)) + ((_turretRot call CBA_fnc_vect2polar) select 2);
         if (_realElevation > 90) then { _realElevation = 180 - _realElevation; }; // does not flip azimuth!
     };
 };

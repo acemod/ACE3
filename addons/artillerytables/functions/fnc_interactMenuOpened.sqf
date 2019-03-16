@@ -65,7 +65,7 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
         // Some turrets (MK6) have a neutralX rotation that we need to add to min/max config elevation to get actual limits
         private _weaponDir = _vehicle weaponDirection _weapon;
         private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, deg _currentTraverseRad] call FUNC(rotateVector3d);
-        private _neutralX = (acos (_turretRot vectorCos _weaponDir)) - (deg _currentElevRad);
+        private _neutralX = (acos ((_turretRot vectorCos _weaponDir) min 1)) - (deg _currentElevRad); // vectorCos can return values outside of -1..1
         _neutralX = (round (_neutralX * 10)) / 10; // minimize floating point errors
         private _minElev = _neutralX + getNumber (_turretCfg >> "minElev");
         private _maxElev = _neutralX + getNumber (_turretCfg >> "maxElev");
