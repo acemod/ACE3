@@ -68,7 +68,6 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
         private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, (180 / PI) * _currentTraverseRad] call FUNC(rotateVector3d);
         private _neutralX = (acos (_turretRot vectorCos _weaponDir)) - ((180 / PI) * _currentElevRad);
         _neutralX = (round (_neutralX * 10)) / 10; // minimize floating point errors
-
         private _minElev = _neutralX + getNumber (_turretCfg >> "minElev");
         private _maxElev = _neutralX + getNumber (_turretCfg >> "maxElev");
 
@@ -79,7 +78,8 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
         };
         private _advCorrection = GVAR(advancedCorrections) && {_applyCorrections == 1};
 
-        private _info = [_weapon, _minElev, _maxElev, _advCorrection]; // in case multiple vehicle types use the same weapon
+         // check weapon and limits in case different vehicles use the same weapon (cammo variants should still produce the same array)
+        private _info = [_weapon, _minElev, _maxElev, _advCorrection];
 
         _vehicleAdded pushBack _vehicle;
         ace_player setVariable [QGVAR(vehiclesAdded), _vehicleAdded];
@@ -90,9 +90,7 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
             private _statement = {
                 params ["", "", "_info"];
                 TRACE_1("interaction statement",_info);
-                [{
-                    _this call FUNC(rangeTableOpen); // delay a frame because of interaction menu closing dialogs
-                }, _info] call CBA_fnc_execNextFrame;
+                [FUNC(rangeTableOpen), _info] call CBA_fnc_execNextFrame; // delay a frame because of interaction menu closing dialogs
             };
             private _condition = {
                 //IGNORE_PRIVATE_WARNING ["_player"];

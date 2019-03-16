@@ -15,32 +15,25 @@
  * Public: No
  */
 
-
 private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
 private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
 private _ctrlChargeList = _dialog displayCtrl IDC_CHARGELIST;
 private _ctrlElevationHigh = _dialog displayCtrl IDC_BUTTON_ELEV_HIGH;
 private _ctrlElevationLow = _dialog displayCtrl IDC_BUTTON_ELEV_LOW;
 
-GVAR(lastElevationMode) = param [0, GVAR(lastElevationMode)];
+GVAR(lastElevationMode) = param [0, GVAR(lastElevationMode)]; // update if passed a new value
 GVAR(lastCharge) = lbCurSel _ctrlChargeList;
 
-private _listBoxData = _ctrlChargeList lbData GVAR(lastCharge);
-if (isNil "_listBoxData" || {_listBoxData == ""}) exitWith {ERROR("lbCurSel out of bounds or no data");};
-private _muzzleVelocity = parseNumber _listBoxData;
-
+// get data for currently selected mag/mode combo:
+(GVAR(magModeData) select GVAR(lastCharge)) params [["_muzzleVelocity", -1], ["_airFriction", 0]];
 private _elevMin = _dialog getVariable [QGVAR(elevMin), 0];
 private _elevMax = _dialog getVariable [QGVAR(elevMax), 0];
 _ctrlElevationHigh ctrlSetTextColor ([[0.25,0.25,0.25,1],[1,1,1,1]] select GVAR(lastElevationMode));
 _ctrlElevationLow ctrlSetTextColor ([[1,1,1,1],[0.25,0.25,0.25,1]] select GVAR(lastElevationMode));
 
-private _advCorrection = _dialog getVariable [QGVAR(advCorrection), false];
-private _airFriction = if (_advCorrection) then {-0.00005} else {0};
-
-TRACE_4("",_muzzleVelocity,_elevMin,_elevMax,_airFriction);
-
 
 lnbClear _ctrlRangeTable;
+// Call extension with current data and start workers
 TRACE_5("callExtension:start",_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode));
 private _ret = "ace_artillerytables" callExtension ["start", [_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode)]];
 TRACE_1("",_ret);

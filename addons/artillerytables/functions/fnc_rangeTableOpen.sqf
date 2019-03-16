@@ -4,7 +4,10 @@
  * Opens the rangetable and fills the charge listbox.
  *
  * Arguments:
- * None
+ * 0: Weapon configname <STRING>
+ * 1: Elevation Min (Deg) <NUMBER>
+ * 2: Elevation Max (Deg) <NUMBER>
+ * 3: Advanced Corrections Enabled <BOOL>
  *
  * Return Value:
  * None
@@ -17,6 +20,8 @@
 
 params ["_weaponName", "_elevMin", "_elevMax", "_advCorrection"];
 TRACE_3("rangeTableOpen",_weaponName,_elevMin,_elevMax);
+
+BEGIN_COUNTER(rangeTableOpen);
 
 createDialog QGVAR(rangeTableDialog);
 private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
@@ -31,48 +36,52 @@ TRACE_2("created dialog",_dialog,_ctrlChargeList);
 private _mags = [_weaponName] call CBA_fnc_compatibleMagazines;
 if (_mags isEqualTo []) exitWith {WARNING_1("No Mags",_weaponName);};
 private _magCfg = configFile >> "CfgMagazines";
-private _firstSpeed = getNumber (_magCfg >> (_mags select 0) >> "initSpeed");
-private _allSame = true;
+private _magParamsArray = [];
 _mags = _mags apply {
     private _initSpeed = getNumber (_magCfg >> _x >> "initSpeed");
-    if (_initSpeed != _firstSpeed) then {_allSame = false};
-    [getText (_magCfg >> _x >> "displayNameShort"), _initSpeed]
+    _magParamsArray pushBackUnique _initSpeed;
+    private _airFriction = 0;
+    if (_advCorrection) then {
+        _airFriction = if (isNumber (_magCfg >> _x >> QGVAR(airFriction))) then { getNumber (_magCfg >> _x >> QGVAR(airFriction)) } else { -0.00005 };
+    };
+    _magParamsArray pushBackUnique _airFriction;
+    [getText (_magCfg >> _x >> "displayNameShort"), getText (_magCfg >> _x >> "displayName"), _initSpeed, _airFriction]
 };
-if (_allSame) then { _mags = [["-", _firstSpeed]]; };
-TRACE_2("",_allSame,_mags);
+TRACE_2("",_magParamsArray,_mags);
+if ((count _magParamsArray) == 2) then { // test if all magazines share the parameters
+    _mags = [["", "", (_mags select 0) select 2, (_mags select 0) select 3]]; // simplify
+};
 
 // Get Firemodes:
 private _fireModes = getArray (configFile >> "CfgWeapons" >> _weaponName >> "modes");
 _fireModes = (_fireModes apply {configFile >> "CfgWeapons" >> _weaponName >> _x}) select {1 == getNumber (_x >> "showToPlayer")};
 _fireModes = _fireModes apply {[getNumber (_x >> "artilleryCharge"), configName _x]};
 _fireModes sort true;
-private _allSameCharge = ((count _fireModes) == 1);
+private _allSameCharge = ((count _fireModes) == 1) && {((_fireModes select 0) select 0) == 1};
 TRACE_2("",_allSameCharge,_fireModes);
 
-private _index = 0;
+GVAR(magModeData) = [];
 {
-    _x params ["_xMagName", "_xMagInitSpeed"];
+    _x params ["_xDisplayNameShort", "_xDisplayName", "_xInitSpeed", "_xAirFriction"];
     if (_allSameCharge) then {
-        _ctrlChargeList lbAdd format ["%1", _xMagName];
-        _ctrlChargeList lbSetTooltip [_index, format ["%1 m/s",_xMagInitSpeed toFixed 1]];
-        _ctrlChargeList lbSetData [_index, str (_xMagInitSpeed)];
-        _index = _index + 1;
+        _ctrlChargeList lbAdd format ["%1", _xDisplayNameShort];
+        _ctrlChargeList lbSetTooltip [count GVAR(magModeData), format ["%1 m/s\n%2",_xInitSpeed toFixed 1, _xDisplayName]];
+        GVAR(magModeData) pushBack [_xInitSpeed, _xAirFriction];
     } else {
         {
-            _x params ["_xArtilleryCharge"];
-            _ctrlChargeList lbAdd format ["%1 Charge: %2", _xMagName, _forEachIndex]; // forEachIndex is for firemodes
-            _ctrlChargeList lbSetTooltip [_index, format ["%1 m/s", (_xMagInitSpeed * _xArtilleryCharge) toFixed 1]];
-            _ctrlChargeList lbSetData [_index, str (_xMagInitSpeed * _xArtilleryCharge)];
-            _index = _index + 1;
+            _x params ["_xModeCharge"];
+            _ctrlChargeList lbAdd format ["[Charge %1] %2", _forEachIndex, _xDisplayNameShort]; // forEachIndex is from firemodes
+            _ctrlChargeList lbSetTooltip [count GVAR(magModeData), format ["%1 m/s\n%2", (_xInitSpeed * _xModeCharge) toFixed 1, _xDisplayName]];
+            GVAR(magModeData) pushBack [_xInitSpeed * _xModeCharge, _xAirFriction];
         } forEach _fireModes;
     };
 } forEach _mags;
 
-if (_index == 0) exitWith {ERROR_1("no modes %1",_weaponName);};
 
 if (isNil QGVAR(lastElevationMode)) then {GVAR(lastElevationMode) = true;};
-if (isNil QGVAR(lastCharge)) then {GVAR(lastCharge) = 0;};
-if ((GVAR(lastCharge) >= _index) || {GVAR(lastCharge) < 0}) then { GVAR(lastCharge) = 0; };
+if (isNil QGVAR(lastTablePage)) then {GVAR(lastTablePage) = 0;};
+if ((GVAR(lastTablePage) >= (count GVAR(magModeData))) || {GVAR(lastTablePage) < 0}) then { GVAR(lastTablePage) = 0; };
 
-TRACE_2("",GVAR(lastElevationMode),GVAR(lastCharge));
-_ctrlChargeList lbSetCurSel GVAR(lastCharge); // triggers call to FUNC(rangeTableUpdate)
+END_COUNTER(rangeTableOpen);
+TRACE_2("trigger update",GVAR(lastElevationMode),GVAR(lastTablePage));
+_ctrlChargeList lbSetCurSel GVAR(lastTablePage); // triggers call to FUNC(rangeTableUpdate)
