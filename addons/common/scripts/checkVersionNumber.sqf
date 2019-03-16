@@ -4,13 +4,14 @@
 private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
 private _files = CBA_common_addons select {
     (_x select [0,3] != "a3_") &&
-    {_x select [0,4] != "ace_"} && 
+    {_x select [0,4] != "ace_"} &&
     {!((toLower _x) in _aceWhitelist)}
 };
 
 private _versions = [];
 {
-    private _version = parseNumber getText (configFile >> "CfgPatches" >> _x >> "version");
+    getText (configFile >> "CfgPatches" >> _x >> "version") splitString "." params ["_major", "_minor"];
+    private _version = parseNumber _major + parseNumber _minor/100;
     _versions set [_forEachIndex, _version];
 } forEach _files;
 
