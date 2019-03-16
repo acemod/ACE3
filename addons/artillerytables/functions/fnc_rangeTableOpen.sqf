@@ -42,7 +42,7 @@ _mags = _mags apply {
     _magParamsArray pushBackUnique _initSpeed;
     private _airFriction = 0;
     if (_advCorrection) then {
-        _airFriction = if (isNumber (_magCfg >> _x >> QGVAR(airFriction))) then { getNumber (_magCfg >> _x >> QGVAR(airFriction)) } else { -0.00005 };
+        _airFriction = if (isNumber (_magCfg >> _x >> QGVAR(airFriction))) then { getNumber (_magCfg >> _x >> QGVAR(airFriction)) } else { DEFAULT_AIR_FRICTION };
     };
     _magParamsArray pushBackUnique _airFriction;
     [getText (_magCfg >> _x >> "displayNameShort"), getText (_magCfg >> _x >> "displayName"), _initSpeed, _airFriction]

@@ -43,7 +43,7 @@ if ((alive _player) && {_showGunLaying > 0} && {_player == gunner _vehicle}) the
 
     // Ugh, see FUNC(turretPFEH) for why this is needed
     private _useAltElevation = (_showGunLaying == 2)
-    || {(["Mortar_01_base_F", "rhs_2b14_82mm_Base", "RHS_M252_Base", "CUP_B_M1129_MC_MK19_Desert"] findIf {_typeOf isKindOf _x}) > -1;};
+    || {(["Mortar_01_base_F", "rhs_2b14_82mm_Base", "RHS_M252_Base", "CUP_B_M1129_MC_MK19_Desert", "LIB_GrWr34", "LIB_BM37"] findIf {_typeOf isKindOf _x}) > -1;};
 
     private _weaponsTurret = _vehicle weaponsTurret _turret;
     if ((count _weaponsTurret) != 1) then { WARNING_2("not singular weapon in turret - %1 - %2",_typeOf,_turret); };

@@ -30,8 +30,8 @@ if ((_vehicle turretUnit [0]) != _gunner) exitWith {};
 
 
 // Get airFriction
-private _airFriction = -0.00005;
-if (!isNull (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction))) then {
+private _airFriction = DEFAULT_AIR_FRICTION;
+if (isNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction))) then {
     _airFriction = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction));
 };
 TRACE_1("",_airFriction);

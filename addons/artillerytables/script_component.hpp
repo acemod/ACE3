@@ -8,6 +8,10 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+
+// This is a good fit for most large artillery, but a little low for lighter mortars
+#define DEFAULT_AIR_FRICTION -0.00006
+
 #define DEGTOMILS 17.7777778
 
 #define IDC_MODECONTROLGROUP 1000
