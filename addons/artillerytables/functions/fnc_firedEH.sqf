@@ -26,7 +26,7 @@ params ["_vehicle", "", "", "", "", "_magazine", "_projectile", "_gunner"];
 TRACE_4("firedEH",_vehicle,_magazine,_projectile,_gunner);
 
 if (!([_gunner] call EFUNC(common,isPlayer))) exitWith {}; // AI don't know how to use (this does give them more range than a player)
-if ((_vehicle turretUnit [0]) != _gunner) exitWith {};
+if ((gunner _vehicle) != _gunner) exitWith {}; // check if primaryGunner
 
 
 // Get airFriction

@@ -4,8 +4,7 @@
  * Interaction menu opened, search for nearby artillery vehicles.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
- * 1: Player <OBJECT>
+ * 0: Menu Type (1 is self interaction) <NUMBER>
  *
  * Return Value:
  * Can Open <BOOL>
@@ -20,7 +19,7 @@ params ["_menuType"];
 TRACE_1("interactMenuOpened",_menuType);
 
 if (_menuType != 1) exitWith {};
-// if (!("ACE_artilleryTable" in (ace_player call EFUNC(common,uniqueItems)))) exitWith {};
+if (!("ACE_artilleryTable" in (ace_player call EFUNC(common,uniqueItems)))) exitWith {};
 
 private _vehicleAdded = ace_player getVariable [QGVAR(vehiclesAdded), []];
 private _rangeTablesShown = ace_player getVariable [QGVAR(rangeTablesShown), []];
@@ -65,8 +64,8 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
 
         // Some turrets (MK6) have a neutralX rotation that we need to add to min/max config elevation to get actual limits
         private _weaponDir = _vehicle weaponDirection _weapon;
-        private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, (180 / PI) * _currentTraverseRad] call FUNC(rotateVector3d);
-        private _neutralX = (acos (_turretRot vectorCos _weaponDir)) - ((180 / PI) * _currentElevRad);
+        private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, deg _currentTraverseRad] call FUNC(rotateVector3d);
+        private _neutralX = (acos (_turretRot vectorCos _weaponDir)) - (deg _currentElevRad);
         _neutralX = (round (_neutralX * 10)) / 10; // minimize floating point errors
         private _minElev = _neutralX + getNumber (_turretCfg >> "minElev");
         private _maxElev = _neutralX + getNumber (_turretCfg >> "maxElev");
@@ -77,6 +76,9 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
             getNumber (_vehicleCfg >> "artilleryScanner")
         };
         private _advCorrection = GVAR(advancedCorrections) && {_applyCorrections == 1};
+        if ((missionNamespace getVariable [QEGVAR(mk6Mortar,airResistanceEnabled), false]) && {_vehicle isKindOf "Mortar_01_base_F"}) then {
+            _advCorrection = true;
+        };
 
          // check weapon and limits in case different vehicles use the same weapon (cammo variants should still produce the same array)
         private _info = [_weapon, _minElev, _maxElev, _advCorrection];
@@ -94,9 +96,7 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
             };
             private _condition = {
                 //IGNORE_PRIVATE_WARNING ["_player"];
-                // ("ACE_artilleryTable" in (_player call EFUNC(common,uniqueItems)))
-                // && {[_player, objNull, ["notOnMap", "isNotSitting"]] call EFUNC(common,canInteractWith)}
-                true
+                ("ACE_artilleryTable" in (_player call EFUNC(common,uniqueItems))) && {[_player, objNull, ["notOnMap", "isNotSitting", "isNotInside"]] call EFUNC(common,canInteractWith)}
             };
             private _displayName = format ["%1%2", getText (_vehicleCfg >> "displayName"),["","*"] select _advCorrection];
             private _action = [format ['QGVAR(%1)',_index], _displayName, QPATHTOF(UI\icon_rangeTable.paa), _statement, _condition, {}, _info] call EFUNC(interact_menu,createAction);

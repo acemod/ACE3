@@ -77,9 +77,10 @@ if (_lastFireMode != -1) then {
 
         //Calc real azimuth/elevation
         //(looking at the sky VS looking at ground will radicaly change fire direction because BIS)
-        private _realAzimuth = -1;
-        private _realElevation = -1;
+        private _realAzimuth = missionNamespace getVariable [QEGVAR(artillerytables,predictedAzimuth), -1];
+        private _realElevation = missionNamespace getVariable [QEGVAR(artillerytables,predictedElevation), -1];
 
+/*
         private _useRealWeaponDir = (ctrlText (_display displayCtrl 173)) == "--";
         if (_useRealWeaponDir && {(_mortarVeh ammo (currentWeapon _mortarVeh)) == 0}) then {
             // With no ammo, distance display will be empty, but gun will still fire at wonky angle if aimed at ground
@@ -104,7 +105,7 @@ if (_lastFireMode != -1) then {
             private _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp _mortarVeh) select 2);
             _realElevation = ((180 / PI) * (_mortarVeh animationPhase "mainGun")) + 75 - _elevationDiff;
         };
-
+*/
         //Update Heading Display:
         if (_notGunnerView || (!GVAR(allowCompass))) then {
             (_display displayCtrl 80156) ctrlSetText "";
@@ -118,10 +119,10 @@ if (_lastFireMode != -1) then {
 
         //Update CurrentElevation Display and "charge" text
         if (_notGunnerView) then {
-            (_display displayCtrl 80085) ctrlSetStructuredText parseText "";
+            // (_display displayCtrl 80085) ctrlSetStructuredText parseText "";
             (_display displayCtrl 80175) ctrlSetText "";
         } else {
-            (_display displayCtrl 80085) ctrlSetStructuredText parseText _chargeText;
+            // (_display displayCtrl 80085) ctrlSetStructuredText parseText _chargeText;
 
             if (_useMils) then {
                 (_display displayCtrl 80175) ctrlSetText str ((round (_realElevation * 6400 / 360)) % 6400);

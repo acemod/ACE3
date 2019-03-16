@@ -33,4 +33,5 @@
 
 #ifdef DEBUG_MODE_FULL
 #include "dev\showShotInfo.sqf"
+#include "dev\checkConfigs.sqf"
 #endif

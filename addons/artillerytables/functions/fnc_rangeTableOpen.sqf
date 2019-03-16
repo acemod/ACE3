@@ -19,7 +19,7 @@
  */
 
 params ["_weaponName", "_elevMin", "_elevMax", "_advCorrection"];
-TRACE_3("rangeTableOpen",_weaponName,_elevMin,_elevMax);
+TRACE_4("rangeTableOpen",_weaponName,_elevMin,_elevMax,_advCorrection);
 
 BEGIN_COUNTER(rangeTableOpen);
 
@@ -49,7 +49,7 @@ _mags = _mags apply {
 };
 TRACE_2("",_magParamsArray,_mags);
 if ((count _magParamsArray) == 2) then { // test if all magazines share the parameters
-    _mags = [["", "", (_mags select 0) select 2, (_mags select 0) select 3]]; // simplify
+    _mags = [["", "All Magazines", (_mags select 0) select 2, (_mags select 0) select 3]]; // simplify
 };
 
 // Get Firemodes:
@@ -65,13 +65,13 @@ GVAR(magModeData) = [];
     _x params ["_xDisplayNameShort", "_xDisplayName", "_xInitSpeed", "_xAirFriction"];
     if (_allSameCharge) then {
         _ctrlChargeList lbAdd format ["%1", _xDisplayNameShort];
-        _ctrlChargeList lbSetTooltip [count GVAR(magModeData), format ["%1 m/s\n%2",_xInitSpeed toFixed 1, _xDisplayName]];
+        _ctrlChargeList lbSetTooltip [count GVAR(magModeData), format ["%1\n%2 m/s\n%3", _xDisplayName, _xInitSpeed toFixed 1, _xAirFriction]];
         GVAR(magModeData) pushBack [_xInitSpeed, _xAirFriction];
     } else {
         {
             _x params ["_xModeCharge"];
             _ctrlChargeList lbAdd format ["[Charge %1] %2", _forEachIndex, _xDisplayNameShort]; // forEachIndex is from firemodes
-            _ctrlChargeList lbSetTooltip [count GVAR(magModeData), format ["%1 m/s\n%2", (_xInitSpeed * _xModeCharge) toFixed 1, _xDisplayName]];
+            _ctrlChargeList lbSetTooltip [count GVAR(magModeData), format ["%1\n%2 m/s\n%3", _xDisplayName, (_xInitSpeed * _xModeCharge) toFixed 1, _xAirFriction]];
             GVAR(magModeData) pushBack [_xInitSpeed * _xModeCharge, _xAirFriction];
         } forEach _fireModes;
     };

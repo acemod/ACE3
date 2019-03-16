@@ -16,7 +16,6 @@
  */
 (_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody"];
 
-
 if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
     // Still Don't like this solution, but it works
     closeDialog 0;
@@ -70,7 +69,7 @@ if (_useRealWeaponDir) then {
         private _currentTraverseRad = _vehicle animationSourcePhase _turretAnimBody;
         if (isNil "_currentTraverseRad") then { _currentTraverseRad = _vehicle animationPhase _turretAnimBody; };
         // Get turret roatation around it's z axis, then calc weapon elev in it's projection
-        private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, (180 / PI) * _currentTraverseRad] call FUNC(rotateVector3d);
+        private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, deg _currentTraverseRad] call FUNC(rotateVector3d);
         _realElevation = acos (_turretRot vectorDotProduct _weaponDir) + ((_turretRot call CBA_fnc_vect2polar) select 2);
         if (_realElevation > 90) then { _realElevation = 180 - _realElevation; }; // does not flip azimuth!
     };

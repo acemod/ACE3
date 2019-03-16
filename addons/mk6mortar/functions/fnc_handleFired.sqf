@@ -31,6 +31,7 @@ if (GVAR(useAmmoHandling) && {_vehicle getVariable [QGVAR(initialized),false] &&
 };
 
 if (!GVAR(airResistanceEnabled)) exitWith {};
+if (EGVAR(artillerytables,advancedCorrections)) exitWith { TRACE_1("defer to artillerytables",_this); };
 
 // Large enough distance to not simulate any wind deflection
 if (_vehicle distance ACE_player > 8000) exitWith {false};

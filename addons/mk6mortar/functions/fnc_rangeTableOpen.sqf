@@ -14,6 +14,10 @@
  *
  * Public: No
  */
+if (true) exitWith { // todo: more cleanup later
+    TRACE_1("defer to artillerytables",_this);
+    ["mortar_82mm", 45, 88, GVAR(airResistanceEnabled) || EGVAR(artillerytables,advancedCorrections)] call EFUNC(artillerytables,rangeTableOpen);
+};
 
 #define LIST_CHARGE ((uiNamespace getVariable "ACE_82mm_RangeTable_Dialog") displayCtrl 1501)
 
