@@ -10,7 +10,7 @@ private _files = CBA_common_addons select {
 
 private _versions = [];
 {
-    getText (configFile >> "CfgPatches" >> _x >> "version") splitString "." params ["_major", "_minor"];
+    getText (configFile >> "CfgPatches" >> _x >> "version") splitString "." params [["_major", "0"], ["_minor", "0"]];
     private _version = parseNumber _major + parseNumber _minor/100;
     _versions set [_forEachIndex, _version];
 } forEach _files;
