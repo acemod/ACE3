@@ -5669,7 +5669,7 @@
             <Chinese>允許醫療時加入昏迷的動作</Chinese>
             <Italian>Permette l'animazione da svenuto dei pazioenti durante loro la cura.</Italian>
             <Polish>Zezwalaj na animacje nieprzytomnych pacjentów podczas leczenia.</Polish>
-            <German>Soll der bewusstlose eine Animation ausführen, wenn dieser behandelt wird?</German>
+            <German>Soll der Bewusstlose eine Animation ausführen, wenn dieser behandelt wird?</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_moveUnitsFromGroupOnUnconscious_DisplayName">
             <English>Move unconscious units from group</English>
