@@ -1026,11 +1026,13 @@
             <Chinesesimp>爆炸范围</Chinesesimp>
             <Chinese>爆炸範圍</Chinese>
             <Italian>Raggio di detonazione</Italian>
+            <Polish>Zasięg wybuchu</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
             <Italian>Timer di detonazione</Italian>
             <Japanese>爆発タイマー</Japanese>
+            <Polish>Czasomierz Wybuchu</Polish>
         </Key>
     </Package>
 </Project>

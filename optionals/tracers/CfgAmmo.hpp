@@ -33,6 +33,8 @@ class CfgAmmo {
     // class B_556x45_Ball_Tracer_White: B_556x45_Ball {model = PATHTOF(ace_TracerWhite2.p3d);}; //New class for testing
 
     class B_580x42_Ball_F: BulletBase {model = PATHTOF(ace_TracerGreen2.p3d);};
+    class ACE_580x42_Ball_Tracer_Red: B_580x42_Ball_F {model = PATHTOF(ace_TracerRed2.p3d);};
+    class ACE_580x42_Ball_Tracer_Yellow: B_580x42_Ball_F {model = PATHTOF(ace_TracerYellow2.p3d);};
 
     class B_65x39_Caseless: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
     class B_65x39_Caseless_green: B_65x39_Caseless {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
@@ -86,10 +88,14 @@ class CfgAmmo {
     class B_338_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
 
     class B_338_NM_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
+    class ACE_338_NM_Ball_red : B_338_NM_Ball {model = PATHTOF(ace_TracerRed2.p3d);};
+    class ACE_338_NM_Ball_yellow : B_338_NM_Ball {model = PATHTOF(ace_TracerYellow2.p3d);};
 
     class B_127x54_Ball: BulletBase {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
 
     class B_93x64_Ball: BulletBase {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green
+    class ACE_93x64_Ball_tracer_red : B_93x64_Ball {model = PATHTOF(ace_TracerRed2.p3d);};
+    class ACE_93x64_Ball_tracer_yellow : B_93x64_Ball {model = PATHTOF(ace_TracerYellow2.p3d);};
 
     //Autocannon
     class B_19mm_HE: BulletBase {model = PATHTOF(ace_TracerWhite2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_white

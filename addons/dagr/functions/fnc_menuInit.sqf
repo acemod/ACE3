@@ -347,7 +347,7 @@ GVAR(menuRun) = true;
                             GVAR(digit4) = floor (GVAR(wp0) / 10000 - GVAR(digit3) * 10 - GVAR(digit2) * 100 - GVAR(digit1) * 1000);
                             GVAR(digit5) = floor (GVAR(wp0) / 1000 - GVAR(digit4) * 10 - GVAR(digit3) * 100 - GVAR(digit2) * 1000 - GVAR(digit1) * 10000);
                             GVAR(digit6) = floor (GVAR(wp0) / 100 - GVAR(digit5) * 10 - GVAR(digit4) * 100 - GVAR(digit3) * 1000 - GVAR(digit2) * 10000 - GVAR(digit1) * 100000);
-                            GVAR(digit7) = floor (GVAR(wp0) / 10- GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
+                            GVAR(digit7) = floor (GVAR(wp0) / 10 - GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
                             GVAR(digit8) = floor (GVAR(wp0) - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                         };
                         case 1: {
@@ -357,7 +357,7 @@ GVAR(menuRun) = true;
                             GVAR(digit4) = floor (GVAR(wp1) / 10000 - GVAR(digit3) * 10 - GVAR(digit2) * 100 - GVAR(digit1) * 1000);
                             GVAR(digit5) = floor (GVAR(wp1) / 1000 - GVAR(digit4) * 10 - GVAR(digit3) * 100 - GVAR(digit2) * 1000 - GVAR(digit1) * 10000);
                             GVAR(digit6) = floor (GVAR(wp1) / 100 - GVAR(digit5) * 10 - GVAR(digit4) * 100 - GVAR(digit3) * 1000 - GVAR(digit2) * 10000 - GVAR(digit1) * 100000);
-                            GVAR(digit7) = floor (GVAR(wp1) / 10- GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
+                            GVAR(digit7) = floor (GVAR(wp1) / 10 - GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
                             GVAR(digit8) = floor (GVAR(wp1) - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                         };
                         case 2: {
@@ -367,7 +367,7 @@ GVAR(menuRun) = true;
                             GVAR(digit4) = floor (GVAR(wp2) / 10000 - GVAR(digit3) * 10 - GVAR(digit2) * 100 - GVAR(digit1) * 1000);
                             GVAR(digit5) = floor (GVAR(wp2) / 1000 - GVAR(digit4) * 10 - GVAR(digit3) * 100 - GVAR(digit2) * 1000 - GVAR(digit1) * 10000);
                             GVAR(digit6) = floor (GVAR(wp2) / 100 - GVAR(digit5) * 10 - GVAR(digit4) * 100 - GVAR(digit3) * 1000 - GVAR(digit2) * 10000 - GVAR(digit1) * 100000);
-                            GVAR(digit7) = floor (GVAR(wp2) / 10- GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
+                            GVAR(digit7) = floor (GVAR(wp2) / 10 - GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
                             GVAR(digit8) = floor (GVAR(wp2) - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                         };
                         case 3: {
@@ -377,7 +377,7 @@ GVAR(menuRun) = true;
                             GVAR(digit4) = floor (GVAR(wp3) / 10000 - GVAR(digit3) * 10 - GVAR(digit2) * 100 - GVAR(digit1) * 1000);
                             GVAR(digit5) = floor (GVAR(wp3) / 1000 - GVAR(digit4) * 10 - GVAR(digit3) * 100 - GVAR(digit2) * 1000 - GVAR(digit1) * 10000);
                             GVAR(digit6) = floor (GVAR(wp3) / 100 - GVAR(digit5) * 10 - GVAR(digit4) * 100 - GVAR(digit3) * 1000 - GVAR(digit2) * 10000 - GVAR(digit1) * 100000);
-                            GVAR(digit7) = floor (GVAR(wp3) / 10- GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
+                            GVAR(digit7) = floor (GVAR(wp3) / 10 - GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
                             GVAR(digit8) = floor (GVAR(wp3) - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                         };
                         case 4: {
@@ -387,7 +387,7 @@ GVAR(menuRun) = true;
                             GVAR(digit4) = floor (GVAR(wp4) / 10000 - GVAR(digit3) * 10 - GVAR(digit2) * 100 - GVAR(digit1) * 1000);
                             GVAR(digit5) = floor (GVAR(wp4) / 1000 - GVAR(digit4) * 10 - GVAR(digit3) * 100 - GVAR(digit2) * 1000 - GVAR(digit1) * 10000);
                             GVAR(digit6) = floor (GVAR(wp4) / 100 - GVAR(digit5) * 10 - GVAR(digit4) * 100 - GVAR(digit3) * 1000 - GVAR(digit2) * 10000 - GVAR(digit1) * 100000);
-                            GVAR(digit7) = floor (GVAR(wp4) / 10- GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
+                            GVAR(digit7) = floor (GVAR(wp4) / 10 - GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
                             GVAR(digit8) = floor (GVAR(wp4) - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                         };
                     };
@@ -457,7 +457,7 @@ GVAR(menuRun) = true;
                     GVAR(digit4) = floor(_gridVector / 10000 - GVAR(digit3) * 10 - GVAR(digit2) * 100 - GVAR(digit1) * 1000);
                     GVAR(digit5) = floor(_gridVector / 1000 - GVAR(digit4) * 10 - GVAR(digit3) * 100 - GVAR(digit2) * 1000 - GVAR(digit1) * 10000);
                     GVAR(digit6) = floor(_gridVector / 100 - GVAR(digit5) * 10 - GVAR(digit4) * 100 - GVAR(digit3) * 1000 - GVAR(digit2) * 10000 - GVAR(digit1) * 100000);
-                    GVAR(digit7) = floor(_gridVector / 10- GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
+                    GVAR(digit7) = floor(_gridVector / 10 - GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
                     GVAR(digit8) = floor(_gridVector - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                 };
                 if (GVAR(F3)) then {

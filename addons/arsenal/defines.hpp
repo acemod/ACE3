@@ -162,6 +162,8 @@
 #define IDC_ATTRIBUTE_SEARCHBAR 8106
 #define IDC_ATTRIBUTE_CLEAR_BUTTON 8107
 #define IDC_ATTRIBUTE_EXPORT_BUTTON 8108
+#define IDC_ATTRIBUTE_IMPORT_BUTTON 8109
+#define IDC_ATTRIBUTE_ADD_COMPATIBLE 8110
 
 #define SYMBOL_ITEM_NONE "−"
 #define SYMBOL_ITEM_REMOVE "×"
@@ -362,7 +364,8 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     {(_accsArray select 2) findIf {_x == _item} > -1} ||\
     {(_accsArray select 3) findIf {_x == _item} > -1}
 
-#define CHECK_ASSIGNED_ITEMS\
+// PboProject 2.45 has problems with these macros for some reason, adding a single space before the \ fixes
+#define CHECK_ASSIGNED_ITEMS \
     (GVAR(virtualItems) select 10) findIf {_x == _item} > -1 ||\
     {(GVAR(virtualItems) select 11) findIf {_x == _item} > -1} ||\
     {(GVAR(virtualItems) select 12) findIf {_x == _item} > -1} ||\
@@ -370,7 +373,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     {(GVAR(virtualItems) select 14) findIf {_x == _item} > -1} ||\
     {(GVAR(virtualItems) select 8) findIf {_x == _item} > -1}
 
-#define CHECK_CONTAINER\
+#define CHECK_CONTAINER \
     (GVAR(virtualItems) select 4) findIf {_x == _item} > -1 ||\
     {(GVAR(virtualItems) select 5) findIf {_x == _item} > -1} ||\
     {(GVAR(virtualItems) select 6) findIf {_x == _item} > -1}
@@ -381,7 +384,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     {isClass (_glassesCfg >> _item)} ||\
     {isClass (_magCfg >> _item)}
 
-#define CHECK_CONTAINER_ITEMS\
+#define CHECK_CONTAINER_ITEMS \
     (GVAR(virtualItems) select 3) findIf {_x == _item} > -1 ||\
     {(_accsArray select 0) findIf {_x == _item} > -1} ||\
     {(_accsArray select 1) findIf {_x == _item} > -1} ||\
