@@ -19,6 +19,7 @@
  * Public: Yes
  */
 
+if (!hasInterface) exitWith { [] };
 if (!params [["_object", objNull, [objNull]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
     ERROR("Bad Params");
     []

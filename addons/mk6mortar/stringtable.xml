@@ -73,6 +73,7 @@
             <Chinesesimp>MK6迫击炮</Chinesesimp>
             <Japanese>Mk6 迫撃砲</Japanese>
             <French>Mortier Mk6</French>
+            <Polish>Moździerz Mk6</Polish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -283,7 +284,7 @@
             <Czech>Připavuji náboj</Czech>
             <Portuguese>Preparar munição</Portuguese>
             <Russian>Подготовка снаряда</Russian>
-            <Japanese>事前に装填</Japanese>
+            <Japanese>砲弾を事前装填</Japanese>
             <Korean>탄약 준비중</Korean>
             <Chinesesimp>准备弹头中</Chinesesimp>
             <Chinese>準備彈頭中</Chinese>
@@ -313,7 +314,7 @@
             <Czech>Nabít Dýmovnici</Czech>
             <Portuguese>Carregar Fumaça</Portuguese>
             <Russian>Зарядить дымовой</Russian>
-            <Japanese>煙幕弾を装填</Japanese>
+            <Japanese>発煙弾を装填</Japanese>
             <Korean>연막탄 장전</Korean>
             <Chinesesimp>装载烟雾弹</Chinesesimp>
             <Chinese>裝載煙霧彈</Chinese>
@@ -388,7 +389,7 @@
             <Czech>82mm Kouřový náboj</Czech>
             <Portuguese>Munição 82mm Fumaça</Portuguese>
             <Russian>Дымовой снаряд 82мм</Russian>
-            <Japanese>82mm 煙幕弾</Japanese>
+            <Japanese>82mm 発煙弾</Japanese>
             <Korean>82mm 연막탄</Korean>
             <Chinesesimp>82mm烟雾弹</Chinesesimp>
             <Chinese>82mm煙霧彈</Chinese>
@@ -478,7 +479,7 @@
             <Czech>[ACE] Bedna s municí (82mm Dýmovnice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Fumaça</Portuguese>
             <Russian>[ACE] Ящик дымовых снарядов 82мм</Russian>
-            <Japanese>[ACE] 82mm 煙幕弾入り弾薬箱</Japanese>
+            <Japanese>[ACE] 82mm 発煙弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 연막탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm烟雾弹药箱</Chinesesimp>
             <Chinese>[ACE] 82mm煙霧彈藥箱</Chinese>
@@ -508,7 +509,7 @@
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
-            <Japanese>[ACE] 82mm 梱包箱</Japanese>
+            <Japanese>[ACE] 82mm 保管箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
             <Chinesesimp>[ACE] 82mm预设弹药箱</Chinesesimp>
             <Chinese>[ACE] 82mm預設彈藥箱</Chinese>

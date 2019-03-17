@@ -108,6 +108,13 @@ class CfgMagazines {
         picture = QPATHTOF(UI\ace_chemlight_ultrahiorange_x_ca.paa);
     };
 
+    // Backwards compatibility
+    // has been removed in v3.12.4
+    class ACE_Chemlight_HiOrange: ACE_Chemlight_UltraHiOrange {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        scopeArsenal = 1;
+    };
 
     class ACE_Chemlight_IR: Chemlight_Green {
         ACE_Attachable = "ACE_Chemlight_IR_Dummy";

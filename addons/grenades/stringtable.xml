@@ -220,7 +220,7 @@
             <Russian>Фальшфейер (Белый)</Russian>
             <Spanish>Bengala (Blanca)</Spanish>
             <French>Feux à main (Blanc)</French>
-            <Japanese>白の発炎筒</Japanese>
+            <Japanese>白の手持ち式信号弾</Japanese>
             <Korean>하얀색 불꽃신호기</Korean>
             <Chinesesimp>白色手持式信号弹</Chinesesimp>
             <Chinese>白色手持式信號彈</Chinese>
@@ -236,7 +236,7 @@
             <Russian>Фальшфейер (Красный)</Russian>
             <Spanish>Bengala (Roja)</Spanish>
             <French>Feux à main (Rouge)</French>
-            <Japanese>赤の発炎筒</Japanese>
+            <Japanese>赤の手持ち式信号弾</Japanese>
             <Korean>빨간색 불꽃신호기</Korean>
             <Chinesesimp>红色手持式信号弹</Chinesesimp>
             <Chinese>紅色手持式信號彈</Chinese>
@@ -252,7 +252,7 @@
             <Russian>Фальшфейер (Зелёный)</Russian>
             <Spanish>Bengala (Verde)</Spanish>
             <French>Feux à main (Vert)</French>
-            <Japanese>緑の発炎筒</Japanese>
+            <Japanese>緑の手持ち式信号弾</Japanese>
             <Korean>초록색 불꽃신호기</Korean>
             <Chinesesimp>绿色手持式信号弹</Chinesesimp>
             <Chinese>綠色手持式信號彈</Chinese>
@@ -268,7 +268,7 @@
             <Russian>Фальшфейер (Жёлтые)</Russian>
             <Spanish>Bengala (Amarilla)</Spanish>
             <French>Feux à main (Jaune)</French>
-            <Japanese>黄の発炎筒</Japanese>
+            <Japanese>黄の手持ち式信号弾</Japanese>
             <Korean>노란색 불꽃신호기</Korean>
             <Chinesesimp>黄色手持式信号弹</Chinesesimp>
             <Chinese>黃色手持式信號彈</Chinese>
@@ -365,13 +365,49 @@
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
             <German>Brandsatzgranate. Verwendet um Waffen, Munition und andere Ausrüstung zu zerstören.</German>
             <Russian>Зажигательная граната используется для уничтожения оружия, боеприпасов и прочего оборудования.</Russian>
-            <Japanese>焼夷手榴弾は武器や弾薬箱などの装備を破壊するために使われます。</Japanese>
+            <Japanese>焼夷手榴弾は武器や弾薬箱などの装備を破壊する為に使われます。</Japanese>
             <Polish>Granat zapalający, używany do niszczenia broni, amunicji i innego sprzętu.</Polish>
             <Korean>소이 수류탄은 무기나 탄약 그리고 장비를 파괴할때 쓰입니다.</Korean>
             <French>Grenade incendiaire utilisé pour détruire des armes, munitions et autres équipements.</French>
             <Italian>Granata incendiaria usata per distruggere armi, munizioni e altri equipaggiamenti.</Italian>
             <Chinesesimp>燃烧手榴弹是用来摧毁武器，弹药以及其他装备的好帮手。</Chinesesimp>
             <Chinese>燃燒手榴彈是用來摧毀武器，彈藥以及其他裝備的好幫手</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_parachute_flare_description">
+            <English>Type: Star Parachute Flare</English>
+            <Polish>Typ: Gwiezdna Flara Spadochronowa</Polish>
+            <Italian>Tipo: Granata a paracadute con bengala</Italian>
+            <Japanese>種類: パラシュート式照明弾 (星弾)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_white">
+            <English>M583 Illumination Flare (White)</English>
+            <Polish>M583 Flara oświetlająca (Biała)</Polish>
+            <Italian>M583 Granata con bengala (Bianca)</Italian>
+            <Japanese>M583 照明弾 (白)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_red">
+            <English>M662 Illumination Flare (Red)</English>
+            <Polish>M662 Flara oświetlająca (Czerwona)</Polish>
+            <Italian>M662 Granata con bengala (Rossa)</Italian>
+            <Japanese>M662 照明弾 (赤)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_green">
+            <English>M661 Illumination Flare (Green)</English>
+            <Polish>M661 Flara oświetlająca (Zielona)</Polish>
+            <Italian>M661 Granata con bengala (Verde)</Italian>
+            <Japanese>M661 照明弾 (緑)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
+            <English>Type: Parachute IR Flare</English>
+            <Polish>Typ: Spadochronowa Flara IR</Polish>
+            <Italian>Tipo: Granata a paracadute con infrarosso</Italian>
+            <Japanese>種類: パラシュート式赤外線照明弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_ir">
+            <English>M992 Illumination IR Flare</English>
+            <Polish>M992 Oświetlająca flara IR</Polish>
+            <Italian>M992 Granata con infrarosso</Italian>
+            <Japanese>M992 赤外線照明弾</Japanese>
         </Key>
     </Package>
 </Project>

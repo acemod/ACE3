@@ -150,6 +150,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "hot" %}
+`ace_common`, `ace_missileguidance`
+{% endif %}
+
 {% if include.component == "huntir" %}
 `ace_common`
 {% endif %}
@@ -307,7 +311,7 @@
 {% endif %}
 
 {% if include.component == "pylons" %}
-`ace_interact_menu`, `ace_zeus`
+`ace_interact_menu`
 {% endif %}
 
 {% if include.component == "quickmount" %}
@@ -446,10 +450,6 @@
 `ace_common`, `ace_ai`
 {% endif %}
 
-{% if include.component == "compat_adr_97" %}
-`A3_Weapons_F_Mod`
-{% endif %}
-
 {% if include.component == "compat_r3f" %}
 `r3f_armes_c`, `R3F_G17_addons`, `r3f_acc`
 {% endif %}
@@ -483,7 +483,7 @@
 {% endif %}
 
 {% if include.component == "compat_rksl_pm_ii" %}
-`RKSL_PMII`
+`RKSL_PMII`, `RKSL_PMII_525`
 {% endif %}
 
 {% if include.component == "compat_sma3_iansky" %}

@@ -26,7 +26,7 @@
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
             <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
-            <Japanese>ヘリコプターで Fast Rope Insertion Extraction System を使えるようにします</Japanese>
+            <Japanese>ヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
             <Korean>패스트로프 투입 및 탈출 시스템을 호환되는 헬리콥터에 적용합니다.</Korean>
             <Chinesesimp>使可相容的直升机启用快速绳降及撤离系统</Chinesesimp>
             <Chinese>使可相容的直升機啟用快速繩降及撤離系統</Chinese>
@@ -54,6 +54,7 @@
             <Chinese>收起快速繩降系統</Chinese>
             <Chinesesimp>收起快速绳降系统</Chinesesimp>
             <Korean>패스트 로프 시스템 보관</Korean>
+            <Polish>Schowaj system zjazdu na linach</Polish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -142,6 +143,84 @@
             <Chinesesimp>让单位快速绳降</Chinesesimp>
             <Chinese>讓單位快速繩降</Chinese>
             <Korean>패스트 로프를 놓음</Korean>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
+            <English>Deploy 12m ropes</English>
+            <French>Déployer les cordes 12m</French>
+            <Japanese>12m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 12 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
+            <English>Deploy 15m ropes</English>
+            <French>Déployer les cordes 15m</French>
+            <Japanese>15m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 15 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
+            <English>Deploy 18m ropes</English>
+            <French>Déployer les cordes 18m</French>
+            <Japanese>18m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 18 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
+            <English>Deploy 27m ropes</English>
+            <French>Déployer les cordes 27m</French>
+            <Japanese>27m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 27 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
+            <English>Deploy 36m ropes</English>
+            <French>Déployer les cordes 36m</French>
+            <Japanese>36m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 36 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Ropesupply">
+            <English>[ACE] Ropes Supply crate</English>
+            <French>[ACE] Caisse de Cordes</French>
+            <Japanese>[ACE] ロープ収納箱</Japanese>
+            <Polish>Skrzynia z linami ACE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_descriptionShort">
+            <English>Used to do deploy ropes from a compatibile helicopter</English>
+            <French>Utilisé pour déployer des cordes depuis un hélicoptère compatible</French>
+            <Japanese>対応するヘリコプターからロープを展開する為に使用されます</Japanese>
+            <Polish>Używane do opuszczania lin z kompatybilnych smigłowców</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_12_Display">
+            <English>Rope 12.2 meters</English>
+            <French>Corde 12.2 mètres</French>
+            <Japanese>ロープ (12.2 メートル)</Japanese>
+            <Polish>Lina, długość 12,2 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_15_Display">
+            <English>Rope 15.2 meters</English>
+            <French>Corde 15.2 mètres</French>
+            <Japanese>ロープ (15.2 メートル)</Japanese>
+            <Polish>Lina, długość 15,2 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_18_Display">
+            <English>Rope 18.3 meters</English>
+            <French>Corde 18.3 mètres</French>
+            <Japanese>ロープ (18.3 メートル)</Japanese>
+            <Polish>Lina, długość 18,3 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_27_Display">
+            <English>Rope 27.4 meters</English>
+            <French>Corde 27.4 mètres</French>
+            <Japanese>ロープ (27.4 メートル)</Japanese>
+            <Polish>Lina, długość 27,4 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_36_Display">
+            <English>Rope 36.6 meters</English>
+            <French>Corde 36.6 mètres</French>
+            <Japanese>ロープ (36.6 メートル)</Japanese>
+            <Polish>Lina, długość 36,6 m.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
+            <English>Require rope item to deploy</English>
+            <French>Exiger une corde pour déployer</French>
+            <Japanese>展開にはロープ アイテムを必須に</Japanese>
+            <Polish>Wymaga przedmiotu typu lina </Polish>
         </Key>
     </Package>
 </Project>

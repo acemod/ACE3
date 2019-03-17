@@ -76,7 +76,7 @@ private _offsetX = 0.5 * safeZoneW - safeZoneX - 0.5;
 private _offsetY = 0.5 * safeZoneH - safeZoneY - 0.5;
 
 private _newTarget = objNull;
-if (GVAR(isLockKeyDown) && {cameraView == "GUNNER"} && {(currentVisionMode ACE_player) == 2}) then {
+if (GVAR(isLockKeyDown) && {cameraView == "GUNNER"} && {((currentVisionMode ACE_player) == 2) || {missionNamespace getVariable [QGVAR(ignoreVisionMode), false]}}) then {
     // Attempting to lock; getTarget can be  expensive so it's rate is limited
     if (diag_tickTime > _nextTargetScan) then {
         BEGIN_COUNTER(getTarget);

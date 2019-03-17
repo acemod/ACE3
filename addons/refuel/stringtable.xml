@@ -131,7 +131,7 @@
             <Italian>Scollega manicotto benzina</Italian>
             <Spanish>Desconectar surtidor</Spanish>
             <French>Déconnecter la pompe</French>
-            <Japanese>給油ノズルを外しました</Japanese>
+            <Japanese>給油ノズルを外す</Japanese>
             <Korean>주유기 뽑기</Korean>
             <Chinesesimp>断开燃料喷嘴</Chinesesimp>
             <Chinese>斷開燃料噴嘴</Chinese>
@@ -279,6 +279,7 @@
             <Chinese>無法開啟燃料噴嘴</Chinese>
             <Chinesesimp>无法开启燃料喷嘴</Chinesesimp>
             <Korean>주유기를 켤 수 없습니다.</Korean>
+            <Polish>Nie można włączyć dyszy paliwowej</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -450,6 +451,7 @@
             <Chinese>儲油量</Chinese>
             <Chinesesimp>储油量</Chinesesimp>
             <Korean>연료통 크기</Korean>
+            <Polish>Pojemność Ładunku Paliwa</Polish>
         </Key>
         <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
@@ -461,6 +463,7 @@
             <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
             <Chinesesimp>设定有多少油料可供载具进行加油(-1时关闭，-10为无限油量)</Chinesesimp>
             <Korean>재급유에 사용 할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
+            <Polish>Pojemność paliwa dostępnego do tankowania (-1 wyłącz, -10 jeśli nieskończone)</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
             <English>Refuel Hose attach coordinates</English>
@@ -471,6 +474,7 @@
             <Chinese>加油軟管安裝位置</Chinese>
             <Chinesesimp>加油软管安装位置</Chinesesimp>
             <Korean>재급유기 부착 좌표</Korean>
+            <Polish>Koordynaty przyłączenia węża paliwowego</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenDesc">
             <English>Model coordinates used to attach refuel hose</English>
@@ -481,6 +485,7 @@
             <Chinese>設定加油軟管會安裝到模型的哪個位置上</Chinese>
             <Chinesesimp>设定加油软管会安装到模型的哪个位置上</Chinesesimp>
             <Korean>재급유기 부착에 쓰이는 모델 좌표</Korean>
+            <Polish>Modelowe koordynaty wykorzystane do przyłączenia węża paliwowego</Polish>
         </Key>
     </Package>
 </Project>

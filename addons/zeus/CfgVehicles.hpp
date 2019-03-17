@@ -186,6 +186,13 @@ class CfgVehicles {
         function = QFUNC(moduleLoadIntoCargo);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
     };
+    class GVAR(moduleCargoParadrop): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(moduleCargoParadrop_DisplayName);
+        function = QFUNC(moduleCargoParadrop);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_ParadropCargo_ca.paa);
+    };
     class GVAR(modulePatrolArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
@@ -316,5 +323,28 @@ class CfgVehicles {
     };
     class ModuleArsenal_F: Module_F {
         function=QFUNC(bi_moduleArsenal);
+    };
+
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class GVAR(create) {
+                displayName = CSTRING(CreateZeus);
+                condition = QUOTE(call FUNC(canCreateModule));
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                //Set GVAR(zeus) to null first to disable the action through the isNil check
+                statement = QUOTE(GVAR(zeus) = objNull; [ARR_2(QQGVAR(createZeus), ACE_player)] call CBA_fnc_serverEvent);
+                showDisabled = 1;
+                icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";
+            };
+            class GVAR(delete) {
+                displayName = CSTRING(DeleteZeus);
+                condition = QUOTE(!(isNil QQGVAR(zeus) || {isNull GVAR(zeus)}));
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                statement = QUOTE(deleteVehicle GVAR(zeus); GVAR(zeus) = nil);
+                showDisabled = 1;
+                icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";
+            };
+        };
     };
 };

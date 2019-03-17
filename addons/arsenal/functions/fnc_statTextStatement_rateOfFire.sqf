@@ -11,7 +11,7 @@
  *  2.2: Evaluate as a logarithmic number (BOOL)
  *
  * Return Value:
- * Number
+ * String
  *
  * Public: No
 */
@@ -29,4 +29,5 @@ private _fireRate = [];
 _fireRate sort true;
 _fireRate = _fireRate param [0, 0];
 
+if (_fireRate == 0) exitWith {"PEWPEWPEW"};
 format ["%1 rpm", round (60 / _fireRate)]
