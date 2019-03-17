@@ -3181,13 +3181,13 @@
             <English>Show medical interaction for self</English>
             <Japanese>自分に治療インタラクションを表示</Japanese>
             <Polish>Pokaż menu interakcji medycznej dla postaci</Polish>
-            <German>Medic Selbst-Interaktionen anzeigen</German>
+            <German>Mediziner Selbst-Interaktionen anzeigen</German>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeStyleSelf_description">
             <English>Show the self interaction medical actions</English>
             <Japanese>セルフ インタラクションに治療動作を表示します。</Japanese>
             <Polish>Pokaż elementy menu interakcji medycznej dla postaci</Polish>
-            <German>Medicinteraktionen bei Selbst-Interaktionen anzeigen</German>
+            <German>Medizinerinteraktionen bei Selbst-Interaktionen anzeigen</German>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
@@ -5687,7 +5687,7 @@
             <Chinese>當隊員昏迷時，將被他的小組中刪除</Chinese>
             <Italian>Quando un membro del gruppo sviene, viene tolto dal gruppo.</Italian>
             <Polish>Kiedy członek grupy straci przytomność, usuwa ich z ich grupy.</Polish>
-            <German>Sobald jemand bewusstlos wird, wird er von der Gruppe entfernt</German>
+            <German>Sobald jemand bewusstlos wird, wird er aus der Gruppe entfernt</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableOverdosing_DisplayName">
             <English>Overdosing</English>
@@ -5709,13 +5709,13 @@
             <English>Convert vanilla items</English>
             <Japanese>標準アイテムを変換</Japanese>
             <Polish>Skonwertuj przedmioty z Army3 (vanilia) na przedmioty medyczne ACE3</Polish>
-            <German>Standart Arma Items in ACE Items umwandeln</German>
+            <German>Standard Arma-Items in ACE-Items umwandeln</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_Description">
             <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
             <Japanese>有効化すると標準の治療アイテムを ACE 治療アイテムへ変換し、無効化すると削除します。</Japanese>
             <Polish>Decyduje czy oryginalne przedmioty medyczne z Army 3 mają być skonwertowane na przedmioty medyczne ACE3 czy usunięte</Polish>
-            <German>Sollen Arma Medic Items in ACE Items umgewandelt werden?</German>
+            <German>Sollen Standard Medic-Items in ACE-Items umgewandelt werden?</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_convertItems_remove">
             <English>Just remove vanilla medical</English>
