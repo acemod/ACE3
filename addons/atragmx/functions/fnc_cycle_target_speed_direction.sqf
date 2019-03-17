@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Cycles through the target directions left/right
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if ((ctrlText 140051) == ">") then {
     ctrlSetText [140051, "<"];

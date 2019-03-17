@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * converts rangefinder distance into array of textures for the vectors scripted info control
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_number"];
 
 _number = round _number;

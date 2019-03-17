@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Finds next valid index for the device array.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_displayName", "_iconImage", "_conditionCode", "_toggleCode", "_closeCode"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Add an addAction event to a unit. Used to handle multiple addAction events and add a action to the mouse wheel menu. Global arguments, local effects. Does only work for player controlled units.
@@ -20,7 +21,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_displayName", "_action", "_condition", "_statement", "_condition2", "_statement2", ["_priority", 0]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Clears the c1 ballistic coefficient data fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Distances
 {ctrlSetText [_x, "0"]} forEach [170021, 170022, 170023, 170024, 170025, 170026, 170027];

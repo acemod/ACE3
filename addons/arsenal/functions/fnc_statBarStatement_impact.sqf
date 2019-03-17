@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Impact bar statement.
@@ -15,7 +16,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_stats", "_config", "_args"];
 _args params ["_hitMinMax", "_initSpeedMinMax", "_launcherTabIDC"];

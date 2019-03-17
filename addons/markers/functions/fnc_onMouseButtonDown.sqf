@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * Triggered when a mouse button is pressed on the map.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrlMap", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
 
@@ -27,7 +27,7 @@ if (_button != 0 || {!([_shift, _ctrl, _alt] isEqualTo [false, false, true])}) e
 
 ctrlMapMouseOver _ctrlMap params [["_type", ""], "_marker"];
 
-if (_type == "marker" && {_marker find "_USER_DEFINED" != -1 && {call FUNC(canMove)}}) then {
+if (_type == "marker" && {_marker find "_USER_DEFINED" != -1 && {_marker call FUNC(canMove)}}) then {
     _ctrlMap ctrlMapCursor ["Track", "Move"];
 
     private _originalPos = getMarkerPos _marker;

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_Module_DisplayName">
@@ -9,6 +9,8 @@
             <Chinesesimp>旁观者</Chinesesimp>
             <Japanese>スペクテイター</Japanese>
             <Korean>관전자</Korean>
+            <French>Spectateur</French>
+            <Polish>Obserwator</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -44,15 +46,19 @@
             <Chinese>可觀察AI</Chinese>
             <Chinesesimp>可观察AI</Chinesesimp>
             <Korean>AI 활성</Korean>
+            <French>IA Activée</French>
+            <Polish>SI Aktywowane</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
             <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
             <Japanese>スペクテイターで AI 視点を可能に</Japanese>
             <Italian>Permette la visibilità delle AI in spettatore</Italian>
-            <Chinese>開啟此功能後可在觀察者模式下觀察AI單位。</Chinese>
+            <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察AI单位。</Chinesesimp>
             <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
+            <French>Rends les IA visibles en spectateur</French>
+            <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -110,7 +116,7 @@
             <Czech>1. a 3. osoby</Czech>
             <Portuguese>1ª e 3ª pessoa</Portuguese>
             <Korean>1PP 과 3PP 카메라</Korean>
-            <Japanese>1PP と 3PP カメラ</Japanese>
+            <Japanese>一人称と三人称</Japanese>
             <Chinese>第一人稱與第三人稱</Chinese>
             <Chinesesimp>第一人称与第三人称</Chinesesimp>
         </Key>
@@ -259,6 +265,8 @@
             <Chinese>單位圖示</Chinese>
             <Chinesesimp>单位图示</Chinesesimp>
             <Korean>아이콘</Korean>
+            <French>Icônes</French>
+            <Polish>Ikony</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -268,6 +276,8 @@
             <Chinese>顯示彈道</Chinese>
             <Chinesesimp>显示弹道</Chinesesimp>
             <Korean>발사체</Korean>
+            <French>Projectiles</French>
+            <Polish>Pociski</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -307,6 +317,8 @@
             <Chinese>視覺模式</Chinese>
             <Chinesesimp>视觉模式</Chinesesimp>
             <Korean>보기 모드</Korean>
+            <French>Mode de vision</French>
+            <Polish>Tryb Wizji</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -316,6 +328,8 @@
             <Chinese>慢速度</Chinese>
             <Chinesesimp>慢速度</Chinesesimp>
             <Korean>느린 속도</Korean>
+            <French>Vitesse lente</French>
+            <Polish>Wolna Prędkość</Polish>
         </Key>
     </Package>
 </Project>

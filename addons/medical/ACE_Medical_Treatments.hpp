@@ -64,7 +64,7 @@ class ACE_Medical_Actions {
             allowSelfTreatment = 0;
             category = "advanced";
             requiredMedic = 1;
-            treatmentTime = 20;
+            treatmentTime = 7;
             items[] = {"ACE_bloodIV"};
             // callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
@@ -687,9 +687,9 @@ class ACE_Medical_Advanced {
     class Treatment {
         class Bandaging {
             // Field dressing is normal average treatment
-            // packing bandage is average treatment, higher reopen change, longer reopening delay
-            // elastic bandage is higher treatment, higher reopen change, shorter reopen delay
-            // quickclot is lower treatment, lower reopen change, longer reopening delay
+            // packing bandage is average treatment, higher reopen chance, longer reopening delay
+            // elastic bandage is higher treatment, higher reopen chance, shorter reopen delay
+            // quickclot is lower treatment, lower reopen chance, longer reopening delay
             class Bandage { // basic bandage
                 effectiveness = 5;
                 reopeningChance = 0;

@@ -179,7 +179,6 @@ class CfgVehicles {
                 statement = QUOTE(_this call FUNC(grabAmmo));
                 exceptions[] = {"isNotInside"};
                 showDisabled = 0;
-                priority = 2;
                 icon = QPATHTOF(ui\icon_rearm_interact.paa);
             };
         };

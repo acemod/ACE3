@@ -60,6 +60,18 @@
     count = COUNT; \
 }
 
+// weapon types
+#define TYPE_WEAPON_PRIMARY 1
+#define TYPE_WEAPON_HANDGUN 2
+#define TYPE_WEAPON_SECONDARY 4
+// magazine types
+#define TYPE_MAGAZINE_HANDGUN_AND_GL 16 // mainly
+#define TYPE_MAGAZINE_PRIMARY_AND_THROW 256
+#define TYPE_MAGAZINE_SECONDARY_AND_PUT 512 // mainly
+// more types
+#define TYPE_BINOCULAR_AND_NVG 4096
+#define TYPE_WEAPON_VEHICLE 65536
+#define TYPE_ITEM 131072
 // item types
 #define TYPE_DEFAULT 0
 #define TYPE_MUZZLE 101
@@ -121,5 +133,7 @@
 #define DEG_TO_MRAD(d) ((d) * 17.45329252) // Conversion factor: (50 * PI) / 9
 #define MRAD_TO_DEG(d) ((d) / 17.45329252) // Conversion factor: 9 / (50 * PI)
 #define MOA_TO_RAD(d) ((d) * 0.00029088) // Conversion factor: PI / 10800
+
+#define ZEUS_ACTION_CONDITION ([_target, {QUOTE(QUOTE(ADDON)) in curatorAddons _this}, missionNamespace, QUOTE(QGVAR(zeusCheck)), 1E11, 'ace_interactMenuClosed'] call EFUNC(common,cachedCall))
 
 #include "script_debug.hpp"

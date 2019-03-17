@@ -9,7 +9,7 @@
             <Spanish>Escalera telescópica</Spanish>
             <French>Echelle téléscopique</French>
             <Czech>Teleskopický žebřík</Czech>
-            <Italian>Telescopic Ladder</Italian>
+            <Italian>Scala Telescopica</Italian>
             <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
             <Japanese>タクティカル ラダー</Japanese>
@@ -25,7 +25,7 @@
             <Spanish>Despelgar escalera</Spanish>
             <French>Déployer l'échelle</French>
             <Czech>Rozložit žebřík</Czech>
-            <Italian>Deploy ladder</Italian>
+            <Italian>Piazza scala</Italian>
             <Hungarian>Létra lerakása</Hungarian>
             <Portuguese>Implantar escada</Portuguese>
             <Japanese>ラダーを設置</Japanese>
@@ -41,7 +41,7 @@
             <Spanish>Soltar escalera</Spanish>
             <French>Lacher l'échelle</French>
             <Czech>Položit žebřík</Czech>
-            <Italian>Drop ladder</Italian>
+            <Italian>Lascia scala</Italian>
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
             <Japanese>ラダーを落とす</Japanese>
@@ -56,7 +56,7 @@
             <Portuguese>Extender</Portuguese>
             <Russian>Разложить</Russian>
             <Czech>Prodloužit</Czech>
-            <Italian>Estendi, +Ctrl ruota</Italian>
+            <Italian>Estendi</Italian>
             <Spanish>Extender</Spanish>
             <French>Déployer</French>
             <Japanese>伸ばす</Japanese>
@@ -87,7 +87,7 @@
             <Spanish>Colocar escalera</Spanish>
             <French>Positionner l'échelle</French>
             <Czech>Umístit žebřík</Czech>
-            <Italian>Position ladder</Italian>
+            <Italian>Posiziona scala</Italian>
             <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
             <Japanese>ラダーの位置</Japanese>
@@ -103,7 +103,7 @@
             <Spanish>Recoger escalera</Spanish>
             <French>Prendre l'échelle</French>
             <Czech>Vzít žebřík</Czech>
-            <Italian>Pickup ladder</Italian>
+            <Italian>Prendi scala</Italian>
             <Hungarian>Létra felvétele</Hungarian>
             <Portuguese>Pegar escada</Portuguese>
             <Japanese>ラダーを拾う</Japanese>

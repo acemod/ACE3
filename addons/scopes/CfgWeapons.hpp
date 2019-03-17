@@ -104,8 +104,8 @@ class CfgWeapons {
     
     class optic_LRPS : ItemCore {
         ACE_ScopeHeightAboveRail = 4.2098;
-        ACE_ScopeAdjust_Vertical[] = {-4, 30};
-        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
+        ACE_ScopeAdjust_Vertical[] = {0, 27};
+        ACE_ScopeAdjust_Horizontal[] = {-8, 8};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
@@ -156,8 +156,8 @@ class CfgWeapons {
 
     class optic_AMS_base : ItemCore {
         ACE_ScopeHeightAboveRail = 3.8933;
-        ACE_ScopeAdjust_Vertical[] = {-4, 30};
-        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
+        ACE_ScopeAdjust_Vertical[] = {0, 16};
+        ACE_ScopeAdjust_Horizontal[] = {-11, 11};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
@@ -176,8 +176,8 @@ class CfgWeapons {
 
     class optic_KHS_base : ItemCore {
         ACE_ScopeHeightAboveRail = 4.30723;
-        ACE_ScopeAdjust_Vertical[] = {-4, 30};
-        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
+        ACE_ScopeAdjust_Vertical[] = {0, 19};
+        ACE_ScopeAdjust_Horizontal[] = {-9, 9};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {
@@ -196,8 +196,8 @@ class CfgWeapons {
 
     class optic_KHS_old : ItemCore {
         ACE_ScopeHeightAboveRail = 4.30723;
-        ACE_ScopeAdjust_Vertical[] = {-4, 30};
-        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
+        ACE_ScopeAdjust_Vertical[] = {0, 19};
+        ACE_ScopeAdjust_Horizontal[] = {-9, 9};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
         class ItemInfo : InventoryOpticsItem_Base_F {

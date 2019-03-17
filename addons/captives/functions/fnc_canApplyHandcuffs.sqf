@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Checks the conditions for being able to apply handcuffs
@@ -14,13 +15,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 //Check sides, Player has cableTie, target is alive and not already handcuffed
 
 (GVAR(allowHandcuffOwnSide) || {(side _unit) != (side _target)}) &&
-{"ACE_CableTie" in (items _unit)} &&
+{"ACE_CableTie" in (_unit call EFUNC(common,uniqueItems))} &&
 {alive _target} &&
 {!(_target getVariable [QGVAR(isHandcuffed), false])} &&
 {

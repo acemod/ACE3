@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Create one action per reloadable missile
@@ -15,7 +16,6 @@
  * Public: No
  *
  */
-#include "script_component.hpp"
 
 params ["_target", "_unit"];
 TRACE_2("params",_target,_unit);
