@@ -36,8 +36,8 @@ if (isNull _display) then {
         private _target = _display getVariable [QGVAR(target), objNull];
         private _selectionN = _display getVariable [QGVAR(selectionN), 0];
 
-        // Close display if target moved too far away
-        if (ACE_player distance _target > MAX_DISTANCE) exitWith {
+        // Close display if target moved too far away (ignore if in same vehicle)
+        if (ACE_player distance _target > MAX_DISTANCE && {vehicle _target != vehicle ACE_player}) exitWith {
             [_pfhID] call CBA_fnc_removePerFrameHandler;
             QGVAR(RscPatientInfo) cutFadeOut 0.3;
             [[ELSTRING(medical,DistanceToFar), _target call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
