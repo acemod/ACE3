@@ -60,6 +60,6 @@ private _fnc_condition = {
 
         ["CAManBase", 0, [_actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
         ["CAManBase", 0, ["ACE_MainActions", "ACE_Medical_Radial", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
-        ["CAManBase", 1, ["ACE_SelfActions", "Medical", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
+        ["CAManBase", 1, ["ACE_SelfActions", "ACE_Medical", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
     } forEach _allowedBodyParts;
 } forEach configProperties [_actionsConfig, "isClass _x"];

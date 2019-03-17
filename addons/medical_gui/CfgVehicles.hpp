@@ -2,12 +2,12 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class Medical {
+            class ACE_Medical {
                 displayName = CSTRING(Medical);
-                runOnHover = 1;
+                condition = QGVAR(enableSelfActions);
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
-                condition = QGVAR(enableSelfActions);
+                runOnHover = 1;
                 icon = QPATHTOF(ui\cross.paa);
                 #define ACTION_CONDITION condition = "true";
                 #include "InteractionBodyParts.hpp"
@@ -15,14 +15,12 @@ class CfgVehicles {
             };
             class ACE_Medical_Menu {
                 displayName = CSTRING(MedicalMenu);
-                runOnHover = 0;
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canOpenMenu));
                 exceptions[] = {"isNotInside", "isNotSwimming"};
-                condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
-                statement = QUOTE([_target] call DFUNC(openMenu));
+                statement = QUOTE(_target call FUNC(openMenu));
                 icon = QPATHTOF(ui\cross.paa);
             };
         };
-
         class ACE_Actions {
             #define ACTION_CONDITION condition = QUOTE(GVAR(enableActions) == 0);
             #include "InteractionBodyParts.hpp"
@@ -30,37 +28,36 @@ class CfgVehicles {
             class ACE_MainActions {
                 class ACE_Medical_Menu {
                     displayName = CSTRING(MedicalMenu);
-                    runOnHover = 0;
-                    exceptions[] = {"isNotInside", "isNotSwimming"};
                     condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
-                    statement = QUOTE([_target] call DFUNC(openMenu));
+                    exceptions[] = {"isNotInside", "isNotSwimming"};
+                    statement = QUOTE(_target call FUNC(openMenu));
                     icon = QPATHTOF(ui\cross.paa);
                 };
                 class ACE_Medical_Radial {
                     displayName = CSTRING(Medical);
-                    runOnHover = 1;
+                    condition = QUOTE((GVAR(enableActions) == 1 || {GVAR(enableActions) != 2 && {vehicle _target != _target && {vehicle _target == vehicle _player}}}));
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE([ARR_2(_target,0)] call FUNC(displayPatientInformation));
-                    condition = QUOTE(((vehicle _target != _target && vehicle _target == vehicle _player) || {GVAR(enableActions) == 1}));
+                    runOnHover = 1;
                     icon = QPATHTOF(ui\cross.paa);
                     #define ACTION_CONDITION condition = "true";
                     #include "InteractionBodyParts.hpp"
                     #undef ACTION_CONDITION
                 };
-                class  ACE_Medical_loadPatient {
+                class  ACE_LoadPatient {
                     displayName = CSTRING(LoadPatient);
-                    condition = "(_target getVariable ['ACE_isUnconscious', false]) && {alive _target} && {vehicle _target == _target}";
+                    condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {alive _target} && {vehicle _target == _target});
+                    exceptions[] = {"isNotDragging", "isNotCarrying"};
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionLoadUnit));
                     icon = QPATHTOF(ui\cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying"};
                     insertChildren = QUOTE(call DEFUNC(medical_treatment,addLoadPatientActions));
                 };
-                class ACE_Medical_UnLoadPatient {
+                class ACE_UnloadPatient {
                     displayName = CSTRING(UnloadPatient);
-                    condition = "(_target getVariable ['ACE_isUnconscious', false]) && {vehicle _target != _target} && {vehicle _player == _player}";
+                    condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {vehicle _target != _target} && {vehicle _player == _player});
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
                     statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,actionUnloadUnit));
                     icon = QPATHTOF(ui\cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
                 };
             };
         };
