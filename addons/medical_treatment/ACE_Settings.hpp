@@ -135,4 +135,12 @@ class ACE_Settings {
         value = 0;
         values[] = {"No", "Yes"};
     };
+    class GVAR(convertItems) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(convertItems_DisplayName);
+        description = CSTRING(convertItems_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {ECSTRING(common,Enabled), CSTRING(convertItems_remove), ECSTRING(common,Disabled)};
+    };
 };
