@@ -32,5 +32,11 @@ if ([_target] call EFUNC(medical_status,isBeingDragged)) then {
 };
 
 private _vehicle = [_caller, _target, _vehicle] call EFUNC(common,loadPerson);
+if (!isNull _vehicle) then {
+    private _hint = LSTRING(loadedInto);
+    private _itemName = [_target, false, true] call EFUNC(common,getName);
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
+};
 
 _vehicle
