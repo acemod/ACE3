@@ -222,5 +222,11 @@
             <Japanese>展開にはロープ アイテムを必須に</Japanese>
             <Polish>Wymaga przedmiotu typu lina </Polish>
         </Key>
+        <Key ID="STR_ACE_Fastroping_setting_confirmCutRopes_displayName">
+            <English>Require confirmation when cutting ropes</English>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_cutRopes_confirm">
+            <English>Confirm</English>
+        </Key>
     </Package>
 </Project>
