@@ -18,7 +18,7 @@ params ["_caller", "_target", "_bodyPart"];
 
 private _heartRate = 0;
 
-if (alive _target && !([_target, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
+if (alive _target && {!([_target, _bodyPart] call FUNC(hasTourniquetAppliedTo))}) then {
     _heartRate = GET_HEART_RATE(_target);
 };
 

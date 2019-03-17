@@ -96,14 +96,14 @@ private _woundsCreated = [];
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
             // Create a new injury. Format [ID, classID, bodypart, percentage treated, bleeding rate]
-            _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
+            private _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
 
             // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
             private _nastinessLikelihood = linearConversion [0, 20, (_woundDamage / _thresholdWoundCount), 0.5, 30, true];
             private _bleedingModifier = 0.25 + 8 * exp ((random [-4.5, -5, -6]) / _nastinessLikelihood);
             private _painModifier = 0.05 + 2 * exp (-2 / _nastinessLikelihood);
 
-            _bleeding = _injuryBleedingRate * _bleedingModifier;
+            private _bleeding = _injuryBleedingRate * _bleedingModifier;
             private _pain = _injuryPain * _painModifier;
             _painLevel = _painLevel + _pain;
 

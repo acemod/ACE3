@@ -33,7 +33,7 @@ private _classID = 0;
     private _causes = GET_ARRAY(_entry >> "causes",[]);
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
 
-    if (count _causes > 0) then {
+    if !(_causes isEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
         GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping];
         _classID = _classID + 1;

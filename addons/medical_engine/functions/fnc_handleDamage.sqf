@@ -32,7 +32,7 @@ if (_hitPoint isEqualTo "") then {
 };
 
 // Damage can be disabled with old variable or via sqf command allowDamage
-if !(isDamageAllowed _unit && _unit getVariable [QEGVAR(medical,allowDamage), true]) exitWith {_oldDamage};
+if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 // Damages are stored for "ace_hdbracket" event triggered last
 private _newDamage = _damage - _oldDamage;
