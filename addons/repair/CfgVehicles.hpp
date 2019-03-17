@@ -462,13 +462,15 @@ class CfgVehicles {
         };
     };
 
-    class Car_F;
-    class Offroad_01_base_F: Car_F {};
+    class Offroad_01_base_F;
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
     };
 
+    class Car_F: Car {
+        class HitPoints;
+    };
     class Offroad_02_base_F: Car_F {
         class EGVAR(interaction,anims) {
             class hideSpareWheel {
@@ -498,7 +500,22 @@ class CfgVehicles {
         GVAR(canRepair) = 0;
     };
 
-    class Truck_03_base_F;
+    class Truck_F: Car_F {
+        class HitPoints: HitPoints {
+            class HitLBWheel;
+            class HitRBWheel;
+        };
+    };
+    class Truck_03_base_F: Truck_F {
+        class HitPoints: HitPoints {
+            class HitLBWheel: HitLBWheel {
+                name = "wheel_1_4_steering"; // return original values back to fix double wheel hitpoint
+            };
+            class HitRBWheel: HitRBWheel {
+                name = "wheel_2_4_steering";
+            };
+        };
+    };
     class O_Truck_03_repair_F: Truck_03_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
@@ -511,7 +528,6 @@ class CfgVehicles {
         GVAR(hitpointPositions)[] = {{"HitBody", {0, 0.7, -0.5}}, {"HitFuel", {0, -1.75, -0.75}}};
     };
 
-    class Truck_F: Car_F {};
     class Van_02_base_F: Truck_F {
         class EGVAR(interaction,anims) {
             class spare_tyre_hide {
@@ -522,6 +538,6 @@ class CfgVehicles {
     };
     class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
         GVAR(canRepair) = 1;
-        transportRepair = 0;  
+        transportRepair = 0;
     };
 };

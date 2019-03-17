@@ -9,6 +9,7 @@
             <Chinese>通用</Chinese>
             <Chinesesimp>通用</Chinesesimp>
             <Korean>일반</Korean>
+            <Polish>Ogólny</Polish>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -482,6 +483,7 @@
             <Chinesesimp>检查PBO动作</Chinesesimp>
             <Japanese>PBO 検査の挙動</Japanese>
             <Korean>PBO 검사</Korean>
+            <Polish>Sprawdź akcję PBO</Polish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -490,6 +492,7 @@
             <Chinesesimp>检查所有PBO</Chinesesimp>
             <Japanese>PBO 全てを検査</Japanese>
             <Korean>모든 PBO 검사</Korean>
+            <Polish>Sprawdź wszystkie PBO</Polish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -498,6 +501,7 @@
             <Chinesesimp>检查PBO白名单</Chinesesimp>
             <Japanese>許可リスト内の PBO を検査</Japanese>
             <Korean>검사 제외 PBO</Korean>
+            <Polish>Sprawdź białą listę PBO</Polish>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -636,6 +640,7 @@
             <German>Kontinuität des Laserpointers/Taktischen Lichts</German>
             <Chinese>保持武器雷射/手電筒的狀態</Chinese>
             <Chinesesimp>保持武器雷射/手电筒的状态</Chinesesimp>
+            <Polish>Trwały znacznik laserowy/latarka</Polish>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -646,6 +651,7 @@
             <German>Aktiviert Laserpointer/Taktisches Licht nach einem Waffenwechsel oder dem Auf-/Absitzen, falls es zuvor aktiv war.</German>
             <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的的狀態</Chinese>
             <Chinesesimp>保存武器雷射/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的的状态。</Chinesesimp>
+            <Polish>Aktywuj znacznik laserowy/latarkę po zmianie broni lub wejściu/wyjściu z pojazdu, jeśli był on poprzednio włączony.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -1171,6 +1177,7 @@
             <Chinesesimp>允许调低音乐音量</Chinesesimp>
             <Japanese>音楽の音量低下を許可</Japanese>
             <Italian>Permesso di abbassare la musica</Italian>
+            <Polish>Zezwól na przyciszanie muzyki</Polish>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1180,6 +1187,7 @@
             <Chinesesimp>允许ACE脚本去控制音乐的音量。</Chinesesimp>
             <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
             <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
+            <Polish>Zezwól skrypty ACE na przyciszanie muzyki.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1187,6 +1195,7 @@
             <Chinese>旗幟(ACE-黑色)</Chinese>
             <Italian>Bandiera (ACE - Nera)</Italian>
             <Japanese>旗 (ACE - 黒)</Japanese>
+            <Polish>Flaga (ACE - Czarna)</Polish>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1194,6 +1203,7 @@
             <Chinese>旗幟(ACE-白色)</Chinese>
             <Italian>Bandiera (ACE - Bianca)</Italian>
             <Japanese>旗 (ACE - 白)</Japanese>
+            <Polish>Flaga (ACE - Biała)</Polish>
         </Key>
     </Package>
 </Project>

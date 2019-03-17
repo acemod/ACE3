@@ -1707,7 +1707,8 @@ Example:
 Author:
     commy2
 ------------------------------------------- */
-#define IS_ADMIN serverCommandAvailable "#kick"
+#define IS_ADMIN_SYS(x) x##kick
+#define IS_ADMIN serverCommandAvailable 'IS_ADMIN_SYS(#)'
 
 /* -------------------------------------------
 Macro: IS_ADMIN_LOGGED
@@ -1727,7 +1728,8 @@ Example:
 Author:
     commy2
 ------------------------------------------- */
-#define IS_ADMIN_LOGGED serverCommandAvailable "#shutdown"
+#define IS_ADMIN_LOGGED_SYS(x) x##shutdown
+#define IS_ADMIN_LOGGED serverCommandAvailable 'IS_ADMIN_LOGGED_SYS(#)'
 
 /* -------------------------------------------
 Macro: FILE_EXISTS

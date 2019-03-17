@@ -60,6 +60,9 @@ class CfgAmmo {
     class B_20mm : BulletBase {
         GVAR(caliber) = 20;
     };
+    class B_20mm_AP: BulletBase {
+        GVAR(caliber) = 20;
+    };
 
     class B_25mm : BulletBase {
         GVAR(caliber) = 25;

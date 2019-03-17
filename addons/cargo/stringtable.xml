@@ -315,10 +315,14 @@
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
             <Japanese>積載時間の係数</Japanese>
+            <Polish>Współczynnik czasu załadowania</Polish>
+            <Italian>Coefficente Tempo Caricamento</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
             <Japanese>アイテムの積み下ろし作業にかかる時間を編集できます。\nアイテムの大きさにこの値が乗法され、時間 (秒) を変更できます。</Japanese>
+            <Polish>Modyfikuje, jak długo zajmuje załadowywanie/wyładowywanie przedmiotów. \nCzasem, w sekundach, jest wielkość przedmiotu razy jego wartość.</Polish>
+            <Italian>Modifica quanto tempo ci impiega a caricare o scaricare gli oggetti.\n Tempo, in secondi, è la dimensione dell'oggetto moltiplicata per questo valore</Italian>
         </Key>
     </Package>
 </Project>

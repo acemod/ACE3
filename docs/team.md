@@ -58,6 +58,7 @@ This lists all the maintainers responsible for project management and the overal
 - [Kieran](https://github.com/kieran-s){:target="_blank"}
 - [Giallustio](https://github.com/Giallustio){:target="_blank"}
 - [654wak654](https://github.com/654wak654){:target="_blank"}
+- [mharis001](https://github.com/mharis001){:target="_blank"}
 
 ## Contributors
 

@@ -300,7 +300,7 @@
             <Hungarian>UP Beállítása</Hungarian>
             <Italian>Definisci WayPoints</Italian>
             <Portuguese>Definir WP</Portuguese>
-            <Japanese>ｳｪｲﾎﾟｲﾝﾄ設定</Japanese>
+            <Japanese>WP設定</Japanese>
             <Korean>웨이포인트 설정</Korean>
             <Chinesesimp>设置路径点</Chinesesimp>
             <Chinese>設置路徑點</Chinese>
@@ -502,30 +502,35 @@
             <German>MicroDAGR - Wegpunkt Genauigkeit</German>
             <Italian>MicroDAGR - Precisione del Waypoint</Italian>
             <Japanese>MicroDAGR - ウェイポイントの精度</Japanese>
+            <Polish>MicroDAGR - Precyzja PT</Polish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
             <German>Legt die Genauigkeit der Entfernung von Wegpunkten fest</German>
             <Italian>Controlla quanto precisamente può essere visualizzato il waypoint a distanza</Italian>
             <Japanese>表示されるウェイポイントの精度を設定します</Japanese>
+            <Polish>Kontroluje jak precyzyjnie może być wyświetlany dystans PT</Polish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
             <German>100m</German>
             <Italian>100m</Italian>
             <Japanese>100m</Japanese>
+            <Polish>100m</Polish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
             <German>10m</German>
             <Italian>10m</Italian>
             <Japanese>10m</Japanese>
+            <Polish>10m</Polish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
             <German>1m</German>
             <Italian>1m</Italian>
             <Japanese>1m</Japanese>
+            <Polish>1m</Polish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>

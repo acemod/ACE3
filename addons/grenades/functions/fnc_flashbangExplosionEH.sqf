@@ -92,8 +92,10 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     _strength = _strength * _losCoefficient;
 
     // Add ace_hearing ear ringing sound effect
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") && {_strength > 0}) then {
-        [40 * _strength] call EFUNC(hearing,earRinging);
+    if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") && {_strength > 0 && {EGVAR(hearing,damageCoefficent) > 0.25}}) then {
+        private _earringingStrength = 40 * _strength;
+        [_earringingStrength] call EFUNC(hearing,earRinging);
+        TRACE_1("Earringing Strength",_earringingStrength);
     };
 
     // add ace_medical pain effect:

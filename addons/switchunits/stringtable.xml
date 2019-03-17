@@ -9,13 +9,14 @@
             <Japanese>ユニット切り替え</Japanese>
             <Korean>병력 전환</Korean>
             <German>Einheitenwechsel</German>
+            <Polish>Przełącz Jednostki</Polish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
             <German>Einheit gewechselt</German>
             <Russian>Юнит переключён</Russian>
             <Czech>Prohozená jednotka</Czech>
-            <Polish>Przełącz jednostkę</Polish>
+            <Polish>Przełączona jednostka</Polish>
             <Spanish>Cambiado de unidad</Spanish>
             <French>Unité changée</French>
             <Hungarian>Egység átváltva</Hungarian>

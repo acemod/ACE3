@@ -3,7 +3,7 @@ class Medical {
     runOnHover = 1;
     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
-    condition = "true";
+    condition = QUOTE(GVAR(menuTypeStyleSelf));
     icon = QPATHTOF(UI\icons\medical_cross.paa);
 
    class ACE_Head {
