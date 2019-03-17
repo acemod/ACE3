@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
-        <Key ID="STR_ACE_Medical_Injuries">
-            <English>INJURIES</English>
-            <German>VERLETZUNGEN</German>
-            <Italian>FERITE</Italian>
-            <Russian>ТРАВМЫ</Russian>
-            <French>BLESSURES</French>
-            <Polish>OBRAŻENIA</Polish>
-            <Spanish>HERIDAS</Spanish>
-            <Hungarian>SÉRÜLÉSEK</Hungarian>
-            <Czech>ZRANĚNÍ</Czech>
-            <Portuguese>FERIMENTOS</Portuguese>
-            <Japanese>負傷</Japanese>
-            <Korean>부상</Korean>
-            <Chinesesimp>受伤</Chinesesimp>
-            <Chinese>受傷</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_Category_DisplayName">
             <English>ACE Medical</English>
             <Russian>ACE: медицина</Russian>
