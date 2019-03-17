@@ -243,6 +243,7 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
+            useModeForAttackProfile = 1;
         };
     };
 

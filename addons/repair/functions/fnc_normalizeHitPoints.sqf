@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Used to normalize dependant hitpoints. May overwrite some global variables that are named like hitpoints or "Total" though...
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 TRACE_2("params",_vehicle, typeOf _vehicle);

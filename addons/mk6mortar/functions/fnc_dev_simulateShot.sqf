@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * DEV function to build mortar tables, very cpu intensive (never used durring normal gameplay)
@@ -21,7 +22,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_angleDeg", "_muzzleVelocity", "_airFriction", "_temp", "_relDensity", "_tailWind", "_crosswind", "_heightOfTarget", "_timeStep"];
 

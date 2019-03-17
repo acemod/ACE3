@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * On keypress, point and send position to nearby players
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 
 if (!alive ACE_player) exitWith {false};

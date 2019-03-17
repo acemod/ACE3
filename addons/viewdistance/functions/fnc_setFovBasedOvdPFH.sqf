@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Sets Object View Distance dynamically based on current Field of View, between Object View Distance (minimal value) and View Distance (maximum value) set before this PFH starts.
@@ -15,8 +16,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["", "_idPFH"];
 
 // Remove PFH and set Object View Distance back to what it was before
@@ -25,7 +24,7 @@ if (GVAR(objectViewDistanceCoeff) < 6) exitWith {
     GVAR(fovBasedPFHminimalViewDistance) = nil;
 };
 
-private _zoom = (call CBA_fnc_getFov) select 1;
+private _zoom = ([] call CBA_fnc_getFov) select 1;
 
 if (_zoom > VD_ZOOM_NORMAL) then {
     // Dynamically set Object View Distance based on player's Zoom Level and View Distance

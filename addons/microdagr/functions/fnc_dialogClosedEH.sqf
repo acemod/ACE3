@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the dialog closeing, switches back to display mode
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
     [-1] call FUNC(saveCurrentAndSetNewMode);

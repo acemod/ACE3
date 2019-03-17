@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Winter
  * Initializes the view distance limiter module.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 

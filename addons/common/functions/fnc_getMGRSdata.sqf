@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Gets the current map's MGRS grid zone designator and 100km square.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_map", worldName]];
 

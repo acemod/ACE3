@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Starts repacking a specific magazine classname.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_player", "_magazineClassname"];
 

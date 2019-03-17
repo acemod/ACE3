@@ -44,6 +44,9 @@ if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
 
 private _beforeState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
 
+    if (currentWeapon _unit != primaryWeapon _unit) then {
+        _unit selectWeapon primaryWeapon _unit;
+    };
 
 if (_knockOut) then {
     if (_minWaitingTime > 0) then {

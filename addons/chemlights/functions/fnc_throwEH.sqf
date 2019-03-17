@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, voiper
  * Fired EH, for handling chemlight ThrowMuzzles.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
 

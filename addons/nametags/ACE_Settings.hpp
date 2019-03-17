@@ -1,10 +1,6 @@
 class ACE_Settings {
     class GVAR(defaultNametagColor) {
-        value[] = {0.77, 0.51, 0.08, 1};
-        typeName = "COLOR";
-        isClientSettable = 1;
-        displayName = CSTRING(DefaultNametagColor);
-        category = CSTRING(Module_DisplayName);
+        movedToSQF = 1;
     };
     class GVAR(showPlayerNames) {
         value = 1;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  * Add HitPart EventHandler to objects in the projectile's path
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-
-//fnc_spallTrack.sqf
-#include "script_component.hpp"
 
 params ["_round", "_multiplier", "_foundObjects", "_foundObjectHPIds"];
 

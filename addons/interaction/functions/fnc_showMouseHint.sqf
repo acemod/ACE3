@@ -1,12 +1,14 @@
+#include "script_component.hpp"
 /*
- * Author: Garth de Wet (LH)
- * Shows the interaction helper text with the mouse buttons at the bottom middle of the screen.
+ * Author: Garth de Wet (LH), mharis001
+ * Shows an interaction hint for mouse buttons.
+ * Empty strings will hide their respective button.
  *
  * Arguments:
- * 0: Left Click Text <STRING>
- * 1: Right Click Text <STRING>
- * 2: Scroll Text <STRING> (default: "")
- * 2: Extra Icon/Text pairs <ARRAY> (default: [])
+ * 0: Left click text <STRING>
+ * 1: Right click text <STRING>
+ * 2: Scroll text <STRING> (default: "")
+ * 2: Extra icon/text pairs <ARRAY> (default: [])
  *
  * Return Value:
  * None
@@ -16,65 +18,78 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-#define GUI_GRID_W  (0.025)
-#define GUI_GRID_H  (0.04)
+params ["_textLMB", "_textRMB", ["_textMMB", ""], ["_extraIconSets", []]];
 
-params ["_leftClick", "_rightClick", ["_scroll", ""], ["_extraIconSets", []]];
+(QGVAR(RscMouseHint) call BIS_fnc_rscLayer) cutRsc [QGVAR(RscMouseHint), "PLAIN", -1, false];
+private _display = uiNamespace getVariable [QGVAR(mouseHint), displayNull];
 
-(QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutRsc [QGVAR(InteractionHelper), "PLAIN", 0.5, false];
+// Set text for buttons, hide if empty string
+{
+    _x params ["_buttonText", "_iconIDC", "_textIDC"];
 
-disableSerialization;
+    if (_buttonText == "") then {
+        private _ctrlIcon = _display displayCtrl _iconIDC;
+        _ctrlIcon ctrlShow false;
+    } else {
+        private _ctrlText = _display displayCtrl _textIDC;
+        _ctrlText ctrlSetText _buttonText;
+    };
+} forEach [
+    [_textLMB, IDC_MOUSEHINT_LMB, IDC_MOUSEHINT_LMB_TEXT],
+    [_textMMB, IDC_MOUSEHINT_MMB, IDC_MOUSEHINT_MMB_TEXT],
+    [_textRMB, IDC_MOUSEHINT_RMB, IDC_MOUSEHINT_RMB_TEXT]
+];
 
-private _display = uiNamespace getVariable ["ACE_Helper_Display", objNull];
+// Y offset for extra icon sets
+private _yOffset = 19.5;
 
-if (isNull _display) exitWith {WARNING("Display was null");};
+if (_textMMB == "") then {
+    // Move RMB up if MMB inactive
+    {
+        private _ctrl = _display displayCtrl _x;
+        private _ctrlPos = ctrlPosition _ctrl;
+        _ctrlPos set [1, (_ctrlPos select 1) - 1.05 * GUI_GRID_H];
+        _ctrl ctrlSetPosition _ctrlPos;
+        _ctrl ctrlCommit 0;
+    } forEach [IDC_MOUSEHINT_RMB, IDC_MOUSEHINT_RMB_TEXT];
 
-(_display displayCtrl 1000) ctrlSetText _leftClick;
-(_display displayCtrl 1001) ctrlSetText _rightClick;
-
-(_display displayCtrl 1000) ctrlShow (_leftClick != "");
-(_display displayCtrl 1200) ctrlShow (_leftClick != "");
-(_display displayCtrl 1001) ctrlShow (_rightClick != "");
-(_display displayCtrl 1201) ctrlShow (_rightClick != "");
-
-private _offset = 19;
-
-if (_scroll == "") then {
-    (_display displayCtrl 1002) ctrlShow false;
-    (_display displayCtrl 1202) ctrlShow false;
-    (_display displayCtrl 1001) ctrlSetPosition [21 * GUI_GRID_W, 18 * GUI_GRID_H, 24 * GUI_GRID_W, 1.5 * GUI_GRID_H];
-    (_display displayCtrl 1201) ctrlSetPosition [20 * GUI_GRID_W, 18.5 * GUI_GRID_H, 1.5 * GUI_GRID_W, 1 * GUI_GRID_H];
-    (_display displayCtrl 1001) ctrlCommit 0;
-    (_display displayCtrl 1201) ctrlCommit 0;
 } else {
-    _offset = _offset + 1;
-    (_display displayCtrl 1002) ctrlSetText _scroll;
-
     // Disable action menu
     inGameUISetEventHandler ["PrevAction", "true"];
     inGameUISetEventHandler ["NextAction", "true"];
     inGameUISetEventHandler ["Action", "true"];
+
+    // Increase offset since MMB active
+    _yOffset = 20.55;
 };
 
+// Create extra icon sets
 {
-    _x params [["_xKeyName", "", [""]], ["_xText", "", [""]]];
-    switch (toLower _xKeyName) do {
-        case ("alt"): {_xKeyName = format ["<%1>", toUpper localize "str_dik_alt"];};
-        case ("control");
-        case ("ctrl"): {_xKeyName = format ["<%1>", toUpper localize "str_dik_control"];};
-        case ("shift"): {_xKeyName = format ["<%1>", toUpper localize "str_dik_shift"];};
+    _x params [["_keyName", "", [""]], ["_keyText", "", [""]]];
+
+    // Only create extra key if both name and text are valid
+    if (_keyName != "" && {_keyText != ""}) then {
+        // Localize Ctrl, Shift, or Alt keys
+        switch (toLower _keyName) do {
+            case "ctrl";
+            case "control": {_keyName = format ["<%1>", toUpper localize "STR_dik_control"]};
+            case "shift": {_keyName = format ["<%1>", toUpper localize "STR_dik_shift"]};
+            case "alt": {_keyName = format ["<%1>", toUpper localize "STR_dik_alt"]};
+        };
+
+        // Create extra key group and update position
+        private _ctrlGroup = _display ctrlCreate [QGVAR(RscExtraKey), IDC_MOUSEHINT_EXTRA];
+        _ctrlGroup ctrlSetPosition [0, _yOffset * GUI_GRID_H];
+        _ctrlGroup ctrlCommit 0;
+
+        // Set name and text
+        private _ctrlName = _ctrlGroup controlsGroupCtrl IDC_MOUSEHINT_EXTRA_NAME;
+        _ctrlName ctrlSetText _keyName;
+
+        private _ctrlText = _ctrlGroup controlsGroupCtrl IDC_MOUSEHINT_EXTRA_TEXT;
+        _ctrlText ctrlSetText _keyText;
+
+        _yOffset = _yOffset + 1;
     };
-
-    private _keyNameCtrl = _display ctrlCreate ["RscInteractionText_right", -1];
-    private _textCtrl = _display ctrlCreate ["RscInteractionText", -1];
-    _keyNameCtrl ctrlSetText _xKeyName;
-    _textCtrl ctrlSetText _xText;
-    _keyNameCtrl ctrlSetPosition [0 * GUI_GRID_W, _offset * GUI_GRID_H, 21.4 * GUI_GRID_W, 1.5 * GUI_GRID_H];
-    _textCtrl ctrlSetPosition [21 * GUI_GRID_W, _offset * GUI_GRID_H, 24 * GUI_GRID_W, 1.5 * GUI_GRID_H];
-    _keyNameCtrl ctrlCommit 0;
-    _textCtrl ctrlCommit 0;
-    _offset = _offset + 1;
 } forEach _extraIconSets;
-

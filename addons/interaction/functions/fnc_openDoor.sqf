@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Open door.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _info = [MACRO_DOOR_REACH_DISTANCE] call FUNC(getDoor);
 
@@ -22,6 +22,10 @@ _info params ["_house", "_door"];
 TRACE_2("openDoor",_house,_door);
 
 if (isNull _house) exitWith {};
+
+if ((configProperties [configFile >> "CfgVehicles" >> (typeOf _house) >> "UserActions"]) isEqualTo []) exitWith {
+    TRACE_1("Ignore houses with no UserActions",typeOf _house); // Fix problem with Shoothouse Walls
+};
 
 private _getDoorAnimations = [_house, _door] call FUNC(getDoorAnimations);
 

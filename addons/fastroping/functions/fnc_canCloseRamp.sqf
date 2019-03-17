@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the player can close the ramp of the given helo.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle", "_door", "_turretPaths"];
 
 (_vehicle doorPhase _door > 0.5) &&

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Calculate light intensity object 1 recieves from object 2
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_lightSource"];
 
@@ -30,7 +30,7 @@ if (_lightSource isKindOf "CAManBase") then {
 
     private _flashlight = (_lightSource weaponAccessories _weapon) select 1;
 
-    if (getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ACE_laserpointer") == 1) exitWith {_lightLevel = 0};
+    if (getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ACE_laserpointer") > 0) exitWith {}; // Red = 1, Green = 2
 
     private _properties = [[_flashlight], FUNC(getLightPropertiesWeapon), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getLightPropertiesWeapon)), _flashlight], 1E11] call FUNC(cachedCall);
     //_properties = [_flashlight] call FUNC(getLightPropertiesWeapon);

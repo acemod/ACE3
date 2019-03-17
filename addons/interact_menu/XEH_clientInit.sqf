@@ -2,6 +2,29 @@
 
 if (!hasInterface) exitWith {};
 
+// Wait until player controls (man,vehicle or uav) a thing before compiling the menu
+GVAR(controllableSelfActionsAdded) = [] call CBA_fnc_createNamespace;
+DFUNC(newControllableObject) = {
+    params ["_object"];
+    private _type = typeOf _object;
+    TRACE_2("newControllableObject",_object,_type);
+    if (_type == "") exitWith {};
+
+    if (!(GVAR(controllableSelfActionsAdded) getVariable [_type, false])) then {
+        [_type] call FUNC(compileMenuSelfAction);
+        GVAR(controllableSelfActionsAdded) setVariable [_type, true];
+        [{
+            TRACE_1("sending newControllableObject event",_this);
+            // event for other systems to add self actions, running addActionToClass before this will cause compiling
+            [QGVAR(newControllableObject), _this] call CBA_fnc_localEvent;
+        }, [_type]] call CBA_fnc_execNextFrame; // delay event a frame to ensure postInit has run for all addons
+    };
+};
+["unit", {[_this select 0] call FUNC(newControllableObject)}, true] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[_this select 1] call FUNC(newControllableObject)}, true] call CBA_fnc_addPlayerEventHandler;
+["ACE_controlledUAV", {[_this select 0] call FUNC(newControllableObject)}] call CBA_fnc_addEventHandler;
+
+
 GVAR(blockDefaultActions) = [];
 
 GVAR(cachedBuildingTypes) = [];

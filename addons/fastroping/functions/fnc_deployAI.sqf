@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Auomatically deploy a helicopter filled with AI units.
@@ -15,8 +16,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 params [["_vehicle", objNull, [objNull]], ["_deploySpecial", false, [true]], ["_createDeploymentGroup", true, [true]]];
 
 if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
