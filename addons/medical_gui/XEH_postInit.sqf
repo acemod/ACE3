@@ -22,8 +22,7 @@ GVAR(menuPFH) = -1;
     };
 }] call CBA_fnc_addEventHandler;
 
-["ACE3 Common", QGVAR(openMedicalMenuKey), localize LSTRING(OpenMedicalMenu),
-{
+["ACE3 Common", QGVAR(openMedicalMenuKey), localize LSTRING(OpenMedicalMenu), {
     // Get target (cursorTarget and cursorObject), if not valid then target is ACE_player
     TRACE_3("Open menu key",cursorTarget,cursorObject,ACE_player);
     private _target = cursorTarget;
@@ -41,15 +40,13 @@ GVAR(menuPFH) = -1;
     // Statement
     [_target] call FUNC(openMenu);
     false
-},
-{
+}, {
     // Close menu if enough time passed from opening
     if (CBA_missionTime - GVAR(lastOpenedOn) > 0.5) exitWith {
         [objNull] call FUNC(openMenu);
     };
     false
-},
-[35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
+}, [DIK_H, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
 
 // Close patient information display when interaction menu is closed

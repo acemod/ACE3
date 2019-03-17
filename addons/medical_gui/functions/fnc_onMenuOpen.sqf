@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal, mharis001
- * Handles opening the Medical Menu.
- * Called from onLoad event.
+ * Handles opening the Medical Menu. Called from onLoad event.
  *
  * Arguments:
  * 0: Medical Menu display <DISPLAY>

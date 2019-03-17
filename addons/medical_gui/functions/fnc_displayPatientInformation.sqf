@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 2: Body part <NUMBER>
+ * 1: Body part <NUMBER>
  *
  * Return Value:
  * None

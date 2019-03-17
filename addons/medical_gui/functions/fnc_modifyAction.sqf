@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 2: Body part index <NUMBER>
- * 3: Action data <ARRAY>
+ * 1: Body part index <NUMBER>
+ * 2: Action data <ARRAY>
  *
  * Return Value:
  * None
