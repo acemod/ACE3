@@ -1831,6 +1831,7 @@
             <Italian>Cingoli di Scorta</Italian>
             <Chinese>備用履帶</Chinese>
             <Chinesesimp>备用履带</Chinesesimp>
+            <Polish>Zapasowe Gąsienice</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
@@ -1839,6 +1840,7 @@
             <Italian>Numero dei cingoli di scorta nel cargo.</Italian>
             <Chinese>設定載具在貨艙內攜帶的備用履帶數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
+            <Polish>Liczba zapasowych gąsienic w ładunku.</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
@@ -1847,6 +1849,7 @@
             <Italian>Ruote di Scorta</Italian>
             <Chinese>備用輪胎</Chinese>
             <Chinesesimp>备用轮胎</Chinesesimp>
+            <Polish>Zapasowe Koła</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
@@ -1855,6 +1858,7 @@
             <Italian>Numero delle ruote di scorta nel cargo.</Italian>
             <Chinese>設定載具在貨艙內攜帶的備用輪胎數量</Chinese>
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
+            <Polish>Liczba zapasowych kół w ładunku.</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
@@ -1862,6 +1866,7 @@
             <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Italian>Motore spento automaticamente durante la riparazione</Italian>
+            <Polish>Automatycznie wyłącz silnik podczas napraw</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -1869,6 +1874,7 @@
             <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
             <Chinese>維修時自動關閉引擎</Chinese>
             <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
+            <Polish>Automatycznie wyłącz silnik podczas napraw.</Polish>
         </Key>
     </Package>
 </Project>

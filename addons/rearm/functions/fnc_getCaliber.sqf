@@ -33,7 +33,7 @@ if (_tmpCal > 0) then {
     if (_tmpCal > 0) then {
         _cal = _tmpCal;
     } else {
-        diag_log format ["[ACE] ERROR: Undefined Ammo [%1 : %2]", _ammo, inheritsFrom (configFile >> "CfgAmmo" >> _ammo)];
+        diag_log format ["[ACE] ERROR: Undefined Ammo [%1 : %2]", _ammo, configName inheritsFrom (configFile >> "CfgAmmo" >> _ammo)];
         if (_ammo isKindOf "BulletBase") then {
             _cal = 8;
         } else {

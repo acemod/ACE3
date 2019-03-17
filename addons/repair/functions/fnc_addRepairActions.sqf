@@ -34,7 +34,7 @@ if (_type in _initializedClasses) exitWith {};
 private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
 private _hitPointsAddedAmount = [];
-private _processedHitpoints = [];
+private _processedSelections = [];
 private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
 // Custom position can be defined via config for associated hitpoint
@@ -47,7 +47,7 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
     private _hitpoint = toLower (_hitPoints select _forEachIndex);
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
-        if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
+        if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
 
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
 
@@ -68,13 +68,15 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(repair)};
         _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
+
+        _processedSelections pushBack _selection;
     } else {
         // Empty selections don't exist
         if (_selection isEqualTo "") exitWith { TRACE_3("Skipping Empty Sel",_hitpoint,_forEachIndex,_selection); };
         // Empty hitpoints don't contain enough information
         if (_hitpoint isEqualTo "") exitWith { TRACE_3("Skipping Empty Hit",_hitpoint,_forEachIndex,_selection); };
         // Ignore glass hitpoints
-        if ((_hitPoint find "glass") != -1) exitWith { TRACE_3("Skipping Glass",_hitpoint,_forEachIndex,_selection); };
+        if ((_hitpoint find "glass") != -1) exitWith { TRACE_3("Skipping Glass",_hitpoint,_forEachIndex,_selection); };
         // Ignore hitpoints starting with # (seems to be lights)
         if ((_hitpoint select [0,1]) == "#") exitWith { TRACE_3("Skipping # hit",_hitpoint,_forEachIndex,_selection); };
         // Ignore ERA/Slat armor (vanilla uses hitera_/hitslat_, pre-1.82 RHS uses era_)
@@ -125,7 +127,7 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
 
         if (_hitpoint in TRACK_HITPOINTS) then {
             // Tracks should always be unique
-            if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
+            if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
             _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             TRACE_4("Adding RepairTrack",_hitpoint,_forEachIndex,_selection,_text);
             private _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(canRepair)};
@@ -145,7 +147,7 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
             };
         };
 
-        _processedHitPoints pushBack _hitpoint;
+        _processedSelections pushBack _selection;
     };
 } forEach _hitSelections;
 

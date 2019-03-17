@@ -89,6 +89,7 @@
             <Chinesesimp>透过增加湿度、温度与气压来增强天气模拟的表现。</Chinesesimp>
             <Japanese>気温や湿度、大気圧によって既存の天候を拡張します。</Japanese>
             <Korean>온도, 습도 및 기압에 따라 기존 날씨를 확장합니다.</Korean>
+            <Polish>Poszerza istniejącą pogodę o temperaturę, wilgotność i ciśnienie powietrza.</Polish>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -130,6 +131,7 @@
             <Chinesesimp>风力模拟(基于地图)</Chinesesimp>
             <Japanese>風シミュレーション (マップを基に)</Japanese>
             <Korean>바람 시뮬레이션 (지도 기반)</Korean>
+            <Polish>Symulacja Wiatru (bazowana na mapie)</Polish>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
             <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
@@ -139,6 +141,7 @@
             <Chinesesimp>启用后将遵照地图特色进行风力模拟(覆盖掉官方原版的风力模拟)</Chinesesimp>
             <Japanese>マップを基にした風シミュレーションを有効化 (標準の風を上書き)</Japanese>
             <Korean>지도 기반의 바람 시뮬레이션을 활성화합니다 (바닐라 바람을 덮음)</Korean>
+            <Polish>Aktywuje symulację wiatru bazującą na mapie (nadpisuje wind z domyślnej wersji gry)</Polish>
         </Key>
     </Package>
 </Project>

@@ -376,6 +376,7 @@
             <Chinese>切換碰撞燈</Chinese>
             <Chinesesimp>切换碰撞灯</Chinesesimp>
             <Japanese>衝突防止灯を切り替え</Japanese>
+            <Polish>Przełącz światła kolizyjne</Polish>
         </Key>
     </Package>
 </Project>

@@ -220,6 +220,13 @@ class CfgWeapons {
         canLock = 0;
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
+        class Single;
+        class Cruise: Single {
+            EGVAR(missileGuidance,attackProfile) = "JAV_DIR";
+        };
+        class TopDown: Single {
+            EGVAR(missileGuidance,attackProfile) = "JAV_TOP";
+        };
     };
 
     class Launcher_Base_F;

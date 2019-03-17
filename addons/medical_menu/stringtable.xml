@@ -832,6 +832,7 @@
             <Chinesesimp>医疗菜单最大范围</Chinesesimp>
             <Chinese>醫療選單最大範圍</Chinese>
             <Italian>Dirstanza menù medico</Italian>
+            <Polish>Maksymalny zasięg menu medycznego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_maxRange_Descr">
             <English>Maximum distance from where the Medical Menu can be opened.</English>
@@ -839,6 +840,7 @@
             <Chinese>醫療選單可以開啟的最大距離</Chinese>
             <Chinesesimp>医疗选单可以开启的最大距离</Chinesesimp>
             <Italian>Massima distanza dalla quale si può aprire il menù medico.</Italian>
+            <Polish>Maksymalny dystans skąd menu medyczne może być otwarte.</Polish>
         </Key>
     </Package>
 </Project>

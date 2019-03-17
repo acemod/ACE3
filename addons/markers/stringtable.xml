@@ -25,6 +25,7 @@
             <Chinese>標誌</Chinese>
             <Chinesesimp>标志</Chinesesimp>
             <Korean>맵마커</Korean>
+            <Polish>Znaczniki</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
@@ -34,6 +35,7 @@
             <Chinese>誰可以移動標誌</Chinese>
             <Chinesesimp>谁可以移动标志</Chinesesimp>
             <Italian>Permetti di spostare i marcatori a:</Italian>
+            <Polish>Zezwól na poruszanie znaczników dla</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
@@ -43,6 +45,7 @@
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
             <Chinesesimp>设定谁可以透过按住Alt键来移动标志。</Chinesesimp>
             <Italian>Limita quali giocatori possono spostare i marcatori mentre premono il tasto Alt.</Italian>
+            <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -52,6 +55,7 @@
             <Chinese>沒有人</Chinese>
             <Chinesesimp>没有人</Chinesesimp>
             <Italian>Nessuno</Italian>
+            <Polish>Nikt</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
@@ -61,6 +65,7 @@
             <Chinese>所有玩家</Chinese>
             <Chinesesimp>所有玩家</Chinesesimp>
             <Korean>모든 플레이어</Korean>
+            <Polish>Wszyscy gracze</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
@@ -70,6 +75,7 @@
             <Chinese>管理員</Chinese>
             <Chinesesimp>管理员</Chinesesimp>
             <Korean>관리자</Korean>
+            <Polish>Administratorzy</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
@@ -79,6 +85,7 @@
             <Chinese>小隊長</Chinese>
             <Chinesesimp>小队长</Chinesesimp>
             <Korean>분대장</Korean>
+            <Polish>Przywódcy grup</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
@@ -88,6 +95,13 @@
             <Chinese>小隊長與管理員</Chinese>
             <Chinesesimp>小队长与管理员</Chinesesimp>
             <Korean>분대장과 관리자</Korean>
+            <Polish>Przywódcy grup i Administratorzy</Polish>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
+            <English>Creator</English>
+            <German>Ersteller</German>
+            <Japanese>設置者</Japanese>
+            <Polish>Twórca</Polish>
         </Key>
     </Package>
 </Project>

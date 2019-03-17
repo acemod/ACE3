@@ -706,6 +706,30 @@ class CfgVehicles {
         };
     };
 
+    class Land_Camping_Light_off_F: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 2;
+
+                // to make "Camping Lantern (Off)" be turned on we replace it with "Camping Lantern"
+                class GVAR(TurnOn) {
+                    displayName = CSTRING(TurnOn);
+                    icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
+                    condition = QUOTE(alive _target);
+                    statement = QUOTE(\
+                        private _position = getPosATL _target;\
+                        private _vectorDirAndUp = [ARR_2(vectorDir _target,vectorUp _target)];\
+                        deleteVehicle _target;\
+                        private _newLamp = 'Land_Camping_Light_F' createVehicle [ARR_3(0,0,0)];\
+                        _newLamp setPosATL _position;\
+                        _newLamp setVectorDirAndUp _vectorDirAndUp;\
+                    );
+                };
+            };
+        };
+    };
+
     class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
