@@ -17,18 +17,7 @@
  * Public: No
  */
 
-#define COLOR_SCALE [ \
-    "#ffffff", \
-    "#fff1a1", \
-    "#ffe075", \
-    "#ffcb55", \
-    "#ffb73c", \
-    "#ffa127", \
-    "#ff8815", \
-    "#ff6d05", \
-    "#ff4b00", \
-    "#ff0000" \
-]
+#define COLOR_SCALE ["#ffffff", "#fff1a1", "#ffe075", "#ffcb55", "#ffb73c", "#ffa127", "#ff8815", "#ff6d05", "#ff4b00", "#ff0000"]
 
 params ["_target", "_partIndex", "_actionData"];
 
