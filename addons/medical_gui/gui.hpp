@@ -250,7 +250,7 @@ class ACE_Medical_Menu {
             idc = IDC_DRAG;
             onButtonClick = QUOTE(GVAR(selectedCategory) = 'drag');
             text = QPATHTOF(data\categories\carry.paa);
-            tooltip = CSTRING(DrayCarry);
+            tooltip = CSTRING(DragCarry);
             x = POS_X(10.5);
         };
         class Toggle: Triage {
