@@ -39,8 +39,8 @@ if (_iconFile isEqualTo "") then {
 };
 
 _text = if (
-    (GVAR(keyDownSelfAction) && {GVAR(UseListMenuSelf)}) ||
-    {!(GVAR(keyDownSelfAction)) && {GVAR(UseListMenu)}}
+    (GVAR(keyDownSelfAction) && {GVAR(useListMenuSelf)}) ||
+    {!(GVAR(keyDownSelfAction)) && {GVAR(useListMenu)}}
 ) then {
     format ["<img image='%1' align='left' color='%2'/><t %3>%4</t>", _iconFile, _iconColor, _textSettings, _text]
 } else {
@@ -51,8 +51,8 @@ _text = if (
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
 private _pos = if (
-    (GVAR(keyDownSelfAction) && {GVAR(UseListMenuSelf)}) ||
-    {!(GVAR(keyDownSelfAction)) && {GVAR(UseListMenu)}}
+    (GVAR(keyDownSelfAction) && {GVAR(useListMenuSelf)}) ||
+    {!(GVAR(keyDownSelfAction)) && {GVAR(useListMenu)}}
 ) then {
     [(_sPos select 0) - (0.0095 * SafeZoneW), (_sPos select 1) - (0.0095 * SafeZoneW), 0.20 * SafeZoneW, 0.035 * SafeZoneW]
 } else {
