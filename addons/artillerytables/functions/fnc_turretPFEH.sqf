@@ -14,7 +14,7 @@
  *
  * Public: No
  */
-(_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody"];
+(_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody", "_invalidGunnerMem"];
 
 if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
     // Still Don't like this solution, but it works
@@ -56,7 +56,7 @@ private _useRealWeaponDir = if ((isNull (_display displayCtrl 173)) || {(_vehicl
 
 private _realElevation = asin (_weaponDir select 2);
 private _realAzimuth = 0;
-if (_useRealWeaponDir) then {
+if (_useRealWeaponDir || _invalidGunnerMem) then {
     // No range (looking at sky), it will follow weaponDir:
     _realAzimuth = (_weaponDir select 0) atan2 (_weaponDir select 1)
 } else {

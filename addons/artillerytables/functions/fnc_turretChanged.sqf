@@ -45,6 +45,11 @@ if ((alive _player) && {_showGunLaying > 0} && {_player == gunner _vehicle}) the
     private _useAltElevation = (_showGunLaying == 2)
     || {(["Mortar_01_base_F", "rhs_2b14_82mm_Base", "RHS_M252_Base", "CUP_B_M1129_MC_MK19_Desert", "LIB_GrWr34", "LIB_BM37"] findIf {_typeOf isKindOf _x}) > -1;};
 
+    // If the memory point is invalid, then the turret will always use real weapon dir (tankOrCar.cpp Line 1550 _isOpticsTargetValid will always be false) (e.g. CUP BM21)
+    private _memoryPointGunnerOptics = getText (_turretCfg >> "memoryPointGunnerOptics");
+    private _invalidGunnerMem = (_vehicle selectionPosition [_memoryPointGunnerOptics, "Memory"]) isEqualTo [0,0,0];
+    if (_invalidGunnerMem) then { INFO_3("[%1-%2] turret's memoryPointGunnerOptics invalid [%3]",typeOf _vehicle,_turret,_memoryPointGunnerOptics); };
+
     private _weaponsTurret = _vehicle weaponsTurret _turret;
     if ((count _weaponsTurret) != 1) then { WARNING_2("not singular weapon in turret - %1 - %2",_typeOf,_turret); };
     private _weapon = _weaponsTurret param [0, ""];
@@ -55,7 +60,7 @@ if ((alive _player) && {_showGunLaying > 0} && {_player == gunner _vehicle}) the
     _fireModes sort true;
     _fireModes = _fireModes apply {_x select 1};
 
-    GVAR(pfID) = [LINKFUNC(turretPFEH), 0, [_vehicle, _turret, _fireModes, _useAltElevation, _turretAnimBody]] call CBA_fnc_addPerFrameHandler;
+    GVAR(pfID) = [LINKFUNC(turretPFEH), 0, [_vehicle, _turret, _fireModes, _useAltElevation, _turretAnimBody, _invalidGunnerMem]] call CBA_fnc_addPerFrameHandler;
     TRACE_1("added pfEH",GVAR(pfID));
 
 
