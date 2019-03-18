@@ -3181,7 +3181,7 @@
             <English>Show medical interaction for self</English>
             <Japanese>自分に治療インタラクションを表示</Japanese>
             <Polish>Pokaż menu interakcji medycznej dla postaci</Polish>
-            <German>Medizinishe Selbst-Interaktionen anzeigen</German>
+            <German>Medizinische Selbst-Interaktionen anzeigen</German>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeStyleSelf_description">
             <English>Show the self interaction medical actions</English>
