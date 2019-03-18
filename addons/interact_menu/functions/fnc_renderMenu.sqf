@@ -91,8 +91,8 @@ private _scaleX = 1;
 private _scaleY = 1;
 
 if (
-    (GVAR(keyDownSelfAction) && {GVAR(UseListMenuSelf)}) ||
-    {!(GVAR(keyDownSelfAction)) && {GVAR(UseListMenu)}}
+    (GVAR(keyDownSelfAction) && {GVAR(useListMenuSelf)}) ||
+    {!(GVAR(keyDownSelfAction)) && {GVAR(useListMenu)}}
 ) then {
     private _textSize = [0.75, 0.875, 1, 1.2, 1.4] select GVAR(textSize);
     _scaleX = _textSize * 0.17 * 1.1;
@@ -116,8 +116,8 @@ private _player = ACE_player;
 private _angle = _centerAngle - _angleSpan / 2;
 {
     private _newPos =  if (
-        (GVAR(keyDownSelfAction) && {GVAR(UseListMenuSelf)}) ||
-        {!(GVAR(keyDownSelfAction)) && {GVAR(UseListMenu)}}
+        (GVAR(keyDownSelfAction) && {GVAR(useListMenuSelf)}) ||
+        {!(GVAR(keyDownSelfAction)) && {GVAR(useListMenu)}}
     ) then {
         [(_sPos select 0) + _scaleX,
          (_sPos select 1) + _scaleY * (_forEachIndex - _numChildren/2 + 0.5)];
