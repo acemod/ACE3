@@ -32,7 +32,7 @@ namespace ace {
             if (selectionN >= 0)
             {
                 double painToAdd = 0;
-                wounds = GetInjuryInfoFor(typeOfDamage, amountOfDamage, selectionN, woundID);
+                wounds = GetInjuryInfoFor(typeOfDamage, amountOfDamage, selectionName, woundID);
 
                 stream << "_woundsCreated = [";
                 for (int i = 0; i < wounds.size(); ++i)
@@ -54,11 +54,12 @@ namespace ace {
             return stream.str();
         }
 
-        std::vector<ace::medical::injuries::OpenWound> handleDamage::GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection, int woundID)
+        std::vector<ace::medical::injuries::OpenWound> handleDamage::GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, std::string& selectionName, int woundID)
         {
             std::vector<ace::medical::injuries::OpenWound> injuriesToAdd;
             std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> information;
             std::shared_ptr<ace::medical::injuries::InjuryType> highestSpot = nullptr;
+            int selection = SelectionToNumber(selectionName);
 
             for (auto & damageType : damageTypes)
             {
@@ -68,13 +69,15 @@ namespace ace {
                     {
                         if (amountOfDamage >= possibleInjury->minDamage && (amountOfDamage <= possibleInjury->maxDamage || possibleInjury->maxDamage <= 0))
                         {
-                            if (highestSpot == NULL)
-                                highestSpot = possibleInjury;
-
-                            if (possibleInjury->minDamage > highestSpot->minDamage)
-                                highestSpot = possibleInjury;
-
-                            information.push_back(possibleInjury);
+                            if (InjuryAllowedOnSelection(possibleInjury->allowedSelections, selectionName)) {
+                                if (highestSpot == NULL) {
+                                    highestSpot = possibleInjury;
+                                }
+                                if (possibleInjury->minDamage > highestSpot->minDamage) {
+                                    highestSpot = possibleInjury;
+                                }
+                                information.push_back(possibleInjury);
+                            }
                         }
                     }
                     if (highestSpot == NULL) {
@@ -215,6 +218,11 @@ namespace ace {
             {
                 return -1; // TODO throw exception
             }
+        }
+
+        bool handleDamage::InjuryAllowedOnSelection(const std::vector<std::string>& allowedSelections, const std::string& selectionName)
+        {
+            return selectionName == "All" || find(allowedSelections.begin(), allowedSelections.end(), selectionName) != selections.end();
         }
 
         std::vector<std::string> handleDamage::inputToVector(const std::string& input)
