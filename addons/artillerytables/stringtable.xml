@@ -40,7 +40,7 @@
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
         </Key>
         <Key ID="STR_ACE_artillerytables_disableArtilleryComputer_displayName">
-            <English>Disable Artillery Computer</English>
+            <English>Artillery Computer Disabled</English>
         </Key>
         <Key ID="STR_ACE_artillerytables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>

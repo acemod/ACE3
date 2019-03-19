@@ -13,21 +13,20 @@
     };
 
     if (GVAR(advancedCorrections)) then {
-        [{ // add a frame later to allow other modules to set variables
-            ["LandVehicle", "init", {
-                params ["_vehicle"];
-                private _vehicleCfg = configFile >> "CfgVehicles" >> typeOf _vehicle;
-                // config "ace_artillerytables_applyCorrections" [0 disabled, 1 enabled] falls back to artilleryScanner
-                private _applyCorrections = if (isNumber (_vehicleCfg >> QGVAR(applyCorrections))) then {
-                    getNumber (_vehicleCfg >> QGVAR(applyCorrections))
-                } else {
-                    getNumber (_vehicleCfg >> "artilleryScanner")
-                };
-                if (_applyCorrections != 1) exitWith {};
+        ["LandVehicle", "init", {
+            params ["_vehicle"];
+            private _vehicleCfg = configFile >> "CfgVehicles" >> typeOf _vehicle;
+            // config "ace_artillerytables_applyCorrections" [0 disabled, 1 enabled] falls back to artilleryScanner
+            private _applyCorrections = if (isNumber (_vehicleCfg >> QGVAR(applyCorrections))) then {
+                getNumber (_vehicleCfg >> QGVAR(applyCorrections))
+            } else {
+                getNumber (_vehicleCfg >> "artilleryScanner")
+            };
+            if (_applyCorrections == 1) then {
                 TRACE_2("adding firedEH",_vehicle,configName _vehicleCfg);
                 _vehicle addEventHandler ["Fired", {call FUNC(firedEH)}];
-            }, true, [], true] call CBA_fnc_addClassEventHandler;
-        }, []] call CBA_fnc_execNextFrame;
+            };
+        }, true, [], true] call CBA_fnc_addClassEventHandler;
     };
 }] call CBA_fnc_addEventHandler;
 

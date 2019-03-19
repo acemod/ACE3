@@ -16,3 +16,5 @@ private _customVeh = configProperties [(configFile >> "CfgVehicles"), 'isClass _
 _customVeh = _customVeh apply {[configName _x, getNumber (_x >> QGVAR(applyCorrections))]};
 diag_log text format ["CfgVehicles with custom applyCorrections [%1]", count _customVeh];
 diag_log text format ["%1", _customVeh];
+
+diag_log text "-------------------------------------------";
