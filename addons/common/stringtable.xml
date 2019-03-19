@@ -1002,6 +1002,9 @@
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_Confirm">
+            <English>Confirm</English>
+        </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
             <German>Nur Fahrzeuge</German>

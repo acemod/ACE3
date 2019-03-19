@@ -5,19 +5,16 @@
  *
  * Arguments:
  * 0: A helicopter with deployed ropes <OBJECT>
- * 1: Confirmed <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_vehicle, false] call ace_fastroping_fnc_cutRopes
+ * [_vehicle] call ace_fastroping_fnc_cutRopes
  *
  * Public: No
  */
-params ["_vehicle", ["_confirmed", true]];
-
-if (GVAR(confirmCutRopes) && {!_confirmed}) exitWith {};
+params ["_vehicle"];
 
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 {
