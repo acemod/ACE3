@@ -15,6 +15,9 @@
  * Public: No
  */
 
+#define TIMER_VALUE_MIN_CUSTOM (missionNamespace getVariable [QGVAR(customTimerMin), TIMER_VALUE_MIN])
+#define TIMER_VALUE_MAX_CUSTOM (missionNamespace getVariable [QGVAR(customTimerMax), TIMER_VALUE_MAX])
+
 params ["_explosive"];
 TRACE_1("Opening timer UI",_explosive);
 
@@ -23,6 +26,9 @@ private _display = uiNamespace getVariable [QGVAR(timerDisplay), displayNull];
 
 // Update slider speed to 1s
 (_display displayCtrl IDC_TIMER_SLIDER) sliderSetSpeed [1, 1];
+(_display displayCtrl IDC_TIMER_SLIDER) sliderSetRange [TIMER_VALUE_MIN_CUSTOM, TIMER_VALUE_MAX_CUSTOM];
+(_display displayCtrl IDC_TIMER_SLIDER) sliderSetPosition (TIMER_VALUE_DEFAULT max TIMER_VALUE_MIN_CUSTOM min TIMER_VALUE_MAX_CUSTOM);
+
 
 // Add confirm button action
 GVAR(explosive) = _explosive;
@@ -52,7 +58,7 @@ _display displayAddEventHandler ["MouseZChanged", {
     if (cba_events_control) then {_change = _change * 10};
 
     private _slider = _display displayCtrl IDC_TIMER_SLIDER;
-    private _value = (sliderPosition _slider + _change) max TIMER_VALUE_MIN min TIMER_VALUE_MAX;
+    private _value = (sliderPosition _slider + _change) max TIMER_VALUE_MIN_CUSTOM min TIMER_VALUE_MAX_CUSTOM;
     _slider sliderSetPosition _value;
 }];
 
