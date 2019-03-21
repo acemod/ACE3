@@ -26,17 +26,14 @@ if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
 };
 
+if (isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage} ) then {
+    _typeOfDamage = "unknown";
+};
+
 // Get the damage type information. Format: [typeDamage thresholds, selectionSpecific, woundTypes]
 // WoundTypes are the available wounds for this damage type. Format [[classID, selections, bleedingRate, pain], ..]
 private _damageTypeInfo = [GVAR(allDamageTypesData) getVariable _typeOfDamage] param [0, [[], false, []]];
 _damageTypeInfo params ["_thresholds", "_isSelectionSpecific", "_woundTypes"];
-
-// It appears we are dealing with an unknown type of damage.
-if (_woundTypes isEqualTo []) then {
-    // grabbing the configuration for unknown damage type
-    _damageTypeInfo = [GVAR(allDamageTypesData) getVariable "unknown"] param [0, [[], false, []]];
-    _woundTypes = _damageTypeInfo select 2;
-};
 
 // find the available injuries for this damage type and damage amount
 private _highestPossibleSpot = -1;
