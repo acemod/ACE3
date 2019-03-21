@@ -69,6 +69,6 @@ private _camshake = [
     BASE_FREQ
 ];
 
-TRACE_4("addCamShake",_recoil,_powerCoef,_powerMod,_camshake);\
+TRACE_4("addCamShake",_recoil,_powerCoef,_powerMod,_camshake);
 
 addCamShake _camshake;

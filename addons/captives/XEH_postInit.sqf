@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "\a3\editor_f\Data\Scripts\dikCodes.h"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 ["ace_settingsInitialized", {
     // Hold on a little bit longer to ensure anims will work

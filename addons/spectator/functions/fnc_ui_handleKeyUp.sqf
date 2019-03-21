@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "\A3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: Nelson Duarte, SilentSpike
  * Function used to handle key up event
