@@ -374,7 +374,7 @@ class ACE_Medical_Menu {
             w = POS_W(12.33);
         };
         class ActivityHeader: TreatmentHeader {
-            text = CSTRING(ACTIVITY_LOG)
+            text = CSTRING(ACTIVITY_LOG);
             y = POS_Y(17.6);
             w = POS_W(18.5);
             sizeEx = POS_H(1);
