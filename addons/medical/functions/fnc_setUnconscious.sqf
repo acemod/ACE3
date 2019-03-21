@@ -33,20 +33,20 @@ if ((isNull _unit) || {!alive _unit} || {!(_unit isKindOf "CAManBase")}) exitWit
     ERROR_3("Bad Unit %1 [Type: %2] [Alive: %3]",_unit,typeOf _unit,alive _unit);
     false
 };
+
 if (!local _unit) exitWith {
     [QEGVAR(medical,setUnconscious), [_unit, _knockOut], _unit] call CBA_fnc_targetEvent;
     true
 };
+
 if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
     WARNING_2("setUnconscious called with no change [Unit %1] [State [%2]", _unit, _knockOut);
     false
 };
 
-private _beforeState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-
-    if (currentWeapon _unit != primaryWeapon _unit) then {
-        _unit selectWeapon primaryWeapon _unit;
-    };
+if (currentWeapon _unit != primaryWeapon _unit) then {
+    _unit selectWeapon primaryWeapon _unit;
+};
 
 if (_knockOut) then {
     if (_minWaitingTime > 0) then {
