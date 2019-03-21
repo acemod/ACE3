@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ShackTac, SilentSpike
  * Converts a blood loss value into a representative RGBA colour.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_bloodLoss"];
 
