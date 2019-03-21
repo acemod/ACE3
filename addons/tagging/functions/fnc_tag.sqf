@@ -37,7 +37,7 @@ private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, _unit
 
 // If there's no intersections
 if (_intersections isEqualTo []) exitWith {
-    TRACE_3("No intersections",_intersections);
+    TRACE_1("No intersections",_intersections);
     false
 };
 
@@ -95,7 +95,7 @@ if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
-    TRACE_3("Unsuitable location:",_touchingPoint);
+    TRACE_1("Unsuitable location:",_touchingPoint);
     false
 };
 

@@ -43,7 +43,7 @@
 {% endif %}
 
 {% if include.component == "captives" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "cargo" %}
@@ -71,7 +71,7 @@
 {% endif %}
 
 {% if include.component == "disarming" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "disposable" %}
