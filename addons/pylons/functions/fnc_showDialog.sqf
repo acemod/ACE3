@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
 * Author: 654wak654
 * Shows the aircraft loadout dialog for given aircraft.
@@ -14,9 +15,10 @@
 *
 * Public: Yes
 */
-#include "script_component.hpp"
 
 params ["_aircraft", ["_isCurator", false]];
+
+if (_isCurator && {!(["ace_zeus"] call EFUNC(common,isModLoaded))}) exitWith { WARNING("ace_zeus not loaded"); };
 
 if !(typeOf _aircraft in GVAR(aircraftWithPylons)) exitWith {
     if (_isCurator) then {

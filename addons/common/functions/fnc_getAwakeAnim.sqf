@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Report awake animation of unit inside vehicle.
@@ -13,7 +14,6 @@
  *
  * Public: no
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

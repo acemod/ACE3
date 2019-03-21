@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Winter
  * Returns the object view distance coefficient according to the given index
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_index"];
 

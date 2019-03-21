@@ -18,7 +18,7 @@ params ["_caller", "_target", "_bodyPart"];
 
 private _bloodPressure = [0, 0];
 
-if (alive _target && !([_target, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
+if (alive _target && {!([_target, _bodyPart] call FUNC(hasTourniquetAppliedTo))}) then {
     _bloodPressure = GET_BLOOD_PRESSURE(_target);
 };
 

@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
-        <Key ID="STR_ACE_Medical_Injuries">
-            <English>INJURIES</English>
-            <German>VERLETZUNGEN</German>
-            <Italian>FERITE</Italian>
-            <Russian>ТРАВМЫ</Russian>
-            <French>BLESSURES</French>
-            <Polish>OBRAŻENIA</Polish>
-            <Spanish>HERIDAS</Spanish>
-            <Hungarian>SÉRÜLÉSEK</Hungarian>
-            <Czech>ZRANĚNÍ</Czech>
-            <Portuguese>FERIMENTOS</Portuguese>
-            <Japanese>負傷</Japanese>
-            <Korean>부상</Korean>
-            <Chinesesimp>受伤</Chinesesimp>
-            <Chinese>受傷</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_Category_DisplayName">
             <English>ACE Medical</English>
             <Russian>ACE: медицина</Russian>
@@ -346,7 +330,7 @@
             <Czech>Kde může být použit adrenalin? (Pouze základní zdravotní systém)</Czech>
             <Portuguese>Onde pode-se usar a Epinefrina? (Somente sistema médico básico)</Portuguese>
             <Russian>Где может использоваться адреналин? (Базовая медицина)</Russian>
-            <Japanese>どこでもアドレナリンをつかえるようにしますか? (ベーシック医療のみ)</Japanese>
+            <Japanese>どこでもアドレナリンを使えるようにしますか? (ベーシック医療のみ)</Japanese>
             <Korean>어디에서 에피네프린을 사용할 수 있습니까? (기본 의료)</Korean>
             <Chinesesimp>在哪里可以使用肾上腺素? (基本医疗)</Chinesesimp>
             <Chinese>在哪裡可以使用腎上腺素? (基本醫療)</Chinese>
@@ -362,7 +346,7 @@
             <French>Lieu d'utilisation da trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
             <Italian>Locazioni Kit Pronto Soccorso</Italian>
-            <Japanese>応急処置キットをつかう場所</Japanese>
+            <Japanese>応急処置キットを使う場所</Japanese>
             <Korean>개인응급키트 사용 장소</Korean>
             <Chinesesimp>个人急救包使用地点</Chinesesimp>
             <Chinese>個人急救包使用地點</Chinese>
@@ -378,7 +362,7 @@
             <French>Où la trousse sanitaire peut être utilisée ?</French>
             <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
             <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
-            <Japanese>どこでも応急処置キットをつかえるようにしますか?</Japanese>
+            <Japanese>どこでも応急処置キットを使えるようにしますか?</Japanese>
             <Korean>어디에서 개인응급키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>在哪里可以使用个人急救包?</Chinesesimp>
             <Chinese>在哪裡可以使用個人急救包?</Chinese>
@@ -410,7 +394,7 @@
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
             <Russian>Когда может использоваться аптечка?</Russian>
             <Italian>Quando può essere usato il Kit Pronto Soccorso?</Italian>
-            <Japanese>どこでも応急処置キットをつかえるようにしますか?</Japanese>
+            <Japanese>どこでも応急処置キットを使えるようにしますか?</Japanese>
             <Korean>언제 개인응급키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>何时可以使用个人急救包?</Chinesesimp>
             <Chinese>何時可以使用個人急救包?</Chinese>
@@ -442,7 +426,7 @@
             <French>Qui peut utiliser les trousses chirurgicales?</French>
             <Hungarian>Ki használhatja a sebészkészletet?</Hungarian>
             <Italian>Chi può usare il Kit Chirurgico?</Italian>
-            <Japanese>だれでも縫合キットをつかえるようにしますか?</Japanese>
+            <Japanese>だれでも縫合キットを使えるようにしますか?</Japanese>
             <Korean>어느 인원이 봉합키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>谁能够使用手术包?</Chinesesimp>
             <Chinese>誰能夠使用手術包?</Chinese>
@@ -474,7 +458,7 @@
             <French>La trousse chirurgicale doit être consommée à l'utilisation?</French>
             <Hungarian>Eltávolítódjon a sebészkészlet használatkor?</Hungarian>
             <Italian>Il Kit Chirurgico dev'essere rimosso dopo l'uso?</Italian>
-            <Japanese>縫合キットをつかった後に削除しますか?</Japanese>
+            <Japanese>縫合キットを使った後に削除しますか?</Japanese>
             <Korean>봉합키트를 사용하고 나서 제거합니까?</Korean>
             <Chinesesimp>手术包会在使用后被删除吗?</Chinesesimp>
             <Chinese>手術包會在使用後被刪除嗎?</Chinese>
@@ -506,7 +490,7 @@
             <French>Où peut être utilisé les trousses chirurgicales?</French>
             <Hungarian>Hol lehet a sebészkészletet használni?</Hungarian>
             <Italian>Dove può essere usato il Kit Chirurgico?</Italian>
-            <Japanese>どこでも縫合キットをつかえるようにしますか?</Japanese>
+            <Japanese>どこでも縫合キットを使えるようにしますか?</Japanese>
             <Korean>어디에서 봉합키트를 사용할 수 있게 합니까?</Korean>
             <Chinesesimp>定义手术包可被使用的地方?</Chinesesimp>
             <Chinese>定義手術包可被使用的地方?</Chinese>
@@ -538,7 +522,7 @@
             <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
             <Russian>Когда может использоваться хирургический набор?</Russian>
             <Italian>Quando può essere usato il Kit Chirurgico?</Italian>
-            <Japanese>いつでも縫合キットをつかえるようにしますか?</Japanese>
+            <Japanese>いつでも縫合キットを使えるようにしますか?</Japanese>
             <Korean>언제 봉합키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>何时可以使用手术工具包?</Chinesesimp>
             <Chinese>何時可以使用手術工具包?</Chinese>
@@ -706,6 +690,7 @@
             <Chinese>打開蓋子</Chinese>
             <Chinesesimp>打开盖子</Chinesesimp>
             <Korean>뚜껑 열기</Korean>
+            <Polish>Otwórz pokrywę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -715,6 +700,7 @@
             <Chinese>關閉蓋子</Chinese>
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Korean>뚜껑 닫기</Korean>
+            <Polish>Zamknij pokrywę</Polish>
         </Key>
     </Package>
 </Project>

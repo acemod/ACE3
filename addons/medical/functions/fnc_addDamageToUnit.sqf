@@ -20,7 +20,6 @@
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
 // #define DEBUG_TESTRESULTS
 
 params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]]];

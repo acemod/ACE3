@@ -8,8 +8,16 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
+if (!hasInterface) exitWith { ADDON = true; };
+
+["All", "init", {_this call FUNC(compileMenu)}] call CBA_fnc_addClassEventHandler;
+
 GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
 GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
+
+// Compile actions for CAManBase now and use for all mans types
+["CAManBase"] call FUNC(compileMenu);
+GVAR(cacheManActions) = +(GVAR(ActNamespace) getVariable ["CAManBase", []]); // copy
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {

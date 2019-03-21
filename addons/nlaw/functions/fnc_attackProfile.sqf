@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * NLAW missile guidance attack profile.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "_launchParams"];

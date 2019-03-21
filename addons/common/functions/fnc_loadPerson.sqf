@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Loads a specified unit into any nearby vehicle, or _vehicle parameter.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 
