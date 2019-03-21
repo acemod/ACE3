@@ -219,6 +219,22 @@
             <Chinesesimp>快速检查</Chinesesimp>
             <Chinese>快速檢查</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_INJURIES">
+            <English>INJURIES</English>
+            <German>VERLETZUNGEN</German>
+            <Italian>FERITE</Italian>
+            <Russian>ТРАВМЫ</Russian>
+            <French>BLESSURES</French>
+            <Polish>OBRAŻENIA</Polish>
+            <Spanish>HERIDAS</Spanish>
+            <Hungarian>SÉRÜLÉSEK</Hungarian>
+            <Czech>ZRANĚNÍ</Czech>
+            <Portuguese>FERIMENTOS</Portuguese>
+            <Japanese>負傷</Japanese>
+            <Korean>부상</Korean>
+            <Chinesesimp>受伤</Chinesesimp>
+            <Chinese>受傷</Chinese>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_ViewTriageCard">
             <English>View Triage Card</English>
             <German>Zeige Triagekarte</German>

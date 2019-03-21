@@ -569,7 +569,7 @@ class RscTitles {
             };
             class InjuriesLabel: RscText {
                 idc = -1;
-                text = ECSTRING(medical,Injuries);
+                text = CSTRING(INJURIES);
                 x = safeZoneX + POS_W(2);
                 y = safeZoneY + POS_H(10.2);
                 w = POS_W(9);
