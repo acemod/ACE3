@@ -22,6 +22,10 @@ if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
 };
 
+if (isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage} ) then {
+    _typeOfDamage = "unknown";
+};
+
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
 private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array

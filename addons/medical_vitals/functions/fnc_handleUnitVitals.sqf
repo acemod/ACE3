@@ -126,7 +126,7 @@ switch (true) do {
             [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
         };
     };
-    case (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput): {
+    case (_bloodLoss / EGVAR(medical,bleedingCoefficient) > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput): {
         [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_bloodLoss > 0): {
