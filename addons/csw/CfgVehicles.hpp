@@ -95,9 +95,6 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
-                class EGVAR(reload,CheckAmmo) {
-                    condition = "false";
-                };
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
                     condition = QUOTE(call FUNC(canGetIn));

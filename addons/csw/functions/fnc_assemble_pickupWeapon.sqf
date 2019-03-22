@@ -55,7 +55,7 @@
 
         private _cswTripod = createVehicle [_turretClassname, [0, 0, 0], [], 0, "NONE"];
         [_cswTripod, _staticWeapon] call (missionNamespace getVariable _onDisassembleFunc);
-        
+
         LOG("delete weapon");
         deleteVehicle _staticWeapon;
 
@@ -64,7 +64,7 @@
         _cswTripod setVelocity [0, 0, -0.05];
         _cswTripod setVectorUp (surfaceNormal _weaponPos);
 
-        _weaponRelPos = _cswTripod getRelPos RELATIVE_DIRECTION(90);
+        private _weaponRelPos = _cswTripod getRelPos RELATIVE_DIRECTION(90);
         private _weaponHolder = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
         _weaponHolder setDir random [0, 180, 360];
         _weaponHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];

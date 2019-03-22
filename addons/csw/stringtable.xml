@@ -26,9 +26,9 @@
             <English>Get In</English>
         </Key>
         <Key ID="STR_ACE_CSW_AmmoHandling_displayName">
-            <English>Handle Ammo</English>
+            <English>Ammo handling</English>
         </Key>
-        <Key ID="STR_ACE_CSW_progressBarLoading">
+        <Key ID="STR_ACE_CSW_loadX">
             <English>Load %1</English>
             <German>Lade %1</German>
             <Spanish>Load %1</Spanish>
@@ -39,7 +39,7 @@
             <Russian>Загрузить %1</Russian>
             <Hungarian>Load %1</Hungarian>
         </Key>
-        <Key ID="STR_ACE_CSW_progressBarUnloading">
+        <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
             <German>Entlade %1</German>
             <Spanish>Unload %1</Spanish>
@@ -58,9 +58,6 @@
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_ammoHandling_displayName">
-            <English>Ammo handling</English>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
@@ -99,88 +96,88 @@
             <English>Used to reload crew served weapons</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticMortarBag_displayName">
-            <English>[ACE] Mk6 Mortar Tube</English>
+            <English>[CSW] Mk6 Mortar Tube</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticATWeapon_displayName">
-            <English>[ACE] Mini-Spike Launcher (AT)</English>
+            <English>[CSW] Mini-Spike Launcher (AT)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAAWeapon_displayName">
-            <English>[ACE] Mini-Spike Launcher (AA)</English>
+            <English>[CSW] Mini-Spike Launcher (AA)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGWeapon_displayName">
-            <English>[ACE] XM312</English>
+            <English>[CSW] XM312</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGWeapon_displayName">
-            <English>[ACE] XM312A</English>
+            <English>[CSW] XM312A</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGTallWeapon_displayName">
-            <English>[ACE] XM312 (High)</English>
+            <English>[CSW] XM312 (High)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGWeapon_displayName">
-            <English>[ACE] XM307</English>
+            <English>[CSW] XM307</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGWeapon_displayName">
-            <English>[ACE] XM307A</English>
+            <English>[CSW] XM307A</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGTallWeapon_displayName">
-            <English>[ACE] XM307 (High)</English>
+            <English>[CSW] XM307 (High)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
-            <English>[ACE] Static Mini-Spike Launcher (AT)</English>
+            <English>[CSW] Static Mini-Spike Launcher (AT)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
-            <English>[ACE] Static Mini-Spike Launcher (AA)</English>
+            <English>[CSW] Static Mini-Spike Launcher (AA)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
-            <English>[ACE] Static XM312 Gun</English>
+            <English>[CSW] Static XM312 Gun</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
-            <English>[ACE] Static XM312 Gun (Autonomous)</English>
+            <English>[CSW] Static XM312 Gun (Autonomous)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGTallBag_displayName">
-            <English>[ACE] Static XM312 Gun (High)</English>
+            <English>[CSW] Static XM312 Gun (High)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
-            <English>[ACE] Static XM307 Gun</English>
+            <English>[CSW] Static XM307 Gun</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
-            <English>[ACE] Static XM307 Gun (Autonomous)</English>
+            <English>[CSW] Static XM307 Gun (Autonomous)</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGTallBag_displayName">
-            <English>[ACE] Static XM307 Gun (High)</English>
+            <English>[CSW] Static XM307 Gun (High)</English>
         </Key>
         <Key ID="STR_ACE_CSW_HMGStatic_displayName">
-            <English>[ACE] HMG Static</English>
+            <English>[CSW] HMG Static</English>
         </Key>
         <Key ID="STR_ACE_CSW_GMGStatic_displayName">
-            <English>[ACE] GMG Static</English>
+            <English>[CSW] GMG Static</English>
         </Key>
         <Key ID="STR_ACE_CSW_ATStatic_displayName">
-            <English>[ACE] AT Static</English>
+            <English>[CSW] AT Static</English>
         </Key>
         <Key ID="STR_ACE_CSW_AAStatic_displayName">
-            <English>[ACE] AA Static</English>
+            <English>[CSW] AA Static</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
-            <English>[ACE] 12.7x108mm HMG Belt</English>
+            <English>[CSW] 12.7x108mm HMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
-            <English>[ACE] 12.7x99mm HMG Belt</English>
+            <English>[CSW] 12.7x99mm HMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
-            <English>[ACE] 12.7x99mm Tracer HMG Belt (Red)</English>
+            <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
-            <English>[ACE] 12.7x99mm Tracer HMG Belt (Green)</English>
+            <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
-            <English>[ACE] 12.7x99mm Tracer HMG Belt (Yellow)</English>
+            <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
-            <English>[ACE] 20mm Grenade GMG Belt</English>
+            <English>[CSW] 20mm Grenade GMG Belt</English>
         </Key>
         <Key ID="STR_ACE_CSW_mag_127x108">
-            <English>[ACE] 12.7 x 108 mm Ammo Belt</English>
+            <English>[CSW] 12.7 x 108 mm Ammo Belt</English>
         </Key>
     </Package>
 </Project>

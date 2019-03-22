@@ -37,7 +37,7 @@ private _statement = {
         [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
     },
     {TRACE_1("unload progressBar fail",_this);},
-    format [localize LSTRING(progressBarUnloading), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
+    format [localize LSTRING(unloadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
     {(_this select 0) call FUNC(reload_canUnloadMagazine)},
     ["isNotInside"]
     ] call EFUNC(common,progressBar);
@@ -69,8 +69,9 @@ private _handeledMagTypes = [];
         if (_carryMag == "") exitWith {};
 
         private _displayName = getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName");
+        private _text = format [LLSTRING(unloadX), _displayName];
         private _picture = getText (configFile >> "CfgMagazines" >> _carryMag >> "picture");
-        private _action = [format ["unload_%1", _forEachIndex], format ["Unload %1", _displayName], _picture, _statement, _condition, {}, [_xMag, _xTurret, _carryMag]] call EFUNC(interact_menu,createAction);
+        private _action = [format ["unload_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, [_xMag, _xTurret, _carryMag]] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _vehicle];
     };
 } forEach (magazinesAllTurrets _vehicle);

@@ -26,7 +26,7 @@ if (!isNull(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> 
     _timeToLoad = getNumber(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "ammoLoadTime");
 };
 
-private _displayName = format [localize LSTRING(progressBarLoading), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
+private _displayName = format [localize LSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
 private _onFinish = {
     (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_unit"];

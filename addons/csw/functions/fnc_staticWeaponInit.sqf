@@ -29,7 +29,7 @@ if (_configEnabled) then {
 
 if (_configEnabled && {local _staticWeapon}) then { // need to wait a frame to allow setting object vars during assembly
     [FUNC(staticWeaponInit_unloadExtraMags), [_staticWeapon]] call CBA_fnc_execNextFrame;
-    
+
     if (_enableAmmoHandling && { !(_proxyWeapon isEqualTo "") }) then {
         // toDo: mk6 ammo handling compatiblity here (changes weapon based on settings)
         // if ((!isNil _proxyWeapon) && {_proxyWeapon isEqualType {}}) then { _proxyWeapon = [_staticWeapon, _typeOf] call _proxyWeapon; }; ?
@@ -60,7 +60,10 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     };
 
     private _magazineLocation = getText (configFile >> "CfgVehicles" >> _typeOf >> QUOTE(ADDON) >> "magazineLocation");
-    private _condition = {[_player, _target, []] call EFUNC(common,canInteractWith)};
+    private _condition = {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+        [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
+    };
     private _childenCode = {
         BEGIN_COUNTER(getActions); // can remove for final release
         private _ret = (call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload));
@@ -80,8 +83,11 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
             _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
         };
     };
+
     if (["ACE_reload"] call EFUNC(common,isModLoaded)) then {
-        private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", {[_player, _target] call EFUNC(reload,checkAmmo)}, {[_player, _target] call EFUNC(reload,canCheckAmmo)}] call EFUNC(interact_menu,createAction);
+        // move reload's check ammo action to the ammo handling point (remove and re-add)
+        [_typeOf, 0, ["ACE_MainActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
+        private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
         [_typeOf, 0, _ammoActionPath, _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
     };
 };

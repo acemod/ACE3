@@ -22,5 +22,5 @@ GVAR(vehicleMagCache) = call CBA_fnc_createNamespace;
 
 
 #ifdef DEBUG_MODE_FULL
-call compile preprocessFileLineNumbers QPATHTOF(functions\dev_checkStaticWeapons.sqf);
+call compile preprocessFileLineNumbers QPATHTOF(dev\checkStaticWeapons.sqf);
 #endif
