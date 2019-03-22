@@ -28,9 +28,9 @@ if (isServer) then {
     if ((GVAR(enabledFor) == 1) && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
 
     private _listcode = if (GVAR(enabledFor) == 1) then {
-        {[ACE_player] select {[_x] call FUNC(isBleeding)}} // ace_player is only possible local player
+        {[ACE_player]} // ace_player is only possible local player
     } else {
-        {allUnits select {(local _x) && {[_x] call FUNC(isBleeding)}}}; // filter all local bleeding units
+        EFUNC(common,getLocalUnits) // filter all local units
     };
     
     private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;

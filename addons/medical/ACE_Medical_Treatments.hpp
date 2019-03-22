@@ -123,10 +123,10 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = QUOTE(!([(_this select 1)] call ace_common_fnc_isAwake) && GVAR(enableRevive)>0);
+            condition = QUOTE(!([(_this select 1)] call DEFUNC(common,isAwake)) && GVAR(enableRevive)>0);
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
+            callbackProgress = QUOTE(!([((_this select 0) select 1)] call DEFUNC(common,isAwake)));
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -371,10 +371,10 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
+            condition = QUOTE(!([(_this select 1)] call DEFUNC(common,isAwake)));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
+            callbackProgress = QUOTE(!([((_this select 0) select 1)] call DEFUNC(common,isAwake)));
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -687,9 +687,9 @@ class ACE_Medical_Advanced {
     class Treatment {
         class Bandaging {
             // Field dressing is normal average treatment
-            // packing bandage is average treatment, higher reopen change, longer reopening delay
-            // elastic bandage is higher treatment, higher reopen change, shorter reopen delay
-            // quickclot is lower treatment, lower reopen change, longer reopening delay
+            // packing bandage is average treatment, higher reopen chance, longer reopening delay
+            // elastic bandage is higher treatment, higher reopen chance, shorter reopen delay
+            // quickclot is lower treatment, lower reopen chance, longer reopening delay
             class Bandage { // basic bandage
                 effectiveness = 5;
                 reopeningChance = 0;

@@ -28,6 +28,7 @@
 
 // IGNORE_PRIVATE_WARNING(_actionName,_displayName,_icon,_statement,_condition,_insertChildren,_customParams,_position,_distance,_params,_modifierFunction);
 
+if (!hasInterface) exitWith { [] };
 params [
     "_actionName",
     "_displayName",
