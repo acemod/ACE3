@@ -68,7 +68,7 @@
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
-            <English>Keep engine runing after geting out</English>
+            <English>Disable automatic engine shut-off</English>
             <German>Motor nach Verlassen laufen lassen</German>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
