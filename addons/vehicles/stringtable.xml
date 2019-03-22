@@ -72,7 +72,7 @@
             <German>Motor nach Verlassen laufen lassen</German>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
-            <English>Prevent the automatic shut off of the engine when exiting vehciles</English>
+            <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
             <German>Verhindere das automatische Abschalten des Motors beim Verlassen des Fahrzeugs</German>
         </Key>
     </Package>
