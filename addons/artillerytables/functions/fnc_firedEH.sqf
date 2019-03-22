@@ -35,7 +35,7 @@ if (isNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction))) 
     _airFriction = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction));
 };
 TRACE_1("",_airFriction);
-if (_airFriction == 0) exitWith {}; // 0 disables everything
+if (_airFriction >= 0) exitWith {}; // 0 disables everything, >0 makes no sense
 
 BEGIN_COUNTER(adjustmentsCalc);
 

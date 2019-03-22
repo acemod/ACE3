@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Turret changed.
+ * Turret changed, determine if we are in the gunner seat of an artillery vehicle.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -20,6 +20,7 @@ params ["_player", "_turret"];
 private _vehicle = vehicle _player;
 private _typeOf = typeOf _vehicle;
 private _vehicleCfg = configFile >> "CfgVehicles" >> _typeOf;
+
 // config "ace_artillerytables_showGunLaying" [0 disabled, 1 enabled, 2 enabled w/ alt elevationMode] falls back to artilleryScanner
 private _showGunLaying = if (isNumber (_vehicleCfg >> QGVAR(showGunLaying))) then {
     getNumber (_vehicleCfg >> QGVAR(showGunLaying))
@@ -40,10 +41,7 @@ if (GVAR(pfID) >= 0) then {
 if ((alive _player) && {_showGunLaying > 0} && {_player == gunner _vehicle}) then {
     private _turretCfg = [_typeOf, _turret] call CBA_fnc_getTurret;
     private _turretAnimBody = getText (_turretCfg >> "animationSourceBody");
-
-    // Ugh, see FUNC(turretPFEH) for why this is needed
-    private _useAltElevation = (_showGunLaying == 2)
-    || {(["Mortar_01_base_F", "rhs_2b14_82mm_Base", "RHS_M252_Base", "CUP_B_M1129_MC_MK19_Desert", "LIB_GrWr34", "LIB_BM37"] findIf {_typeOf isKindOf _x}) > -1;};
+    private _useAltElevation = (_showGunLaying == 2); // StaticMortars need elevation calculated differently, see FUNC(turretPFEH)
 
     // If the memory point is invalid, then the turret will always use real weapon dir (e.g. CUP BM21)
     private _memoryPointGunnerOptics = getText (_turretCfg >> "memoryPointGunnerOptics");
@@ -61,8 +59,7 @@ if ((alive _player) && {_showGunLaying > 0} && {_player == gunner _vehicle}) the
     _fireModes = _fireModes apply {_x select 1};
 
     GVAR(pfID) = [LINKFUNC(turretPFEH), 0, [_vehicle, _turret, _fireModes, _useAltElevation, _turretAnimBody, _invalidGunnerMem]] call CBA_fnc_addPerFrameHandler;
-    TRACE_1("added pfEH",GVAR(pfID));
-
+    TRACE_4("added pfEH",GVAR(pfID),_useAltElevation,_turretAnimBody,_invalidGunnerMem);
 
     #ifdef DEBUG_MODE_FULL
     private _ballisticsComputer = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ballisticsComputer");

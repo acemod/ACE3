@@ -69,7 +69,7 @@ if (_useRealWeaponDir || _invalidGunnerMem) then {
         private _currentTraverseRad = _vehicle animationSourcePhase _turretAnimBody;
         if (isNil "_currentTraverseRad") then { _currentTraverseRad = _vehicle animationPhase _turretAnimBody; };
         // Get turret roatation around it's z axis, then calc weapon elev in it's projection
-        private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, deg _currentTraverseRad] call FUNC(rotateVector3d);
+        private _turretRot = [vectorDir _vehicle, vectorUp _vehicle, deg _currentTraverseRad] call CBA_fnc_vectRotate3D;
         _realElevation = (acos ((_turretRot vectorCos _weaponDir) min 1)) + ((_turretRot call CBA_fnc_vect2polar) select 2);
         if (_realElevation > 90) then { _realElevation = 180 - _realElevation; }; // does not flip azimuth!
     };
@@ -84,6 +84,7 @@ _ctrlAzimuth ctrlSetText Format ["AZ: %1", [DEGTOMILS * _realAzimuth, 4, 0] call
 _ctrlElevation ctrlSetText Format ["EL: %1", [DEGTOMILS * _realElevation, 4, 0] call CBA_fnc_formatNumber];
 _ctrlCharge ctrlSetText format ["CH: %1", _currentChargeMode];
 
+// avalible for other addons (mk6)
 GVAR(predictedAzimuth) = _realAzimuth;
 GVAR(predictedElevation) = _realElevation;
 

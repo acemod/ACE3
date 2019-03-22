@@ -7,9 +7,13 @@ INFO("showing shot info");
     ((velocity _proj) call CBA_fnc_vect2Polar) params ["_mag", "_dir", "_elev"];
     private _shootPos = getPosASL _shooter;
     if (_dir < 0) then {_dir = _dir + 360;};
-    hintSilent format ["%1 m/s\nAz: %2 [%3]\nEl: %4 [%5]\nError: %6",_mag toFixed 1, _dir toFixed 2, ((6400 / 360) * _dir) toFixed 0, _elev toFixed 2, ((6400 / 360) * _elev) toFixed 0,
-    _elev - (missionNamespace getVariable [QGVAR(predictedElevation), 0])];
-    TRACE_1("elev offset",_elev - GVAR(predictedElevation));
+
+    private _offsetElev = _elev - (missionNamespace getVariable [QGVAR(predictedElevation), -999]);
+    private _offsetAz = _dir - (missionNamespace getVariable [QGVAR(predictedAzimuth), -999]);
+
+    hintSilent format ["%1 m/s\nAz: %2 [%3]\nEl: %4 [%5]\nError Az: %6\nError EL: %7",_mag toFixed 1, _dir toFixed 2, ((6400 / 360) * _dir) toFixed 0, _elev toFixed 2, ((6400 / 360) * _elev) toFixed 0,
+    _offsetAz toFixed 3, _offsetElev toFixed 3];
+    TRACE_2("",_offsetAz,_offsetElev);
     private _submunitionAmmo = getText (configFile >> "CfgAmmo" >> _ammo >> "submunitionAmmo");
 
     [{
