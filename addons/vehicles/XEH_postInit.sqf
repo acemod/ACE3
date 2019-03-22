@@ -1,6 +1,8 @@
 // by esteldunedain
 #include "script_component.hpp"
 
+[QGVAR(engineOnLocal), {_this engineOn true;}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 GVAR(isSpeedLimiter) = false;
 // Add keybinds

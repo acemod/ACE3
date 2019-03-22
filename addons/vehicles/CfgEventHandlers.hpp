@@ -23,6 +23,19 @@ class Extended_Engine_EventHandlers {
             clientEngine = QUOTE(if (local driver (_this select 0)) then {_this call FUNC(startEngine)};);
         };
     };
+    class AllVehicles {
+        class ACE_EngineState {
+            engine = QUOTE(if (local (_this select 0)) then {(_this select 0) setVariable [ARR_3(QQGVAR(engineState), _this select 1, true)]};);
+        };
+    };
+};
+
+class Extended_GetOut_EventHandlers {
+    class AllVehicles {
+        class ACE_KeepEngineRunning {
+            getOut = QUOTE(_this call FUNC(keepEngineRunning));
+        };
+    };
 };
 
 class Extended_Init_EventHandlers {
@@ -30,6 +43,11 @@ class Extended_Init_EventHandlers {
         class ACE_FixMass {
             init = QUOTE(if (local (_this select 0)) then {(_this select 0) setMass (getMass (_this select 0) max 250)};);
             exclude[] = {"TargetSoldierBase","Static_Designator_01_base_F","Static_Designator_02_base_F","Pod_Heli_Transport_04_base_F"};
+        };
+    };
+    class AllVehicles {
+        class ACE_EngineState {
+            init = QUOTE(if (local (_this select 0)) then {(_this select 0) setVariable [ARR_3(QQGVAR(engineState),isEngineOn (_this select 0),true)]});
         };
     };
 };
