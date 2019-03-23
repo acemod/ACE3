@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Module for adjusting the medical treatment settings
@@ -10,10 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [Logic, [bob, kevin], true] call ACE_medical_fnc_moduleBasicMedicalSettings
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 

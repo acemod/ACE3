@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if all items are present between the patient and the medic.
@@ -7,13 +8,14 @@
  * 1: Patient <OBJECT>
  * 2: Items <ARRAY<STRING>>
  *
- * ReturnValue:
+ * Return Value:
  * Has the items <BOOL>
+ *
+ * Example:
+ * [bob, patient, ["bandage", "morphine"]] call ace_medical_fnc_hasItems
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_medic", "_patient", "_items"];
 

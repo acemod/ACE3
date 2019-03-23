@@ -1,5 +1,19 @@
-//fnc_spallTrack.sqf
 #include "script_component.hpp"
+/*
+ * Author: ACE-Team
+ * Add HitPart EventHandler to objects in the projectile's path
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_spallTrack
+ *
+ * Public: No
+ */
 
 params ["_round", "_multiplier", "_foundObjects", "_foundObjectHPIds"];
 

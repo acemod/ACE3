@@ -3,13 +3,13 @@ class CfgVehicles {
 
     class ACE_Module;
     class ACE_moduleMedicalMenuSettings: ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(module_DisplayName);
         icon = QPATHTOEF(medical,UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
         function = QUOTE(DFUNC(module));
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
@@ -47,7 +47,7 @@ class CfgVehicles {
             class Medical_Menu {
                 displayName = CSTRING(OpenMenu);
                 runOnHover = 0;
-                exceptions[] = {"isNotInside"};
+                exceptions[] = {"isNotInside", "isNotSwimming"};
                 condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                 statement = QUOTE([_target] call DFUNC(openMenu));
                 icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
@@ -60,7 +60,7 @@ class CfgVehicles {
                 class Medical_Menu {
                     displayName = CSTRING(OpenMenu);
                     runOnHover = 0;
-                    exceptions[] = {"isNotInside"};
+                    exceptions[] = {"isNotInside", "isNotSwimming"};
                     condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                     statement = QUOTE([_target] call DFUNC(openMenu));
                     icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);

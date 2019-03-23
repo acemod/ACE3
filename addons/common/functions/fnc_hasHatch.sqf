@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check if unit is in a vehicle position where it can turn in or out.
@@ -8,9 +9,11 @@
  * Return Value:
  * Unit has a hatch? <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc_hasHatch
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Animate scripted reticle of spotting scope.
@@ -8,14 +9,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [DISPLAY] call ace_spottingscope_fnc_animateReticle
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 
 params ["_display"];
-uinamespace setVariable [QGVAR(dlgSpottingScope), _display]; 
+uinamespace setVariable [QGVAR(dlgSpottingScope), _display];
 
 private _ctrlReticle = _display displayCtrl IDC_RETICLE;
 private _ctrlBody = _display displayCtrl IDC_BODY;

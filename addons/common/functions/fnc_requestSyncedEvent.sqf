@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Send a request to synchronize an event name from the client->server. Execute on client only.
@@ -6,11 +7,13 @@
  * 0: eventName <STRING>
  *
  * Return Value:
- * Boolean of success
+ * Boolean of success <BOOL>
+ *
+ * Example:
+ * ["event"] call ace_common_fnc_requestSyncedEvent
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_eventName"];
 

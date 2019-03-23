@@ -66,7 +66,7 @@ This update does not mean that if your mod depends on any of this functionality 
 
 ### Replacing deprecated functionality
 
-It is recommended to replace any functionality that is deprecated with its replacement as soon as possible. If you are in need of any help with moving from deprecated ACE3 functionality to it's replacement, please visit our [Public Slack team at http://slackin.ace3mod.com](http://slackin.ace3mod.com){:target="_blank"}.
+It is recommended to replace any functionality that is deprecated with its replacement as soon as possible. If you are in need of any help with moving from deprecated ACE3 functionality to it's replacement, please visit our [Public Slack team at https://slackin.ace3mod.com](https://slackin.ace3mod.com){:target="_blank"}.
 
 
 ## ACE3 Events
@@ -77,4 +77,4 @@ Any code currently using the old ACE3 event functions will still function correc
 
 ---
 
-We hope you like the new frameworks made publicly available in CBA A3 and without needing a dependency on ACE3. Feel free to leave your feedback either on the [CBA BI forum thread](https://forums.bistudio.com/topic/168277-cba-community-base-addons-arma-3/){:target="_blank"}, the [ACE3 BI forum thread](https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/){:target="_blank"} or in our [public chat](http://slackin.ace3mod.com){:target="_blank"}.
+We hope you like the new frameworks made publicly available in CBA A3 and without needing a dependency on ACE3. Feel free to leave your feedback either on the [CBA BI forum thread](https://forums.bistudio.com/topic/168277-cba-community-base-addons-arma-3/){:target="_blank"}, the [ACE3 BI forum thread](https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/){:target="_blank"} or in our [public chat](https://slackin.ace3mod.com){:target="_blank"}.

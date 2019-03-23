@@ -199,7 +199,7 @@ class CfgWeapons {
     };
 
     // - CZ Scorpion ----------------------------------------------------------
-    class SMG_02_base_F: Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         class WeaponSlotsInfo;
     };
     class SMG_02_F: SMG_02_base_F {
@@ -286,6 +286,16 @@ class CfgWeapons {
     class srifle_DMR_02_F: DMR_02_base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 130;
+        };
+    };
+
+    // - Cyrus ------------------------------------------------------
+    class DMR_05_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class srifle_DMR_05_blk_F: DMR_05_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 140;
         };
     };
 

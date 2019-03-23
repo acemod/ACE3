@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.8.1-blue.svg?style=flat-square" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-0.0.0-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Fehlermeldungen">
@@ -15,11 +15,11 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 Lizenz">
     </a>
-    <a href="http://slackin.ace3mod.com/">
-        <img src="http://slackin.ace3mod.com/badge.svg?style=flat-square&label=Slack" alt="ACE3 Slack">
+    <a href="https://slackin.ace3mod.com/">
+        <img src="https://slackin.ace3mod.com/badge.svg?style=flat-square&label=Slack" alt="ACE3 Slack">
     </a>
-    <a href="https://travis-ci.org/acemod/ACE3">
-        <img src="https://img.shields.io/travis/acemod/ACE3.svg?style=flat-square&label=Build" alt="ACE3 Build Status">
+    <a href="https://circleci.com/gh/acemod/ACE3">
+        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
     </a>
 </p>
 </p>
@@ -70,14 +70,14 @@ Die Mod ist **modular aufgebaut**. Beinahe jede PBO kann entfernt werden, sodass
 
 #### Anleitungen
 Du hast ACE3 installiert, hast aber keine Ahnung was und wie alles funktioniert und wo sich was befindet?
-- [Erste Schritte](http://ace3mod.com/wiki/user/getting-started.html).
+- [Erste Schritte](https://ace3mod.com/wiki/user/getting-started.html).
 
 #### Mitwirken
 Wenn du bei der Entwicklung von ACE3 mithelfen möchtest, kannst du dies tun, indem du nach Fehlern Ausschau hältst oder neue Funktionen vorschlägst. Um etwas beizutragen, "Forke" dieses Repository und erstelle deine "Pull-Requests", welche von anderen Entwicklern und Beiträgern überprüft werden. Bitte trage dich dabei in [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) mit deinem Nutzernamen und einer gültigen Email-Adresse ein.  
 
 Um uns einen Fehler, Anregungen oder neue Funktionalitäten mitzuteilen: Nutze unseren [Issue Tracker](https://github.com/acemod/ACE3/issues). Besuche auch:
-- [Wie kann ich ein Problem melden](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [Wie kann ich ein Wunsch zu einer neuen Funktion mitteilen?](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [Wie kann ich ein Problem melden](https://ace3mod.com/wiki/user/how-to-report-an-issue.html)
+- [Wie kann ich ein Wunsch zu einer neuen Funktion mitteilen?](https://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testen & Mod erstellen
 Wenn du die neusten Entwicklungen erleben und uns dabei helfen möchtest bestehende Fehler zu entdecken, lade dir die "Master Branch" herunter. Entweder nutzt du [Git](https://help.github.com/articles/fetching-a-remote/) - wenn die Schritte bekannt sind - oder du lädst es dir direkt über [diesen Link](https://github.com/acemod/ACE3/archive/master.zip) herunter.  

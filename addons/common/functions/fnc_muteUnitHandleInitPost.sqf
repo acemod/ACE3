@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Applies speaker changes on init post. Used because setSpeaker is broken on init.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_muteUnitHandleInitPost
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

@@ -1,5 +1,19 @@
-// by commy2
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: Enable illumination <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [true] call ace_vector_fnc_illuminate
+ *
+ * Public: No
+ */
 
 disableSerialization;
 private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the treatment action can be performed.
@@ -8,7 +9,7 @@
  * 2: Selection name <STRING>
  * 3: ACE_Medical_Treatments Classname <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Can Treat <BOOL>
  *
  * Example:
@@ -16,8 +17,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Finds real x/y offset and map step for a 10 digit grid
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(mapGridData) = [];
 
@@ -64,19 +64,17 @@ while {_startGrid == _originGrid} do {
 private _realOffsetY = (parseNumber (_originGrid select [count _formatX, count _formatY])) * _stepY + _heightOffset - 1;
 
 //Calculate MGRS 10digit step - they should both be 1 meter:
-_stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
-_stepYat5 = -1 * _stepY * 10 ^ ((count _formatY) - 5);
+private _stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
+private _stepYat5 = -1 * _stepY * 10 ^ ((count _formatY) - 5);
 
 if (_stepYat5 < 0) then {
-    WARNING_1("Map Grid Warning (%1) - Northing is reversed.",worldName);
+    TRACE_1("Northing is reversed",worldName);
 };
-
 if (_stepXat5 != 1) then {
-    WARNING_2("Map Grid Warning (%1) - MGRS 10 digit grid does not equal 1 meter: (%2) for x.",worldName,_stepXat5);
+    TRACE_2("MGRS 10 digit grid does not equal 1 meter",_stepXat5,worldName);
 };
-
 if (_stepYat5 != 1 && {_stepYat5 != -1}) then {
-    WARNING_2("Map Grid Warning (%1) - MGRS 10 digit grid does not equal 1 meter: (%2) for y.",worldName,_stepXat5);
+    TRACE_2("MGRS 10 digit grid does not equal 1 meter",_stepYat5,worldName);
 };
 
 GVAR(mapGridData) = [_offsetX, _realOffsetY, _stepXat5, _stepYat5];

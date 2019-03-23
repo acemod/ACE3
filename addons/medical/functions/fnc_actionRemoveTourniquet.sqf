@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Action for removing the tourniquet on specified selection
@@ -10,10 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selection"] call ace_medical_fnc_actionRemoveTourniquet
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName"];
 TRACE_3("params",_caller,_target,_selectionName);

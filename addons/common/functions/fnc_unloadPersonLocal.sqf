@@ -1,18 +1,21 @@
+#include "script_component.hpp"
 /*
  * Author: ViperMaul
  * Unload a person from a vehicle, local
  *
  * Arguments:
- * 0: unit to unload <OBJECT>
+ * 0: Unit to unload <OBJECT>
  * 1: Vehicle <OBJECT>
- * 2: Unloader (player) <OBJECT><OPTIONAL>
+ * 2: Unloader (player) <OBJECT> (default: objNull)
  *
  * Return Value:
- * Returns true if succesfully unloaded person <BOOL>
+ * Succesfully unloaded person <BOOL>
+ *
+ * Example:
+ * [bob, car, bob] call ace_common_fnc_unloadpersonLocal
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 

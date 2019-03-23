@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if unit is awake. Will be false when death or unit is unconscious.
@@ -8,9 +9,11 @@
  * Return Value:
  * if unit is awake <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc_isAwake
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

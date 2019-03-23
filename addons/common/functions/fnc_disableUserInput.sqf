@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Disables key input. ESC can still be pressed to open the menu.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [true] call ace_common_fnc_disableUserInput
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_state"];
 

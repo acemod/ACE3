@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support, esteldunedain
  * Continue process of digging trench.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_trench", "_unit"];
 TRACE_2("continueDiggingTrench",_trench,_unit);
@@ -79,7 +79,7 @@ if(_actualProgress == 0) then {
 };
 
 private _progressLeft = (_actualProgress * 10) + 1;
-private ["_i"];
+
 for "_i" from _progressLeft to 10 do {
     private _vectorDiffZ = 1 - (_i / 10);
     private _delay = _digTime * ((_i / 10) - _actualProgress);

@@ -1,10 +1,25 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_debugAmmo
+ *
+ * Public: No
+ */
 
 params [
     ["_debugMissing", true, [false]],
     ["_debugForce", false, [false]],
-    ["_debugNonFrag", false, [false]]
+    ["_debugSkippedFragPower", 30, [0]]
 ];
 
 diag_log text format ["~~~~~~~~~~~~~Start [%1]~~~~~~~~~~~~~", _this];
@@ -55,7 +70,7 @@ private _processedCfgAmmos = [];
                 diag_log text format [" - _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5", _c, _m, _k, _gC, _fragTypes];
             };
         } else {
-            if (_debugNonFrag && {isArray (_ammoConfig >> QGVAR(CLASSES))}) then {
+            if ((_fragPower > _debugSkippedFragPower) && {isArray (_ammoConfig >> QGVAR(CLASSES))}) then {
                 diag_log text format ["Ammo [%1] from Mag [%2] has frag configs but will NOT frag:", _ammo, configName _x];
                 diag_log text format ["- skip=%1,explosive=%2,indirectHitRange=%3,force=%4,fragPower=%5", _skip, _explosive, _indirectRange, _force, _fragPower];
             };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Modify the visuals of a medical action point.
@@ -9,13 +10,14 @@
  * 2: Selection Number <NUMBER>
  * 3: The action to modify <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, kevin, 2, "action"] call ACE_medical_fnc_modifyMedicalAction
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_player", "_partNumber", "_actionData"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets arithmetic result from a set.
@@ -8,7 +9,7 @@
  * 2: Operation (sum, product, min, max, avg) <STRING>
  *
  * Return Value:
- * <NUMBER>
+ * Value <NUMBER>
  *
  * Example:
  * [ace_player, "ace_aimCoefficents", "product"] call ace_common_fnc_arithmeticGetResult
@@ -16,8 +17,6 @@
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_namespace", "_setID", "_op"];
 TRACE_3("params",_namespace,_setID,_op);

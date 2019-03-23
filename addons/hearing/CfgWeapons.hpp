@@ -1,54 +1,91 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_EarPlugs: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EarPlugs_Name);
         descriptionShort = CSTRING(EarPlugs_Description);
         model = QPATHTOF(data\ace_earplugs.p3d);
         picture = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
         scope = 2;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };
 
+    #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
+    #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
+    #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
+
     class H_HelmetB;
     class H_HelmetCrew_B: H_HelmetB {
-        GVAR(protection) = 1;
-        GVAR(lowerVolume) = 0.80;
+        HEARING_PROTECTION_VICCREW
     };
 
     class H_CrewHelmetHeli_B: H_HelmetB {
-        GVAR(protection) = 0.85;
-        GVAR(lowerVolume) = 0.75;
+        HEARING_PROTECTION_VICCREW
     };
 
     class H_PilotHelmetHeli_B: H_HelmetB {
-        GVAR(protection) = 0.85;
-        GVAR(lowerVolume) = 0.75;
+        HEARING_PROTECTION_VICCREW
     };
 
     class H_PilotHelmetFighter_B: H_HelmetB {
-        GVAR(protection) = 1;
-        GVAR(lowerVolume) = 0.80;
+        HEARING_PROTECTION_VICCREW
     };
 
     class HelmetBase;
     class H_Cap_headphones: HelmetBase {
-        GVAR(protection) = 0.5;
-        GVAR(lowerVolume) = 0.60;
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_Construction_earprot_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_Construction_headset_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+    class H_EarProtectors_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
+    };
+
+   class H_HeadSet_base_F: HelmetBase {
+        HEARING_PROTECTION_EARMUFF
     };
 
     class H_HelmetB_light: H_HelmetB {
-        GVAR(protection) = 0.8;
-        GVAR(lowerVolume) = 0.20;
+        HEARING_PROTECTION_PELTOR
+    };
+    class H_HelmetB_camo: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
     };
 
     class H_HelmetB_plain_mcamo;
     class H_HelmetSpecB: H_HelmetB_plain_mcamo {
-        GVAR(protection) = 0.8;
-        GVAR(lowerVolume) = 0.20;
+        HEARING_PROTECTION_PELTOR
     };
 
+    class H_HelmetB_TI_tna_F: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    };
+
+    class H_Tank_base_F;
+    class H_Tank_black_F: H_Tank_base_F {
+        HEARING_PROTECTION_VICCREW
+    };
+
+    class H_RacingHelmet_1_F: H_HelmetB_camo {
+        HEARING_PROTECTION_VICCREW
+    };
+
+    class H_HelmetO_ocamo: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    }; // Defender and Assasin Helmet inherit.
+
+    class H_HelmetO_ViperSP_hex_f: H_HelmetB {
+        HEARING_PROTECTION_PELTOR
+    };
 };

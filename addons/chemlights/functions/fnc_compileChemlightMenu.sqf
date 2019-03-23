@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Compile list of chemlight classnames and add to the "Chemlight shield" parent menu.
@@ -7,7 +8,7 @@
  * 1: Player <OBJECT>
  * 2: Parameters <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["", "_player", "_args"];
 
@@ -29,7 +28,7 @@ private _chemlights = [_player] call FUNC(getShieldComponents);
     private _icon = getText (_config >> "picture");
     private _shieldClass = getText (_config >> "ACE_Chemlight_Shield");
     private _displayName = getText (configFile >> "CfgWeapons" >> _shieldClass >> "displayName");
-    
+
     _displayName = format [localize LSTRING(Action_Prepare), _displayName];
     private _statement = {_this call FUNC(prepShield)};
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Used to execute the checkPBOs module without placing the module. Don't use this together with the module.
@@ -14,9 +15,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [0, false, ""] call ace_common_fnc_checkPBOs
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_mode", ["_checkAll", false], ["_whitelist", "", [""]]];
 TRACE_3("params",_mode,_checkAll,_whitelist);

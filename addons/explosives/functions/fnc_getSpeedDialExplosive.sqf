@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Gets the explosive from the speed dial entry.
@@ -13,15 +14,12 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_code"];
 TRACE_1("params",_code);
 
-private ["_explosive"];
-
 if (isNil QGVAR(CellphoneIEDs)) exitWith {[]};
-_explosive = [];
+private _explosive = [];
 {
     if ((_x select 1) == _code) exitWith {
         _explosive = _x;

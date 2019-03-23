@@ -1,27 +1,27 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
- * Initalises the `radius` zeus module attribute
+ * Initializes the "Radius" Zeus module attribute.
  *
  * Arguments:
  * 0: radius controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [CONTROL] call ace_zeus_fnc_ui_attributeRadius
  *
  * Public: No
  */
 
-#include "script_component.hpp"
-
-disableSerialization;
-
-//Generic Init:
+// Generic init
 params ["_control"];
 private _display = ctrlParent _control;
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
-//Specific on-load stuff:
+// Specific onLoad stuff
 private _edit = _control controlsGroupCtrl 26467;
 
 _edit ctrlSetText "100";
@@ -44,4 +44,4 @@ private _fnc_onKeyUp = {
 };
 
 [_display] call _fnc_onKeyUp;
-_display displayAddEventHandler ["keyUp", _fnc_onKeyUp];
+_display displayAddEventHandler ["KeyUp", _fnc_onKeyUp];

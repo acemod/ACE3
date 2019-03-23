@@ -1,9 +1,14 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Detonates ammunition from a vehicle until no ammo left
  *
  * Arguments:
  * 0: vehicle <OBJECT>
+ * 1: Ammo Array <ARRAY>
+ *      0: Magazine Classname <STRING>
+ *      1: Ammo Count <NUMBER>
+ * 2: Total Ammo Count <NUMBER>
  *
  * Return Value:
  * None
@@ -13,10 +18,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 #define MAX_TIME_BETWEEN_AMMO_DET 25
 
-params ["_vehicle", "_magazines"];
+params ["_vehicle", "_magazines", "_totalAmmo"];
 
 if (isNull _vehicle) exitWith {}; // vehicle got deleted
 if (_magazines isEqualTo []) exitWith {}; // nothing to detonate anymore
@@ -27,21 +31,23 @@ private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_amountOfMagazines"];
 
 if (_amountOfMagazines > 0) exitWith {
-    private _newMagCount = _amountOfMagazines - floor(1 + random(6));
-    if (_newMagCount <= 0) then {
+    private _removed = _amountOfMagazines min floor(1 + random(6 / GVAR(ammoCookoffDuration)));
+
+    _amountOfMagazines = _amountOfMagazines - _removed;
+    if (_amountOfMagazines <= 0) then {
         _magazines deleteAt _magazineIndex;
     } else {
-        _magazine set [1, _newMagCount]; // clear out the magazine
+        _magazine set [1, _amountOfMagazines]; // clear out the magazine
     };
-    private _ammo = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "ammo");
+    private _timeBetweenAmmoDetonation = (((random 10) / (sqrt _totalAmmo)) min MAX_TIME_BETWEEN_AMMO_DET) max 0.1;
+    TRACE_2("",_totalAmmo,_timeBetweenAmmoDetonation);
+    _totalAmmo = _totalAmmo - _removed;
 
-    private _timeBetweenAmmoDetonation = (random 7) * (1 / random (_amountOfMagazines)) min MAX_TIME_BETWEEN_AMMO_DET;
-    _timeBetweenAmmoDetonation = _timeBetweenAmmoDetonation max 0.1;
+    private _ammo = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "ammo");
+    private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
 
     private _speedOfAmmo = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "initSpeed");
-    private _simulationTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "simulation");
-    private _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber");
-    private _simType = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
+    private _simType = getText (_ammoCfg >> "simulation");
 
     private _effect2pos = _vehicle selectionPosition "destructionEffect2";
 
@@ -52,14 +58,13 @@ if (_amountOfMagazines > 0) exitWith {
         if (_spawnPos select 2 < 0) then {
             _spawnPos set [2, 0];
         };
-        private _projectile = _ammo createVehicle [0,0,0];
-        _projectile setPos _spawnPos;
+
+        private _projectile = createVehicle [_ammo, _spawnPos, [], 0, "CAN_COLLIDE"];
         if (_flyAway) then {
             private _vectorAmmo = [(-1 + (random 2)), (-1 + (random 2)), -0.2 + (random 1)];
             private _velVec = _vectorAmmo vectorMultiply _speed;
             _projectile setVectorDir _velVec;
             _projectile setVelocity _velVec;
-            [ACE_player, _projectile, [1,0,0,1]] call EFUNC(frag,addTrack);
         } else {
             _projectile setDamage 1;
         };
@@ -91,22 +96,38 @@ if (_amountOfMagazines > 0) exitWith {
         };
         [_vehicle, _ammo, _speed, random 1 < 0.5] call _spawnProjectile;
     };
-    if (toLower _simType == "shotrocket" || {toLower _simType == "shotmissile"}) then {
+    if (toLower _simType in ["shotrocket", "shotmissile", "shotsubmunitions"]) then {
         if (random 1 < 0.1) then {
             private _sound = selectRandom [QUOTE(PATHTO_R(sounds\cannon_crack_close.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close_filtered.wss))];
             playSound3D [_sound, objNull, false, (getPosASL _vehicle), 3, 1, 1600];
 
             [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
         } else {
-            "ACE_ammoExplosionLarge" createvehicle (_vehicle modelToWorld _effect2pos);
+            createvehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
         };
     };
-    if (toLower _simType in ["shotdirectionalbomb", "shotilluminating", "shotmine"]) then {
+    if (toLower _simType in ["shotdirectionalbomb", "shotmine"]) then {
         if (random 1 < 0.5) then {
-            [_vehicle, _ammo, 0, false] call _spawnProjectile;
+            // Not all explosives detonate on destruction, some have scripted alternatives
+            private _scripted = getNumber (_ammoCfg >> "triggerWhenDestroyed") == 1;
+            if !(_scripted) then {
+                _ammo = getText (_ammoCfg >> "ace_explosives_Explosive");
+            };
+
+            // If a scripted alternative doesn't exist use generic explosion
+            if (_ammo != "") then {
+                [_vehicle, _ammo, 0, false] call _spawnProjectile;
+            } else {
+                createvehicle ["SmallSecondary", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
+            };
+        };
+    };
+    if (toLower _simType == "shotilluminating") then {
+        if (random 1 < 0.15) then {
+            [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
         };
     };
 
-    [FUNC(detonateAmmunition), [_vehicle, _magazines], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
+    [FUNC(detonateAmmunition), [_vehicle, _magazines, _totalAmmo], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
 };
-[FUNC(detonateAmmunition), [_vehicle, _magazines], random 3] call CBA_fnc_waitAndExecute;
+ERROR_1("mag with no ammo - %1", _magazine);

@@ -10,23 +10,4 @@ class CfgVehicles {
             };
         };
     };
-
-    // laserTarget fails if the turret does not have "primaryGunner" config
-    // This only effects the indfor strider who's commander is not the primaryGunner
-    class LandVehicle;
-    class Car: LandVehicle {
-        class NewTurret;
-    };
-    class Car_F: Car {
-        class Turrets {
-            class MainTurret: NewTurret {};
-        };
-    };
-    class MRAP_03_base_F: Car_F {
-        class Turrets: Turrets {
-            class CommanderTurret: MainTurret {
-                primaryGunner = 1;
-            };
-        };
-    };
 };

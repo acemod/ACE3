@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check what kind of weapon the given class name is.
@@ -12,9 +13,11 @@
  *   3 = handgun
  *  -1 = other
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponType
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_weapon"];
 

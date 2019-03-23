@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the gun list screen on/off
@@ -6,14 +7,13 @@
  * change gun? <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * false call ace_atragmx_fnc_toggle_gun_list
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (ctrlVisible 6000) then {
     false call FUNC(show_gun_list);

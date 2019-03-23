@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Starts the deploy process for sandbags.
@@ -13,12 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
 // prevent the placing unit from running
 [_unit, "forceWalk", "ACE_Sandbag", true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", "ACE_Sandbag", true] call EFUNC(common,statusEffect_set);
 
 // create the sandbag
 private _sandBag = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];

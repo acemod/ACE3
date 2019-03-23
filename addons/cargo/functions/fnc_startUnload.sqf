@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Start unload action.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 
@@ -28,13 +28,18 @@ private _ctrl = _display displayCtrl 100;
 private _selected = (lbCurSel _ctrl) max 0;
 
 if (count _loaded <= _selected) exitWith {};
-private _item = _loaded select _selected; //This can be an object or a classname string
+private _item = _loaded select _selected; // This can be an object or a classname string
 
 if (GVAR(interactionParadrop)) exitWith {
+    // If drop time is 0 don't show a progress bar
+    if (GVAR(paradropTimeCoefficent) == 0) exitWith {
+        [QGVAR(paradropItem), [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
+    };
+
     // Start progress bar - paradrop
     private _size = [_item] call FUNC(getSizeItem);
     [
-        2.5 * _size,
+        GVAR(paradropTimeCoefficent) * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
         {
             (_this select 0) params ["_item", "_target", "_player"];
@@ -65,17 +70,24 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     private _size = [_item] call FUNC(getSizeItem);
 
     [
-        5 * _size,
+        GVAR(loadTimeCoefficient) * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
-        {["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
-        {},
+        {TRACE_1("unload finish",_this); ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
+        {TRACE_1("unload fail",_this);},
         localize LSTRING(UnloadingItem),
-        {true},
+        {
+            (_this select 0) params ["_item", "_target", "_player"];
+            
+            (alive _target)
+            && {locked _target < 2}
+            && {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+            && {_item in (_target getVariable [QGVAR(loaded), []])}
+        },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
 } else {
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
 
-    [[LSTRING(UnloadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
+    [[LSTRING(UnloadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };

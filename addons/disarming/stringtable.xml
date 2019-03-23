@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Disarming">
         <Key ID="STR_ACE_Disarming_OpenInventory">
@@ -13,6 +13,9 @@
             <Hungarian>Felszerelés megtekintése</Hungarian>
             <Portuguese>Abrir inventário</Portuguese>
             <Japanese>インベントリを開く</Japanese>
+            <Korean>소지품 열기</Korean>
+            <Chinese>開啟裝備</Chinese>
+            <Chinesesimp>开启装备</Chinesesimp>
         </Key>
     </Package>
 </Project>

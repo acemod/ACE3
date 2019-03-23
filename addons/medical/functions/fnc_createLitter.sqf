@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Spawns litter for the treatment action on the ground around the target
@@ -7,17 +8,18 @@
  * 1: The target <OBJECT>
  * 2: The treatment Selection Name <STRING>
  * 3: The treatment classname <STRING>
- * 4: ?
- * 5: Users of Items <?>
+ * 4: ? <UNKNOWN>
+ * 5: Users of Items <UNKNOWN>
  * 6: Blood Loss on selection (previously called _previousDamage) <NUMBER>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selection", "classname", , , 5] call ACE_medical_fnc_createLitter
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define MIN_ENTRIES_LITTER_CONFIG 3
 

@@ -2,7 +2,9 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 // Laser default variables
 ACE_DEFAULT_LASER_CODE = 1111;

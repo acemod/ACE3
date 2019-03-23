@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Reset earplugs on respawn, and then re-add if appropriate
@@ -6,14 +7,13 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ACE_hearing_fnc_handleRespawn;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);

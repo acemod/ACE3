@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Starts watching the target for sideways correction.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [car, [turret]] call ace_fcs_fnc_keyDown
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret"];
 

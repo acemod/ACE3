@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Get the distance to the next object the player is looking at. Used for laser distance measurements.
@@ -10,9 +11,11 @@
  * Return Value:
  * Distance in meters <NUMBER>
  *
+ * Example:
+ * [5,20000,56] call ace_common_fnc_getTargetDistance
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_accuracy",1], ["_maxDistance",5000], ["_minDistance",0]];
 

@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all input fields based on the currently selected target
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_target_selection
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 {((uiNamespace getVariable "ATragMX_Display") displayCtrl _x) ctrlEnable true} forEach [500, 501, 502, 503];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2
  * Handle "take" event
@@ -11,9 +12,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, thing, "thing"] call ace_overheating_fnc_handleTakeEH
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 if !(GVAR(unJamOnreload)) exitWith {};
 

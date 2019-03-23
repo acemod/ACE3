@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Calculates the offsets for all weapons needed to hit the current target.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [car, [turret]] call ace_fcs_fnc_keyUp
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound", true]];
 TRACE_5("params",_vehicle,_turret,_distance,_showHint,_playSound);

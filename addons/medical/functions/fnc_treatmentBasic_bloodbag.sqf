@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Callback when the bloodbag treatment is complete
@@ -11,10 +12,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentBasic_bloodbag
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_treatmentClassname"];
 

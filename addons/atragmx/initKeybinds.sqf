@@ -15,11 +15,10 @@
 
 
 //Add deviceKey entry:
-private ["_conditonCode", "_toggleCode", "_closeCode"];
-_conditonCode = {
+private _conditonCode = {
     [] call FUNC(can_show);
 };
-_toggleCode = {
+private _toggleCode = {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
     if (GVAR(active)) exitWith {
@@ -28,7 +27,7 @@ _toggleCode = {
     // Statement
     [] call FUNC(create_dialog);
 };
-_closeCode = {
+private _closeCode = {
     if (GVAR(active)) exitWith {
         closeDialog 0;
     };

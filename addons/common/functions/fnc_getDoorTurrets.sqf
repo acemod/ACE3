@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Returns all turret indecies of door gunners.
@@ -8,9 +9,11 @@
  * Return Value:
  * All turret indecies of the Vehicle <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getDoorTurrets
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
@@ -23,7 +26,7 @@ private _doorTurrets = [];
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 
-    if (getNumber (_config >> "isCopilot" == 0) && {count getArray (_config >> "weapons") > 0}) then {
+    if (((getNumber (_config >> "isCopilot")) == 0) && {count getArray (_config >> "weapons") > 0}) then {
         _doorTurrets pushBack _x;
     };
     false

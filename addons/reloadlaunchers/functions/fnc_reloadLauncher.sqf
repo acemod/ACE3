@@ -1,19 +1,22 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Reload a launcher
  *
  * Arguments:
- * 0: Unit to do the reloading (Object)
- * 1: Target to rload (Object)
- * 2: weapon name (String)
- * 3: missile name (String)
+ * 0: Unit to do the reloading <OBJECT>
+ * 1: Target to rload <OBJECT>
+ * 2: weapon name <STRING>
+ * 3: missile name <STRING>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_realoadLauncher
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_target","_weapon","_magazine"];
 TRACE_4("params",_unit,_target,_weapon,_magazine);
@@ -24,4 +27,4 @@ if (currentWeapon _target != _weapon) exitWith {};
 if (currentMagazine _target != "") exitWith {};
 
 // command is wip, reload time for launchers is not intended.
-_target addWeaponItem [_weapon, _magazine]; 
+_target addWeaponItem [_weapon, _magazine];

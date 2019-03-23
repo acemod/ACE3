@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 ["ace_settingsInitialized", {
     // Hold on a little bit longer to ensure anims will work
@@ -35,6 +36,22 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
-["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
-["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);
+["ACE3 Common", QGVAR(captives), [(localize LSTRING(SetCaptive)), (localize LSTRING(KeyComb_description))],
+{
+    private _target = cursorObject;
+    if !([ACE_player, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !(_target isKindOf "CAManBase") exitWith {false};
+    if ((_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")) exitWith {false};
+
+    if ([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
+        [ACE_player, _target] call FUNC(doApplyHandcuffs);
+        true
+    };
+    false
+},
+{false},
+[DIK_F1, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + F1
+
+["isNotEscorting", {!GETVAR(_this select 0,GVAR(isEscorting),false)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotHandcuffed", {!GETVAR(_this select 0,GVAR(isHandcuffed),false)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSurrendering", {!GETVAR(_this select 0,GVAR(isSurrendering),false)}] call EFUNC(common,addCanInteractWithCondition);

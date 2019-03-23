@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk et.al.
  * Calculates a connection for refueling.
@@ -5,8 +6,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
- * 2: Visual Position <ARRAY>
+ * 1: Vehicle <OBJECT>
+ * 2: Visual Position ASL <ARRAY>
  * 3: Nozzle <OBJECT>
  *
  * Return Value:
@@ -17,80 +18,65 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-private ["_closeInDistance", "_endPosTestOffset"];
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_startingPosition", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
-private _startingOffset = _target worldToModel _startingPosition;
+params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startingPosASL", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
 
-private _startDistanceFromCenter = vectorMagnitude _startingOffset;
-private _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 
-private _closeInMax = _startDistanceFromCenter;
-private _closeInMin = 0;
+private _bestPosASL = [];
+private _bestPosDistance = 1e99;
+private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
+private _modelVector = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,0]));
+private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToWorld [0,0,-1]));
 
-while {(_closeInMax - _closeInMin) > 0.01} do {
-    _closeInDistance = (_closeInMax + _closeInMin) / 2;
-    _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
-    _endPosTestOffset set [2, (_startingOffset select 2)];
-    private _endPosTest = _target modelToWorldVisual _endPosTestOffset;
-
-    private _doesIntersect = false;
+{
+    private _endPosASL = _x;
+    // [_startingPosASL, _endPosASL, [1,0,0,1]] call EFUNC(common,addLineToDebugDraw); // Debug scan lines
+    private _intersections = lineIntersectsSurfaces [_startingPosASL, _endPosASL, _unit];
     {
-        if (_doesIntersect) exitWith {};
-        private _startingPosShifted = _startingPosition vectorAdd _x;
-        _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
-        {
-            _endPosShifted = _endPosTest vectorAdd _x;
-            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
-
-            //Uncomment to see the lazor show, and see how the scanning works:
-            // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
-            if (_target in lineIntersectsWith [_startASL, _endASL, _unit]) exitWith {_doesIntersect = true};
-        } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
-    } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
-
-    if (_doesIntersect) then {
-        _closeInMax = _closeInDistance;
-    } else {
-        _closeInMin = _closeInDistance;
-    };
-};
-
-_closeInDistance = (_closeInMax + _closeInMin) / 2;
+        _x params ["_intersectPosASL", "", "_intersectObject"];
+        if (_intersectObject == _sink) then {
+            private _distance = _startingPosASL distance _intersectPosASL;
+            if (_distance < _bestPosDistance) then {
+                _bestPosDistance = _distance;
+                _bestPosASL = _intersectPosASL;
+            };
+        };
+    } forEach _intersections;
+} forEach [
+    // Shoot rays towards player's view angle and see which spot is closest
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [-0.25,0,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0.25,0,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,-0.25,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [-0.25,-0.25,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0.25,-0.25,1])) vectorMultiply 3),
+    AGLtoASL (_sink modelToWorld [0,0,0]), // Try old method of just using model center
+    AGLtoASL (_sink modelToWorld [0,0,-0.5])
+];
 
 //Checks (too close to center or can't attach)
-if ((_startDistanceFromCenter - _closeInDistance) < 0.1) exitWith {
-    TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
+if (_bestPosASL isEqualTo []) exitWith {
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
-_closeInDistance = (_closeInDistance - 0.05);
+_bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
 
-_endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
-_endPosTestOffset set [2, (_startingOffset select 2)];
+private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
 
 [
-    2,
-    [_unit, _nozzle, _target, _endPosTestOffset],
+    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    [_unit, _nozzle, _sink, _attachPosModel],
     {
         params ["_args"];
-        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
+        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
-        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
-        REFUEL_UNHOLSTER_WEAPON
-        private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
-        if (_actionID != -1) then {
-            _unit removeAction _actionID;
-            _unit setVariable [QGVAR(ReleaseActionID), nil];
-        };
 
         detach _nozzle;
-        _nozzle attachTo [_target, _endPosTestOffset];
+        _nozzle attachTo [_sink, _endPosTestOffset];
         _endPosTestOffset params ["_x", "_y"];
-        private _bb = boundingBoxReal _target;
+        private _bb = boundingBoxReal _sink;
         _bb params ["_ll", "_rr"];
         _ll set [2, 0];
         _rr set [2, 0];
@@ -120,9 +106,10 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
             };
         };
         [QEGVAR(common,setVectorDirAndUp), [_nozzle, _dirAndUp], _nozzle] call CBA_fnc_targetEvent;
-        _nozzle setVariable [QGVAR(sink), _target, true];
+        if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), false, true]; };
+        _nozzle setVariable [QGVAR(sink), _sink, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
-        _target setVariable [QGVAR(nozzle), _nozzle, true];
+        _sink setVariable [QGVAR(nozzle), _nozzle, true];
 
         _source = _nozzle getVariable QGVAR(source);
         private _fuel = [_source] call FUNC(getFuel);
@@ -132,10 +119,17 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
             _source setVariable [QGVAR(fuelCounter), _fuel, true];
         };
 
-        [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
+        [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
+
+        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
+            _unit setVariable [QGVAR(tempFuel), nil];
+            [_unit, _nozzle] call FUNC(turnOn);
+        } else {
+            [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        };
     },
     "",
     localize LSTRING(ConnectAction),
     {true},
-    ["isnotinside"]
+    [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

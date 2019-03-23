@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Handles each frame durring the repack progressBar.
@@ -16,9 +17,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_ars", "_elapsedTime", "_totalTime"];
+params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_magazineClassname", "_lastAmmoCount", "_simEvents"];
 
 if !((_simEvents select 0) params ["_nextEventTime", "_nextEventIsBullet", "_nextEventMags"]) exitWith { ERROR("No Event"); false };

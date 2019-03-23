@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Module Function to make a unit surrender (can be called from editor)
@@ -9,14 +10,13 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [objNull, [player], true] call ace_captives_fnc_moduleSurrender
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
 

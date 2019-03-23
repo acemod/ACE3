@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the type of damage based upon the projectile.
@@ -5,13 +6,14 @@
  * Arguments:
  * 0: The projectile classname or object <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Type of damage <STRING>
+ *
+ * Example:
+ * ["bullet"] call ACE_medical_fnc_getTypeOfDamage
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_typeOfProjectile"];
 

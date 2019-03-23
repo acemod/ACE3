@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Grenades">
         <Key ID="STR_ACE_Grenades_SwitchGrenadeMode">
@@ -12,7 +12,10 @@
             <Hungarian>Gránátkezelési mód váltása</Hungarian>
             <Italian>Cambia tipo di granata</Italian>
             <Portuguese>Alternar Modo de Granada</Portuguese>
-            <Japanese>グレネード モードを切り替え</Japanese>
+            <Japanese>投てき方法を切り替え</Japanese>
+            <Korean>투척 종류 전환</Korean>
+            <Chinesesimp>切换投掷模式</Chinesesimp>
+            <Chinese>切換投擲模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_NormalThrow">
             <English>Normal Throw</English>
@@ -25,7 +28,10 @@
             <Hungarian>Normál dobás</Hungarian>
             <Italian>Lancio normale</Italian>
             <Portuguese>Arremesso Normal</Portuguese>
-            <Japanese>通常で投げる</Japanese>
+            <Japanese>普通に投げる</Japanese>
+            <Korean>일반 던지기</Korean>
+            <Chinesesimp>普通投掷</Chinesesimp>
+            <Chinese>普通投擲</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_HighThrow">
             <English>High Throw</English>
@@ -39,6 +45,9 @@
             <Italian>Lancio verso l'alto</Italian>
             <Portuguese>Arremesso Alto</Portuguese>
             <Japanese>高く投げる</Japanese>
+            <Korean>높이 던지기</Korean>
+            <Chinesesimp>高抛</Chinesesimp>
+            <Chinese>高拋</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_PreciseThrow">
             <English>Precise Throw</English>
@@ -52,6 +61,9 @@
             <Italian>Lancio preciso</Italian>
             <Portuguese>Arremesso Preciso</Portuguese>
             <Japanese>低く投げる</Japanese>
+            <Korean>정확한 던지기</Korean>
+            <Chinesesimp>精准投掷</Chinesesimp>
+            <Chinese>精準投擲</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_RollGrenade">
             <English>Roll Grenade</English>
@@ -65,6 +77,9 @@
             <Italian>Fai rotolare la granata</Italian>
             <Portuguese>Rolar Granada</Portuguese>
             <Japanese>転がす</Japanese>
+            <Korean>굴려넣기</Korean>
+            <Chinesesimp>地面滚抛</Chinesesimp>
+            <Chinese>地面滾拋</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_DropGrenade">
             <English>Drop Grenade</English>
@@ -78,6 +93,9 @@
             <Italian>Lascia la granata</Italian>
             <Portuguese>Largar Granada</Portuguese>
             <Japanese>落とす</Japanese>
+            <Korean>떨어뜨리기</Korean>
+            <Chinesesimp>下丢投掷</Chinesesimp>
+            <Chinese>下丟投擲</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
@@ -91,6 +109,9 @@
             <Italian>Granata Stordente M84</Italian>
             <Portuguese>M84 granada de atordoamento</Portuguese>
             <Japanese>M84 閃光手榴弾</Japanese>
+            <Korean>M84 섬광 수류탄</Korean>
+            <Chinesesimp>M84 震撼弹</Chinesesimp>
+            <Chinese>M84 震撼彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_NameShort">
             <English>M84</English>
@@ -104,6 +125,9 @@
             <Italian>M84</Italian>
             <Portuguese>M84</Portuguese>
             <Japanese>M84</Japanese>
+            <Korean>M84</Korean>
+            <Chinesesimp>M84</Chinesesimp>
+            <Chinese>M84</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Description">
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
@@ -117,6 +141,9 @@
             <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
             <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
             <Japanese>フラッシュバンとも知られています。即時に失明と難聴、耳鳴り、内耳障害を引き起こします。</Japanese>
+            <Korean>플래시뱅이라고도 알려져있습니다. 사용즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
+            <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
+            <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
@@ -130,6 +157,9 @@
             <Spanish>Bengala M127A1 (Blanca)</Spanish>
             <French>M127A1 Feux à main (Blanc)</French>
             <Japanese>M127A1 信号弾 (白)</Japanese>
+            <Korean>M127A1 신호탄 (하얀색)</Korean>
+            <Chinesesimp>M127A1 手持式信号弹 (白色)</Chinesesimp>
+            <Chinese>M127A1 手持式信號彈 (白色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_Name">
             <English>M127A1 Hand Held Signal (Red)</English>
@@ -143,6 +173,9 @@
             <Spanish>Bengala M127A1 (Roja)</Spanish>
             <French>M127A1 Feux à main (Rouge)</French>
             <Japanese>M127A1 信号弾 (赤)</Japanese>
+            <Korean>M127A1 신호탄 (빨간색)</Korean>
+            <Chinesesimp>M127A1 手持式信号弹 (红色)</Chinesesimp>
+            <Chinese>M127A1 手持式信號彈 (紅色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_Name">
             <English>M127A1 Hand Held Signal (Green)</English>
@@ -156,6 +189,9 @@
             <Spanish>Bengala M127A1 (Verde)</Spanish>
             <French>M127A1 Feux à main (Vert)</French>
             <Japanese>M127A1 信号弾 (緑)</Japanese>
+            <Korean>M127A1 신호탄 (초록색)</Korean>
+            <Chinesesimp>M127A1 手持式信号弹 (绿色)</Chinesesimp>
+            <Chinese>M127A1 手持式信號彈 (綠色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_Name">
             <English>M127A1 Hand Held Signal (Yellow)</English>
@@ -169,6 +205,9 @@
             <Spanish>Bengala M127A1 (Amarilla)</Spanish>
             <French>M127A1 Feux à main (Jaune)</French>
             <Japanese>M127A1 信号弾 (黄)</Japanese>
+            <Korean>M127A1 신호탄 (노란색)</Korean>
+            <Chinesesimp>M127A1 手持式信号弹 (黄色)</Chinesesimp>
+            <Chinese>M127A1 手持式信號彈 (黃色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Description">
             <English>White Hand Flare</English>
@@ -181,7 +220,10 @@
             <Russian>Фальшфейер (Белый)</Russian>
             <Spanish>Bengala (Blanca)</Spanish>
             <French>Feux à main (Blanc)</French>
-            <Japanese>白の発炎筒</Japanese>
+            <Japanese>白の手持ち式信号弾</Japanese>
+            <Korean>하얀색 불꽃신호기</Korean>
+            <Chinesesimp>白色手持式信号弹</Chinesesimp>
+            <Chinese>白色手持式信號彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_Description">
             <English>Red Hand Flare</English>
@@ -194,7 +236,10 @@
             <Russian>Фальшфейер (Красный)</Russian>
             <Spanish>Bengala (Roja)</Spanish>
             <French>Feux à main (Rouge)</French>
-            <Japanese>赤の発炎筒</Japanese>
+            <Japanese>赤の手持ち式信号弾</Japanese>
+            <Korean>빨간색 불꽃신호기</Korean>
+            <Chinesesimp>红色手持式信号弹</Chinesesimp>
+            <Chinese>紅色手持式信號彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_Description">
             <English>Green Hand Flare</English>
@@ -207,7 +252,10 @@
             <Russian>Фальшфейер (Зелёный)</Russian>
             <Spanish>Bengala (Verde)</Spanish>
             <French>Feux à main (Vert)</French>
-            <Japanese>緑の発炎筒</Japanese>
+            <Japanese>緑の手持ち式信号弾</Japanese>
+            <Korean>초록색 불꽃신호기</Korean>
+            <Chinesesimp>绿色手持式信号弹</Chinesesimp>
+            <Chinese>綠色手持式信號彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_Description">
             <English>Yellow Hand Flare</English>
@@ -220,7 +268,10 @@
             <Russian>Фальшфейер (Жёлтые)</Russian>
             <Spanish>Bengala (Amarilla)</Spanish>
             <French>Feux à main (Jaune)</French>
-            <Japanese>黄の発炎筒</Japanese>
+            <Japanese>黄の手持ち式信号弾</Japanese>
+            <Korean>노란색 불꽃신호기</Korean>
+            <Chinesesimp>黄色手持式信号弹</Chinesesimp>
+            <Chinese>黃色手持式信號彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_NameShort">
             <English>M127A1 (White)</English>
@@ -234,6 +285,9 @@
             <Russian>M127A1 (Белый)</Russian>
             <Spanish>M127A1 (Blanca)</Spanish>
             <Japanese>M127A1 (白)</Japanese>
+            <Korean>M127A1 (하양)</Korean>
+            <Chinesesimp>M127A1 (白色)</Chinesesimp>
+            <Chinese>M127A1 (白色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Red_NameShort">
             <English>M127A1 (Red)</English>
@@ -247,6 +301,9 @@
             <Russian>M127A1 (Красный)</Russian>
             <Spanish>M127A1 (Roja)</Spanish>
             <Japanese>M127A1 (赤)</Japanese>
+            <Korean>M127A1 (빨강)</Korean>
+            <Chinesesimp>M127A1 (红色)</Chinesesimp>
+            <Chinese>M127A1 (紅色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Green_NameShort">
             <English>M127A1 (Green)</English>
@@ -260,6 +317,9 @@
             <Russian>M127A1 (Зелёный)</Russian>
             <Spanish>M127A1 (Verde)</Spanish>
             <Japanese>M127A1 (緑)</Japanese>
+            <Korean>M127A1 (초록)</Korean>
+            <Chinesesimp>M127A1 (绿色)</Chinesesimp>
+            <Chinese>M127A1 (綠色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_Yellow_NameShort">
             <English>M127A1 (Yellow)</English>
@@ -273,6 +333,9 @@
             <Russian>M127A1 (Жёлтые)</Russian>
             <Spanish>M127A1 (Amarilla)</Spanish>
             <Japanese>M127A1 (黄)</Japanese>
+            <Korean>M127A1 (노랑)</Korean>
+            <Chinesesimp>M127A1 (黄色)</Chinesesimp>
+            <Chinese>M127A1 (黃色)</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Name">
             <English>AN-M14 Incendiary Grenade</English>
@@ -280,6 +343,11 @@
             <Russian>AN-M14 Зажигательная граната</Russian>
             <Japanese>AN-M14 焼夷手榴弾</Japanese>
             <Polish>Granat zapalający AN-M14</Polish>
+            <Korean>AN-M14 소이 수류탄</Korean>
+            <French>Grenade incendiaire AN-M14</French>
+            <Italian>AN-M14 Granata Incendiaria</Italian>
+            <Chinesesimp>AN-M14 燃烧手榴弹</Chinesesimp>
+            <Chinese>AN-M14 燃燒手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_NameShort">
             <English>AN-M14</English>
@@ -287,13 +355,59 @@
             <Russian>AN-M14</Russian>
             <Japanese>AN-M14</Japanese>
             <Polish>AN-M14</Polish>
+            <Korean>AN-M14</Korean>
+            <French>AN-M14</French>
+            <Italian>AN-M14</Italian>
+            <Chinesesimp>AN-M14</Chinesesimp>
+            <Chinese>AN-M14</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Description">
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
             <German>Brandsatzgranate. Verwendet um Waffen, Munition und andere Ausrüstung zu zerstören.</German>
             <Russian>Зажигательная граната используется для уничтожения оружия, боеприпасов и прочего оборудования.</Russian>
-            <Japanese>焼夷手榴弾は武器や弾薬箱などの装備を破壊するために使われます。</Japanese>
+            <Japanese>焼夷手榴弾は武器や弾薬箱などの装備を破壊する為に使われます。</Japanese>
             <Polish>Granat zapalający, używany do niszczenia broni, amunicji i innego sprzętu.</Polish>
+            <Korean>소이 수류탄은 무기나 탄약 그리고 장비를 파괴할때 쓰입니다.</Korean>
+            <French>Grenade incendiaire utilisé pour détruire des armes, munitions et autres équipements.</French>
+            <Italian>Granata incendiaria usata per distruggere armi, munizioni e altri equipaggiamenti.</Italian>
+            <Chinesesimp>燃烧手榴弹是用来摧毁武器，弹药以及其他装备的好帮手。</Chinesesimp>
+            <Chinese>燃燒手榴彈是用來摧毀武器，彈藥以及其他裝備的好幫手</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_parachute_flare_description">
+            <English>Type: Star Parachute Flare</English>
+            <Polish>Typ: Gwiezdna Flara Spadochronowa</Polish>
+            <Italian>Tipo: Granata a paracadute con bengala</Italian>
+            <Japanese>種類: パラシュート式照明弾 (星弾)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_white">
+            <English>M583 Illumination Flare (White)</English>
+            <Polish>M583 Flara oświetlająca (Biała)</Polish>
+            <Italian>M583 Granata con bengala (Bianca)</Italian>
+            <Japanese>M583 照明弾 (白)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_red">
+            <English>M662 Illumination Flare (Red)</English>
+            <Polish>M662 Flara oświetlająca (Czerwona)</Polish>
+            <Italian>M662 Granata con bengala (Rossa)</Italian>
+            <Japanese>M662 照明弾 (赤)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_green">
+            <English>M661 Illumination Flare (Green)</English>
+            <Polish>M661 Flara oświetlająca (Zielona)</Polish>
+            <Italian>M661 Granata con bengala (Verde)</Italian>
+            <Japanese>M661 照明弾 (緑)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
+            <English>Type: Parachute IR Flare</English>
+            <Polish>Typ: Spadochronowa Flara IR</Polish>
+            <Italian>Tipo: Granata a paracadute con infrarosso</Italian>
+            <Japanese>種類: パラシュート式赤外線照明弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_ir">
+            <English>M992 Illumination IR Flare</English>
+            <Polish>M992 Oświetlająca flara IR</Polish>
+            <Italian>M992 Granata con infrarosso</Italian>
+            <Japanese>M992 赤外線照明弾</Japanese>
         </Key>
     </Package>
 </Project>

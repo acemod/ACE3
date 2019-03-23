@@ -1,17 +1,19 @@
-/*
-* Author: KoffeinFlummi
-* Initializes the blue force tracking module.
-*
-* Arguments:
-* Whatever the module provides. (I dunno.)
-*
-* Return Value:
-* None
-*/
-
 #include "script_component.hpp"
-
-if (!isServer) exitWith {};
+/*
+ * Author: KoffeinFlummi
+ * Initializes the blue force tracking module.
+ *
+ * Arguments:
+ * Whatever the module provides. (I dunno.) <UNKNOWN>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_map_fnc_blueForceTrackingModule
+ *
+ * Public: No
+ */
 
 params ["_logic"];
 

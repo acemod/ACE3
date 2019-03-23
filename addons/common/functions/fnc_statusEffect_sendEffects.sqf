@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Sends all status effects for an object (can be run on non-local objects)
@@ -7,15 +8,13 @@
  * 1: Effect name (or "" to send all) <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, ""] call ace_common_fnc_statusEffect_sendEffects
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_effectName", "", [""]]];
 TRACE_2("params",_object,_effectName);

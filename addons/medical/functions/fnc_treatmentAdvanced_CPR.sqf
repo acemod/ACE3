@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Callback for the CPR treatment action on success.
@@ -11,10 +12,11 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [medic, patient, "selectionName", "bandage"] call ace_medical_fnc_treatmentAdvanced_CPR
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 

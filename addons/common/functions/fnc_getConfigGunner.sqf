@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the gunner config of a vehicles turret.
@@ -8,9 +9,11 @@
  * Return Value:
  * Gunner config <CONFIG>
  *
+ * Example:
+ * [car] call ace_common_fnc_getConfigGunner
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 

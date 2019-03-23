@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou
  * Turn a laser designator off.
@@ -5,7 +6,7 @@
  * Arguments:
  * 0: UUID (from laserOn) <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_uuid"];
 

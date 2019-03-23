@@ -1,11 +1,19 @@
-/*
-
-by commy2
-
-Handles pressing the special vector keys.
-
-*/
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ * Handles pressing the special vector keys.
+ *
+ * Arguments:
+ * 0: String <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["azimuth"] call ace_vector_fnc_onKeyDown
+ *
+ * Public: No
+ */
 
 // set vector config settings
 switch (GVAR(modeReticle)) do {

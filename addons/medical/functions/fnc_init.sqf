@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Initializes unit variables.
@@ -5,12 +6,14 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_init
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -66,16 +69,14 @@ _unit setVariable [QGVAR(hasPain), false, true];
 _unit setVariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];
 _unit setVariable [QGVAR(painSuppress), 0, true];
 
-private ["_allUsedMedication", "_logs"];
-
 // medication
-_allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
+private _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
 {
    _unit setVariable [_x select 0, nil];
 } forEach _allUsedMedication;
 _unit setVariable [QGVAR(allUsedMedication), [], true];
 
-_logs = _unit getVariable [QGVAR(allLogs), []];
+private _logs = _unit getVariable [QGVAR(allLogs), []];
 {
     _unit setVariable [_x, nil];
 } forEach _logs;

@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Setting Up The Development Environment
+title: Setting Up the Development Environment
 description: This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
 group: development
 parent: wiki
@@ -17,7 +17,8 @@ This page describes how you can setup your development environment for ACE3, all
 - A properly setup P-drive
 - Run Arma 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - [Python 3.x](https://www.python.org/)
-- [Mikero Tools](https://dev.withsix.com/projects/mikero-pbodll/files): DePbo, DeRap, DeOgg, Rapify, MakePbo, PboProject
+- [Mikero Tools](https://armaservices.maverick-applications.com/Products/MikerosDosTools/FileBrowserFree): DePbo, DeRap, DeOgg, Rapify, MakePbo, PboProject >=1.70
+- `*.hpp` removed from PboProject's "Exclude From Pbo" list
 - Python, Mikero Tools and Git in PATH environment variable
 - [CBA](https://github.com/CBATeam/CBA_A3/releases/latest) mod (release or development version)
 
@@ -72,21 +73,24 @@ To start the game using this build, you can use the following modline:
 ## 4.3 Creating a Release Build
 
 To create a complete build of ACE3 that you can use without the source files you will need to:
+
 - Ensure `.hpp` is **NOT** in pboProject's "Exclude From Pbo" list
 
 When the requirements are met:
-- Execute `make.py version increment_build <other-increment-args> force check_external release` in the `tools` folder, replacing `<other-increment-args>` with the part of version you want to increment (options described below)
+
+- Execute `make.py version increment_build <other-increment-args> force checkexternal release` in the `tools` folder, replacing `<other-increment-args>` with the part of version you want to increment (options described below)
 
 This will populate the `release` folder with binarized PBOs, compiled extensions, copied extras, bisigns and a bikey. Additionally, an archive file will also be created in the folder. The folder and archive handle like those of any other mod.
 
 Different `make.py` command line options include:
+
 - `version` - update version number in all files and leave them in working directory (leaving this out will still update the version in all files present in the `release` folder, but they will be reverted to not disturb the working directory)
 - `increment_build` - increments _build_ version number
 - `increment_patch` - increments _patch_ version number (ignored with `increment_minor` or `increment_major`)
 - `increment_minor` - increments _minor_ version number and resets _patch_ version number to `0` (ignored with `increment_major`)
 - `increment_major` - increments _major_ version number and resets _minor_ and _patch_ version numbers to `0`
 - `force` - force rebuild all PBOs, even those already present in the `release` directory (combined with `compile` it will also rebuild all extensions)
-- `check_external` - check external references (incompatible only with `<component1> <component2>` and `force <component1> <component2>`)
+- `checkexternal` - check external references (incompatible only with `<component1> <component2>` and `force <component1> <component2>`)
 - `release` - create release packages/archives
 - `<component1> <component2>` - build only specified component(s) (incompatible with `release`)
 - `force <component1> <component2>` - force rebuild specified component(s) (incompatible with `release`)
@@ -123,10 +127,12 @@ class CfgSettings {
 #define DISABLE_COMPILE_CACHE
 ```
 
+All functions in module with `DISABLE_COMPILE_CACHE` line can be recompiled without mission restart with `[] call ACE_PREP_RECOMPILE;` command. You can add a addAction/keybind/pfeh with this code and use it for fast recompiling.
+
 ### 7.2 Restrictions
 
 Files must exist in the built PBOs for file patching to work. If you create a new file you must rebuild the PBO or Arma will not find it in your file paths.
 
-Configs are not patched during run time, only at load time. You do not have have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the [diagnostic exe](https://community.bistudio.com/wiki/Arma_3_Diagnostics_Exe). That includes `diag_mergeConfigFile` which takes a full system path (as in `diag_mergeConfigFile  ["p:\z\ace\addons\my_module\config.cpp"]`) and allows you selectively reload config files.
+Configs are not patched during run time, only at load time. You do not have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the [diagnostic exe](https://community.bistudio.com/wiki/Arma_3_Diagnostics_Exe). That includes `diag_mergeConfigFile` which takes a full system path (as in `diag_mergeConfigFile  ["p:\z\ace\addons\my_module\config.cpp"]`) and allows you selectively reload config files.
 
 If you need to add/remove files, then you'll need to run `build.py` again without the game running, and restart. That is all that is required to add new files for further use in testing.

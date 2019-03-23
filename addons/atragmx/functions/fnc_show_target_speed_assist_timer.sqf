@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows/Hides the target speed assist timer controls
@@ -6,14 +7,13 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_fnc_show_target_speed_assist_timer
+ * false call ace_atragmx_fnc_show_target_speed_assist_timer
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(showTargetSpeedAssistTimer) = _this;
 

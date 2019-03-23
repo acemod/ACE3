@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use item
@@ -9,9 +10,11 @@
  * Return Value:
  * if item has been used. <BOOL>
  *
+ * Example:
+ * [bob, "gun"] call ace_common_fnc_useItem
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_item", ["_vehicleUsage", false]];
 
@@ -19,7 +22,7 @@ private _return = false;
 
 if !(_vehicleUsage) then {
     if (_item != "") then {
-        if (_item in items _unit) then {
+        if (_item in (_unit call EFUNC(common,uniqueItems))) then {
             _unit removeItem _item;
             _return = true;
         } else {

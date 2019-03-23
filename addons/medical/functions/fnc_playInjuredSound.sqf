@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Play the injured sound for a unit if the unit is damaged. The sound broadcasted across MP.
@@ -8,13 +9,14 @@
  * 0: The Unit <OBJECT>
  * 1: Amount of Pain <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, 5] call ACE_medical_fnc_playInjuredSound
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_pain"];
 if (!local _unit || !GVAR(enableScreams)) exitWith{};

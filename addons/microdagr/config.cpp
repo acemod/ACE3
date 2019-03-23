@@ -18,4 +18,5 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "gui.hpp"
+#include "CfgUIGrids.hpp"
 #include "ACE_Settings.hpp"

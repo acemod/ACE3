@@ -1,5 +1,6 @@
+#include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, PiZZADOX
  * Start the dragging process.
  *
  * Arguments:
@@ -14,34 +15,39 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-// check weight
-private _weight = [_target] call FUNC(getWeight);
-
-if (_weight > missionNamespace getVariable ["ACE_maxWeightDrag", 1E11]) exitWith {
+// exempt from weight check if object has override variable set
+if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
+    private _weight = [_target] call FUNC(getWeight);
+    _weight > GETMVAR(ACE_maxWeightDrag,1E11)
+}) exitWith {
+    // exit if object weight is over global var value
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 // add a primary weapon if the unit has none.
 // @todo prevent opening inventory when equipped with a fake weapon
-if (primaryWeapon _unit == "") then {
+if (primaryWeapon _unit isEqualto "") then {
     _unit addWeapon "ACE_FakePrimaryWeapon";
 };
 
 // select primary, otherwise the drag animation actions don't work.
 _unit selectWeapon primaryWeapon _unit;
 
+[_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+
 // prevent multiple players from accessing the same object
 [_unit, _target, true] call EFUNC(common,claim);
 
 // can't play action that depends on weapon if it was added the same frame
-[{
-    [_this, "grabDrag"] call EFUNC(common,doGesture);
-}, _unit] call CBA_fnc_execNextFrame;
+if !(_unit call EFUNC(common,isSwimming)) then {
+    [{
+        [_this, "grabDrag"] call EFUNC(common,doGesture);
+    }, _unit] call CBA_fnc_execNextFrame;
+};
 
 // move a bit closer and adjust direction when trying to pick up a person
 if (_target isKindOf "CAManBase") then {

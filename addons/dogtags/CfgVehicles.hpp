@@ -6,6 +6,7 @@ class CfgVehicles {
                 displayName = CSTRING(itemName);
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeDogtag));
                 statement = "";
+                exceptions[] = {"isNotSwimming", "isNotInside"};
                 showDisabled = 0;
                 distance = 1.75;
                 icon = QPATHTOF(data\dogtag_icon_ca.paa);
@@ -14,16 +15,16 @@ class CfgVehicles {
                     displayName = CSTRING(checkDogtag);
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckDogtag));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkDogtag));
+                    exceptions[] = {"isNotSwimming", "isNotInside"};
                     showDisabled = 0;
-                    priority = 3;
                     icon = QPATHTOF(data\dogtag_icon_ca.paa);
                 };
                 class ACE_TakeDogtag {
                     displayName = CSTRING(takeDogtag);
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeDogtag));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeDogtag));
+                    exceptions[] = {"isNotSwimming", "isNotInside"};
                     showDisabled = 0;
-                    priority = 3;
                     icon = QPATHTOF(data\dogtag_icon_ca.paa);
                 };
             };
@@ -34,7 +35,8 @@ class CfgVehicles {
                     displayName = CSTRING(checkItem);
                     condition = "true";
                     statement = "";
-                    insertChildren = QUOTE(_this call DFUNC(addDogtagActions));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
+                    insertChildren = QUOTE(_player call DFUNC(addDogtagActions));
                 };
             };
         };

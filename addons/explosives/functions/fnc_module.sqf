@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Initialises the explosives module
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-if !(isServer) exitWith {};
 
 params ["_logic"];
 

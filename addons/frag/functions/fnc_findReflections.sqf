@@ -1,5 +1,19 @@
-//fnc_findReflections.sqf
 #include "script_component.hpp"
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_findReflections
+ *
+ * Public: No
+ */
 
 BEGIN_COUNTER(fnc_findReflections);
 params ["_args", "_pfhID"];
@@ -75,23 +89,18 @@ if (_zIndex < 5) then {
     private _explosions = [];
     {
         private _blist = _x select 1;
-        private _avgX = 0;
-        private _avgY = 0;
-        private _avgZ = 0;
+        private _avg = [0, 0, 0];
 
         {
-            ADD(_avgX,_x select 0);
-            ADD(_avgY,_x select 1);
-            ADD(_avgZ,_x select 2);
+            _avg = _avg vectorAdd _x;
         } forEach _blist;
         _c = count _blist;
-        private _bpos = [_avgX / _c, _avgY / _c, _avgZ / _c];
+        private _bpos = _avg vectorMultiply (1 / _c);
 
         private _distance = _pos vectorDistance _bpos;
         private _hitFactor = 1 - (((_distance / (_indirectHitRange * 4)) min 1) max 0);
         // _hitFactor = 1 / (_distance ^ 2);
-        private _hit = _indirectHit * _hitFactor;
-        _hit = (floor (_hit / 4)) min 500;
+        private _hit = (floor (_indirectHit * _hitFactor / 4)) min 500;
         SUB(_hit,_hit % 10);
         private _range = (floor (_indirectHitRange - (_distance / 4))) min 100;
         SUB(_range,_range % 2);

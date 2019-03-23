@@ -9,12 +9,12 @@ class RscInGameUI {
     };
 
     class ACE_RscWeaponZeroing: RscWeaponZeroing {
-        controls[] = {"CA_Zeroing","CA_FOVMode","ACE_DrawReticleHelper","ACE_ScriptedReticle"};
+        controls[] = {"CA_Zeroing", "CA_FOVMode", "ACE_DrawReticleHelper", "ACE_ScriptedReticle"};
 
-        class CA_FOVMode: RscOpticsValue {  // idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
+        class CA_FOVMode: RscOpticsValue {  // Idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
             idc = 154;
             style = 2;
-            colorText[] = {0,0,0,0};
+            colorText[] = {0, 0, 0, 0};
             x = 0;
             y = 0;
             w = 0;
@@ -40,12 +40,12 @@ class RscInGameUI {
     };
 
     class ACE_RscWeapon_base: RscWeaponZeroing {
-        controls[] = {"CA_Zeroing","CA_FOVMode","ACE_DrawReticleHelper","ReticleDay","ReticleNight","BodyNight","BodyDay", "trippleHeadLeft", "trippleHeadRight"}; // don't change this order
+        controls[] = {"CA_Zeroing", "CA_FOVMode", "ACE_DrawReticleHelper", "ReticleDay", "ReticleNight", "BodyNight", "BodyDay", "trippleHeadLeft", "trippleHeadRight"}; // Don't change this order
 
-        class CA_FOVMode: RscOpticsValue {  // idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
+        class CA_FOVMode: RscOpticsValue {  // Idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
             idc = 154;
             style = 2;
-            colorText[] = {0,0,0,0};
+            colorText[] = {0, 0, 0, 0};
             x = 0;
             y = 0;
             w = 0;
@@ -66,12 +66,12 @@ class RscInGameUI {
             size = 0;
             sizeEx = 1;
             text = "";
-            colorText[] = {1,1,1,0};
-            colorBackground[] = {0,0,0,0};
-            x = safezoneX+0.5*safezoneW-0.5*SIZEX;
-            y = safezoneY+0.5*safezoneH-0.5*SIZEX*(4/3);
+            colorText[] = {1, 1, 1, 0};
+            colorBackground[] = {0, 0, 0, 0};
+            x = safezoneX + 0.5 * safezoneW - 0.5 * SIZEX;
+            y = safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3);
             w = SIZEX;
-            h = SIZEX*(4/3);
+            h = SIZEX * (4 / 3);
         };
 
         class ReticleNight: ReticleDay {
@@ -84,10 +84,10 @@ class RscInGameUI {
         class BodyDay: ReticleDay {
             idc = 1713005;
             text = "";
-            x = safezoneX+0.5*safezoneW-0.5*SIZEX;
-            y = safezoneY+0.5*safezoneH-0.5*SIZEX*(4/3);
+            x = safezoneX + 0.5 * safezoneW - 0.5 * SIZEX;
+            y = safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3);
             w = SIZEX;
-            h = SIZEX*(4/3);
+            h = SIZEX * (4 / 3);
         };
 
         class BodyNight: BodyDay {
@@ -95,21 +95,21 @@ class RscInGameUI {
             text = "";
         };
 
-        //These are just black side panels to cover the areas that the optics p3d doesn't cover
-        //It will ONLY effect tripple head users as (safezoneX == safeZoneXAbs) for everyone else
-        //Reference PR #1156:
+        // These are just black side panels to cover the areas that the optics p3d doesn't cover
+        // It will ONLY effect tripple head users as (safezoneX == safeZoneXAbs) for everyone else
+        // Reference PR #1156:
         class trippleHeadLeft: RscText {
             idc = 1713010;
             x = "safeZoneXAbs";
             Y = "safezoneY";
-            W = "(safezoneX - safeZoneXAbs) * ((getResolution select 4)/(16/3))";
+            W = "(safezoneX - safeZoneXAbs) * ((getResolution select 4) / (16 / 3))";
             H = "safeZoneH";
-            colorBackground[] = {0,0,0,1};
+            colorBackground[] = {0, 0, 0, 1};
         };
         class trippleHeadRight: trippleHeadLeft {
             idc = 1713011;
-            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
-             colorBackground[] = {0,0,0,1};
+            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4) / (16 / 3))";
+             colorBackground[] = {0, 0, 0, 1};
         };
     };
 
@@ -190,12 +190,12 @@ class RscInGameUI {
 
 _ctrl = (D displayCtrl 1713006);
 
-_sizeX = 1.54/(getResolution select 5);
-_sizeY = _sizeX*safezoneW/safezoneH;
+_sizeX = 1.54 / (getResolution select 5);
+_sizeY = _sizeX * safezoneW / safezoneH;
 
 _ctrl ctrlSetPosition [
-    safezoneX+0.5*safezoneW-0.5*_sizeX,
-    safezoneY+0.5*safezoneH-0.5*_sizeY,
+    safezoneX + 0.5 * safezoneW - 0.5 * _sizeX,
+    safezoneY + 0.5 * safezoneH - 0.5 * _sizeY,
     _sizeX,
     _sizeY
 ];

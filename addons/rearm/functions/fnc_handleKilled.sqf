@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Handles medical on set dead event.
@@ -13,9 +14,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]]];
+params ["_unit"];
 
 if (!local _unit) exitWith {};
 

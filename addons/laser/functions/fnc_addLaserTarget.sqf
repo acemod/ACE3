@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Adds a vanilla laser target to the tracker PFH and globaly turns it on
@@ -6,7 +7,7 @@
  * 0: TargetObject (vanilla laser) <OBJECT>
  * 1: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_targetObject", "_vehicle"];
 TRACE_2("params",_targetObject,_vehicle);
@@ -50,7 +50,7 @@ private _methodArgs = [_vehicleSourceSelection];
 TRACE_6("Laser on:",_vehicle,_laserMethod,_waveLength,_laserCode,_beamSpread,_methodArgs);
 private _laserUuid = [_vehicle, _vehicle, _laserMethod, _waveLength, _laserCode, _beamSpread, _methodArgs] call FUNC(laserOn);
 
-GVAR(trackedLaserTargets) pushBack [_targetObject, _vehicle, _laserUuid];
+GVAR(trackedLaserTargets) pushBack [_targetObject, _vehicle, _laserUuid, _laserCode];
 TRACE_1("",GVAR(trackedLaserTargets));
 
 if (GVAR(pfehID) == -1) then {

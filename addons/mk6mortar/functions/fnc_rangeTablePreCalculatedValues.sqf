@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Simple Lookup Table for various muzzle velocities and air frictions.
@@ -8,16 +9,15 @@
  * 1: Air Friction <NUMBER>
  *
  * Return Value:
- * <ARRAY>
+ * Array <ARRAY>
  *
  * Example:
  * [200, 0] call ace_mk6mortar_fnc_rangeTablePreCalculatedValues
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-PARAMS_2(_muzzleVelocity,_airFriction);
+params ["_muzzleVelocity", "_airFriction"];
 
 switch (true) do {
 

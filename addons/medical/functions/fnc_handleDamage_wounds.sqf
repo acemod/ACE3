@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.
@@ -12,10 +13,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_wounds
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_6("ACE_DEBUG: HandleDamage Called",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);

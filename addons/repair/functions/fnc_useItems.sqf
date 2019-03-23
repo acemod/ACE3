@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use Equipment items if any is available.
@@ -6,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Item classnames <ARRAY>
  *
- * ReturnValue:
+ * Return Value:
  * [Had Item to Use <BOOL>, Array of units that used the items <ARRAY>] <ARRAY>
  *
  * Example:
@@ -14,26 +15,23 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_items"];
 TRACE_2("params",_unit,_items);
 
-private ["_itemUsedInfo", "_itemsUsedBy"];
-
-_itemsUsedBy = [];
+private _itemsUsedBy = [];
 {
     // handle a one of type use item
     if (_x isEqualType []) then {
         {
-            _itemUsedInfo = [_unit, _x] call FUNC(useItem);
+            private _itemUsedInfo = [_unit, _x] call FUNC(useItem);
             if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
         } forEach _x;
     };
 
     // handle required item
     if (_x isEqualType "") then {
-        _itemUsedInfo = [_unit, _x] call FUNC(useItem);
+        private _itemUsedInfo = [_unit, _x] call FUNC(useItem);
         if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
     };
 } forEach _items;

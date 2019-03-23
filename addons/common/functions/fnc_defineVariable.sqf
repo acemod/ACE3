@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Define a variable for the ACE variable framework
@@ -13,9 +14,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["bob", 1, true, "category", 1, true] call ace_common_fnc_defineVariable
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_name", "_value", "_defaultGlobal", "_category", ["_code", 0], ["_persistent", false]];
 

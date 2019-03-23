@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nic547, commy2
  * Restart the surrendering animation if it got interrupted. Called from a AnimChanged EH.
@@ -6,14 +7,14 @@
  * 0: The Unit <OBJECT>
  * 1: New animation <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, "movearm"] call ACE_captives_fnc_handleAnimChangedSurrendered
  *
  * Public: No
  */
-
-
-#include "script_component.hpp"
 
 params ["_unit", "_newAnimation"];
 

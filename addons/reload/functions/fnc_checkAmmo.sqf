@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Count the ammo of the currently loaded magazine or count rifle grenades. Play animation and display message.
@@ -7,9 +8,13 @@
  * 1: Target. Optional, if not suplied the player counts his personal or static weapon ammo <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [bob, kevin] call ace_reload_fnc_checkAmmo
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 
 #define COUNT_BARS 12
 

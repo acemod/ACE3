@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Add a condition that gets checked by ace_common_fnc_canInteractWith.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["ID", {Condition}] call ace_common_fnc_addCanInteractWithCondition
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_conditionName", "_conditionFunc"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Make the player check the temperature of his spare barrels
@@ -8,15 +9,14 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_overheating_fnc_checkSpareBarrelsTemperature
+ *
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
-
-// Check canInteractWith:
-if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
 
 // Make the unit go kneeling
 [_player] call EFUNC(common,goKneeling);
@@ -34,5 +34,5 @@ if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canI
     {},
     (localize LSTRING(CheckingSpareBarrelsTemperatures)),
     {true},
-    ["isNotInside", "isNotSitting"]
+    ["isNotInside", "isNotSitting", "isNotSwimming"]
 ] call EFUNC(common,progressBar);

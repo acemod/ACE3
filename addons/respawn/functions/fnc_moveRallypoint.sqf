@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Moves a rallypoint to the players location.
@@ -14,13 +15,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_side"];
 
-private ["_rallypoint", "_position"];
-
-_rallypoint = [
+private _rallypoint = [
     objNull,
     missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
     missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
@@ -31,7 +29,7 @@ TRACE_3("moving rally",_unit,_rallypoint,typeOf _rallypoint);
 
 if (isNull _rallypoint) exitWith {};
 
-_position = getPosATL _unit;
+private _position = getPosATL _unit;
 _position = _position findEmptyPosition [0, 2, typeOf _rallypoint];
 
 if (_position isEqualTo []) then {_position = getPosATL _unit};

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Scans the buidling type for UserActions and Ladder mount points.
@@ -6,14 +7,13 @@
  * 0: Building Classname <STRING>
  *
  * Return Value:
- * [[Array of MemPoints], [Array Of Actions]]
+ * [[Array of MemPoints], [Array Of Actions]] <ARRAY>
  *
  * Example:
  * ["Land_i_House_Big_01_V1_F"] call ace_interact_menu_fnc_userActions_getHouseActions
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_typeOfBuilding"];
 

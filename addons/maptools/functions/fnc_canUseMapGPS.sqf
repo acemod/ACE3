@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * canUseMapGPS
@@ -6,11 +7,13 @@
  * None
  *
  * Return Value:
- * <BOOL>
+ * Boolean <BOOL>
+ *
+ * Example:
+ * call ACE_map_fnc_canUseMapGPS
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 visibleMap &&
 {alive ACE_player} &&

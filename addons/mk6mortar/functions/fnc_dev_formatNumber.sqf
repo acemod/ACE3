@@ -1,30 +1,26 @@
-/*
-Author: Pabst Mirror
-
-Description:
-Converts numbers into nicely formated strings.
-
-Parameters:
-0: NUMBER - Input number
-1: STRING - Output type (see case statement)
-2: BOOL   - If output type is mil, convert input type from deg->mil
-
-Returns:
-STRING - Formatted number
-
-Example:
-[45, "mil4", true] call ace_mk6mortar_fnc_dev_formatNumber = "0800"
- */
 #include "script_component.hpp"
+/*
+ * Author: Pabst Mirror
+ * Converts numbers into nicely formated strings.
+ *
+ * Arguments:
+ * 0: Input number <NUMBER>
+ * 1: Output type (see case statement) <STRING>
+ * 2: If output type is mil, convert input type from deg->mil <BOOL>
+ *
+ * Return Value:
+ * Formatted number <STRING>
+ *
+ * Example:
+ * [45, "mil4", true] call ace_mk6mortar_fnc_dev_formatNumber = "0800"
+ *
+ * Public: No
+ */
 
-private ["_theNumber", "_inputType", "_convertToMils", "_decimalPlaces", "_integerPlaces", "_prefix", "_return"];
+params ["_theNumber", "_inputType", "_convertToMils"];
 
-_theNumber = _this select 0;
-_inputType = _this select 1;
-_convertToMils = _this select 2;
-
-_decimalPlaces = -1;
-_integerPlaces = -1;
+private _decimalPlaces = -1;
+private _integerPlaces = -1;
 
 switch (toLower _inputType) do {
 case ("meters"): {
@@ -73,8 +69,8 @@ case ("sec"): {
 
 //CBA_fnc_formatNumber is silly:  [-9.58545, 1, 1, false] call CBA_fnc_formatNumber == "-9.-6"
 
-_prefix = if (_theNumber < 0) then {"-"} else {""};
+private _prefix = if (_theNumber < 0) then {"-"} else {""};
 
-_return = [abs (_theNumber), _integerPlaces, _decimalPlaces, false] call CBA_fnc_formatNumber;
+private _return = [abs (_theNumber), _integerPlaces, _decimalPlaces, false] call CBA_fnc_formatNumber;
 
 (_prefix + _return)

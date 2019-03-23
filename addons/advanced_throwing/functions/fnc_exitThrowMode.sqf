@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Exits throw mode.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_reason"];
 TRACE_2("params",_unit,_reason);
@@ -32,6 +32,10 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     _unit setVariable [QGVAR(lastThrownTime), CBA_missionTime];
     // Fix floating for throwables without proper physics (eg. IR Grenade)
     _activeThrowable setVelocity [0, 0, -0.1];
+
+    // Set thrower
+    private _instigator = (getShotParents _activeThrowable) param [1, _unit]; // getShotParents could be [] on replaced grenades (like IR chemlight)
+    [QEGVAR(common,setShotParents), [_activeThrowable, _unit, _instigator]] call CBA_fnc_serverEvent;
 };
 
 // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)

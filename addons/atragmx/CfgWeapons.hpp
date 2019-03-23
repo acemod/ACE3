@@ -1,7 +1,7 @@
 
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_ATragMX: ACE_ItemCore {
         author = "Ruthberg";
@@ -13,7 +13,7 @@ class CfgWeapons {
         icon = "iconObject_circle";
         mapSize = 0.034;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };
     };

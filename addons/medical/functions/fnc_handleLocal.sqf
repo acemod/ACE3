@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Called when a unit switched locality
@@ -6,14 +7,14 @@
  * 0: The Unit <OBJECT>
  * 1: Is local <BOOL>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true] call ACE_medical_fnc_handleLocal
  *
  * Public: No
  */
-
-
-#include "script_component.hpp"
 
 params ["_unit", "_local"];
 if (_local) then {

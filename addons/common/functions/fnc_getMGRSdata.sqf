@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Gets the current map's MGRS grid zone designator and 100km square.
@@ -12,22 +13,24 @@
  * 1: 100km square <STRING>
  * 2: GZD + 100km sq. as a single string <STRING>
  *
+ * Example:
+ * ["worldName"] call ace_common_fnc_getMGRSdata
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_map", worldName]];
 
 private _long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
-private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
+private _lat = -1 * getNumber (configFile >> "CfgWorlds" >> _map >> "latitude"); // latitude is reversed in arma (negative config values in north)
 private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
 private _mapData = _map call FUNC(getMapData);
 if (!(_mapData isEqualTo [])) then {
     _lat = _mapData select 0;
-    _alt = _mapData select 1;
+    _altitude = _mapData select 1;
 };
-TRACE_2("Latitude and Altitude",_lat,_alt);
+TRACE_2("Latitude and Altitude",_lat,_altitude);
 
 private _UTM = [_long, _lat] call BIS_fnc_posDegToUTM;
 private _easting = _UTM select 0;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Removes a duty factor.
@@ -7,8 +8,12 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * ["ID"] call ace_advanced_fatigue_fnc_removeDutyFactor
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 params [["_id", "", [""]]];
 
 GVAR(dutyList) params ["_idList", "_factorList"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handle unit hit eventhandler
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, 5] call ACE_medical_blood_fnc_hit
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_causedBy", "_damage"];
 

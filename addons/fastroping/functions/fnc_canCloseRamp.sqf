@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the player can close the ramp of the given helo.
@@ -11,12 +12,10 @@
  * Able to close ramp <BOOL>
  *
  * Example:
- * [_player, _vehicle] call ace_fastroping_fnc_canCloseRamp
+ * [_vehicle, _door, _turretPaths] call ace_fastroping_fnc_canCloseRamp
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle", "_door", "_turretPaths"];
 
 (_vehicle doorPhase _door > 0.5) &&

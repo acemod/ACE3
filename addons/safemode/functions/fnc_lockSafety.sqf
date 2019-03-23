@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Put weapon on safety, or take it off safety if safety is already put on.
@@ -15,16 +16,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // don't immediately switch back
 if (inputAction "nextWeapon" > 0) exitWith {};
 
 params ["_unit", "_weapon", "_muzzle"];
 
-private ["_safedWeapons", "_picture"];
-
-_safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
+private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
 if (_weapon in _safedWeapons) exitWith {
     _this call FUNC(unlockSafety);
@@ -62,12 +60,24 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
 };
 
 if (_muzzle isEqualType "") then {
+    private _laserEnabled = _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weapon};
+
     _unit selectWeapon _muzzle;
+
+    if (
+        _laserEnabled
+        && {
+            _muzzle == primaryWeapon _unit // prevent UGL switch
+            || {"" == primaryWeapon _unit} // Arma switches to primary weapon if exists
+        }
+    ) then {
+        {_unit action [_x, _unit]} forEach ["GunLightOn", "IRLaserOn"];
+    };
 };
 
 // play fire mode selector sound
 [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 
 // show info box
-_picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
+private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
 [localize LSTRING(PutOnSafety), _picture] call EFUNC(common,displayTextPicture);

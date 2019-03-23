@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Remove a synced event handler
@@ -6,11 +7,13 @@
  * 0: Name <STRING>
  *
  * Return Value:
- * Boolean of success
+ * Boolean of success <BOOL>
+ *
+ * Example:
+ * ["bob"] call ace_common_fnc_removeSyncedEventHandler
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name"];
 

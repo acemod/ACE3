@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle the animaion for a Unit for Dragging Module
@@ -14,7 +15,8 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
+
+//IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisID"]; // From CBA_fnc_addBISEventHandler;
 
 params ["_unit", "_anim"];
 _thisArgs params ["_realUnit"];
@@ -28,7 +30,7 @@ if (_unit != _realUnit) exitWith {
 if (_unit getVariable [QGVAR(isDragging), false]) then {
 
     // drop dragged object when not in valid animation
-    if !(_anim in DRAG_ANIMATIONS) then {
+    if (!(_anim in DRAG_ANIMATIONS) && {!(_unit call EFUNC(common,isSwimming))}) then {
         private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
         if (!isNull _draggedObject) then {

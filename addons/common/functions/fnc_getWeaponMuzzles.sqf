@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the muzzles of a weapon.
@@ -8,9 +9,11 @@
  * Return Value:
  * All weapon muzzles <ARRAY>
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponMuzzles
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_weapon", "", [""]]];
 

@@ -24,6 +24,8 @@ Keeping track of Arma 3 issues that need to be fixed.
 - [Heisenberg: T82108: Switching between optic modes of a sniper scope (AMS, DMS, MOS) will result in a blurred vision](https://feedback.bistudio.com/T82108)
 - [AgentRev: T80668: setObjectTextureGlobal causing "Cannot load texture" errors when used with valid mission files](https://feedback.bistudio.com/T80668)
 - [BaerMitUmlaut: T120030: Particles do not render properly since 1.62](https://feedback.bistudio.com/T120030)
+- [Killzone_Kid: T79689: magazineTurretAmmo and setMagazineTurretAmmo do not function as expected if there are multiple magazines of the same type](https://feedback.bistudio.com/T79689)
+- [nekoarrow: T122981: setMagazineTurretAmmo locality issue](https://feedback.bistudio.com/T122981)
 
 **Resolved:**
 

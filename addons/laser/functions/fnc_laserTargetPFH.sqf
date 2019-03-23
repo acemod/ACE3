@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Maintains the tracked lasers, deleting any laser that is turned off
@@ -5,7 +6,7 @@
  * Argument:
  * PFEH Args
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -13,12 +14,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_pfhuid"];
 
 GVAR(trackedLaserTargets) = GVAR(trackedLaserTargets) select {
-    _x params ["_targetObject", "_owner", "_laserUuid"];
+    _x params ["_targetObject", "_owner", "_laserUuid", "_laserCode"];
     if ((isNull _targetObject) ||
             {!(alive _targetObject)} ||
             {isNull _owner} ||
@@ -29,6 +29,12 @@ GVAR(trackedLaserTargets) = GVAR(trackedLaserTargets) select {
         TRACE_1("Laser off:", _laserUuid);
         false
     } else {
+        private _newCode = _owner getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+        if (_laserCode != _newCode) then {
+            TRACE_2("code change",_newCode,_laserCode);
+            [QGVAR(updateCode), [_laserUuid, _newCode]] call CBA_fnc_globalEvent;
+            _x set [3, _newCode];
+        };
         true
     };
 };

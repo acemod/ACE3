@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the vehicle cargo positions. Codrivers and ffv positions are not listed.
@@ -8,9 +9,11 @@
  * Return Value:
  * Vehicle cargo positions <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getVehicleCargo
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_vehicle", objNull, [objNull]]];
 

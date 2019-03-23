@@ -246,23 +246,23 @@ class CfgMagazines {
         displayNameShort = "125mm MP-T";
     };
 
-    class 32Rnd_120mm_APFSDS_shells;
-    class 24Rnd_125mm_APFSDS: 32Rnd_120mm_APFSDS_shells {
+    class 20Rnd_125mm_APFSDS;
+    class 24Rnd_125mm_APFSDS: 20Rnd_125mm_APFSDS {
         displayNameShort = "125mm AP";
     };
 
-    class 32Rnd_120mm_APFSDS_shells_Tracer_Red;
-    class 24Rnd_125mm_APFSDS_T_Red: 32Rnd_120mm_APFSDS_shells_Tracer_Red {
+    class 20Rnd_125mm_APFSDS_T_Red;
+    class 24Rnd_125mm_APFSDS_T_Red: 20Rnd_125mm_APFSDS_T_Red {
         displayNameShort = "125mm AP-T";
     };
 
-    class 32Rnd_120mm_APFSDS_shells_Tracer_Green;
-    class 24Rnd_125mm_APFSDS_T_Green: 32Rnd_120mm_APFSDS_shells_Tracer_Green {
+    class 20Rnd_125mm_APFSDS_T_Green;
+    class 24Rnd_125mm_APFSDS_T_Green: 20Rnd_125mm_APFSDS_T_Green {
         displayNameShort = "125mm AP-T";
     };
 
-    class 32Rnd_120mm_APFSDS_shells_Tracer_Yellow;
-    class 24Rnd_125mm_APFSDS_T_Yellow: 32Rnd_120mm_APFSDS_shells_Tracer_Yellow {
+    class 20Rnd_125mm_APFSDS_T_Yellow;
+    class 24Rnd_125mm_APFSDS_T_Yellow: 20Rnd_125mm_APFSDS_T_Yellow {
         displayNameShort = "125mm AP-T";
     };
 
@@ -396,6 +396,10 @@ class CfgMagazines {
         displayName = CSTRING(HandGrenade_Name);
         displayNameShort = "M67";
     };
+    class MiniGrenade: CA_Magazine {
+        displayName = CSTRING(MiniGrenade_Name);
+        displayNameShort = "V40";
+    };
     class SmokeShell: HandGrenade {
         displayName = CSTRING(SmokeShell_Name);
     };
@@ -417,4 +421,84 @@ class CfgMagazines {
     class SmokeShellYellow: SmokeShell {
         displayName = CSTRING(SmokeShellYellow_Name);
     };
+
+    class 50Rnd_570x28_SMG_03: CA_Magazine {
+        displayName = CSTRING(P90_Mag_Name);
+        descriptionShort = CSTRING(P90_Mag_DescriptionShort);
+    };
+
+    // 1.70 Pylon Magazines (Should Match Weapon Name)
+    class 2Rnd_Missile_AA_04_F;
+    class PylonRack_1Rnd_Missile_AA_04_F: 2Rnd_Missile_AA_04_F {
+        displayName = "AIM-9 Sidewinder"; // [vanilla: Falchion-22 - Missile_AA_04_Plane_CAS_01_F]
+    };
+    class 4Rnd_AAA_missiles;
+    class PylonRack_1Rnd_AAA_missiles: 4Rnd_AAA_missiles {
+        displayName = "AIM-132 ASRAAM"; // [vanilla: ASRAAM - missiles_ASRAAM]
+    };
+    class 4Rnd_GAA_missiles;
+    class PylonRack_1Rnd_GAA_missiles: 4Rnd_GAA_missiles {
+        displayName = "AIM-120A AMRAAM"; // [vanilla: Zephyr - missiles_Zephyr]
+    };
+    class 6Rnd_Missile_AGM_02_F;
+    class PylonRack_1Rnd_Missile_AGM_02_F: 6Rnd_Missile_AGM_02_F {
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonRack_3Rnd_Missile_AGM_02_F: PylonRack_1Rnd_Missile_AGM_02_F {
+        displayName = "AGM-65 Maverick G 3x"; // [vanilla: Macer 3x - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class magazine_Missile_AGM_02_x1 : VehicleMagazine {
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonMissile_Missile_AGM_02_x1 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonMissile_Missile_AGM_02_x2 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G 2x"; // [vanilla: Macer 2x - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonRack_Missile_AGM_02_x1 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class PylonRack_Missile_AGM_02_x2 : magazine_Missile_AGM_02_x1 {
+        displayName = "AGM-65 Maverick G 2x"; // [vanilla: Macer 2x - Missile_AGM_02_Plane_CAS_01_F]
+    };
+    class 2Rnd_LG_scalpel;
+    class PylonRack_1Rnd_LG_scalpel: 2Rnd_LG_scalpel {
+        displayName = "9K121 Vikhr"; // [vanilla: Scalpel - missiles_SCALPEL]
+    };
+    class PylonRack_3Rnd_LG_scalpel: PylonRack_1Rnd_LG_scalpel {
+        displayName = "9K121 Vikhr 3x"; // [vanilla: Scalpel 3x - missiles_SCALPEL]
+    };
+    class PylonRack_4Rnd_LG_scalpel: PylonRack_1Rnd_LG_scalpel {
+        displayName = "9K121 Vikhr 4x"; // [vanilla: Scalpel 4x - missiles_SCALPEL]
+    };
+    class PylonRack_7Rnd_Rocket_04_HE_F: 7Rnd_Rocket_04_HE_F {
+        displayName = "Hydra 70 7x HE"; // [vanilla: Shrieker 7x HE - Rocket_04_HE_Plane_CAS_01_F]
+    }; 
+    class PylonRack_7Rnd_Rocket_04_AP_F: 7Rnd_Rocket_04_AP_F {
+        displayName = "Hydra 70 7x AP"; // [vanilla: Shrieker 7x AP - Rocket_04_AP_Plane_CAS_01_F]
+    };
+    class 12Rnd_missiles;
+    class PylonRack_12Rnd_missiles: 12Rnd_missiles {
+        displayName = "Hydra 70 12x HE"; // [vanilla: DAR - missiles_DAR]
+    };
+    class PylonRack_20Rnd_Rocket_03_HE_F: 20Rnd_Rocket_03_HE_F {
+        displayName = "S-8 20x HE"; // [vanilla: Tratnyr 20x HE - Rocket_03_HE_Plane_CAS_02_F]
+    };
+    class PylonRack_20Rnd_Rocket_03_AP_F: 20Rnd_Rocket_03_AP_F {
+        displayName = "S-8 20x AP"; // [vanilla: Tratnyr 20x AP - Rocket_03_AP_Plane_CAS_02_F]
+    };
+    class 2Rnd_Missile_AA_03_F;
+    class PylonRack_1Rnd_Missile_AA_03_F: 2Rnd_Missile_AA_03_F {
+        displayName = "Wympel R-73"; // [vanilla: Sahr-3 - Missile_AA_03_Plane_CAS_02_F]
+    };
+    class 4Rnd_Missile_AGM_01_F;
+    class PylonRack_1Rnd_Missile_AGM_01_F: 4Rnd_Missile_AGM_01_F {
+        displayName = "Kh-25MTP"; // [vanilla: Sharur - Missile_AGM_01_Plane_CAS_02_F]
+    };
+    class 2Rnd_Bomb_03_F;
+    class PylonMissile_1Rnd_Bomb_03_F: 2Rnd_Bomb_03_F {
+        displayName = "FAB-250M-54"; // [vanilla: LOM-250G - Bomb_03_Plane_CAS_02_F]
+    };
+
 };

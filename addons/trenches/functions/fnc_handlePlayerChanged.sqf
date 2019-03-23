@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle player changes.
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin] call ace_trenches_fnc_handlePlayerChanged
+ *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_newPlayer", "_oldPlayer"];
 

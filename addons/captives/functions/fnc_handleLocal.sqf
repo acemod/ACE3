@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Called when a unit switched locality
@@ -6,14 +7,14 @@
  * 0: The Unit <OBJECT>
  * 1: Is local <BOOL>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true] call ACE_captives_fnc_handleLocal
  *
  * Public: No
  */
-
-
-#include "script_component.hpp"
 
 params ["_unit", "_local"];
 
@@ -26,7 +27,7 @@ if (_local) then {
         if (_unit getVariable [QGVAR(handcuffAnimEHID), -1] != -1) exitWith {};
 
         // Otherwise, restart the AnimChanged EH in the new machine
-        private _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedHandcuffed)];
+        private _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedHandcuffed)}];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
     };
@@ -37,7 +38,7 @@ if (_local) then {
         if (_unit getVariable [QGVAR(surrenderAnimEHID), -1] != -1) exitWith {};
 
         // Otherwise, restart the AnimChanged EH in the new machine
-        private _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedSurrendered)];
+        private _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedSurrendered)}];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
     };

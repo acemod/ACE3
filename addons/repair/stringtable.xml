@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -13,6 +13,9 @@
             <Hungarian>Pót lánctalp</Hungarian>
             <Russian>Запасная гусеница</Russian>
             <Japanese>予備履帯</Japanese>
+            <Korean>예비 궤도</Korean>
+            <Chinesesimp>备用履带</Chinesesimp>
+            <Chinese>備用履帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_SpareWheel">
             <English>Spare Wheel</English>
@@ -26,6 +29,9 @@
             <Hungarian>Pótkerék</Hungarian>
             <Russian>Запасное колесо</Russian>
             <Japanese>予備タイヤ</Japanese>
+            <Korean>예비 바퀴</Korean>
+            <Chinesesimp>备用轮胎</Chinesesimp>
+            <Chinese>備用輪胎</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
@@ -39,6 +45,9 @@
             <Russian>Поменять колесо</Russian>
             <Czech>Vyměnit kolo</Czech>
             <Japanese>タイヤを変える</Japanese>
+            <Korean>바퀴 교체</Korean>
+            <Chinesesimp>更换轮胎</Chinesesimp>
+            <Chinese>更換輪胎</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingWheel">
             <English>Replacing Wheel...</English>
@@ -48,9 +57,12 @@
             <Russian>Замена колеса...</Russian>
             <Czech>Měním kolo...</Czech>
             <Spanish>Cambiando rueda...</Spanish>
-            <Italian>Sto sostituendo la ruota...</Italian>
+            <Italian>Sostituendo la ruota...</Italian>
             <French>Remplacement de la roue...</French>
-            <Japanese>タイヤを交換中・・・</Japanese>
+            <Japanese>タイヤを交換しています・・・</Japanese>
+            <Korean>바퀴 교체중...</Korean>
+            <Chinesesimp>更换轮胎中...</Chinesesimp>
+            <Chinese>更換輪胎中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedWheel">
             <English>Wheel replaced</English>
@@ -62,7 +74,10 @@
             <Spanish>Rueda cambiada</Spanish>
             <Italian>Ruota sostituita</Italian>
             <French>Roue remplacée</French>
-            <Japanese>タイヤを履き替え</Japanese>
+            <Japanese>タイヤを交換しました</Japanese>
+            <Korean>바퀴 교체됨</Korean>
+            <Chinesesimp>轮胎更换完毕</Chinesesimp>
+            <Chinese>輪胎更換完畢</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveWheel">
             <English>Remove Wheel</English>
@@ -76,6 +91,9 @@
             <Hungarian>Kerék leszerelése</Hungarian>
             <Russian>Снять колесо</Russian>
             <Japanese>タイヤを外す</Japanese>
+            <Korean>바퀴 제거</Korean>
+            <Chinesesimp>卸下轮胎</Chinesesimp>
+            <Chinese>卸下輪胎</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingWheel">
             <English>Removing Wheel...</English>
@@ -85,9 +103,12 @@
             <Russian>Снятие колеса...</Russian>
             <Czech>Odstraňuji kolo...</Czech>
             <Spanish>Quitando rueda...</Spanish>
-            <Italian>Sto rimuovendo la ruota...</Italian>
+            <Italian>Rimuovendo la ruota...</Italian>
             <French>Démontage de la roue...</French>
-            <Japanese>タイヤを外している・・</Japanese>
+            <Japanese>タイヤを外しています・・・</Japanese>
+            <Korean>바퀴 제거중...</Korean>
+            <Chinesesimp>卸下轮胎中...</Chinesesimp>
+            <Chinese>卸下輪胎中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedWheel">
             <English>Wheel removed</English>
@@ -99,7 +120,10 @@
             <Spanish>Rueda quitada</Spanish>
             <Italian>Ruota rimossa</Italian>
             <French>Roue démontée</French>
-            <Japanese>タイヤを外した</Japanese>
+            <Japanese>タイヤを外しました</Japanese>
+            <Korean>바퀴 제거됨</Korean>
+            <Chinesesimp>轮胎卸下完毕</Chinesesimp>
+            <Chinese>輪胎卸下完畢</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceTrack">
             <English>Change Track</English>
@@ -112,6 +136,9 @@
             <Italian>Cambia cingolo</Italian>
             <French>Changer la chenille</French>
             <Japanese>履帯を変える</Japanese>
+            <Korean>궤도 교체</Korean>
+            <Chinesesimp>更换履带</Chinesesimp>
+            <Chinese>更換履帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingTrack">
             <English>Replacing Track...</English>
@@ -121,9 +148,12 @@
             <Russian>Замена гусеницы...</Russian>
             <Czech>Měním pás...</Czech>
             <Spanish>Cambiando oruga...</Spanish>
-            <Italian>Sto sostituendo il cingolo...</Italian>
+            <Italian>Sostituendo il cingolo...</Italian>
             <French>Remplacement de la chenille...</French>
-            <Japanese>履帯を交換中・・・</Japanese>
+            <Japanese>履帯を交換しています・・・</Japanese>
+            <Korean>궤도 교체중...</Korean>
+            <Chinesesimp>更换履带中...</Chinesesimp>
+            <Chinese>更換履帶中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedTrack">
             <English>Track replaced</English>
@@ -135,7 +165,10 @@
             <Spanish>Oruga cambiada</Spanish>
             <Italian>Cingolo sostituito</Italian>
             <French>Chenille remplacée</French>
-            <Japanese>履帯を交換した</Japanese>
+            <Japanese>履帯を交換しました</Japanese>
+            <Korean>궤도 교체됨</Korean>
+            <Chinesesimp>履带更换完毕</Chinesesimp>
+            <Chinese>履帶更換完畢</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveTrack">
             <English>Remove Track</English>
@@ -148,6 +181,9 @@
             <Italian>Rimuovi cingolo</Italian>
             <French>Enlever la chenille</French>
             <Japanese>履帯を外す</Japanese>
+            <Korean>궤도 제거</Korean>
+            <Chinesesimp>卸下履带</Chinesesimp>
+            <Chinese>卸下履帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingTrack">
             <English>Removing Track...</English>
@@ -157,9 +193,12 @@
             <Russian>Снятие гусеницы...</Russian>
             <Czech>Odstraňuji pás...</Czech>
             <Spanish>Quitando oruga...</Spanish>
-            <Italian>Sto rimuovendo il cingolo...</Italian>
+            <Italian>Rimuovendo il cingolo...</Italian>
             <French>Enlèvement de la chenille...</French>
-            <Japanese>履帯を外している・・・</Japanese>
+            <Japanese>履帯を外しています・・・</Japanese>
+            <Korean>궤도 제거중...</Korean>
+            <Chinesesimp>卸下履带中...</Chinesesimp>
+            <Chinese>卸下履帶中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
@@ -171,7 +210,10 @@
             <Spanish>Oruga quitada</Spanish>
             <Italian>Cingolo rimosso</Italian>
             <French>Chenille enlevée</French>
-            <Japanese>履帯を外した</Japanese>
+            <Japanese>履帯を外しました</Japanese>
+            <Korean>궤도 제거됨</Korean>
+            <Chinesesimp>履带卸下完毕</Chinesesimp>
+            <Chinese>履帶卸下完畢</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepair">
             <English>Full Repair</English>
@@ -184,6 +226,9 @@
             <Italian>Riparazione completa</Italian>
             <French>Réparations complètes</French>
             <Japanese>完全に修理</Japanese>
+            <Korean>완전수리</Korean>
+            <Chinesesimp>完整维修</Chinesesimp>
+            <Chinese>完整維修</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_fullyRepairing">
             <English>Repairing Vehicle...</English>
@@ -193,9 +238,12 @@
             <Russian>Ремонт транспорта...</Russian>
             <Czech>Opravuji vozidlo...</Czech>
             <Spanish>Reparando vehículo...</Spanish>
-            <Italian>Sto riparando il veicolo...</Italian>
+            <Italian>Riparando il veicolo...</Italian>
             <French>Réparation du véhicule...</French>
-            <Japanese>車両を修理中・・・</Japanese>
+            <Japanese>車両を修理しています・・・</Japanese>
+            <Korean>차량 수리중...</Korean>
+            <Chinesesimp>维修载具中...</Chinesesimp>
+            <Chinese>維修載具中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -207,7 +255,10 @@
             <Spanish>Lugares de reparación completa</Spanish>
             <Italian>Luoghi Riparazione Completa</Italian>
             <French>Lieu de réparation complète</French>
-            <Japanese>完全修理をできる場所</Japanese>
+            <Japanese>完全修理できる場所</Japanese>
+            <Korean>완전수리 구역</Korean>
+            <Chinesesimp>完整维修地点</Chinesesimp>
+            <Chinese>完整維修地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation_description">
             <English>At what locations can a vehicle be fully repaired?</English>
@@ -219,7 +270,10 @@
             <Czech>V které oblasti může být vozidlo plně opraveno?</Czech>
             <Italian>In quali luoghi è possibile riparare completamente un veicolo?</Italian>
             <French>Où peuvent être réparés complètement les véhicules ?</French>
-            <Japanese>どのような場所で車両の完全な修理を出来るようにしますか？</Japanese>
+            <Japanese>どのような場所で車両の完全な修理を出来るようにしますか?</Japanese>
+            <Korean>어느 구역에서 차량을 완전히 수리할 수 있게 합니까?</Korean>
+            <Chinesesimp>什么位置可以完整维修载具?</Chinesesimp>
+            <Chinese>什麼位置可以完整維修載具?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_name">
             <English>Allow Full Repair</English>
@@ -231,7 +285,10 @@
             <Spanish>Permitir reparación completa</Spanish>
             <Italian>Consenti Riparazione Completa</Italian>
             <French>Autoriser les réparations complètes.</French>
-            <Japanese>完全な修理をさせる</Japanese>
+            <Japanese>完全修理を許可</Japanese>
+            <Korean>완전 수리 활성화</Korean>
+            <Chinesesimp>允许完整维修</Chinesesimp>
+            <Chinese>允許完整維修</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
@@ -243,7 +300,10 @@
             <Czech>Kdo může provést úplné opravy na vozidle?</Czech>
             <Italian>Chi può eseguire una riparazione completa su un veicolo?</Italian>
             <French>Qui peut faire une réparation complète ?</French>
-            <Japanese>誰が車両の完全な修理を出来るようにしますか？</Japanese>
+            <Japanese>誰が車両の完全な修理を出来るようにしますか?</Japanese>
+            <Korean>누가 완전 수리를 할 수 있습니까?</Korean>
+            <Chinesesimp>谁可以完整维修载具?</Chinesesimp>
+            <Chinese>誰可以完整維修載具?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_name">
             <English>Add Spare Parts</English>
@@ -256,6 +316,9 @@
             <Italian>Aggiungi Parti di Ricambio</Italian>
             <French>Ajouter des pièces de rechange</French>
             <Japanese>予備部品を追加</Japanese>
+            <Korean>예비 부품 더하기</Korean>
+            <Chinesesimp>添加备件</Chinesesimp>
+            <Chinese>添加備件</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_description">
             <English>Add spare parts to vehicles (requires Cargo component)?</English>
@@ -267,7 +330,10 @@
             <Czech>Přidat náhradní díly do vozidla (vyžaduje úložný prostor)?</Czech>
             <Italian>Aggiungi parti di ricambio ai veicoli (richiede componente Cargo)?</Italian>
             <French>Ajouter des pièces de rechage aux véhicules ? (à besoin du système de cargaison)</French>
-            <Japanese>車両へ予備部品を追加しますか（カーゴ コンポーネントが必要)？</Japanese>
+            <Japanese>車両へ予備部品を追加しますか（カーゴ コンポーネントが必要)?</Japanese>
+            <Korean>차량에 예비 부품을 더합니까?(짐칸 요소 필요)</Korean>
+            <Chinesesimp>添加载具备件 (需相关货物组件)?</Chinesesimp>
+            <Chinese>添加載具備件 (需相關貨物組件)?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair</English>
@@ -281,6 +347,9 @@
             <Hungarian>Szerelés</Hungarian>
             <Russian>Ремонт</Russian>
             <Japanese>修理</Japanese>
+            <Korean>수리</Korean>
+            <Chinesesimp>维修</Chinesesimp>
+            <Chinese>維修</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>
@@ -293,6 +362,9 @@
             <Italian>Mostra testo mentre ripari</Italian>
             <French>Afficher du texte pendant la réparation</French>
             <Japanese>修理時に文章で通知する</Japanese>
+            <Korean>수리시 화면에 글자 표시</Korean>
+            <Chinesesimp>显示维修文本</Chinesesimp>
+            <Chinese>顯示維修文本</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
             <English>Display a notification whenever you repair a vehicle</English>
@@ -304,7 +376,10 @@
             <Czech>Zobrazit oznámení kdykoliv opravíš vozidlo</Czech>
             <Italian>Mostra una notifica quando stai riparando un veicolo</Italian>
             <French>Afficher une notification lorsque l'on répare un véhicule</French>
-            <Japanese>あなたが車両の修理を始めると、画面に通知を出します</Japanese>
+            <Japanese>車両の修理を始めると、画面に通知を出します</Japanese>
+            <Korean>수리시 화면에 글자로 알림이 뜹니다</Korean>
+            <Chinesesimp>每当维修载具时显示通知</Chinesesimp>
+            <Chinese>每當維修載具時顯示通知</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_Repairing">
             <English>Repairing...</English>
@@ -314,10 +389,13 @@
             <Polish>Naprawianie...</Polish>
             <Czech>Opravuji...</Czech>
             <Portuguese>Reparando...</Portuguese>
-            <Italian>Sto riparando...</Italian>
+            <Italian>Riparando...</Italian>
             <Hungarian>javítása...</Hungarian>
             <Russian>Ремонтируем...</Russian>
-            <Japanese>修理中・・・</Japanese>
+            <Japanese>修理しています・・・</Japanese>
+            <Korean>수리중...</Korean>
+            <Chinesesimp>维修中...</Chinesesimp>
+            <Chinese>維修中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RepairingHitPoint">
             <English>Repairing %1...</English>
@@ -327,10 +405,13 @@
             <Polish>Naprawianie %1...</Polish>
             <Czech>Opravuji %1...</Czech>
             <Portuguese>Reparando %1...</Portuguese>
-            <Italian>Sto riparando %1...</Italian>
+            <Italian>Riparando %1...</Italian>
             <Hungarian>%1 javítása...</Hungarian>
             <Russian>Ремонтируем %1...</Russian>
-            <Japanese>%1 を修理中・・・</Japanese>
+            <Japanese>%1 を修理しています・・・</Japanese>
+            <Korean>%1 수리중...</Korean>
+            <Chinesesimp>维修%1中...</Chinesesimp>
+            <Chinese>維修%1中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_Repaired">
             <English>Repaired %1</English>
@@ -343,7 +424,10 @@
             <Italian>%1 Riparata/o</Italian>
             <Hungarian>%1 megjavítva</Hungarian>
             <Russian>%1 отремонтирован</Russian>
-            <Japanese>%1 を修理した</Japanese>
+            <Japanese>%1 を修理しました</Japanese>
+            <Korean>%1 수리됨</Korean>
+            <Chinesesimp>已维修%1</Chinesesimp>
+            <Chinese>已維修%1</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedFully">
             <English>Fully repaired part</English>
@@ -355,7 +439,10 @@
             <Spanish>Parte totalmente reparado</Spanish>
             <Italian>Parte riparata completamente</Italian>
             <French>Pièce entièrement réparée</French>
-            <Japanese>部分的な完全な修理</Japanese>
+            <Japanese>完全に修理された部品</Japanese>
+            <Korean>부분 완벽히 수리됨</Korean>
+            <Chinesesimp>完整维修部分</Chinesesimp>
+            <Chinese>完整維修部分</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedPartially">
             <English>Partially repaired %1</English>
@@ -367,7 +454,10 @@
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
             <French>%1 pratiquement réparée</French>
-            <Japanese>%1 を部分的に修理した</Japanese>
+            <Japanese>%1 を部分的に修理しました</Japanese>
+            <Korean>%1 부분적으로 수리됨</Korean>
+            <Chinesesimp>%1已完成部分维修</Chinesesimp>
+            <Chinese>%1已完成部分維修</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointFully">
             <English>Fully repaired %1</English>
@@ -379,7 +469,10 @@
             <Spanish>Totalmente reparada %1</Spanish>
             <Italian>%1 completamente riparato</Italian>
             <French>%1 entièrement réparée</French>
-            <Japanese>%1 を完全に修理した</Japanese>
+            <Japanese>%1 を完全に修理しました</Japanese>
+            <Korean>%1 완전히 수리됨</Korean>
+            <Chinesesimp>%1已完整维修</Chinesesimp>
+            <Chinese>%1已完整維修</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointPartially">
             <English>Partially repaired %1</English>
@@ -391,7 +484,10 @@
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
             <French>%1 pratiquement réparée</French>
-            <Japanese>%1 を部分的に修理した</Japanese>
+            <Japanese>%1 を部分的に修理しました</Japanese>
+            <Korean>%1 부분적으로 수리됨</Korean>
+            <Chinesesimp>%1已完成部分维修</Chinesesimp>
+            <Chinese>%1已完成部分維修</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitBody">
             <English>Body</English>
@@ -405,6 +501,9 @@
             <Hungarian>Test</Hungarian>
             <Russian>Кузов</Russian>
             <Japanese>車体</Japanese>
+            <Korean>몸체</Korean>
+            <Chinesesimp>车身</Chinesesimp>
+            <Chinese>車身</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitHull">
             <English>Hull</English>
@@ -418,6 +517,9 @@
             <Hungarian>Test</Hungarian>
             <Russian>Корпус</Russian>
             <Japanese>機体</Japanese>
+            <Korean>선체</Korean>
+            <Chinesesimp>车壳</Chinesesimp>
+            <Chinese>車殼</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitEngine">
             <English>Engine</English>
@@ -431,6 +533,9 @@
             <Hungarian>Motor</Hungarian>
             <Russian>Двигатель</Russian>
             <Japanese>エンジン</Japanese>
+            <Korean>엔진</Korean>
+            <Chinesesimp>引擎</Chinesesimp>
+            <Chinese>引擎</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerL1">
             <English>Left Horizontal Stabilizer</English>
@@ -443,6 +548,9 @@
             <French>Stabilisateur horizontal gauche</French>
             <German>Linkes Höhenleitwerk</German>
             <Japanese>左側の水平安定機</Japanese>
+            <Korean>왼쪽 수평안정판</Korean>
+            <Chinesesimp>左侧悬挂稳定</Chinesesimp>
+            <Chinese>左側懸掛穩定</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
@@ -455,6 +563,9 @@
             <French>Stabilisateur horizontal droit</French>
             <German>Rechtes Höhenleitwerk</German>
             <Japanese>右側の水平安定機</Japanese>
+            <Korean>오른쪽 수평안정판</Korean>
+            <Chinesesimp>右侧悬挂稳定</Chinesesimp>
+            <Chinese>右側懸掛穩定</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
@@ -466,7 +577,10 @@
             <Italian>Stabilizzatore Verticale</Italian>
             <French>Stabilisateur vertical</French>
             <German>Seitenleitwerk</German>
-            <Japanese>車両安定器</Japanese>
+            <Japanese>車両スタビライザ</Japanese>
+            <Korean>수직 안정판</Korean>
+            <Chinesesimp>垂直稳定</Chinesesimp>
+            <Chinese>垂直穩定</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
@@ -480,6 +594,9 @@
             <Hungarian>Üzemanyagtank</Hungarian>
             <Russian>Топливный бак</Russian>
             <Japanese>燃料タンク</Japanese>
+            <Korean>연료 탱크</Korean>
+            <Chinesesimp>油箱</Chinesesimp>
+            <Chinese>油箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitTransmission">
             <English>Transmission</English>
@@ -492,6 +609,9 @@
             <Italian>Trasmissione</Italian>
             <French>Instruments</French>
             <Japanese>変速機</Japanese>
+            <Korean>변속기</Korean>
+            <Chinesesimp>变速箱</Chinesesimp>
+            <Chinese>變速箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitGear">
             <English>Gear</English>
@@ -504,6 +624,9 @@
             <Italian>Motore</Italian>
             <French>Trains d'attérissage</French>
             <Japanese>ギア</Japanese>
+            <Korean>기어</Korean>
+            <Chinesesimp>齿轮</Chinesesimp>
+            <Chinese>齒輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitStarter">
             <English>Starter</English>
@@ -516,6 +639,9 @@
             <Italian>Motore d'avviamento</Italian>
             <French>Démarreur</French>
             <Japanese>スターター</Japanese>
+            <Korean>점화기</Korean>
+            <Chinesesimp>发动机</Chinesesimp>
+            <Chinese>發動機</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
@@ -528,6 +654,9 @@
             <Italian>Coda</Italian>
             <French>Queue</French>
             <Japanese>尾翼</Japanese>
+            <Korean>꼬리</Korean>
+            <Chinesesimp>尾翼</Chinesesimp>
+            <Chinese>尾翼</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitPitotTube">
             <English>Pitot Tube</English>
@@ -540,6 +669,9 @@
             <Italian>Tubo di Pitot</Italian>
             <French>Sonde pitot</French>
             <Japanese>ピトー管</Japanese>
+            <Korean>동압관</Korean>
+            <Chinesesimp>空速管</Chinesesimp>
+            <Chinese>空速管</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
@@ -552,6 +684,9 @@
             <Italian>Porta Statica</Italian>
             <French>Port statique</French>
             <Japanese>スタティック ポート</Japanese>
+            <Korean>정압공</Korean>
+            <Chinesesimp>静态端口</Chinesesimp>
+            <Chinese>靜態端口</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
@@ -564,6 +699,9 @@
             <Italian>Munizioni</Italian>
             <French>Munitions</French>
             <Japanese>弾薬</Japanese>
+            <Korean>탄약</Korean>
+            <Chinesesimp>弹药</Chinesesimp>
+            <Chinese>彈藥</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Turret</English>
@@ -577,6 +715,9 @@
             <Hungarian>Lövegtorony</Hungarian>
             <Russian>Башню</Russian>
             <Japanese>砲塔</Japanese>
+            <Korean>포탑</Korean>
+            <Chinesesimp>炮塔</Chinesesimp>
+            <Chinese>砲塔</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitGun">
             <English>Gun</English>
@@ -590,6 +731,41 @@
             <Hungarian>Ágyú</Hungarian>
             <Russian>Пушку</Russian>
             <Japanese>砲</Japanese>
+            <Korean>포</Korean>
+            <Chinesesimp>枪</Chinesesimp>
+            <Chinese>槍</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitComTurret">
+            <English>Commander Turret</English>
+            <German>Kommandant Turm</German>
+            <Spanish>Comandante Torreta</Spanish>
+            <French>Commander Tourelle</French>
+            <Polish>Dowódca Wieżyczka</Polish>
+            <Czech>Velitel Věž</Czech>
+            <Portuguese>Comandante Torre</Portuguese>
+            <Italian>Comandante Torretta</Italian>
+            <Hungarian>Parancsnok Lövegtorony</Hungarian>
+            <Russian>Башня командира</Russian>
+            <Japanese>車長の砲塔</Japanese>
+            <Korean>지휘관 포탑</Korean>
+            <Chinesesimp>指挥官 炮塔</Chinesesimp>
+            <Chinese>指揮官 砲塔</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitComGun">
+            <English>Commander Gun</English>
+            <German>Kommandant Kanone</German>
+            <Spanish>Comandante Cañón</Spanish>
+            <French>Commander Canon</French>
+            <Polish>Dowódca Działo</Polish>
+            <Czech>Velitel Kanón</Czech>
+            <Portuguese>Comandante Canhão</Portuguese>
+            <Italian>Comandante Cannone</Italian>
+            <Hungarian>Parancsnok Ágyú</Hungarian>
+            <Russian>Пушка командира</Russian>
+            <Japanese>車長の砲</Japanese>
+            <Korean>지휘관 포</Korean>
+            <Chinesesimp>指挥官 枪</Chinesesimp>
+            <Chinese>指揮官 槍</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
@@ -602,6 +778,9 @@
             <Italian>Missili</Italian>
             <French>Missiles</French>
             <Japanese>ミサイル</Japanese>
+            <Korean>미사일</Korean>
+            <Chinesesimp>导弹</Chinesesimp>
+            <Chinese>導彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
@@ -615,6 +794,9 @@
             <Hungarian>Bal lánctalp</Hungarian>
             <Russian>Левую гусеницу</Russian>
             <Japanese>左の履帯</Japanese>
+            <Korean>왼쪽 궤도</Korean>
+            <Chinesesimp>左履带</Chinesesimp>
+            <Chinese>左履帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitRTrack">
             <English>Right Track</English>
@@ -628,6 +810,9 @@
             <Hungarian>Jobb lánctalp</Hungarian>
             <Russian>Правую гусеницу</Russian>
             <Japanese>右の履帯</Japanese>
+            <Korean>오른쪽 궤도</Korean>
+            <Chinesesimp>右履带</Chinesesimp>
+            <Chinese>右履帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitLFWheel">
             <English>Left Front Wheel</English>
@@ -641,6 +826,9 @@
             <Hungarian>Bal első kerék</Hungarian>
             <Russian>Левое переднее колесо</Russian>
             <Japanese>左の前輪</Japanese>
+            <Korean>왼쪽 앞바퀴</Korean>
+            <Chinesesimp>左前轮</Chinesesimp>
+            <Chinese>左前輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitRFWheel">
             <English>Right Front Wheel</English>
@@ -654,6 +842,9 @@
             <Hungarian>Jobb első kerék</Hungarian>
             <Russian>Правое переднее колесо</Russian>
             <Japanese>右の前輪</Japanese>
+            <Korean>오른쪽 앞바퀴</Korean>
+            <Chinesesimp>右前轮</Chinesesimp>
+            <Chinese>右前輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitLF2Wheel">
             <English>Second Left Front Wheel</English>
@@ -667,6 +858,9 @@
             <Hungarian>Második bal első kerék</Hungarian>
             <Russian>Второе переднее левое колесо</Russian>
             <Japanese>左の 2 つめの前輪</Japanese>
+            <Korean>왼쪽 두번째 바퀴</Korean>
+            <Chinesesimp>第二左前轮</Chinesesimp>
+            <Chinese>第二左前輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitRF2Wheel">
             <English>Second Right Front Wheel</English>
@@ -680,6 +874,9 @@
             <Hungarian>Második jobb hátsó kerék</Hungarian>
             <Russian>Второе правое переднее колесо</Russian>
             <Japanese>右の 2 つめの前輪</Japanese>
+            <Korean>오른쪽 두번째 바퀴</Korean>
+            <Chinesesimp>第二右前轮</Chinesesimp>
+            <Chinese>第二右前輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitLMWheel">
             <English>Left Middle Wheel</English>
@@ -693,6 +890,9 @@
             <Hungarian>Bal középső kerék</Hungarian>
             <Russian>Левое среднее колесо</Russian>
             <Japanese>左の中央の前輪</Japanese>
+            <Korean>왼쪽 가운데 바퀴</Korean>
+            <Chinesesimp>左中轮</Chinesesimp>
+            <Chinese>左中輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitRMWheel">
             <English>Right Middle Wheel</English>
@@ -706,6 +906,9 @@
             <Hungarian>Jobb középső kerék</Hungarian>
             <Russian>Правое среднее колесо</Russian>
             <Japanese>右の中央の前輪</Japanese>
+            <Korean>오른족 가운데 바퀴</Korean>
+            <Chinesesimp>右中轮</Chinesesimp>
+            <Chinese>右中輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitLBWheel">
             <English>Left Rear Wheel</English>
@@ -719,6 +922,9 @@
             <Hungarian>Bal hátsó kerék</Hungarian>
             <Russian>Левое заднее колесо</Russian>
             <Japanese>左の後輪</Japanese>
+            <Korean>왼쪽 뒤쪽 바퀴</Korean>
+            <Chinesesimp>左后轮</Chinesesimp>
+            <Chinese>左後輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitRBWheel">
             <English>Right Rear Wheel</English>
@@ -731,7 +937,10 @@
             <Italian>Ruota posteriore destra</Italian>
             <Hungarian>Jobb hátsó kerék</Hungarian>
             <Russian>Правое заднее колесо</Russian>
-            <Japanese>右の後</Japanese>
+            <Japanese>右の後輪</Japanese>
+            <Korean>오른쪽 뒤쪽 바퀴</Korean>
+            <Chinesesimp>右后轮</Chinesesimp>
+            <Chinese>右後輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitAvionics">
             <English>Avionics</English>
@@ -745,6 +954,9 @@
             <Hungarian>Avionika</Hungarian>
             <Russian>Авионику</Russian>
             <Japanese>アビオニクス</Japanese>
+            <Korean>항공 전자</Korean>
+            <Chinesesimp>航电系统</Chinesesimp>
+            <Chinese>航電系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitHRotor">
             <English>Main Rotor</English>
@@ -758,6 +970,9 @@
             <Hungarian>Főrotor</Hungarian>
             <Russian>Несущий винт</Russian>
             <Japanese>主翼</Japanese>
+            <Korean>주 로터</Korean>
+            <Chinesesimp>主旋翼</Chinesesimp>
+            <Chinese>主旋翼</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitVRotor">
             <English>Tail Rotor</English>
@@ -770,7 +985,10 @@
             <Italian>Rotore di coda</Italian>
             <Hungarian>Farokrotor</Hungarian>
             <Russian>Рулевой винт</Russian>
-            <Japanese>尾翼ローター</Japanese>
+            <Japanese>テイル ローター</Japanese>
+            <Korean>꼬리 로터</Korean>
+            <Chinesesimp>尾桨</Chinesesimp>
+            <Chinese>尾槳</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitWinch">
             <English>Winch</English>
@@ -783,6 +1001,9 @@
             <Italian>Gancio</Italian>
             <French>Treuil</French>
             <Japanese>ウィンチ</Japanese>
+            <Korean>윈치</Korean>
+            <Chinesesimp>绞盘</Chinesesimp>
+            <Chinese>絞盤</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitRGlass">
             <English>Glass (right)</English>
@@ -796,6 +1017,9 @@
             <Hungarian>Jobb szélvédő</Hungarian>
             <Russian>Стекло (справа)</Russian>
             <Japanese>ガラス (右)</Japanese>
+            <Korean>유리 (오른쪽)</Korean>
+            <Chinesesimp>玻璃 (右)</Chinesesimp>
+            <Chinese>玻璃 (右)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitLGlass">
             <English>Glass (left)</English>
@@ -809,6 +1033,9 @@
             <Hungarian>Bal szélvédő</Hungarian>
             <Russian>Стекло (слава)</Russian>
             <Japanese>ガラス (左)</Japanese>
+            <Korean>유리 (왼쪽)</Korean>
+            <Chinesesimp>玻璃 (左)</Chinesesimp>
+            <Chinese>玻璃 (左)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_HitGlass">
             <English>Glass</English>
@@ -822,6 +1049,9 @@
             <Hungarian>Üveg</Hungarian>
             <Russian>Стекло</Russian>
             <Japanese>ガラス</Japanese>
+            <Korean>유리</Korean>
+            <Chinesesimp>玻璃</Chinesesimp>
+            <Chinese>玻璃</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_Hitera_1_hitpoint">
             <English>ERA</English>
@@ -833,7 +1063,10 @@
             <French>ERA</French>
             <Portuguese>ERA</Portuguese>
             <Russian>ДЗ</Russian>
-            <Japanese>爆発反応装甲</Japanese>
+            <Japanese>ERA</Japanese>
+            <Korean>폭발반응장갑</Korean>
+            <Chinesesimp>爆炸式反应装甲</Chinesesimp>
+            <Chinese>爆炸式反應裝甲</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -845,7 +1078,10 @@
             <Czech>Nastavení oprav</Czech>
             <Italian>Impostazioni Riparazioni</Italian>
             <French>Réglages de réparation</French>
-            <Japanese>車両の全種類に修理システムを適用しますか？</Japanese>
+            <Japanese>修理設定</Japanese>
+            <Korean>수리 설정</Korean>
+            <Chinesesimp>修复设定</Chinesesimp>
+            <Chinese>修復設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_moduleDescription">
             <English>Provides a repair system for all types of vehicles.</English>
@@ -857,7 +1093,10 @@
             <Czech>Poskytuje rozsáhlý systém oprav pro všechny typy vozidel.</Czech>
             <Italian>Fornisce un sistema di riparazione per tutti i tipi di veicoli.</Italian>
             <French>Fournit un système de réparation pour tous les types de véhicules.</French>
-            <Japanese>車両の全種類に修理システムを適用しますか？</Japanese>
+            <Japanese>全種類の車両に修理システムを適用しますか?</Japanese>
+            <Korean>모든 차량에 대해 수리 시스템을 제공합니다.</Korean>
+            <Chinesesimp>提供修复系统给所有载具</Chinesesimp>
+            <Chinese>提供修復系統給所有載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_anyone">
             <English>Anyone</English>
@@ -870,6 +1109,9 @@
             <Italian>Chiunque</Italian>
             <French>Tout le monde</French>
             <Japanese>だれでも</Japanese>
+            <Korean>모두</Korean>
+            <Chinesesimp>任何人</Chinesesimp>
+            <Chinese>任何人</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
@@ -882,20 +1124,21 @@
             <Italian>Solo Geniere</Italian>
             <French>Ingénieurs seulement</French>
             <Japanese>工兵のみ</Japanese>
+            <Korean>오직 정비공만</Korean>
+            <Chinesesimp>只有工兵</Chinesesimp>
+            <Chinese>只有工兵</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
-            <English>Repair Specialist only</English>
-            <German>Nur Reparaturspezialist</German>
-            <Polish>Tylko inżynierowie</Polish>
-            <Portuguese>Somente especialista em reparos</Portuguese>
-            <Russian>Только ремонтные специалисты</Russian>
-            <Czech>Pouze specialista na opravování</Czech>
-            <Spanish>Solo especialista en reparación</Spanish>
-            <Italian>Solo Specialista Riparazioni</Italian>
-            <French>Spécialistes de réparation seulement</French>
-            <Japanese>専門兵のみ</Japanese>
+        <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
+            <English>Advanced Engineer only</English>
+            <German>Instandsetzer</German>
+            <Italian>Solo Geniere avanzato</Italian>
+            <Japanese>上級工兵のみ</Japanese>
+            <Chinesesimp>只有维修专精兵</Chinesesimp>
+            <Chinese>只有維修專精兵</Chinese>
+            <Polish>Tylko zaawansowani mechanicy</Polish>
+            <Korean>고급 정비공만</Korean>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
+        <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
             <German>Erlaube Radwechsel</German>
             <Polish>Wymiana kół</Polish>
@@ -906,8 +1149,11 @@
             <Italian>Consenti Ruota</Italian>
             <French>Autoriser les roues</French>
             <Japanese>タイヤを許可</Japanese>
+            <Korean>바퀴 허가</Korean>
+            <Chinesesimp>允许轮胎</Chinesesimp>
+            <Chinese>允許輪胎</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Wheel_description">
+        <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
             <German>Wer kann Radwechsel durchführern?</German>
             <Polish>Kto może zdejmować i zmieniać koła?</Polish>
@@ -917,9 +1163,12 @@
             <Spanish>¿Quién puede quitar y cambiar las ruedas?</Spanish>
             <Italian>Chi può rimuovere e sostituire le ruote?</Italian>
             <French>Qui peut enlever et remplacer les roues ?</French>
-            <Japanese>誰がタイヤの除去と交換を出来るようにしますか？</Japanese>
+            <Japanese>誰がタイヤの除去と交換を出来るようにしますか?</Japanese>
+            <Korean>누가 바퀴를 제거 및 교체할 수 있습니까?</Korean>
+            <Chinesesimp>谁可维修轮胎?</Chinesesimp>
+            <Chinese>誰可維修輪胎?</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Repair_name">
+        <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
             <German>Erlaube Reperatur</German>
             <Polish>Możliwość naprawy</Polish>
@@ -930,8 +1179,11 @@
             <Italian>Consenti Riparazioni</Italian>
             <French>Autoriser les réparations</French>
             <Japanese>修理を許可</Japanese>
+            <Korean>수리 허가</Korean>
+            <Chinesesimp>允许维修</Chinesesimp>
+            <Chinese>允許維修</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_enginerSetting_Repair_description">
+        <Key ID="STR_ACE_Repair_engineerSetting_Repair_description">
             <English>Who can perform repair actions?</English>
             <German>Wer kann eine Reperatur durchführen?</German>
             <Polish>Kto może wykonywać czynności związane z naprawą pojazdów?</Polish>
@@ -941,11 +1193,14 @@
             <Spanish>¿Quién puede realizar reparaciones?</Spanish>
             <Italian>Chi può eseguire riparazioni?</Italian>
             <French>Qui peut réparer ?</French>
-            <Japanese>誰が修理をおこなえるようにしますか？</Japanese>
+            <Japanese>誰が修理を出来るようににしますか?</Japanese>
+            <Korean>누가 수리를 할 수 있습니까?</Korean>
+            <Chinesesimp>谁可以进行维修操作?</Chinesesimp>
+            <Chinese>誰可以進行維修操作?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
             <English>Repair Threshold</English>
-            <German>Repariere Schweller</German>
+            <German>Reparaturlimit</German>
             <Polish>Próg naprawy</Polish>
             <Portuguese>Limite de reparo</Portuguese>
             <Russian>Лимит ремкомплекта</Russian>
@@ -954,10 +1209,13 @@
             <Italian>Limite Riparazioni</Italian>
             <French>Seuil de réparation</French>
             <Japanese>修理のしきい値</Japanese>
+            <Korean>정비 한계치</Korean>
+            <Chinesesimp>维修门槛</Chinesesimp>
+            <Chinese>維修門檻</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
             <English>What is the maximum damage that can be repaired with a toolkit?</English>
-            <German>Wie hoch ist der Schaden, der von einem Reperatursatz behoben werden kann?</German>
+            <German>Der maximale Schaden, der von einem Reperatursatz behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um kit de ferramentas?</Portuguese>
             <Russian>Какой максимальный урон можно починить с помощью ремкомплекта?</Russian>
@@ -965,11 +1223,14 @@
             <Czech>Jaké maximální poškození může být opraveno pomocí opravárenské sady?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato con il Toolkit?</Italian>
             <French>Quel est le maximum de dommages réparable par une trousse à outils ?</French>
-            <Japanese>ツールキットで修理できる、最大の損傷許容範囲を設定しますか？</Japanese>
+            <Japanese>ツールキットで修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
+            <Korean>어느정도의 피해까지 툴킷으로 수리가 가능합니까?</Korean>
+            <Chinesesimp>工具包可以修复的最大损坏值?</Chinesesimp>
+            <Chinese>工具包可以修復的最大損壞值?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
             <English>Repair Threshold (Engineer)</English>
-            <German>Repariere Schweller (Pionier)</German>
+            <German>Reparaturlimit (Pionier)</German>
             <Polish>Próg naprawy (mechanik)</Polish>
             <Portuguese>Limite de reparo (Engenheiro)</Portuguese>
             <Russian>Лимит инженера</Russian>
@@ -978,10 +1239,13 @@
             <Italian>Limite Riparazioni (Geniere)</Italian>
             <French>Seuil de réparatoin (ingénieur)</French>
             <Japanese>修理のしきい値 (工兵)</Japanese>
+            <Korean>정비 한계치 (정비공)</Korean>
+            <Chinesesimp>维修门槛 (工兵)</Chinesesimp>
+            <Chinese>維修門檻 (工兵)</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
             <English>What is the maximum damage that can be repaired by an engineer?</English>
-            <German>Wie hoch ist der Schaden, der von einem Pionier behoben werden kann?</German>
+            <German>Der maximale Schaden, der von einem Pionier behoben werden kann?</German>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
             <Portuguese>Qual é o dano máximo que pode ser reparado com um engenheiro?</Portuguese>
             <Russian>Какой максимальный урон может починить инженер?</Russian>
@@ -989,7 +1253,10 @@
             <Czech>Jaké maximální poškození může být opraveno pomoci inženýra?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato da un Geniere?</Italian>
             <French>Quel est le maximum de dommages qui peuvent être réparés par un ingénieur ?</French>
-            <Japanese>工兵が修理できる、最大の損傷許容範囲を設定しますか？</Japanese>
+            <Japanese>工兵が修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
+            <Korean>정비공은 어느정도의 피해까지 수리할 수 있습니까?</Korean>
+            <Chinesesimp>工兵可以修复的最大损坏值?</Chinesesimp>
+            <Chinese>工兵可以修復的最大損壞值?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_name">
             <English>Remove toolkit on use</English>
@@ -1002,6 +1269,9 @@
             <Italian>Rimuovi Toolkit dopo l'uso</Italian>
             <French>Enlever la trousse à outils après usage</French>
             <Japanese>ツールキットを使うと削除</Japanese>
+            <Korean>툴킷 사용후 제거</Korean>
+            <Chinesesimp>使用后删除工具包</Chinesesimp>
+            <Chinese>使用後刪除工具包</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_description">
             <English>Should the toolkit be removed on usage?</English>
@@ -1013,7 +1283,10 @@
             <Czech>Má být odstraněna sada nástroju po použití?</Czech>
             <Italian>Il Toolkit dev'essere rimosso dopo l'uso?</Italian>
             <French>La trousse à outils devrait-elle être enlevée après usage ?</French>
-            <Japanese>ツールキットを使うと削除しますか？</Japanese>
+            <Japanese>ツールキットを使うと削除しますか?</Japanese>
+            <Korean>툴킷을 사용하면 제거를 합니까?</Korean>
+            <Chinesesimp>要在使用后删除工具包吗?</Chinesesimp>
+            <Chinese>要在使用後刪除工具包嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_useAnywhere">
             <English>Anywhere</English>
@@ -1025,7 +1298,10 @@
             <Spanish>En cualquier sitio</Spanish>
             <Italian>Ovunque</Italian>
             <French>N'importe où</French>
-            <Japanese>だれでも</Japanese>
+            <Japanese>どこでも</Japanese>
+            <Korean>어디서나</Korean>
+            <Chinesesimp>任何地点</Chinesesimp>
+            <Chinese>任何地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairVehicleOnly">
             <English>Repair Vehicle only</English>
@@ -1038,6 +1314,9 @@
             <Italian>Solo Veicoli Riparazioni</Italian>
             <French>Véhicule de réparation seulement</French>
             <Japanese>修理車両のみ</Japanese>
+            <Korean>오직 수리 차량만</Korean>
+            <Chinesesimp>维修载具旁</Chinesesimp>
+            <Chinese>維修載具旁</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_repairFacilityOnly">
             <English>Repair Facility only</English>
@@ -1050,6 +1329,9 @@
             <Italian>Solo Strutture Riparazioni</Italian>
             <French>Installation de réparation seulement</French>
             <Japanese>修理施設のみ</Japanese>
+            <Korean>오직 수리 시설만</Korean>
+            <Chinesesimp>维修设施旁</Chinesesimp>
+            <Chinese>維修設施旁</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_vehicleAndFacility">
             <English>Repair Facility or Vehicle</English>
@@ -1062,6 +1344,9 @@
             <Italian>Strutture Riparazioni o Veicoli</Italian>
             <French>Installations ou véhicule de réparation</French>
             <Japanese>修理施設または車両のみ</Japanese>
+            <Korean>수리 시설혹은 차량</Korean>
+            <Chinesesimp>维修设施或载具旁</Chinesesimp>
+            <Chinese>維修設施或載具旁</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_DisplayName">
             <English>Assign Engineer</English>
@@ -1074,6 +1359,9 @@
             <Italian>Assegna Geniere</Italian>
             <French>Assigner le rôle d'ingénieur</French>
             <Japanese>工兵にする</Japanese>
+            <Korean>정비공 등록</Korean>
+            <Chinesesimp>指派工兵</Chinesesimp>
+            <Chinese>指派工兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_EnableList_DisplayName">
             <English>List</English>
@@ -1086,6 +1374,9 @@
             <Italian>Lista</Italian>
             <French>Liste</French>
             <Japanese>一覧</Japanese>
+            <Korean>목록</Korean>
+            <Chinesesimp>名单</Chinesesimp>
+            <Chinese>名單</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_Description">
             <English>List of unit names that will be classified as engineer, separated by commas.</English>
@@ -1098,6 +1389,9 @@
             <Italian>Lista di unità che verranno classificate come genieri, separate da virgole.</Italian>
             <French>Liste des noms d'unités qui seront considérées ingénieurs. Séparé par des virgules</French>
             <Japanese>一覧に記載されたユニット名を、工兵として指定します。コンマで複数を指定できます。</Japanese>
+            <Korean>목록내 보직이름은 정비공으로 분류됩니다. 쉼표로 구분합니다.</Korean>
+            <Chinesesimp>工兵名单，把单位名称输入在这边即可定义其为工兵。每个单位使用逗号以做区隔。</Chinesesimp>
+            <Chinese>工兵名單，把單位名稱輸入在這邊即可定義其為工兵。每個單位使用逗號以做區隔。</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_DisplayName">
             <English>Is Engineer</English>
@@ -1110,6 +1404,9 @@
             <Italian>E' Geniere</Italian>
             <French>Est ingénieur</French>
             <Japanese>工兵とする</Japanese>
+            <Korean>은 정비공이다</Korean>
+            <Chinesesimp>是工兵</Chinesesimp>
+            <Chinese>是工兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_Description">
             <English>Select the engineering skill level of the unit</English>
@@ -1122,6 +1419,9 @@
             <Italian>Seleziona il livello di abilità geniere dell'unità</Italian>
             <French>Sélectionner le niveau d'habilité en réparation de l'unité</French>
             <Japanese>ユニットへの工兵スキルを選択</Japanese>
+            <Korean>선택한 인원의 정비 실력을 고르십시요</Korean>
+            <Chinesesimp>选择工兵的技术水平</Chinesesimp>
+            <Chinese>選擇工兵的技術水平</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_none">
             <English>None</English>
@@ -1133,7 +1433,10 @@
             <Spanish>Ningún</Spanish>
             <Italian>Nessuna</Italian>
             <French>Aucun</French>
-            <Japanese>工兵</Japanese>
+            <Japanese>なし</Japanese>
+            <Korean>없음</Korean>
+            <Chinesesimp>无</Chinesesimp>
+            <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_engineer">
             <English>Engineer</English>
@@ -1145,19 +1448,21 @@
             <Spanish>Ingeniero</Spanish>
             <Italian>Geniere</Italian>
             <French>Ingénieur</French>
-            <Japanese>専門兵</Japanese>
+            <Japanese>工兵</Japanese>
+            <Korean>정비공</Korean>
+            <Chinesesimp>工兵</Chinesesimp>
+            <Chinese>工兵</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
-            <English>Specialist</English>
-            <German>Reparaturspezialist</German>
-            <Polish>Inżynier</Polish>
-            <Portuguese>Especialista</Portuguese>
-            <Russian>Специалист</Russian>
-            <Czech>Specialista</Czech>
-            <Spanish>Especialista</Spanish>
-            <Italian>Specialista Riparazioni</Italian>
-            <French>Spécialiste</French>
-            <Japanese>工兵として単体、複数ユニットを割り当てます。</Japanese>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
+            <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
+            <English>Adv. Engineer</English>
+            <German>Instandsetzer</German>
+            <Italian>Adv. Geniere</Italian>
+            <Japanese>上級工兵</Japanese>
+            <Chinesesimp>专精</Chinesesimp>
+            <Chinese>專精</Chinese>
+            <Polish>Zaaw. mechanik</Polish>
+            <Korean>고급 정비공</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -1170,6 +1475,9 @@
             <Italian>Assegna una o più unità come genieri</Italian>
             <French>Assigner un ou plusieurs unités comme ingénieur</French>
             <Japanese>修理車両として指定</Japanese>
+            <Korean>하나 혹은 여러 인원을 정비공으로 등록합니다</Korean>
+            <Chinesesimp>指定一个或多个单位为工兵</Chinesesimp>
+            <Chinese>指定一個或多個單位為工兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_DisplayName">
             <English>Assign Repair Vehicle</English>
@@ -1182,6 +1490,9 @@
             <Italian>Assegna Veicolo Riparazioni</Italian>
             <French>Assigner en tant que véhicule de réparation</French>
             <Japanese>修理車両として指定</Japanese>
+            <Korean>정비 차량 등록</Korean>
+            <Chinesesimp>指定维修载具</Chinesesimp>
+            <Chinese>指定維修載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
             <English>List</English>
@@ -1194,6 +1505,9 @@
             <Italian>Lista</Italian>
             <French>Liste</French>
             <Japanese>一覧</Japanese>
+            <Korean>목록</Korean>
+            <Chinesesimp>名单</Chinesesimp>
+            <Chinese>名單</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
@@ -1206,6 +1520,9 @@
             <Italian>Lista di Veicoli che verranno considerati veicoli riparazioni, separati da virgole.</Italian>
             <French>Liste de véhicules qui seront considérés comme véhicules de réparation. Séparé par des virgules.</French>
             <Japanese>一覧に記載されたユニット名を、修理車両として指定します。コンマで複数を指定できます。</Japanese>
+            <Korean>목록내 차량은 정비 차량으로 분류됩니다. 쉼표로 구분합니다.</Korean>
+            <Chinesesimp>载具名单，把载具名称输入在这边即可定义其为维修载具。每个载具使用逗号以做区隔。</Chinesesimp>
+            <Chinese>載具名單，把載具名稱輸入在這邊即可定義其為維修載具。每個載具使用逗號以做區隔。</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_DisplayName">
             <English>Is Repair Vehicle</English>
@@ -1218,6 +1535,9 @@
             <Italian>E' Veicolo Riparazioni</Italian>
             <French>Est un véhicule de réparation</French>
             <Japanese>修理車両とする</Japanese>
+            <Korean>은 정비 차량이다</Korean>
+            <Chinesesimp>是维修载具</Chinesesimp>
+            <Chinese>是維修載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_Description">
             <English>Is the vehicle classified as a repair vehicle?</English>
@@ -1229,7 +1549,10 @@
             <Czech>Je vozidlo klasifikováno jako opravárenské?</Czech>
             <Italian>Il veicolo è classificato dome veicolo riparazioni?</Italian>
             <French>Le véhicule est-il considéré comme un véhicule de réparation ?</French>
-            <Japanese>車両を修理車両と指定しますか？</Japanese>
+            <Japanese>車両を修理車両と指定しますか?</Japanese>
+            <Korean>이 차량을 정비 차량으로 분류합니까?</Korean>
+            <Chinesesimp>此载具是维修载具吗?</Chinesesimp>
+            <Chinese>此載具是維修載具嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_Description">
             <English>Assign one or multiple vehicles as a repair vehicle</English>
@@ -1242,6 +1565,9 @@
             <Italian>Assegna uno o più veicoli come veicoli riparazioni</Italian>
             <French>Assigner un ou plusieurs véhicules en tant que véhicule de réparation</French>
             <Japanese>単体、または複数の車両を修理車両とします</Japanese>
+            <Korean>하나 혹은 여러 차량을 정비 차량으로 등록합니다</Korean>
+            <Chinesesimp>指定一个或多个载具作为维修载具</Chinesesimp>
+            <Chinese>指定一個或多個載具作為維修載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_DisplayName">
             <English>Assign Repair Facility</English>
@@ -1254,6 +1580,9 @@
             <Italian>Assegna Struttura Riparazioni</Italian>
             <French>Assigner en tant qu'installation de réparation</French>
             <Japanese>修理施設とする</Japanese>
+            <Korean>정비 시설 등록</Korean>
+            <Chinesesimp>指定维修设施</Chinesesimp>
+            <Chinese>指定維修設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
             <English>List</English>
@@ -1266,6 +1595,9 @@
             <Italian>Lista</Italian>
             <French>Liste</French>
             <Japanese>一覧</Japanese>
+            <Korean>목록</Korean>
+            <Chinesesimp>名单</Chinesesimp>
+            <Chinese>名單</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
@@ -1278,6 +1610,9 @@
             <Italian>Lista di oggetti che verranno classificati come strutture riparazioni, separate da virgole.</Italian>
             <French>Liste des objets considérés comme installations de réparation. Séparé par des virgules</French>
             <Japanese>一覧に記載されたユニット名を、修理施設として指定します。コンマで複数を指定できます。</Japanese>
+            <Korean>목록내 시설은 정비 시설으로 분류됩니다. 쉼표로 구분합니다.</Korean>
+            <Chinesesimp>设施名单，把设施名称输入在这边即可定义其为维修设施。每个设施使用逗号以做区隔。</Chinesesimp>
+            <Chinese>設施名單，把設施名稱輸入在這邊即可定義其為維修設施。每個設施使用逗號以做區隔。</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_DisplayName">
             <English>Is Repair Facility</English>
@@ -1290,6 +1625,9 @@
             <Italian>E' Struttura Riparazioni</Italian>
             <French>Est une installation de réparation</French>
             <Japanese>修理施設とする</Japanese>
+            <Korean>은 정비 시설이다</Korean>
+            <Chinesesimp>是维修设施</Chinesesimp>
+            <Chinese>是維修設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_Description">
             <English>Is the object classified as a repair Facility?</English>
@@ -1301,7 +1639,10 @@
             <Czech>Je objekt klasifikován jako opravárenské zařízení?</Czech>
             <Italian>L'oggetto è classificato come struttura riparazioni?</Italian>
             <French>L'objet est-il considéré comme une installation de réparation ?</French>
-            <Japanese>オブジェクトを修理施設として指定しますか？</Japanese>
+            <Japanese>オブジェクトを修理施設として指定しますか?</Japanese>
+            <Korean>이 시설을 정비 시설로 분류합니까?</Korean>
+            <Chinesesimp>此设施是维修设施吗?</Chinesesimp>
+            <Chinese>此設施是維修設施嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
@@ -1314,6 +1655,9 @@
             <Italian>Assegna uno o più oggetti come strutture riparazioni</Italian>
             <French>Assigner un ou plusieurs objets en tant que véhicule de réparation</French>
             <Japanese>ひとつ、または複数オブジェクトに予備部品を追加</Japanese>
+            <Korean>하나 혹은 여러 시설을 정비 시설로 등록합니다</Korean>
+            <Chinesesimp>指定一个或多个对象作为维修设施</Chinesesimp>
+            <Chinese>指定一個或多個對象作為維修設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
             <English>Add Spare Parts</English>
@@ -1326,6 +1670,9 @@
             <Italian>Aggiungi Parti di Ricambio</Italian>
             <French>Ajouter des pièces de rechange</French>
             <Japanese>予備部品を追加</Japanese>
+            <Korean>예비 부품 더하기</Korean>
+            <Chinesesimp>添加备件</Chinesesimp>
+            <Chinese>添加備件</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
             <English>Add spare parts to one or multiple objects</English>
@@ -1338,6 +1685,9 @@
             <Italian>Aggiungi parti di ricambio ad uno o più oggetti</Italian>
             <French>Ajouter des pièces de rechange à un ou plusieurs objets</French>
             <Japanese>一覧に追加されたオブジェクトへ予備部品を与えます。コンマで複数を指定できます。</Japanese>
+            <Korean>하나 혹은 여러 물체가 예비 부품을 더합니다</Korean>
+            <Chinesesimp>添加备件到一个或多个对象上</Chinesesimp>
+            <Chinese>添加備件到一個或多個對象上</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
             <English>List</English>
@@ -1350,6 +1700,9 @@
             <Italian>Lista</Italian>
             <French>Liste</French>
             <Japanese>一覧</Japanese>
+            <Korean>목록</Korean>
+            <Chinesesimp>名单</Chinesesimp>
+            <Chinese>名單</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
@@ -1362,6 +1715,9 @@
             <Italian>Lista di oggetti a cui verranno aggiunte parti di ricambio, separate da virgole.</Italian>
             <French>Liste des objets qui recevront des pièces de réparation en plus. Séparé par des virgules</French>
             <Japanese>一覧に追加されたオブジェクトへ予備部品を与えます。コンマで複数を指定できます。</Japanese>
+            <Korean>목록내 물체는 예비 부품을 받습니다, 쉼표로 구분합니다.</Korean>
+            <Chinesesimp>添加备件到名单的载具上。每个载具使用逗号以做区隔。</Chinesesimp>
+            <Chinese>添加備件到名單的載具上。每個載具使用逗號以做區隔。</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
             <English>Part</English>
@@ -1374,6 +1730,9 @@
             <Italian>Parte</Italian>
             <French>Pièce</French>
             <Japanese>部品</Japanese>
+            <Korean>부품</Korean>
+            <Chinesesimp>零件</Chinesesimp>
+            <Chinese>零件</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
             <English>Spare part.</English>
@@ -1386,6 +1745,9 @@
             <Italian>Parte di ricambio.</Italian>
             <French>Pièce de rechange</French>
             <Japanese>予備部品</Japanese>
+            <Korean>예비 부품</Korean>
+            <Chinesesimp>备用零件</Chinesesimp>
+            <Chinese>備用零件</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
             <English>Amount</English>
@@ -1398,6 +1760,9 @@
             <Italian>Quantità</Italian>
             <French>Quantité</French>
             <Japanese>量</Japanese>
+            <Korean>수량</Korean>
+            <Chinesesimp>数量</Chinesesimp>
+            <Chinese>數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
             <English>Number of selected spare parts.</English>
@@ -1410,6 +1775,9 @@
             <Italian>Numero di parti di ricambio selezionate.</Italian>
             <French>Nombre de pièces de rechange séléctionnées</French>
             <Japanese>選択された予備部品の数を選択します。</Japanese>
+            <Korean>선택한 부품의 수</Korean>
+            <Chinesesimp>选择的备件数量</Chinesesimp>
+            <Chinese>選擇的備件數量</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
             <English>Wheel repair requirements</English>
@@ -1422,6 +1790,9 @@
             <Italian>Requisiti riparazione ruote</Italian>
             <French>Exigences de réparation de roue</French>
             <Japanese>タイヤの修理を必要</Japanese>
+            <Korean>바퀴 교체 요구사항</Korean>
+            <Chinesesimp>维修轮胎限制</Chinesesimp>
+            <Chinese>維修輪胎限制</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
             <English>Items required to remove/replace wheels</English>
@@ -1433,7 +1804,10 @@
             <Czech>Položka vyžaduje odstraněná/vyměněná kola</Czech>
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
             <French>Items exigés pour enlever/remplacer les roues</French>
-            <Japanese>タイヤの除去と交換にアイテムを必要としますか？</Japanese>
+            <Japanese>タイヤの除去と交換にアイテムを必要としますか?</Japanese>
+            <Korean>바퀴를 제거/교체하는데 필요한 물건</Korean>
+            <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
+            <Chinese>需要特定物品來移除/更換車輪</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
@@ -1445,6 +1819,62 @@
             <Russian>Двигатель должен быть выключен для ремонта</Russian>
             <Japanese>修理のためにエンジンを停止させる必要があります。</Japanese>
             <Polish>Silnik musi być wyłączony w celu naprawy</Polish>
+            <Korean>수리를 위해서는 엔진을 꺼야만 합니다</Korean>
+            <Italian>Il motore deve essere spento per poter riparare</Italian>
+            <Chinesesimp>引擎必须先关闭才能开始进行维修</Chinesesimp>
+            <Chinese>引擎必須先關閉才能開始進行維修</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_editorLoadedTracks">
+            <English>Spare Tracks</English>
+            <German>Ersatzketten</German>
+            <Japanese>予備履帯</Japanese>
+            <Italian>Cingoli di Scorta</Italian>
+            <Chinese>備用履帶</Chinese>
+            <Chinesesimp>备用履带</Chinesesimp>
+            <Polish>Zapasowe Gąsienice</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
+            <English>Number of spare tracks in cargo.</English>
+            <German>Anzahl der Ersatzketten im Laderaum.</German>
+            <Japanese>カーゴ内にある予備履帯の数を指定します。</Japanese>
+            <Italian>Numero dei cingoli di scorta nel cargo.</Italian>
+            <Chinese>設定載具在貨艙內攜帶的備用履帶數量</Chinese>
+            <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
+            <Polish>Liczba zapasowych gąsienic w ładunku.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_editorLoadedWheels">
+            <English>Spare Wheels</English>
+            <German>Ersatzreifen</German>
+            <Japanese>予備タイヤ</Japanese>
+            <Italian>Ruote di Scorta</Italian>
+            <Chinese>備用輪胎</Chinese>
+            <Chinesesimp>备用轮胎</Chinesesimp>
+            <Polish>Zapasowe Koła</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
+            <English>Number of spare wheels in cargo.</English>
+            <German>Anzahl der Ersatzreifen im Laderaum.</German>
+            <Japanese>カーゴ内にある予備タイヤの数を指定します。</Japanese>
+            <Italian>Numero delle ruote di scorta nel cargo.</Italian>
+            <Chinese>設定載具在貨艙內攜帶的備用輪胎數量</Chinese>
+            <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
+            <Polish>Liczba zapasowych kół w ładunku.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
+            <English>Auto shut off engine on repair</English>
+            <Japanese>修理時にエンジン自動停止</Japanese>
+            <Chinesesimp>维修时自动关闭发动机。</Chinesesimp>
+            <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Motore spento automaticamente durante la riparazione</Italian>
+            <Polish>Automatycznie wyłącz silnik podczas napraw</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
+            <English>Automatically shut off the engine when doing repairs.</English>
+            <Japanese>修理時にエンジンを自動で停止します。</Japanese>
+            <Chinesesimp>修理时自动关闭发动机。</Chinesesimp>
+            <Chinese>維修時自動關閉引擎</Chinese>
+            <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
+            <Polish>Automatycznie wyłącz silnik podczas napraw.</Polish>
         </Key>
     </Package>
 </Project>

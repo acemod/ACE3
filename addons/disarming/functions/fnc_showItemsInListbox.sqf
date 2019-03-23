@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -8,14 +9,13 @@
  * 1: ItemArray [["itemClassnames"],[counts]] <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [theListBox, [["ace_bandage"],[2]]] call ace_disarming_fnc_showItemsInListbox
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 
@@ -26,7 +26,7 @@ params ["_listBoxCtrl", "_itemsCountArray"];
     private _count = (_itemsCountArray select 1) select _forEachIndex;
 
     if ((_classname != DUMMY_ITEM) && {_classname != "ACE_FakePrimaryWeapon"}) then { //Don't show the dummy potato or fake weapon
-        private "_configPath";
+        private _configPath = configNull;
         private _displayName = "";
         private _picture = "";
         switch (true) do {

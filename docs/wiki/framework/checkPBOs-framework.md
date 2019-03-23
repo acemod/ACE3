@@ -24,7 +24,13 @@ If you are worried that players haven't updated ACE3 or other mods to the versio
 
 You can make a whitelist of mods that don't have to be on the server or are optional for clients. If you want to use the "Check all addons" option of this module and allow the usage of client side modifications like Blastcore or JSRS, you have to list them here.
 
-The list must be in the following format: `["ADDON1","ADDON2",...]` where the strings are `CfgPatches` classes to all PBOs of the optional mod. To figure these out, you can use the scripting command `activatedAddons` in the editor while those mods are enabled.
+The list must be in the following format: `["ADDON1","ADDON2",...]` where the strings are `CfgPatches` classes to all PBOs of the optional mod. To figure these out, you can use the script:
+
+```sqf
+copyToClipboard str ("true" configClasses (configFile >> "CfgPatches") apply {configName _x});
+```
+
+in the editor while those mods are enabled.
 
 #### 1.1.1 Example 1
 

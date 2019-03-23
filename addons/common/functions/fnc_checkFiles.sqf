@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Compares version numbers of PBOs and DLLs.
@@ -8,9 +9,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_common_fnc_checkFiles
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 ///////////////
 // check addons
@@ -37,34 +40,53 @@ if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) the
 };
 
 //private _addons = activatedAddons; // broken with High-Command module, see #2134
-private _addons = "true" configClasses (configFile >> "CfgPatches");//
-_addons = _addons apply {toLower configName _x};//
-_addons = _addons select {_x find "ace_" == 0};
+private _addons = (cba_common_addons select {(_x select [0,4]) == "ace_"}) apply {toLower _x};
 
+private _oldCompats = [];
 {
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
         private _errorMsg = format ["File %1.pbo is outdated.", _x];
 
         ERROR(_errorMsg);
 
-        if (hasInterface) then {
-            ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+        if ((_x select [0, 10]) != "ace_compat") then {
+            if (hasInterface) then {
+                ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+            };
+        } else {
+            _oldCompats pushBack _x;  // Don't block game if it's just an old compat pbo
         };
     };
     false
 } count _addons;
+if (!(_oldCompats isEqualTo [])) then {
+    [{
+        // Lasts for ~10 seconds
+        ERROR_WITH_TITLE_1("The following ACE compatiblity PBOs are outdated", "%1", _this);
+    }, _oldCompats, 1] call CBA_fnc_waitAndExecute;
+};
 
 ///////////////
 // check dlls
 ///////////////
 if (toLower (productVersion select 6) in ["linux", "osx"]) then {
-    INFO_2("Operating system does not support DLL file format");
+    INFO("Operating system does not support DLL file format");
 } else {
     {
         private _versionEx = _x callExtension "version";
 
         if (_versionEx == "") then {
-            private _errorMsg = format ["Extension %1.dll not installed.", _x];
+            private _extension = ".dll";
+
+            if (productVersion select 7 == "x64") then {
+                _extension = "_x64.dll";
+            };
+
+            if (productVersion select 6 == "Linux") then {
+                _extension = ".so";
+            };
+
+            private _errorMsg = format ["Extension %1%2 not found.", _x, _extension];
 
             ERROR(_errorMsg);
 
@@ -111,7 +133,7 @@ if (isMultiplayer) then {
 
             _addons = _addons - GVAR(ServerAddons);
             if !(_addons isEqualTo []) then {
-                _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
+                private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
                 ERROR(_errorMsg);
 

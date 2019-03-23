@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Unfied handling of weapon fire
@@ -14,9 +15,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "gun", "muzzle", "single", "ammo", "magazine", "bullet"] call ace_common_fnc_firedEH
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 BEGIN_COUNTER(firedEH);
 

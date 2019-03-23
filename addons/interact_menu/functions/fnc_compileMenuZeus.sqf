@@ -1,16 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Compile the zeus action menu (only to be done once)
  *
  * Arguments:
- * nil
+ * None
  *
  * Return Value:
  * None
  *
+ * Example:
+ * call ACE_interact_menu_fnc_compileMenuZeus
+ *
  * Public: No
  */
-#include "script_component.hpp";
 
 // Exit if the action menu is already compiled for zeus
 if !(isNil {missionNamespace getVariable [QGVAR(ZeusActions), nil]}) exitWith {};
@@ -24,7 +27,11 @@ private _recurseFnc = {
         if(isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
 
-            private _icon = getText (_entryCfg >> "icon");
+            private _icon = if (isArray (_entryCfg >> "icon")) then {
+                getArray (_entryCfg >> "icon");
+            } else {
+                [getText (_entryCfg >> "icon"), "#FFFFFF"];
+            };
             private _statement = compile (getText (_entryCfg >> "statement"));
 
             private _condition = getText (_entryCfg >> "condition");

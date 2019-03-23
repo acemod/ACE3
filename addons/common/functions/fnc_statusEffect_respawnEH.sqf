@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the Respawn Event Handler to reset effects.
@@ -6,20 +7,18 @@
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, objNull] call ace_common_fnc_statusEffect_respawnEH
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_object"];
 TRACE_1("params",_object);
 
-//Only run this after the settings are initialized  
+//Only run this after the settings are initialized
 //Need to wait for all EH to be installed (local event will happen between pre and post init)
 if !(GVAR(settingsInitFinished)) exitWith {
     TRACE_1("pushing to runAtSettingsInitialized", _this);

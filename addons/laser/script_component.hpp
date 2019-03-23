@@ -23,3 +23,8 @@
 #define __LaserDesignatorIGUI_ACE_Distance (__LaserDesignatorIGUI displayCtrl 123002)
 #define __LaserDesignatorIGUI_CA_Distance (__LaserDesignatorIGUI displayCtrl 151)
 #define __LaserDesignatorIGUI_LaserOn (__LaserDesignatorIGUI displayCtrl 158)
+
+#define IDC_MODECONTROLGROUP 1000
+#define IDC_ATTACKMODE 1001
+#define IDC_LASERCODE 1002
+#define IDC_LASERICON 1003

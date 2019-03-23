@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Sets the Dir and pitch of passed object
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_explosive", "_direction", "_pitch"];
 TRACE_3("params",_explosive,_direction,_pitch);
@@ -28,16 +28,4 @@ if (isNull (attachedTo _explosive)) then {
 } else {
     //Attaching to a vehicle (dirAndUp based on vehicle)
     _explosive setVectorDirAndUp [[0,0,1],[(sin _direction),(cos _direction),0]];
-};
-
-if (isServer) then {
-    // Store the orientation to broadcast it later to JIP players
-    GVAR(explosivesOrientations) pushBack [_explosive, _direction, _pitch];
-
-    // This is a good time to filter the array and remove explosives that no longer exist
-    GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
-        _x params ["_explosive"];
-        (!isNull _explosive && {alive _explosive})
-    };
-    TRACE_1("setPosition",GVAR(explosivesOrientations));
 };

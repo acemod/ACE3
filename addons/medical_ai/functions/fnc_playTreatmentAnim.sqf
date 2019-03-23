@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Plays the corresponding treatment animation.
@@ -8,11 +9,13 @@
  * 2: Is self treatment <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [bob, true, true] call ACE_medical_ai_fnc_playTreatmentAnim
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit", "_isBandage", "_isSelfTreatment"];
 
 if (vehicle _unit != _unit) exitWith {};
@@ -32,7 +35,12 @@ if (stance _unit == "PRONE") then {
 };
 
 private _anim = getText (_animConfig >> _configProperty);
-private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _unit, handgunWeapon _unit] find (currentWeapon _unit)));
+private _wpn = switch (true) do {
+    case ((currentWeapon _unit) == ""): {"non"};
+    case ((currentWeapon _unit) == (primaryWeapon _unit)): {"rfl"};
+    case ((currentWeapon _unit) == (handgunWeapon _unit)): {"pst"};
+    default {"non"};
+};
 _anim = [_anim, "[wpn]", _wpn] call CBA_fnc_replace;
 
 [_unit, _anim] call EFUNC(common,doAnimation);

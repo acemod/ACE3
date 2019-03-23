@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Return current state of the weapon. Attachments and magazines with ammo.
@@ -12,9 +13,11 @@
  * 2: Magazines <ARRAY>
  * 3: Ammo <ARRAY>
  *
+ * Example:
+ * [bob, "gun"] call ace_common_fnc_getWeaponState
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_weapon", nil, [""]]];
 
@@ -42,4 +45,4 @@ private _ammo = _muzzles apply {0};
     false
 } count magazinesAmmoFull _unit;
 
-[_attachments, _muzzles, _magazines, _ammo]; 
+[_attachments, _muzzles, _magazines, _ammo];

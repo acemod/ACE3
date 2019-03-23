@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, Jonpas
  * When interact_menu starts rendering (from "interact_keyDown" event).
@@ -7,14 +8,13 @@
  * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_advanced_throwing_fnc_renderPickUpInteraction
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [{
     params ["_args", "_idPFH"];

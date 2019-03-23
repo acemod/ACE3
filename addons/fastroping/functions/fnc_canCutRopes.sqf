@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the unit can cut deployed ropes.
@@ -13,10 +14,9 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 
-!(_deployedRopes isEqualTo [])
+!(_deployedRopes isEqualTo []) &&
+{{(_x select 5)} count (_deployedRopes) == 0}

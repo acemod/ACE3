@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * canUseMapTools
@@ -6,11 +7,13 @@
  * None
  *
  * Return Value:
- * <BOOL>
+ * Boolean <BOOL>
+ *
+ * Example:
+ * call ACE_maptools_fnc_canUseMapTools
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 visibleMap &&
 {alive ACE_player} &&
@@ -21,6 +24,6 @@ visibleMap &&
     } forEach (assignedItems ACE_player);
     false
 } &&
-{"ACE_MapTools" in (items ACE_player)} &&
+{"ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))} &&
 {!GVAR(mapTool_isDragging)} &&
 {!GVAR(mapTool_isRotating)}

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Collect a entire tree of active actions
@@ -11,9 +12,11 @@
  * Return Value:
  * Active children <ARRAY>
  *
+ * Example:
+ * [bob, [array], [array], 5] call ACE_interact_menu_fnc_collectActoveActionTree
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_origAction", "_parentPath", "_distanceToBasePoint"];
 _origAction params ["_origActionData", "_origActionChildren"];

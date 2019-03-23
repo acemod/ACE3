@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Converts ASL to Arma "Position"
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [1, 2, 3] call ace_common_fnc_ASLToPosition
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (surfaceIsWater _this) then {
     _this

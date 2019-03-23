@@ -1,18 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Toggles the DAGR overlay
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_toggleOverlay
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(run) = !GVAR(run);
 

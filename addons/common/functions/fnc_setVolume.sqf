@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.
@@ -8,11 +9,13 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [true] call ace_common_fnc_setVolume
+ *
  * Public: Yes
  *
  * Note: Uses player
  */
-#include "script_component.hpp"
 
 #define MUTED_LEVEL 0.2
 #define NORMAL_LEVEL 1

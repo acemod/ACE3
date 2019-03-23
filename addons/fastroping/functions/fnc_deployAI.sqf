@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Auomatically deploy a helicopter filled with AI units.
@@ -15,10 +16,7 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 params [["_vehicle", objNull, [objNull]], ["_deploySpecial", false, [true]], ["_createDeploymentGroup", true, [true]]];
-private ["_config", "_configEnabled", "_deployTime", "_unitsToDeploy", "_deployGroup"];
 
 if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
     if (hasInterface) then {
@@ -28,8 +26,8 @@ if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
     ERROR('FUNC(deployAI): deployAI was called with an invalid or non-existant vehicle.');
 };
 
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_configEnabled = getNumber (_config >> QGVAR(enabled));
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _configEnabled = getNumber (_config >> QGVAR(enabled));
 if (_configEnabled == 0) exitWith {
     if (hasInterface) then {
         [format ["You cannot fast rope from a ""%1"" helicopter.", getText (_config >> "DisplayName")], QFUNC(deployAI)] spawn BIS_fnc_guiMessage;
@@ -44,7 +42,7 @@ if (_configEnabled == 2 && {isNull (_vehicle getVariable [QGVAR(FRIES), objNull]
     ERROR_1('FUNC(deployAI): "%1" requires a FRIES for fastroping but has not been equipped with one.',getText (_config >> "DisplayName"));
 };
 
-_unitsToDeploy = crew _vehicle;
+private _unitsToDeploy = crew _vehicle;
 if (_deploySpecial) then {
     _unitsToDeploy deleteAt (_unitsToDeploy find driver _vehicle);
 } else {
@@ -56,11 +54,11 @@ if (_unitsToDeploy isEqualTo []) exitWith {
 };
 
 if (_createDeploymentGroup) then {
-    _deployGroup = createGroup side (_unitsToDeploy select 0);
+    private _deployGroup = createGroup side (_unitsToDeploy select 0);
     _unitsToDeploy joinSilent _deployGroup;
 };
 
-_deployTime = 0;
+private  _deployTime = 0;
 if (getText (_config >> QGVAR(onPrepare)) != "") then {
     _deployTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onPrepare))));
 };

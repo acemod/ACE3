@@ -1,10 +1,11 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain and Ruthberg
- * Updates and applys the current deafness.  Called every 1 sec from a PFEH.
+ * Updates and applies the current deafness. Called every 1 sec from a PFEH.
  *
  * Arguments:
  * 0: Args <ARRAY>
- * -----0: Just update volume (skip ringing/recovery) <BOOL><OPTIONAL>
+ *   0: Just update volume (skip ringing/recovery) <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!alive ACE_player) exitWith {
     if (missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
@@ -22,7 +22,7 @@ if (!alive ACE_player) exitWith {
     [QUOTE(ADDON), 1, true] call EFUNC(common,setHearingCapability);
 };
 
-(_this select 0) params ["_justUpdateVolume"];
+(_this select 0) params [["_justUpdateVolume", false]];
 
 GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
 GVAR(volume) = (1 -  (GVAR(deafnessDV) / 20)) max 0.05;

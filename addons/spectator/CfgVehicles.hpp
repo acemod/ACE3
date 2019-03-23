@@ -1,61 +1,19 @@
 class CfgVehicles {
     class ACE_Module;
     class GVAR(moduleSettings): ACE_Module {
-        scope = 2;
+        scope = 1;
         displayName = CSTRING(Settings_DisplayName);
-        icon = QPATHTOF(UI\Icon_Module_Spectator_ca.paa);
+        icon = QPATHTOF(data\Icon_Module_Spectator_ca.paa);
         category = "ACE";
         function = QFUNC(moduleSpectatorSettings);
         isGlobal = 1;
         author = ECSTRING(common,ACETeam);
         class Arguments {
-            class unitsFilter {
-                displayName = CSTRING(units_DisplayName);
-                description = CSTRING(units_Description);
-                typeName = "NUMBER";
-                class values {
-                    class none {
-                        name = CSTRING(units_none);
-                        value = 0;
-                    };
-                    class players {
-                        name = CSTRING(units_players);
-                        value = 1;
-                    };
-                    class playable {
-                        name = CSTRING(units_playable);
-                        value = 2;
-                        default = 1;
-                    };
-                    class all  {
-                        name = CSTRING(units_all);
-                        value = 3;
-                    };
-                };
-            };
-            class sidesFilter {
-                displayName = CSTRING(sides_DisplayName);
-                description = CSTRING(sides_Description);
-                typeName = "NUMBER";
-                class values {
-                    class player {
-                        name = CSTRING(sides_player);
-                        value = 0;
-                        default = 1;
-                    };
-                    class friendly {
-                        name = CSTRING(sides_friendly);
-                        value = 1;
-                    };
-                    class hostile {
-                        name = CSTRING(sides_hostile);
-                        value = 2;
-                    };
-                    class all  {
-                        name = CSTRING(sides_all);
-                        value = 3;
-                    };
-                };
+            class enableAI {
+                displayName = CSTRING(ai_DisplayName);
+                description = CSTRING(ai_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
             };
             class cameraModes {
                 displayName = CSTRING(modes_DisplayName);
@@ -72,15 +30,15 @@ class CfgVehicles {
                         value = 1;
                     };
                     class free {
-                        name = CSTRING(modes_free);
+                        name = "$STR_A3_Spectator_free_camera_tooltip";
                         value = 2;
                     };
                     class internal  {
-                        name = CSTRING(modes_internal);
+                        name = "$STR_A3_Spectator_1pp_camera_tooltip";
                         value = 3;
                     };
                     class external  {
-                        name = CSTRING(modes_external);
+                        name = "$STR_A3_Spectator_3pp_camera_tooltip";
                         value = 4;
                     };
                 };
@@ -113,5 +71,18 @@ class CfgVehicles {
         class ModuleDescription {
             description = CSTRING(Settings_Description);
         };
+    };
+    class VirtualMan_F;
+    class GVAR(virtual): VirtualMan_F {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(Settings_DisplayName);
+        scope = 2;
+        scopeArsenal = 0;
+        scopeCurator = 0;
+
+        weapons[] = {};
+
+        delete ACE_Actions;
+        delete ACE_SelfActions;
     };
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Prevents the cursor from entering the roamer when drawing lines and records the positions
@@ -7,16 +8,15 @@
  * 1: Roamer Width <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [map, 300] call ace_maptools_fnc_drawLinesOnRoamer
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-if (!GVAR(drawStaightLines)) exitWith {};
+if (!GVAR(drawStraightLines)) exitWith {};
 
 params ["_theMap", "_roamerWidth"];
 GVAR(mapTool_pos) params ["_roamerPosX", "_roamerPosY"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Fixes the lowered rifle animation
@@ -6,14 +7,13 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [ACE_player] call ace_common_fnc_fixLoweredRifleAnimation
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

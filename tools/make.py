@@ -30,7 +30,7 @@
 
 ###############################################################################
 
-__version__ = "0.8"
+__version__ = "0.9"
 
 import sys
 
@@ -71,7 +71,7 @@ key = ""
 dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
-signature_blacklist = ["ace_server.pbo"]
+signature_blacklist = []
 importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
 versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
 
@@ -228,57 +228,41 @@ def find_bi_tools(work_drive):
         raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
 
-def find_depbo_tools(regKey):
+def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
-    stop = False
+    requiredToolPaths = {"pboProject": None, "rapify": None, "MakePbo": None}
+    failed = False
 
-    if regKey == "HKCU":
-        reg = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
-        stop = True
-    else:
-        reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
-
-    try:
+    for tool in requiredToolPaths:
         try:
-            k = winreg.OpenKey(reg, r"Software\Wow6432Node\Mikero\pboProject")
+            try:
+                k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(tool))
+                path = winreg.QueryValueEx(k, "exe")[0]
+            except FileNotFoundError:
+                try:
+                    k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(tool))
+                    path = winreg.QueryValueEx(k, "exe")[0]
+                except FileNotFoundError:
+                    try:
+                        k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Wow6432Node\Mikero\{}".format(tool))
+                        path = winreg.QueryValueEx(k, "exe")[0]
+                    except FileNotFoundError:
+                        k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Wow6432Node\Mikero\{}".format(tool))
+                        path = winreg.QueryValueEx(k, "exe")[0]
         except FileNotFoundError:
-            k = winreg.OpenKey(reg, r"Software\Mikero\pboProject")
-        try:
-            pboproject_path = winreg.QueryValueEx(k, "exe")[0]
+            print_error("Could not find {}".format(tool))
+            failed = True
+        else:
+            #Strip any quotations from the path due to a MikeRo tool bug which leaves a trailing space in some of its registry paths.
+            requiredToolPaths[tool] = path.strip('"')
+            print_green("Found {}.".format(tool))
+        finally:
             winreg.CloseKey(k)
-            print("Found pboproject.")
-        except:
-            print_error("ERROR: Could not find pboProject.")
 
-        try:
-            k = winreg.OpenKey(reg, r"Software\Wow6432Node\Mikero\rapify")
-        except FileNotFoundError:
-            k = winreg.OpenKey(reg, r"Software\Mikero\rapify")
-        try:
-            rapify_path = winreg.QueryValueEx(k, "exe")[0]
-            winreg.CloseKey(k)
-            print("Found rapify.")
-        except:
-            print_error("Could not find rapify.")
+    if failed:
+        raise Exception("BadDePBO", "DePBO tools not installed correctly")
 
-        try:
-            k = winreg.OpenKey(reg, r"Software\Wow6432Node\Mikero\MakePbo")
-        except FileNotFoundError:
-            k = winreg.OpenKey(reg, r"Software\Mikero\MakePbo")
-        try:
-            makepbo_path = winreg.QueryValueEx(k, "exe")[0]
-            winreg.CloseKey(k)
-            print("Found makepbo.")
-        except:
-            print_error("Could not find makepbo.")
-    except:
-        if stop == True:
-            raise Exception("BadDePBO", "DePBO tools not installed correctly")
-        return -1
-
-
-    #Strip any quotations from the path due to a MikeRo tool bug which leaves a trailing space in some of its registry paths.
-    return [pboproject_path.strip('"'),rapify_path.strip('"'),makepbo_path.strip('"')]
+    return requiredToolPaths
 
 
 def color(color):
@@ -308,8 +292,10 @@ def color(color):
 
 def print_error(msg):
     color("red")
-    print ("ERROR: {}".format(msg))
+    print("ERROR: {}".format(msg))
     color("reset")
+    global printedErrors
+    printedErrors += 1
 
 def print_green(msg):
     color("green")
@@ -436,17 +422,25 @@ def cleanup_optionals(mod):
 
             try:
                 file_name = "{}{}.pbo".format(pbo_name_prefix,dir_name)
+                folder= "@{}{}".format(pbo_name_prefix,dir_name)
                 src_file_path = os.path.join(release_dir, project, "addons", file_name)
-                dst_file_path = os.path.join(release_dir, project, "optionals", file_name)
+                dst_file_path = os.path.join(release_dir, project, "optionals",folder,"addons",file_name)
 
                 sigFile_name = "{}.{}.bisign".format(file_name,key_name)
                 src_sig_path = os.path.join(release_dir, project, "addons", sigFile_name)
-                dst_sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
+                dst_sig_path = os.path.join(release_dir, project, "optionals",folder,"addons", sigFile_name)
+
 
                 if (os.path.isfile(src_file_path)):
+                    if (os.path.isfile(dst_file_path)):
+                        # print("Cleanuping up old file {}".format(dst_file_path))
+                        os.remove(dst_file_path);
                     #print("Preserving {}".format(file_name))
                     os.renames(src_file_path,dst_file_path)
                 if (os.path.isfile(src_sig_path)):
+                    if (os.path.isfile(dst_sig_path)):
+                        # print("Cleanuping up old file {}".format(dst_sig_path))
+                        os.remove(dst_sig_path);
                     #print("Preserving {}".format(sigFile_name))
                     os.renames(src_sig_path,dst_sig_path)
             except FileExistsError:
@@ -808,6 +802,10 @@ def main(argv):
     global pbo_name_prefix
     global ciBuild
     global missingFiles
+    global failedBuilds
+    global printedErrors
+
+    printedErrors = 0
 
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -1031,12 +1029,11 @@ See the make.cfg file for additional build options.
 
     if build_tool == "pboproject":
         try:
-            depbo_tools = find_depbo_tools("HKLM")
-            if depbo_tools == -1:
-                depbo_tools = find_depbo_tools("HKCU")
-            pboproject = depbo_tools[0]
-            rapifyTool = depbo_tools[1]
-            makepboTool = depbo_tools[2]
+            depbo_tools = find_depbo_tools()
+
+            pboproject = depbo_tools["pboProject"]
+            rapifyTool = depbo_tools["rapify"]
+            makepboTool = depbo_tools["MakePbo"]
         except:
             raise
             print_error("Could not find dePBO tools. Download the needed tools from: https://dev.withsix.com/projects/mikero-pbodll/files")
@@ -1223,7 +1220,7 @@ See the make.cfg file for additional build options.
 
                 except:
                     raise
-                    print_error("ERROR: Could not copy module to work drive. Does the module exist?")
+                    print_error("Could not copy module to work drive. Does the module exist?")
                     input("Press Enter to continue...")
                     print("Resuming build...")
                     continue
@@ -1244,7 +1241,7 @@ See the make.cfg file for additional build options.
                         os.remove(f)
             except:
                 raise
-                print_error("ERROR: Could not copy module to work drive. Does the module exist?")
+                print_error("Could not copy module to work drive. Does the module exist?")
                 input("Press Enter to continue...")
                 print("Resuming build...")
                 continue
@@ -1271,7 +1268,7 @@ See the make.cfg file for additional build options.
 
                     if os.path.isfile(nobinFilePath):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
-                        cmd = [makepboTool, "-P","-A","-L","-G","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
+                        cmd = [makepboTool, "-P","-A","-G","-N","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
                         if check_external:
@@ -1431,7 +1428,7 @@ See the make.cfg file for additional build options.
 
     # Make release
     if make_release_zip:
-        release_name = "{}_{}".format(zipPrefix, project_version)
+        release_name = "{}_{}".format(zipPrefix, project_version.rsplit(".", 1)[0])
 
         try:
             # Delete all log files
@@ -1484,23 +1481,22 @@ See the make.cfg file for additional build options.
             except:
                 print_error("Could not copy files. Is Arma 3 running?")
 
-    if len(failedBuilds) > 0 or len(missingFiles) > 0:
+    tracedErrors = len(failedBuilds) + len(missingFiles)
+    if printedErrors > 0: # printedErrors includes tracedErrors
+        printedOnlyErrors = printedErrors - tracedErrors
+        print()
+        print_error("Failed with {} errors.".format(printedErrors))
         if len(failedBuilds) > 0:
-            print()
-            print_error("Build failed! {} PBOs failed!".format(len(failedBuilds)))
             for failedBuild in failedBuilds:
-                print("- {} failed.".format(failedBuild))
-
+                print("- {} build failed!".format(failedBuild))
         if len(missingFiles) > 0:
-            missingFiles = set(missingFiles)
-            print()
-            print_error("Missing files! {} files not found!".format(len(missingFiles)))
             for missingFile in missingFiles:
-                print("- {} failed.".format(missingFile))
-
-        sys.exit(1)
+                print("- {} not found!".format(missingFile))
+        if printedOnlyErrors > 0:
+            print_yellow("- {} untraced error(s)!".format(printedOnlyErrors))
     else:
         print_green("\nCompleted with 0 errors.")
+
 
 if __name__ == "__main__":
     start_time = timeit.default_timer()

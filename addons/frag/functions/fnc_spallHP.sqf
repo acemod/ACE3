@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: ACE-Team
+ * Handles the HitPart event
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_spallHP
+ *
+ * Public: No
+ */
 
 //player sideChat format ["f: %1 c: %2", (_this select 0), (count GVAR(spallHPData))];
 

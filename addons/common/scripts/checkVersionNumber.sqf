@@ -1,19 +1,17 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_client", "_clientVersion", "_count", "_error", "_files", "_index", "_missingAddon", "_missingAddonServer", "_missingAddons", "_missingAddonsServer", "_oldVersionClient", "_oldVersionServer", "_oldVersionsClient", "_oldVersionsServer", "_serverFiles", "_serverVersion", "_serverVersions", "_string", "_version", "_versions"];
+private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
+private _files = CBA_common_addons select {
+    (_x select [0,3] != "a3_") &&
+    {_x select [0,4] != "ace_"} &&
+    {!((toLower _x) in _aceWhitelist)}
+};
 
-_files = [];
-
+private _versions = [];
 {
-    if (_x find "a3_" != 0 && {_x find "ace_" != 0} && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
-        _files pushBack _x;
-    };
-} forEach activatedAddons;
-
-_versions = [];
-{
-    _version = parseNumber getText (configFile >> "CfgPatches" >> _x >> "version");
+    getText (configFile >> "CfgPatches" >> _x >> "version") splitString "." params [["_major", "0"], ["_minor", "0"]];
+    private _version = parseNumber _major + parseNumber _minor/100;
     _versions set [_forEachIndex, _version];
 } forEach _files;
 
@@ -32,27 +30,27 @@ if (!isServer) then {
         !isNil "ACE_Version_ClientVersions" && {!isNil "ACE_Version_ServerVersions"}
     };
 
-    _client = profileName;
+    private _client = profileName;
 
     _files = ACE_Version_ClientVersions select 0;
     _versions = ACE_Version_ClientVersions select 1;
 
-    _serverFiles = ACE_Version_ServerVersions select 0;
-    _serverVersions = ACE_Version_ServerVersions select 1;
+    private _serverFiles = ACE_Version_ServerVersions select 0;
+    private _serverVersions = ACE_Version_ServerVersions select 1;
 
     // Compare client and server files and versions
-    _missingAddons = [];
-    _oldVersionsClient = [];
-    _oldVersionsServer = [];
+    private _missingAddons = [];
+    private _oldVersionsClient = [];
+    private _oldVersionsServer = [];
     {
-        _serverVersion = _serverVersions select _forEachIndex;
+        private _serverVersion = _serverVersions select _forEachIndex;
 
-        _index = _files find _x;
+        private _index = _files find _x;
         if (_index == -1) then {
                 if (_x != "ace_server") then {_missingAddons pushBack _x;};
         } else {
 
-            _clientVersion = _versions select _index;
+            private _clientVersion = _versions select _index;
 
             if (_clientVersion < _serverVersion) then {
                 _oldVersionsClient pushBack [_x, _clientVersion, _serverVersion];
@@ -65,20 +63,20 @@ if (!isServer) then {
     } forEach _serverFiles;
 
     // find client files which the server doesn't have
-    _missingAddonsServer = [];
+    private _missingAddonsServer = [];
     {
-        _index = _serverFiles find _x;
+        private _index = _serverFiles find _x;
         if (_index == -1) then {
             _missingAddonsServer pushBack _x;
         }
     } forEach _files;
 
     // display and log error messages
-    _fnc_cutComma = {
-        _string = _this;
+    private _fnc_cutComma = {
+        private _string = _this;
         _string = toArray _string;
 
-        _count = count _string;
+        private _count = count _string;
         _string set [_count - 2, toArray "." select 0];
         _string set [_count - 1, -1];
         _string = _string - [-1];
@@ -86,15 +84,15 @@ if (!isServer) then {
         toString _string;
     };
 
-    _missingAddon = false;
+    private _missingAddon = false;
     if (count _missingAddons > 0) then {
         _missingAddon = true;
 
-        _error = format ["[ACE] %1: ERROR missing addon(s): ", _client];
+        private _error = format ["[ACE] %1: ERROR client missing addon(s): ", _client];
         {
             _error = _error + format ["%1, ", _x];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _missingAddons;
 
         _error = _error call _fnc_cutComma;
@@ -103,15 +101,15 @@ if (!isServer) then {
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
     };
 
-    _missingAddonServer = false;
+    private _missingAddonServer = false;
     if (count _missingAddonsServer > 0) then {
         _missingAddonServer = true;
 
-        _error = format ["[ACE] %1: ERROR missing server addon(s): ", _client];
+        private _error = format ["[ACE] %1: ERROR server missing addon(s): ", _client];
         {
             _error = _error + format ["%1, ", _x];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _missingAddonsServer;
 
         _error = _error call _fnc_cutComma;
@@ -120,15 +118,15 @@ if (!isServer) then {
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
     };
 
-    _oldVersionClient = false;
+    private _oldVersionClient = false;
     if (count _oldVersionsClient > 0) then {
         _oldVersionClient = true;
 
-        _error = format ["[ACE] %1: ERROR outdated addon(s): ", _client];
+        private _error = format ["[ACE] %1: ERROR outdated client addon(s): ", _client];
         {
             _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _oldVersionsClient;
 
         _error = _error call _fnc_cutComma;
@@ -137,15 +135,15 @@ if (!isServer) then {
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
     };
 
-    _oldVersionServer = false;
+    private _oldVersionServer = false;
     if (count _oldVersionsServer > 0) then {
         _oldVersionServer = true;
 
-        _error = format ["[ACE] %1: ERROR outdated server addon(s): ", _client];
+        private _error = format ["[ACE] %1: ERROR outdated server addon(s): ", _client];
         {
             _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
 
-            if (_forEachIndex > 9) exitWith {};//
+            if (_forEachIndex > 9) exitWith {};
         } forEach _oldVersionsServer;
 
         _error = _error call _fnc_cutComma;

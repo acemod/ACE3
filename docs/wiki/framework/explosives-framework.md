@@ -25,9 +25,10 @@ version:
 class CfgMagazines {
     class CA_Magazine;
     class banana_satchel_remote_mag: CA_Magazine {
-        ACE_Placeable = 1;  // Can be placed
+        ACE_Explosives_Placeable = 1;  // Can be placed
         useAction = 0;  // Disable the vanilla interaction
-        ACE_SetupObject = "banana_satchel_place";  // The object placed before the explosive is armed
+        ACE_Explosives_SetupObject = "banana_satchel_place";  // The object placed before the explosive is armed
+        ACE_Explosives_DelayTime = 1.5;  // Seconds between trigger activation and explosion
         class ACE_Triggers {  // Trigger configurations
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};  // Triggers that can be used
             class Timer {
@@ -53,7 +54,8 @@ class CfgAmmo {
         soundDeactivation[] = {"", 0, 0, 0};  // No sound on deactivation
         triggerWhenDestroyed = 1;  // (Optional) Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled).
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
-        ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12}; // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
+        ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12};  // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
+        ACE_explosives_size = 0;  // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
     };
 };
 ```
@@ -82,7 +84,7 @@ _Pretty much the same as Explosives except that we inherit from_ `ATMine_Range_M
 class CfgMagazines {
     class ATMine_Range_Mag;
     class BananaMine_Range_Mag: ATMine_Range_Mag {
-        ACE_SetupObject = "BananaMine_Place";  // The object placed before the mine is armed
+        ACE_Explosives_SetupObject = "BananaMine_Place";  // The object placed before the mine is armed
         class ACE_Triggers {  // Triggers
             SupportedTriggers[] = {"PressurePlate"};  // This mine only support pressure plate activation
             class PressurePlate {
@@ -109,7 +111,8 @@ class CfgWeapons {
     class banana_clacker: ACE_Clacker {
         displayName = "banana clacker";  // Name of the item
         picture = "";  // Path to the item's picture
-        ACE_Range = 9000;  // Explosives activation range in meters
+        ACE_Explosives_Range = 9000;  // Explosives activation range in meters
+        ACE_Explosives_triggerType = "Command";  // Trigger type, see below
     };
 };
 ```
@@ -133,7 +136,7 @@ Name | Use
 
 ### 5.1 Scripted Explosion
 
-`ace_explosives_fnc_scriptedExplosion`
+`ace_explosives_fnc_scriptedExplosive`
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -143,7 +146,7 @@ Name | Use
 
 #### 5.1.1 Example
 
-`[[charge1, charge2], -3] call ace_explosives_fnc_scriptedExplosion;`
+`[[charge1, charge2], -3] call ace_explosives_fnc_scriptedExplosive;`
 
    | Arguments | Explanation
 ---| --------- | -----------
@@ -170,3 +173,40 @@ Name | Use
 0  | `player` | Unit explosive will connect to
 1  | `claymore1` | Explosive object that will be connected
 2  | `"ACE_Clacker"` | Detonator type class name
+
+#### 5.3 Detonation Handler.
+
+Detonation Handlers are called when something attempts to trigger an explosive. They can be used to block the detonation.
+
+These are only used for script based triggers like clackers, cellphone and timers (anything that uses `detonateExplosive`).
+Sensor based triggers like AT Mines, Tripwires are uneffected.
+All added handlers will be called, if ANY one returns false, the detonation will be blocked.
+
+`[{CODE}] call ace_explosives_fnc_addDetonateHandler;`
+
+CODE will be passed `[Unit<OBJECT>, MaxRange <NUMBER>, Explosive <OBJECT>, FuzeTime <NUMBER>, TriggerItem <STRING>]` and should return a bool: true(allowed) / false(blocked)
+
+#### 5.3.1 Example
+
+Jammer that blocks RF triggers:
+
+```cpp
+[{
+    params ["_unit", "_range", "_explosive", "_fuzeTime", "_triggerItem"];
+    if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false };  // always block cell phones
+    if (_triggerItem == "ace_m26_clacker") exitWith {
+        _range = _range / 1000;
+        private _actualRange = _unit distance _explosive;
+        systemChat format ["Limited Range For RF Clacker [%1m / %2m]", _actualRange toFixed 1, _range toFixed 1];
+        (_actualRange < _range) // return bool
+    };
+    // allow anything else (like timers / wired clackers)
+    true
+}] call ace_explosives_fnc_addDetonateHandler;
+```
+
+#### 5.4 Custom timer limits
+`Added in 3.12.7`
+
+Can set custom min and max time for the timer trigger, can set one or both, time in seconds
+`ace_explosives_customTimerMin` / `ace_explosives_customTimerMax`

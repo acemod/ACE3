@@ -70,6 +70,7 @@ LX-14           | 2970 m/s
 Octol 75/25     | 2800 m/s
 PBX 9404        | 2900 m/s
 PBX 9502        | 2377 m/s
+Pentolite       | 2750 m/s
 PETN            | 2930 m/s
 RDX             | 2830 m/s
 Tetryl          | 2500 m/s

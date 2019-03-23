@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike (based on muteUnit)
  * Globally hides a unit. This allows the handling of more than one reason to hide an object globally.
@@ -7,14 +8,13 @@
  * 1: Reason to hide the unit <STRING>
  *
  * Return Value:
- * nil
+ * None <NIL>
  *
  * Example:
  * [ACE_Player, "SpectatorMode"] call ace_common_fnc_hideUnit
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_reason"];
 

@@ -70,7 +70,7 @@ class CAManBase: Man {
 Two steps, creating an action (array) and then adding it to either a class or object.
 Important: `ace_common_fnc_canInteractWith` is not automatically checked and needs to be explicitly called.
 
-### 2.1 fnc_createAction
+### 3.1 fnc_createAction
 
 `ace_interact_menu_fnc_createAction`
 
@@ -91,7 +91,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
  */
 ```
 
-### 2.2 fnc_addActionToClass
+### 3.2 fnc_addActionToClass
 
 `ace_interact_menu_fnc_addActionToClass`
 
@@ -107,7 +107,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
 ```
 By default this function will not use inheritance, so actions will only be added to the specific class.
 
-### 2.3 fnc_addActionToObject
+### 3.3 fnc_addActionToObject
 
 `ace_interact_menu_fnc_addActionToObject`
 
@@ -121,7 +121,19 @@ By default this function will not use inheritance, so actions will only be added
  */
 ```
 
-### 2.4 Examples
+### 3.4 fnc_addActionToZeus
+
+`ace_interact_menu_fnc_addActionToZeus`
+
+```cpp
+/*
+ * Argument:
+ * 0: Parent path of the new action <ARRAY> (Example: `["ACE_ZeusActions"]`)
+ * 1: Action <ARRAY>
+ */
+```
+
+### 3.5 Examples
 
 External:
 
@@ -155,7 +167,17 @@ _action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1",
 ["Tank_F", 0, ["ACE_MainActions", "CheckFuel"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ```
 
-### 2.5 Advanced Example
+Zeus:
+
+```cpp
+_statement = {
+    playSound3D ["alarm.ogg", theBase]
+};
+_action = ["myMissionEvent1","Mission Event: Play Base Alarm","",_statement,{true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
+```
+
+### 3.6 Advanced Example
 
 This adds an interaction to a unit that allows passing items that the player is carrying.
 
@@ -198,4 +220,21 @@ _modifierFunc = {
 
 _action = ["GiveItems", "?","",_statement,_condition,_insertChildren,[123],"",4,[false, false, false, true, false], _modifierFunc] call ace_interact_menu_fnc_createAction;
 [q3, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+```
+
+### 3.7 Using `ace_interact_menu_newControllableObject` event
+
+CBA event `ace_interact_menu_newControllableObject` fires only once the first time the player controls a new object (new man, vehicle or controlled UAV)
+This is the ideal way to add self interaction actions, as adding them via `addActionToClass` will force self interaction actions to be compiled for classes that may never be used.
+
+```cpp
+// Example: Add radio self-action to all civilian cars
+["ace_interact_menu_newControllableObject", {
+    params ["_type"]; // string of the object's classname
+    if (!(_type isKindOf "Car")) exitWith {};
+    if ((getNumber (configFile >> "CfgVehicles" >> _type >> "side")) != 3) exitWith {};
+    
+    private _action = ["playRadio","Play Radio","",{playMusic "NeverGonnaGiveYouUp"},{true}] call ace_interact_menu_fnc_createAction;
+    [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+}] call CBA_fnc_addEventHandler;
 ```

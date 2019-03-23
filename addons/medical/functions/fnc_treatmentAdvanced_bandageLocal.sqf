@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the bandage of a patient.
@@ -10,10 +11,11 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [bob, "classname"] call ACE_medical_fnc_treatmentAdvanced_bandageLocal
+ *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
 

@@ -58,11 +58,14 @@ class ACE_Settings {
 };
 ```
 
+#### 1.2.5 Addon template
+Addon template is at [extras/blank](https://github.com/acemod/ACE3/tree/master/extras/blank){:target="_blank"} repo directory.
+
 ### 1.3 Stringtable
 All text that shall be displayed to a user shall be defined in a `stringtable.xml` file for multi-language support.
 
 - There shall be no empty stringtable language values.
-- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux578/tabler){:target="_blank"} and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html){:target="_blank"} form.
+- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux/tabler){:target="_blank"} and the [translation guidelines]({{ site.baseurl }}/wiki/development/how-to-translate-ace3.html) form.
 
 
 ## 2. Macro Usage
@@ -87,6 +90,7 @@ There also exists the `FUNC` family of Macros:
 |`EFUNC(leg,face)` | `ace_leg_fnc_face` or the call trace wrapper for that function. |
 |`DFUNC(face)` | `ace_balls_fnc_face` and will ALWAYS be the function global variable. |
 |`DEFUNC(leg,face)` | `ace_leg_fnc_face` and will ALWAYS be the function global variable. |
+|`LINKFUNC(face)` | `FUNC(face)` or "pass by reference" `{_this call FUNC(face)}` |
 |`QFUNC(face)` | `"ace_balls_fnc_face"` |
 |`QEFUNC(leg,face)` | `"ace_leg_fnc_face"` |
 |`QQFUNC(face)` | `""ace_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.  |
@@ -95,6 +99,8 @@ There also exists the `FUNC` family of Macros:
 The `FUNC` and `EFUNC` macros shall NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
+
+`LINKFUNC` macro allows to recompile function used in event handler code when function cache is disabled. E.G. `player addEventHandler ["Fired", LINKFUNC(firedEH)];` will run updated code after each recompile.
 
 #### 2.1.1 `FUNC` Macros, Call Tracing, and Non-ACE3/Anonymous Functions
 ACE3 implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
@@ -172,6 +178,10 @@ Every function should have a header of the following format as the start of thei
  * Arguments:
  * 0: The first argument <STRING>
  * 1: The second argument <OBJECT>
+ * 2: Multiple input types <STRING|ARRAY|CODE>
+ * 3: Optional input <BOOL> (default: true)
+ * 4: Optional input with multiple types <CODE|STRING> (default: {true})
+ * 5: Not mandatory input <STRING> (default: nil)
  *
  * Return Value:
  * The return value <BOOL>
@@ -204,7 +214,10 @@ Exceptions:
 
 ## 5. Code Style
 
+To help with some of the coding style we recommend you get the plugin [EditorConfig](http://editorconfig.org/#download) for your editor. It will help with correct indentations and deleting trailing spaces.
+
 ### 5.1 Braces placement
+
 Braces `{ }` which enclose a code block will have the first bracket placed behind the statement in case of `if`, `switch` statements or `while`, `waitUntil` & `for` loops. The second brace will be placed on the same column as the statement but on a separate line.
 
 - Opening brace on the same line as keyword
@@ -264,7 +277,7 @@ class Three {foo = 3;};
 Putting the opening brace in its own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
 ### 5.2 Indents
-Ever new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
+Every new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed. Tabs or spaces are not allowed to trail on a line, last character needs to be non blank.
 
 Good:
 
@@ -590,6 +603,15 @@ Event handlers in ACE3 are implemented through the CBA event system (ACE3's own 
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
 
+<div class="panel info">
+    <h5>Warning about BIS event handlers:</h5>
+    <p>BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.</p>
+    ```js
+    player addEventHandler ["Fired", FUNC(handleFired)]; // bad
+    player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
+    ```
+</div>
+
 ### 7.4 Hashes
 
 When a key value pair is required, make use of the hash implementation from ACE3.
@@ -758,17 +780,14 @@ while {true} do {
 ```
 
 ### 8.9 `waitUntil`
-The `waitUntil` command shall not be used. Instead, make use of a per-frame handler:
-
+The `waitUntil` command shall not be used. Instead, make use of CBA's `CBA_fnc_waitUntilAndExecute`
 ```js
 [{
-    params ["_args", "_id"];
-    _args params ["_unit"];
-
-    if (_unit getvariable [QGVAR(myVariable), false]) exitwith {
-        [_id] call CBA_fnc_removePerFrameHandler;
-
-        // Execute any code
-    };
-}, [_unit], 0] call CBA_fnc_addPerFrameHandler;
+    params ["_unit"];
+    _unit getVariable [QGVAR(myVariable), false]
+},
+{
+    params ["_unit"];
+    // Execute any code
+}, [_unit]] call CBA_fnc_waitUntilAndExecute;
 ```

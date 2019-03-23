@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, PabstMirror
  * Starts up a PFEH to monitor the when players are talking.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (isServer) then {
     //If someone disconnects while speaking, reset their variable
@@ -44,7 +44,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
     };
 } else {
     if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
-        INFO("TFR Detected.");
+        INFO("TFAR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];
             (_unit getVariable ["tf_isSpeaking", false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}
@@ -54,9 +54,8 @@ if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
         //Note: class RscDisplayVoiceChat {idd = 55} - only present when talking
 
         [{
-            private ["_oldSetting", "_newSetting"];
-            _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
-            _newSetting = (!(isNull findDisplay 55));
+            private _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
+            private _newSetting = (!(isNull findDisplay 55));
             if (!(_oldSetting isEqualTo _newSetting)) then {
                 ACE_player setVariable [QGVAR(isSpeakingInGame), _newSetting, true];
             };

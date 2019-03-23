@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get local players weapon direction and slope.
@@ -9,9 +10,11 @@
  * 0: Azimuth <NUMBER>
  * 1: Inclination <NUMBER>
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponAzimuthAndInclination
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_weapon"];
 

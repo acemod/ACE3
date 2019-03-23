@@ -7,13 +7,13 @@ class Extended_PreStart_EventHandlers {
 
 class Extended_PreInit_EventHandlers {
   class ADDON {
-    init = QUOTE( call COMPILE_FILE(XEH_preInit) );
+    init = QUOTE(call COMPILE_FILE(XEH_preInit));
   };
 };
 
 class Extended_PostInit_EventHandlers {
     class ADDON {
-        init = QUOTE( call COMPILE_FILE(XEH_postInit) );
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
 
@@ -40,12 +40,12 @@ class Extended_Init_EventHandlers {
     };
     class ACE_ConcertinaWire {
         class ADDON {
-            init = QUOTE(call COMPILE_FILE(XEH_init));
+            init = QUOTE(call FUNC(handleInit));
         };
     };
     class Land_Razorwire_F {
         class ADDON {
-            init = QUOTE(call COMPILE_FILE(XEH_init));
+            init = QUOTE(call FUNC(handleInit));
         };
     };
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Displays the patient information for given unit.
@@ -7,13 +8,14 @@
  * 1: Show <BOOL> (default: true)
  * 2: Selection <NUMBER> (default: 0)
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true, 2] call ACE_medical_fnc_displayPatientInformation
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MAX_DISTANCE 10
 
 // Exit for basic medical
@@ -28,14 +30,13 @@ if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 
     [{
-        private ["_target", "_display", "_alphaLevel", "_damaged", "_availableSelections", "_openWounds", "_selectionBloodLoss", "_red", "_green", "_blue", "_alphaLevel", "_allInjuryTexts", "_lbCtrl", "_genericMessages"];
         params ["_args", "_idPFH"];
         _args params ["_target", "_selectionN"];
 
         if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
-        if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+        if ((ACE_player distance _target > MAX_DISTANCE) && {vehicle _target != vehicle ACE_player}) exitWith {
             ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             [QEGVAR(common,displayTextStructured), [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player], [ACE_player]] call CBA_fnc_targetEvent;
@@ -68,7 +69,7 @@ if (_show) then {
         };
 
         private _totalIvVolume = 0;
-        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
+        private _bloodBags = _target getVariable [QGVAR(ivBags), []];
         {
             _x params ["_bagVolumeRemaining"];
             _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;
@@ -143,6 +144,9 @@ if (_show) then {
             };
             (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
         } foreach _selectionBloodLoss;
+
+        // update tourniquet information
+        [_display, _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]]] call FUNC(updateTourniquets);
 
         private _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;

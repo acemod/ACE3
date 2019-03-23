@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_laser_fnc_rotateVectLineGetMap
+ *
+ * Public: No
+ */
 
 params ["_p", "_p1", "_p2"];
 

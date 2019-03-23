@@ -1,11 +1,20 @@
-/*
-
-by commy2
-
-PFH executed while holding a vector key down.
-
-*/
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ * PFH executed while holding a vector key down.
+ *
+ * Arguments:
+ * 0: String <STRING>
+ * 1: Number <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["5", 5] call ace_vector_fnc_onKeyHold
+ *
+ * Public: No
+ */
 
 if (!((currentWeapon ACE_player) isKindOf ["ACE_Vector", configFile >> "CfgWeapons"])) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;

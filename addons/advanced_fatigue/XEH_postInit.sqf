@@ -12,10 +12,17 @@ if (!hasInterface) exitWith {};
     GVAR(ppeBlackout) ppEffectCommit 0.4;
 
     // - GVAR updating and initialization -----------------------------------------
-    if !(isNull ACE_player) then {
-        [ACE_player, objNull] call FUNC(handlePlayerChanged);
-    };
-    ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+    ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+
+    ["visibleMap", {
+        params ["", "_visibleMap"]; // command visibleMap is updated one frame later
+        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+        _staminaBarContainer ctrlShow ((!_visibleMap) && {(vehicle ACE_player) == ACE_player});
+    }, true] call CBA_fnc_addPlayerEventHandler;
+    ["vehicle", {
+        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+        _staminaBarContainer ctrlShow ((!visibleMap) && {(vehicle ACE_player) == ACE_player});
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
     if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
@@ -39,14 +46,4 @@ if (!hasInterface) exitWith {};
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
-}] call CBA_fnc_addEventHandler;
-
-["ace_settingChanged", {
-    params ["_name", "_value"];
-
-    if (_name == QGVAR(enableStaminaBar) && {!_value}) then {
-        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlSetFade 1;
-        _staminaBarContainer ctrlCommit 0;
-    };
 }] call CBA_fnc_addEventHandler;

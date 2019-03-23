@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain, Commy2
  * Make a unit start swapping the barrel of another unit
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_assistant", "_gunner", "_weapon"];
 TRACE_3("params",_assistant,_gunner,_weapon);
@@ -28,6 +28,6 @@ if (stance _assistant != "PRONE") then {
 // Barrel dismount gesture
 playSound "ACE_BarrelSwap";
 
-[3, [_assistant, _gunner, _weapon], {}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);
+[3, [_assistant, _gunner, _weapon], {}, {}, localize LSTRING(SwappingBarrel), nil, ["isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,progressBar);
 
 [QGVAR(initiateSwapBarrelAssisted), [_assistant, _gunner, _weapon], _gunner] call CBA_fnc_targetEvent;

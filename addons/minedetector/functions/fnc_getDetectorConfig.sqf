@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Get the mine detector configuration from the cache or config file
@@ -14,9 +15,9 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_detectorType"];
+
+if (_detectorType isEqualTo "") exitWith {[]};
 
 private _detectorConfig = GVAR(detectorConfigs) getVariable _detectorType;
 if (isNil "_detectorConfig") then {

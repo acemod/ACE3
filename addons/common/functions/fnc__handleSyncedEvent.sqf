@@ -1,8 +1,9 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Handles synced events being received. Server will log them, and server/client will execute them.
  *
- * Arguments [Client] :
+ * Arguments: [Client]
  * 0: eventName <STRING>
  * 1: arguments <ARRAY>
  * 2: ttl <NUMBER>
@@ -10,9 +11,11 @@
  * Return Value:
  * Boolean of success <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc__handleSyncedEvent
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name", "_args", "_ttl"];
 

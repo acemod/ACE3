@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Adds a Spare Track to the vehicle.
@@ -10,27 +11,29 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleAddSpareTrack
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
+params ["_logic"];
 
-if !(_activated && local _logic) exitWith {};
+if !(local _logic) exitWith {};
 
 if !(["ace_cargo"] call EFUNC(common,isModLoaded) && ["ace_repair"] call EFUNC(common,isModLoaded)) then {
-    [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
+    [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
     (GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""])) params ["_mouseOverType", "_mouseOverUnit"];
 
     if (_mouseOverType != "OBJECT") then {
-        [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
+        [LSTRING(NothingSelected)] call FUNC(showMessage);
     } else {
         if !(alive _mouseOverUnit) then {
-            [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
+            [LSTRING(OnlyAlive)] call FUNC(showMessage);
         } else {
             if (getNumber (configFile >> "CfgVehicles" >> "ACE_Track" >> QEGVAR(cargo,size)) > [_mouseOverUnit] call EFUNC(cargo,getCargoSpaceLeft)) then {
-                [LSTRING(OnlyEnoughCargoSpace)] call EFUNC(common,displayTextStructured);
+                [LSTRING(OnlyEnoughCargoSpace)] call FUNC(showMessage);
             } else {
                 ["ace_addCargo", ["ACE_Track", _mouseOverUnit, 1, true]] call CBA_fnc_localEvent;
             };

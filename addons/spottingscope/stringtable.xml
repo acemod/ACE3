@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tripod">
         <Key ID="STR_ACE_SpottingScope_DisplayName">
@@ -9,10 +9,13 @@
             <Spanish>Telescopio</Spanish>
             <French>Téléscope de visée</French>
             <Czech>Zaměřovací dalekohled</Czech>
-            <Italian>Spotting Scope</Italian>
+            <Italian>Cannocchiale</Italian>
             <Hungarian>Megfigyelő távcső</Hungarian>
             <Portuguese>Luneta de observador</Portuguese>
             <Japanese>観測用スコープ</Japanese>
+            <Korean>감적 망원경</Korean>
+            <Chinesesimp>观测镜</Chinesesimp>
+            <Chinese>觀測鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -22,10 +25,13 @@
             <Spanish>Coger telescopio</Spanish>
             <French>Prendre téléscope de visée</French>
             <Czech>Zvednout zaměřovací dalekohled</Czech>
-            <Italian>Raccogli spottingscope</Italian>
+            <Italian>Raccogli Cannocchiale</Italian>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
             <Portuguese>Pegar luneta de observador</Portuguese>
             <Japanese>観測用スコープを拾う</Japanese>
+            <Korean>감적 망원경 줍기</Korean>
+            <Chinesesimp>捡起观测镜</Chinesesimp>
+            <Chinese>撿起觀測鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -35,10 +41,13 @@
             <Spanish>Colocar telescopio</Spanish>
             <French>Placer téléscope de visée</French>
             <Czech>Položit zaměřovací dalekohled</Czech>
-            <Italian>Posiziona spottingscope</Italian>
+            <Italian>Posiziona Cannocchiale</Italian>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
             <Portuguese>Colocar luneta de observador</Portuguese>
             <Japanese>観測用スコープを置く</Japanese>
+            <Korean>감적 망원경 배치</Korean>
+            <Chinesesimp>放置观测镜</Chinesesimp>
+            <Chinese>放置觀測鏡</Chinese>
         </Key>
     </Package>
 </Project>

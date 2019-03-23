@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Makes a medic heal the next unit that needs treatment.
@@ -6,11 +7,13 @@
  * None
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * call ACE_medical_ai_fnc_healUnit
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Can't heal other units when unconscious
 if (_this getVariable ["ACE_isUnconscious", false]) exitWith {};
@@ -29,6 +32,7 @@ if (isNull _target || {!alive _target} || {!(_target call FUNC(isInjured))}) exi
     _this forceSpeed -1;
     // return to formation instead of going where the injured unit was if it healed itself in the mean time
     _this doFollow leader _this;
+    _this setVariable [QGVAR(movingToInjured), false];
 
     #ifdef DEBUG_MODE_FULL
         systemChat format ["%1 finished healing %2", _this, _target];
@@ -50,6 +54,7 @@ _target forceSpeed 0;
 
 private _needsBandaging = ([_target] call EFUNC(medical,getBloodLoss)) > 0;
 private _needsMorphine  = (_target getVariable [QEGVAR(medical,pain), 0]) > 0.2;
+private _needsEpinephrine = _target getVariable ["ACE_isUnconscious", false];
 
 switch (true) do {
     case _needsBandaging: {
@@ -62,7 +67,7 @@ switch (true) do {
             };
         } forEach _openWounds;
         private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
-        [_target, "Bandage", _selection] call EFUNC(medical,treatmentAdvanced_bandageLocal);
+        [_this, _target, _selection, "Bandage"] call EFUNC(medical,treatmentAdvanced_bandage);
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is bandaging selection %2 on %3", _this, _selection, _target];
@@ -73,12 +78,21 @@ switch (true) do {
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 5];
     };
     case _needsMorphine: {
-        [_target] call EFUNC(medical,treatmentBasic_morphineLocal);
+        [_this, _target] call EFUNC(medical,treatmentBasic_morphine);
         [_this, false, false] call FUNC(playTreatmentAnim);
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is giving %2 morphine", _this, _target];
+        #endif
+    };
+    case _needsEpinephrine: {
+        [_this, _target] call EFUNC(medical,treatmentBasic_epipen);
+        [_this, false, false] call FUNC(playTreatmentAnim);
+        _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
+
+        #ifdef DEBUG_MODE_FULL
+            systemChat format ["%1 is using an epipen on %2", _this, _target];
         #endif
     };
 };

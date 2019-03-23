@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2, Ruthberg
  * Handles deafness due to explosions going off near the player.
@@ -14,16 +15,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_damage"];
 
-if (_unit != ACE_player) exitWith {};
-
 TRACE_2("explosion near player",_unit,_damage);
 
-private ["_strength"];
-_strength = (0 max _damage) * 30;
+private _strength = (0 max _damage) * 30;
 if (_strength < 0.01) exitWith {};
 
 // Call inmediately, as it will get pick up later anyway by the update thread

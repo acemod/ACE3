@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: joko // Jonas
  * Cache the shot data for a given weapon/mag/ammo combination.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_weapon", "_ammo", "_magazine"];
 TRACE_3("Parameter",_weapon,_magazine,_ammo);
@@ -46,7 +46,7 @@ TRACE_1("ConfigPath",_config);
 // get the Variables out of the Configes and create a array with then
 private _return = [
     (getNumber (_config >> QGVAR(angle))),
-    (getNumber (_config >> QGVAR(range))),
+    (getNumber (_config >> QGVAR(range))) * GVAR(distanceCoefficient),
     (getNumber (_config >> QGVAR(damage)))
 ];
 

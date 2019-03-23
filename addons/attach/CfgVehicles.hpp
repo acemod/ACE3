@@ -5,22 +5,18 @@
             class GVAR(AttachVehicle) { \
                 displayName = CSTRING(AttachDetach); \
                 condition = QUOTE(_this call FUNC(canAttach)); \
-                insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions)); \
-                exceptions[] = {}; \
+                insertChildren = QUOTE(_this call FUNC(getChildrenActions)); \
+                exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
-                priority = 0; \
                 icon = QPATHTOF(UI\attach_ca.paa); \
-                distance = 4.5; \
             }; \
             class GVAR(DetachVehicle) { \
                 displayName = CSTRING(Detach); \
                 condition = QUOTE(_this call FUNC(canDetach)); \
                 statement = QUOTE(_this call FUNC(detach) ); \
-                exceptions[] = {}; \
+                exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
-                priority = 0.1; \
                 icon = QPATHTOF(UI\detach_ca.paa); \
-                distance = 4.5; \
             }; \
         }; \
     };
@@ -56,19 +52,17 @@ class CfgVehicles {
                 class GVAR(Attach) {
                     displayName = CSTRING(AttachDetach);
                     condition = QUOTE(_this call FUNC(canAttach));
-                    insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions));
-                    exceptions[] = {"isNotDragging"};
+                    insertChildren = QUOTE(_this call FUNC(getChildrenActions));
+                    exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
-                    priority = 5;
                     icon = QPATHTOF(UI\attach_ca.paa);
                 };
                 class GVAR(Detach) {
                     displayName = CSTRING(Detach);
                     condition = QUOTE(_this call FUNC(canDetach));
                     statement = QUOTE(_this call FUNC(detach));
-                    exceptions[] = {"isNotDragging"};
+                    exceptions[] = {"isNotDragging", "isNotSwimming"};
                     showDisabled = 0;
-                    priority = 5;
                     icon = QPATHTOF(UI\detach_ca.paa);
                 };
             };
@@ -83,17 +77,12 @@ class CfgVehicles {
         simulation = "nvmarker";
 
         class NVGMarker {
-            diffuse[] = {0.006, 0.006, 0.006, 1};
-            ambient[] = {0.005, 0.005, 0.005, 1};
-            brightness = 0.1;
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.45;
             name = "pozicni blik";
-            drawLightSize = 0.1;
-            drawLightCenterSize = 0.003;
             activeLight = 0;
             blinking=1;
-            blinkingStartsOn=1;
-            blinkingPattern[] = {2,2};
-            blinkingPatternGuarantee = false;
             dayLight = 0;
             onlyInNvg = 1;
             useFlare = 0;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, commy2
  * Handles the player dying.
@@ -8,9 +9,11 @@
  * Return Value:
  * Function is handled? <BOOL>
  *
+ * Example:
+ * [bob] call ace_goggles_fnc_handleKilled
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

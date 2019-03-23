@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Deletes a cached result
@@ -9,9 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [NAMESPACE, "UID"] call ace_common_fnc_eraseCache
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_namespace", "_uid"];
 

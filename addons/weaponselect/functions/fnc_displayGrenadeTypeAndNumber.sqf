@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain, commy2
  * Display a grenade type and quantity.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if !(GVAR(DisplayText)) exitWith {};
 

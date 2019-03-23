@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain, PabstMirror
  * Return a suitable position for the action point for the given target vehicle
@@ -6,7 +7,7 @@
  * 0: Target <OBJECT>
  * 1: Player's Position ASL <ARRAY>
  *
- * Return value:
+ * Return Value:
  * Interaction point in model cords <ARRAY>
  *
  * Example:
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_cameraPosASL"];
 TRACE_2("params",_target,_cameraPosASL);
@@ -29,12 +29,12 @@ if (isNumber (_config >> QGVAR(bodyLength))) then {_bbY = getNumber (_config >> 
 private _relPos = _target worldToModelVisual ASLToAGL _cameraPosASL;
 _relPos params ["_dx", "_dy", "_dz"];
 
-private _ndx = (abs _dx) / ((abs (_bbx)) - 1);
-private _ndy = (abs _dy) / ((abs (_bbY)) - 1);
-private _ndz = (abs _dz) / ((abs (_bbZ)) - 1);
+private _ndx = (abs _dx) / (((abs (_bbX)) - 1) max 1);
+private _ndy = (abs _dy) / (((abs (_bbY)) - 1) max 1);
+private _ndz = (abs _dz) / (((abs (_bbZ)) - 1) max 1);
 
 
-private "_pos";
+private _pos = [];
 if (_ndx > _ndy) then {
     if (_ndx > _ndz) then {
         // _ndx is greater, will colide with x plane first
@@ -53,7 +53,11 @@ if (_ndx > _ndy) then {
     };
 };
 
-//Set max height at player's eye level (prevent very high interactin point on choppers)
-_pos set [2, (_pos select 2) min _dz];
+// Set max height at player's eye level (prevent very high interaction point on vehicles)
+// Only when above water level to prevent underwater actions from following player eye level
+if (_cameraPosASL select 2 >= 0) then {
+    _pos set [2, (_pos select 2) min _dz];
+};
 
+TRACE_5("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
 _pos

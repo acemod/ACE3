@@ -47,4 +47,4 @@ class CfgWeapons {
 
 Event Name | Description | Passed Parameter(s) | Locality
 ---------- | ----------- | ------------------- | --------
-`overpressure` | Overpressure damage inflicted | `[_firer, _position, _direction, _weapon]` | Target
+`ace_overpressure` | Overpressure damage inflicted | `[_firer, _posASL, _direction, _weapon, _magazine, _ammo]` | Target

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth de Wet (LH)
  * Checks whether the passed unit is an explosive specialist.
@@ -16,8 +17,7 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
-_unit getVariable ["ACE_isEOD", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "canDeactivateMines") == 1] // return
+_unit getVariable ["ACE_isEOD", _unit getUnitTrait "explosiveSpecialist"] // return

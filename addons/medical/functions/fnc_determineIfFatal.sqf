@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Determine If Fatal
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 2, 5] call ACE_medical_fnc_determineIfFatal
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define INCREASE_CHANCE_HEAD 0.05
 #define INCREASE_CHANCE_TORSO 0.03
@@ -30,7 +33,7 @@ if (_part < 0 || _part > 5) exitWith {false};
 
 // Find the correct Damage threshold for unit.
 private _damageThreshold = [1,1,1];
-if ([_unit] call EFUNC(common,IsPlayer)) then {
+if ([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) then {
     _damageThreshold =_unit getVariable[QGVAR(unitDamageThreshold), [GVAR(playerDamageThreshold), GVAR(playerDamageThreshold), GVAR(playerDamageThreshold) * 1.7]];
 } else {
     _damageThreshold =_unit getVariable[QGVAR(unitDamageThreshold), [GVAR(AIDamageThreshold), GVAR(AIDamageThreshold), GVAR(AIDamageThreshold) * 1.7]];

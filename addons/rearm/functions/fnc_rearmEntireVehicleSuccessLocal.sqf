@@ -1,48 +1,66 @@
+#include "script_component.hpp"
 /*
- * Author: GitHawk
+ * Author: Tuupertunut
  * Rearm an entire turret locally.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
- * 1: TurretPath <ARRAY>
+ * 0: Ammo Truck <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: TurretPath <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [tank, [0]] call ace_rearm_fnc_rearmEntireVehicleSuccessLocal
+ * [ammo_truck, tank, [0]] call ace_rearm_fnc_rearmEntireVehicleSuccessLocal
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-private ["_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
-params [["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
-TRACE_2("params",_vehicle,_turretPath);
+params ["_truck", "_vehicle", "_turretPath"];
+TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);
 
-//ToDo: Cleanup with CBA_fnc_ownerEvent in CBA 2.4.2
-if (!(_vehicle turretLocal _turretPath)) exitWith {TRACE_1("not local turret",_turretPath);};
-
-_magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
+// Fetching all rearmable magazines in this turret
+private _magazines = ([_vehicle] call FUNC(getNeedRearmMagazines)) select {(_x select 1) isEqualTo _turretPath};
 {
-    _magazine = _x;
-    _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
-    _maxMagazines = [_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines);
-    _maxRounds = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
-    _currentRounds = _vehicle magazineTurretAmmo [_magazine, _turretPath];
+    _x params ["_magazineClass", "_magTurretPath", "_isPylonMag", "_pylonIndex", "_maxMagazines", "_currentMagazines", "_maxRoundsPerMag", "_currentRounds"];
 
-    TRACE_7("Rearmed Turret",_vehicle,_turretPath,_currentMagazines,_maxMagazines,_currentRounds,_maxRounds,_magazine);
+    // Array of planned ammo counts in every magazine after the rearm is complete
+    private _plannedRounds = +_currentRounds;
 
-    if (_turretPath isEqualTo [-1] && _currentMagazines == 0) then {
-        // On driver, the empty magazine is still there, but is not returned by magazinesTurret
-        _currentMagazines =  _currentMagazines + 1;
-    };
-    if (_currentMagazines < _maxMagazines) then {
-        _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
-        for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
-            _vehicle addMagazineTurret [_magazine, _turretPath];
+    // Trying to fill all existing magazines.
+    {
+        if (_x < _maxRoundsPerMag) then {
+            if (
+                GVAR(supply) == 0
+                || {isNull _truck} // zeus rearm
+                || {[_truck, _magazineClass, (_maxRoundsPerMag - _x)] call FUNC(removeMagazineFromSupply)}
+            ) then {
+                _plannedRounds set [_forEachIndex, _maxRoundsPerMag];
+            };
         };
-    } else {
-        _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
+    } forEach _currentRounds;
+
+    // Trying to add new full magazines, if there is space left.
+    if (_currentMagazines < _maxMagazines) then {
+        for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
+            if (
+                GVAR(supply) == 0
+                || {isNull _truck} // zeus rearm
+                || {[_truck, _magazineClass, _maxRoundsPerMag] call FUNC(removeMagazineFromSupply)}
+            ) then {
+                _plannedRounds pushBack _maxRoundsPerMag;
+            };
+        };
     };
-} foreach _magazines;
+
+    TRACE_2("rearming",_x,_plannedRounds);
+
+    // Updating new ammo counts to vehicle.
+    if (_isPylonMag) then {
+        _vehicle setAmmoOnPylon [_pylonIndex, (_plannedRounds select 0)];
+    } else {
+        [_vehicle, _magTurretPath, _magazineClass, _plannedRounds] call FUNC(setTurretMagazineAmmo);
+    };
+} forEach _magazines;
+

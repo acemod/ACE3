@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag on a wall that is on the closest surface within 2m on front of the unit.
@@ -5,6 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
+ * 2: Material of the tag <STRING> (Optional)
  *
  * Return Value:
  * Sucess <BOOL>
@@ -15,11 +17,10 @@
  * Public: Yes
  */
 
-#include "script_component.hpp"
-
 params [
     ["_unit", objNull, [objNull]],
-    ["_texture", "", [""]]
+    ["_texture", "", [""]],
+    ["_material", "", [""]]
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
@@ -36,7 +37,7 @@ private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, _unit
 
 // If there's no intersections
 if (_intersections isEqualTo []) exitWith {
-    TRACE_3("No intersections",_intersections);
+    TRACE_1("No intersections",_intersections);
     false
 };
 
@@ -49,15 +50,11 @@ if ((!isNull _object) && {
     if (_object isKindOf "Static") exitWith {false};
 
     // If the class is not categorized correctly search the cache
-    private _array = str(_object) splitString " ";
-    private _str = toLower (_array select 1);
-    TRACE_1("Object:",_str);
-    private _objClass = GVAR(cacheStaticModels) getVariable _str;
+    private _modelName = (getModelInfo _object) select 0;
+    private _isStatic = GVAR(cacheStaticModels) getVariable [_modelName, false];
+    TRACE_2("Object:",_modelName,_isStatic);
     // If the class in not on the cache, exit
-    if (isNil "_objClass") exitWith {
-        false
-    };
-    true
+    (!_isStatic)
 }) exitWith {
     TRACE_1("Pointed object is non static",_object);
     false
@@ -81,7 +78,7 @@ private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
 
-_fnc_isOk = {
+private _fnc_isOk = {
     params ["_rx", "_ry"];
     private _startPosASL2 = _touchingPoint vectorAdd (_v2 vectorMultiply _rx) vectorAdd (_v3 vectorMultiply _ry) vectorAdd (_v1 vectorMultiply (-0.06));
     private _endPosASL2   = _startPosASL2 vectorAdd (_v1 vectorMultiply (0.12));
@@ -98,7 +95,7 @@ if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
-    TRACE_3("Unsuitable location:",_touchingPoint);
+    TRACE_1("Unsuitable location:",_touchingPoint);
     false
 };
 
@@ -115,6 +112,6 @@ private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call CBA_fnc_waitAndExecute;
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material], 0.6] call CBA_fnc_waitAndExecute;
 
 true

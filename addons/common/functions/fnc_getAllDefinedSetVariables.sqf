@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Returns an 2d array of all variables that have been set on the object
@@ -14,9 +15,11 @@
  *   3: publicFlag <BOOL>
  *   4: peristentFlag <BOOL>
  *
+ * Example:
+ * [bob, ""] call ace_common_fnc_getAllDefinedSetVariables
+ *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_object", ["_category", ""]];
 

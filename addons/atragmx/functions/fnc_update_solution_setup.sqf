@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all solution setup input fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_solution_setup
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 {((uiNamespace getVariable "ATragMX_Display") displayCtrl _x) ctrlEnable true} forEach [15001, 15002, 15003, 15004, 15005, 15006, 15008, 15009, 15010];
 

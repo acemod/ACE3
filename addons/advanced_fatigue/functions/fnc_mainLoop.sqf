@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Main looping function that updates fatigue values.
@@ -7,17 +8,24 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_advanced_fatigue_fnc_mainLoop
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle null (Map intros)
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
+    private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+    _staminaBarContainer ctrlSetFade 1;
+    _staminaBarContainer ctrlCommit 1;
 };
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
 
 // fix #4481. Diving to the ground is recorded as PRONE stance with running speed velocity. Cap maximum speed to fix.
-if (stance ACE_player == "PRONE") then {
+if (GVAR(isProne)) then {
     _currentSpeed = _currentSpeed min 1.5;
 };
 
@@ -29,11 +37,11 @@ if ((vehicle ACE_player == ACE_player) && {_currentSpeed > 0.1} && {isTouchingGr
 // Calculate muscle damage increase
 // Note: Muscle damage recovery is ignored as it takes multiple days
 GVAR(muscleDamage) = GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.2 * 0.00004;
-private _muscleIntegrity = 1 - GVAR(muscleDamage);
+private _muscleIntegritySqrt = sqrt (1 - GVAR(muscleDamage));
 
 // Calculate available power
-private _ae1PathwayPowerFatigued = GVAR(ae1PathwayPower) * sqrt (GVAR(ae1Reserve) / AE1_MAXRESERVE) * OXYGEN * sqrt _muscleIntegrity;
-private _ae2PathwayPowerFatigued = GVAR(ae2PathwayPower) * sqrt (GVAR(ae2Reserve) / AE2_MAXRESERVE) * OXYGEN * sqrt _muscleIntegrity;
+private _ae1PathwayPowerFatigued = GVAR(ae1PathwayPower) * sqrt (GVAR(ae1Reserve) / AE1_MAXRESERVE) * OXYGEN * _muscleIntegritySqrt;
+private _ae2PathwayPowerFatigued = GVAR(ae2PathwayPower) * sqrt (GVAR(ae2Reserve) / AE2_MAXRESERVE) * OXYGEN * _muscleIntegritySqrt;
 
 // Calculate how much power is consumed from each reserve
 private _ae1Power = _currentWork min _ae1PathwayPowerFatigued;

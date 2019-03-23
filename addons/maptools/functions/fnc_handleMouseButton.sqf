@@ -1,15 +1,20 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Handle mouse buttons.
  *
  * Arguments:
- * 0: 1 if mouse down down, 0 if mouse button up (Number)
- * 1: Parameters of the mouse button event
+ * 0: 1 if mouse down down, 0 if mouse button up <Number>
+ * 1: Parameters of the mouse button event <ARRAY>
  *
  * Return Value:
- * Boolean, true if event was handled
+ * true if event was handled <BOOL>
+ *
+ * Example:
+ * [0, [array]] call ACE_maptools_fnc_handleMouseButton
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_dir", "_params"];
 _params params ["_control", "_button", "_screenPosX", "_screenPosY", "_shiftKey", "_ctrlKey", "_altKey"];
@@ -20,22 +25,22 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
     if (GVAR(freedrawing) && {_dir == 0}) then {
         GVAR(freedrawing) = false;
         GVAR(drawPosEnd) = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
-        TRACE_1("Ending Line",GVAR(freedrawing),GVAR(drawPosEnd));
+        TRACE_2("Ending Line",GVAR(freedrawing),GVAR(drawPosEnd));
         [{
             if (allMapMarkers isEqualTo []) exitWith {};
             private _markerName = allMapMarkers select (count allMapMarkers - 1);
             private _markerPos = getMarkerPos _markerName;
             private _distanceCheck = _markerPos distance2d GVAR(drawPosStart);
-            
+
             TRACE_3("Line Drawn",_markerName,_markerPos,_distanceCheck);
-            
+
             if (_distanceCheck > 1) exitWith {WARNING("Wrong Marker!");};
             if ((count GVAR(freeDrawingData)) != 3) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData));};
-            
+
             GVAR(freeDrawingData) params ["", "_startStraightPos", "_endStraightPos"];
            _startStraightPos set [2, 0];
-            _endStraightPos set [2, 0]; 
-            
+            _endStraightPos set [2, 0];
+
             // Convert marker to rectangle and change it's pos/size/dir
             _markerName setMarkerShape "RECTANGLE";
 

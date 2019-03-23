@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows and starts the target speed assist timer
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_target_speed_assist_timer
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if !(ctrlVisible 9000) then {
 

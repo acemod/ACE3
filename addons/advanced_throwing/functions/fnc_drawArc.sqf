@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zapat, Dslyecxi, Jonpas
  * Draws throw arc.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Disable drawing when intersecting with the vehicle
 if !([ACE_player] call FUNC(canThrow)) exitWith {
@@ -67,7 +67,7 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
         private _col = [ [1, 1, 1, _alpha], [0, 1, 0, _alpha], [1, 0, 0, _alpha], [1, 1, 0, _alpha] ] select _cross;
 
         if (_cross != 2 && {lineIntersects [eyePos ACE_player, _newTrajASL]}) then {
-            _col set [3, 0.1]
+            _col set [3, 0.1];
         };
 
         _pathData pushBack [_col, ASLToAGL _newTrajASL, _iDim];

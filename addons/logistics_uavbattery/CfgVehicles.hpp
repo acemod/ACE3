@@ -11,15 +11,26 @@ class CfgVehicles {
         };
     };
     class UAV_01_base_F: Helicopter_Base_F {
+        fuelCapacity = 19; // Around 30 minutes hovering
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(RefuelUAV) {
                     displayName = CSTRING(Recharge);
-                    distance = 4;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRefuelUAV));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(refuelUAV));
-                    showDisabled = 0;
-                    priority = 1.245;
+                    icon = QPATHTOF(ui\UAV_battery_ca.paa);
+                };
+            };
+        };
+    };
+    class UAV_06_base_F: Helicopter_Base_F {
+        fuelCapacity = 16; // Around 25 minutes hovering
+        class ACE_Actions: ACE_Actions{
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(RefuelUAV) {
+                    displayName = CSTRING(Recharge);
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRefuelUAV));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(refuelUAV));
                     icon = QPATHTOF(ui\UAV_battery_ca.paa);
                 };
             };

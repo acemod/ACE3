@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * The player will select the specified weapon and change to the first additional muzzle. E.g. the grenade launcher of a assault rifle.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 
@@ -42,7 +42,7 @@ private _muzzle = _muzzles select _index;
 
 _index = 0;
 while {
-    _index < 100 && {currentMuzzle _unit != _muzzle}
+    _index < 299 && {currentMuzzle _unit != _muzzle}
 } do {
     _unit action ["SwitchWeapon", _unit, _unit, _index];
     _index = _index + 1;

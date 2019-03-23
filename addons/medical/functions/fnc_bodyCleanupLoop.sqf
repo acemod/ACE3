@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain
  * Loop that cleans up litter
@@ -5,13 +6,14 @@
  * Arguments:
  * None
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * call ACE_medical_fnc_bodyCleanupLoop
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 {
     TRACE_2("body",_x,isPlayer _x);

@@ -1,6 +1,6 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_SpraypaintBlack : ACE_ItemCore {
         author = "jokoho48";
@@ -11,7 +11,7 @@ class CfgWeapons {
         scope = 2;
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanBlack_co.paa)};
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };

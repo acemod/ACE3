@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Display triage card for a unit
@@ -9,10 +10,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, true] call ace_medical_fnc_displayTriageCard
+ *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 params ["_target", ["_show", true]];
 

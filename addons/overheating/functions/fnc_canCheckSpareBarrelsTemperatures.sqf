@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey-Soldierman
  * Return true if player can check temperatures of spare barrels
@@ -6,12 +7,15 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * Bool
+ * Bool <BOOL>
+ *
+ * Example:
+ * [bob] call ace_overheating_fnc_canCheckSpareBarrelsTemperatures
  *
  * Public: No
  */
-#include "script_component.hpp"
-params ["_unit"];
+
+params ["_player"];
 
 //Get the classname of the spare barrel for the weapon
 private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(barrelClassname));

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko
  *
@@ -10,9 +11,11 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [wire, car] call ace_concertina_wire_fnc_handleKilled
+ *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_wire", "_killer"];
 TRACE_2("params",_wire,_killer);
 

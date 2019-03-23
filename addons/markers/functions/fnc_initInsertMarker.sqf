@@ -1,5 +1,6 @@
+#include "script_component.hpp"
 /*
- * Author: BIS, commy2
+ * Author: BIS, commy2, Timi007
  * Sets up the marker placement
  * Run instead of \a3\ui_f\scripts\GUI\RscDisplayInsertMarker.sqf
  *
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define BORDER 0.005
 
@@ -46,32 +46,39 @@
     private _aceAngleSlider = _display displayctrl 1220;
     private _aceAngleSliderText = _display displayctrl 1221;
 
-    ////////////////////
-    // Install MapDrawEH on current map
-    private _mapIDD = -1;
+    private _mapDisplay = displayParent _display;
+    if (isNull _mapDisplay) exitWith {ERROR("No Map");};
+    private _mapCtrl = _mapDisplay displayCtrl 51;
 
-    {
-        if (!isNull (findDisplay _x)) exitWith {
-            _mapIDD = _x;
+    GVAR(editingMarker) = "";
+    (ctrlMapMouseOver _mapCtrl) params ["_mouseOverType", "_marker"];
+
+    //check if entity under mouse is a user marker
+    if (_mouseOverType isEqualTo "marker") then {
+        if (!((_marker find "_USER_DEFINED") isEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
+            GVAR(editingMarker) = _marker;
+            //hide marker which is being edited because if the user cancels editing, it will still exist unchanged
+            GVAR(editingMarker) setMarkerAlphaLocal 0;
         };
-        false
-    } count [12, 37, 52, 53, 160];
-
-    if (_mapIDD == -1) exitWith {
-        ERROR("No Map?");
     };
 
-    if !(_mapIDD in GVAR(mapDisplaysWithDrawEHs)) then {
-        GVAR(mapDisplaysWithDrawEHs) pushBack _mapIDD;
-        ((finddisplay _mapIDD) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
+    ////////////////////
+    // Install MapDrawEH on current map
+    if !((ctrlIDD _mapDisplay) in GVAR(mapDisplaysWithDrawEHs)) then {
+        GVAR(mapDisplaysWithDrawEHs) pushBack (ctrlIDD _mapDisplay);
+        _mapCtrl ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
     };
 
     ////////////////////
     // Calculate center position of the marker placement ctrl
-    private _pos = ctrlPosition _picture;
-    _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
-
-    GVAR(currentMarkerPosition) = ((findDisplay _mapIDD) displayCtrl 51) ctrlMapScreenToWorld _pos;
+    if !(GVAR(editingMarker) isEqualTo "") then {
+        //prevent changing the original marker position
+        GVAR(currentMarkerPosition) = markerPos GVAR(editingMarker);
+    } else {
+        private _pos = ctrlPosition _picture;
+        _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
+        GVAR(currentMarkerPosition) = _mapCtrl ctrlMapScreenToWorld _pos;
+    };
 
     //Hide the bis picture:
     _picture ctrlShow false;
@@ -79,12 +86,16 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
+    if !((markerText GVAR(editingMarker)) isEqualTo "") then {
+        //fill text input with text from marker which is being edited
+        _text ctrlSetText (markerText GVAR(editingMarker));
+    };
 
     //Focus on the text input
     ctrlSetFocus _text;
 
     //--- Background
-    _pos = ctrlposition _text;
+    private _pos = ctrlposition _text;
     _pos params ["_posX", "_posY", "_posW", "_posH"];
     _posX = _posX + 0.01;
     _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER));  //prevent buttons being placed below bottom edge of screen
@@ -161,12 +172,20 @@
             };
         };
 
-        private _currentChannelName = CHANNEL_NAMES param [currentChannel, localize "str_channel_group"];
+        private _selectChannel = if !(GVAR(editingMarker) isEqualTo "") then {
+            //get the channel where the marker was placed in
+            parseNumber ((GVAR(editingMarker) splitString "/") param [2, "3"])
+        } else {
+            currentChannel
+        };
+
+        private _currentChannelName = CHANNEL_NAMES param [_selectChannel, localize "str_channel_group"];
 
         // select current channel in list box, must be done after lbDelete
         for "_j" from 0 to (lbSize _channel - 1) do {
             if (_channel lbText _j == _currentChannelName) then {
                 _channel lbSetCurSel _j;
+                setCurrentChannel (CHANNEL_NAMES find _currentChannelName);
             };
         };
 
@@ -198,10 +217,15 @@
     // init marker shape lb
     lbClear _aceShapeLB;
     {
-        _x params ["_add", "_set", "_pic"];
+        _x params ["_add", "_set", "_pic", "_classname"];
         _aceShapeLB lbAdd _add;
         _aceShapeLB lbSetValue [_forEachIndex, _set];
         _aceShapeLB lbSetPicture [_forEachIndex, _pic];
+
+        if ((markerType GVAR(editingMarker)) isEqualTo _classname) then {
+            //if the marker is being edited then get the original shape
+            GVAR(curSelMarkerShape) = _forEachIndex;
+        };
     } forEach GVAR(MarkersCache);
 
     private _curSelShape = GETGVAR(curSelMarkerShape,0);
@@ -215,10 +239,15 @@
     // init marker color lb
     lbClear _aceColorLB;
     {
-        _x params ["_add", "_set", "_pic"];
+        _x params ["_add", "_set", "_pic", "_classname"];
         _aceColorLB lbAdd _add;
         _aceColorLB lbSetValue [_forEachIndex, _set];
         _aceColorLB lbSetPicture [_forEachIndex, _pic];
+
+        if ((markerColor GVAR(editingMarker)) isEqualTo _classname) then {
+            //if the marker is being edited then get the original color
+            GVAR(curSelMarkerColor) = _forEachIndex;
+        };
     } forEach GVAR(MarkerColorsCache);
 
     private _curSelColor = GETGVAR(curSelMarkerColor,0);
@@ -231,6 +260,11 @@
     ////////////////////
     // init marker angle slider
     _aceAngleSlider sliderSetRange [-180, 180];
+
+    if !(GVAR(editingMarker) isEqualTo "") then {
+        //get the original direction
+        GVAR(currentMarkerAngle) = markerDir GVAR(editingMarker);
+    };
 
     private _curSelAngle = GETGVAR(currentMarkerAngle,0);
     _aceAngleSlider sliderSetPosition _curSelAngle;

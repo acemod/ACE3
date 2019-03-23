@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou
  * Searches for a laser spot given a seekers params.
@@ -7,30 +8,31 @@
  * 0: Position of seeker (ASL) <ARRAY>
  * 1: Direction vector (will be normalized) <ARRAY>
  * 2: Seeker FOV in degrees <NUMBER>
- * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <ARRAY>
- * 4: Seeker laser code. <NUMBER>
- * 5: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ * 3: Seeker max distance in meters <NUMBER>
+ * 4: Seeker wavelength sensitivity range, [1550,1550] is common eye safe <ARRAY>
+ * 5: Seeker laser code. <NUMBER>
+ * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  *
  * Return Value:
- * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
+ * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>
  *
  * Example:
- * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot;
+ * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
-private _seekerCos = cos _seekerFov;
 
-TRACE_5("",_posASL,_dir,_seekerFov,_seekerWavelengths,_seekerCode);
+private _seekerCos = cos _seekerFov;
+private _seekerMaxDistSq = _seekerMaxDistance ^ 2;
+
+TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistance,_seekerWavelengths,_seekerCode);
 
 private _spots = [];
 private _finalPos = nil;
@@ -73,10 +75,10 @@ private _finalOwner = objNull;
             // Shoot a cone with dispersion
             ([_laserPos, _laserDir, _divergence, GVAR(dispersionCount), _obj] call FUNC(shootCone)) params ["", "", "_resultPositions"];
             {
-                _testPoint = _x select 0;
+                private _testPoint = _x select 0;
                 private _testPointVector = _posASL vectorFromTo _testPoint;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
-                if (_testDotProduct > _seekerCos) then {
+                if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
                     _spots pushBack [_testPoint, _owner];
                 };
             } forEach _resultPositions;
@@ -87,7 +89,7 @@ private _finalOwner = objNull;
             if (_distance > 0) then {
                 private _testPointVector = _posASL vectorFromTo _resultPos;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
-                if (_testDotProduct > _seekerCos) then {
+                if ((_testDotProduct > _seekerCos) && {(_resultPos vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
                     _spots pushBack [_resultPos, _owner];
                 };
             };
@@ -175,6 +177,7 @@ if ((count _spots) > 0) then {
         private _maxOwnerCount = -1;
 
         [_ownersHash, {
+            //IGNORE_PRIVATE_WARNING ["_key", "_value"];
             if (_value > _maxOwnerCount) then {
                 _finalOwner = _key;
             };
@@ -186,9 +189,9 @@ END_COUNTER(seekerFindLaserSpot);
 
 #ifdef DRAW_LASER_INFO
 if (isNil "_finalPos") then {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _code], 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
 } else {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _code], 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
     drawLine3D [ASLtoAGL _posASL, ASLtoAGL _finalPos, [0.5,1,0,1]];
 };
 #endif

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * handle bleeding state (state machine)
@@ -13,10 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
+if (!([_unit] call FUNC(isBleeding))) exitWith {};
 if (((vehicle _unit) != _unit) && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
 
 private _lastTime = _unit getVariable [QGVAR(lastTime), -10];
@@ -33,6 +34,6 @@ if ((CBA_missionTime - _lastTime) + _bloodLoss >= 8 + random 2) then {
     ];
     _position set [2, 0];
 
-    private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss max 3);
+    private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss min 3);
     [_bloodDrop, _position, getDir _unit] call FUNC(createBlood);
 };

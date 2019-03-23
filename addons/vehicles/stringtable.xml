@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vehicles">
         <Key ID="STR_ACE_Vehicles_On">
@@ -13,6 +13,9 @@
             <Portuguese>Limitador de Velocidade Ativo</Portuguese>
             <Italian>Limitatore Attivo</Italian>
             <Japanese>速度制限を有効化</Japanese>
+            <Korean>속도 제한기 켜짐</Korean>
+            <Chinesesimp>启用速度限制</Chinesesimp>
+            <Chinese>啟用速度限制</Chinese>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -26,6 +29,15 @@
             <Portuguese>Limitador de Velocidade Desativado</Portuguese>
             <Italian>Limitatore Non Attivo</Italian>
             <Japanese>速度制限を無効化</Japanese>
+            <Korean>속도 제한기 꺼짐</Korean>
+            <Chinesesimp>停用速度限制</Chinesesimp>
+            <Chinese>停用速度限制</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_SpeedLimit">
+            <English>Speed Limit</English>
+            <Italian>Limite di velocità</Italian>
+            <Japanese>速度制限</Japanese>
+            <Polish>Ograniczenie prędkości</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -39,6 +51,21 @@
             <Portuguese>Limitador de Velocidade</Portuguese>
             <Italian>Limitatore di Velocità</Italian>
             <Japanese>速度制限</Japanese>
+            <Korean>속도 제한기</Korean>
+            <Chinesesimp>速度限制器</Chinesesimp>
+            <Chinese>速度限制器</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
+            <English>Increase Speed Limit</English>
+            <Italian>Aumenta limite di velocità</Italian>
+            <Japanese>速度制限を増やす</Japanese>
+            <Polish>Zwiększ ograniczenie prędkości</Polish>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
+            <English>Decrease Speed Limit</English>
+            <Italian>Diminuisce limite di velocità</Italian>
+            <Japanese>速度制限を減らす</Japanese>
+            <Polish>Zmniejsz ograniczenie prędkości</Polish>
         </Key>
     </Package>
 </Project>

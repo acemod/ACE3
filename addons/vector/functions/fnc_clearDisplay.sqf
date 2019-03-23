@@ -1,11 +1,19 @@
-/*
-
-by commy2
-
-Clears the vectors control items.
-
-*/
 #include "script_component.hpp"
+/*
+ * Author: commy2
+ * Clears the vectors control items.
+ *
+ * Arguments:
+ * 0: "azimuth" or "distance" <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["azimuth"] call ace_vector_fnc_clearDisplay
+ *
+ * Public: No
+ */
 
 disableSerialization;
 private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);

@@ -1,6 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Goggles">
+        <Key ID="STR_ACE_Goggles_DisplayName">
+            <English>Goggles</English>
+            <German>Schutzbrille</German>
+            <Italian>Occhiali</Italian>
+            <Chinese>護目鏡</Chinese>
+            <Chinesesimp>护目镜</Chinesesimp>
+            <Japanese>ゴーグル</Japanese>
+            <Korean>고글</Korean>
+            <Polish>Gogle</Polish>
+        </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
             <German>Brilleneffekt in dritter Person anzeigen</German>
@@ -13,6 +23,9 @@
             <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
             <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
             <Japanese>三人称視点でもゴーグルによる効果を出す</Japanese>
+            <Korean>3인칭시에도 고글 효과를 보이게 합니다</Korean>
+            <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
+            <Chinese>在第三人稱視角顯示護目鏡效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Goggles_WipeGlasses">
             <English>Wipe Goggles</English>
@@ -26,24 +39,45 @@
             <Portuguese>Limpar Óculos</Portuguese>
             <Italian>Pulisci gli occhiali</Italian>
             <Japanese>ゴーグルを拭く</Japanese>
+            <Korean>고글 닦기</Korean>
+            <Chinesesimp>擦拭护目镜</Chinesesimp>
+            <Chinese>擦拭護目鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_displayName">
             <English>Goggle Effects</English>
             <Russian>Эффект очков</Russian>
             <Japanese>ゴーグルによる効果</Japanese>
             <Polish>Efekty gogli</Polish>
+            <German>Brilleneffekt</German>
+            <Korean>고글 효과</Korean>
+            <French>Effets des lunettes</French>
+            <Italian>Effetti Occhiali</Italian>
+            <Chinesesimp>护目镜效果</Chinesesimp>
+            <Chinese>護目鏡效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
             <Russian>Тонировка</Russian>
             <Japanese>色彩のみ</Japanese>
             <Polish>Winieta</Polish>
+            <German>Tönung</German>
+            <Korean>색조</Korean>
+            <French>Teinte</French>
+            <Italian>Colore</Italian>
+            <Chinesesimp>染色</Chinesesimp>
+            <Chinese>染色</Chinese>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
             <Russian>Тонировка + эффекты</Russian>
             <Japanese>色彩 + 効果</Japanese>
             <Polish>Winieta + Efekty</Polish>
+            <German>Tönung + Effekte</German>
+            <Korean>색조+효과</Korean>
+            <French>Teinte + effets</French>
+            <Italian>Colore + Effetti</Italian>
+            <Chinesesimp>染色 + 影响</Chinesesimp>
+            <Chinese>染色 + 影響</Chinese>
         </Key>
     </Package>
 </Project>

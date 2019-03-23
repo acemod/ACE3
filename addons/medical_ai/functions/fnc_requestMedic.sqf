@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Sends a request to the units assigned medic to heal it.
@@ -6,11 +7,13 @@
  * None
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * call ACE_medical_ai_fnc_requestMedic
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _assignedMedic = _this getVariable QGVAR(assignedMedic);
 private _healQueue = _assignedMedic getVariable [QGVAR(healQueue), []];

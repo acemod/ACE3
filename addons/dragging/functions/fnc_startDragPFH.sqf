@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Drag PFH
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #ifdef DEBUG_ENABLED_DRAGGING
     systemChat format ["%1 startDragPFH running", CBA_missionTime];
@@ -50,7 +50,7 @@ if (CBA_missionTime > _timeOut) exitWith {
 };
 
 // unit is ready to start dragging
-if (animationState _unit in DRAG_ANIMATIONS) exitWith {
+if (animationState _unit in DRAG_ANIMATIONS || {_unit call EFUNC(common,isSwimming)}) exitWith {
     TRACE_4("Start Dragging",_unit,_target,_timeOut,CBA_missionTime);
     [_unit, _target] call FUNC(dragObject);
 

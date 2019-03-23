@@ -13,3 +13,4 @@ PREP(rotateVectLineGetMap);
 PREP(seekerFindLaserSpot);
 PREP(shootCone);
 PREP(shootRay);
+PREP(showVehicleHud);

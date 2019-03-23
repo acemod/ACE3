@@ -1,19 +1,19 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the atmospheric data fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_atmo_env_data
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 13007);
 

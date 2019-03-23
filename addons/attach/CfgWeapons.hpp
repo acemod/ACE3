@@ -1,6 +1,6 @@
 class CfgWeapons {
     class ACE_ItemCore;
-    class InventoryItem_Base_F;
+    class CBA_MiscItem_ItemInfo;
 
     class ACE_IR_Strobe_Item: ACE_ItemCore {
         ACE_attachable = "ACE_IR_Strobe_Effect";
@@ -11,7 +11,7 @@ class CfgWeapons {
         model = QPATHTOF(data\ace_IRStrobe.p3d);
         picture = QPATHTOF(UI\irstrobe_item.paa);
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
     };

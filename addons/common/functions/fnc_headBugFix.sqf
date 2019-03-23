@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: rocko
  * Fixes animation issues that may get you stuck
@@ -8,11 +9,13 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [] call ace_common_fnc_headBugFix
+ *
  * Public: Yes
  *
  * Note: Has to be spawned not called
  */
-#include "script_component.hpp"
 
 private _unit = ACE_player;
 private _anim = animationState _unit;

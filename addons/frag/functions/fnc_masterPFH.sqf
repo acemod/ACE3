@@ -1,25 +1,30 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
- *
- * Master single PFH abstraction for all rounds being tracked by frag/spall
+ * Master single PFH abstraction for all rounds being tracked by frag/spall.
  *
  * Arguments:
- *
+ * None
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ace_frag_fnc_masterPFH
+ *
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
-#include "script_component.hpp"
-//PARAMS_2(_pfhArgs,_handle);
 
-if (!GVAR(enabled)) exitWith {};
+BEGIN_COUNTER(PFH);
+
+// Fast exit if nothing to do
+if (GVAR(objects) isEqualTo []) exitWith {END_COUNTER(PFH);};
 
 private _gcIndex = [];
 
 private _iter = 0;
 private _objectCount = count GVAR(objects);
-while {_objectCount > 0 && {_iter < (GVAR(MaxTrackPerFrame) min _objectCount)}} do {
+while {_objectCount > 0 && {_iter < (GVAR(maxTrackPerFrame) min _objectCount)}} do {
 
     if (GVAR(lastIterationIndex) >= _objectCount) then {
         GVAR(lastIterationIndex) = 0;
@@ -47,3 +52,5 @@ private _deletionCount = 0;
 
     INC(_deletionCount);
 } forEach _gcIndex;
+
+END_COUNTER(PFH);

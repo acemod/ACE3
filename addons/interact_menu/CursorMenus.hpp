@@ -1,6 +1,5 @@
 class GVAR(cursorMenu) {
     idd = 91919;
-    access = 0;
     movingEnable = 0;
     enableSimulation = 1;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgCursorMenu)),_this select 0)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(cursorMenuOpened)),true)]);
@@ -25,7 +24,6 @@ class RscTitles {
                 text = "";
                 sizeEx = 0;
                 lineSpacing = 0;
-                access = 0;
                 type = 0;
                 style = 0;
                 size = 1;
