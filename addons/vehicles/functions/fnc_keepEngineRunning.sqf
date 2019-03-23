@@ -20,8 +20,8 @@
 params ["_vehicle","_position","_unit"];
 
 if (!GVAR(keepEngineRunning)) exitWith {};
-if (_unit == ACE_player && {_position == "driver"} && {_vehicle getVariable [QGVAR(engineState),false]}) then {
+if (_unit == ACE_player && {_position == "driver"} && {_vehicle getVariable [QGVAR(engineState), false]}) then {
     [{
-        [QGVAR(engineOnLocal), _this, _this] call CBA_fnc_targetEvent;
-    }, _vehicle] call CBA_fnc_execNextFrame;
+        [QEGVAR(common,engineOn), _this, _this select 0] call CBA_fnc_targetEvent;
+    }, [_vehicle, true]] call CBA_fnc_execNextFrame;
 };
