@@ -2184,21 +2184,8 @@
             <Chinesesimp>注射生理食盐水 (250ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (250ml)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_Triage_Status_Minor">
-            <English>Minor</English>
-            <German>Gering</German>
-            <Spanish>Menor</Spanish>
-            <Russian>Несрочная помощь</Russian>
-            <Polish>Normalny</Polish>
-            <French>Traitement en attente</French>
-            <Czech>Minimální</Czech>
-            <Hungarian>Enyhe</Hungarian>
-            <Italian>Minore</Italian>
-            <Portuguese>Leve</Portuguese>
-            <Japanese>保留群</Japanese>
-            <Korean>경미</Korean>
-            <Chinesesimp>轻微</Chinesesimp>
-            <Chinese>輕微</Chinese>
+        <Key ID="STR_ACE_Medical_treatment_Triage_Status_Minimal">
+            <English>Minimal</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Triage_Status_Delayed">
             <English>Delayed</English>

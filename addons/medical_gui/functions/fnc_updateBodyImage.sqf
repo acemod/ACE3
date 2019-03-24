@@ -1,50 +1,59 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
- * Update the body image on the menu
+ * Author: Glowbal, SilentSpike, mharis001
+ * Updates the body image for given target.
  *
  * Arguments:
- * 0: selection bloodloss <ARRAY>
- * 1: selection damage <ARRAY>
- * 2: selection torniquet <ARRAY>
- * 3: display <DISPLAY>
+ * 0: Body image controls group <CONTROL>
+ * 1: Target <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [0.3, some_display] call ace_medical_menu_fnc_updateBodyImage
+ * [CONTROL, _target] call ace_medical_menu_fnc_updateBodyImage
  *
  * Public: No
  */
 
-params ["_selectionBloodLoss", "_selectionDamage", "_selectionTourniquet", "_display"];
+params ["_ctrlGroup", "_target"];
 
-// Handle the body image coloring
-private _availableSelections = [50, 51, 52, 53, 54, 55];
+// Get tourniquets, damage, and blood loss for target
+private _tourniquets = GET_TOURNIQUETS(_target);
+private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]];
+private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
+
 {
-    private _red = 1;
-    private _green = 1;
-    private _blue = 1;
+    _x params ["", "", "_bodyPartN", "_amountOf", "_bleeding"];
+    _bodyPartBloodLoss set [_bodyPartN, (_bodyPartBloodLoss select _bodyPartN) + (_bleeding * _amountOf)];
+} forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
 
-    private _torniquet = _selectionTourniquet select _forEachIndex;
-    if (_torniquet > 0) then {
-        _red = 0;
-        _green = 0;
-        _blue = 0.8;
-    } else {
-        private _bloodLoss = _selectionBloodLoss select _forEachIndex;
-        if (_bloodLoss > 0) then {
-            _green = 0 max (0.8 - _bloodLoss);
-            _blue = _green;
-        } else {
-            private _damage = _selectionDamage select _forEachIndex;
-            if (_damage > 0.1) then {
-                _blue = 0 max (1 - _damage);
-                _green = 0.5 max (1 - _damage / 2);
-            };
-        };
+{
+    _x params ["_bodyPartIDC", ["_tourniquetIDC", -1]];
+
+    // Show or hide the tourniquet icon
+    if (_tourniquetIDC != -1) then {
+        private _hasTourniquet = _tourniquets select _forEachIndex > 0;
+        private _ctrlTourniquet = _ctrlGroup controlsGroupCtrl _tourniquetIDC;
+        _ctrlTourniquet ctrlShow _hasTourniquet;
     };
 
-    (_display displayCtrl _x) ctrlSetTextColor [_red, _green, _blue, 1.0];
-} forEach _availableSelections;
+    // Update body part color based on blood loss and damage
+    private _bloodLoss = _bodyPartBloodLoss select _forEachIndex;
+    private _bodyPartColor = if (_bloodLoss > 0) then {
+        [_bloodLoss] call FUNC(bloodLossToRGBA);
+    } else {
+        private _damage = _bodyPartDamage select _forEachIndex;
+        [_damage] call FUNC(damageToRGBA);
+    };
+
+    private _ctrlBodyPart = _ctrlGroup controlsGroupCtrl _bodyPartIDC;
+    _ctrlBodyPart ctrlSetTextColor _bodyPartColor;
+} forEach [
+    [IDC_BODY_HEAD],
+    [IDC_BODY_TORSO],
+    [IDC_BODY_ARMLEFT, IDC_BODY_ARMLEFT_T],
+    [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_T],
+    [IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_T],
+    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T]
+];

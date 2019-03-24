@@ -1,22 +1,25 @@
 #include "script_component.hpp"
 /*
- * Author: esteldunedain
- * Modify the visuals of a medical action point.
- * On Basic medical: modify the icon color based on damage on that body part.
+ * Author: esteldunedain, SilentSpike, mharis001
+ * Modifies the medical action icons to show blood loss and tourniquets.
  *
  * Arguments:
- * 0: The Patient Unit <OBJECT>
- * 1: The Diagnosing Unit <OBJECT>
- * 2: Body part index <NUMBER>
- * 3: The action to modify <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Body part index <NUMBER>
+ * 2: Action data <ARRAY>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [_target, 0, _actionData] call ace_medical_gui_fnc_modifyAction
  *
  * Public: No
  */
 
-params ["_target", "_player", "_partIndex", "_actionData"];
+#define COLOR_SCALE ["#ffffff", "#fff1a1", "#ffe075", "#ffcb55", "#ffb73c", "#ffa127", "#ff8815", "#ff6d05", "#ff4b00", "#ff0000"]
+
+params ["_target", "_partIndex", "_actionData"];
 
 private _bloodLossOnBodyPart = 0;
 
@@ -25,32 +28,15 @@ private _bloodLossOnBodyPart = 0;
     _x params ["", "", "_bodyPartN", "_amountOf", "_bleeding"];
 
     if (_bodyPartN == _partIndex) then {
-        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (20 * _amountOf * _bleeding);
+        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _bleeding);
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
 
-private _hasTourniquet = HAS_TOURNIQUET_APPLIED_ON(_target,_partIndex);
+private _frBL = 0 max (_bloodLossOnBodyPart / BLOOD_LOSS_RED_THRESHOLD) min 1;
+private _colorInt = ceil (_frBL * (BLOOD_LOSS_TOTAL_COLORS - 1)); // ceil because any bleeding more than zero shouldn't be white
 
-switch (true) do {
-    case (_bloodLossOnBodyPart >= 0.15): {
-        if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossRed_t.paa)];
-        } else {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossRed.paa)];
-        };
-    };
-
-    case (_bloodLossOnBodyPart > 0): {
-        if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossYellow_t.paa)];
-        } else {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_crossYellow.paa)];
-        };
-    };
-
-    default {
-        if (_hasTourniquet) then {
-            _actionData set [2, QPATHTOF(ui\ui\icons\medical_cross_t.paa)];
-        };
-    };
+if (HAS_TOURNIQUET_APPLIED_ON(_target,_partIndex)) then {
+    _actionData set [2, format [QPATHTOF(ui\cross_t_%1.paa), _colorInt]];
+} else {
+    _actionData set [2, [QPATHTOF(ui\cross.paa), COLOR_SCALE select _colorInt]];
 };

@@ -55,6 +55,7 @@ PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
 PREP(serverRemoveBody);
+PREP(setTriageStatus);
 
 // items
 PREP(checkItems);

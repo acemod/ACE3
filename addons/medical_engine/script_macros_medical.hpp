@@ -48,6 +48,12 @@
 // To be replaced by a proper blood pressure calculation
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD 0.5 // 50% of cardiac output
 
+// Used to color interaction icons and body image selections
+#define BLOOD_LOSS_RED_THRESHOLD 0.5
+#define BLOOD_LOSS_TOTAL_COLORS 10
+#define DAMAGE_BLUE_THRESHOLD 0.8
+#define DAMAGE_TOTAL_COLORS 10
+
 // --- pain
 #define PAIN_UNCONSCIOUS 0.5
 
@@ -83,6 +89,19 @@
 #define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
 
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
+
+// Triage colors, for consistency across UIs and functions
+#define TRIAGE_COLOR_NONE      0, 0, 0, 0.9
+#define TRIAGE_COLOR_MINIMAL   0, 0.5, 0, 0.9
+#define TRIAGE_COLOR_DELAYED   1, 0.84, 0, 0.9
+#define TRIAGE_COLOR_IMMEDIATE 1, 0, 0, 0.9
+#define TRIAGE_COLOR_DECEASED  0, 0, 0, 0.9
+
+#define TRIAGE_TEXT_COLOR_NONE      1, 1, 1, 1
+#define TRIAGE_TEXT_COLOR_MINIMAL   1, 1, 1, 1
+#define TRIAGE_TEXT_COLOR_DELAYED   0, 0, 0, 1
+#define TRIAGE_TEXT_COLOR_IMMEDIATE 1, 1, 1, 1
+#define TRIAGE_TEXT_COLOR_DECEASED  1, 1, 1, 1
 
 // - Unit Variables ----------------------------------------------------
 // These variables get stored in object space and used across components
