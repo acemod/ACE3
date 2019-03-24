@@ -3437,7 +3437,7 @@
             <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
             <Chinese>完全醫療包紮的部位至痊癒</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_TreatmentAction">
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentAction">
             <English>Treating...</English>
             <German>Behandeln...</German>
             <Hungarian>Ellátás...</Hungarian>
@@ -3477,6 +3477,38 @@
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_remove">
             <English>Just remove vanilla medical</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
+            <English>Locations PAK</English>
+            <Russian>Место использования аптечки</Russian>
+            <Polish>Ograniczenie apteczek osobistych</Polish>
+            <Spanish>Ubicaciones del EPA</Spanish>
+            <German>Orte für Erste-Hilfe-Set</German>
+            <Czech>Oblast k použití PAK</Czech>
+            <Portuguese>Localizações do KPS</Portuguese>
+            <French>Lieu d'utilisation da trousse sanitaire</French>
+            <Hungarian>Elsősegélycsomag helyek</Hungarian>
+            <Italian>Locazioni Kit Pronto Soccorso</Italian>
+            <Japanese>応急処置キットを使う場所</Japanese>
+            <Korean>개인응급키트 사용 장소</Korean>
+            <Chinesesimp>个人急救包使用地点</Chinesesimp>
+            <Chinese>個人急救包使用地點</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_SurgicalKit_DisplayName">
+            <English>Remove Surgical Kit (Adv)</English>
+            <Russian>Удалять хирургический набор (усл.)</Russian>
+            <Polish>Usuń zestaw chirurgiczny po użyciu</Polish>
+            <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
+            <German>Entferne Operationskasten (erweitert)</German>
+            <Czech>Odebrat chirurgickou soupravu (Pokr.)</Czech>
+            <Portuguese>Remover kit cirúrgico (avançado)</Portuguese>
+            <French>Consommer les trousses chirurgicales (Av.)</French>
+            <Hungarian>Sebészkészlet (Fejlett) eltávolítása</Hungarian>
+            <Italian>Rimuovi Kit Chirurgico (Avanzato)</Italian>
+            <Japanese>縫合キットを削除 (アド)</Japanese>
+            <Korean>봉합키트 제거 (고급)</Korean>
+            <Chinesesimp>在使用后删除手术包 (进阶伤口)</Chinesesimp>
+            <Chinese>在使用後刪除手術包 (進階傷口)</Chinese>
         </Key>
     </Package>
 </Project>
