@@ -83,6 +83,11 @@
     _vehicle engineOn false;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setMass), {
+    params ["_object", "_mass"];
+    _object setMass _mass;
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
