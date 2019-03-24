@@ -1,19 +1,4 @@
-#include "script_component.hpp"
-/*
- * Author: PabstMirror
- * Dev function to watch all medical variables on a unit
- *
- * Arguments:
- * None
- *
- * Return Value:
- * None
- *
- * Example:
- * [] call ace_medical_fnc_dev_watchMedicalStats;
- *
- * Public: Yes
- */
+#include "\z\ace\addons\medical\script_component.hpp"
 
 ["medical", {
 

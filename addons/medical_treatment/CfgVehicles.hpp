@@ -269,14 +269,14 @@ class CfgVehicles {
                 selection = "cover_action";
 
                 class ACE_OpenLid {
-                    displayName = CSTRING(openLid);
+                    displayName = ECSTRING(medical,openLid);
                     condition = QUOTE(alive _target && {_target animationPhase 'Cover' < 0.5});
                     statement = QUOTE(_target animate ARR_2(['Cover',1]));
                     showDisabled = 0;
                     priority = -1;
                 };
                 class ACE_CloseLid {
-                    displayName = CSTRING(closeLid);
+                    displayName = ECSTRING(medical,closeLid);
                     condition = QUOTE(alive _target && {_target animationPhase 'Cover' >= 0.5});
                     statement = QUOTE(_target animate ARR_2(['Cover',0]));
                     showDisabled = 0;

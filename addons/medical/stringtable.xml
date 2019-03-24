@@ -335,22 +335,6 @@
             <Chinesesimp>在哪里可以使用肾上腺素? (基本医疗)</Chinesesimp>
             <Chinese>在哪裡可以使用腎上腺素? (基本醫療)</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
-            <English>Locations PAK</English>
-            <Russian>Место использования аптечки</Russian>
-            <Polish>Ograniczenie apteczek osobistych</Polish>
-            <Spanish>Ubicaciones del EPA</Spanish>
-            <German>Orte für Erste-Hilfe-Set</German>
-            <Czech>Oblast k použití PAK</Czech>
-            <Portuguese>Localizações do KPS</Portuguese>
-            <French>Lieu d'utilisation da trousse sanitaire</French>
-            <Hungarian>Elsősegélycsomag helyek</Hungarian>
-            <Italian>Locazioni Kit Pronto Soccorso</Italian>
-            <Japanese>応急処置キットを使う場所</Japanese>
-            <Korean>개인응급키트 사용 장소</Korean>
-            <Chinesesimp>个人急救包使用地点</Chinesesimp>
-            <Chinese>個人急救包使用地點</Chinese>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_PAK_Description">
             <English>Where can the PAK be used?</English>
             <Russian>Где может использоваться аптечка?</Russian>
@@ -430,22 +414,6 @@
             <Korean>어느 인원이 봉합키트를 사용할 수 있습니까?</Korean>
             <Chinesesimp>谁能够使用手术包?</Chinesesimp>
             <Chinese>誰能夠使用手術包?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_SurgicalKit_DisplayName">
-            <English>Remove Surgical Kit (Adv)</English>
-            <Russian>Удалять хирургический набор (усл.)</Russian>
-            <Polish>Usuń zestaw chirurgiczny po użyciu</Polish>
-            <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
-            <German>Entferne Operationskasten (erweitert)</German>
-            <Czech>Odebrat chirurgickou soupravu (Pokr.)</Czech>
-            <Portuguese>Remover kit cirúrgico (avançado)</Portuguese>
-            <French>Consommer les trousses chirurgicales (Av.)</French>
-            <Hungarian>Sebészkészlet (Fejlett) eltávolítása</Hungarian>
-            <Italian>Rimuovi Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットを削除 (アド)</Japanese>
-            <Korean>봉합키트 제거 (고급)</Korean>
-            <Chinesesimp>在使用后删除手术包 (进阶伤口)</Chinesesimp>
-            <Chinese>在使用後刪除手術包 (進階傷口)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_SurgicalKit_Description">
             <English>Should Surgical kit be removed on usage?</English>
@@ -661,20 +629,6 @@
             <Korean>이 부위에는 지혈대가 없습니다!</Korean>
             <Chinesesimp>这部位没有止血带!</Chinesesimp>
             <Chinese>這部位沒有止血帶!</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
-            <English>Whether or not the object will be a medical vehicle.</English>
-            <Polish>Czy pojazd ma być pojazdem medycznym?</Polish>
-            <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
-            <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
-            <Spanish>Es un vehículo médico?</Spanish>
-            <French>Détermine si c'est un véhicule sanitaire.</French>
-            <Portuguese>Se o objeto será ou não um veículo médico</Portuguese>
-            <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
-            <Japanese>どれでも、またはオブジェクトを医療車両として割り当てます。</Japanese>
-            <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
-            <Chinesesimp>是否使该载具为医疗载具?</Chinesesimp>
-            <Chinese>是否使該載具為醫療載具?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>

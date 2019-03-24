@@ -19,11 +19,6 @@ class ACE_Settings {
     };
     */
     class GVAR(spontaneousWakeUpChance) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);
-        description = CSTRING(MedicalSettings_spontaneousWakeUpChance_Description);
-        typeName = "SCALAR";
-        value = 0.05;
-        sliderSettings[] = {0, 1, 0.05, 2};
+        movedToSQF = 1;
     };
 };

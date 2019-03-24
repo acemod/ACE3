@@ -12,6 +12,8 @@
  * Public: No
  */
 
+if (EGVAR(medical,convertItems) == 2) exitWith {};
+
 params ["_unit"];
 
 private _countFirstAidKit = [_unit, "FirstAidKit"] call EFUNC(common,getCountOfItem);
@@ -20,7 +22,7 @@ _unit removeItems "FirstAidKit";
 private _countMedikit = [_unit, "Medikit"] call EFUNC(common,getCountOfItem);
 _unit removeItems "Medikit";
 
-if (GVAR(convertItems) != 0) exitWith {};
+if (EGVAR(medical,convertItems) != 0) exitWith {};
 
 for "_i" from 1 to _countFirstAidKit do {
     _unit addItem "ACE_fieldDressing";

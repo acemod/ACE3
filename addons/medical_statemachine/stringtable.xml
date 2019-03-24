@@ -2,6 +2,9 @@
 <Project name="ACE">
     <Package name="Medical_Statemachine">
         <Container name="Settings">
+            <Key ID="STR_ACE_Medical_statemachine_subCategory">
+                <English>States</English>
+            </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_DisplayName">
                 <English>Fatal Injury Player</English>
             </Key>
