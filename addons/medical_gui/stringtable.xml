@@ -833,5 +833,21 @@
             <Chinesesimp>鼻咽管</Chinesesimp>
             <Chinese>鼻咽管</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Actions_TriageCard">
+            <English>Triage Card</English>
+            <German>Triagekarte</German>
+            <Spanish>Tarjeta de clasificación</Spanish>
+            <Russian>Медкарта</Russian>
+            <Polish>Karta segregacyjna</Polish>
+            <Czech>Štítek</Czech>
+            <French>Fiche de triage</French>
+            <Hungarian>Orvosi lap</Hungarian>
+            <Italian>Triage Card</Italian>
+            <Portuguese>Cartão de Triagem</Portuguese>
+            <Japanese>トリアージ カード</Japanese>
+            <Korean>부상자 분류 카드</Korean>
+            <Chinesesimp>检伤分类卡</Chinesesimp>
+            <Chinese>檢傷分類卡</Chinese>
+        </Key>
     </Package>
 </Project>

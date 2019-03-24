@@ -54,7 +54,7 @@ if (_knockOut) then {
             // If unit still has stable vitals at min waiting time, then force wake up
             [{
                 params [["_unit", objNull]];
-                if ((alive _unit) && {_unit call FUNC(hasStableVitals)}) then {
+                if ((alive _unit) && {_unit call EFUNC(medical_status,hasStableVitals)}) then {
                     TRACE_1("Doing delay wakeup",_unit);
                     [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
                 } else {

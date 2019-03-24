@@ -147,7 +147,7 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subC
 
 [
     QEGVAR(medical,medicSetting_SurgicalKit), "LIST",
-    [LSTRING(medicSetting_SurgicalKit_DisplayName), LSTRING(medicSetting_SurgicalKit_Description)],
+    [LSTRING(MedicalSettings_medicSetting_SurgicalKit_DisplayName), LSTRING(MedicalSettings_medicSetting_SurgicalKit_Description)],
     _categoryArray,
     [[0,1,2],["Anyone","Medics only","Doctors only"],0], // [values, titles, defaultIndex]
     true, // isGlobal
@@ -157,7 +157,7 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subC
 
 [
     QEGVAR(medical,consumeItem_PAK), "LIST",
-    [LSTRING(consumeItem_PAK_DisplayName), LSTRING(consumeItem_PAK_Description)],
+    [LSTRING(MedicalSettings_consumeItem_PAK_DisplayName), LSTRING(MedicalSettings_consumeItem_PAK_Description)],
     _categoryArray,
     [[0,1],["No","Yes"],1], // [values, titles, defaultIndex]
     true, // isGlobal
@@ -167,7 +167,7 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subC
 
 [
     QEGVAR(medical,consumeItem_SurgicalKit), "LIST",
-    [LSTRING(consumeItem_SurgicalKit_DisplayName), LSTRING(consumeItem_SurgicalKit_Description)],
+    [LSTRING(MedicalSettings_consumeItem_SurgicalKit_DisplayName), LSTRING(MedicalSettings_consumeItem_SurgicalKit_Description)],
     _categoryArray,
     [[0,1],["No","Yes"],1], // [values, titles, defaultIndex]
     true, // isGlobal
@@ -177,7 +177,7 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subC
 
 [
     QEGVAR(medical,useLocation_Epi), "LIST",
-    [LSTRING(useLocation_Epi_DisplayName), LSTRING(useLocation_Epi_Description)],
+    [LSTRING(MedicalSettings_useLocation_Epi_DisplayName), LSTRING(MedicalSettings_useLocation_Epi_Description)],
     _categoryArray,
     [[0,1,2,3,4],[LELSTRING(common,Anywhere), LELSTRING(common,Vehicle), LLSTRING(medicalFacility), LLSTRING(vehicleAndFacility), LELSTRING(common,Disabled)],0], // [values, titles, defaultIndex]
     true, // isGlobal
@@ -187,7 +187,7 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subC
 
 [
     QEGVAR(medical,useLocation_PAK), "LIST",
-    [LSTRING(useLocation_PAK_DisplayName), LSTRING(useLocation_PAK_Description)],
+    [LSTRING(MedicalSettings_useLocation_PAK_DisplayName), LSTRING(MedicalSettings_useLocation_PAK_Description)],
     _categoryArray,
     [[0,1,2,3,4],[LELSTRING(common,Anywhere), LELSTRING(common,Vehicle), LLSTRING(medicalFacility), LLSTRING(vehicleAndFacility), LELSTRING(common,Disabled)],0], // [values, titles, defaultIndex]
     true, // isGlobal
@@ -197,7 +197,7 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subC
 
 [
     QEGVAR(medical,useLocation_SurgicalKit), "LIST",
-    [LSTRING(useLocation_SurgicalKit_DisplayName), LSTRING(useLocation_SurgicalKit_Description)],
+    [LSTRING(MedicalSettings_useLocation_SurgicalKit_DisplayName), LSTRING(MedicalSettings_useLocation_SurgicalKit_Description)],
     _categoryArray,
     [[0,1,2,3,4],[LELSTRING(common,Anywhere), LELSTRING(common,Vehicle), LLSTRING(medicalFacility), LLSTRING(vehicleAndFacility), LELSTRING(common,Disabled)],0], // [values, titles, defaultIndex]
     true, // isGlobal

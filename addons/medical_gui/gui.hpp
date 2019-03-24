@@ -443,7 +443,7 @@ class GVAR(RscTriageCard) {
         class Title: RscText {
             idc = -1;
             style = ST_CENTER;
-            text = ECSTRING(medical_treatment,Actions_TriageCard);
+            text = CSTRING(Actions_TriageCard);
             x = POS_X(12.5);
             y = POS_Y(3);
             w = POS_W(15);
