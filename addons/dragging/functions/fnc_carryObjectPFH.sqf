@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, Jonpas
+ * Author: commy2
  * PFH for Carry Object
  *
  * Arguments:
@@ -24,7 +24,7 @@
 #endif
 
 params ["_args", "_idPFH"];
-_args params ["_unit","_target", "_startTime"];
+_args params ["_unit", "_target", "_startTime"];
 
 if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
     TRACE_2("carry false",_unit,_target);
@@ -35,37 +35,10 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
 if (!alive _target || {_unit distance _target > 10}) then {
     TRACE_2("dead/distance",_unit,_target);
     if ((_unit distance _target > 10) && {(CBA_missionTime - _startTime) < 1}) exitWith {
-        //attachTo seems to have some kind of network delay and target can return an odd position durring the first few frames,
+        //attachTo seems to have some kind of network delay and target can return an odd position during the first few frames,
         //so wait a full second to exit if out of range (this is critical as we would otherwise detach and set it's pos to weird pos)
         TRACE_3("ignoring bad distance at start",_unit distance _target,_startTime,CBA_missionTime);
     };
     [_unit, _target] call FUNC(dropObject_carry);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
-
-
-// Disable collision with nearby players
-private _disabledCollisionObjects = _target getVariable [QGVAR(disabledCollisionObjects), []];
-TRACE_1("Disable collision objects",_disabledCollisionObjects);
-
-private _nearUnits = _target nearObjects ["CAManBase", DISABLE_COLLISION_DISTANCE];
-{
-    if !(_x in _disabledCollisionObjects) then {
-        TRACE_2("Adding disable collision object",_x,typeOf _x);
-        _target disableCollisionWith _x;
-        _disabledCollisionObjects pushBack _x;
-    };
-    false
-} count _nearUnits;
-
-_disabledCollisionObjects = _disabledCollisionObjects select {
-    if (_x in _nearUnits) then {
-        true
-    } else {
-        TRACE_2("Removing disable collision object",_x,typeOf _x);
-        _target enableCollisionWith _x;
-        false
-    };
-};
-
-_target setVariable [QGVAR(disabledCollisionObjects), _disabledCollisionObjects];

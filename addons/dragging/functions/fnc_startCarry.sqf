@@ -73,3 +73,11 @@ _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
 [FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
+
+// disable collisions by setting the physx mass to almost zero
+private _mass = getMass _target;
+
+if (_mass > 1) then {
+    _target setVariable [QGVAR(originalMass), _mass, true];
+    [QEGVAR(setMass), [_target, 1e-12], _target] call CBA_fnc_targetEvent;
+};
