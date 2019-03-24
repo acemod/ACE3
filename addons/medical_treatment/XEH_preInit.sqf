@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 // config to determine animation acceleration coefficient
 // adjusting these is trail and error
 // if the animation is cut of ingame, increase these values

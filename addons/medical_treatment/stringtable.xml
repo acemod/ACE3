@@ -2,6 +2,9 @@
 <Project name="ACE">
     <Package name="Medical_Treatment">
         <Container name="Settings">
+            <Key ID="STR_ACE_Medical_treatment_subCategory">
+                <English>Treatment</English>
+            </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedBandages_DisplayName">
                 <English>Advanced Bandages</English>
             </Key>
@@ -396,6 +399,20 @@
             <Korean>[ACE] 의료 물자 (고급)</Korean>
             <Chinesesimp>[ACE] 医疗补给箱（进阶）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（進階）</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_Attributes_isMedicalVehicle_Description">
+            <English>Whether or not the object will be a medical vehicle.</English>
+            <Polish>Czy pojazd ma być pojazdem medycznym?</Polish>
+            <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
+            <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
+            <Spanish>Es un vehículo médico?</Spanish>
+            <French>Détermine si c'est un véhicule sanitaire.</French>
+            <Portuguese>Se o objeto será ou não um veículo médico</Portuguese>
+            <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
+            <Japanese>どれでも、またはオブジェクトを医療車両として割り当てます。</Japanese>
+            <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
+            <Chinesesimp>是否使该载具为医疗载具?</Chinesesimp>
+            <Chinese>是否使該載具為醫療載具?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Attributes_isMedic_Description">
             <English>Medical training</English>
@@ -1416,38 +1433,6 @@
             <Korean>이 부위에는 부상이 없습니다...</Korean>
             <Chinesesimp>此身体部位没有受伤</Chinesesimp>
             <Chinese>此身體部位沒有受傷</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
-            <English>Litter Simulation Detail</English>
-            <Polish>Detale zużytych medykamentów</Polish>
-            <Spanish>Detalle de simulación de basura</Spanish>
-            <Russian>Количество мусора от медицины</Russian>
-            <Italian>Dettagli Simulazione Rifiuti</Italian>
-            <French>Niveau de simulation des détritus</French>
-            <German>Abfall-Detaillevel</German>
-            <Hungarian>Hulladékszimuláció részletessége</Hungarian>
-            <Portuguese>Detalhe da simulação de sujeira</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
-            <Japanese>医療廃棄物シミュレーション詳細度</Japanese>
-            <Korean>의료폐기물 재현 상세도</Korean>
-            <Chinesesimp>医疗废弃物模拟细节</Chinesesimp>
-            <Chinese>醫療廢棄物模擬細節</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Desc">
-            <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
-            <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
-            <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
-            <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
-            <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
-            <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
-            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
-            <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
-            <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
-            <Japanese>医療廃棄物シミュレーションは各クライアントでローカルに作成される、医療廃棄物の詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
-            <Korean>의료폐기물 재현 상세도의 경우 얼마나 많은 수의 폐기물이 클라이언트 주변에 생성되는지를 정합니다. 매우 많은 수의 지역은 프레임드랍을 유발할 수 있습니다, 고로 이는 클라이언트 전용 설정입니다.</Korean>
-            <Chinesesimp>设定医疗废弃物的最大产生数量，过多的数量会导致画面更新率延迟，因此这由用户端来设定。</Chinesesimp>
-            <Chinese>設定醫療廢棄物的最大產生數量，過多的數量會導致畫面更新率延遲，因此這由用戶端來設定。</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Inject_Adenosine">
             <English>Inject Adenosine</English>

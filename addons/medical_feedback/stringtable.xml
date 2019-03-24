@@ -2,6 +2,9 @@
 <Project name="ACE">
     <Package name="Medical_Feedback">
         <Container name="Settings">
+            <Key ID="STR_ACE_Medical_feedback_subCategory">
+                <English>Feedback</English>
+            </Key>
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
                 <Russian>Включить крики</Russian>

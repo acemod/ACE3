@@ -2,6 +2,9 @@
 <Project name="ACE">
     <Package name="Medical_Damage">
         <Container name="Settings">
+            <Key ID="STR_ACE_Medical_damage_subCategory">
+                <English>Damage Threshold</English>
+            </Key>
             <Key ID="STR_ACE_Medical_damage_playerDamageThreshold_DisplayName">
                 <English>Player Damage</English>
                 <Russian>Урон игроку</Russian>

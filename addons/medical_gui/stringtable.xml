@@ -2,6 +2,9 @@
 <Project name="ACE">
     <Package name="Medical GUI">
         <Container name="Settings">
+            <Key ID="STR_ACE_Medical_gui_subCategory">
+                <English>User Interface</English>
+            </Key>
             <Key ID="STR_ACE_Medical_gui_Injuries">
                 <English>INJURIES</English>
                 <German>VERLETZUNGEN</German>

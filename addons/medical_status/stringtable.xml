@@ -2,6 +2,9 @@
 <Project name="ACE">
     <Package name="Medical_Status">
         <Container name="Settings">
+            <Key ID="STR_ACE_Medical_Status_subCategory">
+                <English>Status</English>
+            </Key>
             <Key ID="STR_ACE_Medical_Status_bleedingCoefficient_DisplayName">
                 <English>Bleeding coefficient</English>
                 <Russian>Коэффициент кровопотери</Russian>
