@@ -273,7 +273,6 @@ Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
 ACE_NVG_Gen1 | NV Goggles (Gen1) | NVG |
 ACE_NVG_Gen2 | NV Goggles (Gen2) | NVG |
-ACE_NVG_Gen3 | NV Goggles (Gen3) | NVG |
 ACE_NVG_Gen4 | NV Goggles (Gen4) | NVG |
 ACE_NVG_Wide | NV Goggles (Wide) | NVG |
 

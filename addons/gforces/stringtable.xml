@@ -3,7 +3,7 @@
     <Package name="gforces">
         <Key ID="STR_ACE_gforces_enabledFor_displayName">
             <English>Gforces Effects</English>
-            <German>Gforces Effekte</German>
+            <German>Effekte der G-Kräfte</German>
             <Spanish>Efectos Gforces</Spanish>
             <Czech>G Force efekty</Czech>
             <Portuguese>Efeitos de ForçaG</Portuguese>
@@ -30,6 +30,15 @@
             <Italian>Solo Aerei</Italian>
             <Chinesesimp>只有战斗机</Chinesesimp>
             <Chinese>只有戰鬥機</Chinese>
+        </Key>
+        <Key ID="STR_ACE_gforces_statGReduction">
+            <English>G-force reduction</English>
+            <French>Reduction des Gs</French>
+            <Japanese>耐 G 性</Japanese>
+            <Chinesesimp>减少G力</Chinesesimp>
+            <Chinese>減少G力</Chinese>
+            <Italian>Riduzione forza G</Italian>
+            <Polish>Redukcja przeciążenia</Polish>
         </Key>
     </Package>
 </Project>

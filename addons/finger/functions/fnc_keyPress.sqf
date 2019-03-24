@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * On keypress, point and send position to nearby players
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 
 if (!alive ACE_player) exitWith {false};
@@ -48,7 +48,7 @@ private _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]
             {alive _x} &&
             {(_x == (vehicle _x)) || {(vehicle _x) isKindOf "StaticWeapon"}} &&
             {GVAR(indicatorForSelf) || {_x != ACE_player}} &&
-            {!(lineIntersects [(eyePos _x), _playerEyePosASL, ACE_player, _x])} &&
+            {!(lineIntersects [(eyePos _x), _playerEyePosASL, vehicle ACE_player, vehicle _x])} &&
             {[_x] call EFUNC(common,isPlayer)}) then {
 
         _sendFingerToPlayers pushBack _x;

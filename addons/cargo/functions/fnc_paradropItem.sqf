@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: marc_book, commy2, CAA-Picard
  * Unload and paradrop object from plane or helicopter.
@@ -5,6 +6,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Vehicle <OBJECT>
+ * 2: Show Hint <BOOL> (default: true)
  *
  * Return Value:
  * Object unloaded <BOOL>
@@ -14,9 +16,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_item", "_vehicle"];
+params ["_item", "_vehicle", ["_showHint", true]];
 TRACE_2("params",_item,_vehicle);
 
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
@@ -65,7 +66,7 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
 
     private _velocity = velocity _item;
 
-    _item attachTo [_parachute, [0,0,-1]];
+    _item attachTo [_parachute, [0,0,1]];
     _parachute setVelocity _velocity;
 
     private _light = "Chemlight_yellow" createVehicle [0,0,0];
@@ -90,14 +91,16 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
 
 }, 1, [_itemObject]] call CBA_fnc_addPerFrameHandler;
 
-[
+if (_showHint) then {
     [
-        LSTRING(UnloadedItem),
-        getText (configFile >> "CfgVehicles" >> typeOf _itemObject >> "displayName"),
-        getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
-    ],
-    3
-] call EFUNC(common,displayTextStructured);
+        [
+            LSTRING(UnloadedItem),
+            getText (configFile >> "CfgVehicles" >> typeOf _itemObject >> "displayName"),
+            getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
+        ],
+        3
+    ] call EFUNC(common,displayTextStructured);
+};
 
 // Invoke listenable event
 ["ace_cargoUnloaded", [_item, _vehicle, "paradrop"]] call CBA_fnc_globalEvent;

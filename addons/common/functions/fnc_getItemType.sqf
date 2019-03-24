@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns item type of given classname.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_item"];
 
@@ -38,35 +38,35 @@ private _default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
 
 switch (true) do {
     case (_type == 0): {[_default, "unknown"]};
-    case (_type == 2^0): {["weapon", "primary"]};
-    case (_type == 2^1): {["weapon", "handgun"]};
-    case (_type == 2^2): {["weapon", "secondary"]};
-    case (_type  < 2^4): {["weapon", "unknown"]};
-    case (_type == 2^4): {["magazine", "handgun"]}; // handgun
-    case (_type == 2^8): {["magazine", "primary"]}; // rifle
-    case (_type == 2^9): {["magazine", "secondary"]}; // rpg, mg, mines
+    case (_type == TYPE_WEAPON_PRIMARY): {["weapon", "primary"]};
+    case (_type == TYPE_WEAPON_HANDGUN): {["weapon", "handgun"]};
+    case (_type == TYPE_WEAPON_SECONDARY): {["weapon", "secondary"]};
+    case (_type  < TYPE_MAGAZINE_HANDGUN_AND_GL): {["weapon", "unknown"]};
+    case (_type == TYPE_MAGAZINE_HANDGUN_AND_GL): {["magazine", "handgun"]}; // handgun
+    case (_type == TYPE_MAGAZINE_PRIMARY_AND_THROW): {["magazine", "primary"]}; // rifle
+    case (_type == TYPE_MAGAZINE_SECONDARY_AND_PUT): {["magazine", "secondary"]}; // rpg, mg, mines
     //case (_type  < 2^11): {["magazine", "unknown"]};
 
-    case (_type == 101): {["item", "muzzle"]};
-    case (_type == 201): {["item", "optics"]};
-    case (_type == 301): {["item", "flashlight"]};
-    case (_type == 302): {["item", "under"]}; // czech for bipod item
-    case (_type == 401): {["item", "first_aid_kit"]};
-    case (_type == 501): {["item", "fins"]}; // not implemented
-    case (_type == 601): {["item", "breathing_bomb"]}; // not implemented
-    case (_type == 603): {["item", "goggles"]};
-    case (_type == 604): {["item", "scuba"]}; // not implemented
-    case (_type == 605): {["item", "headgear"]};
-    case (_type == 611): {["item", "radio"]};
-    case (_type == 616): {["item", "hmd"]};
-    case (_type == 617): {["item", "binocular"]};
-    case (_type == 619): {["item", "medikit"]};
-    case (_type == 620): {["item", "toolkit"]};
-    case (_type == 621): {["item", "uav_terminal"]};
-    case (_type == 701): {["item", "vest"]};
-    case (_type == 801): {["item", "uniform"]};
+    case (_type == TYPE_MUZZLE): {["item", "muzzle"]};
+    case (_type == TYPE_OPTICS): {["item", "optics"]};
+    case (_type == TYPE_FLASHLIGHT): {["item", "flashlight"]};
+    case (_type == TYPE_BIPOD): {["item", "under"]}; // czech for bipod item
+    case (_type == TYPE_FIRST_AID_KIT): {["item", "first_aid_kit"]};
+    case (_type == TYPE_FINS): {["item", "fins"]}; // not implemented
+    case (_type == TYPE_BREATHING_BOMB): {["item", "breathing_bomb"]}; // not implemented
+    case (_type == TYPE_GOGGLE): {["item", "goggles"]};
+    case (_type == TYPE_SCUBA): {["item", "scuba"]}; // not implemented
+    case (_type == TYPE_HEADGEAR): {["item", "headgear"]};
+    case (_type == TYPE_RADIO): {["item", "radio"]};
+    case (_type == TYPE_HMD): {["item", "hmd"]};
+    case (_type == TYPE_BINOCULAR): {["item", "binocular"]};
+    case (_type == TYPE_MEDIKIT): {["item", "medikit"]};
+    case (_type == TYPE_TOOLKIT): {["item", "toolkit"]};
+    case (_type == TYPE_UAV_TERMINAL): {["item", "uav_terminal"]};
+    case (_type == TYPE_VEST): {["item", "vest"]};
+    case (_type == TYPE_UNIFORM): {["item", "uniform"]};
 
-    case (_type == 2^12): {
+    case (_type == TYPE_BINOCULAR_AND_NVG): {
         switch (toLower _simulation) do {
             case ("weapon"): {["weapon", "binocular"]};
             case ("binocular"): {["weapon", "binocular"]};
@@ -76,8 +76,8 @@ switch (true) do {
         };
     };
 
-    case (_type == 2^16): {["weapon", "vehicle"]};
-    case (_type == 2^17): {
+    case (_type == TYPE_WEAPON_VEHICLE): {["weapon", "vehicle"]};
+    case (_type == TYPE_ITEM): {
         switch (toLower _simulation) do {
             case ("itemmap"): {["item", "map"]};
             case ("itemgps"): {["item", "gps"]};

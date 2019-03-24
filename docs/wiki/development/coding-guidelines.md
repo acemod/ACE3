@@ -178,6 +178,10 @@ Every function should have a header of the following format as the start of thei
  * Arguments:
  * 0: The first argument <STRING>
  * 1: The second argument <OBJECT>
+ * 2: Multiple input types <STRING|ARRAY|CODE>
+ * 3: Optional input <BOOL> (default: true)
+ * 4: Optional input with multiple types <CODE|STRING> (default: {true})
+ * 5: Not mandatory input <STRING> (default: nil)
  *
  * Return Value:
  * The return value <BOOL>
@@ -776,17 +780,14 @@ while {true} do {
 ```
 
 ### 8.9 `waitUntil`
-The `waitUntil` command shall not be used. Instead, make use of a per-frame handler:
-
+The `waitUntil` command shall not be used. Instead, make use of CBA's `CBA_fnc_waitUntilAndExecute`
 ```js
 [{
-    params ["_args", "_id"];
-    _args params ["_unit"];
-
-    if (_unit getvariable [QGVAR(myVariable), false]) exitwith {
-        [_id] call CBA_fnc_removePerFrameHandler;
-
-        // Execute any code
-    };
-}, [_unit], 0] call CBA_fnc_addPerFrameHandler;
+    params ["_unit"];
+    _unit getVariable [QGVAR(myVariable), false]
+},
+{
+    params ["_unit"];
+    // Execute any code
+}, [_unit]] call CBA_fnc_waitUntilAndExecute;
 ```

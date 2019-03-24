@@ -19,6 +19,6 @@ class ACE_Settings {
         description = CSTRING(simulationInterval_Description);
         typeName = "SCALAR";
         value = 0.05;
-        sliderSettings[] = {0, 0.2, 0.05, 1};
+        sliderSettings[] = {0, 0.2, 0.05, 2};
     };
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Finds the localized string of the given hitpoint name or uses default text if none found.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_hitPoint", "_textLocalized", "_textDefault", ["_trackArray", []]];
 

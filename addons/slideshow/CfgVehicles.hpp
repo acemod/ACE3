@@ -5,7 +5,7 @@ class CfgVehicles {
         category = "ACE_missionModules";
         displayName = CSTRING(DisplayName);
         function = QFUNC(moduleInit);
-        scope = 1;
+        scope = 2;
         isGlobal = 1;
         isTriggerActivated = 0;
         isDisposable = 0;

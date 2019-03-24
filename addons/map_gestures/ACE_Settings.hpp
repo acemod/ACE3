@@ -12,6 +12,7 @@ class ACE_Settings {
         category = CSTRING(mapGestures_category);
         typeName = "SCALAR";
         value = 7;
+        sliderSettings[] = {0, 50, 7, 1};
     };
     class GVAR(interval) {
         displayName = CSTRING(interval_displayName);
@@ -19,6 +20,7 @@ class ACE_Settings {
         category = CSTRING(mapGestures_category);
         typeName = "SCALAR";
         value = 0.03;
+        sliderSettings[] = {0, 1, 0.03, 2};
     };
     class GVAR(nameTextColor) {
         displayName = CSTRING(nameTextColor_displayName);

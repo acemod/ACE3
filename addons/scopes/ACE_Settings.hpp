@@ -38,6 +38,7 @@ class ACE_Settings {
         value = 100;
         displayName = CSTRING(defaultZeroRange_displayName);
         description = CSTRING(defaultZeroRange_description);
+        sliderSettings[] = {0, 1000, 100, 0};
     };
     
     // Only relevant when advanced ballistics is enabled
@@ -47,6 +48,7 @@ class ACE_Settings {
         value = 15;
         displayName = CSTRING(zeroReferenceTemperature_displayName);
         description = CSTRING(zeroReferenceTemperature_description);
+        sliderSettings[] = {-55, 55, 15, 0};
     };
     class GVAR(zeroReferenceBarometricPressure) {
         category = CSTRING(DisplayName);
@@ -54,6 +56,7 @@ class ACE_Settings {
         value = 1013.25;
         displayName = CSTRING(zeroReferenceBarometricPressure_displayName);
         description = CSTRING(zeroReferenceBarometricPressure_description);
+        sliderSettings[] = {0, 1013.25, 1013.25, 2};
     };
     class GVAR(zeroReferenceHumidity) {
         category = CSTRING(DisplayName);
@@ -61,6 +64,7 @@ class ACE_Settings {
         value = 0.0;
         displayName = CSTRING(zeroReferenceHumidity_displayName);
         description = CSTRING(zeroReferenceHumidity_description);
+        sliderSettings[] = {0, 1, 0, 2};
     };
     class GVAR(deduceBarometricPressureFromTerrainAltitude) {
         category = CSTRING(DisplayName);

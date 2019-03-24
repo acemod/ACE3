@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Action for loading an unconscious or dead unit in the nearest vehicle, or _vehicle if given.
@@ -16,8 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_caller", "_target", ["_vehicle", objNull]];
 
 if ([_target] call EFUNC(common,isAwake)) exitWith {
@@ -30,4 +29,10 @@ if ([_target] call FUNC(isBeingDragged)) then {
     [_caller, _target] call EFUNC(dragging,dropObject);
 };
 
-[_caller, _target, _vehicle] call EFUNC(common,loadPerson);
+private _vehicle = [_caller, _target, _vehicle] call EFUNC(common,loadPerson);
+if (!isNull _vehicle) then {
+    private _hint = LSTRING(loadedInto);
+    private _itemName = [_target, false, true] call EFUNC(common,getName);
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
+};

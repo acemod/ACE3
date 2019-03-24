@@ -45,5 +45,6 @@ class ACE_Settings {
         description = CSTRING(SafeZoneRadius_Description);
         value = 100;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 1000, 100, 0};
     };
 };

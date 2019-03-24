@@ -4,9 +4,7 @@
 GVAR(EH_ID) = 0;
 GVAR(lastSearchTextLeft) = "";
 GVAR(lastSearchTextRight) = "";
-
-[QGVAR(addVirtualItems), {_this call FUNC(addVirtualItems)}] call CBA_fnc_addEventHandler;
-[QGVAR(removeVirtualItems), {_this call FUNC(removeVirtualItems)}] call CBA_fnc_addEventHandler;
+GVAR(lastSearchTextLoadouts) = "";
 
 [QGVAR(initBox), {_this call FUNC(initBox)}] call CBA_fnc_addEventHandler;
 [QGVAR(removeBox), {_this call FUNC(removeBox)}] call CBA_fnc_addEventHandler;

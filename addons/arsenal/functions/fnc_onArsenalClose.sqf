@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * onUnLoad EH for arsenal.
@@ -10,18 +11,13 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
-GVAR(camera) cameraEffect ["terminate", "back"];
+(_this select 1) params ["", "_exitCode"];
+
 private _cameraData = [getposAtl GVAR(camera), (getposAtl GVAR(camera)) vectorFromTo (getposAtl GVAR(cameraHelper))];
 
 [QGVAR(displayClosed), []] call CBA_fnc_localEvent;
-
 removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
-
-camDestroy GVAR(camera);
-GVAR(center) switchCamera GVAR(cameraView);
-deleteVehicle GVAR(cameraHelper);
 
 if (is3DEN) then {
 
@@ -34,13 +30,13 @@ if (is3DEN) then {
     GVAR(centerOrigin) hideObject false;
 
     // Apply the loadout from the dummy to all selected units
-    {
-        _x setUnitLoadout (getUnitLoadout GVAR(center));
-        _x setFace GVAR(currentFace);
-        _x setSpeaker GVAR(currentVoice);
-    } foreach (get3DENSelected "object");
+    if (_exitCode == 1) then {
+        {
+            _x setUnitLoadout (getUnitLoadout GVAR(center));
+        } foreach (get3DENSelected "object");
 
-    save3DENInventory (get3DENSelected "object");
+        save3DENInventory (get3DENSelected "object");
+    };
 
     deleteVehicle GVAR(light);
     deleteVehicle GVAR(center);
@@ -58,6 +54,21 @@ if (is3DEN) then {
         case 1: {GVAR(center) selectWeapon secondaryWeapon GVAR(center);};
         case 2: {GVAR(center) selectWeapon handgunWeapon GVAR(center);};
     };
+
+    if (!(isnull curatorCamera) && {ACE_player == player}) then {
+        curatorcamera cameraEffect ["internal","back"];
+    } else {
+        GVAR(camera) cameraEffect ["terminate","back"];
+        ACE_player switchCamera GVAR(cameraView);
+    };
+};
+
+deleteVehicle GVAR(cameraHelper);
+camDestroy GVAR(camera);
+
+if (!isNil QGVAR(moduleUsed)) then {
+    GVAR(moduleUsed) = nil;
+    objNull remoteControl GVAR(center);
 };
 
 if (isMultiplayer) then {
@@ -67,12 +78,6 @@ if (isMultiplayer) then {
 
     [QGVAR(broadcastVoice), [GVAR(center), GVAR(currentVoice)], QGVAR(center) + "_voice"] call CBA_fnc_globalEventJIP;
     [QGVAR(center) + "_voice", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
-};
-
-if !(isnull curatorCamera) then {
-    curatorcamera setPosAtl (_cameraData select 0);
-    curatorcamera setVectorDir (_cameraData select 1);
-    curatorcamera cameraEffect ["internal","back"];
 };
 
 GVAR(camera) = nil;
@@ -96,6 +101,12 @@ GVAR(currentVoice) = nil;
 GVAR(currentInsignia) = nil;
 GVAR(currentAction) = nil;
 
-GVAR(center) = nil;
+GVAR(showStats) = nil;
+GVAR(statsPagesLeft) = nil;
+GVAR(statsPagesRight) = nil;
+GVAR(statsInfo) =  nil;
 
-showHUD true;
+GVAR(center) = nil;
+GVAR(centerNotPlayer) = nil;
+
+[QUOTE(ADDON), []] call EFUNC(common,showHud);

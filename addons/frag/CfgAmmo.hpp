@@ -5,8 +5,8 @@
 class CfgAmmo {
 
     // ~~~~ Bombs:
-    class LaserBombCore;
-    class Bo_GBU12_LGB: LaserBombCore {
+    class ammo_Bomb_LaserGuidedBase;
+    class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
         GVAR(enabled) = 1;
 
         GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
@@ -15,7 +15,7 @@ class CfgAmmo {
         GVAR(gurney_c) = 2320;
         GVAR(gurney_k) = 1/2;
     };
-    class Bomb_04_F: LaserBombCore {
+    class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
         GVAR(enabled) = 1;
 
         GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
@@ -134,16 +134,6 @@ class CfgAmmo {
         GVAR(gurney_c) = 2700;
         GVAR(gurney_k) = 1/2;
     };
-    class ACE_Hellfire_AGM114K: M_PG_AT {
-        // Source: http://www.designation-systems.net/dusrm/m-114.html
-        GVAR(enabled) = 1;
-
-        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
-        GVAR(metal) = 8000;
-        GVAR(charge) = 2400;
-        GVAR(gurney_c) = 2700;
-        GVAR(gurney_k) = 1/2;
-    };
     class RocketBase;
     class R_80mm_HE: RocketBase {
         GVAR(skip) = 1;
@@ -171,6 +161,16 @@ class CfgAmmo {
         GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 10000;
         GVAR(charge) = 3000;
+        GVAR(gurney_c) = 2700;
+        GVAR(gurney_k) = 1/2;
+    };
+    class ACE_Hellfire_AGM114K: M_Scalpel_AT {
+        // Source: http://www.designation-systems.net/dusrm/m-114.html
+        GVAR(enabled) = 1;
+
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
+        GVAR(metal) = 8000;
+        GVAR(charge) = 2400;
         GVAR(gurney_c) = 2700;
         GVAR(gurney_k) = 1/2;
     };

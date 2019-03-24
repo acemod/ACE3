@@ -18,4 +18,3 @@ class CfgPatches {
 #include "CfgFatigue.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
-#include "ACE_Settings.hpp"

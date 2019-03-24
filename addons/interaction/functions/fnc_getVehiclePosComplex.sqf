@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain, PabstMirror
  * Return a suitable position for the action point for the given target vehicle
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_cameraPosASL"];
 TRACE_2("params",_target,_cameraPosASL);
@@ -29,9 +29,9 @@ if (isNumber (_config >> QGVAR(bodyLength))) then {_bbY = getNumber (_config >> 
 private _relPos = _target worldToModelVisual ASLToAGL _cameraPosASL;
 _relPos params ["_dx", "_dy", "_dz"];
 
-private _ndx = (abs _dx) / ((abs (_bbx)) - 1);
-private _ndy = (abs _dy) / ((abs (_bbY)) - 1);
-private _ndz = (abs _dz) / ((abs (_bbZ)) - 1);
+private _ndx = (abs _dx) / (((abs (_bbX)) - 1) max 1);
+private _ndy = (abs _dy) / (((abs (_bbY)) - 1) max 1);
+private _ndz = (abs _dz) / (((abs (_bbZ)) - 1) max 1);
 
 
 private _pos = [];
@@ -59,5 +59,5 @@ if (_cameraPosASL select 2 >= 0) then {
     _pos set [2, (_pos select 2) min _dz];
 };
 
-TRACE_4("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
+TRACE_5("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
 _pos

@@ -13,7 +13,8 @@ version:
 ---
 
 ## 1. Overview
-ACE3 Weather simulates realistic weather effects, according to the geographical location of the map, the date and time. It also ensures that all players experience the same weather effects.
+
+ACE3 Weather extends the existing weather by temperature, humidity and air pressure according to the geographic location, season and time of day. It also ensures that all players experience the same weather effects.
 
 ## 2. Usage
 

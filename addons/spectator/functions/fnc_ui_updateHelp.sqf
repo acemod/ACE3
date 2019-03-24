@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: Nelson Duarte, SilentSpike
  * Updates spectator UI help element
@@ -17,9 +19,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
-#include "\A3\ui_f\hpp\defineDIKCodes.inc"
 #define MAX_CONTROLS_HELP_ENTRIES 12
 
 if !(GVAR(uiHelpVisible)) exitWith {};
@@ -115,6 +114,7 @@ if (count _controls > MAX_CONTROLS_HELP_ENTRIES) then {
     _controls resize MAX_CONTROLS_HELP_ENTRIES;
 };
 
+disableSerialization; // This function could run scheduled as a result of public API
 private _help = CTRL_HELP;
 
 _help ctrlEnable false;

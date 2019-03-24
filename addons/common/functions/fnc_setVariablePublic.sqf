@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and CAA-Picard and joko and PabstMirror
  * Publish a variable, but wait a certain amount of time before allowing it to be published it again.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_object", "_varName", "_value", ["_delay", 1]];
 TRACE_4("params",_object,_varName,_value,_delay);

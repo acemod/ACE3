@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Cycles through the image size units
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(rangeAssistImageSizeUnit) = (GVAR(rangeAssistImageSizeUnit) + 1) % (count GVAR(rangeAssistImageSizeUnits));
 ctrlSetText [7015, GVAR(rangeAssistImageSizeUnits) select GVAR(rangeAssistImageSizeUnit)];

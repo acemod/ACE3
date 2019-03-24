@@ -1,3 +1,5 @@
+#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Change the value of an existing setting if it was not previously forced. Force if neccesary.
@@ -18,8 +20,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
 TRACE_4("setSetting",_name,_value,_force,_broadcastChanges);

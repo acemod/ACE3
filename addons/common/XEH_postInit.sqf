@@ -48,12 +48,17 @@
 [QGVAR(setHidden), {
     params ["_object", "_set"];
     TRACE_2("setHidden EH",_object,_set);
-    INFO("Note: getUnitTrait / camouflageCoef enum error can be ignored [present since Arma 3 v1.78] - IGNORE THIS");
-    private _vis = _object getUnitTrait "camouflageCoef";
+    // May report nil. Default to factor 1.
+    private _vis = [_object getUnitTrait "camouflageCoef"] param [0, 1];
     if (_set > 0) then {
         if (_vis != 0) then {
             _object setVariable [QGVAR(oldVisibility), _vis];
             _object setUnitTrait ["camouflageCoef", 0];
+            {
+                if (side _x != side group _object) then {
+                    _x forgetTarget _object;
+                };
+            } forEach allGroups;
         };
     } else {
         _vis = _object getVariable [QGVAR(oldVisibility), _vis];
@@ -76,6 +81,11 @@
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
     _vehicle engineOn false;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setMass), {
+    params ["_object", "_mass"];
+    _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
@@ -256,21 +266,18 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
     ACE_player = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
+// Clear uniqueItems cache on loadout change
+["loadout", {
+    GVAR(uniqueItemsCache) = nil;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// Backwards compatiblity for old ace event
 GVAR(OldIsCamera) = false;
-
-[{
-    BEGIN_COUNTER(stateChecker);
-
-    // "activeCameraChanged" event
-    private _data = call FUNC(isfeatureCameraActive);
-    if !(_data isEqualTo GVAR(OldIsCamera)) then {
-        // Raise ACE event locally
-        GVAR(OldIsCamera) = _data;
-        ["ace_activeCameraChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    END_COUNTER(stateChecker);
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+["featureCamera", {
+    params ["_player", "_cameraName"];
+    GVAR(OldIsCamera) = _cameraName != "";
+    ["ace_activeCameraChanged", [_player, GVAR(OldIsCamera)]] call CBA_fnc_localEvent;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 // Add event handler for UAV control change
 ACE_controlledUAV = [objNull, objNull, [], ""];
@@ -278,10 +285,10 @@ addMissionEventHandler ["PlayerViewChanged", {
     // On non-server client this command is semi-broken
     // arg index 5 should be the controlled UAV, but it will often be objNull (delay from locality switching?)
     // On PlayerViewChanged event, start polling for new uav state for a few seconds (should be done within a few frames)
-    
+
     params ["", "", "", "", "_newCameraOn", "_UAV"];
     TRACE_2("PlayerViewChanged",_newCameraOn,_UAV);
-    
+
     [{
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
@@ -302,14 +309,14 @@ addMissionEventHandler ["PlayerViewChanged", {
                 _seatAI = gunner _UAV;
             };
         };
-        
+
         private _newArray = [_UAV, _seatAI, _turret, _position];
         if (_newArray isEqualTo ACE_controlledUAV) exitWith {false}; // no change yet
-        
+
         TRACE_2("Seat Change",_newArray,ACE_controlledUAV);
         ACE_controlledUAV = _newArray;
         ["ACE_controlledUAV", _newArray] call CBA_fnc_localEvent;
-        
+
         // stay in the loop as we might switch from gunner -> driver, and there may be a empty position event in-between
         false
     }, {}, [], 3, {TRACE_1("timeout",_this);}] call CBA_fnc_waitUntilAndExecute;

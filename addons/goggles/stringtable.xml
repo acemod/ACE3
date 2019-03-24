@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Goggles">
         <Key ID="STR_ACE_Goggles_DisplayName">
@@ -8,6 +8,8 @@
             <Chinese>護目鏡</Chinese>
             <Chinesesimp>护目镜</Chinesesimp>
             <Japanese>ゴーグル</Japanese>
+            <Korean>고글</Korean>
+            <Polish>Gogle</Polish>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>

@@ -27,3 +27,24 @@ Please refrain from making requests for any planned or existing features from ei
 In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for [ACE3 Feature requests](https://github.com/acemod/ACE3/issues/3594). Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
 
 Following their approval, feature requests may be moved by moderators to a separate issue for further discussion.
+
+# Contributing to the project
+
+We welcome anyone to contribute to this repository. Issues that we are actively seeking help with, are marked as [`help wanted`](https://github.com/acemod/ACE3/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). Feel free to pick up any of those issues.
+
+## Pull Request process
+
+When contributing to this repository, please first discuss the change you wish to make via issue or [Slack](https://slackin.ace3mod.com/) with the [ACE3 project maintainers](https://ace3mod.com/team.html) before making a change. This may not be necessary if you are contributing for something which has an existing issue in our repository already.
+
+1. Please make a pull request (PR) as early as possible. This lets use help you in the proces of developing it. When opening a work in progress pull request, mark your PR with a `WIP:` prefix.
+2. Describe what this pull request will do and how it solves this in the description of your PR. A clear intent and description of the way the issue is resolved will help us to review the PR more efficiently.
+3. Please follow our [Development Guidelines](https://ace3mod.com/wiki/development/). 
+
+
+### Notes
+
+Please note that all contributors to this project are volunteers and do this in their own time. This means that issues and/or PRs may be open for a long time before being picked up and reviewed. We try to keep this time as short as possible, but some times things may fall short. If you feel that an issue or PR has not received attention, please comment asking for a review using the mention `@acemod/maintainers`. 
+
+## Assistance with contributing
+
+If you require assistance with contributing, check out the #dev channel on our [Slack](https://slackin.ace3mod.com/). Additional documentation can be found on our [Development wiki](https://ace3mod.com/wiki/development/).

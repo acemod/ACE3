@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Compares version numbers of PBOs and DLLs.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ///////////////
 // check addons
@@ -40,9 +40,7 @@ if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) the
 };
 
 //private _addons = activatedAddons; // broken with High-Command module, see #2134
-private _addons = "true" configClasses (configFile >> "CfgPatches");//
-_addons = _addons apply {toLower configName _x};//
-_addons = _addons select {_x find "ace_" == 0};
+private _addons = (cba_common_addons select {(_x select [0,4]) == "ace_"}) apply {toLower _x};
 
 private _oldCompats = [];
 {
@@ -72,13 +70,23 @@ if (!(_oldCompats isEqualTo [])) then {
 // check dlls
 ///////////////
 if (toLower (productVersion select 6) in ["linux", "osx"]) then {
-    INFO_2("Operating system does not support DLL file format");
+    INFO("Operating system does not support DLL file format");
 } else {
     {
         private _versionEx = _x callExtension "version";
 
         if (_versionEx == "") then {
-            private _errorMsg = format ["Extension %1.dll not installed.", _x];
+            private _extension = ".dll";
+
+            if (productVersion select 7 == "x64") then {
+                _extension = "_x64.dll";
+            };
+
+            if (productVersion select 6 == "Linux") then {
+                _extension = ".so";
+            };
+
+            private _errorMsg = format ["Extension %1%2 not found.", _x, _extension];
 
             ERROR(_errorMsg);
 

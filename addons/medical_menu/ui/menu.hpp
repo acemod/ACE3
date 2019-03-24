@@ -309,6 +309,22 @@ class GVAR(medicalMenu) {
             idc = 55;
             text = QPATHTOEF(medical,ui\body_leg_right.paa);
         };
+        class bodyImgTournAL: bodyImgHead {
+            idc = 56;
+            text = QPATHTOEF(medical,ui\tourniquet_arm_left.paa);
+        };
+        class bodyImgTournAR: bodyImgHead {
+            idc = 57;
+            text = QPATHTOEF(medical,ui\tourniquet_arm_right.paa);
+        };
+        class bodyImgTournLL: bodyImgHead {
+            idc = 58;
+            text = QPATHTOEF(medical,ui\tourniquet_leg_left.paa);
+        };
+        class bodyImgTournLR: bodyImgHead {
+            idc = 59;
+            text = QPATHTOEF(medical,ui\tourniquet_leg_right.paa);
+        };
 
 
         class selectHead: ACE_gui_buttonBase {

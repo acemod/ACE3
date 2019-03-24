@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Called when a unit is Respawned
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -22,7 +22,7 @@ params ["_unit"];
 
 // Reset captive status for respawning unit
 if (!(_unit getVariable ["ACE_isUnconscious", false])) then {
-    [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
+    [_unit, "setHidden", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
 };
 
 // Remove maximum unconsciousness time handler

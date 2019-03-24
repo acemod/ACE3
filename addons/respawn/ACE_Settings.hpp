@@ -14,10 +14,11 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
-    class GVAR(bodyRemoveTimer) {
-        category = CSTRING(DisplayName);
-        displayName = CSTRING(DeadBodyRemoveTimer);
-        value = 0;
-        typeName = "SCALAR";
-    };
+    // Not used anywhere???
+    // class GVAR(bodyRemoveTimer) {
+        // category = CSTRING(DisplayName);
+        // displayName = CSTRING(DeadBodyRemoveTimer);
+        // value = 0;
+        // typeName = "SCALAR";
+    // };
 };

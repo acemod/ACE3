@@ -4,5 +4,6 @@ class ACE_Settings {
         description = CSTRING(distanceCoefficient_toolTip);
         typeName = "SCALAR";
         value = 1;
+        sliderSettings[] = {-1, 10, 5, 1};
     };
 };

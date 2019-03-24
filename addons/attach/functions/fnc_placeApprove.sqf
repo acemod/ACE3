@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
  * Approves placement of the lightObject, scans for an appropriate location and attaches
@@ -23,7 +24,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAttachText", "_startingPosition"];
 TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAttachText,_startingPosition);
@@ -101,4 +101,4 @@ private _attachList = _attachToVehicle getVariable [QGVAR(attached), []];
 _attachList pushBack [_attachedObject, _itemClassname];
 _attachToVehicle setVariable [QGVAR(attached), _attachList, true];
 
-[_onAttachText] call EFUNC(common,displayTextStructured);
+[_onAttachText, 2] call EFUNC(common,displayTextStructured);

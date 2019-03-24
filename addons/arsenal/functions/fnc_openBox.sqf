@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Open arsenal.
@@ -15,14 +16,13 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mode", false, [false]]];
 
 if (
     isNull _object ||
     {isNull _center} ||
-    {!(_center isKindOf "Man")} ||
+    {!(_center isKindOf "CAManBase")} ||
     {!(isNull objectParent _center) && {!is3DEN}}
 ) exitWith {};
 
@@ -42,7 +42,7 @@ if (isNil "_displayToUse" || {!isnil QGVAR(camera)}) exitWith {
 };
 
 if (_mode) then {
-    GVAR(virtualItems) = uiNamespace getVariable QGVAR(configItems);
+    GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
 } else {
     GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), [
         [[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
@@ -50,4 +50,9 @@ if (_mode) then {
 };
 
 GVAR(center) = _center;
-_displayToUse createDisplay QGVAR(display);
+
+if (is3DEN) then {
+    _displayToUse createDisplay QGVAR(display);
+} else {
+    [{(_this select 0) createDisplay (_this select 1)}, [_displayToUse, QGVAR(display)]] call CBA_fnc_execNextFrame;
+};

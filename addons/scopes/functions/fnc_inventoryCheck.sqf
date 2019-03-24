@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Commy2, Ruthberg
  * Check if weapon optics changed and reset zeroing if needed
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
 
@@ -79,15 +79,17 @@ private _newOptics = [_player] call FUNC(getOptics);
     };
 } forEach GVAR(Optics);
 
+private _unitBaseAngle = +(_player getVariable [QGVAR(baseAngle), [0,0,0]]);
+private _unitBoreHeight = +(_player getVariable [QGVAR(boreHeight), [0,0,0]]);
+
 private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
 {
     if ((_newOptics select _x) != (GVAR(Optics) select _x) || (_newGuns select _x != GVAR(Guns) select _x)) then {
-        GVAR(baseAngle) set [_x, [_player, _x, _newGuns select _x, _newOptics select _x] call FUNC(getBaseAngle)]; 
-        GVAR(boreHeight) set [_x, [_player, _x, _newGuns select _x, _newOptics select _x] call FUNC(getBoreHeight)];
-
+        _unitBaseAngle set [_x, [_player, _x] call FUNC(getBaseAngle)];
+        _unitBoreHeight set [_x, [_player, _x] call FUNC(getBoreHeight)];
         if ((_newOptics select _x) == "") then {
-            // Check if the weapon comes with an integrated optic     
-            private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x); 
+            // Check if the weapon comes with an integrated optic
+            private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x);
             private _maxVertical = [0, 0];
             private _verticalIncrement = 0;
             private _maxHorizontal = [0, 0];
@@ -113,7 +115,7 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             GVAR(canAdjustElevation) set [_x, (_verticalIncrement > 0) && !(_maxVertical isEqualTo [0, 0])];
             GVAR(canAdjustWindage) set [_x, (_horizontalIncrement > 0) && !(_maxHorizontal isEqualTo [0, 0])];
         };
-        
+
         // The optic or the weapon changed, reset the adjustment
         private _persistentZero = profileNamespace getVariable [format[QGVAR(PersistentZero_%1_%2), _newGuns select _x, _newOptics select _x], 0];
         ((GVAR(scopeAdjust) select _x) select 0) params ["_minElevation", "_maxElevation"];
@@ -127,6 +129,17 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
         };
     }
 } forEach [0, 1, 2];
+
+if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
+    if (!(_unitBaseAngle isEqualTo (_player getVariable [QGVAR(baseAngle), [0,0,0]]))) then {
+        TRACE_2("syncing",_unitBaseAngle,_player getVariable QGVAR(baseAngle));
+        _player setVariable [QGVAR(baseAngle), _unitBaseAngle, true];
+    };
+    if (!(_unitBoreHeight isEqualTo (_player getVariable [QGVAR(boreHeight), [0,0,0]]))) then {
+        TRACE_2("syncing",_unitBoreHeight,_player getVariable QGVAR(boreHeight));
+        _player setVariable [QGVAR(boreHeight), _unitBoreHeight, true];
+    };
+};
 
 if (_updateAdjustment) then {
     [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);

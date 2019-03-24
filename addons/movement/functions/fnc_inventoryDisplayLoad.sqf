@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Executed every time an inventory display is opened.
@@ -13,17 +14,22 @@
  *
  * Public: No
  */
- #include "script_component.hpp"
 
-disableSerialization;
+params ["_display"];
 
-[{
-    disableSerialization;
-    params ["_dialog"];
+private _fnc_update = {
+    params ["_display"];
+    private _control = _display displayCtrl 111;
 
-    if (isNull _dialog) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
-    };
+    _control ctrlSetText format ["%1 - %2 %3 (%4)",
+        [ACE_player, false, true] call EFUNC(common,getName),
+        localize ELSTRING(common,Weight),
+        [ACE_player] call EFUNC(common,getWeight),
+        [ACE_player, true] call EFUNC(common,getWeight)
+    ];
+};
 
-    (_dialog displayCtrl 111) ctrlSetText format ["%1 - %2 %3", [ACE_player, false, true] call EFUNC(common,getName), localize ELSTRING(common,Weight), [ACE_player] call EFUNC(common,getWeight)];
-}, 0, _this select 0] call CBA_fnc_addPerFrameHandler;
+_display displayAddEventHandler ["MouseMoving", _fnc_update];
+_display displayAddEventHandler ["MouseHolding", _fnc_update];
+
+_display call _fnc_update;
