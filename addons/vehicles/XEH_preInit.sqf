@@ -15,7 +15,8 @@ PREP_RECOMPILE_END;
     2, {
         profileNamespace setVariable [QGVAR(showEjectAction), parseNumber !_this];
         saveProfileNamespace;
-    }
+    },
+    true // needs restart
 ] call cba_settings_fnc_init;
 
 ADDON = true;
