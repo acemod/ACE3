@@ -67,10 +67,12 @@ if (!(_oldCompats isEqualTo [])) then {
 };
 
 ///////////////
-// check dlls
+// check extensions
 ///////////////
-if (toLower (productVersion select 6) in ["linux", "osx"]) then {
-    INFO("Operating system does not support DLL file format");
+private _platform = toLower (productVersion select 6);
+if (!isServer && {_platform in ["linux", "osx"]}) then {
+    // Linux and OSX client ports do not support extensions at all
+    INFO("Operating system does not support extensions");
 } else {
     {
         private _versionEx = _x callExtension "version";
@@ -82,7 +84,8 @@ if (toLower (productVersion select 6) in ["linux", "osx"]) then {
                 _extension = "_x64.dll";
             };
 
-            if (productVersion select 6 == "Linux") then {
+            // Linux server is 32-bit only
+            if (_platform == "linux") then {
                 _extension = ".so";
             };
 
