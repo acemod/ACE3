@@ -18,7 +18,7 @@ class ACE_Torso {
     modifierFunction = QUOTE([ARR_3(_target,1,_this select 3)] call FUNC(modifyAction));
     runOnHover = 1;
     class TriageCard {
-        displayName = ECSTRING(medical_treatment,Actions_TriageCard);
+        displayName = CSTRING(Actions_TriageCard);
         exceptions[] = {"isNotInside", "isNotSitting"};
         condition = "true";
         statement = QUOTE(_target call FUNC(displayTriageCard));
