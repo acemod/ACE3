@@ -16,7 +16,7 @@
             <English>Damage handling and turret effects</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
-            <English>Changes damage handling on vehicles and adds turret explosion effects</English>
+            <English>Changes damage handling for cook off and turret explosion effects</English>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>
