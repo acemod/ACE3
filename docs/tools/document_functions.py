@@ -294,8 +294,10 @@ def main():
     parser.add_argument('--debug', action="store_true", help='only check for header debug messages')
     args = parser.parse_args()
 
-    # abspath is just used for the terminal output
-    prospective_dir = os.path.abspath(os.path.join('../../addons/',args.directory))
+    # Allow calling from anywhere and work our way to addons from this file
+    file_dir = os.path.abspath(__file__)
+    prospective_dir = os.path.abspath(os.path.join(file_dir, '../../../addons/', args.directory))
+
     if os.path.isdir(prospective_dir):
         print("Directory: {}".format(prospective_dir))
         crawl_dir(prospective_dir, args.debug)
