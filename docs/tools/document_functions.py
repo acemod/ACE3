@@ -48,7 +48,7 @@ class FunctionFile:
         with open(file_path) as file:
             code = file.read()
 
-        header_match = re.match(r"\s*/\*.+?\*/", code, re.S)
+        header_match = re.search(r"\s*/\*.+?\*/", code, re.S)
         if header_match:
             self.header = header_match.group(0)
         else:
