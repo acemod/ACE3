@@ -80,7 +80,7 @@ GVAR(TweakedAngle) = 0;
             #ifdef DEBUG_MODE_FULL
             drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
             #endif
-            if (count (lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) > 0) exitWith {_return = false;};
+            if !((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) isEqualTo []) exitWith {_return = false;};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         _return
     };
@@ -94,7 +94,7 @@ GVAR(TweakedAngle) = 0;
         private _testBase = _basePosASL vectorAdd _lookDirVector;
         {
             private _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
-            private _intersectObject = ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) param [0, ObjNull]) param [3, ObjNull];
+            private _intersectObject = ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) param [0, objNull]) param [3, objNull];
             if !(_intersectObject isEqualTo objNull) exitWith {_attachVehicle = _intersectObject};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         if ((!isNull _attachVehicle) && {[PLACE_RANGE_MIN] call _testPositionIsValid} &&
