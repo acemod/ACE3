@@ -1,0 +1,37 @@
+name = "ACE3"
+prefix = "ace"
+author = "ACE-Team"
+files = [ # TODO glob pattern, sub-folders
+    #"*.dll",
+    #"*.so",
+    "mod.cpp",
+    "README.md",
+    #"docs/README_DE.md",
+    #"docs/README_PL.md",
+    "AUTHORS.txt",
+    "LICENSE",
+    "logo_ace3_ca.paa",
+    "meta.cpp"
+]
+headerexts = [
+    "version=githash8" # TODO git hash
+]
+keyname = "ace_{{version}}"
+signame = "{{prefix}}_{{version}}-githash8" # TODO git hash
+
+releasebuild = [
+    "!launchableoptionals"
+]
+
+[scripts]
+    [scripts.launchableoptionals]
+    steps_linux = [
+        "if [ $(dirname {{target}}) == 'optionals' ]; then mkdir @ace_{{addon}}; mv {{target}} @ace_{{addon}}/{{target}}; fi"
+    ]
+    steps_windows = [
+
+    ]
+    show_output = true
+    foreach = true
+    #parallel = true
+
