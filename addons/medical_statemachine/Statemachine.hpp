@@ -1,7 +1,7 @@
 // Manual transitions applied to this statemachine
 //  - fnc_resetStateDefault on unit respawn
 class ACE_Medical_StateMachine {
-    list = "allUnits select {local _x}";
+    list = QUOTE(call EFUNC(common,getLocalUnits));
     skipNull = 1;
 
     class Default {
