@@ -36,11 +36,7 @@ if ((count _needRearmMagsOfClass) == 0) exitWith {ERROR_2("Could not find turret
 private _currentRearmableMag = _needRearmMagsOfClass select 0;
 _currentRearmableMag params ["", "_turretPath", "", "_pylon", "", "_magazineCount"];
 
-private _magazineDisplayName =  getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName");
-if (_magazineDisplayName == "") then {
-    _magazineDisplayName = _magazineClass;
-    ERROR_1("Magazine is missing display name [%1]",_magazineClass);
-};
+private _magazineDisplayName = _magazineClass call FUNC(getMagazineName);
 
 [
     TIME_PROGRESSBAR(REARM_DURATION_REARM select _idx),

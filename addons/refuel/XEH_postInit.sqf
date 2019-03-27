@@ -62,36 +62,26 @@ GVAR(actions) = [
 ];
 
 // init menu for config refuel vehicles
-private _sourceClasses = [];
-{
-    private _fuelCargo = getNumber (_x >> QGVAR(fuelCargo));
-    if (_fuelCargo > 0 || {_fuelCargo == REFUEL_INFINITE_FUEL}) then {
-        private _sourceClass = configName _x;
-        // check if we can use actions with inheritance
-        if (
-            !isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init") // addActionToClass relies on XEH init
-            || {configName _x isKindOf "Static"} // CBA_fnc_addClassEventHandler doesn't support "Static" class
-        ) then {
-            if (2 == getNumber (_x >> "scope")) then {
-                [_sourceClass, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToClass);
-                {
-                    [_sourceClass, 0, ["ACE_MainActions", QGVAR(Refuel)], _x] call EFUNC(interact_menu,addActionToClass);
-                } forEach GVAR(actions);
-                TRACE_1("add menu to static",_sourceClass);
-            };
-        } else {
-            if (0 == {_sourceClass isKindOf _x} count _sourceClasses) then {
-                _sourceClasses pushBack _sourceClass;
-                [_sourceClass, 0, ["ACE_MainActions"], GVAR(mainAction), true] call EFUNC(interact_menu,addActionToClass);
-                {
-                    [_sourceClass, 0, ["ACE_MainActions", QGVAR(Refuel)], _x, true] call EFUNC(interact_menu,addActionToClass);
-                } forEach GVAR(actions);
-                TRACE_1("add menu to dynamic",_sourceClass);
-            };
-        };
-    };
-} forEach ('true' configClasses (configFile >> "CfgVehicles"));
+private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[]]}]);
+_cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", [], [[]]]];
 
+{
+    private _className = _x;
+    [_className, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToClass);
+    {
+        [_className, 0, ["ACE_MainActions", QGVAR(Refuel)], _x] call EFUNC(interact_menu,addActionToClass);
+    } forEach GVAR(actions);
+    TRACE_1("add menu to static",_x);
+} forEach _staticClasses;
+
+{
+    private _className = _x;
+    [_className, 0, ["ACE_MainActions"], GVAR(mainAction), true] call EFUNC(interact_menu,addActionToClass);
+    {
+        [_className, 0, ["ACE_MainActions", QGVAR(Refuel)], _x, true] call EFUNC(interact_menu,addActionToClass);
+    } forEach GVAR(actions);
+    TRACE_1("add menu to dynamic",_x);
+} forEach _dynamicClasses;
 
 #ifdef DRAW_HOOKS_POS
 addMissionEventHandler ["Draw3D", {

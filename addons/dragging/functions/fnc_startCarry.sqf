@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, PiZZADOX
  * Start the carrying process.
  *
  * Arguments:
@@ -19,10 +19,12 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-// check weight
-private _weight = [_target] call FUNC(getWeight);
-
-if (_weight > missionNamespace getVariable ["ACE_maxWeightCarry", 1E11]) exitWith {
+// exempt from weight check if object has override variable set
+if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
+    private _weight = [_target] call FUNC(getWeight);
+    _weight > GETMVAR(ACE_maxWeightCarry,1E11)
+}) exitWith {
+    // exit if object weight is over global var value
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
@@ -32,7 +34,7 @@ private _timer = CBA_missionTime + 5;
 if (_target isKindOf "CAManBase") then {
 
     // add a primary weapon if the unit has none.
-    if (primaryWeapon _unit == "") then {
+    if (primaryWeapon _unit isEqualto "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
     };
 
@@ -71,3 +73,11 @@ _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
 [FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
+
+// disable collisions by setting the physx mass to almost zero
+private _mass = getMass _target;
+
+if (_mass > 1) then {
+    _target setVariable [QGVAR(originalMass), _mass, true];
+    [QEGVAR(common,setMass), [_target, 1e-12], _target] call CBA_fnc_targetEvent;
+};

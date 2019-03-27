@@ -32,11 +32,11 @@ if ((locked _veh) == 0) exitWith {false};
 //need lockpick item
 if !("ACE_key_lockpick" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
-private _vehLockpickStrenth = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
-if (!(_vehLockpickStrenth isEqualType 0)) exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};
+private _vehLockpickStrength = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
+if (!(_vehLockpickStrength isEqualType 0)) exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};
 
 //-1 indicates unpickable lock
-if (_vehLockpickStrenth < 0) exitWith {false};
+if (_vehLockpickStrength < 0) exitWith {false};
 
 //Condition check for progressBar
 private _condition = {
@@ -53,7 +53,7 @@ switch (_funcType) do {
         _returnValue = !([_unit, _veh] call FUNC(hasKeyForVehicle)) && {(locked _veh) in [2, 3]};
     };
     case "startLockpick": {
-        [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);
+        [_vehLockpickStrength, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);
     };
     case "finishLockpick": {
         [QGVAR(setVehicleLock), [_veh, false], [_veh]] call CBA_fnc_targetEvent;

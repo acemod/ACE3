@@ -18,8 +18,7 @@
 private _distance = call FUNC(getDistance);
 private _direction = call FUNC(getDirection);
 
-private _azimuth = _direction select 0;
-private _inclination = _direction select 1;
+_direction params ["_azimuth", "_inclination"];
 
 if (_distance < -999) exitWith {
     [-1000, -1000]    // return

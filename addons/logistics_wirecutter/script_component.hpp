@@ -50,7 +50,13 @@
     "wall_fen1_5.p3d",\
     "plot_provizorni.p3d",\
     "plp_ctm_partitioningfencegrey.p3d",\
-    "fence.p3d"\
+    "fence.p3d",\
+    "fort_razorwire.p3d",\
+    "barbedwire.pd3",\
+    "dd_pletivo.p3d",\
+    "plot_green_draty.p3d",\
+    "plot_rust_draty.p3d",\
+    "wall_fen1_5_2.p3d"\
 ]
 
 #define SOUND_CLIP_TIME_SPACING 1.5

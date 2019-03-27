@@ -6,7 +6,7 @@ class RscInGameUI {
     };
 
     class RscUnitInfoSoldier: RscUnitInfo {
-        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgSoldier',     _this select 0)];);
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgSoldier', _this select 0)]; [ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Soldier')])] call CBA_fnc_localEvent;);
     };
 
     class RscUnitInfoTank: RscUnitInfo {
@@ -94,7 +94,7 @@ class RscInGameUI {
     };
 
     class RscUnitInfoParachute: RscUnitInfo {
-        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgParachute',   _this select 0)];);
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgParachute', _this select 0)]; [ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Parachute')])] call CBA_fnc_localEvent;);
     };
 
     class RscUnitVehicle {

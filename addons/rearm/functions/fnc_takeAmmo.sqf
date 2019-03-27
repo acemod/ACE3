@@ -32,7 +32,7 @@ REARM_HOLSTER_WEAPON;
     [_unit, _magazineClass, _truck],
     FUNC(takeSuccess),
     "",
-    format [localize LSTRING(TakeAction), getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
+    format [localize LSTRING(TakeAction), _magazineClass call FUNC(getMagazineName), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

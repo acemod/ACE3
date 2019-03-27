@@ -23,3 +23,8 @@
 #define H_PART(num) (num * (SIZEY / 25))
 #define X_PART(num) (W_PART(num) + (safeZoneX + (safeZoneW - SIZEX) / 2))
 #define Y_PART(num) (H_PART(num) + (safeZoneY + (safeZoneH - SIZEY) / 2))
+
+#define CAN_CREATE_NONE    -1
+#define CAN_CREATE_ADMIN    0
+#define CAN_CREATE_CONSOLE  1
+#define CAN_CREATE_ALL      2

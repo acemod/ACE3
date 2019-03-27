@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Setting Up The Development Environment
+title: Setting Up the Development Environment
 description: This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching.
 group: development
 parent: wiki

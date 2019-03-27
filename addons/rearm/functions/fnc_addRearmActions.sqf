@@ -20,6 +20,10 @@ params ["_truck"];
 private _vehicles = nearestObjects [_truck, ["AllVehicles"], 20];
 _vehicles = _vehicles select {(_x != _truck) && {!(_x isKindOf "CAManBase")} && {!(_x getVariable [QGVAR(disabled), false])}};
 
+if (missionNamespace getVariable [QEGVAR(mk6mortar,useAmmoHandling), false]) then {
+    _vehicles = _vehicles select {!(_x isKindOf "Mortar_01_base_F")};
+};
+
 private _vehicleActions = [];
 {
     private _vehicle = _x;
@@ -56,7 +60,7 @@ private _vehicleActions = [];
             {
                 private _action = [
                     _x,
-                    getText(configFile >> "CfgMagazines" >> _x >> "displayName"),
+                    _x call FUNC(getMagazineName),
                     getText(configFile >> "CfgMagazines" >> _x >> "picture"),
                     {_this call FUNC(takeAmmo)},
                     {true},

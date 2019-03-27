@@ -7,7 +7,7 @@ class CfgWeapons {
         EGVAR(nightvision,bluRadius) = 0.13;
     };
     class rhsusf_ANPVS_15: rhsusf_ANPVS_14 { // Binocular (same as base)
-        modelOptics = "";        
+        modelOptics = "";
         EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_binos_4096.paa);
         EGVAR(nightvision,bluRadius) = 0.15;
     };
@@ -70,18 +70,19 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 508.0;
     };
-    class rhs_weap_lmg_minimi_railed; // Rifle_Base_F - scope = private;
+    class rhs_weap_saw_base: Rifle_Base_F { // Base class for all Minimi
+        ACE_Overheating_allowSwapBarrel = 1;
+    };
+    class rhs_weap_lmg_minimi_railed;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
         ACE_RailHeightAboveBore = 4.11044;
         ACE_barrelLength = 348;
         ACE_barrelTwist = 177.8;
-        ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m249_pip_L: rhs_weap_lmg_minimi_railed {
         ACE_RailHeightAboveBore = 4.34899;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
-        ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m240_base; // Rifle_Long_Base_F
     class rhs_weap_m240B: rhs_weap_m240_base {
@@ -219,6 +220,13 @@ class CfgWeapons {
         canLock = 0;
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
+        class Single;
+        class Cruise: Single {
+            EGVAR(missileGuidance,attackProfile) = "JAV_DIR";
+        };
+        class TopDown: Single {
+            EGVAR(missileGuidance,attackProfile) = "JAV_TOP";
+        };
     };
 
     class Launcher_Base_F;
@@ -233,11 +241,18 @@ class CfgWeapons {
         ace_overpressure_damage = 0.75;
     };
 
+    #define HEARING_PROTECTION_OPEN EGVAR(hearing,protection) = 0; EGVAR(hearing,lowerVolume) = 0;
     #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
     #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
     #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
     // Fast Helmets
     class rhsusf_opscore_01;
+    class rhsusf_ihadss: rhsusf_opscore_01 {
+        HEARING_PROTECTION_PELTOR
+    };
+    class rhsusf_opscore_ut_pelt_nsw: rhsusf_opscore_01 {
+        HEARING_PROTECTION_PELTOR
+    };
     class rhsusf_opscore_aor1_pelt: rhsusf_opscore_01 {
         HEARING_PROTECTION_PELTOR
     };
@@ -287,6 +302,9 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR
     };
     class rhsusf_opscore_cover;
+    class rhsusf_opscore_mc_cover_pelt_nsw: rhsusf_opscore_cover {
+        HEARING_PROTECTION_PELTOR
+    };
     class rhsusf_opscore_mc_cover_pelt: rhsusf_opscore_cover {
         HEARING_PROTECTION_PELTOR
     };
@@ -372,7 +390,9 @@ class CfgWeapons {
     class rhsusf_mich_bare_norotos_alt_semi: rhsusf_mich_bare_norotos_semi {
         HEARING_PROTECTION_PELTOR
     };
-    class rhsusf_mich_bare_norotos_arc_semi;
+    class rhsusf_mich_bare_norotos_arc_semi: rhsusf_mich_bare_norotos_alt_semi {
+        HEARING_PROTECTION_OPEN
+    };
     class rhsusf_mich_bare_norotos_arc_alt_semi: rhsusf_mich_bare_norotos_arc_semi {
         HEARING_PROTECTION_PELTOR
     };
