@@ -18,18 +18,17 @@ jobs:
           name: Lint sqf code
           command: sqflint -d addons || true
 
-  armake:
+  hemtt:
     docker:
-      - image: acemod/armake:master
+      - image: hemtt/hemtt:master
     steps:
       - checkout
       - run:
           name: Version
-          command: armake --version
+          command: hemtt --version
       - run:
           name: Build
-          command: |
-            make -j 4
+          command: hemtt build
 
   update-docs:
     docker:
@@ -52,12 +51,12 @@ workflows:
     jobs:
       - linting
       - validate-scripts
-      - armake:
+      - hemtt:
           requires:
             - validate-scripts
       - update-docs:
           requires:
-            - armake
+            - hemtt
           filters:
             branches:
               only: master
