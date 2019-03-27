@@ -250,7 +250,7 @@ class FunctionFile:
         self.log_file(level > 0)
         self.write("{0}: {1}".format(priority_str, message))
 
-        if priority_str == "Error":
+        if priority_str in ["Error", "Aborted"]:
             self.errors += 1;
 
     def write(self, message, indent=2):
@@ -290,6 +290,8 @@ def crawl_dir(directory, debug=False, lint_private=False):
                         components.setdefault(component,[]).append(function)
 
                         function.feedback("Publicly documented")
+                else:
+                    errors += 1
 
     document_functions(components)
 
