@@ -15,7 +15,7 @@
  * Public: Yes
  */
 
-params ["_object"];
+params [["_object", objNull, [objNull]]];
 TRACE_1("params",_object);
 
 private _position = getPosASL _object;
@@ -31,7 +31,7 @@ private _checkObject = {
     };
 };
 
-private _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
+private _objects = (lineIntersectsSurfaces [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]) apply {_x select 3};
 _checkObject forEach _objects;
 
 if (_isInBuilding) exitWith {true};
