@@ -26,6 +26,7 @@ class FunctionFile:
 
         # False unless specified in processing
         self.debug = False
+        self.lint_private = False
 
         # Empty until imported from file
         self.path = ""
@@ -57,9 +58,10 @@ class FunctionFile:
     def has_header(self):
         return bool(self.header)
 
-    def process_header(self, debug=False):
+    def process_header(self, debug=False, lint_private=False):
         # Detailed debugging occurs here so value is set
         self.debug = debug
+        self.lint_private = lint_private
 
         # Preemptively cut away the comment characters (and leading/trailing whitespace)
         self.header_text = "\n".join([x[3:].strip() for x in self.header.splitlines()])
@@ -78,7 +80,7 @@ class FunctionFile:
 
         # Don't bother to process the rest if private
         # Unless in debug mode
-        if not self.public and not self.debug:
+        if not self.public and not self.lint_private:
             return
 
         # Retrieve the raw sections text for processing
@@ -257,7 +259,7 @@ def document_functions(components):
             for function in components[component]:
                 file.write(function.document(component))
 
-def crawl_dir(directory, debug=False):
+def crawl_dir(directory, debug=False, lint_private=False):
     components = {}
 
     for root, dirs, files in os.walk(directory):
@@ -271,7 +273,7 @@ def crawl_dir(directory, debug=False):
 
                 # Undergo data extraction and detailed debug
                 if function.has_header():
-                    function.process_header(debug)
+                    function.process_header(debug, lint_private)
 
                     if function.is_public() and not debug:
                         # Add functions to component key (initalise key if necessary)
@@ -292,6 +294,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('directory', nargs="?", type=str, default=".", help='only crawl specified module addon folder')
     parser.add_argument('--debug', action="store_true", help='only check for header debug messages')
+    parser.add_argument('--lint-private', action="store_true", help='lint private function headers as well')
     args = parser.parse_args()
 
     # Allow calling from anywhere and work our way to addons from this file
@@ -300,7 +303,7 @@ def main():
 
     if os.path.isdir(prospective_dir):
         print("Directory: {}".format(prospective_dir))
-        crawl_dir(prospective_dir, args.debug)
+        crawl_dir(prospective_dir, args.debug, args.lint_private)
     else:
         print("Invalid directory: {}".format(prospective_dir))
 
