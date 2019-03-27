@@ -24,7 +24,7 @@ private _result = [false, [0, 0, 0]];
 
 private _distance = _source vectorDistance _destination;
 
-if (count (lineIntersectsSurfaces [_source, _destination]) == 0) then {
+if ((lineIntersectsSurfaces [_source, _destination]) isEqualTo []) then {
     private _lower = 0;
     private _upper = 1;
     private _mid = 0.5;
