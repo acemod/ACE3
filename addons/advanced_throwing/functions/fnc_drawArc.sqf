@@ -50,10 +50,10 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
             _cross = 1; // 1: Distance Limit (Green)
         } else {
             // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is glass in a window
-            if (!(lineIntersectsSurfaces [_prevTrajASL, _newTrajASL]) isEqualTo []) then { // Checks the "VIEW" LOD
+            if !((lineIntersectsSurfaces [_prevTrajASL, _newTrajASL]) isEqualTo []) then { // Checks the "VIEW" LOD
                 _cross = 2; // 2: View LOD Block (Red)
             } else {
-                if (!((lineIntersectsSurfaces [_prevTrajASL, _newTrajASL, _activeThrowable, ACE_player, true, 1, "GEOM", "FIRE"]) isEqualTo [])) then {
+                if !((lineIntersectsSurfaces [_prevTrajASL, _newTrajASL, _activeThrowable, ACE_player, true, 1, "GEOM", "FIRE"]) isEqualTo []) then {
                     _cross = 3; // 3: GEOM/FIRE LOD Block (Yellow) - pass a3 bulding glass, but blocked on some CUP glass
                 };
             };
