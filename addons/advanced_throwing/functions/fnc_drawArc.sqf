@@ -50,7 +50,7 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
             _cross = 1; // 1: Distance Limit (Green)
         } else {
             // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is glass in a window
-            if (lineIntersects [_prevTrajASL, _newTrajASL]) then { // Checks the "VIEW" LOD
+            if (count (lineIntersectsSurfaces [_prevTrajASL, _newTrajASL]) > 0) then { // Checks the "VIEW" LOD
                 _cross = 2; // 2: View LOD Block (Red)
             } else {
                 if (!((lineIntersectsSurfaces [_prevTrajASL, _newTrajASL, _activeThrowable, ACE_player, true, 1, "GEOM", "FIRE"]) isEqualTo [])) then {
@@ -66,7 +66,7 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
 
         private _col = [ [1, 1, 1, _alpha], [0, 1, 0, _alpha], [1, 0, 0, _alpha], [1, 1, 0, _alpha] ] select _cross;
 
-        if (_cross != 2 && {lineIntersects [eyePos ACE_player, _newTrajASL]}) then {
+        if (_cross != 2 && {count (lineIntersectsSurfaces [eyePos ACE_player, _newTrajASL]) > 0}) then {
             _col set [3, 0.1];
         };
 
