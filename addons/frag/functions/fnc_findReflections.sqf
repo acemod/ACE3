@@ -39,8 +39,7 @@ if (_zIndex < 5) then {
         for "_x" from 1 to _distanceCount do {
             private _testPos = _pos vectorAdd (_vec vectorMultiply _x);
             // drop ["\a3\data_f\Cl_basic","","Billboard",1,15,ASLtoATL _testPos,[0,0,0],1,1.275,1.0,0.0,[1],[[1,0,0,1]],[0],0.0,2.0,"","",""];
-            private _res = lineIntersectsWith [_pos, _testPos];
-            if (count _res > 0) exitWith {
+            if (count (lineIntersectsSurfaces [_pos, _testPos]) > 0) exitWith {
                 _test = false;
                 _nlos pushBack _lastPos;
                 // {
