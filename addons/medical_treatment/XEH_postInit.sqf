@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-[QEGVAR(medical,initialized), FUNC(checkItems)] call CBA_fnc_addEventHandler;
+[QEGVAR(medical_status,initialized), FUNC(checkItems)] call CBA_fnc_addEventHandler;
 ["loadout", FUNC(checkItems)] call CBA_fnc_addPlayerEventHandler;
 
 // Handle bodybags and litter on server
