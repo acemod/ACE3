@@ -17,8 +17,6 @@
 
 if !(alive _this) exitWith {false};
 
-private _bloodLoss = GET_BLOOD_LOSS(_this);
-private _pain = GET_PAIN_PERCEIVED(_this);
-private _unconscious = IS_UNCONSCIOUS(_this);
-
-(_bloodLoss > 0) || {_pain > 0.2} || _unconscious
+(GET_BLOOD_LOSS(_this) > 0)
+|| {GET_PAIN_PERCEIVED(_this) > 0.25}
+|| {IS_UNCONSCIOUS(_this)}
