@@ -51,7 +51,12 @@ def main(argv):
     allDefinedStrings = []
     allUsedStrings = []
 
-    for root, dirnames, filenames in os.walk('../addons' + '/'):
+    # Allow running from root directory as well as from inside the tools directory
+    rootDir = "../addons"
+    if (os.path.exists("addons")):
+        rootDir = "addons"
+
+    for root, dirnames, filenames in os.walk(rootDir):
       for filename in fnmatch.filter(filenames, '*.sqf'):
         sqf_list.append(os.path.join(root, filename))
       for filename in fnmatch.filter(filenames, '*.cpp'):
