@@ -1,13 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
- *
+ * Handles the default state
  *
  * Arguments:
  * 0: The Unit <OBJECT>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [player] call ace_medical_statemachine_fnc_handleStateDefault
  *
  * Public: No
  */

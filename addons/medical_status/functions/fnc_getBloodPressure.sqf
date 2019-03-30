@@ -11,7 +11,7 @@
  * 1: BloodPressure High <NUMBER>
  *
  * Example:
- * [player] call ace_medical_fnc_getBloodPressure
+ * [player] call ace_medical_status_fnc_getBloodPressure
  *
  * Public: No
  */

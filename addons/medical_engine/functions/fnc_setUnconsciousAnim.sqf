@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * player call ace_medical_engine_fnc_setUnconsciousAnim
+ * [player, true] call ace_medical_engine_fnc_setUnconsciousAnim
  *
  * Public: No
  */

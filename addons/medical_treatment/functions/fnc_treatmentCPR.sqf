@@ -12,7 +12,7 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];

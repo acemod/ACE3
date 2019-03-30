@@ -13,7 +13,7 @@
  * Can Treat <BOOL>
  *
  * Example:
- * [bob, kevin, "selection", "classname"] call ACE_medical_treatment_fnc_canTreatCached
+ * [bob, kevin, "selection", "classname"] call ace_medical_treatment_fnc_canTreatCached
  *
  * Public: No
  */

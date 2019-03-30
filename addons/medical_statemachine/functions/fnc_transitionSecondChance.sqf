@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player] call ace_medical_statemachine_fnc_transitionSecondChance
+ *
  * Public: No
  */
 

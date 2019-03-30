@@ -9,6 +9,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_medical_feedback_fnc_handleEffects
+ *
+ * Public: No
  */
 
 if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {

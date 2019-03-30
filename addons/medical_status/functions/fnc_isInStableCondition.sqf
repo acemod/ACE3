@@ -10,7 +10,7 @@
  * Is in stable condition <BOOL>
  *
  * Example:
- * [player] call ace_medical_fnc_isInStableCondition
+ * [player] call ace_medical_status_fnc_isInStableCondition
  *
  * Public: No
  */

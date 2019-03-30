@@ -12,7 +12,7 @@
  * Representative RGBA colour <ARRAY>
  *
  * Example:
- * [0.4] call ACE_medical_gui_fnc_bloodLossToRGBA
+ * [0.4] call ace_medical_gui_fnc_bloodLossToRGBA
  *
  * Public: No
  */

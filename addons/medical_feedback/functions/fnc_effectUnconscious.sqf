@@ -9,6 +9,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [true, 0] call ace_medical_feedback_fnc_effectUnconscious
+ *
+ * Public: No
  */
 
 params ["_enable", "_mode"];

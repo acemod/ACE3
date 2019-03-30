@@ -19,7 +19,6 @@
  *
  * Public: yes
  */
-// #define DEBUG_MODE_FULL
 
 // only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {

@@ -12,7 +12,7 @@
  * 0: success <BOOL>
  * 1: Unit <OBJECT>
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_medic", "_patient", "_item"];

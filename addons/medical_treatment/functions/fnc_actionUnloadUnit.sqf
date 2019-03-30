@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [bob, kevin, false] call ACE_medical_treatment_fnc_actionUnloadUnit
+ * [bob, kevin, false] call ace_medical_treatment_fnc_actionUnloadUnit
  *
  * Public: No
  */

@@ -12,6 +12,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, "Body", 0.5, "bullet"] call ace_medical_damage_fnc_woundsHandler
+ *
  * Public: No
  */
 

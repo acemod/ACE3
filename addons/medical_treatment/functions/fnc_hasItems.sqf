@@ -12,9 +12,9 @@
  * Has the items <BOOL>
  *
  * Example:
- * [bob, patient, ["bandage", "morphine"]] call ACE_medical_treatment_fnc_hasItems
+ * [bob, patient, ["bandage", "morphine"]] call ace_medical_treatment_fnc_hasItems
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_medic", "_patient", "_items"];

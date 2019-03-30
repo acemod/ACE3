@@ -12,7 +12,7 @@
  * Vehicle they are loaded into (objNull on failure) <OBJECT>
  *
  * Example:
- * [bob, kevin] call ACE_medical_treatment_treatment_fnc_actionLoadUnit
+ * [bob, kevin] call ace_medical_treatment_treatment_fnc_actionLoadUnit
  *
  * Public: No
  */

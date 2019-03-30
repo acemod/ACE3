@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player] call ace_medical_statemachine_fnc_enteredStateCardiacArrest
+ *
  * Public: No
  */
 

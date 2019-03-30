@@ -10,7 +10,7 @@
  * Total blood loss of unit <NUMBER>
  *
  * Example:
- * [bob] call ACE_medical_fnc_getBloodLoss
+ * [bob] call ace_medical_status_fnc_getBloodLoss
  *
  * Public: No
  */

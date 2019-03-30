@@ -10,7 +10,7 @@
  * is Bleeding <BOOL>
  *
  * Example:
- * [UNIT] call ace_medical_blood_fnc_onBleeding
+ * [player] call ace_medical_blood_fnc_onBleeding
  *
  * Public: No
  */
