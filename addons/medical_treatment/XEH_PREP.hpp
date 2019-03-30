@@ -42,6 +42,7 @@ PREP(addToTriageCard);
 PREP(bodyCleanupLoop);
 PREP(calculateBlood);
 PREP(canAccessMedicalEquipment);
+PREP(canBandage);
 PREP(findMostEffectiveWound);
 PREP(getBandageTime);
 PREP(getTriageStatus);
