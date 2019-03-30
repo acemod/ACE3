@@ -14,19 +14,20 @@ files = [ # TODO glob pattern, sub-folders
     "meta.cpp"
 ]
 headerexts = [
-    "version=githash8" # TODO git hash
+    "version={{git \"id 8\"}}"
 ]
 keyname = "ace_{{version}}"
-signame = "{{prefix}}_{{version}}-githash8" # TODO git hash
+signame = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
-    "!launchableoptionals"
+    "!launchableoptionals",
+    "@zip ace3_{{version}}"
 ]
 
 [scripts]
     [scripts.launchableoptionals]
     steps_linux = [
-        "if [ $(dirname {{target}}) == 'optionals' ]; then mkdir @ace_{{addon}}; mv {{target}} @ace_{{addon}}/{{target}}; fi"
+        #"if [ $(dirname {{target}}) == 'optionals' ]; then mkdir @ace_{{addon}}; mv {{target}} @ace_{{addon}}/{{target}}; fi"
     ]
     steps_windows = [
 
