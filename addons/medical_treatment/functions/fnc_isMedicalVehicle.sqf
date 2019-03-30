@@ -12,7 +12,7 @@
  * Example:
  * [cursorObject] call ace_medical_treatment_fnc_isMedicalVehicle
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_vehicle"];

@@ -7,7 +7,10 @@
  * 0: The Unit <OBJECT>
  *
  * ReturnValue:
- * nothing
+ * None
+ *
+ * Example:
+ * [player] call ace_medical_damage_fnc_handleIncapacitation
  *
  * Public: No
  */

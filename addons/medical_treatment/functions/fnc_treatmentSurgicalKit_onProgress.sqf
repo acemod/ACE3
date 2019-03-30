@@ -14,7 +14,7 @@
  * Succesful treatment started <BOOL>
  *
  * Example:
- * [[bob, kevin], 5, 5] call ACE_medical_treatment_fnc_treatmentAdvanced_surgicalKit_onProgress
+ * [[bob, kevin], 5, 5] call ace_medical_treatment_fnc_treatmentAdvanced_surgicalKit_onProgress
  *
  * Public: No
  */

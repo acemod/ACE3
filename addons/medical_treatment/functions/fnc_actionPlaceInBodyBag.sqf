@@ -11,9 +11,9 @@
  * body bag (will return objNull when run where target is not local) <OBJECT>
  *
  * Example:
- * [player, cursorTarget] call ACE_medical_treatment_fnc_actionPlaceInBodyBag
+ * [player, cursorTarget] call ace_medical_treatment_fnc_actionPlaceInBodyBag
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_caller", "_target"];

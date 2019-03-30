@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [bob, "classname", "varname", 5, 6, ["stuff"]] call ACE_medical_treatment_fnc_onMedicationUsage
+ * [bob, "classname", "varname", 5, 6, ["stuff"]] call ace_medical_treatment_fnc_onMedicationUsage
  *
  * Public: No
  */

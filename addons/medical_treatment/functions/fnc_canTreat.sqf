@@ -15,7 +15,7 @@
  * Example:
  * [player, cursorTarget, "Head", "SurgicalKit"] call ace_medical_treatment_fnc_canTreat
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_caller", "_target", "_bodyPart", "_className"];

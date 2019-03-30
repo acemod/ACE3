@@ -4,10 +4,15 @@
  * Initializes visual effects of medical.
  *
  * Arguments:
- * None
+ * 0: Just Pain Effects <BOOL>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [false] call ace_medical_feedback_fnc_initEffects
+ *
+ * Public: No
  */
 
 params [["_justPain", false]];

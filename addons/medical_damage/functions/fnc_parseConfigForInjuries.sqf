@@ -9,6 +9,9 @@
  * ReturnValue:
  * None
  *
+ * Example:
+ * [] call ace_medical_damage_fnc_parseConfigForInjuries
+ *
  * Public: No
  */
 

@@ -11,7 +11,7 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Public: Yes
+ * Public: No
  */
 #define MORPHINE_PAIN_SUPPRESSION 0.6
 

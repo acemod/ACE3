@@ -8,6 +8,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [120] call ace_medical_feedback_fnc_effectHeartBeat
+ *
+ * Public: No
  */
 
 params ["_heartRate"];

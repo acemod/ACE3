@@ -8,7 +8,7 @@
  * 1: Desired pain level (0 .. 1) <NUMBER>
  *
  * Return Value:
- * nothing
+ * None
  *
  * Example:
  * [guy, 0.5] call ace_medical_status_fnc_adjustPainLevel

@@ -9,6 +9,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [false, 0.5] call ace_medical_feedback_fnc_effectBloodVolume
+ *
+ * Public: No
  */
 
 params ["_enable", "_intensity"];

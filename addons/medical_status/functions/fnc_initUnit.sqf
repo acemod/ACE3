@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call ACE_medical_fnc_init
+ * [bob] call ace_medical_status_fnc_init
  *
  * Public: No
  */

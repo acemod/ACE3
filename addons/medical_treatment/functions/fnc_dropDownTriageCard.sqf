@@ -10,9 +10,9 @@
  * None
  *
  * Example:
- * [true] call ACE_medical_treatment_fnc_dropDownTriageCard
+ * [true] call ace_medical_treatment_fnc_dropDownTriageCard
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_show"];

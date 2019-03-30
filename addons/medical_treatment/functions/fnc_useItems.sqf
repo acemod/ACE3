@@ -13,9 +13,9 @@
  * 1: Unit <OBJECT>
  *
  * Example:
- * [unit, patient, ["bandage"]] call ACE_medical_treatment_fnc_useItems
+ * [unit, patient, ["bandage"]] call ace_medical_treatment_fnc_useItems
  *
- * Public: Yes
+ * Public: No
  */
 
 #define HAS_USED_ITEM(itemUsedInfo)    (itemUsedInfo select 0)

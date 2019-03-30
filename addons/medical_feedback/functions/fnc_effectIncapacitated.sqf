@@ -8,6 +8,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_medical_feedback_fnc_effectIncapacitated
+ *
+ * Public: No
  */
 
 GVAR(ppIncapacitationBlur)  ppEffectEnable true;

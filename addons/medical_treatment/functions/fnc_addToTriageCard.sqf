@@ -11,9 +11,9 @@
  * None
  *
  * Example:
- * [bob, "bandage"] call ACE_medical_treatment_fnc_addToTriageCard
+ * [bob, "bandage"] call ace_medical_treatment_fnc_addToTriageCard
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_unit", "_newItem"];

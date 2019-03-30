@@ -12,11 +12,14 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, "Body", 0.5, "bullet"] call ace_medical_damage_fnc_woundsHandlerSQF
+ *
  * Public: No
  */
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
-TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
+TRACE_4("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
 private _bodyPartN = ALL_BODY_PARTS find toLower _bodyPart;

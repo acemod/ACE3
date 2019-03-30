@@ -11,7 +11,7 @@
  * Return Value:
  * None
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_caller", "_target", "_bodyPart"];
