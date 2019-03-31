@@ -30,7 +30,7 @@ PREP_RECOMPILE_END;
     {
         params ["_vehicle", "_position", "_unit"];
         if (!GVAR(keepEngineRunning)) exitWith {};
-        if (_unit == ACE_player && {_position == "driver"} && {_vehicle getVariable [QGVAR(engineState), false]}) then {
+        if (_unit == ACE_player && {_position == "driver" && {_vehicle getVariable [QGVAR(engineState), false]}}) then {
             [{
                 params ["_vehicle"];
                 [QEGVAR(common,engineOn), _this, _vehicle] call CBA_fnc_targetEvent;
