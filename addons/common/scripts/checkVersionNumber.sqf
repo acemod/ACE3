@@ -1,17 +1,17 @@
 // by commy2
 #include "script_component.hpp"
 
-private _files = [];
-
-{
-    if (_x find "a3_" != 0 && {_x find "ace_" != 0} && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
-        _files pushBack _x;
-    };
-} forEach activatedAddons;
+private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
+private _files = CBA_common_addons select {
+    (_x select [0,3] != "a3_") &&
+    {_x select [0,4] != "ace_"} &&
+    {!((toLower _x) in _aceWhitelist)}
+};
 
 private _versions = [];
 {
-    private _version = parseNumber getText (configFile >> "CfgPatches" >> _x >> "version");
+    getText (configFile >> "CfgPatches" >> _x >> "version") splitString "." params [["_major", "0"], ["_minor", "0"]];
+    private _version = parseNumber _major + parseNumber _minor/100;
     _versions set [_forEachIndex, _version];
 } forEach _files;
 

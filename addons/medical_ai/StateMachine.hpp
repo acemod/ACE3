@@ -1,11 +1,11 @@
 class GVAR(stateMachine) {
-    list = "allUnits select {local _x}";
+    list = QUOTE(call EFUNC(common,getLocalUnits));
     skipNull = 1;
 
     class Initial {
         class Injured {
             targetState = "Injured";
-            condition = QUOTE(call FUNC(isInjured));
+            condition = QFUNC(isInjured);
         };
         class HealUnit {
             targetState = "HealUnit";
@@ -20,7 +20,7 @@ class GVAR(stateMachine) {
 
         class InSafety {
             targetState = "Safe";
-            condition = QUOTE(call FUNC(isSafe));
+            condition = QFUNC(isSafe);
         };
     };
 
@@ -31,8 +31,8 @@ class GVAR(stateMachine) {
 
         class RequestMedic {
             targetState = "HealSelf";
-            condition = QUOTE(call FUNC(canRequestMedic));
-            onTransition = QUOTE(call FUNC(requestMedic));
+            condition = QFUNC(canRequestMedic);
+            onTransition = QFUNC(requestMedic);
         };
         class HealSelf {
             targetState = "HealSelf";
@@ -41,7 +41,7 @@ class GVAR(stateMachine) {
     };
 
     class HealSelf {
-        onState = QUOTE(call FUNC(healSelf));
+        onState = QFUNC(healSelf);
         onStateLeaving = QUOTE(_this setVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),nil)]);
 
         class Initial {
@@ -63,7 +63,7 @@ class GVAR(stateMachine) {
     };
 
     class HealUnit {
-        onState = QUOTE(call FUNC(healUnit));
+        onState = QFUNC(healUnit);
         onStateLeaving = QUOTE(_this setVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),nil)]);
 
         class Initial {

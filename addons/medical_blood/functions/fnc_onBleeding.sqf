@@ -10,17 +10,19 @@
  * is Bleeding <BOOL>
  *
  * Example:
- * [UNIT] call ace_medical_blood_fnc_onBleeding
+ * [player] call ace_medical_blood_fnc_onBleeding
  *
  * Public: No
  */
 
 params ["_unit"];
 
+if (!([_unit] call FUNC(isBleeding))) exitWith {};
 if (((vehicle _unit) != _unit) && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
 
 private _lastTime = _unit getVariable [QGVAR(lastTime), -10];
-private _bloodLoss = (if (GVAR(useAceMedical)) then {([_unit] call EFUNC(medical,getBloodLoss)) * 2.5} else {getDammage _unit * 2}) min 6;
+private _bloodLoss = (if (GVAR(useAceMedical)) then {GET_BLOOD_LOSS(_unit) * 2.5} else {getDammage _unit * 2}) min 6;
+TRACE_1("",_bloodLoss);
 
 if ((CBA_missionTime - _lastTime) + _bloodLoss >= 8 + random 2) then {
     _unit setVariable [QGVAR(lastTime), CBA_missionTime];
