@@ -12,8 +12,18 @@ GVAR(pendingReopen) = false;
 
 GVAR(menuPFH) = -1;
 
+GVAR(selfInteractionActions) = [];
 [] call FUNC(addTreatmentActions);
 [] call FUNC(collectActions);
+
+["ace_interact_menu_newControllableObject", {
+    params ["_type"]; // string of the object's classname
+    if (!(_type isKindOf "CaManBase")) exitWith {};
+    {
+        _x set [0, _type];
+        _x call EFUNC(interact_menu,addActionToClass);
+    } forEach GVAR(selfInteractionActions);
+}] call CBA_fnc_addEventHandler;
 
 ["ace_treatmentSucceded", {
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {

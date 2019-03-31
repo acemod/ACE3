@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_medical_gui_fnc_addInteractActions
+ * [] call ace_medical_gui_fnc_addTreatmentActions
  *
  * Public: No
  */
@@ -60,6 +60,6 @@ private _fnc_condition = {
 
         ["CAManBase", 0, [_actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
         ["CAManBase", 0, ["ACE_MainActions", "ACE_Medical_Radial", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
-        ["CAManBase", 1, ["ACE_SelfActions", "ACE_Medical", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
+        GVAR(selfInteractionActions) pushBack ["", 1, ["ACE_SelfActions", "ACE_Medical", _actionPath], _action];
     } forEach _allowedBodyParts;
 } forEach configProperties [_actionsConfig, "isClass _x"];
