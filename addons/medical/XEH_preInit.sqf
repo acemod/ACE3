@@ -6,57 +6,12 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(injuredUnitCollection) = [];
+#include "initSettings.sqf"
 
-private _versionEx = "ace_medical" callExtension "version";
-DFUNC(handleDamage_assignWounds) = if (_versionEx == "") then {
-    DFUNC(handleDamage_woundsOld)
-} else {
-    DFUNC(handleDamage_wounds)
-};
-
-call FUNC(parseConfigForInjuries);
-
-GVAR(HITPOINTS) = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
-GVAR(SELECTIONS) = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
-
-//Hack for #3168 (units in static weapons do not take any damage):
-//doing a manual pre-load with a small distance seems to fix the LOD problems with handle damage not returning full results
-GVAR(fixedStatics) = [];
-private _fixStatic = {
-    params ["_vehicle"];
-    private _vehType = typeOf _vehicle;
-    TRACE_2("",_vehicle,_vehType);
-    if (!(_vehType in GVAR(fixedStatics))) then {
-        GVAR(fixedStatics) pushBack _vehType;
-        TRACE_1("starting preload",_vehType);
-        [{
-            1 preloadObject (_this select 0);
-        }, {
-            TRACE_1("preload done",_this);
-        }, [_vehType]] call CBA_fnc_waitUntilAndExecute;
-    };
-};
-["StaticWeapon", "init", _fixStatic] call CBA_fnc_addClassEventHandler;
-["Car", "init", _fixStatic] call CBA_fnc_addClassEventHandler;
-["CAManBase", "Init", FUNC(handleInit)] call CBA_fnc_addClassEventHandler;
-["CAManBase", "Respawn", FUNC(handleRespawn)] call CBA_fnc_addClassEventHandler;
-["CAManBase", "Killed", FUNC(handleKilled)] call CBA_fnc_addClassEventHandler;
-["CAManBase", "Local", FUNC(handleLocal)] call CBA_fnc_addClassEventHandler;
-
-addMissionEventHandler ["Loaded",{
-    {
-        TRACE_1("starting preload (save load)",_x);
-        [{
-            1 preloadObject (_this select 0);
-        }, {
-            TRACE_1("preload done",_this);
-        }, [_x]] call CBA_fnc_waitUntilAndExecute;
-    } forEach GVAR(fixedStatics);
-
-    // Reload configs into extension (handle full game restart)
-    call FUNC(parseConfigForInjuries);
-}];
-
+// Add warning for old functions that were technically public, Remove at 3.14.0
+{
+    missionNamespace setVariable [_x, compileFinal format ['diag_log text "ACE Medical WARNING: Formerly public function [%1] has no effect in medical rewrite."; nil', _x]];
+} forEach ["ace_medical_fnc_actionPlaceInBodyBag","ace_medical_fnc_actionRemoveTourniquet","ace_medical_fnc_addHeartRateAdjustment","ace_medical_fnc_addToLog","ace_medical_fnc_addToTriageCard
+","ace_medical_fnc_addUnconsciousCondition","ace_medical_fnc_addVitalLoop","ace_medical_fnc_canAccessMedicalEquipment","ace_medical_fnc_canTreat","ace_medical_fnc_displayTriageCard","ace_medical_fnc_dropDownTriageCard","ace_medical_fnc_getTriageStatus","ace_medical_fnc_getUnconsciousCondition","ace_medical_fnc_hasItem","ace_medical_fnc_hasItems","ace_medical_fnc_hasTourniquetAppliedTo","ace_medical_fnc_isInMedicalFacility","ace_medical_fnc_isInMedicalVehicle","ace_medical_fnc_isMedic","ace_medical_fnc_isMedicalVehicle","ace_medical_fnc_itemCheck","ace_medical_fnc_selectionNameToNumber","ace_medical_fnc_setCardiacArrest","ace_medical_fnc_setDead","ace_medical_fnc_setHitPointDamage","ace_medical_fnc_showBloodEffect","ace_medical_fnc_treatment","ace_medical_fnc_treatmentAdvanced_bandage","ace_medical_fnc_treatmentAdvanced_CPR","ace_medical_fnc_treatmentAdvanced_CPRLocal","ace_medical_fnc_treatmentAdvanced_medication","ace_medical_fnc_treatmentAdvanced_medicationLocal","ace_medical_fnc_treatmentIV","ace_medical_fnc_treatmentIVLocal","ace_medical_fnc_unconsciousPFH","ace_medical_fnc_useItem","ace_medical_fnc_useItems"];
 
 ADDON = true;

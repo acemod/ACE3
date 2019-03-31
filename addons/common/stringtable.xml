@@ -27,6 +27,20 @@
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
         </Key>
+		<Key ID="STR_ACE_Common_Advanced">
+            <English>Advanced</English>
+            <Russian>Усложненный</Russian>
+            <Polish>Zaawansowany</Polish>
+            <Spanish>Avanzado</Spanish>
+            <German>Erweitert</German>
+            <Czech>Pokročilé</Czech>
+            <Portuguese>Avançada</Portuguese>
+            <French>Avancée</French>
+            <Hungarian>Fejlett</Hungarian>
+            <Italian>Avanzato</Italian>
+            <Japanese>アドバンスド</Japanese>
+            <Korean>고급</Korean>
+        </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
             <German>Speichern</German>
@@ -395,6 +409,20 @@
             <Korean>알 수 없음</Korean>
             <Chinese>未知的</Chinese>
             <Chinesesimp>未知的</Chinesesimp>
+        </Key>
+		<Key ID="STR_ACE_Common_Normal">
+            <English>Normal</English>
+            <German>Normal</German>
+            <Italian>Normale</Italian>
+            <Russian>Нормальное</Russian>
+            <French>Normale</French>
+            <Polish>Normalne</Polish>
+            <Spanish>Normal</Spanish>
+            <Hungarian>Normális</Hungarian>
+            <Czech>Normální</Czech>
+            <Portuguese>Normal</Portuguese>
+            <Japanese>通常</Japanese>
+            <Korean>보통</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -970,6 +998,51 @@
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
         </Key>
+		<Key ID="STR_ACE_Common_Always">
+            <English>Always</English>
+        </Key>
+		<Key ID="STR_ACE_Common_Anywhere">
+            <English>Anywhere</English>
+            <Russian>Где угодно</Russian>
+            <Polish>Wszędzie</Polish>
+            <Spanish>Donde sea</Spanish>
+            <German>Überall</German>
+            <Czech>Kdekoliv</Czech>
+            <Portuguese>Qualquer lugar</Portuguese>
+            <French>PArtout</French>
+            <Hungarian>Akárhol</Hungarian>
+            <Italian>Ovunque</Italian>
+            <Japanese>どこでも</Japanese>
+            <Korean>어디서나</Korean>
+        </Key>
+		<Key ID="STR_ACE_Common_Basic">
+            <English>Basic</English>
+            <Russian>Базовый</Russian>
+            <Polish>Podstawowy</Polish>
+            <Spanish>Básico</Spanish>
+            <German>Standard</German>
+            <Czech>Základní</Czech>
+            <Portuguese>Básica</Portuguese>
+            <French>Basique</French>
+            <Hungarian>Alap</Hungarian>
+            <Italian>Basico</Italian>
+            <Japanese>ベーシック</Japanese>
+            <Korean>기본</Korean>
+        </Key>
+        <Key ID="STR_ACE_Common_Vehicle">
+            <English>Medical vehicles</English>
+            <Russian>В медицинском транспорте</Russian>
+            <Polish>Pojazdy medyczne</Polish>
+            <Spanish>Vehiculos médicos</Spanish>
+            <German>Sanitätsfahrzeuge</German>
+            <Czech>Zdravotnická vozidla</Czech>
+            <Portuguese>Veículos médcos</Portuguese>
+            <French>Dans les véhicules médicals</French>
+            <Hungarian>Orvosi járművek</Hungarian>
+            <Italian>Veicoli medici</Italian>
+            <Japanese>医療車両のみ</Japanese>
+            <Korean>의료차량</Korean>
+        </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
             <German>Ja</German>
@@ -1004,6 +1077,8 @@
         </Key>
         <Key ID="STR_ACE_Common_Confirm">
             <English>Confirm</English>
+		    <Key ID="STR_ACE_Common_Never">
+            <English>Never</English>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>

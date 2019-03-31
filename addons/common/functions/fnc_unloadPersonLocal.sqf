@@ -38,32 +38,51 @@ if (count _emptyPos != 3) exitwith {
 unassignVehicle _unit;
 [_unit] orderGetIn false;
 
-TRACE_1("Ejecting", alive _unit);
+private _resetUncon = false;
+if (lifeState _unit == "INCAPACITATED") then {
+    _resetUncon = true;
+    _unit setUnconscious false;
+    TRACE_1("pausing setUnconscious",_unit);
+};
 
+TRACE_1("Ejecting", alive _unit);
 _unit action ["Eject", vehicle _unit];
 
 [{
-    params ["_unit", "_emptyPos"];
+    params ["_unit", "_emptyPos", "_resetUncon"];
+    
+    if ((vehicle _unit) != _unit) then {
+        WARNING_2("Failed to unload in time [%1 - %2]",_unit, vehicle _unit);
+    };
 
     _unit setPosASL AGLToASL _emptyPos;
 
-    if !([_unit] call FUNC(isAwake)) then {
-        TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
-
-        if (driver _unit == _unit) then {
-            private _anim = [_unit] call FUNC(getDeathAnim);
-
-            [_unit, _anim, 1, true] call FUNC(doAnimation);
-
-            [{
-                params ["_unit", "_anim"];
-                if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
-                    [_unit, _anim, 2, true] call FUNC(doAnimation);
-                };
-            }, [_unit, _anim], 0.5] call CBA_fnc_waitAndExecute;
-        };
+    if (_resetUncon) then {
+        TRACE_1("resuming setUnconscious",_unit);
+        // This should reset the unit to an Unconscious animation
+        // Also has the hilarious effect of violently ragdolling the guy
+        _unit setUnconscious true;
     };
-}, [_unit, _emptyPos], 0.5] call CBA_fnc_waitAndExecute;
+    
+    // ToDo [medical-rewrite]: verify we can remove the following commented code
+    
+    // if !([_unit] call FUNC(isAwake)) then {
+        // TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
+
+        // if (driver _unit == _unit) then {
+            // private _anim = [_unit] call FUNC(getDeathAnim);
+
+            // [_unit, _anim, 1, true] call FUNC(doAnimation);
+
+            // [{
+                // params ["_unit", "_anim"];
+                // if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
+                    // [_unit, _anim, 2, true] call FUNC(doAnimation);
+                // };
+            // }, [_unit, _anim], 0.5] call CBA_fnc_waitAndExecute;
+        // };
+    // };
+}, [_unit, _emptyPos, _resetUncon], 0.5] call CBA_fnc_waitAndExecute;
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 

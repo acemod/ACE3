@@ -204,3 +204,9 @@ Jammer that blocks RF triggers:
     true
 }] call ace_explosives_fnc_addDetonateHandler;
 ```
+
+#### 5.4 Custom timer limits
+`Added in 3.12.7`
+
+Can set custom min and max time for the timer trigger, can set one or both, time in seconds
+`ace_explosives_customTimerMin` / `ace_explosives_customTimerMax`
