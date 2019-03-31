@@ -28,7 +28,7 @@ PREP_RECOMPILE_END;
     "AllVehicles",
     "getout",
     {
-        params ["_vehicle","_position","_unit"];
+        params ["_vehicle", "_position", "_unit"];
         if (!GVAR(keepEngineRunning)) exitWith {};
         if (_unit == ACE_player && {_position == "driver"} && {_vehicle getVariable [QGVAR(engineState), false]}) then {
             [{
