@@ -11,12 +11,18 @@ PREP_RECOMPILE_END;
 [
     "AllVehicles",
     "initPost",
-    {(_this select 0) setVariable [QGVAR(engineState), isEngineOn (_this select 0)]}
+    {
+        params ["_vehicle"];
+        _vehicle setVariable [QGVAR(engineState), isEngineOn _vehicle];
+    }
 ] call CBA_fnc_addClassEventHandler;
 [
     "AllVehicles",
     "engine",
-    {(_this select 0) setVariable [QGVAR(engineState), _this select 1]}
+    {
+        params ["_vehicle", "_state"];
+        _vehicle setVariable [QGVAR(engineState), _state];
+    }
 ] call CBA_fnc_addClassEventHandler;
 [
     "AllVehicles",
