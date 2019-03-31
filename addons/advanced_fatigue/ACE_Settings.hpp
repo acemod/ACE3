@@ -5,9 +5,6 @@ class ACE_Settings {
     class GVAR(enableStaminaBar) {
         movedToSQF = 1;
     };
-    class GVAR(solidStaminaBar) {
-        movedToSQF = 1;
-    };
     class GVAR(performanceFactor) {
         movedToSQF = 1;
     };
