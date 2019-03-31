@@ -1077,7 +1077,7 @@
         </Key>
         <Key ID="STR_ACE_Common_Confirm">
             <English>Confirm</English>
-		    <Key ID="STR_ACE_Common_Never">
+        <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
