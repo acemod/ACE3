@@ -15,6 +15,7 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 
 #define MAX_BLOOD_OBJECTS 500
 #define BLOOD_OBJECT_LIFETIME 900

@@ -39,6 +39,11 @@
     _object allowSprint (_set == 0);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setAnimSpeedCoef), {
+    params ["_object", "_set"];
+    _object setAnimSpeedCoef _set;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
@@ -81,6 +86,11 @@
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
     _vehicle engineOn false;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setMass), {
+    params ["_object", "_mass"];
+    _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit

@@ -76,3 +76,10 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
 if (_target getVariable [QGVAR(isUAV), false]) then {
     createVehicleCrew _target;
 };
+
+// reset mass
+private _mass = _target getVariable [QGVAR(originalMass), 0];
+
+if (_mass != 0) then {
+    [QEGVAR(common,setMass), [_target, _mass], _target] call CBA_fnc_targetEvent;
+};

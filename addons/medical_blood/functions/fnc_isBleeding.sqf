@@ -10,7 +10,7 @@
  * is Bleeding <BOOL>
  *
  * Example:
- * [UNIT] call ace_medical_blood_fnc_isBleeding
+ * [player] call ace_medical_blood_fnc_isBleeding
  *
  * Public: No
  */
@@ -18,6 +18,7 @@
 params ["_unit"];
 
 if (GVAR(useAceMedical)) exitWith {
-    _unit getVariable [QEGVAR(medical,isBleeding), false];
+    IS_BLEEDING(_unit);
 };
-alive _unit && {getDammage _unit > 0.3};
+
+alive _unit && {getDammage _unit > 0.3}

@@ -39,7 +39,7 @@ if (isNil QEFUNC(medical,setUnconscious)) then {
             } else {
                 private _conscious = GETVAR(_unit,ACE_isUnconscious,false);
                 // Function handles locality for me
-                [_unit, !_conscious, 10e10, true] call EFUNC(medical,setUnconscious);
+                [_unit, !_conscious, 10e10] call EFUNC(medical,setUnconscious);
             };
         };
     };
