@@ -32,7 +32,8 @@ PREP_RECOMPILE_END;
         if (!GVAR(keepEngineRunning)) exitWith {};
         if (_unit == ACE_player && {_position == "driver"} && {_vehicle getVariable [QGVAR(engineState), false]}) then {
             [{
-                [QEGVAR(common,engineOn), _this, _this select 0] call CBA_fnc_targetEvent;
+                params ["_unit"];
+                [QEGVAR(common,engineOn), _this, _unit] call CBA_fnc_targetEvent;
             }, [_vehicle, true]] call CBA_fnc_execNextFrame;
         };
     }
