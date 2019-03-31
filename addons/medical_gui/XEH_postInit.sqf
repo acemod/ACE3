@@ -18,7 +18,7 @@ GVAR(selfInteractionActions) = [];
 
 ["ace_interact_menu_newControllableObject", {
     params ["_type"]; // string of the object's classname
-    if (!(_type isKindOf "CaManBase")) exitWith {};
+    if (!(_type isKindOf "CAManBase")) exitWith {};
     {
         _x set [0, _type];
         _x call EFUNC(interact_menu,addActionToClass);
