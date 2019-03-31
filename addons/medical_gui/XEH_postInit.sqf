@@ -16,7 +16,7 @@ GVAR(selfInteractionActions) = [];
 [] call FUNC(addTreatmentActions);
 [] call FUNC(collectActions);
 
-["ace_interact_menu_newControllableObject", {
+[QEGVAR(interact_menu,newControllableObject), {
     params ["_type"]; // string of the object's classname
     if (!(_type isKindOf "CAManBase")) exitWith {};
     {
