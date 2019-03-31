@@ -33,7 +33,7 @@ PREP_RECOMPILE_END;
         if (_unit == ACE_player && {_position == "driver"} && {_vehicle getVariable [QGVAR(engineState), false]}) then {
             [{
                 params ["_vehicle"];
-                [QEGVAR(common,engineOn), _this, _unit] call CBA_fnc_targetEvent;
+                [QEGVAR(common,engineOn), _this, _vehicle] call CBA_fnc_targetEvent;
             }, [_vehicle, true]] call CBA_fnc_execNextFrame;
         };
     }
