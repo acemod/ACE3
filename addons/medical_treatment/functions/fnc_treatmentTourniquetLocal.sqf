@@ -24,3 +24,5 @@ private _tourniquets = GET_TOURNIQUETS(_target);
 _tourniquets set [_partIndex, CBA_missionTime];
 
 _target setVariable [VAR_TOURNIQUET, _tourniquets, true];
+
+[_target] call EFUNC(medical_status,updateWoundBloodLoss);
