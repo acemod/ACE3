@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-!(_unit getVariable ["ACE_isUnconscious", false]) && alive _unit && !(_unit getVariable ["ACE_isDead", false]) // return
+alive _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}

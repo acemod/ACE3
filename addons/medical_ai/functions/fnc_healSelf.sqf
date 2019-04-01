@@ -18,12 +18,12 @@
 // Player will have to do this manually of course
 if ([_this] call EFUNC(common,isPlayer)) exitWith {};
 // Can't heal self when unconscious
-if (_this getVariable ["ACE_isUnconscious", false]) exitWith {};
+if IS_UNCONSCIOUS(_this) exitWith {};
 // Check if we're still treating
 if ((_this getVariable [QGVAR(treatmentOverAt), CBA_missionTime]) > CBA_missionTime) exitWith {};
 
-private _needsBandaging = ([_this] call EFUNC(medical,getBloodLoss)) > 0;
-private _needsMorphine  = (_this getVariable [QEGVAR(medical,pain), 0]) > 0.2;
+private _needsBandaging = GET_BLOOD_LOSS(_this) > 0;
+private _needsMorphine  = GET_PAIN(_this) > 0.2;
 
 switch (true) do {
     case _needsBandaging: {
@@ -35,8 +35,8 @@ switch (true) do {
                 _index
             };
         } forEach _openWounds;
-        private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
-        [_this, "Bandage", _selection] call EFUNC(medical,treatmentAdvanced_bandageLocal);
+        private _selection = ALL_BODY_PARTS select _partIndex;
+        [_this, "BasicBandage", _selection] call EFUNC(medical_treatment,treatmentBandageLocal);
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is bandaging selection %2", _this, _selection];
@@ -47,7 +47,7 @@ switch (true) do {
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 5];
     };
     case _needsMorphine: {
-        [_this] call EFUNC(medical,treatmentBasic_morphineLocal);
+        [_this, "Morphine", 2] call EFUNC(medical_treatment,treatmentMedicationLocal);
         [_this, false, true] call FUNC(playTreatmentAnim);
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
