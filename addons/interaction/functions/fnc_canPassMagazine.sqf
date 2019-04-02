@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if unit has a spare magazine for the specified weapon.
@@ -15,16 +16,14 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_player", "_target", "_weapon"];
 
 if (!GVAR(enableMagazinePassing)) exitWith {false};
 if (((vehicle _target) != _target) && {(vehicle _target) != (vehicle _player)}) exitWith {false};
 
-private _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-{
+private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
+
+(magazinesAmmoFull _player) findIf {
     _x params ["_className", "", "_loaded"];
-    if ((_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}) exitWith {true};
-    false
-} foreach (magazinesAmmoFull _player);
+    (_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}
+} > -1

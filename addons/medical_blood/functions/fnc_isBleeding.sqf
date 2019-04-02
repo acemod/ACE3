@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if is bleeding
@@ -9,11 +10,10 @@
  * is Bleeding <BOOL>
  *
  * Example:
- * [UNIT] call ace_medical_blood_fnc_isBleeding
+ * [player] call ace_medical_blood_fnc_isBleeding
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

@@ -65,6 +65,7 @@ class CfgAmmo {
         GVAR(size) = 0;
     };
 
+    // "The SLAM has an anti-tamper feature that is only active in the bottom- and side-attack modes."
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
         GVAR(explodeOnDefuseChance) = 1;
@@ -77,10 +78,11 @@ class CfgAmmo {
     };
     class ACE_SLAMDirectionalMine_Timer_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "TimeTrigger";
+        GVAR(explodeOnDefuseChance) = 0;
     };
     class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "ACE_MagneticTrigger";
-        GVAR(explodeOnDefuseChance) = 0;
+        GVAR(explodeOnDefuseChance) = 1;
         explosionAngle = 360;
         indirectHitRange = 1;
         mineInconspicuousness = 25;
@@ -165,16 +167,16 @@ class CfgAmmo {
     class ACE_IEDLandSmall_Range_Ammo: IEDLandBig_Remote_Ammo {
         mineTrigger = "RangeTriggerShort";
     };
-    
+
     // Orange DLC:
-    class APERSMineDispenser_Ammo: PipeBombBase {        
+    class APERSMineDispenser_Ammo: PipeBombBase {
         GVAR(magazine) = "APERSMineDispenser_Mag";
         GVAR(Explosive) = "APERSMineDispenser_Ammo_Scripted"; // triggerWhenDestroyed = 1;
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.0, -0.05, 0.15};
     };
     class APERSMine_Range_Ammo;
-    class TrainingMine_Ammo: APERSMine_Range_Ammo {    
+    class TrainingMine_Ammo: APERSMine_Range_Ammo {
         GVAR(magazine) = "TrainingMine_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.15};

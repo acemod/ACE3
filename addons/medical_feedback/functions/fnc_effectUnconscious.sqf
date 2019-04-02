@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles the unconscious effect.
@@ -8,8 +9,13 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [true, 0] call ace_medical_feedback_fnc_effectUnconscious
+ *
+ * Public: No
  */
-#include "script_component.hpp"
+
 params ["_enable", "_mode"];
 
 switch (_mode) do {

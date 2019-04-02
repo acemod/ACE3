@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Parse the ACE_Medical_Advanced config for all injury types.
@@ -8,9 +9,11 @@
  * ReturnValue:
  * None
  *
+ * Example:
+ * [] call ace_medical_damage_fnc_parseConfigForInjuries
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _injuriesConfigRoot = configFile >> "ACE_Medical_Injuries";
 
@@ -33,7 +36,7 @@ private _classID = 0;
     private _causes = GET_ARRAY(_entry >> "causes",[]);
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
 
-    if (count _causes > 0) then {
+    if !(_causes isEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
         GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping];
         _classID = _classID + 1;

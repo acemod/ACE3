@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Gives the unit a second chance and prevents death for 1 second.
@@ -8,9 +9,12 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player] call ace_medical_statemachine_fnc_transitionSecondChance
+ *
  * Public: No
  */
-#include "script_component.hpp"
+
 params ["_unit"];
 
 _unit setVariable [QEGVAR(medical,deathBlocked), true];

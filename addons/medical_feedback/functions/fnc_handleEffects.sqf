@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles any visual effects of medical.
@@ -8,8 +9,12 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_medical_feedback_fnc_handleEffects
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 
 if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false, 0] call FUNC(effectUnconscious);

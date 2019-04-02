@@ -1,18 +1,22 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handle wounds received event.
  *
  * Arguments:
  * 0: unit <OBJECT>
- * 1: caused by <OBJECT>
+ * 1: bodyPart <String>
  * 2: damage <NUMBER>
+ * 3: shooter <OBJECT>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * [player, "Body", 0.5, badGuy] call ace_medical_blood_fnc_handleWoundReceived
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "", "_damage", "_shooter"];
 

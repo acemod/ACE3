@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Cached Check if the treatment action can be performed.
@@ -12,12 +13,10 @@
  * Can Treat <BOOL>
  *
  * Example:
- * [bob, kevin, "selection", "classname"] call ACE_medical_treatment_fnc_canTreatCached
+ * [bob, kevin, "selection", "classname"] call ace_medical_treatment_fnc_canTreatCached
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["", "_target", "_selection", "_classname"];
 

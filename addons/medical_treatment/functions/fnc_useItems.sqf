@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use Equipment items if any is available. Priority: 1) Medic, 2) Patient. If in vehicle: 3) Crew
@@ -12,11 +13,10 @@
  * 1: Unit <OBJECT>
  *
  * Example:
- * [unit, patient, ["bandage"]] call ACE_medical_treatment_fnc_useItems
+ * [unit, patient, ["bandage"]] call ace_medical_treatment_fnc_useItems
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 #define HAS_USED_ITEM(itemUsedInfo)    (itemUsedInfo select 0)
 #define GET_ITEM_USED_BY(itemUsedInfo) (itemUsedInfo select 1)

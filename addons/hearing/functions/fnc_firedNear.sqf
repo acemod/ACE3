@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Handles deafness due to large-caliber weapons going off near the player.
@@ -20,7 +21,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 

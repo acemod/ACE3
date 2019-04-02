@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Checks if a unit is in a designated medical facility
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -44,7 +44,7 @@ private _medicalFacility =
 
 private _objects = (lineIntersectsWith [_unit modelToWorldVisual [0, 0, (_eyePos select 2)], _unit modelToWorldVisual [0, 0, (_eyePos select 2) +10], _unit]);
 {
-    if (((typeOf _x) in _medicalFacility) || (_x getVariable [QEGVAR(medical,isMedicalFacility),false])) exitWith {
+    if (((typeOf _x) in _medicalFacility) || {_x getVariable [QEGVAR(medical,isMedicalFacility),false]}) exitWith {
         _isInBuilding = true;
     };
 } forEach _objects;
@@ -52,7 +52,7 @@ private _objects = (lineIntersectsWith [_unit modelToWorldVisual [0, 0, (_eyePos
 if (!_isInBuilding) then {
     _objects = _unit nearObjects 7.5;
     {
-        if (((typeOf _x) in _medicalFacility) || (_x getVariable [QEGVAR(medical,isMedicalFacility),false])) exitWith {
+        if (((typeOf _x) in _medicalFacility) || {_x getVariable [QEGVAR(medical,isMedicalFacility),false]}) exitWith {
             _isInBuilding = true;
         };
     } forEach _objects;

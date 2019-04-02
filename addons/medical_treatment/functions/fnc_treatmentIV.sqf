@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Patient IV Treatment callback
@@ -12,10 +13,8 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Public: Yes
+ * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_bodyPart", "_className", "_items"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
@@ -18,8 +19,6 @@
  *
  * Public: yes
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 // only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {
@@ -33,17 +32,20 @@ if ((isNull _unit) || {!alive _unit} || {!(_unit isKindOf "CAManBase")}) exitWit
     ERROR_3("Bad Unit %1 [Type: %2] [Alive: %3]",_unit,typeOf _unit,alive _unit);
     false
 };
+
 if (!local _unit) exitWith {
     [QEGVAR(medical,setUnconscious), [_unit, _knockOut], _unit] call CBA_fnc_targetEvent;
     true
 };
+
 if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
     WARNING_2("setUnconscious called with no change [Unit %1] [State [%2]", _unit, _knockOut);
     false
 };
 
-private _beforeState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-
+if (currentWeapon _unit != primaryWeapon _unit) then {
+    _unit selectWeapon primaryWeapon _unit;
+};
 
 if (_knockOut) then {
     if (_minWaitingTime > 0) then {
@@ -51,7 +53,7 @@ if (_knockOut) then {
             // If unit still has stable vitals at min waiting time, then force wake up
             [{
                 params [["_unit", objNull]];
-                if ((alive _unit) && {_unit call FUNC(hasStableVitals)}) then {
+                if ((alive _unit) && {_unit call EFUNC(medical_status,hasStableVitals)}) then {
                     TRACE_1("Doing delay wakeup",_unit);
                     [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
                 } else {

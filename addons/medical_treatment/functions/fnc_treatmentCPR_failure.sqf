@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zakant
  * Handles the failure of the CPR treatment.
@@ -11,7 +12,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Calculate the blood pressure of a unit.
@@ -10,12 +11,10 @@
  * 1: BloodPressure High <NUMBER>
  *
  * Example:
- * [player] call ace_medical_fnc_getBloodPressure
+ * [player] call ace_medical_status_fnc_getBloodPressure
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // Value is taken because with cardic output and resistance at default values, it will put blood pressure High at 120.
 #define MODIFIER_BP_HIGH    13.7142792

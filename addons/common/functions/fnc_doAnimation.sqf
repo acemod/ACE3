@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Execute an animation. This is used to not break things like the unconsciousness animation.
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_animation", ["_priority", 0]];
 TRACE_4("params",_unit,_animation,_priority);

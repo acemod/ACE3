@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Replace a (dead) body by a body bag
@@ -10,11 +11,10 @@
  * body bag (will return objNull when run where target is not local) <OBJECT>
  *
  * Example:
- * [player, cursorTarget] call ACE_medical_treatment_fnc_actionPlaceInBodyBag
+ * [player, cursorTarget] call ace_medical_treatment_fnc_actionPlaceInBodyBag
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 TRACE_2("params",_caller,_target);

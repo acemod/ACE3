@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if a unit is in a stable condition
@@ -9,12 +10,10 @@
  * Is in stable condition <BOOL>
  *
  * Example:
- * [player] call ace_medical_fnc_isInStableCondition
+ * [player] call ace_medical_status_fnc_isInStableCondition
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

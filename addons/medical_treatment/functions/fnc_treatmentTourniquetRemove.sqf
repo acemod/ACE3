@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Action for removing the tourniquet on specified selection
@@ -10,9 +11,8 @@
  * Return Value:
  * None
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_bodyPart"];
 TRACE_3("params",_caller,_target,_bodyPart);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Initializes unit variables.
@@ -9,13 +10,14 @@
  * None
  *
  * Example:
- * [bob] call ACE_medical_fnc_init
+ * [bob] call ace_medical_status_fnc_init
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
+
+if (!local _unit) exitWith {};
 
 if (damage _unit > 0) then {
     _unit setDamage 0;

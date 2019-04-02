@@ -1,30 +1,27 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Interface to allow external modules to affect the pain level
+ * Public interface to allow external modules to safely adjust pain levels.
  *
  * Arguments:
  * 0: The patient <OBJECT>
- * 1: Desired pain level (0 .. 1) <NUMBER>
+ * 1: Added ammount of pain (can be negative) <NUMBER>
  *
  * Return Value:
- * nothing
+ * The new pain level <NUMBER>
  *
  * Example:
  * [guy, 0.5] call ace_medical_fnc_adjustPainLevel
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
-params ["_unit", "_desiredPainLevel"];
+params ["_unit", "_addedPain"];
 
-if (!local _unit) exitWith { ERROR("unit is not local"); };
-
-TRACE_2("adjustPainLevel",_unit,_desiredPainLevel);
-
-_desiredPainLevel = _desiredPainLevel * GVAR(painCoefficient);
+if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit); };
 
 private _pain = GET_PAIN(_unit);
-_pain = 0 max (_pain max _desiredPainLevel) min 1;
+
+_pain = 0 max (_pain + _addedPain) min 1;
 
 _unit setVariable [VAR_PAIN, _pain];

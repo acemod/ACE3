@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * IV Treatment local callback
@@ -10,10 +11,8 @@
  * Return Value:
  * None
  *
- * Public: Yes
+ * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_treatmentClassname", "_bodyPart"];
 

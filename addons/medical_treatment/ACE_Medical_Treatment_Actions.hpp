@@ -4,6 +4,7 @@ class GVAR(Actions) {
     class BasicBandage {
         displayName = CSTRING(Bandage);
         displayNameProgress = CSTRING(Bandaging);
+        icon = QPATHTOEF(medical_gui,ui\bandage.paa);
         category = "bandage";
         treatmentLocations[] = {"All"};
         allowedSelections[] = {"All"};
@@ -12,15 +13,12 @@ class GVAR(Actions) {
         treatmentTime = QFUNC(getBandageTime);
         treatmentTimeSelfCoef = 1;
         items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
-        condition = QUOTE(!EGVAR(medical,advancedBandages));
+        condition = QFUNC(canBandage);
         itemConsumed = 1;
         callbackSuccess = QFUNC(treatmentBandage);
         callbackFailure = "";
         callbackProgress = "";
 
-        animationPatient = "";
-        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-        animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
         animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
         animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
@@ -33,7 +31,6 @@ class GVAR(Actions) {
     class FieldDressing: BasicBandage {
         displayName = CSTRING(Actions_FieldDressing);
         items[] = {"ACE_fieldDressing"};
-        condition = QEGVAR(medical,advancedBandages);
         litter[] = {
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
@@ -41,8 +38,8 @@ class GVAR(Actions) {
     };
     class PackingBandage: BasicBandage {
         displayName = CSTRING(Actions_PackingBandage);
+        icon = QPATHTOEF(medical_gui,ui\packing_bandage.paa);
         items[] = {"ACE_packingBandage"};
-        condition = QEGVAR(medical,advancedBandages);
         litter[] = {
             {"All", "", {"ACE_MedicalLitter_packingBandage"}},
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -52,7 +49,6 @@ class GVAR(Actions) {
     class ElasticBandage: BasicBandage {
         displayName = CSTRING(Actions_ElasticBandage);
         items[] = {"ACE_elasticBandage"};
-        condition = QEGVAR(medical,advancedBandages);
         litter[] = {
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
             {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
@@ -61,7 +57,6 @@ class GVAR(Actions) {
     class QuikClot: BasicBandage {
         displayName = CSTRING(Actions_QuikClot);
         items[] = {"ACE_quikclot"};
-        condition = QEGVAR(medical,advancedBandages);
         litter[] = {
             {"All", "", {"ACE_MedicalLitter_QuickClot"}},
             {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -73,6 +68,7 @@ class GVAR(Actions) {
     class Tourniquet: BasicBandage {
         displayName = CSTRING(Apply_Tourniquet);
         displayNameProgress = CSTRING(Applying_Tourniquet);
+        icon = QPATHTOEF(medical_gui,ui\tourniquet.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_tourniquet"};
         treatmentTime = 7;
@@ -92,6 +88,7 @@ class GVAR(Actions) {
     class Morphine: FieldDressing {
         displayName = CSTRING(Inject_Morphine);
         displayNameProgress = CSTRING(Injecting_Morphine);
+        icon = QPATHTOEF(medical_gui,ui\auto_injector.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         category = "medication";
         items[] = {"ACE_morphine"};
@@ -105,14 +102,14 @@ class GVAR(Actions) {
     class Adenosine: Morphine {
         displayName = CSTRING(Inject_Adenosine);
         displayNameProgress = CSTRING(Injecting_Adenosine);
-        condition = QEGVAR(medical,advancedMedication);
+        condition = QGVAR(advancedMedication);
         items[] = {"ACE_adenosine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
     };
     class Atropine: Morphine {
         displayName = CSTRING(Inject_Atropine);
         displayNameProgress = CSTRING(Injecting_Atropine);
-        condition = QEGVAR(medical,advancedMedication);
+        condition = QGVAR(advancedMedication);
         items[] = {"ACE_atropine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
     };
@@ -129,8 +126,9 @@ class GVAR(Actions) {
     class BloodIV: BasicBandage {
         displayName = CSTRING(Actions_Blood4_1000);
         displayNameProgress = CSTRING(Transfusing_Blood);
+        icon = QPATHTOEF(medical_gui,ui\iv.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        allowSelfTreatment = QEGVAR(medical,allowSelfIV);
+        allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
         requiredMedic = 1;
         treatmentTime = 12;
@@ -181,17 +179,17 @@ class GVAR(Actions) {
     class Diagnose: BasicBandage {
         displayName = CSTRING(Actions_Diagnose);
         displayNameProgress = CSTRING(Actions_Diagnosing);
+        icon = "";
         category = "examine";
         treatmentLocations[] = {"All"};
         allowedSelections[] = {"Head", "Body"};
         requiredMedic = 0;
         treatmentTime = 2.5;
         items[] = {};
-        condition = QUOTE(!EGVAR(medical,advancedDiagnose));
+        condition = QUOTE(!GVAR(advancedDiagnose));
         callbackSuccess = QFUNC(actionDiagnose);
         callbackFailure = "";
         callbackProgress = "";
-        animationPatient = "";
         animationCaller = ""; // TODO
         itemConsumed = 0;
         litter[] = {};
@@ -200,7 +198,7 @@ class GVAR(Actions) {
         displayName = CSTRING(Actions_CheckPulse);
         displayNameProgress = CSTRING(Check_Pulse_Content);
         allowedSelections[] = {"All"};
-        condition = QEGVAR(medical,advancedDiagnose);
+        condition = QGVAR(advancedDiagnose);
         callbackSuccess = QFUNC(actionCheckPulse);
         animationCallerProne = "";
         animationCallerSelfProne = "";
@@ -223,6 +221,7 @@ class GVAR(Actions) {
     class BodyBag: BasicBandage {
         displayName = CSTRING(PlaceInBodyBag);
         displayNameProgress = CSTRING(PlacingInBodyBag);
+        icon = QPATHTOEF(medical_gui,ui\bodybag.paa);
         category = "advanced";
         treatmentLocations[] = {"All"};
         allowSelfTreatment = 0;
@@ -233,14 +232,13 @@ class GVAR(Actions) {
         callbackSuccess = QFUNC(actionPlaceInBodyBag);
         callbackFailure = "";
         callbackProgress = "";
-        animationPatient = "";
-        animationPatientUnconscious = "";
         itemConsumed = 1;
         litter[] = {};
     };
     class CPR: BasicBandage {
         displayName = CSTRING(Actions_CPR);
         displayNameProgress = CSTRING(Actions_PerformingCPR);
+        icon = "";
         category = "advanced";
         treatmentLocations[] = {"All"};
         allowedSelections[] = {"Body"};
@@ -253,8 +251,6 @@ class GVAR(Actions) {
         callbackFailure = QFUNC(treatmentCPR_failure);
         callbackProgress = QFUNC(treatmentCPR_progress);
         callbackStart = QFUNC(treatmentCPR_start);
-        animationPatient = "";
-        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
         animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         animationCallerSelf = "";
@@ -266,6 +262,7 @@ class GVAR(Actions) {
     class SurgicalKit: FieldDressing {
         displayName = CSTRING(Use_SurgicalKit);
         displayNameProgress = CSTRING(Stitching);
+        icon = QPATHTOEF(medical_gui,ui\surgical_kit.paa);
         category = "advanced";
         items[] = {"ACE_surgicalKit"};
         treatmentLocations[] = {QEGVAR(medical,useLocation_SurgicalKit)};
@@ -281,6 +278,7 @@ class GVAR(Actions) {
     class PersonalAidKit: BasicBandage {
         displayName = CSTRING(Use_Aid_Kit);
         displayNameProgress = CSTRING(TreatmentAction);
+        icon = "";
         category = "advanced";
         condition = QUOTE(_target call EFUNC(medical_status,isInStableCondition));
         items[] = {"ACE_personalAidKit"};
@@ -289,8 +287,6 @@ class GVAR(Actions) {
         treatmentTime = QUOTE(_target call FUNC(healTime));
         callbackSuccess = QFUNC(treatmentFullHeal);
         itemConsumed = QEGVAR(medical,consumeItem_PAK);
-        animationPatient = "";
-        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
         animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
         animationCallerSelf = "";

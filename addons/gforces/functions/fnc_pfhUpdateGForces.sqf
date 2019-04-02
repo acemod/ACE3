@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi and esteldunedain
  * Calculates average g-forces and triggers g-effects
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
- #include "script_component.hpp"
 
 // Update the g-forces at constant mission time intervals (taking accTime into account)
 if ((CBA_missionTime - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};
@@ -80,14 +80,14 @@ GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[10,10,0,0,
 if !(ACE_player getVariable ["ACE_isUnconscious", false]) then {
     if (_average > 0.30 * _gBlackOut) then {
         private _strength = ((_average - 0.30 * _gBlackOut) / (0.70 * _gBlackOut)) max 0;
-        GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[2*(1-_strength),2*(1-_strength),0,0,0,0.1,0.5]];
+        GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[2 * (1 - _strength),2 * (1 - _strength),0,0,0,0.1,0.5]];
         addCamShake [_strength, 1, 15];
     } else {
         private _gRedOut = MINVIRTUALG / _classCoef;
 
         if (_average < -0.30 * _gRedOut) then {
             private _strength = ((abs _average - 0.30 * _gRedOut) / (0.70 * _gRedOut)) max 0;
-            GVAR(GForces_CC) ppEffectAdjust [1,1,0,[1,0.2,0.2,1],[0,0,0,0],[1,1,1,1],[2*(1-_strength),2*(1-_strength),0,0,0,0.1,0.5]];
+            GVAR(GForces_CC) ppEffectAdjust [1,1,0,[1,0.2,0.2,1],[0,0,0,0],[1,1,1,1],[2 * (1 - _strength),2 * ( 1 -_strength),0,0,0,0.1,0.5]];
             addCamShake [_strength / 1.5, 1, 15];
         };
     };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Internal function used by ace_ai_fnc_garrison to make the units move to the positions it picked.
@@ -15,7 +16,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params [ ["_unitMoveList", nil, [[]]] ];
 
@@ -53,10 +53,41 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
             {
                 _x params  ["_unit", "_pos"];
 
-                // Check if unit is alive or even existing
-                if (!alive _unit) then {
+                private _fnc_attemptFailed = {
+                    if (_failSafeRemainingAttemps == 0 ) then {
+                        _unit setVariable [QGVAR(garrisonMove_failSafe), nil, true];
+                        _unit setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
+                        [QGVAR(unGarrison), [[_unit]], _unit] call CBA_fnc_targetEvent;
+                        _unitMoveList deleteAt (_unitMoveList find _x);
+                        LOG("garrisonMove PFH: all moving commands failed | restoring AI capabilities");
+
+                    } else {
+                        _unit setVariable [QGVAR(garrisonMove_failSafe), [_failSafeTimer + 15, _failSafeRemainingAttemps - 1]];
+                        [QGVAR(doMove), [[[_unit, _pos]]], _unit] call CBA_fnc_targetEvent;
+                        LOG("garrisonMove PFH unitReady: unit not close enough | Sending another doMove command");
+                    };
+                };
+
+                private _fnc_attemptSuccessful = {
+                    _unit setVariable [QGVAR(garrisonMove_failSafe), nil, true];
+                    _unit setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
+                    _unit setVariable [QGVAR(garrisonned), true, true];
                     _unitMoveList deleteAt (_unitMoveList find _x);
-                    LOG(format [ARR_2("garrisonMove PFH: unit dead or deleted | %1 units left", count _unitMoveList)]);
+
+                    [QGVAR(AISection), [[_unit], ["PATH"], false], _unit] call CBA_fnc_targetEvent;
+                    [QGVAR(AISection), [[_unit], ["FSM"], true], _unit] call CBA_fnc_targetEvent;
+
+                    if ({(_x select 0) in units _unit && {!isPlayer (_x select 0)}} count _unitMoveList == 0) then {
+                        [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
+                    };
+
+                    LOG(format [ARR_2("garrisonMove PFH: unit in position | %1 units left", count _unitMoveList)]);
+                };
+
+                // Check if unit is alive or even existing
+                if (!alive _unit || {_unit getVariable [QGVAR(garrisoned), false]}) then {
+                    _unitMoveList deleteAt (_unitMoveList find _x);
+                    LOG(format [ARR_2("garrisonMove PFH: unit dead, deleted or garrisoned via TP | %1 units left", count _unitMoveList)]);
 
                 } else {
                     private _unitPos = getPos _unit;
@@ -68,38 +99,15 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
 
                     if (unitReady _unit) then {
                         // Check for distance, doMove and AI are moody and may stop for no reason, within 6 meters and ready should be fine
-                        if (_unitPos distance _pos < 3) then { 
-                            _unit setVariable [QGVAR(garrisonMove_failSafe), nil, true];
-                            _unit setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
-                            _unit setVariable [QGVAR(garrisonned), true, true];
-                            _unitMoveList deleteAt (_unitMoveList find _x);
-
-                            [QGVAR(AISection), [[_unit], ["PATH"], false], _unit] call CBA_fnc_targetEvent;
-                            [QGVAR(AISection), [[_unit], ["FSM"], true], _unit] call CBA_fnc_targetEvent;
-
-                            if ({(_x select 0) in units _unit && {!isPlayer (_x select 0)}} count _unitMoveList == 0) then {
-                                [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
-                            };
-                            
-                            LOG(format [ARR_2("garrisonMove PFH: unit in position | %1 units left", count _unitMoveList)]);
+                        if (_unitPos distance _pos < 1.5) then {
+                            call _fnc_attemptSuccessful;
 
                         } else {
                             // Tell the unit to move if an order wasn't given within 30s, avoid doMove spam
                            (_unit getVariable [QGVAR(garrisonMove_failSafe), [CBA_missionTime, 5]]) params ["_failSafeTimer", "_failSafeRemainingAttemps"];
 
                             if (_failSafeTimer <= CBA_missionTime) then {
-                                if (_failSafeRemainingAttemps == 0 ) then {
-                                    _unit setVariable [QGVAR(garrisonMove_failSafe), nil, true];
-                                    _unit setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
-                                    [QGVAR(unGarrison), [[_unit]], _unit] call CBA_fnc_targetEvent;
-                                    _unitMoveList deleteAt (_unitMoveList find _x);
-                                    LOG("garrisonMove PFH unitReady: all moving commands failed | restoring AI capabilities");
-
-                                } else {
-                                    _unit setVariable [QGVAR(garrisonMove_failSafe), [_failSafeTimer + 15, _failSafeRemainingAttemps - 1]];
-                                    [QGVAR(doMove), [[[_unit, _pos]]], _unit] call CBA_fnc_targetEvent;
-                                    LOG("garrisonMove PFH unitReady: unit not close enough | Sending another doMove command");
-                                };
+                                call _fnc_attemptFailed;
                             };
                         };
                     } else {
@@ -107,30 +115,12 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
 
                         // AI may sometimes not be able to report unitReady, this is to avoid the PFH running forever
                         switch true do { 
-                            case ((_unitPosTimer + 15) < CBA_missionTime && {(_unitPos distance _pos) < 3}) : {
-                                TRACE_1("case 1",_unit);
-                                _unit setVariable [QGVAR(garrisonMove_failSafe), nil, true];
-                                _unit setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
-                                _unit setVariable [QGVAR(garrisonned), true, true];
-                                _unitMoveList deleteAt (_unitMoveList find _x);
-
-                                [QGVAR(AISection), [[_unit], ["PATH"], false], _unit] call CBA_fnc_targetEvent;
-                                [QGVAR(AISection), [[_unit], ["FSM"], true], _unit] call CBA_fnc_targetEvent;
-
-                                if ({(_x select 0) in units _unit && {!isPlayer (_x select 0)}} count _unitMoveList == 0) then {
-                                    [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
-                                };
-
-                                LOG(format [ARR_2("garrisonMove PFH unitNotReady: unit in position | %1 units left", count _unitMoveList)]);
+                            case ((_unitPos distance _pos) < 1.5) : {
+                                call _fnc_attemptSuccessful;
                             };
 
-                            case ((_unitPosTimer + 15) < CBA_missionTime && {_unitOldPos distance _unitPos < 0.5}) : {
-                                TRACE_3("case 2",_unit, ((_unitPosTimer + 15) < CBA_missionTime), (_unitOldPos distance _unitPos < 0.5));
-                                _unit setVariable [QGVAR(garrisonMove_failSafe), nil, true];
-                                _unit setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
-                                [QGVAR(unGarrison), [[_unit]], _unit] call CBA_fnc_targetEvent;
-                                _unitMoveList deleteAt (_unitMoveList find _x);
-                                LOG("garrisonMove PFH unitNotReady: all moving commands failed | restoring AI capabilities");
+                            case ((_unitPosTimer + 5) < CBA_missionTime && {_unitOldPos distance _unitPos < 0.5}) : {
+                                call _fnc_attemptFailed;
                             };
 
                             case (_unitOldPos distance _unitPos < 0.5) : {};

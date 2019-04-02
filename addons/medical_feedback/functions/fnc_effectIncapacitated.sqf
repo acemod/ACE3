@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Creates the incapacitation effect.
@@ -7,8 +8,12 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_medical_feedback_fnc_effectIncapacitated
+ *
+ * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(ppIncapacitationBlur)  ppEffectEnable true;
 GVAR(ppIncapacitationGlare) ppEffectEnable true;

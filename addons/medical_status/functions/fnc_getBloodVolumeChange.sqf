@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Calculates the blood volume change and decreases the IVs given to the unit.
@@ -11,11 +12,10 @@
  * Blood volume change (liters per second) <NUMBER>
  *
  * Example:
- * [player, 1, true] call ACE_medical_status_fnc_getBloodVolumeChange
+ * [player, 1, true] call ace_medical_status_fnc_getBloodVolumeChange
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_deltaT", "_syncValues"];
 
@@ -30,7 +30,7 @@ if (!isNil {_unit getVariable QEGVAR(medical,ivBags)}) then {
         _x params ["_bagVolumeRemaining", "_type", "_bodyPart"];
 
         if (_tourniquets select _bodyPart == 0) then {
-            private _bagChange = (_deltaT * EGVAR(medical,ivFlowRate) * IV_CHANGE_PER_SECOND) min _bagVolumeRemaining; // absolute value of the change in miliLiters
+            private _bagChange = (_deltaT * GVAR(ivFlowRate) * IV_CHANGE_PER_SECOND) min _bagVolumeRemaining; // absolute value of the change in miliLiters
             _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
             _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 1000);
         };

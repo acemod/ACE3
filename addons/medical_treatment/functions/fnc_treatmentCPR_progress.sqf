@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zakant
  * Handles the progress of the CPR treatment.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_caller", "_target"];
@@ -25,4 +25,4 @@ if !IN_CRDC_ARRST(_target) exitWith {false};
 
 [_target] call FUNC(calculateBlood); // Calculate blood volume. If their is no pulse, nothing happens!
 
-(alive _target) // CPR may only proceed if the patient is not dead
+true

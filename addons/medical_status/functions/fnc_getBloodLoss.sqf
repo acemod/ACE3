@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Calculate the total blood loss of a unit.
@@ -9,11 +10,10 @@
  * Total blood loss of unit <NUMBER>
  *
  * Example:
- * [bob] call ACE_medical_fnc_getBloodLoss
+ * [bob] call ace_medical_status_fnc_getBloodLoss
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

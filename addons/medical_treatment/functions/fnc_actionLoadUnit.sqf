@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Action for loading an unconscious or dead unit in the nearest vehicle, or _vehicle if given.
@@ -11,11 +12,10 @@
  * Vehicle they are loaded into (objNull on failure) <OBJECT>
  *
  * Example:
- * [bob, kevin] call ACE_medical_treatment_treatment_fnc_actionLoadUnit
+ * [bob, kevin] call ace_medical_treatment_treatment_fnc_actionLoadUnit
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", ["_vehicle", objNull]];
 
@@ -32,5 +32,11 @@ if ([_target] call EFUNC(medical_status,isBeingDragged)) then {
 };
 
 private _vehicle = [_caller, _target, _vehicle] call EFUNC(common,loadPerson);
+if (!isNull _vehicle) then {
+    private _hint = LSTRING(loadedInto);
+    private _itemName = [_target, false, true] call EFUNC(common,getName);
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
+};
 
 _vehicle

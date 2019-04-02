@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.
@@ -11,12 +12,14 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, "Body", 0.5, "bullet"] call ace_medical_damage_fnc_woundsHandlerSQF
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
-TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
+TRACE_4("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
 private _bodyPartN = ALL_BODY_PARTS find toLower _bodyPart;
@@ -26,17 +29,14 @@ if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
 };
 
+if (isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage} ) then {
+    _typeOfDamage = "unknown";
+};
+
 // Get the damage type information. Format: [typeDamage thresholds, selectionSpecific, woundTypes]
 // WoundTypes are the available wounds for this damage type. Format [[classID, selections, bleedingRate, pain], ..]
 private _damageTypeInfo = [GVAR(allDamageTypesData) getVariable _typeOfDamage] param [0, [[], false, []]];
 _damageTypeInfo params ["_thresholds", "_isSelectionSpecific", "_woundTypes"];
-
-// It appears we are dealing with an unknown type of damage.
-if (_woundTypes isEqualTo []) then {
-    // grabbing the configuration for unknown damage type
-    _damageTypeInfo = [GVAR(allDamageTypesData) getVariable "unknown"] param [0, [[], false, []]];
-    _woundTypes = _damageTypeInfo select 2;
-};
 
 // find the available injuries for this damage type and damage amount
 private _highestPossibleSpot = -1;
@@ -96,14 +96,14 @@ private _woundsCreated = [];
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
             // Create a new injury. Format [ID, classID, bodypart, percentage treated, bleeding rate]
-            _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
+            private _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
 
             // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
             private _nastinessLikelihood = linearConversion [0, 20, (_woundDamage / _thresholdWoundCount), 0.5, 30, true];
             private _bleedingModifier = 0.25 + 8 * exp ((random [-4.5, -5, -6]) / _nastinessLikelihood);
             private _painModifier = 0.05 + 2 * exp (-2 / _nastinessLikelihood);
 
-            _bleeding = _injuryBleedingRate * _bleedingModifier;
+            private _bleeding = _injuryBleedingRate * _bleedingModifier;
             private _pain = _injuryPain * _painModifier;
             _painLevel = _painLevel + _pain;
 
@@ -182,7 +182,6 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
-[_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
 [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {

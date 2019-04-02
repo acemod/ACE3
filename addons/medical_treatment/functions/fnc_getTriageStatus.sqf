@@ -1,28 +1,32 @@
+#include "script_component.hpp"
 /*
- * Author: Glowbal
- * Get the triage status and information from a unit
+ * Author: Glowbal, mharis001
+ * Returns the current triage status of the unit.
  *
  * Arguments:
- * 0: The unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * 0: Name <STRING>
- * 1: Status ID <NUMBER>
- * 2: Color <ARRAY <NUMBER>>
+ * Triage info <ARRAY>
+ *  0: Status ID <NUMBER>
+ *  1: Name <STRING>
+ *  2: Color <ARRAY>
+ *  3: Text color <ARRAY>
  *
- * Public: Yes
+ * Example:
+ * [player] call ace_medical_treatment_fnc_getTriageStatus
+ *
+ * Public: No
  */
 
-#include "script_component.hpp"
-
-private ["_unit","_return","_status"];
 params ["_unit"];
-_status = _unit getVariable [QEGVAR(medical,triageLevel), -1];
-_return = switch (_status) do {
-    case 1: {[localize ELSTRING(medical_treatment,Triage_Status_Minor), 1, [0, 0.5, 0, 0.9]]};
-    case 2: {[localize ELSTRING(medical_treatment,Triage_Status_Delayed), 2, [0.7, 0.5, 0, 0.9]]};
-    case 3: {[localize ELSTRING(medical_treatment,Triage_Status_Immediate), 3, [0.4, 0.07, 0.07, 0.9]]};
-    case 4: {[localize ELSTRING(medical_treatment,Triage_Status_Deceased), 4, [0, 0, 0, 0.9]]};
-    default {[localize ELSTRING(medical_treatment,Triage_Status_None), 0, [0, 0, 0, 0.9]]};
+
+private _status = _unit getVariable [QEGVAR(medical,triageLevel), -1];
+
+switch (_status) do {
+    case 1: {[1, localize LSTRING(Triage_Status_Minimal),   [TRIAGE_COLOR_MINIMAL],   [TRIAGE_TEXT_COLOR_MINIMAL]]};
+    case 2: {[2, localize LSTRING(Triage_Status_Delayed),   [TRIAGE_COLOR_DELAYED],   [TRIAGE_TEXT_COLOR_DELAYED]]};
+    case 3: {[3, localize LSTRING(Triage_Status_Immediate), [TRIAGE_COLOR_IMMEDIATE], [TRIAGE_TEXT_COLOR_IMMEDIATE]]};
+    case 4: {[4, localize LSTRING(Triage_Status_Deceased),  [TRIAGE_COLOR_DECEASED],  [TRIAGE_TEXT_COLOR_DECEASED]]};
+    default {[0, localize LSTRING(Triage_Status_None),      [TRIAGE_COLOR_NONE],      [TRIAGE_TEXT_COLOR_NONE]]};
 };
-_return

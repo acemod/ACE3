@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use Equipment if any is available. Priority: 1) Medic, 2) Patient. If in vehicle: 3) Crew
@@ -11,9 +12,8 @@
  * 0: success <BOOL>
  * 1: Unit <OBJECT>
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_medic", "_patient", "_item"];
 

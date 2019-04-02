@@ -1,6 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_ai">
+        <Key ID="STR_ACE_medical_ai_settingCategory">
+            <English>ACE Medical - AI</English>
+        </Key>
+        <Key ID="STR_ACE_medical_ai_enableFor_title">
+            <English>Medic AI</English>
+        </Key>
+        <Key ID="STR_ACE_medical_ai_enableFor_desc">
+            <English>AI will respond to injury and unconsciousness</English>
+        </Key>
         <Key ID="STR_ACE_medical_ai_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
             <German>Nur Server und HC</German>

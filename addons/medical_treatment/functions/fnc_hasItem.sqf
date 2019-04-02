@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the item is present between the patient and the medic
@@ -11,11 +12,10 @@
  * Has the items <BOOL>
  *
  * Example:
- * [bob, patient, "bandage"] call ACE_medical_treatment_fnc_hasItem
+ * [bob, patient, "bandage"] call ace_medical_treatment_fnc_hasItem
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_medic", "_patient", "_item"];
 

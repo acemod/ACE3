@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Adds a heart rate adjustment that will take effect over time.
@@ -11,7 +12,7 @@
  * Return Value:
  * None
  */
-#include "script_component.hpp"
+
 params ["_unit", "_change", "_timeToMaxEffect", "_maxTimeInSystem"];
 
 private _adjustments = _unit getVariable [VAR_HEART_RATE_ADJ,[]];

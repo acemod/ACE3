@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles selection changes on the left panel.
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_control", "_curSel"];
 
@@ -240,7 +240,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             if ((GVAR(currentItems) select 6) != _item) then {
                 removeBackpack GVAR(center);
-                GVAR(center) addBackpack _item;
+                GVAR(center) addBackpackGlobal _item;
                 while {count backpackItems GVAR(center) > 0} do {
                     GVAR(center) removeItemFromBackpack (backpackItems GVAR(center) select 0);
                 }; //--- Remove default config contents
@@ -412,7 +412,14 @@ switch (GVAR(currentLeftPanel)) do {
 
         call FUNC(showItem);
         TOGGLE_RIGHT_PANEL_HIDE
-        [_display, _control, _curSel, (configFile >> "CfgUnitInsignia" >> _item)] call FUNC(itemInfo);
+
+        private _unitInsigniaConfig = (configFile >> "CfgUnitInsignia" >> _item);
+
+        if (configName _unitInsigniaConfig isEqualTo "") then {
+            [_display, _control, _curSel, (missionConfigFile >> "CfgUnitInsignia" >> _item)] call FUNC(itemInfo);
+        } else {
+            [_display, _control, _curSel, _unitInsigniaConfig] call FUNC(itemInfo);
+        };
     };
 };
 

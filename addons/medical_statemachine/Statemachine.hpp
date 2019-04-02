@@ -1,14 +1,14 @@
 // Manual transitions applied to this statemachine
-//  - medical_fnc_handleRespawn:18
+//  - fnc_resetStateDefault on unit respawn
 class ACE_Medical_StateMachine {
-    list = "allUnits select {local _x}";
+    list = QUOTE(call EFUNC(common,getLocalUnits));
     skipNull = 1;
 
     class Default {
         onState = QFUNC(handleStateDefault);
         class Injury {
             targetState = "Injured";
-            events[] = {QEGVAR(medical,injured)};
+            events[] = {QEGVAR(medical,injured), QEGVAR(medical,LoweredVitals)};
         };
         class CriticalInjuryOrVitals {
             targetState = "Unconscious";
@@ -44,16 +44,16 @@ class ACE_Medical_StateMachine {
     };
     class Unconscious {
         onState = QFUNC(handleStateUnconscious);
-        onStateEntered = QUOTE([ARR_2(_this,(true))] call EFUNC(medical_status,setUnconsciousStatemachine));
+        onStateEntered = QUOTE([ARR_2(_this,(true))] call EFUNC(medical_status,setUnconscious));
         class DeathAI {
             targetState = "Dead";
-            condition = QUOTE(!isPlayer _this && {EGVAR(medical,unconsciousConditionAI)});
+            condition = QUOTE(!isPlayer _this && {GVAR(unconsciousConditionAI)});
         };
         class WakeUp {
             targetState = "Injured";
             condition = QEFUNC(medical_status,hasStableVitals);
             events[] = {QEGVAR(medical,WakeUp)};
-            onTransition = QUOTE([ARR_2(_this,(false))] call EFUNC(medical_status,setUnconsciousStatemachine));
+            onTransition = QUOTE([ARR_2(_this,(false))] call EFUNC(medical_status,setUnconscious));
         };
         class FatalTransitions {
             targetState = "CardiacArrest";
@@ -71,12 +71,12 @@ class ACE_Medical_StateMachine {
         class DeathAI {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "Dead";
-            condition = QUOTE(!isPlayer _this && {EGVAR(medical,fatalInjuryConditionAI)});
+            condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
         };
         class SecondChance {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "CardiacArrest";
-            condition = QUOTE(EGVAR(medical,fatalInjuryCondition) > 0);
+            condition = QUOTE(GVAR(fatalInjuryCondition) > 0);
             onTransition = QFUNC(transitionSecondChance);
         };
         class Death {
@@ -90,7 +90,7 @@ class ACE_Medical_StateMachine {
         onStateLeaving = QFUNC(leftStateCardiacArrest);
         class DeathAI {
             targetState = "Dead";
-            condition = QUOTE(!isPlayer _this && {EGVAR(medical,fatalInjuryConditionAI)});
+            condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
         };
         class Timeout {
             targetState = "Dead";

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Condition for an execution caused death.
@@ -8,9 +9,12 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player] call ace_medical_statemachine_fnc_conditionExecutionDeath
+ *
  * Public: No
  */
-#include "script_component.hpp"
+
 params ["_unit"];
 
-(GVAR(fatalInjuryCondition) < 2) && {!(_unit getVariable [QGVAR(deathBlocked), false])}
+(GVAR(fatalInjuryCondition) < 2) && {!(_unit getVariable [QEGVAR(medical,deathBlocked), false])}

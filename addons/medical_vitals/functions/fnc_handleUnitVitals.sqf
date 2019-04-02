@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Called from the statemachine's onState functions.
@@ -14,7 +15,6 @@
  * Public: No
  */
 // #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -76,7 +76,7 @@ private _tourniquets = GET_TOURNIQUETS(_unit);
         _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
     };
 } forEach _tourniquets;
-[_unit, _tourniquetPain] call EFUNC(medical,adjustPainLevel);
+[_unit, _tourniquetPain] call EFUNC(medical_status,adjustPainLevel);
 
 private _heartRate = [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
@@ -126,14 +126,14 @@ switch (true) do {
             [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
         };
     };
-    case (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput): {
+    case (_bloodLoss / EGVAR(medical,bleedingCoefficient) > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput): {
         [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_bloodLoss > 0): {
-        [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
+        [QEGVAR(medical,LoweredVitals), _unit] call CBA_fnc_localEvent;
     };
     case (_inPain): {
-        [QEGVAR(medical,Injury), _unit] call CBA_fnc_localEvent;
+        [QEGVAR(medical,LoweredVitals), _unit] call CBA_fnc_localEvent;
     };
 };
 

@@ -42,7 +42,7 @@ PREP(addToTriageCard);
 PREP(bodyCleanupLoop);
 PREP(calculateBlood);
 PREP(canAccessMedicalEquipment);
-PREP(dropDownTriageCard);
+PREP(canBandage);
 PREP(findMostEffectiveWound);
 PREP(getBandageTime);
 PREP(getTriageStatus);
@@ -55,6 +55,7 @@ PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(onMedicationUsage);
 PREP(serverRemoveBody);
+PREP(setTriageStatus);
 
 // items
 PREP(checkItems);

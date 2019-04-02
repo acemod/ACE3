@@ -43,7 +43,7 @@
 {% endif %}
 
 {% if include.component == "captives" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "cargo" %}
@@ -71,7 +71,7 @@
 {% endif %}
 
 {% if include.component == "disarming" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "disposable" %}
@@ -150,6 +150,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "hot" %}
+`ace_common`, `ace_missileguidance`
+{% endif %}
+
 {% if include.component == "huntir" %}
 `ace_common`
 {% endif %}
@@ -215,19 +219,47 @@
 {% endif %}
 
 {% if include.component == "medical" %}
-`ace_interaction`, `ace_apl`
+`ace_common`
 {% endif %}
 
 {% if include.component == "medical_ai" %}
-`ace_medical`
+`ace_medical_treatment`
 {% endif %}
 
 {% if include.component == "medical_blood" %}
-`ace_main`
+`ace_medical_status`
 {% endif %}
 
-{% if include.component == "medical_menu" %}
-`ace_medical`
+{% if include.component == "medical_damage" %}
+`ace_medical_engine`
+{% endif %}
+
+{% if include.component == "medical_engine" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "medical_feedback" %}
+`ace_medical_status`
+{% endif %}
+
+{% if include.component == "medical_gui" %}
+`ace_medical_treatment`, `ace_interaction`
+{% endif %}
+
+{% if include.component == "medical_statemachine" %}
+`ace_medical_vitals`
+{% endif %}
+
+{% if include.component == "medical_status" %}
+`ace_medical_engine`
+{% endif %}
+
+{% if include.component == "medical_treatment" %}
+`ace_medical_status`, `ace_medical_damage`, `ace_apl`
+{% endif %}
+
+{% if include.component == "medical_vitals" %}
+`ace_medical_status`
 {% endif %}
 
 {% if include.component == "microdagr" %}
@@ -307,7 +339,7 @@
 {% endif %}
 
 {% if include.component == "pylons" %}
-`ace_interact_menu`, `ace_zeus`
+`ace_interact_menu`
 {% endif %}
 
 {% if include.component == "quickmount" %}
@@ -446,12 +478,8 @@
 `ace_common`, `ace_ai`
 {% endif %}
 
-{% if include.component == "compat_adr_97" %}
-`A3_Weapons_F_Mod`
-{% endif %}
-
 {% if include.component == "compat_r3f" %}
-`r3f_armes_c`, `r3f_armes`, `r3f_acc`
+`r3f_armes_c`, `R3F_G17_addons`, `r3f_acc`
 {% endif %}
 
 {% if include.component == "compat_rh_acc" %}
@@ -483,7 +511,7 @@
 {% endif %}
 
 {% if include.component == "compat_rksl_pm_ii" %}
-`RKSL_PMII`
+`RKSL_PMII`, `RKSL_PMII_525`
 {% endif %}
 
 {% if include.component == "compat_sma3_iansky" %}

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Damages a body part of a local unit. Does not kill the unit.
@@ -21,7 +22,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_selection", "_damage"];
 TRACE_3("damageBodyPart",_unit,_selection,_damage);

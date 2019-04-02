@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -13,12 +14,10 @@
  * None
  *
  * Example:
- * [bob, "classname", "varname", 5, 6, ["stuff"]] call ACE_medical_treatment_fnc_onMedicationUsage
+ * [bob, "classname", "varname", 5, 6, ["stuff"]] call ace_medical_treatment_fnc_onMedicationUsage
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_target", "_className", "_variable", "_maxDosage", "_incompatabileMeds"];
 TRACE_5("params",_target,_className,_variable,_maxDosage,_incompatabileMeds);
@@ -27,7 +26,7 @@ private _foundEntry = false;
 private _allUsedMedication = _target getVariable [QEGVAR(medical,allUsedMedication), []];
 {
     _x params ["_variableX", "_allMedsFromClassname"];
-    if (_variableX== _variable) exitWith {
+    if (_variableX == _variable) exitWith {
         if !(_className in _allMedsFromClassname) then {
             _allMedsFromClassname pushBack _className;
             _x set [1, _allMedsFromClassname];
@@ -44,7 +43,7 @@ if (!_foundEntry) then {
 };
 
 private _usedMeds = _target getVariable [_variable, 0];
-if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1) then {
+if (_usedMeds >= floor (_maxDosage + round(random(2))) && {_maxDosage >= 1}) then {
     [QEGVAR(medical,CriticalVitals), _target] call CBA_fnc_localEvent;
 };
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * PFEH to handle refreshing effects.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if ((currentVisionMode ACE_player) != 1) exitWith {
     GVAR(running) = false;

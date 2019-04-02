@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Force local unit into ragdoll / unconsciousness animation.
@@ -10,11 +11,10 @@
  * None
  *
  * Example:
- * player call ace_medical_engine_fnc_setUnconsciousAnim
+ * [player, true] call ace_medical_engine_fnc_setUnconsciousAnim
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_isUnconscious", true, [false]]];
 

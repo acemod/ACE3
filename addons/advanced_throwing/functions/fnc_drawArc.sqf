@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zapat, Dslyecxi, Jonpas
  * Draws throw arc.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Disable drawing when intersecting with the vehicle
 if !([ACE_player] call FUNC(canThrow)) exitWith {

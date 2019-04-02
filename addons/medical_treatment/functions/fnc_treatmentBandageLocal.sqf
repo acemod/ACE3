@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the bandage of a patient.
@@ -12,7 +13,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_bandage", "_bodyPart"];
 
@@ -39,7 +39,7 @@ _openWounds set [_woundIndex, _wound];
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
 // Handle the reopening of bandaged wounds
-if (_impact > 0 && {EGVAR(medical,advancedBandages) && {EGVAR(medical,woundReopening)}}) then {
+if (_impact > 0 && {GVAR(advancedBandages) && {GVAR(woundReopening)}}) then {
     [_target, _impact, _partIndex, _woundIndex, _wound, _bandage] call FUNC(handleBandageOpening);
 };
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Triggers the pain effect (single flash).
@@ -8,8 +9,13 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [true, 0.5] call ace_medical_feedback_fnc_effectPain
+ *
+ * Public: No
  */
-#include "script_component.hpp"
+
 params ["_enable", "_intensity"];
 
 if (!_enable || {_intensity == 0}) exitWith {

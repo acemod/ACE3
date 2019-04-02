@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles the hear beat sound.
@@ -7,8 +8,13 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [120] call ace_medical_feedback_fnc_effectHeartBeat
+ *
+ * Public: No
  */
-#include "script_component.hpp"
+
 params ["_heartRate"];
 
 if (_heartRate == 0) exitWith {

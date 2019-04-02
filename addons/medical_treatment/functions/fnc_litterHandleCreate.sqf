@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * handle Litter Create
@@ -11,11 +12,10 @@
  * None
  *
  * Example:
- * ["litter", [2, 5, 6], bob] call ACE_medical_treatment_fnc_handleCreateLitter
+ * ["litter", [2, 5, 6], bob] call ace_medical_treatment_fnc_handleCreateLitter
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_litterClass", "_position", "_direction"];
 TRACE_3("params",_litterClass,_position,_direction);

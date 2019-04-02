@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * local Callback for the CPR treatment action on success.
@@ -9,10 +10,8 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Public: Yes
+ * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_caller", "_target"];
 

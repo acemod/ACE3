@@ -14,6 +14,7 @@ class CfgPatches {
     };
 };
 
+// #include "ACE_Settings.hpp" // ToDo: setting not used
 #include "CfgEventHandlers.hpp"
 #include "CfgInGameUI.hpp"
 #include "CfgSounds.hpp"

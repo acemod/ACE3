@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -10,16 +11,15 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 #define MORPHINE_PAIN_SUPPRESSION 0.6
 
 params ["_target", "_className", "_partIndex"];
 TRACE_3("params",_target,_className,_partIndex);
 
-if (!EGVAR(medical,advancedMedication)) exitWith {
-    TRACE_1("MedicalSettingAdvancedMedication is:", EGVAR(medical,advancedMedication));
+if (!GVAR(advancedMedication)) exitWith {
+    TRACE_1("MedicalSettingAdvancedMedication is:", GVAR(advancedMedication));
     if (_className == "Morphine") exitWith {
         private _painSupress = GET_PAIN_SUPPRESS(_target);
         _target setVariable [VAR_PAIN_SUPP, (_painSupress + MORPHINE_PAIN_SUPPRESSION) min 1, true];

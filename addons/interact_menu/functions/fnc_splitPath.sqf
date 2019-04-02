@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Take full path and split it between parent path and action name
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _parentPath = [];
 for [{private _i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {

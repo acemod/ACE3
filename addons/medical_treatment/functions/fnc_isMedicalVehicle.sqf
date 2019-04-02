@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if vehicle is a medical vehicle
@@ -11,9 +12,8 @@
  * Example:
  * [cursorObject] call ace_medical_treatment_fnc_isMedicalVehicle
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 

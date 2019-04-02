@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Add an entry to the specified log
@@ -12,11 +13,10 @@
  * None
  *
  * Example:
- * [bob, "type", "message", [_args]] call ACE_medical_treatment_fnc_addToLog
+ * [bob, "type", "message", [_args]] call ace_medical_treatment_fnc_addToLog
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_type", "_message", "_arguments"];
 

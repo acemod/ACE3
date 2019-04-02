@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Inits the gun list from user profile
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 LOG_2("Trying to load gunlist from profile [Version: %1][Count: %2]", profileNamespace getVariable [ARR_2(QGVAR(profileNamespaceVersion), 'none')], count (profileNamespace getVariable [ARR_2(QGVAR(gunList), [])]));
 

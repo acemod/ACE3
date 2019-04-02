@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.
@@ -11,14 +12,20 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, "Body", 0.5, "bullet"] call ace_medical_damage_fnc_woundsHandler
+ *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
 if (_typeOfDamage isEqualTo "") then {
+    _typeOfDamage = "unknown";
+};
+
+if (isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage} ) then {
     _typeOfDamage = "unknown";
 };
 
@@ -124,7 +131,6 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
-[_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
 [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {

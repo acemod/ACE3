@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "common.hpp"
 /*
  * Author: aeroson
  * Gathers and caches data needed by ace_nametags_fnc_doShow.
@@ -17,8 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-#include "common.hpp"
 
 params ["_type"];
 

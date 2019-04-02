@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -452,6 +452,7 @@
             <Chinesesimp>选择器颜色</Chinesesimp>
             <Chinese>選單的顏色</Chinese>
             <Italian>Controllo Settore</Italian>
+            <Polish>Kolor wybierającego</Polish>
         </Key>
     </Package>
 </Project>

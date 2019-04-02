@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the treatment action can be performed.
@@ -14,9 +15,8 @@
  * Example:
  * [player, cursorTarget, "Head", "SurgicalKit"] call ace_medical_treatment_fnc_canTreat
  *
- * Public: Yes
+ * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_bodyPart", "_className"];
 

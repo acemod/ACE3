@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handles full heal of a patient.
@@ -10,14 +11,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target"];
 
 if (!alive _target) exitWith {};
 
-_unit setVariable [VAR_PAIN, 0, true];
-_unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
+_target setVariable [VAR_PAIN, 0, true];
+_target setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
 // tourniquets
 _target setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
