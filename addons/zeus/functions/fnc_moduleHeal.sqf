@@ -45,14 +45,6 @@ switch (false) do {
 // Heal validated target
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
     TRACE_1("healing with ace_medical",_unit);
-    if (_unit getVariable [QEGVAR(medical,inCardiacArrest), false]) then {
-        TRACE_1("exiting cardiac arrest",_unit);
-        [QEGVAR(medical,CPRSucceeded), _unit, _unit] call CBA_fnc_targetEvent;
-    };
-    if (_unit getVariable ["ACE_isUnconscious",false]) then {
-        TRACE_1("waking up",_unit); // wake up first or unconc variables will be reset
-        [QEGVAR(medical,WakeUp), _unit, _unit] call CBA_fnc_targetEvent;
-    };
     [QEGVAR(medical_treatment,treatmentFullHealLocal), [_unit], _unit] call CBA_fnc_targetEvent;
 } else {
     // BI's scripted revive system
