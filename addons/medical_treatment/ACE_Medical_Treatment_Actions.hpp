@@ -269,6 +269,7 @@ class GVAR(Actions) {
         allowSelfTreatment = 0;
         requiredMedic = QEGVAR(medical,medicSetting_SurgicalKit);
         treatmentTime = QUOTE(count (_target getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
+        condition = QFUNC(canStitch);
         callbackSuccess = "";
         callbackProgress = QFUNC(treatmentSurgicalKit_onProgress);
         itemConsumed = QEGVAR(medical,consumeItem_SurgicalKit);
