@@ -1,3 +1,4 @@
+
 class CfgMovesBasic;
 class CfgMovesMaleSdr: CfgMovesBasic {
     class States {
