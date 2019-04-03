@@ -16,7 +16,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryConditionAI_DisplayName">
                 <English>Instant death AI</English>
-                <German>Direkter Tot KI</German>
+                <German>Direkter Tod KI</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryConditionAI_Description">
                 <English>Defines if AI will be able to die instantly</English>
