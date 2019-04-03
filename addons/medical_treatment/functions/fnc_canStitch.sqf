@@ -6,16 +6,16 @@
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
- * 2: Body part <STRING>
- * 3: Treatment class name <STRING>
  *
  * ReturnValue:
  * Can Stitch <BOOL>
+ *
+ * Example:
+ * [player, cursorTarget] call ace_medical_treatment_fnc_canStitch
  *
  * Public: No
  */
 
 params ["", "_patient"];
 
-if ((count (_patient getVariable [QEGVAR(medical,bandagedWounds), []])) > 0) exitWith {true};
-false;
+!((_patient getVariable [QEGVAR(medical,bandagedWounds), []]) isEqualTo [])
