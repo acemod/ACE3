@@ -4,3 +4,4 @@ PREP(updateBodyPartVisuals);
 PREP(setLimping);
 PREP(setStructuralDamage);
 PREP(setUnconsciousAnim);
+PREP(applyAnimAfterRagdoll);
