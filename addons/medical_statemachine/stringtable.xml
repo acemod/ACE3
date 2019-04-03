@@ -8,15 +8,15 @@
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_DisplayName">
                 <English>Fatal Injury Player</English>
-                <German>Tötliche Spielerverletzungen</German>
+                <German>Tödliche Spielerverletzungen</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_Description">
                 <English>Defines when Player can receive a fatal injury</English>
-                <German>Definiert wann ein Spieler tötliche Verletzungen bekommen kann.</German>
+                <German>Definiert wann ein Spieler tödliche Verletzungen bekommen kann.</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryConditionAI_DisplayName">
                 <English>Instant death AI</English>
-                <German>Direkter Tot KI</German>
+                <German>Direkter Tod KI</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryConditionAI_Description">
                 <English>Defines if AI will be able to die instantly</English>
@@ -24,7 +24,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_unconsciousConditionAI_DisplayName">
                 <English>Forbid unconscious AI</English>
-                <German>Verhindere KI-Beuwsstlosigkeit</German>
+                <German>Verhindere KI-Bewusstlosigkeit</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_unconsciousConditionAI_Description">
                 <English>Defines if AI will be denied to go unconscious and will die instead</English>

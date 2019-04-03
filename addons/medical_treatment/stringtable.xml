@@ -127,7 +127,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_Description">
                 <English>Who can use Epinephrine?</English>
-                <German>Wer kann Epiniphrin nutzen?</German>
+                <German>Wer kann Epinephrin nutzen?</German>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_DisplayName">
                 <English>Allow PAK</English>
@@ -290,7 +290,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_Epi_Description">
                 <English>Where can the Epinephrine be used?</English>
-                <German>Wo kann Epiniphrin genutzt werden?</German>
+                <German>Wo kann Epinephrin genutzt werden?</German>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime">
                 <English>How long should PAK take to apply?</English>
@@ -3464,7 +3464,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_remove">
             <English>Just remove vanilla medical</English>
-            <German>Entferne Standard Medic-Items</German>
+            <German>Entferne standard Medic-Items</German>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
