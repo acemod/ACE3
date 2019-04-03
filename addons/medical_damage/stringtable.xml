@@ -4,6 +4,7 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_damage_subCategory">
                 <English>Damage Threshold</English>
+                <German>Schaden</German>
             </Key>
             <Key ID="STR_ACE_Medical_damage_playerDamageThreshold_DisplayName">
                 <English>Player Damage</English>

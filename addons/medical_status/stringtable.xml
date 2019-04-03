@@ -4,6 +4,7 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Status_subCategory">
                 <English>Status</English>
+                <German>Zustand</German>
             </Key>
             <Key ID="STR_ACE_Medical_Status_bleedingCoefficient_DisplayName">
                 <English>Bleeding coefficient</English>
@@ -71,9 +72,11 @@
             </Key>
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_DisplayName">
                 <English>IV Transfusion Flow Rate</English>
+                <German>Bluttransfusions Fließrate</German>
             </Key>
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_Description">
                 <English>Effects how quickly IV Bags will have effect</English>
+                <German>Wie schnell sollen Bluttransfusionen einen Effekt haben?</German>
             </Key>
         </Container>
     </Package>

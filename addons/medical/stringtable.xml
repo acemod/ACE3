@@ -457,9 +457,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
+            <German>Wahrscheinlichkeit um aus Bewusstlosstatus zu kommen</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_Description">
             <English>Probablity that a unit with stable vitals will wake up from unconscious [Checked every 15 sec]</English>
+            <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht [Überprüfung alle 15 Sekunden]</German>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>

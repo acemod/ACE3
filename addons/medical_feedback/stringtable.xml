@@ -4,6 +4,7 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_feedback_subCategory">
                 <English>Feedback</English>
+                <German>Feedback</German>
             </Key>
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
@@ -54,9 +55,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_feedback_painEffectType_whiteFlashing">
             <English>White flashing</English>
+            <German>Weißes blinken</German>
         </Key>
         <Key ID="STR_ACE_Medical_feedback_painEffectType_pulsingBlur">
             <English>Pulsing blur</English>
+            <German>Wiederkehrende Unschärfe</German>
         </Key>
     </Package>
 </Project>
