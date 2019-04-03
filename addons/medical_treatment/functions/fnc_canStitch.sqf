@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Katalam
- * Prevents stitch actions from showing if the body is either fully sitched or has no open wounds.
+ * Prevents stitch actions from showing if the body is either fully stitched or has no open wounds.
  *
  * Arguments:
  * 0: The medic <OBJECT>
