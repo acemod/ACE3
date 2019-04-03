@@ -686,6 +686,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
             <English>Open the loadouts screen</English>
+            <German>Öffnet das Loadout Menü</German>
             <French>Affiche la page des équipements</French>
             <Chinese>開啟裝備選單</Chinese>
             <Chinesesimp>开启装备选单</Chinesesimp>
@@ -695,6 +696,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
+            <German>Exportiert aktuelles / standard Loadout</German>
             <French>Exporte l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯出當前/預設的裝備</Chinese>
             <Chinesesimp>汇出当前/预设的装备</Chinesesimp>
@@ -704,6 +706,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
             <English>Import current / default loadouts</English>
+            <German>Importiert aktuelles / standard Loadout</German>
             <French>Importer l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯入當前/預設的裝備</Chinese>
             <Chinesesimp>汇入当前/预设的装备</Chinesesimp>
@@ -773,6 +776,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
+            <German>Seite</German>
             <French>Page</French>
             <Japanese>ページ</Japanese>
             <Chinesesimp>页面</Chinesesimp>
@@ -782,6 +786,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
+            <German>Aktiviere die Gesichert, Stimmen und Abzeichen Übersicht</German>
             <French>Activer les onglets faces / voix / insignes</French>
             <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
@@ -791,6 +796,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
+            <German>Aktuelle Auswahl leeren</German>
             <French>Vider le conteneur selectionné</French>
             <Japanese>選択されたコンテナは空です</Japanese>
             <Chinesesimp>选择的箱子是空的</Chinesesimp>
@@ -800,6 +806,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
+            <German>Exportiert den Classname in die Zwischenablage</German>
             <French>Nom de classe exporté dans le presse papier</French>
             <Japanese>クリップボードへクラスネームを出力</Japanese>
             <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
@@ -841,6 +848,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Blacklist">
             <English>Blacklist</English>
+            <German>Blacklist</German>
             <Japanese>禁止リスト</Japanese>
             <Italian>Lista Nera</Italian>
             <Polish>Czarna lista (lista wykluczeń)</Polish>
@@ -863,24 +871,29 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
+            <German>Exportiert aktuelle Gegenstände als Array, um es in Scripten zu nutzen</German>
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
             <English>Import items list array from clipboard (should be the same format as export)</English>
+            <German>Importiert alles aus der Zwischenablage (Sollte im gleichen Format sein, wie beim Exportieren)</German>
             <Polish>Zaimportuj listę przedmiotów ze schowka (lista musi być w tym samym formacie jak przy exporcie)</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
             <English>Add Compatible Items</English>
+            <German>Füge kompatible Gegenstände hinzu</German>
             <Polish>Dodaj kompatybilne przedmioty</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_Tooltip">
             <English>Will automatically add compatible attachments or magazines (based on selected category) for all weapons in current items list</English>
+            <German>Es werden automatisch kompatible Aufsätze oder Magazine für alle ausgewählten Waffen hinzugefügt</German>
             <Polish>Automatycznie doda kompatybilne dodatki oraz magazynki (odpowiednio do każdej kategorii) dla wszystkich broni na liście</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">
             <English>Time to live</English>
+            <German>Lebenszeit</German>
             <French>Durée de vie</French>
             <Japanese>生存時間</Japanese>
             <Polish>Czas by żyć</Polish>
