@@ -75,8 +75,13 @@ class CfgVehicles {
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = [_target] call FUNC(canCutRopes);
-                statement = [_target] call FUNC(cutRopes);
+                condition = QUOTE(true);
+                statement = "";
+                class confirmCutRopes {
+                    displayName = ECSTRING(common,confirm);
+                    condition = QUOTE([_target] call FUNC(canCutRopes));
+                    statement = QUOTE([_target] call FUNC(cutRopes));
+                };
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
