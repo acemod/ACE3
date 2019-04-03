@@ -13,6 +13,9 @@
  * ReturnValue:
  * Can Bandage <BOOL>
  *
+ * Example:
+ * [player, cursorTarget, "Head", "FieldDressing"] call ace_medical_treatment_fnc_canBandage
+ *
  * Public: No
  */
 
