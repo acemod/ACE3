@@ -251,8 +251,8 @@ class GVAR(Actions) {
         callbackFailure = QFUNC(treatmentCPR_failure);
         callbackProgress = QFUNC(treatmentCPR_progress);
         callbackStart = QFUNC(treatmentCPR_start);
-        animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
-        animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+        animationCaller = "AinvPknlMstpSnonWnonDr_medic0";
+        animationCallerProne = "AinvPknlMstpSnonWnonDr_medic0";
         animationCallerSelf = "";
         animationCallerSelfProne = "";
         itemConsumed = 0;
