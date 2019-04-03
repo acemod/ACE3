@@ -815,7 +815,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
-            <German>Hat eine kritsche Menge an Blut verloren</German>
+            <German>Hat eine kritische Menge an Blut verloren</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
