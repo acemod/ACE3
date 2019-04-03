@@ -46,8 +46,8 @@ addMissionEventHandler ["Loaded", {
             _unit setVariable [QGVAR(waitForAnim), false];
         };
     } else {
+        _unit setVariable [QGVAR(waitForAnim), nil];
         if (local _unit) then {
-            _unit setVariable [QGVAR(waitForAnim), nil, true];
             [_unit, _active] call FUNC(setUnconsciousAnim);
         };
     };
