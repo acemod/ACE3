@@ -70,7 +70,7 @@ namespace ace {
                         if (amountOfDamage >= possibleInjury->minDamage && (amountOfDamage <= possibleInjury->maxDamage || possibleInjury->maxDamage <= 0))
                         {
                             if (InjuryAllowedOnSelection(possibleInjury->allowedSelections, selectionName)) {
-                                if (!highestSpot) {
+                                if (highestSpot == nullptr) {
                                     highestSpot = possibleInjury;
                                 }
                                 if (possibleInjury->minDamage > highestSpot->minDamage) {
@@ -80,7 +80,7 @@ namespace ace {
                             }
                         }
                     }
-                    if (!highestSpot) {
+                    if (highestSpot == nullptr) {
                         break;
                     }
 
