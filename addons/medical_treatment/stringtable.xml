@@ -290,7 +290,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_Epi_Description">
                 <English>Where can the Epinephrine be used?</English>
-                <German>Wo kann Epiniphrin genutzt werden?</German>
+                <German>Wo kann Epinephrin genutzt werden?</German>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime">
                 <English>How long should PAK take to apply?</English>
