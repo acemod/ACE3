@@ -1,10 +1,9 @@
 
-// we want the face down animation every time
 class CfgExtendedAnimation {
     class Revive {
-        left = "Unconscious";
-        right = "Unconscious";
-        front = "Unconscious";
-        back = "Unconscious";
+        left = QGVAR(faceLeft);
+        right = QGVAR(faceRight);
+        front = QGVAR(faceDown);
+        back = QGVAR(faceUp);
     };
 };

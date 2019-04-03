@@ -42,16 +42,16 @@ if (_isUnconscious) then {
         [_unit, _awakeAnim, 2] call EFUNC(common,doAnimation);
     } else {
         // and on foot
-        [_unit, "AmovPpneMstpSnonWnonDnon"] call EFUNC(common,doAnimation);
+        [_unit, "AmovPpneMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
 
         if (currentWeapon _unit == secondaryWeapon _unit && {currentWeapon _unit != ""}) then {
-            [_unit, "AmovPknlMstpSrasWlnrDnon"] call EFUNC(common,doAnimation);
+            [_unit, "AmovPknlMstpSrasWlnrDnon", 2] call EFUNC(common,doAnimation);
         };
 
         [{
             params ["_unit"];
-
-            if (animationState _unit == "unconscious" && {lifeState _unit != "INCAPACITATED"}) then {
+            private _animation = animationState _unit;
+            if ((_animation == "unconscious" || {_animation find "ace_unc_" != -1}) && {lifeState _unit != "INCAPACITATED"}) then {
                 [_unit, "AmovPpneMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
             };
         }, _unit, 0.5] call CBA_fnc_waitAndExecute;

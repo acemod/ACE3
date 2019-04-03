@@ -8,6 +8,76 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             weaponIK = 0;
         };
 
+        class Unconscious;
+        class DeadState;
+        class ace_unc_1: DeadState {
+            file = QPATHTO_T(anims\ace_unc_1.rtm);
+        };
+        class ace_unc_2: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_2.rtm);
+        };
+        class ace_unc_3: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_3.rtm);
+        };
+        class ace_unc_4: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_4.rtm);
+        };
+        class ace_unc_5: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_5.rtm);
+        };
+        class ace_unc_6: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_6.rtm);
+        };
+        class ace_unc_7: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_7.rtm);
+        };
+        class ace_unc_8: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_8.rtm);
+        };
+        class ace_unc_1_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_1_1.rtm);
+        };
+        class ace_unc_2_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_2_1.rtm);
+        };
+        class ace_unc_3_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_3_1.rtm);
+        };
+        class ace_unc_4_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_4_1.rtm);
+        };
+        class ace_unc_5_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_5_1.rtm);
+        };
+        class ace_unc_6_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_6_1.rtm);
+        };
+        class ace_unc_7_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_7_1.rtm);
+        };
+        class ace_unc_8_1: ace_unc_1 {
+            file = QPATHTO_T(anims\ace_unc_8_1.rtm);
+        };
+        /* added for the "ace_unc" part */
+        class KIA_passenger_boat_holdleft;
+        class ace_unc_9: KIA_passenger_boat_holdleft {
+        };
+        class KIA_driver_boat01;
+        class ace_unc_10: KIA_driver_boat01 {
+        };
+
+        class GVAR(faceDown): Unconscious {
+        };
+
+        class GVAR(faceLeft): Unconscious {
+        };
+
+        class GVAR(faceRight): Unconscious {
+        };
+
+        class GVAR(faceUp): Unconscious {
+        };
+
         class AmovPpneMstpSnonWnonDnon;
         class ACE_UnconsciousOutProne: AmovPpneMstpSnonWnonDnon {
             //file = "\A3\anims_f\Data\Anim\Sdr\dth\pne\stp\ras\Rfl\AdthPpneMstpSrasWrflDnon_1";
