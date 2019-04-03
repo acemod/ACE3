@@ -28,5 +28,7 @@ if (_unconsciousAnimation isEqualTo "") exitWith {
     ERROR("No valid animation found!");
 };
 
-// local only as ragdoll is also local only
+// Apply the animation only locally on the machine and do not broadcast it to others
+// Reason is the nature of setUnconscious' end of ragdoll animation is not synced on all machines either
+// Not synced animations are preferred over units snapping from one to another animation
 _unit switchMove _unconsciousAnimation;
