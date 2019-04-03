@@ -42,12 +42,12 @@ addMissionEventHandler ["Loaded", {
         if (_unit getVariable [QGVAR(waitForAnim), true]) then {
             [{(animationstate _this) find QGVAR(face) != -1}, {
                 [_this, animationstate _this] call FUNC(applyAnimAfterRagdoll);
-            }, _unit] call CBA_fnc_waitUntilAndExecute;
+            }, _unit, 20] call CBA_fnc_waitUntilAndExecute;
             _unit setVariable [QGVAR(waitForAnim), false];
         };
     } else {
-        _unit setVariable [QGVAR(waitForAnim), nil];
         if (local _unit) then {
+            _unit setVariable [QGVAR(waitForAnim), nil, true];
             [_unit, _active] call FUNC(setUnconsciousAnim);
         };
     };
