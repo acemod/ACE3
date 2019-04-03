@@ -61,11 +61,11 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
 call FUNC(compileStats);
 
 // compatibility with CBA scripted 2d optics framework
-["ace_arsenal_displayOpened", {
+[QGVAR(displayOpened), {
     "cba_2doptics_arsenalOpened" call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
-["ace_arsenal_displayClosed", {
+[QGVAR(displayClosed), {
     "cba_2doptics_arsenalClosed" call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
