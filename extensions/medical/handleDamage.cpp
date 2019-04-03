@@ -54,12 +54,12 @@ namespace ace {
             return stream.str();
         }
 
-        std::vector<ace::medical::injuries::OpenWound> handleDamage::GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, std::string& selectionName, int woundID)
+        std::vector<ace::medical::injuries::OpenWound> handleDamage::GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, const std::string& selectionName, int woundID)
         {
             std::vector<ace::medical::injuries::OpenWound> injuriesToAdd;
             std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> information;
             std::shared_ptr<ace::medical::injuries::InjuryType> highestSpot = nullptr;
-            int selection = SelectionToNumber(selectionName);
+            const auto selection = SelectionToNumber(selectionName);
 
             for (auto & damageType : damageTypes)
             {
@@ -70,7 +70,7 @@ namespace ace {
                         if (amountOfDamage >= possibleInjury->minDamage && (amountOfDamage <= possibleInjury->maxDamage || possibleInjury->maxDamage <= 0))
                         {
                             if (InjuryAllowedOnSelection(possibleInjury->allowedSelections, selectionName)) {
-                                if (highestSpot == NULL) {
+                                if (highestSpot == nullptr) {
                                     highestSpot = possibleInjury;
                                 }
                                 if (possibleInjury->minDamage > highestSpot->minDamage) {
@@ -80,7 +80,7 @@ namespace ace {
                             }
                         }
                     }
-                    if (highestSpot == NULL) {
+                    if (highestSpot == nullptr) {
                         break;
                     }
 
@@ -209,7 +209,7 @@ namespace ace {
         {
             // TODO use dynamic selections instead
             std::vector<std::string> hitpoints = { "Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg" };
-            std::vector<std::string>::iterator it = find(hitpoints.begin(), hitpoints.end(), hitpointName);
+            std::vector<std::string>::iterator it = std::find(hitpoints.begin(), hitpoints.end(), hitpointName);
             if (it != hitpoints.end())
             {
                 return it - hitpoints.begin();
@@ -222,11 +222,10 @@ namespace ace {
 
         bool handleDamage::InjuryAllowedOnSelection(const std::vector<std::string>& allowedSelections, const std::string& selectionName)
         {
-            return selectionName == "All" || find(allowedSelections.begin(), allowedSelections.end(), selectionName) != selections.end();
+            return selectionName == "All" || std::find(allowedSelections.begin(), allowedSelections.end(), selectionName) != allowedSelections.end();
         }
 
-        std::vector<std::string> handleDamage::inputToVector(const std::string& input)
-        {
+        std::vector<std::string> handleDamage::inputToVector(const std::string& input) const {
             std::istringstream ss(input);
             std::string token;
 
@@ -236,8 +235,7 @@ namespace ace {
             }
             return output;
         }
-        std::vector<double> handleDamage::inputToVectorDouble(const std::string& input)
-        {
+        std::vector<double> handleDamage::inputToVectorDouble(const std::string& input) const {
             std::istringstream ss(input);
             std::string token;
 
