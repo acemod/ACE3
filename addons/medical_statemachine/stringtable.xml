@@ -8,7 +8,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_DisplayName">
                 <English>Fatal Injury Player</English>
-                <German>Tötliche Spielerverletzungen</German>
+                <German>Tödliche Spielerverletzungen</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_Description">
                 <English>Defines when Player can receive a fatal injury</English>
