@@ -58,6 +58,13 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class ace_unc_8_1: ace_unc_1 {
             file = QPATHTO_T(anims\ace_unc_8_1.rtm);
         };
+        /* added for the "ace_unc" part */
+        class KIA_passenger_boat_holdleft;
+        class ace_unc_9: KIA_passenger_boat_holdleft {
+        };
+        class KIA_driver_boat01;
+        class ace_unc_10: KIA_driver_boat01 {
+        };
 
         class GVAR(faceDown): Unconscious {
         };

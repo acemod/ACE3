@@ -13,9 +13,9 @@ GVAR(fixedStatics) = [];
 
 GVAR(animations) = [] call CBA_fnc_createNamespace;
 GVAR(animations) setVariable [QGVAR(faceUp), ["ace_unc_2","ace_unc_2_1","ace_unc_7_1","ace_unc_8_1","ace_unc_5_1","ace_unc_6_1"]];
-GVAR(animations) setVariable [QGVAR(faceDown), ["ace_unc_1", "ace_unc_3", "ace_unc_4","unconscious","KIA_passenger_boat_holdleft","ace_unc_3_1","ace_unc_4_1"]];
+GVAR(animations) setVariable [QGVAR(faceDown), ["ace_unc_1", "ace_unc_3", "ace_unc_4","unconscious","ace_unc_9","ace_unc_3_1","ace_unc_4_1"]];
 GVAR(animations) setVariable [QGVAR(faceLeft), ["ace_unc_7","ace_unc_8","ace_unc_1_1","ace_unc_7_1","ace_unc_8_1"]];
-GVAR(animations) setVariable [QGVAR(faceRight), ["ace_unc_5","ace_unc_6","KIA_driver_boat01","ace_unc_5_1","ace_unc_6_1"]];
+GVAR(animations) setVariable [QGVAR(faceRight), ["ace_unc_5","ace_unc_6","ace_unc_10","ace_unc_5_1","ace_unc_6_1"]];
 
 private _fnc_fixStatic = {
     params ["_vehicle"];

@@ -50,8 +50,8 @@ if (_isUnconscious) then {
 
         [{
             params ["_unit"];
-
-            if (animationState _unit == "unconscious" && {lifeState _unit != "INCAPACITATED"}) then {
+            private _animation = animationState _unit;
+            if ((_animation == "unconscious" || {_animation find "ace_unc_" != -1}) && {lifeState _unit != "INCAPACITATED"}) then {
                 [_unit, "AmovPpneMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
             };
         }, _unit, 0.5] call CBA_fnc_waitAndExecute;
