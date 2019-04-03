@@ -76,7 +76,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_Description">
                 <English>Effects how quickly IV Bags will have effect</English>
-                <German>Wie schnell sollen Bluttransfusionen einen Effekt haben?</German>
+                <German>Wie schnell sollen Transfusionen einen Effekt haben?</German>
             </Key>
         </Container>
     </Package>
