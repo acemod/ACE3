@@ -43,7 +43,7 @@ namespace ace {
             * @param woundID latest wound ID
             * @return New open wounds.
             */
-            std::vector<ace::medical::injuries::OpenWound> GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, int selection, int woundID);
+            std::vector<ace::medical::injuries::OpenWound> GetInjuryInfoFor(const std::string& typeOfDamage, double amountOfDamage, const std::string& selection, int woundID);
 
             /**
             * Add a new damage type from extension input parameters
@@ -80,8 +80,9 @@ namespace ace {
             handleDamage(handleDamage const&) = delete;
             void operator=(handleDamage const&) = delete;
 
-            std::vector<std::string> inputToVector(const std::string& input);
-            std::vector<double> inputToVectorDouble(const std::string& input);
+            static bool InjuryAllowedOnSelection(const std::vector<std::string>& allowedSelections, const std::string& selectionName);
+            std::vector<std::string> inputToVector(const std::string& input) const;
+            std::vector<double> inputToVectorDouble(const std::string& input) const;
 
             std::vector<std::shared_ptr<ace::medical::injuries::DamageType>> damageTypes;
             std::vector<std::shared_ptr<ace::medical::injuries::InjuryType>> injuryTypes;
