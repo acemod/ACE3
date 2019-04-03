@@ -16,6 +16,17 @@ params ["_target"];
 
 if (!alive _target) exitWith {};
 
+// Treatment conditions would normally limit this to non-unconc units, but treatment event may be called externally (zeus)
+if (_target getVariable [QEGVAR(medical,inCardiacArrest), false]) then {
+    TRACE_1("exiting cardiac arrest",_target);
+    [QEGVAR(medical,CPRSucceeded), _target] call CBA_fnc_localEvent;
+};
+if (_target getVariable ["ACE_isUnconscious",false]) then {
+    TRACE_1("waking up",_target); // wake up first or unconc variables will be reset
+    [QEGVAR(medical,WakeUp), _target] call CBA_fnc_localEvent;
+};
+
+
 _target setVariable [VAR_PAIN, 0, true];
 _target setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
