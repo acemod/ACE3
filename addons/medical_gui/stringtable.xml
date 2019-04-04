@@ -59,7 +59,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
-            <German>Aktiviere die Nutzung des Sanitätsmenü durch eine Tastenkombination oder des Interaktionsmenüs</German>
+            <German>Aktiviere die Nutzung des Sanitätsmenüs durch eine Tastenkombination oder durch das Interaktionsmenü</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
