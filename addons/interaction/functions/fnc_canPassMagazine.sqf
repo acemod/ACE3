@@ -19,6 +19,7 @@
 params ["_player", "_target", "_weapon"];
 
 if (!GVAR(enableMagazinePassing)) exitWith {false};
+if (_weapon == "") exitWith {false};
 if (((vehicle _target) != _target) && {(vehicle _target) != (vehicle _player)}) exitWith {false};
 
 private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
