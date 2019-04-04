@@ -3,11 +3,11 @@
     <Package name="medical_ai">
         <Key ID="STR_ACE_medical_ai_settingCategory">
             <English>ACE Medical - AI</English>
-            <German>ACE Sanitäter - KI</German>
+            <German>ACE Sanitäts - KI</German>
         </Key>
         <Key ID="STR_ACE_medical_ai_enableFor_title">
             <English>Medic AI</English>
-            <German>Sanitäter KI</German>
+            <German>Sanitäts KI</German>
         </Key>
         <Key ID="STR_ACE_medical_ai_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
