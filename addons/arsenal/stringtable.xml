@@ -796,7 +796,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
-            <German>Aktuelle Auswahl leeren</German>
+            <German>Aktuellen Container leeren</German>
             <French>Vider le conteneur selectionné</French>
             <Japanese>選択されたコンテナは空です</Japanese>
             <Chinesesimp>选择的箱子是空的</Chinesesimp>
