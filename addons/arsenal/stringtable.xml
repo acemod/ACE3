@@ -686,7 +686,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
             <English>Open the loadouts screen</English>
-            <German>Öffnet das Loadout Menü</German>
+            <German>Öffnet das Ausrüstungsmenü</German>
             <French>Affiche la page des équipements</French>
             <Chinese>開啟裝備選單</Chinese>
             <Chinesesimp>开启装备选单</Chinesesimp>
@@ -786,7 +786,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
-            <German>Aktiviere die Gesichert, Stimmen und Abzeichen Übersicht</German>
+            <German>Aktiviere die Gesichter-, Stimmen- und Abzeichenübersicht</German>
             <French>Activer les onglets faces / voix / insignes</French>
             <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
