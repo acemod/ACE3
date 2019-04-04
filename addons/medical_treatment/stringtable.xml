@@ -3456,11 +3456,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_DisplayName">
             <English>Convert vanilla items</English>
-            <German>Standard Arma-Items in ACE-Items umwandeln</German>
+            <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_Description">
             <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
-            <German>Sollen Standard Medic-Items in ACE-Items umgewandelt oder entfernt werden?</German>
+            <German>Soll Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt werden?</German>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_remove">
             <English>Just remove vanilla medical</English>
