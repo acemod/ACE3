@@ -457,7 +457,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
-            <German>Wahrscheinlichkeit um aus Bewusstlosigkeit zu kommen</German>
+            <German>Wahrscheinlichkeit aufzuwachen</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_Description">
             <English>Probablity that a unit with stable vitals will wake up from unconscious [Checked every 15 sec]</English>
