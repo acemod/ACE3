@@ -28,7 +28,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_unconsciousConditionAI_Description">
                 <English>Defines if AI will be denied to go unconscious and will die instead</English>
-                <German>Soll eine KI bewusstlos werden oder direkt sterben?</German>
+                <German>Legt fest, ob eine KI bewusstlos wird oder stirbt</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_InCardiacArrest">
                 <English>In Cardiac Arrest</English>
