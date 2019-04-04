@@ -19,11 +19,11 @@
 #include "\z\ace\addons\medical_engine\script_macros_config.hpp"
 
 #define PRELOAD_CLASS(class) \
-    diag_log text format["[ACE] (medical_engine) Starting preload for (%1)",class];\
+    INFO_1("Starting preload for (%1)",class);\
     [{\
         1 preloadObject _this;\
     }, {\
-        diag_log text format ["[ACE] (medical_engine) Preload done for (%1)",_this];\
+        INFO_1("Preload done for (%1)",_this);\
     }, class] call CBA_fnc_waitUntilAndExecute
 
 #define PRIORITY_HEAD       3
