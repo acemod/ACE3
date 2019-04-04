@@ -36,7 +36,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_cardiacArrestTime_DisplayName">
                 <English>Cardiac Arrest time (seconds)</English>
-                <German>Herzstillstand Zeit (Sekunden)</German>
+                <German>Zeit bis zum Herzstillstand (Sekunden)</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_cardiacArrestTime_Description">
                 <English>Defines how long it takes to die from cardiac arrest</English>
