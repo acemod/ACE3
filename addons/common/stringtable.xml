@@ -506,6 +506,7 @@
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
+            <German>PBO Überprüfung</German>
             <Italian>Controlla Azioni PBO</Italian>
             <Chinese>檢查PBO動作</Chinese>
             <Chinesesimp>检查PBO动作</Chinesesimp>
@@ -515,6 +516,7 @@
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
+            <German>Alle PBOs überprüfen</German>
             <Italian>Controlla Tutti i PBO</Italian>
             <Chinese>檢查所有PBO</Chinese>
             <Chinesesimp>检查所有PBO</Chinesesimp>
@@ -524,6 +526,7 @@
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
+            <German>PBO Whitelist</German>
             <Italian>Controlla Whitelist PBO</Italian>
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查PBO白名单</Chinesesimp>
@@ -1000,6 +1003,7 @@
         </Key>
 		<Key ID="STR_ACE_Common_Always">
             <English>Always</English>
+            <German>Immer</German>
         </Key>
 		<Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1077,9 +1081,11 @@
         </Key>
         <Key ID="STR_ACE_Common_Confirm">
             <English>Confirm</English>
+            <German>Bestätigen</German>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
+            <German>Nie</German>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1270,6 +1276,7 @@
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
+            <German>Flagge (Ace - Schwarz)</German>
             <Chinesesimp>旗帜(ACE-黑色):</Chinesesimp>
             <Chinese>旗幟(ACE-黑色)</Chinese>
             <Italian>Bandiera (ACE - Nera)</Italian>
@@ -1278,6 +1285,7 @@
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
+            <German>Flagge (Ace - Weiß)</German>
             <Chinesesimp>旗帜(ACE-白色):</Chinesesimp>
             <Chinese>旗幟(ACE-白色)</Chinese>
             <Italian>Bandiera (ACE - Bianca)</Italian>
