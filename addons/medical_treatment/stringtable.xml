@@ -3460,7 +3460,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_Description">
             <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
-            <German>Soll Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt werden?</German>
+            <German>Legt fest, ob Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt wird</German>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_remove">
             <English>Just remove vanilla medical</English>
