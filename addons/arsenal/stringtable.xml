@@ -806,7 +806,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
-            <German>Exportiert den Classname in die Zwischenablage</German>
+            <German>Der Klassenname wurde in die Zwischenablage exportiert</German>
             <French>Nom de classe exporté dans le presse papier</French>
             <Japanese>クリップボードへクラスネームを出力</Japanese>
             <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
