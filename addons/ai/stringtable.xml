@@ -25,7 +25,7 @@
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
-            <German>Es gibt nicht genug Positionen um alle Einheiten zu platzieren</German>
+            <German>Es gibt nicht genug Positionen, um alle Einheiten zu platzieren</German>
             <French>Il n'y a pas assez de positions pour placer toutes les unités</French>
             <Japanese>全ユニットを置くために十分な位置がありません。</Japanese>
             <Italian>Non ci sono abbastanza posizioni per piazzare tutte le unità.</Italian>
