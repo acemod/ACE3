@@ -1021,6 +1021,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_statExploRange">
             <English>Explosive range</English>
+            <German>Explosionsradius</German>
             <French>Portée du détonateur</French>
             <Japanese>爆発範囲</Japanese>
             <Chinesesimp>爆炸范围</Chinesesimp>
@@ -1030,6 +1031,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
+            <German>Detonationszeit</German>
             <Italian>Timer di detonazione</Italian>
             <Japanese>爆発タイマー</Japanese>
             <Polish>Czasomierz Wybuchu</Polish>
