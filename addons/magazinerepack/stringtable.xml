@@ -3,6 +3,7 @@
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_DisplayName">
             <English>Magazine Repack</English>
+            <German>Magazine umpacken</German>
             <Italian>Riempimento Caricatori</Italian>
             <Chinese>重新整理彈匣</Chinese>
             <Chinesesimp>重新整理弹匣</Chinesesimp>
