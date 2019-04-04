@@ -39,7 +39,7 @@
                 <German>Herzstillstand Zeit (Sekunden)</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_cardiacArrestTime_Description">
-                <English>Defines how long it takes to die from cardiac arrest?</English>
+                <English>Defines how long it takes to die from cardiac arrest</English>
                 <German>Legt fest, wie lang es dauert, bis man an Herzstillstand stirbt.</German>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_enableUnconsciousnessAI_DisplayName">
