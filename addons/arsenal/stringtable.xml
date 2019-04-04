@@ -871,7 +871,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
-            <German>Exportiert aktuelle Gegenstände als Array, um es in Scripten zu nutzen</German>
+            <German>Exportiert aktuelle Gegenstände als Array, um es in Scripten zu verwenden</German>
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
