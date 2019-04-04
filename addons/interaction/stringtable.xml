@@ -843,6 +843,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_Flip">
             <English>Flip</English>
+            <German>Umdrehen</German>
             <Russian>Перевернуть</Russian>
             <Japanese>ひっくり返す</Japanese>
             <Chinese>拋</Chinese>
@@ -1088,6 +1089,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_PullOutBody">
             <English>Pull out body</English>
+            <German>Person herausziehen</German>
             <Russian>Вытащить тело</Russian>
             <Japanese>身体を引き出す</Japanese>
             <Italian>Estrai il corpo</Italian>
