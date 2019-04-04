@@ -3,6 +3,7 @@
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_DisplayName">
             <English>Respawn</English>
+            <German>Wiedereinstieg</German>
             <Italian>Riapparizione</Italian>
             <Chinese>重生</Chinese>
             <Chinesesimp>重生</Chinesesimp>
@@ -283,6 +284,7 @@
         </Key>
         <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
             <English>Body remove timer</English>
+            <German>Zeit bis Körper entfernt werden</German>
             <Italian>Timer rimozione corpo</Italian>
             <Chinese>屍體移除計時器</Chinese>
             <Chinesesimp>尸体移除计时器</Chinesesimp>
