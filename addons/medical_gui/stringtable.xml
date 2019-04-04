@@ -63,7 +63,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
-            <German>Sanitätermenü wieder öffnen</German>
+            <German>Sanitätsmenü wieder öffnen</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
             <English>Reopen the Medical Menu after successful treatment.</English>
