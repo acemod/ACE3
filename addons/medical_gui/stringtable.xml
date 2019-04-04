@@ -11,7 +11,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
-            <German>Aktiviert die Sanitäteroptionen für das Interaktionsmenü und legt das Aussehen fest</German>
+            <German>Aktiviert die Sanitätsaktionen für das Interaktionsmenü und legt das Aussehen fest</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Selections3D">
             <English>Selections (3D)</English>
