@@ -75,7 +75,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
-            <German>Maximale Entfernung, um das Sanitätermenü zu öffnen.</German>
+            <German>Maximale Entfernung, um das Sanitätsmenü zu öffnen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
