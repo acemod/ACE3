@@ -113,7 +113,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor">
             <English>Sway factor</English>
-            <German>Stabilisierungsfaktor</German>
+            <German>Verwacklungsfaktor</German>
             <Japanese>手ぶれ因数</Japanese>
             <Chinesesimp>抖动因数</Chinesesimp>
             <Chinese>抖動因素</Chinese>
