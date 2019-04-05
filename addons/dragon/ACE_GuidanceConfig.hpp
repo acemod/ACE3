@@ -8,3 +8,4 @@ class EGVAR(missileguidance,AttackProfiles) {
         functionName = QFUNC(attackProfile_DRAGON);
     };
 };
+
