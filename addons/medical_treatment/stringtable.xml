@@ -12,7 +12,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedBandages_Description">
                 <English>Enable advanced bandages (required for wound reopening)</English>
-                <German>Aktiviere erweiterte Wunden (Vorraussetzung für das erneute öffnen von Wunden)</German>
+                <German>Aktiviere erweiterte Bandagen (Vorraussetzung für das erneute öffnen von Wunden)</German>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_DisplayName">
                 <English>Advanced Diagnose</English>
