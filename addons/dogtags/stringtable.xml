@@ -81,6 +81,7 @@
         </Key>
         <Key ID="STR_ACE_Dogtags_IGUI_Description">
             <English>Onscreen display for checking dogtags</English>
+            <German>Anzeige um Hundemarke zu überprüfen</German>
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
             <Italian>Display su schermo per il controllo delle piastrine</Italian>
