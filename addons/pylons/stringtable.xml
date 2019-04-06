@@ -117,6 +117,7 @@
             <Chinese>啟用派龍架選單給宙斯</Chinese>
             <Italian>Abilita Menù Piloni da Zeus</Italian>
             <Japanese>Zeus でパイロン メニューを有効化</Japanese>
+            <German>Aktiviert Außenlaststationsmenü im Zeus</German>
             <French>Activer le menu des pylônes (Zeus)</French>
             <Polish>Aktywuj Menu Pylonów dla Zeus'a</Polish>
         </Key>
@@ -126,6 +127,7 @@
             <Chinese>允啟使用宙斯模塊</Chinese>
             <Italian>Abilita l'uso dal modulo di Zeus</Italian>
             <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
+            <German>Aktiviert die Nutzung im Zeus</German>
             <French>Autorise l'utilisation des modules Zeus</French>
             <Polish>Aktywuj wykorzystanie modułu zeus'a.</Polish>
         </Key>
@@ -135,6 +137,7 @@
             <Chinese>啟用從彈藥卡車使用派龍架選單</Chinese>
             <Italian>Abilita Menù Piloni da mezzi rifornimento munizioni</Italian>
             <Japanese>弾薬トラックからパイロン メニューを有効化</Japanese>
+            <German>Aktiviert Außenlaststationsmenü von Munitionstransportern</German>
             <French>Activer le menu des pylônes (camion de munitions)</French>
             <Polish>Aktywuj Menu Pylonów dla Ciężarówek z amunicją</Polish>
         </Key>
@@ -144,6 +147,7 @@
             <Chinese>允許從彈藥卡車使用派龍架選單</Chinese>
             <Italian>Abilita l'uso del Menù Piloni da mezzi rifornimento munizioni</Italian>
             <Japanese>弾薬給弾トラックからパイロン メニューを利用できます。</Japanese>
+            <German>Aktiviert die Nutzung von Außenlaststationsmenü von Munitionstransportern.</German>
             <French>Autorise l'utilisation du menu des pylônes depuis les camions de munitions.</French>
             <Polish>Aktywuj wykorzystanie menu pylonów z ciężarówek z amunicją.</Polish>
         </Key>
@@ -153,6 +157,7 @@
             <Chinese>這架飛機沒有派龍架</Chinese>
             <Italian>Questo aereo non ha piloni</Italian>
             <Japanese>航空機にパイロンがありません</Japanese>
+            <German>Dieses Flugzeug hat keine Außenlaststationen</German>
             <French>Cet aéronef n'a pas de pylônes</French>
             <Polish>Ten pojazd nie posiada pylonów</Polish>
         </Key>
@@ -162,6 +167,7 @@
             <Chinese>宙斯模塊的派龍架設定已被禁用</Chinese>
             <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
             <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
+            <German>Die Konfiguration für das Außenlaststationen ist im Zeus deaktiviert</German>
             <French>La configuration de pylônes est désactivé pour Zeus</French>
             <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
         </Key>
