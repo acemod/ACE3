@@ -24,3 +24,4 @@ if (isServer) then {
 
 // log events
 [QGVAR(addToMedicalLog), FUNC(addToLog)] call CBA_fnc_addEventHandler;
+[QGVAR(addToTriageCard), FUNC(addToTriageCard)] call CBA_fnc_addEventHandler;
