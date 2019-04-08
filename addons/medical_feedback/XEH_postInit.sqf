@@ -24,10 +24,13 @@ GVAR(heartBeatEffectRunning) = false;
     if (_unit != ACE_player) exitWith {};
 
     // Toggle unconscious player's ability to talk in radio addons
-    _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
-    _unit setVariable ["tf_unable_to_use_radio", _unconscious]; // Only used locally
-    _unit setVariable ["acre_sys_core_isDisabled", _unconscious, true];
-
+    if (["tfar_core"] call EFUNC(common,isModLoaded)) then {
+        _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
+        _unit setVariable ["tf_unable_to_use_radio", _unconscious]; // Only used locally
+    };
+    if (["acre_sys_core"] call EFUNC(common,isModLoaded)) then {
+        _unit setVariable ["acre_sys_core_isDisabled", _unconscious, true];
+    };
     // Greatly reduce player's hearing ability while unconscious (affects radio addons)
     [QUOTE(ADDON), VOL_UNCONSCIOUS, _unconscious] call EFUNC(common,setHearingCapability);
 
@@ -40,22 +43,29 @@ GVAR(heartBeatEffectRunning) = false;
     params ["_unit"];
 
     if (_unit != ACE_player) exitWith {};
-
-    _unit setVariable ["tf_voiceVolume", 1, true];
-    _unit setVariable ["tf_unable_to_use_radio", false];
-    _unit setVariable ["acre_sys_core_isDisabled", false, true];
+    if (["tfar_core"] call EFUNC(common,isModLoaded)) then {
+        _unit setVariable ["tf_voiceVolume", 1, true];
+        _unit setVariable ["tf_unable_to_use_radio", false];
+    };
+    if (["acre_sys_core"] call EFUNC(common,isModLoaded)) then {
+        _unit setVariable ["acre_sys_core_isDisabled", false, true];
+    };
     [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
 }] call CBA_fnc_addEventHandler;
 
 // Update effects to match new unit's current status (this also handles respawn)
 ["unit", {
-    params ["_new", "_old"];
+    params ["_new"];
 
     private _status = _new getVariable ["ace_unconscious", false];
 
-    _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];
-    _new setVariable ["tf_unable_to_use_radio", _status];
-    _new setVariable ["acre_sys_core_isDisabled", _status, true];
+    if (["tfar_core"] call EFUNC(common,isModLoaded)) then {
+        _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];
+        _new setVariable ["tf_unable_to_use_radio", _status];
+    };
+    if (["acre_sys_core"] call EFUNC(common,isModLoaded)) then {
+        _new setVariable ["acre_sys_core_isDisabled", _status, true];
+    };
     [QUOTE(ADDON), VOL_UNCONSCIOUS, _status] call EFUNC(common,setHearingCapability);
     [_status, 0] call FUNC(effectUnconscious);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
