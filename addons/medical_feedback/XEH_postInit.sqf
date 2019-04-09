@@ -28,7 +28,7 @@ GVAR(heartBeatEffectRunning) = false;
         _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
         _unit setVariable ["tf_unable_to_use_radio", _unconscious]; // Only used locally
     };
-    if (["acre_sys_core"] call EFUNC(common,isModLoaded)) then {
+    if (["acre_main"] call EFUNC(common,isModLoaded)) then {
         _unit setVariable ["acre_sys_core_isDisabled", _unconscious, true];
     };
     // Greatly reduce player's hearing ability while unconscious (affects radio addons)
@@ -63,7 +63,7 @@ GVAR(heartBeatEffectRunning) = false;
         _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];
         _new setVariable ["tf_unable_to_use_radio", _status];
     };
-    if (["acre_sys_core"] call EFUNC(common,isModLoaded)) then {
+    if (["acre_main"] call EFUNC(common,isModLoaded)) then {
         _new setVariable ["acre_sys_core_isDisabled", _status, true];
     };
     [QUOTE(ADDON), VOL_UNCONSCIOUS, _status] call EFUNC(common,setHearingCapability);
