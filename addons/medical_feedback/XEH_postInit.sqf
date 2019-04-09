@@ -24,7 +24,7 @@ GVAR(heartBeatEffectRunning) = false;
     if (_unit != ACE_player) exitWith {};
 
     // Toggle unconscious player's ability to talk in radio addons
-    if (["tfar_core"] call EFUNC(common,isModLoaded)) then {
+    if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
         _unit setVariable ["tf_unable_to_use_radio", _unconscious]; // Only used locally
     };
@@ -43,7 +43,7 @@ GVAR(heartBeatEffectRunning) = false;
     params ["_unit"];
 
     if (_unit != ACE_player) exitWith {};
-    if (["tfar_core"] call EFUNC(common,isModLoaded)) then {
+    if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _unit setVariable ["tf_voiceVolume", 1, true];
         _unit setVariable ["tf_unable_to_use_radio", false];
     };
@@ -59,7 +59,7 @@ GVAR(heartBeatEffectRunning) = false;
 
     private _status = _new getVariable ["ace_unconscious", false];
 
-    if (["tfar_core"] call EFUNC(common,isModLoaded)) then {
+    if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];
         _new setVariable ["tf_unable_to_use_radio", _status];
     };
