@@ -47,7 +47,7 @@ GVAR(heartBeatEffectRunning) = false;
         _unit setVariable ["tf_voiceVolume", 1, true];
         _unit setVariable ["tf_unable_to_use_radio", false];
     };
-    if (["acre_sys_core"] call EFUNC(common,isModLoaded)) then {
+    if (["acre_main"] call EFUNC(common,isModLoaded)) then {
         _unit setVariable ["acre_sys_core_isDisabled", false, true];
     };
     [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
