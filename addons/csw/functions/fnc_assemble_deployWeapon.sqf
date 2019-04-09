@@ -39,12 +39,16 @@
         deleteVehicle _tripod;
 
         _tripodPos set [2, (_tripodPos select 2) + 0.1];
-        private _csw = createVehicle [_assembledClassname, [0, 0, 0], [], 0, "NONE"];
-        _csw setVariable [QGVAR(assemblyMode), 1, true]; // Explicitly set advanced assembly mode and broadcast
-        _csw setVariable [QGVAR(emptyWeapon), true, false]; // unload gun, shouldn't need broadcast for this as it will be local to us
-        _csw setDir _tripodDir;
-        _csw setPosATL _tripodPos;
-        _csw setVectorUp (surfaceNormal _tripodPos);
+        // Delay a frame so tripod has a chance to be deleted
+        [{
+            params ["_assembledClassname", "_tripodDir", "_tripodPos"];
+            private _csw = createVehicle [_assembledClassname, [0, 0, 0], [], 0, "NONE"];
+            _csw setVariable [QGVAR(assemblyMode), 1, true]; // Explicitly set advanced assembly mode and broadcast
+            _csw setVariable [QGVAR(emptyWeapon), true, false]; // unload gun, shouldn't need broadcast for this as it will be local to us
+            _csw setDir _tripodDir;
+            _csw setPosATL _tripodPos;
+            _csw setVectorUp (surfaceNormal _tripodPos);
+        }, [_assembledClassname, _tripodDir, _tripodPos]] call CBA_fnc_execNextFrame;
     };
 
     private _onFailure = {
