@@ -6,6 +6,7 @@ PREP(canPrepareFRIES);
 PREP(canStowFRIES);
 PREP(checkVehicleThread);
 PREP(cutRopes);
+PREP(deequipFRIES);
 PREP(deployAI);
 PREP(deployRopes);
 PREP(equipFRIES);
