@@ -14,8 +14,8 @@
  * Success? <BOOLEAN>
  *
  * Example:
- * [bob, true] call ace_medical_status__fnc_setUnconscious;
- * [player, true, 5, true] call ace_medical_status_fnc_setUnconscious;
+ * [bob, true] call ace_medical_fnc_setUnconscious;
+ * [player, true, 5, true] call ace_medical_fnc_setUnconscious;
  *
  * Public: yes
  */

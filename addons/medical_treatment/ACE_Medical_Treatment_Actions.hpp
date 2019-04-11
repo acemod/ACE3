@@ -277,6 +277,7 @@ class GVAR(actions) {
         allowSelfTreatment = 0;
         medicRequired = QGVAR(medicSurgicalKit);
         treatmentTime = QUOTE(count (_patient getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
+        condition = QFUNC(canStitch);
         callbackSuccess = "";
         callbackProgress = QFUNC(surgicalKitProgress);
         consumeItem = QGVAR(consumeSurgicalKit);
