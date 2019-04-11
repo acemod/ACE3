@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
-        <Key ID="STR_ACE_Medical_Category_DisplayName">
+        <Key ID="STR_ACE_Medical_Category">
             <English>ACE Medical</English>
             <Russian>ACE: медицина</Russian>
             <Polish>ACE Opcje medyczne</Polish>

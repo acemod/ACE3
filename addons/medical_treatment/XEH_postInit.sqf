@@ -5,7 +5,7 @@
 
 // Handle bodybags and litter on server
 if (isServer) then {
-    [QGVAR(createLitterServer), FUNC(litterHandleCreate)] call CBA_fnc_addEventHandler;
+    [QGVAR(createLitterServer), FUNC(createLitterServer)] call CBA_fnc_addEventHandler;
     ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
 };
 
@@ -18,6 +18,6 @@ if (isServer) then {
 [QGVAR(treatmentFullHealLocal), FUNC(treatmentFullHealLocal)] call CBA_fnc_addEventHandler;
 
 // action events
-[QGVAR(actionCheckPulseLocal), FUNC(actionCheckPulseLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(actionCheckBloodPressureLocal), FUNC(actionCheckBloodPressureLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(checkPulseLocal), FUNC(checkPulseLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(checkBloodPressureLocal), FUNC(checkBloodPressureLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;

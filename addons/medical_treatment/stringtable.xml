@@ -1,64 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
+        <Key ID="STR_ACE_Medical_Treatment_SubCategory_Treatment">
+            <English>Treatment</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
+            <English>Litter</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
+            <English>Advanced Diagnose</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
+            <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
+            <English>Advanced Bandages</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
+            <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
+            <English>Wound Reopening</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
+            <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
+            <English>Advanced Medication</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
+            <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
+            <English>Locations Boost Training</English>
+            <Czech>Místa pro vylepšení zkušeností</Czech>
+            <Italian>Località aumentano addestramento</Italian>
+            <German>Örtliche Trainingssteigerung</German>
+            <Spanish>Ubicación mejora entrenamiento.</Spanish>
+            <Polish>Miejsca zwiększają wyszkolenie</Polish>
+            <Portuguese>Localização melhora treinamento</Portuguese>
+            <French>Le lieu améliore l'efficacité</French>
+            <Russian>Места ускоренного обучения</Russian>
+            <Japanese>衛生兵としての能力を与える場所</Japanese>
+            <Korean>교육 증가 지역</Korean>
+            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
+            <Chinese>受所在位置影響提升醫療能力</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_LocationsBoostTraining_Description">
+            <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
+            <English>Self IV Transfusion</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
+            <English>Enables the use of IV Transfusions on oneself.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
+            <English>Allow Shared Equipment</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
+            <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
+            <English>Patient's Equipment First</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
+            <English>Medic's Equipment First</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
+            <English>Allow Epinephrine</English>
+            <German>Erlaube Epiniphrin</German>
+            <Spanish>Permitir Epinefrina</Spanish>
+            <Polish>Ograniczenia adrenaliny</Polish>
+            <French>Activer l'épinéphrine</French>
+            <Italian>Permette epinefrina</Italian>
+            <Czech>Povolit adrenalin</Czech>
+            <Portuguese>Permitir Epinefrina</Portuguese>
+            <Russian>Разрешить Адреналин</Russian>
+            <Japanese>アドレナリンの許可</Japanese>
+            <Korean>에피네프린 활성화</Korean>
+            <Chinesesimp>允许使用肾上腺素</Chinesesimp>
+            <Chinese>允許使用腎上腺素</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
+            <English>Training level required to use Epinephrine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
+            <English>Locations Epinephrine</English>
+            <German>Orte für Epiniphrin</German>
+            <Spanish>Ubicaciones epinefrina</Spanish>
+            <Polish>Ograniczenia adrenaliny</Polish>
+            <French>Utilisation de l'épinéphrine</French>
+            <Italian>Ubicazione epinefrina</Italian>
+            <Czech>Oblast k použití adrenalinu</Czech>
+            <Portuguese>Localizações de Epinefrina</Portuguese>
+            <Russian>Место использования адреналина</Russian>
+            <Japanese>アドレナリンをつかう場所</Japanese>
+            <Korean>에피네프린 사용 장소</Korean>
+            <Chinesesimp>肾上腺素使用地点</Chinesesimp>
+            <Chinese>腎上腺素使用地點</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
+            <English>Controls where Epinephrine can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
+            <English>Allow PAK</English>
+            <Russian>Использование аптечки</Russian>
+            <Polish>Ustawienie apteczek osobistych</Polish>
+            <Spanish>Permitir EPA</Spanish>
+            <German>Erlaube Erste-Hilfe-Set</German>
+            <Czech>Povolit osobní lékárničky (PAK)</Czech>
+            <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
+            <French>Activer la trousse sanitaire</French>
+            <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
+            <Italian>Consenti Kit di Pronto Soccorso</Italian>
+            <Japanese>応急処置キットの許可</Japanese>
+            <Korean>개인응급키트 활성화</Korean>
+            <Chinesesimp>允许使用个人急救包</Chinesesimp>
+            <Chinese>允許使用個人急救包</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
+            <English>Training level required to use a PAK.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
+            <English>Locations PAK</English>
+            <Russian>Место использования аптечки</Russian>
+            <Polish>Ograniczenie apteczek osobistych</Polish>
+            <Spanish>Ubicaciones del EPA</Spanish>
+            <German>Orte für Erste-Hilfe-Set</German>
+            <Czech>Oblast k použití PAK</Czech>
+            <Portuguese>Localizações do KPS</Portuguese>
+            <French>Lieu d'utilisation da trousse sanitaire</French>
+            <Hungarian>Elsősegélycsomag helyek</Hungarian>
+            <Italian>Locazioni Kit Pronto Soccorso</Italian>
+            <Japanese>応急処置キットを使う場所</Japanese>
+            <Korean>개인응급키트 사용 장소</Korean>
+            <Chinesesimp>个人急救包使用地点</Chinesesimp>
+            <Chinese>個人急救包使用地點</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
+            <English>Controls where a PAK can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
+            <English>Consume PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
+            <English>Controls whether a PAK should be consumed after use.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
+            <English>Allow Surgical Kit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
+            <English>Training level required to use a Surgical Kit.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
+            <English>Locations Surgical Kit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
+            <English>Controls where a Surgical Kit can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
+            <English>Consume Surgical Kit</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
+            <English>Controls whether a Surgical Kit should be consumed after use.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
+            <English>Convert Vanilla Items</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
+            <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
+            <English>Remove Only</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
+            <English>Enable Litter</English>
+            <Russian>Включить мусор</Russian>
+            <Polish>Aktywuj odpadki</Polish>
+            <Spanish>Activar restos médicos</Spanish>
+            <German>Abfälle aktivieren</German>
+            <Czech>Povolit odpadky</Czech>
+            <Portuguese>Ativar lixo médico</Portuguese>
+            <French>Activer les détritus</French>
+            <Hungarian>Szemét engedélyezése</Hungarian>
+            <Italian>Abilita Barella</Italian>
+            <Japanese>医療廃棄物の表示を有効化</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
+            <English>Enables the creation of litter upon treatment.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
+            <English>Max Litter Objects</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
+            <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LitterCleanUpDelay_DisplayName">
+            <English>Litter Lifetime</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LitterCleanUpDelay_Description">
+            <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
+        </Key>
+
+        <Key ID="STR_ACE_Medical_Treatment_Anyone">
+            <English>Anyone</English>
+            <Russian>Кем угодно</Russian>
+            <Polish>Wszyscy</Polish>
+            <Spanish>Nadie</Spanish>
+            <German>Jeder</German>
+            <Czech>Kdokoliv</Czech>
+            <Portuguese>Qualquer um</Portuguese>
+            <French>Tous</French>
+            <Hungarian>Akárki</Hungarian>
+            <Italian>Chiunque</Italian>
+            <Japanese>だれでも</Japanese>
+            <Korean>모두</Korean>
+            <Chinesesimp>任何人</Chinesesimp>
+            <Chinese>任何人</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Medics">
+            <English>Medics</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Doctors">
+            <English>Doctors</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicalFacilities">
+            <English>Medical Facilities</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_VehiclesAndFacilities">
+            <English>Vehicles &amp; Facilities</English>
+        </Key>
+
         <Container name="Settings">
-            <Key ID="STR_ACE_Medical_treatment_subCategory">
-                <English>Treatment</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_advancedBandages_DisplayName">
-                <English>Advanced Bandages</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_advancedBandages_Description">
-                <English>Enable advanced bandages (required for wound reopening)</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_DisplayName">
-                <English>Advanced Diagnose</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_Description">
-                <English>Enable advanced diagnose</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_advancedMedication_DisplayName">
-                <English>Advanced Medication</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_advancedMedication_Description">
-                <English>Enable advanced medication</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_DisplayName">
-                <English>Locations boost training</English>
-                <Czech>Místa pro vylepšení zkušeností</Czech>
-                <Italian>Località aumentano addestramento</Italian>
-                <German>Örtliche Trainingssteigerung</German>
-                <Spanish>Ubicación mejora entrenamiento.</Spanish>
-                <Polish>Miejsca zwiększają wyszkolenie</Polish>
-                <Portuguese>Localização melhora treinamento</Portuguese>
-                <French>Le lieu améliore l'efficacité</French>
-                <Russian>Места ускоренного обучения</Russian>
-                <Japanese>衛生兵としての能力を与える場所</Japanese>
-                <Korean>교육 증가 지역</Korean>
-                <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
-                <Chinese>受所在位置影響提升醫療能力</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_Description">
-                <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
-                <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem]</Czech>
-                <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
-                <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
-                <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
-                <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
-                <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
-                <French>Améliore l'efficacité des soins dans les véhicules ou structures de soins [non formés deviennent médecins, médecins deviennent docteurs]</French>
-                <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
-                <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる (未訓練は衛生兵に、衛生兵は医師に)</Japanese>
-                <Korean>의무병의 수준이 주변의 차량이나 의료시설에 따라 증가합니다. [비교육자가 의무병이되고, 의무병이 의사가 됩니다]</Korean>
-                <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
-                <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_DisplayName">
-                <English>Self IV Transfusion</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
-                <English>Allows using IV Transfusions on yourself</English>
-            </Key>
             <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
                 <English>CPR creates pulse</English>
                 <German>HLW erzeugt einen Puls</German>
@@ -67,307 +241,14 @@
                 <English>CPR will create a pulse for the patient while performing</English>
                 <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
             </Key>
-            <Key ID="STR_ACE_Medical_treatment_woundReopening_DisplayName">
-                <English>Enable Advanced wounds</English>
-                <Russian>Усложненные раны</Russian>
-                <Polish>Aktywuj zaawansowane rany</Polish>
-                <Spanish>Activa heridas avanzadas</Spanish>
-                <German>Aktiviere erweiterte Wunden</German>
-                <Czech>Povolit pokročilé zranění</Czech>
-                <Portuguese>Ativar ferimentos avançados</Portuguese>
-                <French>Activer les plaies compliquées</French>
-                <Hungarian>Komplex sebek engedélyezése</Hungarian>
-                <Italian>Abilita ferite Avanzate</Italian>
-                <Japanese>アドバンスドな傷を有効化</Japanese>
-                <Korean>고급 부상 활성화</Korean>
-                <Chinesesimp>启用进阶伤口系统</Chinesesimp>
-                <Chinese>啟用進階傷口系統</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_woundReopening_Description">
-                <English>Allow reopening of bandaged wounds?</English>
-                <Russian>Будут ли открываться уже перевязанные раны?</Russian>
-                <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
-                <Spanish>Permitir la reapertura de las heridas vendadas?</Spanish>
-                <German>Erlaube das Öffnen von bandagierten Wunden?</German>
-                <Czech>Umožnit znovuotevření zavázané rány?</Czech>
-                <Portuguese>Permitr reabertura de ferimentos enfaixados?</Portuguese>
-                <French>Les plaies peuvent se rouvrir</French>
-                <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
-                <Italian>Permetti la riapertura di ferite bendate?</Italian>
-                <Japanese>包帯で巻かれた傷を再び開くようにしますか?</Japanese>
-                <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
-                <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
-                <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
-            </Key>
         </Container>
-        <Container name="SettingsItems">
-            <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_DisplayName">
-                <English>Allow Epinephrine</English>
-                <German>Erlaube Epiniphrin</German>
-                <Spanish>Permitir Epinefrina</Spanish>
-                <Polish>Ograniczenia adrenaliny</Polish>
-                <French>Activer l'épinéphrine</French>
-                <Italian>Permette epinefrina</Italian>
-                <Czech>Povolit adrenalin</Czech>
-                <Portuguese>Permitir Epinefrina</Portuguese>
-                <Russian>Разрешить Адреналин</Russian>
-                <Japanese>アドレナリンの許可</Japanese>
-                <Korean>에피네프린 활성화</Korean>
-                <Chinesesimp>允许使用肾上腺素</Chinesesimp>
-                <Chinese>允許使用腎上腺素</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_Description">
-                <English>Who can use Epinephrine?</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_DisplayName">
-                <English>Allow PAK</English>
-                <Russian>Использование аптечки</Russian>
-                <Polish>Ustawienie apteczek osobistych</Polish>
-                <Spanish>Permitir EPA</Spanish>
-                <German>Erlaube Erste-Hilfe-Set</German>
-                <Czech>Povolit osobní lékárničky (PAK)</Czech>
-                <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
-                <French>Activer la trousse sanitaire</French>
-                <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
-                <Italian>Consenti Kit di Pronto Soccorso</Italian>
-                <Japanese>応急処置キットの許可</Japanese>
-                <Korean>개인응급키트 활성화</Korean>
-                <Chinesesimp>允许使用个人急救包</Chinesesimp>
-                <Chinese>允許使用個人急救包</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_Description">
-                <English>Who can use the PAK for full heal?</English>
-                <Russian>Кому разрешено выполнять полное лечение с помощью аптечки?</Russian>
-                <Polish>Kto może skorzystać z apteczki osobistej w celu pełnego uleczenia?</Polish>
-                <Spanish>¿Quién puede utilizar el EPA para una cura completa?</Spanish>
-                <German>Wer kann das Erste-Hilfe-Set für eine Endheilung verwenden?</German>
-                <Czech>Kdo může použít osobní lékárničku pro plné vyléčení?</Czech>
-                <Portuguese>Quem pode usar o KPS para cura completa?</Portuguese>
-                <French>Qui peut utilier la trousse sanitaire pour des soins complets?</French>
-                <Hungarian>Ki használhatja az elsősegélycsomagot teljes gyógyításra?</Hungarian>
-                <Italian>Chi può usare il KPS per cura completa?</Italian>
-                <Japanese>完全に回復できるよう誰しもが応急処置キットを使えるようにしますか?</Japanese>
-                <Korean>완전한 체력회복을 위해 어느 인원이 개인응급키트을 쓸 수 있습니까? (기본 의료 전용)</Korean>
-                <Chinesesimp>谁能够使用个人急救包来达到完整医疗?</Chinesesimp>
-                <Chinese>誰能夠使用個人急救包來達到完整醫療?</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_anyone">
-                <English>Anyone</English>
-                <Russian>Кем угодно</Russian>
-                <Polish>Wszyscy</Polish>
-                <Spanish>Nadie</Spanish>
-                <German>Jeder</German>
-                <Czech>Kdokoliv</Czech>
-                <Portuguese>Qualquer um</Portuguese>
-                <French>Tous</French>
-                <Hungarian>Akárki</Hungarian>
-                <Italian>Chiunque</Italian>
-                <Japanese>だれでも</Japanese>
-                <Korean>모두</Korean>
-                <Chinesesimp>任何人</Chinesesimp>
-                <Chinese>任何人</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_medicsOnly">
-                <English>Medics only</English>
-                <Russian>Только медиками</Russian>
-                <Polish>Tylko medycy</Polish>
-                <Spanish>Solo médicos</Spanish>
-                <German>Nur Sanitäter</German>
-                <Czech>Pouze zdravotník</Czech>
-                <Portuguese>Somente médicos</Portuguese>
-                <French>Infirmiers  uniquement</French>
-                <Hungarian>Csak orvosok</Hungarian>
-                <Italian>Solo medici</Italian>
-                <Japanese>衛生兵のみ</Japanese>
-                <Korean>의무병만</Korean>
-                <Chinesesimp>只限医疗兵</Chinesesimp>
-                <Chinese>只限醫療兵</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_doctorsOnly">
-                <English>Doctors only</English>
-                <Russian>Только врачами</Russian>
-                <Polish>Tylko doktorzy</Polish>
-                <Spanish>Solo doctores</Spanish>
-                <German>Nur Ärzte</German>
-                <Czech>Pouze doktor</Czech>
-                <Portuguese>Somente doutores</Portuguese>
-                <French>Médecins uniquement</French>
-                <Hungarian>Csak doktorok</Hungarian>
-                <Italian>Solo dottori</Italian>
-                <Japanese>医師のみ</Japanese>
-                <Korean>오직 의사만</Korean>
-                <Chinesesimp>只限军医</Chinesesimp>
-                <Chinese>只限軍醫</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_medicalFacility">
-                <English>Medical facility</English>
-                <Russian>В госпитале</Russian>
-                <Polish>Budynki medyczne</Polish>
-                <Spanish>Centro médico</Spanish>
-                <German>Medizinische Einrichtungen</German>
-                <Czech>Zdravotnické zařízení</Czech>
-                <Portuguese>Instalação médica</Portuguese>
-                <French>Dans les structures sanitaires</French>
-                <Hungarian>Orvosi létesítmény</Hungarian>
-                <Italian>Strutture mediche</Italian>
-                <Japanese>医療施設でのみ</Japanese>
-                <Korean>의료시설</Korean>
-                <Chinesesimp>医疗设施</Chinesesimp>
-                <Chinese>醫療設施</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_vehicleAndFacility">
-                <English>Vehicles &amp; facility</English>
-                <Russian>В транспорте и госпитале</Russian>
-                <Polish>Pojazdy i budynki medyczne</Polish>
-                <Spanish>Vehículos y centros</Spanish>
-                <German>Fahrzeuge &amp; Einrichtungen</German>
-                <Czech>Vozidla a zařízení</Czech>
-                <Portuguese>Veículos e instalações</Portuguese>
-                <French>Dans les véhicules et les structures sanitaires</French>
-                <Hungarian>Járművek &amp; létesítmény</Hungarian>
-                <Italian>Veicoli e Strutture</Italian>
-                <Japanese>車両 &amp; 施設</Japanese>
-                <Korean>차량 및 시설</Korean>
-                <Chinesesimp>医疗载具 &amp; 医疗设施</Chinesesimp>
-                <Chinese>醫療載具 &amp; 醫療設施</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_MedicalSettings_consumeItem_PAK_DisplayName">
-                <English>Remove PAK on use</English>
-                <Russian>Удалять аптечки после использования</Russian>
-                <Polish>Usuń apteczkę po użyciu</Polish>
-                <Spanish>Eliminar EPA después del uso</Spanish>
-                <German>Entf. Erste-Hilfe-Set bei Verwendung</German>
-                <Czech>Odebrat osobní lékárničku po použití</Czech>
-                <Portuguese>Remover o KPS depois do uso</Portuguese>
-                <French>Utilisation unique de la trousse sanitaire</French>
-                <Hungarian>Elsősegélycsomag eltávolítása használatkor</Hungarian>
-                <Italian>Rimuovi Kit Pronto Soccorso dopo l'uso</Italian>
-                <Japanese>応急処置キットの削除</Japanese>
-                <Korean>개인응급키트 사용후 사라짐</Korean>
-                <Chinesesimp>在使用后删除个人急救包</Chinesesimp>
-                <Chinese>在使用後刪除個人急救包</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_MedicalSettings_consumeItem_PAK_Description">
-                <English>Should PAK be removed on usage?</English>
-                <Russian>Нужно ли удалять аптечки после использования?</Russian>
-                <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
-                <Spanish>El EPA será eliminado después de usarlo</Spanish>
-                <German>Sollen Erste-Hilfe-Sets bei Verwendung entfernt werden?</German>
-                <Czech>Má se osobní lékárnička odstranit po použití?</Czech>
-                <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
-                <French>La trousse sanitaire doit être consommée à l'utilisation?</French>
-                <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
-                <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
-                <Japanese>応急処置キットを使うと削除しますか?</Japanese>
-                <Korean>개인응급키트를 사용하고 나서 제거합니까?</Korean>
-                <Chinesesimp>要在使用后删除个人急救包吗?</Chinesesimp>
-                <Chinese>要在使用後刪除個人急救包嗎?</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_Epi_DisplayName">
-                <English>Locations Epinephrine</English>
-                <German>Orte für Epiniphrin</German>
-                <Spanish>Ubicaciones epinefrina</Spanish>
-                <Polish>Ograniczenia adrenaliny</Polish>
-                <French>Utilisation de l'épinéphrine</French>
-                <Italian>Ubicazione epinefrina</Italian>
-                <Czech>Oblast k použití adrenalinu</Czech>
-                <Portuguese>Localizações de Epinefrina</Portuguese>
-                <Russian>Место использования адреналина</Russian>
-                <Japanese>アドレナリンをつかう場所</Japanese>
-                <Korean>에피네프린 사용 장소</Korean>
-                <Chinesesimp>肾上腺素使用地点</Chinesesimp>
-                <Chinese>腎上腺素使用地點</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_Epi_Description">
-                <English>Where can the Epinephrine be used?</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_PAKTime">
-                <English>How long should PAK take to apply?</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
-                <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
-            </Key>
-        </Container>
-        <Container name="SettingsLitter">
-            <Key ID="STR_ACE_Medical_treatment_allowLitterCreation">
-                <English>Enable Litter</English>
-                <Russian>Включить мусор</Russian>
-                <Polish>Aktywuj odpadki</Polish>
-                <Spanish>Activar restos médicos</Spanish>
-                <German>Abfälle aktivieren</German>
-                <Czech>Povolit odpadky</Czech>
-                <Portuguese>Ativar lixo médico</Portuguese>
-                <French>Activer les détritus</French>
-                <Hungarian>Szemét engedélyezése</Hungarian>
-                <Italian>Abilita Barella</Italian>
-                <Japanese>医療廃棄物の表示を有効化</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_allowLitterCreation_Description">
-                <English>Enable litter being created upon treatment</English>
-                <Russian>Включить появление мусора после лечения</Russian>
-                <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
-                <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
-                <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
-                <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
-                <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
-                <French>Activer la création de détrimus au début des traitements</French>
-                <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
-                <Italian>Abilita la creazione della barella dopo trattamento</Italian>
-                <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
-                <English>Litter Simulation Detail</English>
-                <Polish>Detale zużytych medykamentów</Polish>
-                <Spanish>Detalle de simulación de basura</Spanish>
-                <Russian>Количество мусора от медицины</Russian>
-                <Italian>Dettagli Simulazione Rifiuti</Italian>
-                <French>Niveau de simulation des détritus</French>
-                <German>Abfall-Detaillevel</German>
-                <Hungarian>Hulladékszimuláció részletessége</Hungarian>
-                <Portuguese>Detalhe da simulação de sujeira</Portuguese>
-                <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
-                <Japanese>医療廃棄物を再現する詳細度</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail_Description">
-                <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
-                <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
-                <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
-                <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
-                <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
-                <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
-                <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
-                <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
-                <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
-                <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
-                <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay">
-                <English>Life time of litter objects</English>
-                <Russian>Время удаления мусора</Russian>
-                <Polish>Długość życia odpadków</Polish>
-                <Spanish>Tiempo de vida de los restos médicos</Spanish>
-                <German>Dauer des angezeigten Abfalls</German>
-                <Czech>Životnost pro odpadky</Czech>
-                <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
-                <French>Durée d'affichage des détritus</French>
-                <Hungarian>Szemétobjektumok élettartama</Hungarian>
-                <Italian>Tempo di vita delle barelle</Italian>
-                <Japanese>医療廃棄物の作成限界数を設定</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_litterCleanUpDelay_Description">
-                <English>How long should litter objects stay? In seconds. -1 is forever.</English>
-                <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
-                <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
-                <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
-                <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
-                <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
-                <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
-                <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
-                <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
-                <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
-                <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
-            </Key>
-        </Container>
+
+        <Key ID="STR_ACE_Medical_treatment_PAKTime">
+            <English>How long should PAK take to apply?</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
+            <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
+        </Key>
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
@@ -478,7 +359,7 @@
             <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_AssignMedicRoles_role_medic">
-            <English>Regular medic</English>
+            <English>Regular Medic</English>
             <Russian>Обычный медик</Russian>
             <Polish>Zwykły medyk</Polish>
             <Spanish>Médico regular</Spanish>
@@ -3440,95 +3321,9 @@
             <Chinesesimp>移除军用止血带中...</Chinesesimp>
             <Chinese>移除軍用止血帶中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_convertItems_DisplayName">
-            <English>Convert vanilla items</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_convertItems_Description">
-            <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_convertItems_remove">
-            <English>Just remove vanilla medical</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_PAK_DisplayName">
-            <English>Locations PAK</English>
-            <Russian>Место использования аптечки</Russian>
-            <Polish>Ograniczenie apteczek osobistych</Polish>
-            <Spanish>Ubicaciones del EPA</Spanish>
-            <German>Orte für Erste-Hilfe-Set</German>
-            <Czech>Oblast k použití PAK</Czech>
-            <Portuguese>Localizações do KPS</Portuguese>
-            <French>Lieu d'utilisation da trousse sanitaire</French>
-            <Hungarian>Elsősegélycsomag helyek</Hungarian>
-            <Italian>Locazioni Kit Pronto Soccorso</Italian>
-            <Japanese>応急処置キットを使う場所</Japanese>
-            <Korean>개인응급키트 사용 장소</Korean>
-            <Chinesesimp>个人急救包使用地点</Chinesesimp>
-            <Chinese>個人急救包使用地點</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_consumeItem_SurgicalKit_DisplayName">
-            <English>Remove Surgical Kit (Adv)</English>
-            <Russian>Удалять хирургический набор (усл.)</Russian>
-            <Polish>Usuń zestaw chirurgiczny po użyciu</Polish>
-            <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
-            <German>Entferne Operationskasten (erweitert)</German>
-            <Czech>Odebrat chirurgickou soupravu (Pokr.)</Czech>
-            <Portuguese>Remover kit cirúrgico (avançado)</Portuguese>
-            <French>Consommer les trousses chirurgicales (Av.)</French>
-            <Hungarian>Sebészkészlet (Fejlett) eltávolítása</Hungarian>
-            <Italian>Rimuovi Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットを削除 (アド)</Japanese>
-            <Korean>봉합키트 제거 (고급)</Korean>
-            <Chinesesimp>在使用后删除手术包 (进阶伤口)</Chinesesimp>
-            <Chinese>在使用後刪除手術包 (進階傷口)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_consumeItem_SurgicalKit_Description">
-            <English>Should Surgical kit be removed on usage?</English>
-            <Russian>Нужно ли удалять хирургический набор после использования?</Russian>
-            <Polish>Czy zestaw chirurgiczny powinien zniknąć z ekwipunku po jego użyciu?</Polish>
-            <Spanish>Eliminar el equipo quirúrgico después del uso</Spanish>
-            <German>Entferne Operationskästen bei Verwendung?</German>
-            <Czech>Odebrat chirurgickou soupravu po použití?</Czech>
-            <Portuguese>Deve o kit cirúrgico ser removido após o uso?</Portuguese>
-            <French>La trousse chirurgicale doit être consommée à l'utilisation?</French>
-            <Hungarian>Eltávolítódjon a sebészkészlet használatkor?</Hungarian>
-            <Italian>Il Kit Chirurgico dev'essere rimosso dopo l'uso?</Italian>
-            <Japanese>縫合キットを使った後に削除しますか?</Japanese>
-            <Korean>봉합키트를 사용하고 나서 제거합니까?</Korean>
-            <Chinesesimp>手术包会在使用后被删除吗?</Chinesesimp>
-            <Chinese>手術包會在使用後被刪除嗎?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_medicSetting_SurgicalKit_DisplayName">
-            <English>Allow Surgical Kit (Adv)</English>
-            <Russian>Хирургический набор может использоваться (усл.)</Russian>
-            <Polish>Ustawienia zestawu chirurgicznego</Polish>
-            <Spanish>Permitir equipo quirúrgico (Avanzado)</Spanish>
-            <German>Erlaube Operationskasten</German>
-            <Czech>Povolit chirurgickou soupravu (Pokr.)</Czech>
-            <Portuguese>Permite kit cirúrgico (avançado)</Portuguese>
-            <French>Permettre les trousses chirurgicales (Avancé)</French>
-            <Hungarian>Sebészkészlet (Fejlett) engedélyezése</Hungarian>
-            <Italian>Permetti Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットの許可 (アド)</Japanese>
-            <Korean>봉합키트 활성화 (고급)</Korean>
-            <Chinesesimp>允许使用手术包 (进阶伤口)</Chinesesimp>
-            <Chinese>允許使用手術包 (進階傷口)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_medicSetting_SurgicalKit_Description">
-            <English>Who can use the Surgical Kit?</English>
-            <Russian>Кто может использовать хирургический набор?</Russian>
-            <Polish>Kto może skorzystać z zestawu chirurgicznego w celu zszycia ran?</Polish>
-            <Spanish>¿Quién puede utilizar el equipo quirúrgico?</Spanish>
-            <German>Wer kann den Operationskasten verwenden?</German>
-            <Czech>Kdo může použít chirurgickou soupravu?</Czech>
-            <Portuguese>Quem pode usar o kit cirúrgico?</Portuguese>
-            <French>Qui peut utiliser les trousses chirurgicales?</French>
-            <Hungarian>Ki használhatja a sebészkészletet?</Hungarian>
-            <Italian>Chi può usare il Kit Chirurgico?</Italian>
-            <Japanese>だれでも縫合キットを使えるようにしますか?</Japanese>
-            <Korean>어느 인원이 봉합키트를 사용할 수 있습니까?</Korean>
-            <Chinesesimp>谁能够使用手术包?</Chinesesimp>
-            <Chinese>誰能夠使用手術包?</Chinese>
-        </Key>
+
+
+
         <Key ID="STR_ACE_Medical_treatment_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
             <German>An diesem Körperteil befindet sich kein Tourniquet!</German>
@@ -3560,38 +3355,8 @@
             <Chinesesimp>何时可以使用个人急救包?</Chinesesimp>
             <Chinese>何時可以使用個人急救包?</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_SurgicalKit_DisplayName">
-            <English>Locations Surgical Kit (Adv)</English>
-            <Russian>Место использования хирургического набора (усл.)</Russian>
-            <Polish>Ograniczenie zestawu chirurgicznego</Polish>
-            <Spanish>Ubicaciones del equipo quirúrgico (Avanzado)</Spanish>
-            <German>Orte für Operationskästen (erweitert)</German>
-            <Czech>Lokace chirurgické soupravy (Pokr.)</Czech>
-            <Portuguese>Localizações do kit cirúrgico (avançado)</Portuguese>
-            <French>Lieu d'utilisation des trousses chirurgicales</French>
-            <Hungarian>Sebészkészlet (Fejlett) helyei</Hungarian>
-            <Italian>Località Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットをつかう場所 (アド)</Japanese>
-            <Korean>봉합키트 사용 장소 (고급)</Korean>
-            <Chinesesimp>手术包使用地点 (进阶伤口)</Chinesesimp>
-            <Chinese>手術包使用地點 (進階傷口)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_SurgicalKit_Description">
-            <English>Where can the Surgical Kit be used?</English>
-            <Russian>Где может использоваться хирургический набор?</Russian>
-            <Polish>Gdzie można korzystać z zestawu chirurgicznego?</Polish>
-            <Spanish>Dónde se puede utilizar el equipo quirúrgico</Spanish>
-            <German>Wo kann der Operationskasten verwendet werden?</German>
-            <Czech>Kde může být použita chirurgická souprava?</Czech>
-            <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
-            <French>Où peut être utilisé les trousses chirurgicales?</French>
-            <Hungarian>Hol lehet a sebészkészletet használni?</Hungarian>
-            <Italian>Dove può essere usato il Kit Chirurgico?</Italian>
-            <Japanese>どこでも縫合キットを使えるようにしますか?</Japanese>
-            <Korean>어디에서 봉합키트를 사용할 수 있게 합니까?</Korean>
-            <Chinesesimp>定义手术包可被使用的地方?</Chinesesimp>
-            <Chinese>定義手術包可被使用的地方?</Chinese>
-        </Key>
+
+
         <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>
             <German>Beding. für d. Operationskasten (erw.)</German>
@@ -3624,22 +3389,7 @@
             <Chinesesimp>何时可以使用手术工具包?</Chinesesimp>
             <Chinese>何時可以使用手術工具包?</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_PAK_Description">
-            <English>Where can the PAK be used?</English>
-            <Russian>Где может использоваться аптечка?</Russian>
-            <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
-            <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
-            <German>Wo kann das Erste-Hilfe-Set verwendet werden?</German>
-            <Czech>Kde může být použita osobní lékárnička (PAK)?</Czech>
-            <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
-            <French>Où la trousse sanitaire peut être utilisée ?</French>
-            <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
-            <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
-            <Japanese>どこでも応急処置キットを使えるようにしますか?</Japanese>
-            <Korean>어디에서 개인응급키트를 사용할 수 있습니까?</Korean>
-            <Chinesesimp>在哪里可以使用个人急救包?</Chinesesimp>
-            <Chinese>在哪裡可以使用個人急救包?</Chinese>
-        </Key>
+
         <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
             <German>Bedingungen für d. Erste-Hilfe-Set</German>

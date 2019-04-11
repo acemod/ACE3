@@ -44,7 +44,7 @@ class CfgVehicles {
                     #include "InteractionBodyParts.hpp"
                     #undef ACTION_CONDITION
                 };
-                class  ACE_LoadPatient {
+                class ACE_LoadPatient {
                     displayName = CSTRING(LoadPatient);
                     condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {alive _target} && {vehicle _target == _target});
                     exceptions[] = {"isNotDragging", "isNotCarrying"};

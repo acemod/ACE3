@@ -1,11 +1,11 @@
 
 // actions
-PREP(actionCheckBloodPressure);
-PREP(actionCheckBloodPressureLocal);
-PREP(actionCheckPulse);
-PREP(actionCheckPulseLocal);
-PREP(actionCheckResponse);
-PREP(actionDiagnose);
+PREP(checkBloodPressure);
+PREP(checkBloodPressureLocal);
+PREP(checkPulse);
+PREP(checkPulseLocal);
+PREP(checkResponse);
+PREP(diagnose);
 PREP(actionLoadUnit);
 PREP(actionPlaceInBodyBag);
 PREP(actionUnloadUnit);
@@ -15,11 +15,11 @@ PREP(addLoadPatientActions);
 PREP(canTreat);
 PREP(canTreatCached);
 PREP(treatment);
-PREP(treatment_failure);
-PREP(treatment_success);
+PREP(treatmentFailure);
+PREP(treatmentSuccess);
 
-PREP(treatmentBandage);
-PREP(treatmentBandageLocal);
+PREP(bandage);
+PREP(bandageLocal);
 PREP(treatmentCPR);
 PREP(treatmentCPR_failure);
 PREP(treatmentCPR_progress);
@@ -27,21 +27,20 @@ PREP(treatmentCPR_start);
 PREP(treatmentCPRLocal);
 PREP(treatmentFullHeal);
 PREP(treatmentFullHealLocal);
-PREP(treatmentIV);
-PREP(treatmentIVLocal);
-PREP(treatmentMedication);
-PREP(treatmentMedicationLocal);
-PREP(treatmentSurgicalKit_onProgress);
-PREP(treatmentTourniquet);
-PREP(treatmentTourniquetLocal);
-PREP(treatmentTourniquetRemove);
+PREP(ivBag);
+PREP(ivBagLocal);
+PREP(medication);
+PREP(medicationLocal);
+PREP(surgicalKitProgress);
+PREP(tourniquet);
+PREP(tourniquetLocal);
+PREP(tourniquetRemove);
 
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);
 PREP(bodyCleanupLoop);
 PREP(calculateBlood);
-PREP(canAccessMedicalEquipment);
 PREP(canBandage);
 PREP(findMostEffectiveWound);
 PREP(getBandageTime);
@@ -60,11 +59,9 @@ PREP(setTriageStatus);
 // items
 PREP(checkItems);
 PREP(hasItem);
-PREP(hasItems);
 PREP(useItem);
-PREP(useItems);
 
 // litter
+PREP(createLitter);
+PREP(createLitterServer);
 PREP(litterCleanupLoop);
-PREP(litterCreate);
-PREP(litterHandleCreate);

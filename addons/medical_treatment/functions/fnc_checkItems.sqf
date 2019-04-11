@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
  *
  * Public: No

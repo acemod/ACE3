@@ -1,56 +1,45 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
- * Add an entry to the specified log
+ * Author: Glowbal, mharis001
+ * Adds an entry to the specified medical log of the unit.
  *
  * Arguments:
- * 0: The patient <OBJECT>
- * 1: The log type <STRING>
- * 2: The message <STRING>
- * 3: The arguments for localization <ARRAY>
+ * 0: Unit <OBJECT>
+ * 1: Log Type <STRING>
+ * 2: Message <STRING>
+ * 3: Formatting Arguments <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, "type", "message", [_args]] call ace_medical_treatment_fnc_addToLog
+ * [player, "activity", "Message %1", ["Name"]] call ace_medical_treatment_fnc_addToLog
  *
  * Public: No
  */
 
-params ["_unit", "_type", "_message", "_arguments"];
+params ["_unit", "_logType", "_message", "_arguments"];
 
 if (!local _unit) exitWith {
-    [QGVAR(addToMedicalLog), _this, _unit] call CBA_fnc_targetEvent;
+    [QGVAR(addToLog), _this, _unit] call CBA_fnc_targetEvent;
 };
 
 date params ["", "", "", "_hour", "_minute"];
+private _timeStamp = format ["%1:%2", _hour, [_minute, 2] call CBA_fnc_formatNumber];
 
-private _moment = format [["%1:%2", "%1:0%2"] select (_minute < 10), _hour, _minute];
-private _logVarName = format [QEGVAR(medical,logFile_%1), _type];
+private _logVarName = LOG_VARNAME(_logType);
 private _log = _unit getVariable [_logVarName, []];
 
-if (count _log >= 8) then {
-    private _newLog = [];
-
-    {
-        // ensure the first element will not be added
-        if (_forEachIndex > 0) then {
-            _newLog pushBack _x;
-        };
-    } forEach _log;
-
-    _log = _newLog;
+if (count _log >= MAX_LOG_ENTRIES) then {
+    _log deleteAt 0;
 };
 
-_log pushBack [_message, _moment, _type, _arguments];
-
+_log pushBack [_message, _timeStamp, _arguments, _logType];
 _unit setVariable [_logVarName, _log, true];
-["ace_medicalLogEntryAdded", [_unit, _type, _message, _arguments]] call CBA_fnc_localEvent;
 
-private _logs = _unit getVariable [QEGVAR(medical,allLogs), []];
+private _allLogs = _unit getVariable [QEGVAR(medical,allLogs), []];
 
-if !(_logVarName in _logs) then {
-    _logs pushBack _logVarName;
-    _unit setVariable [QEGVAR(medical,allLogs), _logs, true];
+if !(_logVarName in _allLogs) then {
+    _allLogs pushBack _logVarName;
+    _unit setVariable [QEGVAR(medical,allLogs), _allLogs, true];
 };

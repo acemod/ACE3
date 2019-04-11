@@ -2,8 +2,8 @@
 #define COMPONENT_BEAUTIFIED Medical Treatment
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_MEDICAL_TREATMENT
@@ -16,3 +16,36 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+
+#define GET_FUNCTION(var,cfg) \
+    private var = getText (cfg); \
+    if (isNil var) then { \
+        var = compile var; \
+    } else { \
+        var = missionNamespace getVariable var; \
+    }
+
+// Returns a number config entry with default value of 0
+// If entry is a string, will get the variable from missionNamespace
+#define GET_NUMBER_ENTRY(cfg) \
+    if (isText (cfg)) then { \
+        missionNamespace getVariable [getText (cfg), 0]; \
+    } else { \
+        getNumber (cfg); \
+    }
+
+// Macros for checking if unit is in medical vehicle or facility
+// Defined mostly to make location check in canTreat more readable
+#define IN_MED_VEHICLE(unit)  (unit call FUNC(isInMedicalVehicle))
+#define IN_MED_FACILITY(unit) (unit call FUNC(isInMedicalFacility))
+
+#define TREATMENT_LOCATIONS_NONE 0
+#define TREATMENT_LOCATIONS_VEHICLES 1
+#define TREATMENT_LOCATIONS_FACILITIES 2
+#define TREATMENT_LOCATIONS_VEHICLES_AND_FACILITIES 3
+#define TREATMENT_LOCATIONS_ALL 4
+
+#define LITTER_CLEANUP_CHECK_DELAY 30
+
+#define MAX_LOG_ENTRIES 8
+#define LOG_VARNAME(type) (format [QEGVAR(medical,log_%1), type])

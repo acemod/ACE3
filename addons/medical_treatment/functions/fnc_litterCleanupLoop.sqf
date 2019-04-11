@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, esteldunedain
- * Loop that cleans up litter
+ * Author: Glowbal, esteldunedain, mharis001
+ * Handles cleaning up litter objects that have reached their lifetime.
  *
  * Arguments:
  * None
@@ -10,31 +10,28 @@
  * None
  *
  * Example:
- * call ace_medical_treatment_fnc_litterCleanupLoop
+ * [] call ace_medical_treatment_fnc_litterCleanupLoop
  *
  * Public: No
  */
 
 {
-    _x params ["_time", "_objects"];
+    _x params ["_object", "_timeCreated"];
 
-    // Older elements are always at the begining of the array
-    if (CBA_missionTime - _time < GVAR(litterCleanUpDelay)) exitWith {};
+    // Litter array has older objects at the beginning
+    // Can exit on first element that still has lifetime remaining
+    if (CBA_missionTime - _timeCreated < GVAR(litterCleanUpDelay)) exitWith {};
 
-    TRACE_2("deleting",_time,_objects);
-    {
-        deleteVehicle _x;
-    } forEach _objects;
+    deleteVehicle _object;
+    GVAR(litterObjects) set [_forEachIndex, objNull];
+} forEach GVAR(litterObjects);
 
-    GVAR(allCreatedLitter) set [_forEachIndex, objNull];
-} forEach GVAR(allCreatedLitter);
+GVAR(litterObjects) = GVAR(litterObjects) - [objNull];
 
-GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
-
-// If no more litter remain, exit the loop
-if (GVAR(allCreatedLitter) isEqualTo []) exitWith {
-    GVAR(litterPFHRunning) = false;
+// Exit the loop if no litter objects left
+if (GVAR(litterObjects) isEqualTo []) exitWith {
+    GVAR(litterCleanup) = false;
 };
 
-// Schedule the loop to be executed again 30 sec later
-[FUNC(litterCleanupLoop), [], 30] call CBA_fnc_waitAndExecute;
+// Schedule cleanup loop to executed again
+[FUNC(litterCleanupLoop), [], LITTER_CLEANUP_CHECK_DELAY] call CBA_fnc_waitAndExecute;

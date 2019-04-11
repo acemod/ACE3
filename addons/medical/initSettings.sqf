@@ -1,6 +1,6 @@
 // CBA Settings [ADDON: ace_medical]:
 
-private _categoryArray = [LELSTRING(medical,Category_DisplayName), "?"];
+private _categoryArray = [LELSTRING(medical,Category), "?"];
 
 // todo: Check the description is still accurate
 [
