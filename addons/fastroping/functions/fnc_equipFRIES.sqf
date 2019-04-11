@@ -27,6 +27,5 @@ if !(isNumber (_config >> QGVAR(enabled))) then {
 
         _vehicle addEventHandler ["Killed", FUNC(unequipFRIES)];
         _vehicle addEventHandler ["Deleted", FUNC(unequipFRIES)];
-        [FUNC(checkVehicleThread), [_vehicle, _fries], 5] call CBA_fnc_waitAndExecute;
     };
 };
