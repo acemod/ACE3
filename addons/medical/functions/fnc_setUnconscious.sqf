@@ -2,7 +2,6 @@
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
- * For Public Use
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
@@ -17,7 +16,7 @@
  * [bob, true] call ace_medical_fnc_setUnconscious;
  * [player, true, 5, true] call ace_medical_fnc_setUnconscious;
  *
- * Public: yes
+ * Public: Yes
  */
 
 // only run this after the settings are initialized
