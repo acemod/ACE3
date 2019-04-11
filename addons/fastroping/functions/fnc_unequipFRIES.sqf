@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_vehicle] call ace_fastroping_fnc_deequipFRIES
+ * [_vehicle] call ace_fastroping_fnc_unequipFRIES
  *
  * Public: Yes
  */

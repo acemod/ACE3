@@ -25,8 +25,8 @@ if !(isNumber (_config >> QGVAR(enabled))) then {
         _fries attachTo [_vehicle, (getArray (_config >> QGVAR(friesAttachmentPoint)))];
         _vehicle setVariable [QGVAR(FRIES), _fries, true];
 
-        _vehicle addEventHandler ["Killed", FUNC(deequipFRIES)];
-        _vehicle addEventHandler ["Deleted", FUNC(deequipFRIES)];
+        _vehicle addEventHandler ["Killed", FUNC(unequipFRIES)];
+        _vehicle addEventHandler ["Deleted", FUNC(unequipFRIES)];
         [FUNC(checkVehicleThread), [_vehicle, _fries], 5] call CBA_fnc_waitAndExecute;
     };
 };
