@@ -166,9 +166,9 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(litterCleanUpDelay),
+    QGVAR(litterCleanupDelay),
     "SLIDER",
-    [LSTRING(LitterCleanUpDelay_DisplayName), LSTRING(LitterCleanUpDelay_Description)],
+    [LSTRING(LitterCleanupDelay_DisplayName), LSTRING(LitterCleanupDelay_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Litter)],
     [-1, 3600, 600, 0],
     true

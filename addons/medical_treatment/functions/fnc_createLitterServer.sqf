@@ -53,7 +53,7 @@ if (count GVAR(litterObjects) > GVAR(maxLitterObjects)) then {
 GVAR(litterObjects) pushBack [_object, CBA_missionTime];
 
 // Start cleanup loop if not already running and litter lifetime is not forever
-if (!GVAR(litterCleanup) && {GVAR(litterCleanUpDelay) > 0}) then {
+if (!GVAR(litterCleanup) && {GVAR(litterCleanupDelay) > 0}) then {
     [] call FUNC(litterCleanupLoop);
     GVAR(litterCleanup) = true;
 };

@@ -196,10 +196,10 @@
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_LitterCleanUpDelay_DisplayName">
+        <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_LitterCleanUpDelay_Description">
+        <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
         </Key>
 

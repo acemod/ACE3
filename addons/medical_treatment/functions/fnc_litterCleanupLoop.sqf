@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain, mharis001
- * Handles cleaning up litter objects that have reached their lifetime.
+ * Handles cleaning up litter objects that have reached the end of their lifetime.
  *
  * Arguments:
  * None
@@ -20,7 +20,7 @@
 
     // Litter array has older objects at the beginning
     // Can exit on first element that still has lifetime remaining
-    if (CBA_missionTime - _timeCreated < GVAR(litterCleanUpDelay)) exitWith {};
+    if (CBA_missionTime - _timeCreated < GVAR(litterCleanupDelay)) exitWith {};
 
     deleteVehicle _object;
     GVAR(litterObjects) set [_forEachIndex, objNull];
