@@ -1,13 +1,13 @@
 name = "ACE3"
 prefix = "ace"
 author = "ACE-Team"
-files = [ # TODO glob pattern, sub-folders
-    #"*.dll",
-    #"*.so",
+files = [
+    "*.dll",
+    "*.so",
     "mod.cpp",
     "README.md",
-    #"docs/README_DE.md",
-    #"docs/README_PL.md",
+    "docs/README_DE.md",
+    "docs/README_PL.md",
     "AUTHORS.txt",
     "LICENSE",
     "logo_ace3_ca.paa",
