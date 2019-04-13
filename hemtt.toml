@@ -21,7 +21,7 @@ signame = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
     "!launchableoptionals",
-    "@zip ace3_{{version}}"
+    "@zip ace3_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
 ]
 
 [scripts]
