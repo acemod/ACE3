@@ -5,10 +5,10 @@ class ACE_Medical_Injuries {
     // Defines all the possible injury types
     class wounds {
         // Source: Scarle
-        //  Also called scrapes, they occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
+        // Also called scrapes, they occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
         class Abrasion {
             causes[] = {"falling", "ropeburn", "vehiclecrash", "collision", "unknown"};
-            bleeding = 0.001;
+            bleeding = 0.0002;
             pain = 0.4;
             minDamage = 0.01;
             maxDamage = 0.30;
@@ -16,7 +16,7 @@ class ACE_Medical_Injuries {
         // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
         class Avulsion {
             causes[] = {"explosive", "vehiclecrash", "collision", "grenade", "shell", "bullet", "backblast", "bite"};
-            bleeding = 0.25;
+            bleeding = 0.05;
             pain = 1.0;
             minDamage = 0.01;
             causeLimping = 1;
@@ -24,7 +24,7 @@ class ACE_Medical_Injuries {
         // Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
         class Contusion {
             causes[] = {"bullet", "backblast", "punch", "vehiclecrash", "collision", "falling"};
-            bleeding = 0.0;
+            bleeding = 0;
             pain = 0.3;
             minDamage = 0.02;
             maxDamage = 0.35;
@@ -32,7 +32,7 @@ class ACE_Medical_Injuries {
         // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
         class Crush {
             causes[] = {"falling", "vehiclecrash", "collision", "punch", "unknown"};
-            bleeding = 0.05;
+            bleeding = 0.01;
             pain = 0.8;
             minDamage = 0.1;
             causeLimping = 1;
@@ -40,7 +40,7 @@ class ACE_Medical_Injuries {
         // Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
         class Cut {
             causes[] = {"vehiclecrash", "collision", "grenade", "explosive", "shell", "backblast", "stab", "unknown"};
-            bleeding = 0.04;
+            bleeding = 0.008;
             pain = 0.1;
             minDamage = 0.1;
         };
@@ -48,14 +48,14 @@ class ACE_Medical_Injuries {
         class Laceration {
             selections[] = {"All"};
             causes[] = {"vehiclecrash", "collision", "punch"};
-            bleeding = 0.05;
+            bleeding = 0.01;
             pain = 0.2;
             minDamage = 0.01;
         };
         // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
         class VelocityWound {
-            causes[] = {"bullet", "grenade","explosive", "shell", "unknown"};
-            bleeding = 0.5;
+            causes[] = {"bullet", "grenade", "explosive", "shell", "unknown"};
+            bleeding = 0.1;
             pain = 0.9;
             minDamage = 0.35;
             causeLimping = 1;
@@ -63,7 +63,7 @@ class ACE_Medical_Injuries {
         // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
         class PunctureWound {
             causes[] = {"stab", "grenade"};
-            bleeding = 0.05;
+            bleeding = 0.01;
             pain = 0.4;
             minDamage = 0.02;
             causeLimping = 1;
