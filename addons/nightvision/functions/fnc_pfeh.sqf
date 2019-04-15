@@ -85,10 +85,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // Modify blur if looking down scope
     if ((cameraView == "GUNNER") && {[ACE_player] call CBA_fnc_canUseWeapon}) then {
         if (currentWeapon ACE_player == "") exitWith {};
-        if (
-            currentWeapon ACE_player == primaryWeapon ACE_player && 
-            count ("'NVG' in getArray (_x >> 'visionMode')" configClasses (configFile >> "CfgWeapons" >> ((primaryWeaponItems ACE_player) select 2) >> "ItemInfo" >> "OpticsModes")) > 0
-        ) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_NVS]}; // NVS are good
+        if (count ("'NVG' in getArray (_x >> 'visionMode')" configClasses (configFile >> "CfgWeapons" >> ((primaryWeaponItems ACE_player) select 2) >> "ItemInfo" >> "OpticsModes")) > 0) exitWith {}; // NVS are good
         if (currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]}; // Rifles are bad
         if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL]}; // Pistols aren't so bad
     };
