@@ -19,17 +19,14 @@
  */
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
-TRACE_4("start",_unit,_bodyPart,_damage,_typeOfDamage);
+TRACE_4("woundsHandlerSQF",_unit,_bodyPart,_damage,_typeOfDamage);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
 private _bodyPartN = ALL_BODY_PARTS find toLower _bodyPart;
-if (_bodyPartN < 0) exitWith {};
+if (_bodyPartN < 0) exitWith { ERROR_1("invalid body part %1",_bodyPart); };
 
-if (_typeOfDamage isEqualTo "") then {
-    _typeOfDamage = "unknown";
-};
-
-if (isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage} ) then {
+if ((_typeOfDamage isEqualTo "") || {isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage}}) then {
+    WARNING_1("damage type [%1] not found",_typeOfDamage);
     _typeOfDamage = "unknown";
 };
 
@@ -65,11 +62,10 @@ private _allPossibleInjuries = [];
 } forEach _woundTypes;
 
 // No possible wounds available for this damage type or damage amount.
-if (_highestPossibleSpot < 0) exitWith {};
+if (_highestPossibleSpot < 0) exitWith { TRACE_2("no wounds possible",_damage,_highestPossibleSpot); };
 
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
-private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
 
 private _painLevel = 0;
 private _critialDamage = false;
@@ -88,15 +84,13 @@ private _woundsCreated = [];
                 selectRandom _allPossibleInjuries
             };
 
-            _oldInjury params ["_woundClassIDToAdd", "", "_injuryBleedingRate", "_injuryPain"];
+            _oldInjury params ["_woundClassIDToAdd", "", "_injuryBleedingRate", "_injuryPain", "", "", "", "_causeLimping", "_causeFracture"];
 
             private _bodyPartNToAdd = [floor random 6, _bodyPartN] select _isSelectionSpecific; // 6 == count ALL_BODY_PARTS
 
             _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
-            // Create a new injury. Format [ID, classID, bodypart, percentage treated, bleeding rate]
-            private _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
 
             // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
             private _nastinessLikelihood = linearConversion [0, 20, (_woundDamage / _thresholdWoundCount), 0.5, 30, true];
@@ -110,12 +104,10 @@ private _woundsCreated = [];
             // wound category (minor [0..0.5], medium[0.5..1.0], large[1.0+])
             private _category = floor linearConversion [0, 1, _bleedingModifier, 0, 2, true];
 
-             // wound category (minor, medium, large)
-            private _category = floor ((0 max _bleeding min 0.1) / 0.05);
+            private _classComplex = _woundClassIDToAdd + 0.1 * _category;
 
-            _injury set [4, _bleeding];
-            _injury set [5, _woundDamage];
-            _injury set [6, _category];
+            // Create a new injury. Format [0:classComplex, 1:bodypart, 2:amountOf, 3:bleedingRate, 4:woundDamage]
+            private _injury = [_classComplex, _bodyPartNToAdd, 1, _bleeding, _woundDamage];
 
             if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_woundDamage > PENETRATION_THRESHOLD}}) then {
                 _critialDamage = true;
@@ -127,12 +119,12 @@ private _woundsCreated = [];
             // Emulate damage to vital organs
             switch (true) do {
                 // Fatal damage to the head is guaranteed death
-                case (_bodyPartNToAdd == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD}): {
+            case (_bodyPartNToAdd == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD}): {
                     TRACE_1("lethal headshot",_woundDamage toFixed 2);
                     [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
                 };
                 // Fatal damage to torso has various results based on organ hit
-                case (_bodyPartNToAdd == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD}): {
+            case (_bodyPartNToAdd == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD}): {
                     // Heart shot is lethal
                     if (random 1 < HEART_HIT_CHANCE) then {
                         TRACE_1("lethal heartshot",_woundDamage toFixed 2);
@@ -142,7 +134,6 @@ private _woundsCreated = [];
             };
 
             // todo `forceWalk` based on leg damage
-            private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
             if (_causeLimping == 1 && {_woundDamage > LIMPING_DAMAGE_THRESHOLD} && {_bodyPartNToAdd > 3}) then {
                 [_unit, true] call EFUNC(medical_engine,setLimping);
             };
@@ -150,26 +141,27 @@ private _woundsCreated = [];
             // if possible merge into existing wounds
             private _createNewWound = true;
             {
-                _x params ["", "_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage", "_oldCategory"];
-                if (_woundClassIDToAdd == _classID && {_bodyPartNToAdd == _bodyPartN && {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}}) then {
-                    if (_oldCategory == _category) exitWith {
-                        private _newAmountOf = _oldAmountOf + 1;
-                        _x set [3, _newAmountOf];
-                        private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
-                        _x set [4, _newBleeding];
-                        private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
-                        _x set [5, _newDamage];
-                        _createNewWound = false;
-                    };
+                _x params ["_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
+                if (
+                        (_classComplex == _classID) &&
+                        {_bodyPartNToAdd == _bodyPartN} &&
+                        {(_bodyPartNToAdd != 1) || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}} // penetrating body damage is handled differently
+                        ) exitWith {
+                    TRACE_2("merging with existing wound",_forEachIndex,_x);
+                    private _newAmountOf = _oldAmountOf + 1;
+                    _x set [2, _newAmountOf];
+                    private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
+                    _x set [3, _newBleeding];
+                    private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
+                    _x set [4, _newDamage];
+                    _createNewWound = false;
                 };
             } forEach _openWounds;
 
             if (_createNewWound) then {
+                TRACE_1("adding new wound",_injury);
                 _openWounds pushBack _injury;
             };
-
-            // New injuries will also increase the wound ID
-            _woundID = _woundID + 1;
 
             // Store the injury so we can process it later correctly.
             _woundsCreated pushBack _injury;

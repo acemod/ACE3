@@ -31,9 +31,9 @@ _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
 if (_effectiveness == -1) exitWith {};
 
 // Find the impact this bandage has and reduce the amount this injury is present
-private _amountOf = _wound select 3;
+private _amountOf = _wound select 2;
 private _impact = _effectiveness min _amountOf;
-_wound set [3, _amountOf - _impact];
+_wound set [2, _amountOf - _impact];
 _openWounds set [_woundIndex, _wound];
 
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];

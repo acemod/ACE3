@@ -56,7 +56,7 @@ private _partIndex = (ALL_BODY_PARTS find toLower _bodyPart) max 0;
 private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
 
 {
-    _x params ["", "", "_bodyPartN", "_amountOf", "_percentageOpen"];
+    _x params ["", "_bodyPartN", "_amountOf", "_percentageOpen"];
 
     if (_bodyPartN isEqualTo _partIndex) then {
         _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _percentageOpen);

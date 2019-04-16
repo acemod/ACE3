@@ -37,7 +37,10 @@ private _woundIndex = -1;
 private _effectivenessFound = -1;
 
 {
-    _x params ["", "_classID", "_partIndexN", "_amountOf", "_bleeding", "_damage", "_category"];
+    _x params ["_classID", "_partIndexN", "_amountOf", "_bleeding", "_damage"];
+
+    private _classIndex = floor _classID;
+    private _category = round (10 * (_classID % 1));
 
     // Ignore wounds on other bodyparts
     if (_partIndexN == _partIndex) then {
@@ -45,7 +48,7 @@ private _effectivenessFound = -1;
 
         // Select the classname from the wound classname storage
         private _suffix = ["Minor", "Medium", "Large"] select _category;
-        private _className = format ["%1%2", EGVAR(medical_damage,woundClassNames) select _classID, _suffix];
+        private _className = format ["%1%2", EGVAR(medical_damage,woundClassNames) select _classIndex, _suffix];
 
         // Get the effectiveness of the bandage on this wound type
         if (isClass (_config >> _className)) then {

@@ -26,7 +26,7 @@ private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), [
 private _stitchedWounds = _target getVariable [QEGVAR(medical,stitchedWounds), []];
 
 //In case two people stitch up one patient and the last wound has already been closed we can stop already
-if (count _bandagedWounds == 0) exitWith { false };
+if (_bandagedWounds isEqualTo []) exitWith { false };
 
 //Has enough time elapsed that we can close another wound?
 if (_totalTime - _elapsedTime <= (count _bandagedWounds - 1) * 5) then {

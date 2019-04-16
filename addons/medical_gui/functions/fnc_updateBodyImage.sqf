@@ -24,7 +24,7 @@ private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [
 private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 
 {
-    _x params ["", "", "_bodyPartN", "_amountOf", "_bleeding"];
+    _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
     _bodyPartBloodLoss set [_bodyPartN, (_bodyPartBloodLoss select _bodyPartN) + (_bleeding * _amountOf)];
 } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
 

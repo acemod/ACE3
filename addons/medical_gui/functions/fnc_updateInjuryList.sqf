@@ -93,7 +93,9 @@ if (_totalIvVolume >= 1) then {
 private _woundEntries = [];
 
 private _fnc_getWoundDescription = {
-    private _className = EGVAR(medical_damage,woundsData) select _woundClassID select 6;
+    private _classIndex = floor _woundClassID;
+    private _category = round (10 * (_woundClassID % 1));
+    private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
     private _suffix = ["Minor", "Medium", "Large"] select _category;
     private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
     if (_amountOf >= 1) then {
@@ -104,7 +106,7 @@ private _fnc_getWoundDescription = {
 };
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "", "", "_category"];
+    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN) then {
         if (_amountOf > 0) then {
             _woundEntries pushBack [call _fnc_getWoundDescription, [1, 1, 1, 1]];
@@ -117,14 +119,14 @@ private _fnc_getWoundDescription = {
 } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "", "", "_category"];
+    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
         _woundEntries pushBack [format ["[B] %1", call _fnc_getWoundDescription], [0.88, 0.7, 0.65, 1]];
     };
 } forEach (_target getVariable [QEGVAR(medical,bandagedWounds), []]);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "", "", "_category"];
+    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
         _woundEntries pushBack [format ["[S] %1", call _fnc_getWoundDescription], [0.7, 0.7, 0.7, 1]];
     };

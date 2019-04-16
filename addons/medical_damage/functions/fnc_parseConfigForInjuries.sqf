@@ -35,16 +35,16 @@ private _classID = 0;
     private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
     private _causes = GET_ARRAY(_entry >> "causes",[]);
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
+    private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0);
 
     if !(_causes isEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
-        GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping];
+        GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping, _causeFracture];
         _classID = _classID + 1;
     };
 } forEach configProperties [_woundsConfig, "isClass _x"];
 
 // --- parse damage types
-GVAR(allDamageTypes) = []; // @todo, currently unused by handle damage (was GVAR(allAvailableDamageTypes))
 GVAR(allDamageTypesData) = [] call CBA_fnc_createNamespace;
 
 // minimum lethal damage collection, mapped to damageTypes
@@ -56,8 +56,6 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 {
     private _entry = _x;
     private _className = configName _entry;
-
-    GVAR(allDamageTypes) pushBack _className;
 
     // Check if this type is in the causes of a wound class, if so, we will store the wound types for this damage type
     private _woundTypes = [];
