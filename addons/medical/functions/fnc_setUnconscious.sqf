@@ -25,7 +25,7 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
 };
 
-params ["_unit", ["_knockOut", true, [false]], ["_minWaitingTime", 0, [0]], ["_forcedWakup", false, [false]]];
+params [["_unit", objNull, [objNull]], ["_knockOut", true, [false]], ["_minWaitingTime", 0, [0]], ["_forcedWakup", false, [false]]];
 TRACE_4("setUnconscious",_unit,_knockOut,_minWaitingTime,_forcedWakup);
 
 if ((isNull _unit) || {!alive _unit} || {!(_unit isKindOf "CAManBase")}) exitWith {
@@ -34,7 +34,7 @@ if ((isNull _unit) || {!alive _unit} || {!(_unit isKindOf "CAManBase")}) exitWit
 };
 
 if (!local _unit) exitWith {
-    [QEGVAR(medical,setUnconscious), [_unit, _knockOut], _unit] call CBA_fnc_targetEvent;
+    [QEGVAR(medical,setUnconscious), _this, _unit] call CBA_fnc_targetEvent;
     true
 };
 
