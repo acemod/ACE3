@@ -12,3 +12,23 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), "?"];
     {[QGVAR(spontaneousWakeUpChance), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_settings_fnc_init;
+
+[
+    QEGVAR(medical,limping), "LIST",
+    ["limping"],//LSTRING(limping_DisplayName), LSTRING(limping_Description)],
+    _categoryArray,
+    [[0,1,2],["Disabled", "Limp on open wound", "Limp on open or bandaged wound"], 1], // [values, titles, defaultIndex]
+    true, // isGlobal
+    {[QEGVAR(medical,limping), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_settings_fnc_init;
+
+[
+    QEGVAR(medical,fractures), "LIST",
+    ["fractures"],//LSTRING(limping_DisplayName), LSTRING(limping_Description)],
+    _categoryArray,
+    [[0,1,2],["Disabled", "Splints fully heal", "Splints heal (but cannot sprint)"], 1], // [values, titles, defaultIndex]
+    true, // isGlobal
+    {[QEGVAR(medical,fractures), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_settings_fnc_init;

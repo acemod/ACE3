@@ -39,6 +39,7 @@ _target setVariable [QEGVAR(medical,openWounds), [], true];
 _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
 _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
 _target setVariable [QEGVAR(medical,isLimping), false, true];
+_target setVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0], true];
 
 // - Update wound bleeding
 [_target] call EFUNC(medical_status,updateWoundBloodLoss);
@@ -70,7 +71,7 @@ _target setVariable [VAR_MEDICATIONS, [], true];
 // Reset triage card since medication is all reset
 _target setVariable [QEGVAR(medical,triageCard), [], true];
 
-[_target, false] call EFUNC(medical_engine,setLimping);
+[_target] call EFUNC(medical_engine,setLimping);
 
 // Resetting damage
 _target setDamage 0;

@@ -50,9 +50,6 @@ _unit setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _unit setVariable [QEGVAR(medical,occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
 _unit setVariable [QEGVAR(medical,ivBags), nil, true];
 
-// - Update wound bleeding
-[_unit] call EFUNC(medical_status,updateWoundBloodLoss);
-
 // triage card and logs
 _unit setVariable [QEGVAR(medical,triageLevel), 0, true];
 _unit setVariable [QEGVAR(medical,triageCard), [], true];

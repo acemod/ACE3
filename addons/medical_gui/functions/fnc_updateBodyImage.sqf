@@ -20,6 +20,7 @@ params ["_ctrlGroup", "_target"];
 
 // Get tourniquets, damage, and blood loss for target
 private _tourniquets = GET_TOURNIQUETS(_target);
+private _fractures = _target getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
 private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]];
 private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 
@@ -29,13 +30,28 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
 
 {
-    _x params ["_bodyPartIDC", ["_tourniquetIDC", -1]];
+    _x params ["_bodyPartIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1]];
 
     // Show or hide the tourniquet icon
     if (_tourniquetIDC != -1) then {
         private _hasTourniquet = _tourniquets select _forEachIndex > 0;
         private _ctrlTourniquet = _ctrlGroup controlsGroupCtrl _tourniquetIDC;
         _ctrlTourniquet ctrlShow _hasTourniquet;
+    };
+    // Show or hide fractrue/bones
+    if (_fractureIDC != -1) then {
+        private _ctrlBone = _ctrlGroup controlsGroupCtrl _fractureIDC;
+        switch (_fractures select _forEachIndex) do {
+        case (0): {_ctrlBone ctrlShow false;};
+        case (1): {
+                _ctrlBone ctrlShow true;
+                _ctrlBone ctrlSetTextColor [1, 0, 0, 1];
+            };
+        case (-1): {
+                _ctrlBone ctrlShow true;
+                _ctrlBone ctrlSetTextColor [0, 0, 1, 1];
+            };
+        };
     };
 
     // Update body part color based on blood loss and damage
@@ -54,6 +70,6 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     [IDC_BODY_TORSO],
     [IDC_BODY_ARMLEFT, IDC_BODY_ARMLEFT_T],
     [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_T],
-    [IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_T],
-    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T]
+    [IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_T, IDC_BODY_LEGLEFT_B],
+    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
 ];

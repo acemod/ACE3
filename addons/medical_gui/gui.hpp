@@ -55,6 +55,14 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
             idc = IDC_BODY_ARMRIGHT_T;
             text = QPATHTOF(data\body_image\arm_right_t.paa);
         };
+        class LegLeftB: ArmLeftT {
+            idc = IDC_BODY_LEGLEFT_B;
+            text = QPATHTOF(data\body_image\leg_left_bonel.paa);
+        };
+        class LegRightB: ArmLeftT {
+            idc = IDC_BODY_LEGRIGHT_B;
+            text = QPATHTOF(data\body_image\leg_right_boner.paa);
+        };
         class LegLeftT: ArmLeftT {
             idc = IDC_BODY_LEGLEFT_T;
             text = QPATHTOF(data\body_image\leg_left_t.paa);
@@ -554,6 +562,14 @@ class RscTitles {
                         h = POS_H(8.5);
                     };
                     class ArmRightT: ArmRightT {
+                        w = POS_W(8.5);
+                        h = POS_H(8.5);
+                    };
+                    class LegLeftB: LegLeftB {
+                        w = POS_W(8.5);
+                        h = POS_H(8.5);
+                    };
+                    class LegRightB: LegRightB {
                         w = POS_W(8.5);
                         h = POS_H(8.5);
                     };

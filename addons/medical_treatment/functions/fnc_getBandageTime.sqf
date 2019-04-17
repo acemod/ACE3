@@ -28,7 +28,7 @@ TRACE_3("findMostEffectiveWound",_wound,_woundIndex,_effectiveness);
 if (_wound isEqualTo EMPTY_WOUND) exitWith { 0 };
 
 _wound params ["_classID", "", "_amountOf", "_bloodloss", "_damage"];
-private _category = round (10 * (_classID % 1));
+private _category = (_classID % 10);
 
 // Base bandage time is based on wound size and remaining percentage
 private _bandageTime = ([

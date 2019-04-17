@@ -18,7 +18,7 @@
 private _injuriesConfigRoot = configFile >> "ACE_Medical_Injuries";
 
 // --- parse wounds
-GVAR(woundClassNames) = [];
+GVAR(woundClassNamesComplex) = []; // index = 10 * classID + category; [will contain nils] e.g. ["aMinor", "aMed", "aLarge", nil, nil..."bMinor"]
 GVAR(woundsData) = []; // @todo classTypes are strings currently. Convert them to unqiue IDs instead.
 
 private _woundsConfig = _injuriesConfigRoot >> "wounds";
@@ -34,12 +34,15 @@ private _classID = 0;
     private _minDamage = GET_NUMBER(_entry >> "minDamage",0);
     private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
     private _causes = GET_ARRAY(_entry >> "causes",[]);
-    private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
-    private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0);
+    private _causeLimping = 1 == GET_NUMBER(_entry >> "causeLimping",0);
+    private _causeFracture = 1 == GET_NUMBER(_entry >> "causeFracture",0);
 
     if !(_causes isEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
         GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping, _causeFracture];
+        {
+            GVAR(woundClassNamesComplex) set [10 * _classID + _forEachIndex, format ["%1%2", _className, _x]];
+        } forEach ["Minor", "Medium", "Large"];
         _classID = _classID + 1;
     };
 } forEach configProperties [_woundsConfig, "isClass _x"];

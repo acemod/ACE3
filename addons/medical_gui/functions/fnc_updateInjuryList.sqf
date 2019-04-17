@@ -58,6 +58,10 @@ switch (GET_HEMORRHAGE(_target)) do {
 if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
     _entries pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
+switch ((_target getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]]) select _selectionN) do {
+    case (1): {_entries pushBack ["fracture!", [1, 0, 0, 1]];};
+    case (-1): {_entries pushBack ["splinted", [1, 1, 1, 1]];};
+};
 
 // Indicate the amount of pain the unit is in
 if ([_target] call EFUNC(common,isAwake)) then {
@@ -93,8 +97,8 @@ if (_totalIvVolume >= 1) then {
 private _woundEntries = [];
 
 private _fnc_getWoundDescription = {
-    private _classIndex = floor _woundClassID;
-    private _category = round (10 * (_woundClassID % 1));
+    private _classIndex = _woundClassID / 10;
+    private _category = _woundClassID % 10;
     private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
     private _suffix = ["Minor", "Medium", "Large"] select _category;
     private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];

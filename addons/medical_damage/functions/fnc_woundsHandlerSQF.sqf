@@ -67,16 +67,17 @@ if (_highestPossibleSpot < 0) exitWith { TRACE_2("no wounds possible",_damage,_h
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
 
+private _updateLimping = false;
 private _painLevel = 0;
 private _critialDamage = false;
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
-private _woundsCreated = [];
+
 {
     _x params ["_thresholdMinDam", "_thresholdWoundCount"];
     if (_thresholdMinDam <= _damage) exitWith {
         private _woundDamage = _damage / (_thresholdWoundCount max 1); // If the damage creates multiple wounds
-        for "_i" from 0 to (_thresholdWoundCount-1) do {
+        for "_i" from 1 to _thresholdWoundCount do {
             // Find the injury we are going to add. Format [ classID, allowdSelections, bleedingRate, injuryPain]
             private _oldInjury = if (random 1 >= 0.85) then {
                 _woundTypes select _highestPossibleSpot
@@ -104,7 +105,7 @@ private _woundsCreated = [];
             // wound category (minor [0..0.5], medium[0.5..1.0], large[1.0+])
             private _category = floor linearConversion [0, 1, _bleedingModifier, 0, 2, true];
 
-            private _classComplex = _woundClassIDToAdd + 0.1 * _category;
+            private _classComplex = 10 * _woundClassIDToAdd + _category;
 
             // Create a new injury. Format [0:classComplex, 1:bodypart, 2:amountOf, 3:bleedingRate, 4:woundDamage]
             private _injury = [_classComplex, _bodyPartNToAdd, 1, _bleeding, _woundDamage];
@@ -112,9 +113,10 @@ private _woundsCreated = [];
             if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_woundDamage > PENETRATION_THRESHOLD}}) then {
                 _critialDamage = true;
             };
-#ifdef DEBUG_MODE_FULL
+
+            #ifdef DEBUG_MODE_FULL
             systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, _woundDamage toFixed 2, _woundDamage > PENETRATION_THRESHOLD, _bleeding toFixed 3, _pain toFixed 3];
-#endif
+            #endif
 
             // Emulate damage to vital organs
             switch (true) do {
@@ -131,11 +133,17 @@ private _woundsCreated = [];
                         [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
                     };
                 };
-            };
-
-            // todo `forceWalk` based on leg damage
-            if (_causeLimping == 1 && {_woundDamage > LIMPING_DAMAGE_THRESHOLD} && {_bodyPartNToAdd > 3}) then {
-                [_unit, true] call EFUNC(medical_engine,setLimping);
+            case (_causeFracture && {EGVAR(medical,fractures) > 0} && {_bodyPartNToAdd > 3} && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}): { // ToDo: Arm fractures?
+                    TRACE_1("fracture",_bodyPartNToAdd);
+                    // todo: play sound?
+                    private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+                    _fractures set [_bodyPartNToAdd, 1];
+                    _unit setVariable [QEGVAR(medical,fractures), _fractures, true];
+                    _updateLimping = true;
+                };
+            case (_causeLimping && {EGVAR(medical,limping) > 0} && {_bodyPartNToAdd > 3} && {_woundDamage > LIMPING_DAMAGE_THRESHOLD}): {
+                    _updateLimping = true;
+                };
             };
 
             // if possible merge into existing wounds
@@ -145,9 +153,10 @@ private _woundsCreated = [];
                 if (
                         (_classComplex == _classID) &&
                         {_bodyPartNToAdd == _bodyPartN} &&
-                        {(_bodyPartNToAdd != 1) || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}} // penetrating body damage is handled differently
+                        {(_bodyPartNToAdd != 1) || {(_woundDamage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}} && // penetrating body damage is handled differently
+                        {(_bodyPartNToAdd > 3) || {!_causeLimping} || {(_woundDamage <= LIMPING_DAMAGE_THRESHOLD) isEqualTo (_oldDamage <= LIMPING_DAMAGE_THRESHOLD)}} // ensure limping damage is stacked correctly
                         ) exitWith {
-                    TRACE_2("merging with existing wound",_forEachIndex,_x);
+                    TRACE_2("merging with existing wound",_injury,_x);
                     private _newAmountOf = _oldAmountOf + 1;
                     _x set [2, _newAmountOf];
                     private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
@@ -162,12 +171,13 @@ private _woundsCreated = [];
                 TRACE_1("adding new wound",_injury);
                 _openWounds pushBack _injury;
             };
-
-            // Store the injury so we can process it later correctly.
-            _woundsCreated pushBack _injury;
         };
     };
 } forEach _thresholds;
+
+if (_updateLimping) then {
+    [_unit] call EFUNC(medical_engine,setLimping);
+};
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
@@ -182,4 +192,4 @@ if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call FUNC(handleIncapacitation);
 };
 
-TRACE_5("exit",_unit,_painLevel,GET_PAIN(_unit),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),_unit getVariable QEGVAR(medical,openWounds));

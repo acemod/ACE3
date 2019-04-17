@@ -36,6 +36,10 @@ PREP(treatmentTourniquet);
 PREP(treatmentTourniquetLocal);
 PREP(treatmentTourniquetRemove);
 
+PREP(splint);
+PREP(splintCondition);
+PREP(splintLocal);
+
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);

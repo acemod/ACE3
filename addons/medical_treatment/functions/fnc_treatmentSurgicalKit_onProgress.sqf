@@ -35,6 +35,13 @@ if (_totalTime - _elapsedTime <= (count _bandagedWounds - 1) * 5) then {
     _target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
     _target setVariable [QEGVAR(medical,stitchedWounds), _stitchedWounds, true];
     TRACE_3("stitched",_treatedWound,count _bandagedWounds,count _stitchedWounds);
+
+    // Check if we fixed limping from this treatment
+    if ((EGVAR(medical,limping) == 2) && {_target getVariable [QEGVAR(medical,isLimping), false]}) then {
+        _treatedWound params ["", "_partN"];
+        if (_partN < 4) exitWith {};
+        [_target] call EFUNC(medical_engine,setLimping);
+    };
 };
 
 true

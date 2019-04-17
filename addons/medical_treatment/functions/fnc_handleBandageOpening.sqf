@@ -21,12 +21,8 @@ params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 TRACE_6("handleBandageOpening",_target,_impact,_part,_injuryIndex,_injury,_bandage);
 
 _injury params ["_classID", "_bodyPartN"];
-private _classIndex = floor _classID;
-private _category = round (10 * (_classID % 1));
 
-private _postfix = ["Minor", "Medium", "Large"] select _category;
-private _className = format ["%1%2", EGVAR(medical_damage,woundClassNames) select _classIndex, _postfix];
-
+private _className = EGVAR(medical_damage,woundClassNamesComplex) select _classID;
 private _reopeningChance = DEFAULT_BANDAGE_REOPENING_CHANCE;
 private _reopeningMinDelay = DEFAULT_BANDAGE_REOPENING_MIN_DELAY;
 private _reopeningMaxDelay = DEFAULT_BANDAGE_REOPENING_MAX_DELAY;
@@ -121,6 +117,11 @@ if (random 1 <= _reopeningChance) then {
                 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
                 [_target] call EFUNC(medical_status,updateWoundBloodLoss);
+
+                // Check if we gained limping from this wound re-opening
+                if ((EGVAR(medical,limping) == 1) && {_bodyPartN > 3}) then {
+                    [_target] call EFUNC(medical_engine,setLimping);
+                };
             };
         } else {
             TRACE_3("no match",_selectedInjury,_classID,_bodyPartN);

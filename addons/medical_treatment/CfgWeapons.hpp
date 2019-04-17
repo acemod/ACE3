@@ -70,6 +70,18 @@ class CfgWeapons {
             mass = 2;
         };
     };
+    class ACE_splint: ACE_ItemCore {
+        scope = 2;
+        author = ECSTRING(common,ACETeam);
+        displayName = "splint";
+        picture = QPATHTOF(ui\items\tourniquet_x_ca.paa);
+        model = QPATHTOF(data\tourniquet.p3d);
+        // descriptionShort = CSTRING(Tourniquet_Desc_Short);
+        // descriptionUse = CSTRING(Tourniquet_Desc_Use);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+    };
     class ACE_morphine: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);

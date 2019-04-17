@@ -1,6 +1,6 @@
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
-// #define ENABLE_PERFORMANCE_COUNTERS
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
 
 
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
@@ -73,6 +73,9 @@
 
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD 0.30
+
+// Minimum limb damage required for fracture
+#define FRACTURE_DAMAGE_THRESHOLD 0.50
 
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35

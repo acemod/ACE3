@@ -3,7 +3,8 @@
 ["medical", {
 
     // Hide when patient display is up because they might overlap
-    if (!isNull EGVAR(medical_gui,displayPatientInformationTarget)) exitWith {""};
+    private _display = uiNamespace getVariable [QEGVAR(medical_gui,RscPatientInfo), displayNull];
+    if (!isNull _display) exitWith {"Paused"};
 
     private _unit = cursorTarget;
     if (!(_unit isKindOf "CAManBase")) then {_unit = cursorObject};
@@ -58,6 +59,10 @@
 
     _return pushBack format ["Hitpoints: [HHed:%1] [HBod: %2]", (_unit getHitPointDamage "HitHead") toFixed 2, (_unit getHitPointDamage "HitBody") toFixed 2];
     _return pushBack format ["[HHnd:%1] [HLeg: %2] %3", (_unit getHitPointDamage "HitHands") toFixed 2, (_unit getHitPointDamage "HitLegs") toFixed 2, _limping];
+
+    private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+    private _canSprint = if (isSprintAllowed _unit) then {""} else {"[<t color ='#FFCC22'>Sprint Blocked</t>]"};
+    _return pushBack format ["Fractures: %1 %2", _fractures, _canSprint];
 
 
     // Tourniquets:
