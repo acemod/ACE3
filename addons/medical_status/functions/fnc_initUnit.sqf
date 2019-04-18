@@ -5,17 +5,22 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
+ * 1: Is Respawned <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob] call ace_medical_status_fnc_init
+ * [bob, false] call ace_medical_status_fnc_initUnit
  *
  * Public: No
  */
 
-params ["_unit"];
+params ["_unit", ["_isRespawn", true]];
+
+if (!_isRespawn) then { // Always add respawn EH (same as CBA's onRespawn=1)
+    _unit addEventHandler ["Respawn", {[(_this select 0), true] call FUNC(initUnit)}];
+};
 
 if (!local _unit) exitWith {};
 
@@ -23,6 +28,8 @@ if (damage _unit > 0) then {
     _unit setDamage 0;
 };
 
+if (_isRespawn) then {
+TRACE_1("reseting all vars on respawn",_isRespawn); // note: state is handled by ace_medical_statemachine_fnc_resetStateDefault
 // - Blood and heart ----------------------------------------------------------
 _unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 _unit setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
@@ -56,9 +63,6 @@ _unit setVariable [QEGVAR(medical,triageCard), [], true];
 
 // damage storage
 _unit setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
-#ifdef DEBUG_TESTRESULTS
-_unit setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
-#endif
 
 // medication
 _unit setVariable [VAR_MEDICATIONS, [], true];
@@ -69,6 +73,7 @@ private _logs = _unit getVariable [QEGVAR(medical,allLogs), []];
     _unit setVariable [_x, nil];
 } forEach _logs;
 _unit setVariable [QEGVAR(medical,allLogs), [], true];
+};
 
 [{
     params ["_unit"];

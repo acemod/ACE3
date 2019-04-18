@@ -54,9 +54,6 @@ _target setVariable [QEGVAR(medical,ivBags), nil, true];
 
 // damage storage
 _target setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
-#ifdef DEBUG_TESTRESULTS
-_target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
-#endif
 
 // generic medical admin
 _target setVariable [VAR_CRDC_ARRST, false, true];
