@@ -56,8 +56,7 @@ GVAR(heartBeatEffectRunning) = false;
 // Update effects to match new unit's current status (this also handles respawn)
 ["unit", {
     params ["_new"];
-
-    private _status = _new getVariable ["ace_unconscious", false];
+    private _status = IS_UNCONSCIOUS(_new);
 
     if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];
