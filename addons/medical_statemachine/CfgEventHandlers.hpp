@@ -28,6 +28,7 @@ class Extended_Local_EventHandlers {
     class CAManBase {
         class ADDON {
             local = QUOTE(call FUNC(localityChangedEH));
+            exclude[] = {"B_UAV_AI","O_UAV_AI","UAV_AI_base_F"};
         };
     };
 };
