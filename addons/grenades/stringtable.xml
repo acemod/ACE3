@@ -147,9 +147,23 @@
         </Key>
 		<Key ID="STR_ACE_Grenades_CTS9_Name">
             <English>CTS 7290 9-bang Flash Grenade</English>
+            <German>CTS 7290 9-fach Blendgranate</German>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_NameShort">
             <English>CTS 7290-9</English>
+			 <German>CTS 7290-9</German>
+            <Czech>CTS 7290-9</Czech>
+            <Hungarian>CTS 7290-9</Hungarian>
+            <Italian>CTS 7290-9</Italian>
+            <Polish>CTS 7290-9</Polish>
+            <Portuguese>CTS 7290-9</Portuguese>
+            <Russian>CTS 7290-9</Russian>
+            <Spanish>CTS 7290-9</Spanish>
+            <French>CTS 7290-9</French>
+            <Japanese>CTS 7290-9</Japanese>
+            <Korean>CTS 7290-9</Korean>
+            <Chinesesimp>CTS 7290-9</Chinesesimp>
+            <Chinese>CTS 7290-9</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_M127A1_White_Name">
             <English>M127A1 Hand Held Signal (White)</English>
