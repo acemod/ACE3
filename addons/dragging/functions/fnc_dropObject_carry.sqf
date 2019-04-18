@@ -17,7 +17,7 @@
  */
 
 params ["_unit", "_target"];
-TRACE_2("params",_unit,_target);
+TRACE_1("params",_this);
 
 // remove drop action
 [_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
@@ -75,4 +75,11 @@ if !(_target isKindOf "CAManBase") then {
 // recreate UAV crew
 if (_target getVariable [QGVAR(isUAV), false]) then {
     createVehicleCrew _target;
+};
+
+// reset mass
+private _mass = _target getVariable [QGVAR(originalMass), 0];
+
+if (_mass != 0) then {
+    [QEGVAR(common,setMass), [_target, _mass], _target] call CBA_fnc_targetEvent;
 };

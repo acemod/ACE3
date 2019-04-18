@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Validate SQF and Config style
-          command: python tools/sqf_validator.py && python tools/config_style_checker.py
+          name: Validate SQF and Config style and Stringtable entries
+          command: python tools/sqf_validator.py && python tools/config_style_checker.py && python tools/check_strings.py
 
   linting:
     docker:

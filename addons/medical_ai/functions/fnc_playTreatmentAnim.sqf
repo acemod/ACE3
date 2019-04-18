@@ -21,7 +21,7 @@ params ["_unit", "_isBandage", "_isSelfTreatment"];
 if (vehicle _unit != _unit) exitWith {};
 
 private _animConfig = if (_isBandage) then {
-    configFile >> "ACE_Medical_Actions" >> "Basic" >> "Bandage";
+    configFile >> "ACE_Medical_Actions" >> "Basic" >> "BasicBandage";
 } else {
     configFile >> "ACE_Medical_Actions" >> "Basic" >> "Morphine";
 };
