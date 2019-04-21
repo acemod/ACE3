@@ -5,10 +5,9 @@ class CfgWeapons {
     };
 
     class launch_NLAW_F: Launcher_Base_F {
-        author = "$STR_BWA3_Author";
         scope = 1;
         scopeArsenal = 1;
-        baseWeapon = "BWA3_PzF3";
+        baseWeapon = "launch_NLAW_F";
 
         magazineReloadTime = 0.1;
 
