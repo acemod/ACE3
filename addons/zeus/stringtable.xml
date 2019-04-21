@@ -340,7 +340,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
-            <German>Zusätzliche Objekte unabhängig vom Aufgabenradiius einbeziehen</German>
+            <German>Zusätzliche Objekte unabhängig vom Aufgabenradius einbeziehen</German>
             <Italian>Oggetti aggiuntivi da includere nell'azione indipendentemente dal Raggio di Attività</Italian>
             <Japanese>タスク範囲に関係無くオブジェクトを更に増加させます</Japanese>
             <Polish>Dodatkowe obiekty do uwzględnienia w akcji niezależnie od zasięgu zadania</Polish>
