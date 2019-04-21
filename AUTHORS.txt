@@ -130,6 +130,7 @@ Raspu86
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
+Rutger "RedBery" Meijering <c.redbery@gmail.com>
 simon84 <badguy360th@gmail.com>
 Skengman2
 Sniperwolf572 <tenga6@gmail.com>

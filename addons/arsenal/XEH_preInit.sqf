@@ -65,8 +65,14 @@ call FUNC(compileStats);
     "cba_2doptics_arsenalOpened" call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(displayOpened), {
+    "cba_optics_arsenalOpened" call CBA_fnc_localEvent;
+    "cba_disposable_arsenalOpened" call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(displayClosed), {
-    "cba_2doptics_arsenalClosed" call CBA_fnc_localEvent;
+    "cba_optics_arsenalClosed" call CBA_fnc_localEvent;
+    "cba_disposable_arsenalClosed" call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;
