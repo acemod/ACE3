@@ -29,7 +29,7 @@ _nozzle setVelocity [0, 0, 0];
 
 private _groundPosition = getPosASL _nozzle;
 private _posA = (getPosASL _nozzle) vectorAdd [0,0,0.05];
-private _posB = (getPosASL _nozzle) vectorAdd [0,0,-1 * GVAR(hoseLength)];
+private _posB = (getPosASL _nozzle) vectorAdd [0,0,- GVAR(hoseLength)];
 private _intersections = lineIntersectsSurfaces [_posA, _posB, _unit, _nozzle, true, 1, "GEOM"];
 TRACE_1("",_intersections);
 if (_intersections isEqualTo []) then {
