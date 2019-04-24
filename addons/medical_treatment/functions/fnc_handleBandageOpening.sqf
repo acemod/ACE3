@@ -120,7 +120,7 @@ if (random 1 <= _reopeningChance) then {
 
                 // Check if we gained limping from this wound re-opening
                 if ((EGVAR(medical,limping) == 1) && {_bodyPartN > 3}) then {
-                    [_target] call EFUNC(medical_engine,setLimping);
+                    [_target] call EFUNC(medical_engine,updateDamageEffects);
                 };
             };
         } else {

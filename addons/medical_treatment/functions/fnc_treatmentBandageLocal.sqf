@@ -47,8 +47,8 @@ if (_impact > 0 && {GVAR(advancedBandages) && {GVAR(woundReopening)}}) then {
 };
 
 // Check if we fixed limping from this treatment
-if ((EGVAR(medical,limping) == 1) && {_amountOf <= 0} && {_target getVariable [QEGVAR(medical,isLimping), false]}) then {
-    [_target] call EFUNC(medical_engine,setLimping);
+if ((EGVAR(medical,limping) == 1) && {_partIndex > 3} && {_amountOf <= 0} && {_target getVariable [QEGVAR(medical,isLimping), false]}) then {
+    [_target] call EFUNC(medical_engine,updateDamageEffects);
 };
 
 true

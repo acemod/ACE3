@@ -45,6 +45,24 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
             idc = IDC_BODY_LEGRIGHT;
             text = QPATHTOF(data\body_image\leg_right.paa);
         };
+        class ArmLeftB: Background {
+            idc = IDC_BODY_ARMLEFT_B;
+            text = QPATHTOF(data\body_image\arm_left_bonel.paa);
+            colorText[] = {0, 0, 0.8, 1};
+            show = 0;
+        };
+        class ArmRightB: ArmLeftB {
+            idc = IDC_BODY_ARMRIGHT_B;
+            text = QPATHTOF(data\body_image\arm_right_boner.paa);
+        };
+        class LegLeftB: ArmLeftB {
+            idc = IDC_BODY_LEGLEFT_B;
+            text = QPATHTOF(data\body_image\leg_left_bonel.paa);
+        };
+        class LegRightB: ArmLeftB {
+            idc = IDC_BODY_LEGRIGHT_B;
+            text = QPATHTOF(data\body_image\leg_right_boner.paa);
+        };
         class ArmLeftT: Background {
             idc = IDC_BODY_ARMLEFT_T;
             text = QPATHTOF(data\body_image\arm_left_t.paa);
@@ -54,14 +72,6 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         class ArmRightT: ArmLeftT {
             idc = IDC_BODY_ARMRIGHT_T;
             text = QPATHTOF(data\body_image\arm_right_t.paa);
-        };
-        class LegLeftB: ArmLeftT {
-            idc = IDC_BODY_LEGLEFT_B;
-            text = QPATHTOF(data\body_image\leg_left_bonel.paa);
-        };
-        class LegRightB: ArmLeftT {
-            idc = IDC_BODY_LEGRIGHT_B;
-            text = QPATHTOF(data\body_image\leg_right_boner.paa);
         };
         class LegLeftT: ArmLeftT {
             idc = IDC_BODY_LEGLEFT_T;
@@ -557,11 +567,11 @@ class RscTitles {
                         w = POS_W(8.5);
                         h = POS_H(8.5);
                     };
-                    class ArmLeftT: ArmLeftT {
+                    class ArmLeftB: ArmLeftB {
                         w = POS_W(8.5);
                         h = POS_H(8.5);
                     };
-                    class ArmRightT: ArmRightT {
+                    class ArmRightB: ArmRightB {
                         w = POS_W(8.5);
                         h = POS_H(8.5);
                     };
@@ -570,6 +580,14 @@ class RscTitles {
                         h = POS_H(8.5);
                     };
                     class LegRightB: LegRightB {
+                        w = POS_W(8.5);
+                        h = POS_H(8.5);
+                    };
+                    class ArmLeftT: ArmLeftT {
+                        w = POS_W(8.5);
+                        h = POS_H(8.5);
+                    };
+                    class ArmRightT: ArmRightT {
                         w = POS_W(8.5);
                         h = POS_H(8.5);
                     };

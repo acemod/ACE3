@@ -67,7 +67,7 @@ if (_highestPossibleSpot < 0) exitWith { TRACE_2("no wounds possible",_damage,_h
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
 
-private _updateLimping = false;
+private _updateDamageEffects = false;
 private _painLevel = 0;
 private _critialDamage = false;
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
@@ -133,16 +133,16 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
                         [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
                     };
                 };
-            case (_causeFracture && {EGVAR(medical,fractures) > 0} && {_bodyPartNToAdd > 3} && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}): { // ToDo: Arm fractures?
-                    TRACE_1("fracture",_bodyPartNToAdd);
+            case (_causeFracture && {EGVAR(medical,fractures) > 0} && {_bodyPartNToAdd > 1} && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}): {
+                    TRACE_1("limb fracture",_bodyPartNToAdd);
                     // todo: play sound?
                     private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
                     _fractures set [_bodyPartNToAdd, 1];
                     _unit setVariable [QEGVAR(medical,fractures), _fractures, true];
-                    _updateLimping = true;
+                    _updateDamageEffects = true;
                 };
             case (_causeLimping && {EGVAR(medical,limping) > 0} && {_bodyPartNToAdd > 3} && {_woundDamage > LIMPING_DAMAGE_THRESHOLD}): {
-                    _updateLimping = true;
+                    _updateDamageEffects = true;
                 };
             };
 
@@ -175,8 +175,8 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     };
 } forEach _thresholds;
 
-if (_updateLimping) then {
-    [_unit] call EFUNC(medical_engine,setLimping);
+if (_updateDamageEffects) then {
+    [_unit] call EFUNC(medical_engine,updateDamageEffects);
 };
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];

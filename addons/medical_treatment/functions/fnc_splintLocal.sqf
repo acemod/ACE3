@@ -26,6 +26,6 @@ _fractures set [_bodyPartNum, -1];
 _target setVariable [QEGVAR(medical,fractures), _fractures, true];
 
 // Check if we fixed limping from this treatment
-[_target] call EFUNC(medical_engine,setLimping);
+[_target] call EFUNC(medical_engine,updateDamageEffects);
 
 // toDo: AddToLog:

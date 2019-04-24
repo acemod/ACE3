@@ -71,7 +71,7 @@ _target setVariable [VAR_MEDICATIONS, [], true];
 // Reset triage card since medication is all reset
 _target setVariable [QEGVAR(medical,triageCard), [], true];
 
-[_target] call EFUNC(medical_engine,setLimping);
+[_target] call EFUNC(medical_engine,updateDamageEffects);
 
 // Resetting damage
 _target setDamage 0;

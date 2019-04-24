@@ -144,6 +144,10 @@
     _return pushBack "------- Medications Raw: -------";
     _return append _rawMedications;
 
+    if (_unit isEqualTo ACE_player) then {
+        _return pushBack format ["ACE_setCustomAimCoef: %1", [missionNamespace, "ACE_setCustomAimCoef", "max"] call ace_common_fnc_arithmeticGetResult];
+    };
+
     // Footer:
     _return pushBack "</t>";
 
