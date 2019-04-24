@@ -16,7 +16,7 @@
  * Public: No
  */
 // Ignore UAV/Drone AI
-#define IGNORE_BASE_UAVPILOTS "B_UAV_AI","O_UAV_AI","UAV_AI_base_F"
+#define IGNORE_BASE_UAVPILOTS "B_UAV_AI", "O_UAV_AI", "UAV_AI_base_F"
 
 GVAR(localUnits) = [];
 
