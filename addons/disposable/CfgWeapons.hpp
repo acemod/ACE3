@@ -5,31 +5,32 @@ class CfgWeapons {
     };
 
     class launch_NLAW_F: Launcher_Base_F {
-        scope = 1;
-        scopeArsenal = 1;
+        scope = 2;
+        scopeArsenal = 2;
         baseWeapon = "launch_NLAW_F";
 
+        magazines[] = {"CBA_FakeLauncherMagazine"};
         magazineReloadTime = 0.1;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 180; // launcher 100, magazine 80
+        };
+    };
+
+    class ACE_launch_NLAW_ready_F: launch_NLAW_F {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        scopeArsenal = 1;
+        baseWeapon = "ACE_launch_NLAW_ready_F";
+
+        magazines[] = {"NLAW_F"};
 
         class EventHandlers {
             fired = "_this call CBA_fnc_firedDisposable"; // this weapon eventhandler is required!
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = LAUNCHER_MASS;
-        };
-    };
-
-    class ACE_launch_NLAW_loaded_F: launch_NLAW_F {
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        scopeArsenal = 2;
-        baseWeapon = "ACE_launch_NLAW_loaded_F";
-
-        magazines[] = {"CBA_FakeLauncherMagazine"};
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 180; // launcher 100, magazine 80
+            mass = 100;
         };
     };
 
@@ -41,11 +42,10 @@ class CfgWeapons {
 
         displayName = CSTRING(UsedTube);
         descriptionShort = CSTRING(UsedTubeDescription);
-        magazines[] = {"CBA_FakeLauncherMagazine"};
         weaponPoolAvailable = 0;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = LAUNCHER_MASS;
+            mass = 100;
         };
     };
 };

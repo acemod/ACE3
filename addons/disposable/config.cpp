@@ -15,7 +15,7 @@ class CfgPatches {
 };
 
 class CBA_DisposableLaunchers {
-    launch_NLAW_F[] = {"ACE_launch_NLAW_loaded_F","ACE_launch_NLAW_used_F"};
+    ACE_launch_NLAW_ready_F[] = {"launch_NLAW_F","ACE_launch_NLAW_used_F"};
 };
 
 #include "CfgWeapons.hpp"
