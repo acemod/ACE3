@@ -646,6 +646,12 @@
             <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的</Chinesesimp>
             <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_treatment_splint_Display">
+            <English>Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_splint_Desc_Short">
+            <English>Stabilizes a fractured limb</English>
+        </Key>
         <Key ID="STR_ACE_Medical_treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
             <German>Morphium-Autoinjektor</German>
@@ -1840,6 +1846,12 @@
             <Korean>지혈대 제거</Korean>
             <Chinesesimp>移除军用止血带</Chinesesimp>
             <Chinese>移除軍用止血帶</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_Apply_Splint">
+            <English>Apply Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_Applying_Splint">
+            <English>Applying Splint...</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Actions_Diagnose">
             <English>Diagnose</English>

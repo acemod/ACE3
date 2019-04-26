@@ -1,3 +1,7 @@
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
+
 
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
@@ -70,12 +74,15 @@
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD 0.30
 
+// Minimum limb damage required for fracture
+#define FRACTURE_DAMAGE_THRESHOLD 0.50
+
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 
 // Empty wound data, used for some default return values
-// [ID, classID, bodypartIndex, amountOf, bloodloss, damage, category]
-#define EMPTY_WOUND [-1, -1, -1, 0, 0, 0, 0]
+// [classID, bodypartIndex, amountOf, bloodloss, damage]
+#define EMPTY_WOUND [-1, -1, 0, 0, 0]
 
 // Base time to bandage each wound category
 #define BANDAGE_TIME_S 4
@@ -108,6 +115,7 @@
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)
 #define VAR_BLOOD_PRESS QEGVAR(medical,bloodPressure)
 #define VAR_BLOOD_VOL   QEGVAR(medical,bloodVolume)
+#define VAR_WOUND_BLEEDING QEGVAR(medical,woundBleeding)
 #define VAR_CRDC_ARRST  QEGVAR(medical,inCardiacArrest)
 #define VAR_HEART_RATE  QEGVAR(medical,heartRate)
 #define VAR_PAIN        QEGVAR(medical,pain)
@@ -115,13 +123,10 @@
 #define VAR_PERIPH_RES  QEGVAR(medical,peripheralResistance)
 #define VAR_UNCON       "ACE_isUnconscious"
 // These variables track gradual adjustments (from medication, etc.)
-#define VAR_HEART_RATE_ADJ  QEGVAR(medical,heartRateAdjustments)
-#define VAR_PAIN_SUPP_ADJ   QEGVAR(medical,painSuppressAdjustments)
-#define VAR_PERIPH_RES_ADJ  QEGVAR(medical,peripheralResistanceAdjustments)
+#define VAR_MEDICATIONS     QEGVAR(medical,medications)
 // These variables track the current state of status values above
 #define VAR_HEMORRHAGE      QEGVAR(medical,hemorrhage)
 #define VAR_IN_PAIN         QEGVAR(medical,inPain)
-#define VAR_IS_BLEEDING     QEGVAR(medical,isBleeding)
 #define VAR_TOURNIQUET      QEGVAR(medical,tourniquets)
 
 
@@ -129,13 +134,14 @@
 // Retrieval macros for common unit values
 // Defined for easy consistency and speed
 #define GET_BLOOD_VOLUME(unit)      (unit getVariable [VAR_BLOOD_VOL,DEFAULT_BLOOD_VOLUME])
+#define GET_WOUND_BLEEDING(unit)    (unit getVariable [VAR_WOUND_BLEEDING,0])
 #define GET_HEART_RATE(unit)        (unit getVariable [VAR_HEART_RATE,DEFAULT_HEART_RATE])
 #define GET_HEMORRHAGE(unit)        (unit getVariable [VAR_HEMORRHAGE,0])
 #define GET_PAIN(unit)              (unit getVariable [VAR_PAIN,0])
 #define GET_PAIN_SUPPRESS(unit)     (unit getVariable [VAR_PAIN_SUPP,0])
 #define GET_TOURNIQUETS(unit)       (unit getVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES])
 #define IN_CRDC_ARRST(unit)         (unit getVariable [VAR_CRDC_ARRST,false])
-#define IS_BLEEDING(unit)           (unit getVariable [VAR_IS_BLEEDING,false])
+#define IS_BLEEDING(unit)           (GET_WOUND_BLEEDING(unit) > 0)
 #define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN,false])
 #define IS_UNCONSCIOUS(unit)        (unit getVariable [VAR_UNCON,false])
 

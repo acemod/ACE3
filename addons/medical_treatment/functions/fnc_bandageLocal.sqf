@@ -34,9 +34,10 @@ _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
 if (_effectiveness == -1) exitWith {};
 
 // Find the impact this bandage has and reduce the amount this injury is present
-private _amountOf = _wound select 3;
+private _amountOf = _wound select 2;
 private _impact = _effectiveness min _amountOf;
-_wound set [3, _amountOf - _impact];
+_amountOf = _amountOf - _impact;
+_wound set [2, _amountOf];
 _openWounds set [_woundIndex, _wound];
 
 _patient setVariable [QEGVAR(medical,openWounds), _openWounds, true];
@@ -45,3 +46,10 @@ _patient setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 if (_impact > 0 && {GVAR(advancedBandages) && {GVAR(woundReopening)}}) then {
     [_patient, _impact, _partIndex, _woundIndex, _wound, _bandage] call FUNC(handleBandageOpening);
 };
+
+// Check if we fixed limping from this treatment
+if ((EGVAR(medical,limping) == 1) && {_partIndex > 3} && {_amountOf <= 0} && {_target getVariable [QEGVAR(medical,isLimping), false]}) then {
+    [_patient] call EFUNC(medical_engine,updateDamageEffects);
+};
+
+true

@@ -18,6 +18,8 @@
  * Public: No
  */
 
+WARNING("this function needs to be updated for changes to woundsHandlerSQF");
+
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
@@ -128,6 +130,8 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+
+[_unit] call EFUNC(medical_status,updateWoundBloodLoss);
 
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 

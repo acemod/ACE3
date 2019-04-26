@@ -14,8 +14,8 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_ENGINE
 #endif
 
-#include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_config.hpp"
 
 #define PRELOAD_CLASS(class) \
