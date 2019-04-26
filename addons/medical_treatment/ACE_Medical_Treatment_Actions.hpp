@@ -85,8 +85,8 @@ class GVAR(Actions) {
     };
     // --- splint
     class Splint: BasicBandage {
-        displayName = "Splint"; // CSTRING(Apply_Tourniquet);
-        displayNameProgress = "Splinting"; // CSTRING(Applying_Tourniquet);
+        displayName = CSTRING(Apply_Splint);
+        displayNameProgress = CSTRING(Applying_Splint);
         category = "bandage";
         icon = QPATHTOEF(medical_gui,ui\splint.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};

@@ -73,11 +73,10 @@ class CfgWeapons {
     class ACE_splint: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);
-        displayName = "splint";
+        displayName = CSTRING(splint_Display);
         picture = QPATHTOF(ui\items\tourniquet_x_ca.paa);
         model = QPATHTOF(data\tourniquet.p3d);
-        // descriptionShort = CSTRING(Tourniquet_Desc_Short);
-        // descriptionUse = CSTRING(Tourniquet_Desc_Use);
+        descriptionShort = CSTRING(splint_Desc_Short);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };

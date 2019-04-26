@@ -139,6 +139,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
                     private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
                     _fractures set [_bodyPartNToAdd, 1];
                     _unit setVariable [QEGVAR(medical,fractures), _fractures, true];
+                    [QEGVAR(medical,fracture), [_unit, _bodyPartNToAdd]] call CBA_fnc_localEvent; // local event for fracture
                     _updateDamageEffects = true;
                 };
             case (_causeLimping && {EGVAR(medical,limping) > 0} && {_bodyPartNToAdd > 3} && {_woundDamage > LIMPING_DAMAGE_THRESHOLD}): {

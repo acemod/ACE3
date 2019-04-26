@@ -42,14 +42,19 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     if (_fractureIDC != -1) then {
         private _ctrlBone = _ctrlGroup controlsGroupCtrl _fractureIDC;
         switch (_fractures select _forEachIndex) do {
-        case (0): {_ctrlBone ctrlShow false;};
+        case (0): {
+            _ctrlBone ctrlShow false;
+        };
         case (1): {
                 _ctrlBone ctrlShow true;
                 _ctrlBone ctrlSetTextColor [1, 0, 0, 1];
             };
         case (-1): {
+            if (EGVAR(medical,fractures) == 2) then {
                 _ctrlBone ctrlShow true;
                 _ctrlBone ctrlSetTextColor [0, 0, 1, 1];
+            } else {
+                _ctrlBone ctrlShow false;
             };
         };
     };
