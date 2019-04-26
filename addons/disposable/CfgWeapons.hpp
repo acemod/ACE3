@@ -22,7 +22,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         scope = 1;
         scopeArsenal = 1;
-        baseWeapon = "ACE_launch_NLAW_ready_F";
+        baseWeapon = "launch_NLAW_F";
 
         magazines[] = {"NLAW_F"};
 
