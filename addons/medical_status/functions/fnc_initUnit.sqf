@@ -63,15 +63,8 @@ _unit setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
 // medication
 _unit setVariable [VAR_MEDICATIONS, [], true];
 
-// TODO move to treatment
-private _logs = _unit getVariable [QEGVAR(medical,allLogs), []];
-{
-    _unit setVariable [_x, nil];
-} forEach _logs;
-_unit setVariable [QEGVAR(medical,allLogs), [], true];
-
 [{
     params ["_unit"];
     TRACE_2("Unit Init",_unit,local _unit);
-    [QGVAR(initialized), [_unit]] call CBA_fnc_localEvent;
-}, [_unit], 0.5] call CBA_fnc_waitAndExecute;
+    [QGVAR(initialized), _unit] call CBA_fnc_localEvent;
+}, _unit, 0.5] call CBA_fnc_waitAndExecute;

@@ -1,6 +1,18 @@
 #include "script_component.hpp"
 
-[QEGVAR(medical_status,initialized), FUNC(checkItems)] call CBA_fnc_addEventHandler;
+[QEGVAR(medical_status,initialized), {
+    params ["_unit"];
+
+    // Clear all saved medical logs
+    {
+        _unit setVariable [_x, nil, true];
+    } forEach (_unit getVariable [QEGVAR(medical,allLogs), []]);
+
+    _unit setVariable [QEGVAR(medical,allLogs), [], true];
+
+    [_unit] call FUNC(checkItems);
+}] call CBA_fnc_addEventHandler;
+
 ["loadout", FUNC(checkItems)] call CBA_fnc_addPlayerEventHandler;
 
 // Handle bodybags and litter on server
