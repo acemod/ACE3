@@ -11,6 +11,7 @@ class CfgWeapons {
 
         magazines[] = {"CBA_FakeLauncherMagazine"};
         magazineReloadTime = 0.1;
+        reloadMagazineSound[] = {"",1,1};
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 180; // launcher 100, magazine 80
