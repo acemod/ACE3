@@ -21,20 +21,20 @@ if (isServer) then {
     ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
 };
 
-// treatment events
+// Treatment events
 [QGVAR(bandageLocal), FUNC(bandageLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(tourniquetLocal), FUNC(tourniquetLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(medicationLocal), FUNC(medicationLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(ivBagLocal), FUNC(ivBagLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentCPRLocal), FUNC(treatmentCPRLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentFullHealLocal), FUNC(treatmentFullHealLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(cprLocal), FUNC(cprLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(fullHealLocal), FUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(splintLocal), FUNC(splintLocal)] call CBA_fnc_addEventHandler;
 
-// action events
+// Action events
 [QGVAR(checkPulseLocal), FUNC(checkPulseLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(checkBloodPressureLocal), FUNC(checkBloodPressureLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
-// log events
+// Log events
 [QGVAR(addToMedicalLog), FUNC(addToLog)] call CBA_fnc_addEventHandler;
 [QGVAR(addToTriageCard), FUNC(addToTriageCard)] call CBA_fnc_addEventHandler;

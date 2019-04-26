@@ -267,11 +267,11 @@ class GVAR(actions) {
         medicRequired = 0;
         treatmentTime = 15;
         items[] = {};
-        condition = QUOTE(!(_patient call EFUNC(common,isAwake)) && {!(_patient getVariable [ARR_2('GVAR(receiveCPR)', false)])});
-        callbackSuccess = QFUNC(treatmentCPR);
-        callbackFailure = QFUNC(treatmentCPR_failure);
-        callbackProgress = QFUNC(treatmentCPR_progress);
-        callbackStart = QFUNC(treatmentCPR_start);
+        condition = QFUNC(canCPR);
+        callbackSuccess = QFUNC(cpr);
+        callbackFailure = QFUNC(cprFailure);
+        callbackProgress = QFUNC(cprProgress);
+        callbackStart = QFUNC(cprStart);
         animationMedic = "AinvPknlMstpSlayW[wpn]Dnon_medic";
         animationMedicProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
         animationMedicSelf = "";
@@ -307,7 +307,7 @@ class GVAR(actions) {
         treatmentLocations = QGVAR(locationPAK);
         medicRequired = QGVAR(medicPAK);
         treatmentTime = QUOTE(_patient call FUNC(healTime));
-        callbackSuccess = QFUNC(treatmentFullHeal);
+        callbackSuccess = QFUNC(fullHeal);
         consumeItem = QGVAR(consumePAK);
         animationMedic = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
         animationMedicProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
