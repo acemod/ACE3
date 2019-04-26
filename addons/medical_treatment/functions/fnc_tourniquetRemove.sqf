@@ -18,6 +18,7 @@
  */
 
 params ["_medic", "_patient", "_bodyPart"];
+TRACE_3("tourniquetRemove",_medic,_patient,_bodyPart);
 
 // Remove tourniquet from body part, exit if no tourniquet applied
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
@@ -29,6 +30,8 @@ if (_tourniquets select _partIndex == 0) exitWith {
 
 _tourniquets set [_partIndex, 0];
 _patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
+
+[_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
 // Add tourniquet item to medic's inventory
 // todo: should there be a setting to select who receives the removed tourniquet?
@@ -42,6 +45,7 @@ private _arrayModified = false;
     _x params ["_bodyPartN", "_medication"];
 
     if (_partIndex == _bodyPartN) then {
+        TRACE_1("delayed medication call after tourniquet removeal",_x);
         [QGVAR(medicationLocal), [_patient, _bodyPart, _medication], _patient] call CBA_fnc_targetEvent;
         _occludedMedications set [_forEachIndex, []];
         _arrayModified = true;

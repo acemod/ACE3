@@ -10,13 +10,13 @@ if (isServer) then {
 };
 
 // treatment events
-[QGVAR(treatmentBandageLocal), FUNC(treatmentBandageLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentTourniquetLocal), FUNC(treatmentTourniquetLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentMedicationLocal), FUNC(treatmentMedicationLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentIVLocal), FUNC(treatmentIVLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(bandageLocal), FUNC(bandageLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(tourniquetLocal), FUNC(tourniquetLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(medicationLocal), FUNC(medicationLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(ivBagLocal), FUNC(ivBagLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentCPRLocal), FUNC(treatmentCPRLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentFullHealLocal), FUNC(treatmentFullHealLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentSplintLocal), FUNC(splintLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(splintLocal), FUNC(splintLocal)] call CBA_fnc_addEventHandler;
 
 // action events
 [QGVAR(checkPulseLocal), FUNC(checkPulseLocal)] call CBA_fnc_addEventHandler;

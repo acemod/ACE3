@@ -22,4 +22,4 @@ TRACE_3("splint",_caller,_target,_bodyPart);
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
-[QGVAR(treatmentSplintLocal), [_caller, _target, _partIndex], _target] call CBA_fnc_targetEvent;
+[QGVAR(splintLocal), [_caller, _target, _partIndex], _target] call CBA_fnc_targetEvent;

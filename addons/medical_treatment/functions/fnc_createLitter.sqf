@@ -29,7 +29,7 @@ if (vehicle _medic != _medic || {vehicle _patient != _patient}) exitWith {};
 // Determine if treated body part is bleeding
 private _index = ALL_BODY_PARTS find toLower _bodyPart;
 private _isBleeding = (_patient getVariable [QEGVAR(medical,openWounds), []]) findIf {
-    _x params ["", "", "_bodyPartN", "_amountOf", "_bleeding"];
+    _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
 
     _bodyPartN == _index && {_amountOf * _bleeding > 0}
 } != -1;

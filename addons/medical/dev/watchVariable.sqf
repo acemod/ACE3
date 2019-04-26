@@ -75,7 +75,7 @@
             _return pushBack format ["%1 [Time On: %2]", ALL_SELECTIONS select _tPartNum, (CBA_missionTime - _x) toFixed 1];
         };
         {
-            _x params ["", "_medClassname", "_medPartNum"];
+            _x params ["_medPartNum", "_medClassname"];
             if (_medPartNum == _tPartNum) then {
                 _return pushBack format [" - Occluded Med: %1", _medClassname];
             };

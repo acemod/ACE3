@@ -21,6 +21,7 @@
 #define MORPHINE_PAIN_SUPPRESSION 0.6
 
 params ["_patient", "_bodyPart", "_classname"];
+TRACE_3("medicationLocal",_patient,_bodyPart,_classname);
 
 // Medication has no effects on dead units
 if (!alive _patient) exitWith {};
@@ -37,11 +38,14 @@ if (!GVAR(advancedMedication)) exitWith {
         };
     };
 };
+TRACE_1("Running treatmentMedicationLocal with Advanced configuration for", _target);
+
 
 // Handle tourniquet on body part blocking blood flow at injection site
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
 if (HAS_TOURNIQUET_APPLIED_ON(_patient,_partIndex)) exitWith {
+    TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
     private _occludedMedications = _patient getVariable [QEGVAR(medical,occludedMedications), []];
     _occludedMedications pushBack [_partIndex, _classname];
     _patient setVariable [QEGVAR(medical,occludedMedications), _occludedMedications, true];
@@ -62,8 +66,13 @@ private _hrIncreaseHigh         = GET_ARRAY(_medicationConfig >> "hrIncreaseHigh
 private _incompatableMedication = GET_ARRAY(_medicationConfig >> "incompatableMedication",getArray (_defaultConfig >> "incompatableMedication"));
 
 private _heartRate = GET_HEART_RATE(_patient);
-private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNorm, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
+private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNormal, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
 _hrIncrease params ["_minIncrease", "_maxIncrease"];
 private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
 
-// todo: finish when medication rework PR is complete
+// Adjust the medication effects and add the medication to the list
+TRACE_3("adjustments",_heartRateChange,_painReduce,_viscosityChange);
+[_patient, _className, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painReduce, _viscosityChange] call EFUNC(medical_status,addMedicationAdjustment);
+
+// Check for medication compatiblity
+[_patient, _className, _maxDose, _incompatableMedication] call FUNC(onMedicationUsage);
