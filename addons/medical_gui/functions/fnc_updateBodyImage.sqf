@@ -43,18 +43,19 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
         private _ctrlBone = _ctrlGroup controlsGroupCtrl _fractureIDC;
         switch (_fractures select _forEachIndex) do {
         case (0): {
-            _ctrlBone ctrlShow false;
-        };
+                _ctrlBone ctrlShow false;
+            };
         case (1): {
                 _ctrlBone ctrlShow true;
                 _ctrlBone ctrlSetTextColor [1, 0, 0, 1];
             };
         case (-1): {
-            if (EGVAR(medical,fractures) == 2) then {
-                _ctrlBone ctrlShow true;
-                _ctrlBone ctrlSetTextColor [0, 0, 1, 1];
-            } else {
-                _ctrlBone ctrlShow false;
+                if (EGVAR(medical,fractures) == 2) then {
+                    _ctrlBone ctrlShow true;
+                    _ctrlBone ctrlSetTextColor [0, 0, 1, 1];
+                } else {
+                    _ctrlBone ctrlShow false;
+                };
             };
         };
     };
@@ -71,10 +72,10 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     private _ctrlBodyPart = _ctrlGroup controlsGroupCtrl _bodyPartIDC;
     _ctrlBodyPart ctrlSetTextColor _bodyPartColor;
 } forEach [
-    [IDC_BODY_HEAD],
-    [IDC_BODY_TORSO],
-    [IDC_BODY_ARMLEFT, IDC_BODY_ARMLEFT_T, IDC_BODY_ARMLEFT_B],
-    [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_T, IDC_BODY_ARMRIGHT_B],
-    [IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_T, IDC_BODY_LEGLEFT_B],
-    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
+[IDC_BODY_HEAD],
+[IDC_BODY_TORSO],
+[IDC_BODY_ARMLEFT, IDC_BODY_ARMLEFT_T, IDC_BODY_ARMLEFT_B],
+[IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_T, IDC_BODY_ARMRIGHT_B],
+[IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_T, IDC_BODY_LEGLEFT_B],
+[IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
 ];
