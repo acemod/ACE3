@@ -33,13 +33,7 @@ isClass _config
     private _items = getArray (_config >> "items");
     _items isEqualTo [] || {[_medic, _patient, _items] call FUNC(hasItem)}
 } && {
-    private _condition = getText (_config >> "condition");
-
-    if (isNil _condition) then {
-        _condition = compile _condition;
-    } else {
-        _condition = missionNamespace getVariable _condition;
-    };
+    GET_FUNCTION(_condition,_config >> "condition");
 
     if (_condition isEqualType {}) then {
         _condition = call _condition;

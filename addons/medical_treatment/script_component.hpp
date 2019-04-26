@@ -17,6 +17,7 @@
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #include "\z\ace\addons\main\script_macros.hpp"
 
+// Returns a text config entry as compiled code or variable from missionNamespace
 #define GET_FUNCTION(var,cfg) \
     private var = getText (cfg); \
     if (isNil var) then { \
@@ -46,6 +47,3 @@
 #define TREATMENT_LOCATIONS_ALL 4
 
 #define LITTER_CLEANUP_CHECK_DELAY 30
-
-#define MAX_LOG_ENTRIES 8
-#define LOG_VARNAME(type) (format [QEGVAR(medical,log_%1), type])

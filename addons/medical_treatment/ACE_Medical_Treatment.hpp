@@ -582,7 +582,7 @@ class ADDON {
             timeInSystem = 1800;
             timeTillMaxEffect = 30;
             maxDose = 4;
-            incompatableMedication[] = {};
+            incompatibleMedication[] = {};
             viscosityChange = -10;
         };
         class Epinephrine {
@@ -593,7 +593,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 10;
             maxDose = 10;
-            incompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class Adenosine {
             painReduce = 0;
@@ -603,7 +603,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 6;
-            incompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class Atropine {
             painReduce = 0;
@@ -613,14 +613,14 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 6;
-            incompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class PainKillers {
             painReduce = 0.1;
             timeInSystem = 600;
             timeTillMaxEffect = 60;
             maxDose = 10;
-            incompatableMedication[] = {};
+            incompatibleMedication[] = {};
             viscosityChange = 5;
         };
     };

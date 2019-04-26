@@ -27,10 +27,10 @@ if (!local _unit) exitWith {
 date params ["", "", "", "_hour", "_minute"];
 private _timeStamp = format ["%1:%2", _hour, [_minute, 2] call CBA_fnc_formatNumber];
 
-private _logVarName = LOG_VARNAME(_logType);
+private _logVarName = MED_LOG_VARNAME(_logType);
 private _log = _unit getVariable [_logVarName, []];
 
-if (count _log >= MAX_LOG_ENTRIES) then {
+if (count _log >= MED_LOG_MAX_ENTRIES) then {
     _log deleteAt 0;
 };
 

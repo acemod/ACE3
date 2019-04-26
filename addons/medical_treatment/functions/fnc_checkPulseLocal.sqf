@@ -26,28 +26,28 @@ if (alive _patient && {!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)
 };
 
 private _heartRateOutput = LSTRING(Check_Pulse_Output_5);
-private _logOutPut = LSTRING(Check_Pulse_None);
+private _logOutput = LSTRING(Check_Pulse_None);
 
 if (_heartRate > 1) then {
     if (_medic call FUNC(isMedic)) then {
         _heartRateOutput = LSTRING(Check_Pulse_Output_1);
-        _logOutPut = format ["%1", round _heartRate];
+        _logOutput = format ["%1", round _heartRate];
     } else {
         _heartRateOutput = LSTRING(Check_Pulse_Output_2);
-        _logOutPut = LSTRING(Check_Pulse_Weak);
+        _logOutput = LSTRING(Check_Pulse_Weak);
 
         if (_heartRate > 60) then {
             if (_heartRate > 100) then {
                 _heartRateOutput = LSTRING(Check_Pulse_Output_3);
-                _logOutPut = LSTRING(Check_Pulse_Strong);
+                _logOutput = LSTRING(Check_Pulse_Strong);
             } else {
                 _heartRateOutput = LSTRING(Check_Pulse_Output_4);
-                _logOutPut = LSTRING(Check_Pulse_Normal);
+                _logOutput = LSTRING(Check_Pulse_Normal);
             };
         };
     };
 };
 
-[_patient, "quick_view", LSTRING(Check_Pulse_Log), [_medic call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+[_patient, "quick_view", LSTRING(Check_Pulse_Log), [_medic call EFUNC(common,getName), _logOutput]] call FUNC(addToLog);
 
 [QEGVAR(common,displayTextStructured), [[_heartRateOutput, _patient call EFUNC(common,getName), round _heartRate], 1.5, _medic], _medic] call CBA_fnc_targetEvent;

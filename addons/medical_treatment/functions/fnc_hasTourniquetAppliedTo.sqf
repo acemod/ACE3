@@ -8,7 +8,7 @@
  * 1: Body Part <STRING>
  *
  * Return Value:
- * Has Tourniquet Applied <BOOL>
+ * Has Tourniquet Been Applied <BOOL>
  *
  * Example:
  * [player, "leftleg"] call ace_medical_treatment_fnc_hasTourniquetAppliedTo

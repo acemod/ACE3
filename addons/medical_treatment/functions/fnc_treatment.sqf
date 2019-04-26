@@ -30,23 +30,16 @@ if !(_this call FUNC(canTreat)) exitWith {false};
 private _config = configFile >> QGVAR(actions) >> _classname;
 
 // Get treatment time from config, exit if treatment time is zero
-// Supports number config entries and string entries of code or missionNamespace variables
-private _treatmentTime = 0;
-
-if (isText (_config >> "treatmentTime")) then {
-    _treatmentTime = getText (_config >> "treatmentTime");
-
-    if (isNil _treatmentTime) then {
-        _treatmentTime = compile _treatmentTime;
-    } else {
-        _treatmentTime = missionNamespace getVariable _treatmentTime;
-    };
+private _treatmentTime = if (isText (_config >> "treatmentTime")) then {
+    GET_FUNCTION(_treatmentTime,_config >> "treatmentTime");
 
     if (_treatmentTime isEqualType {}) then {
         _treatmentTime = call _treatmentTime;
     };
+
+    _treatmentTime
 } else {
-    _treatmentTime = getNumber (_config >> "treatmentTime");
+    getNumber (_config >> "treatmentTime");
 };
 
 if (_treatmentTime == 0) exitWith {false};

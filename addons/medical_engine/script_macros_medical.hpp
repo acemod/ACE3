@@ -2,7 +2,6 @@
 #define DISABLE_COMPILE_CACHE
 #define ENABLE_PERFORMANCE_COUNTERS
 
-
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
 #define ALL_HITPOINTS ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
@@ -110,6 +109,10 @@
 #define TRIAGE_TEXT_COLOR_IMMEDIATE 1, 1, 1, 1
 #define TRIAGE_TEXT_COLOR_DECEASED  1, 1, 1, 1
 
+// Medical activity logs
+#define MED_LOG_MAX_ENTRIES 8
+#define MED_LOG_VARNAME(type) (format [QEGVAR(medical,log_%1), type])
+
 // - Unit Variables ----------------------------------------------------
 // These variables get stored in object space and used across components
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)
@@ -128,7 +131,6 @@
 #define VAR_HEMORRHAGE      QEGVAR(medical,hemorrhage)
 #define VAR_IN_PAIN         QEGVAR(medical,inPain)
 #define VAR_TOURNIQUET      QEGVAR(medical,tourniquets)
-
 
 // - Unit Functions ---------------------------------------------------
 // Retrieval macros for common unit values
