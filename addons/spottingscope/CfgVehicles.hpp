@@ -68,6 +68,8 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
 
+        CBA_ScriptedOpticClass = "ACE_SpottingScopeOptic";
+
         author = ECSTRING(common,ACETeam);
         scope = 1;
         side = 1;
@@ -123,15 +125,15 @@ class CfgVehicles {
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    minFov = 0.0025;
-                    maxFov = 0.05;
-                    initFov= 0.05;
+                    minFov = "0.25/35"; // real one is 15x-45x, but max mag in game is 37x
+                    maxFov = "0.25/5";
+                    initFov= "0.25/5";
                 };
 
                 weapons[] = {};
                 magazines[] = {};
                 gunnerOpticsColor[] = {1,1,1,1};
-                gunnerOpticsModel = "\A3\Weapons_F\empty";
+                gunnerOpticsModel = "\x\cba\addons\optics\cba_optic_big_100.p3d";
                 gunnerOpticsEffect[] = {"OpticsCHAbera1","OpticsBlur2"};
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
@@ -140,7 +142,7 @@ class CfgVehicles {
                 gunnerGetOutAction = "PlayerProne";
                 gunnerForceOptics = 0;
                 ejectDeadGunner = 0;
-                turretInfoType = QGVAR(RscUnitInfo);
+                turretInfoType = "CBA_ScriptedOptic_zooming";
                 opticsDisablePeripherialVision = 1;
             };
         };

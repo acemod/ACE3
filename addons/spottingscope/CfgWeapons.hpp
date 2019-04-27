@@ -1,4 +1,3 @@
-
 class CfgWeapons {
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
@@ -13,6 +12,30 @@ class CfgWeapons {
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 40;
+        };
+    };
+
+    class ItemCore;
+    class ACE_SpottingScopeOptic: ItemCore {
+        scope = 1;
+
+        class CBA_ScriptedOptic {
+            opticsPPEffects[] = {QGVAR(OpticsRadBlur1)};
+            minMagnificationReticleScale[] = {5,1.026};
+            maxMagnificationReticleScale[] = {25,5*1.026};
+
+            reticleDetailTextures[] = {
+                // start at > this magnification, reticleTexture, reticleTextureSize, reticleTextureNight (optional)
+                {0,  PATHTOF(data\ace_spottingscope_reticle1_ca.paa), 1},
+                {9,  PATHTOF(data\ace_spottingscope_reticle2_ca.paa), 1/2},
+                {14, PATHTOF(data\ace_spottingscope_reticle3_ca.paa), 1/3},
+                {19, PATHTOF(data\ace_spottingscope_reticle4_ca.paa), 1/4},
+                {24, PATHTOF(data\ace_spottingscope_reticle5_ca.paa), 1/5}
+            };
+
+            bodyTexture = QPATHTOF(data\ace_spottingscope_body_co.paa);
+            //bodyTextureNight = QPATHTOF(data\ace_spottingscope_body_co.paa);
+            bodyTextureSize = 1.15;
         };
     };
 };
