@@ -34,8 +34,8 @@ private _classID = 0;
     private _minDamage = GET_NUMBER(_entry >> "minDamage",0);
     private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
     private _causes = GET_ARRAY(_entry >> "causes",[]);
-    private _causeLimping = 1 == GET_NUMBER(_entry >> "causeLimping",0);
-    private _causeFracture = 1 == GET_NUMBER(_entry >> "causeFracture",0);
+    private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0) == 1;
+    private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0) == 1;
 
     if !(_causes isEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
