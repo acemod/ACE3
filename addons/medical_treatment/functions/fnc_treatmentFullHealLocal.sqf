@@ -44,6 +44,9 @@ _target setVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0], true];
 // - Update wound bleeding
 [_target] call EFUNC(medical_status,updateWoundBloodLoss);
 
+// - Update wound bleeding
+[_target] call EFUNC(medical_status,updateWoundBloodLoss);
+
 // vitals
 _target setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
 _target setVariable [VAR_BLOOD_PRESS, [80, 120], true];

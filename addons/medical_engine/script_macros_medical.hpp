@@ -157,3 +157,6 @@
 // Cache expiry values, in seconds
 #define IN_MEDICAL_FACILITY_CACHE_EXPIRY 1
 #define CAN_TREAT_CONDITION_CACHE_EXPIRY 2
+
+// Ignore UAV/Drone AI Base Classes
+#define IGNORE_BASE_UAVPILOTS "B_UAV_AI", "O_UAV_AI", "UAV_AI_base_F"

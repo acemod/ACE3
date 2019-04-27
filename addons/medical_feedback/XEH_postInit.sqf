@@ -70,3 +70,24 @@ GVAR(heartBeatEffectRunning) = false;
     [_status, 0] call FUNC(effectUnconscious);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addPlayerEventHandler;
+
+
+// Kill vanilla bleeding feedback effects.
+#ifdef DISABLE_VANILLA_DAMAGE_EFFECTS
+TRACE_1("disabling vanilla bleeding feedback effects",_this);
+[{
+    {isNil _x} count [
+        "BIS_fnc_feedback_damageCC",
+        "BIS_fnc_feedback_damageRadialBlur",
+        "BIS_fnc_feedback_damageBlur"
+    ] == 0
+}, {
+    {
+        ppEffectDestroy _x;
+    } forEach [
+        BIS_fnc_feedback_damageCC,
+        BIS_fnc_feedback_damageRadialBlur,
+        BIS_fnc_feedback_damageBlur
+    ];
+}] call CBA_fnc_waitUntilAndExecute;
+#endif

@@ -27,7 +27,7 @@
             _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
         ];
     };
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+}, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
 #ifdef DEBUG_MODE_FULL
 [QEGVAR(medical,woundReceived), {
@@ -37,24 +37,6 @@
 }] call CBA_fnc_addEventHandler;
 #endif
 
-// Kill vanilla bleeding feedback effects.
-#ifdef DISABLE_VANILLA_DAMAGE_EFFECTS
-[{
-    {isNil _x} count [
-        "BIS_fnc_feedback_damageCC",
-        "BIS_fnc_feedback_damageRadialBlur",
-        "BIS_fnc_feedback_damageBlur"
-    ] == 0
-}, {
-    {
-        ppEffectDestroy _x;
-    } forEach [
-        BIS_fnc_feedback_damageCC,
-        BIS_fnc_feedback_damageRadialBlur,
-        BIS_fnc_feedback_damageBlur
-    ];
-}] call CBA_fnc_waitUntilAndExecute;
-#endif
 
 // this handles moving units into vehicles via load functions or zeus
 // needed, because the vanilla INCAPACITATED state does not handle vehicles
