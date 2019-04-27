@@ -61,7 +61,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class LegRightB: ArmLeftB {
             idc = IDC_BODY_LEGRIGHT_B;
-            text = QPATHTOF(data\body_image\leg_right_bo.paa);
+            text = QPATHTOF(data\body_image\leg_right_b.paa);
         };
         class ArmLeftT: Background {
             idc = IDC_BODY_ARMLEFT_T;

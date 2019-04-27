@@ -93,7 +93,7 @@ class GVAR(Actions) {
         items[] = {"ACE_splint"};
         treatmentTime = 7;
         callbackSuccess = QFUNC(splint);
-        condition = QUOTE(call FUNC(splintCondition));
+        condition = QFUNC(splintCondition);
         litter[] = {};
     };
 
