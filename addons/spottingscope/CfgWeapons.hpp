@@ -26,11 +26,11 @@ class CfgWeapons {
 
             reticleDetailTextures[] = {
                 // start at > this magnification, reticleTexture, reticleTextureSize, reticleTextureNight (optional)
-                {0,  PATHTOF(data\ace_spottingscope_reticle1_ca.paa), 1},
-                {9,  PATHTOF(data\ace_spottingscope_reticle2_ca.paa), 1/2},
-                {14, PATHTOF(data\ace_spottingscope_reticle3_ca.paa), 1/3},
-                {19, PATHTOF(data\ace_spottingscope_reticle4_ca.paa), 1/4},
-                {24, PATHTOF(data\ace_spottingscope_reticle5_ca.paa), 1/5}
+                {0,  PATHTOF(data\ace_spottingscope_reticle_b1_ca.paa), 1},
+                {9,  PATHTOF(data\ace_spottingscope_reticle_b2_ca.paa), 1/2},
+                {14, PATHTOF(data\ace_spottingscope_reticle_b3_ca.paa), 1/3},
+                {19, PATHTOF(data\ace_spottingscope_reticle_b4_ca.paa), 1/4},
+                {24, PATHTOF(data\ace_spottingscope_reticle_b5_ca.paa), 1/5}
             };
 
             bodyTexture = QPATHTOF(data\ace_spottingscope_body_co.paa);
