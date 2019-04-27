@@ -34,8 +34,8 @@ if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", 
 _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;
 
 if (!isNull _instigator) then {
-    _unit setVariable [QEGVAR(medical_engine,lastShooter), _instigator];
-    _unit setVariable [QEGVAR(medical_engine,lastInstigator), _instigator];
+    _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
+    _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 };
 
 #ifdef DEBUG_TESTRESULTS

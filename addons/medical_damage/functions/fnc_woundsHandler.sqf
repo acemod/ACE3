@@ -21,7 +21,7 @@
 WARNING("this function needs to be updated for changes to woundsHandlerSQF");
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
-TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
+TRACE_4("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
 if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
