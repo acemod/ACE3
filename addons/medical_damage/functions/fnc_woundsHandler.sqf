@@ -129,6 +129,8 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
+[_unit] call EFUNC(medical_status,updateWoundBloodLoss);
+
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
 [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;

@@ -38,6 +38,8 @@ _openWounds set [_woundIndex, _wound];
 
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
+[_target] call EFUNC(medical_status,updateWoundBloodLoss);
+
 // Handle the reopening of bandaged wounds
 if (_impact > 0 && {GVAR(advancedBandages) && {GVAR(woundReopening)}}) then {
     [_target, _impact, _partIndex, _woundIndex, _wound, _bandage] call FUNC(handleBandageOpening);
