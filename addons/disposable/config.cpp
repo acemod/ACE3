@@ -19,5 +19,4 @@ class CBA_DisposableLaunchers {
 };
 
 #include "CfgWeapons.hpp"
-#include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
