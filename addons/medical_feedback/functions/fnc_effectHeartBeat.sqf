@@ -4,18 +4,18 @@
  * Handles the hear beat sound.
  *
  * Arguments:
- * 0: Heart rate <NUMBER>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [120] call ace_medical_feedback_fnc_effectHeartBeat
+ * [] call ace_medical_feedback_fnc_effectHeartBeat
  *
  * Public: No
  */
 
-params ["_heartRate"];
+private _heartRate = GET_HEART_RATE(ACE_player);
 
 if (_heartRate == 0) exitWith {
     TRACE_1("Ending heart beat effect - zero",_heartRate);

@@ -21,7 +21,7 @@
  */
 
 params ["_unit", "_animation", ["_priority", 0]];
-TRACE_4("params",_unit,_animation,_priority);
+TRACE_3("params",_unit,_animation,_priority);
 
 // switchMove "" no longer works in dev 1.37
 if (_animation == "") then {

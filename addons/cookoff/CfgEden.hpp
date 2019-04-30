@@ -7,8 +7,8 @@ class Cfg3DEN {
                     class GVAR(enable) {
                         property = QGVAR(enable);
                         control = "Checkbox";
-                        displayName = CSTRING(enable_name);
-                        tooltip = CSTRING(enable_tooltip);
+                        displayName = CSTRING(enable_hd_name);
+                        tooltip = CSTRING(enable_hd_tooltip);
                         expression = QUOTE(if !(_value) then {_this setVariable [ARR_3('%s',_value,true)];};);
                         typeName = "BOOL";
                         condition = "objectVehicle";

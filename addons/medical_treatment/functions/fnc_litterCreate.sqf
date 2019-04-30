@@ -65,7 +65,7 @@ private _createLitter = {
 
 {
     if (count _x < MIN_ENTRIES_LITTER_CONFIG) then {
-        WARNING_2("Wrong litter array: %1",_x);
+        WARNING_1("Wrong litter array: %1",_x);
     } else {
         _x params [
             ["_selection", "", [""]],
