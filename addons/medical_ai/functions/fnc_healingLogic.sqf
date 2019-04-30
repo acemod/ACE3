@@ -41,7 +41,7 @@ private _treatmentAction = "#none";
 private _treatmentArgs = [];
 private _treatmentTime = 6;
 switch (true) do {
-case (GET_BLOOD_LOSS(_target) > 0): {
+case (GET_WOUND_BLEEDING(_target) > 0): {
         // Select first bleeding wound and bandage it
         private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
         private _selection = "?";
