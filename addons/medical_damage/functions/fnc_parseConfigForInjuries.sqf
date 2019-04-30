@@ -19,7 +19,7 @@ private _injuriesConfigRoot = configFile >> "ACE_Medical_Injuries";
 
 // --- parse wounds
 GVAR(woundClassNamesComplex) = []; // index = 10 * classID + category; [will contain nils] e.g. ["aMinor", "aMed", "aLarge", nil, nil..."bMinor"]
-GVAR(woundsData) = []; // @todo classTypes are strings currently. Convert them to unqiue IDs instead.
+GVAR(woundsData) = [];
 
 private _woundsConfig = _injuriesConfigRoot >> "wounds";
 private _classID = 0;
@@ -90,8 +90,8 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
     ];
     TRACE_1("",_extensionArgs);
 
-    private _extensionRes = "ace_medical" callExtension _extensionArgs;
-    TRACE_1("",_extensionRes);
+    // private _extensionRes = "ace_medical" callExtension _extensionArgs;
+    // TRACE_1("",_extensionRes);
 } forEach configProperties [_damageTypesConfig, "isClass _x"];
 
 // extension loading
@@ -122,8 +122,8 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
     ];
     TRACE_1("",_extensionArgs);
 
-    private _extensionRes = "ace_medical" callExtension _extensionArgs;
-    TRACE_1("",_extensionRes);
+    // private _extensionRes = "ace_medical" callExtension _extensionArgs;
+    // TRACE_1("",_extensionRes);
 } forEach GVAR(woundsData);
 
-"ace_medical" callExtension "ConfigComplete";
+// "ace_medical" callExtension "ConfigComplete";
