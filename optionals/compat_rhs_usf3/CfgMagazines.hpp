@@ -23,4 +23,17 @@ class cfgMagazines {
         EGVAR(overpressure,range) = 0;
         EGVAR(overpressure,damage) = 0;
     };
+
+    class rhs_mag_AGM114K_2;
+    class GVAR(pylon_mag_2rnd_hellfire_k): rhs_mag_AGM114K_2 {
+        displayName = "2x AGM-114K [ACE]";
+        pylonWeapon = "ace_hellfire_launcher";
+        ammo = "ACE_Hellfire_AGM114K";
+    };
+    class GVAR(pylon_mag_2rnd_hellfire_n): rhs_mag_AGM114K_2 {
+        displayName = "2x AGM-114N [ACE]";
+        pylonWeapon = "ace_hellfire_launcher_N";
+        ammo = "ACE_Hellfire_AGM114N";
+    };
+
 };

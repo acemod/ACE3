@@ -155,38 +155,6 @@
             <Chinese>束線帶可以綁住俘虜</Chinese>
             <Chinesesimp>束线带可以绑住俘虏</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Captives_FriskMenuHeader">
-            <English>Inventory of frisked person</English>
-            <German>Inventar der durchsuchten Person</German>
-            <French>Inventaire de la personne fouillé</French>
-            <Spanish>Inventario de la persona cacheada</Spanish>
-            <Hungarian>Motozott személy felszerelése</Hungarian>
-            <Czech>Inventář prohledávané osoby</Czech>
-            <Polish>Ekwipunek rewidowanej osoby</Polish>
-            <Russian>Инвентарь обысканного человека</Russian>
-            <Portuguese>Inventário da pessoa revistada</Portuguese>
-            <Italian>Inventario della persona perquisita</Italian>
-            <Japanese>捕虜の持ち物を確認する</Japanese>
-            <Korean>검문당한 사람의 소지품</Korean>
-            <Chinese>搜身選單</Chinese>
-            <Chinesesimp>搜身选单</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Captives_FriskPerson">
-            <English>Frisk person</English>
-            <German>Person durchsuchen</German>
-            <French>Fouiller la personne</French>
-            <Spanish>Cachear</Spanish>
-            <Czech>Prohledávaná osoba</Czech>
-            <Polish>Rewiduj osobę</Polish>
-            <Hungarian>Motozás</Hungarian>
-            <Russian>Обыскать человека</Russian>
-            <Portuguese>Revistar</Portuguese>
-            <Italian>Perquisisci la persona</Italian>
-            <Japanese>捕虜の持ち物</Japanese>
-            <Korean>검문당한사람</Korean>
-            <Chinese>搜身</Chinese>
-            <Chinesesimp>搜身</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
             <French>Se rendre</French>

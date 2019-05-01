@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: dedmen
- * Adds the local unit event handlers. 
+ * Adds the local unit event handlers.
  * Access with function `ace_common_fnc_getLocalUnits` or array `ace_common_localUnits`
  *
  * Arguments:
@@ -15,6 +15,8 @@
  *
  * Public: No
  */
+// Ignore UAV/Drone AI
+#define IGNORE_BASE_UAVPILOTS "B_UAV_AI", "O_UAV_AI", "UAV_AI_base_F"
 
 GVAR(localUnits) = [];
 
@@ -27,7 +29,7 @@ GVAR(localUnits) = [];
         if (!alive _unit) exitWith {};
         GVAR(localUnits) pushBack _unit;
     };
-}] call CBA_fnc_addClassEventHandler;
+}, true, [IGNORE_BASE_UAVPILOTS]] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "respawn", {
     params ["_unit"];
@@ -37,7 +39,7 @@ GVAR(localUnits) = [];
         if (!alive _unit) exitWith {};
         GVAR(localUnits) pushBack _unit;
     };
-}] call CBA_fnc_addClassEventHandler;
+}, true, [IGNORE_BASE_UAVPILOTS]] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "local", {
     params ["_unit", "_local"];
@@ -49,7 +51,7 @@ GVAR(localUnits) = [];
     } else {
         GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
     };
-}] call CBA_fnc_addClassEventHandler;
+}, true, [IGNORE_BASE_UAVPILOTS]] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "deleted", {
     params ["_unit"];
@@ -64,7 +66,7 @@ GVAR(localUnits) = [];
             };
         }, [_unit]] call CBA_fnc_execNextFrame;
     };
-}] call CBA_fnc_addClassEventHandler;
+}, true, [IGNORE_BASE_UAVPILOTS]] call CBA_fnc_addClassEventHandler;
 
 ["CAManBase", "killed", {
     params ["_unit"];
@@ -73,4 +75,4 @@ GVAR(localUnits) = [];
     if (local _unit) then {
         GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
     };
-}] call CBA_fnc_addClassEventHandler;
+}, true, [IGNORE_BASE_UAVPILOTS]] call CBA_fnc_addClassEventHandler;

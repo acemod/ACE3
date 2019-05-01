@@ -102,6 +102,8 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip_shiftClick">
             <English>[Shift+Click to save to mission defaults]</English>
+            <Japanese>[Shift + クリック] でミッション標準として保存します</Japanese>
+            <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
@@ -823,7 +825,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Whitelist">
             <English>Whitelist</English>
-            <Polish>Biała lista</Polish>
+            <Polish>Biała lista (lista wybranych)</Polish>
             <Spanish>Lista blanca</Spanish>
             <German>Whitelist</German>
             <Czech>Seznam povolených</Czech>
@@ -841,7 +843,7 @@
             <English>Blacklist</English>
             <Japanese>禁止リスト</Japanese>
             <Italian>Lista Nera</Italian>
-            <Polish>Czarna lista</Polish>
+            <Polish>Czarna lista (lista wykluczeń)</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
@@ -864,6 +866,18 @@
             <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
+            <English>Import items list array from clipboard (should be the same format as export)</English>
+            <Polish>Zaimportuj listę przedmiotów ze schowka (lista musi być w tym samym formacie jak przy exporcie)</Polish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
+            <English>Add Compatible Items</English>
+            <Polish>Dodaj kompatybilne przedmioty</Polish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_Tooltip">
+            <English>Will automatically add compatible attachments or magazines (based on selected category) for all weapons in current items list</English>
+            <Polish>Automatycznie doda kompatybilne dodatki oraz magazynki (odpowiednio do każdej kategorii) dla wszystkich broni na liście</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">
             <English>Time to live</English>
