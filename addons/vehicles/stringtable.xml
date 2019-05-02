@@ -70,10 +70,12 @@
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
             <English>Disable automatic engine shut-off</English>
             <German>Motor nach Verlassen laufen lassen</German>
+            <Japanese>エンジン自動停止を無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
             <German>Verhindere das automatische Abschalten des Motors beim Verlassen des Fahrzeugs.</German>
+            <Japanese>車両から降りた時のエンジンの自動停止を防ぎます。</Japanese>
         </Key>
     </Package>
 </Project>
