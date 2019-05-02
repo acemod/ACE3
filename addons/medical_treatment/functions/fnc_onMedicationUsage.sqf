@@ -53,7 +53,7 @@ if (_currentDose >= floor (_maxDosage + round(random(2))) && {_maxDosage >= 1}) 
     };
 } forEach _incompatabileMeds;
 
-if ((count _overdosedMedications) > 0) then {
+if !(_overdosedMedications isEqualTo []) then {
     private _medicationConfig = (configFile >> "ace_medical_treatment" >> "Medication");
     private _onOverDose = getText (_medicationConfig >> "onOverDose");
     if (isClass (_medicationConfig >> _className)) then {
