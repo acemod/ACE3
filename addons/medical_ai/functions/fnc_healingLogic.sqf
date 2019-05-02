@@ -46,7 +46,7 @@ case (GET_WOUND_BLEEDING(_target) > 0): {
         private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
         private _selection = "?";
         {
-            _x params ["", "", "_index", "_amount", "_percentage"];
+            _x params ["", "", "_index", "_amount", "_percentage"]; // ToDo: Update for wound array changes
             if ((_amount * _percentage) > 0) exitWith { _selection = ALL_BODY_PARTS select _index; };
         } forEach _openWounds;
         _treatmentAction = QEGVAR(medical_treatment,treatmentBandageLocal);
@@ -62,7 +62,7 @@ case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE})
         _treatmentTime = 5;
         _treatmentArgs = [_target, "SalineIV", "leftarm"];
     };
-case ((count (_target getVariable [VAR_HEART_RATE_ADJ, []])) >= 6): {
+case ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6): {
         _treatmentAction = "#tooManyMeds";
     };
 case (IS_UNCONSCIOUS(_target) || {_heartRate <= 50}): {
