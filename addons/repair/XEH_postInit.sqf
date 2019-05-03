@@ -6,15 +6,15 @@
 // wheels
 [QGVAR(setWheelHitPointDamage), {
     params ["_object", "_hitPoint", "_damage"];
-    private _isDamageAllowed = isDamageAllowed _object;
+    private _damageDisabled = !isDamageAllowed _object;
 
-    if !(_isDamageAllowed) then {
+    if (_damageDisabled) then {
         _object allowDamage true;
     };
 
     _object setHitPointDamage [_hitPoint, _damage];
 
-    if !(_isDamageAllowed) then {
+    if (_damageDisabled) then {
         _object allowDamage false;
     };
 }] call CBA_fnc_addEventHandler;

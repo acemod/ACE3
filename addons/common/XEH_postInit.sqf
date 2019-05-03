@@ -149,15 +149,15 @@ if (isServer) then {
 
 [QGVAR(setVanillaHitPointDamage), {
     params ["_object", "_hitPointAnddamage"];
-    private _isDamageAllowed = isDamageAllowed _object;
+    private _damageDisabled = !isDamageAllowed _object;
 
-    if !(_isDamageAllowed) then {
+    if (_damageDisabled) then {
         _object allowDamage true;
     };
 
     _object setHitPointDamage _hitPointAnddamage;
 
-    if !(_isDamageAllowed) then {
+    if (_damageDisabled) then {
         _object allowDamage false;
     };
 }] call CBA_fnc_addEventHandler;
