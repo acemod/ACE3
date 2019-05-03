@@ -114,6 +114,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
         switch (true) do {
             case (_vehicle isKindOf "Tank");
             case (_vehicle isKindOf "Wheeled_APC"): { {true} };
+            case (_vehicle isKindOf "ParachuteBase"): { {false} };
             case (_vehicle isKindOf "Helicopter");
             case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
             default { {false} };

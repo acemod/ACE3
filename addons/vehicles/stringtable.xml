@@ -67,6 +67,14 @@
             <Japanese>速度制限を減らす</Japanese>
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
         </Key>
+        <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
+            <English>Disable automatic engine shut-off</English>
+            <German>Motor nach Verlassen laufen lassen</German>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
+            <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
+            <German>Verhindere das automatische Abschalten des Motors beim Verlassen des Fahrzeugs.</German>
+        </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
             <German>Abspringen-Aktion verstecken</German>

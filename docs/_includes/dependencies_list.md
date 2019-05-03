@@ -43,7 +43,7 @@
 {% endif %}
 
 {% if include.component == "captives" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "cargo" %}
@@ -71,7 +71,7 @@
 {% endif %}
 
 {% if include.component == "disarming" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "disposable" %}
@@ -219,19 +219,47 @@
 {% endif %}
 
 {% if include.component == "medical" %}
-`ace_interaction`, `ace_apl`
+`ace_medical_engine`
 {% endif %}
 
 {% if include.component == "medical_ai" %}
-`ace_medical`
+`ace_medical_treatment`
 {% endif %}
 
 {% if include.component == "medical_blood" %}
-`ace_main`
+`ace_medical_status`
 {% endif %}
 
-{% if include.component == "medical_menu" %}
-`ace_medical`
+{% if include.component == "medical_damage" %}
+`ace_medical_engine`
+{% endif %}
+
+{% if include.component == "medical_engine" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "medical_feedback" %}
+`ace_medical_status`
+{% endif %}
+
+{% if include.component == "medical_gui" %}
+`ace_medical_treatment`, `ace_interaction`
+{% endif %}
+
+{% if include.component == "medical_statemachine" %}
+`ace_medical_vitals`
+{% endif %}
+
+{% if include.component == "medical_status" %}
+`ace_medical_engine`
+{% endif %}
+
+{% if include.component == "medical_treatment" %}
+`ace_medical_status`, `ace_medical_damage`, `ace_apl`
+{% endif %}
+
+{% if include.component == "medical_vitals" %}
+`ace_medical_status`
 {% endif %}
 
 {% if include.component == "microdagr" %}
@@ -439,7 +467,7 @@
 {% endif %}
 
 {% if include.component == "winddeflection" %}
-`ace_weather`
+`ace_common`
 {% endif %}
 
 {% if include.component == "yardage450" %}
