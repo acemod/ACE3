@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-if (hasInterface) exitWith {
+if (hasInterface) then {
     ["CBA_settingsInitialized", {
         private _ejectAction = configFile >> "CfgActions" >> "Eject";
         private _hideEjectAction = missionNamespace getVariable [QEGVAR(vehicles,hideEjectAction), false];
