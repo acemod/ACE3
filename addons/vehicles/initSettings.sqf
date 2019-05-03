@@ -1,9 +1,8 @@
-
 [
     QGVAR(keepEngineRunning),
     "CHECKBOX",
     [LSTRING(SettingKeepEngineRunningName), LSTRING(SettingKeepEngineRunningDesc)],
-    localize ELSTRING(common,ACEKeybindCategoryVehicles),
+    ELSTRING(common,ACEKeybindCategoryVehicles),
     false, // default value
     true // isGlobal
 ] call CBA_fnc_addSetting;
