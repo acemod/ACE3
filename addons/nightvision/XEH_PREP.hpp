@@ -1,4 +1,3 @@
-
 PREP(changeNVGBrightness);
 PREP(initModule);
 PREP(nonDedicatedFix);
@@ -10,3 +9,5 @@ PREP(pfeh);
 PREP(refreshGoggleType);
 PREP(scaleCtrl);
 PREP(setupDisplayEffects);
+PREP(initOpticsModeControl);
+PREP(isUsingOptic);

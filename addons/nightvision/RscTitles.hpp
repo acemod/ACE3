@@ -22,7 +22,7 @@ class RscTitles {
             class Mask: RscPicture {
                 idc = 1001;
             };
-            
+
             // Add blinders for side monitors for tripple monitors (mask won't cover them)
             class trippleHeadLeft: RscPicture {
                 idc = 1002;
@@ -36,6 +36,22 @@ class RscTitles {
                 idc = 1003;
                 x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
             };
+        };
+    };
+};
+
+class RscOpticsValue;
+
+class RscInGameUI {
+    class RscUnitInfo;
+    class RscOptics_nightstalker: RscUnitInfo {
+        controls[] += {QGVAR(OpticsMode)};
+
+        class GVAR(OpticsMode): RscOpticsValue {
+            onLoad = QUOTE(_this call FUNC(initOpticsModeControl));
+            idc = 154;
+            w = 0;
+            h = 0;
         };
     };
 };
