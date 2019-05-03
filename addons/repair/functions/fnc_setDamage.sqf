@@ -26,12 +26,21 @@ if !(local _vehicle) exitWith {};
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // set damage of the vehicle
+private _isDamageAllowed = isDamageAllowed _vehicle;
+if !(_isDamageAllowed) then {
+    _vehicle allowDamage true;
+};
+
 _vehicle setDamage _damage;
 
 // restore original hitpoint damage values
 {
     _vehicle setHitIndex [_forEachIndex, _x];
 } forEach _allHitPointDamages;
+
+if !(_isDamageAllowed) then {
+    _vehicle allowDamage false;
+};
 
 // normalize hitpoints
 [_vehicle] call FUNC(normalizeHitPoints);
