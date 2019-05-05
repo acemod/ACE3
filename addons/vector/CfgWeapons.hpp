@@ -9,12 +9,13 @@ class CfgWeapons {
         visionMode[] = {"Normal","NVG"};
         opticsZoomMax = 0.25/7;
         opticsZoomMin = 0.25/7;
-        modelOptics = "\x\cba\addons\optics\cba_optic_big_100.p3d";
+        opticsDisablePeripherialVision = 1.5;
+        modelOptics = "\A3\Weapons_F\empty.p3d";
         //weaponInfoType = "ACE_RscOptics_vector";
 
         class CBA_ScriptedOptic {
-            minMagnificationReticleScale[] = {5,1.026};
-            maxMagnificationReticleScale[] = {25,25*1.026};
+            minMagnificationReticleScale[] = {7,7/5*1.026};
+            maxMagnificationReticleScale[] = {7,7/5*1.026};
 
             reticleDetailTextures[] = {
                 // start at > this magnification, reticleTexture, reticleTextureSize, reticleTextureNight (optional)
@@ -24,7 +25,7 @@ class CfgWeapons {
 
             bodyTexture = QPATHTOF(data\reticles\ace_vector_body_co.paa);
             //bodyTextureNight = QPATHTOF(data\reticles\ace_vector_body_co.paa);
-            bodyTextureSize = 1.15;
+            bodyTextureSize = 1.25;
         };
         weaponInfoType = "CBA_ScriptedOptic_zooming";
     };
