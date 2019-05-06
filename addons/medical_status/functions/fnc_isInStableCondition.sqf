@@ -19,5 +19,5 @@ params ["_unit"];
 
 (alive _unit
     && {!IS_UNCONSCIOUS(_unit)}
-    && {GET_BLOOD_LOSS(_unit) == 0}
+    && {GET_WOUND_BLEEDING(_unit) == 0}
     && {_unit call FUNC(hasStableVitals)})

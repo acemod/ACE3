@@ -19,7 +19,7 @@
  */
 
 params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
-TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
+TRACE_4("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
 if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
@@ -128,6 +128,8 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+
+[_unit] call EFUNC(medical_status,updateWoundBloodLoss);
 
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 

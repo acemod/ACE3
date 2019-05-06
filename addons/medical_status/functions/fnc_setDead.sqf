@@ -22,7 +22,7 @@ _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
 // Kill the unit without changing visual apperance
 [_unit, 1] call EFUNC(medical_engine,setStructuralDamage);
 
-private _lastShooter = _unit getVariable [QEGVAR(medical_engine,lastShooter), objNull];
-private _lastInstigator = _unit getVariable [QEGVAR(medical_engine,lastInstigator), objNull];
+private _lastShooter = _unit getVariable [QEGVAR(medical,lastDamageSource), objNull];
+private _lastInstigator = _unit getVariable [QEGVAR(medical,lastInstigator), objNull];
 
 ["ace_killed", [_unit, _reason, _lastShooter, _lastInstigator]] call CBA_fnc_globalEvent;
