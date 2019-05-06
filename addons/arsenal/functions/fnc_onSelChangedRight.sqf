@@ -42,7 +42,7 @@ private _fnc_selectItem = {
 
         case 19: {
             if (_item == "") then {
-                if (!isNil {cba_disposable_LoadedLaunchers getVariable secondaryWeapon GVAR(center)}) exitWith { TRACE_1("ignoring unload of disposable",secondaryWeapon GVAR(center)); };
+                if (cba_disposable_replaceDisposableLauncher && !isNil {cba_disposable_LoadedLaunchers getVariable secondaryWeapon GVAR(center)}) exitWith { TRACE_1("ignoring unload of disposable",secondaryWeapon GVAR(center)); };
                 GVAR(center) removeSecondaryWeaponItem ((GVAR(currentItems) select 19) select _itemIndex);
                 private _secondaryMags = secondaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
