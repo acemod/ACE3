@@ -18,6 +18,7 @@
 private _injuriesConfigRoot = configFile >> "ACE_Medical_Injuries";
 
 // --- parse wounds
+GVAR(woundClassNames) = [];
 GVAR(woundClassNamesComplex) = []; // index = 10 * classID + category; [will contain nils] e.g. ["aMinor", "aMed", "aLarge", nil, nil..."bMinor"]
 GVAR(woundsData) = [];
 
