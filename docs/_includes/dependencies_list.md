@@ -219,7 +219,7 @@
 {% endif %}
 
 {% if include.component == "medical" %}
-`ace_common`
+`ace_medical_engine`
 {% endif %}
 
 {% if include.component == "medical_ai" %}
@@ -467,7 +467,7 @@
 {% endif %}
 
 {% if include.component == "winddeflection" %}
-`ace_weather`
+`ace_common`
 {% endif %}
 
 {% if include.component == "yardage450" %}
