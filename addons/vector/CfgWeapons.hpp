@@ -26,6 +26,7 @@ class CfgWeapons {
             //bodyTextureNight = QPATHTOF(data\reticles\ace_vector_body_co.paa);
             bodyTextureSize = 1.25;
             reticleSafezoneSize = 1;
+            hidePeripheralVision = 1;
         };
         weaponInfoType = "ACE_RscOptics_vector";
     };
