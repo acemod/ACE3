@@ -11,7 +11,6 @@ class CfgWeapons {
         opticsZoomMin = 0.25/7;
         opticsDisablePeripherialVision = 1.5;
         modelOptics = "\A3\Weapons_F\empty.p3d";
-        //weaponInfoType = "ACE_RscOptics_vector";
 
         class CBA_ScriptedOptic {
             minMagnificationReticleScale[] = {7,7/5*1.026};
@@ -26,8 +25,9 @@ class CfgWeapons {
             bodyTexture = QPATHTOF(data\reticles\ace_vector_body_co.paa);
             //bodyTextureNight = QPATHTOF(data\reticles\ace_vector_body_co.paa);
             bodyTextureSize = 1.25;
+            reticleSafezoneSize = 1;
         };
-        weaponInfoType = "CBA_ScriptedOptic_zooming";
+        weaponInfoType = "ACE_RscOptics_vector";
     };
 
     class ACE_VectorDay: ACE_Vector {

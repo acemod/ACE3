@@ -1,20 +1,14 @@
-
 class RscText;
 class RscPicture;
-
-//class ScrollBar;
-class RscControlsGroup {
-    class VScrollbar;//: ScrollBar {};
-    class HScrollbar;//: ScrollBar {};
-};
+class RscControlsGroupNoScrollbars;
 
 class RscInGameUI {
-    class RscUnitInfo;
-    class ACE_RscOptics_vector: RscUnitInfo {
-        onLoad = "[""onLoad"",_this,""RscUnitInfo"",'IGUI'] call    (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable ['ACE_dlgVector', _this select 0];";
-        onUnload = "[""onUnload"",_this,""RscUnitInfo"",'IGUI'] call    (uinamespace getvariable 'BIS_fnc_initDisplay')";
-        idd = 300;
-        controls[] = {"CA_Distance","CA_Heading","CA_OpticsPitch","CA_Elev","CA_OpticsZoom","CA_VisionMode","ACE_ScriptedDisplayControlsGroup"};
+    class CBA_ScriptedOptic;
+    class ACE_RscOptics_vector: CBA_ScriptedOptic {
+        controls[] = {
+            "CA_FOVMode","ScopeBlack","Reticle","BodyNight","BodyDay","TrippleHeadLeft","TrippleHeadRight","Magnification","ActiveDisplayHelper",
+            "CA_Distance","CA_Heading","CA_OpticsPitch","CA_Elev","CA_OpticsZoom","CA_VisionMode","ACE_ScriptedDisplayControlsGroup"
+        };
 
         class CA_Distance: RscText {
             idc = 151;  // distance
@@ -52,20 +46,13 @@ class RscInGameUI {
             h = 0;
         };
 
-        class ACE_ScriptedDisplayControlsGroup: RscControlsGroup {
+        class ACE_ScriptedDisplayControlsGroup: RscControlsGroupNoScrollbars {
+            onLoad = "uiNamespace setVariable ['ACE_dlgVector', ctrlParent (_this select 0)];";
             idc = 170;
             x = "SafezoneX";
             y = "SafezoneY";
             w = "SafezoneW";
             h = "SafezoneH";
-
-            class VScrollbar: VScrollbar {
-                width = 0;
-            };
-
-            class HScrollbar: HScrollbar {
-                height = 0;
-            };
 
             class controls {
                 class Center: RscPicture {
