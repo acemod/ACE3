@@ -13,17 +13,9 @@ class CfgWeapons {
         modelOptics = "\A3\Weapons_F\empty.p3d";
 
         class CBA_ScriptedOptic {
-            minMagnificationReticleScale[] = {7,7/5*1.026};
-            maxMagnificationReticleScale[] = {7,7/5*1.026};
-
-            reticleDetailTextures[] = {
-                // start at > this magnification, reticleTexture, reticleTextureSize, reticleTextureNight (optional)
-                {0,  PATHTOF(data\reticles\ace_vector_reticle_1_ca.paa), 1},
-                {9,  PATHTOF(data\reticles\ace_vector_reticle_2_ca.paa), 1/2}
-            };
-
+            reticleTexture = QPATHTOF(data\reticles\ace_vector_reticle_ca.paa);
+            reticleTextureSize = 1.026;
             bodyTexture = QPATHTOF(data\reticles\ace_vector_body_co.paa);
-            //bodyTextureNight = QPATHTOF(data\reticles\ace_vector_body_co.paa);
             bodyTextureSize = 1.25;
             reticleSafezoneSize = 1;
             hidePeripheralVision = 1;
