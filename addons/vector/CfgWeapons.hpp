@@ -9,7 +9,6 @@ class CfgWeapons {
         visionMode[] = {"Normal","NVG"};
         opticsZoomMax = 0.25/7;
         opticsZoomMin = 0.25/7;
-        opticsDisablePeripherialVision = 1.5;
         modelOptics = "\A3\Weapons_F\empty.p3d";
 
         class CBA_ScriptedOptic {
