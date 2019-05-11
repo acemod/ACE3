@@ -180,6 +180,12 @@
             <Chinesesimp>热成像</Chinesesimp>
             <Chinese>熱成像</Chinese>
         </Key>
+        <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
+            <English>Max Follow Distance</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
+            <English>Maximum distance the follow camera can be from the target</English>
+        </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
             <English>Engineer</English>
