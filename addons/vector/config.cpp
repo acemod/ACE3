@@ -17,6 +17,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgOpticsEffect.hpp"
 #include "RscInGameUI.hpp"
 
 class CBA_PIPItems {
