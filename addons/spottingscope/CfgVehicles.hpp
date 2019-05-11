@@ -133,7 +133,7 @@ class CfgVehicles {
                 weapons[] = {};
                 magazines[] = {};
                 gunnerOpticsColor[] = {1,1,1,1};
-                gunnerOpticsModel = "\x\cba\addons\optics\cba_optic_big_100.p3d";
+                gunnerOpticsModel = "\A3\Weapons_F\empty.p3d";
                 gunnerOpticsEffect[] = {"OpticsCHAbera1","OpticsBlur2"};
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
