@@ -3,10 +3,14 @@ class RscPicture;
 class RscControlsGroupNoScrollbars;
 
 class RscInGameUI {
-    class CBA_ScriptedOptic;
+    class RscWeaponZeroing;
+    class CBA_ScriptedOptic: RscWeaponZeroing {
+        class CA_Zeroing;
+    };
+
     class ACE_RscOptics_vector: CBA_ScriptedOptic {
         controls[] = {
-            "CA_FOVMode","ScopeBlack","Reticle","BodyNight","BodyDay","TrippleHeadLeft","TrippleHeadRight",/**/"CA_Zeroing",/**/"Magnification","ActiveDisplayHelper",
+            "CA_FOVMode","ScopeBlack","Reticle","BodyNight","BodyDay","TrippleHeadLeft","TrippleHeadRight","CA_Zeroing","Magnification","ActiveDisplayHelper",
             "CA_Distance","CA_Heading","CA_OpticsPitch","CA_Elev","CA_OpticsZoom","CA_VisionMode","ACE_ScriptedDisplayControlsGroup"
         };
 
@@ -39,6 +43,9 @@ class RscInGameUI {
             idc = 179; // ???
             w = 0;
             h = 0;
+        };
+        class CA_Zeroing: CA_Zeroing {
+            onLoad = "(_this select 0) ctrlShow false";
         };
 
         class ACE_ScriptedDisplayControlsGroup: RscControlsGroupNoScrollbars {
