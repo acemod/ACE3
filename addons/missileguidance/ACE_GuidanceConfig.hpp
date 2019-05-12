@@ -42,12 +42,20 @@ class GVAR(AttackProfiles) {
         functionName = QFUNC(attackProfile_JAV_TOP);
     };
     class WIRE {
-        name = CSTRING(missileType);
-        visualName = CSTRING(missileType);
-        description = CSTRING(missileType_Description);
+        name = "";
+        visualName = "";
+        description = "";
 
         functionName = QFUNC(attackProfile_WIRE);
         onFired = QFUNC(wire_onFired);
+    };
+    class BEAM {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(attackProfile_BEAM);
+        onFired = QFUNC(wire_onFired); // since Beam guidance is pretty much the same as Wire guidance, we can reuse this
     };
 };
 

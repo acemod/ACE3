@@ -24,4 +24,12 @@ class CfgMagazines {
         descriptionShort = "24 Round DAGR";
         weight = 72;
     };
+    
+    class CA_LauncherMagazine;
+    class Vorona_HEAT: CA_LauncherMagazine {
+        ammo = "ACE_Metis_9M135_HEAT";
+    };
+    class Vorona_HE: Vorona_HEAT {
+        ammo = "ACE_Metis_9M135_HE";
+    };
 };
