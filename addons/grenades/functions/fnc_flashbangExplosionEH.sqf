@@ -27,6 +27,7 @@ if (hasInterface) then {
     _light setLightAmbient [1,1,1];
     _light setLightColor [1,1,1];
     _light setLightDayLight true;
+    _light setLightAttenuation [0, 1, 5, 1000, 0, 20];
 
     // Reduce the light after 0.1 seconds
     [{
