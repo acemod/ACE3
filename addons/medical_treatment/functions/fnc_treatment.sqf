@@ -108,8 +108,13 @@ if (vehicle _medic == _medic && {_medicAnim != ""}) then {
     [_medic, _endInAnim] call EFUNC(common,doAnimation);
     _medic setVariable [QGVAR(endInAnim), _endInAnim];
 
-    // Speed up animation based on treatment time
-    [QEGVAR(common,setAnimSpeedCoef), [_medic, _animDuration / _treatmentTime]] call CBA_fnc_globalEvent;
+    // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
+    private _animRatio = (_animDuration / _treatmentTime) min 3;
+    TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
+    [QEGVAR(common,setAnimSpeedCoef), [_medic, _animRatio]] call CBA_fnc_globalEvent;
+    if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
+        EGVAR(advanced_fatigue,setAnimExclusions) pushBack QUOTE(ADDON);
+    };
 };
 
 // Play a random treatment sound globally if defined

@@ -12,6 +12,9 @@
  * Return Value:
  * Time in seconds <NUMBER>
  *
+ * Example:
+ * [player, cursorTarget, "Head", "FieldDressing"] call ace_medical_treatment_fnc_getBandageTime
+ *
  * Public: No
  */
 
@@ -48,4 +51,4 @@ if (_medic == _patient) then {
 };
 
 // Nobody can bandage instantly
-_bandageTime max 1
+_bandageTime max 2
