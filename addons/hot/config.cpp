@@ -14,8 +14,6 @@ class CfgPatches {
     };
 };
 
-#include "ACE_GuidanceConfig.hpp"
-#include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"

@@ -41,6 +41,14 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_JAV_TOP);
     };
+    class WIRE {
+        name = CSTRING(missileType);
+        visualName = CSTRING(missileType);
+        description = CSTRING(missileType_Description);
+
+        functionName = QFUNC(attackProfile_WIRE);
+        onFired = QFUNC(wire_onFired);
+    };
 };
 
 class GVAR(SeekerTypes) {
@@ -57,5 +65,13 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_Optic);
+    };
+    class SACLOS {
+        name = "";
+        visualName = "";
+        description = ";
+
+        functionName = QFUNC(seekerType_SACLOS);
+        onFired = QFUNC(SACLOS_onFired);
     };
 };
