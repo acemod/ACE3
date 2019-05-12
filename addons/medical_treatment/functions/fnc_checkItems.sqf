@@ -24,15 +24,18 @@ private _fnc_loop = if (GVAR(convertItems) == 0) then {
         _x params ["_itemToRemove", "_replacementItems"];
 
         private _count = [_unit, _itemToRemove] call EFUNC(common,getCountOfItem);
-        _unit removeItems _itemToRemove;
 
-        {
-            _x params ["_item", "_amount"];
+        if (_count > 0) then {
+            _unit removeItems _itemToRemove;
 
-            for "_i" from 1 to (_amount * _count) do {
-                _unit addItem _item;
-            };
-        } forEach _replacementItems;
+            {
+                _x params ["_item", "_amount"];
+
+                for "_i" from 1 to (_amount * _count) do {
+                    _unit addItem _item;
+                };
+            } forEach _replacementItems;
+        };
     }
 } else {
     {
