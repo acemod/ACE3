@@ -3,7 +3,8 @@
 ["medical", {
 
     // Hide when patient display is up because they might overlap
-    if (!isNull EGVAR(medical_gui,displayPatientInformationTarget)) exitWith {""};
+    private _display = uiNamespace getVariable [QEGVAR(medical_gui,RscPatientInfo), displayNull];
+    if (!isNull _display) exitWith {"Paused"};
 
     private _unit = cursorTarget;
     if (!(_unit isKindOf "CAManBase")) then {_unit = cursorObject};
@@ -59,6 +60,10 @@
     _return pushBack format ["Hitpoints: [HHed:%1] [HBod: %2]", (_unit getHitPointDamage "HitHead") toFixed 2, (_unit getHitPointDamage "HitBody") toFixed 2];
     _return pushBack format ["[HHnd:%1] [HLeg: %2] %3", (_unit getHitPointDamage "HitHands") toFixed 2, (_unit getHitPointDamage "HitLegs") toFixed 2, _limping];
 
+    private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+    private _canSprint = if (isSprintAllowed _unit) then {""} else {"[<t color ='#FFCC22'>Sprint Blocked</t>]"};
+    _return pushBack format ["Fractures: %1 %2", _fractures, _canSprint];
+
 
     // Tourniquets:
     _return pushBack "------- Tourniquets: -------";
@@ -82,24 +87,24 @@
     _return pushBack "------- Wounds: -------";
     private _wounds = _unit getVariable [QEGVAR(medical,openWounds), []];
     {
-        _x params ["", "_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage", "_xCategory"];
-        _return pushBack format ["%1: [%2-%3] [x%4] [Bld: %5] [Dmg: %6]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xCategory, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
+        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
     } forEach _wounds;
 
     // Bandaged Wounds:
     _return pushBack "------- Bandaged Wounds: -------";
     private _wounds = _unit getVariable [QEGVAR(medical,bandagedWounds), []];
     {
-        _x params ["", "_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage", "_xCategory"];
-        _return pushBack format ["%1: [%2-%3] [x%4] [Bld: %5] [Dmg: %6]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xCategory, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
+        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
     } forEach _wounds;
 
     // Stitched Wounds:
     _return pushBack "------- Stitched Wounds: -------";
     private _wounds = _unit getVariable [QEGVAR(medical,stitchedWounds), []];
     {
-        _x params ["", "_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage", "_xCategory"];
-        _return pushBack format ["%1: [%2-%3] [x%4] [Bld: %5] [Dmg: %6]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xCategory, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
+        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
     } forEach _wounds;
 
     // IVs:
@@ -138,6 +143,10 @@
     };
     _return pushBack "------- Medications Raw: -------";
     _return append _rawMedications;
+
+    if (_unit isEqualTo ACE_player) then {
+        _return pushBack format ["ACE_setCustomAimCoef: %1", [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult)];
+    };
 
     // Footer:
     _return pushBack "</t>";

@@ -775,6 +775,12 @@
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Status_Fractured">
+            <English>Fractured</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
+            <English>Splint Applied</English>
+        </Key>
         <!--
             Strings above match Blood2 but seem to differ in some languages, determine which is best to use
         -->

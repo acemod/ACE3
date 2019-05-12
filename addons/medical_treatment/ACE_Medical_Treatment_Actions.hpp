@@ -83,6 +83,19 @@ class GVAR(Actions) {
         callbackSuccess = QFUNC(treatmentTourniquetRemove);
         condition = QUOTE([ARR_2(_target,_bodyPart)] call FUNC(hasTourniquetAppliedTo));
     };
+    // --- splint
+    class Splint: BasicBandage {
+        displayName = CSTRING(Apply_Splint);
+        displayNameProgress = CSTRING(Applying_Splint);
+        category = "bandage";
+        icon = QPATHTOEF(medical_gui,ui\splint.paa);
+        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        items[] = {"ACE_splint"};
+        treatmentTime = 7;
+        callbackSuccess = QFUNC(splint);
+        condition = QFUNC(splintCondition);
+        litter[] = {};
+    };
 
     // --- syringes
     class Morphine: FieldDressing {

@@ -39,6 +39,7 @@ _target setVariable [QEGVAR(medical,openWounds), [], true];
 _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
 _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
 _target setVariable [QEGVAR(medical,isLimping), false, true];
+_target setVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0], true];
 
 // - Update wound bleeding
 [_target] call EFUNC(medical_status,updateWoundBloodLoss);
@@ -53,9 +54,6 @@ _target setVariable [QEGVAR(medical,ivBags), nil, true];
 
 // damage storage
 _target setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
-#ifdef DEBUG_TESTRESULTS
-_target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
-#endif
 
 // generic medical admin
 _target setVariable [VAR_CRDC_ARRST, false, true];
@@ -70,7 +68,7 @@ _target setVariable [VAR_MEDICATIONS, [], true];
 // Reset triage card since medication is all reset
 _target setVariable [QEGVAR(medical,triageCard), [], true];
 
-[_target, false] call EFUNC(medical_engine,setLimping);
+[_target] call EFUNC(medical_engine,updateDamageEffects);
 
 // Resetting damage
 _target setDamage 0;

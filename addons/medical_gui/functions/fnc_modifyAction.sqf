@@ -25,7 +25,7 @@ private _bloodLossOnBodyPart = 0;
 
 // Add all bleeding from wounds on selection
 {
-    _x params ["", "", "_bodyPartN", "_amountOf", "_bleeding"];
+    _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
 
     if (_bodyPartN == _partIndex) then {
         _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _bleeding);

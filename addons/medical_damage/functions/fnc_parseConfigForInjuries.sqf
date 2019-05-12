@@ -19,7 +19,8 @@ private _injuriesConfigRoot = configFile >> "ACE_Medical_Injuries";
 
 // --- parse wounds
 GVAR(woundClassNames) = [];
-GVAR(woundsData) = []; // @todo classTypes are strings currently. Convert them to unqiue IDs instead.
+GVAR(woundClassNamesComplex) = []; // index = 10 * classID + category; [will contain nils] e.g. ["aMinor", "aMed", "aLarge", nil, nil..."bMinor"]
+GVAR(woundsData) = [];
 
 private _woundsConfig = _injuriesConfigRoot >> "wounds";
 private _classID = 0;
@@ -34,17 +35,20 @@ private _classID = 0;
     private _minDamage = GET_NUMBER(_entry >> "minDamage",0);
     private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
     private _causes = GET_ARRAY(_entry >> "causes",[]);
-    private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
+    private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0) == 1;
+    private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0) == 1;
 
     if !(_causes isEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
-        GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping];
+        GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping, _causeFracture];
+        {
+            GVAR(woundClassNamesComplex) set [10 * _classID + _forEachIndex, format ["%1%2", _className, _x]];
+        } forEach ["Minor", "Medium", "Large"];
         _classID = _classID + 1;
     };
 } forEach configProperties [_woundsConfig, "isClass _x"];
 
 // --- parse damage types
-GVAR(allDamageTypes) = []; // @todo, currently unused by handle damage (was GVAR(allAvailableDamageTypes))
 GVAR(allDamageTypesData) = [] call CBA_fnc_createNamespace;
 
 // minimum lethal damage collection, mapped to damageTypes
@@ -56,8 +60,6 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 {
     private _entry = _x;
     private _className = configName _entry;
-
-    GVAR(allDamageTypes) pushBack _className;
 
     // Check if this type is in the causes of a wound class, if so, we will store the wound types for this damage type
     private _woundTypes = [];
@@ -89,8 +91,8 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
     ];
     TRACE_1("",_extensionArgs);
 
-    private _extensionRes = "ace_medical" callExtension _extensionArgs;
-    TRACE_1("",_extensionRes);
+    // private _extensionRes = "ace_medical" callExtension _extensionArgs;
+    // TRACE_1("",_extensionRes);
 } forEach configProperties [_damageTypesConfig, "isClass _x"];
 
 // extension loading
@@ -121,8 +123,8 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
     ];
     TRACE_1("",_extensionArgs);
 
-    private _extensionRes = "ace_medical" callExtension _extensionArgs;
-    TRACE_1("",_extensionRes);
+    // private _extensionRes = "ace_medical" callExtension _extensionArgs;
+    // TRACE_1("",_extensionRes);
 } forEach GVAR(woundsData);
 
-"ace_medical" callExtension "ConfigComplete";
+// "ace_medical" callExtension "ConfigComplete";

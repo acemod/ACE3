@@ -74,12 +74,15 @@
 // Minimum leg damage required for limping
 #define LIMPING_DAMAGE_THRESHOLD 0.30
 
+// Minimum limb damage required for fracture
+#define FRACTURE_DAMAGE_THRESHOLD 0.50
+
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 
 // Empty wound data, used for some default return values
-// [ID, classID, bodypartIndex, amountOf, bloodloss, damage, category]
-#define EMPTY_WOUND [-1, -1, -1, 0, 0, 0, 0]
+// [classID, bodypartIndex, amountOf, bloodloss, damage]
+#define EMPTY_WOUND [-1, -1, 0, 0, 0]
 
 // Base time to bandage each wound category
 #define BANDAGE_TIME_S 4
