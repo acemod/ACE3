@@ -28,8 +28,6 @@ class CfgWeapons {
 
     // MX
     class arifle_MX_Base_F: Rifle_Base_F {
-        magazineWell[] = {"CBA_65x39_MX", "CBA_65x39_MX_XL"};
-
         class Single: Mode_SemiAuto {
             dispersion = MOA_TO_RAD(0.90);
         };

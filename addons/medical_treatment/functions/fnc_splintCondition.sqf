@@ -17,9 +17,9 @@
  * Public: No
  */
 
-params ["", "_target", "_bodyPart"];
+params ["", "_patient", "_bodyPart"];
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
-private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+private _fractures = _patient getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
 
 (_fractures select _partIndex) == 1

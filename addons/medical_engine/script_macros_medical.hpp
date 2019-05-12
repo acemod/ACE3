@@ -1,6 +1,6 @@
-#define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
-#define ENABLE_PERFORMANCE_COUNTERS
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
