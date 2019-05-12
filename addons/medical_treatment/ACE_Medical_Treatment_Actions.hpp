@@ -104,19 +104,6 @@ class GVAR(actions) {
         condition = QFUNC(splintCondition);
         litter[] = {};
     };
-    // --- splint
-    class Splint: BasicBandage {
-        displayName = CSTRING(Apply_Splint);
-        displayNameProgress = CSTRING(Applying_Splint);
-        category = "bandage";
-        icon = QPATHTOEF(medical_gui,ui\splint.paa);
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        items[] = {"ACE_splint"};
-        treatmentTime = 7;
-        callbackSuccess = QFUNC(splint);
-        condition = QFUNC(splintCondition);
-        litter[] = {};
-    };
 
     // - Syringes -------------------------------------------------------------
     class Morphine: FieldDressing {
