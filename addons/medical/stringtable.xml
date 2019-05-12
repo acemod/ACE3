@@ -457,9 +457,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
+            <Japanese>気絶から覚醒する可能性</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_Description">
             <English>Probablity that a unit with stable vitals will wake up from unconscious [Checked every 15 sec]</English>
+            <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
