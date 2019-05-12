@@ -31,6 +31,7 @@ if (damage _unit > 0) then {
 
 if (_isRespawn) then {
     TRACE_1("reseting all vars on respawn",_isRespawn); // note: state is handled by ace_medical_statemachine_fnc_resetStateDefault
+
     // - Blood and heart ----------------------------------------------------------
     _unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
     _unit setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
@@ -49,6 +50,7 @@ if (_isRespawn) then {
     _unit setVariable [QEGVAR(medical,bandagedWounds), [], true];
     _unit setVariable [QEGVAR(medical,stitchedWounds), [], true];
     _unit setVariable [QEGVAR(medical,isLimping), false, true];
+    _unit setVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0], true];
 
     // - Misc ---------------------------------------------------------------------
     _unit setVariable [VAR_UNCON, false, true];
