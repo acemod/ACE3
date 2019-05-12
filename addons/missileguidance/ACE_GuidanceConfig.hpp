@@ -69,7 +69,7 @@ class GVAR(SeekerTypes) {
     class SACLOS {
         name = "";
         visualName = "";
-        description = ";
+        description = "";
 
         functionName = QFUNC(seekerType_SACLOS);
         onFired = QFUNC(SACLOS_onFired);
