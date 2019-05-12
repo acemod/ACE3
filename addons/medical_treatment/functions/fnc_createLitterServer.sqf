@@ -36,8 +36,6 @@ private _object = createSimpleObject [_model, [0, 0, 0]];
 _object setPosASL _position;
 _object setDir _direction;
 
-systemChat str [_litterClass, _object];
-
 // Set the litter object's position next frame to correct HORRIBLE spacing (fixes #1112)
 [{
     params ["_object", "_position"];

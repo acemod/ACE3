@@ -151,6 +151,12 @@
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
+            <English>Time Coefficient PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
+            <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
         </Key>
@@ -249,12 +255,6 @@
             </Key>
         </Container>
 
-        <Key ID="STR_ACE_Medical_treatment_PAKTime">
-            <English>How long should PAK take to apply?</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
-            <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
-        </Key>
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>

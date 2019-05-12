@@ -121,6 +121,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(timeCoefficientPAK),
+    "SLIDER",
+    [LSTRING(TimeCoefficientPAK_DisplayName), LSTRING(TimeCoefficientPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 5, 1, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(medicSurgicalKit),
     "LIST",
     [LSTRING(MedicSurgicalKit_DisplayName), LSTRING(MedicSurgicalKit_Description)],
