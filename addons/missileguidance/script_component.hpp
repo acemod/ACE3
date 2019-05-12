@@ -15,4 +15,9 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MISSILEGUIDANCE
 #endif
 
+#define MCLOS_UP 0
+#define MCLOS_RIGHT 1
+#define MCLOS_DOWN 2
+#define MCLOS_LEFT 3
+
 #include "\z\ace\addons\main\script_macros.hpp"

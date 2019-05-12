@@ -1,5 +1,6 @@
 LOG("prep");
 PREP(cycleAttackProfileKeyDown);
+PREP(mclosKeyHandler);
 
 PREP(changeMissileDirection);
 
@@ -30,3 +31,4 @@ PREP(attackProfile_JAV_TOP);
 // Seeker search functions
 PREP(seekerType_SALH);
 PREP(seekerType_Optic);
+PREP(seekerType_MCLOS);

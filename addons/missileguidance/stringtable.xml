@@ -193,5 +193,21 @@
             <Chinesesimp>循环切换开火模式</Chinesesimp>
             <Chinese>循環切換開火模式</Chinese>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_MCLOS_Up">
+            <English>MCLOS Steer up</English>
+            <German>MCLOS Nach oben steuern</German>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_MCLOS_Down">
+            <English>MCLOS Steer down</English>
+            <German>MCLOS Nach unten steuern</German>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_MCLOS_Left">
+            <English>MCLOS Steer left</English>
+            <German>MCLOS Nach links steuern</German>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_MCLOS_Right">
+            <English>MCLOS Steer right</English>
+            <German>MCLOS Nach rechts steuern</German>
+        </Key>
     </Package>
 </Project>
