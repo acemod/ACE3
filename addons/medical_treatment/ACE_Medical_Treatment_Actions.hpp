@@ -115,7 +115,7 @@ class GVAR(actions) {
         items[] = {"ACE_morphine"};
         condition = "";
         treatmentTime = 5;
-        callbackSuccess = QFUNC(treatmentMedication);
+        callbackSuccess = QFUNC(medication);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
         litter[] = {{"ACE_MedicalLitter_morphine"}};
