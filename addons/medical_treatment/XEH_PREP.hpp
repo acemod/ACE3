@@ -40,6 +40,10 @@ PREP(splint);
 PREP(splintCondition);
 PREP(splintLocal);
 
+PREP(splint);
+PREP(splintCondition);
+PREP(splintLocal);
+
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);

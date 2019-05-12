@@ -145,8 +145,22 @@ if (isServer) then {
 [QGVAR(playActionNow), {(_this select 0) playActionNow (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
-[QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVanillaHitPointDamage), {
+    params ["_object", "_hitPointAnddamage"];
+    private _damageDisabled = !isDamageAllowed _object;
+
+    if (_damageDisabled) then {
+        _object allowDamage true;
+    };
+
+    _object setHitPointDamage _hitPointAnddamage;
+
+    if (_damageDisabled) then {
+        _object allowDamage false;
+    };
+}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
