@@ -46,7 +46,7 @@ case (GET_WOUND_BLEEDING(_target) > 0): {
         private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
         private _selection = "?";
         {
-            _x params ["", "", "_index", "_amount", "_percentage"]; // ToDo: Update for wound array changes
+            _x params ["", "_index", "_amount", "_percentage"];
             if ((_amount * _percentage) > 0) exitWith { _selection = ALL_BODY_PARTS select _index; };
         } forEach _openWounds;
         _treatmentAction = QEGVAR(medical_treatment,treatmentBandageLocal);
