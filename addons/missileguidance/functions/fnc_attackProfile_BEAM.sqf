@@ -23,7 +23,7 @@ _attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_random
 
 private _projectilePos = getPosASL _projectile;
 
-if ((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSqr || { _seekerTargetPos isEqualTo [0, 0, 0] }) exitWith {
+if (((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSqr || { _seekerTargetPos isEqualTo [0, 0, 0] }) exitWith {
     // return position 50m infront of projectile
     _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 0])
 };
